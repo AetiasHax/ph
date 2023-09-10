@@ -3,6 +3,7 @@
 
 	.text
 
+	.global func_ov61_0213dec0
 	arm_func_start func_ov61_0213dec0
 func_ov61_0213dec0: ; 0x0213dec0
 	cmp r0, #0
@@ -16,6 +17,7 @@ func_ov61_0213dec0: ; 0x0213dec0
 	arm_func_end func_ov61_0213dec0
 _0213dedc: .word data_ov61_0217ea20
 
+	.global func_ov61_0213dee0
 	arm_func_start func_ov61_0213dee0
 func_ov61_0213dee0: ; 0x0213dee0
 	cmp r0, #0
@@ -91,6 +93,7 @@ _0213dfbc:
 	arm_func_end func_ov61_0213dee0
 _0213dfc8: .word data_ov61_0217ea20
 
+	.global func_ov61_0213dfcc
 	arm_func_start func_ov61_0213dfcc
 func_ov61_0213dfcc: ; 0x0213dfcc
 	ldr r0, _0213dfe8 ; =data_ov61_0217ea20
@@ -104,6 +107,7 @@ func_ov61_0213dfcc: ; 0x0213dfcc
 	arm_func_end func_ov61_0213dfcc
 _0213dfe8: .word data_ov61_0217ea20
 
+	.global func_ov61_0213dfec
 	arm_func_start func_ov61_0213dfec
 func_ov61_0213dfec: ; 0x0213dfec
 	ldr r0, _0213e004 ; =data_ov61_0217ea20
@@ -116,6 +120,7 @@ func_ov61_0213dfec: ; 0x0213dfec
 	arm_func_end func_ov61_0213dfec
 _0213e004: .word data_ov61_0217ea20
 
+	.global func_ov61_0213e008
 	arm_func_start func_ov61_0213e008
 func_ov61_0213e008: ; 0x0213e008
 	ldr r2, _0213e01c ; =data_ov61_0217ea20
@@ -127,6 +132,7 @@ func_ov61_0213e008: ; 0x0213e008
 	arm_func_end func_ov61_0213e008
 _0213e01c: .word data_ov61_0217ea20
 
+	.global func_ov61_0213e020
 	arm_func_start func_ov61_0213e020
 func_ov61_0213e020: ; 0x0213e020
 	ldr r2, _0213e030 ; =data_ov61_0217ea28
@@ -137,6 +143,7 @@ func_ov61_0213e020: ; 0x0213e020
 	arm_func_end func_ov61_0213e020
 _0213e030: .word data_ov61_0217ea28
 
+	.global func_ov61_0213e034
 	arm_func_start func_ov61_0213e034
 func_ov61_0213e034: ; 0x0213e034
 	stmdb sp!, {r3, lr}
@@ -149,6 +156,7 @@ func_ov61_0213e034: ; 0x0213e034
 	arm_func_end func_ov61_0213e034
 _0213e04c: .word data_ov61_0217ea28
 
+	.global func_ov61_0213e050
 	arm_func_start func_ov61_0213e050
 func_ov61_0213e050: ; 0x0213e050
 	stmdb sp!, {r3, lr}
@@ -160,6 +168,7 @@ func_ov61_0213e050: ; 0x0213e050
 	arm_func_end func_ov61_0213e050
 _0213e064: .word data_ov61_0217ea28
 
+	.global func_ov61_0213e068
 	arm_func_start func_ov61_0213e068
 func_ov61_0213e068: ; 0x0213e068
 	stmdb sp!, {r3, lr}
@@ -173,6 +182,7 @@ func_ov61_0213e068: ; 0x0213e068
 	arm_func_end func_ov61_0213e068
 _0213e084: .word data_ov61_0217ea28
 
+	.global func_ov61_0213e088
 	arm_func_start func_ov61_0213e088
 func_ov61_0213e088: ; 0x0213e088
 	stmdb sp!, {r3, lr}
@@ -182,6 +192,7 @@ func_ov61_0213e088: ; 0x0213e088
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0213e088
 
+	.global func_ov61_0213e09c
 	arm_func_start func_ov61_0213e09c
 func_ov61_0213e09c: ; 0x0213e09c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -216,6 +227,7 @@ _0213e100:
 	arm_func_end func_ov61_0213e09c
 _0213e108: .word data_ov61_0217ea28
 
+	.global func_ov61_0213e10c
 	arm_func_start func_ov61_0213e10c
 func_ov61_0213e10c: ; 0x0213e10c
 	ldr ip, _0213e11c ; =func_ov61_0213e034
@@ -226,6 +238,7 @@ func_ov61_0213e10c: ; 0x0213e10c
 	arm_func_end func_ov61_0213e10c
 _0213e11c: .word func_ov61_0213e034
 
+	.global func_ov61_0213e120
 	arm_func_start func_ov61_0213e120
 func_ov61_0213e120: ; 0x0213e120
 	ldr ip, _0213e138 ; =func_ov61_0213e088
@@ -238,6 +251,7 @@ func_ov61_0213e120: ; 0x0213e120
 	arm_func_end func_ov61_0213e120
 _0213e138: .word func_ov61_0213e088
 
+	.global func_ov61_0213e13c
 	arm_func_start func_ov61_0213e13c
 func_ov61_0213e13c: ; 0x0213e13c
 	ldr ip, _0213e150 ; =func_ov61_0213e068
@@ -249,6 +263,7 @@ func_ov61_0213e13c: ; 0x0213e13c
 	arm_func_end func_ov61_0213e13c
 _0213e150: .word func_ov61_0213e068
 
+	.global func_ov61_0213e154
 	arm_func_start func_ov61_0213e154
 func_ov61_0213e154: ; 0x0213e154
 	stmdb sp!, {r4, r5, r6, lr}
@@ -278,6 +293,7 @@ func_ov61_0213e154: ; 0x0213e154
 	arm_func_end func_ov61_0213e154
 _0213e1b0: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e1b4
 	arm_func_start func_ov61_0213e1b4
 func_ov61_0213e1b4: ; 0x0213e1b4
 	stmdb sp!, {r3, lr}
@@ -306,6 +322,7 @@ _0213e1f8: .word data_ov61_0217a620
 _0213e1fc: .word data_ov61_0217a648
 _0213e200: .word data_ov61_0217a66c
 
+	.global func_ov61_0213e204
 	arm_func_start func_ov61_0213e204
 func_ov61_0213e204: ; 0x0213e204
 	stmdb sp!, {lr}
@@ -356,6 +373,7 @@ _0213e2a8: .word data_ov61_0217ea30
 _0213e2ac: .word func_ov61_0213e034
 _0213e2b0: .word func_ov61_0213e068
 
+	.global func_ov61_0213e2b4
 	arm_func_start func_ov61_0213e2b4
 func_ov61_0213e2b4: ; 0x0213e2b4
 	stmdb sp!, {r3, lr}
@@ -377,6 +395,7 @@ func_ov61_0213e2b4: ; 0x0213e2b4
 	arm_func_end func_ov61_0213e2b4
 _0213e2f0: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e2f4
 	arm_func_start func_ov61_0213e2f4
 func_ov61_0213e2f4: ; 0x0213e2f4
 	stmdb sp!, {r3, lr}
@@ -413,6 +432,7 @@ _0213e328:
 	arm_func_end func_ov61_0213e2f4
 _0213e368: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e36c
 	arm_func_start func_ov61_0213e36c
 func_ov61_0213e36c: ; 0x0213e36c
 	stmdb sp!, {r3, lr}
@@ -465,6 +485,7 @@ _0213e410:
 	arm_func_end func_ov61_0213e36c
 _0213e418: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e41c
 	arm_func_start func_ov61_0213e41c
 func_ov61_0213e41c: ; 0x0213e41c
 	stmdb sp!, {r4, lr}
@@ -496,6 +517,7 @@ _0213e468:
 	arm_func_end func_ov61_0213e41c
 _0213e478: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e47c
 	arm_func_start func_ov61_0213e47c
 func_ov61_0213e47c: ; 0x0213e47c
 	stmdb sp!, {r3, lr}
@@ -530,6 +552,7 @@ _0213e4bc:
 	arm_func_end func_ov61_0213e47c
 _0213e4e8: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e4ec
 	arm_func_start func_ov61_0213e4ec
 func_ov61_0213e4ec: ; 0x0213e4ec
 	ldr r0, _0213e514 ; =data_ov61_0217ea30
@@ -547,6 +570,7 @@ _0213e50c:
 	arm_func_end func_ov61_0213e4ec
 _0213e514: .word data_ov61_0217ea30
 
+	.global func_ov61_0213e518
 	arm_func_start func_ov61_0213e518
 func_ov61_0213e518: ; 0x0213e518
 	ldr ip, _0213e520 ; =func_ov61_0216138c
@@ -555,6 +579,7 @@ func_ov61_0213e518: ; 0x0213e518
 	arm_func_end func_ov61_0213e518
 _0213e520: .word func_ov61_0216138c
 
+	.global func_ov61_0213e524
 	arm_func_start func_ov61_0213e524
 func_ov61_0213e524: ; 0x0213e524
 	stmdb sp!, {r3, lr}
@@ -580,6 +605,7 @@ _0213e564:
 	arm_func_end func_ov61_0213e524
 _0213e56c: .word 0xffff2d10
 
+	.global func_ov61_0213e570
 	arm_func_start func_ov61_0213e570
 func_ov61_0213e570: ; 0x0213e570
 	ldr r0, _0213e57c ; =data_ov61_0217f368
@@ -589,6 +615,7 @@ func_ov61_0213e570: ; 0x0213e570
 	arm_func_end func_ov61_0213e570
 _0213e57c: .word data_ov61_0217f368
 
+	.global func_ov61_0213e580
 	arm_func_start func_ov61_0213e580
 func_ov61_0213e580: ; 0x0213e580
 	stmdb sp!, {r3, r4, lr}
@@ -608,6 +635,7 @@ func_ov61_0213e580: ; 0x0213e580
 	arm_func_end func_ov61_0213e580
 _0213e5b4: .word data_ov61_0217a68c
 
+	.global func_ov61_0213e5b8
 	arm_func_start func_ov61_0213e5b8
 func_ov61_0213e5b8: ; 0x0213e5b8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -628,6 +656,7 @@ func_ov61_0213e5b8: ; 0x0213e5b8
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0213e5b8
 
+	.global func_ov61_0213e5f8
 	arm_func_start func_ov61_0213e5f8
 func_ov61_0213e5f8: ; 0x0213e5f8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -699,6 +728,7 @@ _0213e6d4:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0213e5f8
 
+	.global func_ov61_0213e6f4
 	arm_func_start func_ov61_0213e6f4
 func_ov61_0213e6f4: ; 0x0213e6f4
 	stmdb sp!, {r4, lr}
@@ -782,6 +812,7 @@ _0213e81c: .word 0x6c078965
 _0213e820: .word 0x5d588b65
 _0213e824: .word 0x00269ec3
 
+	.global func_ov61_0213e828
 	arm_func_start func_ov61_0213e828
 func_ov61_0213e828: ; 0x0213e828
 	ldrh r1, [r0]
@@ -799,6 +830,7 @@ _0213e84c:
 	bx lr
 	arm_func_end func_ov61_0213e828
 
+	.global func_ov61_0213e854
 	arm_func_start func_ov61_0213e854
 func_ov61_0213e854: ; 0x0213e854
 	stmdb sp!, {r4, r5, r6, lr}
@@ -967,6 +999,7 @@ _0213eacc: .word data_ov61_02181384
 _0213ead0: .word data_ov61_02181484
 _0213ead4: .word func_ov61_0213f9f0
 
+	.global func_ov61_0213ead8
 	arm_func_start func_ov61_0213ead8
 func_ov61_0213ead8: ; 0x0213ead8
 	stmdb sp!, {r3, lr}
@@ -1066,6 +1099,7 @@ _0213ec2c:
 	arm_func_end func_ov61_0213ead8
 _0213ec3c: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213ec40
 	arm_func_start func_ov61_0213ec40
 func_ov61_0213ec40: ; 0x0213ec40
 	stmdb sp!, {r3, lr}
@@ -1232,6 +1266,7 @@ _0213ee84: .word func_ov61_021410c8
 _0213ee88: .word 0xffffb172
 _0213ee8c: .word 0xffffb17b
 
+	.global func_ov61_0213ee90
 	arm_func_start func_ov61_0213ee90
 func_ov61_0213ee90: ; 0x0213ee90
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1308,6 +1343,7 @@ _0213ef70:
 _0213ef90: .word data_ov61_0217ea4c
 _0213ef94: .word 0xffff1596
 
+	.global func_ov61_0213ef98
 	arm_func_start func_ov61_0213ef98
 func_ov61_0213ef98: ; 0x0213ef98
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1357,6 +1393,7 @@ _0213efe0:
 _0213f038: .word data_ov61_0217ea4c
 _0213f03c: .word func_ov61_0213fa50
 
+	.global func_ov61_0213f040
 	arm_func_start func_ov61_0213f040
 func_ov61_0213f040: ; 0x0213f040
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -1404,6 +1441,7 @@ _0213f084:
 _0213f0d8: .word data_ov61_0217ea4c
 _0213f0dc: .word func_ov61_0213fa98
 
+	.global func_ov61_0213f0e0
 	arm_func_start func_ov61_0213f0e0
 func_ov61_0213f0e0: ; 0x0213f0e0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -1526,6 +1564,7 @@ _0213f278:
 _0213f284: .word data_ov61_0217ea4c
 _0213f288: .word func_ov61_0213fa98
 
+	.global func_ov61_0213f28c
 	arm_func_start func_ov61_0213f28c
 func_ov61_0213f28c: ; 0x0213f28c
 	ldr r2, _0213f2b4 ; =data_ov61_0217ea4c
@@ -1542,6 +1581,7 @@ func_ov61_0213f28c: ; 0x0213f28c
 	arm_func_end func_ov61_0213f28c
 _0213f2b4: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f2b8
 	arm_func_start func_ov61_0213f2b8
 func_ov61_0213f2b8: ; 0x0213f2b8
 	stmdb sp!, {r3, lr}
@@ -1591,6 +1631,7 @@ _0213f328:
 _0213f354: .word data_ov61_0217ea4c
 _0213f358: .word data_ov61_0217a698
 
+	.global func_ov61_0213f35c
 	arm_func_start func_ov61_0213f35c
 func_ov61_0213f35c: ; 0x0213f35c
 	stmdb sp!, {r4, lr}
@@ -1624,6 +1665,7 @@ _0213f3a0:
 	arm_func_end func_ov61_0213f35c
 _0213f3c0: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f3c4
 	arm_func_start func_ov61_0213f3c4
 func_ov61_0213f3c4: ; 0x0213f3c4
 	stmdb sp!, {r3, lr}
@@ -1648,6 +1690,7 @@ _0213f3fc:
 	arm_func_end func_ov61_0213f3c4
 _0213f408: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f40c
 	arm_func_start func_ov61_0213f40c
 func_ov61_0213f40c: ; 0x0213f40c
 	ldr r0, _0213f424 ; =data_ov61_0217ea4c
@@ -1660,6 +1703,7 @@ func_ov61_0213f40c: ; 0x0213f40c
 	arm_func_end func_ov61_0213f40c
 _0213f424: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f428
 	arm_func_start func_ov61_0213f428
 func_ov61_0213f428: ; 0x0213f428
 	stmdb sp!, {r3, lr}
@@ -1686,6 +1730,7 @@ _0213f46c:
 	arm_func_end func_ov61_0213f428
 _0213f474: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f478
 	arm_func_start func_ov61_0213f478
 func_ov61_0213f478: ; 0x0213f478
 	stmdb sp!, {r3, lr}
@@ -1704,6 +1749,7 @@ func_ov61_0213f478: ; 0x0213f478
 	arm_func_end func_ov61_0213f478
 _0213f4a8: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f4ac
 	arm_func_start func_ov61_0213f4ac
 func_ov61_0213f4ac: ; 0x0213f4ac
 	stmdb sp!, {r3, lr}
@@ -1723,6 +1769,7 @@ func_ov61_0213f4ac: ; 0x0213f4ac
 	arm_func_end func_ov61_0213f4ac
 _0213f4e0: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f4e4
 	arm_func_start func_ov61_0213f4e4
 func_ov61_0213f4e4: ; 0x0213f4e4
 	ldr r0, _0213f4fc ; =data_ov61_0217ea4c
@@ -1735,6 +1782,7 @@ func_ov61_0213f4e4: ; 0x0213f4e4
 	arm_func_end func_ov61_0213f4e4
 _0213f4fc: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f500
 	arm_func_start func_ov61_0213f500
 func_ov61_0213f500: ; 0x0213f500
 	stmdb sp!, {r3, r4, lr}
@@ -1790,6 +1838,7 @@ _0213f5bc: .word func_ov61_02140118
 _0213f5c0: .word func_ov61_021436a4
 _0213f5c4: .word func_ov61_021435b0
 
+	.global func_ov61_0213f5c8
 	arm_func_start func_ov61_0213f5c8
 func_ov61_0213f5c8: ; 0x0213f5c8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1822,6 +1871,7 @@ _0213f610:
 _0213f624: .word data_ov61_0217ea4c
 _0213f628: .word data_ov61_0217ea54
 
+	.global func_ov61_0213f62c
 	arm_func_start func_ov61_0213f62c
 func_ov61_0213f62c: ; 0x0213f62c
 	stmdb sp!, {r3, lr}
@@ -1830,6 +1880,7 @@ func_ov61_0213f62c: ; 0x0213f62c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0213f62c
 
+	.global func_ov61_0213f63c
 	arm_func_start func_ov61_0213f63c
 func_ov61_0213f63c: ; 0x0213f63c
 	stmdb sp!, {r3, lr}
@@ -1838,6 +1889,7 @@ func_ov61_0213f63c: ; 0x0213f63c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0213f63c
 
+	.global func_ov61_0213f64c
 	arm_func_start func_ov61_0213f64c
 func_ov61_0213f64c: ; 0x0213f64c
 	ldr r2, _0213f674 ; =data_ov61_0217ea54
@@ -1855,6 +1907,7 @@ _0213f654:
 	arm_func_end func_ov61_0213f64c
 _0213f674: .word data_ov61_0217ea54
 
+	.global func_ov61_0213f678
 	arm_func_start func_ov61_0213f678
 func_ov61_0213f678: ; 0x0213f678
 	stmdb sp!, {r3, lr}
@@ -1872,6 +1925,7 @@ func_ov61_0213f678: ; 0x0213f678
 _0213f6a0: .word data_ov61_0217ea54
 _0213f6a4: .word data_ov61_0217ead4
 
+	.global func_ov61_0213f6a8
 	arm_func_start func_ov61_0213f6a8
 func_ov61_0213f6a8: ; 0x0213f6a8
 	ldr r1, _0213f6b4 ; =data_ov61_0217ea54
@@ -1881,6 +1935,7 @@ func_ov61_0213f6a8: ; 0x0213f6a8
 	arm_func_end func_ov61_0213f6a8
 _0213f6b4: .word data_ov61_0217ea54
 
+	.global func_ov61_0213f6b8
 	arm_func_start func_ov61_0213f6b8
 func_ov61_0213f6b8: ; 0x0213f6b8
 	stmdb sp!, {r3, lr}
@@ -1914,6 +1969,7 @@ _0213f6f0:
 	arm_func_end func_ov61_0213f6b8
 _0213f71c: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f720
 	arm_func_start func_ov61_0213f720
 func_ov61_0213f720: ; 0x0213f720
 	ldr r1, _0213f72c ; =data_ov61_0217ead4
@@ -1923,6 +1979,7 @@ func_ov61_0213f720: ; 0x0213f720
 	arm_func_end func_ov61_0213f720
 _0213f72c: .word data_ov61_0217ead4
 
+	.global func_ov61_0213f730
 	arm_func_start func_ov61_0213f730
 func_ov61_0213f730: ; 0x0213f730
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1948,11 +2005,13 @@ _0213f760:
 	arm_func_end func_ov61_0213f730
 _0213f774: .word data_ov61_0217ea54
 
+	.global func_ov61_0213f778
 	arm_func_start func_ov61_0213f778
 func_ov61_0213f778: ; 0x0213f778
 	bx lr
 	arm_func_end func_ov61_0213f778
 
+	.global func_ov61_0213f77c
 	arm_func_start func_ov61_0213f77c
 func_ov61_0213f77c: ; 0x0213f77c
 	ldr r1, _0213f798 ; =data_ov61_0217ea4c
@@ -1966,6 +2025,7 @@ func_ov61_0213f77c: ; 0x0213f77c
 	arm_func_end func_ov61_0213f77c
 _0213f798: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213f79c
 	arm_func_start func_ov61_0213f79c
 func_ov61_0213f79c: ; 0x0213f79c
 	stmdb sp!, {r3, r4, lr}
@@ -1996,6 +2056,7 @@ _0213f7e0:
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_0213f79c
 
+	.global func_ov61_0213f7fc
 	arm_func_start func_ov61_0213f7fc
 func_ov61_0213f7fc: ; 0x0213f7fc
 	stmdb sp!, {r3, lr}
@@ -2015,6 +2076,7 @@ _0213f828:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0213f7fc
 
+	.global func_ov61_0213f830
 	arm_func_start func_ov61_0213f830
 func_ov61_0213f830: ; 0x0213f830
 	stmdb sp!, {r4, r5, r6, lr}
@@ -2104,6 +2166,7 @@ _0213f940: .word 0xfffec398
 _0213f944: .word 0xfffeeaa8
 _0213f948: .word 0xfffe9c88
 
+	.global func_ov61_0213f94c
 	arm_func_start func_ov61_0213f94c
 func_ov61_0213f94c: ; 0x0213f94c
 	stmdb sp!, {r4, lr}
@@ -2159,6 +2222,7 @@ _0213f9e4:
 	arm_func_end func_ov61_0213f94c
 _0213f9ec: .word 0xfffefa48
 
+	.global func_ov61_0213f9f0
 	arm_func_start func_ov61_0213f9f0
 func_ov61_0213f9f0: ; 0x0213f9f0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2190,6 +2254,7 @@ _0213fa24:
 	arm_func_end func_ov61_0213f9f0
 _0213fa4c: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213fa50
 	arm_func_start func_ov61_0213fa50
 func_ov61_0213fa50: ; 0x0213fa50
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2214,6 +2279,7 @@ _0213fa74:
 	arm_func_end func_ov61_0213fa50
 _0213fa94: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213fa98
 	arm_func_start func_ov61_0213fa98
 func_ov61_0213fa98: ; 0x0213fa98
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -2319,6 +2385,7 @@ _0213fbd4:
 	arm_func_end func_ov61_0213fa98
 _0213fc0c: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213fc10
 	arm_func_start func_ov61_0213fc10
 func_ov61_0213fc10: ; 0x0213fc10
 	stmdb sp!, {r3, lr}
@@ -2338,6 +2405,7 @@ func_ov61_0213fc10: ; 0x0213fc10
 _0213fc40: .word 0x00000603
 _0213fc44: .word 0x00000901
 
+	.global func_ov61_0213fc48
 	arm_func_start func_ov61_0213fc48
 func_ov61_0213fc48: ; 0x0213fc48
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -2434,6 +2502,7 @@ _0213fda4: .word data_ov61_0217a69c
 _0213fda8: .word data_ov61_0217a6a4
 _0213fdac: .word data_ov61_0217ea4c
 
+	.global func_ov61_0213fdb0
 	arm_func_start func_ov61_0213fdb0
 func_ov61_0213fdb0: ; 0x0213fdb0
 	ldr ip, _0213fdb8 ; =func_ov61_0214a758
@@ -2442,6 +2511,7 @@ func_ov61_0213fdb0: ; 0x0213fdb0
 	arm_func_end func_ov61_0213fdb0
 _0213fdb8: .word func_ov61_0214a758
 
+	.global func_ov61_0213fdbc
 	arm_func_start func_ov61_0213fdbc
 func_ov61_0213fdbc: ; 0x0213fdbc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -2675,6 +2745,7 @@ _02140100: .word data_ov61_0217ea4c
 _02140104: .word data_ov61_0217ea54
 _02140108: .word data_ov61_0217a698
 
+	.global func_ov61_0214010c
 	arm_func_start func_ov61_0214010c
 func_ov61_0214010c: ; 0x0214010c
 	ldr ip, _02140114 ; =func_ov61_0214a794
@@ -2683,6 +2754,7 @@ func_ov61_0214010c: ; 0x0214010c
 	arm_func_end func_ov61_0214010c
 _02140114: .word func_ov61_0214a794
 
+	.global func_ov61_02140118
 	arm_func_start func_ov61_02140118
 func_ov61_02140118: ; 0x02140118
 	stmdb sp!, {r3, lr}
@@ -2703,6 +2775,7 @@ func_ov61_02140118: ; 0x02140118
 _0214014c: .word data_ov61_0217ea4c
 _02140150: .word 0xfffe8515
 
+	.global func_ov61_02140154
 	arm_func_start func_ov61_02140154
 func_ov61_02140154: ; 0x02140154
 	stmdb sp!, {r4, r5, r6, lr}
@@ -2741,6 +2814,7 @@ func_ov61_02140154: ; 0x02140154
 	arm_func_end func_ov61_02140154
 _021401d4: .word data_ov61_0217ebd4
 
+	.global func_ov61_021401d8
 	arm_func_start func_ov61_021401d8
 func_ov61_021401d8: ; 0x021401d8
 	stmdb sp!, {r3, lr}
@@ -2760,6 +2834,7 @@ func_ov61_021401d8: ; 0x021401d8
 _02140208: .word func_ov61_02140580
 _0214020c: .word data_ov61_0217ebd4
 
+	.global func_ov61_02140210
 	arm_func_start func_ov61_02140210
 func_ov61_02140210: ; 0x02140210
 	stmdb sp!, {r3, lr}
@@ -2831,6 +2906,7 @@ _021402fc: .word 0x000082ea
 _02140300: .word 0x0000ea60
 _02140304: .word 0xffff1172
 
+	.global func_ov61_02140308
 	arm_func_start func_ov61_02140308
 func_ov61_02140308: ; 0x02140308
 	ldr r0, _02140320 ; =data_ov61_0217ebd4
@@ -2843,6 +2919,7 @@ func_ov61_02140308: ; 0x02140308
 	arm_func_end func_ov61_02140308
 _02140320: .word data_ov61_0217ebd4
 
+	.global func_ov61_02140324
 	arm_func_start func_ov61_02140324
 func_ov61_02140324: ; 0x02140324
 	stmdb sp!, {r4, lr}
@@ -2869,6 +2946,7 @@ _02140368:
 	arm_func_end func_ov61_02140324
 _02140370: .word data_ov61_0217ebd4
 
+	.global func_ov61_02140374
 	arm_func_start func_ov61_02140374
 func_ov61_02140374: ; 0x02140374
 	stmdb sp!, {r3, lr}
@@ -2898,6 +2976,7 @@ _021403bc:
 	arm_func_end func_ov61_02140374
 _021403cc: .word data_ov61_0217ebd4
 
+	.global func_ov61_021403d0
 	arm_func_start func_ov61_021403d0
 func_ov61_021403d0: ; 0x021403d0
 	ldr r0, _021403f4 ; =data_ov61_0217ebd4
@@ -2913,6 +2992,7 @@ func_ov61_021403d0: ; 0x021403d0
 	arm_func_end func_ov61_021403d0
 _021403f4: .word data_ov61_0217ebd4
 
+	.global func_ov61_021403f8
 	arm_func_start func_ov61_021403f8
 func_ov61_021403f8: ; 0x021403f8
 	stmdb sp!, {r4, lr}
@@ -2953,6 +3033,7 @@ _02140454:
 	arm_func_end func_ov61_021403f8
 _02140468: .word 0xffff11b8
 
+	.global func_ov61_0214046c
 	arm_func_start func_ov61_0214046c
 func_ov61_0214046c: ; 0x0214046c
 	stmdb sp!, {r4, lr}
@@ -3030,6 +3111,7 @@ _02140574: .word data_ov61_0217a6a8
 _02140578: .word 0xffff15a0
 _0214057c: .word func_ov61_02140a08
 
+	.global func_ov61_02140580
 	arm_func_start func_ov61_02140580
 func_ov61_02140580: ; 0x02140580
 	ldr ip, _02140590 ; =func_ov61_02140598
@@ -3041,6 +3123,7 @@ func_ov61_02140580: ; 0x02140580
 _02140590: .word func_ov61_02140598
 _02140594: .word func_ov61_0214046c
 
+	.global func_ov61_02140598
 	arm_func_start func_ov61_02140598
 func_ov61_02140598: ; 0x02140598
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -3085,6 +3168,7 @@ func_ov61_02140598: ; 0x02140598
 	arm_func_end func_ov61_02140598
 _02140630: .word data_ov61_0217ebd4
 
+	.global func_ov61_02140634
 	arm_func_start func_ov61_02140634
 func_ov61_02140634: ; 0x02140634
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3210,6 +3294,7 @@ _021407f4: .word func_ov61_0213e034
 _021407f8: .word func_ov61_0213e068
 _021407fc: .word 0x00001c14
 
+	.global func_ov61_02140800
 	arm_func_start func_ov61_02140800
 func_ov61_02140800: ; 0x02140800
 	stmdb sp!, {r3, lr}
@@ -3348,6 +3433,7 @@ _021409fc: .word 0x00002710
 _02140a00: .word func_ov61_0213e034
 _02140a04: .word func_ov61_0213e068
 
+	.global func_ov61_02140a08
 	arm_func_start func_ov61_02140a08
 func_ov61_02140a08: ; 0x02140a08
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3460,6 +3546,7 @@ _02140b9c: .word 0x00000705
 _02140ba0: .word func_ov61_02140a08
 _02140ba4: .word func_ov61_02140580
 
+	.global func_ov61_02140ba8
 	arm_func_start func_ov61_02140ba8
 func_ov61_02140ba8: ; 0x02140ba8
 	ldr r0, _02140bd0 ; =data_ov61_0217ebd4
@@ -3477,6 +3564,7 @@ _02140bc8:
 	arm_func_end func_ov61_02140ba8
 _02140bd0: .word data_ov61_0217ebd4
 
+	.global func_ov61_02140bd4
 	arm_func_start func_ov61_02140bd4
 func_ov61_02140bd4: ; 0x02140bd4
 	ldr ip, _02140be8 ; =func_ov61_02140bec
@@ -3488,6 +3576,7 @@ func_ov61_02140bd4: ; 0x02140bd4
 	arm_func_end func_ov61_02140bd4
 _02140be8: .word func_ov61_02140bec
 
+	.global func_ov61_02140bec
 	arm_func_start func_ov61_02140bec
 func_ov61_02140bec: ; 0x02140bec
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -3569,6 +3658,7 @@ _02140cdc:
 _02140d00: .word data_ov61_0217a6ac
 _02140d04: .word data_ov61_0217a6b0
 
+	.global func_ov61_02140d08
 	arm_func_start func_ov61_02140d08
 func_ov61_02140d08: ; 0x02140d08
 	ldr r2, _02140d30 ; =data_ov61_0217ebe0
@@ -3585,6 +3675,7 @@ func_ov61_02140d08: ; 0x02140d08
 	arm_func_end func_ov61_02140d08
 _02140d30: .word data_ov61_0217ebe0
 
+	.global func_ov61_02140d34
 	arm_func_start func_ov61_02140d34
 func_ov61_02140d34: ; 0x02140d34
 	stmdb sp!, {r4, lr}
@@ -3646,6 +3737,7 @@ func_ov61_02140d34: ; 0x02140d34
 	arm_func_end func_ov61_02140d34
 _02140e10: .word data_ov61_0217ebe0
 
+	.global func_ov61_02140e14
 	arm_func_start func_ov61_02140e14
 func_ov61_02140e14: ; 0x02140e14
 	stmdb sp!, {r3, lr}
@@ -3721,6 +3813,7 @@ _02140ef4:
 	arm_func_end func_ov61_02140e14
 _02140f18: .word data_ov61_0217ebe0
 
+	.global func_ov61_02140f1c
 	arm_func_start func_ov61_02140f1c
 func_ov61_02140f1c: ; 0x02140f1c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3769,6 +3862,7 @@ func_ov61_02140f1c: ; 0x02140f1c
 	arm_func_end func_ov61_02140f1c
 _02140fc4: .word data_ov61_0217ebe0
 
+	.global func_ov61_02140fc8
 	arm_func_start func_ov61_02140fc8
 func_ov61_02140fc8: ; 0x02140fc8
 	stmdb sp!, {r4, lr}
@@ -3797,6 +3891,7 @@ _02141014:
 	arm_func_end func_ov61_02140fc8
 _0214101c: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141020
 	arm_func_start func_ov61_02141020
 func_ov61_02141020: ; 0x02141020
 	stmdb sp!, {r3, lr}
@@ -3821,6 +3916,7 @@ func_ov61_02141020: ; 0x02141020
 _02141064: .word data_ov61_0217ebe0
 _02141068: .word func_ov61_02141ca4
 
+	.global func_ov61_0214106c
 	arm_func_start func_ov61_0214106c
 func_ov61_0214106c: ; 0x0214106c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3849,6 +3945,7 @@ func_ov61_0214106c: ; 0x0214106c
 _021410c0: .word data_ov61_0217a6b4
 _021410c4: .word func_ov61_02141e54
 
+	.global func_ov61_021410c8
 	arm_func_start func_ov61_021410c8
 func_ov61_021410c8: ; 0x021410c8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -3887,6 +3984,7 @@ func_ov61_021410c8: ; 0x021410c8
 	arm_func_end func_ov61_021410c8
 _02141148: .word data_ov61_0217ebe0
 
+	.global func_ov61_0214114c
 	arm_func_start func_ov61_0214114c
 func_ov61_0214114c: ; 0x0214114c
 	ldr r0, _02141164 ; =data_ov61_0217ebe0
@@ -3899,6 +3997,7 @@ func_ov61_0214114c: ; 0x0214114c
 	arm_func_end func_ov61_0214114c
 _02141164: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141168
 	arm_func_start func_ov61_02141168
 func_ov61_02141168: ; 0x02141168
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3922,6 +4021,7 @@ func_ov61_02141168: ; 0x02141168
 	arm_func_end func_ov61_02141168
 _021411ac: .word data_ov61_0217ebe0
 
+	.global func_ov61_021411b0
 	arm_func_start func_ov61_021411b0
 func_ov61_021411b0: ; 0x021411b0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -3954,6 +4054,7 @@ _02141208:
 	arm_func_end func_ov61_021411b0
 _02141210: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141214
 	arm_func_start func_ov61_02141214
 func_ov61_02141214: ; 0x02141214
 	stmdb sp!, {r3, lr}
@@ -3973,6 +4074,7 @@ func_ov61_02141214: ; 0x02141214
 	arm_func_end func_ov61_02141214
 _02141248: .word data_ov61_0217ebe0
 
+	.global func_ov61_0214124c
 	arm_func_start func_ov61_0214124c
 func_ov61_0214124c: ; 0x0214124c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -4027,6 +4129,7 @@ _021412d8:
 	arm_func_end func_ov61_0214124c
 _021412f8: .word data_ov61_0217ebe0
 
+	.global func_ov61_021412fc
 	arm_func_start func_ov61_021412fc
 func_ov61_021412fc: ; 0x021412fc
 	stmdb sp!, {r4, lr}
@@ -4067,6 +4170,7 @@ _0214132c:
 	arm_func_end func_ov61_021412fc
 _02141380: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141384
 	arm_func_start func_ov61_02141384
 func_ov61_02141384: ; 0x02141384
 	ldr r0, _02141394 ; =data_ov61_0217ebe0
@@ -4077,6 +4181,7 @@ func_ov61_02141384: ; 0x02141384
 	arm_func_end func_ov61_02141384
 _02141394: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141398
 	arm_func_start func_ov61_02141398
 func_ov61_02141398: ; 0x02141398
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4118,6 +4223,7 @@ _02141414:
 _0214141c: .word data_ov61_0217ebe0
 _02141420: .word 0x000082ea
 
+	.global func_ov61_02141424
 	arm_func_start func_ov61_02141424
 func_ov61_02141424: ; 0x02141424
 	ldr r0, _02141450 ; =data_ov61_0217ebe0
@@ -4135,6 +4241,7 @@ func_ov61_02141424: ; 0x02141424
 	arm_func_end func_ov61_02141424
 _02141450: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141454
 	arm_func_start func_ov61_02141454
 func_ov61_02141454: ; 0x02141454
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -4305,6 +4412,7 @@ _02141690:
 _021416b8: .word data_ov61_0217ebe0
 _021416bc: .word func_ov61_02141a68
 
+	.global func_ov61_021416c0
 	arm_func_start func_ov61_021416c0
 func_ov61_021416c0: ; 0x021416c0
 	stmdb sp!, {r3, lr}
@@ -4324,6 +4432,7 @@ func_ov61_021416c0: ; 0x021416c0
 	arm_func_end func_ov61_021416c0
 _021416f4: .word data_ov61_0217ebe0
 
+	.global func_ov61_021416f8
 	arm_func_start func_ov61_021416f8
 func_ov61_021416f8: ; 0x021416f8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4351,6 +4460,7 @@ func_ov61_021416f8: ; 0x021416f8
 	arm_func_end func_ov61_021416f8
 _0214174c: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141750
 	arm_func_start func_ov61_02141750
 func_ov61_02141750: ; 0x02141750
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -4404,6 +4514,7 @@ _021417f0:
 	arm_func_end func_ov61_02141750
 _021417f8: .word data_ov61_0217ebe0
 
+	.global func_ov61_021417fc
 	arm_func_start func_ov61_021417fc
 func_ov61_021417fc: ; 0x021417fc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -4482,6 +4593,7 @@ _021418f4:
 	arm_func_end func_ov61_021417fc
 _02141900: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141904
 	arm_func_start func_ov61_02141904
 func_ov61_02141904: ; 0x02141904
 	stmdb sp!, {r4, lr}
@@ -4500,6 +4612,7 @@ func_ov61_02141904: ; 0x02141904
 _02141930: .word data_ov61_0217ebe0
 _02141934: .word data_ov61_0217a6ec
 
+	.global func_ov61_02141938
 	arm_func_start func_ov61_02141938
 func_ov61_02141938: ; 0x02141938
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4557,6 +4670,7 @@ _021419cc:
 	arm_func_end func_ov61_02141938
 _021419f0: .word data_ov61_0217ebe0
 
+	.global func_ov61_021419f4
 	arm_func_start func_ov61_021419f4
 func_ov61_021419f4: ; 0x021419f4
 	stmdb sp!, {r4, lr}
@@ -4597,6 +4711,7 @@ _02141a50:
 	arm_func_end func_ov61_021419f4
 _02141a64: .word 0xfffeeaa8
 
+	.global func_ov61_02141a68
 	arm_func_start func_ov61_02141a68
 func_ov61_02141a68: ; 0x02141a68
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -4755,6 +4870,7 @@ _02141c7c:
 	arm_func_end func_ov61_02141a68
 _02141ca0: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141ca4
 	arm_func_start func_ov61_02141ca4
 func_ov61_02141ca4: ; 0x02141ca4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -4874,6 +4990,7 @@ _02141e38:
 _02141e4c: .word data_ov61_0217ebe0
 _02141e50: .word data_ov61_0217a6f0
 
+	.global func_ov61_02141e54
 	arm_func_start func_ov61_02141e54
 func_ov61_02141e54: ; 0x02141e54
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -4988,6 +5105,7 @@ _02141fd4:
 	arm_func_end func_ov61_02141e54
 _02141fec: .word data_ov61_0217ebe0
 
+	.global func_ov61_02141ff0
 	arm_func_start func_ov61_02141ff0
 func_ov61_02141ff0: ; 0x02141ff0
 	ldr r0, _02142000 ; =data_ov61_0217ebe0
@@ -4998,6 +5116,7 @@ func_ov61_02141ff0: ; 0x02141ff0
 	arm_func_end func_ov61_02141ff0
 _02142000: .word data_ov61_0217ebe0
 
+	.global func_ov61_02142004
 	arm_func_start func_ov61_02142004
 func_ov61_02142004: ; 0x02142004
 	stmdb sp!, {r3, lr}
@@ -5024,6 +5143,7 @@ _02142038:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02142004
 
+	.global func_ov61_02142054
 	arm_func_start func_ov61_02142054
 func_ov61_02142054: ; 0x02142054
 	stmdb sp!, {r3, lr}
@@ -5036,6 +5156,7 @@ func_ov61_02142054: ; 0x02142054
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02142054
 
+	.global func_ov61_02142074
 	arm_func_start func_ov61_02142074
 func_ov61_02142074: ; 0x02142074
 	stmdb sp!, {r3, lr}
@@ -5061,6 +5182,7 @@ _021420b8:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02142074
 
+	.global func_ov61_021420c0
 	arm_func_start func_ov61_021420c0
 func_ov61_021420c0: ; 0x021420c0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -5145,6 +5267,7 @@ _021421e0: .word data_ov61_0217ebfa
 _021421e4: .word 0xfffec77f
 _021421e8: .word data_ov61_0217ec00
 
+	.global func_ov61_021421ec
 	arm_func_start func_ov61_021421ec
 func_ov61_021421ec: ; 0x021421ec
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -5230,6 +5353,7 @@ _02142310: .word data_ov61_0217ebfa
 _02142314: .word 0xfffec77f
 _02142318: .word data_ov61_0217ec00
 
+	.global func_ov61_0214231c
 	arm_func_start func_ov61_0214231c
 func_ov61_0214231c: ; 0x0214231c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -5261,6 +5385,7 @@ _02142374:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214231c
 
+	.global func_ov61_0214237c
 	arm_func_start func_ov61_0214237c
 func_ov61_0214237c: ; 0x0214237c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -5361,6 +5486,7 @@ func_ov61_0214237c: ; 0x0214237c
 	arm_func_end func_ov61_0214237c
 _021424f4: .word data_ov61_0217ebe8
 
+	.global func_ov61_021424f8
 	arm_func_start func_ov61_021424f8
 func_ov61_021424f8: ; 0x021424f8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -5473,6 +5599,7 @@ _02142688: .word func_ov61_02149bd8
 _0214268c: .word func_ov61_02149bf8
 _02142690: .word func_ov61_02149cac
 
+	.global func_ov61_02142694
 	arm_func_start func_ov61_02142694
 func_ov61_02142694: ; 0x02142694
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -5607,6 +5734,7 @@ _02142874: .word 0xfffec77f
 _02142878: .word func_ov61_02149298
 _0214287c: .word data_ov61_0217a704
 
+	.global func_ov61_02142880
 	arm_func_start func_ov61_02142880
 func_ov61_02142880: ; 0x02142880
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -5770,6 +5898,7 @@ _02142ad8: .word data_ov61_0217a718
 _02142adc: .word data_ov61_0217a714
 _02142ae0: .word data_ov61_0217a71c
 
+	.global func_ov61_02142ae4
 	arm_func_start func_ov61_02142ae4
 func_ov61_02142ae4: ; 0x02142ae4
 	stmdb sp!, {r4, lr}
@@ -5822,6 +5951,7 @@ _02142b74:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02142ae4
 
+	.global func_ov61_02142b94
 	arm_func_start func_ov61_02142b94
 func_ov61_02142b94: ; 0x02142b94
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -6501,6 +6631,7 @@ _021435a4: .word 0xff403b3a
 _021435a8: .word 0x00002710
 _021435ac: .word 0xfffeb3ee
 
+	.global func_ov61_021435b0
 	arm_func_start func_ov61_021435b0
 func_ov61_021435b0: ; 0x021435b0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -6571,6 +6702,7 @@ _02143694:
 	arm_func_end func_ov61_021435b0
 _021436a0: .word data_ov61_0217e158
 
+	.global func_ov61_021436a4
 	arm_func_start func_ov61_021436a4
 func_ov61_021436a4: ; 0x021436a4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -6730,6 +6862,7 @@ _021438e0: .word data_ov61_0217a738
 _021438e4: .word 0xfffec5e6
 _021438e8: .word 0x0000ffff
 
+	.global func_ov61_021438ec
 	arm_func_start func_ov61_021438ec
 func_ov61_021438ec: ; 0x021438ec
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -6903,6 +7036,7 @@ _02143b64: .word data_ov61_0217a708
 _02143b68: .word 0x00001388
 _02143b6c: .word 0xfffeabc4
 
+	.global func_ov61_02143b70
 	arm_func_start func_ov61_02143b70
 func_ov61_02143b70: ; 0x02143b70
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -6942,6 +7076,7 @@ _02143bd0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02143b70
 
+	.global func_ov61_02143bf4
 	arm_func_start func_ov61_02143bf4
 func_ov61_02143bf4: ; 0x02143bf4
 	stmdb sp!, {r3, lr}
@@ -6954,6 +7089,7 @@ func_ov61_02143bf4: ; 0x02143bf4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02143bf4
 
+	.global func_ov61_02143c14
 	arm_func_start func_ov61_02143c14
 func_ov61_02143c14: ; 0x02143c14
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -7006,6 +7142,7 @@ func_ov61_02143c14: ; 0x02143c14
 	arm_func_end func_ov61_02143c14
 _02143ccc: .word data_ov61_0217a704
 
+	.global func_ov61_02143cd0
 	arm_func_start func_ov61_02143cd0
 func_ov61_02143cd0: ; 0x02143cd0
 	stmdb sp!, {r3, lr}
@@ -7025,6 +7162,7 @@ func_ov61_02143cd0: ; 0x02143cd0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02143cd0
 
+	.global func_ov61_02143d0c
 	arm_func_start func_ov61_02143d0c
 func_ov61_02143d0c: ; 0x02143d0c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7150,6 +7288,7 @@ _02143ea8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02143d0c
 
+	.global func_ov61_02143ec4
 	arm_func_start func_ov61_02143ec4
 func_ov61_02143ec4: ; 0x02143ec4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -7259,6 +7398,7 @@ _02144030:
 _02144038: .word 0xfffec780
 _0214403c: .word 0xfffec5d2
 
+	.global func_ov61_02144040
 	arm_func_start func_ov61_02144040
 func_ov61_02144040: ; 0x02144040
 	stmdb sp!, {r4, lr}
@@ -7272,6 +7412,7 @@ func_ov61_02144040: ; 0x02144040
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02144040
 
+	.global func_ov61_02144064
 	arm_func_start func_ov61_02144064
 func_ov61_02144064: ; 0x02144064
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7304,6 +7445,7 @@ _021440c0:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02144064
 
+	.global func_ov61_021440c8
 	arm_func_start func_ov61_021440c8
 func_ov61_021440c8: ; 0x021440c8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -7421,6 +7563,7 @@ _02144278:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_021440c8
 
+	.global func_ov61_02144280
 	arm_func_start func_ov61_02144280
 func_ov61_02144280: ; 0x02144280
 	stmdb sp!, {r3, lr}
@@ -7433,6 +7576,7 @@ func_ov61_02144280: ; 0x02144280
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02144280
 
+	.global func_ov61_021442a0
 	arm_func_start func_ov61_021442a0
 func_ov61_021442a0: ; 0x021442a0
 	stmdb sp!, {r3, lr}
@@ -7445,6 +7589,7 @@ func_ov61_021442a0: ; 0x021442a0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021442a0
 
+	.global func_ov61_021442c0
 	arm_func_start func_ov61_021442c0
 func_ov61_021442c0: ; 0x021442c0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7472,6 +7617,7 @@ _02144308:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021442c0
 
+	.global func_ov61_02144314
 	arm_func_start func_ov61_02144314
 func_ov61_02144314: ; 0x02144314
 	stmdb sp!, {r4, lr}
@@ -7489,6 +7635,7 @@ func_ov61_02144314: ; 0x02144314
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02144314
 
+	.global func_ov61_02144348
 	arm_func_start func_ov61_02144348
 func_ov61_02144348: ; 0x02144348
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -7537,6 +7684,7 @@ _021443d0:
 	arm_func_end func_ov61_02144348
 _021443e8: .word data_ov61_0217f330
 
+	.global func_ov61_021443ec
 	arm_func_start func_ov61_021443ec
 func_ov61_021443ec: ; 0x021443ec
 	stmdb sp!, {lr}
@@ -7594,6 +7742,7 @@ _021444b0: .word data_ov61_0217a750
 _021444b4: .word data_ov61_0217a754
 _021444b8: .word data_ov61_0217a71c
 
+	.global func_ov61_021444bc
 	arm_func_start func_ov61_021444bc
 func_ov61_021444bc: ; 0x021444bc
 	stmdb sp!, {r3, lr}
@@ -7631,6 +7780,7 @@ _0214451c:
 	arm_func_end func_ov61_021444bc
 _02144530: .word data_ov61_0217ebe8
 
+	.global func_ov61_02144534
 	arm_func_start func_ov61_02144534
 func_ov61_02144534: ; 0x02144534
 	stmdb sp!, {r3, lr}
@@ -7641,6 +7791,7 @@ func_ov61_02144534: ; 0x02144534
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02144534
 
+	.global func_ov61_0214454c
 	arm_func_start func_ov61_0214454c
 func_ov61_0214454c: ; 0x0214454c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -7879,6 +8030,7 @@ _02144864:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214454c
 
+	.global func_ov61_021448e4
 	arm_func_start func_ov61_021448e4
 func_ov61_021448e4: ; 0x021448e4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -7926,6 +8078,7 @@ _02144980: .word data_ov61_0217a76c
 _02144984: .word data_ov61_0217a778
 _02144988: .word data_ov61_0217a784
 
+	.global func_ov61_0214498c
 	arm_func_start func_ov61_0214498c
 func_ov61_0214498c: ; 0x0214498c
 	stmdb sp!, {r3, lr}
@@ -7966,6 +8119,7 @@ _021449f8:
 	arm_func_end func_ov61_0214498c
 _02144a0c: .word data_ov61_0217ebe8
 
+	.global func_ov61_02144a10
 	arm_func_start func_ov61_02144a10
 func_ov61_02144a10: ; 0x02144a10
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -8109,6 +8263,7 @@ _02144c00: .word data_ov61_0217a79c
 _02144c04: .word data_ov61_0217a758
 _02144c08: .word 0x00efb5f7
 
+	.global func_ov61_02144c0c
 	arm_func_start func_ov61_02144c0c
 func_ov61_02144c0c: ; 0x02144c0c
 	stmdb sp!, {lr}
@@ -8140,6 +8295,7 @@ _02144c68: .word data_ov61_0217a76c
 _02144c6c: .word data_ov61_0217a7a4
 _02144c70: .word data_ov61_0217a778
 
+	.global func_ov61_02144c74
 	arm_func_start func_ov61_02144c74
 func_ov61_02144c74: ; 0x02144c74
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -8343,6 +8499,7 @@ _02144f50:
 	arm_func_end func_ov61_02144c74
 _02144f5c: .word 0x0000a8c0
 
+	.global func_ov61_02144f60
 	arm_func_start func_ov61_02144f60
 func_ov61_02144f60: ; 0x02144f60
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -8397,6 +8554,7 @@ _02144fc4:
 _02145014: .word func_ov61_02149dbc
 _02145018: .word func_ov61_02149db8
 
+	.global func_ov61_0214501c
 	arm_func_start func_ov61_0214501c
 func_ov61_0214501c: ; 0x0214501c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -8519,6 +8677,7 @@ _021451bc:
 _021451c8: .word data_ov61_0217a708
 _021451cc: .word data_ov61_0217a7fc
 
+	.global func_ov61_021451d0
 	arm_func_start func_ov61_021451d0
 func_ov61_021451d0: ; 0x021451d0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -8594,6 +8753,7 @@ _02145278:
 	arm_func_end func_ov61_021451d0
 _021452dc: .word data_ov61_0217a800
 
+	.global func_ov61_021452e0
 	arm_func_start func_ov61_021452e0
 func_ov61_021452e0: ; 0x021452e0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -8641,6 +8801,7 @@ _02145378: .word data_ov61_0217a818
 _0214537c: .word data_ov61_0217a808
 _02145380: .word data_ov61_0217a810
 
+	.global func_ov61_02145384
 	arm_func_start func_ov61_02145384
 func_ov61_02145384: ; 0x02145384
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -8686,6 +8847,7 @@ _021453dc:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02145384
 
+	.global func_ov61_02145420
 	arm_func_start func_ov61_02145420
 func_ov61_02145420: ; 0x02145420
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -9710,6 +9872,7 @@ _021462f0:
 _021462fc: .word data_ov61_0217ebe8
 _02146300: .word 0x000082ea
 
+	.global func_ov61_02146304
 	arm_func_start func_ov61_02146304
 func_ov61_02146304: ; 0x02146304
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -9927,6 +10090,7 @@ _021465f4:
 	arm_func_end func_ov61_02146304
 _021465fc: .word data_ov61_0217ebe8
 
+	.global func_ov61_02146600
 	arm_func_start func_ov61_02146600
 func_ov61_02146600: ; 0x02146600
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -10046,6 +10210,7 @@ _021467ac:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02146600
 
+	.global func_ov61_021467c0
 	arm_func_start func_ov61_021467c0
 func_ov61_021467c0: ; 0x021467c0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -10071,6 +10236,7 @@ _021467f8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021467c0
 
+	.global func_ov61_02146810
 	arm_func_start func_ov61_02146810
 func_ov61_02146810: ; 0x02146810
 	stmdb sp!, {r4, lr}
@@ -10087,6 +10253,7 @@ _02146834:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02146810
 
+	.global func_ov61_0214683c
 	arm_func_start func_ov61_0214683c
 func_ov61_0214683c: ; 0x0214683c
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -10205,6 +10372,7 @@ _02146964:
 _021469e4: .word data_ov61_0217a758
 _021469e8: .word 0x00001770
 
+	.global func_ov61_021469ec
 	arm_func_start func_ov61_021469ec
 func_ov61_021469ec: ; 0x021469ec
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -10395,6 +10563,7 @@ _02146ca8: .word data_ov61_0217a71c
 _02146cac: .word data_ov61_0217a70c
 _02146cb0: .word data_ov61_0217a718
 
+	.global func_ov61_02146cb4
 	arm_func_start func_ov61_02146cb4
 func_ov61_02146cb4: ; 0x02146cb4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -10457,6 +10626,7 @@ _02146d80:
 	arm_func_end func_ov61_02146cb4
 _02146d88: .word 0xfffec5e6
 
+	.global func_ov61_02146d8c
 	arm_func_start func_ov61_02146d8c
 func_ov61_02146d8c: ; 0x02146d8c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -10482,6 +10652,7 @@ func_ov61_02146d8c: ; 0x02146d8c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02146d8c
 
+	.global func_ov61_02146de0
 	arm_func_start func_ov61_02146de0
 func_ov61_02146de0: ; 0x02146de0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -10632,6 +10803,7 @@ _02146ff4:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02146de0
 
+	.global func_ov61_02146ffc
 	arm_func_start func_ov61_02146ffc
 func_ov61_02146ffc: ; 0x02146ffc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -10690,6 +10862,7 @@ _021470b0:
 	arm_func_end func_ov61_02146ffc
 _021470b8: .word 0xfffec5d2
 
+	.global func_ov61_021470bc
 	arm_func_start func_ov61_021470bc
 func_ov61_021470bc: ; 0x021470bc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -10753,6 +10926,7 @@ _02147154:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_021470bc
 
+	.global func_ov61_021471a0
 	arm_func_start func_ov61_021471a0
 func_ov61_021471a0: ; 0x021471a0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
@@ -11195,6 +11369,7 @@ _021477c4:
 _021477f8: .word data_ov61_0217a704
 _021477fc: .word data_ov61_0217ebe8
 
+	.global func_ov61_02147800
 	arm_func_start func_ov61_02147800
 func_ov61_02147800: ; 0x02147800
 	stmdb sp!, {r4, r5, r6, lr}
@@ -11237,6 +11412,7 @@ _02147880:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02147800
 
+	.global func_ov61_02147888
 	arm_func_start func_ov61_02147888
 func_ov61_02147888: ; 0x02147888
 	stmdb sp!, {r3, lr}
@@ -11348,6 +11524,7 @@ _02147a08:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02147888
 
+	.global func_ov61_02147a10
 	arm_func_start func_ov61_02147a10
 func_ov61_02147a10: ; 0x02147a10
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -11402,6 +11579,7 @@ _02147a64:
 	arm_func_end func_ov61_02147a10
 _02147acc: .word data_ov61_0217a704
 
+	.global func_ov61_02147ad0
 	arm_func_start func_ov61_02147ad0
 func_ov61_02147ad0: ; 0x02147ad0
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -11460,6 +11638,7 @@ _02147b98:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02147ad0
 
+	.global func_ov61_02147ba4
 	arm_func_start func_ov61_02147ba4
 func_ov61_02147ba4: ; 0x02147ba4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -11532,6 +11711,7 @@ _02147c74:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02147ba4
 
+	.global func_ov61_02147ca4
 	arm_func_start func_ov61_02147ca4
 func_ov61_02147ca4: ; 0x02147ca4
 	stmdb sp!, {r3, lr}
@@ -11549,6 +11729,7 @@ func_ov61_02147ca4: ; 0x02147ca4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02147ca4
 
+	.global func_ov61_02147cd8
 	arm_func_start func_ov61_02147cd8
 func_ov61_02147cd8: ; 0x02147cd8
 	stmdb sp!, {r4, lr}
@@ -11604,6 +11785,7 @@ _02147d90:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02147cd8
 
+	.global func_ov61_02147d98
 	arm_func_start func_ov61_02147d98
 func_ov61_02147d98: ; 0x02147d98
 	stmdb sp!, {r3, r4, r5, lr}
@@ -11637,6 +11819,7 @@ _02147dec:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02147d98
 
+	.global func_ov61_02147e08
 	arm_func_start func_ov61_02147e08
 func_ov61_02147e08: ; 0x02147e08
 	stmdb sp!, {r3, lr}
@@ -11653,6 +11836,7 @@ func_ov61_02147e08: ; 0x02147e08
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02147e08
 
+	.global func_ov61_02147e38
 	arm_func_start func_ov61_02147e38
 func_ov61_02147e38: ; 0x02147e38
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -11745,6 +11929,7 @@ _02147f5c:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_02147e38
 
+	.global func_ov61_02147f74
 	arm_func_start func_ov61_02147f74
 func_ov61_02147f74: ; 0x02147f74
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -11813,6 +11998,7 @@ _02148034:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02147f74
 
+	.global func_ov61_02148064
 	arm_func_start func_ov61_02148064
 func_ov61_02148064: ; 0x02148064
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -11988,6 +12174,7 @@ _021482c4:
 _021482cc: .word 0x000082ea
 _021482d0: .word 0x00001770
 
+	.global func_ov61_021482d4
 	arm_func_start func_ov61_021482d4
 func_ov61_021482d4: ; 0x021482d4
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -12025,6 +12212,7 @@ _02148300:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_021482d4
 
+	.global func_ov61_02148354
 	arm_func_start func_ov61_02148354
 func_ov61_02148354: ; 0x02148354
 	stmdb sp!, {r4, r5, r6, lr}
@@ -12177,6 +12365,7 @@ _0214856c:
 	arm_func_end func_ov61_02148354
 _02148574: .word 0x000082ea
 
+	.global func_ov61_02148578
 	arm_func_start func_ov61_02148578
 func_ov61_02148578: ; 0x02148578
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -12321,6 +12510,7 @@ _02148768:
 _02148770: .word 0x000082ea
 _02148774: .word 0x00001770
 
+	.global func_ov61_02148778
 	arm_func_start func_ov61_02148778
 func_ov61_02148778: ; 0x02148778
 	ldr r2, _021487b4 ; =data_ov61_0217ebf8
@@ -12343,6 +12533,7 @@ _02148784:
 	arm_func_end func_ov61_02148778
 _021487b4: .word data_ov61_0217ebf8
 
+	.global func_ov61_021487b8
 	arm_func_start func_ov61_021487b8
 func_ov61_021487b8: ; 0x021487b8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -12372,6 +12563,7 @@ _021487e4:
 _02148808: .word data_ov61_0217ebf8
 _0214880c: .word 0x00000738
 
+	.global func_ov61_02148810
 	arm_func_start func_ov61_02148810
 func_ov61_02148810: ; 0x02148810
 	stmdb sp!, {r4, r5, r6, lr}
@@ -12408,6 +12600,7 @@ _02148878:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02148810
 
+	.global func_ov61_02148880
 	arm_func_start func_ov61_02148880
 func_ov61_02148880: ; 0x02148880
 	stmdb sp!, {r3, r4, r5, lr}
@@ -12443,6 +12636,7 @@ _021488e8:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02148880
 
+	.global func_ov61_021488f0
 	arm_func_start func_ov61_021488f0
 func_ov61_021488f0: ; 0x021488f0
 	stmdb sp!, {r4, lr}
@@ -12504,6 +12698,7 @@ _021489c0: .word data_ov61_0217a76c
 _021489c4: .word data_ov61_0217a778
 _021489c8: .word data_ov61_0217a758
 
+	.global func_ov61_021489cc
 	arm_func_start func_ov61_021489cc
 func_ov61_021489cc: ; 0x021489cc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -12536,6 +12731,7 @@ _02148a28:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021489cc
 
+	.global func_ov61_02148a30
 	arm_func_start func_ov61_02148a30
 func_ov61_02148a30: ; 0x02148a30
 	stmdb sp!, {r4, r5, r6, lr}
@@ -12568,6 +12764,7 @@ _02148a8c:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02148a30
 
+	.global func_ov61_02148a94
 	arm_func_start func_ov61_02148a94
 func_ov61_02148a94: ; 0x02148a94
 	stmdb sp!, {r4, lr}
@@ -12582,6 +12779,7 @@ func_ov61_02148a94: ; 0x02148a94
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02148a94
 
+	.global func_ov61_02148abc
 	arm_func_start func_ov61_02148abc
 func_ov61_02148abc: ; 0x02148abc
 	stmdb sp!, {r4, lr}
@@ -12615,6 +12813,7 @@ func_ov61_02148abc: ; 0x02148abc
 	arm_func_end func_ov61_02148abc
 _02148b28: .word data_ov61_0217ebe8
 
+	.global func_ov61_02148b2c
 	arm_func_start func_ov61_02148b2c
 func_ov61_02148b2c: ; 0x02148b2c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -12901,6 +13100,7 @@ _02148f4c: .word data_ov61_0217ebe8
 _02148f50: .word 0x000082ea
 _02148f54: .word 0x00001770
 
+	.global func_ov61_02148f58
 	arm_func_start func_ov61_02148f58
 func_ov61_02148f58: ; 0x02148f58
 	stmdb sp!, {r4, lr}
@@ -12941,6 +13141,7 @@ _02148fb4:
 	arm_func_end func_ov61_02148f58
 _02148fc8: .word 0xfffec398
 
+	.global func_ov61_02148fcc
 	arm_func_start func_ov61_02148fcc
 func_ov61_02148fcc: ; 0x02148fcc
 	stmdb sp!, {r4, lr}
@@ -12991,6 +13192,7 @@ _02149048:
 	arm_func_end func_ov61_02148fcc
 _0214905c: .word 0xfffeb3f8
 
+	.global func_ov61_02149060
 	arm_func_start func_ov61_02149060
 func_ov61_02149060: ; 0x02149060
 	stmdb sp!, {r4, r5, r6, lr}
@@ -13066,6 +13268,7 @@ _0214913c: .word 0xfffedef0
 _02149140: .word 0xfffeb7e0
 _02149144: .word 0xfffe90d0
 
+	.global func_ov61_02149148
 	arm_func_start func_ov61_02149148
 func_ov61_02149148: ; 0x02149148
 	stmdb sp!, {r4, lr}
@@ -13097,6 +13300,7 @@ _0214918c:
 	arm_func_end func_ov61_02149148
 _021491a0: .word 0xfffeb010
 
+	.global func_ov61_021491a4
 	arm_func_start func_ov61_021491a4
 func_ov61_021491a4: ; 0x021491a4
 	stmdb sp!, {r4, lr}
@@ -13126,6 +13330,7 @@ _021491e8:
 	arm_func_end func_ov61_021491a4
 _021491f0: .word 0xfffeb007
 
+	.global func_ov61_021491f4
 	arm_func_start func_ov61_021491f4
 func_ov61_021491f4: ; 0x021491f4
 	stmdb sp!, {r4, lr}
@@ -13181,6 +13386,7 @@ _0214928c:
 	arm_func_end func_ov61_021491f4
 _02149294: .word 0xfffeac28
 
+	.global func_ov61_02149298
 	arm_func_start func_ov61_02149298
 func_ov61_02149298: ; 0x02149298
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -13457,11 +13663,13 @@ _02149658:
 _0214967c: .word 0x00efb5f7
 _02149680: .word data_ov61_0217a758
 
+	.global func_ov61_02149684
 	arm_func_start func_ov61_02149684
 func_ov61_02149684: ; 0x02149684
 	bx lr
 	arm_func_end func_ov61_02149684
 
+	.global func_ov61_02149688
 	arm_func_start func_ov61_02149688
 func_ov61_02149688: ; 0x02149688
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -13596,6 +13804,7 @@ _02149854: .word data_ov61_0217a758
 _02149858: .word 0x007fffff
 _0214985c: .word data_ov61_0217a784
 
+	.global func_ov61_02149860
 	arm_func_start func_ov61_02149860
 func_ov61_02149860: ; 0x02149860
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -13697,6 +13906,7 @@ _02149980:
 _021499c8: .word data_ov61_0217a210
 _021499cc: .word data_ov61_0217a784
 
+	.global func_ov61_021499d0
 	arm_func_start func_ov61_021499d0
 func_ov61_021499d0: ; 0x021499d0
 	stmdb sp!, {r4, lr}
@@ -13795,16 +14005,19 @@ _02149b0c: .word data_ov61_0217ebf8
 _02149b10: .word data_ov61_0217ebf9
 _02149b14: .word data_ov61_0217ec00
 
+	.global func_ov61_02149b18
 	arm_func_start func_ov61_02149b18
 func_ov61_02149b18: ; 0x02149b18
 	bx lr
 	arm_func_end func_ov61_02149b18
 
+	.global func_ov61_02149b1c
 	arm_func_start func_ov61_02149b1c
 func_ov61_02149b1c: ; 0x02149b1c
 	bx lr
 	arm_func_end func_ov61_02149b1c
 
+	.global func_ov61_02149b20
 	arm_func_start func_ov61_02149b20
 func_ov61_02149b20: ; 0x02149b20
 	stmdb sp!, {r4, r5, r6, lr}
@@ -13854,12 +14067,14 @@ _02149bac:
 	arm_func_end func_ov61_02149b20
 _02149bc0: .word data_ov61_0217ebf8
 
+	.global func_ov61_02149bc4
 	arm_func_start func_ov61_02149bc4
 func_ov61_02149bc4: ; 0x02149bc4
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov61_02149bc4
 
+	.global func_ov61_02149bcc
 	arm_func_start func_ov61_02149bcc
 func_ov61_02149bcc: ; 0x02149bcc
 	ldr ip, _02149bd4 ; =func_ov61_02149060
@@ -13868,6 +14083,7 @@ func_ov61_02149bcc: ; 0x02149bcc
 	arm_func_end func_ov61_02149bcc
 _02149bd4: .word func_ov61_02149060
 
+	.global func_ov61_02149bd8
 	arm_func_start func_ov61_02149bd8
 func_ov61_02149bd8: ; 0x02149bd8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -13880,6 +14096,7 @@ func_ov61_02149bd8: ; 0x02149bd8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02149bd8
 
+	.global func_ov61_02149bf8
 	arm_func_start func_ov61_02149bf8
 func_ov61_02149bf8: ; 0x02149bf8
 	stmdb sp!, {r4, lr}
@@ -13933,6 +14150,7 @@ _02149c74:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02149bf8
 
+	.global func_ov61_02149cac
 	arm_func_start func_ov61_02149cac
 func_ov61_02149cac: ; 0x02149cac
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -14007,11 +14225,13 @@ _02149d20:
 	arm_func_end func_ov61_02149cac
 _02149db4: .word data_ov61_0217a800
 
+	.global func_ov61_02149db8
 	arm_func_start func_ov61_02149db8
 func_ov61_02149db8: ; 0x02149db8
 	bx lr
 	arm_func_end func_ov61_02149db8
 
+	.global func_ov61_02149dbc
 	arm_func_start func_ov61_02149dbc
 func_ov61_02149dbc: ; 0x02149dbc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -14277,6 +14497,7 @@ _0214a138:
 _0214a18c: .word data_ov61_0217a708
 _0214a190: .word 0x00001388
 
+	.global func_ov61_0214a194
 	arm_func_start func_ov61_0214a194
 func_ov61_0214a194: ; 0x0214a194
 	stmdb sp!, {r3, lr}
@@ -14313,6 +14534,7 @@ _0214a1f8:
 	arm_func_end func_ov61_0214a194
 _0214a200: .word 0xfffeae6c
 
+	.global func_ov61_0214a204
 	arm_func_start func_ov61_0214a204
 func_ov61_0214a204: ; 0x0214a204
 	ldr r1, _0214a210 ; =data_ov61_0217ebe8
@@ -14322,6 +14544,7 @@ func_ov61_0214a204: ; 0x0214a204
 	arm_func_end func_ov61_0214a204
 _0214a210: .word data_ov61_0217ebe8
 
+	.global func_ov61_0214a214
 	arm_func_start func_ov61_0214a214
 func_ov61_0214a214: ; 0x0214a214
 	ldr r0, _0214a220 ; =data_ov61_0217ebe8
@@ -14331,6 +14554,7 @@ func_ov61_0214a214: ; 0x0214a214
 	arm_func_end func_ov61_0214a214
 _0214a220: .word data_ov61_0217ebe8
 
+	.global func_ov61_0214a224
 	arm_func_start func_ov61_0214a224
 func_ov61_0214a224: ; 0x0214a224
 	ldr r1, _0214a234 ; =data_ov61_0217ebe8
@@ -14341,6 +14565,7 @@ func_ov61_0214a224: ; 0x0214a224
 	arm_func_end func_ov61_0214a224
 _0214a234: .word data_ov61_0217ebe8
 
+	.global func_ov61_0214a238
 	arm_func_start func_ov61_0214a238
 func_ov61_0214a238: ; 0x0214a238
 	ldr ip, _0214a244 ; =func_ov61_0214a248
@@ -14350,6 +14575,7 @@ func_ov61_0214a238: ; 0x0214a238
 	arm_func_end func_ov61_0214a238
 _0214a244: .word func_ov61_0214a248
 
+	.global func_ov61_0214a248
 	arm_func_start func_ov61_0214a248
 func_ov61_0214a248: ; 0x0214a248
 	stmdb sp!, {r3, r4, r5, lr}
@@ -14389,6 +14615,7 @@ _0214a290:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214a248
 
+	.global func_ov61_0214a2c8
 	arm_func_start func_ov61_0214a2c8
 func_ov61_0214a2c8: ; 0x0214a2c8
 	stmdb sp!, {r3, lr}
@@ -14401,6 +14628,7 @@ func_ov61_0214a2c8: ; 0x0214a2c8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214a2c8
 
+	.global func_ov61_0214a2e8
 	arm_func_start func_ov61_0214a2e8
 func_ov61_0214a2e8: ; 0x0214a2e8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -14479,6 +14707,7 @@ _0214a3f8:
 	arm_func_end func_ov61_0214a2e8
 _0214a404: .word data_ov61_0217f350
 
+	.global func_ov61_0214a408
 	arm_func_start func_ov61_0214a408
 func_ov61_0214a408: ; 0x0214a408
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -14513,6 +14742,7 @@ _0214a460:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_0214a408
 
+	.global func_ov61_0214a478
 	arm_func_start func_ov61_0214a478
 func_ov61_0214a478: ; 0x0214a478
 	stmdb sp!, {r4, r5, r6, lr}
@@ -14555,6 +14785,7 @@ _0214a4fc:
 	arm_func_end func_ov61_0214a478
 _0214a504: .word data_ov61_0217f350
 
+	.global func_ov61_0214a508
 	arm_func_start func_ov61_0214a508
 func_ov61_0214a508: ; 0x0214a508
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -14589,6 +14820,7 @@ _0214a560:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_0214a508
 
+	.global func_ov61_0214a578
 	arm_func_start func_ov61_0214a578
 func_ov61_0214a578: ; 0x0214a578
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -14612,6 +14844,7 @@ func_ov61_0214a578: ; 0x0214a578
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0214a578
 
+	.global func_ov61_0214a5c4
 	arm_func_start func_ov61_0214a5c4
 func_ov61_0214a5c4: ; 0x0214a5c4
 	ldr r1, _0214a5e0 ; =data_ov61_0217f350
@@ -14625,6 +14858,7 @@ func_ov61_0214a5c4: ; 0x0214a5c4
 	arm_func_end func_ov61_0214a5c4
 _0214a5e0: .word data_ov61_0217f350
 
+	.global func_ov61_0214a5e4
 	arm_func_start func_ov61_0214a5e4
 func_ov61_0214a5e4: ; 0x0214a5e4
 	ldr r1, _0214a600 ; =data_ov61_0217f350
@@ -14638,6 +14872,7 @@ func_ov61_0214a5e4: ; 0x0214a5e4
 	arm_func_end func_ov61_0214a5e4
 _0214a600: .word data_ov61_0217f350
 
+	.global func_ov61_0214a604
 	arm_func_start func_ov61_0214a604
 func_ov61_0214a604: ; 0x0214a604
 	ldr r1, _0214a620 ; =data_ov61_0217f350
@@ -14651,6 +14886,7 @@ func_ov61_0214a604: ; 0x0214a604
 	arm_func_end func_ov61_0214a604
 _0214a620: .word data_ov61_0217f350
 
+	.global func_ov61_0214a624
 	arm_func_start func_ov61_0214a624
 func_ov61_0214a624: ; 0x0214a624
 	ldr r1, _0214a640 ; =data_ov61_0217f350
@@ -14664,6 +14900,7 @@ func_ov61_0214a624: ; 0x0214a624
 	arm_func_end func_ov61_0214a624
 _0214a640: .word data_ov61_0217f350
 
+	.global func_ov61_0214a644
 	arm_func_start func_ov61_0214a644
 func_ov61_0214a644: ; 0x0214a644
 	stmdb sp!, {r4, r5, r6, lr}
@@ -14681,6 +14918,7 @@ func_ov61_0214a644: ; 0x0214a644
 	arm_func_end func_ov61_0214a644
 _0214a670: .word data_ov61_0217a834
 
+	.global func_ov61_0214a674
 	arm_func_start func_ov61_0214a674
 func_ov61_0214a674: ; 0x0214a674
 	stmdb sp!, {r3, lr}
@@ -14701,6 +14939,7 @@ func_ov61_0214a674: ; 0x0214a674
 	arm_func_end func_ov61_0214a674
 _0214a6ac: .word data_ov61_0217a834
 
+	.global func_ov61_0214a6b0
 	arm_func_start func_ov61_0214a6b0
 func_ov61_0214a6b0: ; 0x0214a6b0
 	cmp r0, #2
@@ -14714,6 +14953,7 @@ _0214a6c8:
 	bx lr
 	arm_func_end func_ov61_0214a6b0
 
+	.global func_ov61_0214a6d0
 	arm_func_start func_ov61_0214a6d0
 func_ov61_0214a6d0: ; 0x0214a6d0
 	stmdb sp!, {r4, lr}
@@ -14738,6 +14978,7 @@ func_ov61_0214a6d0: ; 0x0214a6d0
 	arm_func_end func_ov61_0214a6d0
 _0214a718: .word data_ov61_0217f350
 
+	.global func_ov61_0214a71c
 	arm_func_start func_ov61_0214a71c
 func_ov61_0214a71c: ; 0x0214a71c
 	stmdb sp!, {r3, lr}
@@ -14758,6 +14999,7 @@ _0214a74c: .word data_ov61_0217f350
 _0214a750: .word 0x00000614
 _0214a754: .word 0x000005b9
 
+	.global func_ov61_0214a758
 	arm_func_start func_ov61_0214a758
 func_ov61_0214a758: ; 0x0214a758
 	stmdb sp!, {r3, lr}
@@ -14779,6 +15021,7 @@ _0214a788:
 	arm_func_end func_ov61_0214a758
 _0214a790: .word data_ov61_0217f350
 
+	.global func_ov61_0214a794
 	arm_func_start func_ov61_0214a794
 func_ov61_0214a794: ; 0x0214a794
 	stmdb sp!, {r4, lr}
@@ -14800,6 +15043,7 @@ func_ov61_0214a794: ; 0x0214a794
 	arm_func_end func_ov61_0214a794
 _0214a7d0: .word data_ov61_0217f350
 
+	.global func_ov61_0214a7d4
 	arm_func_start func_ov61_0214a7d4
 func_ov61_0214a7d4: ; 0x0214a7d4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -14909,6 +15153,7 @@ _0214a950:
 _0214a960: .word data_ov61_0217f350
 _0214a964: .word 0x000082ea
 
+	.global func_ov61_0214a968
 	arm_func_start func_ov61_0214a968
 func_ov61_0214a968: ; 0x0214a968
 	ldr r2, _0214a9ec ; =data_ov61_0217f350
@@ -14948,6 +15193,7 @@ func_ov61_0214a968: ; 0x0214a968
 	arm_func_end func_ov61_0214a968
 _0214a9ec: .word data_ov61_0217f350
 
+	.global func_ov61_0214a9f0
 	arm_func_start func_ov61_0214a9f0
 func_ov61_0214a9f0: ; 0x0214a9f0
 	ldr r0, _0214aa00 ; =data_ov61_0217f350
@@ -14958,6 +15204,7 @@ func_ov61_0214a9f0: ; 0x0214a9f0
 	arm_func_end func_ov61_0214a9f0
 _0214aa00: .word data_ov61_0217f350
 
+	.global func_ov61_0214aa04
 	arm_func_start func_ov61_0214aa04
 func_ov61_0214aa04: ; 0x0214aa04
 	ldr r2, _0214aa18 ; =data_ov61_0217f350
@@ -14969,6 +15216,7 @@ func_ov61_0214aa04: ; 0x0214aa04
 	arm_func_end func_ov61_0214aa04
 _0214aa18: .word data_ov61_0217f350
 
+	.global func_ov61_0214aa1c
 	arm_func_start func_ov61_0214aa1c
 func_ov61_0214aa1c: ; 0x0214aa1c
 	ldr r2, _0214aa34 ; =data_ov61_0217f350
@@ -14981,6 +15229,7 @@ func_ov61_0214aa1c: ; 0x0214aa1c
 	arm_func_end func_ov61_0214aa1c
 _0214aa34: .word data_ov61_0217f350
 
+	.global func_ov61_0214aa38
 	arm_func_start func_ov61_0214aa38
 func_ov61_0214aa38: ; 0x0214aa38
 	ldr r2, _0214aa50 ; =data_ov61_0217f350
@@ -14993,6 +15242,7 @@ func_ov61_0214aa38: ; 0x0214aa38
 	arm_func_end func_ov61_0214aa38
 _0214aa50: .word data_ov61_0217f350
 
+	.global func_ov61_0214aa54
 	arm_func_start func_ov61_0214aa54
 func_ov61_0214aa54: ; 0x0214aa54
 	stmdb sp!, {r4, r5, r6, lr}
@@ -15007,6 +15257,7 @@ func_ov61_0214aa54: ; 0x0214aa54
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214aa54
 
+	.global func_ov61_0214aa7c
 	arm_func_start func_ov61_0214aa7c
 func_ov61_0214aa7c: ; 0x0214aa7c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -15080,6 +15331,7 @@ _0214ab58:
 _0214ab68: .word data_ov61_0217f350
 _0214ab6c: .word 0xfffe82b6
 
+	.global func_ov61_0214ab70
 	arm_func_start func_ov61_0214ab70
 func_ov61_0214ab70: ; 0x0214ab70
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -15125,6 +15377,7 @@ _0214abdc:
 	arm_func_end func_ov61_0214ab70
 _0214ac08: .word data_ov61_0217f350
 
+	.global func_ov61_0214ac0c
 	arm_func_start func_ov61_0214ac0c
 func_ov61_0214ac0c: ; 0x0214ac0c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -15185,6 +15438,7 @@ _0214acc4:
 	arm_func_end func_ov61_0214ac0c
 _0214acd0: .word data_ov61_0217f350
 
+	.global func_ov61_0214acd4
 	arm_func_start func_ov61_0214acd4
 func_ov61_0214acd4: ; 0x0214acd4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -15250,6 +15504,7 @@ _0214ad84:
 _0214adb0: .word data_ov61_0217f350
 _0214adb4: .word 0xfffe82ac
 
+	.global func_ov61_0214adb8
 	arm_func_start func_ov61_0214adb8
 func_ov61_0214adb8: ; 0x0214adb8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15269,6 +15524,7 @@ func_ov61_0214adb8: ; 0x0214adb8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214adb8
 
+	.global func_ov61_0214adf4
 	arm_func_start func_ov61_0214adf4
 func_ov61_0214adf4: ; 0x0214adf4
 	stmdb sp!, {r3, lr}
@@ -15283,6 +15539,7 @@ func_ov61_0214adf4: ; 0x0214adf4
 	arm_func_end func_ov61_0214adf4
 _0214ae14: .word 0xfffffdf9
 
+	.global func_ov61_0214ae18
 	arm_func_start func_ov61_0214ae18
 func_ov61_0214ae18: ; 0x0214ae18
 	stmdb sp!, {r4, lr}
@@ -15396,6 +15653,7 @@ _0214afb0:
 _0214afb8: .word data_ov61_0217f354
 _0214afbc: .word 0x00000d18
 
+	.global func_ov61_0214afc0
 	arm_func_start func_ov61_0214afc0
 func_ov61_0214afc0: ; 0x0214afc0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15459,6 +15717,7 @@ _0214b078:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214afc0
 
+	.global func_ov61_0214b090
 	arm_func_start func_ov61_0214b090
 func_ov61_0214b090: ; 0x0214b090
 	stmdb sp!, {r3, lr}
@@ -15490,6 +15749,7 @@ func_ov61_0214b090: ; 0x0214b090
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214b090
 
+	.global func_ov61_0214b0fc
 	arm_func_start func_ov61_0214b0fc
 func_ov61_0214b0fc: ; 0x0214b0fc
 	stmdb sp!, {r4, lr}
@@ -15513,6 +15773,7 @@ _0214b134:
 	arm_func_end func_ov61_0214b0fc
 _0214b13c: .word data_ov61_0217f354
 
+	.global func_ov61_0214b140
 	arm_func_start func_ov61_0214b140
 func_ov61_0214b140: ; 0x0214b140
 	stmdb sp!, {r3, lr}
@@ -15533,6 +15794,7 @@ _0214b164:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214b140
 
+	.global func_ov61_0214b17c
 	arm_func_start func_ov61_0214b17c
 func_ov61_0214b17c: ; 0x0214b17c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15548,6 +15810,7 @@ func_ov61_0214b17c: ; 0x0214b17c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214b17c
 
+	.global func_ov61_0214b1a8
 	arm_func_start func_ov61_0214b1a8
 func_ov61_0214b1a8: ; 0x0214b1a8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15568,6 +15831,7 @@ func_ov61_0214b1a8: ; 0x0214b1a8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214b1a8
 
+	.global func_ov61_0214b1e8
 	arm_func_start func_ov61_0214b1e8
 func_ov61_0214b1e8: ; 0x0214b1e8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -15590,6 +15854,7 @@ func_ov61_0214b1e8: ; 0x0214b1e8
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214b1e8
 
+	.global func_ov61_0214b230
 	arm_func_start func_ov61_0214b230
 func_ov61_0214b230: ; 0x0214b230
 	stmdb sp!, {r4, lr}
@@ -15667,6 +15932,7 @@ _0214b310:
 	arm_func_end func_ov61_0214b230
 _0214b33c: .word 0x00000d18
 
+	.global func_ov61_0214b340
 	arm_func_start func_ov61_0214b340
 func_ov61_0214b340: ; 0x0214b340
 	tst r0, #1
@@ -15694,6 +15960,7 @@ func_ov61_0214b340: ; 0x0214b340
 	arm_func_end func_ov61_0214b340
 _0214b394: .word data_ov61_0217f354
 
+	.global func_ov61_0214b398
 	arm_func_start func_ov61_0214b398
 func_ov61_0214b398: ; 0x0214b398
 	stmdb sp!, {r4, r5, r6, lr}
@@ -15722,6 +15989,7 @@ func_ov61_0214b398: ; 0x0214b398
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214b398
 
+	.global func_ov61_0214b3f8
 	arm_func_start func_ov61_0214b3f8
 func_ov61_0214b3f8: ; 0x0214b3f8
 	ldr r0, _0214b408 ; =data_ov61_0217f354
@@ -15732,6 +16000,7 @@ func_ov61_0214b3f8: ; 0x0214b3f8
 	arm_func_end func_ov61_0214b3f8
 _0214b408: .word data_ov61_0217f354
 
+	.global func_ov61_0214b40c
 	arm_func_start func_ov61_0214b40c
 func_ov61_0214b40c: ; 0x0214b40c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15745,6 +16014,7 @@ func_ov61_0214b40c: ; 0x0214b40c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214b40c
 
+	.global func_ov61_0214b430
 	arm_func_start func_ov61_0214b430
 func_ov61_0214b430: ; 0x0214b430
 	ldr r0, _0214b440 ; =data_ov61_0217f354
@@ -15755,6 +16025,7 @@ func_ov61_0214b430: ; 0x0214b430
 	arm_func_end func_ov61_0214b430
 _0214b440: .word data_ov61_0217f354
 
+	.global func_ov61_0214b444
 	arm_func_start func_ov61_0214b444
 func_ov61_0214b444: ; 0x0214b444
 	stmdb sp!, {r3, lr}
@@ -15767,6 +16038,7 @@ func_ov61_0214b444: ; 0x0214b444
 	arm_func_end func_ov61_0214b444
 _0214b45c: .word data_ov61_0217f354
 
+	.global func_ov61_0214b460
 	arm_func_start func_ov61_0214b460
 func_ov61_0214b460: ; 0x0214b460
 	cmp r0, #2
@@ -15775,6 +16047,7 @@ func_ov61_0214b460: ; 0x0214b460
 	bx lr
 	arm_func_end func_ov61_0214b460
 
+	.global func_ov61_0214b470
 	arm_func_start func_ov61_0214b470
 func_ov61_0214b470: ; 0x0214b470
 	stmdb sp!, {r3, lr}
@@ -15794,6 +16067,7 @@ func_ov61_0214b470: ; 0x0214b470
 _0214b4a0: .word data_ov61_0217f354
 _0214b4a4: .word 0x00000d18
 
+	.global func_ov61_0214b4a8
 	arm_func_start func_ov61_0214b4a8
 func_ov61_0214b4a8: ; 0x0214b4a8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -15842,6 +16116,7 @@ _0214b53c:
 	arm_func_end func_ov61_0214b4a8
 _0214b544: .word data_ov61_0217f354
 
+	.global func_ov61_0214b548
 	arm_func_start func_ov61_0214b548
 func_ov61_0214b548: ; 0x0214b548
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -15943,6 +16218,7 @@ _0214b68c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0214b548
 
+	.global func_ov61_0214b6b4
 	arm_func_start func_ov61_0214b6b4
 func_ov61_0214b6b4: ; 0x0214b6b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -15986,6 +16262,7 @@ _0214b740:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214b6b4
 
+	.global func_ov61_0214b748
 	arm_func_start func_ov61_0214b748
 func_ov61_0214b748: ; 0x0214b748
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -16025,6 +16302,7 @@ _0214b7bc:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_0214b748
 
+	.global func_ov61_0214b7c4
 	arm_func_start func_ov61_0214b7c4
 func_ov61_0214b7c4: ; 0x0214b7c4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -16069,6 +16347,7 @@ _0214b84c:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_0214b7c4
 
+	.global func_ov61_0214b854
 	arm_func_start func_ov61_0214b854
 func_ov61_0214b854: ; 0x0214b854
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -16127,6 +16406,7 @@ _0214b914:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0214b854
 
+	.global func_ov61_0214b91c
 	arm_func_start func_ov61_0214b91c
 func_ov61_0214b91c: ; 0x0214b91c
 	stmdb sp!, {r3, lr}
@@ -16150,6 +16430,7 @@ func_ov61_0214b91c: ; 0x0214b91c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214b91c
 
+	.global func_ov61_0214b968
 	arm_func_start func_ov61_0214b968
 func_ov61_0214b968: ; 0x0214b968
 	stmdb sp!, {r3, r4, r5, lr}
@@ -16182,6 +16463,7 @@ _0214b9c0:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214b968
 
+	.global func_ov61_0214b9d4
 	arm_func_start func_ov61_0214b9d4
 func_ov61_0214b9d4: ; 0x0214b9d4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -16248,6 +16530,7 @@ _0214ba9c:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0214b9d4
 
+	.global func_ov61_0214bac4
 	arm_func_start func_ov61_0214bac4
 func_ov61_0214bac4: ; 0x0214bac4
 	stmdb sp!, {r4, lr}
@@ -16292,6 +16575,7 @@ _0214bb3c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214bac4
 
+	.global func_ov61_0214bb50
 	arm_func_start func_ov61_0214bb50
 func_ov61_0214bb50: ; 0x0214bb50
 	stmdb sp!, {r4, lr}
@@ -16316,6 +16600,7 @@ _0214bb8c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214bb50
 
+	.global func_ov61_0214bb94
 	arm_func_start func_ov61_0214bb94
 func_ov61_0214bb94: ; 0x0214bb94
 	stmdb sp!, {r3, r4, r5, lr}
@@ -16385,6 +16670,7 @@ _0214bc78:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214bb94
 
+	.global func_ov61_0214bc8c
 	arm_func_start func_ov61_0214bc8c
 func_ov61_0214bc8c: ; 0x0214bc8c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -16475,6 +16761,7 @@ _0214bdc0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0214bc8c
 
+	.global func_ov61_0214bdc8
 	arm_func_start func_ov61_0214bdc8
 func_ov61_0214bdc8: ; 0x0214bdc8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -16593,6 +16880,7 @@ _0214bf58:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0214bdc8
 
+	.global func_ov61_0214bf64
 	arm_func_start func_ov61_0214bf64
 func_ov61_0214bf64: ; 0x0214bf64
 	ldrb r0, [r0, #0xd0b]
@@ -16604,6 +16892,7 @@ func_ov61_0214bf64: ; 0x0214bf64
 	bx lr
 	arm_func_end func_ov61_0214bf64
 
+	.global func_ov61_0214bf80
 	arm_func_start func_ov61_0214bf80
 func_ov61_0214bf80: ; 0x0214bf80
 	ldrb r0, [r0, #0xd0b]
@@ -16615,6 +16904,7 @@ func_ov61_0214bf80: ; 0x0214bf80
 	bx lr
 	arm_func_end func_ov61_0214bf80
 
+	.global func_ov61_0214bf9c
 	arm_func_start func_ov61_0214bf9c
 func_ov61_0214bf9c: ; 0x0214bf9c
 	stmdb sp!, {r4, lr}
@@ -16690,6 +16980,7 @@ _0214c07c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214bf9c
 
+	.global func_ov61_0214c090
 	arm_func_start func_ov61_0214c090
 func_ov61_0214c090: ; 0x0214c090
 	stmdb sp!, {r4, lr}
@@ -16732,6 +17023,7 @@ _0214c110:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214c090
 
+	.global func_ov61_0214c118
 	arm_func_start func_ov61_0214c118
 func_ov61_0214c118: ; 0x0214c118
 	stmdb sp!, {r3, lr}
@@ -16781,6 +17073,7 @@ _0214c1a0:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214c118
 
+	.global func_ov61_0214c1a8
 	arm_func_start func_ov61_0214c1a8
 func_ov61_0214c1a8: ; 0x0214c1a8
 	stmdb sp!, {r3, lr}
@@ -16797,6 +17090,7 @@ func_ov61_0214c1a8: ; 0x0214c1a8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214c1a8
 
+	.global func_ov61_0214c1d8
 	arm_func_start func_ov61_0214c1d8
 func_ov61_0214c1d8: ; 0x0214c1d8
 	stmdb sp!, {r3, lr}
@@ -16810,6 +17104,7 @@ func_ov61_0214c1d8: ; 0x0214c1d8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214c1d8
 
+	.global func_ov61_0214c1fc
 	arm_func_start func_ov61_0214c1fc
 func_ov61_0214c1fc: ; 0x0214c1fc
 	stmdb sp!, {r4, lr}
@@ -16837,6 +17132,7 @@ _0214c244:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214c1fc
 
+	.global func_ov61_0214c24c
 	arm_func_start func_ov61_0214c24c
 func_ov61_0214c24c: ; 0x0214c24c
 	cmp r0, #3
@@ -16864,12 +17160,14 @@ _0214c288:
 	bx lr
 	arm_func_end func_ov61_0214c24c
 
+	.global func_ov61_0214c290
 	arm_func_start func_ov61_0214c290
 func_ov61_0214c290: ; 0x0214c290
 	mvn r0, #5
 	bx lr
 	arm_func_end func_ov61_0214c290
 
+	.global func_ov61_0214c298
 	arm_func_start func_ov61_0214c298
 func_ov61_0214c298: ; 0x0214c298
 	ldrb r0, [r0, #0xb]
@@ -16882,6 +17180,7 @@ func_ov61_0214c298: ; 0x0214c298
 _0214c2ac: .word 0xffff3c4d
 _0214c2b0: .word 0xffff3865
 
+	.global func_ov61_0214c2b4
 	arm_func_start func_ov61_0214c2b4
 func_ov61_0214c2b4: ; 0x0214c2b4
 	ldrb r1, [r0, #0x16]
@@ -16982,6 +17281,7 @@ _0214c3fc: .word 0xffff30f8
 _0214c400: .word 0xffff3094
 _0214c404: .word 0xffff3030
 
+	.global func_ov61_0214c408
 	arm_func_start func_ov61_0214c408
 func_ov61_0214c408: ; 0x0214c408
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17027,6 +17327,7 @@ _0214c494:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214c408
 
+	.global func_ov61_0214c49c
 	arm_func_start func_ov61_0214c49c
 func_ov61_0214c49c: ; 0x0214c49c
 	stmdb sp!, {r4, lr}
@@ -17052,6 +17353,7 @@ _0214c4dc:
 	arm_func_end func_ov61_0214c49c
 _0214c4e4: .word data_ov61_0217a230
 
+	.global func_ov61_0214c4e8
 	arm_func_start func_ov61_0214c4e8
 func_ov61_0214c4e8: ; 0x0214c4e8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17082,6 +17384,7 @@ _0214c53c:
 	arm_func_end func_ov61_0214c4e8
 _0214c544: .word data_ov61_0217a230
 
+	.global func_ov61_0214c548
 	arm_func_start func_ov61_0214c548
 func_ov61_0214c548: ; 0x0214c548
 	stmdb sp!, {r4, r5, r6, lr}
@@ -17149,6 +17452,7 @@ _0214c628: .word data_ov61_0217a838
 _0214c62c: .word data_ov61_0217a228
 _0214c630: .word data_ov61_0217a238
 
+	.global func_ov61_0214c634
 	arm_func_start func_ov61_0214c634
 func_ov61_0214c634: ; 0x0214c634
 	stmdb sp!, {r4, r5, r6, lr}
@@ -17227,6 +17531,7 @@ _0214c724:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214c634
 
+	.global func_ov61_0214c73c
 	arm_func_start func_ov61_0214c73c
 func_ov61_0214c73c: ; 0x0214c73c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17271,6 +17576,7 @@ _0214c7c4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214c73c
 
+	.global func_ov61_0214c7cc
 	arm_func_start func_ov61_0214c7cc
 func_ov61_0214c7cc: ; 0x0214c7cc
 	ldrb ip, [r0, #0xd12]
@@ -17294,6 +17600,7 @@ _0214c808:
 	bx lr
 	arm_func_end func_ov61_0214c7cc
 
+	.global func_ov61_0214c810
 	arm_func_start func_ov61_0214c810
 func_ov61_0214c810: ; 0x0214c810
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17361,6 +17668,7 @@ _0214c8e4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214c810
 
+	.global func_ov61_0214c8ec
 	arm_func_start func_ov61_0214c8ec
 func_ov61_0214c8ec: ; 0x0214c8ec
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17419,6 +17727,7 @@ _0214c9a8:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214c8ec
 
+	.global func_ov61_0214c9b0
 	arm_func_start func_ov61_0214c9b0
 func_ov61_0214c9b0: ; 0x0214c9b0
 	stmdb sp!, {r4, lr}
@@ -17436,6 +17745,7 @@ func_ov61_0214c9b0: ; 0x0214c9b0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214c9b0
 
+	.global func_ov61_0214c9e4
 	arm_func_start func_ov61_0214c9e4
 func_ov61_0214c9e4: ; 0x0214c9e4
 	stmdb sp!, {r4, lr}
@@ -17468,6 +17778,7 @@ _0214ca34:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214c9e4
 
+	.global func_ov61_0214ca4c
 	arm_func_start func_ov61_0214ca4c
 func_ov61_0214ca4c: ; 0x0214ca4c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17532,6 +17843,7 @@ _0214caf0:
 _0214cb24: .word data_ov61_0217a30c
 _0214cb28: .word data_ov61_0217a314
 
+	.global func_ov61_0214cb2c
 	arm_func_start func_ov61_0214cb2c
 func_ov61_0214cb2c: ; 0x0214cb2c
 	stmdb sp!, {r4, lr}
@@ -17557,6 +17869,7 @@ func_ov61_0214cb2c: ; 0x0214cb2c
 _0214cb74: .word data_ov61_0217a30c
 _0214cb78: .word data_ov61_0217a314
 
+	.global func_ov61_0214cb7c
 	arm_func_start func_ov61_0214cb7c
 func_ov61_0214cb7c: ; 0x0214cb7c
 	stmdb sp!, {r4, lr}
@@ -17605,6 +17918,7 @@ _0214cc14: .word 0x000082ea
 _0214cc18: .word data_ov61_0217a30c
 _0214cc1c: .word data_ov61_0217a314
 
+	.global func_ov61_0214cc20
 	arm_func_start func_ov61_0214cc20
 func_ov61_0214cc20: ; 0x0214cc20
 	stmdb sp!, {r4, lr}
@@ -17627,6 +17941,7 @@ func_ov61_0214cc20: ; 0x0214cc20
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214cc20
 
+	.global func_ov61_0214cc68
 	arm_func_start func_ov61_0214cc68
 func_ov61_0214cc68: ; 0x0214cc68
 	stmdb sp!, {r4, lr}
@@ -17711,6 +18026,7 @@ _0214cd84:
 	arm_func_end func_ov61_0214cc68
 _0214cd8c: .word 0x000082ea
 
+	.global func_ov61_0214cd90
 	arm_func_start func_ov61_0214cd90
 func_ov61_0214cd90: ; 0x0214cd90
 	stmdb sp!, {r4, lr}
@@ -17792,6 +18108,7 @@ _0214cea0:
 _0214cea8: .word 0x000082ea
 _0214ceac: .word data_ov61_0217a30c
 
+	.global func_ov61_0214ceb0
 	arm_func_start func_ov61_0214ceb0
 func_ov61_0214ceb0: ; 0x0214ceb0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17850,6 +18167,7 @@ _0214cf64:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214ceb0
 
+	.global func_ov61_0214cf74
 	arm_func_start func_ov61_0214cf74
 func_ov61_0214cf74: ; 0x0214cf74
 	stmdb sp!, {r3, r4, r5, lr}
@@ -17909,6 +18227,7 @@ _0214d01c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214cf74
 
+	.global func_ov61_0214d038
 	arm_func_start func_ov61_0214d038
 func_ov61_0214d038: ; 0x0214d038
 	stmdb sp!, {r4, lr}
@@ -17938,6 +18257,7 @@ _0214d074:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214d038
 
+	.global func_ov61_0214d098
 	arm_func_start func_ov61_0214d098
 func_ov61_0214d098: ; 0x0214d098
 	stmdb sp!, {r3, lr}
@@ -17952,6 +18272,7 @@ func_ov61_0214d098: ; 0x0214d098
 	arm_func_end func_ov61_0214d098
 _0214d0b8: .word data_ov61_0217a244
 
+	.global func_ov61_0214d0bc
 	arm_func_start func_ov61_0214d0bc
 func_ov61_0214d0bc: ; 0x0214d0bc
 	stmdb sp!, {r4, lr}
@@ -17994,6 +18315,7 @@ _0214d134:
 	arm_func_end func_ov61_0214d0bc
 _0214d140: .word func_ov61_0214bac4
 
+	.global func_ov61_0214d144
 	arm_func_start func_ov61_0214d144
 func_ov61_0214d144: ; 0x0214d144
 	stmdb sp!, {r3, r4, r5, lr}
@@ -18073,6 +18395,7 @@ _0214d238:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0214d144
 
+	.global func_ov61_0214d240
 	arm_func_start func_ov61_0214d240
 func_ov61_0214d240: ; 0x0214d240
 	stmdb sp!, {r4, r5, r6, lr}
@@ -18103,6 +18426,7 @@ func_ov61_0214d240: ; 0x0214d240
 	arm_func_end func_ov61_0214d240
 _0214d2a0: .word data_ov61_02180c40
 
+	.global func_ov61_0214d2a4
 	arm_func_start func_ov61_0214d2a4
 func_ov61_0214d2a4: ; 0x0214d2a4
 	stmdb sp!, {r4, lr}
@@ -18145,6 +18469,7 @@ _0214d2dc:
 	arm_func_end func_ov61_0214d2a4
 _0214d330: .word 0x01ff6210
 
+	.global func_ov61_0214d334
 	arm_func_start func_ov61_0214d334
 func_ov61_0214d334: ; 0x0214d334
 	stmdb sp!, {r3, lr}
@@ -18160,6 +18485,7 @@ func_ov61_0214d334: ; 0x0214d334
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214d334
 
+	.global func_ov61_0214d360
 	arm_func_start func_ov61_0214d360
 func_ov61_0214d360: ; 0x0214d360
 	stmdb sp!, {r4, r5, r6, lr}
@@ -18193,6 +18519,7 @@ _0214d3c4:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0214d360
 
+	.global func_ov61_0214d3cc
 	arm_func_start func_ov61_0214d3cc
 func_ov61_0214d3cc: ; 0x0214d3cc
 	stmdb sp!, {r3, lr}
@@ -18202,6 +18529,7 @@ func_ov61_0214d3cc: ; 0x0214d3cc
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214d3cc
 
+	.global func_ov61_0214d3e0
 	arm_func_start func_ov61_0214d3e0
 func_ov61_0214d3e0: ; 0x0214d3e0
 	stmdb sp!, {r3, lr}
@@ -18218,6 +18546,7 @@ func_ov61_0214d3e0: ; 0x0214d3e0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0214d3e0
 
+	.global func_ov61_0214d410
 	arm_func_start func_ov61_0214d410
 func_ov61_0214d410: ; 0x0214d410
 	stmdb sp!, {r4, r5, r6, lr}
@@ -18272,6 +18601,7 @@ _0214d4a8:
 	arm_func_end func_ov61_0214d410
 _0214d4cc: .word data_ov61_0217a278
 
+	.global func_ov61_0214d4d0
 	arm_func_start func_ov61_0214d4d0
 func_ov61_0214d4d0: ; 0x0214d4d0
 	ldrb r1, [r0]
@@ -18297,6 +18627,7 @@ func_ov61_0214d4d0: ; 0x0214d4d0
 	bx lr
 	arm_func_end func_ov61_0214d4d0
 
+	.global func_ov61_0214d524
 	arm_func_start func_ov61_0214d524
 func_ov61_0214d524: ; 0x0214d524
 	rsb r1, r0, #0x20
@@ -18324,6 +18655,7 @@ _0214d548:
 	bx lr
 	arm_func_end func_ov61_0214d524
 
+	.global func_ov61_0214d578
 	arm_func_start func_ov61_0214d578
 func_ov61_0214d578: ; 0x0214d578
 	stmdb sp!, {r4, lr}
@@ -18362,6 +18694,7 @@ func_ov61_0214d578: ; 0x0214d578
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214d578
 
+	.global func_ov61_0214d600
 	arm_func_start func_ov61_0214d600
 func_ov61_0214d600: ; 0x0214d600
 	stmdb sp!, {r3, lr}
@@ -18381,6 +18714,7 @@ func_ov61_0214d600: ; 0x0214d600
 	arm_func_end func_ov61_0214d600
 _0214d634: .word data_ov61_0217a8b8
 
+	.global func_ov61_0214d638
 	arm_func_start func_ov61_0214d638
 func_ov61_0214d638: ; 0x0214d638
 	stmdb sp!, {r4, lr}
@@ -18395,6 +18729,7 @@ func_ov61_0214d638: ; 0x0214d638
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214d638
 
+	.global func_ov61_0214d660
 	arm_func_start func_ov61_0214d660
 func_ov61_0214d660: ; 0x0214d660
 	stmdb sp!, {r4, lr}
@@ -18419,6 +18754,7 @@ func_ov61_0214d660: ; 0x0214d660
 	arm_func_end func_ov61_0214d660
 _0214d6a8: .word data_ov61_0217a8b8
 
+	.global func_ov61_0214d6ac
 	arm_func_start func_ov61_0214d6ac
 func_ov61_0214d6ac: ; 0x0214d6ac
 	stmdb sp!, {r3, lr}
@@ -18433,6 +18769,7 @@ func_ov61_0214d6ac: ; 0x0214d6ac
 	arm_func_end func_ov61_0214d6ac
 _0214d6cc: .word data_ov61_0217a8c4
 
+	.global func_ov61_0214d6d0
 	arm_func_start func_ov61_0214d6d0
 func_ov61_0214d6d0: ; 0x0214d6d0
 	ldr ip, _0214d6dc ; =func_ov61_0214d830
@@ -18442,6 +18779,7 @@ func_ov61_0214d6d0: ; 0x0214d6d0
 	arm_func_end func_ov61_0214d6d0
 _0214d6dc: .word func_ov61_0214d830
 
+	.global func_ov61_0214d6e0
 	arm_func_start func_ov61_0214d6e0
 func_ov61_0214d6e0: ; 0x0214d6e0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -18518,6 +18856,7 @@ _0214d7b4:
 _0214d7dc: .word data_ov61_0217a2d3
 _0214d7e0: .word data_ov61_0217a850
 
+	.global func_ov61_0214d7e4
 	arm_func_start func_ov61_0214d7e4
 func_ov61_0214d7e4: ; 0x0214d7e4
 	stmdb sp!, {r4, r5, lr}
@@ -18541,6 +18880,7 @@ func_ov61_0214d7e4: ; 0x0214d7e4
 	ldmia sp!, {r4, r5, pc}
 	arm_func_end func_ov61_0214d7e4
 
+	.global func_ov61_0214d830
 	arm_func_start func_ov61_0214d830
 func_ov61_0214d830: ; 0x0214d830
 	stmdb sp!, {r4, lr}
@@ -18660,6 +19000,7 @@ _0214d9d0: .word data_ov61_0217a850
 _0214d9d4: .word data_ov61_0217a2ec
 _0214d9d8: .word data_ov61_0217a2fc
 
+	.global func_ov61_0214d9dc
 	arm_func_start func_ov61_0214d9dc
 func_ov61_0214d9dc: ; 0x0214d9dc
 	cmp r0, #0x41
@@ -18695,6 +19036,7 @@ _0214da20:
 	bx lr
 	arm_func_end func_ov61_0214d9dc
 
+	.global func_ov61_0214da4c
 	arm_func_start func_ov61_0214da4c
 func_ov61_0214da4c: ; 0x0214da4c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -18799,6 +19141,7 @@ _0214dba8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0214da4c
 
+	.global func_ov61_0214dbb4
 	arm_func_start func_ov61_0214dbb4
 func_ov61_0214dbb4: ; 0x0214dbb4
 	ldr r1, _0214dbc0 ; =data_ov61_0217a8d0
@@ -18808,6 +19151,7 @@ func_ov61_0214dbb4: ; 0x0214dbb4
 	arm_func_end func_ov61_0214dbb4
 _0214dbc0: .word data_ov61_0217a8d0
 
+	.global func_ov61_0214dbc4
 	arm_func_start func_ov61_0214dbc4
 func_ov61_0214dbc4: ; 0x0214dbc4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -18887,6 +19231,7 @@ _0214dcdc: .word data_ov61_0217a914
 _0214dce0: .word 0x000013f4
 _0214dce4: .word 0x00004e84
 
+	.global func_ov61_0214dce8
 	arm_func_start func_ov61_0214dce8
 func_ov61_0214dce8: ; 0x0214dce8
 	stmdb sp!, {r3, lr}
@@ -18938,6 +19283,7 @@ _0214dd90: .word data_ov61_0217f368
 _0214dd94: .word func_ov61_0214e09c
 _0214dd98: .word data_ov61_0217f370
 
+	.global func_ov61_0214dd9c
 	arm_func_start func_ov61_0214dd9c
 func_ov61_0214dd9c: ; 0x0214dd9c
 	stmdb sp!, {r3, lr}
@@ -18979,6 +19325,7 @@ _0214ddfc:
 	arm_func_end func_ov61_0214dd9c
 _0214de24: .word data_ov61_0217f368
 
+	.global func_ov61_0214de28
 	arm_func_start func_ov61_0214de28
 func_ov61_0214de28: ; 0x0214de28
 	stmdb sp!, {r4, lr}
@@ -19007,6 +19354,7 @@ _0214de54:
 _0214de78: .word data_ov61_0217f368
 _0214de7c: .word data_ov61_0217a924
 
+	.global func_ov61_0214de80
 	arm_func_start func_ov61_0214de80
 func_ov61_0214de80: ; 0x0214de80
 	stmdb sp!, {r3, lr}
@@ -19024,6 +19372,7 @@ func_ov61_0214de80: ; 0x0214de80
 	arm_func_end func_ov61_0214de80
 _0214deac: .word data_ov61_0217f368
 
+	.global func_ov61_0214deb0
 	arm_func_start func_ov61_0214deb0
 func_ov61_0214deb0: ; 0x0214deb0
 	stmdb sp!, {r4, lr}
@@ -19048,6 +19397,7 @@ func_ov61_0214deb0: ; 0x0214deb0
 	arm_func_end func_ov61_0214deb0
 _0214def8: .word data_ov61_0217f368
 
+	.global func_ov61_0214defc
 	arm_func_start func_ov61_0214defc
 func_ov61_0214defc: ; 0x0214defc
 	stmdb sp!, {r4, lr}
@@ -19092,6 +19442,7 @@ _0214df80: .word 0x00007530
 _0214df84: .word 0x00005206
 _0214df88: .word 0x00004e84
 
+	.global func_ov61_0214df8c
 	arm_func_start func_ov61_0214df8c
 func_ov61_0214df8c: ; 0x0214df8c
 	stmdb sp!, {r4, lr}
@@ -19166,6 +19517,7 @@ _0214e090: .word data_ov61_0217a8d0
 _0214e094: .word data_ov61_0217f374
 _0214e098: .word data_027e02a0
 
+	.global func_ov61_0214e09c
 	arm_func_start func_ov61_0214e09c
 func_ov61_0214e09c: ; 0x0214e09c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -19361,6 +19713,7 @@ _0214e344: .word 0x00004e84
 _0214e348: .word 0x000082ea
 _0214e34c: .word 0x00001388
 
+	.global func_ov61_0214e350
 	arm_func_start func_ov61_0214e350
 func_ov61_0214e350: ; 0x0214e350
 	stmdb sp!, {r3, r4, r5, lr}
@@ -19493,6 +19846,7 @@ _0214e51c: .word data_ov61_0217a964
 _0214e520: .word 0x00004e88
 _0214e524: .word 0x00004e8c
 
+	.global func_ov61_0214e528
 	arm_func_start func_ov61_0214e528
 func_ov61_0214e528: ; 0x0214e528
 	stmdb sp!, {r3, r4, r5, lr}
@@ -19682,6 +20036,7 @@ _0214e7e4: .word data_ov61_0217a9a0
 _0214e7e8: .word data_ov61_0217a9ac
 _0214e7ec: .word data_ov61_0217a9b8
 
+	.global func_ov61_0214e7f0
 	arm_func_start func_ov61_0214e7f0
 func_ov61_0214e7f0: ; 0x0214e7f0
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -19796,6 +20151,7 @@ _0214e988: .word data_ov61_0217a9e8
 _0214e98c: .word data_ov61_0217a9ec
 _0214e990: .word data_ov61_0217a9f4
 
+	.global func_ov61_0214e994
 	arm_func_start func_ov61_0214e994
 func_ov61_0214e994: ; 0x0214e994
 	stmdb sp!, {r4, lr}
@@ -19818,6 +20174,7 @@ func_ov61_0214e994: ; 0x0214e994
 	arm_func_end func_ov61_0214e994
 _0214e9d4: .word data_ov61_0217f368
 
+	.global func_ov61_0214e9d8
 	arm_func_start func_ov61_0214e9d8
 func_ov61_0214e9d8: ; 0x0214e9d8
 	stmdb sp!, {r3, r4, lr}
@@ -19832,6 +20189,7 @@ func_ov61_0214e9d8: ; 0x0214e9d8
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_0214e9d8
 
+	.global func_ov61_0214ea00
 	arm_func_start func_ov61_0214ea00
 func_ov61_0214ea00: ; 0x0214ea00
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -20019,6 +20377,7 @@ _0214eca4: .word data_ov61_0217aa18
 _0214eca8: .word data_ov61_0217aa24
 _0214ecac: .word data_ov61_0217aa40
 
+	.global func_ov61_0214ecb0
 	arm_func_start func_ov61_0214ecb0
 func_ov61_0214ecb0: ; 0x0214ecb0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -20236,6 +20595,7 @@ _0214eff0: .word data_ov61_0217aacc
 _0214eff4: .word data_ov61_0217aae4
 _0214eff8: .word data_ov61_0217aaf0
 
+	.global func_ov61_0214effc
 	arm_func_start func_ov61_0214effc
 func_ov61_0214effc: ; 0x0214effc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -20314,6 +20674,7 @@ _0214f10c: .word 0x00000b68
 _0214f110: .word data_ov61_0217ab44
 _0214f114: .word 0x000005ea
 
+	.global func_ov61_0214f118
 	arm_func_start func_ov61_0214f118
 func_ov61_0214f118: ; 0x0214f118
 	stmdb sp!, {r4, lr}
@@ -20358,6 +20719,7 @@ _0214f1a4: .word data_ov61_0217ab70
 _0214f1a8: .word data_ov61_0217ab78
 _0214f1ac: .word data_ov61_0217ab7c
 
+	.global func_ov61_0214f1b0
 	arm_func_start func_ov61_0214f1b0
 func_ov61_0214f1b0: ; 0x0214f1b0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -20411,6 +20773,7 @@ _0214f22c:
 _0214f264: .word data_ov61_0217f388
 _0214f268: .word func_ov61_0214f494
 
+	.global func_ov61_0214f26c
 	arm_func_start func_ov61_0214f26c
 func_ov61_0214f26c: ; 0x0214f26c
 	stmdb sp!, {r4, lr}
@@ -20438,6 +20801,7 @@ func_ov61_0214f26c: ; 0x0214f26c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214f26c
 
+	.global func_ov61_0214f2c8
 	arm_func_start func_ov61_0214f2c8
 func_ov61_0214f2c8: ; 0x0214f2c8
 	stmdb sp!, {r4, lr}
@@ -20474,6 +20838,7 @@ _0214f32c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0214f2c8
 
+	.global func_ov61_0214f340
 	arm_func_start func_ov61_0214f340
 func_ov61_0214f340: ; 0x0214f340
 	stmdb sp!, {r4, lr}
@@ -20501,6 +20866,7 @@ func_ov61_0214f340: ; 0x0214f340
 _0214f390: .word 0x00000b68
 _0214f394: .word 0x000005ea
 
+	.global func_ov61_0214f398
 	arm_func_start func_ov61_0214f398
 func_ov61_0214f398: ; 0x0214f398
 	ldr ip, _0214f3a8 ; =func_ov61_021566cc
@@ -20511,6 +20877,7 @@ func_ov61_0214f398: ; 0x0214f398
 	arm_func_end func_ov61_0214f398
 _0214f3a8: .word func_ov61_021566cc
 
+	.global func_ov61_0214f3ac
 	arm_func_start func_ov61_0214f3ac
 func_ov61_0214f3ac: ; 0x0214f3ac
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -20574,6 +20941,7 @@ _0214f488: .word data_ov61_0217ab70
 _0214f48c: .word data_ov61_0217ab8c
 _0214f490: .word data_ov61_0217aba0
 
+	.global func_ov61_0214f494
 	arm_func_start func_ov61_0214f494
 func_ov61_0214f494: ; 0x0214f494
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -20791,6 +21159,7 @@ _0214f7a4: .word data_ov61_0217ab00
 _0214f7a8: .word data_ov61_0217f464
 _0214f7ac: .word 0x000082ea
 
+	.global func_ov61_0214f7b0
 	arm_func_start func_ov61_0214f7b0
 func_ov61_0214f7b0: ; 0x0214f7b0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -20843,6 +21212,7 @@ _0214f858: .word data_ov61_0217aba4
 _0214f85c: .word data_ov61_0217abbc
 _0214f860: .word 0x00001c14
 
+	.global func_ov61_0214f864
 	arm_func_start func_ov61_0214f864
 func_ov61_0214f864: ; 0x0214f864
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -20896,6 +21266,7 @@ func_ov61_0214f864: ; 0x0214f864
 _0214f91c: .word data_ov61_0217abd4
 _0214f920: .word data_ov61_0217ac28
 
+	.global func_ov61_0214f924
 	arm_func_start func_ov61_0214f924
 func_ov61_0214f924: ; 0x0214f924
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -20957,6 +21328,7 @@ _0214f99c:
 _0214f9f8: .word data_ov61_0217ac48
 _0214f9fc: .word data_ov61_0217ab70
 
+	.global func_ov61_0214fa00
 	arm_func_start func_ov61_0214fa00
 func_ov61_0214fa00: ; 0x0214fa00
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -21030,6 +21402,7 @@ _0214fab0:
 _0214fb04: .word data_ov61_0217ac54
 _0214fb08: .word data_ov61_0217ac58
 
+	.global func_ov61_0214fb0c
 	arm_func_start func_ov61_0214fb0c
 func_ov61_0214fb0c: ; 0x0214fb0c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -21070,6 +21443,7 @@ _0214fb64:
 	arm_func_end func_ov61_0214fb0c
 _0214fb90: .word data_ov61_0217ac60
 
+	.global func_ov61_0214fb94
 	arm_func_start func_ov61_0214fb94
 func_ov61_0214fb94: ; 0x0214fb94
 	tst r0, #0x8000
@@ -21077,6 +21451,7 @@ func_ov61_0214fb94: ; 0x0214fb94
 	bx lr
 	arm_func_end func_ov61_0214fb94
 
+	.global func_ov61_0214fba0
 	arm_func_start func_ov61_0214fba0
 func_ov61_0214fba0: ; 0x0214fba0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -21104,6 +21479,7 @@ func_ov61_0214fba0: ; 0x0214fba0
 	arm_func_end func_ov61_0214fba0
 _0214fbf4: .word data_ov61_0217ac64
 
+	.global func_ov61_0214fbf8
 	arm_func_start func_ov61_0214fbf8
 func_ov61_0214fbf8: ; 0x0214fbf8
 	stmdb sp!, {r4, lr}
@@ -21126,6 +21502,7 @@ _0214fc20:
 	arm_func_end func_ov61_0214fbf8
 _0214fc34: .word data_ov61_0217ac78
 
+	.global func_ov61_0214fc38
 	arm_func_start func_ov61_0214fc38
 func_ov61_0214fc38: ; 0x0214fc38
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -21173,6 +21550,7 @@ func_ov61_0214fc38: ; 0x0214fc38
 _0214fcd8: .word data_ov61_0217ac8c
 _0214fcdc: .word data_ov61_0217ac78
 
+	.global func_ov61_0214fce0
 	arm_func_start func_ov61_0214fce0
 func_ov61_0214fce0: ; 0x0214fce0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -21266,6 +21644,7 @@ _0214fe28: .word data_ov61_0217aca4
 _0214fe2c: .word data_ov61_0217acb0
 _0214fe30: .word data_ov61_0217acb4
 
+	.global func_ov61_0214fe34
 	arm_func_start func_ov61_0214fe34
 func_ov61_0214fe34: ; 0x0214fe34
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -21359,6 +21738,7 @@ _0214ff7c: .word data_ov61_0217acd8
 _0214ff80: .word data_ov61_0217acf8
 _0214ff84: .word data_ov61_0217ad14
 
+	.global func_ov61_0214ff88
 	arm_func_start func_ov61_0214ff88
 func_ov61_0214ff88: ; 0x0214ff88
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -21542,6 +21922,7 @@ _0215021c: .word data_ov61_0217ad44
 _02150220: .word data_ov61_0217ad48
 _02150224: .word data_ov61_0217ad4c
 
+	.global func_ov61_02150228
 	arm_func_start func_ov61_02150228
 func_ov61_02150228: ; 0x02150228
 	stmdb sp!, {r4, r5, r6, lr}
@@ -21571,6 +21952,7 @@ _02150278:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02150228
 
+	.global func_ov61_02150280
 	arm_func_start func_ov61_02150280
 func_ov61_02150280: ; 0x02150280
 	stmdb sp!, {r4, r5, r6, lr}
@@ -21596,6 +21978,7 @@ func_ov61_02150280: ; 0x02150280
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02150280
 
+	.global func_ov61_021502d4
 	arm_func_start func_ov61_021502d4
 func_ov61_021502d4: ; 0x021502d4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -21616,6 +21999,7 @@ func_ov61_021502d4: ; 0x021502d4
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021502d4
 
+	.global func_ov61_02150314
 	arm_func_start func_ov61_02150314
 func_ov61_02150314: ; 0x02150314
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -21658,6 +22042,7 @@ _02150384:
 _02150394: .word data_ov61_0217ad50
 _02150398: .word data_ov61_0217ad6c
 
+	.global func_ov61_0215039c
 	arm_func_start func_ov61_0215039c
 func_ov61_0215039c: ; 0x0215039c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -21719,6 +22104,7 @@ _02150470: .word 0xfffe7961
 _02150474: .word data_ov61_0217adc4
 _02150478: .word 0x00001c14
 
+	.global func_ov61_0215047c
 	arm_func_start func_ov61_0215047c
 func_ov61_0215047c: ; 0x0215047c
 	stmdb sp!, {r4, lr}
@@ -21789,6 +22175,7 @@ _02150568: .word data_ov61_0217ade4
 _0215056c: .word data_ov61_0217ae00
 _02150570: .word data_ov61_0217ae20
 
+	.global func_ov61_02150574
 	arm_func_start func_ov61_02150574
 func_ov61_02150574: ; 0x02150574
 	stmdb sp!, {r3, lr}
@@ -21822,6 +22209,7 @@ _021505c0:
 	arm_func_end func_ov61_02150574
 _021505d8: .word data_ov61_0217f38c
 
+	.global func_ov61_021505dc
 	arm_func_start func_ov61_021505dc
 func_ov61_021505dc: ; 0x021505dc
 	stmdb sp!, {r4, lr}
@@ -21843,6 +22231,7 @@ func_ov61_021505dc: ; 0x021505dc
 	arm_func_end func_ov61_021505dc
 _02150618: .word data_ov61_0217f38c
 
+	.global func_ov61_0215061c
 	arm_func_start func_ov61_0215061c
 func_ov61_0215061c: ; 0x0215061c
 	ldr r0, _02150630 ; =data_ov61_0217f38c
@@ -21854,6 +22243,7 @@ func_ov61_0215061c: ; 0x0215061c
 	arm_func_end func_ov61_0215061c
 _02150630: .word data_ov61_0217f38c
 
+	.global func_ov61_02150634
 	arm_func_start func_ov61_02150634
 func_ov61_02150634: ; 0x02150634
 	stmdb sp!, {r3, lr}
@@ -21894,6 +22284,7 @@ _0215066c:
 _021506b4: .word data_ov61_0217f38c
 _021506b8: .word func_ov61_021506bc
 
+	.global func_ov61_021506bc
 	arm_func_start func_ov61_021506bc
 func_ov61_021506bc: ; 0x021506bc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -22931,6 +23322,7 @@ _0215159c: .word data_ov61_0217af18
 _021515a0: .word data_ov61_0217af24
 _021515a4: .word data_ov61_0217af30
 
+	.global func_ov61_021515a8
 	arm_func_start func_ov61_021515a8
 func_ov61_021515a8: ; 0x021515a8
 	stmdb sp!, {r4, lr}
@@ -22953,6 +23345,7 @@ func_ov61_021515a8: ; 0x021515a8
 	arm_func_end func_ov61_021515a8
 _021515e8: .word data_ov61_0217f38c
 
+	.global func_ov61_021515ec
 	arm_func_start func_ov61_021515ec
 func_ov61_021515ec: ; 0x021515ec
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -23098,6 +23491,7 @@ _02151804: .word data_02076d88
 _02151808: .word data_ov61_0217af6c
 _0215180c: .word data_ov61_0217f408
 
+	.global func_ov61_02151810
 	arm_func_start func_ov61_02151810
 func_ov61_02151810: ; 0x02151810
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -23206,6 +23600,7 @@ _02151980:
 _02151990: .word 0xaaaaaaab
 _02151994: .word data_ov61_0217afbc
 
+	.global func_ov61_02151998
 	arm_func_start func_ov61_02151998
 func_ov61_02151998: ; 0x02151998
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -23310,6 +23705,7 @@ _02151afc:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02151998
 
+	.global func_ov61_02151b04
 	arm_func_start func_ov61_02151b04
 func_ov61_02151b04: ; 0x02151b04
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -23385,6 +23781,7 @@ _02151bfc: .word data_ov61_0217f494
 _02151c00: .word data_027e02a0
 _02151c04: .word data_ov61_0217f73c
 
+	.global func_ov61_02151c08
 	arm_func_start func_ov61_02151c08
 func_ov61_02151c08: ; 0x02151c08
 	stmdb sp!, {r3, lr}
@@ -23401,17 +23798,20 @@ _02151c24:
 	arm_func_end func_ov61_02151c08
 _02151c2c: .word data_ov61_0217f414
 
+	.global func_ov61_02151c30
 	arm_func_start func_ov61_02151c30
 func_ov61_02151c30: ; 0x02151c30
 	bx lr
 	arm_func_end func_ov61_02151c30
 
+	.global func_ov61_02151c34
 	arm_func_start func_ov61_02151c34
 func_ov61_02151c34: ; 0x02151c34
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov61_02151c34
 
+	.global func_ov61_02151c3c
 	arm_func_start func_ov61_02151c3c
 func_ov61_02151c3c: ; 0x02151c3c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -23564,6 +23964,7 @@ _02151e6c: .word data_ov61_0217f5bc
 _02151e70: .word func_ov61_021556b4
 _02151e74: .word data_ov61_02180440
 
+	.global func_ov61_02151e78
 	arm_func_start func_ov61_02151e78
 func_ov61_02151e78: ; 0x02151e78
 	stmdb sp!, {r3, r4, r5, lr}
@@ -23590,6 +23991,7 @@ _02151eb0:
 _02151ec0: .word data_ov61_0217f5bc
 _02151ec4: .word data_ov61_0217f414
 
+	.global func_ov61_02151ec8
 	arm_func_start func_ov61_02151ec8
 func_ov61_02151ec8: ; 0x02151ec8
 	ldr r1, _02151ed4 ; =data_ov61_0217f414
@@ -23599,6 +24001,7 @@ func_ov61_02151ec8: ; 0x02151ec8
 	arm_func_end func_ov61_02151ec8
 _02151ed4: .word data_ov61_0217f414
 
+	.global func_ov61_02151ed8
 	arm_func_start func_ov61_02151ed8
 func_ov61_02151ed8: ; 0x02151ed8
 	stmdb sp!, {r3, lr}
@@ -23622,6 +24025,7 @@ _02151f14: .word data_ov61_0217f5bc
 _02151f18: .word data_ov61_0217f67c
 _02151f1c: .word data_ov61_0217f414
 
+	.global func_ov61_02151f20
 	arm_func_start func_ov61_02151f20
 func_ov61_02151f20: ; 0x02151f20
 	stmdb sp!, {r4, lr}
@@ -23641,6 +24045,7 @@ _02151f4c: .word data_ov61_0217bc04
 _02151f50: .word data_ov61_0217f67c
 _02151f54: .word data_ov61_0217f5bc
 
+	.global func_ov61_02151f58
 	arm_func_start func_ov61_02151f58
 func_ov61_02151f58: ; 0x02151f58
 	tst r0, #1
@@ -23696,6 +24101,7 @@ _02151fe0:
 	arm_func_end func_ov61_02151f58
 _02152008: .word 0x00ff00ff
 
+	.global func_ov61_0215200c
 	arm_func_start func_ov61_0215200c
 func_ov61_0215200c: ; 0x0215200c
 	ldr r1, _02152024 ; =0x0000ffff
@@ -23708,6 +24114,7 @@ func_ov61_0215200c: ; 0x0215200c
 	arm_func_end func_ov61_0215200c
 _02152024: .word 0x0000ffff
 
+	.global func_ov61_02152028
 	arm_func_start func_ov61_02152028
 func_ov61_02152028: ; 0x02152028
 	stmdb sp!, {r3, lr}
@@ -23719,6 +24126,7 @@ func_ov61_02152028: ; 0x02152028
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02152028
 
+	.global func_ov61_02152044
 	arm_func_start func_ov61_02152044
 func_ov61_02152044: ; 0x02152044
 	stmdb sp!, {r3, r4, r5, lr}
@@ -23744,6 +24152,7 @@ func_ov61_02152044: ; 0x02152044
 	arm_func_end func_ov61_02152044
 _02152090: .word 0x0000ffff
 
+	.global func_ov61_02152094
 	arm_func_start func_ov61_02152094
 func_ov61_02152094: ; 0x02152094
 	mov ip, #1
@@ -23766,6 +24175,7 @@ _021520c8:
 	arm_func_end func_ov61_02152094
 _021520d0: .word data_ov61_0217f414
 
+	.global func_ov61_021520d4
 	arm_func_start func_ov61_021520d4
 func_ov61_021520d4: ; 0x021520d4
 	stmdb sp!, {r4, lr}
@@ -23780,6 +24190,7 @@ func_ov61_021520d4: ; 0x021520d4
 	arm_func_end func_ov61_021520d4
 _021520f4: .word data_ov61_0217f414
 
+	.global func_ov61_021520f8
 	arm_func_start func_ov61_021520f8
 func_ov61_021520f8: ; 0x021520f8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -23801,6 +24212,7 @@ _02152128:
 	arm_func_end func_ov61_021520f8
 _02152130: .word data_ov61_0217f414
 
+	.global func_ov61_02152134
 	arm_func_start func_ov61_02152134
 func_ov61_02152134: ; 0x02152134
 	and r0, r0, #0xf0000000
@@ -23810,6 +24222,7 @@ func_ov61_02152134: ; 0x02152134
 	bx lr
 	arm_func_end func_ov61_02152134
 
+	.global func_ov61_02152148
 	arm_func_start func_ov61_02152148
 func_ov61_02152148: ; 0x02152148
 	stmdb sp!, {r4, r5, r6, lr}
@@ -23850,6 +24263,7 @@ _021521b8:
 _021521c0: .word data_ov61_0217f414
 _021521c4: .word 0x7f000001
 
+	.global func_ov61_021521c8
 	arm_func_start func_ov61_021521c8
 func_ov61_021521c8: ; 0x021521c8
 	mov ip, #0
@@ -23866,6 +24280,7 @@ _021521cc:
 	bx lr
 	arm_func_end func_ov61_021521c8
 
+	.global func_ov61_021521f4
 	arm_func_start func_ov61_021521f4
 func_ov61_021521f4: ; 0x021521f4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -23899,6 +24314,7 @@ _0215221c:
 _02152258: .word data_ov61_0217bc10
 _0215225c: .word data_ov61_0217f414
 
+	.global func_ov61_02152260
 	arm_func_start func_ov61_02152260
 func_ov61_02152260: ; 0x02152260
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -24034,6 +24450,7 @@ _02152448: .word data_ov61_0217f414
 _0215244c: .word 0x000005e4
 _02152450: .word data_ov61_0217bc10
 
+	.global func_ov61_02152454
 	arm_func_start func_ov61_02152454
 func_ov61_02152454: ; 0x02152454
 	stmdb sp!, {r3, lr}
@@ -24061,6 +24478,7 @@ func_ov61_02152454: ; 0x02152454
 	arm_func_end func_ov61_02152454
 _021524a8: .word data_ov61_0217f414
 
+	.global func_ov61_021524ac
 	arm_func_start func_ov61_021524ac
 func_ov61_021524ac: ; 0x021524ac
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -24117,6 +24535,7 @@ _02152518:
 _02152564: .word data_ov61_0217f414
 _02152568: .word data_027e02a0
 
+	.global func_ov61_0215256c
 	arm_func_start func_ov61_0215256c
 func_ov61_0215256c: ; 0x0215256c
 	stmdb sp!, {r3, lr}
@@ -24139,6 +24558,7 @@ func_ov61_0215256c: ; 0x0215256c
 	arm_func_end func_ov61_0215256c
 _021525ac: .word data_ov61_0217f414
 
+	.global func_ov61_021525b0
 	arm_func_start func_ov61_021525b0
 func_ov61_021525b0: ; 0x021525b0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -24201,6 +24621,7 @@ _02152674: .word data_ov61_0217bc08
 _02152678: .word data_ov61_0217f494
 _0215267c: .word data_ov61_0217f49e
 
+	.global func_ov61_02152680
 	arm_func_start func_ov61_02152680
 func_ov61_02152680: ; 0x02152680
 	stmdb sp!, {r3, r4, lr}
@@ -24269,6 +24690,7 @@ _02152770: .word 0x00000608
 _02152774: .word 0x00000406
 _02152778: .word data_ov61_0217f414
 
+	.global func_ov61_0215277c
 	arm_func_start func_ov61_0215277c
 func_ov61_0215277c: ; 0x0215277c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -24304,6 +24726,7 @@ _021527a0:
 	arm_func_end func_ov61_0215277c
 _021527e8: .word data_ov61_0217f414
 
+	.global func_ov61_021527ec
 	arm_func_start func_ov61_021527ec
 func_ov61_021527ec: ; 0x021527ec
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -24392,6 +24815,7 @@ _0215291c: .word data_ov61_0217f414
 _02152920: .word data_ov61_0217f494
 _02152924: .word data_ov61_0217f49e
 
+	.global func_ov61_02152928
 	arm_func_start func_ov61_02152928
 func_ov61_02152928: ; 0x02152928
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -24452,6 +24876,7 @@ _021529cc:
 	arm_func_end func_ov61_02152928
 _021529f4: .word data_ov61_0217f8fc
 
+	.global func_ov61_021529f8
 	arm_func_start func_ov61_021529f8
 func_ov61_021529f8: ; 0x021529f8
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -24533,6 +24958,7 @@ _02152b14: .word data_ov61_0217f414
 _02152b18: .word data_ov61_0217bc10
 _02152b1c: .word data_ov61_0217f8fc
 
+	.global func_ov61_02152b20
 	arm_func_start func_ov61_02152b20
 func_ov61_02152b20: ; 0x02152b20
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -24671,6 +25097,7 @@ _02152ce0:
 _02152d10: .word data_ov61_0217f414
 _02152d14: .word 0x000005c8
 
+	.global func_ov61_02152d18
 	arm_func_start func_ov61_02152d18
 func_ov61_02152d18: ; 0x02152d18
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -24720,6 +25147,7 @@ func_ov61_02152d18: ; 0x02152d18
 _02152dc0: .word data_ov61_0217f414
 _02152dc4: .word data_027e02a0
 
+	.global func_ov61_02152dc8
 	arm_func_start func_ov61_02152dc8
 func_ov61_02152dc8: ; 0x02152dc8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -24804,6 +25232,7 @@ func_ov61_02152dc8: ; 0x02152dc8
 	arm_func_end func_ov61_02152dc8
 _02152f00: .word data_ov61_0217f414
 
+	.global func_ov61_02152f04
 	arm_func_start func_ov61_02152f04
 func_ov61_02152f04: ; 0x02152f04
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -24967,6 +25396,7 @@ _0215316c: .word data_ov61_0217f67c
 _02153170: .word data_ov61_0217f926
 _02153174: .word data_ov61_0217f414
 
+	.global func_ov61_02153178
 	arm_func_start func_ov61_02153178
 func_ov61_02153178: ; 0x02153178
 	stmdb sp!, {r4, lr}
@@ -25014,6 +25444,7 @@ func_ov61_02153178: ; 0x02153178
 _02153218: .word data_ov61_0217f8fc
 _0215321c: .word data_ov61_0217f414
 
+	.global func_ov61_02153220
 	arm_func_start func_ov61_02153220
 func_ov61_02153220: ; 0x02153220
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -25102,6 +25533,7 @@ _02153358: .word data_ov61_0217f8fc
 _0215335c: .word data_ov61_0217f414
 _02153360: .word 0x00000406
 
+	.global func_ov61_02153364
 	arm_func_start func_ov61_02153364
 func_ov61_02153364: ; 0x02153364
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -25164,6 +25596,7 @@ _021533d0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02153364
 
+	.global func_ov61_02153448
 	arm_func_start func_ov61_02153448
 func_ov61_02153448: ; 0x02153448
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -25236,6 +25669,7 @@ _02153538:
 	arm_func_end func_ov61_02153448
 _02153544: .word data_027e02a0
 
+	.global func_ov61_02153548
 	arm_func_start func_ov61_02153548
 func_ov61_02153548: ; 0x02153548
 	cmp r0, #0
@@ -25248,6 +25682,7 @@ func_ov61_02153548: ; 0x02153548
 	bx lr
 	arm_func_end func_ov61_02153548
 
+	.global func_ov61_02153568
 	arm_func_start func_ov61_02153568
 func_ov61_02153568: ; 0x02153568
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -25307,6 +25742,7 @@ _02153620:
 	arm_func_end func_ov61_02153568
 _02153634: .word 0x0000ffff
 
+	.global func_ov61_02153638
 	arm_func_start func_ov61_02153638
 func_ov61_02153638: ; 0x02153638
 	stmdb sp!, {r4, r5, r6, lr}
@@ -25370,6 +25806,7 @@ _02153700:
 	arm_func_end func_ov61_02153638
 _02153708: .word data_027e02a0
 
+	.global func_ov61_0215370c
 	arm_func_start func_ov61_0215370c
 func_ov61_0215370c: ; 0x0215370c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -25422,6 +25859,7 @@ _021537b8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215370c
 
+	.global func_ov61_021537c0
 	arm_func_start func_ov61_021537c0
 func_ov61_021537c0: ; 0x021537c0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -25455,6 +25893,7 @@ _02153818:
 	arm_func_end func_ov61_021537c0
 _02153820: .word data_027e02a0
 
+	.global func_ov61_02153824
 	arm_func_start func_ov61_02153824
 func_ov61_02153824: ; 0x02153824
 	mov r2, #0x218
@@ -25495,6 +25934,7 @@ _02153898:
 	bx lr
 	arm_func_end func_ov61_02153824
 
+	.global func_ov61_021538a8
 	arm_func_start func_ov61_021538a8
 func_ov61_021538a8: ; 0x021538a8
 	stmdb sp!, {r3, lr}
@@ -25506,6 +25946,7 @@ func_ov61_021538a8: ; 0x021538a8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021538a8
 
+	.global func_ov61_021538c4
 	arm_func_start func_ov61_021538c4
 func_ov61_021538c4: ; 0x021538c4
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -25542,6 +25983,7 @@ _0215391c:
 _02153930: .word data_027e02a0
 _02153934: .word data_ov61_0217f67c
 
+	.global func_ov61_02153938
 	arm_func_start func_ov61_02153938
 func_ov61_02153938: ; 0x02153938
 	ldr ip, _02153948 ; =func_ov61_021538c4
@@ -25552,6 +25994,7 @@ func_ov61_02153938: ; 0x02153938
 	arm_func_end func_ov61_02153938
 _02153948: .word func_ov61_021538c4
 
+	.global func_ov61_0215394c
 	arm_func_start func_ov61_0215394c
 func_ov61_0215394c: ; 0x0215394c
 	ldr ip, _0215395c ; =func_ov61_021538c4
@@ -25562,6 +26005,7 @@ func_ov61_0215394c: ; 0x0215394c
 	arm_func_end func_ov61_0215394c
 _0215395c: .word func_ov61_021538c4
 
+	.global func_ov61_02153960
 	arm_func_start func_ov61_02153960
 func_ov61_02153960: ; 0x02153960
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -25647,6 +26091,7 @@ _02153a90: .word data_ov61_0217f558
 _02153a94: .word data_ov61_0217f514
 _02153a98: .word data_ov61_0217f414
 
+	.global func_ov61_02153a9c
 	arm_func_start func_ov61_02153a9c
 func_ov61_02153a9c: ; 0x02153a9c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -25710,6 +26155,7 @@ func_ov61_02153a9c: ; 0x02153a9c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02153a9c
 
+	.global func_ov61_02153b88
 	arm_func_start func_ov61_02153b88
 func_ov61_02153b88: ; 0x02153b88
 	stmdb sp!, {r4, r5, r6, lr}
@@ -25752,6 +26198,7 @@ _02153c08:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02153b88
 
+	.global func_ov61_02153c10
 	arm_func_start func_ov61_02153c10
 func_ov61_02153c10: ; 0x02153c10
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -25811,6 +26258,7 @@ _02153cc0:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02153c10
 
+	.global func_ov61_02153ce8
 	arm_func_start func_ov61_02153ce8
 func_ov61_02153ce8: ; 0x02153ce8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -25879,6 +26327,7 @@ _02153d28:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02153ce8
 
+	.global func_ov61_02153de0
 	arm_func_start func_ov61_02153de0
 func_ov61_02153de0: ; 0x02153de0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -26092,6 +26541,7 @@ _021540e0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02153de0
 
+	.global func_ov61_021540e8
 	arm_func_start func_ov61_021540e8
 func_ov61_021540e8: ; 0x021540e8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -26151,6 +26601,7 @@ _0215419c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_021540e8
 
+	.global func_ov61_021541b4
 	arm_func_start func_ov61_021541b4
 func_ov61_021541b4: ; 0x021541b4
 	stmdb sp!, {r4, lr}
@@ -26170,6 +26621,7 @@ func_ov61_021541b4: ; 0x021541b4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021541b4
 
+	.global func_ov61_021541f0
 	arm_func_start func_ov61_021541f0
 func_ov61_021541f0: ; 0x021541f0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -26253,6 +26705,7 @@ _02154300:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021541f0
 
+	.global func_ov61_02154310
 	arm_func_start func_ov61_02154310
 func_ov61_02154310: ; 0x02154310
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -26397,6 +26850,7 @@ _0215450c:
 	arm_func_end func_ov61_02154310
 _02154518: .word data_027e02a0
 
+	.global func_ov61_0215451c
 	arm_func_start func_ov61_0215451c
 func_ov61_0215451c: ; 0x0215451c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -26593,6 +27047,7 @@ _021547dc: .word data_ov61_0217f73c
 _021547e0: .word 0x00001fff
 _021547e4: .word data_ov61_0217f414
 
+	.global func_ov61_021547e8
 	arm_func_start func_ov61_021547e8
 func_ov61_021547e8: ; 0x021547e8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -26715,6 +27170,7 @@ _02154984:
 _021549a4: .word 0x0000ffff
 _021549a8: .word data_ov61_0217f414
 
+	.global func_ov61_021549ac
 	arm_func_start func_ov61_021549ac
 func_ov61_021549ac: ; 0x021549ac
 	stmdb sp!, {r3, r4, r5, lr}
@@ -26752,6 +27208,7 @@ _02154a10:
 	arm_func_end func_ov61_021549ac
 _02154a18: .word 0x00000806
 
+	.global func_ov61_02154a1c
 	arm_func_start func_ov61_02154a1c
 func_ov61_02154a1c: ; 0x02154a1c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -26805,6 +27262,7 @@ _02154ab8: .word data_027e02a0
 _02154abc: .word data_ov61_0217f414
 _02154ac0: .word 0x00001388
 
+	.global func_ov61_02154ac4
 	arm_func_start func_ov61_02154ac4
 func_ov61_02154ac4: ; 0x02154ac4
 	stmdb sp!, {r3, lr}
@@ -26827,6 +27285,7 @@ func_ov61_02154ac4: ; 0x02154ac4
 	arm_func_end func_ov61_02154ac4
 _02154b04: .word data_ov61_0217f414
 
+	.global func_ov61_02154b08
 	arm_func_start func_ov61_02154b08
 func_ov61_02154b08: ; 0x02154b08
 	ldr r1, _02154b18 ; =data_027e02a0
@@ -26837,6 +27296,7 @@ func_ov61_02154b08: ; 0x02154b08
 	arm_func_end func_ov61_02154b08
 _02154b18: .word data_027e02a0
 
+	.global func_ov61_02154b1c
 	arm_func_start func_ov61_02154b1c
 func_ov61_02154b1c: ; 0x02154b1c
 	ldr r0, _02154b30 ; =data_027e02a0
@@ -26848,6 +27308,7 @@ func_ov61_02154b1c: ; 0x02154b1c
 	arm_func_end func_ov61_02154b1c
 _02154b30: .word data_027e02a0
 
+	.global func_ov61_02154b34
 	arm_func_start func_ov61_02154b34
 func_ov61_02154b34: ; 0x02154b34
 	ldr r0, _02154b5c ; =data_027e02a0
@@ -26864,6 +27325,7 @@ func_ov61_02154b34: ; 0x02154b34
 	arm_func_end func_ov61_02154b34
 _02154b5c: .word data_027e02a0
 
+	.global func_ov61_02154b60
 	arm_func_start func_ov61_02154b60
 func_ov61_02154b60: ; 0x02154b60
 	stmdb sp!, {r4, lr}
@@ -26893,6 +27355,7 @@ _02154bb4: .word data_027e02a0
 _02154bb8: .word 0x7f000001
 _02154bbc: .word data_ov61_0217f414
 
+	.global func_ov61_02154bc0
 	arm_func_start func_ov61_02154bc0
 func_ov61_02154bc0: ; 0x02154bc0
 	ldr r0, _02154bf0 ; =data_027e02a0
@@ -26911,6 +27374,7 @@ func_ov61_02154bc0: ; 0x02154bc0
 	arm_func_end func_ov61_02154bc0
 _02154bf0: .word data_027e02a0
 
+	.global func_ov61_02154bf4
 	arm_func_start func_ov61_02154bf4
 func_ov61_02154bf4: ; 0x02154bf4
 	ldr r0, _02154c10 ; =data_027e02a0
@@ -26924,6 +27388,7 @@ func_ov61_02154bf4: ; 0x02154bf4
 	arm_func_end func_ov61_02154bf4
 _02154c10: .word data_027e02a0
 
+	.global func_ov61_02154c14
 	arm_func_start func_ov61_02154c14
 func_ov61_02154c14: ; 0x02154c14
 	ldr r1, _02154c28 ; =data_027e02a0
@@ -26935,6 +27400,7 @@ func_ov61_02154c14: ; 0x02154c14
 	arm_func_end func_ov61_02154c14
 _02154c28: .word data_027e02a0
 
+	.global func_ov61_02154c2c
 	arm_func_start func_ov61_02154c2c
 func_ov61_02154c2c: ; 0x02154c2c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -26954,6 +27420,7 @@ func_ov61_02154c2c: ; 0x02154c2c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02154c2c
 
+	.global func_ov61_02154c68
 	arm_func_start func_ov61_02154c68
 func_ov61_02154c68: ; 0x02154c68
 	ldr r1, _02154c80 ; =data_027e02a0
@@ -26966,6 +27433,7 @@ func_ov61_02154c68: ; 0x02154c68
 	arm_func_end func_ov61_02154c68
 _02154c80: .word data_027e02a0
 
+	.global func_ov61_02154c84
 	arm_func_start func_ov61_02154c84
 func_ov61_02154c84: ; 0x02154c84
 	stmdb sp!, {r3, lr}
@@ -26986,6 +27454,7 @@ _02154cb0:
 	arm_func_end func_ov61_02154c84
 _02154cb8: .word data_027e02a0
 
+	.global func_ov61_02154cbc
 	arm_func_start func_ov61_02154cbc
 func_ov61_02154cbc: ; 0x02154cbc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -27036,6 +27505,7 @@ _02154d58:
 	arm_func_end func_ov61_02154cbc
 _02154d60: .word data_ov61_0217f414
 
+	.global func_ov61_02154d64
 	arm_func_start func_ov61_02154d64
 func_ov61_02154d64: ; 0x02154d64
 	stmdb sp!, {r3, lr}
@@ -27059,6 +27529,7 @@ _02154d98:
 	arm_func_end func_ov61_02154d64
 _02154da0: .word data_027e02a0
 
+	.global func_ov61_02154da4
 	arm_func_start func_ov61_02154da4
 func_ov61_02154da4: ; 0x02154da4
 	ldr r2, _02154df0 ; =data_027e02a0
@@ -27085,6 +27556,7 @@ _02154de8:
 	arm_func_end func_ov61_02154da4
 _02154df0: .word data_027e02a0
 
+	.global func_ov61_02154df4
 	arm_func_start func_ov61_02154df4
 func_ov61_02154df4: ; 0x02154df4
 	stmdb sp!, {r4, lr}
@@ -27110,6 +27582,7 @@ _02154e2c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02154df4
 
+	.global func_ov61_02154e44
 	arm_func_start func_ov61_02154e44
 func_ov61_02154e44: ; 0x02154e44
 	stmdb sp!, {r4, lr}
@@ -27131,6 +27604,7 @@ _02154e70:
 	arm_func_end func_ov61_02154e44
 _02154e7c: .word data_027e02a0
 
+	.global func_ov61_02154e80
 	arm_func_start func_ov61_02154e80
 func_ov61_02154e80: ; 0x02154e80
 	stmdb sp!, {r4, r5, r6, lr}
@@ -27174,6 +27648,7 @@ _02154ef4:
 _02154f00: .word data_027e02a0
 _02154f04: .word data_ov61_0217f414
 
+	.global func_ov61_02154f08
 	arm_func_start func_ov61_02154f08
 func_ov61_02154f08: ; 0x02154f08
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -27201,6 +27676,7 @@ _02154f48:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02154f08
 
+	.global func_ov61_02154f5c
 	arm_func_start func_ov61_02154f5c
 func_ov61_02154f5c: ; 0x02154f5c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -27240,6 +27716,7 @@ _02154fc0:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02154f5c
 
+	.global func_ov61_02154fd8
 	arm_func_start func_ov61_02154fd8
 func_ov61_02154fd8: ; 0x02154fd8
 	stmdb sp!, {r3, lr}
@@ -27273,6 +27750,7 @@ _02155028:
 	arm_func_end func_ov61_02154fd8
 _02155038: .word data_027e02a0
 
+	.global func_ov61_0215503c
 	arm_func_start func_ov61_0215503c
 func_ov61_0215503c: ; 0x0215503c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -27316,6 +27794,7 @@ _021550bc:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215503c
 
+	.global func_ov61_021550cc
 	arm_func_start func_ov61_021550cc
 func_ov61_021550cc: ; 0x021550cc
 	stmdb sp!, {r3, lr}
@@ -27336,6 +27815,7 @@ _021550f8:
 	arm_func_end func_ov61_021550cc
 _02155100: .word data_027e02a0
 
+	.global func_ov61_02155104
 	arm_func_start func_ov61_02155104
 func_ov61_02155104: ; 0x02155104
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -27393,6 +27873,7 @@ _021551bc:
 	arm_func_end func_ov61_02155104
 _021551c4: .word data_ov61_0217f414
 
+	.global func_ov61_021551c8
 	arm_func_start func_ov61_021551c8
 func_ov61_021551c8: ; 0x021551c8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -27412,6 +27893,7 @@ func_ov61_021551c8: ; 0x021551c8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021551c8
 
+	.global func_ov61_02155204
 	arm_func_start func_ov61_02155204
 func_ov61_02155204: ; 0x02155204
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -27553,6 +28035,7 @@ _021553e8:
 	arm_func_end func_ov61_02155204
 _021553f4: .word data_ov61_0217f414
 
+	.global func_ov61_021553f8
 	arm_func_start func_ov61_021553f8
 func_ov61_021553f8: ; 0x021553f8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -27620,6 +28103,7 @@ _021554bc:
 _021554c4: .word data_027e02a0
 _021554c8: .word data_ov61_0217f414
 
+	.global func_ov61_021554cc
 	arm_func_start func_ov61_021554cc
 func_ov61_021554cc: ; 0x021554cc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -27666,6 +28150,7 @@ _02155558:
 	arm_func_end func_ov61_021554cc
 _02155560: .word data_027e02a0
 
+	.global func_ov61_02155564
 	arm_func_start func_ov61_02155564
 func_ov61_02155564: ; 0x02155564
 	stmdb sp!, {r3, lr}
@@ -27703,6 +28188,7 @@ _021555c8:
 	arm_func_end func_ov61_02155564
 _021555d0: .word data_027e02a0
 
+	.global func_ov61_021555d4
 	arm_func_start func_ov61_021555d4
 func_ov61_021555d4: ; 0x021555d4
 	stmdb sp!, {r4, lr}
@@ -27724,6 +28210,7 @@ func_ov61_021555d4: ; 0x021555d4
 	arm_func_end func_ov61_021555d4
 _02155610: .word data_027e02a0
 
+	.global func_ov61_02155614
 	arm_func_start func_ov61_02155614
 func_ov61_02155614: ; 0x02155614
 	stmdb sp!, {r4, r5, r6, lr}
@@ -27772,6 +28259,7 @@ _02155684:
 	arm_func_end func_ov61_02155614
 _021556b0: .word data_ov61_0217f414
 
+	.global func_ov61_021556b4
 	arm_func_start func_ov61_021556b4
 func_ov61_021556b4: ; 0x021556b4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -28019,6 +28507,7 @@ _02155a18: .word 0x000003bd
 _02155a1c: .word data_027e02a0
 _02155a20: .word data_ov61_0217f73c
 
+	.global func_ov61_02155a24
 	arm_func_start func_ov61_02155a24
 func_ov61_02155a24: ; 0x02155a24
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -28123,6 +28612,7 @@ _02155ba4: .word 0x00006353
 _02155ba8: .word 0x00000135
 _02155bac: .word data_ov61_0217bc1c
 
+	.global func_ov61_02155bb0
 	arm_func_start func_ov61_02155bb0
 func_ov61_02155bb0: ; 0x02155bb0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -28141,6 +28631,7 @@ _02155bdc:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02155bb0
 
+	.global func_ov61_02155be4
 	arm_func_start func_ov61_02155be4
 func_ov61_02155be4: ; 0x02155be4
 	stmdb sp!, {r3, r4, lr}
@@ -28196,6 +28687,7 @@ _02155c68:
 _02155ca0: .word data_ov61_0217f96a
 _02155ca4: .word data_ov61_0217f414
 
+	.global func_ov61_02155ca8
 	arm_func_start func_ov61_02155ca8
 func_ov61_02155ca8: ; 0x02155ca8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -28268,6 +28760,7 @@ _02155d74:
 _02155da8: .word data_ov61_0217f96a
 _02155dac: .word data_ov61_0217f414
 
+	.global func_ov61_02155db0
 	arm_func_start func_ov61_02155db0
 func_ov61_02155db0: ; 0x02155db0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -28503,6 +28996,7 @@ _021560ec:
 _021560f8: .word data_ov61_0217f8fc
 _021560fc: .word data_ov61_0217f414
 
+	.global func_ov61_02156100
 	arm_func_start func_ov61_02156100
 func_ov61_02156100: ; 0x02156100
 	stmdb sp!, {r3, r4, r5, lr}
@@ -28531,6 +29025,7 @@ _02156144:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02156100
 
+	.global func_ov61_02156158
 	arm_func_start func_ov61_02156158
 func_ov61_02156158: ; 0x02156158
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -28607,6 +29102,7 @@ _02156248:
 	arm_func_end func_ov61_02156158
 _02156250: .word data_ov61_0217f414
 
+	.global func_ov61_02156254
 	arm_func_start func_ov61_02156254
 func_ov61_02156254: ; 0x02156254
 	stmdb sp!, {r4, lr}
@@ -28639,6 +29135,7 @@ func_ov61_02156254: ; 0x02156254
 _021562b8: .word data_ov61_0217f414
 _021562bc: .word data_ov61_0217f96a
 
+	.global func_ov61_021562c0
 	arm_func_start func_ov61_021562c0
 func_ov61_021562c0: ; 0x021562c0
 	ldrb r2, [r0], #1
@@ -28656,6 +29153,7 @@ _021562cc:
 	bx lr
 	arm_func_end func_ov61_021562c0
 
+	.global func_ov61_021562f0
 	arm_func_start func_ov61_021562f0
 func_ov61_021562f0: ; 0x021562f0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -28845,6 +29343,7 @@ _02156584:
 _02156590: .word 0x00001001
 _02156594: .word data_ov61_0217f414
 
+	.global func_ov61_02156598
 	arm_func_start func_ov61_02156598
 func_ov61_02156598: ; 0x02156598
 	str r0, [r1]
@@ -28863,6 +29362,7 @@ _021565a4:
 	bx lr
 	arm_func_end func_ov61_02156598
 
+	.global func_ov61_021565cc
 	arm_func_start func_ov61_021565cc
 func_ov61_021565cc: ; 0x021565cc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -28909,6 +29409,7 @@ _02156648:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_021565cc
 
+	.global func_ov61_02156668
 	arm_func_start func_ov61_02156668
 func_ov61_02156668: ; 0x02156668
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -28938,6 +29439,7 @@ func_ov61_02156668: ; 0x02156668
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02156668
 
+	.global func_ov61_021566cc
 	arm_func_start func_ov61_021566cc
 func_ov61_021566cc: ; 0x021566cc
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -29025,6 +29527,7 @@ _021567dc:
 _021567fc: .word data_ov61_0217f414
 _02156800: .word data_ov61_0217f474
 
+	.global func_ov61_02156804
 	arm_func_start func_ov61_02156804
 func_ov61_02156804: ; 0x02156804
 	stmdb sp!, {r4, lr}
@@ -29045,6 +29548,7 @@ func_ov61_02156804: ; 0x02156804
 _02156838: .word data_02000bf0
 _0215683c: .word data_ov61_0217bc28
 
+	.global func_ov61_02156840
 	arm_func_start func_ov61_02156840
 func_ov61_02156840: ; 0x02156840
 	stmdb sp!, {r4, lr}
@@ -29067,6 +29571,7 @@ _02156874: .word data_ov61_0217bc28
 _02156878: .word data_ov61_0217bc60
 _0215687c: .word data_ov61_02180c40
 
+	.global func_ov61_02156880
 	arm_func_start func_ov61_02156880
 func_ov61_02156880: ; 0x02156880
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29162,6 +29667,7 @@ _021569d0: .word func_ov61_021569dc
 _021569d4: .word func_ov61_02152454
 _021569d8: .word func_ov61_021588b4
 
+	.global func_ov61_021569dc
 	arm_func_start func_ov61_021569dc
 func_ov61_021569dc: ; 0x021569dc
 	ldr r0, _02156a30 ; =data_ov61_0217bc28
@@ -29194,6 +29700,7 @@ _02156a3c: .word data_ov61_0217f440
 _02156a40: .word data_ov61_0217f474
 _02156a44: .word data_ov61_02180c40
 
+	.global func_ov61_02156a48
 	arm_func_start func_ov61_02156a48
 func_ov61_02156a48: ; 0x02156a48
 	ldr r0, _02156a5c ; =data_ov61_02180c40
@@ -29205,6 +29712,7 @@ func_ov61_02156a48: ; 0x02156a48
 	arm_func_end func_ov61_02156a48
 _02156a5c: .word data_ov61_02180c40
 
+	.global func_ov61_02156a60
 	arm_func_start func_ov61_02156a60
 func_ov61_02156a60: ; 0x02156a60
 	stmdb sp!, {r3, lr}
@@ -29215,6 +29723,7 @@ func_ov61_02156a60: ; 0x02156a60
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02156a60
 
+	.global func_ov61_02156a78
 	arm_func_start func_ov61_02156a78
 func_ov61_02156a78: ; 0x02156a78
 	stmdb sp!, {r4, r5, r6, lr}
@@ -29259,6 +29768,7 @@ _02156b00: .word data_ov61_0217bc28
 _02156b04: .word data_ov61_02180c84
 _02156b08: .word data_ov61_02180c80
 
+	.global func_ov61_02156b0c
 	arm_func_start func_ov61_02156b0c
 func_ov61_02156b0c: ; 0x02156b0c
 	stmdb sp!, {r3, lr}
@@ -29282,6 +29792,7 @@ func_ov61_02156b0c: ; 0x02156b0c
 _02156b4c: .word data_ov61_02180c80
 _02156b50: .word data_ov61_0217bc28
 
+	.global func_ov61_02156b54
 	arm_func_start func_ov61_02156b54
 func_ov61_02156b54: ; 0x02156b54
 	stmdb sp!, {r3, lr}
@@ -29297,6 +29808,7 @@ func_ov61_02156b54: ; 0x02156b54
 	arm_func_end func_ov61_02156b54
 _02156b78: .word data_ov61_02180c84
 
+	.global func_ov61_02156b7c
 	arm_func_start func_ov61_02156b7c
 func_ov61_02156b7c: ; 0x02156b7c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -29317,6 +29829,7 @@ func_ov61_02156b7c: ; 0x02156b7c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02156b7c
 
+	.global func_ov61_02156bbc
 	arm_func_start func_ov61_02156bbc
 func_ov61_02156bbc: ; 0x02156bbc
 	stmdb sp!, {r3, lr}
@@ -29330,6 +29843,7 @@ func_ov61_02156bbc: ; 0x02156bbc
 	arm_func_end func_ov61_02156bbc
 _02156bd8: .word data_ov61_02180c84
 
+	.global func_ov61_02156bdc
 	arm_func_start func_ov61_02156bdc
 func_ov61_02156bdc: ; 0x02156bdc
 	ldr r1, [r0, #0x64]
@@ -29339,6 +29853,7 @@ func_ov61_02156bdc: ; 0x02156bdc
 	bx lr
 	arm_func_end func_ov61_02156bdc
 
+	.global func_ov61_02156bf0
 	arm_func_start func_ov61_02156bf0
 func_ov61_02156bf0: ; 0x02156bf0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29366,6 +29881,7 @@ _02156c2c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02156bf0
 
+	.global func_ov61_02156c3c
 	arm_func_start func_ov61_02156c3c
 func_ov61_02156c3c: ; 0x02156c3c
 	stmdb sp!, {r4, lr}
@@ -29376,6 +29892,7 @@ func_ov61_02156c3c: ; 0x02156c3c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02156c3c
 
+	.global func_ov61_02156c54
 	arm_func_start func_ov61_02156c54
 func_ov61_02156c54: ; 0x02156c54
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29410,6 +29927,7 @@ _02156cb8:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02156c54
 
+	.global func_ov61_02156cc4
 	arm_func_start func_ov61_02156cc4
 func_ov61_02156cc4: ; 0x02156cc4
 	ldr ip, _02156cd0 ; =func_ov61_02156c54
@@ -29419,6 +29937,7 @@ func_ov61_02156cc4: ; 0x02156cc4
 	arm_func_end func_ov61_02156cc4
 _02156cd0: .word func_ov61_02156c54
 
+	.global func_ov61_02156cd4
 	arm_func_start func_ov61_02156cd4
 func_ov61_02156cd4: ; 0x02156cd4
 	ldr ip, _02156ce0 ; =func_ov61_02156c54
@@ -29428,6 +29947,7 @@ func_ov61_02156cd4: ; 0x02156cd4
 	arm_func_end func_ov61_02156cd4
 _02156ce0: .word func_ov61_02156c54
 
+	.global func_ov61_02156ce4
 	arm_func_start func_ov61_02156ce4
 func_ov61_02156ce4: ; 0x02156ce4
 	stmdb sp!, {r4, lr}
@@ -29438,6 +29958,7 @@ func_ov61_02156ce4: ; 0x02156ce4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02156ce4
 
+	.global func_ov61_02156cfc
 	arm_func_start func_ov61_02156cfc
 func_ov61_02156cfc: ; 0x02156cfc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
@@ -29488,6 +30009,7 @@ _02156d8c:
 _02156da4:
 	.byte 0x04, 0xd0, 0x8d, 0xe2, 0xf8, 0x87, 0xbd, 0xe8
 
+	.global func_ov61_02156dac
 	arm_func_start func_ov61_02156dac
 func_ov61_02156dac: ; 0x02156dac
 	stmdb sp!, {r4, lr}
@@ -29508,6 +30030,7 @@ func_ov61_02156dac: ; 0x02156dac
 	arm_func_end func_ov61_02156dac
 _02156de4: .word func_ov61_02156de8
 
+	.global func_ov61_02156de8
 	arm_func_start func_ov61_02156de8
 func_ov61_02156de8: ; 0x02156de8
 	stmdb sp!, {r4, lr}
@@ -29547,6 +30070,7 @@ _02156e48:
 	arm_func_end func_ov61_02156de8
 _02156e58: .word func_ov61_02157cfc
 
+	.global func_ov61_02156e5c
 	arm_func_start func_ov61_02156e5c
 func_ov61_02156e5c: ; 0x02156e5c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -29579,6 +30103,7 @@ _02156eb0:
 	arm_func_end func_ov61_02156e5c
 _02156ec0: .word data_ov61_0217bc28
 
+	.global func_ov61_02156ec4
 	arm_func_start func_ov61_02156ec4
 func_ov61_02156ec4: ; 0x02156ec4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29617,6 +30142,7 @@ _02156f3c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02156ec4
 
+	.global func_ov61_02156f44
 	arm_func_start func_ov61_02156f44
 func_ov61_02156f44: ; 0x02156f44
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29631,6 +30157,7 @@ func_ov61_02156f44: ; 0x02156f44
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02156f44
 
+	.global func_ov61_02156f6c
 	arm_func_start func_ov61_02156f6c
 func_ov61_02156f6c: ; 0x02156f6c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -29702,6 +30229,7 @@ _0215705c:
 	arm_func_end func_ov61_02156f6c
 _02157064: .word data_ov61_02180c4c
 
+	.global func_ov61_02157068
 	arm_func_start func_ov61_02157068
 func_ov61_02157068: ; 0x02157068
 	stmdb sp!, {r4, lr}
@@ -29716,6 +30244,7 @@ func_ov61_02157068: ; 0x02157068
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02157068
 
+	.global func_ov61_02157090
 	arm_func_start func_ov61_02157090
 func_ov61_02157090: ; 0x02157090
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -29750,6 +30279,7 @@ func_ov61_02157090: ; 0x02157090
 	arm_func_end func_ov61_02157090
 _02157100: .word func_ov61_02156cfc
 
+	.global func_ov61_02157104
 	arm_func_start func_ov61_02157104
 func_ov61_02157104: ; 0x02157104
 	stmdb sp!, {r4, lr}
@@ -29787,6 +30317,7 @@ _02157134:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02157104
 
+	.global func_ov61_02157184
 	arm_func_start func_ov61_02157184
 func_ov61_02157184: ; 0x02157184
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -29842,6 +30373,7 @@ _021571bc:
 	arm_func_end func_ov61_02157184
 _02157244: .word data_ov61_0217bc48
 
+	.global func_ov61_02157248
 	arm_func_start func_ov61_02157248
 func_ov61_02157248: ; 0x02157248
 	stmdb sp!, {r4, r5, r6, lr}
@@ -29900,6 +30432,7 @@ _02157280:
 	arm_func_end func_ov61_02157248
 _02157314: .word func_ov61_02157318
 
+	.global func_ov61_02157318
 	arm_func_start func_ov61_02157318
 func_ov61_02157318: ; 0x02157318
 	stmdb sp!, {r4, r5, r6, lr}
@@ -29934,6 +30467,7 @@ func_ov61_02157318: ; 0x02157318
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02157318
 
+	.global func_ov61_02157390
 	arm_func_start func_ov61_02157390
 func_ov61_02157390: ; 0x02157390
 	stmdb sp!, {r3, r4, r5, lr}
@@ -29967,6 +30501,7 @@ _021573c4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02157390
 
+	.global func_ov61_02157400
 	arm_func_start func_ov61_02157400
 func_ov61_02157400: ; 0x02157400
 	stmdb sp!, {r4, r5, r6, lr}
@@ -30036,6 +30571,7 @@ _021574d4:
 	arm_func_end func_ov61_02157400
 _021574e4: .word data_ov61_0217bc2c
 
+	.global func_ov61_021574e8
 	arm_func_start func_ov61_021574e8
 func_ov61_021574e8: ; 0x021574e8
 	stmdb sp!, {r4, lr}
@@ -30063,6 +30599,7 @@ func_ov61_021574e8: ; 0x021574e8
 	arm_func_end func_ov61_021574e8
 _0215753c: .word func_ov61_02157540
 
+	.global func_ov61_02157540
 	arm_func_start func_ov61_02157540
 func_ov61_02157540: ; 0x02157540
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -30102,6 +30639,7 @@ _021575b0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02157540
 
+	.global func_ov61_021575c4
 	arm_func_start func_ov61_021575c4
 func_ov61_021575c4: ; 0x021575c4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -30196,6 +30734,7 @@ _021576d0:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_021575c4
 
+	.global func_ov61_0215770c
 	arm_func_start func_ov61_0215770c
 func_ov61_0215770c: ; 0x0215770c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -30241,6 +30780,7 @@ _02157794:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0215770c
 
+	.global func_ov61_021577a8
 	arm_func_start func_ov61_021577a8
 func_ov61_021577a8: ; 0x021577a8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -30275,6 +30815,7 @@ _021577d8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_021577a8
 
+	.global func_ov61_0215781c
 	arm_func_start func_ov61_0215781c
 func_ov61_0215781c: ; 0x0215781c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -30349,6 +30890,7 @@ _02157910:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_0215781c
 
+	.global func_ov61_02157924
 	arm_func_start func_ov61_02157924
 func_ov61_02157924: ; 0x02157924
 	stmdb sp!, {r3, r4, r5, lr}
@@ -30384,6 +30926,7 @@ _0215798c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02157924
 
+	.global func_ov61_02157998
 	arm_func_start func_ov61_02157998
 func_ov61_02157998: ; 0x02157998
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -30408,6 +30951,7 @@ func_ov61_02157998: ; 0x02157998
 	arm_func_end func_ov61_02157998
 _021579e0: .word func_ov61_021579e4
 
+	.global func_ov61_021579e4
 	arm_func_start func_ov61_021579e4
 func_ov61_021579e4: ; 0x021579e4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -30496,6 +31040,7 @@ _02157b14:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_021579e4
 
+	.global func_ov61_02157b20
 	arm_func_start func_ov61_02157b20
 func_ov61_02157b20: ; 0x02157b20
 	stmdb sp!, {r4, lr}
@@ -30520,6 +31065,7 @@ func_ov61_02157b20: ; 0x02157b20
 	arm_func_end func_ov61_02157b20
 _02157b68: .word func_ov61_02157b6c
 
+	.global func_ov61_02157b6c
 	arm_func_start func_ov61_02157b6c
 func_ov61_02157b6c: ; 0x02157b6c
 	ldr ip, _02157b78 ; =func_ov61_02157b7c
@@ -30529,6 +31075,7 @@ func_ov61_02157b6c: ; 0x02157b6c
 	arm_func_end func_ov61_02157b6c
 _02157b78: .word func_ov61_02157b7c
 
+	.global func_ov61_02157b7c
 	arm_func_start func_ov61_02157b7c
 func_ov61_02157b7c: ; 0x02157b7c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -30549,6 +31096,7 @@ _02157ba8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02157b7c
 
+	.global func_ov61_02157bb8
 	arm_func_start func_ov61_02157bb8
 func_ov61_02157bb8: ; 0x02157bb8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -30641,6 +31189,7 @@ _02157ce4:
 	arm_func_end func_ov61_02157bb8
 _02157cf8: .word data_ov61_0217bc28
 
+	.global func_ov61_02157cfc
 	arm_func_start func_ov61_02157cfc
 func_ov61_02157cfc: ; 0x02157cfc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -30718,6 +31267,7 @@ _02157dd0:
 _02157e08: .word data_ov61_0217bc28
 _02157e0c: .word data_ov61_02180ca4
 
+	.global func_ov61_02157e10
 	arm_func_start func_ov61_02157e10
 func_ov61_02157e10: ; 0x02157e10
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -30797,6 +31347,7 @@ _02157eec:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02157e10
 
+	.global func_ov61_02157f24
 	arm_func_start func_ov61_02157f24
 func_ov61_02157f24: ; 0x02157f24
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -30872,6 +31423,7 @@ _0215801c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02157f24
 
+	.global func_ov61_02158028
 	arm_func_start func_ov61_02158028
 func_ov61_02158028: ; 0x02158028
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -30912,6 +31464,7 @@ _0215809c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02158028
 
+	.global func_ov61_021580ac
 	arm_func_start func_ov61_021580ac
 func_ov61_021580ac: ; 0x021580ac
 	ldr r2, [r0, #0x68]
@@ -30925,6 +31478,7 @@ func_ov61_021580ac: ; 0x021580ac
 	bx lr
 	arm_func_end func_ov61_021580ac
 
+	.global func_ov61_021580d0
 	arm_func_start func_ov61_021580d0
 func_ov61_021580d0: ; 0x021580d0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -31030,6 +31584,7 @@ _0215821c:
 	arm_func_end func_ov61_021580d0
 _02158240: .word func_ov61_02158244
 
+	.global func_ov61_02158244
 	arm_func_start func_ov61_02158244
 func_ov61_02158244: ; 0x02158244
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -31111,6 +31666,7 @@ _02158344:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_02158244
 
+	.global func_ov61_02158360
 	arm_func_start func_ov61_02158360
 func_ov61_02158360: ; 0x02158360
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31161,6 +31717,7 @@ _021583f4:
 _021583fc: .word data_027e02a0
 _02158400: .word data_ov61_02180c50
 
+	.global func_ov61_02158404
 	arm_func_start func_ov61_02158404
 func_ov61_02158404: ; 0x02158404
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -31206,6 +31763,7 @@ _02158494:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02158404
 
+	.global func_ov61_0215849c
 	arm_func_start func_ov61_0215849c
 func_ov61_0215849c: ; 0x0215849c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31258,6 +31816,7 @@ _0215853c:
 	arm_func_end func_ov61_0215849c
 _02158544: .word func_ov61_02158548
 
+	.global func_ov61_02158548
 	arm_func_start func_ov61_02158548
 func_ov61_02158548: ; 0x02158548
 	stmdb sp!, {r3, lr}
@@ -31275,6 +31834,7 @@ _02158570:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02158548
 
+	.global func_ov61_02158578
 	arm_func_start func_ov61_02158578
 func_ov61_02158578: ; 0x02158578
 	stmdb sp!, {r4, lr}
@@ -31293,6 +31853,7 @@ _021585a4:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02158578
 
+	.global func_ov61_021585ac
 	arm_func_start func_ov61_021585ac
 func_ov61_021585ac: ; 0x021585ac
 	stmdb sp!, {r4, lr}
@@ -31352,6 +31913,7 @@ _0215864c:
 	arm_func_end func_ov61_021585ac
 _02158678: .word func_ov61_0215867c
 
+	.global func_ov61_0215867c
 	arm_func_start func_ov61_0215867c
 func_ov61_0215867c: ; 0x0215867c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31395,6 +31957,7 @@ _021586b8:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215867c
 
+	.global func_ov61_02158714
 	arm_func_start func_ov61_02158714
 func_ov61_02158714: ; 0x02158714
 	stmdb sp!, {r4, r5, r6, lr}
@@ -31469,6 +32032,7 @@ _021587d8:
 	arm_func_end func_ov61_02158714
 _02158810: .word data_ov61_0217bc28
 
+	.global func_ov61_02158814
 	arm_func_start func_ov61_02158814
 func_ov61_02158814: ; 0x02158814
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -31517,6 +32081,7 @@ _021588a0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02158814
 
+	.global func_ov61_021588b4
 	arm_func_start func_ov61_021588b4
 func_ov61_021588b4: ; 0x021588b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31539,6 +32104,7 @@ _021588e0:
 	arm_func_end func_ov61_021588b4
 _021588ec: .word data_ov61_02180cb0
 
+	.global func_ov61_021588f0
 	arm_func_start func_ov61_021588f0
 func_ov61_021588f0: ; 0x021588f0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31589,6 +32155,7 @@ _02158988: .word data_ov61_0217f464
 _0215898c: .word data_ov61_0217bc28
 _02158990: .word data_ov61_02180c50
 
+	.global func_ov61_02158994
 	arm_func_start func_ov61_02158994
 func_ov61_02158994: ; 0x02158994
 	stmdb sp!, {r4, r5, r6, lr}
@@ -31643,6 +32210,7 @@ _02158a30: .word data_ov61_02180c4c
 _02158a34: .word data_ov61_02180cac
 _02158a38: .word data_ov61_02180cb0
 
+	.global func_ov61_02158a3c
 	arm_func_start func_ov61_02158a3c
 func_ov61_02158a3c: ; 0x02158a3c
 	stmdb sp!, {r4, lr}
@@ -31682,6 +32250,7 @@ _02158aac:
 	arm_func_end func_ov61_02158a3c
 _02158ab4: .word data_ov61_02180c4c
 
+	.global func_ov61_02158ab8
 	arm_func_start func_ov61_02158ab8
 func_ov61_02158ab8: ; 0x02158ab8
 	stmdb sp!, {r4, r5, lr}
@@ -31731,6 +32300,7 @@ _02158b5c: .word data_ov61_0217bc28
 _02158b60: .word 0x00000b68
 _02158b64: .word 0x00000466
 
+	.global func_ov61_02158b68
 	arm_func_start func_ov61_02158b68
 func_ov61_02158b68: ; 0x02158b68
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -31755,6 +32325,7 @@ func_ov61_02158b68: ; 0x02158b68
 	arm_func_end func_ov61_02158b68
 _02158bb0: .word data_ov61_0217f474
 
+	.global func_ov61_02158bb4
 	arm_func_start func_ov61_02158bb4
 func_ov61_02158bb4: ; 0x02158bb4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -31773,6 +32344,7 @@ func_ov61_02158bb4: ; 0x02158bb4
 	arm_func_end func_ov61_02158bb4
 _02158be4: .word data_ov61_0217f474
 
+	.global func_ov61_02158be8
 	arm_func_start func_ov61_02158be8
 func_ov61_02158be8: ; 0x02158be8
 	stmdb sp!, {r3, lr}
@@ -31806,6 +32378,7 @@ _02158c44: .word data_ov61_0217f464
 _02158c48: .word data_ov61_02180c48
 _02158c4c: .word data_ov61_02180c44
 
+	.global func_ov61_02158c50
 	arm_func_start func_ov61_02158c50
 func_ov61_02158c50: ; 0x02158c50
 	stmdb sp!, {r4, r5, r6, lr}
@@ -31866,6 +32439,7 @@ _02158d18:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02158c50
 
+	.global func_ov61_02158d20
 	arm_func_start func_ov61_02158d20
 func_ov61_02158d20: ; 0x02158d20
 	ldr r2, [r0, #0x64]
@@ -31890,6 +32464,7 @@ _02158d60:
 	bx lr
 	arm_func_end func_ov61_02158d20
 
+	.global func_ov61_02158d68
 	arm_func_start func_ov61_02158d68
 func_ov61_02158d68: ; 0x02158d68
 	add r0, r0, #3
@@ -31897,6 +32472,7 @@ func_ov61_02158d68: ; 0x02158d68
 	bx lr
 	arm_func_end func_ov61_02158d68
 
+	.global func_ov61_02158d74
 	arm_func_start func_ov61_02158d74
 func_ov61_02158d74: ; 0x02158d74
 	ldr ip, _02158d84 ; =func_ov61_02158d8c
@@ -31908,6 +32484,7 @@ func_ov61_02158d74: ; 0x02158d74
 _02158d84: .word func_ov61_02158d8c
 _02158d88: .word data_ov61_02180cac
 
+	.global func_ov61_02158d8c
 	arm_func_start func_ov61_02158d8c
 func_ov61_02158d8c: ; 0x02158d8c
 	ldr r2, [r0]
@@ -31916,6 +32493,7 @@ func_ov61_02158d8c: ; 0x02158d8c
 	bx lr
 	arm_func_end func_ov61_02158d8c
 
+	.global func_ov61_02158d9c
 	arm_func_start func_ov61_02158d9c
 func_ov61_02158d9c: ; 0x02158d9c
 	ldr ip, _02158dac ; =func_ov61_02158d8c
@@ -31927,6 +32505,7 @@ func_ov61_02158d9c: ; 0x02158d9c
 _02158dac: .word func_ov61_02158d8c
 _02158db0: .word data_ov61_02180cb0
 
+	.global func_ov61_02158db4
 	arm_func_start func_ov61_02158db4
 func_ov61_02158db4: ; 0x02158db4
 	ldr ip, _02158dc4 ; =func_ov61_02158dcc
@@ -31938,6 +32517,7 @@ func_ov61_02158db4: ; 0x02158db4
 _02158dc4: .word func_ov61_02158dcc
 _02158dc8: .word data_ov61_02180cac
 
+	.global func_ov61_02158dcc
 	arm_func_start func_ov61_02158dcc
 func_ov61_02158dcc: ; 0x02158dcc
 	stmdb sp!, {r4, lr}
@@ -31949,6 +32529,7 @@ func_ov61_02158dcc: ; 0x02158dcc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02158dcc
 
+	.global func_ov61_02158de8
 	arm_func_start func_ov61_02158de8
 func_ov61_02158de8: ; 0x02158de8
 	ldr r2, [r0]
@@ -31966,6 +32547,7 @@ _02158e0c:
 	bx lr
 	arm_func_end func_ov61_02158de8
 
+	.global func_ov61_02158e14
 	arm_func_start func_ov61_02158e14
 func_ov61_02158e14: ; 0x02158e14
 	ldr ip, _02158e24 ; =func_ov61_02158dcc
@@ -31977,6 +32559,7 @@ func_ov61_02158e14: ; 0x02158e14
 _02158e24: .word func_ov61_02158dcc
 _02158e28: .word data_ov61_02180cb0
 
+	.global func_ov61_02158e2c
 	arm_func_start func_ov61_02158e2c
 func_ov61_02158e2c: ; 0x02158e2c
 	stmdb sp!, {r3, lr}
@@ -31997,6 +32580,7 @@ _02158e54:
 	arm_func_end func_ov61_02158e2c
 _02158e5c: .word data_ov61_02180cac
 
+	.global func_ov61_02158e60
 	arm_func_start func_ov61_02158e60
 func_ov61_02158e60: ; 0x02158e60
 	stmdb sp!, {r3, lr}
@@ -32011,6 +32595,7 @@ func_ov61_02158e60: ; 0x02158e60
 	arm_func_end func_ov61_02158e60
 _02158e80: .word data_ov61_02180cb0
 
+	.global func_ov61_02158e84
 	arm_func_start func_ov61_02158e84
 func_ov61_02158e84: ; 0x02158e84
 	stmdb sp!, {r3, lr}
@@ -32028,6 +32613,7 @@ _02158e9c:
 _02158ea8: .word data_ov61_0217bc48
 _02158eac: .word data_ov61_0217bc30
 
+	.global func_ov61_02158eb0
 	arm_func_start func_ov61_02158eb0
 func_ov61_02158eb0: ; 0x02158eb0
 	ldrh r1, [r1, #2]
@@ -32044,6 +32630,7 @@ func_ov61_02158eb0: ; 0x02158eb0
 	arm_func_end func_ov61_02158eb0
 _02158ed8: .word func_ov61_02157390
 
+	.global func_ov61_02158edc
 	arm_func_start func_ov61_02158edc
 func_ov61_02158edc: ; 0x02158edc
 	stmdb sp!, {r4, lr}
@@ -32071,6 +32658,7 @@ func_ov61_02158edc: ; 0x02158edc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02158edc
 
+	.global func_ov61_02158f38
 	arm_func_start func_ov61_02158f38
 func_ov61_02158f38: ; 0x02158f38
 	stmdb sp!, {r3, lr}
@@ -32084,6 +32672,7 @@ func_ov61_02158f38: ; 0x02158f38
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02158f38
 
+	.global func_ov61_02158f5c
 	arm_func_start func_ov61_02158f5c
 func_ov61_02158f5c: ; 0x02158f5c
 	stmdb sp!, {r3, lr}
@@ -32124,6 +32713,7 @@ func_ov61_02158f5c: ; 0x02158f5c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02158f5c
 
+	.global func_ov61_02158fec
 	arm_func_start func_ov61_02158fec
 func_ov61_02158fec: ; 0x02158fec
 	stmdb sp!, {r3, lr}
@@ -32137,6 +32727,7 @@ func_ov61_02158fec: ; 0x02158fec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02158fec
 
+	.global func_ov61_02159010
 	arm_func_start func_ov61_02159010
 func_ov61_02159010: ; 0x02159010
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -32175,6 +32766,7 @@ _0215907c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02159010
 
+	.global func_ov61_02159094
 	arm_func_start func_ov61_02159094
 func_ov61_02159094: ; 0x02159094
 	ldr ip, _0215909c ; =func_ov61_0215849c
@@ -32183,6 +32775,7 @@ func_ov61_02159094: ; 0x02159094
 	arm_func_end func_ov61_02159094
 _0215909c: .word func_ov61_0215849c
 
+	.global func_ov61_021590a0
 	arm_func_start func_ov61_021590a0
 func_ov61_021590a0: ; 0x021590a0
 	ldr ip, _021590a8 ; =func_ov61_021585ac
@@ -32191,6 +32784,7 @@ func_ov61_021590a0: ; 0x021590a0
 	arm_func_end func_ov61_021590a0
 _021590a8: .word func_ov61_021585ac
 
+	.global func_ov61_021590ac
 	arm_func_start func_ov61_021590ac
 func_ov61_021590ac: ; 0x021590ac
 	stmdb sp!, {r3, r4, r5, lr}
@@ -32244,6 +32838,7 @@ _02159160: .word data_ov61_02180ccc
 _02159164: .word data_ov61_02180cb4
 _02159168: .word data_ov61_02180cd4
 
+	.global func_ov61_0215916c
 	arm_func_start func_ov61_0215916c
 func_ov61_0215916c: ; 0x0215916c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -32285,6 +32880,7 @@ func_ov61_0215916c: ; 0x0215916c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215916c
 
+	.global func_ov61_02159200
 	arm_func_start func_ov61_02159200
 func_ov61_02159200: ; 0x02159200
 	stmdb sp!, {r3, lr}
@@ -32303,6 +32899,7 @@ func_ov61_02159200: ; 0x02159200
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02159200
 
+	.global func_ov61_02159238
 	arm_func_start func_ov61_02159238
 func_ov61_02159238: ; 0x02159238
 	stmdb sp!, {r3, r4, r5, lr}
@@ -32334,6 +32931,7 @@ func_ov61_02159238: ; 0x02159238
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02159238
 
+	.global func_ov61_021592a4
 	arm_func_start func_ov61_021592a4
 func_ov61_021592a4: ; 0x021592a4
 	ldr ip, _021592ac ; =func_ov61_02157104
@@ -32342,6 +32940,7 @@ func_ov61_021592a4: ; 0x021592a4
 	arm_func_end func_ov61_021592a4
 _021592ac: .word func_ov61_02157104
 
+	.global func_ov61_021592b0
 	arm_func_start func_ov61_021592b0
 func_ov61_021592b0: ; 0x021592b0
 	stmdb sp!, {r4, lr}
@@ -32377,6 +32976,7 @@ func_ov61_021592b0: ; 0x021592b0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021592b0
 
+	.global func_ov61_0215932c
 	arm_func_start func_ov61_0215932c
 func_ov61_0215932c: ; 0x0215932c
 	cmp r0, #0
@@ -32404,6 +33004,7 @@ _02159374:
 	bx lr
 	arm_func_end func_ov61_0215932c
 
+	.global func_ov61_0215937c
 	arm_func_start func_ov61_0215937c
 func_ov61_0215937c: ; 0x0215937c
 	stmdb sp!, {r4, lr}
@@ -32420,6 +33021,7 @@ func_ov61_0215937c: ; 0x0215937c
 	arm_func_end func_ov61_0215937c
 _021593a4: .word data_ov61_02180cb4
 
+	.global func_ov61_021593a8
 	arm_func_start func_ov61_021593a8
 func_ov61_021593a8: ; 0x021593a8
 	stmdb sp!, {r3, lr}
@@ -32436,6 +33038,7 @@ func_ov61_021593a8: ; 0x021593a8
 	arm_func_end func_ov61_021593a8
 _021593d0: .word data_ov61_02180cb4
 
+	.global func_ov61_021593d4
 	arm_func_start func_ov61_021593d4
 func_ov61_021593d4: ; 0x021593d4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -32534,6 +33137,7 @@ _0215953c: .word data_ov61_02180cb4
 _02159540: .word func_ov61_021593a8
 _02159544: .word data_ov61_02180cf4
 
+	.global func_ov61_02159548
 	arm_func_start func_ov61_02159548
 func_ov61_02159548: ; 0x02159548
 	ldr ip, _02159550 ; =func_ov61_021588f0
@@ -32542,6 +33146,7 @@ func_ov61_02159548: ; 0x02159548
 	arm_func_end func_ov61_02159548
 _02159550: .word func_ov61_021588f0
 
+	.global func_ov61_02159554
 	arm_func_start func_ov61_02159554
 func_ov61_02159554: ; 0x02159554
 	stmdb sp!, {r0, r1, r2, r3}
@@ -32559,6 +33164,7 @@ func_ov61_02159554: ; 0x02159554
 	arm_func_end func_ov61_02159554
 _02159580: .word data_ov61_02180d2c
 
+	.global func_ov61_02159584
 	arm_func_start func_ov61_02159584
 func_ov61_02159584: ; 0x02159584
 	stmdb sp!, {r4, lr}
@@ -32583,6 +33189,7 @@ func_ov61_02159584: ; 0x02159584
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02159584
 
+	.global func_ov61_021595d4
 	arm_func_start func_ov61_021595d4
 func_ov61_021595d4: ; 0x021595d4
 	stmdb sp!, {r3, r4, lr}
@@ -32621,6 +33228,7 @@ func_ov61_021595d4: ; 0x021595d4
 	arm_func_end func_ov61_021595d4
 _02159654: .word data_ov61_0217bc78
 
+	.global func_ov61_02159658
 	arm_func_start func_ov61_02159658
 func_ov61_02159658: ; 0x02159658
 	mov r2, r0, lsr #0x18
@@ -32633,6 +33241,7 @@ func_ov61_02159658: ; 0x02159658
 	bx lr
 	arm_func_end func_ov61_02159658
 
+	.global func_ov61_02159678
 	arm_func_start func_ov61_02159678
 func_ov61_02159678: ; 0x02159678
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -32688,6 +33297,7 @@ _02159720:
 	arm_func_end func_ov61_02159678
 _02159728: .word 0x0000020b
 
+	.global func_ov61_0215972c
 	arm_func_start func_ov61_0215972c
 func_ov61_0215972c: ; 0x0215972c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -32733,6 +33343,7 @@ _021597b0:
 	arm_func_end func_ov61_0215972c
 _021597bc: .word data_ov61_02180e48
 
+	.global func_ov61_021597c0
 	arm_func_start func_ov61_021597c0
 func_ov61_021597c0: ; 0x021597c0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -32781,6 +33392,7 @@ _02159850:
 	arm_func_end func_ov61_021597c0
 _0215985c: .word data_ov61_02180e48
 
+	.global func_ov61_02159860
 	arm_func_start func_ov61_02159860
 func_ov61_02159860: ; 0x02159860
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -32849,6 +33461,7 @@ _02159908:
 	arm_func_end func_ov61_02159860
 _02159948: .word data_ov61_02180e48
 
+	.global func_ov61_0215994c
 	arm_func_start func_ov61_0215994c
 func_ov61_0215994c: ; 0x0215994c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -32883,6 +33496,7 @@ _021599a4:
 	arm_func_end func_ov61_0215994c
 _021599b0: .word data_ov61_02180e48
 
+	.global func_ov61_021599b4
 	arm_func_start func_ov61_021599b4
 func_ov61_021599b4: ; 0x021599b4
 	stmdb sp!, {lr}
@@ -32902,6 +33516,7 @@ func_ov61_021599b4: ; 0x021599b4
 	arm_func_end func_ov61_021599b4
 _021599e8: .word 0x386d4380
 
+	.global func_ov61_021599ec
 	arm_func_start func_ov61_021599ec
 func_ov61_021599ec: ; 0x021599ec
 	ldr r1, _021599f8 ; =data_ov61_0217bc84
@@ -32911,6 +33526,7 @@ func_ov61_021599ec: ; 0x021599ec
 	arm_func_end func_ov61_021599ec
 _021599f8: .word data_ov61_0217bc84
 
+	.global func_ov61_021599fc
 	arm_func_start func_ov61_021599fc
 func_ov61_021599fc: ; 0x021599fc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -32935,6 +33551,7 @@ func_ov61_021599fc: ; 0x021599fc
 _02159a40: .word data_ov61_0217bc84
 _02159a44: .word data_027e02a0
 
+	.global func_ov61_02159a48
 	arm_func_start func_ov61_02159a48
 func_ov61_02159a48: ; 0x02159a48
 	stmdb sp!, {r3, lr}
@@ -32949,6 +33566,7 @@ func_ov61_02159a48: ; 0x02159a48
 	arm_func_end func_ov61_02159a48
 _02159a68: .word data_027e02a0
 
+	.global func_ov61_02159a6c
 	arm_func_start func_ov61_02159a6c
 func_ov61_02159a6c: ; 0x02159a6c
 	ldr r2, _02159a90 ; =data_027e02a0
@@ -32964,6 +33582,7 @@ func_ov61_02159a6c: ; 0x02159a6c
 	arm_func_end func_ov61_02159a6c
 _02159a90: .word data_027e02a0
 
+	.global func_ov61_02159a94
 	arm_func_start func_ov61_02159a94
 func_ov61_02159a94: ; 0x02159a94
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -32989,6 +33608,7 @@ _02159ad8:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02159a94
 
+	.global func_ov61_02159ae0
 	arm_func_start func_ov61_02159ae0
 func_ov61_02159ae0: ; 0x02159ae0
 	ldr r1, [r0]
@@ -33015,6 +33635,7 @@ _02159b24:
 	bx lr
 	arm_func_end func_ov61_02159ae0
 
+	.global func_ov61_02159b30
 	arm_func_start func_ov61_02159b30
 func_ov61_02159b30: ; 0x02159b30
 	ldrsb r3, [r0]
@@ -33050,6 +33671,7 @@ _02159b90:
 	bx lr
 	arm_func_end func_ov61_02159b30
 
+	.global func_ov61_02159b9c
 	arm_func_start func_ov61_02159b9c
 func_ov61_02159b9c: ; 0x02159b9c
 	stmdb sp!, {r4, lr}
@@ -33088,6 +33710,7 @@ _02159be8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02159b9c
 
+	.global func_ov61_02159c1c
 	arm_func_start func_ov61_02159c1c
 func_ov61_02159c1c: ; 0x02159c1c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -33449,6 +34072,7 @@ _0215a0f4:
 	arm_func_end func_ov61_02159c1c
 _0215a108: .word data_ov61_0217bc8c
 
+	.global func_ov61_0215a10c
 	arm_func_start func_ov61_0215a10c
 func_ov61_0215a10c: ; 0x0215a10c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
@@ -33564,6 +34188,7 @@ _0215a290:
 _0215a2ac: .word data_ov61_0217f428
 _0215a2b0: .word data_ov61_0217f454
 
+	.global func_ov61_0215a2b4
 	arm_func_start func_ov61_0215a2b4
 func_ov61_0215a2b4: ; 0x0215a2b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -33629,6 +34254,7 @@ _0215a370:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215a2b4
 
+	.global func_ov61_0215a398
 	arm_func_start func_ov61_0215a398
 func_ov61_0215a398: ; 0x0215a398
 	mov r2, r0
@@ -33644,6 +34270,7 @@ _0215a3a4:
 	bx lr
 	arm_func_end func_ov61_0215a398
 
+	.global func_ov61_0215a3bc
 	arm_func_start func_ov61_0215a3bc
 func_ov61_0215a3bc: ; 0x0215a3bc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -33678,6 +34305,7 @@ _0215a3d8:
 _0215a424:
 	.byte 0x70, 0x80, 0xbd, 0xe8
 
+	.global func_ov61_0215a428
 	arm_func_start func_ov61_0215a428
 func_ov61_0215a428: ; 0x0215a428
 	stmdb sp!, {r0, r1, r2, r3}
@@ -33826,6 +34454,7 @@ _0215a628:
 	bx lr
 	arm_func_end func_ov61_0215a428
 
+	.global func_ov61_0215a64c
 	arm_func_start func_ov61_0215a64c
 func_ov61_0215a64c: ; 0x0215a64c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -33879,6 +34508,7 @@ _0215a6e0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215a64c
 
+	.global func_ov61_0215a700
 	arm_func_start func_ov61_0215a700
 func_ov61_0215a700: ; 0x0215a700
 	stmdb sp!, {r4, lr}
@@ -33904,6 +34534,7 @@ _0215a744:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215a700
 
+	.global func_ov61_0215a74c
 	arm_func_start func_ov61_0215a74c
 func_ov61_0215a74c: ; 0x0215a74c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -33935,6 +34566,7 @@ _0215a794:
 	arm_func_end func_ov61_0215a74c
 _0215a7a8: .word data_ov61_0217bc84
 
+	.global func_ov61_0215a7ac
 	arm_func_start func_ov61_0215a7ac
 func_ov61_0215a7ac: ; 0x0215a7ac
 	cmp r0, #3
@@ -33943,6 +34575,7 @@ func_ov61_0215a7ac: ; 0x0215a7ac
 	bx lr
 	arm_func_end func_ov61_0215a7ac
 
+	.global func_ov61_0215a7bc
 	arm_func_start func_ov61_0215a7bc
 func_ov61_0215a7bc: ; 0x0215a7bc
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -34000,6 +34633,7 @@ _0215a874:
 	arm_func_end func_ov61_0215a7bc
 _0215a880: .word 0x55555556
 
+	.global func_ov61_0215a884
 	arm_func_start func_ov61_0215a884
 func_ov61_0215a884: ; 0x0215a884
 	stmdb sp!, {r4, r5, r6, lr}
@@ -34044,6 +34678,7 @@ _0215a8e4:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215a884
 
+	.global func_ov61_0215a920
 	arm_func_start func_ov61_0215a920
 func_ov61_0215a920: ; 0x0215a920
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -34195,6 +34830,7 @@ _0215ab2c:
 _0215ab58: .word data_ov61_0217f428
 _0215ab5c: .word data_ov61_0217f454
 
+	.global func_ov61_0215ab60
 	arm_func_start func_ov61_0215ab60
 func_ov61_0215ab60: ; 0x0215ab60
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -34238,6 +34874,7 @@ func_ov61_0215ab60: ; 0x0215ab60
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_0215ab60
 
+	.global func_ov61_0215abfc
 	arm_func_start func_ov61_0215abfc
 func_ov61_0215abfc: ; 0x0215abfc
 	stmdb sp!, {r4, lr}
@@ -34267,6 +34904,7 @@ _0215ac50: .word data_ov61_0217bcd8
 _0215ac54: .word data_ov61_0217bcdc
 _0215ac58: .word data_ov61_0217bce0
 
+	.global func_ov61_0215ac5c
 	arm_func_start func_ov61_0215ac5c
 func_ov61_0215ac5c: ; 0x0215ac5c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -34395,6 +35033,7 @@ _0215ae00:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0215ac5c
 
+	.global func_ov61_0215ae28
 	arm_func_start func_ov61_0215ae28
 func_ov61_0215ae28: ; 0x0215ae28
 	stmdb sp!, {r4, lr}
@@ -34414,6 +35053,7 @@ func_ov61_0215ae28: ; 0x0215ae28
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215ae28
 
+	.global func_ov61_0215ae64
 	arm_func_start func_ov61_0215ae64
 func_ov61_0215ae64: ; 0x0215ae64
 	stmdb sp!, {r3, r4, r5, lr}
@@ -34476,6 +35116,7 @@ _0215aea0:
 _0215af38: .word data_ov61_0217bce4
 _0215af3c: .word data_ov61_0217bcec
 
+	.global func_ov61_0215af40
 	arm_func_start func_ov61_0215af40
 func_ov61_0215af40: ; 0x0215af40
 	stmdb sp!, {r3, r4, r5, lr}
@@ -34538,6 +35179,7 @@ _0215af7c:
 _0215b014: .word data_ov61_0217bce4
 _0215b018: .word data_ov61_0217bcec
 
+	.global func_ov61_0215b01c
 	arm_func_start func_ov61_0215b01c
 func_ov61_0215b01c: ; 0x0215b01c
 	stmdb sp!, {r4, r5, lr}
@@ -34590,6 +35232,7 @@ func_ov61_0215b01c: ; 0x0215b01c
 	ldmia sp!, {r4, r5, pc}
 	arm_func_end func_ov61_0215b01c
 
+	.global func_ov61_0215b0dc
 	arm_func_start func_ov61_0215b0dc
 func_ov61_0215b0dc: ; 0x0215b0dc
 	mov r2, #8
@@ -34604,6 +35247,7 @@ _0215b0e0:
 	bx lr
 	arm_func_end func_ov61_0215b0dc
 
+	.global func_ov61_0215b100
 	arm_func_start func_ov61_0215b100
 func_ov61_0215b100: ; 0x0215b100
 	stmdb sp!, {r4, lr}
@@ -34614,6 +35258,7 @@ func_ov61_0215b100: ; 0x0215b100
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215b100
 
+	.global func_ov61_0215b118
 	arm_func_start func_ov61_0215b118
 func_ov61_0215b118: ; 0x0215b118
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -34761,6 +35406,7 @@ _0215b314:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215b118
 
+	.global func_ov61_0215b348
 	arm_func_start func_ov61_0215b348
 func_ov61_0215b348: ; 0x0215b348
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -34897,6 +35543,7 @@ _0215b51c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215b348
 
+	.global func_ov61_0215b54c
 	arm_func_start func_ov61_0215b54c
 func_ov61_0215b54c: ; 0x0215b54c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -34929,6 +35576,7 @@ _0215b560:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215b54c
 
+	.global func_ov61_0215b5b8
 	arm_func_start func_ov61_0215b5b8
 func_ov61_0215b5b8: ; 0x0215b5b8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -34944,6 +35592,7 @@ func_ov61_0215b5b8: ; 0x0215b5b8
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215b5b8
 
+	.global func_ov61_0215b5e4
 	arm_func_start func_ov61_0215b5e4
 func_ov61_0215b5e4: ; 0x0215b5e4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -35116,6 +35765,7 @@ _0215b814:
 	arm_func_end func_ov61_0215b5e4
 _0215b828: .word data_ov61_0217f454
 
+	.global func_ov61_0215b82c
 	arm_func_start func_ov61_0215b82c
 func_ov61_0215b82c: ; 0x0215b82c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -35231,6 +35881,7 @@ _0215b9c0: .word data_ov61_0217f428
 _0215b9c4: .word data_ov61_0217f454
 _0215b9c8: .word 0x00004805
 
+	.global func_ov61_0215b9cc
 	arm_func_start func_ov61_0215b9cc
 func_ov61_0215b9cc: ; 0x0215b9cc
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -35316,6 +35967,7 @@ _0215baf0: .word data_ov61_0217f47c
 _0215baf4: .word data_ov61_02180fb8
 _0215baf8: .word data_ov61_02180fcb
 
+	.global func_ov61_0215bafc
 	arm_func_start func_ov61_0215bafc
 func_ov61_0215bafc: ; 0x0215bafc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -35349,6 +36001,7 @@ func_ov61_0215bafc: ; 0x0215bafc
 _0215bb64: .word data_ov61_02180fb8
 _0215bb68: .word data_ov61_02180e40
 
+	.global func_ov61_0215bb6c
 	arm_func_start func_ov61_0215bb6c
 func_ov61_0215bb6c: ; 0x0215bb6c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -35511,6 +36164,7 @@ _0215bdc0: .word data_ov61_0217f428
 _0215bdc4: .word data_ov61_02180e40
 _0215bdc8: .word data_ov61_0217f454
 
+	.global func_ov61_0215bdcc
 	arm_func_start func_ov61_0215bdcc
 func_ov61_0215bdcc: ; 0x0215bdcc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -35602,6 +36256,7 @@ func_ov61_0215bdcc: ; 0x0215bdcc
 _0215bf1c: .word data_ov61_0217f428
 _0215bf20: .word data_ov61_0217f454
 
+	.global func_ov61_0215bf24
 	arm_func_start func_ov61_0215bf24
 func_ov61_0215bf24: ; 0x0215bf24
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -35710,6 +36365,7 @@ _0215c0ac: .word data_ov61_0217f428
 _0215c0b0: .word data_ov61_0217bc84
 _0215c0b4: .word data_ov61_0217f454
 
+	.global func_ov61_0215c0b8
 	arm_func_start func_ov61_0215c0b8
 func_ov61_0215c0b8: ; 0x0215c0b8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -35886,6 +36542,7 @@ _0215c2e8:
 _0215c348: .word data_ov61_0217f428
 _0215c34c: .word data_ov61_0217f454
 
+	.global func_ov61_0215c350
 	arm_func_start func_ov61_0215c350
 func_ov61_0215c350: ; 0x0215c350
 	stmdb sp!, {r4, lr}
@@ -35902,6 +36559,7 @@ func_ov61_0215c350: ; 0x0215c350
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215c350
 
+	.global func_ov61_0215c380
 	arm_func_start func_ov61_0215c380
 func_ov61_0215c380: ; 0x0215c380
 	stmdb sp!, {r4, lr}
@@ -35942,6 +36600,7 @@ _0215c400:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215c380
 
+	.global func_ov61_0215c408
 	arm_func_start func_ov61_0215c408
 func_ov61_0215c408: ; 0x0215c408
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -35976,6 +36635,7 @@ _0215c41c:
 _0215c474:
 	.byte 0xf8, 0x80, 0xbd, 0xe8
 
+	.global func_ov61_0215c478
 	arm_func_start func_ov61_0215c478
 func_ov61_0215c478: ; 0x0215c478
 	stmdb sp!, {r3, r4, r5, lr}
@@ -36036,6 +36696,7 @@ _0215c534:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215c478
 
+	.global func_ov61_0215c544
 	arm_func_start func_ov61_0215c544
 func_ov61_0215c544: ; 0x0215c544
 	stmdb sp!, {r3, r4, r5, lr}
@@ -36062,6 +36723,7 @@ _0215c56c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215c544
 
+	.global func_ov61_0215c598
 	arm_func_start func_ov61_0215c598
 func_ov61_0215c598: ; 0x0215c598
 	stmdb sp!, {r4, r5, r6, lr}
@@ -36125,6 +36787,7 @@ _0215c64c:
 	arm_func_end func_ov61_0215c598
 _0215c66c: .word data_ov61_0217f454
 
+	.global func_ov61_0215c670
 	arm_func_start func_ov61_0215c670
 func_ov61_0215c670: ; 0x0215c670
 	stmdb sp!, {r4, lr}
@@ -36152,6 +36815,7 @@ _0215c6b0:
 	arm_func_end func_ov61_0215c670
 _0215c6bc: .word data_ov61_0217f454
 
+	.global func_ov61_0215c6c0
 	arm_func_start func_ov61_0215c6c0
 func_ov61_0215c6c0: ; 0x0215c6c0
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -36241,6 +36905,7 @@ _0215c7e4:
 _0215c7fc: .word 0x00004805
 _0215c800: .word data_ov61_0217f428
 
+	.global func_ov61_0215c804
 	arm_func_start func_ov61_0215c804
 func_ov61_0215c804: ; 0x0215c804
 	stmdb sp!, {r3, r4, r5, lr}
@@ -36280,6 +36945,7 @@ _0215c878:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215c804
 
+	.global func_ov61_0215c880
 	arm_func_start func_ov61_0215c880
 func_ov61_0215c880: ; 0x0215c880
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -36364,6 +37030,7 @@ _0215c9a8: .word 0x00000b4f
 _0215c9ac: .word data_ov61_0217f428
 _0215c9b0: .word data_ov61_0217f454
 
+	.global func_ov61_0215c9b4
 	arm_func_start func_ov61_0215c9b4
 func_ov61_0215c9b4: ; 0x0215c9b4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -36401,6 +37068,7 @@ _0215ca24:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215c9b4
 
+	.global func_ov61_0215ca34
 	arm_func_start func_ov61_0215ca34
 func_ov61_0215ca34: ; 0x0215ca34
 	stmdb sp!, {r4, lr}
@@ -36421,6 +37089,7 @@ _0215ca5c:
 	arm_func_end func_ov61_0215ca34
 _0215ca68: .word data_ov61_0217f454
 
+	.global func_ov61_0215ca6c
 	arm_func_start func_ov61_0215ca6c
 func_ov61_0215ca6c: ; 0x0215ca6c
 	stmdb sp!, {r4, lr}
@@ -36438,6 +37107,7 @@ func_ov61_0215ca6c: ; 0x0215ca6c
 _0215ca94: .word data_02000c18
 _0215ca98: .word data_027e02a0
 
+	.global func_ov61_0215ca9c
 	arm_func_start func_ov61_0215ca9c
 func_ov61_0215ca9c: ; 0x0215ca9c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -36503,6 +37173,7 @@ _0215cb70: .word data_ov61_02180e48
 _0215cb74: .word 0x000003bd
 _0215cb78: .word data_027e02a0
 
+	.global func_ov61_0215cb7c
 	arm_func_start func_ov61_0215cb7c
 func_ov61_0215cb7c: ; 0x0215cb7c
 	ldr ip, _0215cb90 ; =func_02007a44
@@ -36515,6 +37186,7 @@ func_ov61_0215cb7c: ; 0x0215cb7c
 _0215cb90: .word func_02007a44
 _0215cb94: .word data_ov61_02180e48
 
+	.global func_ov61_0215cb98
 	arm_func_start func_ov61_0215cb98
 func_ov61_0215cb98: ; 0x0215cb98
 	ldr ip, _0215cbac ; =func_02007ad8
@@ -36526,6 +37198,7 @@ func_ov61_0215cb98: ; 0x0215cb98
 	arm_func_end func_ov61_0215cb98
 _0215cbac: .word func_02007ad8
 
+	.global func_ov61_0215cbb0
 	arm_func_start func_ov61_0215cbb0
 func_ov61_0215cbb0: ; 0x0215cbb0
 	ldr ip, _0215cbc4 ; =func_02007ad8
@@ -36537,6 +37210,7 @@ func_ov61_0215cbb0: ; 0x0215cbb0
 	arm_func_end func_ov61_0215cbb0
 _0215cbc4: .word func_02007ad8
 
+	.global func_ov61_0215cbc8
 	arm_func_start func_ov61_0215cbc8
 func_ov61_0215cbc8: ; 0x0215cbc8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -36809,6 +37483,7 @@ _0215ceb0:
 _0215cfdc: .word data_ov61_0217bcf4
 _0215cfe0: .word data_ov61_0217bd74
 
+	.global func_ov61_0215cfe4
 	arm_func_start func_ov61_0215cfe4
 func_ov61_0215cfe4: ; 0x0215cfe4
 	stmdb sp!, {r4, lr}
@@ -36832,6 +37507,7 @@ _0215d020: .word 0xefcdab89
 _0215d024: .word 0x98badcfe
 _0215d028: .word 0x10325476
 
+	.global func_ov61_0215d02c
 	arm_func_start func_ov61_0215d02c
 func_ov61_0215d02c: ; 0x0215d02c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -36885,6 +37561,7 @@ _0215d0cc:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0215d02c
 
+	.global func_ov61_0215d0e4
 	arm_func_start func_ov61_0215d0e4
 func_ov61_0215d0e4: ; 0x0215d0e4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -36916,6 +37593,7 @@ func_ov61_0215d0e4: ; 0x0215d0e4
 	arm_func_end func_ov61_0215d0e4
 _0215d148: .word data_ov61_0217bd34
 
+	.global func_ov61_0215d14c
 	arm_func_start func_ov61_0215d14c
 func_ov61_0215d14c: ; 0x0215d14c
 	add r2, r0, #0xd
@@ -36937,6 +37615,7 @@ func_ov61_0215d14c: ; 0x0215d14c
 	bx lr
 	arm_func_end func_ov61_0215d14c
 
+	.global func_ov61_0215d190
 	arm_func_start func_ov61_0215d190
 func_ov61_0215d190: ; 0x0215d190
 	stmdb sp!, {r3, lr}
@@ -36959,6 +37638,7 @@ _0215d1a0:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215d190
 
+	.global func_ov61_0215d1d4
 	arm_func_start func_ov61_0215d1d4
 func_ov61_0215d1d4: ; 0x0215d1d4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -36982,6 +37662,7 @@ _0215d1e4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0215d1d4
 
+	.global func_ov61_0215d21c
 	arm_func_start func_ov61_0215d21c
 func_ov61_0215d21c: ; 0x0215d21c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -37409,6 +38090,7 @@ _0215d898: .word 0x6ed9eba1
 _0215d89c: .word 0x8f1bbcdc
 _0215d8a0: .word 0xca62c1d6
 
+	.global func_ov61_0215d8a4
 	arm_func_start func_ov61_0215d8a4
 func_ov61_0215d8a4: ; 0x0215d8a4
 	stmdb sp!, {r4, lr}
@@ -37435,6 +38117,7 @@ _0215d8ec: .word 0x98badcfe
 _0215d8f0: .word 0x10325476
 _0215d8f4: .word 0xc3d2e1f0
 
+	.global func_ov61_0215d8f8
 	arm_func_start func_ov61_0215d8f8
 func_ov61_0215d8f8: ; 0x0215d8f8
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -37488,6 +38171,7 @@ _0215d998:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0215d8f8
 
+	.global func_ov61_0215d9b0
 	arm_func_start func_ov61_0215d9b0
 func_ov61_0215d9b0: ; 0x0215d9b0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -37519,6 +38203,7 @@ func_ov61_0215d9b0: ; 0x0215d9b0
 	arm_func_end func_ov61_0215d9b0
 _0215da14: .word data_ov61_0217be74
 
+	.global func_ov61_0215da18
 	arm_func_start func_ov61_0215da18
 func_ov61_0215da18: ; 0x0215da18
 	stmdb sp!, {r3, r4, r5, lr}
@@ -37536,6 +38221,7 @@ func_ov61_0215da18: ; 0x0215da18
 	arm_func_end func_ov61_0215da18
 _0215da44: .word data_ov61_0217be75
 
+	.global func_ov61_0215da48
 	arm_func_start func_ov61_0215da48
 func_ov61_0215da48: ; 0x0215da48
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -37571,6 +38257,7 @@ _0215da7c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215da48
 
+	.global func_ov61_0215dabc
 	arm_func_start func_ov61_0215dabc
 func_ov61_0215dabc: ; 0x0215dabc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -37604,6 +38291,7 @@ _0215db1c:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215dabc
 
+	.global func_ov61_0215db28
 	arm_func_start func_ov61_0215db28
 func_ov61_0215db28: ; 0x0215db28
 	b _0215db30
@@ -37621,6 +38309,7 @@ _0215db48:
 	mov r0, r1
 	bx lr
 
+	.global func_ov61_0215db50
 	arm_func_start func_ov61_0215db50
 func_ov61_0215db50: ; 0x0215db50
 	stmdb sp!, {r3, lr}
@@ -37637,6 +38326,7 @@ func_ov61_0215db50: ; 0x0215db50
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215db50
 
+	.global func_ov61_0215db80
 	arm_func_start func_ov61_0215db80
 func_ov61_0215db80: ; 0x0215db80
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -37682,6 +38372,7 @@ _0215dbf8:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0215db80
 
+	.global func_ov61_0215dc1c
 	arm_func_start func_ov61_0215dc1c
 func_ov61_0215dc1c: ; 0x0215dc1c
 	stmdb sp!, {r4, lr}
@@ -37714,6 +38405,7 @@ _0215dc64:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215dc1c
 
+	.global func_ov61_0215dc80
 	arm_func_start func_ov61_0215dc80
 func_ov61_0215dc80: ; 0x0215dc80
 	stmdb sp!, {r3, lr}
@@ -37736,6 +38428,7 @@ _0215dcb0:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215dc80
 
+	.global func_ov61_0215dcc0
 	arm_func_start func_ov61_0215dcc0
 func_ov61_0215dcc0: ; 0x0215dcc0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -37785,6 +38478,7 @@ _0215dd44:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0215dcc0
 
+	.global func_ov61_0215dd68
 	arm_func_start func_ov61_0215dd68
 func_ov61_0215dd68: ; 0x0215dd68
 	stmdb sp!, {r4, lr}
@@ -37818,6 +38512,7 @@ _0215ddb4:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0215dd68
 
+	.global func_ov61_0215ddd0
 	arm_func_start func_ov61_0215ddd0
 func_ov61_0215ddd0: ; 0x0215ddd0
 	subs ip, r2, #1
@@ -37838,6 +38533,7 @@ _0215de00:
 	bx lr
 	arm_func_end func_ov61_0215ddd0
 
+	.global func_ov61_0215de08
 	arm_func_start func_ov61_0215de08
 func_ov61_0215de08: ; 0x0215de08
 	stmdb sp!, {r3, lr}
@@ -37857,6 +38553,7 @@ _0215de28:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215de08
 
+	.global func_ov61_0215de3c
 	arm_func_start func_ov61_0215de3c
 func_ov61_0215de3c: ; 0x0215de3c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -37907,6 +38604,7 @@ _0215dec4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0215de3c
 
+	.global func_ov61_0215dee8
 	arm_func_start func_ov61_0215dee8
 func_ov61_0215dee8: ; 0x0215dee8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -37943,6 +38641,7 @@ _0215df38:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0215dee8
 
+	.global func_ov61_0215df60
 	arm_func_start func_ov61_0215df60
 func_ov61_0215df60: ; 0x0215df60
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -38033,6 +38732,7 @@ _0215e070:
 	arm_func_end func_ov61_0215df60
 _0215e090: .word 0x7fff8000
 
+	.global func_ov61_0215e094
 	arm_func_start func_ov61_0215e094
 func_ov61_0215e094: ; 0x0215e094
 	ldrh r1, [r0]
@@ -38040,6 +38740,7 @@ func_ov61_0215e094: ; 0x0215e094
 	bx lr
 	arm_func_end func_ov61_0215e094
 
+	.global func_ov61_0215e0a0
 	arm_func_start func_ov61_0215e0a0
 func_ov61_0215e0a0: ; 0x0215e0a0
 	ldrh r1, [r0]
@@ -38048,6 +38749,7 @@ func_ov61_0215e0a0: ; 0x0215e0a0
 	bx lr
 	arm_func_end func_ov61_0215e0a0
 
+	.global func_ov61_0215e0b0
 	arm_func_start func_ov61_0215e0b0
 func_ov61_0215e0b0: ; 0x0215e0b0
 	ldrh r1, [r0]
@@ -38057,6 +38759,7 @@ func_ov61_0215e0b0: ; 0x0215e0b0
 	bx lr
 	arm_func_end func_ov61_0215e0b0
 
+	.global func_ov61_0215e0c4
 	arm_func_start func_ov61_0215e0c4
 func_ov61_0215e0c4: ; 0x0215e0c4
 	ldrh r2, [r0]
@@ -38068,6 +38771,7 @@ func_ov61_0215e0c4: ; 0x0215e0c4
 	bx lr
 	arm_func_end func_ov61_0215e0c4
 
+	.global func_ov61_0215e0e0
 	arm_func_start func_ov61_0215e0e0
 func_ov61_0215e0e0: ; 0x0215e0e0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -38201,6 +38905,7 @@ _0215e294:
 	arm_func_end func_ov61_0215e0e0
 _0215e2bc: .word 0x0000ffff
 
+	.global func_ov61_0215e2c0
 	arm_func_start func_ov61_0215e2c0
 func_ov61_0215e2c0: ; 0x0215e2c0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -38314,6 +39019,7 @@ _0215e434:
 _0215e44c: .word data_ov61_0217f428
 _0215e450: .word data_ov61_0217f454
 
+	.global func_ov61_0215e454
 	arm_func_start func_ov61_0215e454
 func_ov61_0215e454: ; 0x0215e454
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -38403,6 +39109,7 @@ _0215e564:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0215e454
 
+	.global func_ov61_0215e5a0
 	arm_func_start func_ov61_0215e5a0
 func_ov61_0215e5a0: ; 0x0215e5a0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -38485,6 +39192,7 @@ _0215e6b0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_0215e5a0
 
+	.global func_ov61_0215e6c8
 	arm_func_start func_ov61_0215e6c8
 func_ov61_0215e6c8: ; 0x0215e6c8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -38624,6 +39332,7 @@ _0215e890:
 _0215e8cc: .word data_ov61_0217f428
 _0215e8d0: .word data_ov61_0217f454
 
+	.global func_ov61_0215e8d4
 	arm_func_start func_ov61_0215e8d4
 func_ov61_0215e8d4: ; 0x0215e8d4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -38653,6 +39362,7 @@ _0215e920:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0215e8d4
 
+	.global func_ov61_0215e930
 	arm_func_start func_ov61_0215e930
 func_ov61_0215e930: ; 0x0215e930
 	sub r3, r2, #1
@@ -38676,6 +39386,7 @@ _0215e964:
 	bx lr
 	arm_func_end func_ov61_0215e930
 
+	.global func_ov61_0215e974
 	arm_func_start func_ov61_0215e974
 func_ov61_0215e974: ; 0x0215e974
 	ldr ip, _0215e97c ; =func_02050218
@@ -38684,6 +39395,7 @@ func_ov61_0215e974: ; 0x0215e974
 	arm_func_end func_ov61_0215e974
 _0215e97c: .word func_02050218
 
+	.global func_ov61_0215e980
 	arm_func_start func_ov61_0215e980
 func_ov61_0215e980: ; 0x0215e980
 	ldr ip, _0215e988 ; =func_02050240
@@ -38692,6 +39404,7 @@ func_ov61_0215e980: ; 0x0215e980
 	arm_func_end func_ov61_0215e980
 _0215e988: .word func_02050240
 
+	.global func_ov61_0215e98c
 	arm_func_start func_ov61_0215e98c
 func_ov61_0215e98c: ; 0x0215e98c
 	ldr ip, _0215e994 ; =func_020502d4
@@ -38700,6 +39413,7 @@ func_ov61_0215e98c: ; 0x0215e98c
 	arm_func_end func_ov61_0215e98c
 _0215e994: .word func_020502d4
 
+	.global func_ov61_0215e998
 	arm_func_start func_ov61_0215e998
 func_ov61_0215e998: ; 0x0215e998
 	stmdb sp!, {r4, r5, r6, lr}
@@ -38781,6 +39495,7 @@ _0215ea88:
 	arm_func_end func_ov61_0215e998
 _0215eaac: .word data_ov61_02180fcc
 
+	.global func_ov61_0215eab0
 	arm_func_start func_ov61_0215eab0
 func_ov61_0215eab0: ; 0x0215eab0
 	stmdb sp!, {r3, lr}
@@ -38810,6 +39525,7 @@ _0215eaf0:
 	arm_func_end func_ov61_0215eab0
 _0215eb04: .word data_ov61_02180fcc
 
+	.global func_ov61_0215eb08
 	arm_func_start func_ov61_0215eb08
 func_ov61_0215eb08: ; 0x0215eb08
 	stmdb sp!, {r4, r5, r6, lr}
@@ -38962,6 +39678,7 @@ _0215ed00: .word data_ov61_02180fcc
 _0215ed04: .word func_ov61_0215fbe8
 _0215ed08: .word func_ov61_0215fc60
 
+	.global func_ov61_0215ed0c
 	arm_func_start func_ov61_0215ed0c
 func_ov61_0215ed0c: ; 0x0215ed0c
 	stmdb sp!, {r4, lr}
@@ -39035,6 +39752,7 @@ _0215ede4:
 _0215edf4: .word data_ov61_02180fcc
 _0215edf8: .word func_ov61_0215fc60
 
+	.global func_ov61_0215edfc
 	arm_func_start func_ov61_0215edfc
 func_ov61_0215edfc: ; 0x0215edfc
 	stmdb sp!, {r3, lr}
@@ -39048,6 +39766,7 @@ _0215ee14:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215edfc
 
+	.global func_ov61_0215ee1c
 	arm_func_start func_ov61_0215ee1c
 func_ov61_0215ee1c: ; 0x0215ee1c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -39156,6 +39875,7 @@ _0215ef7c:
 _0215ef8c: .word data_ov61_02180fcc
 _0215ef90: .word func_ov61_0215ff1c
 
+	.global func_ov61_0215ef94
 	arm_func_start func_ov61_0215ef94
 func_ov61_0215ef94: ; 0x0215ef94
 	stmdb sp!, {r4, lr}
@@ -39208,6 +39928,7 @@ _0215f024:
 	arm_func_end func_ov61_0215ef94
 _0215f034: .word data_ov61_02180fcc
 
+	.global func_ov61_0215f038
 	arm_func_start func_ov61_0215f038
 func_ov61_0215f038: ; 0x0215f038
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -39358,6 +40079,7 @@ _0215f230: .word data_ov61_02180fcc
 _0215f234: .word 0x0000ffff
 _0215f238: .word func_ov61_0215fc60
 
+	.global func_ov61_0215f23c
 	arm_func_start func_ov61_0215f23c
 func_ov61_0215f23c: ; 0x0215f23c
 	stmdb sp!, {r4, lr}
@@ -39443,6 +40165,7 @@ _0215f340:
 _0215f350: .word data_ov61_02180fcc
 _0215f354: .word func_ov61_021606b4
 
+	.global func_ov61_0215f358
 	arm_func_start func_ov61_0215f358
 func_ov61_0215f358: ; 0x0215f358
 	stmdb sp!, {r3, r4, r5, lr}
@@ -39597,6 +40320,7 @@ _0215f55c: .word data_ov61_02180fcc
 _0215f560: .word func_ov61_0215fc60
 _0215f564: .word func_ov61_021607d0
 
+	.global func_ov61_0215f568
 	arm_func_start func_ov61_0215f568
 func_ov61_0215f568: ; 0x0215f568
 	stmdb sp!, {r4, lr}
@@ -39614,6 +40338,7 @@ func_ov61_0215f568: ; 0x0215f568
 	arm_func_end func_ov61_0215f568
 _0215f594: .word data_ov61_02180fcc
 
+	.global func_ov61_0215f598
 	arm_func_start func_ov61_0215f598
 func_ov61_0215f598: ; 0x0215f598
 	stmdb sp!, {r3, r4, r5, lr}
@@ -39660,6 +40385,7 @@ _0215f5ec:
 _0215f62c: .word data_ov61_02180fcc
 _0215f630: .word 0x00003ffe
 
+	.global func_ov61_0215f634
 	arm_func_start func_ov61_0215f634
 func_ov61_0215f634: ; 0x0215f634
 	ldr r0, _0215f640 ; =data_ov61_02180fcc
@@ -39669,6 +40395,7 @@ func_ov61_0215f634: ; 0x0215f634
 	arm_func_end func_ov61_0215f634
 _0215f640: .word data_ov61_02180fcc
 
+	.global func_ov61_0215f644
 	arm_func_start func_ov61_0215f644
 func_ov61_0215f644: ; 0x0215f644
 	stmdb sp!, {r3, r4, r5, lr}
@@ -39750,6 +40477,7 @@ _0215f74c:
 	arm_func_end func_ov61_0215f644
 _0215f760: .word data_ov61_02180fcc
 
+	.global func_ov61_0215f764
 	arm_func_start func_ov61_0215f764
 func_ov61_0215f764: ; 0x0215f764
 	stmdb sp!, {r3, r4, r5, lr}
@@ -39864,6 +40592,7 @@ _0215f8f0: .word data_ov61_02180fcc
 _0215f8f4: .word data_ov61_0217a30c
 _0215f8f8: .word data_ov61_0217a314
 
+	.global func_ov61_0215f8fc
 	arm_func_start func_ov61_0215f8fc
 func_ov61_0215f8fc: ; 0x0215f8fc
 	ldr r0, _0215f914 ; =data_ov61_02180fcc
@@ -39877,6 +40606,7 @@ func_ov61_0215f8fc: ; 0x0215f8fc
 _0215f914: .word data_ov61_02180fcc
 _0215f918: .word 0x00aaa082
 
+	.global func_ov61_0215f91c
 	arm_func_start func_ov61_0215f91c
 func_ov61_0215f91c: ; 0x0215f91c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -39920,6 +40650,7 @@ _0215f974:
 _0215f9a4: .word data_ov61_02180fcc
 _0215f9a8: .word 0x4ec4ec4f
 
+	.global func_ov61_0215f9ac
 	arm_func_start func_ov61_0215f9ac
 func_ov61_0215f9ac: ; 0x0215f9ac
 	stmdb sp!, {r3, r4, r5, lr}
@@ -39942,6 +40673,7 @@ func_ov61_0215f9ac: ; 0x0215f9ac
 	arm_func_end func_ov61_0215f9ac
 _0215f9ec: .word data_ov61_02180fcc
 
+	.global func_ov61_0215f9f0
 	arm_func_start func_ov61_0215f9f0
 func_ov61_0215f9f0: ; 0x0215f9f0
 	stmdb sp!, {r3, lr}
@@ -39968,6 +40700,7 @@ func_ov61_0215f9f0: ; 0x0215f9f0
 	arm_func_end func_ov61_0215f9f0
 _0215fa40: .word data_ov61_02180fcc
 
+	.global func_ov61_0215fa44
 	arm_func_start func_ov61_0215fa44
 func_ov61_0215fa44: ; 0x0215fa44
 	stmdb sp!, {r3, r4, r5, lr}
@@ -40013,6 +40746,7 @@ _0215fad0: .word data_ov61_02180fcc
 _0215fad4: .word 0x022f5341
 _0215fad8: .word func_ov61_0215fb50
 
+	.global func_ov61_0215fadc
 	arm_func_start func_ov61_0215fadc
 func_ov61_0215fadc: ; 0x0215fadc
 	stmdb sp!, {r3, r4, lr}
@@ -40048,6 +40782,7 @@ _0215fb44: .word data_ov61_02180fcc
 _0215fb48: .word 0x022f5341
 _0215fb4c: .word func_ov61_0215fb50
 
+	.global func_ov61_0215fb50
 	arm_func_start func_ov61_0215fb50
 func_ov61_0215fb50: ; 0x0215fb50
 	stmdb sp!, {r3, lr}
@@ -40056,6 +40791,7 @@ func_ov61_0215fb50: ; 0x0215fb50
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0215fb50
 
+	.global func_ov61_0215fb60
 	arm_func_start func_ov61_0215fb60
 func_ov61_0215fb60: ; 0x0215fb60
 	mov r1, r0
@@ -40070,12 +40806,14 @@ _0215fb6c:
 	b _0215fb6c
 	arm_func_end func_ov61_0215fb60
 
+	.global func_ov61_0215fb84
 	arm_func_start func_ov61_0215fb84
 func_ov61_0215fb84: ; 0x0215fb84
 	clz r0, r0
 	bx lr
 	arm_func_end func_ov61_0215fb84
 
+	.global func_ov61_0215fb8c
 	arm_func_start func_ov61_0215fb8c
 func_ov61_0215fb8c: ; 0x0215fb8c
 	stmdb sp!, {r3, lr}
@@ -40104,6 +40842,7 @@ func_ov61_0215fb8c: ; 0x0215fb8c
 _0215fbe0: .word data_ov61_02180fcc
 _0215fbe4: .word func_ov61_021607d0
 
+	.global func_ov61_0215fbe8
 	arm_func_start func_ov61_0215fbe8
 func_ov61_0215fbe8: ; 0x0215fbe8
 	stmdb sp!, {r3, lr}
@@ -40143,6 +40882,7 @@ _0215fc50:
 	arm_func_end func_ov61_0215fbe8
 _0215fc5c: .word data_ov61_02180fcc
 
+	.global func_ov61_0215fc60
 	arm_func_start func_ov61_0215fc60
 func_ov61_0215fc60: ; 0x0215fc60
 	stmdb sp!, {r3, lr}
@@ -40341,6 +41081,7 @@ _0215ff10: .word 0x000006b8
 _0215ff14: .word 0x000006de
 _0215ff18: .word 0x000006e8
 
+	.global func_ov61_0215ff1c
 	arm_func_start func_ov61_0215ff1c
 func_ov61_0215ff1c: ; 0x0215ff1c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -40544,6 +41285,7 @@ _021601f4: .word 0x00000753
 _021601f8: .word 0x0000075c
 _021601fc: .word 0x0000076d
 
+	.global func_ov61_02160200
 	arm_func_start func_ov61_02160200
 func_ov61_02160200: ; 0x02160200
 	stmdb sp!, {r3, lr}
@@ -40583,6 +41325,7 @@ _02160250:
 _02160270: .word 0x00000783
 _02160274: .word 0x00000793
 
+	.global func_ov61_02160278
 	arm_func_start func_ov61_02160278
 func_ov61_02160278: ; 0x02160278
 	stmdb sp!, {r4, lr}
@@ -40759,6 +41502,7 @@ _021604d0: .word 0x000007f6
 _021604d4: .word 0x00000804
 _021604d8: .word 0x0000081b
 
+	.global func_ov61_021604dc
 	arm_func_start func_ov61_021604dc
 func_ov61_021604dc: ; 0x021604dc
 	stmdb sp!, {r3, lr}
@@ -40819,6 +41563,7 @@ _02160598: .word data_ov61_02180fcc
 _0216059c: .word 0x0000083d
 _021605a0: .word 0x0000084f
 
+	.global func_ov61_021605a4
 	arm_func_start func_ov61_021605a4
 func_ov61_021605a4: ; 0x021605a4
 	stmdb sp!, {r4, lr}
@@ -40898,6 +41643,7 @@ _021606a8: .word 0x00000872
 _021606ac: .word 0x00000881
 _021606b0: .word 0x0000088c
 
+	.global func_ov61_021606b4
 	arm_func_start func_ov61_021606b4
 func_ov61_021606b4: ; 0x021606b4
 	stmdb sp!, {r3, lr}
@@ -40981,6 +41727,7 @@ _021607c4: .word func_ov61_021604dc
 _021607c8: .word 0x000008b4
 _021607cc: .word 0x000008d3
 
+	.global func_ov61_021607d0
 	arm_func_start func_ov61_021607d0
 func_ov61_021607d0: ; 0x021607d0
 	stmdb sp!, {r3, r4, lr}
@@ -41201,6 +41948,7 @@ _02160af0: .word func_ov61_0215fc60
 _02160af4: .word 0x0000094a
 _02160af8: .word 0x00000953
 
+	.global func_ov61_02160afc
 	arm_func_start func_ov61_02160afc
 func_ov61_02160afc: ; 0x02160afc
 	stmdb sp!, {r4, lr}
@@ -41228,6 +41976,7 @@ _02160b44:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02160afc
 
+	.global func_ov61_02160b50
 	arm_func_start func_ov61_02160b50
 func_ov61_02160b50: ; 0x02160b50
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41256,6 +42005,7 @@ _02160b98:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02160b50
 
+	.global func_ov61_02160ba8
 	arm_func_start func_ov61_02160ba8
 func_ov61_02160ba8: ; 0x02160ba8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41294,6 +42044,7 @@ _02160c10:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02160ba8
 
+	.global func_ov61_02160c24
 	arm_func_start func_ov61_02160c24
 func_ov61_02160c24: ; 0x02160c24
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41322,6 +42073,7 @@ _02160c70:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02160c24
 
+	.global func_ov61_02160c7c
 	arm_func_start func_ov61_02160c7c
 func_ov61_02160c7c: ; 0x02160c7c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -41363,6 +42115,7 @@ _02160ce0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02160c7c
 
+	.global func_ov61_02160d08
 	arm_func_start func_ov61_02160d08
 func_ov61_02160d08: ; 0x02160d08
 	stmdb sp!, {r4, lr}
@@ -41421,6 +42174,7 @@ _02160d84:
 	arm_func_end func_ov61_02160d08
 _02160dd0: .word 0x4ec4ec4f
 
+	.global func_ov61_02160dd4
 	arm_func_start func_ov61_02160dd4
 func_ov61_02160dd4: ; 0x02160dd4
 	stmdb sp!, {r3, lr}
@@ -41438,6 +42192,7 @@ _02160dfc:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02160dd4
 
+	.global func_ov61_02160e04
 	arm_func_start func_ov61_02160e04
 func_ov61_02160e04: ; 0x02160e04
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41471,6 +42226,7 @@ _02160e68:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02160e04
 
+	.global func_ov61_02160e70
 	arm_func_start func_ov61_02160e70
 func_ov61_02160e70: ; 0x02160e70
 	stmdb sp!, {r4, lr}
@@ -41496,6 +42252,7 @@ _02160ea8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02160e70
 
+	.global func_ov61_02160ec0
 	arm_func_start func_ov61_02160ec0
 func_ov61_02160ec0: ; 0x02160ec0
 	stmdb sp!, {r4, lr}
@@ -41550,6 +42307,7 @@ _02160f38:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02160ec0
 
+	.global func_ov61_02160f7c
 	arm_func_start func_ov61_02160f7c
 func_ov61_02160f7c: ; 0x02160f7c
 	stmdb sp!, {r3, lr}
@@ -41571,6 +42329,7 @@ func_ov61_02160f7c: ; 0x02160f7c
 _02160fb4: .word data_ov61_02180fd0
 _02160fb8: .word data_ov61_02180fdc
 
+	.global func_ov61_02160fbc
 	arm_func_start func_ov61_02160fbc
 func_ov61_02160fbc: ; 0x02160fbc
 	stmdb sp!, {r3, lr}
@@ -41589,6 +42348,7 @@ func_ov61_02160fbc: ; 0x02160fbc
 	arm_func_end func_ov61_02160fbc
 _02160fec: .word data_ov61_02180fd0
 
+	.global func_ov61_02160ff0
 	arm_func_start func_ov61_02160ff0
 func_ov61_02160ff0: ; 0x02160ff0
 	stmdb sp!, {r4, lr}
@@ -41622,6 +42382,7 @@ func_ov61_02160ff0: ; 0x02160ff0
 _02161058: .word data_ov61_02180fdc
 _0216105c: .word func_ov61_021612c4
 
+	.global func_ov61_02161060
 	arm_func_start func_ov61_02161060
 func_ov61_02161060: ; 0x02161060
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41644,6 +42405,7 @@ _02161098:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02161060
 
+	.global func_ov61_021610a4
 	arm_func_start func_ov61_021610a4
 func_ov61_021610a4: ; 0x021610a4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -41673,6 +42435,7 @@ _021610f0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_021610a4
 
+	.global func_ov61_02161104
 	arm_func_start func_ov61_02161104
 func_ov61_02161104: ; 0x02161104
 	stmdb sp!, {r4, lr}
@@ -41686,6 +42449,7 @@ func_ov61_02161104: ; 0x02161104
 	arm_func_end func_ov61_02161104
 _02161120: .word data_ov61_02180fd0
 
+	.global func_ov61_02161124
 	arm_func_start func_ov61_02161124
 func_ov61_02161124: ; 0x02161124
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -41787,6 +42551,7 @@ _02161278: .word func_ov61_02161284
 _0216127c: .word data_ov61_02180fd4
 _02161280: .word data_ov61_02180fd0
 
+	.global func_ov61_02161284
 	arm_func_start func_ov61_02161284
 func_ov61_02161284: ; 0x02161284
 	stmdb sp!, {r3, lr}
@@ -41809,6 +42574,7 @@ _021612b0:
 _021612bc: .word data_ov61_02180fd0
 _021612c0: .word data_ov61_02180fd4
 
+	.global func_ov61_021612c4
 	arm_func_start func_ov61_021612c4
 func_ov61_021612c4: ; 0x021612c4
 	ldr ip, _021612d0 ; =func_ov61_02161328
@@ -41819,6 +42585,7 @@ func_ov61_021612c4: ; 0x021612c4
 _021612d0: .word func_ov61_02161328
 _021612d4: .word data_ov61_02180fdc
 
+	.global func_ov61_021612d8
 	arm_func_start func_ov61_021612d8
 func_ov61_021612d8: ; 0x021612d8
 	ldr r2, [r0, #8]
@@ -41845,6 +42612,7 @@ _02161300:
 	arm_func_end func_ov61_021612d8
 _02161324: .word func_01ffa48c
 
+	.global func_ov61_02161328
 	arm_func_start func_ov61_02161328
 func_ov61_02161328: ; 0x02161328
 	stmdb sp!, {r3, lr}
@@ -41864,6 +42632,7 @@ func_ov61_02161328: ; 0x02161328
 	arm_func_end func_ov61_02161328
 _0216135c: .word func_01ffa48c
 
+	.global func_ov61_02161360
 	arm_func_start func_ov61_02161360
 func_ov61_02161360: ; 0x02161360
 	mov ip, #0
@@ -41880,6 +42649,7 @@ _02161364:
 	bx lr
 	arm_func_end func_ov61_02161360
 
+	.global func_ov61_0216138c
 	arm_func_start func_ov61_0216138c
 func_ov61_0216138c: ; 0x0216138c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -41902,6 +42672,7 @@ _021613c0:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0216138c
 
+	.global func_ov61_021613d0
 	arm_func_start func_ov61_021613d0
 func_ov61_021613d0: ; 0x021613d0
 	stmdb sp!, {r3, lr}
@@ -41944,6 +42715,7 @@ _02161440:
 _02161448: .word data_ov61_02180ffc
 _0216144c: .word data_ov61_02181000
 
+	.global func_ov61_02161450
 	arm_func_start func_ov61_02161450
 func_ov61_02161450: ; 0x02161450
 	stmdb sp!, {r3, lr}
@@ -41962,6 +42734,7 @@ _0216147c:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02161450
 
+	.global func_ov61_02161484
 	arm_func_start func_ov61_02161484
 func_ov61_02161484: ; 0x02161484
 	stmdb sp!, {r3, lr}
@@ -41991,6 +42764,7 @@ func_ov61_02161484: ; 0x02161484
 _021614dc: .word data_ov61_02180ffc
 _021614e0: .word data_ov61_02181000
 
+	.global func_ov61_021614e4
 	arm_func_start func_ov61_021614e4
 func_ov61_021614e4: ; 0x021614e4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -42044,6 +42818,7 @@ _02161588:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_021614e4
 
+	.global func_ov61_02161598
 	arm_func_start func_ov61_02161598
 func_ov61_02161598: ; 0x02161598
 	mov r1, #1
@@ -42067,6 +42842,7 @@ _021615c8:
 	bx lr
 	arm_func_end func_ov61_02161598
 
+	.global func_ov61_021615e0
 	arm_func_start func_ov61_021615e0
 func_ov61_021615e0: ; 0x021615e0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -42124,6 +42900,7 @@ _02161634:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_021615e0
 
+	.global func_ov61_021616a8
 	arm_func_start func_ov61_021616a8
 func_ov61_021616a8: ; 0x021616a8
 	stmdb sp!, {r4, lr}
@@ -42179,6 +42956,7 @@ func_ov61_021616a8: ; 0x021616a8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021616a8
 
+	.global func_ov61_02161774
 	arm_func_start func_ov61_02161774
 func_ov61_02161774: ; 0x02161774
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -42199,6 +42977,7 @@ _02161790:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02161774
 
+	.global func_ov61_021617b0
 	arm_func_start func_ov61_021617b0
 func_ov61_021617b0: ; 0x021617b0
 	ldr r2, [r0, #4]
@@ -42216,6 +42995,7 @@ func_ov61_021617b0: ; 0x021617b0
 	bx lr
 	arm_func_end func_ov61_021617b0
 
+	.global func_ov61_021617e4
 	arm_func_start func_ov61_021617e4
 func_ov61_021617e4: ; 0x021617e4
 	ldr r2, [r0]
@@ -42230,6 +43010,7 @@ func_ov61_021617e4: ; 0x021617e4
 	bx lr
 	arm_func_end func_ov61_021617e4
 
+	.global func_ov61_0216180c
 	arm_func_start func_ov61_0216180c
 func_ov61_0216180c: ; 0x0216180c
 	ldr r2, [r0]
@@ -42248,6 +43029,7 @@ _02161838:
 	bx lr
 	arm_func_end func_ov61_0216180c
 
+	.global func_ov61_02161840
 	arm_func_start func_ov61_02161840
 func_ov61_02161840: ; 0x02161840
 	ldr r2, [r0]
@@ -42282,6 +43064,7 @@ _021618a4:
 	bx lr
 	arm_func_end func_ov61_02161840
 
+	.global func_ov61_021618ac
 	arm_func_start func_ov61_021618ac
 func_ov61_021618ac: ; 0x021618ac
 	mov r1, #0
@@ -42291,6 +43074,7 @@ func_ov61_021618ac: ; 0x021618ac
 	bx lr
 	arm_func_end func_ov61_021618ac
 
+	.global func_ov61_021618c0
 	arm_func_start func_ov61_021618c0
 func_ov61_021618c0: ; 0x021618c0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -42426,6 +43210,7 @@ _02161a70:
 _02161a98: .word data_ov61_0217beb4
 _02161a9c: .word data_ov61_0217bec4
 
+	.global func_ov61_02161aa0
 	arm_func_start func_ov61_02161aa0
 func_ov61_02161aa0: ; 0x02161aa0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -42461,12 +43246,14 @@ _02161ac8:
 	arm_func_end func_ov61_02161aa0
 _02161b10: .word data_ov61_02181024
 
+	.global func_ov61_02161b14
 	arm_func_start func_ov61_02161b14
 func_ov61_02161b14: ; 0x02161b14
 	str r1, [r0, #0x28]
 	bx lr
 	arm_func_end func_ov61_02161b14
 
+	.global func_ov61_02161b1c
 	arm_func_start func_ov61_02161b1c
 func_ov61_02161b1c: ; 0x02161b1c
 	stmdb sp!, {r4, lr}
@@ -42478,6 +43265,7 @@ func_ov61_02161b1c: ; 0x02161b1c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02161b1c
 
+	.global func_ov61_02161b38
 	arm_func_start func_ov61_02161b38
 func_ov61_02161b38: ; 0x02161b38
 	stmdb sp!, {r4, lr}
@@ -42493,6 +43281,7 @@ func_ov61_02161b38: ; 0x02161b38
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02161b38
 
+	.global func_ov61_02161b64
 	arm_func_start func_ov61_02161b64
 func_ov61_02161b64: ; 0x02161b64
 	stmdb sp!, {r3, lr}
@@ -42533,6 +43322,7 @@ _02161bd8:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02161b64
 
+	.global func_ov61_02161be0
 	arm_func_start func_ov61_02161be0
 func_ov61_02161be0: ; 0x02161be0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -42606,6 +43396,7 @@ _02161c98:
 	arm_func_end func_ov61_02161be0
 _02161cdc: .word data_ov61_0217e4e8
 
+	.global func_ov61_02161ce0
 	arm_func_start func_ov61_02161ce0
 func_ov61_02161ce0: ; 0x02161ce0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -42649,12 +43440,14 @@ func_ov61_02161ce0: ; 0x02161ce0
 	arm_func_end func_ov61_02161ce0
 _02161d74: .word data_ov61_0217bed0
 
+	.global func_ov61_02161d78
 	arm_func_start func_ov61_02161d78
 func_ov61_02161d78: ; 0x02161d78
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov61_02161d78
 
+	.global func_ov61_02161d80
 	arm_func_start func_ov61_02161d80
 func_ov61_02161d80: ; 0x02161d80
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -42770,6 +43563,7 @@ _02161ef4:
 	arm_func_end func_ov61_02161d80
 _02161f10: .word 0x000007ff
 
+	.global func_ov61_02161f14
 	arm_func_start func_ov61_02161f14
 func_ov61_02161f14: ; 0x02161f14
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -42812,6 +43606,7 @@ _02161f38:
 	arm_func_end func_ov61_02161f14
 _02161fa0: .word 0x000009c4
 
+	.global func_ov61_02161fa4
 	arm_func_start func_ov61_02161fa4
 func_ov61_02161fa4: ; 0x02161fa4
 	stmdb sp!, {r4, lr}
@@ -42834,6 +43629,7 @@ _02161fc4:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02161fa4
 
+	.global func_ov61_02161fe4
 	arm_func_start func_ov61_02161fe4
 func_ov61_02161fe4: ; 0x02161fe4
 	stmdb sp!, {r4, lr}
@@ -42863,6 +43659,7 @@ _0216201c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02161fe4
 
+	.global func_ov61_02162044
 	arm_func_start func_ov61_02162044
 func_ov61_02162044: ; 0x02162044
 	ldr r3, [r0, #0x40]
@@ -42875,6 +43672,7 @@ func_ov61_02162044: ; 0x02162044
 	bx lr
 	arm_func_end func_ov61_02162044
 
+	.global func_ov61_02162064
 	arm_func_start func_ov61_02162064
 func_ov61_02162064: ; 0x02162064
 	stmdb sp!, {r3, r4, r5, lr}
@@ -42890,6 +43688,7 @@ func_ov61_02162064: ; 0x02162064
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02162064
 
+	.global func_ov61_02162090
 	arm_func_start func_ov61_02162090
 func_ov61_02162090: ; 0x02162090
 	ldr ip, _0216209c ; =func_ov61_021626d8
@@ -42899,6 +43698,7 @@ func_ov61_02162090: ; 0x02162090
 	arm_func_end func_ov61_02162090
 _0216209c: .word func_ov61_021626d8
 
+	.global func_ov61_021620a0
 	arm_func_start func_ov61_021620a0
 func_ov61_021620a0: ; 0x021620a0
 	ldr ip, _021620b0 ; =func_0204de94
@@ -42909,6 +43709,7 @@ func_ov61_021620a0: ; 0x021620a0
 	arm_func_end func_ov61_021620a0
 _021620b0: .word func_0204de94
 
+	.global func_ov61_021620b4
 	arm_func_start func_ov61_021620b4
 func_ov61_021620b4: ; 0x021620b4
 	ldr ip, _021620c0 ; =func_ov61_0213e13c
@@ -42918,6 +43719,7 @@ func_ov61_021620b4: ; 0x021620b4
 	arm_func_end func_ov61_021620b4
 _021620c0: .word func_ov61_0213e13c
 
+	.global func_ov61_021620c4
 	arm_func_start func_ov61_021620c4
 func_ov61_021620c4: ; 0x021620c4
 	stmdb sp!, {r3, lr}
@@ -42949,6 +43751,7 @@ _0216211c: .word func_ov61_021620a0
 _02162120: .word func_ov61_021620b4
 _02162124: .word func_ov61_02162090
 
+	.global func_ov61_02162128
 	arm_func_start func_ov61_02162128
 func_ov61_02162128: ; 0x02162128
 	stmdb sp!, {r3, lr}
@@ -42970,6 +43773,7 @@ func_ov61_02162128: ; 0x02162128
 	arm_func_end func_ov61_02162128
 _02162164: .word data_ov61_02181010
 
+	.global func_ov61_02162168
 	arm_func_start func_ov61_02162168
 func_ov61_02162168: ; 0x02162168
 	stmdb sp!, {r4, lr}
@@ -42983,6 +43787,7 @@ func_ov61_02162168: ; 0x02162168
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162168
 
+	.global func_ov61_0216218c
 	arm_func_start func_ov61_0216218c
 func_ov61_0216218c: ; 0x0216218c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -43003,6 +43808,7 @@ func_ov61_0216218c: ; 0x0216218c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0216218c
 
+	.global func_ov61_021621cc
 	arm_func_start func_ov61_021621cc
 func_ov61_021621cc: ; 0x021621cc
 	stmdb sp!, {r4, r5, lr}
@@ -43022,6 +43828,7 @@ func_ov61_021621cc: ; 0x021621cc
 	arm_func_end func_ov61_021621cc
 _02162200: .word data_ov61_0217bf00
 
+	.global func_ov61_02162204
 	arm_func_start func_ov61_02162204
 func_ov61_02162204: ; 0x02162204
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43055,6 +43862,7 @@ _02162264: .word data_ov61_0217bf04
 _02162268: .word data_ov61_0217bf0c
 _0216226c: .word data_ov61_0217bee8
 
+	.global func_ov61_02162270
 	arm_func_start func_ov61_02162270
 func_ov61_02162270: ; 0x02162270
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43102,6 +43910,7 @@ _021622f0:
 _021622f8: .word data_ov61_0217bf18
 _021622fc: .word data_02056d98
 
+	.global func_ov61_02162300
 	arm_func_start func_ov61_02162300
 func_ov61_02162300: ; 0x02162300
 	stmdb sp!, {r3, r4, r5, lr}
@@ -43120,12 +43929,14 @@ _02162328:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02162300
 
+	.global func_ov61_02162334
 	arm_func_start func_ov61_02162334
 func_ov61_02162334: ; 0x02162334
 	ldr r0, [r0]
 	bx lr
 	arm_func_end func_ov61_02162334
 
+	.global func_ov61_0216233c
 	arm_func_start func_ov61_0216233c
 func_ov61_0216233c: ; 0x0216233c
 	ldrh r0, [r0, #4]
@@ -43139,12 +43950,14 @@ func_ov61_0216233c: ; 0x0216233c
 	bx lr
 	arm_func_end func_ov61_0216233c
 
+	.global func_ov61_02162360
 	arm_func_start func_ov61_02162360
 func_ov61_02162360: ; 0x02162360
 	ldrh r0, [r0, #4]
 	bx lr
 	arm_func_end func_ov61_02162360
 
+	.global func_ov61_02162368
 	arm_func_start func_ov61_02162368
 func_ov61_02162368: ; 0x02162368
 	ldrb r0, [r0, #0x15]
@@ -43155,12 +43968,14 @@ func_ov61_02162368: ; 0x02162368
 	bx lr
 	arm_func_end func_ov61_02162368
 
+	.global func_ov61_02162380
 	arm_func_start func_ov61_02162380
 func_ov61_02162380: ; 0x02162380
 	ldr r0, [r0, #8]
 	bx lr
 	arm_func_end func_ov61_02162380
 
+	.global func_ov61_02162388
 	arm_func_start func_ov61_02162388
 func_ov61_02162388: ; 0x02162388
 	ldrh r0, [r0, #0xc]
@@ -43174,18 +43989,21 @@ func_ov61_02162388: ; 0x02162388
 	bx lr
 	arm_func_end func_ov61_02162388
 
+	.global func_ov61_021623ac
 	arm_func_start func_ov61_021623ac
 func_ov61_021623ac: ; 0x021623ac
 	str r1, [r0, #0x20]
 	bx lr
 	arm_func_end func_ov61_021623ac
 
+	.global func_ov61_021623b4
 	arm_func_start func_ov61_021623b4
 func_ov61_021623b4: ; 0x021623b4
 	ldr r0, [r0, #0x20]
 	bx lr
 	arm_func_end func_ov61_021623b4
 
+	.global func_ov61_021623bc
 	arm_func_start func_ov61_021623bc
 func_ov61_021623bc: ; 0x021623bc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43216,6 +44034,7 @@ _021623e4:
 	arm_func_end func_ov61_021623bc
 _02162418: .word data_ov61_0217a334
 
+	.global func_ov61_0216241c
 	arm_func_start func_ov61_0216241c
 func_ov61_0216241c: ; 0x0216241c
 	cmp r0, #0
@@ -43248,6 +44067,7 @@ _02162440:
 	arm_func_end func_ov61_0216241c
 _0216247c: .word data_ov61_02181010
 
+	.global func_ov61_02162480
 	arm_func_start func_ov61_02162480
 func_ov61_02162480: ; 0x02162480
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -43287,6 +44107,7 @@ _021624e4:
 	arm_func_end func_ov61_02162480
 _021624fc: .word data_ov61_0217bf20
 
+	.global func_ov61_02162500
 	arm_func_start func_ov61_02162500
 func_ov61_02162500: ; 0x02162500
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -43419,6 +44240,7 @@ _021626b8:
 	arm_func_end func_ov61_02162500
 _021626d4: .word data_ov61_0217bf24
 
+	.global func_ov61_021626d8
 	arm_func_start func_ov61_021626d8
 func_ov61_021626d8: ; 0x021626d8
 	stmdb sp!, {r3, lr}
@@ -43449,6 +44271,7 @@ _02162718:
 _02162728: .word data_02056c98
 _0216272c: .word 0x9ccf9319
 
+	.global func_ov61_02162730
 	arm_func_start func_ov61_02162730
 func_ov61_02162730: ; 0x02162730
 	stmdb sp!, {r4, lr}
@@ -43462,6 +44285,7 @@ func_ov61_02162730: ; 0x02162730
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162730
 
+	.global func_ov61_02162754
 	arm_func_start func_ov61_02162754
 func_ov61_02162754: ; 0x02162754
 	ldr ip, _02162760 ; =func_ov61_021626d8
@@ -43471,6 +44295,7 @@ func_ov61_02162754: ; 0x02162754
 	arm_func_end func_ov61_02162754
 _02162760: .word func_ov61_021626d8
 
+	.global func_ov61_02162764
 	arm_func_start func_ov61_02162764
 func_ov61_02162764: ; 0x02162764
 	ldr ip, _02162774 ; =func_0204de94
@@ -43481,12 +44306,14 @@ func_ov61_02162764: ; 0x02162764
 	arm_func_end func_ov61_02162764
 _02162774: .word func_0204de94
 
+	.global func_ov61_02162778
 	arm_func_start func_ov61_02162778
 func_ov61_02162778: ; 0x02162778
 	ldr r0, [r0, #0x1c]
 	bx lr
 	arm_func_end func_ov61_02162778
 
+	.global func_ov61_02162780
 	arm_func_start func_ov61_02162780
 func_ov61_02162780: ; 0x02162780
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43536,12 +44363,14 @@ _02162820: .word func_ov61_02162764
 _02162824: .word func_ov61_02162730
 _02162828: .word func_ov61_02162754
 
+	.global func_ov61_0216282c
 	arm_func_start func_ov61_0216282c
 func_ov61_0216282c: ; 0x0216282c
 	strb r1, [r0, #0x15]
 	bx lr
 	arm_func_end func_ov61_0216282c
 
+	.global func_ov61_02162834
 	arm_func_start func_ov61_02162834
 func_ov61_02162834: ; 0x02162834
 	str r1, [r0, #8]
@@ -43549,24 +44378,28 @@ func_ov61_02162834: ; 0x02162834
 	bx lr
 	arm_func_end func_ov61_02162834
 
+	.global func_ov61_02162840
 	arm_func_start func_ov61_02162840
 func_ov61_02162840: ; 0x02162840
 	str r1, [r0, #0x10]
 	bx lr
 	arm_func_end func_ov61_02162840
 
+	.global func_ov61_02162848
 	arm_func_start func_ov61_02162848
 func_ov61_02162848: ; 0x02162848
 	strb r1, [r0, #0x14]
 	bx lr
 	arm_func_end func_ov61_02162848
 
+	.global func_ov61_02162850
 	arm_func_start func_ov61_02162850
 func_ov61_02162850: ; 0x02162850
 	ldrb r0, [r0, #0x14]
 	bx lr
 	arm_func_end func_ov61_02162850
 
+	.global func_ov61_02162858
 	arm_func_start func_ov61_02162858
 func_ov61_02162858: ; 0x02162858
 	ldr r1, _02162870 ; =data_ov61_02181010
@@ -43579,6 +44412,7 @@ func_ov61_02162858: ; 0x02162858
 	arm_func_end func_ov61_02162858
 _02162870: .word data_ov61_02181010
 
+	.global func_ov61_02162874
 	arm_func_start func_ov61_02162874
 func_ov61_02162874: ; 0x02162874
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43707,6 +44541,7 @@ _021629f8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02162874
 
+	.global func_ov61_02162a2c
 	arm_func_start func_ov61_02162a2c
 func_ov61_02162a2c: ; 0x02162a2c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -43755,6 +44590,7 @@ _02162a98:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02162a2c
 
+	.global func_ov61_02162acc
 	arm_func_start func_ov61_02162acc
 func_ov61_02162acc: ; 0x02162acc
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -43814,6 +44650,7 @@ _02162b94: .word 0x00000638
 _02162b98: .word func_ov61_02162874
 _02162b9c: .word func_ov61_02162a2c
 
+	.global func_ov61_02162ba0
 	arm_func_start func_ov61_02162ba0
 func_ov61_02162ba0: ; 0x02162ba0
 	stmdb sp!, {r4, lr}
@@ -43827,6 +44664,7 @@ func_ov61_02162ba0: ; 0x02162ba0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162ba0
 
+	.global func_ov61_02162bc4
 	arm_func_start func_ov61_02162bc4
 func_ov61_02162bc4: ; 0x02162bc4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -43913,6 +44751,7 @@ _02162cc0:
 _02162cec: .word data_ov61_0217e4e8
 _02162cf0: .word data_ov61_0217bf2c
 
+	.global func_ov61_02162cf4
 	arm_func_start func_ov61_02162cf4
 func_ov61_02162cf4: ; 0x02162cf4
 	stmdb sp!, {r3, lr}
@@ -43930,6 +44769,7 @@ func_ov61_02162cf4: ; 0x02162cf4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02162cf4
 
+	.global func_ov61_02162d28
 	arm_func_start func_ov61_02162d28
 func_ov61_02162d28: ; 0x02162d28
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -43956,6 +44796,7 @@ func_ov61_02162d28: ; 0x02162d28
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02162d28
 
+	.global func_ov61_02162d80
 	arm_func_start func_ov61_02162d80
 func_ov61_02162d80: ; 0x02162d80
 	stmdb sp!, {r4, r5, r6, lr}
@@ -43978,6 +44819,7 @@ func_ov61_02162d80: ; 0x02162d80
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02162d80
 
+	.global func_ov61_02162dc8
 	arm_func_start func_ov61_02162dc8
 func_ov61_02162dc8: ; 0x02162dc8
 	stmdb sp!, {r4, lr}
@@ -43993,6 +44835,7 @@ func_ov61_02162dc8: ; 0x02162dc8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162dc8
 
+	.global func_ov61_02162df4
 	arm_func_start func_ov61_02162df4
 func_ov61_02162df4: ; 0x02162df4
 	stmdb sp!, {r4, lr}
@@ -44003,6 +44846,7 @@ func_ov61_02162df4: ; 0x02162df4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162df4
 
+	.global func_ov61_02162e0c
 	arm_func_start func_ov61_02162e0c
 func_ov61_02162e0c: ; 0x02162e0c
 	stmdb sp!, {r4, lr}
@@ -44014,6 +44858,7 @@ func_ov61_02162e0c: ; 0x02162e0c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162e0c
 
+	.global func_ov61_02162e28
 	arm_func_start func_ov61_02162e28
 func_ov61_02162e28: ; 0x02162e28
 	stmdb sp!, {r4, lr}
@@ -44024,6 +44869,7 @@ func_ov61_02162e28: ; 0x02162e28
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02162e28
 
+	.global func_ov61_02162e40
 	arm_func_start func_ov61_02162e40
 func_ov61_02162e40: ; 0x02162e40
 	ldr r1, [r0, #0x10]
@@ -44041,6 +44887,7 @@ func_ov61_02162e40: ; 0x02162e40
 	bx lr
 	arm_func_end func_ov61_02162e40
 
+	.global func_ov61_02162e74
 	arm_func_start func_ov61_02162e74
 func_ov61_02162e74: ; 0x02162e74
 	ldr ip, _02162e80 ; =func_ov61_021632b8
@@ -44050,6 +44897,7 @@ func_ov61_02162e74: ; 0x02162e74
 	arm_func_end func_ov61_02162e74
 _02162e80: .word func_ov61_021632b8
 
+	.global func_ov61_02162e84
 	arm_func_start func_ov61_02162e84
 func_ov61_02162e84: ; 0x02162e84
 	ldr ip, _02162e90 ; =func_ov61_021632a8
@@ -44059,6 +44907,7 @@ func_ov61_02162e84: ; 0x02162e84
 	arm_func_end func_ov61_02162e84
 _02162e90: .word func_ov61_021632a8
 
+	.global func_ov61_02162e94
 	arm_func_start func_ov61_02162e94
 func_ov61_02162e94: ; 0x02162e94
 	ldr ip, _02162ea0 ; =func_ov61_021630b0
@@ -44068,12 +44917,14 @@ func_ov61_02162e94: ; 0x02162e94
 	arm_func_end func_ov61_02162e94
 _02162ea0: .word func_ov61_021630b0
 
+	.global func_ov61_02162ea4
 	arm_func_start func_ov61_02162ea4
 func_ov61_02162ea4: ; 0x02162ea4
 	ldr r0, [r0, #0x4ec]
 	bx lr
 	arm_func_end func_ov61_02162ea4
 
+	.global func_ov61_02162eac
 	arm_func_start func_ov61_02162eac
 func_ov61_02162eac: ; 0x02162eac
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44102,6 +44953,7 @@ func_ov61_02162eac: ; 0x02162eac
 	arm_func_end func_ov61_02162eac
 _02162f04: .word data_ov61_0218101c
 
+	.global func_ov61_02162f08
 	arm_func_start func_ov61_02162f08
 func_ov61_02162f08: ; 0x02162f08
 	stmdb sp!, {r4, r5, r6, lr}
@@ -44162,6 +45014,7 @@ _02162f9c:
 	arm_func_end func_ov61_02162f08
 _02162fdc: .word data_ov61_0218101c
 
+	.global func_ov61_02162fe0
 	arm_func_start func_ov61_02162fe0
 func_ov61_02162fe0: ; 0x02162fe0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44193,6 +45046,7 @@ func_ov61_02162fe0: ; 0x02162fe0
 _02163040: .word data_ov61_0218101c
 _02163044: .word data_ov61_0217bfbc
 
+	.global func_ov61_02163048
 	arm_func_start func_ov61_02163048
 func_ov61_02163048: ; 0x02163048
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44224,6 +45078,7 @@ func_ov61_02163048: ; 0x02163048
 _021630a8: .word data_ov61_0218101c
 _021630ac: .word data_ov61_0217bfbc
 
+	.global func_ov61_021630b0
 	arm_func_start func_ov61_021630b0
 func_ov61_021630b0: ; 0x021630b0
 	cmp r3, #3
@@ -44266,6 +45121,7 @@ _0216311c: .word func_ov61_02163048
 _02163120: .word data_ov61_0218101c
 _02163124: .word func_ov61_02165da4
 
+	.global func_ov61_02163128
 	arm_func_start func_ov61_02163128
 func_ov61_02163128: ; 0x02163128
 	stmdb sp!, {r0, r1, r2, r3}
@@ -44285,6 +45141,7 @@ func_ov61_02163128: ; 0x02163128
 	bx lr
 	arm_func_end func_ov61_02163128
 
+	.global func_ov61_02163164
 	arm_func_start func_ov61_02163164
 func_ov61_02163164: ; 0x02163164
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -44312,6 +45169,7 @@ _021631b0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02163164
 
+	.global func_ov61_021631b8
 	arm_func_start func_ov61_021631b8
 func_ov61_021631b8: ; 0x021631b8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -44347,6 +45205,7 @@ _02163220:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_021631b8
 
+	.global func_ov61_02163228
 	arm_func_start func_ov61_02163228
 func_ov61_02163228: ; 0x02163228
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44366,6 +45225,7 @@ _02163254:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02163228
 
+	.global func_ov61_0216325c
 	arm_func_start func_ov61_0216325c
 func_ov61_0216325c: ; 0x0216325c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -44389,6 +45249,7 @@ func_ov61_0216325c: ; 0x0216325c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216325c
 
+	.global func_ov61_021632a8
 	arm_func_start func_ov61_021632a8
 func_ov61_021632a8: ; 0x021632a8
 	ldr ip, _021632b4 ; =func_ov61_02165a68
@@ -44398,6 +45259,7 @@ func_ov61_021632a8: ; 0x021632a8
 	arm_func_end func_ov61_021632a8
 _021632b4: .word func_ov61_02165a68
 
+	.global func_ov61_021632b8
 	arm_func_start func_ov61_021632b8
 func_ov61_021632b8: ; 0x021632b8
 	stmdb sp!, {r3, lr}
@@ -44407,6 +45269,7 @@ func_ov61_021632b8: ; 0x021632b8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021632b8
 
+	.global func_ov61_021632cc
 	arm_func_start func_ov61_021632cc
 func_ov61_021632cc: ; 0x021632cc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -44435,6 +45298,7 @@ _02163314:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_021632cc
 
+	.global func_ov61_02163324
 	arm_func_start func_ov61_02163324
 func_ov61_02163324: ; 0x02163324
 	stmdb sp!, {r4, r5, r6, lr}
@@ -44463,6 +45327,7 @@ _02163368:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02163324
 
+	.global func_ov61_0216337c
 	arm_func_start func_ov61_0216337c
 func_ov61_0216337c: ; 0x0216337c
 	stmdb sp!, {r4, lr}
@@ -44477,6 +45342,7 @@ func_ov61_0216337c: ; 0x0216337c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216337c
 
+	.global func_ov61_021633a4
 	arm_func_start func_ov61_021633a4
 func_ov61_021633a4: ; 0x021633a4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44510,6 +45376,7 @@ _021633e4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021633a4
 
+	.global func_ov61_02163414
 	arm_func_start func_ov61_02163414
 func_ov61_02163414: ; 0x02163414
 	stmdb sp!, {r3, r4, r5, lr}
@@ -44547,6 +45414,7 @@ _02163484: .word data_ov61_0217bfc0
 _02163488: .word data_ov61_0217bfcc
 _0216348c: .word data_ov61_0217bf34
 
+	.global func_ov61_02163490
 	arm_func_start func_ov61_02163490
 func_ov61_02163490: ; 0x02163490
 	cmp r1, #0
@@ -44565,6 +45433,7 @@ _021634b8:
 	bx lr
 	arm_func_end func_ov61_02163490
 
+	.global func_ov61_021634c0
 	arm_func_start func_ov61_021634c0
 func_ov61_021634c0: ; 0x021634c0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -44648,6 +45517,7 @@ _021635e0: .word data_ov61_0217bfec
 _021635e4: .word 0x00000132
 _021635e8: .word data_ov61_0217bfbc
 
+	.global func_ov61_021635ec
 	arm_func_start func_ov61_021635ec
 func_ov61_021635ec: ; 0x021635ec
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -44701,6 +45571,7 @@ _02163678:
 _021636a0: .word data_ov61_0217bf30
 _021636a4: .word data_ov61_02181014
 
+	.global func_ov61_021636a8
 	arm_func_start func_ov61_021636a8
 func_ov61_021636a8: ; 0x021636a8
 	stmdb sp!, {r3, lr}
@@ -44731,6 +45602,7 @@ _021636e8:
 _021636f8: .word data_02056c98
 _021636fc: .word 0x9ccf9319
 
+	.global func_ov61_02163700
 	arm_func_start func_ov61_02163700
 func_ov61_02163700: ; 0x02163700
 	stmdb sp!, {r4, lr}
@@ -44815,6 +45687,7 @@ _02163820: .word data_ov61_0218101c
 _02163824: .word data_ov61_0217c000
 _02163828: .word 0x0000ee70
 
+	.global func_ov61_0216382c
 	arm_func_start func_ov61_0216382c
 func_ov61_0216382c: ; 0x0216382c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -44840,6 +45713,7 @@ func_ov61_0216382c: ; 0x0216382c
 	arm_func_end func_ov61_0216382c
 _02163878: .word data_ov61_0217bfbc
 
+	.global func_ov61_0216387c
 	arm_func_start func_ov61_0216387c
 func_ov61_0216387c: ; 0x0216387c
 	ldr r3, [r0]
@@ -44853,6 +45727,7 @@ func_ov61_0216387c: ; 0x0216387c
 	bx lr
 	arm_func_end func_ov61_0216387c
 
+	.global func_ov61_021638a0
 	arm_func_start func_ov61_021638a0
 func_ov61_021638a0: ; 0x021638a0
 	stmdb sp!, {r0, r1, r2, r3}
@@ -44878,6 +45753,7 @@ func_ov61_021638a0: ; 0x021638a0
 	bx lr
 	arm_func_end func_ov61_021638a0
 
+	.global func_ov61_021638f4
 	arm_func_start func_ov61_021638f4
 func_ov61_021638f4: ; 0x021638f4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -44895,6 +45771,7 @@ func_ov61_021638f4: ; 0x021638f4
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021638f4
 
+	.global func_ov61_02163928
 	arm_func_start func_ov61_02163928
 func_ov61_02163928: ; 0x02163928
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -44963,6 +45840,7 @@ _02163a00:
 	arm_func_end func_ov61_02163928
 _02163a10: .word 0x2c0b02c1
 
+	.global func_ov61_02163a14
 	arm_func_start func_ov61_02163a14
 func_ov61_02163a14: ; 0x02163a14
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -45008,6 +45886,7 @@ _02163a9c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02163a14
 
+	.global func_ov61_02163aac
 	arm_func_start func_ov61_02163aac
 func_ov61_02163aac: ; 0x02163aac
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -45174,6 +46053,7 @@ _02163d10: .word data_ov61_0217bfa0
 _02163d14: .word 0x0000020a
 _02163d18: .word data_ov61_0217bfbc
 
+	.global func_ov61_02163d1c
 	arm_func_start func_ov61_02163d1c
 func_ov61_02163d1c: ; 0x02163d1c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -45197,6 +46077,7 @@ _02163d54:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02163d1c
 
+	.global func_ov61_02163d60
 	arm_func_start func_ov61_02163d60
 func_ov61_02163d60: ; 0x02163d60
 	stmdb sp!, {r3, r4, r5, lr}
@@ -45228,6 +46109,7 @@ _02163db0:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02163d60
 
+	.global func_ov61_02163dc4
 	arm_func_start func_ov61_02163dc4
 func_ov61_02163dc4: ; 0x02163dc4
 	stmdb sp!, {r4, lr}
@@ -45259,6 +46141,7 @@ _02163dfc:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02163dc4
 
+	.global func_ov61_02163e28
 	arm_func_start func_ov61_02163e28
 func_ov61_02163e28: ; 0x02163e28
 	stmdb sp!, {r4, lr}
@@ -45278,6 +46161,7 @@ _02163e54:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02163e28
 
+	.global func_ov61_02163e60
 	arm_func_start func_ov61_02163e60
 func_ov61_02163e60: ; 0x02163e60
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -45324,6 +46208,7 @@ _02163ee8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02163e60
 
+	.global func_ov61_02163f00
 	arm_func_start func_ov61_02163f00
 func_ov61_02163f00: ; 0x02163f00
 	mov r1, #5
@@ -45339,6 +46224,7 @@ func_ov61_02163f00: ; 0x02163f00
 	bx lr
 	arm_func_end func_ov61_02163f00
 
+	.global func_ov61_02163f2c
 	arm_func_start func_ov61_02163f2c
 func_ov61_02163f2c: ; 0x02163f2c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -45379,6 +46265,7 @@ _02163f90:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02163f2c
 
+	.global func_ov61_02163fb0
 	arm_func_start func_ov61_02163fb0
 func_ov61_02163fb0: ; 0x02163fb0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -45454,6 +46341,7 @@ _021640a0: .word data_ov61_0217bfcc
 _021640a4: .word data_ov61_0217bf54
 _021640a8: .word 0x00000317
 
+	.global func_ov61_021640ac
 	arm_func_start func_ov61_021640ac
 func_ov61_021640ac: ; 0x021640ac
 	stmdb sp!, {r4, lr}
@@ -45487,6 +46375,7 @@ _02164108:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021640ac
 
+	.global func_ov61_0216411c
 	arm_func_start func_ov61_0216411c
 func_ov61_0216411c: ; 0x0216411c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -45685,6 +46574,7 @@ _021643d8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0216411c
 
+	.global func_ov61_021643e8
 	arm_func_start func_ov61_021643e8
 func_ov61_021643e8: ; 0x021643e8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -45768,12 +46658,14 @@ _02164478:
 	arm_func_end func_ov61_021643e8
 _02164514: .word data_ov61_0217c040
 
+	.global func_ov61_02164518
 	arm_func_start func_ov61_02164518
 func_ov61_02164518: ; 0x02164518
 	str r1, [r0, #0x4ac]
 	bx lr
 	arm_func_end func_ov61_02164518
 
+	.global func_ov61_02164520
 	arm_func_start func_ov61_02164520
 func_ov61_02164520: ; 0x02164520
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -46066,6 +46958,7 @@ _02164940: .word data_ov61_0217bfcc
 _02164944: .word data_ov61_0217bf8c
 _02164948: .word 0x000004af
 
+	.global func_ov61_0216494c
 	arm_func_start func_ov61_0216494c
 func_ov61_0216494c: ; 0x0216494c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -46128,6 +47021,7 @@ _02164a1c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_0216494c
 
+	.global func_ov61_02164a28
 	arm_func_start func_ov61_02164a28
 func_ov61_02164a28: ; 0x02164a28
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -46246,6 +47140,7 @@ _02164bd8:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02164a28
 
+	.global func_ov61_02164be4
 	arm_func_start func_ov61_02164be4
 func_ov61_02164be4: ; 0x02164be4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -46350,6 +47245,7 @@ _02164d24:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02164be4
 
+	.global func_ov61_02164d68
 	arm_func_start func_ov61_02164d68
 func_ov61_02164d68: ; 0x02164d68
 	stmdb sp!, {r4, lr}
@@ -46389,6 +47285,7 @@ func_ov61_02164d68: ; 0x02164d68
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02164d68
 
+	.global func_ov61_02164df4
 	arm_func_start func_ov61_02164df4
 func_ov61_02164df4: ; 0x02164df4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -46458,6 +47355,7 @@ _02164ec8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02164df4
 
+	.global func_ov61_02164eec
 	arm_func_start func_ov61_02164eec
 func_ov61_02164eec: ; 0x02164eec
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -46589,6 +47487,7 @@ _021650a4: .word data_ov61_0217bfcc
 _021650a8: .word data_ov61_0217bf78
 _021650ac: .word 0x000005b4
 
+	.global func_ov61_021650b0
 	arm_func_start func_ov61_021650b0
 func_ov61_021650b0: ; 0x021650b0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -46656,6 +47555,7 @@ _02165190:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021650b0
 
+	.global func_ov61_02165198
 	arm_func_start func_ov61_02165198
 func_ov61_02165198: ; 0x02165198
 	stmdb sp!, {r0, r1, r2, r3}
@@ -46735,6 +47635,7 @@ _021651cc:
 	bx lr
 	arm_func_end func_ov61_02165198
 
+	.global func_ov61_021652c0
 	arm_func_start func_ov61_021652c0
 func_ov61_021652c0: ; 0x021652c0
 	stmdb sp!, {r0, r1, r2, r3}
@@ -46785,6 +47686,7 @@ func_ov61_021652c0: ; 0x021652c0
 	bx lr
 	arm_func_end func_ov61_021652c0
 
+	.global func_ov61_02165378
 	arm_func_start func_ov61_02165378
 func_ov61_02165378: ; 0x02165378
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -46867,6 +47769,7 @@ _02165488:
 _02165494: .word 0x000005db
 _02165498: .word data_ov61_02181014
 
+	.global func_ov61_0216549c
 	arm_func_start func_ov61_0216549c
 func_ov61_0216549c: ; 0x0216549c
 	stmdb sp!, {r4, lr}
@@ -46894,6 +47797,7 @@ _021654e0:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216549c
 
+	.global func_ov61_021654e8
 	arm_func_start func_ov61_021654e8
 func_ov61_021654e8: ; 0x021654e8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -46928,6 +47832,7 @@ _02165554:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021654e8
 
+	.global func_ov61_0216555c
 	arm_func_start func_ov61_0216555c
 func_ov61_0216555c: ; 0x0216555c
 	stmdb sp!, {r3, lr}
@@ -46953,6 +47858,7 @@ _021655a0: .word data_ov61_0218102c
 _021655a4: .word data_ov61_02181024
 _021655a8: .word data_ov61_02181034
 
+	.global func_ov61_021655ac
 	arm_func_start func_ov61_021655ac
 func_ov61_021655ac: ; 0x021655ac
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47021,6 +47927,7 @@ _02165698: .word 0x00006cfc
 _0216569c: .word data_ov61_0218102c
 _021656a0: .word data_ov61_02181039
 
+	.global func_ov61_021656a4
 	arm_func_start func_ov61_021656a4
 func_ov61_021656a4: ; 0x021656a4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -47072,6 +47979,7 @@ _02165750: .word data_ov61_02181030
 _02165754: .word data_ov61_02181024
 _02165758: .word data_ov61_0217c090
 
+	.global func_ov61_0216575c
 	arm_func_start func_ov61_0216575c
 func_ov61_0216575c: ; 0x0216575c
 	stmdb sp!, {r3, lr}
@@ -47161,6 +48069,7 @@ _02165888:
 	arm_func_end func_ov61_0216575c
 _02165894: .word data_ov61_02181024
 
+	.global func_ov61_02165898
 	arm_func_start func_ov61_02165898
 func_ov61_02165898: ; 0x02165898
 	stmdb sp!, {r4, lr}
@@ -47174,6 +48083,7 @@ func_ov61_02165898: ; 0x02165898
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02165898
 
+	.global func_ov61_021658bc
 	arm_func_start func_ov61_021658bc
 func_ov61_021658bc: ; 0x021658bc
 	stmdb sp!, {r4, lr}
@@ -47201,6 +48111,7 @@ _02165908: .word data_ov61_0217c14c
 _0216590c: .word data_ov61_0217c158
 _02165910: .word data_ov61_0217c0b8
 
+	.global func_ov61_02165914
 	arm_func_start func_ov61_02165914
 func_ov61_02165914: ; 0x02165914
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47214,6 +48125,7 @@ func_ov61_02165914: ; 0x02165914
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02165914
 
+	.global func_ov61_02165938
 	arm_func_start func_ov61_02165938
 func_ov61_02165938: ; 0x02165938
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -47272,6 +48184,7 @@ _021659f0: .word data_ov61_0217c0a0
 _021659f4: .word data_ov61_0217c16c
 _021659f8: .word data_ov61_0217c14c
 
+	.global func_ov61_021659fc
 	arm_func_start func_ov61_021659fc
 func_ov61_021659fc: ; 0x021659fc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47307,12 +48220,14 @@ _02165a5c: .word data_ov61_0217c164
 _02165a60: .word data_ov61_0217c158
 _02165a64: .word data_ov61_0217c0ac
 
+	.global func_ov61_02165a68
 	arm_func_start func_ov61_02165a68
 func_ov61_02165a68: ; 0x02165a68
 	ldr r0, [r0]
 	bx lr
 	arm_func_end func_ov61_02165a68
 
+	.global func_ov61_02165a70
 	arm_func_start func_ov61_02165a70
 func_ov61_02165a70: ; 0x02165a70
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47348,6 +48263,7 @@ _02165acc: .word data_ov61_0217c178
 _02165ad0: .word data_ov61_0217c158
 _02165ad4: .word data_ov61_0217c094
 
+	.global func_ov61_02165ad8
 	arm_func_start func_ov61_02165ad8
 func_ov61_02165ad8: ; 0x02165ad8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47373,6 +48289,7 @@ _02165b18: .word data_ov61_0217c164
 _02165b1c: .word data_ov61_0217c158
 _02165b20: .word data_ov61_0217c0c4
 
+	.global func_ov61_02165b24
 	arm_func_start func_ov61_02165b24
 func_ov61_02165b24: ; 0x02165b24
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -47428,6 +48345,7 @@ _02165bd0: .word data_ov61_0217c198
 _02165bd4: .word data_ov61_0217c158
 _02165bd8: .word data_ov61_0217c0f0
 
+	.global func_ov61_02165bdc
 	arm_func_start func_ov61_02165bdc
 func_ov61_02165bdc: ; 0x02165bdc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -47466,6 +48384,7 @@ _02165c50: .word data_ov61_0217c1b8
 _02165c54: .word data_ov61_0217c158
 _02165c58: .word data_ov61_0217c124
 
+	.global func_ov61_02165c5c
 	arm_func_start func_ov61_02165c5c
 func_ov61_02165c5c: ; 0x02165c5c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -47510,6 +48429,7 @@ _02165ce0: .word data_ov61_0217c178
 _02165ce4: .word data_ov61_0217c158
 _02165ce8: .word data_ov61_0217c0d0
 
+	.global func_ov61_02165cec
 	arm_func_start func_ov61_02165cec
 func_ov61_02165cec: ; 0x02165cec
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47539,6 +48459,7 @@ _02165d38: .word data_ov61_0217c178
 _02165d3c: .word data_ov61_0217c158
 _02165d40: .word data_ov61_0217c0e0
 
+	.global func_ov61_02165d44
 	arm_func_start func_ov61_02165d44
 func_ov61_02165d44: ; 0x02165d44
 	stmdb sp!, {r4, r5, r6, lr}
@@ -47570,6 +48491,7 @@ _02165d98: .word data_ov61_0217c178
 _02165d9c: .word data_ov61_0217c158
 _02165da0: .word data_ov61_0217c100
 
+	.global func_ov61_02165da4
 	arm_func_start func_ov61_02165da4
 func_ov61_02165da4: ; 0x02165da4
 	ldr ip, _02165dc0 ; =func_020459e4
@@ -47583,6 +48505,7 @@ func_ov61_02165da4: ; 0x02165da4
 	arm_func_end func_ov61_02165da4
 _02165dc0: .word func_020459e4
 
+	.global func_ov61_02165dc4
 	arm_func_start func_ov61_02165dc4
 func_ov61_02165dc4: ; 0x02165dc4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -47635,6 +48558,7 @@ _02165e4c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02165dc4
 
+	.global func_ov61_02165e7c
 	arm_func_start func_ov61_02165e7c
 func_ov61_02165e7c: ; 0x02165e7c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -47666,6 +48590,7 @@ _02165ed0: .word data_ov61_0217c1c4
 _02165ed4: .word data_ov61_0217c158
 _02165ed8: .word data_ov61_0217c110
 
+	.global func_ov61_02165edc
 	arm_func_start func_ov61_02165edc
 func_ov61_02165edc: ; 0x02165edc
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -47704,6 +48629,7 @@ _02165f48: .word data_ov61_0217c158
 _02165f4c: .word data_ov61_0217c138
 _02165f50: .word 0x00000121
 
+	.global func_ov61_02165f54
 	arm_func_start func_ov61_02165f54
 func_ov61_02165f54: ; 0x02165f54
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47720,6 +48646,7 @@ _02165f68:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02165f54
 
+	.global func_ov61_02165f80
 	arm_func_start func_ov61_02165f80
 func_ov61_02165f80: ; 0x02165f80
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -47748,6 +48675,7 @@ _02165fd0:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_02165f80
 
+	.global func_ov61_02165fd8
 	arm_func_start func_ov61_02165fd8
 func_ov61_02165fd8: ; 0x02165fd8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -47779,6 +48707,7 @@ _02166034:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02165fd8
 
+	.global func_ov61_0216603c
 	arm_func_start func_ov61_0216603c
 func_ov61_0216603c: ; 0x0216603c
 	stmdb sp!, {r3, lr}
@@ -47793,6 +48722,7 @@ func_ov61_0216603c: ; 0x0216603c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216603c
 
+	.global func_ov61_02166064
 	arm_func_start func_ov61_02166064
 func_ov61_02166064: ; 0x02166064
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -47886,6 +48816,7 @@ _02166198: .word data_ov61_0217c258
 _0216619c: .word data_ov61_0217c264
 _021661a0: .word data_ov61_0217c26c
 
+	.global func_ov61_021661a4
 	arm_func_start func_ov61_021661a4
 func_ov61_021661a4: ; 0x021661a4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -47923,6 +48854,7 @@ _0216620c: .word data_ov61_0217c264
 _02166210: .word data_ov61_0217c238
 _02166214: .word data_ov61_0217c1d4
 
+	.global func_ov61_02166218
 	arm_func_start func_ov61_02166218
 func_ov61_02166218: ; 0x02166218
 	stmdb sp!, {r4, r5, r6, lr}
@@ -47960,6 +48892,7 @@ _02166280: .word data_ov61_0217c264
 _02166284: .word data_ov61_0217c238
 _02166288: .word data_ov61_0217c1ec
 
+	.global func_ov61_0216628c
 	arm_func_start func_ov61_0216628c
 func_ov61_0216628c: ; 0x0216628c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -48009,6 +48942,7 @@ _02166328: .word data_ov61_0217c264
 _0216632c: .word data_ov61_0217c238
 _02166330: .word data_ov61_0217c1e0
 
+	.global func_ov61_02166334
 	arm_func_start func_ov61_02166334
 func_ov61_02166334: ; 0x02166334
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -48056,6 +48990,7 @@ _021663cc: .word data_ov61_0217c264
 _021663d0: .word data_ov61_0217c238
 _021663d4: .word data_ov61_0217c1f8
 
+	.global func_ov61_021663d8
 	arm_func_start func_ov61_021663d8
 func_ov61_021663d8: ; 0x021663d8
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -48102,6 +49037,7 @@ _0216646c: .word data_ov61_0217c264
 _02166470: .word data_ov61_0217c238
 _02166474: .word data_ov61_0217c204
 
+	.global func_ov61_02166478
 	arm_func_start func_ov61_02166478
 func_ov61_02166478: ; 0x02166478
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -48136,6 +49072,7 @@ _021664d8: .word data_ov61_0217c27c
 _021664dc: .word data_ov61_0217c238
 _021664e0: .word data_ov61_0217c210
 
+	.global func_ov61_021664e4
 	arm_func_start func_ov61_021664e4
 func_ov61_021664e4: ; 0x021664e4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -48174,6 +49111,7 @@ _02166550: .word data_ov61_0217c27c
 _02166554: .word data_ov61_0217c238
 _02166558: .word data_ov61_0217c220
 
+	.global func_ov61_0216655c
 	arm_func_start func_ov61_0216655c
 func_ov61_0216655c: ; 0x0216655c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -48196,6 +49134,7 @@ _02166574:
 	arm_func_end func_ov61_0216655c
 _02166598: .word data_ov61_0217c280
 
+	.global func_ov61_0216659c
 	arm_func_start func_ov61_0216659c
 func_ov61_0216659c: ; 0x0216659c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -48219,6 +49158,7 @@ func_ov61_0216659c: ; 0x0216659c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216659c
 
+	.global func_ov61_021665e8
 	arm_func_start func_ov61_021665e8
 func_ov61_021665e8: ; 0x021665e8
 	stmdb sp!, {r3, lr}
@@ -48247,6 +49187,7 @@ _02166634: .word data_ov61_0217c294
 _02166638: .word 0x00000109
 _0216663c: .word 0x000082ea
 
+	.global func_ov61_02166640
 	arm_func_start func_ov61_02166640
 func_ov61_02166640: ; 0x02166640
 	ldr ip, _02166648 ; =func_0200db28
@@ -48255,16 +49196,19 @@ func_ov61_02166640: ; 0x02166640
 	arm_func_end func_ov61_02166640
 _02166648: .word func_0200db28
 
+	.global func_ov61_0216664c
 	arm_func_start func_ov61_0216664c
 func_ov61_0216664c: ; 0x0216664c
 	bx lr
 	arm_func_end func_ov61_0216664c
 
+	.global func_ov61_02166650
 	arm_func_start func_ov61_02166650
 func_ov61_02166650: ; 0x02166650
 	bx lr
 	arm_func_end func_ov61_02166650
 
+	.global func_ov61_02166654
 	arm_func_start func_ov61_02166654
 func_ov61_02166654: ; 0x02166654
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48283,6 +49227,7 @@ _02166680:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02166654
 
+	.global func_ov61_02166688
 	arm_func_start func_ov61_02166688
 func_ov61_02166688: ; 0x02166688
 	ldrsb r3, [r0]
@@ -48308,6 +49253,7 @@ _021666c0:
 	arm_func_end func_ov61_02166688
 _021666c8: .word data_02056c98
 
+	.global func_ov61_021666cc
 	arm_func_start func_ov61_021666cc
 func_ov61_021666cc: ; 0x021666cc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48328,6 +49274,7 @@ func_ov61_021666cc: ; 0x021666cc
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021666cc
 
+	.global func_ov61_0216670c
 	arm_func_start func_ov61_0216670c
 func_ov61_0216670c: ; 0x0216670c
 	stmdb sp!, {r0, r1, r2, r3}
@@ -48350,6 +49297,7 @@ func_ov61_0216670c: ; 0x0216670c
 _02166748: .word 0x0000ffff
 _0216674c: .word 0x00001002
 
+	.global func_ov61_02166750
 	arm_func_start func_ov61_02166750
 func_ov61_02166750: ; 0x02166750
 	stmdb sp!, {r0, r1, r2, r3}
@@ -48371,6 +49319,7 @@ func_ov61_02166750: ; 0x02166750
 	arm_func_end func_ov61_02166750
 _0216678c: .word 0x0000ffff
 
+	.global func_ov61_02166790
 	arm_func_start func_ov61_02166790
 func_ov61_02166790: ; 0x02166790
 	stmdb sp!, {lr}
@@ -48394,6 +49343,7 @@ func_ov61_02166790: ; 0x02166790
 _021667d0: .word 0x0000ffff
 _021667d4: .word 0x00001002
 
+	.global func_ov61_021667d8
 	arm_func_start func_ov61_021667d8
 func_ov61_021667d8: ; 0x021667d8
 	stmdb sp!, {lr}
@@ -48416,6 +49366,7 @@ func_ov61_021667d8: ; 0x021667d8
 	arm_func_end func_ov61_021667d8
 _02166818: .word 0x0000ffff
 
+	.global func_ov61_0216681c
 	arm_func_start func_ov61_0216681c
 func_ov61_0216681c: ; 0x0216681c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -48487,6 +49438,7 @@ _02166904:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216681c
 
+	.global func_ov61_02166914
 	arm_func_start func_ov61_02166914
 func_ov61_02166914: ; 0x02166914
 	stmdb sp!, {r3, lr}
@@ -48501,6 +49453,7 @@ func_ov61_02166914: ; 0x02166914
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166914
 
+	.global func_ov61_0216693c
 	arm_func_start func_ov61_0216693c
 func_ov61_0216693c: ; 0x0216693c
 	stmdb sp!, {r3, lr}
@@ -48515,6 +49468,7 @@ func_ov61_0216693c: ; 0x0216693c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216693c
 
+	.global func_ov61_02166964
 	arm_func_start func_ov61_02166964
 func_ov61_02166964: ; 0x02166964
 	stmdb sp!, {r3, lr}
@@ -48555,6 +49509,7 @@ _021669e4: .word data_ov61_0218112c
 _021669e8: .word data_ov61_02181118
 _021669ec: .word data_ov61_02181108
 
+	.global func_ov61_021669f0
 	arm_func_start func_ov61_021669f0
 func_ov61_021669f0: ; 0x021669f0
 	ldr r3, [r0]
@@ -48591,6 +49546,7 @@ _02166a58:
 	bx lr
 	arm_func_end func_ov61_021669f0
 
+	.global func_ov61_02166a6c
 	arm_func_start func_ov61_02166a6c
 func_ov61_02166a6c: ; 0x02166a6c
 	cmp r0, #0
@@ -48602,6 +49558,7 @@ func_ov61_02166a6c: ; 0x02166a6c
 	arm_func_end func_ov61_02166a6c
 _02166a80: .word data_ov61_02181100
 
+	.global func_ov61_02166a84
 	arm_func_start func_ov61_02166a84
 func_ov61_02166a84: ; 0x02166a84
 	stmdb sp!, {r3, lr}
@@ -48611,6 +49568,7 @@ func_ov61_02166a84: ; 0x02166a84
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166a84
 
+	.global func_ov61_02166a98
 	arm_func_start func_ov61_02166a98
 func_ov61_02166a98: ; 0x02166a98
 	stmdb sp!, {r3, lr}
@@ -48620,6 +49578,7 @@ func_ov61_02166a98: ; 0x02166a98
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166a98
 
+	.global func_ov61_02166aac
 	arm_func_start func_ov61_02166aac
 func_ov61_02166aac: ; 0x02166aac
 	stmdb sp!, {r3, lr}
@@ -48629,6 +49588,7 @@ func_ov61_02166aac: ; 0x02166aac
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166aac
 
+	.global func_ov61_02166ac0
 	arm_func_start func_ov61_02166ac0
 func_ov61_02166ac0: ; 0x02166ac0
 	stmdb sp!, {r4, lr}
@@ -48658,6 +49618,7 @@ _02166ae4:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02166ac0
 
+	.global func_ov61_02166b20
 	arm_func_start func_ov61_02166b20
 func_ov61_02166b20: ; 0x02166b20
 	stmdb sp!, {r4, lr}
@@ -48682,6 +49643,7 @@ _02166b30:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02166b20
 
+	.global func_ov61_02166b6c
 	arm_func_start func_ov61_02166b6c
 func_ov61_02166b6c: ; 0x02166b6c
 	stmdb sp!, {r3, lr}
@@ -48691,6 +49653,7 @@ func_ov61_02166b6c: ; 0x02166b6c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166b6c
 
+	.global func_ov61_02166b80
 	arm_func_start func_ov61_02166b80
 func_ov61_02166b80: ; 0x02166b80
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48706,6 +49669,7 @@ func_ov61_02166b80: ; 0x02166b80
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02166b80
 
+	.global func_ov61_02166bac
 	arm_func_start func_ov61_02166bac
 func_ov61_02166bac: ; 0x02166bac
 	stmdb sp!, {r3, lr}
@@ -48715,6 +49679,7 @@ func_ov61_02166bac: ; 0x02166bac
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166bac
 
+	.global func_ov61_02166bc0
 	arm_func_start func_ov61_02166bc0
 func_ov61_02166bc0: ; 0x02166bc0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48731,6 +49696,7 @@ func_ov61_02166bc0: ; 0x02166bc0
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02166bc0
 
+	.global func_ov61_02166bf0
 	arm_func_start func_ov61_02166bf0
 func_ov61_02166bf0: ; 0x02166bf0
 	stmdb sp!, {r3, lr}
@@ -48740,6 +49706,7 @@ func_ov61_02166bf0: ; 0x02166bf0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166bf0
 
+	.global func_ov61_02166c04
 	arm_func_start func_ov61_02166c04
 func_ov61_02166c04: ; 0x02166c04
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -48767,6 +49734,7 @@ _02166c18:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02166c04
 
+	.global func_ov61_02166c5c
 	arm_func_start func_ov61_02166c5c
 func_ov61_02166c5c: ; 0x02166c5c
 	stmdb sp!, {r3, lr}
@@ -48781,6 +49749,7 @@ func_ov61_02166c5c: ; 0x02166c5c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166c5c
 
+	.global func_ov61_02166c84
 	arm_func_start func_ov61_02166c84
 func_ov61_02166c84: ; 0x02166c84
 	ldr ip, _02166c94 ; =func_ov61_02166a6c
@@ -48791,6 +49760,7 @@ func_ov61_02166c84: ; 0x02166c84
 	arm_func_end func_ov61_02166c84
 _02166c94: .word func_ov61_02166a6c
 
+	.global func_ov61_02166c98
 	arm_func_start func_ov61_02166c98
 func_ov61_02166c98: ; 0x02166c98
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48806,6 +49776,7 @@ func_ov61_02166c98: ; 0x02166c98
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02166c98
 
+	.global func_ov61_02166cc4
 	arm_func_start func_ov61_02166cc4
 func_ov61_02166cc4: ; 0x02166cc4
 	stmdb sp!, {r3, lr}
@@ -48817,6 +49788,7 @@ func_ov61_02166cc4: ; 0x02166cc4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166cc4
 
+	.global func_ov61_02166ce0
 	arm_func_start func_ov61_02166ce0
 func_ov61_02166ce0: ; 0x02166ce0
 	ldr r0, _02166cec ; =data_ov61_02181100
@@ -48826,6 +49798,7 @@ func_ov61_02166ce0: ; 0x02166ce0
 	arm_func_end func_ov61_02166ce0
 _02166cec: .word data_ov61_02181100
 
+	.global func_ov61_02166cf0
 	arm_func_start func_ov61_02166cf0
 func_ov61_02166cf0: ; 0x02166cf0
 	stmdb sp!, {r4, lr}
@@ -48857,6 +49830,7 @@ _02166d48: .word data_ov61_0217c28c
 _02166d4c: .word 0x00000667
 _02166d50: .word 0x01ff6210
 
+	.global func_ov61_02166d54
 	arm_func_start func_ov61_02166d54
 func_ov61_02166d54: ; 0x02166d54
 	ldr r2, _02166d9c ; =0x000041a7
@@ -48881,6 +49855,7 @@ func_ov61_02166d54: ; 0x02166d54
 	arm_func_end func_ov61_02166d54
 _02166d9c: .word 0x000041a7
 
+	.global func_ov61_02166da0
 	arm_func_start func_ov61_02166da0
 func_ov61_02166da0: ; 0x02166da0
 	stmdb sp!, {r3, lr}
@@ -48894,6 +49869,7 @@ func_ov61_02166da0: ; 0x02166da0
 	arm_func_end func_ov61_02166da0
 _02166dbc: .word data_ov61_0217c288
 
+	.global func_ov61_02166dc0
 	arm_func_start func_ov61_02166dc0
 func_ov61_02166dc0: ; 0x02166dc0
 	cmp r0, #0
@@ -48906,6 +49882,7 @@ func_ov61_02166dc0: ; 0x02166dc0
 	arm_func_end func_ov61_02166dc0
 _02166dd8: .word data_ov61_0217c288
 
+	.global func_ov61_02166ddc
 	arm_func_start func_ov61_02166ddc
 func_ov61_02166ddc: ; 0x02166ddc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -48919,6 +49896,7 @@ func_ov61_02166ddc: ; 0x02166ddc
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02166ddc
 
+	.global func_ov61_02166e00
 	arm_func_start func_ov61_02166e00
 func_ov61_02166e00: ; 0x02166e00
 	stmdb sp!, {r3, lr}
@@ -48965,6 +49943,7 @@ _02166e4c:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02166e00
 
+	.global func_ov61_02166e98
 	arm_func_start func_ov61_02166e98
 func_ov61_02166e98: ; 0x02166e98
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -49057,6 +50036,7 @@ _02166fc4: .word data_ov61_0217a340
 _02166fc8: .word data_ov61_0217a344
 _02166fcc: .word 0x55555556
 
+	.global func_ov61_02166fd0
 	arm_func_start func_ov61_02166fd0
 func_ov61_02166fd0: ; 0x02166fd0
 	stmdb sp!, {r3, lr}
@@ -49074,6 +50054,7 @@ func_ov61_02166fd0: ; 0x02166fd0
 	arm_func_end func_ov61_02166fd0
 _02166ffc: .word data_ov61_02181024
 
+	.global func_ov61_02167000
 	arm_func_start func_ov61_02167000
 func_ov61_02167000: ; 0x02167000
 	stmdb sp!, {r3, lr}
@@ -49085,6 +50066,7 @@ func_ov61_02167000: ; 0x02167000
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02167000
 
+	.global func_ov61_0216701c
 	arm_func_start func_ov61_0216701c
 func_ov61_0216701c: ; 0x0216701c
 	stmdb sp!, {r3, lr}
@@ -49102,6 +50084,7 @@ func_ov61_0216701c: ; 0x0216701c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216701c
 
+	.global func_ov61_02167050
 	arm_func_start func_ov61_02167050
 func_ov61_02167050: ; 0x02167050
 	stmdb sp!, {r3, lr}
@@ -49129,6 +50112,7 @@ _02167088:
 	arm_func_end func_ov61_02167050
 _0216709c: .word data_ov61_0217c2f0
 
+	.global func_ov61_021670a0
 	arm_func_start func_ov61_021670a0
 func_ov61_021670a0: ; 0x021670a0
 	stmdb sp!, {r3, r4, lr}
@@ -49201,6 +50185,7 @@ _02167158:
 _0216719c: .word data_ov61_0217c300
 _021671a0: .word data_ov61_0217c310
 
+	.global func_ov61_021671a4
 	arm_func_start func_ov61_021671a4
 func_ov61_021671a4: ; 0x021671a4
 	stmdb sp!, {r4, lr}
@@ -49218,6 +50203,7 @@ func_ov61_021671a4: ; 0x021671a4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021671a4
 
+	.global func_ov61_021671d8
 	arm_func_start func_ov61_021671d8
 func_ov61_021671d8: ; 0x021671d8
 	stmdb sp!, {r3, r4, lr}
@@ -49275,6 +50261,7 @@ _02167258:
 _02167298: .word data_ov61_0217c300
 _0216729c: .word 0x00000601
 
+	.global func_ov61_021672a0
 	arm_func_start func_ov61_021672a0
 func_ov61_021672a0: ; 0x021672a0
 	stmdb sp!, {r4, r5, lr}
@@ -49339,6 +50326,7 @@ _0216735c:
 _02167374: .word data_ov61_0217c300
 _02167378: .word data_ov61_0217c314
 
+	.global func_ov61_0216737c
 	arm_func_start func_ov61_0216737c
 func_ov61_0216737c: ; 0x0216737c
 	stmdb sp!, {r3, lr}
@@ -49365,6 +50353,7 @@ _021673c0:
 	arm_func_end func_ov61_0216737c
 _021673c8: .word data_ov61_0217c314
 
+	.global func_ov61_021673cc
 	arm_func_start func_ov61_021673cc
 func_ov61_021673cc: ; 0x021673cc
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -49467,6 +50456,7 @@ _02167534: .word data_ov61_0217c36c
 _02167538: .word data_ov61_0217c37c
 _0216753c: .word data_ov61_0217c388
 
+	.global func_ov61_02167540
 	arm_func_start func_ov61_02167540
 func_ov61_02167540: ; 0x02167540
 	stmdb sp!, {r3, lr}
@@ -49493,6 +50483,7 @@ _02167584:
 	arm_func_end func_ov61_02167540
 _0216758c: .word data_ov61_0217c314
 
+	.global func_ov61_02167590
 	arm_func_start func_ov61_02167590
 func_ov61_02167590: ; 0x02167590
 	stmdb sp!, {r3, r4, r5, lr}
@@ -49548,6 +50539,7 @@ _02167644:
 	arm_func_end func_ov61_02167590
 _0216764c: .word data_ov61_0217c314
 
+	.global func_ov61_02167650
 	arm_func_start func_ov61_02167650
 func_ov61_02167650: ; 0x02167650
 	cmp r0, #0
@@ -49564,6 +50556,7 @@ func_ov61_02167650: ; 0x02167650
 	bx lr
 	arm_func_end func_ov61_02167650
 
+	.global func_ov61_02167680
 	arm_func_start func_ov61_02167680
 func_ov61_02167680: ; 0x02167680
 	stmdb sp!, {r4, r5, r6, lr}
@@ -49657,6 +50650,7 @@ _021677b4: .word data_ov61_0217c3bc
 _021677b8: .word data_ov61_0217c2dc
 _021677bc: .word 0x000005cf
 
+	.global func_ov61_021677c0
 	arm_func_start func_ov61_021677c0
 func_ov61_021677c0: ; 0x021677c0
 	stmdb sp!, {r3, r4, lr}
@@ -49689,6 +50683,7 @@ func_ov61_021677c0: ; 0x021677c0
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_021677c0
 
+	.global func_ov61_02167830
 	arm_func_start func_ov61_02167830
 func_ov61_02167830: ; 0x02167830
 	stmdb sp!, {r3, lr}
@@ -49712,6 +50707,7 @@ func_ov61_02167830: ; 0x02167830
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02167830
 
+	.global func_ov61_0216787c
 	arm_func_start func_ov61_0216787c
 func_ov61_0216787c: ; 0x0216787c
 	stmdb sp!, {r3, lr}
@@ -49740,6 +50736,7 @@ _021678c0:
 	arm_func_end func_ov61_0216787c
 _021678d0: .word data_ov61_0217c314
 
+	.global func_ov61_021678d4
 	arm_func_start func_ov61_021678d4
 func_ov61_021678d4: ; 0x021678d4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -49892,6 +50889,7 @@ _02167af4: .word data_ov61_0217c400
 _02167af8: .word data_ov61_0217c410
 _02167afc: .word data_ov61_0217c388
 
+	.global func_ov61_02167b00
 	arm_func_start func_ov61_02167b00
 func_ov61_02167b00: ; 0x02167b00
 	stmdb sp!, {r3, lr}
@@ -49928,6 +50926,7 @@ _02167b60:
 _02167b6c: .word data_ov61_0217c314
 _02167b70: .word data_ov61_0217c41c
 
+	.global func_ov61_02167b74
 	arm_func_start func_ov61_02167b74
 func_ov61_02167b74: ; 0x02167b74
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -50018,6 +51017,7 @@ _02167c98:
 	arm_func_end func_ov61_02167b74
 _02167cb8: .word data_ov61_0217c43c
 
+	.global func_ov61_02167cbc
 	arm_func_start func_ov61_02167cbc
 func_ov61_02167cbc: ; 0x02167cbc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -50038,6 +51038,7 @@ func_ov61_02167cbc: ; 0x02167cbc
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02167cbc
 
+	.global func_ov61_02167cfc
 	arm_func_start func_ov61_02167cfc
 func_ov61_02167cfc: ; 0x02167cfc
 	mov r0, #0
@@ -50049,6 +51050,7 @@ func_ov61_02167cfc: ; 0x02167cfc
 	bx lr
 	arm_func_end func_ov61_02167cfc
 
+	.global func_ov61_02167d18
 	arm_func_start func_ov61_02167d18
 func_ov61_02167d18: ; 0x02167d18
 	stmdb sp!, {r3, r4, r5, lr}
@@ -50130,6 +51132,7 @@ _02167df4:
 	arm_func_end func_ov61_02167d18
 _02167e3c: .word func_ov61_02167cfc
 
+	.global func_ov61_02167e40
 	arm_func_start func_ov61_02167e40
 func_ov61_02167e40: ; 0x02167e40
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -50345,6 +51348,7 @@ _0216814c: .word data_ov61_0217c4ec
 _02168150: .word data_ov61_0217c4f4
 _02168154: .word data_ov61_0217c524
 
+	.global func_ov61_02168158
 	arm_func_start func_ov61_02168158
 func_ov61_02168158: ; 0x02168158
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -50473,6 +51477,7 @@ _02168300: .word data_ov61_0217c430
 _02168304: .word 0x000001b6
 _02168308: .word data_ov61_0217c64c
 
+	.global func_ov61_0216830c
 	arm_func_start func_ov61_0216830c
 func_ov61_0216830c: ; 0x0216830c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -50520,6 +51525,7 @@ _021683a8: .word data_ov61_0217c678
 _021683ac: .word data_ov61_0217c688
 _021683b0: .word data_ov61_0217c690
 
+	.global func_ov61_021683b4
 	arm_func_start func_ov61_021683b4
 func_ov61_021683b4: ; 0x021683b4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -51182,6 +52188,7 @@ _02168d5c: .word data_ov61_0217c71c
 _02168d60: .word data_ov61_0217c720
 _02168d64: .word data_ov61_0217c724
 
+	.global func_ov61_02168d68
 	arm_func_start func_ov61_02168d68
 func_ov61_02168d68: ; 0x02168d68
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -51242,6 +52249,7 @@ _02168e38: .word data_ov61_0217c728
 _02168e3c: .word data_ov61_0217c6ec
 _02168e40: .word data_ov61_0217c690
 
+	.global func_ov61_02168e44
 	arm_func_start func_ov61_02168e44
 func_ov61_02168e44: ; 0x02168e44
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -51307,6 +52315,7 @@ _02168f08:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_02168e44
 
+	.global func_ov61_02168f2c
 	arm_func_start func_ov61_02168f2c
 func_ov61_02168f2c: ; 0x02168f2c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -51366,6 +52375,7 @@ _02168fec:
 	arm_func_end func_ov61_02168f2c
 _02168ff4: .word data_ov61_0217c72c
 
+	.global func_ov61_02168ff8
 	arm_func_start func_ov61_02168ff8
 func_ov61_02168ff8: ; 0x02168ff8
 	ldr r1, [r1, #8]
@@ -51380,6 +52390,7 @@ _02169014:
 	bx lr
 	arm_func_end func_ov61_02168ff8
 
+	.global func_ov61_0216901c
 	arm_func_start func_ov61_0216901c
 func_ov61_0216901c: ; 0x0216901c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -51497,6 +52508,7 @@ _021691bc: .word 0x000001fd
 _021691c0: .word data_ov61_0217c774
 _021691c4: .word func_ov61_02168ff8
 
+	.global func_ov61_021691c8
 	arm_func_start func_ov61_021691c8
 func_ov61_021691c8: ; 0x021691c8
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -51542,6 +52554,7 @@ _02169254: .word data_ov61_0217c840
 _02169258: .word data_ov61_0217c7d8
 _0216925c: .word data_ov61_0217c84c
 
+	.global func_ov61_02169260
 	arm_func_start func_ov61_02169260
 func_ov61_02169260: ; 0x02169260
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -51618,6 +52631,7 @@ _02169360: .word data_ov61_0217c86c
 _02169364: .word data_ov61_0217c828
 _02169368: .word data_ov61_0217c84c
 
+	.global func_ov61_0216936c
 	arm_func_start func_ov61_0216936c
 func_ov61_0216936c: ; 0x0216936c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -51634,6 +52648,7 @@ func_ov61_0216936c: ; 0x0216936c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216936c
 
+	.global func_ov61_0216939c
 	arm_func_start func_ov61_0216939c
 func_ov61_0216939c: ; 0x0216939c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -51653,6 +52668,7 @@ func_ov61_0216939c: ; 0x0216939c
 	arm_func_end func_ov61_0216939c
 _021693d0: .word data_ov61_0217c87c
 
+	.global func_ov61_021693d4
 	arm_func_start func_ov61_021693d4
 func_ov61_021693d4: ; 0x021693d4
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -51721,6 +52737,7 @@ _021694b4:
 _021694bc: .word data_ov61_0217c880
 _021694c0: .word data_ov61_0217c8a8
 
+	.global func_ov61_021694c4
 	arm_func_start func_ov61_021694c4
 func_ov61_021694c4: ; 0x021694c4
 	stmdb sp!, {r0, r1, r2, r3}
@@ -51784,6 +52801,7 @@ _02169598: .word data_ov61_0217c840
 _0216959c: .word data_ov61_0217c7c4
 _021695a0: .word data_ov61_0217c8f0
 
+	.global func_ov61_021695a4
 	arm_func_start func_ov61_021695a4
 func_ov61_021695a4: ; 0x021695a4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -51857,6 +52875,7 @@ _02169698: .word data_ov61_0217c840
 _0216969c: .word data_ov61_0217c7f0
 _021696a0: .word data_ov61_0217c8f0
 
+	.global func_ov61_021696a4
 	arm_func_start func_ov61_021696a4
 func_ov61_021696a4: ; 0x021696a4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -51873,6 +52892,7 @@ func_ov61_021696a4: ; 0x021696a4
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021696a4
 
+	.global func_ov61_021696d4
 	arm_func_start func_ov61_021696d4
 func_ov61_021696d4: ; 0x021696d4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -52026,6 +53046,7 @@ _021698f0: .word data_ov61_0217c948
 _021698f4: .word data_ov61_0217c974
 _021698f8: .word data_ov61_0217c998
 
+	.global func_ov61_021698fc
 	arm_func_start func_ov61_021698fc
 func_ov61_021698fc: ; 0x021698fc
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -52134,6 +53155,7 @@ _02169a70: .word data_ov61_0217c9b8
 _02169a74: .word 0x000001df
 _02169a78: .word data_ov61_0217c9c4
 
+	.global func_ov61_02169a7c
 	arm_func_start func_ov61_02169a7c
 func_ov61_02169a7c: ; 0x02169a7c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -52220,6 +53242,7 @@ _02169bac: .word data_ov61_0217c9d0
 _02169bb0: .word data_ov61_0217c9d8
 _02169bb4: .word data_ov61_0217c9dc
 
+	.global func_ov61_02169bb8
 	arm_func_start func_ov61_02169bb8
 func_ov61_02169bb8: ; 0x02169bb8
 	stmdb sp!, {r4, lr}
@@ -52247,6 +53270,7 @@ _02169bf8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02169bb8
 
+	.global func_ov61_02169c10
 	arm_func_start func_ov61_02169c10
 func_ov61_02169c10: ; 0x02169c10
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -52317,6 +53341,7 @@ _02169cf8: .word data_ov61_0217c9f4
 _02169cfc: .word data_ov61_0217ca30
 _02169d00: .word data_ov61_0217ca48
 
+	.global func_ov61_02169d04
 	arm_func_start func_ov61_02169d04
 func_ov61_02169d04: ; 0x02169d04
 	stmdb sp!, {r0, r1, r2, r3}
@@ -52364,6 +53389,7 @@ _02169d44:
 	arm_func_end func_ov61_02169d04
 _02169da4: .word data_ov61_0217ca78
 
+	.global func_ov61_02169da8
 	arm_func_start func_ov61_02169da8
 func_ov61_02169da8: ; 0x02169da8
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -52507,6 +53533,7 @@ _02169f94: .word data_ov61_0217ca20
 _02169f98: .word data_ov61_0217c9e4
 _02169f9c: .word data_ov61_0217caa8
 
+	.global func_ov61_02169fa0
 	arm_func_start func_ov61_02169fa0
 func_ov61_02169fa0: ; 0x02169fa0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -52578,6 +53605,7 @@ _0216a080:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_02169fa0
 
+	.global func_ov61_0216a088
 	arm_func_start func_ov61_0216a088
 func_ov61_0216a088: ; 0x0216a088
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -52611,6 +53639,7 @@ _0216a0dc:
 _0216a0e8: .word data_ov61_0217cb1c
 _0216a0ec: .word 0x08421085
 
+	.global func_ov61_0216a0f0
 	arm_func_start func_ov61_0216a0f0
 func_ov61_0216a0f0: ; 0x0216a0f0
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -52849,6 +53878,7 @@ _0216a458: .word data_ov61_0217cabc
 _0216a45c: .word 0x0000cc74
 _0216a460: .word data_ov61_0217cca0
 
+	.global func_ov61_0216a464
 	arm_func_start func_ov61_0216a464
 func_ov61_0216a464: ; 0x0216a464
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -53009,6 +54039,7 @@ _0216a69c: .word data_ov61_0217ccc8
 _0216a6a0: .word data_ov61_0217ccdc
 _0216a6a4: .word data_ov61_0217ccf0
 
+	.global func_ov61_0216a6a8
 	arm_func_start func_ov61_0216a6a8
 func_ov61_0216a6a8: ; 0x0216a6a8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -53255,6 +54286,7 @@ _0216aa40: .word data_ov61_0217cdd8
 _0216aa44: .word data_ov61_0217cde8
 _0216aa48: .word data_ov61_0217cdf0
 
+	.global func_ov61_0216aa4c
 	arm_func_start func_ov61_0216aa4c
 func_ov61_0216aa4c: ; 0x0216aa4c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -53428,6 +54460,7 @@ _0216accc: .word data_ov61_0217ce24
 _0216acd0: .word data_ov61_0217cde8
 _0216acd4: .word data_ov61_0217cdf0
 
+	.global func_ov61_0216acd8
 	arm_func_start func_ov61_0216acd8
 func_ov61_0216acd8: ; 0x0216acd8
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -53890,6 +54923,7 @@ _0216b390: .word data_ov61_0217cecc
 _0216b394: .word data_ov61_0217ced4
 _0216b398: .word data_ov61_0217ccf0
 
+	.global func_ov61_0216b39c
 	arm_func_start func_ov61_0216b39c
 func_ov61_0216b39c: ; 0x0216b39c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -53938,6 +54972,7 @@ _0216b434: .word data_ov61_0217cc90
 _0216b438: .word data_ov61_0217cacc
 _0216b43c: .word 0x000002ef
 
+	.global func_ov61_0216b440
 	arm_func_start func_ov61_0216b440
 func_ov61_0216b440: ; 0x0216b440
 	stmdb sp!, {r4, r5, r6, lr}
@@ -53994,6 +55029,7 @@ _0216b4fc:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216b440
 
+	.global func_ov61_0216b504
 	arm_func_start func_ov61_0216b504
 func_ov61_0216b504: ; 0x0216b504
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -54122,6 +55158,7 @@ _0216b6c0: .word data_ov61_0217cdf0
 _0216b6c4: .word data_ov61_0217cf48
 _0216b6c8: .word func_ov61_0216b440
 
+	.global func_ov61_0216b6cc
 	arm_func_start func_ov61_0216b6cc
 func_ov61_0216b6cc: ; 0x0216b6cc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -54226,6 +55263,7 @@ _0216b81c:
 _0216b824: .word 0x51eb851f
 _0216b828: .word 0x0000076c
 
+	.global func_ov61_0216b82c
 	arm_func_start func_ov61_0216b82c
 func_ov61_0216b82c: ; 0x0216b82c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -54275,6 +55313,7 @@ _0216b8c8: .word data_ov61_0217cf70
 _0216b8cc: .word data_ov61_0217cf4c
 _0216b8d0: .word data_ov61_0217cf7c
 
+	.global func_ov61_0216b8d4
 	arm_func_start func_ov61_0216b8d4
 func_ov61_0216b8d4: ; 0x0216b8d4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -54413,6 +55452,7 @@ _0216ba40:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0216b8d4
 
+	.global func_ov61_0216bacc
 	arm_func_start func_ov61_0216bacc
 func_ov61_0216bacc: ; 0x0216bacc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -54966,6 +56006,7 @@ _0216c2d8: .word data_ov61_0217d0e0
 _0216c2dc: .word data_ov61_0217d0e8
 _0216c2e0: .word data_ov61_0217d0f0
 
+	.global func_ov61_0216c2e4
 	arm_func_start func_ov61_0216c2e4
 func_ov61_0216c2e4: ; 0x0216c2e4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -55022,6 +56063,7 @@ _0216c39c: .word data_ov61_0217d100
 _0216c3a0: .word data_ov61_0217d118
 _0216c3a4: .word data_ov61_0217d120
 
+	.global func_ov61_0216c3a8
 	arm_func_start func_ov61_0216c3a8
 func_ov61_0216c3a8: ; 0x0216c3a8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -55042,6 +56084,7 @@ func_ov61_0216c3a8: ; 0x0216c3a8
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216c3a8
 
+	.global func_ov61_0216c3e8
 	arm_func_start func_ov61_0216c3e8
 func_ov61_0216c3e8: ; 0x0216c3e8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -55062,6 +56105,7 @@ func_ov61_0216c3e8: ; 0x0216c3e8
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216c3e8
 
+	.global func_ov61_0216c428
 	arm_func_start func_ov61_0216c428
 func_ov61_0216c428: ; 0x0216c428
 	stmdb sp!, {r4, lr}
@@ -55401,6 +56445,7 @@ _0216c8ec: .word data_ov61_0217d0c8
 _0216c8f0: .word data_ov61_0217d0d0
 _0216c8f4: .word data_ov61_0217d1e4
 
+	.global func_ov61_0216c8f8
 	arm_func_start func_ov61_0216c8f8
 func_ov61_0216c8f8: ; 0x0216c8f8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -55949,6 +56994,7 @@ _0216d0c4: .word data_ov61_0217d0c8
 _0216d0c8: .word data_ov61_0217d0d0
 _0216d0cc: .word data_ov61_0217d1e4
 
+	.global func_ov61_0216d0d0
 	arm_func_start func_ov61_0216d0d0
 func_ov61_0216d0d0: ; 0x0216d0d0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -55992,6 +57038,7 @@ _0216d15c: .word data_ov61_0217cfdc
 _0216d160: .word data_ov61_0217d274
 _0216d164: .word data_ov61_0217d118
 
+	.global func_ov61_0216d168
 	arm_func_start func_ov61_0216d168
 func_ov61_0216d168: ; 0x0216d168
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -56106,6 +57153,7 @@ _0216d2fc:
 	arm_func_end func_ov61_0216d168
 _0216d308: .word data_ov61_0217d0f0
 
+	.global func_ov61_0216d30c
 	arm_func_start func_ov61_0216d30c
 func_ov61_0216d30c: ; 0x0216d30c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -56166,6 +57214,7 @@ _0216d3d0:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216d30c
 
+	.global func_ov61_0216d3e4
 	arm_func_start func_ov61_0216d3e4
 func_ov61_0216d3e4: ; 0x0216d3e4
 	stmdb sp!, {r4, lr}
@@ -56221,6 +57270,7 @@ func_ov61_0216d3e4: ; 0x0216d3e4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216d3e4
 
+	.global func_ov61_0216d4b0
 	arm_func_start func_ov61_0216d4b0
 func_ov61_0216d4b0: ; 0x0216d4b0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -56455,6 +57505,7 @@ _0216d7f0: .word data_ov61_0217d304
 _0216d7f4: .word 0x00000201
 _0216d7f8: .word data_ov61_0217d314
 
+	.global func_ov61_0216d7fc
 	arm_func_start func_ov61_0216d7fc
 func_ov61_0216d7fc: ; 0x0216d7fc
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -56508,6 +57559,7 @@ _0216d880:
 	arm_func_end func_ov61_0216d7fc
 _0216d8b0: .word data_ov61_0217d304
 
+	.global func_ov61_0216d8b4
 	arm_func_start func_ov61_0216d8b4
 func_ov61_0216d8b4: ; 0x0216d8b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -56554,6 +57606,7 @@ _0216d944: .word data_ov61_0217d318
 _0216d948: .word data_ov61_0217d2cc
 _0216d94c: .word data_ov61_0217d27c
 
+	.global func_ov61_0216d950
 	arm_func_start func_ov61_0216d950
 func_ov61_0216d950: ; 0x0216d950
 	stmdb sp!, {r3, lr}
@@ -56580,6 +57633,7 @@ _0216d98c:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216d950
 
+	.global func_ov61_0216d9a0
 	arm_func_start func_ov61_0216d9a0
 func_ov61_0216d9a0: ; 0x0216d9a0
 	ldr r0, [r0]
@@ -56606,6 +57660,7 @@ _0216d9d8:
 	bx lr
 	arm_func_end func_ov61_0216d9a0
 
+	.global func_ov61_0216d9ec
 	arm_func_start func_ov61_0216d9ec
 func_ov61_0216d9ec: ; 0x0216d9ec
 	ldr r0, [r0]
@@ -56627,6 +57682,7 @@ _0216da20:
 	bx lr
 	arm_func_end func_ov61_0216d9ec
 
+	.global func_ov61_0216da28
 	arm_func_start func_ov61_0216da28
 func_ov61_0216da28: ; 0x0216da28
 	stmdb sp!, {r3, r4, r5, lr}
@@ -56680,6 +57736,7 @@ _0216dac0: .word data_ov61_0217d2cc
 _0216dac4: .word data_ov61_0217d2a4
 _0216dac8: .word 0x00000146
 
+	.global func_ov61_0216dacc
 	arm_func_start func_ov61_0216dacc
 func_ov61_0216dacc: ; 0x0216dacc
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -56916,6 +57973,7 @@ _0216de1c: .word data_ov61_0217d4d4
 _0216de20: .word data_ov61_0217d4d8
 _0216de24: .word data_ov61_0217d414
 
+	.global func_ov61_0216de28
 	arm_func_start func_ov61_0216de28
 func_ov61_0216de28: ; 0x0216de28
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -57081,6 +58139,7 @@ _0216e078: .word data_ov61_0217d504
 _0216e07c: .word data_ov61_0217d480
 _0216e080: .word data_ov61_0217d4ac
 
+	.global func_ov61_0216e084
 	arm_func_start func_ov61_0216e084
 func_ov61_0216e084: ; 0x0216e084
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -57142,6 +58201,7 @@ _0216e148:
 	arm_func_end func_ov61_0216e084
 _0216e154: .word data_ov61_0217d47c
 
+	.global func_ov61_0216e158
 	arm_func_start func_ov61_0216e158
 func_ov61_0216e158: ; 0x0216e158
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -57320,6 +58380,7 @@ _0216e3cc: .word data_ov61_0217d47c
 _0216e3d0: .word data_ov61_0217d50c
 _0216e3d4: .word data_ov61_0217d51c
 
+	.global func_ov61_0216e3d8
 	arm_func_start func_ov61_0216e3d8
 func_ov61_0216e3d8: ; 0x0216e3d8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -57368,6 +58429,7 @@ _0216e468: .word data_ov61_0217d4d8
 _0216e46c: .word data_ov61_0217d390
 _0216e470: .word 0x000001d9
 
+	.global func_ov61_0216e474
 	arm_func_start func_ov61_0216e474
 func_ov61_0216e474: ; 0x0216e474
 	stmdb sp!, {r4, lr}
@@ -57397,6 +58459,7 @@ _0216e4c8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216e474
 
+	.global func_ov61_0216e4d4
 	arm_func_start func_ov61_0216e4d4
 func_ov61_0216e4d4: ; 0x0216e4d4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -57481,6 +58544,7 @@ _0216e5e4: .word data_ov61_0217d4d4
 _0216e5e8: .word 0x00000225
 _0216e5ec: .word data_ov61_0217d558
 
+	.global func_ov61_0216e5f0
 	arm_func_start func_ov61_0216e5f0
 func_ov61_0216e5f0: ; 0x0216e5f0
 	stmdb sp!, {r4, lr}
@@ -57515,6 +58579,7 @@ func_ov61_0216e5f0: ; 0x0216e5f0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216e5f0
 
+	.global func_ov61_0216e668
 	arm_func_start func_ov61_0216e668
 func_ov61_0216e668: ; 0x0216e668
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -57585,6 +58650,7 @@ _0216e750:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_0216e668
 
+	.global func_ov61_0216e758
 	arm_func_start func_ov61_0216e758
 func_ov61_0216e758: ; 0x0216e758
 	ldr r0, [r0]
@@ -57605,6 +58671,7 @@ _0216e788:
 	bx lr
 	arm_func_end func_ov61_0216e758
 
+	.global func_ov61_0216e790
 	arm_func_start func_ov61_0216e790
 func_ov61_0216e790: ; 0x0216e790
 	stmdb sp!, {r4, lr}
@@ -57616,6 +58683,7 @@ func_ov61_0216e790: ; 0x0216e790
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216e790
 
+	.global func_ov61_0216e7ac
 	arm_func_start func_ov61_0216e7ac
 func_ov61_0216e7ac: ; 0x0216e7ac
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -57653,6 +58721,7 @@ func_ov61_0216e7ac: ; 0x0216e7ac
 	arm_func_end func_ov61_0216e7ac
 _0216e828: .word func_ov61_0216e790
 
+	.global func_ov61_0216e82c
 	arm_func_start func_ov61_0216e82c
 func_ov61_0216e82c: ; 0x0216e82c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -57682,6 +58751,7 @@ func_ov61_0216e82c: ; 0x0216e82c
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0216e82c
 
+	.global func_ov61_0216e890
 	arm_func_start func_ov61_0216e890
 func_ov61_0216e890: ; 0x0216e890
 	stmdb sp!, {r4, r5, lr}
@@ -57790,6 +58860,7 @@ _0216ea10: .word data_ov61_0217d57c
 _0216ea14: .word data_ov61_0217d5a4
 _0216ea18: .word data_ov61_0217d5d8
 
+	.global func_ov61_0216ea1c
 	arm_func_start func_ov61_0216ea1c
 func_ov61_0216ea1c: ; 0x0216ea1c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -57897,6 +58968,7 @@ _0216eba0: .word data_ov61_0217d610
 _0216eba4: .word data_ov61_0217d614
 _0216eba8: .word data_ov61_0217d61c
 
+	.global func_ov61_0216ebac
 	arm_func_start func_ov61_0216ebac
 func_ov61_0216ebac: ; 0x0216ebac
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -57934,6 +59006,7 @@ _0216ec1c: .word data_ov61_0217d3b4
 _0216ec20: .word 0x00000376
 _0216ec24: .word data_ov61_0217d630
 
+	.global func_ov61_0216ec28
 	arm_func_start func_ov61_0216ec28
 func_ov61_0216ec28: ; 0x0216ec28
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -58000,6 +59073,7 @@ _0216ed08: .word 0x00000389
 _0216ed0c: .word data_ov61_0217d644
 _0216ed10: .word data_ov61_0217d648
 
+	.global func_ov61_0216ed14
 	arm_func_start func_ov61_0216ed14
 func_ov61_0216ed14: ; 0x0216ed14
 	stmdb sp!, {r3, lr}
@@ -58009,6 +59083,7 @@ func_ov61_0216ed14: ; 0x0216ed14
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216ed14
 
+	.global func_ov61_0216ed28
 	arm_func_start func_ov61_0216ed28
 func_ov61_0216ed28: ; 0x0216ed28
 	ldr r2, [r0]
@@ -58017,6 +59092,7 @@ func_ov61_0216ed28: ; 0x0216ed28
 	bx lr
 	arm_func_end func_ov61_0216ed28
 
+	.global func_ov61_0216ed38
 	arm_func_start func_ov61_0216ed38
 func_ov61_0216ed38: ; 0x0216ed38
 	stmdb sp!, {r4, lr}
@@ -58053,6 +59129,7 @@ _0216ed88:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0216ed38
 
+	.global func_ov61_0216edb4
 	arm_func_start func_ov61_0216edb4
 func_ov61_0216edb4: ; 0x0216edb4
 	stmdb sp!, {r3, r4, lr}
@@ -58080,6 +59157,7 @@ _0216ee00: .word func_ov61_0216ed38
 _0216ee04: .word func_ov61_0216ed14
 _0216ee08: .word func_ov61_0216ed28
 
+	.global func_ov61_0216ee0c
 	arm_func_start func_ov61_0216ee0c
 func_ov61_0216ee0c: ; 0x0216ee0c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -58177,6 +59255,7 @@ _0216ef60: .word data_ov61_0217d674
 _0216ef64: .word data_ov61_0217d6a4
 _0216ef68: .word data_ov61_0217d6b0
 
+	.global func_ov61_0216ef6c
 	arm_func_start func_ov61_0216ef6c
 func_ov61_0216ef6c: ; 0x0216ef6c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -58240,6 +59319,7 @@ _0216f044: .word data_ov61_0217d6c8
 _0216f048: .word data_ov61_0217d658
 _0216f04c: .word 0x000002b5
 
+	.global func_ov61_0216f050
 	arm_func_start func_ov61_0216f050
 func_ov61_0216f050: ; 0x0216f050
 	stmdb sp!, {r3, r4, lr}
@@ -58259,6 +59339,7 @@ func_ov61_0216f050: ; 0x0216f050
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_0216f050
 
+	.global func_ov61_0216f08c
 	arm_func_start func_ov61_0216f08c
 func_ov61_0216f08c: ; 0x0216f08c
 	stmdb sp!, {r3, r4, lr}
@@ -58276,6 +59357,7 @@ func_ov61_0216f08c: ; 0x0216f08c
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_0216f08c
 
+	.global func_ov61_0216f0c0
 	arm_func_start func_ov61_0216f0c0
 func_ov61_0216f0c0: ; 0x0216f0c0
 	ldr r0, [r0]
@@ -58286,6 +59368,7 @@ func_ov61_0216f0c0: ; 0x0216f0c0
 	arm_func_end func_ov61_0216f0c0
 _0216f0d0: .word func_ov61_02166334
 
+	.global func_ov61_0216f0d4
 	arm_func_start func_ov61_0216f0d4
 func_ov61_0216f0d4: ; 0x0216f0d4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -58315,6 +59398,7 @@ _0216f12c:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0216f0d4
 
+	.global func_ov61_0216f134
 	arm_func_start func_ov61_0216f134
 func_ov61_0216f134: ; 0x0216f134
 	stmdb sp!, {r4, lr}
@@ -58339,6 +59423,7 @@ func_ov61_0216f134: ; 0x0216f134
 	arm_func_end func_ov61_0216f134
 _0216f17c: .word func_ov61_0216f0d4
 
+	.global func_ov61_0216f180
 	arm_func_start func_ov61_0216f180
 func_ov61_0216f180: ; 0x0216f180
 	stmdb sp!, {r3, lr}
@@ -58350,6 +59435,7 @@ func_ov61_0216f180: ; 0x0216f180
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0216f180
 
+	.global func_ov61_0216f19c
 	arm_func_start func_ov61_0216f19c
 func_ov61_0216f19c: ; 0x0216f19c
 	stmdb sp!, {lr}
@@ -58371,6 +59457,7 @@ func_ov61_0216f19c: ; 0x0216f19c
 	arm_func_end func_ov61_0216f19c
 _0216f1d8: .word func_ov61_0216f180
 
+	.global func_ov61_0216f1dc
 	arm_func_start func_ov61_0216f1dc
 func_ov61_0216f1dc: ; 0x0216f1dc
 	ldr r0, [r1, #8]
@@ -58387,6 +59474,7 @@ _0216f200:
 	bx lr
 	arm_func_end func_ov61_0216f1dc
 
+	.global func_ov61_0216f208
 	arm_func_start func_ov61_0216f208
 func_ov61_0216f208: ; 0x0216f208
 	stmdb sp!, {r3, lr}
@@ -58404,6 +59492,7 @@ func_ov61_0216f208: ; 0x0216f208
 	arm_func_end func_ov61_0216f208
 _0216f234: .word func_ov61_0216f1dc
 
+	.global func_ov61_0216f238
 	arm_func_start func_ov61_0216f238
 func_ov61_0216f238: ; 0x0216f238
 	cmp r0, #0
@@ -58423,6 +59512,7 @@ _0216f268:
 	bx lr
 	arm_func_end func_ov61_0216f238
 
+	.global func_ov61_0216f270
 	arm_func_start func_ov61_0216f270
 func_ov61_0216f270: ; 0x0216f270
 	stmdb sp!, {r4, r5, r6, lr}
@@ -58562,6 +59652,7 @@ _0216f464: .word data_ov61_0217d700
 _0216f468: .word 0x0000cd74
 _0216f46c: .word data_ov61_0217d820
 
+	.global func_ov61_0216f470
 	arm_func_start func_ov61_0216f470
 func_ov61_0216f470: ; 0x0216f470
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -58613,6 +59704,7 @@ _0216f508:
 	arm_func_end func_ov61_0216f470
 _0216f51c: .word data_ov61_0217d758
 
+	.global func_ov61_0216f520
 	arm_func_start func_ov61_0216f520
 func_ov61_0216f520: ; 0x0216f520
 	stmdb sp!, {r3, r4, r5, lr}
@@ -58654,6 +59746,7 @@ _0216f5a4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_0216f520
 
+	.global func_ov61_0216f5b0
 	arm_func_start func_ov61_0216f5b0
 func_ov61_0216f5b0: ; 0x0216f5b0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -58793,6 +59886,7 @@ _0216f744:
 	arm_func_end func_ov61_0216f5b0
 _0216f798: .word data_ov61_0217d848
 
+	.global func_ov61_0216f79c
 	arm_func_start func_ov61_0216f79c
 func_ov61_0216f79c: ; 0x0216f79c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -60610,6 +61704,7 @@ _02171240: .word data_ov61_0217dab4
 _02171244: .word 0x00000515
 _02171248: .word 0x0000052a
 
+	.global func_ov61_0217124c
 	arm_func_start func_ov61_0217124c
 func_ov61_0217124c: ; 0x0217124c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -60710,6 +61805,7 @@ _02171390: .word data_ov61_0217d814
 _02171394: .word data_ov61_0217d6ec
 _02171398: .word 0x00000563
 
+	.global func_ov61_0217139c
 	arm_func_start func_ov61_0217139c
 func_ov61_0217139c: ; 0x0217139c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -60756,6 +61852,7 @@ func_ov61_0217139c: ; 0x0217139c
 _02171438: .word data_ov61_0217daf4
 _0217143c: .word data_ov61_0217daf8
 
+	.global func_ov61_02171440
 	arm_func_start func_ov61_02171440
 func_ov61_02171440: ; 0x02171440
 	stmdb sp!, {r3, r4, r5, lr}
@@ -60794,6 +61891,7 @@ func_ov61_02171440: ; 0x02171440
 _021714bc: .word data_ov61_0217db10
 _021714c0: .word data_ov61_0217db18
 
+	.global func_ov61_021714c4
 	arm_func_start func_ov61_021714c4
 func_ov61_021714c4: ; 0x021714c4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -60867,6 +61965,7 @@ _021715bc: .word data_ov61_0217db24
 _021715c0: .word data_ov61_0217db2c
 _021715c4: .word data_ov61_0217db5c
 
+	.global func_ov61_021715c8
 	arm_func_start func_ov61_021715c8
 func_ov61_021715c8: ; 0x021715c8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -60903,6 +62002,7 @@ _02171630: .word data_ov61_0217dba8
 _02171634: .word data_ov61_0217db6c
 _02171638: .word data_ov61_0217dbb8
 
+	.global func_ov61_0217163c
 	arm_func_start func_ov61_0217163c
 func_ov61_0217163c: ; 0x0217163c
 	stmdb sp!, {r0, r1, r2, r3}
@@ -60910,6 +62010,7 @@ func_ov61_0217163c: ; 0x0217163c
 	bx lr
 	arm_func_end func_ov61_0217163c
 
+	.global func_ov61_02171648
 	arm_func_start func_ov61_02171648
 func_ov61_02171648: ; 0x02171648
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -60972,6 +62073,7 @@ _02171714: .word data_ov61_0217dbcc
 _02171718: .word data_ov61_0217dbd4
 _0217171c: .word data_ov61_0217dbe0
 
+	.global func_ov61_02171720
 	arm_func_start func_ov61_02171720
 func_ov61_02171720: ; 0x02171720
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -61050,6 +62152,7 @@ _0217181c: .word data_ov61_0217dc04
 _02171820: .word 0x0000010f
 _02171824: .word data_ov61_0217dc14
 
+	.global func_ov61_02171828
 	arm_func_start func_ov61_02171828
 func_ov61_02171828: ; 0x02171828
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61119,6 +62222,7 @@ _02171910: .word data_ov61_0217dc30
 _02171914: .word data_ov61_0217dc68
 _02171918: .word data_ov61_0217dc80
 
+	.global func_ov61_0217191c
 	arm_func_start func_ov61_0217191c
 func_ov61_0217191c: ; 0x0217191c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -61251,6 +62355,7 @@ _02171ae0: .word 0x0000019b
 _02171ae4: .word data_ov61_0217dca8
 _02171ae8: .word 0x000001ff
 
+	.global func_ov61_02171aec
 	arm_func_start func_ov61_02171aec
 func_ov61_02171aec: ; 0x02171aec
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61264,6 +62369,7 @@ func_ov61_02171aec: ; 0x02171aec
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02171aec
 
+	.global func_ov61_02171b10
 	arm_func_start func_ov61_02171b10
 func_ov61_02171b10: ; 0x02171b10
 	ldr ip, _02171b20 ; =func_ov61_021715c8
@@ -61274,6 +62380,7 @@ func_ov61_02171b10: ; 0x02171b10
 	arm_func_end func_ov61_02171b10
 _02171b20: .word func_ov61_021715c8
 
+	.global func_ov61_02171b24
 	arm_func_start func_ov61_02171b24
 func_ov61_02171b24: ; 0x02171b24
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -61319,6 +62426,7 @@ _02171bb4: .word data_ov61_0217dcdc
 _02171bb8: .word data_ov61_0217dce0
 _02171bbc: .word data_ov61_0217dcc0
 
+	.global func_ov61_02171bc0
 	arm_func_start func_ov61_02171bc0
 func_ov61_02171bc0: ; 0x02171bc0
 	stmdb sp!, {r4, lr}
@@ -61334,6 +62442,7 @@ func_ov61_02171bc0: ; 0x02171bc0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02171bc0
 
+	.global func_ov61_02171bec
 	arm_func_start func_ov61_02171bec
 func_ov61_02171bec: ; 0x02171bec
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -61377,6 +62486,7 @@ _02171c6c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02171bec
 
+	.global func_ov61_02171c80
 	arm_func_start func_ov61_02171c80
 func_ov61_02171c80: ; 0x02171c80
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61416,6 +62526,7 @@ _02171cfc:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02171c80
 
+	.global func_ov61_02171d04
 	arm_func_start func_ov61_02171d04
 func_ov61_02171d04: ; 0x02171d04
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61454,6 +62565,7 @@ _02171d7c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02171d04
 
+	.global func_ov61_02171d84
 	arm_func_start func_ov61_02171d84
 func_ov61_02171d84: ; 0x02171d84
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61493,6 +62605,7 @@ _02171e00:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02171d84
 
+	.global func_ov61_02171e08
 	arm_func_start func_ov61_02171e08
 func_ov61_02171e08: ; 0x02171e08
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -61540,6 +62653,7 @@ _02171ea0: .word data_ov61_0217dcec
 _02171ea4: .word data_ov61_0217dce0
 _02171ea8: .word data_ov61_0217dccc
 
+	.global func_ov61_02171eac
 	arm_func_start func_ov61_02171eac
 func_ov61_02171eac: ; 0x02171eac
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -61599,6 +62713,7 @@ _02171f78:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02171eac
 
+	.global func_ov61_02171f80
 	arm_func_start func_ov61_02171f80
 func_ov61_02171f80: ; 0x02171f80
 	ldr r1, _02171f90 ; =data_ov61_02181144
@@ -61610,6 +62725,7 @@ func_ov61_02171f80: ; 0x02171f80
 _02171f90: .word data_ov61_02181144
 _02171f94: .word data_ov61_02181144
 
+	.global func_ov61_02171f98
 	arm_func_start func_ov61_02171f98
 func_ov61_02171f98: ; 0x02171f98
 	ldr r2, _02171fac ; =data_ov61_02181144
@@ -61622,6 +62738,7 @@ func_ov61_02171f98: ; 0x02171f98
 _02171fac: .word data_ov61_02181144
 _02171fb0: .word data_ov61_0218114c
 
+	.global func_ov61_02171fb4
 	arm_func_start func_ov61_02171fb4
 func_ov61_02171fb4: ; 0x02171fb4
 	ldrsb r3, [r0]
@@ -61640,6 +62757,7 @@ _02171fdc:
 	bx lr
 	arm_func_end func_ov61_02171fb4
 
+	.global func_ov61_02171fe4
 	arm_func_start func_ov61_02171fe4
 func_ov61_02171fe4: ; 0x02171fe4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -61679,6 +62797,7 @@ _02172054:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02171fe4
 
+	.global func_ov61_02172060
 	arm_func_start func_ov61_02172060
 func_ov61_02172060: ; 0x02172060
 	cmp r0, #0
@@ -61691,6 +62810,7 @@ func_ov61_02172060: ; 0x02172060
 	bx lr
 	arm_func_end func_ov61_02172060
 
+	.global func_ov61_02172080
 	arm_func_start func_ov61_02172080
 func_ov61_02172080: ; 0x02172080
 	stmdb sp!, {r4, r5, lr}
@@ -61721,6 +62841,7 @@ _021720d4: .word data_ov61_0217dce0
 _021720d8: .word data_ov61_0217dcb8
 _021720dc: .word 0x00000153
 
+	.global func_ov61_021720e0
 	arm_func_start func_ov61_021720e0
 func_ov61_021720e0: ; 0x021720e0
 	stmdb sp!, {r3, lr}
@@ -61755,6 +62876,7 @@ _0217210c:
 _02172148: .word data_ov61_0217dd08
 _0217214c: .word data_ov61_02181154
 
+	.global func_ov61_02172150
 	arm_func_start func_ov61_02172150
 func_ov61_02172150: ; 0x02172150
 	ldr r1, _0217216c ; =data_ov61_0217dd08
@@ -61768,6 +62890,7 @@ func_ov61_02172150: ; 0x02172150
 	arm_func_end func_ov61_02172150
 _0217216c: .word data_ov61_0217dd08
 
+	.global func_ov61_02172170
 	arm_func_start func_ov61_02172170
 func_ov61_02172170: ; 0x02172170
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -61862,6 +62985,7 @@ _0217229c:
 _021722b8: .word data_ov61_0217dd08
 _021722bc: .word data_ov61_02181154
 
+	.global func_ov61_021722c0
 	arm_func_start func_ov61_021722c0
 func_ov61_021722c0: ; 0x021722c0
 	stmdb sp!, {r4, lr}
@@ -61886,6 +63010,7 @@ _021722d8:
 	arm_func_end func_ov61_021722c0
 _02172304: .word data_ov61_0217dd08
 
+	.global func_ov61_02172308
 	arm_func_start func_ov61_02172308
 func_ov61_02172308: ; 0x02172308
 	stmdb sp!, {r4, lr}
@@ -61947,6 +63072,7 @@ _021723d0: .word data_ov61_02181154
 _021723d4: .word data_ov61_0217dd78
 _021723d8: .word data_ov61_02181184
 
+	.global func_ov61_021723dc
 	arm_func_start func_ov61_021723dc
 func_ov61_021723dc: ; 0x021723dc
 	stmdb sp!, {r3, lr}
@@ -61958,6 +63084,7 @@ func_ov61_021723dc: ; 0x021723dc
 	arm_func_end func_ov61_021723dc
 _021723f0: .word data_ov61_0217dd74
 
+	.global func_ov61_021723f4
 	arm_func_start func_ov61_021723f4
 func_ov61_021723f4: ; 0x021723f4
 	ldr ip, _021723fc ; =func_ov61_02166914
@@ -61966,6 +63093,7 @@ func_ov61_021723f4: ; 0x021723f4
 	arm_func_end func_ov61_021723f4
 _021723fc: .word func_ov61_02166914
 
+	.global func_ov61_02172400
 	arm_func_start func_ov61_02172400
 func_ov61_02172400: ; 0x02172400
 	sub r3, r1, #6
@@ -61998,6 +63126,7 @@ _02172460:
 	bx lr
 	arm_func_end func_ov61_02172400
 
+	.global func_ov61_02172468
 	arm_func_start func_ov61_02172468
 func_ov61_02172468: ; 0x02172468
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -62038,6 +63167,7 @@ _021724e0:
 	arm_func_end func_ov61_02172468
 _021724e8: .word data_ov61_02181154
 
+	.global func_ov61_021724ec
 	arm_func_start func_ov61_021724ec
 func_ov61_021724ec: ; 0x021724ec
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -62087,6 +63217,7 @@ _02172590: .word data_ov61_0217dd84
 _02172594: .word data_ov61_0217dd88
 _02172598: .word data_ov61_02181154
 
+	.global func_ov61_0217259c
 	arm_func_start func_ov61_0217259c
 func_ov61_0217259c: ; 0x0217259c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -62127,6 +63258,7 @@ _0217261c: .word data_ov61_0217dd90
 _02172620: .word data_ov61_0217dd84
 _02172624: .word data_ov61_02181154
 
+	.global func_ov61_02172628
 	arm_func_start func_ov61_02172628
 func_ov61_02172628: ; 0x02172628
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -62189,6 +63321,7 @@ _02172700: .word data_ov61_0217dda8
 _02172704: .word data_ov61_0217ddb0
 _02172708: .word data_ov61_0217dd74
 
+	.global func_ov61_0217270c
 	arm_func_start func_ov61_0217270c
 func_ov61_0217270c: ; 0x0217270c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -62232,6 +63365,7 @@ _02172798: .word data_ov61_0217dda0
 _0217279c: .word data_ov61_0217dd84
 _021727a0: .word data_ov61_0217dda4
 
+	.global func_ov61_021727a4
 	arm_func_start func_ov61_021727a4
 func_ov61_021727a4: ; 0x021727a4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -62299,6 +63433,7 @@ _02172880: .word data_ov61_0217ddcc
 _02172884: .word data_ov61_0217ddd8
 _02172888: .word data_ov61_0217dde4
 
+	.global func_ov61_0217288c
 	arm_func_start func_ov61_0217288c
 func_ov61_0217288c: ; 0x0217288c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -62341,6 +63476,7 @@ _02172904:
 _0217290c: .word data_ov61_0217dd54
 _02172910: .word data_ov61_0217dd08
 
+	.global func_ov61_02172914
 	arm_func_start func_ov61_02172914
 func_ov61_02172914: ; 0x02172914
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -62417,6 +63553,7 @@ _021729fc:
 	arm_func_end func_ov61_02172914
 _02172a14: .word data_ov61_02181154
 
+	.global func_ov61_02172a18
 	arm_func_start func_ov61_02172a18
 func_ov61_02172a18: ; 0x02172a18
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -62487,6 +63624,7 @@ _02172b00: .word data_ov61_0217a360
 _02172b04: .word data_ov61_0217dd64
 _02172b08: .word data_ov61_0217dd08
 
+	.global func_ov61_02172b0c
 	arm_func_start func_ov61_02172b0c
 func_ov61_02172b0c: ; 0x02172b0c
 	stmdb sp!, {r3, lr}
@@ -62504,6 +63642,7 @@ func_ov61_02172b0c: ; 0x02172b0c
 	arm_func_end func_ov61_02172b0c
 _02172b38: .word data_ov61_02181154
 
+	.global func_ov61_02172b3c
 	arm_func_start func_ov61_02172b3c
 func_ov61_02172b3c: ; 0x02172b3c
 	stmdb sp!, {r3, lr}
@@ -62521,6 +63660,7 @@ func_ov61_02172b3c: ; 0x02172b3c
 	arm_func_end func_ov61_02172b3c
 _02172b68: .word data_ov61_02181154
 
+	.global func_ov61_02172b6c
 	arm_func_start func_ov61_02172b6c
 func_ov61_02172b6c: ; 0x02172b6c
 	stmdb sp!, {r0, r1, r2, r3}
@@ -62553,6 +63693,7 @@ _02172bc0:
 	arm_func_end func_ov61_02172b6c
 _02172bd0: .word data_ov61_02181154
 
+	.global func_ov61_02172bd4
 	arm_func_start func_ov61_02172bd4
 func_ov61_02172bd4: ; 0x02172bd4
 	stmdb sp!, {r0, r1, r2, r3}
@@ -62587,6 +63728,7 @@ _02172c28:
 	arm_func_end func_ov61_02172bd4
 _02172c40: .word data_ov61_02181154
 
+	.global func_ov61_02172c44
 	arm_func_start func_ov61_02172c44
 func_ov61_02172c44: ; 0x02172c44
 	stmdb sp!, {r4, r5, r6, lr}
@@ -62615,6 +63757,7 @@ func_ov61_02172c44: ; 0x02172c44
 	arm_func_end func_ov61_02172c44
 _02172c9c: .word data_ov61_02181154
 
+	.global func_ov61_02172ca0
 	arm_func_start func_ov61_02172ca0
 func_ov61_02172ca0: ; 0x02172ca0
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -62643,6 +63786,7 @@ func_ov61_02172ca0: ; 0x02172ca0
 	arm_func_end func_ov61_02172ca0
 _02172cf8: .word data_ov61_0217ddf0
 
+	.global func_ov61_02172cfc
 	arm_func_start func_ov61_02172cfc
 func_ov61_02172cfc: ; 0x02172cfc
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -62672,6 +63816,7 @@ func_ov61_02172cfc: ; 0x02172cfc
 	arm_func_end func_ov61_02172cfc
 _02172d58: .word data_ov61_0217ddf0
 
+	.global func_ov61_02172d5c
 	arm_func_start func_ov61_02172d5c
 func_ov61_02172d5c: ; 0x02172d5c
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -62700,6 +63845,7 @@ func_ov61_02172d5c: ; 0x02172d5c
 	arm_func_end func_ov61_02172d5c
 _02172db4: .word data_ov61_0217ddf0
 
+	.global func_ov61_02172db8
 	arm_func_start func_ov61_02172db8
 func_ov61_02172db8: ; 0x02172db8
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -62728,6 +63874,7 @@ func_ov61_02172db8: ; 0x02172db8
 	arm_func_end func_ov61_02172db8
 _02172e10: .word data_ov61_0217ddf8
 
+	.global func_ov61_02172e14
 	arm_func_start func_ov61_02172e14
 func_ov61_02172e14: ; 0x02172e14
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -62757,6 +63904,7 @@ func_ov61_02172e14: ; 0x02172e14
 	arm_func_end func_ov61_02172e14
 _02172e70: .word data_ov61_0217ddf8
 
+	.global func_ov61_02172e74
 	arm_func_start func_ov61_02172e74
 func_ov61_02172e74: ; 0x02172e74
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -62785,6 +63933,7 @@ func_ov61_02172e74: ; 0x02172e74
 	arm_func_end func_ov61_02172e74
 _02172ecc: .word data_ov61_0217ddf8
 
+	.global func_ov61_02172ed0
 	arm_func_start func_ov61_02172ed0
 func_ov61_02172ed0: ; 0x02172ed0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -62832,6 +63981,7 @@ _02172f58:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov61_02172ed0
 
+	.global func_ov61_02172f6c
 	arm_func_start func_ov61_02172f6c
 func_ov61_02172f6c: ; 0x02172f6c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -62913,6 +64063,7 @@ _0217307c: .word data_ov61_0217de40
 _02173080: .word data_ov61_0217de00
 _02173084: .word 0x2c0b02c1
 
+	.global func_ov61_02173088
 	arm_func_start func_ov61_02173088
 func_ov61_02173088: ; 0x02173088
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -62987,6 +64138,7 @@ _02173168:
 _02173188: .word data_ov61_0217de14
 _0217318c: .word 0x2c0b02c1
 
+	.global func_ov61_02173190
 	arm_func_start func_ov61_02173190
 func_ov61_02173190: ; 0x02173190
 	mov ip, #0
@@ -63005,6 +64157,7 @@ _02173194:
 	bx lr
 	arm_func_end func_ov61_02173190
 
+	.global func_ov61_021731c4
 	arm_func_start func_ov61_021731c4
 func_ov61_021731c4: ; 0x021731c4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63020,6 +64173,7 @@ func_ov61_021731c4: ; 0x021731c4
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_021731c4
 
+	.global func_ov61_021731f0
 	arm_func_start func_ov61_021731f0
 func_ov61_021731f0: ; 0x021731f0
 	ldr r1, [r0, #4]
@@ -63028,6 +64182,7 @@ func_ov61_021731f0: ; 0x021731f0
 	bx lr
 	arm_func_end func_ov61_021731f0
 
+	.global func_ov61_02173200
 	arm_func_start func_ov61_02173200
 func_ov61_02173200: ; 0x02173200
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63054,6 +64209,7 @@ _02173244: .word data_ov61_0217dea0
 _02173248: .word data_ov61_0217debc
 _0217324c: .word data_ov61_0217de74
 
+	.global func_ov61_02173250
 	arm_func_start func_ov61_02173250
 func_ov61_02173250: ; 0x02173250
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63087,6 +64243,7 @@ _021732b0: .word data_ov61_0217dec8
 _021732b4: .word data_ov61_0217debc
 _021732b8: .word data_ov61_0217de88
 
+	.global func_ov61_021732bc
 	arm_func_start func_ov61_021732bc
 func_ov61_021732bc: ; 0x021732bc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -63128,6 +64285,7 @@ _02173338: .word data_ov61_0217deec
 _0217333c: .word data_ov61_0217debc
 _02173340: .word data_ov61_0217de60
 
+	.global func_ov61_02173344
 	arm_func_start func_ov61_02173344
 func_ov61_02173344: ; 0x02173344
 	stmdb sp!, {r4, r5, r6, lr}
@@ -63175,6 +64333,7 @@ _021733d8: .word data_ov61_0217debc
 _021733dc: .word data_ov61_0217de4c
 _021733e0: .word data_ov61_0217df28
 
+	.global func_ov61_021733e4
 	arm_func_start func_ov61_021733e4
 func_ov61_021733e4: ; 0x021733e4
 	stmdb sp!, {r4, lr}
@@ -63221,6 +64380,7 @@ _02173474: .word data_ov61_0217e040
 _02173478: .word data_ov61_0217e048
 _0217347c: .word data_ov61_0217dfd0
 
+	.global func_ov61_02173480
 	arm_func_start func_ov61_02173480
 func_ov61_02173480: ; 0x02173480
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -63299,6 +64459,7 @@ _02173590: .word data_ov61_0217e058
 _02173594: .word data_ov61_0217e048
 _02173598: .word data_ov61_0217e004
 
+	.global func_ov61_0217359c
 	arm_func_start func_ov61_0217359c
 func_ov61_0217359c: ; 0x0217359c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -63364,6 +64525,7 @@ _02173678: .word data_ov61_0217e070
 _0217367c: .word data_ov61_0217e048
 _02173680: .word data_ov61_0217dfa0
 
+	.global func_ov61_02173684
 	arm_func_start func_ov61_02173684
 func_ov61_02173684: ; 0x02173684
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -63428,6 +64590,7 @@ _0217375c: .word data_ov61_0217e070
 _02173760: .word data_ov61_0217e048
 _02173764: .word data_ov61_0217df88
 
+	.global func_ov61_02173768
 	arm_func_start func_ov61_02173768
 func_ov61_02173768: ; 0x02173768
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63484,6 +64647,7 @@ _02173820: .word data_ov61_0217e070
 _02173824: .word data_ov61_0217e048
 _02173828: .word data_ov61_0217df74
 
+	.global func_ov61_0217382c
 	arm_func_start func_ov61_0217382c
 func_ov61_0217382c: ; 0x0217382c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63540,6 +64704,7 @@ _021738e4: .word data_ov61_0217e070
 _021738e8: .word data_ov61_0217e048
 _021738ec: .word data_ov61_0217df60
 
+	.global func_ov61_021738f0
 	arm_func_start func_ov61_021738f0
 func_ov61_021738f0: ; 0x021738f0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -63609,6 +64774,7 @@ _021739dc: .word data_ov61_0217e048
 _021739e0: .word data_ov61_0217dfb8
 _021739e4: .word 0x00000101
 
+	.global func_ov61_021739e8
 	arm_func_start func_ov61_021739e8
 func_ov61_021739e8: ; 0x021739e8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -63678,6 +64844,7 @@ _02173ad4: .word data_ov61_0217e048
 _02173ad8: .word data_ov61_0217dfe8
 _02173adc: .word 0x0000012d
 
+	.global func_ov61_02173ae0
 	arm_func_start func_ov61_02173ae0
 func_ov61_02173ae0: ; 0x02173ae0
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -63758,6 +64925,7 @@ _02173bf8: .word data_ov61_0217e040
 _02173bfc: .word data_ov61_0217e048
 _02173c00: .word data_ov61_0217df4c
 
+	.global func_ov61_02173c04
 	arm_func_start func_ov61_02173c04
 func_ov61_02173c04: ; 0x02173c04
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -63827,6 +64995,7 @@ _02173cf0: .word data_ov61_0217e048
 _02173cf4: .word data_ov61_0217e020
 _02173cf8: .word 0x00000197
 
+	.global func_ov61_02173cfc
 	arm_func_start func_ov61_02173cfc
 func_ov61_02173cfc: ; 0x02173cfc
 	stmdb sp!, {r4, lr}
@@ -63843,6 +65012,7 @@ func_ov61_02173cfc: ; 0x02173cfc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02173cfc
 
+	.global func_ov61_02173d2c
 	arm_func_start func_ov61_02173d2c
 func_ov61_02173d2c: ; 0x02173d2c
 	stmdb sp!, {r4, lr}
@@ -63859,6 +65029,7 @@ func_ov61_02173d2c: ; 0x02173d2c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02173d2c
 
+	.global func_ov61_02173d5c
 	arm_func_start func_ov61_02173d5c
 func_ov61_02173d5c: ; 0x02173d5c
 	stmdb sp!, {r0, r1, r2, r3}
@@ -63906,6 +65077,7 @@ _02173dbc:
 	bx lr
 	arm_func_end func_ov61_02173d5c
 
+	.global func_ov61_02173e04
 	arm_func_start func_ov61_02173e04
 func_ov61_02173e04: ; 0x02173e04
 	stmdb sp!, {r3, r4, r5, lr}
@@ -63933,6 +65105,7 @@ func_ov61_02173e04: ; 0x02173e04
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02173e04
 
+	.global func_ov61_02173e60
 	arm_func_start func_ov61_02173e60
 func_ov61_02173e60: ; 0x02173e60
 	stmdb sp!, {r0, r1, r2, r3}
@@ -63959,6 +65132,7 @@ func_ov61_02173e60: ; 0x02173e60
 	bx lr
 	arm_func_end func_ov61_02173e60
 
+	.global func_ov61_02173eb8
 	arm_func_start func_ov61_02173eb8
 func_ov61_02173eb8: ; 0x02173eb8
 	stmdb sp!, {r3, r4, lr}
@@ -63981,6 +65155,7 @@ func_ov61_02173eb8: ; 0x02173eb8
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_02173eb8
 
+	.global func_ov61_02173f00
 	arm_func_start func_ov61_02173f00
 func_ov61_02173f00: ; 0x02173f00
 	stmdb sp!, {r4, lr}
@@ -64030,6 +65205,7 @@ _02173f98:
 	arm_func_end func_ov61_02173f00
 _02173fa0: .word 0x0000ea60
 
+	.global func_ov61_02173fa4
 	arm_func_start func_ov61_02173fa4
 func_ov61_02173fa4: ; 0x02173fa4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -64064,6 +65240,7 @@ _02174008:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02173fa4
 
+	.global func_ov61_02174010
 	arm_func_start func_ov61_02174010
 func_ov61_02174010: ; 0x02174010
 	stmdb sp!, {r3, lr}
@@ -64084,6 +65261,7 @@ _02174044:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02174010
 
+	.global func_ov61_0217404c
 	arm_func_start func_ov61_0217404c
 func_ov61_0217404c: ; 0x0217404c
 	stmdb sp!, {r3, lr}
@@ -64103,6 +65281,7 @@ _02174074:
 	arm_func_end func_ov61_0217404c
 _0217407c: .word 0x00007530
 
+	.global func_ov61_02174080
 	arm_func_start func_ov61_02174080
 func_ov61_02174080: ; 0x02174080
 	stmdb sp!, {r3, r4, r5, lr}
@@ -64133,6 +65312,7 @@ func_ov61_02174080: ; 0x02174080
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02174080
 
+	.global func_ov61_021740e8
 	arm_func_start func_ov61_021740e8
 func_ov61_021740e8: ; 0x021740e8
 	stmdb sp!, {r4, lr}
@@ -64158,6 +65338,7 @@ _02174128:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021740e8
 
+	.global func_ov61_02174138
 	arm_func_start func_ov61_02174138
 func_ov61_02174138: ; 0x02174138
 	stmdb sp!, {r0, r1, r2, r3}
@@ -64185,6 +65366,7 @@ func_ov61_02174138: ; 0x02174138
 	bx lr
 	arm_func_end func_ov61_02174138
 
+	.global func_ov61_02174194
 	arm_func_start func_ov61_02174194
 func_ov61_02174194: ; 0x02174194
 	stmdb sp!, {r4, lr}
@@ -64229,6 +65411,7 @@ _0217420c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02174194
 
+	.global func_ov61_02174218
 	arm_func_start func_ov61_02174218
 func_ov61_02174218: ; 0x02174218
 	stmdb sp!, {r3, lr}
@@ -64238,6 +65421,7 @@ func_ov61_02174218: ; 0x02174218
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02174218
 
+	.global func_ov61_0217422c
 	arm_func_start func_ov61_0217422c
 func_ov61_0217422c: ; 0x0217422c
 	stmdb sp!, {r4, lr}
@@ -64248,6 +65432,7 @@ func_ov61_0217422c: ; 0x0217422c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0217422c
 
+	.global func_ov61_02174244
 	arm_func_start func_ov61_02174244
 func_ov61_02174244: ; 0x02174244
 	stmdb sp!, {r4, lr}
@@ -64264,6 +65449,7 @@ func_ov61_02174244: ; 0x02174244
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02174244
 
+	.global func_ov61_02174274
 	arm_func_start func_ov61_02174274
 func_ov61_02174274: ; 0x02174274
 	ldr ip, _0217427c ; =func_ov61_02176408
@@ -64272,6 +65458,7 @@ func_ov61_02174274: ; 0x02174274
 	arm_func_end func_ov61_02174274
 _0217427c: .word func_ov61_02176408
 
+	.global func_ov61_02174280
 	arm_func_start func_ov61_02174280
 func_ov61_02174280: ; 0x02174280
 	ldr ip, _02174288 ; =func_ov61_02173e04
@@ -64280,6 +65467,7 @@ func_ov61_02174280: ; 0x02174280
 	arm_func_end func_ov61_02174280
 _02174288: .word func_ov61_02173e04
 
+	.global func_ov61_0217428c
 	arm_func_start func_ov61_0217428c
 func_ov61_0217428c: ; 0x0217428c
 	ldr ip, _02174294 ; =func_ov61_02173e60
@@ -64288,6 +65476,7 @@ func_ov61_0217428c: ; 0x0217428c
 	arm_func_end func_ov61_0217428c
 _02174294: .word func_ov61_02173e60
 
+	.global func_ov61_02174298
 	arm_func_start func_ov61_02174298
 func_ov61_02174298: ; 0x02174298
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -64391,6 +65580,7 @@ _021743dc:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02174298
 
+	.global func_ov61_02174414
 	arm_func_start func_ov61_02174414
 func_ov61_02174414: ; 0x02174414
 	stmdb sp!, {r0, r1, r2, r3}
@@ -64429,6 +65619,7 @@ _02174478:
 	bx lr
 	arm_func_end func_ov61_02174414
 
+	.global func_ov61_02174498
 	arm_func_start func_ov61_02174498
 func_ov61_02174498: ; 0x02174498
 	ldr ip, _021744a4 ; =func_ov61_021740e8
@@ -64438,6 +65629,7 @@ func_ov61_02174498: ; 0x02174498
 	arm_func_end func_ov61_02174498
 _021744a4: .word func_ov61_021740e8
 
+	.global func_ov61_021744a8
 	arm_func_start func_ov61_021744a8
 func_ov61_021744a8: ; 0x021744a8
 	ldr ip, _021744b4 ; =func_ov61_02174498
@@ -64447,6 +65639,7 @@ func_ov61_021744a8: ; 0x021744a8
 	arm_func_end func_ov61_021744a8
 _021744b4: .word func_ov61_02174498
 
+	.global func_ov61_021744b8
 	arm_func_start func_ov61_021744b8
 func_ov61_021744b8: ; 0x021744b8
 	stmdb sp!, {r3, lr}
@@ -64469,12 +65662,14 @@ func_ov61_021744b8: ; 0x021744b8
 _021744f4: .word data_ov61_02181584
 _021744f8: .word func_ov61_021744a8
 
+	.global func_ov61_021744fc
 	arm_func_start func_ov61_021744fc
 func_ov61_021744fc: ; 0x021744fc
 	ldrh r0, [r0, #8]
 	bx lr
 	arm_func_end func_ov61_021744fc
 
+	.global func_ov61_02174504
 	arm_func_start func_ov61_02174504
 func_ov61_02174504: ; 0x02174504
 	ldr r1, [r0, #0x54]
@@ -64483,18 +65678,21 @@ func_ov61_02174504: ; 0x02174504
 	bx lr
 	arm_func_end func_ov61_02174504
 
+	.global func_ov61_02174514
 	arm_func_start func_ov61_02174514
 func_ov61_02174514: ; 0x02174514
 	ldr r0, [r0]
 	bx lr
 	arm_func_end func_ov61_02174514
 
+	.global func_ov61_0217451c
 	arm_func_start func_ov61_0217451c
 func_ov61_0217451c: ; 0x0217451c
 	str r1, [r0, #0x30]
 	bx lr
 	arm_func_end func_ov61_0217451c
 
+	.global func_ov61_02174524
 	arm_func_start func_ov61_02174524
 func_ov61_02174524: ; 0x02174524
 	stmdb sp!, {r3, r4, r5, lr}
@@ -64516,6 +65714,7 @@ _02174554: .word data_ov61_0217e0ac
 _02174558: .word data_ov61_0217e07c
 _0217455c: .word 0x000001a3
 
+	.global func_ov61_02174560
 	arm_func_start func_ov61_02174560
 func_ov61_02174560: ; 0x02174560
 	stmdb sp!, {r4, lr}
@@ -64536,6 +65735,7 @@ _0217458c: .word data_ov61_0217e0ac
 _02174590: .word data_ov61_0217e094
 _02174594: .word 0x000001aa
 
+	.global func_ov61_02174598
 	arm_func_start func_ov61_02174598
 func_ov61_02174598: ; 0x02174598
 	ldrb r2, [r0, r1]
@@ -64548,6 +65748,7 @@ func_ov61_02174598: ; 0x02174598
 	bx lr
 	arm_func_end func_ov61_02174598
 
+	.global func_ov61_021745b8
 	arm_func_start func_ov61_021745b8
 func_ov61_021745b8: ; 0x021745b8
 	mov r3, r2, asr #0x8
@@ -64557,6 +65758,7 @@ func_ov61_021745b8: ; 0x021745b8
 	bx lr
 	arm_func_end func_ov61_021745b8
 
+	.global func_ov61_021745cc
 	arm_func_start func_ov61_021745cc
 func_ov61_021745cc: ; 0x021745cc
 	sub r0, r0, r1
@@ -64565,6 +65767,7 @@ func_ov61_021745cc: ; 0x021745cc
 	bx lr
 	arm_func_end func_ov61_021745cc
 
+	.global func_ov61_021745dc
 	arm_func_start func_ov61_021745dc
 func_ov61_021745dc: ; 0x021745dc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -64609,6 +65812,7 @@ _02174668:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021745dc
 
+	.global func_ov61_02174670
 	arm_func_start func_ov61_02174670
 func_ov61_02174670: ; 0x02174670
 	ldr ip, _02174680 ; =func_ov61_021745dc
@@ -64619,6 +65823,7 @@ func_ov61_02174670: ; 0x02174670
 	arm_func_end func_ov61_02174670
 _02174680: .word func_ov61_021745dc
 
+	.global func_ov61_02174684
 	arm_func_start func_ov61_02174684
 func_ov61_02174684: ; 0x02174684
 	stmdb sp!, {r4, lr}
@@ -64634,6 +65839,7 @@ func_ov61_02174684: ; 0x02174684
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02174684
 
+	.global func_ov61_021746b0
 	arm_func_start func_ov61_021746b0
 func_ov61_021746b0: ; 0x021746b0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -64708,6 +65914,7 @@ _02174794:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_021746b0
 
+	.global func_ov61_021747ac
 	arm_func_start func_ov61_021747ac
 func_ov61_021747ac: ; 0x021747ac
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -64749,6 +65956,7 @@ _02174814:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_021747ac
 
+	.global func_ov61_0217483c
 	arm_func_start func_ov61_0217483c
 func_ov61_0217483c: ; 0x0217483c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -64799,6 +66007,7 @@ _021748dc:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_0217483c
 
+	.global func_ov61_021748e8
 	arm_func_start func_ov61_021748e8
 func_ov61_021748e8: ; 0x021748e8
 	stmdb sp!, {r4, lr}
@@ -64843,6 +66052,7 @@ _02174938:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021748e8
 
+	.global func_ov61_02174980
 	arm_func_start func_ov61_02174980
 func_ov61_02174980: ; 0x02174980
 	stmdb sp!, {r3, r4, r5, lr}
@@ -64906,6 +66116,7 @@ _02174a4c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02174980
 
+	.global func_ov61_02174a5c
 	arm_func_start func_ov61_02174a5c
 func_ov61_02174a5c: ; 0x02174a5c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -64982,6 +66193,7 @@ _02174b20:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02174a5c
 
+	.global func_ov61_02174b6c
 	arm_func_start func_ov61_02174b6c
 func_ov61_02174b6c: ; 0x02174b6c
 	stmdb sp!, {r3, lr}
@@ -65006,6 +66218,7 @@ _02174b90:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02174b6c
 
+	.global func_ov61_02174bb8
 	arm_func_start func_ov61_02174bb8
 func_ov61_02174bb8: ; 0x02174bb8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -65038,6 +66251,7 @@ _02174be8:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02174bb8
 
+	.global func_ov61_02174c24
 	arm_func_start func_ov61_02174c24
 func_ov61_02174c24: ; 0x02174c24
 	stmdb sp!, {r4, lr}
@@ -65059,6 +66273,7 @@ func_ov61_02174c24: ; 0x02174c24
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02174c24
 
+	.global func_ov61_02174c68
 	arm_func_start func_ov61_02174c68
 func_ov61_02174c68: ; 0x02174c68
 	stmdb sp!, {r3, lr}
@@ -65134,6 +66349,7 @@ _02174d60:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02174c68
 
+	.global func_ov61_02174d68
 	arm_func_start func_ov61_02174d68
 func_ov61_02174d68: ; 0x02174d68
 	ldr ip, _02174d78 ; =func_ov61_021745cc
@@ -65144,6 +66360,7 @@ func_ov61_02174d68: ; 0x02174d68
 	arm_func_end func_ov61_02174d68
 _02174d78: .word func_ov61_021745cc
 
+	.global func_ov61_02174d7c
 	arm_func_start func_ov61_02174d7c
 func_ov61_02174d7c: ; 0x02174d7c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -65263,6 +66480,7 @@ _02174f18:
 	arm_func_end func_ov61_02174d7c
 _02174f2c: .word func_ov61_02174d68
 
+	.global func_ov61_02174f30
 	arm_func_start func_ov61_02174f30
 func_ov61_02174f30: ; 0x02174f30
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -65303,6 +66521,7 @@ _02174fa0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02174f30
 
+	.global func_ov61_02174fb4
 	arm_func_start func_ov61_02174fb4
 func_ov61_02174fb4: ; 0x02174fb4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -65343,6 +66562,7 @@ _0217502c:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_02174fb4
 
+	.global func_ov61_02175034
 	arm_func_start func_ov61_02175034
 func_ov61_02175034: ; 0x02175034
 	stmdb sp!, {r4, lr}
@@ -65357,6 +66577,7 @@ func_ov61_02175034: ; 0x02175034
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02175034
 
+	.global func_ov61_0217505c
 	arm_func_start func_ov61_0217505c
 func_ov61_0217505c: ; 0x0217505c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -65448,6 +66669,7 @@ _0217519c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov61_0217505c
 
+	.global func_ov61_021751a8
 	arm_func_start func_ov61_021751a8
 func_ov61_021751a8: ; 0x021751a8
 	stmdb sp!, {r4, lr}
@@ -65472,6 +66694,7 @@ _021751cc:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021751a8
 
+	.global func_ov61_021751f4
 	arm_func_start func_ov61_021751f4
 func_ov61_021751f4: ; 0x021751f4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -65536,6 +66759,7 @@ _021752c8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_021751f4
 
+	.global func_ov61_021752d0
 	arm_func_start func_ov61_021752d0
 func_ov61_021752d0: ; 0x021752d0
 	ldr ip, _021752d8 ; =func_ov61_02176004
@@ -65544,6 +66768,7 @@ func_ov61_021752d0: ; 0x021752d0
 	arm_func_end func_ov61_021752d0
 _021752d8: .word func_ov61_02176004
 
+	.global func_ov61_021752dc
 	arm_func_start func_ov61_021752dc
 func_ov61_021752dc: ; 0x021752dc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -65586,6 +66811,7 @@ func_ov61_021752dc: ; 0x021752dc
 	arm_func_end func_ov61_021752dc
 _0217536c: .word data_ov61_0217e0dc
 
+	.global func_ov61_02175370
 	arm_func_start func_ov61_02175370
 func_ov61_02175370: ; 0x02175370
 	stmdb sp!, {r3, lr}
@@ -65604,6 +66830,7 @@ func_ov61_02175370: ; 0x02175370
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02175370
 
+	.global func_ov61_021753a8
 	arm_func_start func_ov61_021753a8
 func_ov61_021753a8: ; 0x021753a8
 	stmdb sp!, {r3, lr}
@@ -65659,6 +66886,7 @@ _02175458:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021753a8
 
+	.global func_ov61_02175460
 	arm_func_start func_ov61_02175460
 func_ov61_02175460: ; 0x02175460
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -65852,6 +67080,7 @@ _021756f0:
 	arm_func_end func_ov61_02175460
 _0217570c: .word data_ov61_0217e0e4
 
+	.global func_ov61_02175710
 	arm_func_start func_ov61_02175710
 func_ov61_02175710: ; 0x02175710
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -65925,6 +67154,7 @@ _02175804:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02175710
 
+	.global func_ov61_02175810
 	arm_func_start func_ov61_02175810
 func_ov61_02175810: ; 0x02175810
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -66011,6 +67241,7 @@ _02175930:
 	arm_func_end func_ov61_02175810
 _0217593c: .word 0x000005dc
 
+	.global func_ov61_02175940
 	arm_func_start func_ov61_02175940
 func_ov61_02175940: ; 0x02175940
 	stmdb sp!, {r3, r4, r5, lr}
@@ -66044,6 +67275,7 @@ func_ov61_02175940: ; 0x02175940
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02175940
 
+	.global func_ov61_021759b4
 	arm_func_start func_ov61_021759b4
 func_ov61_021759b4: ; 0x021759b4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -66100,6 +67332,7 @@ _02175a28:
 	arm_func_end func_ov61_021759b4
 _02175a74: .word data_ov61_0217e0e4
 
+	.global func_ov61_02175a78
 	arm_func_start func_ov61_02175a78
 func_ov61_02175a78: ; 0x02175a78
 	stmdb sp!, {r3, r4, r5, lr}
@@ -66135,6 +67368,7 @@ _02175ae0: .word data_ov61_0217e0f0
 _02175ae4: .word data_ov61_0217e0c4
 _02175ae8: .word 0x00000475
 
+	.global func_ov61_02175aec
 	arm_func_start func_ov61_02175aec
 func_ov61_02175aec: ; 0x02175aec
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -66168,6 +67402,7 @@ func_ov61_02175aec: ; 0x02175aec
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02175aec
 
+	.global func_ov61_02175b60
 	arm_func_start func_ov61_02175b60
 func_ov61_02175b60: ; 0x02175b60
 	stmdb sp!, {r3, r4, r5, lr}
@@ -66196,6 +67431,7 @@ func_ov61_02175b60: ; 0x02175b60
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02175b60
 
+	.global func_ov61_02175bc0
 	arm_func_start func_ov61_02175bc0
 func_ov61_02175bc0: ; 0x02175bc0
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -66235,6 +67471,7 @@ func_ov61_02175bc0: ; 0x02175bc0
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02175bc0
 
+	.global func_ov61_02175c4c
 	arm_func_start func_ov61_02175c4c
 func_ov61_02175c4c: ; 0x02175c4c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -66269,6 +67506,7 @@ func_ov61_02175c4c: ; 0x02175c4c
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02175c4c
 
+	.global func_ov61_02175cc4
 	arm_func_start func_ov61_02175cc4
 func_ov61_02175cc4: ; 0x02175cc4
 	stmdb sp!, {r3, r4, lr}
@@ -66296,6 +67534,7 @@ func_ov61_02175cc4: ; 0x02175cc4
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_02175cc4
 
+	.global func_ov61_02175d20
 	arm_func_start func_ov61_02175d20
 func_ov61_02175d20: ; 0x02175d20
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -66329,6 +67568,7 @@ func_ov61_02175d20: ; 0x02175d20
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02175d20
 
+	.global func_ov61_02175d94
 	arm_func_start func_ov61_02175d94
 func_ov61_02175d94: ; 0x02175d94
 	stmdb sp!, {r3, r4, lr}
@@ -66356,6 +67596,7 @@ func_ov61_02175d94: ; 0x02175d94
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_02175d94
 
+	.global func_ov61_02175df0
 	arm_func_start func_ov61_02175df0
 func_ov61_02175df0: ; 0x02175df0
 	stmdb sp!, {r3, r4, lr}
@@ -66383,6 +67624,7 @@ func_ov61_02175df0: ; 0x02175df0
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_02175df0
 
+	.global func_ov61_02175e4c
 	arm_func_start func_ov61_02175e4c
 func_ov61_02175e4c: ; 0x02175e4c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -66440,6 +67682,7 @@ _02175e9c:
 	arm_func_end func_ov61_02175e4c
 _02175f10: .word data_ov61_0217e0e4
 
+	.global func_ov61_02175f14
 	arm_func_start func_ov61_02175f14
 func_ov61_02175f14: ; 0x02175f14
 	stmdb sp!, {r4, lr}
@@ -66470,6 +67713,7 @@ func_ov61_02175f14: ; 0x02175f14
 	arm_func_end func_ov61_02175f14
 _02175f74: .word data_ov61_0217e0e4
 
+	.global func_ov61_02175f78
 	arm_func_start func_ov61_02175f78
 func_ov61_02175f78: ; 0x02175f78
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -66511,6 +67755,7 @@ _02175fdc:
 	arm_func_end func_ov61_02175f78
 _02176000: .word data_ov61_0217e0e4
 
+	.global func_ov61_02176004
 	arm_func_start func_ov61_02176004
 func_ov61_02176004: ; 0x02176004
 	ldr ip, _02176014 ; =func_ov61_02173eb8
@@ -66521,6 +67766,7 @@ func_ov61_02176004: ; 0x02176004
 	arm_func_end func_ov61_02176004
 _02176014: .word func_ov61_02173eb8
 
+	.global func_ov61_02176018
 	arm_func_start func_ov61_02176018
 func_ov61_02176018: ; 0x02176018
 	ldr ip, _02176030 ; =func_ov61_02176034
@@ -66533,6 +67779,7 @@ func_ov61_02176018: ; 0x02176018
 	arm_func_end func_ov61_02176018
 _02176030: .word func_ov61_02176034
 
+	.global func_ov61_02176034
 	arm_func_start func_ov61_02176034
 func_ov61_02176034: ; 0x02176034
 	stmdb sp!, {r4, lr}
@@ -66557,6 +67804,7 @@ func_ov61_02176034: ; 0x02176034
 	arm_func_end func_ov61_02176034
 _0217607c: .word data_ov61_0217e0e4
 
+	.global func_ov61_02176080
 	arm_func_start func_ov61_02176080
 func_ov61_02176080: ; 0x02176080
 	stmdb sp!, {r3, r4, r5, lr}
@@ -66588,6 +67836,7 @@ func_ov61_02176080: ; 0x02176080
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02176080
 
+	.global func_ov61_021760ec
 	arm_func_start func_ov61_021760ec
 func_ov61_021760ec: ; 0x021760ec
 	stmdb sp!, {r3, lr}
@@ -66600,6 +67849,7 @@ _02176100:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021760ec
 
+	.global func_ov61_02176108
 	arm_func_start func_ov61_02176108
 func_ov61_02176108: ; 0x02176108
 	stmdb sp!, {r3, lr}
@@ -66612,6 +67862,7 @@ func_ov61_02176108: ; 0x02176108
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02176108
 
+	.global func_ov61_02176128
 	arm_func_start func_ov61_02176128
 func_ov61_02176128: ; 0x02176128
 	ldr r3, [r0]
@@ -66629,6 +67880,7 @@ func_ov61_02176128: ; 0x02176128
 	bx lr
 	arm_func_end func_ov61_02176128
 
+	.global func_ov61_0217615c
 	arm_func_start func_ov61_0217615c
 func_ov61_0217615c: ; 0x0217615c
 	ldr ip, _02176168 ; =func_ov61_02174194
@@ -66638,6 +67890,7 @@ func_ov61_0217615c: ; 0x0217615c
 	arm_func_end func_ov61_0217615c
 _02176168: .word func_ov61_02174194
 
+	.global func_ov61_0217616c
 	arm_func_start func_ov61_0217616c
 func_ov61_0217616c: ; 0x0217616c
 	stmdb sp!, {lr}
@@ -66656,6 +67909,7 @@ func_ov61_0217616c: ; 0x0217616c
 	ldmia sp!, {pc}
 	arm_func_end func_ov61_0217616c
 
+	.global func_ov61_021761a4
 	arm_func_start func_ov61_021761a4
 func_ov61_021761a4: ; 0x021761a4
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -66801,6 +68055,7 @@ _021763b8: .word func_ov61_02176128
 _021763bc: .word func_ov61_02176108
 _021763c0: .word func_ov61_0217615c
 
+	.global func_ov61_021763c4
 	arm_func_start func_ov61_021763c4
 func_ov61_021763c4: ; 0x021763c4
 	stmdb sp!, {r4, lr}
@@ -66822,12 +68077,14 @@ func_ov61_021763c4: ; 0x021763c4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021763c4
 
+	.global func_ov61_02176408
 	arm_func_start func_ov61_02176408
 func_ov61_02176408: ; 0x02176408
 	str r1, [r0, #0x20]
 	bx lr
 	arm_func_end func_ov61_02176408
 
+	.global func_ov61_02176410
 	arm_func_start func_ov61_02176410
 func_ov61_02176410: ; 0x02176410
 	ldr ip, _0217641c ; =func_ov61_0213e10c
@@ -66837,6 +68094,7 @@ func_ov61_02176410: ; 0x02176410
 	arm_func_end func_ov61_02176410
 _0217641c: .word func_ov61_0213e10c
 
+	.global func_ov61_02176420
 	arm_func_start func_ov61_02176420
 func_ov61_02176420: ; 0x02176420
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -66979,6 +68237,7 @@ _02176628:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02176420
 
+	.global func_ov61_02176630
 	arm_func_start func_ov61_02176630
 func_ov61_02176630: ; 0x02176630
 	stmdb sp!, {r0, r1, r2, r3}
@@ -67035,6 +68294,7 @@ _021766dc:
 	bx lr
 	arm_func_end func_ov61_02176630
 
+	.global func_ov61_021766f4
 	arm_func_start func_ov61_021766f4
 func_ov61_021766f4: ; 0x021766f4
 	stmdb sp!, {r0, r1, r2, r3}
@@ -67148,6 +68408,7 @@ _02176888:
 	bx lr
 	arm_func_end func_ov61_021766f4
 
+	.global func_ov61_0217689c
 	arm_func_start func_ov61_0217689c
 func_ov61_0217689c: ; 0x0217689c
 	stmdb sp!, {r4, lr}
@@ -67176,6 +68437,7 @@ _021768ec:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0217689c
 
+	.global func_ov61_021768f4
 	arm_func_start func_ov61_021768f4
 func_ov61_021768f4: ; 0x021768f4
 	stmdb sp!, {r3, r4, lr}
@@ -67196,6 +68458,7 @@ func_ov61_021768f4: ; 0x021768f4
 	arm_func_end func_ov61_021768f4
 _0217692c: .word func_ov61_0217689c
 
+	.global func_ov61_02176930
 	arm_func_start func_ov61_02176930
 func_ov61_02176930: ; 0x02176930
 	stmdb sp!, {r3, r4, r5, lr}
@@ -67215,6 +68478,7 @@ _02176948:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02176930
 
+	.global func_ov61_02176968
 	arm_func_start func_ov61_02176968
 func_ov61_02176968: ; 0x02176968
 	stmdb sp!, {r4, lr}
@@ -67234,6 +68498,7 @@ func_ov61_02176968: ; 0x02176968
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02176968
 
+	.global func_ov61_021769a4
 	arm_func_start func_ov61_021769a4
 func_ov61_021769a4: ; 0x021769a4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -67287,6 +68552,7 @@ _02176a48: .word data_ov61_0217e114
 _02176a4c: .word data_ov61_0217e11c
 _02176a50: .word data_ov61_0217e120
 
+	.global func_ov61_02176a54
 	arm_func_start func_ov61_02176a54
 func_ov61_02176a54: ; 0x02176a54
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
@@ -67400,6 +68666,7 @@ _02176bcc: .word data_ov61_0217e100
 _02176bd0: .word data_02056d98
 _02176bd4: .word 0x0000ffff
 
+	.global func_ov61_02176bd8
 	arm_func_start func_ov61_02176bd8
 func_ov61_02176bd8: ; 0x02176bd8
 	stmdb sp!, {r4, lr}
@@ -67426,6 +68693,7 @@ _02176c00:
 	arm_func_end func_ov61_02176bd8
 _02176c24: .word data_ov61_0217e154
 
+	.global func_ov61_02176c28
 	arm_func_start func_ov61_02176c28
 func_ov61_02176c28: ; 0x02176c28
 	stmdb sp!, {r4, r5, r6, lr}
@@ -67459,6 +68727,7 @@ _02176c84:
 	arm_func_end func_ov61_02176c28
 _02176c8c: .word data_ov61_021815b8
 
+	.global func_ov61_02176c90
 	arm_func_start func_ov61_02176c90
 func_ov61_02176c90: ; 0x02176c90
 	stmdb sp!, {r4, lr}
@@ -67476,6 +68745,7 @@ _02176cac:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02176c90
 
+	.global func_ov61_02176cc0
 	arm_func_start func_ov61_02176cc0
 func_ov61_02176cc0: ; 0x02176cc0
 	stmdb sp!, {r3, lr}
@@ -67520,6 +68790,7 @@ _02176d1c:
 _02176d50: .word data_ov61_021815b8
 _02176d54: .word func_ov61_02176c90
 
+	.global func_ov61_02176d58
 	arm_func_start func_ov61_02176d58
 func_ov61_02176d58: ; 0x02176d58
 	stmdb sp!, {r4, r5, r6, lr}
@@ -67553,6 +68824,7 @@ _02176da4:
 	arm_func_end func_ov61_02176d58
 _02176dbc: .word data_ov61_021815b8
 
+	.global func_ov61_02176dc0
 	arm_func_start func_ov61_02176dc0
 func_ov61_02176dc0: ; 0x02176dc0
 	stmdb sp!, {r3, lr}
@@ -67569,6 +68841,7 @@ func_ov61_02176dc0: ; 0x02176dc0
 	arm_func_end func_ov61_02176dc0
 _02176de8: .word data_ov61_021815b8
 
+	.global func_ov61_02176dec
 	arm_func_start func_ov61_02176dec
 func_ov61_02176dec: ; 0x02176dec
 	stmdb sp!, {r3, lr}
@@ -67583,6 +68856,7 @@ func_ov61_02176dec: ; 0x02176dec
 	arm_func_end func_ov61_02176dec
 _02176e0c: .word data_ov61_0217e158
 
+	.global func_ov61_02176e10
 	arm_func_start func_ov61_02176e10
 func_ov61_02176e10: ; 0x02176e10
 	stmdb sp!, {r3, lr}
@@ -67608,6 +68882,7 @@ func_ov61_02176e10: ; 0x02176e10
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02176e10
 
+	.global func_ov61_02176e64
 	arm_func_start func_ov61_02176e64
 func_ov61_02176e64: ; 0x02176e64
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -67641,6 +68916,7 @@ _02176ebc:
 	arm_func_end func_ov61_02176e64
 _02176ec4: .word 0x0100007f
 
+	.global func_ov61_02176ec8
 	arm_func_start func_ov61_02176ec8
 func_ov61_02176ec8: ; 0x02176ec8
 	stmdb sp!, {lr}
@@ -67658,6 +68934,7 @@ func_ov61_02176ec8: ; 0x02176ec8
 	ldmia sp!, {pc}
 	arm_func_end func_ov61_02176ec8
 
+	.global func_ov61_02176efc
 	arm_func_start func_ov61_02176efc
 func_ov61_02176efc: ; 0x02176efc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -67812,6 +69089,7 @@ _02177138: .word data_ov61_021810c0
 _0217713c: .word data_ov61_021815b8
 _02177140: .word 0x00006cfd
 
+	.global func_ov61_02177144
 	arm_func_start func_ov61_02177144
 func_ov61_02177144: ; 0x02177144
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -67889,6 +69167,7 @@ func_ov61_02177144: ; 0x02177144
 	arm_func_end func_ov61_02177144
 _02177260: .word data_ov61_0217e158
 
+	.global func_ov61_02177264
 	arm_func_start func_ov61_02177264
 func_ov61_02177264: ; 0x02177264
 	stmdb sp!, {r4, lr}
@@ -67907,6 +69186,7 @@ func_ov61_02177264: ; 0x02177264
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02177264
 
+	.global func_ov61_0217729c
 	arm_func_start func_ov61_0217729c
 func_ov61_0217729c: ; 0x0217729c
 	stmdb sp!, {lr}
@@ -67929,6 +69209,7 @@ _021772c8:
 _021772d4: .word data_ov61_0217e160
 _021772d8: .word data_ov61_021810c0
 
+	.global func_ov61_021772dc
 	arm_func_start func_ov61_021772dc
 func_ov61_021772dc: ; 0x021772dc
 	stmdb sp!, {r3, lr}
@@ -67966,6 +69247,7 @@ _02177348: .word data_ov61_021815b8
 _0217734c: .word data_ov61_0217e168
 _02177350: .word data_ov61_0217e184
 
+	.global func_ov61_02177354
 	arm_func_start func_ov61_02177354
 func_ov61_02177354: ; 0x02177354
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -68022,6 +69304,7 @@ _0217740c:
 	arm_func_end func_ov61_02177354
 _02177418: .word data_ov61_02181024
 
+	.global func_ov61_0217741c
 	arm_func_start func_ov61_0217741c
 func_ov61_0217741c: ; 0x0217741c
 	stmdb sp!, {r4, lr}
@@ -68041,6 +69324,7 @@ _02177440:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0217741c
 
+	.global func_ov61_02177454
 	arm_func_start func_ov61_02177454
 func_ov61_02177454: ; 0x02177454
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
@@ -68178,6 +69462,7 @@ _021775f4:
 	arm_func_end func_ov61_02177454
 _02177640: .word data_ov61_021815cc
 
+	.global func_ov61_02177644
 	arm_func_start func_ov61_02177644
 func_ov61_02177644: ; 0x02177644
 	stmdb sp!, {r3, r4, r5, lr}
@@ -68201,6 +69486,7 @@ _02177668:
 	arm_func_end func_ov61_02177644
 _02177684: .word data_ov61_021815b8
 
+	.global func_ov61_02177688
 	arm_func_start func_ov61_02177688
 func_ov61_02177688: ; 0x02177688
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -68257,6 +69543,7 @@ func_ov61_02177688: ; 0x02177688
 	arm_func_end func_ov61_02177688
 _02177750: .word data_ov61_0217e158
 
+	.global func_ov61_02177754
 	arm_func_start func_ov61_02177754
 func_ov61_02177754: ; 0x02177754
 	stmdb sp!, {r3, r4, r5, lr}
@@ -68311,6 +69598,7 @@ _021777c4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02177754
 
+	.global func_ov61_02177810
 	arm_func_start func_ov61_02177810
 func_ov61_02177810: ; 0x02177810
 	stmdb sp!, {r3, r4, r5, lr}
@@ -68368,6 +69656,7 @@ _021778c4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02177810
 
+	.global func_ov61_021778d8
 	arm_func_start func_ov61_021778d8
 func_ov61_021778d8: ; 0x021778d8
 	stmdb sp!, {r3, r4, lr}
@@ -68440,6 +69729,7 @@ _02177998:
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_021778d8
 
+	.global func_ov61_021779dc
 	arm_func_start func_ov61_021779dc
 func_ov61_021779dc: ; 0x021779dc
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -68536,6 +69826,7 @@ _02177ac0:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_021779dc
 
+	.global func_ov61_02177b3c
 	arm_func_start func_ov61_02177b3c
 func_ov61_02177b3c: ; 0x02177b3c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -68661,6 +69952,7 @@ _02177cf4: .word data_ov61_021817e4
 _02177cf8: .word data_ov61_0217e2b4
 _02177cfc: .word 0x00006cfc
 
+	.global func_ov61_02177d00
 	arm_func_start func_ov61_02177d00
 func_ov61_02177d00: ; 0x02177d00
 	cmp r0, #0
@@ -68672,6 +69964,7 @@ func_ov61_02177d00: ; 0x02177d00
 	arm_func_end func_ov61_02177d00
 _02177d14: .word data_ov61_0217e1a0
 
+	.global func_ov61_02177d18
 	arm_func_start func_ov61_02177d18
 func_ov61_02177d18: ; 0x02177d18
 	cmp r0, #0
@@ -68683,6 +69976,7 @@ func_ov61_02177d18: ; 0x02177d18
 	arm_func_end func_ov61_02177d18
 _02177d2c: .word data_ov61_0217e1a0
 
+	.global func_ov61_02177d30
 	arm_func_start func_ov61_02177d30
 func_ov61_02177d30: ; 0x02177d30
 	cmp r0, #0
@@ -68694,6 +69988,7 @@ func_ov61_02177d30: ; 0x02177d30
 	arm_func_end func_ov61_02177d30
 _02177d44: .word data_ov61_0217e1a0
 
+	.global func_ov61_02177d48
 	arm_func_start func_ov61_02177d48
 func_ov61_02177d48: ; 0x02177d48
 	stmdb sp!, {r4, lr}
@@ -68713,6 +70008,7 @@ _02177d6c:
 	arm_func_end func_ov61_02177d48
 _02177d78: .word data_ov61_0217e1a0
 
+	.global func_ov61_02177d7c
 	arm_func_start func_ov61_02177d7c
 func_ov61_02177d7c: ; 0x02177d7c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -68763,6 +70059,7 @@ _02177e0c:
 	arm_func_end func_ov61_02177d7c
 _02177e24: .word data_ov61_02181824
 
+	.global func_ov61_02177e28
 	arm_func_start func_ov61_02177e28
 func_ov61_02177e28: ; 0x02177e28
 	stmdb sp!, {r3, r4, r5, lr}
@@ -68842,6 +70139,7 @@ _02177f30: .word data_ov61_0217e2d4
 _02177f34: .word 0x0000ea60
 _02177f38: .word 0x00004e20
 
+	.global func_ov61_02177f3c
 	arm_func_start func_ov61_02177f3c
 func_ov61_02177f3c: ; 0x02177f3c
 	stmdb sp!, {r4, lr}
@@ -68870,6 +70168,7 @@ func_ov61_02177f3c: ; 0x02177f3c
 _02177f90: .word data_ov61_0217e1a0
 _02177f94: .word 0x00002710
 
+	.global func_ov61_02177f98
 	arm_func_start func_ov61_02177f98
 func_ov61_02177f98: ; 0x02177f98
 	stmdb sp!, {r4, lr}
@@ -68911,6 +70210,7 @@ _02177ffc:
 _02178014: .word data_ov61_0217e1a0
 _02178018: .word data_ov61_0217e1a4
 
+	.global func_ov61_0217801c
 	arm_func_start func_ov61_0217801c
 func_ov61_0217801c: ; 0x0217801c
 	ldr r3, [r0, #0x100]
@@ -68926,6 +70226,7 @@ func_ov61_0217801c: ; 0x0217801c
 	bx lr
 	arm_func_end func_ov61_0217801c
 
+	.global func_ov61_02178048
 	arm_func_start func_ov61_02178048
 func_ov61_02178048: ; 0x02178048
 	stmdb sp!, {r3, r4, lr}
@@ -68944,6 +70245,7 @@ func_ov61_02178048: ; 0x02178048
 	arm_func_end func_ov61_02178048
 _02178078: .word data_ov61_0217e30c
 
+	.global func_ov61_0217807c
 	arm_func_start func_ov61_0217807c
 func_ov61_0217807c: ; 0x0217807c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -68971,6 +70273,7 @@ func_ov61_0217807c: ; 0x0217807c
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_0217807c
 
+	.global func_ov61_021780d8
 	arm_func_start func_ov61_021780d8
 func_ov61_021780d8: ; 0x021780d8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -69006,6 +70309,7 @@ _021780f8:
 _02178144: .word data_ov61_021817cc
 _02178148: .word data_ov61_021817d0
 
+	.global func_ov61_0217814c
 	arm_func_start func_ov61_0217814c
 func_ov61_0217814c: ; 0x0217814c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -69055,6 +70359,7 @@ _021781e0:
 	arm_func_end func_ov61_0217814c
 _021781f0: .word data_ov61_0217e310
 
+	.global func_ov61_021781f4
 	arm_func_start func_ov61_021781f4
 func_ov61_021781f4: ; 0x021781f4
 	ldrb r3, [r0]
@@ -69064,6 +70369,7 @@ func_ov61_021781f4: ; 0x021781f4
 	bx lr
 	arm_func_end func_ov61_021781f4
 
+	.global func_ov61_02178208
 	arm_func_start func_ov61_02178208
 func_ov61_02178208: ; 0x02178208
 	cmp r0, #0x1a
@@ -69086,6 +70392,7 @@ func_ov61_02178208: ; 0x02178208
 	bx lr
 	arm_func_end func_ov61_02178208
 
+	.global func_ov61_02178250
 	arm_func_start func_ov61_02178250
 func_ov61_02178250: ; 0x02178250
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -69143,6 +70450,7 @@ _02178304:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	arm_func_end func_ov61_02178250
 
+	.global func_ov61_02178314
 	arm_func_start func_ov61_02178314
 func_ov61_02178314: ; 0x02178314
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -69231,6 +70539,7 @@ _021783d0:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	arm_func_end func_ov61_02178314
 
+	.global func_ov61_02178458
 	arm_func_start func_ov61_02178458
 func_ov61_02178458: ; 0x02178458
 	strb r1, [r0]
@@ -69247,6 +70556,7 @@ func_ov61_02178458: ; 0x02178458
 	bx lr
 	arm_func_end func_ov61_02178458
 
+	.global func_ov61_02178488
 	arm_func_start func_ov61_02178488
 func_ov61_02178488: ; 0x02178488
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -69291,6 +70601,7 @@ func_ov61_02178488: ; 0x02178488
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov61_02178488
 
+	.global func_ov61_02178528
 	arm_func_start func_ov61_02178528
 func_ov61_02178528: ; 0x02178528
 	stmdb sp!, {r4, lr}
@@ -69340,6 +70651,7 @@ func_ov61_02178528: ; 0x02178528
 	arm_func_end func_ov61_02178528
 _021785d4: .word data_ov61_0217e320
 
+	.global func_ov61_021785d8
 	arm_func_start func_ov61_021785d8
 func_ov61_021785d8: ; 0x021785d8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -69508,6 +70820,7 @@ _02178824: .word data_ov61_0217e32c
 _02178828: .word data_ov61_0217e4e8
 _0217882c: .word data_ov61_0217e334
 
+	.global func_ov61_02178830
 	arm_func_start func_ov61_02178830
 func_ov61_02178830: ; 0x02178830
 	stmdb sp!, {r3, r4, r5, lr}
@@ -69534,6 +70847,7 @@ func_ov61_02178830: ; 0x02178830
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02178830
 
+	.global func_ov61_02178888
 	arm_func_start func_ov61_02178888
 func_ov61_02178888: ; 0x02178888
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -69584,6 +70898,7 @@ func_ov61_02178888: ; 0x02178888
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov61_02178888
 
+	.global func_ov61_02178940
 	arm_func_start func_ov61_02178940
 func_ov61_02178940: ; 0x02178940
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -69716,6 +71031,7 @@ _02178b0c: .word data_ov61_0217e32c
 _02178b10: .word data_ov61_0217e334
 _02178b14: .word data_ov61_0217e338
 
+	.global func_ov61_02178b18
 	arm_func_start func_ov61_02178b18
 func_ov61_02178b18: ; 0x02178b18
 	stmdb sp!, {r3, r4, r5, lr}
@@ -69746,6 +71062,7 @@ func_ov61_02178b18: ; 0x02178b18
 	arm_func_end func_ov61_02178b18
 _02178b78: .word data_ov61_0217e340
 
+	.global func_ov61_02178b7c
 	arm_func_start func_ov61_02178b7c
 func_ov61_02178b7c: ; 0x02178b7c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -69829,6 +71146,7 @@ _02178c78:
 	arm_func_end func_ov61_02178b7c
 _02178ca0: .word data_ov61_0217a5e4
 
+	.global func_ov61_02178ca4
 	arm_func_start func_ov61_02178ca4
 func_ov61_02178ca4: ; 0x02178ca4
 	stmdb sp!, {r4, lr}
@@ -69860,6 +71178,7 @@ _02178cac:
 	arm_func_end func_ov61_02178ca4
 _02178d04: .word 0x66666667
 
+	.global func_ov61_02178d08
 	arm_func_start func_ov61_02178d08
 func_ov61_02178d08: ; 0x02178d08
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -70075,6 +71394,7 @@ _02178ff0:
 	arm_func_end func_ov61_02178d08
 _02179018: .word data_ov61_0217e1a0
 
+	.global func_ov61_0217901c
 	arm_func_start func_ov61_0217901c
 func_ov61_0217901c: ; 0x0217901c
 	stmdb sp!, {r3, r4, lr}
@@ -70103,6 +71423,7 @@ func_ov61_0217901c: ; 0x0217901c
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_0217901c
 
+	.global func_ov61_0217907c
 	arm_func_start func_ov61_0217907c
 func_ov61_0217907c: ; 0x0217907c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -70245,6 +71566,7 @@ _0217927c: .word data_ov61_0217e38c
 _02179280: .word data_ov61_0217e398
 _02179284: .word data_ov61_0217e3a4
 
+	.global func_ov61_02179288
 	arm_func_start func_ov61_02179288
 func_ov61_02179288: ; 0x02179288
 	cmp r0, #0x32
@@ -70258,6 +71580,7 @@ func_ov61_02179288: ; 0x02179288
 	arm_func_end func_ov61_02179288
 _021792a4: .word data_ov61_0217e4e8
 
+	.global func_ov61_021792a8
 	arm_func_start func_ov61_021792a8
 func_ov61_021792a8: ; 0x021792a8
 	stmdb sp!, {r3, lr}
@@ -70271,6 +71594,7 @@ func_ov61_021792a8: ; 0x021792a8
 	arm_func_end func_ov61_021792a8
 _021792c4: .word data_ov61_02181940
 
+	.global func_ov61_021792c8
 	arm_func_start func_ov61_021792c8
 func_ov61_021792c8: ; 0x021792c8
 	stmdb sp!, {r3, lr}
@@ -70285,6 +71609,7 @@ func_ov61_021792c8: ; 0x021792c8
 	arm_func_end func_ov61_021792c8
 _021792e8: .word data_ov61_02181940
 
+	.global func_ov61_021792ec
 	arm_func_start func_ov61_021792ec
 func_ov61_021792ec: ; 0x021792ec
 	ldr r0, _021792f8 ; =data_ov61_02181940
@@ -70294,6 +71619,7 @@ func_ov61_021792ec: ; 0x021792ec
 	arm_func_end func_ov61_021792ec
 _021792f8: .word data_ov61_02181940
 
+	.global func_ov61_021792fc
 	arm_func_start func_ov61_021792fc
 func_ov61_021792fc: ; 0x021792fc
 	stmdb sp!, {r4, r5, lr}
@@ -70340,6 +71666,7 @@ _02179394: .word func_ov61_021793bc
 _02179398: .word func_ov61_02179424
 _0217939c: .word func_ov61_021796b0
 
+	.global func_ov61_021793a0
 	arm_func_start func_ov61_021793a0
 func_ov61_021793a0: ; 0x021793a0
 	stmdb sp!, {r3, lr}
@@ -70351,11 +71678,13 @@ func_ov61_021793a0: ; 0x021793a0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_021793a0
 
+	.global func_ov61_021793bc
 	arm_func_start func_ov61_021793bc
 func_ov61_021793bc: ; 0x021793bc
 	bx lr
 	arm_func_end func_ov61_021793bc
 
+	.global func_ov61_021793c0
 	arm_func_start func_ov61_021793c0
 func_ov61_021793c0: ; 0x021793c0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -70386,11 +71715,13 @@ _021793ec:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov61_021793c0
 
+	.global func_ov61_02179424
 	arm_func_start func_ov61_02179424
 func_ov61_02179424: ; 0x02179424
 	bx lr
 	arm_func_end func_ov61_02179424
 
+	.global func_ov61_02179428
 	arm_func_start func_ov61_02179428
 func_ov61_02179428: ; 0x02179428
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -70472,6 +71803,7 @@ _02179524:
 _0217953c: .word data_ov61_0217a5ec
 _02179540: .word 0x00002711
 
+	.global func_ov61_02179544
 	arm_func_start func_ov61_02179544
 func_ov61_02179544: ; 0x02179544
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -70526,6 +71858,7 @@ _021795ec: .word data_ov61_02181940
 _021795f0: .word 0x00002710
 _021795f4: .word func_ov61_0217968c
 
+	.global func_ov61_021795f8
 	arm_func_start func_ov61_021795f8
 func_ov61_021795f8: ; 0x021795f8
 	stmdb sp!, {r4, lr}
@@ -70539,6 +71872,7 @@ func_ov61_021795f8: ; 0x021795f8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021795f8
 
+	.global func_ov61_0217961c
 	arm_func_start func_ov61_0217961c
 func_ov61_0217961c: ; 0x0217961c
 	stmdb sp!, {r3, lr}
@@ -70550,6 +71884,7 @@ func_ov61_0217961c: ; 0x0217961c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0217961c
 
+	.global func_ov61_02179638
 	arm_func_start func_ov61_02179638
 func_ov61_02179638: ; 0x02179638
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -70576,6 +71911,7 @@ func_ov61_02179638: ; 0x02179638
 	arm_func_end func_ov61_02179638
 _02179688: .word data_ov61_021819c8
 
+	.global func_ov61_0217968c
 	arm_func_start func_ov61_0217968c
 func_ov61_0217968c: ; 0x0217968c
 	stmdb sp!, {r4, lr}
@@ -70589,6 +71925,7 @@ func_ov61_0217968c: ; 0x0217968c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_0217968c
 
+	.global func_ov61_021796b0
 	arm_func_start func_ov61_021796b0
 func_ov61_021796b0: ; 0x021796b0
 	stmdb sp!, {r4, lr}
@@ -70605,6 +71942,7 @@ _021796d0:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021796b0
 
+	.global func_ov61_021796dc
 	arm_func_start func_ov61_021796dc
 func_ov61_021796dc: ; 0x021796dc
 	stmdb sp!, {r4, lr}
@@ -70632,6 +71970,7 @@ func_ov61_021796dc: ; 0x021796dc
 _0217972c: .word data_ov61_0217e928
 _02179730: .word data_ov61_02181940
 
+	.global func_ov61_02179734
 	arm_func_start func_ov61_02179734
 func_ov61_02179734: ; 0x02179734
 	stmdb sp!, {r4, lr}
@@ -70653,6 +71992,7 @@ func_ov61_02179734: ; 0x02179734
 _0217976c: .word data_ov61_0217e928
 _02179770: .word data_ov61_02181940
 
+	.global func_ov61_02179774
 	arm_func_start func_ov61_02179774
 func_ov61_02179774: ; 0x02179774
 	stmdb sp!, {r4, lr}
@@ -70676,6 +72016,7 @@ func_ov61_02179774: ; 0x02179774
 _021797b4: .word data_ov61_0217e928
 _021797b8: .word data_ov61_02181940
 
+	.global func_ov61_021797bc
 	arm_func_start func_ov61_021797bc
 func_ov61_021797bc: ; 0x021797bc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -70707,6 +72048,7 @@ _02179818: .word data_ov61_02181940
 _0217981c: .word func_ov61_021792a8
 _02179820: .word func_ov61_021792c8
 
+	.global func_ov61_02179824
 	arm_func_start func_ov61_02179824
 func_ov61_02179824: ; 0x02179824
 	ldr r0, [r0, #0xe3c]
@@ -70716,6 +72058,7 @@ func_ov61_02179824: ; 0x02179824
 	bx lr
 	arm_func_end func_ov61_02179824
 
+	.global func_ov61_02179838
 	arm_func_start func_ov61_02179838
 func_ov61_02179838: ; 0x02179838
 	stmdb sp!, {r3, lr}
@@ -70727,6 +72070,7 @@ func_ov61_02179838: ; 0x02179838
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02179838
 
+	.global func_ov61_02179854
 	arm_func_start func_ov61_02179854
 func_ov61_02179854: ; 0x02179854
 	stmdb sp!, {r4, lr}
@@ -70757,6 +72101,7 @@ func_ov61_02179854: ; 0x02179854
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179854
 
+	.global func_ov61_021798bc
 	arm_func_start func_ov61_021798bc
 func_ov61_021798bc: ; 0x021798bc
 	ldr r0, [r0, #0xe3c]
@@ -70766,6 +72111,7 @@ func_ov61_021798bc: ; 0x021798bc
 	bx lr
 	arm_func_end func_ov61_021798bc
 
+	.global func_ov61_021798d0
 	arm_func_start func_ov61_021798d0
 func_ov61_021798d0: ; 0x021798d0
 	stmdb sp!, {r4, lr}
@@ -70780,6 +72126,7 @@ func_ov61_021798d0: ; 0x021798d0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021798d0
 
+	.global func_ov61_021798f8
 	arm_func_start func_ov61_021798f8
 func_ov61_021798f8: ; 0x021798f8
 	stmdb sp!, {r4, lr}
@@ -70815,6 +72162,7 @@ _02179940:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_021798f8
 
+	.global func_ov61_02179970
 	arm_func_start func_ov61_02179970
 func_ov61_02179970: ; 0x02179970
 	stmdb sp!, {r4, lr}
@@ -70917,6 +72265,7 @@ _02179aa0:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179970
 
+	.global func_ov61_02179acc
 	arm_func_start func_ov61_02179acc
 func_ov61_02179acc: ; 0x02179acc
 	ldr r0, _02179ad8 ; =data_ov61_021819c8
@@ -70926,6 +72275,7 @@ func_ov61_02179acc: ; 0x02179acc
 	arm_func_end func_ov61_02179acc
 _02179ad8: .word data_ov61_021819c8
 
+	.global func_ov61_02179adc
 	arm_func_start func_ov61_02179adc
 func_ov61_02179adc: ; 0x02179adc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -70946,6 +72296,7 @@ _02179b04:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov61_02179adc
 
+	.global func_ov61_02179b18
 	arm_func_start func_ov61_02179b18
 func_ov61_02179b18: ; 0x02179b18
 	stmdb sp!, {r4, lr}
@@ -70969,6 +72320,7 @@ _02179b44:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179b18
 
+	.global func_ov61_02179b5c
 	arm_func_start func_ov61_02179b5c
 func_ov61_02179b5c: ; 0x02179b5c
 	ldr ip, _02179b64 ; =func_ov61_0213e518
@@ -70977,6 +72329,7 @@ func_ov61_02179b5c: ; 0x02179b5c
 	arm_func_end func_ov61_02179b5c
 _02179b64: .word func_ov61_0213e518
 
+	.global func_ov61_02179b68
 	arm_func_start func_ov61_02179b68
 func_ov61_02179b68: ; 0x02179b68
 	stmdb sp!, {r3, r4, r5, lr}
@@ -71002,6 +72355,7 @@ _02179b9c:
 	arm_func_end func_ov61_02179b68
 _02179bac: .word 0x415a454a
 
+	.global func_ov61_02179bb0
 	arm_func_start func_ov61_02179bb0
 func_ov61_02179bb0: ; 0x02179bb0
 	stmdb sp!, {r4, lr}
@@ -71024,6 +72378,7 @@ func_ov61_02179bb0: ; 0x02179bb0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179bb0
 
+	.global func_ov61_02179bf8
 	arm_func_start func_ov61_02179bf8
 func_ov61_02179bf8: ; 0x02179bf8
 	stmdb sp!, {r3, r4, lr}
@@ -71061,6 +72416,7 @@ _02179c6c: .word data_ov61_0217e9ec
 _02179c70: .word data_ov61_0217e9e0
 _02179c74: .word func_ov61_021792fc
 
+	.global func_ov61_02179c78
 	arm_func_start func_ov61_02179c78
 func_ov61_02179c78: ; 0x02179c78
 	stmdb sp!, {r4, lr}
@@ -71094,6 +72450,7 @@ _02179cd8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179c78
 
+	.global func_ov61_02179ce4
 	arm_func_start func_ov61_02179ce4
 func_ov61_02179ce4: ; 0x02179ce4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -71231,6 +72588,7 @@ _02179ed8: .word data_ov61_0217e9f8
 _02179edc: .word data_ov61_0217e9fc
 _02179ee0: .word func_ov61_02179428
 
+	.global func_ov61_02179ee4
 	arm_func_start func_ov61_02179ee4
 func_ov61_02179ee4: ; 0x02179ee4
 	stmdb sp!, {r3, lr}
@@ -71240,6 +72598,7 @@ func_ov61_02179ee4: ; 0x02179ee4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02179ee4
 
+	.global func_ov61_02179ef8
 	arm_func_start func_ov61_02179ef8
 func_ov61_02179ef8: ; 0x02179ef8
 	stmdb sp!, {r4, lr}
@@ -71284,6 +72643,7 @@ _02179f70:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov61_02179ef8
 
+	.global func_ov61_02179f88
 	arm_func_start func_ov61_02179f88
 func_ov61_02179f88: ; 0x02179f88
 	stmdb sp!, {r3, r4, lr}
@@ -71310,6 +72670,7 @@ _02179fd0:
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov61_02179f88
 
+	.global func_ov61_02179fdc
 	arm_func_start func_ov61_02179fdc
 func_ov61_02179fdc: ; 0x02179fdc
 	stmdb sp!, {r3, lr}
@@ -71328,6 +72689,7 @@ _02179ffc:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02179fdc
 
+	.global func_ov61_0217a010
 	arm_func_start func_ov61_0217a010
 func_ov61_0217a010: ; 0x0217a010
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -71391,6 +72753,7 @@ _0217a0e0: .word data_ov61_02181940
 _0217a0e4: .word func_ov61_0217a0ec
 _0217a0e8: .word 0x0027f3a9
 
+	.global func_ov61_0217a0ec
 	arm_func_start func_ov61_0217a0ec
 func_ov61_0217a0ec: ; 0x0217a0ec
 	stmdb sp!, {r3, lr}
@@ -71400,6 +72763,7 @@ func_ov61_0217a0ec: ; 0x0217a0ec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0217a0ec
 
+	.global func_ov61_0217a100
 	arm_func_start func_ov61_0217a100
 func_ov61_0217a100: ; 0x0217a100
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -71460,6 +72824,7 @@ _0217a1c0: .word func_ov61_0217a1cc
 _0217a1c4: .word 0x0027f3a9
 _0217a1c8: .word data_ov61_02181940
 
+	.global func_ov61_0217a1cc
 	arm_func_start func_ov61_0217a1cc
 func_ov61_0217a1cc: ; 0x0217a1cc
 	stmdb sp!, {r3, lr}
@@ -71469,6 +72834,7 @@ func_ov61_0217a1cc: ; 0x0217a1cc
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0217a1cc
 
+	.global func_ov61_0217a1e0
 	arm_func_start func_ov61_0217a1e0
 func_ov61_0217a1e0: ; 0x0217a1e0
 	ldr ip, _0217a1e8 ; =func_ov61_0213f40c
@@ -71477,6 +72843,7 @@ func_ov61_0217a1e0: ; 0x0217a1e0
 	arm_func_end func_ov61_0217a1e0
 _0217a1e8: .word func_ov61_0213f40c
 
+	.global func_ov61_0217a1ec
 	arm_func_start func_ov61_0217a1ec
 func_ov61_0217a1ec: ; 0x0217a1ec
 	stmdb sp!, {r3, lr}
@@ -71485,6 +72852,7 @@ func_ov61_0217a1ec: ; 0x0217a1ec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_0217a1ec
 
+	.global func_ov61_0217a1fc
 	arm_func_start func_ov61_0217a1fc
 func_ov61_0217a1fc: ; 0x0217a1fc
 	ldr r0, [r0, #0xe3c]
@@ -71493,1672 +72861,2497 @@ func_ov61_0217a1fc: ; 0x0217a1fc
 	movne r0, #0
 	bx lr
 	arm_func_end func_ov61_0217a1fc
+	.global data_ov61_0217a210
 data_ov61_0217a210: ; 0x0217a210
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217a214
 data_ov61_0217a214: ; 0x0217a214
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217a218
 data_ov61_0217a218: ; 0x0217a218
 	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov61_0217a21c
 data_ov61_0217a21c: ; 0x0217a21c
 	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov61_0217a220
 data_ov61_0217a220: ; 0x0217a220
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov61_0217a224
 data_ov61_0217a224: ; 0x0217a224
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov61_0217a228
 data_ov61_0217a228: ; 0x0217a228
 	.byte 0x57, 0x61, 0x79, 0x70, 0x6f, 0x72, 0x74, 0x32
+	.global data_ov61_0217a230
 data_ov61_0217a230: ; 0x0217a230
 	.byte 0x46, 0x52, 0x45, 0x45, 0x53, 0x50, 0x4f, 0x54
+	.global data_ov61_0217a238
 data_ov61_0217a238: ; 0x0217a238
 	.byte 0x4e, 0x49, 0x4e, 0x54, 0x45, 0x4e, 0x44, 0x4f
 	.byte 0x57, 0x46, 0x43, 0x00
+	.global data_ov61_0217a244
 data_ov61_0217a244: ; 0x0217a244
 	.byte 0x02, 0x80, 0x00, 0x00
+	.global data_ov61_0217a248
 data_ov61_0217a248: ; 0x0217a248
 	.byte 0x04, 0x80, 0x00, 0x00
+	.global data_ov61_0217a24c
 data_ov61_0217a24c: ; 0x0217a24c
 	.byte 0x08, 0x80, 0x00, 0x00
+	.global data_ov61_0217a250
 data_ov61_0217a250: ; 0x0217a250
 	.byte 0x10, 0x80, 0x00, 0x00
+	.global data_ov61_0217a254
 data_ov61_0217a254: ; 0x0217a254
 	.byte 0x20, 0x80, 0x00, 0x00
+	.global data_ov61_0217a258
 data_ov61_0217a258: ; 0x0217a258
 	.byte 0x40, 0x80, 0x00, 0x00
+	.global data_ov61_0217a25c
 data_ov61_0217a25c: ; 0x0217a25c
 	.byte 0x80, 0x80, 0x00, 0x00
+	.global data_ov61_0217a260
 data_ov61_0217a260: ; 0x0217a260
 	.byte 0x00, 0x81, 0x00, 0x00
+	.global data_ov61_0217a264
 data_ov61_0217a264: ; 0x0217a264
 	.byte 0x00, 0x82, 0x00, 0x00
+	.global data_ov61_0217a268
 data_ov61_0217a268: ; 0x0217a268
 	.byte 0x00, 0x84, 0x00, 0x00
+	.global data_ov61_0217a26c
 data_ov61_0217a26c: ; 0x0217a26c
 	.byte 0x00, 0x88, 0x00, 0x00
+	.global data_ov61_0217a270
 data_ov61_0217a270: ; 0x0217a270
 	.byte 0x00, 0x90, 0x00, 0x00
+	.global data_ov61_0217a274
 data_ov61_0217a274: ; 0x0217a274
 	.byte 0x00, 0xa0, 0x00, 0x00
+	.global data_ov61_0217a278
 data_ov61_0217a278: ; 0x0217a278
 	.byte 0x00, 0x00, 0x00, 0x01
+	.global data_ov61_0217a27c
 data_ov61_0217a27c: ; 0x0217a27c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a280
 data_ov61_0217a280: ; 0x0217a280
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a284
 data_ov61_0217a284: ; 0x0217a284
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov61_0217a288
 data_ov61_0217a288: ; 0x0217a288
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a28c
 data_ov61_0217a28c: ; 0x0217a28c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a290
 data_ov61_0217a290: ; 0x0217a290
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a294
 data_ov61_0217a294: ; 0x0217a294
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a298
 data_ov61_0217a298: ; 0x0217a298
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a29c
 data_ov61_0217a29c: ; 0x0217a29c
 	.byte 0x00, 0x10, 0x00, 0x00
+	.global data_ov61_0217a2a0
 data_ov61_0217a2a0: ; 0x0217a2a0
 	.byte 0x00, 0x10, 0x00, 0x00
+	.global data_ov61_0217a2a4
 data_ov61_0217a2a4: ; 0x0217a2a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2a8
 data_ov61_0217a2a8: ; 0x0217a2a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2ac
 data_ov61_0217a2ac: ; 0x0217a2ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2b0
 data_ov61_0217a2b0: ; 0x0217a2b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2b4
 data_ov61_0217a2b4: ; 0x0217a2b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2b8
 data_ov61_0217a2b8: ; 0x0217a2b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2bc
 data_ov61_0217a2bc: ; 0x0217a2bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2c0
 data_ov61_0217a2c0: ; 0x0217a2c0
 	.byte 0x44, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a2c4
 data_ov61_0217a2c4: ; 0x0217a2c4
 	.byte 0x04, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2c8
 data_ov61_0217a2c8: ; 0x0217a2c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2cc
 data_ov61_0217a2cc: ; 0x0217a2cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a2d0
 data_ov61_0217a2d0: ; 0x0217a2d0
 	.byte 0x61
+	.global data_ov61_0217a2d1
 data_ov61_0217a2d1: ; 0x0217a2d1
 	.byte 0x61
+	.global data_ov61_0217a2d2
 data_ov61_0217a2d2: ; 0x0217a2d2
 	.byte 0x61
+	.global data_ov61_0217a2d3
 data_ov61_0217a2d3: ; 0x0217a2d3
 	.byte 0x17
+	.global data_ov61_0217a2d4
 data_ov61_0217a2d4: ; 0x0217a2d4
 	.byte 0x14
+	.global data_ov61_0217a2d5
 data_ov61_0217a2d5: ; 0x0217a2d5
 	.byte 0x11
+	.global data_ov61_0217a2d6
 data_ov61_0217a2d6: ; 0x0217a2d6
 	.byte 0x0d
+	.global data_ov61_0217a2d7
 data_ov61_0217a2d7: ; 0x0217a2d7
 	.byte 0x0b
+	.global data_ov61_0217a2d8
 data_ov61_0217a2d8: ; 0x0217a2d8
 	.byte 0x06
+	.global data_ov61_0217a2d9
 data_ov61_0217a2d9: ; 0x0217a2d9
 	.byte 0x0f
+	.global data_ov61_0217a2da
 data_ov61_0217a2da: ; 0x0217a2da
 	.byte 0x0e
+	.global data_ov61_0217a2db
 data_ov61_0217a2db: ; 0x0217a2db
 	.byte 0x09
+	.global data_ov61_0217a2dc
 data_ov61_0217a2dc: ; 0x0217a2dc
 	.byte 0x15
+	.global data_ov61_0217a2dd
 data_ov61_0217a2dd: ; 0x0217a2dd
 	.byte 0x0c
+	.global data_ov61_0217a2de
 data_ov61_0217a2de: ; 0x0217a2de
 	.byte 0x04
+	.global data_ov61_0217a2df
 data_ov61_0217a2df: ; 0x0217a2df
 	.byte 0x02
+	.global data_ov61_0217a2e0
 data_ov61_0217a2e0: ; 0x0217a2e0
 	.byte 0x01
+	.global data_ov61_0217a2e1
 data_ov61_0217a2e1: ; 0x0217a2e1
 	.byte 0x12
+	.global data_ov61_0217a2e2
 data_ov61_0217a2e2: ; 0x0217a2e2
 	.byte 0x10
+	.global data_ov61_0217a2e3
 data_ov61_0217a2e3: ; 0x0217a2e3
 	.byte 0x05
+	.global data_ov61_0217a2e4
 data_ov61_0217a2e4: ; 0x0217a2e4
 	.byte 0x03
+	.global data_ov61_0217a2e5
 data_ov61_0217a2e5: ; 0x0217a2e5
 	.byte 0x13
+	.global data_ov61_0217a2e6
 data_ov61_0217a2e6: ; 0x0217a2e6
 	.byte 0x0a
+	.global data_ov61_0217a2e7
 data_ov61_0217a2e7: ; 0x0217a2e7
 	.byte 0x07
+	.global data_ov61_0217a2e8
 data_ov61_0217a2e8: ; 0x0217a2e8
 	.byte 0x08
+	.global data_ov61_0217a2e9
 data_ov61_0217a2e9: ; 0x0217a2e9
 	.byte 0x00
+	.global data_ov61_0217a2ea
 data_ov61_0217a2ea: ; 0x0217a2ea
 	.byte 0x16
+	.global data_ov61_0217a2eb
 data_ov61_0217a2eb: ; 0x0217a2eb
 	.byte 0x00
+	.global data_ov61_0217a2ec
 data_ov61_0217a2ec: ; 0x0217a2ec
 	.byte 0x05
+	.global data_ov61_0217a2ed
 data_ov61_0217a2ed: ; 0x0217a2ed
 	.byte 0x01
+	.global data_ov61_0217a2ee
 data_ov61_0217a2ee: ; 0x0217a2ee
 	.byte 0x0c
+	.global data_ov61_0217a2ef
 data_ov61_0217a2ef: ; 0x0217a2ef
 	.byte 0x04
+	.global data_ov61_0217a2f0
 data_ov61_0217a2f0: ; 0x0217a2f0
 	.byte 0x02
+	.global data_ov61_0217a2f1
 data_ov61_0217a2f1: ; 0x0217a2f1
 	.byte 0x03
+	.global data_ov61_0217a2f2
 data_ov61_0217a2f2: ; 0x0217a2f2
 	.byte 0x0a
+	.global data_ov61_0217a2f3
 data_ov61_0217a2f3: ; 0x0217a2f3
 	.byte 0x00
+	.global data_ov61_0217a2f4
 data_ov61_0217a2f4: ; 0x0217a2f4
 	.byte 0x0b
+	.global data_ov61_0217a2f5
 data_ov61_0217a2f5: ; 0x0217a2f5
 	.byte 0x07
+	.global data_ov61_0217a2f6
 data_ov61_0217a2f6: ; 0x0217a2f6
 	.byte 0x09
+	.global data_ov61_0217a2f7
 data_ov61_0217a2f7: ; 0x0217a2f7
 	.byte 0x08
+	.global data_ov61_0217a2f8
 data_ov61_0217a2f8: ; 0x0217a2f8
 	.byte 0x06
+	.global data_ov61_0217a2f9
 data_ov61_0217a2f9: ; 0x0217a2f9
 	.byte 0x00
+	.global data_ov61_0217a2fa
 data_ov61_0217a2fa: ; 0x0217a2fa
 	.byte 0x00
+	.global data_ov61_0217a2fb
 data_ov61_0217a2fb: ; 0x0217a2fb
 	.byte 0x00
+	.global data_ov61_0217a2fc
 data_ov61_0217a2fc: ; 0x0217a2fc
 	.byte 0x0a
+	.global data_ov61_0217a2fd
 data_ov61_0217a2fd: ; 0x0217a2fd
 	.byte 0x0d
+	.global data_ov61_0217a2fe
 data_ov61_0217a2fe: ; 0x0217a2fe
 	.byte 0x0e
+	.global data_ov61_0217a2ff
 data_ov61_0217a2ff: ; 0x0217a2ff
 	.byte 0x08
+	.global data_ov61_0217a300
 data_ov61_0217a300: ; 0x0217a300
 	.byte 0x09
+	.global data_ov61_0217a301
 data_ov61_0217a301: ; 0x0217a301
 	.byte 0x03
+	.global data_ov61_0217a302
 data_ov61_0217a302: ; 0x0217a302
 	.byte 0x06
+	.global data_ov61_0217a303
 data_ov61_0217a303: ; 0x0217a303
 	.byte 0x00
+	.global data_ov61_0217a304
 data_ov61_0217a304: ; 0x0217a304
 	.byte 0x0c
+	.global data_ov61_0217a305
 data_ov61_0217a305: ; 0x0217a305
 	.byte 0x05
+	.global data_ov61_0217a306
 data_ov61_0217a306: ; 0x0217a306
 	.byte 0x02
+	.global data_ov61_0217a307
 data_ov61_0217a307: ; 0x0217a307
 	.byte 0x07
+	.global data_ov61_0217a308
 data_ov61_0217a308: ; 0x0217a308
 	.byte 0x0b
+	.global data_ov61_0217a309
 data_ov61_0217a309: ; 0x0217a309
 	.byte 0x01
+	.global data_ov61_0217a30a
 data_ov61_0217a30a: ; 0x0217a30a
 	.byte 0x0f
+	.global data_ov61_0217a30b
 data_ov61_0217a30b: ; 0x0217a30b
 	.byte 0x04
+	.global data_ov61_0217a30c
 data_ov61_0217a30c: ; 0x0217a30c
 	.byte 0xff, 0xff
+	.global data_ov61_0217a30e
 data_ov61_0217a30e: ; 0x0217a30e
 	.byte 0xff, 0xff
+	.global data_ov61_0217a310
 data_ov61_0217a310: ; 0x0217a310
 	.byte 0xff, 0xff
+	.global data_ov61_0217a312
 data_ov61_0217a312: ; 0x0217a312
 	.byte 0x00, 0x00
+	.global data_ov61_0217a314
 data_ov61_0217a314: ; 0x0217a314
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a318
 data_ov61_0217a318: ; 0x0217a318
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a31c
 data_ov61_0217a31c: ; 0x0217a31c
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a320
 data_ov61_0217a320: ; 0x0217a320
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a324
 data_ov61_0217a324: ; 0x0217a324
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a328
 data_ov61_0217a328: ; 0x0217a328
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a32c
 data_ov61_0217a32c: ; 0x0217a32c
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a330
 data_ov61_0217a330: ; 0x0217a330
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217a334
 data_ov61_0217a334: ; 0x0217a334
 	.byte 0xe0, 0xbe, 0x17, 0x02
+	.global data_ov61_0217a338
 data_ov61_0217a338: ; 0x0217a338
 	.byte 0xd8, 0xbe, 0x17, 0x02
+	.global data_ov61_0217a33c
 data_ov61_0217a33c: ; 0x0217a33c
 	.byte 0x5b, 0x5d, 0x5f, 0x00
+	.global data_ov61_0217a340
 data_ov61_0217a340: ; 0x0217a340
 	.byte 0x2d, 0x5f, 0x3d, 0x00
+	.global data_ov61_0217a344
 data_ov61_0217a344: ; 0x0217a344
 	.byte 0x2b, 0x2f, 0x3d, 0x00
+	.global data_ov61_0217a348
 data_ov61_0217a348: ; 0x0217a348
 	.asciz "\mod\%d"
+	.global data_ov61_0217a350
 data_ov61_0217a350: ; 0x0217a350
 	.byte 0x13, 0x1d, 0x01, 0x04
+	.global data_ov61_0217a354
 data_ov61_0217a354: ; 0x0217a354
 	.byte 0x00, 0x00, 0x00, 0x28
+	.global data_ov61_0217a358
 data_ov61_0217a358: ; 0x0217a358
 	.byte 0x1f, 0x06, 0x45, 0x34
+	.global data_ov61_0217a35c
 data_ov61_0217a35c: ; 0x0217a35c
 	.byte 0x3f, 0x01, 0x1b, 0x00
+	.global data_ov61_0217a360
 data_ov61_0217a360: ; 0x0217a360
 	.byte 0x13
+	.global data_ov61_0217a361
 data_ov61_0217a361: ; 0x0217a361
 	.byte 0x1d
+	.global data_ov61_0217a362
 data_ov61_0217a362: ; 0x0217a362
 	.byte 0x01
+	.global data_ov61_0217a363
 data_ov61_0217a363: ; 0x0217a363
 	.byte 0x04
+	.global data_ov61_0217a364
 data_ov61_0217a364: ; 0x0217a364
 	.byte 0x00
+	.global data_ov61_0217a365
 data_ov61_0217a365: ; 0x0217a365
 	.byte 0x00
+	.global data_ov61_0217a366
 data_ov61_0217a366: ; 0x0217a366
 	.byte 0x00
+	.global data_ov61_0217a367
 data_ov61_0217a367: ; 0x0217a367
 	.byte 0x28
+	.global data_ov61_0217a368
 data_ov61_0217a368: ; 0x0217a368
 	.byte 0x1f
+	.global data_ov61_0217a369
 data_ov61_0217a369: ; 0x0217a369
 	.byte 0x06
+	.global data_ov61_0217a36a
 data_ov61_0217a36a: ; 0x0217a36a
 	.byte 0x45
+	.global data_ov61_0217a36b
 data_ov61_0217a36b: ; 0x0217a36b
 	.byte 0x34
+	.global data_ov61_0217a36c
 data_ov61_0217a36c: ; 0x0217a36c
 	.byte 0x3f
+	.global data_ov61_0217a36d
 data_ov61_0217a36d: ; 0x0217a36d
 	.byte 0x01
+	.global data_ov61_0217a36e
 data_ov61_0217a36e: ; 0x0217a36e
 	.byte 0x1b
+	.global data_ov61_0217a36f
 data_ov61_0217a36f: ; 0x0217a36f
 	.byte 0x00
+	.global data_ov61_0217a370
 data_ov61_0217a370: ; 0x0217a370
 	.byte 0x0c
+	.global data_ov61_0217a371
 data_ov61_0217a371: ; 0x0217a371
 	.byte 0x13
+	.global data_ov61_0217a372
 data_ov61_0217a372: ; 0x0217a372
 	.byte 0x1a
+	.global data_ov61_0217a373
 data_ov61_0217a373: ; 0x0217a373
 	.byte 0x1e
+	.global data_ov61_0217a374
 data_ov61_0217a374: ; 0x0217a374
 	.byte 0x0d
+	.global data_ov61_0217a375
 data_ov61_0217a375: ; 0x0217a375
 	.byte 0x13
+	.global data_ov61_0217a376
 data_ov61_0217a376: ; 0x0217a376
 	.byte 0x28
+	.global data_ov61_0217a377
 data_ov61_0217a377: ; 0x0217a377
 	.byte 0x1d
+	.global data_ov61_0217a378
 data_ov61_0217a378: ; 0x0217a378
 	.byte 0x00
+	.global data_ov61_0217a379
 data_ov61_0217a379: ; 0x0217a379
 	.byte 0x01
+	.global data_ov61_0217a37a
 data_ov61_0217a37a: ; 0x0217a37a
 	.byte 0x01
+	.global data_ov61_0217a37b
 data_ov61_0217a37b: ; 0x0217a37b
 	.byte 0x24
+	.global data_ov61_0217a37c
 data_ov61_0217a37c: ; 0x0217a37c
 	.byte 0x75
+	.global data_ov61_0217a37d
 data_ov61_0217a37d: ; 0x0217a37d
 	.byte 0x16
+	.global data_ov61_0217a37e
 data_ov61_0217a37e: ; 0x0217a37e
 	.byte 0x33
+	.global data_ov61_0217a37f
 data_ov61_0217a37f: ; 0x0217a37f
 	.byte 0x18
+	.global data_ov61_0217a380
 data_ov61_0217a380: ; 0x0217a380
 	.byte 0x00
+	.global data_ov61_0217a381
 data_ov61_0217a381: ; 0x0217a381
 	.byte 0x10
+	.global data_ov61_0217a382
 data_ov61_0217a382: ; 0x0217a382
 	.byte 0x04
+	.global data_ov61_0217a383
 data_ov61_0217a383: ; 0x0217a383
 	.byte 0x1d
+	.global data_ov61_0217a384
 data_ov61_0217a384: ; 0x0217a384
 	.byte 0x55
+	.global data_ov61_0217a385
 data_ov61_0217a385: ; 0x0217a385
 	.byte 0x1b
+	.global data_ov61_0217a386
 data_ov61_0217a386: ; 0x0217a386
 	.byte 0x39
+	.global data_ov61_0217a387
 data_ov61_0217a387: ; 0x0217a387
 	.byte 0x14
+	.global data_ov61_0217a388
 data_ov61_0217a388: ; 0x0217a388
 	.byte 0x39
+	.global data_ov61_0217a389
 data_ov61_0217a389: ; 0x0217a389
 	.byte 0x16
+	.global data_ov61_0217a38a
 data_ov61_0217a38a: ; 0x0217a38a
 	.byte 0x33
+	.global data_ov61_0217a38b
 data_ov61_0217a38b: ; 0x0217a38b
 	.byte 0x4f
+	.global data_ov61_0217a38c
 data_ov61_0217a38c: ; 0x0217a38c
 	.byte 0x01
+	.global data_ov61_0217a38d
 data_ov61_0217a38d: ; 0x0217a38d
 	.byte 0x00
+	.global data_ov61_0217a38e
 data_ov61_0217a38e: ; 0x0217a38e
 	.byte 0x0c
+	.global data_ov61_0217a38f
 data_ov61_0217a38f: ; 0x0217a38f
 	.byte 0x1c
+	.global data_ov61_0217a390
 data_ov61_0217a390: ; 0x0217a390
 	.byte 0x0a
+	.global data_ov61_0217a391
 data_ov61_0217a391: ; 0x0217a391
 	.byte 0x1d
+	.global data_ov61_0217a392
 data_ov61_0217a392: ; 0x0217a392
 	.byte 0x02
+	.global data_ov61_0217a393
 data_ov61_0217a393: ; 0x0217a393
 	.byte 0x02
+	.global data_ov61_0217a394
 data_ov61_0217a394: ; 0x0217a394
 	.byte 0x19
+	.global data_ov61_0217a395
 data_ov61_0217a395: ; 0x0217a395
 	.byte 0x24
+	.global data_ov61_0217a396
 data_ov61_0217a396: ; 0x0217a396
 	.byte 0x2c
+	.global data_ov61_0217a397
 data_ov61_0217a397: ; 0x0217a397
 	.byte 0x34
+	.global data_ov61_0217a398
 data_ov61_0217a398: ; 0x0217a398
 	.byte 0x06
+	.global data_ov61_0217a399
 data_ov61_0217a399: ; 0x0217a399
 	.byte 0x17
+	.global data_ov61_0217a39a
 data_ov61_0217a39a: ; 0x0217a39a
 	.byte 0x3e
+	.global data_ov61_0217a39b
 data_ov61_0217a39b: ; 0x0217a39b
 	.byte 0x1c
+	.global data_ov61_0217a39c
 data_ov61_0217a39c: ; 0x0217a39c
 	.byte 0x06
+	.global data_ov61_0217a39d
 data_ov61_0217a39d: ; 0x0217a39d
 	.byte 0x0e
+	.global data_ov61_0217a39e
 data_ov61_0217a39e: ; 0x0217a39e
 	.byte 0x39
+	.global data_ov61_0217a39f
 data_ov61_0217a39f: ; 0x0217a39f
 	.byte 0x46
+	.global data_ov61_0217a3a0
 data_ov61_0217a3a0: ; 0x0217a3a0
 	.byte 0x10
+	.global data_ov61_0217a3a1
 data_ov61_0217a3a1: ; 0x0217a3a1
 	.byte 0x1d
+	.global data_ov61_0217a3a2
 data_ov61_0217a3a2: ; 0x0217a3a2
 	.byte 0x03
+	.global data_ov61_0217a3a3
 data_ov61_0217a3a3: ; 0x0217a3a3
 	.byte 0x0d
+	.global data_ov61_0217a3a4
 data_ov61_0217a3a4: ; 0x0217a3a4
 	.byte 0x16
+	.global data_ov61_0217a3a5
 data_ov61_0217a3a5: ; 0x0217a3a5
 	.byte 0x0b
+	.global data_ov61_0217a3a6
 data_ov61_0217a3a6: ; 0x0217a3a6
 	.byte 0x3b
+	.global data_ov61_0217a3a7
 data_ov61_0217a3a7: ; 0x0217a3a7
 	.byte 0x17
+	.global data_ov61_0217a3a8
 data_ov61_0217a3a8: ; 0x0217a3a8
 	.byte 0x16
+	.global data_ov61_0217a3a9
 data_ov61_0217a3a9: ; 0x0217a3a9
 	.byte 0x36
+	.global data_ov61_0217a3aa
 data_ov61_0217a3aa: ; 0x0217a3aa
 	.byte 0x40
+	.global data_ov61_0217a3ab
 data_ov61_0217a3ab: ; 0x0217a3ab
 	.byte 0x07
+	.global data_ov61_0217a3ac
 data_ov61_0217a3ac: ; 0x0217a3ac
 	.byte 0x00
+	.global data_ov61_0217a3ad
 data_ov61_0217a3ad: ; 0x0217a3ad
 	.byte 0x0c
+	.global data_ov61_0217a3ae
 data_ov61_0217a3ae: ; 0x0217a3ae
 	.byte 0x15
+	.global data_ov61_0217a3af
 data_ov61_0217a3af: ; 0x0217a3af
 	.byte 0x0a
+	.global data_ov61_0217a3b0
 data_ov61_0217a3b0: ; 0x0217a3b0
 	.byte 0x1e
+	.global data_ov61_0217a3b1
 data_ov61_0217a3b1: ; 0x0217a3b1
 	.byte 0x15
+	.global data_ov61_0217a3b2
 data_ov61_0217a3b2: ; 0x0217a3b2
 	.byte 0x0a
+	.global data_ov61_0217a3b3
 data_ov61_0217a3b3: ; 0x0217a3b3
 	.byte 0x10
+	.global data_ov61_0217a3b4
 data_ov61_0217a3b4: ; 0x0217a3b4
 	.byte 0x1d
+	.global data_ov61_0217a3b5
 data_ov61_0217a3b5: ; 0x0217a3b5
 	.byte 0x2c
+	.global data_ov61_0217a3b6
 data_ov61_0217a3b6: ; 0x0217a3b6
 	.byte 0x06
+	.global data_ov61_0217a3b7
 data_ov61_0217a3b7: ; 0x0217a3b7
 	.byte 0x0c
+	.global data_ov61_0217a3b8
 data_ov61_0217a3b8: ; 0x0217a3b8
 	.byte 0x1b
+	.global data_ov61_0217a3b9
 data_ov61_0217a3b9: ; 0x0217a3b9
 	.byte 0x3b
+	.global data_ov61_0217a3ba
 data_ov61_0217a3ba: ; 0x0217a3ba
 	.byte 0x2e
+	.global data_ov61_0217a3bb
 data_ov61_0217a3bb: ; 0x0217a3bb
 	.byte 0x4a
+	.global data_ov61_0217a3bc
 data_ov61_0217a3bc: ; 0x0217a3bc
 	.byte 0x19
+	.global data_ov61_0217a3bd
 data_ov61_0217a3bd: ; 0x0217a3bd
 	.byte 0x39
+	.global data_ov61_0217a3be
 data_ov61_0217a3be: ; 0x0217a3be
 	.byte 0x08
+	.global data_ov61_0217a3bf
 data_ov61_0217a3bf: ; 0x0217a3bf
 	.byte 0x11
+	.global data_ov61_0217a3c0
 data_ov61_0217a3c0: ; 0x0217a3c0
 	.byte 0x38
+	.global data_ov61_0217a3c1
 data_ov61_0217a3c1: ; 0x0217a3c1
 	.byte 0x18
+	.global data_ov61_0217a3c2
 data_ov61_0217a3c2: ; 0x0217a3c2
 	.byte 0x09
+	.global data_ov61_0217a3c3
 data_ov61_0217a3c3: ; 0x0217a3c3
 	.byte 0x16
+	.global data_ov61_0217a3c4
 data_ov61_0217a3c4: ; 0x0217a3c4
 	.byte 0x10
+	.global data_ov61_0217a3c5
 data_ov61_0217a3c5: ; 0x0217a3c5
 	.byte 0x0c
+	.global data_ov61_0217a3c6
 data_ov61_0217a3c6: ; 0x0217a3c6
 	.byte 0x57
+	.global data_ov61_0217a3c7
 data_ov61_0217a3c7: ; 0x0217a3c7
 	.byte 0x1c
+	.global data_ov61_0217a3c8
 data_ov61_0217a3c8: ; 0x0217a3c8
 	.byte 0x36
+	.global data_ov61_0217a3c9
 data_ov61_0217a3c9: ; 0x0217a3c9
 	.byte 0x09
+	.global data_ov61_0217a3ca
 data_ov61_0217a3ca: ; 0x0217a3ca
 	.byte 0x0a
+	.global data_ov61_0217a3cb
 data_ov61_0217a3cb: ; 0x0217a3cb
 	.byte 0x10
+	.global data_ov61_0217a3cc
 data_ov61_0217a3cc: ; 0x0217a3cc
 	.byte 0x1d
+	.global data_ov61_0217a3cd
 data_ov61_0217a3cd: ; 0x0217a3cd
 	.byte 0x55
+	.global data_ov61_0217a3ce
 data_ov61_0217a3ce: ; 0x0217a3ce
 	.byte 0x0c
+	.global data_ov61_0217a3cf
 data_ov61_0217a3cf: ; 0x0217a3cf
 	.byte 0x00
+	.global data_ov61_0217a3d0
 data_ov61_0217a3d0: ; 0x0217a3d0
 	.byte 0x0c
+	.global data_ov61_0217a3d1
 data_ov61_0217a3d1: ; 0x0217a3d1
 	.byte 0x13
+	.global data_ov61_0217a3d2
 data_ov61_0217a3d2: ; 0x0217a3d2
 	.byte 0x1a
+	.global data_ov61_0217a3d3
 data_ov61_0217a3d3: ; 0x0217a3d3
 	.byte 0x1e
+	.global data_ov61_0217a3d4
 data_ov61_0217a3d4: ; 0x0217a3d4
 	.byte 0x0d
+	.global data_ov61_0217a3d5
 data_ov61_0217a3d5: ; 0x0217a3d5
 	.byte 0x13
+	.global data_ov61_0217a3d6
 data_ov61_0217a3d6: ; 0x0217a3d6
 	.byte 0x28
+	.global data_ov61_0217a3d7
 data_ov61_0217a3d7: ; 0x0217a3d7
 	.byte 0x1d
+	.global data_ov61_0217a3d8
 data_ov61_0217a3d8: ; 0x0217a3d8
 	.byte 0x11
+	.global data_ov61_0217a3d9
 data_ov61_0217a3d9: ; 0x0217a3d9
 	.byte 0x1d
+	.global data_ov61_0217a3da
 data_ov61_0217a3da: ; 0x0217a3da
 	.byte 0x11
+	.global data_ov61_0217a3db
 data_ov61_0217a3db: ; 0x0217a3db
 	.byte 0x10
+	.global data_ov61_0217a3dc
 data_ov61_0217a3dc: ; 0x0217a3dc
 	.byte 0x24
+	.global data_ov61_0217a3dd
 data_ov61_0217a3dd: ; 0x0217a3dd
 	.byte 0x1d
+	.global data_ov61_0217a3de
 data_ov61_0217a3de: ; 0x0217a3de
 	.byte 0x04
+	.global data_ov61_0217a3df
 data_ov61_0217a3df: ; 0x0217a3df
 	.byte 0x0f
+	.global data_ov61_0217a3e0
 data_ov61_0217a3e0: ; 0x0217a3e0
 	.byte 0x0b
+	.global data_ov61_0217a3e1
 data_ov61_0217a3e1: ; 0x0217a3e1
 	.byte 0x3f
+	.global data_ov61_0217a3e2
 data_ov61_0217a3e2: ; 0x0217a3e2
 	.byte 0x51
+	.global data_ov61_0217a3e3
 data_ov61_0217a3e3: ; 0x0217a3e3
 	.byte 0x32
+	.global data_ov61_0217a3e4
 data_ov61_0217a3e4: ; 0x0217a3e4
 	.byte 0x2c
+	.global data_ov61_0217a3e5
 data_ov61_0217a3e5: ; 0x0217a3e5
 	.byte 0x1a
+	.global data_ov61_0217a3e6
 data_ov61_0217a3e6: ; 0x0217a3e6
 	.byte 0x00
+	.global data_ov61_0217a3e7
 data_ov61_0217a3e7: ; 0x0217a3e7
 	.byte 0x0b
+	.global data_ov61_0217a3e8
 data_ov61_0217a3e8: ; 0x0217a3e8
 	.byte 0x20
+	.global data_ov61_0217a3e9
 data_ov61_0217a3e9: ; 0x0217a3e9
 	.byte 0x2e
+	.global data_ov61_0217a3ea
 data_ov61_0217a3ea: ; 0x0217a3ea
 	.byte 0x4a
+	.global data_ov61_0217a3eb
 data_ov61_0217a3eb: ; 0x0217a3eb
 	.byte 0x19
+	.global data_ov61_0217a3ec
 data_ov61_0217a3ec: ; 0x0217a3ec
 	.byte 0x39
+	.global data_ov61_0217a3ed
 data_ov61_0217a3ed: ; 0x0217a3ed
 	.byte 0x0f
+	.global data_ov61_0217a3ee
 data_ov61_0217a3ee: ; 0x0217a3ee
 	.byte 0x1d
+	.global data_ov61_0217a3ef
 data_ov61_0217a3ef: ; 0x0217a3ef
 	.byte 0x25
+	.global data_ov61_0217a3f0
 data_ov61_0217a3f0: ; 0x0217a3f0
 	.byte 0x2c
+	.global data_ov61_0217a3f1
 data_ov61_0217a3f1: ; 0x0217a3f1
 	.byte 0x4d
+	.global data_ov61_0217a3f2
 data_ov61_0217a3f2: ; 0x0217a3f2
 	.byte 0x01
+	.global data_ov61_0217a3f3
 data_ov61_0217a3f3: ; 0x0217a3f3
 	.byte 0x00
+	.global data_ov61_0217a3f4
 data_ov61_0217a3f4: ; 0x0217a3f4
 	.byte 0x0c
+	.global data_ov61_0217a3f5
 data_ov61_0217a3f5: ; 0x0217a3f5
 	.byte 0x07
+	.global data_ov61_0217a3f6
 data_ov61_0217a3f6: ; 0x0217a3f6
 	.byte 0x1f
+	.global data_ov61_0217a3f7
 data_ov61_0217a3f7: ; 0x0217a3f7
 	.byte 0x0e
+	.global data_ov61_0217a3f8
 data_ov61_0217a3f8: ; 0x0217a3f8
 	.byte 0x02
+	.global data_ov61_0217a3f9
 data_ov61_0217a3f9: ; 0x0217a3f9
 	.byte 0x02
+	.global data_ov61_0217a3fa
 data_ov61_0217a3fa: ; 0x0217a3fa
 	.byte 0x19
+	.global data_ov61_0217a3fb
 data_ov61_0217a3fb: ; 0x0217a3fb
 	.byte 0x24
+	.global data_ov61_0217a3fc
 data_ov61_0217a3fc: ; 0x0217a3fc
 	.byte 0x2c
+	.global data_ov61_0217a3fd
 data_ov61_0217a3fd: ; 0x0217a3fd
 	.byte 0x34
+	.global data_ov61_0217a3fe
 data_ov61_0217a3fe: ; 0x0217a3fe
 	.byte 0x16
+	.global data_ov61_0217a3ff
 data_ov61_0217a3ff: ; 0x0217a3ff
 	.byte 0x1d
+	.global data_ov61_0217a400
 data_ov61_0217a400: ; 0x0217a400
 	.byte 0x23
+	.global data_ov61_0217a401
 data_ov61_0217a401: ; 0x0217a401
 	.byte 0x01
+	.global data_ov61_0217a402
 data_ov61_0217a402: ; 0x0217a402
 	.byte 0x04
+	.global data_ov61_0217a403
 data_ov61_0217a403: ; 0x0217a403
 	.byte 0x0f
+	.global data_ov61_0217a404
 data_ov61_0217a404: ; 0x0217a404
 	.byte 0x1c
+	.global data_ov61_0217a405
 data_ov61_0217a405: ; 0x0217a405
 	.byte 0x3f
+	.global data_ov61_0217a406
 data_ov61_0217a406: ; 0x0217a406
 	.byte 0x51
+	.global data_ov61_0217a407
 data_ov61_0217a407: ; 0x0217a407
 	.byte 0x25
+	.global data_ov61_0217a408
 data_ov61_0217a408: ; 0x0217a408
 	.byte 0x2c
+	.global data_ov61_0217a409
 data_ov61_0217a409: ; 0x0217a409
 	.byte 0x0c
+	.global data_ov61_0217a40a
 data_ov61_0217a40a: ; 0x0217a40a
 	.byte 0x0a
+	.global data_ov61_0217a40b
 data_ov61_0217a40b: ; 0x0217a40b
 	.byte 0x16
+	.global data_ov61_0217a40c
 data_ov61_0217a40c: ; 0x0217a40c
 	.byte 0x35
+	.global data_ov61_0217a40d
 data_ov61_0217a40d: ; 0x0217a40d
 	.byte 0x2e
+	.global data_ov61_0217a40e
 data_ov61_0217a40e: ; 0x0217a40e
 	.byte 0x4a
+	.global data_ov61_0217a40f
 data_ov61_0217a40f: ; 0x0217a40f
 	.byte 0x0e
+	.global data_ov61_0217a410
 data_ov61_0217a410: ; 0x0217a410
 	.byte 0x39
+	.global data_ov61_0217a411
 data_ov61_0217a411: ; 0x0217a411
 	.byte 0x04
+	.global data_ov61_0217a412
 data_ov61_0217a412: ; 0x0217a412
 	.byte 0x15
+	.global data_ov61_0217a413
 data_ov61_0217a413: ; 0x0217a413
 	.byte 0x2c
+	.global data_ov61_0217a414
 data_ov61_0217a414: ; 0x0217a414
 	.byte 0x15
+	.global data_ov61_0217a415
 data_ov61_0217a415: ; 0x0217a415
 	.byte 0x0c
+	.global data_ov61_0217a416
 data_ov61_0217a416: ; 0x0217a416
 	.byte 0x04
+	.global data_ov61_0217a417
 data_ov61_0217a417: ; 0x0217a417
 	.byte 0x0c
+	.global data_ov61_0217a418
 data_ov61_0217a418: ; 0x0217a418
 	.byte 0x31
+	.global data_ov61_0217a419
 data_ov61_0217a419: ; 0x0217a419
 	.byte 0x2e
+	.global data_ov61_0217a41a
 data_ov61_0217a41a: ; 0x0217a41a
 	.byte 0x4a
+	.global data_ov61_0217a41b
 data_ov61_0217a41b: ; 0x0217a41b
 	.byte 0x19
+	.global data_ov61_0217a41c
 data_ov61_0217a41c: ; 0x0217a41c
 	.byte 0x00
+	.global data_ov61_0217a41d
 data_ov61_0217a41d: ; 0x0217a41d
 	.byte 0x0c
+	.global data_ov61_0217a41e
 data_ov61_0217a41e: ; 0x0217a41e
 	.byte 0x13
+	.global data_ov61_0217a41f
 data_ov61_0217a41f: ; 0x0217a41f
 	.byte 0x1a
+	.global data_ov61_0217a420
 data_ov61_0217a420: ; 0x0217a420
 	.byte 0x1e
+	.global data_ov61_0217a421
 data_ov61_0217a421: ; 0x0217a421
 	.byte 0x0d
+	.global data_ov61_0217a422
 data_ov61_0217a422: ; 0x0217a422
 	.byte 0x13
+	.global data_ov61_0217a423
 data_ov61_0217a423: ; 0x0217a423
 	.byte 0x28
+	.global data_ov61_0217a424
 data_ov61_0217a424: ; 0x0217a424
 	.byte 0x1d
+	.global data_ov61_0217a425
 data_ov61_0217a425: ; 0x0217a425
 	.byte 0x1e
+	.global data_ov61_0217a426
 data_ov61_0217a426: ; 0x0217a426
 	.byte 0x01
+	.global data_ov61_0217a427
 data_ov61_0217a427: ; 0x0217a427
 	.byte 0x06
+	.global data_ov61_0217a428
 data_ov61_0217a428: ; 0x0217a428
 	.byte 0x13
+	.global data_ov61_0217a429
 data_ov61_0217a429: ; 0x0217a429
 	.byte 0x0c
+	.global data_ov61_0217a42a
 data_ov61_0217a42a: ; 0x0217a42a
 	.byte 0x57
+	.global data_ov61_0217a42b
 data_ov61_0217a42b: ; 0x0217a42b
 	.byte 0x1c
+	.global data_ov61_0217a42c
 data_ov61_0217a42c: ; 0x0217a42c
 	.byte 0x36
+	.global data_ov61_0217a42d
 data_ov61_0217a42d: ; 0x0217a42d
 	.byte 0x0e
+	.global data_ov61_0217a42e
 data_ov61_0217a42e: ; 0x0217a42e
 	.byte 0x06
+	.global data_ov61_0217a42f
 data_ov61_0217a42f: ; 0x0217a42f
 	.byte 0x0d
+	.global data_ov61_0217a430
 data_ov61_0217a430: ; 0x0217a430
 	.byte 0x29
+	.global data_ov61_0217a431
 data_ov61_0217a431: ; 0x0217a431
 	.byte 0x11
+	.global data_ov61_0217a432
 data_ov61_0217a432: ; 0x0217a432
 	.byte 0x1b
+	.global data_ov61_0217a433
 data_ov61_0217a433: ; 0x0217a433
 	.byte 0x0d
+	.global data_ov61_0217a434
 data_ov61_0217a434: ; 0x0217a434
 	.byte 0x24
+	.global data_ov61_0217a435
 data_ov61_0217a435: ; 0x0217a435
 	.byte 0x75
+	.global data_ov61_0217a436
 data_ov61_0217a436: ; 0x0217a436
 	.byte 0x01
+	.global data_ov61_0217a437
 data_ov61_0217a437: ; 0x0217a437
 	.byte 0x33
+	.global data_ov61_0217a438
 data_ov61_0217a438: ; 0x0217a438
 	.byte 0x18
+	.global data_ov61_0217a439
 data_ov61_0217a439: ; 0x0217a439
 	.byte 0x00
+	.global data_ov61_0217a43a
 data_ov61_0217a43a: ; 0x0217a43a
 	.byte 0x10
+	.global data_ov61_0217a43b
 data_ov61_0217a43b: ; 0x0217a43b
 	.byte 0x04
+	.global data_ov61_0217a43c
 data_ov61_0217a43c: ; 0x0217a43c
 	.byte 0x1d
+	.global data_ov61_0217a43d
 data_ov61_0217a43d: ; 0x0217a43d
 	.byte 0x55
+	.global data_ov61_0217a43e
 data_ov61_0217a43e: ; 0x0217a43e
 	.byte 0x1b
+	.global data_ov61_0217a43f
 data_ov61_0217a43f: ; 0x0217a43f
 	.byte 0x39
+	.global data_ov61_0217a440
 data_ov61_0217a440: ; 0x0217a440
 	.byte 0x14
+	.global data_ov61_0217a441
 data_ov61_0217a441: ; 0x0217a441
 	.byte 0x39
+	.global data_ov61_0217a442
 data_ov61_0217a442: ; 0x0217a442
 	.byte 0x16
+	.global data_ov61_0217a443
 data_ov61_0217a443: ; 0x0217a443
 	.byte 0x33
+	.global data_ov61_0217a444
 data_ov61_0217a444: ; 0x0217a444
 	.byte 0x4f
+	.global data_ov61_0217a445
 data_ov61_0217a445: ; 0x0217a445
 	.byte 0x01
+	.global data_ov61_0217a446
 data_ov61_0217a446: ; 0x0217a446
 	.byte 0x00
+	.global data_ov61_0217a447
 data_ov61_0217a447: ; 0x0217a447
 	.byte 0x0c
+	.global data_ov61_0217a448
 data_ov61_0217a448: ; 0x0217a448
 	.byte 0x13
+	.global data_ov61_0217a449
 data_ov61_0217a449: ; 0x0217a449
 	.byte 0x1a
+	.global data_ov61_0217a44a
 data_ov61_0217a44a: ; 0x0217a44a
 	.byte 0x1e
+	.global data_ov61_0217a44b
 data_ov61_0217a44b: ; 0x0217a44b
 	.byte 0x0d
+	.global data_ov61_0217a44c
 data_ov61_0217a44c: ; 0x0217a44c
 	.byte 0x3f
+	.global data_ov61_0217a44d
 data_ov61_0217a44d: ; 0x0217a44d
 	.byte 0x28
+	.global data_ov61_0217a44e
 data_ov61_0217a44e: ; 0x0217a44e
 	.byte 0x26
+	.global data_ov61_0217a44f
 data_ov61_0217a44f: ; 0x0217a44f
 	.byte 0x11
+	.global data_ov61_0217a450
 data_ov61_0217a450: ; 0x0217a450
 	.byte 0x05
+	.global data_ov61_0217a451
 data_ov61_0217a451: ; 0x0217a451
 	.byte 0x00
+	.global data_ov61_0217a452
 data_ov61_0217a452: ; 0x0217a452
 	.byte 0x16
+	.global data_ov61_0217a453
 data_ov61_0217a453: ; 0x0217a453
 	.byte 0x31
+	.global data_ov61_0217a454
 data_ov61_0217a454: ; 0x0217a454
 	.byte 0x1f
+	.global data_ov61_0217a455
 data_ov61_0217a455: ; 0x0217a455
 	.byte 0x0a
+	.global data_ov61_0217a456
 data_ov61_0217a456: ; 0x0217a456
 	.byte 0x36
+	.global data_ov61_0217a457
 data_ov61_0217a457: ; 0x0217a457
 	.byte 0x40
+	.global data_ov61_0217a458
 data_ov61_0217a458: ; 0x0217a458
 	.byte 0x10
+	.global data_ov61_0217a459
 data_ov61_0217a459: ; 0x0217a459
 	.byte 0x28
+	.global data_ov61_0217a45a
 data_ov61_0217a45a: ; 0x0217a45a
 	.byte 0x33
+	.global data_ov61_0217a45b
 data_ov61_0217a45b: ; 0x0217a45b
 	.byte 0x15
+	.global data_ov61_0217a45c
 data_ov61_0217a45c: ; 0x0217a45c
 	.byte 0x1b
+	.global data_ov61_0217a45d
 data_ov61_0217a45d: ; 0x0217a45d
 	.byte 0x15
+	.global data_ov61_0217a45e
 data_ov61_0217a45e: ; 0x0217a45e
 	.byte 0x17
+	.global data_ov61_0217a45f
 data_ov61_0217a45f: ; 0x0217a45f
 	.byte 0x3e
+	.global data_ov61_0217a460
 data_ov61_0217a460: ; 0x0217a460
 	.byte 0x01
+	.global data_ov61_0217a461
 data_ov61_0217a461: ; 0x0217a461
 	.byte 0x0a
+	.global data_ov61_0217a462
 data_ov61_0217a462: ; 0x0217a462
 	.byte 0x36
+	.global data_ov61_0217a463
 data_ov61_0217a463: ; 0x0217a463
 	.byte 0x40
+	.global data_ov61_0217a464
 data_ov61_0217a464: ; 0x0217a464
 	.byte 0x10
+	.global data_ov61_0217a465
 data_ov61_0217a465: ; 0x0217a465
 	.byte 0x28
+	.global data_ov61_0217a466
 data_ov61_0217a466: ; 0x0217a466
 	.byte 0x31
+	.global data_ov61_0217a467
 data_ov61_0217a467: ; 0x0217a467
 	.byte 0x1f
+	.global data_ov61_0217a468
 data_ov61_0217a468: ; 0x0217a468
 	.byte 0x1a
+	.global data_ov61_0217a469
 data_ov61_0217a469: ; 0x0217a469
 	.byte 0x11
+	.global data_ov61_0217a46a
 data_ov61_0217a46a: ; 0x0217a46a
 	.byte 0x24
+	.global data_ov61_0217a46b
 data_ov61_0217a46b: ; 0x0217a46b
 	.byte 0x75
+	.global data_ov61_0217a46c
 data_ov61_0217a46c: ; 0x0217a46c
 	.byte 0x16
+	.global data_ov61_0217a46d
 data_ov61_0217a46d: ; 0x0217a46d
 	.byte 0x33
+	.global data_ov61_0217a46e
 data_ov61_0217a46e: ; 0x0217a46e
 	.byte 0x03
+	.global data_ov61_0217a46f
 data_ov61_0217a46f: ; 0x0217a46f
 	.byte 0x01
+	.global data_ov61_0217a470
 data_ov61_0217a470: ; 0x0217a470
 	.byte 0x3f
+	.global data_ov61_0217a471
 data_ov61_0217a471: ; 0x0217a471
 	.byte 0x45
+	.global data_ov61_0217a472
 data_ov61_0217a472: ; 0x0217a472
 	.byte 0x00
+	.global data_ov61_0217a473
 data_ov61_0217a473: ; 0x0217a473
 	.byte 0x0c
+	.global data_ov61_0217a474
 data_ov61_0217a474: ; 0x0217a474
 	.byte 0x15
+	.global data_ov61_0217a475
 data_ov61_0217a475: ; 0x0217a475
 	.byte 0x0a
+	.global data_ov61_0217a476
 data_ov61_0217a476: ; 0x0217a476
 	.byte 0x1e
+	.global data_ov61_0217a477
 data_ov61_0217a477: ; 0x0217a477
 	.byte 0x15
+	.global data_ov61_0217a478
 data_ov61_0217a478: ; 0x0217a478
 	.byte 0x07
+	.global data_ov61_0217a479
 data_ov61_0217a479: ; 0x0217a479
 	.byte 0x28
+	.global data_ov61_0217a47a
 data_ov61_0217a47a: ; 0x0217a47a
 	.byte 0x1d
+	.global data_ov61_0217a47b
 data_ov61_0217a47b: ; 0x0217a47b
 	.byte 0x00
+	.global data_ov61_0217a47c
 data_ov61_0217a47c: ; 0x0217a47c
 	.byte 0x01
+	.global data_ov61_0217a47d
 data_ov61_0217a47d: ; 0x0217a47d
 	.byte 0x01
+	.global data_ov61_0217a47e
 data_ov61_0217a47e: ; 0x0217a47e
 	.byte 0x24
+	.global data_ov61_0217a47f
 data_ov61_0217a47f: ; 0x0217a47f
 	.byte 0x75
+	.global data_ov61_0217a480
 data_ov61_0217a480: ; 0x0217a480
 	.byte 0x16
+	.global data_ov61_0217a481
 data_ov61_0217a481: ; 0x0217a481
 	.byte 0x33
+	.global data_ov61_0217a482
 data_ov61_0217a482: ; 0x0217a482
 	.byte 0x1a
+	.global data_ov61_0217a483
 data_ov61_0217a483: ; 0x0217a483
 	.byte 0x11
+	.global data_ov61_0217a484
 data_ov61_0217a484: ; 0x0217a484
 	.byte 0x1a
+	.global data_ov61_0217a485
 data_ov61_0217a485: ; 0x0217a485
 	.byte 0x04
+	.global data_ov61_0217a486
 data_ov61_0217a486: ; 0x0217a486
 	.byte 0x24
+	.global data_ov61_0217a487
 data_ov61_0217a487: ; 0x0217a487
 	.byte 0x2c
+	.global data_ov61_0217a488
 data_ov61_0217a488: ; 0x0217a488
 	.byte 0x4d
+	.global data_ov61_0217a489
 data_ov61_0217a489: ; 0x0217a489
 	.byte 0x01
+	.global data_ov61_0217a48a
 data_ov61_0217a48a: ; 0x0217a48a
 	.byte 0x24
+	.global data_ov61_0217a48b
 data_ov61_0217a48b: ; 0x0217a48b
 	.byte 0x34
+	.global data_ov61_0217a48c
 data_ov61_0217a48c: ; 0x0217a48c
 	.byte 0x1b
+	.global data_ov61_0217a48d
 data_ov61_0217a48d: ; 0x0217a48d
 	.byte 0x01
+	.global data_ov61_0217a48e
 data_ov61_0217a48e: ; 0x0217a48e
 	.byte 0x0e
+	.global data_ov61_0217a48f
 data_ov61_0217a48f: ; 0x0217a48f
 	.byte 0x00
+	.global data_ov61_0217a490
 data_ov61_0217a490: ; 0x0217a490
 	.byte 0x1b
+	.global data_ov61_0217a491
 data_ov61_0217a491: ; 0x0217a491
 	.byte 0x28
+	.global data_ov61_0217a492
 data_ov61_0217a492: ; 0x0217a492
 	.byte 0x64
+	.global data_ov61_0217a493
 data_ov61_0217a493: ; 0x0217a493
 	.byte 0x14
+	.global data_ov61_0217a494
 data_ov61_0217a494: ; 0x0217a494
 	.byte 0x34
+	.global data_ov61_0217a495
 data_ov61_0217a495: ; 0x0217a495
 	.byte 0x0e
+	.global data_ov61_0217a496
 data_ov61_0217a496: ; 0x0217a496
 	.byte 0x1d
+	.global data_ov61_0217a497
 data_ov61_0217a497: ; 0x0217a497
 	.byte 0x29
+	.global data_ov61_0217a498
 data_ov61_0217a498: ; 0x0217a498
 	.byte 0x01
+	.global data_ov61_0217a499
 data_ov61_0217a499: ; 0x0217a499
 	.byte 0x33
+	.global data_ov61_0217a49a
 data_ov61_0217a49a: ; 0x0217a49a
 	.byte 0x4f
+	.global data_ov61_0217a49b
 data_ov61_0217a49b: ; 0x0217a49b
 	.byte 0x16
+	.global data_ov61_0217a49c
 data_ov61_0217a49c: ; 0x0217a49c
 	.byte 0x3f
+	.global data_ov61_0217a49d
 data_ov61_0217a49d: ; 0x0217a49d
 	.byte 0x18
+	.global data_ov61_0217a49e
 data_ov61_0217a49e: ; 0x0217a49e
 	.byte 0x28
+	.global data_ov61_0217a49f
 data_ov61_0217a49f: ; 0x0217a49f
 	.byte 0x14
+	.global data_ov61_0217a4a0
 data_ov61_0217a4a0: ; 0x0217a4a0
 	.byte 0x34
+	.global data_ov61_0217a4a1
 data_ov61_0217a4a1: ; 0x0217a4a1
 	.byte 0x40
+	.global data_ov61_0217a4a2
 data_ov61_0217a4a2: ; 0x0217a4a2
 	.byte 0x1c
+	.global data_ov61_0217a4a3
 data_ov61_0217a4a3: ; 0x0217a4a3
 	.byte 0x00
+	.global data_ov61_0217a4a4
 data_ov61_0217a4a4: ; 0x0217a4a4
 	.byte 0x0c
+	.global data_ov61_0217a4a5
 data_ov61_0217a4a5: ; 0x0217a4a5
 	.byte 0x01
+	.global data_ov61_0217a4a6
 data_ov61_0217a4a6: ; 0x0217a4a6
 	.byte 0x0a
+	.global data_ov61_0217a4a7
 data_ov61_0217a4a7: ; 0x0217a4a7
 	.byte 0x1e
+	.global data_ov61_0217a4a8
 data_ov61_0217a4a8: ; 0x0217a4a8
 	.byte 0x15
+	.global data_ov61_0217a4a9
 data_ov61_0217a4a9: ; 0x0217a4a9
 	.byte 0x07
+	.global data_ov61_0217a4aa
 data_ov61_0217a4aa: ; 0x0217a4aa
 	.byte 0x28
+	.global data_ov61_0217a4ab
 data_ov61_0217a4ab: ; 0x0217a4ab
 	.byte 0x1d
+	.global data_ov61_0217a4ac
 data_ov61_0217a4ac: ; 0x0217a4ac
 	.byte 0x00
+	.global data_ov61_0217a4ad
 data_ov61_0217a4ad: ; 0x0217a4ad
 	.byte 0x01
+	.global data_ov61_0217a4ae
 data_ov61_0217a4ae: ; 0x0217a4ae
 	.byte 0x01
+	.global data_ov61_0217a4af
 data_ov61_0217a4af: ; 0x0217a4af
 	.byte 0x24
+	.global data_ov61_0217a4b0
 data_ov61_0217a4b0: ; 0x0217a4b0
 	.byte 0x75
+	.global data_ov61_0217a4b1
 data_ov61_0217a4b1: ; 0x0217a4b1
 	.byte 0x16
+	.global data_ov61_0217a4b2
 data_ov61_0217a4b2: ; 0x0217a4b2
 	.byte 0x33
+	.global data_ov61_0217a4b3
 data_ov61_0217a4b3: ; 0x0217a4b3
 	.byte 0x1a
+	.global data_ov61_0217a4b4
 data_ov61_0217a4b4: ; 0x0217a4b4
 	.byte 0x11
+	.global data_ov61_0217a4b5
 data_ov61_0217a4b5: ; 0x0217a4b5
 	.byte 0x1a
+	.global data_ov61_0217a4b6
 data_ov61_0217a4b6: ; 0x0217a4b6
 	.byte 0x04
+	.global data_ov61_0217a4b7
 data_ov61_0217a4b7: ; 0x0217a4b7
 	.byte 0x24
+	.global data_ov61_0217a4b8
 data_ov61_0217a4b8: ; 0x0217a4b8
 	.byte 0x2c
+	.global data_ov61_0217a4b9
 data_ov61_0217a4b9: ; 0x0217a4b9
 	.byte 0x4d
+	.global data_ov61_0217a4ba
 data_ov61_0217a4ba: ; 0x0217a4ba
 	.byte 0x01
+	.global data_ov61_0217a4bb
 data_ov61_0217a4bb: ; 0x0217a4bb
 	.byte 0x24
+	.global data_ov61_0217a4bc
 data_ov61_0217a4bc: ; 0x0217a4bc
 	.byte 0x34
+	.global data_ov61_0217a4bd
 data_ov61_0217a4bd: ; 0x0217a4bd
 	.byte 0x1b
+	.global data_ov61_0217a4be
 data_ov61_0217a4be: ; 0x0217a4be
 	.byte 0x01
+	.global data_ov61_0217a4bf
 data_ov61_0217a4bf: ; 0x0217a4bf
 	.byte 0x0e
+	.global data_ov61_0217a4c0
 data_ov61_0217a4c0: ; 0x0217a4c0
 	.byte 0x00
+	.global data_ov61_0217a4c1
 data_ov61_0217a4c1: ; 0x0217a4c1
 	.byte 0x1b
+	.global data_ov61_0217a4c2
 data_ov61_0217a4c2: ; 0x0217a4c2
 	.byte 0x28
+	.global data_ov61_0217a4c3
 data_ov61_0217a4c3: ; 0x0217a4c3
 	.byte 0x64
+	.global data_ov61_0217a4c4
 data_ov61_0217a4c4: ; 0x0217a4c4
 	.byte 0x14
+	.global data_ov61_0217a4c5
 data_ov61_0217a4c5: ; 0x0217a4c5
 	.byte 0x34
+	.global data_ov61_0217a4c6
 data_ov61_0217a4c6: ; 0x0217a4c6
 	.byte 0x0e
+	.global data_ov61_0217a4c7
 data_ov61_0217a4c7: ; 0x0217a4c7
 	.byte 0x0e
+	.global data_ov61_0217a4c8
 data_ov61_0217a4c8: ; 0x0217a4c8
 	.byte 0x0c
+	.global data_ov61_0217a4c9
 data_ov61_0217a4c9: ; 0x0217a4c9
 	.byte 0x57
+	.global data_ov61_0217a4ca
 data_ov61_0217a4ca: ; 0x0217a4ca
 	.byte 0x0b
+	.global data_ov61_0217a4cb
 data_ov61_0217a4cb: ; 0x0217a4cb
 	.byte 0x36
+	.global data_ov61_0217a4cc
 data_ov61_0217a4cc: ; 0x0217a4cc
 	.byte 0x09
+	.global data_ov61_0217a4cd
 data_ov61_0217a4cd: ; 0x0217a4cd
 	.byte 0x0a
+	.global data_ov61_0217a4ce
 data_ov61_0217a4ce: ; 0x0217a4ce
 	.byte 0x10
+	.global data_ov61_0217a4cf
 data_ov61_0217a4cf: ; 0x0217a4cf
 	.byte 0x1d
+	.global data_ov61_0217a4d0
 data_ov61_0217a4d0: ; 0x0217a4d0
 	.byte 0x55
+	.global data_ov61_0217a4d1
 data_ov61_0217a4d1: ; 0x0217a4d1
 	.byte 0x0c
+	.global data_ov61_0217a4d2
 data_ov61_0217a4d2: ; 0x0217a4d2
 	.byte 0x39
+	.global data_ov61_0217a4d3
 data_ov61_0217a4d3: ; 0x0217a4d3
 	.byte 0x14
+	.global data_ov61_0217a4d4
 data_ov61_0217a4d4: ; 0x0217a4d4
 	.byte 0x35
+	.global data_ov61_0217a4d5
 data_ov61_0217a4d5: ; 0x0217a4d5
 	.byte 0x1c
+	.global data_ov61_0217a4d6
 data_ov61_0217a4d6: ; 0x0217a4d6
 	.byte 0x08
+	.global data_ov61_0217a4d7
 data_ov61_0217a4d7: ; 0x0217a4d7
 	.byte 0x1e
+	.global data_ov61_0217a4d8
 data_ov61_0217a4d8: ; 0x0217a4d8
 	.byte 0x0d
+	.global data_ov61_0217a4d9
 data_ov61_0217a4d9: ; 0x0217a4d9
 	.byte 0x3f
+	.global data_ov61_0217a4da
 data_ov61_0217a4da: ; 0x0217a4da
 	.byte 0x51
+	.global data_ov61_0217a4db
 data_ov61_0217a4db: ; 0x0217a4db
 	.byte 0x25
+	.global data_ov61_0217a4dc
 data_ov61_0217a4dc: ; 0x0217a4dc
 	.byte 0x2c
+	.global data_ov61_0217a4dd
 data_ov61_0217a4dd: ; 0x0217a4dd
 	.byte 0x0c
+	.global data_ov61_0217a4de
 data_ov61_0217a4de: ; 0x0217a4de
 	.byte 0x04
+	.global data_ov61_0217a4df
 data_ov61_0217a4df: ; 0x0217a4df
 	.byte 0x0c
+	.global data_ov61_0217a4e0
 data_ov61_0217a4e0: ; 0x0217a4e0
 	.byte 0x31
+	.global data_ov61_0217a4e1
 data_ov61_0217a4e1: ; 0x0217a4e1
 	.byte 0x2e
+	.global data_ov61_0217a4e2
 data_ov61_0217a4e2: ; 0x0217a4e2
 	.byte 0x00
+	.global data_ov61_0217a4e3
 data_ov61_0217a4e3: ; 0x0217a4e3
 	.byte 0x5c
+	.global data_ov61_0217a4e4
 data_ov61_0217a4e4: ; 0x0217a4e4
 	.byte 0x00
+	.global data_ov61_0217a4e5
 data_ov61_0217a4e5: ; 0x0217a4e5
 	.byte 0x00
+	.global data_ov61_0217a4e6
 data_ov61_0217a4e6: ; 0x0217a4e6
 	.byte 0x00
+	.global data_ov61_0217a4e7
 data_ov61_0217a4e7: ; 0x0217a4e7
 	.byte 0x00
+	.global data_ov61_0217a4e8
 data_ov61_0217a4e8: ; 0x0217a4e8
 	.byte 0x00
+	.global data_ov61_0217a4e9
 data_ov61_0217a4e9: ; 0x0217a4e9
 	.byte 0x00
+	.global data_ov61_0217a4ea
 data_ov61_0217a4ea: ; 0x0217a4ea
 	.byte 0x00
+	.global data_ov61_0217a4eb
 data_ov61_0217a4eb: ; 0x0217a4eb
 	.byte 0x00
+	.global data_ov61_0217a4ec
 data_ov61_0217a4ec: ; 0x0217a4ec
 	.byte 0x00
+	.global data_ov61_0217a4ed
 data_ov61_0217a4ed: ; 0x0217a4ed
 	.byte 0x00
+	.global data_ov61_0217a4ee
 data_ov61_0217a4ee: ; 0x0217a4ee
 	.byte 0x00
+	.global data_ov61_0217a4ef
 data_ov61_0217a4ef: ; 0x0217a4ef
 	.byte 0x00
+	.global data_ov61_0217a4f0
 data_ov61_0217a4f0: ; 0x0217a4f0
 	.byte 0x00
+	.global data_ov61_0217a4f1
 data_ov61_0217a4f1: ; 0x0217a4f1
 	.byte 0x00
+	.global data_ov61_0217a4f2
 data_ov61_0217a4f2: ; 0x0217a4f2
 	.byte 0x00
+	.global data_ov61_0217a4f3
 data_ov61_0217a4f3: ; 0x0217a4f3
 	.byte 0x00
+	.global data_ov61_0217a4f4
 data_ov61_0217a4f4: ; 0x0217a4f4
 	.byte 0x00
+	.global data_ov61_0217a4f5
 data_ov61_0217a4f5: ; 0x0217a4f5
 	.byte 0x00
+	.global data_ov61_0217a4f6
 data_ov61_0217a4f6: ; 0x0217a4f6
 	.byte 0x00
+	.global data_ov61_0217a4f7
 data_ov61_0217a4f7: ; 0x0217a4f7
 	.byte 0x00
+	.global data_ov61_0217a4f8
 data_ov61_0217a4f8: ; 0x0217a4f8
 	.byte 0x00
+	.global data_ov61_0217a4f9
 data_ov61_0217a4f9: ; 0x0217a4f9
 	.byte 0x00
+	.global data_ov61_0217a4fa
 data_ov61_0217a4fa: ; 0x0217a4fa
 	.byte 0x00
+	.global data_ov61_0217a4fb
 data_ov61_0217a4fb: ; 0x0217a4fb
 	.byte 0x00
+	.global data_ov61_0217a4fc
 data_ov61_0217a4fc: ; 0x0217a4fc
 	.byte 0x00
+	.global data_ov61_0217a4fd
 data_ov61_0217a4fd: ; 0x0217a4fd
 	.byte 0x00
+	.global data_ov61_0217a4fe
 data_ov61_0217a4fe: ; 0x0217a4fe
 	.byte 0x00
+	.global data_ov61_0217a4ff
 data_ov61_0217a4ff: ; 0x0217a4ff
 	.byte 0x00
+	.global data_ov61_0217a500
 data_ov61_0217a500: ; 0x0217a500
 	.byte 0x00
+	.global data_ov61_0217a501
 data_ov61_0217a501: ; 0x0217a501
 	.byte 0x00
+	.global data_ov61_0217a502
 data_ov61_0217a502: ; 0x0217a502
 	.byte 0x00
+	.global data_ov61_0217a503
 data_ov61_0217a503: ; 0x0217a503
 	.byte 0x00
+	.global data_ov61_0217a504
 data_ov61_0217a504: ; 0x0217a504
 	.byte 0x00
+	.global data_ov61_0217a505
 data_ov61_0217a505: ; 0x0217a505
 	.byte 0x00
+	.global data_ov61_0217a506
 data_ov61_0217a506: ; 0x0217a506
 	.byte 0x00
+	.global data_ov61_0217a507
 data_ov61_0217a507: ; 0x0217a507
 	.byte 0x00
+	.global data_ov61_0217a508
 data_ov61_0217a508: ; 0x0217a508
 	.byte 0x00
+	.global data_ov61_0217a509
 data_ov61_0217a509: ; 0x0217a509
 	.byte 0x00
+	.global data_ov61_0217a50a
 data_ov61_0217a50a: ; 0x0217a50a
 	.byte 0x00
+	.global data_ov61_0217a50b
 data_ov61_0217a50b: ; 0x0217a50b
 	.byte 0x00
+	.global data_ov61_0217a50c
 data_ov61_0217a50c: ; 0x0217a50c
 	.byte 0x00
+	.global data_ov61_0217a50d
 data_ov61_0217a50d: ; 0x0217a50d
 	.byte 0x00
+	.global data_ov61_0217a50e
 data_ov61_0217a50e: ; 0x0217a50e
 	.byte 0x00
+	.global data_ov61_0217a50f
 data_ov61_0217a50f: ; 0x0217a50f
 	.byte 0x00
+	.global data_ov61_0217a510
 data_ov61_0217a510: ; 0x0217a510
 	.byte 0x00
+	.global data_ov61_0217a511
 data_ov61_0217a511: ; 0x0217a511
 	.byte 0x00
+	.global data_ov61_0217a512
 data_ov61_0217a512: ; 0x0217a512
 	.byte 0x00
+	.global data_ov61_0217a513
 data_ov61_0217a513: ; 0x0217a513
 	.byte 0x00
+	.global data_ov61_0217a514
 data_ov61_0217a514: ; 0x0217a514
 	.byte 0x00
+	.global data_ov61_0217a515
 data_ov61_0217a515: ; 0x0217a515
 	.byte 0x00
+	.global data_ov61_0217a516
 data_ov61_0217a516: ; 0x0217a516
 	.byte 0x00
+	.global data_ov61_0217a517
 data_ov61_0217a517: ; 0x0217a517
 	.byte 0x00
+	.global data_ov61_0217a518
 data_ov61_0217a518: ; 0x0217a518
 	.byte 0x00
+	.global data_ov61_0217a519
 data_ov61_0217a519: ; 0x0217a519
 	.byte 0x00
+	.global data_ov61_0217a51a
 data_ov61_0217a51a: ; 0x0217a51a
 	.byte 0x00
+	.global data_ov61_0217a51b
 data_ov61_0217a51b: ; 0x0217a51b
 	.byte 0x00
+	.global data_ov61_0217a51c
 data_ov61_0217a51c: ; 0x0217a51c
 	.byte 0x00
+	.global data_ov61_0217a51d
 data_ov61_0217a51d: ; 0x0217a51d
 	.byte 0x00
+	.global data_ov61_0217a51e
 data_ov61_0217a51e: ; 0x0217a51e
 	.byte 0x00
+	.global data_ov61_0217a51f
 data_ov61_0217a51f: ; 0x0217a51f
 	.byte 0x00
+	.global data_ov61_0217a520
 data_ov61_0217a520: ; 0x0217a520
 	.byte 0x00
+	.global data_ov61_0217a521
 data_ov61_0217a521: ; 0x0217a521
 	.byte 0x00
+	.global data_ov61_0217a522
 data_ov61_0217a522: ; 0x0217a522
 	.byte 0x00
+	.global data_ov61_0217a523
 data_ov61_0217a523: ; 0x0217a523
 	.byte 0x00
+	.global data_ov61_0217a524
 data_ov61_0217a524: ; 0x0217a524
 	.byte 0x00
+	.global data_ov61_0217a525
 data_ov61_0217a525: ; 0x0217a525
 	.byte 0x00
+	.global data_ov61_0217a526
 data_ov61_0217a526: ; 0x0217a526
 	.byte 0x00
+	.global data_ov61_0217a527
 data_ov61_0217a527: ; 0x0217a527
 	.byte 0x00
+	.global data_ov61_0217a528
 data_ov61_0217a528: ; 0x0217a528
 	.byte 0x00
+	.global data_ov61_0217a529
 data_ov61_0217a529: ; 0x0217a529
 	.byte 0x00
+	.global data_ov61_0217a52a
 data_ov61_0217a52a: ; 0x0217a52a
 	.byte 0x00
+	.global data_ov61_0217a52b
 data_ov61_0217a52b: ; 0x0217a52b
 	.byte 0x00
+	.global data_ov61_0217a52c
 data_ov61_0217a52c: ; 0x0217a52c
 	.byte 0x00
+	.global data_ov61_0217a52d
 data_ov61_0217a52d: ; 0x0217a52d
 	.byte 0x00
+	.global data_ov61_0217a52e
 data_ov61_0217a52e: ; 0x0217a52e
 	.byte 0x00
+	.global data_ov61_0217a52f
 data_ov61_0217a52f: ; 0x0217a52f
 	.byte 0x00
+	.global data_ov61_0217a530
 data_ov61_0217a530: ; 0x0217a530
 	.byte 0x00
+	.global data_ov61_0217a531
 data_ov61_0217a531: ; 0x0217a531
 	.byte 0x00
+	.global data_ov61_0217a532
 data_ov61_0217a532: ; 0x0217a532
 	.byte 0x00
+	.global data_ov61_0217a533
 data_ov61_0217a533: ; 0x0217a533
 	.byte 0x00
+	.global data_ov61_0217a534
 data_ov61_0217a534: ; 0x0217a534
 	.byte 0x00
+	.global data_ov61_0217a535
 data_ov61_0217a535: ; 0x0217a535
 	.byte 0x00
+	.global data_ov61_0217a536
 data_ov61_0217a536: ; 0x0217a536
 	.byte 0x00
+	.global data_ov61_0217a537
 data_ov61_0217a537: ; 0x0217a537
 	.byte 0x00
+	.global data_ov61_0217a538
 data_ov61_0217a538: ; 0x0217a538
 	.byte 0x00
+	.global data_ov61_0217a539
 data_ov61_0217a539: ; 0x0217a539
 	.byte 0x00
+	.global data_ov61_0217a53a
 data_ov61_0217a53a: ; 0x0217a53a
 	.byte 0x00
+	.global data_ov61_0217a53b
 data_ov61_0217a53b: ; 0x0217a53b
 	.byte 0x00
+	.global data_ov61_0217a53c
 data_ov61_0217a53c: ; 0x0217a53c
 	.byte 0x00
+	.global data_ov61_0217a53d
 data_ov61_0217a53d: ; 0x0217a53d
 	.byte 0x00
+	.global data_ov61_0217a53e
 data_ov61_0217a53e: ; 0x0217a53e
 	.byte 0x00
+	.global data_ov61_0217a53f
 data_ov61_0217a53f: ; 0x0217a53f
 	.byte 0x00
+	.global data_ov61_0217a540
 data_ov61_0217a540: ; 0x0217a540
 	.byte 0x00
+	.global data_ov61_0217a541
 data_ov61_0217a541: ; 0x0217a541
 	.byte 0x00
+	.global data_ov61_0217a542
 data_ov61_0217a542: ; 0x0217a542
 	.byte 0x00
+	.global data_ov61_0217a543
 data_ov61_0217a543: ; 0x0217a543
 	.byte 0x00
+	.global data_ov61_0217a544
 data_ov61_0217a544: ; 0x0217a544
 	.byte 0x00
+	.global data_ov61_0217a545
 data_ov61_0217a545: ; 0x0217a545
 	.byte 0x00
+	.global data_ov61_0217a546
 data_ov61_0217a546: ; 0x0217a546
 	.byte 0x00
+	.global data_ov61_0217a547
 data_ov61_0217a547: ; 0x0217a547
 	.byte 0x00
+	.global data_ov61_0217a548
 data_ov61_0217a548: ; 0x0217a548
 	.byte 0x00
+	.global data_ov61_0217a549
 data_ov61_0217a549: ; 0x0217a549
 	.byte 0x00
+	.global data_ov61_0217a54a
 data_ov61_0217a54a: ; 0x0217a54a
 	.byte 0x00
+	.global data_ov61_0217a54b
 data_ov61_0217a54b: ; 0x0217a54b
 	.byte 0x00
+	.global data_ov61_0217a54c
 data_ov61_0217a54c: ; 0x0217a54c
 	.byte 0x00
+	.global data_ov61_0217a54d
 data_ov61_0217a54d: ; 0x0217a54d
 	.byte 0x00
+	.global data_ov61_0217a54e
 data_ov61_0217a54e: ; 0x0217a54e
 	.byte 0x00
+	.global data_ov61_0217a54f
 data_ov61_0217a54f: ; 0x0217a54f
 	.byte 0x00
+	.global data_ov61_0217a550
 data_ov61_0217a550: ; 0x0217a550
 	.byte 0x00
+	.global data_ov61_0217a551
 data_ov61_0217a551: ; 0x0217a551
 	.byte 0x00
+	.global data_ov61_0217a552
 data_ov61_0217a552: ; 0x0217a552
 	.byte 0x00
+	.global data_ov61_0217a553
 data_ov61_0217a553: ; 0x0217a553
 	.byte 0x00
+	.global data_ov61_0217a554
 data_ov61_0217a554: ; 0x0217a554
 	.byte 0x00
+	.global data_ov61_0217a555
 data_ov61_0217a555: ; 0x0217a555
 	.byte 0x00
+	.global data_ov61_0217a556
 data_ov61_0217a556: ; 0x0217a556
 	.byte 0x00
+	.global data_ov61_0217a557
 data_ov61_0217a557: ; 0x0217a557
 	.byte 0x00
+	.global data_ov61_0217a558
 data_ov61_0217a558: ; 0x0217a558
 	.byte 0x00
+	.global data_ov61_0217a559
 data_ov61_0217a559: ; 0x0217a559
 	.byte 0x00
+	.global data_ov61_0217a55a
 data_ov61_0217a55a: ; 0x0217a55a
 	.byte 0x00
+	.global data_ov61_0217a55b
 data_ov61_0217a55b: ; 0x0217a55b
 	.byte 0x00
+	.global data_ov61_0217a55c
 data_ov61_0217a55c: ; 0x0217a55c
 	.byte 0x00
+	.global data_ov61_0217a55d
 data_ov61_0217a55d: ; 0x0217a55d
 	.byte 0x00
+	.global data_ov61_0217a55e
 data_ov61_0217a55e: ; 0x0217a55e
 	.byte 0x00
+	.global data_ov61_0217a55f
 data_ov61_0217a55f: ; 0x0217a55f
 	.byte 0x00
+	.global data_ov61_0217a560
 data_ov61_0217a560: ; 0x0217a560
 	.byte 0x00
+	.global data_ov61_0217a561
 data_ov61_0217a561: ; 0x0217a561
 	.byte 0x00
+	.global data_ov61_0217a562
 data_ov61_0217a562: ; 0x0217a562
 	.byte 0x00
+	.global data_ov61_0217a563
 data_ov61_0217a563: ; 0x0217a563
 	.byte 0x00
+	.global data_ov61_0217a564
 data_ov61_0217a564: ; 0x0217a564
 	.byte 0x00
+	.global data_ov61_0217a565
 data_ov61_0217a565: ; 0x0217a565
 	.byte 0x00
+	.global data_ov61_0217a566
 data_ov61_0217a566: ; 0x0217a566
 	.byte 0x00
+	.global data_ov61_0217a567
 data_ov61_0217a567: ; 0x0217a567
 	.byte 0x00
+	.global data_ov61_0217a568
 data_ov61_0217a568: ; 0x0217a568
 	.byte 0x00
+	.global data_ov61_0217a569
 data_ov61_0217a569: ; 0x0217a569
 	.byte 0x00
+	.global data_ov61_0217a56a
 data_ov61_0217a56a: ; 0x0217a56a
 	.byte 0x00
+	.global data_ov61_0217a56b
 data_ov61_0217a56b: ; 0x0217a56b
 	.byte 0x00
+	.global data_ov61_0217a56c
 data_ov61_0217a56c: ; 0x0217a56c
 	.byte 0x00
+	.global data_ov61_0217a56d
 data_ov61_0217a56d: ; 0x0217a56d
 	.byte 0x00
+	.global data_ov61_0217a56e
 data_ov61_0217a56e: ; 0x0217a56e
 	.byte 0x00
+	.global data_ov61_0217a56f
 data_ov61_0217a56f: ; 0x0217a56f
 	.byte 0x00
+	.global data_ov61_0217a570
 data_ov61_0217a570: ; 0x0217a570
 	.byte 0x00
+	.global data_ov61_0217a571
 data_ov61_0217a571: ; 0x0217a571
 	.byte 0x00
+	.global data_ov61_0217a572
 data_ov61_0217a572: ; 0x0217a572
 	.byte 0x00
+	.global data_ov61_0217a573
 data_ov61_0217a573: ; 0x0217a573
 	.byte 0x00
+	.global data_ov61_0217a574
 data_ov61_0217a574: ; 0x0217a574
 	.byte 0x00
+	.global data_ov61_0217a575
 data_ov61_0217a575: ; 0x0217a575
 	.byte 0x00
+	.global data_ov61_0217a576
 data_ov61_0217a576: ; 0x0217a576
 	.byte 0x00
+	.global data_ov61_0217a577
 data_ov61_0217a577: ; 0x0217a577
 	.byte 0x00
+	.global data_ov61_0217a578
 data_ov61_0217a578: ; 0x0217a578
 	.byte 0x00
+	.global data_ov61_0217a579
 data_ov61_0217a579: ; 0x0217a579
 	.byte 0x00
+	.global data_ov61_0217a57a
 data_ov61_0217a57a: ; 0x0217a57a
 	.byte 0x00
+	.global data_ov61_0217a57b
 data_ov61_0217a57b: ; 0x0217a57b
 	.byte 0x00
+	.global data_ov61_0217a57c
 data_ov61_0217a57c: ; 0x0217a57c
 	.byte 0x00
+	.global data_ov61_0217a57d
 data_ov61_0217a57d: ; 0x0217a57d
 	.byte 0x00
+	.global data_ov61_0217a57e
 data_ov61_0217a57e: ; 0x0217a57e
 	.byte 0x00
+	.global data_ov61_0217a57f
 data_ov61_0217a57f: ; 0x0217a57f
 	.byte 0x00
+	.global data_ov61_0217a580
 data_ov61_0217a580: ; 0x0217a580
 	.byte 0x00
+	.global data_ov61_0217a581
 data_ov61_0217a581: ; 0x0217a581
 	.byte 0x00
+	.global data_ov61_0217a582
 data_ov61_0217a582: ; 0x0217a582
 	.byte 0x00
+	.global data_ov61_0217a583
 data_ov61_0217a583: ; 0x0217a583
 	.byte 0x00
+	.global data_ov61_0217a584
 data_ov61_0217a584: ; 0x0217a584
 	.byte 0x00
+	.global data_ov61_0217a585
 data_ov61_0217a585: ; 0x0217a585
 	.byte 0x00
+	.global data_ov61_0217a586
 data_ov61_0217a586: ; 0x0217a586
 	.byte 0x00
+	.global data_ov61_0217a587
 data_ov61_0217a587: ; 0x0217a587
 	.byte 0x00
+	.global data_ov61_0217a588
 data_ov61_0217a588: ; 0x0217a588
 	.byte 0x00
+	.global data_ov61_0217a589
 data_ov61_0217a589: ; 0x0217a589
 	.byte 0x00
+	.global data_ov61_0217a58a
 data_ov61_0217a58a: ; 0x0217a58a
 	.byte 0x00
+	.global data_ov61_0217a58b
 data_ov61_0217a58b: ; 0x0217a58b
 	.byte 0x00
+	.global data_ov61_0217a58c
 data_ov61_0217a58c: ; 0x0217a58c
 	.byte 0x00
+	.global data_ov61_0217a58d
 data_ov61_0217a58d: ; 0x0217a58d
 	.byte 0x00
+	.global data_ov61_0217a58e
 data_ov61_0217a58e: ; 0x0217a58e
 	.byte 0x00
+	.global data_ov61_0217a58f
 data_ov61_0217a58f: ; 0x0217a58f
 	.byte 0x00
+	.global data_ov61_0217a590
 data_ov61_0217a590: ; 0x0217a590
 	.byte 0x00
+	.global data_ov61_0217a591
 data_ov61_0217a591: ; 0x0217a591
 	.byte 0x00
+	.global data_ov61_0217a592
 data_ov61_0217a592: ; 0x0217a592
 	.byte 0x00
+	.global data_ov61_0217a593
 data_ov61_0217a593: ; 0x0217a593
 	.byte 0x00
+	.global data_ov61_0217a594
 data_ov61_0217a594: ; 0x0217a594
 	.byte 0x00
+	.global data_ov61_0217a595
 data_ov61_0217a595: ; 0x0217a595
 	.byte 0x00
+	.global data_ov61_0217a596
 data_ov61_0217a596: ; 0x0217a596
 	.byte 0x00
+	.global data_ov61_0217a597
 data_ov61_0217a597: ; 0x0217a597
 	.byte 0x00
+	.global data_ov61_0217a598
 data_ov61_0217a598: ; 0x0217a598
 	.byte 0x00
+	.global data_ov61_0217a599
 data_ov61_0217a599: ; 0x0217a599
 	.byte 0x00
+	.global data_ov61_0217a59a
 data_ov61_0217a59a: ; 0x0217a59a
 	.byte 0x00
+	.global data_ov61_0217a59b
 data_ov61_0217a59b: ; 0x0217a59b
 	.byte 0x00
+	.global data_ov61_0217a59c
 data_ov61_0217a59c: ; 0x0217a59c
 	.byte 0x00
+	.global data_ov61_0217a59d
 data_ov61_0217a59d: ; 0x0217a59d
 	.byte 0x00
+	.global data_ov61_0217a59e
 data_ov61_0217a59e: ; 0x0217a59e
 	.byte 0x00
+	.global data_ov61_0217a59f
 data_ov61_0217a59f: ; 0x0217a59f
 	.byte 0x00
+	.global data_ov61_0217a5a0
 data_ov61_0217a5a0: ; 0x0217a5a0
 	.byte 0x00
+	.global data_ov61_0217a5a1
 data_ov61_0217a5a1: ; 0x0217a5a1
 	.byte 0x00
+	.global data_ov61_0217a5a2
 data_ov61_0217a5a2: ; 0x0217a5a2
 	.byte 0x00
+	.global data_ov61_0217a5a3
 data_ov61_0217a5a3: ; 0x0217a5a3
 	.byte 0x00
+	.global data_ov61_0217a5a4
 data_ov61_0217a5a4: ; 0x0217a5a4
 	.byte 0x00
+	.global data_ov61_0217a5a5
 data_ov61_0217a5a5: ; 0x0217a5a5
 	.byte 0x00
+	.global data_ov61_0217a5a6
 data_ov61_0217a5a6: ; 0x0217a5a6
 	.byte 0x00
+	.global data_ov61_0217a5a7
 data_ov61_0217a5a7: ; 0x0217a5a7
 	.byte 0x00
+	.global data_ov61_0217a5a8
 data_ov61_0217a5a8: ; 0x0217a5a8
 	.byte 0x00
+	.global data_ov61_0217a5a9
 data_ov61_0217a5a9: ; 0x0217a5a9
 	.byte 0x00
+	.global data_ov61_0217a5aa
 data_ov61_0217a5aa: ; 0x0217a5aa
 	.byte 0x00
+	.global data_ov61_0217a5ab
 data_ov61_0217a5ab: ; 0x0217a5ab
 	.byte 0x00
+	.global data_ov61_0217a5ac
 data_ov61_0217a5ac: ; 0x0217a5ac
 	.byte 0x00
+	.global data_ov61_0217a5ad
 data_ov61_0217a5ad: ; 0x0217a5ad
 	.byte 0x00
+	.global data_ov61_0217a5ae
 data_ov61_0217a5ae: ; 0x0217a5ae
 	.byte 0x00
+	.global data_ov61_0217a5af
 data_ov61_0217a5af: ; 0x0217a5af
 	.byte 0x00
+	.global data_ov61_0217a5b0
 data_ov61_0217a5b0: ; 0x0217a5b0
 	.byte 0x00
+	.global data_ov61_0217a5b1
 data_ov61_0217a5b1: ; 0x0217a5b1
 	.byte 0x00
+	.global data_ov61_0217a5b2
 data_ov61_0217a5b2: ; 0x0217a5b2
 	.byte 0x00
+	.global data_ov61_0217a5b3
 data_ov61_0217a5b3: ; 0x0217a5b3
 	.byte 0x00
+	.global data_ov61_0217a5b4
 data_ov61_0217a5b4: ; 0x0217a5b4
 	.byte 0x00
+	.global data_ov61_0217a5b5
 data_ov61_0217a5b5: ; 0x0217a5b5
 	.byte 0x00
+	.global data_ov61_0217a5b6
 data_ov61_0217a5b6: ; 0x0217a5b6
 	.byte 0x00
+	.global data_ov61_0217a5b7
 data_ov61_0217a5b7: ; 0x0217a5b7
 	.byte 0x00
+	.global data_ov61_0217a5b8
 data_ov61_0217a5b8: ; 0x0217a5b8
 	.byte 0x00
+	.global data_ov61_0217a5b9
 data_ov61_0217a5b9: ; 0x0217a5b9
 	.byte 0x00
+	.global data_ov61_0217a5ba
 data_ov61_0217a5ba: ; 0x0217a5ba
 	.byte 0x00
+	.global data_ov61_0217a5bb
 data_ov61_0217a5bb: ; 0x0217a5bb
 	.byte 0x00
+	.global data_ov61_0217a5bc
 data_ov61_0217a5bc: ; 0x0217a5bc
 	.byte 0x00
+	.global data_ov61_0217a5bd
 data_ov61_0217a5bd: ; 0x0217a5bd
 	.byte 0x00
+	.global data_ov61_0217a5be
 data_ov61_0217a5be: ; 0x0217a5be
 	.byte 0x00
+	.global data_ov61_0217a5bf
 data_ov61_0217a5bf: ; 0x0217a5bf
 	.byte 0x00
+	.global data_ov61_0217a5c0
 data_ov61_0217a5c0: ; 0x0217a5c0
 	.byte 0x00
+	.global data_ov61_0217a5c1
 data_ov61_0217a5c1: ; 0x0217a5c1
 	.byte 0x00
+	.global data_ov61_0217a5c2
 data_ov61_0217a5c2: ; 0x0217a5c2
 	.byte 0x00
+	.global data_ov61_0217a5c3
 data_ov61_0217a5c3: ; 0x0217a5c3
 	.byte 0x00
+	.global data_ov61_0217a5c4
 data_ov61_0217a5c4: ; 0x0217a5c4
 	.byte 0x00
+	.global data_ov61_0217a5c5
 data_ov61_0217a5c5: ; 0x0217a5c5
 	.byte 0x00
+	.global data_ov61_0217a5c6
 data_ov61_0217a5c6: ; 0x0217a5c6
 	.byte 0x00
+	.global data_ov61_0217a5c7
 data_ov61_0217a5c7: ; 0x0217a5c7
 	.byte 0x00
+	.global data_ov61_0217a5c8
 data_ov61_0217a5c8: ; 0x0217a5c8
 	.byte 0x00
+	.global data_ov61_0217a5c9
 data_ov61_0217a5c9: ; 0x0217a5c9
 	.byte 0x00
+	.global data_ov61_0217a5ca
 data_ov61_0217a5ca: ; 0x0217a5ca
 	.byte 0x00
+	.global data_ov61_0217a5cb
 data_ov61_0217a5cb: ; 0x0217a5cb
 	.byte 0x00
+	.global data_ov61_0217a5cc
 data_ov61_0217a5cc: ; 0x0217a5cc
 	.byte 0x00
+	.global data_ov61_0217a5cd
 data_ov61_0217a5cd: ; 0x0217a5cd
 	.byte 0x00
+	.global data_ov61_0217a5ce
 data_ov61_0217a5ce: ; 0x0217a5ce
 	.byte 0x00
+	.global data_ov61_0217a5cf
 data_ov61_0217a5cf: ; 0x0217a5cf
 	.byte 0x00
+	.global data_ov61_0217a5d0
 data_ov61_0217a5d0: ; 0x0217a5d0
 	.byte 0x00
+	.global data_ov61_0217a5d1
 data_ov61_0217a5d1: ; 0x0217a5d1
 	.byte 0x00
+	.global data_ov61_0217a5d2
 data_ov61_0217a5d2: ; 0x0217a5d2
 	.byte 0x00
+	.global data_ov61_0217a5d3
 data_ov61_0217a5d3: ; 0x0217a5d3
 	.byte 0x00
+	.global data_ov61_0217a5d4
 data_ov61_0217a5d4: ; 0x0217a5d4
 	.byte 0x00
+	.global data_ov61_0217a5d5
 data_ov61_0217a5d5: ; 0x0217a5d5
 	.byte 0x00
+	.global data_ov61_0217a5d6
 data_ov61_0217a5d6: ; 0x0217a5d6
 	.byte 0x00
+	.global data_ov61_0217a5d7
 data_ov61_0217a5d7: ; 0x0217a5d7
 	.byte 0x00
+	.global data_ov61_0217a5d8
 data_ov61_0217a5d8: ; 0x0217a5d8
 	.byte 0x00
+	.global data_ov61_0217a5d9
 data_ov61_0217a5d9: ; 0x0217a5d9
 	.byte 0x00
+	.global data_ov61_0217a5da
 data_ov61_0217a5da: ; 0x0217a5da
 	.byte 0x00
+	.global data_ov61_0217a5db
 data_ov61_0217a5db: ; 0x0217a5db
 	.byte 0x00
+	.global data_ov61_0217a5dc
 data_ov61_0217a5dc: ; 0x0217a5dc
 	.byte 0x00
+	.global data_ov61_0217a5dd
 data_ov61_0217a5dd: ; 0x0217a5dd
 	.byte 0x00
+	.global data_ov61_0217a5de
 data_ov61_0217a5de: ; 0x0217a5de
 	.byte 0x00
+	.global data_ov61_0217a5df
 data_ov61_0217a5df: ; 0x0217a5df
 	.byte 0x00
+	.global data_ov61_0217a5e0
 data_ov61_0217a5e0: ; 0x0217a5e0
 	.byte 0x00
+	.global data_ov61_0217a5e1
 data_ov61_0217a5e1: ; 0x0217a5e1
 	.byte 0x00
+	.global data_ov61_0217a5e2
 data_ov61_0217a5e2: ; 0x0217a5e2
 	.byte 0x00
+	.global data_ov61_0217a5e3
 data_ov61_0217a5e3: ; 0x0217a5e3
 	.byte 0x00
+	.global data_ov61_0217a5e4
 data_ov61_0217a5e4: ; 0x0217a5e4
 	.byte 0xfd
+	.global data_ov61_0217a5e5
 data_ov61_0217a5e5: ; 0x0217a5e5
 	.byte 0xfc
+	.global data_ov61_0217a5e6
 data_ov61_0217a5e6: ; 0x0217a5e6
 	.byte 0x1e
+	.global data_ov61_0217a5e7
 data_ov61_0217a5e7: ; 0x0217a5e7
 	.byte 0x66
+	.global data_ov61_0217a5e8
 data_ov61_0217a5e8: ; 0x0217a5e8
 	.byte 0x6a
+	.global data_ov61_0217a5e9
 data_ov61_0217a5e9: ; 0x0217a5e9
 	.byte 0xb2
+	.global data_ov61_0217a5ea
 data_ov61_0217a5ea: ; 0x0217a5ea
 	.byte 0x00
+	.global data_ov61_0217a5eb
 data_ov61_0217a5eb: ; 0x0217a5eb
 	.byte 0x00
+	.global data_ov61_0217a5ec
 data_ov61_0217a5ec: ; 0x0217a5ec
 	.byte 0x74, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a5f0
 data_ov61_0217a5f0: ; 0x0217a5f0
 	.byte 0x80, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a5f4
 data_ov61_0217a5f4: ; 0x0217a5f4
 	.byte 0x90, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a5f8
 data_ov61_0217a5f8: ; 0x0217a5f8
 	.byte 0x9c, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a5fc
 data_ov61_0217a5fc: ; 0x0217a5fc
 	.byte 0xa8, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a600
 data_ov61_0217a600: ; 0x0217a600
 	.byte 0xb4, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a604
 data_ov61_0217a604: ; 0x0217a604
 	.byte 0xc4, 0xe9, 0x17, 0x02
+	.global data_ov61_0217a608
 data_ov61_0217a608: ; 0x0217a608
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a60c
 data_ov61_0217a60c: ; 0x0217a60c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a610
 data_ov61_0217a610: ; 0x0217a610
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a614
 data_ov61_0217a614: ; 0x0217a614
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a618
 data_ov61_0217a618: ; 0x0217a618
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a61c
 data_ov61_0217a61c: ; 0x0217a61c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a620
 data_ov61_0217a620: ; 0x0217a620
 	.byte 0x68, 0x74, 0x74, 0x70, 0x73, 0x3a, 0x2f, 0x2f, 0x6e, 0x61, 0x73, 0x2e, 0x74, 0x65, 0x73, 0x74
 	.byte 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65
 	.byte 0x74, 0x2f, 0x61, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a648
 data_ov61_0217a648: ; 0x0217a648
 	.byte 0x68, 0x74, 0x74, 0x70, 0x73, 0x3a, 0x2f, 0x2f
 	.byte 0x6e, 0x61, 0x73, 0x2e, 0x64, 0x65, 0x76, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f
 	.byte 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x2f, 0x61, 0x63, 0x00
+	.global data_ov61_0217a66c
 data_ov61_0217a66c: ; 0x0217a66c
 	.byte 0x68, 0x74, 0x74, 0x70
 	.byte 0x73, 0x3a, 0x2f, 0x2f, 0x6e, 0x61, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f
 	.byte 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x2f, 0x61, 0x63, 0x00
+	.global data_ov61_0217a68c
 data_ov61_0217a68c: ; 0x0217a68c
 	.byte 0x25, 0x63, 0x25, 0x73
 	.byte 0x25, 0x63, 0x25, 0x73, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a698
 data_ov61_0217a698: ; 0x0217a698
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a69c
 data_ov61_0217a69c: ; 0x0217a69c
 	.byte 0x47, 0x50, 0x43, 0x4d
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a6a4
 data_ov61_0217a6a4: ; 0x0217a6a4
 	.byte 0x4d, 0x41, 0x54, 0x00
+	.global data_ov61_0217a6a8
 data_ov61_0217a6a8: ; 0x0217a6a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a6ac
 data_ov61_0217a6ac: ; 0x0217a6ac
 	.byte 0x53, 0x43, 0x4d, 0x00
+	.global data_ov61_0217a6b0
 data_ov61_0217a6b0: ; 0x0217a6b0
 	.byte 0x53, 0x43, 0x4e, 0x00
+	.global data_ov61_0217a6b4
 data_ov61_0217a6b4: ; 0x0217a6b4
 	.byte 0x49, 0x20, 0x68, 0x61, 0x76, 0x65, 0x20, 0x61, 0x75, 0x74, 0x68, 0x6f
 	.byte 0x72, 0x69, 0x7a, 0x65, 0x64, 0x20, 0x79, 0x6f, 0x75, 0x72, 0x20, 0x72, 0x65, 0x71, 0x75, 0x65
 	.byte 0x73, 0x74, 0x20, 0x74, 0x6f, 0x20, 0x61, 0x64, 0x64, 0x20, 0x6d, 0x65, 0x20, 0x74, 0x6f, 0x20
 	.byte 0x79, 0x6f, 0x75, 0x72, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217a6ec
 data_ov61_0217a6ec: ; 0x0217a6ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a6f0
 data_ov61_0217a6f0: ; 0x0217a6f0
 	.byte 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x25, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a6fc
 data_ov61_0217a6fc: ; 0x0217a6fc
 	.byte 0x20, 0x61, 0x6e, 0x64
 	.byte 0x20, 0x28, 0x29, 0x00
+	.global data_ov61_0217a704
 data_ov61_0217a704: ; 0x0217a704
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a708
 data_ov61_0217a708: ; 0x0217a708
 	.byte 0x25, 0x75, 0x00, 0x00
+	.global data_ov61_0217a70c
 data_ov61_0217a70c: ; 0x0217a70c
 	.byte 0x46, 0x4d, 0x45, 0x00
+	.global data_ov61_0217a710
 data_ov61_0217a710: ; 0x0217a710
 	.byte 0x59, 0x00, 0x00, 0x00
+	.global data_ov61_0217a714
 data_ov61_0217a714: ; 0x0217a714
 	.byte 0x4e, 0x00, 0x00, 0x00
+	.global data_ov61_0217a718
 data_ov61_0217a718: ; 0x0217a718
 	.byte 0x4d, 0x44, 0x46, 0x00
+	.global data_ov61_0217a71c
 data_ov61_0217a71c: ; 0x0217a71c
 	.byte 0x56, 0x45, 0x52, 0x00
+	.global data_ov61_0217a720
 data_ov61_0217a720: ; 0x0217a720
 	.byte 0x49, 0x6e, 0x69, 0x74, 0x20, 0x73, 0x74, 0x61, 0x74, 0x65, 0x00, 0x00
+	.global data_ov61_0217a72c
 data_ov61_0217a72c: ; 0x0217a72c
 	.byte 0x53, 0x65, 0x72, 0x76
 	.byte 0x65, 0x72, 0x20, 0x66, 0x75, 0x6c, 0x6c, 0x00
+	.global data_ov61_0217a738
 data_ov61_0217a738: ; 0x0217a738
 	.byte 0x55, 0x6e, 0x6b, 0x6e, 0x6f, 0x77, 0x6e, 0x20
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x20, 0x61, 0x74, 0x74, 0x65, 0x6d, 0x70, 0x74, 0x00
+	.global data_ov61_0217a750
 data_ov61_0217a750: ; 0x0217a750
 	.byte 0x53, 0x43, 0x4d, 0x00
+	.global data_ov61_0217a754
 data_ov61_0217a754: ; 0x0217a754
 	.byte 0x53, 0x43, 0x4e, 0x00
+	.global data_ov61_0217a758
 data_ov61_0217a758: ; 0x0217a758
 	.byte 0x64, 0x77, 0x63, 0x5f, 0x70, 0x69, 0x64, 0x00
+	.global data_ov61_0217a760
 data_ov61_0217a760: ; 0x0217a760
 	.byte 0x64, 0x77, 0x63, 0x5f, 0x6d, 0x74, 0x79, 0x70, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217a76c
 data_ov61_0217a76c: ; 0x0217a76c
 	.byte 0x64, 0x77, 0x63, 0x5f
 	.byte 0x6d, 0x72, 0x65, 0x73, 0x76, 0x00, 0x00, 0x00
+	.global data_ov61_0217a778
 data_ov61_0217a778: ; 0x0217a778
 	.byte 0x64, 0x77, 0x63, 0x5f, 0x6d, 0x76, 0x65, 0x72
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a784
 data_ov61_0217a784: ; 0x0217a784
 	.byte 0x64, 0x77, 0x63, 0x5f, 0x65, 0x76, 0x61, 0x6c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a790
 data_ov61_0217a790: ; 0x0217a790
 	.byte 0x25, 0x73, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x28, 0x25, 0x73, 0x29, 0x00
+	.global data_ov61_0217a79c
 data_ov61_0217a79c: ; 0x0217a79c
 	.byte 0x25, 0x73, 0x20, 0x3d
 	.byte 0x20, 0x25, 0x75, 0x00
+	.global data_ov61_0217a7a4
 data_ov61_0217a7a4: ; 0x0217a7a4
 	.byte 0x25, 0x73, 0x20, 0x3d, 0x20, 0x25, 0x64, 0x20, 0x61, 0x6e, 0x64, 0x20
 	.byte 0x25, 0x73, 0x20, 0x21, 0x3d, 0x20, 0x25, 0x75, 0x20, 0x61, 0x6e, 0x64, 0x20, 0x6d, 0x61, 0x78
@@ -73166,243 +75359,343 @@ data_ov61_0217a7a4: ; 0x0217a7a4
 	.byte 0x20, 0x6e, 0x75, 0x6d, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x20, 0x3c, 0x20, 0x25, 0x64
 	.byte 0x20, 0x61, 0x6e, 0x64, 0x20, 0x25, 0x73, 0x20, 0x3d, 0x20, 0x25, 0x64, 0x20, 0x61, 0x6e, 0x64
 	.byte 0x20, 0x25, 0x73, 0x20, 0x21, 0x3d, 0x20, 0x25, 0x73, 0x00, 0x00, 0x00
+	.global data_ov61_0217a7fc
 data_ov61_0217a7fc: ; 0x0217a7fc
 	.byte 0x2f, 0x25, 0x75, 0x00
+	.global data_ov61_0217a800
 data_ov61_0217a800: ; 0x0217a800
 	.byte 0x53
+	.global data_ov61_0217a801
 data_ov61_0217a801: ; 0x0217a801
 	.byte 0x42
+	.global data_ov61_0217a802
 data_ov61_0217a802: ; 0x0217a802
 	.byte 0x43
+	.global data_ov61_0217a803
 data_ov61_0217a803: ; 0x0217a803
 	.byte 0x4d
+	.global data_ov61_0217a804
 data_ov61_0217a804: ; 0x0217a804
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a808
 data_ov61_0217a808: ; 0x0217a808
 	.byte 0x25, 0x73, 0x25, 0x64, 0x76, 0x25, 0x73, 0x00
+	.global data_ov61_0217a810
 data_ov61_0217a810: ; 0x0217a810
 	.byte 0x47, 0x50, 0x43, 0x4d, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a818
 data_ov61_0217a818: ; 0x0217a818
 	.byte 0x4d, 0x41, 0x54, 0x00
+	.global data_ov61_0217a81c
 data_ov61_0217a81c: ; 0x0217a81c
 	.byte 0x6e, 0x75, 0x6d, 0x70
 	.byte 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x00, 0x00
+	.global data_ov61_0217a828
 data_ov61_0217a828: ; 0x0217a828
 	.byte 0x6d, 0x61, 0x78, 0x70, 0x6c, 0x61, 0x79, 0x65
 	.byte 0x72, 0x73, 0x00, 0x00
+	.global data_ov61_0217a834
 data_ov61_0217a834: ; 0x0217a834
 	.byte 0x44, 0x54, 0x00, 0x00
+	.global data_ov61_0217a838
 data_ov61_0217a838: ; 0x0217a838
 	.byte 0x4e, 0x57, 0x43, 0x55, 0x53, 0x42, 0x41, 0x50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a844
 data_ov61_0217a844: ; 0x0217a844
 	.byte 0x4e, 0x49, 0x4e, 0x54, 0x45, 0x4e, 0x44, 0x4f, 0x2d, 0x44, 0x53, 0x00
+	.global data_ov61_0217a850
 data_ov61_0217a850: ; 0x0217a850
 	.byte 0x9c, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a854
 data_ov61_0217a854: ; 0x0217a854
 	.byte 0x60, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a858
 data_ov61_0217a858: ; 0x0217a858
 	.byte 0x80, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a85c
 data_ov61_0217a85c: ; 0x0217a85c
 	.byte 0x70, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a860
 data_ov61_0217a860: ; 0x0217a860
 	.byte 0x67, 0x77, 0x69, 0x27, 0x36, 0x26, 0x66, 0x73, 0x3d, 0x30, 0x4e, 0x66, 0x7e, 0x00, 0x00, 0x00
+	.global data_ov61_0217a870
 data_ov61_0217a870: ; 0x0217a870
 	.byte 0x25, 0x28, 0x65, 0x67, 0x45, 0x72, 0x29, 0x61, 0x67, 0x28, 0x73, 0x26, 0x6d, 0x00, 0x00, 0x00
+	.global data_ov61_0217a880
 data_ov61_0217a880: ; 0x0217a880
 	.byte 0x39, 0x35, 0x32, 0x75, 0x79, 0x62, 0x6a, 0x6e, 0x70, 0x6d, 0x75, 0x39, 0x30, 0x33, 0x62, 0x69
 	.byte 0x61, 0x40, 0x62, 0x6b, 0x35, 0x6d, 0x5b, 0x2d, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a89c
 data_ov61_0217a89c: ; 0x0217a89c
 	.byte 0x33, 0x38, 0x67, 0x36
 	.byte 0x7a, 0x78, 0x6a, 0x6b, 0x32, 0x30, 0x67, 0x76, 0x6d, 0x76, 0x5d, 0x36, 0x5e, 0x3d, 0x6a, 0x26
 	.byte 0x25, 0x76, 0x59, 0x31, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8b8
 data_ov61_0217a8b8: ; 0x0217a8b8
 	.byte 0x4e, 0x44, 0x57, 0x43, 0x53, 0x48, 0x41, 0x50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8c4
 data_ov61_0217a8c4: ; 0x0217a8c4
 	.byte 0x4e, 0x57, 0x43, 0x55, 0x53, 0x42, 0x41, 0x50, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8d0
 data_ov61_0217a8d0: ; 0x0217a8d0
 	.byte 0xec, 0xa8, 0x17, 0x02
+	.global data_ov61_0217a8d4
 data_ov61_0217a8d4: ; 0x0217a8d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8d8
 data_ov61_0217a8d8: ; 0x0217a8d8
 	.byte 0x00, 0x10, 0x00, 0x00
+	.global data_ov61_0217a8dc
 data_ov61_0217a8dc: ; 0x0217a8dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8e0
 data_ov61_0217a8e0: ; 0x0217a8e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8e4
 data_ov61_0217a8e4: ; 0x0217a8e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a8e8
 data_ov61_0217a8e8: ; 0x0217a8e8
 	.byte 0x20, 0x4e, 0x00, 0x00
+	.global data_ov61_0217a8ec
 data_ov61_0217a8ec: ; 0x0217a8ec
 	.byte 0x68, 0x74, 0x74, 0x70
 	.byte 0x73, 0x3a, 0x2f, 0x2f, 0x6e, 0x61, 0x73, 0x2e, 0x74, 0x65, 0x73, 0x74, 0x2e, 0x6e, 0x69, 0x6e
 	.byte 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x2f, 0x61, 0x63
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a914
 data_ov61_0217a914: ; 0x0217a914
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x44, 0x57, 0x43, 0x61, 0x75, 0x74
 	.byte 0x68, 0x00, 0x00, 0x00
+	.global data_ov61_0217a924
 data_ov61_0217a924: ; 0x0217a924
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x44, 0x57, 0x43, 0x61, 0x75, 0x74, 0x68
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a934
 data_ov61_0217a934: ; 0x0217a934
 	.byte 0x68, 0x74, 0x74, 0x70, 0x73, 0x3a, 0x2f, 0x2f, 0x6e, 0x61, 0x73, 0x2e
 	.byte 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74
 	.byte 0x2f, 0x61, 0x63, 0x00
+	.global data_ov61_0217a954
 data_ov61_0217a954: ; 0x0217a954
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x62, 0x6d, 0x77, 0x6f, 0x72, 0x6b
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a964
 data_ov61_0217a964: ; 0x0217a964
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x62, 0x6d, 0x77, 0x6f, 0x72, 0x6b, 0x00
+	.global data_ov61_0217a970
 data_ov61_0217a970: ; 0x0217a970
 	.byte 0x44, 0x61, 0x74, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a978
 data_ov61_0217a978: ; 0x0217a978
 	.byte 0x68, 0x74, 0x74, 0x70, 0x72, 0x65, 0x73, 0x75
 	.byte 0x6c, 0x74, 0x00, 0x00
+	.global data_ov61_0217a984
 data_ov61_0217a984: ; 0x0217a984
 	.byte 0x72, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x63, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a990
 data_ov61_0217a990: ; 0x0217a990
 	.byte 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x00, 0x00, 0x00
+	.global data_ov61_0217a998
 data_ov61_0217a998: ; 0x0217a998
 	.byte 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x6f, 0x72, 0x00
+	.global data_ov61_0217a9a0
 data_ov61_0217a9a0: ; 0x0217a9a0
 	.byte 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217a9ac
 data_ov61_0217a9ac: ; 0x0217a9ac
 	.byte 0x64, 0x61, 0x74, 0x65
 	.byte 0x74, 0x69, 0x6d, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217a9b8
 data_ov61_0217a9b8: ; 0x0217a9b8
 	.byte 0x53, 0x65, 0x74, 0x2d, 0x43, 0x6f, 0x6f, 0x6b
 	.byte 0x69, 0x65, 0x00, 0x00
+	.global data_ov61_0217a9c4
 data_ov61_0217a9c4: ; 0x0217a9c4
 	.byte 0x61, 0x63, 0x63, 0x74, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x00, 0x00
+	.global data_ov61_0217a9d0
 data_ov61_0217a9d0: ; 0x0217a9d0
 	.byte 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217a9d8
 data_ov61_0217a9d8: ; 0x0217a9d8
 	.byte 0x6c, 0x6f, 0x67, 0x69, 0x6e, 0x00, 0x00, 0x00
+	.global data_ov61_0217a9e0
 data_ov61_0217a9e0: ; 0x0217a9e0
 	.byte 0x67, 0x73, 0x62, 0x72, 0x63, 0x64, 0x00, 0x00
+	.global data_ov61_0217a9e8
 data_ov61_0217a9e8: ; 0x0217a9e8
 	.byte 0x59, 0x00, 0x00, 0x00
+	.global data_ov61_0217a9ec
 data_ov61_0217a9ec: ; 0x0217a9ec
 	.byte 0x69, 0x73, 0x77, 0x66
 	.byte 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217a9f4
 data_ov61_0217a9f4: ; 0x0217a9f4
 	.byte 0x69, 0x6e, 0x67, 0x61, 0x6d, 0x65, 0x73, 0x6e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa00
 data_ov61_0217aa00: ; 0x0217aa00
 	.byte 0x25, 0x30, 0x31, 0x33, 0x6c, 0x6c, 0x75, 0x00
+	.global data_ov61_0217aa08
 data_ov61_0217aa08: ; 0x0217aa08
 	.byte 0x25, 0x30, 0x33, 0x75, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa10
 data_ov61_0217aa10: ; 0x0217aa10
 	.byte 0x25, 0x30, 0x32, 0x78, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa18
 data_ov61_0217aa18: ; 0x0217aa18
 	.byte 0x25, 0x30, 0x32, 0x78, 0x25, 0x30, 0x32, 0x78
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa24
 data_ov61_0217aa24: ; 0x0217aa24
 	.byte 0x25, 0x30, 0x32, 0x64, 0x25, 0x30, 0x32, 0x64, 0x25, 0x30, 0x32, 0x64
 	.byte 0x25, 0x30, 0x32, 0x64, 0x25, 0x30, 0x32, 0x64, 0x25, 0x30, 0x32, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa40
 data_ov61_0217aa40: ; 0x0217aa40
 	.byte 0x25, 0x30, 0x32, 0x64, 0x3a, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x2d, 0x30, 0x30, 0x00
+	.global data_ov61_0217aa50
 data_ov61_0217aa50: ; 0x0217aa50
 	.byte 0x25, 0x30, 0x33, 0x64, 0x25, 0x30, 0x33, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa5c
 data_ov61_0217aa5c: ; 0x0217aa5c
 	.byte 0x73, 0x64, 0x6b, 0x76
 	.byte 0x65, 0x72, 0x00, 0x00
+	.global data_ov61_0217aa64
 data_ov61_0217aa64: ; 0x0217aa64
 	.byte 0x75, 0x73, 0x65, 0x72, 0x69, 0x64, 0x00, 0x00
+	.global data_ov61_0217aa6c
 data_ov61_0217aa6c: ; 0x0217aa6c
 	.byte 0x70, 0x61, 0x73, 0x73
 	.byte 0x77, 0x64, 0x00, 0x00
+	.global data_ov61_0217aa74
 data_ov61_0217aa74: ; 0x0217aa74
 	.byte 0x62, 0x73, 0x73, 0x69, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217aa7c
 data_ov61_0217aa7c: ; 0x0217aa7c
 	.byte 0x61, 0x70, 0x69, 0x6e
 	.byte 0x66, 0x6f, 0x00, 0x00
+	.global data_ov61_0217aa84
 data_ov61_0217aa84: ; 0x0217aa84
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x63, 0x64, 0x00, 0x00
+	.global data_ov61_0217aa8c
 data_ov61_0217aa8c: ; 0x0217aa8c
 	.byte 0x6d, 0x61, 0x6b, 0x65
 	.byte 0x72, 0x63, 0x64, 0x00
+	.global data_ov61_0217aa94
 data_ov61_0217aa94: ; 0x0217aa94
 	.byte 0x75, 0x6e, 0x69, 0x74, 0x63, 0x64, 0x00, 0x00
+	.global data_ov61_0217aa9c
 data_ov61_0217aa9c: ; 0x0217aa9c
 	.byte 0x6d, 0x61, 0x63, 0x61
 	.byte 0x64, 0x72, 0x00, 0x00
+	.global data_ov61_0217aaa4
 data_ov61_0217aaa4: ; 0x0217aaa4
 	.byte 0x6c, 0x61, 0x6e, 0x67, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aaac
 data_ov61_0217aaac: ; 0x0217aaac
 	.byte 0x62, 0x69, 0x72, 0x74
 	.byte 0x68, 0x00, 0x00, 0x00
+	.global data_ov61_0217aab4
 data_ov61_0217aab4: ; 0x0217aab4
 	.byte 0x64, 0x65, 0x76, 0x74, 0x69, 0x6d, 0x65, 0x00
+	.global data_ov61_0217aabc
 data_ov61_0217aabc: ; 0x0217aabc
 	.byte 0x64, 0x65, 0x76, 0x6e
 	.byte 0x61, 0x6d, 0x65, 0x00
+	.global data_ov61_0217aac4
 data_ov61_0217aac4: ; 0x0217aac4
 	.byte 0x73, 0x73, 0x69, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aacc
 data_ov61_0217aacc: ; 0x0217aacc
 	.byte 0x4e, 0x69, 0x74, 0x72
 	.byte 0x6f, 0x20, 0x57, 0x69, 0x46, 0x69, 0x20, 0x53, 0x44, 0x4b, 0x2f, 0x25, 0x64, 0x2e, 0x25, 0x64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aae4
 data_ov61_0217aae4: ; 0x0217aae4
 	.byte 0x55, 0x73, 0x65, 0x72, 0x2d, 0x41, 0x67, 0x65, 0x6e, 0x74, 0x00, 0x00
+	.global data_ov61_0217aaf0
 data_ov61_0217aaf0: ; 0x0217aaf0
 	.byte 0x48, 0x54, 0x54, 0x50, 0x5f, 0x58, 0x5f, 0x47, 0x41, 0x4d, 0x45, 0x43, 0x44, 0x00, 0x00, 0x00
+	.global data_ov61_0217ab00
 data_ov61_0217ab00: ; 0x0217ab00
 	.byte 0x9c, 0xb8, 0x17, 0x02
+	.global data_ov61_0217ab04
 data_ov61_0217ab04: ; 0x0217ab04
 	.byte 0x70, 0xb7, 0x17, 0x02
+	.global data_ov61_0217ab08
 data_ov61_0217ab08: ; 0x0217ab08
 	.byte 0x50, 0xba, 0x17, 0x02
+	.global data_ov61_0217ab0c
 data_ov61_0217ab0c: ; 0x0217ab0c
 	.byte 0x2c, 0xbb, 0x17, 0x02
+	.global data_ov61_0217ab10
 data_ov61_0217ab10: ; 0x0217ab10
 	.byte 0x08, 0xb0, 0x17, 0x02
+	.global data_ov61_0217ab14
 data_ov61_0217ab14: ; 0x0217ab14
 	.byte 0xa4, 0xb2, 0x17, 0x02
+	.global data_ov61_0217ab18
 data_ov61_0217ab18: ; 0x0217ab18
 	.byte 0x8c, 0xb3, 0x17, 0x02
+	.global data_ov61_0217ab1c
 data_ov61_0217ab1c: ; 0x0217ab1c
 	.byte 0x54, 0xb1, 0x17, 0x02
+	.global data_ov61_0217ab20
 data_ov61_0217ab20: ; 0x0217ab20
 	.byte 0x58, 0xb6, 0x17, 0x02
+	.global data_ov61_0217ab24
 data_ov61_0217ab24: ; 0x0217ab24
 	.byte 0x38, 0xb5, 0x17, 0x02
+	.global data_ov61_0217ab28
 data_ov61_0217ab28: ; 0x0217ab28
 	.byte 0x50, 0xb4, 0x17, 0x02
+	.global data_ov61_0217ab2c
 data_ov61_0217ab2c: ; 0x0217ab2c
 	.byte 0x41, 0x4c, 0x4c, 0x4f
 	.byte 0x43, 0x20, 0x68, 0x74, 0x74, 0x70, 0x2d, 0x3e, 0x6c, 0x6f, 0x77, 0x72, 0x65, 0x63, 0x76, 0x62
 	.byte 0x75, 0x66, 0x00, 0x00
+	.global data_ov61_0217ab44
 data_ov61_0217ab44: ; 0x0217ab44
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x68, 0x74, 0x74, 0x70, 0x2d, 0x3e
 	.byte 0x6c, 0x6f, 0x77, 0x73, 0x65, 0x6e, 0x64, 0x62, 0x75, 0x66, 0x00, 0x00
+	.global data_ov61_0217ab5c
 data_ov61_0217ab5c: ; 0x0217ab5c
 	.byte 0x43, 0x6f, 0x6e, 0x6e
 	.byte 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217ab68
 data_ov61_0217ab68: ; 0x0217ab68
 	.byte 0x63, 0x6c, 0x6f, 0x73, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217ab70
 data_ov61_0217ab70: ; 0x0217ab70
 	.byte 0x0d, 0x0a, 0x0d, 0x0a
+	.global data_ov61_0217ab74
 data_ov61_0217ab74: ; 0x0217ab74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ab78
 data_ov61_0217ab78: ; 0x0217ab78
 	.byte 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217ab7c
 data_ov61_0217ab7c: ; 0x0217ab7c
 	.byte 0x43, 0x6f, 0x6e, 0x74
 	.byte 0x65, 0x6e, 0x74, 0x2d, 0x4c, 0x65, 0x6e, 0x67, 0x74, 0x68, 0x00, 0x00
+	.global data_ov61_0217ab8c
 data_ov61_0217ab8c: ; 0x0217ab8c
 	.byte 0x43, 0x6f, 0x6e, 0x74
 	.byte 0x65, 0x6e, 0x74, 0x2d, 0x4c, 0x65, 0x6e, 0x67, 0x74, 0x68, 0x3a, 0x20, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aba0
 data_ov61_0217aba0: ; 0x0217aba0
 	.byte 0x0d, 0x0a, 0x00, 0x00
+	.global data_ov61_0217aba4
 data_ov61_0217aba4: ; 0x0217aba4
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x68, 0x74, 0x74, 0x70, 0x2d, 0x3e, 0x6c
 	.byte 0x6f, 0x77, 0x72, 0x65, 0x63, 0x76, 0x62, 0x75, 0x66, 0x00, 0x00, 0x00
+	.global data_ov61_0217abbc
 data_ov61_0217abbc: ; 0x0217abbc
 	.byte 0x46, 0x52, 0x45, 0x45
 	.byte 0x20, 0x68, 0x74, 0x74, 0x70, 0x2d, 0x3e, 0x6c, 0x6f, 0x77, 0x73, 0x65, 0x6e, 0x64, 0x62, 0x75
 	.byte 0x66, 0x00, 0x00, 0x00
+	.global data_ov61_0217abd4
 data_ov61_0217abd4: ; 0x0217abd4
 	.byte 0x50, 0x4f, 0x53, 0x54, 0x20, 0x2f, 0x25, 0x73, 0x20, 0x48, 0x54, 0x54
 	.byte 0x50, 0x2f, 0x31, 0x2e, 0x30, 0x0d, 0x0a, 0x43, 0x6f, 0x6e, 0x74, 0x65, 0x6e, 0x74, 0x2d, 0x74
@@ -73410,506 +75703,733 @@ data_ov61_0217abd4: ; 0x0217abd4
 	.byte 0x2f, 0x78, 0x2d, 0x77, 0x77, 0x77, 0x2d, 0x66, 0x6f, 0x72, 0x6d, 0x2d, 0x75, 0x72, 0x6c, 0x65
 	.byte 0x6e, 0x63, 0x6f, 0x64, 0x65, 0x64, 0x0d, 0x0a, 0x48, 0x6f, 0x73, 0x74, 0x3a, 0x20, 0x25, 0x73
 	.byte 0x0d, 0x0a, 0x0d, 0x0a, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac28
 data_ov61_0217ac28: ; 0x0217ac28
 	.byte 0x47, 0x45, 0x54, 0x20, 0x2f, 0x25, 0x73, 0x20
 	.byte 0x48, 0x54, 0x54, 0x50, 0x2f, 0x31, 0x2e, 0x30, 0x0d, 0x0a, 0x48, 0x6f, 0x73, 0x74, 0x3a, 0x20
 	.byte 0x25, 0x73, 0x0d, 0x0a, 0x0d, 0x0a, 0x00, 0x00
+	.global data_ov61_0217ac48
 data_ov61_0217ac48: ; 0x0217ac48
 	.byte 0x25, 0x73, 0x3a, 0x20, 0x25, 0x73, 0x0d, 0x0a
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac54
 data_ov61_0217ac54: ; 0x0217ac54
 	.byte 0x25, 0x73, 0x3d, 0x00
+	.global data_ov61_0217ac58
 data_ov61_0217ac58: ; 0x0217ac58
 	.byte 0x26, 0x25, 0x73, 0x3d, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac60
 data_ov61_0217ac60: ; 0x0217ac60
 	.byte 0x25, 0x73, 0x00, 0x00
+	.global data_ov61_0217ac64
 data_ov61_0217ac64: ; 0x0217ac64
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x62, 0x75, 0x66, 0x2d, 0x3e, 0x62
 	.byte 0x75, 0x66, 0x66, 0x65, 0x72, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac78
 data_ov61_0217ac78: ; 0x0217ac78
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x62, 0x75, 0x66
 	.byte 0x2d, 0x3e, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac8c
 data_ov61_0217ac8c: ; 0x0217ac8c
 	.byte 0x41, 0x4c, 0x4c, 0x4f
 	.byte 0x43, 0x20, 0x6e, 0x65, 0x77, 0x70, 0x74, 0x72, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ac9c
 data_ov61_0217ac9c: ; 0x0217ac9c
 	.byte 0x68, 0x74, 0x74, 0x70
 	.byte 0x3a, 0x2f, 0x2f, 0x00
+	.global data_ov61_0217aca4
 data_ov61_0217aca4: ; 0x0217aca4
 	.byte 0x68, 0x74, 0x74, 0x70, 0x73, 0x3a, 0x2f, 0x2f, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217acb0
 data_ov61_0217acb0: ; 0x0217acb0
 	.byte 0x3a, 0x00, 0x00, 0x00
+	.global data_ov61_0217acb4
 data_ov61_0217acb4: ; 0x0217acb4
 	.byte 0x2f, 0x00, 0x00, 0x00
+	.global data_ov61_0217acb8
 data_ov61_0217acb8: ; 0x0217acb8
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x72, 0x65
 	.byte 0x73, 0x75, 0x6c, 0x74, 0x2d, 0x3e, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5b, 0x69, 0x5d, 0x2e, 0x6c
 	.byte 0x61, 0x62, 0x65, 0x6c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217acd8
 data_ov61_0217acd8: ; 0x0217acd8
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x72, 0x65
 	.byte 0x73, 0x75, 0x6c, 0x74, 0x2d, 0x3e, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5b, 0x69, 0x5d, 0x2e, 0x76
 	.byte 0x61, 0x6c, 0x75, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217acf8
 data_ov61_0217acf8: ; 0x0217acf8
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x72, 0x65, 0x73
 	.byte 0x75, 0x6c, 0x74, 0x2d, 0x3e, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5b, 0x69, 0x5d, 0x2e, 0x6c, 0x61
 	.byte 0x62, 0x65, 0x6c, 0x00
+	.global data_ov61_0217ad14
 data_ov61_0217ad14: ; 0x0217ad14
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x2d
 	.byte 0x3e, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5b, 0x69, 0x5d, 0x2e, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x00
+	.global data_ov61_0217ad30
 data_ov61_0217ad30: ; 0x0217ad30
 	.byte 0x20, 0x00, 0x00, 0x00
+	.global data_ov61_0217ad34
 data_ov61_0217ad34: ; 0x0217ad34
 	.byte 0x68, 0x74, 0x74, 0x70, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x00, 0x00
+	.global data_ov61_0217ad40
 data_ov61_0217ad40: ; 0x0217ad40
 	.byte 0x32, 0x30, 0x30, 0x00
+	.global data_ov61_0217ad44
 data_ov61_0217ad44: ; 0x0217ad44
 	.byte 0x3a, 0x20, 0x00, 0x00
+	.global data_ov61_0217ad48
 data_ov61_0217ad48: ; 0x0217ad48
 	.byte 0x3d, 0x00, 0x00, 0x00
+	.global data_ov61_0217ad4c
 data_ov61_0217ad4c: ; 0x0217ad4c
 	.byte 0x26, 0x00, 0x00, 0x00
+	.global data_ov61_0217ad50
 data_ov61_0217ad50: ; 0x0217ad50
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x61, 0x72, 0x72, 0x61, 0x79, 0x5f, 0x65, 0x6e, 0x74, 0x72, 0x79
 	.byte 0x5b, 0x69, 0x5d, 0x2e, 0x6c, 0x61, 0x62, 0x65, 0x6c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ad6c
 data_ov61_0217ad6c: ; 0x0217ad6c
 	.byte 0x46, 0x52, 0x45, 0x45
 	.byte 0x20, 0x61, 0x72, 0x72, 0x61, 0x79, 0x5f, 0x65, 0x6e, 0x74, 0x72, 0x79, 0x5b, 0x69, 0x5d, 0x2e
 	.byte 0x76, 0x61, 0x6c, 0x75, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217ad88
 data_ov61_0217ad88: ; 0x0217ad88
 	.byte 0x8c, 0xad, 0x17, 0x02
+	.global data_ov61_0217ad8c
 data_ov61_0217ad8c: ; 0x0217ad8c
 	.byte 0x68, 0x74, 0x74, 0x70
 	.byte 0x3a, 0x2f, 0x2f, 0x63, 0x6f, 0x6e, 0x6e, 0x74, 0x65, 0x73, 0x74, 0x2e, 0x6e, 0x69, 0x6e, 0x74
 	.byte 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x2f, 0x00, 0x00, 0x00
+	.global data_ov61_0217adb0
 data_ov61_0217adb0: ; 0x0217adb0
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74, 0x63, 0x68, 0x65, 0x63
 	.byte 0x6b, 0x00, 0x00, 0x00
+	.global data_ov61_0217adc4
 data_ov61_0217adc4: ; 0x0217adc4
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x44, 0x57, 0x43, 0x68, 0x74, 0x74
 	.byte 0x70, 0x00, 0x00, 0x00
+	.global data_ov61_0217add4
 data_ov61_0217add4: ; 0x0217add4
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x44, 0x57, 0x43, 0x68, 0x74, 0x74, 0x70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ade4
 data_ov61_0217ade4: ; 0x0217ade4
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74, 0x63
 	.byte 0x68, 0x65, 0x63, 0x6b, 0x2d, 0x3e, 0x62, 0x6f, 0x64, 0x79, 0x5f, 0x33, 0x30, 0x32, 0x00, 0x00
+	.global data_ov61_0217ae00
 data_ov61_0217ae00: ; 0x0217ae00
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74, 0x63, 0x68, 0x65, 0x63, 0x6b
 	.byte 0x2d, 0x3e, 0x62, 0x6f, 0x64, 0x79, 0x5f, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x72, 0x74, 0x00, 0x00
+	.global data_ov61_0217ae20
 data_ov61_0217ae20: ; 0x0217ae20
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74, 0x63, 0x68, 0x65, 0x63, 0x6b
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ae34
 data_ov61_0217ae34: ; 0x0217ae34
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74
 	.byte 0x63, 0x68, 0x65, 0x63, 0x6b, 0x2d, 0x3e, 0x62, 0x6f, 0x64, 0x79, 0x5f, 0x33, 0x30, 0x32, 0x00
+	.global data_ov61_0217ae50
 data_ov61_0217ae50: ; 0x0217ae50
 	.byte 0x41, 0x4c, 0x4c, 0x4f, 0x43, 0x20, 0x75, 0x72, 0x6c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ae5c
 data_ov61_0217ae5c: ; 0x0217ae5c
 	.byte 0x41, 0x4c, 0x4c, 0x4f
 	.byte 0x43, 0x20, 0x64, 0x61, 0x74, 0x61, 0x5f, 0x6c, 0x65, 0x6e, 0x00, 0x00
+	.global data_ov61_0217ae6c
 data_ov61_0217ae6c: ; 0x0217ae6c
 	.byte 0x41, 0x4c, 0x4c, 0x4f
 	.byte 0x43, 0x20, 0x77, 0x61, 0x69, 0x74, 0x5f, 0x6c, 0x65, 0x6e, 0x00, 0x00
+	.global data_ov61_0217ae7c
 data_ov61_0217ae7c: ; 0x0217ae7c
 	.byte 0x41, 0x4c, 0x4c, 0x4f
 	.byte 0x43, 0x20, 0x44, 0x57, 0x43, 0x6e, 0x65, 0x74, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x2d, 0x3e, 0x62
 	.byte 0x6f, 0x64, 0x79, 0x5f, 0x77, 0x61, 0x79, 0x70, 0x6f, 0x72, 0x74, 0x00
+	.global data_ov61_0217ae9c
 data_ov61_0217ae9c: ; 0x0217ae9c
 	.byte 0x68, 0x74, 0x74, 0x70
 	.byte 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x00, 0x00
+	.global data_ov61_0217aea8
 data_ov61_0217aea8: ; 0x0217aea8
 	.byte 0x68, 0x74, 0x74, 0x70, 0x73, 0x3a, 0x2f, 0x2f
 	.byte 0x6e, 0x61, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69
 	.byte 0x2e, 0x6e, 0x65, 0x74, 0x2f, 0x61, 0x63, 0x00
+	.global data_ov61_0217aec8
 data_ov61_0217aec8: ; 0x0217aec8
 	.byte 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217aed0
 data_ov61_0217aed0: ; 0x0217aed0
 	.byte 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x00
+	.global data_ov61_0217aed8
 data_ov61_0217aed8: ; 0x0217aed8
 	.byte 0x48, 0x6f, 0x74, 0x53, 0x70, 0x6f, 0x74, 0x52
 	.byte 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x00
+	.global data_ov61_0217aee8
 data_ov61_0217aee8: ; 0x0217aee8
 	.byte 0x70, 0x61, 0x72, 0x73, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217aef0
 data_ov61_0217aef0: ; 0x0217aef0
 	.byte 0x48, 0x54, 0x4d, 0x4c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217aef8
 data_ov61_0217aef8: ; 0x0217aef8
 	.byte 0x72, 0x65, 0x74, 0x75, 0x72, 0x6e, 0x63, 0x64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217af04
 data_ov61_0217af04: ; 0x0217af04
 	.byte 0x75, 0x72, 0x6c, 0x00
+	.global data_ov61_0217af08
 data_ov61_0217af08: ; 0x0217af08
 	.byte 0x64, 0x61, 0x74, 0x61, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217af10
 data_ov61_0217af10: ; 0x0217af10
 	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217af18
 data_ov61_0217af18: ; 0x0217af18
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x75, 0x72, 0x6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217af24
 data_ov61_0217af24: ; 0x0217af24
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x64, 0x61, 0x74, 0x61, 0x00, 0x00, 0x00
+	.global data_ov61_0217af30
 data_ov61_0217af30: ; 0x0217af30
 	.byte 0x46, 0x52, 0x45, 0x45, 0x20, 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217af3c
 data_ov61_0217af3c: ; 0x0217af3c
 	.byte 0x44, 0x65, 0x63, 0x00
+	.global data_ov61_0217af40
 data_ov61_0217af40: ; 0x0217af40
 	.byte 0x4a, 0x75, 0x6c, 0x00
+	.global data_ov61_0217af44
 data_ov61_0217af44: ; 0x0217af44
 	.byte 0x4f, 0x63, 0x74, 0x00
+	.global data_ov61_0217af48
 data_ov61_0217af48: ; 0x0217af48
 	.byte 0x53, 0x65, 0x70, 0x00
+	.global data_ov61_0217af4c
 data_ov61_0217af4c: ; 0x0217af4c
 	.byte 0x41, 0x75, 0x67, 0x00
+	.global data_ov61_0217af50
 data_ov61_0217af50: ; 0x0217af50
 	.byte 0x4e, 0x6f, 0x76, 0x00
+	.global data_ov61_0217af54
 data_ov61_0217af54: ; 0x0217af54
 	.byte 0x4a, 0x75, 0x6e, 0x00
+	.global data_ov61_0217af58
 data_ov61_0217af58: ; 0x0217af58
 	.byte 0x4d, 0x61, 0x79, 0x00
+	.global data_ov61_0217af5c
 data_ov61_0217af5c: ; 0x0217af5c
 	.byte 0x41, 0x70, 0x72, 0x00
+	.global data_ov61_0217af60
 data_ov61_0217af60: ; 0x0217af60
 	.byte 0x4d, 0x61, 0x72, 0x00
+	.global data_ov61_0217af64
 data_ov61_0217af64: ; 0x0217af64
 	.byte 0x46, 0x65, 0x62, 0x00
+	.global data_ov61_0217af68
 data_ov61_0217af68: ; 0x0217af68
 	.byte 0x4a, 0x61, 0x6e, 0x00
+	.global data_ov61_0217af6c
 data_ov61_0217af6c: ; 0x0217af6c
 	.byte 0x68, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af70
 data_ov61_0217af70: ; 0x0217af70
 	.byte 0x64, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af74
 data_ov61_0217af74: ; 0x0217af74
 	.byte 0x60, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af78
 data_ov61_0217af78: ; 0x0217af78
 	.byte 0x5c, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af7c
 data_ov61_0217af7c: ; 0x0217af7c
 	.byte 0x58, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af80
 data_ov61_0217af80: ; 0x0217af80
 	.byte 0x54, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af84
 data_ov61_0217af84: ; 0x0217af84
 	.byte 0x40, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af88
 data_ov61_0217af88: ; 0x0217af88
 	.byte 0x4c, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af8c
 data_ov61_0217af8c: ; 0x0217af8c
 	.byte 0x48, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af90
 data_ov61_0217af90: ; 0x0217af90
 	.byte 0x44, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af94
 data_ov61_0217af94: ; 0x0217af94
 	.byte 0x50, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af98
 data_ov61_0217af98: ; 0x0217af98
 	.byte 0x3c, 0xaf, 0x17, 0x02
+	.global data_ov61_0217af9c
 data_ov61_0217af9c: ; 0x0217af9c
 	.byte 0x46, 0x72, 0x69, 0x2c
 	.byte 0x20, 0x30, 0x33, 0x20, 0x4d, 0x61, 0x72, 0x20, 0x32, 0x30, 0x30, 0x36, 0x20, 0x30, 0x31, 0x3a
 	.byte 0x32, 0x38, 0x3a, 0x31, 0x33, 0x20, 0x47, 0x4d, 0x54, 0x00, 0x00, 0x00
+	.global data_ov61_0217afbc
 data_ov61_0217afbc: ; 0x0217afbc
 	.byte 0xc0, 0xaf, 0x17, 0x02
+	.global data_ov61_0217afc0
 data_ov61_0217afc0: ; 0x0217afc0
 	.byte 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f, 0x50
 	.byte 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5a, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66
 	.byte 0x67, 0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76
 	.byte 0x77, 0x78, 0x79, 0x7a, 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x2e, 0x2d
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217b004
 data_ov61_0217b004: ; 0x0217b004
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b008
 data_ov61_0217b008: ; 0x0217b008
 	.byte 0x1c, 0xb0, 0x17, 0x02
+	.global data_ov61_0217b00c
 data_ov61_0217b00c: ; 0x0217b00c
 	.byte 0x00, 0x01, 0x00, 0x00
+	.global data_ov61_0217b010
 data_ov61_0217b010: ; 0x0217b010
 	.byte 0x50, 0xb0, 0x17, 0x02
+	.global data_ov61_0217b014
 data_ov61_0217b014: ; 0x0217b014
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b018
 data_ov61_0217b018: ; 0x0217b018
 	.byte 0x04, 0xb0, 0x17, 0x02
+	.global data_ov61_0217b01c
 data_ov61_0217b01c: ; 0x0217b01c
 	.byte 0x42, 0x45, 0x2c, 0x20
 	.byte 0x47, 0x6c, 0x6f, 0x62, 0x61, 0x6c, 0x53, 0x69, 0x67, 0x6e, 0x20, 0x6e, 0x76, 0x2d, 0x73, 0x61
 	.byte 0x2c, 0x20, 0x52, 0x6f, 0x6f, 0x74, 0x20, 0x43, 0x41, 0x2c, 0x20, 0x47, 0x6c, 0x6f, 0x62, 0x61
 	.byte 0x6c, 0x53, 0x69, 0x67, 0x6e, 0x20, 0x52, 0x6f, 0x6f, 0x74, 0x20, 0x43, 0x41, 0x00, 0x00, 0x00
+	.global data_ov61_0217b050
 data_ov61_0217b050: ; 0x0217b050
 	.byte 0xda, 0x0e, 0xe6, 0x99
+	.global data_ov61_0217b054
 data_ov61_0217b054: ; 0x0217b054
 	.byte 0x8d, 0xce, 0xa3, 0xe3
+	.global data_ov61_0217b058
 data_ov61_0217b058: ; 0x0217b058
 	.byte 0x4f, 0x8a, 0x7e, 0xfb
+	.global data_ov61_0217b05c
 data_ov61_0217b05c: ; 0x0217b05c
 	.byte 0xf1, 0x8b, 0x83, 0x25
+	.global data_ov61_0217b060
 data_ov61_0217b060: ; 0x0217b060
 	.byte 0x6b, 0xea, 0x48, 0x1f
+	.global data_ov61_0217b064
 data_ov61_0217b064: ; 0x0217b064
 	.byte 0xf1, 0x2a, 0xb0, 0xb9
+	.global data_ov61_0217b068
 data_ov61_0217b068: ; 0x0217b068
 	.byte 0x95, 0x11, 0x04, 0xbd
+	.global data_ov61_0217b06c
 data_ov61_0217b06c: ; 0x0217b06c
 	.byte 0xf0, 0x63, 0xd1, 0xe2
+	.global data_ov61_0217b070
 data_ov61_0217b070: ; 0x0217b070
 	.byte 0x67, 0x66, 0xcf, 0x1c
+	.global data_ov61_0217b074
 data_ov61_0217b074: ; 0x0217b074
 	.byte 0xdd, 0xcf, 0x1b, 0x48
+	.global data_ov61_0217b078
 data_ov61_0217b078: ; 0x0217b078
 	.byte 0x2b, 0xee, 0x8d, 0x89
+	.global data_ov61_0217b07c
 data_ov61_0217b07c: ; 0x0217b07c
 	.byte 0x8e, 0x9a, 0xaf, 0x29
+	.global data_ov61_0217b080
 data_ov61_0217b080: ; 0x0217b080
 	.byte 0x80, 0x65, 0xab, 0xe9
+	.global data_ov61_0217b084
 data_ov61_0217b084: ; 0x0217b084
 	.byte 0xc7, 0x2d, 0x12, 0xcb
+	.global data_ov61_0217b088
 data_ov61_0217b088: ; 0x0217b088
 	.byte 0xab, 0x1c, 0x4c, 0x70
+	.global data_ov61_0217b08c
 data_ov61_0217b08c: ; 0x0217b08c
 	.byte 0x07, 0xa1, 0x3d, 0x0a
+	.global data_ov61_0217b090
 data_ov61_0217b090: ; 0x0217b090
 	.byte 0x30, 0xcd, 0x15, 0x8d
+	.global data_ov61_0217b094
 data_ov61_0217b094: ; 0x0217b094
 	.byte 0x4f, 0xf8, 0xdd, 0xd4
+	.global data_ov61_0217b098
 data_ov61_0217b098: ; 0x0217b098
 	.byte 0x8c, 0x50, 0x15, 0x1c
+	.global data_ov61_0217b09c
 data_ov61_0217b09c: ; 0x0217b09c
 	.byte 0xef, 0x50, 0xee, 0xc4
+	.global data_ov61_0217b0a0
 data_ov61_0217b0a0: ; 0x0217b0a0
 	.byte 0x2e, 0xf7, 0xfc, 0xe9
+	.global data_ov61_0217b0a4
 data_ov61_0217b0a4: ; 0x0217b0a4
 	.byte 0x52, 0xf2, 0x91, 0x7d
+	.global data_ov61_0217b0a8
 data_ov61_0217b0a8: ; 0x0217b0a8
 	.byte 0xe0, 0x6d, 0xd5, 0x35
+	.global data_ov61_0217b0ac
 data_ov61_0217b0ac: ; 0x0217b0ac
 	.byte 0x30, 0x8e, 0x5e, 0x43
+	.global data_ov61_0217b0b0
 data_ov61_0217b0b0: ; 0x0217b0b0
 	.byte 0x73, 0xf2, 0x41, 0xe9
+	.global data_ov61_0217b0b4
 data_ov61_0217b0b4: ; 0x0217b0b4
 	.byte 0xd5, 0x6a, 0xe3, 0xb2
+	.global data_ov61_0217b0b8
 data_ov61_0217b0b8: ; 0x0217b0b8
 	.byte 0x89, 0x3a, 0x56, 0x39
+	.global data_ov61_0217b0bc
 data_ov61_0217b0bc: ; 0x0217b0bc
 	.byte 0x38, 0x6f, 0x06, 0x3c
+	.global data_ov61_0217b0c0
 data_ov61_0217b0c0: ; 0x0217b0c0
 	.byte 0x88, 0x69, 0x5b, 0x2a
+	.global data_ov61_0217b0c4
 data_ov61_0217b0c4: ; 0x0217b0c4
 	.byte 0x4d, 0xc5, 0xa7, 0x54
+	.global data_ov61_0217b0c8
 data_ov61_0217b0c8: ; 0x0217b0c8
 	.byte 0xb8, 0x6c, 0x89, 0xcc
+	.global data_ov61_0217b0cc
 data_ov61_0217b0cc: ; 0x0217b0cc
 	.byte 0x9b, 0xf9, 0x3c, 0xca
+	.global data_ov61_0217b0d0
 data_ov61_0217b0d0: ; 0x0217b0d0
 	.byte 0xe5, 0xfd, 0x89, 0xf5
+	.global data_ov61_0217b0d4
 data_ov61_0217b0d4: ; 0x0217b0d4
 	.byte 0x12, 0x3c, 0x92, 0x78
+	.global data_ov61_0217b0d8
 data_ov61_0217b0d8: ; 0x0217b0d8
 	.byte 0x96, 0xd6, 0xdc, 0x74
+	.global data_ov61_0217b0dc
 data_ov61_0217b0dc: ; 0x0217b0dc
 	.byte 0x6e, 0x93, 0x44, 0x61
+	.global data_ov61_0217b0e0
 data_ov61_0217b0e0: ; 0x0217b0e0
 	.byte 0xd1, 0x8d, 0xc7, 0x46
+	.global data_ov61_0217b0e4
 data_ov61_0217b0e4: ; 0x0217b0e4
 	.byte 0xb2, 0x75, 0x0e, 0x86
+	.global data_ov61_0217b0e8
 data_ov61_0217b0e8: ; 0x0217b0e8
 	.byte 0xe8, 0x19, 0x8a, 0xd5
+	.global data_ov61_0217b0ec
 data_ov61_0217b0ec: ; 0x0217b0ec
 	.byte 0x6d, 0x6c, 0xd5, 0x78
+	.global data_ov61_0217b0f0
 data_ov61_0217b0f0: ; 0x0217b0f0
 	.byte 0x16, 0x95, 0xa2, 0xe9
+	.global data_ov61_0217b0f4
 data_ov61_0217b0f4: ; 0x0217b0f4
 	.byte 0xc8, 0x0a, 0x38, 0xeb
+	.global data_ov61_0217b0f8
 data_ov61_0217b0f8: ; 0x0217b0f8
 	.byte 0xf2, 0x24, 0x13, 0x4f
+	.global data_ov61_0217b0fc
 data_ov61_0217b0fc: ; 0x0217b0fc
 	.byte 0x73, 0x54, 0x93, 0x13
+	.global data_ov61_0217b100
 data_ov61_0217b100: ; 0x0217b100
 	.byte 0x85, 0x3a, 0x1b, 0xbc
+	.global data_ov61_0217b104
 data_ov61_0217b104: ; 0x0217b104
 	.byte 0x1e, 0x34, 0xb5, 0x8b
+	.global data_ov61_0217b108
 data_ov61_0217b108: ; 0x0217b108
 	.byte 0x05, 0x8c, 0xb9, 0x77
+	.global data_ov61_0217b10c
 data_ov61_0217b10c: ; 0x0217b10c
 	.byte 0x8b, 0xb1, 0xdb, 0x1f
+	.global data_ov61_0217b110
 data_ov61_0217b110: ; 0x0217b110
 	.byte 0x20, 0x91, 0xab, 0x09
+	.global data_ov61_0217b114
 data_ov61_0217b114: ; 0x0217b114
 	.byte 0x53, 0x6e, 0x90, 0xce
+	.global data_ov61_0217b118
 data_ov61_0217b118: ; 0x0217b118
 	.byte 0x7b, 0x37, 0x74, 0xb9
+	.global data_ov61_0217b11c
 data_ov61_0217b11c: ; 0x0217b11c
 	.byte 0x70, 0x47, 0x91, 0x22
+	.global data_ov61_0217b120
 data_ov61_0217b120: ; 0x0217b120
 	.byte 0x51, 0x63, 0x16, 0x79
+	.global data_ov61_0217b124
 data_ov61_0217b124: ; 0x0217b124
 	.byte 0xae, 0xb1, 0xae, 0x41
+	.global data_ov61_0217b128
 data_ov61_0217b128: ; 0x0217b128
 	.byte 0x26, 0x08, 0xc8, 0x19
+	.global data_ov61_0217b12c
 data_ov61_0217b12c: ; 0x0217b12c
 	.byte 0x2b, 0xd1, 0x46, 0xaa
+	.global data_ov61_0217b130
 data_ov61_0217b130: ; 0x0217b130
 	.byte 0x48, 0xd6, 0x64, 0x2a
+	.global data_ov61_0217b134
 data_ov61_0217b134: ; 0x0217b134
 	.byte 0xd7, 0x83, 0x34, 0xff
+	.global data_ov61_0217b138
 data_ov61_0217b138: ; 0x0217b138
 	.byte 0x2c, 0x2a, 0xc1, 0x6c
+	.global data_ov61_0217b13c
 data_ov61_0217b13c: ; 0x0217b13c
 	.byte 0x19, 0x43, 0x4a, 0x07
+	.global data_ov61_0217b140
 data_ov61_0217b140: ; 0x0217b140
 	.byte 0x85, 0xe7, 0xd3, 0x7c
+	.global data_ov61_0217b144
 data_ov61_0217b144: ; 0x0217b144
 	.byte 0xf6, 0x21, 0x68, 0xef
+	.global data_ov61_0217b148
 data_ov61_0217b148: ; 0x0217b148
 	.byte 0xea, 0xf2, 0x52, 0x9f
+	.global data_ov61_0217b14c
 data_ov61_0217b14c: ; 0x0217b14c
 	.byte 0x7f, 0x93, 0x90, 0xcf
+	.global data_ov61_0217b150
 data_ov61_0217b150: ; 0x0217b150
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b154
 data_ov61_0217b154: ; 0x0217b154
 	.byte 0x68, 0xb1, 0x17, 0x02
+	.global data_ov61_0217b158
 data_ov61_0217b158: ; 0x0217b158
 	.byte 0x00, 0x01, 0x00, 0x00
+	.global data_ov61_0217b15c
 data_ov61_0217b15c: ; 0x0217b15c
 	.byte 0xa0, 0xb1, 0x17, 0x02
+	.global data_ov61_0217b160
 data_ov61_0217b160: ; 0x0217b160
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b164
 data_ov61_0217b164: ; 0x0217b164
 	.byte 0x50, 0xb1, 0x17, 0x02
+	.global data_ov61_0217b168
 data_ov61_0217b168: ; 0x0217b168
 	.byte 0x49, 0x45, 0x2c, 0x20, 0x42, 0x61, 0x6c, 0x74
 	.byte 0x69, 0x6d, 0x6f, 0x72, 0x65, 0x2c, 0x20, 0x43, 0x79, 0x62, 0x65, 0x72, 0x54, 0x72, 0x75, 0x73
 	.byte 0x74, 0x2c, 0x20, 0x42, 0x61, 0x6c, 0x74, 0x69, 0x6d, 0x6f, 0x72, 0x65, 0x20, 0x43, 0x79, 0x62
 	.byte 0x65, 0x72, 0x54, 0x72, 0x75, 0x73, 0x74, 0x20, 0x52, 0x6f, 0x6f, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217b1a0
 data_ov61_0217b1a0: ; 0x0217b1a0
 	.byte 0xa3, 0x04, 0xbb, 0x22
+	.global data_ov61_0217b1a4
 data_ov61_0217b1a4: ; 0x0217b1a4
 	.byte 0xab, 0x98, 0x3d, 0x57
+	.global data_ov61_0217b1a8
 data_ov61_0217b1a8: ; 0x0217b1a8
 	.byte 0xe8, 0x26, 0x72, 0x9a
+	.global data_ov61_0217b1ac
 data_ov61_0217b1ac: ; 0x0217b1ac
 	.byte 0xb5, 0x79, 0xd4, 0x29
+	.global data_ov61_0217b1b0
 data_ov61_0217b1b0: ; 0x0217b1b0
 	.byte 0xe2, 0xe1, 0xe8, 0x95
+	.global data_ov61_0217b1b4
 data_ov61_0217b1b4: ; 0x0217b1b4
 	.byte 0x80, 0xb1, 0xb0, 0xe3
+	.global data_ov61_0217b1b8
 data_ov61_0217b1b8: ; 0x0217b1b8
 	.byte 0x5b, 0x8e, 0x2b, 0x29
+	.global data_ov61_0217b1bc
 data_ov61_0217b1bc: ; 0x0217b1bc
 	.byte 0x9a, 0x64, 0xdf, 0xa1
+	.global data_ov61_0217b1c0
 data_ov61_0217b1c0: ; 0x0217b1c0
 	.byte 0x5d, 0xed, 0xb0, 0x09
+	.global data_ov61_0217b1c4
 data_ov61_0217b1c4: ; 0x0217b1c4
 	.byte 0x05, 0x6d, 0xdb, 0x28
+	.global data_ov61_0217b1c8
 data_ov61_0217b1c8: ; 0x0217b1c8
 	.byte 0x2e, 0xce, 0x62, 0xa2
+	.global data_ov61_0217b1cc
 data_ov61_0217b1cc: ; 0x0217b1cc
 	.byte 0x62, 0xfe, 0xb4, 0x88
+	.global data_ov61_0217b1d0
 data_ov61_0217b1d0: ; 0x0217b1d0
 	.byte 0xda, 0x12, 0xeb, 0x38
+	.global data_ov61_0217b1d4
 data_ov61_0217b1d4: ; 0x0217b1d4
 	.byte 0xeb, 0x21, 0x9d, 0xc0
+	.global data_ov61_0217b1d8
 data_ov61_0217b1d8: ; 0x0217b1d8
 	.byte 0x41, 0x2b, 0x01, 0x52
+	.global data_ov61_0217b1dc
 data_ov61_0217b1dc: ; 0x0217b1dc
 	.byte 0x7b, 0x88, 0x77, 0xd3
+	.global data_ov61_0217b1e0
 data_ov61_0217b1e0: ; 0x0217b1e0
 	.byte 0x1c, 0x8f, 0xc7, 0xba
+	.global data_ov61_0217b1e4
 data_ov61_0217b1e4: ; 0x0217b1e4
 	.byte 0xb9, 0x88, 0xb5, 0x6a
+	.global data_ov61_0217b1e8
 data_ov61_0217b1e8: ; 0x0217b1e8
 	.byte 0x09, 0xe7, 0x73, 0xe8
+	.global data_ov61_0217b1ec
 data_ov61_0217b1ec: ; 0x0217b1ec
 	.byte 0x11, 0x40, 0xa7, 0xd1
+	.global data_ov61_0217b1f0
 data_ov61_0217b1f0: ; 0x0217b1f0
 	.byte 0xcc, 0xca, 0x62, 0x8d
+	.global data_ov61_0217b1f4
 data_ov61_0217b1f4: ; 0x0217b1f4
 	.byte 0x2d, 0xe5, 0x8f, 0x0b
+	.global data_ov61_0217b1f8
 data_ov61_0217b1f8: ; 0x0217b1f8
 	.byte 0xa6, 0x50, 0xd2, 0xa8
+	.global data_ov61_0217b1fc
 data_ov61_0217b1fc: ; 0x0217b1fc
 	.byte 0x50, 0xc3, 0x28, 0xea
+	.global data_ov61_0217b200
 data_ov61_0217b200: ; 0x0217b200
 	.byte 0xf5, 0xab, 0x25, 0x87
+	.global data_ov61_0217b204
 data_ov61_0217b204: ; 0x0217b204
 	.byte 0x8a, 0x9a, 0x96, 0x1c
+	.global data_ov61_0217b208
 data_ov61_0217b208: ; 0x0217b208
 	.byte 0xa9, 0x67, 0xb8, 0x3f
+	.global data_ov61_0217b20c
 data_ov61_0217b20c: ; 0x0217b20c
 	.byte 0x0c, 0xd5, 0xf7, 0xf9
+	.global data_ov61_0217b210
 data_ov61_0217b210: ; 0x0217b210
 	.byte 0x52, 0x13, 0x2f, 0xc2
+	.global data_ov61_0217b214
 data_ov61_0217b214: ; 0x0217b214
 	.byte 0x1b, 0xd5, 0x70, 0x70
+	.global data_ov61_0217b218
 data_ov61_0217b218: ; 0x0217b218
 	.byte 0xf0, 0x8f, 0xc0, 0x12
+	.global data_ov61_0217b21c
 data_ov61_0217b21c: ; 0x0217b21c
 	.byte 0xca, 0x06, 0xcb, 0x9a
+	.global data_ov61_0217b220
 data_ov61_0217b220: ; 0x0217b220
 	.byte 0xe1, 0xd9, 0xca, 0x33
+	.global data_ov61_0217b224
 data_ov61_0217b224: ; 0x0217b224
 	.byte 0x7a, 0x77, 0xd6, 0xf8
+	.global data_ov61_0217b228
 data_ov61_0217b228: ; 0x0217b228
 	.byte 0xec, 0xb9, 0xf1, 0x68
+	.global data_ov61_0217b22c
 data_ov61_0217b22c: ; 0x0217b22c
 	.byte 0x44, 0x42, 0x48, 0x13
+	.global data_ov61_0217b230
 data_ov61_0217b230: ; 0x0217b230
 	.byte 0xd2, 0xc0, 0xc2, 0xa4
+	.global data_ov61_0217b234
 data_ov61_0217b234: ; 0x0217b234
 	.byte 0xae, 0x5e, 0x60, 0xfe
+	.global data_ov61_0217b238
 data_ov61_0217b238: ; 0x0217b238
 	.byte 0xb6, 0xa6, 0x05, 0xfc
+	.global data_ov61_0217b23c
 data_ov61_0217b23c: ; 0x0217b23c
 	.byte 0xb4, 0xdd, 0x07, 0x59
+	.global data_ov61_0217b240
 data_ov61_0217b240: ; 0x0217b240
 	.byte 0x02, 0xd4, 0x59, 0x18
+	.global data_ov61_0217b244
 data_ov61_0217b244: ; 0x0217b244
 	.byte 0x98, 0x63, 0xf5, 0xa5
+	.global data_ov61_0217b248
 data_ov61_0217b248: ; 0x0217b248
 	.byte 0x63, 0xe0, 0x90, 0x0c
+	.global data_ov61_0217b24c
 data_ov61_0217b24c: ; 0x0217b24c
 	.byte 0x7d, 0x5d, 0xb2, 0x06
+	.global data_ov61_0217b250
 data_ov61_0217b250: ; 0x0217b250
 	.byte 0x7a, 0xf3, 0x85, 0xea
+	.global data_ov61_0217b254
 data_ov61_0217b254: ; 0x0217b254
 	.byte 0xeb, 0xd4, 0x03, 0xae
+	.global data_ov61_0217b258
 data_ov61_0217b258: ; 0x0217b258
 	.byte 0x5e, 0x84, 0x3e, 0x5f
+	.global data_ov61_0217b25c
 data_ov61_0217b25c: ; 0x0217b25c
 	.byte 0xff, 0x15, 0xed, 0x69
+	.global data_ov61_0217b260
 data_ov61_0217b260: ; 0x0217b260
 	.byte 0xbc, 0xf9, 0x39, 0x36
+	.global data_ov61_0217b264
 data_ov61_0217b264: ; 0x0217b264
 	.byte 0x72, 0x75, 0xcf, 0x77
+	.global data_ov61_0217b268
 data_ov61_0217b268: ; 0x0217b268
 	.byte 0x52, 0x4d, 0xf3, 0xc9
+	.global data_ov61_0217b26c
 data_ov61_0217b26c: ; 0x0217b26c
 	.byte 0x90, 0x2c, 0xb9, 0x3d
+	.global data_ov61_0217b270
 data_ov61_0217b270: ; 0x0217b270
 	.byte 0xe5, 0xc9, 0x23, 0x53
+	.global data_ov61_0217b274
 data_ov61_0217b274: ; 0x0217b274
 	.byte 0x3f, 0x1f, 0x24, 0x98
+	.global data_ov61_0217b278
 data_ov61_0217b278: ; 0x0217b278
 	.byte 0x21, 0x5c, 0x07, 0x99
+	.global data_ov61_0217b27c
 data_ov61_0217b27c: ; 0x0217b27c
 	.byte 0x29, 0xbd, 0xc6, 0x3a
+	.global data_ov61_0217b280
 data_ov61_0217b280: ; 0x0217b280
 	.byte 0xec, 0xe7, 0x6e, 0x86
+	.global data_ov61_0217b284
 data_ov61_0217b284: ; 0x0217b284
 	.byte 0x3a, 0x6b, 0x97, 0x74
+	.global data_ov61_0217b288
 data_ov61_0217b288: ; 0x0217b288
 	.byte 0x63, 0x33, 0xbd, 0x68
+	.global data_ov61_0217b28c
 data_ov61_0217b28c: ; 0x0217b28c
 	.byte 0x18, 0x31, 0xf0, 0x78
+	.global data_ov61_0217b290
 data_ov61_0217b290: ; 0x0217b290
 	.byte 0x8d, 0x76, 0xbf, 0xfc
+	.global data_ov61_0217b294
 data_ov61_0217b294: ; 0x0217b294
 	.byte 0x9e, 0x8e, 0x5d, 0x2a
+	.global data_ov61_0217b298
 data_ov61_0217b298: ; 0x0217b298
 	.byte 0x86, 0xa7, 0x4d, 0x90
+	.global data_ov61_0217b29c
 data_ov61_0217b29c: ; 0x0217b29c
 	.byte 0xdc, 0x27, 0x1a, 0x39
+	.global data_ov61_0217b2a0
 data_ov61_0217b2a0: ; 0x0217b2a0
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b2a4
 data_ov61_0217b2a4: ; 0x0217b2a4
 	.byte 0xb8, 0xb2, 0x17, 0x02
+	.global data_ov61_0217b2a8
 data_ov61_0217b2a8: ; 0x0217b2a8
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b2ac
 data_ov61_0217b2ac: ; 0x0217b2ac
 	.byte 0x08, 0xb3, 0x17, 0x02
+	.global data_ov61_0217b2b0
 data_ov61_0217b2b0: ; 0x0217b2b0
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b2b4
 data_ov61_0217b2b4: ; 0x0217b2b4
 	.byte 0xa0, 0xb2, 0x17, 0x02
+	.global data_ov61_0217b2b8
 data_ov61_0217b2b8: ; 0x0217b2b8
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x47, 0x54, 0x45, 0x20
 	.byte 0x43, 0x6f, 0x72, 0x70, 0x6f, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2c, 0x20, 0x47, 0x54, 0x45
@@ -73917,162 +76437,240 @@ data_ov61_0217b2b8: ; 0x0217b2b8
 	.byte 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x2c, 0x20, 0x49, 0x6e, 0x63, 0x2e, 0x2c, 0x20, 0x47, 0x54, 0x45
 	.byte 0x20, 0x43, 0x79, 0x62, 0x65, 0x72, 0x54, 0x72, 0x75, 0x73, 0x74, 0x20, 0x47, 0x6c, 0x6f, 0x62
 	.byte 0x61, 0x6c, 0x20, 0x52, 0x6f, 0x6f, 0x74, 0x00
+	.global data_ov61_0217b308
 data_ov61_0217b308: ; 0x0217b308
 	.byte 0x95, 0x0f, 0xa0, 0xb6
+	.global data_ov61_0217b30c
 data_ov61_0217b30c: ; 0x0217b30c
 	.byte 0xf0, 0x50, 0x9c, 0xe8
+	.global data_ov61_0217b310
 data_ov61_0217b310: ; 0x0217b310
 	.byte 0x7a, 0xc7, 0x88, 0xcd
+	.global data_ov61_0217b314
 data_ov61_0217b314: ; 0x0217b314
 	.byte 0xdd, 0x17, 0x0e, 0x2e
+	.global data_ov61_0217b318
 data_ov61_0217b318: ; 0x0217b318
 	.byte 0xb0, 0x94, 0xd0, 0x1b
+	.global data_ov61_0217b31c
 data_ov61_0217b31c: ; 0x0217b31c
 	.byte 0x3d, 0x0e, 0xf6, 0x94
+	.global data_ov61_0217b320
 data_ov61_0217b320: ; 0x0217b320
 	.byte 0xc0, 0x8a, 0x94, 0xc7
+	.global data_ov61_0217b324
 data_ov61_0217b324: ; 0x0217b324
 	.byte 0x06, 0xc8, 0x90, 0x97
+	.global data_ov61_0217b328
 data_ov61_0217b328: ; 0x0217b328
 	.byte 0xc8, 0xb8, 0x64, 0x1a
+	.global data_ov61_0217b32c
 data_ov61_0217b32c: ; 0x0217b32c
 	.byte 0x7a, 0x7e, 0x6c, 0x3c
+	.global data_ov61_0217b330
 data_ov61_0217b330: ; 0x0217b330
 	.byte 0x53, 0xe1, 0x37, 0x28
+	.global data_ov61_0217b334
 data_ov61_0217b334: ; 0x0217b334
 	.byte 0x73, 0x60, 0x7f, 0xb2
+	.global data_ov61_0217b338
 data_ov61_0217b338: ; 0x0217b338
 	.byte 0x97, 0x53, 0x07, 0x9f
+	.global data_ov61_0217b33c
 data_ov61_0217b33c: ; 0x0217b33c
 	.byte 0x53, 0xf9, 0x6d, 0x58
+	.global data_ov61_0217b340
 data_ov61_0217b340: ; 0x0217b340
 	.byte 0x94, 0xd2, 0xaf, 0x8d
+	.global data_ov61_0217b344
 data_ov61_0217b344: ; 0x0217b344
 	.byte 0x6d, 0x88, 0x67, 0x80
+	.global data_ov61_0217b348
 data_ov61_0217b348: ; 0x0217b348
 	.byte 0xe6, 0xed, 0xb2, 0x95
+	.global data_ov61_0217b34c
 data_ov61_0217b34c: ; 0x0217b34c
 	.byte 0xcf, 0x72, 0x31, 0xca
+	.global data_ov61_0217b350
 data_ov61_0217b350: ; 0x0217b350
 	.byte 0xa5, 0x1c, 0x72, 0xba
+	.global data_ov61_0217b354
 data_ov61_0217b354: ; 0x0217b354
 	.byte 0x5c, 0x02, 0xe7, 0x64
+	.global data_ov61_0217b358
 data_ov61_0217b358: ; 0x0217b358
 	.byte 0x42, 0xe7, 0xf9, 0xa9
+	.global data_ov61_0217b35c
 data_ov61_0217b35c: ; 0x0217b35c
 	.byte 0x2c, 0xd6, 0x3a, 0x0d
+	.global data_ov61_0217b360
 data_ov61_0217b360: ; 0x0217b360
 	.byte 0xac, 0x8d, 0x42, 0xaa
+	.global data_ov61_0217b364
 data_ov61_0217b364: ; 0x0217b364
 	.byte 0x24, 0x01, 0x39, 0xe6
+	.global data_ov61_0217b368
 data_ov61_0217b368: ; 0x0217b368
 	.byte 0x9c, 0x3f, 0x01, 0x85
+	.global data_ov61_0217b36c
 data_ov61_0217b36c: ; 0x0217b36c
 	.byte 0x57, 0x0d, 0x58, 0x87
+	.global data_ov61_0217b370
 data_ov61_0217b370: ; 0x0217b370
 	.byte 0x45, 0xf8, 0xd3, 0x85
+	.global data_ov61_0217b374
 data_ov61_0217b374: ; 0x0217b374
 	.byte 0xaa, 0x93, 0x69, 0x26
+	.global data_ov61_0217b378
 data_ov61_0217b378: ; 0x0217b378
 	.byte 0x85, 0x70, 0x48, 0x80
+	.global data_ov61_0217b37c
 data_ov61_0217b37c: ; 0x0217b37c
 	.byte 0x3f, 0x12, 0x15, 0xc7
+	.global data_ov61_0217b380
 data_ov61_0217b380: ; 0x0217b380
 	.byte 0x79, 0xb4, 0x1f, 0x05
+	.global data_ov61_0217b384
 data_ov61_0217b384: ; 0x0217b384
 	.byte 0x2f, 0x3b, 0x62, 0x99
+	.global data_ov61_0217b388
 data_ov61_0217b388: ; 0x0217b388
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b38c
 data_ov61_0217b38c: ; 0x0217b38c
 	.byte 0xa0, 0xb3, 0x17, 0x02
+	.global data_ov61_0217b390
 data_ov61_0217b390: ; 0x0217b390
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b394
 data_ov61_0217b394: ; 0x0217b394
 	.byte 0xcc, 0xb3, 0x17, 0x02
+	.global data_ov61_0217b398
 data_ov61_0217b398: ; 0x0217b398
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b39c
 data_ov61_0217b39c: ; 0x0217b39c
 	.byte 0x88, 0xb3, 0x17, 0x02
+	.global data_ov61_0217b3a0
 data_ov61_0217b3a0: ; 0x0217b3a0
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x47, 0x54, 0x45, 0x20, 0x43, 0x6f, 0x72, 0x70, 0x6f, 0x72, 0x61, 0x74
 	.byte 0x69, 0x6f, 0x6e, 0x2c, 0x20, 0x47, 0x54, 0x45, 0x20, 0x43, 0x79, 0x62, 0x65, 0x72, 0x54, 0x72
 	.byte 0x75, 0x73, 0x74, 0x20, 0x52, 0x6f, 0x6f, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217b3cc
 data_ov61_0217b3cc: ; 0x0217b3cc
 	.byte 0xb8, 0xe6, 0x4f, 0xba
+	.global data_ov61_0217b3d0
 data_ov61_0217b3d0: ; 0x0217b3d0
 	.byte 0xdb, 0x98, 0x7c, 0x71
+	.global data_ov61_0217b3d4
 data_ov61_0217b3d4: ; 0x0217b3d4
 	.byte 0x7c, 0xaf, 0x44, 0xb7
+	.global data_ov61_0217b3d8
 data_ov61_0217b3d8: ; 0x0217b3d8
 	.byte 0xd3, 0x0f, 0x46, 0xd9
+	.global data_ov61_0217b3dc
 data_ov61_0217b3dc: ; 0x0217b3dc
 	.byte 0x64, 0xe5, 0x93, 0xc1
+	.global data_ov61_0217b3e0
 data_ov61_0217b3e0: ; 0x0217b3e0
 	.byte 0x42, 0x8e, 0xc7, 0xba
+	.global data_ov61_0217b3e4
 data_ov61_0217b3e4: ; 0x0217b3e4
 	.byte 0x49, 0x8d, 0x35, 0x2d
+	.global data_ov61_0217b3e8
 data_ov61_0217b3e8: ; 0x0217b3e8
 	.byte 0x7a, 0xe7, 0x8b, 0xbd
+	.global data_ov61_0217b3ec
 data_ov61_0217b3ec: ; 0x0217b3ec
 	.byte 0xe5, 0x05, 0x31, 0x59
+	.global data_ov61_0217b3f0
 data_ov61_0217b3f0: ; 0x0217b3f0
 	.byte 0xc6, 0xb1, 0x2f, 0x0a
+	.global data_ov61_0217b3f4
 data_ov61_0217b3f4: ; 0x0217b3f4
 	.byte 0x0c, 0xfb, 0x9f, 0xa7
+	.global data_ov61_0217b3f8
 data_ov61_0217b3f8: ; 0x0217b3f8
 	.byte 0x3f, 0xa2, 0x09, 0x66
+	.global data_ov61_0217b3fc
 data_ov61_0217b3fc: ; 0x0217b3fc
 	.byte 0x84, 0x56, 0x1e, 0x37
+	.global data_ov61_0217b400
 data_ov61_0217b400: ; 0x0217b400
 	.byte 0x29, 0x1b, 0x87, 0xe9
+	.global data_ov61_0217b404
 data_ov61_0217b404: ; 0x0217b404
 	.byte 0x7e, 0x0c, 0xca, 0x9a
+	.global data_ov61_0217b408
 data_ov61_0217b408: ; 0x0217b408
 	.byte 0x9f, 0xa5, 0x7f, 0xf5
+	.global data_ov61_0217b40c
 data_ov61_0217b40c: ; 0x0217b40c
 	.byte 0x15, 0x94, 0xa3, 0xd5
+	.global data_ov61_0217b410
 data_ov61_0217b410: ; 0x0217b410
 	.byte 0xa2, 0x46, 0x82, 0xd8
+	.global data_ov61_0217b414
 data_ov61_0217b414: ; 0x0217b414
 	.byte 0x68, 0x4c, 0xd1, 0x37
+	.global data_ov61_0217b418
 data_ov61_0217b418: ; 0x0217b418
 	.byte 0x15, 0x06, 0x68, 0xaf
+	.global data_ov61_0217b41c
 data_ov61_0217b41c: ; 0x0217b41c
 	.byte 0xbd, 0xf8, 0xb0, 0xb3
+	.global data_ov61_0217b420
 data_ov61_0217b420: ; 0x0217b420
 	.byte 0xf0, 0x29, 0xf5, 0x95
+	.global data_ov61_0217b424
 data_ov61_0217b424: ; 0x0217b424
 	.byte 0x5a, 0x09, 0x16, 0x61
+	.global data_ov61_0217b428
 data_ov61_0217b428: ; 0x0217b428
 	.byte 0x77, 0x0a, 0x22, 0x25
+	.global data_ov61_0217b42c
 data_ov61_0217b42c: ; 0x0217b42c
 	.byte 0xd4, 0x4f, 0x45, 0xaa
+	.global data_ov61_0217b430
 data_ov61_0217b430: ; 0x0217b430
 	.byte 0xc7, 0xbd, 0xe5, 0x96
+	.global data_ov61_0217b434
 data_ov61_0217b434: ; 0x0217b434
 	.byte 0xdf, 0xf9, 0xd4, 0xa8
+	.global data_ov61_0217b438
 data_ov61_0217b438: ; 0x0217b438
 	.byte 0x8e, 0x42, 0xcc, 0x24
+	.global data_ov61_0217b43c
 data_ov61_0217b43c: ; 0x0217b43c
 	.byte 0xc0, 0x1e, 0x91, 0x27
+	.global data_ov61_0217b440
 data_ov61_0217b440: ; 0x0217b440
 	.byte 0x4a, 0xb5, 0x6d, 0x06
+	.global data_ov61_0217b444
 data_ov61_0217b444: ; 0x0217b444
 	.byte 0x80, 0x63, 0x39, 0xc4
+	.global data_ov61_0217b448
 data_ov61_0217b448: ; 0x0217b448
 	.byte 0xa2, 0x5e, 0x38, 0x03
+	.global data_ov61_0217b44c
 data_ov61_0217b44c: ; 0x0217b44c
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b450
 data_ov61_0217b450: ; 0x0217b450
 	.byte 0x64, 0xb4, 0x17, 0x02
+	.global data_ov61_0217b454
 data_ov61_0217b454: ; 0x0217b454
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b458
 data_ov61_0217b458: ; 0x0217b458
 	.byte 0xb4, 0xb4, 0x17, 0x02
+	.global data_ov61_0217b45c
 data_ov61_0217b45c: ; 0x0217b45c
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b460
 data_ov61_0217b460: ; 0x0217b460
 	.byte 0x4c, 0xb4, 0x17, 0x02
+	.global data_ov61_0217b464
 data_ov61_0217b464: ; 0x0217b464
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x57, 0x61, 0x73, 0x68, 0x69, 0x6e, 0x67, 0x74
 	.byte 0x6f, 0x6e, 0x2c, 0x20, 0x4e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x20, 0x6f, 0x66, 0x20
@@ -74080,146 +76678,217 @@ data_ov61_0217b464: ; 0x0217b464
 	.byte 0x2c, 0x20, 0x4e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x20, 0x43, 0x41, 0x2c, 0x20, 0x63
 	.byte 0x61, 0x40, 0x6e, 0x6f, 0x61, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x2e, 0x63
 	.byte 0x6f, 0x6d, 0x00, 0x00
+	.global data_ov61_0217b4b4
 data_ov61_0217b4b4: ; 0x0217b4b4
 	.byte 0xb3, 0xcd, 0x79, 0x97
+	.global data_ov61_0217b4b8
 data_ov61_0217b4b8: ; 0x0217b4b8
 	.byte 0x77, 0x5d, 0x8a, 0xaf
+	.global data_ov61_0217b4bc
 data_ov61_0217b4bc: ; 0x0217b4bc
 	.byte 0x86, 0xa8, 0xe8, 0xd7
+	.global data_ov61_0217b4c0
 data_ov61_0217b4c0: ; 0x0217b4c0
 	.byte 0x73, 0x1c, 0x77, 0xdf
+	.global data_ov61_0217b4c4
 data_ov61_0217b4c4: ; 0x0217b4c4
 	.byte 0x10, 0x90, 0x1f, 0x81
+	.global data_ov61_0217b4c8
 data_ov61_0217b4c8: ; 0x0217b4c8
 	.byte 0xf8, 0x41, 0x9e, 0x21
+	.global data_ov61_0217b4cc
 data_ov61_0217b4cc: ; 0x0217b4cc
 	.byte 0x55, 0xdf, 0xbc, 0xfc
+	.global data_ov61_0217b4d0
 data_ov61_0217b4d0: ; 0x0217b4d0
 	.byte 0x63, 0xfb, 0x19, 0x43
+	.global data_ov61_0217b4d4
 data_ov61_0217b4d4: ; 0x0217b4d4
 	.byte 0xf1, 0xf6, 0xc4, 0x72
+	.global data_ov61_0217b4d8
 data_ov61_0217b4d8: ; 0x0217b4d8
 	.byte 0x42, 0x49, 0xbd, 0xad
+	.global data_ov61_0217b4dc
 data_ov61_0217b4dc: ; 0x0217b4dc
 	.byte 0x44, 0x68, 0x4e, 0xf3
+	.global data_ov61_0217b4e0
 data_ov61_0217b4e0: ; 0x0217b4e0
 	.byte 0xda, 0x1d, 0xe6, 0x4d
+	.global data_ov61_0217b4e4
 data_ov61_0217b4e4: ; 0x0217b4e4
 	.byte 0xd8, 0xf9, 0x59, 0x88
+	.global data_ov61_0217b4e8
 data_ov61_0217b4e8: ; 0x0217b4e8
 	.byte 0xdc, 0xae, 0x3e, 0x9b
+	.global data_ov61_0217b4ec
 data_ov61_0217b4ec: ; 0x0217b4ec
 	.byte 0x38, 0x09, 0xca, 0x7f
+	.global data_ov61_0217b4f0
 data_ov61_0217b4f0: ; 0x0217b4f0
 	.byte 0xff, 0xdc, 0x24, 0xa2
+	.global data_ov61_0217b4f4
 data_ov61_0217b4f4: ; 0x0217b4f4
 	.byte 0x44, 0x78, 0x78, 0x49
+	.global data_ov61_0217b4f8
 data_ov61_0217b4f8: ; 0x0217b4f8
 	.byte 0x93, 0xd4, 0x84, 0x40
+	.global data_ov61_0217b4fc
 data_ov61_0217b4fc: ; 0x0217b4fc
 	.byte 0x10, 0xb8, 0xec, 0x3e
+	.global data_ov61_0217b500
 data_ov61_0217b500: ; 0x0217b500
 	.byte 0xdb, 0x2d, 0x93, 0xc8
+	.global data_ov61_0217b504
 data_ov61_0217b504: ; 0x0217b504
 	.byte 0x11, 0xc8, 0xfd, 0x78
+	.global data_ov61_0217b508
 data_ov61_0217b508: ; 0x0217b508
 	.byte 0x2d, 0x61, 0xad, 0x31
+	.global data_ov61_0217b50c
 data_ov61_0217b50c: ; 0x0217b50c
 	.byte 0xae, 0x86, 0x26, 0xb0
+	.global data_ov61_0217b510
 data_ov61_0217b510: ; 0x0217b510
 	.byte 0xfd, 0x5a, 0x3f, 0xa1
+	.global data_ov61_0217b514
 data_ov61_0217b514: ; 0x0217b514
 	.byte 0x3d, 0xbf, 0xe2, 0x4b
+	.global data_ov61_0217b518
 data_ov61_0217b518: ; 0x0217b518
 	.byte 0x49, 0xec, 0xce, 0x66
+	.global data_ov61_0217b51c
 data_ov61_0217b51c: ; 0x0217b51c
 	.byte 0x98, 0x58, 0x26, 0x12
+	.global data_ov61_0217b520
 data_ov61_0217b520: ; 0x0217b520
 	.byte 0xc0, 0xfb, 0xf4, 0x77
+	.global data_ov61_0217b524
 data_ov61_0217b524: ; 0x0217b524
 	.byte 0x65, 0x1b, 0xea, 0xfb
+	.global data_ov61_0217b528
 data_ov61_0217b528: ; 0x0217b528
 	.byte 0xcb, 0x7f, 0xe0, 0x8c
+	.global data_ov61_0217b52c
 data_ov61_0217b52c: ; 0x0217b52c
 	.byte 0xcb, 0x02, 0xa3, 0x4e
+	.global data_ov61_0217b530
 data_ov61_0217b530: ; 0x0217b530
 	.byte 0x5e, 0x8c, 0xea, 0x9b
+	.global data_ov61_0217b534
 data_ov61_0217b534: ; 0x0217b534
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b538
 data_ov61_0217b538: ; 0x0217b538
 	.byte 0xcc, 0xb5, 0x17, 0x02
+	.global data_ov61_0217b53c
 data_ov61_0217b53c: ; 0x0217b53c
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b540
 data_ov61_0217b540: ; 0x0217b540
 	.byte 0x4c, 0xb5, 0x17, 0x02
+	.global data_ov61_0217b544
 data_ov61_0217b544: ; 0x0217b544
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b548
 data_ov61_0217b548: ; 0x0217b548
 	.byte 0x34, 0xb5, 0x17, 0x02
+	.global data_ov61_0217b54c
 data_ov61_0217b54c: ; 0x0217b54c
 	.byte 0xd2, 0x36, 0x36, 0x6a
+	.global data_ov61_0217b550
 data_ov61_0217b550: ; 0x0217b550
 	.byte 0x8b, 0xd7, 0xc2, 0x5b
+	.global data_ov61_0217b554
 data_ov61_0217b554: ; 0x0217b554
 	.byte 0x9e, 0xda, 0x81, 0x41
+	.global data_ov61_0217b558
 data_ov61_0217b558: ; 0x0217b558
 	.byte 0x62, 0x8f, 0x38, 0xee
+	.global data_ov61_0217b55c
 data_ov61_0217b55c: ; 0x0217b55c
 	.byte 0x49, 0x04, 0x55, 0xd6
+	.global data_ov61_0217b560
 data_ov61_0217b560: ; 0x0217b560
 	.byte 0xd0, 0xef, 0x1c, 0x1b
+	.global data_ov61_0217b564
 data_ov61_0217b564: ; 0x0217b564
 	.byte 0x95, 0x16, 0x47, 0xef
+	.global data_ov61_0217b568
 data_ov61_0217b568: ; 0x0217b568
 	.byte 0x18, 0x48, 0x35, 0x3a
+	.global data_ov61_0217b56c
 data_ov61_0217b56c: ; 0x0217b56c
 	.byte 0x52, 0xf4, 0x2b, 0x6a
+	.global data_ov61_0217b570
 data_ov61_0217b570: ; 0x0217b570
 	.byte 0x06, 0x8f, 0x3b, 0x2f
+	.global data_ov61_0217b574
 data_ov61_0217b574: ; 0x0217b574
 	.byte 0xea, 0x56, 0xe3, 0xaf
+	.global data_ov61_0217b578
 data_ov61_0217b578: ; 0x0217b578
 	.byte 0x86, 0x8d, 0x9e, 0x17
+	.global data_ov61_0217b57c
 data_ov61_0217b57c: ; 0x0217b57c
 	.byte 0xf7, 0x9e, 0xb4, 0x65
+	.global data_ov61_0217b580
 data_ov61_0217b580: ; 0x0217b580
 	.byte 0x75, 0x02, 0x4d, 0xef
+	.global data_ov61_0217b584
 data_ov61_0217b584: ; 0x0217b584
 	.byte 0xcb, 0x09, 0xa2, 0x21
+	.global data_ov61_0217b588
 data_ov61_0217b588: ; 0x0217b588
 	.byte 0x51, 0xd8, 0x9b, 0xd0
+	.global data_ov61_0217b58c
 data_ov61_0217b58c: ; 0x0217b58c
 	.byte 0x67, 0xd0, 0xba, 0x0d
+	.global data_ov61_0217b590
 data_ov61_0217b590: ; 0x0217b590
 	.byte 0x92, 0x06, 0x14, 0x73
+	.global data_ov61_0217b594
 data_ov61_0217b594: ; 0x0217b594
 	.byte 0xd4, 0x93, 0xcb, 0x97
+	.global data_ov61_0217b598
 data_ov61_0217b598: ; 0x0217b598
 	.byte 0x2a, 0x00, 0x9c, 0x5c
+	.global data_ov61_0217b59c
 data_ov61_0217b59c: ; 0x0217b59c
 	.byte 0x4e, 0x0c, 0xbc, 0xfa
+	.global data_ov61_0217b5a0
 data_ov61_0217b5a0: ; 0x0217b5a0
 	.byte 0x15, 0x52, 0xfc, 0xf2
+	.global data_ov61_0217b5a4
 data_ov61_0217b5a4: ; 0x0217b5a4
 	.byte 0x44, 0x6e, 0xda, 0x11
+	.global data_ov61_0217b5a8
 data_ov61_0217b5a8: ; 0x0217b5a8
 	.byte 0x4a, 0x6e, 0x08, 0x9f
+	.global data_ov61_0217b5ac
 data_ov61_0217b5ac: ; 0x0217b5ac
 	.byte 0x2f, 0x2d, 0xe3, 0xf9
+	.global data_ov61_0217b5b0
 data_ov61_0217b5b0: ; 0x0217b5b0
 	.byte 0xaa, 0x3a, 0x86, 0x73
+	.global data_ov61_0217b5b4
 data_ov61_0217b5b4: ; 0x0217b5b4
 	.byte 0xb6, 0x46, 0x53, 0x58
+	.global data_ov61_0217b5b8
 data_ov61_0217b5b8: ; 0x0217b5b8
 	.byte 0xc8, 0x89, 0x05, 0xbd
+	.global data_ov61_0217b5bc
 data_ov61_0217b5bc: ; 0x0217b5bc
 	.byte 0x83, 0x11, 0xb8, 0x73
+	.global data_ov61_0217b5c0
 data_ov61_0217b5c0: ; 0x0217b5c0
 	.byte 0x3f, 0xaa, 0x07, 0x8d
+	.global data_ov61_0217b5c4
 data_ov61_0217b5c4: ; 0x0217b5c4
 	.byte 0xf4, 0x42, 0x4d, 0xe7
+	.global data_ov61_0217b5c8
 data_ov61_0217b5c8: ; 0x0217b5c8
 	.byte 0x40, 0x9d, 0x1c, 0x37
+	.global data_ov61_0217b5cc
 data_ov61_0217b5cc: ; 0x0217b5cc
 	.byte 0x5a, 0x41, 0x2c, 0x20
 	.byte 0x57, 0x65, 0x73, 0x74, 0x65, 0x72, 0x6e, 0x20, 0x43, 0x61, 0x70, 0x65, 0x2c, 0x20, 0x43, 0x61
@@ -74231,18 +76900,25 @@ data_ov61_0217b5cc: ; 0x0217b5cc
 	.byte 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x43, 0x41, 0x2c, 0x20, 0x70, 0x72, 0x65, 0x6d, 0x69, 0x75
 	.byte 0x6d, 0x2d, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x40, 0x74, 0x68, 0x61, 0x77, 0x74, 0x65, 0x2e
 	.byte 0x63, 0x6f, 0x6d, 0x00
+	.global data_ov61_0217b654
 data_ov61_0217b654: ; 0x0217b654
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b658
 data_ov61_0217b658: ; 0x0217b658
 	.byte 0x6c, 0xb6, 0x17, 0x02
+	.global data_ov61_0217b65c
 data_ov61_0217b65c: ; 0x0217b65c
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b660
 data_ov61_0217b660: ; 0x0217b660
 	.byte 0xec, 0xb6, 0x17, 0x02
+	.global data_ov61_0217b664
 data_ov61_0217b664: ; 0x0217b664
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b668
 data_ov61_0217b668: ; 0x0217b668
 	.byte 0x54, 0xb6, 0x17, 0x02
+	.global data_ov61_0217b66c
 data_ov61_0217b66c: ; 0x0217b66c
 	.byte 0x5a, 0x41, 0x2c, 0x20
 	.byte 0x57, 0x65, 0x73, 0x74, 0x65, 0x72, 0x6e, 0x20, 0x43, 0x61, 0x70, 0x65, 0x2c, 0x20, 0x43, 0x61
@@ -74253,146 +76929,217 @@ data_ov61_0217b66c: ; 0x0217b66c
 	.byte 0x54, 0x68, 0x61, 0x77, 0x74, 0x65, 0x20, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x43, 0x41
 	.byte 0x2c, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2d, 0x63, 0x65, 0x72, 0x74, 0x73, 0x40, 0x74
 	.byte 0x68, 0x61, 0x77, 0x74, 0x65, 0x2e, 0x63, 0x6f, 0x6d, 0x00, 0x00, 0x00
+	.global data_ov61_0217b6ec
 data_ov61_0217b6ec: ; 0x0217b6ec
 	.byte 0xd3, 0xa4, 0x50, 0x6e
+	.global data_ov61_0217b6f0
 data_ov61_0217b6f0: ; 0x0217b6f0
 	.byte 0xc8, 0xff, 0x56, 0x6b
+	.global data_ov61_0217b6f4
 data_ov61_0217b6f4: ; 0x0217b6f4
 	.byte 0xe6, 0xcf, 0x5d, 0xb6
+	.global data_ov61_0217b6f8
 data_ov61_0217b6f8: ; 0x0217b6f8
 	.byte 0xea, 0x0c, 0x68, 0x75
+	.global data_ov61_0217b6fc
 data_ov61_0217b6fc: ; 0x0217b6fc
 	.byte 0x47, 0xa2, 0xaa, 0xc2
+	.global data_ov61_0217b700
 data_ov61_0217b700: ; 0x0217b700
 	.byte 0xda, 0x84, 0x25, 0xfc
+	.global data_ov61_0217b704
 data_ov61_0217b704: ; 0x0217b704
 	.byte 0xa8, 0xf4, 0x47, 0x51
+	.global data_ov61_0217b708
 data_ov61_0217b708: ; 0x0217b708
 	.byte 0xda, 0x85, 0xb5, 0x20
+	.global data_ov61_0217b70c
 data_ov61_0217b70c: ; 0x0217b70c
 	.byte 0x74, 0x94, 0x86, 0x1e
+	.global data_ov61_0217b710
 data_ov61_0217b710: ; 0x0217b710
 	.byte 0x0f, 0x75, 0xc9, 0xe9
+	.global data_ov61_0217b714
 data_ov61_0217b714: ; 0x0217b714
 	.byte 0x08, 0x61, 0xf5, 0x06
+	.global data_ov61_0217b718
 data_ov61_0217b718: ; 0x0217b718
 	.byte 0x6d, 0x30, 0x6e, 0x15
+	.global data_ov61_0217b71c
 data_ov61_0217b71c: ; 0x0217b71c
 	.byte 0x19, 0x02, 0xe9, 0x52
+	.global data_ov61_0217b720
 data_ov61_0217b720: ; 0x0217b720
 	.byte 0xc0, 0x62, 0xdb, 0x4d
+	.global data_ov61_0217b724
 data_ov61_0217b724: ; 0x0217b724
 	.byte 0x99, 0x9e, 0xe2, 0x6a
+	.global data_ov61_0217b728
 data_ov61_0217b728: ; 0x0217b728
 	.byte 0x0c, 0x44, 0x38, 0xcd
+	.global data_ov61_0217b72c
 data_ov61_0217b72c: ; 0x0217b72c
 	.byte 0xfe, 0xbe, 0xe3, 0x64
+	.global data_ov61_0217b730
 data_ov61_0217b730: ; 0x0217b730
 	.byte 0x09, 0x70, 0xc5, 0xfe
+	.global data_ov61_0217b734
 data_ov61_0217b734: ; 0x0217b734
 	.byte 0xb1, 0x6b, 0x29, 0xb6
+	.global data_ov61_0217b738
 data_ov61_0217b738: ; 0x0217b738
 	.byte 0x2f, 0x49, 0xc8, 0x3b
+	.global data_ov61_0217b73c
 data_ov61_0217b73c: ; 0x0217b73c
 	.byte 0xd4, 0x27, 0x04, 0x25
+	.global data_ov61_0217b740
 data_ov61_0217b740: ; 0x0217b740
 	.byte 0x10, 0x97, 0x2f, 0xe7
+	.global data_ov61_0217b744
 data_ov61_0217b744: ; 0x0217b744
 	.byte 0x90, 0x6d, 0xc0, 0x28
+	.global data_ov61_0217b748
 data_ov61_0217b748: ; 0x0217b748
 	.byte 0x42, 0x99, 0xd7, 0x4c
+	.global data_ov61_0217b74c
 data_ov61_0217b74c: ; 0x0217b74c
 	.byte 0x43, 0xde, 0xc3, 0xf5
+	.global data_ov61_0217b750
 data_ov61_0217b750: ; 0x0217b750
 	.byte 0x21, 0x6d, 0x54, 0x9f
+	.global data_ov61_0217b754
 data_ov61_0217b754: ; 0x0217b754
 	.byte 0x5d, 0xc3, 0x58, 0xe1
+	.global data_ov61_0217b758
 data_ov61_0217b758: ; 0x0217b758
 	.byte 0xc0, 0xe4, 0xd9, 0x5b
+	.global data_ov61_0217b75c
 data_ov61_0217b75c: ; 0x0217b75c
 	.byte 0xb0, 0xb8, 0xdc, 0xb4
+	.global data_ov61_0217b760
 data_ov61_0217b760: ; 0x0217b760
 	.byte 0x7b, 0xdf, 0x36, 0x3a
+	.global data_ov61_0217b764
 data_ov61_0217b764: ; 0x0217b764
 	.byte 0xc2, 0xb5, 0x66, 0x22
+	.global data_ov61_0217b768
 data_ov61_0217b768: ; 0x0217b768
 	.byte 0x12, 0xd6, 0x87, 0x0d
+	.global data_ov61_0217b76c
 data_ov61_0217b76c: ; 0x0217b76c
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b770
 data_ov61_0217b770: ; 0x0217b770
 	.byte 0x04, 0xb8, 0x17, 0x02
+	.global data_ov61_0217b774
 data_ov61_0217b774: ; 0x0217b774
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217b778
 data_ov61_0217b778: ; 0x0217b778
 	.byte 0x84, 0xb7, 0x17, 0x02
+	.global data_ov61_0217b77c
 data_ov61_0217b77c: ; 0x0217b77c
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b780
 data_ov61_0217b780: ; 0x0217b780
 	.byte 0x6c, 0xb7, 0x17, 0x02
+	.global data_ov61_0217b784
 data_ov61_0217b784: ; 0x0217b784
 	.byte 0xcc, 0x5e, 0xd1, 0x11
+	.global data_ov61_0217b788
 data_ov61_0217b788: ; 0x0217b788
 	.byte 0x5d, 0x5c, 0x69, 0xd0
+	.global data_ov61_0217b78c
 data_ov61_0217b78c: ; 0x0217b78c
 	.byte 0xab, 0xd3, 0xb9, 0x6a
+	.global data_ov61_0217b790
 data_ov61_0217b790: ; 0x0217b790
 	.byte 0x4c, 0x99, 0x1f, 0x59
+	.global data_ov61_0217b794
 data_ov61_0217b794: ; 0x0217b794
 	.byte 0x98, 0x30, 0x8e, 0x16
+	.global data_ov61_0217b798
 data_ov61_0217b798: ; 0x0217b798
 	.byte 0x85, 0x20, 0x46, 0x6d
+	.global data_ov61_0217b79c
 data_ov61_0217b79c: ; 0x0217b79c
 	.byte 0x47, 0x3f, 0xd4, 0x85
+	.global data_ov61_0217b7a0
 data_ov61_0217b7a0: ; 0x0217b7a0
 	.byte 0x20, 0x84, 0xe1, 0x6d
+	.global data_ov61_0217b7a4
 data_ov61_0217b7a4: ; 0x0217b7a4
 	.byte 0xb3, 0xf8, 0xa4, 0xed
+	.global data_ov61_0217b7a8
 data_ov61_0217b7a8: ; 0x0217b7a8
 	.byte 0x0c, 0xf1, 0x17, 0x0f
+	.global data_ov61_0217b7ac
 data_ov61_0217b7ac: ; 0x0217b7ac
 	.byte 0x3b, 0xf9, 0xa7, 0xf9
+	.global data_ov61_0217b7b0
 data_ov61_0217b7b0: ; 0x0217b7b0
 	.byte 0x25, 0xd7, 0xc1, 0xcf
+	.global data_ov61_0217b7b4
 data_ov61_0217b7b4: ; 0x0217b7b4
 	.byte 0x84, 0x63, 0xf2, 0x7c
+	.global data_ov61_0217b7b8
 data_ov61_0217b7b8: ; 0x0217b7b8
 	.byte 0x63, 0xcf, 0xa2, 0x47
+	.global data_ov61_0217b7bc
 data_ov61_0217b7bc: ; 0x0217b7bc
 	.byte 0xf2, 0xc6, 0x5b, 0x33
+	.global data_ov61_0217b7c0
 data_ov61_0217b7c0: ; 0x0217b7c0
 	.byte 0x8e, 0x64, 0x40, 0x04
+	.global data_ov61_0217b7c4
 data_ov61_0217b7c4: ; 0x0217b7c4
 	.byte 0x68, 0xc1, 0x80, 0xb9
+	.global data_ov61_0217b7c8
 data_ov61_0217b7c8: ; 0x0217b7c8
 	.byte 0x64, 0x1c, 0x45, 0x77
+	.global data_ov61_0217b7cc
 data_ov61_0217b7cc: ; 0x0217b7cc
 	.byte 0xc7, 0xd8, 0x6e, 0xf5
+	.global data_ov61_0217b7d0
 data_ov61_0217b7d0: ; 0x0217b7d0
 	.byte 0x95, 0x29, 0x3c, 0x50
+	.global data_ov61_0217b7d4
 data_ov61_0217b7d4: ; 0x0217b7d4
 	.byte 0xe8, 0x34, 0xd7, 0x78
+	.global data_ov61_0217b7d8
 data_ov61_0217b7d8: ; 0x0217b7d8
 	.byte 0x1f, 0xa8, 0xba, 0x6d
+	.global data_ov61_0217b7dc
 data_ov61_0217b7dc: ; 0x0217b7dc
 	.byte 0x43, 0x91, 0x95, 0x8f
+	.global data_ov61_0217b7e0
 data_ov61_0217b7e0: ; 0x0217b7e0
 	.byte 0x45, 0x57, 0x5e, 0x7e
+	.global data_ov61_0217b7e4
 data_ov61_0217b7e4: ; 0x0217b7e4
 	.byte 0xc5, 0xfb, 0xca, 0xa4
+	.global data_ov61_0217b7e8
 data_ov61_0217b7e8: ; 0x0217b7e8
 	.byte 0x04, 0xeb, 0xea, 0x97
+	.global data_ov61_0217b7ec
 data_ov61_0217b7ec: ; 0x0217b7ec
 	.byte 0x37, 0x54, 0x30, 0x6f
+	.global data_ov61_0217b7f0
 data_ov61_0217b7f0: ; 0x0217b7f0
 	.byte 0xbb, 0x01, 0x47, 0x32
+	.global data_ov61_0217b7f4
 data_ov61_0217b7f4: ; 0x0217b7f4
 	.byte 0x33, 0xcd, 0xdc, 0x57
+	.global data_ov61_0217b7f8
 data_ov61_0217b7f8: ; 0x0217b7f8
 	.byte 0x9b, 0x64, 0x69, 0x61
+	.global data_ov61_0217b7fc
 data_ov61_0217b7fc: ; 0x0217b7fc
 	.byte 0xf8, 0x9b, 0x1d, 0x1c
+	.global data_ov61_0217b800
 data_ov61_0217b800: ; 0x0217b800
 	.byte 0x89, 0x4f, 0x5c, 0x67
+	.global data_ov61_0217b804
 data_ov61_0217b804: ; 0x0217b804
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x56, 0x65, 0x72, 0x69, 0x53, 0x69, 0x67, 0x6e
 	.byte 0x2c, 0x20, 0x49, 0x6e, 0x63, 0x2e, 0x2c, 0x20, 0x43, 0x6c, 0x61, 0x73, 0x73, 0x20, 0x33, 0x20
@@ -74404,18 +77151,25 @@ data_ov61_0217b804: ; 0x0217b804
 	.byte 0x72, 0x69, 0x7a, 0x65, 0x64, 0x20, 0x75, 0x73, 0x65, 0x20, 0x6f, 0x6e, 0x6c, 0x79, 0x2c, 0x20
 	.byte 0x56, 0x65, 0x72, 0x69, 0x53, 0x69, 0x67, 0x6e, 0x20, 0x54, 0x72, 0x75, 0x73, 0x74, 0x20, 0x4e
 	.byte 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x00, 0x00
+	.global data_ov61_0217b898
 data_ov61_0217b898: ; 0x0217b898
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217b89c
 data_ov61_0217b89c: ; 0x0217b89c
 	.byte 0xb0, 0xb8, 0x17, 0x02
+	.global data_ov61_0217b8a0
 data_ov61_0217b8a0: ; 0x0217b8a0
 	.byte 0x00, 0x01, 0x00, 0x00
+	.global data_ov61_0217b8a4
 data_ov61_0217b8a4: ; 0x0217b8a4
 	.byte 0x4c, 0xb9, 0x17, 0x02
+	.global data_ov61_0217b8a8
 data_ov61_0217b8a8: ; 0x0217b8a8
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217b8ac
 data_ov61_0217b8ac: ; 0x0217b8ac
 	.byte 0x98, 0xb8, 0x17, 0x02
+	.global data_ov61_0217b8b0
 data_ov61_0217b8b0: ; 0x0217b8b0
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x56, 0x65, 0x72, 0x69, 0x53, 0x69, 0x67, 0x6e, 0x2c, 0x20, 0x49, 0x6e
 	.byte 0x63, 0x2e, 0x2c, 0x20, 0x56, 0x65, 0x72, 0x69, 0x53, 0x69, 0x67, 0x6e, 0x20, 0x54, 0x72, 0x75
@@ -74427,1246 +77181,1826 @@ data_ov61_0217b8b0: ; 0x0217b8b0
 	.byte 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x20, 0x50, 0x72, 0x69, 0x6d, 0x61, 0x72, 0x79, 0x20, 0x43
 	.byte 0x65, 0x72, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x41, 0x75, 0x74
 	.byte 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x20, 0x2d, 0x20, 0x47, 0x33, 0x00
+	.global data_ov61_0217b94c
 data_ov61_0217b94c: ; 0x0217b94c
 	.byte 0xcb, 0xba, 0x9c, 0x52
+	.global data_ov61_0217b950
 data_ov61_0217b950: ; 0x0217b950
 	.byte 0xfc, 0x78, 0x1f, 0x1a
+	.global data_ov61_0217b954
 data_ov61_0217b954: ; 0x0217b954
 	.byte 0x1e, 0x6f, 0x1b, 0x37
+	.global data_ov61_0217b958
 data_ov61_0217b958: ; 0x0217b958
 	.byte 0x73, 0xbd, 0xf8, 0xc9
+	.global data_ov61_0217b95c
 data_ov61_0217b95c: ; 0x0217b95c
 	.byte 0x6b, 0x94, 0x12, 0x30
+	.global data_ov61_0217b960
 data_ov61_0217b960: ; 0x0217b960
 	.byte 0x4f, 0xf0, 0x36, 0x47
+	.global data_ov61_0217b964
 data_ov61_0217b964: ; 0x0217b964
 	.byte 0xf5, 0xd0, 0x91, 0x0a
+	.global data_ov61_0217b968
 data_ov61_0217b968: ; 0x0217b968
 	.byte 0xf5, 0x17, 0xc8, 0xa5
+	.global data_ov61_0217b96c
 data_ov61_0217b96c: ; 0x0217b96c
 	.byte 0x61, 0xc1, 0x16, 0x40
+	.global data_ov61_0217b970
 data_ov61_0217b970: ; 0x0217b970
 	.byte 0x4d, 0xfb, 0x8a, 0x61
+	.global data_ov61_0217b974
 data_ov61_0217b974: ; 0x0217b974
 	.byte 0x90, 0xe5, 0x76, 0x20
+	.global data_ov61_0217b978
 data_ov61_0217b978: ; 0x0217b978
 	.byte 0xc1, 0x11, 0x06, 0x7d
+	.global data_ov61_0217b97c
 data_ov61_0217b97c: ; 0x0217b97c
 	.byte 0xab, 0x2c, 0x6e, 0xa6
+	.global data_ov61_0217b980
 data_ov61_0217b980: ; 0x0217b980
 	.byte 0xf5, 0x11, 0x41, 0x8e
+	.global data_ov61_0217b984
 data_ov61_0217b984: ; 0x0217b984
 	.byte 0xfa, 0x2d, 0xad, 0x2a
+	.global data_ov61_0217b988
 data_ov61_0217b988: ; 0x0217b988
 	.byte 0x61, 0x59, 0xa4, 0x67
+	.global data_ov61_0217b98c
 data_ov61_0217b98c: ; 0x0217b98c
 	.byte 0x26, 0x4c, 0xd0, 0xe8
+	.global data_ov61_0217b990
 data_ov61_0217b990: ; 0x0217b990
 	.byte 0xbc, 0x52, 0x5b, 0x70
+	.global data_ov61_0217b994
 data_ov61_0217b994: ; 0x0217b994
 	.byte 0x20, 0x04, 0x58, 0xd1
+	.global data_ov61_0217b998
 data_ov61_0217b998: ; 0x0217b998
 	.byte 0x7a, 0xc9, 0xa4, 0x69
+	.global data_ov61_0217b99c
 data_ov61_0217b99c: ; 0x0217b99c
 	.byte 0xbc, 0x83, 0x17, 0x64
+	.global data_ov61_0217b9a0
 data_ov61_0217b9a0: ; 0x0217b9a0
 	.byte 0xad, 0x05, 0x8b, 0xbc
+	.global data_ov61_0217b9a4
 data_ov61_0217b9a4: ; 0x0217b9a4
 	.byte 0xd0, 0x58, 0xce, 0x8d
+	.global data_ov61_0217b9a8
 data_ov61_0217b9a8: ; 0x0217b9a8
 	.byte 0x8c, 0xf5, 0xeb, 0xf0
+	.global data_ov61_0217b9ac
 data_ov61_0217b9ac: ; 0x0217b9ac
 	.byte 0x42, 0x49, 0x0b, 0x9d
+	.global data_ov61_0217b9b0
 data_ov61_0217b9b0: ; 0x0217b9b0
 	.byte 0x97, 0x27, 0x67, 0x32
+	.global data_ov61_0217b9b4
 data_ov61_0217b9b4: ; 0x0217b9b4
 	.byte 0x6e, 0xe1, 0xae, 0x93
+	.global data_ov61_0217b9b8
 data_ov61_0217b9b8: ; 0x0217b9b8
 	.byte 0x15, 0x1c, 0x70, 0xbc
+	.global data_ov61_0217b9bc
 data_ov61_0217b9bc: ; 0x0217b9bc
 	.byte 0x20, 0x4d, 0x2f, 0x18
+	.global data_ov61_0217b9c0
 data_ov61_0217b9c0: ; 0x0217b9c0
 	.byte 0xde, 0x92, 0x88, 0xe8
+	.global data_ov61_0217b9c4
 data_ov61_0217b9c4: ; 0x0217b9c4
 	.byte 0x6c, 0x85, 0x57, 0x11
+	.global data_ov61_0217b9c8
 data_ov61_0217b9c8: ; 0x0217b9c8
 	.byte 0x1a, 0xe9, 0x7e, 0xe3
+	.global data_ov61_0217b9cc
 data_ov61_0217b9cc: ; 0x0217b9cc
 	.byte 0x26, 0x11, 0x54, 0xa2
+	.global data_ov61_0217b9d0
 data_ov61_0217b9d0: ; 0x0217b9d0
 	.byte 0x45, 0x96, 0x55, 0x83
+	.global data_ov61_0217b9d4
 data_ov61_0217b9d4: ; 0x0217b9d4
 	.byte 0xca, 0x30, 0x89, 0xe8
+	.global data_ov61_0217b9d8
 data_ov61_0217b9d8: ; 0x0217b9d8
 	.byte 0xdc, 0xd8, 0xa3, 0xed
+	.global data_ov61_0217b9dc
 data_ov61_0217b9dc: ; 0x0217b9dc
 	.byte 0x2a, 0x80, 0x3f, 0x7f
+	.global data_ov61_0217b9e0
 data_ov61_0217b9e0: ; 0x0217b9e0
 	.byte 0x79, 0x65, 0x57, 0x3e
+	.global data_ov61_0217b9e4
 data_ov61_0217b9e4: ; 0x0217b9e4
 	.byte 0x15, 0x20, 0x66, 0x08
+	.global data_ov61_0217b9e8
 data_ov61_0217b9e8: ; 0x0217b9e8
 	.byte 0x2f, 0x95, 0x93, 0xbf
+	.global data_ov61_0217b9ec
 data_ov61_0217b9ec: ; 0x0217b9ec
 	.byte 0xaa, 0x47, 0x2f, 0xa8
+	.global data_ov61_0217b9f0
 data_ov61_0217b9f0: ; 0x0217b9f0
 	.byte 0x46, 0x97, 0xf0, 0x12
+	.global data_ov61_0217b9f4
 data_ov61_0217b9f4: ; 0x0217b9f4
 	.byte 0xe2, 0xfe, 0xc2, 0x0a
+	.global data_ov61_0217b9f8
 data_ov61_0217b9f8: ; 0x0217b9f8
 	.byte 0x2b, 0x51, 0xe6, 0x76
+	.global data_ov61_0217b9fc
 data_ov61_0217b9fc: ; 0x0217b9fc
 	.byte 0xe6, 0xb7, 0x46, 0xb7
+	.global data_ov61_0217ba00
 data_ov61_0217ba00: ; 0x0217ba00
 	.byte 0xe2, 0x0d, 0xa6, 0xcc
+	.global data_ov61_0217ba04
 data_ov61_0217ba04: ; 0x0217ba04
 	.byte 0xa8, 0xc3, 0x4c, 0x59
+	.global data_ov61_0217ba08
 data_ov61_0217ba08: ; 0x0217ba08
 	.byte 0x55, 0x89, 0xe6, 0xe8
+	.global data_ov61_0217ba0c
 data_ov61_0217ba0c: ; 0x0217ba0c
 	.byte 0x53, 0x5c, 0x1c, 0xea
+	.global data_ov61_0217ba10
 data_ov61_0217ba10: ; 0x0217ba10
 	.byte 0x9d, 0xf0, 0x62, 0x16
+	.global data_ov61_0217ba14
 data_ov61_0217ba14: ; 0x0217ba14
 	.byte 0x0b, 0xa7, 0xc9, 0x5f
+	.global data_ov61_0217ba18
 data_ov61_0217ba18: ; 0x0217ba18
 	.byte 0x0c, 0xf0, 0xde, 0xc2
+	.global data_ov61_0217ba1c
 data_ov61_0217ba1c: ; 0x0217ba1c
 	.byte 0x76, 0xce, 0xaf, 0xf7
+	.global data_ov61_0217ba20
 data_ov61_0217ba20: ; 0x0217ba20
 	.byte 0x6a, 0xf2, 0xfa, 0x41
+	.global data_ov61_0217ba24
 data_ov61_0217ba24: ; 0x0217ba24
 	.byte 0xa6, 0xa2, 0x33, 0x14
+	.global data_ov61_0217ba28
 data_ov61_0217ba28: ; 0x0217ba28
 	.byte 0xc9, 0xe5, 0x7a, 0x63
+	.global data_ov61_0217ba2c
 data_ov61_0217ba2c: ; 0x0217ba2c
 	.byte 0xd3, 0x9e, 0x62, 0x37
+	.global data_ov61_0217ba30
 data_ov61_0217ba30: ; 0x0217ba30
 	.byte 0xd5, 0x85, 0x65, 0x9e
+	.global data_ov61_0217ba34
 data_ov61_0217ba34: ; 0x0217ba34
 	.byte 0x0e, 0xe6, 0x53, 0x24
+	.global data_ov61_0217ba38
 data_ov61_0217ba38: ; 0x0217ba38
 	.byte 0x74, 0x1b, 0x5e, 0x1d
+	.global data_ov61_0217ba3c
 data_ov61_0217ba3c: ; 0x0217ba3c
 	.byte 0x12, 0x53, 0x5b, 0xc7
+	.global data_ov61_0217ba40
 data_ov61_0217ba40: ; 0x0217ba40
 	.byte 0x2c, 0xe7, 0x83, 0x49
+	.global data_ov61_0217ba44
 data_ov61_0217ba44: ; 0x0217ba44
 	.byte 0x3b, 0x15, 0xae, 0x8a
+	.global data_ov61_0217ba48
 data_ov61_0217ba48: ; 0x0217ba48
 	.byte 0x68, 0xb9, 0x57, 0x97
+	.global data_ov61_0217ba4c
 data_ov61_0217ba4c: ; 0x0217ba4c
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217ba50
 data_ov61_0217ba50: ; 0x0217ba50
 	.byte 0x64, 0xba, 0x17, 0x02
+	.global data_ov61_0217ba54
 data_ov61_0217ba54: ; 0x0217ba54
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217ba58
 data_ov61_0217ba58: ; 0x0217ba58
 	.byte 0xa8, 0xba, 0x17, 0x02
+	.global data_ov61_0217ba5c
 data_ov61_0217ba5c: ; 0x0217ba5c
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217ba60
 data_ov61_0217ba60: ; 0x0217ba60
 	.byte 0x4c, 0xba, 0x17, 0x02
+	.global data_ov61_0217ba64
 data_ov61_0217ba64: ; 0x0217ba64
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x56, 0x65, 0x72, 0x69, 0x53, 0x69, 0x67, 0x6e
 	.byte 0x2c, 0x20, 0x49, 0x6e, 0x63, 0x2e, 0x2c, 0x20, 0x43, 0x6c, 0x61, 0x73, 0x73, 0x20, 0x33, 0x20
 	.byte 0x50, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x20, 0x50, 0x72, 0x69, 0x6d, 0x61, 0x72, 0x79, 0x20, 0x43
 	.byte 0x65, 0x72, 0x74, 0x69, 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x41, 0x75, 0x74
 	.byte 0x68, 0x6f, 0x72, 0x69, 0x74, 0x79, 0x00, 0x00
+	.global data_ov61_0217baa8
 data_ov61_0217baa8: ; 0x0217baa8
 	.byte 0xc9, 0x5c, 0x59, 0x9e
+	.global data_ov61_0217baac
 data_ov61_0217baac: ; 0x0217baac
 	.byte 0xf2, 0x1b, 0x8a, 0x01
+	.global data_ov61_0217bab0
 data_ov61_0217bab0: ; 0x0217bab0
 	.byte 0x14, 0xb4, 0x10, 0xdf
+	.global data_ov61_0217bab4
 data_ov61_0217bab4: ; 0x0217bab4
 	.byte 0x04, 0x40, 0xdb, 0xe3
+	.global data_ov61_0217bab8
 data_ov61_0217bab8: ; 0x0217bab8
 	.byte 0x57, 0xaf, 0x6a, 0x45
+	.global data_ov61_0217babc
 data_ov61_0217babc: ; 0x0217babc
 	.byte 0x40, 0x8f, 0x84, 0x0c
+	.global data_ov61_0217bac0
 data_ov61_0217bac0: ; 0x0217bac0
 	.byte 0x0b, 0xd1, 0x33, 0xd9
+	.global data_ov61_0217bac4
 data_ov61_0217bac4: ; 0x0217bac4
 	.byte 0xd9, 0x11, 0xcf, 0xee
+	.global data_ov61_0217bac8
 data_ov61_0217bac8: ; 0x0217bac8
 	.byte 0x02, 0x58, 0x1f, 0x25
+	.global data_ov61_0217bacc
 data_ov61_0217bacc: ; 0x0217bacc
 	.byte 0xf7, 0x2a, 0xa8, 0x44
+	.global data_ov61_0217bad0
 data_ov61_0217bad0: ; 0x0217bad0
 	.byte 0x05, 0xaa, 0xec, 0x03
+	.global data_ov61_0217bad4
 data_ov61_0217bad4: ; 0x0217bad4
 	.byte 0x1f, 0x78, 0x7f, 0x9e
+	.global data_ov61_0217bad8
 data_ov61_0217bad8: ; 0x0217bad8
 	.byte 0x93, 0xb9, 0x9a, 0x00
+	.global data_ov61_0217badc
 data_ov61_0217badc: ; 0x0217badc
 	.byte 0xaa, 0x23, 0x7d, 0xd6
+	.global data_ov61_0217bae0
 data_ov61_0217bae0: ; 0x0217bae0
 	.byte 0xac, 0x85, 0xa2, 0x63
+	.global data_ov61_0217bae4
 data_ov61_0217bae4: ; 0x0217bae4
 	.byte 0x45, 0xc7, 0x72, 0x27
+	.global data_ov61_0217bae8
 data_ov61_0217bae8: ; 0x0217bae8
 	.byte 0xcc, 0xf4, 0x4c, 0xc6
+	.global data_ov61_0217baec
 data_ov61_0217baec: ; 0x0217baec
 	.byte 0x75, 0x71, 0xd2, 0x39
+	.global data_ov61_0217baf0
 data_ov61_0217baf0: ; 0x0217baf0
 	.byte 0xef, 0x4f, 0x42, 0xf0
+	.global data_ov61_0217baf4
 data_ov61_0217baf4: ; 0x0217baf4
 	.byte 0x75, 0xdf, 0x0a, 0x90
+	.global data_ov61_0217baf8
 data_ov61_0217baf8: ; 0x0217baf8
 	.byte 0xc6, 0x8e, 0x20, 0x6f
+	.global data_ov61_0217bafc
 data_ov61_0217bafc: ; 0x0217bafc
 	.byte 0x98, 0x0f, 0xf8, 0xac
+	.global data_ov61_0217bb00
 data_ov61_0217bb00: ; 0x0217bb00
 	.byte 0x23, 0x5f, 0x70, 0x29
+	.global data_ov61_0217bb04
 data_ov61_0217bb04: ; 0x0217bb04
 	.byte 0x36, 0xa4, 0xc9, 0x86
+	.global data_ov61_0217bb08
 data_ov61_0217bb08: ; 0x0217bb08
 	.byte 0xe7, 0xb1, 0x9a, 0x20
+	.global data_ov61_0217bb0c
 data_ov61_0217bb0c: ; 0x0217bb0c
 	.byte 0xcb, 0x53, 0xa5, 0x85
+	.global data_ov61_0217bb10
 data_ov61_0217bb10: ; 0x0217bb10
 	.byte 0xe7, 0x3d, 0xbe, 0x7d
+	.global data_ov61_0217bb14
 data_ov61_0217bb14: ; 0x0217bb14
 	.byte 0x9a, 0xfe, 0x24, 0x45
+	.global data_ov61_0217bb18
 data_ov61_0217bb18: ; 0x0217bb18
 	.byte 0x33, 0xdc, 0x76, 0x15
+	.global data_ov61_0217bb1c
 data_ov61_0217bb1c: ; 0x0217bb1c
 	.byte 0xed, 0x0f, 0xa2, 0x71
+	.global data_ov61_0217bb20
 data_ov61_0217bb20: ; 0x0217bb20
 	.byte 0x64, 0x4c, 0x65, 0x2e
+	.global data_ov61_0217bb24
 data_ov61_0217bb24: ; 0x0217bb24
 	.byte 0x81, 0x68, 0x45, 0xa7
+	.global data_ov61_0217bb28
 data_ov61_0217bb28: ; 0x0217bb28
 	.byte 0x01, 0x00, 0x01, 0x00
+	.global data_ov61_0217bb2c
 data_ov61_0217bb2c: ; 0x0217bb2c
 	.byte 0x40, 0xbb, 0x17, 0x02
+	.global data_ov61_0217bb30
 data_ov61_0217bb30: ; 0x0217bb30
 	.byte 0x7d, 0x00, 0x00, 0x00
+	.global data_ov61_0217bb34
 data_ov61_0217bb34: ; 0x0217bb34
 	.byte 0x84, 0xbb, 0x17, 0x02
+	.global data_ov61_0217bb38
 data_ov61_0217bb38: ; 0x0217bb38
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov61_0217bb3c
 data_ov61_0217bb3c: ; 0x0217bb3c
 	.byte 0x28, 0xbb, 0x17, 0x02
+	.global data_ov61_0217bb40
 data_ov61_0217bb40: ; 0x0217bb40
 	.byte 0x55, 0x53, 0x2c, 0x20, 0x52, 0x53, 0x41, 0x20, 0x44, 0x61, 0x74, 0x61, 0x20, 0x53, 0x65, 0x63
 	.byte 0x75, 0x72, 0x69, 0x74, 0x79, 0x2c, 0x20, 0x49, 0x6e, 0x63, 0x2e, 0x2c, 0x20, 0x53, 0x65, 0x63
 	.byte 0x75, 0x72, 0x65, 0x20, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x43, 0x65, 0x72, 0x74, 0x69
 	.byte 0x66, 0x69, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x41, 0x75, 0x74, 0x68, 0x6f, 0x72, 0x69
 	.byte 0x74, 0x79, 0x00, 0x00
+	.global data_ov61_0217bb84
 data_ov61_0217bb84: ; 0x0217bb84
 	.byte 0x92, 0xce, 0x7a, 0xc1
+	.global data_ov61_0217bb88
 data_ov61_0217bb88: ; 0x0217bb88
 	.byte 0xae, 0x83, 0x3e, 0x5a
+	.global data_ov61_0217bb8c
 data_ov61_0217bb8c: ; 0x0217bb8c
 	.byte 0xaa, 0x89, 0x83, 0x57
+	.global data_ov61_0217bb90
 data_ov61_0217bb90: ; 0x0217bb90
 	.byte 0xac, 0x25, 0x01, 0x76
+	.global data_ov61_0217bb94
 data_ov61_0217bb94: ; 0x0217bb94
 	.byte 0x0c, 0xad, 0xae, 0x8e
+	.global data_ov61_0217bb98
 data_ov61_0217bb98: ; 0x0217bb98
 	.byte 0x2c, 0x37, 0xce, 0xeb
+	.global data_ov61_0217bb9c
 data_ov61_0217bb9c: ; 0x0217bb9c
 	.byte 0x35, 0x78, 0x64, 0x54
+	.global data_ov61_0217bba0
 data_ov61_0217bba0: ; 0x0217bba0
 	.byte 0x03, 0xe5, 0x84, 0x40
+	.global data_ov61_0217bba4
 data_ov61_0217bba4: ; 0x0217bba4
 	.byte 0x51, 0xc9, 0xbf, 0x8f
+	.global data_ov61_0217bba8
 data_ov61_0217bba8: ; 0x0217bba8
 	.byte 0x08, 0xe2, 0x8a, 0x82
+	.global data_ov61_0217bbac
 data_ov61_0217bbac: ; 0x0217bbac
 	.byte 0x08, 0xd2, 0x16, 0x86
+	.global data_ov61_0217bbb0
 data_ov61_0217bbb0: ; 0x0217bbb0
 	.byte 0x37, 0x55, 0xe9, 0xb1
+	.global data_ov61_0217bbb4
 data_ov61_0217bbb4: ; 0x0217bbb4
 	.byte 0x21, 0x02, 0xad, 0x76
+	.global data_ov61_0217bbb8
 data_ov61_0217bbb8: ; 0x0217bbb8
 	.byte 0x68, 0x81, 0x9a, 0x05
+	.global data_ov61_0217bbbc
 data_ov61_0217bbbc: ; 0x0217bbbc
 	.byte 0xa2, 0x4b, 0xc9, 0x4b
+	.global data_ov61_0217bbc0
 data_ov61_0217bbc0: ; 0x0217bbc0
 	.byte 0x25, 0x66, 0x22, 0x56
+	.global data_ov61_0217bbc4
 data_ov61_0217bbc4: ; 0x0217bbc4
 	.byte 0x6c, 0x88, 0x07, 0x8f
+	.global data_ov61_0217bbc8
 data_ov61_0217bbc8: ; 0x0217bbc8
 	.byte 0xf7, 0x81, 0x59, 0x6d
+	.global data_ov61_0217bbcc
 data_ov61_0217bbcc: ; 0x0217bbcc
 	.byte 0x84, 0x07, 0x65, 0x70
+	.global data_ov61_0217bbd0
 data_ov61_0217bbd0: ; 0x0217bbd0
 	.byte 0x13, 0x71, 0x76, 0x3e
+	.global data_ov61_0217bbd4
 data_ov61_0217bbd4: ; 0x0217bbd4
 	.byte 0x9b, 0x77, 0x4c, 0xe3
+	.global data_ov61_0217bbd8
 data_ov61_0217bbd8: ; 0x0217bbd8
 	.byte 0x50, 0x89, 0x56, 0x98
+	.global data_ov61_0217bbdc
 data_ov61_0217bbdc: ; 0x0217bbdc
 	.byte 0x48, 0xb9, 0x1d, 0xa7
+	.global data_ov61_0217bbe0
 data_ov61_0217bbe0: ; 0x0217bbe0
 	.byte 0x29, 0x1a, 0x13, 0x2e
+	.global data_ov61_0217bbe4
 data_ov61_0217bbe4: ; 0x0217bbe4
 	.byte 0x4a, 0x11, 0x59, 0x9c
+	.global data_ov61_0217bbe8
 data_ov61_0217bbe8: ; 0x0217bbe8
 	.byte 0x1e, 0x15, 0xd5, 0x49
+	.global data_ov61_0217bbec
 data_ov61_0217bbec: ; 0x0217bbec
 	.byte 0x54, 0x2c, 0x73, 0x3a
+	.global data_ov61_0217bbf0
 data_ov61_0217bbf0: ; 0x0217bbf0
 	.byte 0x69, 0x82, 0xb1, 0x97
+	.global data_ov61_0217bbf4
 data_ov61_0217bbf4: ; 0x0217bbf4
 	.byte 0x39, 0x9c, 0x6d, 0x70
+	.global data_ov61_0217bbf8
 data_ov61_0217bbf8: ; 0x0217bbf8
 	.byte 0x67, 0x48, 0xe5, 0xdd
+	.global data_ov61_0217bbfc
 data_ov61_0217bbfc: ; 0x0217bbfc
 	.byte 0x2d, 0xd6, 0xc8, 0x1e
+	.global data_ov61_0217bc00
 data_ov61_0217bc00: ; 0x0217bc00
 	.byte 0x7b, 0x00, 0x00, 0x00
+	.global data_ov61_0217bc04
 data_ov61_0217bc04: ; 0x0217bc04
 	.byte 0x10, 0x00, 0x00, 0x00
+	.global data_ov61_0217bc08
 data_ov61_0217bc08: ; 0x0217bc08
 	.byte 0xff, 0xff
+	.global data_ov61_0217bc0a
 data_ov61_0217bc0a: ; 0x0217bc0a
 	.byte 0xff, 0xff
+	.global data_ov61_0217bc0c
 data_ov61_0217bc0c: ; 0x0217bc0c
 	.byte 0xff, 0xff
+	.global data_ov61_0217bc0e
 data_ov61_0217bc0e: ; 0x0217bc0e
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc10
 data_ov61_0217bc10: ; 0x0217bc10
 	.byte 0xaa, 0xaa
+	.global data_ov61_0217bc12
 data_ov61_0217bc12: ; 0x0217bc12
 	.byte 0x03, 0x00
+	.global data_ov61_0217bc14
 data_ov61_0217bc14: ; 0x0217bc14
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc16
 data_ov61_0217bc16: ; 0x0217bc16
 	.byte 0x08, 0x00
+	.global data_ov61_0217bc18
 data_ov61_0217bc18: ; 0x0217bc18
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc1a
 data_ov61_0217bc1a: ; 0x0217bc1a
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc1c
 data_ov61_0217bc1c: ; 0x0217bc1c
 	.byte 0x4e, 0x69, 0x6e, 0x74
 	.byte 0x65, 0x6e, 0x64, 0x6f, 0x44, 0x53, 0x00, 0x00
+	.global data_ov61_0217bc28
 data_ov61_0217bc28: ; 0x0217bc28
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bc2c
 data_ov61_0217bc2c: ; 0x0217bc2c
 	.byte 0xe6, 0xff, 0xff, 0xff
+	.global data_ov61_0217bc30
 data_ov61_0217bc30: ; 0x0217bc30
 	.byte 0x01, 0x01
+	.global data_ov61_0217bc32
 data_ov61_0217bc32: ; 0x0217bc32
 	.byte 0xc0, 0x05
+	.global data_ov61_0217bc34
 data_ov61_0217bc34: ; 0x0217bc34
 	.byte 0x01, 0x00
+	.global data_ov61_0217bc36
 data_ov61_0217bc36: ; 0x0217bc36
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc38
 data_ov61_0217bc38: ; 0x0217bc38
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc3a
 data_ov61_0217bc3a: ; 0x0217bc3a
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc3c
 data_ov61_0217bc3c: ; 0x0217bc3c
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc3e
 data_ov61_0217bc3e: ; 0x0217bc3e
 	.byte 0x00, 0x08
+	.global data_ov61_0217bc40
 data_ov61_0217bc40: ; 0x0217bc40
 	.byte 0x00, 0x08
+	.global data_ov61_0217bc42
 data_ov61_0217bc42: ; 0x0217bc42
 	.byte 0x0c, 0x20
+	.global data_ov61_0217bc44
 data_ov61_0217bc44: ; 0x0217bc44
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc46
 data_ov61_0217bc46: ; 0x0217bc46
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc48
 data_ov61_0217bc48: ; 0x0217bc48
 	.byte 0x00, 0x01
+	.global data_ov61_0217bc4a
 data_ov61_0217bc4a: ; 0x0217bc4a
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc4c
 data_ov61_0217bc4c: ; 0x0217bc4c
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc4e
 data_ov61_0217bc4e: ; 0x0217bc4e
 	.byte 0x66, 0x04
+	.global data_ov61_0217bc50
 data_ov61_0217bc50: ; 0x0217bc50
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc52
 data_ov61_0217bc52: ; 0x0217bc52
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc54
 data_ov61_0217bc54: ; 0x0217bc54
 	.byte 0x61, 0x08
+	.global data_ov61_0217bc56
 data_ov61_0217bc56: ; 0x0217bc56
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc58
 data_ov61_0217bc58: ; 0x0217bc58
 	.byte 0x00, 0x08
+	.global data_ov61_0217bc5a
 data_ov61_0217bc5a: ; 0x0217bc5a
 	.byte 0x0c, 0x20
+	.global data_ov61_0217bc5c
 data_ov61_0217bc5c: ; 0x0217bc5c
 	.byte 0x00, 0x08
+	.global data_ov61_0217bc5e
 data_ov61_0217bc5e: ; 0x0217bc5e
 	.byte 0x0d, 0x20
+	.global data_ov61_0217bc60
 data_ov61_0217bc60: ; 0x0217bc60
 	.byte 0x02, 0x00
+	.global data_ov61_0217bc62
 data_ov61_0217bc62: ; 0x0217bc62
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc64
 data_ov61_0217bc64: ; 0x0217bc64
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc66
 data_ov61_0217bc66: ; 0x0217bc66
 	.byte 0xea, 0x05
+	.global data_ov61_0217bc68
 data_ov61_0217bc68: ; 0x0217bc68
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc6a
 data_ov61_0217bc6a: ; 0x0217bc6a
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc6c
 data_ov61_0217bc6c: ; 0x0217bc6c
 	.byte 0xeb, 0x06
+	.global data_ov61_0217bc6e
 data_ov61_0217bc6e: ; 0x0217bc6e
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc70
 data_ov61_0217bc70: ; 0x0217bc70
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc72
 data_ov61_0217bc72: ; 0x0217bc72
 	.byte 0x00, 0x00
+	.global data_ov61_0217bc74
 data_ov61_0217bc74: ; 0x0217bc74
 	.byte 0x00, 0x08
+	.global data_ov61_0217bc76
 data_ov61_0217bc76: ; 0x0217bc76
 	.byte 0x0d, 0x20
+	.global data_ov61_0217bc78
 data_ov61_0217bc78: ; 0x0217bc78
 	.byte 0x25, 0x64, 0x2e, 0x25, 0x64, 0x2e, 0x25, 0x64
 	.byte 0x2e, 0x25, 0x64, 0x00
+	.global data_ov61_0217bc84
 data_ov61_0217bc84: ; 0x0217bc84
 	.byte 0x04, 0x00
+	.global data_ov61_0217bc86
 data_ov61_0217bc86: ; 0x0217bc86
 	.byte 0x05, 0x00
+	.global data_ov61_0217bc88
 data_ov61_0217bc88: ; 0x0217bc88
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217bc8c
 data_ov61_0217bc8c: ; 0x0217bc8c
 	.byte 0xa4, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bc90
 data_ov61_0217bc90: ; 0x0217bc90
 	.byte 0xb4, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bc94
 data_ov61_0217bc94: ; 0x0217bc94
 	.byte 0xac, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bc98
 data_ov61_0217bc98: ; 0x0217bc98
 	.byte 0xc0, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bc9c
 data_ov61_0217bc9c: ; 0x0217bc9c
 	.byte 0xcc, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bca0
 data_ov61_0217bca0: ; 0x0217bca0
 	.byte 0xa8, 0xbc, 0x17, 0x02
+	.global data_ov61_0217bca4
 data_ov61_0217bca4: ; 0x0217bca4
 	.byte 0xff, 0xff, 0xff, 0x00
+	.global data_ov61_0217bca8
 data_ov61_0217bca8: ; 0x0217bca8
 	.byte 0x55
+	.global data_ov61_0217bca9
 data_ov61_0217bca9: ; 0x0217bca9
 	.byte 0x04
+	.global data_ov61_0217bcaa
 data_ov61_0217bcaa: ; 0x0217bcaa
 	.byte 0x03
+	.global data_ov61_0217bcab
 data_ov61_0217bcab: ; 0x0217bcab
 	.byte 0x00
+	.global data_ov61_0217bcac
 data_ov61_0217bcac: ; 0x0217bcac
 	.byte 0x55
+	.global data_ov61_0217bcad
 data_ov61_0217bcad: ; 0x0217bcad
 	.byte 0x08
+	.global data_ov61_0217bcae
 data_ov61_0217bcae: ; 0x0217bcae
 	.byte 0x01
+	.global data_ov61_0217bcaf
 data_ov61_0217bcaf: ; 0x0217bcaf
 	.byte 0x01
+	.global data_ov61_0217bcb0
 data_ov61_0217bcb0: ; 0x0217bcb0
 	.byte 0x00
+	.global data_ov61_0217bcb1
 data_ov61_0217bcb1: ; 0x0217bcb1
 	.byte 0x00
+	.global data_ov61_0217bcb2
 data_ov61_0217bcb2: ; 0x0217bcb2
 	.byte 0x00
+	.global data_ov61_0217bcb3
 data_ov61_0217bcb3: ; 0x0217bcb3
 	.byte 0x00
+	.global data_ov61_0217bcb4
 data_ov61_0217bcb4: ; 0x0217bcb4
 	.byte 0x2a
+	.global data_ov61_0217bcb5
 data_ov61_0217bcb5: ; 0x0217bcb5
 	.byte 0x86
+	.global data_ov61_0217bcb6
 data_ov61_0217bcb6: ; 0x0217bcb6
 	.byte 0x48
+	.global data_ov61_0217bcb7
 data_ov61_0217bcb7: ; 0x0217bcb7
 	.byte 0x86
+	.global data_ov61_0217bcb8
 data_ov61_0217bcb8: ; 0x0217bcb8
 	.byte 0xf7
+	.global data_ov61_0217bcb9
 data_ov61_0217bcb9: ; 0x0217bcb9
 	.byte 0x0d
+	.global data_ov61_0217bcba
 data_ov61_0217bcba: ; 0x0217bcba
 	.byte 0x01
+	.global data_ov61_0217bcbb
 data_ov61_0217bcbb: ; 0x0217bcbb
 	.byte 0x01
+	.global data_ov61_0217bcbc
 data_ov61_0217bcbc: ; 0x0217bcbc
 	.byte 0x01
+	.global data_ov61_0217bcbd
 data_ov61_0217bcbd: ; 0x0217bcbd
 	.byte 0x00
+	.global data_ov61_0217bcbe
 data_ov61_0217bcbe: ; 0x0217bcbe
 	.byte 0x00
+	.global data_ov61_0217bcbf
 data_ov61_0217bcbf: ; 0x0217bcbf
 	.byte 0x00
+	.global data_ov61_0217bcc0
 data_ov61_0217bcc0: ; 0x0217bcc0
 	.byte 0x2a
+	.global data_ov61_0217bcc1
 data_ov61_0217bcc1: ; 0x0217bcc1
 	.byte 0x86
+	.global data_ov61_0217bcc2
 data_ov61_0217bcc2: ; 0x0217bcc2
 	.byte 0x48
+	.global data_ov61_0217bcc3
 data_ov61_0217bcc3: ; 0x0217bcc3
 	.byte 0x86
+	.global data_ov61_0217bcc4
 data_ov61_0217bcc4: ; 0x0217bcc4
 	.byte 0xf7
+	.global data_ov61_0217bcc5
 data_ov61_0217bcc5: ; 0x0217bcc5
 	.byte 0x0d
+	.global data_ov61_0217bcc6
 data_ov61_0217bcc6: ; 0x0217bcc6
 	.byte 0x01
+	.global data_ov61_0217bcc7
 data_ov61_0217bcc7: ; 0x0217bcc7
 	.byte 0x01
+	.global data_ov61_0217bcc8
 data_ov61_0217bcc8: ; 0x0217bcc8
 	.byte 0x04
+	.global data_ov61_0217bcc9
 data_ov61_0217bcc9: ; 0x0217bcc9
 	.byte 0x00
+	.global data_ov61_0217bcca
 data_ov61_0217bcca: ; 0x0217bcca
 	.byte 0x00
+	.global data_ov61_0217bccb
 data_ov61_0217bccb: ; 0x0217bccb
 	.byte 0x00
+	.global data_ov61_0217bccc
 data_ov61_0217bccc: ; 0x0217bccc
 	.byte 0x2a
+	.global data_ov61_0217bccd
 data_ov61_0217bccd: ; 0x0217bccd
 	.byte 0x86
+	.global data_ov61_0217bcce
 data_ov61_0217bcce: ; 0x0217bcce
 	.byte 0x48
+	.global data_ov61_0217bccf
 data_ov61_0217bccf: ; 0x0217bccf
 	.byte 0x86
+	.global data_ov61_0217bcd0
 data_ov61_0217bcd0: ; 0x0217bcd0
 	.byte 0xf7
+	.global data_ov61_0217bcd1
 data_ov61_0217bcd1: ; 0x0217bcd1
 	.byte 0x0d
+	.global data_ov61_0217bcd2
 data_ov61_0217bcd2: ; 0x0217bcd2
 	.byte 0x01
+	.global data_ov61_0217bcd3
 data_ov61_0217bcd3: ; 0x0217bcd3
 	.byte 0x01
+	.global data_ov61_0217bcd4
 data_ov61_0217bcd4: ; 0x0217bcd4
 	.byte 0x05
+	.global data_ov61_0217bcd5
 data_ov61_0217bcd5: ; 0x0217bcd5
 	.byte 0x00
+	.global data_ov61_0217bcd6
 data_ov61_0217bcd6: ; 0x0217bcd6
 	.byte 0x00
+	.global data_ov61_0217bcd7
 data_ov61_0217bcd7: ; 0x0217bcd7
 	.byte 0x00
+	.global data_ov61_0217bcd8
 data_ov61_0217bcd8: ; 0x0217bcd8
 	.byte 0x41, 0x00, 0x00, 0x00
+	.global data_ov61_0217bcdc
 data_ov61_0217bcdc: ; 0x0217bcdc
 	.byte 0x42, 0x42, 0x00, 0x00
+	.global data_ov61_0217bce0
 data_ov61_0217bce0: ; 0x0217bce0
 	.byte 0x43, 0x43, 0x43, 0x00
+	.global data_ov61_0217bce4
 data_ov61_0217bce4: ; 0x0217bce4
 	.byte 0x53, 0x52, 0x56, 0x52, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bcec
 data_ov61_0217bcec: ; 0x0217bcec
 	.byte 0x43, 0x4c, 0x4e, 0x54
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bcf4
 data_ov61_0217bcf4: ; 0x0217bcf4
 	.byte 0x00
+	.global data_ov61_0217bcf5
 data_ov61_0217bcf5: ; 0x0217bcf5
 	.byte 0x01
+	.global data_ov61_0217bcf6
 data_ov61_0217bcf6: ; 0x0217bcf6
 	.byte 0x02
+	.global data_ov61_0217bcf7
 data_ov61_0217bcf7: ; 0x0217bcf7
 	.byte 0x03
+	.global data_ov61_0217bcf8
 data_ov61_0217bcf8: ; 0x0217bcf8
 	.byte 0x04
+	.global data_ov61_0217bcf9
 data_ov61_0217bcf9: ; 0x0217bcf9
 	.byte 0x05
+	.global data_ov61_0217bcfa
 data_ov61_0217bcfa: ; 0x0217bcfa
 	.byte 0x06
+	.global data_ov61_0217bcfb
 data_ov61_0217bcfb: ; 0x0217bcfb
 	.byte 0x07
+	.global data_ov61_0217bcfc
 data_ov61_0217bcfc: ; 0x0217bcfc
 	.byte 0x08
+	.global data_ov61_0217bcfd
 data_ov61_0217bcfd: ; 0x0217bcfd
 	.byte 0x09
+	.global data_ov61_0217bcfe
 data_ov61_0217bcfe: ; 0x0217bcfe
 	.byte 0x0a
+	.global data_ov61_0217bcff
 data_ov61_0217bcff: ; 0x0217bcff
 	.byte 0x0b
+	.global data_ov61_0217bd00
 data_ov61_0217bd00: ; 0x0217bd00
 	.byte 0x0c
+	.global data_ov61_0217bd01
 data_ov61_0217bd01: ; 0x0217bd01
 	.byte 0x0d
+	.global data_ov61_0217bd02
 data_ov61_0217bd02: ; 0x0217bd02
 	.byte 0x0e
+	.global data_ov61_0217bd03
 data_ov61_0217bd03: ; 0x0217bd03
 	.byte 0x0f
+	.global data_ov61_0217bd04
 data_ov61_0217bd04: ; 0x0217bd04
 	.byte 0x01
+	.global data_ov61_0217bd05
 data_ov61_0217bd05: ; 0x0217bd05
 	.byte 0x06
+	.global data_ov61_0217bd06
 data_ov61_0217bd06: ; 0x0217bd06
 	.byte 0x0b
+	.global data_ov61_0217bd07
 data_ov61_0217bd07: ; 0x0217bd07
 	.byte 0x00
+	.global data_ov61_0217bd08
 data_ov61_0217bd08: ; 0x0217bd08
 	.byte 0x05
+	.global data_ov61_0217bd09
 data_ov61_0217bd09: ; 0x0217bd09
 	.byte 0x0a
+	.global data_ov61_0217bd0a
 data_ov61_0217bd0a: ; 0x0217bd0a
 	.byte 0x0f
+	.global data_ov61_0217bd0b
 data_ov61_0217bd0b: ; 0x0217bd0b
 	.byte 0x04
+	.global data_ov61_0217bd0c
 data_ov61_0217bd0c: ; 0x0217bd0c
 	.byte 0x09
+	.global data_ov61_0217bd0d
 data_ov61_0217bd0d: ; 0x0217bd0d
 	.byte 0x0e
+	.global data_ov61_0217bd0e
 data_ov61_0217bd0e: ; 0x0217bd0e
 	.byte 0x03
+	.global data_ov61_0217bd0f
 data_ov61_0217bd0f: ; 0x0217bd0f
 	.byte 0x08
+	.global data_ov61_0217bd10
 data_ov61_0217bd10: ; 0x0217bd10
 	.byte 0x0d
+	.global data_ov61_0217bd11
 data_ov61_0217bd11: ; 0x0217bd11
 	.byte 0x02
+	.global data_ov61_0217bd12
 data_ov61_0217bd12: ; 0x0217bd12
 	.byte 0x07
+	.global data_ov61_0217bd13
 data_ov61_0217bd13: ; 0x0217bd13
 	.byte 0x0c
+	.global data_ov61_0217bd14
 data_ov61_0217bd14: ; 0x0217bd14
 	.byte 0x05
+	.global data_ov61_0217bd15
 data_ov61_0217bd15: ; 0x0217bd15
 	.byte 0x08
+	.global data_ov61_0217bd16
 data_ov61_0217bd16: ; 0x0217bd16
 	.byte 0x0b
+	.global data_ov61_0217bd17
 data_ov61_0217bd17: ; 0x0217bd17
 	.byte 0x0e
+	.global data_ov61_0217bd18
 data_ov61_0217bd18: ; 0x0217bd18
 	.byte 0x01
+	.global data_ov61_0217bd19
 data_ov61_0217bd19: ; 0x0217bd19
 	.byte 0x04
+	.global data_ov61_0217bd1a
 data_ov61_0217bd1a: ; 0x0217bd1a
 	.byte 0x07
+	.global data_ov61_0217bd1b
 data_ov61_0217bd1b: ; 0x0217bd1b
 	.byte 0x0a
+	.global data_ov61_0217bd1c
 data_ov61_0217bd1c: ; 0x0217bd1c
 	.byte 0x0d
+	.global data_ov61_0217bd1d
 data_ov61_0217bd1d: ; 0x0217bd1d
 	.byte 0x00
+	.global data_ov61_0217bd1e
 data_ov61_0217bd1e: ; 0x0217bd1e
 	.byte 0x03
+	.global data_ov61_0217bd1f
 data_ov61_0217bd1f: ; 0x0217bd1f
 	.byte 0x06
+	.global data_ov61_0217bd20
 data_ov61_0217bd20: ; 0x0217bd20
 	.byte 0x09
+	.global data_ov61_0217bd21
 data_ov61_0217bd21: ; 0x0217bd21
 	.byte 0x0c
+	.global data_ov61_0217bd22
 data_ov61_0217bd22: ; 0x0217bd22
 	.byte 0x0f
+	.global data_ov61_0217bd23
 data_ov61_0217bd23: ; 0x0217bd23
 	.byte 0x02
+	.global data_ov61_0217bd24
 data_ov61_0217bd24: ; 0x0217bd24
 	.byte 0x00
+	.global data_ov61_0217bd25
 data_ov61_0217bd25: ; 0x0217bd25
 	.byte 0x07
+	.global data_ov61_0217bd26
 data_ov61_0217bd26: ; 0x0217bd26
 	.byte 0x0e
+	.global data_ov61_0217bd27
 data_ov61_0217bd27: ; 0x0217bd27
 	.byte 0x05
+	.global data_ov61_0217bd28
 data_ov61_0217bd28: ; 0x0217bd28
 	.byte 0x0c
+	.global data_ov61_0217bd29
 data_ov61_0217bd29: ; 0x0217bd29
 	.byte 0x03
+	.global data_ov61_0217bd2a
 data_ov61_0217bd2a: ; 0x0217bd2a
 	.byte 0x0a
+	.global data_ov61_0217bd2b
 data_ov61_0217bd2b: ; 0x0217bd2b
 	.byte 0x01
+	.global data_ov61_0217bd2c
 data_ov61_0217bd2c: ; 0x0217bd2c
 	.byte 0x08
+	.global data_ov61_0217bd2d
 data_ov61_0217bd2d: ; 0x0217bd2d
 	.byte 0x0f
+	.global data_ov61_0217bd2e
 data_ov61_0217bd2e: ; 0x0217bd2e
 	.byte 0x06
+	.global data_ov61_0217bd2f
 data_ov61_0217bd2f: ; 0x0217bd2f
 	.byte 0x0d
+	.global data_ov61_0217bd30
 data_ov61_0217bd30: ; 0x0217bd30
 	.byte 0x04
+	.global data_ov61_0217bd31
 data_ov61_0217bd31: ; 0x0217bd31
 	.byte 0x0b
+	.global data_ov61_0217bd32
 data_ov61_0217bd32: ; 0x0217bd32
 	.byte 0x02
+	.global data_ov61_0217bd33
 data_ov61_0217bd33: ; 0x0217bd33
 	.byte 0x09
+	.global data_ov61_0217bd34
 data_ov61_0217bd34: ; 0x0217bd34
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd38
 data_ov61_0217bd38: ; 0x0217bd38
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd3c
 data_ov61_0217bd3c: ; 0x0217bd3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd40
 data_ov61_0217bd40: ; 0x0217bd40
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd44
 data_ov61_0217bd44: ; 0x0217bd44
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd48
 data_ov61_0217bd48: ; 0x0217bd48
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd4c
 data_ov61_0217bd4c: ; 0x0217bd4c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd50
 data_ov61_0217bd50: ; 0x0217bd50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd54
 data_ov61_0217bd54: ; 0x0217bd54
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd58
 data_ov61_0217bd58: ; 0x0217bd58
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd5c
 data_ov61_0217bd5c: ; 0x0217bd5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd60
 data_ov61_0217bd60: ; 0x0217bd60
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd64
 data_ov61_0217bd64: ; 0x0217bd64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd68
 data_ov61_0217bd68: ; 0x0217bd68
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd6c
 data_ov61_0217bd6c: ; 0x0217bd6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd70
 data_ov61_0217bd70: ; 0x0217bd70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bd74
 data_ov61_0217bd74: ; 0x0217bd74
 	.byte 0x78, 0xa4, 0x6a, 0xd7
+	.global data_ov61_0217bd78
 data_ov61_0217bd78: ; 0x0217bd78
 	.byte 0x56, 0xb7, 0xc7, 0xe8
+	.global data_ov61_0217bd7c
 data_ov61_0217bd7c: ; 0x0217bd7c
 	.byte 0xdb, 0x70, 0x20, 0x24
+	.global data_ov61_0217bd80
 data_ov61_0217bd80: ; 0x0217bd80
 	.byte 0xee, 0xce, 0xbd, 0xc1
+	.global data_ov61_0217bd84
 data_ov61_0217bd84: ; 0x0217bd84
 	.byte 0xaf, 0x0f, 0x7c, 0xf5
+	.global data_ov61_0217bd88
 data_ov61_0217bd88: ; 0x0217bd88
 	.byte 0x2a, 0xc6, 0x87, 0x47
+	.global data_ov61_0217bd8c
 data_ov61_0217bd8c: ; 0x0217bd8c
 	.byte 0x13, 0x46, 0x30, 0xa8
+	.global data_ov61_0217bd90
 data_ov61_0217bd90: ; 0x0217bd90
 	.byte 0x01, 0x95, 0x46, 0xfd
+	.global data_ov61_0217bd94
 data_ov61_0217bd94: ; 0x0217bd94
 	.byte 0xd8, 0x98, 0x80, 0x69
+	.global data_ov61_0217bd98
 data_ov61_0217bd98: ; 0x0217bd98
 	.byte 0xaf, 0xf7, 0x44, 0x8b
+	.global data_ov61_0217bd9c
 data_ov61_0217bd9c: ; 0x0217bd9c
 	.byte 0xb1, 0x5b, 0xff, 0xff
+	.global data_ov61_0217bda0
 data_ov61_0217bda0: ; 0x0217bda0
 	.byte 0xbe, 0xd7, 0x5c, 0x89
+	.global data_ov61_0217bda4
 data_ov61_0217bda4: ; 0x0217bda4
 	.byte 0x22, 0x11, 0x90, 0x6b
+	.global data_ov61_0217bda8
 data_ov61_0217bda8: ; 0x0217bda8
 	.byte 0x93, 0x71, 0x98, 0xfd
+	.global data_ov61_0217bdac
 data_ov61_0217bdac: ; 0x0217bdac
 	.byte 0x8e, 0x43, 0x79, 0xa6
+	.global data_ov61_0217bdb0
 data_ov61_0217bdb0: ; 0x0217bdb0
 	.byte 0x21, 0x08, 0xb4, 0x49
+	.global data_ov61_0217bdb4
 data_ov61_0217bdb4: ; 0x0217bdb4
 	.byte 0x62, 0x25, 0x1e, 0xf6
+	.global data_ov61_0217bdb8
 data_ov61_0217bdb8: ; 0x0217bdb8
 	.byte 0x40, 0xb3, 0x40, 0xc0
+	.global data_ov61_0217bdbc
 data_ov61_0217bdbc: ; 0x0217bdbc
 	.byte 0x51, 0x5a, 0x5e, 0x26
+	.global data_ov61_0217bdc0
 data_ov61_0217bdc0: ; 0x0217bdc0
 	.byte 0xaa, 0xc7, 0xb6, 0xe9
+	.global data_ov61_0217bdc4
 data_ov61_0217bdc4: ; 0x0217bdc4
 	.byte 0x5d, 0x10, 0x2f, 0xd6
+	.global data_ov61_0217bdc8
 data_ov61_0217bdc8: ; 0x0217bdc8
 	.byte 0x53, 0x14, 0x44, 0x02
+	.global data_ov61_0217bdcc
 data_ov61_0217bdcc: ; 0x0217bdcc
 	.byte 0x81, 0xe6, 0xa1, 0xd8
+	.global data_ov61_0217bdd0
 data_ov61_0217bdd0: ; 0x0217bdd0
 	.byte 0xc8, 0xfb, 0xd3, 0xe7
+	.global data_ov61_0217bdd4
 data_ov61_0217bdd4: ; 0x0217bdd4
 	.byte 0xe6, 0xcd, 0xe1, 0x21
+	.global data_ov61_0217bdd8
 data_ov61_0217bdd8: ; 0x0217bdd8
 	.byte 0xd6, 0x07, 0x37, 0xc3
+	.global data_ov61_0217bddc
 data_ov61_0217bddc: ; 0x0217bddc
 	.byte 0x87, 0x0d, 0xd5, 0xf4
+	.global data_ov61_0217bde0
 data_ov61_0217bde0: ; 0x0217bde0
 	.byte 0xed, 0x14, 0x5a, 0x45
+	.global data_ov61_0217bde4
 data_ov61_0217bde4: ; 0x0217bde4
 	.byte 0x05, 0xe9, 0xe3, 0xa9
+	.global data_ov61_0217bde8
 data_ov61_0217bde8: ; 0x0217bde8
 	.byte 0xf8, 0xa3, 0xef, 0xfc
+	.global data_ov61_0217bdec
 data_ov61_0217bdec: ; 0x0217bdec
 	.byte 0xd9, 0x02, 0x6f, 0x67
+	.global data_ov61_0217bdf0
 data_ov61_0217bdf0: ; 0x0217bdf0
 	.byte 0x8a, 0x4c, 0x2a, 0x8d
+	.global data_ov61_0217bdf4
 data_ov61_0217bdf4: ; 0x0217bdf4
 	.byte 0x42, 0x39, 0xfa, 0xff
+	.global data_ov61_0217bdf8
 data_ov61_0217bdf8: ; 0x0217bdf8
 	.byte 0x81, 0xf6, 0x71, 0x87
+	.global data_ov61_0217bdfc
 data_ov61_0217bdfc: ; 0x0217bdfc
 	.byte 0x22, 0x61, 0x9d, 0x6d
+	.global data_ov61_0217be00
 data_ov61_0217be00: ; 0x0217be00
 	.byte 0x0c, 0x38, 0xe5, 0xfd
+	.global data_ov61_0217be04
 data_ov61_0217be04: ; 0x0217be04
 	.byte 0x44, 0xea, 0xbe, 0xa4
+	.global data_ov61_0217be08
 data_ov61_0217be08: ; 0x0217be08
 	.byte 0xa9, 0xcf, 0xde, 0x4b
+	.global data_ov61_0217be0c
 data_ov61_0217be0c: ; 0x0217be0c
 	.byte 0x60, 0x4b, 0xbb, 0xf6
+	.global data_ov61_0217be10
 data_ov61_0217be10: ; 0x0217be10
 	.byte 0x70, 0xbc, 0xbf, 0xbe
+	.global data_ov61_0217be14
 data_ov61_0217be14: ; 0x0217be14
 	.byte 0xc6, 0x7e, 0x9b, 0x28
+	.global data_ov61_0217be18
 data_ov61_0217be18: ; 0x0217be18
 	.byte 0xfa, 0x27, 0xa1, 0xea
+	.global data_ov61_0217be1c
 data_ov61_0217be1c: ; 0x0217be1c
 	.byte 0x85, 0x30, 0xef, 0xd4
+	.global data_ov61_0217be20
 data_ov61_0217be20: ; 0x0217be20
 	.byte 0x05, 0x1d, 0x88, 0x04
+	.global data_ov61_0217be24
 data_ov61_0217be24: ; 0x0217be24
 	.byte 0x39, 0xd0, 0xd4, 0xd9
+	.global data_ov61_0217be28
 data_ov61_0217be28: ; 0x0217be28
 	.byte 0xe5, 0x99, 0xdb, 0xe6
+	.global data_ov61_0217be2c
 data_ov61_0217be2c: ; 0x0217be2c
 	.byte 0xf8, 0x7c, 0xa2, 0x1f
+	.global data_ov61_0217be30
 data_ov61_0217be30: ; 0x0217be30
 	.byte 0x65, 0x56, 0xac, 0xc4
+	.global data_ov61_0217be34
 data_ov61_0217be34: ; 0x0217be34
 	.byte 0x44, 0x22, 0x29, 0xf4
+	.global data_ov61_0217be38
 data_ov61_0217be38: ; 0x0217be38
 	.byte 0x97, 0xff, 0x2a, 0x43
+	.global data_ov61_0217be3c
 data_ov61_0217be3c: ; 0x0217be3c
 	.byte 0xa7, 0x23, 0x94, 0xab
+	.global data_ov61_0217be40
 data_ov61_0217be40: ; 0x0217be40
 	.byte 0x39, 0xa0, 0x93, 0xfc
+	.global data_ov61_0217be44
 data_ov61_0217be44: ; 0x0217be44
 	.byte 0xc3, 0x59, 0x5b, 0x65
+	.global data_ov61_0217be48
 data_ov61_0217be48: ; 0x0217be48
 	.byte 0x92, 0xcc, 0x0c, 0x8f
+	.global data_ov61_0217be4c
 data_ov61_0217be4c: ; 0x0217be4c
 	.byte 0x7d, 0xf4, 0xef, 0xff
+	.global data_ov61_0217be50
 data_ov61_0217be50: ; 0x0217be50
 	.byte 0xd1, 0x5d, 0x84, 0x85
+	.global data_ov61_0217be54
 data_ov61_0217be54: ; 0x0217be54
 	.byte 0x4f, 0x7e, 0xa8, 0x6f
+	.global data_ov61_0217be58
 data_ov61_0217be58: ; 0x0217be58
 	.byte 0xe0, 0xe6, 0x2c, 0xfe
+	.global data_ov61_0217be5c
 data_ov61_0217be5c: ; 0x0217be5c
 	.byte 0x14, 0x43, 0x01, 0xa3
+	.global data_ov61_0217be60
 data_ov61_0217be60: ; 0x0217be60
 	.byte 0xa1, 0x11, 0x08, 0x4e
+	.global data_ov61_0217be64
 data_ov61_0217be64: ; 0x0217be64
 	.byte 0x82, 0x7e, 0x53, 0xf7
+	.global data_ov61_0217be68
 data_ov61_0217be68: ; 0x0217be68
 	.byte 0x35, 0xf2, 0x3a, 0xbd
+	.global data_ov61_0217be6c
 data_ov61_0217be6c: ; 0x0217be6c
 	.byte 0xbb, 0xd2, 0xd7, 0x2a
+	.global data_ov61_0217be70
 data_ov61_0217be70: ; 0x0217be70
 	.byte 0x91, 0xd3, 0x86, 0xeb
+	.global data_ov61_0217be74
 data_ov61_0217be74: ; 0x0217be74
 	.byte 0x80
+	.global data_ov61_0217be75
 data_ov61_0217be75: ; 0x0217be75
 	.byte 0x00
+	.global data_ov61_0217be76
 data_ov61_0217be76: ; 0x0217be76
 	.byte 0x00
+	.global data_ov61_0217be77
 data_ov61_0217be77: ; 0x0217be77
 	.byte 0x00
+	.global data_ov61_0217be78
 data_ov61_0217be78: ; 0x0217be78
 	.byte 0x00
+	.global data_ov61_0217be79
 data_ov61_0217be79: ; 0x0217be79
 	.byte 0x00
+	.global data_ov61_0217be7a
 data_ov61_0217be7a: ; 0x0217be7a
 	.byte 0x00
+	.global data_ov61_0217be7b
 data_ov61_0217be7b: ; 0x0217be7b
 	.byte 0x00
+	.global data_ov61_0217be7c
 data_ov61_0217be7c: ; 0x0217be7c
 	.byte 0x00
+	.global data_ov61_0217be7d
 data_ov61_0217be7d: ; 0x0217be7d
 	.byte 0x00
+	.global data_ov61_0217be7e
 data_ov61_0217be7e: ; 0x0217be7e
 	.byte 0x00
+	.global data_ov61_0217be7f
 data_ov61_0217be7f: ; 0x0217be7f
 	.byte 0x00
+	.global data_ov61_0217be80
 data_ov61_0217be80: ; 0x0217be80
 	.byte 0x00
+	.global data_ov61_0217be81
 data_ov61_0217be81: ; 0x0217be81
 	.byte 0x00
+	.global data_ov61_0217be82
 data_ov61_0217be82: ; 0x0217be82
 	.byte 0x00
+	.global data_ov61_0217be83
 data_ov61_0217be83: ; 0x0217be83
 	.byte 0x00
+	.global data_ov61_0217be84
 data_ov61_0217be84: ; 0x0217be84
 	.byte 0x00
+	.global data_ov61_0217be85
 data_ov61_0217be85: ; 0x0217be85
 	.byte 0x00
+	.global data_ov61_0217be86
 data_ov61_0217be86: ; 0x0217be86
 	.byte 0x00
+	.global data_ov61_0217be87
 data_ov61_0217be87: ; 0x0217be87
 	.byte 0x00
+	.global data_ov61_0217be88
 data_ov61_0217be88: ; 0x0217be88
 	.byte 0x00
+	.global data_ov61_0217be89
 data_ov61_0217be89: ; 0x0217be89
 	.byte 0x00
+	.global data_ov61_0217be8a
 data_ov61_0217be8a: ; 0x0217be8a
 	.byte 0x00
+	.global data_ov61_0217be8b
 data_ov61_0217be8b: ; 0x0217be8b
 	.byte 0x00
+	.global data_ov61_0217be8c
 data_ov61_0217be8c: ; 0x0217be8c
 	.byte 0x00
+	.global data_ov61_0217be8d
 data_ov61_0217be8d: ; 0x0217be8d
 	.byte 0x00
+	.global data_ov61_0217be8e
 data_ov61_0217be8e: ; 0x0217be8e
 	.byte 0x00
+	.global data_ov61_0217be8f
 data_ov61_0217be8f: ; 0x0217be8f
 	.byte 0x00
+	.global data_ov61_0217be90
 data_ov61_0217be90: ; 0x0217be90
 	.byte 0x00
+	.global data_ov61_0217be91
 data_ov61_0217be91: ; 0x0217be91
 	.byte 0x00
+	.global data_ov61_0217be92
 data_ov61_0217be92: ; 0x0217be92
 	.byte 0x00
+	.global data_ov61_0217be93
 data_ov61_0217be93: ; 0x0217be93
 	.byte 0x00
+	.global data_ov61_0217be94
 data_ov61_0217be94: ; 0x0217be94
 	.byte 0x00
+	.global data_ov61_0217be95
 data_ov61_0217be95: ; 0x0217be95
 	.byte 0x00
+	.global data_ov61_0217be96
 data_ov61_0217be96: ; 0x0217be96
 	.byte 0x00
+	.global data_ov61_0217be97
 data_ov61_0217be97: ; 0x0217be97
 	.byte 0x00
+	.global data_ov61_0217be98
 data_ov61_0217be98: ; 0x0217be98
 	.byte 0x00
+	.global data_ov61_0217be99
 data_ov61_0217be99: ; 0x0217be99
 	.byte 0x00
+	.global data_ov61_0217be9a
 data_ov61_0217be9a: ; 0x0217be9a
 	.byte 0x00
+	.global data_ov61_0217be9b
 data_ov61_0217be9b: ; 0x0217be9b
 	.byte 0x00
+	.global data_ov61_0217be9c
 data_ov61_0217be9c: ; 0x0217be9c
 	.byte 0x00
+	.global data_ov61_0217be9d
 data_ov61_0217be9d: ; 0x0217be9d
 	.byte 0x00
+	.global data_ov61_0217be9e
 data_ov61_0217be9e: ; 0x0217be9e
 	.byte 0x00
+	.global data_ov61_0217be9f
 data_ov61_0217be9f: ; 0x0217be9f
 	.byte 0x00
+	.global data_ov61_0217bea0
 data_ov61_0217bea0: ; 0x0217bea0
 	.byte 0x00
+	.global data_ov61_0217bea1
 data_ov61_0217bea1: ; 0x0217bea1
 	.byte 0x00
+	.global data_ov61_0217bea2
 data_ov61_0217bea2: ; 0x0217bea2
 	.byte 0x00
+	.global data_ov61_0217bea3
 data_ov61_0217bea3: ; 0x0217bea3
 	.byte 0x00
+	.global data_ov61_0217bea4
 data_ov61_0217bea4: ; 0x0217bea4
 	.byte 0x00
+	.global data_ov61_0217bea5
 data_ov61_0217bea5: ; 0x0217bea5
 	.byte 0x00
+	.global data_ov61_0217bea6
 data_ov61_0217bea6: ; 0x0217bea6
 	.byte 0x00
+	.global data_ov61_0217bea7
 data_ov61_0217bea7: ; 0x0217bea7
 	.byte 0x00
+	.global data_ov61_0217bea8
 data_ov61_0217bea8: ; 0x0217bea8
 	.byte 0x00
+	.global data_ov61_0217bea9
 data_ov61_0217bea9: ; 0x0217bea9
 	.byte 0x00
+	.global data_ov61_0217beaa
 data_ov61_0217beaa: ; 0x0217beaa
 	.byte 0x00
+	.global data_ov61_0217beab
 data_ov61_0217beab: ; 0x0217beab
 	.byte 0x00
+	.global data_ov61_0217beac
 data_ov61_0217beac: ; 0x0217beac
 	.byte 0x00
+	.global data_ov61_0217bead
 data_ov61_0217bead: ; 0x0217bead
 	.byte 0x00
+	.global data_ov61_0217beae
 data_ov61_0217beae: ; 0x0217beae
 	.byte 0x00
+	.global data_ov61_0217beaf
 data_ov61_0217beaf: ; 0x0217beaf
 	.byte 0x00
+	.global data_ov61_0217beb0
 data_ov61_0217beb0: ; 0x0217beb0
 	.byte 0x00
+	.global data_ov61_0217beb1
 data_ov61_0217beb1: ; 0x0217beb1
 	.byte 0x00
+	.global data_ov61_0217beb2
 data_ov61_0217beb2: ; 0x0217beb2
 	.byte 0x00
+	.global data_ov61_0217beb3
 data_ov61_0217beb3: ; 0x0217beb3
 	.byte 0x00
+	.global data_ov61_0217beb4
 data_ov61_0217beb4: ; 0x0217beb4
 	.byte 0x5c
+	.global data_ov61_0217beb5
 data_ov61_0217beb5: ; 0x0217beb5
 	.byte 0x62
+	.global data_ov61_0217beb6
 data_ov61_0217beb6: ; 0x0217beb6
 	.byte 0x61, 0x73, 0x69, 0x63, 0x5c, 0x5c, 0x69, 0x6e, 0x66, 0x6f
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217bec4
 data_ov61_0217bec4: ; 0x0217bec4
 	.byte 0x5c
+	.global data_ov61_0217bec5
 data_ov61_0217bec5: ; 0x0217bec5
 	.byte 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bed0
 data_ov61_0217bed0: ; 0x0217bed0
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217bed8
 data_ov61_0217bed8: ; 0x0217bed8
 	.byte 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x00, 0x00, 0x00
+	.global data_ov61_0217bee0
 data_ov61_0217bee0: ; 0x0217bee0
 	.byte 0x71, 0x75, 0x65, 0x72, 0x79, 0x69, 0x64, 0x00
+	.global data_ov61_0217bee8
 data_ov61_0217bee8: ; 0x0217bee8
 	.byte 0x53, 0x42, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72
 	.byte 0x47, 0x65, 0x74, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x41, 0x00
+	.global data_ov61_0217bf00
 data_ov61_0217bf00: ; 0x0217bf00
 	.byte 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217bf04
 data_ov61_0217bf04: ; 0x0217bf04
 	.byte 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x00, 0x00
+	.global data_ov61_0217bf0c
 data_ov61_0217bf0c: ; 0x0217bf0c
 	.byte 0x73, 0x62, 0x5f, 0x73
 	.byte 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x63, 0x00
+	.global data_ov61_0217bf18
 data_ov61_0217bf18: ; 0x0217bf18
 	.byte 0x70, 0x69, 0x6e, 0x67, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf20
 data_ov61_0217bf20: ; 0x0217bf20
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf24
 data_ov61_0217bf24: ; 0x0217bf24
 	.byte 0x25, 0x73, 0x25, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf2c
 data_ov61_0217bf2c: ; 0x0217bf2c
 	.byte 0x5c, 0x25, 0x73, 0x00
+	.global data_ov61_0217bf30
 data_ov61_0217bf30: ; 0x0217bf30
 	.byte 0x44, 0xbf, 0x17, 0x02
+	.global data_ov61_0217bf34
 data_ov61_0217bf34: ; 0x0217bf34
 	.byte 0x53, 0x42, 0x52, 0x65, 0x6c, 0x65, 0x61, 0x73, 0x65, 0x53, 0x74, 0x72
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf44
 data_ov61_0217bf44: ; 0x0217bf44
 	.byte 0x51, 0x75, 0x65, 0x72, 0x79, 0x20, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x3a
 	.byte 0x20, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf54
 data_ov61_0217bf54: ; 0x0217bf54
 	.byte 0x41, 0x6c, 0x6c, 0x4b, 0x65, 0x79, 0x73, 0x50, 0x72, 0x65, 0x73, 0x65
 	.byte 0x6e, 0x74, 0x00, 0x00
+	.global data_ov61_0217bf64
 data_ov61_0217bf64: ; 0x0217bf64
 	.byte 0x53, 0x42, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74
 	.byte 0x49, 0x6e, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf78
 data_ov61_0217bf78: ; 0x0217bf78
 	.byte 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x41
 	.byte 0x64, 0x48, 0x6f, 0x63, 0x44, 0x61, 0x74, 0x61, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bf8c
 data_ov61_0217bf8c: ; 0x0217bf8c
 	.byte 0x50, 0x72, 0x6f, 0x63
 	.byte 0x65, 0x73, 0x73, 0x4d, 0x61, 0x69, 0x6e, 0x4c, 0x69, 0x73, 0x74, 0x44, 0x61, 0x74, 0x61, 0x00
+	.global data_ov61_0217bfa0
 data_ov61_0217bfa0: ; 0x0217bfa0
 	.byte 0x53, 0x42, 0x53, 0x65, 0x72, 0x76, 0x65, 0x72, 0x4c, 0x69, 0x73, 0x74, 0x43, 0x6f, 0x6e, 0x6e
 	.byte 0x65, 0x63, 0x74, 0x41, 0x6e, 0x64, 0x51, 0x75, 0x65, 0x72, 0x79, 0x00
+	.global data_ov61_0217bfbc
 data_ov61_0217bfbc: ; 0x0217bfbc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217bfc0
 data_ov61_0217bfc0: ; 0x0217bfc0
 	.byte 0x76, 0x61, 0x6c, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217bfcc
 data_ov61_0217bfcc: ; 0x0217bfcc
 	.byte 0x73, 0x62, 0x5f, 0x73
 	.byte 0x65, 0x72, 0x76, 0x65, 0x72, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x63, 0x00
+	.global data_ov61_0217bfdc
 data_ov61_0217bfdc: ; 0x0217bfdc
 	.byte 0x73, 0x6c, 0x69, 0x73
 	.byte 0x74, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217bfec
 data_ov61_0217bfec: ; 0x0217bfec
 	.byte 0x63, 0x61, 0x6c, 0x6c
 	.byte 0x62, 0x61, 0x63, 0x6b, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c000
 data_ov61_0217c000: ; 0x0217c000
 	.byte 0x25, 0x73, 0x2e, 0x6d, 0x73, 0x25, 0x64, 0x2e, 0x67, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65
 	.byte 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x00
+	.global data_ov61_0217c01c
 data_ov61_0217c01c: ; 0x0217c01c
 	.byte 0x73, 0x6c, 0x69, 0x73
 	.byte 0x74, 0x2d, 0x3e, 0x73, 0x74, 0x61, 0x74, 0x65, 0x20, 0x3d, 0x3d, 0x20, 0x73, 0x6c, 0x5f, 0x64
 	.byte 0x69, 0x73, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x65, 0x64, 0x00
+	.global data_ov61_0217c03c
 data_ov61_0217c03c: ; 0x0217c03c
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217c040
 data_ov61_0217c040: ; 0x0217c040
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217c044
 data_ov61_0217c044: ; 0x0217c044
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c048
 data_ov61_0217c048: ; 0x0217c048
 	.byte 0x69, 0x6e, 0x6c, 0x65, 0x6e, 0x20, 0x3e, 0x3d
 	.byte 0x20, 0x30, 0x00, 0x00
+	.global data_ov61_0217c054
 data_ov61_0217c054: ; 0x0217c054
 	.byte 0x73, 0x6c, 0x69, 0x73, 0x74, 0x2d, 0x3e, 0x69, 0x6e, 0x62, 0x75, 0x66
 	.byte 0x66, 0x65, 0x72, 0x6c, 0x65, 0x6e, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x00
+	.global data_ov61_0217c06c
 data_ov61_0217c06c: ; 0x0217c06c
 	.byte 0x25, 0x73, 0x2e, 0x61
 	.byte 0x76, 0x61, 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x2e, 0x67, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74
 	.byte 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c090
 data_ov61_0217c090: ; 0x0217c090
 	.byte 0xfe, 0xfd, 0x09, 0x00
+	.global data_ov61_0217c094
 data_ov61_0217c094: ; 0x0217c094
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x4e, 0x74, 0x68, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0a0
 data_ov61_0217c0a0: ; 0x0217c0a0
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x4e, 0x65, 0x77, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0ac
 data_ov61_0217c0ac: ; 0x0217c0ac
 	.byte 0x41, 0x72, 0x72, 0x61
 	.byte 0x79, 0x46, 0x72, 0x65, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0b8
 data_ov61_0217c0b8: ; 0x0217c0b8
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x47, 0x72, 0x6f
 	.byte 0x77, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0c4
 data_ov61_0217c0c4: ; 0x0217c0c4
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x41, 0x70, 0x70, 0x65, 0x6e, 0x64, 0x00
+	.global data_ov61_0217c0d0
 data_ov61_0217c0d0: ; 0x0217c0d0
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x41, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0e0
 data_ov61_0217c0e0: ; 0x0217c0e0
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x41, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217c0f0
 data_ov61_0217c0f0: ; 0x0217c0f0
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x49, 0x6e, 0x73, 0x65, 0x72, 0x74, 0x41, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217c100
 data_ov61_0217c100: ; 0x0217c100
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x52, 0x65, 0x70, 0x6c, 0x61, 0x63, 0x65, 0x41, 0x74, 0x00, 0x00
+	.global data_ov61_0217c110
 data_ov61_0217c110: ; 0x0217c110
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x4d, 0x61, 0x70, 0x42, 0x61, 0x63, 0x6b, 0x77, 0x61, 0x72, 0x64
 	.byte 0x73, 0x00, 0x00, 0x00
+	.global data_ov61_0217c124
 data_ov61_0217c124: ; 0x0217c124
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x49, 0x6e, 0x73, 0x65, 0x72, 0x74, 0x53
 	.byte 0x6f, 0x72, 0x74, 0x65, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217c138
 data_ov61_0217c138: ; 0x0217c138
 	.byte 0x41, 0x72, 0x72, 0x61, 0x79, 0x4d, 0x61, 0x70
 	.byte 0x42, 0x61, 0x63, 0x6b, 0x77, 0x61, 0x72, 0x64, 0x73, 0x32, 0x00, 0x00
+	.global data_ov61_0217c14c
 data_ov61_0217c14c: ; 0x0217c14c
 	.byte 0x61, 0x72, 0x72, 0x61
 	.byte 0x79, 0x2d, 0x3e, 0x6c, 0x69, 0x73, 0x74, 0x00
+	.global data_ov61_0217c158
 data_ov61_0217c158: ; 0x0217c158
 	.byte 0x64, 0x61, 0x72, 0x72, 0x61, 0x79, 0x2e, 0x63
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c164
 data_ov61_0217c164: ; 0x0217c164
 	.byte 0x61, 0x72, 0x72, 0x61, 0x79, 0x00, 0x00, 0x00
+	.global data_ov61_0217c16c
 data_ov61_0217c16c: ; 0x0217c16c
 	.byte 0x65, 0x6c, 0x65, 0x6d
 	.byte 0x53, 0x69, 0x7a, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c178
 data_ov61_0217c178: ; 0x0217c178
 	.byte 0x28, 0x6e, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x29
 	.byte 0x20, 0x26, 0x26, 0x20, 0x28, 0x6e, 0x20, 0x3c, 0x20, 0x61, 0x72, 0x72, 0x61, 0x79, 0x2d, 0x3e
 	.byte 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x29, 0x00, 0x00
+	.global data_ov61_0217c198
 data_ov61_0217c198: ; 0x0217c198
 	.byte 0x28, 0x6e, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x29
 	.byte 0x20, 0x26, 0x26, 0x20, 0x28, 0x6e, 0x20, 0x3c, 0x3d, 0x20, 0x61, 0x72, 0x72, 0x61, 0x79, 0x2d
 	.byte 0x3e, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x29, 0x00
+	.global data_ov61_0217c1b8
 data_ov61_0217c1b8: ; 0x0217c1b8
 	.byte 0x63, 0x6f, 0x6d, 0x70, 0x61, 0x72, 0x61, 0x74
 	.byte 0x6f, 0x72, 0x00, 0x00
+	.global data_ov61_0217c1c4
 data_ov61_0217c1c4: ; 0x0217c1c4
 	.byte 0x66, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c1c8
 data_ov61_0217c1c8: ; 0x0217c1c8
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x4e, 0x65, 0x77
 	.byte 0x32, 0x00, 0x00, 0x00
+	.global data_ov61_0217c1d4
 data_ov61_0217c1d4: ; 0x0217c1d4
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x46, 0x72, 0x65, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217c1e0
 data_ov61_0217c1e0: ; 0x0217c1e0
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x45, 0x6e, 0x74, 0x65, 0x72, 0x00, 0x00
+	.global data_ov61_0217c1ec
 data_ov61_0217c1ec: ; 0x0217c1ec
 	.byte 0x54, 0x61, 0x62, 0x6c
 	.byte 0x65, 0x43, 0x6f, 0x75, 0x6e, 0x74, 0x00, 0x00
+	.global data_ov61_0217c1f8
 data_ov61_0217c1f8: ; 0x0217c1f8
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x52, 0x65, 0x6d
 	.byte 0x6f, 0x76, 0x65, 0x00
+	.global data_ov61_0217c204
 data_ov61_0217c204: ; 0x0217c204
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x4c, 0x6f, 0x6f, 0x6b, 0x75, 0x70, 0x00
+	.global data_ov61_0217c210
 data_ov61_0217c210: ; 0x0217c210
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x4d, 0x61, 0x70, 0x53, 0x61, 0x66, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c220
 data_ov61_0217c220: ; 0x0217c220
 	.byte 0x54, 0x61, 0x62, 0x6c, 0x65, 0x4d, 0x61, 0x70, 0x53, 0x61, 0x66, 0x65, 0x32, 0x00, 0x00, 0x00
+	.global data_ov61_0217c230
 data_ov61_0217c230: ; 0x0217c230
 	.byte 0x68, 0x61, 0x73, 0x68, 0x46, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c238
 data_ov61_0217c238: ; 0x0217c238
 	.byte 0x68, 0x61, 0x73, 0x68, 0x74, 0x61, 0x62, 0x6c
 	.byte 0x65, 0x2e, 0x63, 0x00
+	.global data_ov61_0217c244
 data_ov61_0217c244: ; 0x0217c244
 	.byte 0x63, 0x6f, 0x6d, 0x70, 0x46, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c24c
 data_ov61_0217c24c: ; 0x0217c24c
 	.byte 0x65, 0x6c, 0x65, 0x6d
 	.byte 0x53, 0x69, 0x7a, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c258
 data_ov61_0217c258: ; 0x0217c258
 	.byte 0x6e, 0x42, 0x75, 0x63, 0x6b, 0x65, 0x74, 0x73
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c264
 data_ov61_0217c264: ; 0x0217c264
 	.byte 0x74, 0x61, 0x62, 0x6c, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217c26c
 data_ov61_0217c26c: ; 0x0217c26c
 	.byte 0x74, 0x61, 0x62, 0x6c
 	.byte 0x65, 0x2d, 0x3e, 0x62, 0x75, 0x63, 0x6b, 0x65, 0x74, 0x73, 0x00, 0x00
+	.global data_ov61_0217c27c
 data_ov61_0217c27c: ; 0x0217c27c
 	.byte 0x66, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c280
 data_ov61_0217c280: ; 0x0217c280
 	.byte 0x25, 0x30, 0x32, 0x78, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c288
 data_ov61_0217c288: ; 0x0217c288
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov61_0217c28c
 data_ov61_0217c28c: ; 0x0217c28c
 	.byte 0x74, 0x69, 0x6d, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c294
 data_ov61_0217c294: ; 0x0217c294
 	.byte 0x63, 0x75, 0x72, 0x72, 0x65, 0x6e, 0x74, 0x5f, 0x74, 0x69, 0x6d, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c2a4
 data_ov61_0217c2a4: ; 0x0217c2a4
 	.byte 0x4f, 0x53, 0x5f, 0x49, 0x73, 0x54, 0x69, 0x63, 0x6b, 0x41, 0x76, 0x61
 	.byte 0x69, 0x6c, 0x61, 0x62, 0x6c, 0x65, 0x28, 0x29, 0x20, 0x3d, 0x3d, 0x20, 0x54, 0x52, 0x55, 0x45
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c2c4
 data_ov61_0217c2c4: ; 0x0217c2c4
 	.byte 0x6e, 0x6f, 0x6e, 0x70, 0x6f, 0x72, 0x74, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217c2d0
 data_ov61_0217c2d0: ; 0x0217c2d0
 	.byte 0x6c, 0x6f, 0x63, 0x61, 0x6c, 0x68, 0x6f, 0x73, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217c2dc
 data_ov61_0217c2dc: ; 0x0217c2dc
 	.byte 0x67, 0x70, 0x47, 0x65
 	.byte 0x74, 0x42, 0x75, 0x64, 0x64, 0x79, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c2f0
 data_ov61_0217c2f0: ; 0x0217c2f0
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x66, 0x75, 0x6e, 0x63, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c300
 data_ov61_0217c300: ; 0x0217c300
 	.byte 0x4e, 0x6f, 0x20, 0x63, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c310
 data_ov61_0217c310: ; 0x0217c310
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c314
 data_ov61_0217c314: ; 0x0217c314
 	.byte 0x54, 0x68, 0x65, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69
 	.byte 0x6f, 0x6e, 0x20, 0x68, 0x61, 0x73, 0x20, 0x61, 0x6c, 0x72, 0x65, 0x61, 0x64, 0x79, 0x20, 0x62
 	.byte 0x65, 0x65, 0x6e, 0x20, 0x64, 0x69, 0x73, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x65, 0x64
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c344
 data_ov61_0217c344: ; 0x0217c344
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x72, 0x65, 0x61, 0x73
 	.byte 0x6f, 0x6e, 0x2e, 0x00
+	.global data_ov61_0217c354
 data_ov61_0217c354: ; 0x0217c354
 	.byte 0x5c, 0x61, 0x64, 0x64, 0x62, 0x75, 0x64, 0x64, 0x79, 0x5c, 0x00, 0x00
+	.global data_ov61_0217c360
 data_ov61_0217c360: ; 0x0217c360
 	.byte 0x5c, 0x73, 0x65, 0x73, 0x73, 0x6b, 0x65, 0x79, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c36c
 data_ov61_0217c36c: ; 0x0217c36c
 	.byte 0x5c, 0x6e, 0x65, 0x77
 	.byte 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00, 0x00
+	.global data_ov61_0217c37c
 data_ov61_0217c37c: ; 0x0217c37c
 	.byte 0x5c, 0x72, 0x65, 0x61
 	.byte 0x73, 0x6f, 0x6e, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c388
 data_ov61_0217c388: ; 0x0217c388
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217c390
 data_ov61_0217c390: ; 0x0217c390
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x2e, 0x00
+	.global data_ov61_0217c3a0
 data_ov61_0217c3a0: ; 0x0217c3a0
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x69, 0x6e, 0x64, 0x65, 0x78, 0x2e, 0x00, 0x00
+	.global data_ov61_0217c3b0
 data_ov61_0217c3b0: ; 0x0217c3b0
 	.byte 0x62, 0x75, 0x64, 0x64, 0x79, 0x53, 0x74, 0x61, 0x74, 0x75, 0x73, 0x00
+	.global data_ov61_0217c3bc
 data_ov61_0217c3bc: ; 0x0217c3bc
 	.byte 0x67, 0x70, 0x2e, 0x63
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c3c4
 data_ov61_0217c3c4: ; 0x0217c3c4
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x73, 0x74, 0x61, 0x74
 	.byte 0x75, 0x73, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c3dc
 data_ov61_0217c3dc: ; 0x0217c3dc
 	.byte 0x49, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x6c, 0x6f, 0x63, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x53, 0x74, 0x72, 0x69
 	.byte 0x6e, 0x67, 0x2e, 0x00
+	.global data_ov61_0217c3f4
 data_ov61_0217c3f4: ; 0x0217c3f4
 	.byte 0x5c, 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c400
 data_ov61_0217c400: ; 0x0217c400
 	.byte 0x5c, 0x73, 0x74, 0x61, 0x74, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c410
 data_ov61_0217c410: ; 0x0217c410
 	.byte 0x5c, 0x6c, 0x6f, 0x63, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5c, 0x00
+	.global data_ov61_0217c41c
 data_ov61_0217c41c: ; 0x0217c41c
 	.byte 0x49, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c430
 data_ov61_0217c430: ; 0x0217c430
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x00, 0x00
+	.global data_ov61_0217c43c
 data_ov61_0217c43c: ; 0x0217c43c
 	.byte 0x0a, 0x0a, 0x0a, 0x0a
 	.byte 0x0a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x2a, 0x0a, 0x67
 	.byte 0x70, 0x69, 0x49, 0x6e, 0x69, 0x74, 0x69, 0x61, 0x6c, 0x69, 0x7a, 0x65, 0x0a, 0x00, 0x00, 0x00
+	.global data_ov61_0217c460
 data_ov61_0217c460: ; 0x0217c460
 	.byte 0x43, 0x4d, 0x00, 0x00
+	.global data_ov61_0217c464
 data_ov61_0217c464: ; 0x0217c464
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e
 	.byte 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69, 0x6e, 0x67, 0x20, 0x66
 	.byte 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00
+	.global data_ov61_0217c490
 data_ov61_0217c490: ; 0x0217c490
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217c498
 data_ov61_0217c498: ; 0x0217c498
 	.byte 0x43, 0x4d, 0x44, 0x3a, 0x20, 0x25, 0x73, 0x0a
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c4a4
 data_ov61_0217c4a4: ; 0x0217c4a4
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72
 	.byte 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217c4b4
 data_ov61_0217c4b4: ; 0x0217c4b4
 	.byte 0x5c, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c4bc
 data_ov61_0217c4bc: ; 0x0217c4bc
 	.byte 0x4e, 0x6f, 0x20, 0x6d
 	.byte 0x61, 0x74, 0x63, 0x68, 0x69, 0x6e, 0x67, 0x20, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f
 	.byte 0x6e, 0x20, 0x66, 0x6f, 0x75, 0x6e, 0x64, 0x20, 0x66, 0x6f, 0x72, 0x20, 0x69, 0x64, 0x20, 0x25
 	.byte 0x64, 0x0a, 0x00, 0x00
+	.global data_ov61_0217c4e4
 data_ov61_0217c4e4: ; 0x0217c4e4
 	.byte 0x5c, 0x62, 0x6d, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c4ec
 data_ov61_0217c4ec: ; 0x0217c4ec
 	.byte 0x5c, 0x6b, 0x61, 0x5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c4f4
 data_ov61_0217c4f4: ; 0x0217c4f4
 	.byte 0x52, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x20, 0x61, 0x6e, 0x20
 	.byte 0x75, 0x6e, 0x72, 0x65, 0x63, 0x6f, 0x67, 0x6e, 0x69, 0x7a, 0x65, 0x64, 0x2c, 0x20, 0x75, 0x6e
 	.byte 0x73, 0x6f, 0x6c, 0x69, 0x63, 0x69, 0x74, 0x65, 0x64, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67
 	.byte 0x65, 0x2e, 0x0a, 0x00
+	.global data_ov61_0217c524
 data_ov61_0217c524: ; 0x0217c524
 	.byte 0x54, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x68
 	.byte 0x61, 0x73, 0x20, 0x63, 0x6c, 0x6f, 0x73, 0x65, 0x64, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63, 0x6f
 	.byte 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c54c
 data_ov61_0217c54c: ; 0x0217c54c
 	.byte 0x28, 0x69, 0x63, 0x6f
 	.byte 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2d, 0x3e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63
@@ -75685,8899 +79019,13171 @@ data_ov61_0217c54c: ; 0x0217c54c
 	.byte 0x3e, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x53, 0x74, 0x61, 0x74, 0x65, 0x20, 0x3d, 0x3d
 	.byte 0x20, 0x47, 0x50, 0x49, 0x5f, 0x44, 0x49, 0x53, 0x43, 0x4f, 0x4e, 0x4e, 0x45, 0x43, 0x54, 0x45
 	.byte 0x44, 0x29, 0x00, 0x00
+	.global data_ov61_0217c644
 data_ov61_0217c644: ; 0x0217c644
 	.byte 0x67, 0x70, 0x69, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217c64c
 data_ov61_0217c64c: ; 0x0217c64c
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217c650
 data_ov61_0217c650: ; 0x0217c650
 	.byte 0x67, 0x70, 0x69, 0x44, 0x65, 0x6c, 0x65, 0x74, 0x65, 0x42, 0x75, 0x64, 0x64, 0x79, 0x00, 0x00
+	.global data_ov61_0217c660
 data_ov61_0217c660: ; 0x0217c660
 	.byte 0x5c, 0x61, 0x75, 0x74, 0x68, 0x61, 0x64, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c66c
 data_ov61_0217c66c: ; 0x0217c66c
 	.byte 0x5c, 0x73, 0x65, 0x73
 	.byte 0x73, 0x6b, 0x65, 0x79, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c678
 data_ov61_0217c678: ; 0x0217c678
 	.byte 0x5c, 0x66, 0x72, 0x6f, 0x6d, 0x70, 0x72, 0x6f
 	.byte 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217c688
 data_ov61_0217c688: ; 0x0217c688
 	.byte 0x5c, 0x73, 0x69, 0x67, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c690
 data_ov61_0217c690: ; 0x0217c690
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217c698
 data_ov61_0217c698: ; 0x0217c698
 	.byte 0x5c, 0x62, 0x6d, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c6a0
 data_ov61_0217c6a0: ; 0x0217c6a0
 	.byte 0x55, 0x6e, 0x65, 0x78, 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20
 	.byte 0x77, 0x61, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f
 	.byte 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c6d0
 data_ov61_0217c6d0: ; 0x0217c6d0
 	.byte 0x5c, 0x66, 0x5c, 0x00
+	.global data_ov61_0217c6d4
 data_ov61_0217c6d4: ; 0x0217c6d4
 	.byte 0x5c, 0x64, 0x61, 0x74, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217c6dc
 data_ov61_0217c6dc: ; 0x0217c6dc
 	.byte 0x4f, 0x75, 0x74, 0x20
 	.byte 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217c6ec
 data_ov61_0217c6ec: ; 0x0217c6ec
 	.byte 0x5c, 0x6d, 0x73, 0x67
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c6f4
 data_ov61_0217c6f4: ; 0x0217c6f4
 	.byte 0x7c, 0x73, 0x69, 0x67, 0x6e, 0x65, 0x64, 0x7c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c700
 data_ov61_0217c700: ; 0x0217c700
 	.byte 0x7c, 0x73, 0x7c, 0x00
+	.global data_ov61_0217c704
 data_ov61_0217c704: ; 0x0217c704
 	.byte 0x7c, 0x73, 0x73, 0x7c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c70c
 data_ov61_0217c70c: ; 0x0217c70c
 	.byte 0x7c, 0x6c, 0x73, 0x7c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c714
 data_ov61_0217c714: ; 0x0217c714
 	.byte 0x7c, 0x69, 0x70, 0x7c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c71c
 data_ov61_0217c71c: ; 0x0217c71c
 	.byte 0x7c, 0x70, 0x7c, 0x00
+	.global data_ov61_0217c720
 data_ov61_0217c720: ; 0x0217c720
 	.byte 0x7c, 0x6c, 0x7c, 0x00
+	.global data_ov61_0217c724
 data_ov61_0217c724: ; 0x0217c724
 	.byte 0x31, 0x00, 0x00, 0x00
+	.global data_ov61_0217c728
 data_ov61_0217c728: ; 0x0217c728
 	.byte 0x5c, 0x74, 0x5c, 0x00
+	.global data_ov61_0217c72c
 data_ov61_0217c72c: ; 0x0217c72c
 	.byte 0x49, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c740
 data_ov61_0217c740: ; 0x0217c740
 	.byte 0x5c, 0x64, 0x65, 0x6c, 0x62, 0x75, 0x64, 0x64, 0x79, 0x5c, 0x00, 0x00
+	.global data_ov61_0217c74c
 data_ov61_0217c74c: ; 0x0217c74c
 	.byte 0x5c, 0x64, 0x65, 0x6c
 	.byte 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00, 0x00
+	.global data_ov61_0217c75c
 data_ov61_0217c75c: ; 0x0217c75c
 	.byte 0x69, 0x6e, 0x64, 0x65
 	.byte 0x78, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x00, 0x00
+	.global data_ov61_0217c768
 data_ov61_0217c768: ; 0x0217c768
 	.byte 0x67, 0x70, 0x69, 0x42, 0x75, 0x64, 0x64, 0x79
 	.byte 0x2e, 0x63, 0x00, 0x00
+	.global data_ov61_0217c774
 data_ov61_0217c774: ; 0x0217c774
 	.byte 0x69, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2d
 	.byte 0x3e, 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x4c, 0x69, 0x73, 0x74, 0x2e, 0x6e, 0x75, 0x6d
 	.byte 0x42, 0x75, 0x64, 0x64, 0x69, 0x65, 0x73, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c7a0
 data_ov61_0217c7a0: ; 0x0217c7a0
 	.byte 0x67, 0x70, 0x69, 0x52, 0x65, 0x63, 0x76, 0x54, 0x6f, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x00
+	.global data_ov61_0217c7b0
 data_ov61_0217c7b0: ; 0x0217c7b0
 	.byte 0x67, 0x70, 0x69, 0x53, 0x65, 0x6e, 0x64, 0x46, 0x72, 0x6f, 0x6d, 0x42, 0x75, 0x66, 0x66, 0x65
 	.byte 0x72, 0x00, 0x00, 0x00
+	.global data_ov61_0217c7c4
 data_ov61_0217c7c4: ; 0x0217c7c4
 	.byte 0x67, 0x70, 0x69, 0x53, 0x65, 0x6e, 0x64, 0x4f, 0x72, 0x42, 0x75, 0x66
 	.byte 0x66, 0x65, 0x72, 0x43, 0x68, 0x61, 0x72, 0x00
+	.global data_ov61_0217c7d8
 data_ov61_0217c7d8: ; 0x0217c7d8
 	.byte 0x67, 0x70, 0x69, 0x41, 0x70, 0x70, 0x65, 0x6e
 	.byte 0x64, 0x43, 0x68, 0x61, 0x72, 0x54, 0x6f, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x00, 0x00, 0x00
+	.global data_ov61_0217c7f0
 data_ov61_0217c7f0: ; 0x0217c7f0
 	.byte 0x67, 0x70, 0x69, 0x53, 0x65, 0x6e, 0x64, 0x4f, 0x72, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x53
 	.byte 0x74, 0x72, 0x69, 0x6e, 0x67, 0x4c, 0x65, 0x6e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c80c
 data_ov61_0217c80c: ; 0x0217c80c
 	.byte 0x67, 0x70, 0x69, 0x41
 	.byte 0x70, 0x70, 0x65, 0x6e, 0x64, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x54, 0x6f, 0x42, 0x75, 0x66
 	.byte 0x66, 0x65, 0x72, 0x4c, 0x65, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c828
 data_ov61_0217c828: ; 0x0217c828
 	.byte 0x6f, 0x75, 0x74, 0x70, 0x75, 0x74, 0x42, 0x75
 	.byte 0x66, 0x66, 0x65, 0x72, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c840
 data_ov61_0217c840: ; 0x0217c840
 	.byte 0x67, 0x70, 0x69, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2e, 0x63, 0x00
+	.global data_ov61_0217c84c
 data_ov61_0217c84c: ; 0x0217c84c
 	.byte 0x4f, 0x75, 0x74, 0x20
 	.byte 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217c85c
 data_ov61_0217c85c: ; 0x0217c85c
 	.byte 0x73, 0x74, 0x72, 0x69
 	.byte 0x6e, 0x67, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00
+	.global data_ov61_0217c86c
 data_ov61_0217c86c: ; 0x0217c86c
 	.byte 0x73, 0x74, 0x72, 0x69
 	.byte 0x6e, 0x67, 0x4c, 0x65, 0x6e, 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x00, 0x00
+	.global data_ov61_0217c87c
 data_ov61_0217c87c: ; 0x0217c87c
 	.byte 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217c880
 data_ov61_0217c880: ; 0x0217c880
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x73, 0x65, 0x6e, 0x64, 0x69, 0x6e, 0x67, 0x20, 0x6f, 0x6e, 0x20, 0x61, 0x20
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00
+	.global data_ov61_0217c8a8
 data_ov61_0217c8a8: ; 0x0217c8a8
 	.byte 0x53, 0x45, 0x4e, 0x44, 0x58, 0x58, 0x58, 0x58
 	.byte 0x28, 0x25, 0x73, 0x29, 0x3a, 0x20, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e
 	.byte 0x20, 0x63, 0x6c, 0x6f, 0x73, 0x65, 0x64, 0x0a, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c8cc
 data_ov61_0217c8cc: ; 0x0217c8cc
 	.byte 0x70, 0x65, 0x65, 0x72
 	.byte 0x2d, 0x3e, 0x6f, 0x75, 0x74, 0x70, 0x75, 0x74, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2e, 0x62
 	.byte 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c8f0
 data_ov61_0217c8f0: ; 0x0217c8f0
 	.byte 0x50, 0x54, 0x00, 0x00
+	.global data_ov61_0217c8f4
 data_ov61_0217c8f4: ; 0x0217c8f4
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x20, 0x21, 0x3d, 0x20, 0x49, 0x4e, 0x56, 0x41
 	.byte 0x4c, 0x49, 0x44, 0x5f, 0x53, 0x4f, 0x43, 0x4b, 0x45, 0x54, 0x00, 0x00
+	.global data_ov61_0217c90c
 data_ov61_0217c90c: ; 0x0217c90c
 	.byte 0x69, 0x6e, 0x70, 0x75
 	.byte 0x74, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217c920
 data_ov61_0217c920: ; 0x0217c920
 	.byte 0x62, 0x79, 0x74, 0x65, 0x73, 0x52, 0x65, 0x61, 0x64, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c
 	.byte 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c934
 data_ov61_0217c934: ; 0x0217c934
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x43, 0x6c, 0x6f, 0x73, 0x65, 0x64, 0x20, 0x21
 	.byte 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00
+	.global data_ov61_0217c948
 data_ov61_0217c948: ; 0x0217c948
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61
 	.byte 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69
 	.byte 0x6e, 0x67, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217c974
 data_ov61_0217c974: ; 0x0217c974
 	.byte 0x52, 0x45, 0x43, 0x56, 0x58, 0x58, 0x58, 0x58, 0x28, 0x25, 0x73, 0x29
 	.byte 0x3a, 0x20, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x63, 0x6c, 0x6f
 	.byte 0x73, 0x65, 0x64, 0x0a, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c998
 data_ov61_0217c998: ; 0x0217c998
 	.byte 0x52, 0x45, 0x43, 0x56, 0x54, 0x4f, 0x54, 0x4c
 	.byte 0x28, 0x25, 0x73, 0x29, 0x3a, 0x20, 0x25, 0x64, 0x0a, 0x00, 0x00, 0x00
+	.global data_ov61_0217c9ac
 data_ov61_0217c9ac: ; 0x0217c9ac
 	.byte 0x6c, 0x65, 0x6e, 0x20
 	.byte 0x3e, 0x3d, 0x20, 0x30, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c9b8
 data_ov61_0217c9b8: ; 0x0217c9b8
 	.byte 0x70, 0x6f, 0x73, 0x20, 0x3e, 0x3d, 0x20, 0x30
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217c9c4
 data_ov61_0217c9c4: ; 0x0217c9c4
 	.byte 0x70, 0x6f, 0x73, 0x20, 0x3c, 0x3d, 0x20, 0x6c, 0x65, 0x6e, 0x00, 0x00
+	.global data_ov61_0217c9d0
 data_ov61_0217c9d0: ; 0x0217c9d0
 	.byte 0x5c, 0x6d, 0x73, 0x67, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c9d8
 data_ov61_0217c9d8: ; 0x0217c9d8
 	.byte 0x5c, 0x6d, 0x5c, 0x00
+	.global data_ov61_0217c9dc
 data_ov61_0217c9dc: ; 0x0217c9dc
 	.byte 0x5c, 0x6c, 0x65, 0x6e
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217c9e4
 data_ov61_0217c9e4: ; 0x0217c9e4
 	.byte 0x67, 0x70, 0x69, 0x43, 0x61, 0x6c, 0x6c, 0x43, 0x61, 0x6c, 0x6c, 0x62
 	.byte 0x61, 0x63, 0x6b, 0x00
+	.global data_ov61_0217c9f4
 data_ov61_0217c9f4: ; 0x0217c9f4
 	.byte 0x67, 0x70, 0x69, 0x43, 0x61, 0x6c, 0x6c, 0x45, 0x72, 0x72, 0x6f, 0x72
 	.byte 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ca0c
 data_ov61_0217ca0c: ; 0x0217ca0c
 	.byte 0x69, 0x63, 0x6f, 0x6e
 	.byte 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217ca20
 data_ov61_0217ca20: ; 0x0217ca20
 	.byte 0x67, 0x70, 0x69, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217ca30
 data_ov61_0217ca30: ; 0x0217ca30
 	.byte 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x20, 0x21, 0x3d, 0x20, 0x47, 0x50, 0x5f, 0x4e, 0x4f, 0x5f
 	.byte 0x45, 0x52, 0x52, 0x4f, 0x52, 0x00, 0x00, 0x00
+	.global data_ov61_0217ca48
 data_ov61_0217ca48: ; 0x0217ca48
 	.byte 0x28, 0x66, 0x61, 0x74, 0x61, 0x6c, 0x20, 0x3d
 	.byte 0x3d, 0x20, 0x47, 0x50, 0x5f, 0x46, 0x41, 0x54, 0x41, 0x4c, 0x29, 0x20, 0x7c, 0x7c, 0x20, 0x28
 	.byte 0x66, 0x61, 0x74, 0x61, 0x6c, 0x20, 0x3d, 0x3d, 0x20, 0x47, 0x50, 0x5f, 0x4e, 0x4f, 0x4e, 0x5f
 	.byte 0x46, 0x41, 0x54, 0x41, 0x4c, 0x29, 0x00, 0x00
+	.global data_ov61_0217ca78
 data_ov61_0217ca78: ; 0x0217ca78
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d
 	.byte 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217ca88
 data_ov61_0217ca88: ; 0x0217ca88
 	.byte 0x64, 0x61, 0x74, 0x61, 0x2d, 0x3e, 0x63, 0x61
 	.byte 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x2e, 0x63, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x20
 	.byte 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217caa8
 data_ov61_0217caa8: ; 0x0217caa8
 	.byte 0x64, 0x61, 0x74, 0x61, 0x2d, 0x3e, 0x61, 0x72
 	.byte 0x67, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217cabc
 data_ov61_0217cabc: ; 0x0217cabc
 	.byte 0x67, 0x70, 0x69, 0x53
 	.byte 0x74, 0x61, 0x72, 0x74, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x00
+	.global data_ov61_0217cacc
 data_ov61_0217cacc: ; 0x0217cacc
 	.byte 0x67, 0x70, 0x69, 0x43
 	.byte 0x68, 0x65, 0x63, 0x6b, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x00
+	.global data_ov61_0217cadc
 data_ov61_0217cadc: ; 0x0217cadc
 	.byte 0x67, 0x70, 0x63, 0x6d
 	.byte 0x2e, 0x67, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69
 	.byte 0x2e, 0x6e, 0x65, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217caf8
 data_ov61_0217caf8: ; 0x0217caf8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cafc
 data_ov61_0217cafc: ; 0x0217cafc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb00
 data_ov61_0217cb00: ; 0x0217cb00
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb04
 data_ov61_0217cb04: ; 0x0217cb04
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb08
 data_ov61_0217cb08: ; 0x0217cb08
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb0c
 data_ov61_0217cb0c: ; 0x0217cb0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb10
 data_ov61_0217cb10: ; 0x0217cb10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb14
 data_ov61_0217cb14: ; 0x0217cb14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb18
 data_ov61_0217cb18: ; 0x0217cb18
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb1c
 data_ov61_0217cb1c: ; 0x0217cb1c
 	.byte 0x41, 0x42, 0x43, 0x44
 	.byte 0x45, 0x46, 0x47, 0x48, 0x49, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54
 	.byte 0x55, 0x56, 0x57, 0x58, 0x59, 0x5a, 0x61, 0x62, 0x63, 0x64, 0x65, 0x66, 0x67, 0x68, 0x69, 0x6a
 	.byte 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77, 0x78, 0x79, 0x7a
 	.byte 0x30, 0x31, 0x32, 0x33, 0x34, 0x35, 0x36, 0x37, 0x38, 0x39, 0x00, 0x00
+	.global data_ov61_0217cb5c
 data_ov61_0217cb5c: ; 0x0217cb5c
 	.byte 0x54, 0x68, 0x65, 0x72
 	.byte 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x63
 	.byte 0x72, 0x65, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217cb84
 data_ov61_0217cb84: ; 0x0217cb84
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e
 	.byte 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x6d, 0x61, 0x6b, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x6e, 0x6f, 0x6e, 0x2d, 0x62, 0x6c, 0x6f, 0x63, 0x6b
 	.byte 0x69, 0x6e, 0x67, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cbb8
 data_ov61_0217cbb8: ; 0x0217cbb8
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61
 	.byte 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x62, 0x69, 0x6e, 0x64, 0x69
 	.byte 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cbe0
 data_ov61_0217cbe0: ; 0x0217cbe0
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x65, 0x6e, 0x69, 0x6e, 0x67, 0x20, 0x6f, 0x6e, 0x20
 	.byte 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217cc0c
 data_ov61_0217cc0c: ; 0x0217cc0c
 	.byte 0x54, 0x68, 0x65, 0x72
 	.byte 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x67
 	.byte 0x65, 0x74, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x27
 	.byte 0x73, 0x20, 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217cc3c
 data_ov61_0217cc3c: ; 0x0217cc3c
 	.byte 0x43, 0x6f, 0x75, 0x6c
 	.byte 0x64, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x72, 0x65, 0x73, 0x6f, 0x6c, 0x76, 0x65, 0x20, 0x63, 0x6f
 	.byte 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x6d, 0x61, 0x6e, 0x61, 0x6e, 0x67, 0x65
 	.byte 0x72, 0x20, 0x68, 0x6f, 0x73, 0x74, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cc70
 data_ov61_0217cc70: ; 0x0217cc70
 	.byte 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x2e, 0x73, 0x69, 0x6e, 0x5f, 0x61, 0x64, 0x64, 0x72
 	.byte 0x2e, 0x73, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x20, 0x21, 0x3d, 0x20, 0x30, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cc90
 data_ov61_0217cc90: ; 0x0217cc90
 	.byte 0x67, 0x70, 0x69, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x2e, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cca0
 data_ov61_0217cca0: ; 0x0217cca0
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00
+	.global data_ov61_0217ccc8
 data_ov61_0217ccc8: ; 0x0217ccc8
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x00
+	.global data_ov61_0217ccdc
 data_ov61_0217ccdc: ; 0x0217ccdc
 	.byte 0x49, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x66, 0x69, 0x72, 0x65, 0x77, 0x61, 0x6c, 0x6c, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217ccf0
 data_ov61_0217ccf0: ; 0x0217ccf0
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217cd00
 data_ov61_0217cd00: ; 0x0217cd00
 	.byte 0x25, 0x73, 0x40, 0x25, 0x73, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd08
 data_ov61_0217cd08: ; 0x0217cd08
 	.byte 0x25, 0x73, 0x25, 0x73, 0x25, 0x73, 0x25, 0x73
 	.byte 0x25, 0x73, 0x25, 0x73, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd18
 data_ov61_0217cd18: ; 0x0217cd18
 	.byte 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20
 	.byte 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20
 	.byte 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20
 	.byte 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x20, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd4c
 data_ov61_0217cd4c: ; 0x0217cd4c
 	.byte 0x5c, 0x6c, 0x6f, 0x67
 	.byte 0x69, 0x6e, 0x5c, 0x00
+	.global data_ov61_0217cd54
 data_ov61_0217cd54: ; 0x0217cd54
 	.byte 0x5c, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65, 0x5c, 0x00
+	.global data_ov61_0217cd60
 data_ov61_0217cd60: ; 0x0217cd60
 	.byte 0x5c, 0x61, 0x75, 0x74, 0x68, 0x74, 0x6f, 0x6b, 0x65, 0x6e, 0x5c, 0x00
+	.global data_ov61_0217cd6c
 data_ov61_0217cd6c: ; 0x0217cd6c
 	.byte 0x5c, 0x75, 0x6e, 0x69
 	.byte 0x71, 0x75, 0x65, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd7c
 data_ov61_0217cd7c: ; 0x0217cd7c
 	.byte 0x5c, 0x75, 0x73, 0x65
 	.byte 0x72, 0x5c, 0x00, 0x00
+	.global data_ov61_0217cd84
 data_ov61_0217cd84: ; 0x0217cd84
 	.byte 0x40, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd88
 data_ov61_0217cd88: ; 0x0217cd88
 	.byte 0x5c, 0x75, 0x73, 0x65, 0x72, 0x69, 0x64, 0x5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cd94
 data_ov61_0217cd94: ; 0x0217cd94
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217cda0
 data_ov61_0217cda0: ; 0x0217cda0
 	.byte 0x5c, 0x72, 0x65, 0x73, 0x70, 0x6f, 0x6e, 0x73, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217cdac
 data_ov61_0217cdac: ; 0x0217cdac
 	.byte 0x5c, 0x66, 0x69, 0x72
 	.byte 0x65, 0x77, 0x61, 0x6c, 0x6c, 0x5c, 0x31, 0x00
+	.global data_ov61_0217cdb8
 data_ov61_0217cdb8: ; 0x0217cdb8
 	.byte 0x5c, 0x70, 0x6f, 0x72, 0x74, 0x5c, 0x00, 0x00
+	.global data_ov61_0217cdc0
 data_ov61_0217cdc0: ; 0x0217cdc0
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x64, 0x75, 0x63, 0x74, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217cdcc
 data_ov61_0217cdcc: ; 0x0217cdcc
 	.byte 0x5c, 0x67, 0x61, 0x6d
 	.byte 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217cdd8
 data_ov61_0217cdd8: ; 0x0217cdd8
 	.byte 0x5c, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61
 	.byte 0x63, 0x65, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217cde8
 data_ov61_0217cde8: ; 0x0217cde8
 	.byte 0x5c, 0x69, 0x64, 0x5c, 0x31, 0x00, 0x00, 0x00
+	.global data_ov61_0217cdf0
 data_ov61_0217cdf0: ; 0x0217cdf0
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217cdf8
 data_ov61_0217cdf8: ; 0x0217cdf8
 	.byte 0x5c, 0x6e, 0x65, 0x77, 0x75, 0x73, 0x65, 0x72
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce04
 data_ov61_0217ce04: ; 0x0217ce04
 	.byte 0x5c, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217ce0c
 data_ov61_0217ce0c: ; 0x0217ce0c
 	.byte 0x5c, 0x6e, 0x69, 0x63
 	.byte 0x6b, 0x5c, 0x00, 0x00
+	.global data_ov61_0217ce14
 data_ov61_0217ce14: ; 0x0217ce14
 	.byte 0x5c, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x65, 0x6e, 0x63
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce24
 data_ov61_0217ce24: ; 0x0217ce24
 	.byte 0x5c, 0x63, 0x64, 0x6b, 0x65, 0x79, 0x65, 0x6e, 0x63, 0x5c, 0x00, 0x00
+	.global data_ov61_0217ce30
 data_ov61_0217ce30: ; 0x0217ce30
 	.byte 0x5c, 0x70, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce38
 data_ov61_0217ce38: ; 0x0217ce38
 	.byte 0x5c, 0x66, 0x61, 0x74, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217ce40
 data_ov61_0217ce40: ; 0x0217ce40
 	.byte 0x5c, 0x6c, 0x63, 0x5c, 0x31, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce48
 data_ov61_0217ce48: ; 0x0217ce48
 	.byte 0x55, 0x6e, 0x65, 0x78, 0x70, 0x65, 0x63, 0x74
 	.byte 0x65, 0x64, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x77, 0x61, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65
 	.byte 0x69, 0x76, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65
 	.byte 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce78
 data_ov61_0217ce78: ; 0x0217ce78
 	.byte 0x5c, 0x6e, 0x75, 0x72, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ce80
 data_ov61_0217ce80: ; 0x0217ce80
 	.byte 0x55, 0x6e, 0x65, 0x78, 0x65, 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x64, 0x61, 0x74, 0x61
 	.byte 0x20, 0x77, 0x61, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x20, 0x66, 0x72
 	.byte 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00, 0x00
+	.global data_ov61_0217ceb0
 data_ov61_0217ceb0: ; 0x0217ceb0
 	.byte 0x5c, 0x6c, 0x63, 0x5c, 0x32, 0x00, 0x00, 0x00
+	.global data_ov61_0217ceb8
 data_ov61_0217ceb8: ; 0x0217ceb8
 	.byte 0x5c, 0x73, 0x65, 0x73, 0x73, 0x6b, 0x65, 0x79
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217cec4
 data_ov61_0217cec4: ; 0x0217cec4
 	.byte 0x5c, 0x6c, 0x74, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cecc
 data_ov61_0217cecc: ; 0x0217cecc
 	.byte 0x5c, 0x70, 0x72, 0x6f
 	.byte 0x6f, 0x66, 0x5c, 0x00
+	.global data_ov61_0217ced4
 data_ov61_0217ced4: ; 0x0217ced4
 	.byte 0x43, 0x6f, 0x75, 0x6c, 0x64, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x61, 0x75
 	.byte 0x74, 0x68, 0x65, 0x6e, 0x74, 0x69, 0x63, 0x61, 0x74, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65
 	.byte 0x72, 0x2e, 0x00, 0x00
+	.global data_ov61_0217cef4
 data_ov61_0217cef4: ; 0x0217cef4
 	.byte 0x54, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x20, 0x68
 	.byte 0x61, 0x73, 0x20, 0x72, 0x65, 0x66, 0x75, 0x73, 0x65, 0x64, 0x20, 0x74, 0x68, 0x65, 0x20, 0x63
 	.byte 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x00, 0x00
+	.global data_ov61_0217cf1c
 data_ov61_0217cf1c: ; 0x0217cf1c
 	.byte 0x73, 0x74, 0x61, 0x74
 	.byte 0x65, 0x20, 0x3d, 0x3d, 0x20, 0x47, 0x50, 0x49, 0x5f, 0x43, 0x4f, 0x4e, 0x4e, 0x45, 0x43, 0x54
 	.byte 0x45, 0x44, 0x00, 0x00
+	.global data_ov61_0217cf34
 data_ov61_0217cf34: ; 0x0217cf34
 	.byte 0x5c, 0x6c, 0x6f, 0x67, 0x6f, 0x75, 0x74, 0x5c, 0x5c, 0x73, 0x65, 0x73
 	.byte 0x73, 0x6b, 0x65, 0x79, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217cf48
 data_ov61_0217cf48: ; 0x0217cf48
 	.byte 0x43, 0x4d, 0x00, 0x00
+	.global data_ov61_0217cf4c
 data_ov61_0217cf4c: ; 0x0217cf4c
 	.byte 0x67, 0x70, 0x69, 0x49
 	.byte 0x6e, 0x74, 0x54, 0x6f, 0x44, 0x61, 0x74, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cf5c
 data_ov61_0217cf5c: ; 0x0217cf5c
 	.byte 0x67, 0x70, 0x69, 0x50
 	.byte 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x47, 0x65, 0x74, 0x49, 0x6e, 0x66, 0x6f, 0x00, 0x00, 0x00
+	.global data_ov61_0217cf70
 data_ov61_0217cf70: ; 0x0217cf70
 	.byte 0x67, 0x70, 0x69, 0x49, 0x6e, 0x66, 0x6f, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217cf7c
 data_ov61_0217cf7c: ; 0x0217cf7c
 	.byte 0x49, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x64, 0x61, 0x74, 0x65, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217cf8c
 data_ov61_0217cf8c: ; 0x0217cf8c
 	.byte 0x67, 0x70, 0x69, 0x49
 	.byte 0x73, 0x56, 0x61, 0x6c, 0x69, 0x64, 0x44, 0x61, 0x74, 0x65, 0x28, 0x64, 0x2c, 0x20, 0x6d, 0x2c
 	.byte 0x20, 0x79, 0x29, 0x00
+	.global data_ov61_0217cfa4
 data_ov61_0217cfa4: ; 0x0217cfa4
 	.byte 0x5c, 0x70, 0x69, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217cfac
 data_ov61_0217cfac: ; 0x0217cfac
 	.byte 0x55, 0x6e, 0x65, 0x78
 	.byte 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x77, 0x61, 0x73, 0x20
 	.byte 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68
 	.byte 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217cfdc
 data_ov61_0217cfdc: ; 0x0217cfdc
 	.byte 0x5c, 0x70, 0x72, 0x6f
 	.byte 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217cfe8
 data_ov61_0217cfe8: ; 0x0217cfe8
 	.byte 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69
 	.byte 0x64, 0x20, 0x3e, 0x20, 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217cff8
 data_ov61_0217cff8: ; 0x0217cff8
 	.byte 0x5c, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d000
 data_ov61_0217d000: ; 0x0217d000
 	.byte 0x5c, 0x75, 0x6e, 0x69, 0x71, 0x75, 0x65, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d010
 data_ov61_0217d010: ; 0x0217d010
 	.byte 0x5c, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217d018
 data_ov61_0217d018: ; 0x0217d018
 	.byte 0x5c, 0x66, 0x69, 0x72, 0x73, 0x74, 0x6e, 0x61
 	.byte 0x6d, 0x65, 0x5c, 0x00
+	.global data_ov61_0217d024
 data_ov61_0217d024: ; 0x0217d024
 	.byte 0x5c, 0x6c, 0x61, 0x73, 0x74, 0x6e, 0x61, 0x6d, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d030
 data_ov61_0217d030: ; 0x0217d030
 	.byte 0x5c, 0x69, 0x63, 0x71, 0x75, 0x69, 0x6e, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d03c
 data_ov61_0217d03c: ; 0x0217d03c
 	.byte 0x5c, 0x68, 0x6f, 0x6d
 	.byte 0x65, 0x70, 0x61, 0x67, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d048
 data_ov61_0217d048: ; 0x0217d048
 	.byte 0x5c, 0x7a, 0x69, 0x70, 0x63, 0x6f, 0x64, 0x65
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d054
 data_ov61_0217d054: ; 0x0217d054
 	.byte 0x5c, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x63, 0x6f, 0x64, 0x65
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d064
 data_ov61_0217d064: ; 0x0217d064
 	.byte 0x5c, 0x6c, 0x6f, 0x6e, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d06c
 data_ov61_0217d06c: ; 0x0217d06c
 	.byte 0x5c, 0x6c, 0x61, 0x74
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d074
 data_ov61_0217d074: ; 0x0217d074
 	.byte 0x5c, 0x6c, 0x6f, 0x63, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d07c
 data_ov61_0217d07c: ; 0x0217d07c
 	.byte 0x5c, 0x62, 0x69, 0x72
 	.byte 0x74, 0x68, 0x64, 0x61, 0x79, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d088
 data_ov61_0217d088: ; 0x0217d088
 	.byte 0x5c, 0x73, 0x65, 0x78, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d090
 data_ov61_0217d090: ; 0x0217d090
 	.byte 0x5c, 0x70, 0x6d, 0x61, 0x73, 0x6b, 0x5c, 0x00
+	.global data_ov61_0217d098
 data_ov61_0217d098: ; 0x0217d098
 	.byte 0x5c, 0x61, 0x69, 0x6d, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0a0
 data_ov61_0217d0a0: ; 0x0217d0a0
 	.byte 0x5c, 0x70, 0x69, 0x63, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0a8
 data_ov61_0217d0a8: ; 0x0217d0a8
 	.byte 0x5c, 0x6f, 0x63, 0x63, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0b0
 data_ov61_0217d0b0: ; 0x0217d0b0
 	.byte 0x5c, 0x69, 0x6e, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0b8
 data_ov61_0217d0b8: ; 0x0217d0b8
 	.byte 0x5c, 0x69, 0x6e, 0x63, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0c0
 data_ov61_0217d0c0: ; 0x0217d0c0
 	.byte 0x5c, 0x6d, 0x61, 0x72, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0c8
 data_ov61_0217d0c8: ; 0x0217d0c8
 	.byte 0x5c, 0x63, 0x68, 0x63, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0d0
 data_ov61_0217d0d0: ; 0x0217d0d0
 	.byte 0x5c, 0x69, 0x31, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0d8
 data_ov61_0217d0d8: ; 0x0217d0d8
 	.byte 0x5c, 0x6f, 0x31, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0e0
 data_ov61_0217d0e0: ; 0x0217d0e0
 	.byte 0x5c, 0x63, 0x6f, 0x6e, 0x6e, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d0e8
 data_ov61_0217d0e8: ; 0x0217d0e8
 	.byte 0x5c, 0x73, 0x69, 0x67, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d0f0
 data_ov61_0217d0f0: ; 0x0217d0f0
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d100
 data_ov61_0217d100: ; 0x0217d100
 	.byte 0x5c, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x70, 0x72, 0x6f, 0x5c, 0x5c, 0x73, 0x65, 0x73, 0x73
 	.byte 0x6b, 0x65, 0x79, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d118
 data_ov61_0217d118: ; 0x0217d118
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217d120
 data_ov61_0217d120: ; 0x0217d120
 	.byte 0x5c, 0x75, 0x70, 0x64, 0x61, 0x74, 0x65, 0x75, 0x69, 0x5c, 0x5c, 0x73, 0x65, 0x73, 0x73, 0x6b
 	.byte 0x65, 0x79, 0x5c, 0x00
+	.global data_ov61_0217d134
 data_ov61_0217d134: ; 0x0217d134
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x7a, 0x69, 0x70, 0x63
 	.byte 0x6f, 0x64, 0x65, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d148
 data_ov61_0217d148: ; 0x0217d148
 	.byte 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217d14c
 data_ov61_0217d14c: ; 0x0217d14c
 	.byte 0x30
+	.global data_ov61_0217d14d
 data_ov61_0217d14d: ; 0x0217d14d
 	.byte 0x00
+	.global data_ov61_0217d14e
 data_ov61_0217d14e: ; 0x0217d14e
 	.byte 0x00
+	.global data_ov61_0217d14f
 data_ov61_0217d14f: ; 0x0217d14f
 	.byte 0x00
+	.global data_ov61_0217d150
 data_ov61_0217d150: ; 0x0217d150
 	.byte 0x31
+	.global data_ov61_0217d151
 data_ov61_0217d151: ; 0x0217d151
 	.byte 0x00
+	.global data_ov61_0217d152
 data_ov61_0217d152: ; 0x0217d152
 	.byte 0x00
+	.global data_ov61_0217d153
 data_ov61_0217d153: ; 0x0217d153
 	.byte 0x00
+	.global data_ov61_0217d154
 data_ov61_0217d154: ; 0x0217d154
 	.byte 0x32
+	.global data_ov61_0217d155
 data_ov61_0217d155: ; 0x0217d155
 	.byte 0x00
+	.global data_ov61_0217d156
 data_ov61_0217d156: ; 0x0217d156
 	.byte 0x00
+	.global data_ov61_0217d157
 data_ov61_0217d157: ; 0x0217d157
 	.byte 0x00
+	.global data_ov61_0217d158
 data_ov61_0217d158: ; 0x0217d158
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20
 	.byte 0x73, 0x65, 0x78, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d168
 data_ov61_0217d168: ; 0x0217d168
 	.byte 0x5c, 0x63, 0x70, 0x75, 0x62, 0x72, 0x61, 0x6e
 	.byte 0x64, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d178
 data_ov61_0217d178: ; 0x0217d178
 	.byte 0x5c, 0x63, 0x70, 0x75, 0x73, 0x70, 0x65, 0x65
 	.byte 0x64, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d184
 data_ov61_0217d184: ; 0x0217d184
 	.byte 0x5c, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d190
 data_ov61_0217d190: ; 0x0217d190
 	.byte 0x5c, 0x76, 0x69, 0x64, 0x65, 0x6f, 0x63, 0x61, 0x72, 0x64, 0x31, 0x72, 0x61, 0x6d, 0x5c, 0x00
+	.global data_ov61_0217d1a0
 data_ov61_0217d1a0: ; 0x0217d1a0
 	.byte 0x5c, 0x76, 0x69, 0x64, 0x65, 0x6f, 0x63, 0x61, 0x72, 0x64, 0x32, 0x72, 0x61, 0x6d, 0x5c, 0x00
+	.global data_ov61_0217d1b0
 data_ov61_0217d1b0: ; 0x0217d1b0
 	.byte 0x5c, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x69, 0x64, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d1c0
 data_ov61_0217d1c0: ; 0x0217d1c0
 	.byte 0x5c, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x73, 0x70, 0x65, 0x65, 0x64
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d1d4
 data_ov61_0217d1d4: ; 0x0217d1d4
 	.byte 0x5c, 0x68, 0x61, 0x73, 0x6e, 0x65, 0x74, 0x77, 0x6f, 0x72, 0x6b, 0x5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d1e4
 data_ov61_0217d1e4: ; 0x0217d1e4
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x69, 0x6e, 0x66, 0x6f
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d1f4
 data_ov61_0217d1f4: ; 0x0217d1f4
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x76, 0x61, 0x6c, 0x75
 	.byte 0x65, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d204
 data_ov61_0217d204: ; 0x0217d204
 	.byte 0x5c, 0x70, 0x61, 0x73, 0x73, 0x77, 0x6f, 0x72, 0x64, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d210
 data_ov61_0217d210: ; 0x0217d210
 	.byte 0x49, 0x6e, 0x76, 0x61, 0x6c, 0x69, 0x64, 0x20, 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x63
 	.byte 0x6f, 0x64, 0x65, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d228
 data_ov61_0217d228: ; 0x0217d228
 	.byte 0x5c, 0x76, 0x69, 0x64, 0x65, 0x6f, 0x63, 0x61
 	.byte 0x72, 0x64, 0x31, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d23c
 data_ov61_0217d23c: ; 0x0217d23c
 	.byte 0x5c, 0x76, 0x69, 0x64
 	.byte 0x65, 0x6f, 0x63, 0x61, 0x72, 0x64, 0x32, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d250
 data_ov61_0217d250: ; 0x0217d250
 	.byte 0x5c, 0x6f, 0x73, 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d25c
 data_ov61_0217d25c: ; 0x0217d25c
 	.byte 0x5c, 0x67, 0x65, 0x74
 	.byte 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x5c, 0x5c, 0x73, 0x65, 0x73, 0x73, 0x6b, 0x65, 0x79
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d274
 data_ov61_0217d274: ; 0x0217d274
 	.byte 0x5c, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d27c
 data_ov61_0217d27c: ; 0x0217d27c
 	.byte 0x67, 0x70, 0x69, 0x44
 	.byte 0x65, 0x73, 0x74, 0x72, 0x6f, 0x79, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x00
+	.global data_ov61_0217d290
 data_ov61_0217d290: ; 0x0217d290
 	.byte 0x67, 0x70, 0x69, 0x46, 0x61, 0x69, 0x6c, 0x65, 0x64, 0x4f, 0x70, 0x43, 0x61, 0x6c, 0x6c, 0x62
 	.byte 0x61, 0x63, 0x6b, 0x00
+	.global data_ov61_0217d2a4
 data_ov61_0217d2a4: ; 0x0217d2a4
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x4f, 0x70
 	.byte 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x00
+	.global data_ov61_0217d2b8
 data_ov61_0217d2b8: ; 0x0217d2b8
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69
 	.byte 0x6f, 0x6e, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00
+	.global data_ov61_0217d2cc
 data_ov61_0217d2cc: ; 0x0217d2cc
 	.byte 0x67, 0x70, 0x69, 0x4f
 	.byte 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x63, 0x00, 0x00
+	.global data_ov61_0217d2dc
 data_ov61_0217d2dc: ; 0x0217d2dc
 	.byte 0x2a, 0x63, 0x6f, 0x6e
 	.byte 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217d2f0
 data_ov61_0217d2f0: ; 0x0217d2f0
 	.byte 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c
 	.byte 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d304
 data_ov61_0217d304: ; 0x0217d304
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72
 	.byte 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d314
 data_ov61_0217d314: ; 0x0217d314
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217d318
 data_ov61_0217d318: ; 0x0217d318
 	.byte 0x69, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74
 	.byte 0x69, 0x6f, 0x6e, 0x2d, 0x3e, 0x6e, 0x75, 0x6d, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x65, 0x73
 	.byte 0x20, 0x3e, 0x3d, 0x20, 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217d338
 data_ov61_0217d338: ; 0x0217d338
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65
 	.byte 0x73, 0x73, 0x4f, 0x70, 0x65, 0x72, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x77, 0x61, 0x73, 0x20
 	.byte 0x70, 0x61, 0x73, 0x73, 0x65, 0x64, 0x20, 0x61, 0x6e, 0x20, 0x6f, 0x70, 0x65, 0x72, 0x61, 0x74
 	.byte 0x69, 0x6f, 0x6e, 0x20, 0x77, 0x69, 0x74, 0x68, 0x20, 0x61, 0x6e, 0x20, 0x69, 0x6e, 0x76, 0x61
 	.byte 0x6c, 0x69, 0x64, 0x20, 0x74, 0x79, 0x70, 0x65, 0x20, 0x28, 0x25, 0x64, 0x29, 0x0a, 0x00, 0x00
+	.global data_ov61_0217d380
 data_ov61_0217d380: ; 0x0217d380
 	.byte 0x67, 0x70, 0x69, 0x52, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x50, 0x65, 0x65, 0x72, 0x00, 0x00, 0x00
+	.global data_ov61_0217d390
 data_ov61_0217d390: ; 0x0217d390
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x50, 0x65, 0x65, 0x72, 0x00, 0x00
+	.global data_ov61_0217d3a0
 data_ov61_0217d3a0: ; 0x0217d3a0
 	.byte 0x67, 0x70, 0x69, 0x50, 0x65, 0x65, 0x72, 0x41, 0x64, 0x64, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67
 	.byte 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217d3b4
 data_ov61_0217d3b4: ; 0x0217d3b4
 	.byte 0x67, 0x70, 0x69, 0x50, 0x65, 0x65, 0x72, 0x53, 0x74, 0x61, 0x72, 0x74
 	.byte 0x54, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x00
+	.global data_ov61_0217d3d0
 data_ov61_0217d3d0: ; 0x0217d3d0
 	.byte 0x67, 0x70, 0x69, 0x50, 0x65, 0x65, 0x72, 0x46, 0x69, 0x6e, 0x69, 0x73, 0x68, 0x54, 0x72, 0x61
 	.byte 0x6e, 0x73, 0x66, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d3f0
 data_ov61_0217d3f0: ; 0x0217d3f0
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x50, 0x65, 0x65, 0x72, 0x41, 0x63
 	.byte 0x63, 0x65, 0x70, 0x74, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f
 	.byte 0x6e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d414
 data_ov61_0217d414: ; 0x0217d414
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x50, 0x65
 	.byte 0x65, 0x72, 0x49, 0x6e, 0x69, 0x74, 0x69, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x43, 0x6f, 0x6e, 0x6e
 	.byte 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217d438
 data_ov61_0217d438: ; 0x0217d438
 	.byte 0x45, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x63, 0x6f
 	.byte 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x74, 0x6f, 0x20, 0x61, 0x20, 0x70, 0x65
 	.byte 0x65, 0x72, 0x2e, 0x00
+	.global data_ov61_0217d454
 data_ov61_0217d454: ; 0x0217d454
 	.byte 0x5c, 0x61, 0x75, 0x74, 0x68, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d45c
 data_ov61_0217d45c: ; 0x0217d45c
 	.byte 0x5c, 0x70, 0x69, 0x64
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d464
 data_ov61_0217d464: ; 0x0217d464
 	.byte 0x5c, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d46c
 data_ov61_0217d46c: ; 0x0217d46c
 	.byte 0x5c, 0x73, 0x69, 0x67
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d474
 data_ov61_0217d474: ; 0x0217d474
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217d47c
 data_ov61_0217d47c: ; 0x0217d47c
 	.byte 0x50, 0x52, 0x00, 0x00
+	.global data_ov61_0217d480
 data_ov61_0217d480: ; 0x0217d480
 	.byte 0x5c, 0x61, 0x6e, 0x61, 0x63, 0x6b, 0x5c, 0x00
+	.global data_ov61_0217d488
 data_ov61_0217d488: ; 0x0217d488
 	.byte 0x45, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x67, 0x65
 	.byte 0x74, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x62, 0x75, 0x64, 0x64, 0x79, 0x20, 0x61, 0x75, 0x74, 0x68
 	.byte 0x6f, 0x72, 0x69, 0x7a, 0x61, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d4ac
 data_ov61_0217d4ac: ; 0x0217d4ac
 	.byte 0x5c, 0x61, 0x61, 0x63
 	.byte 0x6b, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d4b4
 data_ov61_0217d4b4: ; 0x0217d4b4
 	.byte 0x45, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x70, 0x61, 0x72, 0x73, 0x69, 0x6e
 	.byte 0x67, 0x20, 0x62, 0x75, 0x64, 0x64, 0x79, 0x20, 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d4d4
 data_ov61_0217d4d4: ; 0x0217d4d4
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217d4d8
 data_ov61_0217d4d8: ; 0x0217d4d8
 	.byte 0x67, 0x70, 0x69, 0x50, 0x65, 0x65, 0x72, 0x2e
 	.byte 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217d4e4
 data_ov61_0217d4e4: ; 0x0217d4e4
 	.byte 0x70, 0x65, 0x65, 0x72, 0x2d, 0x3e, 0x73, 0x74, 0x61, 0x74, 0x65, 0x20
 	.byte 0x3d, 0x3d, 0x20, 0x47, 0x50, 0x49, 0x5f, 0x50, 0x45, 0x45, 0x52, 0x5f, 0x57, 0x41, 0x49, 0x54
 	.byte 0x49, 0x4e, 0x47, 0x00
+	.global data_ov61_0217d504
 data_ov61_0217d504: ; 0x0217d504
 	.byte 0x25, 0x73, 0x25, 0x64, 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217d50c
 data_ov61_0217d50c: ; 0x0217d50c
 	.byte 0x4f, 0x75, 0x74, 0x20
 	.byte 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d51c
 data_ov61_0217d51c: ; 0x0217d51c
 	.byte 0x31, 0x00, 0x00, 0x00
+	.global data_ov61_0217d520
 data_ov61_0217d520: ; 0x0217d520
 	.byte 0x70, 0x65, 0x65, 0x72, 0x2d, 0x3e, 0x73, 0x74, 0x61, 0x74, 0x65, 0x20, 0x21, 0x3d, 0x20, 0x47
 	.byte 0x50, 0x49, 0x5f, 0x50, 0x45, 0x45, 0x52, 0x5f, 0x4e, 0x4f, 0x54, 0x5f, 0x43, 0x4f, 0x4e, 0x4e
 	.byte 0x45, 0x43, 0x54, 0x45, 0x44, 0x00, 0x00, 0x00
+	.global data_ov61_0217d548
 data_ov61_0217d548: ; 0x0217d548
 	.byte 0x70, 0x65, 0x65, 0x72, 0x20, 0x21, 0x3d, 0x20
 	.byte 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d558
 data_ov61_0217d558: ; 0x0217d558
 	.byte 0x54, 0x72, 0x69, 0x65, 0x64, 0x20, 0x74, 0x6f
 	.byte 0x20, 0x72, 0x65, 0x6d, 0x6f, 0x76, 0x65, 0x20, 0x70, 0x65, 0x65, 0x72, 0x20, 0x6e, 0x6f, 0x74
 	.byte 0x20, 0x69, 0x6e, 0x20, 0x6c, 0x69, 0x73, 0x74, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d57c
 data_ov61_0217d57c: ; 0x0217d57c
 	.byte 0x54, 0x68, 0x65, 0x72
 	.byte 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x63
 	.byte 0x72, 0x65, 0x61, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d5a4
 data_ov61_0217d5a4: ; 0x0217d5a4
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e
 	.byte 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x6d, 0x61, 0x6b, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x6e, 0x6f, 0x6e, 0x2d, 0x62, 0x6c, 0x6f, 0x63, 0x6b
 	.byte 0x69, 0x6e, 0x67, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d5d8
 data_ov61_0217d5d8: ; 0x0217d5d8
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61
 	.byte 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65
 	.byte 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00
+	.global data_ov61_0217d600
 data_ov61_0217d600: ; 0x0217d600
 	.byte 0x6d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217d610
 data_ov61_0217d610: ; 0x0217d610
 	.byte 0x5c, 0x6d, 0x5c, 0x00
+	.global data_ov61_0217d614
 data_ov61_0217d614: ; 0x0217d614
 	.byte 0x5c, 0x6c, 0x65, 0x6e, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d61c
 data_ov61_0217d61c: ; 0x0217d61c
 	.byte 0x5c, 0x6d, 0x73, 0x67
 	.byte 0x5c, 0x0a, 0x00, 0x00
+	.global data_ov61_0217d624
 data_ov61_0217d624: ; 0x0217d624
 	.byte 0x74, 0x72, 0x61, 0x6e, 0x73, 0x66, 0x65, 0x72, 0x49, 0x44, 0x00, 0x00
+	.global data_ov61_0217d630
 data_ov61_0217d630: ; 0x0217d630
 	.byte 0x5c, 0x6d, 0x5c, 0x25, 0x64, 0x5c, 0x78, 0x66, 0x65, 0x72, 0x5c, 0x25, 0x64, 0x20, 0x25, 0x75
 	.byte 0x20, 0x25, 0x75, 0x00
+	.global data_ov61_0217d644
 data_ov61_0217d644: ; 0x0217d644
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d648
 data_ov61_0217d648: ; 0x0217d648
 	.byte 0x5c, 0x6c, 0x65, 0x6e, 0x5c, 0x25, 0x64, 0x5c
 	.byte 0x6d, 0x73, 0x67, 0x5c, 0x0a, 0x00, 0x00, 0x00
+	.global data_ov61_0217d658
 data_ov61_0217d658: ; 0x0217d658
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x66, 0x69
 	.byte 0x6c, 0x65, 0x4c, 0x69, 0x73, 0x74, 0x41, 0x64, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217d66c
 data_ov61_0217d66c: ; 0x0217d66c
 	.byte 0x5c, 0x6e, 0x70, 0x72
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d674
 data_ov61_0217d674: ; 0x0217d674
 	.byte 0x55, 0x6e, 0x65, 0x78, 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x64
 	.byte 0x61, 0x74, 0x61, 0x20, 0x77, 0x61, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64
 	.byte 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d6a4
 data_ov61_0217d6a4: ; 0x0217d6a4
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217d6b0
 data_ov61_0217d6b0: ; 0x0217d6b0
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d6c0
 data_ov61_0217d6c0: ; 0x0217d6c0
 	.byte 0x69, 0x64, 0x20, 0x3e, 0x20, 0x30, 0x00, 0x00
+	.global data_ov61_0217d6c8
 data_ov61_0217d6c8: ; 0x0217d6c8
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x66, 0x69
 	.byte 0x6c, 0x65, 0x2e, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d6d8
 data_ov61_0217d6d8: ; 0x0217d6d8
 	.byte 0x67, 0x70, 0x69, 0x50, 0x72, 0x6f, 0x63, 0x65
 	.byte 0x73, 0x73, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d6ec
 data_ov61_0217d6ec: ; 0x0217d6ec
 	.byte 0x67, 0x70, 0x69, 0x50
 	.byte 0x72, 0x6f, 0x63, 0x65, 0x73, 0x73, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x65, 0x73, 0x00, 0x00
+	.global data_ov61_0217d700
 data_ov61_0217d700: ; 0x0217d700
 	.byte 0x67, 0x70, 0x69, 0x53, 0x74, 0x61, 0x72, 0x74, 0x50, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x53
 	.byte 0x65, 0x61, 0x72, 0x63, 0x68, 0x00, 0x00, 0x00
+	.global data_ov61_0217d718
 data_ov61_0217d718: ; 0x0217d718
 	.byte 0x67, 0x70, 0x73, 0x70, 0x2e, 0x67, 0x73, 0x2e
 	.byte 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d734
 data_ov61_0217d734: ; 0x0217d734
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d738
 data_ov61_0217d738: ; 0x0217d738
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d73c
 data_ov61_0217d73c: ; 0x0217d73c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d740
 data_ov61_0217d740: ; 0x0217d740
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d744
 data_ov61_0217d744: ; 0x0217d744
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d748
 data_ov61_0217d748: ; 0x0217d748
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d74c
 data_ov61_0217d74c: ; 0x0217d74c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d750
 data_ov61_0217d750: ; 0x0217d750
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d754
 data_ov61_0217d754: ; 0x0217d754
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d758
 data_ov61_0217d758: ; 0x0217d758
 	.byte 0x4f, 0x75, 0x74, 0x20, 0x6f, 0x66, 0x20, 0x6d
 	.byte 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217d768
 data_ov61_0217d768: ; 0x0217d768
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61
 	.byte 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x63, 0x72, 0x65, 0x61, 0x74
 	.byte 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217d790
 data_ov61_0217d790: ; 0x0217d790
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x6d, 0x61, 0x6b, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20, 0x73, 0x6f, 0x63, 0x6b
 	.byte 0x65, 0x74, 0x20, 0x6e, 0x6f, 0x6e, 0x2d, 0x62, 0x6c, 0x6f, 0x63, 0x6b, 0x69, 0x6e, 0x67, 0x2e
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d7c4
 data_ov61_0217d7c4: ; 0x0217d7c4
 	.byte 0x43, 0x6f, 0x75, 0x6c, 0x64, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x72, 0x65
 	.byte 0x73, 0x6f, 0x6c, 0x76, 0x65, 0x20, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x20, 0x6d, 0x61, 0x6e
 	.byte 0x61, 0x6e, 0x67, 0x65, 0x72, 0x20, 0x68, 0x6f, 0x73, 0x74, 0x20, 0x6e, 0x61, 0x6d, 0x65, 0x2e
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d7f4
 data_ov61_0217d7f4: ; 0x0217d7f4
 	.byte 0x61, 0x64, 0x64, 0x72, 0x65, 0x73, 0x73, 0x2e, 0x73, 0x69, 0x6e, 0x5f
 	.byte 0x61, 0x64, 0x64, 0x72, 0x2e, 0x73, 0x5f, 0x61, 0x64, 0x64, 0x72, 0x20, 0x21, 0x3d, 0x20, 0x30
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d814
 data_ov61_0217d814: ; 0x0217d814
 	.byte 0x67, 0x70, 0x69, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68, 0x2e, 0x63, 0x00
+	.global data_ov61_0217d820
 data_ov61_0217d820: ; 0x0217d820
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x20, 0x61, 0x20
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x00
+	.global data_ov61_0217d848
 data_ov61_0217d848: ; 0x0217d848
 	.byte 0x4e, 0x6f, 0x20, 0x73, 0x65, 0x61, 0x72, 0x63
 	.byte 0x68, 0x20, 0x63, 0x72, 0x69, 0x74, 0x65, 0x72, 0x69, 0x61, 0x2e, 0x00
+	.global data_ov61_0217d85c
 data_ov61_0217d85c: ; 0x0217d85c
 	.byte 0x53, 0x4d, 0x00, 0x00
+	.global data_ov61_0217d860
 data_ov61_0217d860: ; 0x0217d860
 	.byte 0x43, 0x6f, 0x75, 0x6c, 0x64, 0x20, 0x6e, 0x6f, 0x74, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63
 	.byte 0x74, 0x20, 0x74, 0x6f, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x20
 	.byte 0x6d, 0x61, 0x6e, 0x61, 0x67, 0x65, 0x72, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d88c
 data_ov61_0217d88c: ; 0x0217d88c
 	.byte 0x5c, 0x73, 0x65, 0x61
 	.byte 0x72, 0x63, 0x68, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d898
 data_ov61_0217d898: ; 0x0217d898
 	.byte 0x5c, 0x73, 0x65, 0x73, 0x73, 0x6b, 0x65, 0x79
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d8a4
 data_ov61_0217d8a4: ; 0x0217d8a4
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x66, 0x69, 0x6c, 0x65, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217d8b0
 data_ov61_0217d8b0: ; 0x0217d8b0
 	.byte 0x5c, 0x6e, 0x61, 0x6d, 0x65, 0x73, 0x70, 0x61, 0x63, 0x65, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d8c0
 data_ov61_0217d8c0: ; 0x0217d8c0
 	.byte 0x5c, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d8c8
 data_ov61_0217d8c8: ; 0x0217d8c8
 	.byte 0x5c, 0x75, 0x6e, 0x69, 0x71, 0x75, 0x65, 0x6e
 	.byte 0x69, 0x63, 0x6b, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d8d8
 data_ov61_0217d8d8: ; 0x0217d8d8
 	.byte 0x5c, 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217d8e0
 data_ov61_0217d8e0: ; 0x0217d8e0
 	.byte 0x5c, 0x66, 0x69, 0x72, 0x73, 0x74, 0x6e, 0x61, 0x6d, 0x65, 0x5c, 0x00
+	.global data_ov61_0217d8ec
 data_ov61_0217d8ec: ; 0x0217d8ec
 	.byte 0x5c, 0x6c, 0x61, 0x73
 	.byte 0x74, 0x6e, 0x61, 0x6d, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d8f8
 data_ov61_0217d8f8: ; 0x0217d8f8
 	.byte 0x5c, 0x69, 0x63, 0x71, 0x75, 0x69, 0x6e, 0x5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d904
 data_ov61_0217d904: ; 0x0217d904
 	.byte 0x5c, 0x73, 0x6b, 0x69, 0x70, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d90c
 data_ov61_0217d90c: ; 0x0217d90c
 	.byte 0x5c, 0x76, 0x61, 0x6c
 	.byte 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217d914
 data_ov61_0217d914: ; 0x0217d914
 	.byte 0x5c, 0x6e, 0x69, 0x63, 0x6b, 0x73, 0x5c, 0x00
+	.global data_ov61_0217d91c
 data_ov61_0217d91c: ; 0x0217d91c
 	.byte 0x5c, 0x70, 0x61, 0x73
 	.byte 0x73, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d924
 data_ov61_0217d924: ; 0x0217d924
 	.byte 0x5c, 0x70, 0x6d, 0x61, 0x74, 0x63, 0x68, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d930
 data_ov61_0217d930: ; 0x0217d930
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x64, 0x75, 0x63, 0x74, 0x69, 0x64, 0x5c, 0x00
+	.global data_ov61_0217d93c
 data_ov61_0217d93c: ; 0x0217d93c
 	.byte 0x5c, 0x63, 0x68, 0x65
 	.byte 0x63, 0x6b, 0x5c, 0x00
+	.global data_ov61_0217d944
 data_ov61_0217d944: ; 0x0217d944
 	.byte 0x5c, 0x6e, 0x65, 0x77, 0x75, 0x73, 0x65, 0x72, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217d950
 data_ov61_0217d950: ; 0x0217d950
 	.byte 0x5c, 0x70, 0x72, 0x6f, 0x64, 0x75, 0x63, 0x74, 0x49, 0x44, 0x5c, 0x00
+	.global data_ov61_0217d95c
 data_ov61_0217d95c: ; 0x0217d95c
 	.byte 0x5c, 0x63, 0x64, 0x6b
 	.byte 0x65, 0x79, 0x5c, 0x00
+	.global data_ov61_0217d964
 data_ov61_0217d964: ; 0x0217d964
 	.byte 0x5c, 0x6f, 0x74, 0x68, 0x65, 0x72, 0x73, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d970
 data_ov61_0217d970: ; 0x0217d970
 	.byte 0x5c, 0x75, 0x6e, 0x69, 0x71, 0x75, 0x65, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d980
 data_ov61_0217d980: ; 0x0217d980
 	.byte 0x5c, 0x70, 0x72, 0x65, 0x66, 0x65, 0x72, 0x72, 0x65, 0x64, 0x6e, 0x69, 0x63, 0x6b, 0x5c, 0x00
+	.global data_ov61_0217d990
 data_ov61_0217d990: ; 0x0217d990
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217d994
 data_ov61_0217d994: ; 0x0217d994
 	.byte 0x5c, 0x67, 0x61, 0x6d, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x5c, 0x00, 0x00
+	.global data_ov61_0217d9a0
 data_ov61_0217d9a0: ; 0x0217d9a0
 	.byte 0x5c, 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217d9a8
 data_ov61_0217d9a8: ; 0x0217d9a8
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61
 	.byte 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69
 	.byte 0x6e, 0x67, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x73, 0x65, 0x72, 0x76
 	.byte 0x65, 0x72, 0x2e, 0x00
+	.global data_ov61_0217d9d4
 data_ov61_0217d9d4: ; 0x0217d9d4
 	.byte 0x62, 0x73, 0x72, 0x64, 0x6f, 0x6e, 0x65, 0x00
+	.global data_ov61_0217d9dc
 data_ov61_0217d9dc: ; 0x0217d9dc
 	.byte 0x6d, 0x6f, 0x72, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d9e4
 data_ov61_0217d9e4: ; 0x0217d9e4
 	.byte 0x62, 0x73, 0x72, 0x00
+	.global data_ov61_0217d9e8
 data_ov61_0217d9e8: ; 0x0217d9e8
 	.byte 0x6e, 0x69, 0x63, 0x6b, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217d9f0
 data_ov61_0217d9f0: ; 0x0217d9f0
 	.byte 0x75, 0x6e, 0x69, 0x71, 0x75, 0x65, 0x6e, 0x69, 0x63, 0x6b, 0x00, 0x00
+	.global data_ov61_0217d9fc
 data_ov61_0217d9fc: ; 0x0217d9fc
 	.byte 0x66, 0x69, 0x72, 0x73
 	.byte 0x74, 0x6e, 0x61, 0x6d, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217da08
 data_ov61_0217da08: ; 0x0217da08
 	.byte 0x6c, 0x61, 0x73, 0x74, 0x6e, 0x61, 0x6d, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217da14
 data_ov61_0217da14: ; 0x0217da14
 	.byte 0x65, 0x6d, 0x61, 0x69, 0x6c, 0x00, 0x00, 0x00
+	.global data_ov61_0217da1c
 data_ov61_0217da1c: ; 0x0217da1c
 	.byte 0x45, 0x72, 0x72, 0x6f
 	.byte 0x72, 0x20, 0x72, 0x65, 0x61, 0x64, 0x69, 0x6e, 0x67, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74
 	.byte 0x68, 0x65, 0x20, 0x73, 0x65, 0x61, 0x72, 0x63, 0x68, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72
 	.byte 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217da44
 data_ov61_0217da44: ; 0x0217da44
 	.byte 0x76, 0x72, 0x00, 0x00
+	.global data_ov61_0217da48
 data_ov61_0217da48: ; 0x0217da48
 	.byte 0x6e, 0x72, 0x00, 0x00
+	.global data_ov61_0217da4c
 data_ov61_0217da4c: ; 0x0217da4c
 	.byte 0x6e, 0x64, 0x6f, 0x6e
 	.byte 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217da54
 data_ov61_0217da54: ; 0x0217da54
 	.byte 0x70, 0x73, 0x72, 0x64, 0x6f, 0x6e, 0x65, 0x00
+	.global data_ov61_0217da5c
 data_ov61_0217da5c: ; 0x0217da5c
 	.byte 0x70, 0x73, 0x72, 0x00
+	.global data_ov61_0217da60
 data_ov61_0217da60: ; 0x0217da60
 	.byte 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x00, 0x00
+	.global data_ov61_0217da68
 data_ov61_0217da68: ; 0x0217da68
 	.byte 0x73, 0x74, 0x61, 0x74, 0x75, 0x73, 0x63, 0x6f
 	.byte 0x64, 0x65, 0x00, 0x00
+	.global data_ov61_0217da74
 data_ov61_0217da74: ; 0x0217da74
 	.byte 0x63, 0x75, 0x72, 0x00
+	.global data_ov61_0217da78
 data_ov61_0217da78: ; 0x0217da78
 	.byte 0x5c, 0x70, 0x69, 0x64, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217da80
 data_ov61_0217da80: ; 0x0217da80
 	.byte 0x6e, 0x75, 0x72, 0x00
+	.global data_ov61_0217da84
 data_ov61_0217da84: ; 0x0217da84
 	.byte 0x6f, 0x74, 0x68, 0x65, 0x72, 0x73, 0x00, 0x00
+	.global data_ov61_0217da8c
 data_ov61_0217da8c: ; 0x0217da8c
 	.byte 0x6f, 0x64, 0x6f, 0x6e
 	.byte 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217da94
 data_ov61_0217da94: ; 0x0217da94
 	.byte 0x6f, 0x00, 0x00, 0x00
+	.global data_ov61_0217da98
 data_ov61_0217da98: ; 0x0217da98
 	.byte 0x66, 0x69, 0x72, 0x73, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217daa0
 data_ov61_0217daa0: ; 0x0217daa0
 	.byte 0x6c, 0x61, 0x73, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217daa8
 data_ov61_0217daa8: ; 0x0217daa8
 	.byte 0x75, 0x73, 0x00, 0x00
+	.global data_ov61_0217daac
 data_ov61_0217daac: ; 0x0217daac
 	.byte 0x75, 0x73, 0x64, 0x6f
 	.byte 0x6e, 0x65, 0x00, 0x00
+	.global data_ov61_0217dab4
 data_ov61_0217dab4: ; 0x0217dab4
 	.byte 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x20, 0x3d, 0x3d, 0x20, 0x61, 0x72, 0x67
 	.byte 0x2d, 0x3e, 0x6e, 0x75, 0x6d, 0x53, 0x75, 0x67, 0x67, 0x65, 0x73, 0x74, 0x65, 0x64, 0x4e, 0x69
 	.byte 0x63, 0x6b, 0x73, 0x00
+	.global data_ov61_0217dad4
 data_ov61_0217dad4: ; 0x0217dad4
 	.byte 0x6e, 0x75, 0x6d, 0x20, 0x3c, 0x20, 0x69, 0x63, 0x6f, 0x6e, 0x6e, 0x65
 	.byte 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2d, 0x3e, 0x6e, 0x75, 0x6d, 0x53, 0x65, 0x61, 0x72, 0x63, 0x68
 	.byte 0x65, 0x73, 0x00, 0x00
+	.global data_ov61_0217daf4
 data_ov61_0217daf4: ; 0x0217daf4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217daf8
 data_ov61_0217daf8: ; 0x0217daf8
 	.byte 0x5c, 0x76, 0x65, 0x72, 0x73, 0x69, 0x6f, 0x6e
 	.byte 0x5c, 0x25, 0x64, 0x5c, 0x72, 0x65, 0x73, 0x75, 0x6c, 0x74, 0x5c, 0x25, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217db10
 data_ov61_0217db10: ; 0x0217db10
 	.byte 0x5c, 0x78, 0x66, 0x65, 0x72, 0x5c, 0x00, 0x00
+	.global data_ov61_0217db18
 data_ov61_0217db18: ; 0x0217db18
 	.byte 0x25, 0x64, 0x20, 0x25, 0x75, 0x20, 0x25, 0x75
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217db24
 data_ov61_0217db24: ; 0x0217db24
 	.byte 0x5c, 0x72, 0x6e, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217db2c
 data_ov61_0217db2c: ; 0x0217db2c
 	.byte 0x55, 0x6e, 0x65, 0x78
 	.byte 0x70, 0x65, 0x63, 0x74, 0x65, 0x64, 0x20, 0x64, 0x61, 0x74, 0x61, 0x20, 0x77, 0x61, 0x73, 0x20
 	.byte 0x72, 0x65, 0x63, 0x65, 0x69, 0x76, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68
 	.byte 0x65, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00, 0x00, 0x00
+	.global data_ov61_0217db5c
 data_ov61_0217db5c: ; 0x0217db5c
 	.byte 0x4f, 0x75, 0x74, 0x20
 	.byte 0x6f, 0x66, 0x20, 0x6d, 0x65, 0x6d, 0x6f, 0x72, 0x79, 0x2e, 0x00, 0x00
+	.global data_ov61_0217db6c
 data_ov61_0217db6c: ; 0x0217db6c
 	.byte 0x73, 0x74, 0x72, 0x7a
 	.byte 0x63, 0x70, 0x79, 0x00
+	.global data_ov61_0217db74
 data_ov61_0217db74: ; 0x0217db74
 	.byte 0x67, 0x70, 0x69, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x46, 0x6f, 0x72, 0x4b
 	.byte 0x65, 0x79, 0x00, 0x00
+	.global data_ov61_0217db84
 data_ov61_0217db84: ; 0x0217db84
 	.byte 0x67, 0x70, 0x69, 0x52, 0x65, 0x61, 0x64, 0x4b, 0x65, 0x79, 0x41, 0x6e
 	.byte 0x64, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x00, 0x00
+	.global data_ov61_0217db98
 data_ov61_0217db98: ; 0x0217db98
 	.byte 0x64, 0x65, 0x73, 0x74, 0x20, 0x21, 0x3d, 0x20
 	.byte 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dba8
 data_ov61_0217dba8: ; 0x0217dba8
 	.byte 0x67, 0x70, 0x69, 0x55, 0x74, 0x69, 0x6c, 0x69
 	.byte 0x74, 0x79, 0x2e, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dbb8
 data_ov61_0217dbb8: ; 0x0217dbb8
 	.byte 0x73, 0x72, 0x63, 0x20, 0x21, 0x3d, 0x20, 0x4e
 	.byte 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217dbc4
 data_ov61_0217dbc4: ; 0x0217dbc4
 	.byte 0x5c, 0x65, 0x72, 0x72, 0x6f, 0x72, 0x5c, 0x00
+	.global data_ov61_0217dbcc
 data_ov61_0217dbcc: ; 0x0217dbcc
 	.byte 0x5c, 0x65, 0x72, 0x72
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217dbd4
 data_ov61_0217dbd4: ; 0x0217dbd4
 	.byte 0x5c, 0x65, 0x72, 0x72, 0x6d, 0x73, 0x67, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dbe0
 data_ov61_0217dbe0: ; 0x0217dbe0
 	.byte 0x5c, 0x66, 0x61, 0x74, 0x61, 0x6c, 0x5c, 0x00
+	.global data_ov61_0217dbe8
 data_ov61_0217dbe8: ; 0x0217dbe8
 	.byte 0x63, 0x6f, 0x6d, 0x6d, 0x61, 0x6e, 0x64, 0x20
 	.byte 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217dbf8
 data_ov61_0217dbf8: ; 0x0217dbf8
 	.byte 0x6b, 0x65, 0x79, 0x20, 0x21, 0x3d, 0x20, 0x4e
 	.byte 0x55, 0x4c, 0x4c, 0x00
+	.global data_ov61_0217dc04
 data_ov61_0217dc04: ; 0x0217dc04
 	.byte 0x76, 0x61, 0x6c, 0x75, 0x65, 0x20, 0x21, 0x3d, 0x20, 0x4e, 0x55, 0x4c
 	.byte 0x4c, 0x00, 0x00, 0x00
+	.global data_ov61_0217dc14
 data_ov61_0217dc14: ; 0x0217dc14
 	.byte 0x6c, 0x65, 0x6e, 0x20, 0x3e, 0x20, 0x30, 0x00
+	.global data_ov61_0217dc1c
 data_ov61_0217dc1c: ; 0x0217dc1c
 	.byte 0x45, 0x72, 0x72, 0x6f
 	.byte 0x72, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6e, 0x67, 0x0a, 0x00, 0x00, 0x00
+	.global data_ov61_0217dc30
 data_ov61_0217dc30: ; 0x0217dc30
 	.byte 0x54, 0x68, 0x65, 0x72, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x61, 0x6e, 0x20, 0x65, 0x72, 0x72
 	.byte 0x6f, 0x72, 0x20, 0x63, 0x68, 0x65, 0x63, 0x6b, 0x69, 0x6e, 0x67, 0x20, 0x66, 0x6f, 0x72, 0x20
 	.byte 0x61, 0x20, 0x63, 0x6f, 0x6d, 0x70, 0x6c, 0x65, 0x74, 0x65, 0x64, 0x20, 0x63, 0x6f, 0x6e, 0x6e
 	.byte 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x2e, 0x00
+	.global data_ov61_0217dc68
 data_ov61_0217dc68: ; 0x0217dc68
 	.byte 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69
 	.byte 0x6f, 0x6e, 0x20, 0x72, 0x65, 0x6a, 0x65, 0x63, 0x74, 0x65, 0x64, 0x0a, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dc80
 data_ov61_0217dc80: ; 0x0217dc80
 	.byte 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x20, 0x61, 0x63, 0x63, 0x65, 0x70
 	.byte 0x74, 0x65, 0x64, 0x0a, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dc98
 data_ov61_0217dc98: ; 0x0217dc98
 	.byte 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x20, 0x21
 	.byte 0x3d, 0x20, 0x4e, 0x55, 0x4c, 0x4c, 0x00, 0x00
+	.global data_ov61_0217dca8
 data_ov61_0217dca8: ; 0x0217dca8
 	.byte 0x50, 0x61, 0x72, 0x73, 0x65, 0x20, 0x45, 0x72
 	.byte 0x72, 0x6f, 0x72, 0x2e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dcb8
 data_ov61_0217dcb8: ; 0x0217dcb8
 	.byte 0x44, 0x6f, 0x46, 0x69, 0x6e, 0x64, 0x00, 0x00
+	.global data_ov61_0217dcc0
 data_ov61_0217dcc0: ; 0x0217dcc0
 	.byte 0x42, 0x75, 0x63, 0x6b, 0x65, 0x74, 0x4e, 0x65, 0x77, 0x00, 0x00, 0x00
+	.global data_ov61_0217dccc
 data_ov61_0217dccc: ; 0x0217dccc
 	.byte 0x42, 0x75, 0x63, 0x6b
 	.byte 0x65, 0x74, 0x43, 0x6f, 0x6e, 0x63, 0x61, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dcdc
 data_ov61_0217dcdc: ; 0x0217dcdc
 	.byte 0x73, 0x65, 0x74, 0x00
+	.global data_ov61_0217dce0
 data_ov61_0217dce0: ; 0x0217dce0
 	.byte 0x67, 0x62, 0x75, 0x63, 0x6b, 0x65, 0x74, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217dcec
 data_ov61_0217dcec: ; 0x0217dcec
 	.byte 0x70, 0x62, 0x75, 0x63
 	.byte 0x6b, 0x65, 0x74, 0x2d, 0x3e, 0x74, 0x79, 0x70, 0x65, 0x20, 0x3d, 0x3d, 0x20, 0x62, 0x74, 0x5f
 	.byte 0x73, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x00, 0x00
+	.global data_ov61_0217dd08
 data_ov61_0217dd08: ; 0x0217dd08
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217dd0c
 data_ov61_0217dd0c: ; 0x0217dd0c
 	.byte 0x20, 0x4e, 0x00, 0x00
+	.global data_ov61_0217dd10
 data_ov61_0217dd10: ; 0x0217dd10
 	.byte 0x54, 0xdd, 0x17, 0x02
+	.global data_ov61_0217dd14
 data_ov61_0217dd14: ; 0x0217dd14
 	.byte 0xc0, 0x1b, 0x17, 0x02
+	.global data_ov61_0217dd18
 data_ov61_0217dd18: ; 0x0217dd18
 	.byte 0xec, 0x1b, 0x17, 0x02
+	.global data_ov61_0217dd1c
 data_ov61_0217dd1c: ; 0x0217dd1c
 	.byte 0x80, 0x1c, 0x17, 0x02
+	.global data_ov61_0217dd20
 data_ov61_0217dd20: ; 0x0217dd20
 	.byte 0x04, 0x1d, 0x17, 0x02
+	.global data_ov61_0217dd24
 data_ov61_0217dd24: ; 0x0217dd24
 	.byte 0x84, 0x1d, 0x17, 0x02
+	.global data_ov61_0217dd28
 data_ov61_0217dd28: ; 0x0217dd28
 	.byte 0x08, 0x1e, 0x17, 0x02
+	.global data_ov61_0217dd2c
 data_ov61_0217dd2c: ; 0x0217dd2c
 	.byte 0xac, 0x1e, 0x17, 0x02
+	.global data_ov61_0217dd30
 data_ov61_0217dd30: ; 0x0217dd30
 	.byte 0x6c, 0x2b, 0x17, 0x02
+	.global data_ov61_0217dd34
 data_ov61_0217dd34: ; 0x0217dd34
 	.byte 0xd4, 0x2b, 0x17, 0x02
+	.global data_ov61_0217dd38
 data_ov61_0217dd38: ; 0x0217dd38
 	.byte 0x44, 0x2c, 0x17, 0x02
+	.global data_ov61_0217dd3c
 data_ov61_0217dd3c: ; 0x0217dd3c
 	.byte 0xa0, 0x2c, 0x17, 0x02
+	.global data_ov61_0217dd40
 data_ov61_0217dd40: ; 0x0217dd40
 	.byte 0xfc, 0x2c, 0x17, 0x02
+	.global data_ov61_0217dd44
 data_ov61_0217dd44: ; 0x0217dd44
 	.byte 0x5c, 0x2d, 0x17, 0x02
+	.global data_ov61_0217dd48
 data_ov61_0217dd48: ; 0x0217dd48
 	.byte 0xb8, 0x2d, 0x17, 0x02
+	.global data_ov61_0217dd4c
 data_ov61_0217dd4c: ; 0x0217dd4c
 	.byte 0x14, 0x2e, 0x17, 0x02
+	.global data_ov61_0217dd50
 data_ov61_0217dd50: ; 0x0217dd50
 	.byte 0x74, 0x2e, 0x17, 0x02
+	.global data_ov61_0217dd54
 data_ov61_0217dd54: ; 0x0217dd54
 	.byte 0x00
+	.global data_ov61_0217dd55
 data_ov61_0217dd55: ; 0x0217dd55
 	.byte 0x61, 0x6d, 0x65, 0x53, 0x70, 0x79, 0x33, 0x44, 0x00
+	.global data_ov61_0217dd5e
 data_ov61_0217dd5e: ; 0x0217dd5e
 	.byte 0x00
+	.global data_ov61_0217dd5f
 data_ov61_0217dd5f: ; 0x0217dd5f
 	.byte 0x00
+	.global data_ov61_0217dd60
 data_ov61_0217dd60: ; 0x0217dd60
 	.byte 0x00
+	.global data_ov61_0217dd61
 data_ov61_0217dd61: ; 0x0217dd61
 	.byte 0x00
+	.global data_ov61_0217dd62
 data_ov61_0217dd62: ; 0x0217dd62
 	.byte 0x00
+	.global data_ov61_0217dd63
 data_ov61_0217dd63: ; 0x0217dd63
 	.byte 0x00
+	.global data_ov61_0217dd64
 data_ov61_0217dd64: ; 0x0217dd64
 	.byte 0x00
+	.global data_ov61_0217dd65
 data_ov61_0217dd65: ; 0x0217dd65
 	.asciz "rojectAphex"
+	.global data_ov61_0217dd71
 data_ov61_0217dd71: ; 0x0217dd71
 	.byte 0x00
+	.global data_ov61_0217dd72
 data_ov61_0217dd72: ; 0x0217dd72
 	.byte 0x00
+	.global data_ov61_0217dd73
 data_ov61_0217dd73: ; 0x0217dd73
 	.byte 0x00
+	.global data_ov61_0217dd74
 data_ov61_0217dd74: ; 0x0217dd74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dd78
 data_ov61_0217dd78: ; 0x0217dd78
 	.byte 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217dd7c
 data_ov61_0217dd7c: ; 0x0217dd7c
 	.byte 0x70, 0x61, 0x75, 0x74
 	.byte 0x68, 0x72, 0x00, 0x00
+	.global data_ov61_0217dd84
 data_ov61_0217dd84: ; 0x0217dd84
 	.byte 0x6c, 0x69, 0x64, 0x00
+	.global data_ov61_0217dd88
 data_ov61_0217dd88: ; 0x0217dd88
 	.byte 0x65, 0x72, 0x72, 0x6d, 0x73, 0x67, 0x00, 0x00
+	.global data_ov61_0217dd90
 data_ov61_0217dd90: ; 0x0217dd90
 	.byte 0x67, 0x65, 0x74, 0x70, 0x69, 0x64, 0x72, 0x00
+	.global data_ov61_0217dd98
 data_ov61_0217dd98: ; 0x0217dd98
 	.byte 0x67, 0x65, 0x74, 0x70, 0x64, 0x72, 0x00, 0x00
+	.global data_ov61_0217dda0
 data_ov61_0217dda0: ; 0x0217dda0
 	.byte 0x70, 0x69, 0x64, 0x00
+	.global data_ov61_0217dda4
 data_ov61_0217dda4: ; 0x0217dda4
 	.byte 0x6d, 0x6f, 0x64, 0x00
+	.global data_ov61_0217dda8
 data_ov61_0217dda8: ; 0x0217dda8
 	.byte 0x6c, 0x65, 0x6e, 0x67, 0x74, 0x68, 0x00, 0x00
+	.global data_ov61_0217ddb0
 data_ov61_0217ddb0: ; 0x0217ddb0
 	.byte 0x5c, 0x64, 0x61, 0x74, 0x61, 0x5c, 0x00, 0x00
+	.global data_ov61_0217ddb8
 data_ov61_0217ddb8: ; 0x0217ddb8
 	.byte 0x73, 0x65, 0x74, 0x70, 0x64, 0x72, 0x00, 0x00
+	.global data_ov61_0217ddc0
 data_ov61_0217ddc0: ; 0x0217ddc0
 	.byte 0x5c, 0x70, 0x61, 0x75, 0x74, 0x68, 0x72, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ddcc
 data_ov61_0217ddcc: ; 0x0217ddcc
 	.byte 0x5c, 0x67, 0x65, 0x74
 	.byte 0x70, 0x69, 0x64, 0x72, 0x5c, 0x00, 0x00, 0x00
+	.global data_ov61_0217ddd8
 data_ov61_0217ddd8: ; 0x0217ddd8
 	.byte 0x5c, 0x67, 0x65, 0x74, 0x70, 0x64, 0x72, 0x5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dde4
 data_ov61_0217dde4: ; 0x0217dde4
 	.byte 0x5c, 0x73, 0x65, 0x74, 0x70, 0x64, 0x72, 0x5c, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ddf0
 data_ov61_0217ddf0: ; 0x0217ddf0
 	.byte 0x25, 0x73, 0x5f, 0x74, 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217ddf8
 data_ov61_0217ddf8: ; 0x0217ddf8
 	.byte 0x25, 0x73, 0x5f, 0x25, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217de00
 data_ov61_0217de00: ; 0x0217de00
 	.byte 0x67, 0x74, 0x69, 0x32, 0x47, 0x65, 0x74, 0x43, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217de14
 data_ov61_0217de14: ; 0x0217de14
 	.byte 0x33, 0x62, 0x38, 0x64, 0x64, 0x38, 0x39, 0x39, 0x35, 0x66, 0x37, 0x63
 	.byte 0x34, 0x30, 0x61, 0x39, 0x61, 0x35, 0x63, 0x35, 0x62, 0x37, 0x64, 0x64, 0x35, 0x62, 0x34, 0x38
 	.byte 0x31, 0x33, 0x34, 0x31, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217de38
 data_ov61_0217de38: ; 0x0217de38
 	.byte 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x00, 0x00
+	.global data_ov61_0217de40
 data_ov61_0217de40: ; 0x0217de40
 	.byte 0x67, 0x74, 0x32, 0x41, 0x75, 0x74, 0x68, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217de4c
 data_ov61_0217de4c: ; 0x0217de4c
 	.byte 0x67, 0x74, 0x69, 0x32
 	.byte 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x53, 0x68, 0x6f, 0x72, 0x74, 0x65, 0x6e, 0x00, 0x00, 0x00
+	.global data_ov61_0217de60
 data_ov61_0217de60: ; 0x0217de60
 	.byte 0x67, 0x74, 0x69, 0x32, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x57, 0x72, 0x69, 0x74, 0x65, 0x44
 	.byte 0x61, 0x74, 0x61, 0x00
+	.global data_ov61_0217de74
 data_ov61_0217de74: ; 0x0217de74
 	.byte 0x67, 0x74, 0x69, 0x32, 0x42, 0x75, 0x66, 0x66, 0x65, 0x72, 0x57, 0x72
 	.byte 0x69, 0x74, 0x65, 0x42, 0x79, 0x74, 0x65, 0x00
+	.global data_ov61_0217de88
 data_ov61_0217de88: ; 0x0217de88
 	.byte 0x67, 0x74, 0x69, 0x32, 0x42, 0x75, 0x66, 0x66
 	.byte 0x65, 0x72, 0x57, 0x72, 0x69, 0x74, 0x65, 0x55, 0x53, 0x68, 0x6f, 0x72, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217dea0
 data_ov61_0217dea0: ; 0x0217dea0
 	.byte 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x6c, 0x65, 0x6e, 0x20, 0x3c, 0x20, 0x62, 0x75
 	.byte 0x66, 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x73, 0x69, 0x7a, 0x65, 0x00, 0x00
+	.global data_ov61_0217debc
 data_ov61_0217debc: ; 0x0217debc
 	.byte 0x67, 0x74, 0x32, 0x42
 	.byte 0x75, 0x66, 0x66, 0x65, 0x72, 0x2e, 0x63, 0x00
+	.global data_ov61_0217dec8
 data_ov61_0217dec8: ; 0x0217dec8
 	.byte 0x28, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2d
 	.byte 0x3e, 0x6c, 0x65, 0x6e, 0x20, 0x2b, 0x20, 0x32, 0x29, 0x20, 0x3c, 0x3d, 0x20, 0x62, 0x75, 0x66
 	.byte 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x73, 0x69, 0x7a, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217deec
 data_ov61_0217deec: ; 0x0217deec
 	.byte 0x28, 0x62, 0x75, 0x66
 	.byte 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x6c, 0x65, 0x6e, 0x20, 0x2b, 0x20, 0x6c, 0x65, 0x6e, 0x29, 0x20
 	.byte 0x3c, 0x3d, 0x20, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x73, 0x69, 0x7a, 0x65, 0x00
+	.global data_ov61_0217df10
 data_ov61_0217df10: ; 0x0217df10
 	.byte 0x73, 0x74, 0x61, 0x72, 0x74, 0x20, 0x3c, 0x3d, 0x20, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2d
 	.byte 0x3e, 0x6c, 0x65, 0x6e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217df28
 data_ov61_0217df28: ; 0x0217df28
 	.byte 0x73, 0x68, 0x6f, 0x72, 0x74, 0x65, 0x6e, 0x42
 	.byte 0x79, 0x20, 0x3c, 0x3d, 0x20, 0x28, 0x62, 0x75, 0x66, 0x66, 0x65, 0x72, 0x2d, 0x3e, 0x6c, 0x65
 	.byte 0x6e, 0x20, 0x2d, 0x20, 0x73, 0x74, 0x61, 0x72, 0x74, 0x29, 0x00, 0x00
+	.global data_ov61_0217df4c
 data_ov61_0217df4c: ; 0x0217df4c
 	.byte 0x67, 0x74, 0x69, 0x32
 	.byte 0x44, 0x75, 0x6d, 0x70, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217df60
 data_ov61_0217df60: ; 0x0217df60
 	.byte 0x67, 0x74, 0x69, 0x32, 0x50, 0x69, 0x6e, 0x67, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217df74
 data_ov61_0217df74: ; 0x0217df74
 	.byte 0x67, 0x74, 0x69, 0x32, 0x43, 0x6c, 0x6f, 0x73, 0x65, 0x64, 0x43, 0x61
 	.byte 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00
+	.global data_ov61_0217df88
 data_ov61_0217df88: ; 0x0217df88
 	.byte 0x67, 0x74, 0x69, 0x32, 0x52, 0x65, 0x63, 0x65
 	.byte 0x69, 0x76, 0x65, 0x64, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217dfa0
 data_ov61_0217dfa0: ; 0x0217dfa0
 	.byte 0x67, 0x74, 0x69, 0x32, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x65, 0x64, 0x43, 0x61, 0x6c
 	.byte 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00, 0x00
+	.global data_ov61_0217dfb8
 data_ov61_0217dfb8: ; 0x0217dfb8
 	.byte 0x67, 0x74, 0x69, 0x32, 0x53, 0x65, 0x6e, 0x64
 	.byte 0x46, 0x69, 0x6c, 0x74, 0x65, 0x72, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00
+	.global data_ov61_0217dfd0
 data_ov61_0217dfd0: ; 0x0217dfd0
 	.byte 0x67, 0x74, 0x69, 0x32, 0x53, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x45, 0x72, 0x72, 0x6f, 0x72, 0x43
 	.byte 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00
+	.global data_ov61_0217dfe8
 data_ov61_0217dfe8: ; 0x0217dfe8
 	.byte 0x67, 0x74, 0x69, 0x32, 0x52, 0x65, 0x63, 0x65
 	.byte 0x69, 0x76, 0x65, 0x46, 0x69, 0x6c, 0x74, 0x65, 0x72, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63
 	.byte 0x6b, 0x00, 0x00, 0x00
+	.global data_ov61_0217e004
 data_ov61_0217e004: ; 0x0217e004
 	.byte 0x67, 0x74, 0x69, 0x32, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x41
 	.byte 0x74, 0x74, 0x65, 0x6d, 0x70, 0x74, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00, 0x00
+	.global data_ov61_0217e020
 data_ov61_0217e020: ; 0x0217e020
 	.byte 0x67, 0x74, 0x69, 0x32, 0x55, 0x6e, 0x72, 0x65, 0x63, 0x6f, 0x67, 0x6e, 0x69, 0x7a, 0x65, 0x64
 	.byte 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x43, 0x61, 0x6c, 0x6c, 0x62, 0x61, 0x63, 0x6b, 0x00
+	.global data_ov61_0217e040
 data_ov61_0217e040: ; 0x0217e040
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x00, 0x00
+	.global data_ov61_0217e048
 data_ov61_0217e048: ; 0x0217e048
 	.byte 0x67, 0x74, 0x32, 0x43, 0x61, 0x6c, 0x6c, 0x62
 	.byte 0x61, 0x63, 0x6b, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217e058
 data_ov61_0217e058: ; 0x0217e058
 	.byte 0x73, 0x6f, 0x63, 0x6b, 0x65, 0x74, 0x20, 0x26
 	.byte 0x26, 0x20, 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e070
 data_ov61_0217e070: ; 0x0217e070
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217e07c
 data_ov61_0217e07c: ; 0x0217e07c
 	.byte 0x67, 0x74, 0x32, 0x53
 	.byte 0x65, 0x74, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x44, 0x61, 0x74, 0x61
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e094
 data_ov61_0217e094: ; 0x0217e094
 	.byte 0x67, 0x74, 0x32, 0x47, 0x65, 0x74, 0x43, 0x6f, 0x6e, 0x6e, 0x65, 0x63
 	.byte 0x74, 0x69, 0x6f, 0x6e, 0x44, 0x61, 0x74, 0x61, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e0ac
 data_ov61_0217e0ac: ; 0x0217e0ac
 	.byte 0x67, 0x74, 0x32, 0x4d
 	.byte 0x61, 0x69, 0x6e, 0x2e, 0x63, 0x00, 0x00, 0x00
+	.global data_ov61_0217e0b8
 data_ov61_0217e0b8: ; 0x0217e0b8
 	.byte 0x63, 0x6f, 0x6e, 0x6e, 0x65, 0x63, 0x74, 0x69
 	.byte 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217e0c4
 data_ov61_0217e0c4: ; 0x0217e0c4
 	.byte 0x67, 0x74, 0x69, 0x32, 0x45, 0x6e, 0x64, 0x52, 0x65, 0x6c, 0x69, 0x61
 	.byte 0x62, 0x6c, 0x65, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x00, 0x00
+	.global data_ov61_0217e0dc
 data_ov61_0217e0dc: ; 0x0217e0dc
 	.byte 0x74, 0x69, 0x6d, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e0e4
 data_ov61_0217e0e4: ; 0x0217e0e4
 	.byte 0xfe
+	.global data_ov61_0217e0e5
 data_ov61_0217e0e5: ; 0x0217e0e5
 	.byte 0xfe
+	.global data_ov61_0217e0e6
 data_ov61_0217e0e6: ; 0x0217e0e6
 	.byte 0x00
+	.global data_ov61_0217e0e7
 data_ov61_0217e0e7: ; 0x0217e0e7
 	.byte 0x00
+	.global data_ov61_0217e0e8
 data_ov61_0217e0e8: ; 0x0217e0e8
 	.byte 0x6c, 0x65, 0x6e, 0x20, 0x3e, 0x20, 0x30, 0x00
+	.global data_ov61_0217e0f0
 data_ov61_0217e0f0: ; 0x0217e0f0
 	.byte 0x67, 0x74, 0x32, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x2e, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e100
 data_ov61_0217e100: ; 0x0217e100
 	.byte 0x67, 0x74, 0x32, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x54, 0x6f, 0x41, 0x64, 0x64, 0x72, 0x65
 	.byte 0x73, 0x73, 0x00, 0x00
+	.global data_ov61_0217e114
 data_ov61_0217e114: ; 0x0217e114
 	.byte 0x25, 0x73, 0x3a, 0x25, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217e11c
 data_ov61_0217e11c: ; 0x0217e11c
 	.byte 0x25, 0x73, 0x00, 0x00
+	.global data_ov61_0217e120
 data_ov61_0217e120: ; 0x0217e120
 	.byte 0x3a, 0x25, 0x64, 0x00
+	.global data_ov61_0217e124
 data_ov61_0217e124: ; 0x0217e124
 	.byte 0x6c, 0x65, 0x6e, 0x20, 0x3c, 0x20, 0x47, 0x54, 0x49, 0x32, 0x5f, 0x53
 	.byte 0x54, 0x41, 0x43, 0x4b, 0x5f, 0x48, 0x4f, 0x53, 0x54, 0x4c, 0x45, 0x4e, 0x5f, 0x4d, 0x41, 0x58
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e144
 data_ov61_0217e144: ; 0x0217e144
 	.byte 0x67, 0x74, 0x32, 0x55, 0x74, 0x69, 0x6c, 0x69, 0x74, 0x79, 0x2e, 0x63
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e154
 data_ov61_0217e154: ; 0x0217e154
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e158
 data_ov61_0217e158: ; 0x0217e158
 	.byte 0xfd
+	.global data_ov61_0217e159
 data_ov61_0217e159: ; 0x0217e159
 	.byte 0xfc
+	.global data_ov61_0217e15a
 data_ov61_0217e15a: ; 0x0217e15a
 	.byte 0x1e
+	.global data_ov61_0217e15b
 data_ov61_0217e15b: ; 0x0217e15b
 	.byte 0x66
+	.global data_ov61_0217e15c
 data_ov61_0217e15c: ; 0x0217e15c
 	.byte 0x6a
+	.global data_ov61_0217e15d
 data_ov61_0217e15d: ; 0x0217e15d
 	.byte 0xb2
+	.global data_ov61_0217e15e
 data_ov61_0217e15e: ; 0x0217e15e
 	.byte 0x00
+	.global data_ov61_0217e15f
 data_ov61_0217e15f: ; 0x0217e15f
 	.byte 0x00
+	.global data_ov61_0217e160
 data_ov61_0217e160: ; 0x0217e160
 	.byte 0x25, 0x73, 0x2e, 0x25, 0x73, 0x00, 0x00, 0x00
+	.global data_ov61_0217e168
 data_ov61_0217e168: ; 0x0217e168
 	.byte 0x6e, 0x61, 0x74, 0x6e, 0x65, 0x67, 0x31, 0x2e
 	.byte 0x67, 0x73, 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e
 	.byte 0x6e, 0x65, 0x74, 0x00
+	.global data_ov61_0217e184
 data_ov61_0217e184: ; 0x0217e184
 	.byte 0x6e, 0x61, 0x74, 0x6e, 0x65, 0x67, 0x32, 0x2e, 0x67, 0x73, 0x2e, 0x6e
 	.byte 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65, 0x74, 0x00
+	.global data_ov61_0217e1a0
 data_ov61_0217e1a0: ; 0x0217e1a0
 	.byte 0xa4, 0xe1, 0x17, 0x02
+	.global data_ov61_0217e1a4
 data_ov61_0217e1a4: ; 0x0217e1a4
 	.byte 0xff, 0xff, 0xff, 0xff
+	.global data_ov61_0217e1a8
 data_ov61_0217e1a8: ; 0x0217e1a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1ac
 data_ov61_0217e1ac: ; 0x0217e1ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1b0
 data_ov61_0217e1b0: ; 0x0217e1b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1b4
 data_ov61_0217e1b4: ; 0x0217e1b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1b8
 data_ov61_0217e1b8: ; 0x0217e1b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1bc
 data_ov61_0217e1bc: ; 0x0217e1bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1c0
 data_ov61_0217e1c0: ; 0x0217e1c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1c4
 data_ov61_0217e1c4: ; 0x0217e1c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1c8
 data_ov61_0217e1c8: ; 0x0217e1c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1cc
 data_ov61_0217e1cc: ; 0x0217e1cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1d0
 data_ov61_0217e1d0: ; 0x0217e1d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1d4
 data_ov61_0217e1d4: ; 0x0217e1d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1d8
 data_ov61_0217e1d8: ; 0x0217e1d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1dc
 data_ov61_0217e1dc: ; 0x0217e1dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1e0
 data_ov61_0217e1e0: ; 0x0217e1e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1e4
 data_ov61_0217e1e4: ; 0x0217e1e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1e8
 data_ov61_0217e1e8: ; 0x0217e1e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1ec
 data_ov61_0217e1ec: ; 0x0217e1ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1f0
 data_ov61_0217e1f0: ; 0x0217e1f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1f4
 data_ov61_0217e1f4: ; 0x0217e1f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1f8
 data_ov61_0217e1f8: ; 0x0217e1f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e1fc
 data_ov61_0217e1fc: ; 0x0217e1fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e200
 data_ov61_0217e200: ; 0x0217e200
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e204
 data_ov61_0217e204: ; 0x0217e204
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e208
 data_ov61_0217e208: ; 0x0217e208
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e20c
 data_ov61_0217e20c: ; 0x0217e20c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e210
 data_ov61_0217e210: ; 0x0217e210
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e214
 data_ov61_0217e214: ; 0x0217e214
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e218
 data_ov61_0217e218: ; 0x0217e218
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e21c
 data_ov61_0217e21c: ; 0x0217e21c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e220
 data_ov61_0217e220: ; 0x0217e220
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e224
 data_ov61_0217e224: ; 0x0217e224
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e228
 data_ov61_0217e228: ; 0x0217e228
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e22c
 data_ov61_0217e22c: ; 0x0217e22c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e230
 data_ov61_0217e230: ; 0x0217e230
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e234
 data_ov61_0217e234: ; 0x0217e234
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e238
 data_ov61_0217e238: ; 0x0217e238
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e23c
 data_ov61_0217e23c: ; 0x0217e23c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e240
 data_ov61_0217e240: ; 0x0217e240
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e244
 data_ov61_0217e244: ; 0x0217e244
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e248
 data_ov61_0217e248: ; 0x0217e248
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e24c
 data_ov61_0217e24c: ; 0x0217e24c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e250
 data_ov61_0217e250: ; 0x0217e250
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e254
 data_ov61_0217e254: ; 0x0217e254
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e258
 data_ov61_0217e258: ; 0x0217e258
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e25c
 data_ov61_0217e25c: ; 0x0217e25c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e260
 data_ov61_0217e260: ; 0x0217e260
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e264
 data_ov61_0217e264: ; 0x0217e264
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e268
 data_ov61_0217e268: ; 0x0217e268
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e26c
 data_ov61_0217e26c: ; 0x0217e26c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e270
 data_ov61_0217e270: ; 0x0217e270
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e274
 data_ov61_0217e274: ; 0x0217e274
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e278
 data_ov61_0217e278: ; 0x0217e278
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e27c
 data_ov61_0217e27c: ; 0x0217e27c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e280
 data_ov61_0217e280: ; 0x0217e280
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e284
 data_ov61_0217e284: ; 0x0217e284
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e288
 data_ov61_0217e288: ; 0x0217e288
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e28c
 data_ov61_0217e28c: ; 0x0217e28c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e290
 data_ov61_0217e290: ; 0x0217e290
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e294
 data_ov61_0217e294: ; 0x0217e294
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e298
 data_ov61_0217e298: ; 0x0217e298
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e29c
 data_ov61_0217e29c: ; 0x0217e29c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2a0
 data_ov61_0217e2a0: ; 0x0217e2a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2a4
 data_ov61_0217e2a4: ; 0x0217e2a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2a8
 data_ov61_0217e2a8: ; 0x0217e2a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2ac
 data_ov61_0217e2ac: ; 0x0217e2ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2b0
 data_ov61_0217e2b0: ; 0x0217e2b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2b4
 data_ov61_0217e2b4: ; 0x0217e2b4
 	.byte 0x25, 0x73, 0x2e, 0x6d, 0x61, 0x73, 0x74, 0x65, 0x72, 0x2e, 0x67, 0x73
 	.byte 0x2e, 0x6e, 0x69, 0x6e, 0x74, 0x65, 0x6e, 0x64, 0x6f, 0x77, 0x69, 0x66, 0x69, 0x2e, 0x6e, 0x65
 	.byte 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217e2d4
 data_ov61_0217e2d4: ; 0x0217e2d4
 	.byte 0x4e, 0x6f, 0x20, 0x63, 0x68, 0x61, 0x6c, 0x6c, 0x65, 0x6e, 0x67, 0x65
 	.byte 0x20, 0x76, 0x61, 0x6c, 0x75, 0x65, 0x20, 0x77, 0x61, 0x73, 0x20, 0x72, 0x65, 0x63, 0x65, 0x69
 	.byte 0x76, 0x65, 0x64, 0x20, 0x66, 0x72, 0x6f, 0x6d, 0x20, 0x74, 0x68, 0x65, 0x20, 0x6d, 0x61, 0x73
 	.byte 0x74, 0x65, 0x72, 0x20, 0x73, 0x65, 0x72, 0x76, 0x65, 0x72, 0x2e, 0x00
+	.global data_ov61_0217e30c
 data_ov61_0217e30c: ; 0x0217e30c
 	.byte 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217e310
 data_ov61_0217e310: ; 0x0217e310
 	.byte 0x32, 0x35, 0x35, 0x2e, 0x32, 0x35, 0x35, 0x2e, 0x32, 0x35, 0x35, 0x2e, 0x32, 0x35, 0x35, 0x00
+	.global data_ov61_0217e320
 data_ov61_0217e320: ; 0x0217e320
 	.byte 0x25, 0x30, 0x38, 0x58, 0x25, 0x30, 0x34, 0x58, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e32c
 data_ov61_0217e32c: ; 0x0217e32c
 	.byte 0x75, 0x6e, 0x6b, 0x6e
 	.byte 0x6f, 0x77, 0x6e, 0x00
+	.global data_ov61_0217e334
 data_ov61_0217e334: ; 0x0217e334
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e338
 data_ov61_0217e338: ; 0x0217e338
 	.byte 0x25, 0x73, 0x25, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e340
 data_ov61_0217e340: ; 0x0217e340
 	.byte 0x66, 0x69, 0x6e, 0x61, 0x6c, 0x5c, 0x5c, 0x71, 0x75, 0x65, 0x72, 0x79, 0x69, 0x64, 0x5c, 0x31
 	.byte 0x2e, 0x31, 0x00, 0x00
+	.global data_ov61_0217e354
 data_ov61_0217e354: ; 0x0217e354
 	.byte 0x6c, 0x6f, 0x63, 0x61, 0x6c, 0x69, 0x70, 0x25, 0x64, 0x00, 0x00, 0x00
+	.global data_ov61_0217e360
 data_ov61_0217e360: ; 0x0217e360
 	.byte 0x6c, 0x6f, 0x63, 0x61, 0x6c, 0x70, 0x6f, 0x72, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217e36c
 data_ov61_0217e36c: ; 0x0217e36c
 	.byte 0x6e, 0x61, 0x74, 0x6e
 	.byte 0x65, 0x67, 0x00, 0x00
+	.global data_ov61_0217e374
 data_ov61_0217e374: ; 0x0217e374
 	.byte 0x31, 0x00, 0x00, 0x00
+	.global data_ov61_0217e378
 data_ov61_0217e378: ; 0x0217e378
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov61_0217e37c
 data_ov61_0217e37c: ; 0x0217e37c
 	.byte 0x73, 0x74, 0x61, 0x74
 	.byte 0x65, 0x63, 0x68, 0x61, 0x6e, 0x67, 0x65, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e38c
 data_ov61_0217e38c: ; 0x0217e38c
 	.byte 0x67, 0x61, 0x6d, 0x65
 	.byte 0x6e, 0x61, 0x6d, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e398
 data_ov61_0217e398: ; 0x0217e398
 	.byte 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x69, 0x70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e3a4
 data_ov61_0217e3a4: ; 0x0217e3a4
 	.byte 0x70, 0x75, 0x62, 0x6c, 0x69, 0x63, 0x70, 0x6f, 0x72, 0x74, 0x00, 0x00
+	.global data_ov61_0217e3b0
 data_ov61_0217e3b0: ; 0x0217e3b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e3b4
 data_ov61_0217e3b4: ; 0x0217e3b4
 	.byte 0x70, 0x69, 0x64, 0x5f, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e3bc
 data_ov61_0217e3bc: ; 0x0217e3bc
 	.byte 0x70, 0x69, 0x6e, 0x67
 	.byte 0x5f, 0x00, 0x00, 0x00
+	.global data_ov61_0217e3c4
 data_ov61_0217e3c4: ; 0x0217e3c4
 	.byte 0x74, 0x65, 0x61, 0x6d, 0x5f, 0x00, 0x00, 0x00
+	.global data_ov61_0217e3cc
 data_ov61_0217e3cc: ; 0x0217e3cc
 	.byte 0x73, 0x63, 0x6f, 0x72
 	.byte 0x65, 0x5f, 0x00, 0x00
+	.global data_ov61_0217e3d4
 data_ov61_0217e3d4: ; 0x0217e3d4
 	.byte 0x74, 0x65, 0x61, 0x6d, 0x5f, 0x74, 0x00, 0x00
+	.global data_ov61_0217e3dc
 data_ov61_0217e3dc: ; 0x0217e3dc
 	.byte 0x73, 0x6b, 0x69, 0x6c
 	.byte 0x6c, 0x5f, 0x00, 0x00
+	.global data_ov61_0217e3e4
 data_ov61_0217e3e4: ; 0x0217e3e4
 	.byte 0x67, 0x72, 0x6f, 0x75, 0x70, 0x69, 0x64, 0x00
+	.global data_ov61_0217e3ec
 data_ov61_0217e3ec: ; 0x0217e3ec
 	.byte 0x64, 0x65, 0x61, 0x74
 	.byte 0x68, 0x73, 0x5f, 0x00
+	.global data_ov61_0217e3f4
 data_ov61_0217e3f4: ; 0x0217e3f4
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x76, 0x65, 0x72, 0x00
+	.global data_ov61_0217e3fc
 data_ov61_0217e3fc: ; 0x0217e3fc
 	.byte 0x70, 0x6c, 0x61, 0x79
 	.byte 0x65, 0x72, 0x5f, 0x00
+	.global data_ov61_0217e404
 data_ov61_0217e404: ; 0x0217e404
 	.byte 0x73, 0x63, 0x6f, 0x72, 0x65, 0x5f, 0x74, 0x00
+	.global data_ov61_0217e40c
 data_ov61_0217e40c: ; 0x0217e40c
 	.byte 0x6d, 0x61, 0x70, 0x6e
 	.byte 0x61, 0x6d, 0x65, 0x00
+	.global data_ov61_0217e414
 data_ov61_0217e414: ; 0x0217e414
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x6e, 0x61, 0x6d, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e420
 data_ov61_0217e420: ; 0x0217e420
 	.byte 0x68, 0x6f, 0x73, 0x74, 0x70, 0x6f, 0x72, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e42c
 data_ov61_0217e42c: ; 0x0217e42c
 	.byte 0x70, 0x61, 0x73, 0x73
 	.byte 0x77, 0x6f, 0x72, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e438
 data_ov61_0217e438: ; 0x0217e438
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x74, 0x79, 0x70, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e444
 data_ov61_0217e444: ; 0x0217e444
 	.byte 0x6e, 0x75, 0x6d, 0x74, 0x65, 0x61, 0x6d, 0x73, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e450
 data_ov61_0217e450: ; 0x0217e450
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x6d, 0x6f, 0x64, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e45c
 data_ov61_0217e45c: ; 0x0217e45c
 	.byte 0x74, 0x65, 0x61, 0x6d
 	.byte 0x70, 0x6c, 0x61, 0x79, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e468
 data_ov61_0217e468: ; 0x0217e468
 	.byte 0x68, 0x6f, 0x73, 0x74, 0x6e, 0x61, 0x6d, 0x65
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e474
 data_ov61_0217e474: ; 0x0217e474
 	.byte 0x66, 0x72, 0x61, 0x67, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217e480
 data_ov61_0217e480: ; 0x0217e480
 	.byte 0x74, 0x69, 0x6d, 0x65, 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217e48c
 data_ov61_0217e48c: ; 0x0217e48c
 	.byte 0x72, 0x6f, 0x75, 0x6e
 	.byte 0x64, 0x74, 0x69, 0x6d, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217e498
 data_ov61_0217e498: ; 0x0217e498
 	.byte 0x6e, 0x75, 0x6d, 0x70, 0x6c, 0x61, 0x79, 0x65
 	.byte 0x72, 0x73, 0x00, 0x00
+	.global data_ov61_0217e4a4
 data_ov61_0217e4a4: ; 0x0217e4a4
 	.byte 0x6d, 0x61, 0x78, 0x70, 0x6c, 0x61, 0x79, 0x65, 0x72, 0x73, 0x00, 0x00
+	.global data_ov61_0217e4b0
 data_ov61_0217e4b0: ; 0x0217e4b0
 	.byte 0x67, 0x61, 0x6d, 0x65, 0x76, 0x61, 0x72, 0x69, 0x61, 0x6e, 0x74, 0x00
+	.global data_ov61_0217e4bc
 data_ov61_0217e4bc: ; 0x0217e4bc
 	.byte 0x74, 0x69, 0x6d, 0x65
 	.byte 0x65, 0x6c, 0x61, 0x70, 0x73, 0x65, 0x64, 0x00
+	.global data_ov61_0217e4c8
 data_ov61_0217e4c8: ; 0x0217e4c8
 	.byte 0x72, 0x6f, 0x75, 0x6e, 0x64, 0x65, 0x6c, 0x61
 	.byte 0x70, 0x73, 0x65, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e4d8
 data_ov61_0217e4d8: ; 0x0217e4d8
 	.byte 0x74, 0x65, 0x61, 0x6d, 0x66, 0x72, 0x61, 0x67
 	.byte 0x6c, 0x69, 0x6d, 0x69, 0x74, 0x00, 0x00, 0x00
+	.global data_ov61_0217e4e8
 data_ov61_0217e4e8: ; 0x0217e4e8
 	.byte 0xb0, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e4ec
 data_ov61_0217e4ec: ; 0x0217e4ec
 	.byte 0x68, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e4f0
 data_ov61_0217e4f0: ; 0x0217e4f0
 	.byte 0x14, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e4f4
 data_ov61_0217e4f4: ; 0x0217e4f4
 	.byte 0xf4, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e4f8
 data_ov61_0217e4f8: ; 0x0217e4f8
 	.byte 0x20, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e4fc
 data_ov61_0217e4fc: ; 0x0217e4fc
 	.byte 0x0c, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e500
 data_ov61_0217e500: ; 0x0217e500
 	.byte 0x38, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e504
 data_ov61_0217e504: ; 0x0217e504
 	.byte 0xb0, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e508
 data_ov61_0217e508: ; 0x0217e508
 	.byte 0x98, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e50c
 data_ov61_0217e50c: ; 0x0217e50c
 	.byte 0x44, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e510
 data_ov61_0217e510: ; 0x0217e510
 	.byte 0xa4, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e514
 data_ov61_0217e514: ; 0x0217e514
 	.byte 0x50, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e518
 data_ov61_0217e518: ; 0x0217e518
 	.byte 0x5c, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e51c
 data_ov61_0217e51c: ; 0x0217e51c
 	.byte 0x74, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e520
 data_ov61_0217e520: ; 0x0217e520
 	.byte 0xd8, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e524
 data_ov61_0217e524: ; 0x0217e524
 	.byte 0xbc, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e528
 data_ov61_0217e528: ; 0x0217e528
 	.byte 0x80, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e52c
 data_ov61_0217e52c: ; 0x0217e52c
 	.byte 0x8c, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e530
 data_ov61_0217e530: ; 0x0217e530
 	.byte 0xc8, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e534
 data_ov61_0217e534: ; 0x0217e534
 	.byte 0x2c, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e538
 data_ov61_0217e538: ; 0x0217e538
 	.byte 0xe4, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e53c
 data_ov61_0217e53c: ; 0x0217e53c
 	.byte 0xfc, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e540
 data_ov61_0217e540: ; 0x0217e540
 	.byte 0xcc, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e544
 data_ov61_0217e544: ; 0x0217e544
 	.byte 0xdc, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e548
 data_ov61_0217e548: ; 0x0217e548
 	.byte 0xbc, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e54c
 data_ov61_0217e54c: ; 0x0217e54c
 	.byte 0xc4, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e550
 data_ov61_0217e550: ; 0x0217e550
 	.byte 0xec, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e554
 data_ov61_0217e554: ; 0x0217e554
 	.byte 0xb4, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e558
 data_ov61_0217e558: ; 0x0217e558
 	.byte 0xd4, 0xe3, 0x17, 0x02
+	.global data_ov61_0217e55c
 data_ov61_0217e55c: ; 0x0217e55c
 	.byte 0x04, 0xe4, 0x17, 0x02
+	.global data_ov61_0217e560
 data_ov61_0217e560: ; 0x0217e560
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e564
 data_ov61_0217e564: ; 0x0217e564
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e568
 data_ov61_0217e568: ; 0x0217e568
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e56c
 data_ov61_0217e56c: ; 0x0217e56c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e570
 data_ov61_0217e570: ; 0x0217e570
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e574
 data_ov61_0217e574: ; 0x0217e574
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e578
 data_ov61_0217e578: ; 0x0217e578
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e57c
 data_ov61_0217e57c: ; 0x0217e57c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e580
 data_ov61_0217e580: ; 0x0217e580
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e584
 data_ov61_0217e584: ; 0x0217e584
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e588
 data_ov61_0217e588: ; 0x0217e588
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e58c
 data_ov61_0217e58c: ; 0x0217e58c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e590
 data_ov61_0217e590: ; 0x0217e590
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e594
 data_ov61_0217e594: ; 0x0217e594
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e598
 data_ov61_0217e598: ; 0x0217e598
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e59c
 data_ov61_0217e59c: ; 0x0217e59c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5a0
 data_ov61_0217e5a0: ; 0x0217e5a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5a4
 data_ov61_0217e5a4: ; 0x0217e5a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5a8
 data_ov61_0217e5a8: ; 0x0217e5a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5ac
 data_ov61_0217e5ac: ; 0x0217e5ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5b0
 data_ov61_0217e5b0: ; 0x0217e5b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5b4
 data_ov61_0217e5b4: ; 0x0217e5b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5b8
 data_ov61_0217e5b8: ; 0x0217e5b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5bc
 data_ov61_0217e5bc: ; 0x0217e5bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5c0
 data_ov61_0217e5c0: ; 0x0217e5c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5c4
 data_ov61_0217e5c4: ; 0x0217e5c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5c8
 data_ov61_0217e5c8: ; 0x0217e5c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5cc
 data_ov61_0217e5cc: ; 0x0217e5cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5d0
 data_ov61_0217e5d0: ; 0x0217e5d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5d4
 data_ov61_0217e5d4: ; 0x0217e5d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5d8
 data_ov61_0217e5d8: ; 0x0217e5d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5dc
 data_ov61_0217e5dc: ; 0x0217e5dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5e0
 data_ov61_0217e5e0: ; 0x0217e5e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5e4
 data_ov61_0217e5e4: ; 0x0217e5e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5e8
 data_ov61_0217e5e8: ; 0x0217e5e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5ec
 data_ov61_0217e5ec: ; 0x0217e5ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5f0
 data_ov61_0217e5f0: ; 0x0217e5f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5f4
 data_ov61_0217e5f4: ; 0x0217e5f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5f8
 data_ov61_0217e5f8: ; 0x0217e5f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e5fc
 data_ov61_0217e5fc: ; 0x0217e5fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e600
 data_ov61_0217e600: ; 0x0217e600
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e604
 data_ov61_0217e604: ; 0x0217e604
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e608
 data_ov61_0217e608: ; 0x0217e608
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e60c
 data_ov61_0217e60c: ; 0x0217e60c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e610
 data_ov61_0217e610: ; 0x0217e610
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e614
 data_ov61_0217e614: ; 0x0217e614
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e618
 data_ov61_0217e618: ; 0x0217e618
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e61c
 data_ov61_0217e61c: ; 0x0217e61c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e620
 data_ov61_0217e620: ; 0x0217e620
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e624
 data_ov61_0217e624: ; 0x0217e624
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e628
 data_ov61_0217e628: ; 0x0217e628
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e62c
 data_ov61_0217e62c: ; 0x0217e62c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e630
 data_ov61_0217e630: ; 0x0217e630
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e634
 data_ov61_0217e634: ; 0x0217e634
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e638
 data_ov61_0217e638: ; 0x0217e638
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e63c
 data_ov61_0217e63c: ; 0x0217e63c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e640
 data_ov61_0217e640: ; 0x0217e640
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e644
 data_ov61_0217e644: ; 0x0217e644
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e648
 data_ov61_0217e648: ; 0x0217e648
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e64c
 data_ov61_0217e64c: ; 0x0217e64c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e650
 data_ov61_0217e650: ; 0x0217e650
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e654
 data_ov61_0217e654: ; 0x0217e654
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e658
 data_ov61_0217e658: ; 0x0217e658
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e65c
 data_ov61_0217e65c: ; 0x0217e65c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e660
 data_ov61_0217e660: ; 0x0217e660
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e664
 data_ov61_0217e664: ; 0x0217e664
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e668
 data_ov61_0217e668: ; 0x0217e668
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e66c
 data_ov61_0217e66c: ; 0x0217e66c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e670
 data_ov61_0217e670: ; 0x0217e670
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e674
 data_ov61_0217e674: ; 0x0217e674
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e678
 data_ov61_0217e678: ; 0x0217e678
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e67c
 data_ov61_0217e67c: ; 0x0217e67c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e680
 data_ov61_0217e680: ; 0x0217e680
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e684
 data_ov61_0217e684: ; 0x0217e684
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e688
 data_ov61_0217e688: ; 0x0217e688
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e68c
 data_ov61_0217e68c: ; 0x0217e68c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e690
 data_ov61_0217e690: ; 0x0217e690
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e694
 data_ov61_0217e694: ; 0x0217e694
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e698
 data_ov61_0217e698: ; 0x0217e698
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e69c
 data_ov61_0217e69c: ; 0x0217e69c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6a0
 data_ov61_0217e6a0: ; 0x0217e6a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6a4
 data_ov61_0217e6a4: ; 0x0217e6a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6a8
 data_ov61_0217e6a8: ; 0x0217e6a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6ac
 data_ov61_0217e6ac: ; 0x0217e6ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6b0
 data_ov61_0217e6b0: ; 0x0217e6b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6b4
 data_ov61_0217e6b4: ; 0x0217e6b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6b8
 data_ov61_0217e6b8: ; 0x0217e6b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6bc
 data_ov61_0217e6bc: ; 0x0217e6bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6c0
 data_ov61_0217e6c0: ; 0x0217e6c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6c4
 data_ov61_0217e6c4: ; 0x0217e6c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6c8
 data_ov61_0217e6c8: ; 0x0217e6c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6cc
 data_ov61_0217e6cc: ; 0x0217e6cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6d0
 data_ov61_0217e6d0: ; 0x0217e6d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6d4
 data_ov61_0217e6d4: ; 0x0217e6d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6d8
 data_ov61_0217e6d8: ; 0x0217e6d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6dc
 data_ov61_0217e6dc: ; 0x0217e6dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6e0
 data_ov61_0217e6e0: ; 0x0217e6e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6e4
 data_ov61_0217e6e4: ; 0x0217e6e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6e8
 data_ov61_0217e6e8: ; 0x0217e6e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6ec
 data_ov61_0217e6ec: ; 0x0217e6ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6f0
 data_ov61_0217e6f0: ; 0x0217e6f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6f4
 data_ov61_0217e6f4: ; 0x0217e6f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6f8
 data_ov61_0217e6f8: ; 0x0217e6f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e6fc
 data_ov61_0217e6fc: ; 0x0217e6fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e700
 data_ov61_0217e700: ; 0x0217e700
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e704
 data_ov61_0217e704: ; 0x0217e704
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e708
 data_ov61_0217e708: ; 0x0217e708
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e70c
 data_ov61_0217e70c: ; 0x0217e70c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e710
 data_ov61_0217e710: ; 0x0217e710
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e714
 data_ov61_0217e714: ; 0x0217e714
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e718
 data_ov61_0217e718: ; 0x0217e718
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e71c
 data_ov61_0217e71c: ; 0x0217e71c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e720
 data_ov61_0217e720: ; 0x0217e720
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e724
 data_ov61_0217e724: ; 0x0217e724
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e728
 data_ov61_0217e728: ; 0x0217e728
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e72c
 data_ov61_0217e72c: ; 0x0217e72c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e730
 data_ov61_0217e730: ; 0x0217e730
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e734
 data_ov61_0217e734: ; 0x0217e734
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e738
 data_ov61_0217e738: ; 0x0217e738
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e73c
 data_ov61_0217e73c: ; 0x0217e73c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e740
 data_ov61_0217e740: ; 0x0217e740
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e744
 data_ov61_0217e744: ; 0x0217e744
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e748
 data_ov61_0217e748: ; 0x0217e748
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e74c
 data_ov61_0217e74c: ; 0x0217e74c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e750
 data_ov61_0217e750: ; 0x0217e750
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e754
 data_ov61_0217e754: ; 0x0217e754
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e758
 data_ov61_0217e758: ; 0x0217e758
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e75c
 data_ov61_0217e75c: ; 0x0217e75c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e760
 data_ov61_0217e760: ; 0x0217e760
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e764
 data_ov61_0217e764: ; 0x0217e764
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e768
 data_ov61_0217e768: ; 0x0217e768
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e76c
 data_ov61_0217e76c: ; 0x0217e76c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e770
 data_ov61_0217e770: ; 0x0217e770
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e774
 data_ov61_0217e774: ; 0x0217e774
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e778
 data_ov61_0217e778: ; 0x0217e778
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e77c
 data_ov61_0217e77c: ; 0x0217e77c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e780
 data_ov61_0217e780: ; 0x0217e780
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e784
 data_ov61_0217e784: ; 0x0217e784
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e788
 data_ov61_0217e788: ; 0x0217e788
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e78c
 data_ov61_0217e78c: ; 0x0217e78c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e790
 data_ov61_0217e790: ; 0x0217e790
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e794
 data_ov61_0217e794: ; 0x0217e794
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e798
 data_ov61_0217e798: ; 0x0217e798
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e79c
 data_ov61_0217e79c: ; 0x0217e79c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7a0
 data_ov61_0217e7a0: ; 0x0217e7a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7a4
 data_ov61_0217e7a4: ; 0x0217e7a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7a8
 data_ov61_0217e7a8: ; 0x0217e7a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7ac
 data_ov61_0217e7ac: ; 0x0217e7ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7b0
 data_ov61_0217e7b0: ; 0x0217e7b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7b4
 data_ov61_0217e7b4: ; 0x0217e7b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7b8
 data_ov61_0217e7b8: ; 0x0217e7b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7bc
 data_ov61_0217e7bc: ; 0x0217e7bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7c0
 data_ov61_0217e7c0: ; 0x0217e7c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7c4
 data_ov61_0217e7c4: ; 0x0217e7c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7c8
 data_ov61_0217e7c8: ; 0x0217e7c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7cc
 data_ov61_0217e7cc: ; 0x0217e7cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7d0
 data_ov61_0217e7d0: ; 0x0217e7d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7d4
 data_ov61_0217e7d4: ; 0x0217e7d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7d8
 data_ov61_0217e7d8: ; 0x0217e7d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7dc
 data_ov61_0217e7dc: ; 0x0217e7dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7e0
 data_ov61_0217e7e0: ; 0x0217e7e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7e4
 data_ov61_0217e7e4: ; 0x0217e7e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7e8
 data_ov61_0217e7e8: ; 0x0217e7e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7ec
 data_ov61_0217e7ec: ; 0x0217e7ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7f0
 data_ov61_0217e7f0: ; 0x0217e7f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7f4
 data_ov61_0217e7f4: ; 0x0217e7f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7f8
 data_ov61_0217e7f8: ; 0x0217e7f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e7fc
 data_ov61_0217e7fc: ; 0x0217e7fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e800
 data_ov61_0217e800: ; 0x0217e800
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e804
 data_ov61_0217e804: ; 0x0217e804
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e808
 data_ov61_0217e808: ; 0x0217e808
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e80c
 data_ov61_0217e80c: ; 0x0217e80c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e810
 data_ov61_0217e810: ; 0x0217e810
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e814
 data_ov61_0217e814: ; 0x0217e814
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e818
 data_ov61_0217e818: ; 0x0217e818
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e81c
 data_ov61_0217e81c: ; 0x0217e81c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e820
 data_ov61_0217e820: ; 0x0217e820
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e824
 data_ov61_0217e824: ; 0x0217e824
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e828
 data_ov61_0217e828: ; 0x0217e828
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e82c
 data_ov61_0217e82c: ; 0x0217e82c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e830
 data_ov61_0217e830: ; 0x0217e830
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e834
 data_ov61_0217e834: ; 0x0217e834
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e838
 data_ov61_0217e838: ; 0x0217e838
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e83c
 data_ov61_0217e83c: ; 0x0217e83c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e840
 data_ov61_0217e840: ; 0x0217e840
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e844
 data_ov61_0217e844: ; 0x0217e844
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e848
 data_ov61_0217e848: ; 0x0217e848
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e84c
 data_ov61_0217e84c: ; 0x0217e84c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e850
 data_ov61_0217e850: ; 0x0217e850
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e854
 data_ov61_0217e854: ; 0x0217e854
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e858
 data_ov61_0217e858: ; 0x0217e858
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e85c
 data_ov61_0217e85c: ; 0x0217e85c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e860
 data_ov61_0217e860: ; 0x0217e860
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e864
 data_ov61_0217e864: ; 0x0217e864
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e868
 data_ov61_0217e868: ; 0x0217e868
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e86c
 data_ov61_0217e86c: ; 0x0217e86c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e870
 data_ov61_0217e870: ; 0x0217e870
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e874
 data_ov61_0217e874: ; 0x0217e874
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e878
 data_ov61_0217e878: ; 0x0217e878
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e87c
 data_ov61_0217e87c: ; 0x0217e87c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e880
 data_ov61_0217e880: ; 0x0217e880
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e884
 data_ov61_0217e884: ; 0x0217e884
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e888
 data_ov61_0217e888: ; 0x0217e888
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e88c
 data_ov61_0217e88c: ; 0x0217e88c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e890
 data_ov61_0217e890: ; 0x0217e890
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e894
 data_ov61_0217e894: ; 0x0217e894
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e898
 data_ov61_0217e898: ; 0x0217e898
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e89c
 data_ov61_0217e89c: ; 0x0217e89c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8a0
 data_ov61_0217e8a0: ; 0x0217e8a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8a4
 data_ov61_0217e8a4: ; 0x0217e8a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8a8
 data_ov61_0217e8a8: ; 0x0217e8a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8ac
 data_ov61_0217e8ac: ; 0x0217e8ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8b0
 data_ov61_0217e8b0: ; 0x0217e8b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8b4
 data_ov61_0217e8b4: ; 0x0217e8b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8b8
 data_ov61_0217e8b8: ; 0x0217e8b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8bc
 data_ov61_0217e8bc: ; 0x0217e8bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8c0
 data_ov61_0217e8c0: ; 0x0217e8c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8c4
 data_ov61_0217e8c4: ; 0x0217e8c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8c8
 data_ov61_0217e8c8: ; 0x0217e8c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8cc
 data_ov61_0217e8cc: ; 0x0217e8cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8d0
 data_ov61_0217e8d0: ; 0x0217e8d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8d4
 data_ov61_0217e8d4: ; 0x0217e8d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8d8
 data_ov61_0217e8d8: ; 0x0217e8d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8dc
 data_ov61_0217e8dc: ; 0x0217e8dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e8e0
 data_ov61_0217e8e0: ; 0x0217e8e0
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov61_0217e8e4
 data_ov61_0217e8e4: ; 0x0217e8e4
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov61_0217e8e8
 data_ov61_0217e8e8: ; 0x0217e8e8
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov61_0217e8ec
 data_ov61_0217e8ec: ; 0x0217e8ec
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov61_0217e8f0
 data_ov61_0217e8f0: ; 0x0217e8f0
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov61_0217e8f4
 data_ov61_0217e8f4: ; 0x0217e8f4
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov61_0217e8f8
 data_ov61_0217e8f8: ; 0x0217e8f8
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov61_0217e8fc
 data_ov61_0217e8fc: ; 0x0217e8fc
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov61_0217e900
 data_ov61_0217e900: ; 0x0217e900
 	.byte 0xfc, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e904
 data_ov61_0217e904: ; 0x0217e904
 	.byte 0xf8, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e908
 data_ov61_0217e908: ; 0x0217e908
 	.byte 0xf4, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e90c
 data_ov61_0217e90c: ; 0x0217e90c
 	.byte 0xf0, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e910
 data_ov61_0217e910: ; 0x0217e910
 	.byte 0xec, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e914
 data_ov61_0217e914: ; 0x0217e914
 	.byte 0xe8, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e918
 data_ov61_0217e918: ; 0x0217e918
 	.byte 0xe4, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e91c
 data_ov61_0217e91c: ; 0x0217e91c
 	.byte 0xe0, 0xe8, 0x17, 0x02
+	.global data_ov61_0217e920
 data_ov61_0217e920: ; 0x0217e920
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e924
 data_ov61_0217e924: ; 0x0217e924
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e928
 data_ov61_0217e928: ; 0x0217e928
 	.byte 0x34, 0x97, 0x17, 0x02
+	.global data_ov61_0217e92c
 data_ov61_0217e92c: ; 0x0217e92c
 	.byte 0x74, 0x97, 0x17, 0x02
+	.global data_ov61_0217e930
 data_ov61_0217e930: ; 0x0217e930
 	.byte 0xbc, 0x97, 0x17, 0x02
+	.global data_ov61_0217e934
 data_ov61_0217e934: ; 0x0217e934
 	.byte 0x38, 0x98, 0x17, 0x02
+	.global data_ov61_0217e938
 data_ov61_0217e938: ; 0x0217e938
 	.byte 0x54, 0x98, 0x17, 0x02
+	.global data_ov61_0217e93c
 data_ov61_0217e93c: ; 0x0217e93c
 	.byte 0xf8, 0x9e, 0x17, 0x02
+	.global data_ov61_0217e940
 data_ov61_0217e940: ; 0x0217e940
 	.byte 0xd0, 0x98, 0x17, 0x02
+	.global data_ov61_0217e944
 data_ov61_0217e944: ; 0x0217e944
 	.byte 0xf8, 0x98, 0x17, 0x02
+	.global data_ov61_0217e948
 data_ov61_0217e948: ; 0x0217e948
 	.byte 0x70, 0x99, 0x17, 0x02
+	.global data_ov61_0217e94c
 data_ov61_0217e94c: ; 0x0217e94c
 	.byte 0xcc, 0x9a, 0x17, 0x02
+	.global data_ov61_0217e950
 data_ov61_0217e950: ; 0x0217e950
 	.byte 0xdc, 0x9a, 0x17, 0x02
+	.global data_ov61_0217e954
 data_ov61_0217e954: ; 0x0217e954
 	.byte 0xe0, 0xa1, 0x17, 0x02
+	.global data_ov61_0217e958
 data_ov61_0217e958: ; 0x0217e958
 	.byte 0xec, 0xa1, 0x17, 0x02
+	.global data_ov61_0217e95c
 data_ov61_0217e95c: ; 0x0217e95c
 	.byte 0x24, 0x98, 0x17, 0x02
+	.global data_ov61_0217e960
 data_ov61_0217e960: ; 0x0217e960
 	.byte 0xbc, 0x98, 0x17, 0x02
+	.global data_ov61_0217e964
 data_ov61_0217e964: ; 0x0217e964
 	.byte 0xfc, 0xa1, 0x17, 0x02
+	.global data_ov61_0217e968
 data_ov61_0217e968: ; 0x0217e968
 	.byte 0x18, 0x9b, 0x17, 0x02
+	.global data_ov61_0217e96c
 data_ov61_0217e96c: ; 0x0217e96c
 	.byte 0x5c, 0x9b, 0x17, 0x02
+	.global data_ov61_0217e970
 data_ov61_0217e970: ; 0x0217e970
 	.byte 0xdc, 0x9f, 0x17, 0x02
+	.global data_ov61_0217e974
 data_ov61_0217e974: ; 0x0217e974
 	.byte 0x73, 0x6f, 0x66, 0x74, 0x5f, 0x6e, 0x61, 0x6d, 0x65, 0x00, 0x00, 0x00
+	.global data_ov61_0217e980
 data_ov61_0217e980: ; 0x0217e980
 	.byte 0x63, 0x6f, 0x75, 0x6e, 0x74, 0x72, 0x79, 0x5f, 0x72, 0x65, 0x67, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.global data_ov61_0217e990
 data_ov61_0217e990: ; 0x0217e990
 	.byte 0x70, 0x6c, 0x61, 0x79, 0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c, 0x00, 0x00
+	.global data_ov61_0217e99c
 data_ov61_0217e99c: ; 0x0217e99c
 	.byte 0x62, 0x61, 0x74, 0x74
 	.byte 0x6c, 0x65, 0x5f, 0x72, 0x61, 0x6e, 0x6b, 0x00
+	.global data_ov61_0217e9a8
 data_ov61_0217e9a8: ; 0x0217e9a8
 	.byte 0x6d, 0x61, 0x74, 0x63, 0x68, 0x5f, 0x74, 0x79
 	.byte 0x70, 0x65, 0x00, 0x00
+	.global data_ov61_0217e9b4
 data_ov61_0217e9b4: ; 0x0217e9b4
 	.byte 0x6d, 0x61, 0x6e, 0x6e, 0x65, 0x72, 0x5f, 0x6c, 0x65, 0x76, 0x65, 0x6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217e9c4
 data_ov61_0217e9c4: ; 0x0217e9c4
 	.byte 0x7a, 0x65, 0x6c, 0x64, 0x61, 0x5f, 0x64, 0x73, 0x5f, 0x70, 0x68, 0x61
 	.byte 0x6e, 0x74, 0x6f, 0x6d, 0x5f, 0x68, 0x6f, 0x75, 0x72, 0x67, 0x6c, 0x61, 0x73, 0x73, 0x00, 0x00
+	.global data_ov61_0217e9e0
 data_ov61_0217e9e0: ; 0x0217e9e0
 	.byte 0x6c, 0x6f, 0x7a, 0x70, 0x68, 0x6f, 0x75, 0x72, 0x64, 0x73, 0x00, 0x00
+	.global data_ov61_0217e9ec
 data_ov61_0217e9ec: ; 0x0217e9ec
 	.byte 0x74, 0x38, 0x52, 0x73
 	.byte 0x44, 0x62, 0x00, 0x00
+	.global data_ov61_0217e9f4
 data_ov61_0217e9f4: ; 0x0217e9f4
 	.byte 0x3d, 0x27, 0x00, 0x00
+	.global data_ov61_0217e9f8
 data_ov61_0217e9f8: ; 0x0217e9f8
 	.byte 0x27, 0x00, 0x00, 0x00
+	.global data_ov61_0217e9fc
 data_ov61_0217e9fc: ; 0x0217e9fc
 	.byte 0x20, 0x61, 0x6e, 0x64
 	.byte 0x20, 0x25, 0x73, 0x3d, 0x25, 0x64, 0x00, 0x00
+	.global data_ov61_0217ea08
 data_ov61_0217ea08: ; 0x0217ea08
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ea0c
 data_ov61_0217ea0c: ; 0x0217ea0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ea10
 data_ov61_0217ea10: ; 0x0217ea10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ea14
 data_ov61_0217ea14: ; 0x0217ea14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ea18
 data_ov61_0217ea18: ; 0x0217ea18
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov61_0217ea1c
 data_ov61_0217ea1c: ; 0x0217ea1c
 	.byte 0x00, 0x00, 0x00, 0x00
 	; 0x0217ea20
 
 	.bss
+	.global data_ov61_0217ea20
 data_ov61_0217ea20:
 	.space 0x4
+	.global data_ov61_0217ea24
 data_ov61_0217ea24:
 	.space 0x4
+	.global data_ov61_0217ea28
 data_ov61_0217ea28:
 	.space 0x4
+	.global data_ov61_0217ea2c
 data_ov61_0217ea2c:
 	.space 0x4
+	.global data_ov61_0217ea30
 data_ov61_0217ea30:
 	.space 0x4
+	.global data_ov61_0217ea34
 data_ov61_0217ea34:
 	.space 0x4
+	.global data_ov61_0217ea38
 data_ov61_0217ea38:
 	.space 0x4
+	.global data_ov61_0217ea3c
 data_ov61_0217ea3c:
 	.space 0x4
+	.global data_ov61_0217ea40
 data_ov61_0217ea40:
 	.space 0x4
+	.global data_ov61_0217ea44
 data_ov61_0217ea44:
 	.space 0x4
+	.global data_ov61_0217ea48
 data_ov61_0217ea48:
 	.space 0x4
+	.global data_ov61_0217ea4c
 data_ov61_0217ea4c:
 	.space 0x4
+	.global data_ov61_0217ea50
 data_ov61_0217ea50:
 	.space 0x4
+	.global data_ov61_0217ea54
 data_ov61_0217ea54:
 	.space 0x4
+	.global data_ov61_0217ea58
 data_ov61_0217ea58:
 	.space 0x4
+	.global data_ov61_0217ea5c
 data_ov61_0217ea5c:
 	.space 0x4
+	.global data_ov61_0217ea60
 data_ov61_0217ea60:
 	.space 0x4
+	.global data_ov61_0217ea64
 data_ov61_0217ea64:
 	.space 0x4
+	.global data_ov61_0217ea68
 data_ov61_0217ea68:
 	.space 0x4
+	.global data_ov61_0217ea6c
 data_ov61_0217ea6c:
 	.space 0x4
+	.global data_ov61_0217ea70
 data_ov61_0217ea70:
 	.space 0x4
+	.global data_ov61_0217ea74
 data_ov61_0217ea74:
 	.space 0x4
+	.global data_ov61_0217ea78
 data_ov61_0217ea78:
 	.space 0x4
+	.global data_ov61_0217ea7c
 data_ov61_0217ea7c:
 	.space 0x4
+	.global data_ov61_0217ea80
 data_ov61_0217ea80:
 	.space 0x4
+	.global data_ov61_0217ea84
 data_ov61_0217ea84:
 	.space 0x4
+	.global data_ov61_0217ea88
 data_ov61_0217ea88:
 	.space 0x4
+	.global data_ov61_0217ea8c
 data_ov61_0217ea8c:
 	.space 0x4
+	.global data_ov61_0217ea90
 data_ov61_0217ea90:
 	.space 0x4
+	.global data_ov61_0217ea94
 data_ov61_0217ea94:
 	.space 0x4
+	.global data_ov61_0217ea98
 data_ov61_0217ea98:
 	.space 0x4
+	.global data_ov61_0217ea9c
 data_ov61_0217ea9c:
 	.space 0x4
+	.global data_ov61_0217eaa0
 data_ov61_0217eaa0:
 	.space 0x4
+	.global data_ov61_0217eaa4
 data_ov61_0217eaa4:
 	.space 0x4
+	.global data_ov61_0217eaa8
 data_ov61_0217eaa8:
 	.space 0x4
+	.global data_ov61_0217eaac
 data_ov61_0217eaac:
 	.space 0x4
+	.global data_ov61_0217eab0
 data_ov61_0217eab0:
 	.space 0x4
+	.global data_ov61_0217eab4
 data_ov61_0217eab4:
 	.space 0x4
+	.global data_ov61_0217eab8
 data_ov61_0217eab8:
 	.space 0x4
+	.global data_ov61_0217eabc
 data_ov61_0217eabc:
 	.space 0x4
+	.global data_ov61_0217eac0
 data_ov61_0217eac0:
 	.space 0x4
+	.global data_ov61_0217eac4
 data_ov61_0217eac4:
 	.space 0x4
+	.global data_ov61_0217eac8
 data_ov61_0217eac8:
 	.space 0x4
+	.global data_ov61_0217eacc
 data_ov61_0217eacc:
 	.space 0x4
+	.global data_ov61_0217ead0
 data_ov61_0217ead0:
 	.space 0x4
+	.global data_ov61_0217ead4
 data_ov61_0217ead4:
 	.space 0x4
+	.global data_ov61_0217ead8
 data_ov61_0217ead8:
 	.space 0x4
+	.global data_ov61_0217eadc
 data_ov61_0217eadc:
 	.space 0x4
+	.global data_ov61_0217eae0
 data_ov61_0217eae0:
 	.space 0x4
+	.global data_ov61_0217eae4
 data_ov61_0217eae4:
 	.space 0x4
+	.global data_ov61_0217eae8
 data_ov61_0217eae8:
 	.space 0x4
+	.global data_ov61_0217eaec
 data_ov61_0217eaec:
 	.space 0x4
+	.global data_ov61_0217eaf0
 data_ov61_0217eaf0:
 	.space 0x4
+	.global data_ov61_0217eaf4
 data_ov61_0217eaf4:
 	.space 0x4
+	.global data_ov61_0217eaf8
 data_ov61_0217eaf8:
 	.space 0x4
+	.global data_ov61_0217eafc
 data_ov61_0217eafc:
 	.space 0x4
+	.global data_ov61_0217eb00
 data_ov61_0217eb00:
 	.space 0x4
+	.global data_ov61_0217eb04
 data_ov61_0217eb04:
 	.space 0x4
+	.global data_ov61_0217eb08
 data_ov61_0217eb08:
 	.space 0x4
+	.global data_ov61_0217eb0c
 data_ov61_0217eb0c:
 	.space 0x4
+	.global data_ov61_0217eb10
 data_ov61_0217eb10:
 	.space 0x4
+	.global data_ov61_0217eb14
 data_ov61_0217eb14:
 	.space 0x4
+	.global data_ov61_0217eb18
 data_ov61_0217eb18:
 	.space 0x4
+	.global data_ov61_0217eb1c
 data_ov61_0217eb1c:
 	.space 0x4
+	.global data_ov61_0217eb20
 data_ov61_0217eb20:
 	.space 0x4
+	.global data_ov61_0217eb24
 data_ov61_0217eb24:
 	.space 0x4
+	.global data_ov61_0217eb28
 data_ov61_0217eb28:
 	.space 0x4
+	.global data_ov61_0217eb2c
 data_ov61_0217eb2c:
 	.space 0x4
+	.global data_ov61_0217eb30
 data_ov61_0217eb30:
 	.space 0x4
+	.global data_ov61_0217eb34
 data_ov61_0217eb34:
 	.space 0x4
+	.global data_ov61_0217eb38
 data_ov61_0217eb38:
 	.space 0x4
+	.global data_ov61_0217eb3c
 data_ov61_0217eb3c:
 	.space 0x4
+	.global data_ov61_0217eb40
 data_ov61_0217eb40:
 	.space 0x4
+	.global data_ov61_0217eb44
 data_ov61_0217eb44:
 	.space 0x4
+	.global data_ov61_0217eb48
 data_ov61_0217eb48:
 	.space 0x4
+	.global data_ov61_0217eb4c
 data_ov61_0217eb4c:
 	.space 0x4
+	.global data_ov61_0217eb50
 data_ov61_0217eb50:
 	.space 0x4
+	.global data_ov61_0217eb54
 data_ov61_0217eb54:
 	.space 0x4
+	.global data_ov61_0217eb58
 data_ov61_0217eb58:
 	.space 0x4
+	.global data_ov61_0217eb5c
 data_ov61_0217eb5c:
 	.space 0x4
+	.global data_ov61_0217eb60
 data_ov61_0217eb60:
 	.space 0x4
+	.global data_ov61_0217eb64
 data_ov61_0217eb64:
 	.space 0x4
+	.global data_ov61_0217eb68
 data_ov61_0217eb68:
 	.space 0x4
+	.global data_ov61_0217eb6c
 data_ov61_0217eb6c:
 	.space 0x4
+	.global data_ov61_0217eb70
 data_ov61_0217eb70:
 	.space 0x4
+	.global data_ov61_0217eb74
 data_ov61_0217eb74:
 	.space 0x4
+	.global data_ov61_0217eb78
 data_ov61_0217eb78:
 	.space 0x4
+	.global data_ov61_0217eb7c
 data_ov61_0217eb7c:
 	.space 0x4
+	.global data_ov61_0217eb80
 data_ov61_0217eb80:
 	.space 0x4
+	.global data_ov61_0217eb84
 data_ov61_0217eb84:
 	.space 0x4
+	.global data_ov61_0217eb88
 data_ov61_0217eb88:
 	.space 0x4
+	.global data_ov61_0217eb8c
 data_ov61_0217eb8c:
 	.space 0x4
+	.global data_ov61_0217eb90
 data_ov61_0217eb90:
 	.space 0x4
+	.global data_ov61_0217eb94
 data_ov61_0217eb94:
 	.space 0x4
+	.global data_ov61_0217eb98
 data_ov61_0217eb98:
 	.space 0x4
+	.global data_ov61_0217eb9c
 data_ov61_0217eb9c:
 	.space 0x4
+	.global data_ov61_0217eba0
 data_ov61_0217eba0:
 	.space 0x4
+	.global data_ov61_0217eba4
 data_ov61_0217eba4:
 	.space 0x4
+	.global data_ov61_0217eba8
 data_ov61_0217eba8:
 	.space 0x4
+	.global data_ov61_0217ebac
 data_ov61_0217ebac:
 	.space 0x4
+	.global data_ov61_0217ebb0
 data_ov61_0217ebb0:
 	.space 0x4
+	.global data_ov61_0217ebb4
 data_ov61_0217ebb4:
 	.space 0x4
+	.global data_ov61_0217ebb8
 data_ov61_0217ebb8:
 	.space 0x4
+	.global data_ov61_0217ebbc
 data_ov61_0217ebbc:
 	.space 0x4
+	.global data_ov61_0217ebc0
 data_ov61_0217ebc0:
 	.space 0x4
+	.global data_ov61_0217ebc4
 data_ov61_0217ebc4:
 	.space 0x4
+	.global data_ov61_0217ebc8
 data_ov61_0217ebc8:
 	.space 0x4
+	.global data_ov61_0217ebcc
 data_ov61_0217ebcc:
 	.space 0x4
+	.global data_ov61_0217ebd0
 data_ov61_0217ebd0:
 	.space 0x4
+	.global data_ov61_0217ebd4
 data_ov61_0217ebd4:
 	.space 0x4
+	.global data_ov61_0217ebd8
 data_ov61_0217ebd8:
 	.space 0x4
+	.global data_ov61_0217ebdc
 data_ov61_0217ebdc:
 	.space 0x4
+	.global data_ov61_0217ebe0
 data_ov61_0217ebe0:
 	.space 0x4
+	.global data_ov61_0217ebe4
 data_ov61_0217ebe4:
 	.space 0x4
+	.global data_ov61_0217ebe8
 data_ov61_0217ebe8:
 	.space 0x4
+	.global data_ov61_0217ebec
 data_ov61_0217ebec:
 	.space 0x4
+	.global data_ov61_0217ebf0
 data_ov61_0217ebf0:
 	.space 0x1
+	.global data_ov61_0217ebf1
 data_ov61_0217ebf1:
 	.space 0x1
+	.global data_ov61_0217ebf2
 data_ov61_0217ebf2:
 	.space 0x2
+	.global data_ov61_0217ebf4
 data_ov61_0217ebf4:
 	.space 0x4
+	.global data_ov61_0217ebf8
 data_ov61_0217ebf8:
 	.space 0x1
+	.global data_ov61_0217ebf9
 data_ov61_0217ebf9:
 	.space 0x1
+	.global data_ov61_0217ebfa
 data_ov61_0217ebfa:
 	.space 0x2
+	.global data_ov61_0217ebfc
 data_ov61_0217ebfc:
 	.space 0x4
+	.global data_ov61_0217ec00
 data_ov61_0217ec00:
 	.space 0x4
+	.global data_ov61_0217ec04
 data_ov61_0217ec04:
 	.space 0x4
+	.global data_ov61_0217ec08
 data_ov61_0217ec08:
 	.space 0x4
+	.global data_ov61_0217ec0c
 data_ov61_0217ec0c:
 	.space 0x4
+	.global data_ov61_0217ec10
 data_ov61_0217ec10:
 	.space 0x4
+	.global data_ov61_0217ec14
 data_ov61_0217ec14:
 	.space 0x4
+	.global data_ov61_0217ec18
 data_ov61_0217ec18:
 	.space 0x4
+	.global data_ov61_0217ec1c
 data_ov61_0217ec1c:
 	.space 0x4
+	.global data_ov61_0217ec20
 data_ov61_0217ec20:
 	.space 0x4
+	.global data_ov61_0217ec24
 data_ov61_0217ec24:
 	.space 0x4
+	.global data_ov61_0217ec28
 data_ov61_0217ec28:
 	.space 0x4
+	.global data_ov61_0217ec2c
 data_ov61_0217ec2c:
 	.space 0x4
+	.global data_ov61_0217ec30
 data_ov61_0217ec30:
 	.space 0x4
+	.global data_ov61_0217ec34
 data_ov61_0217ec34:
 	.space 0x4
+	.global data_ov61_0217ec38
 data_ov61_0217ec38:
 	.space 0x4
+	.global data_ov61_0217ec3c
 data_ov61_0217ec3c:
 	.space 0x4
+	.global data_ov61_0217ec40
 data_ov61_0217ec40:
 	.space 0x4
+	.global data_ov61_0217ec44
 data_ov61_0217ec44:
 	.space 0x4
+	.global data_ov61_0217ec48
 data_ov61_0217ec48:
 	.space 0x4
+	.global data_ov61_0217ec4c
 data_ov61_0217ec4c:
 	.space 0x4
+	.global data_ov61_0217ec50
 data_ov61_0217ec50:
 	.space 0x4
+	.global data_ov61_0217ec54
 data_ov61_0217ec54:
 	.space 0x4
+	.global data_ov61_0217ec58
 data_ov61_0217ec58:
 	.space 0x4
+	.global data_ov61_0217ec5c
 data_ov61_0217ec5c:
 	.space 0x4
+	.global data_ov61_0217ec60
 data_ov61_0217ec60:
 	.space 0x4
+	.global data_ov61_0217ec64
 data_ov61_0217ec64:
 	.space 0x4
+	.global data_ov61_0217ec68
 data_ov61_0217ec68:
 	.space 0x4
+	.global data_ov61_0217ec6c
 data_ov61_0217ec6c:
 	.space 0x4
+	.global data_ov61_0217ec70
 data_ov61_0217ec70:
 	.space 0x4
+	.global data_ov61_0217ec74
 data_ov61_0217ec74:
 	.space 0x4
+	.global data_ov61_0217ec78
 data_ov61_0217ec78:
 	.space 0x4
+	.global data_ov61_0217ec7c
 data_ov61_0217ec7c:
 	.space 0x4
+	.global data_ov61_0217ec80
 data_ov61_0217ec80:
 	.space 0x4
+	.global data_ov61_0217ec84
 data_ov61_0217ec84:
 	.space 0x4
+	.global data_ov61_0217ec88
 data_ov61_0217ec88:
 	.space 0x4
+	.global data_ov61_0217ec8c
 data_ov61_0217ec8c:
 	.space 0x4
+	.global data_ov61_0217ec90
 data_ov61_0217ec90:
 	.space 0x4
+	.global data_ov61_0217ec94
 data_ov61_0217ec94:
 	.space 0x4
+	.global data_ov61_0217ec98
 data_ov61_0217ec98:
 	.space 0x4
+	.global data_ov61_0217ec9c
 data_ov61_0217ec9c:
 	.space 0x4
+	.global data_ov61_0217eca0
 data_ov61_0217eca0:
 	.space 0x4
+	.global data_ov61_0217eca4
 data_ov61_0217eca4:
 	.space 0x4
+	.global data_ov61_0217eca8
 data_ov61_0217eca8:
 	.space 0x4
+	.global data_ov61_0217ecac
 data_ov61_0217ecac:
 	.space 0x4
+	.global data_ov61_0217ecb0
 data_ov61_0217ecb0:
 	.space 0x4
+	.global data_ov61_0217ecb4
 data_ov61_0217ecb4:
 	.space 0x4
+	.global data_ov61_0217ecb8
 data_ov61_0217ecb8:
 	.space 0x4
+	.global data_ov61_0217ecbc
 data_ov61_0217ecbc:
 	.space 0x4
+	.global data_ov61_0217ecc0
 data_ov61_0217ecc0:
 	.space 0x4
+	.global data_ov61_0217ecc4
 data_ov61_0217ecc4:
 	.space 0x4
+	.global data_ov61_0217ecc8
 data_ov61_0217ecc8:
 	.space 0x4
+	.global data_ov61_0217eccc
 data_ov61_0217eccc:
 	.space 0x4
+	.global data_ov61_0217ecd0
 data_ov61_0217ecd0:
 	.space 0x4
+	.global data_ov61_0217ecd4
 data_ov61_0217ecd4:
 	.space 0x4
+	.global data_ov61_0217ecd8
 data_ov61_0217ecd8:
 	.space 0x4
+	.global data_ov61_0217ecdc
 data_ov61_0217ecdc:
 	.space 0x4
+	.global data_ov61_0217ece0
 data_ov61_0217ece0:
 	.space 0x4
+	.global data_ov61_0217ece4
 data_ov61_0217ece4:
 	.space 0x4
+	.global data_ov61_0217ece8
 data_ov61_0217ece8:
 	.space 0x4
+	.global data_ov61_0217ecec
 data_ov61_0217ecec:
 	.space 0x4
+	.global data_ov61_0217ecf0
 data_ov61_0217ecf0:
 	.space 0x4
+	.global data_ov61_0217ecf4
 data_ov61_0217ecf4:
 	.space 0x4
+	.global data_ov61_0217ecf8
 data_ov61_0217ecf8:
 	.space 0x4
+	.global data_ov61_0217ecfc
 data_ov61_0217ecfc:
 	.space 0x4
+	.global data_ov61_0217ed00
 data_ov61_0217ed00:
 	.space 0x4
+	.global data_ov61_0217ed04
 data_ov61_0217ed04:
 	.space 0x4
+	.global data_ov61_0217ed08
 data_ov61_0217ed08:
 	.space 0x4
+	.global data_ov61_0217ed0c
 data_ov61_0217ed0c:
 	.space 0x4
+	.global data_ov61_0217ed10
 data_ov61_0217ed10:
 	.space 0x4
+	.global data_ov61_0217ed14
 data_ov61_0217ed14:
 	.space 0x4
+	.global data_ov61_0217ed18
 data_ov61_0217ed18:
 	.space 0x4
+	.global data_ov61_0217ed1c
 data_ov61_0217ed1c:
 	.space 0x4
+	.global data_ov61_0217ed20
 data_ov61_0217ed20:
 	.space 0x4
+	.global data_ov61_0217ed24
 data_ov61_0217ed24:
 	.space 0x4
+	.global data_ov61_0217ed28
 data_ov61_0217ed28:
 	.space 0x4
+	.global data_ov61_0217ed2c
 data_ov61_0217ed2c:
 	.space 0x4
+	.global data_ov61_0217ed30
 data_ov61_0217ed30:
 	.space 0x4
+	.global data_ov61_0217ed34
 data_ov61_0217ed34:
 	.space 0x4
+	.global data_ov61_0217ed38
 data_ov61_0217ed38:
 	.space 0x4
+	.global data_ov61_0217ed3c
 data_ov61_0217ed3c:
 	.space 0x4
+	.global data_ov61_0217ed40
 data_ov61_0217ed40:
 	.space 0x4
+	.global data_ov61_0217ed44
 data_ov61_0217ed44:
 	.space 0x4
+	.global data_ov61_0217ed48
 data_ov61_0217ed48:
 	.space 0x4
+	.global data_ov61_0217ed4c
 data_ov61_0217ed4c:
 	.space 0x4
+	.global data_ov61_0217ed50
 data_ov61_0217ed50:
 	.space 0x4
+	.global data_ov61_0217ed54
 data_ov61_0217ed54:
 	.space 0x4
+	.global data_ov61_0217ed58
 data_ov61_0217ed58:
 	.space 0x4
+	.global data_ov61_0217ed5c
 data_ov61_0217ed5c:
 	.space 0x4
+	.global data_ov61_0217ed60
 data_ov61_0217ed60:
 	.space 0x4
+	.global data_ov61_0217ed64
 data_ov61_0217ed64:
 	.space 0x4
+	.global data_ov61_0217ed68
 data_ov61_0217ed68:
 	.space 0x4
+	.global data_ov61_0217ed6c
 data_ov61_0217ed6c:
 	.space 0x4
+	.global data_ov61_0217ed70
 data_ov61_0217ed70:
 	.space 0x4
+	.global data_ov61_0217ed74
 data_ov61_0217ed74:
 	.space 0x4
+	.global data_ov61_0217ed78
 data_ov61_0217ed78:
 	.space 0x4
+	.global data_ov61_0217ed7c
 data_ov61_0217ed7c:
 	.space 0x4
+	.global data_ov61_0217ed80
 data_ov61_0217ed80:
 	.space 0x4
+	.global data_ov61_0217ed84
 data_ov61_0217ed84:
 	.space 0x4
+	.global data_ov61_0217ed88
 data_ov61_0217ed88:
 	.space 0x4
+	.global data_ov61_0217ed8c
 data_ov61_0217ed8c:
 	.space 0x4
+	.global data_ov61_0217ed90
 data_ov61_0217ed90:
 	.space 0x4
+	.global data_ov61_0217ed94
 data_ov61_0217ed94:
 	.space 0x4
+	.global data_ov61_0217ed98
 data_ov61_0217ed98:
 	.space 0x4
+	.global data_ov61_0217ed9c
 data_ov61_0217ed9c:
 	.space 0x4
+	.global data_ov61_0217eda0
 data_ov61_0217eda0:
 	.space 0x4
+	.global data_ov61_0217eda4
 data_ov61_0217eda4:
 	.space 0x4
+	.global data_ov61_0217eda8
 data_ov61_0217eda8:
 	.space 0x4
+	.global data_ov61_0217edac
 data_ov61_0217edac:
 	.space 0x4
+	.global data_ov61_0217edb0
 data_ov61_0217edb0:
 	.space 0x4
+	.global data_ov61_0217edb4
 data_ov61_0217edb4:
 	.space 0x4
+	.global data_ov61_0217edb8
 data_ov61_0217edb8:
 	.space 0x4
+	.global data_ov61_0217edbc
 data_ov61_0217edbc:
 	.space 0x4
+	.global data_ov61_0217edc0
 data_ov61_0217edc0:
 	.space 0x4
+	.global data_ov61_0217edc4
 data_ov61_0217edc4:
 	.space 0x4
+	.global data_ov61_0217edc8
 data_ov61_0217edc8:
 	.space 0x4
+	.global data_ov61_0217edcc
 data_ov61_0217edcc:
 	.space 0x4
+	.global data_ov61_0217edd0
 data_ov61_0217edd0:
 	.space 0x4
+	.global data_ov61_0217edd4
 data_ov61_0217edd4:
 	.space 0x4
+	.global data_ov61_0217edd8
 data_ov61_0217edd8:
 	.space 0x4
+	.global data_ov61_0217eddc
 data_ov61_0217eddc:
 	.space 0x4
+	.global data_ov61_0217ede0
 data_ov61_0217ede0:
 	.space 0x4
+	.global data_ov61_0217ede4
 data_ov61_0217ede4:
 	.space 0x4
+	.global data_ov61_0217ede8
 data_ov61_0217ede8:
 	.space 0x4
+	.global data_ov61_0217edec
 data_ov61_0217edec:
 	.space 0x4
+	.global data_ov61_0217edf0
 data_ov61_0217edf0:
 	.space 0x4
+	.global data_ov61_0217edf4
 data_ov61_0217edf4:
 	.space 0x4
+	.global data_ov61_0217edf8
 data_ov61_0217edf8:
 	.space 0x4
+	.global data_ov61_0217edfc
 data_ov61_0217edfc:
 	.space 0x4
+	.global data_ov61_0217ee00
 data_ov61_0217ee00:
 	.space 0x4
+	.global data_ov61_0217ee04
 data_ov61_0217ee04:
 	.space 0x4
+	.global data_ov61_0217ee08
 data_ov61_0217ee08:
 	.space 0x4
+	.global data_ov61_0217ee0c
 data_ov61_0217ee0c:
 	.space 0x4
+	.global data_ov61_0217ee10
 data_ov61_0217ee10:
 	.space 0x4
+	.global data_ov61_0217ee14
 data_ov61_0217ee14:
 	.space 0x4
+	.global data_ov61_0217ee18
 data_ov61_0217ee18:
 	.space 0x4
+	.global data_ov61_0217ee1c
 data_ov61_0217ee1c:
 	.space 0x4
+	.global data_ov61_0217ee20
 data_ov61_0217ee20:
 	.space 0x4
+	.global data_ov61_0217ee24
 data_ov61_0217ee24:
 	.space 0x4
+	.global data_ov61_0217ee28
 data_ov61_0217ee28:
 	.space 0x4
+	.global data_ov61_0217ee2c
 data_ov61_0217ee2c:
 	.space 0x4
+	.global data_ov61_0217ee30
 data_ov61_0217ee30:
 	.space 0x4
+	.global data_ov61_0217ee34
 data_ov61_0217ee34:
 	.space 0x4
+	.global data_ov61_0217ee38
 data_ov61_0217ee38:
 	.space 0x4
+	.global data_ov61_0217ee3c
 data_ov61_0217ee3c:
 	.space 0x4
+	.global data_ov61_0217ee40
 data_ov61_0217ee40:
 	.space 0x4
+	.global data_ov61_0217ee44
 data_ov61_0217ee44:
 	.space 0x4
+	.global data_ov61_0217ee48
 data_ov61_0217ee48:
 	.space 0x4
+	.global data_ov61_0217ee4c
 data_ov61_0217ee4c:
 	.space 0x4
+	.global data_ov61_0217ee50
 data_ov61_0217ee50:
 	.space 0x4
+	.global data_ov61_0217ee54
 data_ov61_0217ee54:
 	.space 0x4
+	.global data_ov61_0217ee58
 data_ov61_0217ee58:
 	.space 0x4
+	.global data_ov61_0217ee5c
 data_ov61_0217ee5c:
 	.space 0x4
+	.global data_ov61_0217ee60
 data_ov61_0217ee60:
 	.space 0x4
+	.global data_ov61_0217ee64
 data_ov61_0217ee64:
 	.space 0x4
+	.global data_ov61_0217ee68
 data_ov61_0217ee68:
 	.space 0x4
+	.global data_ov61_0217ee6c
 data_ov61_0217ee6c:
 	.space 0x4
+	.global data_ov61_0217ee70
 data_ov61_0217ee70:
 	.space 0x4
+	.global data_ov61_0217ee74
 data_ov61_0217ee74:
 	.space 0x4
+	.global data_ov61_0217ee78
 data_ov61_0217ee78:
 	.space 0x4
+	.global data_ov61_0217ee7c
 data_ov61_0217ee7c:
 	.space 0x4
+	.global data_ov61_0217ee80
 data_ov61_0217ee80:
 	.space 0x4
+	.global data_ov61_0217ee84
 data_ov61_0217ee84:
 	.space 0x4
+	.global data_ov61_0217ee88
 data_ov61_0217ee88:
 	.space 0x4
+	.global data_ov61_0217ee8c
 data_ov61_0217ee8c:
 	.space 0x4
+	.global data_ov61_0217ee90
 data_ov61_0217ee90:
 	.space 0x4
+	.global data_ov61_0217ee94
 data_ov61_0217ee94:
 	.space 0x4
+	.global data_ov61_0217ee98
 data_ov61_0217ee98:
 	.space 0x4
+	.global data_ov61_0217ee9c
 data_ov61_0217ee9c:
 	.space 0x4
+	.global data_ov61_0217eea0
 data_ov61_0217eea0:
 	.space 0x4
+	.global data_ov61_0217eea4
 data_ov61_0217eea4:
 	.space 0x4
+	.global data_ov61_0217eea8
 data_ov61_0217eea8:
 	.space 0x4
+	.global data_ov61_0217eeac
 data_ov61_0217eeac:
 	.space 0x4
+	.global data_ov61_0217eeb0
 data_ov61_0217eeb0:
 	.space 0x4
+	.global data_ov61_0217eeb4
 data_ov61_0217eeb4:
 	.space 0x4
+	.global data_ov61_0217eeb8
 data_ov61_0217eeb8:
 	.space 0x4
+	.global data_ov61_0217eebc
 data_ov61_0217eebc:
 	.space 0x4
+	.global data_ov61_0217eec0
 data_ov61_0217eec0:
 	.space 0x4
+	.global data_ov61_0217eec4
 data_ov61_0217eec4:
 	.space 0x4
+	.global data_ov61_0217eec8
 data_ov61_0217eec8:
 	.space 0x4
+	.global data_ov61_0217eecc
 data_ov61_0217eecc:
 	.space 0x4
+	.global data_ov61_0217eed0
 data_ov61_0217eed0:
 	.space 0x4
+	.global data_ov61_0217eed4
 data_ov61_0217eed4:
 	.space 0x4
+	.global data_ov61_0217eed8
 data_ov61_0217eed8:
 	.space 0x4
+	.global data_ov61_0217eedc
 data_ov61_0217eedc:
 	.space 0x4
+	.global data_ov61_0217eee0
 data_ov61_0217eee0:
 	.space 0x4
+	.global data_ov61_0217eee4
 data_ov61_0217eee4:
 	.space 0x4
+	.global data_ov61_0217eee8
 data_ov61_0217eee8:
 	.space 0x4
+	.global data_ov61_0217eeec
 data_ov61_0217eeec:
 	.space 0x4
+	.global data_ov61_0217eef0
 data_ov61_0217eef0:
 	.space 0x4
+	.global data_ov61_0217eef4
 data_ov61_0217eef4:
 	.space 0x4
+	.global data_ov61_0217eef8
 data_ov61_0217eef8:
 	.space 0x4
+	.global data_ov61_0217eefc
 data_ov61_0217eefc:
 	.space 0x4
+	.global data_ov61_0217ef00
 data_ov61_0217ef00:
 	.space 0x4
+	.global data_ov61_0217ef04
 data_ov61_0217ef04:
 	.space 0x4
+	.global data_ov61_0217ef08
 data_ov61_0217ef08:
 	.space 0x4
+	.global data_ov61_0217ef0c
 data_ov61_0217ef0c:
 	.space 0x4
+	.global data_ov61_0217ef10
 data_ov61_0217ef10:
 	.space 0x4
+	.global data_ov61_0217ef14
 data_ov61_0217ef14:
 	.space 0x4
+	.global data_ov61_0217ef18
 data_ov61_0217ef18:
 	.space 0x4
+	.global data_ov61_0217ef1c
 data_ov61_0217ef1c:
 	.space 0x4
+	.global data_ov61_0217ef20
 data_ov61_0217ef20:
 	.space 0x4
+	.global data_ov61_0217ef24
 data_ov61_0217ef24:
 	.space 0x4
+	.global data_ov61_0217ef28
 data_ov61_0217ef28:
 	.space 0x4
+	.global data_ov61_0217ef2c
 data_ov61_0217ef2c:
 	.space 0x4
+	.global data_ov61_0217ef30
 data_ov61_0217ef30:
 	.space 0x4
+	.global data_ov61_0217ef34
 data_ov61_0217ef34:
 	.space 0x4
+	.global data_ov61_0217ef38
 data_ov61_0217ef38:
 	.space 0x4
+	.global data_ov61_0217ef3c
 data_ov61_0217ef3c:
 	.space 0x4
+	.global data_ov61_0217ef40
 data_ov61_0217ef40:
 	.space 0x4
+	.global data_ov61_0217ef44
 data_ov61_0217ef44:
 	.space 0x4
+	.global data_ov61_0217ef48
 data_ov61_0217ef48:
 	.space 0x4
+	.global data_ov61_0217ef4c
 data_ov61_0217ef4c:
 	.space 0x4
+	.global data_ov61_0217ef50
 data_ov61_0217ef50:
 	.space 0x4
+	.global data_ov61_0217ef54
 data_ov61_0217ef54:
 	.space 0x4
+	.global data_ov61_0217ef58
 data_ov61_0217ef58:
 	.space 0x4
+	.global data_ov61_0217ef5c
 data_ov61_0217ef5c:
 	.space 0x4
+	.global data_ov61_0217ef60
 data_ov61_0217ef60:
 	.space 0x4
+	.global data_ov61_0217ef64
 data_ov61_0217ef64:
 	.space 0x4
+	.global data_ov61_0217ef68
 data_ov61_0217ef68:
 	.space 0x4
+	.global data_ov61_0217ef6c
 data_ov61_0217ef6c:
 	.space 0x4
+	.global data_ov61_0217ef70
 data_ov61_0217ef70:
 	.space 0x4
+	.global data_ov61_0217ef74
 data_ov61_0217ef74:
 	.space 0x4
+	.global data_ov61_0217ef78
 data_ov61_0217ef78:
 	.space 0x4
+	.global data_ov61_0217ef7c
 data_ov61_0217ef7c:
 	.space 0x4
+	.global data_ov61_0217ef80
 data_ov61_0217ef80:
 	.space 0x4
+	.global data_ov61_0217ef84
 data_ov61_0217ef84:
 	.space 0x4
+	.global data_ov61_0217ef88
 data_ov61_0217ef88:
 	.space 0x4
+	.global data_ov61_0217ef8c
 data_ov61_0217ef8c:
 	.space 0x4
+	.global data_ov61_0217ef90
 data_ov61_0217ef90:
 	.space 0x4
+	.global data_ov61_0217ef94
 data_ov61_0217ef94:
 	.space 0x4
+	.global data_ov61_0217ef98
 data_ov61_0217ef98:
 	.space 0x4
+	.global data_ov61_0217ef9c
 data_ov61_0217ef9c:
 	.space 0x4
+	.global data_ov61_0217efa0
 data_ov61_0217efa0:
 	.space 0x4
+	.global data_ov61_0217efa4
 data_ov61_0217efa4:
 	.space 0x4
+	.global data_ov61_0217efa8
 data_ov61_0217efa8:
 	.space 0x4
+	.global data_ov61_0217efac
 data_ov61_0217efac:
 	.space 0x4
+	.global data_ov61_0217efb0
 data_ov61_0217efb0:
 	.space 0x4
+	.global data_ov61_0217efb4
 data_ov61_0217efb4:
 	.space 0x4
+	.global data_ov61_0217efb8
 data_ov61_0217efb8:
 	.space 0x4
+	.global data_ov61_0217efbc
 data_ov61_0217efbc:
 	.space 0x4
+	.global data_ov61_0217efc0
 data_ov61_0217efc0:
 	.space 0x4
+	.global data_ov61_0217efc4
 data_ov61_0217efc4:
 	.space 0x4
+	.global data_ov61_0217efc8
 data_ov61_0217efc8:
 	.space 0x4
+	.global data_ov61_0217efcc
 data_ov61_0217efcc:
 	.space 0x4
+	.global data_ov61_0217efd0
 data_ov61_0217efd0:
 	.space 0x4
+	.global data_ov61_0217efd4
 data_ov61_0217efd4:
 	.space 0x4
+	.global data_ov61_0217efd8
 data_ov61_0217efd8:
 	.space 0x4
+	.global data_ov61_0217efdc
 data_ov61_0217efdc:
 	.space 0x4
+	.global data_ov61_0217efe0
 data_ov61_0217efe0:
 	.space 0x4
+	.global data_ov61_0217efe4
 data_ov61_0217efe4:
 	.space 0x4
+	.global data_ov61_0217efe8
 data_ov61_0217efe8:
 	.space 0x4
+	.global data_ov61_0217efec
 data_ov61_0217efec:
 	.space 0x4
+	.global data_ov61_0217eff0
 data_ov61_0217eff0:
 	.space 0x4
+	.global data_ov61_0217eff4
 data_ov61_0217eff4:
 	.space 0x4
+	.global data_ov61_0217eff8
 data_ov61_0217eff8:
 	.space 0x4
+	.global data_ov61_0217effc
 data_ov61_0217effc:
 	.space 0x4
+	.global data_ov61_0217f000
 data_ov61_0217f000:
 	.space 0x4
+	.global data_ov61_0217f004
 data_ov61_0217f004:
 	.space 0x4
+	.global data_ov61_0217f008
 data_ov61_0217f008:
 	.space 0x4
+	.global data_ov61_0217f00c
 data_ov61_0217f00c:
 	.space 0x4
+	.global data_ov61_0217f010
 data_ov61_0217f010:
 	.space 0x4
+	.global data_ov61_0217f014
 data_ov61_0217f014:
 	.space 0x4
+	.global data_ov61_0217f018
 data_ov61_0217f018:
 	.space 0x4
+	.global data_ov61_0217f01c
 data_ov61_0217f01c:
 	.space 0x4
+	.global data_ov61_0217f020
 data_ov61_0217f020:
 	.space 0x4
+	.global data_ov61_0217f024
 data_ov61_0217f024:
 	.space 0x4
+	.global data_ov61_0217f028
 data_ov61_0217f028:
 	.space 0x4
+	.global data_ov61_0217f02c
 data_ov61_0217f02c:
 	.space 0x4
+	.global data_ov61_0217f030
 data_ov61_0217f030:
 	.space 0x4
+	.global data_ov61_0217f034
 data_ov61_0217f034:
 	.space 0x4
+	.global data_ov61_0217f038
 data_ov61_0217f038:
 	.space 0x4
+	.global data_ov61_0217f03c
 data_ov61_0217f03c:
 	.space 0x4
+	.global data_ov61_0217f040
 data_ov61_0217f040:
 	.space 0x4
+	.global data_ov61_0217f044
 data_ov61_0217f044:
 	.space 0x4
+	.global data_ov61_0217f048
 data_ov61_0217f048:
 	.space 0x4
+	.global data_ov61_0217f04c
 data_ov61_0217f04c:
 	.space 0x4
+	.global data_ov61_0217f050
 data_ov61_0217f050:
 	.space 0x4
+	.global data_ov61_0217f054
 data_ov61_0217f054:
 	.space 0x4
+	.global data_ov61_0217f058
 data_ov61_0217f058:
 	.space 0x4
+	.global data_ov61_0217f05c
 data_ov61_0217f05c:
 	.space 0x4
+	.global data_ov61_0217f060
 data_ov61_0217f060:
 	.space 0x4
+	.global data_ov61_0217f064
 data_ov61_0217f064:
 	.space 0x4
+	.global data_ov61_0217f068
 data_ov61_0217f068:
 	.space 0x4
+	.global data_ov61_0217f06c
 data_ov61_0217f06c:
 	.space 0x4
+	.global data_ov61_0217f070
 data_ov61_0217f070:
 	.space 0x4
+	.global data_ov61_0217f074
 data_ov61_0217f074:
 	.space 0x4
+	.global data_ov61_0217f078
 data_ov61_0217f078:
 	.space 0x4
+	.global data_ov61_0217f07c
 data_ov61_0217f07c:
 	.space 0x4
+	.global data_ov61_0217f080
 data_ov61_0217f080:
 	.space 0x4
+	.global data_ov61_0217f084
 data_ov61_0217f084:
 	.space 0x4
+	.global data_ov61_0217f088
 data_ov61_0217f088:
 	.space 0x4
+	.global data_ov61_0217f08c
 data_ov61_0217f08c:
 	.space 0x4
+	.global data_ov61_0217f090
 data_ov61_0217f090:
 	.space 0x4
+	.global data_ov61_0217f094
 data_ov61_0217f094:
 	.space 0x4
+	.global data_ov61_0217f098
 data_ov61_0217f098:
 	.space 0x4
+	.global data_ov61_0217f09c
 data_ov61_0217f09c:
 	.space 0x4
+	.global data_ov61_0217f0a0
 data_ov61_0217f0a0:
 	.space 0x4
+	.global data_ov61_0217f0a4
 data_ov61_0217f0a4:
 	.space 0x4
+	.global data_ov61_0217f0a8
 data_ov61_0217f0a8:
 	.space 0x4
+	.global data_ov61_0217f0ac
 data_ov61_0217f0ac:
 	.space 0x4
+	.global data_ov61_0217f0b0
 data_ov61_0217f0b0:
 	.space 0x4
+	.global data_ov61_0217f0b4
 data_ov61_0217f0b4:
 	.space 0x4
+	.global data_ov61_0217f0b8
 data_ov61_0217f0b8:
 	.space 0x4
+	.global data_ov61_0217f0bc
 data_ov61_0217f0bc:
 	.space 0x4
+	.global data_ov61_0217f0c0
 data_ov61_0217f0c0:
 	.space 0x4
+	.global data_ov61_0217f0c4
 data_ov61_0217f0c4:
 	.space 0x4
+	.global data_ov61_0217f0c8
 data_ov61_0217f0c8:
 	.space 0x4
+	.global data_ov61_0217f0cc
 data_ov61_0217f0cc:
 	.space 0x4
+	.global data_ov61_0217f0d0
 data_ov61_0217f0d0:
 	.space 0x4
+	.global data_ov61_0217f0d4
 data_ov61_0217f0d4:
 	.space 0x4
+	.global data_ov61_0217f0d8
 data_ov61_0217f0d8:
 	.space 0x4
+	.global data_ov61_0217f0dc
 data_ov61_0217f0dc:
 	.space 0x4
+	.global data_ov61_0217f0e0
 data_ov61_0217f0e0:
 	.space 0x4
+	.global data_ov61_0217f0e4
 data_ov61_0217f0e4:
 	.space 0x4
+	.global data_ov61_0217f0e8
 data_ov61_0217f0e8:
 	.space 0x4
+	.global data_ov61_0217f0ec
 data_ov61_0217f0ec:
 	.space 0x4
+	.global data_ov61_0217f0f0
 data_ov61_0217f0f0:
 	.space 0x4
+	.global data_ov61_0217f0f4
 data_ov61_0217f0f4:
 	.space 0x4
+	.global data_ov61_0217f0f8
 data_ov61_0217f0f8:
 	.space 0x4
+	.global data_ov61_0217f0fc
 data_ov61_0217f0fc:
 	.space 0x4
+	.global data_ov61_0217f100
 data_ov61_0217f100:
 	.space 0x4
+	.global data_ov61_0217f104
 data_ov61_0217f104:
 	.space 0x4
+	.global data_ov61_0217f108
 data_ov61_0217f108:
 	.space 0x4
+	.global data_ov61_0217f10c
 data_ov61_0217f10c:
 	.space 0x4
+	.global data_ov61_0217f110
 data_ov61_0217f110:
 	.space 0x4
+	.global data_ov61_0217f114
 data_ov61_0217f114:
 	.space 0x4
+	.global data_ov61_0217f118
 data_ov61_0217f118:
 	.space 0x4
+	.global data_ov61_0217f11c
 data_ov61_0217f11c:
 	.space 0x4
+	.global data_ov61_0217f120
 data_ov61_0217f120:
 	.space 0x4
+	.global data_ov61_0217f124
 data_ov61_0217f124:
 	.space 0x4
+	.global data_ov61_0217f128
 data_ov61_0217f128:
 	.space 0x4
+	.global data_ov61_0217f12c
 data_ov61_0217f12c:
 	.space 0x4
+	.global data_ov61_0217f130
 data_ov61_0217f130:
 	.space 0x4
+	.global data_ov61_0217f134
 data_ov61_0217f134:
 	.space 0x4
+	.global data_ov61_0217f138
 data_ov61_0217f138:
 	.space 0x4
+	.global data_ov61_0217f13c
 data_ov61_0217f13c:
 	.space 0x4
+	.global data_ov61_0217f140
 data_ov61_0217f140:
 	.space 0x4
+	.global data_ov61_0217f144
 data_ov61_0217f144:
 	.space 0x4
+	.global data_ov61_0217f148
 data_ov61_0217f148:
 	.space 0x4
+	.global data_ov61_0217f14c
 data_ov61_0217f14c:
 	.space 0x4
+	.global data_ov61_0217f150
 data_ov61_0217f150:
 	.space 0x4
+	.global data_ov61_0217f154
 data_ov61_0217f154:
 	.space 0x4
+	.global data_ov61_0217f158
 data_ov61_0217f158:
 	.space 0x4
+	.global data_ov61_0217f15c
 data_ov61_0217f15c:
 	.space 0x4
+	.global data_ov61_0217f160
 data_ov61_0217f160:
 	.space 0x4
+	.global data_ov61_0217f164
 data_ov61_0217f164:
 	.space 0x4
+	.global data_ov61_0217f168
 data_ov61_0217f168:
 	.space 0x4
+	.global data_ov61_0217f16c
 data_ov61_0217f16c:
 	.space 0x4
+	.global data_ov61_0217f170
 data_ov61_0217f170:
 	.space 0x4
+	.global data_ov61_0217f174
 data_ov61_0217f174:
 	.space 0x4
+	.global data_ov61_0217f178
 data_ov61_0217f178:
 	.space 0x4
+	.global data_ov61_0217f17c
 data_ov61_0217f17c:
 	.space 0x4
+	.global data_ov61_0217f180
 data_ov61_0217f180:
 	.space 0x4
+	.global data_ov61_0217f184
 data_ov61_0217f184:
 	.space 0x4
+	.global data_ov61_0217f188
 data_ov61_0217f188:
 	.space 0x4
+	.global data_ov61_0217f18c
 data_ov61_0217f18c:
 	.space 0x4
+	.global data_ov61_0217f190
 data_ov61_0217f190:
 	.space 0x4
+	.global data_ov61_0217f194
 data_ov61_0217f194:
 	.space 0x4
+	.global data_ov61_0217f198
 data_ov61_0217f198:
 	.space 0x4
+	.global data_ov61_0217f19c
 data_ov61_0217f19c:
 	.space 0x4
+	.global data_ov61_0217f1a0
 data_ov61_0217f1a0:
 	.space 0x4
+	.global data_ov61_0217f1a4
 data_ov61_0217f1a4:
 	.space 0x4
+	.global data_ov61_0217f1a8
 data_ov61_0217f1a8:
 	.space 0x4
+	.global data_ov61_0217f1ac
 data_ov61_0217f1ac:
 	.space 0x4
+	.global data_ov61_0217f1b0
 data_ov61_0217f1b0:
 	.space 0x4
+	.global data_ov61_0217f1b4
 data_ov61_0217f1b4:
 	.space 0x4
+	.global data_ov61_0217f1b8
 data_ov61_0217f1b8:
 	.space 0x4
+	.global data_ov61_0217f1bc
 data_ov61_0217f1bc:
 	.space 0x4
+	.global data_ov61_0217f1c0
 data_ov61_0217f1c0:
 	.space 0x4
+	.global data_ov61_0217f1c4
 data_ov61_0217f1c4:
 	.space 0x4
+	.global data_ov61_0217f1c8
 data_ov61_0217f1c8:
 	.space 0x4
+	.global data_ov61_0217f1cc
 data_ov61_0217f1cc:
 	.space 0x4
+	.global data_ov61_0217f1d0
 data_ov61_0217f1d0:
 	.space 0x4
+	.global data_ov61_0217f1d4
 data_ov61_0217f1d4:
 	.space 0x4
+	.global data_ov61_0217f1d8
 data_ov61_0217f1d8:
 	.space 0x4
+	.global data_ov61_0217f1dc
 data_ov61_0217f1dc:
 	.space 0x4
+	.global data_ov61_0217f1e0
 data_ov61_0217f1e0:
 	.space 0x4
+	.global data_ov61_0217f1e4
 data_ov61_0217f1e4:
 	.space 0x4
+	.global data_ov61_0217f1e8
 data_ov61_0217f1e8:
 	.space 0x4
+	.global data_ov61_0217f1ec
 data_ov61_0217f1ec:
 	.space 0x4
+	.global data_ov61_0217f1f0
 data_ov61_0217f1f0:
 	.space 0x4
+	.global data_ov61_0217f1f4
 data_ov61_0217f1f4:
 	.space 0x4
+	.global data_ov61_0217f1f8
 data_ov61_0217f1f8:
 	.space 0x4
+	.global data_ov61_0217f1fc
 data_ov61_0217f1fc:
 	.space 0x4
+	.global data_ov61_0217f200
 data_ov61_0217f200:
 	.space 0x4
+	.global data_ov61_0217f204
 data_ov61_0217f204:
 	.space 0x4
+	.global data_ov61_0217f208
 data_ov61_0217f208:
 	.space 0x4
+	.global data_ov61_0217f20c
 data_ov61_0217f20c:
 	.space 0x4
+	.global data_ov61_0217f210
 data_ov61_0217f210:
 	.space 0x4
+	.global data_ov61_0217f214
 data_ov61_0217f214:
 	.space 0x4
+	.global data_ov61_0217f218
 data_ov61_0217f218:
 	.space 0x4
+	.global data_ov61_0217f21c
 data_ov61_0217f21c:
 	.space 0x4
+	.global data_ov61_0217f220
 data_ov61_0217f220:
 	.space 0x4
+	.global data_ov61_0217f224
 data_ov61_0217f224:
 	.space 0x4
+	.global data_ov61_0217f228
 data_ov61_0217f228:
 	.space 0x4
+	.global data_ov61_0217f22c
 data_ov61_0217f22c:
 	.space 0x4
+	.global data_ov61_0217f230
 data_ov61_0217f230:
 	.space 0x4
+	.global data_ov61_0217f234
 data_ov61_0217f234:
 	.space 0x4
+	.global data_ov61_0217f238
 data_ov61_0217f238:
 	.space 0x4
+	.global data_ov61_0217f23c
 data_ov61_0217f23c:
 	.space 0x4
+	.global data_ov61_0217f240
 data_ov61_0217f240:
 	.space 0x4
+	.global data_ov61_0217f244
 data_ov61_0217f244:
 	.space 0x4
+	.global data_ov61_0217f248
 data_ov61_0217f248:
 	.space 0x4
+	.global data_ov61_0217f24c
 data_ov61_0217f24c:
 	.space 0x4
+	.global data_ov61_0217f250
 data_ov61_0217f250:
 	.space 0x4
+	.global data_ov61_0217f254
 data_ov61_0217f254:
 	.space 0x4
+	.global data_ov61_0217f258
 data_ov61_0217f258:
 	.space 0x4
+	.global data_ov61_0217f25c
 data_ov61_0217f25c:
 	.space 0x4
+	.global data_ov61_0217f260
 data_ov61_0217f260:
 	.space 0x4
+	.global data_ov61_0217f264
 data_ov61_0217f264:
 	.space 0x4
+	.global data_ov61_0217f268
 data_ov61_0217f268:
 	.space 0x4
+	.global data_ov61_0217f26c
 data_ov61_0217f26c:
 	.space 0x4
+	.global data_ov61_0217f270
 data_ov61_0217f270:
 	.space 0x4
+	.global data_ov61_0217f274
 data_ov61_0217f274:
 	.space 0x4
+	.global data_ov61_0217f278
 data_ov61_0217f278:
 	.space 0x4
+	.global data_ov61_0217f27c
 data_ov61_0217f27c:
 	.space 0x4
+	.global data_ov61_0217f280
 data_ov61_0217f280:
 	.space 0x4
+	.global data_ov61_0217f284
 data_ov61_0217f284:
 	.space 0x4
+	.global data_ov61_0217f288
 data_ov61_0217f288:
 	.space 0x4
+	.global data_ov61_0217f28c
 data_ov61_0217f28c:
 	.space 0x4
+	.global data_ov61_0217f290
 data_ov61_0217f290:
 	.space 0x4
+	.global data_ov61_0217f294
 data_ov61_0217f294:
 	.space 0x4
+	.global data_ov61_0217f298
 data_ov61_0217f298:
 	.space 0x4
+	.global data_ov61_0217f29c
 data_ov61_0217f29c:
 	.space 0x4
+	.global data_ov61_0217f2a0
 data_ov61_0217f2a0:
 	.space 0x4
+	.global data_ov61_0217f2a4
 data_ov61_0217f2a4:
 	.space 0x4
+	.global data_ov61_0217f2a8
 data_ov61_0217f2a8:
 	.space 0x4
+	.global data_ov61_0217f2ac
 data_ov61_0217f2ac:
 	.space 0x4
+	.global data_ov61_0217f2b0
 data_ov61_0217f2b0:
 	.space 0x4
+	.global data_ov61_0217f2b4
 data_ov61_0217f2b4:
 	.space 0x4
+	.global data_ov61_0217f2b8
 data_ov61_0217f2b8:
 	.space 0x4
+	.global data_ov61_0217f2bc
 data_ov61_0217f2bc:
 	.space 0x4
+	.global data_ov61_0217f2c0
 data_ov61_0217f2c0:
 	.space 0x4
+	.global data_ov61_0217f2c4
 data_ov61_0217f2c4:
 	.space 0x4
+	.global data_ov61_0217f2c8
 data_ov61_0217f2c8:
 	.space 0x4
+	.global data_ov61_0217f2cc
 data_ov61_0217f2cc:
 	.space 0x4
+	.global data_ov61_0217f2d0
 data_ov61_0217f2d0:
 	.space 0x4
+	.global data_ov61_0217f2d4
 data_ov61_0217f2d4:
 	.space 0x4
+	.global data_ov61_0217f2d8
 data_ov61_0217f2d8:
 	.space 0x4
+	.global data_ov61_0217f2dc
 data_ov61_0217f2dc:
 	.space 0x4
+	.global data_ov61_0217f2e0
 data_ov61_0217f2e0:
 	.space 0x4
+	.global data_ov61_0217f2e4
 data_ov61_0217f2e4:
 	.space 0x4
+	.global data_ov61_0217f2e8
 data_ov61_0217f2e8:
 	.space 0x4
+	.global data_ov61_0217f2ec
 data_ov61_0217f2ec:
 	.space 0x4
+	.global data_ov61_0217f2f0
 data_ov61_0217f2f0:
 	.space 0x4
+	.global data_ov61_0217f2f4
 data_ov61_0217f2f4:
 	.space 0x4
+	.global data_ov61_0217f2f8
 data_ov61_0217f2f8:
 	.space 0x4
+	.global data_ov61_0217f2fc
 data_ov61_0217f2fc:
 	.space 0x4
+	.global data_ov61_0217f300
 data_ov61_0217f300:
 	.space 0x4
+	.global data_ov61_0217f304
 data_ov61_0217f304:
 	.space 0x4
+	.global data_ov61_0217f308
 data_ov61_0217f308:
 	.space 0x4
+	.global data_ov61_0217f30c
 data_ov61_0217f30c:
 	.space 0x4
+	.global data_ov61_0217f310
 data_ov61_0217f310:
 	.space 0x4
+	.global data_ov61_0217f314
 data_ov61_0217f314:
 	.space 0x4
+	.global data_ov61_0217f318
 data_ov61_0217f318:
 	.space 0x4
+	.global data_ov61_0217f31c
 data_ov61_0217f31c:
 	.space 0x4
+	.global data_ov61_0217f320
 data_ov61_0217f320:
 	.space 0x4
+	.global data_ov61_0217f324
 data_ov61_0217f324:
 	.space 0x4
+	.global data_ov61_0217f328
 data_ov61_0217f328:
 	.space 0x4
+	.global data_ov61_0217f32c
 data_ov61_0217f32c:
 	.space 0x4
+	.global data_ov61_0217f330
 data_ov61_0217f330:
 	.space 0x4
+	.global data_ov61_0217f334
 data_ov61_0217f334:
 	.space 0x4
+	.global data_ov61_0217f338
 data_ov61_0217f338:
 	.space 0x4
+	.global data_ov61_0217f33c
 data_ov61_0217f33c:
 	.space 0x4
+	.global data_ov61_0217f340
 data_ov61_0217f340:
 	.space 0x4
+	.global data_ov61_0217f344
 data_ov61_0217f344:
 	.space 0x4
+	.global data_ov61_0217f348
 data_ov61_0217f348:
 	.space 0x4
+	.global data_ov61_0217f34c
 data_ov61_0217f34c:
 	.space 0x4
+	.global data_ov61_0217f350
 data_ov61_0217f350:
 	.space 0x4
+	.global data_ov61_0217f354
 data_ov61_0217f354:
 	.space 0x4
+	.global data_ov61_0217f358
 data_ov61_0217f358:
 	.space 0x4
+	.global data_ov61_0217f35c
 data_ov61_0217f35c:
 	.space 0x4
+	.global data_ov61_0217f360
 data_ov61_0217f360:
 	.space 0x4
+	.global data_ov61_0217f364
 data_ov61_0217f364:
 	.space 0x4
+	.global data_ov61_0217f368
 data_ov61_0217f368:
 	.space 0x4
+	.global data_ov61_0217f36c
 data_ov61_0217f36c:
 	.space 0x4
+	.global data_ov61_0217f370
 data_ov61_0217f370:
 	.space 0x4
+	.global data_ov61_0217f374
 data_ov61_0217f374:
 	.space 0x4
+	.global data_ov61_0217f378
 data_ov61_0217f378:
 	.space 0x4
+	.global data_ov61_0217f37c
 data_ov61_0217f37c:
 	.space 0x4
+	.global data_ov61_0217f380
 data_ov61_0217f380:
 	.space 0x4
+	.global data_ov61_0217f384
 data_ov61_0217f384:
 	.space 0x4
+	.global data_ov61_0217f388
 data_ov61_0217f388:
 	.space 0x4
+	.global data_ov61_0217f38c
 data_ov61_0217f38c:
 	.space 0x4
+	.global data_ov61_0217f390
 data_ov61_0217f390:
 	.space 0x4
+	.global data_ov61_0217f394
 data_ov61_0217f394:
 	.space 0x4
+	.global data_ov61_0217f398
 data_ov61_0217f398:
 	.space 0x4
+	.global data_ov61_0217f39c
 data_ov61_0217f39c:
 	.space 0x4
+	.global data_ov61_0217f3a0
 data_ov61_0217f3a0:
 	.space 0x4
+	.global data_ov61_0217f3a4
 data_ov61_0217f3a4:
 	.space 0x4
+	.global data_ov61_0217f3a8
 data_ov61_0217f3a8:
 	.space 0x4
+	.global data_ov61_0217f3ac
 data_ov61_0217f3ac:
 	.space 0x4
+	.global data_ov61_0217f3b0
 data_ov61_0217f3b0:
 	.space 0x4
+	.global data_ov61_0217f3b4
 data_ov61_0217f3b4:
 	.space 0x4
+	.global data_ov61_0217f3b8
 data_ov61_0217f3b8:
 	.space 0x4
+	.global data_ov61_0217f3bc
 data_ov61_0217f3bc:
 	.space 0x4
+	.global data_ov61_0217f3c0
 data_ov61_0217f3c0:
 	.space 0x4
+	.global data_ov61_0217f3c4
 data_ov61_0217f3c4:
 	.space 0x4
+	.global data_ov61_0217f3c8
 data_ov61_0217f3c8:
 	.space 0x4
+	.global data_ov61_0217f3cc
 data_ov61_0217f3cc:
 	.space 0x4
+	.global data_ov61_0217f3d0
 data_ov61_0217f3d0:
 	.space 0x4
+	.global data_ov61_0217f3d4
 data_ov61_0217f3d4:
 	.space 0x4
+	.global data_ov61_0217f3d8
 data_ov61_0217f3d8:
 	.space 0x4
+	.global data_ov61_0217f3dc
 data_ov61_0217f3dc:
 	.space 0x4
+	.global data_ov61_0217f3e0
 data_ov61_0217f3e0:
 	.space 0x4
+	.global data_ov61_0217f3e4
 data_ov61_0217f3e4:
 	.space 0x4
+	.global data_ov61_0217f3e8
 data_ov61_0217f3e8:
 	.space 0x4
+	.global data_ov61_0217f3ec
 data_ov61_0217f3ec:
 	.space 0x4
+	.global data_ov61_0217f3f0
 data_ov61_0217f3f0:
 	.space 0x4
+	.global data_ov61_0217f3f4
 data_ov61_0217f3f4:
 	.space 0x4
+	.global data_ov61_0217f3f8
 data_ov61_0217f3f8:
 	.space 0x4
+	.global data_ov61_0217f3fc
 data_ov61_0217f3fc:
 	.space 0x4
+	.global data_ov61_0217f400
 data_ov61_0217f400:
 	.space 0x4
+	.global data_ov61_0217f404
 data_ov61_0217f404:
 	.space 0x4
+	.global data_ov61_0217f408
 data_ov61_0217f408:
 	.space 0x4
+	.global data_ov61_0217f40c
 data_ov61_0217f40c:
 	.space 0x4
+	.global data_ov61_0217f410
 data_ov61_0217f410:
 	.space 0x4
+	.global data_ov61_0217f414
 data_ov61_0217f414:
 	.space 0x1
+	.global data_ov61_0217f415
 data_ov61_0217f415:
 	.space 0x1
+	.global data_ov61_0217f416
 data_ov61_0217f416:
 	.space 0x2
+	.global data_ov61_0217f418
 data_ov61_0217f418:
 	.space 0x2
+	.global data_ov61_0217f41a
 data_ov61_0217f41a:
 	.space 0x2
+	.global data_ov61_0217f41c
 data_ov61_0217f41c:
 	.space 0x4
+	.global data_ov61_0217f420
 data_ov61_0217f420:
 	.space 0x4
+	.global data_ov61_0217f424
 data_ov61_0217f424:
 	.space 0x4
+	.global data_ov61_0217f428
 data_ov61_0217f428:
 	.space 0x4
+	.global data_ov61_0217f42c
 data_ov61_0217f42c:
 	.space 0x4
+	.global data_ov61_0217f430
 data_ov61_0217f430:
 	.space 0x4
+	.global data_ov61_0217f434
 data_ov61_0217f434:
 	.space 0x4
+	.global data_ov61_0217f438
 data_ov61_0217f438:
 	.space 0x4
+	.global data_ov61_0217f43c
 data_ov61_0217f43c:
 	.space 0x4
+	.global data_ov61_0217f440
 data_ov61_0217f440:
 	.space 0x4
+	.global data_ov61_0217f444
 data_ov61_0217f444:
 	.space 0x4
+	.global data_ov61_0217f448
 data_ov61_0217f448:
 	.space 0x4
+	.global data_ov61_0217f44c
 data_ov61_0217f44c:
 	.space 0x4
+	.global data_ov61_0217f450
 data_ov61_0217f450:
 	.space 0x4
+	.global data_ov61_0217f454
 data_ov61_0217f454:
 	.space 0x4
+	.global data_ov61_0217f458
 data_ov61_0217f458:
 	.space 0x4
+	.global data_ov61_0217f45c
 data_ov61_0217f45c:
 	.space 0x4
+	.global data_ov61_0217f460
 data_ov61_0217f460:
 	.space 0x4
+	.global data_ov61_0217f464
 data_ov61_0217f464:
 	.space 0x4
+	.global data_ov61_0217f468
 data_ov61_0217f468:
 	.space 0x4
+	.global data_ov61_0217f46c
 data_ov61_0217f46c:
 	.space 0x4
+	.global data_ov61_0217f470
 data_ov61_0217f470:
 	.space 0x4
+	.global data_ov61_0217f474
 data_ov61_0217f474:
 	.space 0x4
+	.global data_ov61_0217f478
 data_ov61_0217f478:
 	.space 0x4
+	.global data_ov61_0217f47c
 data_ov61_0217f47c:
 	.space 0x4
+	.global data_ov61_0217f480
 data_ov61_0217f480:
 	.space 0x4
+	.global data_ov61_0217f484
 data_ov61_0217f484:
 	.space 0x4
+	.global data_ov61_0217f488
 data_ov61_0217f488:
 	.space 0x4
+	.global data_ov61_0217f48c
 data_ov61_0217f48c:
 	.space 0x4
+	.global data_ov61_0217f490
 data_ov61_0217f490:
 	.space 0x4
+	.global data_ov61_0217f494
 data_ov61_0217f494:
 	.space 0x2
+	.global data_ov61_0217f496
 data_ov61_0217f496:
 	.space 0x2
+	.global data_ov61_0217f498
 data_ov61_0217f498:
 	.space 0x2
+	.global data_ov61_0217f49a
 data_ov61_0217f49a:
 	.space 0x2
+	.global data_ov61_0217f49c
 data_ov61_0217f49c:
 	.space 0x2
+	.global data_ov61_0217f49e
 data_ov61_0217f49e:
 	.space 0x2
+	.global data_ov61_0217f4a0
 data_ov61_0217f4a0:
 	.space 0x2
+	.global data_ov61_0217f4a2
 data_ov61_0217f4a2:
 	.space 0x2
+	.global data_ov61_0217f4a4
 data_ov61_0217f4a4:
 	.space 0x2
+	.global data_ov61_0217f4a6
 data_ov61_0217f4a6:
 	.space 0x2
+	.global data_ov61_0217f4a8
 data_ov61_0217f4a8:
 	.space 0x2
+	.global data_ov61_0217f4aa
 data_ov61_0217f4aa:
 	.space 0x2
+	.global data_ov61_0217f4ac
 data_ov61_0217f4ac:
 	.space 0x2
+	.global data_ov61_0217f4ae
 data_ov61_0217f4ae:
 	.space 0x2
+	.global data_ov61_0217f4b0
 data_ov61_0217f4b0:
 	.space 0x2
+	.global data_ov61_0217f4b2
 data_ov61_0217f4b2:
 	.space 0x2
+	.global data_ov61_0217f4b4
 data_ov61_0217f4b4:
 	.space 0x2
+	.global data_ov61_0217f4b6
 data_ov61_0217f4b6:
 	.space 0x2
+	.global data_ov61_0217f4b8
 data_ov61_0217f4b8:
 	.space 0x2
+	.global data_ov61_0217f4ba
 data_ov61_0217f4ba:
 	.space 0x2
+	.global data_ov61_0217f4bc
 data_ov61_0217f4bc:
 	.space 0x2
+	.global data_ov61_0217f4be
 data_ov61_0217f4be:
 	.space 0x2
+	.global data_ov61_0217f4c0
 data_ov61_0217f4c0:
 	.space 0x2
+	.global data_ov61_0217f4c2
 data_ov61_0217f4c2:
 	.space 0x2
+	.global data_ov61_0217f4c4
 data_ov61_0217f4c4:
 	.space 0x2
+	.global data_ov61_0217f4c6
 data_ov61_0217f4c6:
 	.space 0x2
+	.global data_ov61_0217f4c8
 data_ov61_0217f4c8:
 	.space 0x2
+	.global data_ov61_0217f4ca
 data_ov61_0217f4ca:
 	.space 0x2
+	.global data_ov61_0217f4cc
 data_ov61_0217f4cc:
 	.space 0x2
+	.global data_ov61_0217f4ce
 data_ov61_0217f4ce:
 	.space 0x2
+	.global data_ov61_0217f4d0
 data_ov61_0217f4d0:
 	.space 0x2
+	.global data_ov61_0217f4d2
 data_ov61_0217f4d2:
 	.space 0x2
+	.global data_ov61_0217f4d4
 data_ov61_0217f4d4:
 	.space 0x2
+	.global data_ov61_0217f4d6
 data_ov61_0217f4d6:
 	.space 0x2
+	.global data_ov61_0217f4d8
 data_ov61_0217f4d8:
 	.space 0x2
+	.global data_ov61_0217f4da
 data_ov61_0217f4da:
 	.space 0x2
+	.global data_ov61_0217f4dc
 data_ov61_0217f4dc:
 	.space 0x2
+	.global data_ov61_0217f4de
 data_ov61_0217f4de:
 	.space 0x2
+	.global data_ov61_0217f4e0
 data_ov61_0217f4e0:
 	.space 0x2
+	.global data_ov61_0217f4e2
 data_ov61_0217f4e2:
 	.space 0x2
+	.global data_ov61_0217f4e4
 data_ov61_0217f4e4:
 	.space 0x2
+	.global data_ov61_0217f4e6
 data_ov61_0217f4e6:
 	.space 0x2
+	.global data_ov61_0217f4e8
 data_ov61_0217f4e8:
 	.space 0x2
+	.global data_ov61_0217f4ea
 data_ov61_0217f4ea:
 	.space 0x2
+	.global data_ov61_0217f4ec
 data_ov61_0217f4ec:
 	.space 0x2
+	.global data_ov61_0217f4ee
 data_ov61_0217f4ee:
 	.space 0x2
+	.global data_ov61_0217f4f0
 data_ov61_0217f4f0:
 	.space 0x2
+	.global data_ov61_0217f4f2
 data_ov61_0217f4f2:
 	.space 0x2
+	.global data_ov61_0217f4f4
 data_ov61_0217f4f4:
 	.space 0x4
+	.global data_ov61_0217f4f8
 data_ov61_0217f4f8:
 	.space 0x4
+	.global data_ov61_0217f4fc
 data_ov61_0217f4fc:
 	.space 0x4
+	.global data_ov61_0217f500
 data_ov61_0217f500:
 	.space 0x4
+	.global data_ov61_0217f504
 data_ov61_0217f504:
 	.space 0x4
+	.global data_ov61_0217f508
 data_ov61_0217f508:
 	.space 0x4
+	.global data_ov61_0217f50c
 data_ov61_0217f50c:
 	.space 0x4
+	.global data_ov61_0217f510
 data_ov61_0217f510:
 	.space 0x4
+	.global data_ov61_0217f514
 data_ov61_0217f514:
 	.space 0x4
+	.global data_ov61_0217f518
 data_ov61_0217f518:
 	.space 0x4
+	.global data_ov61_0217f51c
 data_ov61_0217f51c:
 	.space 0x4
+	.global data_ov61_0217f520
 data_ov61_0217f520:
 	.space 0x4
+	.global data_ov61_0217f524
 data_ov61_0217f524:
 	.space 0x4
+	.global data_ov61_0217f528
 data_ov61_0217f528:
 	.space 0x4
+	.global data_ov61_0217f52c
 data_ov61_0217f52c:
 	.space 0x4
+	.global data_ov61_0217f530
 data_ov61_0217f530:
 	.space 0x4
+	.global data_ov61_0217f534
 data_ov61_0217f534:
 	.space 0x4
+	.global data_ov61_0217f538
 data_ov61_0217f538:
 	.space 0x4
+	.global data_ov61_0217f53c
 data_ov61_0217f53c:
 	.space 0x4
+	.global data_ov61_0217f540
 data_ov61_0217f540:
 	.space 0x4
+	.global data_ov61_0217f544
 data_ov61_0217f544:
 	.space 0x4
+	.global data_ov61_0217f548
 data_ov61_0217f548:
 	.space 0x4
+	.global data_ov61_0217f54c
 data_ov61_0217f54c:
 	.space 0x4
+	.global data_ov61_0217f550
 data_ov61_0217f550:
 	.space 0x4
+	.global data_ov61_0217f554
 data_ov61_0217f554:
 	.space 0x4
+	.global data_ov61_0217f558
 data_ov61_0217f558:
 	.space 0x2
+	.global data_ov61_0217f55a
 data_ov61_0217f55a:
 	.space 0x2
+	.global data_ov61_0217f55c
 data_ov61_0217f55c:
 	.space 0x2
+	.global data_ov61_0217f55e
 data_ov61_0217f55e:
 	.space 0x2
+	.global data_ov61_0217f560
 data_ov61_0217f560:
 	.space 0x2
+	.global data_ov61_0217f562
 data_ov61_0217f562:
 	.space 0x2
+	.global data_ov61_0217f564
 data_ov61_0217f564:
 	.space 0x2
+	.global data_ov61_0217f566
 data_ov61_0217f566:
 	.space 0x2
+	.global data_ov61_0217f568
 data_ov61_0217f568:
 	.space 0x2
+	.global data_ov61_0217f56a
 data_ov61_0217f56a:
 	.space 0x2
+	.global data_ov61_0217f56c
 data_ov61_0217f56c:
 	.space 0x2
+	.global data_ov61_0217f56e
 data_ov61_0217f56e:
 	.space 0x2
+	.global data_ov61_0217f570
 data_ov61_0217f570:
 	.space 0x4
+	.global data_ov61_0217f574
 data_ov61_0217f574:
 	.space 0x4
+	.global data_ov61_0217f578
 data_ov61_0217f578:
 	.space 0x4
+	.global data_ov61_0217f57c
 data_ov61_0217f57c:
 	.space 0x4
+	.global data_ov61_0217f580
 data_ov61_0217f580:
 	.space 0x4
+	.global data_ov61_0217f584
 data_ov61_0217f584:
 	.space 0x4
+	.global data_ov61_0217f588
 data_ov61_0217f588:
 	.space 0x4
+	.global data_ov61_0217f58c
 data_ov61_0217f58c:
 	.space 0x4
+	.global data_ov61_0217f590
 data_ov61_0217f590:
 	.space 0x4
+	.global data_ov61_0217f594
 data_ov61_0217f594:
 	.space 0x4
+	.global data_ov61_0217f598
 data_ov61_0217f598:
 	.space 0x4
+	.global data_ov61_0217f59c
 data_ov61_0217f59c:
 	.space 0x4
+	.global data_ov61_0217f5a0
 data_ov61_0217f5a0:
 	.space 0x4
+	.global data_ov61_0217f5a4
 data_ov61_0217f5a4:
 	.space 0x4
+	.global data_ov61_0217f5a8
 data_ov61_0217f5a8:
 	.space 0x4
+	.global data_ov61_0217f5ac
 data_ov61_0217f5ac:
 	.space 0x4
+	.global data_ov61_0217f5b0
 data_ov61_0217f5b0:
 	.space 0x4
+	.global data_ov61_0217f5b4
 data_ov61_0217f5b4:
 	.space 0x4
+	.global data_ov61_0217f5b8
 data_ov61_0217f5b8:
 	.space 0x4
+	.global data_ov61_0217f5bc
 data_ov61_0217f5bc:
 	.space 0x4
+	.global data_ov61_0217f5c0
 data_ov61_0217f5c0:
 	.space 0x4
+	.global data_ov61_0217f5c4
 data_ov61_0217f5c4:
 	.space 0x4
+	.global data_ov61_0217f5c8
 data_ov61_0217f5c8:
 	.space 0x4
+	.global data_ov61_0217f5cc
 data_ov61_0217f5cc:
 	.space 0x4
+	.global data_ov61_0217f5d0
 data_ov61_0217f5d0:
 	.space 0x4
+	.global data_ov61_0217f5d4
 data_ov61_0217f5d4:
 	.space 0x4
+	.global data_ov61_0217f5d8
 data_ov61_0217f5d8:
 	.space 0x4
+	.global data_ov61_0217f5dc
 data_ov61_0217f5dc:
 	.space 0x4
+	.global data_ov61_0217f5e0
 data_ov61_0217f5e0:
 	.space 0x4
+	.global data_ov61_0217f5e4
 data_ov61_0217f5e4:
 	.space 0x4
+	.global data_ov61_0217f5e8
 data_ov61_0217f5e8:
 	.space 0x4
+	.global data_ov61_0217f5ec
 data_ov61_0217f5ec:
 	.space 0x4
+	.global data_ov61_0217f5f0
 data_ov61_0217f5f0:
 	.space 0x4
+	.global data_ov61_0217f5f4
 data_ov61_0217f5f4:
 	.space 0x4
+	.global data_ov61_0217f5f8
 data_ov61_0217f5f8:
 	.space 0x4
+	.global data_ov61_0217f5fc
 data_ov61_0217f5fc:
 	.space 0x4
+	.global data_ov61_0217f600
 data_ov61_0217f600:
 	.space 0x4
+	.global data_ov61_0217f604
 data_ov61_0217f604:
 	.space 0x4
+	.global data_ov61_0217f608
 data_ov61_0217f608:
 	.space 0x4
+	.global data_ov61_0217f60c
 data_ov61_0217f60c:
 	.space 0x4
+	.global data_ov61_0217f610
 data_ov61_0217f610:
 	.space 0x4
+	.global data_ov61_0217f614
 data_ov61_0217f614:
 	.space 0x4
+	.global data_ov61_0217f618
 data_ov61_0217f618:
 	.space 0x4
+	.global data_ov61_0217f61c
 data_ov61_0217f61c:
 	.space 0x4
+	.global data_ov61_0217f620
 data_ov61_0217f620:
 	.space 0x4
+	.global data_ov61_0217f624
 data_ov61_0217f624:
 	.space 0x4
+	.global data_ov61_0217f628
 data_ov61_0217f628:
 	.space 0x4
+	.global data_ov61_0217f62c
 data_ov61_0217f62c:
 	.space 0x4
+	.global data_ov61_0217f630
 data_ov61_0217f630:
 	.space 0x4
+	.global data_ov61_0217f634
 data_ov61_0217f634:
 	.space 0x4
+	.global data_ov61_0217f638
 data_ov61_0217f638:
 	.space 0x4
+	.global data_ov61_0217f63c
 data_ov61_0217f63c:
 	.space 0x4
+	.global data_ov61_0217f640
 data_ov61_0217f640:
 	.space 0x4
+	.global data_ov61_0217f644
 data_ov61_0217f644:
 	.space 0x4
+	.global data_ov61_0217f648
 data_ov61_0217f648:
 	.space 0x4
+	.global data_ov61_0217f64c
 data_ov61_0217f64c:
 	.space 0x4
+	.global data_ov61_0217f650
 data_ov61_0217f650:
 	.space 0x4
+	.global data_ov61_0217f654
 data_ov61_0217f654:
 	.space 0x4
+	.global data_ov61_0217f658
 data_ov61_0217f658:
 	.space 0x4
+	.global data_ov61_0217f65c
 data_ov61_0217f65c:
 	.space 0x4
+	.global data_ov61_0217f660
 data_ov61_0217f660:
 	.space 0x4
+	.global data_ov61_0217f664
 data_ov61_0217f664:
 	.space 0x4
+	.global data_ov61_0217f668
 data_ov61_0217f668:
 	.space 0x4
+	.global data_ov61_0217f66c
 data_ov61_0217f66c:
 	.space 0x4
+	.global data_ov61_0217f670
 data_ov61_0217f670:
 	.space 0x4
+	.global data_ov61_0217f674
 data_ov61_0217f674:
 	.space 0x4
+	.global data_ov61_0217f678
 data_ov61_0217f678:
 	.space 0x4
+	.global data_ov61_0217f67c
 data_ov61_0217f67c:
 	.space 0x4
+	.global data_ov61_0217f680
 data_ov61_0217f680:
 	.space 0x4
+	.global data_ov61_0217f684
 data_ov61_0217f684:
 	.space 0x4
+	.global data_ov61_0217f688
 data_ov61_0217f688:
 	.space 0x4
+	.global data_ov61_0217f68c
 data_ov61_0217f68c:
 	.space 0x4
+	.global data_ov61_0217f690
 data_ov61_0217f690:
 	.space 0x4
+	.global data_ov61_0217f694
 data_ov61_0217f694:
 	.space 0x4
+	.global data_ov61_0217f698
 data_ov61_0217f698:
 	.space 0x4
+	.global data_ov61_0217f69c
 data_ov61_0217f69c:
 	.space 0x4
+	.global data_ov61_0217f6a0
 data_ov61_0217f6a0:
 	.space 0x4
+	.global data_ov61_0217f6a4
 data_ov61_0217f6a4:
 	.space 0x4
+	.global data_ov61_0217f6a8
 data_ov61_0217f6a8:
 	.space 0x4
+	.global data_ov61_0217f6ac
 data_ov61_0217f6ac:
 	.space 0x4
+	.global data_ov61_0217f6b0
 data_ov61_0217f6b0:
 	.space 0x4
+	.global data_ov61_0217f6b4
 data_ov61_0217f6b4:
 	.space 0x4
+	.global data_ov61_0217f6b8
 data_ov61_0217f6b8:
 	.space 0x4
+	.global data_ov61_0217f6bc
 data_ov61_0217f6bc:
 	.space 0x4
+	.global data_ov61_0217f6c0
 data_ov61_0217f6c0:
 	.space 0x4
+	.global data_ov61_0217f6c4
 data_ov61_0217f6c4:
 	.space 0x4
+	.global data_ov61_0217f6c8
 data_ov61_0217f6c8:
 	.space 0x4
+	.global data_ov61_0217f6cc
 data_ov61_0217f6cc:
 	.space 0x4
+	.global data_ov61_0217f6d0
 data_ov61_0217f6d0:
 	.space 0x4
+	.global data_ov61_0217f6d4
 data_ov61_0217f6d4:
 	.space 0x4
+	.global data_ov61_0217f6d8
 data_ov61_0217f6d8:
 	.space 0x4
+	.global data_ov61_0217f6dc
 data_ov61_0217f6dc:
 	.space 0x4
+	.global data_ov61_0217f6e0
 data_ov61_0217f6e0:
 	.space 0x4
+	.global data_ov61_0217f6e4
 data_ov61_0217f6e4:
 	.space 0x4
+	.global data_ov61_0217f6e8
 data_ov61_0217f6e8:
 	.space 0x4
+	.global data_ov61_0217f6ec
 data_ov61_0217f6ec:
 	.space 0x4
+	.global data_ov61_0217f6f0
 data_ov61_0217f6f0:
 	.space 0x4
+	.global data_ov61_0217f6f4
 data_ov61_0217f6f4:
 	.space 0x4
+	.global data_ov61_0217f6f8
 data_ov61_0217f6f8:
 	.space 0x4
+	.global data_ov61_0217f6fc
 data_ov61_0217f6fc:
 	.space 0x4
+	.global data_ov61_0217f700
 data_ov61_0217f700:
 	.space 0x4
+	.global data_ov61_0217f704
 data_ov61_0217f704:
 	.space 0x4
+	.global data_ov61_0217f708
 data_ov61_0217f708:
 	.space 0x4
+	.global data_ov61_0217f70c
 data_ov61_0217f70c:
 	.space 0x4
+	.global data_ov61_0217f710
 data_ov61_0217f710:
 	.space 0x4
+	.global data_ov61_0217f714
 data_ov61_0217f714:
 	.space 0x4
+	.global data_ov61_0217f718
 data_ov61_0217f718:
 	.space 0x4
+	.global data_ov61_0217f71c
 data_ov61_0217f71c:
 	.space 0x4
+	.global data_ov61_0217f720
 data_ov61_0217f720:
 	.space 0x4
+	.global data_ov61_0217f724
 data_ov61_0217f724:
 	.space 0x4
+	.global data_ov61_0217f728
 data_ov61_0217f728:
 	.space 0x4
+	.global data_ov61_0217f72c
 data_ov61_0217f72c:
 	.space 0x4
+	.global data_ov61_0217f730
 data_ov61_0217f730:
 	.space 0x4
+	.global data_ov61_0217f734
 data_ov61_0217f734:
 	.space 0x4
+	.global data_ov61_0217f738
 data_ov61_0217f738:
 	.space 0x4
+	.global data_ov61_0217f73c
 data_ov61_0217f73c:
 	.space 0x4
+	.global data_ov61_0217f740
 data_ov61_0217f740:
 	.space 0x4
+	.global data_ov61_0217f744
 data_ov61_0217f744:
 	.space 0x4
+	.global data_ov61_0217f748
 data_ov61_0217f748:
 	.space 0x4
+	.global data_ov61_0217f74c
 data_ov61_0217f74c:
 	.space 0x4
+	.global data_ov61_0217f750
 data_ov61_0217f750:
 	.space 0x4
+	.global data_ov61_0217f754
 data_ov61_0217f754:
 	.space 0x4
+	.global data_ov61_0217f758
 data_ov61_0217f758:
 	.space 0x4
+	.global data_ov61_0217f75c
 data_ov61_0217f75c:
 	.space 0x4
+	.global data_ov61_0217f760
 data_ov61_0217f760:
 	.space 0x4
+	.global data_ov61_0217f764
 data_ov61_0217f764:
 	.space 0x4
+	.global data_ov61_0217f768
 data_ov61_0217f768:
 	.space 0x4
+	.global data_ov61_0217f76c
 data_ov61_0217f76c:
 	.space 0x4
+	.global data_ov61_0217f770
 data_ov61_0217f770:
 	.space 0x4
+	.global data_ov61_0217f774
 data_ov61_0217f774:
 	.space 0x4
+	.global data_ov61_0217f778
 data_ov61_0217f778:
 	.space 0x4
+	.global data_ov61_0217f77c
 data_ov61_0217f77c:
 	.space 0x4
+	.global data_ov61_0217f780
 data_ov61_0217f780:
 	.space 0x4
+	.global data_ov61_0217f784
 data_ov61_0217f784:
 	.space 0x4
+	.global data_ov61_0217f788
 data_ov61_0217f788:
 	.space 0x4
+	.global data_ov61_0217f78c
 data_ov61_0217f78c:
 	.space 0x4
+	.global data_ov61_0217f790
 data_ov61_0217f790:
 	.space 0x4
+	.global data_ov61_0217f794
 data_ov61_0217f794:
 	.space 0x4
+	.global data_ov61_0217f798
 data_ov61_0217f798:
 	.space 0x4
+	.global data_ov61_0217f79c
 data_ov61_0217f79c:
 	.space 0x4
+	.global data_ov61_0217f7a0
 data_ov61_0217f7a0:
 	.space 0x4
+	.global data_ov61_0217f7a4
 data_ov61_0217f7a4:
 	.space 0x4
+	.global data_ov61_0217f7a8
 data_ov61_0217f7a8:
 	.space 0x4
+	.global data_ov61_0217f7ac
 data_ov61_0217f7ac:
 	.space 0x4
+	.global data_ov61_0217f7b0
 data_ov61_0217f7b0:
 	.space 0x4
+	.global data_ov61_0217f7b4
 data_ov61_0217f7b4:
 	.space 0x4
+	.global data_ov61_0217f7b8
 data_ov61_0217f7b8:
 	.space 0x4
+	.global data_ov61_0217f7bc
 data_ov61_0217f7bc:
 	.space 0x4
+	.global data_ov61_0217f7c0
 data_ov61_0217f7c0:
 	.space 0x4
+	.global data_ov61_0217f7c4
 data_ov61_0217f7c4:
 	.space 0x4
+	.global data_ov61_0217f7c8
 data_ov61_0217f7c8:
 	.space 0x4
+	.global data_ov61_0217f7cc
 data_ov61_0217f7cc:
 	.space 0x4
+	.global data_ov61_0217f7d0
 data_ov61_0217f7d0:
 	.space 0x4
+	.global data_ov61_0217f7d4
 data_ov61_0217f7d4:
 	.space 0x4
+	.global data_ov61_0217f7d8
 data_ov61_0217f7d8:
 	.space 0x4
+	.global data_ov61_0217f7dc
 data_ov61_0217f7dc:
 	.space 0x4
+	.global data_ov61_0217f7e0
 data_ov61_0217f7e0:
 	.space 0x4
+	.global data_ov61_0217f7e4
 data_ov61_0217f7e4:
 	.space 0x4
+	.global data_ov61_0217f7e8
 data_ov61_0217f7e8:
 	.space 0x4
+	.global data_ov61_0217f7ec
 data_ov61_0217f7ec:
 	.space 0x4
+	.global data_ov61_0217f7f0
 data_ov61_0217f7f0:
 	.space 0x4
+	.global data_ov61_0217f7f4
 data_ov61_0217f7f4:
 	.space 0x4
+	.global data_ov61_0217f7f8
 data_ov61_0217f7f8:
 	.space 0x4
+	.global data_ov61_0217f7fc
 data_ov61_0217f7fc:
 	.space 0x4
+	.global data_ov61_0217f800
 data_ov61_0217f800:
 	.space 0x4
+	.global data_ov61_0217f804
 data_ov61_0217f804:
 	.space 0x4
+	.global data_ov61_0217f808
 data_ov61_0217f808:
 	.space 0x4
+	.global data_ov61_0217f80c
 data_ov61_0217f80c:
 	.space 0x4
+	.global data_ov61_0217f810
 data_ov61_0217f810:
 	.space 0x4
+	.global data_ov61_0217f814
 data_ov61_0217f814:
 	.space 0x4
+	.global data_ov61_0217f818
 data_ov61_0217f818:
 	.space 0x4
+	.global data_ov61_0217f81c
 data_ov61_0217f81c:
 	.space 0x4
+	.global data_ov61_0217f820
 data_ov61_0217f820:
 	.space 0x4
+	.global data_ov61_0217f824
 data_ov61_0217f824:
 	.space 0x4
+	.global data_ov61_0217f828
 data_ov61_0217f828:
 	.space 0x4
+	.global data_ov61_0217f82c
 data_ov61_0217f82c:
 	.space 0x4
+	.global data_ov61_0217f830
 data_ov61_0217f830:
 	.space 0x4
+	.global data_ov61_0217f834
 data_ov61_0217f834:
 	.space 0x4
+	.global data_ov61_0217f838
 data_ov61_0217f838:
 	.space 0x4
+	.global data_ov61_0217f83c
 data_ov61_0217f83c:
 	.space 0x4
+	.global data_ov61_0217f840
 data_ov61_0217f840:
 	.space 0x4
+	.global data_ov61_0217f844
 data_ov61_0217f844:
 	.space 0x4
+	.global data_ov61_0217f848
 data_ov61_0217f848:
 	.space 0x4
+	.global data_ov61_0217f84c
 data_ov61_0217f84c:
 	.space 0x4
+	.global data_ov61_0217f850
 data_ov61_0217f850:
 	.space 0x4
+	.global data_ov61_0217f854
 data_ov61_0217f854:
 	.space 0x4
+	.global data_ov61_0217f858
 data_ov61_0217f858:
 	.space 0x4
+	.global data_ov61_0217f85c
 data_ov61_0217f85c:
 	.space 0x4
+	.global data_ov61_0217f860
 data_ov61_0217f860:
 	.space 0x4
+	.global data_ov61_0217f864
 data_ov61_0217f864:
 	.space 0x4
+	.global data_ov61_0217f868
 data_ov61_0217f868:
 	.space 0x4
+	.global data_ov61_0217f86c
 data_ov61_0217f86c:
 	.space 0x4
+	.global data_ov61_0217f870
 data_ov61_0217f870:
 	.space 0x4
+	.global data_ov61_0217f874
 data_ov61_0217f874:
 	.space 0x4
+	.global data_ov61_0217f878
 data_ov61_0217f878:
 	.space 0x4
+	.global data_ov61_0217f87c
 data_ov61_0217f87c:
 	.space 0x4
+	.global data_ov61_0217f880
 data_ov61_0217f880:
 	.space 0x4
+	.global data_ov61_0217f884
 data_ov61_0217f884:
 	.space 0x4
+	.global data_ov61_0217f888
 data_ov61_0217f888:
 	.space 0x4
+	.global data_ov61_0217f88c
 data_ov61_0217f88c:
 	.space 0x4
+	.global data_ov61_0217f890
 data_ov61_0217f890:
 	.space 0x4
+	.global data_ov61_0217f894
 data_ov61_0217f894:
 	.space 0x4
+	.global data_ov61_0217f898
 data_ov61_0217f898:
 	.space 0x4
+	.global data_ov61_0217f89c
 data_ov61_0217f89c:
 	.space 0x4
+	.global data_ov61_0217f8a0
 data_ov61_0217f8a0:
 	.space 0x4
+	.global data_ov61_0217f8a4
 data_ov61_0217f8a4:
 	.space 0x4
+	.global data_ov61_0217f8a8
 data_ov61_0217f8a8:
 	.space 0x4
+	.global data_ov61_0217f8ac
 data_ov61_0217f8ac:
 	.space 0x4
+	.global data_ov61_0217f8b0
 data_ov61_0217f8b0:
 	.space 0x4
+	.global data_ov61_0217f8b4
 data_ov61_0217f8b4:
 	.space 0x4
+	.global data_ov61_0217f8b8
 data_ov61_0217f8b8:
 	.space 0x4
+	.global data_ov61_0217f8bc
 data_ov61_0217f8bc:
 	.space 0x4
+	.global data_ov61_0217f8c0
 data_ov61_0217f8c0:
 	.space 0x4
+	.global data_ov61_0217f8c4
 data_ov61_0217f8c4:
 	.space 0x4
+	.global data_ov61_0217f8c8
 data_ov61_0217f8c8:
 	.space 0x4
+	.global data_ov61_0217f8cc
 data_ov61_0217f8cc:
 	.space 0x4
+	.global data_ov61_0217f8d0
 data_ov61_0217f8d0:
 	.space 0x4
+	.global data_ov61_0217f8d4
 data_ov61_0217f8d4:
 	.space 0x4
+	.global data_ov61_0217f8d8
 data_ov61_0217f8d8:
 	.space 0x4
+	.global data_ov61_0217f8dc
 data_ov61_0217f8dc:
 	.space 0x4
+	.global data_ov61_0217f8e0
 data_ov61_0217f8e0:
 	.space 0x4
+	.global data_ov61_0217f8e4
 data_ov61_0217f8e4:
 	.space 0x4
+	.global data_ov61_0217f8e8
 data_ov61_0217f8e8:
 	.space 0x4
+	.global data_ov61_0217f8ec
 data_ov61_0217f8ec:
 	.space 0x4
+	.global data_ov61_0217f8f0
 data_ov61_0217f8f0:
 	.space 0x4
+	.global data_ov61_0217f8f4
 data_ov61_0217f8f4:
 	.space 0x4
+	.global data_ov61_0217f8f8
 data_ov61_0217f8f8:
 	.space 0x4
+	.global data_ov61_0217f8fc
 data_ov61_0217f8fc:
 	.space 0x2
+	.global data_ov61_0217f8fe
 data_ov61_0217f8fe:
 	.space 0x2
+	.global data_ov61_0217f900
 data_ov61_0217f900:
 	.space 0x2
+	.global data_ov61_0217f902
 data_ov61_0217f902:
 	.space 0x2
+	.global data_ov61_0217f904
 data_ov61_0217f904:
 	.space 0x2
+	.global data_ov61_0217f906
 data_ov61_0217f906:
 	.space 0x2
+	.global data_ov61_0217f908
 data_ov61_0217f908:
 	.space 0x2
+	.global data_ov61_0217f90a
 data_ov61_0217f90a:
 	.space 0x2
+	.global data_ov61_0217f90c
 data_ov61_0217f90c:
 	.space 0x2
+	.global data_ov61_0217f90e
 data_ov61_0217f90e:
 	.space 0x2
+	.global data_ov61_0217f910
 data_ov61_0217f910:
 	.space 0x2
+	.global data_ov61_0217f912
 data_ov61_0217f912:
 	.space 0x2
+	.global data_ov61_0217f914
 data_ov61_0217f914:
 	.space 0x2
+	.global data_ov61_0217f916
 data_ov61_0217f916:
 	.space 0x2
+	.global data_ov61_0217f918
 data_ov61_0217f918:
 	.space 0x2
+	.global data_ov61_0217f91a
 data_ov61_0217f91a:
 	.space 0x2
+	.global data_ov61_0217f91c
 data_ov61_0217f91c:
 	.space 0x2
+	.global data_ov61_0217f91e
 data_ov61_0217f91e:
 	.space 0x2
+	.global data_ov61_0217f920
 data_ov61_0217f920:
 	.space 0x2
+	.global data_ov61_0217f922
 data_ov61_0217f922:
 	.space 0x2
+	.global data_ov61_0217f924
 data_ov61_0217f924:
 	.space 0x2
+	.global data_ov61_0217f926
 data_ov61_0217f926:
 	.space 0x2
+	.global data_ov61_0217f928
 data_ov61_0217f928:
 	.space 0x2
+	.global data_ov61_0217f92a
 data_ov61_0217f92a:
 	.space 0x2
+	.global data_ov61_0217f92c
 data_ov61_0217f92c:
 	.space 0x2
+	.global data_ov61_0217f92e
 data_ov61_0217f92e:
 	.space 0x2
+	.global data_ov61_0217f930
 data_ov61_0217f930:
 	.space 0x2
+	.global data_ov61_0217f932
 data_ov61_0217f932:
 	.space 0x2
+	.global data_ov61_0217f934
 data_ov61_0217f934:
 	.space 0x2
+	.global data_ov61_0217f936
 data_ov61_0217f936:
 	.space 0x2
+	.global data_ov61_0217f938
 data_ov61_0217f938:
 	.space 0x2
+	.global data_ov61_0217f93a
 data_ov61_0217f93a:
 	.space 0x2
+	.global data_ov61_0217f93c
 data_ov61_0217f93c:
 	.space 0x2
+	.global data_ov61_0217f93e
 data_ov61_0217f93e:
 	.space 0x2
+	.global data_ov61_0217f940
 data_ov61_0217f940:
 	.space 0x2
+	.global data_ov61_0217f942
 data_ov61_0217f942:
 	.space 0x2
+	.global data_ov61_0217f944
 data_ov61_0217f944:
 	.space 0x2
+	.global data_ov61_0217f946
 data_ov61_0217f946:
 	.space 0x2
+	.global data_ov61_0217f948
 data_ov61_0217f948:
 	.space 0x2
+	.global data_ov61_0217f94a
 data_ov61_0217f94a:
 	.space 0x2
+	.global data_ov61_0217f94c
 data_ov61_0217f94c:
 	.space 0x2
+	.global data_ov61_0217f94e
 data_ov61_0217f94e:
 	.space 0x2
+	.global data_ov61_0217f950
 data_ov61_0217f950:
 	.space 0x2
+	.global data_ov61_0217f952
 data_ov61_0217f952:
 	.space 0x2
+	.global data_ov61_0217f954
 data_ov61_0217f954:
 	.space 0x2
+	.global data_ov61_0217f956
 data_ov61_0217f956:
 	.space 0x2
+	.global data_ov61_0217f958
 data_ov61_0217f958:
 	.space 0x2
+	.global data_ov61_0217f95a
 data_ov61_0217f95a:
 	.space 0x2
+	.global data_ov61_0217f95c
 data_ov61_0217f95c:
 	.space 0x2
+	.global data_ov61_0217f95e
 data_ov61_0217f95e:
 	.space 0x2
+	.global data_ov61_0217f960
 data_ov61_0217f960:
 	.space 0x2
+	.global data_ov61_0217f962
 data_ov61_0217f962:
 	.space 0x2
+	.global data_ov61_0217f964
 data_ov61_0217f964:
 	.space 0x2
+	.global data_ov61_0217f966
 data_ov61_0217f966:
 	.space 0x2
+	.global data_ov61_0217f968
 data_ov61_0217f968:
 	.space 0x2
+	.global data_ov61_0217f96a
 data_ov61_0217f96a:
 	.space 0x2
+	.global data_ov61_0217f96c
 data_ov61_0217f96c:
 	.space 0x2
+	.global data_ov61_0217f96e
 data_ov61_0217f96e:
 	.space 0x2
+	.global data_ov61_0217f970
 data_ov61_0217f970:
 	.space 0x2
+	.global data_ov61_0217f972
 data_ov61_0217f972:
 	.space 0x2
+	.global data_ov61_0217f974
 data_ov61_0217f974:
 	.space 0x2
+	.global data_ov61_0217f976
 data_ov61_0217f976:
 	.space 0x2
+	.global data_ov61_0217f978
 data_ov61_0217f978:
 	.space 0x2
+	.global data_ov61_0217f97a
 data_ov61_0217f97a:
 	.space 0x2
+	.global data_ov61_0217f97c
 data_ov61_0217f97c:
 	.space 0x2
+	.global data_ov61_0217f97e
 data_ov61_0217f97e:
 	.space 0x2
+	.global data_ov61_0217f980
 data_ov61_0217f980:
 	.space 0x2
+	.global data_ov61_0217f982
 data_ov61_0217f982:
 	.space 0x2
+	.global data_ov61_0217f984
 data_ov61_0217f984:
 	.space 0x2
+	.global data_ov61_0217f986
 data_ov61_0217f986:
 	.space 0x2
+	.global data_ov61_0217f988
 data_ov61_0217f988:
 	.space 0x2
+	.global data_ov61_0217f98a
 data_ov61_0217f98a:
 	.space 0x2
+	.global data_ov61_0217f98c
 data_ov61_0217f98c:
 	.space 0x2
+	.global data_ov61_0217f98e
 data_ov61_0217f98e:
 	.space 0x2
+	.global data_ov61_0217f990
 data_ov61_0217f990:
 	.space 0x2
+	.global data_ov61_0217f992
 data_ov61_0217f992:
 	.space 0x2
+	.global data_ov61_0217f994
 data_ov61_0217f994:
 	.space 0x2
+	.global data_ov61_0217f996
 data_ov61_0217f996:
 	.space 0x2
+	.global data_ov61_0217f998
 data_ov61_0217f998:
 	.space 0x2
+	.global data_ov61_0217f99a
 data_ov61_0217f99a:
 	.space 0x2
+	.global data_ov61_0217f99c
 data_ov61_0217f99c:
 	.space 0x2
+	.global data_ov61_0217f99e
 data_ov61_0217f99e:
 	.space 0x2
+	.global data_ov61_0217f9a0
 data_ov61_0217f9a0:
 	.space 0x2
+	.global data_ov61_0217f9a2
 data_ov61_0217f9a2:
 	.space 0x2
+	.global data_ov61_0217f9a4
 data_ov61_0217f9a4:
 	.space 0x2
+	.global data_ov61_0217f9a6
 data_ov61_0217f9a6:
 	.space 0x2
+	.global data_ov61_0217f9a8
 data_ov61_0217f9a8:
 	.space 0x2
+	.global data_ov61_0217f9aa
 data_ov61_0217f9aa:
 	.space 0x2
+	.global data_ov61_0217f9ac
 data_ov61_0217f9ac:
 	.space 0x2
+	.global data_ov61_0217f9ae
 data_ov61_0217f9ae:
 	.space 0x2
+	.global data_ov61_0217f9b0
 data_ov61_0217f9b0:
 	.space 0x2
+	.global data_ov61_0217f9b2
 data_ov61_0217f9b2:
 	.space 0x2
+	.global data_ov61_0217f9b4
 data_ov61_0217f9b4:
 	.space 0x2
+	.global data_ov61_0217f9b6
 data_ov61_0217f9b6:
 	.space 0x2
+	.global data_ov61_0217f9b8
 data_ov61_0217f9b8:
 	.space 0x2
+	.global data_ov61_0217f9ba
 data_ov61_0217f9ba:
 	.space 0x2
+	.global data_ov61_0217f9bc
 data_ov61_0217f9bc:
 	.space 0x2
+	.global data_ov61_0217f9be
 data_ov61_0217f9be:
 	.space 0x2
+	.global data_ov61_0217f9c0
 data_ov61_0217f9c0:
 	.space 0x2
+	.global data_ov61_0217f9c2
 data_ov61_0217f9c2:
 	.space 0x2
+	.global data_ov61_0217f9c4
 data_ov61_0217f9c4:
 	.space 0x2
+	.global data_ov61_0217f9c6
 data_ov61_0217f9c6:
 	.space 0x2
+	.global data_ov61_0217f9c8
 data_ov61_0217f9c8:
 	.space 0x2
+	.global data_ov61_0217f9ca
 data_ov61_0217f9ca:
 	.space 0x2
+	.global data_ov61_0217f9cc
 data_ov61_0217f9cc:
 	.space 0x2
+	.global data_ov61_0217f9ce
 data_ov61_0217f9ce:
 	.space 0x2
+	.global data_ov61_0217f9d0
 data_ov61_0217f9d0:
 	.space 0x2
+	.global data_ov61_0217f9d2
 data_ov61_0217f9d2:
 	.space 0x2
+	.global data_ov61_0217f9d4
 data_ov61_0217f9d4:
 	.space 0x2
+	.global data_ov61_0217f9d6
 data_ov61_0217f9d6:
 	.space 0x2
+	.global data_ov61_0217f9d8
 data_ov61_0217f9d8:
 	.space 0x2
+	.global data_ov61_0217f9da
 data_ov61_0217f9da:
 	.space 0x2
+	.global data_ov61_0217f9dc
 data_ov61_0217f9dc:
 	.space 0x2
+	.global data_ov61_0217f9de
 data_ov61_0217f9de:
 	.space 0x2
+	.global data_ov61_0217f9e0
 data_ov61_0217f9e0:
 	.space 0x2
+	.global data_ov61_0217f9e2
 data_ov61_0217f9e2:
 	.space 0x2
+	.global data_ov61_0217f9e4
 data_ov61_0217f9e4:
 	.space 0x2
+	.global data_ov61_0217f9e6
 data_ov61_0217f9e6:
 	.space 0x2
+	.global data_ov61_0217f9e8
 data_ov61_0217f9e8:
 	.space 0x2
+	.global data_ov61_0217f9ea
 data_ov61_0217f9ea:
 	.space 0x2
+	.global data_ov61_0217f9ec
 data_ov61_0217f9ec:
 	.space 0x2
+	.global data_ov61_0217f9ee
 data_ov61_0217f9ee:
 	.space 0x2
+	.global data_ov61_0217f9f0
 data_ov61_0217f9f0:
 	.space 0x2
+	.global data_ov61_0217f9f2
 data_ov61_0217f9f2:
 	.space 0x2
+	.global data_ov61_0217f9f4
 data_ov61_0217f9f4:
 	.space 0x2
+	.global data_ov61_0217f9f6
 data_ov61_0217f9f6:
 	.space 0x2
+	.global data_ov61_0217f9f8
 data_ov61_0217f9f8:
 	.space 0x2
+	.global data_ov61_0217f9fa
 data_ov61_0217f9fa:
 	.space 0x2
+	.global data_ov61_0217f9fc
 data_ov61_0217f9fc:
 	.space 0x2
+	.global data_ov61_0217f9fe
 data_ov61_0217f9fe:
 	.space 0x2
+	.global data_ov61_0217fa00
 data_ov61_0217fa00:
 	.space 0x2
+	.global data_ov61_0217fa02
 data_ov61_0217fa02:
 	.space 0x2
+	.global data_ov61_0217fa04
 data_ov61_0217fa04:
 	.space 0x2
+	.global data_ov61_0217fa06
 data_ov61_0217fa06:
 	.space 0x2
+	.global data_ov61_0217fa08
 data_ov61_0217fa08:
 	.space 0x2
+	.global data_ov61_0217fa0a
 data_ov61_0217fa0a:
 	.space 0x2
+	.global data_ov61_0217fa0c
 data_ov61_0217fa0c:
 	.space 0x2
+	.global data_ov61_0217fa0e
 data_ov61_0217fa0e:
 	.space 0x2
+	.global data_ov61_0217fa10
 data_ov61_0217fa10:
 	.space 0x2
+	.global data_ov61_0217fa12
 data_ov61_0217fa12:
 	.space 0x2
+	.global data_ov61_0217fa14
 data_ov61_0217fa14:
 	.space 0x2
+	.global data_ov61_0217fa16
 data_ov61_0217fa16:
 	.space 0x2
+	.global data_ov61_0217fa18
 data_ov61_0217fa18:
 	.space 0x2
+	.global data_ov61_0217fa1a
 data_ov61_0217fa1a:
 	.space 0x2
+	.global data_ov61_0217fa1c
 data_ov61_0217fa1c:
 	.space 0x2
+	.global data_ov61_0217fa1e
 data_ov61_0217fa1e:
 	.space 0x2
+	.global data_ov61_0217fa20
 data_ov61_0217fa20:
 	.space 0x2
+	.global data_ov61_0217fa22
 data_ov61_0217fa22:
 	.space 0x2
+	.global data_ov61_0217fa24
 data_ov61_0217fa24:
 	.space 0x2
+	.global data_ov61_0217fa26
 data_ov61_0217fa26:
 	.space 0x2
+	.global data_ov61_0217fa28
 data_ov61_0217fa28:
 	.space 0x2
+	.global data_ov61_0217fa2a
 data_ov61_0217fa2a:
 	.space 0x2
+	.global data_ov61_0217fa2c
 data_ov61_0217fa2c:
 	.space 0x2
+	.global data_ov61_0217fa2e
 data_ov61_0217fa2e:
 	.space 0x2
+	.global data_ov61_0217fa30
 data_ov61_0217fa30:
 	.space 0x2
+	.global data_ov61_0217fa32
 data_ov61_0217fa32:
 	.space 0x2
+	.global data_ov61_0217fa34
 data_ov61_0217fa34:
 	.space 0x2
+	.global data_ov61_0217fa36
 data_ov61_0217fa36:
 	.space 0x2
+	.global data_ov61_0217fa38
 data_ov61_0217fa38:
 	.space 0x2
+	.global data_ov61_0217fa3a
 data_ov61_0217fa3a:
 	.space 0x2
+	.global data_ov61_0217fa3c
 data_ov61_0217fa3c:
 	.space 0x2
+	.global data_ov61_0217fa3e
 data_ov61_0217fa3e:
 	.space 0x2
+	.global data_ov61_0217fa40
 data_ov61_0217fa40:
 	.space 0x2
+	.global data_ov61_0217fa42
 data_ov61_0217fa42:
 	.space 0x2
+	.global data_ov61_0217fa44
 data_ov61_0217fa44:
 	.space 0x2
+	.global data_ov61_0217fa46
 data_ov61_0217fa46:
 	.space 0x2
+	.global data_ov61_0217fa48
 data_ov61_0217fa48:
 	.space 0x2
+	.global data_ov61_0217fa4a
 data_ov61_0217fa4a:
 	.space 0x2
+	.global data_ov61_0217fa4c
 data_ov61_0217fa4c:
 	.space 0x2
+	.global data_ov61_0217fa4e
 data_ov61_0217fa4e:
 	.space 0x2
+	.global data_ov61_0217fa50
 data_ov61_0217fa50:
 	.space 0x2
+	.global data_ov61_0217fa52
 data_ov61_0217fa52:
 	.space 0x2
+	.global data_ov61_0217fa54
 data_ov61_0217fa54:
 	.space 0x2
+	.global data_ov61_0217fa56
 data_ov61_0217fa56:
 	.space 0x2
+	.global data_ov61_0217fa58
 data_ov61_0217fa58:
 	.space 0x2
+	.global data_ov61_0217fa5a
 data_ov61_0217fa5a:
 	.space 0x2
+	.global data_ov61_0217fa5c
 data_ov61_0217fa5c:
 	.space 0x2
+	.global data_ov61_0217fa5e
 data_ov61_0217fa5e:
 	.space 0x2
+	.global data_ov61_0217fa60
 data_ov61_0217fa60:
 	.space 0x2
+	.global data_ov61_0217fa62
 data_ov61_0217fa62:
 	.space 0x2
+	.global data_ov61_0217fa64
 data_ov61_0217fa64:
 	.space 0x2
+	.global data_ov61_0217fa66
 data_ov61_0217fa66:
 	.space 0x2
+	.global data_ov61_0217fa68
 data_ov61_0217fa68:
 	.space 0x2
+	.global data_ov61_0217fa6a
 data_ov61_0217fa6a:
 	.space 0x2
+	.global data_ov61_0217fa6c
 data_ov61_0217fa6c:
 	.space 0x2
+	.global data_ov61_0217fa6e
 data_ov61_0217fa6e:
 	.space 0x2
+	.global data_ov61_0217fa70
 data_ov61_0217fa70:
 	.space 0x2
+	.global data_ov61_0217fa72
 data_ov61_0217fa72:
 	.space 0x2
+	.global data_ov61_0217fa74
 data_ov61_0217fa74:
 	.space 0x2
+	.global data_ov61_0217fa76
 data_ov61_0217fa76:
 	.space 0x2
+	.global data_ov61_0217fa78
 data_ov61_0217fa78:
 	.space 0x2
+	.global data_ov61_0217fa7a
 data_ov61_0217fa7a:
 	.space 0x2
+	.global data_ov61_0217fa7c
 data_ov61_0217fa7c:
 	.space 0x2
+	.global data_ov61_0217fa7e
 data_ov61_0217fa7e:
 	.space 0x2
+	.global data_ov61_0217fa80
 data_ov61_0217fa80:
 	.space 0x2
+	.global data_ov61_0217fa82
 data_ov61_0217fa82:
 	.space 0x2
+	.global data_ov61_0217fa84
 data_ov61_0217fa84:
 	.space 0x2
+	.global data_ov61_0217fa86
 data_ov61_0217fa86:
 	.space 0x2
+	.global data_ov61_0217fa88
 data_ov61_0217fa88:
 	.space 0x2
+	.global data_ov61_0217fa8a
 data_ov61_0217fa8a:
 	.space 0x2
+	.global data_ov61_0217fa8c
 data_ov61_0217fa8c:
 	.space 0x2
+	.global data_ov61_0217fa8e
 data_ov61_0217fa8e:
 	.space 0x2
+	.global data_ov61_0217fa90
 data_ov61_0217fa90:
 	.space 0x2
+	.global data_ov61_0217fa92
 data_ov61_0217fa92:
 	.space 0x2
+	.global data_ov61_0217fa94
 data_ov61_0217fa94:
 	.space 0x2
+	.global data_ov61_0217fa96
 data_ov61_0217fa96:
 	.space 0x2
+	.global data_ov61_0217fa98
 data_ov61_0217fa98:
 	.space 0x2
+	.global data_ov61_0217fa9a
 data_ov61_0217fa9a:
 	.space 0x2
+	.global data_ov61_0217fa9c
 data_ov61_0217fa9c:
 	.space 0x2
+	.global data_ov61_0217fa9e
 data_ov61_0217fa9e:
 	.space 0x2
+	.global data_ov61_0217faa0
 data_ov61_0217faa0:
 	.space 0x2
+	.global data_ov61_0217faa2
 data_ov61_0217faa2:
 	.space 0x2
+	.global data_ov61_0217faa4
 data_ov61_0217faa4:
 	.space 0x2
+	.global data_ov61_0217faa6
 data_ov61_0217faa6:
 	.space 0x2
+	.global data_ov61_0217faa8
 data_ov61_0217faa8:
 	.space 0x2
+	.global data_ov61_0217faaa
 data_ov61_0217faaa:
 	.space 0x2
+	.global data_ov61_0217faac
 data_ov61_0217faac:
 	.space 0x2
+	.global data_ov61_0217faae
 data_ov61_0217faae:
 	.space 0x2
+	.global data_ov61_0217fab0
 data_ov61_0217fab0:
 	.space 0x2
+	.global data_ov61_0217fab2
 data_ov61_0217fab2:
 	.space 0x2
+	.global data_ov61_0217fab4
 data_ov61_0217fab4:
 	.space 0x2
+	.global data_ov61_0217fab6
 data_ov61_0217fab6:
 	.space 0x2
+	.global data_ov61_0217fab8
 data_ov61_0217fab8:
 	.space 0x2
+	.global data_ov61_0217faba
 data_ov61_0217faba:
 	.space 0x2
+	.global data_ov61_0217fabc
 data_ov61_0217fabc:
 	.space 0x2
+	.global data_ov61_0217fabe
 data_ov61_0217fabe:
 	.space 0x2
+	.global data_ov61_0217fac0
 data_ov61_0217fac0:
 	.space 0x4
+	.global data_ov61_0217fac4
 data_ov61_0217fac4:
 	.space 0x4
+	.global data_ov61_0217fac8
 data_ov61_0217fac8:
 	.space 0x4
+	.global data_ov61_0217facc
 data_ov61_0217facc:
 	.space 0x4
+	.global data_ov61_0217fad0
 data_ov61_0217fad0:
 	.space 0x4
+	.global data_ov61_0217fad4
 data_ov61_0217fad4:
 	.space 0x4
+	.global data_ov61_0217fad8
 data_ov61_0217fad8:
 	.space 0x4
+	.global data_ov61_0217fadc
 data_ov61_0217fadc:
 	.space 0x4
+	.global data_ov61_0217fae0
 data_ov61_0217fae0:
 	.space 0x4
+	.global data_ov61_0217fae4
 data_ov61_0217fae4:
 	.space 0x4
+	.global data_ov61_0217fae8
 data_ov61_0217fae8:
 	.space 0x4
+	.global data_ov61_0217faec
 data_ov61_0217faec:
 	.space 0x4
+	.global data_ov61_0217faf0
 data_ov61_0217faf0:
 	.space 0x4
+	.global data_ov61_0217faf4
 data_ov61_0217faf4:
 	.space 0x4
+	.global data_ov61_0217faf8
 data_ov61_0217faf8:
 	.space 0x4
+	.global data_ov61_0217fafc
 data_ov61_0217fafc:
 	.space 0x4
+	.global data_ov61_0217fb00
 data_ov61_0217fb00:
 	.space 0x4
+	.global data_ov61_0217fb04
 data_ov61_0217fb04:
 	.space 0x4
+	.global data_ov61_0217fb08
 data_ov61_0217fb08:
 	.space 0x4
+	.global data_ov61_0217fb0c
 data_ov61_0217fb0c:
 	.space 0x4
+	.global data_ov61_0217fb10
 data_ov61_0217fb10:
 	.space 0x4
+	.global data_ov61_0217fb14
 data_ov61_0217fb14:
 	.space 0x4
+	.global data_ov61_0217fb18
 data_ov61_0217fb18:
 	.space 0x4
+	.global data_ov61_0217fb1c
 data_ov61_0217fb1c:
 	.space 0x4
+	.global data_ov61_0217fb20
 data_ov61_0217fb20:
 	.space 0x4
+	.global data_ov61_0217fb24
 data_ov61_0217fb24:
 	.space 0x4
+	.global data_ov61_0217fb28
 data_ov61_0217fb28:
 	.space 0x4
+	.global data_ov61_0217fb2c
 data_ov61_0217fb2c:
 	.space 0x4
+	.global data_ov61_0217fb30
 data_ov61_0217fb30:
 	.space 0x4
+	.global data_ov61_0217fb34
 data_ov61_0217fb34:
 	.space 0x4
+	.global data_ov61_0217fb38
 data_ov61_0217fb38:
 	.space 0x4
+	.global data_ov61_0217fb3c
 data_ov61_0217fb3c:
 	.space 0x4
+	.global data_ov61_0217fb40
 data_ov61_0217fb40:
 	.space 0x4
+	.global data_ov61_0217fb44
 data_ov61_0217fb44:
 	.space 0x4
+	.global data_ov61_0217fb48
 data_ov61_0217fb48:
 	.space 0x4
+	.global data_ov61_0217fb4c
 data_ov61_0217fb4c:
 	.space 0x4
+	.global data_ov61_0217fb50
 data_ov61_0217fb50:
 	.space 0x4
+	.global data_ov61_0217fb54
 data_ov61_0217fb54:
 	.space 0x4
+	.global data_ov61_0217fb58
 data_ov61_0217fb58:
 	.space 0x4
+	.global data_ov61_0217fb5c
 data_ov61_0217fb5c:
 	.space 0x4
+	.global data_ov61_0217fb60
 data_ov61_0217fb60:
 	.space 0x4
+	.global data_ov61_0217fb64
 data_ov61_0217fb64:
 	.space 0x4
+	.global data_ov61_0217fb68
 data_ov61_0217fb68:
 	.space 0x4
+	.global data_ov61_0217fb6c
 data_ov61_0217fb6c:
 	.space 0x4
+	.global data_ov61_0217fb70
 data_ov61_0217fb70:
 	.space 0x4
+	.global data_ov61_0217fb74
 data_ov61_0217fb74:
 	.space 0x4
+	.global data_ov61_0217fb78
 data_ov61_0217fb78:
 	.space 0x4
+	.global data_ov61_0217fb7c
 data_ov61_0217fb7c:
 	.space 0x4
+	.global data_ov61_0217fb80
 data_ov61_0217fb80:
 	.space 0x4
+	.global data_ov61_0217fb84
 data_ov61_0217fb84:
 	.space 0x4
+	.global data_ov61_0217fb88
 data_ov61_0217fb88:
 	.space 0x4
+	.global data_ov61_0217fb8c
 data_ov61_0217fb8c:
 	.space 0x4
+	.global data_ov61_0217fb90
 data_ov61_0217fb90:
 	.space 0x4
+	.global data_ov61_0217fb94
 data_ov61_0217fb94:
 	.space 0x4
+	.global data_ov61_0217fb98
 data_ov61_0217fb98:
 	.space 0x4
+	.global data_ov61_0217fb9c
 data_ov61_0217fb9c:
 	.space 0x4
+	.global data_ov61_0217fba0
 data_ov61_0217fba0:
 	.space 0x4
+	.global data_ov61_0217fba4
 data_ov61_0217fba4:
 	.space 0x4
+	.global data_ov61_0217fba8
 data_ov61_0217fba8:
 	.space 0x4
+	.global data_ov61_0217fbac
 data_ov61_0217fbac:
 	.space 0x4
+	.global data_ov61_0217fbb0
 data_ov61_0217fbb0:
 	.space 0x4
+	.global data_ov61_0217fbb4
 data_ov61_0217fbb4:
 	.space 0x4
+	.global data_ov61_0217fbb8
 data_ov61_0217fbb8:
 	.space 0x4
+	.global data_ov61_0217fbbc
 data_ov61_0217fbbc:
 	.space 0x4
+	.global data_ov61_0217fbc0
 data_ov61_0217fbc0:
 	.space 0x4
+	.global data_ov61_0217fbc4
 data_ov61_0217fbc4:
 	.space 0x4
+	.global data_ov61_0217fbc8
 data_ov61_0217fbc8:
 	.space 0x4
+	.global data_ov61_0217fbcc
 data_ov61_0217fbcc:
 	.space 0x4
+	.global data_ov61_0217fbd0
 data_ov61_0217fbd0:
 	.space 0x4
+	.global data_ov61_0217fbd4
 data_ov61_0217fbd4:
 	.space 0x4
+	.global data_ov61_0217fbd8
 data_ov61_0217fbd8:
 	.space 0x4
+	.global data_ov61_0217fbdc
 data_ov61_0217fbdc:
 	.space 0x4
+	.global data_ov61_0217fbe0
 data_ov61_0217fbe0:
 	.space 0x4
+	.global data_ov61_0217fbe4
 data_ov61_0217fbe4:
 	.space 0x4
+	.global data_ov61_0217fbe8
 data_ov61_0217fbe8:
 	.space 0x4
+	.global data_ov61_0217fbec
 data_ov61_0217fbec:
 	.space 0x4
+	.global data_ov61_0217fbf0
 data_ov61_0217fbf0:
 	.space 0x4
+	.global data_ov61_0217fbf4
 data_ov61_0217fbf4:
 	.space 0x4
+	.global data_ov61_0217fbf8
 data_ov61_0217fbf8:
 	.space 0x4
+	.global data_ov61_0217fbfc
 data_ov61_0217fbfc:
 	.space 0x4
+	.global data_ov61_0217fc00
 data_ov61_0217fc00:
 	.space 0x4
+	.global data_ov61_0217fc04
 data_ov61_0217fc04:
 	.space 0x4
+	.global data_ov61_0217fc08
 data_ov61_0217fc08:
 	.space 0x4
+	.global data_ov61_0217fc0c
 data_ov61_0217fc0c:
 	.space 0x4
+	.global data_ov61_0217fc10
 data_ov61_0217fc10:
 	.space 0x4
+	.global data_ov61_0217fc14
 data_ov61_0217fc14:
 	.space 0x4
+	.global data_ov61_0217fc18
 data_ov61_0217fc18:
 	.space 0x4
+	.global data_ov61_0217fc1c
 data_ov61_0217fc1c:
 	.space 0x4
+	.global data_ov61_0217fc20
 data_ov61_0217fc20:
 	.space 0x4
+	.global data_ov61_0217fc24
 data_ov61_0217fc24:
 	.space 0x4
+	.global data_ov61_0217fc28
 data_ov61_0217fc28:
 	.space 0x4
+	.global data_ov61_0217fc2c
 data_ov61_0217fc2c:
 	.space 0x4
+	.global data_ov61_0217fc30
 data_ov61_0217fc30:
 	.space 0x4
+	.global data_ov61_0217fc34
 data_ov61_0217fc34:
 	.space 0x4
+	.global data_ov61_0217fc38
 data_ov61_0217fc38:
 	.space 0x4
+	.global data_ov61_0217fc3c
 data_ov61_0217fc3c:
 	.space 0x4
+	.global data_ov61_0217fc40
 data_ov61_0217fc40:
 	.space 0x4
+	.global data_ov61_0217fc44
 data_ov61_0217fc44:
 	.space 0x4
+	.global data_ov61_0217fc48
 data_ov61_0217fc48:
 	.space 0x4
+	.global data_ov61_0217fc4c
 data_ov61_0217fc4c:
 	.space 0x4
+	.global data_ov61_0217fc50
 data_ov61_0217fc50:
 	.space 0x4
+	.global data_ov61_0217fc54
 data_ov61_0217fc54:
 	.space 0x4
+	.global data_ov61_0217fc58
 data_ov61_0217fc58:
 	.space 0x4
+	.global data_ov61_0217fc5c
 data_ov61_0217fc5c:
 	.space 0x4
+	.global data_ov61_0217fc60
 data_ov61_0217fc60:
 	.space 0x4
+	.global data_ov61_0217fc64
 data_ov61_0217fc64:
 	.space 0x4
+	.global data_ov61_0217fc68
 data_ov61_0217fc68:
 	.space 0x4
+	.global data_ov61_0217fc6c
 data_ov61_0217fc6c:
 	.space 0x4
+	.global data_ov61_0217fc70
 data_ov61_0217fc70:
 	.space 0x4
+	.global data_ov61_0217fc74
 data_ov61_0217fc74:
 	.space 0x4
+	.global data_ov61_0217fc78
 data_ov61_0217fc78:
 	.space 0x4
+	.global data_ov61_0217fc7c
 data_ov61_0217fc7c:
 	.space 0x4
+	.global data_ov61_0217fc80
 data_ov61_0217fc80:
 	.space 0x4
+	.global data_ov61_0217fc84
 data_ov61_0217fc84:
 	.space 0x4
+	.global data_ov61_0217fc88
 data_ov61_0217fc88:
 	.space 0x4
+	.global data_ov61_0217fc8c
 data_ov61_0217fc8c:
 	.space 0x4
+	.global data_ov61_0217fc90
 data_ov61_0217fc90:
 	.space 0x4
+	.global data_ov61_0217fc94
 data_ov61_0217fc94:
 	.space 0x4
+	.global data_ov61_0217fc98
 data_ov61_0217fc98:
 	.space 0x4
+	.global data_ov61_0217fc9c
 data_ov61_0217fc9c:
 	.space 0x4
+	.global data_ov61_0217fca0
 data_ov61_0217fca0:
 	.space 0x4
+	.global data_ov61_0217fca4
 data_ov61_0217fca4:
 	.space 0x4
+	.global data_ov61_0217fca8
 data_ov61_0217fca8:
 	.space 0x4
+	.global data_ov61_0217fcac
 data_ov61_0217fcac:
 	.space 0x4
+	.global data_ov61_0217fcb0
 data_ov61_0217fcb0:
 	.space 0x4
+	.global data_ov61_0217fcb4
 data_ov61_0217fcb4:
 	.space 0x4
+	.global data_ov61_0217fcb8
 data_ov61_0217fcb8:
 	.space 0x4
+	.global data_ov61_0217fcbc
 data_ov61_0217fcbc:
 	.space 0x4
+	.global data_ov61_0217fcc0
 data_ov61_0217fcc0:
 	.space 0x4
+	.global data_ov61_0217fcc4
 data_ov61_0217fcc4:
 	.space 0x4
+	.global data_ov61_0217fcc8
 data_ov61_0217fcc8:
 	.space 0x4
+	.global data_ov61_0217fccc
 data_ov61_0217fccc:
 	.space 0x4
+	.global data_ov61_0217fcd0
 data_ov61_0217fcd0:
 	.space 0x4
+	.global data_ov61_0217fcd4
 data_ov61_0217fcd4:
 	.space 0x4
+	.global data_ov61_0217fcd8
 data_ov61_0217fcd8:
 	.space 0x4
+	.global data_ov61_0217fcdc
 data_ov61_0217fcdc:
 	.space 0x4
+	.global data_ov61_0217fce0
 data_ov61_0217fce0:
 	.space 0x4
+	.global data_ov61_0217fce4
 data_ov61_0217fce4:
 	.space 0x4
+	.global data_ov61_0217fce8
 data_ov61_0217fce8:
 	.space 0x4
+	.global data_ov61_0217fcec
 data_ov61_0217fcec:
 	.space 0x4
+	.global data_ov61_0217fcf0
 data_ov61_0217fcf0:
 	.space 0x4
+	.global data_ov61_0217fcf4
 data_ov61_0217fcf4:
 	.space 0x4
+	.global data_ov61_0217fcf8
 data_ov61_0217fcf8:
 	.space 0x4
+	.global data_ov61_0217fcfc
 data_ov61_0217fcfc:
 	.space 0x4
+	.global data_ov61_0217fd00
 data_ov61_0217fd00:
 	.space 0x4
+	.global data_ov61_0217fd04
 data_ov61_0217fd04:
 	.space 0x4
+	.global data_ov61_0217fd08
 data_ov61_0217fd08:
 	.space 0x4
+	.global data_ov61_0217fd0c
 data_ov61_0217fd0c:
 	.space 0x4
+	.global data_ov61_0217fd10
 data_ov61_0217fd10:
 	.space 0x4
+	.global data_ov61_0217fd14
 data_ov61_0217fd14:
 	.space 0x4
+	.global data_ov61_0217fd18
 data_ov61_0217fd18:
 	.space 0x4
+	.global data_ov61_0217fd1c
 data_ov61_0217fd1c:
 	.space 0x4
+	.global data_ov61_0217fd20
 data_ov61_0217fd20:
 	.space 0x4
+	.global data_ov61_0217fd24
 data_ov61_0217fd24:
 	.space 0x4
+	.global data_ov61_0217fd28
 data_ov61_0217fd28:
 	.space 0x4
+	.global data_ov61_0217fd2c
 data_ov61_0217fd2c:
 	.space 0x4
+	.global data_ov61_0217fd30
 data_ov61_0217fd30:
 	.space 0x4
+	.global data_ov61_0217fd34
 data_ov61_0217fd34:
 	.space 0x4
+	.global data_ov61_0217fd38
 data_ov61_0217fd38:
 	.space 0x4
+	.global data_ov61_0217fd3c
 data_ov61_0217fd3c:
 	.space 0x4
+	.global data_ov61_0217fd40
 data_ov61_0217fd40:
 	.space 0x4
+	.global data_ov61_0217fd44
 data_ov61_0217fd44:
 	.space 0x4
+	.global data_ov61_0217fd48
 data_ov61_0217fd48:
 	.space 0x4
+	.global data_ov61_0217fd4c
 data_ov61_0217fd4c:
 	.space 0x4
+	.global data_ov61_0217fd50
 data_ov61_0217fd50:
 	.space 0x4
+	.global data_ov61_0217fd54
 data_ov61_0217fd54:
 	.space 0x4
+	.global data_ov61_0217fd58
 data_ov61_0217fd58:
 	.space 0x4
+	.global data_ov61_0217fd5c
 data_ov61_0217fd5c:
 	.space 0x4
+	.global data_ov61_0217fd60
 data_ov61_0217fd60:
 	.space 0x4
+	.global data_ov61_0217fd64
 data_ov61_0217fd64:
 	.space 0x4
+	.global data_ov61_0217fd68
 data_ov61_0217fd68:
 	.space 0x4
+	.global data_ov61_0217fd6c
 data_ov61_0217fd6c:
 	.space 0x4
+	.global data_ov61_0217fd70
 data_ov61_0217fd70:
 	.space 0x4
+	.global data_ov61_0217fd74
 data_ov61_0217fd74:
 	.space 0x4
+	.global data_ov61_0217fd78
 data_ov61_0217fd78:
 	.space 0x4
+	.global data_ov61_0217fd7c
 data_ov61_0217fd7c:
 	.space 0x4
+	.global data_ov61_0217fd80
 data_ov61_0217fd80:
 	.space 0x4
+	.global data_ov61_0217fd84
 data_ov61_0217fd84:
 	.space 0x4
+	.global data_ov61_0217fd88
 data_ov61_0217fd88:
 	.space 0x4
+	.global data_ov61_0217fd8c
 data_ov61_0217fd8c:
 	.space 0x4
+	.global data_ov61_0217fd90
 data_ov61_0217fd90:
 	.space 0x4
+	.global data_ov61_0217fd94
 data_ov61_0217fd94:
 	.space 0x4
+	.global data_ov61_0217fd98
 data_ov61_0217fd98:
 	.space 0x4
+	.global data_ov61_0217fd9c
 data_ov61_0217fd9c:
 	.space 0x4
+	.global data_ov61_0217fda0
 data_ov61_0217fda0:
 	.space 0x4
+	.global data_ov61_0217fda4
 data_ov61_0217fda4:
 	.space 0x4
+	.global data_ov61_0217fda8
 data_ov61_0217fda8:
 	.space 0x4
+	.global data_ov61_0217fdac
 data_ov61_0217fdac:
 	.space 0x4
+	.global data_ov61_0217fdb0
 data_ov61_0217fdb0:
 	.space 0x4
+	.global data_ov61_0217fdb4
 data_ov61_0217fdb4:
 	.space 0x4
+	.global data_ov61_0217fdb8
 data_ov61_0217fdb8:
 	.space 0x4
+	.global data_ov61_0217fdbc
 data_ov61_0217fdbc:
 	.space 0x4
+	.global data_ov61_0217fdc0
 data_ov61_0217fdc0:
 	.space 0x4
+	.global data_ov61_0217fdc4
 data_ov61_0217fdc4:
 	.space 0x4
+	.global data_ov61_0217fdc8
 data_ov61_0217fdc8:
 	.space 0x4
+	.global data_ov61_0217fdcc
 data_ov61_0217fdcc:
 	.space 0x4
+	.global data_ov61_0217fdd0
 data_ov61_0217fdd0:
 	.space 0x4
+	.global data_ov61_0217fdd4
 data_ov61_0217fdd4:
 	.space 0x4
+	.global data_ov61_0217fdd8
 data_ov61_0217fdd8:
 	.space 0x4
+	.global data_ov61_0217fddc
 data_ov61_0217fddc:
 	.space 0x4
+	.global data_ov61_0217fde0
 data_ov61_0217fde0:
 	.space 0x4
+	.global data_ov61_0217fde4
 data_ov61_0217fde4:
 	.space 0x4
+	.global data_ov61_0217fde8
 data_ov61_0217fde8:
 	.space 0x4
+	.global data_ov61_0217fdec
 data_ov61_0217fdec:
 	.space 0x4
+	.global data_ov61_0217fdf0
 data_ov61_0217fdf0:
 	.space 0x4
+	.global data_ov61_0217fdf4
 data_ov61_0217fdf4:
 	.space 0x4
+	.global data_ov61_0217fdf8
 data_ov61_0217fdf8:
 	.space 0x4
+	.global data_ov61_0217fdfc
 data_ov61_0217fdfc:
 	.space 0x4
+	.global data_ov61_0217fe00
 data_ov61_0217fe00:
 	.space 0x4
+	.global data_ov61_0217fe04
 data_ov61_0217fe04:
 	.space 0x4
+	.global data_ov61_0217fe08
 data_ov61_0217fe08:
 	.space 0x4
+	.global data_ov61_0217fe0c
 data_ov61_0217fe0c:
 	.space 0x4
+	.global data_ov61_0217fe10
 data_ov61_0217fe10:
 	.space 0x4
+	.global data_ov61_0217fe14
 data_ov61_0217fe14:
 	.space 0x4
+	.global data_ov61_0217fe18
 data_ov61_0217fe18:
 	.space 0x4
+	.global data_ov61_0217fe1c
 data_ov61_0217fe1c:
 	.space 0x4
+	.global data_ov61_0217fe20
 data_ov61_0217fe20:
 	.space 0x4
+	.global data_ov61_0217fe24
 data_ov61_0217fe24:
 	.space 0x4
+	.global data_ov61_0217fe28
 data_ov61_0217fe28:
 	.space 0x4
+	.global data_ov61_0217fe2c
 data_ov61_0217fe2c:
 	.space 0x4
+	.global data_ov61_0217fe30
 data_ov61_0217fe30:
 	.space 0x4
+	.global data_ov61_0217fe34
 data_ov61_0217fe34:
 	.space 0x4
+	.global data_ov61_0217fe38
 data_ov61_0217fe38:
 	.space 0x4
+	.global data_ov61_0217fe3c
 data_ov61_0217fe3c:
 	.space 0x4
+	.global data_ov61_0217fe40
 data_ov61_0217fe40:
 	.space 0x4
+	.global data_ov61_0217fe44
 data_ov61_0217fe44:
 	.space 0x4
+	.global data_ov61_0217fe48
 data_ov61_0217fe48:
 	.space 0x4
+	.global data_ov61_0217fe4c
 data_ov61_0217fe4c:
 	.space 0x4
+	.global data_ov61_0217fe50
 data_ov61_0217fe50:
 	.space 0x4
+	.global data_ov61_0217fe54
 data_ov61_0217fe54:
 	.space 0x4
+	.global data_ov61_0217fe58
 data_ov61_0217fe58:
 	.space 0x4
+	.global data_ov61_0217fe5c
 data_ov61_0217fe5c:
 	.space 0x4
+	.global data_ov61_0217fe60
 data_ov61_0217fe60:
 	.space 0x4
+	.global data_ov61_0217fe64
 data_ov61_0217fe64:
 	.space 0x4
+	.global data_ov61_0217fe68
 data_ov61_0217fe68:
 	.space 0x4
+	.global data_ov61_0217fe6c
 data_ov61_0217fe6c:
 	.space 0x4
+	.global data_ov61_0217fe70
 data_ov61_0217fe70:
 	.space 0x4
+	.global data_ov61_0217fe74
 data_ov61_0217fe74:
 	.space 0x4
+	.global data_ov61_0217fe78
 data_ov61_0217fe78:
 	.space 0x4
+	.global data_ov61_0217fe7c
 data_ov61_0217fe7c:
 	.space 0x4
+	.global data_ov61_0217fe80
 data_ov61_0217fe80:
 	.space 0x4
+	.global data_ov61_0217fe84
 data_ov61_0217fe84:
 	.space 0x4
+	.global data_ov61_0217fe88
 data_ov61_0217fe88:
 	.space 0x4
+	.global data_ov61_0217fe8c
 data_ov61_0217fe8c:
 	.space 0x4
+	.global data_ov61_0217fe90
 data_ov61_0217fe90:
 	.space 0x4
+	.global data_ov61_0217fe94
 data_ov61_0217fe94:
 	.space 0x4
+	.global data_ov61_0217fe98
 data_ov61_0217fe98:
 	.space 0x4
+	.global data_ov61_0217fe9c
 data_ov61_0217fe9c:
 	.space 0x4
+	.global data_ov61_0217fea0
 data_ov61_0217fea0:
 	.space 0x4
+	.global data_ov61_0217fea4
 data_ov61_0217fea4:
 	.space 0x4
+	.global data_ov61_0217fea8
 data_ov61_0217fea8:
 	.space 0x4
+	.global data_ov61_0217feac
 data_ov61_0217feac:
 	.space 0x4
+	.global data_ov61_0217feb0
 data_ov61_0217feb0:
 	.space 0x4
+	.global data_ov61_0217feb4
 data_ov61_0217feb4:
 	.space 0x4
+	.global data_ov61_0217feb8
 data_ov61_0217feb8:
 	.space 0x4
+	.global data_ov61_0217febc
 data_ov61_0217febc:
 	.space 0x4
+	.global data_ov61_0217fec0
 data_ov61_0217fec0:
 	.space 0x4
+	.global data_ov61_0217fec4
 data_ov61_0217fec4:
 	.space 0x4
+	.global data_ov61_0217fec8
 data_ov61_0217fec8:
 	.space 0x4
+	.global data_ov61_0217fecc
 data_ov61_0217fecc:
 	.space 0x4
+	.global data_ov61_0217fed0
 data_ov61_0217fed0:
 	.space 0x4
+	.global data_ov61_0217fed4
 data_ov61_0217fed4:
 	.space 0x4
+	.global data_ov61_0217fed8
 data_ov61_0217fed8:
 	.space 0x4
+	.global data_ov61_0217fedc
 data_ov61_0217fedc:
 	.space 0x4
+	.global data_ov61_0217fee0
 data_ov61_0217fee0:
 	.space 0x4
+	.global data_ov61_0217fee4
 data_ov61_0217fee4:
 	.space 0x4
+	.global data_ov61_0217fee8
 data_ov61_0217fee8:
 	.space 0x4
+	.global data_ov61_0217feec
 data_ov61_0217feec:
 	.space 0x4
+	.global data_ov61_0217fef0
 data_ov61_0217fef0:
 	.space 0x4
+	.global data_ov61_0217fef4
 data_ov61_0217fef4:
 	.space 0x4
+	.global data_ov61_0217fef8
 data_ov61_0217fef8:
 	.space 0x4
+	.global data_ov61_0217fefc
 data_ov61_0217fefc:
 	.space 0x4
+	.global data_ov61_0217ff00
 data_ov61_0217ff00:
 	.space 0x4
+	.global data_ov61_0217ff04
 data_ov61_0217ff04:
 	.space 0x4
+	.global data_ov61_0217ff08
 data_ov61_0217ff08:
 	.space 0x4
+	.global data_ov61_0217ff0c
 data_ov61_0217ff0c:
 	.space 0x4
+	.global data_ov61_0217ff10
 data_ov61_0217ff10:
 	.space 0x4
+	.global data_ov61_0217ff14
 data_ov61_0217ff14:
 	.space 0x4
+	.global data_ov61_0217ff18
 data_ov61_0217ff18:
 	.space 0x4
+	.global data_ov61_0217ff1c
 data_ov61_0217ff1c:
 	.space 0x4
+	.global data_ov61_0217ff20
 data_ov61_0217ff20:
 	.space 0x4
+	.global data_ov61_0217ff24
 data_ov61_0217ff24:
 	.space 0x4
+	.global data_ov61_0217ff28
 data_ov61_0217ff28:
 	.space 0x4
+	.global data_ov61_0217ff2c
 data_ov61_0217ff2c:
 	.space 0x4
+	.global data_ov61_0217ff30
 data_ov61_0217ff30:
 	.space 0x4
+	.global data_ov61_0217ff34
 data_ov61_0217ff34:
 	.space 0x4
+	.global data_ov61_0217ff38
 data_ov61_0217ff38:
 	.space 0x4
+	.global data_ov61_0217ff3c
 data_ov61_0217ff3c:
 	.space 0x4
+	.global data_ov61_0217ff40
 data_ov61_0217ff40:
 	.space 0x4
+	.global data_ov61_0217ff44
 data_ov61_0217ff44:
 	.space 0x4
+	.global data_ov61_0217ff48
 data_ov61_0217ff48:
 	.space 0x4
+	.global data_ov61_0217ff4c
 data_ov61_0217ff4c:
 	.space 0x4
+	.global data_ov61_0217ff50
 data_ov61_0217ff50:
 	.space 0x4
+	.global data_ov61_0217ff54
 data_ov61_0217ff54:
 	.space 0x4
+	.global data_ov61_0217ff58
 data_ov61_0217ff58:
 	.space 0x4
+	.global data_ov61_0217ff5c
 data_ov61_0217ff5c:
 	.space 0x4
+	.global data_ov61_0217ff60
 data_ov61_0217ff60:
 	.space 0x4
+	.global data_ov61_0217ff64
 data_ov61_0217ff64:
 	.space 0x4
+	.global data_ov61_0217ff68
 data_ov61_0217ff68:
 	.space 0x4
+	.global data_ov61_0217ff6c
 data_ov61_0217ff6c:
 	.space 0x4
+	.global data_ov61_0217ff70
 data_ov61_0217ff70:
 	.space 0x4
+	.global data_ov61_0217ff74
 data_ov61_0217ff74:
 	.space 0x4
+	.global data_ov61_0217ff78
 data_ov61_0217ff78:
 	.space 0x4
+	.global data_ov61_0217ff7c
 data_ov61_0217ff7c:
 	.space 0x4
+	.global data_ov61_0217ff80
 data_ov61_0217ff80:
 	.space 0x4
+	.global data_ov61_0217ff84
 data_ov61_0217ff84:
 	.space 0x4
+	.global data_ov61_0217ff88
 data_ov61_0217ff88:
 	.space 0x4
+	.global data_ov61_0217ff8c
 data_ov61_0217ff8c:
 	.space 0x4
+	.global data_ov61_0217ff90
 data_ov61_0217ff90:
 	.space 0x4
+	.global data_ov61_0217ff94
 data_ov61_0217ff94:
 	.space 0x4
+	.global data_ov61_0217ff98
 data_ov61_0217ff98:
 	.space 0x4
+	.global data_ov61_0217ff9c
 data_ov61_0217ff9c:
 	.space 0x4
+	.global data_ov61_0217ffa0
 data_ov61_0217ffa0:
 	.space 0x4
+	.global data_ov61_0217ffa4
 data_ov61_0217ffa4:
 	.space 0x4
+	.global data_ov61_0217ffa8
 data_ov61_0217ffa8:
 	.space 0x4
+	.global data_ov61_0217ffac
 data_ov61_0217ffac:
 	.space 0x4
+	.global data_ov61_0217ffb0
 data_ov61_0217ffb0:
 	.space 0x4
+	.global data_ov61_0217ffb4
 data_ov61_0217ffb4:
 	.space 0x4
+	.global data_ov61_0217ffb8
 data_ov61_0217ffb8:
 	.space 0x4
+	.global data_ov61_0217ffbc
 data_ov61_0217ffbc:
 	.space 0x4
+	.global data_ov61_0217ffc0
 data_ov61_0217ffc0:
 	.space 0x4
+	.global data_ov61_0217ffc4
 data_ov61_0217ffc4:
 	.space 0x4
+	.global data_ov61_0217ffc8
 data_ov61_0217ffc8:
 	.space 0x4
+	.global data_ov61_0217ffcc
 data_ov61_0217ffcc:
 	.space 0x4
+	.global data_ov61_0217ffd0
 data_ov61_0217ffd0:
 	.space 0x4
+	.global data_ov61_0217ffd4
 data_ov61_0217ffd4:
 	.space 0x4
+	.global data_ov61_0217ffd8
 data_ov61_0217ffd8:
 	.space 0x4
+	.global data_ov61_0217ffdc
 data_ov61_0217ffdc:
 	.space 0x4
+	.global data_ov61_0217ffe0
 data_ov61_0217ffe0:
 	.space 0x4
+	.global data_ov61_0217ffe4
 data_ov61_0217ffe4:
 	.space 0x4
+	.global data_ov61_0217ffe8
 data_ov61_0217ffe8:
 	.space 0x4
+	.global data_ov61_0217ffec
 data_ov61_0217ffec:
 	.space 0x4
+	.global data_ov61_0217fff0
 data_ov61_0217fff0:
 	.space 0x4
+	.global data_ov61_0217fff4
 data_ov61_0217fff4:
 	.space 0x4
+	.global data_ov61_0217fff8
 data_ov61_0217fff8:
 	.space 0x4
+	.global data_ov61_0217fffc
 data_ov61_0217fffc:
 	.space 0x4
+	.global data_ov61_02180000
 data_ov61_02180000:
 	.space 0x4
+	.global data_ov61_02180004
 data_ov61_02180004:
 	.space 0x4
+	.global data_ov61_02180008
 data_ov61_02180008:
 	.space 0x4
+	.global data_ov61_0218000c
 data_ov61_0218000c:
 	.space 0x4
+	.global data_ov61_02180010
 data_ov61_02180010:
 	.space 0x4
+	.global data_ov61_02180014
 data_ov61_02180014:
 	.space 0x4
+	.global data_ov61_02180018
 data_ov61_02180018:
 	.space 0x4
+	.global data_ov61_0218001c
 data_ov61_0218001c:
 	.space 0x4
+	.global data_ov61_02180020
 data_ov61_02180020:
 	.space 0x4
+	.global data_ov61_02180024
 data_ov61_02180024:
 	.space 0x4
+	.global data_ov61_02180028
 data_ov61_02180028:
 	.space 0x4
+	.global data_ov61_0218002c
 data_ov61_0218002c:
 	.space 0x4
+	.global data_ov61_02180030
 data_ov61_02180030:
 	.space 0x4
+	.global data_ov61_02180034
 data_ov61_02180034:
 	.space 0x4
+	.global data_ov61_02180038
 data_ov61_02180038:
 	.space 0x4
+	.global data_ov61_0218003c
 data_ov61_0218003c:
 	.space 0x4
+	.global data_ov61_02180040
 data_ov61_02180040:
 	.space 0x4
+	.global data_ov61_02180044
 data_ov61_02180044:
 	.space 0x4
+	.global data_ov61_02180048
 data_ov61_02180048:
 	.space 0x4
+	.global data_ov61_0218004c
 data_ov61_0218004c:
 	.space 0x4
+	.global data_ov61_02180050
 data_ov61_02180050:
 	.space 0x4
+	.global data_ov61_02180054
 data_ov61_02180054:
 	.space 0x4
+	.global data_ov61_02180058
 data_ov61_02180058:
 	.space 0x4
+	.global data_ov61_0218005c
 data_ov61_0218005c:
 	.space 0x4
+	.global data_ov61_02180060
 data_ov61_02180060:
 	.space 0x4
+	.global data_ov61_02180064
 data_ov61_02180064:
 	.space 0x4
+	.global data_ov61_02180068
 data_ov61_02180068:
 	.space 0x4
+	.global data_ov61_0218006c
 data_ov61_0218006c:
 	.space 0x4
+	.global data_ov61_02180070
 data_ov61_02180070:
 	.space 0x4
+	.global data_ov61_02180074
 data_ov61_02180074:
 	.space 0x4
+	.global data_ov61_02180078
 data_ov61_02180078:
 	.space 0x4
+	.global data_ov61_0218007c
 data_ov61_0218007c:
 	.space 0x4
+	.global data_ov61_02180080
 data_ov61_02180080:
 	.space 0x4
+	.global data_ov61_02180084
 data_ov61_02180084:
 	.space 0x4
+	.global data_ov61_02180088
 data_ov61_02180088:
 	.space 0x4
+	.global data_ov61_0218008c
 data_ov61_0218008c:
 	.space 0x4
+	.global data_ov61_02180090
 data_ov61_02180090:
 	.space 0x4
+	.global data_ov61_02180094
 data_ov61_02180094:
 	.space 0x4
+	.global data_ov61_02180098
 data_ov61_02180098:
 	.space 0x4
+	.global data_ov61_0218009c
 data_ov61_0218009c:
 	.space 0x4
+	.global data_ov61_021800a0
 data_ov61_021800a0:
 	.space 0x4
+	.global data_ov61_021800a4
 data_ov61_021800a4:
 	.space 0x4
+	.global data_ov61_021800a8
 data_ov61_021800a8:
 	.space 0x4
+	.global data_ov61_021800ac
 data_ov61_021800ac:
 	.space 0x4
+	.global data_ov61_021800b0
 data_ov61_021800b0:
 	.space 0x4
+	.global data_ov61_021800b4
 data_ov61_021800b4:
 	.space 0x4
+	.global data_ov61_021800b8
 data_ov61_021800b8:
 	.space 0x4
+	.global data_ov61_021800bc
 data_ov61_021800bc:
 	.space 0x4
+	.global data_ov61_021800c0
 data_ov61_021800c0:
 	.space 0x4
+	.global data_ov61_021800c4
 data_ov61_021800c4:
 	.space 0x4
+	.global data_ov61_021800c8
 data_ov61_021800c8:
 	.space 0x4
+	.global data_ov61_021800cc
 data_ov61_021800cc:
 	.space 0x4
+	.global data_ov61_021800d0
 data_ov61_021800d0:
 	.space 0x4
+	.global data_ov61_021800d4
 data_ov61_021800d4:
 	.space 0x4
+	.global data_ov61_021800d8
 data_ov61_021800d8:
 	.space 0x4
+	.global data_ov61_021800dc
 data_ov61_021800dc:
 	.space 0x4
+	.global data_ov61_021800e0
 data_ov61_021800e0:
 	.space 0x4
+	.global data_ov61_021800e4
 data_ov61_021800e4:
 	.space 0x4
+	.global data_ov61_021800e8
 data_ov61_021800e8:
 	.space 0x4
+	.global data_ov61_021800ec
 data_ov61_021800ec:
 	.space 0x4
+	.global data_ov61_021800f0
 data_ov61_021800f0:
 	.space 0x4
+	.global data_ov61_021800f4
 data_ov61_021800f4:
 	.space 0x4
+	.global data_ov61_021800f8
 data_ov61_021800f8:
 	.space 0x4
+	.global data_ov61_021800fc
 data_ov61_021800fc:
 	.space 0x4
+	.global data_ov61_02180100
 data_ov61_02180100:
 	.space 0x4
+	.global data_ov61_02180104
 data_ov61_02180104:
 	.space 0x4
+	.global data_ov61_02180108
 data_ov61_02180108:
 	.space 0x4
+	.global data_ov61_0218010c
 data_ov61_0218010c:
 	.space 0x4
+	.global data_ov61_02180110
 data_ov61_02180110:
 	.space 0x4
+	.global data_ov61_02180114
 data_ov61_02180114:
 	.space 0x4
+	.global data_ov61_02180118
 data_ov61_02180118:
 	.space 0x4
+	.global data_ov61_0218011c
 data_ov61_0218011c:
 	.space 0x4
+	.global data_ov61_02180120
 data_ov61_02180120:
 	.space 0x4
+	.global data_ov61_02180124
 data_ov61_02180124:
 	.space 0x4
+	.global data_ov61_02180128
 data_ov61_02180128:
 	.space 0x4
+	.global data_ov61_0218012c
 data_ov61_0218012c:
 	.space 0x4
+	.global data_ov61_02180130
 data_ov61_02180130:
 	.space 0x4
+	.global data_ov61_02180134
 data_ov61_02180134:
 	.space 0x4
+	.global data_ov61_02180138
 data_ov61_02180138:
 	.space 0x4
+	.global data_ov61_0218013c
 data_ov61_0218013c:
 	.space 0x4
+	.global data_ov61_02180140
 data_ov61_02180140:
 	.space 0x4
+	.global data_ov61_02180144
 data_ov61_02180144:
 	.space 0x4
+	.global data_ov61_02180148
 data_ov61_02180148:
 	.space 0x4
+	.global data_ov61_0218014c
 data_ov61_0218014c:
 	.space 0x4
+	.global data_ov61_02180150
 data_ov61_02180150:
 	.space 0x4
+	.global data_ov61_02180154
 data_ov61_02180154:
 	.space 0x4
+	.global data_ov61_02180158
 data_ov61_02180158:
 	.space 0x4
+	.global data_ov61_0218015c
 data_ov61_0218015c:
 	.space 0x4
+	.global data_ov61_02180160
 data_ov61_02180160:
 	.space 0x4
+	.global data_ov61_02180164
 data_ov61_02180164:
 	.space 0x4
+	.global data_ov61_02180168
 data_ov61_02180168:
 	.space 0x4
+	.global data_ov61_0218016c
 data_ov61_0218016c:
 	.space 0x4
+	.global data_ov61_02180170
 data_ov61_02180170:
 	.space 0x4
+	.global data_ov61_02180174
 data_ov61_02180174:
 	.space 0x4
+	.global data_ov61_02180178
 data_ov61_02180178:
 	.space 0x4
+	.global data_ov61_0218017c
 data_ov61_0218017c:
 	.space 0x4
+	.global data_ov61_02180180
 data_ov61_02180180:
 	.space 0x4
+	.global data_ov61_02180184
 data_ov61_02180184:
 	.space 0x4
+	.global data_ov61_02180188
 data_ov61_02180188:
 	.space 0x4
+	.global data_ov61_0218018c
 data_ov61_0218018c:
 	.space 0x4
+	.global data_ov61_02180190
 data_ov61_02180190:
 	.space 0x4
+	.global data_ov61_02180194
 data_ov61_02180194:
 	.space 0x4
+	.global data_ov61_02180198
 data_ov61_02180198:
 	.space 0x4
+	.global data_ov61_0218019c
 data_ov61_0218019c:
 	.space 0x4
+	.global data_ov61_021801a0
 data_ov61_021801a0:
 	.space 0x4
+	.global data_ov61_021801a4
 data_ov61_021801a4:
 	.space 0x4
+	.global data_ov61_021801a8
 data_ov61_021801a8:
 	.space 0x4
+	.global data_ov61_021801ac
 data_ov61_021801ac:
 	.space 0x4
+	.global data_ov61_021801b0
 data_ov61_021801b0:
 	.space 0x4
+	.global data_ov61_021801b4
 data_ov61_021801b4:
 	.space 0x4
+	.global data_ov61_021801b8
 data_ov61_021801b8:
 	.space 0x4
+	.global data_ov61_021801bc
 data_ov61_021801bc:
 	.space 0x4
+	.global data_ov61_021801c0
 data_ov61_021801c0:
 	.space 0x4
+	.global data_ov61_021801c4
 data_ov61_021801c4:
 	.space 0x4
+	.global data_ov61_021801c8
 data_ov61_021801c8:
 	.space 0x4
+	.global data_ov61_021801cc
 data_ov61_021801cc:
 	.space 0x4
+	.global data_ov61_021801d0
 data_ov61_021801d0:
 	.space 0x4
+	.global data_ov61_021801d4
 data_ov61_021801d4:
 	.space 0x4
+	.global data_ov61_021801d8
 data_ov61_021801d8:
 	.space 0x4
+	.global data_ov61_021801dc
 data_ov61_021801dc:
 	.space 0x4
+	.global data_ov61_021801e0
 data_ov61_021801e0:
 	.space 0x4
+	.global data_ov61_021801e4
 data_ov61_021801e4:
 	.space 0x4
+	.global data_ov61_021801e8
 data_ov61_021801e8:
 	.space 0x4
+	.global data_ov61_021801ec
 data_ov61_021801ec:
 	.space 0x4
+	.global data_ov61_021801f0
 data_ov61_021801f0:
 	.space 0x4
+	.global data_ov61_021801f4
 data_ov61_021801f4:
 	.space 0x4
+	.global data_ov61_021801f8
 data_ov61_021801f8:
 	.space 0x4
+	.global data_ov61_021801fc
 data_ov61_021801fc:
 	.space 0x4
+	.global data_ov61_02180200
 data_ov61_02180200:
 	.space 0x4
+	.global data_ov61_02180204
 data_ov61_02180204:
 	.space 0x4
+	.global data_ov61_02180208
 data_ov61_02180208:
 	.space 0x4
+	.global data_ov61_0218020c
 data_ov61_0218020c:
 	.space 0x4
+	.global data_ov61_02180210
 data_ov61_02180210:
 	.space 0x4
+	.global data_ov61_02180214
 data_ov61_02180214:
 	.space 0x4
+	.global data_ov61_02180218
 data_ov61_02180218:
 	.space 0x4
+	.global data_ov61_0218021c
 data_ov61_0218021c:
 	.space 0x4
+	.global data_ov61_02180220
 data_ov61_02180220:
 	.space 0x4
+	.global data_ov61_02180224
 data_ov61_02180224:
 	.space 0x4
+	.global data_ov61_02180228
 data_ov61_02180228:
 	.space 0x4
+	.global data_ov61_0218022c
 data_ov61_0218022c:
 	.space 0x4
+	.global data_ov61_02180230
 data_ov61_02180230:
 	.space 0x4
+	.global data_ov61_02180234
 data_ov61_02180234:
 	.space 0x4
+	.global data_ov61_02180238
 data_ov61_02180238:
 	.space 0x4
+	.global data_ov61_0218023c
 data_ov61_0218023c:
 	.space 0x4
+	.global data_ov61_02180240
 data_ov61_02180240:
 	.space 0x4
+	.global data_ov61_02180244
 data_ov61_02180244:
 	.space 0x4
+	.global data_ov61_02180248
 data_ov61_02180248:
 	.space 0x4
+	.global data_ov61_0218024c
 data_ov61_0218024c:
 	.space 0x4
+	.global data_ov61_02180250
 data_ov61_02180250:
 	.space 0x4
+	.global data_ov61_02180254
 data_ov61_02180254:
 	.space 0x4
+	.global data_ov61_02180258
 data_ov61_02180258:
 	.space 0x4
+	.global data_ov61_0218025c
 data_ov61_0218025c:
 	.space 0x4
+	.global data_ov61_02180260
 data_ov61_02180260:
 	.space 0x4
+	.global data_ov61_02180264
 data_ov61_02180264:
 	.space 0x4
+	.global data_ov61_02180268
 data_ov61_02180268:
 	.space 0x4
+	.global data_ov61_0218026c
 data_ov61_0218026c:
 	.space 0x4
+	.global data_ov61_02180270
 data_ov61_02180270:
 	.space 0x4
+	.global data_ov61_02180274
 data_ov61_02180274:
 	.space 0x4
+	.global data_ov61_02180278
 data_ov61_02180278:
 	.space 0x4
+	.global data_ov61_0218027c
 data_ov61_0218027c:
 	.space 0x4
+	.global data_ov61_02180280
 data_ov61_02180280:
 	.space 0x4
+	.global data_ov61_02180284
 data_ov61_02180284:
 	.space 0x4
+	.global data_ov61_02180288
 data_ov61_02180288:
 	.space 0x4
+	.global data_ov61_0218028c
 data_ov61_0218028c:
 	.space 0x4
+	.global data_ov61_02180290
 data_ov61_02180290:
 	.space 0x4
+	.global data_ov61_02180294
 data_ov61_02180294:
 	.space 0x4
+	.global data_ov61_02180298
 data_ov61_02180298:
 	.space 0x4
+	.global data_ov61_0218029c
 data_ov61_0218029c:
 	.space 0x4
+	.global data_ov61_021802a0
 data_ov61_021802a0:
 	.space 0x4
+	.global data_ov61_021802a4
 data_ov61_021802a4:
 	.space 0x4
+	.global data_ov61_021802a8
 data_ov61_021802a8:
 	.space 0x4
+	.global data_ov61_021802ac
 data_ov61_021802ac:
 	.space 0x4
+	.global data_ov61_021802b0
 data_ov61_021802b0:
 	.space 0x4
+	.global data_ov61_021802b4
 data_ov61_021802b4:
 	.space 0x4
+	.global data_ov61_021802b8
 data_ov61_021802b8:
 	.space 0x4
+	.global data_ov61_021802bc
 data_ov61_021802bc:
 	.space 0x4
+	.global data_ov61_021802c0
 data_ov61_021802c0:
 	.space 0x4
+	.global data_ov61_021802c4
 data_ov61_021802c4:
 	.space 0x4
+	.global data_ov61_021802c8
 data_ov61_021802c8:
 	.space 0x4
+	.global data_ov61_021802cc
 data_ov61_021802cc:
 	.space 0x4
+	.global data_ov61_021802d0
 data_ov61_021802d0:
 	.space 0x4
+	.global data_ov61_021802d4
 data_ov61_021802d4:
 	.space 0x4
+	.global data_ov61_021802d8
 data_ov61_021802d8:
 	.space 0x4
+	.global data_ov61_021802dc
 data_ov61_021802dc:
 	.space 0x4
+	.global data_ov61_021802e0
 data_ov61_021802e0:
 	.space 0x4
+	.global data_ov61_021802e4
 data_ov61_021802e4:
 	.space 0x4
+	.global data_ov61_021802e8
 data_ov61_021802e8:
 	.space 0x4
+	.global data_ov61_021802ec
 data_ov61_021802ec:
 	.space 0x4
+	.global data_ov61_021802f0
 data_ov61_021802f0:
 	.space 0x4
+	.global data_ov61_021802f4
 data_ov61_021802f4:
 	.space 0x4
+	.global data_ov61_021802f8
 data_ov61_021802f8:
 	.space 0x4
+	.global data_ov61_021802fc
 data_ov61_021802fc:
 	.space 0x4
+	.global data_ov61_02180300
 data_ov61_02180300:
 	.space 0x4
+	.global data_ov61_02180304
 data_ov61_02180304:
 	.space 0x4
+	.global data_ov61_02180308
 data_ov61_02180308:
 	.space 0x4
+	.global data_ov61_0218030c
 data_ov61_0218030c:
 	.space 0x4
+	.global data_ov61_02180310
 data_ov61_02180310:
 	.space 0x4
+	.global data_ov61_02180314
 data_ov61_02180314:
 	.space 0x4
+	.global data_ov61_02180318
 data_ov61_02180318:
 	.space 0x4
+	.global data_ov61_0218031c
 data_ov61_0218031c:
 	.space 0x4
+	.global data_ov61_02180320
 data_ov61_02180320:
 	.space 0x4
+	.global data_ov61_02180324
 data_ov61_02180324:
 	.space 0x4
+	.global data_ov61_02180328
 data_ov61_02180328:
 	.space 0x4
+	.global data_ov61_0218032c
 data_ov61_0218032c:
 	.space 0x4
+	.global data_ov61_02180330
 data_ov61_02180330:
 	.space 0x4
+	.global data_ov61_02180334
 data_ov61_02180334:
 	.space 0x4
+	.global data_ov61_02180338
 data_ov61_02180338:
 	.space 0x4
+	.global data_ov61_0218033c
 data_ov61_0218033c:
 	.space 0x4
+	.global data_ov61_02180340
 data_ov61_02180340:
 	.space 0x4
+	.global data_ov61_02180344
 data_ov61_02180344:
 	.space 0x4
+	.global data_ov61_02180348
 data_ov61_02180348:
 	.space 0x4
+	.global data_ov61_0218034c
 data_ov61_0218034c:
 	.space 0x4
+	.global data_ov61_02180350
 data_ov61_02180350:
 	.space 0x4
+	.global data_ov61_02180354
 data_ov61_02180354:
 	.space 0x4
+	.global data_ov61_02180358
 data_ov61_02180358:
 	.space 0x4
+	.global data_ov61_0218035c
 data_ov61_0218035c:
 	.space 0x4
+	.global data_ov61_02180360
 data_ov61_02180360:
 	.space 0x4
+	.global data_ov61_02180364
 data_ov61_02180364:
 	.space 0x4
+	.global data_ov61_02180368
 data_ov61_02180368:
 	.space 0x4
+	.global data_ov61_0218036c
 data_ov61_0218036c:
 	.space 0x4
+	.global data_ov61_02180370
 data_ov61_02180370:
 	.space 0x4
+	.global data_ov61_02180374
 data_ov61_02180374:
 	.space 0x4
+	.global data_ov61_02180378
 data_ov61_02180378:
 	.space 0x4
+	.global data_ov61_0218037c
 data_ov61_0218037c:
 	.space 0x4
+	.global data_ov61_02180380
 data_ov61_02180380:
 	.space 0x4
+	.global data_ov61_02180384
 data_ov61_02180384:
 	.space 0x4
+	.global data_ov61_02180388
 data_ov61_02180388:
 	.space 0x4
+	.global data_ov61_0218038c
 data_ov61_0218038c:
 	.space 0x4
+	.global data_ov61_02180390
 data_ov61_02180390:
 	.space 0x4
+	.global data_ov61_02180394
 data_ov61_02180394:
 	.space 0x4
+	.global data_ov61_02180398
 data_ov61_02180398:
 	.space 0x4
+	.global data_ov61_0218039c
 data_ov61_0218039c:
 	.space 0x4
+	.global data_ov61_021803a0
 data_ov61_021803a0:
 	.space 0x4
+	.global data_ov61_021803a4
 data_ov61_021803a4:
 	.space 0x4
+	.global data_ov61_021803a8
 data_ov61_021803a8:
 	.space 0x4
+	.global data_ov61_021803ac
 data_ov61_021803ac:
 	.space 0x4
+	.global data_ov61_021803b0
 data_ov61_021803b0:
 	.space 0x4
+	.global data_ov61_021803b4
 data_ov61_021803b4:
 	.space 0x4
+	.global data_ov61_021803b8
 data_ov61_021803b8:
 	.space 0x4
+	.global data_ov61_021803bc
 data_ov61_021803bc:
 	.space 0x4
+	.global data_ov61_021803c0
 data_ov61_021803c0:
 	.space 0x4
+	.global data_ov61_021803c4
 data_ov61_021803c4:
 	.space 0x4
+	.global data_ov61_021803c8
 data_ov61_021803c8:
 	.space 0x4
+	.global data_ov61_021803cc
 data_ov61_021803cc:
 	.space 0x4
+	.global data_ov61_021803d0
 data_ov61_021803d0:
 	.space 0x4
+	.global data_ov61_021803d4
 data_ov61_021803d4:
 	.space 0x4
+	.global data_ov61_021803d8
 data_ov61_021803d8:
 	.space 0x4
+	.global data_ov61_021803dc
 data_ov61_021803dc:
 	.space 0x4
+	.global data_ov61_021803e0
 data_ov61_021803e0:
 	.space 0x4
+	.global data_ov61_021803e4
 data_ov61_021803e4:
 	.space 0x4
+	.global data_ov61_021803e8
 data_ov61_021803e8:
 	.space 0x4
+	.global data_ov61_021803ec
 data_ov61_021803ec:
 	.space 0x4
+	.global data_ov61_021803f0
 data_ov61_021803f0:
 	.space 0x4
+	.global data_ov61_021803f4
 data_ov61_021803f4:
 	.space 0x4
+	.global data_ov61_021803f8
 data_ov61_021803f8:
 	.space 0x4
+	.global data_ov61_021803fc
 data_ov61_021803fc:
 	.space 0x4
+	.global data_ov61_02180400
 data_ov61_02180400:
 	.space 0x4
+	.global data_ov61_02180404
 data_ov61_02180404:
 	.space 0x4
+	.global data_ov61_02180408
 data_ov61_02180408:
 	.space 0x4
+	.global data_ov61_0218040c
 data_ov61_0218040c:
 	.space 0x4
+	.global data_ov61_02180410
 data_ov61_02180410:
 	.space 0x4
+	.global data_ov61_02180414
 data_ov61_02180414:
 	.space 0x4
+	.global data_ov61_02180418
 data_ov61_02180418:
 	.space 0x4
+	.global data_ov61_0218041c
 data_ov61_0218041c:
 	.space 0x4
+	.global data_ov61_02180420
 data_ov61_02180420:
 	.space 0x4
+	.global data_ov61_02180424
 data_ov61_02180424:
 	.space 0x4
+	.global data_ov61_02180428
 data_ov61_02180428:
 	.space 0x4
+	.global data_ov61_0218042c
 data_ov61_0218042c:
 	.space 0x4
+	.global data_ov61_02180430
 data_ov61_02180430:
 	.space 0x4
+	.global data_ov61_02180434
 data_ov61_02180434:
 	.space 0x4
+	.global data_ov61_02180438
 data_ov61_02180438:
 	.space 0x4
+	.global data_ov61_0218043c
 data_ov61_0218043c:
 	.space 0x4
+	.global data_ov61_02180440
 data_ov61_02180440:
 	.space 0x4
+	.global data_ov61_02180444
 data_ov61_02180444:
 	.space 0x4
+	.global data_ov61_02180448
 data_ov61_02180448:
 	.space 0x4
+	.global data_ov61_0218044c
 data_ov61_0218044c:
 	.space 0x4
+	.global data_ov61_02180450
 data_ov61_02180450:
 	.space 0x4
+	.global data_ov61_02180454
 data_ov61_02180454:
 	.space 0x4
+	.global data_ov61_02180458
 data_ov61_02180458:
 	.space 0x4
+	.global data_ov61_0218045c
 data_ov61_0218045c:
 	.space 0x4
+	.global data_ov61_02180460
 data_ov61_02180460:
 	.space 0x4
+	.global data_ov61_02180464
 data_ov61_02180464:
 	.space 0x4
+	.global data_ov61_02180468
 data_ov61_02180468:
 	.space 0x4
+	.global data_ov61_0218046c
 data_ov61_0218046c:
 	.space 0x4
+	.global data_ov61_02180470
 data_ov61_02180470:
 	.space 0x4
+	.global data_ov61_02180474
 data_ov61_02180474:
 	.space 0x4
+	.global data_ov61_02180478
 data_ov61_02180478:
 	.space 0x4
+	.global data_ov61_0218047c
 data_ov61_0218047c:
 	.space 0x4
+	.global data_ov61_02180480
 data_ov61_02180480:
 	.space 0x4
+	.global data_ov61_02180484
 data_ov61_02180484:
 	.space 0x4
+	.global data_ov61_02180488
 data_ov61_02180488:
 	.space 0x4
+	.global data_ov61_0218048c
 data_ov61_0218048c:
 	.space 0x4
+	.global data_ov61_02180490
 data_ov61_02180490:
 	.space 0x4
+	.global data_ov61_02180494
 data_ov61_02180494:
 	.space 0x4
+	.global data_ov61_02180498
 data_ov61_02180498:
 	.space 0x4
+	.global data_ov61_0218049c
 data_ov61_0218049c:
 	.space 0x4
+	.global data_ov61_021804a0
 data_ov61_021804a0:
 	.space 0x4
+	.global data_ov61_021804a4
 data_ov61_021804a4:
 	.space 0x4
+	.global data_ov61_021804a8
 data_ov61_021804a8:
 	.space 0x4
+	.global data_ov61_021804ac
 data_ov61_021804ac:
 	.space 0x4
+	.global data_ov61_021804b0
 data_ov61_021804b0:
 	.space 0x4
+	.global data_ov61_021804b4
 data_ov61_021804b4:
 	.space 0x4
+	.global data_ov61_021804b8
 data_ov61_021804b8:
 	.space 0x4
+	.global data_ov61_021804bc
 data_ov61_021804bc:
 	.space 0x4
+	.global data_ov61_021804c0
 data_ov61_021804c0:
 	.space 0x4
+	.global data_ov61_021804c4
 data_ov61_021804c4:
 	.space 0x4
+	.global data_ov61_021804c8
 data_ov61_021804c8:
 	.space 0x4
+	.global data_ov61_021804cc
 data_ov61_021804cc:
 	.space 0x4
+	.global data_ov61_021804d0
 data_ov61_021804d0:
 	.space 0x4
+	.global data_ov61_021804d4
 data_ov61_021804d4:
 	.space 0x4
+	.global data_ov61_021804d8
 data_ov61_021804d8:
 	.space 0x4
+	.global data_ov61_021804dc
 data_ov61_021804dc:
 	.space 0x4
+	.global data_ov61_021804e0
 data_ov61_021804e0:
 	.space 0x4
+	.global data_ov61_021804e4
 data_ov61_021804e4:
 	.space 0x4
+	.global data_ov61_021804e8
 data_ov61_021804e8:
 	.space 0x4
+	.global data_ov61_021804ec
 data_ov61_021804ec:
 	.space 0x4
+	.global data_ov61_021804f0
 data_ov61_021804f0:
 	.space 0x4
+	.global data_ov61_021804f4
 data_ov61_021804f4:
 	.space 0x4
+	.global data_ov61_021804f8
 data_ov61_021804f8:
 	.space 0x4
+	.global data_ov61_021804fc
 data_ov61_021804fc:
 	.space 0x4
+	.global data_ov61_02180500
 data_ov61_02180500:
 	.space 0x4
+	.global data_ov61_02180504
 data_ov61_02180504:
 	.space 0x4
+	.global data_ov61_02180508
 data_ov61_02180508:
 	.space 0x4
+	.global data_ov61_0218050c
 data_ov61_0218050c:
 	.space 0x4
+	.global data_ov61_02180510
 data_ov61_02180510:
 	.space 0x4
+	.global data_ov61_02180514
 data_ov61_02180514:
 	.space 0x4
+	.global data_ov61_02180518
 data_ov61_02180518:
 	.space 0x4
+	.global data_ov61_0218051c
 data_ov61_0218051c:
 	.space 0x4
+	.global data_ov61_02180520
 data_ov61_02180520:
 	.space 0x4
+	.global data_ov61_02180524
 data_ov61_02180524:
 	.space 0x4
+	.global data_ov61_02180528
 data_ov61_02180528:
 	.space 0x4
+	.global data_ov61_0218052c
 data_ov61_0218052c:
 	.space 0x4
+	.global data_ov61_02180530
 data_ov61_02180530:
 	.space 0x4
+	.global data_ov61_02180534
 data_ov61_02180534:
 	.space 0x4
+	.global data_ov61_02180538
 data_ov61_02180538:
 	.space 0x4
+	.global data_ov61_0218053c
 data_ov61_0218053c:
 	.space 0x4
+	.global data_ov61_02180540
 data_ov61_02180540:
 	.space 0x4
+	.global data_ov61_02180544
 data_ov61_02180544:
 	.space 0x4
+	.global data_ov61_02180548
 data_ov61_02180548:
 	.space 0x4
+	.global data_ov61_0218054c
 data_ov61_0218054c:
 	.space 0x4
+	.global data_ov61_02180550
 data_ov61_02180550:
 	.space 0x4
+	.global data_ov61_02180554
 data_ov61_02180554:
 	.space 0x4
+	.global data_ov61_02180558
 data_ov61_02180558:
 	.space 0x4
+	.global data_ov61_0218055c
 data_ov61_0218055c:
 	.space 0x4
+	.global data_ov61_02180560
 data_ov61_02180560:
 	.space 0x4
+	.global data_ov61_02180564
 data_ov61_02180564:
 	.space 0x4
+	.global data_ov61_02180568
 data_ov61_02180568:
 	.space 0x4
+	.global data_ov61_0218056c
 data_ov61_0218056c:
 	.space 0x4
+	.global data_ov61_02180570
 data_ov61_02180570:
 	.space 0x4
+	.global data_ov61_02180574
 data_ov61_02180574:
 	.space 0x4
+	.global data_ov61_02180578
 data_ov61_02180578:
 	.space 0x4
+	.global data_ov61_0218057c
 data_ov61_0218057c:
 	.space 0x4
+	.global data_ov61_02180580
 data_ov61_02180580:
 	.space 0x4
+	.global data_ov61_02180584
 data_ov61_02180584:
 	.space 0x4
+	.global data_ov61_02180588
 data_ov61_02180588:
 	.space 0x4
+	.global data_ov61_0218058c
 data_ov61_0218058c:
 	.space 0x4
+	.global data_ov61_02180590
 data_ov61_02180590:
 	.space 0x4
+	.global data_ov61_02180594
 data_ov61_02180594:
 	.space 0x4
+	.global data_ov61_02180598
 data_ov61_02180598:
 	.space 0x4
+	.global data_ov61_0218059c
 data_ov61_0218059c:
 	.space 0x4
+	.global data_ov61_021805a0
 data_ov61_021805a0:
 	.space 0x4
+	.global data_ov61_021805a4
 data_ov61_021805a4:
 	.space 0x4
+	.global data_ov61_021805a8
 data_ov61_021805a8:
 	.space 0x4
+	.global data_ov61_021805ac
 data_ov61_021805ac:
 	.space 0x4
+	.global data_ov61_021805b0
 data_ov61_021805b0:
 	.space 0x4
+	.global data_ov61_021805b4
 data_ov61_021805b4:
 	.space 0x4
+	.global data_ov61_021805b8
 data_ov61_021805b8:
 	.space 0x4
+	.global data_ov61_021805bc
 data_ov61_021805bc:
 	.space 0x4
+	.global data_ov61_021805c0
 data_ov61_021805c0:
 	.space 0x4
+	.global data_ov61_021805c4
 data_ov61_021805c4:
 	.space 0x4
+	.global data_ov61_021805c8
 data_ov61_021805c8:
 	.space 0x4
+	.global data_ov61_021805cc
 data_ov61_021805cc:
 	.space 0x4
+	.global data_ov61_021805d0
 data_ov61_021805d0:
 	.space 0x4
+	.global data_ov61_021805d4
 data_ov61_021805d4:
 	.space 0x4
+	.global data_ov61_021805d8
 data_ov61_021805d8:
 	.space 0x4
+	.global data_ov61_021805dc
 data_ov61_021805dc:
 	.space 0x4
+	.global data_ov61_021805e0
 data_ov61_021805e0:
 	.space 0x4
+	.global data_ov61_021805e4
 data_ov61_021805e4:
 	.space 0x4
+	.global data_ov61_021805e8
 data_ov61_021805e8:
 	.space 0x4
+	.global data_ov61_021805ec
 data_ov61_021805ec:
 	.space 0x4
+	.global data_ov61_021805f0
 data_ov61_021805f0:
 	.space 0x4
+	.global data_ov61_021805f4
 data_ov61_021805f4:
 	.space 0x4
+	.global data_ov61_021805f8
 data_ov61_021805f8:
 	.space 0x4
+	.global data_ov61_021805fc
 data_ov61_021805fc:
 	.space 0x4
+	.global data_ov61_02180600
 data_ov61_02180600:
 	.space 0x4
+	.global data_ov61_02180604
 data_ov61_02180604:
 	.space 0x4
+	.global data_ov61_02180608
 data_ov61_02180608:
 	.space 0x4
+	.global data_ov61_0218060c
 data_ov61_0218060c:
 	.space 0x4
+	.global data_ov61_02180610
 data_ov61_02180610:
 	.space 0x4
+	.global data_ov61_02180614
 data_ov61_02180614:
 	.space 0x4
+	.global data_ov61_02180618
 data_ov61_02180618:
 	.space 0x4
+	.global data_ov61_0218061c
 data_ov61_0218061c:
 	.space 0x4
+	.global data_ov61_02180620
 data_ov61_02180620:
 	.space 0x4
+	.global data_ov61_02180624
 data_ov61_02180624:
 	.space 0x4
+	.global data_ov61_02180628
 data_ov61_02180628:
 	.space 0x4
+	.global data_ov61_0218062c
 data_ov61_0218062c:
 	.space 0x4
+	.global data_ov61_02180630
 data_ov61_02180630:
 	.space 0x4
+	.global data_ov61_02180634
 data_ov61_02180634:
 	.space 0x4
+	.global data_ov61_02180638
 data_ov61_02180638:
 	.space 0x4
+	.global data_ov61_0218063c
 data_ov61_0218063c:
 	.space 0x4
+	.global data_ov61_02180640
 data_ov61_02180640:
 	.space 0x4
+	.global data_ov61_02180644
 data_ov61_02180644:
 	.space 0x4
+	.global data_ov61_02180648
 data_ov61_02180648:
 	.space 0x4
+	.global data_ov61_0218064c
 data_ov61_0218064c:
 	.space 0x4
+	.global data_ov61_02180650
 data_ov61_02180650:
 	.space 0x4
+	.global data_ov61_02180654
 data_ov61_02180654:
 	.space 0x4
+	.global data_ov61_02180658
 data_ov61_02180658:
 	.space 0x4
+	.global data_ov61_0218065c
 data_ov61_0218065c:
 	.space 0x4
+	.global data_ov61_02180660
 data_ov61_02180660:
 	.space 0x4
+	.global data_ov61_02180664
 data_ov61_02180664:
 	.space 0x4
+	.global data_ov61_02180668
 data_ov61_02180668:
 	.space 0x4
+	.global data_ov61_0218066c
 data_ov61_0218066c:
 	.space 0x4
+	.global data_ov61_02180670
 data_ov61_02180670:
 	.space 0x4
+	.global data_ov61_02180674
 data_ov61_02180674:
 	.space 0x4
+	.global data_ov61_02180678
 data_ov61_02180678:
 	.space 0x4
+	.global data_ov61_0218067c
 data_ov61_0218067c:
 	.space 0x4
+	.global data_ov61_02180680
 data_ov61_02180680:
 	.space 0x4
+	.global data_ov61_02180684
 data_ov61_02180684:
 	.space 0x4
+	.global data_ov61_02180688
 data_ov61_02180688:
 	.space 0x4
+	.global data_ov61_0218068c
 data_ov61_0218068c:
 	.space 0x4
+	.global data_ov61_02180690
 data_ov61_02180690:
 	.space 0x4
+	.global data_ov61_02180694
 data_ov61_02180694:
 	.space 0x4
+	.global data_ov61_02180698
 data_ov61_02180698:
 	.space 0x4
+	.global data_ov61_0218069c
 data_ov61_0218069c:
 	.space 0x4
+	.global data_ov61_021806a0
 data_ov61_021806a0:
 	.space 0x4
+	.global data_ov61_021806a4
 data_ov61_021806a4:
 	.space 0x4
+	.global data_ov61_021806a8
 data_ov61_021806a8:
 	.space 0x4
+	.global data_ov61_021806ac
 data_ov61_021806ac:
 	.space 0x4
+	.global data_ov61_021806b0
 data_ov61_021806b0:
 	.space 0x4
+	.global data_ov61_021806b4
 data_ov61_021806b4:
 	.space 0x4
+	.global data_ov61_021806b8
 data_ov61_021806b8:
 	.space 0x4
+	.global data_ov61_021806bc
 data_ov61_021806bc:
 	.space 0x4
+	.global data_ov61_021806c0
 data_ov61_021806c0:
 	.space 0x4
+	.global data_ov61_021806c4
 data_ov61_021806c4:
 	.space 0x4
+	.global data_ov61_021806c8
 data_ov61_021806c8:
 	.space 0x4
+	.global data_ov61_021806cc
 data_ov61_021806cc:
 	.space 0x4
+	.global data_ov61_021806d0
 data_ov61_021806d0:
 	.space 0x4
+	.global data_ov61_021806d4
 data_ov61_021806d4:
 	.space 0x4
+	.global data_ov61_021806d8
 data_ov61_021806d8:
 	.space 0x4
+	.global data_ov61_021806dc
 data_ov61_021806dc:
 	.space 0x4
+	.global data_ov61_021806e0
 data_ov61_021806e0:
 	.space 0x4
+	.global data_ov61_021806e4
 data_ov61_021806e4:
 	.space 0x4
+	.global data_ov61_021806e8
 data_ov61_021806e8:
 	.space 0x4
+	.global data_ov61_021806ec
 data_ov61_021806ec:
 	.space 0x4
+	.global data_ov61_021806f0
 data_ov61_021806f0:
 	.space 0x4
+	.global data_ov61_021806f4
 data_ov61_021806f4:
 	.space 0x4
+	.global data_ov61_021806f8
 data_ov61_021806f8:
 	.space 0x4
+	.global data_ov61_021806fc
 data_ov61_021806fc:
 	.space 0x4
+	.global data_ov61_02180700
 data_ov61_02180700:
 	.space 0x4
+	.global data_ov61_02180704
 data_ov61_02180704:
 	.space 0x4
+	.global data_ov61_02180708
 data_ov61_02180708:
 	.space 0x4
+	.global data_ov61_0218070c
 data_ov61_0218070c:
 	.space 0x4
+	.global data_ov61_02180710
 data_ov61_02180710:
 	.space 0x4
+	.global data_ov61_02180714
 data_ov61_02180714:
 	.space 0x4
+	.global data_ov61_02180718
 data_ov61_02180718:
 	.space 0x4
+	.global data_ov61_0218071c
 data_ov61_0218071c:
 	.space 0x4
+	.global data_ov61_02180720
 data_ov61_02180720:
 	.space 0x4
+	.global data_ov61_02180724
 data_ov61_02180724:
 	.space 0x4
+	.global data_ov61_02180728
 data_ov61_02180728:
 	.space 0x4
+	.global data_ov61_0218072c
 data_ov61_0218072c:
 	.space 0x4
+	.global data_ov61_02180730
 data_ov61_02180730:
 	.space 0x4
+	.global data_ov61_02180734
 data_ov61_02180734:
 	.space 0x4
+	.global data_ov61_02180738
 data_ov61_02180738:
 	.space 0x4
+	.global data_ov61_0218073c
 data_ov61_0218073c:
 	.space 0x4
+	.global data_ov61_02180740
 data_ov61_02180740:
 	.space 0x4
+	.global data_ov61_02180744
 data_ov61_02180744:
 	.space 0x4
+	.global data_ov61_02180748
 data_ov61_02180748:
 	.space 0x4
+	.global data_ov61_0218074c
 data_ov61_0218074c:
 	.space 0x4
+	.global data_ov61_02180750
 data_ov61_02180750:
 	.space 0x4
+	.global data_ov61_02180754
 data_ov61_02180754:
 	.space 0x4
+	.global data_ov61_02180758
 data_ov61_02180758:
 	.space 0x4
+	.global data_ov61_0218075c
 data_ov61_0218075c:
 	.space 0x4
+	.global data_ov61_02180760
 data_ov61_02180760:
 	.space 0x4
+	.global data_ov61_02180764
 data_ov61_02180764:
 	.space 0x4
+	.global data_ov61_02180768
 data_ov61_02180768:
 	.space 0x4
+	.global data_ov61_0218076c
 data_ov61_0218076c:
 	.space 0x4
+	.global data_ov61_02180770
 data_ov61_02180770:
 	.space 0x4
+	.global data_ov61_02180774
 data_ov61_02180774:
 	.space 0x4
+	.global data_ov61_02180778
 data_ov61_02180778:
 	.space 0x4
+	.global data_ov61_0218077c
 data_ov61_0218077c:
 	.space 0x4
+	.global data_ov61_02180780
 data_ov61_02180780:
 	.space 0x4
+	.global data_ov61_02180784
 data_ov61_02180784:
 	.space 0x4
+	.global data_ov61_02180788
 data_ov61_02180788:
 	.space 0x4
+	.global data_ov61_0218078c
 data_ov61_0218078c:
 	.space 0x4
+	.global data_ov61_02180790
 data_ov61_02180790:
 	.space 0x4
+	.global data_ov61_02180794
 data_ov61_02180794:
 	.space 0x4
+	.global data_ov61_02180798
 data_ov61_02180798:
 	.space 0x4
+	.global data_ov61_0218079c
 data_ov61_0218079c:
 	.space 0x4
+	.global data_ov61_021807a0
 data_ov61_021807a0:
 	.space 0x4
+	.global data_ov61_021807a4
 data_ov61_021807a4:
 	.space 0x4
+	.global data_ov61_021807a8
 data_ov61_021807a8:
 	.space 0x4
+	.global data_ov61_021807ac
 data_ov61_021807ac:
 	.space 0x4
+	.global data_ov61_021807b0
 data_ov61_021807b0:
 	.space 0x4
+	.global data_ov61_021807b4
 data_ov61_021807b4:
 	.space 0x4
+	.global data_ov61_021807b8
 data_ov61_021807b8:
 	.space 0x4
+	.global data_ov61_021807bc
 data_ov61_021807bc:
 	.space 0x4
+	.global data_ov61_021807c0
 data_ov61_021807c0:
 	.space 0x4
+	.global data_ov61_021807c4
 data_ov61_021807c4:
 	.space 0x4
+	.global data_ov61_021807c8
 data_ov61_021807c8:
 	.space 0x4
+	.global data_ov61_021807cc
 data_ov61_021807cc:
 	.space 0x4
+	.global data_ov61_021807d0
 data_ov61_021807d0:
 	.space 0x4
+	.global data_ov61_021807d4
 data_ov61_021807d4:
 	.space 0x4
+	.global data_ov61_021807d8
 data_ov61_021807d8:
 	.space 0x4
+	.global data_ov61_021807dc
 data_ov61_021807dc:
 	.space 0x4
+	.global data_ov61_021807e0
 data_ov61_021807e0:
 	.space 0x4
+	.global data_ov61_021807e4
 data_ov61_021807e4:
 	.space 0x4
+	.global data_ov61_021807e8
 data_ov61_021807e8:
 	.space 0x4
+	.global data_ov61_021807ec
 data_ov61_021807ec:
 	.space 0x4
+	.global data_ov61_021807f0
 data_ov61_021807f0:
 	.space 0x4
+	.global data_ov61_021807f4
 data_ov61_021807f4:
 	.space 0x4
+	.global data_ov61_021807f8
 data_ov61_021807f8:
 	.space 0x4
+	.global data_ov61_021807fc
 data_ov61_021807fc:
 	.space 0x4
+	.global data_ov61_02180800
 data_ov61_02180800:
 	.space 0x4
+	.global data_ov61_02180804
 data_ov61_02180804:
 	.space 0x4
+	.global data_ov61_02180808
 data_ov61_02180808:
 	.space 0x4
+	.global data_ov61_0218080c
 data_ov61_0218080c:
 	.space 0x4
+	.global data_ov61_02180810
 data_ov61_02180810:
 	.space 0x4
+	.global data_ov61_02180814
 data_ov61_02180814:
 	.space 0x4
+	.global data_ov61_02180818
 data_ov61_02180818:
 	.space 0x4
+	.global data_ov61_0218081c
 data_ov61_0218081c:
 	.space 0x4
+	.global data_ov61_02180820
 data_ov61_02180820:
 	.space 0x4
+	.global data_ov61_02180824
 data_ov61_02180824:
 	.space 0x4
+	.global data_ov61_02180828
 data_ov61_02180828:
 	.space 0x4
+	.global data_ov61_0218082c
 data_ov61_0218082c:
 	.space 0x4
+	.global data_ov61_02180830
 data_ov61_02180830:
 	.space 0x4
+	.global data_ov61_02180834
 data_ov61_02180834:
 	.space 0x4
+	.global data_ov61_02180838
 data_ov61_02180838:
 	.space 0x4
+	.global data_ov61_0218083c
 data_ov61_0218083c:
 	.space 0x4
+	.global data_ov61_02180840
 data_ov61_02180840:
 	.space 0x4
+	.global data_ov61_02180844
 data_ov61_02180844:
 	.space 0x4
+	.global data_ov61_02180848
 data_ov61_02180848:
 	.space 0x4
+	.global data_ov61_0218084c
 data_ov61_0218084c:
 	.space 0x4
+	.global data_ov61_02180850
 data_ov61_02180850:
 	.space 0x4
+	.global data_ov61_02180854
 data_ov61_02180854:
 	.space 0x4
+	.global data_ov61_02180858
 data_ov61_02180858:
 	.space 0x4
+	.global data_ov61_0218085c
 data_ov61_0218085c:
 	.space 0x4
+	.global data_ov61_02180860
 data_ov61_02180860:
 	.space 0x4
+	.global data_ov61_02180864
 data_ov61_02180864:
 	.space 0x4
+	.global data_ov61_02180868
 data_ov61_02180868:
 	.space 0x4
+	.global data_ov61_0218086c
 data_ov61_0218086c:
 	.space 0x4
+	.global data_ov61_02180870
 data_ov61_02180870:
 	.space 0x4
+	.global data_ov61_02180874
 data_ov61_02180874:
 	.space 0x4
+	.global data_ov61_02180878
 data_ov61_02180878:
 	.space 0x4
+	.global data_ov61_0218087c
 data_ov61_0218087c:
 	.space 0x4
+	.global data_ov61_02180880
 data_ov61_02180880:
 	.space 0x4
+	.global data_ov61_02180884
 data_ov61_02180884:
 	.space 0x4
+	.global data_ov61_02180888
 data_ov61_02180888:
 	.space 0x4
+	.global data_ov61_0218088c
 data_ov61_0218088c:
 	.space 0x4
+	.global data_ov61_02180890
 data_ov61_02180890:
 	.space 0x4
+	.global data_ov61_02180894
 data_ov61_02180894:
 	.space 0x4
+	.global data_ov61_02180898
 data_ov61_02180898:
 	.space 0x4
+	.global data_ov61_0218089c
 data_ov61_0218089c:
 	.space 0x4
+	.global data_ov61_021808a0
 data_ov61_021808a0:
 	.space 0x4
+	.global data_ov61_021808a4
 data_ov61_021808a4:
 	.space 0x4
+	.global data_ov61_021808a8
 data_ov61_021808a8:
 	.space 0x4
+	.global data_ov61_021808ac
 data_ov61_021808ac:
 	.space 0x4
+	.global data_ov61_021808b0
 data_ov61_021808b0:
 	.space 0x4
+	.global data_ov61_021808b4
 data_ov61_021808b4:
 	.space 0x4
+	.global data_ov61_021808b8
 data_ov61_021808b8:
 	.space 0x4
+	.global data_ov61_021808bc
 data_ov61_021808bc:
 	.space 0x4
+	.global data_ov61_021808c0
 data_ov61_021808c0:
 	.space 0x4
+	.global data_ov61_021808c4
 data_ov61_021808c4:
 	.space 0x4
+	.global data_ov61_021808c8
 data_ov61_021808c8:
 	.space 0x4
+	.global data_ov61_021808cc
 data_ov61_021808cc:
 	.space 0x4
+	.global data_ov61_021808d0
 data_ov61_021808d0:
 	.space 0x4
+	.global data_ov61_021808d4
 data_ov61_021808d4:
 	.space 0x4
+	.global data_ov61_021808d8
 data_ov61_021808d8:
 	.space 0x4
+	.global data_ov61_021808dc
 data_ov61_021808dc:
 	.space 0x4
+	.global data_ov61_021808e0
 data_ov61_021808e0:
 	.space 0x4
+	.global data_ov61_021808e4
 data_ov61_021808e4:
 	.space 0x4
+	.global data_ov61_021808e8
 data_ov61_021808e8:
 	.space 0x4
+	.global data_ov61_021808ec
 data_ov61_021808ec:
 	.space 0x4
+	.global data_ov61_021808f0
 data_ov61_021808f0:
 	.space 0x4
+	.global data_ov61_021808f4
 data_ov61_021808f4:
 	.space 0x4
+	.global data_ov61_021808f8
 data_ov61_021808f8:
 	.space 0x4
+	.global data_ov61_021808fc
 data_ov61_021808fc:
 	.space 0x4
+	.global data_ov61_02180900
 data_ov61_02180900:
 	.space 0x4
+	.global data_ov61_02180904
 data_ov61_02180904:
 	.space 0x4
+	.global data_ov61_02180908
 data_ov61_02180908:
 	.space 0x4
+	.global data_ov61_0218090c
 data_ov61_0218090c:
 	.space 0x4
+	.global data_ov61_02180910
 data_ov61_02180910:
 	.space 0x4
+	.global data_ov61_02180914
 data_ov61_02180914:
 	.space 0x4
+	.global data_ov61_02180918
 data_ov61_02180918:
 	.space 0x4
+	.global data_ov61_0218091c
 data_ov61_0218091c:
 	.space 0x4
+	.global data_ov61_02180920
 data_ov61_02180920:
 	.space 0x4
+	.global data_ov61_02180924
 data_ov61_02180924:
 	.space 0x4
+	.global data_ov61_02180928
 data_ov61_02180928:
 	.space 0x4
+	.global data_ov61_0218092c
 data_ov61_0218092c:
 	.space 0x4
+	.global data_ov61_02180930
 data_ov61_02180930:
 	.space 0x4
+	.global data_ov61_02180934
 data_ov61_02180934:
 	.space 0x4
+	.global data_ov61_02180938
 data_ov61_02180938:
 	.space 0x4
+	.global data_ov61_0218093c
 data_ov61_0218093c:
 	.space 0x4
+	.global data_ov61_02180940
 data_ov61_02180940:
 	.space 0x4
+	.global data_ov61_02180944
 data_ov61_02180944:
 	.space 0x4
+	.global data_ov61_02180948
 data_ov61_02180948:
 	.space 0x4
+	.global data_ov61_0218094c
 data_ov61_0218094c:
 	.space 0x4
+	.global data_ov61_02180950
 data_ov61_02180950:
 	.space 0x4
+	.global data_ov61_02180954
 data_ov61_02180954:
 	.space 0x4
+	.global data_ov61_02180958
 data_ov61_02180958:
 	.space 0x4
+	.global data_ov61_0218095c
 data_ov61_0218095c:
 	.space 0x4
+	.global data_ov61_02180960
 data_ov61_02180960:
 	.space 0x4
+	.global data_ov61_02180964
 data_ov61_02180964:
 	.space 0x4
+	.global data_ov61_02180968
 data_ov61_02180968:
 	.space 0x4
+	.global data_ov61_0218096c
 data_ov61_0218096c:
 	.space 0x4
+	.global data_ov61_02180970
 data_ov61_02180970:
 	.space 0x4
+	.global data_ov61_02180974
 data_ov61_02180974:
 	.space 0x4
+	.global data_ov61_02180978
 data_ov61_02180978:
 	.space 0x4
+	.global data_ov61_0218097c
 data_ov61_0218097c:
 	.space 0x4
+	.global data_ov61_02180980
 data_ov61_02180980:
 	.space 0x4
+	.global data_ov61_02180984
 data_ov61_02180984:
 	.space 0x4
+	.global data_ov61_02180988
 data_ov61_02180988:
 	.space 0x4
+	.global data_ov61_0218098c
 data_ov61_0218098c:
 	.space 0x4
+	.global data_ov61_02180990
 data_ov61_02180990:
 	.space 0x4
+	.global data_ov61_02180994
 data_ov61_02180994:
 	.space 0x4
+	.global data_ov61_02180998
 data_ov61_02180998:
 	.space 0x4
+	.global data_ov61_0218099c
 data_ov61_0218099c:
 	.space 0x4
+	.global data_ov61_021809a0
 data_ov61_021809a0:
 	.space 0x4
+	.global data_ov61_021809a4
 data_ov61_021809a4:
 	.space 0x4
+	.global data_ov61_021809a8
 data_ov61_021809a8:
 	.space 0x4
+	.global data_ov61_021809ac
 data_ov61_021809ac:
 	.space 0x4
+	.global data_ov61_021809b0
 data_ov61_021809b0:
 	.space 0x4
+	.global data_ov61_021809b4
 data_ov61_021809b4:
 	.space 0x4
+	.global data_ov61_021809b8
 data_ov61_021809b8:
 	.space 0x4
+	.global data_ov61_021809bc
 data_ov61_021809bc:
 	.space 0x4
+	.global data_ov61_021809c0
 data_ov61_021809c0:
 	.space 0x4
+	.global data_ov61_021809c4
 data_ov61_021809c4:
 	.space 0x4
+	.global data_ov61_021809c8
 data_ov61_021809c8:
 	.space 0x4
+	.global data_ov61_021809cc
 data_ov61_021809cc:
 	.space 0x4
+	.global data_ov61_021809d0
 data_ov61_021809d0:
 	.space 0x4
+	.global data_ov61_021809d4
 data_ov61_021809d4:
 	.space 0x4
+	.global data_ov61_021809d8
 data_ov61_021809d8:
 	.space 0x4
+	.global data_ov61_021809dc
 data_ov61_021809dc:
 	.space 0x4
+	.global data_ov61_021809e0
 data_ov61_021809e0:
 	.space 0x4
+	.global data_ov61_021809e4
 data_ov61_021809e4:
 	.space 0x4
+	.global data_ov61_021809e8
 data_ov61_021809e8:
 	.space 0x4
+	.global data_ov61_021809ec
 data_ov61_021809ec:
 	.space 0x4
+	.global data_ov61_021809f0
 data_ov61_021809f0:
 	.space 0x4
+	.global data_ov61_021809f4
 data_ov61_021809f4:
 	.space 0x4
+	.global data_ov61_021809f8
 data_ov61_021809f8:
 	.space 0x4
+	.global data_ov61_021809fc
 data_ov61_021809fc:
 	.space 0x4
+	.global data_ov61_02180a00
 data_ov61_02180a00:
 	.space 0x4
+	.global data_ov61_02180a04
 data_ov61_02180a04:
 	.space 0x4
+	.global data_ov61_02180a08
 data_ov61_02180a08:
 	.space 0x4
+	.global data_ov61_02180a0c
 data_ov61_02180a0c:
 	.space 0x4
+	.global data_ov61_02180a10
 data_ov61_02180a10:
 	.space 0x4
+	.global data_ov61_02180a14
 data_ov61_02180a14:
 	.space 0x4
+	.global data_ov61_02180a18
 data_ov61_02180a18:
 	.space 0x4
+	.global data_ov61_02180a1c
 data_ov61_02180a1c:
 	.space 0x4
+	.global data_ov61_02180a20
 data_ov61_02180a20:
 	.space 0x4
+	.global data_ov61_02180a24
 data_ov61_02180a24:
 	.space 0x4
+	.global data_ov61_02180a28
 data_ov61_02180a28:
 	.space 0x4
+	.global data_ov61_02180a2c
 data_ov61_02180a2c:
 	.space 0x4
+	.global data_ov61_02180a30
 data_ov61_02180a30:
 	.space 0x4
+	.global data_ov61_02180a34
 data_ov61_02180a34:
 	.space 0x4
+	.global data_ov61_02180a38
 data_ov61_02180a38:
 	.space 0x4
+	.global data_ov61_02180a3c
 data_ov61_02180a3c:
 	.space 0x4
+	.global data_ov61_02180a40
 data_ov61_02180a40:
 	.space 0x4
+	.global data_ov61_02180a44
 data_ov61_02180a44:
 	.space 0x4
+	.global data_ov61_02180a48
 data_ov61_02180a48:
 	.space 0x4
+	.global data_ov61_02180a4c
 data_ov61_02180a4c:
 	.space 0x4
+	.global data_ov61_02180a50
 data_ov61_02180a50:
 	.space 0x4
+	.global data_ov61_02180a54
 data_ov61_02180a54:
 	.space 0x4
+	.global data_ov61_02180a58
 data_ov61_02180a58:
 	.space 0x4
+	.global data_ov61_02180a5c
 data_ov61_02180a5c:
 	.space 0x4
+	.global data_ov61_02180a60
 data_ov61_02180a60:
 	.space 0x4
+	.global data_ov61_02180a64
 data_ov61_02180a64:
 	.space 0x4
+	.global data_ov61_02180a68
 data_ov61_02180a68:
 	.space 0x4
+	.global data_ov61_02180a6c
 data_ov61_02180a6c:
 	.space 0x4
+	.global data_ov61_02180a70
 data_ov61_02180a70:
 	.space 0x4
+	.global data_ov61_02180a74
 data_ov61_02180a74:
 	.space 0x4
+	.global data_ov61_02180a78
 data_ov61_02180a78:
 	.space 0x4
+	.global data_ov61_02180a7c
 data_ov61_02180a7c:
 	.space 0x4
+	.global data_ov61_02180a80
 data_ov61_02180a80:
 	.space 0x4
+	.global data_ov61_02180a84
 data_ov61_02180a84:
 	.space 0x4
+	.global data_ov61_02180a88
 data_ov61_02180a88:
 	.space 0x4
+	.global data_ov61_02180a8c
 data_ov61_02180a8c:
 	.space 0x4
+	.global data_ov61_02180a90
 data_ov61_02180a90:
 	.space 0x4
+	.global data_ov61_02180a94
 data_ov61_02180a94:
 	.space 0x4
+	.global data_ov61_02180a98
 data_ov61_02180a98:
 	.space 0x4
+	.global data_ov61_02180a9c
 data_ov61_02180a9c:
 	.space 0x4
+	.global data_ov61_02180aa0
 data_ov61_02180aa0:
 	.space 0x4
+	.global data_ov61_02180aa4
 data_ov61_02180aa4:
 	.space 0x4
+	.global data_ov61_02180aa8
 data_ov61_02180aa8:
 	.space 0x4
+	.global data_ov61_02180aac
 data_ov61_02180aac:
 	.space 0x4
+	.global data_ov61_02180ab0
 data_ov61_02180ab0:
 	.space 0x4
+	.global data_ov61_02180ab4
 data_ov61_02180ab4:
 	.space 0x4
+	.global data_ov61_02180ab8
 data_ov61_02180ab8:
 	.space 0x4
+	.global data_ov61_02180abc
 data_ov61_02180abc:
 	.space 0x4
+	.global data_ov61_02180ac0
 data_ov61_02180ac0:
 	.space 0x4
+	.global data_ov61_02180ac4
 data_ov61_02180ac4:
 	.space 0x4
+	.global data_ov61_02180ac8
 data_ov61_02180ac8:
 	.space 0x4
+	.global data_ov61_02180acc
 data_ov61_02180acc:
 	.space 0x4
+	.global data_ov61_02180ad0
 data_ov61_02180ad0:
 	.space 0x4
+	.global data_ov61_02180ad4
 data_ov61_02180ad4:
 	.space 0x4
+	.global data_ov61_02180ad8
 data_ov61_02180ad8:
 	.space 0x4
+	.global data_ov61_02180adc
 data_ov61_02180adc:
 	.space 0x4
+	.global data_ov61_02180ae0
 data_ov61_02180ae0:
 	.space 0x4
+	.global data_ov61_02180ae4
 data_ov61_02180ae4:
 	.space 0x4
+	.global data_ov61_02180ae8
 data_ov61_02180ae8:
 	.space 0x4
+	.global data_ov61_02180aec
 data_ov61_02180aec:
 	.space 0x4
+	.global data_ov61_02180af0
 data_ov61_02180af0:
 	.space 0x4
+	.global data_ov61_02180af4
 data_ov61_02180af4:
 	.space 0x4
+	.global data_ov61_02180af8
 data_ov61_02180af8:
 	.space 0x4
+	.global data_ov61_02180afc
 data_ov61_02180afc:
 	.space 0x4
+	.global data_ov61_02180b00
 data_ov61_02180b00:
 	.space 0x4
+	.global data_ov61_02180b04
 data_ov61_02180b04:
 	.space 0x4
+	.global data_ov61_02180b08
 data_ov61_02180b08:
 	.space 0x4
+	.global data_ov61_02180b0c
 data_ov61_02180b0c:
 	.space 0x4
+	.global data_ov61_02180b10
 data_ov61_02180b10:
 	.space 0x4
+	.global data_ov61_02180b14
 data_ov61_02180b14:
 	.space 0x4
+	.global data_ov61_02180b18
 data_ov61_02180b18:
 	.space 0x4
+	.global data_ov61_02180b1c
 data_ov61_02180b1c:
 	.space 0x4
+	.global data_ov61_02180b20
 data_ov61_02180b20:
 	.space 0x4
+	.global data_ov61_02180b24
 data_ov61_02180b24:
 	.space 0x4
+	.global data_ov61_02180b28
 data_ov61_02180b28:
 	.space 0x4
+	.global data_ov61_02180b2c
 data_ov61_02180b2c:
 	.space 0x4
+	.global data_ov61_02180b30
 data_ov61_02180b30:
 	.space 0x4
+	.global data_ov61_02180b34
 data_ov61_02180b34:
 	.space 0x4
+	.global data_ov61_02180b38
 data_ov61_02180b38:
 	.space 0x4
+	.global data_ov61_02180b3c
 data_ov61_02180b3c:
 	.space 0x4
+	.global data_ov61_02180b40
 data_ov61_02180b40:
 	.space 0x4
+	.global data_ov61_02180b44
 data_ov61_02180b44:
 	.space 0x4
+	.global data_ov61_02180b48
 data_ov61_02180b48:
 	.space 0x4
+	.global data_ov61_02180b4c
 data_ov61_02180b4c:
 	.space 0x4
+	.global data_ov61_02180b50
 data_ov61_02180b50:
 	.space 0x4
+	.global data_ov61_02180b54
 data_ov61_02180b54:
 	.space 0x4
+	.global data_ov61_02180b58
 data_ov61_02180b58:
 	.space 0x4
+	.global data_ov61_02180b5c
 data_ov61_02180b5c:
 	.space 0x4
+	.global data_ov61_02180b60
 data_ov61_02180b60:
 	.space 0x4
+	.global data_ov61_02180b64
 data_ov61_02180b64:
 	.space 0x4
+	.global data_ov61_02180b68
 data_ov61_02180b68:
 	.space 0x4
+	.global data_ov61_02180b6c
 data_ov61_02180b6c:
 	.space 0x4
+	.global data_ov61_02180b70
 data_ov61_02180b70:
 	.space 0x4
+	.global data_ov61_02180b74
 data_ov61_02180b74:
 	.space 0x4
+	.global data_ov61_02180b78
 data_ov61_02180b78:
 	.space 0x4
+	.global data_ov61_02180b7c
 data_ov61_02180b7c:
 	.space 0x4
+	.global data_ov61_02180b80
 data_ov61_02180b80:
 	.space 0x4
+	.global data_ov61_02180b84
 data_ov61_02180b84:
 	.space 0x4
+	.global data_ov61_02180b88
 data_ov61_02180b88:
 	.space 0x4
+	.global data_ov61_02180b8c
 data_ov61_02180b8c:
 	.space 0x4
+	.global data_ov61_02180b90
 data_ov61_02180b90:
 	.space 0x4
+	.global data_ov61_02180b94
 data_ov61_02180b94:
 	.space 0x4
+	.global data_ov61_02180b98
 data_ov61_02180b98:
 	.space 0x4
+	.global data_ov61_02180b9c
 data_ov61_02180b9c:
 	.space 0x4
+	.global data_ov61_02180ba0
 data_ov61_02180ba0:
 	.space 0x4
+	.global data_ov61_02180ba4
 data_ov61_02180ba4:
 	.space 0x4
+	.global data_ov61_02180ba8
 data_ov61_02180ba8:
 	.space 0x4
+	.global data_ov61_02180bac
 data_ov61_02180bac:
 	.space 0x4
+	.global data_ov61_02180bb0
 data_ov61_02180bb0:
 	.space 0x4
+	.global data_ov61_02180bb4
 data_ov61_02180bb4:
 	.space 0x4
+	.global data_ov61_02180bb8
 data_ov61_02180bb8:
 	.space 0x4
+	.global data_ov61_02180bbc
 data_ov61_02180bbc:
 	.space 0x4
+	.global data_ov61_02180bc0
 data_ov61_02180bc0:
 	.space 0x4
+	.global data_ov61_02180bc4
 data_ov61_02180bc4:
 	.space 0x4
+	.global data_ov61_02180bc8
 data_ov61_02180bc8:
 	.space 0x4
+	.global data_ov61_02180bcc
 data_ov61_02180bcc:
 	.space 0x4
+	.global data_ov61_02180bd0
 data_ov61_02180bd0:
 	.space 0x4
+	.global data_ov61_02180bd4
 data_ov61_02180bd4:
 	.space 0x4
+	.global data_ov61_02180bd8
 data_ov61_02180bd8:
 	.space 0x4
+	.global data_ov61_02180bdc
 data_ov61_02180bdc:
 	.space 0x4
+	.global data_ov61_02180be0
 data_ov61_02180be0:
 	.space 0x4
+	.global data_ov61_02180be4
 data_ov61_02180be4:
 	.space 0x4
+	.global data_ov61_02180be8
 data_ov61_02180be8:
 	.space 0x4
+	.global data_ov61_02180bec
 data_ov61_02180bec:
 	.space 0x4
+	.global data_ov61_02180bf0
 data_ov61_02180bf0:
 	.space 0x4
+	.global data_ov61_02180bf4
 data_ov61_02180bf4:
 	.space 0x4
+	.global data_ov61_02180bf8
 data_ov61_02180bf8:
 	.space 0x4
+	.global data_ov61_02180bfc
 data_ov61_02180bfc:
 	.space 0x4
+	.global data_ov61_02180c00
 data_ov61_02180c00:
 	.space 0x4
+	.global data_ov61_02180c04
 data_ov61_02180c04:
 	.space 0x4
+	.global data_ov61_02180c08
 data_ov61_02180c08:
 	.space 0x4
+	.global data_ov61_02180c0c
 data_ov61_02180c0c:
 	.space 0x4
+	.global data_ov61_02180c10
 data_ov61_02180c10:
 	.space 0x4
+	.global data_ov61_02180c14
 data_ov61_02180c14:
 	.space 0x4
+	.global data_ov61_02180c18
 data_ov61_02180c18:
 	.space 0x4
+	.global data_ov61_02180c1c
 data_ov61_02180c1c:
 	.space 0x4
+	.global data_ov61_02180c20
 data_ov61_02180c20:
 	.space 0x4
+	.global data_ov61_02180c24
 data_ov61_02180c24:
 	.space 0x4
+	.global data_ov61_02180c28
 data_ov61_02180c28:
 	.space 0x4
+	.global data_ov61_02180c2c
 data_ov61_02180c2c:
 	.space 0x4
+	.global data_ov61_02180c30
 data_ov61_02180c30:
 	.space 0x4
+	.global data_ov61_02180c34
 data_ov61_02180c34:
 	.space 0x4
+	.global data_ov61_02180c38
 data_ov61_02180c38:
 	.space 0x4
+	.global data_ov61_02180c3c
 data_ov61_02180c3c:
 	.space 0x4
+	.global data_ov61_02180c40
 data_ov61_02180c40:
 	.space 0x4
+	.global data_ov61_02180c44
 data_ov61_02180c44:
 	.space 0x4
+	.global data_ov61_02180c48
 data_ov61_02180c48:
 	.space 0x4
+	.global data_ov61_02180c4c
 data_ov61_02180c4c:
 	.space 0x4
+	.global data_ov61_02180c50
 data_ov61_02180c50:
 	.space 0x4
+	.global data_ov61_02180c54
 data_ov61_02180c54:
 	.space 0x4
+	.global data_ov61_02180c58
 data_ov61_02180c58:
 	.space 0x4
+	.global data_ov61_02180c5c
 data_ov61_02180c5c:
 	.space 0x4
+	.global data_ov61_02180c60
 data_ov61_02180c60:
 	.space 0x4
+	.global data_ov61_02180c64
 data_ov61_02180c64:
 	.space 0x4
+	.global data_ov61_02180c68
 data_ov61_02180c68:
 	.space 0x4
+	.global data_ov61_02180c6c
 data_ov61_02180c6c:
 	.space 0x4
+	.global data_ov61_02180c70
 data_ov61_02180c70:
 	.space 0x4
+	.global data_ov61_02180c74
 data_ov61_02180c74:
 	.space 0x4
+	.global data_ov61_02180c78
 data_ov61_02180c78:
 	.space 0x4
+	.global data_ov61_02180c7c
 data_ov61_02180c7c:
 	.space 0x4
+	.global data_ov61_02180c80
 data_ov61_02180c80:
 	.space 0x4
+	.global data_ov61_02180c84
 data_ov61_02180c84:
 	.space 0x4
+	.global data_ov61_02180c88
 data_ov61_02180c88:
 	.space 0x4
+	.global data_ov61_02180c8c
 data_ov61_02180c8c:
 	.space 0x4
+	.global data_ov61_02180c90
 data_ov61_02180c90:
 	.space 0x4
+	.global data_ov61_02180c94
 data_ov61_02180c94:
 	.space 0x4
+	.global data_ov61_02180c98
 data_ov61_02180c98:
 	.space 0x4
+	.global data_ov61_02180c9c
 data_ov61_02180c9c:
 	.space 0x4
+	.global data_ov61_02180ca0
 data_ov61_02180ca0:
 	.space 0x4
+	.global data_ov61_02180ca4
 data_ov61_02180ca4:
 	.space 0x4
+	.global data_ov61_02180ca8
 data_ov61_02180ca8:
 	.space 0x4
+	.global data_ov61_02180cac
 data_ov61_02180cac:
 	.space 0x4
+	.global data_ov61_02180cb0
 data_ov61_02180cb0:
 	.space 0x4
+	.global data_ov61_02180cb4
 data_ov61_02180cb4:
 	.space 0x4
+	.global data_ov61_02180cb8
 data_ov61_02180cb8:
 	.space 0x4
+	.global data_ov61_02180cbc
 data_ov61_02180cbc:
 	.space 0x4
+	.global data_ov61_02180cc0
 data_ov61_02180cc0:
 	.space 0x4
+	.global data_ov61_02180cc4
 data_ov61_02180cc4:
 	.space 0x4
+	.global data_ov61_02180cc8
 data_ov61_02180cc8:
 	.space 0x4
+	.global data_ov61_02180ccc
 data_ov61_02180ccc:
 	.space 0x4
+	.global data_ov61_02180cd0
 data_ov61_02180cd0:
 	.space 0x4
+	.global data_ov61_02180cd4
 data_ov61_02180cd4:
 	.space 0x4
+	.global data_ov61_02180cd8
 data_ov61_02180cd8:
 	.space 0x4
+	.global data_ov61_02180cdc
 data_ov61_02180cdc:
 	.space 0x2
+	.global data_ov61_02180cde
 data_ov61_02180cde:
 	.space 0x2
+	.global data_ov61_02180ce0
 data_ov61_02180ce0:
 	.space 0x4
+	.global data_ov61_02180ce4
 data_ov61_02180ce4:
 	.space 0x4
+	.global data_ov61_02180ce8
 data_ov61_02180ce8:
 	.space 0x4
+	.global data_ov61_02180cec
 data_ov61_02180cec:
 	.space 0x4
+	.global data_ov61_02180cf0
 data_ov61_02180cf0:
 	.space 0x4
+	.global data_ov61_02180cf4
 data_ov61_02180cf4:
 	.space 0x4
+	.global data_ov61_02180cf8
 data_ov61_02180cf8:
 	.space 0x4
+	.global data_ov61_02180cfc
 data_ov61_02180cfc:
 	.space 0x4
+	.global data_ov61_02180d00
 data_ov61_02180d00:
 	.space 0x4
+	.global data_ov61_02180d04
 data_ov61_02180d04:
 	.space 0x4
+	.global data_ov61_02180d08
 data_ov61_02180d08:
 	.space 0x4
+	.global data_ov61_02180d0c
 data_ov61_02180d0c:
 	.space 0x4
+	.global data_ov61_02180d10
 data_ov61_02180d10:
 	.space 0x4
+	.global data_ov61_02180d14
 data_ov61_02180d14:
 	.space 0x4
+	.global data_ov61_02180d18
 data_ov61_02180d18:
 	.space 0x4
+	.global data_ov61_02180d1c
 data_ov61_02180d1c:
 	.space 0x4
+	.global data_ov61_02180d20
 data_ov61_02180d20:
 	.space 0x4
+	.global data_ov61_02180d24
 data_ov61_02180d24:
 	.space 0x4
+	.global data_ov61_02180d28
 data_ov61_02180d28:
 	.space 0x4
+	.global data_ov61_02180d2c
 data_ov61_02180d2c:
 	.space 0x4
+	.global data_ov61_02180d30
 data_ov61_02180d30:
 	.space 0x4
+	.global data_ov61_02180d34
 data_ov61_02180d34:
 	.space 0x4
+	.global data_ov61_02180d38
 data_ov61_02180d38:
 	.space 0x4
+	.global data_ov61_02180d3c
 data_ov61_02180d3c:
 	.space 0x4
+	.global data_ov61_02180d40
 data_ov61_02180d40:
 	.space 0x4
+	.global data_ov61_02180d44
 data_ov61_02180d44:
 	.space 0x4
+	.global data_ov61_02180d48
 data_ov61_02180d48:
 	.space 0x4
+	.global data_ov61_02180d4c
 data_ov61_02180d4c:
 	.space 0x4
+	.global data_ov61_02180d50
 data_ov61_02180d50:
 	.space 0x4
+	.global data_ov61_02180d54
 data_ov61_02180d54:
 	.space 0x4
+	.global data_ov61_02180d58
 data_ov61_02180d58:
 	.space 0x4
+	.global data_ov61_02180d5c
 data_ov61_02180d5c:
 	.space 0x4
+	.global data_ov61_02180d60
 data_ov61_02180d60:
 	.space 0x4
+	.global data_ov61_02180d64
 data_ov61_02180d64:
 	.space 0x4
+	.global data_ov61_02180d68
 data_ov61_02180d68:
 	.space 0x4
+	.global data_ov61_02180d6c
 data_ov61_02180d6c:
 	.space 0x4
+	.global data_ov61_02180d70
 data_ov61_02180d70:
 	.space 0x4
+	.global data_ov61_02180d74
 data_ov61_02180d74:
 	.space 0x4
+	.global data_ov61_02180d78
 data_ov61_02180d78:
 	.space 0x4
+	.global data_ov61_02180d7c
 data_ov61_02180d7c:
 	.space 0x4
+	.global data_ov61_02180d80
 data_ov61_02180d80:
 	.space 0x4
+	.global data_ov61_02180d84
 data_ov61_02180d84:
 	.space 0x4
+	.global data_ov61_02180d88
 data_ov61_02180d88:
 	.space 0x4
+	.global data_ov61_02180d8c
 data_ov61_02180d8c:
 	.space 0x4
+	.global data_ov61_02180d90
 data_ov61_02180d90:
 	.space 0x4
+	.global data_ov61_02180d94
 data_ov61_02180d94:
 	.space 0x4
+	.global data_ov61_02180d98
 data_ov61_02180d98:
 	.space 0x4
+	.global data_ov61_02180d9c
 data_ov61_02180d9c:
 	.space 0x4
+	.global data_ov61_02180da0
 data_ov61_02180da0:
 	.space 0x4
+	.global data_ov61_02180da4
 data_ov61_02180da4:
 	.space 0x4
+	.global data_ov61_02180da8
 data_ov61_02180da8:
 	.space 0x4
+	.global data_ov61_02180dac
 data_ov61_02180dac:
 	.space 0x4
+	.global data_ov61_02180db0
 data_ov61_02180db0:
 	.space 0x4
+	.global data_ov61_02180db4
 data_ov61_02180db4:
 	.space 0x4
+	.global data_ov61_02180db8
 data_ov61_02180db8:
 	.space 0x4
+	.global data_ov61_02180dbc
 data_ov61_02180dbc:
 	.space 0x4
+	.global data_ov61_02180dc0
 data_ov61_02180dc0:
 	.space 0x4
+	.global data_ov61_02180dc4
 data_ov61_02180dc4:
 	.space 0x4
+	.global data_ov61_02180dc8
 data_ov61_02180dc8:
 	.space 0x4
+	.global data_ov61_02180dcc
 data_ov61_02180dcc:
 	.space 0x4
+	.global data_ov61_02180dd0
 data_ov61_02180dd0:
 	.space 0x4
+	.global data_ov61_02180dd4
 data_ov61_02180dd4:
 	.space 0x4
+	.global data_ov61_02180dd8
 data_ov61_02180dd8:
 	.space 0x4
+	.global data_ov61_02180ddc
 data_ov61_02180ddc:
 	.space 0x4
+	.global data_ov61_02180de0
 data_ov61_02180de0:
 	.space 0x4
+	.global data_ov61_02180de4
 data_ov61_02180de4:
 	.space 0x4
+	.global data_ov61_02180de8
 data_ov61_02180de8:
 	.space 0x4
+	.global data_ov61_02180dec
 data_ov61_02180dec:
 	.space 0x4
+	.global data_ov61_02180df0
 data_ov61_02180df0:
 	.space 0x4
+	.global data_ov61_02180df4
 data_ov61_02180df4:
 	.space 0x4
+	.global data_ov61_02180df8
 data_ov61_02180df8:
 	.space 0x4
+	.global data_ov61_02180dfc
 data_ov61_02180dfc:
 	.space 0x4
+	.global data_ov61_02180e00
 data_ov61_02180e00:
 	.space 0x4
+	.global data_ov61_02180e04
 data_ov61_02180e04:
 	.space 0x4
+	.global data_ov61_02180e08
 data_ov61_02180e08:
 	.space 0x4
+	.global data_ov61_02180e0c
 data_ov61_02180e0c:
 	.space 0x4
+	.global data_ov61_02180e10
 data_ov61_02180e10:
 	.space 0x4
+	.global data_ov61_02180e14
 data_ov61_02180e14:
 	.space 0x4
+	.global data_ov61_02180e18
 data_ov61_02180e18:
 	.space 0x4
+	.global data_ov61_02180e1c
 data_ov61_02180e1c:
 	.space 0x4
+	.global data_ov61_02180e20
 data_ov61_02180e20:
 	.space 0x4
+	.global data_ov61_02180e24
 data_ov61_02180e24:
 	.space 0x4
+	.global data_ov61_02180e28
 data_ov61_02180e28:
 	.space 0x4
+	.global data_ov61_02180e2c
 data_ov61_02180e2c:
 	.space 0x4
+	.global data_ov61_02180e30
 data_ov61_02180e30:
 	.space 0x4
+	.global data_ov61_02180e34
 data_ov61_02180e34:
 	.space 0x4
+	.global data_ov61_02180e38
 data_ov61_02180e38:
 	.space 0x4
+	.global data_ov61_02180e3c
 data_ov61_02180e3c:
 	.space 0x4
+	.global data_ov61_02180e40
 data_ov61_02180e40:
 	.space 0x4
+	.global data_ov61_02180e44
 data_ov61_02180e44:
 	.space 0x4
+	.global data_ov61_02180e48
 data_ov61_02180e48:
 	.space 0x4
+	.global data_ov61_02180e4c
 data_ov61_02180e4c:
 	.space 0x4
+	.global data_ov61_02180e50
 data_ov61_02180e50:
 	.space 0x4
+	.global data_ov61_02180e54
 data_ov61_02180e54:
 	.space 0x4
+	.global data_ov61_02180e58
 data_ov61_02180e58:
 	.space 0x4
+	.global data_ov61_02180e5c
 data_ov61_02180e5c:
 	.space 0x4
+	.global data_ov61_02180e60
 data_ov61_02180e60:
 	.space 0x4
+	.global data_ov61_02180e64
 data_ov61_02180e64:
 	.space 0x4
+	.global data_ov61_02180e68
 data_ov61_02180e68:
 	.space 0x4
+	.global data_ov61_02180e6c
 data_ov61_02180e6c:
 	.space 0x4
+	.global data_ov61_02180e70
 data_ov61_02180e70:
 	.space 0x4
+	.global data_ov61_02180e74
 data_ov61_02180e74:
 	.space 0x4
+	.global data_ov61_02180e78
 data_ov61_02180e78:
 	.space 0x4
+	.global data_ov61_02180e7c
 data_ov61_02180e7c:
 	.space 0x4
+	.global data_ov61_02180e80
 data_ov61_02180e80:
 	.space 0x4
+	.global data_ov61_02180e84
 data_ov61_02180e84:
 	.space 0x4
+	.global data_ov61_02180e88
 data_ov61_02180e88:
 	.space 0x4
+	.global data_ov61_02180e8c
 data_ov61_02180e8c:
 	.space 0x4
+	.global data_ov61_02180e90
 data_ov61_02180e90:
 	.space 0x4
+	.global data_ov61_02180e94
 data_ov61_02180e94:
 	.space 0x4
+	.global data_ov61_02180e98
 data_ov61_02180e98:
 	.space 0x4
+	.global data_ov61_02180e9c
 data_ov61_02180e9c:
 	.space 0x4
+	.global data_ov61_02180ea0
 data_ov61_02180ea0:
 	.space 0x2
+	.global data_ov61_02180ea2
 data_ov61_02180ea2:
 	.space 0x2
+	.global data_ov61_02180ea4
 data_ov61_02180ea4:
 	.space 0x2
+	.global data_ov61_02180ea6
 data_ov61_02180ea6:
 	.space 0x2
+	.global data_ov61_02180ea8
 data_ov61_02180ea8:
 	.space 0x2
+	.global data_ov61_02180eaa
 data_ov61_02180eaa:
 	.space 0x2
+	.global data_ov61_02180eac
 data_ov61_02180eac:
 	.space 0x2
+	.global data_ov61_02180eae
 data_ov61_02180eae:
 	.space 0x2
+	.global data_ov61_02180eb0
 data_ov61_02180eb0:
 	.space 0x2
+	.global data_ov61_02180eb2
 data_ov61_02180eb2:
 	.space 0x2
+	.global data_ov61_02180eb4
 data_ov61_02180eb4:
 	.space 0x2
+	.global data_ov61_02180eb6
 data_ov61_02180eb6:
 	.space 0x2
+	.global data_ov61_02180eb8
 data_ov61_02180eb8:
 	.space 0x2
+	.global data_ov61_02180eba
 data_ov61_02180eba:
 	.space 0x2
+	.global data_ov61_02180ebc
 data_ov61_02180ebc:
 	.space 0x2
+	.global data_ov61_02180ebe
 data_ov61_02180ebe:
 	.space 0x2
+	.global data_ov61_02180ec0
 data_ov61_02180ec0:
 	.space 0x2
+	.global data_ov61_02180ec2
 data_ov61_02180ec2:
 	.space 0x2
+	.global data_ov61_02180ec4
 data_ov61_02180ec4:
 	.space 0x2
+	.global data_ov61_02180ec6
 data_ov61_02180ec6:
 	.space 0x2
+	.global data_ov61_02180ec8
 data_ov61_02180ec8:
 	.space 0x2
+	.global data_ov61_02180eca
 data_ov61_02180eca:
 	.space 0x2
+	.global data_ov61_02180ecc
 data_ov61_02180ecc:
 	.space 0x2
+	.global data_ov61_02180ece
 data_ov61_02180ece:
 	.space 0x2
+	.global data_ov61_02180ed0
 data_ov61_02180ed0:
 	.space 0x2
+	.global data_ov61_02180ed2
 data_ov61_02180ed2:
 	.space 0x2
+	.global data_ov61_02180ed4
 data_ov61_02180ed4:
 	.space 0x2
+	.global data_ov61_02180ed6
 data_ov61_02180ed6:
 	.space 0x2
+	.global data_ov61_02180ed8
 data_ov61_02180ed8:
 	.space 0x2
+	.global data_ov61_02180eda
 data_ov61_02180eda:
 	.space 0x2
+	.global data_ov61_02180edc
 data_ov61_02180edc:
 	.space 0x2
+	.global data_ov61_02180ede
 data_ov61_02180ede:
 	.space 0x2
+	.global data_ov61_02180ee0
 data_ov61_02180ee0:
 	.space 0x2
+	.global data_ov61_02180ee2
 data_ov61_02180ee2:
 	.space 0x2
+	.global data_ov61_02180ee4
 data_ov61_02180ee4:
 	.space 0x2
+	.global data_ov61_02180ee6
 data_ov61_02180ee6:
 	.space 0x2
+	.global data_ov61_02180ee8
 data_ov61_02180ee8:
 	.space 0x2
+	.global data_ov61_02180eea
 data_ov61_02180eea:
 	.space 0x2
+	.global data_ov61_02180eec
 data_ov61_02180eec:
 	.space 0x2
+	.global data_ov61_02180eee
 data_ov61_02180eee:
 	.space 0x2
+	.global data_ov61_02180ef0
 data_ov61_02180ef0:
 	.space 0x2
+	.global data_ov61_02180ef2
 data_ov61_02180ef2:
 	.space 0x2
+	.global data_ov61_02180ef4
 data_ov61_02180ef4:
 	.space 0x2
+	.global data_ov61_02180ef6
 data_ov61_02180ef6:
 	.space 0x2
+	.global data_ov61_02180ef8
 data_ov61_02180ef8:
 	.space 0x2
+	.global data_ov61_02180efa
 data_ov61_02180efa:
 	.space 0x2
+	.global data_ov61_02180efc
 data_ov61_02180efc:
 	.space 0x2
+	.global data_ov61_02180efe
 data_ov61_02180efe:
 	.space 0x2
+	.global data_ov61_02180f00
 data_ov61_02180f00:
 	.space 0x2
+	.global data_ov61_02180f02
 data_ov61_02180f02:
 	.space 0x2
+	.global data_ov61_02180f04
 data_ov61_02180f04:
 	.space 0x2
+	.global data_ov61_02180f06
 data_ov61_02180f06:
 	.space 0x2
+	.global data_ov61_02180f08
 data_ov61_02180f08:
 	.space 0x2
+	.global data_ov61_02180f0a
 data_ov61_02180f0a:
 	.space 0x2
+	.global data_ov61_02180f0c
 data_ov61_02180f0c:
 	.space 0x2
+	.global data_ov61_02180f0e
 data_ov61_02180f0e:
 	.space 0x2
+	.global data_ov61_02180f10
 data_ov61_02180f10:
 	.space 0x2
+	.global data_ov61_02180f12
 data_ov61_02180f12:
 	.space 0x2
+	.global data_ov61_02180f14
 data_ov61_02180f14:
 	.space 0x2
+	.global data_ov61_02180f16
 data_ov61_02180f16:
 	.space 0x2
+	.global data_ov61_02180f18
 data_ov61_02180f18:
 	.space 0x2
+	.global data_ov61_02180f1a
 data_ov61_02180f1a:
 	.space 0x2
+	.global data_ov61_02180f1c
 data_ov61_02180f1c:
 	.space 0x2
+	.global data_ov61_02180f1e
 data_ov61_02180f1e:
 	.space 0x2
+	.global data_ov61_02180f20
 data_ov61_02180f20:
 	.space 0x2
+	.global data_ov61_02180f22
 data_ov61_02180f22:
 	.space 0x2
+	.global data_ov61_02180f24
 data_ov61_02180f24:
 	.space 0x2
+	.global data_ov61_02180f26
 data_ov61_02180f26:
 	.space 0x2
+	.global data_ov61_02180f28
 data_ov61_02180f28:
 	.space 0x2
+	.global data_ov61_02180f2a
 data_ov61_02180f2a:
 	.space 0x2
+	.global data_ov61_02180f2c
 data_ov61_02180f2c:
 	.space 0x2
+	.global data_ov61_02180f2e
 data_ov61_02180f2e:
 	.space 0x2
+	.global data_ov61_02180f30
 data_ov61_02180f30:
 	.space 0x2
+	.global data_ov61_02180f32
 data_ov61_02180f32:
 	.space 0x2
+	.global data_ov61_02180f34
 data_ov61_02180f34:
 	.space 0x2
+	.global data_ov61_02180f36
 data_ov61_02180f36:
 	.space 0x2
+	.global data_ov61_02180f38
 data_ov61_02180f38:
 	.space 0x2
+	.global data_ov61_02180f3a
 data_ov61_02180f3a:
 	.space 0x2
+	.global data_ov61_02180f3c
 data_ov61_02180f3c:
 	.space 0x2
+	.global data_ov61_02180f3e
 data_ov61_02180f3e:
 	.space 0x2
+	.global data_ov61_02180f40
 data_ov61_02180f40:
 	.space 0x2
+	.global data_ov61_02180f42
 data_ov61_02180f42:
 	.space 0x2
+	.global data_ov61_02180f44
 data_ov61_02180f44:
 	.space 0x2
+	.global data_ov61_02180f46
 data_ov61_02180f46:
 	.space 0x2
+	.global data_ov61_02180f48
 data_ov61_02180f48:
 	.space 0x2
+	.global data_ov61_02180f4a
 data_ov61_02180f4a:
 	.space 0x2
+	.global data_ov61_02180f4c
 data_ov61_02180f4c:
 	.space 0x2
+	.global data_ov61_02180f4e
 data_ov61_02180f4e:
 	.space 0x2
+	.global data_ov61_02180f50
 data_ov61_02180f50:
 	.space 0x2
+	.global data_ov61_02180f52
 data_ov61_02180f52:
 	.space 0x2
+	.global data_ov61_02180f54
 data_ov61_02180f54:
 	.space 0x2
+	.global data_ov61_02180f56
 data_ov61_02180f56:
 	.space 0x2
+	.global data_ov61_02180f58
 data_ov61_02180f58:
 	.space 0x2
+	.global data_ov61_02180f5a
 data_ov61_02180f5a:
 	.space 0x2
+	.global data_ov61_02180f5c
 data_ov61_02180f5c:
 	.space 0x2
+	.global data_ov61_02180f5e
 data_ov61_02180f5e:
 	.space 0x2
+	.global data_ov61_02180f60
 data_ov61_02180f60:
 	.space 0x2
+	.global data_ov61_02180f62
 data_ov61_02180f62:
 	.space 0x2
+	.global data_ov61_02180f64
 data_ov61_02180f64:
 	.space 0x2
+	.global data_ov61_02180f66
 data_ov61_02180f66:
 	.space 0x2
+	.global data_ov61_02180f68
 data_ov61_02180f68:
 	.space 0x2
+	.global data_ov61_02180f6a
 data_ov61_02180f6a:
 	.space 0x2
+	.global data_ov61_02180f6c
 data_ov61_02180f6c:
 	.space 0x2
+	.global data_ov61_02180f6e
 data_ov61_02180f6e:
 	.space 0x2
+	.global data_ov61_02180f70
 data_ov61_02180f70:
 	.space 0x2
+	.global data_ov61_02180f72
 data_ov61_02180f72:
 	.space 0x2
+	.global data_ov61_02180f74
 data_ov61_02180f74:
 	.space 0x2
+	.global data_ov61_02180f76
 data_ov61_02180f76:
 	.space 0x2
+	.global data_ov61_02180f78
 data_ov61_02180f78:
 	.space 0x2
+	.global data_ov61_02180f7a
 data_ov61_02180f7a:
 	.space 0x2
+	.global data_ov61_02180f7c
 data_ov61_02180f7c:
 	.space 0x2
+	.global data_ov61_02180f7e
 data_ov61_02180f7e:
 	.space 0x2
+	.global data_ov61_02180f80
 data_ov61_02180f80:
 	.space 0x2
+	.global data_ov61_02180f82
 data_ov61_02180f82:
 	.space 0x2
+	.global data_ov61_02180f84
 data_ov61_02180f84:
 	.space 0x2
+	.global data_ov61_02180f86
 data_ov61_02180f86:
 	.space 0x2
+	.global data_ov61_02180f88
 data_ov61_02180f88:
 	.space 0x2
+	.global data_ov61_02180f8a
 data_ov61_02180f8a:
 	.space 0x2
+	.global data_ov61_02180f8c
 data_ov61_02180f8c:
 	.space 0x2
+	.global data_ov61_02180f8e
 data_ov61_02180f8e:
 	.space 0x2
+	.global data_ov61_02180f90
 data_ov61_02180f90:
 	.space 0x2
+	.global data_ov61_02180f92
 data_ov61_02180f92:
 	.space 0x2
+	.global data_ov61_02180f94
 data_ov61_02180f94:
 	.space 0x2
+	.global data_ov61_02180f96
 data_ov61_02180f96:
 	.space 0x2
+	.global data_ov61_02180f98
 data_ov61_02180f98:
 	.space 0x2
+	.global data_ov61_02180f9a
 data_ov61_02180f9a:
 	.space 0x2
+	.global data_ov61_02180f9c
 data_ov61_02180f9c:
 	.space 0x2
+	.global data_ov61_02180f9e
 data_ov61_02180f9e:
 	.space 0x2
+	.global data_ov61_02180fa0
 data_ov61_02180fa0:
 	.space 0x2
+	.global data_ov61_02180fa2
 data_ov61_02180fa2:
 	.space 0x2
+	.global data_ov61_02180fa4
 data_ov61_02180fa4:
 	.space 0x2
+	.global data_ov61_02180fa6
 data_ov61_02180fa6:
 	.space 0x2
+	.global data_ov61_02180fa8
 data_ov61_02180fa8:
 	.space 0x2
+	.global data_ov61_02180faa
 data_ov61_02180faa:
 	.space 0x2
+	.global data_ov61_02180fac
 data_ov61_02180fac:
 	.space 0x2
+	.global data_ov61_02180fae
 data_ov61_02180fae:
 	.space 0x2
+	.global data_ov61_02180fb0
 data_ov61_02180fb0:
 	.space 0x2
+	.global data_ov61_02180fb2
 data_ov61_02180fb2:
 	.space 0x2
+	.global data_ov61_02180fb4
 data_ov61_02180fb4:
 	.space 0x2
+	.global data_ov61_02180fb6
 data_ov61_02180fb6:
 	.space 0x2
+	.global data_ov61_02180fb8
 data_ov61_02180fb8:
 	.space 0x1
+	.global data_ov61_02180fb9
 data_ov61_02180fb9:
 	.space 0x1
+	.global data_ov61_02180fba
 data_ov61_02180fba:
 	.space 0x1
+	.global data_ov61_02180fbb
 data_ov61_02180fbb:
 	.space 0x1
+	.global data_ov61_02180fbc
 data_ov61_02180fbc:
 	.space 0x1
+	.global data_ov61_02180fbd
 data_ov61_02180fbd:
 	.space 0x1
+	.global data_ov61_02180fbe
 data_ov61_02180fbe:
 	.space 0x1
+	.global data_ov61_02180fbf
 data_ov61_02180fbf:
 	.space 0x1
+	.global data_ov61_02180fc0
 data_ov61_02180fc0:
 	.space 0x1
+	.global data_ov61_02180fc1
 data_ov61_02180fc1:
 	.space 0x1
+	.global data_ov61_02180fc2
 data_ov61_02180fc2:
 	.space 0x1
+	.global data_ov61_02180fc3
 data_ov61_02180fc3:
 	.space 0x1
+	.global data_ov61_02180fc4
 data_ov61_02180fc4:
 	.space 0x1
+	.global data_ov61_02180fc5
 data_ov61_02180fc5:
 	.space 0x1
+	.global data_ov61_02180fc6
 data_ov61_02180fc6:
 	.space 0x1
+	.global data_ov61_02180fc7
 data_ov61_02180fc7:
 	.space 0x1
+	.global data_ov61_02180fc8
 data_ov61_02180fc8:
 	.space 0x1
+	.global data_ov61_02180fc9
 data_ov61_02180fc9:
 	.space 0x1
+	.global data_ov61_02180fca
 data_ov61_02180fca:
 	.space 0x1
+	.global data_ov61_02180fcb
 data_ov61_02180fcb:
 	.space 0x1
+	.global data_ov61_02180fcc
 data_ov61_02180fcc:
 	.space 0x4
+	.global data_ov61_02180fd0
 data_ov61_02180fd0:
 	.space 0x4
+	.global data_ov61_02180fd4
 data_ov61_02180fd4:
 	.space 0x4
+	.global data_ov61_02180fd8
 data_ov61_02180fd8:
 	.space 0x4
+	.global data_ov61_02180fdc
 data_ov61_02180fdc:
 	.space 0x4
+	.global data_ov61_02180fe0
 data_ov61_02180fe0:
 	.space 0x4
+	.global data_ov61_02180fe4
 data_ov61_02180fe4:
 	.space 0x4
+	.global data_ov61_02180fe8
 data_ov61_02180fe8:
 	.space 0x4
+	.global data_ov61_02180fec
 data_ov61_02180fec:
 	.space 0x4
+	.global data_ov61_02180ff0
 data_ov61_02180ff0:
 	.space 0x4
+	.global data_ov61_02180ff4
 data_ov61_02180ff4:
 	.space 0x4
+	.global data_ov61_02180ff8
 data_ov61_02180ff8:
 	.space 0x4
+	.global data_ov61_02180ffc
 data_ov61_02180ffc:
 	.space 0x4
+	.global data_ov61_02181000
 data_ov61_02181000:
 	.space 0x1
+	.global data_ov61_02181001
 data_ov61_02181001:
 	.space 0x1
+	.global data_ov61_02181002
 data_ov61_02181002:
 	.space 0x1
+	.global data_ov61_02181003
 data_ov61_02181003:
 	.space 0x1
+	.global data_ov61_02181004
 data_ov61_02181004:
 	.space 0x1
+	.global data_ov61_02181005
 data_ov61_02181005:
 	.space 0x1
+	.global data_ov61_02181006
 data_ov61_02181006:
 	.space 0x1
+	.global data_ov61_02181007
 data_ov61_02181007:
 	.space 0x1
+	.global data_ov61_02181008
 data_ov61_02181008:
 	.space 0x1
+	.global data_ov61_02181009
 data_ov61_02181009:
 	.space 0x1
+	.global data_ov61_0218100a
 data_ov61_0218100a:
 	.space 0x1
+	.global data_ov61_0218100b
 data_ov61_0218100b:
 	.space 0x1
+	.global data_ov61_0218100c
 data_ov61_0218100c:
 	.space 0x1
+	.global data_ov61_0218100d
 data_ov61_0218100d:
 	.space 0x1
+	.global data_ov61_0218100e
 data_ov61_0218100e:
 	.space 0x1
+	.global data_ov61_0218100f
 data_ov61_0218100f:
 	.space 0x1
+	.global data_ov61_02181010
 data_ov61_02181010:
 	.space 0x4
+	.global data_ov61_02181014
 data_ov61_02181014:
 	.space 0x4
+	.global data_ov61_02181018
 data_ov61_02181018:
 	.space 0x4
+	.global data_ov61_0218101c
 data_ov61_0218101c:
 	.space 0x4
+	.global data_ov61_02181020
 data_ov61_02181020:
 	.space 0x4
+	.global data_ov61_02181024
 data_ov61_02181024:
 	.space 0x4
+	.global data_ov61_02181028
 data_ov61_02181028:
 	.space 0x4
+	.global data_ov61_0218102c
 data_ov61_0218102c:
 	.space 0x2
+	.global data_ov61_0218102e
 data_ov61_0218102e:
 	.space 0x2
+	.global data_ov61_02181030
 data_ov61_02181030:
 	.space 0x4
+	.global data_ov61_02181034
 data_ov61_02181034:
 	.space 0x1
+	.global data_ov61_02181035
 data_ov61_02181035:
 	.space 0x1
+	.global data_ov61_02181036
 data_ov61_02181036:
 	.space 0x1
+	.global data_ov61_02181037
 data_ov61_02181037:
 	.space 0x1
+	.global data_ov61_02181038
 data_ov61_02181038:
 	.space 0x1
+	.global data_ov61_02181039
 data_ov61_02181039:
 	.space 0x1
+	.global data_ov61_0218103a
 data_ov61_0218103a:
 	.space 0x1
+	.global data_ov61_0218103b
 data_ov61_0218103b:
 	.space 0x1
+	.global data_ov61_0218103c
 data_ov61_0218103c:
 	.space 0x1
+	.global data_ov61_0218103d
 data_ov61_0218103d:
 	.space 0x1
+	.global data_ov61_0218103e
 data_ov61_0218103e:
 	.space 0x1
+	.global data_ov61_0218103f
 data_ov61_0218103f:
 	.space 0x1
+	.global data_ov61_02181040
 data_ov61_02181040:
 	.space 0x1
+	.global data_ov61_02181041
 data_ov61_02181041:
 	.space 0x1
+	.global data_ov61_02181042
 data_ov61_02181042:
 	.space 0x1
+	.global data_ov61_02181043
 data_ov61_02181043:
 	.space 0x1
+	.global data_ov61_02181044
 data_ov61_02181044:
 	.space 0x1
+	.global data_ov61_02181045
 data_ov61_02181045:
 	.space 0x1
+	.global data_ov61_02181046
 data_ov61_02181046:
 	.space 0x1
+	.global data_ov61_02181047
 data_ov61_02181047:
 	.space 0x1
+	.global data_ov61_02181048
 data_ov61_02181048:
 	.space 0x1
+	.global data_ov61_02181049
 data_ov61_02181049:
 	.space 0x1
+	.global data_ov61_0218104a
 data_ov61_0218104a:
 	.space 0x1
+	.global data_ov61_0218104b
 data_ov61_0218104b:
 	.space 0x1
+	.global data_ov61_0218104c
 data_ov61_0218104c:
 	.space 0x1
+	.global data_ov61_0218104d
 data_ov61_0218104d:
 	.space 0x1
+	.global data_ov61_0218104e
 data_ov61_0218104e:
 	.space 0x1
+	.global data_ov61_0218104f
 data_ov61_0218104f:
 	.space 0x1
+	.global data_ov61_02181050
 data_ov61_02181050:
 	.space 0x1
+	.global data_ov61_02181051
 data_ov61_02181051:
 	.space 0x1
+	.global data_ov61_02181052
 data_ov61_02181052:
 	.space 0x1
+	.global data_ov61_02181053
 data_ov61_02181053:
 	.space 0x1
+	.global data_ov61_02181054
 data_ov61_02181054:
 	.space 0x1
+	.global data_ov61_02181055
 data_ov61_02181055:
 	.space 0x1
+	.global data_ov61_02181056
 data_ov61_02181056:
 	.space 0x1
+	.global data_ov61_02181057
 data_ov61_02181057:
 	.space 0x1
+	.global data_ov61_02181058
 data_ov61_02181058:
 	.space 0x1
+	.global data_ov61_02181059
 data_ov61_02181059:
 	.space 0x1
+	.global data_ov61_0218105a
 data_ov61_0218105a:
 	.space 0x1
+	.global data_ov61_0218105b
 data_ov61_0218105b:
 	.space 0x1
+	.global data_ov61_0218105c
 data_ov61_0218105c:
 	.space 0x1
+	.global data_ov61_0218105d
 data_ov61_0218105d:
 	.space 0x1
+	.global data_ov61_0218105e
 data_ov61_0218105e:
 	.space 0x1
+	.global data_ov61_0218105f
 data_ov61_0218105f:
 	.space 0x1
+	.global data_ov61_02181060
 data_ov61_02181060:
 	.space 0x1
+	.global data_ov61_02181061
 data_ov61_02181061:
 	.space 0x1
+	.global data_ov61_02181062
 data_ov61_02181062:
 	.space 0x1
+	.global data_ov61_02181063
 data_ov61_02181063:
 	.space 0x1
+	.global data_ov61_02181064
 data_ov61_02181064:
 	.space 0x1
+	.global data_ov61_02181065
 data_ov61_02181065:
 	.space 0x1
+	.global data_ov61_02181066
 data_ov61_02181066:
 	.space 0x1
+	.global data_ov61_02181067
 data_ov61_02181067:
 	.space 0x1
+	.global data_ov61_02181068
 data_ov61_02181068:
 	.space 0x1
+	.global data_ov61_02181069
 data_ov61_02181069:
 	.space 0x1
+	.global data_ov61_0218106a
 data_ov61_0218106a:
 	.space 0x1
+	.global data_ov61_0218106b
 data_ov61_0218106b:
 	.space 0x1
+	.global data_ov61_0218106c
 data_ov61_0218106c:
 	.space 0x1
+	.global data_ov61_0218106d
 data_ov61_0218106d:
 	.space 0x1
+	.global data_ov61_0218106e
 data_ov61_0218106e:
 	.space 0x1
+	.global data_ov61_0218106f
 data_ov61_0218106f:
 	.space 0x1
+	.global data_ov61_02181070
 data_ov61_02181070:
 	.space 0x1
+	.global data_ov61_02181071
 data_ov61_02181071:
 	.space 0x1
+	.global data_ov61_02181072
 data_ov61_02181072:
 	.space 0x1
+	.global data_ov61_02181073
 data_ov61_02181073:
 	.space 0x1
+	.global data_ov61_02181074
 data_ov61_02181074:
 	.space 0x4
+	.global data_ov61_02181078
 data_ov61_02181078:
 	.space 0x4
+	.global data_ov61_0218107c
 data_ov61_0218107c:
 	.space 0x4
+	.global data_ov61_02181080
 data_ov61_02181080:
 	.space 0x4
+	.global data_ov61_02181084
 data_ov61_02181084:
 	.space 0x4
+	.global data_ov61_02181088
 data_ov61_02181088:
 	.space 0x4
+	.global data_ov61_0218108c
 data_ov61_0218108c:
 	.space 0x4
+	.global data_ov61_02181090
 data_ov61_02181090:
 	.space 0x4
+	.global data_ov61_02181094
 data_ov61_02181094:
 	.space 0x4
+	.global data_ov61_02181098
 data_ov61_02181098:
 	.space 0x4
+	.global data_ov61_0218109c
 data_ov61_0218109c:
 	.space 0x4
+	.global data_ov61_021810a0
 data_ov61_021810a0:
 	.space 0x4
+	.global data_ov61_021810a4
 data_ov61_021810a4:
 	.space 0x4
+	.global data_ov61_021810a8
 data_ov61_021810a8:
 	.space 0x4
+	.global data_ov61_021810ac
 data_ov61_021810ac:
 	.space 0x4
+	.global data_ov61_021810b0
 data_ov61_021810b0:
 	.space 0x4
+	.global data_ov61_021810b4
 data_ov61_021810b4:
 	.space 0x4
+	.global data_ov61_021810b8
 data_ov61_021810b8:
 	.space 0x4
+	.global data_ov61_021810bc
 data_ov61_021810bc:
 	.space 0x4
+	.global data_ov61_021810c0
 data_ov61_021810c0:
 	.space 0x4
+	.global data_ov61_021810c4
 data_ov61_021810c4:
 	.space 0x4
+	.global data_ov61_021810c8
 data_ov61_021810c8:
 	.space 0x4
+	.global data_ov61_021810cc
 data_ov61_021810cc:
 	.space 0x4
+	.global data_ov61_021810d0
 data_ov61_021810d0:
 	.space 0x4
+	.global data_ov61_021810d4
 data_ov61_021810d4:
 	.space 0x4
+	.global data_ov61_021810d8
 data_ov61_021810d8:
 	.space 0x4
+	.global data_ov61_021810dc
 data_ov61_021810dc:
 	.space 0x4
+	.global data_ov61_021810e0
 data_ov61_021810e0:
 	.space 0x4
+	.global data_ov61_021810e4
 data_ov61_021810e4:
 	.space 0x4
+	.global data_ov61_021810e8
 data_ov61_021810e8:
 	.space 0x4
+	.global data_ov61_021810ec
 data_ov61_021810ec:
 	.space 0x4
+	.global data_ov61_021810f0
 data_ov61_021810f0:
 	.space 0x4
+	.global data_ov61_021810f4
 data_ov61_021810f4:
 	.space 0x4
+	.global data_ov61_021810f8
 data_ov61_021810f8:
 	.space 0x4
+	.global data_ov61_021810fc
 data_ov61_021810fc:
 	.space 0x4
+	.global data_ov61_02181100
 data_ov61_02181100:
 	.space 0x4
+	.global data_ov61_02181104
 data_ov61_02181104:
 	.space 0x4
+	.global data_ov61_02181108
 data_ov61_02181108:
 	.space 0x4
+	.global data_ov61_0218110c
 data_ov61_0218110c:
 	.space 0x4
+	.global data_ov61_02181110
 data_ov61_02181110:
 	.space 0x2
+	.global data_ov61_02181112
 data_ov61_02181112:
 	.space 0x2
+	.global data_ov61_02181114
 data_ov61_02181114:
 	.space 0x4
+	.global data_ov61_02181118
 data_ov61_02181118:
 	.space 0x4
+	.global data_ov61_0218111c
 data_ov61_0218111c:
 	.space 0x4
+	.global data_ov61_02181120
 data_ov61_02181120:
 	.space 0x4
+	.global data_ov61_02181124
 data_ov61_02181124:
 	.space 0x4
+	.global data_ov61_02181128
 data_ov61_02181128:
 	.space 0x4
+	.global data_ov61_0218112c
 data_ov61_0218112c:
 	.space 0x4
+	.global data_ov61_02181130
 data_ov61_02181130:
 	.space 0x4
+	.global data_ov61_02181134
 data_ov61_02181134:
 	.space 0x4
+	.global data_ov61_02181138
 data_ov61_02181138:
 	.space 0x4
+	.global data_ov61_0218113c
 data_ov61_0218113c:
 	.space 0x4
+	.global data_ov61_02181140
 data_ov61_02181140:
 	.space 0x4
+	.global data_ov61_02181144
 data_ov61_02181144:
 	.space 0x4
+	.global data_ov61_02181148
 data_ov61_02181148:
 	.space 0x4
+	.global data_ov61_0218114c
 data_ov61_0218114c:
 	.space 0x4
+	.global data_ov61_02181150
 data_ov61_02181150:
 	.space 0x4
+	.global data_ov61_02181154
 data_ov61_02181154:
 	.space 0x4
+	.global data_ov61_02181158
 data_ov61_02181158:
 	.space 0x4
+	.global data_ov61_0218115c
 data_ov61_0218115c:
 	.space 0x4
+	.global data_ov61_02181160
 data_ov61_02181160:
 	.space 0x4
+	.global data_ov61_02181164
 data_ov61_02181164:
 	.space 0x4
+	.global data_ov61_02181168
 data_ov61_02181168:
 	.space 0x4
+	.global data_ov61_0218116c
 data_ov61_0218116c:
 	.space 0x4
+	.global data_ov61_02181170
 data_ov61_02181170:
 	.space 0x4
+	.global data_ov61_02181174
 data_ov61_02181174:
 	.space 0x4
+	.global data_ov61_02181178
 data_ov61_02181178:
 	.space 0x4
+	.global data_ov61_0218117c
 data_ov61_0218117c:
 	.space 0x4
+	.global data_ov61_02181180
 data_ov61_02181180:
 	.space 0x4
+	.global data_ov61_02181184
 data_ov61_02181184:
 	.space 0x4
+	.global data_ov61_02181188
 data_ov61_02181188:
 	.space 0x4
+	.global data_ov61_0218118c
 data_ov61_0218118c:
 	.space 0x4
+	.global data_ov61_02181190
 data_ov61_02181190:
 	.space 0x4
+	.global data_ov61_02181194
 data_ov61_02181194:
 	.space 0x4
+	.global data_ov61_02181198
 data_ov61_02181198:
 	.space 0x4
+	.global data_ov61_0218119c
 data_ov61_0218119c:
 	.space 0x4
+	.global data_ov61_021811a0
 data_ov61_021811a0:
 	.space 0x4
+	.global data_ov61_021811a4
 data_ov61_021811a4:
 	.space 0x4
+	.global data_ov61_021811a8
 data_ov61_021811a8:
 	.space 0x4
+	.global data_ov61_021811ac
 data_ov61_021811ac:
 	.space 0x4
+	.global data_ov61_021811b0
 data_ov61_021811b0:
 	.space 0x4
+	.global data_ov61_021811b4
 data_ov61_021811b4:
 	.space 0x4
+	.global data_ov61_021811b8
 data_ov61_021811b8:
 	.space 0x4
+	.global data_ov61_021811bc
 data_ov61_021811bc:
 	.space 0x4
+	.global data_ov61_021811c0
 data_ov61_021811c0:
 	.space 0x4
+	.global data_ov61_021811c4
 data_ov61_021811c4:
 	.space 0x4
+	.global data_ov61_021811c8
 data_ov61_021811c8:
 	.space 0x4
+	.global data_ov61_021811cc
 data_ov61_021811cc:
 	.space 0x4
+	.global data_ov61_021811d0
 data_ov61_021811d0:
 	.space 0x4
+	.global data_ov61_021811d4
 data_ov61_021811d4:
 	.space 0x4
+	.global data_ov61_021811d8
 data_ov61_021811d8:
 	.space 0x4
+	.global data_ov61_021811dc
 data_ov61_021811dc:
 	.space 0x4
+	.global data_ov61_021811e0
 data_ov61_021811e0:
 	.space 0x4
+	.global data_ov61_021811e4
 data_ov61_021811e4:
 	.space 0x4
+	.global data_ov61_021811e8
 data_ov61_021811e8:
 	.space 0x4
+	.global data_ov61_021811ec
 data_ov61_021811ec:
 	.space 0x4
+	.global data_ov61_021811f0
 data_ov61_021811f0:
 	.space 0x4
+	.global data_ov61_021811f4
 data_ov61_021811f4:
 	.space 0x4
+	.global data_ov61_021811f8
 data_ov61_021811f8:
 	.space 0x4
+	.global data_ov61_021811fc
 data_ov61_021811fc:
 	.space 0x4
+	.global data_ov61_02181200
 data_ov61_02181200:
 	.space 0x4
+	.global data_ov61_02181204
 data_ov61_02181204:
 	.space 0x4
+	.global data_ov61_02181208
 data_ov61_02181208:
 	.space 0x4
+	.global data_ov61_0218120c
 data_ov61_0218120c:
 	.space 0x4
+	.global data_ov61_02181210
 data_ov61_02181210:
 	.space 0x4
+	.global data_ov61_02181214
 data_ov61_02181214:
 	.space 0x4
+	.global data_ov61_02181218
 data_ov61_02181218:
 	.space 0x4
+	.global data_ov61_0218121c
 data_ov61_0218121c:
 	.space 0x4
+	.global data_ov61_02181220
 data_ov61_02181220:
 	.space 0x4
+	.global data_ov61_02181224
 data_ov61_02181224:
 	.space 0x4
+	.global data_ov61_02181228
 data_ov61_02181228:
 	.space 0x4
+	.global data_ov61_0218122c
 data_ov61_0218122c:
 	.space 0x4
+	.global data_ov61_02181230
 data_ov61_02181230:
 	.space 0x4
+	.global data_ov61_02181234
 data_ov61_02181234:
 	.space 0x4
+	.global data_ov61_02181238
 data_ov61_02181238:
 	.space 0x4
+	.global data_ov61_0218123c
 data_ov61_0218123c:
 	.space 0x4
+	.global data_ov61_02181240
 data_ov61_02181240:
 	.space 0x4
+	.global data_ov61_02181244
 data_ov61_02181244:
 	.space 0x4
+	.global data_ov61_02181248
 data_ov61_02181248:
 	.space 0x4
+	.global data_ov61_0218124c
 data_ov61_0218124c:
 	.space 0x4
+	.global data_ov61_02181250
 data_ov61_02181250:
 	.space 0x4
+	.global data_ov61_02181254
 data_ov61_02181254:
 	.space 0x4
+	.global data_ov61_02181258
 data_ov61_02181258:
 	.space 0x4
+	.global data_ov61_0218125c
 data_ov61_0218125c:
 	.space 0x4
+	.global data_ov61_02181260
 data_ov61_02181260:
 	.space 0x4
+	.global data_ov61_02181264
 data_ov61_02181264:
 	.space 0x4
+	.global data_ov61_02181268
 data_ov61_02181268:
 	.space 0x4
+	.global data_ov61_0218126c
 data_ov61_0218126c:
 	.space 0x4
+	.global data_ov61_02181270
 data_ov61_02181270:
 	.space 0x4
+	.global data_ov61_02181274
 data_ov61_02181274:
 	.space 0x4
+	.global data_ov61_02181278
 data_ov61_02181278:
 	.space 0x4
+	.global data_ov61_0218127c
 data_ov61_0218127c:
 	.space 0x4
+	.global data_ov61_02181280
 data_ov61_02181280:
 	.space 0x4
+	.global data_ov61_02181284
 data_ov61_02181284:
 	.space 0x4
+	.global data_ov61_02181288
 data_ov61_02181288:
 	.space 0x4
+	.global data_ov61_0218128c
 data_ov61_0218128c:
 	.space 0x4
+	.global data_ov61_02181290
 data_ov61_02181290:
 	.space 0x4
+	.global data_ov61_02181294
 data_ov61_02181294:
 	.space 0x4
+	.global data_ov61_02181298
 data_ov61_02181298:
 	.space 0x4
+	.global data_ov61_0218129c
 data_ov61_0218129c:
 	.space 0x4
+	.global data_ov61_021812a0
 data_ov61_021812a0:
 	.space 0x4
+	.global data_ov61_021812a4
 data_ov61_021812a4:
 	.space 0x4
+	.global data_ov61_021812a8
 data_ov61_021812a8:
 	.space 0x4
+	.global data_ov61_021812ac
 data_ov61_021812ac:
 	.space 0x4
+	.global data_ov61_021812b0
 data_ov61_021812b0:
 	.space 0x4
+	.global data_ov61_021812b4
 data_ov61_021812b4:
 	.space 0x4
+	.global data_ov61_021812b8
 data_ov61_021812b8:
 	.space 0x4
+	.global data_ov61_021812bc
 data_ov61_021812bc:
 	.space 0x4
+	.global data_ov61_021812c0
 data_ov61_021812c0:
 	.space 0x4
+	.global data_ov61_021812c4
 data_ov61_021812c4:
 	.space 0x4
+	.global data_ov61_021812c8
 data_ov61_021812c8:
 	.space 0x4
+	.global data_ov61_021812cc
 data_ov61_021812cc:
 	.space 0x4
+	.global data_ov61_021812d0
 data_ov61_021812d0:
 	.space 0x4
+	.global data_ov61_021812d4
 data_ov61_021812d4:
 	.space 0x4
+	.global data_ov61_021812d8
 data_ov61_021812d8:
 	.space 0x4
+	.global data_ov61_021812dc
 data_ov61_021812dc:
 	.space 0x4
+	.global data_ov61_021812e0
 data_ov61_021812e0:
 	.space 0x4
+	.global data_ov61_021812e4
 data_ov61_021812e4:
 	.space 0x4
+	.global data_ov61_021812e8
 data_ov61_021812e8:
 	.space 0x4
+	.global data_ov61_021812ec
 data_ov61_021812ec:
 	.space 0x4
+	.global data_ov61_021812f0
 data_ov61_021812f0:
 	.space 0x4
+	.global data_ov61_021812f4
 data_ov61_021812f4:
 	.space 0x4
+	.global data_ov61_021812f8
 data_ov61_021812f8:
 	.space 0x4
+	.global data_ov61_021812fc
 data_ov61_021812fc:
 	.space 0x4
+	.global data_ov61_02181300
 data_ov61_02181300:
 	.space 0x4
+	.global data_ov61_02181304
 data_ov61_02181304:
 	.space 0x4
+	.global data_ov61_02181308
 data_ov61_02181308:
 	.space 0x4
+	.global data_ov61_0218130c
 data_ov61_0218130c:
 	.space 0x4
+	.global data_ov61_02181310
 data_ov61_02181310:
 	.space 0x4
+	.global data_ov61_02181314
 data_ov61_02181314:
 	.space 0x4
+	.global data_ov61_02181318
 data_ov61_02181318:
 	.space 0x4
+	.global data_ov61_0218131c
 data_ov61_0218131c:
 	.space 0x4
+	.global data_ov61_02181320
 data_ov61_02181320:
 	.space 0x4
+	.global data_ov61_02181324
 data_ov61_02181324:
 	.space 0x4
+	.global data_ov61_02181328
 data_ov61_02181328:
 	.space 0x4
+	.global data_ov61_0218132c
 data_ov61_0218132c:
 	.space 0x4
+	.global data_ov61_02181330
 data_ov61_02181330:
 	.space 0x4
+	.global data_ov61_02181334
 data_ov61_02181334:
 	.space 0x4
+	.global data_ov61_02181338
 data_ov61_02181338:
 	.space 0x4
+	.global data_ov61_0218133c
 data_ov61_0218133c:
 	.space 0x4
+	.global data_ov61_02181340
 data_ov61_02181340:
 	.space 0x4
+	.global data_ov61_02181344
 data_ov61_02181344:
 	.space 0x4
+	.global data_ov61_02181348
 data_ov61_02181348:
 	.space 0x4
+	.global data_ov61_0218134c
 data_ov61_0218134c:
 	.space 0x4
+	.global data_ov61_02181350
 data_ov61_02181350:
 	.space 0x4
+	.global data_ov61_02181354
 data_ov61_02181354:
 	.space 0x4
+	.global data_ov61_02181358
 data_ov61_02181358:
 	.space 0x4
+	.global data_ov61_0218135c
 data_ov61_0218135c:
 	.space 0x4
+	.global data_ov61_02181360
 data_ov61_02181360:
 	.space 0x4
+	.global data_ov61_02181364
 data_ov61_02181364:
 	.space 0x4
+	.global data_ov61_02181368
 data_ov61_02181368:
 	.space 0x4
+	.global data_ov61_0218136c
 data_ov61_0218136c:
 	.space 0x4
+	.global data_ov61_02181370
 data_ov61_02181370:
 	.space 0x4
+	.global data_ov61_02181374
 data_ov61_02181374:
 	.space 0x4
+	.global data_ov61_02181378
 data_ov61_02181378:
 	.space 0x4
+	.global data_ov61_0218137c
 data_ov61_0218137c:
 	.space 0x4
+	.global data_ov61_02181380
 data_ov61_02181380:
 	.space 0x4
+	.global data_ov61_02181384
 data_ov61_02181384:
 	.space 0x4
+	.global data_ov61_02181388
 data_ov61_02181388:
 	.space 0x4
+	.global data_ov61_0218138c
 data_ov61_0218138c:
 	.space 0x4
+	.global data_ov61_02181390
 data_ov61_02181390:
 	.space 0x4
+	.global data_ov61_02181394
 data_ov61_02181394:
 	.space 0x4
+	.global data_ov61_02181398
 data_ov61_02181398:
 	.space 0x4
+	.global data_ov61_0218139c
 data_ov61_0218139c:
 	.space 0x4
+	.global data_ov61_021813a0
 data_ov61_021813a0:
 	.space 0x4
+	.global data_ov61_021813a4
 data_ov61_021813a4:
 	.space 0x4
+	.global data_ov61_021813a8
 data_ov61_021813a8:
 	.space 0x4
+	.global data_ov61_021813ac
 data_ov61_021813ac:
 	.space 0x4
+	.global data_ov61_021813b0
 data_ov61_021813b0:
 	.space 0x4
+	.global data_ov61_021813b4
 data_ov61_021813b4:
 	.space 0x4
+	.global data_ov61_021813b8
 data_ov61_021813b8:
 	.space 0x4
+	.global data_ov61_021813bc
 data_ov61_021813bc:
 	.space 0x4
+	.global data_ov61_021813c0
 data_ov61_021813c0:
 	.space 0x4
+	.global data_ov61_021813c4
 data_ov61_021813c4:
 	.space 0x4
+	.global data_ov61_021813c8
 data_ov61_021813c8:
 	.space 0x4
+	.global data_ov61_021813cc
 data_ov61_021813cc:
 	.space 0x4
+	.global data_ov61_021813d0
 data_ov61_021813d0:
 	.space 0x4
+	.global data_ov61_021813d4
 data_ov61_021813d4:
 	.space 0x4
+	.global data_ov61_021813d8
 data_ov61_021813d8:
 	.space 0x4
+	.global data_ov61_021813dc
 data_ov61_021813dc:
 	.space 0x4
+	.global data_ov61_021813e0
 data_ov61_021813e0:
 	.space 0x4
+	.global data_ov61_021813e4
 data_ov61_021813e4:
 	.space 0x4
+	.global data_ov61_021813e8
 data_ov61_021813e8:
 	.space 0x4
+	.global data_ov61_021813ec
 data_ov61_021813ec:
 	.space 0x4
+	.global data_ov61_021813f0
 data_ov61_021813f0:
 	.space 0x4
+	.global data_ov61_021813f4
 data_ov61_021813f4:
 	.space 0x4
+	.global data_ov61_021813f8
 data_ov61_021813f8:
 	.space 0x4
+	.global data_ov61_021813fc
 data_ov61_021813fc:
 	.space 0x4
+	.global data_ov61_02181400
 data_ov61_02181400:
 	.space 0x4
+	.global data_ov61_02181404
 data_ov61_02181404:
 	.space 0x4
+	.global data_ov61_02181408
 data_ov61_02181408:
 	.space 0x4
+	.global data_ov61_0218140c
 data_ov61_0218140c:
 	.space 0x4
+	.global data_ov61_02181410
 data_ov61_02181410:
 	.space 0x4
+	.global data_ov61_02181414
 data_ov61_02181414:
 	.space 0x4
+	.global data_ov61_02181418
 data_ov61_02181418:
 	.space 0x4
+	.global data_ov61_0218141c
 data_ov61_0218141c:
 	.space 0x4
+	.global data_ov61_02181420
 data_ov61_02181420:
 	.space 0x4
+	.global data_ov61_02181424
 data_ov61_02181424:
 	.space 0x4
+	.global data_ov61_02181428
 data_ov61_02181428:
 	.space 0x4
+	.global data_ov61_0218142c
 data_ov61_0218142c:
 	.space 0x4
+	.global data_ov61_02181430
 data_ov61_02181430:
 	.space 0x4
+	.global data_ov61_02181434
 data_ov61_02181434:
 	.space 0x4
+	.global data_ov61_02181438
 data_ov61_02181438:
 	.space 0x4
+	.global data_ov61_0218143c
 data_ov61_0218143c:
 	.space 0x4
+	.global data_ov61_02181440
 data_ov61_02181440:
 	.space 0x4
+	.global data_ov61_02181444
 data_ov61_02181444:
 	.space 0x4
+	.global data_ov61_02181448
 data_ov61_02181448:
 	.space 0x4
+	.global data_ov61_0218144c
 data_ov61_0218144c:
 	.space 0x4
+	.global data_ov61_02181450
 data_ov61_02181450:
 	.space 0x4
+	.global data_ov61_02181454
 data_ov61_02181454:
 	.space 0x4
+	.global data_ov61_02181458
 data_ov61_02181458:
 	.space 0x4
+	.global data_ov61_0218145c
 data_ov61_0218145c:
 	.space 0x4
+	.global data_ov61_02181460
 data_ov61_02181460:
 	.space 0x4
+	.global data_ov61_02181464
 data_ov61_02181464:
 	.space 0x4
+	.global data_ov61_02181468
 data_ov61_02181468:
 	.space 0x4
+	.global data_ov61_0218146c
 data_ov61_0218146c:
 	.space 0x4
+	.global data_ov61_02181470
 data_ov61_02181470:
 	.space 0x4
+	.global data_ov61_02181474
 data_ov61_02181474:
 	.space 0x4
+	.global data_ov61_02181478
 data_ov61_02181478:
 	.space 0x4
+	.global data_ov61_0218147c
 data_ov61_0218147c:
 	.space 0x4
+	.global data_ov61_02181480
 data_ov61_02181480:
 	.space 0x4
+	.global data_ov61_02181484
 data_ov61_02181484:
 	.space 0x4
+	.global data_ov61_02181488
 data_ov61_02181488:
 	.space 0x4
+	.global data_ov61_0218148c
 data_ov61_0218148c:
 	.space 0x4
+	.global data_ov61_02181490
 data_ov61_02181490:
 	.space 0x4
+	.global data_ov61_02181494
 data_ov61_02181494:
 	.space 0x4
+	.global data_ov61_02181498
 data_ov61_02181498:
 	.space 0x4
+	.global data_ov61_0218149c
 data_ov61_0218149c:
 	.space 0x4
+	.global data_ov61_021814a0
 data_ov61_021814a0:
 	.space 0x4
+	.global data_ov61_021814a4
 data_ov61_021814a4:
 	.space 0x4
+	.global data_ov61_021814a8
 data_ov61_021814a8:
 	.space 0x4
+	.global data_ov61_021814ac
 data_ov61_021814ac:
 	.space 0x4
+	.global data_ov61_021814b0
 data_ov61_021814b0:
 	.space 0x4
+	.global data_ov61_021814b4
 data_ov61_021814b4:
 	.space 0x4
+	.global data_ov61_021814b8
 data_ov61_021814b8:
 	.space 0x4
+	.global data_ov61_021814bc
 data_ov61_021814bc:
 	.space 0x4
+	.global data_ov61_021814c0
 data_ov61_021814c0:
 	.space 0x4
+	.global data_ov61_021814c4
 data_ov61_021814c4:
 	.space 0x4
+	.global data_ov61_021814c8
 data_ov61_021814c8:
 	.space 0x4
+	.global data_ov61_021814cc
 data_ov61_021814cc:
 	.space 0x4
+	.global data_ov61_021814d0
 data_ov61_021814d0:
 	.space 0x4
+	.global data_ov61_021814d4
 data_ov61_021814d4:
 	.space 0x4
+	.global data_ov61_021814d8
 data_ov61_021814d8:
 	.space 0x4
+	.global data_ov61_021814dc
 data_ov61_021814dc:
 	.space 0x4
+	.global data_ov61_021814e0
 data_ov61_021814e0:
 	.space 0x4
+	.global data_ov61_021814e4
 data_ov61_021814e4:
 	.space 0x4
+	.global data_ov61_021814e8
 data_ov61_021814e8:
 	.space 0x4
+	.global data_ov61_021814ec
 data_ov61_021814ec:
 	.space 0x4
+	.global data_ov61_021814f0
 data_ov61_021814f0:
 	.space 0x4
+	.global data_ov61_021814f4
 data_ov61_021814f4:
 	.space 0x4
+	.global data_ov61_021814f8
 data_ov61_021814f8:
 	.space 0x4
+	.global data_ov61_021814fc
 data_ov61_021814fc:
 	.space 0x4
+	.global data_ov61_02181500
 data_ov61_02181500:
 	.space 0x4
+	.global data_ov61_02181504
 data_ov61_02181504:
 	.space 0x4
+	.global data_ov61_02181508
 data_ov61_02181508:
 	.space 0x4
+	.global data_ov61_0218150c
 data_ov61_0218150c:
 	.space 0x4
+	.global data_ov61_02181510
 data_ov61_02181510:
 	.space 0x4
+	.global data_ov61_02181514
 data_ov61_02181514:
 	.space 0x4
+	.global data_ov61_02181518
 data_ov61_02181518:
 	.space 0x4
+	.global data_ov61_0218151c
 data_ov61_0218151c:
 	.space 0x4
+	.global data_ov61_02181520
 data_ov61_02181520:
 	.space 0x4
+	.global data_ov61_02181524
 data_ov61_02181524:
 	.space 0x4
+	.global data_ov61_02181528
 data_ov61_02181528:
 	.space 0x4
+	.global data_ov61_0218152c
 data_ov61_0218152c:
 	.space 0x4
+	.global data_ov61_02181530
 data_ov61_02181530:
 	.space 0x4
+	.global data_ov61_02181534
 data_ov61_02181534:
 	.space 0x4
+	.global data_ov61_02181538
 data_ov61_02181538:
 	.space 0x4
+	.global data_ov61_0218153c
 data_ov61_0218153c:
 	.space 0x4
+	.global data_ov61_02181540
 data_ov61_02181540:
 	.space 0x4
+	.global data_ov61_02181544
 data_ov61_02181544:
 	.space 0x4
+	.global data_ov61_02181548
 data_ov61_02181548:
 	.space 0x4
+	.global data_ov61_0218154c
 data_ov61_0218154c:
 	.space 0x4
+	.global data_ov61_02181550
 data_ov61_02181550:
 	.space 0x4
+	.global data_ov61_02181554
 data_ov61_02181554:
 	.space 0x4
+	.global data_ov61_02181558
 data_ov61_02181558:
 	.space 0x4
+	.global data_ov61_0218155c
 data_ov61_0218155c:
 	.space 0x4
+	.global data_ov61_02181560
 data_ov61_02181560:
 	.space 0x4
+	.global data_ov61_02181564
 data_ov61_02181564:
 	.space 0x4
+	.global data_ov61_02181568
 data_ov61_02181568:
 	.space 0x4
+	.global data_ov61_0218156c
 data_ov61_0218156c:
 	.space 0x4
+	.global data_ov61_02181570
 data_ov61_02181570:
 	.space 0x4
+	.global data_ov61_02181574
 data_ov61_02181574:
 	.space 0x4
+	.global data_ov61_02181578
 data_ov61_02181578:
 	.space 0x4
+	.global data_ov61_0218157c
 data_ov61_0218157c:
 	.space 0x4
+	.global data_ov61_02181580
 data_ov61_02181580:
 	.space 0x4
+	.global data_ov61_02181584
 data_ov61_02181584:
 	.space 0x4
+	.global data_ov61_02181588
 data_ov61_02181588:
 	.space 0x4
+	.global data_ov61_0218158c
 data_ov61_0218158c:
 	.space 0x4
+	.global data_ov61_02181590
 data_ov61_02181590:
 	.space 0x4
+	.global data_ov61_02181594
 data_ov61_02181594:
 	.space 0x4
+	.global data_ov61_02181598
 data_ov61_02181598:
 	.space 0x4
+	.global data_ov61_0218159c
 data_ov61_0218159c:
 	.space 0x4
+	.global data_ov61_021815a0
 data_ov61_021815a0:
 	.space 0x4
+	.global data_ov61_021815a4
 data_ov61_021815a4:
 	.space 0x4
+	.global data_ov61_021815a8
 data_ov61_021815a8:
 	.space 0x4
+	.global data_ov61_021815ac
 data_ov61_021815ac:
 	.space 0x4
+	.global data_ov61_021815b0
 data_ov61_021815b0:
 	.space 0x4
+	.global data_ov61_021815b4
 data_ov61_021815b4:
 	.space 0x4
+	.global data_ov61_021815b8
 data_ov61_021815b8:
 	.space 0x4
+	.global data_ov61_021815bc
 data_ov61_021815bc:
 	.space 0x4
+	.global data_ov61_021815c0
 data_ov61_021815c0:
 	.space 0x4
+	.global data_ov61_021815c4
 data_ov61_021815c4:
 	.space 0x4
+	.global data_ov61_021815c8
 data_ov61_021815c8:
 	.space 0x4
+	.global data_ov61_021815cc
 data_ov61_021815cc:
 	.space 0x4
+	.global data_ov61_021815d0
 data_ov61_021815d0:
 	.space 0x4
+	.global data_ov61_021815d4
 data_ov61_021815d4:
 	.space 0x4
+	.global data_ov61_021815d8
 data_ov61_021815d8:
 	.space 0x4
+	.global data_ov61_021815dc
 data_ov61_021815dc:
 	.space 0x4
+	.global data_ov61_021815e0
 data_ov61_021815e0:
 	.space 0x4
+	.global data_ov61_021815e4
 data_ov61_021815e4:
 	.space 0x4
+	.global data_ov61_021815e8
 data_ov61_021815e8:
 	.space 0x4
+	.global data_ov61_021815ec
 data_ov61_021815ec:
 	.space 0x4
+	.global data_ov61_021815f0
 data_ov61_021815f0:
 	.space 0x4
+	.global data_ov61_021815f4
 data_ov61_021815f4:
 	.space 0x4
+	.global data_ov61_021815f8
 data_ov61_021815f8:
 	.space 0x4
+	.global data_ov61_021815fc
 data_ov61_021815fc:
 	.space 0x4
+	.global data_ov61_02181600
 data_ov61_02181600:
 	.space 0x4
+	.global data_ov61_02181604
 data_ov61_02181604:
 	.space 0x4
+	.global data_ov61_02181608
 data_ov61_02181608:
 	.space 0x4
+	.global data_ov61_0218160c
 data_ov61_0218160c:
 	.space 0x4
+	.global data_ov61_02181610
 data_ov61_02181610:
 	.space 0x4
+	.global data_ov61_02181614
 data_ov61_02181614:
 	.space 0x4
+	.global data_ov61_02181618
 data_ov61_02181618:
 	.space 0x4
+	.global data_ov61_0218161c
 data_ov61_0218161c:
 	.space 0x4
+	.global data_ov61_02181620
 data_ov61_02181620:
 	.space 0x4
+	.global data_ov61_02181624
 data_ov61_02181624:
 	.space 0x4
+	.global data_ov61_02181628
 data_ov61_02181628:
 	.space 0x4
+	.global data_ov61_0218162c
 data_ov61_0218162c:
 	.space 0x4
+	.global data_ov61_02181630
 data_ov61_02181630:
 	.space 0x4
+	.global data_ov61_02181634
 data_ov61_02181634:
 	.space 0x4
+	.global data_ov61_02181638
 data_ov61_02181638:
 	.space 0x4
+	.global data_ov61_0218163c
 data_ov61_0218163c:
 	.space 0x4
+	.global data_ov61_02181640
 data_ov61_02181640:
 	.space 0x4
+	.global data_ov61_02181644
 data_ov61_02181644:
 	.space 0x4
+	.global data_ov61_02181648
 data_ov61_02181648:
 	.space 0x4
+	.global data_ov61_0218164c
 data_ov61_0218164c:
 	.space 0x4
+	.global data_ov61_02181650
 data_ov61_02181650:
 	.space 0x4
+	.global data_ov61_02181654
 data_ov61_02181654:
 	.space 0x4
+	.global data_ov61_02181658
 data_ov61_02181658:
 	.space 0x4
+	.global data_ov61_0218165c
 data_ov61_0218165c:
 	.space 0x4
+	.global data_ov61_02181660
 data_ov61_02181660:
 	.space 0x4
+	.global data_ov61_02181664
 data_ov61_02181664:
 	.space 0x4
+	.global data_ov61_02181668
 data_ov61_02181668:
 	.space 0x4
+	.global data_ov61_0218166c
 data_ov61_0218166c:
 	.space 0x4
+	.global data_ov61_02181670
 data_ov61_02181670:
 	.space 0x4
+	.global data_ov61_02181674
 data_ov61_02181674:
 	.space 0x4
+	.global data_ov61_02181678
 data_ov61_02181678:
 	.space 0x4
+	.global data_ov61_0218167c
 data_ov61_0218167c:
 	.space 0x4
+	.global data_ov61_02181680
 data_ov61_02181680:
 	.space 0x4
+	.global data_ov61_02181684
 data_ov61_02181684:
 	.space 0x4
+	.global data_ov61_02181688
 data_ov61_02181688:
 	.space 0x4
+	.global data_ov61_0218168c
 data_ov61_0218168c:
 	.space 0x4
+	.global data_ov61_02181690
 data_ov61_02181690:
 	.space 0x4
+	.global data_ov61_02181694
 data_ov61_02181694:
 	.space 0x4
+	.global data_ov61_02181698
 data_ov61_02181698:
 	.space 0x4
+	.global data_ov61_0218169c
 data_ov61_0218169c:
 	.space 0x4
+	.global data_ov61_021816a0
 data_ov61_021816a0:
 	.space 0x4
+	.global data_ov61_021816a4
 data_ov61_021816a4:
 	.space 0x4
+	.global data_ov61_021816a8
 data_ov61_021816a8:
 	.space 0x4
+	.global data_ov61_021816ac
 data_ov61_021816ac:
 	.space 0x4
+	.global data_ov61_021816b0
 data_ov61_021816b0:
 	.space 0x4
+	.global data_ov61_021816b4
 data_ov61_021816b4:
 	.space 0x4
+	.global data_ov61_021816b8
 data_ov61_021816b8:
 	.space 0x4
+	.global data_ov61_021816bc
 data_ov61_021816bc:
 	.space 0x4
+	.global data_ov61_021816c0
 data_ov61_021816c0:
 	.space 0x4
+	.global data_ov61_021816c4
 data_ov61_021816c4:
 	.space 0x4
+	.global data_ov61_021816c8
 data_ov61_021816c8:
 	.space 0x4
+	.global data_ov61_021816cc
 data_ov61_021816cc:
 	.space 0x4
+	.global data_ov61_021816d0
 data_ov61_021816d0:
 	.space 0x4
+	.global data_ov61_021816d4
 data_ov61_021816d4:
 	.space 0x4
+	.global data_ov61_021816d8
 data_ov61_021816d8:
 	.space 0x4
+	.global data_ov61_021816dc
 data_ov61_021816dc:
 	.space 0x4
+	.global data_ov61_021816e0
 data_ov61_021816e0:
 	.space 0x4
+	.global data_ov61_021816e4
 data_ov61_021816e4:
 	.space 0x4
+	.global data_ov61_021816e8
 data_ov61_021816e8:
 	.space 0x4
+	.global data_ov61_021816ec
 data_ov61_021816ec:
 	.space 0x4
+	.global data_ov61_021816f0
 data_ov61_021816f0:
 	.space 0x4
+	.global data_ov61_021816f4
 data_ov61_021816f4:
 	.space 0x4
+	.global data_ov61_021816f8
 data_ov61_021816f8:
 	.space 0x4
+	.global data_ov61_021816fc
 data_ov61_021816fc:
 	.space 0x4
+	.global data_ov61_02181700
 data_ov61_02181700:
 	.space 0x4
+	.global data_ov61_02181704
 data_ov61_02181704:
 	.space 0x4
+	.global data_ov61_02181708
 data_ov61_02181708:
 	.space 0x4
+	.global data_ov61_0218170c
 data_ov61_0218170c:
 	.space 0x4
+	.global data_ov61_02181710
 data_ov61_02181710:
 	.space 0x4
+	.global data_ov61_02181714
 data_ov61_02181714:
 	.space 0x4
+	.global data_ov61_02181718
 data_ov61_02181718:
 	.space 0x4
+	.global data_ov61_0218171c
 data_ov61_0218171c:
 	.space 0x4
+	.global data_ov61_02181720
 data_ov61_02181720:
 	.space 0x4
+	.global data_ov61_02181724
 data_ov61_02181724:
 	.space 0x4
+	.global data_ov61_02181728
 data_ov61_02181728:
 	.space 0x4
+	.global data_ov61_0218172c
 data_ov61_0218172c:
 	.space 0x4
+	.global data_ov61_02181730
 data_ov61_02181730:
 	.space 0x4
+	.global data_ov61_02181734
 data_ov61_02181734:
 	.space 0x4
+	.global data_ov61_02181738
 data_ov61_02181738:
 	.space 0x4
+	.global data_ov61_0218173c
 data_ov61_0218173c:
 	.space 0x4
+	.global data_ov61_02181740
 data_ov61_02181740:
 	.space 0x4
+	.global data_ov61_02181744
 data_ov61_02181744:
 	.space 0x4
+	.global data_ov61_02181748
 data_ov61_02181748:
 	.space 0x4
+	.global data_ov61_0218174c
 data_ov61_0218174c:
 	.space 0x4
+	.global data_ov61_02181750
 data_ov61_02181750:
 	.space 0x4
+	.global data_ov61_02181754
 data_ov61_02181754:
 	.space 0x4
+	.global data_ov61_02181758
 data_ov61_02181758:
 	.space 0x4
+	.global data_ov61_0218175c
 data_ov61_0218175c:
 	.space 0x4
+	.global data_ov61_02181760
 data_ov61_02181760:
 	.space 0x4
+	.global data_ov61_02181764
 data_ov61_02181764:
 	.space 0x4
+	.global data_ov61_02181768
 data_ov61_02181768:
 	.space 0x4
+	.global data_ov61_0218176c
 data_ov61_0218176c:
 	.space 0x4
+	.global data_ov61_02181770
 data_ov61_02181770:
 	.space 0x4
+	.global data_ov61_02181774
 data_ov61_02181774:
 	.space 0x4
+	.global data_ov61_02181778
 data_ov61_02181778:
 	.space 0x4
+	.global data_ov61_0218177c
 data_ov61_0218177c:
 	.space 0x4
+	.global data_ov61_02181780
 data_ov61_02181780:
 	.space 0x4
+	.global data_ov61_02181784
 data_ov61_02181784:
 	.space 0x4
+	.global data_ov61_02181788
 data_ov61_02181788:
 	.space 0x4
+	.global data_ov61_0218178c
 data_ov61_0218178c:
 	.space 0x4
+	.global data_ov61_02181790
 data_ov61_02181790:
 	.space 0x4
+	.global data_ov61_02181794
 data_ov61_02181794:
 	.space 0x4
+	.global data_ov61_02181798
 data_ov61_02181798:
 	.space 0x4
+	.global data_ov61_0218179c
 data_ov61_0218179c:
 	.space 0x4
+	.global data_ov61_021817a0
 data_ov61_021817a0:
 	.space 0x4
+	.global data_ov61_021817a4
 data_ov61_021817a4:
 	.space 0x4
+	.global data_ov61_021817a8
 data_ov61_021817a8:
 	.space 0x4
+	.global data_ov61_021817ac
 data_ov61_021817ac:
 	.space 0x4
+	.global data_ov61_021817b0
 data_ov61_021817b0:
 	.space 0x4
+	.global data_ov61_021817b4
 data_ov61_021817b4:
 	.space 0x4
+	.global data_ov61_021817b8
 data_ov61_021817b8:
 	.space 0x4
+	.global data_ov61_021817bc
 data_ov61_021817bc:
 	.space 0x4
+	.global data_ov61_021817c0
 data_ov61_021817c0:
 	.space 0x4
+	.global data_ov61_021817c4
 data_ov61_021817c4:
 	.space 0x4
+	.global data_ov61_021817c8
 data_ov61_021817c8:
 	.space 0x4
+	.global data_ov61_021817cc
 data_ov61_021817cc:
 	.space 0x4
+	.global data_ov61_021817d0
 data_ov61_021817d0:
 	.space 0x1
+	.global data_ov61_021817d1
 data_ov61_021817d1:
 	.space 0x1
+	.global data_ov61_021817d2
 data_ov61_021817d2:
 	.space 0x1
+	.global data_ov61_021817d3
 data_ov61_021817d3:
 	.space 0x1
+	.global data_ov61_021817d4
 data_ov61_021817d4:
 	.space 0x1
+	.global data_ov61_021817d5
 data_ov61_021817d5:
 	.space 0x1
+	.global data_ov61_021817d6
 data_ov61_021817d6:
 	.space 0x1
+	.global data_ov61_021817d7
 data_ov61_021817d7:
 	.space 0x1
+	.global data_ov61_021817d8
 data_ov61_021817d8:
 	.space 0x1
+	.global data_ov61_021817d9
 data_ov61_021817d9:
 	.space 0x1
+	.global data_ov61_021817da
 data_ov61_021817da:
 	.space 0x1
+	.global data_ov61_021817db
 data_ov61_021817db:
 	.space 0x1
+	.global data_ov61_021817dc
 data_ov61_021817dc:
 	.space 0x1
+	.global data_ov61_021817dd
 data_ov61_021817dd:
 	.space 0x1
+	.global data_ov61_021817de
 data_ov61_021817de:
 	.space 0x1
+	.global data_ov61_021817df
 data_ov61_021817df:
 	.space 0x1
+	.global data_ov61_021817e0
 data_ov61_021817e0:
 	.space 0x1
+	.global data_ov61_021817e1
 data_ov61_021817e1:
 	.space 0x1
+	.global data_ov61_021817e2
 data_ov61_021817e2:
 	.space 0x1
+	.global data_ov61_021817e3
 data_ov61_021817e3:
 	.space 0x1
+	.global data_ov61_021817e4
 data_ov61_021817e4:
 	.space 0x4
+	.global data_ov61_021817e8
 data_ov61_021817e8:
 	.space 0x4
+	.global data_ov61_021817ec
 data_ov61_021817ec:
 	.space 0x4
+	.global data_ov61_021817f0
 data_ov61_021817f0:
 	.space 0x4
+	.global data_ov61_021817f4
 data_ov61_021817f4:
 	.space 0x4
+	.global data_ov61_021817f8
 data_ov61_021817f8:
 	.space 0x4
+	.global data_ov61_021817fc
 data_ov61_021817fc:
 	.space 0x4
+	.global data_ov61_02181800
 data_ov61_02181800:
 	.space 0x4
+	.global data_ov61_02181804
 data_ov61_02181804:
 	.space 0x4
+	.global data_ov61_02181808
 data_ov61_02181808:
 	.space 0x4
+	.global data_ov61_0218180c
 data_ov61_0218180c:
 	.space 0x4
+	.global data_ov61_02181810
 data_ov61_02181810:
 	.space 0x4
+	.global data_ov61_02181814
 data_ov61_02181814:
 	.space 0x4
+	.global data_ov61_02181818
 data_ov61_02181818:
 	.space 0x4
+	.global data_ov61_0218181c
 data_ov61_0218181c:
 	.space 0x4
+	.global data_ov61_02181820
 data_ov61_02181820:
 	.space 0x4
+	.global data_ov61_02181824
 data_ov61_02181824:
 	.space 0x4
+	.global data_ov61_02181828
 data_ov61_02181828:
 	.space 0x4
+	.global data_ov61_0218182c
 data_ov61_0218182c:
 	.space 0x4
+	.global data_ov61_02181830
 data_ov61_02181830:
 	.space 0x4
+	.global data_ov61_02181834
 data_ov61_02181834:
 	.space 0x4
+	.global data_ov61_02181838
 data_ov61_02181838:
 	.space 0x4
+	.global data_ov61_0218183c
 data_ov61_0218183c:
 	.space 0x4
+	.global data_ov61_02181840
 data_ov61_02181840:
 	.space 0x4
+	.global data_ov61_02181844
 data_ov61_02181844:
 	.space 0x4
+	.global data_ov61_02181848
 data_ov61_02181848:
 	.space 0x4
+	.global data_ov61_0218184c
 data_ov61_0218184c:
 	.space 0x4
+	.global data_ov61_02181850
 data_ov61_02181850:
 	.space 0x4
+	.global data_ov61_02181854
 data_ov61_02181854:
 	.space 0x4
+	.global data_ov61_02181858
 data_ov61_02181858:
 	.space 0x4
+	.global data_ov61_0218185c
 data_ov61_0218185c:
 	.space 0x4
+	.global data_ov61_02181860
 data_ov61_02181860:
 	.space 0x4
+	.global data_ov61_02181864
 data_ov61_02181864:
 	.space 0x4
+	.global data_ov61_02181868
 data_ov61_02181868:
 	.space 0x4
+	.global data_ov61_0218186c
 data_ov61_0218186c:
 	.space 0x4
+	.global data_ov61_02181870
 data_ov61_02181870:
 	.space 0x4
+	.global data_ov61_02181874
 data_ov61_02181874:
 	.space 0x4
+	.global data_ov61_02181878
 data_ov61_02181878:
 	.space 0x4
+	.global data_ov61_0218187c
 data_ov61_0218187c:
 	.space 0x4
+	.global data_ov61_02181880
 data_ov61_02181880:
 	.space 0x4
+	.global data_ov61_02181884
 data_ov61_02181884:
 	.space 0x4
+	.global data_ov61_02181888
 data_ov61_02181888:
 	.space 0x4
+	.global data_ov61_0218188c
 data_ov61_0218188c:
 	.space 0x4
+	.global data_ov61_02181890
 data_ov61_02181890:
 	.space 0x4
+	.global data_ov61_02181894
 data_ov61_02181894:
 	.space 0x4
+	.global data_ov61_02181898
 data_ov61_02181898:
 	.space 0x4
+	.global data_ov61_0218189c
 data_ov61_0218189c:
 	.space 0x4
+	.global data_ov61_021818a0
 data_ov61_021818a0:
 	.space 0x4
+	.global data_ov61_021818a4
 data_ov61_021818a4:
 	.space 0x4
+	.global data_ov61_021818a8
 data_ov61_021818a8:
 	.space 0x4
+	.global data_ov61_021818ac
 data_ov61_021818ac:
 	.space 0x4
+	.global data_ov61_021818b0
 data_ov61_021818b0:
 	.space 0x4
+	.global data_ov61_021818b4
 data_ov61_021818b4:
 	.space 0x4
+	.global data_ov61_021818b8
 data_ov61_021818b8:
 	.space 0x4
+	.global data_ov61_021818bc
 data_ov61_021818bc:
 	.space 0x4
+	.global data_ov61_021818c0
 data_ov61_021818c0:
 	.space 0x4
+	.global data_ov61_021818c4
 data_ov61_021818c4:
 	.space 0x4
+	.global data_ov61_021818c8
 data_ov61_021818c8:
 	.space 0x4
+	.global data_ov61_021818cc
 data_ov61_021818cc:
 	.space 0x4
+	.global data_ov61_021818d0
 data_ov61_021818d0:
 	.space 0x4
+	.global data_ov61_021818d4
 data_ov61_021818d4:
 	.space 0x4
+	.global data_ov61_021818d8
 data_ov61_021818d8:
 	.space 0x4
+	.global data_ov61_021818dc
 data_ov61_021818dc:
 	.space 0x4
+	.global data_ov61_021818e0
 data_ov61_021818e0:
 	.space 0x4
+	.global data_ov61_021818e4
 data_ov61_021818e4:
 	.space 0x4
+	.global data_ov61_021818e8
 data_ov61_021818e8:
 	.space 0x4
+	.global data_ov61_021818ec
 data_ov61_021818ec:
 	.space 0x4
+	.global data_ov61_021818f0
 data_ov61_021818f0:
 	.space 0x4
+	.global data_ov61_021818f4
 data_ov61_021818f4:
 	.space 0x4
+	.global data_ov61_021818f8
 data_ov61_021818f8:
 	.space 0x4
+	.global data_ov61_021818fc
 data_ov61_021818fc:
 	.space 0x4
+	.global data_ov61_02181900
 data_ov61_02181900:
 	.space 0x4
+	.global data_ov61_02181904
 data_ov61_02181904:
 	.space 0x4
+	.global data_ov61_02181908
 data_ov61_02181908:
 	.space 0x4
+	.global data_ov61_0218190c
 data_ov61_0218190c:
 	.space 0x4
+	.global data_ov61_02181910
 data_ov61_02181910:
 	.space 0x4
+	.global data_ov61_02181914
 data_ov61_02181914:
 	.space 0x4
+	.global data_ov61_02181918
 data_ov61_02181918:
 	.space 0x4
+	.global data_ov61_0218191c
 data_ov61_0218191c:
 	.space 0x4
+	.global data_ov61_02181920
 data_ov61_02181920:
 	.space 0x4
+	.global data_ov61_02181924
 data_ov61_02181924:
 	.space 0x4
+	.global data_ov61_02181928
 data_ov61_02181928:
 	.space 0x4
+	.global data_ov61_0218192c
 data_ov61_0218192c:
 	.space 0x4
+	.global data_ov61_02181930
 data_ov61_02181930:
 	.space 0x4
+	.global data_ov61_02181934
 data_ov61_02181934:
 	.space 0x4
+	.global data_ov61_02181938
 data_ov61_02181938:
 	.space 0x4
+	.global data_ov61_0218193c
 data_ov61_0218193c:
 	.space 0x4
+	.global data_ov61_02181940
 data_ov61_02181940:
 	.space 0x4
+	.global data_ov61_02181944
 data_ov61_02181944:
 	.space 0x4
+	.global data_ov61_02181948
 data_ov61_02181948:
 	.space 0x4
+	.global data_ov61_0218194c
 data_ov61_0218194c:
 	.space 0x4
+	.global data_ov61_02181950
 data_ov61_02181950:
 	.space 0x4
+	.global data_ov61_02181954
 data_ov61_02181954:
 	.space 0x4
+	.global data_ov61_02181958
 data_ov61_02181958:
 	.space 0x4
+	.global data_ov61_0218195c
 data_ov61_0218195c:
 	.space 0x4
+	.global data_ov61_02181960
 data_ov61_02181960:
 	.space 0x4
+	.global data_ov61_02181964
 data_ov61_02181964:
 	.space 0x4
+	.global data_ov61_02181968
 data_ov61_02181968:
 	.space 0x4
+	.global data_ov61_0218196c
 data_ov61_0218196c:
 	.space 0x4
+	.global data_ov61_02181970
 data_ov61_02181970:
 	.space 0x4
+	.global data_ov61_02181974
 data_ov61_02181974:
 	.space 0x4
+	.global data_ov61_02181978
 data_ov61_02181978:
 	.space 0x4
+	.global data_ov61_0218197c
 data_ov61_0218197c:
 	.space 0x4
+	.global data_ov61_02181980
 data_ov61_02181980:
 	.space 0x4
+	.global data_ov61_02181984
 data_ov61_02181984:
 	.space 0x4
+	.global data_ov61_02181988
 data_ov61_02181988:
 	.space 0x4
+	.global data_ov61_0218198c
 data_ov61_0218198c:
 	.space 0x4
+	.global data_ov61_02181990
 data_ov61_02181990:
 	.space 0x4
+	.global data_ov61_02181994
 data_ov61_02181994:
 	.space 0x4
+	.global data_ov61_02181998
 data_ov61_02181998:
 	.space 0x4
+	.global data_ov61_0218199c
 data_ov61_0218199c:
 	.space 0x4
+	.global data_ov61_021819a0
 data_ov61_021819a0:
 	.space 0x4
+	.global data_ov61_021819a4
 data_ov61_021819a4:
 	.space 0x4
+	.global data_ov61_021819a8
 data_ov61_021819a8:
 	.space 0x4
+	.global data_ov61_021819ac
 data_ov61_021819ac:
 	.space 0x4
+	.global data_ov61_021819b0
 data_ov61_021819b0:
 	.space 0x4
+	.global data_ov61_021819b4
 data_ov61_021819b4:
 	.space 0x4
+	.global data_ov61_021819b8
 data_ov61_021819b8:
 	.space 0x4
+	.global data_ov61_021819bc
 data_ov61_021819bc:
 	.space 0x4
+	.global data_ov61_021819c0
 data_ov61_021819c0:
 	.space 0x4
+	.global data_ov61_021819c4
 data_ov61_021819c4:
 	.space 0x4
+	.global data_ov61_021819c8
 data_ov61_021819c8:
 	.space 0x4
+	.global data_ov61_021819cc
 data_ov61_021819cc:
 	.space 0x4
+	.global data_ov61_021819d0
 data_ov61_021819d0:
 	.space 0x4
+	.global data_ov61_021819d4
 data_ov61_021819d4:
 	.space 0x4
+	.global data_ov61_021819d8
 data_ov61_021819d8:
 	.space 0x4
+	.global data_ov61_021819dc
 data_ov61_021819dc:
 	.space 0x4

@@ -3,6 +3,7 @@
 
 	.text
 
+	.global func_ov26_0216d6a0
 	arm_func_start func_ov26_0216d6a0
 func_ov26_0216d6a0: ; 0x0216d6a0
 	stmdb sp!, {r4, lr}
@@ -37,6 +38,7 @@ _0216d6ec:
 _0216d708: .word data_027e0ffc
 _0216d70c: .word 0x0000038d
 
+	.global func_ov26_0216d710
 	arm_func_start func_ov26_0216d710
 func_ov26_0216d710: ; 0x0216d710
 	stmdb sp!, {r4, lr}
@@ -71,6 +73,7 @@ _0216d75c:
 _0216d778: .word data_027e0ffc
 _0216d77c: .word 0x0000038d
 
+	.global func_ov26_0216d780
 	arm_func_start func_ov26_0216d780
 func_ov26_0216d780: ; 0x0216d780
 	stmdb sp!, {r4, lr}
@@ -93,6 +96,7 @@ _0216d7b0:
 _0216d7b8: .word data_027e0fe0
 _0216d7bc: .word data_ov26_0217a374
 
+	.global func_ov26_0216d7c0
 	arm_func_start func_ov26_0216d7c0
 func_ov26_0216d7c0: ; 0x0216d7c0
 	stmdb sp!, {r4, lr}
@@ -115,6 +119,7 @@ _0216d7f0:
 _0216d7f8: .word data_027e0fe0
 _0216d7fc: .word data_ov26_0217a374
 
+	.global func_ov26_0216d800
 	arm_func_start func_ov26_0216d800
 func_ov26_0216d800: ; 0x0216d800
 	stmdb sp!, {r4, lr}
@@ -137,6 +142,7 @@ _0216d830:
 _0216d838: .word data_027e0fe0
 _0216d83c: .word data_ov26_0217a374
 
+	.global func_ov26_0216d840
 	arm_func_start func_ov26_0216d840
 func_ov26_0216d840: ; 0x0216d840
 	stmdb sp!, {r4, lr}
@@ -159,6 +165,7 @@ _0216d870:
 _0216d878: .word data_027e0fe0
 _0216d87c: .word data_ov26_0217a374
 
+	.global func_ov26_0216d880
 	arm_func_start func_ov26_0216d880
 func_ov26_0216d880: ; 0x0216d880
 	stmdb sp!, {r4, lr}
@@ -181,6 +188,7 @@ _0216d8b0:
 _0216d8b8: .word data_027e0fe0
 _0216d8bc: .word data_ov26_0217a374
 
+	.global func_ov26_0216d8c0
 	arm_func_start func_ov26_0216d8c0
 func_ov26_0216d8c0: ; 0x0216d8c0
 	stmdb sp!, {r4, lr}
@@ -203,6 +211,7 @@ _0216d8f0:
 _0216d8f8: .word data_027e0fe0
 _0216d8fc: .word data_ov26_0217a374
 
+	.global func_ov26_0216d900
 	arm_func_start func_ov26_0216d900
 func_ov26_0216d900: ; 0x0216d900
 	stmdb sp!, {r4, lr}
@@ -225,6 +234,7 @@ _0216d930:
 _0216d938: .word data_027e0fe0
 _0216d93c: .word data_ov26_0217a374
 
+	.global func_ov26_0216d940
 	arm_func_start func_ov26_0216d940
 func_ov26_0216d940: ; 0x0216d940
 	stmdb sp!, {r4, lr}
@@ -247,6 +257,7 @@ _0216d970:
 _0216d978: .word data_027e0fe0
 _0216d97c: .word data_ov26_0217a374
 
+	.global func_ov26_0216d980
 	thumb_func_start func_ov26_0216d980
 func_ov26_0216d980: ; 0x0216d980
 	push {r4, r5, r6, lr}
@@ -415,6 +426,7 @@ _0216dab0: .word func_ov26_0216d710
 _0216dab4: .word data_ov26_0217926c
 _0216dab8: .word data_ov26_02179260
 
+	.global func_ov26_0216dabc
 	arm_func_start func_ov26_0216dabc
 func_ov26_0216dabc: ; 0x0216dabc
 	stmdb sp!, {r4, lr}
@@ -437,6 +449,7 @@ _0216daec:
 _0216daf4: .word data_027e0fe0
 _0216daf8: .word data_ov26_0217a270
 
+	.global func_ov26_0216dafc
 	arm_func_start func_ov26_0216dafc
 func_ov26_0216dafc: ; 0x0216dafc
 	stmdb sp!, {r4, lr}
@@ -460,6 +473,7 @@ _0216db38: .word data_ov26_02179290
 _0216db3c: .word func_ov26_0216d6a0
 _0216db40: .word data_ov26_02179278
 
+	.global func_ov26_0216db44
 	arm_func_start func_ov26_0216db44
 func_ov26_0216db44: ; 0x0216db44
 	stmdb sp!, {r4, lr}
@@ -490,6 +504,7 @@ _0216db8c:
 _0216db98: .word data_027e0fe4
 _0216db9c: .word 0x43574d42
 
+	.global func_ov26_0216dba0
 	arm_func_start func_ov26_0216dba0
 func_ov26_0216dba0: ; 0x0216dba0
 	stmdb sp!, {r4, lr}
@@ -512,6 +527,7 @@ _0216dbd0:
 _0216dbd8: .word data_027e0fe0
 _0216dbdc: .word data_ov26_0217a16c
 
+	.global func_ov26_0216dbe0
 	arm_func_start func_ov26_0216dbe0
 func_ov26_0216dbe0: ; 0x0216dbe0
 	stmdb sp!, {r4, lr}
@@ -534,6 +550,7 @@ _0216dc10:
 _0216dc18: .word data_027e0fe0
 _0216dc1c: .word data_ov26_0217a16c
 
+	.global func_ov26_0216dc20
 	thumb_func_start func_ov26_0216dc20
 func_ov26_0216dc20: ; 0x0216dc20
 	push {r4, lr}
@@ -599,6 +616,7 @@ _0216dc98: .word 0x00005555
 _0216dc9c: .word data_ov26_02179284
 _0216dca0: .word 0x00000468
 
+	.global func_ov26_0216dca4
 	arm_func_start func_ov26_0216dca4
 func_ov26_0216dca4: ; 0x0216dca4
 	stmdb sp!, {r4, lr}
@@ -613,6 +631,7 @@ func_ov26_0216dca4: ; 0x0216dca4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216dca4
 
+	.global func_ov26_0216dccc
 	arm_func_start func_ov26_0216dccc
 func_ov26_0216dccc: ; 0x0216dccc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -645,6 +664,7 @@ func_ov26_0216dccc: ; 0x0216dccc
 	arm_func_end func_ov26_0216dccc
 _0216dd34: .word data_02050f54
 
+	.global func_ov26_0216dd38
 	arm_func_start func_ov26_0216dd38
 func_ov26_0216dd38: ; 0x0216dd38
 	stmdb sp!, {r3, lr}
@@ -661,6 +681,7 @@ func_ov26_0216dd38: ; 0x0216dd38
 	arm_func_end func_ov26_0216dd38
 _0216dd60: .word 0xfffffa3d
 
+	.global func_ov26_0216dd64
 	arm_func_start func_ov26_0216dd64
 func_ov26_0216dd64: ; 0x0216dd64
 	stmdb sp!, {r4, lr}
@@ -683,6 +704,7 @@ _0216dd94:
 _0216dd9c: .word data_027e0fe0
 _0216dda0: .word data_ov26_0217a068
 
+	.global func_ov26_0216dda4
 	arm_func_start func_ov26_0216dda4
 func_ov26_0216dda4: ; 0x0216dda4
 	stmdb sp!, {r4, lr}
@@ -704,6 +726,7 @@ func_ov26_0216dda4: ; 0x0216dda4
 	arm_func_end func_ov26_0216dda4
 _0216dde0: .word data_ov26_02179308
 
+	.global func_ov26_0216dde4
 	arm_func_start func_ov26_0216dde4
 func_ov26_0216dde4: ; 0x0216dde4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -752,6 +775,7 @@ _0216de54:
 	arm_func_end func_ov26_0216dde4
 _0216de88: .word data_027e0f94
 
+	.global func_ov26_0216de8c
 	arm_func_start func_ov26_0216de8c
 func_ov26_0216de8c: ; 0x0216de8c
 	stmdb sp!, {r4, lr}
@@ -782,6 +806,7 @@ _0216ded4:
 _0216dee0: .word data_027e0fe4
 _0216dee4: .word 0x434f4253
 
+	.global func_ov26_0216dee8
 	arm_func_start func_ov26_0216dee8
 func_ov26_0216dee8: ; 0x0216dee8
 	stmdb sp!, {r4, lr}
@@ -793,6 +818,7 @@ func_ov26_0216dee8: ; 0x0216dee8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216dee8
 
+	.global func_ov26_0216df04
 	arm_func_start func_ov26_0216df04
 func_ov26_0216df04: ; 0x0216df04
 	stmdb sp!, {r4, lr}
@@ -802,6 +828,7 @@ func_ov26_0216df04: ; 0x0216df04
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df04
 
+	.global func_ov26_0216df18
 	arm_func_start func_ov26_0216df18
 func_ov26_0216df18: ; 0x0216df18
 	stmdb sp!, {r4, lr}
@@ -813,6 +840,7 @@ func_ov26_0216df18: ; 0x0216df18
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df18
 
+	.global func_ov26_0216df34
 	arm_func_start func_ov26_0216df34
 func_ov26_0216df34: ; 0x0216df34
 	stmdb sp!, {r4, lr}
@@ -822,6 +850,7 @@ func_ov26_0216df34: ; 0x0216df34
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df34
 
+	.global func_ov26_0216df48
 	arm_func_start func_ov26_0216df48
 func_ov26_0216df48: ; 0x0216df48
 	stmdb sp!, {r4, lr}
@@ -833,6 +862,7 @@ func_ov26_0216df48: ; 0x0216df48
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df48
 
+	.global func_ov26_0216df64
 	arm_func_start func_ov26_0216df64
 func_ov26_0216df64: ; 0x0216df64
 	stmdb sp!, {r4, lr}
@@ -842,6 +872,7 @@ func_ov26_0216df64: ; 0x0216df64
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df64
 
+	.global func_ov26_0216df78
 	arm_func_start func_ov26_0216df78
 func_ov26_0216df78: ; 0x0216df78
 	stmdb sp!, {r4, lr}
@@ -853,6 +884,7 @@ func_ov26_0216df78: ; 0x0216df78
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df78
 
+	.global func_ov26_0216df94
 	arm_func_start func_ov26_0216df94
 func_ov26_0216df94: ; 0x0216df94
 	stmdb sp!, {r4, lr}
@@ -862,11 +894,13 @@ func_ov26_0216df94: ; 0x0216df94
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216df94
 
+	.global func_ov26_0216dfa8
 	arm_func_start func_ov26_0216dfa8
 func_ov26_0216dfa8: ; 0x0216dfa8
 	bx lr
 	arm_func_end func_ov26_0216dfa8
 
+	.global func_ov26_0216dfac
 	arm_func_start func_ov26_0216dfac
 func_ov26_0216dfac: ; 0x0216dfac
 	stmdb sp!, {r4, lr}
@@ -886,6 +920,7 @@ func_ov26_0216dfac: ; 0x0216dfac
 	arm_func_end func_ov26_0216dfac
 _0216dfe0: .word data_027e0f84
 
+	.global func_ov26_0216dfe4
 	arm_func_start func_ov26_0216dfe4
 func_ov26_0216dfe4: ; 0x0216dfe4
 	stmdb sp!, {r3, r4, lr}
@@ -931,6 +966,7 @@ _0216e078: .word data_027e0f68
 _0216e07c: .word data_ov00_020e2f04
 _0216e080: .word data_ov00_020e2dd8
 
+	.global func_ov26_0216e084
 	arm_func_start func_ov26_0216e084
 func_ov26_0216e084: ; 0x0216e084
 	stmdb sp!, {r4, lr}
@@ -954,6 +990,7 @@ func_ov26_0216e084: ; 0x0216e084
 _0216e0c4: .word data_ov26_0217a478
 _0216e0c8: .word data_027e0f6c
 
+	.global func_ov26_0216e0cc
 	arm_func_start func_ov26_0216e0cc
 func_ov26_0216e0cc: ; 0x0216e0cc
 	stmdb sp!, {r4, lr}
@@ -979,6 +1016,7 @@ func_ov26_0216e0cc: ; 0x0216e0cc
 _0216e114: .word data_ov26_0217a478
 _0216e118: .word data_027e0f6c
 
+	.global func_ov26_0216e11c
 	arm_func_start func_ov26_0216e11c
 func_ov26_0216e11c: ; 0x0216e11c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
@@ -1120,6 +1158,7 @@ _0216e308:
 _0216e320: .word data_027e0e60
 _0216e324: .word data_027e0f6c
 
+	.global func_ov26_0216e328
 	arm_func_start func_ov26_0216e328
 func_ov26_0216e328: ; 0x0216e328
 	stmdb sp!, {r3, r4, r5, lr}
@@ -1167,6 +1206,7 @@ _0216e3b4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_0216e328
 
+	.global func_ov26_0216e3c8
 	arm_func_start func_ov26_0216e3c8
 func_ov26_0216e3c8: ; 0x0216e3c8
 	stmdb sp!, {r4, lr}
@@ -1220,18 +1260,21 @@ _0216e470: .word data_027e0f68
 _0216e474: .word data_ov26_0217931c
 _0216e478: .word data_ov26_0217932c
 
+	.global func_ov26_0216e47c
 	arm_func_start func_ov26_0216e47c
 func_ov26_0216e47c: ; 0x0216e47c
 	mov r0, #0x57
 	bx lr
 	arm_func_end func_ov26_0216e47c
 
+	.global func_ov26_0216e484
 	arm_func_start func_ov26_0216e484
 func_ov26_0216e484: ; 0x0216e484
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov26_0216e484
 
+	.global func_ov26_0216e48c
 	arm_func_start func_ov26_0216e48c
 func_ov26_0216e48c: ; 0x0216e48c
 	stmdb sp!, {r4, lr}
@@ -1249,6 +1292,7 @@ func_ov26_0216e48c: ; 0x0216e48c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_0216e48c
 
+	.global func_ov26_0216e4c0
 	arm_func_start func_ov26_0216e4c0
 func_ov26_0216e4c0: ; 0x0216e4c0
 	cmp r1, #0
@@ -1257,6 +1301,7 @@ func_ov26_0216e4c0: ; 0x0216e4c0
 	bx lr
 	arm_func_end func_ov26_0216e4c0
 
+	.global func_ov26_0216e4d0
 	arm_func_start func_ov26_0216e4d0
 func_ov26_0216e4d0: ; 0x0216e4d0
 	ldr r0, _0216e4e4 ; =data_027e0f74
@@ -1269,6 +1314,7 @@ func_ov26_0216e4d0: ; 0x0216e4d0
 _0216e4e4: .word data_027e0f74
 _0216e4e8: .word func_ov00_02097760
 
+	.global func_ov26_0216e4ec
 	thumb_func_start func_ov26_0216e4ec
 func_ov26_0216e4ec: ; 0x0216e4ec
 	push {r4, lr}
@@ -1293,11 +1339,13 @@ _0216e50c:
 _0216e514: .word data_ov26_0217a50c
 _0216e518: .word data_027e0ce0
 
+	.global func_ov26_0216e51c
 	thumb_func_start func_ov26_0216e51c
 func_ov26_0216e51c: ; 0x0216e51c
 	thumb_func_end func_ov26_0216e51c
 _0216e51c:
 	.byte 0x38
+	.global data_ov26_0216e51d
 data_ov26_0216e51d: ; 0x0216e51d
 	.byte 0xb5, 0x04, 0x1c
 	.byte 0x07, 0x48, 0x20, 0x60, 0xe5, 0x6b, 0x00, 0x2d, 0x05, 0xd0, 0x28, 0x1c, 0x00, 0xf0, 0x4a, 0xfa
@@ -1310,11 +1358,13 @@ _0216e536:
 	.align 2, 0
 _0216e540: .word data_ov26_0217a50c
 
+	.global func_ov26_0216e544
 	thumb_func_start func_ov26_0216e544
 func_ov26_0216e544: ; 0x0216e544
 	thumb_func_end func_ov26_0216e544
 _0216e544:
 	.byte 0x38
+	.global data_ov26_0216e545
 data_ov26_0216e545: ; 0x0216e545
 	.byte 0xb5, 0x04, 0x1c, 0x09, 0x48, 0x20, 0x60, 0xe5, 0x6b, 0x00, 0x2d
 	.byte 0x05, 0xd0, 0x28, 0x1c, 0x00, 0xf0, 0x36, 0xfa, 0x28, 0x1c, 0xc0, 0xf6, 0x58, 0xea
@@ -1328,6 +1378,7 @@ _0216e55e:
 	nop
 _0216e570: .word data_ov26_0217a50c
 
+	.global func_ov26_0216e574
 	arm_func_start func_ov26_0216e574
 func_ov26_0216e574: ; 0x0216e574
 	stmdb sp!, {r3, r4, r5, lr}
@@ -1340,6 +1391,7 @@ func_ov26_0216e574: ; 0x0216e574
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_0216e574
 
+	.global func_ov26_0216e594
 	arm_func_start func_ov26_0216e594
 func_ov26_0216e594: ; 0x0216e594
 	stmdb sp!, {r3, r4, r5, lr}
@@ -1352,6 +1404,7 @@ func_ov26_0216e594: ; 0x0216e594
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_0216e594
 
+	.global func_ov26_0216e5b4
 	arm_func_start func_ov26_0216e5b4
 func_ov26_0216e5b4: ; 0x0216e5b4
 	stmdb sp!, {r3, lr}
@@ -1391,6 +1444,7 @@ _0216e62c: .word data_027e077c
 _0216e630: .word data_02056be4
 _0216e634: .word data_027e1054
 
+	.global func_ov26_0216e638
 	arm_func_start func_ov26_0216e638
 func_ov26_0216e638: ; 0x0216e638
 	ldrb r1, [r0, #0x10]
@@ -1427,6 +1481,7 @@ _0216e68c:
 	arm_func_end func_ov26_0216e638
 _0216e6a4: .word 0x00007fff
 
+	.global func_ov26_0216e6a8
 	arm_func_start func_ov26_0216e6a8
 func_ov26_0216e6a8: ; 0x0216e6a8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -1566,6 +1621,7 @@ _0216e8ac: .word data_027e0618
 _0216e8b0: .word data_027e0f64
 _0216e8b4: .word data_027e0f94
 
+	.global func_ov26_0216e8b8
 	thumb_func_start func_ov26_0216e8b8
 func_ov26_0216e8b8: ; 0x0216e8b8
 	push {r4, lr}
@@ -1699,6 +1755,7 @@ _0216e9b8: .word data_027e0fb4
 _0216e9bc: .word data_027e0d38
 _0216e9c0: .word data_027e0fbc
 
+	.global func_ov26_0216e9c4
 	thumb_func_start func_ov26_0216e9c4
 func_ov26_0216e9c4: ; 0x0216e9c4
 	push {r4, lr}
@@ -1708,6 +1765,7 @@ func_ov26_0216e9c4: ; 0x0216e9c4
 	pop {r4, pc}
 	thumb_func_end func_ov26_0216e9c4
 
+	.global func_ov26_0216e9d0
 	arm_func_start func_ov26_0216e9d0
 func_ov26_0216e9d0: ; 0x0216e9d0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1813,6 +1871,7 @@ _0216eb28:
 _0216eb38: .word data_027e0fb4
 _0216eb3c: .word data_ov00_020eec9c
 
+	.global func_ov26_0216eb40
 	arm_func_start func_ov26_0216eb40
 func_ov26_0216eb40: ; 0x0216eb40
 	stmdb sp!, {r3, r4, r5, lr}
@@ -1851,6 +1910,7 @@ _0216eb9c:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_0216eb40
 
+	.global func_ov26_0216ebc0
 	arm_func_start func_ov26_0216ebc0
 func_ov26_0216ebc0: ; 0x0216ebc0
 	stmdb sp!, {r3, lr}
@@ -1922,6 +1982,7 @@ _0216ecac: .word data_027e077c
 _0216ecb0: .word data_02056be4
 _0216ecb4: .word data_027e1054
 
+	.global func_ov26_0216ecb8
 	arm_func_start func_ov26_0216ecb8
 func_ov26_0216ecb8: ; 0x0216ecb8
 	stmdb sp!, {r3, lr}
@@ -1972,6 +2033,7 @@ _0216ed2c:
 _0216ed5c: .word data_027e0fb4
 _0216ed60: .word 0x88888889
 
+	.global func_ov26_0216ed64
 	arm_func_start func_ov26_0216ed64
 func_ov26_0216ed64: ; 0x0216ed64
 	stmdb sp!, {r4, lr}
@@ -1987,6 +2049,7 @@ func_ov26_0216ed64: ; 0x0216ed64
 	arm_func_end func_ov26_0216ed64
 _0216ed88: .word data_027e0cbc
 
+	.global func_ov26_0216ed8c
 	arm_func_start func_ov26_0216ed8c
 func_ov26_0216ed8c: ; 0x0216ed8c
 	stmdb sp!, {r4, lr}
@@ -2002,6 +2065,7 @@ func_ov26_0216ed8c: ; 0x0216ed8c
 	arm_func_end func_ov26_0216ed8c
 _0216edb0: .word data_027e0cbc
 
+	.global func_ov26_0216edb4
 	arm_func_start func_ov26_0216edb4
 func_ov26_0216edb4: ; 0x0216edb4
 	stmdb sp!, {r4, lr}
@@ -2044,6 +2108,7 @@ _0216edf8:
 	arm_func_end func_ov26_0216edb4
 _0216ee38: .word data_027e0fbc
 
+	.global func_ov26_0216ee3c
 	arm_func_start func_ov26_0216ee3c
 func_ov26_0216ee3c: ; 0x0216ee3c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2103,6 +2168,7 @@ _0216eef4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_0216ee3c
 
+	.global func_ov26_0216ef08
 	arm_func_start func_ov26_0216ef08
 func_ov26_0216ef08: ; 0x0216ef08
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2155,6 +2221,7 @@ _0216efa4:
 _0216efac: .word data_027e0618
 _0216efb0: .word data_ov00_020eec9c
 
+	.global func_ov26_0216efb4
 	arm_func_start func_ov26_0216efb4
 func_ov26_0216efb4: ; 0x0216efb4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -2313,6 +2380,7 @@ _0216f200: .word data_027e0e60
 _0216f204: .word data_027e0fd4
 _0216f208: .word data_ov26_0217933c
 
+	.global func_ov26_0216f20c
 	arm_func_start func_ov26_0216f20c
 func_ov26_0216f20c: ; 0x0216f20c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -2392,6 +2460,7 @@ func_ov26_0216f20c: ; 0x0216f20c
 	arm_func_end func_ov26_0216f20c
 _0216f330: .word data_ov26_02179340
 
+	.global func_ov26_0216f334
 	arm_func_start func_ov26_0216f334
 func_ov26_0216f334: ; 0x0216f334
 	stmdb sp!, {r4, lr}
@@ -2428,6 +2497,7 @@ _0216f394:
 	arm_func_end func_ov26_0216f334
 _0216f39c: .word data_027e0e60
 
+	.global func_ov26_0216f3a0
 	arm_func_start func_ov26_0216f3a0
 func_ov26_0216f3a0: ; 0x0216f3a0
 	stmdb sp!, {r4, lr}
@@ -2459,6 +2529,7 @@ _0216f3fc: .word data_ov26_0217a620
 _0216f400: .word data_ov26_0217a634
 _0216f404: .word data_ov26_02179344
 
+	.global func_ov26_0216f408
 	arm_func_start func_ov26_0216f408
 func_ov26_0216f408: ; 0x0216f408
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -2547,6 +2618,7 @@ _0216f52c: .word data_ov26_0217a5f4
 _0216f530: .word data_ov26_0217a60c
 _0216f534: .word data_027e0fec
 
+	.global func_ov26_0216f538
 	arm_func_start func_ov26_0216f538
 func_ov26_0216f538: ; 0x0216f538
 	stmdb sp!, {r4, lr}
@@ -2573,6 +2645,7 @@ func_ov26_0216f538: ; 0x0216f538
 _0216f584: .word data_027e0ffc
 _0216f588: .word 0x000001c2
 
+	.global func_ov26_0216f58c
 	arm_func_start func_ov26_0216f58c
 func_ov26_0216f58c: ; 0x0216f58c
 	stmdb sp!, {r3, lr}
@@ -2591,6 +2664,7 @@ func_ov26_0216f58c: ; 0x0216f58c
 _0216f5b8: .word data_027e0fe0
 _0216f5bc: .word 0x000004ec
 
+	.global func_ov26_0216f5c0
 	arm_func_start func_ov26_0216f5c0
 func_ov26_0216f5c0: ; 0x0216f5c0
 	stmdb sp!, {r4, lr}
@@ -2614,6 +2688,7 @@ func_ov26_0216f5c0: ; 0x0216f5c0
 	arm_func_end func_ov26_0216f5c0
 _0216f604: .word data_ov26_0217a704
 
+	.global func_ov26_0216f608
 	arm_func_start func_ov26_0216f608
 func_ov26_0216f608: ; 0x0216f608
 	stmdb sp!, {r4, lr}
@@ -2708,6 +2783,7 @@ _0216f750:
 _0216f75c: .word data_ov26_0217a67c
 _0216f760: .word 0x00000333
 
+	.global func_ov26_0216f764
 	arm_func_start func_ov26_0216f764
 func_ov26_0216f764: ; 0x0216f764
 	stmdb sp!, {r4, lr}
@@ -2738,6 +2814,7 @@ _0216f7b4:
 	arm_func_end func_ov26_0216f764
 _0216f7c0: .word data_027e10b4
 
+	.global func_ov26_0216f7c4
 	arm_func_start func_ov26_0216f7c4
 func_ov26_0216f7c4: ; 0x0216f7c4
 	stmdb sp!, {r3, r4, lr}
@@ -2767,11 +2844,13 @@ func_ov26_0216f7c4: ; 0x0216f7c4
 	arm_func_end func_ov26_0216f7c4
 _0216f820: .word data_027e0e60
 
+	.global func_ov26_0216f824
 	arm_func_start func_ov26_0216f824
 func_ov26_0216f824: ; 0x0216f824
 	bx lr
 	arm_func_end func_ov26_0216f824
 
+	.global func_ov26_0216f828
 	arm_func_start func_ov26_0216f828
 func_ov26_0216f828: ; 0x0216f828
 	stmdb sp!, {r3, r4, lr}
@@ -2814,6 +2893,7 @@ _0216f88c:
 	arm_func_end func_ov26_0216f828
 _0216f8b4: .word data_027e0e60
 
+	.global func_ov26_0216f8b8
 	arm_func_start func_ov26_0216f8b8
 func_ov26_0216f8b8: ; 0x0216f8b8
 	stmdb sp!, {r3, r4, lr}
@@ -2842,6 +2922,7 @@ func_ov26_0216f8b8: ; 0x0216f8b8
 	arm_func_end func_ov26_0216f8b8
 _0216f910: .word data_027e0e60
 
+	.global func_ov26_0216f914
 	arm_func_start func_ov26_0216f914
 func_ov26_0216f914: ; 0x0216f914
 	mov r1, #0xff
@@ -2849,6 +2930,7 @@ func_ov26_0216f914: ; 0x0216f914
 	bx lr
 	arm_func_end func_ov26_0216f914
 
+	.global func_ov26_0216f920
 	arm_func_start func_ov26_0216f920
 func_ov26_0216f920: ; 0x0216f920
 	stmdb sp!, {r3, r4, lr}
@@ -2909,6 +2991,7 @@ _0216f9d8:
 	arm_func_end func_ov26_0216f920
 _0216f9f4: .word data_027e0e60
 
+	.global func_ov26_0216f9f8
 	arm_func_start func_ov26_0216f9f8
 func_ov26_0216f9f8: ; 0x0216f9f8
 	mov r1, #0xff
@@ -2916,6 +2999,7 @@ func_ov26_0216f9f8: ; 0x0216f9f8
 	bx lr
 	arm_func_end func_ov26_0216f9f8
 
+	.global func_ov26_0216fa04
 	arm_func_start func_ov26_0216fa04
 func_ov26_0216fa04: ; 0x0216fa04
 	stmdb sp!, {r3, r4, lr}
@@ -2992,6 +3076,7 @@ _0216fb10: .word data_027e0f94
 _0216fb14: .word 0x000004cd
 _0216fb18: .word data_027e0e60
 
+	.global func_ov26_0216fb1c
 	arm_func_start func_ov26_0216fb1c
 func_ov26_0216fb1c: ; 0x0216fb1c
 	stmdb sp!, {r3, lr}
@@ -3005,6 +3090,7 @@ func_ov26_0216fb1c: ; 0x0216fb1c
 	arm_func_end func_ov26_0216fb1c
 _0216fb38: .word 0x0000019a
 
+	.global func_ov26_0216fb3c
 	arm_func_start func_ov26_0216fb3c
 func_ov26_0216fb3c: ; 0x0216fb3c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3037,6 +3123,7 @@ func_ov26_0216fb3c: ; 0x0216fb3c
 	arm_func_end func_ov26_0216fb3c
 _0216fba4: .word data_027e0764
 
+	.global func_ov26_0216fba8
 	arm_func_start func_ov26_0216fba8
 func_ov26_0216fba8: ; 0x0216fba8
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -3167,6 +3254,7 @@ _0216fd8c: .word data_02050f54
 _0216fd90: .word data_027e0d0c
 _0216fd94: .word data_027e0e60
 
+	.global func_ov26_0216fd98
 	arm_func_start func_ov26_0216fd98
 func_ov26_0216fd98: ; 0x0216fd98
 	mov r1, #0
@@ -3177,6 +3265,7 @@ func_ov26_0216fd98: ; 0x0216fd98
 	bx lr
 	arm_func_end func_ov26_0216fd98
 
+	.global func_ov26_0216fdb0
 	arm_func_start func_ov26_0216fdb0
 func_ov26_0216fdb0: ; 0x0216fdb0
 	stmdb sp!, {r3, r4, lr}
@@ -3237,6 +3326,7 @@ _0216fe68:
 	arm_func_end func_ov26_0216fdb0
 _0216fe84: .word data_027e0e60
 
+	.global func_ov26_0216fe88
 	arm_func_start func_ov26_0216fe88
 func_ov26_0216fe88: ; 0x0216fe88
 	stmdb sp!, {r3, lr}
@@ -3251,6 +3341,7 @@ func_ov26_0216fe88: ; 0x0216fe88
 	arm_func_end func_ov26_0216fe88
 _0216fea8: .word 0x0000019a
 
+	.global func_ov26_0216feac
 	arm_func_start func_ov26_0216feac
 func_ov26_0216feac: ; 0x0216feac
 	mov r1, #0
@@ -3258,6 +3349,7 @@ func_ov26_0216feac: ; 0x0216feac
 	bx lr
 	arm_func_end func_ov26_0216feac
 
+	.global func_ov26_0216feb8
 	arm_func_start func_ov26_0216feb8
 func_ov26_0216feb8: ; 0x0216feb8
 	stmdb sp!, {r3, lr}
@@ -3272,6 +3364,7 @@ func_ov26_0216feb8: ; 0x0216feb8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0216feb8
 
+	.global func_ov26_0216fee0
 	arm_func_start func_ov26_0216fee0
 func_ov26_0216fee0: ; 0x0216fee0
 	mov r1, #0xff
@@ -3279,6 +3372,7 @@ func_ov26_0216fee0: ; 0x0216fee0
 	bx lr
 	arm_func_end func_ov26_0216fee0
 
+	.global func_ov26_0216feec
 	arm_func_start func_ov26_0216feec
 func_ov26_0216feec: ; 0x0216feec
 	stmdb sp!, {r3, lr}
@@ -3293,6 +3387,7 @@ func_ov26_0216feec: ; 0x0216feec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0216feec
 
+	.global func_ov26_0216ff14
 	arm_func_start func_ov26_0216ff14
 func_ov26_0216ff14: ; 0x0216ff14
 	stmdb sp!, {r3, r4, lr}
@@ -3320,6 +3415,7 @@ func_ov26_0216ff14: ; 0x0216ff14
 	arm_func_end func_ov26_0216ff14
 _0216ff68: .word data_027e0e60
 
+	.global func_ov26_0216ff6c
 	arm_func_start func_ov26_0216ff6c
 func_ov26_0216ff6c: ; 0x0216ff6c
 	stmdb sp!, {r3, lr}
@@ -3344,6 +3440,7 @@ _0216ff98:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0216ff6c
 
+	.global func_ov26_0216ffb8
 	arm_func_start func_ov26_0216ffb8
 func_ov26_0216ffb8: ; 0x0216ffb8
 	stmdb sp!, {r3, r4, lr}
@@ -3372,6 +3469,7 @@ func_ov26_0216ffb8: ; 0x0216ffb8
 	arm_func_end func_ov26_0216ffb8
 _02170010: .word data_027e0e60
 
+	.global func_ov26_02170014
 	arm_func_start func_ov26_02170014
 func_ov26_02170014: ; 0x02170014
 	ldr r0, [r0, #0x130]
@@ -3393,6 +3491,7 @@ _02170044:
 	bx lr
 	arm_func_end func_ov26_02170014
 
+	.global func_ov26_0217004c
 	arm_func_start func_ov26_0217004c
 func_ov26_0217004c: ; 0x0217004c
 	ldr r0, [r0, #0x130]
@@ -3405,6 +3504,7 @@ _02170060:
 	bx lr
 	arm_func_end func_ov26_0217004c
 
+	.global func_ov26_02170068
 	arm_func_start func_ov26_02170068
 func_ov26_02170068: ; 0x02170068
 	stmdb sp!, {r3, lr}
@@ -3417,6 +3517,7 @@ func_ov26_02170068: ; 0x02170068
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02170068
 
+	.global func_ov26_02170088
 	arm_func_start func_ov26_02170088
 func_ov26_02170088: ; 0x02170088
 	stmdb sp!, {r3, r4, lr}
@@ -3466,6 +3567,7 @@ _02170114:
 	arm_func_end func_ov26_02170088
 _02170130: .word data_027e0e60
 
+	.global func_ov26_02170134
 	arm_func_start func_ov26_02170134
 func_ov26_02170134: ; 0x02170134
 	ldr ip, _02170148 ; =func_ov00_020ce284
@@ -3478,6 +3580,7 @@ func_ov26_02170134: ; 0x02170134
 _02170148: .word func_ov00_020ce284
 _0217014c: .word 0x0000019a
 
+	.global func_ov26_02170150
 	arm_func_start func_ov26_02170150
 func_ov26_02170150: ; 0x02170150
 	ldr r0, [r0, #0x130]
@@ -3487,6 +3590,7 @@ func_ov26_02170150: ; 0x02170150
 	bx lr
 	arm_func_end func_ov26_02170150
 
+	.global func_ov26_02170164
 	arm_func_start func_ov26_02170164
 func_ov26_02170164: ; 0x02170164
 	stmdb sp!, {r3, lr}
@@ -3498,6 +3602,7 @@ func_ov26_02170164: ; 0x02170164
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02170164
 
+	.global func_ov26_02170180
 	arm_func_start func_ov26_02170180
 func_ov26_02170180: ; 0x02170180
 	mov r1, #0
@@ -3507,6 +3612,7 @@ func_ov26_02170180: ; 0x02170180
 	bx lr
 	arm_func_end func_ov26_02170180
 
+	.global func_ov26_02170194
 	arm_func_start func_ov26_02170194
 func_ov26_02170194: ; 0x02170194
 	stmdb sp!, {r4, lr}
@@ -3564,6 +3670,7 @@ _02170258: .word data_027e0f94
 _0217025c: .word 0x000004cd
 _02170260: .word data_027e0e60
 
+	.global func_ov26_02170264
 	arm_func_start func_ov26_02170264
 func_ov26_02170264: ; 0x02170264
 	stmdb sp!, {r3, lr}
@@ -3574,6 +3681,7 @@ func_ov26_02170264: ; 0x02170264
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02170264
 
+	.global func_ov26_0217027c
 	arm_func_start func_ov26_0217027c
 func_ov26_0217027c: ; 0x0217027c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -3620,6 +3728,7 @@ func_ov26_0217027c: ; 0x0217027c
 _02170318: .word data_027e0fac
 _0217031c: .word data_027e0764
 
+	.global func_ov26_02170320
 	arm_func_start func_ov26_02170320
 func_ov26_02170320: ; 0x02170320
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -3781,6 +3890,7 @@ _02170584: .word data_027e0f94
 _02170588: .word data_027e0fa0
 _0217058c: .word data_027e0e60
 
+	.global func_ov26_02170590
 	arm_func_start func_ov26_02170590
 func_ov26_02170590: ; 0x02170590
 	stmdb sp!, {r4, r5, r6, lr}
@@ -3834,6 +3944,7 @@ func_ov26_02170590: ; 0x02170590
 _02170648: .word data_02050f54
 _0217064c: .word 0x000004cd
 
+	.global func_ov26_02170650
 	arm_func_start func_ov26_02170650
 func_ov26_02170650: ; 0x02170650
 	ldr r0, _02170658 ; =data_027e0f94
@@ -3842,6 +3953,7 @@ func_ov26_02170650: ; 0x02170650
 	arm_func_end func_ov26_02170650
 _02170658: .word data_027e0f94
 
+	.global func_ov26_0217065c
 	arm_func_start func_ov26_0217065c
 func_ov26_0217065c: ; 0x0217065c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3889,6 +4001,7 @@ func_ov26_0217065c: ; 0x0217065c
 	arm_func_end func_ov26_0217065c
 _02170700: .word 0x00000e66
 
+	.global func_ov26_02170704
 	arm_func_start func_ov26_02170704
 func_ov26_02170704: ; 0x02170704
 	stmdb sp!, {r4, lr}
@@ -3931,6 +4044,7 @@ _02170780:
 _0217078c: .word data_027e0e60
 _02170790: .word data_027e0f94
 
+	.global func_ov26_02170794
 	arm_func_start func_ov26_02170794
 func_ov26_02170794: ; 0x02170794
 	ldr r0, _021707a4 ; =data_027e10b4
@@ -3942,6 +4056,7 @@ func_ov26_02170794: ; 0x02170794
 _021707a4: .word data_027e10b4
 _021707a8: .word func_ov30_02183f84
 
+	.global func_ov26_021707ac
 	arm_func_start func_ov26_021707ac
 func_ov26_021707ac: ; 0x021707ac
 	stmdb sp!, {r3, lr}
@@ -3960,6 +4075,7 @@ _021707d4:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_021707ac
 
+	.global func_ov26_021707dc
 	arm_func_start func_ov26_021707dc
 func_ov26_021707dc: ; 0x021707dc
 	stmdb sp!, {r4, lr}
@@ -4014,6 +4130,7 @@ _0217088c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_021707dc
 
+	.global func_ov26_02170894
 	arm_func_start func_ov26_02170894
 func_ov26_02170894: ; 0x02170894
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4064,6 +4181,7 @@ _0217092c:
 	arm_func_end func_ov26_02170894
 _02170934: .word data_027e0fb4
 
+	.global func_ov26_02170938
 	arm_func_start func_ov26_02170938
 func_ov26_02170938: ; 0x02170938
 	stmdb sp!, {r4, r5, r6, lr}
@@ -4359,6 +4477,7 @@ _02170d38:
 	arm_func_end func_ov26_02170938
 _02170d5c: .word data_027e0764
 
+	.global func_ov26_02170d60
 	arm_func_start func_ov26_02170d60
 func_ov26_02170d60: ; 0x02170d60
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -5052,6 +5171,7 @@ _02171748: .word data_027e0ff0
 _0217174c: .word data_027e0f94
 _02171750: .word data_027e0fc8
 
+	.global func_ov26_02171754
 	arm_func_start func_ov26_02171754
 func_ov26_02171754: ; 0x02171754
 	stmdb sp!, {r3, r4, lr}
@@ -5070,6 +5190,7 @@ func_ov26_02171754: ; 0x02171754
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov26_02171754
 
+	.global func_ov26_0217178c
 	arm_func_start func_ov26_0217178c
 func_ov26_0217178c: ; 0x0217178c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5170,6 +5291,7 @@ _021718ec: .word 0x0000ffff
 _021718f0: .word data_027e0d3c
 _021718f4: .word data_02063e4c
 
+	.global func_ov26_021718f8
 	arm_func_start func_ov26_021718f8
 func_ov26_021718f8: ; 0x021718f8
 	stmdb sp!, {r4, lr}
@@ -5201,6 +5323,7 @@ func_ov26_021718f8: ; 0x021718f8
 	arm_func_end func_ov26_021718f8
 _0217195c: .word func_ov00_020b7d74
 
+	.global func_ov26_02171960
 	arm_func_start func_ov26_02171960
 func_ov26_02171960: ; 0x02171960
 	stmdb sp!, {r4, lr}
@@ -5230,6 +5353,7 @@ func_ov26_02171960: ; 0x02171960
 	arm_func_end func_ov26_02171960
 _021719bc: .word func_ov00_020b7d74
 
+	.global func_ov26_021719c0
 	arm_func_start func_ov26_021719c0
 func_ov26_021719c0: ; 0x021719c0
 	stmdb sp!, {r4, lr}
@@ -5249,6 +5373,7 @@ func_ov26_021719c0: ; 0x021719c0
 	arm_func_end func_ov26_021719c0
 _021719f4: .word data_027e0f84
 
+	.global func_ov26_021719f8
 	arm_func_start func_ov26_021719f8
 func_ov26_021719f8: ; 0x021719f8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5374,6 +5499,7 @@ _02171bcc: .word data_ov26_0217a91c
 _02171bd0: .word data_ov26_021793d4
 _02171bd4: .word data_ov26_02179404
 
+	.global func_ov26_02171bd8
 	arm_func_start func_ov26_02171bd8
 func_ov26_02171bd8: ; 0x02171bd8
 	stmdb sp!, {r4, lr}
@@ -5394,6 +5520,7 @@ func_ov26_02171bd8: ; 0x02171bd8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02171bd8
 
+	.global func_ov26_02171c18
 	arm_func_start func_ov26_02171c18
 func_ov26_02171c18: ; 0x02171c18
 	stmdb sp!, {r4, lr}
@@ -5416,6 +5543,7 @@ func_ov26_02171c18: ; 0x02171c18
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02171c18
 
+	.global func_ov26_02171c60
 	arm_func_start func_ov26_02171c60
 func_ov26_02171c60: ; 0x02171c60
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5475,6 +5603,7 @@ _02171d1c: .word data_027e0ffc
 _02171d20: .word data_027e0fb4
 _02171d24: .word data_ov26_02179434
 
+	.global func_ov26_02171d28
 	arm_func_start func_ov26_02171d28
 func_ov26_02171d28: ; 0x02171d28
 	stmdb sp!, {r4, lr}
@@ -5528,12 +5657,14 @@ _02171dcc: .word data_027e0ffc
 _02171dd0: .word data_027e0f74
 _02171dd4: .word data_ov26_0217944c
 
+	.global func_ov26_02171dd8
 	arm_func_start func_ov26_02171dd8
 func_ov26_02171dd8: ; 0x02171dd8
 	mov r0, #0x70
 	bx lr
 	arm_func_end func_ov26_02171dd8
 
+	.global func_ov26_02171de0
 	arm_func_start func_ov26_02171de0
 func_ov26_02171de0: ; 0x02171de0
 	stmdb sp!, {r3, lr}
@@ -5568,6 +5699,7 @@ _02171e20:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02171de0
 
+	.global func_ov26_02171e4c
 	arm_func_start func_ov26_02171e4c
 func_ov26_02171e4c: ; 0x02171e4c
 	stmdb sp!, {r4, lr}
@@ -5592,18 +5724,21 @@ _02171e8c: .word data_027e0f74
 _02171e90: .word data_ov26_0217944c
 _02171e94: .word data_027e0e60
 
+	.global func_ov26_02171e98
 	arm_func_start func_ov26_02171e98
 func_ov26_02171e98: ; 0x02171e98
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov26_02171e98
 
+	.global func_ov26_02171ea0
 	arm_func_start func_ov26_02171ea0
 func_ov26_02171ea0: ; 0x02171ea0
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov26_02171ea0
 
+	.global func_ov26_02171ea8
 	arm_func_start func_ov26_02171ea8
 func_ov26_02171ea8: ; 0x02171ea8
 	stmdb sp!, {r3, r4, lr}
@@ -5631,6 +5766,7 @@ func_ov26_02171ea8: ; 0x02171ea8
 	arm_func_end func_ov26_02171ea8
 _02171efc: .word data_027e0e58
 
+	.global func_ov26_02171f00
 	arm_func_start func_ov26_02171f00
 func_ov26_02171f00: ; 0x02171f00
 	stmdb sp!, {r4, lr}
@@ -5644,6 +5780,7 @@ func_ov26_02171f00: ; 0x02171f00
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02171f00
 
+	.global func_ov26_02171f24
 	arm_func_start func_ov26_02171f24
 func_ov26_02171f24: ; 0x02171f24
 	stmdb sp!, {r4, lr}
@@ -5750,6 +5887,7 @@ _021720a8: .word 0x46800000
 _021720ac: .word data_02050f54
 _021720b0: .word 0x00000547
 
+	.global func_ov26_021720b4
 	arm_func_start func_ov26_021720b4
 func_ov26_021720b4: ; 0x021720b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5844,6 +5982,7 @@ _02172204: .word 0x45800000
 _02172208: .word 0x46800000
 _0217220c: .word data_02050f54
 
+	.global func_ov26_02172210
 	arm_func_start func_ov26_02172210
 func_ov26_02172210: ; 0x02172210
 	stmdb sp!, {r4, lr}
@@ -5863,6 +6002,7 @@ func_ov26_02172210: ; 0x02172210
 	arm_func_end func_ov26_02172210
 _02172244: .word data_027e0f84
 
+	.global func_ov26_02172248
 	arm_func_start func_ov26_02172248
 func_ov26_02172248: ; 0x02172248
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5939,6 +6079,7 @@ _02172358: .word data_027e0f68
 _0217235c: .word data_ov26_0217a9c0
 _02172360: .word data_ov26_02179458
 
+	.global func_ov26_02172364
 	arm_func_start func_ov26_02172364
 func_ov26_02172364: ; 0x02172364
 	stmdb sp!, {r4, lr}
@@ -5955,6 +6096,7 @@ func_ov26_02172364: ; 0x02172364
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02172364
 
+	.global func_ov26_02172394
 	arm_func_start func_ov26_02172394
 func_ov26_02172394: ; 0x02172394
 	stmdb sp!, {r4, lr}
@@ -5973,12 +6115,14 @@ func_ov26_02172394: ; 0x02172394
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02172394
 
+	.global func_ov26_021723cc
 	arm_func_start func_ov26_021723cc
 func_ov26_021723cc: ; 0x021723cc
 	mov r0, #0x15
 	bx lr
 	arm_func_end func_ov26_021723cc
 
+	.global func_ov26_021723d4
 	arm_func_start func_ov26_021723d4
 func_ov26_021723d4: ; 0x021723d4
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -6104,6 +6248,7 @@ _021725a0: .word data_027e0e60
 _021725a4: .word data_ov26_02179468
 _021725a8: .word func_ov26_021728f8
 
+	.global func_ov26_021725ac
 	arm_func_start func_ov26_021725ac
 func_ov26_021725ac: ; 0x021725ac
 	stmdb sp!, {r4, lr}
@@ -6151,6 +6296,7 @@ _02172638:
 	arm_func_end func_ov26_021725ac
 _02172644: .word 0xfffff666
 
+	.global func_ov26_02172648
 	arm_func_start func_ov26_02172648
 func_ov26_02172648: ; 0x02172648
 	stmdb sp!, {r4, lr}
@@ -6256,6 +6402,7 @@ _021727a8: .word data_027e0f74
 _021727ac: .word 0xfffff666
 _021727b0: .word data_027e0e60
 
+	.global func_ov26_021727b4
 	arm_func_start func_ov26_021727b4
 func_ov26_021727b4: ; 0x021727b4
 	stmdb sp!, {r4, lr}
@@ -6281,6 +6428,7 @@ func_ov26_021727b4: ; 0x021727b4
 _021727fc: .word data_027e0ffc
 _02172800: .word 0x00000473
 
+	.global func_ov26_02172804
 	arm_func_start func_ov26_02172804
 func_ov26_02172804: ; 0x02172804
 	stmdb sp!, {r3, lr}
@@ -6304,6 +6452,7 @@ func_ov26_02172804: ; 0x02172804
 	arm_func_end func_ov26_02172804
 _02172848: .word 0xfffff666
 
+	.global func_ov26_0217284c
 	arm_func_start func_ov26_0217284c
 func_ov26_0217284c: ; 0x0217284c
 	stmdb sp!, {r3, lr}
@@ -6320,6 +6469,7 @@ func_ov26_0217284c: ; 0x0217284c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0217284c
 
+	.global func_ov26_0217287c
 	arm_func_start func_ov26_0217287c
 func_ov26_0217287c: ; 0x0217287c
 	ldr r2, [r0, #0x1c]
@@ -6334,6 +6484,7 @@ func_ov26_0217287c: ; 0x0217287c
 	bx lr
 	arm_func_end func_ov26_0217287c
 
+	.global func_ov26_021728a4
 	arm_func_start func_ov26_021728a4
 func_ov26_021728a4: ; 0x021728a4
 	stmdb sp!, {r3, lr}
@@ -6352,6 +6503,7 @@ _021728d0:
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_021728a4
 
+	.global func_ov26_021728d8
 	arm_func_start func_ov26_021728d8
 func_ov26_021728d8: ; 0x021728d8
 	stmdb sp!, {r3, lr}
@@ -6364,6 +6516,7 @@ func_ov26_021728d8: ; 0x021728d8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_021728d8
 
+	.global func_ov26_021728f8
 	arm_func_start func_ov26_021728f8
 func_ov26_021728f8: ; 0x021728f8
 	mov r1, r0
@@ -6375,6 +6528,7 @@ func_ov26_021728f8: ; 0x021728f8
 	arm_func_end func_ov26_021728f8
 _0217290c: .word func_ov26_02172910
 
+	.global func_ov26_02172910
 	arm_func_start func_ov26_02172910
 func_ov26_02172910: ; 0x02172910
 	ldr r2, [r1, #8]
@@ -6399,6 +6553,7 @@ func_ov26_02172910: ; 0x02172910
 	bx lr
 	arm_func_end func_ov26_02172910
 
+	.global func_ov26_02172960
 	arm_func_start func_ov26_02172960
 func_ov26_02172960: ; 0x02172960
 	stmdb sp!, {r4, lr}
@@ -6418,6 +6573,7 @@ func_ov26_02172960: ; 0x02172960
 	arm_func_end func_ov26_02172960
 _02172994: .word data_027e0f84
 
+	.global func_ov26_02172998
 	arm_func_start func_ov26_02172998
 func_ov26_02172998: ; 0x02172998
 	stmdb sp!, {r4, lr}
@@ -6470,6 +6626,7 @@ _02172a48: .word data_ov00_020e2dd8
 _02172a4c: .word data_ov26_0217aa14
 _02172a50: .word data_027e0f68
 
+	.global func_ov26_02172a54
 	arm_func_start func_ov26_02172a54
 func_ov26_02172a54: ; 0x02172a54
 	stmdb sp!, {r4, lr}
@@ -6497,6 +6654,7 @@ func_ov26_02172a54: ; 0x02172a54
 _02172aa4: .word data_ov26_0217aa14
 _02172aa8: .word data_027e0f6c
 
+	.global func_ov26_02172aac
 	arm_func_start func_ov26_02172aac
 func_ov26_02172aac: ; 0x02172aac
 	stmdb sp!, {r4, lr}
@@ -6526,12 +6684,14 @@ func_ov26_02172aac: ; 0x02172aac
 _02172b04: .word data_ov26_0217aa14
 _02172b08: .word data_027e0f6c
 
+	.global func_ov26_02172b0c
 	arm_func_start func_ov26_02172b0c
 func_ov26_02172b0c: ; 0x02172b0c
 	mov r0, #0x8f
 	bx lr
 	arm_func_end func_ov26_02172b0c
 
+	.global func_ov26_02172b14
 	arm_func_start func_ov26_02172b14
 func_ov26_02172b14: ; 0x02172b14
 	stmdb sp!, {r4, lr}
@@ -6678,6 +6838,7 @@ _02172d3c: .word 0x00002666
 _02172d40: .word data_027e0f6c
 _02172d44: .word func_ov26_02173344
 
+	.global func_ov26_02172d48
 	arm_func_start func_ov26_02172d48
 func_ov26_02172d48: ; 0x02172d48
 	stmdb sp!, {r4, lr}
@@ -6857,6 +7018,7 @@ _02172fbc: .word data_027e0c68
 _02172fc0: .word data_027e103c
 _02172fc4: .word data_027e077c
 
+	.global func_ov26_02172fc8
 	arm_func_start func_ov26_02172fc8
 func_ov26_02172fc8: ; 0x02172fc8
 	stmdb sp!, {r3, r4, lr}
@@ -7068,6 +7230,7 @@ _021732c0: .word data_027e0ffc
 _021732c4: .word data_027e0d04
 _021732c8: .word data_027e1054
 
+	.global func_ov26_021732cc
 	arm_func_start func_ov26_021732cc
 func_ov26_021732cc: ; 0x021732cc
 	stmdb sp!, {r3, lr}
@@ -7104,6 +7267,7 @@ _02173334:
 _0217333c: .word data_027e077c
 _02173340: .word data_02056be4
 
+	.global func_ov26_02173344
 	arm_func_start func_ov26_02173344
 func_ov26_02173344: ; 0x02173344
 	ldr ip, _0217334c ; =func_ov26_02173350
@@ -7112,6 +7276,7 @@ func_ov26_02173344: ; 0x02173344
 	arm_func_end func_ov26_02173344
 _0217334c: .word func_ov26_02173350
 
+	.global func_ov26_02173350
 	arm_func_start func_ov26_02173350
 func_ov26_02173350: ; 0x02173350
 	stmdb sp!, {r4, lr}
@@ -7141,6 +7306,7 @@ func_ov26_02173350: ; 0x02173350
 _021733a8: .word data_027e0f74
 _021733ac: .word data_027e0618
 
+	.global func_ov26_021733b0
 	arm_func_start func_ov26_021733b0
 func_ov26_021733b0: ; 0x021733b0
 	stmdb sp!, {r3, lr}
@@ -7153,6 +7319,7 @@ func_ov26_021733b0: ; 0x021733b0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_021733b0
 
+	.global func_ov26_021733d0
 	arm_func_start func_ov26_021733d0
 func_ov26_021733d0: ; 0x021733d0
 	stmdb sp!, {r3, lr}
@@ -7185,6 +7352,7 @@ _02173430: .word data_027e077c
 _02173434: .word data_027e0d3c
 _02173438: .word data_ov26_0217a9e8
 
+	.global func_ov26_0217343c
 	arm_func_start func_ov26_0217343c
 func_ov26_0217343c: ; 0x0217343c
 	stmdb sp!, {r4, lr}
@@ -7204,6 +7372,7 @@ func_ov26_0217343c: ; 0x0217343c
 	arm_func_end func_ov26_0217343c
 _02173470: .word data_027e0f84
 
+	.global func_ov26_02173474
 	arm_func_start func_ov26_02173474
 func_ov26_02173474: ; 0x02173474
 	stmdb sp!, {r3, r4, lr}
@@ -7251,6 +7420,7 @@ _02173510: .word data_027e0f68
 _02173514: .word data_ov00_020e2f04
 _02173518: .word data_ov00_020e2dd8
 
+	.global func_ov26_0217351c
 	arm_func_start func_ov26_0217351c
 func_ov26_0217351c: ; 0x0217351c
 	stmdb sp!, {r4, lr}
@@ -7274,6 +7444,7 @@ func_ov26_0217351c: ; 0x0217351c
 _0217355c: .word data_ov26_0217aafc
 _02173560: .word data_027e0f6c
 
+	.global func_ov26_02173564
 	arm_func_start func_ov26_02173564
 func_ov26_02173564: ; 0x02173564
 	stmdb sp!, {r4, lr}
@@ -7299,12 +7470,14 @@ func_ov26_02173564: ; 0x02173564
 _021735ac: .word data_ov26_0217aafc
 _021735b0: .word data_027e0f6c
 
+	.global func_ov26_021735b4
 	arm_func_start func_ov26_021735b4
 func_ov26_021735b4: ; 0x021735b4
 	mov r0, #0x91
 	bx lr
 	arm_func_end func_ov26_021735b4
 
+	.global func_ov26_021735bc
 	arm_func_start func_ov26_021735bc
 func_ov26_021735bc: ; 0x021735bc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7404,6 +7577,7 @@ _02173728: .word 0x0000019a
 _0217372c: .word 0x00001333
 _02173730: .word data_027e0f6c
 
+	.global func_ov26_02173734
 	arm_func_start func_ov26_02173734
 func_ov26_02173734: ; 0x02173734
 	stmdb sp!, {r4, lr}
@@ -7417,6 +7591,7 @@ func_ov26_02173734: ; 0x02173734
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02173734
 
+	.global func_ov26_02173758
 	arm_func_start func_ov26_02173758
 func_ov26_02173758: ; 0x02173758
 	stmdb sp!, {r3, r4, r5, lr}
@@ -7455,6 +7630,7 @@ _021737b4:
 	arm_func_end func_ov26_02173758
 _021737d4: .word data_027e0f74
 
+	.global func_ov26_021737d8
 	arm_func_start func_ov26_021737d8
 func_ov26_021737d8: ; 0x021737d8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7506,6 +7682,7 @@ _0217387c:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov26_021737d8
 
+	.global func_ov26_02173884
 	arm_func_start func_ov26_02173884
 func_ov26_02173884: ; 0x02173884
 	stmdb sp!, {r4, r5, lr}
@@ -7544,12 +7721,14 @@ func_ov26_02173884: ; 0x02173884
 	arm_func_end func_ov26_02173884
 _02173904: .word data_02050f54
 
+	.global func_ov26_02173908
 	arm_func_start func_ov26_02173908
 func_ov26_02173908: ; 0x02173908
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov26_02173908
 
+	.global func_ov26_02173910
 	arm_func_start func_ov26_02173910
 func_ov26_02173910: ; 0x02173910
 	cmp r1, #0
@@ -7558,6 +7737,7 @@ func_ov26_02173910: ; 0x02173910
 	bx lr
 	arm_func_end func_ov26_02173910
 
+	.global func_ov26_02173920
 	arm_func_start func_ov26_02173920
 func_ov26_02173920: ; 0x02173920
 	stmdb sp!, {r3}
@@ -7571,6 +7751,7 @@ func_ov26_02173920: ; 0x02173920
 	bx lr
 	arm_func_end func_ov26_02173920
 
+	.global func_ov26_02173944
 	arm_func_start func_ov26_02173944
 func_ov26_02173944: ; 0x02173944
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -7678,6 +7859,7 @@ _02173ab4: .word data_027e0f74
 _02173ab8: .word data_ov26_0217947c
 _02173abc: .word data_ov26_02179480
 
+	.global func_ov26_02173ac0
 	arm_func_start func_ov26_02173ac0
 func_ov26_02173ac0: ; 0x02173ac0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -7714,6 +7896,7 @@ func_ov26_02173ac0: ; 0x02173ac0
 	arm_func_end func_ov26_02173ac0
 _02173b38: .word data_027e0f68
 
+	.global func_ov26_02173b3c
 	arm_func_start func_ov26_02173b3c
 func_ov26_02173b3c: ; 0x02173b3c
 	stmdb sp!, {r4, lr}
@@ -7736,6 +7919,7 @@ _02173b64:
 	arm_func_end func_ov26_02173b3c
 _02173b78: .word data_027e0e60
 
+	.global func_ov26_02173b7c
 	thumb_func_start func_ov26_02173b7c
 func_ov26_02173b7c: ; 0x02173b7c
 	push {r4, lr}
@@ -7759,6 +7943,7 @@ _02173ba0:
 	.align 2, 0
 	thumb_func_end func_ov26_02173b7c
 
+	.global func_ov26_02173ba4
 	thumb_func_start func_ov26_02173ba4
 func_ov26_02173ba4: ; 0x02173ba4
 	push {r3, r4, r5, lr}
@@ -7777,6 +7962,7 @@ _02173bbc:
 	.align 2, 0
 	thumb_func_end func_ov26_02173ba4
 
+	.global func_ov26_02173bc0
 	thumb_func_start func_ov26_02173bc0
 func_ov26_02173bc0: ; 0x02173bc0
 	push {r4, lr}
@@ -7811,6 +7997,7 @@ _02173bd8:
 	thumb_func_end func_ov26_02173bc0
 _02173bfc: .word data_027e0ce0
 
+	.global func_ov26_02173c00
 	thumb_func_start func_ov26_02173c00
 func_ov26_02173c00: ; 0x02173c00
 	push {r3, r4, r5, lr}
@@ -7828,6 +8015,7 @@ _02173c16:
 	.align 2, 0
 	thumb_func_end func_ov26_02173c00
 
+	.global func_ov26_02173c1c
 	thumb_func_start func_ov26_02173c1c
 func_ov26_02173c1c: ; 0x02173c1c
 	push {r4, lr}
@@ -7843,6 +8031,7 @@ func_ov26_02173c1c: ; 0x02173c1c
 	thumb_func_end func_ov26_02173c1c
 _02173c30: .word data_027e0d38
 
+	.global func_ov26_02173c34
 	thumb_func_start func_ov26_02173c34
 func_ov26_02173c34: ; 0x02173c34
 	mov r1, #0
@@ -7859,6 +8048,7 @@ _02173c40:
 	thumb_func_end func_ov26_02173c34
 _02173c48: .word func_ov26_02173cec
 
+	.global func_ov26_02173c4c
 	thumb_func_start func_ov26_02173c4c
 func_ov26_02173c4c: ; 0x02173c4c
 	ldr r3, _02173c54 ; =func_ov26_02173dec
@@ -7868,6 +8058,7 @@ func_ov26_02173c4c: ; 0x02173c4c
 	thumb_func_end func_ov26_02173c4c
 _02173c54: .word func_ov26_02173dec
 
+	.global func_ov26_02173c58
 	thumb_func_start func_ov26_02173c58
 func_ov26_02173c58: ; 0x02173c58
 	push {r4, lr}
@@ -7888,6 +8079,7 @@ _02173c74:
 	thumb_func_end func_ov26_02173c58
 _02173c78: .word data_027e0d38
 
+	.global func_ov26_02173c7c
 	thumb_func_start func_ov26_02173c7c
 func_ov26_02173c7c: ; 0x02173c7c
 	ldr r3, _02173c84 ; =func_ov26_02174170
@@ -7897,6 +8089,7 @@ func_ov26_02173c7c: ; 0x02173c7c
 	thumb_func_end func_ov26_02173c7c
 _02173c84: .word func_ov26_02174170
 
+	.global func_ov26_02173c88
 	thumb_func_start func_ov26_02173c88
 func_ov26_02173c88: ; 0x02173c88
 	ldr r3, _02173c90 ; =func_ov26_02174258
@@ -7906,6 +8099,7 @@ func_ov26_02173c88: ; 0x02173c88
 	thumb_func_end func_ov26_02173c88
 _02173c90: .word func_ov26_02174258
 
+	.global func_ov26_02173c94
 	thumb_func_start func_ov26_02173c94
 func_ov26_02173c94: ; 0x02173c94
 	push {r4, lr}
@@ -7941,6 +8135,7 @@ func_ov26_02173c94: ; 0x02173c94
 _02173cd0: .word data_027e0fec
 _02173cd4: .word 0x000035d0
 
+	.global func_ov26_02173cd8
 	thumb_func_start func_ov26_02173cd8
 func_ov26_02173cd8: ; 0x02173cd8
 	push {r4, lr}
@@ -7953,6 +8148,7 @@ func_ov26_02173cd8: ; 0x02173cd8
 	pop {r4, pc}
 	thumb_func_end func_ov26_02173cd8
 
+	.global func_ov26_02173cec
 	thumb_func_start func_ov26_02173cec
 func_ov26_02173cec: ; 0x02173cec
 	push {r3, r4, r5, lr}
@@ -8081,6 +8277,7 @@ _02173de0: .word 0x04000050
 _02173de4: .word data_027e0c38
 _02173de8: .word data_ov00_020eec68
 
+	.global func_ov26_02173dec
 	thumb_func_start func_ov26_02173dec
 func_ov26_02173dec: ; 0x02173dec
 	push {r3, r4, lr}
@@ -8103,6 +8300,7 @@ func_ov26_02173dec: ; 0x02173dec
 	thumb_func_end func_ov26_02173dec
 _02173e10: .word 0x04000050
 
+	.global func_ov26_02173e14
 	thumb_func_start func_ov26_02173e14
 func_ov26_02173e14: ; 0x02173e14
 	str r1, [r0, #0x7c]
@@ -8117,10 +8315,13 @@ func_ov26_02173e14: ; 0x02173e14
 	thumb_func_end func_ov26_02173e14
 _02173e26: ; jump table
 	.short _02173e48 - _02173e26 - 2 ; case 0
+	.global data_ov26_02173e28
 data_ov26_02173e28: ; 0x02173e28
 	.byte 0x06, 0x00
+	.global data_ov26_02173e2a
 data_ov26_02173e2a: ; 0x02173e2a
 	.byte 0x1a, 0x00
+	.global data_ov26_02173e2c
 data_ov26_02173e2c: ; 0x02173e2c
 	.byte 0x20, 0x00, 0x01, 0x1c
 	.byte 0x10, 0x22, 0x74, 0x31, 0x0a, 0x80, 0x05, 0x49, 0xa4, 0x30, 0x09, 0x68, 0xc9, 0x68, 0x01, 0x60
@@ -8130,14 +8331,17 @@ _02173e48:
 	nop
 _02173e4c: .word data_027e0fb4
 
+	.global func_ov26_02173e50
 	thumb_func_start func_ov26_02173e50
 func_ov26_02173e50: ; 0x02173e50
 	thumb_func_end func_ov26_02173e50
 _02173e50:
 	.byte 0x01
+	.global data_ov26_02173e51
 data_ov26_02173e51: ; 0x02173e51
 	.byte 0x21, 0x09, 0x03, 0x01, 0x67, 0x70, 0x47
 
+	.global func_ov26_02173e58
 	thumb_func_start func_ov26_02173e58
 func_ov26_02173e58: ; 0x02173e58
 	push {r3, r4, lr}
@@ -8171,12 +8375,16 @@ _02173e80:
 	thumb_func_end func_ov26_02173e58
 _02173e8c: ; jump table
 	.short _02173e96 - _02173e8c - 2 ; case 0
+	.global data_ov26_02173e8e
 data_ov26_02173e8e: ; 0x02173e8e
 	.byte 0x5e, 0x01
+	.global data_ov26_02173e90
 data_ov26_02173e90: ; 0x02173e90
 	.byte 0x88, 0x01
+	.global data_ov26_02173e92
 data_ov26_02173e92: ; 0x02173e92
 	.byte 0x9c, 0x01
+	.global data_ov26_02173e94
 data_ov26_02173e94: ; 0x02173e94
 	.byte 0xba, 0x01
 _02173e96:
@@ -8373,13 +8581,17 @@ _0217405c: .word 0x00002710
 _02174060: .word func_ov26_02173e50
 _02174064: .word data_027e0e58
 _02174068: .word data_ov26_0217abd4
+	.global data_ov26_0217406c
 data_ov26_0217406c: ; 0x0217406c
 	.byte 0x00, 0xc0, 0xfe, 0xff
+	.global data_ov26_02174070
 data_ov26_02174070: ; 0x02174070
 	.byte 0x68, 0xec, 0x0e, 0x02
+	.global data_ov26_02174074
 data_ov26_02174074: ; 0x02174074
 	.byte 0xdc, 0xf5, 0x11, 0x02
 
+	.global func_ov26_02174078
 	thumb_func_start func_ov26_02174078
 func_ov26_02174078: ; 0x02174078
 	push {r4, r5, r6, lr}
@@ -8491,6 +8703,7 @@ _0217415e:
 	thumb_func_end func_ov26_02174078
 _0217416c: .word data_027e0c38
 
+	.global func_ov26_02174170
 	thumb_func_start func_ov26_02174170
 func_ov26_02174170: ; 0x02174170
 	push {r3, lr}
@@ -8506,12 +8719,16 @@ func_ov26_02174170: ; 0x02174170
 	thumb_func_end func_ov26_02174170
 _02174184: ; jump table
 	.short _0217424e - _02174184 - 2 ; case 0
+	.global data_ov26_02174186
 data_ov26_02174186: ; 0x02174186
 	.byte 0xc8, 0x00
+	.global data_ov26_02174188
 data_ov26_02174188: ; 0x02174188
 	.byte 0x08, 0x00
+	.global data_ov26_0217418a
 data_ov26_0217418a: ; 0x0217418a
 	.byte 0x10, 0x00
+	.global data_ov26_0217418c
 data_ov26_0217418c: ; 0x0217418c
 	.byte 0x10, 0x00, 0x00, 0x21
 	.byte 0xff, 0xf7, 0x72, 0xff, 0x08, 0xbd, 0x01, 0x1c, 0xa8, 0x31, 0x09, 0x78, 0x00, 0x29, 0x31, 0xd0
@@ -8528,11 +8745,14 @@ data_ov26_0217418c: ; 0x0217418c
 	.byte 0x09, 0x03, 0x51, 0x1a, 0x81, 0x66, 0x81, 0x6e, 0x09, 0x13, 0xff, 0xf7, 0x15, 0xff
 _0217424e:
 	pop {r3, pc}
+	.global data_ov26_02174250
 data_ov26_02174250: ; 0x02174250
 	.byte 0xbc, 0x0f, 0x7e, 0x02
+	.global data_ov26_02174254
 data_ov26_02174254: ; 0x02174254
 	.byte 0xb4, 0x0f, 0x7e, 0x02
 
+	.global func_ov26_02174258
 	thumb_func_start func_ov26_02174258
 func_ov26_02174258: ; 0x02174258
 	push {r4, r5, r6, lr}
@@ -8715,6 +8935,7 @@ _021743f4: .word data_02050f54
 _021743f8: .word 0xfffffc00
 _021743fc: .word data_027e0e58
 
+	.global func_ov26_02174400
 	arm_func_start func_ov26_02174400
 func_ov26_02174400: ; 0x02174400
 	stmdb sp!, {r4, lr}
@@ -8735,6 +8956,7 @@ func_ov26_02174400: ; 0x02174400
 _02174434: .word data_027e0f84
 _02174438: .word 0x0000186c
 
+	.global func_ov26_0217443c
 	arm_func_start func_ov26_0217443c
 func_ov26_0217443c: ; 0x0217443c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -8805,6 +9027,7 @@ _02174534: .word func_ov26_02174568
 _02174538: .word func_ov26_0217456c
 _0217453c: .word 0x00007fff
 
+	.global func_ov26_02174540
 	arm_func_start func_ov26_02174540
 func_ov26_02174540: ; 0x02174540
 	stmdb sp!, {r4, lr}
@@ -8820,11 +9043,13 @@ func_ov26_02174540: ; 0x02174540
 	arm_func_end func_ov26_02174540
 _02174564: .word func_ov26_02174568
 
+	.global func_ov26_02174568
 	arm_func_start func_ov26_02174568
 func_ov26_02174568: ; 0x02174568
 	bx lr
 	arm_func_end func_ov26_02174568
 
+	.global func_ov26_0217456c
 	arm_func_start func_ov26_0217456c
 func_ov26_0217456c: ; 0x0217456c
 	ldr r1, _02174578 ; =data_ov26_0217ad0c
@@ -8834,11 +9059,13 @@ func_ov26_0217456c: ; 0x0217456c
 	arm_func_end func_ov26_0217456c
 _02174578: .word data_ov26_0217ad0c
 
+	.global func_ov26_0217457c
 	arm_func_start func_ov26_0217457c
 func_ov26_0217457c: ; 0x0217457c
 	bx lr
 	arm_func_end func_ov26_0217457c
 
+	.global func_ov26_02174580
 	arm_func_start func_ov26_02174580
 func_ov26_02174580: ; 0x02174580
 	stmdb sp!, {r4, lr}
@@ -8874,6 +9101,7 @@ _021745ec: .word data_ov26_0217ac50
 _021745f0: .word data_027e1048
 _021745f4: .word func_ov26_02174568
 
+	.global func_ov26_021745f8
 	arm_func_start func_ov26_021745f8
 func_ov26_021745f8: ; 0x021745f8
 	stmdb sp!, {r4, lr}
@@ -8911,6 +9139,7 @@ _0217466c: .word data_ov26_0217ac50
 _02174670: .word data_027e1048
 _02174674: .word func_ov26_02174568
 
+	.global func_ov26_02174678
 	arm_func_start func_ov26_02174678
 func_ov26_02174678: ; 0x02174678
 	stmdb sp!, {r4, lr}
@@ -8987,6 +9216,7 @@ func_ov26_02174678: ; 0x02174678
 _0217478c: .word 0x00000666
 _02174790: .word data_027e1048
 
+	.global func_ov26_02174794
 	arm_func_start func_ov26_02174794
 func_ov26_02174794: ; 0x02174794
 	stmdb sp!, {r3, lr}
@@ -8998,6 +9228,7 @@ func_ov26_02174794: ; 0x02174794
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02174794
 
+	.global func_ov26_021747b0
 	arm_func_start func_ov26_021747b0
 func_ov26_021747b0: ; 0x021747b0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -9347,6 +9578,7 @@ _02174ca0: .word data_027e0f74
 _02174ca4: .word data_027e077c
 _02174ca8: .word data_027e0c68
 
+	.global func_ov26_02174cac
 	arm_func_start func_ov26_02174cac
 func_ov26_02174cac: ; 0x02174cac
 	stmdb sp!, {r3, r4, lr}
@@ -9582,6 +9814,7 @@ _02175004: .word 0x000001a9
 _02175008: .word 0x000001f9
 _0217500c: .word data_027e1038
 
+	.global func_ov26_02175010
 	arm_func_start func_ov26_02175010
 func_ov26_02175010: ; 0x02175010
 	stmdb sp!, {r4, lr}
@@ -9641,12 +9874,14 @@ _021750d0: .word data_02056be4
 _021750d4: .word 0x00003555
 _021750d8: .word 0x00020007
 
+	.global func_ov26_021750dc
 	arm_func_start func_ov26_021750dc
 func_ov26_021750dc: ; 0x021750dc
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov26_021750dc
 
+	.global func_ov26_021750e4
 	arm_func_start func_ov26_021750e4
 func_ov26_021750e4: ; 0x021750e4
 	stmdb sp!, {r3, r4, lr}
@@ -9682,6 +9917,7 @@ _02175150:
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov26_021750e4
 
+	.global func_ov26_0217515c
 	arm_func_start func_ov26_0217515c
 func_ov26_0217515c: ; 0x0217515c
 	stmdb sp!, {r3, lr}
@@ -9692,6 +9928,7 @@ func_ov26_0217515c: ; 0x0217515c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0217515c
 
+	.global func_ov26_02175174
 	arm_func_start func_ov26_02175174
 func_ov26_02175174: ; 0x02175174
 	stmdb sp!, {r3, lr}
@@ -9704,6 +9941,7 @@ func_ov26_02175174: ; 0x02175174
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02175174
 
+	.global func_ov26_02175194
 	arm_func_start func_ov26_02175194
 func_ov26_02175194: ; 0x02175194
 	stmdb sp!, {r4, lr}
@@ -9734,6 +9972,7 @@ _021751e4:
 	arm_func_end func_ov26_02175194
 _021751ec: .word data_027e0f74
 
+	.global func_ov26_021751f0
 	arm_func_start func_ov26_021751f0
 func_ov26_021751f0: ; 0x021751f0
 	ldr ip, _021751fc ; =func_ov00_0208b9e4
@@ -9743,6 +9982,7 @@ func_ov26_021751f0: ; 0x021751f0
 	arm_func_end func_ov26_021751f0
 _021751fc: .word func_ov00_0208b9e4
 
+	.global func_ov26_02175200
 	arm_func_start func_ov26_02175200
 func_ov26_02175200: ; 0x02175200
 	stmdb sp!, {r3, lr}
@@ -9761,6 +10001,7 @@ func_ov26_02175200: ; 0x02175200
 _0217522c: .word data_027e1048
 _02175230: .word data_027e104c
 
+	.global func_ov26_02175234
 	arm_func_start func_ov26_02175234
 func_ov26_02175234: ; 0x02175234
 	mov r1, #0
@@ -9768,6 +10009,7 @@ func_ov26_02175234: ; 0x02175234
 	bx lr
 	arm_func_end func_ov26_02175234
 
+	.global func_ov26_02175240
 	arm_func_start func_ov26_02175240
 func_ov26_02175240: ; 0x02175240
 	add r0, r0, #0x1000
@@ -9776,12 +10018,14 @@ func_ov26_02175240: ; 0x02175240
 	bx lr
 	arm_func_end func_ov26_02175240
 
+	.global func_ov26_02175250
 	arm_func_start func_ov26_02175250
 func_ov26_02175250: ; 0x02175250
 	mov r0, #0x12c
 	bx lr
 	arm_func_end func_ov26_02175250
 
+	.global func_ov26_02175258
 	arm_func_start func_ov26_02175258
 func_ov26_02175258: ; 0x02175258
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -10016,18 +10260,21 @@ _02175588:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov26_02175258
 
+	.global func_ov26_021755c0
 	arm_func_start func_ov26_021755c0
 func_ov26_021755c0: ; 0x021755c0
 	ldrh r0, [r0, #0xc]
 	bx lr
 	arm_func_end func_ov26_021755c0
 
+	.global func_ov26_021755c8
 	arm_func_start func_ov26_021755c8
 func_ov26_021755c8: ; 0x021755c8
 	ldrb r0, [r0, #0xe]
 	bx lr
 	arm_func_end func_ov26_021755c8
 
+	.global func_ov26_021755d0
 	arm_func_start func_ov26_021755d0
 func_ov26_021755d0: ; 0x021755d0
 	ldr r3, [r0]
@@ -10041,6 +10288,7 @@ func_ov26_021755d0: ; 0x021755d0
 	bx lr
 	arm_func_end func_ov26_021755d0
 
+	.global func_ov26_021755f4
 	arm_func_start func_ov26_021755f4
 func_ov26_021755f4: ; 0x021755f4
 	ldr r1, [r0]
@@ -10052,6 +10300,7 @@ func_ov26_021755f4: ; 0x021755f4
 	bx lr
 	arm_func_end func_ov26_021755f4
 
+	.global func_ov26_02175610
 	arm_func_start func_ov26_02175610
 func_ov26_02175610: ; 0x02175610
 	ldr r3, [r0]
@@ -10065,6 +10314,7 @@ func_ov26_02175610: ; 0x02175610
 	bx lr
 	arm_func_end func_ov26_02175610
 
+	.global func_ov26_02175634
 	arm_func_start func_ov26_02175634
 func_ov26_02175634: ; 0x02175634
 	ldr r2, [r0]
@@ -10084,6 +10334,7 @@ func_ov26_02175634: ; 0x02175634
 	bx lr
 	arm_func_end func_ov26_02175634
 
+	.global func_ov26_02175670
 	arm_func_start func_ov26_02175670
 func_ov26_02175670: ; 0x02175670
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -10150,6 +10401,7 @@ _02175750: .word 0x04000280
 _02175754: .word 0x040002b4
 _02175758: .word 0x040002a0
 
+	.global func_ov26_0217575c
 	arm_func_start func_ov26_0217575c
 func_ov26_0217575c: ; 0x0217575c
 	ldr ip, [r1]
@@ -10163,23 +10415,27 @@ func_ov26_0217575c: ; 0x0217575c
 	bx lr
 	arm_func_end func_ov26_0217575c
 
+	.global func_ov26_02175780
 	arm_func_start func_ov26_02175780
 func_ov26_02175780: ; 0x02175780
 	bx lr
 	arm_func_end func_ov26_02175780
 
+	.global func_ov26_02175784
 	arm_func_start func_ov26_02175784
 func_ov26_02175784: ; 0x02175784
 	ldr r0, [r0, #4]
 	bx lr
 	arm_func_end func_ov26_02175784
 
+	.global func_ov26_0217578c
 	arm_func_start func_ov26_0217578c
 func_ov26_0217578c: ; 0x0217578c
 	ldr r0, [r0, #8]
 	bx lr
 	arm_func_end func_ov26_0217578c
 
+	.global func_ov26_02175794
 	arm_func_start func_ov26_02175794
 func_ov26_02175794: ; 0x02175794
 	stmdb sp!, {r3, lr}
@@ -10213,12 +10469,14 @@ _021757d8:
 _021757f8: .word 0x040002b0
 _021757fc: .word 0x040002b4
 
+	.global func_ov26_02175800
 	arm_func_start func_ov26_02175800
 func_ov26_02175800: ; 0x02175800
 	stmia r0!, {r1, r2}
 	bx lr
 	arm_func_end func_ov26_02175800
 
+	.global func_ov26_02175808
 	arm_func_start func_ov26_02175808
 func_ov26_02175808: ; 0x02175808
 	ldr r1, [r0, #0xc]
@@ -10230,6 +10488,7 @@ func_ov26_02175808: ; 0x02175808
 	bx lr
 	arm_func_end func_ov26_02175808
 
+	.global func_ov26_02175824
 	arm_func_start func_ov26_02175824
 func_ov26_02175824: ; 0x02175824
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -10474,6 +10733,7 @@ _02175b7c:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end func_ov26_02175824
 
+	.global func_ov26_02175bb4
 	arm_func_start func_ov26_02175bb4
 func_ov26_02175bb4: ; 0x02175bb4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -10671,21 +10931,25 @@ _02175e88: .word 0x04000500
 _02175e8c: .word 0x04000504
 _02175e90: .word 0x04000448
 
+	.global func_ov26_02175e94
 	arm_func_start func_ov26_02175e94
 func_ov26_02175e94: ; 0x02175e94
 	bx lr
 	arm_func_end func_ov26_02175e94
 
+	.global func_ov26_02175e98
 	arm_func_start func_ov26_02175e98
 func_ov26_02175e98: ; 0x02175e98
 	bx lr
 	arm_func_end func_ov26_02175e98
 
+	.global func_ov26_02175e9c
 	arm_func_start func_ov26_02175e9c
 func_ov26_02175e9c: ; 0x02175e9c
 	bx lr
 	arm_func_end func_ov26_02175e9c
 
+	.global func_ov26_02175ea0
 	arm_func_start func_ov26_02175ea0
 func_ov26_02175ea0: ; 0x02175ea0
 	stmdb sp!, {r4, lr}
@@ -10695,6 +10959,7 @@ func_ov26_02175ea0: ; 0x02175ea0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02175ea0
 
+	.global func_ov26_02175eb4
 	arm_func_start func_ov26_02175eb4
 func_ov26_02175eb4: ; 0x02175eb4
 	stmdb sp!, {r4, lr}
@@ -10704,6 +10969,7 @@ func_ov26_02175eb4: ; 0x02175eb4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02175eb4
 
+	.global func_ov26_02175ec8
 	arm_func_start func_ov26_02175ec8
 func_ov26_02175ec8: ; 0x02175ec8
 	stmdb sp!, {r4, lr}
@@ -10721,39 +10987,46 @@ func_ov26_02175ec8: ; 0x02175ec8
 	arm_func_end func_ov26_02175ec8
 _02175ef4: .word func_ov26_02174568
 
+	.global func_ov26_02175ef8
 	arm_func_start func_ov26_02175ef8
 func_ov26_02175ef8: ; 0x02175ef8
 	mov r0, #0x28
 	bx lr
 	arm_func_end func_ov26_02175ef8
 
+	.global func_ov26_02175f00
 	arm_func_start func_ov26_02175f00
 func_ov26_02175f00: ; 0x02175f00
 	bx lr
 	arm_func_end func_ov26_02175f00
 
+	.global func_ov26_02175f04
 	arm_func_start func_ov26_02175f04
 func_ov26_02175f04: ; 0x02175f04
 	bx lr
 	arm_func_end func_ov26_02175f04
 
+	.global func_ov26_02175f08
 	arm_func_start func_ov26_02175f08
 func_ov26_02175f08: ; 0x02175f08
 	bx lr
 	arm_func_end func_ov26_02175f08
 
+	.global func_ov26_02175f0c
 	arm_func_start func_ov26_02175f0c
 func_ov26_02175f0c: ; 0x02175f0c
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov26_02175f0c
 
+	.global func_ov26_02175f14
 	arm_func_start func_ov26_02175f14
 func_ov26_02175f14: ; 0x02175f14
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov26_02175f14
 
+	.global func_ov26_02175f1c
 	arm_func_start func_ov26_02175f1c
 func_ov26_02175f1c: ; 0x02175f1c
 	stmdb sp!, {r4, lr}
@@ -10763,6 +11036,7 @@ func_ov26_02175f1c: ; 0x02175f1c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02175f1c
 
+	.global func_ov26_02175f30
 	thumb_func_start func_ov26_02175f30
 func_ov26_02175f30: ; 0x02175f30
 	push {r4, lr}
@@ -10780,6 +11054,7 @@ func_ov26_02175f30: ; 0x02175f30
 	thumb_func_end func_ov26_02175f30
 _02175f4c: .word data_027e103c
 
+	.global func_ov26_02175f50
 	thumb_func_start func_ov26_02175f50
 func_ov26_02175f50: ; 0x02175f50
 	push {r4, lr}
@@ -10794,6 +11069,7 @@ func_ov26_02175f50: ; 0x02175f50
 	thumb_func_end func_ov26_02175f50
 _02175f64: .word data_027e103c
 
+	.global func_ov26_02175f68
 	thumb_func_start func_ov26_02175f68
 func_ov26_02175f68: ; 0x02175f68
 	ldr r3, _02175f70 ; =func_0202e740
@@ -10805,6 +11081,7 @@ func_ov26_02175f68: ; 0x02175f68
 _02175f70: .word func_0202e740
 _02175f74: .word data_027e077c
 
+	.global func_ov26_02175f78
 	thumb_func_start func_ov26_02175f78
 func_ov26_02175f78: ; 0x02175f78
 	ldr r3, _02175f80 ; =func_0202e740
@@ -10816,6 +11093,7 @@ func_ov26_02175f78: ; 0x02175f78
 _02175f80: .word func_0202e740
 _02175f84: .word data_027e077c
 
+	.global func_ov26_02175f88
 	thumb_func_start func_ov26_02175f88
 func_ov26_02175f88: ; 0x02175f88
 	add r1, r0, #0
@@ -10828,6 +11106,7 @@ func_ov26_02175f88: ; 0x02175f88
 	thumb_func_end func_ov26_02175f88
 _02175f94: .word func_ov03_020f4bc0
 
+	.global func_ov26_02175f98
 	thumb_func_start func_ov26_02175f98
 func_ov26_02175f98: ; 0x02175f98
 	add r1, r0, #0
@@ -10840,6 +11119,7 @@ func_ov26_02175f98: ; 0x02175f98
 	thumb_func_end func_ov26_02175f98
 _02175fa4: .word func_ov03_020f4bc0
 
+	.global func_ov26_02175fa8
 	thumb_func_start func_ov26_02175fa8
 func_ov26_02175fa8: ; 0x02175fa8
 	mov r1, #0
@@ -10850,12 +11130,14 @@ func_ov26_02175fa8: ; 0x02175fa8
 	.align 2, 0
 	thumb_func_end func_ov26_02175fa8
 
+	.global func_ov26_02175fb4
 	thumb_func_start func_ov26_02175fb4
 func_ov26_02175fb4: ; 0x02175fb4
 	bx lr
 	.align 2, 0
 	thumb_func_end func_ov26_02175fb4
 
+	.global func_ov26_02175fb8
 	arm_func_start func_ov26_02175fb8
 func_ov26_02175fb8: ; 0x02175fb8
 	stmdb sp!, {r4, lr}
@@ -10906,6 +11188,7 @@ _02176060: .word data_027e0d3c
 _02176064: .word data_027e103c
 _02176068: .word 0x00000eb8
 
+	.global func_ov26_0217606c
 	arm_func_start func_ov26_0217606c
 func_ov26_0217606c: ; 0x0217606c
 	stmdb sp!, {r3, r4, lr}
@@ -10959,6 +11242,7 @@ _02176120: .word data_027e0c38
 _02176124: .word data_027e0f7c
 _02176128: .word data_027e0d3c
 
+	.global func_ov26_0217612c
 	arm_func_start func_ov26_0217612c
 func_ov26_0217612c: ; 0x0217612c
 	stmdb sp!, {r4, lr}
@@ -10998,6 +11282,7 @@ func_ov26_0217612c: ; 0x0217612c
 _021761ac: .word data_027e0f7c
 _021761b0: .word data_027e0d3c
 
+	.global func_ov26_021761b4
 	thumb_func_start func_ov26_021761b4
 func_ov26_021761b4: ; 0x021761b4
 	push {r4, lr}
@@ -11019,6 +11304,7 @@ func_ov26_021761b4: ; 0x021761b4
 _021761d4: .word func_ov26_02176200
 _021761d8: .word data_027e077c
 
+	.global func_ov26_021761dc
 	thumb_func_start func_ov26_021761dc
 func_ov26_021761dc: ; 0x021761dc
 	push {r4, lr}
@@ -11038,6 +11324,7 @@ func_ov26_021761dc: ; 0x021761dc
 _021761f8: .word func_ov26_02176200
 _021761fc: .word data_027e077c
 
+	.global func_ov26_02176200
 	arm_func_start func_ov26_02176200
 func_ov26_02176200: ; 0x02176200
 	stmdb sp!, {r3, lr}
@@ -11057,6 +11344,7 @@ _0217621c:
 	arm_func_end func_ov26_02176200
 _02176230: .word data_027e0d18
 
+	.global func_ov26_02176234
 	arm_func_start func_ov26_02176234
 func_ov26_02176234: ; 0x02176234
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -11128,6 +11416,7 @@ _02176324: .word data_027e077c
 _02176328: .word data_027e103c
 _0217632c: .word data_027e0d78
 
+	.global func_ov26_02176330
 	arm_func_start func_ov26_02176330
 func_ov26_02176330: ; 0x02176330
 	ldr r2, [r1]
@@ -11141,6 +11430,7 @@ func_ov26_02176330: ; 0x02176330
 	bx lr
 	arm_func_end func_ov26_02176330
 
+	.global func_ov26_02176354
 	arm_func_start func_ov26_02176354
 func_ov26_02176354: ; 0x02176354
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -11181,6 +11471,7 @@ _021763bc:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	arm_func_end func_ov26_02176354
 
+	.global func_ov26_021763d4
 	arm_func_start func_ov26_021763d4
 func_ov26_021763d4: ; 0x021763d4
 	stmdb sp!, {r4, lr}
@@ -11200,6 +11491,7 @@ func_ov26_021763d4: ; 0x021763d4
 	arm_func_end func_ov26_021763d4
 _02176408: .word data_027e0f84
 
+	.global func_ov26_0217640c
 	arm_func_start func_ov26_0217640c
 func_ov26_0217640c: ; 0x0217640c
 	stmdb sp!, {r3, r4, lr}
@@ -11249,6 +11541,7 @@ _021764b0: .word data_027e0f68
 _021764b4: .word data_ov00_020e2f04
 _021764b8: .word data_ov00_020e2dd8
 
+	.global func_ov26_021764bc
 	arm_func_start func_ov26_021764bc
 func_ov26_021764bc: ; 0x021764bc
 	stmdb sp!, {r4, lr}
@@ -11272,6 +11565,7 @@ func_ov26_021764bc: ; 0x021764bc
 _021764fc: .word data_ov26_0217ad60
 _02176500: .word data_027e0f6c
 
+	.global func_ov26_02176504
 	arm_func_start func_ov26_02176504
 func_ov26_02176504: ; 0x02176504
 	stmdb sp!, {r4, lr}
@@ -11297,6 +11591,7 @@ func_ov26_02176504: ; 0x02176504
 _0217654c: .word data_ov26_0217ad60
 _02176550: .word data_027e0f6c
 
+	.global func_ov26_02176554
 	arm_func_start func_ov26_02176554
 func_ov26_02176554: ; 0x02176554
 	stmdb sp!, {r4, r5, r6, lr}
@@ -11395,6 +11690,7 @@ _021766bc: .word 0x0000019a
 _021766c0: .word 0x00001333
 _021766c4: .word data_027e0f6c
 
+	.global func_ov26_021766c8
 	arm_func_start func_ov26_021766c8
 func_ov26_021766c8: ; 0x021766c8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -11408,6 +11704,7 @@ func_ov26_021766c8: ; 0x021766c8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_021766c8
 
+	.global func_ov26_021766ec
 	arm_func_start func_ov26_021766ec
 func_ov26_021766ec: ; 0x021766ec
 	stmdb sp!, {r4, lr}
@@ -11435,6 +11732,7 @@ _02176734:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_021766ec
 
+	.global func_ov26_02176740
 	arm_func_start func_ov26_02176740
 func_ov26_02176740: ; 0x02176740
 	ldrsb r1, [r0, #0x12]
@@ -11444,12 +11742,14 @@ func_ov26_02176740: ; 0x02176740
 	bx lr
 	arm_func_end func_ov26_02176740
 
+	.global func_ov26_02176754
 	arm_func_start func_ov26_02176754
 func_ov26_02176754: ; 0x02176754
 	mov r0, #0x63
 	bx lr
 	arm_func_end func_ov26_02176754
 
+	.global func_ov26_0217675c
 	arm_func_start func_ov26_0217675c
 func_ov26_0217675c: ; 0x0217675c
 	ldr ip, _02176768 ; =func_ov00_0208b9e4
@@ -11459,6 +11759,7 @@ func_ov26_0217675c: ; 0x0217675c
 	arm_func_end func_ov26_0217675c
 _02176768: .word func_ov00_0208b9e4
 
+	.global func_ov26_0217676c
 	arm_func_start func_ov26_0217676c
 func_ov26_0217676c: ; 0x0217676c
 	stmdb sp!, {r3, lr}
@@ -11470,6 +11771,7 @@ func_ov26_0217676c: ; 0x0217676c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_0217676c
 
+	.global func_ov26_02176788
 	arm_func_start func_ov26_02176788
 func_ov26_02176788: ; 0x02176788
 	stmdb sp!, {r3, r4, r5, lr}
@@ -11491,12 +11793,14 @@ func_ov26_02176788: ; 0x02176788
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov26_02176788
 
+	.global func_ov26_021767cc
 	arm_func_start func_ov26_021767cc
 func_ov26_021767cc: ; 0x021767cc
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov26_021767cc
 
+	.global func_ov26_021767d4
 	arm_func_start func_ov26_021767d4
 func_ov26_021767d4: ; 0x021767d4
 	cmp r1, #0
@@ -11505,16 +11809,19 @@ func_ov26_021767d4: ; 0x021767d4
 	bx lr
 	arm_func_end func_ov26_021767d4
 
+	.global func_ov26_021767e4
 	arm_func_start func_ov26_021767e4
 func_ov26_021767e4: ; 0x021767e4
 	bx lr
 	arm_func_end func_ov26_021767e4
 
+	.global func_ov26_021767e8
 	arm_func_start func_ov26_021767e8
 func_ov26_021767e8: ; 0x021767e8
 	bx lr
 	arm_func_end func_ov26_021767e8
 
+	.global func_ov26_021767ec
 	arm_func_start func_ov26_021767ec
 func_ov26_021767ec: ; 0x021767ec
 	stmdb sp!, {r4, r5, r6, lr}
@@ -11529,6 +11836,7 @@ func_ov26_021767ec: ; 0x021767ec
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov26_021767ec
 
+	.global func_ov26_02176814
 	arm_func_start func_ov26_02176814
 func_ov26_02176814: ; 0x02176814
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -11574,6 +11882,7 @@ _02176850:
 	arm_func_end func_ov26_02176814
 _021768ac: .word data_ov26_02179554
 
+	.global func_ov26_021768b0
 	arm_func_start func_ov26_021768b0
 func_ov26_021768b0: ; 0x021768b0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -11619,6 +11928,7 @@ _02176930:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov26_021768b0
 
+	.global func_ov26_02176948
 	arm_func_start func_ov26_02176948
 func_ov26_02176948: ; 0x02176948
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -11665,6 +11975,7 @@ _02176980:
 _021769e0: .word data_ov26_02179558
 _021769e4: .word data_027e0d3c
 
+	.global func_ov26_021769e8
 	arm_func_start func_ov26_021769e8
 func_ov26_021769e8: ; 0x021769e8
 	stmdb sp!, {r4, lr}
@@ -11684,6 +11995,7 @@ func_ov26_021769e8: ; 0x021769e8
 	arm_func_end func_ov26_021769e8
 _02176a1c: .word data_027e0f84
 
+	.global func_ov26_02176a20
 	arm_func_start func_ov26_02176a20
 func_ov26_02176a20: ; 0x02176a20
 	stmdb sp!, {r4, lr}
@@ -11736,6 +12048,7 @@ _02176ad0: .word data_ov00_020e2dd8
 _02176ad4: .word data_ov26_0217ae18
 _02176ad8: .word data_027e0f68
 
+	.global func_ov26_02176adc
 	arm_func_start func_ov26_02176adc
 func_ov26_02176adc: ; 0x02176adc
 	stmdb sp!, {r4, lr}
@@ -11752,6 +12065,7 @@ func_ov26_02176adc: ; 0x02176adc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02176adc
 
+	.global func_ov26_02176b0c
 	arm_func_start func_ov26_02176b0c
 func_ov26_02176b0c: ; 0x02176b0c
 	stmdb sp!, {r4, lr}
@@ -11770,6 +12084,7 @@ func_ov26_02176b0c: ; 0x02176b0c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02176b0c
 
+	.global func_ov26_02176b44
 	arm_func_start func_ov26_02176b44
 func_ov26_02176b44: ; 0x02176b44
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -11868,6 +12183,7 @@ _02176c94:
 _02176cac: .word 0x0000059a
 _02176cb0: .word data_027e0e60
 
+	.global func_ov26_02176cb4
 	arm_func_start func_ov26_02176cb4
 func_ov26_02176cb4: ; 0x02176cb4
 	stmdb sp!, {r4, lr}
@@ -11930,6 +12246,7 @@ _02176d7c:
 	arm_func_end func_ov26_02176cb4
 _02176d88: .word data_027e0e60
 
+	.global func_ov26_02176d8c
 	arm_func_start func_ov26_02176d8c
 func_ov26_02176d8c: ; 0x02176d8c
 	stmdb sp!, {r3, lr}
@@ -11943,6 +12260,7 @@ func_ov26_02176d8c: ; 0x02176d8c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02176d8c
 
+	.global func_ov26_02176db0
 	arm_func_start func_ov26_02176db0
 func_ov26_02176db0: ; 0x02176db0
 	stmdb sp!, {r4, lr}
@@ -11998,6 +12316,7 @@ _02176e6c: .word data_027e0fe8
 _02176e70: .word 0x54415255
 _02176e74: .word data_027e0fe4
 
+	.global func_ov26_02176e78
 	arm_func_start func_ov26_02176e78
 func_ov26_02176e78: ; 0x02176e78
 	stmdb sp!, {r4, lr}
@@ -12061,6 +12380,7 @@ _02176f40: .word 0x41525257
 _02176f44: .word 0x424d524e
 _02176f48: .word 0x5342454d
 
+	.global func_ov26_02176f4c
 	arm_func_start func_ov26_02176f4c
 func_ov26_02176f4c: ; 0x02176f4c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -12097,6 +12417,7 @@ func_ov26_02176f4c: ; 0x02176f4c
 	arm_func_end func_ov26_02176f4c
 _02176fc4: .word 0x00000733
 
+	.global func_ov26_02176fc8
 	arm_func_start func_ov26_02176fc8
 func_ov26_02176fc8: ; 0x02176fc8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -12128,6 +12449,7 @@ func_ov26_02176fc8: ; 0x02176fc8
 	arm_func_end func_ov26_02176fc8
 _0217702c: .word data_027e0e60
 
+	.global func_ov26_02177030
 	arm_func_start func_ov26_02177030
 func_ov26_02177030: ; 0x02177030
 	stmdb sp!, {r4, r5, r6, lr}
@@ -12186,12 +12508,14 @@ _021770f8: .word data_ov26_0217958c
 _021770fc: .word data_ov26_021795a0
 _02177100: .word data_027e0e60
 
+	.global func_ov26_02177104
 	arm_func_start func_ov26_02177104
 func_ov26_02177104: ; 0x02177104
 	mov r0, #0x94
 	bx lr
 	arm_func_end func_ov26_02177104
 
+	.global func_ov26_0217710c
 	arm_func_start func_ov26_0217710c
 func_ov26_0217710c: ; 0x0217710c
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -12265,6 +12589,7 @@ _0217717c:
 _02177210: .word 0x00000eb8
 _02177214: .word data_ov00_020eec60
 
+	.global func_ov26_02177218
 	arm_func_start func_ov26_02177218
 func_ov26_02177218: ; 0x02177218
 	stmdb sp!, {r3, r4, lr}
@@ -12320,6 +12645,7 @@ _0217729c:
 	arm_func_end func_ov26_02177218
 _021772d8: .word data_027e0d3c
 
+	.global func_ov26_021772dc
 	arm_func_start func_ov26_021772dc
 func_ov26_021772dc: ; 0x021772dc
 	ldr r1, [r0]
@@ -12344,6 +12670,7 @@ _0217731c:
 	bx lr
 	arm_func_end func_ov26_021772dc
 
+	.global func_ov26_02177324
 	arm_func_start func_ov26_02177324
 func_ov26_02177324: ; 0x02177324
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -12374,6 +12701,7 @@ _0217734c:
 	arm_func_end func_ov26_02177324
 _02177380: .word data_ov26_021795b4
 
+	.global func_ov26_02177384
 	arm_func_start func_ov26_02177384
 func_ov26_02177384: ; 0x02177384
 	stmdb sp!, {r3, r4, lr}
@@ -12422,6 +12750,7 @@ _0217740c:
 _02177420: .word data_ov26_021795b4
 _02177424: .word data_027e0d3c
 
+	.global func_ov26_02177428
 	arm_func_start func_ov26_02177428
 func_ov26_02177428: ; 0x02177428
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -12492,6 +12821,7 @@ func_ov26_02177428: ; 0x02177428
 	arm_func_end func_ov26_02177428
 _02177528: .word data_027e0764
 
+	.global func_ov26_0217752c
 	thumb_func_start func_ov26_0217752c
 func_ov26_0217752c: ; 0x0217752c
 	push {r3, r4, r5, r6, r7, lr}
@@ -12538,14 +12868,17 @@ _02177564:
 _0217757c: .word func_ov26_02177584
 _02177580: .word func_ov26_02177588
 
+	.global func_ov26_02177584
 	thumb_func_start func_ov26_02177584
 func_ov26_02177584: ; 0x02177584
 	thumb_func_end func_ov26_02177584
 _02177584:
 	.byte 0x70
+	.global data_ov26_02177585
 data_ov26_02177585: ; 0x02177585
 	.byte 0x47, 0x00, 0x00
 
+	.global func_ov26_02177588
 	arm_func_start func_ov26_02177588
 func_ov26_02177588: ; 0x02177588
 	mov r1, #0x200000
@@ -12560,6 +12893,7 @@ func_ov26_02177588: ; 0x02177588
 	bx lr
 	arm_func_end func_ov26_02177588
 
+	.global func_ov26_021775b0
 	thumb_func_start func_ov26_021775b0
 func_ov26_021775b0: ; 0x021775b0
 	push {r4, lr}
@@ -12575,6 +12909,7 @@ func_ov26_021775b0: ; 0x021775b0
 	thumb_func_end func_ov26_021775b0
 _021775c4: .word func_ov26_02177584
 
+	.global func_ov26_021775c8
 	arm_func_start func_ov26_021775c8
 func_ov26_021775c8: ; 0x021775c8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -12710,6 +13045,7 @@ _02177790: .word data_ov00_020eec9c
 _02177794: .word 0x00000487
 _02177798: .word data_027e0764
 
+	.global func_ov26_0217779c
 	arm_func_start func_ov26_0217779c
 func_ov26_0217779c: ; 0x0217779c
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -12772,6 +13108,7 @@ _0217786c: .word data_027e0618
 _02177870: .word data_027e0f7c
 _02177874: .word data_027e0d3c
 
+	.global func_ov26_02177878
 	thumb_func_start func_ov26_02177878
 func_ov26_02177878: ; 0x02177878
 	mov r1, #0
@@ -12780,6 +13117,7 @@ func_ov26_02177878: ; 0x02177878
 	.align 2, 0
 	thumb_func_end func_ov26_02177878
 
+	.global func_ov26_02177880
 	arm_func_start func_ov26_02177880
 func_ov26_02177880: ; 0x02177880
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -12813,6 +13151,7 @@ _021778d4:
 _021778e0: .word data_027e0e60
 _021778e4: .word data_027e0d3c
 
+	.global func_ov26_021778e8
 	arm_func_start func_ov26_021778e8
 func_ov26_021778e8: ; 0x021778e8
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -12880,6 +13219,7 @@ _021779d0: .word data_027e0f7c
 _021779d4: .word data_027e0f74
 _021779d8: .word data_027e0d3c
 
+	.global func_ov26_021779dc
 	arm_func_start func_ov26_021779dc
 func_ov26_021779dc: ; 0x021779dc
 	stmdb sp!, {r3, lr}
@@ -12897,6 +13237,7 @@ func_ov26_021779dc: ; 0x021779dc
 	arm_func_end func_ov26_021779dc
 _02177a08: .word data_027e0fe0
 
+	.global func_ov26_02177a0c
 	arm_func_start func_ov26_02177a0c
 func_ov26_02177a0c: ; 0x02177a0c
 	stmdb sp!, {r4, lr}
@@ -12919,6 +13260,7 @@ func_ov26_02177a0c: ; 0x02177a0c
 _02177a48: .word data_ov26_0217aeb0
 _02177a4c: .word data_027e0fec
 
+	.global func_ov26_02177a50
 	arm_func_start func_ov26_02177a50
 func_ov26_02177a50: ; 0x02177a50
 	stmdb sp!, {r4, lr}
@@ -12931,6 +13273,7 @@ func_ov26_02177a50: ; 0x02177a50
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02177a50
 
+	.global func_ov26_02177a70
 	arm_func_start func_ov26_02177a70
 func_ov26_02177a70: ; 0x02177a70
 	stmdb sp!, {r4, lr}
@@ -12945,6 +13288,7 @@ func_ov26_02177a70: ; 0x02177a70
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02177a70
 
+	.global func_ov26_02177a98
 	arm_func_start func_ov26_02177a98
 func_ov26_02177a98: ; 0x02177a98
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -13013,6 +13357,7 @@ _02177b84: .word data_027e0f74
 _02177b88: .word data_ov26_0217aea4
 _02177b8c: .word data_ov26_021795c8
 
+	.global func_ov26_02177b90
 	arm_func_start func_ov26_02177b90
 func_ov26_02177b90: ; 0x02177b90
 	ldr ip, _02177ba4 ; =func_ov00_0207a1c8
@@ -13024,6 +13369,7 @@ func_ov26_02177b90: ; 0x02177b90
 	arm_func_end func_ov26_02177b90
 _02177ba4: .word func_ov00_0207a1c8
 
+	.global func_ov26_02177ba8
 	arm_func_start func_ov26_02177ba8
 func_ov26_02177ba8: ; 0x02177ba8
 	stmdb sp!, {lr}
@@ -13053,6 +13399,7 @@ func_ov26_02177ba8: ; 0x02177ba8
 _02177c00: .word 0x00001f33
 _02177c04: .word data_027e0194
 
+	.global func_ov26_02177c08
 	arm_func_start func_ov26_02177c08
 func_ov26_02177c08: ; 0x02177c08
 	stmdb sp!, {r3, lr}
@@ -13070,6 +13417,7 @@ func_ov26_02177c08: ; 0x02177c08
 	arm_func_end func_ov26_02177c08
 _02177c34: .word data_027e0fe0
 
+	.global func_ov26_02177c38
 	arm_func_start func_ov26_02177c38
 func_ov26_02177c38: ; 0x02177c38
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -13169,6 +13517,7 @@ _02177da0: .word data_ov26_0217b04c
 _02177da4: .word data_ov26_02179628
 _02177da8: .word data_ov26_02179638
 
+	.global func_ov26_02177dac
 	arm_func_start func_ov26_02177dac
 func_ov26_02177dac: ; 0x02177dac
 	stmdb sp!, {r4, lr}
@@ -13185,6 +13534,7 @@ func_ov26_02177dac: ; 0x02177dac
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02177dac
 
+	.global func_ov26_02177ddc
 	arm_func_start func_ov26_02177ddc
 func_ov26_02177ddc: ; 0x02177ddc
 	stmdb sp!, {r4, lr}
@@ -13203,6 +13553,7 @@ func_ov26_02177ddc: ; 0x02177ddc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02177ddc
 
+	.global func_ov26_02177e14
 	arm_func_start func_ov26_02177e14
 func_ov26_02177e14: ; 0x02177e14
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -13297,6 +13648,7 @@ _02177f60: .word data_027e0e60
 _02177f64: .word data_ov26_0217af64
 _02177f68: .word 0xffffeccd
 
+	.global func_ov26_02177f6c
 	arm_func_start func_ov26_02177f6c
 func_ov26_02177f6c: ; 0x02177f6c
 	stmdb sp!, {r4, lr}
@@ -13311,6 +13663,7 @@ func_ov26_02177f6c: ; 0x02177f6c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02177f6c
 
+	.global func_ov26_02177f94
 	arm_func_start func_ov26_02177f94
 func_ov26_02177f94: ; 0x02177f94
 	stmdb sp!, {r3, lr}
@@ -13320,6 +13673,7 @@ func_ov26_02177f94: ; 0x02177f94
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02177f94
 
+	.global func_ov26_02177fa8
 	arm_func_start func_ov26_02177fa8
 func_ov26_02177fa8: ; 0x02177fa8
 	stmdb sp!, {r3, lr}
@@ -13340,6 +13694,7 @@ func_ov26_02177fa8: ; 0x02177fa8
 _02177fdc: .word data_ov00_020e9c88
 _02177fe0: .word func_ov26_02177fe4
 
+	.global func_ov26_02177fe4
 	arm_func_start func_ov26_02177fe4
 func_ov26_02177fe4: ; 0x02177fe4
 	ldr ip, _02177fec ; =func_ov26_02177ff0
@@ -13348,6 +13703,7 @@ func_ov26_02177fe4: ; 0x02177fe4
 	arm_func_end func_ov26_02177fe4
 _02177fec: .word func_ov26_02177ff0
 
+	.global func_ov26_02177ff0
 	arm_func_start func_ov26_02177ff0
 func_ov26_02177ff0: ; 0x02177ff0
 	stmdb sp!, {r3, r4, r5, lr}
@@ -13410,6 +13766,7 @@ func_ov26_02177ff0: ; 0x02177ff0
 	arm_func_end func_ov26_02177ff0
 _021780d0: .word data_ov00_020e9360
 
+	.global func_ov26_021780d4
 	arm_func_start func_ov26_021780d4
 func_ov26_021780d4: ; 0x021780d4
 	stmdb sp!, {r3, lr}
@@ -13427,6 +13784,7 @@ func_ov26_021780d4: ; 0x021780d4
 	arm_func_end func_ov26_021780d4
 _02178100: .word data_027e0fe0
 
+	.global func_ov26_02178104
 	arm_func_start func_ov26_02178104
 func_ov26_02178104: ; 0x02178104
 	stmdb sp!, {r4, lr}
@@ -13443,6 +13801,7 @@ func_ov26_02178104: ; 0x02178104
 	arm_func_end func_ov26_02178104
 _0217812c: .word data_ov26_0217b05c
 
+	.global func_ov26_02178130
 	arm_func_start func_ov26_02178130
 func_ov26_02178130: ; 0x02178130
 	stmdb sp!, {r4, lr}
@@ -13452,6 +13811,7 @@ func_ov26_02178130: ; 0x02178130
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02178130
 
+	.global func_ov26_02178144
 	arm_func_start func_ov26_02178144
 func_ov26_02178144: ; 0x02178144
 	stmdb sp!, {r4, lr}
@@ -13463,6 +13823,7 @@ func_ov26_02178144: ; 0x02178144
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02178144
 
+	.global func_ov26_02178160
 	arm_func_start func_ov26_02178160
 func_ov26_02178160: ; 0x02178160
 	stmdb sp!, {r3}
@@ -13492,6 +13853,7 @@ func_ov26_02178160: ; 0x02178160
 	bx lr
 	arm_func_end func_ov26_02178160
 
+	.global func_ov26_021781c4
 	arm_func_start func_ov26_021781c4
 func_ov26_021781c4: ; 0x021781c4
 	stmdb sp!, {r4, lr}
@@ -13524,6 +13886,7 @@ _02178218:
 	arm_func_end func_ov26_021781c4
 _02178224: .word data_027e103c
 
+	.global func_ov26_02178228
 	arm_func_start func_ov26_02178228
 func_ov26_02178228: ; 0x02178228
 	ldr r1, _02178244 ; =data_027e0e60
@@ -13538,6 +13901,7 @@ func_ov26_02178228: ; 0x02178228
 _02178244: .word data_027e0e60
 _02178248: .word func_ov00_020836dc
 
+	.global func_ov26_0217824c
 	thumb_func_start func_ov26_0217824c
 func_ov26_0217824c: ; 0x0217824c
 	mov r1, #0
@@ -13546,6 +13910,7 @@ func_ov26_0217824c: ; 0x0217824c
 	bx lr
 	thumb_func_end func_ov26_0217824c
 
+	.global func_ov26_02178254
 	arm_func_start func_ov26_02178254
 func_ov26_02178254: ; 0x02178254
 	ldr r0, _02178260 ; =data_ov26_0217b588
@@ -13555,6 +13920,7 @@ func_ov26_02178254: ; 0x02178254
 	arm_func_end func_ov26_02178254
 _02178260: .word data_ov26_0217b588
 
+	.global func_ov26_02178264
 	thumb_func_start func_ov26_02178264
 func_ov26_02178264: ; 0x02178264
 	push {r3, lr}
@@ -13580,6 +13946,7 @@ _02178286:
 _02178288: .word data_ov26_0217b588
 _0217828c: .word data_027e0ce0
 
+	.global func_ov26_02178290
 	thumb_func_start func_ov26_02178290
 func_ov26_02178290: ; 0x02178290
 	push {r3, lr}
@@ -13597,6 +13964,7 @@ _0217829e:
 	thumb_func_end func_ov26_02178290
 _021782a8: .word data_ov26_0217b588
 
+	.global func_ov26_021782ac
 	arm_func_start func_ov26_021782ac
 func_ov26_021782ac: ; 0x021782ac
 	stmdb sp!, {r4, r5, lr}
@@ -13672,6 +14040,7 @@ _021783ac: .word data_ov26_0217968c
 _021783b0: .word data_ov00_020eec68
 _021783b4: .word data_027e0e60
 
+	.global func_ov26_021783b8
 	arm_func_start func_ov26_021783b8
 func_ov26_021783b8: ; 0x021783b8
 	stmdb sp!, {r4, lr}
@@ -13697,6 +14066,7 @@ func_ov26_021783b8: ; 0x021783b8
 _02178400: .word data_ov26_02179688
 _02178404: .word data_ov00_020eec68
 
+	.global func_ov26_02178408
 	arm_func_start func_ov26_02178408
 func_ov26_02178408: ; 0x02178408
 	stmdb sp!, {r4, lr}
@@ -13713,6 +14083,7 @@ func_ov26_02178408: ; 0x02178408
 	arm_func_end func_ov26_02178408
 _02178430: .word data_ov00_020eec68
 
+	.global func_ov26_02178434
 	arm_func_start func_ov26_02178434
 func_ov26_02178434: ; 0x02178434
 	ldr ip, _0217844c ; =func_ov00_020d70a4
@@ -13726,6 +14097,7 @@ func_ov26_02178434: ; 0x02178434
 _0217844c: .word func_ov00_020d70a4
 _02178450: .word data_ov00_020eec68
 
+	.global func_ov26_02178454
 	arm_func_start func_ov26_02178454
 func_ov26_02178454: ; 0x02178454
 	stmdb sp!, {r4, lr}
@@ -13745,6 +14117,7 @@ func_ov26_02178454: ; 0x02178454
 	arm_func_end func_ov26_02178454
 _02178488: .word data_027e0f84
 
+	.global func_ov26_0217848c
 	arm_func_start func_ov26_0217848c
 func_ov26_0217848c: ; 0x0217848c
 	stmdb sp!, {r3, r4, lr}
@@ -13784,6 +14157,7 @@ func_ov26_0217848c: ; 0x0217848c
 _0217850c: .word data_ov26_0217b118
 _02178510: .word data_027e0f68
 
+	.global func_ov26_02178514
 	arm_func_start func_ov26_02178514
 func_ov26_02178514: ; 0x02178514
 	stmdb sp!, {r4, lr}
@@ -13796,6 +14170,7 @@ func_ov26_02178514: ; 0x02178514
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02178514
 
+	.global func_ov26_02178534
 	arm_func_start func_ov26_02178534
 func_ov26_02178534: ; 0x02178534
 	stmdb sp!, {r4, lr}
@@ -13810,6 +14185,7 @@ func_ov26_02178534: ; 0x02178534
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_02178534
 
+	.global func_ov26_0217855c
 	arm_func_start func_ov26_0217855c
 func_ov26_0217855c: ; 0x0217855c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -13918,6 +14294,7 @@ _0217868c:
 	arm_func_end func_ov26_0217855c
 _021786d4: .word data_027e0e60
 
+	.global func_ov26_021786d8
 	arm_func_start func_ov26_021786d8
 func_ov26_021786d8: ; 0x021786d8
 	stmdb sp!, {r4, lr}
@@ -13949,6 +14326,7 @@ _02178720:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov26_021786d8
 
+	.global func_ov26_0217873c
 	arm_func_start func_ov26_0217873c
 func_ov26_0217873c: ; 0x0217873c
 	stmdb sp!, {r4, r5, lr}
@@ -14113,6 +14491,7 @@ _02178988: .word 0xffffeccd
 _0217898c: .word data_027e0ffc
 _02178990: .word data_027e0fc8
 
+	.global func_ov26_02178994
 	arm_func_start func_ov26_02178994
 func_ov26_02178994: ; 0x02178994
 	ldr ip, _021789a0 ; =func_01fffcd8
@@ -14122,6 +14501,7 @@ func_ov26_02178994: ; 0x02178994
 	arm_func_end func_ov26_02178994
 _021789a0: .word func_01fffcd8
 
+	.global func_ov26_021789a4
 	arm_func_start func_ov26_021789a4
 func_ov26_021789a4: ; 0x021789a4
 	stmdb sp!, {r4, lr}
@@ -14236,18 +14616,21 @@ _02178b30: .word data_027e0f74
 _02178b34: .word data_027e0f64
 _02178b38: .word data_027e0fc8
 
+	.global func_ov26_02178b3c
 	arm_func_start func_ov26_02178b3c
 func_ov26_02178b3c: ; 0x02178b3c
 	mov r0, #0x9b
 	bx lr
 	arm_func_end func_ov26_02178b3c
 
+	.global func_ov26_02178b44
 	arm_func_start func_ov26_02178b44
 func_ov26_02178b44: ; 0x02178b44
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov26_02178b44
 
+	.global func_ov26_02178b4c
 	arm_func_start func_ov26_02178b4c
 func_ov26_02178b4c: ; 0x02178b4c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
@@ -14302,6 +14685,7 @@ _02178bd4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov26_02178b4c
 
+	.global func_ov26_02178c0c
 	arm_func_start func_ov26_02178c0c
 func_ov26_02178c0c: ; 0x02178c0c
 	cmp r1, #0
@@ -14310,6 +14694,7 @@ func_ov26_02178c0c: ; 0x02178c0c
 	bx lr
 	arm_func_end func_ov26_02178c0c
 
+	.global func_ov26_02178c1c
 	arm_func_start func_ov26_02178c1c
 func_ov26_02178c1c: ; 0x02178c1c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -14346,6 +14731,7 @@ _02178c6c:
 	arm_func_end func_ov26_02178c1c
 _02178c90: .word data_027e0f6c
 
+	.global func_ov26_02178c94
 	arm_func_start func_ov26_02178c94
 func_ov26_02178c94: ; 0x02178c94
 	ldr r2, [r0, #0x50]
@@ -14360,6 +14746,7 @@ func_ov26_02178c94: ; 0x02178c94
 	bx lr
 	arm_func_end func_ov26_02178c94
 
+	.global func_ov26_02178cbc
 	arm_func_start func_ov26_02178cbc
 func_ov26_02178cbc: ; 0x02178cbc
 	stmdb sp!, {r4, r5, lr}
@@ -14467,6 +14854,7 @@ _02178e3c: .word 0x00000102
 _02178e40: .word data_027e1038
 _02178e44: .word data_027e0e58
 
+	.global func_ov26_02178e48
 	arm_func_start func_ov26_02178e48
 func_ov26_02178e48: ; 0x02178e48
 	stmdb sp!, {r4, r5, r6, lr}
@@ -14490,6 +14878,7 @@ _02178e78:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end func_ov26_02178e48
 
+	.global func_ov26_02178e8c
 	arm_func_start func_ov26_02178e8c
 func_ov26_02178e8c: ; 0x02178e8c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -14573,6 +14962,7 @@ _02178f48:
 	arm_func_end func_ov26_02178e8c
 _02178fb0: .word data_ov00_020eec9c
 
+	.global func_ov26_02178fb4
 	arm_func_start func_ov26_02178fb4
 func_ov26_02178fb4: ; 0x02178fb4
 	stmdb sp!, {r4, lr}
@@ -14592,6 +14982,7 @@ func_ov26_02178fb4: ; 0x02178fb4
 	arm_func_end func_ov26_02178fb4
 _02178fe8: .word data_027e0f84
 
+	.global func_ov26_02178fec
 	arm_func_start func_ov26_02178fec
 func_ov26_02178fec: ; 0x02178fec
 	stmdb sp!, {r4, lr}
@@ -14631,6 +15022,7 @@ _02179068: .word data_ov00_020e2dd8
 _0217906c: .word data_ov26_0217b22c
 _02179070: .word data_027e0f68
 
+	.global func_ov26_02179074
 	arm_func_start func_ov26_02179074
 func_ov26_02179074: ; 0x02179074
 	stmdb sp!, {r4, lr}
@@ -14654,6 +15046,7 @@ func_ov26_02179074: ; 0x02179074
 _021790b4: .word data_ov26_0217b22c
 _021790b8: .word data_027e0f6c
 
+	.global func_ov26_021790bc
 	arm_func_start func_ov26_021790bc
 func_ov26_021790bc: ; 0x021790bc
 	stmdb sp!, {r4, lr}
@@ -14679,12 +15072,14 @@ func_ov26_021790bc: ; 0x021790bc
 _02179104: .word data_ov26_0217b22c
 _02179108: .word data_027e0f6c
 
+	.global func_ov26_0217910c
 	arm_func_start func_ov26_0217910c
 func_ov26_0217910c: ; 0x0217910c
 	mov r0, #0x22
 	bx lr
 	arm_func_end func_ov26_0217910c
 
+	.global func_ov26_02179114
 	arm_func_start func_ov26_02179114
 func_ov26_02179114: ; 0x02179114
 	stmdb sp!, {r4, r5, r6, lr}
@@ -14765,6 +15160,7 @@ _02179234: .word 0x00004ccd
 _02179238: .word data_027e0f6c
 _0217923c: .word data_027e0f74
 
+	.global func_ov26_02179240
 	arm_func_start func_ov26_02179240
 func_ov26_02179240: ; 0x02179240
 	stmdb sp!, {r3, lr}
@@ -14776,634 +15172,916 @@ func_ov26_02179240: ; 0x02179240
 	blx r2
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02179240
+	.global data_ov26_02179260
 data_ov26_02179260: ; 0x02179260
 	.byte 0x00, 0x08, 0x00, 0x00
+	.global data_ov26_02179264
 data_ov26_02179264: ; 0x02179264
 	.byte 0x85, 0x07, 0x00, 0x00
+	.global data_ov26_02179268
 data_ov26_02179268: ; 0x02179268
 	.byte 0xcd, 0x10, 0x00, 0x00
+	.global data_ov26_0217926c
 data_ov26_0217926c: ; 0x0217926c
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179270
 data_ov26_02179270: ; 0x02179270
 	.byte 0xcd, 0x04, 0x00, 0x00
+	.global data_ov26_02179274
 data_ov26_02179274: ; 0x02179274
 	.byte 0xcd, 0x10, 0x00, 0x00
+	.global data_ov26_02179278
 data_ov26_02179278: ; 0x02179278
 	.byte 0x00, 0x08, 0x00, 0x00
+	.global data_ov26_0217927c
 data_ov26_0217927c: ; 0x0217927c
 	.byte 0x9a, 0x05, 0x00, 0x00
+	.global data_ov26_02179280
 data_ov26_02179280: ; 0x02179280
 	.byte 0x66, 0x1a, 0x00, 0x00
+	.global data_ov26_02179284
 data_ov26_02179284: ; 0x02179284
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179288
 data_ov26_02179288: ; 0x02179288
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217928c
 data_ov26_0217928c: ; 0x0217928c
 	.byte 0x00, 0x0c, 0x00, 0x00
+	.global data_ov26_02179290
 data_ov26_02179290: ; 0x02179290
 	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179298
 data_ov26_02179298: ; 0x02179298
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217929c
 data_ov26_0217929c: ; 0x0217929c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792a0
 data_ov26_021792a0: ; 0x021792a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792a4
 data_ov26_021792a4: ; 0x021792a4
 	.asciz "walk_m"
 _021792ab:
 	.byte 0x00
+	.global data_ov26_021792ac
 data_ov26_021792ac: ; 0x021792ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792b0
 data_ov26_021792b0: ; 0x021792b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792b4
 data_ov26_021792b4: ; 0x021792b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792b8
 data_ov26_021792b8: ; 0x021792b8
 	.asciz "talk_m"
 _021792bf:
 	.byte 0x00
+	.global data_ov26_021792c0
 data_ov26_021792c0: ; 0x021792c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792c4
 data_ov26_021792c4: ; 0x021792c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792c8
 data_ov26_021792c8: ; 0x021792c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792cc
 data_ov26_021792cc: ; 0x021792cc
 	.byte 0x77, 0x61, 0x69, 0x74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792d4
 data_ov26_021792d4: ; 0x021792d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792d8
 data_ov26_021792d8: ; 0x021792d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792dc
 data_ov26_021792dc: ; 0x021792dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792e0
 data_ov26_021792e0: ; 0x021792e0
 	.asciz "walk_w"
 _021792e7:
 	.byte 0x00
+	.global data_ov26_021792e8
 data_ov26_021792e8: ; 0x021792e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792ec
 data_ov26_021792ec: ; 0x021792ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792f0
 data_ov26_021792f0: ; 0x021792f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021792f4
 data_ov26_021792f4: ; 0x021792f4
 	.asciz "talk_w"
 _021792fb:
 	.byte 0x00
+	.global data_ov26_021792fc
 data_ov26_021792fc: ; 0x021792fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179300
 data_ov26_02179300: ; 0x02179300
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179304
 data_ov26_02179304: ; 0x02179304
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179308
 data_ov26_02179308: ; 0x02179308
 	.byte 0x00, 0x08, 0x00, 0x00
+	.global data_ov26_0217930c
 data_ov26_0217930c: ; 0x0217930c
 	.byte 0x9a, 0x05, 0x00, 0x00
+	.global data_ov26_02179310
 data_ov26_02179310: ; 0x02179310
 	.byte 0x9a, 0x1d, 0x00, 0x00
+	.global data_ov26_02179314
 data_ov26_02179314: ; 0x02179314
 	.byte 0x00, 0x10, 0x00, 0x00
+	.global data_ov26_02179318
 data_ov26_02179318: ; 0x02179318
 	.byte 0x00, 0x10, 0x00, 0x00
+	.global data_ov26_0217931c
 data_ov26_0217931c: ; 0x0217931c
 	.byte 0x62, 0x72, 0x69, 0x64
 	.byte 0x67, 0x65, 0x31, 0x00
+	.global data_ov26_02179324
 data_ov26_02179324: ; 0x02179324
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179328
 data_ov26_02179328: ; 0x02179328
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217932c
 data_ov26_0217932c: ; 0x0217932c
 	.byte 0x62, 0x72, 0x69, 0x64
 	.byte 0x67, 0x65, 0x30, 0x00
+	.global data_ov26_02179334
 data_ov26_02179334: ; 0x02179334
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179338
 data_ov26_02179338: ; 0x02179338
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217933c
 data_ov26_0217933c: ; 0x0217933c
 	.byte 0x14, 0x1e, 0x00, 0x00
+	.global data_ov26_02179340
 data_ov26_02179340: ; 0x02179340
 	.byte 0x0e, 0x18, 0x00, 0x00
+	.global data_ov26_02179344
 data_ov26_02179344: ; 0x02179344
 	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217934c
 data_ov26_0217934c: ; 0x0217934c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179350
 data_ov26_02179350: ; 0x02179350
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179354
 data_ov26_02179354: ; 0x02179354
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179358
 data_ov26_02179358: ; 0x02179358
 	.asciz "appear1"
+	.global data_ov26_02179360
 data_ov26_02179360: ; 0x02179360
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179364
 data_ov26_02179364: ; 0x02179364
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179368
 data_ov26_02179368: ; 0x02179368
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_0217936c
 data_ov26_0217936c: ; 0x0217936c
 	.asciz "hide1"
 _02179372:
 	.byte 0x00, 0x00
+	.global data_ov26_02179374
 data_ov26_02179374: ; 0x02179374
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179378
 data_ov26_02179378: ; 0x02179378
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217937c
 data_ov26_0217937c: ; 0x0217937c
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_02179380
 data_ov26_02179380: ; 0x02179380
 	.asciz "sleep"
 _02179386:
 	.byte 0x00, 0x00
+	.global data_ov26_02179388
 data_ov26_02179388: ; 0x02179388
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217938c
 data_ov26_0217938c: ; 0x0217938c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179390
 data_ov26_02179390: ; 0x02179390
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179394
 data_ov26_02179394: ; 0x02179394
 	.asciz "sleep_sta"
 _0217939e:
 	.byte 0x00, 0x00
+	.global data_ov26_021793a0
 data_ov26_021793a0: ; 0x021793a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021793a4
 data_ov26_021793a4: ; 0x021793a4
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_021793a8
 data_ov26_021793a8: ; 0x021793a8
 	.asciz "sleep_end"
 _021793b2:
 	.byte 0x00, 0x00
+	.global data_ov26_021793b4
 data_ov26_021793b4: ; 0x021793b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021793b8
 data_ov26_021793b8: ; 0x021793b8
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_021793bc
 data_ov26_021793bc: ; 0x021793bc
 	.byte 0xcf, 0x00, 0x00, 0x00
+	.global data_ov26_021793c0
 data_ov26_021793c0: ; 0x021793c0
 	.byte 0xd0, 0x00, 0x00, 0x00
+	.global data_ov26_021793c4
 data_ov26_021793c4: ; 0x021793c4
 	.byte 0xd1, 0x00, 0x00, 0x00
+	.global data_ov26_021793c8
 data_ov26_021793c8: ; 0x021793c8
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_021793cc
 data_ov26_021793cc: ; 0x021793cc
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_021793d0
 data_ov26_021793d0: ; 0x021793d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021793d4
 data_ov26_021793d4: ; 0x021793d4
 	.byte 0x64, 0x6f, 0x6f, 0x72, 0x5f, 0x70, 0x6c, 0x75, 0x63, 0x6b, 0x5f, 0x6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021793e4
 data_ov26_021793e4: ; 0x021793e4
 	.asciz "door_power_l"
 _021793f1:
 	.byte 0x00, 0x00, 0x00
+	.global data_ov26_021793f4
 data_ov26_021793f4: ; 0x021793f4
 	.asciz "door_philos"
+	.global data_ov26_02179400
 data_ov26_02179400: ; 0x02179400
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179404
 data_ov26_02179404: ; 0x02179404
 	.byte 0x64, 0x6f, 0x6f, 0x72, 0x5f, 0x70, 0x6c, 0x75, 0x63, 0x6b, 0x5f, 0x72
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179414
 data_ov26_02179414: ; 0x02179414
 	.asciz "door_power_r"
 _02179421:
 	.byte 0x00, 0x00, 0x00
+	.global data_ov26_02179424
 data_ov26_02179424: ; 0x02179424
 	.asciz "door_philos"
+	.global data_ov26_02179430
 data_ov26_02179430: ; 0x02179430
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179434
 data_ov26_02179434: ; 0x02179434
 	.byte 0x14, 0x00, 0x00, 0x00
+	.global data_ov26_02179438
 data_ov26_02179438: ; 0x02179438
 	.byte 0x15, 0x00, 0x00, 0x00
+	.global data_ov26_0217943c
 data_ov26_0217943c: ; 0x0217943c
 	.byte 0x16, 0x00, 0x00, 0x00
+	.global data_ov26_02179440
 data_ov26_02179440: ; 0x02179440
 	.byte 0x45, 0x03
+	.global data_ov26_02179442
 data_ov26_02179442: ; 0x02179442
 	.byte 0x46, 0x03
+	.global data_ov26_02179444
 data_ov26_02179444: ; 0x02179444
 	.byte 0x44, 0x03
+	.global data_ov26_02179446
 data_ov26_02179446: ; 0x02179446
 	.byte 0x48, 0x03
+	.global data_ov26_02179448
 data_ov26_02179448: ; 0x02179448
 	.byte 0x49, 0x03
+	.global data_ov26_0217944a
 data_ov26_0217944a: ; 0x0217944a
 	.byte 0x47, 0x03
+	.global data_ov26_0217944c
 data_ov26_0217944c: ; 0x0217944c
 	.byte 0x79, 0x01, 0x00, 0x00
+	.global data_ov26_02179450
 data_ov26_02179450: ; 0x02179450
 	.byte 0x77, 0x01, 0x00, 0x00
+	.global data_ov26_02179454
 data_ov26_02179454: ; 0x02179454
 	.byte 0x78, 0x01, 0x00, 0x00
+	.global data_ov26_02179458
 data_ov26_02179458: ; 0x02179458
 	.byte 0x73, 0x77, 0x69, 0x74, 0x63, 0x68, 0x5f, 0x66
 	.byte 0x6f, 0x72, 0x63, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179468
 data_ov26_02179468: ; 0x02179468
 	.byte 0x62, 0x61, 0x73, 0x65, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179470
 data_ov26_02179470: ; 0x02179470
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179474
 data_ov26_02179474: ; 0x02179474
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179478
 data_ov26_02179478: ; 0x02179478
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217947c
 data_ov26_0217947c: ; 0x0217947c
 	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov26_02179480
 data_ov26_02179480: ; 0x02179480
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov26_02179484
 data_ov26_02179484: ; 0x02179484
 	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov26_02179488
 data_ov26_02179488: ; 0x02179488
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217948c
 data_ov26_0217948c: ; 0x0217948c
 	.byte 0x33, 0x13, 0x00, 0x00
+	.global data_ov26_02179490
 data_ov26_02179490: ; 0x02179490
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179494
 data_ov26_02179494: ; 0x02179494
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61, 0x6e, 0x64, 0x41, 0x5f
 	.byte 0x73, 0x00, 0x00, 0x00
+	.global data_ov26_021794a4
 data_ov26_021794a4: ; 0x021794a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021794a8
 data_ov26_021794a8: ; 0x021794a8
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61
 	.byte 0x6e, 0x64, 0x41, 0x5f, 0x6d, 0x00, 0x00, 0x00
+	.global data_ov26_021794b8
 data_ov26_021794b8: ; 0x021794b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021794bc
 data_ov26_021794bc: ; 0x021794bc
 	.byte 0x6d, 0x74, 0x5f, 0x67
 	.byte 0x64, 0x5f, 0x73, 0x61, 0x6e, 0x64, 0x41, 0x5f, 0x66, 0x00, 0x00, 0x00
+	.global data_ov26_021794cc
 data_ov26_021794cc: ; 0x021794cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021794d0
 data_ov26_021794d0: ; 0x021794d0
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61, 0x6e, 0x64, 0x42, 0x5f, 0x73, 0x00, 0x00, 0x00
+	.global data_ov26_021794e0
 data_ov26_021794e0: ; 0x021794e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021794e4
 data_ov26_021794e4: ; 0x021794e4
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61, 0x6e, 0x64, 0x42, 0x5f
 	.byte 0x6d, 0x00, 0x00, 0x00
+	.global data_ov26_021794f4
 data_ov26_021794f4: ; 0x021794f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021794f8
 data_ov26_021794f8: ; 0x021794f8
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61
 	.byte 0x6e, 0x64, 0x42, 0x5f, 0x66, 0x00, 0x00, 0x00
+	.global data_ov26_02179508
 data_ov26_02179508: ; 0x02179508
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217950c
 data_ov26_0217950c: ; 0x0217950c
 	.byte 0x6d, 0x74, 0x5f, 0x67
 	.byte 0x64, 0x5f, 0x67, 0x6c, 0x61, 0x73, 0x73, 0x00
+	.global data_ov26_02179518
 data_ov26_02179518: ; 0x02179518
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217951c
 data_ov26_0217951c: ; 0x0217951c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179520
 data_ov26_02179520: ; 0x02179520
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179524
 data_ov26_02179524: ; 0x02179524
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179528
 data_ov26_02179528: ; 0x02179528
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_0217952c
 data_ov26_0217952c: ; 0x0217952c
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179530
 data_ov26_02179530: ; 0x02179530
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179534
 data_ov26_02179534: ; 0x02179534
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179538
 data_ov26_02179538: ; 0x02179538
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_0217953c
 data_ov26_0217953c: ; 0x0217953c
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179540
 data_ov26_02179540: ; 0x02179540
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179544
 data_ov26_02179544: ; 0x02179544
 	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov26_02179548
 data_ov26_02179548: ; 0x02179548
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217954c
 data_ov26_0217954c: ; 0x0217954c
 	.byte 0x33, 0x13, 0x00, 0x00
+	.global data_ov26_02179550
 data_ov26_02179550: ; 0x02179550
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179554
 data_ov26_02179554: ; 0x02179554
 	.byte 0x00
+	.global data_ov26_02179555
 data_ov26_02179555: ; 0x02179555
 	.byte 0x03
+	.global data_ov26_02179556
 data_ov26_02179556: ; 0x02179556
 	.byte 0x06
+	.global data_ov26_02179557
 data_ov26_02179557: ; 0x02179557
 	.byte 0x09
+	.global data_ov26_02179558
 data_ov26_02179558: ; 0x02179558
 	.byte 0x03
+	.global data_ov26_02179559
 data_ov26_02179559: ; 0x02179559
 	.byte 0x0b
+	.global data_ov26_0217955a
 data_ov26_0217955a: ; 0x0217955a
 	.byte 0x0a
+	.global data_ov26_0217955b
 data_ov26_0217955b: ; 0x0217955b
 	.byte 0x02
+	.global data_ov26_0217955c
 data_ov26_0217955c: ; 0x0217955c
 	.byte 0x06
+	.global data_ov26_0217955d
 data_ov26_0217955d: ; 0x0217955d
 	.byte 0x09
+	.global data_ov26_0217955e
 data_ov26_0217955e: ; 0x0217955e
 	.byte 0x01
+	.global data_ov26_0217955f
 data_ov26_0217955f: ; 0x0217955f
 	.byte 0x05
+	.global data_ov26_02179560
 data_ov26_02179560: ; 0x02179560
 	.byte 0x08
+	.global data_ov26_02179561
 data_ov26_02179561: ; 0x02179561
 	.byte 0x00
+	.global data_ov26_02179562
 data_ov26_02179562: ; 0x02179562
 	.byte 0x04
+	.global data_ov26_02179563
 data_ov26_02179563: ; 0x02179563
 	.byte 0x07
+	.global data_ov26_02179564
 data_ov26_02179564: ; 0x02179564
 	.byte 0x65, 0x6e, 0x74, 0x72, 0x61, 0x6e, 0x63, 0x65, 0x5f, 0x31, 0x5f, 0x6f
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179574
 data_ov26_02179574: ; 0x02179574
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179578
 data_ov26_02179578: ; 0x02179578
 	.byte 0x65, 0x6e, 0x74, 0x72, 0x61, 0x6e, 0x63, 0x65
 	.byte 0x5f, 0x31, 0x5f, 0x6f, 0x5f, 0x70, 0x6c, 0x00
+	.global data_ov26_02179588
 data_ov26_02179588: ; 0x02179588
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217958c
 data_ov26_0217958c: ; 0x0217958c
 	.byte 0x65, 0x6e, 0x74, 0x72
 	.byte 0x61, 0x6e, 0x63, 0x65, 0x5f, 0x31, 0x5f, 0x6f, 0x31, 0x00, 0x00, 0x00
+	.global data_ov26_0217959c
 data_ov26_0217959c: ; 0x0217959c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021795a0
 data_ov26_021795a0: ; 0x021795a0
 	.byte 0x65, 0x6e, 0x74, 0x72, 0x61, 0x6e, 0x63, 0x65, 0x5f, 0x31, 0x5f, 0x6f, 0x31, 0x5f, 0x70, 0x6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_021795b4
 data_ov26_021795b4: ; 0x021795b4
 	.byte 0x33
+	.global data_ov26_021795b5
 data_ov26_021795b5: ; 0x021795b5
 	.byte 0x01
+	.global data_ov26_021795b6
 data_ov26_021795b6: ; 0x021795b6
 	.byte 0x2d
+	.global data_ov26_021795b7
 data_ov26_021795b7: ; 0x021795b7
 	.byte 0x01
+	.global data_ov26_021795b8
 data_ov26_021795b8: ; 0x021795b8
 	.byte 0x2c
+	.global data_ov26_021795b9
 data_ov26_021795b9: ; 0x021795b9
 	.byte 0x01
+	.global data_ov26_021795ba
 data_ov26_021795ba: ; 0x021795ba
 	.byte 0x2b
+	.global data_ov26_021795bb
 data_ov26_021795bb: ; 0x021795bb
 	.byte 0x01
+	.global data_ov26_021795bc
 data_ov26_021795bc: ; 0x021795bc
 	.byte 0x2a
+	.global data_ov26_021795bd
 data_ov26_021795bd: ; 0x021795bd
 	.byte 0x01
+	.global data_ov26_021795be
 data_ov26_021795be: ; 0x021795be
 	.byte 0x00
+	.global data_ov26_021795bf
 data_ov26_021795bf: ; 0x021795bf
 	.byte 0x00
+	.global data_ov26_021795c0
 data_ov26_021795c0: ; 0x021795c0
 	.byte 0x14
+	.global data_ov26_021795c1
 data_ov26_021795c1: ; 0x021795c1
 	.byte 0x00
+	.global data_ov26_021795c2
 data_ov26_021795c2: ; 0x021795c2
 	.byte 0x00
+	.global data_ov26_021795c3
 data_ov26_021795c3: ; 0x021795c3
 	.byte 0x00
+	.global data_ov26_021795c4
 data_ov26_021795c4: ; 0x021795c4
 	.byte 0xb8
+	.global data_ov26_021795c5
 data_ov26_021795c5: ; 0x021795c5
 	.byte 0x0e
+	.global data_ov26_021795c6
 data_ov26_021795c6: ; 0x021795c6
 	.byte 0x00
+	.global data_ov26_021795c7
 data_ov26_021795c7: ; 0x021795c7
 	.byte 0x00
+	.global data_ov26_021795c8
 data_ov26_021795c8: ; 0x021795c8
 	.byte 0x6d, 0x74, 0x5f, 0x67, 0x64, 0x5f, 0x73, 0x61
 	.byte 0x6e, 0x64, 0x41, 0x5f, 0x73, 0x00, 0x00, 0x00
+	.global data_ov26_021795d8
 data_ov26_021795d8: ; 0x021795d8
 	.asciz "mt_gd_sandA_m"
 _021795e6:
 	.byte 0x00, 0x00
+	.global data_ov26_021795e8
 data_ov26_021795e8: ; 0x021795e8
 	.asciz "mt_gd_sandA_f"
 _021795f6:
 	.byte 0x00, 0x00
+	.global data_ov26_021795f8
 data_ov26_021795f8: ; 0x021795f8
 	.asciz "mt_gd_sandB_s"
 _02179606:
 	.byte 0x00, 0x00
+	.global data_ov26_02179608
 data_ov26_02179608: ; 0x02179608
 	.asciz "mt_gd_sandB_m"
 _02179616:
 	.byte 0x00, 0x00
+	.global data_ov26_02179618
 data_ov26_02179618: ; 0x02179618
 	.asciz "mt_gd_sandB_f"
 _02179626:
 	.byte 0x00, 0x00
+	.global data_ov26_02179628
 data_ov26_02179628: ; 0x02179628
 	.byte 0x6d, 0x61, 0x69, 0x6e, 0x5f, 0x62, 0x65, 0x61
 	.byte 0x63, 0x68, 0x00, 0x00
+	.global data_ov26_02179634
 data_ov26_02179634: ; 0x02179634
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179638
 data_ov26_02179638: ; 0x02179638
 	.byte 0x4d, 0x5f, 0x4e, 0x75, 0x72, 0x65, 0x53, 0x75
 	.byte 0x6e, 0x61, 0x00, 0x00
+	.global data_ov26_02179644
 data_ov26_02179644: ; 0x02179644
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179648
 data_ov26_02179648: ; 0x02179648
 	.asciz "M_NamiA"
+	.global data_ov26_02179650
 data_ov26_02179650: ; 0x02179650
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179654
 data_ov26_02179654: ; 0x02179654
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179658
 data_ov26_02179658: ; 0x02179658
 	.asciz "M_NamiB"
+	.global data_ov26_02179660
 data_ov26_02179660: ; 0x02179660
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179664
 data_ov26_02179664: ; 0x02179664
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179668
 data_ov26_02179668: ; 0x02179668
 	.asciz "M_SeaGrad"
 _02179672:
 	.byte 0x00, 0x00
+	.global data_ov26_02179674
 data_ov26_02179674: ; 0x02179674
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179678
 data_ov26_02179678: ; 0x02179678
 	.asciz "M_NamiKiwa"
 _02179683:
 	.byte 0x00
+	.global data_ov26_02179684
 data_ov26_02179684: ; 0x02179684
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_02179688
 data_ov26_02179688: ; 0x02179688
 	.byte 0x00
+	.global data_ov26_02179689
 data_ov26_02179689: ; 0x02179689
 	.byte 0x02
+	.global data_ov26_0217968a
 data_ov26_0217968a: ; 0x0217968a
 	.byte 0x01
+	.global data_ov26_0217968b
 data_ov26_0217968b: ; 0x0217968b
 	.byte 0x03
+	.global data_ov26_0217968c
 data_ov26_0217968c: ; 0x0217968c
 	.byte 0x00
+	.global data_ov26_0217968d
 data_ov26_0217968d: ; 0x0217968d
 	.byte 0x01
+	.global data_ov26_0217968e
 data_ov26_0217968e: ; 0x0217968e
 	.byte 0x03
+	.global data_ov26_0217968f
 data_ov26_0217968f: ; 0x0217968f
 	.byte 0x00
+	.global data_ov26_02179690
 data_ov26_02179690: ; 0x02179690
 	.byte 0x00
+	.global data_ov26_02179691
 data_ov26_02179691: ; 0x02179691
 	.byte 0x01
+	.global data_ov26_02179692
 data_ov26_02179692: ; 0x02179692
 	.byte 0x03
+	.global data_ov26_02179693
 data_ov26_02179693: ; 0x02179693
 	.byte 0x00
+	.global data_ov26_02179694
 data_ov26_02179694: ; 0x02179694
 	.byte 0x02
+	.global data_ov26_02179695
 data_ov26_02179695: ; 0x02179695
 	.byte 0x00
+	.global data_ov26_02179696
 data_ov26_02179696: ; 0x02179696
 	.byte 0x03
+	.global data_ov26_02179697
 data_ov26_02179697: ; 0x02179697
 	.byte 0x00
+	.global data_ov26_02179698
 data_ov26_02179698: ; 0x02179698
 	.byte 0x02
+	.global data_ov26_02179699
 data_ov26_02179699: ; 0x02179699
 	.byte 0x00
+	.global data_ov26_0217969a
 data_ov26_0217969a: ; 0x0217969a
 	.byte 0x01
+	.global data_ov26_0217969b
 data_ov26_0217969b: ; 0x0217969b
 	.byte 0x03
+	.global data_ov26_0217969c
 data_ov26_0217969c: ; 0x0217969c
 	.byte 0x02
+	.global data_ov26_0217969d
 data_ov26_0217969d: ; 0x0217969d
 	.byte 0x00
+	.global data_ov26_0217969e
 data_ov26_0217969e: ; 0x0217969e
 	.byte 0x0f
+	.global data_ov26_0217969f
 data_ov26_0217969f: ; 0x0217969f
 	.byte 0x0f
+	.global data_ov26_021796a0
 data_ov26_021796a0: ; 0x021796a0
 	.byte 0x03
+	.global data_ov26_021796a1
 data_ov26_021796a1: ; 0x021796a1
 	.byte 0x00
+	.global data_ov26_021796a2
 data_ov26_021796a2: ; 0x021796a2
 	.byte 0x0c
+	.global data_ov26_021796a3
 data_ov26_021796a3: ; 0x021796a3
 	.byte 0x0f
+	.global data_ov26_021796a4
 data_ov26_021796a4: ; 0x021796a4
 	.byte 0x03
+	.global data_ov26_021796a5
 data_ov26_021796a5: ; 0x021796a5
 	.byte 0x00
+	.global data_ov26_021796a6
 data_ov26_021796a6: ; 0x021796a6
 	.byte 0x0f
+	.global data_ov26_021796a7
 data_ov26_021796a7: ; 0x021796a7
 	.byte 0x0f
+	.global data_ov26_021796a8
 data_ov26_021796a8: ; 0x021796a8
 	.byte 0x02
+	.global data_ov26_021796a9
 data_ov26_021796a9: ; 0x021796a9
 	.byte 0x00
+	.global data_ov26_021796aa
 data_ov26_021796aa: ; 0x021796aa
 	.byte 0x06
+	.global data_ov26_021796ab
 data_ov26_021796ab: ; 0x021796ab
 	.byte 0x0f
+	.global data_ov26_021796ac
 data_ov26_021796ac: ; 0x021796ac
 	.byte 0x02
+	.global data_ov26_021796ad
 data_ov26_021796ad: ; 0x021796ad
 	.byte 0x00
+	.global data_ov26_021796ae
 data_ov26_021796ae: ; 0x021796ae
 	.byte 0x07
+	.global data_ov26_021796af
 data_ov26_021796af: ; 0x021796af
 	.byte 0x0f
+	.global data_ov26_021796b0
 data_ov26_021796b0: ; 0x021796b0
 	.byte 0x0d
+	.global data_ov26_021796b1
 data_ov26_021796b1: ; 0x021796b1
 	.byte 0x08
+	.global data_ov26_021796b2
 data_ov26_021796b2: ; 0x021796b2
 	.byte 0x0f
+	.global data_ov26_021796b3
 data_ov26_021796b3: ; 0x021796b3
 	.byte 0x0f
+	.global data_ov26_021796b4
 data_ov26_021796b4: ; 0x021796b4
 	.byte 0x00
+	.global data_ov26_021796b5
 data_ov26_021796b5: ; 0x021796b5
 	.byte 0x00
+	.global data_ov26_021796b6
 data_ov26_021796b6: ; 0x021796b6
 	.byte 0x01
+	.global data_ov26_021796b7
 data_ov26_021796b7: ; 0x021796b7
 	.byte 0x0f
+	.global data_ov26_021796b8
 data_ov26_021796b8: ; 0x021796b8
 	.byte 0x08
+	.global data_ov26_021796b9
 data_ov26_021796b9: ; 0x021796b9
 	.byte 0x00
+	.global data_ov26_021796ba
 data_ov26_021796ba: ; 0x021796ba
 	.byte 0x0c
+	.global data_ov26_021796bb
 data_ov26_021796bb: ; 0x021796bb
 	.byte 0x0f
+	.global data_ov26_021796bc
 data_ov26_021796bc: ; 0x021796bc
 	.byte 0x1c, 0x03, 0x6a, 0x06
+	.global data_ov26_021796c0
 data_ov26_021796c0: ; 0x021796c0
 	.byte 0x00, 0x00, 0x01, 0x0f
+	.global data_ov26_021796c4
 data_ov26_021796c4: ; 0x021796c4
 	.byte 0x07, 0x00, 0x09, 0x0f
+	.global data_ov26_021796c8
 data_ov26_021796c8: ; 0x021796c8
 	.byte 0x07, 0x00, 0x0c, 0x0f
+	.global data_ov26_021796cc
 data_ov26_021796cc: ; 0x021796cc
 	.byte 0x02, 0x00, 0x0c, 0x0f
+	.global data_ov26_021796d0
 data_ov26_021796d0: ; 0x021796d0
 	.byte 0x10, 0x03, 0x6a, 0x06
+	.global data_ov26_021796d4
 data_ov26_021796d4: ; 0x021796d4
 	.byte 0x00, 0x00, 0x0f, 0x0f
+	.global data_ov26_021796d8
 data_ov26_021796d8: ; 0x021796d8
 	.byte 0xfe, 0x00, 0x00, 0x00
+	.global data_ov26_021796dc
 data_ov26_021796dc: ; 0x021796dc
 	.byte 0x18, 0xb2, 0x17, 0x02
+	.global data_ov26_021796e0
 data_ov26_021796e0: ; 0x021796e0
 	.byte 0x56, 0x00, 0x00, 0x00
+	.global data_ov26_021796e4
 data_ov26_021796e4: ; 0x021796e4
 	.byte 0xd0, 0xb1, 0x17, 0x02
+	.global data_ov26_021796e8
 data_ov26_021796e8: ; 0x021796e8
 	.byte 0x33, 0x00, 0x00, 0x00
+	.global data_ov26_021796ec
 data_ov26_021796ec: ; 0x021796ec
 	.byte 0xa4, 0xb1, 0x17, 0x02
+	.global data_ov26_021796f0
 data_ov26_021796f0: ; 0x021796f0
 	.byte 0xfb, 0x00, 0x00, 0x00
+	.global data_ov26_021796f4
 data_ov26_021796f4: ; 0x021796f4
 	.byte 0xe8, 0xb1, 0x17, 0x02
+	.global data_ov26_021796f8
 data_ov26_021796f8: ; 0x021796f8
 	.byte 0x72, 0x00, 0x00, 0x00
+	.global data_ov26_021796fc
 data_ov26_021796fc: ; 0x021796fc
 	.byte 0xac, 0xb1, 0x17, 0x02
+	.global data_ov26_02179700
 data_ov26_02179700: ; 0x02179700
 	.byte 0x59, 0x00, 0x00, 0x00
+	.global data_ov26_02179704
 data_ov26_02179704: ; 0x02179704
 	.byte 0x00, 0xb2, 0x17, 0x02
+	.global data_ov26_02179708
 data_ov26_02179708: ; 0x02179708
 	.byte 0x00, 0x03, 0x00, 0x0f
+	.global data_ov26_0217970c
 data_ov26_0217970c: ; 0x0217970c
 	.byte 0x01, 0x03, 0x01, 0x0f
+	.global data_ov26_02179710
 data_ov26_02179710: ; 0x02179710
 	.byte 0x25, 0x00, 0x26, 0x00
+	.global data_ov26_02179714
 data_ov26_02179714: ; 0x02179714
 	.byte 0x27, 0x00, 0x28, 0x00
+	.global data_ov26_02179718
 data_ov26_02179718: ; 0x02179718
 	.byte 0x6a, 0x06, 0x00, 0x00
+	.global data_ov26_0217971c
 data_ov26_0217971c: ; 0x0217971c
 	.byte 0xdc, 0xb1, 0x17, 0x02
 	.byte 0xe0, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0x55, 0x00, 0x00, 0x00, 0x57, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0xc4, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_0217973c
 data_ov26_0217973c: ; 0x0217973c
 	.byte 0xc4, 0xb1, 0x17, 0x02
 	.byte 0xd8, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0xfd, 0x00, 0x00, 0x00, 0xff, 0x00, 0x00, 0x00
 	.byte 0x01, 0x01, 0x00, 0x00, 0xa0, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_0217975c
 data_ov26_0217975c: ; 0x0217975c
 	.byte 0xf4, 0xb1, 0x17, 0x02
 	.byte 0xf0, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0xfa, 0x00, 0x00, 0x00, 0xfc, 0x00, 0x00, 0x00
 	.byte 0x00, 0x01, 0x00, 0x00, 0xa4, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_0217977c
 data_ov26_0217977c: ; 0x0217977c
 	.byte 0x0c, 0xb2, 0x17, 0x02
 	.byte 0x00, 0x97, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0x58, 0x00, 0x00, 0x00, 0x5a, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0x9c, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_0217979c
 data_ov26_0217979c: ; 0x0217979c
 	.byte 0xbc, 0xb1, 0x17, 0x02
 	.byte 0xf8, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0x71, 0x00, 0x00, 0x00, 0x73, 0x00, 0x00, 0x00
 	.byte 0x01, 0x00, 0x00, 0x00, 0xc0, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
+	.global data_ov26_021797bc
 data_ov26_021797bc: ; 0x021797bc
 	.byte 0xb4, 0xb1, 0x17, 0x02
 	.byte 0xe8, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0xb4, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
 
+	.global func_ov26_021797dc
 	arm_func_start func_ov26_021797dc
 func_ov26_021797dc: ; 0x021797dc
 	stmdb sp!, {r3, lr}
@@ -15568,6 +16246,7 @@ _02179a4c: .word 0x424d5354
 _02179a50: .word func_ov26_0216dd64
 _02179a54: .word data_ov26_0217b420
 
+	.global func_ov26_02179a58
 	arm_func_start func_ov26_02179a58
 func_ov26_02179a58: ; 0x02179a58
 	stmdb sp!, {r3, lr}
@@ -15587,6 +16266,7 @@ _02179a84: .word func_ov26_0216dfac
 _02179a88: .word func_0203ebc8
 _02179a8c: .word data_ov26_0217b448
 
+	.global func_ov26_02179a90
 	arm_func_start func_ov26_02179a90
 func_ov26_02179a90: ; 0x02179a90
 	stmdb sp!, {lr}
@@ -15663,6 +16343,7 @@ _02179ba0: .word data_ov26_0217a67c
 _02179ba4: .word func_ov00_020cceec
 _02179ba8: .word data_ov26_0217b474
 
+	.global func_ov26_02179bac
 	arm_func_start func_ov26_02179bac
 func_ov26_02179bac: ; 0x02179bac
 	stmdb sp!, {r3, lr}
@@ -15682,6 +16363,7 @@ _02179bd8: .word func_ov26_021719c0
 _02179bdc: .word func_0203ebc8
 _02179be0: .word data_ov26_0217b480
 
+	.global func_ov26_02179be4
 	arm_func_start func_ov26_02179be4
 func_ov26_02179be4: ; 0x02179be4
 	stmdb sp!, {r3, lr}
@@ -15701,6 +16383,7 @@ _02179c10: .word func_ov26_02172210
 _02179c14: .word func_0203ebc8
 _02179c18: .word data_ov26_0217b49c
 
+	.global func_ov26_02179c1c
 	arm_func_start func_ov26_02179c1c
 func_ov26_02179c1c: ; 0x02179c1c
 	stmdb sp!, {r3, lr}
@@ -15720,6 +16403,7 @@ _02179c48: .word func_ov26_02172960
 _02179c4c: .word func_0203ebc8
 _02179c50: .word data_ov26_0217b4a8
 
+	.global func_ov26_02179c54
 	arm_func_start func_ov26_02179c54
 func_ov26_02179c54: ; 0x02179c54
 	stmdb sp!, {r3, lr}
@@ -15739,6 +16423,7 @@ _02179c80: .word func_ov26_0217343c
 _02179c84: .word func_0203ebc8
 _02179c88: .word data_ov26_0217b4bc
 
+	.global func_ov26_02179c8c
 	arm_func_start func_ov26_02179c8c
 func_ov26_02179c8c: ; 0x02179c8c
 	stmdb sp!, {r3, lr}
@@ -15781,6 +16466,7 @@ _02179d14: .word data_ov26_0217b4f0
 _02179d18: .word func_ov26_02175f00
 _02179d1c: .word data_ov26_0217b4e4
 
+	.global func_ov26_02179d20
 	arm_func_start func_ov26_02179d20
 func_ov26_02179d20: ; 0x02179d20
 	stmdb sp!, {r3, lr}
@@ -15800,6 +16486,7 @@ _02179d4c: .word func_ov26_021763d4
 _02179d50: .word func_0203ebc8
 _02179d54: .word data_ov26_0217b508
 
+	.global func_ov26_02179d58
 	arm_func_start func_ov26_02179d58
 func_ov26_02179d58: ; 0x02179d58
 	stmdb sp!, {r3, lr}
@@ -15819,6 +16506,7 @@ _02179d84: .word func_ov26_021769e8
 _02179d88: .word func_0203ebc8
 _02179d8c: .word data_ov26_0217b51c
 
+	.global func_ov26_02179d90
 	arm_func_start func_ov26_02179d90
 func_ov26_02179d90: ; 0x02179d90
 	stmdb sp!, {r3, lr}
@@ -15845,6 +16533,7 @@ _02179dd8: .word data_ov26_0217b528
 _02179ddc: .word 0x000005b6
 _02179de0: .word data_ov26_0217aea4
 
+	.global func_ov26_02179de4
 	arm_func_start func_ov26_02179de4
 func_ov26_02179de4: ; 0x02179de4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -15949,6 +16638,7 @@ _02179f64: .word data_ov26_0217af82
 _02179f68: .word data_ov26_0217af84
 _02179f6c: .word data_ov26_0217af86
 
+	.global func_ov26_02179f70
 	arm_func_start func_ov26_02179f70
 func_ov26_02179f70: ; 0x02179f70
 	stmdb sp!, {r3, lr}
@@ -15970,6 +16660,7 @@ _02179fa4: .word func_ov26_021780d4
 _02179fa8: .word func_0203e7b4
 _02179fac: .word data_ov26_0217b568
 
+	.global func_ov26_02179fb0
 	arm_func_start func_ov26_02179fb0
 func_ov26_02179fb0: ; 0x02179fb0
 	stmdb sp!, {r3, lr}
@@ -15989,6 +16680,7 @@ _02179fdc: .word func_ov26_02178454
 _02179fe0: .word func_0203ebc8
 _02179fe4: .word data_ov26_0217b594
 
+	.global func_ov26_02179fe8
 	arm_func_start func_ov26_02179fe8
 func_ov26_02179fe8: ; 0x02179fe8
 	stmdb sp!, {r3, lr}
@@ -16007,2741 +16699,4100 @@ _0217a010: .word data_ov26_0217b5a0
 _0217a014: .word func_ov26_02178fb4
 _0217a018: .word func_0203ebc8
 _0217a01c: .word data_ov26_0217b5a8
+	.global data_ov26_0217a020
 data_ov26_0217a020: ; 0x0217a020
 	.byte 0xdc, 0x97, 0x17, 0x02
+	.global data_ov26_0217a024
 data_ov26_0217a024: ; 0x0217a024
 	.byte 0x58, 0x9a, 0x17, 0x02
+	.global data_ov26_0217a028
 data_ov26_0217a028: ; 0x0217a028
 	.byte 0x90, 0x9a, 0x17, 0x02
+	.global data_ov26_0217a02c
 data_ov26_0217a02c: ; 0x0217a02c
 	.byte 0xac, 0x9b, 0x17, 0x02
+	.global data_ov26_0217a030
 data_ov26_0217a030: ; 0x0217a030
 	.byte 0xe4, 0x9b, 0x17, 0x02
+	.global data_ov26_0217a034
 data_ov26_0217a034: ; 0x0217a034
 	.byte 0x1c, 0x9c, 0x17, 0x02
+	.global data_ov26_0217a038
 data_ov26_0217a038: ; 0x0217a038
 	.byte 0x54, 0x9c, 0x17, 0x02
+	.global data_ov26_0217a03c
 data_ov26_0217a03c: ; 0x0217a03c
 	.byte 0x8c, 0x9c, 0x17, 0x02
+	.global data_ov26_0217a040
 data_ov26_0217a040: ; 0x0217a040
 	.byte 0x20, 0x9d, 0x17, 0x02
+	.global data_ov26_0217a044
 data_ov26_0217a044: ; 0x0217a044
 	.byte 0x58, 0x9d, 0x17, 0x02
+	.global data_ov26_0217a048
 data_ov26_0217a048: ; 0x0217a048
 	.byte 0x90, 0x9d, 0x17, 0x02
+	.global data_ov26_0217a04c
 data_ov26_0217a04c: ; 0x0217a04c
 	.byte 0xe4, 0x9d, 0x17, 0x02
+	.global data_ov26_0217a050
 data_ov26_0217a050: ; 0x0217a050
 	.byte 0x70, 0x9f, 0x17, 0x02
+	.global data_ov26_0217a054
 data_ov26_0217a054: ; 0x0217a054
 	.byte 0xb0, 0x9f, 0x17, 0x02
+	.global data_ov26_0217a058
 data_ov26_0217a058: ; 0x0217a058
 	.byte 0xe8, 0x9f, 0x17, 0x02
+	.global data_ov26_0217a05c
 data_ov26_0217a05c: ; 0x0217a05c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a060
 data_ov26_0217a060: ; 0x0217a060
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a064
 data_ov26_0217a064: ; 0x0217a064
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a068
 data_ov26_0217a068: ; 0x0217a068
 	.byte 0x04, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a06c
 data_ov26_0217a06c: ; 0x0217a06c
 	.byte 0xe8, 0xde, 0x16, 0x02
+	.global data_ov26_0217a070
 data_ov26_0217a070: ; 0x0217a070
 	.byte 0x48, 0x77, 0x14, 0x02
+	.global data_ov26_0217a074
 data_ov26_0217a074: ; 0x0217a074
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a078
 data_ov26_0217a078: ; 0x0217a078
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a07c
 data_ov26_0217a07c: ; 0x0217a07c
 	.byte 0x90, 0x4a, 0x14, 0x02
+	.global data_ov26_0217a080
 data_ov26_0217a080: ; 0x0217a080
 	.byte 0x64, 0x4b, 0x14, 0x02
+	.global data_ov26_0217a084
 data_ov26_0217a084: ; 0x0217a084
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a088
 data_ov26_0217a088: ; 0x0217a088
 	.byte 0x00, 0x51, 0x14, 0x02
+	.global data_ov26_0217a08c
 data_ov26_0217a08c: ; 0x0217a08c
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a090
 data_ov26_0217a090: ; 0x0217a090
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a094
 data_ov26_0217a094: ; 0x0217a094
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a098
 data_ov26_0217a098: ; 0x0217a098
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a09c
 data_ov26_0217a09c: ; 0x0217a09c
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a0a0
 data_ov26_0217a0a0: ; 0x0217a0a0
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a0a4
 data_ov26_0217a0a4: ; 0x0217a0a4
 	.byte 0xe4, 0xdd, 0x16, 0x02
+	.global data_ov26_0217a0a8
 data_ov26_0217a0a8: ; 0x0217a0a8
 	.byte 0x74, 0x59, 0x14, 0x02
+	.global data_ov26_0217a0ac
 data_ov26_0217a0ac: ; 0x0217a0ac
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a0b0
 data_ov26_0217a0b0: ; 0x0217a0b0
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a0b4
 data_ov26_0217a0b4: ; 0x0217a0b4
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a0b8
 data_ov26_0217a0b8: ; 0x0217a0b8
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a0bc
 data_ov26_0217a0bc: ; 0x0217a0bc
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a0c0
 data_ov26_0217a0c0: ; 0x0217a0c0
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a0c4
 data_ov26_0217a0c4: ; 0x0217a0c4
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a0c8
 data_ov26_0217a0c8: ; 0x0217a0c8
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a0cc
 data_ov26_0217a0cc: ; 0x0217a0cc
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a0d0
 data_ov26_0217a0d0: ; 0x0217a0d0
 	.byte 0x28, 0x78, 0x14, 0x02
+	.global data_ov26_0217a0d4
 data_ov26_0217a0d4: ; 0x0217a0d4
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a0d8
 data_ov26_0217a0d8: ; 0x0217a0d8
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a0dc
 data_ov26_0217a0dc: ; 0x0217a0dc
 	.byte 0x98, 0x56, 0x14, 0x02
+	.global data_ov26_0217a0e0
 data_ov26_0217a0e0: ; 0x0217a0e0
 	.byte 0x8c, 0xde, 0x16, 0x02
+	.global data_ov26_0217a0e4
 data_ov26_0217a0e4: ; 0x0217a0e4
 	.byte 0x3c, 0x57, 0x14, 0x02
+	.global data_ov26_0217a0e8
 data_ov26_0217a0e8: ; 0x0217a0e8
 	.byte 0x64, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a0ec
 data_ov26_0217a0ec: ; 0x0217a0ec
 	.byte 0xa8, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a0f0
 data_ov26_0217a0f0: ; 0x0217a0f0
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a0f4
 data_ov26_0217a0f4: ; 0x0217a0f4
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a0f8
 data_ov26_0217a0f8: ; 0x0217a0f8
 	.byte 0x60, 0x57, 0x14, 0x02
+	.global data_ov26_0217a0fc
 data_ov26_0217a0fc: ; 0x0217a0fc
 	.byte 0x14, 0x58, 0x14, 0x02
+	.global data_ov26_0217a100
 data_ov26_0217a100: ; 0x0217a100
 	.byte 0x74, 0x58, 0x14, 0x02
+	.global data_ov26_0217a104
 data_ov26_0217a104: ; 0x0217a104
 	.byte 0xb0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a108
 data_ov26_0217a108: ; 0x0217a108
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a10c
 data_ov26_0217a10c: ; 0x0217a10c
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a110
 data_ov26_0217a110: ; 0x0217a110
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a114
 data_ov26_0217a114: ; 0x0217a114
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a118
 data_ov26_0217a118: ; 0x0217a118
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217a11c
 data_ov26_0217a11c: ; 0x0217a11c
 	.byte 0x08, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a120
 data_ov26_0217a120: ; 0x0217a120
 	.byte 0x34, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a124
 data_ov26_0217a124: ; 0x0217a124
 	.byte 0x74, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a128
 data_ov26_0217a128: ; 0x0217a128
 	.byte 0x40, 0x78, 0x14, 0x02
+	.global data_ov26_0217a12c
 data_ov26_0217a12c: ; 0x0217a12c
 	.byte 0x70, 0x78, 0x14, 0x02
+	.global data_ov26_0217a130
 data_ov26_0217a130: ; 0x0217a130
 	.byte 0x78, 0x56, 0x14, 0x02
+	.global data_ov26_0217a134
 data_ov26_0217a134: ; 0x0217a134
 	.byte 0xe4, 0x55, 0x14, 0x02
+	.global data_ov26_0217a138
 data_ov26_0217a138: ; 0x0217a138
 	.byte 0xa0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a13c
 data_ov26_0217a13c: ; 0x0217a13c
 	.byte 0x00, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a140
 data_ov26_0217a140: ; 0x0217a140
 	.byte 0xd4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a144
 data_ov26_0217a144: ; 0x0217a144
 	.byte 0xdc, 0x48, 0x14, 0x02
+	.global data_ov26_0217a148
 data_ov26_0217a148: ; 0x0217a148
 	.byte 0xe4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a14c
 data_ov26_0217a14c: ; 0x0217a14c
 	.byte 0xec, 0x48, 0x14, 0x02
+	.global data_ov26_0217a150
 data_ov26_0217a150: ; 0x0217a150
 	.byte 0xf4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a154
 data_ov26_0217a154: ; 0x0217a154
 	.byte 0xcc, 0x58, 0x14, 0x02
+	.global data_ov26_0217a158
 data_ov26_0217a158: ; 0x0217a158
 	.byte 0x00, 0x59, 0x14, 0x02
+	.global data_ov26_0217a15c
 data_ov26_0217a15c: ; 0x0217a15c
 	.byte 0xa4, 0xdd, 0x16, 0x02
+	.global data_ov26_0217a160
 data_ov26_0217a160: ; 0x0217a160
 	.byte 0xa8, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a164
 data_ov26_0217a164: ; 0x0217a164
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a168
 data_ov26_0217a168: ; 0x0217a168
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a16c
 data_ov26_0217a16c: ; 0x0217a16c
 	.byte 0x34, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a170
 data_ov26_0217a170: ; 0x0217a170
 	.byte 0x18, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a174
 data_ov26_0217a174: ; 0x0217a174
 	.byte 0x48, 0x77, 0x14, 0x02
+	.global data_ov26_0217a178
 data_ov26_0217a178: ; 0x0217a178
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a17c
 data_ov26_0217a17c: ; 0x0217a17c
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a180
 data_ov26_0217a180: ; 0x0217a180
 	.byte 0x90, 0x4a, 0x14, 0x02
+	.global data_ov26_0217a184
 data_ov26_0217a184: ; 0x0217a184
 	.byte 0x64, 0x4b, 0x14, 0x02
+	.global data_ov26_0217a188
 data_ov26_0217a188: ; 0x0217a188
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a18c
 data_ov26_0217a18c: ; 0x0217a18c
 	.byte 0x38, 0xdd, 0x16, 0x02
+	.global data_ov26_0217a190
 data_ov26_0217a190: ; 0x0217a190
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a194
 data_ov26_0217a194: ; 0x0217a194
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a198
 data_ov26_0217a198: ; 0x0217a198
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a19c
 data_ov26_0217a19c: ; 0x0217a19c
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a1a0
 data_ov26_0217a1a0: ; 0x0217a1a0
 	.byte 0xcc, 0xdc, 0x16, 0x02
+	.global data_ov26_0217a1a4
 data_ov26_0217a1a4: ; 0x0217a1a4
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a1a8
 data_ov26_0217a1a8: ; 0x0217a1a8
 	.byte 0xa4, 0xdc, 0x16, 0x02
+	.global data_ov26_0217a1ac
 data_ov26_0217a1ac: ; 0x0217a1ac
 	.byte 0x74, 0x59, 0x14, 0x02
+	.global data_ov26_0217a1b0
 data_ov26_0217a1b0: ; 0x0217a1b0
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a1b4
 data_ov26_0217a1b4: ; 0x0217a1b4
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a1b8
 data_ov26_0217a1b8: ; 0x0217a1b8
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a1bc
 data_ov26_0217a1bc: ; 0x0217a1bc
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a1c0
 data_ov26_0217a1c0: ; 0x0217a1c0
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a1c4
 data_ov26_0217a1c4: ; 0x0217a1c4
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a1c8
 data_ov26_0217a1c8: ; 0x0217a1c8
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a1cc
 data_ov26_0217a1cc: ; 0x0217a1cc
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a1d0
 data_ov26_0217a1d0: ; 0x0217a1d0
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a1d4
 data_ov26_0217a1d4: ; 0x0217a1d4
 	.byte 0x28, 0x78, 0x14, 0x02
+	.global data_ov26_0217a1d8
 data_ov26_0217a1d8: ; 0x0217a1d8
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a1dc
 data_ov26_0217a1dc: ; 0x0217a1dc
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a1e0
 data_ov26_0217a1e0: ; 0x0217a1e0
 	.byte 0x98, 0x56, 0x14, 0x02
+	.global data_ov26_0217a1e4
 data_ov26_0217a1e4: ; 0x0217a1e4
 	.byte 0x90, 0x56, 0x14, 0x02
+	.global data_ov26_0217a1e8
 data_ov26_0217a1e8: ; 0x0217a1e8
 	.byte 0x3c, 0x57, 0x14, 0x02
+	.global data_ov26_0217a1ec
 data_ov26_0217a1ec: ; 0x0217a1ec
 	.byte 0x64, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a1f0
 data_ov26_0217a1f0: ; 0x0217a1f0
 	.byte 0xa8, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a1f4
 data_ov26_0217a1f4: ; 0x0217a1f4
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a1f8
 data_ov26_0217a1f8: ; 0x0217a1f8
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a1fc
 data_ov26_0217a1fc: ; 0x0217a1fc
 	.byte 0x60, 0x57, 0x14, 0x02
+	.global data_ov26_0217a200
 data_ov26_0217a200: ; 0x0217a200
 	.byte 0x14, 0x58, 0x14, 0x02
+	.global data_ov26_0217a204
 data_ov26_0217a204: ; 0x0217a204
 	.byte 0x74, 0x58, 0x14, 0x02
+	.global data_ov26_0217a208
 data_ov26_0217a208: ; 0x0217a208
 	.byte 0xb0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a20c
 data_ov26_0217a20c: ; 0x0217a20c
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a210
 data_ov26_0217a210: ; 0x0217a210
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a214
 data_ov26_0217a214: ; 0x0217a214
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a218
 data_ov26_0217a218: ; 0x0217a218
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a21c
 data_ov26_0217a21c: ; 0x0217a21c
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217a220
 data_ov26_0217a220: ; 0x0217a220
 	.byte 0x08, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a224
 data_ov26_0217a224: ; 0x0217a224
 	.byte 0x34, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a228
 data_ov26_0217a228: ; 0x0217a228
 	.byte 0x74, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a22c
 data_ov26_0217a22c: ; 0x0217a22c
 	.byte 0x40, 0x78, 0x14, 0x02
+	.global data_ov26_0217a230
 data_ov26_0217a230: ; 0x0217a230
 	.byte 0x70, 0x78, 0x14, 0x02
+	.global data_ov26_0217a234
 data_ov26_0217a234: ; 0x0217a234
 	.byte 0x78, 0x56, 0x14, 0x02
+	.global data_ov26_0217a238
 data_ov26_0217a238: ; 0x0217a238
 	.byte 0xe4, 0x55, 0x14, 0x02
+	.global data_ov26_0217a23c
 data_ov26_0217a23c: ; 0x0217a23c
 	.byte 0xa0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a240
 data_ov26_0217a240: ; 0x0217a240
 	.byte 0x00, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a244
 data_ov26_0217a244: ; 0x0217a244
 	.byte 0xd4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a248
 data_ov26_0217a248: ; 0x0217a248
 	.byte 0xdc, 0x48, 0x14, 0x02
+	.global data_ov26_0217a24c
 data_ov26_0217a24c: ; 0x0217a24c
 	.byte 0xe4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a250
 data_ov26_0217a250: ; 0x0217a250
 	.byte 0xec, 0x48, 0x14, 0x02
+	.global data_ov26_0217a254
 data_ov26_0217a254: ; 0x0217a254
 	.byte 0xf4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a258
 data_ov26_0217a258: ; 0x0217a258
 	.byte 0xcc, 0x58, 0x14, 0x02
+	.global data_ov26_0217a25c
 data_ov26_0217a25c: ; 0x0217a25c
 	.byte 0x00, 0x59, 0x14, 0x02
+	.global data_ov26_0217a260
 data_ov26_0217a260: ; 0x0217a260
 	.byte 0x21, 0xdc, 0x16, 0x02
+	.global data_ov26_0217a264
 data_ov26_0217a264: ; 0x0217a264
 	.byte 0xa8, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a268
 data_ov26_0217a268: ; 0x0217a268
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a26c
 data_ov26_0217a26c: ; 0x0217a26c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a270
 data_ov26_0217a270: ; 0x0217a270
 	.byte 0x64, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a274
 data_ov26_0217a274: ; 0x0217a274
 	.byte 0x48, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a278
 data_ov26_0217a278: ; 0x0217a278
 	.byte 0x48, 0x77, 0x14, 0x02
+	.global data_ov26_0217a27c
 data_ov26_0217a27c: ; 0x0217a27c
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a280
 data_ov26_0217a280: ; 0x0217a280
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a284
 data_ov26_0217a284: ; 0x0217a284
 	.byte 0x90, 0x4a, 0x14, 0x02
+	.global data_ov26_0217a288
 data_ov26_0217a288: ; 0x0217a288
 	.byte 0x64, 0x4b, 0x14, 0x02
+	.global data_ov26_0217a28c
 data_ov26_0217a28c: ; 0x0217a28c
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a290
 data_ov26_0217a290: ; 0x0217a290
 	.byte 0x00, 0x51, 0x14, 0x02
+	.global data_ov26_0217a294
 data_ov26_0217a294: ; 0x0217a294
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a298
 data_ov26_0217a298: ; 0x0217a298
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a29c
 data_ov26_0217a29c: ; 0x0217a29c
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a2a0
 data_ov26_0217a2a0: ; 0x0217a2a0
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a2a4
 data_ov26_0217a2a4: ; 0x0217a2a4
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a2a8
 data_ov26_0217a2a8: ; 0x0217a2a8
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a2ac
 data_ov26_0217a2ac: ; 0x0217a2ac
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a2b0
 data_ov26_0217a2b0: ; 0x0217a2b0
 	.byte 0x74, 0x59, 0x14, 0x02
+	.global data_ov26_0217a2b4
 data_ov26_0217a2b4: ; 0x0217a2b4
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a2b8
 data_ov26_0217a2b8: ; 0x0217a2b8
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a2bc
 data_ov26_0217a2bc: ; 0x0217a2bc
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a2c0
 data_ov26_0217a2c0: ; 0x0217a2c0
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a2c4
 data_ov26_0217a2c4: ; 0x0217a2c4
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a2c8
 data_ov26_0217a2c8: ; 0x0217a2c8
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a2cc
 data_ov26_0217a2cc: ; 0x0217a2cc
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a2d0
 data_ov26_0217a2d0: ; 0x0217a2d0
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a2d4
 data_ov26_0217a2d4: ; 0x0217a2d4
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a2d8
 data_ov26_0217a2d8: ; 0x0217a2d8
 	.byte 0x28, 0x78, 0x14, 0x02
+	.global data_ov26_0217a2dc
 data_ov26_0217a2dc: ; 0x0217a2dc
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a2e0
 data_ov26_0217a2e0: ; 0x0217a2e0
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a2e4
 data_ov26_0217a2e4: ; 0x0217a2e4
 	.byte 0x98, 0x56, 0x14, 0x02
+	.global data_ov26_0217a2e8
 data_ov26_0217a2e8: ; 0x0217a2e8
 	.byte 0x44, 0xdb, 0x16, 0x02
+	.global data_ov26_0217a2ec
 data_ov26_0217a2ec: ; 0x0217a2ec
 	.byte 0x3c, 0x57, 0x14, 0x02
+	.global data_ov26_0217a2f0
 data_ov26_0217a2f0: ; 0x0217a2f0
 	.byte 0x64, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a2f4
 data_ov26_0217a2f4: ; 0x0217a2f4
 	.byte 0xa8, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a2f8
 data_ov26_0217a2f8: ; 0x0217a2f8
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a2fc
 data_ov26_0217a2fc: ; 0x0217a2fc
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a300
 data_ov26_0217a300: ; 0x0217a300
 	.byte 0x60, 0x57, 0x14, 0x02
+	.global data_ov26_0217a304
 data_ov26_0217a304: ; 0x0217a304
 	.byte 0x14, 0x58, 0x14, 0x02
+	.global data_ov26_0217a308
 data_ov26_0217a308: ; 0x0217a308
 	.byte 0x74, 0x58, 0x14, 0x02
+	.global data_ov26_0217a30c
 data_ov26_0217a30c: ; 0x0217a30c
 	.byte 0xb0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a310
 data_ov26_0217a310: ; 0x0217a310
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a314
 data_ov26_0217a314: ; 0x0217a314
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a318
 data_ov26_0217a318: ; 0x0217a318
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a31c
 data_ov26_0217a31c: ; 0x0217a31c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a320
 data_ov26_0217a320: ; 0x0217a320
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217a324
 data_ov26_0217a324: ; 0x0217a324
 	.byte 0x08, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a328
 data_ov26_0217a328: ; 0x0217a328
 	.byte 0x34, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a32c
 data_ov26_0217a32c: ; 0x0217a32c
 	.byte 0x74, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a330
 data_ov26_0217a330: ; 0x0217a330
 	.byte 0x40, 0x78, 0x14, 0x02
+	.global data_ov26_0217a334
 data_ov26_0217a334: ; 0x0217a334
 	.byte 0x70, 0x78, 0x14, 0x02
+	.global data_ov26_0217a338
 data_ov26_0217a338: ; 0x0217a338
 	.byte 0x78, 0x56, 0x14, 0x02
+	.global data_ov26_0217a33c
 data_ov26_0217a33c: ; 0x0217a33c
 	.byte 0xe4, 0x55, 0x14, 0x02
+	.global data_ov26_0217a340
 data_ov26_0217a340: ; 0x0217a340
 	.byte 0xa0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a344
 data_ov26_0217a344: ; 0x0217a344
 	.byte 0x00, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a348
 data_ov26_0217a348: ; 0x0217a348
 	.byte 0xd4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a34c
 data_ov26_0217a34c: ; 0x0217a34c
 	.byte 0xdc, 0x48, 0x14, 0x02
+	.global data_ov26_0217a350
 data_ov26_0217a350: ; 0x0217a350
 	.byte 0xe4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a354
 data_ov26_0217a354: ; 0x0217a354
 	.byte 0xec, 0x48, 0x14, 0x02
+	.global data_ov26_0217a358
 data_ov26_0217a358: ; 0x0217a358
 	.byte 0xf4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a35c
 data_ov26_0217a35c: ; 0x0217a35c
 	.byte 0xcc, 0x58, 0x14, 0x02
+	.global data_ov26_0217a360
 data_ov26_0217a360: ; 0x0217a360
 	.byte 0x00, 0x59, 0x14, 0x02
+	.global data_ov26_0217a364
 data_ov26_0217a364: ; 0x0217a364
 	.byte 0xfc, 0xda, 0x16, 0x02
+	.global data_ov26_0217a368
 data_ov26_0217a368: ; 0x0217a368
 	.byte 0xa8, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a36c
 data_ov26_0217a36c: ; 0x0217a36c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a370
 data_ov26_0217a370: ; 0x0217a370
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a374
 data_ov26_0217a374: ; 0x0217a374
 	.byte 0x94, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a378
 data_ov26_0217a378: ; 0x0217a378
 	.byte 0x78, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a37c
 data_ov26_0217a37c: ; 0x0217a37c
 	.byte 0x48, 0x77, 0x14, 0x02
+	.global data_ov26_0217a380
 data_ov26_0217a380: ; 0x0217a380
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a384
 data_ov26_0217a384: ; 0x0217a384
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a388
 data_ov26_0217a388: ; 0x0217a388
 	.byte 0x90, 0x4a, 0x14, 0x02
+	.global data_ov26_0217a38c
 data_ov26_0217a38c: ; 0x0217a38c
 	.byte 0x64, 0x4b, 0x14, 0x02
+	.global data_ov26_0217a390
 data_ov26_0217a390: ; 0x0217a390
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a394
 data_ov26_0217a394: ; 0x0217a394
 	.byte 0x00, 0x51, 0x14, 0x02
+	.global data_ov26_0217a398
 data_ov26_0217a398: ; 0x0217a398
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a39c
 data_ov26_0217a39c: ; 0x0217a39c
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a3a0
 data_ov26_0217a3a0: ; 0x0217a3a0
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a3a4
 data_ov26_0217a3a4: ; 0x0217a3a4
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a3a8
 data_ov26_0217a3a8: ; 0x0217a3a8
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a3ac
 data_ov26_0217a3ac: ; 0x0217a3ac
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a3b0
 data_ov26_0217a3b0: ; 0x0217a3b0
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a3b4
 data_ov26_0217a3b4: ; 0x0217a3b4
 	.byte 0x74, 0x59, 0x14, 0x02
+	.global data_ov26_0217a3b8
 data_ov26_0217a3b8: ; 0x0217a3b8
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a3bc
 data_ov26_0217a3bc: ; 0x0217a3bc
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a3c0
 data_ov26_0217a3c0: ; 0x0217a3c0
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217a3c4
 data_ov26_0217a3c4: ; 0x0217a3c4
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a3c8
 data_ov26_0217a3c8: ; 0x0217a3c8
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a3cc
 data_ov26_0217a3cc: ; 0x0217a3cc
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a3d0
 data_ov26_0217a3d0: ; 0x0217a3d0
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a3d4
 data_ov26_0217a3d4: ; 0x0217a3d4
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a3d8
 data_ov26_0217a3d8: ; 0x0217a3d8
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a3dc
 data_ov26_0217a3dc: ; 0x0217a3dc
 	.byte 0x28, 0x78, 0x14, 0x02
+	.global data_ov26_0217a3e0
 data_ov26_0217a3e0: ; 0x0217a3e0
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a3e4
 data_ov26_0217a3e4: ; 0x0217a3e4
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a3e8
 data_ov26_0217a3e8: ; 0x0217a3e8
 	.byte 0x98, 0x56, 0x14, 0x02
+	.global data_ov26_0217a3ec
 data_ov26_0217a3ec: ; 0x0217a3ec
 	.byte 0x90, 0x56, 0x14, 0x02
+	.global data_ov26_0217a3f0
 data_ov26_0217a3f0: ; 0x0217a3f0
 	.byte 0x3c, 0x57, 0x14, 0x02
+	.global data_ov26_0217a3f4
 data_ov26_0217a3f4: ; 0x0217a3f4
 	.byte 0x64, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a3f8
 data_ov26_0217a3f8: ; 0x0217a3f8
 	.byte 0xa8, 0x7a, 0x14, 0x02
+	.global data_ov26_0217a3fc
 data_ov26_0217a3fc: ; 0x0217a3fc
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a400
 data_ov26_0217a400: ; 0x0217a400
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a404
 data_ov26_0217a404: ; 0x0217a404
 	.byte 0x60, 0x57, 0x14, 0x02
+	.global data_ov26_0217a408
 data_ov26_0217a408: ; 0x0217a408
 	.byte 0x14, 0x58, 0x14, 0x02
+	.global data_ov26_0217a40c
 data_ov26_0217a40c: ; 0x0217a40c
 	.byte 0x74, 0x58, 0x14, 0x02
+	.global data_ov26_0217a410
 data_ov26_0217a410: ; 0x0217a410
 	.byte 0xb0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a414
 data_ov26_0217a414: ; 0x0217a414
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a418
 data_ov26_0217a418: ; 0x0217a418
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a41c
 data_ov26_0217a41c: ; 0x0217a41c
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a420
 data_ov26_0217a420: ; 0x0217a420
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a424
 data_ov26_0217a424: ; 0x0217a424
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217a428
 data_ov26_0217a428: ; 0x0217a428
 	.byte 0x08, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a42c
 data_ov26_0217a42c: ; 0x0217a42c
 	.byte 0x34, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a430
 data_ov26_0217a430: ; 0x0217a430
 	.byte 0x74, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a434
 data_ov26_0217a434: ; 0x0217a434
 	.byte 0x40, 0x78, 0x14, 0x02
+	.global data_ov26_0217a438
 data_ov26_0217a438: ; 0x0217a438
 	.byte 0x70, 0x78, 0x14, 0x02
+	.global data_ov26_0217a43c
 data_ov26_0217a43c: ; 0x0217a43c
 	.byte 0x78, 0x56, 0x14, 0x02
+	.global data_ov26_0217a440
 data_ov26_0217a440: ; 0x0217a440
 	.byte 0xe4, 0x55, 0x14, 0x02
+	.global data_ov26_0217a444
 data_ov26_0217a444: ; 0x0217a444
 	.byte 0xa0, 0x58, 0x14, 0x02
+	.global data_ov26_0217a448
 data_ov26_0217a448: ; 0x0217a448
 	.byte 0x00, 0x4d, 0x14, 0x02
+	.global data_ov26_0217a44c
 data_ov26_0217a44c: ; 0x0217a44c
 	.byte 0xd4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a450
 data_ov26_0217a450: ; 0x0217a450
 	.byte 0xdc, 0x48, 0x14, 0x02
+	.global data_ov26_0217a454
 data_ov26_0217a454: ; 0x0217a454
 	.byte 0xe4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a458
 data_ov26_0217a458: ; 0x0217a458
 	.byte 0xec, 0x48, 0x14, 0x02
+	.global data_ov26_0217a45c
 data_ov26_0217a45c: ; 0x0217a45c
 	.byte 0xf4, 0x48, 0x14, 0x02
+	.global data_ov26_0217a460
 data_ov26_0217a460: ; 0x0217a460
 	.byte 0xcc, 0x58, 0x14, 0x02
+	.global data_ov26_0217a464
 data_ov26_0217a464: ; 0x0217a464
 	.byte 0x00, 0x59, 0x14, 0x02
+	.global data_ov26_0217a468
 data_ov26_0217a468: ; 0x0217a468
 	.byte 0x81, 0xd9, 0x16, 0x02
+	.global data_ov26_0217a46c
 data_ov26_0217a46c: ; 0x0217a46c
 	.byte 0xa8, 0xdf, 0x16, 0x02
+	.global data_ov26_0217a470
 data_ov26_0217a470: ; 0x0217a470
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a474
 data_ov26_0217a474: ; 0x0217a474
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a478
 data_ov26_0217a478: ; 0x0217a478
 	.byte 0x84, 0xe0, 0x16, 0x02
+	.global data_ov26_0217a47c
 data_ov26_0217a47c: ; 0x0217a47c
 	.byte 0xcc, 0xe0, 0x16, 0x02
+	.global data_ov26_0217a480
 data_ov26_0217a480: ; 0x0217a480
 	.byte 0x1c, 0xe1, 0x16, 0x02
+	.global data_ov26_0217a484
 data_ov26_0217a484: ; 0x0217a484
 	.byte 0x28, 0xe3, 0x16, 0x02
+	.global data_ov26_0217a488
 data_ov26_0217a488: ; 0x0217a488
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a48c
 data_ov26_0217a48c: ; 0x0217a48c
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a490
 data_ov26_0217a490: ; 0x0217a490
 	.byte 0xb8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a494
 data_ov26_0217a494: ; 0x0217a494
 	.byte 0x7c, 0xe4, 0x16, 0x02
+	.global data_ov26_0217a498
 data_ov26_0217a498: ; 0x0217a498
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a49c
 data_ov26_0217a49c: ; 0x0217a49c
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4a0
 data_ov26_0217a4a0: ; 0x0217a4a0
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4a4
 data_ov26_0217a4a4: ; 0x0217a4a4
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4a8
 data_ov26_0217a4a8: ; 0x0217a4a8
 	.byte 0xd8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4ac
 data_ov26_0217a4ac: ; 0x0217a4ac
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4b0
 data_ov26_0217a4b0: ; 0x0217a4b0
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4b4
 data_ov26_0217a4b4: ; 0x0217a4b4
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4b8
 data_ov26_0217a4b8: ; 0x0217a4b8
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a4bc
 data_ov26_0217a4bc: ; 0x0217a4bc
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4c0
 data_ov26_0217a4c0: ; 0x0217a4c0
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4c4
 data_ov26_0217a4c4: ; 0x0217a4c4
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4c8
 data_ov26_0217a4c8: ; 0x0217a4c8
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4cc
 data_ov26_0217a4cc: ; 0x0217a4cc
 	.byte 0x14, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4d0
 data_ov26_0217a4d0: ; 0x0217a4d0
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a4d4
 data_ov26_0217a4d4: ; 0x0217a4d4
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a4d8
 data_ov26_0217a4d8: ; 0x0217a4d8
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a4dc
 data_ov26_0217a4dc: ; 0x0217a4dc
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a4e0
 data_ov26_0217a4e0: ; 0x0217a4e0
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217a4e4
 data_ov26_0217a4e4: ; 0x0217a4e4
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217a4e8
 data_ov26_0217a4e8: ; 0x0217a4e8
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217a4ec
 data_ov26_0217a4ec: ; 0x0217a4ec
 	.byte 0x84, 0xe4, 0x16, 0x02
+	.global data_ov26_0217a4f0
 data_ov26_0217a4f0: ; 0x0217a4f0
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217a4f4
 data_ov26_0217a4f4: ; 0x0217a4f4
 	.byte 0x8c, 0xe4, 0x16, 0x02
+	.global data_ov26_0217a4f8
 data_ov26_0217a4f8: ; 0x0217a4f8
 	.byte 0xc8, 0xe3, 0x16, 0x02
+	.global data_ov26_0217a4fc
 data_ov26_0217a4fc: ; 0x0217a4fc
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217a500
 data_ov26_0217a500: ; 0x0217a500
 	.byte 0xc0, 0xe4, 0x16, 0x02
+	.global data_ov26_0217a504
 data_ov26_0217a504: ; 0x0217a504
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a508
 data_ov26_0217a508: ; 0x0217a508
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a50c
 data_ov26_0217a50c: ; 0x0217a50c
 	.byte 0x74, 0xe5, 0x16, 0x02
+	.global data_ov26_0217a510
 data_ov26_0217a510: ; 0x0217a510
 	.byte 0x1d, 0xe5, 0x16, 0x02
+	.global data_ov26_0217a514
 data_ov26_0217a514: ; 0x0217a514
 	.byte 0x45, 0xe5, 0x16, 0x02
+	.global data_ov26_0217a518
 data_ov26_0217a518: ; 0x0217a518
 	.byte 0x05, 0x3f, 0x14, 0x02
+	.global data_ov26_0217a51c
 data_ov26_0217a51c: ; 0x0217a51c
 	.byte 0xe9, 0x3e, 0x14, 0x02
+	.global data_ov26_0217a520
 data_ov26_0217a520: ; 0x0217a520
 	.byte 0xed, 0xf4, 0x10, 0x02
+	.global data_ov26_0217a524
 data_ov26_0217a524: ; 0x0217a524
 	.byte 0x19, 0x3f, 0x14, 0x02
+	.global data_ov26_0217a528
 data_ov26_0217a528: ; 0x0217a528
 	.byte 0xa1, 0x3f, 0x14, 0x02
+	.global data_ov26_0217a52c
 data_ov26_0217a52c: ; 0x0217a52c
 	.byte 0x48, 0xaf, 0x11, 0x02
+	.global data_ov26_0217a530
 data_ov26_0217a530: ; 0x0217a530
 	.byte 0x74, 0x41, 0x14, 0x02
+	.global data_ov26_0217a534
 data_ov26_0217a534: ; 0x0217a534
 	.byte 0x8c, 0x41, 0x14, 0x02
+	.global data_ov26_0217a538
 data_ov26_0217a538: ; 0x0217a538
 	.byte 0xc4, 0x42, 0x14, 0x02
+	.global data_ov26_0217a53c
 data_ov26_0217a53c: ; 0x0217a53c
 	.byte 0xec, 0x43, 0x14, 0x02
+	.global data_ov26_0217a540
 data_ov26_0217a540: ; 0x0217a540
 	.byte 0x64, 0x44, 0x14, 0x02
+	.global data_ov26_0217a544
 data_ov26_0217a544: ; 0x0217a544
 	.byte 0x14, 0x45, 0x14, 0x02
+	.global data_ov26_0217a548
 data_ov26_0217a548: ; 0x0217a548
 	.byte 0x54, 0x45, 0x14, 0x02
+	.global data_ov26_0217a54c
 data_ov26_0217a54c: ; 0x0217a54c
 	.byte 0x94, 0xe5, 0x16, 0x02
+	.global data_ov26_0217a550
 data_ov26_0217a550: ; 0x0217a550
 	.byte 0x78, 0xb6, 0x11, 0x02
+	.global data_ov26_0217a554
 data_ov26_0217a554: ; 0x0217a554
 	.byte 0xd4, 0x46, 0x14, 0x02
+	.global data_ov26_0217a558
 data_ov26_0217a558: ; 0x0217a558
 	.byte 0x99, 0xcc, 0x11, 0x02
+	.global data_ov26_0217a55c
 data_ov26_0217a55c: ; 0x0217a55c
 	.byte 0x4c, 0x38, 0x0d, 0x02
+	.global data_ov26_0217a560
 data_ov26_0217a560: ; 0x0217a560
 	.byte 0x38, 0x47, 0x14, 0x02
+	.global data_ov26_0217a564
 data_ov26_0217a564: ; 0x0217a564
 	.byte 0x00, 0x47, 0x14, 0x02
+	.global data_ov26_0217a568
 data_ov26_0217a568: ; 0x0217a568
 	.byte 0x78, 0x40, 0x14, 0x02
+	.global data_ov26_0217a56c
 data_ov26_0217a56c: ; 0x0217a56c
 	.byte 0x4c, 0x41, 0x14, 0x02
+	.global data_ov26_0217a570
 data_ov26_0217a570: ; 0x0217a570
 	.byte 0xc4, 0x46, 0x14, 0x02
+	.global data_ov26_0217a574
 data_ov26_0217a574: ; 0x0217a574
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a578
 data_ov26_0217a578: ; 0x0217a578
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a57c
 data_ov26_0217a57c: ; 0x0217a57c
 	.byte 0x57, 0x54, 0x43, 0x3a
 	.byte 0x2f, 0x61, 0x6c, 0x65, 0x72, 0x74, 0x31, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00
+	.global data_ov26_0217a590
 data_ov26_0217a590: ; 0x0217a590
 	.byte 0x61, 0x6c, 0x65, 0x72, 0x74, 0x31, 0x00, 0x00
+	.global data_ov26_0217a598
 data_ov26_0217a598: ; 0x0217a598
 	.byte 0x57, 0x54, 0x43, 0x3a, 0x2f, 0x62, 0x6c, 0x69
 	.byte 0x6e, 0x6b, 0x31, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00
+	.global data_ov26_0217a5ac
 data_ov26_0217a5ac: ; 0x0217a5ac
 	.byte 0x62, 0x6c, 0x69, 0x6e
 	.byte 0x6b, 0x31, 0x00, 0x00
+	.global data_ov26_0217a5b4
 data_ov26_0217a5b4: ; 0x0217a5b4
 	.byte 0x57, 0x54, 0x43, 0x3a, 0x2f, 0x73, 0x6c, 0x65, 0x65, 0x70, 0x2e, 0x6e
 	.byte 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a5c8
 data_ov26_0217a5c8: ; 0x0217a5c8
 	.byte 0x73, 0x6c, 0x65, 0x65, 0x70, 0x00, 0x00, 0x00
+	.global data_ov26_0217a5d0
 data_ov26_0217a5d0: ; 0x0217a5d0
 	.byte 0x57, 0x54, 0x43, 0x3a, 0x2f, 0x73, 0x6c, 0x65, 0x65, 0x70, 0x5f, 0x73, 0x74, 0x61, 0x2e, 0x6e
 	.byte 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a5e8
 data_ov26_0217a5e8: ; 0x0217a5e8
 	.byte 0x73, 0x6c, 0x65, 0x65, 0x70, 0x5f, 0x73, 0x74
 	.byte 0x61, 0x00, 0x00, 0x00
+	.global data_ov26_0217a5f4
 data_ov26_0217a5f4: ; 0x0217a5f4
 	.byte 0x57, 0x54, 0x43, 0x3a, 0x2f, 0x73, 0x6c, 0x65, 0x65, 0x70, 0x5f, 0x65
 	.byte 0x6e, 0x64, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a60c
 data_ov26_0217a60c: ; 0x0217a60c
 	.byte 0x73, 0x6c, 0x65, 0x65
 	.byte 0x70, 0x5f, 0x65, 0x6e, 0x64, 0x00, 0x00, 0x00
+	.global data_ov26_0217a618
 data_ov26_0217a618: ; 0x0217a618
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a61c
 data_ov26_0217a61c: ; 0x0217a61c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a620
 data_ov26_0217a620: ; 0x0217a620
 	.byte 0x34, 0x5d, 0x0c, 0x02
+	.global data_ov26_0217a624
 data_ov26_0217a624: ; 0x0217a624
 	.byte 0x38, 0xf5, 0x16, 0x02
+	.global data_ov26_0217a628
 data_ov26_0217a628: ; 0x0217a628
 	.byte 0x58, 0x5e, 0x0c, 0x02
+	.global data_ov26_0217a62c
 data_ov26_0217a62c: ; 0x0217a62c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a630
 data_ov26_0217a630: ; 0x0217a630
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a634
 data_ov26_0217a634: ; 0x0217a634
 	.byte 0x6d, 0x9b, 0x0a, 0x02
+	.global data_ov26_0217a638
 data_ov26_0217a638: ; 0x0217a638
 	.byte 0x79, 0x9b, 0x0a, 0x02
+	.global data_ov26_0217a63c
 data_ov26_0217a63c: ; 0x0217a63c
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov26_0217a640
 data_ov26_0217a640: ; 0x0217a640
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov26_0217a644
 data_ov26_0217a644: ; 0x0217a644
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov26_0217a648
 data_ov26_0217a648: ; 0x0217a648
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov26_0217a64c
 data_ov26_0217a64c: ; 0x0217a64c
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov26_0217a650
 data_ov26_0217a650: ; 0x0217a650
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov26_0217a654
 data_ov26_0217a654: ; 0x0217a654
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov26_0217a658
 data_ov26_0217a658: ; 0x0217a658
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov26_0217a65c
 data_ov26_0217a65c: ; 0x0217a65c
 	.byte 0x58, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a660
 data_ov26_0217a660: ; 0x0217a660
 	.byte 0x54, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a664
 data_ov26_0217a664: ; 0x0217a664
 	.byte 0x50, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a668
 data_ov26_0217a668: ; 0x0217a668
 	.byte 0x4c, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a66c
 data_ov26_0217a66c: ; 0x0217a66c
 	.byte 0x48, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a670
 data_ov26_0217a670: ; 0x0217a670
 	.byte 0x44, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a674
 data_ov26_0217a674: ; 0x0217a674
 	.byte 0x40, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a678
 data_ov26_0217a678: ; 0x0217a678
 	.byte 0x3c, 0xa6, 0x17, 0x02
+	.global data_ov26_0217a67c
 data_ov26_0217a67c: ; 0x0217a67c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a680
 data_ov26_0217a680: ; 0x0217a680
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a684
 data_ov26_0217a684: ; 0x0217a684
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a688
 data_ov26_0217a688: ; 0x0217a688
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a68c
 data_ov26_0217a68c: ; 0x0217a68c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a690
 data_ov26_0217a690: ; 0x0217a690
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a694
 data_ov26_0217a694: ; 0x0217a694
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a698
 data_ov26_0217a698: ; 0x0217a698
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a69c
 data_ov26_0217a69c: ; 0x0217a69c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6a0
 data_ov26_0217a6a0: ; 0x0217a6a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6a4
 data_ov26_0217a6a4: ; 0x0217a6a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6a8
 data_ov26_0217a6a8: ; 0x0217a6a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6ac
 data_ov26_0217a6ac: ; 0x0217a6ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6b0
 data_ov26_0217a6b0: ; 0x0217a6b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6b4
 data_ov26_0217a6b4: ; 0x0217a6b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6b8
 data_ov26_0217a6b8: ; 0x0217a6b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6bc
 data_ov26_0217a6bc: ; 0x0217a6bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6c0
 data_ov26_0217a6c0: ; 0x0217a6c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6c4
 data_ov26_0217a6c4: ; 0x0217a6c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6c8
 data_ov26_0217a6c8: ; 0x0217a6c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6cc
 data_ov26_0217a6cc: ; 0x0217a6cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6d0
 data_ov26_0217a6d0: ; 0x0217a6d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6d4
 data_ov26_0217a6d4: ; 0x0217a6d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6d8
 data_ov26_0217a6d8: ; 0x0217a6d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6dc
 data_ov26_0217a6dc: ; 0x0217a6dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6e0
 data_ov26_0217a6e0: ; 0x0217a6e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6e4
 data_ov26_0217a6e4: ; 0x0217a6e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6e8
 data_ov26_0217a6e8: ; 0x0217a6e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6ec
 data_ov26_0217a6ec: ; 0x0217a6ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6f0
 data_ov26_0217a6f0: ; 0x0217a6f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6f4
 data_ov26_0217a6f4: ; 0x0217a6f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6f8
 data_ov26_0217a6f8: ; 0x0217a6f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a6fc
 data_ov26_0217a6fc: ; 0x0217a6fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a700
 data_ov26_0217a700: ; 0x0217a700
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a704
 data_ov26_0217a704: ; 0x0217a704
 	.byte 0x60, 0x19, 0x17, 0x02
+	.global data_ov26_0217a708
 data_ov26_0217a708: ; 0x0217a708
 	.byte 0xf8, 0x18, 0x17, 0x02
+	.global data_ov26_0217a70c
 data_ov26_0217a70c: ; 0x0217a70c
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov26_0217a710
 data_ov26_0217a710: ; 0x0217a710
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a714
 data_ov26_0217a714: ; 0x0217a714
 	.byte 0x64, 0xf7, 0x16, 0x02
+	.global data_ov26_0217a718
 data_ov26_0217a718: ; 0x0217a718
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov26_0217a71c
 data_ov26_0217a71c: ; 0x0217a71c
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov26_0217a720
 data_ov26_0217a720: ; 0x0217a720
 	.byte 0x8c, 0x17, 0x17, 0x02
+	.global data_ov26_0217a724
 data_ov26_0217a724: ; 0x0217a724
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov26_0217a728
 data_ov26_0217a728: ; 0x0217a728
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a72c
 data_ov26_0217a72c: ; 0x0217a72c
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a730
 data_ov26_0217a730: ; 0x0217a730
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a734
 data_ov26_0217a734: ; 0x0217a734
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a738
 data_ov26_0217a738: ; 0x0217a738
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a73c
 data_ov26_0217a73c: ; 0x0217a73c
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217a740
 data_ov26_0217a740: ; 0x0217a740
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a744
 data_ov26_0217a744: ; 0x0217a744
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov26_0217a748
 data_ov26_0217a748: ; 0x0217a748
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217a74c
 data_ov26_0217a74c: ; 0x0217a74c
 	.byte 0x94, 0x08, 0x17, 0x02
+	.global data_ov26_0217a750
 data_ov26_0217a750: ; 0x0217a750
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov26_0217a754
 data_ov26_0217a754: ; 0x0217a754
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a758
 data_ov26_0217a758: ; 0x0217a758
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a75c
 data_ov26_0217a75c: ; 0x0217a75c
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a760
 data_ov26_0217a760: ; 0x0217a760
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a764
 data_ov26_0217a764: ; 0x0217a764
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217a768
 data_ov26_0217a768: ; 0x0217a768
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a76c
 data_ov26_0217a76c: ; 0x0217a76c
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a770
 data_ov26_0217a770: ; 0x0217a770
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a774
 data_ov26_0217a774: ; 0x0217a774
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a778
 data_ov26_0217a778: ; 0x0217a778
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a77c
 data_ov26_0217a77c: ; 0x0217a77c
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a780
 data_ov26_0217a780: ; 0x0217a780
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a784
 data_ov26_0217a784: ; 0x0217a784
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a788
 data_ov26_0217a788: ; 0x0217a788
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a78c
 data_ov26_0217a78c: ; 0x0217a78c
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a790
 data_ov26_0217a790: ; 0x0217a790
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a794
 data_ov26_0217a794: ; 0x0217a794
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a798
 data_ov26_0217a798: ; 0x0217a798
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a79c
 data_ov26_0217a79c: ; 0x0217a79c
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a7a0
 data_ov26_0217a7a0: ; 0x0217a7a0
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov26_0217a7a4
 data_ov26_0217a7a4: ; 0x0217a7a4
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a7a8
 data_ov26_0217a7a8: ; 0x0217a7a8
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a7ac
 data_ov26_0217a7ac: ; 0x0217a7ac
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217a7b0
 data_ov26_0217a7b0: ; 0x0217a7b0
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217a7b4
 data_ov26_0217a7b4: ; 0x0217a7b4
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217a7b8
 data_ov26_0217a7b8: ; 0x0217a7b8
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov26_0217a7bc
 data_ov26_0217a7bc: ; 0x0217a7bc
 	.byte 0x08, 0xf6, 0x16, 0x02
+	.global data_ov26_0217a7c0
 data_ov26_0217a7c0: ; 0x0217a7c0
 	.byte 0x60, 0x0d, 0x17, 0x02
+	.global data_ov26_0217a7c4
 data_ov26_0217a7c4: ; 0x0217a7c4
 	.byte 0x54, 0x17, 0x17, 0x02
+	.global data_ov26_0217a7c8
 data_ov26_0217a7c8: ; 0x0217a7c8
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov26_0217a7cc
 data_ov26_0217a7cc: ; 0x0217a7cc
 	.byte 0xf8, 0xae, 0x0c, 0x02
+	.global data_ov26_0217a7d0
 data_ov26_0217a7d0: ; 0x0217a7d0
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov26_0217a7d4
 data_ov26_0217a7d4: ; 0x0217a7d4
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov26_0217a7d8
 data_ov26_0217a7d8: ; 0x0217a7d8
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov26_0217a7dc
 data_ov26_0217a7dc: ; 0x0217a7dc
 	.byte 0xdc, 0x07, 0x17, 0x02
+	.global data_ov26_0217a7e0
 data_ov26_0217a7e0: ; 0x0217a7e0
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov26_0217a7e4
 data_ov26_0217a7e4: ; 0x0217a7e4
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov26_0217a7e8
 data_ov26_0217a7e8: ; 0x0217a7e8
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov26_0217a7ec
 data_ov26_0217a7ec: ; 0x0217a7ec
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov26_0217a7f0
 data_ov26_0217a7f0: ; 0x0217a7f0
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov26_0217a7f4
 data_ov26_0217a7f4: ; 0x0217a7f4
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov26_0217a7f8
 data_ov26_0217a7f8: ; 0x0217a7f8
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov26_0217a7fc
 data_ov26_0217a7fc: ; 0x0217a7fc
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov26_0217a800
 data_ov26_0217a800: ; 0x0217a800
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov26_0217a804
 data_ov26_0217a804: ; 0x0217a804
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov26_0217a808
 data_ov26_0217a808: ; 0x0217a808
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov26_0217a80c
 data_ov26_0217a80c: ; 0x0217a80c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a810
 data_ov26_0217a810: ; 0x0217a810
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a814
 data_ov26_0217a814: ; 0x0217a814
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a818
 data_ov26_0217a818: ; 0x0217a818
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a81c
 data_ov26_0217a81c: ; 0x0217a81c
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov26_0217a820
 data_ov26_0217a820: ; 0x0217a820
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov26_0217a824
 data_ov26_0217a824: ; 0x0217a824
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov26_0217a828
 data_ov26_0217a828: ; 0x0217a828
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov26_0217a82c
 data_ov26_0217a82c: ; 0x0217a82c
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov26_0217a830
 data_ov26_0217a830: ; 0x0217a830
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov26_0217a834
 data_ov26_0217a834: ; 0x0217a834
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov26_0217a838
 data_ov26_0217a838: ; 0x0217a838
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov26_0217a83c
 data_ov26_0217a83c: ; 0x0217a83c
 	.byte 0x38, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a840
 data_ov26_0217a840: ; 0x0217a840
 	.byte 0x34, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a844
 data_ov26_0217a844: ; 0x0217a844
 	.byte 0x30, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a848
 data_ov26_0217a848: ; 0x0217a848
 	.byte 0x2c, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a84c
 data_ov26_0217a84c: ; 0x0217a84c
 	.byte 0x28, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a850
 data_ov26_0217a850: ; 0x0217a850
 	.byte 0x24, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a854
 data_ov26_0217a854: ; 0x0217a854
 	.byte 0x20, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a858
 data_ov26_0217a858: ; 0x0217a858
 	.byte 0x1c, 0xa8, 0x17, 0x02
+	.global data_ov26_0217a85c
 data_ov26_0217a85c: ; 0x0217a85c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a860
 data_ov26_0217a860: ; 0x0217a860
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a864
 data_ov26_0217a864: ; 0x0217a864
 	.byte 0xd8, 0x1b, 0x17, 0x02
+	.global data_ov26_0217a868
 data_ov26_0217a868: ; 0x0217a868
 	.byte 0x18, 0x1c, 0x17, 0x02
+	.global data_ov26_0217a86c
 data_ov26_0217a86c: ; 0x0217a86c
 	.byte 0x54, 0x68, 0x12, 0x02
+	.global data_ov26_0217a870
 data_ov26_0217a870: ; 0x0217a870
 	.byte 0x60, 0x1c, 0x17, 0x02
+	.global data_ov26_0217a874
 data_ov26_0217a874: ; 0x0217a874
 	.byte 0xf8, 0x76, 0x12, 0x02
+	.global data_ov26_0217a878
 data_ov26_0217a878: ; 0x0217a878
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a87c
 data_ov26_0217a87c: ; 0x0217a87c
 	.byte 0xbc, 0x6a, 0x12, 0x02
+	.global data_ov26_0217a880
 data_ov26_0217a880: ; 0x0217a880
 	.byte 0xd8, 0x1d, 0x17, 0x02
+	.global data_ov26_0217a884
 data_ov26_0217a884: ; 0x0217a884
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a888
 data_ov26_0217a888: ; 0x0217a888
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a88c
 data_ov26_0217a88c: ; 0x0217a88c
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a890
 data_ov26_0217a890: ; 0x0217a890
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a894
 data_ov26_0217a894: ; 0x0217a894
 	.byte 0xe0, 0x1d, 0x17, 0x02
+	.global data_ov26_0217a898
 data_ov26_0217a898: ; 0x0217a898
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a89c
 data_ov26_0217a89c: ; 0x0217a89c
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a8a0
 data_ov26_0217a8a0: ; 0x0217a8a0
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a8a4
 data_ov26_0217a8a4: ; 0x0217a8a4
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a8a8
 data_ov26_0217a8a8: ; 0x0217a8a8
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a8ac
 data_ov26_0217a8ac: ; 0x0217a8ac
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a8b0
 data_ov26_0217a8b0: ; 0x0217a8b0
 	.byte 0xcc, 0x79, 0x12, 0x02
+	.global data_ov26_0217a8b4
 data_ov26_0217a8b4: ; 0x0217a8b4
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a8b8
 data_ov26_0217a8b8: ; 0x0217a8b8
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217a8bc
 data_ov26_0217a8bc: ; 0x0217a8bc
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a8c0
 data_ov26_0217a8c0: ; 0x0217a8c0
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a8c4
 data_ov26_0217a8c4: ; 0x0217a8c4
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a8c8
 data_ov26_0217a8c8: ; 0x0217a8c8
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a8cc
 data_ov26_0217a8cc: ; 0x0217a8cc
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217a8d0
 data_ov26_0217a8d0: ; 0x0217a8d0
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217a8d4
 data_ov26_0217a8d4: ; 0x0217a8d4
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217a8d8
 data_ov26_0217a8d8: ; 0x0217a8d8
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217a8dc
 data_ov26_0217a8dc: ; 0x0217a8dc
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217a8e0
 data_ov26_0217a8e0: ; 0x0217a8e0
 	.byte 0xb4, 0x20, 0x17, 0x02
+	.global data_ov26_0217a8e4
 data_ov26_0217a8e4: ; 0x0217a8e4
 	.byte 0x28, 0x1d, 0x17, 0x02
+	.global data_ov26_0217a8e8
 data_ov26_0217a8e8: ; 0x0217a8e8
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217a8ec
 data_ov26_0217a8ec: ; 0x0217a8ec
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217a8f0
 data_ov26_0217a8f0: ; 0x0217a8f0
 	.byte 0x34, 0x70, 0x12, 0x02
+	.global data_ov26_0217a8f4
 data_ov26_0217a8f4: ; 0x0217a8f4
 	.byte 0x4c, 0x1e, 0x17, 0x02
+	.global data_ov26_0217a8f8
 data_ov26_0217a8f8: ; 0x0217a8f8
 	.byte 0x98, 0x1e, 0x17, 0x02
+	.global data_ov26_0217a8fc
 data_ov26_0217a8fc: ; 0x0217a8fc
 	.byte 0xa0, 0x1e, 0x17, 0x02
+	.global data_ov26_0217a900
 data_ov26_0217a900: ; 0x0217a900
 	.byte 0x14, 0x7a, 0x12, 0x02
+	.global data_ov26_0217a904
 data_ov26_0217a904: ; 0x0217a904
 	.byte 0xa8, 0x1e, 0x17, 0x02
+	.global data_ov26_0217a908
 data_ov26_0217a908: ; 0x0217a908
 	.byte 0x00, 0x1f, 0x17, 0x02
+	.global data_ov26_0217a90c
 data_ov26_0217a90c: ; 0x0217a90c
 	.byte 0x24, 0x1f, 0x17, 0x02
+	.global data_ov26_0217a910
 data_ov26_0217a910: ; 0x0217a910
 	.byte 0x84, 0x79, 0x12, 0x02
+	.global data_ov26_0217a914
 data_ov26_0217a914: ; 0x0217a914
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a918
 data_ov26_0217a918: ; 0x0217a918
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a91c
 data_ov26_0217a91c: ; 0x0217a91c
 	.byte 0xad, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217a920
 data_ov26_0217a920: ; 0x0217a920
 	.byte 0xb9, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217a924
 data_ov26_0217a924: ; 0x0217a924
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a928
 data_ov26_0217a928: ; 0x0217a928
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a92c
 data_ov26_0217a92c: ; 0x0217a92c
 	.byte 0x64, 0x23, 0x17, 0x02
+	.global data_ov26_0217a930
 data_ov26_0217a930: ; 0x0217a930
 	.byte 0x94, 0x23, 0x17, 0x02
+	.global data_ov26_0217a934
 data_ov26_0217a934: ; 0x0217a934
 	.byte 0xd4, 0x23, 0x17, 0x02
+	.global data_ov26_0217a938
 data_ov26_0217a938: ; 0x0217a938
 	.byte 0xac, 0x25, 0x17, 0x02
+	.global data_ov26_0217a93c
 data_ov26_0217a93c: ; 0x0217a93c
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a940
 data_ov26_0217a940: ; 0x0217a940
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a944
 data_ov26_0217a944: ; 0x0217a944
 	.byte 0xb8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a948
 data_ov26_0217a948: ; 0x0217a948
 	.byte 0xcc, 0x23, 0x17, 0x02
+	.global data_ov26_0217a94c
 data_ov26_0217a94c: ; 0x0217a94c
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a950
 data_ov26_0217a950: ; 0x0217a950
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a954
 data_ov26_0217a954: ; 0x0217a954
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a958
 data_ov26_0217a958: ; 0x0217a958
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a95c
 data_ov26_0217a95c: ; 0x0217a95c
 	.byte 0xa4, 0x28, 0x17, 0x02
+	.global data_ov26_0217a960
 data_ov26_0217a960: ; 0x0217a960
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a964
 data_ov26_0217a964: ; 0x0217a964
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a968
 data_ov26_0217a968: ; 0x0217a968
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a96c
 data_ov26_0217a96c: ; 0x0217a96c
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217a970
 data_ov26_0217a970: ; 0x0217a970
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a974
 data_ov26_0217a974: ; 0x0217a974
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a978
 data_ov26_0217a978: ; 0x0217a978
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a97c
 data_ov26_0217a97c: ; 0x0217a97c
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a980
 data_ov26_0217a980: ; 0x0217a980
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217a984
 data_ov26_0217a984: ; 0x0217a984
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217a988
 data_ov26_0217a988: ; 0x0217a988
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a98c
 data_ov26_0217a98c: ; 0x0217a98c
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a990
 data_ov26_0217a990: ; 0x0217a990
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217a994
 data_ov26_0217a994: ; 0x0217a994
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217a998
 data_ov26_0217a998: ; 0x0217a998
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217a99c
 data_ov26_0217a99c: ; 0x0217a99c
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217a9a0
 data_ov26_0217a9a0: ; 0x0217a9a0
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217a9a4
 data_ov26_0217a9a4: ; 0x0217a9a4
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217a9a8
 data_ov26_0217a9a8: ; 0x0217a9a8
 	.byte 0xd8, 0x28, 0x17, 0x02
+	.global data_ov26_0217a9ac
 data_ov26_0217a9ac: ; 0x0217a9ac
 	.byte 0x48, 0x26, 0x17, 0x02
+	.global data_ov26_0217a9b0
 data_ov26_0217a9b0: ; 0x0217a9b0
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217a9b4
 data_ov26_0217a9b4: ; 0x0217a9b4
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217a9b8
 data_ov26_0217a9b8: ; 0x0217a9b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a9bc
 data_ov26_0217a9bc: ; 0x0217a9bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217a9c0
 data_ov26_0217a9c0: ; 0x0217a9c0
 	.byte 0x8d, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217a9c4
 data_ov26_0217a9c4: ; 0x0217a9c4
 	.byte 0x99, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217a9c8
 data_ov26_0217a9c8: ; 0x0217a9c8
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov26_0217a9cc
 data_ov26_0217a9cc: ; 0x0217a9cc
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov26_0217a9d0
 data_ov26_0217a9d0: ; 0x0217a9d0
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov26_0217a9d4
 data_ov26_0217a9d4: ; 0x0217a9d4
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov26_0217a9d8
 data_ov26_0217a9d8: ; 0x0217a9d8
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov26_0217a9dc
 data_ov26_0217a9dc: ; 0x0217a9dc
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov26_0217a9e0
 data_ov26_0217a9e0: ; 0x0217a9e0
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov26_0217a9e4
 data_ov26_0217a9e4: ; 0x0217a9e4
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov26_0217a9e8
 data_ov26_0217a9e8: ; 0x0217a9e8
 	.byte 0xe4, 0xa9, 0x17, 0x02
+	.global data_ov26_0217a9ec
 data_ov26_0217a9ec: ; 0x0217a9ec
 	.byte 0xe0, 0xa9, 0x17, 0x02
+	.global data_ov26_0217a9f0
 data_ov26_0217a9f0: ; 0x0217a9f0
 	.byte 0xdc, 0xa9, 0x17, 0x02
+	.global data_ov26_0217a9f4
 data_ov26_0217a9f4: ; 0x0217a9f4
 	.byte 0xd8, 0xa9, 0x17, 0x02
+	.global data_ov26_0217a9f8
 data_ov26_0217a9f8: ; 0x0217a9f8
 	.byte 0xd4, 0xa9, 0x17, 0x02
+	.global data_ov26_0217a9fc
 data_ov26_0217a9fc: ; 0x0217a9fc
 	.byte 0xd0, 0xa9, 0x17, 0x02
+	.global data_ov26_0217aa00
 data_ov26_0217aa00: ; 0x0217aa00
 	.byte 0xcc, 0xa9, 0x17, 0x02
+	.global data_ov26_0217aa04
 data_ov26_0217aa04: ; 0x0217aa04
 	.byte 0xc8, 0xa9, 0x17, 0x02
+	.global data_ov26_0217aa08
 data_ov26_0217aa08: ; 0x0217aa08
 	.byte 0xa0, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aa0c
 data_ov26_0217aa0c: ; 0x0217aa0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aa10
 data_ov26_0217aa10: ; 0x0217aa10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aa14
 data_ov26_0217aa14: ; 0x0217aa14
 	.byte 0x54, 0x2a, 0x17, 0x02
+	.global data_ov26_0217aa18
 data_ov26_0217aa18: ; 0x0217aa18
 	.byte 0xac, 0x2a, 0x17, 0x02
+	.global data_ov26_0217aa1c
 data_ov26_0217aa1c: ; 0x0217aa1c
 	.byte 0x14, 0x2b, 0x17, 0x02
+	.global data_ov26_0217aa20
 data_ov26_0217aa20: ; 0x0217aa20
 	.byte 0x48, 0x2d, 0x17, 0x02
+	.global data_ov26_0217aa24
 data_ov26_0217aa24: ; 0x0217aa24
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa28
 data_ov26_0217aa28: ; 0x0217aa28
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa2c
 data_ov26_0217aa2c: ; 0x0217aa2c
 	.byte 0xb8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa30
 data_ov26_0217aa30: ; 0x0217aa30
 	.byte 0x0c, 0x2b, 0x17, 0x02
+	.global data_ov26_0217aa34
 data_ov26_0217aa34: ; 0x0217aa34
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa38
 data_ov26_0217aa38: ; 0x0217aa38
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa3c
 data_ov26_0217aa3c: ; 0x0217aa3c
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa40
 data_ov26_0217aa40: ; 0x0217aa40
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa44
 data_ov26_0217aa44: ; 0x0217aa44
 	.byte 0xcc, 0x32, 0x17, 0x02
+	.global data_ov26_0217aa48
 data_ov26_0217aa48: ; 0x0217aa48
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa4c
 data_ov26_0217aa4c: ; 0x0217aa4c
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa50
 data_ov26_0217aa50: ; 0x0217aa50
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa54
 data_ov26_0217aa54: ; 0x0217aa54
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217aa58
 data_ov26_0217aa58: ; 0x0217aa58
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aa5c
 data_ov26_0217aa5c: ; 0x0217aa5c
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aa60
 data_ov26_0217aa60: ; 0x0217aa60
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aa64
 data_ov26_0217aa64: ; 0x0217aa64
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aa68
 data_ov26_0217aa68: ; 0x0217aa68
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217aa6c
 data_ov26_0217aa6c: ; 0x0217aa6c
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aa70
 data_ov26_0217aa70: ; 0x0217aa70
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217aa74
 data_ov26_0217aa74: ; 0x0217aa74
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217aa78
 data_ov26_0217aa78: ; 0x0217aa78
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217aa7c
 data_ov26_0217aa7c: ; 0x0217aa7c
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217aa80
 data_ov26_0217aa80: ; 0x0217aa80
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217aa84
 data_ov26_0217aa84: ; 0x0217aa84
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217aa88
 data_ov26_0217aa88: ; 0x0217aa88
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217aa8c
 data_ov26_0217aa8c: ; 0x0217aa8c
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217aa90
 data_ov26_0217aa90: ; 0x0217aa90
 	.byte 0xb0, 0x33, 0x17, 0x02
+	.global data_ov26_0217aa94
 data_ov26_0217aa94: ; 0x0217aa94
 	.byte 0xc8, 0x2f, 0x17, 0x02
+	.global data_ov26_0217aa98
 data_ov26_0217aa98: ; 0x0217aa98
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217aa9c
 data_ov26_0217aa9c: ; 0x0217aa9c
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217aaa0
 data_ov26_0217aaa0: ; 0x0217aaa0
 	.byte 0x4d, 0x61, 0x70, 0x32, 0x44, 0x2f, 0x73, 0x65, 0x61, 0x2f, 0x6d, 0x61, 0x70, 0x30, 0x30, 0x2e
 	.byte 0x62, 0x69, 0x6e, 0x00
+	.global data_ov26_0217aab4
 data_ov26_0217aab4: ; 0x0217aab4
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov26_0217aab8
 data_ov26_0217aab8: ; 0x0217aab8
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov26_0217aabc
 data_ov26_0217aabc: ; 0x0217aabc
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov26_0217aac0
 data_ov26_0217aac0: ; 0x0217aac0
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov26_0217aac4
 data_ov26_0217aac4: ; 0x0217aac4
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov26_0217aac8
 data_ov26_0217aac8: ; 0x0217aac8
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov26_0217aacc
 data_ov26_0217aacc: ; 0x0217aacc
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov26_0217aad0
 data_ov26_0217aad0: ; 0x0217aad0
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov26_0217aad4
 data_ov26_0217aad4: ; 0x0217aad4
 	.byte 0xd0, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aad8
 data_ov26_0217aad8: ; 0x0217aad8
 	.byte 0xcc, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aadc
 data_ov26_0217aadc: ; 0x0217aadc
 	.byte 0xc8, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aae0
 data_ov26_0217aae0: ; 0x0217aae0
 	.byte 0xc4, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aae4
 data_ov26_0217aae4: ; 0x0217aae4
 	.byte 0xc0, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aae8
 data_ov26_0217aae8: ; 0x0217aae8
 	.byte 0xbc, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aaec
 data_ov26_0217aaec: ; 0x0217aaec
 	.byte 0xb8, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aaf0
 data_ov26_0217aaf0: ; 0x0217aaf0
 	.byte 0xb4, 0xaa, 0x17, 0x02
+	.global data_ov26_0217aaf4
 data_ov26_0217aaf4: ; 0x0217aaf4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aaf8
 data_ov26_0217aaf8: ; 0x0217aaf8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aafc
 data_ov26_0217aafc: ; 0x0217aafc
 	.byte 0x1c, 0x35, 0x17, 0x02
+	.global data_ov26_0217ab00
 data_ov26_0217ab00: ; 0x0217ab00
 	.byte 0x64, 0x35, 0x17, 0x02
+	.global data_ov26_0217ab04
 data_ov26_0217ab04: ; 0x0217ab04
 	.byte 0xbc, 0x35, 0x17, 0x02
+	.global data_ov26_0217ab08
 data_ov26_0217ab08: ; 0x0217ab08
 	.byte 0x58, 0x37, 0x17, 0x02
+	.global data_ov26_0217ab0c
 data_ov26_0217ab0c: ; 0x0217ab0c
 	.byte 0xf8, 0x76, 0x12, 0x02
+	.global data_ov26_0217ab10
 data_ov26_0217ab10: ; 0x0217ab10
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab14
 data_ov26_0217ab14: ; 0x0217ab14
 	.byte 0x34, 0x37, 0x17, 0x02
+	.global data_ov26_0217ab18
 data_ov26_0217ab18: ; 0x0217ab18
 	.byte 0xb4, 0x35, 0x17, 0x02
+	.global data_ov26_0217ab1c
 data_ov26_0217ab1c: ; 0x0217ab1c
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab20
 data_ov26_0217ab20: ; 0x0217ab20
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab24
 data_ov26_0217ab24: ; 0x0217ab24
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab28
 data_ov26_0217ab28: ; 0x0217ab28
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab2c
 data_ov26_0217ab2c: ; 0x0217ab2c
 	.byte 0xa0, 0x8d, 0x12, 0x02
+	.global data_ov26_0217ab30
 data_ov26_0217ab30: ; 0x0217ab30
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab34
 data_ov26_0217ab34: ; 0x0217ab34
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab38
 data_ov26_0217ab38: ; 0x0217ab38
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab3c
 data_ov26_0217ab3c: ; 0x0217ab3c
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ab40
 data_ov26_0217ab40: ; 0x0217ab40
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ab44
 data_ov26_0217ab44: ; 0x0217ab44
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ab48
 data_ov26_0217ab48: ; 0x0217ab48
 	.byte 0xcc, 0x79, 0x12, 0x02
+	.global data_ov26_0217ab4c
 data_ov26_0217ab4c: ; 0x0217ab4c
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ab50
 data_ov26_0217ab50: ; 0x0217ab50
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217ab54
 data_ov26_0217ab54: ; 0x0217ab54
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ab58
 data_ov26_0217ab58: ; 0x0217ab58
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ab5c
 data_ov26_0217ab5c: ; 0x0217ab5c
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ab60
 data_ov26_0217ab60: ; 0x0217ab60
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ab64
 data_ov26_0217ab64: ; 0x0217ab64
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217ab68
 data_ov26_0217ab68: ; 0x0217ab68
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217ab6c
 data_ov26_0217ab6c: ; 0x0217ab6c
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217ab70
 data_ov26_0217ab70: ; 0x0217ab70
 	.byte 0x08, 0x39, 0x17, 0x02
+	.global data_ov26_0217ab74
 data_ov26_0217ab74: ; 0x0217ab74
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217ab78
 data_ov26_0217ab78: ; 0x0217ab78
 	.byte 0x84, 0x38, 0x17, 0x02
+	.global data_ov26_0217ab7c
 data_ov26_0217ab7c: ; 0x0217ab7c
 	.byte 0xd8, 0x37, 0x17, 0x02
+	.global data_ov26_0217ab80
 data_ov26_0217ab80: ; 0x0217ab80
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217ab84
 data_ov26_0217ab84: ; 0x0217ab84
 	.byte 0x10, 0x39, 0x17, 0x02
+	.global data_ov26_0217ab88
 data_ov26_0217ab88: ; 0x0217ab88
 	.byte 0x34, 0x70, 0x12, 0x02
+	.global data_ov26_0217ab8c
 data_ov26_0217ab8c: ; 0x0217ab8c
 	.byte 0x3c, 0x3b, 0x17, 0x02
+	.global data_ov26_0217ab90
 data_ov26_0217ab90: ; 0x0217ab90
 	.byte 0x18, 0x8e, 0x12, 0x02
+	.global data_ov26_0217ab94
 data_ov26_0217ab94: ; 0x0217ab94
 	.byte 0x20, 0x8e, 0x12, 0x02
+	.global data_ov26_0217ab98
 data_ov26_0217ab98: ; 0x0217ab98
 	.byte 0x14, 0x7a, 0x12, 0x02
+	.global data_ov26_0217ab9c
 data_ov26_0217ab9c: ; 0x0217ab9c
 	.byte 0xf8, 0x95, 0x12, 0x02
+	.global data_ov26_0217aba0
 data_ov26_0217aba0: ; 0x0217aba0
 	.byte 0x50, 0x96, 0x12, 0x02
+	.global data_ov26_0217aba4
 data_ov26_0217aba4: ; 0x0217aba4
 	.byte 0x74, 0x96, 0x12, 0x02
+	.global data_ov26_0217aba8
 data_ov26_0217aba8: ; 0x0217aba8
 	.byte 0x84, 0x79, 0x12, 0x02
+	.global data_ov26_0217abac
 data_ov26_0217abac: ; 0x0217abac
 	.byte 0x44, 0x39, 0x17, 0x02
+	.global data_ov26_0217abb0
 data_ov26_0217abb0: ; 0x0217abb0
 	.byte 0xc0, 0x3a, 0x17, 0x02
+	.global data_ov26_0217abb4
 data_ov26_0217abb4: ; 0x0217abb4
 	.byte 0x62, 0x72, 0x67, 0x00
+	.global data_ov26_0217abb8
 data_ov26_0217abb8: ; 0x0217abb8
 	.byte 0x66, 0x6e, 0x6c, 0x00
+	.global data_ov26_0217abbc
 data_ov26_0217abbc: ; 0x0217abbc
 	.byte 0x70, 0x64, 0x6c, 0x00
+	.global data_ov26_0217abc0
 data_ov26_0217abc0: ; 0x0217abc0
 	.byte 0x64, 0x63, 0x6f, 0x00
+	.global data_ov26_0217abc4
 data_ov26_0217abc4: ; 0x0217abc4
 	.byte 0x63, 0x61, 0x6e, 0x00
+	.global data_ov26_0217abc8
 data_ov26_0217abc8: ; 0x0217abc8
 	.byte 0x68, 0x75, 0x6c, 0x00
+	.global data_ov26_0217abcc
 data_ov26_0217abcc: ; 0x0217abcc
 	.byte 0x62, 0x6f, 0x77, 0x00
+	.global data_ov26_0217abd0
 data_ov26_0217abd0: ; 0x0217abd0
 	.byte 0x61, 0x6e, 0x63, 0x00
+	.global data_ov26_0217abd4
 data_ov26_0217abd4: ; 0x0217abd4
 	.byte 0xd0, 0xab, 0x17, 0x02
+	.global data_ov26_0217abd8
 data_ov26_0217abd8: ; 0x0217abd8
 	.byte 0xcc, 0xab, 0x17, 0x02
+	.global data_ov26_0217abdc
 data_ov26_0217abdc: ; 0x0217abdc
 	.byte 0xc8, 0xab, 0x17, 0x02
+	.global data_ov26_0217abe0
 data_ov26_0217abe0: ; 0x0217abe0
 	.byte 0xc4, 0xab, 0x17, 0x02
+	.global data_ov26_0217abe4
 data_ov26_0217abe4: ; 0x0217abe4
 	.byte 0xc0, 0xab, 0x17, 0x02
+	.global data_ov26_0217abe8
 data_ov26_0217abe8: ; 0x0217abe8
 	.byte 0xbc, 0xab, 0x17, 0x02
+	.global data_ov26_0217abec
 data_ov26_0217abec: ; 0x0217abec
 	.byte 0xb8, 0xab, 0x17, 0x02
+	.global data_ov26_0217abf0
 data_ov26_0217abf0: ; 0x0217abf0
 	.byte 0xb4, 0xab, 0x17, 0x02
+	.global data_ov26_0217abf4
 data_ov26_0217abf4: ; 0x0217abf4
 	.byte 0x1f, 0x00, 0x00, 0x00
+	.global data_ov26_0217abf8
 data_ov26_0217abf8: ; 0x0217abf8
 	.byte 0x30, 0x00, 0x00, 0x00
+	.global data_ov26_0217abfc
 data_ov26_0217abfc: ; 0x0217abfc
 	.byte 0x31, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac00
 data_ov26_0217ac00: ; 0x0217ac00
 	.byte 0x32, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac04
 data_ov26_0217ac04: ; 0x0217ac04
 	.byte 0x33, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac08
 data_ov26_0217ac08: ; 0x0217ac08
 	.byte 0x34, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac0c
 data_ov26_0217ac0c: ; 0x0217ac0c
 	.byte 0x35, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac10
 data_ov26_0217ac10: ; 0x0217ac10
 	.byte 0x36, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac14
 data_ov26_0217ac14: ; 0x0217ac14
 	.byte 0x37, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac18
 data_ov26_0217ac18: ; 0x0217ac18
 	.byte 0x38, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac1c
 data_ov26_0217ac1c: ; 0x0217ac1c
 	.byte 0x39, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac20
 data_ov26_0217ac20: ; 0x0217ac20
 	.byte 0xf8, 0xab, 0x17, 0x02
+	.global data_ov26_0217ac24
 data_ov26_0217ac24: ; 0x0217ac24
 	.byte 0xfc, 0xab, 0x17, 0x02
+	.global data_ov26_0217ac28
 data_ov26_0217ac28: ; 0x0217ac28
 	.byte 0x00, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac2c
 data_ov26_0217ac2c: ; 0x0217ac2c
 	.byte 0x04, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac30
 data_ov26_0217ac30: ; 0x0217ac30
 	.byte 0x08, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac34
 data_ov26_0217ac34: ; 0x0217ac34
 	.byte 0x0c, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac38
 data_ov26_0217ac38: ; 0x0217ac38
 	.byte 0x10, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac3c
 data_ov26_0217ac3c: ; 0x0217ac3c
 	.byte 0x14, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac40
 data_ov26_0217ac40: ; 0x0217ac40
 	.byte 0x18, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac44
 data_ov26_0217ac44: ; 0x0217ac44
 	.byte 0x1c, 0xac, 0x17, 0x02
+	.global data_ov26_0217ac48
 data_ov26_0217ac48: ; 0x0217ac48
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac4c
 data_ov26_0217ac4c: ; 0x0217ac4c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ac50
 data_ov26_0217ac50: ; 0x0217ac50
 	.byte 0x80, 0x45, 0x17, 0x02
+	.global data_ov26_0217ac54
 data_ov26_0217ac54: ; 0x0217ac54
 	.byte 0xf8, 0x45, 0x17, 0x02
+	.global data_ov26_0217ac58
 data_ov26_0217ac58: ; 0x0217ac58
 	.byte 0x78, 0x46, 0x17, 0x02
+	.global data_ov26_0217ac5c
 data_ov26_0217ac5c: ; 0x0217ac5c
 	.byte 0xb0, 0x47, 0x17, 0x02
+	.global data_ov26_0217ac60
 data_ov26_0217ac60: ; 0x0217ac60
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac64
 data_ov26_0217ac64: ; 0x0217ac64
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac68
 data_ov26_0217ac68: ; 0x0217ac68
 	.byte 0x94, 0x47, 0x17, 0x02
+	.global data_ov26_0217ac6c
 data_ov26_0217ac6c: ; 0x0217ac6c
 	.byte 0xf8, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ac70
 data_ov26_0217ac70: ; 0x0217ac70
 	.byte 0xdc, 0x50, 0x17, 0x02
+	.global data_ov26_0217ac74
 data_ov26_0217ac74: ; 0x0217ac74
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac78
 data_ov26_0217ac78: ; 0x0217ac78
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac7c
 data_ov26_0217ac7c: ; 0x0217ac7c
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac80
 data_ov26_0217ac80: ; 0x0217ac80
 	.byte 0x10, 0x50, 0x17, 0x02
+	.global data_ov26_0217ac84
 data_ov26_0217ac84: ; 0x0217ac84
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac88
 data_ov26_0217ac88: ; 0x0217ac88
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac8c
 data_ov26_0217ac8c: ; 0x0217ac8c
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac90
 data_ov26_0217ac90: ; 0x0217ac90
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ac94
 data_ov26_0217ac94: ; 0x0217ac94
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ac98
 data_ov26_0217ac98: ; 0x0217ac98
 	.byte 0xe4, 0x50, 0x17, 0x02
+	.global data_ov26_0217ac9c
 data_ov26_0217ac9c: ; 0x0217ac9c
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aca0
 data_ov26_0217aca0: ; 0x0217aca0
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217aca4
 data_ov26_0217aca4: ; 0x0217aca4
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217aca8
 data_ov26_0217aca8: ; 0x0217aca8
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217acac
 data_ov26_0217acac: ; 0x0217acac
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217acb0
 data_ov26_0217acb0: ; 0x0217acb0
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217acb4
 data_ov26_0217acb4: ; 0x0217acb4
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217acb8
 data_ov26_0217acb8: ; 0x0217acb8
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217acbc
 data_ov26_0217acbc: ; 0x0217acbc
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217acc0
 data_ov26_0217acc0: ; 0x0217acc0
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217acc4
 data_ov26_0217acc4: ; 0x0217acc4
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217acc8
 data_ov26_0217acc8: ; 0x0217acc8
 	.byte 0x5c, 0x51, 0x17, 0x02
+	.global data_ov26_0217accc
 data_ov26_0217accc: ; 0x0217accc
 	.byte 0x74, 0x51, 0x17, 0x02
+	.global data_ov26_0217acd0
 data_ov26_0217acd0: ; 0x0217acd0
 	.byte 0xac, 0x4c, 0x17, 0x02
+	.global data_ov26_0217acd4
 data_ov26_0217acd4: ; 0x0217acd4
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217acd8
 data_ov26_0217acd8: ; 0x0217acd8
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217acdc
 data_ov26_0217acdc: ; 0x0217acdc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ace0
 data_ov26_0217ace0: ; 0x0217ace0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ace4
 data_ov26_0217ace4: ; 0x0217ace4
 	.byte 0x40, 0x45, 0x17, 0x02
+	.global data_ov26_0217ace8
 data_ov26_0217ace8: ; 0x0217ace8
 	.byte 0xc8, 0x5e, 0x17, 0x02
+	.global data_ov26_0217acec
 data_ov26_0217acec: ; 0x0217acec
 	.byte 0x34, 0x52, 0x17, 0x02
+	.global data_ov26_0217acf0
 data_ov26_0217acf0: ; 0x0217acf0
 	.byte 0xb4, 0x5b, 0x17, 0x02
+	.global data_ov26_0217acf4
 data_ov26_0217acf4: ; 0x0217acf4
 	.byte 0x24, 0x58, 0x17, 0x02
+	.global data_ov26_0217acf8
 data_ov26_0217acf8: ; 0x0217acf8
 	.byte 0x58, 0x52, 0x17, 0x02
+	.global data_ov26_0217acfc
 data_ov26_0217acfc: ; 0x0217acfc
 	.byte 0x50, 0x52, 0x17, 0x02
+	.global data_ov26_0217ad00
 data_ov26_0217ad00: ; 0x0217ad00
 	.byte 0x40, 0x52, 0x17, 0x02
+	.global data_ov26_0217ad04
 data_ov26_0217ad04: ; 0x0217ad04
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad08
 data_ov26_0217ad08: ; 0x0217ad08
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad0c
 data_ov26_0217ad0c: ; 0x0217ad0c
 	.byte 0x68, 0x45, 0x17, 0x02
+	.global data_ov26_0217ad10
 data_ov26_0217ad10: ; 0x0217ad10
 	.byte 0xb4, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ad14
 data_ov26_0217ad14: ; 0x0217ad14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad18
 data_ov26_0217ad18: ; 0x0217ad18
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad1c
 data_ov26_0217ad1c: ; 0x0217ad1c
 	.byte 0x94, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ad20
 data_ov26_0217ad20: ; 0x0217ad20
 	.byte 0xa0, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ad24
 data_ov26_0217ad24: ; 0x0217ad24
 	.byte 0x98, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ad28
 data_ov26_0217ad28: ; 0x0217ad28
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad2c
 data_ov26_0217ad2c: ; 0x0217ad2c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad30
 data_ov26_0217ad30: ; 0x0217ad30
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad34
 data_ov26_0217ad34: ; 0x0217ad34
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad38
 data_ov26_0217ad38: ; 0x0217ad38
 	.byte 0x9c, 0x5e, 0x17, 0x02
+	.global data_ov26_0217ad3c
 data_ov26_0217ad3c: ; 0x0217ad3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad40
 data_ov26_0217ad40: ; 0x0217ad40
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad44
 data_ov26_0217ad44: ; 0x0217ad44
 	.byte 0x04, 0x5f, 0x17, 0x02
+	.global data_ov26_0217ad48
 data_ov26_0217ad48: ; 0x0217ad48
 	.byte 0x1c, 0x5f, 0x17, 0x02
+	.global data_ov26_0217ad4c
 data_ov26_0217ad4c: ; 0x0217ad4c
 	.byte 0x08, 0x5f, 0x17, 0x02
+	.global data_ov26_0217ad50
 data_ov26_0217ad50: ; 0x0217ad50
 	.byte 0x14, 0x5f, 0x17, 0x02
+	.global data_ov26_0217ad54
 data_ov26_0217ad54: ; 0x0217ad54
 	.byte 0x0c, 0x5f, 0x17, 0x02
+	.global data_ov26_0217ad58
 data_ov26_0217ad58: ; 0x0217ad58
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad5c
 data_ov26_0217ad5c: ; 0x0217ad5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ad60
 data_ov26_0217ad60: ; 0x0217ad60
 	.byte 0xbc, 0x64, 0x17, 0x02
+	.global data_ov26_0217ad64
 data_ov26_0217ad64: ; 0x0217ad64
 	.byte 0x04, 0x65, 0x17, 0x02
+	.global data_ov26_0217ad68
 data_ov26_0217ad68: ; 0x0217ad68
 	.byte 0x54, 0x65, 0x17, 0x02
+	.global data_ov26_0217ad6c
 data_ov26_0217ad6c: ; 0x0217ad6c
 	.byte 0xc8, 0x66, 0x17, 0x02
+	.global data_ov26_0217ad70
 data_ov26_0217ad70: ; 0x0217ad70
 	.byte 0xf8, 0x76, 0x12, 0x02
+	.global data_ov26_0217ad74
 data_ov26_0217ad74: ; 0x0217ad74
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad78
 data_ov26_0217ad78: ; 0x0217ad78
 	.byte 0xbc, 0x6a, 0x12, 0x02
+	.global data_ov26_0217ad7c
 data_ov26_0217ad7c: ; 0x0217ad7c
 	.byte 0x54, 0x67, 0x17, 0x02
+	.global data_ov26_0217ad80
 data_ov26_0217ad80: ; 0x0217ad80
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad84
 data_ov26_0217ad84: ; 0x0217ad84
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad88
 data_ov26_0217ad88: ; 0x0217ad88
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad8c
 data_ov26_0217ad8c: ; 0x0217ad8c
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad90
 data_ov26_0217ad90: ; 0x0217ad90
 	.byte 0x40, 0x67, 0x17, 0x02
+	.global data_ov26_0217ad94
 data_ov26_0217ad94: ; 0x0217ad94
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad98
 data_ov26_0217ad98: ; 0x0217ad98
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ad9c
 data_ov26_0217ad9c: ; 0x0217ad9c
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ada0
 data_ov26_0217ada0: ; 0x0217ada0
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ada4
 data_ov26_0217ada4: ; 0x0217ada4
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ada8
 data_ov26_0217ada8: ; 0x0217ada8
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217adac
 data_ov26_0217adac: ; 0x0217adac
 	.byte 0xcc, 0x79, 0x12, 0x02
+	.global data_ov26_0217adb0
 data_ov26_0217adb0: ; 0x0217adb0
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217adb4
 data_ov26_0217adb4: ; 0x0217adb4
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217adb8
 data_ov26_0217adb8: ; 0x0217adb8
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217adbc
 data_ov26_0217adbc: ; 0x0217adbc
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217adc0
 data_ov26_0217adc0: ; 0x0217adc0
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217adc4
 data_ov26_0217adc4: ; 0x0217adc4
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217adc8
 data_ov26_0217adc8: ; 0x0217adc8
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217adcc
 data_ov26_0217adcc: ; 0x0217adcc
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217add0
 data_ov26_0217add0: ; 0x0217add0
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217add4
 data_ov26_0217add4: ; 0x0217add4
 	.byte 0xcc, 0x67, 0x17, 0x02
+	.global data_ov26_0217add8
 data_ov26_0217add8: ; 0x0217add8
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217addc
 data_ov26_0217addc: ; 0x0217addc
 	.byte 0x88, 0x67, 0x17, 0x02
+	.global data_ov26_0217ade0
 data_ov26_0217ade0: ; 0x0217ade0
 	.byte 0xec, 0x66, 0x17, 0x02
+	.global data_ov26_0217ade4
 data_ov26_0217ade4: ; 0x0217ade4
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217ade8
 data_ov26_0217ade8: ; 0x0217ade8
 	.byte 0xd4, 0x67, 0x17, 0x02
+	.global data_ov26_0217adec
 data_ov26_0217adec: ; 0x0217adec
 	.byte 0x34, 0x70, 0x12, 0x02
+	.global data_ov26_0217adf0
 data_ov26_0217adf0: ; 0x0217adf0
 	.byte 0x5c, 0x67, 0x17, 0x02
+	.global data_ov26_0217adf4
 data_ov26_0217adf4: ; 0x0217adf4
 	.byte 0xe0, 0x76, 0x12, 0x02
+	.global data_ov26_0217adf8
 data_ov26_0217adf8: ; 0x0217adf8
 	.byte 0x6c, 0x67, 0x17, 0x02
+	.global data_ov26_0217adfc
 data_ov26_0217adfc: ; 0x0217adfc
 	.byte 0x14, 0x7a, 0x12, 0x02
+	.global data_ov26_0217ae00
 data_ov26_0217ae00: ; 0x0217ae00
 	.byte 0xe4, 0x67, 0x17, 0x02
+	.global data_ov26_0217ae04
 data_ov26_0217ae04: ; 0x0217ae04
 	.byte 0xc4, 0x7a, 0x12, 0x02
+	.global data_ov26_0217ae08
 data_ov26_0217ae08: ; 0x0217ae08
 	.byte 0xe8, 0x67, 0x17, 0x02
+	.global data_ov26_0217ae0c
 data_ov26_0217ae0c: ; 0x0217ae0c
 	.byte 0x84, 0x79, 0x12, 0x02
+	.global data_ov26_0217ae10
 data_ov26_0217ae10: ; 0x0217ae10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ae14
 data_ov26_0217ae14: ; 0x0217ae14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217ae18
 data_ov26_0217ae18: ; 0x0217ae18
 	.byte 0xdc, 0x6a, 0x17, 0x02
+	.global data_ov26_0217ae1c
 data_ov26_0217ae1c: ; 0x0217ae1c
 	.byte 0x0c, 0x6b, 0x17, 0x02
+	.global data_ov26_0217ae20
 data_ov26_0217ae20: ; 0x0217ae20
 	.byte 0x44, 0x6b, 0x17, 0x02
+	.global data_ov26_0217ae24
 data_ov26_0217ae24: ; 0x0217ae24
 	.byte 0x90, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae28
 data_ov26_0217ae28: ; 0x0217ae28
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae2c
 data_ov26_0217ae2c: ; 0x0217ae2c
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae30
 data_ov26_0217ae30: ; 0x0217ae30
 	.byte 0xb8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae34
 data_ov26_0217ae34: ; 0x0217ae34
 	.byte 0x04, 0x71, 0x17, 0x02
+	.global data_ov26_0217ae38
 data_ov26_0217ae38: ; 0x0217ae38
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae3c
 data_ov26_0217ae3c: ; 0x0217ae3c
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae40
 data_ov26_0217ae40: ; 0x0217ae40
 	.byte 0xb0, 0x6d, 0x17, 0x02
+	.global data_ov26_0217ae44
 data_ov26_0217ae44: ; 0x0217ae44
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae48
 data_ov26_0217ae48: ; 0x0217ae48
 	.byte 0x8c, 0x6d, 0x17, 0x02
+	.global data_ov26_0217ae4c
 data_ov26_0217ae4c: ; 0x0217ae4c
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae50
 data_ov26_0217ae50: ; 0x0217ae50
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae54
 data_ov26_0217ae54: ; 0x0217ae54
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae58
 data_ov26_0217ae58: ; 0x0217ae58
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217ae5c
 data_ov26_0217ae5c: ; 0x0217ae5c
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ae60
 data_ov26_0217ae60: ; 0x0217ae60
 	.byte 0x78, 0x6e, 0x17, 0x02
+	.global data_ov26_0217ae64
 data_ov26_0217ae64: ; 0x0217ae64
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ae68
 data_ov26_0217ae68: ; 0x0217ae68
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ae6c
 data_ov26_0217ae6c: ; 0x0217ae6c
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217ae70
 data_ov26_0217ae70: ; 0x0217ae70
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217ae74
 data_ov26_0217ae74: ; 0x0217ae74
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ae78
 data_ov26_0217ae78: ; 0x0217ae78
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ae7c
 data_ov26_0217ae7c: ; 0x0217ae7c
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217ae80
 data_ov26_0217ae80: ; 0x0217ae80
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217ae84
 data_ov26_0217ae84: ; 0x0217ae84
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217ae88
 data_ov26_0217ae88: ; 0x0217ae88
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217ae8c
 data_ov26_0217ae8c: ; 0x0217ae8c
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217ae90
 data_ov26_0217ae90: ; 0x0217ae90
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217ae94
 data_ov26_0217ae94: ; 0x0217ae94
 	.byte 0x4c, 0x6f, 0x17, 0x02
+	.global data_ov26_0217ae98
 data_ov26_0217ae98: ; 0x0217ae98
 	.byte 0xb4, 0x6c, 0x17, 0x02
+	.global data_ov26_0217ae9c
 data_ov26_0217ae9c: ; 0x0217ae9c
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217aea0
 data_ov26_0217aea0: ; 0x0217aea0
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217aea4
 data_ov26_0217aea4: ; 0x0217aea4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aea8
 data_ov26_0217aea8: ; 0x0217aea8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aeac
 data_ov26_0217aeac: ; 0x0217aeac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217aeb0
 data_ov26_0217aeb0: ; 0x0217aeb0
 	.byte 0x50, 0x7a, 0x17, 0x02
+	.global data_ov26_0217aeb4
 data_ov26_0217aeb4: ; 0x0217aeb4
 	.byte 0x70, 0x7a, 0x17, 0x02
+	.global data_ov26_0217aeb8
 data_ov26_0217aeb8: ; 0x0217aeb8
 	.byte 0x98, 0x7a, 0x17, 0x02
+	.global data_ov26_0217aebc
 data_ov26_0217aebc: ; 0x0217aebc
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aec0
 data_ov26_0217aec0: ; 0x0217aec0
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aec4
 data_ov26_0217aec4: ; 0x0217aec4
 	.byte 0x90, 0x7b, 0x17, 0x02
+	.global data_ov26_0217aec8
 data_ov26_0217aec8: ; 0x0217aec8
 	.byte 0xbc, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aecc
 data_ov26_0217aecc: ; 0x0217aecc
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aed0
 data_ov26_0217aed0: ; 0x0217aed0
 	.byte 0xa8, 0x7b, 0x17, 0x02
+	.global data_ov26_0217aed4
 data_ov26_0217aed4: ; 0x0217aed4
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aed8
 data_ov26_0217aed8: ; 0x0217aed8
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aedc
 data_ov26_0217aedc: ; 0x0217aedc
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aee0
 data_ov26_0217aee0: ; 0x0217aee0
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aee4
 data_ov26_0217aee4: ; 0x0217aee4
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aee8
 data_ov26_0217aee8: ; 0x0217aee8
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217aeec
 data_ov26_0217aeec: ; 0x0217aeec
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217aef0
 data_ov26_0217aef0: ; 0x0217aef0
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov26_0217aef4
 data_ov26_0217aef4: ; 0x0217aef4
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217aef8
 data_ov26_0217aef8: ; 0x0217aef8
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217aefc
 data_ov26_0217aefc: ; 0x0217aefc
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217af00
 data_ov26_0217af00: ; 0x0217af00
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217af04
 data_ov26_0217af04: ; 0x0217af04
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217af08
 data_ov26_0217af08: ; 0x0217af08
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217af0c
 data_ov26_0217af0c: ; 0x0217af0c
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217af10
 data_ov26_0217af10: ; 0x0217af10
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217af14
 data_ov26_0217af14: ; 0x0217af14
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af18
 data_ov26_0217af18: ; 0x0217af18
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af1c
 data_ov26_0217af1c: ; 0x0217af1c
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af20
 data_ov26_0217af20: ; 0x0217af20
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af24
 data_ov26_0217af24: ; 0x0217af24
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af28
 data_ov26_0217af28: ; 0x0217af28
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af2c
 data_ov26_0217af2c: ; 0x0217af2c
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af30
 data_ov26_0217af30: ; 0x0217af30
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af34
 data_ov26_0217af34: ; 0x0217af34
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af38
 data_ov26_0217af38: ; 0x0217af38
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af3c
 data_ov26_0217af3c: ; 0x0217af3c
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af40
 data_ov26_0217af40: ; 0x0217af40
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af44
 data_ov26_0217af44: ; 0x0217af44
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af48
 data_ov26_0217af48: ; 0x0217af48
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af4c
 data_ov26_0217af4c: ; 0x0217af4c
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov26_0217af50
 data_ov26_0217af50: ; 0x0217af50
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217af54
 data_ov26_0217af54: ; 0x0217af54
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217af58
 data_ov26_0217af58: ; 0x0217af58
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217af5c
 data_ov26_0217af5c: ; 0x0217af5c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217af60
 data_ov26_0217af60: ; 0x0217af60
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217af64
 data_ov26_0217af64: ; 0x0217af64
 	.byte 0x00
+	.global data_ov26_0217af65
 data_ov26_0217af65: ; 0x0217af65
 	.byte 0x00
+	.global data_ov26_0217af66
 data_ov26_0217af66: ; 0x0217af66
 	.byte 0x00
+	.global data_ov26_0217af67
 data_ov26_0217af67: ; 0x0217af67
 	.byte 0x00
+	.global data_ov26_0217af68
 data_ov26_0217af68: ; 0x0217af68
 	.byte 0x00
+	.global data_ov26_0217af69
 data_ov26_0217af69: ; 0x0217af69
 	.byte 0x00
+	.global data_ov26_0217af6a
 data_ov26_0217af6a: ; 0x0217af6a
 	.byte 0x00
+	.global data_ov26_0217af6b
 data_ov26_0217af6b: ; 0x0217af6b
 	.byte 0x00
+	.global data_ov26_0217af6c
 data_ov26_0217af6c: ; 0x0217af6c
 	.byte 0x00
+	.global data_ov26_0217af6d
 data_ov26_0217af6d: ; 0x0217af6d
 	.byte 0x00
+	.global data_ov26_0217af6e
 data_ov26_0217af6e: ; 0x0217af6e
 	.byte 0x00
+	.global data_ov26_0217af6f
 data_ov26_0217af6f: ; 0x0217af6f
 	.byte 0x00
+	.global data_ov26_0217af70
 data_ov26_0217af70: ; 0x0217af70
 	.byte 0x00
+	.global data_ov26_0217af71
 data_ov26_0217af71: ; 0x0217af71
 	.byte 0x00
+	.global data_ov26_0217af72
 data_ov26_0217af72: ; 0x0217af72
 	.byte 0x00
+	.global data_ov26_0217af73
 data_ov26_0217af73: ; 0x0217af73
 	.byte 0x00
+	.global data_ov26_0217af74
 data_ov26_0217af74: ; 0x0217af74
 	.byte 0x00
+	.global data_ov26_0217af75
 data_ov26_0217af75: ; 0x0217af75
 	.byte 0x00
+	.global data_ov26_0217af76
 data_ov26_0217af76: ; 0x0217af76
 	.byte 0x00
+	.global data_ov26_0217af77
 data_ov26_0217af77: ; 0x0217af77
 	.byte 0x00
+	.global data_ov26_0217af78
 data_ov26_0217af78: ; 0x0217af78
 	.byte 0x00
+	.global data_ov26_0217af79
 data_ov26_0217af79: ; 0x0217af79
 	.byte 0x00
+	.global data_ov26_0217af7a
 data_ov26_0217af7a: ; 0x0217af7a
 	.byte 0x00
+	.global data_ov26_0217af7b
 data_ov26_0217af7b: ; 0x0217af7b
 	.byte 0x00
+	.global data_ov26_0217af7c
 data_ov26_0217af7c: ; 0x0217af7c
 	.byte 0x00
+	.global data_ov26_0217af7d
 data_ov26_0217af7d: ; 0x0217af7d
 	.byte 0x00
+	.global data_ov26_0217af7e
 data_ov26_0217af7e: ; 0x0217af7e
 	.byte 0x00
+	.global data_ov26_0217af7f
 data_ov26_0217af7f: ; 0x0217af7f
 	.byte 0x00
+	.global data_ov26_0217af80
 data_ov26_0217af80: ; 0x0217af80
 	.byte 0x00
+	.global data_ov26_0217af81
 data_ov26_0217af81: ; 0x0217af81
 	.byte 0x00
+	.global data_ov26_0217af82
 data_ov26_0217af82: ; 0x0217af82
 	.byte 0x00
+	.global data_ov26_0217af83
 data_ov26_0217af83: ; 0x0217af83
 	.byte 0x00
+	.global data_ov26_0217af84
 data_ov26_0217af84: ; 0x0217af84
 	.byte 0x00
+	.global data_ov26_0217af85
 data_ov26_0217af85: ; 0x0217af85
 	.byte 0x00
+	.global data_ov26_0217af86
 data_ov26_0217af86: ; 0x0217af86
 	.byte 0x00
+	.global data_ov26_0217af87
 data_ov26_0217af87: ; 0x0217af87
 	.byte 0x00
+	.global data_ov26_0217af88
 data_ov26_0217af88: ; 0x0217af88
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217af8c
 data_ov26_0217af8c: ; 0x0217af8c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217af90
 data_ov26_0217af90: ; 0x0217af90
 	.byte 0xac, 0x7d, 0x17, 0x02
+	.global data_ov26_0217af94
 data_ov26_0217af94: ; 0x0217af94
 	.byte 0xdc, 0x7d, 0x17, 0x02
+	.global data_ov26_0217af98
 data_ov26_0217af98: ; 0x0217af98
 	.byte 0x14, 0x7e, 0x17, 0x02
+	.global data_ov26_0217af9c
 data_ov26_0217af9c: ; 0x0217af9c
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afa0
 data_ov26_0217afa0: ; 0x0217afa0
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afa4
 data_ov26_0217afa4: ; 0x0217afa4
 	.byte 0x6c, 0x7f, 0x17, 0x02
+	.global data_ov26_0217afa8
 data_ov26_0217afa8: ; 0x0217afa8
 	.byte 0x94, 0x7f, 0x17, 0x02
+	.global data_ov26_0217afac
 data_ov26_0217afac: ; 0x0217afac
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afb0
 data_ov26_0217afb0: ; 0x0217afb0
 	.byte 0xa8, 0x7f, 0x17, 0x02
+	.global data_ov26_0217afb4
 data_ov26_0217afb4: ; 0x0217afb4
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afb8
 data_ov26_0217afb8: ; 0x0217afb8
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afbc
 data_ov26_0217afbc: ; 0x0217afbc
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afc0
 data_ov26_0217afc0: ; 0x0217afc0
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afc4
 data_ov26_0217afc4: ; 0x0217afc4
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afc8
 data_ov26_0217afc8: ; 0x0217afc8
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217afcc
 data_ov26_0217afcc: ; 0x0217afcc
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217afd0
 data_ov26_0217afd0: ; 0x0217afd0
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov26_0217afd4
 data_ov26_0217afd4: ; 0x0217afd4
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217afd8
 data_ov26_0217afd8: ; 0x0217afd8
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217afdc
 data_ov26_0217afdc: ; 0x0217afdc
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217afe0
 data_ov26_0217afe0: ; 0x0217afe0
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217afe4
 data_ov26_0217afe4: ; 0x0217afe4
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217afe8
 data_ov26_0217afe8: ; 0x0217afe8
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217afec
 data_ov26_0217afec: ; 0x0217afec
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217aff0
 data_ov26_0217aff0: ; 0x0217aff0
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217aff4
 data_ov26_0217aff4: ; 0x0217aff4
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217aff8
 data_ov26_0217aff8: ; 0x0217aff8
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov26_0217affc
 data_ov26_0217affc: ; 0x0217affc
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b000
 data_ov26_0217b000: ; 0x0217b000
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b004
 data_ov26_0217b004: ; 0x0217b004
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b008
 data_ov26_0217b008: ; 0x0217b008
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b00c
 data_ov26_0217b00c: ; 0x0217b00c
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b010
 data_ov26_0217b010: ; 0x0217b010
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b014
 data_ov26_0217b014: ; 0x0217b014
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b018
 data_ov26_0217b018: ; 0x0217b018
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b01c
 data_ov26_0217b01c: ; 0x0217b01c
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b020
 data_ov26_0217b020: ; 0x0217b020
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b024
 data_ov26_0217b024: ; 0x0217b024
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b028
 data_ov26_0217b028: ; 0x0217b028
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b02c
 data_ov26_0217b02c: ; 0x0217b02c
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b030
 data_ov26_0217b030: ; 0x0217b030
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b034
 data_ov26_0217b034: ; 0x0217b034
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b038
 data_ov26_0217b038: ; 0x0217b038
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b03c
 data_ov26_0217b03c: ; 0x0217b03c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217b040
 data_ov26_0217b040: ; 0x0217b040
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217b044
 data_ov26_0217b044: ; 0x0217b044
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b048
 data_ov26_0217b048: ; 0x0217b048
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b04c
 data_ov26_0217b04c: ; 0x0217b04c
 	.byte 0xed, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217b050
 data_ov26_0217b050: ; 0x0217b050
 	.byte 0xf9, 0x9a, 0x0a, 0x02
+	.global data_ov26_0217b054
 data_ov26_0217b054: ; 0x0217b054
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b058
 data_ov26_0217b058: ; 0x0217b058
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b05c
 data_ov26_0217b05c: ; 0x0217b05c
 	.byte 0x30, 0x81, 0x17, 0x02
+	.global data_ov26_0217b060
 data_ov26_0217b060: ; 0x0217b060
 	.byte 0x44, 0x81, 0x17, 0x02
+	.global data_ov26_0217b064
 data_ov26_0217b064: ; 0x0217b064
 	.byte 0x60, 0x81, 0x17, 0x02
+	.global data_ov26_0217b068
 data_ov26_0217b068: ; 0x0217b068
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b06c
 data_ov26_0217b06c: ; 0x0217b06c
 	.byte 0x40, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b070
 data_ov26_0217b070: ; 0x0217b070
 	.byte 0xc4, 0x81, 0x17, 0x02
+	.global data_ov26_0217b074
 data_ov26_0217b074: ; 0x0217b074
 	.byte 0xbc, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b078
 data_ov26_0217b078: ; 0x0217b078
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b07c
 data_ov26_0217b07c: ; 0x0217b07c
 	.byte 0x94, 0x18, 0x0c, 0x02
+	.global data_ov26_0217b080
 data_ov26_0217b080: ; 0x0217b080
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b084
 data_ov26_0217b084: ; 0x0217b084
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b088
 data_ov26_0217b088: ; 0x0217b088
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b08c
 data_ov26_0217b08c: ; 0x0217b08c
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b090
 data_ov26_0217b090: ; 0x0217b090
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b094
 data_ov26_0217b094: ; 0x0217b094
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov26_0217b098
 data_ov26_0217b098: ; 0x0217b098
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov26_0217b09c
 data_ov26_0217b09c: ; 0x0217b09c
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov26_0217b0a0
 data_ov26_0217b0a0: ; 0x0217b0a0
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov26_0217b0a4
 data_ov26_0217b0a4: ; 0x0217b0a4
 	.byte 0x48, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217b0a8
 data_ov26_0217b0a8: ; 0x0217b0a8
 	.byte 0x50, 0x1c, 0x0c, 0x02
+	.global data_ov26_0217b0ac
 data_ov26_0217b0ac: ; 0x0217b0ac
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov26_0217b0b0
 data_ov26_0217b0b0: ; 0x0217b0b0
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov26_0217b0b4
 data_ov26_0217b0b4: ; 0x0217b0b4
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov26_0217b0b8
 data_ov26_0217b0b8: ; 0x0217b0b8
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov26_0217b0bc
 data_ov26_0217b0bc: ; 0x0217b0bc
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov26_0217b0c0
 data_ov26_0217b0c0: ; 0x0217b0c0
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0c4
 data_ov26_0217b0c4: ; 0x0217b0c4
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0c8
 data_ov26_0217b0c8: ; 0x0217b0c8
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0cc
 data_ov26_0217b0cc: ; 0x0217b0cc
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0d0
 data_ov26_0217b0d0: ; 0x0217b0d0
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0d4
 data_ov26_0217b0d4: ; 0x0217b0d4
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0d8
 data_ov26_0217b0d8: ; 0x0217b0d8
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0dc
 data_ov26_0217b0dc: ; 0x0217b0dc
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0e0
 data_ov26_0217b0e0: ; 0x0217b0e0
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0e4
 data_ov26_0217b0e4: ; 0x0217b0e4
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0e8
 data_ov26_0217b0e8: ; 0x0217b0e8
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0ec
 data_ov26_0217b0ec: ; 0x0217b0ec
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0f0
 data_ov26_0217b0f0: ; 0x0217b0f0
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0f4
 data_ov26_0217b0f4: ; 0x0217b0f4
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0f8
 data_ov26_0217b0f8: ; 0x0217b0f8
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov26_0217b0fc
 data_ov26_0217b0fc: ; 0x0217b0fc
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b100
 data_ov26_0217b100: ; 0x0217b100
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b104
 data_ov26_0217b104: ; 0x0217b104
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov26_0217b108
 data_ov26_0217b108: ; 0x0217b108
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov26_0217b10c
 data_ov26_0217b10c: ; 0x0217b10c
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov26_0217b110
 data_ov26_0217b110: ; 0x0217b110
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b114
 data_ov26_0217b114: ; 0x0217b114
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b118
 data_ov26_0217b118: ; 0x0217b118
 	.byte 0x14, 0x85, 0x17, 0x02
+	.global data_ov26_0217b11c
 data_ov26_0217b11c: ; 0x0217b11c
 	.byte 0x34, 0x85, 0x17, 0x02
+	.global data_ov26_0217b120
 data_ov26_0217b120: ; 0x0217b120
 	.byte 0x5c, 0x85, 0x17, 0x02
+	.global data_ov26_0217b124
 data_ov26_0217b124: ; 0x0217b124
 	.byte 0x3c, 0x87, 0x17, 0x02
+	.global data_ov26_0217b128
 data_ov26_0217b128: ; 0x0217b128
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b12c
 data_ov26_0217b12c: ; 0x0217b12c
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b130
 data_ov26_0217b130: ; 0x0217b130
 	.byte 0xd8, 0x86, 0x17, 0x02
+	.global data_ov26_0217b134
 data_ov26_0217b134: ; 0x0217b134
 	.byte 0x3c, 0x8b, 0x17, 0x02
+	.global data_ov26_0217b138
 data_ov26_0217b138: ; 0x0217b138
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b13c
 data_ov26_0217b13c: ; 0x0217b13c
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b140
 data_ov26_0217b140: ; 0x0217b140
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b144
 data_ov26_0217b144: ; 0x0217b144
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b148
 data_ov26_0217b148: ; 0x0217b148
 	.byte 0xd8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b14c
 data_ov26_0217b14c: ; 0x0217b14c
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b150
 data_ov26_0217b150: ; 0x0217b150
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b154
 data_ov26_0217b154: ; 0x0217b154
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b158
 data_ov26_0217b158: ; 0x0217b158
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b15c
 data_ov26_0217b15c: ; 0x0217b15c
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b160
 data_ov26_0217b160: ; 0x0217b160
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b164
 data_ov26_0217b164: ; 0x0217b164
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b168
 data_ov26_0217b168: ; 0x0217b168
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b16c
 data_ov26_0217b16c: ; 0x0217b16c
 	.byte 0x14, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b170
 data_ov26_0217b170: ; 0x0217b170
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b174
 data_ov26_0217b174: ; 0x0217b174
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b178
 data_ov26_0217b178: ; 0x0217b178
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b17c
 data_ov26_0217b17c: ; 0x0217b17c
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b180
 data_ov26_0217b180: ; 0x0217b180
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217b184
 data_ov26_0217b184: ; 0x0217b184
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217b188
 data_ov26_0217b188: ; 0x0217b188
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217b18c
 data_ov26_0217b18c: ; 0x0217b18c
 	.byte 0x44, 0x8b, 0x17, 0x02
+	.global data_ov26_0217b190
 data_ov26_0217b190: ; 0x0217b190
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217b194
 data_ov26_0217b194: ; 0x0217b194
 	.byte 0x4c, 0x8b, 0x17, 0x02
+	.global data_ov26_0217b198
 data_ov26_0217b198: ; 0x0217b198
 	.byte 0xa4, 0x89, 0x17, 0x02
+	.global data_ov26_0217b19c
 data_ov26_0217b19c: ; 0x0217b19c
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217b1a0
 data_ov26_0217b1a0: ; 0x0217b1a0
 	.byte 0x0c, 0x8c, 0x17, 0x02
+	.global data_ov26_0217b1a4
 data_ov26_0217b1a4: ; 0x0217b1a4
 	.byte 0x43, 0x72, 0x73, 0x43, 0x72, 0x67, 0x4d, 0x00
+	.global data_ov26_0217b1ac
 data_ov26_0217b1ac: ; 0x0217b1ac
 	.byte 0x64, 0x6d, 0x48, 0x72
 	.byte 0x47, 0x73, 0x4d, 0x00
+	.global data_ov26_0217b1b4
 data_ov26_0217b1b4: ; 0x0217b1b4
 	.byte 0x43, 0x72, 0x73, 0x43, 0x72, 0x67, 0x4d, 0x00
+	.global data_ov26_0217b1bc
 data_ov26_0217b1bc: ; 0x0217b1bc
 	.byte 0x64, 0x6d, 0x48, 0x72
 	.byte 0x47, 0x73, 0x4d, 0x00
+	.global data_ov26_0217b1c4
 data_ov26_0217b1c4: ; 0x0217b1c4
 	.byte 0x73, 0x68, 0x69, 0x70, 0x79, 0x61, 0x72, 0x64, 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b1d0
 data_ov26_0217b1d0: ; 0x0217b1d0
 	.byte 0x73, 0x68, 0x69, 0x70, 0x76, 0x69, 0x65, 0x77, 0x4d, 0x00, 0x00, 0x00
+	.global data_ov26_0217b1dc
 data_ov26_0217b1dc: ; 0x0217b1dc
 	.byte 0x73, 0x68, 0x69, 0x70
 	.byte 0x76, 0x69, 0x65, 0x77, 0x4d, 0x00, 0x00, 0x00
+	.global data_ov26_0217b1e8
 data_ov26_0217b1e8: ; 0x0217b1e8
 	.byte 0x73, 0x68, 0x69, 0x70, 0x76, 0x69, 0x65, 0x77
 	.byte 0x53, 0x00, 0x00, 0x00
+	.global data_ov26_0217b1f4
 data_ov26_0217b1f4: ; 0x0217b1f4
 	.byte 0x73, 0x68, 0x69, 0x70, 0x76, 0x69, 0x65, 0x77, 0x53, 0x00, 0x00, 0x00
+	.global data_ov26_0217b200
 data_ov26_0217b200: ; 0x0217b200
 	.asciz "shipbuildM"
 _0217b20b:
 	.byte 0x00
+	.global data_ov26_0217b20c
 data_ov26_0217b20c: ; 0x0217b20c
 	.byte 0x73, 0x68, 0x69, 0x70
 	.byte 0x62, 0x75, 0x69, 0x6c, 0x64, 0x4d, 0x00, 0x00
+	.global data_ov26_0217b218
 data_ov26_0217b218: ; 0x0217b218
 	.byte 0x73, 0x68, 0x69, 0x70, 0x79, 0x61, 0x72, 0x64
 	.byte 0x30, 0x31, 0x00, 0x00
+	.global data_ov26_0217b224
 data_ov26_0217b224: ; 0x0217b224
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b228
 data_ov26_0217b228: ; 0x0217b228
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b22c
 data_ov26_0217b22c: ; 0x0217b22c
 	.byte 0x74, 0x90, 0x17, 0x02
+	.global data_ov26_0217b230
 data_ov26_0217b230: ; 0x0217b230
 	.byte 0xbc, 0x90, 0x17, 0x02
+	.global data_ov26_0217b234
 data_ov26_0217b234: ; 0x0217b234
 	.byte 0x14, 0x91, 0x17, 0x02
+	.global data_ov26_0217b238
 data_ov26_0217b238: ; 0x0217b238
 	.byte 0x90, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b23c
 data_ov26_0217b23c: ; 0x0217b23c
 	.byte 0x94, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b240
 data_ov26_0217b240: ; 0x0217b240
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b244
 data_ov26_0217b244: ; 0x0217b244
 	.byte 0xb8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b248
 data_ov26_0217b248: ; 0x0217b248
 	.byte 0x0c, 0x91, 0x17, 0x02
+	.global data_ov26_0217b24c
 data_ov26_0217b24c: ; 0x0217b24c
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b250
 data_ov26_0217b250: ; 0x0217b250
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b254
 data_ov26_0217b254: ; 0x0217b254
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b258
 data_ov26_0217b258: ; 0x0217b258
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b25c
 data_ov26_0217b25c: ; 0x0217b25c
 	.byte 0xd8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b260
 data_ov26_0217b260: ; 0x0217b260
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b264
 data_ov26_0217b264: ; 0x0217b264
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b268
 data_ov26_0217b268: ; 0x0217b268
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b26c
 data_ov26_0217b26c: ; 0x0217b26c
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov26_0217b270
 data_ov26_0217b270: ; 0x0217b270
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b274
 data_ov26_0217b274: ; 0x0217b274
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b278
 data_ov26_0217b278: ; 0x0217b278
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b27c
 data_ov26_0217b27c: ; 0x0217b27c
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b280
 data_ov26_0217b280: ; 0x0217b280
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov26_0217b284
 data_ov26_0217b284: ; 0x0217b284
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov26_0217b288
 data_ov26_0217b288: ; 0x0217b288
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b28c
 data_ov26_0217b28c: ; 0x0217b28c
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b290
 data_ov26_0217b290: ; 0x0217b290
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov26_0217b294
 data_ov26_0217b294: ; 0x0217b294
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov26_0217b298
 data_ov26_0217b298: ; 0x0217b298
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov26_0217b29c
 data_ov26_0217b29c: ; 0x0217b29c
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov26_0217b2a0
 data_ov26_0217b2a0: ; 0x0217b2a0
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov26_0217b2a4
 data_ov26_0217b2a4: ; 0x0217b2a4
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov26_0217b2a8
 data_ov26_0217b2a8: ; 0x0217b2a8
 	.byte 0x40, 0x92, 0x17, 0x02
+	.global data_ov26_0217b2ac
 data_ov26_0217b2ac: ; 0x0217b2ac
 	.byte 0x84, 0xc3, 0x08, 0x02
+	.global data_ov26_0217b2b0
 data_ov26_0217b2b0: ; 0x0217b2b0
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217b2b4
 data_ov26_0217b2b4: ; 0x0217b2b4
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov26_0217b2b8
 data_ov26_0217b2b8: ; 0x0217b2b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov26_0217b2bc
 data_ov26_0217b2bc: ; 0x0217b2bc
 	.byte 0x00, 0x00, 0x00, 0x00
 	; 0x0217b2c0
 
 	.bss
+	.global data_ov26_0217b2c0
 data_ov26_0217b2c0:
 	.space 0x4
+	.global data_ov26_0217b2c4
 data_ov26_0217b2c4:
 	.space 0x4
+	.global data_ov26_0217b2c8
 data_ov26_0217b2c8:
 	.space 0x4
+	.global data_ov26_0217b2cc
 data_ov26_0217b2cc:
 	.space 0x4
+	.global data_ov26_0217b2d0
 data_ov26_0217b2d0:
 	.space 0x4
+	.global data_ov26_0217b2d4
 data_ov26_0217b2d4:
 	.space 0x4
+	.global data_ov26_0217b2d8
 data_ov26_0217b2d8:
 	.space 0x4
+	.global data_ov26_0217b2dc
 data_ov26_0217b2dc:
 	.space 0x4
+	.global data_ov26_0217b2e0
 data_ov26_0217b2e0:
 	.space 0x4
+	.global data_ov26_0217b2e4
 data_ov26_0217b2e4:
 	.space 0x4
+	.global data_ov26_0217b2e8
 data_ov26_0217b2e8:
 	.space 0x4
+	.global data_ov26_0217b2ec
 data_ov26_0217b2ec:
 	.space 0x4
+	.global data_ov26_0217b2f0
 data_ov26_0217b2f0:
 	.space 0x4
+	.global data_ov26_0217b2f4
 data_ov26_0217b2f4:
 	.space 0x4
+	.global data_ov26_0217b2f8
 data_ov26_0217b2f8:
 	.space 0x4
+	.global data_ov26_0217b2fc
 data_ov26_0217b2fc:
 	.space 0x4
+	.global data_ov26_0217b300
 data_ov26_0217b300:
 	.space 0x4
+	.global data_ov26_0217b304
 data_ov26_0217b304:
 	.space 0x4
+	.global data_ov26_0217b308
 data_ov26_0217b308:
 	.space 0x4
+	.global data_ov26_0217b30c
 data_ov26_0217b30c:
 	.space 0x4
+	.global data_ov26_0217b310
 data_ov26_0217b310:
 	.space 0x4
+	.global data_ov26_0217b314
 data_ov26_0217b314:
 	.space 0x4
+	.global data_ov26_0217b318
 data_ov26_0217b318:
 	.space 0x4
+	.global data_ov26_0217b31c
 data_ov26_0217b31c:
 	.space 0x4
+	.global data_ov26_0217b320
 data_ov26_0217b320:
 	.space 0x4
+	.global data_ov26_0217b324
 data_ov26_0217b324:
 	.space 0x4
+	.global data_ov26_0217b328
 data_ov26_0217b328:
 	.space 0x4
+	.global data_ov26_0217b32c
 data_ov26_0217b32c:
 	.space 0x4
+	.global data_ov26_0217b330
 data_ov26_0217b330:
 	.space 0x4
+	.global data_ov26_0217b334
 data_ov26_0217b334:
 	.space 0x4
+	.global data_ov26_0217b338
 data_ov26_0217b338:
 	.space 0x4
+	.global data_ov26_0217b33c
 data_ov26_0217b33c:
 	.space 0x4
+	.global data_ov26_0217b340
 data_ov26_0217b340:
 	.space 0x4
+	.global data_ov26_0217b344
 data_ov26_0217b344:
 	.space 0x4
+	.global data_ov26_0217b348
 data_ov26_0217b348:
 	.space 0x4
+	.global data_ov26_0217b34c
 data_ov26_0217b34c:
 	.space 0x4
+	.global data_ov26_0217b350
 data_ov26_0217b350:
 	.space 0x4
+	.global data_ov26_0217b354
 data_ov26_0217b354:
 	.space 0x4
+	.global data_ov26_0217b358
 data_ov26_0217b358:
 	.space 0x4
+	.global data_ov26_0217b35c
 data_ov26_0217b35c:
 	.space 0x4
+	.global data_ov26_0217b360
 data_ov26_0217b360:
 	.space 0x4
+	.global data_ov26_0217b364
 data_ov26_0217b364:
 	.space 0x4
+	.global data_ov26_0217b368
 data_ov26_0217b368:
 	.space 0x4
+	.global data_ov26_0217b36c
 data_ov26_0217b36c:
 	.space 0x4
+	.global data_ov26_0217b370
 data_ov26_0217b370:
 	.space 0x4
+	.global data_ov26_0217b374
 data_ov26_0217b374:
 	.space 0x4
+	.global data_ov26_0217b378
 data_ov26_0217b378:
 	.space 0x4
+	.global data_ov26_0217b37c
 data_ov26_0217b37c:
 	.space 0x4
+	.global data_ov26_0217b380
 data_ov26_0217b380:
 	.space 0x4
+	.global data_ov26_0217b384
 data_ov26_0217b384:
 	.space 0x4
+	.global data_ov26_0217b388
 data_ov26_0217b388:
 	.space 0x4
+	.global data_ov26_0217b38c
 data_ov26_0217b38c:
 	.space 0x4
+	.global data_ov26_0217b390
 data_ov26_0217b390:
 	.space 0x4
+	.global data_ov26_0217b394
 data_ov26_0217b394:
 	.space 0x4
+	.global data_ov26_0217b398
 data_ov26_0217b398:
 	.space 0x4
+	.global data_ov26_0217b39c
 data_ov26_0217b39c:
 	.space 0x4
+	.global data_ov26_0217b3a0
 data_ov26_0217b3a0:
 	.space 0x4
+	.global data_ov26_0217b3a4
 data_ov26_0217b3a4:
 	.space 0x4
+	.global data_ov26_0217b3a8
 data_ov26_0217b3a8:
 	.space 0x4
+	.global data_ov26_0217b3ac
 data_ov26_0217b3ac:
 	.space 0x4
+	.global data_ov26_0217b3b0
 data_ov26_0217b3b0:
 	.space 0x4
+	.global data_ov26_0217b3b4
 data_ov26_0217b3b4:
 	.space 0x4
+	.global data_ov26_0217b3b8
 data_ov26_0217b3b8:
 	.space 0x4
+	.global data_ov26_0217b3bc
 data_ov26_0217b3bc:
 	.space 0x4
+	.global data_ov26_0217b3c0
 data_ov26_0217b3c0:
 	.space 0x4
+	.global data_ov26_0217b3c4
 data_ov26_0217b3c4:
 	.space 0x4
+	.global data_ov26_0217b3c8
 data_ov26_0217b3c8:
 	.space 0x4
+	.global data_ov26_0217b3cc
 data_ov26_0217b3cc:
 	.space 0x4
+	.global data_ov26_0217b3d0
 data_ov26_0217b3d0:
 	.space 0x4
+	.global data_ov26_0217b3d4
 data_ov26_0217b3d4:
 	.space 0x4
+	.global data_ov26_0217b3d8
 data_ov26_0217b3d8:
 	.space 0x4
+	.global data_ov26_0217b3dc
 data_ov26_0217b3dc:
 	.space 0x4
+	.global data_ov26_0217b3e0
 data_ov26_0217b3e0:
 	.space 0x4
+	.global data_ov26_0217b3e4
 data_ov26_0217b3e4:
 	.space 0x4
+	.global data_ov26_0217b3e8
 data_ov26_0217b3e8:
 	.space 0x4
+	.global data_ov26_0217b3ec
 data_ov26_0217b3ec:
 	.space 0x4
+	.global data_ov26_0217b3f0
 data_ov26_0217b3f0:
 	.space 0x4
+	.global data_ov26_0217b3f4
 data_ov26_0217b3f4:
 	.space 0x4
+	.global data_ov26_0217b3f8
 data_ov26_0217b3f8:
 	.space 0x4
+	.global data_ov26_0217b3fc
 data_ov26_0217b3fc:
 	.space 0x4
+	.global data_ov26_0217b400
 data_ov26_0217b400:
 	.space 0x4
+	.global data_ov26_0217b404
 data_ov26_0217b404:
 	.space 0x4
+	.global data_ov26_0217b408
 data_ov26_0217b408:
 	.space 0x4
+	.global data_ov26_0217b40c
 data_ov26_0217b40c:
 	.space 0x4
+	.global data_ov26_0217b410
 data_ov26_0217b410:
 	.space 0x4
+	.global data_ov26_0217b414
 data_ov26_0217b414:
 	.space 0x4
+	.global data_ov26_0217b418
 data_ov26_0217b418:
 	.space 0x4
+	.global data_ov26_0217b41c
 data_ov26_0217b41c:
 	.space 0x4
+	.global data_ov26_0217b420
 data_ov26_0217b420:
 	.space 0x4
+	.global data_ov26_0217b424
 data_ov26_0217b424:
 	.space 0x4
+	.global data_ov26_0217b428
 data_ov26_0217b428:
 	.space 0x4
+	.global data_ov26_0217b42c
 data_ov26_0217b42c:
 	.space 0x4
+	.global data_ov26_0217b430
 data_ov26_0217b430:
 	.space 0x4
+	.global data_ov26_0217b434
 data_ov26_0217b434:
 	.space 0x4
+	.global data_ov26_0217b438
 data_ov26_0217b438:
 	.space 0x4
+	.global data_ov26_0217b43c
 data_ov26_0217b43c:
 	.space 0x4
+	.global data_ov26_0217b440
 data_ov26_0217b440:
 	.space 0x4
+	.global data_ov26_0217b444
 data_ov26_0217b444:
 	.space 0x4
+	.global data_ov26_0217b448
 data_ov26_0217b448:
 	.space 0x4
+	.global data_ov26_0217b44c
 data_ov26_0217b44c:
 	.space 0x4
+	.global data_ov26_0217b450
 data_ov26_0217b450:
 	.space 0x4
+	.global data_ov26_0217b454
 data_ov26_0217b454:
 	.space 0x4
+	.global data_ov26_0217b458
 data_ov26_0217b458:
 	.space 0x4
+	.global data_ov26_0217b45c
 data_ov26_0217b45c:
 	.space 0x4
+	.global data_ov26_0217b460
 data_ov26_0217b460:
 	.space 0x4
+	.global data_ov26_0217b464
 data_ov26_0217b464:
 	.space 0x4
+	.global data_ov26_0217b468
 data_ov26_0217b468:
 	.space 0x4
+	.global data_ov26_0217b46c
 data_ov26_0217b46c:
 	.space 0x4
+	.global data_ov26_0217b470
 data_ov26_0217b470:
 	.space 0x4
+	.global data_ov26_0217b474
 data_ov26_0217b474:
 	.space 0x4
+	.global data_ov26_0217b478
 data_ov26_0217b478:
 	.space 0x4
+	.global data_ov26_0217b47c
 data_ov26_0217b47c:
 	.space 0x4
+	.global data_ov26_0217b480
 data_ov26_0217b480:
 	.space 0x4
+	.global data_ov26_0217b484
 data_ov26_0217b484:
 	.space 0x4
+	.global data_ov26_0217b488
 data_ov26_0217b488:
 	.space 0x4
+	.global data_ov26_0217b48c
 data_ov26_0217b48c:
 	.space 0x4
+	.global data_ov26_0217b490
 data_ov26_0217b490:
 	.space 0x4
+	.global data_ov26_0217b494
 data_ov26_0217b494:
 	.space 0x4
+	.global data_ov26_0217b498
 data_ov26_0217b498:
 	.space 0x4
+	.global data_ov26_0217b49c
 data_ov26_0217b49c:
 	.space 0x4
+	.global data_ov26_0217b4a0
 data_ov26_0217b4a0:
 	.space 0x4
+	.global data_ov26_0217b4a4
 data_ov26_0217b4a4:
 	.space 0x4
+	.global data_ov26_0217b4a8
 data_ov26_0217b4a8:
 	.space 0x4
+	.global data_ov26_0217b4ac
 data_ov26_0217b4ac:
 	.space 0x4
+	.global data_ov26_0217b4b0
 data_ov26_0217b4b0:
 	.space 0x4
+	.global data_ov26_0217b4b4
 data_ov26_0217b4b4:
 	.space 0x4
+	.global data_ov26_0217b4b8
 data_ov26_0217b4b8:
 	.space 0x4
+	.global data_ov26_0217b4bc
 data_ov26_0217b4bc:
 	.space 0x4
+	.global data_ov26_0217b4c0
 data_ov26_0217b4c0:
 	.space 0x4
+	.global data_ov26_0217b4c4
 data_ov26_0217b4c4:
 	.space 0x4
+	.global data_ov26_0217b4c8
 data_ov26_0217b4c8:
 	.space 0x4
+	.global data_ov26_0217b4cc
 data_ov26_0217b4cc:
 	.space 0x4
+	.global data_ov26_0217b4d0
 data_ov26_0217b4d0:
 	.space 0x4
+	.global data_ov26_0217b4d4
 data_ov26_0217b4d4:
 	.space 0x4
+	.global data_ov26_0217b4d8
 data_ov26_0217b4d8:
 	.space 0x4
+	.global data_ov26_0217b4dc
 data_ov26_0217b4dc:
 	.space 0x4
+	.global data_ov26_0217b4e0
 data_ov26_0217b4e0:
 	.space 0x4
+	.global data_ov26_0217b4e4
 data_ov26_0217b4e4:
 	.space 0x4
+	.global data_ov26_0217b4e8
 data_ov26_0217b4e8:
 	.space 0x4
+	.global data_ov26_0217b4ec
 data_ov26_0217b4ec:
 	.space 0x4
+	.global data_ov26_0217b4f0
 data_ov26_0217b4f0:
 	.space 0x4
+	.global data_ov26_0217b4f4
 data_ov26_0217b4f4:
 	.space 0x4
+	.global data_ov26_0217b4f8
 data_ov26_0217b4f8:
 	.space 0x4
+	.global data_ov26_0217b4fc
 data_ov26_0217b4fc:
 	.space 0x2
+	.global data_ov26_0217b4fe
 data_ov26_0217b4fe:
 	.space 0x2
+	.global data_ov26_0217b500
 data_ov26_0217b500:
 	.space 0x4
+	.global data_ov26_0217b504
 data_ov26_0217b504:
 	.space 0x4
+	.global data_ov26_0217b508
 data_ov26_0217b508:
 	.space 0x4
+	.global data_ov26_0217b50c
 data_ov26_0217b50c:
 	.space 0x4
+	.global data_ov26_0217b510
 data_ov26_0217b510:
 	.space 0x4
+	.global data_ov26_0217b514
 data_ov26_0217b514:
 	.space 0x4
+	.global data_ov26_0217b518
 data_ov26_0217b518:
 	.space 0x4
+	.global data_ov26_0217b51c
 data_ov26_0217b51c:
 	.space 0x4
+	.global data_ov26_0217b520
 data_ov26_0217b520:
 	.space 0x4
+	.global data_ov26_0217b524
 data_ov26_0217b524:
 	.space 0x4
+	.global data_ov26_0217b528
 data_ov26_0217b528:
 	.space 0x4
+	.global data_ov26_0217b52c
 data_ov26_0217b52c:
 	.space 0x4
+	.global data_ov26_0217b530
 data_ov26_0217b530:
 	.space 0x4
+	.global data_ov26_0217b534
 data_ov26_0217b534:
 	.space 0x4
+	.global data_ov26_0217b538
 data_ov26_0217b538:
 	.space 0x4
+	.global data_ov26_0217b53c
 data_ov26_0217b53c:
 	.space 0x4
+	.global data_ov26_0217b540
 data_ov26_0217b540:
 	.space 0x4
+	.global data_ov26_0217b544
 data_ov26_0217b544:
 	.space 0x4
+	.global data_ov26_0217b548
 data_ov26_0217b548:
 	.space 0x4
+	.global data_ov26_0217b54c
 data_ov26_0217b54c:
 	.space 0x4
+	.global data_ov26_0217b550
 data_ov26_0217b550:
 	.space 0x4
+	.global data_ov26_0217b554
 data_ov26_0217b554:
 	.space 0x4
+	.global data_ov26_0217b558
 data_ov26_0217b558:
 	.space 0x4
+	.global data_ov26_0217b55c
 data_ov26_0217b55c:
 	.space 0x4
+	.global data_ov26_0217b560
 data_ov26_0217b560:
 	.space 0x4
+	.global data_ov26_0217b564
 data_ov26_0217b564:
 	.space 0x4
+	.global data_ov26_0217b568
 data_ov26_0217b568:
 	.space 0x4
+	.global data_ov26_0217b56c
 data_ov26_0217b56c:
 	.space 0x4
+	.global data_ov26_0217b570
 data_ov26_0217b570:
 	.space 0x4
+	.global data_ov26_0217b574
 data_ov26_0217b574:
 	.space 0x4
+	.global data_ov26_0217b578
 data_ov26_0217b578:
 	.space 0x4
+	.global data_ov26_0217b57c
 data_ov26_0217b57c:
 	.space 0x4
+	.global data_ov26_0217b580
 data_ov26_0217b580:
 	.space 0x4
+	.global data_ov26_0217b584
 data_ov26_0217b584:
 	.space 0x4
+	.global data_ov26_0217b588
 data_ov26_0217b588:
 	.space 0x4
+	.global data_ov26_0217b58c
 data_ov26_0217b58c:
 	.space 0x4
+	.global data_ov26_0217b590
 data_ov26_0217b590:
 	.space 0x4
+	.global data_ov26_0217b594
 data_ov26_0217b594:
 	.space 0x4
+	.global data_ov26_0217b598
 data_ov26_0217b598:
 	.space 0x4
+	.global data_ov26_0217b59c
 data_ov26_0217b59c:
 	.space 0x4
+	.global data_ov26_0217b5a0
 data_ov26_0217b5a0:
 	.space 0x4
+	.global data_ov26_0217b5a4
 data_ov26_0217b5a4:
 	.space 0x4
+	.global data_ov26_0217b5a8
 data_ov26_0217b5a8:
 	.space 0x4
+	.global data_ov26_0217b5ac
 data_ov26_0217b5ac:
 	.space 0x4
+	.global data_ov26_0217b5b0
 data_ov26_0217b5b0:
 	.space 0x4
+	.global data_ov26_0217b5b4
 data_ov26_0217b5b4:
 	.space 0x4
+	.global data_ov26_0217b5b8
 data_ov26_0217b5b8:
 	.space 0x4
+	.global data_ov26_0217b5bc
 data_ov26_0217b5bc:
 	.space 0x4

@@ -3,6 +3,7 @@
 
 	.text
 
+	.global func_ov32_0217bd80
 	arm_func_start func_ov32_0217bd80
 func_ov32_0217bd80: ; 0x0217bd80
 	stmdb sp!, {r4, lr}
@@ -19,6 +20,7 @@ func_ov32_0217bd80: ; 0x0217bd80
 	arm_func_end func_ov32_0217bd80
 _0217bda8: .word data_ov32_02185434
 
+	.global func_ov32_0217bdac
 	arm_func_start func_ov32_0217bdac
 func_ov32_0217bdac: ; 0x0217bdac
 	ldr r1, _0217bdd0 ; =func_ov32_0217bdd8
@@ -35,6 +37,7 @@ func_ov32_0217bdac: ; 0x0217bdac
 _0217bdd0: .word func_ov32_0217bdd8
 _0217bdd4: .word func_ov32_0217be4c
 
+	.global func_ov32_0217bdd8
 	arm_func_start func_ov32_0217bdd8
 func_ov32_0217bdd8: ; 0x0217bdd8
 	stmdb sp!, {r4, lr}
@@ -69,6 +72,7 @@ func_ov32_0217bdd8: ; 0x0217bdd8
 	arm_func_end func_ov32_0217bdd8
 _0217be48: .word data_ov32_02184c30
 
+	.global func_ov32_0217be4c
 	arm_func_start func_ov32_0217be4c
 func_ov32_0217be4c: ; 0x0217be4c
 	stmdb sp!, {r4, lr}
@@ -102,6 +106,7 @@ func_ov32_0217be4c: ; 0x0217be4c
 	arm_func_end func_ov32_0217be4c
 _0217beb8: .word data_ov32_02184ba8
 
+	.global func_ov32_0217bebc
 	arm_func_start func_ov32_0217bebc
 func_ov32_0217bebc: ; 0x0217bebc
 	ldr ip, _0217bed0 ; =func_02018cb8
@@ -114,6 +119,7 @@ func_ov32_0217bebc: ; 0x0217bebc
 _0217bed0: .word func_02018cb8
 _0217bed4: .word func_ov32_0217bdac
 
+	.global func_ov32_0217bed8
 	arm_func_start func_ov32_0217bed8
 func_ov32_0217bed8: ; 0x0217bed8
 	stmdb sp!, {r4, lr}
@@ -153,6 +159,7 @@ _0217bf54: .word data_ov32_02185420
 _0217bf58: .word data_ov32_0218547c
 _0217bf5c: .word data_ov32_02184bb8
 
+	.global func_ov32_0217bf60
 	arm_func_start func_ov32_0217bf60
 func_ov32_0217bf60: ; 0x0217bf60
 	stmdb sp!, {r4, lr}
@@ -162,6 +169,7 @@ func_ov32_0217bf60: ; 0x0217bf60
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217bf60
 
+	.global func_ov32_0217bf74
 	arm_func_start func_ov32_0217bf74
 func_ov32_0217bf74: ; 0x0217bf74
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -236,6 +244,7 @@ _0217c064: .word data_027e0fec
 _0217c068: .word data_ov32_02185400
 _0217c06c: .word data_ov32_02185410
 
+	.global func_ov32_0217c070
 	arm_func_start func_ov32_0217c070
 func_ov32_0217c070: ; 0x0217c070
 	stmdb sp!, {r3, r4, r5, lr}
@@ -301,6 +310,7 @@ _0217c138:
 _0217c144: .word data_027e0e58
 _0217c148: .word 0x00000237
 
+	.global func_ov32_0217c14c
 	arm_func_start func_ov32_0217c14c
 func_ov32_0217c14c: ; 0x0217c14c
 	stmdb sp!, {r4, lr}
@@ -312,6 +322,7 @@ func_ov32_0217c14c: ; 0x0217c14c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c14c
 
+	.global func_ov32_0217c168
 	arm_func_start func_ov32_0217c168
 func_ov32_0217c168: ; 0x0217c168
 	stmdb sp!, {r4, lr}
@@ -326,6 +337,7 @@ func_ov32_0217c168: ; 0x0217c168
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c168
 
+	.global func_ov32_0217c190
 	arm_func_start func_ov32_0217c190
 func_ov32_0217c190: ; 0x0217c190
 	stmdb sp!, {r3, lr}
@@ -334,6 +346,7 @@ func_ov32_0217c190: ; 0x0217c190
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c190
 
+	.global func_ov32_0217c1a0
 	arm_func_start func_ov32_0217c1a0
 func_ov32_0217c1a0: ; 0x0217c1a0
 	stmdb sp!, {r3, lr}
@@ -345,6 +358,7 @@ func_ov32_0217c1a0: ; 0x0217c1a0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c1a0
 
+	.global func_ov32_0217c1bc
 	arm_func_start func_ov32_0217c1bc
 func_ov32_0217c1bc: ; 0x0217c1bc
 	stmdb sp!, {r3, lr}
@@ -353,6 +367,7 @@ func_ov32_0217c1bc: ; 0x0217c1bc
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c1bc
 
+	.global func_ov32_0217c1cc
 	arm_func_start func_ov32_0217c1cc
 func_ov32_0217c1cc: ; 0x0217c1cc
 	stmdb sp!, {r4, lr}
@@ -369,6 +384,7 @@ func_ov32_0217c1cc: ; 0x0217c1cc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c1cc
 
+	.global func_ov32_0217c1fc
 	arm_func_start func_ov32_0217c1fc
 func_ov32_0217c1fc: ; 0x0217c1fc
 	stmdb sp!, {r4, r5, r6, lr}
@@ -418,6 +434,7 @@ func_ov32_0217c1fc: ; 0x0217c1fc
 	arm_func_end func_ov32_0217c1fc
 _0217c2a8: .word data_027e0764
 
+	.global func_ov32_0217c2ac
 	arm_func_start func_ov32_0217c2ac
 func_ov32_0217c2ac: ; 0x0217c2ac
 	stmdb sp!, {r3, lr}
@@ -431,6 +448,7 @@ func_ov32_0217c2ac: ; 0x0217c2ac
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c2ac
 
+	.global func_ov32_0217c2d0
 	arm_func_start func_ov32_0217c2d0
 func_ov32_0217c2d0: ; 0x0217c2d0
 	stmdb sp!, {r3, lr}
@@ -439,6 +457,7 @@ func_ov32_0217c2d0: ; 0x0217c2d0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c2d0
 
+	.global func_ov32_0217c2e0
 	arm_func_start func_ov32_0217c2e0
 func_ov32_0217c2e0: ; 0x0217c2e0
 	stmdb sp!, {r4, lr}
@@ -453,6 +472,7 @@ func_ov32_0217c2e0: ; 0x0217c2e0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c2e0
 
+	.global func_ov32_0217c308
 	arm_func_start func_ov32_0217c308
 func_ov32_0217c308: ; 0x0217c308
 	stmdb sp!, {r3, r4, r5, lr}
@@ -507,6 +527,7 @@ _0217c390:
 	arm_func_end func_ov32_0217c308
 _0217c3bc: .word 0x00035fff
 
+	.global func_ov32_0217c3c0
 	arm_func_start func_ov32_0217c3c0
 func_ov32_0217c3c0: ; 0x0217c3c0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -556,6 +577,7 @@ _0217c448:
 _0217c458: .word data_027e0ffc
 _0217c45c: .word 0x000001df
 
+	.global func_ov32_0217c460
 	arm_func_start func_ov32_0217c460
 func_ov32_0217c460: ; 0x0217c460
 	stmdb sp!, {r4, lr}
@@ -569,6 +591,7 @@ func_ov32_0217c460: ; 0x0217c460
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c460
 
+	.global func_ov32_0217c484
 	arm_func_start func_ov32_0217c484
 func_ov32_0217c484: ; 0x0217c484
 	stmdb sp!, {r4, r5, r6, lr}
@@ -692,6 +715,7 @@ _0217c630: .word data_027e0ffc
 _0217c634: .word 0x000001e5
 _0217c638: .word 0x000001e6
 
+	.global func_ov32_0217c63c
 	arm_func_start func_ov32_0217c63c
 func_ov32_0217c63c: ; 0x0217c63c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -751,6 +775,7 @@ _0217c6ec:
 _0217c6fc: .word data_027e0ffc
 _0217c700: .word 0x000001e3
 
+	.global func_ov32_0217c704
 	arm_func_start func_ov32_0217c704
 func_ov32_0217c704: ; 0x0217c704
 	stmdb sp!, {r4, lr}
@@ -772,6 +797,7 @@ func_ov32_0217c704: ; 0x0217c704
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c704
 
+	.global func_ov32_0217c748
 	arm_func_start func_ov32_0217c748
 func_ov32_0217c748: ; 0x0217c748
 	stmdb sp!, {r4, r5, r6, lr}
@@ -804,6 +830,7 @@ func_ov32_0217c748: ; 0x0217c748
 	arm_func_end func_ov32_0217c748
 _0217c7b0: .word 0x0000047b
 
+	.global func_ov32_0217c7b4
 	arm_func_start func_ov32_0217c7b4
 func_ov32_0217c7b4: ; 0x0217c7b4
 	stmdb sp!, {r4, lr}
@@ -822,6 +849,7 @@ func_ov32_0217c7b4: ; 0x0217c7b4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217c7b4
 
+	.global func_ov32_0217c7ec
 	arm_func_start func_ov32_0217c7ec
 func_ov32_0217c7ec: ; 0x0217c7ec
 	stmdb sp!, {r3, lr}
@@ -830,46 +858,55 @@ func_ov32_0217c7ec: ; 0x0217c7ec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217c7ec
 
+	.global func_ov32_0217c7fc
 	arm_func_start func_ov32_0217c7fc
 func_ov32_0217c7fc: ; 0x0217c7fc
 	bx lr
 	arm_func_end func_ov32_0217c7fc
 
+	.global func_ov32_0217c800
 	arm_func_start func_ov32_0217c800
 func_ov32_0217c800: ; 0x0217c800
 	bx lr
 	arm_func_end func_ov32_0217c800
 
+	.global func_ov32_0217c804
 	arm_func_start func_ov32_0217c804
 func_ov32_0217c804: ; 0x0217c804
 	bx lr
 	arm_func_end func_ov32_0217c804
 
+	.global func_ov32_0217c808
 	arm_func_start func_ov32_0217c808
 func_ov32_0217c808: ; 0x0217c808
 	bx lr
 	arm_func_end func_ov32_0217c808
 
+	.global func_ov32_0217c80c
 	arm_func_start func_ov32_0217c80c
 func_ov32_0217c80c: ; 0x0217c80c
 	bx lr
 	arm_func_end func_ov32_0217c80c
 
+	.global func_ov32_0217c810
 	arm_func_start func_ov32_0217c810
 func_ov32_0217c810: ; 0x0217c810
 	bx lr
 	arm_func_end func_ov32_0217c810
 
+	.global func_ov32_0217c814
 	arm_func_start func_ov32_0217c814
 func_ov32_0217c814: ; 0x0217c814
 	bx lr
 	arm_func_end func_ov32_0217c814
 
+	.global func_ov32_0217c818
 	arm_func_start func_ov32_0217c818
 func_ov32_0217c818: ; 0x0217c818
 	bx lr
 	arm_func_end func_ov32_0217c818
 
+	.global func_ov32_0217c81c
 	arm_func_start func_ov32_0217c81c
 func_ov32_0217c81c: ; 0x0217c81c
 	stmdb sp!, {r3, lr}
@@ -888,6 +925,7 @@ func_ov32_0217c81c: ; 0x0217c81c
 _0217c848: .word data_027e0fe0
 _0217c84c: .word 0x000004cc
 
+	.global func_ov32_0217c850
 	arm_func_start func_ov32_0217c850
 func_ov32_0217c850: ; 0x0217c850
 	ldrsh r2, [r1]
@@ -899,6 +937,7 @@ func_ov32_0217c850: ; 0x0217c850
 	bx lr
 	arm_func_end func_ov32_0217c850
 
+	.global func_ov32_0217c86c
 	arm_func_start func_ov32_0217c86c
 func_ov32_0217c86c: ; 0x0217c86c
 	stmdb sp!, {r3, r4, lr}
@@ -1020,6 +1059,7 @@ _0217ca30: .word data_ov32_021856e4
 _0217ca34: .word func_ov32_0217ca3c
 _0217ca38: .word func_ov32_0217ca58
 
+	.global func_ov32_0217ca3c
 	arm_func_start func_ov32_0217ca3c
 func_ov32_0217ca3c: ; 0x0217ca3c
 	stmdb sp!, {r4, lr}
@@ -1031,6 +1071,7 @@ func_ov32_0217ca3c: ; 0x0217ca3c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217ca3c
 
+	.global func_ov32_0217ca58
 	arm_func_start func_ov32_0217ca58
 func_ov32_0217ca58: ; 0x0217ca58
 	mov r2, #0
@@ -1040,6 +1081,7 @@ func_ov32_0217ca58: ; 0x0217ca58
 	bx lr
 	arm_func_end func_ov32_0217ca58
 
+	.global func_ov32_0217ca6c
 	arm_func_start func_ov32_0217ca6c
 func_ov32_0217ca6c: ; 0x0217ca6c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1091,6 +1133,7 @@ _0217cb10: .word data_ov32_021855ac
 _0217cb14: .word func_ov32_0217ca3c
 _0217cb18: .word func_ov00_020b7d74
 
+	.global func_ov32_0217cb1c
 	arm_func_start func_ov32_0217cb1c
 func_ov32_0217cb1c: ; 0x0217cb1c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1140,6 +1183,7 @@ _0217cbb8: .word data_ov32_021855ac
 _0217cbbc: .word func_ov32_0217ca3c
 _0217cbc0: .word func_ov00_020b7d74
 
+	.global func_ov32_0217cbc4
 	arm_func_start func_ov32_0217cbc4
 func_ov32_0217cbc4: ; 0x0217cbc4
 	stmdb sp!, {r4, lr}
@@ -1257,6 +1301,7 @@ _0217cd4c:
 _0217cd58: .word data_ov32_02185524
 _0217cd5c: .word 0x00000548
 
+	.global func_ov32_0217cd60
 	arm_func_start func_ov32_0217cd60
 func_ov32_0217cd60: ; 0x0217cd60
 	stmdb sp!, {r4, lr}
@@ -1273,6 +1318,7 @@ func_ov32_0217cd60: ; 0x0217cd60
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217cd60
 
+	.global func_ov32_0217cd90
 	arm_func_start func_ov32_0217cd90
 func_ov32_0217cd90: ; 0x0217cd90
 	ldr ip, _0217cda4 ; =func_ov00_020c51d0
@@ -1284,6 +1330,7 @@ func_ov32_0217cd90: ; 0x0217cd90
 	arm_func_end func_ov32_0217cd90
 _0217cda4: .word func_ov00_020c51d0
 
+	.global func_ov32_0217cda8
 	arm_func_start func_ov32_0217cda8
 func_ov32_0217cda8: ; 0x0217cda8
 	ldr ip, _0217cdbc ; =func_ov00_020c51d0
@@ -1295,6 +1342,7 @@ func_ov32_0217cda8: ; 0x0217cda8
 	arm_func_end func_ov32_0217cda8
 _0217cdbc: .word func_ov00_020c51d0
 
+	.global func_ov32_0217cdc0
 	arm_func_start func_ov32_0217cdc0
 func_ov32_0217cdc0: ; 0x0217cdc0
 	mov r1, #0
@@ -1304,11 +1352,13 @@ func_ov32_0217cdc0: ; 0x0217cdc0
 	bx lr
 	arm_func_end func_ov32_0217cdc0
 
+	.global func_ov32_0217cdd4
 	arm_func_start func_ov32_0217cdd4
 func_ov32_0217cdd4: ; 0x0217cdd4
 	bx lr
 	arm_func_end func_ov32_0217cdd4
 
+	.global func_ov32_0217cdd8
 	arm_func_start func_ov32_0217cdd8
 func_ov32_0217cdd8: ; 0x0217cdd8
 	stmdb sp!, {r4, lr}
@@ -1332,6 +1382,7 @@ func_ov32_0217cdd8: ; 0x0217cdd8
 	arm_func_end func_ov32_0217cdd8
 _0217ce1c: .word data_027e0e60
 
+	.global func_ov32_0217ce20
 	arm_func_start func_ov32_0217ce20
 func_ov32_0217ce20: ; 0x0217ce20
 	stmdb sp!, {r4, lr}
@@ -1359,6 +1410,7 @@ _0217ce6c: .word 0x00000924
 _0217ce70: .word data_027e0ffc
 _0217ce74: .word 0x000001de
 
+	.global func_ov32_0217ce78
 	arm_func_start func_ov32_0217ce78
 func_ov32_0217ce78: ; 0x0217ce78
 	stmdb sp!, {r4, lr}
@@ -1400,6 +1452,7 @@ func_ov32_0217ce78: ; 0x0217ce78
 _0217cf00: .word 0x00000c58
 _0217cf04: .word 0x00001f3a
 
+	.global func_ov32_0217cf08
 	arm_func_start func_ov32_0217cf08
 func_ov32_0217cf08: ; 0x0217cf08
 	mov r1, #2
@@ -1446,6 +1499,7 @@ _0217cf34:
 	arm_func_end func_ov32_0217cf08
 _0217cfa0: .word data_02050f54
 
+	.global func_ov32_0217cfa4
 	arm_func_start func_ov32_0217cfa4
 func_ov32_0217cfa4: ; 0x0217cfa4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -1577,6 +1631,7 @@ _0217d17c: .word data_027e0764
 _0217d180: .word 0x0000038e
 _0217d184: .word data_02050f54
 
+	.global func_ov32_0217d188
 	arm_func_start func_ov32_0217d188
 func_ov32_0217d188: ; 0x0217d188
 	stmdb sp!, {r4, lr}
@@ -1594,6 +1649,7 @@ func_ov32_0217d188: ; 0x0217d188
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217d188
 
+	.global func_ov32_0217d1bc
 	arm_func_start func_ov32_0217d1bc
 func_ov32_0217d1bc: ; 0x0217d1bc
 	stmdb sp!, {r4, lr}
@@ -1649,6 +1705,7 @@ _0217d278: .word 0x00000c58
 _0217d27c: .word 0x00001f3a
 _0217d280: .word data_02050f54
 
+	.global func_ov32_0217d284
 	arm_func_start func_ov32_0217d284
 func_ov32_0217d284: ; 0x0217d284
 	stmdb sp!, {r4, lr}
@@ -1677,6 +1734,7 @@ func_ov32_0217d284: ; 0x0217d284
 	arm_func_end func_ov32_0217d284
 _0217d2dc: .word 0x51eb851f
 
+	.global func_ov32_0217d2e0
 	arm_func_start func_ov32_0217d2e0
 func_ov32_0217d2e0: ; 0x0217d2e0
 	mov r1, #2
@@ -1690,6 +1748,7 @@ func_ov32_0217d2e0: ; 0x0217d2e0
 	bx lr
 	arm_func_end func_ov32_0217d2e0
 
+	.global func_ov32_0217d304
 	arm_func_start func_ov32_0217d304
 func_ov32_0217d304: ; 0x0217d304
 	stmdb sp!, {r4, lr}
@@ -1715,6 +1774,7 @@ func_ov32_0217d304: ; 0x0217d304
 	arm_func_end func_ov32_0217d304
 _0217d350: .word 0x0000071c
 
+	.global func_ov32_0217d354
 	arm_func_start func_ov32_0217d354
 func_ov32_0217d354: ; 0x0217d354
 	stmdb sp!, {r3, r4, lr}
@@ -1746,6 +1806,7 @@ _0217d3a8:
 	arm_func_end func_ov32_0217d354
 _0217d3b4: .word data_027e0f94
 
+	.global func_ov32_0217d3b8
 	arm_func_start func_ov32_0217d3b8
 func_ov32_0217d3b8: ; 0x0217d3b8
 	stmdb sp!, {r3, lr}
@@ -1756,6 +1817,7 @@ func_ov32_0217d3b8: ; 0x0217d3b8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217d3b8
 
+	.global func_ov32_0217d3d0
 	arm_func_start func_ov32_0217d3d0
 func_ov32_0217d3d0: ; 0x0217d3d0
 	stmdb sp!, {r4, lr}
@@ -1787,6 +1849,7 @@ _0217d414:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217d3d0
 
+	.global func_ov32_0217d434
 	arm_func_start func_ov32_0217d434
 func_ov32_0217d434: ; 0x0217d434
 	stmdb sp!, {r4, lr}
@@ -1798,6 +1861,7 @@ func_ov32_0217d434: ; 0x0217d434
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217d434
 
+	.global func_ov32_0217d450
 	arm_func_start func_ov32_0217d450
 func_ov32_0217d450: ; 0x0217d450
 	stmdb sp!, {r4, lr}
@@ -1812,6 +1876,7 @@ func_ov32_0217d450: ; 0x0217d450
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217d450
 
+	.global func_ov32_0217d478
 	arm_func_start func_ov32_0217d478
 func_ov32_0217d478: ; 0x0217d478
 	stmdb sp!, {r4, r5, r6, lr}
@@ -2020,6 +2085,7 @@ _0217d76c: .word 0x00000236
 _0217d770: .word 0x00000232
 _0217d774: .word 0x00000233
 
+	.global func_ov32_0217d778
 	arm_func_start func_ov32_0217d778
 func_ov32_0217d778: ; 0x0217d778
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2052,6 +2118,7 @@ _0217d7cc:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217d778
 
+	.global func_ov32_0217d7dc
 	arm_func_start func_ov32_0217d7dc
 func_ov32_0217d7dc: ; 0x0217d7dc
 	stmdb sp!, {r3, r4, lr}
@@ -2225,6 +2292,7 @@ _0217da3c:
 _0217da48: .word data_027e0ffc
 _0217da4c: .word 0x000001e1
 
+	.global func_ov32_0217da50
 	arm_func_start func_ov32_0217da50
 func_ov32_0217da50: ; 0x0217da50
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -2299,11 +2367,13 @@ _0217db48: .word data_027e0e58
 _0217db4c: .word 0x00000548
 _0217db50: .word data_ov00_020e9370
 
+	.global func_ov32_0217db54
 	arm_func_start func_ov32_0217db54
 func_ov32_0217db54: ; 0x0217db54
 	bx lr
 	arm_func_end func_ov32_0217db54
 
+	.global func_ov32_0217db58
 	arm_func_start func_ov32_0217db58
 func_ov32_0217db58: ; 0x0217db58
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2321,6 +2391,7 @@ func_ov32_0217db58: ; 0x0217db58
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217db58
 
+	.global func_ov32_0217db8c
 	arm_func_start func_ov32_0217db8c
 func_ov32_0217db8c: ; 0x0217db8c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2359,6 +2430,7 @@ _0217dbd0:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217db8c
 
+	.global func_ov32_0217dc0c
 	arm_func_start func_ov32_0217dc0c
 func_ov32_0217dc0c: ; 0x0217dc0c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -2385,6 +2457,7 @@ _0217dc44:
 _0217dc54: .word data_027e0ffc
 _0217dc58: .word 0x000001e7
 
+	.global func_ov32_0217dc5c
 	arm_func_start func_ov32_0217dc5c
 func_ov32_0217dc5c: ; 0x0217dc5c
 	stmdb sp!, {r3, lr}
@@ -2396,6 +2469,7 @@ func_ov32_0217dc5c: ; 0x0217dc5c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217dc5c
 
+	.global func_ov32_0217dc78
 	arm_func_start func_ov32_0217dc78
 func_ov32_0217dc78: ; 0x0217dc78
 	stmdb sp!, {r4, lr}
@@ -2413,6 +2487,7 @@ func_ov32_0217dc78: ; 0x0217dc78
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217dc78
 
+	.global func_ov32_0217dcac
 	arm_func_start func_ov32_0217dcac
 func_ov32_0217dcac: ; 0x0217dcac
 	stmdb sp!, {r3, lr}
@@ -2423,6 +2498,7 @@ func_ov32_0217dcac: ; 0x0217dcac
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217dcac
 
+	.global func_ov32_0217dcc4
 	arm_func_start func_ov32_0217dcc4
 func_ov32_0217dcc4: ; 0x0217dcc4
 	stmdb sp!, {r3, lr}
@@ -2431,6 +2507,7 @@ func_ov32_0217dcc4: ; 0x0217dcc4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217dcc4
 
+	.global func_ov32_0217dcd4
 	arm_func_start func_ov32_0217dcd4
 func_ov32_0217dcd4: ; 0x0217dcd4
 	stmdb sp!, {r3, lr}
@@ -2442,6 +2519,7 @@ func_ov32_0217dcd4: ; 0x0217dcd4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217dcd4
 
+	.global func_ov32_0217dcf0
 	arm_func_start func_ov32_0217dcf0
 func_ov32_0217dcf0: ; 0x0217dcf0
 	stmdb sp!, {r3, lr}
@@ -2450,26 +2528,31 @@ func_ov32_0217dcf0: ; 0x0217dcf0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217dcf0
 
+	.global func_ov32_0217dd00
 	arm_func_start func_ov32_0217dd00
 func_ov32_0217dd00: ; 0x0217dd00
 	bx lr
 	arm_func_end func_ov32_0217dd00
 
+	.global func_ov32_0217dd04
 	arm_func_start func_ov32_0217dd04
 func_ov32_0217dd04: ; 0x0217dd04
 	bx lr
 	arm_func_end func_ov32_0217dd04
 
+	.global func_ov32_0217dd08
 	arm_func_start func_ov32_0217dd08
 func_ov32_0217dd08: ; 0x0217dd08
 	bx lr
 	arm_func_end func_ov32_0217dd08
 
+	.global func_ov32_0217dd0c
 	arm_func_start func_ov32_0217dd0c
 func_ov32_0217dd0c: ; 0x0217dd0c
 	bx lr
 	arm_func_end func_ov32_0217dd0c
 
+	.global func_ov32_0217dd10
 	arm_func_start func_ov32_0217dd10
 func_ov32_0217dd10: ; 0x0217dd10
 	stmdb sp!, {r3, lr}
@@ -2488,6 +2571,7 @@ func_ov32_0217dd10: ; 0x0217dd10
 _0217dd3c: .word data_027e0fe0
 _0217dd40: .word 0x00000504
 
+	.global func_ov32_0217dd44
 	arm_func_start func_ov32_0217dd44
 func_ov32_0217dd44: ; 0x0217dd44
 	ldrsh r2, [r1]
@@ -2499,6 +2583,7 @@ func_ov32_0217dd44: ; 0x0217dd44
 	bx lr
 	arm_func_end func_ov32_0217dd44
 
+	.global func_ov32_0217dd60
 	arm_func_start func_ov32_0217dd60
 func_ov32_0217dd60: ; 0x0217dd60
 	stmdb sp!, {r3, r4, lr}
@@ -2624,6 +2709,7 @@ _0217df34: .word data_ov00_020e2f98
 _0217df38: .word func_ov00_020b7d74
 _0217df3c: .word func_ov32_0217df40
 
+	.global func_ov32_0217df40
 	arm_func_start func_ov32_0217df40
 func_ov32_0217df40: ; 0x0217df40
 	mov r1, #0
@@ -2631,6 +2717,7 @@ func_ov32_0217df40: ; 0x0217df40
 	bx lr
 	arm_func_end func_ov32_0217df40
 
+	.global func_ov32_0217df4c
 	arm_func_start func_ov32_0217df4c
 func_ov32_0217df4c: ; 0x0217df4c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -2695,6 +2782,7 @@ _0217df84:
 _0217e028: .word data_ov32_021857c0
 _0217e02c: .word func_ov00_020b7d74
 
+	.global func_ov32_0217e030
 	arm_func_start func_ov32_0217e030
 func_ov32_0217e030: ; 0x0217e030
 	stmdb sp!, {r4, r5, r6, lr}
@@ -2757,6 +2845,7 @@ _0217e068:
 _0217e104: .word data_ov32_021857c0
 _0217e108: .word func_ov00_020b7d74
 
+	.global func_ov32_0217e10c
 	arm_func_start func_ov32_0217e10c
 func_ov32_0217e10c: ; 0x0217e10c
 	stmdb sp!, {r3, r4, lr}
@@ -2850,6 +2939,7 @@ _0217e260: .word data_027e0fe8
 _0217e264: .word 0x49434848
 _0217e268: .word data_027e0fe4
 
+	.global func_ov32_0217e26c
 	arm_func_start func_ov32_0217e26c
 func_ov32_0217e26c: ; 0x0217e26c
 	stmdb sp!, {r3, r4, lr}
@@ -2873,6 +2963,7 @@ func_ov32_0217e26c: ; 0x0217e26c
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov32_0217e26c
 
+	.global func_ov32_0217e2b8
 	arm_func_start func_ov32_0217e2b8
 func_ov32_0217e2b8: ; 0x0217e2b8
 	stmdb sp!, {r4, lr}
@@ -2937,6 +3028,7 @@ _0217e398: .word 0x000001a3
 _0217e39c: .word data_027e0ffc
 _0217e3a0: .word 0x000001e9
 
+	.global func_ov32_0217e3a4
 	arm_func_start func_ov32_0217e3a4
 func_ov32_0217e3a4: ; 0x0217e3a4
 	stmdb sp!, {r4, lr}
@@ -2949,6 +3041,7 @@ func_ov32_0217e3a4: ; 0x0217e3a4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217e3a4
 
+	.global func_ov32_0217e3c4
 	arm_func_start func_ov32_0217e3c4
 func_ov32_0217e3c4: ; 0x0217e3c4
 	stmdb sp!, {r4, r5, r6, lr}
@@ -3079,6 +3172,7 @@ _0217e598: .word data_027e0764
 _0217e59c: .word 0x0000038e
 _0217e5a0: .word data_02050f54
 
+	.global func_ov32_0217e5a4
 	arm_func_start func_ov32_0217e5a4
 func_ov32_0217e5a4: ; 0x0217e5a4
 	mov r1, #0
@@ -3087,6 +3181,7 @@ func_ov32_0217e5a4: ; 0x0217e5a4
 	bx lr
 	arm_func_end func_ov32_0217e5a4
 
+	.global func_ov32_0217e5b4
 	arm_func_start func_ov32_0217e5b4
 func_ov32_0217e5b4: ; 0x0217e5b4
 	stmdb sp!, {r4, lr}
@@ -3099,6 +3194,7 @@ func_ov32_0217e5b4: ; 0x0217e5b4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217e5b4
 
+	.global func_ov32_0217e5d4
 	arm_func_start func_ov32_0217e5d4
 func_ov32_0217e5d4: ; 0x0217e5d4
 	ldr r0, [r0, #0x29c]
@@ -3108,6 +3204,7 @@ func_ov32_0217e5d4: ; 0x0217e5d4
 	bx lr
 	arm_func_end func_ov32_0217e5d4
 
+	.global func_ov32_0217e5e8
 	arm_func_start func_ov32_0217e5e8
 func_ov32_0217e5e8: ; 0x0217e5e8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -3171,6 +3268,7 @@ _0217e6c4: .word data_027e0e58
 _0217e6c8: .word 0x000001a3
 _0217e6cc: .word data_027e0ffc
 
+	.global func_ov32_0217e6d0
 	arm_func_start func_ov32_0217e6d0
 func_ov32_0217e6d0: ; 0x0217e6d0
 	ldr ip, _0217e6e4 ; =func_ov00_020c51d0
@@ -3182,6 +3280,7 @@ func_ov32_0217e6d0: ; 0x0217e6d0
 	arm_func_end func_ov32_0217e6d0
 _0217e6e4: .word func_ov00_020c51d0
 
+	.global func_ov32_0217e6e8
 	arm_func_start func_ov32_0217e6e8
 func_ov32_0217e6e8: ; 0x0217e6e8
 	stmdb sp!, {r3, lr}
@@ -3192,6 +3291,7 @@ func_ov32_0217e6e8: ; 0x0217e6e8
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217e6e8
 
+	.global func_ov32_0217e700
 	arm_func_start func_ov32_0217e700
 func_ov32_0217e700: ; 0x0217e700
 	stmdb sp!, {r4, lr}
@@ -3208,6 +3308,7 @@ func_ov32_0217e700: ; 0x0217e700
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217e700
 
+	.global func_ov32_0217e730
 	arm_func_start func_ov32_0217e730
 func_ov32_0217e730: ; 0x0217e730
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -3513,6 +3614,7 @@ _0217eb98: .word 0x000001bd
 _0217eb9c: .word func_ov32_0217dd44
 _0217eba0: .word 0x00000239
 
+	.global func_ov32_0217eba4
 	arm_func_start func_ov32_0217eba4
 func_ov32_0217eba4: ; 0x0217eba4
 	ldr ip, _0217ebb0 ; =func_01fffcd8
@@ -3522,6 +3624,7 @@ func_ov32_0217eba4: ; 0x0217eba4
 	arm_func_end func_ov32_0217eba4
 _0217ebb0: .word func_01fffcd8
 
+	.global func_ov32_0217ebb4
 	arm_func_start func_ov32_0217ebb4
 func_ov32_0217ebb4: ; 0x0217ebb4
 	ldr ip, _0217ebc0 ; =func_01fffcec
@@ -3531,6 +3634,7 @@ func_ov32_0217ebb4: ; 0x0217ebb4
 	arm_func_end func_ov32_0217ebb4
 _0217ebc0: .word func_01fffcec
 
+	.global func_ov32_0217ebc4
 	arm_func_start func_ov32_0217ebc4
 func_ov32_0217ebc4: ; 0x0217ebc4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -3675,6 +3779,7 @@ _0217edb4:
 _0217edc4: .word data_027e0764
 _0217edc8: .word 0x00000201
 
+	.global func_ov32_0217edcc
 	arm_func_start func_ov32_0217edcc
 func_ov32_0217edcc: ; 0x0217edcc
 	ldr ip, _0217edd8 ; =func_01fffcec
@@ -3684,6 +3789,7 @@ func_ov32_0217edcc: ; 0x0217edcc
 	arm_func_end func_ov32_0217edcc
 _0217edd8: .word func_01fffcec
 
+	.global func_ov32_0217eddc
 	arm_func_start func_ov32_0217eddc
 func_ov32_0217eddc: ; 0x0217eddc
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -3820,6 +3926,7 @@ _0217efcc: .word data_027e0f90
 _0217efd0: .word data_027e0fac
 _0217efd4: .word 0x00005555
 
+	.global func_ov32_0217efd8
 	arm_func_start func_ov32_0217efd8
 func_ov32_0217efd8: ; 0x0217efd8
 	ldr ip, _0217efe4 ; =func_01fffcec
@@ -3829,6 +3936,7 @@ func_ov32_0217efd8: ; 0x0217efd8
 	arm_func_end func_ov32_0217efd8
 _0217efe4: .word func_01fffcec
 
+	.global func_ov32_0217efe8
 	arm_func_start func_ov32_0217efe8
 func_ov32_0217efe8: ; 0x0217efe8
 	stmdb sp!, {r3, r4, lr}
@@ -3901,6 +4009,7 @@ _0217f0c4:
 	arm_func_end func_ov32_0217efe8
 _0217f0dc: .word data_02050f54
 
+	.global func_ov32_0217f0e0
 	arm_func_start func_ov32_0217f0e0
 func_ov32_0217f0e0: ; 0x0217f0e0
 	stmdb sp!, {r4, lr}
@@ -3928,6 +4037,7 @@ _0217f124:
 _0217f12c: .word data_ov32_02185944
 _0217f130: .word data_ov32_02185904
 
+	.global func_ov32_0217f134
 	arm_func_start func_ov32_0217f134
 func_ov32_0217f134: ; 0x0217f134
 	stmdb sp!, {r3, r4, lr}
@@ -3952,6 +4062,7 @@ func_ov32_0217f134: ; 0x0217f134
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov32_0217f134
 
+	.global func_ov32_0217f184
 	arm_func_start func_ov32_0217f184
 func_ov32_0217f184: ; 0x0217f184
 	stmdb sp!, {r4, r5, r6, r7, lr}
@@ -4014,6 +4125,7 @@ _0217f25c: .word data_ov32_02185930
 _0217f260: .word data_ov32_0218547c
 _0217f264: .word data_ov32_0218591c
 
+	.global func_ov32_0217f268
 	arm_func_start func_ov32_0217f268
 func_ov32_0217f268: ; 0x0217f268
 	stmdb sp!, {r4, lr}
@@ -4023,6 +4135,7 @@ func_ov32_0217f268: ; 0x0217f268
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217f268
 
+	.global func_ov32_0217f27c
 	arm_func_start func_ov32_0217f27c
 func_ov32_0217f27c: ; 0x0217f27c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -4097,11 +4210,13 @@ _0217f36c: .word data_027e0fec
 _0217f370: .word data_ov32_02185994
 _0217f374: .word data_ov32_021859a4
 
+	.global func_ov32_0217f378
 	arm_func_start func_ov32_0217f378
 func_ov32_0217f378: ; 0x0217f378
 	bx lr
 	arm_func_end func_ov32_0217f378
 
+	.global func_ov32_0217f37c
 	arm_func_start func_ov32_0217f37c
 func_ov32_0217f37c: ; 0x0217f37c
 	stmdb sp!, {r4, lr}
@@ -4113,11 +4228,13 @@ func_ov32_0217f37c: ; 0x0217f37c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217f37c
 
+	.global func_ov32_0217f398
 	arm_func_start func_ov32_0217f398
 func_ov32_0217f398: ; 0x0217f398
 	bx lr
 	arm_func_end func_ov32_0217f398
 
+	.global func_ov32_0217f39c
 	arm_func_start func_ov32_0217f39c
 func_ov32_0217f39c: ; 0x0217f39c
 	stmdb sp!, {r4, lr}
@@ -4136,11 +4253,13 @@ func_ov32_0217f39c: ; 0x0217f39c
 _0217f3c8: .word data_ov32_021859b4
 _0217f3cc: .word data_ov32_02184c6c
 
+	.global func_ov32_0217f3d0
 	arm_func_start func_ov32_0217f3d0
 func_ov32_0217f3d0: ; 0x0217f3d0
 	bx lr
 	arm_func_end func_ov32_0217f3d0
 
+	.global func_ov32_0217f3d4
 	arm_func_start func_ov32_0217f3d4
 func_ov32_0217f3d4: ; 0x0217f3d4
 	stmdb sp!, {r4, lr}
@@ -4155,6 +4274,7 @@ func_ov32_0217f3d4: ; 0x0217f3d4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217f3d4
 
+	.global func_ov32_0217f3fc
 	arm_func_start func_ov32_0217f3fc
 func_ov32_0217f3fc: ; 0x0217f3fc
 	stmdb sp!, {r4, lr}
@@ -4170,6 +4290,7 @@ func_ov32_0217f3fc: ; 0x0217f3fc
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217f3fc
 
+	.global func_ov32_0217f428
 	arm_func_start func_ov32_0217f428
 func_ov32_0217f428: ; 0x0217f428
 	stmdb sp!, {r4, lr}
@@ -4186,6 +4307,7 @@ func_ov32_0217f428: ; 0x0217f428
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217f428
 
+	.global func_ov32_0217f458
 	arm_func_start func_ov32_0217f458
 func_ov32_0217f458: ; 0x0217f458
 	stmdb sp!, {r3, lr}
@@ -4194,6 +4316,7 @@ func_ov32_0217f458: ; 0x0217f458
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217f458
 
+	.global func_ov32_0217f468
 	arm_func_start func_ov32_0217f468
 func_ov32_0217f468: ; 0x0217f468
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4214,6 +4337,7 @@ func_ov32_0217f468: ; 0x0217f468
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217f468
 
+	.global func_ov32_0217f4a8
 	arm_func_start func_ov32_0217f4a8
 func_ov32_0217f4a8: ; 0x0217f4a8
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4262,6 +4386,7 @@ _0217f530:
 _0217f540: .word 0x0000efff
 _0217f544: .word 0x0001dfff
 
+	.global func_ov32_0217f548
 	arm_func_start func_ov32_0217f548
 func_ov32_0217f548: ; 0x0217f548
 	stmdb sp!, {r4, r5, r6, lr}
@@ -4352,6 +4477,7 @@ _0217f664: .word 0x000001eb
 _0217f668: .word 0x000001ef
 _0217f66c: .word 0x000001ee
 
+	.global func_ov32_0217f670
 	arm_func_start func_ov32_0217f670
 func_ov32_0217f670: ; 0x0217f670
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4373,6 +4499,7 @@ func_ov32_0217f670: ; 0x0217f670
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217f670
 
+	.global func_ov32_0217f6b4
 	arm_func_start func_ov32_0217f6b4
 func_ov32_0217f6b4: ; 0x0217f6b4
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4412,6 +4539,7 @@ _0217f720:
 	arm_func_end func_ov32_0217f6b4
 _0217f730: .word 0x00020fff
 
+	.global func_ov32_0217f734
 	arm_func_start func_ov32_0217f734
 func_ov32_0217f734: ; 0x0217f734
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4431,6 +4559,7 @@ func_ov32_0217f734: ; 0x0217f734
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217f734
 
+	.global func_ov32_0217f770
 	arm_func_start func_ov32_0217f770
 func_ov32_0217f770: ; 0x0217f770
 	stmdb sp!, {r3, lr}
@@ -4439,6 +4568,7 @@ func_ov32_0217f770: ; 0x0217f770
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217f770
 
+	.global func_ov32_0217f780
 	arm_func_start func_ov32_0217f780
 func_ov32_0217f780: ; 0x0217f780
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4458,6 +4588,7 @@ func_ov32_0217f780: ; 0x0217f780
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217f780
 
+	.global func_ov32_0217f7bc
 	arm_func_start func_ov32_0217f7bc
 func_ov32_0217f7bc: ; 0x0217f7bc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -4480,6 +4611,7 @@ _0217f7ec:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_0217f7bc
 
+	.global func_ov32_0217f800
 	arm_func_start func_ov32_0217f800
 func_ov32_0217f800: ; 0x0217f800
 	stmdb sp!, {r4, lr}
@@ -4504,6 +4636,7 @@ func_ov32_0217f800: ; 0x0217f800
 _0217f844: .word data_027e0ffc
 _0217f848: .word 0x000001f1
 
+	.global func_ov32_0217f84c
 	arm_func_start func_ov32_0217f84c
 func_ov32_0217f84c: ; 0x0217f84c
 	stmdb sp!, {r3, lr}
@@ -4512,41 +4645,49 @@ func_ov32_0217f84c: ; 0x0217f84c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_0217f84c
 
+	.global func_ov32_0217f85c
 	arm_func_start func_ov32_0217f85c
 func_ov32_0217f85c: ; 0x0217f85c
 	bx lr
 	arm_func_end func_ov32_0217f85c
 
+	.global func_ov32_0217f860
 	arm_func_start func_ov32_0217f860
 func_ov32_0217f860: ; 0x0217f860
 	bx lr
 	arm_func_end func_ov32_0217f860
 
+	.global func_ov32_0217f864
 	arm_func_start func_ov32_0217f864
 func_ov32_0217f864: ; 0x0217f864
 	bx lr
 	arm_func_end func_ov32_0217f864
 
+	.global func_ov32_0217f868
 	arm_func_start func_ov32_0217f868
 func_ov32_0217f868: ; 0x0217f868
 	bx lr
 	arm_func_end func_ov32_0217f868
 
+	.global func_ov32_0217f86c
 	arm_func_start func_ov32_0217f86c
 func_ov32_0217f86c: ; 0x0217f86c
 	bx lr
 	arm_func_end func_ov32_0217f86c
 
+	.global func_ov32_0217f870
 	arm_func_start func_ov32_0217f870
 func_ov32_0217f870: ; 0x0217f870
 	bx lr
 	arm_func_end func_ov32_0217f870
 
+	.global func_ov32_0217f874
 	arm_func_start func_ov32_0217f874
 func_ov32_0217f874: ; 0x0217f874
 	bx lr
 	arm_func_end func_ov32_0217f874
 
+	.global func_ov32_0217f878
 	arm_func_start func_ov32_0217f878
 func_ov32_0217f878: ; 0x0217f878
 	stmdb sp!, {r3, lr}
@@ -4564,6 +4705,7 @@ func_ov32_0217f878: ; 0x0217f878
 	arm_func_end func_ov32_0217f878
 _0217f8a4: .word data_027e0fe0
 
+	.global func_ov32_0217f8a8
 	arm_func_start func_ov32_0217f8a8
 func_ov32_0217f8a8: ; 0x0217f8a8
 	stmdb sp!, {r4, lr}
@@ -4667,6 +4809,7 @@ _0217fa24: .word data_ov32_02185c04
 _0217fa28: .word data_ov32_02185c08
 _0217fa2c: .word data_ov32_02185c0c
 
+	.global func_ov32_0217fa30
 	arm_func_start func_ov32_0217fa30
 func_ov32_0217fa30: ; 0x0217fa30
 	stmdb sp!, {r4, lr}
@@ -4690,6 +4833,7 @@ func_ov32_0217fa30: ; 0x0217fa30
 	arm_func_end func_ov32_0217fa30
 _0217fa74: .word func_ov00_020b7d74
 
+	.global func_ov32_0217fa78
 	arm_func_start func_ov32_0217fa78
 func_ov32_0217fa78: ; 0x0217fa78
 	stmdb sp!, {r4, lr}
@@ -4715,6 +4859,7 @@ func_ov32_0217fa78: ; 0x0217fa78
 	arm_func_end func_ov32_0217fa78
 _0217fac4: .word func_ov00_020b7d74
 
+	.global func_ov32_0217fac8
 	arm_func_start func_ov32_0217fac8
 func_ov32_0217fac8: ; 0x0217fac8
 	stmdb sp!, {r4, lr}
@@ -4772,6 +4917,7 @@ _0217fb5c:
 	arm_func_end func_ov32_0217fac8
 _0217fb8c: .word data_ov32_02185a4c
 
+	.global func_ov32_0217fb90
 	arm_func_start func_ov32_0217fb90
 func_ov32_0217fb90: ; 0x0217fb90
 	stmdb sp!, {r4, lr}
@@ -4842,6 +4988,7 @@ _0217fbcc:
 _0217fc84: .word 0x0000270f
 _0217fc88: .word data_027e0fe4
 
+	.global func_ov32_0217fc8c
 	arm_func_start func_ov32_0217fc8c
 func_ov32_0217fc8c: ; 0x0217fc8c
 	mov r1, #0
@@ -4851,6 +4998,7 @@ func_ov32_0217fc8c: ; 0x0217fc8c
 	bx lr
 	arm_func_end func_ov32_0217fc8c
 
+	.global func_ov32_0217fca0
 	arm_func_start func_ov32_0217fca0
 func_ov32_0217fca0: ; 0x0217fca0
 	stmdb sp!, {r4, r5, r6, lr}
@@ -4910,6 +5058,7 @@ _0217fd34:
 	arm_func_end func_ov32_0217fca0
 _0217fd64: .word 0x00000b33
 
+	.global func_ov32_0217fd68
 	arm_func_start func_ov32_0217fd68
 func_ov32_0217fd68: ; 0x0217fd68
 	ldr r0, [r0, #0x29c]
@@ -4919,6 +5068,7 @@ func_ov32_0217fd68: ; 0x0217fd68
 	bx lr
 	arm_func_end func_ov32_0217fd68
 
+	.global func_ov32_0217fd7c
 	arm_func_start func_ov32_0217fd7c
 func_ov32_0217fd7c: ; 0x0217fd7c
 	ldr ip, _0217fd90 ; =func_ov00_020c51d0
@@ -4930,6 +5080,7 @@ func_ov32_0217fd7c: ; 0x0217fd7c
 	arm_func_end func_ov32_0217fd7c
 _0217fd90: .word func_ov00_020c51d0
 
+	.global func_ov32_0217fd94
 	arm_func_start func_ov32_0217fd94
 func_ov32_0217fd94: ; 0x0217fd94
 	stmdb sp!, {r4, lr}
@@ -4983,6 +5134,7 @@ func_ov32_0217fd94: ; 0x0217fd94
 	arm_func_end func_ov32_0217fd94
 _0217fe50: .word data_02050f54
 
+	.global func_ov32_0217fe54
 	arm_func_start func_ov32_0217fe54
 func_ov32_0217fe54: ; 0x0217fe54
 	stmdb sp!, {r4, lr}
@@ -5010,6 +5162,7 @@ _0217fe8c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0217fe54
 
+	.global func_ov32_0217feac
 	arm_func_start func_ov32_0217feac
 func_ov32_0217feac: ; 0x0217feac
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -5126,6 +5279,7 @@ _02180050: .word data_027e0764
 _02180054: .word 0x0000ffff
 _02180058: .word data_02050f54
 
+	.global func_ov32_0218005c
 	arm_func_start func_ov32_0218005c
 func_ov32_0218005c: ; 0x0218005c
 	stmdb sp!, {r4, lr}
@@ -5139,6 +5293,7 @@ func_ov32_0218005c: ; 0x0218005c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0218005c
 
+	.global func_ov32_02180080
 	arm_func_start func_ov32_02180080
 func_ov32_02180080: ; 0x02180080
 	mov r1, #2
@@ -5149,6 +5304,7 @@ func_ov32_02180080: ; 0x02180080
 	bx lr
 	arm_func_end func_ov32_02180080
 
+	.global func_ov32_02180098
 	arm_func_start func_ov32_02180098
 func_ov32_02180098: ; 0x02180098
 	stmdb sp!, {r4, lr}
@@ -5172,6 +5328,7 @@ func_ov32_02180098: ; 0x02180098
 	arm_func_end func_ov32_02180098
 _021800dc: .word 0x0000071c
 
+	.global func_ov32_021800e0
 	arm_func_start func_ov32_021800e0
 func_ov32_021800e0: ; 0x021800e0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -5285,6 +5442,7 @@ _0218027c: .word 0x000005ed
 _02180280: .word data_02050f54
 _02180284: .word 0x00000199
 
+	.global func_ov32_02180288
 	arm_func_start func_ov32_02180288
 func_ov32_02180288: ; 0x02180288
 	stmdb sp!, {r4, lr}
@@ -5304,6 +5462,7 @@ func_ov32_02180288: ; 0x02180288
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180288
 
+	.global func_ov32_021802c4
 	arm_func_start func_ov32_021802c4
 func_ov32_021802c4: ; 0x021802c4
 	stmdb sp!, {r4, lr}
@@ -5369,6 +5528,7 @@ func_ov32_021802c4: ; 0x021802c4
 _021803ac: .word data_027e0fe8
 _021803b0: .word 0x47454c4c
 
+	.global func_ov32_021803b4
 	arm_func_start func_ov32_021803b4
 func_ov32_021803b4: ; 0x021803b4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -5434,6 +5594,7 @@ func_ov32_021803b4: ; 0x021803b4
 	arm_func_end func_ov32_021803b4
 _021804a0: .word data_027e0764
 
+	.global func_ov32_021804a4
 	arm_func_start func_ov32_021804a4
 func_ov32_021804a4: ; 0x021804a4
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -5690,6 +5851,7 @@ _02180864: .word data_027e0f6c
 _02180868: .word 0x0000ffff
 _0218086c: .word 0x00000a66
 
+	.global func_ov32_02180870
 	arm_func_start func_ov32_02180870
 func_ov32_02180870: ; 0x02180870
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -5814,6 +5976,7 @@ _02180a34: .word data_027e0f94
 _02180a38: .word data_02050f54
 _02180a3c: .word 0x0000099a
 
+	.global func_ov32_02180a40
 	arm_func_start func_ov32_02180a40
 func_ov32_02180a40: ; 0x02180a40
 	stmdb sp!, {r4, lr}
@@ -5827,6 +5990,7 @@ func_ov32_02180a40: ; 0x02180a40
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180a40
 
+	.global func_ov32_02180a64
 	arm_func_start func_ov32_02180a64
 func_ov32_02180a64: ; 0x02180a64
 	mov r1, #2
@@ -5841,6 +6005,7 @@ func_ov32_02180a64: ; 0x02180a64
 	bx lr
 	arm_func_end func_ov32_02180a64
 
+	.global func_ov32_02180a8c
 	arm_func_start func_ov32_02180a8c
 func_ov32_02180a8c: ; 0x02180a8c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -5871,6 +6036,7 @@ _02180ae8:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov32_02180a8c
 
+	.global func_ov32_02180af0
 	arm_func_start func_ov32_02180af0
 func_ov32_02180af0: ; 0x02180af0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -5914,6 +6080,7 @@ func_ov32_02180af0: ; 0x02180af0
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov32_02180af0
 
+	.global func_ov32_02180b8c
 	arm_func_start func_ov32_02180b8c
 func_ov32_02180b8c: ; 0x02180b8c
 	stmdb sp!, {r3, lr}
@@ -5924,6 +6091,7 @@ func_ov32_02180b8c: ; 0x02180b8c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_02180b8c
 
+	.global func_ov32_02180ba4
 	arm_func_start func_ov32_02180ba4
 func_ov32_02180ba4: ; 0x02180ba4
 	stmdb sp!, {r4, lr}
@@ -5952,6 +6120,7 @@ _02180bec:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180ba4
 
+	.global func_ov32_02180c00
 	arm_func_start func_ov32_02180c00
 func_ov32_02180c00: ; 0x02180c00
 	stmdb sp!, {r4, lr}
@@ -5990,6 +6159,7 @@ _02180c74:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180c00
 
+	.global func_ov32_02180c7c
 	arm_func_start func_ov32_02180c7c
 func_ov32_02180c7c: ; 0x02180c7c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -6102,6 +6272,7 @@ _02180dec:
 	arm_func_end func_ov32_02180c7c
 _02180df4: .word data_027e0fc8
 
+	.global func_ov32_02180df8
 	arm_func_start func_ov32_02180df8
 func_ov32_02180df8: ; 0x02180df8
 	ldr ip, _02180e04 ; =func_01fffcd8
@@ -6111,6 +6282,7 @@ func_ov32_02180df8: ; 0x02180df8
 	arm_func_end func_ov32_02180df8
 _02180e04: .word func_01fffcd8
 
+	.global func_ov32_02180e08
 	arm_func_start func_ov32_02180e08
 func_ov32_02180e08: ; 0x02180e08
 	stmdb sp!, {r4, lr}
@@ -6133,6 +6305,7 @@ _02180e3c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180e08
 
+	.global func_ov32_02180e4c
 	arm_func_start func_ov32_02180e4c
 func_ov32_02180e4c: ; 0x02180e4c
 	stmdb sp!, {r3, r4, lr}
@@ -6273,6 +6446,7 @@ _02181050: .word unk_02051f54
 _02181054: .word 0x00000666
 _02181058: .word data_ov00_020e9370
 
+	.global func_ov32_0218105c
 	arm_func_start func_ov32_0218105c
 func_ov32_0218105c: ; 0x0218105c
 	stmdb sp!, {r4, lr}
@@ -6292,6 +6466,7 @@ func_ov32_0218105c: ; 0x0218105c
 	arm_func_end func_ov32_0218105c
 _02181090: .word data_027e0f84
 
+	.global func_ov32_02181094
 	arm_func_start func_ov32_02181094
 func_ov32_02181094: ; 0x02181094
 	stmdb sp!, {r4, lr}
@@ -6434,6 +6609,7 @@ _021812ac: .word data_ov32_02185cd8
 _021812b0: .word data_ov32_02184d00
 _021812b4: .word data_ov32_02184d10
 
+	.global func_ov32_021812b8
 	arm_func_start func_ov32_021812b8
 func_ov32_021812b8: ; 0x021812b8
 	stmdb sp!, {r4, lr}
@@ -6483,6 +6659,7 @@ func_ov32_021812b8: ; 0x021812b8
 _02181360: .word data_ov32_02185c44
 _02181364: .word data_027e0e58
 
+	.global func_ov32_02181368
 	arm_func_start func_ov32_02181368
 func_ov32_02181368: ; 0x02181368
 	stmdb sp!, {r4, lr}
@@ -6534,6 +6711,7 @@ func_ov32_02181368: ; 0x02181368
 _02181418: .word data_ov32_02185c44
 _0218141c: .word data_027e0e58
 
+	.global func_ov32_02181420
 	arm_func_start func_ov32_02181420
 func_ov32_02181420: ; 0x02181420
 	stmdb sp!, {r3, r4, lr}
@@ -6620,6 +6798,7 @@ _0218154c: .word data_ov32_02184ca8
 _02181550: .word 0x00001ccd
 _02181554: .word 0x000001b6
 
+	.global func_ov32_02181558
 	arm_func_start func_ov32_02181558
 func_ov32_02181558: ; 0x02181558
 	stmdb sp!, {r4, lr}
@@ -6681,6 +6860,7 @@ _02181614:
 	arm_func_end func_ov32_02181558
 _02181624: .word data_027e0e60
 
+	.global func_ov32_02181628
 	arm_func_start func_ov32_02181628
 func_ov32_02181628: ; 0x02181628
 	stmdb sp!, {r4, lr}
@@ -6721,6 +6901,7 @@ _02181698:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02181628
 
+	.global func_ov32_021816ac
 	arm_func_start func_ov32_021816ac
 func_ov32_021816ac: ; 0x021816ac
 	stmdb sp!, {r4, r5, r6, lr}
@@ -7159,6 +7340,7 @@ _02181cf4: .word data_027e0c68
 _02181cf8: .word data_027e103c
 _02181cfc: .word data_027e077c
 
+	.global func_ov32_02181d00
 	arm_func_start func_ov32_02181d00
 func_ov32_02181d00: ; 0x02181d00
 	stmdb sp!, {r3, r4, lr}
@@ -7553,18 +7735,21 @@ _021822a4: .word data_027e0f90
 _021822a8: .word data_027e0c68
 _021822ac: .word 0x0000039a
 
+	.global func_ov32_021822b0
 	arm_func_start func_ov32_021822b0
 func_ov32_021822b0: ; 0x021822b0
 	mov r0, #0x8a
 	bx lr
 	arm_func_end func_ov32_021822b0
 
+	.global func_ov32_021822b8
 	arm_func_start func_ov32_021822b8
 func_ov32_021822b8: ; 0x021822b8
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov32_021822b8
 
+	.global func_ov32_021822c0
 	arm_func_start func_ov32_021822c0
 func_ov32_021822c0: ; 0x021822c0
 	stmdb sp!, {r4, lr}
@@ -7628,6 +7813,7 @@ _02182388: .word 0x41525257
 _0218238c: .word 0x424d524e
 _02182390: .word 0x5342454d
 
+	.global func_ov32_02182394
 	arm_func_start func_ov32_02182394
 func_ov32_02182394: ; 0x02182394
 	stmdb sp!, {r3, lr}
@@ -7670,6 +7856,7 @@ _02182410:
 _02182418: .word data_027e077c
 _0218241c: .word data_02056be4
 
+	.global func_ov32_02182420
 	arm_func_start func_ov32_02182420
 func_ov32_02182420: ; 0x02182420
 	ldrb r2, [r0, #0x6b]
@@ -7685,6 +7872,7 @@ func_ov32_02182420: ; 0x02182420
 	arm_func_end func_ov32_02182420
 _02182444: .word data_ov32_02184ca8
 
+	.global func_ov32_02182448
 	arm_func_start func_ov32_02182448
 func_ov32_02182448: ; 0x02182448
 	stmdb sp!, {r4, lr}
@@ -7708,6 +7896,7 @@ func_ov32_02182448: ; 0x02182448
 	arm_func_end func_ov32_02182448
 _0218248c: .word data_ov32_02185c10
 
+	.global func_ov32_02182490
 	arm_func_start func_ov32_02182490
 func_ov32_02182490: ; 0x02182490
 	stmdb sp!, {r3, r4, lr}
@@ -7752,6 +7941,7 @@ func_ov32_02182490: ; 0x02182490
 _02182524: .word data_027e0d78
 _02182528: .word 0x00000aab
 
+	.global func_ov32_0218252c
 	arm_func_start func_ov32_0218252c
 func_ov32_0218252c: ; 0x0218252c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -7855,6 +8045,7 @@ _021826a4: .word data_027e0e58
 _021826a8: .word data_027e0ffc
 _021826ac: .word 0x0000039d
 
+	.global func_ov32_021826b0
 	arm_func_start func_ov32_021826b0
 func_ov32_021826b0: ; 0x021826b0
 	stmdb sp!, {r4, lr}
@@ -7864,6 +8055,7 @@ func_ov32_021826b0: ; 0x021826b0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_021826b0
 
+	.global func_ov32_021826c4
 	arm_func_start func_ov32_021826c4
 func_ov32_021826c4: ; 0x021826c4
 	stmdb sp!, {r3, lr}
@@ -7880,6 +8072,7 @@ func_ov32_021826c4: ; 0x021826c4
 	arm_func_end func_ov32_021826c4
 _021826ec: .word data_027e0e60
 
+	.global func_ov32_021826f0
 	arm_func_start func_ov32_021826f0
 func_ov32_021826f0: ; 0x021826f0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -7983,6 +8176,7 @@ _02182860: .word data_027e080c
 _02182864: .word data_027e0618
 _02182868: .word data_ov32_02184cc0
 
+	.global func_ov32_0218286c
 	arm_func_start func_ov32_0218286c
 func_ov32_0218286c: ; 0x0218286c
 	stmdb sp!, {r4, lr}
@@ -8083,12 +8277,14 @@ _02182984:
 	arm_func_end func_ov32_0218286c
 _021829e0: .word data_02050f54
 
+	.global func_ov32_021829e4
 	arm_func_start func_ov32_021829e4
 func_ov32_021829e4: ; 0x021829e4
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov32_021829e4
 
+	.global func_ov32_021829ec
 	arm_func_start func_ov32_021829ec
 func_ov32_021829ec: ; 0x021829ec
 	ldrh r1, [r0, #0x72]
@@ -8114,6 +8310,7 @@ _02182a20:
 	bx lr
 	arm_func_end func_ov32_021829ec
 
+	.global func_ov32_02182a3c
 	arm_func_start func_ov32_02182a3c
 func_ov32_02182a3c: ; 0x02182a3c
 	stmdb sp!, {r3, lr}
@@ -8128,18 +8325,21 @@ func_ov32_02182a3c: ; 0x02182a3c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_02182a3c
 
+	.global func_ov32_02182a64
 	arm_func_start func_ov32_02182a64
 func_ov32_02182a64: ; 0x02182a64
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov32_02182a64
 
+	.global func_ov32_02182a6c
 	arm_func_start func_ov32_02182a6c
 func_ov32_02182a6c: ; 0x02182a6c
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov32_02182a6c
 
+	.global func_ov32_02182a74
 	arm_func_start func_ov32_02182a74
 func_ov32_02182a74: ; 0x02182a74
 	stmdb sp!, {r3, lr}
@@ -8153,12 +8353,14 @@ func_ov32_02182a74: ; 0x02182a74
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_02182a74
 
+	.global func_ov32_02182a98
 	arm_func_start func_ov32_02182a98
 func_ov32_02182a98: ; 0x02182a98
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov32_02182a98
 
+	.global func_ov32_02182aa0
 	arm_func_start func_ov32_02182aa0
 func_ov32_02182aa0: ; 0x02182aa0
 	stmdb sp!, {r4, lr}
@@ -8170,6 +8372,7 @@ func_ov32_02182aa0: ; 0x02182aa0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02182aa0
 
+	.global func_ov32_02182abc
 	arm_func_start func_ov32_02182abc
 func_ov32_02182abc: ; 0x02182abc
 	stmdb sp!, {r4, lr}
@@ -8189,6 +8392,7 @@ func_ov32_02182abc: ; 0x02182abc
 	arm_func_end func_ov32_02182abc
 _02182af0: .word data_027e0f84
 
+	.global func_ov32_02182af4
 	arm_func_start func_ov32_02182af4
 func_ov32_02182af4: ; 0x02182af4
 	stmdb sp!, {r4, lr}
@@ -8246,6 +8450,7 @@ _02182bb8: .word data_027e0f68
 _02182bbc: .word data_ov32_02185da0
 _02182bc0: .word data_ov32_02184d28
 
+	.global func_ov32_02182bc4
 	arm_func_start func_ov32_02182bc4
 func_ov32_02182bc4: ; 0x02182bc4
 	stmdb sp!, {r4, lr}
@@ -8260,6 +8465,7 @@ func_ov32_02182bc4: ; 0x02182bc4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02182bc4
 
+	.global func_ov32_02182bec
 	arm_func_start func_ov32_02182bec
 func_ov32_02182bec: ; 0x02182bec
 	stmdb sp!, {r4, lr}
@@ -8276,12 +8482,14 @@ func_ov32_02182bec: ; 0x02182bec
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02182bec
 
+	.global func_ov32_02182c1c
 	arm_func_start func_ov32_02182c1c
 func_ov32_02182c1c: ; 0x02182c1c
 	mov r0, #0x8b
 	bx lr
 	arm_func_end func_ov32_02182c1c
 
+	.global func_ov32_02182c24
 	arm_func_start func_ov32_02182c24
 func_ov32_02182c24: ; 0x02182c24
 	stmdb sp!, {r4, lr}
@@ -8293,6 +8501,7 @@ func_ov32_02182c24: ; 0x02182c24
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02182c24
 
+	.global func_ov32_02182c40
 	arm_func_start func_ov32_02182c40
 func_ov32_02182c40: ; 0x02182c40
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -8387,6 +8596,7 @@ _02182d80: .word data_027e0ffc
 _02182d84: .word 0x0000039f
 _02182d88: .word data_027e0f68
 
+	.global func_ov32_02182d8c
 	arm_func_start func_ov32_02182d8c
 func_ov32_02182d8c: ; 0x02182d8c
 	stmdb sp!, {r4, lr}
@@ -8401,6 +8611,7 @@ func_ov32_02182d8c: ; 0x02182d8c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02182d8c
 
+	.global func_ov32_02182db4
 	arm_func_start func_ov32_02182db4
 func_ov32_02182db4: ; 0x02182db4
 	stmdb sp!, {r3, r4, r5, r6, lr}
@@ -8469,6 +8680,7 @@ _02182e80:
 _02182e98: .word data_027e0f74
 _02182e9c: .word data_027e0ffc
 
+	.global func_ov32_02182ea0
 	arm_func_start func_ov32_02182ea0
 func_ov32_02182ea0: ; 0x02182ea0
 	ldr ip, _02182eac ; =func_ov00_0208b9e4
@@ -8478,6 +8690,7 @@ func_ov32_02182ea0: ; 0x02182ea0
 	arm_func_end func_ov32_02182ea0
 _02182eac: .word func_ov00_0208b9e4
 
+	.global func_ov32_02182eb0
 	arm_func_start func_ov32_02182eb0
 func_ov32_02182eb0: ; 0x02182eb0
 	stmdb sp!, {r3, lr}
@@ -8489,6 +8702,7 @@ func_ov32_02182eb0: ; 0x02182eb0
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov32_02182eb0
 
+	.global func_ov32_02182ecc
 	arm_func_start func_ov32_02182ecc
 func_ov32_02182ecc: ; 0x02182ecc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -8583,21 +8797,25 @@ _0218301c: .word 0x45800000
 _02183020: .word 0x46800000
 _02183024: .word data_02050f54
 
+	.global func_ov32_02183028
 	arm_func_start func_ov32_02183028
 func_ov32_02183028: ; 0x02183028
 	bx lr
 	arm_func_end func_ov32_02183028
 
+	.global func_ov32_0218302c
 	arm_func_start func_ov32_0218302c
 func_ov32_0218302c: ; 0x0218302c
 	bx lr
 	arm_func_end func_ov32_0218302c
 
+	.global func_ov32_02183030
 	arm_func_start func_ov32_02183030
 func_ov32_02183030: ; 0x02183030
 	bx lr
 	arm_func_end func_ov32_02183030
 
+	.global func_ov32_02183034
 	arm_func_start func_ov32_02183034
 func_ov32_02183034: ; 0x02183034
 	stmdb sp!, {r3, lr}
@@ -8615,6 +8833,7 @@ func_ov32_02183034: ; 0x02183034
 	arm_func_end func_ov32_02183034
 _02183060: .word data_027e0fe0
 
+	.global func_ov32_02183064
 	arm_func_start func_ov32_02183064
 func_ov32_02183064: ; 0x02183064
 	stmdb sp!, {r4, lr}
@@ -8639,6 +8858,7 @@ func_ov32_02183064: ; 0x02183064
 _021830a8: .word data_ov32_02185e30
 _021830ac: .word data_027e0fec
 
+	.global func_ov32_021830b0
 	arm_func_start func_ov32_021830b0
 func_ov32_021830b0: ; 0x021830b0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -8702,6 +8922,7 @@ _02183180: .word data_ov32_02185da8
 _02183184: .word data_027e0764
 _02183188: .word 0x0000ffff
 
+	.global func_ov32_0218318c
 	arm_func_start func_ov32_0218318c
 func_ov32_0218318c: ; 0x0218318c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -8818,6 +9039,7 @@ _0218333c: .word 0x00001801
 _02183340: .word data_02050f54
 _02183344: .word data_027e0e60
 
+	.global func_ov32_02183348
 	arm_func_start func_ov32_02183348
 func_ov32_02183348: ; 0x02183348
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
@@ -8952,6 +9174,7 @@ _02183534: .word data_027e0764
 _02183538: .word 0x00002001
 _0218353c: .word data_027e0e60
 
+	.global func_ov32_02183540
 	arm_func_start func_ov32_02183540
 func_ov32_02183540: ; 0x02183540
 	stmdb sp!, {r3, r4, lr}
@@ -8981,6 +9204,7 @@ func_ov32_02183540: ; 0x02183540
 	arm_func_end func_ov32_02183540
 _0218359c: .word 0x00000333
 
+	.global func_ov32_021835a0
 	arm_func_start func_ov32_021835a0
 func_ov32_021835a0: ; 0x021835a0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -9072,6 +9296,7 @@ _021836ec: .word data_027e0764
 _021836f0: .word data_02050f54
 _021836f4: .word 0x00000b34
 
+	.global func_ov32_021836f8
 	arm_func_start func_ov32_021836f8
 func_ov32_021836f8: ; 0x021836f8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
@@ -9149,6 +9374,7 @@ _0218380c: .word data_02050f54
 _02183810: .word data_027e0764
 _02183814: .word 0x00000b34
 
+	.global func_ov32_02183818
 	arm_func_start func_ov32_02183818
 func_ov32_02183818: ; 0x02183818
 	stmdb sp!, {r3, r4, lr}
@@ -9201,6 +9427,7 @@ _021838c8: .word data_027e0f94
 _021838cc: .word data_027e0e60
 _021838d0: .word 0x00000333
 
+	.global func_ov32_021838d4
 	arm_func_start func_ov32_021838d4
 func_ov32_021838d4: ; 0x021838d4
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
@@ -9296,6 +9523,7 @@ _021839cc:
 	arm_func_end func_ov32_021838d4
 _02183a24: .word data_027e0764
 
+	.global func_ov32_02183a28
 	arm_func_start func_ov32_02183a28
 func_ov32_02183a28: ; 0x02183a28
 	stmdb sp!, {r4, r5, r6, lr}
@@ -9454,6 +9682,7 @@ _02183c58:
 _02183c60: .word data_027e0764
 _02183c64: .word data_027e0ffc
 
+	.global func_ov32_02183c68
 	arm_func_start func_ov32_02183c68
 func_ov32_02183c68: ; 0x02183c68
 	stmdb sp!, {r4, lr}
@@ -9472,6 +9701,7 @@ func_ov32_02183c68: ; 0x02183c68
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02183c68
 
+	.global func_ov32_02183ca0
 	arm_func_start func_ov32_02183ca0
 func_ov32_02183ca0: ; 0x02183ca0
 	stmdb sp!, {r4, lr}
@@ -9495,6 +9725,7 @@ func_ov32_02183ca0: ; 0x02183ca0
 	arm_func_end func_ov32_02183ca0
 _02183ce4: .word func_ov00_020b7d74
 
+	.global func_ov32_02183ce8
 	arm_func_start func_ov32_02183ce8
 func_ov32_02183ce8: ; 0x02183ce8
 	stmdb sp!, {r4, lr}
@@ -9516,6 +9747,7 @@ func_ov32_02183ce8: ; 0x02183ce8
 	arm_func_end func_ov32_02183ce8
 _02183d24: .word func_ov00_020b7d74
 
+	.global func_ov32_02183d28
 	arm_func_start func_ov32_02183d28
 func_ov32_02183d28: ; 0x02183d28
 	stmdb sp!, {r3, lr}
@@ -9533,6 +9765,7 @@ func_ov32_02183d28: ; 0x02183d28
 	arm_func_end func_ov32_02183d28
 _02183d54: .word data_027e0fe0
 
+	.global func_ov32_02183d58
 	arm_func_start func_ov32_02183d58
 func_ov32_02183d58: ; 0x02183d58
 	stmdb sp!, {r4, lr}
@@ -9557,6 +9790,7 @@ func_ov32_02183d58: ; 0x02183d58
 _02183d9c: .word data_ov32_02185fc0
 _02183da0: .word data_027e0fec
 
+	.global func_ov32_02183da4
 	arm_func_start func_ov32_02183da4
 func_ov32_02183da4: ; 0x02183da4
 	stmdb sp!, {r4, lr}
@@ -9635,6 +9869,7 @@ _02183ea8: .word 0xffff871c
 _02183eac: .word 0xffffeaab
 _02183eb0: .word data_ov32_02185f38
 
+	.global func_ov32_02183eb4
 	arm_func_start func_ov32_02183eb4
 func_ov32_02183eb4: ; 0x02183eb4
 	add r0, r0, #0x200
@@ -9645,6 +9880,7 @@ func_ov32_02183eb4: ; 0x02183eb4
 	bx lr
 	arm_func_end func_ov32_02183eb4
 
+	.global func_ov32_02183ecc
 	arm_func_start func_ov32_02183ecc
 func_ov32_02183ecc: ; 0x02183ecc
 	stmdb sp!, {r3, r4, r5, lr}
@@ -9696,6 +9932,7 @@ func_ov32_02183ecc: ; 0x02183ecc
 _02183f7c: .word 0x00e39000
 _02183f80: .word data_02050f54
 
+	.global func_ov32_02183f84
 	arm_func_start func_ov32_02183f84
 func_ov32_02183f84: ; 0x02183f84
 	add r0, r0, #0x200
@@ -9706,6 +9943,7 @@ func_ov32_02183f84: ; 0x02183f84
 	bx lr
 	arm_func_end func_ov32_02183f84
 
+	.global func_ov32_02183f9c
 	arm_func_start func_ov32_02183f9c
 func_ov32_02183f9c: ; 0x02183f9c
 	stmdb sp!, {r4, lr}
@@ -9721,6 +9959,7 @@ func_ov32_02183f9c: ; 0x02183f9c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02183f9c
 
+	.global func_ov32_02183fc8
 	arm_func_start func_ov32_02183fc8
 func_ov32_02183fc8: ; 0x02183fc8
 	stmdb sp!, {r4, r5, r6, lr}
@@ -9779,6 +10018,7 @@ _02184080: .word data_027e0764
 _02184084: .word data_027e0ffc
 _02184088: .word 0x0000046c
 
+	.global func_ov32_0218408c
 	arm_func_start func_ov32_0218408c
 func_ov32_0218408c: ; 0x0218408c
 	stmdb sp!, {r3, r4, r5, lr}
@@ -9824,6 +10064,7 @@ _02184114:
 	arm_func_end func_ov32_0218408c
 _0218411c: .word data_027e0ffc
 
+	.global func_ov32_02184120
 	arm_func_start func_ov32_02184120
 func_ov32_02184120: ; 0x02184120
 	stmdb sp!, {r4, r5, r6, lr}
@@ -9942,6 +10183,7 @@ _021842b4: .word data_027e0764
 _021842b8: .word data_027e0ffc
 _021842bc: .word 0x0000046d
 
+	.global func_ov32_021842c0
 	arm_func_start func_ov32_021842c0
 func_ov32_021842c0: ; 0x021842c0
 	stmdb sp!, {r3, r4, lr}
@@ -10003,6 +10245,7 @@ _02184390: .word data_02050f54
 _02184394: .word 0x000004cd
 _02184398: .word data_ov00_020e9370
 
+	.global func_ov32_0218439c
 	arm_func_start func_ov32_0218439c
 func_ov32_0218439c: ; 0x0218439c
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
@@ -10118,6 +10361,7 @@ _02184548: .word data_02050f54
 _0218454c: .word 0x0000019a
 _02184550: .word data_027e0fe8
 
+	.global func_ov32_02184554
 	arm_func_start func_ov32_02184554
 func_ov32_02184554: ; 0x02184554
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
@@ -10169,6 +10413,7 @@ _021845f8: .word data_027e0764
 _021845fc: .word data_027e0ffc
 _02184600: .word 0x0000046b
 
+	.global func_ov32_02184604
 	arm_func_start func_ov32_02184604
 func_ov32_02184604: ; 0x02184604
 	stmdb sp!, {r4, lr}
@@ -10192,6 +10437,7 @@ func_ov32_02184604: ; 0x02184604
 	arm_func_end func_ov32_02184604
 _02184648: .word func_ov00_020b7d74
 
+	.global func_ov32_0218464c
 	arm_func_start func_ov32_0218464c
 func_ov32_0218464c: ; 0x0218464c
 	stmdb sp!, {r4, lr}
@@ -10213,6 +10459,7 @@ func_ov32_0218464c: ; 0x0218464c
 	arm_func_end func_ov32_0218464c
 _02184688: .word func_ov00_020b7d74
 
+	.global func_ov32_0218468c
 	arm_func_start func_ov32_0218468c
 func_ov32_0218468c: ; 0x0218468c
 	stmdb sp!, {r3, lr}
@@ -10230,6 +10477,7 @@ func_ov32_0218468c: ; 0x0218468c
 	arm_func_end func_ov32_0218468c
 _021846b8: .word data_027e0fe0
 
+	.global func_ov32_021846bc
 	arm_func_start func_ov32_021846bc
 func_ov32_021846bc: ; 0x021846bc
 	stmdb sp!, {r4, lr}
@@ -10249,6 +10497,7 @@ func_ov32_021846bc: ; 0x021846bc
 	arm_func_end func_ov32_021846bc
 _021846f0: .word data_ov32_021860d0
 
+	.global func_ov32_021846f4
 	arm_func_start func_ov32_021846f4
 func_ov32_021846f4: ; 0x021846f4
 	stmdb sp!, {r4, lr}
@@ -10270,6 +10519,7 @@ func_ov32_021846f4: ; 0x021846f4
 	arm_func_end func_ov32_021846f4
 _02184730: .word func_ov00_020b7d74
 
+	.global func_ov32_02184734
 	arm_func_start func_ov32_02184734
 func_ov32_02184734: ; 0x02184734
 	stmdb sp!, {r4, lr}
@@ -10293,6 +10543,7 @@ func_ov32_02184734: ; 0x02184734
 	arm_func_end func_ov32_02184734
 _02184778: .word func_ov00_020b7d74
 
+	.global func_ov32_0218477c
 	arm_func_start func_ov32_0218477c
 func_ov32_0218477c: ; 0x0218477c
 	stmdb sp!, {r4, lr}
@@ -10365,12 +10616,14 @@ _0218487c: .word data_027e0d0c
 _02184880: .word data_027e0fec
 _02184884: .word data_027e0fe4
 
+	.global func_ov32_02184888
 	arm_func_start func_ov32_02184888
 func_ov32_02184888: ; 0x02184888
 	mov r0, #0
 	bx lr
 	arm_func_end func_ov32_02184888
 
+	.global func_ov32_02184890
 	arm_func_start func_ov32_02184890
 func_ov32_02184890: ; 0x02184890
 	stmdb sp!, {r3, r4, lr}
@@ -10427,6 +10680,7 @@ _0218493c:
 	arm_func_end func_ov32_02184890
 _02184948: .word data_027e0e60
 
+	.global func_ov32_0218494c
 	arm_func_start func_ov32_0218494c
 func_ov32_0218494c: ; 0x0218494c
 	stmdb sp!, {r4, lr}
@@ -10443,6 +10697,7 @@ func_ov32_0218494c: ; 0x0218494c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0218494c
 
+	.global func_ov32_0218497c
 	arm_func_start func_ov32_0218497c
 func_ov32_0218497c: ; 0x0218497c
 	stmdb sp!, {r4, lr}
@@ -10458,6 +10713,7 @@ _0218499c:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_0218497c
 
+	.global func_ov32_021849a4
 	arm_func_start func_ov32_021849a4
 func_ov32_021849a4: ; 0x021849a4
 	stmdb sp!, {r4, lr}
@@ -10487,6 +10743,7 @@ _021849e8:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_021849a4
 
+	.global func_ov32_02184a00
 	arm_func_start func_ov32_02184a00
 func_ov32_02184a00: ; 0x02184a00
 	stmdb sp!, {r4, r5, lr}
@@ -10533,6 +10790,7 @@ _02184a8c:
 	arm_func_end func_ov32_02184a00
 _02184a98: .word data_02050f54
 
+	.global func_ov32_02184a9c
 	arm_func_start func_ov32_02184a9c
 func_ov32_02184a9c: ; 0x02184a9c
 	stmdb sp!, {r4, r5, r6, lr}
@@ -10604,191 +10862,279 @@ _02184b98: .word 0x00000266
 _02184b9c: .word data_027e0e60
 _02184ba0: .word 0x0000059a
 _02184ba4: .word data_ov00_020e9370
+	.global data_ov32_02184ba8
 data_ov32_02184ba8: ; 0x02184ba8
 	.byte 0x65, 0x79, 0x65, 0x00
+	.global data_ov32_02184bac
 data_ov32_02184bac: ; 0x02184bac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bb0
 data_ov32_02184bb0: ; 0x02184bb0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bb4
 data_ov32_02184bb4: ; 0x02184bb4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bb8
 data_ov32_02184bb8: ; 0x02184bb8
 	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bc0
 data_ov32_02184bc0: ; 0x02184bc0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bc4
 data_ov32_02184bc4: ; 0x02184bc4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bc8
 data_ov32_02184bc8: ; 0x02184bc8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bcc
 data_ov32_02184bcc: ; 0x02184bcc
 	.asciz "attack1"
+	.global data_ov32_02184bd4
 data_ov32_02184bd4: ; 0x02184bd4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bd8
 data_ov32_02184bd8: ; 0x02184bd8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bdc
 data_ov32_02184bdc: ; 0x02184bdc
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov32_02184be0
 data_ov32_02184be0: ; 0x02184be0
 	.asciz "sunken1"
+	.global data_ov32_02184be8
 data_ov32_02184be8: ; 0x02184be8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bec
 data_ov32_02184bec: ; 0x02184bec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184bf0
 data_ov32_02184bf0: ; 0x02184bf0
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov32_02184bf4
 data_ov32_02184bf4: ; 0x02184bf4
 	.asciz "sunken2"
+	.global data_ov32_02184bfc
 data_ov32_02184bfc: ; 0x02184bfc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c00
 data_ov32_02184c00: ; 0x02184c00
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c04
 data_ov32_02184c04: ; 0x02184c04
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c08
 data_ov32_02184c08: ; 0x02184c08
 	.asciz "sunken3"
+	.global data_ov32_02184c10
 data_ov32_02184c10: ; 0x02184c10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c14
 data_ov32_02184c14: ; 0x02184c14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c18
 data_ov32_02184c18: ; 0x02184c18
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov32_02184c1c
 data_ov32_02184c1c: ; 0x02184c1c
 	.asciz "ele_sta"
+	.global data_ov32_02184c24
 data_ov32_02184c24: ; 0x02184c24
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c28
 data_ov32_02184c28: ; 0x02184c28
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c2c
 data_ov32_02184c2c: ; 0x02184c2c
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov32_02184c30
 data_ov32_02184c30: ; 0x02184c30
 	.byte 0x63, 0x68, 0x65, 0x73, 0x74, 0x32, 0x00, 0x00
+	.global data_ov32_02184c38
 data_ov32_02184c38: ; 0x02184c38
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c3c
 data_ov32_02184c3c: ; 0x02184c3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c40
 data_ov32_02184c40: ; 0x02184c40
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c44
 data_ov32_02184c44: ; 0x02184c44
 	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c4c
 data_ov32_02184c4c: ; 0x02184c4c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c50
 data_ov32_02184c50: ; 0x02184c50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c54
 data_ov32_02184c54: ; 0x02184c54
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c58
 data_ov32_02184c58: ; 0x02184c58
 	.asciz "wait2"
 _02184c5e:
 	.byte 0x00, 0x00
+	.global data_ov32_02184c60
 data_ov32_02184c60: ; 0x02184c60
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c64
 data_ov32_02184c64: ; 0x02184c64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c68
 data_ov32_02184c68: ; 0x02184c68
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c6c
 data_ov32_02184c6c: ; 0x02184c6c
 	.byte 0x6a, 0x75, 0x6d, 0x70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c74
 data_ov32_02184c74: ; 0x02184c74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c78
 data_ov32_02184c78: ; 0x02184c78
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c7c
 data_ov32_02184c7c: ; 0x02184c7c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c80
 data_ov32_02184c80: ; 0x02184c80
 	.asciz "crush"
 _02184c86:
 	.byte 0x00, 0x00
+	.global data_ov32_02184c88
 data_ov32_02184c88: ; 0x02184c88
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c8c
 data_ov32_02184c8c: ; 0x02184c8c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c90
 data_ov32_02184c90: ; 0x02184c90
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184c94
 data_ov32_02184c94: ; 0x02184c94
 	.asciz "stick"
 _02184c9a:
 	.byte 0x00, 0x00
+	.global data_ov32_02184c9c
 data_ov32_02184c9c: ; 0x02184c9c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184ca0
 data_ov32_02184ca0: ; 0x02184ca0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184ca4
 data_ov32_02184ca4: ; 0x02184ca4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184ca8
 data_ov32_02184ca8: ; 0x02184ca8
 	.byte 0x00, 0x00
+	.global data_ov32_02184caa
 data_ov32_02184caa: ; 0x02184caa
 	.byte 0x55, 0x15
+	.global data_ov32_02184cac
 data_ov32_02184cac: ; 0x02184cac
 	.byte 0xab, 0x2a
+	.global data_ov32_02184cae
 data_ov32_02184cae: ; 0x02184cae
 	.byte 0x00, 0x40
+	.global data_ov32_02184cb0
 data_ov32_02184cb0: ; 0x02184cb0
 	.byte 0x55, 0x55
+	.global data_ov32_02184cb2
 data_ov32_02184cb2: ; 0x02184cb2
 	.byte 0xab, 0x6a
+	.global data_ov32_02184cb4
 data_ov32_02184cb4: ; 0x02184cb4
 	.byte 0x00, 0x80
+	.global data_ov32_02184cb6
 data_ov32_02184cb6: ; 0x02184cb6
 	.byte 0x55, 0x95
+	.global data_ov32_02184cb8
 data_ov32_02184cb8: ; 0x02184cb8
 	.byte 0xab, 0xaa
+	.global data_ov32_02184cba
 data_ov32_02184cba: ; 0x02184cba
 	.byte 0x00, 0xc0
+	.global data_ov32_02184cbc
 data_ov32_02184cbc: ; 0x02184cbc
 	.byte 0x55, 0xd5
+	.global data_ov32_02184cbe
 data_ov32_02184cbe: ; 0x02184cbe
 	.byte 0xab, 0xea
+	.global data_ov32_02184cc0
 data_ov32_02184cc0: ; 0x02184cc0
 	.byte 0x07, 0x00, 0x00, 0x00
+	.global data_ov32_02184cc4
 data_ov32_02184cc4: ; 0x02184cc4
 	.byte 0x06, 0x00, 0x00, 0x00
+	.global data_ov32_02184cc8
 data_ov32_02184cc8: ; 0x02184cc8
 	.byte 0x05, 0x00, 0x00, 0x00
+	.global data_ov32_02184ccc
 data_ov32_02184ccc: ; 0x02184ccc
 	.byte 0x04, 0x00, 0x00, 0x00
+	.global data_ov32_02184cd0
 data_ov32_02184cd0: ; 0x02184cd0
 	.byte 0x03, 0x00, 0x00, 0x00
+	.global data_ov32_02184cd4
 data_ov32_02184cd4: ; 0x02184cd4
 	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov32_02184cd8
 data_ov32_02184cd8: ; 0x02184cd8
 	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov32_02184cdc
 data_ov32_02184cdc: ; 0x02184cdc
 	.byte 0x0c, 0x00, 0x00, 0x00
+	.global data_ov32_02184ce0
 data_ov32_02184ce0: ; 0x02184ce0
 	.byte 0x0b, 0x00, 0x00, 0x00
+	.global data_ov32_02184ce4
 data_ov32_02184ce4: ; 0x02184ce4
 	.byte 0x0a, 0x00, 0x00, 0x00
+	.global data_ov32_02184ce8
 data_ov32_02184ce8: ; 0x02184ce8
 	.byte 0x09, 0x00, 0x00, 0x00
+	.global data_ov32_02184cec
 data_ov32_02184cec: ; 0x02184cec
 	.byte 0x08, 0x00, 0x00, 0x00
+	.global data_ov32_02184cf0
 data_ov32_02184cf0: ; 0x02184cf0
 	.asciz "ray_statue"
 _02184cfb:
 	.byte 0x00
+	.global data_ov32_02184cfc
 data_ov32_02184cfc: ; 0x02184cfc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184d00
 data_ov32_02184d00: ; 0x02184d00
 	.byte 0x73, 0x74, 0x61, 0x74, 0x75, 0x65, 0x5f, 0x62, 0x65, 0x61, 0x6d, 0x00
+	.global data_ov32_02184d0c
 data_ov32_02184d0c: ; 0x02184d0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184d10
 data_ov32_02184d10: ; 0x02184d10
 	.byte 0x73, 0x74, 0x61, 0x74, 0x75, 0x65, 0x5f, 0x62, 0x65, 0x61, 0x6d, 0x00
+	.global data_ov32_02184d1c
 data_ov32_02184d1c: ; 0x02184d1c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184d20
 data_ov32_02184d20: ; 0x02184d20
 	.byte 0x60, 0x00, 0x00, 0x00
+	.global data_ov32_02184d24
 data_ov32_02184d24: ; 0x02184d24
 	.byte 0x80, 0x00, 0x00, 0x00
+	.global data_ov32_02184d28
 data_ov32_02184d28: ; 0x02184d28
 	.byte 0x64, 0x6f, 0x6f, 0x72, 0x5f, 0x70, 0x6c, 0x75
 	.byte 0x63, 0x6b, 0x00, 0x00
+	.global data_ov32_02184d34
 data_ov32_02184d34: ; 0x02184d34
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02184d38
 data_ov32_02184d38: ; 0x02184d38
 	.byte 0x03, 0x00, 0x00, 0x00
 
+	.global func_ov32_02184d3c
 	arm_func_start func_ov32_02184d3c
 func_ov32_02184d3c: ; 0x02184d3c
 	stmdb sp!, {lr}
@@ -10869,6 +11215,7 @@ _02184e5c: .word data_ov32_02185524
 _02184e60: .word func_ov00_020cceec
 _02184e64: .word data_ov32_02186200
 
+	.global func_ov32_02184e68
 	arm_func_start func_ov32_02184e68
 func_ov32_02184e68: ; 0x02184e68
 	stmdb sp!, {lr}
@@ -10948,6 +11295,7 @@ _02184f84: .word data_ov32_02185738
 _02184f88: .word func_ov00_020cceec
 _02184f8c: .word data_ov32_0218622c
 
+	.global func_ov32_02184f90
 	arm_func_start func_ov32_02184f90
 func_ov32_02184f90: ; 0x02184f90
 	stmdb sp!, {lr}
@@ -11027,6 +11375,7 @@ _021850ac: .word data_ov32_02185a4c
 _021850b0: .word func_ov00_020cceec
 _021850b4: .word data_ov32_02186258
 
+	.global func_ov32_021850b8
 	arm_func_start func_ov32_021850b8
 func_ov32_021850b8: ; 0x021850b8
 	stmdb sp!, {r3, lr}
@@ -11062,6 +11411,7 @@ _02185124: .word data_ov32_02185c10
 _02185128: .word func_0202bac0
 _0218512c: .word data_ov32_02186278
 
+	.global func_ov32_02185130
 	arm_func_start func_ov32_02185130
 func_ov32_02185130: ; 0x02185130
 	stmdb sp!, {r3, lr}
@@ -11081,6 +11431,7 @@ _0218515c: .word func_ov32_02182abc
 _02185160: .word func_0203ebc8
 _02185164: .word data_ov32_0218628c
 
+	.global func_ov32_02185168
 	arm_func_start func_ov32_02185168
 func_ov32_02185168: ; 0x02185168
 	stmdb sp!, {lr}
@@ -11154,6 +11505,7 @@ _0218526c: .word data_ov32_02185da8
 _02185270: .word func_ov00_020cceec
 _02185274: .word data_ov32_021862b8
 
+	.global func_ov32_02185278
 	arm_func_start func_ov32_02185278
 func_ov32_02185278: ; 0x02185278
 	stmdb sp!, {lr}
@@ -11227,6 +11579,7 @@ _0218537c: .word data_ov32_02185f38
 _02185380: .word func_ov00_020cceec
 _02185384: .word data_ov32_021862e4
 
+	.global func_ov32_02185388
 	arm_func_start func_ov32_02185388
 func_ov32_02185388: ; 0x02185388
 	stmdb sp!, {r3, lr}
@@ -11247,1953 +11600,2926 @@ _021853b8: .word 0x49434848
 _021853bc: .word func_ov32_0218468c
 _021853c0: .word func_0203e7b4
 _021853c4: .word data_ov32_021862f0
+	.global data_ov32_021853c8
 data_ov32_021853c8: ; 0x021853c8
 	.byte 0x3c, 0x4d, 0x18, 0x02
+	.global data_ov32_021853cc
 data_ov32_021853cc: ; 0x021853cc
 	.byte 0x68, 0x4e, 0x18, 0x02
+	.global data_ov32_021853d0
 data_ov32_021853d0: ; 0x021853d0
 	.byte 0x90, 0x4f, 0x18, 0x02
+	.global data_ov32_021853d4
 data_ov32_021853d4: ; 0x021853d4
 	.byte 0xb8, 0x50, 0x18, 0x02
+	.global data_ov32_021853d8
 data_ov32_021853d8: ; 0x021853d8
 	.byte 0x30, 0x51, 0x18, 0x02
+	.global data_ov32_021853dc
 data_ov32_021853dc: ; 0x021853dc
 	.byte 0x68, 0x51, 0x18, 0x02
+	.global data_ov32_021853e0
 data_ov32_021853e0: ; 0x021853e0
 	.byte 0x78, 0x52, 0x18, 0x02
+	.global data_ov32_021853e4
 data_ov32_021853e4: ; 0x021853e4
 	.byte 0x88, 0x53, 0x18, 0x02
+	.global data_ov32_021853e8
 data_ov32_021853e8: ; 0x021853e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021853ec
 data_ov32_021853ec: ; 0x021853ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021853f0
 data_ov32_021853f0: ; 0x021853f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021853f4
 data_ov32_021853f4: ; 0x021853f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021853f8
 data_ov32_021853f8: ; 0x021853f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021853fc
 data_ov32_021853fc: ; 0x021853fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185400
 data_ov32_02185400: ; 0x02185400
 	.byte 0x43, 0x48, 0x55, 0x3a, 0x2f, 0x63, 0x68, 0x75, 0x63, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00
+	.global data_ov32_02185410
 data_ov32_02185410: ; 0x02185410
 	.byte 0x63, 0x68, 0x75, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185418
 data_ov32_02185418: ; 0x02185418
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218541c
 data_ov32_0218541c: ; 0x0218541c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185420
 data_ov32_02185420: ; 0x02185420
 	.byte 0x34, 0x5d, 0x0c, 0x02
+	.global data_ov32_02185424
 data_ov32_02185424: ; 0x02185424
 	.byte 0x70, 0xc0, 0x17, 0x02
+	.global data_ov32_02185428
 data_ov32_02185428: ; 0x02185428
 	.byte 0x58, 0x5e, 0x0c, 0x02
+	.global data_ov32_0218542c
 data_ov32_0218542c: ; 0x0218542c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185430
 data_ov32_02185430: ; 0x02185430
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185434
 data_ov32_02185434: ; 0x02185434
 	.byte 0x60, 0xbf, 0x17, 0x02
+	.global data_ov32_02185438
 data_ov32_02185438: ; 0x02185438
 	.byte 0x4c, 0xc1, 0x17, 0x02
+	.global data_ov32_0218543c
 data_ov32_0218543c: ; 0x0218543c
 	.byte 0x0c, 0x96, 0x0a, 0x02
+	.global data_ov32_02185440
 data_ov32_02185440: ; 0x02185440
 	.byte 0x14, 0x96, 0x0a, 0x02
+	.global data_ov32_02185444
 data_ov32_02185444: ; 0x02185444
 	.byte 0x50, 0x96, 0x0a, 0x02
+	.global data_ov32_02185448
 data_ov32_02185448: ; 0x02185448
 	.byte 0xd4, 0x96, 0x0a, 0x02
+	.global data_ov32_0218544c
 data_ov32_0218544c: ; 0x0218544c
 	.byte 0x40, 0x97, 0x0a, 0x02
+	.global data_ov32_02185450
 data_ov32_02185450: ; 0x02185450
 	.byte 0x64, 0x97, 0x0a, 0x02
+	.global data_ov32_02185454
 data_ov32_02185454: ; 0x02185454
 	.byte 0xd0, 0x97, 0x0a, 0x02
+	.global data_ov32_02185458
 data_ov32_02185458: ; 0x02185458
 	.byte 0xe0, 0x97, 0x0a, 0x02
+	.global data_ov32_0218545c
 data_ov32_0218545c: ; 0x0218545c
 	.byte 0xf8, 0x97, 0x0a, 0x02
+	.global data_ov32_02185460
 data_ov32_02185460: ; 0x02185460
 	.byte 0x64, 0x98, 0x0a, 0x02
+	.global data_ov32_02185464
 data_ov32_02185464: ; 0x02185464
 	.byte 0xbc, 0x98, 0x0a, 0x02
+	.global data_ov32_02185468
 data_ov32_02185468: ; 0x02185468
 	.byte 0x90, 0x98, 0x0a, 0x02
+	.global data_ov32_0218546c
 data_ov32_0218546c: ; 0x0218546c
 	.byte 0x68, 0x99, 0x0a, 0x02
+	.global data_ov32_02185470
 data_ov32_02185470: ; 0x02185470
 	.byte 0x94, 0x99, 0x0a, 0x02
+	.global data_ov32_02185474
 data_ov32_02185474: ; 0x02185474
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185478
 data_ov32_02185478: ; 0x02185478
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218547c
 data_ov32_0218547c: ; 0x0218547c
 	.byte 0x6d, 0x9b, 0x0a, 0x02
+	.global data_ov32_02185480
 data_ov32_02185480: ; 0x02185480
 	.byte 0x79, 0x9b, 0x0a, 0x02
+	.global data_ov32_02185484
 data_ov32_02185484: ; 0x02185484
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185488
 data_ov32_02185488: ; 0x02185488
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218548c
 data_ov32_0218548c: ; 0x0218548c
 	.byte 0xb4, 0xc7, 0x17, 0x02
+	.global data_ov32_02185490
 data_ov32_02185490: ; 0x02185490
 	.byte 0xec, 0xc7, 0x17, 0x02
+	.global data_ov32_02185494
 data_ov32_02185494: ; 0x02185494
 	.byte 0x18, 0xc8, 0x17, 0x02
+	.global data_ov32_02185498
 data_ov32_02185498: ; 0x02185498
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218549c
 data_ov32_0218549c: ; 0x0218549c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854a0
 data_ov32_021854a0: ; 0x021854a0
 	.byte 0x04, 0xc7, 0x17, 0x02
+	.global data_ov32_021854a4
 data_ov32_021854a4: ; 0x021854a4
 	.byte 0x48, 0xc7, 0x17, 0x02
+	.global data_ov32_021854a8
 data_ov32_021854a8: ; 0x021854a8
 	.byte 0x14, 0xc8, 0x17, 0x02
+	.global data_ov32_021854ac
 data_ov32_021854ac: ; 0x021854ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854b0
 data_ov32_021854b0: ; 0x021854b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854b4
 data_ov32_021854b4: ; 0x021854b4
 	.byte 0x60, 0xc4, 0x17, 0x02
+	.global data_ov32_021854b8
 data_ov32_021854b8: ; 0x021854b8
 	.byte 0x84, 0xc4, 0x17, 0x02
+	.global data_ov32_021854bc
 data_ov32_021854bc: ; 0x021854bc
 	.byte 0x10, 0xc8, 0x17, 0x02
+	.global data_ov32_021854c0
 data_ov32_021854c0: ; 0x021854c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854c4
 data_ov32_021854c4: ; 0x021854c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854c8
 data_ov32_021854c8: ; 0x021854c8
 	.byte 0xe0, 0xc2, 0x17, 0x02
+	.global data_ov32_021854cc
 data_ov32_021854cc: ; 0x021854cc
 	.byte 0x08, 0xc3, 0x17, 0x02
+	.global data_ov32_021854d0
 data_ov32_021854d0: ; 0x021854d0
 	.byte 0x0c, 0xc8, 0x17, 0x02
+	.global data_ov32_021854d4
 data_ov32_021854d4: ; 0x021854d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854d8
 data_ov32_021854d8: ; 0x021854d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854dc
 data_ov32_021854dc: ; 0x021854dc
 	.byte 0xac, 0xc2, 0x17, 0x02
+	.global data_ov32_021854e0
 data_ov32_021854e0: ; 0x021854e0
 	.byte 0xd0, 0xc2, 0x17, 0x02
+	.global data_ov32_021854e4
 data_ov32_021854e4: ; 0x021854e4
 	.byte 0x08, 0xc8, 0x17, 0x02
+	.global data_ov32_021854e8
 data_ov32_021854e8: ; 0x021854e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854ec
 data_ov32_021854ec: ; 0x021854ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021854f0
 data_ov32_021854f0: ; 0x021854f0
 	.byte 0xcc, 0xc1, 0x17, 0x02
+	.global data_ov32_021854f4
 data_ov32_021854f4: ; 0x021854f4
 	.byte 0xfc, 0xc1, 0x17, 0x02
+	.global data_ov32_021854f8
 data_ov32_021854f8: ; 0x021854f8
 	.byte 0x04, 0xc8, 0x17, 0x02
+	.global data_ov32_021854fc
 data_ov32_021854fc: ; 0x021854fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185500
 data_ov32_02185500: ; 0x02185500
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185504
 data_ov32_02185504: ; 0x02185504
 	.byte 0xa0, 0xc1, 0x17, 0x02
+	.global data_ov32_02185508
 data_ov32_02185508: ; 0x02185508
 	.byte 0xbc, 0xc1, 0x17, 0x02
+	.global data_ov32_0218550c
 data_ov32_0218550c: ; 0x0218550c
 	.byte 0x00, 0xc8, 0x17, 0x02
+	.global data_ov32_02185510
 data_ov32_02185510: ; 0x02185510
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185514
 data_ov32_02185514: ; 0x02185514
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185518
 data_ov32_02185518: ; 0x02185518
 	.byte 0x68, 0xc1, 0x17, 0x02
+	.global data_ov32_0218551c
 data_ov32_0218551c: ; 0x0218551c
 	.byte 0x90, 0xc1, 0x17, 0x02
+	.global data_ov32_02185520
 data_ov32_02185520: ; 0x02185520
 	.byte 0xfc, 0xc7, 0x17, 0x02
+	.global data_ov32_02185524
 data_ov32_02185524: ; 0x02185524
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185528
 data_ov32_02185528: ; 0x02185528
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218552c
 data_ov32_0218552c: ; 0x0218552c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185530
 data_ov32_02185530: ; 0x02185530
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185534
 data_ov32_02185534: ; 0x02185534
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185538
 data_ov32_02185538: ; 0x02185538
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218553c
 data_ov32_0218553c: ; 0x0218553c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185540
 data_ov32_02185540: ; 0x02185540
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185544
 data_ov32_02185544: ; 0x02185544
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185548
 data_ov32_02185548: ; 0x02185548
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218554c
 data_ov32_0218554c: ; 0x0218554c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185550
 data_ov32_02185550: ; 0x02185550
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185554
 data_ov32_02185554: ; 0x02185554
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185558
 data_ov32_02185558: ; 0x02185558
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218555c
 data_ov32_0218555c: ; 0x0218555c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185560
 data_ov32_02185560: ; 0x02185560
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185564
 data_ov32_02185564: ; 0x02185564
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185568
 data_ov32_02185568: ; 0x02185568
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218556c
 data_ov32_0218556c: ; 0x0218556c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185570
 data_ov32_02185570: ; 0x02185570
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185574
 data_ov32_02185574: ; 0x02185574
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185578
 data_ov32_02185578: ; 0x02185578
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218557c
 data_ov32_0218557c: ; 0x0218557c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185580
 data_ov32_02185580: ; 0x02185580
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185584
 data_ov32_02185584: ; 0x02185584
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185588
 data_ov32_02185588: ; 0x02185588
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218558c
 data_ov32_0218558c: ; 0x0218558c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185590
 data_ov32_02185590: ; 0x02185590
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185594
 data_ov32_02185594: ; 0x02185594
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185598
 data_ov32_02185598: ; 0x02185598
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218559c
 data_ov32_0218559c: ; 0x0218559c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021855a0
 data_ov32_021855a0: ; 0x021855a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021855a4
 data_ov32_021855a4: ; 0x021855a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021855a8
 data_ov32_021855a8: ; 0x021855a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021855ac
 data_ov32_021855ac: ; 0x021855ac
 	.byte 0x1c, 0xcb, 0x17, 0x02
+	.global data_ov32_021855b0
 data_ov32_021855b0: ; 0x021855b0
 	.byte 0x6c, 0xca, 0x17, 0x02
+	.global data_ov32_021855b4
 data_ov32_021855b4: ; 0x021855b4
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_021855b8
 data_ov32_021855b8: ; 0x021855b8
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_021855bc
 data_ov32_021855bc: ; 0x021855bc
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_021855c0
 data_ov32_021855c0: ; 0x021855c0
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_021855c4
 data_ov32_021855c4: ; 0x021855c4
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_021855c8
 data_ov32_021855c8: ; 0x021855c8
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_021855cc
 data_ov32_021855cc: ; 0x021855cc
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_021855d0
 data_ov32_021855d0: ; 0x021855d0
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_021855d4
 data_ov32_021855d4: ; 0x021855d4
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_021855d8
 data_ov32_021855d8: ; 0x021855d8
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_021855dc
 data_ov32_021855dc: ; 0x021855dc
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_021855e0
 data_ov32_021855e0: ; 0x021855e0
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_021855e4
 data_ov32_021855e4: ; 0x021855e4
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_021855e8
 data_ov32_021855e8: ; 0x021855e8
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_021855ec
 data_ov32_021855ec: ; 0x021855ec
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_021855f0
 data_ov32_021855f0: ; 0x021855f0
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_021855f4
 data_ov32_021855f4: ; 0x021855f4
 	.byte 0x78, 0xd4, 0x17, 0x02
+	.global data_ov32_021855f8
 data_ov32_021855f8: ; 0x021855f8
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_021855fc
 data_ov32_021855fc: ; 0x021855fc
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02185600
 data_ov32_02185600: ; 0x02185600
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02185604
 data_ov32_02185604: ; 0x02185604
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_02185608
 data_ov32_02185608: ; 0x02185608
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_0218560c
 data_ov32_0218560c: ; 0x0218560c
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02185610
 data_ov32_02185610: ; 0x02185610
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02185614
 data_ov32_02185614: ; 0x02185614
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_02185618
 data_ov32_02185618: ; 0x02185618
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_0218561c
 data_ov32_0218561c: ; 0x0218561c
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185620
 data_ov32_02185620: ; 0x02185620
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02185624
 data_ov32_02185624: ; 0x02185624
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185628
 data_ov32_02185628: ; 0x02185628
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_0218562c
 data_ov32_0218562c: ; 0x0218562c
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02185630
 data_ov32_02185630: ; 0x02185630
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02185634
 data_ov32_02185634: ; 0x02185634
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185638
 data_ov32_02185638: ; 0x02185638
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_0218563c
 data_ov32_0218563c: ; 0x0218563c
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02185640
 data_ov32_02185640: ; 0x02185640
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02185644
 data_ov32_02185644: ; 0x02185644
 	.byte 0x90, 0xcd, 0x17, 0x02
+	.global data_ov32_02185648
 data_ov32_02185648: ; 0x02185648
 	.byte 0xa8, 0xcd, 0x17, 0x02
+	.global data_ov32_0218564c
 data_ov32_0218564c: ; 0x0218564c
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185650
 data_ov32_02185650: ; 0x02185650
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185654
 data_ov32_02185654: ; 0x02185654
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185658
 data_ov32_02185658: ; 0x02185658
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_0218565c
 data_ov32_0218565c: ; 0x0218565c
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02185660
 data_ov32_02185660: ; 0x02185660
 	.byte 0x60, 0xcd, 0x17, 0x02
+	.global data_ov32_02185664
 data_ov32_02185664: ; 0x02185664
 	.byte 0xc4, 0xcb, 0x17, 0x02
+	.global data_ov32_02185668
 data_ov32_02185668: ; 0x02185668
 	.byte 0xdc, 0xd7, 0x17, 0x02
+	.global data_ov32_0218566c
 data_ov32_0218566c: ; 0x0218566c
 	.byte 0x50, 0xda, 0x17, 0x02
+	.global data_ov32_02185670
 data_ov32_02185670: ; 0x02185670
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185674
 data_ov32_02185674: ; 0x02185674
 	.byte 0xd0, 0xd3, 0x17, 0x02
+	.global data_ov32_02185678
 data_ov32_02185678: ; 0x02185678
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_0218567c
 data_ov32_0218567c: ; 0x0218567c
 	.byte 0x34, 0xd4, 0x17, 0x02
+	.global data_ov32_02185680
 data_ov32_02185680: ; 0x02185680
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185684
 data_ov32_02185684: ; 0x02185684
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185688
 data_ov32_02185688: ; 0x02185688
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov32_0218568c
 data_ov32_0218568c: ; 0x0218568c
 	.byte 0x50, 0xd4, 0x17, 0x02
+	.global data_ov32_02185690
 data_ov32_02185690: ; 0x02185690
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185694
 data_ov32_02185694: ; 0x02185694
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185698
 data_ov32_02185698: ; 0x02185698
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_0218569c
 data_ov32_0218569c: ; 0x0218569c
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021856a0
 data_ov32_021856a0: ; 0x021856a0
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021856a4
 data_ov32_021856a4: ; 0x021856a4
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_021856a8
 data_ov32_021856a8: ; 0x021856a8
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_021856ac
 data_ov32_021856ac: ; 0x021856ac
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_021856b0
 data_ov32_021856b0: ; 0x021856b0
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov32_021856b4
 data_ov32_021856b4: ; 0x021856b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856b8
 data_ov32_021856b8: ; 0x021856b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856bc
 data_ov32_021856bc: ; 0x021856bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856c0
 data_ov32_021856c0: ; 0x021856c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856c4
 data_ov32_021856c4: ; 0x021856c4
 	.byte 0x54, 0xdb, 0x17, 0x02
+	.global data_ov32_021856c8
 data_ov32_021856c8: ; 0x021856c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856cc
 data_ov32_021856cc: ; 0x021856cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856d0
 data_ov32_021856d0: ; 0x021856d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856d4
 data_ov32_021856d4: ; 0x021856d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856d8
 data_ov32_021856d8: ; 0x021856d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856dc
 data_ov32_021856dc: ; 0x021856dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856e0
 data_ov32_021856e0: ; 0x021856e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856e4
 data_ov32_021856e4: ; 0x021856e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856e8
 data_ov32_021856e8: ; 0x021856e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856ec
 data_ov32_021856ec: ; 0x021856ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021856f0
 data_ov32_021856f0: ; 0x021856f0
 	.byte 0xd4, 0xdc, 0x17, 0x02
+	.global data_ov32_021856f4
 data_ov32_021856f4: ; 0x021856f4
 	.byte 0xf0, 0xdc, 0x17, 0x02
+	.global data_ov32_021856f8
 data_ov32_021856f8: ; 0x021856f8
 	.byte 0x0c, 0xdd, 0x17, 0x02
+	.global data_ov32_021856fc
 data_ov32_021856fc: ; 0x021856fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185700
 data_ov32_02185700: ; 0x02185700
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185704
 data_ov32_02185704: ; 0x02185704
 	.byte 0xac, 0xdc, 0x17, 0x02
+	.global data_ov32_02185708
 data_ov32_02185708: ; 0x02185708
 	.byte 0xc4, 0xdc, 0x17, 0x02
+	.global data_ov32_0218570c
 data_ov32_0218570c: ; 0x0218570c
 	.byte 0x08, 0xdd, 0x17, 0x02
+	.global data_ov32_02185710
 data_ov32_02185710: ; 0x02185710
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185714
 data_ov32_02185714: ; 0x02185714
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185718
 data_ov32_02185718: ; 0x02185718
 	.byte 0x5c, 0xdc, 0x17, 0x02
+	.global data_ov32_0218571c
 data_ov32_0218571c: ; 0x0218571c
 	.byte 0x78, 0xdc, 0x17, 0x02
+	.global data_ov32_02185720
 data_ov32_02185720: ; 0x02185720
 	.byte 0x04, 0xdd, 0x17, 0x02
+	.global data_ov32_02185724
 data_ov32_02185724: ; 0x02185724
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185728
 data_ov32_02185728: ; 0x02185728
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218572c
 data_ov32_0218572c: ; 0x0218572c
 	.byte 0x58, 0xdb, 0x17, 0x02
+	.global data_ov32_02185730
 data_ov32_02185730: ; 0x02185730
 	.byte 0x8c, 0xdb, 0x17, 0x02
+	.global data_ov32_02185734
 data_ov32_02185734: ; 0x02185734
 	.byte 0x00, 0xdd, 0x17, 0x02
+	.global data_ov32_02185738
 data_ov32_02185738: ; 0x02185738
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218573c
 data_ov32_0218573c: ; 0x0218573c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185740
 data_ov32_02185740: ; 0x02185740
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185744
 data_ov32_02185744: ; 0x02185744
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185748
 data_ov32_02185748: ; 0x02185748
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218574c
 data_ov32_0218574c: ; 0x0218574c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185750
 data_ov32_02185750: ; 0x02185750
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185754
 data_ov32_02185754: ; 0x02185754
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185758
 data_ov32_02185758: ; 0x02185758
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218575c
 data_ov32_0218575c: ; 0x0218575c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185760
 data_ov32_02185760: ; 0x02185760
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185764
 data_ov32_02185764: ; 0x02185764
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185768
 data_ov32_02185768: ; 0x02185768
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218576c
 data_ov32_0218576c: ; 0x0218576c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185770
 data_ov32_02185770: ; 0x02185770
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185774
 data_ov32_02185774: ; 0x02185774
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185778
 data_ov32_02185778: ; 0x02185778
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218577c
 data_ov32_0218577c: ; 0x0218577c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185780
 data_ov32_02185780: ; 0x02185780
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185784
 data_ov32_02185784: ; 0x02185784
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185788
 data_ov32_02185788: ; 0x02185788
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218578c
 data_ov32_0218578c: ; 0x0218578c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185790
 data_ov32_02185790: ; 0x02185790
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185794
 data_ov32_02185794: ; 0x02185794
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185798
 data_ov32_02185798: ; 0x02185798
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218579c
 data_ov32_0218579c: ; 0x0218579c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857a0
 data_ov32_021857a0: ; 0x021857a0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857a4
 data_ov32_021857a4: ; 0x021857a4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857a8
 data_ov32_021857a8: ; 0x021857a8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857ac
 data_ov32_021857ac: ; 0x021857ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857b0
 data_ov32_021857b0: ; 0x021857b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857b4
 data_ov32_021857b4: ; 0x021857b4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857b8
 data_ov32_021857b8: ; 0x021857b8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857bc
 data_ov32_021857bc: ; 0x021857bc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021857c0
 data_ov32_021857c0: ; 0x021857c0
 	.byte 0x30, 0xe0, 0x17, 0x02
+	.global data_ov32_021857c4
 data_ov32_021857c4: ; 0x021857c4
 	.byte 0x4c, 0xdf, 0x17, 0x02
+	.global data_ov32_021857c8
 data_ov32_021857c8: ; 0x021857c8
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_021857cc
 data_ov32_021857cc: ; 0x021857cc
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_021857d0
 data_ov32_021857d0: ; 0x021857d0
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_021857d4
 data_ov32_021857d4: ; 0x021857d4
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_021857d8
 data_ov32_021857d8: ; 0x021857d8
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_021857dc
 data_ov32_021857dc: ; 0x021857dc
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_021857e0
 data_ov32_021857e0: ; 0x021857e0
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_021857e4
 data_ov32_021857e4: ; 0x021857e4
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_021857e8
 data_ov32_021857e8: ; 0x021857e8
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_021857ec
 data_ov32_021857ec: ; 0x021857ec
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_021857f0
 data_ov32_021857f0: ; 0x021857f0
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_021857f4
 data_ov32_021857f4: ; 0x021857f4
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_021857f8
 data_ov32_021857f8: ; 0x021857f8
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_021857fc
 data_ov32_021857fc: ; 0x021857fc
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_02185800
 data_ov32_02185800: ; 0x02185800
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_02185804
 data_ov32_02185804: ; 0x02185804
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_02185808
 data_ov32_02185808: ; 0x02185808
 	.byte 0x30, 0xe7, 0x17, 0x02
+	.global data_ov32_0218580c
 data_ov32_0218580c: ; 0x0218580c
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_02185810
 data_ov32_02185810: ; 0x02185810
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02185814
 data_ov32_02185814: ; 0x02185814
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02185818
 data_ov32_02185818: ; 0x02185818
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_0218581c
 data_ov32_0218581c: ; 0x0218581c
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_02185820
 data_ov32_02185820: ; 0x02185820
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02185824
 data_ov32_02185824: ; 0x02185824
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02185828
 data_ov32_02185828: ; 0x02185828
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_0218582c
 data_ov32_0218582c: ; 0x0218582c
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_02185830
 data_ov32_02185830: ; 0x02185830
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185834
 data_ov32_02185834: ; 0x02185834
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02185838
 data_ov32_02185838: ; 0x02185838
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218583c
 data_ov32_0218583c: ; 0x0218583c
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_02185840
 data_ov32_02185840: ; 0x02185840
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02185844
 data_ov32_02185844: ; 0x02185844
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02185848
 data_ov32_02185848: ; 0x02185848
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218584c
 data_ov32_0218584c: ; 0x0218584c
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_02185850
 data_ov32_02185850: ; 0x02185850
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02185854
 data_ov32_02185854: ; 0x02185854
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02185858
 data_ov32_02185858: ; 0x02185858
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov32_0218585c
 data_ov32_0218585c: ; 0x0218585c
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov32_02185860
 data_ov32_02185860: ; 0x02185860
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185864
 data_ov32_02185864: ; 0x02185864
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185868
 data_ov32_02185868: ; 0x02185868
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_0218586c
 data_ov32_0218586c: ; 0x0218586c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_02185870
 data_ov32_02185870: ; 0x02185870
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02185874
 data_ov32_02185874: ; 0x02185874
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov32_02185878
 data_ov32_02185878: ; 0x02185878
 	.byte 0x0c, 0xe1, 0x17, 0x02
+	.global data_ov32_0218587c
 data_ov32_0218587c: ; 0x0218587c
 	.byte 0xc4, 0xeb, 0x17, 0x02
+	.global data_ov32_02185880
 data_ov32_02185880: ; 0x02185880
 	.byte 0xe8, 0xef, 0x17, 0x02
+	.global data_ov32_02185884
 data_ov32_02185884: ; 0x02185884
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185888
 data_ov32_02185888: ; 0x02185888
 	.byte 0x00, 0xe7, 0x17, 0x02
+	.global data_ov32_0218588c
 data_ov32_0218588c: ; 0x0218588c
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_02185890
 data_ov32_02185890: ; 0x02185890
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185894
 data_ov32_02185894: ; 0x02185894
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185898
 data_ov32_02185898: ; 0x02185898
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_0218589c
 data_ov32_0218589c: ; 0x0218589c
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov32_021858a0
 data_ov32_021858a0: ; 0x021858a0
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov32_021858a4
 data_ov32_021858a4: ; 0x021858a4
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_021858a8
 data_ov32_021858a8: ; 0x021858a8
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021858ac
 data_ov32_021858ac: ; 0x021858ac
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_021858b0
 data_ov32_021858b0: ; 0x021858b0
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021858b4
 data_ov32_021858b4: ; 0x021858b4
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021858b8
 data_ov32_021858b8: ; 0x021858b8
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_021858bc
 data_ov32_021858bc: ; 0x021858bc
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_021858c0
 data_ov32_021858c0: ; 0x021858c0
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_021858c4
 data_ov32_021858c4: ; 0x021858c4
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov32_021858c8
 data_ov32_021858c8: ; 0x021858c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858cc
 data_ov32_021858cc: ; 0x021858cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858d0
 data_ov32_021858d0: ; 0x021858d0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858d4
 data_ov32_021858d4: ; 0x021858d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858d8
 data_ov32_021858d8: ; 0x021858d8
 	.byte 0x54, 0xdb, 0x17, 0x02
+	.global data_ov32_021858dc
 data_ov32_021858dc: ; 0x021858dc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858e0
 data_ov32_021858e0: ; 0x021858e0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858e4
 data_ov32_021858e4: ; 0x021858e4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858e8
 data_ov32_021858e8: ; 0x021858e8
 	.byte 0x58, 0x1f, 0x08, 0x02
+	.global data_ov32_021858ec
 data_ov32_021858ec: ; 0x021858ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858f0
 data_ov32_021858f0: ; 0x021858f0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858f4
 data_ov32_021858f4: ; 0x021858f4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858f8
 data_ov32_021858f8: ; 0x021858f8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021858fc
 data_ov32_021858fc: ; 0x021858fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185900
 data_ov32_02185900: ; 0x02185900
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185904
 data_ov32_02185904: ; 0x02185904
 	.byte 0x63, 0x68, 0x65, 0x73, 0x74, 0x32, 0x00, 0x00
+	.global data_ov32_0218590c
 data_ov32_0218590c: ; 0x0218590c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185910
 data_ov32_02185910: ; 0x02185910
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185914
 data_ov32_02185914: ; 0x02185914
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185918
 data_ov32_02185918: ; 0x02185918
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218591c
 data_ov32_0218591c: ; 0x0218591c
 	.byte 0x34, 0x5d, 0x0c, 0x02
+	.global data_ov32_02185920
 data_ov32_02185920: ; 0x02185920
 	.byte 0x78, 0xf3, 0x17, 0x02
+	.global data_ov32_02185924
 data_ov32_02185924: ; 0x02185924
 	.byte 0x58, 0x5e, 0x0c, 0x02
+	.global data_ov32_02185928
 data_ov32_02185928: ; 0x02185928
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218592c
 data_ov32_0218592c: ; 0x0218592c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185930
 data_ov32_02185930: ; 0x02185930
 	.byte 0x34, 0x5d, 0x0c, 0x02
+	.global data_ov32_02185934
 data_ov32_02185934: ; 0x02185934
 	.byte 0x98, 0xf3, 0x17, 0x02
+	.global data_ov32_02185938
 data_ov32_02185938: ; 0x02185938
 	.byte 0x58, 0x5e, 0x0c, 0x02
+	.global data_ov32_0218593c
 data_ov32_0218593c: ; 0x0218593c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185940
 data_ov32_02185940: ; 0x02185940
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185944
 data_ov32_02185944: ; 0x02185944
 	.byte 0x68, 0xf2, 0x17, 0x02
+	.global data_ov32_02185948
 data_ov32_02185948: ; 0x02185948
 	.byte 0x7c, 0xf3, 0x17, 0x02
+	.global data_ov32_0218594c
 data_ov32_0218594c: ; 0x0218594c
 	.byte 0x0c, 0x96, 0x0a, 0x02
+	.global data_ov32_02185950
 data_ov32_02185950: ; 0x02185950
 	.byte 0x14, 0x96, 0x0a, 0x02
+	.global data_ov32_02185954
 data_ov32_02185954: ; 0x02185954
 	.byte 0x50, 0x96, 0x0a, 0x02
+	.global data_ov32_02185958
 data_ov32_02185958: ; 0x02185958
 	.byte 0xd4, 0x96, 0x0a, 0x02
+	.global data_ov32_0218595c
 data_ov32_0218595c: ; 0x0218595c
 	.byte 0x40, 0x97, 0x0a, 0x02
+	.global data_ov32_02185960
 data_ov32_02185960: ; 0x02185960
 	.byte 0x64, 0x97, 0x0a, 0x02
+	.global data_ov32_02185964
 data_ov32_02185964: ; 0x02185964
 	.byte 0xd0, 0x97, 0x0a, 0x02
+	.global data_ov32_02185968
 data_ov32_02185968: ; 0x02185968
 	.byte 0xe0, 0x97, 0x0a, 0x02
+	.global data_ov32_0218596c
 data_ov32_0218596c: ; 0x0218596c
 	.byte 0xf8, 0x97, 0x0a, 0x02
+	.global data_ov32_02185970
 data_ov32_02185970: ; 0x02185970
 	.byte 0x64, 0x98, 0x0a, 0x02
+	.global data_ov32_02185974
 data_ov32_02185974: ; 0x02185974
 	.byte 0xbc, 0x98, 0x0a, 0x02
+	.global data_ov32_02185978
 data_ov32_02185978: ; 0x02185978
 	.byte 0x90, 0x98, 0x0a, 0x02
+	.global data_ov32_0218597c
 data_ov32_0218597c: ; 0x0218597c
 	.byte 0x68, 0x99, 0x0a, 0x02
+	.global data_ov32_02185980
 data_ov32_02185980: ; 0x02185980
 	.byte 0x34, 0xf1, 0x17, 0x02
+	.global data_ov32_02185984
 data_ov32_02185984: ; 0x02185984
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185988
 data_ov32_02185988: ; 0x02185988
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_0218598c
 data_ov32_0218598c: ; 0x0218598c
 	.byte 0x6d, 0x9b, 0x0a, 0x02
+	.global data_ov32_02185990
 data_ov32_02185990: ; 0x02185990
 	.byte 0x79, 0x9b, 0x0a, 0x02
+	.global data_ov32_02185994
 data_ov32_02185994: ; 0x02185994
 	.byte 0x43, 0x48, 0x55, 0x3a, 0x2f, 0x63, 0x68, 0x75, 0x63, 0x2e, 0x6e, 0x73
 	.byte 0x62, 0x74, 0x70, 0x00
+	.global data_ov32_021859a4
 data_ov32_021859a4: ; 0x021859a4
 	.byte 0x63, 0x68, 0x75, 0x63, 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859ac
 data_ov32_021859ac: ; 0x021859ac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859b0
 data_ov32_021859b0: ; 0x021859b0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859b4
 data_ov32_021859b4: ; 0x021859b4
 	.byte 0x34, 0x5d, 0x0c, 0x02
+	.global data_ov32_021859b8
 data_ov32_021859b8: ; 0x021859b8
 	.byte 0xd0, 0xf3, 0x17, 0x02
+	.global data_ov32_021859bc
 data_ov32_021859bc: ; 0x021859bc
 	.byte 0x58, 0x5e, 0x0c, 0x02
+	.global data_ov32_021859c0
 data_ov32_021859c0: ; 0x021859c0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859c4
 data_ov32_021859c4: ; 0x021859c4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859c8
 data_ov32_021859c8: ; 0x021859c8
 	.byte 0x00, 0xf8, 0x17, 0x02
+	.global data_ov32_021859cc
 data_ov32_021859cc: ; 0x021859cc
 	.byte 0x4c, 0xf8, 0x17, 0x02
+	.global data_ov32_021859d0
 data_ov32_021859d0: ; 0x021859d0
 	.byte 0x74, 0xf8, 0x17, 0x02
+	.global data_ov32_021859d4
 data_ov32_021859d4: ; 0x021859d4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859d8
 data_ov32_021859d8: ; 0x021859d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859dc
 data_ov32_021859dc: ; 0x021859dc
 	.byte 0x80, 0xf7, 0x17, 0x02
+	.global data_ov32_021859e0
 data_ov32_021859e0: ; 0x021859e0
 	.byte 0xbc, 0xf7, 0x17, 0x02
+	.global data_ov32_021859e4
 data_ov32_021859e4: ; 0x021859e4
 	.byte 0x70, 0xf8, 0x17, 0x02
+	.global data_ov32_021859e8
 data_ov32_021859e8: ; 0x021859e8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859ec
 data_ov32_021859ec: ; 0x021859ec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021859f0
 data_ov32_021859f0: ; 0x021859f0
 	.byte 0x34, 0xf7, 0x17, 0x02
+	.global data_ov32_021859f4
 data_ov32_021859f4: ; 0x021859f4
 	.byte 0x70, 0xf7, 0x17, 0x02
+	.global data_ov32_021859f8
 data_ov32_021859f8: ; 0x021859f8
 	.byte 0x6c, 0xf8, 0x17, 0x02
+	.global data_ov32_021859fc
 data_ov32_021859fc: ; 0x021859fc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a00
 data_ov32_02185a00: ; 0x02185a00
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a04
 data_ov32_02185a04: ; 0x02185a04
 	.byte 0x70, 0xf6, 0x17, 0x02
+	.global data_ov32_02185a08
 data_ov32_02185a08: ; 0x02185a08
 	.byte 0xb4, 0xf6, 0x17, 0x02
+	.global data_ov32_02185a0c
 data_ov32_02185a0c: ; 0x02185a0c
 	.byte 0x68, 0xf8, 0x17, 0x02
+	.global data_ov32_02185a10
 data_ov32_02185a10: ; 0x02185a10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a14
 data_ov32_02185a14: ; 0x02185a14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a18
 data_ov32_02185a18: ; 0x02185a18
 	.byte 0x68, 0xf4, 0x17, 0x02
+	.global data_ov32_02185a1c
 data_ov32_02185a1c: ; 0x02185a1c
 	.byte 0xa8, 0xf4, 0x17, 0x02
+	.global data_ov32_02185a20
 data_ov32_02185a20: ; 0x02185a20
 	.byte 0x64, 0xf8, 0x17, 0x02
+	.global data_ov32_02185a24
 data_ov32_02185a24: ; 0x02185a24
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a28
 data_ov32_02185a28: ; 0x02185a28
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a2c
 data_ov32_02185a2c: ; 0x02185a2c
 	.byte 0x28, 0xf4, 0x17, 0x02
+	.global data_ov32_02185a30
 data_ov32_02185a30: ; 0x02185a30
 	.byte 0x58, 0xf4, 0x17, 0x02
+	.global data_ov32_02185a34
 data_ov32_02185a34: ; 0x02185a34
 	.byte 0x60, 0xf8, 0x17, 0x02
+	.global data_ov32_02185a38
 data_ov32_02185a38: ; 0x02185a38
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a3c
 data_ov32_02185a3c: ; 0x02185a3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a40
 data_ov32_02185a40: ; 0x02185a40
 	.byte 0xd4, 0xf3, 0x17, 0x02
+	.global data_ov32_02185a44
 data_ov32_02185a44: ; 0x02185a44
 	.byte 0xfc, 0xf3, 0x17, 0x02
+	.global data_ov32_02185a48
 data_ov32_02185a48: ; 0x02185a48
 	.byte 0x5c, 0xf8, 0x17, 0x02
+	.global data_ov32_02185a4c
 data_ov32_02185a4c: ; 0x02185a4c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a50
 data_ov32_02185a50: ; 0x02185a50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a54
 data_ov32_02185a54: ; 0x02185a54
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a58
 data_ov32_02185a58: ; 0x02185a58
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a5c
 data_ov32_02185a5c: ; 0x02185a5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a60
 data_ov32_02185a60: ; 0x02185a60
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a64
 data_ov32_02185a64: ; 0x02185a64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a68
 data_ov32_02185a68: ; 0x02185a68
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a6c
 data_ov32_02185a6c: ; 0x02185a6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a70
 data_ov32_02185a70: ; 0x02185a70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a74
 data_ov32_02185a74: ; 0x02185a74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a78
 data_ov32_02185a78: ; 0x02185a78
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a7c
 data_ov32_02185a7c: ; 0x02185a7c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a80
 data_ov32_02185a80: ; 0x02185a80
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a84
 data_ov32_02185a84: ; 0x02185a84
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a88
 data_ov32_02185a88: ; 0x02185a88
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a8c
 data_ov32_02185a8c: ; 0x02185a8c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a90
 data_ov32_02185a90: ; 0x02185a90
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a94
 data_ov32_02185a94: ; 0x02185a94
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a98
 data_ov32_02185a98: ; 0x02185a98
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185a9c
 data_ov32_02185a9c: ; 0x02185a9c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185aa0
 data_ov32_02185aa0: ; 0x02185aa0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185aa4
 data_ov32_02185aa4: ; 0x02185aa4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185aa8
 data_ov32_02185aa8: ; 0x02185aa8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185aac
 data_ov32_02185aac: ; 0x02185aac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ab0
 data_ov32_02185ab0: ; 0x02185ab0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ab4
 data_ov32_02185ab4: ; 0x02185ab4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ab8
 data_ov32_02185ab8: ; 0x02185ab8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185abc
 data_ov32_02185abc: ; 0x02185abc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ac0
 data_ov32_02185ac0: ; 0x02185ac0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ac4
 data_ov32_02185ac4: ; 0x02185ac4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ac8
 data_ov32_02185ac8: ; 0x02185ac8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185acc
 data_ov32_02185acc: ; 0x02185acc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ad0
 data_ov32_02185ad0: ; 0x02185ad0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ad4
 data_ov32_02185ad4: ; 0x02185ad4
 	.byte 0x30, 0xfa, 0x17, 0x02
+	.global data_ov32_02185ad8
 data_ov32_02185ad8: ; 0x02185ad8
 	.byte 0x78, 0xfa, 0x17, 0x02
+	.global data_ov32_02185adc
 data_ov32_02185adc: ; 0x02185adc
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185ae0
 data_ov32_02185ae0: ; 0x02185ae0
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185ae4
 data_ov32_02185ae4: ; 0x02185ae4
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_02185ae8
 data_ov32_02185ae8: ; 0x02185ae8
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185aec
 data_ov32_02185aec: ; 0x02185aec
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_02185af0
 data_ov32_02185af0: ; 0x02185af0
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_02185af4
 data_ov32_02185af4: ; 0x02185af4
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185af8
 data_ov32_02185af8: ; 0x02185af8
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_02185afc
 data_ov32_02185afc: ; 0x02185afc
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_02185b00
 data_ov32_02185b00: ; 0x02185b00
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_02185b04
 data_ov32_02185b04: ; 0x02185b04
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_02185b08
 data_ov32_02185b08: ; 0x02185b08
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185b0c
 data_ov32_02185b0c: ; 0x02185b0c
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185b10
 data_ov32_02185b10: ; 0x02185b10
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_02185b14
 data_ov32_02185b14: ; 0x02185b14
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_02185b18
 data_ov32_02185b18: ; 0x02185b18
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_02185b1c
 data_ov32_02185b1c: ; 0x02185b1c
 	.byte 0x00, 0x0c, 0x18, 0x02
+	.global data_ov32_02185b20
 data_ov32_02185b20: ; 0x02185b20
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_02185b24
 data_ov32_02185b24: ; 0x02185b24
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02185b28
 data_ov32_02185b28: ; 0x02185b28
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02185b2c
 data_ov32_02185b2c: ; 0x02185b2c
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_02185b30
 data_ov32_02185b30: ; 0x02185b30
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_02185b34
 data_ov32_02185b34: ; 0x02185b34
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02185b38
 data_ov32_02185b38: ; 0x02185b38
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b3c
 data_ov32_02185b3c: ; 0x02185b3c
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b40
 data_ov32_02185b40: ; 0x02185b40
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b44
 data_ov32_02185b44: ; 0x02185b44
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b48
 data_ov32_02185b48: ; 0x02185b48
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b4c
 data_ov32_02185b4c: ; 0x02185b4c
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b50
 data_ov32_02185b50: ; 0x02185b50
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b54
 data_ov32_02185b54: ; 0x02185b54
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b58
 data_ov32_02185b58: ; 0x02185b58
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b5c
 data_ov32_02185b5c: ; 0x02185b5c
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b60
 data_ov32_02185b60: ; 0x02185b60
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b64
 data_ov32_02185b64: ; 0x02185b64
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b68
 data_ov32_02185b68: ; 0x02185b68
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b6c
 data_ov32_02185b6c: ; 0x02185b6c
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b70
 data_ov32_02185b70: ; 0x02185b70
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov32_02185b74
 data_ov32_02185b74: ; 0x02185b74
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185b78
 data_ov32_02185b78: ; 0x02185b78
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185b7c
 data_ov32_02185b7c: ; 0x02185b7c
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185b80
 data_ov32_02185b80: ; 0x02185b80
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_02185b84
 data_ov32_02185b84: ; 0x02185b84
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02185b88
 data_ov32_02185b88: ; 0x02185b88
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov32_02185b8c
 data_ov32_02185b8c: ; 0x02185b8c
 	.byte 0xc8, 0xfa, 0x17, 0x02
+	.global data_ov32_02185b90
 data_ov32_02185b90: ; 0x02185b90
 	.byte 0x7c, 0x0c, 0x18, 0x02
+	.global data_ov32_02185b94
 data_ov32_02185b94: ; 0x02185b94
 	.byte 0x4c, 0x0e, 0x18, 0x02
+	.global data_ov32_02185b98
 data_ov32_02185b98: ; 0x02185b98
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185b9c
 data_ov32_02185b9c: ; 0x02185b9c
 	.byte 0xf8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185ba0
 data_ov32_02185ba0: ; 0x02185ba0
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_02185ba4
 data_ov32_02185ba4: ; 0x02185ba4
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185ba8
 data_ov32_02185ba8: ; 0x02185ba8
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185bac
 data_ov32_02185bac: ; 0x02185bac
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185bb0
 data_ov32_02185bb0: ; 0x02185bb0
 	.byte 0xa4, 0x0b, 0x18, 0x02
+	.global data_ov32_02185bb4
 data_ov32_02185bb4: ; 0x02185bb4
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185bb8
 data_ov32_02185bb8: ; 0x02185bb8
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185bbc
 data_ov32_02185bbc: ; 0x02185bbc
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185bc0
 data_ov32_02185bc0: ; 0x02185bc0
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185bc4
 data_ov32_02185bc4: ; 0x02185bc4
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185bc8
 data_ov32_02185bc8: ; 0x02185bc8
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185bcc
 data_ov32_02185bcc: ; 0x02185bcc
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_02185bd0
 data_ov32_02185bd0: ; 0x02185bd0
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_02185bd4
 data_ov32_02185bd4: ; 0x02185bd4
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_02185bd8
 data_ov32_02185bd8: ; 0x02185bd8
 	.byte 0x08, 0x0e, 0x18, 0x02
+	.global data_ov32_02185bdc
 data_ov32_02185bdc: ; 0x02185bdc
 	.byte 0x8c, 0xfc, 0x17, 0x02
+	.global data_ov32_02185be0
 data_ov32_02185be0: ; 0x02185be0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185be4
 data_ov32_02185be4: ; 0x02185be4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185be8
 data_ov32_02185be8: ; 0x02185be8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185bec
 data_ov32_02185bec: ; 0x02185bec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185bf0
 data_ov32_02185bf0: ; 0x02185bf0
 	.byte 0x54, 0xdb, 0x17, 0x02
+	.global data_ov32_02185bf4
 data_ov32_02185bf4: ; 0x02185bf4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185bf8
 data_ov32_02185bf8: ; 0x02185bf8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185bfc
 data_ov32_02185bfc: ; 0x02185bfc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c00
 data_ov32_02185c00: ; 0x02185c00
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c04
 data_ov32_02185c04: ; 0x02185c04
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c08
 data_ov32_02185c08: ; 0x02185c08
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c0c
 data_ov32_02185c0c: ; 0x02185c0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c10
 data_ov32_02185c10: ; 0x02185c10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c14
 data_ov32_02185c14: ; 0x02185c14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c18
 data_ov32_02185c18: ; 0x02185c18
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c1c
 data_ov32_02185c1c: ; 0x02185c1c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c20
 data_ov32_02185c20: ; 0x02185c20
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c24
 data_ov32_02185c24: ; 0x02185c24
 	.byte 0xb0, 0x26, 0x18, 0x02
+	.global data_ov32_02185c28
 data_ov32_02185c28: ; 0x02185c28
 	.byte 0xa0, 0x2a, 0x18, 0x02
+	.global data_ov32_02185c2c
 data_ov32_02185c2c: ; 0x02185c2c
 	.byte 0x64, 0x2a, 0x18, 0x02
+	.global data_ov32_02185c30
 data_ov32_02185c30: ; 0x02185c30
 	.byte 0x6c, 0x2a, 0x18, 0x02
+	.global data_ov32_02185c34
 data_ov32_02185c34: ; 0x02185c34
 	.byte 0x74, 0x2a, 0x18, 0x02
+	.global data_ov32_02185c38
 data_ov32_02185c38: ; 0x02185c38
 	.byte 0x98, 0x2a, 0x18, 0x02
+	.global data_ov32_02185c3c
 data_ov32_02185c3c: ; 0x02185c3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c40
 data_ov32_02185c40: ; 0x02185c40
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185c44
 data_ov32_02185c44: ; 0x02185c44
 	.byte 0xb8, 0x12, 0x18, 0x02
+	.global data_ov32_02185c48
 data_ov32_02185c48: ; 0x02185c48
 	.byte 0x68, 0x13, 0x18, 0x02
+	.global data_ov32_02185c4c
 data_ov32_02185c4c: ; 0x02185c4c
 	.byte 0x20, 0x14, 0x18, 0x02
+	.global data_ov32_02185c50
 data_ov32_02185c50: ; 0x02185c50
 	.byte 0xac, 0x16, 0x18, 0x02
+	.global data_ov32_02185c54
 data_ov32_02185c54: ; 0x02185c54
 	.byte 0xf0, 0x26, 0x18, 0x02
+	.global data_ov32_02185c58
 data_ov32_02185c58: ; 0x02185c58
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c5c
 data_ov32_02185c5c: ; 0x02185c5c
 	.byte 0x58, 0x15, 0x18, 0x02
+	.global data_ov32_02185c60
 data_ov32_02185c60: ; 0x02185c60
 	.byte 0xb0, 0x22, 0x18, 0x02
+	.global data_ov32_02185c64
 data_ov32_02185c64: ; 0x02185c64
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c68
 data_ov32_02185c68: ; 0x02185c68
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c6c
 data_ov32_02185c6c: ; 0x02185c6c
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c70
 data_ov32_02185c70: ; 0x02185c70
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c74
 data_ov32_02185c74: ; 0x02185c74
 	.byte 0x94, 0x23, 0x18, 0x02
+	.global data_ov32_02185c78
 data_ov32_02185c78: ; 0x02185c78
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c7c
 data_ov32_02185c7c: ; 0x02185c7c
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c80
 data_ov32_02185c80: ; 0x02185c80
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c84
 data_ov32_02185c84: ; 0x02185c84
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185c88
 data_ov32_02185c88: ; 0x02185c88
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov32_02185c8c
 data_ov32_02185c8c: ; 0x02185c8c
 	.byte 0xc0, 0x22, 0x18, 0x02
+	.global data_ov32_02185c90
 data_ov32_02185c90: ; 0x02185c90
 	.byte 0x0c, 0xb7, 0x08, 0x02
+	.global data_ov32_02185c94
 data_ov32_02185c94: ; 0x02185c94
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov32_02185c98
 data_ov32_02185c98: ; 0x02185c98
 	.byte 0xf8, 0xc9, 0x08, 0x02
+	.global data_ov32_02185c9c
 data_ov32_02185c9c: ; 0x02185c9c
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov32_02185ca0
 data_ov32_02185ca0: ; 0x02185ca0
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov32_02185ca4
 data_ov32_02185ca4: ; 0x02185ca4
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov32_02185ca8
 data_ov32_02185ca8: ; 0x02185ca8
 	.byte 0x28, 0x16, 0x18, 0x02
+	.global data_ov32_02185cac
 data_ov32_02185cac: ; 0x02185cac
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov32_02185cb0
 data_ov32_02185cb0: ; 0x02185cb0
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov32_02185cb4
 data_ov32_02185cb4: ; 0x02185cb4
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov32_02185cb8
 data_ov32_02185cb8: ; 0x02185cb8
 	.byte 0xb8, 0x22, 0x18, 0x02
+	.global data_ov32_02185cbc
 data_ov32_02185cbc: ; 0x02185cbc
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov32_02185cc0
 data_ov32_02185cc0: ; 0x02185cc0
 	.byte 0x6c, 0x28, 0x18, 0x02
+	.global data_ov32_02185cc4
 data_ov32_02185cc4: ; 0x02185cc4
 	.byte 0x00, 0x1d, 0x18, 0x02
+	.global data_ov32_02185cc8
 data_ov32_02185cc8: ; 0x02185cc8
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov32_02185ccc
 data_ov32_02185ccc: ; 0x02185ccc
 	.byte 0xe4, 0x29, 0x18, 0x02
+	.global data_ov32_02185cd0
 data_ov32_02185cd0: ; 0x02185cd0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185cd4
 data_ov32_02185cd4: ; 0x02185cd4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185cd8
 data_ov32_02185cd8: ; 0x02185cd8
 	.byte 0xad, 0x9a, 0x0a, 0x02
+	.global data_ov32_02185cdc
 data_ov32_02185cdc: ; 0x02185cdc
 	.byte 0xb9, 0x9a, 0x0a, 0x02
+	.global data_ov32_02185ce0
 data_ov32_02185ce0: ; 0x02185ce0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ce4
 data_ov32_02185ce4: ; 0x02185ce4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ce8
 data_ov32_02185ce8: ; 0x02185ce8
 	.byte 0xc4, 0x2b, 0x18, 0x02
+	.global data_ov32_02185cec
 data_ov32_02185cec: ; 0x02185cec
 	.byte 0xec, 0x2b, 0x18, 0x02
+	.global data_ov32_02185cf0
 data_ov32_02185cf0: ; 0x02185cf0
 	.byte 0x24, 0x2c, 0x18, 0x02
+	.global data_ov32_02185cf4
 data_ov32_02185cf4: ; 0x02185cf4
 	.byte 0x40, 0x2c, 0x18, 0x02
+	.global data_ov32_02185cf8
 data_ov32_02185cf8: ; 0x02185cf8
 	.byte 0xf8, 0x76, 0x12, 0x02
+	.global data_ov32_02185cfc
 data_ov32_02185cfc: ; 0x02185cfc
 	.byte 0x98, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d00
 data_ov32_02185d00: ; 0x02185d00
 	.byte 0xbc, 0x6a, 0x12, 0x02
+	.global data_ov32_02185d04
 data_ov32_02185d04: ; 0x02185d04
 	.byte 0x1c, 0x2c, 0x18, 0x02
+	.global data_ov32_02185d08
 data_ov32_02185d08: ; 0x02185d08
 	.byte 0xbc, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d0c
 data_ov32_02185d0c: ; 0x02185d0c
 	.byte 0xc4, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d10
 data_ov32_02185d10: ; 0x02185d10
 	.byte 0xc8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d14
 data_ov32_02185d14: ; 0x02185d14
 	.byte 0xd0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d18
 data_ov32_02185d18: ; 0x02185d18
 	.byte 0xd8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d1c
 data_ov32_02185d1c: ; 0x02185d1c
 	.byte 0xe0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d20
 data_ov32_02185d20: ; 0x02185d20
 	.byte 0xe8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d24
 data_ov32_02185d24: ; 0x02185d24
 	.byte 0xf0, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d28
 data_ov32_02185d28: ; 0x02185d28
 	.byte 0xf8, 0xb6, 0x08, 0x02
+	.global data_ov32_02185d2c
 data_ov32_02185d2c: ; 0x02185d2c
 	.byte 0x00, 0xb7, 0x08, 0x02
+	.global data_ov32_02185d30
 data_ov32_02185d30: ; 0x02185d30
 	.byte 0x04, 0xb7, 0x08, 0x02
+	.global data_ov32_02185d34
 data_ov32_02185d34: ; 0x02185d34
 	.byte 0xcc, 0x79, 0x12, 0x02
+	.global data_ov32_02185d38
 data_ov32_02185d38: ; 0x02185d38
 	.byte 0x10, 0xb7, 0x08, 0x02
+	.global data_ov32_02185d3c
 data_ov32_02185d3c: ; 0x02185d3c
 	.byte 0x00, 0xca, 0x08, 0x02
+	.global data_ov32_02185d40
 data_ov32_02185d40: ; 0x02185d40
 	.byte 0x1c, 0xb7, 0x08, 0x02
+	.global data_ov32_02185d44
 data_ov32_02185d44: ; 0x02185d44
 	.byte 0x44, 0xb8, 0x08, 0x02
+	.global data_ov32_02185d48
 data_ov32_02185d48: ; 0x02185d48
 	.byte 0x70, 0xb8, 0x08, 0x02
+	.global data_ov32_02185d4c
 data_ov32_02185d4c: ; 0x02185d4c
 	.byte 0x9c, 0xb8, 0x08, 0x02
+	.global data_ov32_02185d50
 data_ov32_02185d50: ; 0x02185d50
 	.byte 0x30, 0xba, 0x08, 0x02
+	.global data_ov32_02185d54
 data_ov32_02185d54: ; 0x02185d54
 	.byte 0x38, 0xba, 0x08, 0x02
+	.global data_ov32_02185d58
 data_ov32_02185d58: ; 0x02185d58
 	.byte 0x40, 0xba, 0x08, 0x02
+	.global data_ov32_02185d5c
 data_ov32_02185d5c: ; 0x02185d5c
 	.byte 0x48, 0xba, 0x08, 0x02
+	.global data_ov32_02185d60
 data_ov32_02185d60: ; 0x02185d60
 	.byte 0x50, 0xba, 0x08, 0x02
+	.global data_ov32_02185d64
 data_ov32_02185d64: ; 0x02185d64
 	.byte 0xcc, 0x2e, 0x18, 0x02
+	.global data_ov32_02185d68
 data_ov32_02185d68: ; 0x02185d68
 	.byte 0xb4, 0x2d, 0x18, 0x02
+	.global data_ov32_02185d6c
 data_ov32_02185d6c: ; 0x02185d6c
 	.byte 0x8c, 0xc3, 0x08, 0x02
+	.global data_ov32_02185d70
 data_ov32_02185d70: ; 0x02185d70
 	.byte 0x9c, 0xc3, 0x08, 0x02
+	.global data_ov32_02185d74
 data_ov32_02185d74: ; 0x02185d74
 	.byte 0x34, 0x70, 0x12, 0x02
+	.global data_ov32_02185d78
 data_ov32_02185d78: ; 0x02185d78
 	.byte 0xa0, 0x2e, 0x18, 0x02
+	.global data_ov32_02185d7c
 data_ov32_02185d7c: ; 0x02185d7c
 	.byte 0x8c, 0x2d, 0x18, 0x02
+	.global data_ov32_02185d80
 data_ov32_02185d80: ; 0x02185d80
 	.byte 0xb0, 0x2e, 0x18, 0x02
+	.global data_ov32_02185d84
 data_ov32_02185d84: ; 0x02185d84
 	.byte 0x28, 0x30, 0x18, 0x02
+	.global data_ov32_02185d88
 data_ov32_02185d88: ; 0x02185d88
 	.byte 0x2c, 0x30, 0x18, 0x02
+	.global data_ov32_02185d8c
 data_ov32_02185d8c: ; 0x02185d8c
 	.byte 0xc4, 0x7a, 0x12, 0x02
+	.global data_ov32_02185d90
 data_ov32_02185d90: ; 0x02185d90
 	.byte 0x30, 0x30, 0x18, 0x02
+	.global data_ov32_02185d94
 data_ov32_02185d94: ; 0x02185d94
 	.byte 0x84, 0x79, 0x12, 0x02
+	.global data_ov32_02185d98
 data_ov32_02185d98: ; 0x02185d98
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185d9c
 data_ov32_02185d9c: ; 0x02185d9c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185da0
 data_ov32_02185da0: ; 0x02185da0
 	.byte 0xed, 0x9a, 0x0a, 0x02
+	.global data_ov32_02185da4
 data_ov32_02185da4: ; 0x02185da4
 	.byte 0xf9, 0x9a, 0x0a, 0x02
+	.global data_ov32_02185da8
 data_ov32_02185da8: ; 0x02185da8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dac
 data_ov32_02185dac: ; 0x02185dac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185db0
 data_ov32_02185db0: ; 0x02185db0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185db4
 data_ov32_02185db4: ; 0x02185db4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185db8
 data_ov32_02185db8: ; 0x02185db8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dbc
 data_ov32_02185dbc: ; 0x02185dbc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dc0
 data_ov32_02185dc0: ; 0x02185dc0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dc4
 data_ov32_02185dc4: ; 0x02185dc4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dc8
 data_ov32_02185dc8: ; 0x02185dc8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dcc
 data_ov32_02185dcc: ; 0x02185dcc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dd0
 data_ov32_02185dd0: ; 0x02185dd0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dd4
 data_ov32_02185dd4: ; 0x02185dd4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dd8
 data_ov32_02185dd8: ; 0x02185dd8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185ddc
 data_ov32_02185ddc: ; 0x02185ddc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185de0
 data_ov32_02185de0: ; 0x02185de0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185de4
 data_ov32_02185de4: ; 0x02185de4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185de8
 data_ov32_02185de8: ; 0x02185de8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dec
 data_ov32_02185dec: ; 0x02185dec
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185df0
 data_ov32_02185df0: ; 0x02185df0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185df4
 data_ov32_02185df4: ; 0x02185df4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185df8
 data_ov32_02185df8: ; 0x02185df8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185dfc
 data_ov32_02185dfc: ; 0x02185dfc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e00
 data_ov32_02185e00: ; 0x02185e00
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e04
 data_ov32_02185e04: ; 0x02185e04
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e08
 data_ov32_02185e08: ; 0x02185e08
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e0c
 data_ov32_02185e0c: ; 0x02185e0c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e10
 data_ov32_02185e10: ; 0x02185e10
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e14
 data_ov32_02185e14: ; 0x02185e14
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e18
 data_ov32_02185e18: ; 0x02185e18
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e1c
 data_ov32_02185e1c: ; 0x02185e1c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e20
 data_ov32_02185e20: ; 0x02185e20
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e24
 data_ov32_02185e24: ; 0x02185e24
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e28
 data_ov32_02185e28: ; 0x02185e28
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e2c
 data_ov32_02185e2c: ; 0x02185e2c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185e30
 data_ov32_02185e30: ; 0x02185e30
 	.byte 0xe8, 0x3c, 0x18, 0x02
+	.global data_ov32_02185e34
 data_ov32_02185e34: ; 0x02185e34
 	.byte 0xa0, 0x3c, 0x18, 0x02
+	.global data_ov32_02185e38
 data_ov32_02185e38: ; 0x02185e38
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185e3c
 data_ov32_02185e3c: ; 0x02185e3c
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e40
 data_ov32_02185e40: ; 0x02185e40
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_02185e44
 data_ov32_02185e44: ; 0x02185e44
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185e48
 data_ov32_02185e48: ; 0x02185e48
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_02185e4c
 data_ov32_02185e4c: ; 0x02185e4c
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e50
 data_ov32_02185e50: ; 0x02185e50
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185e54
 data_ov32_02185e54: ; 0x02185e54
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e58
 data_ov32_02185e58: ; 0x02185e58
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e5c
 data_ov32_02185e5c: ; 0x02185e5c
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e60
 data_ov32_02185e60: ; 0x02185e60
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e64
 data_ov32_02185e64: ; 0x02185e64
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e68
 data_ov32_02185e68: ; 0x02185e68
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185e6c
 data_ov32_02185e6c: ; 0x02185e6c
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_02185e70
 data_ov32_02185e70: ; 0x02185e70
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_02185e74
 data_ov32_02185e74: ; 0x02185e74
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_02185e78
 data_ov32_02185e78: ; 0x02185e78
 	.byte 0xb4, 0xae, 0x0c, 0x02
+	.global data_ov32_02185e7c
 data_ov32_02185e7c: ; 0x02185e7c
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_02185e80
 data_ov32_02185e80: ; 0x02185e80
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02185e84
 data_ov32_02185e84: ; 0x02185e84
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02185e88
 data_ov32_02185e88: ; 0x02185e88
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_02185e8c
 data_ov32_02185e8c: ; 0x02185e8c
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_02185e90
 data_ov32_02185e90: ; 0x02185e90
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02185e94
 data_ov32_02185e94: ; 0x02185e94
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02185e98
 data_ov32_02185e98: ; 0x02185e98
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_02185e9c
 data_ov32_02185e9c: ; 0x02185e9c
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ea0
 data_ov32_02185ea0: ; 0x02185ea0
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ea4
 data_ov32_02185ea4: ; 0x02185ea4
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ea8
 data_ov32_02185ea8: ; 0x02185ea8
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185eac
 data_ov32_02185eac: ; 0x02185eac
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_02185eb0
 data_ov32_02185eb0: ; 0x02185eb0
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02185eb4
 data_ov32_02185eb4: ; 0x02185eb4
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02185eb8
 data_ov32_02185eb8: ; 0x02185eb8
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ebc
 data_ov32_02185ebc: ; 0x02185ebc
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ec0
 data_ov32_02185ec0: ; 0x02185ec0
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ec4
 data_ov32_02185ec4: ; 0x02185ec4
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ec8
 data_ov32_02185ec8: ; 0x02185ec8
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ecc
 data_ov32_02185ecc: ; 0x02185ecc
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov32_02185ed0
 data_ov32_02185ed0: ; 0x02185ed0
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185ed4
 data_ov32_02185ed4: ; 0x02185ed4
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185ed8
 data_ov32_02185ed8: ; 0x02185ed8
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_02185edc
 data_ov32_02185edc: ; 0x02185edc
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_02185ee0
 data_ov32_02185ee0: ; 0x02185ee0
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02185ee4
 data_ov32_02185ee4: ; 0x02185ee4
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov32_02185ee8
 data_ov32_02185ee8: ; 0x02185ee8
 	.byte 0xb0, 0x30, 0x18, 0x02
+	.global data_ov32_02185eec
 data_ov32_02185eec: ; 0x02185eec
 	.byte 0x28, 0x3a, 0x18, 0x02
+	.global data_ov32_02185ef0
 data_ov32_02185ef0: ; 0x02185ef0
 	.byte 0x68, 0x3c, 0x18, 0x02
+	.global data_ov32_02185ef4
 data_ov32_02185ef4: ; 0x02185ef4
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185ef8
 data_ov32_02185ef8: ; 0x02185ef8
 	.byte 0xf8, 0xae, 0x0c, 0x02
+	.global data_ov32_02185efc
 data_ov32_02185efc: ; 0x02185efc
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_02185f00
 data_ov32_02185f00: ; 0x02185f00
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185f04
 data_ov32_02185f04: ; 0x02185f04
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185f08
 data_ov32_02185f08: ; 0x02185f08
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_02185f0c
 data_ov32_02185f0c: ; 0x02185f0c
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185f10
 data_ov32_02185f10: ; 0x02185f10
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185f14
 data_ov32_02185f14: ; 0x02185f14
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_02185f18
 data_ov32_02185f18: ; 0x02185f18
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185f1c
 data_ov32_02185f1c: ; 0x02185f1c
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185f20
 data_ov32_02185f20: ; 0x02185f20
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185f24
 data_ov32_02185f24: ; 0x02185f24
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185f28
 data_ov32_02185f28: ; 0x02185f28
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_02185f2c
 data_ov32_02185f2c: ; 0x02185f2c
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_02185f30
 data_ov32_02185f30: ; 0x02185f30
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_02185f34
 data_ov32_02185f34: ; 0x02185f34
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov32_02185f38
 data_ov32_02185f38: ; 0x02185f38
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f3c
 data_ov32_02185f3c: ; 0x02185f3c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f40
 data_ov32_02185f40: ; 0x02185f40
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f44
 data_ov32_02185f44: ; 0x02185f44
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f48
 data_ov32_02185f48: ; 0x02185f48
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f4c
 data_ov32_02185f4c: ; 0x02185f4c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f50
 data_ov32_02185f50: ; 0x02185f50
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f54
 data_ov32_02185f54: ; 0x02185f54
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f58
 data_ov32_02185f58: ; 0x02185f58
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f5c
 data_ov32_02185f5c: ; 0x02185f5c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f60
 data_ov32_02185f60: ; 0x02185f60
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f64
 data_ov32_02185f64: ; 0x02185f64
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f68
 data_ov32_02185f68: ; 0x02185f68
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f6c
 data_ov32_02185f6c: ; 0x02185f6c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f70
 data_ov32_02185f70: ; 0x02185f70
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f74
 data_ov32_02185f74: ; 0x02185f74
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f78
 data_ov32_02185f78: ; 0x02185f78
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f7c
 data_ov32_02185f7c: ; 0x02185f7c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f80
 data_ov32_02185f80: ; 0x02185f80
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f84
 data_ov32_02185f84: ; 0x02185f84
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f88
 data_ov32_02185f88: ; 0x02185f88
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f8c
 data_ov32_02185f8c: ; 0x02185f8c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f90
 data_ov32_02185f90: ; 0x02185f90
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f94
 data_ov32_02185f94: ; 0x02185f94
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f98
 data_ov32_02185f98: ; 0x02185f98
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185f9c
 data_ov32_02185f9c: ; 0x02185f9c
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fa0
 data_ov32_02185fa0: ; 0x02185fa0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fa4
 data_ov32_02185fa4: ; 0x02185fa4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fa8
 data_ov32_02185fa8: ; 0x02185fa8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fac
 data_ov32_02185fac: ; 0x02185fac
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fb0
 data_ov32_02185fb0: ; 0x02185fb0
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fb4
 data_ov32_02185fb4: ; 0x02185fb4
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fb8
 data_ov32_02185fb8: ; 0x02185fb8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fbc
 data_ov32_02185fbc: ; 0x02185fbc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_02185fc0
 data_ov32_02185fc0: ; 0x02185fc0
 	.byte 0x4c, 0x46, 0x18, 0x02
+	.global data_ov32_02185fc4
 data_ov32_02185fc4: ; 0x02185fc4
 	.byte 0x04, 0x46, 0x18, 0x02
+	.global data_ov32_02185fc8
 data_ov32_02185fc8: ; 0x02185fc8
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185fcc
 data_ov32_02185fcc: ; 0x02185fcc
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185fd0
 data_ov32_02185fd0: ; 0x02185fd0
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_02185fd4
 data_ov32_02185fd4: ; 0x02185fd4
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_02185fd8
 data_ov32_02185fd8: ; 0x02185fd8
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_02185fdc
 data_ov32_02185fdc: ; 0x02185fdc
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_02185fe0
 data_ov32_02185fe0: ; 0x02185fe0
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_02185fe4
 data_ov32_02185fe4: ; 0x02185fe4
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_02185fe8
 data_ov32_02185fe8: ; 0x02185fe8
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_02185fec
 data_ov32_02185fec: ; 0x02185fec
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_02185ff0
 data_ov32_02185ff0: ; 0x02185ff0
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_02185ff4
 data_ov32_02185ff4: ; 0x02185ff4
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185ff8
 data_ov32_02185ff8: ; 0x02185ff8
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_02185ffc
 data_ov32_02185ffc: ; 0x02185ffc
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_02186000
 data_ov32_02186000: ; 0x02186000
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_02186004
 data_ov32_02186004: ; 0x02186004
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_02186008
 data_ov32_02186008: ; 0x02186008
 	.byte 0x8c, 0x40, 0x18, 0x02
+	.global data_ov32_0218600c
 data_ov32_0218600c: ; 0x0218600c
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_02186010
 data_ov32_02186010: ; 0x02186010
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02186014
 data_ov32_02186014: ; 0x02186014
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02186018
 data_ov32_02186018: ; 0x02186018
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_0218601c
 data_ov32_0218601c: ; 0x0218601c
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_02186020
 data_ov32_02186020: ; 0x02186020
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02186024
 data_ov32_02186024: ; 0x02186024
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02186028
 data_ov32_02186028: ; 0x02186028
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_0218602c
 data_ov32_0218602c: ; 0x0218602c
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_02186030
 data_ov32_02186030: ; 0x02186030
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02186034
 data_ov32_02186034: ; 0x02186034
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02186038
 data_ov32_02186038: ; 0x02186038
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218603c
 data_ov32_0218603c: ; 0x0218603c
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_02186040
 data_ov32_02186040: ; 0x02186040
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02186044
 data_ov32_02186044: ; 0x02186044
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02186048
 data_ov32_02186048: ; 0x02186048
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218604c
 data_ov32_0218604c: ; 0x0218604c
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_02186050
 data_ov32_02186050: ; 0x02186050
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02186054
 data_ov32_02186054: ; 0x02186054
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02186058
 data_ov32_02186058: ; 0x02186058
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov32_0218605c
 data_ov32_0218605c: ; 0x0218605c
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov32_02186060
 data_ov32_02186060: ; 0x02186060
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02186064
 data_ov32_02186064: ; 0x02186064
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02186068
 data_ov32_02186068: ; 0x02186068
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_0218606c
 data_ov32_0218606c: ; 0x0218606c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_02186070
 data_ov32_02186070: ; 0x02186070
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02186074
 data_ov32_02186074: ; 0x02186074
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov32_02186078
 data_ov32_02186078: ; 0x02186078
 	.byte 0xa4, 0x3d, 0x18, 0x02
+	.global data_ov32_0218607c
 data_ov32_0218607c: ; 0x0218607c
 	.byte 0x20, 0x41, 0x18, 0x02
+	.global data_ov32_02186080
 data_ov32_02186080: ; 0x02186080
 	.byte 0xc0, 0x42, 0x18, 0x02
+	.global data_ov32_02186084
 data_ov32_02186084: ; 0x02186084
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02186088
 data_ov32_02186088: ; 0x02186088
 	.byte 0xf8, 0xae, 0x0c, 0x02
+	.global data_ov32_0218608c
 data_ov32_0218608c: ; 0x0218608c
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_02186090
 data_ov32_02186090: ; 0x02186090
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov32_02186094
 data_ov32_02186094: ; 0x02186094
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_02186098
 data_ov32_02186098: ; 0x02186098
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_0218609c
 data_ov32_0218609c: ; 0x0218609c
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov32_021860a0
 data_ov32_021860a0: ; 0x021860a0
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov32_021860a4
 data_ov32_021860a4: ; 0x021860a4
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_021860a8
 data_ov32_021860a8: ; 0x021860a8
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021860ac
 data_ov32_021860ac: ; 0x021860ac
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_021860b0
 data_ov32_021860b0: ; 0x021860b0
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021860b4
 data_ov32_021860b4: ; 0x021860b4
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021860b8
 data_ov32_021860b8: ; 0x021860b8
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_021860bc
 data_ov32_021860bc: ; 0x021860bc
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_021860c0
 data_ov32_021860c0: ; 0x021860c0
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_021860c4
 data_ov32_021860c4: ; 0x021860c4
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov32_021860c8
 data_ov32_021860c8: ; 0x021860c8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021860cc
 data_ov32_021860cc: ; 0x021860cc
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021860d0
 data_ov32_021860d0: ; 0x021860d0
 	.byte 0xf4, 0x46, 0x18, 0x02
+	.global data_ov32_021860d4
 data_ov32_021860d4: ; 0x021860d4
 	.byte 0x34, 0x47, 0x18, 0x02
+	.global data_ov32_021860d8
 data_ov32_021860d8: ; 0x021860d8
 	.byte 0x00, 0xaa, 0x0c, 0x02
+	.global data_ov32_021860dc
 data_ov32_021860dc: ; 0x021860dc
 	.byte 0x3c, 0x17, 0x0c, 0x02
+	.global data_ov32_021860e0
 data_ov32_021860e0: ; 0x021860e0
 	.byte 0xe8, 0xa7, 0x0c, 0x02
+	.global data_ov32_021860e4
 data_ov32_021860e4: ; 0x021860e4
 	.byte 0x28, 0xaa, 0x0c, 0x02
+	.global data_ov32_021860e8
 data_ov32_021860e8: ; 0x021860e8
 	.byte 0x30, 0xad, 0x0c, 0x02
+	.global data_ov32_021860ec
 data_ov32_021860ec: ; 0x021860ec
 	.byte 0xd4, 0x17, 0x0c, 0x02
+	.global data_ov32_021860f0
 data_ov32_021860f0: ; 0x021860f0
 	.byte 0xc0, 0xb1, 0x0c, 0x02
+	.global data_ov32_021860f4
 data_ov32_021860f4: ; 0x021860f4
 	.byte 0x44, 0x17, 0x0c, 0x02
+	.global data_ov32_021860f8
 data_ov32_021860f8: ; 0x021860f8
 	.byte 0x48, 0x17, 0x0c, 0x02
+	.global data_ov32_021860fc
 data_ov32_021860fc: ; 0x021860fc
 	.byte 0xa8, 0x17, 0x0c, 0x02
+	.global data_ov32_02186100
 data_ov32_02186100: ; 0x02186100
 	.byte 0xb0, 0x17, 0x0c, 0x02
+	.global data_ov32_02186104
 data_ov32_02186104: ; 0x02186104
 	.byte 0x4c, 0x17, 0x0c, 0x02
+	.global data_ov32_02186108
 data_ov32_02186108: ; 0x02186108
 	.byte 0x7c, 0x17, 0x0c, 0x02
+	.global data_ov32_0218610c
 data_ov32_0218610c: ; 0x0218610c
 	.byte 0xe4, 0x27, 0x0c, 0x02
+	.global data_ov32_02186110
 data_ov32_02186110: ; 0x02186110
 	.byte 0x04, 0x30, 0x0c, 0x02
+	.global data_ov32_02186114
 data_ov32_02186114: ; 0x02186114
 	.byte 0x44, 0x27, 0x0c, 0x02
+	.global data_ov32_02186118
 data_ov32_02186118: ; 0x02186118
 	.byte 0x88, 0x48, 0x18, 0x02
+	.global data_ov32_0218611c
 data_ov32_0218611c: ; 0x0218611c
 	.byte 0x40, 0xa8, 0x0c, 0x02
+	.global data_ov32_02186120
 data_ov32_02186120: ; 0x02186120
 	.byte 0x0c, 0x31, 0x0c, 0x02
+	.global data_ov32_02186124
 data_ov32_02186124: ; 0x02186124
 	.byte 0x14, 0x31, 0x0c, 0x02
+	.global data_ov32_02186128
 data_ov32_02186128: ; 0x02186128
 	.byte 0xa8, 0x18, 0x0c, 0x02
+	.global data_ov32_0218612c
 data_ov32_0218612c: ; 0x0218612c
 	.byte 0xc4, 0x18, 0x0c, 0x02
+	.global data_ov32_02186130
 data_ov32_02186130: ; 0x02186130
 	.byte 0xfc, 0x18, 0x0c, 0x02
+	.global data_ov32_02186134
 data_ov32_02186134: ; 0x02186134
 	.byte 0x04, 0x19, 0x0c, 0x02
+	.global data_ov32_02186138
 data_ov32_02186138: ; 0x02186138
 	.byte 0x10, 0x19, 0x0c, 0x02
+	.global data_ov32_0218613c
 data_ov32_0218613c: ; 0x0218613c
 	.byte 0x14, 0x19, 0x0c, 0x02
+	.global data_ov32_02186140
 data_ov32_02186140: ; 0x02186140
 	.byte 0x1c, 0x19, 0x0c, 0x02
+	.global data_ov32_02186144
 data_ov32_02186144: ; 0x02186144
 	.byte 0x24, 0x19, 0x0c, 0x02
+	.global data_ov32_02186148
 data_ov32_02186148: ; 0x02186148
 	.byte 0x2c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218614c
 data_ov32_0218614c: ; 0x0218614c
 	.byte 0x28, 0x19, 0x0c, 0x02
+	.global data_ov32_02186150
 data_ov32_02186150: ; 0x02186150
 	.byte 0x34, 0x19, 0x0c, 0x02
+	.global data_ov32_02186154
 data_ov32_02186154: ; 0x02186154
 	.byte 0x38, 0x19, 0x0c, 0x02
+	.global data_ov32_02186158
 data_ov32_02186158: ; 0x02186158
 	.byte 0x3c, 0x19, 0x0c, 0x02
+	.global data_ov32_0218615c
 data_ov32_0218615c: ; 0x0218615c
 	.byte 0x40, 0x19, 0x0c, 0x02
+	.global data_ov32_02186160
 data_ov32_02186160: ; 0x02186160
 	.byte 0x48, 0x19, 0x0c, 0x02
+	.global data_ov32_02186164
 data_ov32_02186164: ; 0x02186164
 	.byte 0x50, 0x19, 0x0c, 0x02
+	.global data_ov32_02186168
 data_ov32_02186168: ; 0x02186168
 	.byte 0x54, 0x19, 0x0c, 0x02
+	.global data_ov32_0218616c
 data_ov32_0218616c: ; 0x0218616c
 	.byte 0x58, 0x19, 0x0c, 0x02
+	.global data_ov32_02186170
 data_ov32_02186170: ; 0x02186170
 	.byte 0x6c, 0x1b, 0x0c, 0x02
+	.global data_ov32_02186174
 data_ov32_02186174: ; 0x02186174
 	.byte 0xb4, 0x1b, 0x0c, 0x02
+	.global data_ov32_02186178
 data_ov32_02186178: ; 0x02186178
 	.byte 0xf8, 0x1b, 0x0c, 0x02
+	.global data_ov32_0218617c
 data_ov32_0218617c: ; 0x0218617c
 	.byte 0xfc, 0x31, 0x0c, 0x02
+	.global data_ov32_02186180
 data_ov32_02186180: ; 0x02186180
 	.byte 0x2c, 0x32, 0x0c, 0x02
+	.global data_ov32_02186184
 data_ov32_02186184: ; 0x02186184
 	.byte 0xf4, 0xac, 0x0c, 0x02
+	.global data_ov32_02186188
 data_ov32_02186188: ; 0x02186188
 	.byte 0x7c, 0x47, 0x18, 0x02
+	.global data_ov32_0218618c
 data_ov32_0218618c: ; 0x0218618c
 	.byte 0x90, 0x48, 0x18, 0x02
+	.global data_ov32_02186190
 data_ov32_02186190: ; 0x02186190
 	.byte 0x00, 0x4a, 0x18, 0x02
+	.global data_ov32_02186194
 data_ov32_02186194: ; 0x02186194
 	.byte 0xa8, 0xae, 0x0c, 0x02
+	.global data_ov32_02186198
 data_ov32_02186198: ; 0x02186198
 	.byte 0xf8, 0xae, 0x0c, 0x02
+	.global data_ov32_0218619c
 data_ov32_0218619c: ; 0x0218619c
 	.byte 0xfc, 0xae, 0x0c, 0x02
+	.global data_ov32_021861a0
 data_ov32_021861a0: ; 0x021861a0
 	.byte 0xb8, 0xaf, 0x0c, 0x02
+	.global data_ov32_021861a4
 data_ov32_021861a4: ; 0x021861a4
 	.byte 0xbc, 0xaf, 0x0c, 0x02
+	.global data_ov32_021861a8
 data_ov32_021861a8: ; 0x021861a8
 	.byte 0xd0, 0xaf, 0x0c, 0x02
+	.global data_ov32_021861ac
 data_ov32_021861ac: ; 0x021861ac
 	.byte 0x58, 0xb0, 0x0c, 0x02
+	.global data_ov32_021861b0
 data_ov32_021861b0: ; 0x021861b0
 	.byte 0x6c, 0xb0, 0x0c, 0x02
+	.global data_ov32_021861b4
 data_ov32_021861b4: ; 0x021861b4
 	.byte 0x80, 0xb0, 0x0c, 0x02
+	.global data_ov32_021861b8
 data_ov32_021861b8: ; 0x021861b8
 	.byte 0x0c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021861bc
 data_ov32_021861bc: ; 0x021861bc
 	.byte 0x20, 0xb1, 0x0c, 0x02
+	.global data_ov32_021861c0
 data_ov32_021861c0: ; 0x021861c0
 	.byte 0x2c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021861c4
 data_ov32_021861c4: ; 0x021861c4
 	.byte 0x3c, 0xb1, 0x0c, 0x02
+	.global data_ov32_021861c8
 data_ov32_021861c8: ; 0x021861c8
 	.byte 0x50, 0xc1, 0x0c, 0x02
+	.global data_ov32_021861cc
 data_ov32_021861cc: ; 0x021861cc
 	.byte 0x5c, 0xc1, 0x0c, 0x02
+	.global data_ov32_021861d0
 data_ov32_021861d0: ; 0x021861d0
 	.byte 0x90, 0xc4, 0x0c, 0x02
+	.global data_ov32_021861d4
 data_ov32_021861d4: ; 0x021861d4
 	.byte 0x24, 0xc5, 0x0c, 0x02
+	.global data_ov32_021861d8
 data_ov32_021861d8: ; 0x021861d8
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov32_021861dc
 data_ov32_021861dc: ; 0x021861dc
 	.byte 0x00, 0x00, 0x00, 0x00
 	; 0x021861e0
 
 	.bss
+	.global data_ov32_021861e0
 data_ov32_021861e0:
 	.space 0x4
+	.global data_ov32_021861e4
 data_ov32_021861e4:
 	.space 0x4
+	.global data_ov32_021861e8
 data_ov32_021861e8:
 	.space 0x4
+	.global data_ov32_021861ec
 data_ov32_021861ec:
 	.space 0x4
+	.global data_ov32_021861f0
 data_ov32_021861f0:
 	.space 0x4
+	.global data_ov32_021861f4
 data_ov32_021861f4:
 	.space 0x4
+	.global data_ov32_021861f8
 data_ov32_021861f8:
 	.space 0x4
+	.global data_ov32_021861fc
 data_ov32_021861fc:
 	.space 0x4
+	.global data_ov32_02186200
 data_ov32_02186200:
 	.space 0x4
+	.global data_ov32_02186204
 data_ov32_02186204:
 	.space 0x4
+	.global data_ov32_02186208
 data_ov32_02186208:
 	.space 0x4
+	.global data_ov32_0218620c
 data_ov32_0218620c:
 	.space 0x4
+	.global data_ov32_02186210
 data_ov32_02186210:
 	.space 0x4
+	.global data_ov32_02186214
 data_ov32_02186214:
 	.space 0x4
+	.global data_ov32_02186218
 data_ov32_02186218:
 	.space 0x4
+	.global data_ov32_0218621c
 data_ov32_0218621c:
 	.space 0x4
+	.global data_ov32_02186220
 data_ov32_02186220:
 	.space 0x4
+	.global data_ov32_02186224
 data_ov32_02186224:
 	.space 0x4
+	.global data_ov32_02186228
 data_ov32_02186228:
 	.space 0x4
+	.global data_ov32_0218622c
 data_ov32_0218622c:
 	.space 0x4
+	.global data_ov32_02186230
 data_ov32_02186230:
 	.space 0x4
+	.global data_ov32_02186234
 data_ov32_02186234:
 	.space 0x4
+	.global data_ov32_02186238
 data_ov32_02186238:
 	.space 0x4
+	.global data_ov32_0218623c
 data_ov32_0218623c:
 	.space 0x4
+	.global data_ov32_02186240
 data_ov32_02186240:
 	.space 0x4
+	.global data_ov32_02186244
 data_ov32_02186244:
 	.space 0x4
+	.global data_ov32_02186248
 data_ov32_02186248:
 	.space 0x4
+	.global data_ov32_0218624c
 data_ov32_0218624c:
 	.space 0x4
+	.global data_ov32_02186250
 data_ov32_02186250:
 	.space 0x4
+	.global data_ov32_02186254
 data_ov32_02186254:
 	.space 0x4
+	.global data_ov32_02186258
 data_ov32_02186258:
 	.space 0x4
+	.global data_ov32_0218625c
 data_ov32_0218625c:
 	.space 0x4
+	.global data_ov32_02186260
 data_ov32_02186260:
 	.space 0x4
+	.global data_ov32_02186264
 data_ov32_02186264:
 	.space 0x4
+	.global data_ov32_02186268
 data_ov32_02186268:
 	.space 0x4
+	.global data_ov32_0218626c
 data_ov32_0218626c:
 	.space 0x4
+	.global data_ov32_02186270
 data_ov32_02186270:
 	.space 0x4
+	.global data_ov32_02186274
 data_ov32_02186274:
 	.space 0x4
+	.global data_ov32_02186278
 data_ov32_02186278:
 	.space 0x4
+	.global data_ov32_0218627c
 data_ov32_0218627c:
 	.space 0x4
+	.global data_ov32_02186280
 data_ov32_02186280:
 	.space 0x4
+	.global data_ov32_02186284
 data_ov32_02186284:
 	.space 0x4
+	.global data_ov32_02186288
 data_ov32_02186288:
 	.space 0x4
+	.global data_ov32_0218628c
 data_ov32_0218628c:
 	.space 0x4
+	.global data_ov32_02186290
 data_ov32_02186290:
 	.space 0x4
+	.global data_ov32_02186294
 data_ov32_02186294:
 	.space 0x4
+	.global data_ov32_02186298
 data_ov32_02186298:
 	.space 0x4
+	.global data_ov32_0218629c
 data_ov32_0218629c:
 	.space 0x4
+	.global data_ov32_021862a0
 data_ov32_021862a0:
 	.space 0x4
+	.global data_ov32_021862a4
 data_ov32_021862a4:
 	.space 0x4
+	.global data_ov32_021862a8
 data_ov32_021862a8:
 	.space 0x4
+	.global data_ov32_021862ac
 data_ov32_021862ac:
 	.space 0x4
+	.global data_ov32_021862b0
 data_ov32_021862b0:
 	.space 0x4
+	.global data_ov32_021862b4
 data_ov32_021862b4:
 	.space 0x4
+	.global data_ov32_021862b8
 data_ov32_021862b8:
 	.space 0x4
+	.global data_ov32_021862bc
 data_ov32_021862bc:
 	.space 0x4
+	.global data_ov32_021862c0
 data_ov32_021862c0:
 	.space 0x4
+	.global data_ov32_021862c4
 data_ov32_021862c4:
 	.space 0x4
+	.global data_ov32_021862c8
 data_ov32_021862c8:
 	.space 0x4
+	.global data_ov32_021862cc
 data_ov32_021862cc:
 	.space 0x4
+	.global data_ov32_021862d0
 data_ov32_021862d0:
 	.space 0x4
+	.global data_ov32_021862d4
 data_ov32_021862d4:
 	.space 0x4
+	.global data_ov32_021862d8
 data_ov32_021862d8:
 	.space 0x4
+	.global data_ov32_021862dc
 data_ov32_021862dc:
 	.space 0x4
+	.global data_ov32_021862e0
 data_ov32_021862e0:
 	.space 0x4
+	.global data_ov32_021862e4
 data_ov32_021862e4:
 	.space 0x4
+	.global data_ov32_021862e8
 data_ov32_021862e8:
 	.space 0x4
+	.global data_ov32_021862ec
 data_ov32_021862ec:
 	.space 0x4
+	.global data_ov32_021862f0
 data_ov32_021862f0:
 	.space 0x4
+	.global data_ov32_021862f4
 data_ov32_021862f4:
 	.space 0x4
+	.global data_ov32_021862f8
 data_ov32_021862f8:
 	.space 0x4
+	.global data_ov32_021862fc
 data_ov32_021862fc:
 	.space 0x4
+	.global data_ov32_02186300
 data_ov32_02186300:
 	.space 0x4
+	.global data_ov32_02186304
 data_ov32_02186304:
 	.space 0x4
+	.global data_ov32_02186308
 data_ov32_02186308:
 	.space 0x4
+	.global data_ov32_0218630c
 data_ov32_0218630c:
 	.space 0x4
+	.global data_ov32_02186310
 data_ov32_02186310:
 	.space 0x4
+	.global data_ov32_02186314
 data_ov32_02186314:
 	.space 0x4
+	.global data_ov32_02186318
 data_ov32_02186318:
 	.space 0x4
+	.global data_ov32_0218631c
 data_ov32_0218631c:
 	.space 0x4
