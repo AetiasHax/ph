@@ -1,0 +1,190 @@
+asm/main.o
+asm/itcm.o
+asm/dtcm.o
+
+-og OV00,0 -ol OV00
+	asm/ov00.o
+
+-og OV01,0 -ol OV00
+	asm/ov01.o
+
+-og OV02,0 -ol OV00
+	asm/ov02.o
+
+-og OV03,0 -ol OV00
+	asm/ov03.o
+
+-og OV04,0 -ol OV00
+	asm/ov04.o
+
+-og OV05,0 -ol OV00
+	asm/ov05.o
+
+-og OV06,0 -ol OV00
+	asm/ov06.o
+
+-og OV07,0 -ol OV00
+	asm/ov07.o
+
+-og OV08,0 -ol OV00
+	asm/ov08.o
+
+-og OV09,0 -ol OV00
+	asm/ov09.o
+
+-og OV10,0 -ol OV00
+	asm/ov10.o
+
+-og OV11,0 -ol OV00
+	asm/ov11.o
+
+-og OV12,0 -ol OV00
+	asm/ov12.o
+
+-og OV13,0 -ol OV00
+	asm/ov13.o
+
+-og OV14,0 -ol OV00
+	asm/ov14.o
+
+-og OV15,0 -ol OV00
+	asm/ov15.o
+
+-og OV16,0 -ol OV00
+	asm/ov16.o
+
+-og OV17,0 -ol OV00
+	asm/ov17.o
+
+-og OV18,0 -ol OV00
+	asm/ov18.o
+
+-og OV19,0 -ol OV00
+	asm/ov19.o
+
+-og OV20,0 -ol OV00
+	asm/ov20.o
+
+-og OV21,0 -ol OV00
+	asm/ov21.o
+
+-og OV22,0 -ol OV00
+	asm/ov22.o
+
+-og OV23,0 -ol OV00
+	asm/ov23.o
+
+-og OV24,0 -ol OV00
+	asm/ov24.o
+
+-og OV25,0 -ol OV00
+	asm/ov25.o
+
+-og OV26,0 -ol OV00
+	asm/ov26.o
+
+-og OV27,0 -ol OV00
+	asm/ov27.o
+
+-og OV28,0 -ol OV00
+	asm/ov28.o
+
+-og OV29,0 -ol OV00
+	asm/ov29.o
+
+-og OV30,0 -ol OV00
+	asm/ov30.o
+
+-og OV31,0 -ol OV00
+	asm/ov31.o
+
+-og OV32,0 -ol OV00
+	asm/ov32.o
+
+-og OV33,0 -ol OV00
+	asm/ov33.o
+
+-og OV34,0 -ol OV00
+	asm/ov34.o
+
+-og OV35,0 -ol OV00
+	asm/ov35.o
+
+-og OV36,0 -ol OV00
+	asm/ov36.o
+
+-og OV37,0 -ol OV00
+	asm/ov37.o
+
+-og OV38,0 -ol OV00
+	asm/ov38.o
+
+-og OV39,0 -ol OV00
+	asm/ov39.o
+
+-og OV40,0 -ol OV00
+	asm/ov40.o
+
+-og OV41,0 -ol OV00
+	asm/ov41.o
+
+-og OV42,0 -ol OV00
+	asm/ov42.o
+
+-og OV43,0 -ol OV00
+	asm/ov43.o
+
+-og OV44,0 -ol OV00
+	asm/ov44.o
+
+-og OV45,0 -ol OV00
+	asm/ov45.o
+
+-og OV46,0 -ol OV00
+	asm/ov46.o
+
+-og OV47,0 -ol OV00
+	asm/ov47.o
+
+-og OV48,0 -ol OV00
+	asm/ov48.o
+
+-og OV49,0 -ol OV00
+	asm/ov49.o
+
+-og OV50,0 -ol OV00
+	asm/ov50.o
+
+-og OV51,0 -ol OV00
+	asm/ov51.o
+
+-og OV52,0 -ol OV00
+	asm/ov52.o
+
+-og OV53,0 -ol OV00
+	asm/ov53.o
+
+-og OV54,0 -ol OV00
+	asm/ov54.o
+
+-og OV55,0 -ol OV00
+	asm/ov55.o
+
+-og OV56,0 -ol OV00
+	asm/ov56.o
+
+-og OV57,0 -ol OV00
+	asm/ov57.o
+
+-og OV58,0 -ol OV00
+	asm/ov58.o
+
+-og OV59,0 -ol OV00
+	asm/ov59.o
+
+-og OV60,0 -ol OV00
+	asm/ov60.o
+
+-og OV61,0 -ol OV00
+	asm/ov61.o
+

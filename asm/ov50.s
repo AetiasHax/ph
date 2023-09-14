@@ -3649,7 +3649,7 @@ func_ov50_02198598: ; 0x02198598
 	ldrsh r1, [r3, ip]
 	ldrsh r2, [r3, r2]
 	blx func_01ff8214
-	ldr r2, _02198678 ; =unk_02054954
+	ldr r2, _02198678 ; =data_02054954
 	add r0, sp, #0
 	ldrsh r1, [r2, #0xa8]
 	ldrsh r2, [r2, #0xaa]
@@ -3688,7 +3688,7 @@ _02198668:
 	.align 2, 0
 	arm_func_end func_ov50_02198598
 _02198674: .word data_02050f54
-_02198678: .word unk_02054954
+_02198678: .word data_02054954
 
 	.global func_ov50_0219867c
 	arm_func_start func_ov50_0219867c
@@ -3817,7 +3817,7 @@ func_ov50_021987c4: ; 0x021987c4
 	arm_func_end func_ov50_021987c4
 	.global data_ov50_021987cc
 data_ov50_021987cc: ; 0x021987cc
-	.byte 0x77, 0x61, 0x69, 0x74
+	.ascii "wait"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov50_021987d4
 data_ov50_021987d4: ; 0x021987d4
@@ -3830,7 +3830,8 @@ data_ov50_021987dc: ; 0x021987dc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov50_021987e0
 data_ov50_021987e0: ; 0x021987e0
-	.asciz "fly"
+	.ascii "fly"
+	.byte 0x00
 	.global data_ov50_021987e4
 data_ov50_021987e4: ; 0x021987e4
 	.byte 0x00, 0x00, 0x00, 0x00

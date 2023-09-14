@@ -1,7 +1,7 @@
     .include "macros/function.inc"
     .include "global.inc"
 
-	.text
+	.data
 	.global data_027e0000
 data_027e0000: ; 0x027e0000
 	.byte 0x03, 0x00, 0x00, 0x00
@@ -40,10 +40,7 @@ data_027e001c: ; 0x027e001c
 	.byte 0x00, 0xc1, 0x00, 0x02
 	.global data_027e0020
 data_027e0020: ; 0x027e0020
-	.byte 0xcc
-	.global data_027e0021
-data_027e0021: ; 0x027e0021
-	.byte 0xc1, 0x00, 0x02
+	.byte 0xcc, 0xc1, 0x00, 0x02
 	.global data_027e0024
 data_027e0024: ; 0x027e0024
 	.byte 0xdc, 0xc1, 0x00, 0x02

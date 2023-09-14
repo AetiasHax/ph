@@ -162,7 +162,7 @@ func_ov54_02198e4c: ; 0x02198e4c
 	cmpne r0, #0x25
 	cmpne r0, #0x26
 	bne _02198ec4
-	ldr r2, _02198ed8 ; =unk_02054654
+	ldr r2, _02198ed8 ; =data_02054654
 	add r0, sp, #4
 	ldrsh r1, [r2, #0x1c]
 	ldrsh r2, [r2, #0x1e]
@@ -179,7 +179,7 @@ _02198ec4:
 	.align 2, 0
 	arm_func_end func_ov54_02198e4c
 _02198ed4: .word data_027e0fcc
-_02198ed8: .word unk_02054654
+_02198ed8: .word data_02054654
 _02198edc: .word data_ov54_02199a2c
 
 	.global func_ov54_02198ee0
@@ -945,28 +945,36 @@ data_ov54_0219995c: ; 0x0219995c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov54_02199960
 data_ov54_02199960: ; 0x02199960
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov54_02199964
 data_ov54_02199964: ; 0x02199964
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov54_02199968
 data_ov54_02199968: ; 0x02199968
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov54_0219996c
 data_ov54_0219996c: ; 0x0219996c
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov54_02199970
 data_ov54_02199970: ; 0x02199970
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov54_02199974
 data_ov54_02199974: ; 0x02199974
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov54_02199978
 data_ov54_02199978: ; 0x02199978
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov54_0219997c
 data_ov54_0219997c: ; 0x0219997c
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov54_02199980
 data_ov54_02199980: ; 0x02199980
 	.byte 0x7c, 0x99, 0x19, 0x02

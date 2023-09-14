@@ -1,0 +1,528 @@
+MEMORY
+{
+    ARM9      : ORIGIN = 0x2000000, LENGTH = 0x0 >  arm9.bin
+    ITCM      : ORIGIN = 0x1ff8000, LENGTH = 0x0 >> arm9.bin
+    DTCM      : ORIGIN = 0x2fe0000, LENGTH = 0x0 >> arm9.bin
+    AUTOLOADS : ORIGIN = 0,         LENGTH = 0x0 >> arm9.bin
+    FOOTER    : ORIGIN = 0,         LENGTH = 0x0 >> arm9.bin
+
+    OV_TABLE  : ORIGIN = AFTER(ARM9), LENGTH = 0x0 > arm9_ovt.bin
+
+    OV00 : ORIGIN = 0x20773c0, LENGTH = 0x0 > ov00.bin
+    OV01 : ORIGIN = 0x20eed40, LENGTH = 0x0 > ov01.bin
+    OV02 : ORIGIN = 0x20eed40, LENGTH = 0x0 > ov02.bin
+    OV03 : ORIGIN = 0x20eed40, LENGTH = 0x0 > ov03.bin
+    OV04 : ORIGIN = 0x2100ae0, LENGTH = 0x0 > ov04.bin
+    OV05 : ORIGIN = 0x2100ae0, LENGTH = 0x0 > ov05.bin
+    OV06 : ORIGIN = 0x2100ae0, LENGTH = 0x0 > ov06.bin
+    OV07 : ORIGIN = 0x2100ae0, LENGTH = 0x0 > ov07.bin
+    OV08 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov08.bin
+    OV09 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov09.bin
+    OV10 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov10.bin
+    OV11 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov11.bin
+    OV12 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov12.bin
+    OV13 : ORIGIN = 0x2112c20, LENGTH = 0x0 > ov13.bin
+    OV14 : ORIGIN = 0x211f640, LENGTH = 0x0 > ov14.bin
+    OV15 : ORIGIN = 0x211f640, LENGTH = 0x0 > ov15.bin
+    OV16 : ORIGIN = 0x211f640, LENGTH = 0x0 > ov16.bin
+    OV17 : ORIGIN = 0x215b4a0, LENGTH = 0x0 > ov17.bin
+    OV18 : ORIGIN = 0x215b4a0, LENGTH = 0x0 > ov18.bin
+    OV19 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov19.bin
+    OV20 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov20.bin
+    OV21 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov21.bin
+    OV22 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov22.bin
+    OV23 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov23.bin
+    OV24 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov24.bin
+    OV25 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov25.bin
+    OV26 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov26.bin
+    OV27 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov27.bin
+    OV28 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov28.bin
+    OV29 : ORIGIN = 0x216d6a0, LENGTH = 0x0 > ov29.bin
+    OV30 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov30.bin
+    OV31 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov31.bin
+    OV32 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov32.bin
+    OV33 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov33.bin
+    OV34 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov34.bin
+    OV35 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov35.bin
+    OV36 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov36.bin
+    OV37 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov37.bin
+    OV38 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov38.bin
+    OV39 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov39.bin
+    OV40 : ORIGIN = 0x217bd80, LENGTH = 0x0 > ov40.bin
+    OV41 : ORIGIN = 0x2189560, LENGTH = 0x0 > ov41.bin
+    OV42 : ORIGIN = 0x2189560, LENGTH = 0x0 > ov42.bin
+    OV43 : ORIGIN = 0x2189560, LENGTH = 0x0 > ov43.bin
+    OV44 : ORIGIN = 0x2189560, LENGTH = 0x0 > ov44.bin
+    OV45 : ORIGIN = 0x2189560, LENGTH = 0x0 > ov45.bin
+    OV46 : ORIGIN = 0x2190040, LENGTH = 0x0 > ov46.bin
+    OV47 : ORIGIN = 0x2190040, LENGTH = 0x0 > ov47.bin
+    OV48 : ORIGIN = 0x2190040, LENGTH = 0x0 > ov48.bin
+    OV49 : ORIGIN = 0x2195500, LENGTH = 0x0 > ov49.bin
+    OV50 : ORIGIN = 0x2195500, LENGTH = 0x0 > ov50.bin
+    OV51 : ORIGIN = 0x2195500, LENGTH = 0x0 > ov51.bin
+    OV52 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov52.bin
+    OV53 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov53.bin
+    OV54 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov54.bin
+    OV55 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov55.bin
+    OV56 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov56.bin
+    OV57 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov57.bin
+    OV58 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov58.bin
+    OV59 : ORIGIN = 0x2198d00, LENGTH = 0x0 > ov59.bin
+    OV60 : ORIGIN = 0x213dec0, LENGTH = 0x0 > ov60.bin
+    OV61 : ORIGIN = 0x213dec0, LENGTH = 0x0 > ov61.bin
+}
+
+SECTIONS
+{
+    .arm9 :
+    {
+        main.o(.text)
+        main.o(.data)
+        main.o(.bss)
+    } > ARM9
+
+    .itcm :
+    {
+        itcm.o(.text)
+    } > ITCM
+
+    .dtcm :
+    {
+        dtcm.o(.data)
+        dtcm.o(.bss)
+    } > DTCM
+
+    .ov00 :
+    {
+        ov00.o(.text)
+        ov00.o(.data)
+        ov00.o(.bss)
+    } > OV00
+
+    .ov01 :
+    {
+        ov01.o(.text)
+        ov01.o(.data)
+        ov01.o(.bss)
+    } > OV01
+
+    .ov02 :
+    {
+        ov02.o(.text)
+        ov02.o(.data)
+        ov02.o(.bss)
+    } > OV02
+
+    .ov03 :
+    {
+        ov03.o(.text)
+        ov03.o(.data)
+        ov03.o(.bss)
+    } > OV03
+
+    .ov04 :
+    {
+        ov04.o(.text)
+        ov04.o(.data)
+        ov04.o(.bss)
+    } > OV04
+
+    .ov05 :
+    {
+        ov05.o(.text)
+        ov05.o(.data)
+        ov05.o(.bss)
+    } > OV05
+
+    .ov06 :
+    {
+        ov06.o(.text)
+        ov06.o(.data)
+        ov06.o(.bss)
+    } > OV06
+
+    .ov07 :
+    {
+        ov07.o(.text)
+        ov07.o(.data)
+        ov07.o(.bss)
+    } > OV07
+
+    .ov08 :
+    {
+        ov08.o(.text)
+        ov08.o(.data)
+        ov08.o(.bss)
+    } > OV08
+
+    .ov09 :
+    {
+        ov09.o(.text)
+        ov09.o(.data)
+        ov09.o(.bss)
+    } > OV09
+
+    .ov10 :
+    {
+        ov10.o(.text)
+        ov10.o(.data)
+        ov10.o(.bss)
+    } > OV10
+
+    .ov11 :
+    {
+        ov11.o(.text)
+        ov11.o(.data)
+        ov11.o(.bss)
+    } > OV11
+
+    .ov12 :
+    {
+        ov12.o(.text)
+        ov12.o(.data)
+        ov12.o(.bss)
+    } > OV12
+
+    .ov13 :
+    {
+        ov13.o(.text)
+        ov13.o(.data)
+        ov13.o(.bss)
+    } > OV13
+
+    .ov14 :
+    {
+        ov14.o(.text)
+        ov14.o(.data)
+        ov14.o(.bss)
+    } > OV14
+
+    .ov15 :
+    {
+        ov15.o(.text)
+        ov15.o(.data)
+        ov15.o(.bss)
+    } > OV15
+
+    .ov16 :
+    {
+        ov16.o(.text)
+        ov16.o(.data)
+        ov16.o(.bss)
+    } > OV16
+
+    .ov17 :
+    {
+        ov17.o(.text)
+        ov17.o(.data)
+        ov17.o(.bss)
+    } > OV17
+
+    .ov18 :
+    {
+        ov18.o(.text)
+        ov18.o(.data)
+        ov18.o(.bss)
+    } > OV18
+
+    .ov19 :
+    {
+        ov19.o(.text)
+        ov19.o(.data)
+        ov19.o(.bss)
+    } > OV19
+
+    .ov20 :
+    {
+        ov20.o(.text)
+        ov20.o(.data)
+        ov20.o(.bss)
+    } > OV20
+
+    .ov21 :
+    {
+        ov21.o(.text)
+        ov21.o(.data)
+        ov21.o(.bss)
+    } > OV21
+
+    .ov22 :
+    {
+        ov22.o(.text)
+        ov22.o(.data)
+        ov22.o(.bss)
+    } > OV22
+
+    .ov23 :
+    {
+        ov23.o(.text)
+        ov23.o(.data)
+        ov23.o(.bss)
+    } > OV23
+
+    .ov24 :
+    {
+        ov24.o(.text)
+        ov24.o(.data)
+        ov24.o(.bss)
+    } > OV24
+
+    .ov25 :
+    {
+        ov25.o(.text)
+        ov25.o(.data)
+        ov25.o(.bss)
+    } > OV25
+
+    .ov26 :
+    {
+        ov26.o(.text)
+        ov26.o(.data)
+        ov26.o(.bss)
+    } > OV26
+
+    .ov27 :
+    {
+        ov27.o(.text)
+        ov27.o(.data)
+        ov27.o(.bss)
+    } > OV27
+
+    .ov28 :
+    {
+        ov28.o(.text)
+        ov28.o(.data)
+        ov28.o(.bss)
+    } > OV28
+
+    .ov29 :
+    {
+        ov29.o(.text)
+        ov29.o(.data)
+        ov29.o(.bss)
+    } > OV29
+
+    .ov30 :
+    {
+        ov30.o(.text)
+        ov30.o(.data)
+        ov30.o(.bss)
+    } > OV30
+
+    .ov31 :
+    {
+        ov31.o(.text)
+        ov31.o(.data)
+        ov31.o(.bss)
+    } > OV31
+
+    .ov32 :
+    {
+        ov32.o(.text)
+        ov32.o(.data)
+        ov32.o(.bss)
+    } > OV32
+
+    .ov33 :
+    {
+        ov33.o(.text)
+        ov33.o(.data)
+        ov33.o(.bss)
+    } > OV33
+
+    .ov34 :
+    {
+        ov34.o(.text)
+        ov34.o(.data)
+        ov34.o(.bss)
+    } > OV34
+
+    .ov35 :
+    {
+        ov35.o(.text)
+        ov35.o(.data)
+        ov35.o(.bss)
+    } > OV35
+
+    .ov36 :
+    {
+        ov36.o(.text)
+        ov36.o(.data)
+        ov36.o(.bss)
+    } > OV36
+
+    .ov37 :
+    {
+        ov37.o(.text)
+        ov37.o(.data)
+        ov37.o(.bss)
+    } > OV37
+
+    .ov38 :
+    {
+        ov38.o(.text)
+        ov38.o(.data)
+        ov38.o(.bss)
+    } > OV38
+
+    .ov39 :
+    {
+        ov39.o(.text)
+        ov39.o(.data)
+        ov39.o(.bss)
+    } > OV39
+
+    .ov40 :
+    {
+        ov40.o(.text)
+        ov40.o(.data)
+        ov40.o(.bss)
+    } > OV40
+
+    .ov41 :
+    {
+        ov41.o(.text)
+        ov41.o(.data)
+        ov41.o(.bss)
+    } > OV41
+
+    .ov42 :
+    {
+        ov42.o(.text)
+        ov42.o(.data)
+        ov42.o(.bss)
+    } > OV42
+
+    .ov43 :
+    {
+        ov43.o(.text)
+        ov43.o(.data)
+        ov43.o(.bss)
+    } > OV43
+
+    .ov44 :
+    {
+        ov44.o(.text)
+        ov44.o(.data)
+        ov44.o(.bss)
+    } > OV44
+
+    .ov45 :
+    {
+        ov45.o(.text)
+        ov45.o(.data)
+        ov45.o(.bss)
+    } > OV45
+
+    .ov46 :
+    {
+        ov46.o(.text)
+        ov46.o(.data)
+        ov46.o(.bss)
+    } > OV46
+
+    .ov47 :
+    {
+        ov47.o(.text)
+        ov47.o(.data)
+        ov47.o(.bss)
+    } > OV47
+
+    .ov48 :
+    {
+        ov48.o(.text)
+        ov48.o(.data)
+        ov48.o(.bss)
+    } > OV48
+
+    .ov49 :
+    {
+        ov49.o(.text)
+        ov49.o(.data)
+        ov49.o(.bss)
+    } > OV49
+
+    .ov50 :
+    {
+        ov50.o(.text)
+        ov50.o(.data)
+        ov50.o(.bss)
+    } > OV50
+
+    .ov51 :
+    {
+        ov51.o(.text)
+        ov51.o(.data)
+        ov51.o(.bss)
+    } > OV51
+
+    .ov52 :
+    {
+        ov52.o(.text)
+        ov52.o(.data)
+        ov52.o(.bss)
+    } > OV52
+
+    .ov53 :
+    {
+        ov53.o(.text)
+        ov53.o(.data)
+        ov53.o(.bss)
+    } > OV53
+
+    .ov54 :
+    {
+        ov54.o(.text)
+        ov54.o(.data)
+        ov54.o(.bss)
+    } > OV54
+
+    .ov55 :
+    {
+        ov55.o(.text)
+        ov55.o(.data)
+        ov55.o(.bss)
+    } > OV55
+
+    .ov56 :
+    {
+        ov56.o(.text)
+        ov56.o(.data)
+        ov56.o(.bss)
+    } > OV56
+
+    .ov57 :
+    {
+        ov57.o(.text)
+        ov57.o(.data)
+        ov57.o(.bss)
+    } > OV57
+
+    .ov58 :
+    {
+        ov58.o(.text)
+        ov58.o(.data)
+        ov58.o(.bss)
+    } > OV58
+
+    .ov59 :
+    {
+        ov59.o(.text)
+        ov59.o(.data)
+        ov59.o(.bss)
+    } > OV59
+
+    .ov60 :
+    {
+        ov60.o(.text)
+        ov60.o(.data)
+        ov60.o(.bss)
+    } > OV60
+
+    .ov61 :
+    {
+        ov61.o(.text)
+        ov61.o(.data)
+        ov61.o(.bss)
+    } > OV61
+}

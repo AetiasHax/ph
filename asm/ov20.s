@@ -102,7 +102,7 @@ func_ov20_0216d7c8: ; 0x0216d7c8
 	str r2, [r4]
 	bl func_ov20_0216fd90
 	ldr ip, _0216d840 ; =func_ov00_020b7d74
-	ldr r3, _0216d844 ; =data_ov20_0216da18
+	ldr r3, _0216d844 ; =0x0216da18
 	add r0, r4, #0xaa0
 	mov r1, #3
 	mov r2, #4
@@ -114,7 +114,7 @@ func_ov20_0216d7c8: ; 0x0216d7c8
 	mov r1, #3
 	str r2, [sp]
 	mov r2, #4
-	ldr r3, _0216d844 ; =data_ov20_0216da18
+	ldr r3, _0216d844 ; =0x0216da18
 	bl func_0204f614
 	mov r0, #0
 	str r0, [r4, #0xab8]
@@ -125,7 +125,7 @@ func_ov20_0216d7c8: ; 0x0216d7c8
 	arm_func_end func_ov20_0216d7c8
 _0216d83c: .word data_ov20_021783a8
 _0216d840: .word func_ov00_020b7d74
-_0216d844: .word data_ov20_0216da18
+_0216d844: .word 0x0216da18
 
 	.global func_ov20_0216d848
 	arm_func_start func_ov20_0216d848
@@ -250,8 +250,7 @@ _0216da08: .word data_027e0fe8
 _0216da0c: .word data_027e0fe4
 _0216da10: .word data_02050f54
 _0216da14: .word 0x55555556
-	.global data_ov20_0216da18
-data_ov20_0216da18: ; 0x0216da18
+_0216da18:
 	.byte 0x00, 0x10, 0xa0, 0xe3, 0x00, 0x10, 0x80, 0xe5
 	.byte 0x1e, 0xff, 0x2f, 0xe1
 
@@ -2803,8 +2802,7 @@ func_ov20_0216fcf8: ; 0x0216fcf8
 	.align 2, 0
 	arm_func_end func_ov20_0216fcf8
 _0216fd74: .word func_ov00_020b7d74
-	.global data_ov20_0216fd78
-data_ov20_0216fd78: ; 0x0216fd78
+_0216fd78:
 	.byte 0xf8, 0x27, 0xd1, 0xe1, 0x08, 0x10, 0x9f, 0xe5
 	.byte 0x01, 0x10, 0x82, 0xe0, 0xb6, 0x15, 0xc0, 0xe1, 0x1e, 0xff, 0x2f, 0xe1
 	.global data_ov20_0216fd8c
@@ -2866,7 +2864,7 @@ func_ov20_0216fe3c: ; 0x0216fe3c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #0xfc
-	bl unk_021687f0
+	bl func_ov17_021687f0
 	mov r0, r4
 	bl func_ov00_020c5e58
 	ldmia sp!, {r4, pc}
@@ -2997,7 +2995,7 @@ _02170008:
 	addeq sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
 	ldr r2, [r4, #0x1c]
-	ldr r1, _021700a8 ; =data_ov20_0216fd78
+	ldr r1, _021700a8 ; =0x0216fd78
 	str r2, [sp]
 	str r1, [sp, #4]
 	ldr r0, _02170094 ; =data_027e0e58
@@ -3034,7 +3032,7 @@ _02170098: .word 0x00001010
 _0217009c: .word 0x00001011
 _021700a0: .word 0x00001012
 _021700a4: .word 0x00000265
-_021700a8: .word data_ov20_0216fd78
+_021700a8: .word 0x0216fd78
 _021700ac: .word 0x00000269
 
 	.global func_ov20_021700b0
@@ -3106,7 +3104,7 @@ func_ov20_02170138: ; 0x02170138
 	str r2, [r4]
 	bl func_ov20_02174074
 	ldr ip, _021701b0 ; =func_ov00_020b7d74
-	ldr r3, _021701b4 ; =data_ov20_0216da18
+	ldr r3, _021701b4 ; =0x0216da18
 	add r0, r4, #0x340
 	mov r1, #2
 	mov r2, #4
@@ -3120,7 +3118,7 @@ func_ov20_02170138: ; 0x02170138
 	str r1, [sp]
 	mov r1, #2
 	mov r2, #4
-	ldr r3, _021701b4 ; =data_ov20_0216da18
+	ldr r3, _021701b4 ; =0x0216da18
 	bl func_0204f614
 	mov r0, r4
 	add sp, sp, #4
@@ -3129,7 +3127,7 @@ func_ov20_02170138: ; 0x02170138
 	arm_func_end func_ov20_02170138
 _021701ac: .word data_ov20_0217854c
 _021701b0: .word func_ov00_020b7d74
-_021701b4: .word data_ov20_0216da18
+_021701b4: .word 0x0216da18
 
 	.global func_ov20_021701b8
 	arm_func_start func_ov20_021701b8
@@ -5202,7 +5200,7 @@ func_ov20_02171c88: ; 0x02171c88
 	str r1, [sp]
 	mov r1, #4
 	mov r2, r1
-	ldr r3, _02171d10 ; =data_ov20_0216da18
+	ldr r3, _02171d10 ; =0x0216da18
 	bl func_0204f614
 	add r0, r4, #0x190
 	mov r1, r4
@@ -5215,7 +5213,7 @@ func_ov20_02171c88: ; 0x02171c88
 _02171d04: .word data_ov20_02178718
 _02171d08: .word data_027e0fec
 _02171d0c: .word func_ov00_020b7d74
-_02171d10: .word data_ov20_0216da18
+_02171d10: .word 0x0216da18
 
 	.global func_ov20_02171d14
 	arm_func_start func_ov20_02171d14
@@ -7240,8 +7238,7 @@ func_ov20_0217387c: ; 0x0217387c
 func_ov20_02173884: ; 0x02173884
 	bx lr
 	arm_func_end func_ov20_02173884
-	.global data_ov20_02173888
-data_ov20_02173888: ; 0x02173888
+_02173888:
 	.byte 0x10, 0xc0, 0x9f, 0xe5, 0x10, 0x00, 0x9f, 0xe5
 	.byte 0x10, 0x30, 0x9f, 0xe5, 0x02, 0x10, 0xa0, 0xe3, 0x20, 0x20, 0xa0, 0xe3, 0x1c, 0xff, 0x2f, 0xe1
 	.global data_ov20_021738a0
@@ -7252,10 +7249,7 @@ data_ov20_021738a4: ; 0x021738a4
 	.byte 0xdc, 0x88, 0x17, 0x02
 	.global data_ov20_021738a8
 data_ov20_021738a8: ; 0x021738a8
-	.byte 0xac, 0x38, 0x17, 0x02
-	.global data_ov20_021738ac
-data_ov20_021738ac: ; 0x021738ac
-	.byte 0x10, 0x40, 0x2d, 0xe9
+	.byte 0xac, 0x38, 0x17, 0x02, 0x10, 0x40, 0x2d, 0xe9
 	.byte 0x00, 0x40, 0xa0, 0xe1, 0x14, 0x30, 0x9f, 0xe5, 0x04, 0x00, 0x84, 0xe2, 0x03, 0x10, 0xa0, 0xe3
 	.byte 0x08, 0x20, 0xa0, 0xe3, 0xa2, 0x6f, 0xfb, 0xeb, 0x04, 0x00, 0xa0, 0xe1, 0x10, 0x80, 0xbd, 0xe8
 	.global data_ov20_021738d0
@@ -7951,7 +7945,7 @@ func_ov20_02174140: ; 0x02174140
 	ldr r0, _02174180 ; =data_ov20_02178b40
 	ldr ip, _02174184 ; =func_ov00_020b7d74
 	str r0, [r4]
-	ldr r3, _02174188 ; =data_ov20_0216da18
+	ldr r3, _02174188 ; =0x0216da18
 	add r0, r4, #0x158
 	mov r1, #2
 	mov r2, #4
@@ -7964,7 +7958,7 @@ func_ov20_02174140: ; 0x02174140
 	arm_func_end func_ov20_02174140
 _02174180: .word data_ov20_02178b40
 _02174184: .word func_ov00_020b7d74
-_02174188: .word data_ov20_0216da18
+_02174188: .word 0x0216da18
 
 	.global func_ov20_0217418c
 	arm_func_start func_ov20_0217418c
@@ -9122,7 +9116,7 @@ func_ov20_02175004: ; 0x02175004
 	str r1, [r4, #0x60]
 	strh r1, [r4, #0x64]
 	strh r1, [r4, #0x66]
-	ldr ip, _021750d0 ; =data_ov20_021750e0
+	ldr ip, _021750d0 ; =0x021750e0
 	strh r1, [r4, #0x68]
 	ldr r3, _021750d4 ; =func_ov20_021750fc
 	add r0, r4, #0x84
@@ -9149,12 +9143,11 @@ _021750c0: .word data_ov00_020e2748
 _021750c4: .word data_ov00_020e2f04
 _021750c8: .word data_ov00_020e2e3c
 _021750cc: .word data_ov20_02178e3c
-_021750d0: .word data_ov20_021750e0
+_021750d0: .word 0x021750e0
 _021750d4: .word func_ov20_021750fc
 _021750d8: .word data_027e0f68
 _021750dc: .word data_ov00_020eec60
-	.global data_ov20_021750e0
-data_ov20_021750e0: ; 0x021750e0
+_021750e0:
 	.byte 0x10, 0x40, 0x2d, 0xe9, 0x00, 0x40, 0xa0, 0xe1, 0x5f, 0x0b, 0xfd, 0xeb, 0x04, 0x00, 0xa0, 0xe1
 	.byte 0x3e, 0x0b, 0xfd, 0xeb, 0x04, 0x00, 0xa0, 0xe1, 0x10, 0x80, 0xbd, 0xe8
 
@@ -9191,7 +9184,7 @@ _02175138:
 	blo _02175138
 	add r0, r7, #0xa8
 	blx func_ov00_020a95a4
-	ldr r3, _0217519c ; =data_ov20_021750e0
+	ldr r3, _0217519c ; =0x021750e0
 	add r0, r7, #0x84
 	mov r1, #3
 	mov r2, #0xc
@@ -9209,7 +9202,7 @@ _02175138:
 _02175190: .word data_ov20_02178e3c
 _02175194: .word data_ov00_020eec60
 _02175198: .word data_027e0e58
-_0217519c: .word data_ov20_021750e0
+_0217519c: .word 0x021750e0
 
 	.global func_ov20_021751a0
 	arm_func_start func_ov20_021751a0
@@ -9234,7 +9227,7 @@ _021751c8:
 	blo _021751c8
 	add r0, r7, #0xa8
 	blx func_ov00_020a95a4
-	ldr r3, _02175224 ; =data_ov20_021750e0
+	ldr r3, _02175224 ; =0x021750e0
 	add r0, r7, #0x84
 	mov r1, #3
 	mov r2, #0xc
@@ -9250,7 +9243,7 @@ _021751c8:
 _02175218: .word data_ov20_02178e3c
 _0217521c: .word data_ov00_020eec60
 _02175220: .word data_027e0e58
-_02175224: .word data_ov20_021750e0
+_02175224: .word 0x021750e0
 
 	.global func_ov20_02175228
 	arm_func_start func_ov20_02175228
@@ -10412,7 +10405,7 @@ func_ov20_02176150: ; 0x02176150
 	ldr r0, _021761a8 ; =data_ov20_02179058
 	ldr ip, _021761ac ; =func_ov00_020b7d74
 	str r0, [r4]
-	ldr r3, _021761b0 ; =data_ov20_0216da18
+	ldr r3, _021761b0 ; =0x0216da18
 	add r0, r4, #0x470
 	mov r1, #2
 	mov r2, #4
@@ -10431,7 +10424,7 @@ func_ov20_02176150: ; 0x02176150
 	arm_func_end func_ov20_02176150
 _021761a8: .word data_ov20_02179058
 _021761ac: .word func_ov00_020b7d74
-_021761b0: .word data_ov20_0216da18
+_021761b0: .word 0x0216da18
 
 	.global func_ov20_021761b4
 	arm_func_start func_ov20_021761b4
@@ -11037,7 +11030,7 @@ func_ov20_021768a4: ; 0x021768a4
 	str r0, [r4, #0x1d8]
 	ldr ip, _02176908 ; =func_ov00_020b7d74
 	str r0, [r4, #0x1dc]
-	ldr r3, _0217690c ; =data_ov20_0216da18
+	ldr r3, _0217690c ; =0x0216da18
 	add r0, r4, #0x1e0
 	mov r1, #3
 	mov r2, #4
@@ -11054,7 +11047,7 @@ func_ov20_021768a4: ; 0x021768a4
 	arm_func_end func_ov20_021768a4
 _02176904: .word data_ov20_02179154
 _02176908: .word func_ov00_020b7d74
-_0217690c: .word data_ov20_0216da18
+_0217690c: .word 0x0216da18
 
 	.global func_ov20_02176910
 	arm_func_start func_ov20_02176910
@@ -12366,7 +12359,7 @@ data_ov20_021778a8: ; 0x021778a8
 	.byte 0x00, 0x20, 0x00, 0x00
 	.global data_ov20_021778ac
 data_ov20_021778ac: ; 0x021778ac
-	.byte 0x77, 0x61, 0x69, 0x74
+	.ascii "wait"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021778b4
 data_ov20_021778b4: ; 0x021778b4
@@ -12379,9 +12372,8 @@ data_ov20_021778bc: ; 0x021778bc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021778c0
 data_ov20_021778c0: ; 0x021778c0
-	.asciz "wait"
-_021778c5:
-	.byte 0x00, 0x00, 0x00
+	.ascii "wait"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021778c8
 data_ov20_021778c8: ; 0x021778c8
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12393,9 +12385,8 @@ data_ov20_021778d0: ; 0x021778d0
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_021778d4
 data_ov20_021778d4: ; 0x021778d4
-	.asciz "attack"
-_021778db:
-	.byte 0x00
+	.ascii "attack"
+	.byte 0x00, 0x00
 	.global data_ov20_021778dc
 data_ov20_021778dc: ; 0x021778dc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12407,9 +12398,8 @@ data_ov20_021778e4: ; 0x021778e4
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_021778e8
 data_ov20_021778e8: ; 0x021778e8
-	.asciz "piyo"
-_021778ed:
-	.byte 0x00, 0x00, 0x00
+	.ascii "piyo"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021778f0
 data_ov20_021778f0: ; 0x021778f0
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12421,7 +12411,8 @@ data_ov20_021778f8: ; 0x021778f8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021778fc
 data_ov20_021778fc: ; 0x021778fc
-	.asciz "set"
+	.ascii "set"
+	.byte 0x00
 	.global data_ov20_02177900
 data_ov20_02177900: ; 0x02177900
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12436,9 +12427,8 @@ data_ov20_0217790c: ; 0x0217790c
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177910
 data_ov20_02177910: ; 0x02177910
-	.asciz "break"
-_02177916:
-	.byte 0x00, 0x00
+	.ascii "break"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov20_02177918
 data_ov20_02177918: ; 0x02177918
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12450,9 +12440,8 @@ data_ov20_02177920: ; 0x02177920
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177924
 data_ov20_02177924: ; 0x02177924
-	.asciz "flick"
-_0217792a:
-	.byte 0x00, 0x00
+	.ascii "flick"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov20_0217792c
 data_ov20_0217792c: ; 0x0217792c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12464,9 +12453,8 @@ data_ov20_02177934: ; 0x02177934
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177938
 data_ov20_02177938: ; 0x02177938
-	.asciz "dead"
-_0217793d:
-	.byte 0x00, 0x00, 0x00
+	.ascii "dead"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177940
 data_ov20_02177940: ; 0x02177940
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12478,7 +12466,8 @@ data_ov20_02177948: ; 0x02177948
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_0217794c
 data_ov20_0217794c: ; 0x0217794c
-	.asciz "move_st"
+	.ascii "move_st"
+	.byte 0x00
 	.global data_ov20_02177954
 data_ov20_02177954: ; 0x02177954
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12490,9 +12479,8 @@ data_ov20_0217795c: ; 0x0217795c
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177960
 data_ov20_02177960: ; 0x02177960
-	.asciz "move_end"
-_02177969:
-	.byte 0x00, 0x00, 0x00
+	.ascii "move_end"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_0217796c
 data_ov20_0217796c: ; 0x0217796c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12513,7 +12501,8 @@ data_ov20_02177980: ; 0x02177980
 	.byte 0x00, 0x14, 0x00, 0x00
 	.global data_ov20_02177984
 data_ov20_02177984: ; 0x02177984
-	.byte 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e, 0x00, 0x00
+	.ascii "action"
+	.byte 0x00, 0x00
 	.global data_ov20_0217798c
 data_ov20_0217798c: ; 0x0217798c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12525,9 +12514,8 @@ data_ov20_02177994: ; 0x02177994
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177998
 data_ov20_02177998: ; 0x02177998
-	.asciz "action_end"
-_021779a3:
-	.byte 0x00
+	.ascii "action_end"
+	.byte 0x00, 0x00
 	.global data_ov20_021779a4
 data_ov20_021779a4: ; 0x021779a4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12542,7 +12530,8 @@ data_ov20_021779b0: ; 0x021779b0
 	.byte 0x05, 0x00, 0x00, 0x00
 	.global data_ov20_021779b4
 data_ov20_021779b4: ; 0x021779b4
-	.byte 0x6d, 0x74, 0x5f, 0x63, 0x6c, 0x6f, 0x74, 0x68, 0x00, 0x00, 0x00, 0x00
+	.ascii "mt_cloth"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021779c0
 data_ov20_021779c0: ; 0x021779c0
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12551,8 +12540,8 @@ data_ov20_021779c4: ; 0x021779c4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021779c8
 data_ov20_021779c8: ; 0x021779c8
-	.byte 0x6d, 0x74, 0x5f, 0x66, 0x6f, 0x72, 0x74, 0x75
-	.byte 0x6e, 0x65, 0x00, 0x00
+	.ascii "mt_fortune"
+	.byte 0x00, 0x00
 	.global data_ov20_021779d4
 data_ov20_021779d4: ; 0x021779d4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12561,8 +12550,8 @@ data_ov20_021779d8: ; 0x021779d8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021779dc
 data_ov20_021779dc: ; 0x021779dc
-	.byte 0x6d, 0x74, 0x5f, 0x66
-	.byte 0x74, 0x5f, 0x65, 0x79, 0x65, 0x00, 0x00, 0x00
+	.ascii "mt_ft_eye"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov20_021779e8
 data_ov20_021779e8: ; 0x021779e8
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12571,7 +12560,8 @@ data_ov20_021779ec: ; 0x021779ec
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021779f0
 data_ov20_021779f0: ; 0x021779f0
-	.byte 0x68, 0x65, 0x61, 0x64, 0x5f, 0x6a, 0x6e, 0x74, 0x00, 0x00, 0x00, 0x00
+	.ascii "head_jnt"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021779fc
 data_ov20_021779fc: ; 0x021779fc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12580,7 +12570,8 @@ data_ov20_02177a00: ; 0x02177a00
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a04
 data_ov20_02177a04: ; 0x02177a04
-	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.ascii "wait"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a0c
 data_ov20_02177a0c: ; 0x02177a0c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12592,9 +12583,8 @@ data_ov20_02177a14: ; 0x02177a14
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a18
 data_ov20_02177a18: ; 0x02177a18
-	.asciz "attack"
-_02177a1f:
-	.byte 0x00
+	.ascii "attack"
+	.byte 0x00, 0x00
 	.global data_ov20_02177a20
 data_ov20_02177a20: ; 0x02177a20
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12606,9 +12596,8 @@ data_ov20_02177a28: ; 0x02177a28
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a2c
 data_ov20_02177a2c: ; 0x02177a2c
-	.asciz "attack_st"
-_02177a36:
-	.byte 0x00, 0x00
+	.ascii "attack_st"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov20_02177a38
 data_ov20_02177a38: ; 0x02177a38
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12617,9 +12606,8 @@ data_ov20_02177a3c: ; 0x02177a3c
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177a40
 data_ov20_02177a40: ; 0x02177a40
-	.asciz "attack_end"
-_02177a4b:
-	.byte 0x00
+	.ascii "attack_end"
+	.byte 0x00, 0x00
 	.global data_ov20_02177a4c
 data_ov20_02177a4c: ; 0x02177a4c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12628,7 +12616,8 @@ data_ov20_02177a50: ; 0x02177a50
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177a54
 data_ov20_02177a54: ; 0x02177a54
-	.byte 0x77, 0x61, 0x69, 0x74, 0x00, 0x00, 0x00, 0x00
+	.ascii "wait"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a5c
 data_ov20_02177a5c: ; 0x02177a5c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12640,7 +12629,8 @@ data_ov20_02177a64: ; 0x02177a64
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a68
 data_ov20_02177a68: ; 0x02177a68
-	.asciz "jump_st"
+	.ascii "jump_st"
+	.byte 0x00
 	.global data_ov20_02177a70
 data_ov20_02177a70: ; 0x02177a70
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12652,9 +12642,8 @@ data_ov20_02177a78: ; 0x02177a78
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov20_02177a7c
 data_ov20_02177a7c: ; 0x02177a7c
-	.asciz "jump"
-_02177a81:
-	.byte 0x00, 0x00, 0x00
+	.ascii "jump"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a84
 data_ov20_02177a84: ; 0x02177a84
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12666,7 +12655,8 @@ data_ov20_02177a8c: ; 0x02177a8c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177a90
 data_ov20_02177a90: ; 0x02177a90
-	.byte 0x62, 0x6f, 0x73, 0x73, 0x5f, 0x66, 0x6c, 0x61, 0x6d, 0x65, 0x00, 0x00
+	.ascii "boss_flame"
+	.byte 0x00, 0x00
 	.global data_ov20_02177a9c
 data_ov20_02177a9c: ; 0x02177a9c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12681,8 +12671,8 @@ data_ov20_02177aa8: ; 0x02177aa8
 	.byte 0x70, 0x12, 0x00, 0x00
 	.global data_ov20_02177aac
 data_ov20_02177aac: ; 0x02177aac
-	.byte 0x63, 0x72, 0x79, 0x73
-	.byte 0x74, 0x61, 0x6c, 0x00
+	.ascii "crystal"
+	.byte 0x00
 	.global data_ov20_02177ab4
 data_ov20_02177ab4: ; 0x02177ab4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12694,19 +12684,22 @@ data_ov20_02177abc: ; 0x02177abc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177ac0
 data_ov20_02177ac0: ; 0x02177ac0
-	.byte 0x68, 0x69, 0x5f, 0x79, 0x6f, 0x75, 0x67, 0x61, 0x6e, 0x00, 0x00, 0x00
+	.ascii "hi_yougan"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov20_02177acc
 data_ov20_02177acc: ; 0x02177acc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177ad0
 data_ov20_02177ad0: ; 0x02177ad0
-	.byte 0x4d, 0x5f, 0x48, 0x69, 0x5f, 0x59, 0x6f, 0x67, 0x61, 0x6e, 0x43, 0x00
+	.ascii "M_Hi_YoganC"
+	.byte 0x00
 	.global data_ov20_02177adc
 data_ov20_02177adc: ; 0x02177adc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177ae0
 data_ov20_02177ae0: ; 0x02177ae0
-	.byte 0x7a, 0x64, 0x66, 0x5f, 0x6c, 0x61, 0x76, 0x61, 0x00, 0x00, 0x00, 0x00
+	.ascii "zdf_lava"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02177aec
 data_ov20_02177aec: ; 0x02177aec
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12987,7 +12980,7 @@ func_ov20_02177de4: ; 0x02177de4
 	ldr r0, _02177ef0 ; =data_ov20_02178910
 	add r1, sp, #0
 	bl func_ov20_021738d4
-	ldr r1, _02177ef4 ; =data_ov20_02173888
+	ldr r1, _02177ef4 ; =0x02173888
 	ldr r2, _02177ef8 ; =data_ov20_021795cc
 	mov r0, #0
 	bl func_0204f8d4
@@ -13005,7 +12998,7 @@ _02177ee4: .word data_ov20_021788f0
 _02177ee8: .word data_ov20_02178900
 _02177eec: .word data_ov20_02178908
 _02177ef0: .word data_ov20_02178910
-_02177ef4: .word data_ov20_02173888
+_02177ef4: .word 0x02173888
 _02177ef8: .word data_ov20_021795cc
 
 	.global func_ov20_02177efc
@@ -13360,28 +13353,36 @@ data_ov20_021782dc: ; 0x021782dc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_021782e0
 data_ov20_021782e0: ; 0x021782e0
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov20_021782e4
 data_ov20_021782e4: ; 0x021782e4
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov20_021782e8
 data_ov20_021782e8: ; 0x021782e8
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov20_021782ec
 data_ov20_021782ec: ; 0x021782ec
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov20_021782f0
 data_ov20_021782f0: ; 0x021782f0
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov20_021782f4
 data_ov20_021782f4: ; 0x021782f4
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov20_021782f8
 data_ov20_021782f8: ; 0x021782f8
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov20_021782fc
 data_ov20_021782fc: ; 0x021782fc
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov20_02178300
 data_ov20_02178300: ; 0x02178300
 	.byte 0xfc, 0x82, 0x17, 0x02
@@ -14668,10 +14669,12 @@ data_ov20_021789ac: ; 0x021789ac
 	.byte 0x9c, 0xc3, 0x08, 0x02
 	.global data_ov20_021789b0
 data_ov20_021789b0: ; 0x021789b0
-	.byte 0x43, 0x46, 0x54, 0x00
+	.ascii "CFT"
+	.byte 0x00
 	.global data_ov20_021789b4
 data_ov20_021789b4: ; 0x021789b4
-	.byte 0x66, 0x74, 0x5f, 0x65, 0x79, 0x65, 0x00, 0x00
+	.ascii "ft_eye"
+	.byte 0x00, 0x00
 	.global data_ov20_021789bc
 data_ov20_021789bc: ; 0x021789bc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -15100,28 +15103,36 @@ data_ov20_02178bf0: ; 0x02178bf0
 	.byte 0x2c, 0x32, 0x0c, 0x02
 	.global data_ov20_02178bf4
 data_ov20_02178bf4: ; 0x02178bf4
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov20_02178bf8
 data_ov20_02178bf8: ; 0x02178bf8
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov20_02178bfc
 data_ov20_02178bfc: ; 0x02178bfc
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov20_02178c00
 data_ov20_02178c00: ; 0x02178c00
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov20_02178c04
 data_ov20_02178c04: ; 0x02178c04
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov20_02178c08
 data_ov20_02178c08: ; 0x02178c08
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov20_02178c0c
 data_ov20_02178c0c: ; 0x02178c0c
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov20_02178c10
 data_ov20_02178c10: ; 0x02178c10
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov20_02178c14
 data_ov20_02178c14: ; 0x02178c14
 	.byte 0x10, 0x8c, 0x17, 0x02
@@ -15466,11 +15477,12 @@ data_ov20_02178dd8: ; 0x02178dd8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02178ddc
 data_ov20_02178ddc: ; 0x02178ddc
-	.byte 0x54, 0x4b, 0x54, 0x3a
-	.byte 0x2f, 0x74, 0x65, 0x6b, 0x74, 0x69, 0x67, 0x68, 0x74, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00
+	.ascii "TKT:/tektight.nsbtp"
+	.byte 0x00
 	.global data_ov20_02178df0
 data_ov20_02178df0: ; 0x02178df0
-	.byte 0x74, 0x65, 0x6b, 0x74, 0x69, 0x67, 0x68, 0x74, 0x00, 0x00, 0x00, 0x00
+	.ascii "tektight"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02178dfc
 data_ov20_02178dfc: ; 0x02178dfc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -16250,12 +16262,12 @@ data_ov20_02179204: ; 0x02179204
 	.byte 0x2c, 0x32, 0x0c, 0x02
 	.global data_ov20_02179208
 data_ov20_02179208: ; 0x02179208
-	.byte 0x4c, 0x41, 0x56, 0x3a, 0x2f, 0x68, 0x69, 0x5f
-	.byte 0x79, 0x6f, 0x75, 0x67, 0x61, 0x6e, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x61, 0x00, 0x00, 0x00, 0x00
+	.ascii "LAV:/hi_yougan.nsbta"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02179220
 data_ov20_02179220: ; 0x02179220
-	.byte 0x4c, 0x41, 0x56, 0x3a, 0x2f, 0x68, 0x69, 0x5f, 0x79, 0x6f, 0x75, 0x67, 0x61, 0x6e, 0x2e, 0x6e
-	.byte 0x73, 0x62, 0x6d, 0x61, 0x00, 0x00, 0x00, 0x00
+	.ascii "LAV:/hi_yougan.nsbma"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov20_02179238
 data_ov20_02179238: ; 0x02179238
 	.byte 0x00, 0x00, 0x00, 0x00

@@ -518,27 +518,15 @@ _02199224: .word func_ov58_02199228
 	.global func_ov58_02199228
 	thumb_func_start func_ov58_02199228
 func_ov58_02199228: ; 0x02199228
-	push {r3, r4, r5, lr}
-	add r5, r0, #0
-	ldr r0, _0219925c ; =data_ov00_020e9360
-	mov r1, #2
-	blx func_ov00_02079e68
-	add r4, r0, #0
-	ldr r0, _02199260 ; =data_ov58_0219b034
-	blx func_ov00_020a960c
-	add r1, r4, #0
-	blx func_020197bc
-	ldr r0, _02199260 ; =data_ov58_0219b034
-	blx func_ov00_020a960c
-	mov r1, #1
-	blx func_0201987c
-	add r5, #0x20
-	ldr r0, _02199260 ; =data_ov58_0219b034
-	add r1, r5, #0
-	blx func_ov00_020a9740
-	pop {r3, r4, r5, pc}
-	nop
 	thumb_func_end func_ov58_02199228
+_02199228:
+	.byte 0x38
+	.global data_ov58_02199229
+data_ov58_02199229: ; 0x02199229
+	.byte 0xb5, 0x05, 0x1c, 0x0b, 0x48, 0x02, 0x21
+	.byte 0xe0, 0xf6, 0x1a, 0xee, 0x04, 0x1c, 0x0a, 0x48, 0x10, 0xf7, 0xe8, 0xe9, 0x21, 0x1c, 0x80, 0xf6
+	.byte 0xbe, 0xea, 0x07, 0x48, 0x10, 0xf7, 0xe2, 0xe9, 0x01, 0x21, 0x80, 0xf6, 0x18, 0xeb, 0x20, 0x35
+	.byte 0x03, 0x48, 0x29, 0x1c, 0x10, 0xf7, 0x74, 0xea, 0x38, 0xbd, 0xc0, 0x46
 _0219925c: .word data_ov00_020e9360
 _02199260: .word data_ov58_0219b034
 
@@ -556,18 +544,14 @@ _02199268: .word func_ov58_0219926c
 	.global func_ov58_0219926c
 	thumb_func_start func_ov58_0219926c
 func_ov58_0219926c: ; 0x0219926c
-	push {r3, r4, lr}
-	sub sp, #4
-	mov r1, #0x44
-	ldrsh r1, [r0, r1]
-	add r4, r0, #0
-	add r4, #0x38
-	str r1, [sp]
-	ldmia r4!, {r1, r2, r3}
-	blx func_ov00_020be9e4
-	add sp, #4
-	pop {r3, r4, pc}
 	thumb_func_end func_ov58_0219926c
+_0219926c:
+	.byte 0x18
+	.global data_ov58_0219926d
+data_ov58_0219926d: ; 0x0219926d
+	.byte 0xb5, 0x81, 0xb0
+	.byte 0x44, 0x21, 0x41, 0x5e, 0x04, 0x1c, 0x38, 0x34, 0x00, 0x91, 0x0e, 0xcc, 0x25, 0xf7, 0xb2, 0xeb
+	.byte 0x01, 0xb0, 0x18, 0xbd
 
 	.global func_ov58_02199284
 	arm_func_start func_ov58_02199284
@@ -2562,7 +2546,7 @@ func_ov58_0219a47c: ; 0x0219a47c
 	ldrsh r0, [r0]
 	strh r0, [r4, #0x78]
 	bl func_ov58_0219a5b8
-	bl unk_0213ec40
+	bl func_ov14_0213ec40
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0219a59c:
@@ -3287,8 +3271,8 @@ func_ov58_0219ad34: ; 0x0219ad34
 	thumb_func_end func_ov58_0219ad34
 	.global data_ov58_0219ad68
 data_ov58_0219ad68: ; 0x0219ad68
-	.byte 0x62, 0x6f, 0x6d, 0x63, 0x68, 0x75, 0x5f, 0x70
-	.byte 0x74, 0x00, 0x00, 0x00
+	.ascii "bomchu_pt"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov58_0219ad74
 data_ov58_0219ad74: ; 0x0219ad74
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -3396,28 +3380,36 @@ data_ov58_0219ae9c: ; 0x0219ae9c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov58_0219aea0
 data_ov58_0219aea0: ; 0x0219aea0
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov58_0219aea4
 data_ov58_0219aea4: ; 0x0219aea4
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov58_0219aea8
 data_ov58_0219aea8: ; 0x0219aea8
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov58_0219aeac
 data_ov58_0219aeac: ; 0x0219aeac
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov58_0219aeb0
 data_ov58_0219aeb0: ; 0x0219aeb0
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov58_0219aeb4
 data_ov58_0219aeb4: ; 0x0219aeb4
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov58_0219aeb8
 data_ov58_0219aeb8: ; 0x0219aeb8
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov58_0219aebc
 data_ov58_0219aebc: ; 0x0219aebc
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov58_0219aec0
 data_ov58_0219aec0: ; 0x0219aec0
 	.byte 0xbc, 0xae, 0x19, 0x02
@@ -3486,28 +3478,36 @@ data_ov58_0219af14: ; 0x0219af14
 	.byte 0xb9, 0x9a, 0x0a, 0x02
 	.global data_ov58_0219af18
 data_ov58_0219af18: ; 0x0219af18
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov58_0219af1c
 data_ov58_0219af1c: ; 0x0219af1c
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov58_0219af20
 data_ov58_0219af20: ; 0x0219af20
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov58_0219af24
 data_ov58_0219af24: ; 0x0219af24
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov58_0219af28
 data_ov58_0219af28: ; 0x0219af28
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov58_0219af2c
 data_ov58_0219af2c: ; 0x0219af2c
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov58_0219af30
 data_ov58_0219af30: ; 0x0219af30
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov58_0219af34
 data_ov58_0219af34: ; 0x0219af34
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov58_0219af38
 data_ov58_0219af38: ; 0x0219af38
 	.byte 0x34, 0xaf, 0x19, 0x02
@@ -3546,28 +3546,36 @@ data_ov58_0219af64: ; 0x0219af64
 	.byte 0x00, 0xa0, 0x00, 0x00
 	.global data_ov58_0219af68
 data_ov58_0219af68: ; 0x0219af68
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov58_0219af6c
 data_ov58_0219af6c: ; 0x0219af6c
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov58_0219af70
 data_ov58_0219af70: ; 0x0219af70
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov58_0219af74
 data_ov58_0219af74: ; 0x0219af74
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov58_0219af78
 data_ov58_0219af78: ; 0x0219af78
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov58_0219af7c
 data_ov58_0219af7c: ; 0x0219af7c
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov58_0219af80
 data_ov58_0219af80: ; 0x0219af80
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov58_0219af84
 data_ov58_0219af84: ; 0x0219af84
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov58_0219af88
 data_ov58_0219af88: ; 0x0219af88
 	.byte 0x84, 0xaf, 0x19, 0x02

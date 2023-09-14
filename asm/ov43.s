@@ -3504,7 +3504,7 @@ _0218c4a8:
 	add r1, sp, #0x2c
 	add r2, sp, #0x28
 	mov r0, r5
-	bl unk_02184dec
+	bl func_ov36_02184dec
 _0218c4c0:
 	mov r0, r4
 	bl func_ov00_020cc168
@@ -3534,7 +3534,7 @@ _0218c4ec:
 	beq _0218c52c
 	add r1, sp, #0x24
 	add r2, sp, #0x20
-	bl unk_02184dec
+	bl func_ov36_02184dec
 _0218c52c:
 	ldrb r0, [r4, #0x3e6]
 	ldr r2, _0218c9b8 ; =0x00000222
@@ -3672,7 +3672,7 @@ _0218c6f0:
 	beq _0218c730
 	add r1, sp, #0x1c
 	add r2, sp, #0x18
-	bl unk_02184dec
+	bl func_ov36_02184dec
 _0218c730:
 	add r0, r4, #0x28c
 	mov r1, #3
@@ -4561,7 +4561,8 @@ func_ov43_0218d314: ; 0x0218d314
 	arm_func_end func_ov43_0218d314
 	.global data_ov43_0218d340
 data_ov43_0218d340: ; 0x0218d340
-	.byte 0x77, 0x61, 0x6c, 0x6b, 0x00, 0x00, 0x00, 0x00
+	.ascii "walk"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d348
 data_ov43_0218d348: ; 0x0218d348
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4573,7 +4574,8 @@ data_ov43_0218d350: ; 0x0218d350
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d354
 data_ov43_0218d354: ; 0x0218d354
-	.asciz "attack1"
+	.ascii "attack1"
+	.byte 0x00
 	.global data_ov43_0218d35c
 data_ov43_0218d35c: ; 0x0218d35c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4585,7 +4587,8 @@ data_ov43_0218d364: ; 0x0218d364
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov43_0218d368
 data_ov43_0218d368: ; 0x0218d368
-	.asciz "attack2"
+	.ascii "attack2"
+	.byte 0x00
 	.global data_ov43_0218d370
 data_ov43_0218d370: ; 0x0218d370
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4597,7 +4600,8 @@ data_ov43_0218d378: ; 0x0218d378
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov43_0218d37c
 data_ov43_0218d37c: ; 0x0218d37c
-	.asciz "attack3"
+	.ascii "attack3"
+	.byte 0x00
 	.global data_ov43_0218d384
 data_ov43_0218d384: ; 0x0218d384
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4609,9 +4613,8 @@ data_ov43_0218d38c: ; 0x0218d38c
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov43_0218d390
 data_ov43_0218d390: ; 0x0218d390
-	.asciz "discover"
-_0218d399:
-	.byte 0x00, 0x00, 0x00
+	.ascii "discover"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d39c
 data_ov43_0218d39c: ; 0x0218d39c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4620,9 +4623,8 @@ data_ov43_0218d3a0: ; 0x0218d3a0
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3a4
 data_ov43_0218d3a4: ; 0x0218d3a4
-	.asciz "walk"
-_0218d3a9:
-	.byte 0x00, 0x00, 0x00
+	.ascii "walk"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3ac
 data_ov43_0218d3ac: ; 0x0218d3ac
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4643,7 +4645,8 @@ data_ov43_0218d3c0: ; 0x0218d3c0
 	.byte 0x10, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3c4
 data_ov43_0218d3c4: ; 0x0218d3c4
-	.byte 0x61, 0x70, 0x70, 0x65, 0x61, 0x72, 0x00, 0x00
+	.ascii "appear"
+	.byte 0x00, 0x00
 	.global data_ov43_0218d3cc
 data_ov43_0218d3cc: ; 0x0218d3cc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4655,9 +4658,8 @@ data_ov43_0218d3d4: ; 0x0218d3d4
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3d8
 data_ov43_0218d3d8: ; 0x0218d3d8
-	.asciz "walk"
-_0218d3dd:
-	.byte 0x00, 0x00, 0x00
+	.ascii "walk"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3e0
 data_ov43_0218d3e0: ; 0x0218d3e0
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4669,9 +4671,8 @@ data_ov43_0218d3e8: ; 0x0218d3e8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3ec
 data_ov43_0218d3ec: ; 0x0218d3ec
-	.asciz "wait"
-_0218d3f1:
-	.byte 0x00, 0x00, 0x00
+	.ascii "wait"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d3f4
 data_ov43_0218d3f4: ; 0x0218d3f4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4683,9 +4684,8 @@ data_ov43_0218d3fc: ; 0x0218d3fc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov43_0218d400
 data_ov43_0218d400: ; 0x0218d400
-	.asciz "attack"
-_0218d407:
-	.byte 0x00
+	.ascii "attack"
+	.byte 0x00, 0x00
 	.global data_ov43_0218d408
 data_ov43_0218d408: ; 0x0218d408
 	.byte 0x00, 0x00, 0x00, 0x00

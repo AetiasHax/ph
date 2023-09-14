@@ -2535,7 +2535,8 @@ _0219b108: .word data_027e0fb4
 _0219b10c: .word data_027e0fb8
 	.global data_ov59_0219b110
 data_ov59_0219b110: ; 0x0219b110
-	.byte 0x49, 0x68, 0x61, 0x6d, 0x61, 0x74, 0x00, 0x00
+	.ascii "Ihamat"
+	.byte 0x00, 0x00
 	.global data_ov59_0219b118
 data_ov59_0219b118: ; 0x0219b118
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -2568,28 +2569,36 @@ data_ov59_0219b13c: ; 0x0219b13c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov59_0219b140
 data_ov59_0219b140: ; 0x0219b140
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov59_0219b144
 data_ov59_0219b144: ; 0x0219b144
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov59_0219b148
 data_ov59_0219b148: ; 0x0219b148
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov59_0219b14c
 data_ov59_0219b14c: ; 0x0219b14c
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov59_0219b150
 data_ov59_0219b150: ; 0x0219b150
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov59_0219b154
 data_ov59_0219b154: ; 0x0219b154
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov59_0219b158
 data_ov59_0219b158: ; 0x0219b158
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov59_0219b15c
 data_ov59_0219b15c: ; 0x0219b15c
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov59_0219b160
 data_ov59_0219b160: ; 0x0219b160
 	.byte 0x5c, 0xb1, 0x19, 0x02

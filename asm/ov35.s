@@ -8885,7 +8885,7 @@ _02183874:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	add r0, r7, #0x168
 	add r0, r0, #0x400
-	bl unk_021687f0
+	bl func_ov17_021687f0
 	ldr r5, [r7, #0x174]
 	ldr r1, [r7, #0x530]
 	add r0, r5, #0x48
@@ -10972,8 +10972,8 @@ data_ov35_021851ea: ; 0x021851ea
 	.byte 0x00, 0x00
 	.global data_ov35_021851ec
 data_ov35_021851ec: ; 0x021851ec
-	.byte 0x77, 0x61, 0x6c, 0x6b
-	.byte 0x31, 0x00, 0x00, 0x00
+	.ascii "walk1"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_021851f4
 data_ov35_021851f4: ; 0x021851f4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -10988,7 +10988,8 @@ data_ov35_02185200: ; 0x02185200
 	.byte 0x00, 0x08, 0x00, 0x00
 	.global data_ov35_02185204
 data_ov35_02185204: ; 0x02185204
-	.byte 0x77, 0x61, 0x6c, 0x6b, 0x31, 0x00, 0x00, 0x00
+	.ascii "walk1"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_0218520c
 data_ov35_0218520c: ; 0x0218520c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11000,9 +11001,8 @@ data_ov35_02185214: ; 0x02185214
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185218
 data_ov35_02185218: ; 0x02185218
-	.asciz "shlin1"
-_0218521f:
-	.byte 0x00
+	.ascii "shlin1"
+	.byte 0x00, 0x00
 	.global data_ov35_02185220
 data_ov35_02185220: ; 0x02185220
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11014,9 +11014,8 @@ data_ov35_02185228: ; 0x02185228
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_0218522c
 data_ov35_0218522c: ; 0x0218522c
-	.asciz "shl1"
-_02185231:
-	.byte 0x00, 0x00, 0x00
+	.ascii "shl1"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185234
 data_ov35_02185234: ; 0x02185234
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11028,7 +11027,8 @@ data_ov35_0218523c: ; 0x0218523c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185240
 data_ov35_02185240: ; 0x02185240
-	.asciz "shlout1"
+	.ascii "shlout1"
+	.byte 0x00
 	.global data_ov35_02185248
 data_ov35_02185248: ; 0x02185248
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11040,7 +11040,8 @@ data_ov35_02185250: ; 0x02185250
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_02185254
 data_ov35_02185254: ; 0x02185254
-	.asciz "shlout2"
+	.ascii "shlout2"
+	.byte 0x00
 	.global data_ov35_0218525c
 data_ov35_0218525c: ; 0x0218525c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11052,7 +11053,8 @@ data_ov35_02185264: ; 0x02185264
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185268
 data_ov35_02185268: ; 0x02185268
-	.asciz "shlout3"
+	.ascii "shlout3"
+	.byte 0x00
 	.global data_ov35_02185270
 data_ov35_02185270: ; 0x02185270
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11064,9 +11066,8 @@ data_ov35_02185278: ; 0x02185278
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_0218527c
 data_ov35_0218527c: ; 0x0218527c
-	.asciz "hold1"
-_02185282:
-	.byte 0x00, 0x00
+	.ascii "hold1"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_02185284
 data_ov35_02185284: ; 0x02185284
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11078,9 +11079,8 @@ data_ov35_0218528c: ; 0x0218528c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185290
 data_ov35_02185290: ; 0x02185290
-	.asciz "throw1"
-_02185297:
-	.byte 0x00
+	.ascii "throw1"
+	.byte 0x00, 0x00
 	.global data_ov35_02185298
 data_ov35_02185298: ; 0x02185298
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11092,9 +11092,8 @@ data_ov35_021852a0: ; 0x021852a0
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_021852a4
 data_ov35_021852a4: ; 0x021852a4
-	.asciz "walk2"
-_021852aa:
-	.byte 0x00, 0x00
+	.ascii "walk2"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_021852ac
 data_ov35_021852ac: ; 0x021852ac
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11106,9 +11105,8 @@ data_ov35_021852b4: ; 0x021852b4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_021852b8
 data_ov35_021852b8: ; 0x021852b8
-	.asciz "catch1"
-_021852bf:
-	.byte 0x00
+	.ascii "catch1"
+	.byte 0x00, 0x00
 	.global data_ov35_021852c0
 data_ov35_021852c0: ; 0x021852c0
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11120,9 +11118,8 @@ data_ov35_021852c8: ; 0x021852c8
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_021852cc
 data_ov35_021852cc: ; 0x021852cc
-	.asciz "catch2"
-_021852d3:
-	.byte 0x00
+	.ascii "catch2"
+	.byte 0x00, 0x00
 	.global data_ov35_021852d4
 data_ov35_021852d4: ; 0x021852d4
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11134,9 +11131,8 @@ data_ov35_021852dc: ; 0x021852dc
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_021852e0
 data_ov35_021852e0: ; 0x021852e0
-	.asciz "hold2"
-_021852e6:
-	.byte 0x00, 0x00
+	.ascii "hold2"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_021852e8
 data_ov35_021852e8: ; 0x021852e8
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11148,9 +11144,8 @@ data_ov35_021852f0: ; 0x021852f0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_021852f4
 data_ov35_021852f4: ; 0x021852f4
-	.asciz "throw2"
-_021852fb:
-	.byte 0x00
+	.ascii "throw2"
+	.byte 0x00, 0x00
 	.global data_ov35_021852fc
 data_ov35_021852fc: ; 0x021852fc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11162,9 +11157,8 @@ data_ov35_02185304: ; 0x02185304
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_02185308
 data_ov35_02185308: ; 0x02185308
-	.asciz "guard1"
-_0218530f:
-	.byte 0x00
+	.ascii "guard1"
+	.byte 0x00, 0x00
 	.global data_ov35_02185310
 data_ov35_02185310: ; 0x02185310
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11176,9 +11170,8 @@ data_ov35_02185318: ; 0x02185318
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_0218531c
 data_ov35_0218531c: ; 0x0218531c
-	.asciz "walk3"
-_02185322:
-	.byte 0x00, 0x00
+	.ascii "walk3"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_02185324
 data_ov35_02185324: ; 0x02185324
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11190,9 +11183,8 @@ data_ov35_0218532c: ; 0x0218532c
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_02185330
 data_ov35_02185330: ; 0x02185330
-	.asciz "dead1"
-_02185336:
-	.byte 0x00, 0x00
+	.ascii "dead1"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_02185338
 data_ov35_02185338: ; 0x02185338
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11204,9 +11196,8 @@ data_ov35_02185340: ; 0x02185340
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_ov35_02185344
 data_ov35_02185344: ; 0x02185344
-	.asciz "walk4"
-_0218534a:
-	.byte 0x00, 0x00
+	.ascii "walk4"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_0218534c
 data_ov35_0218534c: ; 0x0218534c
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11218,7 +11209,8 @@ data_ov35_02185354: ; 0x02185354
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185358
 data_ov35_02185358: ; 0x02185358
-	.asciz "appear1"
+	.ascii "appear1"
+	.byte 0x00
 	.global data_ov35_02185360
 data_ov35_02185360: ; 0x02185360
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11242,12 +11234,22 @@ data_ov35_02185372: ; 0x02185372
 	.byte 0x09, 0x10
 	.global data_ov35_02185374
 data_ov35_02185374: ; 0x02185374
-	.byte 0x42, 0x4d, 0x4f, 0x42
+	.ascii "BMOB"
 	.global data_ov35_02185378
 data_ov35_02185378: ; 0x02185378
-	.asciz "YTMBWRRANRMBLLUN"
-_02185389:
-	.byte 0x00, 0x00, 0x00
+	.ascii "YTMB"
+	.global data_ov35_0218537c
+data_ov35_0218537c: ; 0x0218537c
+	.ascii "WRRA"
+	.global data_ov35_02185380
+data_ov35_02185380: ; 0x02185380
+	.ascii "NRMB"
+	.global data_ov35_02185384
+data_ov35_02185384: ; 0x02185384
+	.ascii "LLUN"
+	.global data_ov35_02185388
+data_ov35_02185388: ; 0x02185388
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_0218538c
 data_ov35_0218538c: ; 0x0218538c
 	.byte 0x33, 0x03, 0x00, 0x00
@@ -11769,12 +11771,23 @@ data_ov35_0218563c: ; 0x0218563c
 	.byte 0xa4, 0xec, 0xff, 0xff
 	.global data_ov35_02185640
 data_ov35_02185640: ; 0x02185640
-	.byte 0x42, 0x4d, 0x4f, 0x42
+	.ascii "BMOB"
 	.global data_ov35_02185644
 data_ov35_02185644: ; 0x02185644
-	.asciz "TSLBWRRANRMBLLUNhamp_mat"
-_0218565d:
-	.byte 0x00, 0x00, 0x00
+	.ascii "TSLB"
+	.global data_ov35_02185648
+data_ov35_02185648: ; 0x02185648
+	.ascii "WRRA"
+	.global data_ov35_0218564c
+data_ov35_0218564c: ; 0x0218564c
+	.ascii "NRMB"
+	.global data_ov35_02185650
+data_ov35_02185650: ; 0x02185650
+	.ascii "LLUN"
+	.global data_ov35_02185654
+data_ov35_02185654: ; 0x02185654
+	.ascii "hamp_mat"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185660
 data_ov35_02185660: ; 0x02185660
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11997,16 +12010,16 @@ data_ov35_0218591c: ; 0x0218591c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185920
 data_ov35_02185920: ; 0x02185920
-	.byte 0x52, 0x43, 0x31, 0x3a, 0x2f, 0x63, 0x72, 0x61, 0x63, 0x6b, 0x31, 0x2e, 0x6e, 0x73, 0x62, 0x74
-	.byte 0x70, 0x00, 0x00, 0x00
+	.ascii "RC1:/crack1.nsbtp"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_02185934
 data_ov35_02185934: ; 0x02185934
-	.byte 0x52, 0x43, 0x32, 0x3a, 0x2f, 0x63, 0x72, 0x61, 0x63, 0x6b, 0x32, 0x2e
-	.byte 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00
+	.ascii "RC2:/crack2.nsbtp"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_02185948
 data_ov35_02185948: ; 0x02185948
-	.byte 0x52, 0x43, 0x33, 0x3a, 0x2f, 0x63, 0x72, 0x61
-	.byte 0x63, 0x6b, 0x33, 0x2e, 0x6e, 0x73, 0x62, 0x74, 0x70, 0x00, 0x00, 0x00
+	.ascii "RC3:/crack3.nsbtp"
+	.byte 0x00, 0x00, 0x00
 	.global data_ov35_0218595c
 data_ov35_0218595c: ; 0x0218595c
 	.byte 0x20, 0x59, 0x18, 0x02
@@ -12192,13 +12205,16 @@ data_ov35_02185a4c: ; 0x02185a4c
 	.byte 0xb9, 0x9a, 0x0a, 0x02
 	.global data_ov35_02185a50
 data_ov35_02185a50: ; 0x02185a50
-	.byte 0x63, 0x72, 0x61, 0x63, 0x6b, 0x31, 0x00, 0x00
+	.ascii "crack1"
+	.byte 0x00, 0x00
 	.global data_ov35_02185a58
 data_ov35_02185a58: ; 0x02185a58
-	.byte 0x63, 0x72, 0x61, 0x63, 0x6b, 0x32, 0x00, 0x00
+	.ascii "crack2"
+	.byte 0x00, 0x00
 	.global data_ov35_02185a60
 data_ov35_02185a60: ; 0x02185a60
-	.byte 0x63, 0x72, 0x61, 0x63, 0x6b, 0x33, 0x00, 0x00
+	.ascii "crack3"
+	.byte 0x00, 0x00
 	.global data_ov35_02185a68
 data_ov35_02185a68: ; 0x02185a68
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12567,28 +12583,36 @@ data_ov35_02185c4c: ; 0x02185c4c
 	.byte 0x6c, 0xe7, 0x17, 0x02
 	.global data_ov35_02185c50
 data_ov35_02185c50: ; 0x02185c50
-	.byte 0x62, 0x72, 0x67, 0x00
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov35_02185c54
 data_ov35_02185c54: ; 0x02185c54
-	.byte 0x66, 0x6e, 0x6c, 0x00
+	.ascii "fnl"
+	.byte 0x00
 	.global data_ov35_02185c58
 data_ov35_02185c58: ; 0x02185c58
-	.byte 0x70, 0x64, 0x6c, 0x00
+	.ascii "pdl"
+	.byte 0x00
 	.global data_ov35_02185c5c
 data_ov35_02185c5c: ; 0x02185c5c
-	.byte 0x64, 0x63, 0x6f, 0x00
+	.ascii "dco"
+	.byte 0x00
 	.global data_ov35_02185c60
 data_ov35_02185c60: ; 0x02185c60
-	.byte 0x63, 0x61, 0x6e, 0x00
+	.ascii "can"
+	.byte 0x00
 	.global data_ov35_02185c64
 data_ov35_02185c64: ; 0x02185c64
-	.byte 0x68, 0x75, 0x6c, 0x00
+	.ascii "hul"
+	.byte 0x00
 	.global data_ov35_02185c68
 data_ov35_02185c68: ; 0x02185c68
-	.byte 0x62, 0x6f, 0x77, 0x00
+	.ascii "bow"
+	.byte 0x00
 	.global data_ov35_02185c6c
 data_ov35_02185c6c: ; 0x02185c6c
-	.byte 0x61, 0x6e, 0x63, 0x00
+	.ascii "anc"
+	.byte 0x00
 	.global data_ov35_02185c70
 data_ov35_02185c70: ; 0x02185c70
 	.byte 0x6c, 0x5c, 0x18, 0x02
@@ -13020,29 +13044,27 @@ data_ov35_02185ea8: ; 0x02185ea8
 	.byte 0xd0, 0x48, 0x18, 0x02
 	.global data_ov35_02185eac
 data_ov35_02185eac: ; 0x02185eac
-	.asciz ""
-_02185ead:
-	.byte 0x00, 0x00, 0x00
+	.ascii ""
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185eb0
 data_ov35_02185eb0: ; 0x02185eb0
-	.asciz ""
-_02185eb1:
-	.byte 0x00, 0x00, 0x00
+	.ascii ""
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185eb4
 data_ov35_02185eb4: ; 0x02185eb4
-	.asciz ""
-_02185eb5:
-	.byte 0x00, 0x00, 0x00
+	.ascii ""
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov35_02185eb8
 data_ov35_02185eb8: ; 0x02185eb8
-	.asciz ""
-_02185eb9:
-	.byte 0x00, 0x00, 0x00
-_02185ebc:
+	.ascii ""
 	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov35_02185ebc
+data_ov35_02185ebc: ; 0x02185ebc
+	.ascii ""
+	.byte 0x00, 0x00, 0x00, 0x00
+	; 0x02185ec0
 
 	.bss
-	.space 0x7
 	.global data_ov35_02185ec0
 data_ov35_02185ec0:
 	.space 0x4
@@ -16375,4 +16397,7 @@ data_ov35_02187014:
 	.space 0x4
 	.global data_ov35_02187018
 data_ov35_02187018:
-	.space 0x1
+	.space 0x4
+	.global data_ov35_0218701c
+data_ov35_0218701c:
+	.space 0x4
