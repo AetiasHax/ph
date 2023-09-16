@@ -4187,7 +4187,7 @@ func_ov11_02114c04: ; 0x02114c04
 	mvn r0, r0
 	pop {r3, r4, r5, pc}
 _02114c36:
-	ldr r5, _02114c58 ; =data_ov37_0217f464
+	ldr r5, _02114c58 ; =data_ov61_0217f464
 	ldr r0, [r5]
 	cmp r0, #0
 	bne _02114c4c
@@ -4205,7 +4205,7 @@ _02114c4c:
 	thumb_func_end func_ov11_02114c04
 _02114c50: .word data_ov11_0212ed24
 _02114c54: .word data_ov11_0212ed2c
-_02114c58: .word data_ov37_0217f464
+_02114c58: .word data_ov61_0217f464
 
 	.global func_ov11_02114c5c
 	thumb_func_start func_ov11_02114c5c

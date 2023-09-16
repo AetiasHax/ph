@@ -17,7 +17,7 @@ MW_LICENSE := $(TOOLS_DIR)/mwccarm/license.dat
 
 ASM_FLAGS := -proc arm5te -i asm -msgstyle gcc
 CC_FLAGS  := -O1 -thumb
-LD_FLAGS  := -proc arm946e -nostdlib -interworking -m func_02000800 -map closure,unused -o main.bin -msgstyle gcc
+LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m func_02000800 -map closure,unused -o main.bin -msgstyle gcc
 
 .PHONY: all
 all: arm9
