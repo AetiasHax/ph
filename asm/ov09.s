@@ -167,15 +167,22 @@ func_ov09_02112d68: ; 0x02112d68
 	.global func_ov09_02112d6c
 	thumb_func_start func_ov09_02112d6c
 func_ov09_02112d6c: ; 0x02112d6c
-	thumb_func_end func_ov09_02112d6c
-_02112d6c:
-	.byte 0x38
-	.global data_ov09_02112d6d
-data_ov09_02112d6d: ; 0x02112d6d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x1d, 0x48, 0x20, 0x60, 0x65, 0xf7, 0xca, 0xfe, 0xe1, 0xf7, 0xdc, 0xfb, 0x1b, 0x48, 0x00, 0x21
-	.byte 0x01, 0x60, 0x65, 0x69, 0x00, 0x2d, 0x05, 0xd0, 0x28, 0x1d, 0x17, 0xf7, 0xeb, 0xfe, 0x28, 0x1c
-	.byte 0x1b, 0xf7, 0x3c, 0xee
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _02112de8 ; =data_ov09_0211e6c8
+	str r0, [r4]
+	bl func_ov00_02078b0c
+	bl func_ov03_020f4534
+	ldr r0, _02112dec ; =data_027e1044
+	mov r1, #0
+	str r1, [r0]
+	ldr r5, [r4, #0x14]
+	cmp r5, #0
+	beq _02112d94
+	add r0, r5, #4
+	bl func_0202ab64
+	add r0, r5, #0
+	blx func_0202ea0c
 _02112d94:
 	ldr r5, [r4, #0x10]
 	cmp r5, #0
@@ -214,6 +221,7 @@ _02112dd8:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02112d6c
 _02112de8: .word data_ov09_0211e6c8
 _02112dec: .word data_027e1044
 _02112df0: .word func_ov09_02112d68
@@ -221,14 +229,22 @@ _02112df0: .word func_ov09_02112d68
 	.global func_ov09_02112df4
 	thumb_func_start func_ov09_02112df4
 func_ov09_02112df4: ; 0x02112df4
-	thumb_func_end func_ov09_02112df4
-_02112df4:
-	.byte 0x38
-	.global data_ov09_02112df5
-data_ov09_02112df5: ; 0x02112df5
-	.byte 0xb5, 0x04, 0x1c, 0x1c, 0x48, 0x20, 0x60, 0x65, 0xf7, 0x86, 0xfe
-	.byte 0xe1, 0xf7, 0x98, 0xfb, 0x1a, 0x48, 0x00, 0x21, 0x01, 0x60, 0x65, 0x69, 0x00, 0x2d, 0x05, 0xd0
-	.byte 0x28, 0x1d, 0x17, 0xf7, 0xa7, 0xfe, 0x28, 0x1c, 0x1b, 0xf7, 0xf8, 0xed
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _02112e6c ; =data_ov09_0211e6c8
+	str r0, [r4]
+	bl func_ov00_02078b0c
+	bl func_ov03_020f4534
+	ldr r0, _02112e70 ; =data_027e1044
+	mov r1, #0
+	str r1, [r0]
+	ldr r5, [r4, #0x14]
+	cmp r5, #0
+	beq _02112e1c
+	add r0, r5, #4
+	bl func_0202ab64
+	add r0, r5, #0
+	blx func_0202ea0c
 _02112e1c:
 	ldr r5, [r4, #0x10]
 	cmp r5, #0
@@ -265,6 +281,7 @@ _02112e60:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_02112df4
 _02112e6c: .word data_ov09_0211e6c8
 _02112e70: .word data_027e1044
 _02112e74: .word func_ov09_02112d68
@@ -337,7 +354,7 @@ _02112f48:
 	ldr r1, [r1]
 	ldr r1, [r1, #0x14]
 	cmp r1, #1
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, _02112fdc ; =data_027e0900
 	ldr r1, _02112fe0 ; =0x0000001d
 	ldr r0, [r0, #0x18]
@@ -399,7 +416,7 @@ _02113028:
 	ldr r0, [r5, #0xc]
 	bl func_ov09_0211370c
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0xc]
 	bl func_ov09_021136c4
 	cmp r0, #0
@@ -412,11 +429,11 @@ _02113058:
 	ldr r0, _021130b0 ; =data_ov09_0211f5dc
 	bl func_ov09_021136e8
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0x14]
 	bl func_ov09_021136e8
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _021130ac ; =data_027e0d38
 	mov r2, r4
 	ldr r1, [r0]
@@ -457,7 +474,7 @@ _021130f0:
 	ldr r0, [r5, #0xc]
 	bl func_ov09_0211370c
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0xc]
 	bl func_ov09_021136c4
 	cmp r0, #0
@@ -470,7 +487,7 @@ _02113120:
 	ldr r0, [r5, #0x14]
 	bl func_ov09_0211370c
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0x14]
 	bl func_ov09_021136c4
 	cmp r0, #0
@@ -491,7 +508,7 @@ _0211314c:
 	ldr r0, _02113198 ; =data_ov09_0211f5dc
 	bl func_ov09_021136c4
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _02113198 ; =data_ov09_0211f5dc
 	mov r1, r4
 	blx func_ov03_020fb258
@@ -522,7 +539,7 @@ _021131d0:
 	ldr r0, [r5, #0xc]
 	bl func_ov09_0211370c
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0xc]
 	bl func_ov09_021136c4
 	cmp r0, #0
@@ -535,7 +552,7 @@ _02113200:
 	ldr r0, _0211325c ; =data_ov09_0211f5dc
 	bl func_ov09_0211370c
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, _0211325c ; =data_ov09_0211f5dc
 	bl func_ov09_021136c4
 	cmp r0, #0
@@ -547,7 +564,7 @@ _0211322c:
 	ldr r0, [r5, #0x14]
 	bl func_ov09_021136e8
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _02113258 ; =data_027e0d38
 	mov r2, r4
 	ldr r1, [r0]
@@ -563,17 +580,28 @@ _0211325c: .word data_ov09_0211f5dc
 	.global func_ov09_02113260
 	thumb_func_start func_ov09_02113260
 func_ov09_02113260: ; 0x02113260
-	thumb_func_end func_ov09_02113260
-_02113260:
-	.byte 0x10
-	.global data_ov09_02113261
-data_ov09_02113261: ; 0x02113261
-	.byte 0xb5, 0x04, 0x1c, 0x66, 0xf7, 0xb0, 0xfd, 0x09, 0x48, 0x00, 0x68, 0x40, 0x69, 0x01, 0x28
-	.byte 0x0d, 0xd0, 0xe0, 0x68, 0xe7, 0xf7, 0xf6, 0xfd, 0x06, 0x48, 0xe7, 0xf7, 0x89, 0xfe, 0x60, 0x69
-	.byte 0x07, 0xf0, 0xd4, 0xfc, 0x04, 0x48, 0x01, 0x21, 0x00, 0x68, 0xe1, 0xf7, 0xf5, 0xf9
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov00_02079dc8
+	ldr r0, _02113290 ; =data_027e0d38
+	ldr r0, [r0]
+	ldr r0, [r0, #0x14]
+	cmp r0, #1
+	beq _0211328e
+	ldr r0, [r4, #0xc]
+	bl func_ov03_020fae64
+	ldr r0, _02113294 ; =data_ov09_0211f5dc
+	bl func_ov03_020faf90
+	ldr r0, [r4, #0x14]
+	bl func_ov09_0211ac2c
+	ldr r0, _02113298 ; =data_027e1054
+	mov r1, #1
+	ldr r0, [r0]
+	bl func_ov03_020f4678
 _0211328e:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113260
 _02113290: .word data_027e0d38
 _02113294: .word data_ov09_0211f5dc
 _02113298: .word data_027e1054
@@ -581,19 +609,24 @@ _02113298: .word data_027e1054
 	.global func_ov09_0211329c
 	thumb_func_start func_ov09_0211329c
 func_ov09_0211329c: ; 0x0211329c
-	thumb_func_end func_ov09_0211329c
-_0211329c:
-	.byte 0x10
-	.global data_ov09_0211329d
-data_ov09_0211329d: ; 0x0211329d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x07, 0x48, 0x00, 0x68, 0x40, 0x69, 0x01, 0x28, 0x06, 0xd0, 0x06, 0x48, 0x00, 0x68, 0xe1, 0xf7
-	.byte 0x23, 0xfa, 0x05, 0x48, 0xe7, 0xf7, 0xac, 0xfe
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _021132c0 ; =data_027e0d38
+	ldr r0, [r0]
+	ldr r0, [r0, #0x14]
+	cmp r0, #1
+	beq _021132b8
+	ldr r0, _021132c4 ; =data_027e1054
+	ldr r0, [r0]
+	bl func_ov03_020f46f8
+	ldr r0, _021132c8 ; =data_ov09_0211f5dc
+	bl func_ov03_020fb010
 _021132b8:
 	add r0, r4, #0
 	bl func_ov00_02079dd8
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211329c
 _021132c0: .word data_027e0d38
 _021132c4: .word data_027e1054
 _021132c8: .word data_ov09_0211f5dc
@@ -601,15 +634,25 @@ _021132c8: .word data_ov09_0211f5dc
 	.global func_ov09_021132cc
 	thumb_func_start func_ov09_021132cc
 func_ov09_021132cc: ; 0x021132cc
-	thumb_func_end func_ov09_021132cc
-_021132cc:
-	.byte 0x38
-	.global data_ov09_021132cd
-data_ov09_021132cd: ; 0x021132cd
-	.byte 0xb5, 0x00, 0x22
-	.byte 0x05, 0x1c, 0xd2, 0x43, 0x0c, 0x1c, 0x95, 0x42, 0x36, 0xd0, 0xef, 0xf7, 0xd2, 0xeb, 0x1b, 0x48
-	.byte 0x00, 0x68, 0x13, 0x38, 0x04, 0x28, 0x2f, 0xd8, 0x00, 0x18, 0x78, 0x44, 0xc0, 0x88, 0x00, 0x04
-	.byte 0x00, 0x14, 0x87, 0x44
+	push {r3, r4, r5, lr}
+	mov r2, #0
+	add r5, r0, #0
+	mvn r2, r2
+	add r4, r1, #0
+	cmp r5, r2
+	beq _02113348
+	blx func_ov05_02102a80
+	ldr r0, _0211334c ; =data_027e077c
+	ldr r0, [r0]
+	sub r0, #0x13
+	cmp r0, #4
+	bhi _02113348
+	add r0, r0, r0
+	add r0, pc
+	ldrh r0, [r0, #6]
+	lsl r0, r0, #0x10
+	asr r0, r0, #0x10
+	add pc, r0
 _021132f4: ; jump table
 	.short _021132fe - _021132f4 - 2 ; case 0
 	.short _02113312 - _021132f4 - 2 ; case 1
@@ -650,6 +693,7 @@ _02113338:
 _02113348:
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_021132cc
 _0211334c: .word data_027e077c
 
 	.global func_ov09_02113350
@@ -663,10 +707,10 @@ func_ov09_02113350: ; 0x02113350
 	bge _021133bc
 	cmp r1, #0x17
 	addgt sp, sp, #8
-	ldmia sp!, {r4, pc}
+	ldmgtia sp!, {r4, pc}
 	cmp r1, #0x13
 	addlt sp, sp, #8
-	ldmia sp!, {r4, pc}
+	ldmltia sp!, {r4, pc}
 	beq _021133bc
 	cmp r1, #0x16
 	cmpne r1, #0x17
@@ -708,7 +752,7 @@ _02113404:
 	ldr r0, [r4, #0x38]
 	cmp r0, #4
 	addne sp, sp, #8
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldrb r0, [r4, #0x48]
 	cmp r0, #0
 	mov r0, r4
@@ -736,7 +780,7 @@ _0211345c:
 _0211346c:
 	cmp r0, #0x15
 	addne sp, sp, #8
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	mov r0, r4
 	bl func_ov09_02113698
 	add sp, sp, #8
@@ -749,13 +793,15 @@ _0211348c: .word func_ov09_021132cc
 	.global func_ov09_02113490
 	thumb_func_start func_ov09_02113490
 func_ov09_02113490: ; 0x02113490
-	thumb_func_end func_ov09_02113490
-_02113490:
-	.byte 0x10
-	.global data_ov09_02113491
-data_ov09_02113491: ; 0x02113491
-	.byte 0xb5, 0x04, 0x1c, 0x60, 0x6c, 0x01, 0x28, 0x03, 0xd0, 0x1a, 0x28, 0x0b, 0xd0, 0x37, 0x28
-	.byte 0x16, 0xd1
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, [r4, #0x44]
+	cmp r0, #1
+	beq _021134a2
+	cmp r0, #0x1a
+	beq _021134b6
+	cmp r0, #0x37
+	bne _021134d0
 _021134a2:
 	ldr r0, _02113514 ; =data_027e077c
 	mov r1, #0x14
@@ -807,6 +853,7 @@ _021134d0:
 	blx func_ov02_020f420c
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02113490
 _02113514: .word data_027e077c
 _02113518: .word 0x04000304
 _0211351c: .word 0xffff7fff
@@ -819,13 +866,15 @@ _02113530: .word 0x00000002
 	.global func_ov09_02113534
 	thumb_func_start func_ov09_02113534
 func_ov09_02113534: ; 0x02113534
-	thumb_func_end func_ov09_02113534
-_02113534:
-	.byte 0x10
-	.global data_ov09_02113535
-data_ov09_02113535: ; 0x02113535
-	.byte 0xb5, 0x04, 0x1c, 0x60, 0x6c, 0x01, 0x28, 0x03, 0xd0, 0x1a, 0x28
-	.byte 0x0e, 0xd0, 0x37, 0x28, 0x19, 0xd1
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, [r4, #0x44]
+	cmp r0, #1
+	beq _02113546
+	cmp r0, #0x1a
+	beq _02113560
+	cmp r0, #0x37
+	bne _0211357a
 _02113546:
 	ldr r0, _021135b0 ; =data_027e077c
 	ldr r1, [r0]
@@ -876,6 +925,7 @@ _0211357a:
 _021135ae:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113534
 _021135b0: .word data_027e077c
 _021135b4: .word 0x04000304
 _021135b8: .word 0xffff7fff
@@ -894,7 +944,7 @@ func_ov09_021135d0: ; 0x021135d0
 	ldrsh r0, [r4, #0x4a]
 	cmp r0, #0
 	cmpne r0, #3
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldr r0, [r4, #0x38]
 	cmp r0, #4
 	addls pc, pc, r0, lsl #2
@@ -935,42 +985,30 @@ _0211363c: .word data_ov09_0211e74c
 	.global func_ov09_02113640
 	thumb_func_start func_ov09_02113640
 func_ov09_02113640: ; 0x02113640
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02113640
-_02113640:
-	.byte 0x70
-	.global data_ov09_02113641
-data_ov09_02113641: ; 0x02113641
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02113644
 	thumb_func_start func_ov09_02113644
 func_ov09_02113644: ; 0x02113644
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02113644
-_02113644:
-	.byte 0x70
-	.global data_ov09_02113645
-data_ov09_02113645: ; 0x02113645
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02113648
 	thumb_func_start func_ov09_02113648
 func_ov09_02113648: ; 0x02113648
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02113648
-_02113648:
-	.byte 0x70
-	.global data_ov09_02113649
-data_ov09_02113649: ; 0x02113649
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_0211364c
 	thumb_func_start func_ov09_0211364c
 func_ov09_0211364c: ; 0x0211364c
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_0211364c
-_0211364c:
-	.byte 0x70
-	.global data_ov09_0211364d
-data_ov09_0211364d: ; 0x0211364d
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02113650
 	arm_func_start func_ov09_02113650
@@ -991,7 +1029,7 @@ func_ov09_0211366c: ; 0x0211366c
 	ldr r1, [r0, #0x38]
 	cmp r1, #0
 	movne r0, #0
-	ldmia sp!, {r3, pc}
+	ldmneia sp!, {r3, pc}
 	mov r1, #1
 	str r1, [r0, #0x38]
 	add r0, r0, #4
@@ -1007,7 +1045,7 @@ func_ov09_02113698: ; 0x02113698
 	ldr r1, [r0, #0x38]
 	cmp r1, #4
 	movne r0, #0
-	ldmia sp!, {r3, pc}
+	ldmneia sp!, {r3, pc}
 	mov r1, #5
 	str r1, [r0, #0x38]
 	add r0, r0, #4
@@ -1068,7 +1106,7 @@ func_ov09_0211372c: ; 0x0211372c
 	add r0, r4, #4
 	bl func_ov00_0207a794
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	ldr r1, [r4, #0x38]
 	cmp r1, #7
 	addls pc, pc, r1, lsl #2
@@ -1085,7 +1123,7 @@ _02113754: ; jump table
 _02113774:
 	ldr r0, [r4, #4]
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	cmp r1, #1
 	bne _021137a4
 	mov r1, #2
@@ -1118,7 +1156,7 @@ _021137c0:
 _021137ec:
 	ldr r0, [r4, #4]
 	cmp r0, #1
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	cmp r1, #3
 	bne _0211381c
 	mov r1, #4
@@ -1378,14 +1416,23 @@ _021139b4: .word data_ov09_0211f520
 	.global func_ov09_021139b8
 	thumb_func_start func_ov09_021139b8
 func_ov09_021139b8: ; 0x021139b8
-	thumb_func_end func_ov09_021139b8
-_021139b8:
-	.byte 0x10
-	.global data_ov09_021139b9
-data_ov09_021139b9: ; 0x021139b9
-	.byte 0xb5, 0x0d, 0x49, 0x04, 0x1c, 0x21, 0x60
-	.byte 0x00, 0x21, 0x61, 0x60, 0x01, 0x68, 0x49, 0x69, 0x88, 0x47, 0x00, 0x20, 0xa0, 0x60, 0x09, 0x48
-	.byte 0x01, 0x68, 0x00, 0x29, 0x01, 0xd1, 0x04, 0x60, 0x07, 0xe0
+	push {r4, lr}
+	ldr r1, _021139f0 ; =data_ov09_0211e7e4
+	add r4, r0, #0
+	str r1, [r4]
+	mov r1, #0
+	str r1, [r4, #4]
+	ldr r1, [r0]
+	ldr r1, [r1, #0x14]
+	blx r1
+	mov r0, #0
+	str r0, [r4, #8]
+	ldr r0, _021139f4 ; =data_ov09_0211f520
+	ldr r1, [r0]
+	cmp r1, #0
+	bne _021139da
+	str r4, [r0]
+	b _021139ea
 _021139da:
 	ldr r0, [r1, #8]
 	cmp r0, #0
@@ -1401,19 +1448,22 @@ _021139ea:
 	add r0, r4, #0
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_021139b8
 _021139f0: .word data_ov09_0211e7e4
 _021139f4: .word data_ov09_0211f520
 
 	.global func_ov09_021139f8
 	thumb_func_start func_ov09_021139f8
 func_ov09_021139f8: ; 0x021139f8
-	thumb_func_end func_ov09_021139f8
-_021139f8:
-	.byte 0x09
-	.global data_ov09_021139f9
-data_ov09_021139f9: ; 0x021139f9
-	.byte 0x49, 0x0a, 0x68, 0x00, 0x2a, 0x0e, 0xd0
-	.byte 0x82, 0x42, 0x02, 0xd1, 0x00, 0x22, 0x0a, 0x60, 0x70, 0x47
+	ldr r1, _02113a20 ; =data_ov09_0211f520
+	ldr r2, [r1]
+	cmp r2, #0
+	beq _02113a1e
+	cmp r2, r0
+	bne _02113a0a
+	mov r2, #0
+	str r2, [r1]
+	bx lr
 _02113a0a:
 	ldr r1, [r2, #8]
 	cmp r1, #0
@@ -1429,18 +1479,23 @@ _02113a1a:
 _02113a1e:
 	bx lr
 	.align 2, 0
+	thumb_func_end func_ov09_021139f8
 _02113a20: .word data_ov09_0211f520
 
 	.global func_ov09_02113a24
 	thumb_func_start func_ov09_02113a24
 func_ov09_02113a24: ; 0x02113a24
-	thumb_func_end func_ov09_02113a24
-_02113a24:
-	.byte 0x10
-	.global data_ov09_02113a25
-data_ov09_02113a25: ; 0x02113a25
-	.byte 0xb5, 0x04, 0x1c, 0x0b, 0x48, 0x01, 0x68, 0x00, 0x29, 0x0e, 0xd0
-	.byte 0xa1, 0x42, 0x02, 0xd1, 0x00, 0x21, 0x01, 0x60, 0x09, 0xe0
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _02113a58 ; =data_ov09_0211f520
+	ldr r1, [r0]
+	cmp r1, #0
+	beq _02113a4e
+	cmp r1, r4
+	bne _02113a3a
+	mov r1, #0
+	str r1, [r0]
+	b _02113a4e
 _02113a3a:
 	ldr r0, [r1, #8]
 	cmp r0, #0
@@ -1459,6 +1514,7 @@ _02113a4e:
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113a24
 _02113a58: .word data_ov09_0211f520
 
 	.global func_ov09_02113a5c
@@ -1494,13 +1550,15 @@ _02113a84: .word data_ov09_0211f520
 	.global func_ov09_02113a88
 	thumb_func_start func_ov09_02113a88
 func_ov09_02113a88: ; 0x02113a88
-	thumb_func_end func_ov09_02113a88
-_02113a88:
-	.byte 0x10
-	.global data_ov09_02113a89
-data_ov09_02113a89: ; 0x02113a89
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0xf0, 0x2a, 0xfb
-	.byte 0x00, 0x28, 0x03, 0xd0, 0x20, 0x1c, 0x01, 0x21, 0x59, 0x30, 0x01, 0x70
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_021140e4
+	cmp r0, #0
+	beq _02113a9c
+	add r0, r4, #0
+	mov r1, #1
+	add r0, #0x59
+	strb r1, [r0]
 _02113a9c:
 	add r0, r4, #0
 	add r0, #0x5b
@@ -1606,20 +1664,32 @@ _02113b46:
 _02113b56:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113a88
 _02113b58: .word data_027e0d78
 
 	.global func_ov09_02113b5c
 	thumb_func_start func_ov09_02113b5c
 func_ov09_02113b5c: ; 0x02113b5c
-	thumb_func_end func_ov09_02113b5c
-_02113b5c:
-	.byte 0xf8
-	.global data_ov09_02113b5d
-data_ov09_02113b5d: ; 0x02113b5d
-	.byte 0xb5, 0x8a, 0xb0
-	.byte 0x05, 0x1c, 0x0c, 0x1c, 0x17, 0x1c, 0x00, 0xf0, 0x57, 0xf9, 0x00, 0x28, 0x55, 0xd0, 0x28, 0x1c
-	.byte 0x5c, 0x30, 0x00, 0x78, 0x00, 0x28, 0x50, 0xd0, 0x28, 0x1c, 0x00, 0xf0, 0x99, 0xf8, 0x00, 0x28
-	.byte 0x02, 0xda, 0xe8, 0x68, 0x00, 0x28, 0x48, 0xd0
+	push {r3, r4, r5, r6, r7, lr}
+	sub sp, #0x28
+	add r5, r0, #0
+	add r4, r1, #0
+	add r7, r2, #0
+	bl func_ov09_02113e18
+	cmp r0, #0
+	beq _02113c1a
+	add r0, r5, #0
+	add r0, #0x5c
+	ldrb r0, [r0]
+	cmp r0, #0
+	beq _02113c1a
+	add r0, r5, #0
+	bl func_ov09_02113cb0
+	cmp r0, #0
+	bge _02113b88
+	ldr r0, [r5, #0xc]
+	cmp r0, #0
+	beq _02113c1a
 _02113b88:
 	ldr r0, [r5, #0x1c]
 	ldr r2, [r5, #0x20]
@@ -1696,6 +1766,7 @@ _02113c1a:
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113b5c
 
 	.global func_ov09_02113c20
 	thumb_func_start func_ov09_02113c20
@@ -1735,17 +1806,53 @@ func_ov09_02113c34: ; 0x02113c34
 	.global func_ov09_02113c54
 	thumb_func_start func_ov09_02113c54
 func_ov09_02113c54: ; 0x02113c54
+	push {r3, r4}
+	mov r1, #0
+	str r1, [r0, #0xc]
+	sub r4, r1, #1
+	str r4, [r0, #0x10]
+	str r4, [r0, #0x14]
+	str r4, [r0, #0x18]
+	str r1, [r0, #0x1c]
+	str r1, [r0, #0x20]
+	str r1, [r0, #0x24]
+	str r1, [r0, #0x28]
+	str r1, [r0, #0x2c]
+	str r1, [r0, #0x30]
+	str r1, [r0, #0x34]
+	str r1, [r0, #0x38]
+	str r1, [r0, #0x3c]
+	mov r2, #2
+	str r2, [r0, #0x40]
+	add r2, r0, #0
+	mov r3, #1
+	add r2, #0x5c
+	strb r3, [r2]
+	add r2, r0, #0
+	add r2, #0x5d
+	strb r1, [r2]
+	str r4, [r0, #0x44]
+	str r4, [r0, #0x4c]
+	str r4, [r0, #0x48]
+	str r1, [r0, #0x50]
+	add r2, r0, #0
+	str r1, [r0, #0x54]
+	add r2, #0x58
+	strb r1, [r2]
+	add r2, r0, #0
+	add r2, #0x59
+	strb r1, [r2]
+	add r2, r0, #0
+	add r2, #0x5a
+	strb r1, [r2]
+	add r2, r0, #0
+	add r2, #0x5b
+	strb r1, [r2]
+	add r0, #0x5e
+	strb r1, [r0]
+	pop {r3, r4}
+	bx lr
 	thumb_func_end func_ov09_02113c54
-_02113c54:
-	.byte 0x18
-	.global data_ov09_02113c55
-data_ov09_02113c55: ; 0x02113c55
-	.byte 0xb4, 0x00, 0x21, 0xc1, 0x60, 0x4c, 0x1e, 0x04, 0x61, 0x44, 0x61
-	.byte 0x84, 0x61, 0xc1, 0x61, 0x01, 0x62, 0x41, 0x62, 0x81, 0x62, 0xc1, 0x62, 0x01, 0x63, 0x41, 0x63
-	.byte 0x81, 0x63, 0xc1, 0x63, 0x02, 0x22, 0x02, 0x64, 0x02, 0x1c, 0x01, 0x23, 0x5c, 0x32, 0x13, 0x70
-	.byte 0x02, 0x1c, 0x5d, 0x32, 0x11, 0x70, 0x44, 0x64, 0xc4, 0x64, 0x84, 0x64, 0x01, 0x65, 0x02, 0x1c
-	.byte 0x41, 0x65, 0x58, 0x32, 0x11, 0x70, 0x02, 0x1c, 0x59, 0x32, 0x11, 0x70, 0x02, 0x1c, 0x5a, 0x32
-	.byte 0x11, 0x70, 0x02, 0x1c, 0x5b, 0x32, 0x11, 0x70, 0x5e, 0x30, 0x01, 0x70, 0x18, 0xbc, 0x70, 0x47
 
 	.global func_ov09_02113cb0
 	thumb_func_start func_ov09_02113cb0
@@ -1800,12 +1907,9 @@ _02113cf2:
 	.global func_ov09_02113cf8
 	thumb_func_start func_ov09_02113cf8
 func_ov09_02113cf8: ; 0x02113cf8
+	ldr r0, [r0, #0xc]
+	bx lr
 	thumb_func_end func_ov09_02113cf8
-_02113cf8:
-	.byte 0xc0
-	.global data_ov09_02113cf9
-data_ov09_02113cf9: ; 0x02113cf9
-	.byte 0x68, 0x70, 0x47
 
 	.global func_ov09_02113cfc
 	thumb_func_start func_ov09_02113cfc
@@ -1901,7 +2005,6 @@ _02113d72:
 	lsl r1, r1, #0x10
 	asr r1, r1, #0x10
 	add pc, r1
-	thumb_func_end func_ov09_02113d38
 _02113d84: ; jump table
 	.short _02113db0 - _02113d84 - 2 ; case 0
 	.short _02113e12 - _02113d84 - 2 ; case 1
@@ -1993,6 +2096,7 @@ _02113e12:
 	mov r0, #0
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02113d38
 
 	.global func_ov09_02113e18
 	thumb_func_start func_ov09_02113e18
@@ -2045,7 +2149,6 @@ _02113e5e:
 	lsl r1, r1, #0x10
 	asr r1, r1, #0x10
 	add pc, r1
-	thumb_func_end func_ov09_02113e18
 _02113e70: ; jump table
 	.short _02113e9c - _02113e70 - 2 ; case 0
 	.short _02113f04 - _02113e70 - 2 ; case 1
@@ -2138,6 +2241,7 @@ _02113f00:
 _02113f04:
 	mov r0, #0
 	pop {r4, pc}
+	thumb_func_end func_ov09_02113e18
 
 	.global func_ov09_02113f08
 	thumb_func_start func_ov09_02113f08
@@ -2672,14 +2776,17 @@ _021142a8: .word data_ov09_0211d98c
 	.global func_ov09_021142ac
 	thumb_func_start func_ov09_021142ac
 func_ov09_021142ac: ; 0x021142ac
-	thumb_func_end func_ov09_021142ac
-_021142ac:
-	.byte 0x10
-	.global data_ov09_021142ad
-data_ov09_021142ad: ; 0x021142ad
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0xff, 0xf7, 0xea, 0xfb, 0x20, 0x1c, 0xff, 0xf7, 0x63, 0xff, 0x00, 0x28, 0x04, 0xd1, 0x20, 0x1c
-	.byte 0xff, 0xf7, 0x22, 0xfe, 0x00, 0x28, 0x08, 0xd0
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_02113a88
+	add r0, r4, #0
+	bl func_ov09_02114180
+	cmp r0, #0
+	bne _021142c8
+	add r0, r4, #0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	beq _021142da
 _021142c8:
 	add r0, r4, #0
 	mov r1, #0
@@ -2694,19 +2801,39 @@ _021142da:
 	add r0, r4, #0
 	blx func_0203516c
 	pop {r4, pc}
+	thumb_func_end func_ov09_021142ac
 
 	.global func_ov09_021142e4
 	thumb_func_start func_ov09_021142e4
 func_ov09_021142e4: ; 0x021142e4
-	thumb_func_end func_ov09_021142e4
-_021142e4:
-	.byte 0xf8
-	.global data_ov09_021142e5
-data_ov09_021142e5: ; 0x021142e5
-	.byte 0xb5, 0x8a, 0xb0, 0x05, 0x1c, 0x0c, 0x1c, 0x17, 0x1c, 0xff, 0xf7
-	.byte 0x93, 0xfd, 0x00, 0x28, 0x53, 0xd0, 0x28, 0x1c, 0x5c, 0x30, 0x00, 0x78, 0x00, 0x28, 0x4e, 0xd0
-	.byte 0x28, 0x1c, 0xff, 0xf7, 0xd5, 0xfc, 0x00, 0x28, 0x49, 0xdb, 0x28, 0x1c, 0xe8, 0x30, 0x00, 0x68
-	.byte 0x00, 0x28, 0xe8, 0x69, 0x04, 0xd1, 0x01, 0x19, 0x28, 0x6d, 0x40, 0x00, 0x09, 0x18, 0x03, 0xe0
+	push {r3, r4, r5, r6, r7, lr}
+	sub sp, #0x28
+	add r5, r0, #0
+	add r4, r1, #0
+	add r7, r2, #0
+	bl func_ov09_02113e18
+	cmp r0, #0
+	beq _0211439e
+	add r0, r5, #0
+	add r0, #0x5c
+	ldrb r0, [r0]
+	cmp r0, #0
+	beq _0211439e
+	add r0, r5, #0
+	bl func_ov09_02113cb0
+	cmp r0, #0
+	blt _0211439e
+	add r0, r5, #0
+	add r0, #0xe8
+	ldr r0, [r0]
+	cmp r0, #0
+	ldr r0, [r5, #0x1c]
+	bne _02114320
+	add r1, r0, r4
+	ldr r0, [r5, #0x50]
+	lsl r0, r0, #1
+	add r1, r1, r0
+	b _02114328
 _02114320:
 	add r1, r0, r4
 	ldr r0, [r5, #0x50]
@@ -2770,6 +2897,7 @@ _0211439e:
 	add sp, #0x28
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021142e4
 
 	.global func_ov09_021143a4
 	thumb_func_start func_ov09_021143a4
@@ -2792,37 +2920,66 @@ _021143bc: .word data_ov09_0211e7a4
 	.global func_ov09_021143c0
 	thumb_func_start func_ov09_021143c0
 func_ov09_021143c0: ; 0x021143c0
-	thumb_func_end func_ov09_021143c0
-_021143c0:
-	.byte 0x01
-	.global data_ov09_021143c1
-data_ov09_021143c1: ; 0x021143c1
-	.byte 0x1c, 0x5a, 0x31, 0x09, 0x78, 0x01, 0x29, 0x04, 0xd0, 0x01, 0x1c, 0x5b, 0x31, 0x09, 0x78
-	.byte 0x01, 0x29, 0x01, 0xd1
+	add r1, r0, #0
+	add r1, #0x5a
+	ldrb r1, [r1]
+	cmp r1, #1
+	beq _021143d4
+	add r1, r0, #0
+	add r1, #0x5b
+	ldrb r1, [r1]
+	cmp r1, #1
+	bne _021143d8
 _021143d4:
 	ldr r0, [r0, #0x60]
 	bx lr
 _021143d8:
 	ldr r0, [r0, #0xc]
 	bx lr
+	thumb_func_end func_ov09_021143c0
 
 	.global func_ov09_021143dc
 	thumb_func_start func_ov09_021143dc
 func_ov09_021143dc: ; 0x021143dc
-	thumb_func_end func_ov09_021143dc
-_021143dc:
-	.byte 0xf0
-	.global data_ov09_021143dd
-data_ov09_021143dd: ; 0x021143dd
-	.byte 0xb5, 0x89, 0xb0
-	.byte 0x05, 0x1c, 0x0c, 0x1c, 0x16, 0x1c, 0xff, 0xf7, 0xb9, 0xfb, 0x68, 0x6e, 0x00, 0x28, 0x1b, 0xdb
-	.byte 0xe8, 0x69, 0x2a, 0x6a, 0x01, 0x19, 0x02, 0x20, 0x80, 0x02, 0x09, 0x18, 0x0f, 0x13, 0x29, 0x6d
-	.byte 0x51, 0x18, 0x71, 0x18, 0x08, 0x18, 0x04, 0x13, 0x01, 0xa8, 0xe7, 0xf6, 0x14, 0xed, 0x01, 0x21
-	.byte 0x01, 0xa8, 0x81, 0x72, 0x28, 0x6c, 0x3a, 0x1c, 0x02, 0x90, 0x01, 0xa8, 0x00, 0x90, 0x69, 0x6e
-	.byte 0xe8, 0x20, 0x23, 0x1c, 0x20, 0xf7, 0x8a, 0xea
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x24
+	add r5, r0, #0
+	add r4, r1, #0
+	add r6, r2, #0
+	bl func_ov09_02113b5c
+	ldr r0, [r5, #0x64]
+	cmp r0, #0
+	blt _02114428
+	ldr r0, [r5, #0x1c]
+	ldr r2, [r5, #0x20]
+	add r1, r0, r4
+	mov r0, #2
+	lsl r0, r0, #0xa
+	add r1, r1, r0
+	asr r7, r1, #0xc
+	ldr r1, [r5, #0x50]
+	add r1, r2, r1
+	add r1, r6, r1
+	add r0, r1, r0
+	asr r4, r0, #0xc
+	add r0, sp, #4
+	blx func_01ffbe34
+	mov r1, #1
+	add r0, sp, #4
+	strb r1, [r0, #0xa]
+	ldr r0, [r5, #0x40]
+	add r2, r7, #0
+	str r0, [sp, #8]
+	add r0, sp, #4
+	str r0, [sp]
+	ldr r1, [r5, #0x64]
+	mov r0, #0xe8
+	add r3, r4, #0
+	blx func_0203493c
 _02114428:
 	add sp, #0x24
 	pop {r4, r5, r6, r7, pc}
+	thumb_func_end func_ov09_021143dc
 
 	.global func_ov09_0211442c
 	arm_func_start func_ov09_0211442c
@@ -2890,23 +3047,19 @@ _021144b0: .word data_ov09_0211e804
 	.global func_ov09_021144b4
 	thumb_func_start func_ov09_021144b4
 func_ov09_021144b4: ; 0x021144b4
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021144b4
-_021144b4:
-	.byte 0x70
-	.global data_ov09_021144b5
-data_ov09_021144b5: ; 0x021144b5
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_021144b8
 	thumb_func_start func_ov09_021144b8
 func_ov09_021144b8: ; 0x021144b8
+	push {r4, lr}
+	add r4, r0, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
 	thumb_func_end func_ov09_021144b8
-_021144b8:
-	.byte 0x10
-	.global data_ov09_021144b9
-data_ov09_021144b9: ; 0x021144b9
-	.byte 0xb5, 0x04, 0x1c, 0x1a, 0xf7, 0xa6, 0xea
-	.byte 0x20, 0x1c, 0x10, 0xbd
 
 	.global func_ov09_021144c4
 	thumb_func_start func_ov09_021144c4
@@ -2918,88 +3071,77 @@ func_ov09_021144c4: ; 0x021144c4
 	.global func_ov09_021144c8
 	thumb_func_start func_ov09_021144c8
 func_ov09_021144c8: ; 0x021144c8
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021144c8
-_021144c8:
-	.byte 0x70
-	.global data_ov09_021144c9
-data_ov09_021144c9: ; 0x021144c9
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_021144cc
 	thumb_func_start func_ov09_021144cc
 func_ov09_021144cc: ; 0x021144cc
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021144cc
-_021144cc:
-	.byte 0x70
-	.global data_ov09_021144cd
-data_ov09_021144cd: ; 0x021144cd
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_021144d0
 	thumb_func_start func_ov09_021144d0
 func_ov09_021144d0: ; 0x021144d0
+	mov r1, #1
+	strb r1, [r0, #0xc]
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021144d0
-_021144d0:
-	.byte 0x01
-	.global data_ov09_021144d1
-data_ov09_021144d1: ; 0x021144d1
-	.byte 0x21, 0x01, 0x73, 0x70, 0x47, 0x00, 0x00
 
 	.global func_ov09_021144d8
 	thumb_func_start func_ov09_021144d8
 func_ov09_021144d8: ; 0x021144d8
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021144d8
-_021144d8:
-	.byte 0x70
-	.global data_ov09_021144d9
-data_ov09_021144d9: ; 0x021144d9
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_021144dc
 	thumb_func_start func_ov09_021144dc
 func_ov09_021144dc: ; 0x021144dc
-	thumb_func_end func_ov09_021144dc
-_021144dc:
-	.byte 0x10
-	.global data_ov09_021144dd
-data_ov09_021144dd: ; 0x021144dd
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x21, 0x7b, 0x00, 0x29, 0x09, 0xd1, 0x01, 0x68, 0x89, 0x6a, 0x88, 0x47, 0x00, 0x28, 0x04, 0xd0
-	.byte 0x02, 0x48, 0x00, 0x21, 0x01, 0x70, 0x01, 0x20, 0x20, 0x73
+	push {r4, lr}
+	add r4, r0, #0
+	ldrb r1, [r4, #0xc]
+	cmp r1, #0
+	bne _021144fa
+	ldr r1, [r0]
+	ldr r1, [r1, #0x28]
+	blx r1
+	cmp r0, #0
+	beq _021144fa
+	ldr r0, _021144fc ; =data_ov09_0211f52c
+	mov r1, #0
+	strb r1, [r0]
+	mov r0, #1
+	strb r0, [r4, #0xc]
 _021144fa:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021144dc
 _021144fc: .word data_ov09_0211f52c
 
 	.global func_ov09_02114500
 	thumb_func_start func_ov09_02114500
 func_ov09_02114500: ; 0x02114500
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02114500
-_02114500:
-	.byte 0x70
-	.global data_ov09_02114501
-data_ov09_02114501: ; 0x02114501
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02114504
 	thumb_func_start func_ov09_02114504
 func_ov09_02114504: ; 0x02114504
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02114504
-_02114504:
-	.byte 0x70
-	.global data_ov09_02114505
-data_ov09_02114505: ; 0x02114505
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02114508
 	thumb_func_start func_ov09_02114508
 func_ov09_02114508: ; 0x02114508
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02114508
-_02114508:
-	.byte 0x70
-	.global data_ov09_02114509
-data_ov09_02114509: ; 0x02114509
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_0211450c
 	thumb_func_start func_ov09_0211450c
@@ -3017,12 +3159,9 @@ _02114518: .word data_ov09_0211f52c
 	.global func_ov09_0211451c
 	thumb_func_start func_ov09_0211451c
 func_ov09_0211451c: ; 0x0211451c
+	mov r0, #1
+	bx lr
 	thumb_func_end func_ov09_0211451c
-_0211451c:
-	.byte 0x01
-	.global data_ov09_0211451d
-data_ov09_0211451d: ; 0x0211451d
-	.byte 0x20, 0x70, 0x47
 
 	.global func_ov09_02114520
 	thumb_func_start func_ov09_02114520
@@ -3243,15 +3382,29 @@ func_ov09_021146d0: ; 0x021146d0
 	.global func_ov09_021146e8
 	thumb_func_start func_ov09_021146e8
 func_ov09_021146e8: ; 0x021146e8
-	thumb_func_end func_ov09_021146e8
-_021146e8:
-	.byte 0xf8
-	.global data_ov09_021146e9
-data_ov09_021146e9: ; 0x021146e9
-	.byte 0xb5, 0xa8, 0xb0, 0x05, 0x90, 0x44, 0x48
-	.byte 0x80, 0x8a, 0x2b, 0xf7, 0xff, 0xfc, 0x00, 0x20, 0x00, 0x90, 0x01, 0x90, 0x06, 0x21, 0x02, 0x91
-	.byte 0x01, 0x22, 0x03, 0x92, 0x07, 0xa9, 0x03, 0x1c, 0x04, 0x90, 0x2b, 0xf7, 0xab, 0xfe, 0x00, 0x28
-	.byte 0x04, 0xd1, 0x2b, 0xf7, 0xd5, 0xfc, 0x3a, 0x49, 0x08, 0x61, 0x59, 0xe0
+	push {r3, r4, r5, r6, r7, lr}
+	sub sp, #0xa0
+	str r0, [sp, #0x14]
+	ldr r0, _02114800 ; =data_027e0d54
+	ldrh r0, [r0, #0x14]
+	bl func_020400f4
+	mov r0, #0
+	str r0, [sp]
+	str r0, [sp, #4]
+	mov r1, #6
+	str r1, [sp, #8]
+	mov r2, #1
+	str r2, [sp, #0xc]
+	add r1, sp, #0x1c
+	add r3, r0, #0
+	str r0, [sp, #0x10]
+	bl func_02040464
+	cmp r0, #0
+	bne _0211471c
+	bl func_020400c0
+	ldr r1, _02114800 ; =data_027e0d54
+	str r0, [r1, #0x10]
+	b _021147d0
 _0211471c:
 	mov r5, #0
 	str r5, [sp, #0x18]
@@ -3366,6 +3519,7 @@ _021147e6:
 	add sp, #0xa0
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
+	thumb_func_end func_ov09_021146e8
 _02114800: .word data_027e0d54
 _02114804: .word data_ov00_020e9e18
 _02114808: .word 0x0003f500
@@ -3749,12 +3903,12 @@ _02114b20: .word data_027e0ce0
 	.global func_ov09_02114b24
 	thumb_func_start func_ov09_02114b24
 func_ov09_02114b24: ; 0x02114b24
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_02030294
+	add r0, r4, #0
+	pop {r4, pc}
 	thumb_func_end func_ov09_02114b24
-_02114b24:
-	.byte 0x10
-	.global data_ov09_02114b25
-data_ov09_02114b25: ; 0x02114b25
-	.byte 0xb5, 0x04, 0x1c, 0x1b, 0xf7, 0xb4, 0xfb, 0x20, 0x1c, 0x10, 0xbd
 
 	.global func_ov09_02114b30
 	thumb_func_start func_ov09_02114b30
@@ -4140,13 +4294,13 @@ _02114e38: .word data_ov09_0211e8cc
 	.global func_ov09_02114e3c
 	thumb_func_start func_ov09_02114e3c
 func_ov09_02114e3c: ; 0x02114e3c
-	thumb_func_end func_ov09_02114e3c
-_02114e3c:
-	.byte 0x70
-	.global data_ov09_02114e3d
-data_ov09_02114e3d: ; 0x02114e3d
-	.byte 0xb5, 0x06, 0x1c
-	.byte 0x13, 0x48, 0x35, 0x1c, 0x30, 0x60, 0x07, 0x24, 0x1c, 0x35
+	push {r4, r5, r6, lr}
+	add r6, r0, #0
+	ldr r0, _02114e90 ; =data_ov09_0211e8b4
+	add r5, r6, #0
+	str r0, [r6]
+	mov r4, #7
+	add r5, #0x1c
 _02114e4a:
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
@@ -4183,18 +4337,19 @@ _02114e78:
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	nop
+	thumb_func_end func_ov09_02114e3c
 _02114e90: .word data_ov09_0211e8b4
 
 	.global func_ov09_02114e94
 	thumb_func_start func_ov09_02114e94
 func_ov09_02114e94: ; 0x02114e94
-	thumb_func_end func_ov09_02114e94
-_02114e94:
-	.byte 0x70
-	.global data_ov09_02114e95
-data_ov09_02114e95: ; 0x02114e95
-	.byte 0xb5, 0x06, 0x1c, 0x14, 0x48, 0x35, 0x1c, 0x30, 0x60, 0x07, 0x24
-	.byte 0x1c, 0x35
+	push {r4, r5, r6, lr}
+	add r6, r0, #0
+	ldr r0, _02114eec ; =data_ov09_0211e8b4
+	add r5, r6, #0
+	str r0, [r6]
+	mov r4, #7
+	add r5, #0x1c
 _02114ea2:
 	ldr r0, [r5, #0x14]
 	cmp r0, #0
@@ -4233,6 +4388,7 @@ _02114ed0:
 	add r0, r6, #0
 	pop {r4, r5, r6, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02114e94
 _02114eec: .word data_ov09_0211e8b4
 
 	.global func_ov09_02114ef0
@@ -4295,7 +4451,7 @@ func_ov09_02114f48: ; 0x02114f48
 	str r2, [ip, #0x64]
 	blx func_ov09_02114f9c
 	cmp r4, #2
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0x1c]
 	ldr r1, [r5, #0x5c]
 	ldr r2, [r0]
@@ -4376,7 +4532,7 @@ func_ov09_0211500c: ; 0x0211500c
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	addne sp, sp, #4
-	ldmia sp!, {r3, r4, pc}
+	ldmneia sp!, {r3, r4, pc}
 	ldr r0, _02115098 ; =data_027e0d38
 	ldr r0, [r0]
 	ldr r1, [r0, #0x14]
@@ -4463,14 +4619,14 @@ func_ov09_021150f0: ; 0x021150f0
 	ldrne r0, [r4, #0x10]
 	cmpne r0, #0
 	addeq sp, sp, #0xc
-	ldmia sp!, {r3, r4, pc}
+	ldmeqia sp!, {r3, r4, pc}
 	ldr r0, [r4, #0x7c]
 	cmp r0, #0
 	ldrge r0, [r4, #0x1c]
 	ldrge r0, [r0, #0x46c]
 	cmpge r0, #0
 	addlt sp, sp, #0xc
-	ldmia sp!, {r3, r4, pc}
+	ldmltia sp!, {r3, r4, pc}
 	ldrb r0, [r4, #0x9d]
 	cmp r0, #0
 	bne _02115170
@@ -4485,8 +4641,8 @@ _02115170:
 	ldr r0, [r4, #0x2c]
 	add r3, sp, #0
 	add r0, r0, #0x68
-	ldmia r0!, {r0, r1, r2}
-	stmia r3!, {r0, r1, r2}
+	ldmia r0, {r0, r1, r2}
+	stmia r3, {r0, r1, r2}
 	ldr r0, [r4, #0x10]
 	cmp r0, #0
 	beq _021151d8
@@ -4558,7 +4714,7 @@ _02115240:
 	ldrh r0, [r4, #0x98]
 	cmp r2, #0
 	addeq sp, sp, #0xc
-	ldmia sp!, {r3, r4, pc}
+	ldmeqia sp!, {r3, r4, pc}
 	ldr r1, [r2, #0x84]
 	and r0, r0, #0xff
 	bic r1, r1, #0xff00
@@ -4800,7 +4956,7 @@ func_ov09_0211555c: ; 0x0211555c
 	bl func_ov00_020c0d68
 	cmp r0, r5
 	moveq r0, #1
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r1, #0x1000
 	ldr r0, [r4, #0x5c]
 	rsb r1, r1, #0
@@ -4812,7 +4968,7 @@ _021155cc:
 	bl func_ov00_020c0d68
 	cmp r0, r5
 	moveq r0, #1
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, [r4, #0x5c]
 	mov r1, #0x1000
 	str r1, [r0, #0x10]
@@ -4882,10 +5038,10 @@ func_ov09_021156a4: ; 0x021156a4
 	str r2, [sp, #8]
 	cmp r3, #0
 	addlt sp, sp, #0xdc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmltia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	cmp r6, #0
 	addeq sp, sp, #0xdc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldrb r1, [r5, #0x9a]
 	cmp r1, #0
 	bne _021156e8
@@ -4924,9 +5080,9 @@ _02115750:
 	stmia sb!, {r0, r1, r2, r3}
 	ldmia sl!, {r0, r1, r2, r3}
 	stmia sb!, {r0, r1, r2, r3}
-	ldmia sl!, {r0, r1, r2, r3}
+	ldmia sl, {r0, r1, r2, r3}
 	mov lr, fp
-	stmia sb!, {r0, r1, r2, r3}
+	stmia sb, {r0, r1, r2, r3}
 	ldmia lr!, {r0, r1, r2, r3}
 	add ip, sp, #0x34
 	stmia ip!, {r0, r1, r2, r3}
@@ -5094,7 +5250,7 @@ _021159d0:
 	ldr r0, [r5, #0x54]
 	cmp r0, #0
 	addeq sp, sp, #0xdc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldr r1, [r5, #0x58]
 	cmp r1, #0
 	bne _02115a44
@@ -5114,7 +5270,7 @@ _021159d0:
 _02115a44:
 	cmp r1, #1
 	addne sp, sp, #0xdc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
 	blx r1
@@ -5154,11 +5310,11 @@ func_ov09_02115aa4: ; 0x02115aa4
 	ldr r0, [r1, #0x64]
 	cmp r0, #0
 	addlt sp, sp, #0x30
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmltia sp!, {r4, r5, r6, pc}
 	ldr r0, [r1, #0x14]
 	cmp r0, #0
 	addeq sp, sp, #0x30
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	add r1, sp, #0
 	mov r2, r4
 	bl func_ov00_020b3f78
@@ -5291,8 +5447,8 @@ _02115c7c:
 	stmia r5!, {r0, r1, r2, r3}
 	ldmia r4!, {r0, r1, r2, r3}
 	stmia r5!, {r0, r1, r2, r3}
-	ldmia r4!, {r0, r1, r2, r3}
-	stmia r5!, {r0, r1, r2, r3}
+	ldmia r4, {r0, r1, r2, r3}
+	stmia r5, {r0, r1, r2, r3}
 	bl func_02018450
 	mov r1, r0
 	add r3, r8, #0x2a8
@@ -5312,10 +5468,10 @@ _02115cdc:
 	ldr r0, [r0, #0x14]
 	cmp r0, #1
 	addne sp, sp, #0xc0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	cmp r6, #1
 	addhi sp, sp, #0xc0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
+	ldmhiia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	ldr r0, [r7, #4]
 	ldr r0, [r0]
 	and r0, r0, #4
@@ -5324,7 +5480,7 @@ _02115cdc:
 	movne r0, #0
 	cmp r0, #0
 	addne sp, sp, #0xc0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	add r0, sp, #0x30
 	mov r1, #0
 	bl func_0201b1bc
@@ -5341,8 +5497,8 @@ _02115cdc:
 	stmia r4!, {r0, r1, r2, r3}
 	ldmia r5!, {r0, r1, r2, r3}
 	stmia r4!, {r0, r1, r2, r3}
-	ldmia r5!, {r0, r1, r2, r3}
-	stmia r4!, {r0, r1, r2, r3}
+	ldmia r5, {r0, r1, r2, r3}
+	stmia r4, {r0, r1, r2, r3}
 	add sp, sp, #0xc0
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	.align 2, 0
@@ -5385,7 +5541,7 @@ _02115dc4:
 	mvneq r1, #0
 	cmp r1, r0
 	addne sp, sp, #0x30
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	add r0, sp, #0
 	mov r1, #0
 	bl func_0201b1bc
@@ -5475,11 +5631,11 @@ _02115eb8:
 	movne r0, #0
 	cmp r0, #0
 	addeq sp, sp, #0x30
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, [r4, #0x74]
 	cmp r1, r0
 	addne sp, sp, #0x30
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	add r0, sp, #0
 	mov r1, #0
 	bl func_0201b1bc
@@ -5576,13 +5732,13 @@ func_ov09_02115fbc: ; 0x02115fbc
 	.global func_ov09_02115fd8
 	thumb_func_start func_ov09_02115fd8
 func_ov09_02115fd8: ; 0x02115fd8
+	mov r1, #0
+	strh r1, [r0]
+	strb r1, [r0, #2]
+	strb r1, [r0, #3]
+	str r1, [r0, #4]
+	bx lr
 	thumb_func_end func_ov09_02115fd8
-_02115fd8:
-	.byte 0x00
-	.global data_ov09_02115fd9
-data_ov09_02115fd9: ; 0x02115fd9
-	.byte 0x21, 0x01, 0x80, 0x81, 0x70, 0xc1, 0x70
-	.byte 0x41, 0x60, 0x70, 0x47
 
 	.global func_ov09_02115fe4
 	thumb_func_start func_ov09_02115fe4
@@ -6139,7 +6295,7 @@ _0211646c:
 	ldr r2, [r5, #4]
 	str r2, [r5]
 	cmp r4, r2
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, _02116538 ; =data_027e0d54
 	mov r1, r4
 	blx func_ov09_021149b4
@@ -6277,8 +6433,8 @@ func_ov09_02116620: ; 0x02116620
 	ldr r0, _02116660 ; =data_027e0184
 	str lr, [r4, #4]
 	add ip, r4, #8
-	ldmia r0!, {r0, r1, r2, r3}
-	stmia ip!, {r0, r1, r2, r3}
+	ldmia r0, {r0, r1, r2, r3}
+	stmia ip, {r0, r1, r2, r3}
 	mov r0, #0x80
 	str r0, [r4, #0x18]
 	mov r0, #0x60
@@ -6446,25 +6602,90 @@ _02116804: .word 0x000013b0
 	.global func_ov09_02116808
 	thumb_func_start func_ov09_02116808
 func_ov09_02116808: ; 0x02116808
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _021168d8 ; =0x000013b0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168dc ; =0x00001350
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168e0 ; =0x000012f0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168e4 ; =0x00001290
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168e8 ; =0x00001230
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168ec ; =0x000011d0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168f0 ; =0x00001170
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168f4 ; =0x00001110
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168f8 ; =0x000010b0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021168fc ; =0x00001050
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xff
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xf9
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xf3
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x7b
+	lsl r0, r0, #4
+	ldr r3, _02116900 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #0x14
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x75
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x6f
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	ldr r3, _02116900 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	ldr r3, _02116900 ; =func_ov09_021139f8
+	add r0, #0xf0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	add r0, #0x90
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	add r0, #0x30
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	bl func_ov09_021144c4
+	add r0, r4, #0
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_02116808
-_02116808:
-	.byte 0x10
-	.global data_ov09_02116809
-data_ov09_02116809: ; 0x02116809
-	.byte 0xb5, 0x04, 0x1c, 0x32, 0x48, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xf2, 0xf8, 0x31, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0xee, 0xf8, 0x30, 0x48, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xea, 0xf8, 0x2f, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0xe6, 0xf8, 0x2e, 0x48, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xe2, 0xf8, 0x2d, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0xde, 0xf8, 0x2c, 0x48, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xda, 0xf8, 0x2b, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0xd6, 0xf8, 0x2a, 0x48, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xd2, 0xf8, 0x29, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0xce, 0xf8, 0xff, 0x20, 0x00, 0x01
-	.byte 0x20, 0x18, 0xfd, 0xf7, 0xc9, 0xf8, 0xf9, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0xc4, 0xf8
-	.byte 0xf3, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0xbf, 0xf8, 0x7b, 0x20, 0x00, 0x01, 0x20, 0x4b
-	.byte 0x20, 0x18, 0x14, 0x21, 0x60, 0x22, 0x38, 0xf7, 0x66, 0xef, 0x75, 0x20, 0x00, 0x01, 0x20, 0x18
-	.byte 0xfd, 0xf7, 0xb2, 0xf8, 0x6f, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0xad, 0xf8, 0x3f, 0x20
-	.byte 0x00, 0x01, 0x17, 0x4b, 0x20, 0x18, 0x08, 0x21, 0x60, 0x22, 0x38, 0xf7, 0x54, 0xef, 0x20, 0x1c
-	.byte 0x13, 0x4b, 0xf0, 0x30, 0x08, 0x21, 0x60, 0x22, 0x38, 0xf7, 0x4c, 0xef, 0x20, 0x1c, 0x90, 0x30
-	.byte 0xfd, 0xf7, 0x9a, 0xf8, 0x20, 0x1c, 0x30, 0x30, 0xfd, 0xf7, 0x96, 0xf8, 0x20, 0x1c, 0xfd, 0xf7
-	.byte 0xf9, 0xfd, 0x20, 0x1c, 0x10, 0xbd, 0xc0, 0x46
 _021168d8: .word 0x000013b0
 _021168dc: .word 0x00001350
 _021168e0: .word 0x000012f0
@@ -6480,25 +6701,92 @@ _02116900: .word func_ov09_021139f8
 	.global func_ov09_02116904
 	thumb_func_start func_ov09_02116904
 func_ov09_02116904: ; 0x02116904
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _021169d8 ; =0x000013b0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169dc ; =0x00001350
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169e0 ; =0x000012f0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169e4 ; =0x00001290
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169e8 ; =0x00001230
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169ec ; =0x000011d0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169f0 ; =0x00001170
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169f4 ; =0x00001110
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169f8 ; =0x000010b0
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	ldr r0, _021169fc ; =0x00001050
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xff
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xf9
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xf3
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x7b
+	lsl r0, r0, #4
+	ldr r3, _02116a00 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #0x14
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x75
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x6f
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	ldr r3, _02116a00 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	ldr r3, _02116a00 ; =func_ov09_021139f8
+	add r0, #0xf0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	add r0, #0x90
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	add r0, #0x30
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	bl func_ov09_021144c4
+	add r0, r4, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02116904
-_02116904:
-	.byte 0x10
-	.global data_ov09_02116905
-data_ov09_02116905: ; 0x02116905
-	.byte 0xb5, 0x04, 0x1c, 0x33, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x74, 0xf8
-	.byte 0x32, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x70, 0xf8, 0x31, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x6c, 0xf8
-	.byte 0x30, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x68, 0xf8, 0x2f, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x64, 0xf8
-	.byte 0x2e, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x60, 0xf8, 0x2d, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x5c, 0xf8
-	.byte 0x2c, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x58, 0xf8, 0x2b, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x54, 0xf8
-	.byte 0x2a, 0x48, 0x20, 0x18, 0xfd, 0xf7, 0x50, 0xf8, 0xff, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7
-	.byte 0x4b, 0xf8, 0xf9, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0x46, 0xf8, 0xf3, 0x20, 0x00, 0x01
-	.byte 0x20, 0x18, 0xfd, 0xf7, 0x41, 0xf8, 0x7b, 0x20, 0x00, 0x01, 0x21, 0x4b, 0x20, 0x18, 0x14, 0x21
-	.byte 0x60, 0x22, 0x38, 0xf7, 0xe8, 0xee, 0x75, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0x34, 0xf8
-	.byte 0x6f, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfd, 0xf7, 0x2f, 0xf8, 0x3f, 0x20, 0x00, 0x01, 0x18, 0x4b
-	.byte 0x20, 0x18, 0x08, 0x21, 0x60, 0x22, 0x38, 0xf7, 0xd6, 0xee, 0x20, 0x1c, 0x14, 0x4b, 0xf0, 0x30
-	.byte 0x08, 0x21, 0x60, 0x22, 0x38, 0xf7, 0xce, 0xee, 0x20, 0x1c, 0x90, 0x30, 0xfd, 0xf7, 0x1c, 0xf8
-	.byte 0x20, 0x1c, 0x30, 0x30, 0xfd, 0xf7, 0x18, 0xf8, 0x20, 0x1c, 0xfd, 0xf7, 0x7b, 0xfd, 0x20, 0x1c
-	.byte 0x18, 0xf7, 0x1c, 0xe8, 0x20, 0x1c, 0x10, 0xbd
 _021169d8: .word 0x000013b0
 _021169dc: .word 0x00001350
 _021169e0: .word 0x000012f0
@@ -6613,25 +6901,37 @@ _02116afc: .word func_ov09_021139f8
 	.global func_ov09_02116b00
 	thumb_func_start func_ov09_02116b00
 func_ov09_02116b00: ; 0x02116b00
+	push {r4, lr}
+	mov r1, #0
+	add r4, r0, #0
+	mvn r1, r1
+	str r1, [r4, #0x18]
+	bl func_ov09_02117ba4
+	ldr r0, _02116b20 ; =data_ov09_0211eaa4
+	ldr r1, [r0, #0x20]
+	ldr r0, [r0, #0x24]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	add r0, r4, #0
+	bl func_ov09_021144c8
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02116b00
-_02116b00:
-	.byte 0x10
-	.global data_ov09_02116b01
-data_ov09_02116b01: ; 0x02116b01
-	.byte 0xb5, 0x00, 0x21, 0x04, 0x1c, 0xc9, 0x43, 0xa1, 0x61, 0x01, 0xf0, 0x4b, 0xf8, 0x04, 0x48
-	.byte 0x01, 0x6a, 0x40, 0x6a, 0x21, 0x61, 0x60, 0x61, 0x20, 0x1c, 0xfd, 0xf7, 0xd5, 0xfc, 0x10, 0xbd
 _02116b20: .word data_ov09_0211eaa4
 
 	.global func_ov09_02116b24
 	thumb_func_start func_ov09_02116b24
 func_ov09_02116b24: ; 0x02116b24
-	thumb_func_end func_ov09_02116b24
-_02116b24:
-	.byte 0xf0
-	.global data_ov09_02116b25
-data_ov09_02116b25: ; 0x02116b25
-	.byte 0xb5, 0x8d, 0xb0, 0x05, 0x1c, 0x3f, 0x20, 0x00, 0x01, 0x2e, 0x1c
-	.byte 0x00, 0x24, 0x2f, 0x18, 0xf0, 0x36, 0x03, 0x95
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x34
+	add r5, r0, #0
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	add r6, r5, #0
+	mov r4, #0
+	add r7, r5, r0
+	add r6, #0xf0
+	str r5, [sp, #0xc]
 _02116b38:
 	add r0, r4, #0
 	bl func_ov09_0211c94c
@@ -7098,6 +7398,7 @@ _02116ece:
 	add sp, #0x34
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02116b24
 _02116f0c: .word 0x0000072c
 _02116f10: .word 0x0000078c
 _02116f14: .word 0x00000fcc
@@ -7124,25 +7425,31 @@ _02116f60: .word 0x0000142a
 	.global func_ov09_02116f64
 	thumb_func_start func_ov09_02116f64
 func_ov09_02116f64: ; 0x02116f64
+	ldr r3, _02116f68 ; =func_ov09_021144d8
+	bx r3
+	.align 2, 0
 	thumb_func_end func_ov09_02116f64
-_02116f64:
-	.byte 0x00
-	.global data_ov09_02116f65
-data_ov09_02116f65: ; 0x02116f65
-	.byte 0x4b, 0x18, 0x47
 _02116f68: .word func_ov09_021144d8
 
 	.global func_ov09_02116f6c
 	thumb_func_start func_ov09_02116f6c
 func_ov09_02116f6c: ; 0x02116f6c
-	thumb_func_end func_ov09_02116f6c
-_02116f6c:
-	.byte 0x10
-	.global data_ov09_02116f6d
-data_ov09_02116f6d: ; 0x02116f6d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x20, 0x69, 0x00, 0x28, 0x0d, 0xd0, 0x23, 0x1c, 0x10, 0x33, 0x59, 0x68, 0x01, 0x20, 0x4a, 0x10
-	.byte 0x08, 0x42, 0x03, 0xd0, 0xa1, 0x58, 0x18, 0x68, 0x09, 0x58, 0x00, 0xe0
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, [r4, #0x10]
+	cmp r0, #0
+	beq _02116f92
+	add r3, r4, #0
+	add r3, #0x10
+	ldr r1, [r3, #4]
+	mov r0, #1
+	asr r2, r1, #1
+	tst r0, r1
+	beq _02116f8c
+	ldr r1, [r4, r2]
+	ldr r0, [r3]
+	ldr r1, [r1, r0]
+	b _02116f8e
 _02116f8c:
 	ldr r1, [r3]
 _02116f8e:
@@ -7153,17 +7460,20 @@ _02116f92:
 	bl func_ov09_021144dc
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02116f6c
 
 	.global func_ov09_02116f9c
 	thumb_func_start func_ov09_02116f9c
 func_ov09_02116f9c: ; 0x02116f9c
-	thumb_func_end func_ov09_02116f9c
-_02116f9c:
-	.byte 0xf0
-	.global data_ov09_02116f9d
-data_ov09_02116f9d: ; 0x02116f9d
-	.byte 0xb5, 0x85, 0xb0
-	.byte 0x01, 0x90, 0x00, 0x7b, 0x00, 0x28, 0x02, 0xd0, 0x23, 0x48, 0x00, 0x21, 0x01, 0x70
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x14
+	str r0, [sp, #4]
+	ldrb r0, [r0, #0xc]
+	cmp r0, #0
+	beq _02116fae
+	ldr r0, _02117038 ; =data_ov09_0211f52c
+	mov r1, #0
+	strb r1, [r0]
 _02116fae:
 	ldr r0, [sp, #4]
 	ldr r1, [r0]
@@ -7234,6 +7544,7 @@ _02116fd2:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02116f9c
 _02117038: .word data_ov09_0211f52c
 _0211703c: .word 0x000007ec
 _02117040: .word 0x00001170
@@ -7242,13 +7553,12 @@ _02117044: .word data_ov09_0211eaa4
 	.global func_ov09_02117048
 	thumb_func_start func_ov09_02117048
 func_ov09_02117048: ; 0x02117048
-	thumb_func_end func_ov09_02117048
-_02117048:
-	.byte 0x78
-	.global data_ov09_02117049
-data_ov09_02117049: ; 0x02117049
-	.byte 0xb5, 0x83, 0xb0, 0x05, 0x1c, 0x2c, 0x1c
-	.byte 0x00, 0x26, 0xf0, 0x34
+	push {r3, r4, r5, r6, lr}
+	sub sp, #0xc
+	add r5, r0, #0
+	add r4, r5, #0
+	mov r6, #0
+	add r4, #0xf0
 _02117054:
 	add r0, r4, #0
 	bl func_ov09_02114110
@@ -7345,6 +7655,7 @@ _0211710a:
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	nop
+	thumb_func_end func_ov09_02117048
 _02117118: .word data_ov09_0211eaa4
 _0211711c: .word data_027e0fb4
 _02117120: .word 0x00001420
@@ -7356,48 +7667,112 @@ _02117130: .word data_ov00_020eec9c
 	.global func_ov09_02117134
 	thumb_func_start func_ov09_02117134
 func_ov09_02117134: ; 0x02117134
+	push {r4, lr}
+	ldr r1, [r0]
+	add r4, r0, #0
+	ldr r1, [r1, #0x38]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x54]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x58]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x60]
+	blx r1
+	ldr r0, _02117164 ; =data_ov09_0211eaa4
+	ldr r1, [r0, #0x40]
+	ldr r0, [r0, #0x44]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_02117134
-_02117134:
-	.byte 0x10
-	.global data_ov09_02117135
-data_ov09_02117135: ; 0x02117135
-	.byte 0xb5, 0x01, 0x68, 0x04, 0x1c, 0x89, 0x6b, 0x88, 0x47, 0x20, 0x1c
-	.byte 0x01, 0x68, 0x49, 0x6d, 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0x89, 0x6d, 0x88, 0x47, 0x20, 0x1c
-	.byte 0x01, 0x68, 0x09, 0x6e, 0x88, 0x47, 0x03, 0x48, 0x01, 0x6c, 0x40, 0x6c, 0x21, 0x61, 0x60, 0x61
-	.byte 0x10, 0xbd, 0xc0, 0x46
 _02117164: .word data_ov09_0211eaa4
 
 	.global func_ov09_02117168
 	thumb_func_start func_ov09_02117168
 func_ov09_02117168: ; 0x02117168
-	thumb_func_end func_ov09_02117168
-_02117168:
-	.byte 0x10
-	.global data_ov09_02117169
-data_ov09_02117169: ; 0x02117169
-	.byte 0xb5, 0x04, 0x1c, 0x3f, 0x20, 0x00, 0x01
-	.byte 0x22, 0x18, 0xa1, 0x69, 0x60, 0x20, 0x48, 0x43, 0x10, 0x18, 0xfc, 0xf7, 0xc5, 0xfe, 0x00, 0x28
-	.byte 0x04, 0xd1, 0x03, 0x48, 0x81, 0x6c, 0xc0, 0x6c, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x18]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	bne _0211718c
+	ldr r0, _02117190 ; =data_ov09_0211eaa4
+	ldr r1, [r0, #0x48]
+	ldr r0, [r0, #0x4c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _0211718c:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02117168
 _02117190: .word data_ov09_0211eaa4
 
 	.global func_ov09_02117194
 	thumb_func_start func_ov09_02117194
 func_ov09_02117194: ; 0x02117194
+	push {r3, r4, r5, lr}
+	sub sp, #0x20
+	ldr r5, _021171fc ; =data_ov09_0211db2c
+	add r2, sp, #0
+	add r4, r0, #0
+	add r3, r2, #0
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	add r1, r4, r0
+	ldr r2, [r4, #0x18]
+	mov r0, #0x60
+	mul r0, r2
+	lsl r2, r2, #2
+	ldr r2, [r3, r2]
+	add r0, r1, r0
+	mov r1, #0x18
+	mov r3, #2
+	bl func_ov09_02113f90
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x18]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113d28
+	mov r0, #0x75
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_02113d28
+	ldr r0, _02117200 ; =0x00001170
+	add r0, r4, r0
+	bl func_ov09_02113d28
+	ldr r0, _02117204 ; =data_ov09_0211eaa4
+	ldr r1, [r0, #0x50]
+	ldr r0, [r0, #0x54]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	add sp, #0x20
+	pop {r3, r4, r5, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02117194
-_02117194:
-	.byte 0x38
-	.global data_ov09_02117195
-data_ov09_02117195: ; 0x02117195
-	.byte 0xb5, 0x88, 0xb0, 0x18, 0x4d, 0x00, 0xaa, 0x04, 0x1c, 0x13, 0x1c
-	.byte 0x03, 0xcd, 0x03, 0xc2, 0x03, 0xcd, 0x03, 0xc2, 0x03, 0xcd, 0x03, 0xc2, 0x03, 0xcd, 0x03, 0xc2
-	.byte 0x3f, 0x20, 0x00, 0x01, 0x21, 0x18, 0xa2, 0x69, 0x60, 0x20, 0x50, 0x43, 0x92, 0x00, 0x9a, 0x58
-	.byte 0x08, 0x18, 0x18, 0x21, 0x02, 0x23, 0xfc, 0xf7, 0xe3, 0xfe, 0x3f, 0x20, 0x00, 0x01, 0x22, 0x18
-	.byte 0xa1, 0x69, 0x60, 0x20, 0x48, 0x43, 0x10, 0x18, 0xfc, 0xf7, 0xa6, 0xfd, 0x75, 0x20, 0x00, 0x01
-	.byte 0x20, 0x18, 0xfc, 0xf7, 0xa1, 0xfd, 0x06, 0x48, 0x20, 0x18, 0xfc, 0xf7, 0x9d, 0xfd, 0x05, 0x48
-	.byte 0x01, 0x6d, 0x40, 0x6d, 0x21, 0x61, 0x60, 0x61, 0x08, 0xb0, 0x38, 0xbd
 _021171fc: .word data_ov09_0211db2c
 _02117200: .word 0x00001170
 _02117204: .word data_ov09_0211eaa4
@@ -7405,14 +7780,24 @@ _02117204: .word data_ov09_0211eaa4
 	.global func_ov09_02117208
 	thumb_func_start func_ov09_02117208
 func_ov09_02117208: ; 0x02117208
-	thumb_func_end func_ov09_02117208
-_02117208:
-	.byte 0x38
-	.global data_ov09_02117209
-data_ov09_02117209: ; 0x02117209
-	.byte 0xb5, 0x05, 0x1c, 0x03, 0x20, 0xc0, 0x43
-	.byte 0x04, 0xf0, 0x74, 0xfe, 0x04, 0x1c, 0x3f, 0x20, 0x00, 0x01, 0x2a, 0x18, 0xa9, 0x69, 0x60, 0x20
-	.byte 0x48, 0x43, 0x10, 0x18, 0xfc, 0xf7, 0x70, 0xfe, 0x00, 0x28, 0x01, 0xd1, 0x01, 0x20, 0x00, 0xe0
+	push {r3, r4, r5, lr}
+	add r5, r0, #0
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	add r4, r0, #0
+	mov r0, #0x3f
+	lsl r0, r0, #4
+	add r2, r5, r0
+	ldr r1, [r5, #0x18]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	bne _02117230
+	mov r0, #1
+	b _02117232
 _02117230:
 	mov r0, #0
 _02117232:
@@ -7428,19 +7813,23 @@ _02117232:
 _02117244:
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_02117208
 _02117248: .word data_ov09_0211eaa4
 
 	.global func_ov09_0211724c
 	thumb_func_start func_ov09_0211724c
 func_ov09_0211724c: ; 0x0211724c
-	thumb_func_end func_ov09_0211724c
-_0211724c:
-	.byte 0x38
-	.global data_ov09_0211724d
-data_ov09_0211724d: ; 0x0211724d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x29, 0x48, 0x00, 0x22, 0x22, 0x54, 0x08, 0x38, 0x20, 0x58, 0x00, 0x28, 0x01, 0xdd, 0x01, 0x22
-	.byte 0xff, 0xe7
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _021172f8 ; =0x00001428
+	mov r2, #0
+	strb r2, [r4, r0]
+	sub r0, #8
+	ldr r0, [r4, r0]
+	cmp r0, #0
+	ble _02117262
+	mov r2, #1
+	b _02117262
 _02117262:
 	ldr r0, _021172fc ; =0x0000104c
 	ldr r1, _02117300 ; =0x0000116c
@@ -7515,6 +7904,7 @@ _021172a8:
 	str r0, [r4, #0x14]
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_0211724c
 _021172f8: .word 0x00001428
 _021172fc: .word 0x0000104c
 _02117300: .word 0x0000116c
@@ -7528,22 +7918,53 @@ _02117318: .word data_ov09_0211eaa4
 	.global func_ov09_0211731c
 	thumb_func_start func_ov09_0211731c
 func_ov09_0211731c: ; 0x0211731c
-	thumb_func_end func_ov09_0211731c
-_0211731c:
-	.byte 0x18
-	.global data_ov09_0211731d
-data_ov09_0211731d: ; 0x0211731d
-	.byte 0xb5, 0x81, 0xb0
-	.byte 0x04, 0x1c, 0x04, 0x20, 0x04, 0xf0, 0xea, 0xfd, 0x00, 0x28, 0x26, 0xd0, 0x14, 0x48, 0x00, 0x21
-	.byte 0x01, 0x22, 0x20, 0x18, 0x92, 0x04, 0x0b, 0x1c, 0x00, 0x91, 0xfc, 0xf7, 0x01, 0xfe, 0x00, 0x21
-	.byte 0x0f, 0x48, 0x0a, 0x1c, 0x20, 0x18, 0x04, 0x23, 0x00, 0x91, 0xfc, 0xf7, 0xf9, 0xfd, 0x00, 0x21
-	.byte 0x0c, 0x48, 0x01, 0x22, 0x20, 0x18, 0x92, 0x04, 0x0b, 0x1c, 0x00, 0x91, 0xfc, 0xf7, 0xf0, 0xfd
-	.byte 0x00, 0x21, 0x08, 0x48, 0x0a, 0x1c, 0x20, 0x18, 0x04, 0x23, 0x00, 0x91, 0xfc, 0xf7, 0xe8, 0xfd
-	.byte 0x05, 0x48, 0x81, 0x6e, 0xc0, 0x6e, 0x21, 0x61, 0x60, 0x61
+	push {r3, r4, lr}
+	sub sp, #4
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _0211737a
+	ldr r0, _02117380 ; =0x00001170
+	mov r1, #0
+	mov r2, #1
+	add r0, r4, r0
+	lsl r2, r2, #0x12
+	add r3, r1, #0
+	str r1, [sp]
+	bl func_ov09_02113f40
+	mov r1, #0
+	ldr r0, _02117380 ; =0x00001170
+	add r2, r1, #0
+	add r0, r4, r0
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
+	mov r1, #0
+	ldr r0, _02117384 ; =0x000013b0
+	mov r2, #1
+	add r0, r4, r0
+	lsl r2, r2, #0x12
+	add r3, r1, #0
+	str r1, [sp]
+	bl func_ov09_02113f40
+	mov r1, #0
+	ldr r0, _02117384 ; =0x000013b0
+	add r2, r1, #0
+	add r0, r4, r0
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
+	ldr r0, _02117388 ; =data_ov09_0211eaa4
+	ldr r1, [r0, #0x68]
+	ldr r0, [r0, #0x6c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _0211737a:
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
+	thumb_func_end func_ov09_0211731c
 _02117380: .word 0x00001170
 _02117384: .word 0x000013b0
 _02117388: .word data_ov09_0211eaa4
@@ -7551,15 +7972,30 @@ _02117388: .word data_ov09_0211eaa4
 	.global func_ov09_0211738c
 	thumb_func_start func_ov09_0211738c
 func_ov09_0211738c: ; 0x0211738c
-	thumb_func_end func_ov09_0211738c
-_0211738c:
-	.byte 0xf0
-	.global data_ov09_0211738d
-data_ov09_0211738d: ; 0x0211738d
-	.byte 0xb5, 0x85, 0xb0
-	.byte 0x01, 0x90, 0x33, 0x48, 0x00, 0x21, 0x01, 0x70, 0x3f, 0x21, 0x01, 0x98, 0x09, 0x01, 0x42, 0x18
-	.byte 0x81, 0x69, 0x60, 0x20, 0x48, 0x43, 0x10, 0x18, 0xfc, 0xf7, 0xba, 0xfd, 0x00, 0x20, 0x04, 0x90
-	.byte 0x7b, 0x21, 0x01, 0x98, 0x09, 0x01, 0x40, 0x18, 0x03, 0x90, 0x01, 0x98, 0x02, 0x90
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x14
+	str r0, [sp, #4]
+	ldr r0, _02117460 ; =data_ov09_0211f52c
+	mov r1, #0
+	strb r1, [r0]
+	mov r1, #0x3f
+	ldr r0, [sp, #4]
+	lsl r1, r1, #4
+	add r2, r0, r1
+	ldr r1, [r0, #0x18]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f20
+	mov r0, #0
+	str r0, [sp, #0x10]
+	mov r1, #0x7b
+	ldr r0, [sp, #4]
+	lsl r1, r1, #4
+	add r0, r0, r1
+	str r0, [sp, #0xc]
+	ldr r0, [sp, #4]
+	str r0, [sp, #8]
 _021173be:
 	mov r7, #0
 	ldr r6, [sp, #0xc]
@@ -7640,6 +8076,7 @@ _0211742a:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
+	thumb_func_end func_ov09_0211738c
 _02117460: .word data_ov09_0211f52c
 _02117464: .word 0x000007ec
 _02117468: .word 0x0000090c
@@ -7651,14 +8088,22 @@ _02117478: .word 0x00001054
 	.global func_ov09_0211747c
 	thumb_func_start func_ov09_0211747c
 func_ov09_0211747c: ; 0x0211747c
-	thumb_func_end func_ov09_0211747c
-_0211747c:
-	.byte 0xf8
-	.global data_ov09_0211747d
-data_ov09_0211747d: ; 0x0211747d
-	.byte 0xb5, 0x84, 0xb0
-	.byte 0x05, 0x1c, 0xf3, 0x20, 0x1f, 0x21, 0x1d, 0xf7, 0x34, 0xe9, 0x07, 0x1c, 0xf3, 0x20, 0x20, 0x21
-	.byte 0x1d, 0xf7, 0x2e, 0xe9, 0xcf, 0x49, 0x04, 0x1c, 0x08, 0x7b, 0x00, 0x28, 0x00, 0xd1, 0xdb, 0xe0
+	push {r3, r4, r5, r6, r7, lr}
+	sub sp, #0x10
+	add r5, r0, #0
+	mov r0, #0xf3
+	mov r1, #0x1f
+	blx func_020346f0
+	add r7, r0, #0
+	mov r0, #0xf3
+	mov r1, #0x20
+	blx func_020346f0
+	ldr r1, _021177d4 ; =data_027e0d78
+	add r4, r0, #0
+	ldrb r0, [r1, #0xc]
+	cmp r0, #0
+	bne _021174a0
+	b _02117658
 _021174a0:
 	ldr r0, _021177d8 ; =0x00001050
 	add r0, r5, r0
@@ -8061,6 +8506,7 @@ _021177c0:
 	ldr r7, _02117818 ; =0x000007ec
 	b _0211781c
 	.align 2, 0
+	thumb_func_end func_ov09_0211747c
 _021177d4: .word data_027e0d78
 _021177d8: .word 0x00001050
 _021177dc: .word 0x0000141c
@@ -8165,16 +8611,43 @@ _021178bc: .word data_ov00_020eec9c
 	.global func_ov09_021178c0
 	thumb_func_start func_ov09_021178c0
 func_ov09_021178c0: ; 0x021178c0
+	push {r3, r4, lr}
+	sub sp, #4
+	add r4, r0, #0
+	ldr r0, _0211790c ; =data_ov09_0211f52c
+	mov r2, #1
+	strb r2, [r0]
+	add r0, r4, #0
+	mov r1, #0
+	add r0, #0x30
+	lsl r2, r2, #0x12
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
+	add r0, r4, #0
+	mov r2, #1
+	mov r1, #0
+	add r0, #0x90
+	lsl r2, r2, #0x12
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
+	ldr r0, _02117910 ; =0x00001054
+	mov r1, #0
+	str r1, [r4, r0]
+	add r0, #0x60
+	str r1, [r4, r0]
+	add r0, r4, #0
+	bl func_ov09_0211805c
+	ldr r0, _02117914 ; =data_ov09_0211eb24
+	ldr r1, [r0, #8]
+	ldr r0, [r0, #0xc]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	add sp, #4
+	pop {r3, r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_021178c0
-_021178c0:
-	.byte 0x18
-	.global data_ov09_021178c1
-data_ov09_021178c1: ; 0x021178c1
-	.byte 0xb5, 0x81, 0xb0, 0x04, 0x1c, 0x11, 0x48, 0x01, 0x22, 0x02, 0x70, 0x20, 0x1c, 0x00, 0x21
-	.byte 0x30, 0x30, 0x92, 0x04, 0x04, 0x23, 0x00, 0x91, 0xfc, 0xf7, 0x32, 0xfb, 0x20, 0x1c, 0x01, 0x22
-	.byte 0x00, 0x21, 0x90, 0x30, 0x92, 0x04, 0x04, 0x23, 0x00, 0x91, 0xfc, 0xf7, 0x29, 0xfb, 0x08, 0x48
-	.byte 0x00, 0x21, 0x21, 0x50, 0x60, 0x30, 0x21, 0x50, 0x20, 0x1c, 0x00, 0xf0, 0xaf, 0xfb, 0x05, 0x48
-	.byte 0x81, 0x68, 0xc0, 0x68, 0x21, 0x61, 0x60, 0x61, 0x01, 0xb0, 0x18, 0xbd
 _0211790c: .word data_ov09_0211f52c
 _02117910: .word 0x00001054
 _02117914: .word data_ov09_0211eb24
@@ -8182,73 +8655,102 @@ _02117914: .word data_ov09_0211eb24
 	.global func_ov09_02117918
 	thumb_func_start func_ov09_02117918
 func_ov09_02117918: ; 0x02117918
-	thumb_func_end func_ov09_02117918
-_02117918:
-	.byte 0x10
-	.global data_ov09_02117919
-data_ov09_02117919: ; 0x02117919
-	.byte 0xb5, 0x04, 0x1c, 0x03, 0x20, 0xc0, 0x43
-	.byte 0x04, 0xf0, 0xec, 0xfa, 0x00, 0x28, 0x04, 0xd0, 0x02, 0x48, 0x01, 0x69, 0x40, 0x69, 0x21, 0x61
-	.byte 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117932
+	ldr r0, _02117934 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x10]
+	ldr r0, [r0, #0x14]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117932:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02117918
 _02117934: .word data_ov09_0211eb24
 
 	.global func_ov09_02117938
 	thumb_func_start func_ov09_02117938
 func_ov09_02117938: ; 0x02117938
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_02117dc0
+	ldr r0, _0211794c ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x18]
+	ldr r0, [r0, #0x1c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02117938
-_02117938:
-	.byte 0x10
-	.global data_ov09_02117939
-data_ov09_02117939: ; 0x02117939
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0xf0, 0x40, 0xfa
-	.byte 0x02, 0x48, 0x81, 0x69, 0xc0, 0x69, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd
 _0211794c: .word data_ov09_0211eb24
 
 	.global func_ov09_02117950
 	thumb_func_start func_ov09_02117950
 func_ov09_02117950: ; 0x02117950
-	thumb_func_end func_ov09_02117950
-_02117950:
-	.byte 0x10
-	.global data_ov09_02117951
-data_ov09_02117951: ; 0x02117951
-	.byte 0xb5, 0x04, 0x1c, 0x04, 0x20, 0x04, 0xf0, 0xd1, 0xfa, 0x00, 0x28, 0x04, 0xd0, 0x03, 0x48
-	.byte 0x01, 0x6a, 0x40, 0x6a, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117968
+	ldr r0, _0211796c ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x20]
+	ldr r0, [r0, #0x24]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117968:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02117950
 _0211796c: .word data_ov09_0211eb24
 
 	.global func_ov09_02117970
 	thumb_func_start func_ov09_02117970
 func_ov09_02117970: ; 0x02117970
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_02113950
+	ldr r0, _0211798c ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x28]
+	ldr r0, [r0, #0x2c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	ldr r0, _02117990 ; =data_ov09_0211f52c
+	mov r1, #0
+	strb r1, [r0]
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_02117970
-_02117970:
-	.byte 0x10
-	.global data_ov09_02117971
-data_ov09_02117971: ; 0x02117971
-	.byte 0xb5, 0x04, 0x1c, 0xfb, 0xf7, 0xec, 0xff, 0x04, 0x48, 0x81, 0x6a, 0xc0, 0x6a, 0x21, 0x61
-	.byte 0x60, 0x61, 0x03, 0x48, 0x00, 0x21, 0x01, 0x70, 0x10, 0xbd, 0xc0, 0x46
 _0211798c: .word data_ov09_0211eb24
 _02117990: .word data_ov09_0211f52c
 
 	.global func_ov09_02117994
 	thumb_func_start func_ov09_02117994
 func_ov09_02117994: ; 0x02117994
-	thumb_func_end func_ov09_02117994
-_02117994:
-	.byte 0x10
-	.global data_ov09_02117995
-data_ov09_02117995: ; 0x02117995
-	.byte 0xb5, 0x04, 0x1c, 0x07, 0x48, 0x20, 0x18, 0xfc, 0xf7, 0xb8, 0xfb
-	.byte 0x00, 0x28, 0x08, 0xd0, 0x05, 0x48, 0x01, 0x6b, 0x40, 0x6b, 0x21, 0x61, 0x60, 0x61, 0x04, 0x48
-	.byte 0x7d, 0x21, 0xbf, 0xf7, 0x18, 0xef
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _021179b8 ; =0x000013b0
+	add r0, r4, r0
+	bl func_ov09_02114110
+	cmp r0, #0
+	beq _021179b6
+	ldr r0, _021179bc ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x30]
+	ldr r0, [r0, #0x34]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	ldr r0, _021179c0 ; =data_ov00_020eec9c
+	mov r1, #0x7d
+	blx func_ov00_020d77e4
 _021179b6:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02117994
 _021179b8: .word 0x000013b0
 _021179bc: .word data_ov09_0211eb24
 _021179c0: .word data_ov00_020eec9c
@@ -8256,72 +8758,106 @@ _021179c0: .word data_ov00_020eec9c
 	.global func_ov09_021179c4
 	thumb_func_start func_ov09_021179c4
 func_ov09_021179c4: ; 0x021179c4
+	push {r4, lr}
+	ldr r1, _021179e0 ; =data_ov09_0211f52c
+	mov r2, #1
+	add r4, r0, #0
+	strb r2, [r1]
+	bl func_ov09_0211805c
+	ldr r0, _021179e4 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x38]
+	ldr r0, [r0, #0x3c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_021179c4
-_021179c4:
-	.byte 0x10
-	.global data_ov09_021179c5
-data_ov09_021179c5: ; 0x021179c5
-	.byte 0xb5, 0x06, 0x49, 0x01, 0x22, 0x04, 0x1c, 0x0a, 0x70, 0x00, 0xf0
-	.byte 0x45, 0xfb, 0x04, 0x48, 0x81, 0x6b, 0xc0, 0x6b, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd, 0xc0, 0x46
 _021179e0: .word data_ov09_0211f52c
 _021179e4: .word data_ov09_0211eb24
 
 	.global func_ov09_021179e8
 	thumb_func_start func_ov09_021179e8
 func_ov09_021179e8: ; 0x021179e8
-	thumb_func_end func_ov09_021179e8
-_021179e8:
-	.byte 0x10
-	.global data_ov09_021179e9
-data_ov09_021179e9: ; 0x021179e9
-	.byte 0xb5, 0x04, 0x1c, 0x03, 0x20, 0xc0, 0x43
-	.byte 0x04, 0xf0, 0x84, 0xfa, 0x00, 0x28, 0x04, 0xd0, 0x02, 0x48, 0x01, 0x6c, 0x40, 0x6c, 0x21, 0x61
-	.byte 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117a02
+	ldr r0, _02117a04 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x40]
+	ldr r0, [r0, #0x44]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117a02:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021179e8
 _02117a04: .word data_ov09_0211eb24
 
 	.global func_ov09_02117a08
 	thumb_func_start func_ov09_02117a08
 func_ov09_02117a08: ; 0x02117a08
+	push {r4, lr}
+	ldr r1, _02117a28 ; =0x00001428
+	add r4, r0, #0
+	mov r2, #0
+	strb r2, [r4, r1]
+	sub r1, #0xc
+	ldr r1, [r4, r1]
+	bl func_ov09_02117bb4
+	ldr r0, _02117a2c ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x48]
+	ldr r0, [r0, #0x4c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_02117a08
-_02117a08:
-	.byte 0x10
-	.global data_ov09_02117a09
-data_ov09_02117a09: ; 0x02117a09
-	.byte 0xb5, 0x07, 0x49, 0x04, 0x1c, 0x00, 0x22
-	.byte 0x62, 0x54, 0x0c, 0x39, 0x61, 0x58, 0x00, 0xf0, 0xcd, 0xf8, 0x04, 0x48, 0x81, 0x6c, 0xc0, 0x6c
-	.byte 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd, 0xc0, 0x46
 _02117a28: .word 0x00001428
 _02117a2c: .word data_ov09_0211eb24
 
 	.global func_ov09_02117a30
 	thumb_func_start func_ov09_02117a30
 func_ov09_02117a30: ; 0x02117a30
-	thumb_func_end func_ov09_02117a30
-_02117a30:
-	.byte 0x10
-	.global data_ov09_02117a31
-data_ov09_02117a31: ; 0x02117a31
-	.byte 0xb5, 0x04, 0x1c, 0x04, 0x20, 0x04, 0xf0, 0x61, 0xfa, 0x00, 0x28, 0x04, 0xd0, 0x03, 0x48
-	.byte 0x01, 0x6d, 0x40, 0x6d, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117a48
+	ldr r0, _02117a4c ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x50]
+	ldr r0, [r0, #0x54]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117a48:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02117a30
 _02117a4c: .word data_ov09_0211eb24
 
 	.global func_ov09_02117a50
 	thumb_func_start func_ov09_02117a50
 func_ov09_02117a50: ; 0x02117a50
-	thumb_func_end func_ov09_02117a50
-_02117a50:
-	.byte 0xf0
-	.global data_ov09_02117a51
-data_ov09_02117a51: ; 0x02117a51
-	.byte 0xb5, 0x85, 0xb0, 0x01, 0x90, 0x2e, 0x48, 0x01, 0x21, 0x01, 0x70, 0x00, 0x20, 0x04, 0x90
-	.byte 0x7b, 0x21, 0x00, 0x27, 0x01, 0x98, 0x09, 0x01, 0x40, 0x18, 0x03, 0x90, 0x01, 0x98, 0xff, 0x43
-	.byte 0x02, 0x90
+	push {r4, r5, r6, r7, lr}
+	sub sp, #0x14
+	str r0, [sp, #4]
+	ldr r0, _02117b10 ; =data_ov09_0211f52c
+	mov r1, #1
+	strb r1, [r0]
+	mov r0, #0
+	str r0, [sp, #0x10]
+	mov r1, #0x7b
+	mov r7, #0
+	ldr r0, [sp, #4]
+	lsl r1, r1, #4
+	add r0, r0, r1
+	str r0, [sp, #0xc]
+	ldr r0, [sp, #4]
+	mvn r7, r7
+	str r0, [sp, #8]
 _02117a72:
 	ldr r6, [sp, #0xc]
 	ldr r5, [sp, #8]
@@ -8399,6 +8935,7 @@ _02117a78:
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
+	thumb_func_end func_ov09_02117a50
 _02117b10: .word data_ov09_0211f52c
 _02117b14: .word 0x000007ec
 _02117b18: .word 0x00001170
@@ -8408,46 +8945,76 @@ _02117b20: .word data_ov09_0211eb24
 	.global func_ov09_02117b24
 	thumb_func_start func_ov09_02117b24
 func_ov09_02117b24: ; 0x02117b24
-	thumb_func_end func_ov09_02117b24
-_02117b24:
-	.byte 0x10
-	.global data_ov09_02117b25
-data_ov09_02117b25: ; 0x02117b25
-	.byte 0xb5, 0x04, 0x1c, 0x7b, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfc, 0xf7
-	.byte 0xeb, 0xf9, 0x00, 0x28, 0x0a, 0xd1, 0x03, 0x20, 0xc0, 0x43, 0x04, 0xf0, 0xdf, 0xf9, 0x00, 0x28
-	.byte 0x04, 0xd0, 0x03, 0x48, 0x01, 0x6e, 0x40, 0x6e, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0x7b
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	bne _02117b4c
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117b4c
+	ldr r0, _02117b50 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x60]
+	ldr r0, [r0, #0x64]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117b4c:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02117b24
 _02117b50: .word data_ov09_0211eb24
 
 	.global func_ov09_02117b54
 	thumb_func_start func_ov09_02117b54
 func_ov09_02117b54: ; 0x02117b54
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_02117ba4
+	ldr r0, _02117b68 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x68]
+	ldr r0, [r0, #0x6c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02117b54
-_02117b54:
-	.byte 0x10
-	.global data_ov09_02117b55
-data_ov09_02117b55: ; 0x02117b55
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0xf0, 0x24, 0xf8, 0x02, 0x48, 0x81, 0x6e
-	.byte 0xc0, 0x6e, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd
 _02117b68: .word data_ov09_0211eb24
 
 	.global func_ov09_02117b6c
 	thumb_func_start func_ov09_02117b6c
 func_ov09_02117b6c: ; 0x02117b6c
-	thumb_func_end func_ov09_02117b6c
-_02117b6c:
-	.byte 0x10
-	.global data_ov09_02117b6d
-data_ov09_02117b6d: ; 0x02117b6d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x04, 0x20, 0x04, 0xf0, 0xc3, 0xf9, 0x00, 0x28, 0x10, 0xd0, 0x20, 0x1c, 0x01, 0x68, 0x49, 0x6e
-	.byte 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0x89, 0x6e, 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0x09, 0x6f
-	.byte 0x88, 0x47, 0x03, 0x48, 0x01, 0x6f, 0x40, 0x6f, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02117b9c
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x64]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x68]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x70]
+	blx r1
+	ldr r0, _02117ba0 ; =data_ov09_0211eb24
+	ldr r1, [r0, #0x70]
+	ldr r0, [r0, #0x74]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02117b9c:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02117b6c
 _02117ba0: .word data_ov09_0211eb24
 
 	.global func_ov09_02117ba4
@@ -8809,14 +9376,20 @@ _02117ea4: .word 0x0000135c
 	.global func_ov09_02117ea8
 	thumb_func_start func_ov09_02117ea8
 func_ov09_02117ea8: ; 0x02117ea8
-	thumb_func_end func_ov09_02117ea8
-_02117ea8:
-	.byte 0xf8
-	.global data_ov09_02117ea9
-data_ov09_02117ea9: ; 0x02117ea9
-	.byte 0xb5, 0x04, 0x1c, 0xfc, 0xf7, 0x28, 0xfb
-	.byte 0x02, 0x20, 0x26, 0x21, 0x0b, 0x22, 0x32, 0x23, 0x0e, 0x25, 0x00, 0x27, 0x80, 0x02, 0x89, 0x01
-	.byte 0x12, 0x02, 0x9b, 0x01, 0x2d, 0x02
+	push {r3, r4, r5, r6, r7, lr}
+	add r4, r0, #0
+	bl func_ov09_02114500
+	mov r0, #2
+	mov r1, #0x26
+	mov r2, #0xb
+	mov r3, #0x32
+	mov r5, #0xe
+	mov r7, #0
+	lsl r0, r0, #0xa
+	lsl r1, r1, #6
+	lsl r2, r2, #8
+	lsl r3, r3, #6
+	lsl r5, r5, #8
 _02117ec6:
 	ldr r6, [r4, r0]
 	add r7, r7, #1
@@ -8829,18 +9402,21 @@ _02117ec6:
 	blt _02117ec6
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02117ea8
 
 	.global func_ov09_02117edc
 	thumb_func_start func_ov09_02117edc
 func_ov09_02117edc: ; 0x02117edc
-	thumb_func_end func_ov09_02117edc
-_02117edc:
-	.byte 0x10
-	.global data_ov09_02117edd
-data_ov09_02117edd: ; 0x02117edd
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x01, 0x20, 0x03, 0xf0, 0xf5, 0xff, 0xf2, 0x28, 0x03, 0xd0, 0xf3, 0x28, 0x01, 0xd0, 0xf4, 0x28
-	.byte 0x06, 0xd1
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #1
+	bl func_ov09_0211bed0
+	cmp r0, #0xf2
+	beq _02117ef2
+	cmp r0, #0xf3
+	beq _02117ef2
+	cmp r0, #0xf4
+	bne _02117f00
 _02117ef2:
 	mov r0, #1
 	bl func_ov09_0211bed0
@@ -8850,56 +9426,42 @@ _02117ef2:
 _02117f00:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02117edc
 
 	.global func_ov09_02117f04
 	thumb_func_start func_ov09_02117f04
 func_ov09_02117f04: ; 0x02117f04
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02117f04
-_02117f04:
-	.byte 0x70
-	.global data_ov09_02117f05
-data_ov09_02117f05: ; 0x02117f05
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02117f08
 	thumb_func_start func_ov09_02117f08
 func_ov09_02117f08: ; 0x02117f08
+	mov r0, #0
+	bx lr
 	thumb_func_end func_ov09_02117f08
-_02117f08:
-	.byte 0x00
-	.global data_ov09_02117f09
-data_ov09_02117f09: ; 0x02117f09
-	.byte 0x20, 0x70, 0x47
 
 	.global func_ov09_02117f0c
 	thumb_func_start func_ov09_02117f0c
 func_ov09_02117f0c: ; 0x02117f0c
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02117f0c
-_02117f0c:
-	.byte 0x70
-	.global data_ov09_02117f0d
-data_ov09_02117f0d: ; 0x02117f0d
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02117f10
 	thumb_func_start func_ov09_02117f10
 func_ov09_02117f10: ; 0x02117f10
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02117f10
-_02117f10:
-	.byte 0x70
-	.global data_ov09_02117f11
-data_ov09_02117f11: ; 0x02117f11
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02117f14
 	thumb_func_start func_ov09_02117f14
 func_ov09_02117f14: ; 0x02117f14
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02117f14
-_02117f14:
-	.byte 0x70
-	.global data_ov09_02117f15
-data_ov09_02117f15: ; 0x02117f15
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02117f18
 	thumb_func_start func_ov09_02117f18
@@ -8961,125 +9523,130 @@ _02117f64: .word 0x0000142a
 	.global func_ov09_02117f68
 	thumb_func_start func_ov09_02117f68
 func_ov09_02117f68: ; 0x02117f68
+	ldr r0, _02117f70 ; =data_027e1050
+	ldr r3, _02117f74 ; =func_ov02_020f5ed4
+	ldr r0, [r0]
+	bx r3
+	.align 2, 0
 	thumb_func_end func_ov09_02117f68
-_02117f68:
-	.byte 0x01
-	.global data_ov09_02117f69
-data_ov09_02117f69: ; 0x02117f69
-	.byte 0x48, 0x02, 0x4b, 0x00, 0x68, 0x18, 0x47
 _02117f70: .word data_027e1050
 _02117f74: .word func_ov02_020f5ed4
 
 	.global func_ov09_02117f78
 	thumb_func_start func_ov09_02117f78
 func_ov09_02117f78: ; 0x02117f78
+	ldr r0, _02117f84 ; =data_027e1050
+	ldr r3, _02117f88 ; =func_ov02_020f5dc4
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117f78
-_02117f78:
-	.byte 0x02
-	.global data_ov09_02117f79
-data_ov09_02117f79: ; 0x02117f79
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21
-	.byte 0x18, 0x47, 0xc0, 0x46
 _02117f84: .word data_027e1050
 _02117f88: .word func_ov02_020f5dc4
 
 	.global func_ov09_02117f8c
 	thumb_func_start func_ov09_02117f8c
 func_ov09_02117f8c: ; 0x02117f8c
+	ldr r0, _02117f98 ; =data_027e1050
+	ldr r3, _02117f9c ; =func_ov02_020f2284
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117f8c
-_02117f8c:
-	.byte 0x02
-	.global data_ov09_02117f8d
-data_ov09_02117f8d: ; 0x02117f8d
-	.byte 0x48, 0x03, 0x4b
-	.byte 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02117f98: .word data_027e1050
 _02117f9c: .word func_ov02_020f2284
 
 	.global func_ov09_02117fa0
 	thumb_func_start func_ov09_02117fa0
 func_ov09_02117fa0: ; 0x02117fa0
+	ldr r0, _02117fac ; =data_027e1050
+	ldr r3, _02117fb0 ; =func_ov02_020f2378
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117fa0
-_02117fa0:
-	.byte 0x02
-	.global data_ov09_02117fa1
-data_ov09_02117fa1: ; 0x02117fa1
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02117fac: .word data_027e1050
 _02117fb0: .word func_ov02_020f2378
 
 	.global func_ov09_02117fb4
 	thumb_func_start func_ov09_02117fb4
 func_ov09_02117fb4: ; 0x02117fb4
+	ldr r0, _02117fc0 ; =data_027e1050
+	ldr r3, _02117fc4 ; =func_ov02_020f23cc
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117fb4
-_02117fb4:
-	.byte 0x02
-	.global data_ov09_02117fb5
-data_ov09_02117fb5: ; 0x02117fb5
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02117fc0: .word data_027e1050
 _02117fc4: .word func_ov02_020f23cc
 
 	.global func_ov09_02117fc8
 	thumb_func_start func_ov09_02117fc8
 func_ov09_02117fc8: ; 0x02117fc8
+	ldr r0, _02117fd4 ; =data_027e1050
+	ldr r3, _02117fd8 ; =func_ov02_020f5e14
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117fc8
-_02117fc8:
-	.byte 0x02
-	.global data_ov09_02117fc9
-data_ov09_02117fc9: ; 0x02117fc9
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21
-	.byte 0x18, 0x47, 0xc0, 0x46
 _02117fd4: .word data_027e1050
 _02117fd8: .word func_ov02_020f5e14
 
 	.global func_ov09_02117fdc
 	thumb_func_start func_ov09_02117fdc
 func_ov09_02117fdc: ; 0x02117fdc
+	ldr r0, _02117fe8 ; =data_027e1050
+	ldr r3, _02117fec ; =func_ov02_020f22a8
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117fdc
-_02117fdc:
-	.byte 0x02
-	.global data_ov09_02117fdd
-data_ov09_02117fdd: ; 0x02117fdd
-	.byte 0x48, 0x03, 0x4b
-	.byte 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02117fe8: .word data_027e1050
 _02117fec: .word func_ov02_020f22a8
 
 	.global func_ov09_02117ff0
 	thumb_func_start func_ov09_02117ff0
 func_ov09_02117ff0: ; 0x02117ff0
+	ldr r0, _02117ffc ; =data_027e1050
+	ldr r3, _02118000 ; =func_ov02_020f2398
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02117ff0
-_02117ff0:
-	.byte 0x02
-	.global data_ov09_02117ff1
-data_ov09_02117ff1: ; 0x02117ff1
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02117ffc: .word data_027e1050
 _02118000: .word func_ov02_020f2398
 
 	.global func_ov09_02118004
 	thumb_func_start func_ov09_02118004
 func_ov09_02118004: ; 0x02118004
+	ldr r0, _02118010 ; =data_027e1050
+	ldr r3, _02118014 ; =func_ov02_020f23ec
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118004
-_02118004:
-	.byte 0x02
-	.global data_ov09_02118005
-data_ov09_02118005: ; 0x02118005
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118010: .word data_027e1050
 _02118014: .word func_ov02_020f23ec
 
 	.global func_ov09_02118018
 	thumb_func_start func_ov09_02118018
 func_ov09_02118018: ; 0x02118018
+	ldr r0, _02118024 ; =data_027e1050
+	ldr r1, [r0]
+	mov r0, #0x35
+	lsl r0, r0, #4
+	ldrb r0, [r1, r0]
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118018
-_02118018:
-	.byte 0x02
-	.global data_ov09_02118019
-data_ov09_02118019: ; 0x02118019
-	.byte 0x48, 0x01, 0x68, 0x35, 0x20, 0x00, 0x01
-	.byte 0x08, 0x5c, 0x70, 0x47
 _02118024: .word data_027e1050
 
 	.global func_ov09_02118028
@@ -9313,26 +9880,25 @@ _021181ce:
 	.global func_ov09_021181d0
 	thumb_func_start func_ov09_021181d0
 func_ov09_021181d0: ; 0x021181d0
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_021181d0
-_021181d0:
-	.byte 0x70
-	.global data_ov09_021181d1
-data_ov09_021181d1: ; 0x021181d1
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_021181d4
 	thumb_func_start func_ov09_021181d4
 func_ov09_021181d4: ; 0x021181d4
-	thumb_func_end func_ov09_021181d4
-_021181d4:
-	.byte 0x08
-	.global data_ov09_021181d5
-data_ov09_021181d5: ; 0x021181d5
-	.byte 0xb5, 0x08, 0x1c, 0xfb, 0xf7, 0xe6, 0xff, 0x00, 0x28, 0x03, 0xd0
-	.byte 0x02, 0x48, 0x82, 0x21, 0xbf, 0xf7, 0xfe, 0xea
+	push {r3, lr}
+	add r0, r1, #0
+	bl func_ov09_021141a8
+	cmp r0, #0
+	beq _021181e8
+	ldr r0, _021181ec ; =data_ov00_020eec9c
+	mov r1, #0x82
+	blx func_ov00_020d77e4
 _021181e8:
 	pop {r3, pc}
 	nop
+	thumb_func_end func_ov09_021181d4
 _021181ec: .word data_ov00_020eec9c
 
 	.global func_ov09_021181f0
@@ -9423,40 +9989,135 @@ _021182ac: .word func_ov09_021139b8
 	.global func_ov09_021182b0
 	thumb_func_start func_ov09_021182b0
 func_ov09_021182b0: ; 0x021182b0
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0xe6
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xe
+	lsl r0, r0, #8
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xda
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x35
+	lsl r0, r0, #6
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xce
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x9e
+	lsl r0, r0, #4
+	ldr r3, _02118340 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x6e
+	lsl r0, r0, #4
+	ldr r3, _02118340 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	ldr r3, _02118340 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	ldr r3, _02118340 ; =func_ov09_021139f8
+	add r0, #0xe0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	add r0, #0x80
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	add r0, #0x20
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	bl func_ov09_021144c4
+	add r0, r4, #0
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_021182b0
-_021182b0:
-	.byte 0x10
-	.global data_ov09_021182b1
-data_ov09_021182b1: ; 0x021182b1
-	.byte 0xb5, 0x04, 0x1c, 0xe6, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0x9d, 0xfb, 0x0e, 0x20
-	.byte 0x00, 0x02, 0x20, 0x18, 0xfb, 0xf7, 0x98, 0xfb, 0xda, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfb, 0xf7
-	.byte 0x93, 0xfb, 0x35, 0x20, 0x80, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0x8e, 0xfb, 0xce, 0x20, 0x00, 0x01
-	.byte 0x20, 0x18, 0xfb, 0xf7, 0x89, 0xfb, 0x9e, 0x20, 0x00, 0x01, 0x15, 0x4b, 0x20, 0x18, 0x08, 0x21
-	.byte 0x60, 0x22, 0x37, 0xf7, 0x30, 0xea, 0x6e, 0x20, 0x00, 0x01, 0x11, 0x4b, 0x20, 0x18, 0x08, 0x21
-	.byte 0x60, 0x22, 0x37, 0xf7, 0x28, 0xea, 0x3e, 0x20, 0x00, 0x01, 0x0d, 0x4b, 0x20, 0x18, 0x08, 0x21
-	.byte 0x60, 0x22, 0x37, 0xf7, 0x20, 0xea, 0x20, 0x1c, 0x09, 0x4b, 0xe0, 0x30, 0x08, 0x21, 0x60, 0x22
-	.byte 0x37, 0xf7, 0x18, 0xea, 0x20, 0x1c, 0x80, 0x30, 0xfb, 0xf7, 0x66, 0xfb, 0x20, 0x1c, 0x20, 0x30
-	.byte 0xfb, 0xf7, 0x62, 0xfb, 0x20, 0x1c, 0xfc, 0xf7, 0xc5, 0xf8, 0x20, 0x1c, 0x10, 0xbd, 0xc0, 0x46
 _02118340: .word func_ov09_021139f8
 
 	.global func_ov09_02118344
 	thumb_func_start func_ov09_02118344
 func_ov09_02118344: ; 0x02118344
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0xe6
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xe
+	lsl r0, r0, #8
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xda
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x35
+	lsl r0, r0, #6
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0xce
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_021139f8
+	mov r0, #0x9e
+	lsl r0, r0, #4
+	ldr r3, _021183d8 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x6e
+	lsl r0, r0, #4
+	ldr r3, _021183d8 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	ldr r3, _021183d8 ; =func_ov09_021139f8
+	add r0, r4, r0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	ldr r3, _021183d8 ; =func_ov09_021139f8
+	add r0, #0xe0
+	mov r1, #8
+	mov r2, #0x60
+	blx func_0204f754
+	add r0, r4, #0
+	add r0, #0x80
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	add r0, #0x20
+	bl func_ov09_021139f8
+	add r0, r4, #0
+	bl func_ov09_021144c4
+	add r0, r4, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02118344
-_02118344:
-	.byte 0x10
-	.global data_ov09_02118345
-data_ov09_02118345: ; 0x02118345
-	.byte 0xb5, 0x04, 0x1c, 0xe6, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfb, 0xf7
-	.byte 0x53, 0xfb, 0x0e, 0x20, 0x00, 0x02, 0x20, 0x18, 0xfb, 0xf7, 0x4e, 0xfb, 0xda, 0x20, 0x00, 0x01
-	.byte 0x20, 0x18, 0xfb, 0xf7, 0x49, 0xfb, 0x35, 0x20, 0x80, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0x44, 0xfb
-	.byte 0xce, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0x3f, 0xfb, 0x9e, 0x20, 0x00, 0x01, 0x16, 0x4b
-	.byte 0x20, 0x18, 0x08, 0x21, 0x60, 0x22, 0x37, 0xf7, 0xe6, 0xe9, 0x6e, 0x20, 0x00, 0x01, 0x12, 0x4b
-	.byte 0x20, 0x18, 0x08, 0x21, 0x60, 0x22, 0x37, 0xf7, 0xde, 0xe9, 0x3e, 0x20, 0x00, 0x01, 0x0e, 0x4b
-	.byte 0x20, 0x18, 0x08, 0x21, 0x60, 0x22, 0x37, 0xf7, 0xd6, 0xe9, 0x20, 0x1c, 0x0a, 0x4b, 0xe0, 0x30
-	.byte 0x08, 0x21, 0x60, 0x22, 0x37, 0xf7, 0xce, 0xe9, 0x20, 0x1c, 0x80, 0x30, 0xfb, 0xf7, 0x1c, 0xfb
-	.byte 0x20, 0x1c, 0x20, 0x30, 0xfb, 0xf7, 0x18, 0xfb, 0x20, 0x1c, 0xfc, 0xf7, 0x7b, 0xf8, 0x20, 0x1c
-	.byte 0x16, 0xf7, 0x1c, 0xeb, 0x20, 0x1c, 0x10, 0xbd
 _021183d8: .word func_ov09_021139f8
 
 	.global func_ov09_021183dc
@@ -9528,25 +10189,37 @@ _0211846c: .word func_ov09_021139f8
 	.global func_ov09_02118470
 	thumb_func_start func_ov09_02118470
 func_ov09_02118470: ; 0x02118470
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_0211894c
+	ldr r0, _02118490 ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x20]
+	ldr r0, [r0, #0x24]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	mov r0, #0
+	mvn r0, r0
+	str r0, [r4, #0x1c]
+	add r0, r4, #0
+	bl func_ov09_021144c8
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_02118470
-_02118470:
-	.byte 0x10
-	.global data_ov09_02118471
-data_ov09_02118471: ; 0x02118471
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0xf0, 0x6a, 0xfa, 0x05, 0x48, 0x01, 0x6a, 0x40, 0x6a, 0x21, 0x61
-	.byte 0x60, 0x61, 0x00, 0x20, 0xc0, 0x43, 0xe0, 0x61, 0x20, 0x1c, 0xfc, 0xf7, 0x1d, 0xf8, 0x10, 0xbd
 _02118490: .word data_ov09_0211ec50
 
 	.global func_ov09_02118494
 	thumb_func_start func_ov09_02118494
 func_ov09_02118494: ; 0x02118494
-	thumb_func_end func_ov09_02118494
-_02118494:
-	.byte 0xf8
-	.global data_ov09_02118495
-data_ov09_02118495: ; 0x02118495
-	.byte 0xb5, 0x84, 0xb0, 0x3e, 0x21, 0x09, 0x01, 0x06, 0x1c, 0x03, 0x90
-	.byte 0x00, 0x24, 0x47, 0x18, 0xe0, 0x36, 0x05, 0x1c
+	push {r3, r4, r5, r6, r7, lr}
+	sub sp, #0x10
+	mov r1, #0x3e
+	lsl r1, r1, #4
+	add r6, r0, #0
+	str r0, [sp, #0xc]
+	mov r4, #0
+	add r7, r0, r1
+	add r6, #0xe0
+	add r5, r0, #0
 _021184a8:
 	add r2, r4, #0
 	add r2, #0x10
@@ -9678,30 +10351,37 @@ _021185a4:
 	add sp, #0x10
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
+	thumb_func_end func_ov09_02118494
 _021185c0: .word data_ov09_0211ec50
 
 	.global func_ov09_021185c4
 	thumb_func_start func_ov09_021185c4
 func_ov09_021185c4: ; 0x021185c4
+	ldr r3, _021185c8 ; =func_ov09_021144d8
+	bx r3
+	.align 2, 0
 	thumb_func_end func_ov09_021185c4
-_021185c4:
-	.byte 0x00
-	.global data_ov09_021185c5
-data_ov09_021185c5: ; 0x021185c5
-	.byte 0x4b, 0x18, 0x47
 _021185c8: .word func_ov09_021144d8
 
 	.global func_ov09_021185cc
 	thumb_func_start func_ov09_021185cc
 func_ov09_021185cc: ; 0x021185cc
-	thumb_func_end func_ov09_021185cc
-_021185cc:
-	.byte 0x10
-	.global data_ov09_021185cd
-data_ov09_021185cd: ; 0x021185cd
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x20, 0x69, 0x00, 0x28, 0x0d, 0xd0, 0x23, 0x1c, 0x10, 0x33, 0x59, 0x68, 0x01, 0x20, 0x4a, 0x10
-	.byte 0x08, 0x42, 0x03, 0xd0, 0xa1, 0x58, 0x18, 0x68, 0x09, 0x58, 0x00, 0xe0
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, [r4, #0x10]
+	cmp r0, #0
+	beq _021185f2
+	add r3, r4, #0
+	add r3, #0x10
+	ldr r1, [r3, #4]
+	mov r0, #1
+	asr r2, r1, #1
+	tst r0, r1
+	beq _021185ec
+	ldr r1, [r4, r2]
+	ldr r0, [r3]
+	ldr r1, [r1, r0]
+	b _021185ee
 _021185ec:
 	ldr r1, [r3]
 _021185ee:
@@ -9712,17 +10392,20 @@ _021185f2:
 	bl func_ov09_021144dc
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021185cc
 
 	.global func_ov09_021185fc
 	thumb_func_start func_ov09_021185fc
 func_ov09_021185fc: ; 0x021185fc
-	thumb_func_end func_ov09_021185fc
-_021185fc:
-	.byte 0x18
-	.global data_ov09_021185fd
-data_ov09_021185fd: ; 0x021185fd
-	.byte 0xb5, 0x81, 0xb0
-	.byte 0x04, 0x1c, 0x20, 0x7b, 0x00, 0x28, 0x02, 0xd0, 0x0c, 0x48, 0x00, 0x21, 0x01, 0x70
+	push {r3, r4, lr}
+	sub sp, #4
+	add r4, r0, #0
+	ldrb r0, [r4, #0xc]
+	cmp r0, #0
+	beq _0211860e
+	ldr r0, _0211863c ; =data_ov09_0211f52c
+	mov r1, #0
+	strb r1, [r0]
 _0211860e:
 	mov r0, #0xe7
 	lsl r0, r0, #4
@@ -9747,18 +10430,19 @@ _0211862a:
 	add sp, #4
 	pop {r3, r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021185fc
 _0211863c: .word data_ov09_0211f52c
 _02118640: .word data_ov09_0211ec50
 
 	.global func_ov09_02118644
 	thumb_func_start func_ov09_02118644
 func_ov09_02118644: ; 0x02118644
-	thumb_func_end func_ov09_02118644
-_02118644:
-	.byte 0x78
-	.global data_ov09_02118645
-data_ov09_02118645: ; 0x02118645
-	.byte 0xb5, 0x83, 0xb0, 0x06, 0x1c, 0x35, 0x1c, 0x00, 0x24, 0xe0, 0x35
+	push {r3, r4, r5, r6, lr}
+	sub sp, #0xc
+	add r6, r0, #0
+	add r5, r6, #0
+	mov r4, #0
+	add r5, #0xe0
 _02118650:
 	add r0, r5, #0
 	bl func_ov09_02114110
@@ -9803,6 +10487,7 @@ _0211869c:
 	add sp, #0xc
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02118644
 _021186a8: .word data_ov09_0211ec50
 _021186ac: .word data_ov09_0211f52c
 _021186b0: .word data_ov00_020eec9c
@@ -9810,105 +10495,200 @@ _021186b0: .word data_ov00_020eec9c
 	.global func_ov09_021186b4
 	thumb_func_start func_ov09_021186b4
 func_ov09_021186b4: ; 0x021186b4
+	push {r4, lr}
+	ldr r1, [r0]
+	add r4, r0, #0
+	ldr r1, [r1, #0x44]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x48]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x4c]
+	blx r1
+	ldr r0, _021186dc ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x40]
+	ldr r0, [r0, #0x44]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_021186b4
-_021186b4:
-	.byte 0x10
-	.global data_ov09_021186b5
-data_ov09_021186b5: ; 0x021186b5
-	.byte 0xb5, 0x01, 0x68, 0x04, 0x1c, 0x49, 0x6c, 0x88, 0x47, 0x20, 0x1c
-	.byte 0x01, 0x68, 0x89, 0x6c, 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0xc9, 0x6c, 0x88, 0x47, 0x03, 0x48
-	.byte 0x01, 0x6c, 0x40, 0x6c, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd, 0xc0, 0x46
 _021186dc: .word data_ov09_0211ec50
 
 	.global func_ov09_021186e0
 	thumb_func_start func_ov09_021186e0
 func_ov09_021186e0: ; 0x021186e0
-	thumb_func_end func_ov09_021186e0
-_021186e0:
-	.byte 0x10
-	.global data_ov09_021186e1
-data_ov09_021186e1: ; 0x021186e1
-	.byte 0xb5, 0x04, 0x1c, 0x3e, 0x20, 0x00, 0x01, 0x22, 0x18, 0xe1, 0x69, 0x60, 0x20, 0x48, 0x43
-	.byte 0x10, 0x18, 0xfb, 0xf7, 0x09, 0xfc, 0x00, 0x28, 0x04, 0xd1, 0x03, 0x48, 0x81, 0x6c, 0xc0, 0x6c
-	.byte 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x1c]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	bne _02118704
+	ldr r0, _02118708 ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x48]
+	ldr r0, [r0, #0x4c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02118704:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_021186e0
 _02118708: .word data_ov09_0211ec50
 
 	.global func_ov09_0211870c
 	thumb_func_start func_ov09_0211870c
 func_ov09_0211870c: ; 0x0211870c
+	push {r3, r4, r5, lr}
+	sub sp, #0x20
+	ldr r5, _0211876c ; =data_ov09_0211db6c
+	add r2, sp, #0
+	add r4, r0, #0
+	add r3, r2, #0
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	ldmia r5!, {r0, r1}
+	stmia r2!, {r0, r1}
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	add r1, r4, r0
+	ldr r2, [r4, #0x1c]
+	mov r0, #0x60
+	mul r0, r2
+	lsl r2, r2, #2
+	ldr r2, [r3, r2]
+	add r0, r1, r0
+	mov r1, #0x32
+	mov r3, #2
+	bl func_ov09_02113f90
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x1c]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113d28
+	mov r0, #0x35
+	lsl r0, r0, #6
+	add r0, r4, r0
+	bl func_ov09_02113d28
+	ldr r0, _02118770 ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x50]
+	ldr r0, [r0, #0x54]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	add sp, #0x20
+	pop {r3, r4, r5, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_0211870c
-_0211870c:
-	.byte 0x38
-	.global data_ov09_0211870d
-data_ov09_0211870d: ; 0x0211870d
-	.byte 0xb5, 0x88, 0xb0
-	.byte 0x16, 0x4d, 0x00, 0xaa, 0x04, 0x1c, 0x13, 0x1c, 0x03, 0xcd, 0x03, 0xc2, 0x03, 0xcd, 0x03, 0xc2
-	.byte 0x03, 0xcd, 0x03, 0xc2, 0x03, 0xcd, 0x03, 0xc2, 0x3e, 0x20, 0x00, 0x01, 0x21, 0x18, 0xe2, 0x69
-	.byte 0x60, 0x20, 0x50, 0x43, 0x92, 0x00, 0x9a, 0x58, 0x08, 0x18, 0x32, 0x21, 0x02, 0x23, 0xfb, 0xf7
-	.byte 0x27, 0xfc, 0x3e, 0x20, 0x00, 0x01, 0x22, 0x18, 0xe1, 0x69, 0x60, 0x20, 0x48, 0x43, 0x10, 0x18
-	.byte 0xfb, 0xf7, 0xea, 0xfa, 0x35, 0x20, 0x80, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0xe5, 0xfa, 0x04, 0x48
-	.byte 0x01, 0x6d, 0x40, 0x6d, 0x21, 0x61, 0x60, 0x61, 0x08, 0xb0, 0x38, 0xbd
 _0211876c: .word data_ov09_0211db6c
 _02118770: .word data_ov09_0211ec50
 
 	.global func_ov09_02118774
 	thumb_func_start func_ov09_02118774
 func_ov09_02118774: ; 0x02118774
-	thumb_func_end func_ov09_02118774
-_02118774:
-	.byte 0x10
-	.global data_ov09_02118775
-data_ov09_02118775: ; 0x02118775
-	.byte 0xb5, 0x04, 0x1c, 0x03, 0x20, 0xc0, 0x43, 0x03, 0xf0, 0xbe, 0xfb
-	.byte 0x3e, 0x20, 0x00, 0x01, 0x22, 0x18, 0xe1, 0x69, 0x60, 0x20, 0x48, 0x43, 0x10, 0x18, 0xfb, 0xf7
-	.byte 0xbb, 0xfb, 0x00, 0x28, 0x04, 0xd1, 0x03, 0x48, 0x81, 0x6d, 0xc0, 0x6d, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x1c]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f08
+	cmp r0, #0
+	bne _021187a0
+	ldr r0, _021187a4 ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x58]
+	ldr r0, [r0, #0x5c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _021187a0:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02118774
 _021187a4: .word data_ov09_0211ec50
 
 	.global func_ov09_021187a8
 	thumb_func_start func_ov09_021187a8
 func_ov09_021187a8: ; 0x021187a8
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_02118964
+	ldr r0, _021187bc ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x60]
+	ldr r0, [r0, #0x64]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_021187a8
-_021187a8:
-	.byte 0x10
-	.global data_ov09_021187a9
-data_ov09_021187a9: ; 0x021187a9
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0xf0, 0xda, 0xf8
-	.byte 0x02, 0x48, 0x01, 0x6e, 0x40, 0x6e, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd
 _021187bc: .word data_ov09_0211ec50
 
 	.global func_ov09_021187c0
 	thumb_func_start func_ov09_021187c0
 func_ov09_021187c0: ; 0x021187c0
-	thumb_func_end func_ov09_021187c0
-_021187c0:
-	.byte 0x10
-	.global data_ov09_021187c1
-data_ov09_021187c1: ; 0x021187c1
-	.byte 0xb5, 0x04, 0x1c, 0x04, 0x20, 0x03, 0xf0, 0x99, 0xfb, 0x00, 0x28, 0x04, 0xd0, 0x03, 0x48
-	.byte 0x81, 0x6e, 0xc0, 0x6e, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _021187d8
+	ldr r0, _021187dc ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x68]
+	ldr r0, [r0, #0x6c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _021187d8:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_021187c0
 _021187dc: .word data_ov09_0211ec50
 
 	.global func_ov09_021187e0
 	thumb_func_start func_ov09_021187e0
 func_ov09_021187e0: ; 0x021187e0
-	thumb_func_end func_ov09_021187e0
-_021187e0:
-	.byte 0x18
-	.global data_ov09_021187e1
-data_ov09_021187e1: ; 0x021187e1
-	.byte 0xb5, 0x81, 0xb0, 0x04, 0x1c, 0x3e, 0x20, 0x00, 0x01, 0x22, 0x18, 0xe1, 0x69, 0x60, 0x20
-	.byte 0x48, 0x43, 0x10, 0x18, 0xfb, 0xf7, 0x94, 0xfb, 0x20, 0x1c, 0x01, 0x68, 0x09, 0x6b, 0x88, 0x47
-	.byte 0x00, 0x28, 0x07, 0xd0, 0x00, 0x21, 0x20, 0x1c, 0x20, 0x30, 0x0a, 0x1c, 0x04, 0x23, 0x00, 0x91
-	.byte 0xfb, 0xf7, 0x96, 0xfb
+	push {r3, r4, lr}
+	sub sp, #4
+	add r4, r0, #0
+	mov r0, #0x3e
+	lsl r0, r0, #4
+	add r2, r4, r0
+	ldr r1, [r4, #0x1c]
+	mov r0, #0x60
+	mul r0, r1
+	add r0, r2, r0
+	bl func_ov09_02113f20
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x30]
+	blx r1
+	cmp r0, #0
+	beq _02118814
+	mov r1, #0
+	add r0, r4, #0
+	add r0, #0x20
+	add r2, r1, #0
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
 _02118814:
 	mov r0, #0xe6
 	mov r1, #0
@@ -9939,21 +10719,34 @@ _02118814:
 	add sp, #4
 	pop {r3, r4, pc}
 	nop
+	thumb_func_end func_ov09_021187e0
 _02118854: .word data_ov09_0211ec50
 _02118858: .word data_ov09_0211f52c
 
 	.global func_ov09_0211885c
 	thumb_func_start func_ov09_0211885c
 func_ov09_0211885c: ; 0x0211885c
-	thumb_func_end func_ov09_0211885c
-_0211885c:
-	.byte 0x10
-	.global data_ov09_0211885d
-data_ov09_0211885d: ; 0x0211885d
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0xe6, 0x20, 0x00, 0x01, 0x20, 0x18, 0xfb, 0xf7, 0x53, 0xfc, 0x00, 0x28, 0x0d, 0xd0, 0x0c, 0x48
-	.byte 0x81, 0x6f, 0xc0, 0x6f, 0x21, 0x61, 0x60, 0x61, 0x20, 0x1c, 0x01, 0x68, 0x89, 0x6b, 0x88, 0x47
-	.byte 0x08, 0x48, 0x7d, 0x21, 0xbe, 0xf7, 0xae, 0xef, 0x10, 0xbd
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #0xe6
+	lsl r0, r0, #4
+	add r0, r4, r0
+	bl func_ov09_02114110
+	cmp r0, #0
+	beq _0211888a
+	ldr r0, _021188a0 ; =data_ov09_0211ec50
+	ldr r1, [r0, #0x78]
+	ldr r0, [r0, #0x7c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x38]
+	blx r1
+	ldr r0, _021188a4 ; =data_ov00_020eec9c
+	mov r1, #0x7d
+	blx func_ov00_020d77e4
+	pop {r4, pc}
 _0211888a:
 	add r0, r4, #0
 	add r0, #0x20
@@ -9967,67 +10760,105 @@ _0211888a:
 _0211889e:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211885c
 _021188a0: .word data_ov09_0211ec50
 _021188a4: .word data_ov00_020eec9c
 
 	.global func_ov09_021188a8
 	thumb_func_start func_ov09_021188a8
 func_ov09_021188a8: ; 0x021188a8
+	push {r3, r4, lr}
+	sub sp, #4
+	mov r2, #1
+	add r4, r0, #0
+	mov r1, #0
+	add r0, #0x20
+	lsl r2, r2, #0x12
+	mov r3, #4
+	str r1, [sp]
+	bl func_ov09_02113f40
+	ldr r0, _021188d4 ; =data_ov09_0211ecd0
+	ldr r1, [r0]
+	ldr r0, [r0, #4]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	ldr r0, _021188d8 ; =data_ov09_0211f52c
+	mov r1, #1
+	strb r1, [r0]
+	add sp, #4
+	pop {r3, r4, pc}
+	nop
 	thumb_func_end func_ov09_021188a8
-_021188a8:
-	.byte 0x18
-	.global data_ov09_021188a9
-data_ov09_021188a9: ; 0x021188a9
-	.byte 0xb5, 0x81, 0xb0, 0x01, 0x22, 0x04, 0x1c
-	.byte 0x00, 0x21, 0x20, 0x30, 0x92, 0x04, 0x04, 0x23, 0x00, 0x91, 0xfb, 0xf7, 0x41, 0xfb, 0x05, 0x48
-	.byte 0x01, 0x68, 0x40, 0x68, 0x21, 0x61, 0x60, 0x61, 0x03, 0x48, 0x01, 0x21, 0x01, 0x70, 0x01, 0xb0
-	.byte 0x18, 0xbd, 0xc0, 0x46
 _021188d4: .word data_ov09_0211ecd0
 _021188d8: .word data_ov09_0211f52c
 
 	.global func_ov09_021188dc
 	thumb_func_start func_ov09_021188dc
 func_ov09_021188dc: ; 0x021188dc
-	thumb_func_end func_ov09_021188dc
-_021188dc:
-	.byte 0x10
-	.global data_ov09_021188dd
-data_ov09_021188dd: ; 0x021188dd
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x03, 0x20, 0xc0, 0x43, 0x03, 0xf0, 0x0a, 0xfb, 0x00, 0x28, 0x04, 0xd0, 0x02, 0x48, 0x81, 0x68
-	.byte 0xc0, 0x68, 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #3
+	mvn r0, r0
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _021188f6
+	ldr r0, _021188f8 ; =data_ov09_0211ecd0
+	ldr r1, [r0, #8]
+	ldr r0, [r0, #0xc]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _021188f6:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_021188dc
 _021188f8: .word data_ov09_0211ecd0
 
 	.global func_ov09_021188fc
 	thumb_func_start func_ov09_021188fc
 func_ov09_021188fc: ; 0x021188fc
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov09_0211894c
+	ldr r0, _02118910 ; =data_ov09_0211ecd0
+	ldr r1, [r0, #0x10]
+	ldr r0, [r0, #0x14]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_021188fc
-_021188fc:
-	.byte 0x10
-	.global data_ov09_021188fd
-data_ov09_021188fd: ; 0x021188fd
-	.byte 0xb5, 0x04, 0x1c
-	.byte 0x00, 0xf0, 0x24, 0xf8, 0x02, 0x48, 0x01, 0x69, 0x40, 0x69, 0x21, 0x61, 0x60, 0x61, 0x10, 0xbd
 _02118910: .word data_ov09_0211ecd0
 
 	.global func_ov09_02118914
 	thumb_func_start func_ov09_02118914
 func_ov09_02118914: ; 0x02118914
-	thumb_func_end func_ov09_02118914
-_02118914:
-	.byte 0x10
-	.global data_ov09_02118915
-data_ov09_02118915: ; 0x02118915
-	.byte 0xb5, 0x04, 0x1c, 0x04, 0x20, 0x03, 0xf0, 0xef, 0xfa, 0x00, 0x28
-	.byte 0x10, 0xd0, 0x20, 0x1c, 0x01, 0x68, 0x49, 0x6d, 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0x89, 0x6d
-	.byte 0x88, 0x47, 0x20, 0x1c, 0x01, 0x68, 0xc9, 0x6d, 0x88, 0x47, 0x03, 0x48, 0x81, 0x69, 0xc0, 0x69
-	.byte 0x21, 0x61, 0x60, 0x61
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #4
+	bl func_ov09_0211befc
+	cmp r0, #0
+	beq _02118944
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x54]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x58]
+	blx r1
+	add r0, r4, #0
+	ldr r1, [r0]
+	ldr r1, [r1, #0x5c]
+	blx r1
+	ldr r0, _02118948 ; =data_ov09_0211ecd0
+	ldr r1, [r0, #0x18]
+	ldr r0, [r0, #0x1c]
+	str r1, [r4, #0x10]
+	str r0, [r4, #0x14]
 _02118944:
 	pop {r4, pc}
 	nop
+	thumb_func_end func_ov09_02118914
 _02118948: .word data_ov09_0211ecd0
 
 	.global func_ov09_0211894c
@@ -10252,13 +11083,14 @@ _02118b10: .word data_027e0fb4
 	.global func_ov09_02118b14
 	thumb_func_start func_ov09_02118b14
 func_ov09_02118b14: ; 0x02118b14
-	thumb_func_end func_ov09_02118b14
-_02118b14:
-	.byte 0x10
-	.global data_ov09_02118b15
-data_ov09_02118b15: ; 0x02118b15
-	.byte 0xb5, 0x04, 0x1c, 0x01, 0x20, 0x03, 0xf0, 0xd9, 0xf9, 0xf7, 0x28
-	.byte 0x01, 0xd0, 0xf8, 0x28, 0x06, 0xd1
+	push {r4, lr}
+	add r4, r0, #0
+	mov r0, #1
+	bl func_ov09_0211bed0
+	cmp r0, #0xf7
+	beq _02118b26
+	cmp r0, #0xf8
+	bne _02118b34
 _02118b26:
 	mov r0, #1
 	bl func_ov09_0211bed0
@@ -10268,168 +11100,159 @@ _02118b26:
 _02118b34:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_02118b14
 
 	.global func_ov09_02118b38
 	thumb_func_start func_ov09_02118b38
 func_ov09_02118b38: ; 0x02118b38
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118b38
-_02118b38:
-	.byte 0x70
-	.global data_ov09_02118b39
-data_ov09_02118b39: ; 0x02118b39
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02118b3c
 	thumb_func_start func_ov09_02118b3c
 func_ov09_02118b3c: ; 0x02118b3c
+	mov r0, #0
+	bx lr
 	thumb_func_end func_ov09_02118b3c
-_02118b3c:
-	.byte 0x00
-	.global data_ov09_02118b3d
-data_ov09_02118b3d: ; 0x02118b3d
-	.byte 0x20, 0x70, 0x47
 
 	.global func_ov09_02118b40
 	thumb_func_start func_ov09_02118b40
 func_ov09_02118b40: ; 0x02118b40
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118b40
-_02118b40:
-	.byte 0x70
-	.global data_ov09_02118b41
-data_ov09_02118b41: ; 0x02118b41
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02118b44
 	thumb_func_start func_ov09_02118b44
 func_ov09_02118b44: ; 0x02118b44
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118b44
-_02118b44:
-	.byte 0x70
-	.global data_ov09_02118b45
-data_ov09_02118b45: ; 0x02118b45
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02118b48
 	thumb_func_start func_ov09_02118b48
 func_ov09_02118b48: ; 0x02118b48
+	ldr r0, _02118b54 ; =data_027e1050
+	ldr r3, _02118b58 ; =func_ov02_020f5dc4
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118b48
-_02118b48:
-	.byte 0x02
-	.global data_ov09_02118b49
-data_ov09_02118b49: ; 0x02118b49
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21
-	.byte 0x18, 0x47, 0xc0, 0x46
 _02118b54: .word data_027e1050
 _02118b58: .word func_ov02_020f5dc4
 
 	.global func_ov09_02118b5c
 	thumb_func_start func_ov09_02118b5c
 func_ov09_02118b5c: ; 0x02118b5c
+	ldr r0, _02118b68 ; =data_027e1050
+	ldr r3, _02118b6c ; =func_ov02_020f2284
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118b5c
-_02118b5c:
-	.byte 0x02
-	.global data_ov09_02118b5d
-data_ov09_02118b5d: ; 0x02118b5d
-	.byte 0x48, 0x03, 0x4b
-	.byte 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118b68: .word data_027e1050
 _02118b6c: .word func_ov02_020f2284
 
 	.global func_ov09_02118b70
 	thumb_func_start func_ov09_02118b70
 func_ov09_02118b70: ; 0x02118b70
+	ldr r0, _02118b7c ; =data_027e1050
+	ldr r3, _02118b80 ; =func_ov02_020f2378
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118b70
-_02118b70:
-	.byte 0x02
-	.global data_ov09_02118b71
-data_ov09_02118b71: ; 0x02118b71
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118b7c: .word data_027e1050
 _02118b80: .word func_ov02_020f2378
 
 	.global func_ov09_02118b84
 	thumb_func_start func_ov09_02118b84
 func_ov09_02118b84: ; 0x02118b84
+	ldr r0, _02118b90 ; =data_027e1050
+	ldr r3, _02118b94 ; =func_ov02_020f23cc
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118b84
-_02118b84:
-	.byte 0x02
-	.global data_ov09_02118b85
-data_ov09_02118b85: ; 0x02118b85
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118b90: .word data_027e1050
 _02118b94: .word func_ov02_020f23cc
 
 	.global func_ov09_02118b98
 	thumb_func_start func_ov09_02118b98
 func_ov09_02118b98: ; 0x02118b98
+	ldr r0, _02118ba4 ; =data_027e1050
+	ldr r3, _02118ba8 ; =func_ov02_020f5e14
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118b98
-_02118b98:
-	.byte 0x02
-	.global data_ov09_02118b99
-data_ov09_02118b99: ; 0x02118b99
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21
-	.byte 0x18, 0x47, 0xc0, 0x46
 _02118ba4: .word data_027e1050
 _02118ba8: .word func_ov02_020f5e14
 
 	.global func_ov09_02118bac
 	thumb_func_start func_ov09_02118bac
 func_ov09_02118bac: ; 0x02118bac
+	ldr r0, _02118bb8 ; =data_027e1050
+	ldr r3, _02118bbc ; =func_ov02_020f22a8
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118bac
-_02118bac:
-	.byte 0x02
-	.global data_ov09_02118bad
-data_ov09_02118bad: ; 0x02118bad
-	.byte 0x48, 0x03, 0x4b
-	.byte 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118bb8: .word data_027e1050
 _02118bbc: .word func_ov02_020f22a8
 
 	.global func_ov09_02118bc0
 	thumb_func_start func_ov09_02118bc0
 func_ov09_02118bc0: ; 0x02118bc0
+	ldr r0, _02118bcc ; =data_027e1050
+	ldr r3, _02118bd0 ; =func_ov02_020f2398
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118bc0
-_02118bc0:
-	.byte 0x02
-	.global data_ov09_02118bc1
-data_ov09_02118bc1: ; 0x02118bc1
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118bcc: .word data_027e1050
 _02118bd0: .word func_ov02_020f2398
 
 	.global func_ov09_02118bd4
 	thumb_func_start func_ov09_02118bd4
 func_ov09_02118bd4: ; 0x02118bd4
+	ldr r0, _02118be0 ; =data_027e1050
+	ldr r3, _02118be4 ; =func_ov02_020f23ec
+	ldr r0, [r0]
+	mov r1, #0
+	bx r3
+	nop
 	thumb_func_end func_ov09_02118bd4
-_02118bd4:
-	.byte 0x02
-	.global data_ov09_02118bd5
-data_ov09_02118bd5: ; 0x02118bd5
-	.byte 0x48, 0x03, 0x4b, 0x00, 0x68, 0x00, 0x21, 0x18, 0x47, 0xc0, 0x46
 _02118be0: .word data_027e1050
 _02118be4: .word func_ov02_020f23ec
 
 	.global func_ov09_02118be8
 	thumb_func_start func_ov09_02118be8
 func_ov09_02118be8: ; 0x02118be8
+	ldr r0, _02118bf4 ; =data_027e1050
+	ldr r1, [r0]
+	mov r0, #0x35
+	lsl r0, r0, #4
+	ldrb r0, [r1, r0]
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118be8
-_02118be8:
-	.byte 0x02
-	.global data_ov09_02118be9
-data_ov09_02118be9: ; 0x02118be9
-	.byte 0x48, 0x01, 0x68, 0x35, 0x20, 0x00, 0x01
-	.byte 0x08, 0x5c, 0x70, 0x47
 _02118bf4: .word data_027e1050
 
 	.global func_ov09_02118bf8
 	thumb_func_start func_ov09_02118bf8
 func_ov09_02118bf8: ; 0x02118bf8
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118bf8
-_02118bf8:
-	.byte 0x70
-	.global data_ov09_02118bf9
-data_ov09_02118bf9: ; 0x02118bf9
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02118bfc
 	thumb_func_start func_ov09_02118bfc
@@ -10579,7 +11402,7 @@ func_ov09_02118cd4: ; 0x02118cd4
 	ldr r0, [r6, #0x14]
 	add r0, r4, r0, lsl #2
 	cmp r4, r0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 _02118cf8:
 	ldr r0, [r4]
 	cmp r0, #0
@@ -10694,23 +11517,18 @@ _02118df4: .word 0x00007fff
 	.global func_ov09_02118df8
 	thumb_func_start func_ov09_02118df8
 func_ov09_02118df8: ; 0x02118df8
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_02118df8
-_02118df8:
-	.byte 0x70
-	.global data_ov09_02118df9
-data_ov09_02118df9: ; 0x02118df9
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_02118dfc
 	thumb_func_start func_ov09_02118dfc
 func_ov09_02118dfc: ; 0x02118dfc
+	ldr r1, _02118e04 ; =data_ov09_0211ed8c
+	str r1, [r0]
+	bx lr
+	nop
 	thumb_func_end func_ov09_02118dfc
-_02118dfc:
-	.byte 0x01
-	.global data_ov09_02118dfd
-data_ov09_02118dfd: ; 0x02118dfd
-	.byte 0x49, 0x01, 0x60
-	.byte 0x70, 0x47, 0xc0, 0x46
 _02118e04: .word data_ov09_0211ed8c
 
 	.global func_ov09_02118e08
@@ -10938,17 +11756,17 @@ func_ov09_02119048: ; 0x02119048
 	mov r5, r2
 	mov r4, r3
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, [r7]
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, _021190c0 ; =data_027e103c
 	ldr r0, [r0]
 	bl func_ov05_02103ea0
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	str r6, [r7, #0x1c]
 	str r5, [r7, #0x20]
 	str r4, [sp]
@@ -10984,7 +11802,7 @@ func_ov09_021190d4: ; 0x021190d4
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0]
 	cmp r0, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	ldr r3, [r0]
 	ldr r3, [r3, #0x1c]
 	blx r3
@@ -11229,7 +12047,7 @@ func_ov09_02119378: ; 0x02119378
 	mov r4, r3
 	addhs sp, sp, #0x10
 	movhs r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmhsia sp!, {r3, r4, r5, r6, r7, pc}
 	cmp r4, #0
 	beq _021193d8
 	cmp r0, #1
@@ -11242,7 +12060,7 @@ func_ov09_02119378: ; 0x02119378
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 _021193d8:
 	add r0, r7, #0x1000
 	ldrb r0, [r0, #0xf50]
@@ -11265,7 +12083,7 @@ _02119414:
 	add r2, r7, #0x10
 	mov r0, #0x14
 	mla r0, r1, r0, r2
-	ldmia r5!, {r1, r2}
+	ldmia r5, {r1, r2}
 	bl func_ov09_02119920
 	b _0211944c
 _02119430:
@@ -11302,7 +12120,7 @@ _0211944c:
 	cmp r5, r0
 	addlt sp, sp, #0x10
 	movlt r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmltia sp!, {r3, r4, r5, r6, r7, pc}
 _021194b4:
 	cmp r4, #0
 	beq _021194dc
@@ -11664,7 +12482,7 @@ _0211991c: .word 0x040002b4
 	.global func_ov09_02119920
 	arm_func_start func_ov09_02119920
 func_ov09_02119920: ; 0x02119920
-	stmia r0!, {r1, r2}
+	stmia r0, {r1, r2}
 	bx lr
 	arm_func_end func_ov09_02119920
 
@@ -11691,7 +12509,7 @@ func_ov09_02119944: ; 0x02119944
 	cmp r6, #0x190
 	addhs sp, sp, #0x24
 	movhs r0, #0
-	ldmia sp!, {r3, r4, r5, r6, pc}
+	ldmhsia sp!, {r3, r4, r5, r6, pc}
 	add ip, r5, #0x1000
 	ldr r6, [ip, #0xf4c]
 	add r1, sp, #0x18
@@ -11713,7 +12531,7 @@ func_ov09_02119944: ; 0x02119944
 	cmp r0, #0
 	addne sp, sp, #0x24
 	movne r0, #0
-	ldmia sp!, {r3, r4, r5, r6, pc}
+	ldmneia sp!, {r3, r4, r5, r6, pc}
 _021199c0:
 	add r0, r5, #0x1000
 	ldrb r0, [r0, #0xf50]
@@ -11775,7 +12593,7 @@ _02119a38:
 	cmp r6, r0
 	addlt sp, sp, #0x24
 	movlt r0, #0
-	ldmia sp!, {r3, r4, r5, r6, pc}
+	ldmltia sp!, {r3, r4, r5, r6, pc}
 _02119aa4:
 	ldrb r0, [sp, #0x38]
 	cmp r0, #0
@@ -11934,7 +12752,7 @@ func_ov09_02119cd4: ; 0x02119cd4
 	ldr r0, [sl, #4]
 	cmp r0, #1
 	addls sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmlsia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldr r3, _02119f98 ; =0x04000444
 	mov r1, #0
 	ldr r0, _02119f9c ; =0x21230000
@@ -12158,12 +12976,12 @@ func_ov09_02119fd0: ; 0x02119fd0
 	.global func_ov09_02119fe4
 	thumb_func_start func_ov09_02119fe4
 func_ov09_02119fe4: ; 0x02119fe4
+	push {r4, lr}
+	add r4, r0, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
 	thumb_func_end func_ov09_02119fe4
-_02119fe4:
-	.byte 0x10
-	.global data_ov09_02119fe5
-data_ov09_02119fe5: ; 0x02119fe5
-	.byte 0xb5, 0x04, 0x1c, 0x14, 0xf7, 0x10, 0xed, 0x20, 0x1c, 0x10, 0xbd
 
 	.global func_ov09_02119ff0
 	arm_func_start func_ov09_02119ff0
@@ -12479,7 +13297,7 @@ func_ov09_0211a384: ; 0x0211a384
 	.global func_ov09_0211a3ac
 	arm_func_start func_ov09_0211a3ac
 func_ov09_0211a3ac: ; 0x0211a3ac
-	stmia r0!, {r1, r2}
+	stmia r0, {r1, r2}
 	bx lr
 	arm_func_end func_ov09_0211a3ac
 
@@ -12657,13 +13475,16 @@ _0211a4d0: .word 0x00000898
 	.global func_ov09_0211a4d4
 	thumb_func_start func_ov09_0211a4d4
 func_ov09_0211a4d4: ; 0x0211a4d4
-	thumb_func_end func_ov09_0211a4d4
-_0211a4d4:
-	.byte 0x10
-	.global data_ov09_0211a4d5
-data_ov09_0211a4d5: ; 0x0211a4d5
-	.byte 0xb5, 0x04, 0x1c, 0x61, 0x68, 0x00, 0x29, 0x05, 0xd0, 0x0c, 0x48
-	.byte 0x40, 0x68, 0xfc, 0xf6, 0xdf, 0xff, 0x00, 0x20, 0x60, 0x60
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r1, [r4, #4]
+	cmp r1, #0
+	beq _0211a4ea
+	ldr r0, _0211a510 ; =data_027e0ce0
+	ldr r0, [r0, #4]
+	bl func_020174a4
+	mov r0, #0
+	str r0, [r4, #4]
 _0211a4ea:
 	ldr r1, [r4, #8]
 	cmp r1, #0
@@ -12685,6 +13506,7 @@ _0211a4fc:
 _0211a50e:
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211a4d4
 _0211a510: .word data_027e0ce0
 
 	.global func_ov09_0211a514
@@ -12821,7 +13643,7 @@ func_ov09_0211a69c: ; 0x0211a69c
 	mov r6, r2
 	mov r5, r3
 	moveq r0, #0
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	ldr sb, _0211a748 ; =data_ov03_0210041c
 	mov r4, #0
 	mvn sl, #0
@@ -12876,7 +13698,7 @@ func_ov09_0211a74c: ; 0x0211a74c
 	mov r8, r2
 	addeq sp, sp, #8
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	mvn r0, #0
 	mov r6, #0
 	str r0, [sp, #4]
@@ -13004,7 +13826,7 @@ func_ov09_0211a8ac: ; 0x0211a8ac
 	str r2, [r0, #0x8c4]
 	ldr r1, [r0, #0x8c0]
 	cmp r2, r1
-	mov r1, r1, lsr #0x1
+	movhs r1, r1, lsr #0x1
 	strhs r1, [r0, #0x8c4]
 	ldr r1, [r0, #0x8c0]
 	ldr r3, [r0, #0x8bc]
@@ -13183,10 +14005,10 @@ _0211aad4:
 	ldmia sp!, {r4, pc}
 _0211aae0:
 	cmp r1, #0x3b
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 _0211aae8:
 	cmp r0, #6
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	mov r0, r4
 	blx func_ov03_020f4884
 	ldmia sp!, {r4, pc}
@@ -13248,7 +14070,7 @@ func_ov09_0211abc8: ; 0x0211abc8
 	cmp r1, #0x2a
 	cmpne r1, #0x2b
 	addne sp, sp, #8
-	ldmia sp!, {r3, pc}
+	ldmneia sp!, {r3, pc}
 	mov ip, #0x10
 	str ip, [sp]
 	ldr r0, _0211ac04 ; =data_027e0c54
@@ -13311,19 +14133,60 @@ func_ov09_0211ac2c: ; 0x0211ac2c
 	.global func_ov09_0211ac58
 	thumb_func_start func_ov09_0211ac58
 func_ov09_0211ac58: ; 0x0211ac58
+	push {r4, lr}
+	add r4, r0, #0
+	mov r1, #0
+	ldr r0, _0211acc8 ; =data_027e0ffc
+	mvn r1, r1
+	str r1, [r0, #0x14]
+	ldr r0, _0211accc ; =data_027e0db0
+	mov r1, #1
+	bl func_ov00_0207b334
+	ldr r0, _0211acd0 ; =data_027e0c68
+	blx func_02036d6c
+	ldr r0, _0211acd4 ; =data_027e077c
+	mov r1, #1
+	blx func_0202e740
+	mov r2, #1
+	lsl r2, r2, #0x1a
+	ldr r0, [r2]
+	ldr r1, _0211acd8 ; =0xffffe0ff
+	add r3, r0, #0
+	and r3, r1
+	lsr r0, r2, #0xe
+	orr r0, r3
+	str r0, [r2]
+	ldr r2, _0211acdc ; =0x04001000
+	ldr r0, [r2]
+	and r1, r0
+	lsr r0, r2, #0xe
+	orr r0, r1
+	str r0, [r2]
+	ldr r2, _0211ace0 ; =0x04000304
+	ldr r0, _0211ace4 ; =0xffff7fff
+	ldrh r1, [r2]
+	and r0, r1
+	strh r0, [r2]
+	add r0, r4, #0
+	add r0, #0x3c
+	mov r1, #0xf
+	mov r2, #0
+	bl func_ov00_0207c0ac
+	ldr r2, [r4, #0x40]
+	mov r0, #0x74
+	ldrsh r1, [r2, r0]
+	add r0, r2, #0
+	add r0, #0x70
+	strh r1, [r0]
+	add r0, r2, #0
+	mov r1, #0
+	add r0, #0x84
+	strb r1, [r0]
+	add r2, #0x85
+	strb r1, [r2]
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_0211ac58
-_0211ac58:
-	.byte 0x10
-	.global data_ov09_0211ac59
-data_ov09_0211ac59: ; 0x0211ac59
-	.byte 0xb5, 0x04, 0x1c, 0x00, 0x21, 0x1a, 0x48
-	.byte 0xc9, 0x43, 0x41, 0x61, 0x19, 0x48, 0x01, 0x21, 0x60, 0xf7, 0x64, 0xfb, 0x18, 0x48, 0x1c, 0xf7
-	.byte 0x7e, 0xe8, 0x18, 0x48, 0x01, 0x21, 0x13, 0xf7, 0x64, 0xed, 0x01, 0x22, 0x92, 0x06, 0x10, 0x68
-	.byte 0x15, 0x49, 0x03, 0x1c, 0x0b, 0x40, 0x90, 0x0b, 0x18, 0x43, 0x10, 0x60, 0x13, 0x4a, 0x10, 0x68
-	.byte 0x01, 0x40, 0x90, 0x0b, 0x08, 0x43, 0x10, 0x60, 0x11, 0x4a, 0x12, 0x48, 0x11, 0x88, 0x08, 0x40
-	.byte 0x10, 0x80, 0x20, 0x1c, 0x3c, 0x30, 0x0f, 0x21, 0x00, 0x22, 0x61, 0xf7, 0xff, 0xf9, 0x22, 0x6c
-	.byte 0x74, 0x20, 0x11, 0x5e, 0x10, 0x1c, 0x70, 0x30, 0x01, 0x80, 0x10, 0x1c, 0x00, 0x21, 0x84, 0x30
-	.byte 0x01, 0x70, 0x85, 0x32, 0x11, 0x70, 0x10, 0xbd
 _0211acc8: .word data_027e0ffc
 _0211accc: .word data_027e0db0
 _0211acd0: .word data_027e0c68
@@ -13336,12 +14199,12 @@ _0211ace4: .word 0xffff7fff
 	.global func_ov09_0211ace8
 	thumb_func_start func_ov09_0211ace8
 func_ov09_0211ace8: ; 0x0211ace8
+	ldr r0, _0211acf0 ; =data_027e0d38
+	ldr r3, _0211acf4 ; =func_ov03_020f3894
+	ldr r0, [r0]
+	bx r3
+	.align 2, 0
 	thumb_func_end func_ov09_0211ace8
-_0211ace8:
-	.byte 0x01
-	.global data_ov09_0211ace9
-data_ov09_0211ace9: ; 0x0211ace9
-	.byte 0x48, 0x02, 0x4b, 0x00, 0x68, 0x18, 0x47
 _0211acf0: .word data_027e0d38
 _0211acf4: .word func_ov03_020f3894
 
@@ -13425,14 +14288,17 @@ _0211ad94: .word data_027e0d38
 	.global func_ov09_0211ad98
 	thumb_func_start func_ov09_0211ad98
 func_ov09_0211ad98: ; 0x0211ad98
-	thumb_func_end func_ov09_0211ad98
-_0211ad98:
-	.byte 0x38
-	.global data_ov09_0211ad99
-data_ov09_0211ad99: ; 0x0211ad99
-	.byte 0xb5, 0x04, 0x1c, 0x1b, 0x48, 0x20, 0x60
-	.byte 0x25, 0x6a, 0x00, 0x2d, 0x05, 0xd0, 0x28, 0x1c, 0xdf, 0xf7, 0x9c, 0xf9, 0x28, 0x1c, 0x13, 0xf7
-	.byte 0x2e, 0xee
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _0211ae0c ; =data_ov09_0211ee8c
+	str r0, [r4]
+	ldr r5, [r4, #0x20]
+	cmp r5, #0
+	beq _0211adb2
+	add r0, r5, #0
+	bl func_ov03_020fa0e4
+	add r0, r5, #0
+	blx func_0202ea0c
 _0211adb2:
 	ldr r0, [r4, #0x1c]
 	cmp r0, #0
@@ -13475,19 +14341,24 @@ _0211ae00:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_0211ad98
 _0211ae0c: .word data_ov09_0211ee8c
 _0211ae10: .word func_ov09_02112d68
 
 	.global func_ov09_0211ae14
 	thumb_func_start func_ov09_0211ae14
 func_ov09_0211ae14: ; 0x0211ae14
-	thumb_func_end func_ov09_0211ae14
-_0211ae14:
-	.byte 0x38
-	.global data_ov09_0211ae15
-data_ov09_0211ae15: ; 0x0211ae15
-	.byte 0xb5, 0x04, 0x1c, 0x1c, 0x48, 0x20, 0x60, 0x25, 0x6a, 0x00, 0x2d
-	.byte 0x05, 0xd0, 0x28, 0x1c, 0xdf, 0xf7, 0x5e, 0xf9, 0x28, 0x1c, 0x13, 0xf7, 0xf0, 0xed
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _0211ae8c ; =data_ov09_0211ee8c
+	str r0, [r4]
+	ldr r5, [r4, #0x20]
+	cmp r5, #0
+	beq _0211ae2e
+	add r0, r5, #0
+	bl func_ov03_020fa0e4
+	add r0, r5, #0
+	blx func_0202ea0c
 _0211ae2e:
 	ldr r0, [r4, #0x1c]
 	cmp r0, #0
@@ -13532,6 +14403,7 @@ _0211ae7c:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211ae14
 _0211ae8c: .word data_ov09_0211ee8c
 _0211ae90: .word func_ov09_02112d68
 
@@ -13598,35 +14470,38 @@ _0211af0c: .word func_ov09_02112d68
 	.global func_ov09_0211af10
 	thumb_func_start func_ov09_0211af10
 func_ov09_0211af10: ; 0x0211af10
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov00_020d1054
+	ldr r0, [r4, #0x18]
+	blx func_ov00_020cef40
+	ldr r0, [r4, #0x1c]
+	bl func_ov03_020f1f38
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_0211af10
-_0211af10:
-	.byte 0x10
-	.global data_ov09_0211af11
-data_ov09_0211af11: ; 0x0211af11
-	.byte 0xb5, 0x04, 0x1c, 0xb6, 0xf7, 0x9e, 0xf8, 0xa0, 0x69, 0xb4, 0xf7, 0x12, 0xe8, 0xe0, 0x69
-	.byte 0xd7, 0xf7, 0x0a, 0xf8, 0x10, 0xbd, 0x00, 0x00
 
 	.global func_ov09_0211af28
 	thumb_func_start func_ov09_0211af28
 func_ov09_0211af28: ; 0x0211af28
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov04_0210f4e8
+	ldr r0, [r4, #0x14]
+	bl func_ov03_020f63d4
+	pop {r4, pc}
 	thumb_func_end func_ov09_0211af28
-_0211af28:
-	.byte 0x10
-	.global data_ov09_0211af29
-data_ov09_0211af29: ; 0x0211af29
-	.byte 0xb5, 0x04, 0x1c, 0xf4, 0xf7, 0xdc, 0xfa
-	.byte 0x60, 0x69, 0xdb, 0xf7, 0x4f, 0xfa, 0x10, 0xbd
 
 	.global func_ov09_0211af38
 	thumb_func_start func_ov09_0211af38
 func_ov09_0211af38: ; 0x0211af38
+	push {r4, lr}
+	add r4, r0, #0
+	bl func_ov04_0210f4f0
+	ldr r0, [r4, #0x14]
+	bl func_ov03_020f63d4
+	pop {r4, pc}
 	thumb_func_end func_ov09_0211af38
-_0211af38:
-	.byte 0x10
-	.global data_ov09_0211af39
-data_ov09_0211af39: ; 0x0211af39
-	.byte 0xb5, 0x04, 0x1c, 0xf4, 0xf7, 0xd8, 0xfa
-	.byte 0x60, 0x69, 0xdb, 0xf7, 0x47, 0xfa, 0x10, 0xbd
 
 	.global func_ov09_0211af48
 	arm_func_start func_ov09_0211af48
@@ -13735,7 +14610,7 @@ _0211b094:
 	ldr r0, [r0]
 	cmp r0, #1
 	cmpne r0, #0x37
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldr r0, [r4, #0x1c]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x10]
@@ -13752,7 +14627,7 @@ func_ov09_0211b0c0: ; 0x0211b0c0
 	ldr r1, [r0, #0x1c]
 	ldrsb r1, [r1, #0x14]
 	cmp r1, #1
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	bl func_ov09_0211b708
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov09_0211b0c0
@@ -13765,7 +14640,7 @@ func_ov09_0211b0dc: ; 0x0211b0dc
 	bl func_ov00_020d1064
 	cmp r0, #1
 	moveq r0, #1
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, _0211b364 ; =data_027e05f8
 	mov r4, #0
 	ldrh r0, [r0, #2]
@@ -13849,7 +14724,7 @@ _0211b210:
 	ldr r0, [r6, #0xc]
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, [r6, #4]
 	mov r1, #0x80
 	bl func_ov00_020cf270
@@ -13893,24 +14768,24 @@ _0211b294:
 	bl func_ov00_020cf270
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	ldr r0, [r6, #4]
 	mov r1, #0x800
 	bl func_ov00_020cf270
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmeqia sp!, {r4, r5, r6, pc}
 	bl func_ov00_020cf948
 	cmp r0, #0
 	movne r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmneia sp!, {r4, r5, r6, pc}
 	ldr r0, _0211b384 ; =data_027e103c
 	ldr r1, _0211b388 ; =0x0000018f
 	ldr r0, [r0]
 	bl func_ov00_020cf8fc
 	cmp r0, #0
 	movne r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmneia sp!, {r4, r5, r6, pc}
 	ldr r0, [r6, #0x1c]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x14]
@@ -14054,14 +14929,14 @@ func_ov09_0211b48c: ; 0x0211b48c
 	cmpne r1, #2
 	cmpne r0, #2
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, [r7, #0x14]
 	mov r1, r6
 	mov r2, r5
 	bl func_ov03_020f69fc
 	cmp r0, #0
 	moveq r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, [r7, #0x1c]
 	mov r1, r6
 	mov r2, r5
@@ -14108,7 +14983,7 @@ func_ov09_0211b554: ; 0x0211b554
 	ldr r0, [r0, #4]
 	ldrb r0, [r0, #0x95]
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldr r0, _0211b5a8 ; =data_027e077c
 	ldr r0, [r0]
 	cmp r0, #0x38
@@ -14116,7 +14991,7 @@ func_ov09_0211b554: ; 0x0211b554
 	ldr r0, [r4, #0xc]
 	bl func_ov03_020f7d30
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 _0211b598:
 	ldr r0, [r4, #0x10]
 	bl func_ov00_02079b34
@@ -14202,15 +15077,15 @@ func_ov09_0211b678: ; 0x0211b678
 	mvn r0, #0
 	ldr r1, [r1, #4]
 	cmp r1, r0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, _0211b6cc ; =data_027e0c54
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0211b6bc
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldrh r0, [r5]
 	tst r0, #2
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 _0211b6bc:
 	ldr r0, [r4, #0x1c]
 	bl func_ov03_020f2324
@@ -14261,7 +15136,7 @@ func_ov09_0211b708: ; 0x0211b708
 	ldr r1, [r1, #0x20]
 	blx r1
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	mov r0, r4
 	ldr r2, [r0]
 	mov r1, #4
@@ -14354,22 +15229,19 @@ _0211b7dc: .word data_ov09_0211eefc
 	.global func_ov09_0211b7e0
 	thumb_func_start func_ov09_0211b7e0
 func_ov09_0211b7e0: ; 0x0211b7e0
+	bx lr
+	.align 2, 0
 	thumb_func_end func_ov09_0211b7e0
-_0211b7e0:
-	.byte 0x70
-	.global data_ov09_0211b7e1
-data_ov09_0211b7e1: ; 0x0211b7e1
-	.byte 0x47, 0x00, 0x00
 
 	.global func_ov09_0211b7e4
 	thumb_func_start func_ov09_0211b7e4
 func_ov09_0211b7e4: ; 0x0211b7e4
+	push {r4, lr}
+	add r4, r0, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
 	thumb_func_end func_ov09_0211b7e4
-_0211b7e4:
-	.byte 0x10
-	.global data_ov09_0211b7e5
-data_ov09_0211b7e5: ; 0x0211b7e5
-	.byte 0xb5, 0x04, 0x1c, 0x13, 0xf7, 0x10, 0xe9, 0x20, 0x1c, 0x10, 0xbd
 
 	.global func_ov09_0211b7f0
 	thumb_func_start func_ov09_0211b7f0
@@ -14478,10 +15350,10 @@ func_ov09_0211b914: ; 0x0211b914
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	cmp r1, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldrsb r1, [r4, #0x14]
 	cmp r1, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	ldr r1, [r0]
 	ldr r1, [r1, #0x28]
 	blx r1
@@ -14495,13 +15367,13 @@ _0211b950:
 	ldr r1, [r1, #0x24]
 	blx r1
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0x20]
 	blx r1
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	mov r0, r4
 	ldr r2, [r0]
 	mov r1, #4
@@ -14610,7 +15482,7 @@ func_ov09_0211bad0: ; 0x0211bad0
 	stmdb sp!, {r3, lr}
 	ldrsb r1, [r0, #0x14]
 	cmp r1, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #8]
@@ -14711,11 +15583,11 @@ func_ov09_0211bbdc: ; 0x0211bbdc
 _0211bc00:
 	ldrb r0, [r4, #0x15]
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	ldr r0, _0211bc30 ; =data_027e0c68
 	bl func_02036808
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0x18]
@@ -15127,7 +15999,7 @@ func_ov09_0211bf54: ; 0x0211bf54
 	cmp r1, #0x2e
 	beq _0211bf88
 	cmp r1, #0x30
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 _0211bf74:
 	mov r0, r4
 	bl func_ov09_0211366c
@@ -15543,7 +16415,7 @@ _0211c324:
 _0211c344:
 	cmp r5, #2
 	cmpne r5, #0x28
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r4
 	blx func_ov09_0211c364
 	ldmia sp!, {r3, r4, r5, pc}
@@ -15723,17 +16595,19 @@ func_ov09_0211c468: ; 0x0211c468
 	.global func_ov09_0211c46c
 	thumb_func_start func_ov09_0211c46c
 func_ov09_0211c46c: ; 0x0211c46c
-	thumb_func_end func_ov09_0211c46c
-_0211c46c:
-	.byte 0x08
-	.global data_ov09_0211c46d
-data_ov09_0211c46d: ; 0x0211c46d
-	.byte 0xb5, 0x05, 0x49
-	.byte 0x1c, 0x20, 0x49, 0x68, 0x04, 0x22, 0x12, 0xf7, 0xb2, 0xea, 0x00, 0x28, 0x01, 0xd0, 0x00, 0xf0
-	.byte 0x03, 0xf8
+	push {r3, lr}
+	ldr r1, _0211c484 ; =data_027e0ce0
+	mov r0, #0x1c
+	ldr r1, [r1, #4]
+	mov r2, #4
+	blx func_0202e9dc
+	cmp r0, #0
+	beq _0211c482
+	bl func_ov09_0211c488
 _0211c482:
 	pop {r3, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211c46c
 _0211c484: .word data_027e0ce0
 
 	.global func_ov09_0211c488
@@ -15770,27 +16644,41 @@ _0211c4c4: .word data_ov09_0211f5c4
 	.global func_ov09_0211c4c8
 	thumb_func_start func_ov09_0211c4c8
 func_ov09_0211c4c8: ; 0x0211c4c8
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _0211c4e4 ; =data_ov09_0211f5c4
+	mov r1, #0
+	str r1, [r0]
+	add r0, r4, #0
+	add r0, #0x10
+	bl func_02030294
+	add r0, r4, #0
+	bl func_ov03_020f44ec
+	add r0, r4, #0
+	pop {r4, pc}
+	.align 2, 0
 	thumb_func_end func_ov09_0211c4c8
-_0211c4c8:
-	.byte 0x10
-	.global data_ov09_0211c4c9
-data_ov09_0211c4c9: ; 0x0211c4c9
-	.byte 0xb5, 0x04, 0x1c, 0x05, 0x48, 0x00, 0x21
-	.byte 0x01, 0x60, 0x20, 0x1c, 0x10, 0x30, 0x13, 0xf7, 0xdd, 0xfe, 0x20, 0x1c, 0xd8, 0xf7, 0x06, 0xf8
-	.byte 0x20, 0x1c, 0x10, 0xbd
 _0211c4e4: .word data_ov09_0211f5c4
 
 	.global func_ov09_0211c4e8
 	thumb_func_start func_ov09_0211c4e8
 func_ov09_0211c4e8: ; 0x0211c4e8
+	push {r4, lr}
+	add r4, r0, #0
+	ldr r0, _0211c50c ; =data_ov09_0211f5c4
+	mov r1, #0
+	str r1, [r0]
+	add r0, r4, #0
+	add r0, #0x10
+	bl func_02030294
+	add r0, r4, #0
+	bl func_ov03_020f44ec
+	add r0, r4, #0
+	blx func_0202ea0c
+	add r0, r4, #0
+	pop {r4, pc}
+	nop
 	thumb_func_end func_ov09_0211c4e8
-_0211c4e8:
-	.byte 0x10
-	.global data_ov09_0211c4e9
-data_ov09_0211c4e9: ; 0x0211c4e9
-	.byte 0xb5, 0x04, 0x1c, 0x07, 0x48, 0x00, 0x21
-	.byte 0x01, 0x60, 0x20, 0x1c, 0x10, 0x30, 0x13, 0xf7, 0xcd, 0xfe, 0x20, 0x1c, 0xd7, 0xf7, 0xf6, 0xff
-	.byte 0x20, 0x1c, 0x12, 0xf7, 0x84, 0xea, 0x20, 0x1c, 0x10, 0xbd, 0xc0, 0x46
 _0211c50c: .word data_ov09_0211f5c4
 
 	.global func_ov09_0211c510
@@ -15907,13 +16795,16 @@ _0211c5c0: .word data_ov09_0211e19c
 	.global func_ov09_0211c5c4
 	thumb_func_start func_ov09_0211c5c4
 func_ov09_0211c5c4: ; 0x0211c5c4
-	thumb_func_end func_ov09_0211c5c4
-_0211c5c4:
-	.byte 0x09
-	.global data_ov09_0211c5c5
-data_ov09_0211c5c5: ; 0x0211c5c5
-	.byte 0x49, 0x09, 0x6c, 0xca, 0x00, 0x09, 0x49, 0x89, 0x18, 0x40, 0x5c
-	.byte 0x48, 0x38, 0x01, 0xd4, 0x03, 0x28, 0x02, 0xdd
+	ldr r1, _0211c5ec ; =data_ov00_020ec798
+	ldr r1, [r1, #0x40]
+	lsl r2, r1, #3
+	ldr r1, _0211c5f0 ; =data_ov09_0211e1ec
+	add r1, r1, r2
+	ldrb r0, [r0, r1]
+	sub r0, #0x48
+	bmi _0211c5d8
+	cmp r0, #3
+	ble _0211c5de
 _0211c5d8:
 	ldr r1, _0211c5f4 ; =data_ov09_0211f5cc
 	mov r2, #1
@@ -15927,6 +16818,7 @@ _0211c5de:
 _0211c5e8:
 	bx lr
 	nop
+	thumb_func_end func_ov09_0211c5c4
 _0211c5ec: .word data_ov00_020ec798
 _0211c5f0: .word data_ov09_0211e1ec
 _0211c5f4: .word data_ov09_0211f5cc
@@ -15934,24 +16826,27 @@ _0211c5f4: .word data_ov09_0211f5cc
 	.global func_ov09_0211c5f8
 	thumb_func_start func_ov09_0211c5f8
 func_ov09_0211c5f8: ; 0x0211c5f8
+	ldr r3, _0211c600 ; =func_ov09_0211c5c4
+	sub r0, r0, #1
+	bx r3
+	nop
 	thumb_func_end func_ov09_0211c5f8
-_0211c5f8:
-	.byte 0x01
-	.global data_ov09_0211c5f9
-data_ov09_0211c5f9: ; 0x0211c5f9
-	.byte 0x4b, 0x40, 0x1e, 0x18, 0x47, 0xc0, 0x46
 _0211c600: .word func_ov09_0211c5c4
 
 	.global func_ov09_0211c604
 	thumb_func_start func_ov09_0211c604
 func_ov09_0211c604: ; 0x0211c604
-	thumb_func_end func_ov09_0211c604
-_0211c604:
-	.byte 0x10
-	.global data_ov09_0211c605
-data_ov09_0211c605: ; 0x0211c605
-	.byte 0xb5, 0x0c, 0x1c, 0xff, 0xf7, 0xdc, 0xff, 0x03, 0x28, 0x0f, 0xd8
-	.byte 0x00, 0x18, 0x78, 0x44, 0xc0, 0x88, 0x00, 0x04, 0x00, 0x14, 0x87, 0x44
+	push {r4, lr}
+	add r4, r1, #0
+	bl func_ov09_0211c5c4
+	cmp r0, #3
+	bhi _0211c630
+	add r0, r0, r0
+	add r0, pc
+	ldrh r0, [r0, #6]
+	lsl r0, r0, #0x10
+	asr r0, r0, #0x10
+	add pc, r0
 _0211c61c: ; jump table
 	.short _0211c630 - _0211c61c - 2 ; case 0
 	.short _0211c624 - _0211c61c - 2 ; case 1
@@ -15979,6 +16874,7 @@ _0211c632:
 	asr r0, r0, #0xc
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211c604
 _0211c644: .word 0x032100de
 _0211c648: .word 0x03210368
 _0211c64c: .word 0x03210624
@@ -15988,13 +16884,12 @@ _0211c654: .word 0x03210048
 	.global func_ov09_0211c658
 	thumb_func_start func_ov09_0211c658
 func_ov09_0211c658: ; 0x0211c658
-	thumb_func_end func_ov09_0211c658
-_0211c658:
-	.byte 0x10
-	.global data_ov09_0211c659
-data_ov09_0211c659: ; 0x0211c659
-	.byte 0xb5, 0x0c, 0x1c, 0x01, 0x28, 0x01, 0xda
-	.byte 0x00, 0x20, 0x10, 0xbd
+	push {r4, lr}
+	add r4, r1, #0
+	cmp r0, #1
+	bge _0211c664
+	mov r0, #0
+	pop {r4, pc}
 _0211c664:
 	bl func_ov09_0211c5f8
 	cmp r0, #3
@@ -16032,6 +16927,7 @@ _0211c68e:
 	asr r0, r0, #0xc
 	pop {r4, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211c658
 _0211c6a0: .word 0x032100de
 _0211c6a4: .word 0x03210368
 _0211c6a8: .word 0x03210624
@@ -16791,13 +17687,17 @@ _0211cbcc: .word data_027e0ce0
 	.global func_ov09_0211cbd0
 	thumb_func_start func_ov09_0211cbd0
 func_ov09_0211cbd0: ; 0x0211cbd0
-	thumb_func_end func_ov09_0211cbd0
-_0211cbd0:
-	.byte 0x38
-	.global data_ov09_0211cbd1
-data_ov09_0211cbd1: ; 0x0211cbd1
-	.byte 0xb5, 0x04, 0x1c, 0x0a, 0x48, 0x20, 0x60, 0x25, 0x69, 0x00, 0x2d, 0x05, 0xd0, 0x28, 0x1c
-	.byte 0xd3, 0xf7, 0xba, 0xfa, 0x28, 0x1c, 0x11, 0xf7, 0x12, 0xef
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _0211cc00 ; =data_ov09_0211f458
+	str r0, [r4]
+	ldr r5, [r4, #0x10]
+	cmp r5, #0
+	beq _0211cbea
+	add r0, r5, #0
+	bl func_ov03_020f0158
+	add r0, r5, #0
+	blx func_0202ea0c
 _0211cbea:
 	ldr r0, [r4, #0xc]
 	cmp r0, #0
@@ -16811,18 +17711,23 @@ _0211cbf6:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211cbd0
 _0211cc00: .word data_ov09_0211f458
 
 	.global func_ov09_0211cc04
 	thumb_func_start func_ov09_0211cc04
 func_ov09_0211cc04: ; 0x0211cc04
-	thumb_func_end func_ov09_0211cc04
-_0211cc04:
-	.byte 0x38
-	.global data_ov09_0211cc05
-data_ov09_0211cc05: ; 0x0211cc05
-	.byte 0xb5, 0x04, 0x1c, 0x0c, 0x48, 0x20, 0x60, 0x25, 0x69, 0x00, 0x2d
-	.byte 0x05, 0xd0, 0x28, 0x1c, 0xd3, 0xf7, 0xa0, 0xfa, 0x28, 0x1c, 0x11, 0xf7, 0xf8, 0xee
+	push {r3, r4, r5, lr}
+	add r4, r0, #0
+	ldr r0, _0211cc3c ; =data_ov09_0211f458
+	str r0, [r4]
+	ldr r5, [r4, #0x10]
+	cmp r5, #0
+	beq _0211cc1e
+	add r0, r5, #0
+	bl func_ov03_020f0158
+	add r0, r5, #0
+	blx func_0202ea0c
 _0211cc1e:
 	ldr r0, [r4, #0xc]
 	cmp r0, #0
@@ -16838,6 +17743,7 @@ _0211cc2a:
 	add r0, r4, #0
 	pop {r3, r4, r5, pc}
 	nop
+	thumb_func_end func_ov09_0211cc04
 _0211cc3c: .word data_ov09_0211f458
 
 	.global func_ov09_0211cc40
@@ -16873,16 +17779,18 @@ _0211cc70: .word data_ov09_0211f458
 	.global func_ov09_0211cc74
 	thumb_func_start func_ov09_0211cc74
 func_ov09_0211cc74: ; 0x0211cc74
-	thumb_func_end func_ov09_0211cc74
-_0211cc74:
-	.byte 0x38
-	.global data_ov09_0211cc75
-data_ov09_0211cc75: ; 0x0211cc75
-	.byte 0xb5, 0x05, 0x1c, 0x0c, 0x1c, 0xb4, 0xf7, 0x09, 0xfa, 0x00, 0x2c
-	.byte 0x02, 0xd1, 0x28, 0x69, 0x5c, 0xf7, 0x66, 0xff
+	push {r3, r4, r5, lr}
+	add r5, r0, #0
+	add r4, r1, #0
+	bl func_ov00_020d1090
+	cmp r4, #0
+	bne _0211cc88
+	ldr r0, [r5, #0x10]
+	bl func_ov00_02079b54
 _0211cc88:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
+	thumb_func_end func_ov09_0211cc74
 
 	.global func_ov09_0211cc8c
 	thumb_func_start func_ov09_0211cc8c
@@ -16897,12 +17805,11 @@ _0211cc94: .word func_ov00_020798e8
 	.global func_ov09_0211cc98
 	thumb_func_start func_ov09_0211cc98
 func_ov09_0211cc98: ; 0x0211cc98
+	ldr r3, _0211cca0 ; =func_ov03_020f041c
+	ldr r0, [r0, #0x10]
+	bx r3
+	nop
 	thumb_func_end func_ov09_0211cc98
-_0211cc98:
-	.byte 0x01
-	.global data_ov09_0211cc99
-data_ov09_0211cc99: ; 0x0211cc99
-	.byte 0x4b, 0x00, 0x69, 0x18, 0x47, 0xc0, 0x46
 _0211cca0: .word func_ov03_020f041c
 
 	.global func_ov09_0211cca4
@@ -17799,13 +18706,13 @@ _0211d69c:
 	ldr r1, [r3, #4]
 	add r4, r6, #0x38
 	str r1, [r6, #0x34]
-	ldmia r0!, {r0, r1, r2}
-	stmia r4!, {r0, r1, r2}
+	ldmia r0, {r0, r1, r2}
+	stmia r4, {r0, r1, r2}
 	add r0, r3, #0x14
 	sub r4, ip, #1
 	add r5, r6, #0x44
-	ldmia r0!, {r0, r1, r2}
-	stmia r5!, {r0, r1, r2}
+	ldmia r0, {r0, r1, r2}
+	stmia r5, {r0, r1, r2}
 	ldr r1, [r3, #0x20]
 	mov r0, #0x1000
 	str r1, [r6, #0x50]
@@ -17828,7 +18735,7 @@ _0211d69c:
 	ldr r0, _0211d790 ; =data_027e0e58
 	mov r1, r6
 	ldr r0, [r0]
-	ldmia r4!, {r2, r3}
+	ldmia r4, {r2, r3}
 	bl func_ov00_0207c358
 	ldr r0, [r4, #0x18]
 	ldr r1, _0211d78c ; =data_027e0d0c
@@ -22192,18 +23099,7 @@ data_ov09_0211f4e4: ; 0x0211f4e4
 	.byte 0x00
 	.global data_ov09_0211f4e8
 data_ov09_0211f4e8: ; 0x0211f4e8
-	.ascii "M"
-	.global data_ov09_0211f4e9
-data_ov09_0211f4e9: ; 0x0211f4e9
-	.byte 0x32
-	.global data_ov09_0211f4ea
-data_ov09_0211f4ea: ; 0x0211f4ea
-	.byte 0x44
-	.global data_ov09_0211f4eb
-data_ov09_0211f4eb: ; 0x0211f4eb
-	.byte 0x3a
-	.global data_ov09_0211f4ec
-data_ov09_0211f4ec: ; 0x0211f4ec
+	.ascii "M2D:"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov09_0211f4f0
 data_ov09_0211f4f0: ; 0x0211f4f0
@@ -22211,18 +23107,7 @@ data_ov09_0211f4f0: ; 0x0211f4f0
 	.byte 0x00, 0x00, 0x00
 	.global data_ov09_0211f4f8
 data_ov09_0211f4f8: ; 0x0211f4f8
-	.ascii "M"
-	.global data_ov09_0211f4f9
-data_ov09_0211f4f9: ; 0x0211f4f9
-	.byte 0x32
-	.global data_ov09_0211f4fa
-data_ov09_0211f4fa: ; 0x0211f4fa
-	.byte 0x44
-	.global data_ov09_0211f4fb
-data_ov09_0211f4fb: ; 0x0211f4fb
-	.byte 0x3a
-	.global data_ov09_0211f4fc
-data_ov09_0211f4fc: ; 0x0211f4fc
+	.ascii "M2D:"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov09_0211f500
 data_ov09_0211f500: ; 0x0211f500
@@ -22230,18 +23115,7 @@ data_ov09_0211f500: ; 0x0211f500
 	.byte 0x00, 0x00, 0x00
 	.global data_ov09_0211f508
 data_ov09_0211f508: ; 0x0211f508
-	.ascii "M"
-	.global data_ov09_0211f509
-data_ov09_0211f509: ; 0x0211f509
-	.byte 0x32
-	.global data_ov09_0211f50a
-data_ov09_0211f50a: ; 0x0211f50a
-	.byte 0x44
-	.global data_ov09_0211f50b
-data_ov09_0211f50b: ; 0x0211f50b
-	.byte 0x3a
-	.global data_ov09_0211f50c
-data_ov09_0211f50c: ; 0x0211f50c
+	.ascii "M2D:"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov09_0211f510
 data_ov09_0211f510: ; 0x0211f510

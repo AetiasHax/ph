@@ -104,7 +104,7 @@ func_ov42_0218963c: ; 0x0218963c
 	mov r2, #4
 	bl func_0202e9dc
 	cmp r0, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	bl func_ov42_02189668
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -363,8 +363,8 @@ _02189918:
 	bl func_ov00_020c3348
 	ldr r0, _02189b04 ; =data_ov42_0218c6f4
 	add r4, sp, #4
-	ldmia r0!, {r0, r1, r2}
-	stmia r4!, {r0, r1, r2}
+	ldmia r0, {r0, r1, r2}
+	stmia r4, {r0, r1, r2}
 	ldr sl, _02189b08 ; =0x4d544748
 	ldr r8, _02189b0c ; =data_027e0fe8
 	mov r5, #0
@@ -604,7 +604,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	cmp r1, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldrb r0, [r4, #0x64]
 	cmp r0, #0
 	bne _02189d64
@@ -612,7 +612,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	ldr r0, [r0]
 	bl func_ov00_020bc500
 	cmp r0, #6
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	bl func_ov42_0218a794
 	bl func_ov42_0218aa8c
 	mov r3, #1
@@ -634,7 +634,7 @@ _02189d64:
 	bgt _02189da4
 	ldrb r0, [r4, #0x65]
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldr r0, _02189e58 ; =data_ov00_020eec9c
 	mov r1, #0xbf
 	bl func_ov00_020d77e4
@@ -764,12 +764,12 @@ func_ov42_02189efc: ; 0x02189efc
 	ldr r0, [sl, #0x60]
 	cmp r0, #0
 	addle sp, sp, #0x10
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmleia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	sub r0, r0, #1
 	cmp r0, #0
 	addgt sp, sp, #0x10
 	str r0, [sl, #0x60]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmgtia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	mov r1, #0
 	add r0, sp, #0
 _02189f34:
@@ -877,7 +877,7 @@ func_ov42_0218a060: ; 0x0218a060
 	movne r0, #0
 	tst r1, r0
 	addeq sp, sp, #0x3c
-	ldmia sp!, {r3, r4, r5, r6, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, pc}
 	add r0, sp, #0x1c
 	bl func_01ffbe34
 	mov r2, #1
@@ -1136,7 +1136,7 @@ _0218a424:
 	bne _0218a440
 	subs r3, r3, #1
 	moveq r0, r2
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 _0218a440:
 	add r2, r2, #1
 	cmp r2, #5
@@ -1320,7 +1320,7 @@ func_ov42_0218a63c: ; 0x0218a63c
 	mov r7, r2
 	mov r6, r3
 	strgt r0, [sb, #0x60]
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmgtia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	cmp r7, #0
 	mov r4, #0
 	ble _0218a6c8
@@ -1353,7 +1353,7 @@ _0218a6b8:
 _0218a6c8:
 	mov r5, #0
 	cmp r8, #0
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmleia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	ldr r4, _0218a730 ; =data_027e0fe4
 	add r7, sb, #0x10
 _0218a6dc:
@@ -1418,7 +1418,7 @@ func_ov42_0218a760: ; 0x0218a760
 	ldr r1, [r1]
 	bl func_0202e9dc
 	cmp r0, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	bl func_ov42_0218a898
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -1456,7 +1456,7 @@ func_ov42_0218a7a4: ; 0x0218a7a4
 	ldreqb r0, [r4, #0x25]
 	cmpeq r0, #2
 	addne sp, sp, #0x48
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmneia sp!, {r4, r5, r6, pc}
 	ldr r4, [r6, #0xb4]
 	add r0, r5, #0x400
 	ldr r1, [r4]
@@ -1714,7 +1714,7 @@ func_ov42_0218aae8: ; 0x0218aae8
 	ldr r0, [r4, #0x10]
 	cmp r0, #7
 	movne r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	add r1, r5, #0x400
 	mov r2, #0x14
@@ -1999,7 +1999,7 @@ func_ov42_0218ae7c: ; 0x0218ae7c
 	blx r1
 	cmp r0, #0
 	addeq sp, sp, #0xc
-	ldmia sp!, {r3, r4, pc}
+	ldmeqia sp!, {r3, r4, pc}
 	ldrb r0, [r4, #0x478]
 	cmp r0, #0
 	mov r0, r4
@@ -2124,7 +2124,7 @@ func_ov42_0218aff8: ; 0x0218aff8
 	blx r1
 	cmp r0, #0
 	addeq sp, sp, #0xc
-	ldmia sp!, {r3, r4, pc}
+	ldmeqia sp!, {r3, r4, pc}
 	ldr r0, _0218b080 ; =data_027e103c
 	mov r1, #0
 	ldr r0, [r0]
@@ -2215,7 +2215,7 @@ func_ov42_0218b130: ; 0x0218b130
 	ldrsb r2, [r0, #0xa0]
 	cmp r2, r1
 	strneb r1, [r4, #0x4a0]
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	ldrsb r0, [r0, #0xa0]
 	cmp r0, #6
 	addls pc, pc, r0, lsl #2
@@ -2329,7 +2329,7 @@ func_ov42_0218b2a0: ; 0x0218b2a0
 	ldreq r0, _0218b434 ; =data_027e0618
 	ldreqb r0, [r0, #0x101]
 	cmpeq r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #0x488]
 	mov r1, #0
 	sub r0, r0, #1
@@ -2427,7 +2427,7 @@ _0218b40c:
 	add r0, r5, #0x400
 	ldrsb r0, [r0, #0xa0]
 	cmp r0, #0
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _0218b438 ; =data_027e0de4
 	ldr r2, _0218b43c ; =func_ov42_0218b440
 	mov r3, r4
@@ -2716,13 +2716,13 @@ _0218b81c:
 	ldreqb r0, [r5, #0xa4]
 	cmp r0, #0
 	addeq sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmeqia sp!, {r3, r4, r5, pc}
 	add r0, r5, #0x1d8
 	bl func_ov00_020c5f1c
 	ldr r3, [r5, #0x45c]
 	cmp r3, #0
 	addle sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, pc}
+	ldmleia sp!, {r3, r4, r5, pc}
 	str r3, [sp]
 	mov r1, #0
 	str r1, [sp, #4]
@@ -2765,7 +2765,7 @@ func_ov42_0218b888: ; 0x0218b888
 	bl func_ov14_02144d70
 	ldr r0, [r4, #0x474]
 	cmp r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
+	ldmneia sp!, {r4, r5, r6, pc}
 	mov r0, r4
 	bl func_ov42_0218ae58
 	ldmia sp!, {r4, r5, r6, pc}
@@ -2779,7 +2779,7 @@ func_ov42_0218b8ec: ; 0x0218b8ec
 	mov r4, r1
 	cmp r0, #3
 	mvnne r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	bl func_ov42_0218962c
 	mov r1, r4
 	bl func_ov42_0218959c
@@ -2797,7 +2797,7 @@ func_ov42_0218b914: ; 0x0218b914
 	ldr r1, [r1]
 	bl func_0202e9dc
 	cmp r0, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	bl func_ov42_0218b9b8
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -2815,7 +2815,7 @@ func_ov42_0218b944: ; 0x0218b944
 	ldr r1, [r1]
 	bl func_0202e9dc
 	cmp r0, #0
-	ldmia sp!, {r3, pc}
+	ldmeqia sp!, {r3, pc}
 	bl func_ov42_0218b9d8
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -3338,7 +3338,7 @@ func_ov42_0218bf84: ; 0x0218bf84
 	bl func_ov42_0218962c
 	ldr r1, [r4, #0x14]
 	add r1, r1, #8
-	ldmia r1!, {r1, r2}
+	ldmia r1, {r1, r2}
 	bl func_ov42_0218a5a0
 	mov r0, r5
 	ldr r1, [r0]
@@ -3363,7 +3363,7 @@ func_ov42_0218bffc: ; 0x0218bffc
 	mov r4, r0
 	bl func_ov42_0218962c
 	add r1, r4, #0x48
-	ldmia r1!, {r1, r2, r3}
+	ldmia r1, {r1, r2, r3}
 	bl func_ov42_0218a458
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov42_0218bffc
@@ -3375,7 +3375,7 @@ func_ov42_0218c018: ; 0x0218c018
 	mov r4, r0
 	bl func_ov42_0218962c
 	add r1, r4, #0x48
-	ldmia r1!, {r1, r2, r3}
+	ldmia r1, {r1, r2, r3}
 	bl func_ov42_0218a53c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov42_0218c018
@@ -3391,7 +3391,7 @@ func_ov42_0218c034: ; 0x0218c034
 	cmp r0, #0
 	ldrneb r0, [r4, #0x214]
 	cmpne r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	add r0, r4, #0x164
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
@@ -3563,7 +3563,7 @@ _0218c214:
 	ldr r3, [r2, #0x14]
 	adds r5, r6, lr
 	adc r6, r3, ip
-	stmia r2!, {r5, r6}
+	stmia r2, {r5, r6}
 	cmp r1, #0
 	beq _0218c2d4
 	mov r5, #0
@@ -3598,7 +3598,7 @@ _0218c2e0:
 	ldr r3, [r2, #0x14]
 	adds r5, r6, lr
 	adc r6, r3, ip
-	stmia r2!, {r5, r6}
+	stmia r2, {r5, r6}
 	cmp r0, #0
 	beq _0218c358
 	mov r5, #0
@@ -3649,7 +3649,7 @@ _0218c36c:
 	ldr r3, [r2, #0x14]
 	adds r5, r6, lr
 	adc r6, r3, ip
-	stmia r2!, {r5, r6}
+	stmia r2, {r5, r6}
 	cmp r0, #0
 	beq _0218c418
 	mov r5, #0
@@ -3810,7 +3810,7 @@ func_ov42_0218c620: ; 0x0218c620
 	stmdb sp!, {r3, lr}
 	ldrb r1, [r0, #0x214]
 	cmp r1, #1
-	ldmia sp!, {r3, pc}
+	ldmneia sp!, {r3, pc}
 	ldr r1, _0218c640 ; =data_ov42_0218c73c
 	mov r2, #0
 	bl func_ov00_020c243c
@@ -3827,13 +3827,13 @@ func_ov42_0218c644: ; 0x0218c644
 	ldr r1, [r4, #0x15c]
 	mvn r0, #0
 	cmp r1, r0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	ldr r0, _0218c68c ; =data_027e0fe4
 	add r1, r4, #0x15c
 	ldr r0, [r0]
 	bl func_ov00_020c3674
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmeqia sp!, {r4, pc}
 	mov r1, #0
 	strb r1, [r0, #0x118]
 	sub r0, r1, #1
@@ -4407,17 +4407,8 @@ data_ov42_0218ca0c: ; 0x0218ca0c
 	.byte 0x00, 0x59, 0x14, 0x02
 	.global data_ov42_0218ca10
 data_ov42_0218ca10: ; 0x0218ca10
-	.ascii "/"
-	.global data_ov42_0218ca11
-data_ov42_0218ca11: ; 0x0218ca11
-	.byte 0x4d
-	.global data_ov42_0218ca12
-data_ov42_0218ca12: ; 0x0218ca12
-	.byte 0x65
-	.global data_ov42_0218ca13
-data_ov42_0218ca13: ; 0x0218ca13
-	.byte 0x6e, 0x75, 0x2f, 0x54, 0x65, 0x78, 0x32, 0x44, 0x2f, 0x6d, 0x69, 0x6e, 0x69
-	.byte 0x67, 0x61, 0x6d, 0x65, 0x2e, 0x62, 0x69, 0x6e, 0x00, 0x00, 0x00, 0x00
+	.ascii "/Menu/Tex2D/minigame.bin"
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov42_0218ca2c
 data_ov42_0218ca2c: ; 0x0218ca2c
 	.ascii "MTX"

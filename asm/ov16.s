@@ -691,7 +691,7 @@ func_ov16_0211fef4: ; 0x0211fef4
 	blx func_02035594
 	blx func_0202ab48
 	cmp r0, #0
-	ldmia sp!, {r4, pc}
+	ldmneia sp!, {r4, pc}
 	ldr r1, _0211ff2c ; =data_ov16_02120178
 	add r0, r4, #0x20
 	mov r2, #1
@@ -725,7 +725,7 @@ func_ov16_0211ff30: ; 0x0211ff30
 	str r3, [sp, #4]
 	bl func_0204f558
 _0211ff7c:
-	stmia r5!, {r0, r4}
+	stmia r5, {r0, r4}
 	cmp r4, #0
 	mov r1, #0
 	ble _0211ffac
