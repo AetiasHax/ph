@@ -1,8 +1,8 @@
 ROOT      := $(shell pwd)
 BUILD_DIR := $(ROOT)/build
 TOOLS_DIR := $(ROOT)/tools
-LCF_FILE  := $(ROOT)/arm9_linker_script.lcf
-OBJS_FILE := $(ROOT)/arm9_objects.txt
+LCF_FILE  := $(BUILD_DIR)/arm9_linker_script.lcf
+OBJS_FILE := $(BUILD_DIR)/arm9_objects.txt
 
 ASM_FILES := $(wildcard asm/*.s)
 CXX_FILES := $(wildcard src/*.cpp)
@@ -23,7 +23,7 @@ LD_FLAGS  := -proc arm946e -nostdlib -interworking -m func_02000800 -map closure
 all: arm9
 
 .PHONY: arm9
-arm9: setup $(ASM_OBJS) link
+arm9: setup $(ASM_OBJS) lcf link
 
 .PHONY: setup
 setup:
@@ -32,6 +32,10 @@ setup:
 .PHONY: clean
 clean:
 	rm -r build/
+
+.PHONY: lcf
+lcf: $(TOOLS_DIR)/lcf.py
+	python $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(BUILD_DIR)/%.o: %.s
 	mkdir -p $(dir $@)
