@@ -1549,7 +1549,7 @@ func_ov00_02077e5c: ; 0x02077e5c
 	lsr r1, r6, #0x10
 	lsl r1, r1, #0x18
 	lsr r1, r1, #0x18
-	ldr r2, _02078144 ; =data_02002500
+	ldr r2, _02078144 ; =0x02002500
 	mov ip, r1
 	orr r1, r2
 	str r1, [sp, #0x24]
@@ -1573,7 +1573,7 @@ func_ov00_02077e5c: ; 0x02077e5c
 	lsl r1, r1, #0x12
 	orr r1, r3
 	str r1, [sp, #0x30]
-	ldr r2, _02078148 ; =data_02002300
+	ldr r2, _02078148 ; =0x02002300
 	mov r1, ip
 	orr r1, r2
 	str r1, [sp, #0x10]

@@ -57424,7 +57424,7 @@ data_ov11_0212e2e7: ; 0x0212e2e7
 	.byte 0x00
 	.global data_ov11_0212e2e8
 data_ov11_0212e2e8: ; 0x0212e2e8
-	.ascii "ï¿½ï¿½"
+	.ascii "‚ƒ"
 	.byte 0x00, 0x00
 	.global data_ov11_0212e2ec
 data_ov11_0212e2ec: ; 0x0212e2ec
