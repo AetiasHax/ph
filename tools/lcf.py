@@ -17,7 +17,7 @@ DTCM_OBJECTS = [
     'dtcm.o'
 ]
 
-ov00 = Overlay(name='ov00', origin=0x20773c0, objects=[
+ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'ov00.o'
 ])
 ov01 = Overlay(name='ov01', after=ov00, objects=[
@@ -224,14 +224,16 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('    AUTOLOADS : ORIGIN = 0         >> arm9.bin\n')
     file.write('    FOOTER    : ORIGIN = 0         >> arm9.bin\n')
     file.write('\n')
-    file.write('    OV_TABLE  : ORIGIN = AFTER(ARM9) > arm9_ovt.bin\n')
+    file.write('    OV_TABLE  : ORIGIN = 0 > arm9_ovt.bin\n')
     file.write('\n')
     for ov in OVERLAYS:
         file.write(f'    {ov.name} : ORIGIN = ')
         if ov.origin is not None:
             file.write(hex(ov.origin))
-        elif ov.after is not None:
+        elif type(ov.after) is Overlay:
             file.write(f'AFTER({ov.after.name})')
+        elif type(ov.after) is str:
+            file.write(f'AFTER({ov.after})')
         file.write(f' > {ov.name}.bin\n')
     file.write('}\n')
     file.write('\n')
