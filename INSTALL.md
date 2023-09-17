@@ -6,10 +6,10 @@ Contents:
 
 ## Prerequisites
 
-1. Install Python 3.7 or higher
+1. Install Python 3.11 or higher
 2. Install the Python dependencies:
 ```shell
-python3 -m pip install -r tools/requirements.txt
+python -m pip install -r tools/requirements.txt
 ```
 3. Run the setup script:
 ```shell
