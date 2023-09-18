@@ -6370,7 +6370,7 @@ func_ov17_0216044c: ; 0x0216044c
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov17_0216044c
-_02160458: .word func_0202ab78
+_02160458: .word func_0202ab78 + 1
 
 	.global func_ov17_0216045c
 	arm_func_start func_ov17_0216045c

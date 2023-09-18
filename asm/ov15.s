@@ -112381,7 +112381,7 @@ func_ov15_0217f47c: ; 0x0217f47c
 	mov r0, #0x28
 	mul r4, r1, r0
 	ldr r0, _0217f5d0 ; =data_027e0f74
-	ldr r1, _0217f5d4 ; =data_ov40_0218e6f0
+	ldr r1, _0217f5d4 ; =data_ov15_0218e6f0
 	ldr r0, [r0]
 	ldr r1, [r1, r4]
 	bl func_ov00_02097760
@@ -112389,14 +112389,14 @@ func_ov15_0217f47c: ; 0x0217f47c
 	addeq sp, sp, #0x18
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
-	ldr lr, _0217f5d8 ; =data_ov40_0218e6e8
+	ldr lr, _0217f5d8 ; =data_ov15_0218e6e8
 	ldr ip, _0217f5dc ; =data_ov15_0218e6ea
 	ldr r3, _0217f5e0 ; =data_ov15_0218e6eb
-	ldr r2, _0217f5e4 ; =data_ov40_0218e6ec
+	ldr r2, _0217f5e4 ; =data_ov15_0218e6ec
 	ldr r1, _0217f5e8 ; =data_ov15_0218e6ed
 	ldr r7, _0217f5ec ; =data_ov15_0218e6d8
-	ldr r6, _0217f5f0 ; =data_ov40_0218e6dc
-	ldr r5, _0217f5f4 ; =data_ov40_0218e6e0
+	ldr r6, _0217f5f0 ; =data_ov15_0218e6dc
+	ldr r5, _0217f5f4 ; =data_ov15_0218e6e0
 	ldrsh lr, [lr, r4]
 	ldrb ip, [ip, r4]
 	ldrb r3, [r3, r4]
@@ -112405,7 +112405,7 @@ func_ov15_0217f47c: ; 0x0217f47c
 	ldr r7, [r7, r4]
 	ldr r6, [r6, r4]
 	ldr r5, [r5, r4]
-	ldr r0, _0217f5f8 ; =data_ov40_0218e6e4
+	ldr r0, _0217f5f8 ; =data_ov15_0218e6e4
 	str r7, [sp]
 	ldr r4, [r0, r4]
 	add r0, sp, #0
@@ -112466,16 +112466,16 @@ _0217f5c4:
 	.align 2, 0
 	arm_func_end func_ov15_0217f47c
 _0217f5d0: .word data_027e0f74
-_0217f5d4: .word data_ov40_0218e6f0
-_0217f5d8: .word data_ov40_0218e6e8
+_0217f5d4: .word data_ov15_0218e6f0
+_0217f5d8: .word data_ov15_0218e6e8
 _0217f5dc: .word data_ov15_0218e6ea
 _0217f5e0: .word data_ov15_0218e6eb
-_0217f5e4: .word data_ov40_0218e6ec
+_0217f5e4: .word data_ov15_0218e6ec
 _0217f5e8: .word data_ov15_0218e6ed
 _0217f5ec: .word data_ov15_0218e6d8
-_0217f5f0: .word data_ov40_0218e6dc
-_0217f5f4: .word data_ov40_0218e6e0
-_0217f5f8: .word data_ov40_0218e6e4
+_0217f5f0: .word data_ov15_0218e6dc
+_0217f5f4: .word data_ov15_0218e6e0
+_0217f5f8: .word data_ov15_0218e6e4
 _0217f5fc: .word data_027e0fb4
 
 	.global func_ov15_0217f600
@@ -112490,9 +112490,9 @@ func_ov15_0217f600: ; 0x0217f600
 	mov r0, #0x28
 	mul r0, r1, r0
 	ldr r1, _0217f6cc ; =data_ov15_0218e6ea
-	ldr r2, _0217f6d0 ; =data_ov40_0218e6e8
+	ldr r2, _0217f6d0 ; =data_ov15_0218e6e8
 	ldrb r3, [r1, r0]
-	ldr r1, _0217f6d4 ; =data_ov40_0218e6ec
+	ldr r1, _0217f6d4 ; =data_ov15_0218e6ec
 	ldr r4, _0217f6d8 ; =data_ov15_0218e6d8
 	ldrb r7, [r1, r0]
 	ldrsh ip, [r2, r0]
@@ -112501,11 +112501,11 @@ func_ov15_0217f600: ; 0x0217f600
 	ldr r2, _0217f6e0 ; =data_ov15_0218e6eb
 	ldrb r6, [r1, r0]
 	ldrb r2, [r2, r0]
-	ldr r1, _0217f6e4 ; =data_ov40_0218e6e0
-	ldr r4, _0217f6e8 ; =data_ov40_0218e6dc
+	ldr r1, _0217f6e4 ; =data_ov15_0218e6e0
+	ldr r4, _0217f6e8 ; =data_ov15_0218e6dc
 	ldr lr, [r1, r0]
 	ldr r4, [r4, r0]
-	ldr r8, _0217f6ec ; =data_ov40_0218e6e4
+	ldr r8, _0217f6ec ; =data_ov15_0218e6e4
 	ldr r1, _0217f6f0 ; =data_027e10a4
 	ldr r8, [r8, r0]
 	ldr r0, [r1]
@@ -112535,14 +112535,14 @@ func_ov15_0217f600: ; 0x0217f600
 	.align 2, 0
 	arm_func_end func_ov15_0217f600
 _0217f6cc: .word data_ov15_0218e6ea
-_0217f6d0: .word data_ov40_0218e6e8
-_0217f6d4: .word data_ov40_0218e6ec
+_0217f6d0: .word data_ov15_0218e6e8
+_0217f6d4: .word data_ov15_0218e6ec
 _0217f6d8: .word data_ov15_0218e6d8
 _0217f6dc: .word data_ov15_0218e6ed
 _0217f6e0: .word data_ov15_0218e6eb
-_0217f6e4: .word data_ov40_0218e6e0
-_0217f6e8: .word data_ov40_0218e6dc
-_0217f6ec: .word data_ov40_0218e6e4
+_0217f6e4: .word data_ov15_0218e6e0
+_0217f6e8: .word data_ov15_0218e6dc
+_0217f6ec: .word data_ov15_0218e6e4
 _0217f6f0: .word data_027e10a4
 
 	.global func_ov15_0217f6f4
@@ -119114,7 +119114,7 @@ _02184fac:
 _02184fc4: .word data_027e0ce0
 _02184fc8: .word data_02057878
 _02184fcc: .word data_0205785c
-_02184fd0: .word func_0203010c
+_02184fd0: .word func_0203010c + 1
 _02184fd4: .word func_ov15_02184fdc
 _02184fd8: .word data_ov15_0218726c
 
@@ -119178,7 +119178,7 @@ _02185084:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02185004
-_02185090: .word func_0203010c
+_02185090: .word func_0203010c + 1
 
 	.global func_ov15_02185094
 	arm_func_start func_ov15_02185094
@@ -125827,7 +125827,7 @@ _02187e90: .word data_ov15_0218f55c
 _02187e94: .word data_ov15_0218b8fc
 _02187e98: .word data_02057840
 _02187e9c: .word data_ov15_0218f56c
-_02187ea0: .word func_0203010c
+_02187ea0: .word func_0203010c + 1
 _02187ea4: .word data_ov15_0218f560
 _02187ea8: .word data_ov15_0218b90c
 _02187eac: .word data_ov15_0218f588
@@ -125835,7 +125835,7 @@ _02187eb0: .word data_ov15_0218f57c
 _02187eb4: .word data_ov15_0218b91c
 _02187eb8: .word data_0205785c
 _02187ebc: .word data_ov15_0218f5a4
-_02187ec0: .word func_0203005c
+_02187ec0: .word func_0203005c + 1
 _02187ec4: .word data_ov15_0218f598
 _02187ec8: .word data_ov15_0218b92c
 _02187ecc: .word data_ov15_0218f5c4
@@ -126635,13 +126635,13 @@ _02188848: .word func_ov15_0216be78
 _0218884c: .word func_0203e7b4
 _02188850: .word data_ov15_0218f9b8
 _02188854: .word data_ov15_0218f9e4
-_02188858: .word func_ov00_020a95a4
+_02188858: .word func_ov00_020a95a4 + 1
 _0218885c: .word data_ov15_0218f9d8
 _02188860: .word data_ov15_0218fa4c
 _02188864: .word data_ov15_0218fa70
 _02188868: .word data_ov15_0218d6fc
 _0218886c: .word data_ov15_0218f9b8
-_02188870: .word func_ov00_020a9b6c
+_02188870: .word func_ov00_020a9b6c + 1
 _02188874: .word data_ov15_0218fa40
 
 	.global func_ov15_02188878
@@ -143156,17 +143156,17 @@ data_ov15_0218e6d4: ; 0x0218e6d4
 	.global data_ov15_0218e6d8
 data_ov15_0218e6d8: ; 0x0218e6d8
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov40_0218e6dc
-data_ov40_0218e6dc: ; 0x0218e6dc
+	.global data_ov15_0218e6dc
+data_ov15_0218e6dc: ; 0x0218e6dc
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov40_0218e6e0
-data_ov40_0218e6e0: ; 0x0218e6e0
+	.global data_ov15_0218e6e0
+data_ov15_0218e6e0: ; 0x0218e6e0
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov40_0218e6e4
-data_ov40_0218e6e4: ; 0x0218e6e4
+	.global data_ov15_0218e6e4
+data_ov15_0218e6e4: ; 0x0218e6e4
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov40_0218e6e8
-data_ov40_0218e6e8: ; 0x0218e6e8
+	.global data_ov15_0218e6e8
+data_ov15_0218e6e8: ; 0x0218e6e8
 	.byte 0x00, 0x00
 	.global data_ov15_0218e6ea
 data_ov15_0218e6ea: ; 0x0218e6ea
@@ -143174,31 +143174,234 @@ data_ov15_0218e6ea: ; 0x0218e6ea
 	.global data_ov15_0218e6eb
 data_ov15_0218e6eb: ; 0x0218e6eb
 	.byte 0x00
-	.global data_ov40_0218e6ec
-data_ov40_0218e6ec: ; 0x0218e6ec
+	.global data_ov15_0218e6ec
+data_ov15_0218e6ec: ; 0x0218e6ec
 	.byte 0x00
 	.global data_ov15_0218e6ed
 data_ov15_0218e6ed: ; 0x0218e6ed
-	.byte 0x00, 0x00, 0x00
-	.global data_ov40_0218e6f0
-data_ov40_0218e6f0: ; 0x0218e6f0
-	.byte 0x37, 0x01, 0x00, 0x00, 0xa8, 0xe6, 0x18, 0x02, 0x01, 0x00, 0x00, 0x00, 0x33, 0x0b, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x38, 0x01, 0x00, 0x00, 0xb0, 0xe6, 0x18, 0x02
-	.byte 0x01, 0x00, 0x00, 0x00, 0x33, 0x0b, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x39, 0x01, 0x00, 0x00, 0xb8, 0xe6, 0x18, 0x02, 0x01, 0x00, 0x00, 0x00, 0x33, 0x0b, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3a, 0x01, 0x00, 0x00, 0xc0, 0xe6, 0x18, 0x02
-	.byte 0x01, 0x00, 0x00, 0x00, 0xec, 0x09, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.byte 0x00
+	.global data_ov15_0218e6ee
+data_ov15_0218e6ee: ; 0x0218e6ee
+	.byte 0x00, 0x00
+	.global data_ov15_0218e6f0
+data_ov15_0218e6f0: ; 0x0218e6f0
+	.byte 0x37, 0x01, 0x00, 0x00
+	.global data_ov15_0218e6f4
+data_ov15_0218e6f4: ; 0x0218e6f4
+	.byte 0xa8, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e6f8
+data_ov15_0218e6f8: ; 0x0218e6f8
+	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov15_0218e6fc
+data_ov15_0218e6fc: ; 0x0218e6fc
+	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov15_0218e700
+data_ov15_0218e700: ; 0x0218e700
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e704
+data_ov15_0218e704: ; 0x0218e704
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e708
+data_ov15_0218e708: ; 0x0218e708
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e70c
+data_ov15_0218e70c: ; 0x0218e70c
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e710
+data_ov15_0218e710: ; 0x0218e710
+	.byte 0x00, 0x00
+	.global data_ov15_0218e712
+data_ov15_0218e712: ; 0x0218e712
+	.byte 0x00
+	.global data_ov15_0218e713
+data_ov15_0218e713: ; 0x0218e713
+	.byte 0x00
+	.global data_ov15_0218e714
+data_ov15_0218e714: ; 0x0218e714
+	.byte 0x00
+	.global data_ov15_0218e715
+data_ov15_0218e715: ; 0x0218e715
+	.byte 0x00
+	.global data_ov15_0218e716
+data_ov15_0218e716: ; 0x0218e716
+	.byte 0x00, 0x00
+	.global data_ov15_0218e718
+data_ov15_0218e718: ; 0x0218e718
+	.byte 0x38, 0x01, 0x00, 0x00
+	.global data_ov15_0218e71c
+data_ov15_0218e71c: ; 0x0218e71c
+	.byte 0xb0, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e720
+data_ov15_0218e720: ; 0x0218e720
+	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov15_0218e724
+data_ov15_0218e724: ; 0x0218e724
+	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov15_0218e728
+data_ov15_0218e728: ; 0x0218e728
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e730
+data_ov15_0218e730: ; 0x0218e730
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e734
+data_ov15_0218e734: ; 0x0218e734
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e738
+data_ov15_0218e738: ; 0x0218e738
+	.byte 0x00, 0x00
+	.global data_ov15_0218e73a
+data_ov15_0218e73a: ; 0x0218e73a
+	.byte 0x00
+	.global data_ov15_0218e73b
+data_ov15_0218e73b: ; 0x0218e73b
+	.byte 0x00
+	.global data_ov15_0218e73c
+data_ov15_0218e73c: ; 0x0218e73c
+	.byte 0x00
+	.global data_ov15_0218e73d
+data_ov15_0218e73d: ; 0x0218e73d
+	.byte 0x00
+	.global data_ov15_0218e73e
+data_ov15_0218e73e: ; 0x0218e73e
+	.byte 0x00, 0x00
+	.global data_ov15_0218e740
+data_ov15_0218e740: ; 0x0218e740
+	.byte 0x39, 0x01, 0x00, 0x00
+	.global data_ov15_0218e744
+data_ov15_0218e744: ; 0x0218e744
+	.byte 0xb8, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e748
+data_ov15_0218e748: ; 0x0218e748
+	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov15_0218e74c
+data_ov15_0218e74c: ; 0x0218e74c
+	.byte 0x33, 0x0b, 0x00, 0x00
+	.global data_ov15_0218e750
+data_ov15_0218e750: ; 0x0218e750
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e754
+data_ov15_0218e754: ; 0x0218e754
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e758
+data_ov15_0218e758: ; 0x0218e758
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e75c
+data_ov15_0218e75c: ; 0x0218e75c
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e760
+data_ov15_0218e760: ; 0x0218e760
+	.byte 0x00, 0x00
+	.global data_ov15_0218e762
+data_ov15_0218e762: ; 0x0218e762
+	.byte 0x00
+	.global data_ov15_0218e763
+data_ov15_0218e763: ; 0x0218e763
+	.byte 0x00
+	.global data_ov15_0218e764
+data_ov15_0218e764: ; 0x0218e764
+	.byte 0x00
+	.global data_ov15_0218e765
+data_ov15_0218e765: ; 0x0218e765
+	.byte 0x00
+	.global data_ov15_0218e766
+data_ov15_0218e766: ; 0x0218e766
+	.byte 0x00, 0x00
+	.global data_ov15_0218e768
+data_ov15_0218e768: ; 0x0218e768
+	.byte 0x3a, 0x01, 0x00, 0x00
+	.global data_ov15_0218e76c
+data_ov15_0218e76c: ; 0x0218e76c
+	.byte 0xc0, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e770
+data_ov15_0218e770: ; 0x0218e770
+	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov15_0218e774
+data_ov15_0218e774: ; 0x0218e774
+	.byte 0xec, 0x09, 0x00, 0x00
+	.global data_ov15_0218e778
+data_ov15_0218e778: ; 0x0218e778
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e77c
+data_ov15_0218e77c: ; 0x0218e77c
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e780
+data_ov15_0218e780: ; 0x0218e780
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e784
+data_ov15_0218e784: ; 0x0218e784
+	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov15_0218e788
 data_ov15_0218e788: ; 0x0218e788
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x3b, 0x01, 0x00, 0x00, 0xc8, 0xe6, 0x18, 0x02, 0x02, 0x00, 0x00, 0x00, 0x66, 0x0a, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
-	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x3c, 0x01, 0x00, 0x00, 0xd0, 0xe6, 0x18, 0x02
-	.byte 0x01, 0x00, 0x00, 0x00, 0xe1, 0x0a, 0x00, 0x00
+	.byte 0x00, 0x00
+	.global data_ov15_0218e78a
+data_ov15_0218e78a: ; 0x0218e78a
+	.byte 0x00
+	.global data_ov15_0218e78b
+data_ov15_0218e78b: ; 0x0218e78b
+	.byte 0x00
+	.global data_ov15_0218e78c
+data_ov15_0218e78c: ; 0x0218e78c
+	.byte 0x00
+	.global data_ov15_0218e78d
+data_ov15_0218e78d: ; 0x0218e78d
+	.byte 0x00
+	.global data_ov15_0218e78e
+data_ov15_0218e78e: ; 0x0218e78e
+	.byte 0x00, 0x00
+	.global data_ov15_0218e790
+data_ov15_0218e790: ; 0x0218e790
+	.byte 0x3b, 0x01, 0x00, 0x00
+	.global data_ov15_0218e794
+data_ov15_0218e794: ; 0x0218e794
+	.byte 0xc8, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e798
+data_ov15_0218e798: ; 0x0218e798
+	.byte 0x02, 0x00, 0x00, 0x00
+	.global data_ov15_0218e79c
+data_ov15_0218e79c: ; 0x0218e79c
+	.byte 0x66, 0x0a, 0x00, 0x00
+	.global data_ov15_0218e7a0
+data_ov15_0218e7a0: ; 0x0218e7a0
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e7a4
+data_ov15_0218e7a4: ; 0x0218e7a4
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e7a8
+data_ov15_0218e7a8: ; 0x0218e7a8
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e7ac
+data_ov15_0218e7ac: ; 0x0218e7ac
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov15_0218e7b0
+data_ov15_0218e7b0: ; 0x0218e7b0
+	.byte 0x00, 0x00
+	.global data_ov15_0218e7b2
+data_ov15_0218e7b2: ; 0x0218e7b2
+	.byte 0x00
+	.global data_ov15_0218e7b3
+data_ov15_0218e7b3: ; 0x0218e7b3
+	.byte 0x00
+	.global data_ov15_0218e7b4
+data_ov15_0218e7b4: ; 0x0218e7b4
+	.byte 0x00
+	.global data_ov15_0218e7b5
+data_ov15_0218e7b5: ; 0x0218e7b5
+	.byte 0x00
+	.global data_ov15_0218e7b6
+data_ov15_0218e7b6: ; 0x0218e7b6
+	.byte 0x00, 0x00
+	.global data_ov15_0218e7b8
+data_ov15_0218e7b8: ; 0x0218e7b8
+	.byte 0x3c, 0x01, 0x00, 0x00
+	.global data_ov15_0218e7bc
+data_ov15_0218e7bc: ; 0x0218e7bc
+	.byte 0xd0, 0xe6, 0x18, 0x02
+	.global data_ov15_0218e7c0
+data_ov15_0218e7c0: ; 0x0218e7c0
+	.byte 0x01, 0x00, 0x00, 0x00
+	.global data_ov15_0218e7c4
+data_ov15_0218e7c4: ; 0x0218e7c4
+	.byte 0xe1, 0x0a, 0x00, 0x00
 	.global data_ov15_0218e7c8
 data_ov15_0218e7c8: ; 0x0218e7c8
 	.byte 0x00, 0x00, 0x00, 0x00

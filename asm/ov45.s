@@ -1153,7 +1153,7 @@ func_ov45_0218a448: ; 0x0218a448
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218a448
-_0218a450: .word func_ov09_021185c4
+_0218a450: .word func_ov09_021185c4 + 1
 
 	.global func_ov45_0218a454
 	arm_func_start func_ov45_0218a454
@@ -1829,7 +1829,7 @@ func_ov45_0218ac2c: ; 0x0218ac2c
 	.align 2, 0
 	arm_func_end func_ov45_0218ac2c
 _0218ac54: .word data_ov45_0218e6c4
-_0218ac58: .word func_ov03_020f9ef4
+_0218ac58: .word func_ov03_020f9ef4 + 1
 
 	.global func_ov45_0218ac5c
 	arm_func_start func_ov45_0218ac5c
@@ -3450,7 +3450,7 @@ func_ov45_0218c0a4: ; 0x0218c0a4
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218c0a4
-_0218c0b0: .word func_ov09_02114110
+_0218c0b0: .word func_ov09_02114110 + 1
 
 	.global func_ov45_0218c0b4
 	arm_func_start func_ov45_0218c0b4
@@ -4525,7 +4525,7 @@ func_ov45_0218cd8c: ; 0x0218cd8c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218cd8c
-_0218cd94: .word func_ov09_02116b00
+_0218cd94: .word func_ov09_02116b00 + 1
 
 	.global func_ov45_0218cd98
 	arm_func_start func_ov45_0218cd98
@@ -4585,7 +4585,7 @@ func_ov45_0218ce50: ; 0x0218ce50
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218ce50
-_0218ce58: .word func_ov09_02116f64
+_0218ce58: .word func_ov09_02116f64 + 1
 
 	.global func_ov45_0218ce5c
 	arm_func_start func_ov45_0218ce5c
@@ -4594,7 +4594,7 @@ func_ov45_0218ce5c: ; 0x0218ce5c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218ce5c
-_0218ce64: .word func_ov09_02116f6c
+_0218ce64: .word func_ov09_02116f6c + 1
 
 	.global func_ov45_0218ce68
 	arm_func_start func_ov45_0218ce68
@@ -5092,7 +5092,7 @@ func_ov45_0218d4bc: ; 0x0218d4bc
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d4bc
-_0218d4c4: .word func_ov09_02117edc
+_0218d4c4: .word func_ov09_02117edc + 1
 
 	.global func_ov45_0218d4c8
 	arm_func_start func_ov45_0218d4c8
@@ -5101,7 +5101,7 @@ func_ov45_0218d4c8: ; 0x0218d4c8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d4c8
-_0218d4d0: .word func_ov09_02117f04
+_0218d4d0: .word func_ov09_02117f04 + 1
 
 	.global func_ov45_0218d4d4
 	arm_func_start func_ov45_0218d4d4
@@ -5268,7 +5268,7 @@ func_ov45_0218d62c: ; 0x0218d62c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d62c
-_0218d634: .word func_ov09_02118470
+_0218d634: .word func_ov09_02118470 + 1
 
 	.global func_ov45_0218d638
 	arm_func_start func_ov45_0218d638
@@ -5323,7 +5323,7 @@ func_ov45_0218d6dc: ; 0x0218d6dc
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d6dc
-_0218d6e4: .word func_ov09_021185c4
+_0218d6e4: .word func_ov09_021185c4 + 1
 
 	.global func_ov45_0218d6e8
 	arm_func_start func_ov45_0218d6e8
@@ -5332,7 +5332,7 @@ func_ov45_0218d6e8: ; 0x0218d6e8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d6e8
-_0218d6f0: .word func_ov09_021185cc
+_0218d6f0: .word func_ov09_021185cc + 1
 
 	.global func_ov45_0218d6f4
 	arm_func_start func_ov45_0218d6f4
@@ -5341,7 +5341,7 @@ func_ov45_0218d6f4: ; 0x0218d6f4
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d6f4
-_0218d6fc: .word func_ov09_02118b14
+_0218d6fc: .word func_ov09_02118b14 + 1
 
 	.global func_ov45_0218d700
 	arm_func_start func_ov45_0218d700
@@ -5350,7 +5350,7 @@ func_ov45_0218d700: ; 0x0218d700
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d700
-_0218d708: .word func_ov09_02118b38
+_0218d708: .word func_ov09_02118b38 + 1
 
 	.global func_ov45_0218d70c
 	arm_func_start func_ov45_0218d70c
@@ -5431,7 +5431,7 @@ func_ov45_0218d7e4: ; 0x0218d7e4
 	.align 2, 0
 	arm_func_end func_ov45_0218d7e4
 _0218d7fc: .word data_027e0fb4
-_0218d800: .word func_ov00_020ae76c
+_0218d800: .word func_ov00_020ae76c + 1
 
 	.global func_ov45_0218d804
 	arm_func_start func_ov45_0218d804
@@ -5942,7 +5942,7 @@ func_ov45_0218ddb8: ; 0x0218ddb8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218ddb8
-_0218ddc0: .word func_ov09_02116f64
+_0218ddc0: .word func_ov09_02116f64 + 1
 
 	.global func_ov45_0218ddc4
 	arm_func_start func_ov45_0218ddc4

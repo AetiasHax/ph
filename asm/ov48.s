@@ -1120,7 +1120,7 @@ _02190cf8: .word data_ov48_02194cec
 _02190cfc: .word data_ov48_0219533c
 _02190d00: .word 0x000004f8
 _02190d04: .word func_ov00_020b7d74
-_02190d08: .word func_ov48_02190e78
+_02190d08: .word func_ov48_02190e78 + 1
 _02190d0c: .word 0x00000528
 
 	.global func_ov48_02190d10

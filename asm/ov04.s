@@ -3486,7 +3486,7 @@ func_ov04_021025d8: ; 0x021025d8
 	.align 2, 0
 	thumb_func_end func_ov04_021025d8
 _021025e0: .word data_027e0f68
-_021025e4: .word func_ov04_021029e4
+_021025e4: .word func_ov04_021029e4 + 1
 
 	.global func_ov04_021025e8
 	thumb_func_start func_ov04_021025e8
@@ -9563,7 +9563,7 @@ func_ov04_021056b8: ; 0x021056b8
 	.align 2, 0
 	thumb_func_end func_ov04_021056b8
 _021056c0: .word data_027e0fb4
-_021056c4: .word func_ov04_02107750
+_021056c4: .word func_ov04_02107750 + 1
 
 	.global func_ov04_021056c8
 	thumb_func_start func_ov04_021056c8
@@ -9693,7 +9693,7 @@ func_ov04_021057a8: ; 0x021057a8
 	bx r3
 	nop
 	thumb_func_end func_ov04_021057a8
-_021057b0: .word func_ov04_021057b4
+_021057b0: .word func_ov04_021057b4 + 1
 
 	.global func_ov04_021057b4
 	thumb_func_start func_ov04_021057b4
@@ -10391,7 +10391,7 @@ _02105c92:
 	thumb_func_end func_ov04_02105c64
 _02105cb0: .word data_027e0ce0
 _02105cb4: .word 0x00000968
-_02105cb8: .word func_ov04_02105cbc
+_02105cb8: .word func_ov04_02105cbc + 1
 
 	.global func_ov04_02105cbc
 	thumb_func_start func_ov04_02105cbc
@@ -10944,7 +10944,7 @@ func_ov04_021060cc: ; 0x021060cc
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov04_021060cc
-_021060d0: .word func_ov04_02106128
+_021060d0: .word func_ov04_02106128 + 1
 
 	.global func_ov04_021060d4
 	thumb_func_start func_ov04_021060d4
@@ -12988,7 +12988,7 @@ func_ov04_02106fc4: ; 0x02106fc4
 	bx r3
 	nop
 	thumb_func_end func_ov04_02106fc4
-_02106fcc: .word func_0203d730
+_02106fcc: .word func_0203d730 + 1
 
 	.global func_ov04_02106fd0
 	thumb_func_start func_ov04_02106fd0
@@ -13157,7 +13157,7 @@ func_ov04_02107124: ; 0x02107124
 	bx r3
 	nop
 	thumb_func_end func_ov04_02107124
-_0210712c: .word func_0203d730
+_0210712c: .word func_0203d730 + 1
 
 	.global func_ov04_02107130
 	thumb_func_start func_ov04_02107130
@@ -13810,7 +13810,7 @@ func_ov04_02107648: ; 0x02107648
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov04_02107648
-_0210764c: .word func_ov04_02107698
+_0210764c: .word func_ov04_02107698 + 1
 
 	.global func_ov04_02107650
 	thumb_func_start func_ov04_02107650
@@ -14160,7 +14160,7 @@ _021078f8: .word data_ov00_020ee1f8
 _021078fc: .word data_ov00_020e67ac
 _02107900: .word data_ov04_02110540
 _02107904: .word func_ov00_020b7d74
-_02107908: .word func_ov04_021079d4
+_02107908: .word func_ov04_021079d4 + 1
 
 	.global func_ov04_0210790c
 	thumb_func_start func_ov04_0210790c
@@ -14460,7 +14460,7 @@ _02107b4c: .word data_ov00_020e6560
 _02107b50: .word data_027e0fb4
 _02107b54: .word data_ov04_02110540
 _02107b58: .word func_ov00_020b7d74
-_02107b5c: .word func_ov04_021079d4
+_02107b5c: .word func_ov04_021079d4 + 1
 _02107b60: .word data_02057200
 
 	.global func_ov04_02107b64
@@ -15137,7 +15137,7 @@ _02108066:
 	.align 2, 0
 	thumb_func_end func_ov04_02108060
 _02108070: .word data_027e0ce0
-_02108074: .word func_0201762c
+_02108074: .word func_0201762c + 1
 
 	.global func_ov04_02108078
 	thumb_func_start func_ov04_02108078
@@ -15405,7 +15405,7 @@ _02108268:
 _02108270: .word data_027e0d38
 _02108274: .word data_027e0f74
 _02108278: .word data_ov00_020e9360
-_0210827c: .word func_ov04_02108060
+_0210827c: .word func_ov04_02108060 + 1
 _02108280: .word data_027e01b8
 _02108284: .word data_ov04_0211066c
 _02108288: .word data_ov04_0210f83c
@@ -15578,7 +15578,7 @@ _021083c8:
 _021083d0: .word data_ov00_020e5b68
 _021083d4: .word data_027e0d0c
 _021083d8: .word func_ov00_020b7d74
-_021083dc: .word func_ov04_021079d4
+_021083dc: .word func_ov04_021079d4 + 1
 _021083e0: .word data_027e0d38
 _021083e4: .word data_027e0fc4
 _021083e8: .word data_ov00_020dc528
@@ -18521,7 +18521,7 @@ func_ov04_02109a58: ; 0x02109a58
 	.align 2, 0
 	thumb_func_end func_ov04_02109a58
 _02109ad8: .word data_ov00_020e5a48
-_02109adc: .word func_ov04_021079d4
+_02109adc: .word func_ov04_021079d4 + 1
 _02109ae0: .word data_02057200
 _02109ae4: .word func_ov00_020b7d74
 
@@ -20785,7 +20785,7 @@ _0210aca2:
 	thumb_func_end func_ov04_0210abd4
 _0210acb8: .word data_ov00_020e6300
 _0210acbc: .word func_ov00_020b7d74
-_0210acc0: .word func_ov04_021079d4
+_0210acc0: .word func_ov04_021079d4 + 1
 _0210acc4: .word data_027e0ce0
 
 	.global func_ov04_0210acc8
@@ -21031,7 +21031,7 @@ _0210ae52:
 	thumb_func_end func_ov04_0210adfc
 _0210ae70: .word data_ov00_020e60c0
 _0210ae74: .word data_ov00_020dc6e0
-_0210ae78: .word func_ov04_021079d4
+_0210ae78: .word func_ov04_021079d4 + 1
 _0210ae7c: .word func_ov00_020b7d74
 
 	.global func_ov04_0210ae80
@@ -21949,7 +21949,7 @@ _0210b4ac:
 	thumb_func_end func_ov04_0210b3f0
 _0210b51c: .word data_ov00_020e63dc
 _0210b520: .word func_ov04_0210b3d4
-_0210b524: .word func_ov04_0210b634
+_0210b524: .word func_ov04_0210b634 + 1
 _0210b528: .word 0x00000666
 _0210b52c: .word 0x00000ccd
 _0210b530: .word data_ov04_02110cb4
@@ -22455,7 +22455,7 @@ _0210b8ee:
 _0210b8f4: .word data_ov00_020e6fb0
 _0210b8f8: .word data_027e0ce0
 _0210b8fc: .word func_ov00_020b7d74
-_0210b900: .word func_ov04_021079d4
+_0210b900: .word func_ov04_021079d4 + 1
 _0210b904: .word data_027e0fc4
 _0210b908: .word data_ov04_0210f918
 _0210b90c: .word data_ov04_0210f8f0

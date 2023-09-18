@@ -8055,7 +8055,7 @@ _02173c40:
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c34
-_02173c48: .word func_ov26_02173cec
+_02173c48: .word func_ov26_02173cec + 1
 
 	.global func_ov26_02173c4c
 	thumb_func_start func_ov26_02173c4c
@@ -8065,7 +8065,7 @@ func_ov26_02173c4c: ; 0x02173c4c
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c4c
-_02173c54: .word func_ov26_02173dec
+_02173c54: .word func_ov26_02173dec + 1
 
 	.global func_ov26_02173c58
 	thumb_func_start func_ov26_02173c58
@@ -8096,7 +8096,7 @@ func_ov26_02173c7c: ; 0x02173c7c
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c7c
-_02173c84: .word func_ov26_02174170
+_02173c84: .word func_ov26_02174170 + 1
 
 	.global func_ov26_02173c88
 	thumb_func_start func_ov26_02173c88
@@ -8106,7 +8106,7 @@ func_ov26_02173c88: ; 0x02173c88
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c88
-_02173c90: .word func_ov26_02174258
+_02173c90: .word func_ov26_02174258 + 1
 
 	.global func_ov26_02173c94
 	thumb_func_start func_ov26_02173c94
@@ -8621,7 +8621,7 @@ _02174050: .word 0x00000122
 _02174054: .word 0x00004650
 _02174058: .word 0xfffffc00
 _0217405c: .word 0x00002710
-_02174060: .word func_ov26_02173e50
+_02174060: .word func_ov26_02173e50 + 1
 _02174064: .word data_027e0e58
 _02174068: .word data_ov26_0217abd4
 _0217406c: .word 0xfffec000
@@ -8753,41 +8753,122 @@ func_ov26_02174170: ; 0x02174170
 	lsl r1, r1, #0x10
 	asr r1, r1, #0x10
 	add pc, r1
-	thumb_func_end func_ov26_02174170
 _02174184: ; jump table
-	.byte 0xc8, 0x00
-	.global data_ov26_02174186
-data_ov26_02174186: ; 0x02174186
-	.byte 0xc8, 0x00
-	.global data_ov26_02174188
-data_ov26_02174188: ; 0x02174188
-	.byte 0x08, 0x00
-	.global data_ov26_0217418a
-data_ov26_0217418a: ; 0x0217418a
-	.byte 0x10, 0x00
-	.global data_ov26_0217418c
-data_ov26_0217418c: ; 0x0217418c
-	.byte 0x10, 0x00, 0x00, 0x21
-	.byte 0xff, 0xf7, 0x72, 0xff, 0x08, 0xbd, 0x01, 0x1c, 0xa8, 0x31, 0x09, 0x78, 0x00, 0x29, 0x31, 0xd0
-	.byte 0x2b, 0x49, 0x09, 0x68, 0x4a, 0x89, 0x02, 0x21, 0x89, 0x03, 0x13, 0x1c, 0x0b, 0x42, 0x02, 0xd0
-	.byte 0x49, 0x1e, 0x0a, 0x40, 0x00, 0xe0, 0x00, 0x22, 0x26, 0x49, 0x09, 0x68, 0xcb, 0x68, 0x11, 0x04
-	.byte 0x0a, 0x0c, 0x3c, 0x21, 0x51, 0x43, 0x5a, 0x1a, 0x01, 0x1c, 0xa4, 0x31, 0x09, 0x68, 0x91, 0x42
-	.byte 0x10, 0xd8, 0x01, 0x1c, 0xa4, 0x31, 0x0a, 0x60, 0x01, 0x1c, 0xab, 0x31, 0x09, 0x78, 0x00, 0x29
-	.byte 0x03, 0xd1, 0x01, 0x1c, 0x1e, 0x22, 0x74, 0x31, 0x0a, 0x80, 0x01, 0x1c, 0x01, 0x22, 0xab, 0x31
-	.byte 0x0a, 0x70, 0x1a, 0xe0, 0x01, 0x1c, 0xa4, 0x31, 0x0a, 0x68, 0x01, 0x1c, 0xc8, 0x3a, 0xa4, 0x31
-	.byte 0x0a, 0x60, 0x12, 0xe0, 0x13, 0x49, 0x09, 0x68, 0xca, 0x68, 0x01, 0x1c, 0xa4, 0x31, 0x0a, 0x60
-	.byte 0x01, 0x1c, 0xab, 0x31, 0x09, 0x78, 0x00, 0x29, 0x03, 0xd1, 0x01, 0x1c, 0x1e, 0x22, 0x74, 0x31
-	.byte 0x0a, 0x80, 0x01, 0x1c, 0x01, 0x22, 0xab, 0x31, 0x0a, 0x70, 0x01, 0x1c, 0xab, 0x31, 0x09, 0x78
-	.byte 0x00, 0x29, 0x08, 0xd0, 0x74, 0x21, 0x41, 0x5e, 0x00, 0x29, 0x04, 0xd1, 0x05, 0x21, 0x82, 0x6e
-	.byte 0x09, 0x03, 0x51, 0x1a, 0x81, 0x66, 0x81, 0x6e, 0x09, 0x13, 0xff, 0xf7, 0x15, 0xff
+	.short _0217424e - _02174184 - 2 ; case 0
+	.short _0217424e - _02174184 - 2 ; case 1
+	.short _0217418e - _02174184 - 2 ; case 2
+	.short _02174196 - _02174184 - 2 ; case 3
+	.short _02174196 - _02174184 - 2 ; case 4
+_0217418e:
+	mov r1, #0
+	bl func_ov26_02174078
+	pop {r3, pc}
+_02174196:
+	add r1, r0, #0
+	add r1, #0xa8
+	ldrb r1, [r1]
+	cmp r1, #0
+	beq _02174204
+	ldr r1, _02174250 ; =data_027e0fbc
+	ldr r1, [r1]
+	ldrh r2, [r1, #0xa]
+	mov r1, #2
+	lsl r1, r1, #0xe
+	add r3, r2, #0
+	tst r3, r1
+	beq _021741b6
+	sub r1, r1, #1
+	and r2, r1
+	b _021741b8
+_021741b6:
+	mov r2, #0
+_021741b8:
+	ldr r1, _02174254 ; =data_027e0fb4
+	ldr r1, [r1]
+	ldr r3, [r1, #0xc]
+	lsl r1, r2, #0x10
+	lsr r2, r1, #0x10
+	mov r1, #0x3c
+	mul r1, r2
+	sub r2, r3, r1
+	add r1, r0, #0
+	add r1, #0xa4
+	ldr r1, [r1]
+	cmp r1, r2
+	bhi _021741f4
+	add r1, r0, #0
+	add r1, #0xa4
+	str r2, [r1]
+	add r1, r0, #0
+	add r1, #0xab
+	ldrb r1, [r1]
+	cmp r1, #0
+	bne _021741ea
+	add r1, r0, #0
+	mov r2, #0x1e
+	add r1, #0x74
+	strh r2, [r1]
+_021741ea:
+	add r1, r0, #0
+	mov r2, #1
+	add r1, #0xab
+	strb r2, [r1]
+	b _0217422a
+_021741f4:
+	add r1, r0, #0
+	add r1, #0xa4
+	ldr r2, [r1]
+	add r1, r0, #0
+	sub r2, #0xc8
+	add r1, #0xa4
+	str r2, [r1]
+	b _0217422a
+_02174204:
+	ldr r1, _02174254 ; =data_027e0fb4
+	ldr r1, [r1]
+	ldr r2, [r1, #0xc]
+	add r1, r0, #0
+	add r1, #0xa4
+	str r2, [r1]
+	add r1, r0, #0
+	add r1, #0xab
+	ldrb r1, [r1]
+	cmp r1, #0
+	bne _02174222
+	add r1, r0, #0
+	mov r2, #0x1e
+	add r1, #0x74
+	strh r2, [r1]
+_02174222:
+	add r1, r0, #0
+	mov r2, #1
+	add r1, #0xab
+	strb r2, [r1]
+_0217422a:
+	add r1, r0, #0
+	add r1, #0xab
+	ldrb r1, [r1]
+	cmp r1, #0
+	beq _02174246
+	mov r1, #0x74
+	ldrsh r1, [r0, r1]
+	cmp r1, #0
+	bne _02174246
+	mov r1, #5
+	ldr r2, [r0, #0x68]
+	lsl r1, r1, #0xc
+	sub r1, r2, r1
+	str r1, [r0, #0x68]
+_02174246:
+	ldr r1, [r0, #0x68]
+	asr r1, r1, #0xc
+	bl func_ov26_02174078
 _0217424e:
 	pop {r3, pc}
-	.global data_ov26_02174250
-data_ov26_02174250: ; 0x02174250
-	.byte 0xbc, 0x0f, 0x7e, 0x02
-	.global data_ov26_02174254
-data_ov26_02174254: ; 0x02174254
-	.byte 0xb4, 0x0f, 0x7e, 0x02
+	.align 2, 0
+	thumb_func_end func_ov26_02174170
+_02174250: .word data_027e0fbc
+_02174254: .word data_027e0fb4
 
 	.global func_ov26_02174258
 	thumb_func_start func_ov26_02174258
@@ -11141,7 +11222,7 @@ func_ov26_02175f88: ; 0x02175f88
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov26_02175f88
-_02175f94: .word func_ov03_020f4bc0
+_02175f94: .word func_ov03_020f4bc0 + 1
 
 	.global func_ov26_02175f98
 	thumb_func_start func_ov26_02175f98
@@ -11154,7 +11235,7 @@ func_ov26_02175f98: ; 0x02175f98
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov26_02175f98
-_02175fa4: .word func_ov03_020f4bc0
+_02175fa4: .word func_ov03_020f4bc0 + 1
 
 	.global func_ov26_02175fa8
 	thumb_func_start func_ov26_02175fa8
@@ -12902,7 +12983,7 @@ _02177564:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 	thumb_func_end func_ov26_0217752c
-_0217757c: .word func_ov26_02177584
+_0217757c: .word func_ov26_02177584 + 1
 _02177580: .word func_ov26_02177588
 
 	.global func_ov26_02177584
@@ -12941,7 +13022,7 @@ func_ov26_021775b0: ; 0x021775b0
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov26_021775b0
-_021775c4: .word func_ov26_02177584
+_021775c4: .word func_ov26_02177584 + 1
 
 	.global func_ov26_021775c8
 	arm_func_start func_ov26_021775c8

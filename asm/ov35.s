@@ -114,7 +114,7 @@ _0217bed4:
 _0217bef8: .word data_ov35_0218598c
 _0217befc: .word func_ov35_0217bf4c
 _0217bf00: .word func_ov35_0217bf68
-_0217bf04: .word func_ov00_020a95a4
+_0217bf04: .word func_ov00_020a95a4 + 1
 _0217bf08: .word func_ov35_0217bf3c
 _0217bf0c: .word 0x020a9aad
 _0217bf10: .word func_ov35_0217bf14
@@ -143,7 +143,7 @@ func_ov35_0217bf3c: ; 0x0217bf3c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov35_0217bf3c
-_0217bf48: .word func_ov00_020a9588
+_0217bf48: .word func_ov00_020a9588 + 1
 
 	.global func_ov35_0217bf4c
 	arm_func_start func_ov35_0217bf4c
@@ -247,7 +247,7 @@ _0217bfdc:
 _0217c090: .word data_ov35_0218598c
 _0217c094: .word data_027e0fe4
 _0217c098: .word 0x020a9aad
-_0217c09c: .word func_ov00_020a95a4
+_0217c09c: .word func_ov00_020a95a4 + 1
 _0217c0a0: .word func_ov35_0217bf4c
 
 	.global func_ov35_0217c0a4
@@ -332,7 +332,7 @@ _0217c104:
 _0217c1c0: .word data_ov35_0218598c
 _0217c1c4: .word data_027e0fe4
 _0217c1c8: .word 0x020a9aad
-_0217c1cc: .word func_ov00_020a95a4
+_0217c1cc: .word func_ov00_020a95a4 + 1
 _0217c1d0: .word func_ov35_0217bf4c
 
 	.global func_ov35_0217c1d4

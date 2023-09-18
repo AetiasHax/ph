@@ -39393,7 +39393,7 @@ func_ov61_0215e974: ; 0x0215e974
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov61_0215e974
-_0215e97c: .word func_02050218
+_0215e97c: .word func_02050218 + 1
 
 	.global func_ov61_0215e980
 	arm_func_start func_ov61_0215e980
@@ -39402,7 +39402,7 @@ func_ov61_0215e980: ; 0x0215e980
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov61_0215e980
-_0215e988: .word func_02050240
+_0215e988: .word func_02050240 + 1
 
 	.global func_ov61_0215e98c
 	arm_func_start func_ov61_0215e98c
@@ -39411,7 +39411,7 @@ func_ov61_0215e98c: ; 0x0215e98c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov61_0215e98c
-_0215e994: .word func_020502d4
+_0215e994: .word func_020502d4 + 1
 
 	.global func_ov61_0215e998
 	arm_func_start func_ov61_0215e998

@@ -2839,7 +2839,7 @@ _01ffa534:
 	ldr ip, _01ffa634 ; =data_027e02a0
 	ldrh r1, [ip]
 	cmp r1, #0
-	ldmeqia sp!, {pc}
+	ldreq pc, [sp], #4
 	mov r1, #0
 	strh r1, [ip]
 	mov r3, #0xd2
@@ -2857,7 +2857,7 @@ _01ffa55c:
 _01ffa578:
 	mov r3, #0x92
 	msr cpsr_c, r3 ; 16
-	ldmia sp!, {pc}
+	ldr pc, [sp], #4
 _01ffa584:
 	ldr r0, [ip, #4]
 	cmp r1, r0
