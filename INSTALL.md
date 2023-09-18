@@ -3,6 +3,7 @@
 Contents:
 
 - [Prerequisites](#prerequisites)
+- [Build the ROM](#build-the-rom)
 
 ## Prerequisites
 
@@ -15,4 +16,8 @@ python -m pip install -r tools/requirements.txt
 ```shell
 python tools/setup.py
 ```
+
+## Build the ROM
+
+To build the ROM, simply run `make` in the root directory.
 
