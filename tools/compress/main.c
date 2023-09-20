@@ -33,7 +33,7 @@
 bool FindSubsequence(const uint8_t *buf, const uint8_t *start, const uint8_t *end, size_t *pLen, size_t *pDist) {
     size_t bestLen = 0;
     size_t bestDist = 0;
-    size_t maxLookahead = min(LOOKAHEAD + MAX_SUBSEQ, end - buf);
+    size_t maxLookahead = min(LOOKAHEAD + MAX_SUBSEQ, end - buf - 1);
     for (size_t i = 0; i < maxLookahead; ++i) {
         const uint8_t *needle = buf;
         const uint8_t *haystack = buf + 1 + i;
