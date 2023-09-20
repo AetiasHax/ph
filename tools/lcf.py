@@ -222,7 +222,6 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('    ITCM      : ORIGIN = 0x1ff8000 >> arm9.bin\n')
     file.write('    DTCM      : ORIGIN = 0x27e0000 >> arm9.bin\n')
     file.write('    AUTOLOADS : ORIGIN = 0         >> arm9.bin\n')
-    file.write('    FOOTER    : ORIGIN = 0         >> arm9.bin\n')
     file.write('\n')
     file.write('    OV_TABLE  : ORIGIN = 0 > arm9_ovt.bin\n')
     file.write('\n')
@@ -247,17 +246,30 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('    } > ARM9\n')
     file.write('\n')
     file.write('    .itcm : {\n')
+    file.write('        itcm_start = .;\n')
     for obj in ITCM_OBJECTS:
         file.write(f'        {obj}(.text)\n')
         file.write(f'        {obj}(.rodata)\n')
+    file.write('        itcm_end = .;\n')
+    file.write('        itcm_size = itcm_end - itcm_start;\n')
+    for obj in ITCM_OBJECTS:
         file.write(f'        {obj}(.bss)\n')
     file.write('    } > ITCM\n')
     file.write('\n')
     file.write('    .dtcm : {\n')
+    file.write('        dtcm_start = .;\n')
     for obj in DTCM_OBJECTS:
         file.write(f'        {obj}(.data)\n')
+    file.write('        dtcm_end = .;\n')
+    file.write('        dtcm_size = dtcm_end - dtcm_start;\n')
+    for obj in DTCM_OBJECTS:
         file.write(f'        {obj}(.bss)\n')
     file.write('    } > DTCM\n')
+    file.write('\n')
+    file.write('    .autoloads : {\n')
+    file.write('        WRITEW ADDR(ITCM); WRITEW itcm_size; WRITEW 0;\n')
+    file.write('        WRITEW ADDR(DTCM); WRITEW dtcm_size; WRITEW 0xec0;\n')
+    file.write('    } > AUTOLOADS\n')
     file.write('\n')
     for ov in OVERLAYS:
         file.write(f'    .{ov.name} : ' + '{\n')
