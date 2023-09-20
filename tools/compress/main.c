@@ -95,7 +95,7 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
 
 bool WriteFooter(FILE *fp, const char *fileName, bool addPadding, uint32_t compressedSize, uint32_t originalSize, uint32_t start) {
     size_t padding = 0;
-    if (addPadding) padding = 0x10 - (compressedSize & 0xf);
+    if (addPadding) padding = 0x4 - (compressedSize & 0x3);
     for (size_t i = 0; i < padding; ++i) fputc(0xFF, fp);
     compressedSize += padding + 8;
     uint32_t readOffset = padding + 8;
@@ -125,7 +125,7 @@ void PrintUsage(const char *program) {
         "Usage: %s [-o OUTFILE] [-s START] [-p] -i INFILE\n"
         "    -o OUTFILE\tWrites result to file instead of stdout\n"
         "    -s START  \tOffset to start compressing from\n"
-        "    -p        \tPad compressed data to 16-alignment\n"
+        "    -p        \tPad compressed data to 4-alignment\n"
         "    -i INFILE \tInput file to compress",
         program
     );
