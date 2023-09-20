@@ -95,7 +95,7 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
 
 bool WriteFooter(FILE *fp, const char *fileName, bool addPadding, uint32_t compressedSize, uint32_t originalSize, uint32_t start) {
     size_t padding = 0;
-    if (addPadding) padding = 0x4 - (compressedSize & 0x3);
+    if (addPadding) padding = (0x4 - (compressedSize & 0x3)) & 0x3;
     for (size_t i = 0; i < padding; ++i) fputc(0xFF, fp);
     compressedSize += padding + 8;
     uint32_t readOffset = padding + 8;
