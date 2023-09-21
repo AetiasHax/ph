@@ -54,14 +54,25 @@ bool FindSubsequence(const uint8_t *buf, const uint8_t *start, const uint8_t *en
     return true;
 }
 
-bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, size_t *pLen) {
+bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, size_t *pLen, size_t *pNumIdentical) {
     const uint8_t *end = src + size;
     const uint8_t *read = end;
-    uint8_t *write = dst + size - 1;
+    uint8_t *writeEnd = dst + size;
+    uint8_t *write = writeEnd - 1;
     uint8_t *pFlags = write;
     uint8_t flags;
     size_t flagCount = 0;
+    size_t numIdentical = 0;
     while (read > src) {
+        if (read - 1 == src && flagCount == 0) {
+            read -= 1;
+            *write = *read;
+            for (numIdentical = 0; write + numIdentical < writeEnd; ++numIdentical) {
+                if (read[numIdentical] != write[numIdentical]) break;
+            }
+            write -= 1;
+            break;
+        }
         flags <<= 1;
         size_t len, dist;
         if (FindSubsequence(read - 1, src, end, &len, &dist)) {
@@ -90,16 +101,18 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
     else write += 1;
     *pResult = write;
     *pLen = size - (write - dst);
+    *pNumIdentical = numIdentical;
     return true;
 }
 
-bool WriteFooter(FILE *fp, const char *fileName, bool addPadding, uint32_t compressedSize, uint32_t originalSize, uint32_t start) {
+bool WriteFooter(FILE *fp, const char *fileName, bool addPadding, uint32_t compressedSize, uint32_t originalSize, uint32_t start, uint32_t numIdentical) {
     size_t padding = 0;
     if (addPadding) padding = (0x4 - (compressedSize & 0x3)) & 0x3;
     for (size_t i = 0; i < padding; ++i) fputc(0xFF, fp);
     compressedSize += padding + 8;
     uint32_t readOffset = padding + 8;
     uint32_t writeOffset = originalSize - compressedSize - start;
+    compressedSize -= numIdentical;
     if (fwrite(&compressedSize, 3, 1, fp) != 1) {
         if (fp == stdout) fprintf(stderr, "Failed to write compressed size to stdout\n");
         else fprintf(stderr, "Failed to write compressed size to '%s'\n", fileName);
@@ -211,14 +224,14 @@ int main(int argc, const char **argv) {
 
     uint8_t *outBuf = malloc(inSize - start);
     uint8_t *result;
-    size_t resultLen;
-    if (!Compress(buf + start, outBuf, inSize - start, &result, &resultLen)) return 1;
+    size_t resultLen, numIdentical;
+    if (!Compress(buf + start, outBuf, inSize - start, &result, &resultLen, &numIdentical)) return 1;
     if (fwrite(result, resultLen, 1, fpIn) != 1) {
         if (fpOut == stdout) fprintf(stderr, "Failed to write compressed output to stdout\n");
         else fprintf(stderr, "Failed to write compressed output to '%s'\n", outFile);
         return 1;
     }
-    if (!WriteFooter(fpOut, outFile, padCompressedBlock, resultLen, inSize, start)) return 1;
+    if (!WriteFooter(fpOut, outFile, padCompressedBlock, resultLen, inSize, start, numIdentical)) return 1;
     free(outBuf);
 
     if (outFile != NULL) fclose(fpOut);
