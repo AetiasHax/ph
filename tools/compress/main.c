@@ -30,6 +30,11 @@
 #define MAX_SUBSEQ ((MIN_SUBSEQ) + LEN_MASK)
 #define LOOKAHEAD (1 << (DIST_BITS))
 
+typedef struct {
+    uint8_t *pos;
+    uint32_t totalBytesSaved;
+} BlockInfo;
+
 bool FindSubsequence(const uint8_t *buf, const uint8_t *start, const uint8_t *end, size_t *pLen, size_t *pDist) {
     size_t bestLen = 0;
     size_t bestDist = 0;
@@ -62,17 +67,10 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
     uint8_t *pFlags = write;
     uint8_t flags;
     size_t flagCount = 0;
-    size_t numIdentical = 0;
+    int32_t bytesSaved = 0;
+    BlockInfo *blockInfos = malloc(((size + 7) / 8) * sizeof(BlockInfo));
+    size_t numBlocks = 0;
     while (read > src) {
-        if (read - 1 == src && flagCount == 0) {
-            read -= 1;
-            *write = *read;
-            for (numIdentical = 0; write + numIdentical < writeEnd; ++numIdentical) {
-                if (read[numIdentical] != write[numIdentical]) break;
-            }
-            write -= 1;
-            break;
-        }
         flags <<= 1;
         size_t len, dist;
         if (FindSubsequence(read - 1, src, end, &len, &dist)) {
@@ -82,6 +80,7 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
             write -= 2;
             WRITE16(write, pair);
             flags |= 1;
+            bytesSaved += len - 2;
         } else {
             // write literal
             write -= 1;
@@ -92,13 +91,38 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
         if (flagCount == 8) {
             flagCount = 0;
             *pFlags = flags;
+            bytesSaved -= 1;
             flags = 0;
             write -= 1;
             pFlags = write;
+
+            blockInfos[numBlocks].pos = write;
+            blockInfos[numBlocks].totalBytesSaved = bytesSaved;
+            numBlocks++;
         }
     }
-    if (flagCount != 0) *pFlags = flags << (8 - flagCount);
-    else write += 1;
+    if (flagCount != 0) {
+        blockInfos[numBlocks].pos = write;
+        blockInfos[numBlocks].totalBytesSaved = bytesSaved;
+        numBlocks++;
+
+        *pFlags = flags << (8 - flagCount);
+    }
+    else {
+        write += 1;
+    }
+    size_t numIdentical = 0;
+    for (int32_t i = 0; i < numBlocks - 1; ++i) {
+        if (blockInfos[i].totalBytesSaved == bytesSaved) {
+            numIdentical = blockInfos[i].pos - write;
+            write += 1;
+            memcpy(write, src, numIdentical);
+            while (write[numIdentical] == read[numIdentical]) {
+                numIdentical += 1;
+            }
+            break;
+        }
+    }
     *pResult = write;
     *pLen = size - (write - dst);
     *pNumIdentical = numIdentical;

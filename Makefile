@@ -9,6 +9,9 @@ CXX_FILES := $(wildcard src/*.cpp)
 ASM_OBJS = $(ASM_FILES:%.s=$(BUILD_DIR)/%.o)
 CXX_OBJS = $(CXX_FILES:%.cpp=$(BUILD_DIR)/%.o)
 
+OV_BINS := $(wildcard $(BUILD_DIR)/overlays/*.bin)
+OV_LZS = $(OV_BINS:%.bin=%.lz)
+
 MW_VER     := 2.0/sp1p5
 MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm
 MW_CC      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm
@@ -20,14 +23,20 @@ CC_FLAGS  := -O1 -thumb
 LD_FLAGS  := -proc arm946e -nostdlib -nointerworking -nodead -m func_02000800 -map closure,unused -o main.bin -msgstyle gcc
 
 .PHONY: all
-all: arm9
+all: tools arm9
+
+.PHONY: tools
+tools:
+	cd $(TOOLS_DIR)/compress && $(MAKE)
 
 .PHONY: arm9
 arm9: setup $(ASM_OBJS) lcf link
+	$(MAKE) compress
 
 .PHONY: setup
 setup:
 	mkdir -p $(BUILD_DIR)
+	mkdir -p $(BUILD_DIR)/overlays
 
 .PHONY: clean
 clean:
@@ -48,3 +57,10 @@ $(CXX_OBJS): $(BUILD_DIR)/%.o: %.cpp
 .PHONY: link
 link:
 	cd $(BUILD_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
+
+.PHONY: compress
+compress: $(OV_LZS)
+	$(TOOLS_DIR)/compress/compress -s 0x4000 -i $(BUILD_DIR)/arm9.bin -o $(BUILD_DIR)/arm9.lz
+
+$(OV_LZS): %.lz: %.bin
+	$(TOOLS_DIR)/compress/compress -p -i $< -o $@

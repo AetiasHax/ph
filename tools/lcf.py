@@ -233,7 +233,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
             file.write(f'AFTER({ov.after.name})')
         elif type(ov.after) is str:
             file.write(f'AFTER({ov.after})')
-        file.write(f' > {ov.name}.bin\n')
+        file.write(f' > overlays/{ov.name}.bin\n')
     file.write('}\n')
     file.write('\n')
     file.write('SECTIONS {\n')
