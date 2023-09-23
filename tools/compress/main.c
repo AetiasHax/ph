@@ -123,6 +123,7 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
             break;
         }
     }
+    free(blockInfos);
     *pResult = write;
     *pLen = size - (write - dst);
     *pNumIdentical = numIdentical;
