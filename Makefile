@@ -1,5 +1,17 @@
+REGION ?= EUR
+
+ifeq ($(REGION), EUR)
+	BUILD_SUBDIR := eur
+else ifeq ($(REGION), USA)
+	BUILD_SUBDIR := usa
+else ifeq ($(REGION), JPN)
+	BUILD_SUBDIR := jpn
+else
+	$(error Unknown region '$(REGION)')
+endif
+
 ROOT      := $(shell pwd)
-BUILD_DIR := $(ROOT)/build
+BUILD_DIR := $(ROOT)/build/$(BUILD_SUBDIR)
 TOOLS_DIR := $(ROOT)/tools
 LCF_FILE  := $(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE := $(BUILD_DIR)/arm9_objects.txt
@@ -18,8 +30,8 @@ MW_CC      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm
 MW_LD      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm
 MW_LICENSE := $(TOOLS_DIR)/mwccarm/license.dat
 
-ASM_FLAGS := -proc arm5te -i asm -msgstyle gcc
-CC_FLAGS  := -O1 -thumb
+ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
+CC_FLAGS  := -O1 -thumb -d $(REGION)
 LD_FLAGS  := -proc arm946e -nostdlib -nointerworking -nodead -m func_02000800 -map closure,unused -o main.bin -msgstyle gcc
 
 .PHONY: all
@@ -35,7 +47,6 @@ arm9: setup $(ASM_OBJS) lcf link
 
 .PHONY: setup
 setup:
-	mkdir -p $(BUILD_DIR)
 	mkdir -p $(BUILD_DIR)/overlays
 
 .PHONY: clean
