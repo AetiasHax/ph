@@ -18680,6 +18680,8 @@ func_ov10_0211e740: ; 0x0211e740
 	.align 2, 0
 	arm_func_end func_ov10_0211e740
 _0211e74c: .word func_0202a5e8
+
+	.rodata
 	.global data_ov10_0211e750
 data_ov10_0211e750: ; 0x0211e750
 	.byte 0x31, 0x00, 0x00, 0x00
@@ -19189,12 +19191,12 @@ data_ov10_0211e9f0: ; 0x0211e9f0
 data_ov10_0211ea04: ; 0x0211ea04
 	.ascii "Menu/Bg/rplBg.bin"
 	.byte 0x00, 0x00, 0x00
-	.global data_ov10_0211ea18
-data_ov10_0211ea18: ; 0x0211ea18
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov10_0211ea1c
-data_ov10_0211ea1c: ; 0x0211ea1c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov10_0211ea20
 data_ov10_0211ea20: ; 0x0211ea20
 	.ascii "brg"

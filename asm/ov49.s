@@ -3357,6 +3357,8 @@ _021981d4:
 	.align 2, 0
 	arm_func_end func_ov49_02198184
 _021981dc: .word data_027e0f74
+
+	.rodata
 	.global data_ov49_021981e0
 data_ov49_021981e0: ; 0x021981e0
 	.ascii "jnt_rupee"
@@ -3484,6 +3486,7 @@ data_ov49_021982b4: ; 0x021982b4
 data_ov49_021982c4: ; 0x021982c4
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov49_021982c8
 	arm_func_start func_ov49_021982c8
 func_ov49_021982c8: ; 0x021982c8
@@ -3608,6 +3611,8 @@ _02198464: .word 0x45514152
 _02198468: .word func_ov49_02197cf4
 _0219846c: .word func_0203e7b4
 _02198470: .word data_ov49_0219896c
+
+	.section .sinit
 	.global data_ov49_02198474
 data_ov49_02198474: ; 0x02198474
 	.byte 0xc8, 0x82, 0x19, 0x02
@@ -3617,30 +3622,8 @@ data_ov49_02198478: ; 0x02198478
 	.global data_ov49_0219847c
 data_ov49_0219847c: ; 0x0219847c
 	.byte 0x34, 0x84, 0x19, 0x02
-	.global data_ov49_02198480
-data_ov49_02198480: ; 0x02198480
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_02198484
-data_ov49_02198484: ; 0x02198484
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_02198488
-data_ov49_02198488: ; 0x02198488
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_0219848c
-data_ov49_0219848c: ; 0x0219848c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_02198490
-data_ov49_02198490: ; 0x02198490
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_02198494
-data_ov49_02198494: ; 0x02198494
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_02198498
-data_ov49_02198498: ; 0x02198498
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov49_0219849c
-data_ov49_0219849c: ; 0x0219849c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov49_021984a0
 data_ov49_021984a0: ; 0x021984a0
 	.ascii "brg"

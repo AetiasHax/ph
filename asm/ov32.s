@@ -10862,6 +10862,8 @@ _02184b98: .word 0x00000266
 _02184b9c: .word data_027e0e60
 _02184ba0: .word 0x0000059a
 _02184ba4: .word data_ov00_020e9370
+
+	.rodata
 	.global data_ov32_02184ba8
 data_ov32_02184ba8: ; 0x02184ba8
 	.ascii "eye"
@@ -11141,6 +11143,7 @@ data_ov32_02184d34: ; 0x02184d34
 data_ov32_02184d38: ; 0x02184d38
 	.byte 0x03, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov32_02184d3c
 	arm_func_start func_ov32_02184d3c
 func_ov32_02184d3c: ; 0x02184d3c
@@ -11607,6 +11610,8 @@ _021853b8: .word 0x49434848
 _021853bc: .word func_ov32_0218468c
 _021853c0: .word func_0203e7b4
 _021853c4: .word data_ov32_021862f0
+
+	.section .sinit
 	.global data_ov32_021853c8
 data_ov32_021853c8: ; 0x021853c8
 	.byte 0x3c, 0x4d, 0x18, 0x02
@@ -11631,24 +11636,8 @@ data_ov32_021853e0: ; 0x021853e0
 	.global data_ov32_021853e4
 data_ov32_021853e4: ; 0x021853e4
 	.byte 0x88, 0x53, 0x18, 0x02
-	.global data_ov32_021853e8
-data_ov32_021853e8: ; 0x021853e8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov32_021853ec
-data_ov32_021853ec: ; 0x021853ec
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov32_021853f0
-data_ov32_021853f0: ; 0x021853f0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov32_021853f4
-data_ov32_021853f4: ; 0x021853f4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov32_021853f8
-data_ov32_021853f8: ; 0x021853f8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov32_021853fc
-data_ov32_021853fc: ; 0x021853fc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov32_02185400
 data_ov32_02185400: ; 0x02185400
 	.ascii "CHU:/chuc.nsbtp"

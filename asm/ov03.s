@@ -21203,6 +21203,8 @@ func_ov03_020fc448: ; 0x020fc448
 	ldrb r0, [r0, #0x12c]
 	bx lr
 	arm_func_end func_ov03_020fc448
+
+	.rodata
 	.global data_ov03_020fc454
 data_ov03_020fc454: ; 0x020fc454
 	.byte 0x03
@@ -42881,6 +42883,7 @@ data_ov03_020ffe20: ; 0x020ffe20
 data_ov03_020ffe24: ; 0x020ffe24
 	.byte 0xb4, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov03_020ffe28
 	arm_func_start func_ov03_020ffe28
 func_ov03_020ffe28: ; 0x020ffe28
@@ -43039,6 +43042,8 @@ _020fffbc: .word data_ov03_02100ab0
 _020fffc0: .word func_ov03_020fbcc8
 _020fffc4: .word func_0203ebc8
 _020fffc8: .word data_ov03_02100ab8
+
+	.section .sinit
 	.global data_ov03_020fffcc
 data_ov03_020fffcc: ; 0x020fffcc
 	.byte 0x28, 0xfe, 0x0f, 0x02
@@ -43066,18 +43071,8 @@ data_ov03_020fffe8: ; 0x020fffe8
 	.global data_ov03_020fffec
 data_ov03_020fffec: ; 0x020fffec
 	.byte 0x94, 0xff, 0x0f, 0x02
-	.global data_ov03_020ffff0
-data_ov03_020ffff0: ; 0x020ffff0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov03_020ffff4
-data_ov03_020ffff4: ; 0x020ffff4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov03_020ffff8
-data_ov03_020ffff8: ; 0x020ffff8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov03_020ffffc
-data_ov03_020ffffc: ; 0x020ffffc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov03_02100000
 data_ov03_02100000: ; 0x02100000
 	.ascii "brg"

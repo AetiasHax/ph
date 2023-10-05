@@ -3815,6 +3815,8 @@ func_ov50_021987c4: ; 0x021987c4
 	mov r0, #1
 	bx lr
 	arm_func_end func_ov50_021987c4
+
+	.rodata
 	.global data_ov50_021987cc
 data_ov50_021987cc: ; 0x021987cc
 	.ascii "wait"
@@ -3887,6 +3889,7 @@ data_ov50_02198824: ; 0x02198824
 data_ov50_02198828: ; 0x02198828
 	.byte 0x8e, 0x03, 0x8e, 0x03
 
+	.section .init
 	.global func_ov50_0219882c
 	arm_func_start func_ov50_0219882c
 func_ov50_0219882c: ; 0x0219882c
@@ -3993,24 +3996,16 @@ _02198998: .word 0x00001b33
 _0219899c: .word data_ov50_02198ad8
 _021989a0: .word func_ov00_020cceec
 _021989a4: .word data_ov50_02198ce0
+
+	.section .sinit
 	.global data_ov50_021989a8
 data_ov50_021989a8: ; 0x021989a8
 	.byte 0x2c, 0x88, 0x19, 0x02
 	.global data_ov50_021989ac
 data_ov50_021989ac: ; 0x021989ac
 	.byte 0x90, 0x88, 0x19, 0x02
-	.global data_ov50_021989b0
-data_ov50_021989b0: ; 0x021989b0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov50_021989b4
-data_ov50_021989b4: ; 0x021989b4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov50_021989b8
-data_ov50_021989b8: ; 0x021989b8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov50_021989bc
-data_ov50_021989bc: ; 0x021989bc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov50_021989c0
 data_ov50_021989c0: ; 0x021989c0
 	.byte 0x00, 0x00, 0x00, 0x00

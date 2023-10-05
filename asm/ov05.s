@@ -20687,6 +20687,8 @@ func_ov05_02112294: ; 0x02112294
 	str r1, [r0]
 	bx lr
 	arm_func_end func_ov05_02112294
+
+	.rodata
 	.global data_ov05_021122a0
 data_ov05_021122a0: ; 0x021122a0
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -20902,6 +20904,7 @@ data_ov05_021123b4: ; 0x021123b4
 data_ov05_021123b8: ; 0x021123b8
 	.byte 0x00, 0xf0, 0x00, 0x00
 
+	.section .sinit
 	.global func_ov05_021123bc
 	arm_func_start func_ov05_021123bc
 func_ov05_021123bc: ; 0x021123bc
@@ -20979,15 +20982,8 @@ data_ov05_0211246c: ; 0x0211246c
 	.global data_ov05_02112470
 data_ov05_02112470: ; 0x02112470
 	.byte 0x20, 0x24, 0x11, 0x02
-	.global data_ov05_02112474
-data_ov05_02112474: ; 0x02112474
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov05_02112478
-data_ov05_02112478: ; 0x02112478
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov05_0211247c
-data_ov05_0211247c: ; 0x0211247c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov05_02112480
 data_ov05_02112480: ; 0x02112480
 	.ascii "brg"

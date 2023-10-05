@@ -12009,6 +12009,8 @@ _021476a8: .word data_ov60_021477c4
 _021476ac: .word func_ov60_02147210
 _021476b0: .word func_ov60_021471f0
 _021476b4: .word func_ov60_02147208
+
+	.rodata
 	.global data_ov60_021476b8
 data_ov60_021476b8: ; 0x021476b8
 	.byte 0x06, 0x00, 0x00, 0x00
@@ -12049,20 +12051,12 @@ data_ov60_021476e4: ; 0x021476e4
 data_ov60_021476e8: ; 0x021476e8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov60_021476ec
-data_ov60_021476ec: ; 0x021476ec
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov60_021476f0
-data_ov60_021476f0: ; 0x021476f0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov60_021476f4
-data_ov60_021476f4: ; 0x021476f4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov60_021476f8
-data_ov60_021476f8: ; 0x021476f8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov60_021476fc
-data_ov60_021476fc: ; 0x021476fc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov60_02147700
 data_ov60_02147700: ; 0x02147700
 	.byte 0xff, 0xff, 0xff, 0xff

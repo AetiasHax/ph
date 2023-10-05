@@ -14798,6 +14798,8 @@ _020f868c:
 	bl func_0201f1ac
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov01_020f8658
+
+	.rodata
 	.global data_ov01_020f86b4
 data_ov01_020f86b4: ; 0x020f86b4
 	.byte 0x02, 0x00, 0x00, 0x00
@@ -15137,24 +15139,12 @@ data_ov01_020f88f0: ; 0x020f88f0
 	.global data_ov01_020f88f2
 data_ov01_020f88f2: ; 0x020f88f2
 	.byte 0x02, 0x00
-	.global data_ov01_020f88f4
-data_ov01_020f88f4: ; 0x020f88f4
-	.byte 0x00, 0x00
-	.global data_ov01_020f88f6
-data_ov01_020f88f6: ; 0x020f88f6
-	.byte 0x00, 0x00
-	.global data_ov01_020f88f8
-data_ov01_020f88f8: ; 0x020f88f8
-	.byte 0x00, 0x00
-	.global data_ov01_020f88fa
-data_ov01_020f88fa: ; 0x020f88fa
-	.byte 0x00, 0x00
-	.global data_ov01_020f88fc
-data_ov01_020f88fc: ; 0x020f88fc
-	.byte 0x00, 0x00
-	.global data_ov01_020f88fe
-data_ov01_020f88fe: ; 0x020f88fe
-	.byte 0x00, 0x00
+
+	.section .init
+	
+	.section .sinit
+
+	.data
 	.global data_ov01_020f8900
 data_ov01_020f8900: ; 0x020f8900
 	.byte 0x00, 0x00, 0x01, 0x00

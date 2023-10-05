@@ -6331,6 +6331,8 @@ func_ov45_0218e20c: ; 0x0218e20c
 	bl func_020328a8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov45_0218e20c
+
+	.rodata
 	.global data_ov45_0218e278
 data_ov45_0218e278: ; 0x0218e278
 	.byte 0x00, 0x08, 0x00, 0x00
@@ -6568,6 +6570,7 @@ data_ov45_0218e3e0: ; 0x0218e3e0
 data_ov45_0218e3e4: ; 0x0218e3e4
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov45_0218e3e8
 	arm_func_start func_ov45_0218e3e8
 func_ov45_0218e3e8: ; 0x0218e3e8
@@ -6633,6 +6636,8 @@ _0218e498: .word 0x4a554447
 _0218e49c: .word func_ov45_0218c4c4
 _0218e4a0: .word func_0203e7b4
 _0218e4a4: .word data_ov45_0218edc8
+
+	.section .sinit
 	.global data_ov45_0218e4a8
 data_ov45_0218e4a8: ; 0x0218e4a8
 	.byte 0xe8, 0xe3, 0x18, 0x02
@@ -6642,15 +6647,8 @@ data_ov45_0218e4ac: ; 0x0218e4ac
 	.global data_ov45_0218e4b0
 data_ov45_0218e4b0: ; 0x0218e4b0
 	.byte 0x68, 0xe4, 0x18, 0x02
-	.global data_ov45_0218e4b4
-data_ov45_0218e4b4: ; 0x0218e4b4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov45_0218e4b8
-data_ov45_0218e4b8: ; 0x0218e4b8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov45_0218e4bc
-data_ov45_0218e4bc: ; 0x0218e4bc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov45_0218e4c0
 data_ov45_0218e4c0: ; 0x0218e4c0
 	.ascii "IMA"

@@ -15777,6 +15777,8 @@ func_ov30_021885b8: ; 0x021885b8
 	movne r0, #0
 	bx lr
 	arm_func_end func_ov30_021885b8
+
+	.rodata
 	.global data_ov30_021885d4
 data_ov30_021885d4: ; 0x021885d4
 	.ascii "head_jnt"
@@ -16184,6 +16186,7 @@ data_ov30_0218881c: ; 0x0218881c
 data_ov30_02188820: ; 0x02188820
 	.byte 0x00, 0x10, 0x00, 0x00
 
+	.section .init
 	.global func_ov30_02188824
 	arm_func_start func_ov30_02188824
 func_ov30_02188824: ; 0x02188824
@@ -16325,21 +16328,16 @@ _02188a1c: .word 0x43484f42
 _02188a20: .word func_ov30_021847b0
 _02188a24: .word func_0203e7b4
 _02188a28: .word data_ov30_02189530
+
+	.section .sinit
 	.global data_ov30_02188a2c
 data_ov30_02188a2c: ; 0x02188a2c
 	.byte 0x24, 0x88, 0x18, 0x02
 	.global data_ov30_02188a30
 data_ov30_02188a30: ; 0x02188a30
 	.byte 0xec, 0x89, 0x18, 0x02
-	.global data_ov30_02188a34
-data_ov30_02188a34: ; 0x02188a34
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov30_02188a38
-data_ov30_02188a38: ; 0x02188a38
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov30_02188a3c
-data_ov30_02188a3c: ; 0x02188a3c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov30_02188a40
 data_ov30_02188a40: ; 0x02188a40
 	.byte 0x00, 0x00, 0x00, 0x00

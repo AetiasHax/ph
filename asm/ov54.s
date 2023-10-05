@@ -904,6 +904,8 @@ func_ov54_021998d4: ; 0x021998d4
 	.align 2, 0
 	arm_func_end func_ov54_021998d4
 _02199910: .word 0x504f5354
+
+	.rodata
 	.global data_ov54_02199914
 data_ov54_02199914: ; 0x02199914
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -917,6 +919,7 @@ data_ov54_0219991c: ; 0x0219991c
 data_ov54_02199920: ; 0x02199920
 	.byte 0x00, 0x08, 0x00, 0x00
 
+	.section .init
 	.global func_ov54_02199924
 	arm_func_start func_ov54_02199924
 func_ov54_02199924: ; 0x02199924
@@ -934,15 +937,13 @@ func_ov54_02199924: ; 0x02199924
 _02199948: .word data_ov54_02199a2c
 _0219994c: .word 0x020a95a5
 _02199950: .word data_ov54_02199a20
+
+	.section .sinit
 	.global data_ov54_02199954
 data_ov54_02199954: ; 0x02199954
 	.byte 0x24, 0x99, 0x19, 0x02
-	.global data_ov54_02199958
-data_ov54_02199958: ; 0x02199958
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov54_0219995c
-data_ov54_0219995c: ; 0x0219995c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov54_02199960
 data_ov54_02199960: ; 0x02199960
 	.ascii "brg"

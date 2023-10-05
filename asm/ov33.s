@@ -4727,6 +4727,8 @@ func_ov33_0217fa5c: ; 0x0217fa5c
 	arm_func_end func_ov33_0217fa5c
 _0217fac4: .word 0x00000666
 _0217fac8: .word data_ov00_020e9370
+
+	.rodata
 	.global data_ov33_0217facc
 data_ov33_0217facc: ; 0x0217facc
 	.ascii "walk"
@@ -4850,6 +4852,7 @@ data_ov33_0217fb88: ; 0x0217fb88
 data_ov33_0217fb8c: ; 0x0217fb8c
 	.byte 0x00, 0x50, 0x00, 0x00
 
+	.section .init
 	.global func_ov33_0217fb90
 	arm_func_start func_ov33_0217fb90
 func_ov33_0217fb90: ; 0x0217fb90
@@ -5072,6 +5075,8 @@ _0217fe84: .word 0x4b4f4b41
 _0217fe88: .word func_ov33_0217f658
 _0217fe8c: .word func_0203e7b4
 _0217fe90: .word data_ov33_02180618
+
+	.section .sinit
 	.global data_ov33_0217fe94
 data_ov33_0217fe94: ; 0x0217fe94
 	.byte 0x90, 0xfb, 0x17, 0x02
@@ -5087,24 +5092,8 @@ data_ov33_0217fea0: ; 0x0217fea0
 	.global data_ov33_0217fea4
 data_ov33_0217fea4: ; 0x0217fea4
 	.byte 0x54, 0xfe, 0x17, 0x02
-	.global data_ov33_0217fea8
-data_ov33_0217fea8: ; 0x0217fea8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov33_0217feac
-data_ov33_0217feac: ; 0x0217feac
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov33_0217feb0
-data_ov33_0217feb0: ; 0x0217feb0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov33_0217feb4
-data_ov33_0217feb4: ; 0x0217feb4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov33_0217feb8
-data_ov33_0217feb8: ; 0x0217feb8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov33_0217febc
-data_ov33_0217febc: ; 0x0217febc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov33_0217fec0
 data_ov33_0217fec0: ; 0x0217fec0
 	.byte 0x00, 0x00, 0x00, 0x00

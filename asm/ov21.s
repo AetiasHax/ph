@@ -4255,6 +4255,8 @@ func_ov21_02170bcc: ; 0x02170bcc
 func_ov21_02170bd0: ; 0x02170bd0
 	bx lr
 	arm_func_end func_ov21_02170bd0
+
+	.rodata
 	.global data_ov21_02170bd4
 data_ov21_02170bd4: ; 0x02170bd4
 	.byte 0x26, 0x00, 0x00, 0x00
@@ -4445,6 +4447,7 @@ data_ov21_02170ce4: ; 0x02170ce4
 data_ov21_02170ce8: ; 0x02170ce8
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov21_02170cec
 	arm_func_start func_ov21_02170cec
 func_ov21_02170cec: ; 0x02170cec
@@ -4644,6 +4647,8 @@ _02170f54: .word data_ov21_02171ca0
 _02170f58: .word func_ov21_02170974
 _02170f5c: .word func_0203ebc8
 _02170f60: .word data_ov21_02171ca8
+
+	.section .sinit
 	.global data_ov21_02170f64
 data_ov21_02170f64: ; 0x02170f64
 	.byte 0xec, 0x0c, 0x17, 0x02
@@ -4665,30 +4670,8 @@ data_ov21_02170f78: ; 0x02170f78
 	.global data_ov21_02170f7c
 data_ov21_02170f7c: ; 0x02170f7c
 	.byte 0x2c, 0x0f, 0x17, 0x02
-	.global data_ov21_02170f80
-data_ov21_02170f80: ; 0x02170f80
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f84
-data_ov21_02170f84: ; 0x02170f84
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f88
-data_ov21_02170f88: ; 0x02170f88
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f8c
-data_ov21_02170f8c: ; 0x02170f8c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f90
-data_ov21_02170f90: ; 0x02170f90
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f94
-data_ov21_02170f94: ; 0x02170f94
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f98
-data_ov21_02170f98: ; 0x02170f98
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov21_02170f9c
-data_ov21_02170f9c: ; 0x02170f9c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov21_02170fa0
 data_ov21_02170fa0: ; 0x02170fa0
 	.ascii "brg"

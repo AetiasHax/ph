@@ -5680,6 +5680,8 @@ func_ov48_02194648: ; 0x02194648
 	.align 2, 0
 	arm_func_end func_ov48_02194648
 _02194658: .word func_020197bc
+
+	.rodata
 	.global data_ov48_0219465c
 data_ov48_0219465c: ; 0x0219465c
 	.ascii "wait"
@@ -5747,6 +5749,7 @@ data_ov48_021946b8: ; 0x021946b8
 data_ov48_021946bc: ; 0x021946bc
 	.byte 0x00, 0x70, 0x00, 0x00
 
+	.section .init
 	.global func_ov48_021946c0
 	arm_func_start func_ov48_021946c0
 func_ov48_021946c0: ; 0x021946c0
@@ -6043,6 +6046,8 @@ _02194ac4: .word 0x424d5345
 _02194ac8: .word func_ov48_021940ac
 _02194acc: .word func_0203e7b4
 _02194ad0: .word data_ov48_021954d8
+
+	.section .sinit
 	.global data_ov48_02194ad4
 data_ov48_02194ad4: ; 0x02194ad4
 	.byte 0xc0, 0x46, 0x19, 0x02
@@ -6061,21 +6066,8 @@ data_ov48_02194ae4: ; 0x02194ae4
 	.global data_ov48_02194ae8
 data_ov48_02194ae8: ; 0x02194ae8
 	.byte 0x94, 0x4a, 0x19, 0x02
-	.global data_ov48_02194aec
-data_ov48_02194aec: ; 0x02194aec
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov48_02194af0
-data_ov48_02194af0: ; 0x02194af0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov48_02194af4
-data_ov48_02194af4: ; 0x02194af4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov48_02194af8
-data_ov48_02194af8: ; 0x02194af8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov48_02194afc
-data_ov48_02194afc: ; 0x02194afc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov48_02194b00
 data_ov48_02194b00: ; 0x02194b00
 	.ascii "brg"

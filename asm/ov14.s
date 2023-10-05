@@ -66060,6 +66060,8 @@ _02153b08:
 	arm_func_end func_ov14_02153a48
 _02153b48: .word data_027e0d38
 _02153b4c: .word data_027e0fb4
+
+	.rodata
 	.global data_ov14_02153b50
 data_ov14_02153b50: ; 0x02153b50
 	.byte 0x10, 0x3c
@@ -67234,6 +67236,7 @@ data_ov14_021541d4: ; 0x021541d4
 	.ascii "Menu/UI_main/UIMBig.bin"
 	.byte 0x00
 
+	.section .init
 	.global func_ov14_021541ec
 	arm_func_start func_ov14_021541ec
 func_ov14_021541ec: ; 0x021541ec
@@ -69139,6 +69142,8 @@ _0215583c: .word data_ov14_0215b480
 _02155840: .word func_ov14_02152880
 _02155844: .word func_0203ebc8
 _02155848: .word data_ov14_0215b488
+
+	.section .sinit
 	.global data_ov14_0215584c
 data_ov14_0215584c: ; 0x0215584c
 	.byte 0xec, 0x41, 0x15, 0x02
@@ -69376,24 +69381,8 @@ data_ov14_02155980: ; 0x02155980
 	.global data_ov14_02155984
 data_ov14_02155984: ; 0x02155984
 	.byte 0x14, 0x58, 0x15, 0x02
-	.global data_ov14_02155988
-data_ov14_02155988: ; 0x02155988
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_0215598c
-data_ov14_0215598c: ; 0x0215598c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_02155990
-data_ov14_02155990: ; 0x02155990
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_02155994
-data_ov14_02155994: ; 0x02155994
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_02155998
-data_ov14_02155998: ; 0x02155998
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_0215599c
-data_ov14_0215599c: ; 0x0215599c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov14_021559a0
 data_ov14_021559a0: ; 0x021559a0
 	.ascii "brg"

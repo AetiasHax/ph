@@ -6914,6 +6914,8 @@ func_ov44_0218e8b4: ; 0x0218e8b4
 	.align 2, 0
 	arm_func_end func_ov44_0218e8b4
 _0218e980: .word 0x0000019a
+
+	.rodata
 	.global data_ov44_0218e984
 data_ov44_0218e984: ; 0x0218e984
 	.ascii "wait1"
@@ -7103,6 +7105,7 @@ data_ov44_0218ea94: ; 0x0218ea94
 data_ov44_0218ea98: ; 0x0218ea98
 	.byte 0x9a, 0x01, 0x00, 0x00
 
+	.section .init
 	.global func_ov44_0218ea9c
 	arm_func_start func_ov44_0218ea9c
 func_ov44_0218ea9c: ; 0x0218ea9c
@@ -7610,6 +7613,8 @@ _0218f1bc: .word 0x52415448
 _0218f1c0: .word func_ov44_0218e320
 _0218f1c4: .word func_0203e7b4
 _0218f1c8: .word data_ov44_0219001c
+
+	.section .sinit
 	.global data_ov44_0218f1cc
 data_ov44_0218f1cc: ; 0x0218f1cc
 	.byte 0x9c, 0xea, 0x18, 0x02
@@ -7634,21 +7639,8 @@ data_ov44_0218f1e4: ; 0x0218f1e4
 	.global data_ov44_0218f1e8
 data_ov44_0218f1e8: ; 0x0218f1e8
 	.byte 0x8c, 0xf1, 0x18, 0x02
-	.global data_ov44_0218f1ec
-data_ov44_0218f1ec: ; 0x0218f1ec
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov44_0218f1f0
-data_ov44_0218f1f0: ; 0x0218f1f0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov44_0218f1f4
-data_ov44_0218f1f4: ; 0x0218f1f4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov44_0218f1f8
-data_ov44_0218f1f8: ; 0x0218f1f8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov44_0218f1fc
-data_ov44_0218f1fc: ; 0x0218f1fc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov44_0218f200
 data_ov44_0218f200: ; 0x0218f200
 	.byte 0x00, 0x00, 0x00, 0x00

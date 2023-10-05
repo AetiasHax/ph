@@ -72861,6 +72861,8 @@ func_ov61_0217a1fc: ; 0x0217a1fc
 	movne r0, #0
 	bx lr
 	arm_func_end func_ov61_0217a1fc
+
+	.rodata
 	.global data_ov61_0217a210
 data_ov61_0217a210: ; 0x0217a210
 	.byte 0x03, 0x00, 0x00, 0x00
@@ -75222,23 +75224,12 @@ data_ov61_0217a600: ; 0x0217a600
 data_ov61_0217a604: ; 0x0217a604
 	.byte 0xc4, 0xe9, 0x17, 0x02
 	.global data_ov61_0217a608
-data_ov61_0217a608: ; 0x0217a608
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov61_0217a60c
-data_ov61_0217a60c: ; 0x0217a60c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov61_0217a610
-data_ov61_0217a610: ; 0x0217a610
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov61_0217a614
-data_ov61_0217a614: ; 0x0217a614
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov61_0217a618
-data_ov61_0217a618: ; 0x0217a618
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov61_0217a61c
-data_ov61_0217a61c: ; 0x0217a61c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov61_0217a620
 data_ov61_0217a620: ; 0x0217a620
 	.ascii "https://nas.test.nintendowifi.net/ac"

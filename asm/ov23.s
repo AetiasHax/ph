@@ -14044,6 +14044,8 @@ _02179020: .word data_027e0d38
 _02179024: .word 0xfffff99a
 _02179028: .word data_ov23_0217ab30
 _0217902c: .word data_ov23_0217ab20
+
+	.rodata
 	.global data_ov23_02179030
 data_ov23_02179030: ; 0x02179030
 	.byte 0x33, 0x0b, 0x00, 0x00
@@ -15183,6 +15185,7 @@ data_ov23_02179690: ; 0x02179690
 data_ov23_02179694: ; 0x02179694
 	.byte 0x00, 0x10, 0x00, 0x00
 
+	.section .init
 	.global func_ov23_02179698
 	arm_func_start func_ov23_02179698
 func_ov23_02179698: ; 0x02179698
@@ -15662,6 +15665,8 @@ _02179cd0: .word data_ov23_0217ad64
 _02179cd4: .word func_ov23_02177978
 _02179cd8: .word func_0203ebc8
 _02179cdc: .word data_ov23_0217ad6c
+
+	.section .sinit
 	.global data_ov23_02179ce0
 data_ov23_02179ce0: ; 0x02179ce0
 	.byte 0x98, 0x96, 0x17, 0x02
@@ -15701,15 +15706,8 @@ data_ov23_02179d0c: ; 0x02179d0c
 	.global data_ov23_02179d10
 data_ov23_02179d10: ; 0x02179d10
 	.byte 0xa8, 0x9c, 0x17, 0x02
-	.global data_ov23_02179d14
-data_ov23_02179d14: ; 0x02179d14
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov23_02179d18
-data_ov23_02179d18: ; 0x02179d18
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov23_02179d1c
-data_ov23_02179d1c: ; 0x02179d1c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov23_02179d20
 data_ov23_02179d20: ; 0x02179d20
 	.byte 0x10, 0xe0, 0x16, 0x02

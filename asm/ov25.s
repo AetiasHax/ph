@@ -14144,6 +14144,8 @@ func_ov25_02179320: ; 0x02179320
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov25_02179320
+
+	.rodata
 	.global data_ov25_0217933c
 data_ov25_0217933c: ; 0x0217933c
 	.byte 0x04, 0x00, 0x00, 0x00
@@ -14683,6 +14685,7 @@ data_ov25_02179678: ; 0x02179678
 data_ov25_0217967c: ; 0x0217967c
 	.byte 0x04, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov25_02179680
 	arm_func_start func_ov25_02179680
 func_ov25_02179680: ; 0x02179680
@@ -15074,6 +15077,8 @@ _02179b88: .word data_ov25_0217a9e4
 _02179b8c: .word data_ov25_0217a680
 _02179b90: .word func_ov00_020cceec
 _02179b94: .word data_ov25_0217aa04
+
+	.section .sinit
 	.global data_ov25_02179b98
 data_ov25_02179b98: ; 0x02179b98
 	.byte 0x80, 0x96, 0x17, 0x02
@@ -15107,27 +15112,8 @@ data_ov25_02179bbc: ; 0x02179bbc
 	.global data_ov25_02179bc0
 data_ov25_02179bc0: ; 0x02179bc0
 	.byte 0x8c, 0x9a, 0x17, 0x02
-	.global data_ov25_02179bc4
-data_ov25_02179bc4: ; 0x02179bc4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bc8
-data_ov25_02179bc8: ; 0x02179bc8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bcc
-data_ov25_02179bcc: ; 0x02179bcc
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bd0
-data_ov25_02179bd0: ; 0x02179bd0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bd4
-data_ov25_02179bd4: ; 0x02179bd4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bd8
-data_ov25_02179bd8: ; 0x02179bd8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov25_02179bdc
-data_ov25_02179bdc: ; 0x02179bdc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov25_02179be0
 data_ov25_02179be0: ; 0x02179be0
 	.byte 0x00, 0x00, 0x00, 0x00

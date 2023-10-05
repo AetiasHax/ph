@@ -9286,6 +9286,8 @@ func_ov02_020f6718: ; 0x020f6718
 	.align 2, 0
 	arm_func_end func_ov02_020f6718
 _020f6728: .word func_020373b4 + 1
+
+	.rodata
 	.global data_ov02_020f672c
 data_ov02_020f672c: ; 0x020f672c
 	.ascii "}"
@@ -9876,6 +9878,7 @@ data_ov02_020f6970: ; 0x020f6970
 data_ov02_020f6974: ; 0x020f6974
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov02_020f6978
 	arm_func_start func_ov02_020f6978
 func_ov02_020f6978: ; 0x020f6978
@@ -9892,27 +9895,13 @@ func_ov02_020f6978: ; 0x020f6978
 _020f6998: .word data_ov02_020f716c
 _020f699c: .word func_ov02_020f66d0
 _020f69a0: .word data_ov02_020f7160
+
+	.section .sinit
 	.global data_ov02_020f69a4
 data_ov02_020f69a4: ; 0x020f69a4
 	.byte 0x78, 0x69, 0x0f, 0x02
-	.global data_ov02_020f69a8
-data_ov02_020f69a8: ; 0x020f69a8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov02_020f69ac
-data_ov02_020f69ac: ; 0x020f69ac
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov02_020f69b0
-data_ov02_020f69b0: ; 0x020f69b0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov02_020f69b4
-data_ov02_020f69b4: ; 0x020f69b4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov02_020f69b8
-data_ov02_020f69b8: ; 0x020f69b8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov02_020f69bc
-data_ov02_020f69bc: ; 0x020f69bc
-	.byte 0x00, 0x00, 0x00, 0x00
+	
+	.data
 	.global data_ov02_020f69c0
 data_ov02_020f69c0: ; 0x020f69c0
 	.ascii "brg"

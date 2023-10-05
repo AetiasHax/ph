@@ -4559,6 +4559,8 @@ func_ov43_0218d314: ; 0x0218d314
 	moveq r0, #0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov43_0218d314
+
+	.rodata
 	.global data_ov43_0218d340
 data_ov43_0218d340: ; 0x0218d340
 	.ascii "walk"
@@ -4696,6 +4698,7 @@ data_ov43_0218d40c: ; 0x0218d40c
 data_ov43_0218d410: ; 0x0218d410
 	.byte 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov43_0218d414
 	arm_func_start func_ov43_0218d414
 func_ov43_0218d414: ; 0x0218d414
@@ -4814,30 +4817,16 @@ _0218d5b0: .word 0x50425a4b
 _0218d5b4: .word func_ov43_0218b018
 _0218d5b8: .word func_0203e7b4
 _0218d5bc: .word data_ov43_0218db4c
+
+	.section .sinit
 	.global data_ov43_0218d5c0
 data_ov43_0218d5c0: ; 0x0218d5c0
 	.byte 0x14, 0xd4, 0x18, 0x02
 	.global data_ov43_0218d5c4
 data_ov43_0218d5c4: ; 0x0218d5c4
 	.byte 0x80, 0xd5, 0x18, 0x02
-	.global data_ov43_0218d5c8
-data_ov43_0218d5c8: ; 0x0218d5c8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov43_0218d5cc
-data_ov43_0218d5cc: ; 0x0218d5cc
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov43_0218d5d0
-data_ov43_0218d5d0: ; 0x0218d5d0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov43_0218d5d4
-data_ov43_0218d5d4: ; 0x0218d5d4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov43_0218d5d8
-data_ov43_0218d5d8: ; 0x0218d5d8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov43_0218d5dc
-data_ov43_0218d5dc: ; 0x0218d5dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov43_0218d5e0
 data_ov43_0218d5e0: ; 0x0218d5e0
 	.byte 0x00, 0x00, 0x00, 0x00

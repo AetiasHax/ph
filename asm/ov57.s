@@ -2169,6 +2169,8 @@ func_ov57_0219a980: ; 0x0219a980
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov57_0219a980
+
+	.rodata
 	.global data_ov57_0219a994
 data_ov57_0219a994: ; 0x0219a994
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -2179,6 +2181,7 @@ data_ov57_0219a998: ; 0x0219a998
 data_ov57_0219a99c: ; 0x0219a99c
 	.byte 0xcd, 0x04, 0x00, 0x00
 
+	.section .init
 	.global func_ov57_0219a9a0
 	arm_func_start func_ov57_0219a9a0
 func_ov57_0219a9a0: ; 0x0219a9a0
@@ -2218,18 +2221,16 @@ _0219aa00: .word data_ov57_0219aac8
 _0219aa04: .word data_ov57_0219ab1c
 _0219aa08: .word func_ov57_0219a980
 _0219aa0c: .word data_ov57_0219ab1c
+
+	.section .sinit
 	.global data_ov57_0219aa10
 data_ov57_0219aa10: ; 0x0219aa10
 	.byte 0xa0, 0xa9, 0x19, 0x02
 	.global data_ov57_0219aa14
 data_ov57_0219aa14: ; 0x0219aa14
 	.byte 0xcc, 0xa9, 0x19, 0x02
-	.global data_ov57_0219aa18
-data_ov57_0219aa18: ; 0x0219aa18
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov57_0219aa1c
-data_ov57_0219aa1c: ; 0x0219aa1c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov57_0219aa20
 data_ov57_0219aa20: ; 0x0219aa20
 	.byte 0x00, 0x00, 0x00, 0x00

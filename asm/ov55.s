@@ -813,6 +813,8 @@ _021997a0: .word data_ov55_02199890
 _021997a4: .word data_ov00_020eec9c
 _021997a8: .word 0x0000011b
 _021997ac: .word data_ov00_020eec68
+
+	.rodata
 	.global data_ov55_021997b0
 data_ov55_021997b0: ; 0x021997b0
 	.ascii "mat_rev_bin_2"
@@ -835,6 +837,7 @@ data_ov55_021997d8: ; 0x021997d8
 data_ov55_021997e8: ; 0x021997e8
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov55_021997ec
 	arm_func_start func_ov55_021997ec
 func_ov55_021997ec: ; 0x021997ec
@@ -852,33 +855,13 @@ func_ov55_021997ec: ; 0x021997ec
 _02199810: .word data_ov55_021998ac
 _02199814: .word func_ov00_020a95a4 + 1
 _02199818: .word data_ov55_021998a0
+
+	.section .sinit
 	.global data_ov55_0219981c
 data_ov55_0219981c: ; 0x0219981c
 	.byte 0xec, 0x97, 0x19, 0x02
-	.global data_ov55_02199820
-data_ov55_02199820: ; 0x02199820
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_02199824
-data_ov55_02199824: ; 0x02199824
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_02199828
-data_ov55_02199828: ; 0x02199828
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_0219982c
-data_ov55_0219982c: ; 0x0219982c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_02199830
-data_ov55_02199830: ; 0x02199830
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_02199834
-data_ov55_02199834: ; 0x02199834
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_02199838
-data_ov55_02199838: ; 0x02199838
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov55_0219983c
-data_ov55_0219983c: ; 0x0219983c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov55_02199840
 data_ov55_02199840: ; 0x02199840
 	.byte 0x1e, 0x00, 0x00, 0x00

@@ -10987,6 +10987,8 @@ func_ov34_0218572c: ; 0x0218572c
 func_ov34_0218573c: ; 0x0218573c
 	bx lr
 	arm_func_end func_ov34_0218573c
+
+	.rodata
 	.global data_ov34_02185740
 data_ov34_02185740: ; 0x02185740
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -11150,6 +11152,7 @@ data_ov34_02185810: ; 0x02185810
 data_ov34_02185814: ; 0x02185814
 	.byte 0x29, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov34_02185818
 	arm_func_start func_ov34_02185818
 func_ov34_02185818: ; 0x02185818
@@ -11314,6 +11317,8 @@ _02185a54: .word func_0203e7b4
 _02185a58: .word data_ov34_021863a0
 _02185a5c: .word data_02057200
 _02185a60: .word data_ov34_02186070
+
+	.section .sinit
 	.global data_ov34_02185a64
 data_ov34_02185a64: ; 0x02185a64
 	.byte 0x18, 0x58, 0x18, 0x02
@@ -11323,18 +11328,8 @@ data_ov34_02185a68: ; 0x02185a68
 	.global data_ov34_02185a6c
 data_ov34_02185a6c: ; 0x02185a6c
 	.byte 0xdc, 0x59, 0x18, 0x02
-	.global data_ov34_02185a70
-data_ov34_02185a70: ; 0x02185a70
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov34_02185a74
-data_ov34_02185a74: ; 0x02185a74
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov34_02185a78
-data_ov34_02185a78: ; 0x02185a78
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov34_02185a7c
-data_ov34_02185a7c: ; 0x02185a7c
-	.byte 0x00, 0x00, 0x00, 0x00
+	
+	.data
 	.global data_ov34_02185a80
 data_ov34_02185a80: ; 0x02185a80
 	.ascii "brg"

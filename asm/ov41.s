@@ -5690,6 +5690,8 @@ func_ov41_0218dea8: ; 0x0218dea8
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov41_0218dea8
+
+	.rodata
 	.global data_ov41_0218dec4
 data_ov41_0218dec4: ; 0x0218dec4
 	.byte 0x33, 0x0b, 0x00, 0x00
@@ -6004,6 +6006,7 @@ data_ov41_0218e090: ; 0x0218e090
 data_ov41_0218e094: ; 0x0218e094
 	.byte 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov41_0218e098
 	arm_func_start func_ov41_0218e098
 func_ov41_0218e098: ; 0x0218e098
@@ -6196,6 +6199,8 @@ _0218e2fc: .word 0x00001b33
 _0218e300: .word data_ov41_0218e85c
 _0218e304: .word func_ov00_020cceec
 _0218e308: .word data_ov41_0218eb44
+
+	.section .sinit
 	.global data_ov41_0218e30c
 data_ov41_0218e30c: ; 0x0218e30c
 	.byte 0x98, 0xe0, 0x18, 0x02
@@ -6214,27 +6219,8 @@ data_ov41_0218e31c: ; 0x0218e31c
 	.global data_ov41_0218e320
 data_ov41_0218e320: ; 0x0218e320
 	.byte 0xf8, 0xe1, 0x18, 0x02
-	.global data_ov41_0218e324
-data_ov41_0218e324: ; 0x0218e324
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e328
-data_ov41_0218e328: ; 0x0218e328
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e32c
-data_ov41_0218e32c: ; 0x0218e32c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e330
-data_ov41_0218e330: ; 0x0218e330
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e334
-data_ov41_0218e334: ; 0x0218e334
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e338
-data_ov41_0218e338: ; 0x0218e338
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov41_0218e33c
-data_ov41_0218e33c: ; 0x0218e33c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov41_0218e340
 data_ov41_0218e340: ; 0x0218e340
 	.byte 0x00, 0x00, 0x00, 0x00

@@ -7773,6 +7773,8 @@ func_ov31_02181888: ; 0x02181888
 func_ov31_0218189c: ; 0x0218189c
 	bx lr
 	arm_func_end func_ov31_0218189c
+
+	.rodata
 	.global data_ov31_021818a0
 data_ov31_021818a0: ; 0x021818a0
 	.ascii "MDTI"
@@ -8209,6 +8211,7 @@ data_ov31_02181b64: ; 0x02181b64
 data_ov31_02181b68: ; 0x02181b68
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov31_02181b6c
 	arm_func_start func_ov31_02181b6c
 func_ov31_02181b6c: ; 0x02181b6c
@@ -8557,6 +8560,8 @@ _02182070: .word 0x54455452
 _02182074: .word func_ov31_02181448
 _02182078: .word func_0203e7b4
 _0218207c: .word data_ov31_021841d4
+
+	.section .sinit
 	.global data_ov31_02182080
 data_ov31_02182080: ; 0x02182080
 	.byte 0x6c, 0x1b, 0x18, 0x02
@@ -8569,18 +8574,8 @@ data_ov31_02182088: ; 0x02182088
 	.global data_ov31_0218208c
 data_ov31_0218208c: ; 0x0218208c
 	.byte 0x40, 0x20, 0x18, 0x02
-	.global data_ov31_02182090
-data_ov31_02182090: ; 0x02182090
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov31_02182094
-data_ov31_02182094: ; 0x02182094
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov31_02182098
-data_ov31_02182098: ; 0x02182098
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov31_0218209c
-data_ov31_0218209c: ; 0x0218209c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov31_021820a0
 data_ov31_021820a0: ; 0x021820a0
 	.ascii "brg"

@@ -2773,6 +2773,8 @@ _02197880:
 	mvn r0, #0
 	bx lr
 	arm_func_end func_ov52_02197858
+
+	.rodata
 	.global data_ov52_02197888
 data_ov52_02197888: ; 0x02197888
 	.byte 0x30, 0x00, 0x00, 0x00
@@ -2831,6 +2833,7 @@ data_ov52_021978cc: ; 0x021978cc
 data_ov52_021978d0: ; 0x021978d0
 	.byte 0x66, 0x1a, 0x00, 0x00
 
+	.section .init
 	.global func_ov52_021978d4
 	arm_func_start func_ov52_021978d4
 func_ov52_021978d4: ; 0x021978d4
@@ -2874,15 +2877,16 @@ _02197944: .word 0x4154474e
 _02197948: .word func_ov52_02196ddc
 _0219794c: .word func_0203e7b4
 _02197950: .word data_ov52_02197c74
+
+	.section .sinit
 	.global data_ov52_02197954
 data_ov52_02197954: ; 0x02197954
 	.byte 0xd4, 0x78, 0x19, 0x02
 	.global data_ov52_02197958
 data_ov52_02197958: ; 0x02197958
 	.byte 0x14, 0x79, 0x19, 0x02
-	.global data_ov52_0219795c
-data_ov52_0219795c: ; 0x0219795c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov52_02197960
 data_ov52_02197960: ; 0x02197960
 	.ascii "brg"

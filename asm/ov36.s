@@ -12066,6 +12066,8 @@ _02186688:
 	arm_func_end func_ov36_02186648
 _02186690: .word 0x424f4d42
 _02186694: .word 0x424d5459
+
+	.rodata
 	.global data_ov36_02186698
 data_ov36_02186698: ; 0x02186698
 	.byte 0x7c, 0xdd, 0x17, 0x02
@@ -12905,6 +12907,7 @@ data_ov36_02186bac: ; 0x02186bac
 data_ov36_02186bb0: ; 0x02186bb0
 	.ascii "LLUN"
 
+	.section .init
 	.global func_ov36_02186bb4
 	arm_func_start func_ov36_02186bb4
 func_ov36_02186bb4: ; 0x02186bb4
@@ -12948,15 +12951,16 @@ _02186c24: .word 0x50424652
 _02186c28: .word func_ov36_02185ffc
 _02186c2c: .word func_0203e7b4
 _02186c30: .word data_ov36_02186fc0
+
+	.section .sinit
 	.global data_ov36_02186c34
 data_ov36_02186c34: ; 0x02186c34
 	.byte 0xb4, 0x6b, 0x18, 0x02
 	.global data_ov36_02186c38
 data_ov36_02186c38: ; 0x02186c38
 	.byte 0xf4, 0x6b, 0x18, 0x02
-	.global data_ov36_02186c3c
-data_ov36_02186c3c: ; 0x02186c3c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov36_02186c40
 data_ov36_02186c40: ; 0x02186c40
 	.ascii "brg"

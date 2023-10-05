@@ -13891,6 +13891,8 @@ func_ov37_02187dac: ; 0x02187dac
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov37_02187dac
+	
+	.rodata
 	.global data_ov37_02187dc8
 data_ov37_02187dc8: ; 0x02187dc8
 	.byte 0x04, 0x00, 0x00, 0x00
@@ -15339,6 +15341,7 @@ data_ov37_02188688: ; 0x02188688
 data_ov37_0218868c: ; 0x0218868c
 	.byte 0x08, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov37_02188690
 	arm_func_start func_ov37_02188690
 func_ov37_02188690: ; 0x02188690
@@ -15569,6 +15572,8 @@ _021889a4: .word data_ov37_0218920c
 _021889a8: .word data_ov37_02188f00
 _021889ac: .word func_ov00_020cceec
 _021889b0: .word data_ov37_0218922c
+
+	.section .sinit
 	.global data_ov37_021889b4
 data_ov37_021889b4: ; 0x021889b4
 	.byte 0x90, 0x86, 0x18, 0x02
@@ -15584,24 +15589,8 @@ data_ov37_021889c0: ; 0x021889c0
 	.global data_ov37_021889c4
 data_ov37_021889c4: ; 0x021889c4
 	.byte 0x9c, 0x88, 0x18, 0x02
-	.global data_ov37_021889c8
-data_ov37_021889c8: ; 0x021889c8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov37_021889cc
-data_ov37_021889cc: ; 0x021889cc
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov37_021889d0
-data_ov37_021889d0: ; 0x021889d0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov37_021889d4
-data_ov37_021889d4: ; 0x021889d4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov37_021889d8
-data_ov37_021889d8: ; 0x021889d8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov37_021889dc
-data_ov37_021889dc: ; 0x021889dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov37_021889e0
 data_ov37_021889e0: ; 0x021889e0
 	.ascii "brg"

@@ -10691,6 +10691,8 @@ func_ov35_02185110: ; 0x02185110
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov35_02185110
+
+	.rodata
 	.global data_ov35_0218512c
 data_ov35_0218512c: ; 0x0218512c
 	.byte 0xac, 0x00, 0x00, 0x00
@@ -11795,6 +11797,7 @@ data_ov35_02185660: ; 0x02185660
 data_ov35_02185664: ; 0x02185664
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov35_02185668
 	arm_func_start func_ov35_02185668
 func_ov35_02185668: ; 0x02185668
@@ -11984,6 +11987,8 @@ _021858f0: .word 0x52594448
 _021858f4: .word func_ov35_02184810
 _021858f8: .word func_0203e7b4
 _021858fc: .word data_ov35_02186fec
+
+	.section .sinit
 	.global data_ov35_02185900
 data_ov35_02185900: ; 0x02185900
 	.byte 0x68, 0x56, 0x18, 0x02
@@ -11996,18 +12001,8 @@ data_ov35_02185908: ; 0x02185908
 	.global data_ov35_0218590c
 data_ov35_0218590c: ; 0x0218590c
 	.byte 0xc0, 0x58, 0x18, 0x02
-	.global data_ov35_02185910
-data_ov35_02185910: ; 0x02185910
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov35_02185914
-data_ov35_02185914: ; 0x02185914
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov35_02185918
-data_ov35_02185918: ; 0x02185918
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov35_0218591c
-data_ov35_0218591c: ; 0x0218591c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov35_02185920
 data_ov35_02185920: ; 0x02185920
 	.ascii "RC1:/crack1.nsbtp"

@@ -12306,6 +12306,8 @@ func_ov20_0217784c: ; 0x0217784c
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov20_0217784c
+
+	.rodata
 	.global data_ov20_02177868
 data_ov20_02177868: ; 0x02177868
 	.byte 0x04, 0x00, 0x00, 0x00
@@ -12707,6 +12709,7 @@ data_ov20_02177aec: ; 0x02177aec
 data_ov20_02177af0: ; 0x02177af0
 	.byte 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov20_02177af4
 	arm_func_start func_ov20_02177af4
 func_ov20_02177af4: ; 0x02177af4
@@ -13297,6 +13300,8 @@ _02178288: .word 0x4546574c
 _0217828c: .word func_ov20_021775d0
 _02178290: .word func_0203e7b4
 _02178294: .word data_ov20_0217970c
+
+	.section .sinit
 	.global data_ov20_02178298
 data_ov20_02178298: ; 0x02178298
 	.byte 0xf4, 0x7a, 0x17, 0x02
@@ -13348,9 +13353,8 @@ data_ov20_021782d4: ; 0x021782d4
 	.global data_ov20_021782d8
 data_ov20_021782d8: ; 0x021782d8
 	.byte 0x58, 0x82, 0x17, 0x02
-	.global data_ov20_021782dc
-data_ov20_021782dc: ; 0x021782dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov20_021782e0
 data_ov20_021782e0: ; 0x021782e0
 	.ascii "brg"

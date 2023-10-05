@@ -2533,6 +2533,8 @@ _0219b0bc:
 	arm_func_end func_ov59_0219b020
 _0219b108: .word data_027e0fb4
 _0219b10c: .word data_027e0fb8
+
+	.rodata
 	.global data_ov59_0219b110
 data_ov59_0219b110: ; 0x0219b110
 	.ascii "Ihamat"
@@ -2547,26 +2549,12 @@ data_ov59_0219b11c: ; 0x0219b11c
 data_ov59_0219b120: ; 0x0219b120
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov59_0219b124
-data_ov59_0219b124: ; 0x0219b124
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b128
-data_ov59_0219b128: ; 0x0219b128
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b12c
-data_ov59_0219b12c: ; 0x0219b12c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b130
-data_ov59_0219b130: ; 0x0219b130
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b134
-data_ov59_0219b134: ; 0x0219b134
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b138
-data_ov59_0219b138: ; 0x0219b138
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov59_0219b13c
-data_ov59_0219b13c: ; 0x0219b13c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov59_0219b140
 data_ov59_0219b140: ; 0x0219b140
 	.ascii "brg"

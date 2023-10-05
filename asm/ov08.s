@@ -1189,15 +1189,14 @@ _02113ac0:
 	strb r1, [r8, #0x3c]
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov08_02113aa8
-	.global data_ov08_02113af4
-data_ov08_02113af4: ; 0x02113af4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov08_02113af8
-data_ov08_02113af8: ; 0x02113af8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov08_02113afc
-data_ov08_02113afc: ; 0x02113afc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.rodata
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov08_02113b00
 data_ov08_02113b00: ; 0x02113b00
 	.ascii "NLG"

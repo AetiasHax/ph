@@ -41208,6 +41208,8 @@ _0213449c: .word data_02050f54
 _021344a0: .word data_ov00_020eec9c
 _021344a4: .word data_027e0e2c
 _021344a8: .word func_ov12_021342e8
+
+	.rodata
 	.global data_ov12_021344ac
 data_ov12_021344ac: ; 0x021344ac
 	.byte 0x00, 0x08, 0x00, 0x00
@@ -44824,6 +44826,7 @@ data_ov12_021354b4: ; 0x021354b4
 	.ascii "Menu/Bg/simpleBg.bin"
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov12_021354cc
 	arm_func_start func_ov12_021354cc
 func_ov12_021354cc: ; 0x021354cc
@@ -45149,6 +45152,8 @@ func_ov12_021358e0: ; 0x021358e0
 	arm_func_end func_ov12_021358e0
 _021358ec: .word func_ov12_021341f0
 _021358f0: .word data_ov12_0213deb0
+
+	.section .sinit
 	.global data_ov12_021358f4
 data_ov12_021358f4: ; 0x021358f4
 	.byte 0xcc, 0x54, 0x13, 0x02
@@ -45179,9 +45184,8 @@ data_ov12_02135914: ; 0x02135914
 	.global data_ov12_02135918
 data_ov12_02135918: ; 0x02135918
 	.byte 0xe0, 0x58, 0x13, 0x02
-	.global data_ov12_0213591c
-data_ov12_0213591c: ; 0x0213591c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov12_02135920
 data_ov12_02135920: ; 0x02135920
 	.ascii "brg"

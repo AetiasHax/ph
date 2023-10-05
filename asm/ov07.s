@@ -2251,6 +2251,8 @@ func_ov07_021028a0: ; 0x021028a0
 	blx func_0203eb8c
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov07_021028a0
+
+	.rodata
 	.global data_ov07_021028c8
 data_ov07_021028c8: ; 0x021028c8
 	.ascii "Menu/Bg/simpleBg.bin"
@@ -2337,12 +2339,12 @@ data_ov07_02102930: ; 0x02102930
 	.global data_ov07_02102934
 data_ov07_02102934: ; 0x02102934
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov07_02102938
-data_ov07_02102938: ; 0x02102938
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov07_0210293c
-data_ov07_0210293c: ; 0x0210293c
-	.byte 0x00, 0x00, 0x00, 0x00
+	
+	.section .init
+	
+	.section .sinit
+
+	.data
 	.global data_ov07_02102940
 data_ov07_02102940: ; 0x02102940
 	.ascii "brg"

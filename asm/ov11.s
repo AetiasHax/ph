@@ -52842,6 +52842,8 @@ func_ov11_0212b9f8: ; 0x0212b9f8
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov11_0212b9f8
+
+	.data
 	.global data_ov11_0212ba0c
 data_ov11_0212ba0c: ; 0x0212ba0c
 	.byte 0xff, 0xff
@@ -64944,30 +64946,12 @@ data_ov11_0212ecfe: ; 0x0212ecfe
 	.global data_ov11_0212ecff
 data_ov11_0212ecff: ; 0x0212ecff
 	.byte 0x00
-	.global data_ov11_0212ed00
-data_ov11_0212ed00: ; 0x0212ed00
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed04
-data_ov11_0212ed04: ; 0x0212ed04
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed08
-data_ov11_0212ed08: ; 0x0212ed08
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed0c
-data_ov11_0212ed0c: ; 0x0212ed0c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed10
-data_ov11_0212ed10: ; 0x0212ed10
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed14
-data_ov11_0212ed14: ; 0x0212ed14
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed18
-data_ov11_0212ed18: ; 0x0212ed18
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov11_0212ed1c
-data_ov11_0212ed1c: ; 0x0212ed1c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov11_0212ed20
 data_ov11_0212ed20: ; 0x0212ed20
 	.byte 0x09

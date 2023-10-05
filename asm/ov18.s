@@ -19597,6 +19597,8 @@ func_ov18_0216b424: ; 0x0216b424
 	stmia r0, {r1, r2}
 	bx lr
 	arm_func_end func_ov18_0216b424
+
+	.rodata
 	.global data_ov18_0216b42c
 data_ov18_0216b42c: ; 0x0216b42c
 	.ascii "M_SeaC"
@@ -20151,6 +20153,7 @@ data_ov18_0216b778: ; 0x0216b778
 data_ov18_0216b77c: ; 0x0216b77c
 	.byte 0xf2, 0xff, 0xff, 0xff
 
+	.section .init
 	.global func_ov18_0216b780
 	arm_func_start func_ov18_0216b780
 func_ov18_0216b780: ; 0x0216b780
@@ -20851,6 +20854,8 @@ _0216c03c: .word 0x48534b42
 _0216c040: .word func_ov18_0216a0e0
 _0216c044: .word func_0203e7b4
 _0216c048: .word data_ov18_0216d678
+
+	.section .sinit
 	.global data_ov18_0216c04c
 data_ov18_0216c04c: ; 0x0216c04c
 	.byte 0x80, 0xb7, 0x16, 0x02
@@ -20920,24 +20925,8 @@ data_ov18_0216c0a0: ; 0x0216c0a0
 	.global data_ov18_0216c0a4
 data_ov18_0216c0a4: ; 0x0216c0a4
 	.byte 0x0c, 0xc0, 0x16, 0x02
-	.global data_ov18_0216c0a8
-data_ov18_0216c0a8: ; 0x0216c0a8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov18_0216c0ac
-data_ov18_0216c0ac: ; 0x0216c0ac
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov18_0216c0b0
-data_ov18_0216c0b0: ; 0x0216c0b0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov18_0216c0b4
-data_ov18_0216c0b4: ; 0x0216c0b4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov18_0216c0b8
-data_ov18_0216c0b8: ; 0x0216c0b8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov18_0216c0bc
-data_ov18_0216c0bc: ; 0x0216c0bc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov18_0216c0c0
 data_ov18_0216c0c0: ; 0x0216c0c0
 	.byte 0xd0, 0xc1, 0x16, 0x02

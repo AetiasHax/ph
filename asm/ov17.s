@@ -19844,6 +19844,8 @@ func_ov17_0216b02c: ; 0x0216b02c
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov17_0216b02c
+
+	.rodata
 	.global data_ov17_0216b098
 data_ov17_0216b098: ; 0x0216b098
 	.ascii "keyhole"
@@ -20178,6 +20180,7 @@ data_ov17_0216b2a4: ; 0x0216b2a4
 	.byte 0xca, 0x00, 0x00, 0x00, 0xcc, 0x00, 0x00, 0x00, 0x01, 0x01, 0x00, 0x00, 0x48, 0xb2, 0x16, 0x02
 	.byte 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov17_0216b2c4
 	arm_func_start func_ov17_0216b2c4
 func_ov17_0216b2c4: ; 0x0216b2c4
@@ -20763,6 +20766,8 @@ _0216b954: .word data_ov17_0216d0f0
 _0216b958: .word func_ov17_0216a818
 _0216b95c: .word func_0203ebc8
 _0216b960: .word data_ov17_0216d0f8
+
+	.section .sinit
 	.global data_ov17_0216b964
 data_ov17_0216b964: ; 0x0216b964
 	.byte 0xc4, 0xb2, 0x16, 0x02
@@ -20844,18 +20849,8 @@ data_ov17_0216b9c8: ; 0x0216b9c8
 	.global data_ov17_0216b9cc
 data_ov17_0216b9cc: ; 0x0216b9cc
 	.byte 0x2c, 0xb9, 0x16, 0x02
-	.global data_ov17_0216b9d0
-data_ov17_0216b9d0: ; 0x0216b9d0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov17_0216b9d4
-data_ov17_0216b9d4: ; 0x0216b9d4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov17_0216b9d8
-data_ov17_0216b9d8: ; 0x0216b9d8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov17_0216b9dc
-data_ov17_0216b9dc: ; 0x0216b9dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov17_0216b9e0
 data_ov17_0216b9e0: ; 0x0216b9e0
 	.byte 0x00, 0x00, 0x00, 0x00

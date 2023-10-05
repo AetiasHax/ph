@@ -4987,6 +4987,8 @@ _021942d8:
 	arm_func_end func_ov46_0219416c
 _021942ec: .word data_027e0764
 _021942f0: .word data_02050f54
+
+	.rodata
 	.global data_ov46_021942f4
 data_ov46_021942f4: ; 0x021942f4
 	.byte 0x00, 0x08, 0x00, 0x00
@@ -5258,6 +5260,7 @@ data_ov46_021944a4: ; 0x021944a4
 data_ov46_021944a8: ; 0x021944a8
 	.byte 0x04, 0x04, 0x04, 0x00
 
+	.section .init
 	.global func_ov46_021944ac
 	arm_func_start func_ov46_021944ac
 func_ov46_021944ac: ; 0x021944ac
@@ -5381,6 +5384,8 @@ _0219462c: .word func_0203e7b4
 _02194630: .word data_ov46_02194c68
 _02194634: .word data_02057200
 _02194638: .word data_ov46_02194a6c
+
+	.section .sinit
 	.global data_ov46_0219463c
 data_ov46_0219463c: ; 0x0219463c
 	.byte 0xac, 0x44, 0x19, 0x02
@@ -5393,21 +5398,8 @@ data_ov46_02194644: ; 0x02194644
 	.global data_ov46_02194648
 data_ov46_02194648: ; 0x02194648
 	.byte 0xac, 0x45, 0x19, 0x02
-	.global data_ov46_0219464c
-data_ov46_0219464c: ; 0x0219464c
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov46_02194650
-data_ov46_02194650: ; 0x02194650
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov46_02194654
-data_ov46_02194654: ; 0x02194654
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov46_02194658
-data_ov46_02194658: ; 0x02194658
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov46_0219465c
-data_ov46_0219465c: ; 0x0219465c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov46_02194660
 data_ov46_02194660: ; 0x02194660
 	.ascii "LNB"

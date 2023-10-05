@@ -14355,6 +14355,8 @@ _021791cc: .word data_02050f54
 func_ov24_021791d0: ; 0x021791d0
 	bx lr
 	arm_func_end func_ov24_021791d0
+
+	.rodata
 	.global data_ov24_021791d4
 data_ov24_021791d4: ; 0x021791d4
 	.byte 0x03, 0x00, 0x00, 0x00
@@ -14984,6 +14986,7 @@ data_ov24_021795c8: ; 0x021795c8
 data_ov24_021795cc: ; 0x021795cc
 	.byte 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov24_021795d0
 	arm_func_start func_ov24_021795d0
 func_ov24_021795d0: ; 0x021795d0
@@ -15604,6 +15607,8 @@ _02179e0c: .word data_ov24_0217b148
 _02179e10: .word func_ov24_02179048
 _02179e14: .word func_0203ebc8
 _02179e18: .word data_ov24_0217b150
+
+	.section .sinit
 	.global data_ov24_02179e1c
 data_ov24_02179e1c: ; 0x02179e1c
 	.byte 0xd0, 0x95, 0x17, 0x02
@@ -15649,12 +15654,8 @@ data_ov24_02179e50: ; 0x02179e50
 	.global data_ov24_02179e54
 data_ov24_02179e54: ; 0x02179e54
 	.byte 0xe4, 0x9d, 0x17, 0x02
-	.global data_ov24_02179e58
-data_ov24_02179e58: ; 0x02179e58
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov24_02179e5c
-data_ov24_02179e5c: ; 0x02179e5c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov24_02179e60
 data_ov24_02179e60: ; 0x02179e60
 	.byte 0x00, 0x00, 0x00, 0x00

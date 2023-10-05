@@ -4953,6 +4953,8 @@ func_ov47_021941d4: ; 0x021941d4
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov47_021941d4
+
+	.rodata
 	.global data_ov47_021941f0
 data_ov47_021941f0: ; 0x021941f0
 	.ascii "Rarm1"
@@ -5125,6 +5127,7 @@ data_ov47_021942ec: ; 0x021942ec
 data_ov47_021942ee: ; 0x021942ee
 	.byte 0x00, 0x00
 
+	.section .init
 	.global func_ov47_021942f0
 	arm_func_start func_ov47_021942f0
 func_ov47_021942f0: ; 0x021942f0
@@ -5274,6 +5277,8 @@ _021944d8: .word 0x46534842
 _021944dc: .word func_ov47_02193a54
 _021944e0: .word func_0203e7b4
 _021944e4: .word data_ov47_02194a6c
+
+	.section .sinit
 	.global data_ov47_021944e8
 data_ov47_021944e8: ; 0x021944e8
 	.byte 0xf0, 0x42, 0x19, 0x02
@@ -5286,12 +5291,8 @@ data_ov47_021944f0: ; 0x021944f0
 	.global data_ov47_021944f4
 data_ov47_021944f4: ; 0x021944f4
 	.byte 0xa8, 0x44, 0x19, 0x02
-	.global data_ov47_021944f8
-data_ov47_021944f8: ; 0x021944f8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov47_021944fc
-data_ov47_021944fc: ; 0x021944fc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov47_02194500
 data_ov47_02194500: ; 0x02194500
 	.byte 0x00, 0x00, 0x00, 0x00

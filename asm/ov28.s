@@ -13134,6 +13134,8 @@ func_ov28_02178058: ; 0x02178058
 	bl func_ov00_020c5f1c
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov28_02178058
+
+	.rodata
 	.global data_ov28_0217807c
 data_ov28_0217807c: ; 0x0217807c
 	.byte 0x00, 0x10, 0x00, 0x00
@@ -13860,6 +13862,7 @@ data_ov28_021784fc: ; 0x021784fc
 data_ov28_02178500: ; 0x02178500
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov28_02178504
 	arm_func_start func_ov28_02178504
 func_ov28_02178504: ; 0x02178504
@@ -14159,6 +14162,8 @@ _02178884: .word 0x46524348
 _02178888: .word func_ov28_02177900
 _0217888c: .word func_0203e7b4
 _02178890: .word data_ov28_02179cb8
+
+	.section .sinit
 	.global data_ov28_02178894
 data_ov28_02178894: ; 0x02178894
 	.byte 0x04, 0x85, 0x17, 0x02
@@ -14195,27 +14200,8 @@ data_ov28_021788bc: ; 0x021788bc
 	.global data_ov28_021788c0
 data_ov28_021788c0: ; 0x021788c0
 	.byte 0x54, 0x88, 0x17, 0x02
-	.global data_ov28_021788c4
-data_ov28_021788c4: ; 0x021788c4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788c8
-data_ov28_021788c8: ; 0x021788c8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788cc
-data_ov28_021788cc: ; 0x021788cc
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788d0
-data_ov28_021788d0: ; 0x021788d0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788d4
-data_ov28_021788d4: ; 0x021788d4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788d8
-data_ov28_021788d8: ; 0x021788d8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov28_021788dc
-data_ov28_021788dc: ; 0x021788dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov28_021788e0
 data_ov28_021788e0: ; 0x021788e0
 	.ascii "brg"

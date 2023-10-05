@@ -4047,6 +4047,8 @@ func_ov13_02115fa4: ; 0x02115fa4
 	arm_func_end func_ov13_02115fa4
 _02115ffc: .word data_027e08e4
 _02116000: .word func_ov13_02115ef4
+
+	.rodata
 	.global data_ov13_02116004
 data_ov13_02116004: ; 0x02116004
 	.byte 0x01, 0x00, 0x00, 0x00
@@ -4215,21 +4217,13 @@ data_ov13_021160bc: ; 0x021160bc
 data_ov13_021160d4: ; 0x021160d4
 	.ascii "/Menu/Bg/pslnkDBg.bin"
 	.byte 0x00, 0x00, 0x00
+
+	.section .sinit
 	.global data_ov13_021160ec
 data_ov13_021160ec: ; 0x021160ec
 	.byte 0x04, 0x4b, 0x11, 0x02
-	.global data_ov13_021160f0
-data_ov13_021160f0: ; 0x021160f0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov13_021160f4
-data_ov13_021160f4: ; 0x021160f4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov13_021160f8
-data_ov13_021160f8: ; 0x021160f8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov13_021160fc
-data_ov13_021160fc: ; 0x021160fc
-	.byte 0x00, 0x00, 0x00, 0x00
+	
+	.data
 	.global data_ov13_02116100
 data_ov13_02116100: ; 0x02116100
 	.ascii "WXC"

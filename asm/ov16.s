@@ -889,6 +889,8 @@ _0212010c:
 func_ov16_02120130: ; 0x02120130
 	bx lr
 	arm_func_end func_ov16_02120130
+
+	.rodata
 	.global data_ov16_02120134
 data_ov16_02120134: ; 0x02120134
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -910,18 +912,12 @@ data_ov16_02120148: ; 0x02120148
 	.global data_ov16_0212014c
 data_ov16_0212014c: ; 0x0212014c
 	.byte 0x00, 0xdc, 0x01, 0x00
-	.global data_ov16_02120150
-data_ov16_02120150: ; 0x02120150
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov16_02120154
-data_ov16_02120154: ; 0x02120154
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov16_02120158
-data_ov16_02120158: ; 0x02120158
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov16_0212015c
-data_ov16_0212015c: ; 0x0212015c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.section .init
+
+	.section .sinit
+
+	.data
 	.global data_ov16_02120160
 data_ov16_02120160: ; 0x02120160
 	.ascii "Font/zeldaDS_15.nftr"

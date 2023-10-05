@@ -11902,6 +11902,8 @@ func_ov39_02186108: ; 0x02186108
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov39_02186108
+
+	.rodata
 	.global data_ov39_02186124
 data_ov39_02186124: ; 0x02186124
 	.ascii "wait"
@@ -13255,6 +13257,7 @@ data_ov39_02186960: ; 0x02186960
 data_ov39_02186964: ; 0x02186964
 	.byte 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov39_02186968
 	arm_func_start func_ov39_02186968
 func_ov39_02186968: ; 0x02186968
@@ -13281,33 +13284,13 @@ _021869ac: .word func_0203e7b4
 _021869b0: .word data_ov39_02186cc0
 _021869b4: .word data_ov39_02186cc0
 _021869b8: .word data_ov39_02186a28
+
+	.section .sinit
 	.global data_ov39_021869bc
 data_ov39_021869bc: ; 0x021869bc
 	.byte 0x68, 0x69, 0x18, 0x02
-	.global data_ov39_021869c0
-data_ov39_021869c0: ; 0x021869c0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869c4
-data_ov39_021869c4: ; 0x021869c4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869c8
-data_ov39_021869c8: ; 0x021869c8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869cc
-data_ov39_021869cc: ; 0x021869cc
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869d0
-data_ov39_021869d0: ; 0x021869d0
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869d4
-data_ov39_021869d4: ; 0x021869d4
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869d8
-data_ov39_021869d8: ; 0x021869d8
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov39_021869dc
-data_ov39_021869dc: ; 0x021869dc
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov39_021869e0
 data_ov39_021869e0: ; 0x021869e0
 	.ascii "brg"

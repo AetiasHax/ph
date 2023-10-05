@@ -30180,6 +30180,8 @@ _0210f816:
 	blt _0210f816
 	bx lr
 	thumb_func_end func_ov04_0210f80c
+
+	.rodata
 	.global data_ov04_0210f824
 data_ov04_0210f824: ; 0x0210f824
 	.byte 0x03, 0x00
@@ -30514,6 +30516,7 @@ data_ov04_0210fd48: ; 0x0210fd48
 	.ascii "vr01_Demo01"
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov04_0210fd58
 	arm_func_start func_ov04_0210fd58
 func_ov04_0210fd58: ; 0x0210fd58
@@ -30540,17 +30543,15 @@ func_ov04_0210fd7c: ; 0x0210fd7c
 	arm_func_end func_ov04_0210fd7c
 _0210fd8c: .word data_ov04_02110cb4
 	.global data_ov04_0210fd90
+
+	.section .sinit
 data_ov04_0210fd90: ; 0x0210fd90
 	.byte 0x58, 0xfd, 0x10, 0x02
 	.global data_ov04_0210fd94
 data_ov04_0210fd94: ; 0x0210fd94
 	.byte 0x7c, 0xfd, 0x10, 0x02
-	.global data_ov04_0210fd98
-data_ov04_0210fd98: ; 0x0210fd98
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov04_0210fd9c
-data_ov04_0210fd9c: ; 0x0210fd9c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov04_0210fda0
 data_ov04_0210fda0: ; 0x0210fda0
 	.ascii "Map/courselist.clb"

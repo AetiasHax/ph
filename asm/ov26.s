@@ -15287,6 +15287,8 @@ func_ov26_02179240: ; 0x02179240
 	blx r2
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02179240
+
+	.rodata
 	.global data_ov26_02179260
 data_ov26_02179260: ; 0x02179260
 	.byte 0x00, 0x08, 0x00, 0x00
@@ -16188,6 +16190,7 @@ data_ov26_021797bc: ; 0x021797bc
 	.byte 0xe8, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00, 0x32, 0x00, 0x00, 0x00, 0x34, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0xb4, 0x96, 0x17, 0x02, 0x01, 0x00, 0x00, 0x00
 
+	.section .init
 	.global func_ov26_021797dc
 	arm_func_start func_ov26_021797dc
 func_ov26_021797dc: ; 0x021797dc
@@ -16806,6 +16809,8 @@ _0217a010: .word data_ov26_0217b5a0
 _0217a014: .word func_ov26_02178fb4
 _0217a018: .word func_0203ebc8
 _0217a01c: .word data_ov26_0217b5a8
+
+	.section .sinit
 	.global data_ov26_0217a020
 data_ov26_0217a020: ; 0x0217a020
 	.byte 0xdc, 0x97, 0x17, 0x02
@@ -16851,9 +16856,8 @@ data_ov26_0217a054: ; 0x0217a054
 	.global data_ov26_0217a058
 data_ov26_0217a058: ; 0x0217a058
 	.byte 0xe8, 0x9f, 0x17, 0x02
-	.global data_ov26_0217a05c
-data_ov26_0217a05c: ; 0x0217a05c
-	.byte 0x00, 0x00, 0x00, 0x00
+
+	.data
 	.global data_ov26_0217a060
 data_ov26_0217a060: ; 0x0217a060
 	.byte 0x00, 0x00, 0x00, 0x00
