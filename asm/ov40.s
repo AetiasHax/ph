@@ -16344,7 +16344,7 @@ data_ov40_02188350: ; 0x02188350
 	.ascii "mt_gd_sandB_f"
 	.byte 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov40_02188360
 	arm_func_start func_ov40_02188360
 func_ov40_02188360: ; 0x02188360
@@ -16580,7 +16580,7 @@ _021885f8: .word func_ov40_02187380
 _021885fc: .word func_0203e7b4
 _02188600: .word data_ov40_0219a180
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov40_02188604
 data_ov40_02188604: ; 0x02188604
 	.byte 0x60, 0x83, 0x18, 0x02

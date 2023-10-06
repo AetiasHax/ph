@@ -1455,7 +1455,7 @@ data_ov53_02199fc0: ; 0x02199fc0
 
 	.rodata
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov53_02199fc4
 	arm_func_start func_ov53_02199fc4
 func_ov53_02199fc4: ; 0x02199fc4
@@ -1507,7 +1507,7 @@ _0219a064: .word data_ov53_0219a5f0
 _0219a068: .word data_ov53_0219a670
 _0219a06c: .word data_ov53_0219a5e4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov53_0219a070
 data_ov53_0219a070: ; 0x0219a070
 	.byte 0xc4, 0x9f, 0x19, 0x02

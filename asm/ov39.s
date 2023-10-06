@@ -13257,7 +13257,7 @@ data_ov39_02186960: ; 0x02186960
 data_ov39_02186964: ; 0x02186964
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov39_02186968
 	arm_func_start func_ov39_02186968
 func_ov39_02186968: ; 0x02186968
@@ -13285,7 +13285,7 @@ _021869b0: .word data_ov39_02186cc0
 _021869b4: .word data_ov39_02186cc0
 _021869b8: .word data_ov39_02186a28
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov39_021869bc
 data_ov39_021869bc: ; 0x021869bc
 	.byte 0x68, 0x69, 0x18, 0x02

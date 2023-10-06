@@ -2340,9 +2340,9 @@ data_ov07_02102930: ; 0x02102930
 data_ov07_02102934: ; 0x02102934
 	.byte 0x00, 0x00, 0x00, 0x00
 	
-	.section .init
+	.section .init, 4, 1, 4
 	
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov07_02102940

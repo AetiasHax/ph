@@ -52843,7 +52843,7 @@ func_ov11_0212b9f8: ; 0x0212b9f8
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov11_0212b9f8
 
-	.data
+	.rodata
 	.global data_ov11_0212ba0c
 data_ov11_0212ba0c: ; 0x0212ba0c
 	.byte 0xff, 0xff
@@ -64947,9 +64947,9 @@ data_ov11_0212ecfe: ; 0x0212ecfe
 data_ov11_0212ecff: ; 0x0212ecff
 	.byte 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov11_0212ed20

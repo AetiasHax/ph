@@ -12052,9 +12052,9 @@ data_ov60_021476e8: ; 0x021476e8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov60_021476ec
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov60_02147700

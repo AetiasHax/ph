@@ -20497,7 +20497,7 @@ data_ov09_0211e49c: ; 0x0211e49c
 data_ov09_0211e4a0: ; 0x0211e4a0
 	.byte 0x15, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov09_0211e4a4
 	arm_func_start func_ov09_0211e4a4
 func_ov09_0211e4a4: ; 0x0211e4a4
@@ -20651,7 +20651,7 @@ func_ov09_0211e64c: ; 0x0211e64c
 	arm_func_end func_ov09_0211e64c
 _0211e65c: .word data_027e1094
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov09_0211e660
 data_ov09_0211e660: ; 0x0211e660
 	.byte 0xa4, 0xe4, 0x11, 0x02

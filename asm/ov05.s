@@ -20904,7 +20904,7 @@ data_ov05_021123b4: ; 0x021123b4
 data_ov05_021123b8: ; 0x021123b8
 	.byte 0x00, 0xf0, 0x00, 0x00
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global func_ov05_021123bc
 	arm_func_start func_ov05_021123bc
 func_ov05_021123bc: ; 0x021123bc

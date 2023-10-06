@@ -3889,7 +3889,7 @@ data_ov50_02198824: ; 0x02198824
 data_ov50_02198828: ; 0x02198828
 	.byte 0x8e, 0x03, 0x8e, 0x03
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov50_0219882c
 	arm_func_start func_ov50_0219882c
 func_ov50_0219882c: ; 0x0219882c
@@ -3997,7 +3997,7 @@ _0219899c: .word data_ov50_02198ad8
 _021989a0: .word func_ov00_020cceec
 _021989a4: .word data_ov50_02198ce0
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov50_021989a8
 data_ov50_021989a8: ; 0x021989a8
 	.byte 0x2c, 0x88, 0x19, 0x02

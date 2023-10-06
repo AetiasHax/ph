@@ -4447,7 +4447,7 @@ data_ov21_02170ce4: ; 0x02170ce4
 data_ov21_02170ce8: ; 0x02170ce8
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov21_02170cec
 	arm_func_start func_ov21_02170cec
 func_ov21_02170cec: ; 0x02170cec
@@ -4648,7 +4648,7 @@ _02170f58: .word func_ov21_02170974
 _02170f5c: .word func_0203ebc8
 _02170f60: .word data_ov21_02171ca8
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov21_02170f64
 data_ov21_02170f64: ; 0x02170f64
 	.byte 0xec, 0x0c, 0x17, 0x02

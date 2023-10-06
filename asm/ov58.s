@@ -3298,7 +3298,7 @@ data_ov58_0219ad78: ; 0x0219ad78
 data_ov58_0219ad7c: ; 0x0219ad7c
 	.byte 0x64, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov58_0219ad80
 	arm_func_start func_ov58_0219ad80
 func_ov58_0219ad80: ; 0x0219ad80
@@ -3368,7 +3368,7 @@ _0219ae70: .word data_ov58_0219aeec
 _0219ae74: .word func_ov58_0219a440
 _0219ae78: .word data_ov58_0219b0e4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov58_0219ae7c
 data_ov58_0219ae7c: ; 0x0219ae7c
 	.byte 0x80, 0xad, 0x19, 0x02

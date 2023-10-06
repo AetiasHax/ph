@@ -14254,7 +14254,7 @@ data_ov29_021794a8: ; 0x021794a8
 data_ov29_021794ac: ; 0x021794ac
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov29_021794b0
 	arm_func_start func_ov29_021794b0
 func_ov29_021794b0: ; 0x021794b0
@@ -14554,7 +14554,7 @@ _02179818: .word func_ov29_02179208
 _0217981c: .word func_ov29_02179214
 _02179820: .word data_ov29_0217bd50
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov29_02179824
 data_ov29_02179824: ; 0x02179824
 	.byte 0xb0, 0x94, 0x17, 0x02

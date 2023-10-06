@@ -20153,7 +20153,7 @@ data_ov18_0216b778: ; 0x0216b778
 data_ov18_0216b77c: ; 0x0216b77c
 	.byte 0xf2, 0xff, 0xff, 0xff
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov18_0216b780
 	arm_func_start func_ov18_0216b780
 func_ov18_0216b780: ; 0x0216b780
@@ -20855,7 +20855,7 @@ _0216c040: .word func_ov18_0216a0e0
 _0216c044: .word func_0203e7b4
 _0216c048: .word data_ov18_0216d678
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov18_0216c04c
 data_ov18_0216c04c: ; 0x0216c04c
 	.byte 0x80, 0xb7, 0x16, 0x02

@@ -75225,9 +75225,9 @@ data_ov61_0217a604: ; 0x0217a604
 	.byte 0xc4, 0xe9, 0x17, 0x02
 	.global data_ov61_0217a608
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov61_0217a620

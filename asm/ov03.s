@@ -42883,7 +42883,7 @@ data_ov03_020ffe20: ; 0x020ffe20
 data_ov03_020ffe24: ; 0x020ffe24
 	.byte 0xb4, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov03_020ffe28
 	arm_func_start func_ov03_020ffe28
 func_ov03_020ffe28: ; 0x020ffe28
@@ -43043,7 +43043,7 @@ _020fffc0: .word func_ov03_020fbcc8
 _020fffc4: .word func_0203ebc8
 _020fffc8: .word data_ov03_02100ab8
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov03_020fffcc
 data_ov03_020fffcc: ; 0x020fffcc
 	.byte 0x28, 0xfe, 0x0f, 0x02

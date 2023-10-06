@@ -39,7 +39,7 @@ tools:
 	cd $(TOOLS_DIR)/compress && $(MAKE)
 
 .PHONY: arm9
-arm9: setup lcf link
+arm9: link
 	$(MAKE) compress
 
 .PHONY: setup
@@ -51,7 +51,7 @@ clean:
 	rm -r build/
 
 .PHONY: lcf
-lcf: $(TOOLS_DIR)/lcf.py
+lcf: setup $(TOOLS_DIR)/lcf.py
 	python $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(TARGET_DIR)/%.o: %.s
@@ -63,7 +63,7 @@ $(CXX_OBJS): $(TARGET_DIR)/%.o: %.cpp
 	LM_LICENSE_FILE=$(MW_LICENSE) $(MW_CC) $(CC_FLAGS) $< -o $@
 
 .PHONY: link
-link: $(ASM_OBJS) $(CXX_OBJS)
+link: lcf $(ASM_OBJS) $(CXX_OBJS)
 	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
 
 .PHONY: compress

@@ -11143,7 +11143,7 @@ data_ov32_02184d34: ; 0x02184d34
 data_ov32_02184d38: ; 0x02184d38
 	.byte 0x03, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov32_02184d3c
 	arm_func_start func_ov32_02184d3c
 func_ov32_02184d3c: ; 0x02184d3c
@@ -11611,7 +11611,7 @@ _021853bc: .word func_ov32_0218468c
 _021853c0: .word func_0203e7b4
 _021853c4: .word data_ov32_021862f0
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov32_021853c8
 data_ov32_021853c8: ; 0x021853c8
 	.byte 0x3c, 0x4d, 0x18, 0x02

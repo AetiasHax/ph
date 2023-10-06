@@ -5749,7 +5749,7 @@ data_ov48_021946b8: ; 0x021946b8
 data_ov48_021946bc: ; 0x021946bc
 	.byte 0x00, 0x70, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov48_021946c0
 	arm_func_start func_ov48_021946c0
 func_ov48_021946c0: ; 0x021946c0
@@ -6047,7 +6047,7 @@ _02194ac8: .word func_ov48_021940ac
 _02194acc: .word func_0203e7b4
 _02194ad0: .word data_ov48_021954d8
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov48_02194ad4
 data_ov48_02194ad4: ; 0x02194ad4
 	.byte 0xc0, 0x46, 0x19, 0x02

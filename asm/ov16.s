@@ -913,9 +913,9 @@ data_ov16_02120148: ; 0x02120148
 data_ov16_0212014c: ; 0x0212014c
 	.byte 0x00, 0xdc, 0x01, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov16_02120160

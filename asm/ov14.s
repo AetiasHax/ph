@@ -67236,7 +67236,7 @@ data_ov14_021541d4: ; 0x021541d4
 	.ascii "Menu/UI_main/UIMBig.bin"
 	.byte 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov14_021541ec
 	arm_func_start func_ov14_021541ec
 func_ov14_021541ec: ; 0x021541ec
@@ -69143,7 +69143,7 @@ _02155840: .word func_ov14_02152880
 _02155844: .word func_0203ebc8
 _02155848: .word data_ov14_0215b488
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov14_0215584c
 data_ov14_0215584c: ; 0x0215584c
 	.byte 0xec, 0x41, 0x15, 0x02

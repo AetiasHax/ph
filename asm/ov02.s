@@ -9878,7 +9878,7 @@ data_ov02_020f6970: ; 0x020f6970
 data_ov02_020f6974: ; 0x020f6974
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov02_020f6978
 	arm_func_start func_ov02_020f6978
 func_ov02_020f6978: ; 0x020f6978
@@ -9896,7 +9896,7 @@ _020f6998: .word data_ov02_020f716c
 _020f699c: .word func_ov02_020f66d0
 _020f69a0: .word data_ov02_020f7160
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov02_020f69a4
 data_ov02_020f69a4: ; 0x020f69a4
 	.byte 0x78, 0x69, 0x0f, 0x02

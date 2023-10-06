@@ -6570,7 +6570,7 @@ data_ov45_0218e3e0: ; 0x0218e3e0
 data_ov45_0218e3e4: ; 0x0218e3e4
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov45_0218e3e8
 	arm_func_start func_ov45_0218e3e8
 func_ov45_0218e3e8: ; 0x0218e3e8
@@ -6637,7 +6637,7 @@ _0218e49c: .word func_ov45_0218c4c4
 _0218e4a0: .word func_0203e7b4
 _0218e4a4: .word data_ov45_0218edc8
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov45_0218e4a8
 data_ov45_0218e4a8: ; 0x0218e4a8
 	.byte 0xe8, 0xe3, 0x18, 0x02

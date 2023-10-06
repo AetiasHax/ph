@@ -1192,9 +1192,9 @@ _02113ac0:
 
 	.rodata
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov08_02113b00

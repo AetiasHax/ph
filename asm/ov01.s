@@ -15140,9 +15140,9 @@ data_ov01_020f88f0: ; 0x020f88f0
 data_ov01_020f88f2: ; 0x020f88f2
 	.byte 0x02, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov01_020f8900

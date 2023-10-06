@@ -6006,7 +6006,7 @@ data_ov41_0218e090: ; 0x0218e090
 data_ov41_0218e094: ; 0x0218e094
 	.byte 0x01, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov41_0218e098
 	arm_func_start func_ov41_0218e098
 func_ov41_0218e098: ; 0x0218e098
@@ -6200,7 +6200,7 @@ _0218e300: .word data_ov41_0218e85c
 _0218e304: .word func_ov00_020cceec
 _0218e308: .word data_ov41_0218eb44
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov41_0218e30c
 data_ov41_0218e30c: ; 0x0218e30c
 	.byte 0x98, 0xe0, 0x18, 0x02

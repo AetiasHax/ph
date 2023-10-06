@@ -19192,9 +19192,9 @@ data_ov10_0211ea04: ; 0x0211ea04
 	.ascii "Menu/Bg/rplBg.bin"
 	.byte 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov10_0211ea20

@@ -11797,7 +11797,7 @@ data_ov35_02185660: ; 0x02185660
 data_ov35_02185664: ; 0x02185664
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov35_02185668
 	arm_func_start func_ov35_02185668
 func_ov35_02185668: ; 0x02185668
@@ -11988,7 +11988,7 @@ _021858f4: .word func_ov35_02184810
 _021858f8: .word func_0203e7b4
 _021858fc: .word data_ov35_02186fec
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov35_02185900
 data_ov35_02185900: ; 0x02185900
 	.byte 0x68, 0x56, 0x18, 0x02

@@ -837,7 +837,7 @@ data_ov55_021997d8: ; 0x021997d8
 data_ov55_021997e8: ; 0x021997e8
 	.byte 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov55_021997ec
 	arm_func_start func_ov55_021997ec
 func_ov55_021997ec: ; 0x021997ec
@@ -856,7 +856,7 @@ _02199810: .word data_ov55_021998ac
 _02199814: .word func_ov00_020a95a4 + 1
 _02199818: .word data_ov55_021998a0
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov55_0219981c
 data_ov55_0219981c: ; 0x0219981c
 	.byte 0xec, 0x97, 0x19, 0x02

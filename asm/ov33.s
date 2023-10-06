@@ -4852,7 +4852,7 @@ data_ov33_0217fb88: ; 0x0217fb88
 data_ov33_0217fb8c: ; 0x0217fb8c
 	.byte 0x00, 0x50, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov33_0217fb90
 	arm_func_start func_ov33_0217fb90
 func_ov33_0217fb90: ; 0x0217fb90
@@ -5076,7 +5076,7 @@ _0217fe88: .word func_ov33_0217f658
 _0217fe8c: .word func_0203e7b4
 _0217fe90: .word data_ov33_02180618
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov33_0217fe94
 data_ov33_0217fe94: ; 0x0217fe94
 	.byte 0x90, 0xfb, 0x17, 0x02

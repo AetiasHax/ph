@@ -14685,7 +14685,7 @@ data_ov25_02179678: ; 0x02179678
 data_ov25_0217967c: ; 0x0217967c
 	.byte 0x04, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov25_02179680
 	arm_func_start func_ov25_02179680
 func_ov25_02179680: ; 0x02179680
@@ -15078,7 +15078,7 @@ _02179b8c: .word data_ov25_0217a680
 _02179b90: .word func_ov00_020cceec
 _02179b94: .word data_ov25_0217aa04
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov25_02179b98
 data_ov25_02179b98: ; 0x02179b98
 	.byte 0x80, 0x96, 0x17, 0x02

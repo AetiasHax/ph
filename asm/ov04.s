@@ -30516,7 +30516,7 @@ data_ov04_0210fd48: ; 0x0210fd48
 	.ascii "vr01_Demo01"
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov04_0210fd58
 	arm_func_start func_ov04_0210fd58
 func_ov04_0210fd58: ; 0x0210fd58
@@ -30544,7 +30544,7 @@ func_ov04_0210fd7c: ; 0x0210fd7c
 _0210fd8c: .word data_ov04_02110cb4
 	.global data_ov04_0210fd90
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 data_ov04_0210fd90: ; 0x0210fd90
 	.byte 0x58, 0xfd, 0x10, 0x02
 	.global data_ov04_0210fd94

@@ -2181,7 +2181,7 @@ data_ov57_0219a998: ; 0x0219a998
 data_ov57_0219a99c: ; 0x0219a99c
 	.byte 0xcd, 0x04, 0x00, 0x00
 
-	.section .init
+	.section .init, 4, 1, 4
 	.global func_ov57_0219a9a0
 	arm_func_start func_ov57_0219a9a0
 func_ov57_0219a9a0: ; 0x0219a9a0
@@ -2222,7 +2222,7 @@ _0219aa04: .word data_ov57_0219ab1c
 _0219aa08: .word func_ov57_0219a980
 _0219aa0c: .word data_ov57_0219ab1c
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 	.global data_ov57_0219aa10
 data_ov57_0219aa10: ; 0x0219aa10
 	.byte 0xa0, 0xa9, 0x19, 0x02

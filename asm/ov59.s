@@ -2550,9 +2550,9 @@ data_ov59_0219b120: ; 0x0219b120
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov59_0219b124
 
-	.section .init
+	.section .init, 4, 1, 4
 
-	.section .sinit
+	.section .sinit, 4, 1, 4
 
 	.data
 	.global data_ov59_0219b140
