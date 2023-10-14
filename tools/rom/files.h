@@ -4,7 +4,7 @@
 #include "util.h"
 #include "rom.h"
 
-bool MakeFntTree(FntTree *pTree);
+bool MakeFileTree(FileTree *pTree);
 
 bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *userData) {
 #ifdef _WIN32
@@ -29,15 +29,16 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
 #endif
 }
 
-typedef struct FntTree {
-	struct FntTree *children;
-	size_t numChildren;
-	size_t maxChildren;
+typedef struct FileTree {
+	struct FileTree *children;
+	uint16_t numChildren;
+	uint16_t maxChildren;
+	uint16_t firstFileId;
 	FntSubEntry *entry;
-} FntTree;
+} FileTree;
 
-bool _GrowFntTreeChildren(FntTree *pTree, size_t minChildren) {
-	FntTree tree;
+bool _GrowFileTreeChildren(FileTree *pTree, size_t minChildren) {
+	FileTree tree;
 	memcpy(&tree, pTree, sizeof(tree));
 	if (tree.numChildren >= minChildren) return true;
 
@@ -45,12 +46,12 @@ bool _GrowFntTreeChildren(FntTree *pTree, size_t minChildren) {
 	if (newSize == 0) newSize = minChildren;
 	while (newSize < minChildren) newSize *= 2;
 	if (tree.children == NULL) {
-		FntTree *children = malloc(newSize * sizeof(FntTree));
-		if (children == NULL) FATAL("Failed to allocate FNT tree children\n");
+		FileTree *children = malloc(newSize * sizeof(FileTree));
+		if (children == NULL) FATAL("Failed to allocate file tree children\n");
 		tree.children = children;
 	} else {
-		FntTree *children = realloc(tree.children, newSize * sizeof(FntTree));
-		if (children == NULL) FATAL("Failed to reallocate FNT tree children\n");
+		FileTree *children = realloc(tree.children, newSize * sizeof(FileTree));
+		if (children == NULL) FATAL("Failed to reallocate file tree children\n");
 		tree.children = children;
 	}
 	tree.maxChildren = newSize;
@@ -59,8 +60,8 @@ bool _GrowFntTreeChildren(FntTree *pTree, size_t minChildren) {
 	return true;
 }
 
-bool _FntTreeFileCallback(const char *name, bool isDir, void *userData) {
-	FntTree *pTree = (FntTree*) userData;
+bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
+	FileTree *pTree = (FileTree*) userData;
 	size_t nameLength = strlen(name);
 
 	if (isDir) {
@@ -71,15 +72,15 @@ bool _FntTreeFileCallback(const char *name, bool isDir, void *userData) {
 		memcpy(entry->name, name, nameLength);
 		WRITE_SUBDIR_ID(entry, 0);
 
-		if (chdir(name) != 0) FATAL("Failed to enter FNT directory '%s'\n", name);
+		if (chdir(name) != 0) FATAL("Failed to enter directory '%s'\n", name);
 
-		FntTree child;
-		if (!MakeFntTree(&child)) return false;
+		FileTree child;
+		if (!MakeFileTree(&child)) return false;
 		child.entry = entry;
 		memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
 		pTree->numChildren += 1;
 
-		if (chdir("..") != 0) FATAL("Failed to leave FNT directory '%s'\n", name);
+		if (chdir("..") != 0) FATAL("Failed to leave directory '%s'\n", name);
 	} else {
 		FntSubEntry *entry = malloc(sizeof(FntSubEntry) + nameLength);
 		if (entry == NULL) FATAL("Failed to allocate FNT sub entry for file '%s'\n", name);
@@ -87,32 +88,33 @@ bool _FntTreeFileCallback(const char *name, bool isDir, void *userData) {
 		entry->length = nameLength;
 		memcpy(entry->name, name, nameLength);
 
-		FntTree child;
+		FileTree child;
 		child.children = NULL;
 		child.numChildren = 0;
 		child.maxChildren = 0;
+		child.firstFileId = 0;
 		child.entry = entry;
-		if (!_GrowFntTreeChildren(pTree, pTree->numChildren + 1)) return false;
+		if (!_GrowFileTreeChildren(pTree, pTree->numChildren + 1)) return false;
 		memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
 		pTree->numChildren += 1;
 	}
 }
 
-bool MakeFntTree(FntTree *pTree) {
-	FntTree tree;
+bool MakeFileTree(FileTree *pTree) {
+	FileTree tree;
 	tree.maxChildren = 0;
 	tree.numChildren = 0;
-	if (!_GrowFntTreeChildren(&tree, 64)) return false;
+	if (!_GrowFileTreeChildren(&tree, 64)) return false;
 	tree.entry = NULL;
 
-	if (!IterFiles(_FntTreeFileCallback, &tree)) return false;
+	if (!IterFiles(_FileTreeFileCallback, &tree)) return false;
 	memcpy(pTree, &tree, sizeof(tree));
 	return true;
 }
 
-bool FreeFntTree(FntTree *pTree) {
+bool FreeFileTree(FileTree *pTree) {
 	for (size_t i = 0; i < pTree->numChildren; ++i) {
-		if (!FreeFntTree(&pTree->children[i])) return false;
+		if (!FreeFileTree(&pTree->children[i])) return false;
 	}
 	if (pTree->children != NULL) {
 		free(pTree->children);
@@ -126,7 +128,7 @@ bool FreeFntTree(FntTree *pTree) {
 	}
 }
 
-int CompareFntTree(const FntTree *a, const FntTree *b) {
+int CompareFileTree(const FileTree *a, const FileTree *b) {
 	size_t lenA = a->entry->length;
 	size_t lenB = b->entry->length;
 	size_t minSize = (lenA < lenB) ? lenA : lenB;
@@ -137,13 +139,13 @@ int CompareFntTree(const FntTree *a, const FntTree *b) {
 	return 0;
 }
 
-bool SortFntTree(FntTree *pTree) {
-	FntTree tree;
+bool SortFileTree(FileTree *pTree) {
+	FileTree tree;
 	memcpy(&tree, pTree, sizeof(tree));
 
-	qsort(tree.children, tree.numChildren, sizeof(*tree.children), CompareFntTree);
+	qsort(tree.children, tree.numChildren, sizeof(*tree.children), CompareFileTree);
 	for (size_t i = 0; i < tree.numChildren; ++i) {
-		if (!SortFntTree(&tree.children[i])) return false;
+		if (!SortFileTree(&tree.children[i])) return false;
 	}
 
 	memcpy(pTree, &tree, sizeof(tree));

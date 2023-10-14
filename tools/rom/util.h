@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-#define FATAL(...) do { fprintf(stderr, __VA_ARGS__); return false; } while (0);
+#define FATAL(...) do { fprintf(stderr, __VA_ARGS__); return false; } while (0)
 
 #define WRITE16(buf,val) do { ((char*) buf)[0] = (val) & 0xFF; ((char*) buf)[1] = ((val) >> 8) & 0xFF; } while (0)
 #define WRITE24(buf,val) do { ((char*) buf)[0] = (val) & 0xFF; ((char*) buf)[1] = ((val) >> 8) & 0xFF; ((char*) buf)[2] = ((val) >> 16) & 0xFF; } while (0)
