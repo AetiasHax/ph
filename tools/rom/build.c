@@ -14,6 +14,7 @@ uint8_t *readBuffer = NULL;
 
 #define MAX_DIR_SIZE 256
 #define INITIAL_SUBTABLE_SIZE 1024 * 1024
+#define INITIAL_TABLE_SIZE 256
 
 const uint8_t logo[] = {
     0x24, 0xff, 0xae, 0x51, 0x69, 0x9a, 0xa2, 0x21, 0x3d, 0x84, 0x82, 0x0a, 0x84, 0xe4, 0x09, 0xad,
@@ -169,7 +170,10 @@ bool WriteArm9Overlays(FILE *fpRom, size_t *pAddress, size_t *pNumOverlays) {
 }
 
 typedef struct {
+	FntEntry *table;
 	uint16_t tableSize;
+	uint16_t tableMax;
+
 	uint16_t nextFileId;
 	uint16_t parentId;
 
@@ -177,6 +181,23 @@ typedef struct {
 	size_t subtableSize;
 	size_t subtableMax;
 } FntContext;
+
+bool GrowFntTable(FntContext *pContext, size_t minEntries) {
+	FntContext ctx;
+	memcpy(&ctx, pContext, sizeof(ctx));
+
+	if (minEntries <= ctx.tableMax) return true;
+	while (minEntries > ctx.tableMax) {
+		ctx.tableMax *= 2;
+	}
+
+	FntEntry *newTable = realloc(ctx.table, ctx.tableMax * sizeof(FntEntry));
+	if (newTable == NULL) FATAL("Failed to reallocate FNT table to %d entries\n", ctx.tableMax);
+	ctx.table = newTable;
+
+	memcpy(pContext, &ctx, sizeof(ctx));
+	return true;
+}
 
 bool GrowFntSubtable(FntContext *pContext, size_t growSize) {
 	FntContext ctx;
@@ -195,9 +216,7 @@ bool GrowFntSubtable(FntContext *pContext, size_t growSize) {
 	return true;
 }
 
-bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntTree *tree, FntContext *pContext) {
-	size_t address = *pAddress;
-
+bool WriteFntSubtable(FntTree *tree, FntContext *pContext) {
 	FntContext ctx;
 	memcpy(&ctx, pContext, sizeof(ctx));
 	size_t subtableStart = ctx.subtableSize;
@@ -232,10 +251,8 @@ bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntTree *tree, FntContext *
 		mainEntry.subtableOffset = ctx.subtableSize; // will add main table length later
 		mainEntry.firstFile = ctx.nextFileId;
 		mainEntry.parentId = ctx.parentId;
-		if (fwrite(&mainEntry, sizeof(mainEntry), 1, fpRom) != 1) {
-			FATAL("Failed to write FNT entry for directory '%.*s'\n", entry->length, entry->name);
-		}
-		address += sizeof(mainEntry);
+		if (!GrowFntTable(&ctx, ctx.tableSize + 1)) return false;
+		memcpy(&ctx.table[ctx.tableSize], &mainEntry, sizeof(mainEntry));
 
 		ctx.nextFileId += numFiles;
 		uint16_t oldParentId = ctx.parentId;
@@ -243,7 +260,7 @@ bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntTree *tree, FntContext *
 
 		char name[128];
 		strncpy(name, entry->name, entry->length);
-		if (!WriteFntSubtable(fpRom, &address, child, &ctx)) return false;
+		if (!WriteFntSubtable(child, &ctx)) return false;
 
 		ctx.parentId = oldParentId;
 	}
@@ -259,7 +276,6 @@ bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntTree *tree, FntContext *
 	}
 	
 	memcpy(pContext, &ctx, sizeof(ctx));
-	*pAddress = address;
 	return true;
 }
 
@@ -267,15 +283,35 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FntTree *pRoot, size_t firstFileId)
 	size_t address = *pAddress;
 
 	FntContext ctx;
+	ctx.table = malloc(INITIAL_TABLE_SIZE * sizeof(FntEntry));
+	if (ctx.table == NULL) FATAL("Failed to allocate FNT table\n");
 	ctx.tableSize = 0;
+	ctx.tableMax = INITIAL_TABLE_SIZE;
+
 	ctx.nextFileId = firstFileId;
 	ctx.parentId = 0xf000; // root directory
+
 	ctx.subtable = malloc(INITIAL_SUBTABLE_SIZE);
-	if (ctx.subtable == NULL) FATAL(stderr, "Failed to allocate FNT subtable\n");
+	if (ctx.subtable == NULL) FATAL("Failed to allocate FNT subtable\n");
 	ctx.subtableSize = 0;
 	ctx.subtableMax = INITIAL_SUBTABLE_SIZE;
 
+	FntEntry rootEntry;
+	rootEntry.subtableOffset = 0; // will add main table length later
+	rootEntry.firstFile = firstFileId;
+	rootEntry.parentId = 0; // will be set to number of directories later
+
+	size_t tableStart = address;
 	if (!WriteFntSubtable(fpRom, &address, pRoot, &ctx)) return false;
+
+	size_t tableLength = ctx.tableSize * sizeof(FntEntry);
+	for (size_t i = 0; i < ctx.tableSize; ++i) {
+		ctx.table[i].subtableOffset += tableLength;
+	}
+	if (fwrite(ctx.table, sizeof(FntEntry), ctx.tableSize, fpRom) != ctx.tableSize) FATAL("Failed to write FNT table\n");
+	if (fwrite(ctx.subtable, ctx.subtableSize, 1, fpRom) != 1) FATAL("Failed to write FNT subtables\n");
+
+	free(ctx.table);
 	free(ctx.subtable);
 
 	*pAddress = address;
