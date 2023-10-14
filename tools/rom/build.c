@@ -195,22 +195,18 @@ bool GrowFntSubtable(FntContext *pContext, size_t growSize) {
 	return true;
 }
 
-bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntContext *pContext) {
+bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntTree *tree, FntContext *pContext) {
 	size_t address = *pAddress;
-	FntSubEntry *entries[MAX_DIR_SIZE];
-	size_t numEntries;
 
 	FntContext ctx;
 	memcpy(&ctx, pContext, sizeof(ctx));
 	size_t subtableStart = ctx.subtableSize;
 
-	if (!GetFiles(entries, MAX_DIR_SIZE, &numEntries)) return false;
-	qsort(entries, numEntries, sizeof(FntSubEntry*), CompareFnt);
-
 	// Create initial subtable entries
 	size_t numFiles = 0;
-	for (size_t i = 0; i < numEntries; ++i) {
-		FntSubEntry *entry = entries[i];
+	for (size_t i = 0; i < tree->numChildren; ++i) {
+		FntTree *child = &tree->children[i];
+		FntSubEntry *entry = child->entry;
 		if (!entry->isSubdir) numFiles += 1;
 
 		size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
@@ -226,8 +222,9 @@ bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntContext *pContext) {
 	ctx.subtableSize += 1;
 
 	// Recurse child directories
-	for (size_t i = 0; i < numEntries; ++i) {
-		FntSubEntry *entry = entries[i];
+	for (size_t i = 0; i < tree->numChildren; ++i) {
+		FntTree *child = &tree->children[i];
+		FntSubEntry *entry = child->entry;
 		if (!entry->isSubdir) continue;
 		uint16_t subdirId = 0xf000 | ctx.tableSize;
 		WRITE_SUBDIR_ID(entry, subdirId);
@@ -246,30 +243,27 @@ bool WriteFntSubtable(FILE *fpRom, size_t *pAddress, FntContext *pContext) {
 
 		char name[128];
 		strncpy(name, entry->name, entry->length);
-		if (chdir(name) != 0) FATAL("Failed to enter assets subdirectory '%s'\n", name);
-		if (!WriteFntSubtable(fpRom, &address, &ctx)) return false;
-		if (chdir("..") != 0) FATAL("Failed to leave assets subdirectory '%s'\n", name);
+		if (!WriteFntSubtable(fpRom, &address, child, &ctx)) return false;
 
 		ctx.parentId = oldParentId;
 	}
 
 	// Update subdir IDs
 	size_t subtableOffset = 0;
-	for (size_t i = 0; i < numEntries; ++i) {
-		FntSubEntry *entry = entries[i];
+	for (size_t i = 0; i < tree->numChildren; ++i) {
+		FntTree *child = &tree->children[i];
+		FntSubEntry *entry = child->entry;
 		size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
 		memcpy(ctx.subtable + subtableStart + subtableOffset, entry, entrySize);
 		subtableOffset += entrySize;
 	}
-
-	FreeFiles(entries, numEntries);
 	
 	memcpy(pContext, &ctx, sizeof(ctx));
 	*pAddress = address;
 	return true;
 }
 
-bool WriteFnt(FILE *fpRom, size_t *pAddress, size_t firstFileId) {
+bool WriteFnt(FILE *fpRom, size_t *pAddress, FntTree *pRoot, size_t firstFileId) {
 	size_t address = *pAddress;
 
 	FntContext ctx;
@@ -281,7 +275,7 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, size_t firstFileId) {
 	ctx.subtableSize = 0;
 	ctx.subtableMax = INITIAL_SUBTABLE_SIZE;
 
-	if (!WriteFntSubtable(fpRom, &address, &ctx)) return false;
+	if (!WriteFntSubtable(fpRom, &address, pRoot, &ctx)) return false;
 	free(ctx.subtable);
 
 	*pAddress = address;
@@ -430,15 +424,21 @@ int main(int argc, const char **argv) {
 	header.arm7.offset = address;
 	if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
 
+	FntTree root;
+	if (!MakeFntTree(&root)) return false;
+	if (!SortFntTree(&root)) return false;
+
 	if (!Align(256, fpRom, &address)) return 1;
 	header.fileNames.offset = address;
-	if (!WriteFnt(fpRom, &address, numOverlays)) return 1;
+	if (!WriteFnt(fpRom, &address, &root, numOverlays)) return 1;
 
 	if (!Align(256, fpRom, &address)) return 1;
 	header.fileAllocs.offset = address;
 	// TODO (aetias): Write initial FAT
 
 	// TODO (aetias): Write files
+
+	if (!FreeFntTree(&root)) return false;
 
 	if (chdir(rootDir) != 0) {
 		fprintf(stderr, "Failed to leave assets directory '%s'\n", assetsDir);
