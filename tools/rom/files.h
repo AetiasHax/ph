@@ -4,6 +4,14 @@
 #include "util.h"
 #include "rom.h"
 
+typedef struct FileTree {
+	struct FileTree *children;
+	uint16_t numChildren;
+	uint16_t maxChildren;
+	uint16_t firstFileId;
+	FntSubEntry *entry;
+} FileTree;
+
 bool MakeFileTree(FileTree *pTree);
 
 bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *userData) {
@@ -17,7 +25,7 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
 		if (!callback(name, isDir, userData)) return false;
 	} while (FindNextFileA(hFind, &findData));
 	FindClose(hFind);
-#else __linux__
+#elif __linux__
 	DIR *dir = opendir(".");
 	struct dirent entry;
 	while ((entry = readdir(dir)) != NULL) {
@@ -28,14 +36,6 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
 	closedir(dir);
 #endif
 }
-
-typedef struct FileTree {
-	struct FileTree *children;
-	uint16_t numChildren;
-	uint16_t maxChildren;
-	uint16_t firstFileId;
-	FntSubEntry *entry;
-} FileTree;
 
 bool _GrowFileTreeChildren(FileTree *pTree, size_t minChildren) {
 	FileTree tree;
@@ -128,11 +128,13 @@ bool FreeFileTree(FileTree *pTree) {
 	}
 }
 
-int CompareFileTree(const FileTree *a, const FileTree *b) {
-	size_t lenA = a->entry->length;
-	size_t lenB = b->entry->length;
+int CompareFileTree(const void *a, const void *b) {
+	FileTree *treeA = (FileTree*) a;
+	FileTree *treeB = (FileTree*) b;
+	size_t lenA = treeA->entry->length;
+	size_t lenB = treeB->entry->length;
 	size_t minSize = (lenA < lenB) ? lenA : lenB;
-	int cmp = strncmp(a->entry->name, b->entry->name, minSize);
+	int cmp = strncmp(treeA->entry->name, treeB->entry->name, minSize);
 	if (cmp != 0) return cmp;
 	if (lenA < lenB) return -1;
 	if (lenA > lenB) return 1;

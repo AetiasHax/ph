@@ -234,7 +234,7 @@ bool WriteFntSubtable(FileTree *tree, FntContext *pContext) {
 		size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
 		if (!GrowFntSubtable(&ctx, entrySize)) return false;
 
-		FntSubEntry *dest = ctx.subtable + ctx.subtableSize;
+		FntSubEntry *dest = (FntSubEntry*) (ctx.subtable + ctx.subtableSize);
 		memcpy(dest, entry, entrySize);
 		ctx.subtableSize += entrySize;
 	}
@@ -306,7 +306,7 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
 	rootEntry.parentId = 0; // will be set to number of directories later
 
 	size_t tableStart = address;
-	if (!WriteFntSubtable(fpRom, &address, pRoot, &ctx)) return false;
+	if (!WriteFntSubtable(pRoot, &ctx)) return false;
 
 	size_t tableLength = ctx.tableSize * sizeof(FntEntry);
 	for (size_t i = 0; i < ctx.tableSize; ++i) {
@@ -499,7 +499,7 @@ int main(int argc, const char **argv) {
 	size_t address = 0;
 
 	Header header;
-	InitHeader(&header, &region);
+	InitHeader(&header, &info);
 
 	if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
 		fprintf(stderr, "Failed to write NDS header\n");
@@ -523,7 +523,7 @@ int main(int argc, const char **argv) {
 
 	FatEntry overlayEntries[MAX_OVERLAYS];
 	size_t numOverlays = 0;
-	if (!WriteArm9Overlays(fpRom, &address, &numOverlays, &overlayEntries, MAX_OVERLAYS)) return 1;
+	if (!WriteArm9Overlays(fpRom, &address, &numOverlays, overlayEntries, MAX_OVERLAYS)) return 1;
 
 	if (chdir(rootDir) != 0) {
 		fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
@@ -571,6 +571,5 @@ int main(int argc, const char **argv) {
 	}
 
 	free(readBuffer);
-	flose(fpRom);
-	free(rootDir);
+	fclose(fpRom);
 }
