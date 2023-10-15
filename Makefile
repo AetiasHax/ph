@@ -1,15 +1,17 @@
 REGION ?= EUR
 
 ifeq ($(REGION), EUR)
-	TARGET_SUBDIR := eur
+	REGION_NAME := eur
+	REGION_SUFFIX := P
 else
 	$(error Unknown region '$(REGION)')
 endif
 
 ROOT       := $(shell pwd)
 BUILD_DIR  := $(ROOT)/build
-TARGET_DIR := $(BUILD_DIR)/$(TARGET_SUBDIR)
+TARGET_DIR := $(BUILD_DIR)/$(REGION_NAME)
 TOOLS_DIR  := $(ROOT)/tools
+BASE_DIR   := $(ROOT)/ph_$(REGION_NAME)
 LCF_FILE   := $(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(BUILD_DIR)/arm9_objects.txt
 
@@ -20,6 +22,8 @@ CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.o)
 
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
+
+NDS_FILE = ph_$(REGION_NAME).nds
 
 MW_VER     := 2.0/sp1p5
 MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm
@@ -32,11 +36,18 @@ CC_FLAGS  := -O1 -thumb -d $(REGION)
 LD_FLAGS  := -proc arm946e -nostdlib -nointerworking -nodead -m func_02000800 -map closure,unused -o main.bin -msgstyle gcc
 
 .PHONY: all
-all: tools arm9
+all: tools rom
+	sha1sum $(NDS_FILE)
+	sha1sum -c checksum.sha1
 
 .PHONY: tools
 tools:
 	cd $(TOOLS_DIR)/compress && $(MAKE)
+	cd $(TOOLS_DIR)/rom && $(MAKE)
+
+.PHONY: rom
+rom: arm9
+	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE)
 
 .PHONY: arm9
 arm9: link
