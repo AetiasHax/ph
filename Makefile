@@ -25,6 +25,7 @@ OV_LZS = $(OV_BINS:%.bin=%.lz)
 
 NDS_FILE := ph_$(REGION_NAME).nds
 BASE_ROM := baserom_$(REGION_NAME).nds
+CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
 MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm
@@ -39,7 +40,7 @@ LD_FLAGS  := -proc arm946e -nostdlib -nointerworking -nodead -m func_02000800 -m
 .PHONY: all
 all: tools rom
 	sha1sum $(NDS_FILE)
-	sha1sum -c checksum.sha1
+	sha1sum -c $(CHECKSUM)
 
 .PHONY: tools
 tools:
