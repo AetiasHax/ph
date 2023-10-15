@@ -45,18 +45,14 @@ bool ExtractArm7(const uint8_t *rom, ProgramOffset *pArm7) {
 }
 
 bool ExtractTitle(const char *language, const char *file, const wchar_t *title, size_t titleSize) {
-	size_t bufSize = 1024;
-	char *buf = malloc(1024);
-	if (buf == NULL) FATAL("Failed to allocate UTF-8 buffer for %s banner title\n", language);
-
+    char buf[1024];
 	FILE *fp = fopen(file, "wb");
 	if (fp == NULL) FATAL("Failed to create %s banner title '%s'\n", language, file);
+
 	size_t resultSize = 0;
-	if (!WcharToUtf8((wchar_t*) title, titleSize, buf, bufSize, &resultSize)) return false;
+	if (!WcharToUtf8((wchar_t*) title, titleSize, buf, sizeof(buf), &resultSize)) return false;
 	if (fputs(buf, fp) == -1) FATAL("Failed to write %s banner title '%s'\n", language, file);
 	fclose(fp);
-
-	free(buf);
 	return true;
 }
 
@@ -120,7 +116,7 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
 		if (!MakeDir(name)) return false;
 		if (chdir(name) != 0) FATAL("Failed to enter assets subdirectory '%s'\n", name);
 		
-		uint16_t subdirId = READ16(subEntryAddr + sizeof(FntSubEntry) + pSubEntry->length);
+		uint16_t subdirId = READ_SUBDIR_ID(pSubEntry);
 		uint16_t subdirIndex = subdirId & 0xfff;
 		if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex)) return false;
 
