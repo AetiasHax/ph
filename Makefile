@@ -48,7 +48,7 @@ setup:
 
 .PHONY: clean
 clean:
-	rm -r build/
+	rm -rf build/
 
 .PHONY: lcf
 lcf: setup $(TOOLS_DIR)/lcf.py

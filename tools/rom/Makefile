@@ -18,8 +18,8 @@ endif
 all: $(EXTRACTFILE) $(BUILDFILE)
 
 clean:
-	rm $(EXTRACTFILE)
-	rm $(BUILDFILE)
+	rm -f $(EXTRACTFILE)
+	rm -f $(BUILDFILE)
 
 $(EXTRACTFILE): extract.c
 	$(CC) $(CFLAGS) -o $(EXTRACTFILE) extract.c

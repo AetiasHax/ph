@@ -16,7 +16,7 @@ endif
 all: $(OUTFILE)
 
 clean:
-	rm $(OUTFILE)
+	rm -f $(OUTFILE)
 
 $(OUTFILE): main.c
 	$(CC) $(CFLAGS) -o $(OUTFILE) main.c
