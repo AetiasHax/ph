@@ -36,6 +36,14 @@ bool CheckRegion(const Header *pHeader, BuildInfo *pInfo) {
 	return true;
 }
 
+bool ExtractArm7(const uint8_t *rom, ProgramOffset *pArm7) {
+	FILE *fp = fopen(ARM7_PROGRAM_FILE, "wb");
+	if (fp == NULL) FATAL("Failed to create ARM7 program '" ARM7_PROGRAM_FILE "'\n");
+	if (fwrite(rom + pArm7->offset, pArm7->size, 1, fp) != 1) FATAL("Failed to write ARM7 program '" ARM7_PROGRAM_FILE "'\n");
+	fclose(fp);
+	return true;
+}
+
 bool ExtractTitle(const char *language, const char *file, const wchar_t *title, size_t titleSize) {
 	size_t bufSize = 1024;
 	char *buf = malloc(1024);
@@ -201,6 +209,8 @@ int main(int argc, const char **argv) {
 		fprintf(stderr, "Failed to enter output directory '%s'\n", outDir);
 		return 1;
 	}
+
+	if (!ExtractArm7(rom, &pHeader->arm7)) return 1;
 
     Banner *pBanner = (Banner*) (rom + pHeader->bannerOffset);
 	if (!ExtractBanner(pBanner, &info)) return 1;
