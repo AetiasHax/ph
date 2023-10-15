@@ -577,7 +577,8 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 	
-	size_t romEnd = 1 << (32 - __builtin_clz(address));
+    header.capacity = 15 - __builtin_clz(address);
+	size_t romEnd = 1 << (17 + header.capacity);
 	if (!Align(romEnd, fpRom, &address)) return 1;
 
 	fseek(fpRom, 0, SEEK_SET);
