@@ -80,29 +80,29 @@ typedef struct {
 } Banner;
 
 typedef struct {
-	/* 0 */ uint32_t subtableOffset;
-	/* 4 */ uint16_t firstFile;
-	/* 6 */ uint16_t parentId;
-	/* 8 */
+    /* 0 */ uint32_t subtableOffset;
+    /* 4 */ uint16_t firstFile;
+    /* 6 */ uint16_t parentId;
+    /* 8 */
 } FntEntry;
 
 typedef struct {
-	/* 0.0 */ uint8_t length : 7;
-	/* 0.7 */ bool isSubdir : 1;
-	/* 1.0 */ char name[];
-	// If isSubdir
-		/* 1.0 + length */     // uint16_t subdirId;
-		/* 1.0 + length + 2 */
-	// Else
-		/* 1.0 + length */
+    /* 0.0 */ uint8_t length : 7;
+    /* 0.7 */ bool isSubdir : 1;
+    /* 1.0 */ char name[];
+    // If isSubdir
+        /* 1.0 + length */     // uint16_t subdirId;
+        /* 1.0 + length + 2 */
+    // Else
+        /* 1.0 + length */
 } FntSubEntry;
 
 #define READ_SUBDIR_ID(entry) READ16(entry + sizeof(*entry) + entry->length);
 #define WRITE_SUBDIR_ID(entry,id) WRITE16(entry + sizeof(*entry) + entry->length, id)
 
 typedef struct {
-	/* 0 */ uint32_t startOffset;
-	/* 4 */ uint32_t endOffset;
+    /* 0 */ uint32_t startOffset;
+    /* 4 */ uint32_t endOffset;
 } FatEntry;
 
 #endif

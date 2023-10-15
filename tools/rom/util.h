@@ -28,18 +28,18 @@
 
 bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *pResultSize) {
 #ifdef _WIN32
-	size_t resultSize = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, in, inSize / sizeof(wchar_t), out, outSize, NULL, NULL);
-	if (resultSize == 0) FATAL("Failed to convert to UTF-8\n");
-	*pResultSize = resultSize;
-	return true;
+    size_t resultSize = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, in, inSize / sizeof(wchar_t), out, outSize, NULL, NULL);
+    if (resultSize == 0) FATAL("Failed to convert to UTF-8\n");
+    *pResultSize = resultSize;
+    return true;
 #elif __linux__
-	iconv_t convDesc = iconv_open("UTF-16", "UTF-8");
-	if (convDesc == -1) FATAL("Failed to get conversion description to UTF-8\n");
-	size_t remainingBytes = outSize;
-	if (iconv(convDesc, &in, &inSize, &out, &remainingBytes) == -1) FATAL("Failed to convert to UTF-8\n");
-	if (inSize > 0) FATAL("Some characters were not converted to UTF-8\n");
-	*pResultSize = outSize - remainingBytes;
-	return true;
+    iconv_t convDesc = iconv_open("UTF-16", "UTF-8");
+    if (convDesc == -1) FATAL("Failed to get conversion description to UTF-8\n");
+    size_t remainingBytes = outSize;
+    if (iconv(convDesc, &in, &inSize, &out, &remainingBytes) == -1) FATAL("Failed to convert to UTF-8\n");
+    if (inSize > 0) FATAL("Some characters were not converted to UTF-8\n");
+    *pResultSize = outSize - remainingBytes;
+    return true;
 #endif
 }
 

@@ -114,235 +114,235 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
 }
 
 bool AppendFile(FILE *fpRom, const char *filePath, size_t *pAddress, uint32_t *pFileSize) {
-	assert(readBuffer != NULL);
+    assert(readBuffer != NULL);
 
-	FILE *fp = fopen(filePath, "rb");
-	if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
-	fseek(fp, 0, SEEK_END);
-	size_t size = ftell(fp);
-	fseek(fp, 0, SEEK_SET);
-	
-	size_t bytesWritten = 0;
-	while (bytesWritten < size) {
-		size_t bytesRead = fread(readBuffer, 1, BUFFER_SIZE, fp);
-		if (bytesRead == 0) FATAL("Failed to read from file '%s'\n", filePath);
-		if (fwrite(readBuffer, bytesRead, 1, fpRom) != 1) FATAL("Failed to write file '%s' to output ROM\n", filePath);
-		bytesWritten += bytesRead;
-	}
-	fclose(fp);
+    FILE *fp = fopen(filePath, "rb");
+    if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
+    fseek(fp, 0, SEEK_END);
+    size_t size = ftell(fp);
+    fseek(fp, 0, SEEK_SET);
+    
+    size_t bytesWritten = 0;
+    while (bytesWritten < size) {
+        size_t bytesRead = fread(readBuffer, 1, BUFFER_SIZE, fp);
+        if (bytesRead == 0) FATAL("Failed to read from file '%s'\n", filePath);
+        if (fwrite(readBuffer, bytesRead, 1, fpRom) != 1) FATAL("Failed to write file '%s' to output ROM\n", filePath);
+        bytesWritten += bytesRead;
+    }
+    fclose(fp);
 
-	*pAddress += size;
-	if (pFileSize != NULL) *pFileSize = size;
-	return true;
+    *pAddress += size;
+    if (pFileSize != NULL) *pFileSize = size;
+    return true;
 }
 
 bool Align(size_t alignment, FILE *fpRom, size_t *pAddress) {
-	assert((alignment & (alignment - 1)) == 0);
+    assert((alignment & (alignment - 1)) == 0);
 
-	size_t mask = alignment - 1;
-	size_t address = ftell(fpRom);
-	size_t nextAddr = (address + mask) & ~mask;
-	while (address < nextAddr) {
-		if (fputc(0xff, fpRom) == -1) FATAL("Failed to pad output ROM at address 0x%x\n", address);
-		address += 1;
-	}
+    size_t mask = alignment - 1;
+    size_t address = ftell(fpRom);
+    size_t nextAddr = (address + mask) & ~mask;
+    while (address < nextAddr) {
+        if (fputc(0xff, fpRom) == -1) FATAL("Failed to pad output ROM at address 0x%x\n", address);
+        address += 1;
+    }
     *pAddress = address;
-	return true;
+    return true;
 }
 
 bool WriteArm9Overlays(FILE *fpRom, size_t *pAddress, size_t *pNumOverlays, FatEntry *entries, size_t maxEntries) {
-	size_t address = *pAddress;
-	uint32_t ovNum = 0;
-	char fileName[32];
+    size_t address = *pAddress;
+    uint32_t ovNum = 0;
+    char fileName[32];
 
-	if (chdir(OVERLAYS_SUBDIR) != 0) FATAL("Failed to enter overlays directory '" OVERLAYS_SUBDIR "'\n");
+    if (chdir(OVERLAYS_SUBDIR) != 0) FATAL("Failed to enter overlays directory '" OVERLAYS_SUBDIR "'\n");
 
-	while (true) {
-		sprintf(fileName, "ov%02d.lz", ovNum);
-		if (!Align(512, fpRom, &address)) return false;
-		size_t startOffset = address;
-		if (!AppendFile(fpRom, fileName, &address, NULL)) break;
-		entries[ovNum].startOffset = startOffset;
-		entries[ovNum].endOffset = address;
+    while (true) {
+        sprintf(fileName, "ov%02d.lz", ovNum);
+        if (!Align(512, fpRom, &address)) return false;
+        size_t startOffset = address;
+        if (!AppendFile(fpRom, fileName, &address, NULL)) break;
+        entries[ovNum].startOffset = startOffset;
+        entries[ovNum].endOffset = address;
         ovNum += 1;
-	}
+    }
 
-	if (chdir("..") != 0) FATAL("Failed to leave overlays directory '" OVERLAYS_SUBDIR "'\n");
+    if (chdir("..") != 0) FATAL("Failed to leave overlays directory '" OVERLAYS_SUBDIR "'\n");
 
-	*pAddress = address;
-	*pNumOverlays = ovNum;
-	return true;
+    *pAddress = address;
+    *pNumOverlays = ovNum;
+    return true;
 }
 
 typedef struct {
-	FntEntry *table;
-	uint16_t tableSize;
-	uint16_t tableMax;
+    FntEntry *table;
+    uint16_t tableSize;
+    uint16_t tableMax;
 
-	uint16_t nextFileId;
-	uint16_t parentId;
+    uint16_t nextFileId;
+    uint16_t parentId;
 
-	uint8_t *subtable;
-	size_t subtableSize;
-	size_t subtableMax;
+    uint8_t *subtable;
+    size_t subtableSize;
+    size_t subtableMax;
 } FntContext;
 
 bool GrowFntTable(FntContext *pContext, size_t minEntries) {
-	FntContext ctx;
-	memcpy(&ctx, pContext, sizeof(ctx));
+    FntContext ctx;
+    memcpy(&ctx, pContext, sizeof(ctx));
 
-	if (minEntries <= ctx.tableMax) return true;
-	while (minEntries > ctx.tableMax) {
-		ctx.tableMax *= 2;
-	}
+    if (minEntries <= ctx.tableMax) return true;
+    while (minEntries > ctx.tableMax) {
+        ctx.tableMax *= 2;
+    }
 
-	FntEntry *newTable = realloc(ctx.table, ctx.tableMax * sizeof(FntEntry));
-	if (newTable == NULL) FATAL("Failed to reallocate FNT table to %d entries\n", ctx.tableMax);
-	ctx.table = newTable;
+    FntEntry *newTable = realloc(ctx.table, ctx.tableMax * sizeof(FntEntry));
+    if (newTable == NULL) FATAL("Failed to reallocate FNT table to %d entries\n", ctx.tableMax);
+    ctx.table = newTable;
 
-	memcpy(pContext, &ctx, sizeof(ctx));
-	return true;
+    memcpy(pContext, &ctx, sizeof(ctx));
+    return true;
 }
 
 bool GrowFntSubtable(FntContext *pContext, size_t growSize) {
-	FntContext ctx;
-	memcpy(&ctx, pContext, sizeof(ctx));
+    FntContext ctx;
+    memcpy(&ctx, pContext, sizeof(ctx));
 
-	if (ctx.subtableSize + growSize < ctx.subtableMax) return true;
-	while (ctx.subtableSize + growSize >= ctx.subtableMax) {
-		ctx.subtableMax *= 2;
-	}
+    if (ctx.subtableSize + growSize < ctx.subtableMax) return true;
+    while (ctx.subtableSize + growSize >= ctx.subtableMax) {
+        ctx.subtableMax *= 2;
+    }
 
-	uint8_t *newTable = realloc(ctx.subtable, ctx.subtableMax);
-	if (newTable == NULL) FATAL("Failed to reallocate FNT subtable to %d bytes\n", ctx.subtableMax);
-	ctx.subtable = newTable;
+    uint8_t *newTable = realloc(ctx.subtable, ctx.subtableMax);
+    if (newTable == NULL) FATAL("Failed to reallocate FNT subtable to %d bytes\n", ctx.subtableMax);
+    ctx.subtable = newTable;
 
-	memcpy(pContext, &ctx, sizeof(ctx));
-	return true;
+    memcpy(pContext, &ctx, sizeof(ctx));
+    return true;
 }
 
 bool WriteFntSubtable(FileTree *tree, FntContext *pContext) {
-	FntContext ctx;
-	memcpy(&ctx, pContext, sizeof(ctx));
-	size_t subtableStart = ctx.subtableSize;
+    FntContext ctx;
+    memcpy(&ctx, pContext, sizeof(ctx));
+    size_t subtableStart = ctx.subtableSize;
 
-	// Create initial subtable entries
-	size_t numFiles = 0;
-	for (size_t i = 0; i < tree->numChildren; ++i) {
-		FileTree *child = &tree->children[i];
-		FntSubEntry *entry = child->entry;
-		if (!entry->isSubdir) numFiles += 1;
+    // Create initial subtable entries
+    size_t numFiles = 0;
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        if (!entry->isSubdir) numFiles += 1;
 
-		size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
-		if (!GrowFntSubtable(&ctx, entrySize)) return false;
+        size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
+        if (!GrowFntSubtable(&ctx, entrySize)) return false;
 
-		FntSubEntry *dest = (FntSubEntry*) (ctx.subtable + ctx.subtableSize);
-		memcpy(dest, entry, entrySize);
-		ctx.subtableSize += entrySize;
-	}
+        FntSubEntry *dest = (FntSubEntry*) (ctx.subtable + ctx.subtableSize);
+        memcpy(dest, entry, entrySize);
+        ctx.subtableSize += entrySize;
+    }
 
-	if (!GrowFntSubtable(&ctx, 1)) return false;
-	ctx.subtable[ctx.subtableSize] = 0; // End of subtable
-	ctx.subtableSize += 1;
+    if (!GrowFntSubtable(&ctx, 1)) return false;
+    ctx.subtable[ctx.subtableSize] = 0; // End of subtable
+    ctx.subtableSize += 1;
 
     ctx.nextFileId += numFiles;
 
-	// Recurse child directories
-	for (size_t i = 0; i < tree->numChildren; ++i) {
-		FileTree *child = &tree->children[i];
-		FntSubEntry *entry = child->entry;
-		if (!entry->isSubdir) continue;
-		uint16_t subdirId = 0xf000 | ctx.tableSize;
-		WRITE_SUBDIR_ID(entry, subdirId);
-		child->firstFileId = ctx.nextFileId;
-		FntEntry mainEntry;
-		mainEntry.subtableOffset = ctx.subtableSize; // will add main table length later
-		mainEntry.firstFile = ctx.nextFileId;
-		mainEntry.parentId = ctx.parentId;
-		if (!GrowFntTable(&ctx, ctx.tableSize + 1)) return false;
-		memcpy(&ctx.table[ctx.tableSize], &mainEntry, sizeof(mainEntry));
+    // Recurse child directories
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        if (!entry->isSubdir) continue;
+        uint16_t subdirId = 0xf000 | ctx.tableSize;
+        WRITE_SUBDIR_ID(entry, subdirId);
+        child->firstFileId = ctx.nextFileId;
+        FntEntry mainEntry;
+        mainEntry.subtableOffset = ctx.subtableSize; // will add main table length later
+        mainEntry.firstFile = ctx.nextFileId;
+        mainEntry.parentId = ctx.parentId;
+        if (!GrowFntTable(&ctx, ctx.tableSize + 1)) return false;
+        memcpy(&ctx.table[ctx.tableSize], &mainEntry, sizeof(mainEntry));
         ctx.tableSize += 1;
 
-		uint16_t oldParentId = ctx.parentId;
-		ctx.parentId = subdirId;
+        uint16_t oldParentId = ctx.parentId;
+        ctx.parentId = subdirId;
 
-		char name[128];
-		strncpy(name, entry->name, entry->length);
+        char name[128];
+        strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
-		if (!WriteFntSubtable(child, &ctx)) return false;
+        if (!WriteFntSubtable(child, &ctx)) return false;
 
-		ctx.parentId = oldParentId;
-	}
+        ctx.parentId = oldParentId;
+    }
 
-	// Update subdir IDs
-	size_t subtableOffset = 0;
-	for (size_t i = 0; i < tree->numChildren; ++i) {
-		FileTree *child = &tree->children[i];
-		FntSubEntry *entry = child->entry;
-		size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
-		memcpy(ctx.subtable + subtableStart + subtableOffset, entry, entrySize);
-		subtableOffset += entrySize;
-	}
-	
-	memcpy(pContext, &ctx, sizeof(ctx));
-	return true;
+    // Update subdir IDs
+    size_t subtableOffset = 0;
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
+        memcpy(ctx.subtable + subtableStart + subtableOffset, entry, entrySize);
+        subtableOffset += entrySize;
+    }
+    
+    memcpy(pContext, &ctx, sizeof(ctx));
+    return true;
 }
 
 bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId, size_t *pNumFiles) {
-	size_t address = *pAddress;
+    size_t address = *pAddress;
 
-	FntContext ctx;
-	ctx.table = malloc(INITIAL_TABLE_SIZE * sizeof(FntEntry));
-	if (ctx.table == NULL) FATAL("Failed to allocate FNT table\n");
-	ctx.tableSize = 1;
-	ctx.tableMax = INITIAL_TABLE_SIZE;
+    FntContext ctx;
+    ctx.table = malloc(INITIAL_TABLE_SIZE * sizeof(FntEntry));
+    if (ctx.table == NULL) FATAL("Failed to allocate FNT table\n");
+    ctx.tableSize = 1;
+    ctx.tableMax = INITIAL_TABLE_SIZE;
 
-	ctx.nextFileId = firstFileId;
-	ctx.parentId = 0xf000; // root directory
+    ctx.nextFileId = firstFileId;
+    ctx.parentId = 0xf000; // root directory
 
-	ctx.subtable = malloc(INITIAL_SUBTABLE_SIZE);
-	if (ctx.subtable == NULL) FATAL("Failed to allocate FNT subtable\n");
-	ctx.subtableSize = 0;
-	ctx.subtableMax = INITIAL_SUBTABLE_SIZE;
+    ctx.subtable = malloc(INITIAL_SUBTABLE_SIZE);
+    if (ctx.subtable == NULL) FATAL("Failed to allocate FNT subtable\n");
+    ctx.subtableSize = 0;
+    ctx.subtableMax = INITIAL_SUBTABLE_SIZE;
 
     ctx.table[0].subtableOffset = 0; // will add main table length later
-	ctx.table[0].firstFile = firstFileId;
-	ctx.table[0].parentId = 0; // will be set to number of directories later
+    ctx.table[0].firstFile = firstFileId;
+    ctx.table[0].parentId = 0; // will be set to number of directories later
 
-	size_t tableStart = address;
-	if (!WriteFntSubtable(pRoot, &ctx)) return false;
+    size_t tableStart = address;
+    if (!WriteFntSubtable(pRoot, &ctx)) return false;
 
-	size_t tableLength = ctx.tableSize * sizeof(FntEntry);
-	for (size_t i = 0; i < ctx.tableSize; ++i) {
-		ctx.table[i].subtableOffset += tableLength;
-	}
-	if (fwrite(ctx.table, sizeof(FntEntry), ctx.tableSize, fpRom) != ctx.tableSize) FATAL("Failed to write FNT table\n");
-	address += ctx.tableSize * sizeof(FntEntry);
-	if (fwrite(ctx.subtable, ctx.subtableSize, 1, fpRom) != 1) FATAL("Failed to write FNT subtables\n");
-	address += ctx.subtableSize;
+    size_t tableLength = ctx.tableSize * sizeof(FntEntry);
+    for (size_t i = 0; i < ctx.tableSize; ++i) {
+        ctx.table[i].subtableOffset += tableLength;
+    }
+    if (fwrite(ctx.table, sizeof(FntEntry), ctx.tableSize, fpRom) != ctx.tableSize) FATAL("Failed to write FNT table\n");
+    address += ctx.tableSize * sizeof(FntEntry);
+    if (fwrite(ctx.subtable, ctx.subtableSize, 1, fpRom) != 1) FATAL("Failed to write FNT subtables\n");
+    address += ctx.subtableSize;
 
-	free(ctx.table);
-	free(ctx.subtable);
+    free(ctx.table);
+    free(ctx.subtable);
 
-	*pAddress = address;
-	*pNumFiles = ctx.nextFileId;
-	return true;
+    *pAddress = address;
+    *pNumFiles = ctx.nextFileId;
+    return true;
 }
 
 bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
-	size_t address = *pAddress;
-	size_t fatStart = address;
+    size_t address = *pAddress;
+    size_t fatStart = address;
 
-	FatEntry blank;
-	blank.startOffset = 0;
-	blank.endOffset = 0;
-	for (size_t i = 0; i < numFiles; ++i) {
-		if (fwrite(&blank, sizeof(blank), 1, fpRom) != 1) FATAL("Failed to write blank placeholder FAT entry\n");
-	}
-	address += sizeof(blank) * numFiles;
+    FatEntry blank;
+    blank.startOffset = 0;
+    blank.endOffset = 0;
+    for (size_t i = 0; i < numFiles; ++i) {
+        if (fwrite(&blank, sizeof(blank), 1, fpRom) != 1) FATAL("Failed to write blank placeholder FAT entry\n");
+    }
+    address += sizeof(blank) * numFiles;
 
-	*pAddress = address;
-	return true;
+    *pAddress = address;
+    return true;
 }
 
 bool ReadTitle(const char *language, const char *file, wchar_t *title, size_t titleSize) {
@@ -402,45 +402,45 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
 }
 
 bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
-	size_t address = *pAddress;
+    size_t address = *pAddress;
 
-	// Traverse directories
-	for (size_t i = 0; i < tree->numChildren; ++i) {
-		FileTree *child = &tree->children[i];
-		FntSubEntry *entry = child->entry;
-		if (!entry->isSubdir) continue;
-		char name[128];
-		strncpy(name, entry->name, entry->length);
+    // Traverse directories
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        if (!entry->isSubdir) continue;
+        char name[128];
+        strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
-		if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
-		if (!AppendAssets(fpRom, &address, child, entries)) return false;
-		if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
-	}
-	
-	// Append files
-	size_t fileId = tree->firstFileId;
-	for (size_t i = 0; i < tree->numChildren; ++i, ++fileId) {
-		FileTree *child = &tree->children[i];
-		FntSubEntry *entry = child->entry;
-		if (entry->isSubdir) continue;
-		char name[128];
-		strncpy(name, entry->name, entry->length);
+        if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
+        if (!AppendAssets(fpRom, &address, child, entries)) return false;
+        if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
+    }
+    
+    // Append files
+    size_t fileId = tree->firstFileId;
+    for (size_t i = 0; i < tree->numChildren; ++i, ++fileId) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        if (entry->isSubdir) continue;
+        char name[128];
+        strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
-		if (!Align(512, fpRom, &address)) return false;
-		size_t startOffset = address;
-		if (!AppendFile(fpRom, name, &address, NULL)) return false;
-		entries[fileId].startOffset = startOffset;
-		entries[fileId].endOffset = address;
-	}
+        if (!Align(512, fpRom, &address)) return false;
+        size_t startOffset = address;
+        if (!AppendFile(fpRom, name, &address, NULL)) return false;
+        entries[fileId].startOffset = startOffset;
+        entries[fileId].endOffset = address;
+    }
 
-	*pAddress = address;
-	return true;
+    *pAddress = address;
+    return true;
 }
 
 bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t numFiles) {
     fseek(fpRom, fatStart, SEEK_SET);
-	if (fwrite(entries, sizeof(*entries), numFiles, fpRom) != numFiles) FATAL("Failed to rewrite FAT table\n");
-	fseek(fpRom, 0, SEEK_END);
+    if (fwrite(entries, sizeof(*entries), numFiles, fpRom) != numFiles) FATAL("Failed to rewrite FAT table\n");
+    fseek(fpRom, 0, SEEK_END);
 }
 
 void PrintUsage(const char *program) {
@@ -450,7 +450,7 @@ void PrintUsage(const char *program) {
         "Usage: %s -a BASEDIR -b BUILDDIR -r REGION -o OUTFILE\n"
         "    -a BASEDIR \tBase directory generated by extractrom\n"
         "    -b BUILDDIR\tBuild directory generated by Makefile\n"
-		"    -r REGION  \tJ = Japan, E = USA, P = Europe\n"
+        "    -r REGION  \tJ = Japan, E = USA, P = Europe\n"
         "    -o OUTFILE \tOutput ROM file\n",
         program
     );
@@ -465,7 +465,7 @@ int main(int argc, const char **argv) {
     const char *baseDir = NULL;
     const char *buildDir = NULL;
     const char *romFile = NULL;
-	Region region = 0;
+    Region region = 0;
     for (int i = 1; i < argc; ++i) {
         if (strcmp(argv[i], "-o") == 0) {
             if (++i >= argc) {
@@ -486,171 +486,173 @@ int main(int argc, const char **argv) {
             }
             buildDir = argv[i];
         } else if (strcmp(argv[i], "-r") == 0) {
-			if (++i >= argc) {
-				fprintf(stderr, "Expected region after -r\n");
-				return 1;
-			}
-			if (strlen(argv[i]) != 1) {
-				fprintf(stderr, "Region must be a single character\n");
-				return 1;
-			}
-			region = argv[i][0];
-		} else {
+            if (++i >= argc) {
+                fprintf(stderr, "Expected region after -r\n");
+                return 1;
+            }
+            if (strlen(argv[i]) != 1) {
+                fprintf(stderr, "Region must be a single character\n");
+                return 1;
+            }
+            region = argv[i][0];
+        } else {
             fprintf(stderr, "Unknown option '%s'\n", argv[i]);
             return 1;
         }
     }
-	if (baseDir == NULL) {
-		PrintUsage(program);
-		fprintf(stderr, "Please provide a base directory, see usage above\n");
-		return 1;
-	}
-	if (buildDir == NULL) {
-		PrintUsage(program);
-		fprintf(stderr, "Please provide a build directory, see usage above\n");
-		return 1;
-	}
-	if (region != REGION_JAPAN && region != REGION_USA && region != REGION_EUROPE) {
-		PrintUsage(program);
-		fprintf(stderr, "Invalid region '%c', see usage above\n", region);
-		return 1;
-	}
-	if (romFile == NULL) {
-		PrintUsage(program);
-		fprintf(stderr, "Please provide an output ROM file, see usage above\n");
-		return 1;
-	}
+    if (baseDir == NULL) {
+        PrintUsage(program);
+        fprintf(stderr, "Please provide a base directory, see usage above\n");
+        return 1;
+    }
+    if (buildDir == NULL) {
+        PrintUsage(program);
+        fprintf(stderr, "Please provide a build directory, see usage above\n");
+        return 1;
+    }
+    if (region != REGION_JAPAN && region != REGION_USA && region != REGION_EUROPE) {
+        PrintUsage(program);
+        fprintf(stderr, "Invalid region '%c', see usage above\n", region);
+        return 1;
+    }
+    if (romFile == NULL) {
+        PrintUsage(program);
+        fprintf(stderr, "Please provide an output ROM file, see usage above\n");
+        return 1;
+    }
 
-	char rootDir[256];
-	if (getcwd(rootDir, sizeof(rootDir)) == NULL) {
-		fprintf(stderr, "Failed to get root directory\n");
-		return 1;
-	}
+    char rootDir[256];
+    if (getcwd(rootDir, sizeof(rootDir)) == NULL) {
+        fprintf(stderr, "Failed to get root directory\n");
+        return 1;
+    }
 
-	FILE *fpRom = fopen(romFile, "wb");
-	if (fpRom == NULL) {
-		fprintf(stderr, "Failed to open output ROM file '%s'\n", romFile);
-		return 1;
-	}
-	
-	readBuffer = malloc(BUFFER_SIZE);
-	if (readBuffer == NULL) {
-		fprintf(stderr, "Failed to allocate read buffer to %d bytes\n", BUFFER_SIZE);
-		return 1;
-	}
+    FILE *fpRom = fopen(romFile, "wb");
+    if (fpRom == NULL) {
+        fprintf(stderr, "Failed to open output ROM file '%s'\n", romFile);
+        return 1;
+    }
+    
+    readBuffer = malloc(BUFFER_SIZE);
+    if (readBuffer == NULL) {
+        fprintf(stderr, "Failed to allocate read buffer to %d bytes\n", BUFFER_SIZE);
+        return 1;
+    }
 
     GenerateCrcTable();
 
-	BuildInfo info;
-	info.region = region;
-	size_t address = 0;
+    BuildInfo info;
+    info.region = region;
+    size_t address = 0;
 
-	Header header;
-	InitHeader(&header, &info);
+    Header header;
+    InitHeader(&header, &info);
 
-	if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
-		fprintf(stderr, "Failed to write NDS header\n");
-		return 1;
-	}
-	address += sizeof(header);
+    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
+        fprintf(stderr, "Failed to write NDS header\n");
+        return 1;
+    }
+    address += sizeof(header);
 
-	if (chdir(buildDir) != 0) {
-		fprintf(stderr, "Failed to enter build directory '%s'\n", buildDir);
-		return 1;
-	}
+    if (chdir(buildDir) != 0) {
+        fprintf(stderr, "Failed to enter build directory '%s'\n", buildDir);
+        return 1;
+    }
 
-	if (!Align(512, fpRom, &address)) return 1;
-	header.arm9.offset = address;
-	if (!AppendFile(fpRom, ARM9_PROGRAM_FILE, &address, &header.arm9.size)) return 1;
-	if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
+    if (!Align(512, fpRom, &address)) return 1;
+    header.arm9.offset = address;
+    if (!AppendFile(fpRom, ARM9_PROGRAM_FILE, &address, &header.arm9.size)) return 1;
+    if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
 
-	if (!Align(512, fpRom, &address)) return 1;
-	header.arm9Overlays.offset = address;
-	if (!AppendFile(fpRom, ARM9_OVERLAY_TABLE_FILE, &address, &header.arm9Overlays.size)) return 1;
+    if (!Align(512, fpRom, &address)) return 1;
+    header.arm9Overlays.offset = address;
+    if (!AppendFile(fpRom, ARM9_OVERLAY_TABLE_FILE, &address, &header.arm9Overlays.size)) return 1;
 
-	FatEntry overlayEntries[MAX_OVERLAYS];
-	size_t numOverlays = 0;
-	if (!WriteArm9Overlays(fpRom, &address, &numOverlays, overlayEntries, MAX_OVERLAYS)) return 1;
+    FatEntry overlayEntries[MAX_OVERLAYS];
+    size_t numOverlays = 0;
+    if (!WriteArm9Overlays(fpRom, &address, &numOverlays, overlayEntries, MAX_OVERLAYS)) return 1;
 
-	if (chdir(rootDir) != 0) {
-		fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
-		return 1;
-	}
+    if (chdir(rootDir) != 0) {
+        fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
+        return 1;
+    }
 
-	if (chdir(baseDir) != 0) {
-		fprintf(stderr, "Failed to enter base directory '%s'\n", baseDir);
-		return 1;
-	}
+    if (chdir(baseDir) != 0) {
+        fprintf(stderr, "Failed to enter base directory '%s'\n", baseDir);
+        return 1;
+    }
 
-	if (!Align(512, fpRom, &address)) return 1;
-	header.arm7.offset = address;
-	if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
+    if (!Align(512, fpRom, &address)) return 1;
+    header.arm7.offset = address;
+    if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
 
-	if (chdir(ASSETS_SUBDIR) != 0) {
-		fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-		return 1;
-	}
+    if (chdir(ASSETS_SUBDIR) != 0) {
+        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
+        return 1;
+    }
 
-	FileTree root;
-	if (!MakeFileTree(&root)) return false;
-	if (!SortFileTree(&root)) return false;
+    FileTree root;
+    if (!MakeFileTree(&root)) return false;
+    if (!SortFileTree(&root)) return false;
 
-	if (!Align(512, fpRom, &address)) return 1;
-	size_t numFiles = 0;
-	header.fileNames.offset = address;
-	if (!WriteFnt(fpRom, &address, &root, numOverlays, &numFiles)) return 1;
-	header.fileNames.size = address - header.fileNames.offset;
+    if (!Align(512, fpRom, &address)) return 1;
+    size_t numFiles = 0;
+    header.fileNames.offset = address;
+    if (!WriteFnt(fpRom, &address, &root, numOverlays, &numFiles)) return 1;
+    header.fileNames.size = address - header.fileNames.offset;
 
-	if (!Align(512, fpRom, &address)) return 1;
-	header.fileAllocs.offset = address;
-	if (!WriteFat(fpRom, &address, numFiles)) return 1;
-	header.fileAllocs.size = address - header.fileAllocs.offset;
+    if (!Align(512, fpRom, &address)) return 1;
+    header.fileAllocs.offset = address;
+    if (!WriteFat(fpRom, &address, numFiles)) return 1;
+    header.fileAllocs.size = address - header.fileAllocs.offset;
     FatEntry *fatEntries = malloc(numFiles * sizeof(FatEntry));
     memcpy(fatEntries, overlayEntries, numOverlays * sizeof(*fatEntries));
 
-	if (chdir("..") != 0) {
-		fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-		return 1;
-	}
+    if (chdir("..") != 0) {
+        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
+        return 1;
+    }
 
     if (!Align(512, fpRom, &address)) return false;
     header.bannerOffset = address;
     if (!WriteBanner(fpRom, &address)) return false;
 
-	if (chdir(ASSETS_SUBDIR) != 0) {
-		fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-		return 1;
-	}
+    if (chdir(ASSETS_SUBDIR) != 0) {
+        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
+        return 1;
+    }
 
-	if (!Align(512, fpRom, &address)) return false;
-	if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
+    if (!Align(512, fpRom, &address)) return false;
+    if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
 
     if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
     free(fatEntries);
 
-	if (!FreeFileTree(&root)) return false;
+    if (!FreeFileTree(&root)) return false;
 
-	if (chdir("..") != 0) {
-		fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-		return 1;
-	}
+    if (chdir("..") != 0) {
+        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
+        return 1;
+    }
 
-	if (chdir(rootDir) != 0) {
-		fprintf(stderr, "Failed to leave base directory '%s'\n", baseDir);
-		return 1;
-	}
-	
+    if (chdir(rootDir) != 0) {
+        fprintf(stderr, "Failed to leave base directory '%s'\n", baseDir);
+        return 1;
+    }
+    
     header.romSize = address;
     header.capacity = 15 - __builtin_clz(header.romSize);
-	size_t romEnd = 1 << (17 + header.capacity);
-	if (!Align(romEnd, fpRom, &address)) return 1;
+    size_t romEnd = 1 << (17 + header.capacity);
+    if (!Align(romEnd, fpRom, &address)) return 1;
 
-	fseek(fpRom, 0, SEEK_SET);
-	if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
-		fprintf(stderr, "Failed to rewrite header\n");
-		return 1;
-	}
+    header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
 
-	free(readBuffer);
-	fclose(fpRom);
+    fseek(fpRom, 0, SEEK_SET);
+    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
+        fprintf(stderr, "Failed to rewrite header\n");
+        return 1;
+    }
+
+    free(readBuffer);
+    fclose(fpRom);
 }
