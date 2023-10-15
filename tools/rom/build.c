@@ -640,7 +640,8 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 	
-    header.capacity = 15 - __builtin_clz(address);
+    header.romSize = address;
+    header.capacity = 15 - __builtin_clz(header.romSize);
 	size_t romEnd = 1 << (17 + header.capacity);
 	if (!Align(romEnd, fpRom, &address)) return 1;
 
