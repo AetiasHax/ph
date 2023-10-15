@@ -21,6 +21,8 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
 	if (hFind == INVALID_HANDLE_VALUE) FATAL("Failed to open directory to iterate files\n");
 	do {
 		const char *name = findData.cFileName;
+        if (strcmp(name, ".") == 0) continue;
+        if (strcmp(name, "..") == 0) continue;
 		bool isDir = (findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
 		if (!callback(name, isDir, userData)) return false;
 	} while (FindNextFileA(hFind, &findData));
@@ -40,7 +42,7 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
 bool _GrowFileTreeChildren(FileTree *pTree, size_t minChildren) {
 	FileTree tree;
 	memcpy(&tree, pTree, sizeof(tree));
-	if (tree.numChildren >= minChildren) return true;
+	if (tree.maxChildren >= minChildren) return true;
 
 	size_t newSize = tree.maxChildren;
 	if (newSize == 0) newSize = minChildren;
@@ -77,6 +79,7 @@ bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
 		FileTree child;
 		if (!MakeFileTree(&child)) return false;
 		child.entry = entry;
+		if (!_GrowFileTreeChildren(pTree, pTree->numChildren + 1)) return false;
 		memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
 		pTree->numChildren += 1;
 
@@ -98,12 +101,14 @@ bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
 		memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
 		pTree->numChildren += 1;
 	}
+    return true;
 }
 
 bool MakeFileTree(FileTree *pTree) {
 	FileTree tree;
-	tree.maxChildren = 0;
+    tree.children = NULL;
 	tree.numChildren = 0;
+	tree.maxChildren = 0;
 	if (!_GrowFileTreeChildren(&tree, 64)) return false;
 	tree.entry = NULL;
 
@@ -126,6 +131,7 @@ bool FreeFileTree(FileTree *pTree) {
 		free(pTree->entry);
 		pTree->entry = NULL;
 	}
+    return true;
 }
 
 int CompareFileTree(const void *a, const void *b) {
@@ -134,14 +140,21 @@ int CompareFileTree(const void *a, const void *b) {
 	size_t lenA = treeA->entry->length;
 	size_t lenB = treeB->entry->length;
 	size_t minSize = (lenA < lenB) ? lenA : lenB;
-	int cmp = strncmp(treeA->entry->name, treeB->entry->name, minSize);
-	if (cmp != 0) return cmp;
+
+    const char *nameA = treeA->entry->name;
+    const char *nameB = treeB->entry->name;
+    for (size_t i = 0; i < minSize; ++i) {
+        const char chA = tolower(nameA[i]);
+        const char chB = tolower(nameB[i]);
+        if (chA != chB) return chA - chB;
+    }
 	if (lenA < lenB) return -1;
 	if (lenA > lenB) return 1;
 	return 0;
 }
 
 bool SortFileTree(FileTree *pTree) {
+    if (pTree->numChildren <= 1) return true;
 	FileTree tree;
 	memcpy(&tree, pTree, sizeof(tree));
 

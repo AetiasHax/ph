@@ -7,12 +7,12 @@
 
 #define FATAL(...) do { fprintf(stderr, __VA_ARGS__); return false; } while (0)
 
-#define WRITE16(buf,val) do { ((char*) buf)[0] = (val) & 0xFF; ((char*) buf)[1] = ((val) >> 8) & 0xFF; } while (0)
-#define WRITE24(buf,val) do { ((char*) buf)[0] = (val) & 0xFF; ((char*) buf)[1] = ((val) >> 8) & 0xFF; ((char*) buf)[2] = ((val) >> 16) & 0xFF; } while (0)
-#define WRITE32(buf,val) do { ((char*) buf)[0] = (val) & 0xFF; ((char*) buf)[1] = ((val) >> 8) & 0xFF; ((char*) buf)[2] = ((val) >> 16) & 0xFF; ((char*) buf)[3] = ((val) >> 24) & 0xFF; } while (0)
-#define READ16(buf) (((char*) buf)[0] | (((char*) buf)[1] << 8))
-#define READ24(buf) (((char*) buf)[0] | (((char*) buf)[1] << 8) | (((char*) buf)[2] << 16))
-#define READ32(buf) (((char*) buf)[0] | (((char*) buf)[1] << 8) | (((char*) buf)[2] << 16) | (((char*) buf)[3] << 24))
+#define WRITE16(buf,val) do { ((uint8_t*) buf)[0] = (val) & 0xFF; ((uint8_t*) buf)[1] = ((val) >> 8) & 0xFF; } while (0)
+#define WRITE24(buf,val) do { ((uint8_t*) buf)[0] = (val) & 0xFF; ((uint8_t*) buf)[1] = ((val) >> 8) & 0xFF; ((uint8_t*) buf)[2] = ((val) >> 16) & 0xFF; } while (0)
+#define WRITE32(buf,val) do { ((uint8_t*) buf)[0] = (val) & 0xFF; ((uint8_t*) buf)[1] = ((val) >> 8) & 0xFF; ((uint8_t*) buf)[2] = ((val) >> 16) & 0xFF; ((uint8_t*) buf)[3] = ((val) >> 24) & 0xFF; } while (0)
+#define READ16(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8))
+#define READ24(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8) | (((uint8_t*) buf)[2] << 16))
+#define READ32(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8) | (((uint8_t*) buf)[2] << 16) | (((uint8_t*) buf)[3] << 24))
 
 #ifdef _WIN32
 #	include <Windows.h>

@@ -47,8 +47,8 @@ typedef struct {
     /* 0084 */ uint32_t headerSize;
     /* 0088 */ uint32_t autoloadParamsOffset;
     /* 008c */ uint8_t reserved1[0x8];
-    /* 0094 */ uint32_t romEnd;
-    /* 0096 */ uint32_t rwEnd;
+    /* 0094 */ uint16_t romEnd;
+    /* 0096 */ uint16_t rwEnd;
     /* 0098 */ uint8_t reserved2[0x18];
     /* 00b0 */ uint8_t reserved3[0x10];
     /* 00c0 */ uint8_t logo[0x9c];
