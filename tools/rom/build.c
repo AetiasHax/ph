@@ -523,7 +523,7 @@ int main(int argc, const char **argv) {
 	if (!AppendFile(fpRom, ARM9_PROGRAM_FILE, &address, &header.arm9.size)) return 1;
 	if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
 
-	if (!Align(256, fpRom, &address)) return 1;
+	if (!Align(512, fpRom, &address)) return 1;
 	header.arm9Overlays.offset = address;
 	if (!AppendFile(fpRom, ARM9_OVERLAY_TABLE_FILE, &address, &header.arm9Overlays.size)) return 1;
 
@@ -563,7 +563,7 @@ int main(int argc, const char **argv) {
 	if (!Align(256, fpRom, &address)) return 1;
 	header.fileAllocs.offset = address;
 	if (!WriteFat(fpRom, &address, &root, numFiles, overlayEntries, numOverlays)) return 1;
-	header.fileAllocs.offset = address - header.fileAllocs.offset;
+	header.fileAllocs.size = numFiles * sizeof(FatEntry);
 
 	if (!FreeFileTree(&root)) return false;
 
