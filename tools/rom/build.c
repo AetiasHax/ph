@@ -159,7 +159,7 @@ bool WriteArm9Overlays(FILE *fpRom, size_t *pAddress, size_t *pNumOverlays, FatE
 
 	while (true) {
 		sprintf(fileName, "ov%02d.lz", ovNum);
-		if (!Align(256, fpRom, &address)) return false;
+		if (!Align(512, fpRom, &address)) return false;
 		size_t startOffset = address;
 		if (!AppendFile(fpRom, fileName, &address, NULL)) break;
 		entries[ovNum].startOffset = startOffset;
@@ -426,7 +426,7 @@ bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry 
 		char name[128];
 		strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
-		if (!Align(256, fpRom, &address)) return false;
+		if (!Align(512, fpRom, &address)) return false;
 		size_t startOffset = address;
 		if (!AppendFile(fpRom, name, &address, NULL)) return false;
 		entries[fileId].startOffset = startOffset;
@@ -559,7 +559,7 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 
-	if (!Align(256, fpRom, &address)) return 1;
+	if (!Align(512, fpRom, &address)) return 1;
 	header.arm9.offset = address;
 	if (!AppendFile(fpRom, ARM9_PROGRAM_FILE, &address, &header.arm9.size)) return 1;
 	if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
@@ -582,7 +582,7 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 
-	if (!Align(256, fpRom, &address)) return 1;
+	if (!Align(512, fpRom, &address)) return 1;
 	header.arm7.offset = address;
 	if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
 
@@ -595,13 +595,13 @@ int main(int argc, const char **argv) {
 	if (!MakeFileTree(&root)) return false;
 	if (!SortFileTree(&root)) return false;
 
-	if (!Align(256, fpRom, &address)) return 1;
+	if (!Align(512, fpRom, &address)) return 1;
 	size_t numFiles = 0;
 	header.fileNames.offset = address;
 	if (!WriteFnt(fpRom, &address, &root, numOverlays, &numFiles)) return 1;
 	header.fileNames.size = address - header.fileNames.offset;
 
-	if (!Align(256, fpRom, &address)) return 1;
+	if (!Align(512, fpRom, &address)) return 1;
 	header.fileAllocs.offset = address;
 	if (!WriteFat(fpRom, &address, numFiles)) return 1;
 	header.fileAllocs.size = address - header.fileAllocs.offset;
@@ -613,7 +613,7 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 
-    if (!Align(256, fpRom, &address)) return false;
+    if (!Align(512, fpRom, &address)) return false;
     header.bannerOffset = address;
     if (!WriteBanner(fpRom, &address)) return false;
 
@@ -622,7 +622,7 @@ int main(int argc, const char **argv) {
 		return 1;
 	}
 
-	if (!Align(256, fpRom, &address)) return false;
+	if (!Align(512, fpRom, &address)) return false;
 	if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
 
     if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
