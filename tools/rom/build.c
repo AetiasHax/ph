@@ -329,14 +329,24 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
 	return true;
 }
 
-typedef struct {
-	FatEntry *entries;
-} FatContext;
-
-bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatContext *pCtx) {
+bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
 	size_t address = *pAddress;
-	FatContext ctx;
-	memcpy(&ctx, pCtx, sizeof(ctx));
+	size_t fatStart = address;
+
+	FatEntry blank;
+	blank.startOffset = 0;
+	blank.endOffset = 0;
+	for (size_t i = 0; i < numFiles; ++i) {
+		if (fwrite(&blank, sizeof(blank), 1, fpRom) != 1) FATAL("Failed to write blank placeholder FAT entry\n");
+	}
+	address += sizeof(blank) * numFiles;
+
+	*pAddress = address;
+	return true;
+}
+
+bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
+	size_t address = *pAddress;
 
 	// Traverse directories
 	for (size_t i = 0; i < tree->numChildren; ++i) {
@@ -347,7 +357,7 @@ bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatContex
 		strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
 		if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
-		if (!AppendAssets(fpRom, &address, child, &ctx)) return false;
+		if (!AppendAssets(fpRom, &address, child, entries)) return false;
 		if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
 	}
 	
@@ -363,43 +373,18 @@ bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatContex
 		if (!Align(256, fpRom, &address)) return false;
 		size_t startOffset = address;
 		if (!AppendFile(fpRom, name, &address, NULL)) return false;
-		ctx.entries[fileId].startOffset = startOffset;
-		ctx.entries[fileId].endOffset = address;
+		entries[fileId].startOffset = startOffset;
+		entries[fileId].endOffset = address;
 	}
 
 	*pAddress = address;
-	memcpy(pCtx, &ctx, sizeof(ctx));
 	return true;
 }
 
-bool WriteFat(FILE *fpRom, size_t *pAddress, const FileTree *root, size_t numFiles, FatEntry *overlayEntries, size_t numOverlays) {
-	size_t address = *pAddress;
-	size_t fatStart = address;
-
-	FatEntry blank;
-	blank.startOffset = 0;
-	blank.endOffset = 0;
-	for (size_t i = 0; i < numFiles; ++i) {
-		if (fwrite(&blank, sizeof(blank), 1, fpRom) != 1) FATAL("Failed to write blank placeholder FAT entry\n");
-	}
-	address += sizeof(blank) * numFiles;
-
-	FatContext ctx;
-	ctx.entries = malloc(numFiles * sizeof(*ctx.entries));
-	if (ctx.entries == NULL) FATAL("Failed to allocate FAT entries, %d needed\n", numFiles);
-	memcpy(ctx.entries, overlayEntries, numOverlays * sizeof(*overlayEntries));
-
-	if (!Align(256, fpRom, &address)) return false;
-	if (!AppendAssets(fpRom, &address, root, &ctx)) return false;
-
-	fseek(fpRom, fatStart, SEEK_SET);
-	if (fwrite(ctx.entries, sizeof(*ctx.entries), numFiles, fpRom) != numFiles) FATAL("Failed to write FAT table\n");
+bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t numFiles) {
+    fseek(fpRom, fatStart, SEEK_SET);
+	if (fwrite(entries, sizeof(*entries), numFiles, fpRom) != numFiles) FATAL("Failed to rewrite FAT table\n");
 	fseek(fpRom, 0, SEEK_END);
-
-	free(ctx.entries);
-
-	*pAddress = address;
-	return true;
 }
 
 void PrintUsage(const char *program) {
@@ -562,8 +547,16 @@ int main(int argc, const char **argv) {
 
 	if (!Align(256, fpRom, &address)) return 1;
 	header.fileAllocs.offset = address;
-	if (!WriteFat(fpRom, &address, &root, numFiles, overlayEntries, numOverlays)) return 1;
-	header.fileAllocs.size = numFiles * sizeof(FatEntry);
+	if (!WriteFat(fpRom, &address, numFiles)) return 1;
+	header.fileAllocs.size = address - header.fileAllocs.offset;
+    FatEntry *fatEntries = malloc(numFiles * sizeof(FatEntry));
+    memcpy(fatEntries, overlayEntries, numOverlays * sizeof(*fatEntries));
+
+	if (!Align(256, fpRom, &address)) return false;
+	if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
+
+    if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
+    free(fatEntries);
 
 	if (!FreeFileTree(&root)) return false;
 
