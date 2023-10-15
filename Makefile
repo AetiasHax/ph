@@ -23,7 +23,8 @@ CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.o)
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
 
-NDS_FILE = ph_$(REGION_NAME).nds
+NDS_FILE := ph_$(REGION_NAME).nds
+BASE_ROM := baserom_$(REGION_NAME).nds
 
 MW_VER     := 2.0/sp1p5
 MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm
@@ -48,6 +49,10 @@ tools:
 .PHONY: rom
 rom: arm9
 	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE)
+
+.PHONY: extract
+extract:
+	$(TOOLS_DIR)/rom/extractrom -o $(BASE_DIR) -i $(BASE_ROM)
 
 .PHONY: arm9
 arm9: link
