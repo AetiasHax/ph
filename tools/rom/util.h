@@ -43,52 +43,19 @@ bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *
 #endif
 }
 
-// typedef struct {
-// #ifdef _WIN32
-// 	WIN32_FIND_DATA findData;
-// 	HANDLE hFind;
-// 	bool done;
-// #elif __linux__
-// 	DIR *dir;
-// 	struct dirent *entry;
-// #endif
-// } DirContext;
-
-// bool BeginDir(DirContext *ctx) {
-// #ifdef _WIN32
-// 	ctx->hFind = FindFirstFileA("*", &ctx->findData);
-// 	if (ctx->hFind == INVALID_HANDLE_VALUE) FATAL("Failed to begin walking directory\n");
-// 	return true;
-// #elif __linux__
-// 	ctx->dir = opendir(".");
-// 	if (ctx->dir == NULL) FATAL("Failed to begin walking directory\n");
-// 	ctx->entry = readdir(ctx->dir);
-// 	return true;
-// #endif
-// }
-
-// bool NextFile(DirContext *ctx, char *pName, size_t nameSize, bool *pIsDir) {
-// #ifdef _WIN32
-// 	if (ctx->done) return false;
-// 	strncpy(pName, ctx->findData.cFileName, nameSize);
-// 	*pIsDir = (ctx->findData.dwFileAttributes & FILE_ATTRIBUTE_DIRECTORY) != 0;
-// 	if (!FindNextFileA(ctx->hFind, &ctx->findData)) ctx->done = true;
-// 	return true;
-// #elif __linux__
-// 	if (ctx->entry == NULL) return false;
-// 	strncpy(pName, ctx->entry.d_name, nameSize);
-// 	*pIsDir = ctx->entry.d_type == DT_DIR;
-// 	ctx->entry = readdir(ctx->dir);
-// 	return true;
-// #endif
-// }
-
-// void EndDir(DirContext *ctx) {
-// #ifdef _WIN32
-// 	FindClose(ctx->hFind);
-// #elif __linux__
-// 	closedir(ctx->dir);
-// #endif
-// }
+bool Utf8ToWchar(char *in, size_t inSize, wchar_t *out, size_t outSize) {
+#ifdef _WIN32
+    size_t resultSize = MultiByteToWideChar(CP_UTF8, 0, in, inSize, out, outSize / sizeof(wchar_t));
+    if (resultSize == 0) FATAL("Failed to convert from UTF-8: %d\n", GetLastError());
+    return true;
+#elif __linux__
+    iconv_t convDesc = iconv_open("UTF-8", "UTF-16");
+    if (convDesc == -1) FATAL("Failed to get conversion description from UTF-8\n");
+    size_t remainingBytes = outSize;
+    if (iconv(convDesc, &in, &inSize, &out, &remainingBytes) == -1) FATAL("Failed to convert from UTF-8\n");
+    if (inSize > 0) FATAL("Some characters were not converted from UTF-8\n");
+    return true;
+#endif
+}
 
 #endif

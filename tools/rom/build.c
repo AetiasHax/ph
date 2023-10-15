@@ -345,6 +345,62 @@ bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
 	return true;
 }
 
+bool ReadTitle(const char *language, const char *file, wchar_t *title, size_t titleSize) {
+    char buf[1024];
+    memset(buf, 0, sizeof(buf));
+    FILE *fp = fopen(file, "rb");
+    if (fp == NULL) FATAL("Failed to open %s banner title '%s'\n", language, file);
+    
+    fseek(fp, 0, SEEK_END);
+    size_t fileSize = ftell(fp);
+    if (fileSize > sizeof(buf) - 1) FATAL("Buffer too small for %s banner title '%s'\n", language, file);
+    fseek(fp, 0, SEEK_SET);
+
+    if (fread(buf, fileSize, 1, fp) != 1) FATAL("Failed to read %s banner title '%s'\n", language, file);
+    fclose(fp);
+
+    if (!Utf8ToWchar(buf, fileSize, title, titleSize)) return false;
+    return true;
+}
+
+bool WriteBanner(FILE *fpRom, size_t *pAddress) {
+    size_t address = *pAddress;
+
+    FILE *fp;
+
+    Banner banner;
+    banner.version = 1;
+    banner.crc;
+    memset(banner.reserved0, 0, sizeof(banner.reserved0));
+
+    fp = fopen(ICON_BITMAP_FILE, "rb");
+    if (fp == NULL) FATAL("Failed to open banner icon bitmap '" ICON_BITMAP_FILE "'\n");
+    if (fread(banner.iconBitmap, sizeof(banner.iconBitmap), 1, fp) != 1) {
+        FATAL("Failed to read banner icon bitmap '" ICON_BITMAP_FILE "'\n");
+    }
+    fclose(fp);
+
+    fp = fopen(ICON_PALETTE_FILE, "rb");
+    if (fp == NULL) FATAL("Failed to open banner icon palette '" ICON_PALETTE_FILE "'\n");
+    if (fread(banner.iconPalette, sizeof(banner.iconPalette), 1, fp) != 1) {
+        FATAL("Failed to read banner icon palette '" ICON_PALETTE_FILE "'\n");
+    }
+    fclose(fp);
+
+    if (!ReadTitle("Japanese", TITLE_JAP_FILE, banner.japaneseTitle, sizeof(banner.japaneseTitle))) return false;
+    if (!ReadTitle("English", TITLE_ENG_FILE, banner.englishTitle, sizeof(banner.englishTitle))) return false;
+    if (!ReadTitle("French", TITLE_FRE_FILE, banner.frenchTitle, sizeof(banner.frenchTitle))) return false;
+    if (!ReadTitle("German", TITLE_GER_FILE, banner.germanTitle, sizeof(banner.germanTitle))) return false;
+    if (!ReadTitle("Italian", TITLE_ITA_FILE, banner.italianTitle, sizeof(banner.italianTitle))) return false;
+    if (!ReadTitle("Spanish", TITLE_SPA_FILE, banner.spanishTitle, sizeof(banner.spanishTitle))) return false;
+
+    if (fwrite(&banner, sizeof(banner), 1, fpRom) != 1) FATAL("Failed to write banner\n");
+    address += sizeof(banner);
+
+    *pAddress = address;
+    return true;
+}
+
 bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
 	size_t address = *pAddress;
 
@@ -551,6 +607,20 @@ int main(int argc, const char **argv) {
 	header.fileAllocs.size = address - header.fileAllocs.offset;
     FatEntry *fatEntries = malloc(numFiles * sizeof(FatEntry));
     memcpy(fatEntries, overlayEntries, numOverlays * sizeof(*fatEntries));
+
+	if (chdir("..") != 0) {
+		fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
+		return 1;
+	}
+
+    if (!Align(256, fpRom, &address)) return false;
+    header.bannerOffset = address;
+    if (!WriteBanner(fpRom, &address)) return false;
+
+	if (chdir(ASSETS_SUBDIR) != 0) {
+		fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
+		return 1;
+	}
 
 	if (!Align(256, fpRom, &address)) return false;
 	if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
