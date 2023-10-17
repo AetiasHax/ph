@@ -32,7 +32,7 @@ const uint8_t logo[] = {
 
 uint16_t crcTable[0x100];
 void GenerateCrcTable() {
-    uint16_t polynomial = 0x2f15;
+    uint16_t polynomial = 0xa001;
     for (size_t i = 0; i < 0x100; ++i) {
         uint16_t value = i;
         for (size_t j = 0; j < 8; ++j) {
@@ -443,6 +443,31 @@ bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t nu
     fseek(fpRom, 0, SEEK_END);
 }
 
+bool FinalizeHeader(FILE *fpRom, Header *pHeader) {
+    Header header;
+    memcpy(&header, pHeader, sizeof(header));
+
+    FILE *fp = fopen(ARM9_PROGRAM_FILE, "rb");
+    if (fp == NULL) FATAL("Failed to open ARM9 program '" ARM9_PROGRAM_FILE "'\n");
+    uint8_t secureArea[0x4000];
+    if (fread(secureArea, sizeof(secureArea), 1, fp) != 1) FATAL("Failed to read secure area\n");
+    fclose(fp);
+
+    header.secureAreaCrc = Crc(secureArea, sizeof(secureArea));
+    header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
+    
+    size_t prevPos = ftell(fpRom);
+    fseek(fpRom, 0, SEEK_SET);
+    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
+        fprintf(stderr, "Failed to rewrite header\n");
+        return 1;
+    }
+    fseek(fpRom, prevPos, SEEK_SET);
+
+    memcpy(pHeader, &header, sizeof(header));
+    return true;
+}
+
 void PrintUsage(const char *program) {
     printf(
         "buildrom " VERSION "\n"
@@ -645,11 +670,15 @@ int main(int argc, const char **argv) {
     size_t romEnd = 1 << (17 + header.capacity);
     if (!Align(romEnd, fpRom, &address)) return 1;
 
-    header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
+    if (chdir(buildDir) != 0) {
+        fprintf(stderr, "Failed to enter build directory '%s'\n", buildDir);
+        return 1;
+    }
 
-    fseek(fpRom, 0, SEEK_SET);
-    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
-        fprintf(stderr, "Failed to rewrite header\n");
+    if (!FinalizeHeader(fpRom, &header)) return false;
+
+    if (chdir(rootDir) != 0) {
+        fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
         return 1;
     }
 
