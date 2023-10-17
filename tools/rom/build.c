@@ -52,6 +52,71 @@ uint16_t Crc(const void *buf, size_t size) {
     return crc;
 }
 
+typedef struct {
+    /* 0000 */ uint32_t subkeys[0x12];
+    /* 0048 */ uint32_t sbox[4][0x100];
+    /* 1048 */
+} Blowfish;
+Blowfish blowfish;
+
+uint32_t BlowfishF(size_t x) {
+    uint32_t f;
+    f = blowfish.sbox[0][(x >> 24) & 0xff];
+    f += blowfish.sbox[1][(x >> 16) & 0xff];
+    f ^= blowfish.sbox[2][(x >> 8) & 0xff];
+    f += blowfish.sbox[3][x & 0xff];
+    return f;
+}
+
+void BlowfishEncrypt(uint32_t *a, uint32_t *b) {
+    uint32_t tmp;
+    for (size_t i = 0; i < 0x12; ++i) {
+        tmp = *a ^ blowfish.subkeys[i];
+        *a = *b ^ BlowfishF(tmp);
+        *b = tmp;
+    }
+    tmp = *a ^ blowfish.subkeys[0x11];
+    *a = *b ^ blowfish.subkeys[0x10];
+    *b = tmp;
+}
+
+void BlowfishApplyCode(uint32_t code[3]) {
+    BlowfishEncrypt(&code[1], &code[2]);
+    BlowfishEncrypt(&code[0], &code[1]);
+    for (size_t i = 0; i < 0x12; i += 2) {
+        blowfish.subkeys[i + 0] ^= REVERSE32(code[0]);
+        blowfish.subkeys[i + 1] ^= REVERSE32(code[1]);
+    }
+
+    uint32_t scratch0 = 0;
+    uint32_t scratch1 = 0;
+    for (size_t i = 0; i < 0x12; i += 2) {
+        BlowfishEncrypt(&scratch0, &scratch1);
+        blowfish.subkeys[i + 0] = scratch1;
+        blowfish.subkeys[i + 1] = scratch0;
+    }
+    for (size_t i = 0; i < 4; ++i) {
+        for (size_t j = 0; j < 0x100; j += 2) {
+            BlowfishEncrypt(&scratch0, &scratch1);
+            blowfish.sbox[i][j + 0] = scratch1;
+            blowfish.sbox[i][j + 1] = scratch0;
+        }
+    }
+}
+
+bool BlowfishInit(const char *arm7bios, const Header *pHeader, size_t level, size_t modulo) {
+    FILE *fp = fopen(arm7bios, "rb");
+    if (fp == NULL) FATAL("Failed to open ARM7 BIOS '%s'\n", arm7bios);
+    if (fread(&blowfish, sizeof(blowfish), 1, fp) != 1) FATAL("Failed to read encrypion key\n");
+    fclose(fp);
+
+    uint32_t code[3];
+    memcpy(&code[0], pHeader->gamecode, sizeof(code[0]));
+    code[1] = code[0] << 1;
+    code[2] = code[0] >> 1;
+    BlowfishApplyCode(code);
+}
+
 void InitHeader(Header *pHeader, const BuildInfo *info) {
     memcpy(&pHeader->title, TITLE, sizeof(pHeader->title));
     memcpy(&pHeader->gamecode, GAMECODE_PREFIX, 3);

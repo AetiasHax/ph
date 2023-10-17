@@ -13,6 +13,7 @@
 #define READ16(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8))
 #define READ24(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8) | (((uint8_t*) buf)[2] << 16))
 #define READ32(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8) | (((uint8_t*) buf)[2] << 16) | (((uint8_t*) buf)[3] << 24))
+#define REVERSE32(val) ((val >> 24) | ((val & 0xff0000) >> 8) | ((val & 0xff00) << 8) | ((val & 0xff) << 24))
 
 #ifdef _WIN32
 #	include <Windows.h>
