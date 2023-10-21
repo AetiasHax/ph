@@ -4,7 +4,7 @@
 assembly code by hand. **The repository only contains code.** To build the ROM, you must own an existing copy of the game to
 extract assets from.
 
-**Note:** The project can not build a ROM yet. Furthermore, it only targets the European version, and other versions might
+**Note:** The project can build a ROM, but it doesn't match the original ROM yet. Furthermore, it only targets the European version, and other versions might
 be supported later.
 
 ## How to install

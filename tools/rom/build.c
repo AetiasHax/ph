@@ -68,24 +68,25 @@ uint32_t BlowfishF(size_t x) {
     return f;
 }
 
-void BlowfishEncrypt(uint32_t *a, uint32_t *b) {
+void BlowfishEncrypt(uint32_t *pLeft, uint32_t *pRight) {
     uint32_t tmp;
-    for (size_t i = 0; i < 0x12; ++i) {
-        tmp = *a ^ blowfish.subkeys[i];
-        *a = *b ^ BlowfishF(tmp);
-        *b = tmp;
+    uint32_t x = *pRight;
+    uint32_t y = *pLeft;
+    for (size_t i = 0; i < 0x10; ++i) {
+        tmp = x ^ blowfish.subkeys[i];
+        x = y ^ BlowfishF(tmp);
+        y = tmp;
     }
-    tmp = *a ^ blowfish.subkeys[0x11];
-    *a = *b ^ blowfish.subkeys[0x10];
-    *b = tmp;
+    *pLeft = x ^ blowfish.subkeys[0x10];
+    *pRight = y ^ blowfish.subkeys[0x11];
 }
 
 void BlowfishApplyCode(uint32_t code[3]) {
     BlowfishEncrypt(&code[1], &code[2]);
     BlowfishEncrypt(&code[0], &code[1]);
-    for (size_t i = 0; i < 0x12; i += 2) {
-        blowfish.subkeys[i + 0] ^= REVERSE32(code[0]);
-        blowfish.subkeys[i + 1] ^= REVERSE32(code[1]);
+    for (size_t i = 0; i < 0x12; ++i) {
+        uint32_t x = REVERSE32(code[i % 2]);
+        blowfish.subkeys[i] ^= x;
     }
 
     uint32_t scratch0 = 0;
@@ -109,8 +110,8 @@ bool BlowfishInit(const uint8_t *encKey, const Header *pHeader, size_t level) {
 
     uint32_t code[3];
     memcpy(&code[0], pHeader->gamecode, sizeof(code[0]));
-    code[1] = code[0] << 1;
-    code[2] = code[0] >> 1;
+    code[1] = code[0] >> 1;
+    code[2] = code[0] << 1;
     BlowfishApplyCode(code);
     if (level >= 2) BlowfishApplyCode(code);
     if (level >= 3) {
@@ -524,13 +525,15 @@ bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t
         if (fread(&encKey, sizeof(encKey), 1, fp) != 1) FATAL("Failed to read encrypion key\n");
         fclose(fp);
 
-        if (!BlowfishInit(encKey, pHeader, 2)) return false;
-        BlowfishEncrypt(&secureArea[0], &secureArea[1]);
         if (!BlowfishInit(encKey, pHeader, 3)) return false;
         for (size_t i = 2; i < 0x200; i += 2) {
             BlowfishEncrypt(&secureArea[i], &secureArea[i + 1]);
         }
-        header.secureAreaCrc = Crc(secureArea, sizeof(secureArea));
+        memcpy(secureArea, "encryObj", 8);
+        BlowfishEncrypt(&secureArea[0], &secureArea[1]);
+        if (!BlowfishInit(encKey, pHeader, 2)) return false;
+        BlowfishEncrypt(&secureArea[0], &secureArea[1]);
+        header.secureAreaCrc = Crc(secureArea, 0x4000);
     }
 
     header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
