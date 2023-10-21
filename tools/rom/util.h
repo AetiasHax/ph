@@ -59,4 +59,30 @@ bool Utf8ToWchar(char *in, size_t inSize, wchar_t *out, size_t outSize) {
 #endif
 }
 
+bool AllocFullPath(const char *path, char **pFullPath) {
+#ifdef _WIN32
+    if (path[0] == '/') {
+        // Remove drive letter, e.g. /c/Projects/ph/ -> /Projects/ph/
+        const char *root = strchr(path + 1, '/');
+        if (root - path == 2) path = root;
+    }
+    size_t size = GetFullPathNameA(path, 0, NULL, NULL);
+    char *fullPath = malloc(size);
+    size_t resultSize = GetFullPathNameA(path, size, fullPath, NULL);
+    if (resultSize == 0 || resultSize > size) FATAL("Failed to get full path for '%s'\n", path);
+    *pFullPath = fullPath;
+    return true;
+#elif __linux__
+    char *fullPath = realpath(path, NULL);
+    if (fullPath == NULL) FATAL("Failed to get full path for '%s'\n", path);
+    *pFullPath = fullPath;
+    return true;
+#endif
+}
+
+void FreeFullPath(char **pFullPath) {
+    free(*pFullPath);
+    *pFullPath = NULL;
+}
+
 #endif

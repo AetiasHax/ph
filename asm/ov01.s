@@ -5619,7 +5619,7 @@ _020f2b9e:
 	bne _020f2b9e
 _020f2bb4:
 	ldr r0, [sp, #0x14]
-	ldr r1, _020f2be8 ; =func_02000a74
+	ldr r1, _020f2be8 ; =AutoloadDoneCallback
 	ldr r2, [r0, #0x48]
 	ldr r0, [r6, #0x28]
 	sub r1, r1, r0
@@ -5642,7 +5642,7 @@ _020f2bd8: .word 0x027ffe00
 _020f2bdc: .word data_ov01_020f890c
 _020f2be0: .word 0x00406000
 _020f2be4: .word data_ov01_020f8908
-_020f2be8: .word func_02000a74
+_020f2be8: .word AutoloadDoneCallback
 _020f2bec: .word 0xe12fff1e
 
 	.global func_ov01_020f2bf0

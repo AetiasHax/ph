@@ -225,6 +225,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('    DTCM      : ORIGIN = 0x27e0000 >> arm9.bin\n')
     file.write('    AUTOLOADS : ORIGIN = 0         >> arm9.bin\n')
     file.write('    FOOTER    : ORIGIN = 0         >  arm9_footer.bin\n')
+    file.write('    METADATA  : ORIGIN = 0         >  arm9_metadata.bin\n')
     file.write('\n')
     file.write('    OV_TABLE  : ORIGIN = 0 > arm9_ovt.bin\n')
     file.write('\n')
@@ -278,6 +279,10 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('        WRITEW spAutoloadBlockInfosStart - ADDR(ARM9);\n')
     file.write('        WRITEW 0;\n')
     file.write('    } > FOOTER\n')
+    file.write('\n')
+    file.write('    .metadata : {\n')
+    file.write('        WRITEW AutoloadDoneCallback;\n')
+    file.write('    } > METADATA\n')
     file.write('\n')
     for ov in OVERLAYS:
         file.write(f'    .{ov.name} : ' + '{\n')

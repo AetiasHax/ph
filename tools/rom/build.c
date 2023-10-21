@@ -160,8 +160,8 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
     pHeader->bannerOffset = 0; // will be 256-aligned after file alloc table
     pHeader->secureAreaCrc = 0; // TODO: Calculate
     pHeader->secureAreaDelay = 0x0d7e;
-    pHeader->arm9AutoloadList = 0; // TODO: Get from linker (always 2000a74)
-    pHeader->arm7AutoloadList = 0x2380158;
+    pHeader->arm9AutoloadCallback = 0; // TODO: Get from linker (always 2000a74)
+    pHeader->arm7AutoloadCallback = 0x2380158;
     pHeader->secureAreaDisable = 0;
     pHeader->romSize = 0; // Will be set
     pHeader->headerSize = sizeof(Header);
@@ -513,12 +513,22 @@ bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t nu
     fseek(fpRom, 0, SEEK_END);
 }
 
-bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t *secureArea) {
+typedef struct {
+    uint32_t autoloadCallback;
+} Arm9Metadata;
+
+bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios) {
     Header header;
     memcpy(&header, pHeader, sizeof(header));
 
     if (arm7bios != NULL) {
-        FILE *fp = fopen(arm7bios, "rb");
+        FILE *fp = fopen(ARM9_PROGRAM_FILE, "rb");
+        if (fp == NULL) FATAL("Failed to open ARM9 program '" ARM9_PROGRAM_FILE "'\n");
+        uint32_t secureArea[0x1000];
+        if (fread(secureArea, sizeof(secureArea), 1, fp) != 1) FATAL("Failed to read secure area\n");
+        fclose(fp);
+
+        fp = fopen(arm7bios, "rb");
         if (fp == NULL) FATAL("Failed to open ARM7 BIOS '%s'\n", arm7bios);
         fseek(fp, 0x30, SEEK_SET);
         uint8_t encKey[sizeof(Blowfish)];
@@ -535,6 +545,13 @@ bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t
         BlowfishEncrypt(&secureArea[0], &secureArea[1]);
         header.secureAreaCrc = Crc(secureArea, 0x4000);
     }
+
+    FILE *fp = fopen(ARM9_METADATA_FILE, "rb");
+    if (fp == NULL) FATAL("Failed to open ARM9 metadata '" ARM9_METADATA_FILE "'\n");
+    Arm9Metadata metadata;
+    if (fread(&metadata, sizeof(metadata), 1, fp) != 1) FATAL("Failed to read ARM9 metadata '" ARM9_METADATA_FILE "'\n");
+    fclose(fp);
+    header.arm9AutoloadCallback = metadata.autoloadCallback;
 
     header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
     
@@ -573,7 +590,7 @@ int main(int argc, const char **argv) {
     const char *baseDir = NULL;
     const char *buildDir = NULL;
     const char *romFile = NULL;
-    const char *arm7bios = NULL;
+    const char *arm7biosFile = NULL;
     Region region = 0;
     for (int i = 1; i < argc; ++i) {
         if (strcmp(argv[i], "-o") == 0) {
@@ -599,7 +616,7 @@ int main(int argc, const char **argv) {
                 fprintf(stderr, "Expected pathname after -7\n");
                 return 1;
             }
-            arm7bios = argv[i];
+            arm7biosFile = argv[i];
         } else if (strcmp(argv[i], "-r") == 0) {
             if (++i >= argc) {
                 fprintf(stderr, "Expected region after -r\n");
@@ -755,6 +772,9 @@ int main(int argc, const char **argv) {
         return 1;
     }
     
+    char *arm7bios = NULL;
+    if (arm7biosFile != NULL && !AllocFullPath(arm7biosFile, &arm7bios)) return 1;
+    
     header.romSize = address;
     header.capacity = 15 - __builtin_clz(header.romSize);
     size_t romEnd = 1 << (17 + header.capacity);
@@ -765,18 +785,13 @@ int main(int argc, const char **argv) {
         return 1;
     }
 
-    FILE *fp = fopen(ARM9_PROGRAM_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open ARM9 program '" ARM9_PROGRAM_FILE "'\n");
-    uint32_t secureArea[0x1000];
-    if (fread(secureArea, sizeof(secureArea), 1, fp) != 1) FATAL("Failed to read secure area\n");
-    fclose(fp);
+    if (!FinalizeHeader(fpRom, &header, arm7bios)) return false;
+    FreeFullPath(&arm7bios);
 
     if (chdir(rootDir) != 0) {
         fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
         return 1;
     }
-
-    if (!FinalizeHeader(fpRom, &header, arm7bios, secureArea)) return false;
 
     free(readBuffer);
     fclose(fpRom);

@@ -40,8 +40,8 @@ typedef struct {
     /* 0068 */ uint32_t bannerOffset;
     /* 006c */ uint16_t secureAreaCrc;
     /* 006e */ uint16_t secureAreaDelay;
-    /* 0070 */ uint32_t arm9AutoloadList;
-    /* 0074 */ uint32_t arm7AutoloadList;
+    /* 0070 */ uint32_t arm9AutoloadCallback;
+    /* 0074 */ uint32_t arm7AutoloadCallback;
     /* 0078 */ uint64_t secureAreaDisable;
     /* 0080 */ uint32_t romSize;
     /* 0084 */ uint32_t headerSize;
