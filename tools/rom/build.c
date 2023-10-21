@@ -438,6 +438,7 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
 
     size_t tableStart = address;
     if (!WriteFntSubtable(pRoot, &ctx)) return false;
+    ctx.table[0].parentId = ctx.tableSize;
 
     size_t tableLength = ctx.tableSize * sizeof(FntEntry);
     for (size_t i = 0; i < ctx.tableSize; ++i) {

@@ -137,10 +137,18 @@ bool FreeFileTree(FileTree *pTree) {
 int CompareFileTree(const void *a, const void *b) {
     FileTree *treeA = (FileTree*) a;
     FileTree *treeB = (FileTree*) b;
+
+    // Files before directories
+    bool dirA = treeA->entry == NULL || treeA->entry->isSubdir;
+    bool dirB = treeB->entry == NULL || treeB->entry->isSubdir;
+    if (dirA && !dirB) return 1;
+    if (!dirA && dirB) return -1;
+
     size_t lenA = treeA->entry->length;
     size_t lenB = treeB->entry->length;
     size_t minSize = (lenA < lenB) ? lenA : lenB;
 
+    // Alphabetic name order
     const char *nameA = treeA->entry->name;
     const char *nameB = treeB->entry->name;
     for (size_t i = 0; i < minSize; ++i) {
@@ -148,6 +156,8 @@ int CompareFileTree(const void *a, const void *b) {
         const char chB = tolower(nameB[i]);
         if (chA != chB) return chA - chB;
     }
+
+    // Shortest name first
     if (lenA < lenB) return -1;
     if (lenA > lenB) return 1;
     return 0;
