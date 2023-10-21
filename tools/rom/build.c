@@ -485,6 +485,7 @@ bool ReadTitle(const char *language, const char *file, wchar_t *title, size_t ti
     if (fread(buf, fileSize, 1, fp) != 1) FATAL("Failed to read %s banner title '%s'\n", language, file);
     fclose(fp);
 
+    memset(title, 0, titleSize);
     if (!Utf8ToWchar(buf, fileSize, title, titleSize)) return false;
     return true;
 }
@@ -496,7 +497,6 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
 
     Banner banner;
     banner.version = 1;
-    banner.crc;
     memset(banner.reserved0, 0, sizeof(banner.reserved0));
 
     fp = fopen(ICON_BITMAP_FILE, "rb");
@@ -519,6 +519,10 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
     if (!ReadTitle("German", TITLE_GER_FILE, banner.germanTitle, sizeof(banner.germanTitle))) return false;
     if (!ReadTitle("Italian", TITLE_ITA_FILE, banner.italianTitle, sizeof(banner.italianTitle))) return false;
     if (!ReadTitle("Spanish", TITLE_SPA_FILE, banner.spanishTitle, sizeof(banner.spanishTitle))) return false;
+
+    uint8_t *crcStart = (uint8_t*) &banner + offsetof(Banner, iconBitmap);
+    uint8_t *crcEnd = (uint8_t*) &banner + sizeof(banner);
+    banner.crc = Crc(crcStart, crcEnd - crcStart);
 
     if (fwrite(&banner, sizeof(banner), 1, fpRom) != 1) FATAL("Failed to write banner\n");
     address += sizeof(banner);

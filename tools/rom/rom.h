@@ -86,9 +86,9 @@ typedef struct {
     /* 0240 */ wchar_t japaneseTitle[0x80];
     /* 0340 */ wchar_t englishTitle[0x80];
     /* 0440 */ wchar_t frenchTitle[0x80];
-    /* 0440 */ wchar_t germanTitle[0x80];
-    /* 0440 */ wchar_t italianTitle[0x80];
-    /* 0440 */ wchar_t spanishTitle[0x80];
+    /* 0540 */ wchar_t germanTitle[0x80];
+    /* 0640 */ wchar_t italianTitle[0x80];
+    /* 0740 */ wchar_t spanishTitle[0x80];
     /* 0540 */
 } Banner;
 
