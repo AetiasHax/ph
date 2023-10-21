@@ -222,7 +222,7 @@ bool Align(size_t alignment, FILE *fpRom, size_t *pAddress) {
 
 // Writes the ARM9 overlay table and returns the entries to `*pEntries`. `*pEntries` is allocated using `malloc`, so remember
 // to `free` it.
-bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, const Header *pHeader, const char *overlayDataFile, OverlayEntry **pEntries) {
+bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, Header *pHeader, const char *overlayDataFile, OverlayEntry **pEntries) {
     size_t address = *pAddress;
 
     FILE *fp = fopen(ARM9_OVERLAY_TABLE_FILE, "rb");
@@ -262,6 +262,7 @@ bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, const Header *pHeader,
 
     *pAddress = address;
     *pEntries = entries;
+    pHeader->arm9Overlays.size = tableSize;
     return true;
 }
 
