@@ -471,24 +471,9 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
     return true;
 }
 
-bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
+bool AppendAssetFiles(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries, size_t firstFileId) {
     size_t address = *pAddress;
-
-    // Traverse directories
-    for (size_t i = 0; i < tree->numChildren; ++i) {
-        FileTree *child = &tree->children[i];
-        FntSubEntry *entry = child->entry;
-        if (!entry->isSubdir) continue;
-        char name[128];
-        strncpy(name, entry->name, entry->length);
-        name[entry->length] = '\0';
-        if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
-        if (!AppendAssets(fpRom, &address, child, entries)) return false;
-        if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
-    }
-    
-    // Append files
-    size_t fileId = tree->firstFileId;
+    size_t fileId = firstFileId;
     for (size_t i = 0; i < tree->numChildren; ++i, ++fileId) {
         FileTree *child = &tree->children[i];
         FntSubEntry *entry = child->entry;
@@ -502,6 +487,39 @@ bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry 
         entries[fileId].startOffset = startOffset;
         entries[fileId].endOffset = address;
     }
+    *pAddress = address;
+    return true;
+}
+
+bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
+    size_t address = *pAddress;
+
+    // Traverse directories
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        FntSubEntry *entry = child->entry;
+        if (!entry->isSubdir) continue;
+        char name[128];
+        strncpy(name, entry->name, entry->length);
+        name[entry->length] = '\0';
+        if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
+        if (!TraverseAndAppendAssets(fpRom, &address, child, entries)) return false;
+        if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
+    }
+    
+    if (tree->entry != NULL) { // Directory is not root
+        AppendAssetFiles(fpRom, &address, tree, entries, tree->firstFileId);
+    }
+    
+    *pAddress = address;
+    return true;
+}
+
+bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *root, FatEntry *entries, size_t numOverlays) {
+    size_t address = *pAddress;
+
+    if (!TraverseAndAppendAssets(fpRom, &address, root, entries)) return false;
+    if (!AppendAssetFiles(fpRom, &address, root, entries, numOverlays)) return false;
 
     *pAddress = address;
     return true;
@@ -755,7 +773,7 @@ int main(int argc, const char **argv) {
     }
 
     if (!Align(512, fpRom, &address)) return false;
-    if (!AppendAssets(fpRom, &address, &root, fatEntries)) return false;
+    if (!AppendAssets(fpRom, &address, &root, fatEntries, numOverlays)) return false;
 
     if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
     free(fatEntries);
