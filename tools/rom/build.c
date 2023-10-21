@@ -130,42 +130,42 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
 
     pHeader->unitcode = 0;
     pHeader->encSeedSelect = 0;
-    pHeader->capacity = 0; // will be set
+    pHeader->capacity = 0;
     memset(&pHeader->reserved0, 0, sizeof(pHeader->reserved0));
     pHeader->dsRegion = 0;
     pHeader->romVersion = 0;
     pHeader->autostart = 0;
 
-    pHeader->arm9.offset = 0; // will be set after header
-    pHeader->arm9.entry = 0x2000800; // TODO: Get from linker
-    pHeader->arm9.baseAddr = 0x2000000; // TODO: Get from linker
-    pHeader->arm9.size = 0; // TODO: Get from arm9.lz
+    pHeader->arm9.offset = 0;
+    pHeader->arm9.entry = 0;
+    pHeader->arm9.baseAddr = 0;
+    pHeader->arm9.size = 0;
 
-    pHeader->arm7.offset = 0; // will be 256-aligned after ARM9 overlay files
+    pHeader->arm7.offset = 0;
     pHeader->arm7.entry = 0x2380000;
     pHeader->arm7.baseAddr = 0x2380000;
-    pHeader->arm7.size = 0; // TODO: Get from arm7.bin
+    pHeader->arm7.size = 0;
 
-    pHeader->fileNames.offset = 0; // will be 256-aligned after ARM7 program
-    pHeader->fileNames.size = 0; // will be set
-    pHeader->fileAllocs.offset = 0; // will be 256-aligned after file name table
-    pHeader->fileAllocs.size = 0; // will be set
-    pHeader->arm9Overlays.offset = 0; // will be 256-aligned after ARM9 program
-    pHeader->arm9Overlays.size = 0; // will be set
+    pHeader->fileNames.offset = 0;
+    pHeader->fileNames.size = 0;
+    pHeader->fileAllocs.offset = 0;
+    pHeader->fileAllocs.size = 0;
+    pHeader->arm9Overlays.offset = 0;
+    pHeader->arm9Overlays.size = 0;
     pHeader->arm7Overlays.offset = 0;
     pHeader->arm7Overlays.size = 0;
 
     pHeader->normalCmdSetting = 0x00416657;
     pHeader->key1CmdSetting = 0x081808f8;
-    pHeader->bannerOffset = 0; // will be 256-aligned after file alloc table
-    pHeader->secureAreaCrc = 0; // TODO: Calculate
+    pHeader->bannerOffset = 0;
+    pHeader->secureAreaCrc = 0;
     pHeader->secureAreaDelay = 0x0d7e;
-    pHeader->arm9AutoloadCallback = 0; // TODO: Get from linker (always 2000a74)
+    pHeader->arm9AutoloadCallback = 0;
     pHeader->arm7AutoloadCallback = 0x2380158;
     pHeader->secureAreaDisable = 0;
-    pHeader->romSize = 0; // Will be set
+    pHeader->romSize = 0;
     pHeader->headerSize = sizeof(Header);
-    pHeader->autoloadParamsOffset = 0; // TODO: Get from linker (always 4b64, see 2000b64)
+    pHeader->autoloadBlockInfosOffset = 0;
     memset(&pHeader->reserved1, 0, sizeof(pHeader->reserved1));
     pHeader->romEnd = 0;
     pHeader->rwEnd = 0;
@@ -173,7 +173,7 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
     memset(&pHeader->reserved3, 0, sizeof(pHeader->reserved3));
     memcpy(&pHeader->logo, logo, sizeof(pHeader->logo));
     pHeader->logoCrc = 0xcf56;
-    pHeader->headerCrc = 0; // Will be set
+    pHeader->headerCrc = 0;
     pHeader->debugRomOffset = 0;
     pHeader->debugSize = 0;
     pHeader->debugRamAddr = 0;
@@ -533,6 +533,9 @@ bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t nu
 
 typedef struct {
     uint32_t autoloadCallback;
+    uint32_t autoloadBlockInfos;
+    uint32_t entryAddr;
+    uint32_t baseAddr;
 } Arm9Metadata;
 
 bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios) {
@@ -569,7 +572,10 @@ bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios) {
     Arm9Metadata metadata;
     if (fread(&metadata, sizeof(metadata), 1, fp) != 1) FATAL("Failed to read ARM9 metadata '" ARM9_METADATA_FILE "'\n");
     fclose(fp);
+    header.arm9.entry = metadata.entryAddr;
+    header.arm9.baseAddr = metadata.baseAddr;
     header.arm9AutoloadCallback = metadata.autoloadCallback;
+    header.autoloadBlockInfosOffset = header.arm9.offset + metadata.autoloadBlockInfos;
 
     header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
     

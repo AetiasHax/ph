@@ -282,6 +282,9 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('\n')
     file.write('    .metadata : {\n')
     file.write('        WRITEW AutoloadDoneCallback;\n')
+    file.write('        WRITEW spAutoloadBlockInfosStart - ADDR(ARM9);\n')
+    file.write('        WRITEW Entry;\n')
+    file.write('        WRITEW ADDR(ARM9);\n')
     file.write('    } > METADATA\n')
     file.write('\n')
     for ov in OVERLAYS:

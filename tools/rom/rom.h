@@ -45,7 +45,7 @@ typedef struct {
     /* 0078 */ uint64_t secureAreaDisable;
     /* 0080 */ uint32_t romSize;
     /* 0084 */ uint32_t headerSize;
-    /* 0088 */ uint32_t autoloadParamsOffset;
+    /* 0088 */ uint32_t autoloadBlockInfosOffset;
     /* 008c */ uint8_t reserved1[0x8];
     /* 0094 */ uint16_t romEnd;
     /* 0096 */ uint16_t rwEnd;
