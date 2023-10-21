@@ -20904,7 +20904,7 @@ data_ov05_021123b4: ; 0x021123b4
 data_ov05_021123b8: ; 0x021123b8
 	.byte 0x00, 0xf0, 0x00, 0x00
 
-	.section .sinit, 4, 1, 4
+	.section .init, 4, 1, 4
 	.global func_ov05_021123bc
 	arm_func_start func_ov05_021123bc
 func_ov05_021123bc: ; 0x021123bc
@@ -20970,6 +20970,8 @@ func_ov05_02112420: ; 0x02112420
 	arm_func_end func_ov05_02112420
 _0211245c: .word data_02057200
 _02112460: .word data_ov05_02112954
+
+.section .sinit, 4, 1, 4
 	.global data_ov05_02112464
 data_ov05_02112464: ; 0x02112464
 	.byte 0xbc, 0x23, 0x11, 0x02
