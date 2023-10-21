@@ -65,6 +65,19 @@ typedef struct {
 } Header;
 
 typedef struct {
+    /* 00 */ uint32_t id;
+    /* 04 */ uint32_t baseAddr;
+    /* 08 */ uint32_t textSize;
+    /* 0c */ uint32_t bssSize;
+    /* 10 */ uint32_t sinitStart;
+    /* 14 */ uint32_t sinitEnd;
+    /* 18 */ uint32_t fileId;
+    /* 1c */ uint32_t compressedSize : 24;
+    /* 1f */ uint32_t isCompressed : 8;
+    /* 20 */
+} OverlayEntry;
+
+typedef struct {
     /* 0000 */ uint16_t version;
     /* 0002 */ uint16_t crc;
     /* 0004 */ uint8_t reserved0[0x1c];

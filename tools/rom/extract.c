@@ -130,6 +130,24 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
     return true;
 }
 
+bool ExtractOverlayData(const uint8_t *rom, const Header *header) {
+    const OverlayEntry *entry = (OverlayEntry*) (rom + header->arm9Overlays.offset);
+    const OverlayEntry *end = entry + header->arm9Overlays.size / sizeof(OverlayEntry);
+
+    FILE *fp = fopen(ARM9_OVERLAY_DATA_FILE, "wb");
+    if (fp == NULL) FATAL("Failed to open overlay data file '" ARM9_OVERLAY_DATA_FILE "'\n");
+    for(; entry < end; ++entry) {
+        OverlayData data;
+        data.fileId = entry->fileId;
+        if (fwrite(&data, sizeof(data), 1, fp) != 1) {
+            FATAL("Failed to write overlay data to '" ARM9_OVERLAY_DATA_FILE "'\n");
+        }
+    }
+    
+    fclose(fp);
+    return true;
+}
+
 void PrintUsage(const char *program) {
     printf(
         "extractrom " VERSION "\n"
@@ -224,6 +242,8 @@ int main(int argc, const char **argv) {
         return 1;
     }
     
+    if (!ExtractOverlayData(rom, pHeader)) return 1;
+
     if (chdir("..") != 0) {
         fprintf(stderr, "Failed to leave output directory '%s'\n", outDir);
         return 1;

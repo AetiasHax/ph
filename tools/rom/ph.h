@@ -20,6 +20,7 @@
 #define ARM9_FOOTER_FILE "arm9_footer.bin"
 #define ARM9_METADATA_FILE "arm9_metadata.bin"
 #define ARM9_OVERLAY_TABLE_FILE "arm9_ovt.bin"
+#define ARM9_OVERLAY_DATA_FILE "arm9_ovdata.bin"
 #define OVERLAYS_SUBDIR "overlays"
 
 #define ARM7_PROGRAM_FILE "arm7.bin"
@@ -33,5 +34,9 @@ typedef enum {
 typedef struct {
     Region region;
 } BuildInfo;
+
+typedef struct {
+    uint32_t fileId;
+} OverlayData;
 
 #endif
