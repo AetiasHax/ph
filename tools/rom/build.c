@@ -172,7 +172,7 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
     memset(&pHeader->reserved2, 0, sizeof(pHeader->reserved2));
     memset(&pHeader->reserved3, 0, sizeof(pHeader->reserved3));
     memcpy(&pHeader->logo, logo, sizeof(pHeader->logo));
-    pHeader->logoCrc = 0xcf56;
+    pHeader->logoCrc = Crc(logo, sizeof(logo));
     pHeader->headerCrc = 0;
     pHeader->debugRomOffset = 0;
     pHeader->debugSize = 0;
