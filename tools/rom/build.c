@@ -220,9 +220,15 @@ bool Align(size_t alignment, FILE *fpRom, size_t *pAddress) {
     return true;
 }
 
-// Writes the ARM9 overlay table and returns the entries to `*pEntries`. `*pEntries` is allocated using `malloc`, so remember
-// to `free` it.
-bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, Header *pHeader, const char *overlayDataFile, OverlayEntry **pEntries) {
+bool WriteArm9OverlayTable(
+    FILE *fpRom,
+    size_t *pAddress,
+    Header *pHeader,
+    const char *overlayDataFile,
+    OverlayEntry **pEntries,
+    OverlayData **pData,
+    size_t *pNumOverlays
+) {
     size_t address = *pAddress;
 
     FILE *fp = fopen(ARM9_OVERLAY_TABLE_FILE, "rb");
@@ -232,7 +238,7 @@ bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, Header *pHeader, const
     if (tableSize % sizeof(OverlayEntry) != 0) {
         FATAL("ARM9 overlay table has an invalid size (entries must be %d bytes long)\n", sizeof(OverlayEntry));
     }
-    size_t numEntries = tableSize / sizeof(OverlayEntry);
+    size_t numOverlays = tableSize / sizeof(OverlayEntry);
     fseek(fp, 0, SEEK_SET);
 
     OverlayEntry *entries = malloc(tableSize);
@@ -244,8 +250,8 @@ bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, Header *pHeader, const
     if (fp == NULL) FATAL("Failed to open ARM9 overlay data file '%s'\n", overlayDataFile);
     fseek(fp, 0, SEEK_END);
     size_t dataSize = ftell(fp);
-    if (dataSize != numEntries * sizeof(OverlayData)) {
-        FATAL("ARM9 data file has an invalid size (expected %d entries with %d bytes each)\n", numEntries, sizeof(OverlayData));
+    if (dataSize != numOverlays * sizeof(OverlayData)) {
+        FATAL("ARM9 overlay data file has an invalid size (expected %d overlays with %d bytes each)\n", numOverlays, sizeof(OverlayData));
     }
     fseek(fp, 0, SEEK_SET);
 
@@ -253,43 +259,50 @@ bool WriteArm9OverlayTable(FILE *fpRom, size_t *pAddress, Header *pHeader, const
     if (data == NULL) FATAL("Failed to allocate array for ARM9 overlay data entries\n");
     if (fread(data, dataSize, 1, fp) != 1) FATAL("Failed to read ARM9 overlay data '%s'\n", overlayDataFile);
     fclose(fp);
-    for (size_t i = 0; i < numEntries; ++i) {
+    for (size_t i = 0; i < numOverlays; ++i) {
         entries[i].fileId = data[i].fileId;
     }
-    free(data);
 
     if (fwrite(entries, tableSize, 1, fpRom) != 1) FATAL("Failed to write ARM9 overlay table\n");
 
     *pAddress = address;
     *pEntries = entries;
+    *pData = data;
+    *pNumOverlays = numOverlays;
     pHeader->arm9Overlays.size = tableSize;
     return true;
 }
 
-bool WriteArm9Overlays(FILE *fpRom, size_t *pAddress, size_t *pNumOverlays, FatEntry *fatEntries, OverlayEntry *table) {
+bool WriteArm9OverlayFiles(
+    FILE *fpRom,
+    size_t *pAddress, 
+    size_t numOverlays,
+    FatEntry *fatEntries,
+    OverlayEntry *table,
+    const OverlayData *data
+) {
     size_t address = *pAddress;
-    uint32_t ovNum = 0;
     char fileName[32];
 
     if (chdir(OVERLAYS_SUBDIR) != 0) FATAL("Failed to enter overlays directory '" OVERLAYS_SUBDIR "'\n");
 
-    while (true) {
+    for (size_t ovNum = 0; ovNum < numOverlays; ++ovNum) {
         sprintf(fileName, "ov%02d.lz", ovNum);
         if (!Align(512, fpRom, &address)) return false;
         size_t startOffset = address;
         uint32_t fileSize = 0;
-        if (!AppendFile(fpRom, fileName, &address, &fileSize)) break;
+        if (!AppendFile(fpRom, fileName, &address, &fileSize)) return false;
         table[ovNum].compressedSize = fileSize;
         table[ovNum].isCompressed = true;
-        fatEntries[ovNum].startOffset = startOffset;
-        fatEntries[ovNum].endOffset = address;
-        ovNum += 1;
+        uint32_t fileId = data[ovNum].fileId;
+        if (fileId >= MAX_OVERLAYS) FATAL("Overlay %d's file ID (%d) exceeds the maximum %d\n", ovNum, fileId, MAX_OVERLAYS);
+        fatEntries[fileId].startOffset = startOffset;
+        fatEntries[fileId].endOffset = address;
     }
 
     if (chdir("..") != 0) FATAL("Failed to leave overlays directory '" OVERLAYS_SUBDIR "'\n");
 
     *pAddress = address;
-    *pNumOverlays = ovNum;
     return true;
 }
 
@@ -298,6 +311,31 @@ bool RewriteArm9OverlayTable(FILE *fpRom, const Header *header, OverlayEntry *en
     fseek(fpRom, header->arm9Overlays.offset, SEEK_SET);
     if (fwrite(entries, sizeof(*entries), numEntries, fpRom) != numEntries) FATAL("Failed to rewrite ARM9 overlay table\n");
     fseek(fpRom, prevAddress, SEEK_SET);
+    return true;
+}
+
+bool WriteArm9Overlays(
+    FILE *fpRom,
+    size_t *pAddress,
+    Header *pHeader,
+    const char *overlayDataFile,
+    FatEntry *fatEntries,
+    size_t *pNumOverlays
+) {
+    size_t address = *pAddress;
+
+    OverlayEntry *entries;
+    OverlayData *data;
+    size_t numOverlays;
+    if (!WriteArm9OverlayTable(fpRom, &address, pHeader, overlayDataFile, &entries, &data, &numOverlays)) return false;
+    if (!WriteArm9OverlayFiles(fpRom, &address, numOverlays, fatEntries, entries, data)) return false;
+    if (!RewriteArm9OverlayTable(fpRom, pHeader, entries, numOverlays)) return false;
+
+    free(data);
+    free(entries);
+
+    *pAddress = address;
+    *pNumOverlays = numOverlays;
     return true;
 }
 
@@ -804,20 +842,13 @@ int main(int argc, const char **argv) {
     if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
 
 
-    // --------------------- Write ARM9 overlay table ---------------------
+    // --------------------- Write ARM9 overlay table and overlay files ---------------------
     if (!Align(512, fpRom, &address)) return 1;
     header.arm9Overlays.offset = address;
-    OverlayEntry *arm9overlays;
-    if (!WriteArm9OverlayTable(fpRom, &address, &header, arm9overlayDataFile, &arm9overlays)) return 1;
-    FreeFullPath(&arm9overlayDataFile);
-
-
-    // --------------------- Write ARM9 overlays ---------------------
-    FatEntry overlayEntries[MAX_OVERLAYS];
     size_t numOverlays = 0;
-    if (!WriteArm9Overlays(fpRom, &address, &numOverlays, overlayEntries, arm9overlays)) return 1;
-    if (!RewriteArm9OverlayTable(fpRom, &header, arm9overlays, numOverlays)) return 1;
-    free(arm9overlays);
+    FatEntry overlayEntries[MAX_OVERLAYS];
+    if (!WriteArm9Overlays(fpRom, &address, &header, arm9overlayDataFile, overlayEntries, &numOverlays)) return 1;
+    FreeFullPath(&arm9overlayDataFile);
 
     if (chdir(rootDir) != 0) {
         fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
