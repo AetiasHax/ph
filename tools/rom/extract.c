@@ -9,6 +9,20 @@
 #include "util.h"
 
 #define VERSION "1.0"
+#define INDENT 4
+
+// Command line flags for debugging purposes
+bool printFileHierarchy = false;
+bool printFileAllocOrder = false;
+
+void Indent(size_t depth) {
+    char spaces[INDENT + 1];
+    memset(spaces, ' ', INDENT);
+    spaces[INDENT] = '\0';
+    for (size_t i = 0; i < depth; ++i) {
+        printf(spaces);
+    }
+}
 
 bool MakeDir(const char *dir) {
     struct stat dirStat;
@@ -85,7 +99,7 @@ bool ExtractBanner(const Banner *pBanner, const BuildInfo *pInfo) {
     return true;
 }
 
-bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *fntStart, const FntEntry *pFntEntry) {
+bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *fntStart, const FntEntry *pFntEntry, size_t depth) {
     const uint8_t *subEntryAddr = fntStart + pFntEntry->subtableOffset;
     const FntSubEntry *pSubEntry = (const FntSubEntry*) subEntryAddr;
     uint16_t fileId = pFntEntry->firstFile;
@@ -95,7 +109,10 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         name[pSubEntry->length] = '\0';
         
         if (!pSubEntry->isSubdir) {
-            printf("File '%s'\n", name);
+            if (printFileHierarchy) {
+                Indent(depth);
+                printf("%d: %s\n", fileId, name);
+            }
 
             const FatEntry *pFatEntry = (const FatEntry*) fatStart + fileId;
             size_t fileSize = pFatEntry->endOffset - pFatEntry->startOffset;
@@ -112,21 +129,65 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
             continue;
         }
 
-        printf("Dir '%s'\n", name);
+        if (printFileHierarchy) {
+            Indent(depth);
+            printf("%s {\n", name);
+        }
         if (!MakeDir(name)) return false;
         if (chdir(name) != 0) FATAL("Failed to enter assets subdirectory '%s'\n", name);
         
         uint16_t subdirId = READ_SUBDIR_ID(pSubEntry);
         uint16_t subdirIndex = subdirId & 0xfff;
-        if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex)) return false;
+        if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex, depth + 1)) return false;
 
-        printf("Leave '%s'\n", name);
+        if (printFileHierarchy) {
+            Indent(depth);
+            printf("}\n");
+        }
 
         if (chdir("..") != 0) FATAL("Failed to leave assets subdirectory '%s'\n", name);
         subEntryAddr += sizeof(FntSubEntry) + pSubEntry->length + sizeof(subdirId);
         pSubEntry = (const FntSubEntry*) subEntryAddr;
     }
 
+    return true;
+}
+
+typedef struct {
+    uint32_t fileId;
+    uint32_t startOffset;
+    uint32_t endOffset;
+} FatInfo;
+
+int32_t CompareFat(const void *a, const void *b) {
+    const FatInfo *infoA = (FatInfo*) a;
+    const FatInfo *infoB = (FatInfo*) b;
+    return infoA->startOffset - infoB->startOffset;
+}
+
+bool PrintFileAllocOrder(const uint8_t *rom, const uint8_t *fatAddr) {
+    const FatEntry *fatStart = (FatEntry*) fatAddr;
+    const FatEntry *fat;
+    for (fat = fatStart; fat->startOffset != 0xFFFFFFFF; ++fat);
+    size_t numFiles = fat - fatStart;
+    
+    FatInfo *fatInfo = malloc(numFiles * sizeof(FatInfo));
+    if (fatInfo == NULL) FATAL("Failed to allocate array for printing file allocation order\n");
+    for (size_t i = 0; i < numFiles; ++i) {
+        fatInfo[i].fileId = i;
+        fatInfo[i].startOffset = fatStart[i].startOffset;
+        fatInfo[i].endOffset = fatStart[i].endOffset;
+    }
+
+    qsort(fatInfo, numFiles, sizeof(*fatInfo), CompareFat);
+    for (size_t i = 0; i < numFiles; ++i) {
+        printf(
+            "% 4d: % 4d (%08x -- %08x, %d bytes)\n", i, fatInfo[i].fileId,
+            fatInfo[i].startOffset, fatInfo[i].endOffset, fatInfo[i].endOffset - fatInfo[i].startOffset
+        );
+    }
+
+    free(fatInfo);
     return true;
 }
 
@@ -152,9 +213,11 @@ void PrintUsage(const char *program) {
     printf(
         "extractrom " VERSION "\n"
         "\n"
-        "Usage: %s -i ROMFILE -o OUTDIR\n"
+        "Usage: %s -i ROMFILE -o OUTDIR [-n] [-a]\n"
         "    -o OUTDIR \tDirectory to extract files to\n"
-        "    -i ROMFILE\tROM to extract from",
+        "    -i ROMFILE\tROM to extract from\n"
+        "    -n        \tPrints file name hierarchy to stdout\n"
+        "    -a        \tPrints file allocation order to stdout\n",
         program
     );
 }
@@ -180,6 +243,10 @@ int main(int argc, const char **argv) {
                 return 1;
             }
             romFile = argv[i];
+        } else if (strcmp(argv[i], "-n") == 0) {
+            printFileHierarchy = true;
+        } else if (strcmp(argv[i], "-a") == 0) {
+            printFileAllocOrder = true;
         } else {
             fprintf(stderr, "Unknown option '%s'\n", argv[i]);
             return 1;
@@ -236,10 +303,13 @@ int main(int argc, const char **argv) {
     }
     const uint8_t *fntStart = rom + pHeader->fileNames.offset;
     const uint8_t *fatStart = rom + pHeader->fileAllocs.offset;
-    if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart)) return 1;
+    if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart, 0)) return 1;
     if (chdir("..") != 0) {
         fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
         return 1;
+    }
+    if (printFileAllocOrder) {
+        if (!PrintFileAllocOrder(rom, fatStart)) return 1;
     }
     
     if (!ExtractOverlayData(rom, pHeader)) return 1;
