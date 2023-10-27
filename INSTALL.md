@@ -52,4 +52,4 @@ ARM7 BIOS in the root directory of this repository, and verify that your dumped 
 | --------------- | ------------------------------------------ |
 | `arm7_bios.bin` | `6ee830c7f552c5bf194c20a2c13d5bb44bdb5c03` |
 
-Now, `make` should automatically detect the ARM7 BIOS and will build a matching ROM (soon™).
+Now, `make` should automatically detect the ARM7 BIOS and will build a matching ROM.
