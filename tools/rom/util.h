@@ -85,4 +85,14 @@ void FreeFullPath(char **pFullPath) {
     *pFullPath = NULL;
 }
 
+char* SplitLine(char *str) {
+    while (*str != '\n' && *str != '\r') {
+        if (*str == '\0') return str;
+        ++str;
+    }
+    *str++ = '\0';
+    while (*str == '\n' || *str == '\r') ++str;
+    return str;
+}
+
 #endif

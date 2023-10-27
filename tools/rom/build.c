@@ -571,55 +571,83 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
     return true;
 }
 
-bool AppendAssetFiles(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries, size_t firstFileId) {
+bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries, uint16_t firstFileId) {
     size_t address = *pAddress;
+
     size_t fileId = firstFileId;
-    for (size_t i = 0; i < tree->numChildren; ++i, ++fileId) {
-        FileTree *child = &tree->children[i];
-        FntSubEntry *entry = child->entry;
-        if (entry->isSubdir) continue;
-        char name[128];
-        strncpy(name, entry->name, entry->length);
-        name[entry->length] = '\0';
-        if (!Align(512, fpRom, &address)) return false;
-        size_t startOffset = address;
-        if (!AppendFile(fpRom, name, &address, NULL)) return false;
-        entries[fileId].startOffset = startOffset;
-        entries[fileId].endOffset = address;
-    }
-    *pAddress = address;
-    return true;
-}
-
-bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries) {
-    size_t address = *pAddress;
-
-    // Traverse directories
     for (size_t i = 0; i < tree->numChildren; ++i) {
         FileTree *child = &tree->children[i];
+        if (child->addedToFat) continue;
         FntSubEntry *entry = child->entry;
-        if (!entry->isSubdir) continue;
         char name[128];
         strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
+        if (!entry->isSubdir) {
+            if (!Align(512, fpRom, &address)) return false;
+            size_t startOffset = address;
+            if (!AppendFile(fpRom, name, &address, NULL)) return false;
+            entries[fileId].startOffset = startOffset;
+            entries[fileId].endOffset = address;
+            ++fileId;
+            continue;
+        }
         if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
-        if (!TraverseAndAppendAssets(fpRom, &address, child, entries)) return false;
+        if (!TraverseAndAppendAssets(fpRom, &address, child, entries, child->firstFileId)) return false;
         if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
     }
     
-    if (tree->entry != NULL) { // Directory is not root
-        AppendAssetFiles(fpRom, &address, tree, entries, tree->firstFileId);
-    }
-    
     *pAddress = address;
     return true;
 }
 
-bool AppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *root, FatEntry *entries, size_t numOverlays) {
+bool AppendAssets(
+    FILE *fpRom,
+    size_t *pAddress,
+    FileTree *root,
+    FatEntry *entries,
+    size_t numOverlays,
+    const char *assetsListFile
+) {
     size_t address = *pAddress;
 
-    if (!TraverseAndAppendAssets(fpRom, &address, root, entries)) return false;
-    if (!AppendAssetFiles(fpRom, &address, root, entries, numOverlays)) return false;
+    if (assetsListFile == NULL) {
+        if (!TraverseAndAppendAssets(fpRom, &address, root, entries, numOverlays)) return false;
+        *pAddress = address;
+        return true;
+    }
+
+    FILE *fp = fopen(assetsListFile, "rb");
+    if (fp == NULL) FATAL("Failed to open assets list file '%s'\n", assetsListFile);
+    fseek(fp, 0, SEEK_END);
+    size_t listSize = ftell(fp);
+    char *assetsList = malloc(listSize + 1);
+    if (assetsList == NULL) FATAL("Failed to allocate string for assets list file '%s'\n", assetsListFile);
+    fseek(fp, 0, SEEK_SET);
+    if (fread(assetsList, listSize, 1, fp) != 1) FATAL("Failed to read from assets list file '%s'\n", assetsListFile);
+    fclose(fp);
+    assetsList[listSize] = '\0';
+
+    char assetsDir[256];
+    if (getcwd(assetsDir, sizeof(assetsDir)) == NULL) FATAL("Failed to get assets directory\n");
+
+    char *const listEnd = assetsList + listSize;
+    for (char *path = assetsList, *next; path < listEnd; path = next) {
+        next = SplitLine(path);
+        if (*path != '/') continue;
+        FileTree *subTree = FindSubTree(root, path);
+        if (subTree == NULL) continue;
+        
+        // First file ID of root directory is given from number of overlays
+        uint16_t firstFileId = subTree->entry == NULL ? numOverlays : subTree->firstFileId;
+
+        if (path[1] != '\0' && chdir(&path[1]) != 0) FATAL("Failed to enter assets directory '%s'\n", path);
+        if (!TraverseAndAppendAssets(fpRom, &address, subTree, entries, firstFileId)) return false;
+        if (chdir(assetsDir) != 0) FATAL("Failed to leave assets directory '%s'\n", path);
+
+        subTree->addedToFat = true;
+    }
+
+    free(assetsList);
 
     *pAddress = address;
     return true;
@@ -695,17 +723,18 @@ void PrintUsage(const char *program) {
     printf(
         "buildrom " VERSION "\n"
         "\n"
-        "Usage: %s -a BASEDIR -b BUILDDIR -r REGION -o OUTFILE [-7 ARM7BIOS]\n"
+        "Usage: %s -a BASEDIR -b BUILDDIR -r REGION -o OUTFILE [-7 ARM7BIOS] [-s ASSETS]\n"
         "    -a BASEDIR \tBase directory generated by extractrom\n"
         "    -b BUILDDIR\tBuild directory generated by Makefile\n"
         "    -r REGION  \tJ = Japan, E = USA, P = Europe\n"
         "    -o OUTFILE \tOutput ROM file\n"
-        "    -7 ARM7BIOS\tPath to ARM7 BIOS file\n",
+        "    -7 ARM7BIOS\tPath to ARM7 BIOS file\n"
+        "    -s ASSETS  \tPath to assets list\n",
         program
     );
 }
 
-int main(int argc, const char **argv) {
+int main(int argc, char **argv) {
 
     // --------------------- Parse command line arguments ---------------------
     const char *program = argv[0];
@@ -717,6 +746,7 @@ int main(int argc, const char **argv) {
     const char *buildDir = NULL;
     const char *romFile = NULL;
     const char *arm7biosFile = NULL;
+    char *assetsListFile = NULL;
     Region region = 0;
     for (int i = 1; i < argc; ++i) {
         if (strcmp(argv[i], "-o") == 0) {
@@ -743,6 +773,12 @@ int main(int argc, const char **argv) {
                 return 1;
             }
             arm7biosFile = argv[i];
+        } else if (strcmp(argv[i], "-s") == 0) {
+            if (++i >= argc) {
+                fprintf(stderr, "Expected pathname after -s\n");
+                return 1;
+            }
+            assetsListFile = argv[i];
         } else if (strcmp(argv[i], "-r") == 0) {
             if (++i >= argc) {
                 fprintf(stderr, "Expected region after -r\n");
@@ -818,6 +854,7 @@ int main(int argc, const char **argv) {
 
 
     // --------------------- Get canonical file paths ---------------------
+    if (assetsListFile != NULL && !AllocFullPath(assetsListFile, &assetsListFile)) return 1;
     if (chdir(baseDir) != 0) {
         fprintf(stderr, "Failed to enter base directory '%s'\n", baseDir);
         return 1;
@@ -875,7 +912,7 @@ int main(int argc, const char **argv) {
     // --------------------- Write file name table (FNT) ---------------------
     FileTree root;
     if (!MakeFileTree(&root)) return false;
-    if (!SortFileTree(&root)) return false;
+    if (!SortFileTree(&root, CompareFileTreeNormal)) return false;
 
     if (!Align(512, fpRom, &address)) return 1;
     size_t numFiles = 0;
@@ -911,7 +948,9 @@ int main(int argc, const char **argv) {
 
     // --------------------- Write assets ---------------------
     if (!Align(512, fpRom, &address)) return false;
-    if (!AppendAssets(fpRom, &address, &root, fatEntries, numOverlays)) return false;
+    if (!SortFileTree(&root, CompareFileTreeAscii)) return false;
+    if (!AppendAssets(fpRom, &address, &root, fatEntries, numOverlays, assetsListFile)) return false;
+    if (assetsListFile != NULL) FreeFullPath(&assetsListFile);
 
     if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
     free(fatEntries);

@@ -9,6 +9,7 @@ typedef struct FileTree {
     uint16_t numChildren;
     uint16_t maxChildren;
     uint16_t firstFileId;
+    bool addedToFat;
     FntSubEntry *entry;
 } FileTree;
 
@@ -96,6 +97,7 @@ bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
         child.numChildren = 0;
         child.maxChildren = 0;
         child.firstFileId = 0;
+        child.addedToFat = false;
         child.entry = entry;
         if (!_GrowFileTreeChildren(pTree, pTree->numChildren + 1)) return false;
         memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
@@ -109,6 +111,7 @@ bool MakeFileTree(FileTree *pTree) {
     tree.children = NULL;
     tree.numChildren = 0;
     tree.maxChildren = 0;
+    tree.addedToFat = false;
     if (!_GrowFileTreeChildren(&tree, 64)) return false;
     tree.entry = NULL;
 
@@ -127,6 +130,7 @@ bool FreeFileTree(FileTree *pTree) {
     }
     pTree->numChildren = 0;
     pTree->maxChildren = 0;
+    pTree->addedToFat = false;
     if (pTree->entry != NULL) {
         free(pTree->entry);
         pTree->entry = NULL;
@@ -134,7 +138,7 @@ bool FreeFileTree(FileTree *pTree) {
     return true;
 }
 
-int CompareFileTree(const void *a, const void *b) {
+int CompareFileTreeNormal(const void *a, const void *b) {
     FileTree *treeA = (FileTree*) a;
     FileTree *treeB = (FileTree*) b;
 
@@ -163,18 +167,40 @@ int CompareFileTree(const void *a, const void *b) {
     return 0;
 }
 
-bool SortFileTree(FileTree *pTree) {
+int CompareFileTreeAscii(const void *a, const void *b) {
+    FileTree *treeA = (FileTree*) a;
+    FileTree *treeB = (FileTree*) b;
+    return strcmp(treeA->entry->name, treeB->entry->name);
+}
+
+bool SortFileTree(FileTree *pTree, int (*compare)(const void*, const void*)) {
     if (pTree->numChildren <= 1) return true;
     FileTree tree;
     memcpy(&tree, pTree, sizeof(tree));
 
-    qsort(tree.children, tree.numChildren, sizeof(*tree.children), CompareFileTree);
+    qsort(tree.children, tree.numChildren, sizeof(*tree.children), compare);
     for (size_t i = 0; i < tree.numChildren; ++i) {
-        if (!SortFileTree(&tree.children[i])) return false;
+        if (!SortFileTree(&tree.children[i], compare)) return false;
     }
 
     memcpy(pTree, &tree, sizeof(tree));
     return true;
+}
+
+FileTree* FindSubTree(FileTree *tree, const char *path) {
+    if (*path == '/') ++path;
+    const char *nextPath = strchr(path, '/');
+    if (nextPath == NULL) return tree;
+    
+    size_t dirNameLen = nextPath - path;
+    for (size_t i = 0; i < tree->numChildren; ++i) {
+        FileTree *child = &tree->children[i];
+        if (child->entry->length != dirNameLen) continue;
+        if (strncmp(child->entry->name, path, dirNameLen) != 0) continue;
+        return FindSubTree(child, nextPath);
+    }
+
+    return NULL;
 }
 
 #endif
