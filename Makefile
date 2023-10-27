@@ -57,7 +57,7 @@ else
 endif
 
 .PHONY: extract
-extract:
+extract: tools
 	$(TOOLS_DIR)/rom/extractrom -o $(BASE_DIR) -i $(BASE_ROM)
 
 .PHONY: arm9
