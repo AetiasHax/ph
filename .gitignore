@@ -1,7 +1,5 @@
 build/
 .vscode/
-ph_jpn/
-ph_usa/
-ph_eur/
+ph_*/
 *.nds
 *bios.bin
