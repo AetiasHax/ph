@@ -99,7 +99,46 @@ bool ExtractBanner(const Banner *pBanner, const BuildInfo *pInfo) {
     return true;
 }
 
-bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *fntStart, const FntEntry *pFntEntry, size_t depth) {
+typedef struct {
+    char basePath[256];
+    size_t basePathLen;
+    char **filePathList;
+    size_t numFilePaths;
+    size_t maxFilePaths;
+
+    size_t depth;
+} ExtractContext;
+
+bool GrowFilePathList(ExtractContext *pContext, size_t minEntries) {
+    ExtractContext ctx;
+    memcpy(&ctx, pContext, sizeof(ctx));
+
+    if (minEntries <= ctx.maxFilePaths) return true;
+    while (minEntries > ctx.maxFilePaths) {
+        ctx.maxFilePaths *= 2;
+    }
+
+    char **newFilePathList = realloc(ctx.filePathList, ctx.maxFilePaths * sizeof(*ctx.filePathList));
+    if (newFilePathList == NULL) FATAL("Failed to reallocate file path list to %d entries\n", ctx.maxFilePaths);
+    ctx.filePathList = newFilePathList;
+
+    // Fill new entries with 0
+    memset(&ctx.filePathList[pContext->maxFilePaths], 0, (ctx.maxFilePaths - pContext->maxFilePaths) * sizeof(*ctx.filePathList));
+
+    memcpy(pContext, &ctx, sizeof(ctx));
+    return true;
+}
+
+bool ExtractSubtable(
+    const uint8_t *rom,
+    const uint8_t *fatStart,
+    const uint8_t *fntStart,
+    const FntEntry *pFntEntry,
+    ExtractContext *pContext
+) {
+    ExtractContext ctx;
+    memcpy(&ctx, pContext, sizeof(ctx));
+    
     const uint8_t *subEntryAddr = fntStart + pFntEntry->subtableOffset;
     const FntSubEntry *pSubEntry = (const FntSubEntry*) subEntryAddr;
     uint16_t fileId = pFntEntry->firstFile;
@@ -110,7 +149,7 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         
         if (!pSubEntry->isSubdir) {
             if (printFileHierarchy) {
-                Indent(depth);
+                Indent(ctx.depth);
                 printf("%d: %s\n", fileId, name);
             }
 
@@ -123,6 +162,14 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
             if (fwrite(pFileBytes, fileSize, 1, fp) != 1) FATAL("Failed to write to assets file '%s'\n", name);
             fclose(fp);
 
+            if (printFileAllocOrder) {
+                if (!GrowFilePathList(&ctx, fileId + 1)) return false;
+                char *filePath = malloc(ctx.basePathLen + pSubEntry->length + 1);
+                if (filePath == NULL) FATAL("Failed to allocate string for file path\n");
+                sprintf(filePath, "%s%s", ctx.basePath, name);
+                ctx.filePathList[fileId] = filePath;
+            }
+
             subEntryAddr += sizeof(FntSubEntry) + pSubEntry->length;
             pSubEntry = (const FntSubEntry*) subEntryAddr;
             ++fileId;
@@ -130,7 +177,7 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         }
 
         if (printFileHierarchy) {
-            Indent(depth);
+            Indent(ctx.depth);
             printf("%s {\n", name);
         }
         if (!MakeDir(name)) return false;
@@ -138,10 +185,23 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         
         uint16_t subdirId = READ_SUBDIR_ID(pSubEntry);
         uint16_t subdirIndex = subdirId & 0xfff;
-        if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex, depth + 1)) return false;
+        ctx.depth += 1;
+
+        if (printFileAllocOrder) {
+            size_t basePathSpace = sizeof(ctx.basePath) - ctx.basePathLen;
+            size_t basePathAdded = snprintf(&ctx.basePath[ctx.basePathLen], basePathSpace, "%s/", name);
+            if (basePathAdded >= basePathSpace) FATAL("Maximum base path size was exceeded\n");
+            ctx.basePathLen += basePathAdded;
+            if (!ExtractSubtable(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex, &ctx)) return false;
+            ctx.basePathLen -= basePathAdded;
+            memset(&ctx.basePath[ctx.basePathLen], 0, basePathAdded);
+        } else {
+            if (!ExtractSubtable(rom, fatStart, fntStart, (FntEntry*) fntStart + subdirIndex, &ctx)) return false;
+        }
+        ctx.depth -= 1;
 
         if (printFileHierarchy) {
-            Indent(depth);
+            Indent(ctx.depth);
             printf("}\n");
         }
 
@@ -150,6 +210,7 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         pSubEntry = (const FntSubEntry*) subEntryAddr;
     }
 
+    memcpy(pContext, &ctx, sizeof(ctx));
     return true;
 }
 
@@ -159,13 +220,13 @@ typedef struct {
     uint32_t endOffset;
 } FatInfo;
 
-int32_t CompareFat(const void *a, const void *b) {
+int32_t CompareFatInfo(const void *a, const void *b) {
     const FatInfo *infoA = (FatInfo*) a;
     const FatInfo *infoB = (FatInfo*) b;
     return infoA->startOffset - infoB->startOffset;
 }
 
-bool PrintFileAllocOrder(const uint8_t *rom, const uint8_t *fatAddr) {
+bool PrintFileAllocOrder(ExtractContext *ctx, const uint8_t *fatAddr) {
     const FatEntry *fatStart = (FatEntry*) fatAddr;
     const FatEntry *fat;
     for (fat = fatStart; fat->startOffset != 0xFFFFFFFF; ++fat);
@@ -179,16 +240,41 @@ bool PrintFileAllocOrder(const uint8_t *rom, const uint8_t *fatAddr) {
         fatInfo[i].endOffset = fatStart[i].endOffset;
     }
 
-    qsort(fatInfo, numFiles, sizeof(*fatInfo), CompareFat);
+    qsort(fatInfo, numFiles, sizeof(*fatInfo), CompareFatInfo);
+
     for (size_t i = 0; i < numFiles; ++i) {
-        printf(
-            "% 4d: % 4d (%08x -- %08x, %d bytes)\n", i, fatInfo[i].fileId,
-            fatInfo[i].startOffset, fatInfo[i].endOffset, fatInfo[i].endOffset - fatInfo[i].startOffset
-        );
+        uint32_t fileId = fatInfo[i].fileId;
+        if (ctx->filePathList[fileId] == NULL) continue;
+        size_t len = strlen(ctx->filePathList[fileId]);
+        printf("%s\n", ctx->filePathList[fileId]);
     }
 
     free(fatInfo);
     return true;
+}
+
+bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *fntStart) {
+    ExtractContext ctx;
+    memset(ctx.basePath, 0, sizeof(ctx.basePath));
+    ctx.basePathLen = 0;
+    ctx.numFilePaths = 0;
+    if (printFileAllocOrder) {
+        ctx.maxFilePaths = 4096;
+        ctx.filePathList = calloc(ctx.maxFilePaths, sizeof(*ctx.filePathList));
+    } else {
+        ctx.maxFilePaths = 0;
+        ctx.filePathList = NULL;
+    }
+    ctx.depth = 0;
+
+    if (!ExtractSubtable(rom, fatStart, fntStart, (FntEntry*) fntStart, &ctx)) return false;
+    if (printFileAllocOrder) {
+        if (!PrintFileAllocOrder(&ctx, fatStart)) return false;
+        for (size_t i = 0; i < ctx.numFilePaths; ++i) {
+            if (ctx.filePathList[i] != NULL) free(ctx.filePathList[i]);
+        }
+        free(ctx.filePathList);
+    }
 }
 
 bool ExtractOverlayData(const uint8_t *rom, const Header *header) {
@@ -213,7 +299,7 @@ void PrintUsage(const char *program) {
     printf(
         "extractrom " VERSION "\n"
         "\n"
-        "Usage: %s -i ROMFILE -o OUTDIR [-n] [-a]\n"
+        "Usage: %s -i ROMFILE -o OUTDIR [-n] [-a] [-l]\n"
         "    -o OUTDIR \tDirectory to extract files to\n"
         "    -i ROMFILE\tROM to extract from\n"
         "    -n        \tPrints file name hierarchy to stdout\n"
@@ -223,6 +309,8 @@ void PrintUsage(const char *program) {
 }
 
 int main(int argc, const char **argv) {
+
+    // --------------------- Parse command line arguments ---------------------
     const char *program = argv[0];
     if (argc == 1) {
         PrintUsage(program);
@@ -263,6 +351,8 @@ int main(int argc, const char **argv) {
         return 1;
     }
 
+
+    // --------------------- Load ROM ---------------------
     FILE *fpRom = fopen(romFile, "rb");
     if (fpRom == NULL) {
         fprintf(stderr, "Failed to open input ROM '%s'\n", romFile);
@@ -282,6 +372,8 @@ int main(int argc, const char **argv) {
     }
     fclose(fpRom);
 
+
+    // --------------------- Set up ---------------------
     Header *pHeader = (Header*) rom;
     BuildInfo info;
     if (!CheckRegion(pHeader, &info)) return 1;
@@ -291,11 +383,17 @@ int main(int argc, const char **argv) {
         return 1;
     }
 
+
+    // --------------------- Extract ARM7 program ---------------------
     if (!ExtractArm7(rom, &pHeader->arm7)) return 1;
 
+
+    // --------------------- Extract banner ---------------------
     Banner *pBanner = (Banner*) (rom + pHeader->bannerOffset);
     if (!ExtractBanner(pBanner, &info)) return 1;
 
+
+    // --------------------- Extract assets ---------------------
     if (!MakeDir(ASSETS_SUBDIR)) return 1;
     if (chdir(ASSETS_SUBDIR) != 0) {
         fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
@@ -303,15 +401,14 @@ int main(int argc, const char **argv) {
     }
     const uint8_t *fntStart = rom + pHeader->fileNames.offset;
     const uint8_t *fatStart = rom + pHeader->fileAllocs.offset;
-    if (!ExtractAssets(rom, fatStart, fntStart, (FntEntry*) fntStart, 0)) return 1;
+    if (!ExtractAssets(rom, fatStart, fntStart)) return 1;
     if (chdir("..") != 0) {
         fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
         return 1;
     }
-    if (printFileAllocOrder) {
-        if (!PrintFileAllocOrder(rom, fatStart)) return 1;
-    }
-    
+
+
+    // --------------------- Extract overlay data ---------------------
     if (!ExtractOverlayData(rom, pHeader)) return 1;
 
     if (chdir("..") != 0) {
