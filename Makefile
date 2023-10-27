@@ -15,6 +15,7 @@ BASE_DIR   := $(ROOT)/ph_$(REGION_NAME)
 LCF_FILE   := $(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(BUILD_DIR)/arm9_objects.txt
 ARM7_BIOS  := $(ROOT)/arm7_bios.bin
+ASSETS_TXT := $(ROOT)/assets.txt
 
 ASM_FILES := $(wildcard asm/*.s)
 CXX_FILES := $(wildcard src/*.cpp)
@@ -51,9 +52,9 @@ tools:
 .PHONY: rom
 rom: arm9
 ifneq (,$(wildcard $(ARM7_BIOS)))
-	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE) -7 $(ARM7_BIOS)
+	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE) -s $(ASSETS_TXT) -7 $(ARM7_BIOS)
 else
-	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE)
+	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE) -s $(ASSETS_TXT)
 endif
 
 .PHONY: extract
