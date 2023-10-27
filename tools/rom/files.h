@@ -170,7 +170,22 @@ int CompareFileTreeNormal(const void *a, const void *b) {
 int CompareFileTreeAscii(const void *a, const void *b) {
     FileTree *treeA = (FileTree*) a;
     FileTree *treeB = (FileTree*) b;
-    return strcmp(treeA->entry->name, treeB->entry->name);
+    
+    size_t lenA = treeA->entry->length;
+    size_t lenB = treeB->entry->length;
+    size_t minSize = (lenA < lenB) ? lenA : lenB;
+    
+    // ASCII order
+    if (strncmp(treeA->entry->name, "Color0.NCLR", 11) == 0 || strncmp(treeB->entry->name, "Color0.NCLR", 11) == 0) {
+        printf("");
+    }
+    int cmp = strncmp(treeA->entry->name, treeB->entry->name, minSize);
+    if (cmp != 0) return cmp;
+    
+    // Shortest name first
+    if (lenA < lenB) return -1;
+    if (lenA > lenB) return 1;
+    return 0;
 }
 
 bool SortFileTree(FileTree *pTree, int (*compare)(const void*, const void*)) {

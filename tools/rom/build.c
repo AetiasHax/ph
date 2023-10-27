@@ -392,11 +392,14 @@ bool WriteFntSubtable(FileTree *tree, FntContext *pContext) {
     size_t subtableStart = ctx.subtableSize;
 
     // Create initial subtable entries
-    size_t numFiles = 0;
+    uint16_t fileId = ctx.nextFileId;
     for (size_t i = 0; i < tree->numChildren; ++i) {
         FileTree *child = &tree->children[i];
         FntSubEntry *entry = child->entry;
-        if (!entry->isSubdir) numFiles += 1;
+        if (!entry->isSubdir) {
+            child->firstFileId = fileId;
+            fileId += 1;
+        }
 
         size_t entrySize = sizeof(*entry) + entry->length + (entry->isSubdir ? 2 : 0);
         if (!GrowFntSubtable(&ctx, entrySize)) return false;
@@ -410,7 +413,7 @@ bool WriteFntSubtable(FileTree *tree, FntContext *pContext) {
     ctx.subtable[ctx.subtableSize] = 0; // End of subtable
     ctx.subtableSize += 1;
 
-    ctx.nextFileId += numFiles;
+    ctx.nextFileId = fileId;
 
     // Recurse child directories
     for (size_t i = 0; i < tree->numChildren; ++i) {
@@ -574,7 +577,6 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
 bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries, uint16_t firstFileId) {
     size_t address = *pAddress;
 
-    size_t fileId = firstFileId;
     for (size_t i = 0; i < tree->numChildren; ++i) {
         FileTree *child = &tree->children[i];
         if (child->addedToFat) continue;
@@ -586,9 +588,9 @@ bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree
             if (!Align(512, fpRom, &address)) return false;
             size_t startOffset = address;
             if (!AppendFile(fpRom, name, &address, NULL)) return false;
-            entries[fileId].startOffset = startOffset;
-            entries[fileId].endOffset = address;
-            ++fileId;
+            // For files, `firstFileId` is the ID of the file
+            entries[child->firstFileId].startOffset = startOffset;
+            entries[child->firstFileId].endOffset = address;
             continue;
         }
         if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
