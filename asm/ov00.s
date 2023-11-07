@@ -167567,6 +167567,8 @@ data_ov00_020ec710:
 data_ov00_020ec714:
 	.space 0x4
 	.global data_ov00_020ec718
+
+    .sbss
 data_ov00_020ec718:
 	.space 0x4
 	.global data_ov00_020ec71c
