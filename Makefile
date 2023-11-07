@@ -17,8 +17,8 @@ OBJS_FILE  := $(BUILD_DIR)/arm9_objects.txt
 ARM7_BIOS  := $(ROOT)/arm7_bios.bin
 ASSETS_TXT := $(ROOT)/assets.txt
 
-ASM_FILES := $(wildcard asm/*.s)
-CXX_FILES := $(wildcard src/*.cpp)
+ASM_FILES := $(wildcard asm/*.s) $(wildcard asm/*/*.s)
+CXX_FILES := $(wildcard src/*.cpp) $(wildcard src/*/*.cpp)
 ASM_OBJS = $(ASM_FILES:%.s=$(TARGET_DIR)/%.o)
 CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.o)
 
