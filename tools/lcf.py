@@ -20,7 +20,26 @@ DTCM_OBJECTS = [
 ]
 
 ov00 = Overlay(name='ov00', after='ARM9', objects=[
-    'asm/ov00.o'
+    'asm/ov00/ov00_020773c0.o',
+    'asm/ov00/ov00_02078e00.o',
+    'asm/ov00/ov00_02079d28.o',
+    'asm/ov00/ov00_0207cc84.o',
+    'asm/ov00/ov00_02084eac.o',
+    'asm/ov00/ov00_0208b220.o',
+    'asm/ov00/ov00_02096160.o',
+    'asm/ov00/ov00_0209afc4.o',
+    'asm/ov00/ov00_0209bea0.o',
+    'asm/ov00/ov00_020a03e4.o',
+    'asm/ov00/inventory.o',
+    'asm/ov00/ov00_020ae7a4.o',
+    'asm/ov00/ov00_020b4940.o',
+    'asm/ov00/ov00_020c36b4.o',
+    'asm/ov00/ov00_020c43c8.o',
+    'asm/ov00/ov00_020c9a68.o',
+    'asm/ov00/ov00_020d0000.o',
+    'asm/ov00/ov00_020d1870.o',
+    'asm/ov00/ov00_020d5458.o',
+    'asm/ov00/ov00_init.o'
 ])
 ov01 = Overlay(name='ov01', after=ov00, objects=[
     'asm/ov01.o'
