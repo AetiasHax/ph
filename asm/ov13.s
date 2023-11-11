@@ -2778,7 +2778,7 @@ func_ov13_02114f78: ; 0x02114f78
 	ldr r1, [r1, #4]
 	ldr r0, _02114fac ; =0x0000056c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4

@@ -3206,7 +3206,7 @@ func_ov00_0207b988: ; 0x0207b988
 	mov r0, #0x50
 	ldr r1, [r1, #4]
 	mov r2, #4
-	blx func_0202e9dc
+	blx _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0207b9a6
 	add r1, r4, #0

@@ -1944,7 +1944,7 @@ func_ov06_02102214: ; 0x02102214
 	mov r0, #0x23c
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _02102248
 	bl func_ov06_02102038

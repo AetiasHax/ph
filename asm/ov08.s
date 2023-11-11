@@ -12,7 +12,7 @@ func_ov08_02112c20: ; 0x02112c20
 	ldr r1, [r1, #4]
 	mov r0, #0x10
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -257,7 +257,7 @@ func_ov08_02112f28: ; 0x02112f28
 	mov r0, #4
 	ldr r1, [r1]
 	mov r2, r0
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _02112f70
 	mov r1, r4
@@ -795,7 +795,7 @@ _02113600:
 	mov r0, #0x10
 	mov r1, sb
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0211363c
 	str r7, [sp]
@@ -836,7 +836,7 @@ func_ov08_02113678: ; 0x02113678
 	mov r1, r4
 	mov r0, #0x14
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _021136b0
 	mov r1, r4

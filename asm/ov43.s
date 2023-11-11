@@ -12,7 +12,7 @@ func_ov43_02189560: ; 0x02189560
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _02189590
 	bl func_ov43_02189860
@@ -35,7 +35,7 @@ func_ov43_021895a0: ; 0x021895a0
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _021895d0
 	bl func_ov43_02189860
@@ -2019,7 +2019,7 @@ func_ov43_0218b018: ; 0x0218b018
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov43_0218b388

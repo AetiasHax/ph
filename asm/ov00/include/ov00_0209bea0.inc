@@ -141,11 +141,11 @@
 .extern func_0202ea0c
 .extern func_0204dd9c
 .extern func_0204dd9c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern func_0202ea0c
 .extern func_0204dd9c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern func_ov00_02090a7c
 .extern func_ov00_020a5e9c
@@ -175,7 +175,7 @@
 .extern data_027e0d38
 .extern func_02005dcc
 .extern func_0202ea0c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0fe0
 .extern func_ov00_020c1554
 .extern func_ov00_020c1730
@@ -225,7 +225,7 @@
 .extern func_0202ea24
 .extern func_0202ea50
 .extern func_0202ea34
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0f80
 .extern data_027e0ce0
 .extern func_0202ea0c
@@ -233,7 +233,7 @@
 .extern func_0202ea24
 .extern func_0202ea50
 .extern func_0202ea34
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0f84
 .extern data_027e0ce0
 .extern func_0202ea0c

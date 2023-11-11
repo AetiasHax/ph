@@ -869,7 +869,7 @@ _0209ba9c:
 	mov r0, #0x60
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0209bb30
 	mvn r0, #0
@@ -1116,7 +1116,7 @@ _0209bdd8:
 	mov r0, r4, lsl #0x2
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}

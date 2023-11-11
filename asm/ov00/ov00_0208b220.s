@@ -3468,7 +3468,7 @@ _0208ddb0:
 	mov r0, r4, lsl #0x2
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -5318,7 +5318,7 @@ func_ov00_0208f69c: ; 0x0208f69c
 	mov r0, #0x48
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -5632,7 +5632,7 @@ func_ov00_0208fa70: ; 0x0208fa70
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0208fad8
 	bl func_ov00_020c1554
@@ -6335,7 +6335,7 @@ func_ov00_020903a8: ; 0x020903a8
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _020903d8
 	bl func_ov00_020c1554
@@ -6454,7 +6454,7 @@ func_ov00_020904f4: ; 0x020904f4
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov00_02090524
@@ -10897,7 +10897,7 @@ func_ov00_02093c9c: ; 0x02093c9c
 	mov r0, #0x74
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -13874,7 +13874,7 @@ func_ov00_02095f5c: ; 0x02095f5c
 	mov r0, #0xc
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _02095f90
 	bl func_ov00_02095f0c

@@ -52748,7 +52748,7 @@ func_ov11_0212b934: ; 0x0212b934
 	ldr r1, [r1, #4]
 	mov r0, #0xc
 	mov r2, #4
-	blx func_0202e9dc
+	blx _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0212b94e
 	add r1, r4, #0

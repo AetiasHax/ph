@@ -678,7 +678,7 @@ _020a0c84:
 	ldrne r1, [r0]
 	mov r0, #0x28
 	mul r0, r4, r0
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -897,7 +897,7 @@ _020a0f6c:
 	moveq r1, #0
 	ldrne r1, [r0]
 	mov r0, r4, lsl #0x2
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -1009,7 +1009,7 @@ _020a1090:
 	moveq r1, #0
 	ldrne r1, [r0]
 	mov r0, r4, lsl #0x2
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -1049,7 +1049,7 @@ func_ov00_020a10f0: ; 0x020a10f0
 	mov r0, #0x44
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -1544,7 +1544,7 @@ _020a165c:
 	ldr r1, [r4, #4]
 	mov r0, #0x20
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020a1690
 	str r6, [r0]
@@ -1561,7 +1561,7 @@ _020a1698:
 	ldr r1, [r4, #4]
 	mov r0, #0x1c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020a16cc
 	str r6, [r0]
@@ -2074,7 +2074,7 @@ func_ov00_020a1c98: ; 0x020a1c98
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _020a1cd4
 	bl func_ov00_020c1554
@@ -4498,7 +4498,7 @@ _020a3cc8:
 	ldr r1, _020a3cf0 ; =data_027e0ce0
 	mov r2, #4
 	ldr r1, [r1, #4]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -4559,7 +4559,7 @@ _020a3d74:
 	ldr r1, _020a3d9c ; =data_027e0ce0
 	mov r2, #4
 	ldr r1, [r1, #4]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -6479,7 +6479,7 @@ _020a5560:
 	ldr r1, [r4, #4]
 	mov r0, #0x60
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r6, r0
 	beq _020a5610
 	str r5, [r6]
@@ -6515,7 +6515,7 @@ _020a562c:
 	ldr r1, [r4, #4]
 	mov r0, #0x6c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r6, r0
 	beq _020a5664
 	add r0, sl, r8, lsl #2
@@ -6545,7 +6545,7 @@ _020a5664:
 	ldr r1, [r4, #4]
 	mov r0, #0x24
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r6, r0
 	beq _020a56e0
 	add r0, sl, r8, lsl #2
@@ -6584,7 +6584,7 @@ _020a56e0:
 	ldr r1, [r4, #4]
 	mov r0, #0x24
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r7, r0
 	beq _020a5778
 	add r0, sl, r8, lsl #2
@@ -7213,7 +7213,7 @@ func_ov00_020a5ef8: ; 0x020a5ef8
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov00_020a5f28

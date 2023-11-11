@@ -6910,7 +6910,7 @@ _0208adf0:
 	ldrne r1, [r0]
 	mov r0, #0x28
 	mul r0, r4, r0
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	str r0, [r5]
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}

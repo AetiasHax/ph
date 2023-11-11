@@ -102,7 +102,7 @@
 .extern func_0201f1f8
 .extern func_020209bc
 .extern func_0201f1ac
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern func_0202ea0c
 .extern func_0200b4f4
@@ -230,7 +230,7 @@
 .extern data_027e0ce0
 .extern func_020174a4
 .extern data_027e0ce0
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern func_0202a5c0
 .extern func_0202ea0c

@@ -3569,7 +3569,7 @@ func_ov00_02078d0c: ; 0x02078d0c
     mov r0, #0x4c
     ldr r1, [r1, #4]
     mov r2, #4
-    blx func_0202e9dc
+    blx _ZN9SysObjectnwEmPjj
     cmp r0, #0
     beq _02078d22
     bl func_ov00_02078d54
@@ -3616,7 +3616,7 @@ func_ov00_02078d54: ; 0x02078d54
     mov r0, #0x80
     ldr r1, [r1, #4]
     mov r2, #4
-    blx func_0202e9dc
+    blx _ZN9SysObjectnwEmPjj
     cmp r0, #0
     beq _02078d78
     bl func_ov03_020f05bc

@@ -26,7 +26,7 @@
 .extern func_ov00_020c1730
 .extern func_ov00_020a95ec
 .extern func_0202ea0c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0fe0
 .extern func_ov00_020a956c
 .extern func_ov00_020a9998
@@ -69,7 +69,7 @@
 .extern func_ov00_020c1730
 .extern func_ov00_020a95ec
 .extern func_0202ea0c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020c1554
 .extern data_027e0fe0
 .extern func_ov00_0207a1c8

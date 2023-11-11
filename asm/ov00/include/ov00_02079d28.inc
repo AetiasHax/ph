@@ -198,7 +198,7 @@
 .extern data_027e0f64
 .extern func_0200be04
 .extern data_020691a0
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern func_ov03_020f3974
 .extern func_ov09_02114810
 .extern data_027e0ce0

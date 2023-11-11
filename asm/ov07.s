@@ -12,7 +12,7 @@ func_ov07_02100ae0: ; 0x02100ae0
 	ldr r1, [r1, #4]
 	ldr r0, _02100b14 ; =0x00180240
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4

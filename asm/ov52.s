@@ -241,7 +241,7 @@ func_ov52_02195764: ; 0x02195764
 	mov r0, #0x24
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov52_02195790
@@ -1271,7 +1271,7 @@ func_ov52_02196510: ; 0x02196510
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov52_02196540
@@ -1944,7 +1944,7 @@ func_ov52_02196ddc: ; 0x02196ddc
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov52_02196e10

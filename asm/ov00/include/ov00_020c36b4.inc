@@ -10,7 +10,7 @@
 .extern func_ov00_020c1898
 .extern data_027e0e60
 .extern func_02007938
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern data_027e0fe8
 .extern func_0202ea0c

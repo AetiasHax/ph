@@ -1648,7 +1648,7 @@ func_ov00_020d67c4: ; 0x020d67c4
 	mov r0, #0x10
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020d67f8
 	bl func_ov00_020d6798
@@ -4143,7 +4143,7 @@ func_ov00_020d8610: ; 0x020d8610
 	mov r0, #0x820
 	ldr r1, [r1, #4]
 	mov r2, #0x20
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020d864c
 	mov r1, r4

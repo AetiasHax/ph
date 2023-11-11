@@ -49,7 +49,7 @@ func_ov16_0211f6c0: ; 0x0211f6c0
 	ldr r1, [r1]
 	mov r0, #8
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0211f6ec
 	mov r1, #0x22
@@ -436,7 +436,7 @@ func_ov16_0211fbb8: ; 0x0211fbb8
 	mov r0, #0xcc
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0211fc04
 	bl func_ov16_0211fc14
@@ -827,7 +827,7 @@ func_ov16_02120050: ; 0x02120050
 	mov r0, #0x10
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _021200a4
 	mov r1, r4

@@ -5491,7 +5491,7 @@ func_ov30_02180628: ; 0x02180628
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _02180658
 	blx func_ov30_021808d4
@@ -5515,7 +5515,7 @@ func_ov30_0218066c: ; 0x0218066c
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0218069c
 	blx func_ov30_021808d4
@@ -5539,7 +5539,7 @@ func_ov30_021806b0: ; 0x021806b0
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _021806e0
 	blx func_ov30_021808d4
@@ -5563,7 +5563,7 @@ func_ov30_021806f4: ; 0x021806f4
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _02180724
 	blx func_ov30_021808d4
@@ -11195,7 +11195,7 @@ func_ov30_021847b0: ; 0x021847b0
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	blx func_ov30_021847e0

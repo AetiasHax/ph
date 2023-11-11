@@ -719,7 +719,7 @@ func_ov00_020c3f9c: ; 0x020c3f9c
 	mov r0, #1
 	ldr r1, [r1, #4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020c3fc0
 	bl func_ov00_020c400c

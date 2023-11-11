@@ -125,12 +125,12 @@
 .extern func_ov00_020a5e9c
 .extern data_027e0f7c
 .extern data_027e0d38
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern data_027e0d3c
 .extern func_0202ea0c
 .extern data_027e0d3c
-.extern func_0202e9dc
+.extern _ZN9SysObjectnwEmPjj
 .extern func_ov03_020f05bc
 .extern data_027e0618
 .extern data_027e0ce0

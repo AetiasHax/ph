@@ -2670,7 +2670,7 @@ func_ov02_020f1178: ; 0x020f1178
 	ldr r1, [r1]
 	mov r0, #0x28
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f11b8
 	bl func_ov02_020f6490
@@ -3020,7 +3020,7 @@ func_ov02_020f15bc: ; 0x020f15bc
 	ldr r1, [r0]
 	mov r0, #0x28
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f15f8
 	bl func_ov02_020f612c
@@ -4250,7 +4250,7 @@ func_ov02_020f2444: ; 0x020f2444
 	ldr r1, _020f24dc ; =data_ov02_0210016c
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f24c4
 	mov r1, #0
@@ -4782,7 +4782,7 @@ func_ov02_020f2b7c: ; 0x020f2b7c
 	mov r0, #0x20
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f2bd0
 	mov r1, #0
@@ -6746,7 +6746,7 @@ _020f44fc:
 	mov r0, #0x60
 	ldr r1, [r4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f451c
 	blx func_ov09_0211cca4
@@ -6757,7 +6757,7 @@ _020f451c:
 	ldr r1, [r4]
 	mov r0, #0x30
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f4544
 	bl func_ov02_020f3888
@@ -6769,7 +6769,7 @@ _020f4544:
 	ldr r1, [r4]
 	ldr r0, _020f4d18 ; =0x00000d18
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f4570
 	bl func_ov02_020eed78
@@ -6781,7 +6781,7 @@ _020f4570:
 	ldr r1, [r4]
 	ldr r0, _020f4d1c ; =0x00001434
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f459c
 	bl func_ov02_020f1178
@@ -6793,7 +6793,7 @@ _020f459c:
 	ldr r1, [r4]
 	ldr r0, _020f4d20 ; =0x00000ec8
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f45c8
 	bl func_ov02_020f15bc
@@ -6808,7 +6808,7 @@ _020f45dc:
 	mov r0, #0x1ec
 	ldr r1, [r5]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f4610
 	ldr r1, _020f4d24 ; =0x000011c7
@@ -6825,7 +6825,7 @@ _020f4610:
 	ldr r1, [r5]
 	ldr r0, _020f4d2c ; =0x00001490
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f463c
 	bl func_ov02_020f2b7c
@@ -6840,7 +6840,7 @@ _020f4650:
 	mov r0, #0x1ec
 	ldr r1, [r5]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f4684
 	ldr r1, _020f4d24 ; =0x000011c7
@@ -6857,7 +6857,7 @@ _020f4684:
 	ldr r1, [r5]
 	mov r0, #0x21c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f46b0
 	bl func_ov02_020f2444
@@ -6872,7 +6872,7 @@ _020f46c4:
 	mov r0, #0x60
 	ldr r1, [r4]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f46e4
 	blx func_ov09_0211cca4
@@ -6883,7 +6883,7 @@ _020f46e4:
 	ldr r1, [r4]
 	ldr r0, _020f4d1c ; =0x00001434
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f470c
 	bl func_ov45_0218db94
@@ -6895,7 +6895,7 @@ _020f470c:
 	ldr r1, [r4]
 	ldr r0, _020f4d20 ; =0x00000ec8
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f4738
 	bl func_ov45_0218a284
@@ -8797,7 +8797,7 @@ func_ov02_020f612c: ; 0x020f612c
 	ldr r1, [r1]
 	mov r0, #0x5c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f6174
 	mov r1, r4
@@ -9073,7 +9073,7 @@ func_ov02_020f6490: ; 0x020f6490
 	ldr r1, [r1]
 	mov r0, #0x5c
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _020f64ec
 	mov r1, r4

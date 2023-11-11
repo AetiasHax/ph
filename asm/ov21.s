@@ -13,7 +13,7 @@ func_ov21_0216d6a0: ; 0x0216d6a0
 	mov r0, #0xb8
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -367,7 +367,7 @@ func_ov21_0216dae0: ; 0x0216dae0
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov21_0216db44
@@ -1797,7 +1797,7 @@ func_ov21_0216ece8: ; 0x0216ece8
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0216ed18
 	bl func_ov14_021476d0
@@ -1845,7 +1845,7 @@ func_ov21_0216ed74: ; 0x0216ed74
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0216eda4
 	bl func_ov14_021476d0
@@ -1889,7 +1889,7 @@ func_ov21_0216edf0: ; 0x0216edf0
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0216ee20
 	bl func_ov14_021476d0
@@ -1976,7 +1976,7 @@ func_ov21_0216eed8: ; 0x0216eed8
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0216ef08
 	bl func_ov14_021476d0
@@ -2020,7 +2020,7 @@ func_ov21_0216ef54: ; 0x0216ef54
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	beq _0216ef84
 	bl func_ov14_021476d0
@@ -2210,7 +2210,7 @@ func_ov21_0216f100: ; 0x0216f100
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov21_0216f130
@@ -3601,7 +3601,7 @@ func_ov21_02170400: ; 0x02170400
 	mov r0, #0x80
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -3865,7 +3865,7 @@ func_ov21_02170714: ; 0x02170714
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov21_02170744
@@ -4053,7 +4053,7 @@ func_ov21_02170974: ; 0x02170974
 	mov r0, #0x114
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4

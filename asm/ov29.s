@@ -187,7 +187,7 @@ func_ov29_0216d8a0: ; 0x0216d8a0
 	ldr r1, [r6, #0x44]
 	mov r0, #0x14
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	movs r4, r0
 	movne r0, #0
 	strne r0, [r4, #0x10]
@@ -830,7 +830,7 @@ func_ov29_0216e048: ; 0x0216e048
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_0216e07c
@@ -2023,7 +2023,7 @@ func_ov29_0216f144: ; 0x0216f144
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_0216f174
@@ -3080,7 +3080,7 @@ func_ov29_0216ff60: ; 0x0216ff60
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02170180
@@ -4647,7 +4647,7 @@ func_ov29_02171540: ; 0x02171540
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02171770
@@ -6001,7 +6001,7 @@ func_ov29_021726cc: ; 0x021726cc
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02172738
@@ -8915,7 +8915,7 @@ func_ov29_02174f6c: ; 0x02174f6c
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02175234
@@ -10137,7 +10137,7 @@ func_ov29_02175ff4: ; 0x02175ff4
 	mov r0, #0x7c
 	ldr r1, [r1]
 	mov r2, #4
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r1, r4
@@ -10726,7 +10726,7 @@ func_ov29_0217679c: ; 0x0217679c
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_021767cc
@@ -12018,7 +12018,7 @@ func_ov29_021778f8: ; 0x021778f8
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02177928
@@ -12808,7 +12808,7 @@ func_ov29_02178358: ; 0x02178358
 	ldr r1, [r1]
 	mov r2, #4
 	ldr r1, [r1]
-	bl func_0202e9dc
+	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	bl func_ov29_02178448
