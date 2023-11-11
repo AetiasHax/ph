@@ -1072,7 +1072,7 @@ func_ov00_0209cc3c: ; 0x0209cc3c
 	arm_func_start func_ov00_0209cc48
 func_ov00_0209cc48: ; 0x0209cc48
 	stmdb sp!, {r4, lr}
-	ldr r1, _0209ccd8 ; =data_027e0fb4
+	ldr r1, _0209ccd8 ; =gInventory
 	mov r4, r0
 	ldr r0, [r1]
 	blx func_ov00_020ae5fc
@@ -1109,7 +1109,7 @@ func_ov00_0209cc48: ; 0x0209cc48
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov00_0209cc48
-_0209ccd8: .word data_027e0fb4
+_0209ccd8: .word gInventory
 _0209ccdc: .word data_027e0fec
 _0209cce0: .word data_027e0e60
 _0209cce4: .word data_027e0f68

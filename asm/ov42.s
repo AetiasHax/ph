@@ -323,7 +323,7 @@ _021898e0:
 	mov r3, r2
 	bl func_ov00_02087400
 _02189918:
-	ldr r0, _02189afc ; =data_027e0fb4
+	ldr r0, _02189afc ; =gInventory
 	mov r1, #5
 	ldr r0, [r0]
 	blx func_ov00_020ae3d0
@@ -449,7 +449,7 @@ _02189a74:
 	arm_func_end func_ov42_02189834
 _02189af4: .word data_027e0e60
 _02189af8: .word data_027e0f64
-_02189afc: .word data_027e0fb4
+_02189afc: .word gInventory
 _02189b00: .word data_027e0fc8
 _02189b04: .word data_ov42_0218c6f4
 _02189b08: .word 0x4d544748
@@ -531,7 +531,7 @@ _02189be4:
 	cmp r8, #3
 	add sb, sb, #8
 	blt _02189be4
-	ldr r0, _02189cd0 ; =data_027e0fb4
+	ldr r0, _02189cd0 ; =gInventory
 	ldr r0, [r0]
 	blx func_ov00_020ae400
 	bl func_ov42_02189ce8
@@ -581,7 +581,7 @@ _02189c88:
 	.align 2, 0
 	arm_func_end func_ov42_02189b84
 _02189ccc: .word data_027e0fe4
-_02189cd0: .word data_027e0fb4
+_02189cd0: .word gInventory
 _02189cd4: .word data_027e0fb8
 _02189cd8: .word data_027e0f64
 _02189cdc: .word data_ov09_0211f5b4

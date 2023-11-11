@@ -6063,7 +6063,7 @@ _02181138:
 	bl func_ov00_020c198c
 	cmp r0, #0
 	beq _0218116c
-	ldr r0, _02181544 ; =data_027e0fb4
+	ldr r0, _02181544 ; =gInventory
 	ldr r0, [r0]
 	ldr r0, [r0]
 	sub r0, r0, #9
@@ -6326,7 +6326,7 @@ _021814ec:
 	.align 2, 0
 	arm_func_end func_ov36_0218108c
 _02181540: .word data_027e0f74
-_02181544: .word data_027e0fb4
+_02181544: .word gInventory
 _02181548: .word data_027e0f64
 _0218154c: .word 0x000004cd
 _02181550: .word 0x00001e84
@@ -9014,7 +9014,7 @@ _02183c28: ; jump table
 	b _02183cbc ; case 8
 	b _02183cbc ; case 9
 _02183c50:
-	ldr r0, _02184090 ; =data_027e0fb4
+	ldr r0, _02184090 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
 	bl func_ov00_020ad714
@@ -9024,7 +9024,7 @@ _02183c50:
 	blx r2
 	b _02183ce8
 _02183c74:
-	ldr r0, _02184090 ; =data_027e0fb4
+	ldr r0, _02184090 ; =gInventory
 	mov r1, #8
 	ldr r0, [r0]
 	bl func_ov00_020ad714
@@ -9034,7 +9034,7 @@ _02183c74:
 	blx r2
 	b _02183ce8
 _02183c98:
-	ldr r0, _02184090 ; =data_027e0fb4
+	ldr r0, _02184090 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov00_020ad714
@@ -9309,7 +9309,7 @@ _02184078:
 	.align 2, 0
 	arm_func_end func_ov36_02183b7c
 _0218408c: .word 0x424d5459
-_02184090: .word data_027e0fb4
+_02184090: .word gInventory
 _02184094: .word data_027e0f94
 _02184098: .word data_027e0fd4
 _0218409c: .word data_02050f54
@@ -9471,7 +9471,7 @@ _02184160:
 _021842d4:
 	cmp r1, #0
 	bne _02184320
-	ldr r0, _02184420 ; =data_027e0fb4
+	ldr r0, _02184420 ; =gInventory
 	mov r1, r4
 	ldr r0, [r0]
 	bl func_ov00_020ad714
@@ -9559,7 +9559,7 @@ _02184410: .word 0x524f5045
 _02184414: .word 0x41525257
 _02184418: .word data_02050f54
 _0218441c: .word 0x00000ccd
-_02184420: .word data_027e0fb4
+_02184420: .word gInventory
 _02184424: .word data_027e0f64
 _02184428: .word 0x000002cb
 

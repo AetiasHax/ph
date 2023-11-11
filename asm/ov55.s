@@ -7,7 +7,7 @@
 	arm_func_start func_ov55_02198d00
 func_ov55_02198d00: ; 0x02198d00
 	stmdb sp!, {r3, lr}
-	ldr r0, _02198d24 ; =data_027e0fb4
+	ldr r0, _02198d24 ; =gInventory
 	mov r1, #8
 	ldr r0, [r0]
 	bl func_ov00_020ad52c
@@ -17,7 +17,7 @@ func_ov55_02198d00: ; 0x02198d00
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov55_02198d00
-_02198d24: .word data_027e0fb4
+_02198d24: .word gInventory
 _02198d28: .word data_ov55_021998ac
 
 	.global func_ov55_02198d2c
@@ -392,7 +392,7 @@ func_ov55_021991b0: ; 0x021991b0
 	mov r4, r0
 	ldr r0, [r1]
 	bl func_ov05_02103ff0
-	ldr r0, _0219926c ; =data_027e0fb4
+	ldr r0, _0219926c ; =gInventory
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	add r0, r0, r1
@@ -428,19 +428,19 @@ _0219922c:
 	ldr r2, [r2, #0x40]
 	blx r2
 _02199244:
-	ldr r0, _0219926c ; =data_027e0fb4
+	ldr r0, _0219926c ; =gInventory
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	mov r2, #0
 	bl func_ov00_020ae50c
-	ldr r0, _0219926c ; =data_027e0fb4
+	ldr r0, _0219926c ; =gInventory
 	ldr r0, [r0]
 	bl func_ov00_020ae3c0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov55_021991b0
 _02199268: .word data_027e103c
-_0219926c: .word data_027e0fb4
+_0219926c: .word gInventory
 _02199270: .word data_027e0f90
 
 	.global func_ov55_02199274
@@ -458,7 +458,7 @@ func_ov55_02199278: ; 0x02199278
 	add r0, sp, #4
 	mov r1, #0
 	blx func_ov00_020a9588
-	ldr r0, _021993a4 ; =data_027e0fb4
+	ldr r0, _021993a4 ; =gInventory
 	ldr r1, [r5, #0xc]
 	ldr r0, [r0]
 	add r1, r0, r1
@@ -535,7 +535,7 @@ _02199374:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov55_02199278
-_021993a4: .word data_027e0fb4
+_021993a4: .word gInventory
 _021993a8: .word data_ov55_021997b0
 _021993ac: .word data_ov55_021997c4
 _021993b0: .word data_ov55_021997d8

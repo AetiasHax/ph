@@ -9734,7 +9734,7 @@ _021754f4:
 	mov r2, #0
 	bl func_ov00_020bf008
 _02175624:
-	ldr r0, _02175ed0 ; =data_027e0fb4
+	ldr r0, _02175ed0 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
 	bl func_ov00_020ad9e8
@@ -10333,7 +10333,7 @@ _02175ec0: .word data_ov24_021792e4
 _02175ec4: .word 0x00000b33
 _02175ec8: .word data_02050f54
 _02175ecc: .word data_027e0f90
-_02175ed0: .word data_027e0fb4
+_02175ed0: .word gInventory
 _02175ed4: .word data_027e0ffc
 _02175ed8: .word 0x0000ffff
 _02175edc: .word 0x0000019a

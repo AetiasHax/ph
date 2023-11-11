@@ -51,7 +51,7 @@
 .extern func_ov00_020c46cc
 .extern func_ov00_020c474c
 .extern func_0201842c
-.extern data_027e0fb4
+.extern gInventory
 .extern data_027e0fec
 .extern data_027e0e60
 .extern data_027e0f68

@@ -2959,7 +2959,7 @@ _0219267c:
 	strb r0, [r6, #0x498]
 	add r0, r6, #0x400
 	ldrh r1, [r0, #0x88]
-	ldr r0, _02192700 ; =data_027e0fb4
+	ldr r0, _02192700 ; =gInventory
 	str r1, [r6, #0x48c]
 	ldrb r1, [r6, #0x48a]
 	ldr r0, [r0]
@@ -2990,7 +2990,7 @@ _0219267c:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov46_02192638
-_02192700: .word data_027e0fb4
+_02192700: .word gInventory
 _02192704: .word 0x00002710
 
 	.global func_ov46_02192708
@@ -3018,7 +3018,7 @@ _02192724:
 	b _021927c4
 _02192754:
 	ldrb r1, [r5, #0x48a]
-	ldr r0, _021927d0 ; =data_027e0fb4
+	ldr r0, _021927d0 ; =gInventory
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
@@ -3030,14 +3030,14 @@ _02192754:
 	add r0, r5, #0x400
 	ldrb r2, [r5, #0x48b]
 	ldrh r1, [r0, #0x88]
-	ldr r0, _021927d0 ; =data_027e0fb4
+	ldr r0, _021927d0 ; =gInventory
 	add r2, r2, #1
 	strb r2, [r5, #0x48b]
 	ldr r0, [r0]
 	mov r2, #1
 	bl func_ov00_020ae2e0
 	ldrb r2, [r5, #0x48a]
-	ldr r0, _021927d0 ; =data_027e0fb4
+	ldr r0, _021927d0 ; =gInventory
 	sub r1, r4, #1
 	mov r3, r2, lsl #0x1c
 	mov r2, r1, lsl #0x18
@@ -3051,7 +3051,7 @@ _021927c4:
 	.align 2, 0
 	arm_func_end func_ov46_02192708
 _021927cc: .word 0x00001555
-_021927d0: .word data_027e0fb4
+_021927d0: .word gInventory
 _021927d4: .word data_027e0dbc
 
 	.global func_ov46_021927d8
@@ -3070,7 +3070,7 @@ _021927f8:
 	cmp r0, #0
 	bne _02192834
 	ldrb r1, [r4, #0x48a]
-	ldr r0, _021928b8 ; =data_027e0fb4
+	ldr r0, _021928b8 ; =gInventory
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
@@ -3085,7 +3085,7 @@ _02192834:
 	cmp r0, #1
 	bne _021928b0
 	ldrb r1, [r4, #0x48a]
-	ldr r0, _021928b8 ; =data_027e0fb4
+	ldr r0, _021928b8 ; =gInventory
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
@@ -3119,7 +3119,7 @@ _021928b0:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov46_021927d8
-_021928b8: .word data_027e0fb4
+_021928b8: .word gInventory
 
 	.global func_ov46_021928bc
 	arm_func_start func_ov46_021928bc

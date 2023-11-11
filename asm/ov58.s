@@ -213,27 +213,27 @@ _02198fbc: .word data_ov58_0219afc0
 	thumb_func_start func_ov58_02198fc0
 func_ov58_02198fc0: ; 0x02198fc0
 	push {r3, lr}
-	ldr r0, _02199020 ; =data_027e0fb4
+	ldr r0, _02199020 ; =gInventory
 	mov r1, #9
 	ldr r0, [r0]
 	blx func_ov00_020ad52c
 	add r1, r0, #0
 	ldr r0, _02199024 ; =data_ov58_0219afcc
 	blx func_ov00_020a9614
-	ldr r0, _02199020 ; =data_027e0fb4
+	ldr r0, _02199020 ; =gInventory
 	mov r1, #0xf
 	ldr r0, [r0]
 	blx func_ov00_020ad52c
 	add r1, r0, #0
 	ldr r0, _02199028 ; =data_ov58_0219b034
 	blx func_ov00_020a9614
-	ldr r0, _02199020 ; =data_027e0fb4
+	ldr r0, _02199020 ; =gInventory
 	mov r1, #0xf
 	ldr r0, [r0]
 	blx func_ov00_020ad52c
 	ldr r1, _0219902c ; =data_ov58_0219b040
 	str r0, [r1, #0x68]
-	ldr r0, _02199020 ; =data_027e0fb4
+	ldr r0, _02199020 ; =gInventory
 	ldr r1, _02199030 ; =data_ov58_0219ad68
 	ldr r0, [r0]
 	blx func_ov00_020ad538
@@ -252,7 +252,7 @@ func_ov58_02198fc0: ; 0x02198fc0
 	pop {r3, pc}
 	nop
 	thumb_func_end func_ov58_02198fc0
-_02199020: .word data_027e0fb4
+_02199020: .word gInventory
 _02199024: .word data_ov58_0219afcc
 _02199028: .word data_ov58_0219b034
 _0219902c: .word data_ov58_0219b040
@@ -2844,7 +2844,7 @@ _0219a91c:
 	strh r0, [r4, #0xd8]
 	ldmia sp!, {r3, r4, pc}
 _0219a92c:
-	ldr r0, _0219a994 ; =data_027e0fb4
+	ldr r0, _0219a994 ; =gInventory
 	mov r1, #7
 	ldr r0, [r0]
 	bl func_ov00_020ad714
@@ -2876,7 +2876,7 @@ _0219a984: .word data_027e077c
 _0219a988: .word data_027e0d78
 _0219a98c: .word data_027e0d3c
 _0219a990: .word data_027e0f94
-_0219a994: .word data_027e0fb4
+_0219a994: .word gInventory
 
 	.global func_ov58_0219a998
 	arm_func_start func_ov58_0219a998
@@ -3075,7 +3075,7 @@ _0219abb0:
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0219ac8e
-	ldr r0, _0219aca0 ; =data_027e0fb4
+	ldr r0, _0219aca0 ; =gInventory
 	ldr r0, [r0]
 	ldr r1, [r0]
 	cmp r1, #7
@@ -3179,7 +3179,7 @@ _0219ac8e:
 _0219ac94: .word data_027e077c
 _0219ac98: .word data_027e0d3c
 _0219ac9c: .word data_027e0d78
-_0219aca0: .word data_027e0fb4
+_0219aca0: .word gInventory
 _0219aca4: .word data_027e103c
 _0219aca8: .word data_ov00_020ee6f8
 

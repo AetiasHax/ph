@@ -1084,7 +1084,7 @@ func_ov53_02199ac8: ; 0x02199ac8
 	mov r4, r0
 	bl func_ov00_020c1554
 	ldr r1, _02199b64 ; =data_ov14_02155cfc
-	ldr r0, _02199b68 ; =data_027e0fb4
+	ldr r0, _02199b68 ; =gInventory
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #6
@@ -1121,7 +1121,7 @@ func_ov53_02199ac8: ; 0x02199ac8
 	.align 2, 0
 	arm_func_end func_ov53_02199ac8
 _02199b64: .word data_ov14_02155cfc
-_02199b68: .word data_027e0fb4
+_02199b68: .word gInventory
 _02199b6c: .word func_ov53_02199b78
 _02199b70: .word func_ov53_02199c34
 _02199b74: .word 0xfffffe66

@@ -4789,7 +4789,7 @@ func_ov47_02193f78: ; 0x02193f78
 	mov r0, r5
 	bl func_ov00_020c2a0c
 	ldr r1, _02194104 ; =data_027e0f94
-	ldr r0, _02194108 ; =data_027e0fb4
+	ldr r0, _02194108 ; =gInventory
 	ldr r2, [r1, #4]
 	ldr r0, [r0]
 	mov r1, #2
@@ -4874,7 +4874,7 @@ _021940ec:
 	.align 2, 0
 	arm_func_end func_ov47_02193f78
 _02194104: .word data_027e0f94
-_02194108: .word data_027e0fb4
+_02194108: .word gInventory
 _0219410c: .word data_027e0f90
 
 	.global func_ov47_02194110

@@ -1343,7 +1343,7 @@ _0217cf8c: .word data_02050f54
 func_ov38_0217cf90: ; 0x0217cf90
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x6c
-	ldr r1, _0217d504 ; =data_027e0fb4
+	ldr r1, _0217d504 ; =gInventory
 	mov r2, #0
 	ldr r3, [r1]
 	ldr r1, _0217d508 ; =data_027e0f74
@@ -1696,7 +1696,7 @@ _0217d360:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov38_0217cf90
-_0217d504: .word data_027e0fb4
+_0217d504: .word gInventory
 _0217d508: .word data_027e0f74
 _0217d50c: .word data_ov38_021889b8
 _0217d510: .word func_ov38_0217cc2c
@@ -7049,7 +7049,7 @@ func_ov38_02182040: ; 0x02182040
 	str r2, [r1, #0x38]
 	mov r3, #0x400
 	str r3, [r1, #0x3c]
-	ldr r2, _0218208c ; =data_027e0fb4
+	ldr r2, _0218208c ; =gInventory
 	ldr ip, _02182090 ; =func_ov38_0217d570
 	ldr r2, [r2]
 	mov r3, #0x200
@@ -7063,7 +7063,7 @@ func_ov38_02182040: ; 0x02182040
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov38_02182040
-_0218208c: .word data_027e0fb4
+_0218208c: .word gInventory
 _02182090: .word func_ov38_0217d570
 
 	.global func_ov38_02182094
@@ -11125,7 +11125,7 @@ _02185984:
 	strh r1, [r0, #0x9c]
 	ldmia sp!, {r4, pc}
 _021859e4:
-	ldr r0, _02185a6c ; =data_027e0fb4
+	ldr r0, _02185a6c ; =gInventory
 	ldr r0, [r0]
 	ldrh r0, [r0, #0xba]
 	cmp r0, #0
@@ -11162,7 +11162,7 @@ _02185a58:
 	arm_func_end func_ov38_02185830
 _02185a64: .word data_027e0e60
 _02185a68: .word data_ov29_0217a4ac
-_02185a6c: .word data_027e0fb4
+_02185a6c: .word gInventory
 
 	.global func_ov38_02185a70
 	arm_func_start func_ov38_02185a70
@@ -12355,7 +12355,7 @@ func_ov38_02186b08: ; 0x02186b08
 	mov r2, #0x7100
 	ldr ip, [ip, #0x34]
 	blx ip
-	ldr r1, _02186c74 ; =data_027e0fb4
+	ldr r1, _02186c74 ; =gInventory
 	ldr r0, _02186c78 ; =data_ov38_02188ca0
 	ldr r2, [r1]
 	mov r3, #0x7f
@@ -12390,7 +12390,7 @@ _02186c64: .word data_ov38_021893d4
 _02186c68: .word data_ov38_02189414
 _02186c6c: .word data_027e071c
 _02186c70: .word data_027e0fc8
-_02186c74: .word data_027e0fb4
+_02186c74: .word gInventory
 _02186c78: .word data_ov38_02188ca0
 _02186c7c: .word data_ov00_020eec68
 _02186c80: .word data_027e0f74
@@ -12934,7 +12934,7 @@ _0218746c:
 	ldr r0, _02187514 ; =data_ov38_02188ca0
 	ldr r1, [r0, #0x258]
 	cmp r1, #0
-	ldrne r0, _02187518 ; =data_027e0fb4
+	ldrne r0, _02187518 ; =gInventory
 	ldrne r0, [r0]
 	strne r1, [r0, #0x10]
 	ldr r0, _0218751c ; =data_02057200
@@ -12967,7 +12967,7 @@ _02187508: .word data_027e0fc8
 _0218750c: .word data_ov00_020eec68
 _02187510: .word data_027e0f74
 _02187514: .word data_ov38_02188ca0
-_02187518: .word data_027e0fb4
+_02187518: .word gInventory
 _0218751c: .word data_02057200
 
 	.global func_ov38_02187520

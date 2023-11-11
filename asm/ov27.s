@@ -6847,7 +6847,7 @@ func_ov27_02173590: ; 0x02173590
 	cmpne r1, #0x3d
 	addne sp, sp, #8
 	ldmneia sp!, {r4, pc}
-	ldr r0, _02173700 ; =data_027e0fb4
+	ldr r0, _02173700 ; =gInventory
 	ldr r0, [r0]
 	ldr r0, [r0]
 	cmp r0, #9
@@ -6906,7 +6906,7 @@ _021736dc:
 _021736f4: .word data_027e103c
 _021736f8: .word data_027e0f90
 _021736fc: .word data_027e077c
-_02173700: .word data_027e0fb4
+_02173700: .word gInventory
 _02173704: .word data_027e0fe4
 _02173708: .word 0x55424c4e
 _0217370c: .word data_ov00_020eec68
@@ -8569,7 +8569,7 @@ func_ov27_02174bdc: ; 0x02174bdc
 	beq _02174c30
 	b _02174d20
 _02174bf8:
-	ldr r0, _02174d28 ; =data_027e0fb4
+	ldr r0, _02174d28 ; =gInventory
 	mov r4, #0
 	ldr r5, [r0]
 _02174c04:
@@ -8585,7 +8585,7 @@ _02174c04:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 _02174c30:
-	ldr r0, _02174d28 ; =data_027e0fb4
+	ldr r0, _02174d28 ; =gInventory
 	mov r1, #4
 	ldr r4, [r0]
 	mov r0, r4
@@ -8653,7 +8653,7 @@ _02174d20:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov27_02174bdc
-_02174d28: .word data_027e0fb4
+_02174d28: .word gInventory
 _02174d2c: .word data_027e0f74
 _02174d30: .word 0x0000013e
 _02174d34: .word 0x0000013f
@@ -12969,7 +12969,7 @@ _02178718:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 _02178760:
 	mov r5, #0
-	ldr r7, _02178868 ; =data_027e0fb4
+	ldr r7, _02178868 ; =gInventory
 	str r5, [sp]
 	mov r1, r5
 	mov r8, #1
@@ -13043,7 +13043,7 @@ _02178858: .word 0x00001001
 _0217885c: .word data_ov27_021790dc
 _02178860: .word data_027e0dbc
 _02178864: .word data_027e0fc8
-_02178868: .word data_027e0fb4
+_02178868: .word gInventory
 _0217886c: .word data_ov27_02179114
 
 	.global func_ov27_02178870

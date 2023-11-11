@@ -386,7 +386,7 @@
 .extern func_ov09_0211cc8c
 .extern func_ov00_020ad790
 .extern data_027e0fb8
-.extern data_027e0fb4
+.extern gInventory
 .extern func_ov00_020a5e9c
 .extern func_0203673c
 .extern data_027e0618
@@ -401,7 +401,7 @@
 .extern data_027e103c
 .extern func_ov00_020ada78
 .extern func_ov14_02152220
-.extern data_027e0fb4
+.extern gInventory
 .extern data_027e0618
 .extern func_01ff98e0
 .extern func_ov00_02079e04
@@ -418,7 +418,7 @@
 .extern func_ov09_0211b6e8
 .extern func_ov05_02104ca4
 .extern func_ov26_0216ebc0
-.extern data_027e0fb4
+.extern gInventory
 .extern func_ov26_0216ecb8
 .extern func_ov03_020fa528
 .extern func_ov03_020fa5d8

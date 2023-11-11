@@ -3995,8 +3995,8 @@ data_027e0fac:
 	.global data_027e0fb0
 data_027e0fb0:
 	.space 0x4
-	.global data_027e0fb4
-data_027e0fb4:
+	.global gInventory
+gInventory:
 	.space 0x4
 	.global data_027e0fb8
 data_027e0fb8:

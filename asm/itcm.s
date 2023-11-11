@@ -9139,14 +9139,14 @@ _01fffce8: .word data_027e0fdc
 	.global func_01fffcec
 	arm_func_start func_01fffcec
 func_01fffcec: ; 0x01fffcec
-	ldr r1, _01fffd00 ; =data_027e0fb4
+	ldr r1, _01fffd00 ; =gInventory
 	ldr r1, [r1]
 	ldr r1, [r1, #0xac]
 	ldr r0, [r1, r0, lsl #2]
 	bx lr
 	.align 2, 0
 	arm_func_end func_01fffcec
-_01fffd00: .word data_027e0fb4
+_01fffd00: .word gInventory
 
 	.global func_01fffd04
 	arm_func_start func_01fffd04

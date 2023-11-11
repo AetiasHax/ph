@@ -543,7 +543,7 @@
 .extern func_ov00_020ad414
 .extern func_ov00_020ad428
 .extern func_ov00_0207c5d4
-.extern data_027e0fb4
+.extern gInventory
 .extern data_027e0e58
 .extern func_01fffcec
 .extern func_01fffcec
@@ -554,10 +554,10 @@
 .extern data_027e0c54
 .extern func_01ffec34
 .extern func_ov00_0208f030
-.extern data_027e0fb4
+.extern gInventory
 .extern func_ov00_020ad678
 .extern func_ov00_020ad6f8
-.extern data_027e0fb4
+.extern gInventory
 .extern func_ov00_02083624
 .extern data_027e0e60
 .extern func_ov00_02083ee0
@@ -588,8 +588,8 @@
 .extern func_ov00_020bb544
 .extern func_ov00_020bb594
 .extern func_ov00_020ad714
-.extern data_027e0fb4
-.extern data_027e0fb4
+.extern gInventory
+.extern gInventory
 .extern func_ov00_020ae418
 .extern func_ov05_02106980
 .extern func_01fffcd8
@@ -672,8 +672,8 @@
 .extern func_ov00_020c3674
 .extern func_ov00_020bc71c
 .extern func_ov00_020ad714
-.extern data_027e0fb4
-.extern data_027e0fb4
+.extern gInventory
+.extern gInventory
 .extern func_ov00_020ad714
 .extern data_027e0fd4
 .extern data_027e0fcc
@@ -866,7 +866,7 @@
 .extern func_ov00_020ad414
 .extern func_ov00_020ad428
 .extern func_ov00_020ba458
-.extern data_027e0fb4
+.extern gInventory
 .extern func_01ff9bf8
 .extern func_ov00_020c2a0c
 .extern data_02050f54
@@ -898,7 +898,7 @@
 .extern func_ov05_021113b4
 .extern func_ov00_020c1908
 .extern func_ov00_020af050
-.extern data_027e0fb4
+.extern gInventory
 .extern data_027e0d0c
 .extern data_02050f54
 .extern data_027e0fb8
@@ -994,7 +994,7 @@
 .extern data_027e0e58
 .extern data_ov00_020eec9c
 .extern data_027e0618
-.extern data_027e0fb4
+.extern gInventory
 .extern data_027e0f74
 .extern func_ov05_02110f50
 .extern func_ov05_0210f7b8
@@ -1017,8 +1017,8 @@
 .extern func_0202d95c
 .extern func_01ff9bc4
 .extern data_027e0618
-.extern data_027e0fb4
+.extern gInventory
 .extern func_01ffa0f4
 .extern func_ov00_020ae5d0
 .extern data_027e0618
-.extern data_027e0fb4
+.extern gInventory

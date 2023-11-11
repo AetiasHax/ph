@@ -189,7 +189,7 @@
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0f7c
-.extern data_027e0fb4
+.extern gInventory
 .extern data_ov09_0211f5dc
 .extern func_ov05_021010b0
 .extern func_ov05_021010ec

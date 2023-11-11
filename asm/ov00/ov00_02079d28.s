@@ -2907,7 +2907,7 @@ _0207b688:
 	blx func_ov00_0209d738
 	cmp r0, #3
 	bne _0207b6cc
-	ldr r0, _0207b818 ; =data_027e0fb4
+	ldr r0, _0207b818 ; =gInventory
 	mov r1, #0x20
 	ldr r0, [r0]
 	blx func_ov00_020ada78
@@ -3076,7 +3076,7 @@ _0207b808: .word data_027e0e60
 _0207b80c: .word data_027e0f94
 _0207b810: .word data_027e0fac
 _0207b814: .word data_027e0f7c
-_0207b818: .word data_027e0fb4
+_0207b818: .word gInventory
 _0207b81c: .word data_ov09_0211f5dc
 
 	.global func_ov00_0207b820
