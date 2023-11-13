@@ -30,7 +30,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_0209afc4.s',
     'asm/ov00/ov00_0209bea0.s',
     'asm/ov00/ov00_020a03e4.s',
-    'src/Inventory.s',
+    'src/Inventory.cpp',
     'asm/ov00/inventory.s',
     'asm/ov00/ov00_020ae7a4.s',
     'asm/ov00/ov00_020b4940.s',
@@ -350,11 +350,11 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('}\n')
 
 with open(f'{BUILD}arm9_objects.txt', 'w') as file:
-    for obj in ARM9_OBJECTS: file.write(f'{obj}\n')
-    for obj in ITCM_OBJECTS: file.write(f'{obj}\n')
-    for obj in DTCM_OBJECTS: file.write(f'{obj}\n')
+    for obj in ARM9_OBJECTS: file.write(f'{obj}.o\n')
+    for obj in ITCM_OBJECTS: file.write(f'{obj}.o\n')
+    for obj in DTCM_OBJECTS: file.write(f'{obj}.o\n')
     file.write('\n')
     for ov in OVERLAYS:
         file.write(f'-og {ov.name},0 -ol {ov.name}\n')
-        for obj in ov.objects: file.write(f'    {obj}\n')
+        for obj in ov.objects: file.write(f'    {obj}.o\n')
         file.write('\n')
