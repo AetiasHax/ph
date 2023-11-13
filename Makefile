@@ -19,8 +19,8 @@ ASSETS_TXT := $(ROOT)/assets.txt
 
 ASM_FILES := $(wildcard asm/*.s) $(wildcard asm/*/*.s)
 CXX_FILES := $(wildcard src/*.cpp) $(wildcard src/*/*.cpp)
-ASM_OBJS = $(ASM_FILES:%.s=$(TARGET_DIR)/%.o)
-CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.o)
+ASM_OBJS = $(ASM_FILES:%.s=$(TARGET_DIR)/%.s.o)
+CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.o)
 
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
@@ -77,11 +77,11 @@ clean:
 lcf: setup $(TOOLS_DIR)/lcf.py
 	python $(TOOLS_DIR)/lcf.py
 
-$(ASM_OBJS): $(TARGET_DIR)/%.o: %.s
+$(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
 
-$(CXX_OBJS): $(TARGET_DIR)/%.o: %.cpp
+$(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(MW_CC) $(CC_FLAGS) $< -o $@
 
