@@ -5,7 +5,7 @@
 
 typedef u32 EquipItem;
 enum EquipItem_ {
-    EquipItem_None          = 0,
+    EquipItem_None          = -1,
     EquipItem_Boomerang     = 2,
     EquipItem_Shovel        = 3,
     EquipItem_Bomb          = 4,
@@ -66,6 +66,8 @@ public:
     static void Destroy();
     Inventory();
     ~Inventory();
+
+    void ClearPrevEquippedItem();
 };
 
 extern Inventory *gInventory;

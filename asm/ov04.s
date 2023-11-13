@@ -14965,7 +14965,7 @@ _02107ef6:
 	bl func_ov00_020aef30
 	ldr r0, _02107f2c ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad0dc
+	bl _ZN9Inventory21ClearPrevEquippedItemEv
 	add r0, r4, #0
 	bl func_ov00_020b8060
 	mov r0, #4

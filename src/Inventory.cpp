@@ -12,4 +12,11 @@ void Inventory::Destroy() {
     delete gInventory;
     gInventory = 0;
 }
+
+#pragma interworking on
+void Inventory::ClearPrevEquippedItem() {
+    this->mPrevEquippedItem = EquipItem_None;
+}
+#pragma interworking off
+
 #pragma thumb off

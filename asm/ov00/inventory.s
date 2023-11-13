@@ -3,15 +3,6 @@
 
 	.text
 
-	.global func_ov00_020ad0dc
-	thumb_func_start func_ov00_020ad0dc
-func_ov00_020ad0dc: ; 0x020ad0dc
-	mov r1, #0
-	mvn r1, r1
-	str r1, [r0, #4]
-	bx lr
-	thumb_func_end func_ov00_020ad0dc
-
 	.global func_ov00_020ad0e4
 	thumb_func_start func_ov00_020ad0e4
 func_ov00_020ad0e4: ; 0x020ad0e4
