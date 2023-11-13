@@ -6,7 +6,7 @@
 .extern func_ov00_020a5ccc
 .extern func_0204f754
 .extern func_0203005c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_02080f94
 .extern func_0203010c
 .extern func_ov00_020a5d10
@@ -30,7 +30,7 @@
 .extern func_0204dd9c
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_020908f8
 .extern func_ov00_02090ac8
 .extern data_027e0fac

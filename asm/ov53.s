@@ -801,7 +801,7 @@ func_ov53_02199700: ; 0x02199700
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov53_02199700
@@ -1439,7 +1439,7 @@ func_ov53_02199f9c: ; 0x02199f9c
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov53_02199f9c

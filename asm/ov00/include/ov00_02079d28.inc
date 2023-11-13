@@ -8,7 +8,7 @@
 .extern data_027e0d40
 .extern func_0201825c
 .extern func_0202c0b8
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0d40
 .extern func_0201825c
 .extern func_0202c0b8
@@ -204,7 +204,7 @@
 .extern data_027e0ce0
 .extern data_027e0618
 .extern data_027e0d54
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_02042b40
 .extern func_02042bfc
 .extern func_ov03_020f3c28
@@ -220,7 +220,7 @@
 .extern data_027e037c
 .extern data_027e03c8
 .extern func_ov18_0215cb28
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov17_0215cef4
 .extern data_027e0db0
 .extern func_01ff9b4c

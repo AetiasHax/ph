@@ -3172,7 +3172,7 @@ _021154e8:
 	mov r0, r4
 	blx func_0202c0b8
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0

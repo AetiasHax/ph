@@ -52828,7 +52828,7 @@ func_ov11_0212b9dc: ; 0x0212b9dc
 	mov r4, r0
 	blx func_0202c0b8
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov11_0212b9dc

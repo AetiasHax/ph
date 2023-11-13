@@ -152,7 +152,7 @@
 .extern data_027e0f6c
 .extern data_027e0fe4
 .extern func_ov00_02081f4c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_0207aed0
 .extern func_ov00_0208b180
 .extern func_01ffe468
@@ -186,7 +186,7 @@
 .extern data_027e03c8
 .extern data_02050f54
 .extern func_ov00_020b3ea8
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_020b3ea8
 .extern func_020078d8
 .extern func_ov00_020ad0e4
@@ -198,7 +198,7 @@
 .extern data_027e0fe0
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f4c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_02093a1c
 .extern data_027e0f6c
 .extern data_027e0618
@@ -215,7 +215,7 @@
 .extern func_ov00_020a9aac
 .extern func_ov00_020a95a4
 .extern func_ov04_02107994
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_0204f754
 .extern func_ov00_020a9aac
 .extern func_ov00_020a95a4
@@ -225,7 +225,7 @@
 .extern func_ov04_02107810
 .extern data_027e0fe0
 .extern func_ov04_02107994
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov04_02107994
 .extern func_01ff9e64
 .extern func_ov00_020c4588
@@ -374,9 +374,9 @@
 .extern func_ov00_020ad428
 .extern gInventory
 .extern func_ov00_02081f4c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_020a95ec
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_020a95ec
 .extern func_01ff9bf8
 .extern func_01ff9cec
@@ -655,7 +655,7 @@
 .extern func_02023548
 .extern func_02023548
 .extern func_ov00_020b3ea8
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_0202d550
 .extern func_0202d56c
 .extern func_0200e2a4
@@ -701,7 +701,7 @@
 .extern data_027e0f64
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0fe0
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0d0c
 .extern func_ov00_020836dc
 .extern func_ov00_02097760
@@ -738,7 +738,7 @@
 .extern data_027e0f6c
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f4c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_02093a1c
 .extern data_027e0f6c
 .extern data_027e0fc8
@@ -820,7 +820,7 @@
 .extern func_ov00_020ad9e8
 .extern gInventory
 .extern func_ov00_02081f4c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0fb8
 .extern func_ov00_020ceacc
 .extern data_027e0ffc
@@ -848,11 +848,11 @@
 .extern func_ov04_02107810
 .extern data_027e0fe0
 .extern func_ov04_02107994
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov04_02107994
 .extern func_0201e544
 .extern func_0202e1a0
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_020188d4
 .extern func_0202e1c4
 .extern func_02018884
@@ -878,7 +878,7 @@
 .extern func_01ffa9fc
 .extern data_027e0d44
 .extern func_ov00_0207a188
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_02087ef0
 .extern data_027e0e60
 .extern func_ov00_02083570
@@ -1019,7 +1019,7 @@
 .extern data_027e0ce0
 .extern data_027e0fe0
 .extern func_0202ea34
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0fe0
 .extern func_ov00_020c3f54
 .extern data_027e103c

@@ -3509,7 +3509,7 @@ func_ov00_020b155c: ; 0x020b155c
 	add r4, r0, #0
 	blx func_ov00_02081f4c
 	add r0, r4, #0
-	blx func_0202ea0c
+	blx _ZN9SysObjectdlEPv
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
@@ -6651,7 +6651,7 @@ func_ov00_020b3e78: ; 0x020b3e78
 	mov r4, r0
 	bl func_0203780c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020b3e78

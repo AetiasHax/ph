@@ -3,27 +3,6 @@
 
 	.text
 
-	.global func_ov00_020ad0b8
-	thumb_func_start func_ov00_020ad0b8
-func_ov00_020ad0b8: ; 0x020ad0b8
-	push {r4, lr}
-	ldr r0, _020ad0d8 ; =gInventory
-	ldr r4, [r0]
-	cmp r4, #0
-	beq _020ad0ce
-	add r0, r4, #0
-	bl func_ov04_021074e8
-	add r0, r4, #0
-	blx func_0202ea0c
-_020ad0ce:
-	ldr r0, _020ad0d8 ; =gInventory
-	mov r1, #0
-	str r1, [r0]
-	pop {r4, pc}
-	nop
-	thumb_func_end func_ov00_020ad0b8
-_020ad0d8: .word gInventory
-
 	.global func_ov00_020ad0dc
 	thumb_func_start func_ov00_020ad0dc
 func_ov00_020ad0dc: ; 0x020ad0dc

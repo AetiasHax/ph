@@ -1219,7 +1219,7 @@ func_ov15_021206bc: ; 0x021206bc
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021206bc
@@ -1231,7 +1231,7 @@ func_ov15_021206d8: ; 0x021206d8
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021206d8
@@ -1474,7 +1474,7 @@ func_ov15_021209c0: ; 0x021209c0
 	mov r0, r4
 	blx func_ov09_0211b7f0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	add sp, sp, #8
 	ldmia sp!, {r4, pc}
@@ -2756,7 +2756,7 @@ func_ov15_02121af8: ; 0x02121af8
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02121af8
@@ -3209,7 +3209,7 @@ func_ov15_02122124: ; 0x02122124
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02122124
@@ -4589,7 +4589,7 @@ func_ov15_021234f4: ; 0x021234f4
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021234f4
@@ -5301,7 +5301,7 @@ func_ov15_02123dc8: ; 0x02123dc8
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02123dc8
@@ -6905,7 +6905,7 @@ func_ov15_02125444: ; 0x02125444
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02125444
@@ -7892,7 +7892,7 @@ func_ov15_021261e4: ; 0x021261e4
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -8126,7 +8126,7 @@ func_ov15_02126478: ; 0x02126478
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02126478
@@ -8410,7 +8410,7 @@ func_ov15_021267bc: ; 0x021267bc
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -8590,7 +8590,7 @@ func_ov15_021269d0: ; 0x021269d0
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -8887,7 +8887,7 @@ func_ov15_02126d68: ; 0x02126d68
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02126d68
@@ -9082,7 +9082,7 @@ func_ov15_02126fa8: ; 0x02126fa8
 	mov r4, r0
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02126fa8
@@ -9182,7 +9182,7 @@ func_ov15_021270b4: ; 0x021270b4
 	mov r4, r0
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021270b4
@@ -9269,7 +9269,7 @@ func_ov15_02127188: ; 0x02127188
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -9583,7 +9583,7 @@ func_ov15_02127540: ; 0x02127540
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -9774,7 +9774,7 @@ func_ov15_02127784: ; 0x02127784
 	mov r4, r0
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02127784
@@ -9830,7 +9830,7 @@ func_ov15_0212780c: ; 0x0212780c
 	mov r4, r0
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0212780c
@@ -9983,7 +9983,7 @@ func_ov15_021279c4: ; 0x021279c4
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021279c4
@@ -10276,7 +10276,7 @@ func_ov15_02127d3c: ; 0x02127d3c
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -10818,7 +10818,7 @@ func_ov15_02128478: ; 0x02128478
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02128478
@@ -11565,7 +11565,7 @@ _02128edc:
 	mov r0, r4
 	bl func_ov15_021417b8
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02128f08:
 	mov r0, #0
 	str r0, [r5, #0x19c]
@@ -11577,7 +11577,7 @@ _02128f10:
 	mov r0, r4
 	bl func_ov15_0212c420
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02128f30:
 	mov r0, #0
 	str r0, [r5, #0x198]
@@ -11629,7 +11629,7 @@ _02128fa8:
 	mov r0, r4
 	bl func_ov15_021417b8
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02128fd4:
 	mov r0, #0
 	str r0, [r5, #0x19c]
@@ -11641,7 +11641,7 @@ _02128fdc:
 	mov r0, r4
 	bl func_ov15_0212c420
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02128ffc:
 	mov r0, #0
 	str r0, [r5, #0x198]
@@ -11649,7 +11649,7 @@ _02129004:
 	mov r0, r5
 	bl func_ov00_0207da38
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r5
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -12942,7 +12942,7 @@ func_ov15_02129ff4: ; 0x02129ff4
 func_ov15_02129ffc: ; 0x02129ffc
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02129ffc
@@ -13166,7 +13166,7 @@ _0212a314:
 	cmp r0, #0
 	beq _0212a334
 	beq _0212a32c
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0212a32c:
 	ldr r0, [r4, #0x64]
 	str r5, [r0, r6, lsl #2]
@@ -14627,7 +14627,7 @@ func_ov15_0212b76c: ; 0x0212b76c
 	ldr r2, [r2]
 	bl func_ov15_0212b7e4
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0212b7a8:
 	mov r0, r4
 	add sp, sp, #4
@@ -14849,7 +14849,7 @@ func_ov15_0212ba4c: ; 0x0212ba4c
 	ldr r2, [r2]
 	bl func_ov15_0212b7e4
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0212ba88:
 	mov r0, r4
 	add sp, sp, #4
@@ -15122,7 +15122,7 @@ func_ov15_0212bdd4: ; 0x0212bdd4
 	ldr r2, [r2]
 	bl func_ov15_0212be94
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0212be10:
 	mov r0, r4
 	add sp, sp, #4
@@ -15529,7 +15529,7 @@ func_ov15_0212c324: ; 0x0212c324
 	mov r4, r0
 	bl func_ov15_0212a010
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0212c324
@@ -15621,7 +15621,7 @@ func_ov15_0212c420: ; 0x0212c420
 	mov r0, r4
 	bl func_ov15_0212a2a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0212c448:
 	mov r0, #0
 	str r0, [r5, #4]
@@ -16098,7 +16098,7 @@ func_ov15_0212c9b8: ; 0x0212c9b8
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0212c9b8
@@ -18996,7 +18996,7 @@ func_ov15_0212f34c: ; 0x0212f34c
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0212f34c
@@ -19333,7 +19333,7 @@ _0212f730:
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -22803,7 +22803,7 @@ func_ov15_0213294c: ; 0x0213294c
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0213294c
@@ -23038,7 +23038,7 @@ func_ov15_02132be0: ; 0x02132be0
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02132be0
@@ -24577,7 +24577,7 @@ func_ov15_02134150: ; 0x02134150
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -25972,7 +25972,7 @@ func_ov15_02135484: ; 0x02135484
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02135484
@@ -31261,7 +31261,7 @@ _02139d10:
 	mov r0, r4
 	blx func_ov04_0210b2b0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -31819,7 +31819,7 @@ func_ov15_0213a5e8: ; 0x0213a5e8
 	mov r4, r0
 	blx func_02030294
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0213a5e8
@@ -32080,7 +32080,7 @@ func_ov15_0213a8bc: ; 0x0213a8bc
 	mov r0, r4
 	bl func_ov15_0213dda4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0213a8bc
@@ -32793,7 +32793,7 @@ func_ov15_0213b2bc: ; 0x0213b2bc
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0213b2bc
@@ -32922,7 +32922,7 @@ _0213b424:
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -34865,7 +34865,7 @@ func_ov15_0213cf78: ; 0x0213cf78
 	mov r0, r4
 	bl func_ov15_0213cf10
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0213cfa0:
 	ldr r0, _0213cfb0 ; =data_ov15_0218ef1c
 	mov r1, #0
@@ -35980,7 +35980,7 @@ func_ov15_0213dd88: ; 0x0213dd88
 	mov r4, r0
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0213dd88
@@ -36762,7 +36762,7 @@ func_ov15_0213e7e4: ; 0x0213e7e4
 	mov r0, r4
 	bl func_ov15_0213dda4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -39577,7 +39577,7 @@ func_ov15_02141048: ; 0x02141048
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02141048
@@ -39631,7 +39631,7 @@ func_ov15_021410c8: ; 0x021410c8
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021410c8
@@ -40032,7 +40032,7 @@ func_ov15_02141594: ; 0x02141594
 	str r1, [r4, #0x14]
 	bl func_ov00_0209549c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02141594
@@ -41087,7 +41087,7 @@ func_ov15_0214236c: ; 0x0214236c
 	sub r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021423a4:
 	mov r0, r4
 	add sp, sp, #4
@@ -41418,7 +41418,7 @@ func_ov15_02142784: ; 0x02142784
 	sub r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021427bc:
 	mov r0, r4
 	add sp, sp, #4
@@ -41474,7 +41474,7 @@ func_ov15_02142810: ; 0x02142810
 	sub r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02142848:
 	mov r0, r4
 	add sp, sp, #4
@@ -45413,7 +45413,7 @@ func_ov15_02145f28: ; 0x02145f28
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -45547,7 +45547,7 @@ func_ov15_0214609c: ; 0x0214609c
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -46067,7 +46067,7 @@ func_ov15_021466b0: ; 0x021466b0
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021466b0
@@ -46579,7 +46579,7 @@ func_ov15_02146d3c: ; 0x02146d3c
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02146d3c
@@ -46983,7 +46983,7 @@ func_ov15_02147204: ; 0x02147204
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -48834,7 +48834,7 @@ func_ov15_02148ccc: ; 0x02148ccc
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02148ccc
@@ -49244,7 +49244,7 @@ func_ov15_0214928c: ; 0x0214928c
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214928c
@@ -49329,7 +49329,7 @@ _02149390:
 	mov r0, r5
 	bl func_ov15_0216e0f0
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021493b0:
 	mov r0, #0
 	str r0, [r4, #0xc0]
@@ -49341,7 +49341,7 @@ _021493b8:
 	mov r0, r5
 	bl func_ov15_02177290
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021493d8:
 	mov r0, #0
 	str r0, [r4, #0xc4]
@@ -49396,7 +49396,7 @@ _02149470:
 	mov r0, r4
 	blx func_ov09_02114ef0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -49483,7 +49483,7 @@ _02149580:
 	mov r0, r5
 	bl func_ov15_0216e0f0
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021495a0:
 	mov r0, #0
 	str r0, [r4, #0xc0]
@@ -49495,7 +49495,7 @@ _021495a8:
 	mov r0, r5
 	bl func_ov15_02177290
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _021495c8:
 	mov r0, #0
 	str r0, [r4, #0xc4]
@@ -52415,7 +52415,7 @@ func_ov15_0214be60: ; 0x0214be60
 	mov r0, r4
 	bl func_ov15_0214bf40
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0214be88:
 	ldr r0, _0214be98 ; =data_ov15_0218f55c
 	mov r1, #0
@@ -52698,7 +52698,7 @@ func_ov15_0214c1b4: ; 0x0214c1b4
 	mov r0, r4
 	bl func_ov00_0208b5a4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -53069,7 +53069,7 @@ func_ov15_0214c61c: ; 0x0214c61c
 	str r1, [r4, #4]
 	bl func_ov00_02081f6c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214c61c
@@ -53136,7 +53136,7 @@ func_ov15_0214c6dc: ; 0x0214c6dc
 	mov r0, r4
 	blx func_ov09_0211b7f0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -53584,7 +53584,7 @@ func_ov15_0214cc7c: ; 0x0214cc7c
 	mov r0, r4
 	bl func_ov15_021837e0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0214cca8:
 	ldr r4, [r5, #0x2c]
 	cmp r4, #0
@@ -53592,7 +53592,7 @@ _0214cca8:
 	mov r0, r4
 	blx func_ov04_02106054
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0214ccc4:
 	ldr r0, [r5, #0x28]
 	cmp r0, #0
@@ -53611,7 +53611,7 @@ _0214ccf4:
 	mov r0, r5
 	blx func_ov09_0211ae94
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r5
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -53631,7 +53631,7 @@ func_ov15_0214cd10: ; 0x0214cd10
 	mov r0, r4
 	bl func_ov15_021837e0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0214cd3c:
 	ldr r4, [r5, #0x2c]
 	cmp r4, #0
@@ -53639,7 +53639,7 @@ _0214cd3c:
 	mov r0, r4
 	blx func_ov04_02106054
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0214cd58:
 	ldr r0, [r5, #0x28]
 	cmp r0, #0
@@ -54298,7 +54298,7 @@ func_ov15_0214d4e8: ; 0x0214d4e8
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214d4e8
@@ -54495,7 +54495,7 @@ func_ov15_0214d724: ; 0x0214d724
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214d724
@@ -54586,7 +54586,7 @@ func_ov15_0214d824: ; 0x0214d824
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214d824
@@ -55226,7 +55226,7 @@ func_ov15_0214e0f0: ; 0x0214e0f0
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214e0f0
@@ -56205,7 +56205,7 @@ func_ov15_0214eedc: ; 0x0214eedc
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0214eedc
@@ -57537,7 +57537,7 @@ func_ov15_0215014c: ; 0x0215014c
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -59055,7 +59055,7 @@ func_ov15_02151704: ; 0x02151704
 	mov r4, r0
 	bl func_ov00_02081f6c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02151704
@@ -59109,7 +59109,7 @@ func_ov15_02151784: ; 0x02151784
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02151784
@@ -63753,7 +63753,7 @@ _02155804:
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -65968,7 +65968,7 @@ func_ov15_0215768c: ; 0x0215768c
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215768c
@@ -66490,7 +66490,7 @@ func_ov15_02157dbc: ; 0x02157dbc
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02157dbc
@@ -67202,7 +67202,7 @@ _02158738:
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -69298,7 +69298,7 @@ func_ov15_0215a440: ; 0x0215a440
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215a440
@@ -70908,7 +70908,7 @@ func_ov15_0215bb20: ; 0x0215bb20
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215bb20
@@ -71004,7 +71004,7 @@ func_ov15_0215bc20: ; 0x0215bc20
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215bc20
@@ -72668,7 +72668,7 @@ func_ov15_0215d334: ; 0x0215d334
 	mov r4, r0
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215d334
@@ -72821,7 +72821,7 @@ func_ov15_0215d4d4: ; 0x0215d4d4
 	mov r4, r0
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215d4d4
@@ -72921,7 +72921,7 @@ func_ov15_0215d5e0: ; 0x0215d5e0
 	mov r4, r0
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215d5e0
@@ -73021,7 +73021,7 @@ func_ov15_0215d6ec: ; 0x0215d6ec
 	mov r4, r0
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215d6ec
@@ -73564,7 +73564,7 @@ func_ov15_0215dd70: ; 0x0215dd70
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0215dd70
@@ -76259,7 +76259,7 @@ func_ov15_0216041c: ; 0x0216041c
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216041c
@@ -76348,7 +76348,7 @@ func_ov15_021604fc: ; 0x021604fc
 	str r2, [r1]
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -76601,7 +76601,7 @@ func_ov15_0216078c: ; 0x0216078c
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -77826,7 +77826,7 @@ func_ov15_02161904: ; 0x02161904
 	mov r4, r0
 	bl func_ov00_02081f6c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02161904
@@ -78090,7 +78090,7 @@ _02161c14:
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -81866,7 +81866,7 @@ func_ov15_02165310: ; 0x02165310
 	mov r0, r4
 	bl func_ov15_02126234
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -82782,7 +82782,7 @@ func_ov15_02165fac: ; 0x02165fac
 	mov r4, r0
 	bl func_ov00_02081f4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02165fac
@@ -82881,7 +82881,7 @@ func_ov15_021660a4: ; 0x021660a4
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021660a4
@@ -83405,7 +83405,7 @@ func_ov15_0216677c: ; 0x0216677c
 	mov r0, r4
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -83676,7 +83676,7 @@ func_ov15_02166ab8: ; 0x02166ab8
 	mov r4, r0
 	bl func_ov15_02165358
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02166ab8
@@ -83767,7 +83767,7 @@ func_ov15_02166ba0: ; 0x02166ba0
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02166ba0
@@ -84771,7 +84771,7 @@ func_ov15_02167928: ; 0x02167928
 	mov r0, r4
 	bl func_ov15_02123510
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02167928
@@ -86665,7 +86665,7 @@ func_ov15_021692f0: ; 0x021692f0
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -87956,7 +87956,7 @@ func_ov15_0216a558: ; 0x0216a558
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216a558
@@ -87968,7 +87968,7 @@ func_ov15_0216a574: ; 0x0216a574
 	mov r4, r0
 	bl func_ov00_02081f6c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216a574
@@ -88176,7 +88176,7 @@ func_ov15_0216a7f8: ; 0x0216a7f8
 	mov r0, r4
 	blx func_ov03_020fab4c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -88582,7 +88582,7 @@ func_ov15_0216ad14: ; 0x0216ad14
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216ad14
@@ -88617,7 +88617,7 @@ func_ov15_0216ad70: ; 0x0216ad70
 	mov r4, r0
 	bl func_ov15_0216ad3c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216ad70
@@ -88639,7 +88639,7 @@ func_ov15_0216ada0: ; 0x0216ada0
 	mov r4, r0
 	bl func_ov15_0216ad3c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216ada0
@@ -90199,7 +90199,7 @@ func_ov15_0216c264: ; 0x0216c264
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216c264
@@ -91721,7 +91721,7 @@ func_ov15_0216d798: ; 0x0216d798
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216d798
@@ -92401,7 +92401,7 @@ func_ov15_0216e0d4: ; 0x0216e0d4
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216e0d4
@@ -93469,7 +93469,7 @@ func_ov15_0216ef0c: ; 0x0216ef0c
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0216ef0c
@@ -94438,7 +94438,7 @@ func_ov15_0216fb50: ; 0x0216fb50
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -98557,7 +98557,7 @@ func_ov15_0217371c: ; 0x0217371c
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217371c
@@ -98643,7 +98643,7 @@ func_ov15_02173800: ; 0x02173800
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -99296,7 +99296,7 @@ func_ov15_021740e4: ; 0x021740e4
 	mov r4, r0
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021740e4
@@ -99505,7 +99505,7 @@ func_ov15_02174334: ; 0x02174334
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -99707,7 +99707,7 @@ func_ov15_021745ac: ; 0x021745ac
 	add r0, r4, #4
 	bl func_ov00_020b7df0
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021745ac
@@ -103460,7 +103460,7 @@ _021778b8:
 	mov r0, r4
 	bl func_ov15_0214e118
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -106962,7 +106962,7 @@ func_ov15_0217ab60: ; 0x0217ab60
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217ab60
@@ -106974,7 +106974,7 @@ func_ov15_0217ab7c: ; 0x0217ab7c
 	mov r4, r0
 	bl func_ov00_02081f6c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217ab7c
@@ -107270,7 +107270,7 @@ func_ov15_0217aed4: ; 0x0217aed4
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217aed4
@@ -108518,7 +108518,7 @@ func_ov15_0217c010: ; 0x0217c010
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217c010
@@ -108685,7 +108685,7 @@ func_ov15_0217c1d8: ; 0x0217c1d8
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -110200,7 +110200,7 @@ func_ov15_0217d718: ; 0x0217d718
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217d718
@@ -110568,7 +110568,7 @@ func_ov15_0217dbc8: ; 0x0217dbc8
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217dbc8
@@ -111119,7 +111119,7 @@ func_ov15_0217e338: ; 0x0217e338
 	mov r4, r0
 	blx func_ov03_020f1f0c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217e338
@@ -112617,7 +112617,7 @@ func_ov15_0217f758: ; 0x0217f758
 func_ov15_0217f760: ; 0x0217f760
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217f760
@@ -112639,7 +112639,7 @@ func_ov15_0217f778: ; 0x0217f778
 func_ov15_0217f77c: ; 0x0217f77c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217f77c
@@ -112649,7 +112649,7 @@ func_ov15_0217f77c: ; 0x0217f77c
 func_ov15_0217f790: ; 0x0217f790
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_0217f790
@@ -112665,7 +112665,7 @@ func_ov15_0217f7a4: ; 0x0217f7a4
 	mov r2, #0x14
 	bl func_0204f754
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -113189,7 +113189,7 @@ _0217fdb8:
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -117184,7 +117184,7 @@ func_ov15_021836e8: ; 0x021836e8
 	mov r4, r0
 	blx func_ov00_020a95ec
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_021836e8
@@ -117262,7 +117262,7 @@ func_ov15_021837e0: ; 0x021837e0
 	mov r0, r4
 	bl func_ov15_0217e620
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02183804:
 	ldr r3, _02183820 ; =func_ov15_021208e0
 	add r0, r5, #0x18
@@ -117652,7 +117652,7 @@ func_ov15_02183c8c: ; 0x02183c8c
 	mov r0, r4
 	bl func_ov00_020c1730
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov15_02183c8c
@@ -119171,7 +119171,7 @@ _0218503c:
 	add r0, r5, #0xc
 	blx func_0203005c
 	mov r0, r5
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02185084:
 	mov r0, #0
 	str r0, [r4]

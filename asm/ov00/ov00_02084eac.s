@@ -6884,7 +6884,7 @@ func_ov00_0208ad8c: ; 0x0208ad8c
 	ldr r2, [r2]
 	bl func_ov00_0208ae58
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0208adc8:
 	mov r0, r4
 	add sp, sp, #4

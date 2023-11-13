@@ -515,7 +515,7 @@ _0209b5dc:
 	add r0, r7, #0xc
 	blx func_0203005c
 	mov r0, r7
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0209b62c:
 	str r4, [r8]
 _0209b630:
@@ -1140,7 +1140,7 @@ func_ov00_0209bdfc: ; 0x0209bdfc
 	sub r0, r0, r1
 	str r0, [r4, #4]
 	ldr r0, [r4]
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _0209be34:
 	mov r0, r4
 	add sp, sp, #4

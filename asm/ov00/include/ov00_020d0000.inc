@@ -35,7 +35,7 @@
 .extern func_0203efd8
 .extern func_02038b1c
 .extern func_02038b1c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_02038f44
 .extern func_01ffe468
 .extern func_0203f378

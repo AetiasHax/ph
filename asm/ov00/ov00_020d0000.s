@@ -1412,7 +1412,7 @@ func_ov00_020d1118: ; 0x020d1118
 	mov r4, r0
 	blx func_02038b1c
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020d1118

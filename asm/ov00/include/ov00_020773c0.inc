@@ -102,7 +102,7 @@
 .extern func_0200e8f8
 .extern func_0202ff64
 .extern func_ov04_02100b6c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0900
 .extern data_027e0d38
 .extern func_ov00_020a5e9c
@@ -128,14 +128,14 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern data_027e0d3c
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0d3c
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov03_020f05bc
 .extern data_027e0618
 .extern data_027e0ce0
 .extern func_ov03_020f0670
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_0200e254
 .extern func_02006864
 .extern func_02006564

@@ -3323,7 +3323,7 @@ func_ov00_02078b0c: ; 0x02078b0c
     add r0, r4, #0
     bl func_ov04_02100b6c
     add r0, r4, #0
-    blx func_0202ea0c
+    blx _ZN9SysObjectdlEPv
 _02078b2c:
     ldr r0, _02078b3c ; =data_027e0d38
     mov r1, #0
@@ -3593,7 +3593,7 @@ func_ov00_02078d30: ; 0x02078d30
     add r0, r4, #0
     bl func_ov00_02078d90
     add r0, r4, #0
-    blx func_0202ea0c
+    blx _ZN9SysObjectdlEPv
 _02078d46:
     ldr r0, _02078d50 ; =data_027e0d3c
     mov r1, #0
@@ -3648,7 +3648,7 @@ func_ov00_02078d90: ; 0x02078d90
     add r0, r4, #0
     bl func_ov03_020f0670
     add r0, r4, #0
-    blx func_0202ea0c
+    blx _ZN9SysObjectdlEPv
 _02078da6:
     add r0, r5, #0
     pop {r3, r4, r5, pc}

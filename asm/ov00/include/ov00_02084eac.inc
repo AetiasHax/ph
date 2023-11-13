@@ -264,7 +264,7 @@
 .extern func_02042d50
 .extern func_0204dd9c
 .extern func_ov00_020a0368
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_0204dd9c
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0f80

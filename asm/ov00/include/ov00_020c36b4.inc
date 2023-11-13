@@ -13,7 +13,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern data_027e0fe8
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0fe8
 .extern func_0203e868
 .extern func_0202bbbc

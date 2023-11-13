@@ -133,7 +133,7 @@
 .extern data_02050f54
 .extern data_027e0ff0
 .extern func_ov00_020ce284
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern data_027e0ff0
 .extern func_01ffa0f4
 .extern func_01ffa0f4

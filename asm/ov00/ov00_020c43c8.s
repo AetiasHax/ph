@@ -2939,7 +2939,7 @@ func_ov00_020c6928: ; 0x020c6928
 func_ov00_020c692c: ; 0x020c692c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020c692c

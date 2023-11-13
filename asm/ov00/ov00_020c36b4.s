@@ -743,7 +743,7 @@ func_ov00_020c3fd4: ; 0x020c3fd4
 	mov r0, r4
 	bl func_ov00_020c4010
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _020c3ff8:
 	ldr r0, _020c4008 ; =data_027e0fe8
 	mov r1, #0

@@ -20,8 +20,6 @@ enum ItemId {
 
 };
 
-extern void* foo(unsigned long length, u32 *id, u32 idLength);
-
 class Inventory : public SysObject {
 private:
     /* 000 */ EquipItem mEquippedItem;
@@ -65,7 +63,9 @@ private:
 
 public:
     static Inventory* Create();
+    static void Destroy();
     Inventory();
+    ~Inventory();
 };
 
 extern Inventory *gInventory;

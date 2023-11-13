@@ -46,7 +46,7 @@
 .extern func_ov00_020a9a8c
 .extern func_ov00_020a95ec
 .extern func_ov00_020c1730
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_ov00_020a9a8c
 .extern func_ov00_020a9a8c
 .extern func_ov00_020a95ec
@@ -58,7 +58,7 @@
 .extern func_ov00_020a95ec
 .extern func_ov00_020c1730
 .extern func_ov00_020a95ec
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_01ff9958
 .extern func_01ff9f3c
 .extern func_020037b8
@@ -104,7 +104,7 @@
 .extern func_0201f1ac
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv
 .extern func_0200b4f4
 .extern func_0200ab90
 .extern func_0200ac24
@@ -233,4 +233,4 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0ce0
 .extern func_0202a5c0
-.extern func_0202ea0c
+.extern _ZN9SysObjectdlEPv

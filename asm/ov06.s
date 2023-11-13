@@ -1979,7 +1979,7 @@ func_ov06_0210226c: ; 0x0210226c
 	mov r0, r4
 	bl func_ov06_021021b4
 	mov r0, r4
-	bl func_0202ea0c
+	bl _ZN9SysObjectdlEPv
 _02102294:
 	ldr r0, _021022a4 ; =data_ov06_02104000
 	mov r1, #0
