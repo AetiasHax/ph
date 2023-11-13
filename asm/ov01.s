@@ -6724,7 +6724,7 @@ func_ov01_020f33a4: ; 0x020f33a4
 	thumb_func_end func_ov01_020f33a4
 _020f33b8: .word data_ov01_020f96a0
 _020f33bc: .word data_ov01_020f96c0
-_020f33c0: .word func_ov01_020f33c4 + 1
+_020f33c0: .word func_ov01_020f33c4
 
 	.global func_ov01_020f33c4
 	thumb_func_start func_ov01_020f33c4
@@ -7369,7 +7369,7 @@ func_ov01_020f385c: ; 0x020f385c
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end func_ov01_020f385c
-_020f3888: .word func_ov01_020f38c0 + 1
+_020f3888: .word func_ov01_020f38c0
 _020f388c: .word data_ov01_020f8910
 
 	.global func_ov01_020f3890
@@ -11064,7 +11064,7 @@ _020f5630:
 	.align 2, 0
 	arm_func_end func_ov01_020f55e8
 _020f5638: .word 0x00002710
-_020f563c: .word func_ov00_0207a514 + 1
+_020f563c: .word func_ov00_0207a514
 
 	.global func_ov01_020f5640
 	arm_func_start func_ov01_020f5640
@@ -14637,7 +14637,7 @@ func_ov01_020f84a8: ; 0x020f84a8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov01_020f84a8
-_020f84b4: .word func_0202f134 + 1
+_020f84b4: .word func_0202f134
 
 	.global func_ov01_020f84b8
 	arm_func_start func_ov01_020f84b8
@@ -14647,7 +14647,7 @@ func_ov01_020f84b8: ; 0x020f84b8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov01_020f84b8
-_020f84c4: .word func_0202f154 + 1
+_020f84c4: .word func_0202f154
 
 	.global func_ov01_020f84c8
 	arm_func_start func_ov01_020f84c8

@@ -7352,7 +7352,7 @@ func_ov00_020cf404: ; 0x020cf404
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020cf404
-_020cf410: .word func_ov09_0211cc8c + 1
+_020cf410: .word func_ov09_0211cc8c
 
 	.global func_ov00_020cf414
 	arm_func_start func_ov00_020cf414

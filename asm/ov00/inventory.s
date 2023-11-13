@@ -1168,15 +1168,9 @@ func_ov00_020ada98: ; 0x020ada98
 	thumb_func_end func_ov00_020ada98
 
 	.global func_ov00_020adabc
-	thumb_func_start func_ov00_020adabc
+	arm_func_start func_ov00_020adabc
 func_ov00_020adabc: ; 0x020adabc
-	mov r2, #0xa1
-	b _020ade02
-	thumb_func_end func_ov00_020adabc
-
-	.global func_ov00_020adac0
-	arm_func_start func_ov00_020adac0
-func_ov00_020adac0: ; 0x020adac0
+	mov r2, r1, lsr #5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x138]
 	and r1, r1, #0x1f
@@ -1184,7 +1178,7 @@ func_ov00_020adac0: ; 0x020adac0
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end func_ov00_020adac0
+	arm_func_end func_ov00_020adabc
 
 	.global func_ov00_020adadc
 	thumb_func_start func_ov00_020adadc
@@ -2413,7 +2407,7 @@ func_ov00_020ae3c0: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020ae3c0
-_020ae3cc: .word func_ov00_020ae3a8
+_020ae3cc: .word func_ov00_020ae3a8 - 1
 
 	.global func_ov00_020ae3d0
 	thumb_func_start func_ov00_020ae3d0

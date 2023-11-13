@@ -498,11 +498,11 @@ _021991fc:
 _02199200: .word 0x00000b33
 _02199204: .word data_ov58_0219afcc
 _02199208: .word data_ov00_020e9c88
-_0219920c: .word func_ov58_02199220 + 1
+_0219920c: .word func_ov58_02199220
 _02199210: .word data_ov58_0219b080
 _02199214: .word data_027e077c
 _02199218: .word data_027e0de4
-_0219921c: .word func_ov58_02199264 + 1
+_0219921c: .word func_ov58_02199264
 
 	.global func_ov58_02199220
 	thumb_func_start func_ov58_02199220
@@ -511,7 +511,7 @@ func_ov58_02199220: ; 0x02199220
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov58_02199220
-_02199224: .word func_ov58_02199228 + 1
+_02199224: .word func_ov58_02199228
 
 	.global func_ov58_02199228
 	thumb_func_start func_ov58_02199228
@@ -547,7 +547,7 @@ func_ov58_02199264: ; 0x02199264
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov58_02199264
-_02199268: .word func_ov58_0219926c + 1
+_02199268: .word func_ov58_0219926c
 
 	.global func_ov58_0219926c
 	thumb_func_start func_ov58_0219926c

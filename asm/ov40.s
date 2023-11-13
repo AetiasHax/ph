@@ -10310,7 +10310,7 @@ func_ov40_02183dac: ; 0x02183dac
 	.align 2, 0
 	arm_func_end func_ov40_02183dac
 _02183ddc: .word 0x020d88ae
-_02183de0: .word func_ov00_0207c074 + 1
+_02183de0: .word func_ov00_0207c074
 
 	.global func_ov40_02183de4
 	arm_func_start func_ov40_02183de4

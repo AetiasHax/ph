@@ -3979,7 +3979,7 @@ _020b1b34:
 	.align 2, 0
 	arm_func_end func_ov00_020b1a4c
 _020b1b48: .word data_027e0e60
-_020b1b4c: .word func_ov00_020b1940
+_020b1b4c: .word func_ov00_020b1940 - 1
 _020b1b50: .word data_ov00_020dc704
 
 	.global func_ov00_020b1b54
@@ -6921,7 +6921,7 @@ func_ov00_020b41a0: ; 0x020b41a0
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020b41a0
-_020b41b4: .word func_ov00_020b3ffc
+_020b41b4: .word func_ov00_020b3ffc - 1
 _020b41b8: .word data_027e0468
 _020b41bc: .word data_027e0438
 _020b41c0: .word data_027e045c

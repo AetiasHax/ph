@@ -6639,7 +6639,7 @@ _020a57fc: .word data_ov00_020dc354
 _020a5800: .word data_02057878
 _020a5804: .word func_ov00_0209bbc0
 _020a5808: .word data_0205785c
-_020a580c: .word func_0203010c + 1
+_020a580c: .word func_0203010c
 _020a5810: .word data_ov00_020dc2c4
 _020a5814: .word data_ov00_020dc324
 _020a5818: .word data_ov00_020dc2f4
@@ -6773,7 +6773,7 @@ _020a59a4:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a58ac
-_020a59b4: .word func_0203010c + 1
+_020a59b4: .word func_0203010c
 
 	.global func_ov00_020a59b8
 	arm_func_start func_ov00_020a59b8

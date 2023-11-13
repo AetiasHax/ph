@@ -37,7 +37,7 @@ MW_LICENSE := $(TOOLS_DIR)/mwccarm/license.dat
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
 CC_FLAGS  := -O2 -enum int -i include -nolink -d $(REGION)
-LD_FLAGS  := -proc arm946e -nostdlib -nointerworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
+LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
 .PHONY: all
 all: tools rom

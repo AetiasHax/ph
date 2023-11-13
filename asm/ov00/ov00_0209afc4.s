@@ -574,7 +574,7 @@ _0209b6ac:
 	.align 2, 0
 	arm_func_end func_ov00_0209b5a4
 _0209b6ec: .word data_ov00_020db058
-_0209b6f0: .word func_0203010c + 1
+_0209b6f0: .word func_0203010c
 
 	.global func_ov00_0209b6f4
 	arm_func_start func_ov00_0209b6f4
@@ -930,7 +930,7 @@ _0209bb9c:
 _0209bba8: .word data_027e0ce0
 _0209bbac: .word data_02057878
 _0209bbb0: .word data_0205785c
-_0209bbb4: .word func_0203010c + 1
+_0209bbb4: .word func_0203010c
 _0209bbb8: .word func_ov00_0209bbc0
 _0209bbbc: .word data_ov00_020db058
 

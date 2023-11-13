@@ -119114,7 +119114,7 @@ _02184fac:
 _02184fc4: .word data_027e0ce0
 _02184fc8: .word data_02057878
 _02184fcc: .word data_0205785c
-_02184fd0: .word func_0203010c + 1
+_02184fd0: .word func_0203010c
 _02184fd4: .word func_ov15_02184fdc
 _02184fd8: .word data_ov15_0218726c
 
@@ -119178,7 +119178,7 @@ _02185084:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02185004
-_02185090: .word func_0203010c + 1
+_02185090: .word func_0203010c
 
 	.global func_ov15_02185094
 	arm_func_start func_ov15_02185094
@@ -125830,7 +125830,7 @@ _02187e90: .word data_ov15_0218f55c
 _02187e94: .word data_ov15_0218b8fc
 _02187e98: .word data_02057840
 _02187e9c: .word data_ov15_0218f56c
-_02187ea0: .word func_0203010c + 1
+_02187ea0: .word func_0203010c
 _02187ea4: .word data_ov15_0218f560
 _02187ea8: .word data_ov15_0218b90c
 _02187eac: .word data_ov15_0218f588
@@ -125838,7 +125838,7 @@ _02187eb0: .word data_ov15_0218f57c
 _02187eb4: .word data_ov15_0218b91c
 _02187eb8: .word data_0205785c
 _02187ebc: .word data_ov15_0218f5a4
-_02187ec0: .word func_0203005c + 1
+_02187ec0: .word func_0203005c
 _02187ec4: .word data_ov15_0218f598
 _02187ec8: .word data_ov15_0218b92c
 _02187ecc: .word data_ov15_0218f5c4
@@ -126638,13 +126638,13 @@ _02188848: .word func_ov15_0216be78
 _0218884c: .word func_0203e7b4
 _02188850: .word data_ov15_0218f9b8
 _02188854: .word data_ov15_0218f9e4
-_02188858: .word func_ov00_020a95a4 + 1
+_02188858: .word func_ov00_020a95a4
 _0218885c: .word data_ov15_0218f9d8
 _02188860: .word data_ov15_0218fa4c
 _02188864: .word data_ov15_0218fa70
 _02188868: .word data_ov15_0218d6fc
 _0218886c: .word data_ov15_0218f9b8
-_02188870: .word func_ov00_020a9b6c + 1
+_02188870: .word func_ov00_020a9b6c
 _02188874: .word data_ov15_0218fa40
 
 	.global func_ov15_02188878

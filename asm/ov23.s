@@ -4081,7 +4081,7 @@ func_ov23_02170b7c: ; 0x02170b7c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov23_02170b7c
-_02170b84: .word func_ov04_0210b640 + 1
+_02170b84: .word func_ov04_0210b640
 
 	.global func_ov23_02170b88
 	arm_func_start func_ov23_02170b88

@@ -6195,7 +6195,7 @@ _0209afa4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
 	arm_func_end func_ov00_0209af20
-_0209afc0: .word func_0203010c + 1
+_0209afc0: .word func_0203010c
 
     .data
 	.global data_ov00_020e3080

@@ -7875,7 +7875,7 @@ func_ov00_02082d74: ; 0x02082d74
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_02082d74
-_02082d80: .word func_ov00_02078bc4 + 1
+_02082d80: .word func_ov00_02078bc4
 
 	.global func_ov00_02082d84
 	arm_func_start func_ov00_02082d84

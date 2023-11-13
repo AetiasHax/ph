@@ -202,7 +202,7 @@ func_ov00_020774c4: ; 0x020774c4
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_020774c4
-_020774c8: .word func_ov00_02077490 + 1
+_020774c8: .word func_ov00_02077490
 
     .global func_ov00_020774cc
     thumb_func_start func_ov00_020774cc
@@ -309,7 +309,7 @@ func_ov00_02077568: ; 0x02077568
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_02077568
-_02077574: .word func_ov00_02077578 + 1
+_02077574: .word func_ov00_02077578
 
     .global func_ov00_02077578
     thumb_func_start func_ov00_02077578
@@ -637,7 +637,7 @@ func_ov00_020777c4: ; 0x020777c4
     bx r3
     nop
     thumb_func_end func_ov00_020777c4
-_020777cc: .word func_ov00_020777b0 + 1
+_020777cc: .word func_ov00_020777b0
 
     .global func_ov00_020777d0
     thumb_func_start func_ov00_020777d0
@@ -661,7 +661,7 @@ func_ov00_020777e4: ; 0x020777e4
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_020777e4
-_020777e8: .word func_ov00_020777d0 + 1
+_020777e8: .word func_ov00_020777d0
 
     .global func_ov00_020777ec
     thumb_func_start func_ov00_020777ec
@@ -670,7 +670,7 @@ func_ov00_020777ec: ; 0x020777ec
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_020777ec
-_020777f0: .word func_ov00_02077694 + 1
+_020777f0: .word func_ov00_02077694
 
     .global func_ov00_020777f4
     thumb_func_start func_ov00_020777f4
@@ -808,7 +808,7 @@ func_ov00_020778d8: ; 0x020778d8
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_020778d8
-_020778dc: .word func_ov00_020778e0 + 1
+_020778dc: .word func_ov00_020778e0
 
     .global func_ov00_020778e0
     thumb_func_start func_ov00_020778e0
@@ -831,7 +831,7 @@ func_ov00_020778f0: ; 0x020778f0
     bx r3
     .align 2, 0
     thumb_func_end func_ov00_020778f0
-_020778f4: .word func_ov00_020778f8 + 1
+_020778f4: .word func_ov00_020778f8
 
     .global func_ov00_020778f8
     thumb_func_start func_ov00_020778f8
@@ -1021,7 +1021,7 @@ func_ov00_02077a30: ; 0x02077a30
     bx r3
     nop
     thumb_func_end func_ov00_02077a30
-_02077a3c: .word func_ov00_02077634 + 1
+_02077a3c: .word func_ov00_02077634
 
     .global func_ov00_02077a40
     thumb_func_start func_ov00_02077a40
@@ -2053,7 +2053,7 @@ _020781ac:
     pop {r3, r4, r5, r6, r7, pc}
     .align 2, 0
     thumb_func_end func_ov00_02078164
-_020781b8: .word func_ov00_02078278 + 1
+_020781b8: .word func_ov00_02078278
 
     .global func_ov00_020781bc
     thumb_func_start func_ov00_020781bc
@@ -2092,7 +2092,7 @@ _020781fe:
     pop {r3, r4, r5, r6, r7, pc}
     .align 2, 0
     thumb_func_end func_ov00_020781bc
-_02078200: .word func_ov00_02078278 + 1
+_02078200: .word func_ov00_02078278
 
     .global func_ov00_02078204
     thumb_func_start func_ov00_02078204
@@ -2158,7 +2158,7 @@ _0207826e:
     pop {r4, r5, r6, pc}
     nop
     thumb_func_end func_ov00_02078234
-_02078274: .word func_ov00_02078278 + 1
+_02078274: .word func_ov00_02078278
 
     .global func_ov00_02078278
     thumb_func_start func_ov00_02078278

@@ -9949,7 +9949,7 @@ func_ov12_0211adc8: ; 0x0211adc8
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov12_0211adc8
-_0211add0: .word func_ov04_0210b640 + 1
+_0211add0: .word func_ov04_0210b640
 
 	.global func_ov12_0211add4
 	arm_func_start func_ov12_0211add4

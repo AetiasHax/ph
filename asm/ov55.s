@@ -853,7 +853,7 @@ func_ov55_021997ec: ; 0x021997ec
 	.align 2, 0
 	arm_func_end func_ov55_021997ec
 _02199810: .word data_ov55_021998ac
-_02199814: .word func_ov00_020a95a4 + 1
+_02199814: .word func_ov00_020a95a4
 _02199818: .word data_ov55_021998a0
 
 	.section .sinit, 4, 1, 4

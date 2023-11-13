@@ -1313,7 +1313,7 @@ func_ov00_02079cd8: ; 0x02079cd8
 	bx r3
 	nop
 	thumb_func_end func_ov00_02079cd8
-_02079ce0: .word func_ov00_02079c88 + 1
+_02079ce0: .word func_ov00_02079c88
 
 	.global func_ov00_02079ce4
 	thumb_func_start func_ov00_02079ce4
@@ -1324,7 +1324,7 @@ func_ov00_02079ce4: ; 0x02079ce4
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov00_02079ce4
-_02079cec: .word func_ov00_02079c88 + 1
+_02079cec: .word func_ov00_02079c88
 
 	.global func_ov00_02079cf0
 	thumb_func_start func_ov00_02079cf0

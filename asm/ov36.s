@@ -1367,7 +1367,7 @@ func_ov36_0217ccd8: ; 0x0217ccd8
 	arm_func_end func_ov36_0217ccd8
 _0217cf94: .word data_ov36_02186d18
 _0217cf98: .word data_ov36_02186dec
-_0217cf9c: .word func_ov00_020a9b4c + 1
+_0217cf9c: .word func_ov00_020a9b4c
 _0217cfa0: .word func_ov36_0217d01c
 _0217cfa4: .word data_ov36_02186e00
 _0217cfa8: .word func_ov36_0217cfec
@@ -1513,7 +1513,7 @@ _0217d154: .word data_ov36_02186d18
 _0217d158: .word data_027e0f6c
 _0217d15c: .word func_ov00_020b7d74
 _0217d160: .word func_ov36_0217cfec
-_0217d164: .word func_ov00_020a9b4c + 1
+_0217d164: .word func_ov00_020a9b4c
 
 	.global func_ov36_0217d168
 	arm_func_start func_ov36_0217d168
@@ -1594,7 +1594,7 @@ _0217d280: .word data_ov36_02186d18
 _0217d284: .word data_027e0f6c
 _0217d288: .word func_ov00_020b7d74
 _0217d28c: .word func_ov36_0217cfec
-_0217d290: .word func_ov00_020a9b4c + 1
+_0217d290: .word func_ov00_020a9b4c
 
 	.global func_ov36_0217d294
 	arm_func_start func_ov36_0217d294
