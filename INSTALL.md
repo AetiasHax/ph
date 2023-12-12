@@ -8,7 +8,9 @@ Contents:
 
 ## Prerequisites
 
-1. Install Python 3.11 or higher
+1. Install the following:
+    - Python 3.11+ and `pip`
+    - GCC 9+
 2. Install the Python dependencies:
 ```shell
 python -m pip install -r tools/requirements.txt
