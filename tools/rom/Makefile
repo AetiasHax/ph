@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -g
+CFLAGS := -g -Wall
 
 ifneq ($(DEBUG),1)
 	CFLAGS += -O2 -DNDEBUG
@@ -11,6 +11,7 @@ ifeq ($(OS),Windows_NT)
 else
 	EXTRACTFILE := extractrom
 	BUILDFILE := buildrom
+	CFLAGS += -fshort-wchar
 endif
 
 .PHONY: all clean

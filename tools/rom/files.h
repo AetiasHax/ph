@@ -1,6 +1,8 @@
 #ifndef __FILES_H
 #define __FILES_H
 
+#include <ctype.h>
+
 #include "util.h"
 #include "rom.h"
 
@@ -30,14 +32,17 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
     FindClose(hFind);
 #elif __linux__
     DIR *dir = opendir(".");
-    struct dirent entry;
+    struct dirent *entry;
     while ((entry = readdir(dir)) != NULL) {
         const char *name = entry->d_name;
+        if (strcmp(name, ".") == 0) continue;
+        if (strcmp(name, "..") == 0) continue;
         bool isDir = entry->d_type == DT_DIR;
         if (!callback(name, isDir, userData)) return false;
     }
     closedir(dir);
 #endif
+    return true;
 }
 
 bool _GrowFileTreeChildren(FileTree *pTree, size_t minChildren) {
@@ -176,9 +181,6 @@ int CompareFileTreeAscii(const void *a, const void *b) {
     size_t minSize = (lenA < lenB) ? lenA : lenB;
     
     // ASCII order
-    if (strncmp(treeA->entry->name, "Color0.NCLR", 11) == 0 || strncmp(treeB->entry->name, "Color0.NCLR", 11) == 0) {
-        printf("");
-    }
     int cmp = strncmp(treeA->entry->name, treeB->entry->name, minSize);
     if (cmp != 0) return cmp;
     

@@ -1,4 +1,5 @@
 #include <assert.h>
+#include <stddef.h>
 #include <stdio.h>
 #include <string.h>
 
@@ -7,7 +8,7 @@
 #include "util.h"
 #include "files.h"
 
-#define VERSION "1.0"
+#define VERSION "1.0.1"
 
 #define BUFFER_SIZE 1024 * 1024
 uint8_t *readBuffer = NULL;
@@ -213,7 +214,7 @@ bool Align(size_t alignment, FILE *fpRom, size_t *pAddress) {
     size_t address = ftell(fpRom);
     size_t nextAddr = (address + mask) & ~mask;
     while (address < nextAddr) {
-        if (fputc(0xff, fpRom) == -1) FATAL("Failed to pad output ROM at address 0x%x\n", address);
+        if (fputc(0xff, fpRom) == -1) FATAL("Failed to pad output ROM at address 0x%lx\n", address);
         address += 1;
     }
     *pAddress = address;
@@ -236,7 +237,7 @@ bool WriteArm9OverlayTable(
     fseek(fp, 0, SEEK_END);
     size_t tableSize = ftell(fp);
     if (tableSize % sizeof(OverlayEntry) != 0) {
-        FATAL("ARM9 overlay table has an invalid size (entries must be %d bytes long)\n", sizeof(OverlayEntry));
+        FATAL("ARM9 overlay table has an invalid size (entries must be %ld bytes long)\n", sizeof(OverlayEntry));
     }
     size_t numOverlays = tableSize / sizeof(OverlayEntry);
     fseek(fp, 0, SEEK_SET);
@@ -251,7 +252,7 @@ bool WriteArm9OverlayTable(
     fseek(fp, 0, SEEK_END);
     size_t dataSize = ftell(fp);
     if (dataSize != numOverlays * sizeof(OverlayData)) {
-        FATAL("ARM9 overlay data file has an invalid size (expected %d overlays with %d bytes each)\n", numOverlays, sizeof(OverlayData));
+        FATAL("ARM9 overlay data file has an invalid size (expected %ld overlays with %ld bytes each)\n", numOverlays, sizeof(OverlayData));
     }
     fseek(fp, 0, SEEK_SET);
 
@@ -287,7 +288,7 @@ bool WriteArm9OverlayFiles(
     if (chdir(OVERLAYS_SUBDIR) != 0) FATAL("Failed to enter overlays directory '" OVERLAYS_SUBDIR "'\n");
 
     for (size_t ovNum = 0; ovNum < numOverlays; ++ovNum) {
-        sprintf(fileName, "ov%02d.lz", ovNum);
+        sprintf(fileName, "ov%02ld.lz", ovNum);
         if (!Align(512, fpRom, &address)) return false;
         size_t startOffset = address;
         uint32_t fileSize = 0;
@@ -295,7 +296,7 @@ bool WriteArm9OverlayFiles(
         table[ovNum].compressedSize = fileSize;
         table[ovNum].isCompressed = true;
         uint32_t fileId = data[ovNum].fileId;
-        if (fileId >= MAX_OVERLAYS) FATAL("Overlay %d's file ID (%d) exceeds the maximum %d\n", ovNum, fileId, MAX_OVERLAYS);
+        if (fileId >= MAX_OVERLAYS) FATAL("Overlay %ld's file ID (%d) exceeds the maximum %d\n", ovNum, fileId, MAX_OVERLAYS);
         fatEntries[fileId].startOffset = startOffset;
         fatEntries[fileId].endOffset = address;
     }
@@ -379,7 +380,7 @@ bool GrowFntSubtable(FntContext *pContext, size_t growSize) {
     }
 
     uint8_t *newTable = realloc(ctx.subtable, ctx.subtableMax);
-    if (newTable == NULL) FATAL("Failed to reallocate FNT subtable to %d bytes\n", ctx.subtableMax);
+    if (newTable == NULL) FATAL("Failed to reallocate FNT subtable to %ld bytes\n", ctx.subtableMax);
     ctx.subtable = newTable;
 
     memcpy(pContext, &ctx, sizeof(ctx));
@@ -477,7 +478,6 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
     ctx.table[0].firstFile = firstFileId;
     ctx.table[0].parentId = 0; // will be set to number of directories later
 
-    size_t tableStart = address;
     if (!WriteFntSubtable(pRoot, &ctx)) return false;
     ctx.table[0].parentId = ctx.tableSize;
 
@@ -500,7 +500,6 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
 
 bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
     size_t address = *pAddress;
-    size_t fatStart = address;
 
     FatEntry blank;
     blank.startOffset = 0;
@@ -659,6 +658,7 @@ bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t nu
     fseek(fpRom, fatStart, SEEK_SET);
     if (fwrite(entries, sizeof(*entries), numFiles, fpRom) != numFiles) FATAL("Failed to rewrite FAT table\n");
     fseek(fpRom, 0, SEEK_END);
+    return true;
 }
 
 typedef struct {

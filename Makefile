@@ -7,6 +7,12 @@ else
 	$(error Unknown region '$(REGION)')
 endif
 
+ifeq ($(OS),Windows_NT)
+	WINE :=
+else
+	WINE := wine
+endif
+
 ROOT       := $(shell pwd)
 BUILD_DIR  := $(ROOT)/build
 TARGET_DIR := $(BUILD_DIR)/$(REGION_NAME)
@@ -30,9 +36,9 @@ BASE_ROM := baserom_$(REGION_NAME).nds
 CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm
-MW_CC      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm
-MW_LD      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm
+MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
+MW_CC      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
+MW_LD      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
 MW_LICENSE := $(TOOLS_DIR)/mwccarm/license.dat
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
@@ -79,15 +85,15 @@ lcf: setup $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
 
 $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(MW_CC) $(CC_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $< -o $@
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS)
-	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
+	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
 
 .PHONY: compress
 compress: $(OV_LZS)

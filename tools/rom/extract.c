@@ -8,7 +8,7 @@
 #include "ph.h"
 #include "util.h"
 
-#define VERSION "1.0"
+#define VERSION "1.0.1"
 #define INDENT 4
 
 // Command line flags for debugging purposes
@@ -20,7 +20,7 @@ void Indent(size_t depth) {
     memset(spaces, ' ', INDENT);
     spaces[INDENT] = '\0';
     for (size_t i = 0; i < depth; ++i) {
-        printf(spaces);
+        puts(spaces);
     }
 }
 
@@ -30,7 +30,7 @@ bool MakeDir(const char *dir) {
         if (mkdir(dir, 0777) != 0) FATAL("Failed to make directory '%s'\n", dir);
         return true;
     }
-    if (!S_ISDIR(dirStat.st_mode)) FATAL("Could not make directory '%s' due to a file with the same name\n");
+    if (!S_ISDIR(dirStat.st_mode)) FATAL("Could not make directory '%s' due to a file with the same name\n", dir);
     return true;
 }
 
@@ -119,7 +119,7 @@ bool GrowFilePathList(ExtractContext *pContext, size_t minEntries) {
     }
 
     char **newFilePathList = realloc(ctx.filePathList, ctx.maxFilePaths * sizeof(*ctx.filePathList));
-    if (newFilePathList == NULL) FATAL("Failed to reallocate file path list to %d entries\n", ctx.maxFilePaths);
+    if (newFilePathList == NULL) FATAL("Failed to reallocate file path list to %ld entries\n", ctx.maxFilePaths);
     ctx.filePathList = newFilePathList;
 
     // Fill new entries with 0
@@ -245,7 +245,6 @@ bool PrintFileAllocOrder(ExtractContext *ctx, const uint8_t *fatAddr) {
     for (size_t i = 0; i < numFiles; ++i) {
         uint32_t fileId = fatInfo[i].fileId;
         if (ctx->filePathList[fileId] == NULL) continue;
-        size_t len = strlen(ctx->filePathList[fileId]);
         printf("%s\n", ctx->filePathList[fileId]);
     }
 
@@ -275,6 +274,7 @@ bool ExtractAssets(const uint8_t *rom, const uint8_t *fatStart, const uint8_t *f
         }
         free(ctx.filePathList);
     }
+    return true;
 }
 
 bool ExtractOverlayData(const uint8_t *rom, const Header *header) {

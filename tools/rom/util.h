@@ -4,6 +4,7 @@
 #include <stdbool.h>
 #include <stdlib.h>
 #include <stdio.h>
+#include <string.h>
 
 #define FATAL(...) do { fprintf(stderr, __VA_ARGS__); return false; } while (0)
 
@@ -20,9 +21,11 @@
 #	include <sys/stat.h>
 #	define mkdir(path, mode) mkdir(path)
 #elif __linux__
+#   include <errno.h>
 #	include <sys/stat.h>
 #   include <iconv.h>
 #	include <dirent.h>
+#   include <unistd.h>
 #else
 #	error "Target platform not supported"
 #endif
@@ -34,10 +37,12 @@ bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *
     *pResultSize = resultSize;
     return true;
 #elif __linux__
-    iconv_t convDesc = iconv_open("UTF-16", "UTF-8");
-    if (convDesc == -1) FATAL("Failed to get conversion description to UTF-8\n");
+    iconv_t convDesc = iconv_open("UTF-8", "UTF-16");
+    if (convDesc == (iconv_t) -1) FATAL("Failed to get conversion description to UTF-8\n");
     size_t remainingBytes = outSize;
-    if (iconv(convDesc, &in, &inSize, &out, &remainingBytes) == -1) FATAL("Failed to convert to UTF-8\n");
+    if (iconv(convDesc, (char**) &in, &inSize, &out, &remainingBytes) == -1) {
+        FATAL("Failed to convert to UTF-8: %s (%d)\n", strerror(errno), errno);
+    }
     if (inSize > 0) FATAL("Some characters were not converted to UTF-8\n");
     *pResultSize = outSize - remainingBytes;
     return true;
@@ -50,11 +55,20 @@ bool Utf8ToWchar(char *in, size_t inSize, wchar_t *out, size_t outSize) {
     if (resultSize == 0) FATAL("Failed to convert from UTF-8: %d\n", GetLastError());
     return true;
 #elif __linux__
-    iconv_t convDesc = iconv_open("UTF-8", "UTF-16");
-    if (convDesc == -1) FATAL("Failed to get conversion description from UTF-8\n");
+    iconv_t convDesc = iconv_open("UTF-16", "UTF-8");
+    if (convDesc == (iconv_t) -1) FATAL("Failed to get conversion description from UTF-8\n");
     size_t remainingBytes = outSize;
-    if (iconv(convDesc, &in, &inSize, &out, &remainingBytes) == -1) FATAL("Failed to convert from UTF-8\n");
+    wchar_t *result = out;
+    if (iconv(convDesc, &in, &inSize, (char**) &out, &remainingBytes) == -1) {
+        FATAL("Failed to convert from UTF-8: %s (%d)\n", strerror(errno), errno);
+    }
     if (inSize > 0) FATAL("Some characters were not converted from UTF-8\n");
+    // Remove 0xFEFF header
+    if (*result == 0xfeff) {
+        size_t numChars = (outSize - remainingBytes) / sizeof(wchar_t) - 1;
+        memmove(result, result + 1, numChars * sizeof(wchar_t));
+        result[numChars] = '\0';
+    }
     return true;
 #endif
 }
