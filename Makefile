@@ -45,6 +45,10 @@ ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
 CC_FLAGS  := -O2 -enum int -i include -nolink -d $(REGION)
 LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
+ifeq ($(NONMATCHING),1)
+	CC_FLAGS += -DNONMATCHING
+endif
+
 .PHONY: all
 all: tools rom
 	sha1sum $(NDS_FILE)

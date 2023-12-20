@@ -5,6 +5,7 @@ Contents:
 - [Prerequisites](#prerequisites)
 - [Build the ROM](#build-the-rom)
     - [Matching the base ROM](#matching-the-base-rom)
+    - [Building with non-matching code](#building-with-non-matching-code)
 
 ## Prerequisites
 
@@ -55,3 +56,15 @@ ARM7 BIOS in the root directory of this repository, and verify that your dumped 
 | `arm7_bios.bin` | `6ee830c7f552c5bf194c20a2c13d5bb44bdb5c03` |
 
 Now, `make` should automatically detect the ARM7 BIOS and will build a matching ROM.
+
+## Building with non-matching code
+Due to challenges with decompilation, some functions are not decompiled to 100% match the original assembly. Such functions are
+marked with `NONMATCH` before the function declaration.
+
+While non-matching functions do not contribute to getting a matching ROM, they can provide useful information (e.g. updates to
+structs/classes) or encourage collaboration to match the function.
+
+By default, non-matching functions are compiled with **inline assembly** so that the built ROM can still match the base ROM.
+However, by running `make NONMATCHING=1`, non-matching functions are compiled as **C++** instead of inline assembly.
+
+As a result, the built ROM will not match and is not guaranteed to function identically to the base ROM.
