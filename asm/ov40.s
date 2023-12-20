@@ -11101,7 +11101,7 @@ func_ov40_021847ec: ; 0x021847ec
 	ldr r7, [r0, #0x818]
 	mov r0, #0xc000
 	mov r1, r7
-	bl func_02002e20
+	bl FastDivide
 	ldr r2, _021848e4 ; =data_027e0d44
 	ldr ip, _021848e8 ; =data_ov40_021881f8
 	mov r3, r0
@@ -11131,7 +11131,7 @@ _0218486c:
 	ldr r7, [r0, #0x820]
 	mov r0, #0x200
 	mov r1, r7
-	bl func_02002e20
+	bl FastDivide
 	ldr r2, _021848e4 ; =data_027e0d44
 	ldr ip, _021848e8 ; =data_ov40_021881f8
 	mov r3, r0

@@ -6143,7 +6143,7 @@ _020f2fa0:
 	str r0, [sp, #4]
 	add r0, r0, r1
 	sub r0, r0, #1
-	blx func_02002e20
+	blx FastDivide
 	lsl r1, r5, #1
 	lsl r0, r0, #0x10
 	ldrh r1, [r7, r1]
@@ -8790,7 +8790,7 @@ _020f4314:
 	mov r0, #7
 	mul r0, r1
 	mov r1, #0x14
-	blx func_02002e20
+	blx FastDivide
 	add r0, r1, #0
 	add sp, #8
 	pop {r3, pc}

@@ -8192,7 +8192,7 @@ _02173cfa:
 	ldr r5, [r0]
 	lsl r1, r1, #4
 	ldr r0, [r5, #0xc]
-	blx func_02002e20
+	blx FastDivide
 	cmp r0, #0xf
 	bhs _02173d3a
 	mov r3, #0
@@ -8201,7 +8201,7 @@ _02173d3a:
 	mov r1, #0xe1
 	ldr r0, [r5, #0xc]
 	lsl r1, r1, #4
-	blx func_02002e20
+	blx FastDivide
 	cmp r0, #0x14
 	bhs _02173d4c
 	mov r3, #1
@@ -8663,12 +8663,12 @@ func_ov26_02174078: ; 0x02174078
 	mov r1, #0xe1
 	ldr r0, [r0]
 	lsl r1, r1, #4
-	blx func_02002e20
+	blx FastDivide
 	mov r1, #0xa
 	add r6, r0, #0
-	blx func_02002e20
+	blx FastDivide
 	mov r1, #0xa
-	blx func_02002e20
+	blx FastDivide
 	str r4, [sp]
 	add r0, sp, #8
 	str r0, [sp, #4]
@@ -8679,7 +8679,7 @@ func_ov26_02174078: ; 0x02174078
 	blx func_020349cc
 	add r0, r6, #0
 	mov r1, #0xa
-	blx func_02002e20
+	blx FastDivide
 	str r4, [sp]
 	add r0, sp, #8
 	str r0, [sp, #4]
@@ -8692,15 +8692,15 @@ func_ov26_02174078: ; 0x02174078
 	add r0, #0xa4
 	ldr r0, [r0]
 	mov r1, #0x3c
-	blx func_02002e20
+	blx FastDivide
 	mov r1, #0x3c
-	blx func_02002e20
+	blx FastDivide
 	add r6, r1, #0
 	add r0, r6, #0
 	mov r1, #0xa
-	blx func_02002e20
+	blx FastDivide
 	mov r1, #0xa
-	blx func_02002e20
+	blx FastDivide
 	str r4, [sp]
 	add r0, sp, #8
 	str r0, [sp, #4]
@@ -8711,7 +8711,7 @@ func_ov26_02174078: ; 0x02174078
 	blx func_020349cc
 	add r0, r6, #0
 	mov r1, #0xa
-	blx func_02002e20
+	blx FastDivide
 	str r4, [sp]
 	add r0, sp, #8
 	str r0, [sp, #4]

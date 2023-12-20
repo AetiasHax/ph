@@ -41179,7 +41179,7 @@ _0216003c:
 	add r0, r0, #0x2000
 	ldr r6, [r0, #0x284]
 	mov r0, r6
-	bl func_02002e20
+	bl FastDivide
 	cmp r1, #0
 	bne _021600a8
 	ldr r4, _021601e8 ; =0x00000728
@@ -42809,7 +42809,7 @@ _02161568:
 	and r0, r5, r0
 	bls _02161588
 	mov r1, sb
-	bl func_02002e20
+	bl FastDivide
 	mov r0, r1
 _02161588:
 	cmp r0, sb
@@ -44263,7 +44263,7 @@ _02162708:
 	bne _021626f4
 _02162718:
 	mov r0, ip
-	bl func_02002e20
+	bl FastDivide
 	mov r0, r1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -45594,7 +45594,7 @@ _021636d8:
 	bne _021636c4
 _021636e8:
 	mov r0, ip
-	bl func_02002e20
+	bl FastDivide
 	mov r0, r1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -67857,7 +67857,7 @@ func_ov61_02176108: ; 0x02176108
 	ldrh r0, [r2, #4]
 	ldr r2, [r2]
 	mul r0, r2, r0
-	bl func_02002e20
+	bl FastDivide
 	mov r0, r1
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov61_02176108

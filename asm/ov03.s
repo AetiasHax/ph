@@ -701,7 +701,7 @@ _020ef1f8:
 	ldr r1, [sp, #0x20]
 	lsl r0, r0, #0x10
 	add r1, r1, #1
-	blx func_02002e20
+	blx FastDivide
 	str r0, [sp, #0x40]
 	add r0, r4, #0
 	str r0, [sp, #0x2c]

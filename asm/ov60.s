@@ -9018,7 +9018,7 @@ func_ov60_02144fd0: ; 0x02144fd0
 	bl func_ov60_0214154c
 	ldr r1, _02145058 ; =data_ov60_021480a6
 	ldrb r1, [r1]
-	bl func_02002e20
+	bl FastDivide
 	ldr r0, _0214505c ; =data_ov60_021480a8
 	and r2, r1, #0xff
 	ldrh r3, [r0]
@@ -11030,7 +11030,7 @@ _02146940:
 	sub r1, r0, #0xe
 	add r0, r2, r1
 	sub r0, r0, #1
-	bl func_02002e20
+	bl FastDivide
 	add r0, r0, #0x1f
 	mov r0, r0, lsr #0x2
 	mov r5, r0, lsl #0x4

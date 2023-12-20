@@ -5012,7 +5012,7 @@ func_ov00_0209fe18: ; 0x0209fe18
 	str r1, [sp, #4]
 	str lr, [sp, #8]
 	str ip, [sp, #0xc]
-	bl func_02002e20
+	bl FastDivide
 	cmp r0, #0
 	ble _0209feb0
 	ldr r1, [sp, #0x34]

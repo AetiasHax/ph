@@ -218,7 +218,7 @@
 .extern func_01ff9b88
 .extern func_01ff98e0
 .extern func_02002c14
-.extern func_02002e20
+.extern FastDivide
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectdlEPv
 .extern func_01ff98f0

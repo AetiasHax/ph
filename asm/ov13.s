@@ -2635,7 +2635,7 @@ _02114db8:
 	ldr r0, [r0, #0x14]
 	add r0, r0, r1
 	sub r0, r0, #1
-	bl func_02002e20
+	bl FastDivide
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
 	str r0, [r4, #8]

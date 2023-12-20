@@ -3814,7 +3814,7 @@ _021149a4:
 	ldr r1, [sp]
 	add r0, r7, r0
 	ldr r1, [r1, #0xc]
-	blx func_02002e20
+	blx FastDivide
 	ldrb r0, [r4, r1]
 	add r6, r6, #1
 	strb r7, [r4, r1]
@@ -3872,14 +3872,14 @@ func_ov11_02114a00: ; 0x02114a00
 	ldr r0, [r5]
 	ldr r1, [sp]
 	add r0, r0, #1
-	blx func_02002e20
+	blx FastDivide
 	lsl r0, r1, #0x18
 	lsr r7, r0, #0x18
 	ldrb r6, [r4, r7]
 	ldr r0, [r5, #4]
 	ldr r1, [sp]
 	add r0, r6, r0
-	blx func_02002e20
+	blx FastDivide
 	lsl r0, r1, #0x18
 	lsr r1, r0, #0x18
 	ldrb r0, [r4, r1]
@@ -3889,7 +3889,7 @@ func_ov11_02114a00: ; 0x02114a00
 	strb r0, [r4, r7]
 	ldr r1, [r5, #0xc]
 	add r0, r6, r0
-	blx func_02002e20
+	blx FastDivide
 	ldrb r0, [r4, r1]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -47383,7 +47383,7 @@ _0212928e:
 	ldr r4, [r1, r0]
 	mov r1, #0x1e
 	add r0, r4, #0
-	blx func_02002e20
+	blx FastDivide
 	cmp r1, #1
 	bne _021292f8
 	cmp r4, #0x37
