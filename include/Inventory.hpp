@@ -212,6 +212,7 @@ public:
     ~Inventory();
 
     void ClearPrevEquippedItem();
+    void Save(SaveInventory *save);
 };
 
 extern Inventory *gInventory;

@@ -189,7 +189,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern func_ov00_020b3ea8
 .extern func_020078d8
-.extern func_ov00_020ad0e4
+.extern _ZN9Inventory4SaveEP13SaveInventory
 .extern gInventory
 .extern func_ov00_020ad8e0
 .extern gInventory

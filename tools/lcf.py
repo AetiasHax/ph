@@ -31,7 +31,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_0209bea0.s',
     'asm/ov00/ov00_020a03e4.s',
     'src/Inventory.cpp',
-    'asm/ov00/inventory.s',
+    'asm/ov00/inventory/inventory.s',
     'asm/ov00/ov00_020ae7a4.s',
     'asm/ov00/ov00_020b4940.s',
     'asm/ov00/ov00_020c36b4.s',

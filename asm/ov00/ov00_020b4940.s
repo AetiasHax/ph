@@ -4097,7 +4097,7 @@ _020b8016:
 	ldr r0, _020b8048 ; =gInventory
 	add r1, r4, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad0e4
+	bl _ZN9Inventory4SaveEP13SaveInventory
 	pop {r4, pc}
 	nop
 	thumb_func_end func_ov00_020b7ffc
