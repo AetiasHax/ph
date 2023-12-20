@@ -9,4 +9,10 @@ typedef int s32;
 typedef short s16;
 typedef char s8;
 
+typedef u8 unk8;
+typedef u16 unk16;
+typedef u32 unk32;
+
+#define CEIL_DIV(a, b) (((a) + (b) - 1) / (b))
+
 #endif

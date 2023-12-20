@@ -15,7 +15,7 @@ void Inventory::Destroy() {
 
 #pragma interworking on
 void Inventory::ClearPrevEquippedItem() {
-    this->mPrevEquippedItem = EquipItem_None;
+    this->mPrevEquippedItem = ItemFlag_None;
 }
 #pragma interworking off
 
