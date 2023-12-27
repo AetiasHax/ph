@@ -8,3 +8,9 @@ extract assets from.
 
 ## How to install
 See [INSTALL.md](INSTALL.md) for instructions on how to install the project.
+
+## Contribution
+A work in progress, but [CONTRIBUTING.md](CONTRIBUTING.md) has guidelines for how to contribute to the project.
+
+## Documentation
+See [/docs](/docs) for documentation about the game.
