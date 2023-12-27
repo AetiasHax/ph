@@ -39,11 +39,12 @@ NONMATCH void Inventory::Save(SaveInventory *save) {
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = this->mNumGems[i];
     }
-    for (s32 i = 0; i < ShipPart_COUNT; ++i) {
+    for (s32 i = 0, j = 0; i < ShipPart_COUNT; ++i, j = 0) {
         save->equippedShipParts[i] = this->mEquippedShipParts[i];
-        for (s32 j = 0; j < ShipType_COUNT; ++j) {
+        do {
             save->shipParts[i].parts[j] = this->mShipParts[i].parts[j];
-        }
+            ++j;
+        } while (j < ShipType_COUNT);
     }
     save->shipPartPricesShown = this->mShipPartPricesShown;
     for (s32 i = 0; i < Treasure_COUNT; ++i) {
