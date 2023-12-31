@@ -14958,7 +14958,7 @@ func_ov04_02107e9c: ; 0x02107e9c
 	ldr r0, _02107f2c ; =gInventory
 	ldr r1, _02107f30 ; =data_ov00_020e9e18
 	ldr r0, [r0]
-	bl func_ov00_020ad244
+	bl _ZN9Inventory4LoadEPK13SaveInventory
 _02107ef6:
 	ldr r0, _02107f34 ; =data_027e0fb8
 	ldr r0, [r0]

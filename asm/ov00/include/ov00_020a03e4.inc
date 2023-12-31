@@ -988,7 +988,7 @@
 .extern func_ov00_020b7e6c
 .extern func_ov00_020b7e6c
 .extern func_ov05_021113c4
-.extern func_ov00_020ada78
+.extern _ZN9Inventory7HasItemEj
 .extern func_ov00_02097760
 .extern func_ov00_0209779c
 .extern data_027e0e58

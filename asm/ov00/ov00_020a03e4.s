@@ -16262,7 +16262,7 @@ _020ac930:
 	ldr r0, _020ac9dc ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	bne _020ac9bc
 	ldr r0, _020ac9e0 ; =data_027e0f74

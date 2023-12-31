@@ -399,7 +399,7 @@
 .extern data_027e077c
 .extern data_02056be4
 .extern data_027e103c
-.extern func_ov00_020ada78
+.extern _ZN9Inventory7HasItemEj
 .extern func_ov14_02152220
 .extern gInventory
 .extern data_027e0618

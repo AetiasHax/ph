@@ -11391,7 +11391,7 @@ func_ov28_021768dc: ; 0x021768dc
 	ldr r0, _021769e4 ; =gInventory
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x7ad]

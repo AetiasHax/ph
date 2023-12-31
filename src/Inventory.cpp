@@ -65,4 +65,79 @@ NONMATCH void Inventory::Save(SaveInventory *save) {
     save->equippedFairy = (u8) this->mEquippedFairy;
     #endif
 }
+
+extern "C" bool _ZN9Inventory7HasItemEj();
+NONMATCH void Inventory::Load(const SaveInventory *save) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/inventory/Inventory_Load.inc"
+    #else
+    this->mItemFlags = save->itemFlags;
+    this->mNumRupees = save->numRupees;
+    this->mHourglassSandFrames = save->hourglassSeconds <= MAX_HOURGLASS_SECONDS
+        ? save->hourglassSeconds * 60
+        : MAX_HOURGLASS_SECONDS * 60;
+    for (s32 i = ItemFlag_EQUIP_START; i < ItemFlag_EQUIP_END; ++i) {
+        if (GET_FLAG(this->mItemFlags.flags, (u32) i)) {
+            (*this->mAmmo)[i] = 1;
+        }
+    }
+    (*this->mAmmo)[ItemFlag_BombBag] = save->numBombs;
+    (*this->mAmmo)[ItemFlag_BombchuBag] = save->numBombchus;
+    (*this->mAmmo)[ItemFlag_Bow] = save->numArrows;
+    for (s32 i = 0; i < NUM_POTIONS; ++i) {
+        this->mPotions[i] = save->potions[i];
+    }
+    this->mEquippedItem = save->equippedItem;
+    this->mSalvagedTreasureFlags = save->salvagedTreasureFlags;
+    for (s32 i = 0; i < Gem_COUNT; ++i) {
+        this->mNumGems[i] = save->numGems[i];
+    }
+
+    s32 i = 0; // ip (r0)
+    Inventory *this2 = this; // sp+0
+    const SaveInventory *save2 = save; // r3
+    Inventory *this3 = this; // r5
+    ShipParts (SaveInventory::*shipParts)[ShipPart_COUNT] = &SaveInventory::shipParts; // r7
+    do {
+        this2->mEquippedShipParts[0] = save->equippedShipParts[i];
+        for (s32 j = 0; j < ShipType_COUNT; ++j) {
+            u8 partCount = (((const SaveInventory*) ((u32)save2 + j))->*shipParts)[0].parts[0];
+            ((Inventory*) ((u32)this3 + j))->mShipParts[0].parts[0] = partCount;
+        }
+        save2 = (const SaveInventory*) ((u32)save2 + sizeof(save->shipParts[0]));
+        this2 = (Inventory*) ((u32)this2 + sizeof(this->mEquippedShipParts[0]));
+        ++i;
+        this3 = (Inventory*) ((u32)this3 + sizeof(this->mShipParts[0]));
+    }
+    while(i < ShipPart_COUNT);
+    
+    this->mShipPartPricesShown = save->shipPartPricesShown;
+    for (s32 i = 0; i < Treasure_COUNT; ++i) {
+        this->mTreasure[i] = save->treasure[i];
+    }
+    this->mTreasurePriceShownFlags[0] = save->treasurePriceShownFlags[0];
+    for (s32 i = 0; i < 6; ++i) {
+        this->mUnk_098[i] = save->unk_9f[i];
+        this->mUnk_09e[i] = save->unk_82[i];
+    }
+    this->mQuiverSize = save->quiverSize;
+    this->mBombBagSize = save->bombBagSize;
+    this->mBombchuBagSize = save->bombchuBagSize;
+    this->mEquippedFairy = save->equippedFairy;
+    if (this->mEquippedFairy >= FairyId_COUNT) {
+        this->mEquippedFairy = FairyId_None;
+    }
+    if (this->mEquippedItem - 9 <= 1) {
+        if (this->HasItem(ItemFlag_Boomerang)) {
+            this->mEquippedItem = ItemFlag_Boomerang;
+        } else {
+            this->mEquippedItem = ItemFlag_None;
+        }
+    } else if (this->mEquippedItem == ItemFlag_None) {
+        if (this->HasItem(ItemFlag_Boomerang)) {
+            this->mEquippedItem = ItemFlag_Boomerang;
+        }
+    }
+    #endif
+}
 #pragma thumb off

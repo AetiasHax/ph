@@ -856,7 +856,7 @@ func_ov49_02196008: ; 0x02196008
 	ldr r0, _021960f0 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0219605c
 	ldr r0, _021960f0 ; =gInventory

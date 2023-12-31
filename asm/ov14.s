@@ -26490,7 +26490,7 @@ _02134fd4:
 	blx r2
 	mov r1, r0
 	mov r0, r5
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -30499,7 +30499,7 @@ func_ov14_021383e0: ; 0x021383e0
 	ldr r0, _02138418 ; =gInventory
 	add r1, r1, #0x15
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	ldmia sp!, {r3, pc}
 _0213840c:
 	mov r1, #1
@@ -35286,7 +35286,7 @@ _0213c004:
 	ldr r0, _0213c0f4 ; =gInventory
 	mov r1, sb
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	addeq sp, sp, #0x14
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
@@ -35360,7 +35360,7 @@ func_ov14_0213c0fc: ; 0x0213c0fc
 	ldr r1, [r8, #0x18]
 	mov r6, r2
 	mov r5, r3
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0213c208
 	ldr r0, _0213c218 ; =data_027e0c38
@@ -35444,7 +35444,7 @@ func_ov14_0213c220: ; 0x0213c220
 	ldr r1, [r7, #0x18]
 	mov r5, r2
 	mov r4, r3
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0213c34c
 	ldr r1, [r7, #0x18]
@@ -40148,7 +40148,7 @@ _0213f874:
 	str r1, [r5, #0x70]
 	ldr r0, [r0]
 	mov r1, #0x20
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	bne _0213f8c0
 	ldr r4, [r5, #0x70]
@@ -42287,13 +42287,13 @@ _021412a8:
 	mov r1, #0x25
 	ldrsh fp, [r3, r5]
 	ldrsh r5, [r3, r2]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	mov r7, #0
 	ldr r1, _021415bc ; =gInventory
 	mov r6, r0
 	ldr r0, [r1]
 	mov r1, r7
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _02141308
 	cmp r6, #0
@@ -53562,7 +53562,7 @@ _02149fc8:
 	ldr r1, _0214a05c ; =data_ov14_02153f1c
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0214a040
 	ldr r0, [r4, #0x74]
@@ -53863,14 +53863,14 @@ func_ov14_0214a3dc: ; 0x0214a3dc
 	ldr r3, [r0, #0x74]
 	ldr r2, _0214a3fc ; =data_ov14_02153f1c
 	ldr r0, [r1]
-	ldr ip, _0214a400 ; =func_ov00_020ada78
+	ldr ip, _0214a400 ; =_ZN9Inventory7HasItemEj
 	ldr r1, [r2, r3, lsl #2]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov14_0214a3dc
 _0214a3f8: .word gInventory
 _0214a3fc: .word data_ov14_02153f1c
-_0214a400: .word func_ov00_020ada78
+_0214a400: .word _ZN9Inventory7HasItemEj
 
 	.global func_ov14_0214a404
 	arm_func_start func_ov14_0214a404
@@ -53894,7 +53894,7 @@ func_ov14_0214a404: ; 0x0214a404
 	mov r5, r0
 	ldr r0, [r1]
 	ldr r1, [r2, r3, lsl #2]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0214a480
 	ldr r0, _0214a4b4 ; =0x00003555
@@ -63317,7 +63317,7 @@ _021519d0:
 	bne _021519ec
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _02151a08
 _021519ec:
@@ -65920,7 +65920,7 @@ func_ov14_02153924: ; 0x02153924
 	ldr r0, _02153a3c ; =gInventory
 	mov r1, r5
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	movne r4, #1
 _02153964:

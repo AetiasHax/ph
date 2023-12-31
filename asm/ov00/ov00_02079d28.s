@@ -2910,7 +2910,7 @@ _0207b688:
 	ldr r0, _0207b818 ; =gInventory
 	mov r1, #0x20
 	ldr r0, [r0]
-	blx func_ov00_020ada78
+	blx _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0207b6cc
 	ldrb r0, [r4, #0x12]

@@ -1420,7 +1420,7 @@ func_ov26_0216e5b4: ; 0x0216e5b4
 	ldr r0, _0216e628 ; =gInventory
 	mov r1, #0x20
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0216e620
 	ldr r0, _0216e62c ; =data_027e077c
@@ -1693,7 +1693,7 @@ func_ov26_0216e8b8: ; 0x0216e8b8
 	ldr r0, _0216e9b8 ; =gInventory
 	mov r1, #0x20
 	ldr r0, [r0]
-	blx func_ov00_020ada78
+	blx _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0216e986
 	ldr r0, _0216e9b8 ; =gInventory
@@ -1785,7 +1785,7 @@ func_ov26_0216e9d0: ; 0x0216e9d0
 	mov r1, #0x20
 	ldr r0, [r0]
 	mov r5, #0
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0216ea08
 	ldrb r0, [r6, #0xc2]
@@ -4151,7 +4151,7 @@ func_ov26_02170894: ; 0x02170894
 	ldr r0, _02170934 ; =gInventory
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	bne _021708dc
 	ldr r0, _02170934 ; =gInventory
@@ -5599,7 +5599,7 @@ _02171cec:
 	ldr r1, _02171d24 ; =data_ov26_02179434
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	movne r0, #5
 	moveq r0, #0xc

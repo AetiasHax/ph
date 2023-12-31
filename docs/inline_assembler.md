@@ -18,11 +18,11 @@ dcd 0x1234
 
 This can also be written as:
 ```asm
-lda 0x1234
+ldconst 0x1234
 bx lr
 ```
 
-The built-in `lda` instruction will be replaced by an ARM load instruction and also append a pool constant to the function.
+The built-in `ldconst` instruction will be replaced by an ARM load instruction and also append a pool constant to the function.
 
 ### Data sections
 Directives such as `.section`, `.data` and `.bss` are not supported in the inline assembler. There might be a way to change

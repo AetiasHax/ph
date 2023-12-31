@@ -5,12 +5,15 @@
 #include "Player/EquipItem.hpp"
 #include "Actors/Navi/Navi.hpp"
 
+#define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
+
 typedef u32 FairyId;
 enum FairyId_ {
     FairyId_None    = -1,
     FairyId_Courage = 0,
     FairyId_Power   = 1,
     FairyId_Wisdom  = 2,
+    FairyId_COUNT   = 3,
 };
 
 enum Gem {
@@ -213,6 +216,9 @@ public:
 
     void ClearPrevEquippedItem();
     void Save(SaveInventory *save);
+    void Load(const SaveInventory *save);
+    
+    bool HasItem(ItemFlag item);
 };
 
 extern Inventory *gInventory;

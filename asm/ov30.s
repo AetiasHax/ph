@@ -6964,7 +6964,7 @@ _021813d0:
 	ldr r0, _02181804 ; =gInventory
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl func_ov00_020ada78
+	bl _ZN9Inventory7HasItemEj
 	cmp r0, #0
 	beq _0218146c
 	mov r2, #2
