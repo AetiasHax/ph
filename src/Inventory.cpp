@@ -39,13 +39,23 @@ NONMATCH void Inventory::Save(SaveInventory *save) {
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = this->mNumGems[i];
     }
-    for (s32 i = 0, j = 0; i < ShipPart_COUNT; ++i, j = 0) {
+    u8 *saveEquippedParts = save->equippedShipParts;
+    const u32 *equippedParts = this->mEquippedShipParts;
+
+    s32 i = 0;
+    SaveInventory *save2 = save;
+    Inventory *this2 = this;
+    ShipParts (Inventory::*shipParts)[ShipPart_COUNT] = &Inventory::mShipParts;
+    for (; i < ShipPart_COUNT; ++i) {
         save->equippedShipParts[i] = this->mEquippedShipParts[i];
-        do {
-            save->shipParts[i].parts[j] = this->mShipParts[i].parts[j];
-            ++j;
-        } while (j < ShipType_COUNT);
+        for (s32 j = 0; j < ShipType_COUNT; ++j) {
+            u8 shipPartCount = ((Inventory*) ((u32)this2 + j)->*shipParts)[0].parts[0];
+            ((SaveInventory*) ((u32)save2 + j))->shipParts[0].parts[0] = shipPartCount;
+        }
+        this2 = (Inventory*) ((u32)this2 + sizeof(this2->mShipParts[0]));
+        save2 = (SaveInventory*) ((u32)save2 + sizeof(save2->shipParts[0]));
     }
+
     save->shipPartPricesShown = this->mShipPartPricesShown;
     for (s32 i = 0; i < Treasure_COUNT; ++i) {
         save->treasure[i] = this->mTreasure[i];
