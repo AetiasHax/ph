@@ -19,6 +19,7 @@ private:
     /* 84 */ void *mUnk_84;
     /* 88 */ unk8 mUnk_88[0x18];
     /* a0 */ unk32 mUnk_a0;
+    /* a4 */
 
 public:
     EquipRope();

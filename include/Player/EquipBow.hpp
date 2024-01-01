@@ -5,12 +5,13 @@
 
 class EquipBow : public EquipItem {
 private:
-    /* 0 (base) */
-    /* 9 */ u8 mUnk_9;
-    /* a */ u8 mUnk_a;
-    /* b */ u8 mUnk_b;
-    /* c */ u8 mUnk_c;
-    /* d */
+    /* 00 (base) */
+    /* 09 */ unk8 mUnk_09;
+    /* 0a */ unk8 mUnk_0a;
+    /* 0b */ unk8 mUnk_0b;
+    /* 0c */ unk8 mUnk_0c;
+    /* 0d */ unk8 mUnk_0d[3];
+    /* 10 */
 
 public:
     EquipBow();

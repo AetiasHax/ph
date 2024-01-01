@@ -4,6 +4,11 @@
 #include "Player/EquipItem.hpp"
 
 class EquipScoop : public EquipItem {
+private:
+    /* 0 (base) */
+    /* 9 */ unk8 mUnk_9[3];
+    /* c */
+
 public:
     /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov54_02198d00
     /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213cf9c

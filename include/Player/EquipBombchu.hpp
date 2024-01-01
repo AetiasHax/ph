@@ -21,7 +21,8 @@ private:
     /* 46 */ u8 mUnk_46;
     /* 47 */ char mUnk_47;
     /* 48 */ bool mUnk_48;
-    /* 49 */
+    /* 49 */ unk8 mUnk_49[3];
+    /* 4c */
 
 public:
     EquipBombchu();

@@ -9,8 +9,7 @@ private:
     /* 09 */ unk8 mUnk_09[3];
     /* 0c */ unk32 mUnk_0c;
     /* 10 */ unk8 mUnk_10[0x14];
-    /* 24 */ unk32 mUnk_24;
-    /* 28 */
+    /* 24 */ 
 
 public:
     EquipBomb();

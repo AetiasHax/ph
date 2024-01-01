@@ -14,7 +14,8 @@ private:
     /* 24 */ u32 mUnk_24;
     /* 28 */ u32 mUnk_28;
     /* 2c */ u16 mUnk_2c;
-    /* 2e */
+    /* 2e */ unk8 mUnk_2e[2];
+    /* 30 */
 
 public:
     /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_213d010
