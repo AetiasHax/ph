@@ -2,8 +2,9 @@
 
 #include "types.h"
 #include "Item.hpp"
+#include "SysNew.hpp"
 
-class EquipItem {
+class EquipItem : public SysObject {
 private:
     /* 0 (vtable) */
     /* 4 */ u16 mUnk_00;
