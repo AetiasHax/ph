@@ -7,7 +7,7 @@ Below is a list of all the overlays and what we call them. Feel free to contribu
 `01` | ---             |
 `02` | ---             |
 `03` | ---             |
-`04` | ---             |
+`04` | ---             | Memory management
 `05` | ---             |
 `06` | ---             |
 `07` | ---             |
@@ -58,7 +58,7 @@ Below is a list of all the overlays and what we call them. Feel free to contribu
 `52` | ---             |
 `53` | PlayerBoomerang | Handles the boomerang.
 `54` | PlayerScoop     | Handles the shovel.
-`55` | PlayerBomb      | Handles bombs.
+`55` | PlayerBomb      | Handles bombs and potions.
 `56` | PlayerBow       | Handles the bow.
 `57` | PlayerRope      | Handles the grappling hook.
 `58` | PlayerBombchu   | Handles bombchus.
