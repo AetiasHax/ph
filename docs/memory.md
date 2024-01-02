@@ -10,6 +10,9 @@ meanings or translations.
 > These IDs will appear in memory in reverse order. This is because allocation IDs are often interpreted as 32-bit integers,
 > and integers are stored in little-endian which effectively "reverses" the character order.
 
- ID    | Translation | Meaning
--------|-------------|---------
-`EXPH` | ?           | SysObject
+ ID    | Translation     | Meaning
+-------|-----------------|---------
+`EDGM` | Edge manager    | ?
+`EXPH` | ?               | SysObject
+`MESG` | Message manager | ?
+`IMNG` | Item manager    | ?
