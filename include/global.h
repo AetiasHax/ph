@@ -14,4 +14,7 @@
 #define NONMATCH
 #endif
 
+// `override` was added in C++11 before the DS, so we only use the keyword to indicate overriden functions
+#define override
+
 #endif
