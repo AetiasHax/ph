@@ -27,9 +27,8 @@ private:
 public:
     EquipBombchu();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov58_02198fc0
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213eb5c
-    /* 08 */ virtual ~EquipBombchu() override;
+    /* 00 */ virtual void vfunc_00() override; // func_ov58_02198fc0
+    /* 04 */ virtual ~EquipBombchu() override;
     /* 0c */ virtual ItemFlag GetId() const override;
 
     bool CheckUsable(unk32 param1) const;

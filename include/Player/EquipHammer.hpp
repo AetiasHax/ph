@@ -20,8 +20,7 @@ private:
 public:
     EquipHammer();
 
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213ede4
-    /* 08 */ virtual ~EquipHammer() override;
+    /* 04 */ virtual ~EquipHammer() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov14_0213ee04
 

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+#include "global.h"
 #include "Item.hpp"
 #include "SysNew.hpp"
 
@@ -14,9 +15,8 @@ private:
 public:
     EquipItem();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3); // func_ov00_020be8dc
-    /* 04 */ virtual EquipItem* vfunc_04(); // func_ov04_0210ba74
-    /* 08 */ virtual ~EquipItem();
+    /* 00 */ virtual void vfunc_00(); // func_ov00_020be8dc
+    /* 04 */ virtual ~EquipItem();
     /* 0c */ virtual ItemFlag GetId() const = 0;
     /* 10 */ virtual void vfunc_10(); // func_ov04_0210ba88
 

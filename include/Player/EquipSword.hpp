@@ -41,9 +41,8 @@ private:
 public:
     EquipSword();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov00_020beffc
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov04_0210b918
-    /* 08 */ virtual ~EquipSword() override;
+    /* 00 */ virtual void vfunc_00() override; // func_ov00_020beffc
+    /* 04 */ virtual ~EquipSword() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov00_020bf18c
 

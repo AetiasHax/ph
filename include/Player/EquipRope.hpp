@@ -24,8 +24,7 @@ private:
 public:
     EquipRope();
 
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213d314
-    /* 08 */ virtual ~EquipRope() override;
+    /* 04 */ virtual ~EquipRope() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov14_0213d3a0
 

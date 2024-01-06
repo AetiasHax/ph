@@ -16,9 +16,8 @@ private:
 public:
     EquipBow();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov56_02198d00
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213ead4
-    /* 08 */ virtual ~EquipBow() override;
+    /* 00 */ virtual void vfunc_00() override; // func_ov56_02198d00
+    /* 04 */ virtual ~EquipBow() override;
     /* 0c */ virtual ItemFlag GetId() const override;
 
     /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;

@@ -19,9 +19,8 @@ private:
 public:
     EquipShield();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov00_020c06d4
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov04_0210bc28
-    /* 08 */ virtual ~EquipShield() override; // func_ov04_0210bc94
+    /* 00 */ virtual void vfunc_00() override; // func_ov00_020c06d4
+    /* 04 */ virtual ~EquipShield() override; // func_ov04_0210bc94
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov00_020c076c
 

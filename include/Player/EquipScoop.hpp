@@ -10,9 +10,8 @@ private:
     /* c */
 
 public:
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov54_02198d00
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_0213cf9c
-    /* 08 */ virtual ~EquipScoop() override;
+    /* 00 */ virtual void vfunc_00() override; // func_ov54_02198d00
+    /* 04 */ virtual ~EquipScoop() override;
     /* 0c */ virtual ItemFlag GetId() const override;
 
     /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;

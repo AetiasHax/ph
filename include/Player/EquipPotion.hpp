@@ -13,9 +13,8 @@ private:
 public:
     EquipPotion();
 
-    /* 00 */ virtual void vfunc_00(unk32 param1, unk32 param2, unk32 param3) override; // func_ov55_021991a8
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_02151564
-    /* 08 */ virtual ~EquipPotion() override;
+    /* 00 */ virtual void vfunc_00() override; // func_ov55_021991a8
+    /* 04 */ virtual ~EquipPotion() override;
 
     /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov55_021991ac
@@ -30,8 +29,7 @@ class EquipPotionA : public EquipPotion {
 public:
     EquipPotionA();
 
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_021515a8
-    /* 08 */ virtual ~EquipPotionA() override;
+    /* 04 */ virtual ~EquipPotionA() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 50 */
 };
@@ -40,8 +38,7 @@ class EquipPotionB : public EquipPotion {
 public:
     EquipPotionB();
 
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_021515e8
-    /* 08 */ virtual ~EquipPotionB() override;
+    /* 04 */ virtual ~EquipPotionB() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 50 */
 };

@@ -18,8 +18,7 @@ private:
     /* 30 */
 
 public:
-    /* 04 */ virtual EquipItem* vfunc_04() override; // func_ov14_213d010
-    /* 08 */ virtual ~EquipBoomerang() override;
+    /* 04 */ virtual ~EquipBoomerang() override;
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov14_0213d078
 
