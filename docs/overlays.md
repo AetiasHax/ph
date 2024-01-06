@@ -1,13 +1,14 @@
 # Overlays
-Below is a list of all the overlays and what we call them. Feel free to contribute to this list!
+Below is a list of all the overlays and what we call them. These can also be found in `OverlayManager.hpp`. Feel free to
+contribute to this list!
 
  ID  | Name            | Description
 -----|-----------------|-------------
-`00` | ---             | Core game engine
+`00` | Core            | Core game engine
 `01` | ---             |
 `02` | ---             |
 `03` | ---             |
-`04` | ---             | Memory management
+`04` | Memory          | Memory management
 `05` | ---             |
 `06` | ---             |
 `07` | ---             |
