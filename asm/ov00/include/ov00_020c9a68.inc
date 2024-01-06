@@ -424,7 +424,7 @@
 .extern func_ov03_020fa5d8
 .extern func_ov03_020fa644
 .extern func_ov03_020fa660
-.extern data_027e0900
+.extern gOverlayManager
 .extern func_ov00_020a5e9c
 .extern func_ov00_02097738
 .extern func_02036798

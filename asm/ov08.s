@@ -201,10 +201,10 @@ func_ov08_02112e84: ; 0x02112e84
 func_ov08_02112e88: ; 0x02112e88
 	stmdb sp!, {r3, lr}
 	blx func_020425e0
-	ldr r0, _02112ec8 ; =data_027e0900
+	ldr r0, _02112ec8 ; =gOverlayManager
 	ldr r2, _02112ecc ; =0x00000000
 	mov r1, #0
-	blx func_0202ff44
+	blx _ZN14OverlayManager4LoadEjj
 	ldr r0, _02112ed0 ; =data_ov00_020ee734
 	bl func_ov08_021131ac
 	ldr r0, _02112ed4 ; =data_027e0d54
@@ -217,7 +217,7 @@ func_ov08_02112e88: ; 0x02112e88
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov08_02112e88
-_02112ec8: .word data_027e0900
+_02112ec8: .word gOverlayManager
 _02112ecc: .word 0x00000000
 _02112ed0: .word data_ov00_020ee734
 _02112ed4: .word data_027e0d54

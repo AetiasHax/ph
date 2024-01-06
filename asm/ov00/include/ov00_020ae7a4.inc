@@ -86,7 +86,7 @@
 .extern func_ov00_02078b40
 .extern func_ov00_020ad790
 .extern func_ov00_020ad790
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory8GetFairyEj
 .extern data_027e0f74
 .extern data_027e0c68
 .extern data_027e0d38
@@ -147,8 +147,8 @@
 .extern data_027e0f90
 .extern data_027e0e60
 .extern func_ov00_020c3674
-.extern func_ov00_020ad414
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory16GetEquippedFairyEv
+.extern _ZNK9Inventory8GetFairyEj
 .extern func_ov00_020bad18
 .extern func_01ff9ec0
 .extern func_ov00_020c2a0c
@@ -168,8 +168,8 @@
 .extern data_027e0fcc
 .extern data_027e0fcc
 .extern func_ov00_02078b40
-.extern func_ov00_020ad414
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory16GetEquippedFairyEv
+.extern _ZNK9Inventory8GetFairyEj
 .extern func_ov00_020baca8
 .extern data_027e0d38
 .extern gInventory
@@ -179,8 +179,8 @@
 .extern func_01ff991c
 .extern func_01ff9c2c
 .extern func_01ff9e64
-.extern func_ov00_020ad414
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory16GetEquippedFairyEv
+.extern _ZNK9Inventory8GetFairyEj
 .extern func_ov00_020ba204
 .extern data_027e0f64
 .extern gInventory
@@ -217,7 +217,7 @@
 .extern data_027e0f64
 .extern data_02050f54
 .extern func_ov00_020ad790
-.extern func_ov00_020ae390
+.extern _ZNK9Inventory15GetEquippedItemEv
 .extern func_ov00_020cf330
 .extern func_01ff9cec
 .extern func_01ffa0f4

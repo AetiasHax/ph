@@ -8541,7 +8541,7 @@ _02119ac4:
 	ldr r0, _02119dc4 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r0, _02119dc8 ; =data_027e0fd4
 	ldr r4, [r0]
 	ldrb r0, [r4, #0x54]
@@ -10224,7 +10224,7 @@ _0211b130:
 	addne sp, sp, #0x20
 	ldmneia sp!, {r4, r5, r6, pc}
 _0211b150:
-	ldr r0, _0211b298 ; =data_ov00_020ee57c
+	ldr r0, _0211b298 ; =gPlayerAnimHandler
 	mov r1, r4
 	ldr r0, [r0]
 	bl func_ov00_020be540
@@ -10309,7 +10309,7 @@ _0211b21c:
 	.align 2, 0
 	arm_func_end func_ov12_0211b0f0
 _0211b294: .word data_ov00_020dca38
-_0211b298: .word data_ov00_020ee57c
+_0211b298: .word gPlayerAnimHandler
 _0211b29c: .word data_ov12_02134754
 
 	.global func_ov12_0211b2a0
@@ -10478,13 +10478,13 @@ _0211b4d0: .word data_ov00_020dc894
 	.global func_ov12_0211b4d4
 	arm_func_start func_ov12_0211b4d4
 func_ov12_0211b4d4: ; 0x0211b4d4
-	ldr r0, _0211b4e4 ; =data_ov00_020ee57c
+	ldr r0, _0211b4e4 ; =gPlayerAnimHandler
 	ldr ip, _0211b4e8 ; =func_ov00_020be674
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov12_0211b4d4
-_0211b4e4: .word data_ov00_020ee57c
+_0211b4e4: .word gPlayerAnimHandler
 _0211b4e8: .word func_ov00_020be674
 
 	.global func_ov12_0211b4ec
@@ -15414,10 +15414,10 @@ func_ov12_0211f594: ; 0x0211f594
 	ldr r0, _0211f66c ; =data_027e0d38
 	ldr r0, [r0]
 	blx func_ov04_02100bcc
-	ldr r0, _0211f670 ; =data_027e0900
+	ldr r0, _0211f670 ; =gOverlayManager
 	ldr r2, _0211f674 ; =0x00000005
 	mov r1, #2
-	blx func_0202ff64
+	blx _ZN14OverlayManager15LoadIfNotLoadedEjj
 	bl func_ov12_0212e274
 	ldr r0, _0211f664 ; =data_ov12_0213dd0c
 	ldr r0, [r0]
@@ -15439,7 +15439,7 @@ _0211f648:
 _0211f664: .word data_ov12_0213dd0c
 _0211f668: .word data_ov12_02137c64
 _0211f66c: .word data_027e0d38
-_0211f670: .word data_027e0900
+_0211f670: .word gOverlayManager
 _0211f674: .word 0x00000005
 
 	.global func_ov12_0211f678

@@ -2723,20 +2723,20 @@ _0207b52c: .word 0x04000040
 func_ov00_0207b530: ; 0x0207b530
 	push {r4, lr}
 	add r4, r0, #0
-	ldr r0, _0207b550 ; =data_027e0900
+	ldr r0, _0207b550 ; =gOverlayManager
 	ldr r2, _0207b554 ; =0x00000004
 	mov r1, #2
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	add r0, r4, #0
 	bl func_ov04_02101188
-	ldr r0, _0207b550 ; =data_027e0900
+	ldr r0, _0207b550 ; =gOverlayManager
 	ldr r2, _0207b558 ; =0x00000005
 	mov r1, #2
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov00_0207b530
-_0207b550: .word data_027e0900
+_0207b550: .word gOverlayManager
 _0207b554: .word 0x00000004
 _0207b558: .word 0x00000005
 
@@ -3310,7 +3310,7 @@ func_ov00_0207ba90: ; 0x0207ba90
 func_ov00_0207ba94: ; 0x0207ba94
 	push {r3, lr}
 	add r2, r0, #0
-	ldr r0, _0207baac ; =data_027e0900
+	ldr r0, _0207baac ; =gOverlayManager
 	ldr r3, [r0, #4]
 	ldr r0, _0207bab0 ; =0x00000003
 	cmp r3, r0
@@ -3321,7 +3321,7 @@ _0207baa8:
 	pop {r3, pc}
 	nop
 	thumb_func_end func_ov00_0207ba94
-_0207baac: .word data_027e0900
+_0207baac: .word gOverlayManager
 _0207bab0: .word 0x00000003
 
 	.global func_ov00_0207bab4

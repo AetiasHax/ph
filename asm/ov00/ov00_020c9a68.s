@@ -8141,7 +8141,7 @@ func_ov00_020cfc9c: ; 0x020cfc9c
 	bl func_ov00_020cf488
 	cmp r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _020cfce4 ; =data_027e0900
+	ldr r0, _020cfce4 ; =gOverlayManager
 	ldr r1, _020cfce8 ; =0x00000003
 	ldr r0, [r0, #4]
 	cmp r1, r0
@@ -8154,7 +8154,7 @@ func_ov00_020cfc9c: ; 0x020cfc9c
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020cfc9c
-_020cfce4: .word data_027e0900
+_020cfce4: .word gOverlayManager
 _020cfce8: .word 0x00000003
 
 	.global func_ov00_020cfcec

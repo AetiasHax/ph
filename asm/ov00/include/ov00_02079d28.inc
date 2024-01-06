@@ -155,10 +155,10 @@
 .extern data_027e0e2c
 .extern data_027e0c54
 .extern data_027e0618
-.extern func_0202ff64
+.extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern func_ov04_02101188
-.extern func_0202ff64
-.extern data_027e0900
+.extern _ZN14OverlayManager15LoadIfNotLoadedEjj
+.extern gOverlayManager
 .extern func_ov04_02100eb0
 .extern func_ov40_02183dac
 .extern func_ov05_02100e0c
@@ -208,7 +208,7 @@
 .extern func_02042b40
 .extern func_02042bfc
 .extern func_ov03_020f3c28
-.extern data_027e0900
+.extern gOverlayManager
 .extern func_0204f754
 .extern func_0204f754
 .extern func_0204f754

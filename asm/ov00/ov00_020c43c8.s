@@ -81,7 +81,7 @@ func_ov00_020c43c8: ; 0x020c43c8
 	ldrne r0, [r0, #0x14]
 	cmpne r0, #1
 	beq _020c4508
-	ldr r0, _020c4578 ; =data_027e0900
+	ldr r0, _020c4578 ; =gOverlayManager
 	ldr r1, _020c457c ; =0x0000001d
 	ldr r0, [r0, #0x18]
 	cmp r0, r1
@@ -118,7 +118,7 @@ _020c4568: .word data_027e0ce0
 _020c456c: .word data_ov00_020e836c
 _020c4570: .word data_ov00_020e837c
 _020c4574: .word data_027e0d38
-_020c4578: .word data_027e0900
+_020c4578: .word gOverlayManager
 _020c457c: .word 0x0000001d
 _020c4580: .word func_ov29_0216d918
 _020c4584: .word data_ov00_020e8384

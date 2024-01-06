@@ -5084,7 +5084,7 @@ _020b8978:
 	bne _020b8b70
 	ldr r0, _020b8b88 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r4, r0
 	mov r0, sl
 	ldr r1, [r0]
@@ -5135,7 +5135,7 @@ _020b8a68:
 	beq _020b8ad4
 	ldr r0, [r4]
 	mov r1, r8
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r2, [r0, #8]
 	mov r1, r6
 _020b8a94:
@@ -5163,7 +5163,7 @@ _020b8ad4:
 _020b8ae0:
 	ldr r0, _020b8b88 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r4, r0
 	mov r0, sl
 	ldr r1, [r0]
@@ -5181,7 +5181,7 @@ _020b8ae0:
 	ldr r0, _020b8b88 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldrb r0, [r0, #0x28e]
 	cmp r0, #0
 	beq _020b8b54
@@ -6803,7 +6803,7 @@ func_ov00_020ba170: ; 0x020ba170
 	bne _020ba1c4
 	ldr r0, _020ba200 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r4, r0
 	mov r0, r5
 	ldr r1, [r0]
@@ -6970,7 +6970,7 @@ func_ov00_020ba3b4: ; 0x020ba3b4
 	ldr r1, _020ba410 ; =gInventory
 	mov r5, r0
 	ldr r0, [r1]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r4, r0
 	mov r0, r5
 	ldr r1, [r0]
@@ -7025,7 +7025,7 @@ func_ov00_020ba458: ; 0x020ba458
 	ldr r1, _020ba4e0 ; =gInventory
 	mov r5, r0
 	ldr r0, [r1]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r4, r0
 	mov r0, r5
 	ldr r1, [r0]
@@ -7176,7 +7176,7 @@ _020ba618:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x24c]
 	ldr r0, [r0, #0xc]
@@ -7191,7 +7191,7 @@ _020ba650:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x254]
 	ldr r0, [r0, #0xc]
@@ -7200,7 +7200,7 @@ _020ba688:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x25c]
 	ldr r1, [r0, #0xc]
@@ -7217,7 +7217,7 @@ _020ba6b0:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x24c]
 	ldr r0, [r0, #0xc]
@@ -7235,7 +7235,7 @@ _020ba6f0:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x254]
 	ldr r0, [r0, #0xc]
@@ -7253,7 +7253,7 @@ _020ba730:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x24c]
 	ldr r0, [r0, #0xc]
@@ -7262,7 +7262,7 @@ _020ba768:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x25c]
 	ldr r1, [r0, #0xc]
@@ -7279,7 +7279,7 @@ _020ba790:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x254]
 	ldr r0, [r0, #0xc]
@@ -7288,7 +7288,7 @@ _020ba7c8:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x25c]
 	ldr r1, [r0, #0xc]
@@ -7305,7 +7305,7 @@ _020ba7f0:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x24c]
 	ldr r0, [r0, #0xc]
@@ -7320,7 +7320,7 @@ _020ba828:
 	ldr r0, _020ba870 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, [r0, #8]
 	str r1, [r4, #0x254]
 	ldr r0, [r0, #0xc]
@@ -7931,7 +7931,7 @@ func_ov00_020bb0ac: ; 0x020bb0ac
 _020bb0bc:
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	add r6, r6, #1
 	strb r5, [r0, #0x290]
 	cmp r6, #3
@@ -7951,7 +7951,7 @@ func_ov00_020bb0e0: ; 0x020bb0e0
 _020bb0f0:
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	add r6, r6, #1
 	strb r5, [r0, #0x290]
 	cmp r6, #3
@@ -9185,7 +9185,7 @@ _020bbd7c: .word data_027e0fd4
 	arm_func_start func_ov00_020bbd80
 func_ov00_020bbd80: ; 0x020bbd80
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _020bbe80 ; =data_027e0900
+	ldr r2, _020bbe80 ; =gOverlayManager
 	ldr r3, _020bbe84 ; =0x00000005
 	ldr r2, [r2, #8]
 	mov r5, r0
@@ -9255,7 +9255,7 @@ _020bbe78:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020bbd80
-_020bbe80: .word data_027e0900
+_020bbe80: .word gOverlayManager
 _020bbe84: .word 0x00000005
 _020bbe88: .word data_027e0fd4
 _020bbe8c: .word data_027e0fe4
@@ -12380,7 +12380,7 @@ func_ov00_020be464: ; 0x020be464
 	cmpne r3, lr
 	beq _020be4bc
 	mov r1, r6
-	bl func_ov00_020be70c
+	bl LoadEquipItemModel
 	ldmia sp!, {r4, r5, r6, pc}
 _020be4bc:
 	mvn r1, #1
@@ -12388,7 +12388,7 @@ _020be4bc:
 	cmpne r3, r1
 	ldmneia sp!, {r4, r5, r6, pc}
 	mov r1, r6
-	bl func_ov00_020be70c
+	bl LoadEquipItemModel
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020be464
@@ -12535,7 +12535,7 @@ func_ov00_020be674: ; 0x020be674
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	mov r0, r7
 	bl func_ov00_020c0d68
-	ldr r1, _020be704 ; =data_ov00_020ee57c
+	ldr r1, _020be704 ; =gPlayerAnimHandler
 	mov r5, r0
 	ldr r0, [r1, #4]
 	tst r0, #1
@@ -12556,12 +12556,12 @@ func_ov00_020be674: ; 0x020be674
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020be674
-_020be704: .word data_ov00_020ee57c
+_020be704: .word gPlayerAnimHandler
 _020be708: .word data_ov00_020dca3c
 
-	.global func_ov00_020be70c
-	arm_func_start func_ov00_020be70c
-func_ov00_020be70c: ; 0x020be70c
+	.global LoadEquipItemModel
+	arm_func_start LoadEquipItemModel
+LoadEquipItemModel: ; 0x020be70c
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x84
 	ldr r2, _020be7d0 ; =data_ov00_020e6e08
@@ -12613,7 +12613,7 @@ _020be73c:
 	add sp, sp, #0x84
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020be70c
+	arm_func_end LoadEquipItemModel
 _020be7d0: .word data_ov00_020e6e08
 _020be7d4: .word data_ov00_020e6dfc
 _020be7d8: .word 0x000051b0
@@ -23188,8 +23188,8 @@ data_ov00_020ee574:
 	.global data_ov00_020ee578
 data_ov00_020ee578:
 	.space 0x4
-	.global data_ov00_020ee57c
-data_ov00_020ee57c:
+	.global gPlayerAnimHandler
+gPlayerAnimHandler:
 	.space 0x4
 	.global data_ov00_020ee580
 data_ov00_020ee580:

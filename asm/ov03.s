@@ -5214,7 +5214,7 @@ func_ov03_020f1d04: ; 0x020f1d04
 	bl func_ov03_020f3fb4
 	cmp r0, #0
 	bne _020f1da8
-	ldr r0, _020f1dc4 ; =data_027e0900
+	ldr r0, _020f1dc4 ; =gOverlayManager
 	ldr r1, _020f1dc8 ; =0x0000001d
 	ldr r0, [r0, #0x18]
 	mov r5, #0
@@ -5237,7 +5237,7 @@ _020f1db4: .word data_027e0f74
 _020f1db8: .word data_027e0c68
 _020f1dbc: .word data_027e0e28
 _020f1dc0: .word data_ov09_0211f5b4
-_020f1dc4: .word data_027e0900
+_020f1dc4: .word gOverlayManager
 _020f1dc8: .word 0x0000001d
 _020f1dcc: .word data_ov29_0217a4ac
 
@@ -7746,10 +7746,10 @@ func_ov03_020f3894: ; 0x020f3894
 	push {r4, lr}
 	sub sp, #0x18
 	add r4, r0, #0
-	ldr r0, _020f390c ; =data_027e0900
+	ldr r0, _020f390c ; =gOverlayManager
 	ldr r2, _020f3910 ; =0x00000004
 	mov r1, #2
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	add r0, r4, #0
 	mov r1, #0
 	bl func_ov03_020f3870
@@ -7788,15 +7788,15 @@ func_ov03_020f3894: ; 0x020f3894
 	add r0, r4, #0
 	mov r1, #1
 	bl func_ov04_02100c6c
-	ldr r0, _020f390c ; =data_027e0900
+	ldr r0, _020f390c ; =gOverlayManager
 	ldr r2, _020f391c ; =0x00000005
 	mov r1, #2
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	add sp, #0x18
 	pop {r4, pc}
 	nop
 	thumb_func_end func_ov03_020f3894
-_020f390c: .word data_027e0900
+_020f390c: .word gOverlayManager
 _020f3910: .word 0x00000004
 _020f3914: .word data_027e0d54
 _020f3918: .word data_ov00_020eab04
@@ -8544,7 +8544,7 @@ _020f3e1a:
 	cmp r4, #2
 	bne _020f3e2e
 	mov r1, #1
-	ldr r0, _020f3e6c ; =data_027e0900
+	ldr r0, _020f3e6c ; =gOverlayManager
 	lsl r1, r1, #0xe
 	bl func_ov03_020faa64
 _020f3e2e:
@@ -8578,7 +8578,7 @@ _020f3e58:
 	thumb_func_end func_ov03_020f3e04
 _020f3e64: .word data_027e0d38
 _020f3e68: .word data_ov03_020ff5a4
-_020f3e6c: .word data_027e0900
+_020f3e6c: .word gOverlayManager
 _020f3e70: .word data_027e0ce0
 
 	.global func_ov03_020f3e74
@@ -9122,7 +9122,7 @@ _020f4292:
 	ldr r1, [r0, #0x20]
 	blx func_ov03_020fa874
 _020f42b2:
-	ldr r0, _020f4300 ; =data_027e0900
+	ldr r0, _020f4300 ; =gOverlayManager
 	ldr r1, [r0, #8]
 	ldr r0, _020f4304 ; =0x00000005
 	cmp r1, r0
@@ -9158,7 +9158,7 @@ _020f42f0: .word data_ov03_020ff5a4
 _020f42f4: .word data_027e0718
 _020f42f8: .word data_027e103c
 _020f42fc: .word data_027e0cbc
-_020f4300: .word data_027e0900
+_020f4300: .word gOverlayManager
 _020f4304: .word 0x00000005
 _020f4308: .word data_027e0fc8
 
@@ -11838,7 +11838,7 @@ func_ov03_020f59d4: ; 0x020f59d4
 	beq _020f5a6c
 	ldr r0, _020f5a94 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	cmp r0, #2
 	ldrsh r0, [r4, #0xe]
 	mov r1, #4
@@ -13061,7 +13061,7 @@ _020f68d8:
 _020f693c:
 	ldr r0, _020f69c8 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ae390
+	bl _ZNK9Inventory15GetEquippedItemEv
 	cmp r0, #7
 	bne _020f69a8
 	ldr r0, _020f69c8 ; =gInventory
@@ -13541,7 +13541,7 @@ _020f6f58:
 	cmp r7, #0x10
 	mov r0, r5
 	movge r7, #0x10
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	cmp r0, #2
 	moveq r5, #1
 	str r6, [sp]
@@ -15917,7 +15917,7 @@ func_ov03_020f8bb0: ; 0x020f8bb0
 	mov r1, #0x14
 	mov r2, #0x18
 	blx func_0204f614
-	ldr r0, _020f8d34 ; =data_027e0900
+	ldr r0, _020f8d34 ; =gOverlayManager
 	ldr r1, _020f8d38 ; =0x0000001a
 	ldr r0, [r0, #0x18]
 	cmp r1, r0
@@ -16079,7 +16079,7 @@ _020f8c22:
 	thumb_func_end func_ov03_020f8bb0
 _020f8d2c: .word func_ov03_020f121c - 1
 _020f8d30: .word func_ov03_020f1220 - 1
-_020f8d34: .word data_027e0900
+_020f8d34: .word gOverlayManager
 _020f8d38: .word 0x0000001a
 _020f8d3c: .word data_027e0ce0
 _020f8d40: .word func_ov03_020f8d50
@@ -18357,14 +18357,14 @@ _020faa0c:
 _020faa10:
 	ldr r2, _020faa1c ; =0x0000000f
 _020faa12:
-	ldr r3, _020faa20 ; =func_0202ff64
+	ldr r3, _020faa20 ; =_ZN14OverlayManager15LoadIfNotLoadedEjj
 	mov r1, #4
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov03_020fa9f0
 _020faa18: .word 0x0000000e
 _020faa1c: .word 0x0000000f
-_020faa20: .word func_0202ff64
+_020faa20: .word _ZN14OverlayManager15LoadIfNotLoadedEjj
 
 	.global func_ov03_020faa24
 	thumb_func_start func_ov03_020faa24
@@ -18383,14 +18383,14 @@ _020faa34:
 _020faa38:
 	ldr r2, _020faa44 ; =0x00000012
 _020faa3a:
-	ldr r3, _020faa48 ; =func_0202ff64
+	ldr r3, _020faa48 ; =_ZN14OverlayManager15LoadIfNotLoadedEjj
 	mov r1, #5
 	bx r3
 	.align 2, 0
 	thumb_func_end func_ov03_020faa24
 _020faa40: .word 0x00000011
 _020faa44: .word 0x00000012
-_020faa48: .word func_0202ff64
+_020faa48: .word _ZN14OverlayManager15LoadIfNotLoadedEjj
 
 	.global func_ov03_020faa4c
 	thumb_func_start func_ov03_020faa4c
@@ -18400,12 +18400,12 @@ func_ov03_020faa4c: ; 0x020faa4c
 	ldr r2, _020faa5c ; =data_ov03_020ff92c
 	mov r1, #6
 	ldr r2, [r2, r3]
-	ldr r3, _020faa60 ; =func_0202ff64
+	ldr r3, _020faa60 ; =_ZN14OverlayManager15LoadIfNotLoadedEjj
 	bx r3
 	nop
 	thumb_func_end func_ov03_020faa4c
 _020faa5c: .word data_ov03_020ff92c
-_020faa60: .word func_0202ff64
+_020faa60: .word _ZN14OverlayManager15LoadIfNotLoadedEjj
 
 	.global func_ov03_020faa64
 	thumb_func_start func_ov03_020faa64
@@ -18430,7 +18430,7 @@ _020faa7a:
 	ldr r0, [sp]
 	ldr r2, [r2, r3]
 	add r1, r6, #7
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	add r6, r6, #1
 	add r4, r4, #4
 	add r5, r5, #4
@@ -18452,15 +18452,15 @@ func_ov03_020faaa4: ; 0x020faaa4
 _020faaaa:
 	add r0, r5, #0
 	add r1, r4, #7
-	bl func_0202ff84
+	bl _ZN14OverlayManager6UnloadEj
 	sub r4, r4, #1
 	bpl _020faaaa
 	pop {r3, r4, r5, pc}
 	thumb_func_end func_ov03_020faaa4
 
-	.global func_ov03_020faab8
-	thumb_func_start func_ov03_020faab8
-func_ov03_020faab8: ; 0x020faab8
+	.global _ZN14OverlayManager13LoadEquipItemEj
+	thumb_func_start _ZN14OverlayManager13LoadEquipItemEj
+_ZN14OverlayManager13LoadEquipItemEj: ; 0x020faab8
 	mov r2, #0
 	mvn r2, r2
 	cmp r1, #0xa
@@ -18507,11 +18507,11 @@ _020faafa:
 _020faafe:
 	ldr r2, _020fab10 ; =0x00000037
 _020fab00:
-	ldr r3, _020fab24 ; =func_0202ff64
+	ldr r3, _020fab24 ; =_ZN14OverlayManager15LoadIfNotLoadedEjj
 	mov r1, #0xb
 	bx r3
 	nop
-	thumb_func_end func_ov03_020faab8
+	thumb_func_end _ZN14OverlayManager13LoadEquipItemEj
 _020fab08: .word 0x00000035
 _020fab0c: .word 0x00000036
 _020fab10: .word 0x00000037
@@ -18519,7 +18519,7 @@ _020fab14: .word 0x00000038
 _020fab18: .word 0x00000039
 _020fab1c: .word 0x0000003a
 _020fab20: .word 0x0000003b
-_020fab24: .word func_0202ff64
+_020fab24: .word _ZN14OverlayManager15LoadIfNotLoadedEjj
 
 	.global func_ov03_020fab28
 	thumb_func_start func_ov03_020fab28

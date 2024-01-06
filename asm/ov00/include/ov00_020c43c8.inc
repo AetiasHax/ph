@@ -21,7 +21,7 @@
 .extern data_ov00_020e836c
 .extern data_ov00_020e837c
 .extern data_027e0d38
-.extern data_027e0900
+.extern gOverlayManager
 .extern func_ov29_0216d918
 .extern data_ov00_020e8384
 .extern func_01ffa8d4

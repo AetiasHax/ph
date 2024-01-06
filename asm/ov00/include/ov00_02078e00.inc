@@ -15,7 +15,7 @@
 .extern func_02016fcc
 .extern data_027e0c54
 .extern data_027e0d38
-.extern data_027e0900
+.extern gOverlayManager
 .extern data_020691a0
 .extern func_ov03_020f4b7c
 .extern data_027e1054
@@ -53,7 +53,7 @@
 .extern func_ov00_0208306c
 .extern data_027e0e28
 .extern data_027e0d38
-.extern data_027e0900
+.extern gOverlayManager
 .extern data_027e0e60
 .extern func_ov00_02079e04
 .extern func_ov00_0207bc48

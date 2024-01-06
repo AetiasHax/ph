@@ -100,10 +100,10 @@
 .extern func_0200e880
 .extern func_0200f014
 .extern func_0200e8f8
-.extern func_0202ff64
+.extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern func_ov04_02100b6c
 .extern _ZN9SysObjectdlEPv
-.extern data_027e0900
+.extern gOverlayManager
 .extern data_027e0d38
 .extern func_ov00_020a5e9c
 .extern func_ov00_0209d738

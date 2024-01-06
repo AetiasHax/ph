@@ -3,92 +3,6 @@
 
 	.text
 
-	.global func_ov00_020ad414
-	arm_func_start func_ov00_020ad414
-func_ov00_020ad414: ; 0x020ad414
-	ldr r0, [r0, #0x10]
-	mvn r1, #0
-	cmp r0, r1
-	moveq r0, #0
-	bx lr
-	arm_func_end func_ov00_020ad414
-
-	.global func_ov00_020ad428
-	arm_func_start func_ov00_020ad428
-func_ov00_020ad428: ; 0x020ad428
-	add r0, r0, r1, lsl #2
-	ldr r0, [r0, #0x14]
-	bx lr
-	arm_func_end func_ov00_020ad428
-
-	.global func_ov00_020ad434
-	arm_func_start func_ov00_020ad434
-func_ov00_020ad434: ; 0x020ad434
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r5, r0
-	bl func_ov00_020ae390
-	ldrh r1, [r5, #0x20]
-	mov r4, r0
-	cmp r1, #0
-	beq _020ad4b4
-	sub r0, r1, #1
-	strh r0, [r5, #0x20]
-	ldrh r0, [r5, #0x20]
-	cmp r0, #0
-	bne _020ad4b4
-	mvn r0, #0
-	cmp r4, r0
-	beq _020ad4b4
-	ldr r0, _020ad51c ; =data_027e0d38
-	ldr r0, [r0]
-	ldr r0, [r0, #0x14]
-	cmp r0, #1
-	beq _020ad4b4
-	ldr r0, _020ad520 ; =data_027e0900
-	mov r1, r4
-	blx func_ov03_020faab8
-	ldr r0, _020ad524 ; =data_ov00_020ee57c
-	mov r1, r4
-	ldr r0, [r0]
-	bl func_ov00_020be70c
-	ldr r0, [r5, #0xac]
-	ldr r0, [r0, r4, lsl #2]
-	ldr r1, [r0]
-	ldr r1, [r1]
-	blx r1
-_020ad4b4:
-	ldr r0, [r5, #0xac]
-	ldr r0, [r0]
-	ldr r1, [r0]
-	ldr r1, [r1, #0x30]
-	blx r1
-	ldr r0, [r5, #0xac]
-	ldr r0, [r0, #4]
-	ldr r1, [r0]
-	ldr r1, [r1, #0x30]
-	blx r1
-	ldr r0, _020ad51c ; =data_027e0d38
-	ldr r0, [r0]
-	ldr r0, [r0, #0x14]
-	cmp r0, #1
-	mvnne r0, #0
-	cmpne r4, r0
-	ldmeqia sp!, {r3, r4, r5, pc}
-	ldrh r0, [r5, #0x20]
-	cmp r0, #0
-	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, [r5, #0xac]
-	ldr r0, [r0, r4, lsl #2]
-	ldr r1, [r0]
-	ldr r1, [r1, #0x30]
-	blx r1
-	ldmia sp!, {r3, r4, r5, pc}
-	.align 2, 0
-	arm_func_end func_ov00_020ad434
-_020ad51c: .word data_027e0d38
-_020ad520: .word data_027e0900
-_020ad524: .word data_ov00_020ee57c
-
 	.global func_ov00_020ad528
 	arm_func_start func_ov00_020ad528
 func_ov00_020ad528: ; 0x020ad528
@@ -204,7 +118,7 @@ _020ad620:
 	cmp r0, #1
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r5
-	bl func_ov00_020ae390
+	bl _ZNK9Inventory15GetEquippedItemEv
 	mvn r1, #0
 	cmp r0, r1
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -342,7 +256,7 @@ _020ad7c0:
 	cmp r0, #1
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _020ad8cc ; =data_027e0900
+	ldr r0, _020ad8cc ; =gOverlayManager
 	ldr r1, _020ad8d0 ; =0x0000001d
 	ldr r0, [r0, #0x18]
 	cmp r0, r1
@@ -411,7 +325,7 @@ _020ad8bc:
 	arm_func_end func_ov00_020ad790
 _020ad8c4: .word data_027e0d38
 _020ad8c8: .word data_027e10a4
-_020ad8cc: .word data_027e0900
+_020ad8cc: .word gOverlayManager
 _020ad8d0: .word 0x0000001d
 _020ad8d4: .word data_ov29_0217a4ac
 _020ad8d8: .word data_027e0e60
@@ -630,7 +544,7 @@ func_ov00_020ad9e8: ; 0x020ad9e8
 	mov r4, r1
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	cmp r0, #0
 	bne _020ada24
 	ldrb r0, [r5, #0x14d]
@@ -639,7 +553,7 @@ func_ov00_020ad9e8: ; 0x020ad9e8
 	ldmneia sp!, {r3, r4, r5, pc}
 _020ada24:
 	mov r0, r5
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	cmp r4, r0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
@@ -1912,16 +1826,16 @@ _020ae382:
 	thumb_func_end func_ov00_020ae368
 _020ae38c: .word data_027e0e60
 
-	.global func_ov00_020ae390
-	arm_func_start func_ov00_020ae390
-func_ov00_020ae390: ; 0x020ae390
+	.global _ZNK9Inventory15GetEquippedItemEv
+	arm_func_start _ZNK9Inventory15GetEquippedItemEv
+_ZNK9Inventory15GetEquippedItemEv: ; 0x020ae390
 	ldr r2, [r0, #8]
 	mvn r1, #0
 	cmp r2, r1
 	ldreq r2, [r0]
 	mov r0, r2
 	bx lr
-	arm_func_end func_ov00_020ae390
+	arm_func_end _ZNK9Inventory15GetEquippedItemEv
 
 	.global func_ov00_020ae3a8
 	arm_func_start func_ov00_020ae3a8

@@ -3312,10 +3312,10 @@ _02078b04:
     thumb_func_start func_ov00_02078b0c
 func_ov00_02078b0c: ; 0x02078b0c
     push {r4, lr}
-    ldr r0, _02078b34 ; =data_027e0900
+    ldr r0, _02078b34 ; =gOverlayManager
     ldr r2, _02078b38 ; =0x00000004
     mov r1, #2
-    bl func_0202ff64
+    bl _ZN14OverlayManager15LoadIfNotLoadedEjj
     ldr r0, _02078b3c ; =data_027e0d38
     ldr r4, [r0]
     cmp r4, #0
@@ -3331,7 +3331,7 @@ _02078b2c:
     pop {r4, pc}
     .align 2, 0
     thumb_func_end func_ov00_02078b0c
-_02078b34: .word data_027e0900
+_02078b34: .word gOverlayManager
 _02078b38: .word 0x00000004
 _02078b3c: .word data_027e0d38
 

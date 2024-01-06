@@ -393,10 +393,10 @@ _021991a8:
 	ldr r0, _021992c4 ; =gInventory
 	ldr r4, [r0]
 	mov r0, r4
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r0, #0
 	beq _0219920c
 	bl func_ov00_020ba3b4

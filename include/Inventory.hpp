@@ -1,10 +1,24 @@
 #pragma once
 
 #include "types.h"
+#include "lib/math.h"
+#include "global.h"
 #include "SysNew.hpp"
 #include "Item.hpp"
 #include "Player/EquipItem.hpp"
+#include "Player/EquipBomb.hpp"
+#include "Player/EquipBombchu.hpp"
+#include "Player/EquipBoomerang.hpp"
+#include "Player/EquipBow.hpp"
+#include "Player/EquipHammer.hpp"
+#include "Player/EquipItem.hpp"
+#include "Player/EquipPotion.hpp"
+#include "Player/EquipRope.hpp"
+#include "Player/EquipScoop.hpp"
+#include "Player/EquipShield.hpp"
+#include "Player/EquipSword.hpp"
 #include "Actors/Navi/Navi.hpp"
+#include "OverlayManager.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 
@@ -95,6 +109,26 @@ struct ShipParts {
     /* 9 */
 };
 
+struct UnkStruct_027e0d38 {
+    /* 00 */ unk8 mUnk_00;
+    /* 01 */ unk8 mUnk_01[3]; // padding?
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0c */ unk32 mUnk_0c;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk32 mUnk_14;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk16 mUnk_1c;
+    /* 1e */ unk8 mUnk_1e;
+    /* 1f */ unk8 mUnk_1f;
+    /* 20 */ unk8 mUnk_20;
+    /* 21 */ unk8 mUnk_21;
+    /* 22 */ unk8 mUnk_22[2]; // padding?
+    /* 24 */ void *mUnk_24;
+    /* 28 */ void *mUnk_28;
+    /* 2c */
+};
+
 struct SaveInventory {
     /* 00 */ ItemFlags itemFlags;
     /* 10 */ u32 salvagedTreasureFlags;
@@ -131,9 +165,7 @@ private:
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
     /* 00c */ u32 mHourglassSandFrames;
     /* 010 */ FairyId mEquippedFairy;
-    /* 014 */ Navi *mNaviCourage;
-    /* 018 */ Navi *mNaviPower;
-    /* 01c */ Navi *mNaviWisdom;
+    /* 014 */ Navi *mFairies[FairyId_COUNT];
     /* 020 */ u16 mEquipLoadTimer;
     /* 022 */ u16 mNumRupees;
     /* 024 */ u8 mNumGems[Gem_COUNT];
@@ -175,6 +207,22 @@ public:
     void ClearPrevEquippedItem();
     void Save(SaveInventory *save);
     void Load(const SaveInventory *save);
+
+    FairyId GetEquippedFairy() const;
+    Navi* GetFairy(FairyId id) const;
+
+    void TickEquipItem();
+    ItemFlag GetEquippedItem() const; // 020ae390
+    void Sword_vfunc_38(); // 020ad5bc
+    void Shield_vfunc_38(); // 020ad5d8
+    void EquipItem_vfunc_38(unk32 param1, unk32 param2, unk32 param3); // 020ad5f4
+    
+    void* GetIslandData(u32 index); // 020ad52c
+    void* GetDungeonData(u32 index); // 020ad588
+
+    void func_020ad538(unk32 param1); // 020ad538
+    void func_020ad560(unk32 param1); // 020ad560
+    void func_020ad594(unk32 param1); // 020ad594
     
     bool HasItem(ItemFlag item);
 };

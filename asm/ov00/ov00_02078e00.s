@@ -61,7 +61,7 @@ _02078e5e:
 	blx func_02047280
 	cmp r0, #0
 	bne _02078e7e
-	ldr r0, _02078f2c ; =data_027e0900
+	ldr r0, _02078f2c ; =gOverlayManager
 	ldr r1, [r0, #4]
 	ldr r0, _02078f30 ; =0x00000002
 	cmp r1, r0
@@ -149,7 +149,7 @@ _02078f1e:
 	thumb_func_end func_ov00_02078e00
 _02078f24: .word data_027e0c54
 _02078f28: .word data_027e0d38
-_02078f2c: .word data_027e0900
+_02078f2c: .word gOverlayManager
 _02078f30: .word 0x00000002
 _02078f34: .word data_ov00_020d878c
 _02078f38: .word data_ov00_020e1fcc
@@ -617,7 +617,7 @@ _020794c8:
 	ldrne r0, [sb]
 	cmpne r0, #0
 	beq _0207955c
-	ldr r1, _02079674 ; =data_027e0900
+	ldr r1, _02079674 ; =gOverlayManager
 	ldr r2, _02079678 ; =0x00000003
 	ldr r1, [r1, #4]
 	cmp r1, r2
@@ -719,7 +719,7 @@ _02079638:
 	arm_func_end func_ov00_02079470
 _0207966c: .word data_027e0e28
 _02079670: .word data_027e0d38
-_02079674: .word data_027e0900
+_02079674: .word gOverlayManager
 _02079678: .word 0x00000003
 _0207967c: .word data_027e0e60
 

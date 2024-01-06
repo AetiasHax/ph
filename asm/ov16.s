@@ -568,11 +568,11 @@ func_ov16_0211fd68: ; 0x0211fd68
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _0211fdc4
-	ldr r0, _0211fdd8 ; =data_027e0900
+	ldr r0, _0211fdd8 ; =gOverlayManager
 	mov r1, #1
 	blx func_0202ffa4
 	bl func_ov08_02112e88
-	ldr r0, _0211fdd8 ; =data_027e0900
+	ldr r0, _0211fdd8 ; =gOverlayManager
 	blx func_02030008
 	mov r0, #4
 	str r0, [r4, #4]
@@ -586,7 +586,7 @@ _0211fdc4:
 	arm_func_end func_ov16_0211fd68
 _0211fdd0: .word data_027e071c
 _0211fdd4: .word 0x027ffc20
-_0211fdd8: .word data_027e0900
+_0211fdd8: .word gOverlayManager
 
 	.global func_ov16_0211fddc
 	arm_func_start func_ov16_0211fddc

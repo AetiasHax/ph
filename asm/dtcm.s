@@ -1892,8 +1892,8 @@ data_027e08fa:
 	.global data_027e08fc
 data_027e08fc:
 	.space 0x4
-	.global data_027e0900
-data_027e0900:
+	.global gOverlayManager
+gOverlayManager:
 	.space 0x4
 	.global data_027e0904
 data_027e0904:

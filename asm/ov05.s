@@ -5427,7 +5427,7 @@ func_ov05_02105140: ; 0x02105140
 	movne r0, #0
 	cmp r0, #0
 	beq _021051b8
-	ldr r0, _021052ec ; =data_027e0900
+	ldr r0, _021052ec ; =gOverlayManager
 	ldr r1, _021052f0 ; =0x0000001e
 	ldr r0, [r0, #0x1c]
 	cmp r1, r0
@@ -5524,7 +5524,7 @@ _021052cc:
 	arm_func_end func_ov05_02105140
 _021052e4: .word data_027e0ff4
 _021052e8: .word data_027e0d38
-_021052ec: .word data_027e0900
+_021052ec: .word gOverlayManager
 _021052f0: .word 0x0000001e
 _021052f4: .word data_027e10b4
 _021052f8: .word data_027e0f74
@@ -10295,21 +10295,21 @@ _02109420:
 	ldr r0, _02109524 ; =gInventory
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	mov r4, r0
 	b _02109464
 _02109438:
 	ldr r0, _02109524 ; =gInventory
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	mov r4, r0
 	b _02109464
 _02109450:
 	ldr r0, _02109524 ; =gInventory
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	mov r4, r0
 _02109464:
 	cmp r4, #0
@@ -10737,10 +10737,10 @@ func_ov05_021099dc: ; 0x021099dc
 	mov r5, r0
 	ldr r4, [r1]
 	mov r0, r4
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldrsh r1, [r5, #0x80]
 	mov r4, r0
 	cmp r1, #4
@@ -12059,15 +12059,15 @@ _0210aba8:
 	ldr r0, _0210ad74 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, _0210ad74 ; =gInventory
 	mov r4, r0
 	ldr r7, [r1]
 	mov r0, r7
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r7
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r5, r4
 	bne _0210ac7c
 	mov r0, #0x10000
@@ -12107,10 +12107,10 @@ _0210ac7c:
 	ldr r0, _0210ad74 ; =gInventory
 	ldr r4, [r0]
 	mov r0, r4
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r0, r5
 	mov r0, r6
 	beq _0210ad00
@@ -14073,7 +14073,7 @@ _0210c824:
 	ldr r2, [r7, #0x2c]
 	mov r1, #0
 	str r2, [sp, #0x14]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	ldr r1, _0210c950 ; =data_027e0e60
 	mov r4, r0
 	ldr r0, [r1]
@@ -20360,7 +20360,7 @@ func_ov05_02111e20: ; 0x02111e20
 	bl func_ov05_021121cc
 	ldr r0, [r4, #0xec]
 	bl func_ov00_020a4e30
-	ldr r0, _02111f30 ; =data_027e0900
+	ldr r0, _02111f30 ; =gOverlayManager
 	ldr r1, _02111f34 ; =0x0000001d
 	ldr r0, [r0, #0x18]
 	cmp r0, r1
@@ -20428,7 +20428,7 @@ _02111f04:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov05_02111e20
-_02111f30: .word data_027e0900
+_02111f30: .word gOverlayManager
 _02111f34: .word 0x0000001d
 _02111f38: .word data_027e0d38
 _02111f3c: .word data_ov61_0217a4ac

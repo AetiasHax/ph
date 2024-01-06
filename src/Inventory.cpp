@@ -1,6 +1,4 @@
 #include "Inventory.hpp"
-#include "lib/math.h"
-#include "global.h"
 
 extern u32 *data_027e0ce0[];
 
@@ -151,3 +149,42 @@ NONMATCH void Inventory::Load(const SaveInventory *save) {
     #endif
 }
 #pragma thumb off
+
+#pragma interworking on
+FairyId Inventory::GetEquippedFairy() const {
+    FairyId fairy = this->mEquippedFairy;
+    if (fairy == FairyId_None) return FairyId_Courage;
+    return fairy;
+}
+
+Navi* Inventory::GetFairy(FairyId id) const {
+    return this->mFairies[id];
+}
+#pragma interworking off
+
+extern UnkStruct_027e0d38 *data_027e0d38;
+extern unk32 gPlayerAnimHandler;
+extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
+extern "C" void _ZNK9Inventory15GetEquippedItemEv();
+extern "C" void _ZN14OverlayManager13LoadEquipItemEj();
+NONMATCH void Inventory::TickEquipItem(void) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/inventory/Inventory_TickEquipItem.inc"
+    #else
+    ItemFlag equip = this->GetEquippedItem();
+    if (this->mEquipLoadTimer != 0) {
+        this->mEquipLoadTimer -= 1;
+        if (this->mEquipLoadTimer == 0 && equip != ItemFlag_None && data_027e0d38->mUnk_14 != 1) {
+            gOverlayManager.LoadEquipItem(equip);
+            LoadEquipItemModel(gPlayerAnimHandler, equip);
+            (*this->mEquipItems)[equip]->vfunc_00();
+        }
+    }
+    (*this->mEquipItems)[ItemFlag_OshusSword]->vfunc_30();
+    (*this->mEquipItems)[ItemFlag_WoodenShield]->vfunc_30();
+    if (data_027e0d38->mUnk_14 == 1) return;
+    if (equip != ItemFlag_None && this->mEquipLoadTimer == 0) {
+        (*this->mEquipItems)[equip]->vfunc_30();
+    }
+    #endif
+}

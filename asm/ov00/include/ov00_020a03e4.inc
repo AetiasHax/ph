@@ -355,7 +355,7 @@
 .extern func_0203010c
 .extern data_027e0ce0
 .extern data_027e0d38
-.extern data_027e0900
+.extern gOverlayManager
 .extern func_ov29_0216d918
 .extern data_02057840
 .extern func_0202d5dc
@@ -540,8 +540,8 @@
 .extern func_ov00_02079e68
 .extern func_02019534
 .extern data_ov00_020e9360
-.extern func_ov00_020ad414
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory16GetEquippedFairyEv
+.extern _ZNK9Inventory8GetFairyEj
 .extern func_ov00_0207c5d4
 .extern gInventory
 .extern data_027e0e58
@@ -863,8 +863,8 @@
 .extern data_027e0fe4
 .extern func_ov00_020af050
 .extern data_027e0fb8
-.extern func_ov00_020ad414
-.extern func_ov00_020ad428
+.extern _ZNK9Inventory16GetEquippedFairyEv
+.extern _ZNK9Inventory8GetFairyEj
 .extern func_ov00_020ba458
 .extern gInventory
 .extern func_01ff9bf8

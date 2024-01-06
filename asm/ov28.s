@@ -6677,7 +6677,7 @@ _02172c54:
 	ldmeqia sp!, {r4, r5, pc}
 	ldr r0, _02172f10 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r0, #0
 	beq _02172ee4
 	add r1, r5, #0x100
@@ -8966,20 +8966,20 @@ func_ov28_0217496c: ; 0x0217496c
 	strb lr, [sp, #0x14]
 	strb lr, [sp, #0x15]
 	bl func_ov00_020838e8
-	ldr r0, _02174a10 ; =data_027e0900
+	ldr r0, _02174a10 ; =gOverlayManager
 	ldr r2, _02174a14 ; =0x00000004
 	mov r1, #2
-	blx func_0202ff64
+	blx _ZN14OverlayManager15LoadIfNotLoadedEjj
 	ldr r0, _02174a0c ; =data_027e0e60
 	mov r2, #1
 	ldr r0, [r0]
 	add r1, sp, #0
 	strb r2, [sp, #0x15]
 	bl func_ov00_02082b3c
-	ldr r0, _02174a10 ; =data_027e0900
+	ldr r0, _02174a10 ; =gOverlayManager
 	ldr r2, _02174a18 ; =0x00000005
 	mov r1, #2
-	blx func_0202ff64
+	blx _ZN14OverlayManager15LoadIfNotLoadedEjj
 	mov r0, r4
 	mov r1, #0
 	bl func_ov28_02174a1c
@@ -8988,7 +8988,7 @@ func_ov28_0217496c: ; 0x0217496c
 	.align 2, 0
 	arm_func_end func_ov28_0217496c
 _02174a0c: .word data_027e0e60
-_02174a10: .word data_027e0900
+_02174a10: .word gOverlayManager
 _02174a14: .word 0x00000004
 _02174a18: .word 0x00000005
 

@@ -139,10 +139,10 @@ _02112d24:
 	ldr r0, _02112d5c ; =data_027e0d38
 	ldr r0, [r0]
 	bl func_ov04_02100bcc
-	ldr r0, _02112d60 ; =data_027e0900
+	ldr r0, _02112d60 ; =gOverlayManager
 	ldr r2, _02112d64 ; =0x00000005
 	mov r1, #2
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	add r0, r5, #0
 	add sp, #0x18
 	pop {r3, r4, r5, pc}
@@ -155,7 +155,7 @@ _02112d50: .word data_027e0718
 _02112d54: .word data_027e0618
 _02112d58: .word data_ov00_020eab04
 _02112d5c: .word data_027e0d38
-_02112d60: .word data_027e0900
+_02112d60: .word gOverlayManager
 _02112d64: .word 0x00000005
 
 	.global func_ov09_02112d68
@@ -355,7 +355,7 @@ _02112f48:
 	ldr r1, [r1, #0x14]
 	cmp r1, #1
 	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _02112fdc ; =data_027e0900
+	ldr r0, _02112fdc ; =gOverlayManager
 	ldr r1, _02112fe0 ; =0x0000001d
 	ldr r0, [r0, #0x18]
 	cmp r0, r1
@@ -389,7 +389,7 @@ _02112fc8:
 _02112fd0: .word data_027e0d38
 _02112fd4: .word data_027e1060
 _02112fd8: .word data_ov09_0211f5dc
-_02112fdc: .word data_027e0900
+_02112fdc: .word gOverlayManager
 _02112fe0: .word 0x0000001d
 _02112fe4: .word data_ov61_0217a4ac
 _02112fe8: .word data_ov09_0211f5b4
@@ -843,10 +843,10 @@ _021134d0:
 	mov r1, #0x13
 	mov r2, #0
 	bl func_ov00_0207c0ac
-	ldr r0, _0211352c ; =data_027e0900
+	ldr r0, _0211352c ; =gOverlayManager
 	ldr r2, _02113530 ; =0x00000002
 	mov r1, #1
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	mov r1, #0x4a
 	ldrsh r1, [r4, r1]
 	ldr r0, [r4, #0x40]
@@ -860,7 +860,7 @@ _0211351c: .word 0xffff7fff
 _02113520: .word data_027e103c
 _02113524: .word data_027e0c68
 _02113528: .word data_027e0d54
-_0211352c: .word data_027e0900
+_0211352c: .word gOverlayManager
 _02113530: .word 0x00000002
 
 	.global func_ov09_02113534
@@ -904,10 +904,10 @@ _02113560:
 _0211357a:
 	ldr r0, [r4, #0x40]
 	blx func_ov02_020f4d9c
-	ldr r0, _021135bc ; =data_027e0900
+	ldr r0, _021135bc ; =gOverlayManager
 	ldr r2, _021135c0 ; =0x00000003
 	mov r1, #1
-	bl func_0202ff64
+	bl _ZN14OverlayManager15LoadIfNotLoadedEjj
 	ldr r0, _021135c4 ; =data_027e0c68
 	blx func_02036d6c
 	add r0, r4, #0
@@ -929,7 +929,7 @@ _021135ae:
 _021135b0: .word data_027e077c
 _021135b4: .word 0x04000304
 _021135b8: .word 0xffff7fff
-_021135bc: .word data_027e0900
+_021135bc: .word gOverlayManager
 _021135c0: .word 0x00000003
 _021135c4: .word data_027e0c68
 _021135c8: .word data_027e103c
@@ -17501,7 +17501,7 @@ _0211ca7c:
 	str r5, [r0]
 	ldr r0, _0211cab0 ; =data_ov09_0211f298
 	str r4, [r0]
-	ldr r0, _0211cab4 ; =data_027e0900
+	ldr r0, _0211cab4 ; =gOverlayManager
 	ldr r1, [r0, #8]
 	ldr r0, _0211cab8 ; =0x00000005
 	cmp r1, r0
@@ -17525,7 +17525,7 @@ _0211ca94:
 _0211caa8: .word gInventory
 _0211caac: .word data_ov09_0211f294
 _0211cab0: .word data_ov09_0211f298
-_0211cab4: .word data_027e0900
+_0211cab4: .word gOverlayManager
 _0211cab8: .word 0x00000005
 _0211cabc: .word data_027e1058
 
@@ -17568,7 +17568,7 @@ _0211cae8:
 _0211cb04:
 	ldr r0, _0211cb2c ; =data_ov09_0211f308
 	str r5, [r0]
-	ldr r0, _0211cb30 ; =data_027e0900
+	ldr r0, _0211cb30 ; =gOverlayManager
 	ldr r1, [r0, #8]
 	ldr r0, _0211cb34 ; =0x00000005
 	cmp r1, r0
@@ -17588,7 +17588,7 @@ _0211cb18:
 	thumb_func_end func_ov09_0211cac0
 _0211cb28: .word gInventory
 _0211cb2c: .word data_ov09_0211f308
-_0211cb30: .word data_027e0900
+_0211cb30: .word gOverlayManager
 _0211cb34: .word 0x00000005
 _0211cb38: .word data_027e105c
 

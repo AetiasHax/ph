@@ -868,7 +868,7 @@ _020af1f8:
 	ldr r0, _020af288 ; =gInventory
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r0, #0
 	beq _020af268
 	ldr r1, _020af294 ; =data_027e0f94
@@ -1577,10 +1577,10 @@ func_ov00_020afb6c: ; 0x020afb6c
 	mov r5, r0
 	ldr r6, [r1]
 	mov r0, r6
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r6
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r5, #0
 	ldreqb r1, [sb, #0x81]
 	cmpeq r1, #0
@@ -1882,10 +1882,10 @@ func_ov00_020aff90: ; 0x020aff90
 	ldr r0, _020affe8 ; =gInventory
 	ldr r4, [r0]
 	mov r0, r4
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	cmp r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r1, r6
@@ -2022,10 +2022,10 @@ func_ov00_020b014c: ; 0x020b014c
 	ldr r0, _020b0218 ; =gInventory
 	ldr r6, [r0]
 	mov r0, r6
-	bl func_ov00_020ad414
+	bl _ZNK9Inventory16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r6
-	bl func_ov00_020ad428
+	bl _ZNK9Inventory8GetFairyEj
 	movs r6, r0
 	addeq sp, sp, #0x10
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -2725,7 +2725,7 @@ func_ov00_020b0b0c: ; 0x020b0b0c
 	beq _020b0b80
 	ldr r0, _020b0de0 ; =gInventory
 	ldr r0, [r0]
-	bl func_ov00_020ae390
+	bl _ZNK9Inventory15GetEquippedItemEv
 	ldr r1, _020b0de4 ; =data_027e103c
 	str r0, [r4]
 	ldr r0, [r1]
