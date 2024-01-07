@@ -326,7 +326,7 @@ _02189918:
 	ldr r0, _02189afc ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	blx func_ov00_020ae3d0
+	blx _ZN11ItemManager13ForceEquipItemEj
 	ldr r1, _02189b00 ; =data_027e0fc8
 	mov r0, r7
 	ldr r4, [r1]
@@ -533,7 +533,7 @@ _02189be4:
 	blt _02189be4
 	ldr r0, _02189cd0 ; =gItemManager
 	ldr r0, [r0]
-	blx func_ov00_020ae400
+	blx _ZN11ItemManager20ClearForcedEquipItemEv
 	bl func_ov42_02189ce8
 	mov r1, #0
 	ldr r2, _02189cd4 ; =data_027e0fb8

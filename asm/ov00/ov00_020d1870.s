@@ -2996,7 +2996,7 @@ _020d3f34:
 	ldr r0, _020d3f6c ; =gItemManager
 	ldr r1, [r5, #0x40]
 	ldr r0, [r0]
-	bl func_ov00_020ae3a8
+	bl _ZN11ItemManager15SetEquippedItemEj
 	ldr r0, _020d3f70 ; =data_027e103c
 	mov r1, #1
 	ldr r0, [r0]

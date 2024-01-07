@@ -10,14 +10,14 @@ func_ov56_02198d00: ; 0x02198d00
 	ldr r0, _02198d40 ; =gItemManager
 	mov r1, #3
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	ldr r0, _02198d44 ; =data_ov56_0219940c
 	bl func_ov00_020a9614
 	ldr r0, _02198d40 ; =gItemManager
 	mov r1, #4
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	ldr r0, _02198d48 ; =data_ov56_02199474
 	bl func_ov00_020a9614

@@ -1214,7 +1214,7 @@ _0218a508:
 	blt _0218a5b4
 	ldr r0, _0218a5c4 ; =gItemManager
 	ldr r0, [r0]
-	blx func_ov00_020ae744
+	blx _ZNK11ItemManager21HasTreasurePriceShownEj
 	cmp r0, #0
 	beq _0218a5b4
 	add ip, sp, #0x2c
@@ -1280,7 +1280,7 @@ func_ov45_0218a5e0: ; 0x0218a5e0
 	mov r2, r0
 	ldr r0, [r1]
 	ldr r1, [r2, #0x1c]
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	movgt r0, #1
 	movle r0, #0
@@ -1367,13 +1367,13 @@ func_ov45_0218a6ac: ; 0x0218a6ac
 	strb r1, [r0, r3]
 	ldr r1, [r5, #0x1c]
 	mov r0, r4
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	sub r0, r0, #1
 	mov r2, r0, lsl #0x18
 	ldr r1, [r5, #0x1c]
 	mov r0, r4
 	mov r2, r2, asr #0x18
-	blx func_ov00_020ad920
+	blx _ZN11ItemManager16SetTreasureCountEjj
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218a6ac
@@ -4814,7 +4814,7 @@ _0218d10c:
 	mov r1, r0
 	ldr r2, [r4, #0x1c]
 	mov r0, r5
-	blx func_ov00_020ad8f0
+	blx _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	bgt _0218d16c
 	bl func_ov45_0218c5b4
@@ -5128,7 +5128,7 @@ func_ov45_0218d4d4: ; 0x0218d4d4
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r4
-	blx func_ov00_020ae71c
+	blx _ZN11ItemManager21AddShipPartPriceShownEjj
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218d4d4
@@ -5372,7 +5372,7 @@ func_ov45_0218d714: ; 0x0218d714
 	ldr r0, _0218d7d0 ; =gItemManager
 	ldr r1, [r4, #0x1c]
 	ldr r0, [r0]
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	bgt _0218d764
 	bl func_ov45_0218c5b4
@@ -5425,13 +5425,13 @@ func_ov45_0218d7e4: ; 0x0218d7e4
 	ldr r1, _0218d7fc ; =gItemManager
 	mov r2, r0
 	ldr r0, [r1]
-	ldr ip, _0218d800 ; =func_ov00_020ae76c
+	ldr ip, _0218d800 ; =_ZN11ItemManager21AddTreasurePriceShownEj
 	ldr r1, [r2, #0x1c]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov45_0218d7e4
 _0218d7fc: .word gItemManager
-_0218d800: .word func_ov00_020ae76c
+_0218d800: .word _ZN11ItemManager21AddTreasurePriceShownEj
 
 	.global func_ov45_0218d804
 	arm_func_start func_ov45_0218d804
@@ -5752,7 +5752,7 @@ func_ov45_0218db40: ; 0x0218db40
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	blx func_ov00_020ad8f0
+	blx _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	movle r0, #0
 	ldmleia sp!, {r3, r4, r5, pc}
@@ -6012,7 +6012,7 @@ _0218de84:
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r6
-	blx func_ov00_020ae6f0
+	blx _ZNK11ItemManager21HasShipPartPriceShownEjj
 	cmp r0, #0
 	beq _0218df54
 	add ip, sp, #0x28
@@ -6174,7 +6174,7 @@ func_ov45_0218e010: ; 0x0218e010
 	mov r1, r0
 	mov r0, r6
 	ldr r2, [r4, #0x1c]
-	blx func_ov00_020ad8f0
+	blx _ZNK11ItemManager16GetShipPartCountEjj
 	mov r1, r5
 	ldr r2, [r4, #0x1c]
 	mov r3, r0
@@ -6182,7 +6182,7 @@ func_ov45_0218e010: ; 0x0218e010
 	sub r3, r3, #1
 	mov r3, r3, lsl #0x18
 	mov r3, r3, asr #0x18
-	blx func_ov00_020ad900
+	blx _ZN11ItemManager16SetShipPartCountEjjj
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218e010

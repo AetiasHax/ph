@@ -3,23 +3,23 @@
 
 	.text
 
-	.global func_ov00_020ad528
-	arm_func_start func_ov00_020ad528
-func_ov00_020ad528: ; 0x020ad528
+	.global _ZN11ItemManager18func_ov00_020ad528Ev
+	arm_func_start _ZN11ItemManager18func_ov00_020ad528Ev
+_ZN11ItemManager18func_ov00_020ad528Ev: ; 0x020ad528
 	bx lr
-	arm_func_end func_ov00_020ad528
+	arm_func_end _ZN11ItemManager18func_ov00_020ad528Ev
 
-	.global func_ov00_020ad52c
-	arm_func_start func_ov00_020ad52c
-func_ov00_020ad52c: ; 0x020ad52c
+	.global _ZN11ItemManager12GetItemModelEj
+	arm_func_start _ZN11ItemManager12GetItemModelEj
+_ZN11ItemManager12GetItemModelEj: ; 0x020ad52c
 	add r0, r0, r1, lsl #2
 	ldr r0, [r0, #0xc0]
 	bx lr
-	arm_func_end func_ov00_020ad52c
+	arm_func_end _ZN11ItemManager12GetItemModelEj
 
-	.global func_ov00_020ad538
-	arm_func_start func_ov00_020ad538
-func_ov00_020ad538: ; 0x020ad538
+	.global _ZNK11ItemManager18func_ov00_020ad538Ej
+	arm_func_start _ZNK11ItemManager18func_ov00_020ad538Ej
+_ZNK11ItemManager18func_ov00_020ad538Ej: ; 0x020ad538
 	stmdb sp!, {r4, lr}
 	ldr r0, _020ad55c ; =data_027e0fc4
 	mov r4, r1
@@ -30,12 +30,12 @@ func_ov00_020ad538: ; 0x020ad538
 	bl func_ov00_020c0bdc
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ad538
+	arm_func_end _ZNK11ItemManager18func_ov00_020ad538Ej
 _020ad55c: .word data_027e0fc4
 
-	.global func_ov00_020ad560
-	arm_func_start func_ov00_020ad560
-func_ov00_020ad560: ; 0x020ad560
+	.global _ZNK11ItemManager18func_ov00_020ad560Ej
+	arm_func_start _ZNK11ItemManager18func_ov00_020ad560Ej
+_ZNK11ItemManager18func_ov00_020ad560Ej: ; 0x020ad560
 	stmdb sp!, {r4, lr}
 	ldr r0, _020ad584 ; =data_027e0fc4
 	mov r4, r1
@@ -46,20 +46,20 @@ func_ov00_020ad560: ; 0x020ad560
 	bl func_ov00_020c0bdc
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ad560
+	arm_func_end _ZNK11ItemManager18func_ov00_020ad560Ej
 _020ad584: .word data_027e0fc4
 
-	.global func_ov00_020ad588
-	arm_func_start func_ov00_020ad588
-func_ov00_020ad588: ; 0x020ad588
+	.global _ZN11ItemManager19GetDungeonItemModelEj
+	arm_func_start _ZN11ItemManager19GetDungeonItemModelEj
+_ZN11ItemManager19GetDungeonItemModelEj: ; 0x020ad588
 	add r0, r0, r1, lsl #2
 	ldr r0, [r0, #0x100]
 	bx lr
-	arm_func_end func_ov00_020ad588
+	arm_func_end _ZN11ItemManager19GetDungeonItemModelEj
 
-	.global func_ov00_020ad594
-	arm_func_start func_ov00_020ad594
-func_ov00_020ad594: ; 0x020ad594
+	.global _ZNK11ItemManager18func_ov00_020ad594Ej
+	arm_func_start _ZNK11ItemManager18func_ov00_020ad594Ej
+_ZNK11ItemManager18func_ov00_020ad594Ej: ; 0x020ad594
 	stmdb sp!, {r4, lr}
 	ldr r0, _020ad5b8 ; =data_027e0fc4
 	mov r4, r1
@@ -70,12 +70,12 @@ func_ov00_020ad594: ; 0x020ad594
 	bl func_ov00_020c0bdc
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ad594
+	arm_func_end _ZNK11ItemManager18func_ov00_020ad594Ej
 _020ad5b8: .word data_027e0fc4
 
-	.global func_ov00_020ad5bc
-	arm_func_start func_ov00_020ad5bc
-func_ov00_020ad5bc: ; 0x020ad5bc
+	.global _ZN11ItemManager13Sword_vfunc_38Ev
+	arm_func_start _ZN11ItemManager13Sword_vfunc_38Ev
+_ZN11ItemManager13Sword_vfunc_38Ev: ; 0x020ad5bc
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #0xac]
 	ldr r0, [r0]
@@ -83,11 +83,11 @@ func_ov00_020ad5bc: ; 0x020ad5bc
 	ldr r2, [r2, #0x38]
 	blx r2
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020ad5bc
+	arm_func_end _ZN11ItemManager13Sword_vfunc_38Ev
 
-	.global func_ov00_020ad5d8
-	arm_func_start func_ov00_020ad5d8
-func_ov00_020ad5d8: ; 0x020ad5d8
+	.global _ZN11ItemManager14Shield_vfunc_38Ev
+	arm_func_start _ZN11ItemManager14Shield_vfunc_38Ev
+_ZN11ItemManager14Shield_vfunc_38Ev: ; 0x020ad5d8
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #0xac]
 	ldr r0, [r0, #4]
@@ -95,11 +95,11 @@ func_ov00_020ad5d8: ; 0x020ad5d8
 	ldr r2, [r2, #0x38]
 	blx r2
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020ad5d8
+	arm_func_end _ZN11ItemManager14Shield_vfunc_38Ev
 
-	.global func_ov00_020ad5f4
-	arm_func_start func_ov00_020ad5f4
-func_ov00_020ad5f4: ; 0x020ad5f4
+	.global _ZN11ItemManager17EquipItem_vfunc_38Ev
+	arm_func_start _ZN11ItemManager17EquipItem_vfunc_38Ev
+_ZN11ItemManager17EquipItem_vfunc_38Ev: ; 0x020ad5f4
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r2, _020ad670 ; =data_027e0618
 	mov r5, r0
@@ -107,10 +107,10 @@ func_ov00_020ad5f4: ; 0x020ad5f4
 	mov r4, r1
 	cmp r2, #6
 	beq _020ad620
-	bl func_ov00_020ad5bc
+	bl _ZN11ItemManager13Sword_vfunc_38Ev
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_020ad5d8
+	bl _ZN11ItemManager14Shield_vfunc_38Ev
 _020ad620:
 	ldr r0, _020ad674 ; =data_027e0d38
 	ldr r0, [r0]
@@ -133,13 +133,13 @@ _020ad620:
 	blx r2
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ad5f4
+	arm_func_end _ZN11ItemManager17EquipItem_vfunc_38Ev
 _020ad670: .word data_027e0618
 _020ad674: .word data_027e0d38
 
-	.global func_ov00_020ad678
-	arm_func_start func_ov00_020ad678
-func_ov00_020ad678: ; 0x020ad678
+	.global _ZN11ItemManager18func_ov00_020ad678Ejjj
+	arm_func_start _ZN11ItemManager18func_ov00_020ad678Ejjj
+_ZN11ItemManager18func_ov00_020ad678Ejjj: ; 0x020ad678
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x10
 	mov r6, r0
@@ -174,11 +174,11 @@ _020ad6ec:
 	mov r0, #0
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_020ad678
+	arm_func_end _ZN11ItemManager18func_ov00_020ad678Ejjj
 
-	.global func_ov00_020ad6f8
-	arm_func_start func_ov00_020ad6f8
-func_ov00_020ad6f8: ; 0x020ad6f8
+	.global _ZN11ItemManager17EquipItem_vfunc_2cEj
+	arm_func_start _ZN11ItemManager17EquipItem_vfunc_2cEj
+_ZN11ItemManager17EquipItem_vfunc_2cEj: ; 0x020ad6f8
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #0xac]
 	ldr r0, [r0, r1, lsl #2]
@@ -186,31 +186,31 @@ func_ov00_020ad6f8: ; 0x020ad6f8
 	ldr r1, [r1, #0x2c]
 	blx r1
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020ad6f8
+	arm_func_end _ZN11ItemManager17EquipItem_vfunc_2cEj
 
-	.global func_ov00_020ad714
-	arm_func_start func_ov00_020ad714
-func_ov00_020ad714: ; 0x020ad714
+	.global _ZN11ItemManager12GetEquipItemEj
+	arm_func_start _ZN11ItemManager12GetEquipItemEj
+_ZN11ItemManager12GetEquipItemEj: ; 0x020ad714
 	mvn r2, #0
 	cmp r1, r2
 	moveq r0, #0
 	ldrne r0, [r0, #0xac]
 	ldrne r0, [r0, r1, lsl #2]
 	bx lr
-	arm_func_end func_ov00_020ad714
+	arm_func_end _ZN11ItemManager12GetEquipItemEj
 
-	.global func_ov00_020ad72c
-	arm_func_start func_ov00_020ad72c
-func_ov00_020ad72c: ; 0x020ad72c
+	.global _ZNK11ItemManager7GetAmmoEj
+	arm_func_start _ZNK11ItemManager7GetAmmoEj
+_ZNK11ItemManager7GetAmmoEj: ; 0x020ad72c
 	ldr r2, [r0, #0xb0]
 	mov r0, r1, lsl #0x1
 	ldrh r0, [r2, r0]
 	bx lr
-	arm_func_end func_ov00_020ad72c
+	arm_func_end _ZNK11ItemManager7GetAmmoEj
 
-	.global func_ov00_020ad73c
-	arm_func_start func_ov00_020ad73c
-func_ov00_020ad73c: ; 0x020ad73c
+	.global _ZN11ItemManager8GiveAmmoEjj
+	arm_func_start _ZN11ItemManager8GiveAmmoEjj
+_ZN11ItemManager8GiveAmmoEjj: ; 0x020ad73c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
@@ -219,7 +219,7 @@ func_ov00_020ad73c: ; 0x020ad73c
 	ldrh r3, [lr, ip]
 	add r2, r3, r2
 	strh r2, [lr, ip]
-	blx func_ov00_020ad9a0
+	blx _ZNK11ItemManager10GetMaxAmmoEj
 	ldr r2, [r5, #0xb0]
 	mov r1, r4, lsl #0x1
 	ldrh r1, [r2, r1]
@@ -227,16 +227,16 @@ func_ov00_020ad73c: ; 0x020ad73c
 	ldmlsia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	mov r1, r4
-	blx func_ov00_020ad9a0
+	blx _ZNK11ItemManager10GetMaxAmmoEj
 	ldr r2, [r5, #0xb0]
 	mov r1, r4, lsl #0x1
 	strh r0, [r2, r1]
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020ad73c
+	arm_func_end _ZN11ItemManager8GiveAmmoEjj
 
-	.global func_ov00_020ad790
-	arm_func_start func_ov00_020ad790
-func_ov00_020ad790: ; 0x020ad790
+	.global _ZN11ItemManager18func_ov00_020ad790Ej
+	arm_func_start _ZN11ItemManager18func_ov00_020ad790Ej
+_ZN11ItemManager18func_ov00_020ad790Ej: ; 0x020ad790
 	stmdb sp!, {r4, r5, r6, lr}
 	ldr r2, _020ad8c4 ; =data_027e0d38
 	mov r6, r0
@@ -312,7 +312,7 @@ _020ad874:
 _020ad89c:
 	mov r0, r6
 	mov r1, r4
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, r5
 	ldr r2, [r2, #0x14]
@@ -322,7 +322,7 @@ _020ad8bc:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ad790
+	arm_func_end _ZN11ItemManager18func_ov00_020ad790Ej
 _020ad8c4: .word data_027e0d38
 _020ad8c8: .word data_027e10a4
 _020ad8cc: .word gOverlayManager
@@ -331,27 +331,27 @@ _020ad8d4: .word data_ov29_0217a4ac
 _020ad8d8: .word data_027e0e60
 _020ad8dc: .word data_027e0fc8
 
-	.global func_ov00_020ad8e0
-	thumb_func_start func_ov00_020ad8e0
-func_ov00_020ad8e0: ; 0x020ad8e0
+	.global _ZNK11ItemManager19GetEquippedShipPartEj
+	thumb_func_start _ZNK11ItemManager19GetEquippedShipPartEj
+_ZNK11ItemManager19GetEquippedShipPartEj: ; 0x020ad8e0
 	lsl r1, r1, #2
 	add r0, r0, r1
 	ldr r0, [r0, #0x28]
 	bx lr
-	thumb_func_end func_ov00_020ad8e0
+	thumb_func_end _ZNK11ItemManager19GetEquippedShipPartEj
 
-	.global func_ov00_020ad8e8
-	thumb_func_start func_ov00_020ad8e8
-func_ov00_020ad8e8: ; 0x020ad8e8
+	.global _ZN11ItemManager13EquipShipPartEjj
+	thumb_func_start _ZN11ItemManager13EquipShipPartEjj
+_ZN11ItemManager13EquipShipPartEjj: ; 0x020ad8e8
 	lsl r1, r1, #2
 	add r0, r0, r1
 	str r2, [r0, #0x28]
 	bx lr
-	thumb_func_end func_ov00_020ad8e8
+	thumb_func_end _ZN11ItemManager13EquipShipPartEjj
 
-	.global func_ov00_020ad8f0
-	thumb_func_start func_ov00_020ad8f0
-func_ov00_020ad8f0: ; 0x020ad8f0
+	.global _ZNK11ItemManager16GetShipPartCountEjj
+	thumb_func_start _ZNK11ItemManager16GetShipPartCountEjj
+_ZNK11ItemManager16GetShipPartCountEjj: ; 0x020ad8f0
 	lsl r3, r1, #3
 	add r1, r1, r3
 	add r0, r0, r1
@@ -360,11 +360,11 @@ func_ov00_020ad8f0: ; 0x020ad8f0
 	ldrsb r0, [r1, r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ad8f0
+	thumb_func_end _ZNK11ItemManager16GetShipPartCountEjj
 
-	.global func_ov00_020ad900
-	thumb_func_start func_ov00_020ad900
-func_ov00_020ad900: ; 0x020ad900
+	.global _ZN11ItemManager16SetShipPartCountEjjj
+	thumb_func_start _ZN11ItemManager16SetShipPartCountEjjj
+_ZN11ItemManager16SetShipPartCountEjjj: ; 0x020ad900
 	push {r3, r4}
 	cmp r3, #0x63
 	ble _020ad908
@@ -378,20 +378,20 @@ _020ad908:
 	strb r3, [r0]
 	pop {r3, r4}
 	bx lr
-	thumb_func_end func_ov00_020ad900
+	thumb_func_end _ZN11ItemManager16SetShipPartCountEjjj
 
-	.global func_ov00_020ad918
-	thumb_func_start func_ov00_020ad918
-func_ov00_020ad918: ; 0x020ad918
+	.global _ZNK11ItemManager16GetTreasureCountEj
+	thumb_func_start _ZNK11ItemManager16GetTreasureCountEj
+_ZNK11ItemManager16GetTreasureCountEj: ; 0x020ad918
 	add r1, r0, r1
 	mov r0, #0x90
 	ldrsb r0, [r1, r0]
 	bx lr
-	thumb_func_end func_ov00_020ad918
+	thumb_func_end _ZNK11ItemManager16GetTreasureCountEj
 
-	.global func_ov00_020ad920
-	thumb_func_start func_ov00_020ad920
-func_ov00_020ad920: ; 0x020ad920
+	.global _ZN11ItemManager16SetTreasureCountEjj
+	thumb_func_start _ZN11ItemManager16SetTreasureCountEjj
+_ZN11ItemManager16SetTreasureCountEjj: ; 0x020ad920
 	cmp r2, #0x63
 	ble _020ad926
 	mov r2, #0x63
@@ -401,31 +401,31 @@ _020ad926:
 	strb r2, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ad920
+	thumb_func_end _ZN11ItemManager16SetTreasureCountEjj
 
-	.global func_ov00_020ad930
-	thumb_func_start func_ov00_020ad930
-func_ov00_020ad930: ; 0x020ad930
+	.global _ZNK11ItemManager10GetUnk_098Ej
+	thumb_func_start _ZNK11ItemManager10GetUnk_098Ej
+_ZNK11ItemManager10GetUnk_098Ej: ; 0x020ad930
 	add r0, r0, r1
 	add r0, #0x98
 	ldrb r0, [r0]
 	bx lr
-	thumb_func_end func_ov00_020ad930
+	thumb_func_end _ZNK11ItemManager10GetUnk_098Ej
 
-	.global func_ov00_020ad938
-	thumb_func_start func_ov00_020ad938
-func_ov00_020ad938: ; 0x020ad938
+	.global _ZNK11ItemManager10GetUnk_09eEj
+	thumb_func_start _ZNK11ItemManager10GetUnk_09eEj
+_ZNK11ItemManager10GetUnk_09eEj: ; 0x020ad938
 	lsl r1, r1, #1
 	add r0, r0, r1
 	add r0, #0x9e
 	ldrh r0, [r0]
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ad938
+	thumb_func_end _ZNK11ItemManager10GetUnk_09eEj
 
-	.global func_ov00_020ad944
-	thumb_func_start func_ov00_020ad944
-func_ov00_020ad944: ; 0x020ad944
+	.global _ZNK11ItemManager18GetUnk_09e_DividedEj
+	thumb_func_start _ZNK11ItemManager18GetUnk_09e_DividedEj
+_ZNK11ItemManager18GetUnk_09e_DividedEj: ; 0x020ad944
 	push {r3, lr}
 	lsl r1, r1, #1
 	add r0, r0, r1
@@ -444,12 +444,12 @@ func_ov00_020ad944: ; 0x020ad944
 _020ad964:
 	pop {r3, pc}
 	nop
-	thumb_func_end func_ov00_020ad944
+	thumb_func_end _ZNK11ItemManager18GetUnk_09e_DividedEj
 _020ad968: .word 0x000028a4
 
-	.global func_ov00_020ad96c
-	thumb_func_start func_ov00_020ad96c
-func_ov00_020ad96c: ; 0x020ad96c
+	.global _ZN11ItemManager10SetUnk_09eEjj
+	thumb_func_start _ZN11ItemManager10SetUnk_09eEjj
+_ZN11ItemManager10SetUnk_09eEjj: ; 0x020ad96c
 	push {r3, r4}
 	add r4, r0, #0
 	add r4, #0x98
@@ -477,12 +477,12 @@ _020ad996:
 	pop {r3, r4}
 	bx lr
 	nop
-	thumb_func_end func_ov00_020ad96c
+	thumb_func_end _ZN11ItemManager10SetUnk_09eEjj
 _020ad99c: .word 0x0000270f
 
-	.global func_ov00_020ad9a0
-	thumb_func_start func_ov00_020ad9a0
-func_ov00_020ad9a0: ; 0x020ad9a0
+	.global _ZNK11ItemManager10GetMaxAmmoEj
+	thumb_func_start _ZNK11ItemManager10GetMaxAmmoEj
+_ZNK11ItemManager10GetMaxAmmoEj: ; 0x020ad9a0
 	cmp r1, #4
 	beq _020ad9ba
 	cmp r1, #5
@@ -515,27 +515,27 @@ _020ad9d2:
 	mov r0, #1
 	bx lr
 	nop
-	thumb_func_end func_ov00_020ad9a0
+	thumb_func_end _ZNK11ItemManager10GetMaxAmmoEj
 _020ad9d8: .word data_ov00_020dc6c6
 _020ad9dc: .word data_ov00_020dc6cc
 
-	.global func_ov00_020ad9e0
-	thumb_func_start func_ov00_020ad9e0
-func_ov00_020ad9e0: ; 0x020ad9e0
+	.global _ZNK11ItemManager19GetMaxShipPartCountEv
+	thumb_func_start _ZNK11ItemManager19GetMaxShipPartCountEv
+_ZNK11ItemManager19GetMaxShipPartCountEv: ; 0x020ad9e0
 	mov r0, #0x63
 	bx lr
-	thumb_func_end func_ov00_020ad9e0
+	thumb_func_end _ZNK11ItemManager19GetMaxShipPartCountEv
 
-	.global func_ov00_020ad9e4
-	thumb_func_start func_ov00_020ad9e4
-func_ov00_020ad9e4: ; 0x020ad9e4
+	.global _ZNK11ItemManager19GetMaxTreasureCountEv
+	thumb_func_start _ZNK11ItemManager19GetMaxTreasureCountEv
+_ZNK11ItemManager19GetMaxTreasureCountEv: ; 0x020ad9e4
 	mov r0, #0x63
 	bx lr
-	thumb_func_end func_ov00_020ad9e4
+	thumb_func_end _ZNK11ItemManager19GetMaxTreasureCountEv
 
-	.global func_ov00_020ad9e8
-	arm_func_start func_ov00_020ad9e8
-func_ov00_020ad9e8: ; 0x020ad9e8
+	.global _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	arm_func_start _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+_ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj: ; 0x020ad9e8
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	ldr r3, [r5, #0x10]
@@ -559,13 +559,13 @@ _020ada24:
 	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020ad9e8
+	arm_func_end _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 
-	.global func_ov00_020ada48
-	arm_func_start func_ov00_020ada48
-func_ov00_020ada48: ; 0x020ada48
+	.global _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
+	arm_func_start _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
+_ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj: ; 0x020ada48
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	add r1, r4, #0x1a
@@ -578,7 +578,7 @@ func_ov00_020ada48: ; 0x020ada48
 	add r1, r4, #0x17
 	bl _ZN11ItemManager7HasItemEj
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020ada48
+	arm_func_end _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 
 	.global _ZN11ItemManager7HasItemEj
 	arm_func_start _ZN11ItemManager7HasItemEj
@@ -593,9 +593,9 @@ _ZN11ItemManager7HasItemEj: ; 0x020ada78
 	bx lr
 	arm_func_end _ZN11ItemManager7HasItemEj
 
-	.global func_ov00_020ada98
-	thumb_func_start func_ov00_020ada98
-func_ov00_020ada98: ; 0x020ada98
+	.global _ZN11ItemManager7AddItemEj
+	thumb_func_start _ZN11ItemManager7AddItemEj
+_ZN11ItemManager7AddItemEj: ; 0x020ada98
 	push {r4, r5}
 	mov r2, #0x4a
 	lsl r2, r2, #2
@@ -614,11 +614,11 @@ func_ov00_020ada98: ; 0x020ada98
 	pop {r4, r5}
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ada98
+	thumb_func_end _ZN11ItemManager7AddItemEj
 
-	.global func_ov00_020adabc
-	arm_func_start func_ov00_020adabc
-func_ov00_020adabc: ; 0x020adabc
+	.global _ZNK11ItemManager21HasShipPartPriceShownEj
+	arm_func_start _ZNK11ItemManager21HasShipPartPriceShownEj
+_ZNK11ItemManager21HasShipPartPriceShownEj: ; 0x020adabc
 	mov r2, r1, lsr #5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x138]
@@ -627,11 +627,11 @@ func_ov00_020adabc: ; 0x020adabc
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end func_ov00_020adabc
+	arm_func_end _ZNK11ItemManager21HasShipPartPriceShownEj
 
-	.global func_ov00_020adadc
-	thumb_func_start func_ov00_020adadc
-func_ov00_020adadc: ; 0x020adadc
+	.global _ZN11ItemManager21AddShipPartPriceShownEj
+	thumb_func_start _ZN11ItemManager21AddShipPartPriceShownEj
+_ZN11ItemManager21AddShipPartPriceShownEj: ; 0x020adadc
 	push {r4, r5}
 	mov r2, #0x4e
 	lsl r2, r2, #2
@@ -650,11 +650,11 @@ func_ov00_020adadc: ; 0x020adadc
 	pop {r4, r5}
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020adadc
+	thumb_func_end _ZN11ItemManager21AddShipPartPriceShownEj
 
-	.global func_ov00_020adb00
-	thumb_func_start func_ov00_020adb00
-func_ov00_020adb00: ; 0x020adb00
+	.global _ZN11ItemManager10RemoveItemEj
+	thumb_func_start _ZN11ItemManager10RemoveItemEj
+_ZN11ItemManager10RemoveItemEj: ; 0x020adb00
 	push {r3, r4, r5, r6}
 	mov r2, #0x4a
 	lsl r2, r2, #2
@@ -680,11 +680,11 @@ func_ov00_020adb00: ; 0x020adb00
 _020adb2c:
 	pop {r3, r4, r5, r6}
 	bx lr
-	thumb_func_end func_ov00_020adb00
+	thumb_func_end _ZN11ItemManager10RemoveItemEj
 
-	.global func_ov00_020adb30
-	thumb_func_start func_ov00_020adb30
-func_ov00_020adb30: ; 0x020adb30
+	.global _ZN11ItemManager15LoadFanfareItemEj
+	thumb_func_start _ZN11ItemManager15LoadFanfareItemEj
+_ZN11ItemManager15LoadFanfareItemEj: ; 0x020adb30
 	push {r4, r5, lr}
 	sub sp, #0x10c
 	add r5, r0, #0
@@ -869,7 +869,7 @@ _020adc7c:
 	add sp, #0x10c
 	pop {r4, r5, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020adb30
+	thumb_func_end _ZN11ItemManager15LoadFanfareItemEj
 _020adc8c: .word data_027e1058
 _020adc90: .word data_027e105c
 _020adc94: .word data_ov00_020e5df8
@@ -878,9 +878,9 @@ _020adc9c: .word data_ov00_020e5c9c
 _020adca0: .word data_ov00_020e5db4
 _020adca4: .word data_ov00_020e5dd4
 
-	.global func_ov00_020adca8
-	thumb_func_start func_ov00_020adca8
-func_ov00_020adca8: ; 0x020adca8
+	.global _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
+	thumb_func_start _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
+_ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p: ; 0x020adca8
 	mov r2, #0x46
 	lsl r2, r2, #2
 	ldr r0, [r0, r2]
@@ -910,12 +910,12 @@ _020adcd4:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020adca8
+	thumb_func_end _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 _020adcd8: .word 0x00001666
 
-	.global func_ov00_020adcdc
-	thumb_func_start func_ov00_020adcdc
-func_ov00_020adcdc: ; 0x020adcdc
+	.global _ZN11ItemManager8GiveItemEjjj
+	thumb_func_start _ZN11ItemManager8GiveItemEjjj
+_ZN11ItemManager8GiveItemEjjj: ; 0x020adcdc
 	push {r3, r4, r5, lr}
 	cmp r1, #0x76
 	bgt _020addd2
@@ -1092,7 +1092,7 @@ _020addfc:
 _020addfe:
 	cmp r1, #0x7b
 	bne _020ade04
-	thumb_func_end func_ov00_020adcdc
+	thumb_func_end _ZN11ItemManager8GiveItemEjjj
 _020ade02:
 	b _020ae198
 _020ade04:
@@ -1133,38 +1133,38 @@ _020ade34:
 	b _020ae1fe
 _020ade36:
 	mov r1, #1
-	bl func_ov00_020ae368
+	bl _ZN11ItemManager8GiveKeysEj
 	b _020ae222
 _020ade3e:
 	mov r1, #1
 	add r2, r1, #0
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade48:
 	mov r1, #5
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade52:
 	mov r1, #0x14
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade5c:
 	mov r1, #0x64
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade66:
 	mov r1, #0xc8
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade70:
 	mov r1, #0x4b
 	lsl r1, r1, #2
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ade7c:
 	mov r2, #0x4a
@@ -1174,7 +1174,7 @@ _020ade7c:
 	orr r1, r3
 	str r1, [r0, r2]
 	mov r1, #0
-	blx func_ov00_020ad714
+	blx _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x20]
@@ -1188,7 +1188,7 @@ _020ade98:
 	orr r1, r3
 	str r1, [r0, r2]
 	mov r1, #1
-	blx func_ov00_020ad714
+	blx _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x20]
@@ -1197,37 +1197,37 @@ _020ade98:
 _020adeb4:
 	mov r1, #4
 	mov r2, #0xa
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adebe:
 	mov r1, #7
 	mov r2, #0xa
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adec8:
 	mov r1, #5
 	mov r2, #0x14
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020aded2:
 	mov r1, #2
 	mov r2, #1
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adedc:
 	mov r1, #3
 	mov r2, #1
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adee6:
 	mov r1, #8
 	mov r2, #1
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adef0:
 	mov r1, #6
 	mov r2, #1
-	bl func_ov00_020ae278
+	bl _ZN11ItemManager13GiveEquipItemEjj
 	b _020ae222
 _020adefa:
 	mov r1, #0x4b
@@ -1352,13 +1352,13 @@ _020adfd8:
 	blx func_ov00_0209779c
 	b _020ae222
 _020adff2:
-	bl func_ov00_020ae458
+	bl _ZN11ItemManager13UpgradeQuiverEv
 	b _020ae222
 _020adff8:
-	bl func_ov00_020ae484
+	bl _ZN11ItemManager14UpgradeBombBagEv
 	b _020ae222
 _020adffe:
-	bl func_ov00_020ae4b0
+	bl _ZN11ItemManager17UpgradeBombchuBagEv
 	b _020ae222
 _020ae004:
 	mov r2, #0x4b
@@ -1513,7 +1513,7 @@ _020ae10e:
 	cmp r2, #0
 	bne _020ae120
 	mov r2, #1
-	blx func_ov00_020ae50c
+	blx _ZN11ItemManager9SetPotionEjj
 	b _020ae222
 _020ae120:
 	add r1, r1, #1
@@ -1529,7 +1529,7 @@ _020ae12a:
 	cmp r2, #0
 	bne _020ae13c
 	mov r2, #2
-	blx func_ov00_020ae50c
+	blx _ZN11ItemManager9SetPotionEjj
 	b _020ae222
 _020ae13c:
 	add r1, r1, #1
@@ -1545,7 +1545,7 @@ _020ae146:
 	cmp r2, #0
 	bne _020ae158
 	mov r2, #3
-	blx func_ov00_020ae50c
+	blx _ZN11ItemManager9SetPotionEjj
 	b _020ae222
 _020ae158:
 	add r1, r1, #1
@@ -1622,13 +1622,13 @@ _020ae1e6:
 	mov r1, #9
 	mvn r1, r1
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ae1f2:
 	mov r1, #0x31
 	mvn r1, r1
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	b _020ae222
 _020ae1fe:
 	cmp r1, #0x4b
@@ -1686,9 +1686,9 @@ _020ae270:
 	nop
 _020ae274: .word data_027e0f74
 
-	.global func_ov00_020ae278
-	thumb_func_start func_ov00_020ae278
-func_ov00_020ae278: ; 0x020ae278
+	.global _ZN11ItemManager13GiveEquipItemEjj
+	thumb_func_start _ZN11ItemManager13GiveEquipItemEjj
+_ZN11ItemManager13GiveEquipItemEjj: ; 0x020ae278
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r1, #0
 	str r2, [sp]
@@ -1709,7 +1709,7 @@ func_ov00_020ae278: ; 0x020ae278
 	mov r5, ip
 	orr r3, r5
 	str r3, [r2, r7]
-	blx func_ov00_020ad714
+	blx _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	ldr r1, [sp]
 	ldr r2, [r2, #0x20]
@@ -1725,11 +1725,11 @@ func_ov00_020ae278: ; 0x020ae278
 _020ae2bc:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae278
+	thumb_func_end _ZN11ItemManager13GiveEquipItemEjj
 
-	.global func_ov00_020ae2c0
-	thumb_func_start func_ov00_020ae2c0
-func_ov00_020ae2c0: ; 0x020ae2c0
+	.global _ZN11ItemManager13UnequipPotionEv
+	thumb_func_start _ZN11ItemManager13UnequipPotionEv
+_ZN11ItemManager13UnequipPotionEv: ; 0x020ae2c0
 	push {r3, lr}
 	ldr r1, [r0]
 	cmp r1, #9
@@ -1737,34 +1737,34 @@ func_ov00_020ae2c0: ; 0x020ae2c0
 	cmp r1, #0xa
 	bne _020ae2d0
 _020ae2cc:
-	blx func_ov00_020ae3c0
+	blx _ZN11ItemManager17EquipPreviousItemEv
 _020ae2d0:
 	pop {r3, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae2c0
+	thumb_func_end _ZN11ItemManager13UnequipPotionEv
 
-	.global func_ov00_020ae2d4
-	arm_func_start func_ov00_020ae2d4
-func_ov00_020ae2d4: ; 0x020ae2d4
+	.global _ZNK11ItemManager12GetMaxRupeesEv
+	arm_func_start _ZNK11ItemManager12GetMaxRupeesEv
+_ZNK11ItemManager12GetMaxRupeesEv: ; 0x020ae2d4
 	ldr r0, _020ae2dc ; =0x0000270f
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_020ae2d4
+	arm_func_end _ZNK11ItemManager12GetMaxRupeesEv
 _020ae2dc: .word 0x0000270f
 
-	.global func_ov00_020ae2e0
-	arm_func_start func_ov00_020ae2e0
-func_ov00_020ae2e0: ; 0x020ae2e0
+	.global _ZN11ItemManager10GiveRupeesEjj
+	arm_func_start _ZN11ItemManager10GiveRupeesEjj
+_ZN11ItemManager10GiveRupeesEjj: ; 0x020ae2e0
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrh r3, [r6, #0x22]
 	mov r5, r2
 	add r4, r3, r1
-	bl func_ov00_020ae2d4
+	bl _ZNK11ItemManager12GetMaxRupeesEv
 	cmp r4, r0
 	ble _020ae310
 	mov r0, r6
-	bl func_ov00_020ae2d4
+	bl _ZNK11ItemManager12GetMaxRupeesEv
 	mov r4, r0
 	b _020ae318
 _020ae310:
@@ -1786,24 +1786,24 @@ _020ae344:
 	strh r4, [r6, #0x22]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020ae2e0
+	arm_func_end _ZN11ItemManager10GiveRupeesEjj
 _020ae34c: .word data_027e103c
 
-	.global func_ov00_020ae350
-	arm_func_start func_ov00_020ae350
-func_ov00_020ae350: ; 0x020ae350
+	.global _ZNK11ItemManager18func_ov00_020ae350Ev
+	arm_func_start _ZNK11ItemManager18func_ov00_020ae350Ev
+_ZNK11ItemManager18func_ov00_020ae350Ev: ; 0x020ae350
 	ldr r0, _020ae360 ; =data_027e0e60
 	ldr ip, _020ae364 ; =func_ov00_02084b14
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_020ae350
+	arm_func_end _ZNK11ItemManager18func_ov00_020ae350Ev
 _020ae360: .word data_027e0e60
 _020ae364: .word func_ov00_02084b14
 
-	.global func_ov00_020ae368
-	thumb_func_start func_ov00_020ae368
-func_ov00_020ae368: ; 0x020ae368
+	.global _ZN11ItemManager8GiveKeysEj
+	thumb_func_start _ZN11ItemManager8GiveKeysEj
+_ZN11ItemManager8GiveKeysEj: ; 0x020ae368
 	push {r4, lr}
 	ldr r0, _020ae38c ; =data_027e0e60
 	add r4, r1, #0
@@ -1823,7 +1823,7 @@ _020ae382:
 	blx func_ov00_02084b08
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae368
+	thumb_func_end _ZN11ItemManager8GiveKeysEj
 _020ae38c: .word data_027e0e60
 
 	.global _ZNK11ItemManager15GetEquippedItemEv
@@ -1837,30 +1837,30 @@ _ZNK11ItemManager15GetEquippedItemEv: ; 0x020ae390
 	bx lr
 	arm_func_end _ZNK11ItemManager15GetEquippedItemEv
 
-	.global func_ov00_020ae3a8
-	arm_func_start func_ov00_020ae3a8
-func_ov00_020ae3a8: ; 0x020ae3a8
+	.global _ZN11ItemManager15SetEquippedItemEj
+	arm_func_start _ZN11ItemManager15SetEquippedItemEj
+_ZN11ItemManager15SetEquippedItemEj: ; 0x020ae3a8
 	ldr r3, [r0]
 	mov r2, #2
 	stmia r0, {r1, r3}
 	strh r2, [r0, #0x20]
 	mov r0, #1
 	bx lr
-	arm_func_end func_ov00_020ae3a8
+	arm_func_end _ZN11ItemManager15SetEquippedItemEj
 
-	.global func_ov00_020ae3c0
-	arm_func_start func_ov00_020ae3c0
-func_ov00_020ae3c0: ; 0x020ae3c0
-	ldr ip, _020ae3cc ; =func_ov00_020ae3a8
+	.global _ZN11ItemManager17EquipPreviousItemEv
+	arm_func_start _ZN11ItemManager17EquipPreviousItemEv
+_ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
+	ldr ip, _020ae3cc ; =_ZN11ItemManager15SetEquippedItemEj
 	ldr r1, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_020ae3c0
-_020ae3cc: .word func_ov00_020ae3a8
+	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
 
-	.global func_ov00_020ae3d0
-	thumb_func_start func_ov00_020ae3d0
-func_ov00_020ae3d0: ; 0x020ae3d0
+	.global _ZN11ItemManager13ForceEquipItemEj
+	thumb_func_start _ZN11ItemManager13ForceEquipItemEj
+_ZN11ItemManager13ForceEquipItemEj: ; 0x020ae3d0
 	push {r3, r4, r5, r6, r7, lr}
 	mov r4, #0
 	add r6, r0, #0
@@ -1887,11 +1887,11 @@ _020ae3ee:
 	strh r0, [r6, #0x20]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae3d0
+	thumb_func_end _ZN11ItemManager13ForceEquipItemEj
 
-	.global func_ov00_020ae400
-	thumb_func_start func_ov00_020ae400
-func_ov00_020ae400: ; 0x020ae400
+	.global _ZN11ItemManager20ClearForcedEquipItemEv
+	thumb_func_start _ZN11ItemManager20ClearForcedEquipItemEv
+_ZN11ItemManager20ClearForcedEquipItemEv: ; 0x020ae400
 	push {r3, lr}
 	mov r2, #0
 	mvn r2, r2
@@ -1899,37 +1899,37 @@ func_ov00_020ae400: ; 0x020ae400
 	ldr r1, [r0]
 	cmp r1, r2
 	beq _020ae414
-	blx func_ov00_020ae3a8
+	blx _ZN11ItemManager15SetEquippedItemEj
 	pop {r3, pc}
 _020ae414:
 	mov r0, #0
 	pop {r3, pc}
-	thumb_func_end func_ov00_020ae400
+	thumb_func_end _ZN11ItemManager20ClearForcedEquipItemEv
 
-	.global func_ov00_020ae418
-	arm_func_start func_ov00_020ae418
-func_ov00_020ae418: ; 0x020ae418
+	.global _ZN11ItemManager22UpdateSwordShieldInUseEv
+	arm_func_start _ZN11ItemManager22UpdateSwordShieldInUseEv
+_ZN11ItemManager22UpdateSwordShieldInUseEv: ; 0x020ae418
 	stmdb sp!, {r4, lr}
 	mov r1, #0
 	mov r4, r0
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x28]
 	blx r2
 	mov r0, r4
 	mov r1, #1
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x28]
 	blx r2
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_020ae418
+	arm_func_end _ZN11ItemManager22UpdateSwordShieldInUseEv
 
-	.global func_ov00_020ae458
-	thumb_func_start func_ov00_020ae458
-func_ov00_020ae458: ; 0x020ae458
+	.global _ZN11ItemManager13UpgradeQuiverEv
+	thumb_func_start _ZN11ItemManager13UpgradeQuiverEv
+_ZN11ItemManager13UpgradeQuiverEv: ; 0x020ae458
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, #0xb4
@@ -1946,17 +1946,17 @@ func_ov00_020ae458: ; 0x020ae458
 _020ae472:
 	add r0, r4, #0
 	mov r1, #5
-	bl func_ov00_020ad9a0
+	bl _ZNK11ItemManager10GetMaxAmmoEj
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #0xa]
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae458
+	thumb_func_end _ZN11ItemManager13UpgradeQuiverEv
 
-	.global func_ov00_020ae484
-	thumb_func_start func_ov00_020ae484
-func_ov00_020ae484: ; 0x020ae484
+	.global _ZN11ItemManager14UpgradeBombBagEv
+	thumb_func_start _ZN11ItemManager14UpgradeBombBagEv
+_ZN11ItemManager14UpgradeBombBagEv: ; 0x020ae484
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, #0xb6
@@ -1973,17 +1973,17 @@ func_ov00_020ae484: ; 0x020ae484
 _020ae49e:
 	add r0, r4, #0
 	mov r1, #4
-	bl func_ov00_020ad9a0
+	bl _ZNK11ItemManager10GetMaxAmmoEj
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #8]
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae484
+	thumb_func_end _ZN11ItemManager14UpgradeBombBagEv
 
-	.global func_ov00_020ae4b0
-	thumb_func_start func_ov00_020ae4b0
-func_ov00_020ae4b0: ; 0x020ae4b0
+	.global _ZN11ItemManager17UpgradeBombchuBagEv
+	thumb_func_start _ZN11ItemManager17UpgradeBombchuBagEv
+_ZN11ItemManager17UpgradeBombchuBagEv: ; 0x020ae4b0
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, #0xb8
@@ -2000,17 +2000,17 @@ func_ov00_020ae4b0: ; 0x020ae4b0
 _020ae4ca:
 	add r0, r4, #0
 	mov r1, #7
-	bl func_ov00_020ad9a0
+	bl _ZNK11ItemManager10GetMaxAmmoEj
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #0xe]
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020ae4b0
+	thumb_func_end _ZN11ItemManager17UpgradeBombchuBagEv
 
-	.global func_ov00_020ae4dc
-	arm_func_start func_ov00_020ae4dc
-func_ov00_020ae4dc: ; 0x020ae4dc
+	.global _ZN11ItemManager18func_ov00_020ae4dcEj
+	arm_func_start _ZN11ItemManager18func_ov00_020ae4dcEj
+_ZN11ItemManager18func_ov00_020ae4dcEj: ; 0x020ae4dc
 	ldrh r3, [r0, #0xba]
 	add r2, r3, r1
 	cmp r2, #9
@@ -2023,11 +2023,11 @@ func_ov00_020ae4dc: ; 0x020ae4dc
 	strlth r1, [r0, #0xba]
 	strgeh r2, [r0, #0xba]
 	bx lr
-	arm_func_end func_ov00_020ae4dc
+	arm_func_end _ZN11ItemManager18func_ov00_020ae4dcEj
 
-	.global func_ov00_020ae50c
-	arm_func_start func_ov00_020ae50c
-func_ov00_020ae50c: ; 0x020ae50c
+	.global _ZN11ItemManager9SetPotionEjj
+	arm_func_start _ZN11ItemManager9SetPotionEjj
+_ZN11ItemManager9SetPotionEjj: ; 0x020ae50c
 	add r3, r0, r1
 	strb r2, [r3, #0xbc]
 	cmp r2, #0
@@ -2051,11 +2051,11 @@ _020ae544:
 	orr r0, r2, r1, lsl r0
 	str r0, [ip, r3, lsl #2]
 	bx lr
-	arm_func_end func_ov00_020ae50c
+	arm_func_end _ZN11ItemManager9SetPotionEjj
 
-	.global func_ov00_020ae564
-	arm_func_start func_ov00_020ae564
-func_ov00_020ae564: ; 0x020ae564
+	.global _ZNK11ItemManager9HasPotionEj
+	arm_func_start _ZNK11ItemManager9HasPotionEj
+_ZNK11ItemManager9HasPotionEj: ; 0x020ae564
 	add r0, r0, r1
 	ldrb r0, [r0, #0xbc]
 	cmp r0, #3
@@ -2072,18 +2072,18 @@ _020ae588:
 _020ae590:
 	mov r0, #0
 	bx lr
-	arm_func_end func_ov00_020ae564
+	arm_func_end _ZNK11ItemManager9HasPotionEj
 
-	.global func_ov00_020ae598
-	arm_func_start func_ov00_020ae598
-func_ov00_020ae598: ; 0x020ae598
+	.global _ZNK11ItemManager13HasAllPotionsEv
+	arm_func_start _ZNK11ItemManager13HasAllPotionsEv
+_ZNK11ItemManager13HasAllPotionsEv: ; 0x020ae598
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, #0
 _020ae5a4:
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_020ae564
+	bl _ZNK11ItemManager9HasPotionEj
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -2092,11 +2092,11 @@ _020ae5a4:
 	blt _020ae5a4
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020ae598
+	arm_func_end _ZNK11ItemManager13HasAllPotionsEv
 
-	.global func_ov00_020ae5d0
-	arm_func_start func_ov00_020ae5d0
-func_ov00_020ae5d0: ; 0x020ae5d0
+	.global _ZNK11ItemManager13HasBluePotionEv
+	arm_func_start _ZNK11ItemManager13HasBluePotionEv
+_ZNK11ItemManager13HasBluePotionEv: ; 0x020ae5d0
 	mov r2, #0
 _020ae5d4:
 	add r1, r0, r2
@@ -2109,11 +2109,11 @@ _020ae5d4:
 	blt _020ae5d4
 	mov r0, #0
 	bx lr
-	arm_func_end func_ov00_020ae5d0
+	arm_func_end _ZNK11ItemManager13HasBluePotionEv
 
-	.global func_ov00_020ae5fc
-	thumb_func_start func_ov00_020ae5fc
-func_ov00_020ae5fc: ; 0x020ae5fc
+	.global _ZN11ItemManager21LoadDungeonItemModelsEv
+	thumb_func_start _ZN11ItemManager21LoadDungeonItemModelsEv
+_ZN11ItemManager21LoadDungeonItemModelsEv: ; 0x020ae5fc
 	push {r3, r4, r5, r6, r7, lr}
 	ldr r7, _020ae644 ; =data_027e0f78
 	add r5, r0, #0
@@ -2153,12 +2153,12 @@ _020ae638:
 	blt _020ae604
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
-	thumb_func_end func_ov00_020ae5fc
+	thumb_func_end _ZN11ItemManager21LoadDungeonItemModelsEv
 _020ae644: .word data_027e0f78
 
-	.global func_ov00_020ae648
-	thumb_func_start func_ov00_020ae648
-func_ov00_020ae648: ; 0x020ae648
+	.global _ZN11ItemManager18func_ov00_020ae648Ejjj
+	thumb_func_start _ZN11ItemManager18func_ov00_020ae648Ejjj
+_ZN11ItemManager18func_ov00_020ae648Ejjj: ; 0x020ae648
 	push {r3, lr}
 	ldr r1, _020ae6e8 ; =gItemManager
 	ldr r2, [r1]
@@ -2255,13 +2255,13 @@ _020ae6de:
 	blx func_ov00_020d73bc
 	pop {r3, pc}
 	nop
-	thumb_func_end func_ov00_020ae648
+	thumb_func_end _ZN11ItemManager18func_ov00_020ae648Ejjj
 _020ae6e8: .word gItemManager
 _020ae6ec: .word data_ov00_020eec68
 
-	.global func_ov00_020ae6f0
-	thumb_func_start func_ov00_020ae6f0
-func_ov00_020ae6f0: ; 0x020ae6f0
+	.global _ZNK11ItemManager21HasShipPartPriceShownEjj
+	thumb_func_start _ZNK11ItemManager21HasShipPartPriceShownEjj
+_ZNK11ItemManager21HasShipPartPriceShownEjj: ; 0x020ae6f0
 	push {r3, r4}
 	lsl r3, r1, #3
 	add r1, r1, r3
@@ -2285,11 +2285,11 @@ _020ae716:
 	add r0, r2, #0
 	pop {r3, r4}
 	bx lr
-	thumb_func_end func_ov00_020ae6f0
+	thumb_func_end _ZNK11ItemManager21HasShipPartPriceShownEjj
 
-	.global func_ov00_020ae71c
-	thumb_func_start func_ov00_020ae71c
-func_ov00_020ae71c: ; 0x020ae71c
+	.global _ZN11ItemManager21AddShipPartPriceShownEjj
+	thumb_func_start _ZN11ItemManager21AddShipPartPriceShownEjj
+_ZN11ItemManager21AddShipPartPriceShownEjj: ; 0x020ae71c
 	push {r4, r5}
 	lsl r3, r1, #3
 	add r1, r1, r3
@@ -2310,11 +2310,11 @@ func_ov00_020ae71c: ; 0x020ae71c
 	str r2, [r1, r0]
 	pop {r4, r5}
 	bx lr
-	thumb_func_end func_ov00_020ae71c
+	thumb_func_end _ZN11ItemManager21AddShipPartPriceShownEjj
 
-	.global func_ov00_020ae744
-	thumb_func_start func_ov00_020ae744
-func_ov00_020ae744: ; 0x020ae744
+	.global _ZNK11ItemManager21HasTreasurePriceShownEj
+	thumb_func_start _ZNK11ItemManager21HasTreasurePriceShownEj
+_ZNK11ItemManager21HasTreasurePriceShownEj: ; 0x020ae744
 	push {r3, r4}
 	add r4, r1, #0
 	lsr r1, r1, #5
@@ -2336,11 +2336,11 @@ _020ae764:
 	pop {r3, r4}
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ae744
+	thumb_func_end _ZNK11ItemManager21HasTreasurePriceShownEj
 
-	.global func_ov00_020ae76c
-	thumb_func_start func_ov00_020ae76c
-func_ov00_020ae76c: ; 0x020ae76c
+	.global _ZN11ItemManager21AddTreasurePriceShownEj
+	thumb_func_start _ZN11ItemManager21AddTreasurePriceShownEj
+_ZN11ItemManager21AddTreasurePriceShownEj: ; 0x020ae76c
 	push {r4, r5}
 	mov r2, #0x52
 	lsl r2, r2, #2
@@ -2359,7 +2359,7 @@ func_ov00_020ae76c: ; 0x020ae76c
 	pop {r4, r5}
 	bx lr
 	.align 2, 0
-	thumb_func_end func_ov00_020ae76c
+	thumb_func_end _ZN11ItemManager21AddTreasurePriceShownEj
 
     .rodata
 	.global data_ov00_020dc6c4

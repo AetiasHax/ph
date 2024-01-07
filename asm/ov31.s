@@ -1049,7 +1049,7 @@ _0217cae4:
 	ldr r0, [r0]
 	rsb r1, r1, #0
 	mov r2, #1
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	bl func_ov31_0217cf1c
 	ldr r0, [r0, #0x470]
 	cmp r0, #0
@@ -1147,7 +1147,7 @@ _0217cc28:
 _0217cc50:
 	ldr r0, _0217cd00 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae598
+	bl _ZNK11ItemManager13HasAllPotionsEv
 	cmp r0, #0
 	beq _0217cc80
 	bl func_ov31_0217cf1c
@@ -5339,7 +5339,7 @@ func_ov31_0217fe00: ; 0x0217fe00
 	ldr r0, [r1]
 	mov r1, #5
 	mov r2, #0xa
-	bl func_ov00_020ad73c
+	bl _ZN11ItemManager8GiveAmmoEjj
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5373,7 +5373,7 @@ func_ov31_0217fe58: ; 0x0217fe58
 	ldr r0, [r1]
 	mov r1, #4
 	mov r2, #0xa
-	bl func_ov00_020ad73c
+	bl _ZN11ItemManager8GiveAmmoEjj
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5407,7 +5407,7 @@ func_ov31_0217feb0: ; 0x0217feb0
 	ldr r0, [r1]
 	mov r1, #7
 	mov r2, #0xa
-	bl func_ov00_020ad73c
+	bl _ZN11ItemManager8GiveAmmoEjj
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5791,11 +5791,11 @@ func_ov31_021802a8: ; 0x021802a8
 	mov r1, #5
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020ad72c
+	bl _ZNK11ItemManager7GetAmmoEj
 	mov r4, r0
 	mov r0, r5
 	mov r1, #5
-	blx func_ov00_020ad9a0
+	blx _ZNK11ItemManager10GetMaxAmmoEj
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5819,11 +5819,11 @@ func_ov31_021802ec: ; 0x021802ec
 	mov r1, #4
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020ad72c
+	bl _ZNK11ItemManager7GetAmmoEj
 	mov r4, r0
 	mov r0, r5
 	mov r1, #4
-	blx func_ov00_020ad9a0
+	blx _ZNK11ItemManager10GetMaxAmmoEj
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5847,11 +5847,11 @@ func_ov31_02180330: ; 0x02180330
 	mov r1, #7
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020ad72c
+	bl _ZNK11ItemManager7GetAmmoEj
 	mov r4, r0
 	mov r0, r5
 	mov r1, #7
-	blx func_ov00_020ad9a0
+	blx _ZNK11ItemManager10GetMaxAmmoEj
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5881,10 +5881,10 @@ func_ov31_02180374: ; 0x02180374
 	mov r2, r0
 	mov r0, r5
 	mov r1, r4
-	blx func_ov00_020ad8f0
+	blx _ZNK11ItemManager16GetShipPartCountEjj
 	mov r4, r0
 	mov r0, r5
-	blx func_ov00_020ad9e0
+	blx _ZNK11ItemManager19GetMaxShipPartCountEv
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5902,10 +5902,10 @@ func_ov31_021803c4: ; 0x021803c4
 	bl func_ov31_02180278
 	mov r1, r0
 	mov r0, r5
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	mov r4, r0
 	mov r0, r5
-	blx func_ov00_020ad9e4
+	blx _ZNK11ItemManager19GetMaxTreasureCountEv
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0

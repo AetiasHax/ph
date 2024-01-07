@@ -8502,7 +8502,7 @@ func_ov23_02174684: ; 0x02174684
 	ldr r0, _02174714 ; =gItemManager
 	mov r1, #8
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, r4, #0x15c
 	ldr r2, [r0]

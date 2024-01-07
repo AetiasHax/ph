@@ -576,7 +576,7 @@ _02199408:
 	ldr r0, _0219a068 ; =gItemManager
 	ldr r1, _0219a06c ; =data_ov59_0219b110
 	ldr r0, [r0]
-	bl func_ov00_020ad538
+	bl _ZNK11ItemManager18func_ov00_020ad538Ej
 	ldr r1, [r4, #0x2f4]
 	mov r5, r0
 	ldr r0, [r1, #8]
@@ -1439,7 +1439,7 @@ func_ov59_0219a0ac: ; 0x0219a0ac
 	ldr r4, [r1, #8]
 	ldr r0, [r0]
 	ldr r1, _0219a9ec ; =data_ov59_0219b110
-	bl func_ov00_020ad538
+	bl _ZNK11ItemManager18func_ov00_020ad538Ej
 	cmp r4, r0
 	addeq sp, sp, #0x220
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -2346,7 +2346,7 @@ _0219ae8c:
 	ldr r0, _0219af08 ; =gItemManager
 	ldr r1, _0219af0c ; =data_ov00_020dc7d0
 	ldr r0, [r0]
-	bl func_ov00_020ad538
+	bl _ZNK11ItemManager18func_ov00_020ad538Ej
 	mov r1, r0
 	add r0, r5, #0x2f0
 	bl func_ov00_020c0c44
@@ -2361,7 +2361,7 @@ _0219aebc:
 	str r1, [r5, #0x348]
 	ldr r0, [r0]
 	ldr r1, _0219af10 ; =data_ov00_020dc7e4
-	bl func_ov00_020ad538
+	bl _ZNK11ItemManager18func_ov00_020ad538Ej
 	mov r1, r0
 	add r0, r5, #0x2f0
 	bl func_ov00_020c0c44

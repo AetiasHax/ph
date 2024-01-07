@@ -778,7 +778,7 @@ _020af0d4:
 	cmp r4, #9
 	bne _020af104
 	mov r1, #0
-	bl func_ov00_020ae564
+	bl _ZNK11ItemManager9HasPotionEj
 	cmp r0, #0
 	beq _020af124
 	mov r0, #1
@@ -788,7 +788,7 @@ _020af104:
 	cmp r4, #0xa
 	bne _020af124
 	mov r1, #1
-	bl func_ov00_020ae564
+	bl _ZNK11ItemManager9HasPotionEj
 	cmp r0, #0
 	movne r0, #1
 	strneb r0, [r6, #0x79]
@@ -803,7 +803,7 @@ _020af124:
 	ldr r0, _020af288 ; =gItemManager
 	strb r1, [r6, #0x7b]
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	ldrb r1, [r6, #0x7b]
 	tst r1, r0
 	movne r0, #1
@@ -854,7 +854,7 @@ _020af1f8:
 	ldr r0, _020af288 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	ldrb r1, [r6, #0x7b]
 	tst r1, r0
 	movne r0, #1
@@ -1365,7 +1365,7 @@ _020af810:
 	beq _020af8b0
 	ldr r0, _020afac4 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	mov r5, r0
 _020af8b0:
 	ldr r0, _020afac8 ; =data_027e0fc8
@@ -2720,7 +2720,7 @@ func_ov00_020b0b0c: ; 0x020b0b0c
 	ldr r0, _020b0de0 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	beq _020b0b80
 	ldr r0, _020b0de0 ; =gItemManager

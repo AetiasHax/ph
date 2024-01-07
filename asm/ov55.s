@@ -10,7 +10,7 @@ func_ov55_02198d00: ; 0x02198d00
 	ldr r0, _02198d24 ; =gItemManager
 	mov r1, #8
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	ldr r0, _02198d28 ; =data_ov55_021998ac
 	bl func_ov00_020a9614
@@ -432,10 +432,10 @@ _02199244:
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020ae50c
+	bl _ZN11ItemManager9SetPotionEjj
 	ldr r0, _0219926c ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae3c0
+	bl _ZN11ItemManager17EquipPreviousItemEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov55_021991b0
@@ -472,7 +472,7 @@ func_ov55_02199278: ; 0x02199278
 	b _02199334
 _021992c0:
 	mov r1, #0xa
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, sp, #4
 	bl func_ov00_020a9614
@@ -483,7 +483,7 @@ _021992c0:
 	b _02199334
 _021992e8:
 	mov r1, #0xb
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, sp, #4
 	bl func_ov00_020a9614
@@ -494,7 +494,7 @@ _021992e8:
 	b _02199334
 _02199310:
 	mov r1, #0xc
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, sp, #4
 	bl func_ov00_020a9614

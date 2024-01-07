@@ -1088,7 +1088,7 @@ func_ov53_02199ac8: ; 0x02199ac8
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #6
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r2, #0
 	mov r1, r0
 	mov r3, r2

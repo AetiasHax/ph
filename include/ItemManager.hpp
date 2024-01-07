@@ -235,14 +235,17 @@ public:
     ItemManager();
     ~ItemManager();
 
-    void ClearPrevEquippedItem();
+    // Save/load
     void Save(SaveItemManager *save);
     void Load(const SaveItemManager *save);
 
+    // Fairy
     FairyId GetEquippedFairy() const;
     Navi* GetFairy(FairyId id) const;
-    unk32 func_ov00_020ad9e8(FairyId id) const;
+    unk32 _ZNK11ItemManager18func_ov00_020ad9e8Ej(FairyId id) const;
 
+    // Equip item
+    void ClearPrevEquippedItem();
     void TickEquipItem();
     ItemFlag GetEquippedItem() const;
     void Sword_vfunc_38();
@@ -252,12 +255,13 @@ public:
     void EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem GetEquipItem(ItemFlag equipId);
     unk32 func_ov00_020ad790(unk32 param1);
-    bool EquipItem(ItemFlag equipId);
+    bool SetEquippedItem(ItemFlag equipId);
     void EquipPreviousItem();
     void ForceEquipItem(ItemFlag equipId);
     bool ClearForcedEquipItem();
     void UpdateSwordShieldInUse();
     
+    // Ammo
     u16 GetAmmo(ItemFlag equipId) const;
     void GiveAmmo(ItemFlag equipId, u16 amount);
     u16 GetMaxAmmo(ItemFlag equipId) const;
@@ -265,6 +269,7 @@ public:
     void UpgradeBombBag();
     void UpgradeBombchuBag();
 
+    // Item model
     void func_ov00_020ad528();
     ItemModel* GetItemModel(ItemModelId id);
     void func_ov00_020ad538(unk32 param1) const;
@@ -275,6 +280,7 @@ public:
     bool GetFanfareItemScale(Vec3p *pScale) const;
     void LoadDungeonItemModels();
 
+    // Ship
     ShipType GetEquippedShipPart(ShipPart part) const;
     void EquipShipPart(ShipPart part, ShipType type);
     u8 GetShipPartCount(ShipPart part, ShipType type) const;
@@ -283,43 +289,45 @@ public:
     bool HasShipPartPriceShown(ShipPart part, ShipType type) const;
     void AddShipPartPriceShown(u32 index);
     void AddShipPartPriceShown(ShipPart part, ShipType type);
+    u8 GetMaxShipPartCount() const;
 
+    // Treasure
     s8 GetTreasureCount(Treasure treasure) const;
     void SetTreasureCount(Treasure treasure, s8 count);
     bool HasTreasurePriceShown(Treasure treasure) const;
     void AddTreasurePriceShown(Treasure treasure);
+    u8 GetMaxTreasureCount() const;
     
+    // mUnk_098, mUnk_09e
     u8 GetUnk_098(u32 index) const;
     u16 GetUnk_09e(u32 index) const;
     u32 GetUnk_09e_Divided(u32 index) const; // gets mUnk_09e value divided by 2.54, rounded half up
-    void SetUnk_09e(u32 index, u16 value) const; // also increments the corresponding mUnk_098 value
+    void SetUnk_09e(u32 index, u16 value); // also increments the corresponding mUnk_098 value
 
-    u32 func_ov00_020ad9e0() const; // returns 99
-    u32 func_ov00_020ad9e4() const; // returns 99
-
-    unk32 func_ov00_020ada48(ItemFlag item) const;
+    // Item
+    unk32 func_ov00_020ad9a48(ItemFlag item) const;
     bool HasItem(ItemFlag item) const;
     void AddItem(ItemFlag item);
     void RemoveItem(ItemFlag item);
     void GiveItem(ItemId id, unk32 param2, unk32 param3);
     void GiveEquipItem(ItemFlag item, u16 ammo);
-    void UnequipPotion();
 
+    // Rupees
     u32 GetMaxRupees() const;
     void GiveRupees(u16 amount, unk32 param2);
 
-    void func_ov00_020ae350() const;
-
-    void GiveKeys(u32 amount);
-
-    void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
-
+    // Potion
     void SetPotion(u32 index, Potion potion);
     bool HasPotion(u32 index) const;
     bool HasAllPotions() const;
-    bool HasBluePotion();
+    bool HasBluePotion() const;
+    void UnequipPotion();
 
-    void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3)
+    // Unknown
+    void func_ov00_020ae350() const;
+    void GiveKeys(u32 amount);
+    void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
+    void _ZN11ItemManager18func_ov00_020ae648Ejjj(unk32 param1, unk32 param2, unk32 param3)
 };
 
 extern ItemManager *gItemManager;

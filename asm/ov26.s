@@ -4157,7 +4157,7 @@ func_ov26_02170894: ; 0x02170894
 	ldr r0, _02170934 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	blt _021708e4
 _021708dc:
@@ -7173,7 +7173,7 @@ _021731b8:
 	ldr r0, _021732bc ; =gItemManager
 	mov r1, #0x60
 	ldr r0, [r0]
-	blx func_ov00_020ada98
+	blx _ZN11ItemManager7AddItemEj
 	add r0, sp, #0xc
 	bl func_ov00_0209a4f4
 	mov r2, #0
@@ -13278,7 +13278,7 @@ func_ov26_021778e8: ; 0x021778e8
 	ldr r0, _021779cc ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020adabc
+	bl _ZNK11ItemManager21HasShipPartPriceShownEj
 	cmp r0, #0
 	addne sp, sp, #0xc
 	ldmneia sp!, {r3, r4, r5, r6, pc}

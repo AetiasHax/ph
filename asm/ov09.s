@@ -3803,7 +3803,7 @@ _02114a44:
 	ldr r0, _02114b14 ; =gItemManager
 	add r1, r6, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	add r1, r5, r4
 	add r6, r6, #1
 	add r4, r4, #4
@@ -3971,7 +3971,7 @@ _02114b9c:
 	ldr r0, _02114c6c ; =gItemManager
 	add r1, r6, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	add r1, r5, r4
 	add r6, r6, #1
 	add r4, r4, #4
@@ -7577,7 +7577,7 @@ _02117054:
 	bl func_ov09_02118028
 	add r1, r0, #0
 	add r0, r4, #0
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	str r0, [r5, #0x1c]
 	ldr r1, _02117120 ; =0x00001420
 	mov r0, #6
@@ -9096,7 +9096,7 @@ _02117c20:
 	add r1, r0, #0
 	ldr r0, [sp, #0x20]
 	add r2, r4, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	str r0, [sp, #0x24]
 	cmp r0, #0
 	blt _02117d2c
@@ -9153,7 +9153,7 @@ _02117caa:
 	bl func_ov09_02118028
 	add r1, r0, #0
 	ldr r0, [sp, #0x1c]
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	cmp r4, r0
 	bne _02117ccc
 	mov r1, #1
@@ -10968,7 +10968,7 @@ _02118a22:
 	ldr r0, _02118b10 ; =gItemManager
 	ldr r1, [sp, #0x18]
 	ldr r0, [r0]
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	str r0, [sp, #0x1c]
 	cmp r0, #0
 	bge _02118a78
@@ -16947,25 +16947,25 @@ _0211c6be:
 	beq _0211c6f2
 	ldr r0, [r4]
 	add r1, r5, #0
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	cmp r0, #0
 	bge _0211c6d8
 	ldr r0, [r4]
 	add r1, r5, #0
 	add r2, r6, #0
-	bl func_ov00_020ad8e8
+	bl _ZN11ItemManager13EquipShipPartEjj
 _0211c6d8:
 	ldr r0, [r4]
 	add r1, r5, #0
 	add r2, r7, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	bge _0211c6f2
 	ldr r0, [r4]
 	add r1, r5, #0
 	mov r2, #0
 	mov r3, #1
-	bl func_ov00_020ad900
+	bl _ZN11ItemManager16SetShipPartCountEjjj
 _0211c6f2:
 	add r5, r5, #1
 	cmp r5, #8
@@ -16982,14 +16982,14 @@ func_ov09_0211c700: ; 0x0211c700
 	ldr r0, _0211c720 ; =gItemManager
 	mov r1, #3
 	ldr r0, [r0]
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	cmp r0, #0
 	bge _0211c71c
 	ldr r0, _0211c720 ; =gItemManager
 	mov r1, #3
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020ad8e8
+	bl _ZN11ItemManager13EquipShipPartEjj
 _0211c71c:
 	pop {r3, pc}
 	nop
@@ -17159,7 +17159,7 @@ _0211c84e:
 	ldr r0, [r6]
 	add r1, r4, #0
 	add r2, r5, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	blt _0211c860
 	mov r0, #1
@@ -17186,7 +17186,7 @@ func_ov09_0211c874: ; 0x0211c874
 _0211c87a:
 	ldr r0, [r4]
 	add r1, r5, #0
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	blt _0211c88a
 	mov r0, #1
@@ -17210,7 +17210,7 @@ func_ov09_0211c898: ; 0x0211c898
 _0211c89e:
 	ldr r0, [r4]
 	add r1, r5, #0
-	bl func_ov00_020ad930
+	bl _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	ble _0211c8ae
 	mov r0, #1
@@ -17234,14 +17234,14 @@ func_ov09_0211c8bc: ; 0x0211c8bc
 	add r4, r1, #0
 	ldr r0, [r0]
 	add r1, r5, #0
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	cmp r4, r0
 	bne _0211c8e4
 	ldr r0, _0211c8e8 ; =gItemManager
 	add r1, r5, #0
 	ldr r0, [r0]
 	add r2, r4, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #1
 	bgt _0211c8e4
 	mov r0, #1
@@ -17266,7 +17266,7 @@ _0211c8f6:
 	ldr r0, [r6]
 	add r1, r4, #0
 	add r2, r5, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	ble _0211c914
 	add r0, r4, #0
@@ -17298,7 +17298,7 @@ func_ov09_0211c928: ; 0x0211c928
 _0211c92e:
 	ldr r0, [r4]
 	add r1, r5, #0
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	ble _0211c93e
 	mov r0, #1
@@ -17326,7 +17326,7 @@ _0211c956:
 	add r1, r6, #0
 	ldr r0, [r0]
 	add r2, r4, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	blt _0211c96a
 	mov r7, #1
@@ -17397,13 +17397,13 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r0, #0
 	add r0, r6, #0
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	ldr r0, _0211c9e4 ; =gItemManager
 	add r1, r5, #0
 	ldr r6, [r0]
 	add r2, r4, #0
 	add r0, r6, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	add r3, r0, #0
 	sub r3, r3, #1
 	lsl r3, r3, #0x18
@@ -17411,7 +17411,7 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r5, #0
 	add r2, r4, #0
 	asr r3, r3, #0x18
-	bl func_ov00_020ad900
+	bl _ZN11ItemManager16SetShipPartCountEjjj
 	pop {r4, r5, r6, pc}
 	nop
 	thumb_func_end func_ov09_0211c9a8
@@ -17428,19 +17428,19 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #1
-	blx func_ov00_020ae2e0
+	blx _ZN11ItemManager10GiveRupeesEjj
 	ldr r0, _0211ca1c ; =gItemManager
 	add r1, r5, #0
 	ldr r4, [r0]
 	add r0, r4, #0
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	add r2, r0, #0
 	sub r2, r2, #1
 	lsl r2, r2, #0x18
 	add r0, r4, #0
 	add r1, r5, #0
 	asr r2, r2, #0x18
-	bl func_ov00_020ad920
+	bl _ZN11ItemManager16SetTreasureCountEjj
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211c9e8
@@ -17471,7 +17471,7 @@ _0211ca3c:
 	add r1, r5, #0
 	ldr r0, [r0]
 	add r2, r4, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	bge _0211ca5c
 	ldr r0, _0211caa8 ; =gItemManager
@@ -17479,7 +17479,7 @@ _0211ca3c:
 	ldr r0, [r0]
 	add r2, r4, #0
 	mov r3, #1
-	bl func_ov00_020ad900
+	bl _ZN11ItemManager16SetShipPartCountEjjj
 	b _0211ca7c
 _0211ca5c:
 	ldr r0, _0211caa8 ; =gItemManager
@@ -17487,7 +17487,7 @@ _0211ca5c:
 	ldr r6, [r0]
 	add r2, r4, #0
 	add r0, r6, #0
-	bl func_ov00_020ad8f0
+	bl _ZNK11ItemManager16GetShipPartCountEjj
 	add r3, r0, #0
 	add r3, r3, #1
 	lsl r3, r3, #0x18
@@ -17495,7 +17495,7 @@ _0211ca5c:
 	add r1, r5, #0
 	add r2, r4, #0
 	asr r3, r3, #0x18
-	bl func_ov00_020ad900
+	bl _ZN11ItemManager16SetShipPartCountEjjj
 _0211ca7c:
 	ldr r0, _0211caac ; =data_ov09_0211f294
 	str r5, [r0]
@@ -17543,28 +17543,28 @@ _0211cacc:
 	ldr r0, _0211cb28 ; =gItemManager
 	add r1, r5, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	bge _0211cae8
 	ldr r0, _0211cb28 ; =gItemManager
 	add r1, r5, #0
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020ad920
+	bl _ZN11ItemManager16SetTreasureCountEjj
 	b _0211cb04
 _0211cae8:
 	ldr r0, _0211cb28 ; =gItemManager
 	add r1, r5, #0
 	ldr r4, [r0]
 	add r0, r4, #0
-	bl func_ov00_020ad918
+	bl _ZNK11ItemManager16GetTreasureCountEj
 	add r2, r0, #0
 	add r2, r2, #1
 	lsl r2, r2, #0x18
 	add r0, r4, #0
 	add r1, r5, #0
 	asr r2, r2, #0x18
-	bl func_ov00_020ad920
+	bl _ZN11ItemManager16SetTreasureCountEjj
 _0211cb04:
 	ldr r0, _0211cb2c ; =data_ov09_0211f308
 	str r5, [r0]

@@ -4644,7 +4644,7 @@ _02104694:
 	beq _0210471c
 	ldr r0, [r6]
 	and r1, sb, #0xff
-	bl func_ov00_020adabc
+	bl _ZNK11ItemManager21HasShipPartPriceShownEj
 	cmp r0, #0
 	bne _0210471c
 	ldr r0, [r5]
@@ -4793,7 +4793,7 @@ _021048a8:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020adabc
+	bl _ZNK11ItemManager21HasShipPartPriceShownEj
 	cmp r0, #0
 	addne sp, sp, #0x34
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -9639,7 +9639,7 @@ _02108af4:
 	movne r5, #0
 	mov r1, #3
 	mov r2, #0
-	blx func_ov00_020ad8f0
+	blx _ZNK11ItemManager16GetShipPartCountEjj
 	cmp r0, #0
 	add r1, sp, #4
 	add r2, sp, #0
@@ -9686,7 +9686,7 @@ _02108b9c:
 _02108bb4:
 	ldr r0, _02108cf0 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae598
+	bl _ZNK11ItemManager13HasAllPotionsEv
 	cmp r0, #0
 	movne r0, #9
 	strne r0, [r4, #0x74]
@@ -9694,7 +9694,7 @@ _02108bb4:
 _02108bd0:
 	ldr r0, _02108cf0 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae598
+	bl _ZNK11ItemManager13HasAllPotionsEv
 	cmp r0, #0
 	movne r0, #0x1a
 	strne r0, [r4, #0x74]
@@ -9726,7 +9726,7 @@ _02108c34:
 	ldr r0, _02108cf0 ; =gItemManager
 	ldr r1, [r4, #0x74]
 	ldr r0, [r0]
-	blx func_ov00_020adb30
+	blx _ZN11ItemManager15LoadFanfareItemEj
 	ldr r0, [r4, #0x74]
 	mov r2, #1
 	cmp r0, #0x81
@@ -9884,7 +9884,7 @@ _02108e44:
 	ldr r0, _02108e88 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx func_ov00_020adb30
+	blx _ZN11ItemManager15LoadFanfareItemEj
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov05_02108e08
@@ -10245,7 +10245,7 @@ _02109354:
 	cmp r0, #0
 	beq _02109380
 	ldr r0, [r5, #0x74]
-	blx func_ov00_020ae648
+	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
 _02109380:
 	mov r0, r5
 	bl func_ov00_020a8d50
@@ -10646,7 +10646,7 @@ _0210989c:
 	ldr r0, _021099cc ; =gItemManager
 	ldr r1, [r5, #0x74]
 	ldr r0, [r0]
-	blx func_ov00_020adcdc
+	blx _ZN11ItemManager8GiveItemEjjj
 _021098bc:
 	mov r0, r4
 	blx func_ov00_020ad020
@@ -11291,7 +11291,7 @@ _0210a154:
 	ldr r0, _0210a4b4 ; =gItemManager
 	mov r1, #0xb
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, sp, #0x74
 	blx func_ov00_020a9588
@@ -11587,7 +11587,7 @@ func_ov05_0210a4e0: ; 0x0210a4e0
 	ldr r0, _0210a608 ; =gItemManager
 	add r1, sp, #0
 	ldr r0, [r0]
-	blx func_ov00_020adca8
+	blx _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 	cmp r0, #0
 	mov r0, r5
 	beq _0210a5e4
@@ -17166,7 +17166,7 @@ _0210f244:
 	bgt _0210f298
 	ldr r0, _0210f6c4 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae5d0
+	bl _ZNK11ItemManager13HasBluePotionEv
 	cmp r0, #0
 	beq _0210f298
 	mov r0, r6

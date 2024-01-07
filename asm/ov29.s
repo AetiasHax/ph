@@ -755,7 +755,7 @@ _0216df70:
 	ldr r0, _0216e008 ; =gItemManager
 	mvn r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ae4dc
+	bl _ZN11ItemManager18func_ov00_020ae4dcEj
 	add r0, r6, r4
 	add r1, r7, r5
 	ldr r3, _0216e000 ; =data_027e0fc8

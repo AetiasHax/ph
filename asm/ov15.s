@@ -31483,7 +31483,7 @@ func_ov15_0213a184: ; 0x0213a184
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _0213a454 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ad528
+	bl _ZN11ItemManager18func_ov00_020ad528Ev
 	mov r1, #1
 	ldr r0, _0213a458 ; =data_027e077c
 	strb r1, [r5, #0x26e]
@@ -44538,12 +44538,12 @@ _0214531c:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx func_ov00_020adcdc
+	blx _ZN11ItemManager8GiveItemEjjj
 _02145334:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx func_ov00_020adb30
+	blx _ZN11ItemManager15LoadFanfareItemEj
 	mov r0, r6
 	mov r1, #1
 	bl func_ov15_0216e168
@@ -44561,7 +44561,7 @@ _02145370:
 	mov r4, r0
 	bl func_ov03_020fc10c
 	mov r0, r4
-	blx func_ov00_020ae648
+	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
 	mov r0, #0x10
 	strb r0, [sb, #0x34d]
 	b _02145420
@@ -44581,7 +44581,7 @@ _02145390:
 	bhs _021453d4
 	ldr r0, _0214581c ; =gItemManager
 	ldr r0, [r0]
-	blx func_ov00_020adadc
+	blx _ZN11ItemManager21AddShipPartPriceShownEj
 	b _021453f8
 _021453d4:
 	sub r0, r1, #0x20
@@ -44602,7 +44602,7 @@ _021453f8:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, #0x26
 	ldr r0, [r0]
-	blx func_ov00_020adcdc
+	blx _ZN11ItemManager8GiveItemEjjj
 _0214541c:
 	bl func_ov15_021465e8
 _02145420:
@@ -45653,7 +45653,7 @@ func_ov15_021461b0: ; 0x021461b0
 	ldr r0, _021462c4 ; =gItemManager
 	ldrh r1, [r5, r4]
 	ldr r0, [r0]
-	bl func_ov00_020adabc
+	bl _ZNK11ItemManager21HasShipPartPriceShownEj
 	cmp r0, #0
 	beq _02146244
 	add sp, sp, #0x18
@@ -47023,7 +47023,7 @@ _021472c0:
 	strb r2, [r4, #0x43d]
 	ldr r1, [r4, #0x41c]
 	ldr r0, [r0]
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #3
 	blt _02147358
 	ldr r2, _02147540 ; =data_027e0764
@@ -48309,7 +48309,7 @@ _02148540:
 	ldr r0, [r0]
 	ldr r1, [r4, #0x41c]
 	mov r2, r2, lsr #0x10
-	blx func_ov00_020ad96c
+	blx _ZN11ItemManager10SetUnk_09eEjj
 	ldrb r0, [r4, #0x43d]
 	cmp r0, #0
 	beq _021485cc
@@ -48337,7 +48337,7 @@ _02148540:
 	mov r2, r1, lsr #0x10
 	mov r1, #5
 	str r3, [ip, #4]
-	blx func_ov00_020ad96c
+	blx _ZN11ItemManager10SetUnk_09eEjj
 _021485cc:
 	mov r1, #0
 	str r1, [r4, #0x3fc]
@@ -54185,7 +54185,7 @@ func_ov15_0214d358: ; 0x0214d358
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	ldr r1, [r4, #0x158]
 	ldr r0, _0214d3dc ; =data_ov00_020eec9c
 	add r1, r1, #0xfa
@@ -61729,7 +61729,7 @@ _02153b28:
 	bl func_ov15_02153938
 	ldr r0, [r4, #0x41c]
 	add r0, r0, #0x46
-	blx func_ov00_020ae648
+	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
 	mov r0, #5
 	strb r0, [r5, #0x436]
 	b _02153d74
@@ -62211,7 +62211,7 @@ _02154254:
 	bl func_ov15_02153938
 	ldr r0, [r5, #0x41c]
 	add r0, r0, #0x46
-	blx func_ov00_020ae648
+	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
 	mov r0, #5
 	strb r0, [r4, #0x436]
 	b _02154304
@@ -88238,7 +88238,7 @@ _0216a8e8:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx func_ov00_020adcdc
+	blx _ZN11ItemManager8GiveItemEjjj
 _0216a8f8:
 	bl func_ov15_02146578
 	mov r1, r0
@@ -88246,7 +88246,7 @@ _0216a8f8:
 	bhs _0216a918
 	ldr r0, _0216a95c ; =gItemManager
 	ldr r0, [r0]
-	blx func_ov00_020adadc
+	blx _ZN11ItemManager21AddShipPartPriceShownEj
 	b _0216a93c
 _0216a918:
 	sub r0, r1, #0x20
@@ -88262,7 +88262,7 @@ _0216a93c:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx func_ov00_020adb30
+	blx _ZN11ItemManager15LoadFanfareItemEj
 	mov r0, r5
 	bl func_ov15_0216a968
 	add sp, sp, #4
@@ -88405,7 +88405,7 @@ func_ov15_0216aadc: ; 0x0216aadc
 	ldr r0, _0216abe0 ; =gItemManager
 	add r1, sp, #0x3c
 	ldr r0, [r0]
-	blx func_ov00_020adca8
+	blx _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 	cmp r0, #0
 	beq _0216ab80
 	ldr r2, [sp, #0x48]
@@ -92889,7 +92889,7 @@ func_ov15_0216e69c: ; 0x0216e69c
 	add r1, sp, #0x14
 	ldr r0, [r0]
 	ldr r6, [r0, #0x114]
-	blx func_ov00_020adca8
+	blx _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 	cmp r0, #0
 	beq _0216e838
 	ldr r2, [r4, #8]
@@ -99853,7 +99853,7 @@ func_ov15_02174794: ; 0x02174794
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	ldr r1, [r4, #0x2c]
 	ldr r0, _02174878 ; =data_ov00_020eec9c
 	add r1, r1, #0xfa

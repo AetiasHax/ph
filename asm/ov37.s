@@ -9607,7 +9607,7 @@ func_ov37_021843d4: ; 0x021843d4
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #4
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r2, #0
 	mov r1, r0
 	mov r3, r2
@@ -9616,7 +9616,7 @@ func_ov37_021843d4: ; 0x021843d4
 	ldr r0, _02184478 ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, r4, #0x164
 	mov r2, #0

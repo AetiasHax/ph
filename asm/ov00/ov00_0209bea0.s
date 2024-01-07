@@ -1075,7 +1075,7 @@ func_ov00_0209cc48: ; 0x0209cc48
 	ldr r1, _0209ccd8 ; =gItemManager
 	mov r4, r0
 	ldr r0, [r1]
-	blx func_ov00_020ae5fc
+	blx _ZN11ItemManager21LoadDungeonItemModelsEv
 	ldr r0, _0209ccdc ; =data_027e0fec
 	ldrh r1, [r4, #0x18]
 	ldr r0, [r0]

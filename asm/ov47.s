@@ -4794,7 +4794,7 @@ func_ov47_02193f78: ; 0x02193f78
 	ldr r0, [r0]
 	mov r1, #2
 	str r2, [sp, #4]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	blt _02194028
 	add r1, sp, #0

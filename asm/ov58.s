@@ -216,27 +216,27 @@ func_ov58_02198fc0: ; 0x02198fc0
 	ldr r0, _02199020 ; =gItemManager
 	mov r1, #9
 	ldr r0, [r0]
-	blx func_ov00_020ad52c
+	blx _ZN11ItemManager12GetItemModelEj
 	add r1, r0, #0
 	ldr r0, _02199024 ; =data_ov58_0219afcc
 	blx func_ov00_020a9614
 	ldr r0, _02199020 ; =gItemManager
 	mov r1, #0xf
 	ldr r0, [r0]
-	blx func_ov00_020ad52c
+	blx _ZN11ItemManager12GetItemModelEj
 	add r1, r0, #0
 	ldr r0, _02199028 ; =data_ov58_0219b034
 	blx func_ov00_020a9614
 	ldr r0, _02199020 ; =gItemManager
 	mov r1, #0xf
 	ldr r0, [r0]
-	blx func_ov00_020ad52c
+	blx _ZN11ItemManager12GetItemModelEj
 	ldr r1, _0219902c ; =data_ov58_0219b040
 	str r0, [r1, #0x68]
 	ldr r0, _02199020 ; =gItemManager
 	ldr r1, _02199030 ; =data_ov58_0219ad68
 	ldr r0, [r0]
-	blx func_ov00_020ad538
+	blx _ZNK11ItemManager18func_ov00_020ad538Ej
 	add r1, r0, #0
 	ldr r0, _02199034 ; =data_ov58_0219b0a0
 	blx func_ov00_020c0c44
@@ -2847,7 +2847,7 @@ _0219a92c:
 	ldr r0, _0219a994 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r0, [r0, #0x18]
 	cmp r0, #0
 	bgt _0219a954
@@ -3091,7 +3091,7 @@ _0219abb0:
 	cmp r2, r1
 	bhs _0219ac8e
 	mov r1, #7
-	blx func_ov00_020ad714
+	blx _ZN11ItemManager12GetEquipItemEj
 	add r4, r0, #0
 	beq _0219ac8e
 	ldr r0, _0219ac9c ; =data_027e0d78

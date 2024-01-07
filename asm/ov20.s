@@ -294,7 +294,7 @@ func_ov20_0216da64: ; 0x0216da64
 	ldr r0, _0216dac0 ; =gItemManager
 	mov r1, #0x15
 	ldr r0, [r0]
-	blx func_ov00_020ada98
+	blx _ZN11ItemManager7AddItemEj
 	mov r4, #0
 _0216da98:
 	add r0, r5, r4, lsl #2
@@ -8616,7 +8616,7 @@ func_ov20_021749dc: ; 0x021749dc
 	mov r6, r0
 	ldr r0, [r1]
 	mov r1, #2
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	movge r5, #1
 	ldrb r0, [r6, #0x446]
@@ -8681,7 +8681,7 @@ _02174a20:
 	str r4, [sp, #0x20]
 	str r3, [sp, #0x24]
 	str r2, [sp, #0x28]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	movge r0, #3
 	strge r0, [sp, #0x2c]

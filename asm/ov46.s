@@ -2965,7 +2965,7 @@ _0219267c:
 	ldr r0, [r0]
 	mov r1, r1, lsl #0x1c
 	mov r1, r1, lsr #0x1c
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	str r0, [r6, #0x490]
 	add r1, r6, #0x400
 	ldrh r2, [r1, #0x88]
@@ -3022,7 +3022,7 @@ _02192754:
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	mov r4, r0
 	ldr r0, _021927d4 ; =data_027e0dbc
 	mov r1, #1
@@ -3035,7 +3035,7 @@ _02192754:
 	strb r2, [r5, #0x48b]
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	ldrb r2, [r5, #0x48a]
 	ldr r0, _021927d0 ; =gItemManager
 	sub r1, r4, #1
@@ -3044,7 +3044,7 @@ _02192754:
 	ldr r0, [r0]
 	mov r1, r3, lsr #0x1c
 	mov r2, r2, asr #0x18
-	blx func_ov00_020ad920
+	blx _ZN11ItemManager16SetTreasureCountEjj
 _021927c4:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
@@ -3074,7 +3074,7 @@ _021927f8:
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #0
 	movle r0, #1
 	movgt r0, #0
@@ -3089,7 +3089,7 @@ _02192834:
 	mov r1, r1, lsl #0x1c
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x1c
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	cmp r0, #1
 	mov r0, #1
 	streqb r0, [r4, #0x498]

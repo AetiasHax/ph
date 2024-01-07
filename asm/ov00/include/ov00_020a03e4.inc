@@ -555,8 +555,8 @@
 .extern func_01ffec34
 .extern func_ov00_0208f030
 .extern gItemManager
-.extern func_ov00_020ad678
-.extern func_ov00_020ad6f8
+.extern _ZN11ItemManager18func_ov00_020ad678Ejjj
+.extern _ZN11ItemManager17EquipItem_vfunc_2cEj
 .extern gItemManager
 .extern func_ov00_02083624
 .extern data_027e0e60
@@ -587,10 +587,10 @@
 .extern func_ov00_020bd364
 .extern func_ov00_020bb544
 .extern func_ov00_020bb594
-.extern func_ov00_020ad714
+.extern _ZN11ItemManager12GetEquipItemEj
 .extern gItemManager
 .extern gItemManager
-.extern func_ov00_020ae418
+.extern _ZN11ItemManager22UpdateSwordShieldInUseEv
 .extern func_ov05_02106980
 .extern func_01fffcd8
 .extern func_ov00_020bb810
@@ -671,10 +671,10 @@
 .extern data_027e0fe4
 .extern func_ov00_020c3674
 .extern func_ov00_020bc71c
-.extern func_ov00_020ad714
+.extern _ZN11ItemManager12GetEquipItemEj
 .extern gItemManager
 .extern gItemManager
-.extern func_ov00_020ad714
+.extern _ZN11ItemManager12GetEquipItemEj
 .extern data_027e0fd4
 .extern data_027e0fcc
 .extern func_ov00_020c0d68
@@ -1006,7 +1006,7 @@
 .extern data_ov00_020e9360
 .extern func_ov00_0207b89c
 .extern data_ov00_020e9c88
-.extern func_ov00_020ad714
+.extern _ZN11ItemManager12GetEquipItemEj
 .extern func_ov14_0213ec64
 .extern func_01ffa0f4
 .extern func_0202d95c
@@ -1019,6 +1019,6 @@
 .extern data_027e0618
 .extern gItemManager
 .extern func_01ffa0f4
-.extern func_ov00_020ae5d0
+.extern _ZNK11ItemManager13HasBluePotionEv
 .extern data_027e0618
 .extern gItemManager

@@ -7388,7 +7388,7 @@ func_ov00_020cf444: ; 0x020cf444
 	ldr r0, _020cf484 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, pc}

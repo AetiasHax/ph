@@ -862,7 +862,7 @@ func_ov49_02196008: ; 0x02196008
 	ldr r0, _021960f0 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	blx func_ov00_020adb00
+	blx _ZN11ItemManager10RemoveItemEj
 	ldrb r0, [r4, #0x5c9]
 	add r0, r0, #1
 	strb r0, [r4, #0x5c9]
@@ -894,7 +894,7 @@ _02196068:
 	mov r0, r5
 	rsb r1, r1, #0
 	mov r2, #0
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	ldrb r1, [r4, #0x5c9]
 	ldr r0, _021960f0 ; =gItemManager
 	add r1, r1, #1
@@ -2466,7 +2466,7 @@ func_ov49_0219766c: ; 0x0219766c
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #2
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, r4, #0x16c
 	blx func_ov00_020a9588

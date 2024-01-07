@@ -3469,7 +3469,7 @@ func_ov35_0217ebb4: ; 0x0217ebb4
 	str r1, [r4, #0x3b4]
 	ldr r0, [r0]
 	mov r1, #4
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, r4, #0x3bc
 	blx func_ov00_020a9588
@@ -7758,7 +7758,7 @@ _021828f4:
 	ldr r0, _02182944 ; =gItemManager
 	mov r1, #0x1d
 	ldr r0, [r0]
-	blx func_ov00_020ada98
+	blx _ZN11ItemManager7AddItemEj
 	ldr r0, _02182938 ; =data_027e0f74
 	mov r1, #8
 	ldr r0, [r0]

@@ -233,7 +233,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectdlEPv
 .extern func_020366c4
-.extern func_ov00_020ae3a8
+.extern _ZN11ItemManager15SetEquippedItemEj
 .extern func_ov00_020cf9dc
 .extern func_0203878c
 .extern data_027e0c68

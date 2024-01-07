@@ -12679,7 +12679,7 @@ func_ov03_020f63d4: ; 0x020f63d4
 	bl func_ov03_020f5d48
 	ldr r0, _020f6414 ; =gItemManager
 	ldr r0, [r0]
-	blx func_ov00_020ae350
+	blx _ZNK11ItemManager18func_ov00_020ae350Ev
 	mov r1, #0x79
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -12983,7 +12983,7 @@ _020f680c:
 	ldr r0, _020f69c8 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	beq _020f68d8
 	ldr r0, _020f69b8 ; =data_027e0c68
@@ -13051,7 +13051,7 @@ _020f68d8:
 	ldr r0, _020f69c8 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	bne _020f693c
 	ldr r0, _020f69d0 ; =data_ov00_020eec9c
@@ -13067,7 +13067,7 @@ _020f693c:
 	ldr r0, _020f69c8 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r1, _020f69d4 ; =data_027e0f64
 	mov r4, r0
 	ldr r0, [r1]
@@ -13173,7 +13173,7 @@ func_ov03_020f6a88: ; 0x020f6a88
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _020f6b10 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae350
+	bl _ZNK11ItemManager18func_ov00_020ae350Ev
 	ldr r1, [r5, #0x1e4]
 	mov r4, r0
 	subs r0, r4, r1
@@ -13602,7 +13602,7 @@ _020f7068:
 	ldr r0, _020f70bc ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	beq _020f70ac
 	ldr r0, _020f70c0 ; =data_027e0fb8
@@ -13741,7 +13741,7 @@ _020f7240:
 	ldr r0, _020f72ac ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	addne sp, sp, #0x4c
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, pc}
@@ -13855,7 +13855,7 @@ func_ov03_020f7398: ; 0x020f7398
 	ldr r0, _020f7410 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	beq _020f7404
 	mov r3, r5
@@ -13894,7 +13894,7 @@ func_ov03_020f7414: ; 0x020f7414
 	ldr r0, _020f74b4 ; =gItemManager
 	mov r1, r6
 	ldr r0, [r0]
-	bl func_ov00_020ad790
+	bl _ZN11ItemManager18func_ov00_020ad790Ej
 	cmp r0, #0
 	beq _020f747c
 	mov ip, r6

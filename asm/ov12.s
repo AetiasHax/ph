@@ -9019,13 +9019,13 @@ _0211a0a8: ; jump table
 _0211a1e0:
 	ldr r0, _0211a3ec ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae418
+	bl _ZN11ItemManager22UpdateSwordShieldInUseEv
 	b _0211a230
 _0211a1f0:
 	ldr r0, _0211a3ec ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x28]
@@ -9033,7 +9033,7 @@ _0211a1f0:
 	ldr r0, _0211a3ec ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x28]
@@ -10803,12 +10803,12 @@ func_ov12_0211b8bc: ; 0x0211b8bc
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020ad5d8
+	bl _ZN11ItemManager14Shield_vfunc_38Ev
 _0211b96c:
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020ad5f4
+	bl _ZN11ItemManager17EquipItem_vfunc_38Ev
 _0211b97c:
 	ldr r0, [r5, #0x230]
 	mov r1, #0
@@ -28445,14 +28445,14 @@ func_ov12_02129fb4: ; 0x02129fb4
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #0
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r1, r0
 	add r0, r4, #0x18c
 	blx func_ov00_020a9588
 	ldr r0, _0212a078 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r2, r0
 	add r0, r4, #0x1e8
 	add r1, r4, #0x20c
@@ -28700,7 +28700,7 @@ func_ov12_0212a2cc: ; 0x0212a2cc
 	ldr r0, _0212a458 ; =gItemManager
 	ldr r1, _0212a45c ; =data_ov12_02134914
 	ldr r0, [r0]
-	bl func_ov00_020ad594
+	bl _ZNK11ItemManager18func_ov00_020ad594Ej
 	ldr r1, _0212a460 ; =data_027e0fc4
 	mov r5, r0
 	ldr r0, [r1]

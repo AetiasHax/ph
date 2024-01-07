@@ -2999,7 +2999,7 @@ _0216fe84:
 _0216fe90:
 	mov r0, r5
 	mov r1, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
@@ -3013,7 +3013,7 @@ _0216febc:
 	mov r1, #4
 	ldr r4, [r0]
 	mov r0, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _0216fef4
 	ldr r0, _0216ffb8 ; =data_027e0f74
@@ -3026,7 +3026,7 @@ _0216febc:
 _0216fef4:
 	mov r0, r4
 	mov r1, #3
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _0216ff24
 	ldr r0, _0216ffb8 ; =data_027e0f74
@@ -3039,7 +3039,7 @@ _0216fef4:
 _0216ff24:
 	mov r0, r4
 	mov r1, #2
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _0216ff54
 	ldr r0, _0216ffb8 ; =data_027e0f74
@@ -3092,7 +3092,7 @@ func_ov28_0216ffc4: ; 0x0216ffc4
 	ldr r0, _02170004 ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -5121,7 +5121,7 @@ _021718f4:
 _02171900:
 	mov r0, r5
 	mov r1, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
@@ -5135,7 +5135,7 @@ _0217192c:
 	mov r1, #4
 	ldr r4, [r0]
 	mov r0, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _02171964
 	ldr r0, _02171a28 ; =data_027e0f74
@@ -5148,7 +5148,7 @@ _0217192c:
 _02171964:
 	mov r0, r4
 	mov r1, #3
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _02171994
 	ldr r0, _02171a28 ; =data_027e0f74
@@ -5161,7 +5161,7 @@ _02171964:
 _02171994:
 	mov r0, r4
 	mov r1, #2
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _021719c4
 	ldr r0, _02171a28 ; =data_027e0f74
@@ -5231,7 +5231,7 @@ func_ov28_02171a60: ; 0x02171a60
 	ldr r0, _02171aa0 ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -6309,7 +6309,7 @@ func_ov28_0217280c: ; 0x0217280c
 	mov r1, #1
 	mov r8, r2
 	str r3, [sl, #0x20c]
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #0
 	beq _02172870
 	cmp r0, #1
@@ -6322,7 +6322,7 @@ _02172870:
 _02172878:
 	mov r0, r7
 	mov r1, #2
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #0
 	beq _0217289c
 	cmp r0, #1
@@ -6335,7 +6335,7 @@ _0217289c:
 _021728a4:
 	mov r0, r7
 	mov r1, #0
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #0
 	beq _021728c8
 	cmp r0, #1
@@ -6422,7 +6422,7 @@ _02172998:
 	ldr r0, [r0]
 	add r2, r0, r1
 	ldrb r4, [r2, #0x24]
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #0
 	beq _021729d0
 	cmp r0, #1
@@ -6451,7 +6451,7 @@ _021729f4:
 	ldrb r2, [r2, #0x24]
 	cmp r2, #0x14
 	bne _02172a2c
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #0
 	moveq r0, #2
 	movne r0, #1
@@ -6479,7 +6479,7 @@ func_ov28_02172a44: ; 0x02172a44
 	ldr r1, _02172a84 ; =data_ov28_021782e0
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl func_ov00_020ada48
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 	cmp r0, #2
 	movge r0, #1
 	ldmgeia sp!, {r3, pc}

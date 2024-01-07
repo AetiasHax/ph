@@ -8575,7 +8575,7 @@ _02174bf8:
 _02174c04:
 	mov r0, r5
 	mov r1, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
@@ -8589,7 +8589,7 @@ _02174c30:
 	mov r1, #4
 	ldr r4, [r0]
 	mov r0, r4
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _02174c68
 	ldr r0, _02174d2c ; =data_027e0f74
@@ -8602,7 +8602,7 @@ _02174c30:
 _02174c68:
 	mov r0, r4
 	mov r1, #3
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _02174c98
 	ldr r0, _02174d2c ; =data_027e0f74
@@ -8615,7 +8615,7 @@ _02174c68:
 _02174c98:
 	mov r0, r4
 	mov r1, #2
-	blx func_ov00_020ad930
+	blx _ZNK11ItemManager10GetUnk_098Ej
 	cmp r0, #0
 	beq _02174cc8
 	ldr r0, _02174d2c ; =data_027e0f74
@@ -12976,10 +12976,10 @@ _02178760:
 _02178774:
 	ldr sl, [r7]
 	mov r0, sl
-	blx func_ov00_020ad918
+	blx _ZNK11ItemManager16GetTreasureCountEj
 	mov sb, r0
 	mov r0, sl
-	blx func_ov00_020ad9e4
+	blx _ZNK11ItemManager19GetMaxTreasureCountEv
 	cmp sb, r0
 	ldrge r0, [sp]
 	orrge r0, r5, r8, lsl r0

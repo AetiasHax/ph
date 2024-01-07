@@ -384,7 +384,7 @@
 .extern func_ov03_020f7e0c
 .extern func_ov03_020f7e18
 .extern func_ov09_0211cc8c
-.extern func_ov00_020ad790
+.extern _ZN11ItemManager18func_ov00_020ad790Ej
 .extern data_027e0fb8
 .extern gItemManager
 .extern func_ov00_020a5e9c

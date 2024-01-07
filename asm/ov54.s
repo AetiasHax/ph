@@ -10,7 +10,7 @@ func_ov54_02198d00: ; 0x02198d00
 	ldr r0, _02198d24 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	ldr r0, _02198d28 ; =data_ov54_02199a2c
 	bl func_ov00_020a9614

@@ -9646,13 +9646,13 @@ func_ov00_020a7c60: ; 0x020a7c60
 	arm_func_start func_ov00_020a7ce4
 func_ov00_020a7ce4: ; 0x020a7ce4
 	ldr r0, _020a7cf4 ; =gItemManager
-	ldr ip, _020a7cf8 ; =func_ov00_020ad678
+	ldr ip, _020a7cf8 ; =_ZN11ItemManager18func_ov00_020ad678Ejjj
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a7ce4
 _020a7cf4: .word gItemManager
-_020a7cf8: .word func_ov00_020ad678
+_020a7cf8: .word _ZN11ItemManager18func_ov00_020ad678Ejjj
 
 	.global func_ov00_020a7cfc
 	arm_func_start func_ov00_020a7cfc
@@ -9668,7 +9668,7 @@ func_ov00_020a7cfc: ; 0x020a7cfc
 	ldmeqia sp!, {r3, pc}
 	ldr r0, _020a7d30 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ad6f8
+	bl _ZN11ItemManager17EquipItem_vfunc_2cEj
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a7cfc
@@ -10052,7 +10052,7 @@ func_ov00_020a8158: ; 0x020a8158
 _020a8168:
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	cmp r0, #0
 	beq _020a818c
 	ldr r2, [r0]
@@ -10072,13 +10072,13 @@ _020a819c: .word gItemManager
 	arm_func_start func_ov00_020a81a0
 func_ov00_020a81a0: ; 0x020a81a0
 	ldr r0, _020a81b0 ; =gItemManager
-	ldr ip, _020a81b4 ; =func_ov00_020ae418
+	ldr ip, _020a81b4 ; =_ZN11ItemManager22UpdateSwordShieldInUseEv
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a81a0
 _020a81b0: .word gItemManager
-_020a81b4: .word func_ov00_020ae418
+_020a81b4: .word _ZN11ItemManager22UpdateSwordShieldInUseEv
 
 	.global func_ov00_020a81b8
 	arm_func_start func_ov00_020a81b8
@@ -11145,7 +11145,7 @@ func_ov00_020a8cec: ; 0x020a8cec
 	stmdb sp!, {r3, lr}
 	ldr r0, _020a8d24 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	cmp r0, #0
 	beq _020a8d1c
 	ldr r1, [r0]
@@ -11165,13 +11165,13 @@ _020a8d24: .word gItemManager
 	arm_func_start func_ov00_020a8d28
 func_ov00_020a8d28: ; 0x020a8d28
 	ldr r0, _020a8d38 ; =gItemManager
-	ldr ip, _020a8d3c ; =func_ov00_020ad714
+	ldr ip, _020a8d3c ; =_ZN11ItemManager12GetEquipItemEj
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a8d28
 _020a8d38: .word gItemManager
-_020a8d3c: .word func_ov00_020ad714
+_020a8d3c: .word _ZN11ItemManager12GetEquipItemEj
 
 	.global func_ov00_020a8d40
 	arm_func_start func_ov00_020a8d40
@@ -16427,7 +16427,7 @@ func_ov00_020acb6c: ; 0x020acb6c
 	ldr r0, _020ace74 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	cmp r0, #0
 	beq _020acbb0
 	bl func_ov00_020abf50
@@ -16703,7 +16703,7 @@ func_ov00_020acf28: ; 0x020acf28
 	bgt _020acf98
 	ldr r0, _020acfe4 ; =gItemManager
 	ldr r0, [r0]
-	bl func_ov00_020ae5d0
+	bl _ZNK11ItemManager13HasBluePotionEv
 	cmp r0, #0
 	movne r0, #0xe
 	moveq r0, #0xf

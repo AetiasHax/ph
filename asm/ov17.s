@@ -2274,7 +2274,7 @@ func_ov17_0215cf24: ; 0x0215cf24
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #1
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r1, r0
 	add r0, r4, #0x188
 	blx func_ov00_020a9588
@@ -3652,14 +3652,14 @@ func_ov17_0215e1f0: ; 0x0215e1f0
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #0
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r1, r0
 	add r0, r4, #0x188
 	blx func_ov00_020a9588
 	ldr r0, _0215e29c ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r2, r0
 	add r0, r4, #0x1e4
 	add r1, r4, #0x208
@@ -4153,7 +4153,7 @@ func_ov17_0215e8f4: ; 0x0215e8f4
 	ldr r0, _0215e9dc ; =gItemManager
 	ldr r1, _0215e9e0 ; =data_ov17_0216b0ac
 	ldr r0, [r0]
-	bl func_ov00_020ad594
+	bl _ZNK11ItemManager18func_ov00_020ad594Ej
 	ldr r1, _0215e9e4 ; =data_027e0fc4
 	mov r5, r0
 	ldr r0, [r1]
@@ -4803,7 +4803,7 @@ func_ov17_0215f16c: ; 0x0215f16c
 	ldr r0, _0215f2d0 ; =gItemManager
 	ldr r0, [r0]
 	ldr r1, [r3, r1, lsl #2]
-	bl func_ov00_020ad588
+	bl _ZN11ItemManager19GetDungeonItemModelEj
 	mov r1, r0
 	add r0, r4, #0x188
 	ldr r2, [r0]
@@ -11500,7 +11500,7 @@ func_ov17_02164538: ; 0x02164538
 	ldr r0, _021645fc ; =gItemManager
 	mov r1, #4
 	ldr r0, [r0]
-	bl func_ov00_020ad52c
+	bl _ZN11ItemManager12GetItemModelEj
 	mov r1, r0
 	add r0, r4, #0x78
 	mov r2, #0

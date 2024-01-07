@@ -1360,7 +1360,7 @@ _020b5a04:
 	ldr r0, _020b5ca0 ; =gItemManager
 	mov r1, #6
 	ldr r0, [r0]
-	bl func_ov00_020ad714
+	bl _ZN11ItemManager12GetEquipItemEj
 	ldrsh r1, [r6, #0x5a]
 	mov r4, r0
 	cmp r1, #5
@@ -4138,7 +4138,7 @@ _020b806c:
 _020b8078:
 	ldr r0, [r6]
 	add r1, r5, #0
-	bl func_ov00_020ad8e0
+	bl _ZNK11ItemManager19GetEquippedShipPartEj
 	lsl r1, r0, #2
 	ldr r0, [r4, r1]
 	add r5, r5, #1
@@ -8459,7 +8459,7 @@ func_ov00_020bb50c: ; 0x020bb50c
 	ldr r0, _020bb540 ; =gItemManager
 	strh r1, [r4, #8]
 	ldr r0, [r0]
-	blx func_ov00_020ae2c0
+	blx _ZN11ItemManager13UnequipPotionEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020bb50c
@@ -9307,7 +9307,7 @@ func_ov00_020bbed4: ; 0x020bbed4
 	movgt r7, #0
 	bl func_ov00_020bc098
 	mov r1, #2
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #0
 	ble _020bbf34
 	cmp r7, r0
@@ -9450,7 +9450,7 @@ func_ov00_020bc0a8: ; 0x020bc0a8
 	ldmneia sp!, {r4, r5, r6, r7, r8, pc}
 	bl func_ov00_020bc098
 	mov r1, #2
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	mov r4, r0
 	cmp r4, #0
 	ble _020bc114
@@ -11124,7 +11124,7 @@ func_ov00_020bd510: ; 0x020bd510
 	ldmltia sp!, {r3, r4, r5, pc}
 	rsb r1, r2, #0
 	mov r2, #0
-	bl func_ov00_020ae2e0
+	bl _ZN11ItemManager10GiveRupeesEjj
 	mvn lr, #0
 	mov r3, #0
 	str r3, [sp, #0xc]
@@ -12923,7 +12923,7 @@ func_ov00_020beb30: ; 0x020beb30
 	blx r2
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020ad72c
+	bl _ZNK11ItemManager7GetAmmoEj
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020beb30
@@ -12942,7 +12942,7 @@ func_ov00_020beb5c: ; 0x020beb5c
 	mov r1, r0
 	mov r0, r4
 	mov r2, r5
-	bl func_ov00_020ad73c
+	bl _ZN11ItemManager8GiveAmmoEjj
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020beb5c
@@ -13465,7 +13465,7 @@ func_ov00_020bf18c: ; 0x020bf18c
 	ldr r0, _020bf1bc ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	blx func_ov00_020ad52c
+	blx _ZN11ItemManager12GetItemModelEj
 	add r1, r0, #0
 	ldr r0, [r4, #0xc]
 	ldr r2, [r0]
@@ -13474,7 +13474,7 @@ func_ov00_020bf18c: ; 0x020bf18c
 	ldr r0, _020bf1bc ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	blx func_ov00_020ad52c
+	blx _ZN11ItemManager12GetItemModelEj
 	add r1, r0, #0
 	ldr r0, [r4, #0x10]
 	ldr r2, [r0]
@@ -13551,7 +13551,7 @@ func_ov00_020bf270: ; 0x020bf270
 	ldr r0, _020bf2d4 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	strh r0, [r4, #0x54]
 	ldrsh r0, [r4, #0x54]
 	cmp r0, #0
@@ -14286,7 +14286,7 @@ _020bfd18:
 	ldr r0, _020bff38 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 _020bfd40:
 	str r0, [r4, #0x50]
 	ldr r0, [r4, #0x1c]
@@ -14973,7 +14973,7 @@ func_ov00_020c0674: ; 0x020c0674
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #1
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	ldr r2, [r4, #0x40]
 	mov r1, #0x18
 	mul r3, r2, r1
@@ -15087,7 +15087,7 @@ func_ov00_020c0770: ; 0x020c0770
 	ldr r0, _020c07f4 ; =gItemManager
 	mov r1, #2
 	ldr r0, [r0]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	movge r1, #1
 	ldrb r0, [r4, #0xc]
@@ -17270,7 +17270,7 @@ _020c208c:
 	str ip, [sp, #0x34]
 	str r3, [sp, #0x38]
 	str r2, [sp, #0x3c]
-	bl func_ov00_020ad9e8
+	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	cmp r0, #1
 	movge r0, #3
 	strge r0, [sp, #0x40]

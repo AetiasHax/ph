@@ -4428,7 +4428,7 @@ _0217f5a4:
 	mov r1, r1, lsl #0x8
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x10
-	blx func_ov00_020adcdc
+	blx _ZN11ItemManager8GiveItemEjjj
 	add sp, sp, #8
 	ldmia sp!, {r3, pc}
 _0217f5c4:
@@ -8538,7 +8538,7 @@ _021827e8:
 	ldr r0, _0218281c ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	blx func_ov00_020ada98
+	blx _ZN11ItemManager7AddItemEj
 _02182804:
 	mvn r0, #1
 	str r0, [r4, #0x10]

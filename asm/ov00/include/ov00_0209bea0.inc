@@ -43,7 +43,7 @@
 .extern func_ov00_02083978
 .extern data_027e0e60
 .extern func_01ff9cec
-.extern func_ov00_020ae5fc
+.extern _ZN11ItemManager21LoadDungeonItemModelsEv
 .extern func_ov00_020c45c4
 .extern func_ov00_020c4648
 .extern func_ov00_02082638
