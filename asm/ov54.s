@@ -7,7 +7,7 @@
 	arm_func_start func_ov54_02198d00
 func_ov54_02198d00: ; 0x02198d00
 	stmdb sp!, {r3, lr}
-	ldr r0, _02198d24 ; =gInventory
+	ldr r0, _02198d24 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
 	bl func_ov00_020ad52c
@@ -17,7 +17,7 @@ func_ov54_02198d00: ; 0x02198d00
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov54_02198d00
-_02198d24: .word gInventory
+_02198d24: .word gItemManager
 _02198d28: .word data_ov54_02199a2c
 
 	.global func_ov54_02198d2c
@@ -390,13 +390,13 @@ _021991a8:
 	strb r1, [r2, #0x7b]
 	ldr r0, [r0]
 	bl func_ov00_020af050
-	ldr r0, _021992c4 ; =gInventory
+	ldr r0, _021992c4 ; =gItemManager
 	ldr r4, [r0]
 	mov r0, r4
-	bl _ZNK9Inventory16GetEquippedFairyEv
+	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK9Inventory8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEj
 	cmp r0, #0
 	beq _0219920c
 	bl func_ov00_020ba3b4
@@ -459,7 +459,7 @@ _021992b4: .word 0x00000216
 _021992b8: .word data_ov00_020eec9c
 _021992bc: .word data_ov54_021999d8
 _021992c0: .word data_027e0fb8
-_021992c4: .word gInventory
+_021992c4: .word gItemManager
 
 	.global func_ov54_021992c8
 	arm_func_start func_ov54_021992c8

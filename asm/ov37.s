@@ -9603,7 +9603,7 @@ func_ov37_021843d4: ; 0x021843d4
 	mov r4, r0
 	bl func_ov00_020c1554
 	ldr r1, _02184474 ; =data_ov37_02188cd4
-	ldr r0, _02184478 ; =gInventory
+	ldr r0, _02184478 ; =gItemManager
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #4
@@ -9613,7 +9613,7 @@ func_ov37_021843d4: ; 0x021843d4
 	mov r3, r2
 	add r0, r4, #0x158
 	blx func_ov00_020bd618
-	ldr r0, _02184478 ; =gInventory
+	ldr r0, _02184478 ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
 	bl func_ov00_020ad52c
@@ -9642,7 +9642,7 @@ func_ov37_021843d4: ; 0x021843d4
 	.align 2, 0
 	arm_func_end func_ov37_021843d4
 _02184474: .word data_ov37_02188cd4
-_02184478: .word gInventory
+_02184478: .word gItemManager
 _0218447c: .word 0x000004cd
 
 	.global func_ov37_02184480

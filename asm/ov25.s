@@ -12898,7 +12898,7 @@ _021783b0:
 	bl func_ov00_020c1fc8
 	cmp r0, #0
 	beq _02178404
-	ldr r0, _02178504 ; =gInventory
+	ldr r0, _02178504 ; =gItemManager
 	mov r1, #2
 	ldr r0, [r0]
 	bl func_ov00_020ad9e8
@@ -12987,7 +12987,7 @@ _021784e8:
 	.align 2, 0
 	arm_func_end func_ov25_02178218
 _02178500: .word data_027e0e60
-_02178504: .word gInventory
+_02178504: .word gItemManager
 _02178508: .word 0x66666667
 
 	.global func_ov25_0217850c

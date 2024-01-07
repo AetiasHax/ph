@@ -1,27 +1,27 @@
-#include "Inventory.hpp"
+#include "ItemManager.hpp"
 
 extern u32 *data_027e0ce0[];
 
 #pragma thumb on
-Inventory* Inventory::Create() {
-    gInventory = new(data_027e0ce0[1], 4) Inventory();
-    return gInventory;
+ItemManager* ItemManager::Create() {
+    gItemManager = new(data_027e0ce0[1], 4) ItemManager();
+    return gItemManager;
 }
 
-void Inventory::Destroy() {
-    delete gInventory;
-    gInventory = 0;
+void ItemManager::Destroy() {
+    delete gItemManager;
+    gItemManager = 0;
 }
 
 #pragma interworking on
-void Inventory::ClearPrevEquippedItem() {
+void ItemManager::ClearPrevEquippedItem() {
     this->mPrevEquippedItem = ItemFlag_None;
 }
 #pragma interworking off
 
-NONMATCH void Inventory::Save(SaveInventory *save) {
+NONMATCH void ItemManager::Save(SaveItemManager *save) {
     #ifndef NONMATCHING
-    #include "../asm/ov00/inventory/Inventory_Save.inc"
+    #include "../asm/ov00/ItemManager/ItemManager_Save.inc"
     #else
     save->itemFlags = this->mItemFlags;
     save->numRupees = this->mNumRupees;
@@ -41,17 +41,17 @@ NONMATCH void Inventory::Save(SaveInventory *save) {
     const u32 *equippedParts = this->mEquippedShipParts;
 
     s32 i = 0;
-    SaveInventory *save2 = save;
-    Inventory *this2 = this;
-    ShipParts (Inventory::*shipParts)[ShipPart_COUNT] = &Inventory::mShipParts;
+    SaveItemManager *save2 = save;
+    ItemManager *this2 = this;
+    ShipParts (ItemManager::*shipParts)[ShipPart_COUNT] = &ItemManager::mShipParts;
     for (; i < ShipPart_COUNT; ++i) {
         save->equippedShipParts[i] = this->mEquippedShipParts[i];
         for (s32 j = 0; j < ShipType_COUNT; ++j) {
-            u8 shipPartCount = ((Inventory*) ((u32)this2 + j)->*shipParts)[0].parts[0];
-            ((SaveInventory*) ((u32)save2 + j))->shipParts[0].parts[0] = shipPartCount;
+            u8 shipPartCount = ((ItemManager*) ((u32)this2 + j)->*shipParts)[0].parts[0];
+            ((SaveItemManager*) ((u32)save2 + j))->shipParts[0].parts[0] = shipPartCount;
         }
-        this2 = (Inventory*) ((u32)this2 + sizeof(this2->mShipParts[0]));
-        save2 = (SaveInventory*) ((u32)save2 + sizeof(save2->shipParts[0]));
+        this2 = (ItemManager*) ((u32)this2 + sizeof(this2->mShipParts[0]));
+        save2 = (SaveItemManager*) ((u32)save2 + sizeof(save2->shipParts[0]));
     }
 
     save->shipPartPricesShown = this->mShipPartPricesShown;
@@ -74,10 +74,10 @@ NONMATCH void Inventory::Save(SaveInventory *save) {
     #endif
 }
 
-extern "C" bool _ZN9Inventory7HasItemEj();
-NONMATCH void Inventory::Load(const SaveInventory *save) {
+extern "C" bool _ZN11ItemManager7HasItemEj();
+NONMATCH void ItemManager::Load(const SaveItemManager *save) {
     #ifndef NONMATCHING
-    #include "../asm/ov00/inventory/Inventory_Load.inc"
+    #include "../asm/ov00/ItemManager/ItemManager_Load.inc"
     #else
     this->mItemFlags = save->itemFlags;
     this->mNumRupees = save->numRupees;
@@ -102,20 +102,20 @@ NONMATCH void Inventory::Load(const SaveInventory *save) {
     }
 
     s32 i = 0; // ip (r0)
-    Inventory *this2 = this; // sp+0
-    const SaveInventory *save2 = save; // r3
-    Inventory *this3 = this; // r5
-    ShipParts (SaveInventory::*shipParts)[ShipPart_COUNT] = &SaveInventory::shipParts; // r7
+    ItemManager *this2 = this; // sp+0
+    const SaveItemManager *save2 = save; // r3
+    ItemManager *this3 = this; // r5
+    ShipParts (SaveItemManager::*shipParts)[ShipPart_COUNT] = &SaveItemManager::shipParts; // r7
     do {
         this2->mEquippedShipParts[0] = save->equippedShipParts[i];
         for (s32 j = 0; j < ShipType_COUNT; ++j) {
-            u8 partCount = (((const SaveInventory*) ((u32)save2 + j))->*shipParts)[0].parts[0];
-            ((Inventory*) ((u32)this3 + j))->mShipParts[0].parts[0] = partCount;
+            u8 partCount = (((const SaveItemManager*) ((u32)save2 + j))->*shipParts)[0].parts[0];
+            ((ItemManager*) ((u32)this3 + j))->mShipParts[0].parts[0] = partCount;
         }
-        save2 = (const SaveInventory*) ((u32)save2 + sizeof(save->shipParts[0]));
-        this2 = (Inventory*) ((u32)this2 + sizeof(this->mEquippedShipParts[0]));
+        save2 = (const SaveItemManager*) ((u32)save2 + sizeof(save->shipParts[0]));
+        this2 = (ItemManager*) ((u32)this2 + sizeof(this->mEquippedShipParts[0]));
         ++i;
-        this3 = (Inventory*) ((u32)this3 + sizeof(this->mShipParts[0]));
+        this3 = (ItemManager*) ((u32)this3 + sizeof(this->mShipParts[0]));
     }
     while(i < ShipPart_COUNT);
     
@@ -151,13 +151,13 @@ NONMATCH void Inventory::Load(const SaveInventory *save) {
 #pragma thumb off
 
 #pragma interworking on
-FairyId Inventory::GetEquippedFairy() const {
+FairyId ItemManager::GetEquippedFairy() const {
     FairyId fairy = this->mEquippedFairy;
     if (fairy == FairyId_None) return FairyId_Courage;
     return fairy;
 }
 
-Navi* Inventory::GetFairy(FairyId id) const {
+Navi* ItemManager::GetFairy(FairyId id) const {
     return this->mFairies[id];
 }
 #pragma interworking off
@@ -165,11 +165,11 @@ Navi* Inventory::GetFairy(FairyId id) const {
 extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
-extern "C" void _ZNK9Inventory15GetEquippedItemEv();
+extern "C" void _ZNK11ItemManager15GetEquippedItemEv();
 extern "C" void _ZN14OverlayManager13LoadEquipItemEj();
-NONMATCH void Inventory::TickEquipItem(void) {
+NONMATCH void ItemManager::TickEquipItem(void) {
     #ifndef NONMATCHING
-    #include "../asm/ov00/inventory/Inventory_TickEquipItem.inc"
+    #include "../asm/ov00/ItemManager/ItemManager_TickEquipItem.inc"
     #else
     ItemFlag equip = this->GetEquippedItem();
     if (this->mEquipLoadTimer != 0) {

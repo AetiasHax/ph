@@ -118,7 +118,7 @@ _020ad620:
 	cmp r0, #1
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r5
-	bl _ZNK9Inventory15GetEquippedItemEv
+	bl _ZNK11ItemManager15GetEquippedItemEv
 	mvn r1, #0
 	cmp r0, r1
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -295,7 +295,7 @@ _020ad840:
 _020ad860:
 	ldr r1, [r6]
 	mov r0, r6
-	bl _ZN9Inventory7HasItemEj
+	bl _ZN11ItemManager7HasItemEj
 	cmp r0, #0
 	ldrne r4, [r6]
 _020ad874:
@@ -544,7 +544,7 @@ func_ov00_020ad9e8: ; 0x020ad9e8
 	mov r4, r1
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	bl _ZNK9Inventory16GetEquippedFairyEv
+	bl _ZNK11ItemManager16GetEquippedFairyEv
 	cmp r0, #0
 	bne _020ada24
 	ldrb r0, [r5, #0x14d]
@@ -553,7 +553,7 @@ func_ov00_020ad9e8: ; 0x020ad9e8
 	ldmneia sp!, {r3, r4, r5, pc}
 _020ada24:
 	mov r0, r5
-	bl _ZNK9Inventory16GetEquippedFairyEv
+	bl _ZNK11ItemManager16GetEquippedFairyEv
 	cmp r4, r0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
@@ -570,19 +570,19 @@ func_ov00_020ada48: ; 0x020ada48
 	mov r4, r1
 	add r1, r4, #0x1a
 	mov r5, r0
-	bl _ZN9Inventory7HasItemEj
+	bl _ZN11ItemManager7HasItemEj
 	cmp r0, #0
 	movne r0, #2
 	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	add r1, r4, #0x17
-	bl _ZN9Inventory7HasItemEj
+	bl _ZN11ItemManager7HasItemEj
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov00_020ada48
 
-	.global _ZN9Inventory7HasItemEj
-	arm_func_start _ZN9Inventory7HasItemEj
-_ZN9Inventory7HasItemEj: ; 0x020ada78
+	.global _ZN11ItemManager7HasItemEj
+	arm_func_start _ZN11ItemManager7HasItemEj
+_ZN11ItemManager7HasItemEj: ; 0x020ada78
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x128]
@@ -591,7 +591,7 @@ _ZN9Inventory7HasItemEj: ; 0x020ada78
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end _ZN9Inventory7HasItemEj
+	arm_func_end _ZN11ItemManager7HasItemEj
 
 	.global func_ov00_020ada98
 	thumb_func_start func_ov00_020ada98
@@ -1826,16 +1826,16 @@ _020ae382:
 	thumb_func_end func_ov00_020ae368
 _020ae38c: .word data_027e0e60
 
-	.global _ZNK9Inventory15GetEquippedItemEv
-	arm_func_start _ZNK9Inventory15GetEquippedItemEv
-_ZNK9Inventory15GetEquippedItemEv: ; 0x020ae390
+	.global _ZNK11ItemManager15GetEquippedItemEv
+	arm_func_start _ZNK11ItemManager15GetEquippedItemEv
+_ZNK11ItemManager15GetEquippedItemEv: ; 0x020ae390
 	ldr r2, [r0, #8]
 	mvn r1, #0
 	cmp r2, r1
 	ldreq r2, [r0]
 	mov r0, r2
 	bx lr
-	arm_func_end _ZNK9Inventory15GetEquippedItemEv
+	arm_func_end _ZNK11ItemManager15GetEquippedItemEv
 
 	.global func_ov00_020ae3a8
 	arm_func_start func_ov00_020ae3a8
@@ -2160,7 +2160,7 @@ _020ae644: .word data_027e0f78
 	thumb_func_start func_ov00_020ae648
 func_ov00_020ae648: ; 0x020ae648
 	push {r3, lr}
-	ldr r1, _020ae6e8 ; =gInventory
+	ldr r1, _020ae6e8 ; =gItemManager
 	ldr r2, [r1]
 	mov r1, #0x53
 	lsl r1, r1, #2
@@ -2256,7 +2256,7 @@ _020ae6de:
 	pop {r3, pc}
 	nop
 	thumb_func_end func_ov00_020ae648
-_020ae6e8: .word gInventory
+_020ae6e8: .word gItemManager
 _020ae6ec: .word data_ov00_020eec68
 
 	.global func_ov00_020ae6f0

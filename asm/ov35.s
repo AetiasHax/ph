@@ -3465,7 +3465,7 @@ func_ov35_0217ebb4: ; 0x0217ebb4
 	str r1, [r4, #0x3ac]
 	sub r0, r1, #1
 	str r0, [r4, #0x3b0]
-	ldr r0, _0217eca4 ; =gInventory
+	ldr r0, _0217eca4 ; =gItemManager
 	str r1, [r4, #0x3b4]
 	ldr r0, [r0]
 	mov r1, #4
@@ -3507,7 +3507,7 @@ func_ov35_0217ebb4: ; 0x0217ebb4
 _0217ec98: .word data_ov35_02185cf0
 _0217ec9c: .word func_ov35_0217bf4c
 _0217eca0: .word func_ov35_0217bf68
-_0217eca4: .word gInventory
+_0217eca4: .word gItemManager
 
 	.global func_ov35_0217eca8
 	arm_func_start func_ov35_0217eca8
@@ -7755,7 +7755,7 @@ _021828f4:
 	mov r1, #0x1f
 	mov r2, #1
 	bl func_ov00_0209779c
-	ldr r0, _02182944 ; =gInventory
+	ldr r0, _02182944 ; =gItemManager
 	mov r1, #0x1d
 	ldr r0, [r0]
 	blx func_ov00_020ada98
@@ -7770,7 +7770,7 @@ _021828f4:
 _02182938: .word data_027e0f74
 _0218293c: .word 0x0000099a
 _02182940: .word data_027e0e58
-_02182944: .word gInventory
+_02182944: .word gItemManager
 
 	.global func_ov35_02182948
 	arm_func_start func_ov35_02182948

@@ -291,7 +291,7 @@ func_ov20_0216da64: ; 0x0216da64
 	ldr r0, [r0]
 	mov r2, #1
 	bl func_ov00_0209779c
-	ldr r0, _0216dac0 ; =gInventory
+	ldr r0, _0216dac0 ; =gItemManager
 	mov r1, #0x15
 	ldr r0, [r0]
 	blx func_ov00_020ada98
@@ -309,7 +309,7 @@ _0216da98:
 	.align 2, 0
 	arm_func_end func_ov20_0216da64
 _0216dabc: .word data_027e0f74
-_0216dac0: .word gInventory
+_0216dac0: .word gItemManager
 
 	.global func_ov20_0216dac4
 	arm_func_start func_ov20_0216dac4
@@ -8612,7 +8612,7 @@ func_ov20_021749b0: ; 0x021749b0
 func_ov20_021749dc: ; 0x021749dc
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x5c
-	ldr r1, _02174b94 ; =gInventory
+	ldr r1, _02174b94 ; =gItemManager
 	mov r6, r0
 	ldr r0, [r1]
 	mov r1, #2
@@ -8667,7 +8667,7 @@ _02174a20:
 	bl func_ov00_020c2238
 	cmp r0, #0
 	beq _02174b28
-	ldr r0, _02174b94 ; =gInventory
+	ldr r0, _02174b94 ; =gItemManager
 	mov lr, r4
 	ldr r4, [sp, #0x34]
 	ldr r3, [sp, #0x38]
@@ -8727,7 +8727,7 @@ _02174b88:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov20_021749dc
-_02174b94: .word gInventory
+_02174b94: .word gItemManager
 _02174b98: .word 0x000008a4
 _02174b9c: .word 0x00000733
 _02174ba0: .word data_027e0e60

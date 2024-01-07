@@ -171,7 +171,7 @@
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5e9c
 .extern func_ov00_0209d738
-.extern _ZN9Inventory7HasItemEj
+.extern _ZN11ItemManager7HasItemEj
 .extern func_ov26_02173b7c
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5e9c
@@ -189,7 +189,7 @@
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0f7c
-.extern gInventory
+.extern gItemManager
 .extern data_ov09_0211f5dc
 .extern func_ov05_021010b0
 .extern func_ov05_021010ec

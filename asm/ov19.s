@@ -1543,7 +1543,7 @@ func_ov19_0216eacc: ; 0x0216eacc
 	mov r1, #0x1e
 	mov r2, #1
 	bl func_ov00_0209779c
-	ldr r0, _0216eb2c ; =gInventory
+	ldr r0, _0216eb2c ; =gItemManager
 	mov r1, #0x16
 	ldr r0, [r0]
 	blx func_ov00_020ada98
@@ -1563,7 +1563,7 @@ _0216eafc:
 	.align 2, 0
 	arm_func_end func_ov19_0216eacc
 _0216eb28: .word data_027e0f74
-_0216eb2c: .word gInventory
+_0216eb2c: .word gItemManager
 _0216eb30: .word 0x0000048d
 _0216eb34: .word data_027e0ffc
 

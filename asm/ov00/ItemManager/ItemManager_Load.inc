@@ -213,7 +213,7 @@ _020ad3ce:
     bhi _020ad3f2
     add r0, r4, #0
     mov r1, #2
-    bl _ZN9Inventory7HasItemEj
+    bl _ZN11ItemManager7HasItemEj
     cmp r0, #0
     beq _020ad3ea
     mov r0, #2
@@ -231,7 +231,7 @@ _020ad3f2:
     bne _020ad40a
     add r0, r4, #0
     mov r1, #2
-    bl _ZN9Inventory7HasItemEj
+    bl _ZN11ItemManager7HasItemEj
     cmp r0, #0
     beq _020ad40a
     mov r0, #2

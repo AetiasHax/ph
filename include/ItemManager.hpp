@@ -129,7 +129,7 @@ struct UnkStruct_027e0d38 {
     /* 2c */
 };
 
-struct SaveInventory {
+struct SaveItemManager {
     /* 00 */ ItemFlags itemFlags;
     /* 10 */ u32 salvagedTreasureFlags;
     /* 14 */ ShipPartPricesShown shipPartPricesShown;
@@ -158,7 +158,7 @@ struct SaveInventory {
     /* a6 */
 };
 
-class Inventory : public SysObject {
+class ItemManager : public SysObject {
 private:
     /* 000 */ ItemFlag mEquippedItem;
     /* 004 */ ItemFlag mPrevEquippedItem;
@@ -199,14 +199,14 @@ private:
     /* 150 */
 
 public:
-    static Inventory* Create();
+    static ItemManager* Create();
     static void Destroy();
-    Inventory();
-    ~Inventory();
+    ItemManager();
+    ~ItemManager();
 
     void ClearPrevEquippedItem();
-    void Save(SaveInventory *save);
-    void Load(const SaveInventory *save);
+    void Save(SaveItemManager *save);
+    void Load(const SaveItemManager *save);
 
     FairyId GetEquippedFairy() const;
     Navi* GetFairy(FairyId id) const;
@@ -227,4 +227,4 @@ public:
     bool HasItem(ItemFlag item);
 };
 
-extern Inventory *gInventory;
+extern ItemManager *gItemManager;

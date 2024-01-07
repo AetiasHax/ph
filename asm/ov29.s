@@ -752,7 +752,7 @@ _0216df70:
 	ldr r0, _0216dff4 ; =data_027e104c
 	ldr r0, [r0]
 	bl func_ov09_0211a988
-	ldr r0, _0216e008 ; =gInventory
+	ldr r0, _0216e008 ; =gItemManager
 	mvn r1, #0
 	ldr r0, [r0]
 	bl func_ov00_020ae4dc
@@ -779,7 +779,7 @@ _0216dff8: .word data_ov00_020eec9c
 _0216dffc: .word 0x0000099a
 _0216e000: .word data_027e0fc8
 _0216e004: .word data_ov29_0217a504
-_0216e008: .word gInventory
+_0216e008: .word gItemManager
 
 	.global func_ov29_0216e00c
 	arm_func_start func_ov29_0216e00c
@@ -11179,7 +11179,7 @@ func_ov29_02176d6c: ; 0x02176d6c
 	ldrb r0, [r0, #0x2a]
 	cmp r0, #0
 	bne _02176da8
-	ldr r0, _02176dbc ; =gInventory
+	ldr r0, _02176dbc ; =gItemManager
 	ldr r0, [r0]
 	ldr r0, [r0]
 	cmp r0, #9
@@ -11197,7 +11197,7 @@ _02176db0:
 	.align 2, 0
 	arm_func_end func_ov29_02176d6c
 _02176db8: .word data_027e103c
-_02176dbc: .word gInventory
+_02176dbc: .word gItemManager
 
 	.global func_ov29_02176dc0
 	arm_func_start func_ov29_02176dc0
@@ -11307,7 +11307,7 @@ _02176eec:
 	cmp r2, r1
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r1, _02176fb4 ; =gInventory
+	ldr r1, _02176fb4 ; =gItemManager
 	ldr r1, [r1]
 	ldrh r1, [r1, #0xba]
 	cmp r1, #0
@@ -11356,7 +11356,7 @@ _02176f60:
 	arm_func_end func_ov29_02176ea8
 _02176fac: .word data_027e0f74
 _02176fb0: .word data_ov29_0217a4ac
-_02176fb4: .word gInventory
+_02176fb4: .word gItemManager
 _02176fb8: .word data_027e103c
 
 	.global func_ov29_02176fbc
@@ -11514,7 +11514,7 @@ _0217714c:
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _021771d8:
-	ldr r0, _021772f4 ; =gInventory
+	ldr r0, _021772f4 ; =gItemManager
 	ldr r0, [r0]
 	ldrh r6, [r0, #0xba]
 	cmp r6, #0
@@ -11588,7 +11588,7 @@ _021772e4: .word data_027e0618
 _021772e8: .word data_027e0db0
 _021772ec: .word data_ov29_0217a4ac
 _021772f0: .word data_027e103c
-_021772f4: .word gInventory
+_021772f4: .word gItemManager
 
 	.global func_ov29_021772f8
 	arm_func_start func_ov29_021772f8
@@ -11947,7 +11947,7 @@ _021777f8:
 	cmp r1, #0
 	moveq r1, #1
 	streqb r1, [r0, #0x55]
-	ldr r1, _021778ec ; =gInventory
+	ldr r1, _021778ec ; =gItemManager
 	ldr r0, _021778f0 ; =data_ov00_020eec9c
 	ldr r2, [r1]
 	mov r1, #0xc1
@@ -12005,7 +12005,7 @@ _021778dc: .word data_ov29_0217a244
 _021778e0: .word data_02057200
 _021778e4: .word data_ov29_0217bd28
 _021778e8: .word data_ov29_0217a4ac
-_021778ec: .word gInventory
+_021778ec: .word gItemManager
 _021778f0: .word data_ov00_020eec9c
 _021778f4: .word data_ov38_02189238
 

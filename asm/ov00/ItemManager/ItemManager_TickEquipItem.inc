@@ -1,7 +1,7 @@
 func_ov00_020ad434: // 0x020ad434
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl _ZNK9Inventory15GetEquippedItemEv
+	bl _ZNK11ItemManager15GetEquippedItemEv
 	ldrh r1, [r5, #0x20]
 	mov r4, r0
 	cmp r1, #0

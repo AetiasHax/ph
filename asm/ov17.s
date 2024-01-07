@@ -2270,7 +2270,7 @@ func_ov17_0215cf24: ; 0x0215cf24
 	mov r4, r0
 	bl func_ov00_020d4414
 	ldr r1, _0215cf90 ; =data_ov17_0216bcc4
-	ldr r0, _0215cf94 ; =gInventory
+	ldr r0, _0215cf94 ; =gItemManager
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #1
@@ -2296,7 +2296,7 @@ func_ov17_0215cf24: ; 0x0215cf24
 	.align 2, 0
 	arm_func_end func_ov17_0215cf24
 _0215cf90: .word data_ov17_0216bcc4
-_0215cf94: .word gInventory
+_0215cf94: .word gItemManager
 _0215cf98: .word data_027e0d0c
 
 	.global func_ov17_0215cf9c
@@ -3648,7 +3648,7 @@ func_ov17_0215e1f0: ; 0x0215e1f0
 	mov r4, r0
 	bl func_ov00_020d4414
 	ldr r1, _0215e298 ; =data_ov17_0216bdcc
-	ldr r0, _0215e29c ; =gInventory
+	ldr r0, _0215e29c ; =gItemManager
 	str r1, [r4]
 	ldr r0, [r0]
 	mov r1, #0
@@ -3656,7 +3656,7 @@ func_ov17_0215e1f0: ; 0x0215e1f0
 	mov r1, r0
 	add r0, r4, #0x188
 	blx func_ov00_020a9588
-	ldr r0, _0215e29c ; =gInventory
+	ldr r0, _0215e29c ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
 	bl func_ov00_020ad588
@@ -3688,7 +3688,7 @@ func_ov17_0215e1f0: ; 0x0215e1f0
 	.align 2, 0
 	arm_func_end func_ov17_0215e1f0
 _0215e298: .word data_ov17_0216bdcc
-_0215e29c: .word gInventory
+_0215e29c: .word gItemManager
 _0215e2a0: .word data_ov17_0216be94
 _0215e2a4: .word func_ov00_020b7d74
 _0215e2a8: .word func_ov17_0215bf80
@@ -4150,7 +4150,7 @@ func_ov17_0215e8f4: ; 0x0215e8f4
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	ldr r0, _0215e9dc ; =gInventory
+	ldr r0, _0215e9dc ; =gItemManager
 	ldr r1, _0215e9e0 ; =data_ov17_0216b0ac
 	ldr r0, [r0]
 	bl func_ov00_020ad594
@@ -4204,7 +4204,7 @@ func_ov17_0215e8f4: ; 0x0215e8f4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov17_0215e8f4
-_0215e9dc: .word gInventory
+_0215e9dc: .word gItemManager
 _0215e9e0: .word data_ov17_0216b0ac
 _0215e9e4: .word data_027e0fc4
 _0215e9e8: .word 0x00000733
@@ -4800,7 +4800,7 @@ func_ov17_0215f16c: ; 0x0215f16c
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldrh r1, [r4, #0x22]
-	ldr r0, _0215f2d0 ; =gInventory
+	ldr r0, _0215f2d0 ; =gItemManager
 	ldr r0, [r0]
 	ldr r1, [r3, r1, lsl #2]
 	bl func_ov00_020ad588
@@ -4881,7 +4881,7 @@ _0215f2b8:
 	.align 2, 0
 	arm_func_end func_ov17_0215f16c
 _0215f2cc: .word data_ov17_0216b0c4
-_0215f2d0: .word gInventory
+_0215f2d0: .word gItemManager
 _0215f2d4: .word data_027e0fc4
 _0215f2d8: .word 0x00000733
 _0215f2dc: .word data_ov17_0216b0d0
@@ -11497,7 +11497,7 @@ func_ov17_02164538: ; 0x02164538
 	mov r3, r2
 	add r0, r4, #0x6c
 	blx func_ov00_020bd618
-	ldr r0, _021645fc ; =gInventory
+	ldr r0, _021645fc ; =gItemManager
 	mov r1, #4
 	ldr r0, [r0]
 	bl func_ov00_020ad52c
@@ -11519,7 +11519,7 @@ _021645ec: .word data_ov00_020e2dd8
 _021645f0: .word data_ov17_0216c6e8
 _021645f4: .word 0x000004cd
 _021645f8: .word data_027e0f68
-_021645fc: .word gInventory
+_021645fc: .word gItemManager
 _02164600: .word data_ov00_020e2f68
 
 	.global func_ov17_02164604

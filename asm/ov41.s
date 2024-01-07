@@ -2885,10 +2885,10 @@ _0218b9b4:
 	blx r1
 	cmp r0, #0
 	beq _0218bda8
-	ldr r0, _0218be0c ; =gInventory
+	ldr r0, _0218be0c ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZN9Inventory7HasItemEj
+	bl _ZN11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _0218ba48
 	ldr r0, _0218be10 ; =data_027e0f74
@@ -3176,7 +3176,7 @@ _0218bdfc: .word data_027e0fc8
 _0218be00: .word data_027e0ffc
 _0218be04: .word 0x00000329
 _0218be08: .word data_ov00_020eec68
-_0218be0c: .word gInventory
+_0218be0c: .word gItemManager
 _0218be10: .word data_027e0f74
 _0218be14: .word data_027e0fd0
 _0218be18: .word data_027e0d04

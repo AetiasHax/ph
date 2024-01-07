@@ -88,12 +88,12 @@ func_ov21_0216d784: ; 0x0216d784
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_ov14_02126b04
-	ldr r0, _0216d7bc ; =gInventory
+	ldr r0, _0216d7bc ; =gItemManager
 	ldr r2, [r4, #0xb4]
 	ldr r1, _0216d7c0 ; =data_ov21_02170bd4
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl _ZN9Inventory7HasItemEj
+	bl _ZN11ItemManager7HasItemEj
 	cmp r0, #0
 	movne r0, #5
 	moveq r0, #0xc
@@ -101,7 +101,7 @@ func_ov21_0216d784: ; 0x0216d784
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov21_0216d784
-_0216d7bc: .word gInventory
+_0216d7bc: .word gItemManager
 _0216d7c0: .word data_ov21_02170bd4
 
 	.global func_ov21_0216d7c4
@@ -147,18 +147,18 @@ func_ov21_0216d828: ; 0x0216d828
 	.global func_ov21_0216d830
 	arm_func_start func_ov21_0216d830
 func_ov21_0216d830: ; 0x0216d830
-	ldr r1, _0216d84c ; =gInventory
+	ldr r1, _0216d84c ; =gItemManager
 	ldr r3, [r0, #0xb4]
 	ldr r2, _0216d850 ; =data_ov21_02170bd4
 	ldr r0, [r1]
-	ldr ip, _0216d854 ; =_ZN9Inventory7HasItemEj
+	ldr ip, _0216d854 ; =_ZN11ItemManager7HasItemEj
 	ldr r1, [r2, r3, lsl #2]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov21_0216d830
-_0216d84c: .word gInventory
+_0216d84c: .word gItemManager
 _0216d850: .word data_ov21_02170bd4
-_0216d854: .word _ZN9Inventory7HasItemEj
+_0216d854: .word _ZN11ItemManager7HasItemEj
 
 	.global func_ov21_0216d858
 	arm_func_start func_ov21_0216d858

@@ -4883,7 +4883,7 @@ func_ov44_0218cfc4: ; 0x0218cfc4
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 _0218d008:
-	ldr r0, _0218d078 ; =gInventory
+	ldr r0, _0218d078 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov00_020ad9e8
@@ -4916,7 +4916,7 @@ _0218d070:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov44_0218cfc4
-_0218d078: .word gInventory
+_0218d078: .word gItemManager
 
 	.global func_ov44_0218d07c
 	arm_func_start func_ov44_0218d07c
