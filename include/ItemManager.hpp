@@ -129,6 +129,35 @@ struct UnkStruct_027e0d38 {
     /* 2c */
 };
 
+enum ItemModel_ {
+    ItemModel_OshusSword,   // swA
+    ItemModel_PhantomSword, // swB
+    ItemModel_WoodenShield, // shA
+    ItemModel_Bow,          // bow
+    ItemModel_Arrow,        // arrow
+    ItemModel_ArrowS,       // arrow_s, purpose unknown
+    ItemModel_Boomerang,    // boomerang
+    ItemModel_Scoop,        // scp
+    ItemModel_Bomb,         // bomb
+    ItemModel_Bombchu,      // bomchu
+    ItemModel_RedPotion,    // rev_bin
+    ItemModel_BluePotion,   // rev_binP
+    ItemModel_YellowPotion, // rev_binY
+    ItemModel_Hammer,       // ham
+    ItemModel_RopeTop,      // ropetop
+    ItemModel_BombchuPt,    // bomchu_pt, purpose unknown
+    ItemModel_COUNT,
+};
+enum DungeonItemModel_ {
+    DungeonItemModel_ForceGem,        // force
+    DungeonItemModel_BossKey,         // bosskey
+    DungeonItemModel_CircleCrystal,   // switch_cstl_c_c
+    DungeonItemModel_SquareCrystal,   // switch_cstl_s_c
+    DungeonItemModel_TriangleCrystal, // switch_cstl_t_c
+    DungeonItemModel_COUNT,
+};
+struct ItemModel;
+
 struct SaveItemManager {
     /* 00 */ ItemFlags itemFlags;
     /* 10 */ u32 salvagedTreasureFlags;
@@ -184,8 +213,8 @@ private:
     /* 0ba */ unk16 mUnk_0ba; // only between 0 and 9
     /* 0bc */ Potion mPotions[2];
     /* 0be */ unk8 mUnk_0be[2]; // padding?
-    /* 0c0 */ void *mIslandData[16];
-    /* 100 */ void *mDungeonData[5]; // non-null in dungeons/caves, similar struct to mIslandData
+    /* 0c0 */ ItemModel *mItemModels[ItemModel_COUNT];
+    /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModel_COUNT]; // non-null in dungeons/caves
     /* 114 */ void *mUnk_114;
     /* 118 */ unk32 mUnk_118;
     /* 11c */ unk32 mUnk_11c;
