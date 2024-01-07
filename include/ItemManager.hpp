@@ -129,32 +129,34 @@ struct UnkStruct_027e0d38 {
     /* 2c */
 };
 
-enum ItemModel_ {
-    ItemModel_OshusSword,   // swA
-    ItemModel_PhantomSword, // swB
-    ItemModel_WoodenShield, // shA
-    ItemModel_Bow,          // bow
-    ItemModel_Arrow,        // arrow
-    ItemModel_ArrowS,       // arrow_s, purpose unknown
-    ItemModel_Boomerang,    // boomerang
-    ItemModel_Scoop,        // scp
-    ItemModel_Bomb,         // bomb
-    ItemModel_Bombchu,      // bomchu
-    ItemModel_RedPotion,    // rev_bin
-    ItemModel_BluePotion,   // rev_binP
-    ItemModel_YellowPotion, // rev_binY
-    ItemModel_Hammer,       // ham
-    ItemModel_RopeTop,      // ropetop
-    ItemModel_BombchuPt,    // bomchu_pt, purpose unknown
-    ItemModel_COUNT,
+typedef u32 ItemModelId;
+enum ItemModelId_ {
+    ItemModelId_OshusSword,   // swA
+    ItemModelId_PhantomSword, // swB
+    ItemModelId_WoodenShield, // shA
+    ItemModelId_Bow,          // bow
+    ItemModelId_Arrow,        // arrow
+    ItemModelId_ArrowS,       // arrow_s, purpose unknown
+    ItemModelId_Boomerang,    // boomerang
+    ItemModelId_Scoop,        // scp
+    ItemModelId_Bomb,         // bomb
+    ItemModelId_Bombchu,      // bomchu
+    ItemModelId_RedPotion,    // rev_bin
+    ItemModelId_BluePotion,   // rev_binP
+    ItemModelId_YellowPotion, // rev_binY
+    ItemModelId_Hammer,       // ham
+    ItemModelId_RopeTop,      // ropetop
+    ItemModelId_BombchuPt,    // bomchu_pt, purpose unknown
+    ItemModelId_COUNT,
 };
-enum DungeonItemModel_ {
-    DungeonItemModel_ForceGem,        // force
-    DungeonItemModel_BossKey,         // bosskey
-    DungeonItemModel_CircleCrystal,   // switch_cstl_c_c
-    DungeonItemModel_SquareCrystal,   // switch_cstl_s_c
-    DungeonItemModel_TriangleCrystal, // switch_cstl_t_c
-    DungeonItemModel_COUNT,
+typedef u32 DungeonItemModelId;
+enum DungeonItemModelId_ {
+    DungeonItemModelId_ForceGem,        // force
+    DungeonItemModelId_BossKey,         // bosskey
+    DungeonItemModelId_CircleCrystal,   // switch_cstl_c_c
+    DungeonItemModelId_SquareCrystal,   // switch_cstl_s_c
+    DungeonItemModelId_TriangleCrystal, // switch_cstl_t_c
+    DungeonItemModelId_COUNT,
 };
 struct ItemModel;
 
@@ -202,9 +204,9 @@ private:
     /* 028 */ ShipType mEquippedShipParts[ShipPart_COUNT];
     /* 048 */ ShipParts mShipParts[ShipPart_COUNT];
     /* 090 */ s8 mTreasure[Treasure_COUNT];
-    /* 098 */ u8 mUnk_098[6];
-    /* 09e */ u16 mUnk_09e[6]; // corresponds with mUnk_098
-    /* 0a6 */ unk16 mUnk_0a6; // padding?
+    /* 098 */ u8 mUnk_098[6]; // max 99
+    /* 09e */ u16 mUnk_09e[6]; // max 9999, corresponds with mUnk_098
+    /* 0aa */ unk16 mUnk_0aa; // padding?
     /* 0ac */ EquipItem *(*mEquipItems)[ItemFlag_EQUIP_COUNT];
     /* 0b0 */ u16 (*mAmmo)[ItemFlag_EQUIP_COUNT];
     /* 0b4 */ u16 mQuiverSize;
@@ -213,12 +215,12 @@ private:
     /* 0ba */ unk16 mUnk_0ba; // only between 0 and 9
     /* 0bc */ Potion mPotions[2];
     /* 0be */ unk8 mUnk_0be[2]; // padding?
-    /* 0c0 */ ItemModel *mItemModels[ItemModel_COUNT];
-    /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModel_COUNT]; // non-null in dungeons/caves
+    /* 0c0 */ ItemModel *mItemModels[ItemModelId_COUNT];
+    /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModelId_COUNT]; // non-null in dungeons/caves
     /* 114 */ void *mUnk_114;
-    /* 118 */ unk32 mUnk_118;
+    /* 118 */ ItemId mFanfareItem;
     /* 11c */ unk32 mUnk_11c;
-    /* 120 */ void *mUnk_120;
+    /* 120 */ void *mFanfareItemModel;
     /* 124 */ void *mUnk_124;
     /* 128 */ ItemFlags mItemFlags;
     /* 138 */ u32 mSalvagedTreasureFlags;
@@ -239,21 +241,85 @@ public:
 
     FairyId GetEquippedFairy() const;
     Navi* GetFairy(FairyId id) const;
+    unk32 func_ov00_020ad9e8(FairyId id) const;
 
     void TickEquipItem();
-    ItemFlag GetEquippedItem() const; // 020ae390
-    void Sword_vfunc_38(); // 020ad5bc
-    void Shield_vfunc_38(); // 020ad5d8
-    void EquipItem_vfunc_38(unk32 param1, unk32 param2, unk32 param3); // 020ad5f4
+    ItemFlag GetEquippedItem() const;
+    void Sword_vfunc_38();
+    void Shield_vfunc_38();
+    void EquipItem_vfunc_38(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov00_020ad678(unk32 *param1, ItemFlag equipId);
+    void EquipItem_vfunc_2c(ItemFlag equipId);
+    EquipItem GetEquipItem(ItemFlag equipId);
+    unk32 func_ov00_020ad790(unk32 param1);
+    bool EquipItem(ItemFlag equipId);
+    void EquipPreviousItem();
+    void ForceEquipItem(ItemFlag equipId);
+    bool ClearForcedEquipItem();
+    void UpdateSwordShieldInUse();
     
-    void* GetIslandData(u32 index); // 020ad52c
-    void* GetDungeonData(u32 index); // 020ad588
+    u16 GetAmmo(ItemFlag equipId) const;
+    void GiveAmmo(ItemFlag equipId, u16 amount);
+    u16 GetMaxAmmo(ItemFlag equipId) const;
+    void UpgradeQuiver();
+    void UpgradeBombBag();
+    void UpgradeBombchuBag();
 
-    void func_020ad538(unk32 param1); // 020ad538
-    void func_020ad560(unk32 param1); // 020ad560
-    void func_020ad594(unk32 param1); // 020ad594
+    void func_ov00_020ad528();
+    ItemModel* GetItemModel(ItemModelId id);
+    void func_ov00_020ad538(unk32 param1) const;
+    void func_ov00_020ad560(unk32 param1) const;
+    ItemModel* GetDungeonItemModel(DungeonItemModelId id);
+    void func_ov00_020ad594(unk32 param1) const;
+    void LoadFanfareItem(ItemId id);
+    bool GetFanfareItemScale(Vec3p *pScale) const;
+    void LoadDungeonItemModels();
+
+    ShipType GetEquippedShipPart(ShipPart part) const;
+    void EquipShipPart(ShipPart part, ShipType type);
+    u8 GetShipPartCount(ShipPart part, ShipType type) const;
+    void SetShipPartCount(ShipPart part, ShipType type, u8 count);
+    bool HasShipPartPriceShown(u32 index) const;
+    bool HasShipPartPriceShown(ShipPart part, ShipType type) const;
+    void AddShipPartPriceShown(u32 index);
+    void AddShipPartPriceShown(ShipPart part, ShipType type);
+
+    s8 GetTreasureCount(Treasure treasure) const;
+    void SetTreasureCount(Treasure treasure, s8 count);
+    bool HasTreasurePriceShown(Treasure treasure) const;
+    void AddTreasurePriceShown(Treasure treasure);
     
-    bool HasItem(ItemFlag item);
+    u8 GetUnk_098(u32 index) const;
+    u16 GetUnk_09e(u32 index) const;
+    u32 GetUnk_09e_Divided(u32 index) const; // gets mUnk_09e value divided by 2.54, rounded half up
+    void SetUnk_09e(u32 index, u16 value) const; // also increments the corresponding mUnk_098 value
+
+    u32 func_ov00_020ad9e0() const; // returns 99
+    u32 func_ov00_020ad9e4() const; // returns 99
+
+    unk32 func_ov00_020ada48(ItemFlag item) const;
+    bool HasItem(ItemFlag item) const;
+    void AddItem(ItemFlag item);
+    void RemoveItem(ItemFlag item);
+    void GiveItem(ItemId id, unk32 param2, unk32 param3);
+    void GiveEquipItem(ItemFlag item, u16 ammo);
+    void UnequipPotion();
+
+    u32 GetMaxRupees() const;
+    void GiveRupees(u16 amount, unk32 param2);
+
+    void func_ov00_020ae350() const;
+
+    void GiveKeys(u32 amount);
+
+    void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
+
+    void SetPotion(u32 index, Potion potion);
+    bool HasPotion(u32 index) const;
+    bool HasAllPotions() const;
+    bool HasBluePotion();
+
+    void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3)
 };
 
 extern ItemManager *gItemManager;
