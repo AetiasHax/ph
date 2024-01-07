@@ -45,3 +45,42 @@ enum ItemFlag_ {
 
     ItemFlag_COUNT            = 128,
 };
+
+typedef u32 ItemId;
+enum ItemId_ {
+    ItemId_SmallKey = 1,
+    ItemId_GreenRupee = 2,
+    ItemId_OshusSword = 3,
+    ItemId_WoodenShield = 4,
+
+    ItemId_BombBag = 7,
+    ItemId_Bow = 8,
+    ItemId_BigGreenRupee = 9,
+
+    ItemId_Boomerang = 12,
+    ItemId_Scoop = 13,
+    ItemId_BombchuBag = 14,
+    
+    ItemId_BlueRupee = 24,
+    ItemId_RedRupee = 25,
+    ItemId_BigRedRupee = 26,
+    ItemId_GoldRupee = 27,
+
+    ItemId_Hammer = 31,
+    ItemId_Rope = 32,
+
+    ItemId_Quiver = 40,
+    ItemId_BigBombBag = 41,
+    ItemId_BigBombchuBag = 42,
+
+    ItemId_PowerGem = 45,
+    ItemId_WisdomGem = 46,
+    ItemId_CourageGem = 47,
+
+    ItemId_RedPotion = 117,
+
+    ItemId_YellowPotion = 119,
+    ItemId_SandOfHours = 120,
+
+    ItemId_Rupoor = 129,
+};
