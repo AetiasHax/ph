@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "global.inc"
+    .include "include/ov10.inc"
 
 	.text
 
@@ -165,9 +165,9 @@ func_ov10_02112d40: ; 0x02112d40
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov10_02112d40
-_02112d90: .word func_ov10_02112da4
-_02112d94: .word func_ov10_02112da0
-_02112d98: .word func_ov10_02112d9c
+_02112d90: .word func_ov10_02112da4 - 1
+_02112d94: .word func_ov10_02112da0 - 1
+_02112d98: .word func_ov10_02112d9c - 1
 
 	.global func_ov10_02112d9c
 	arm_func_start func_ov10_02112d9c
@@ -1920,7 +1920,7 @@ func_ov10_02113a4c: ; 0x02113a4c
 	bx r3
 	nop
 	thumb_func_end func_ov10_02113a4c
-_02113a54: .word func_ov10_0211cb64
+_02113a54: .word func_ov10_0211cb64 - 1
 
 	.global func_ov10_02113a58
 	thumb_func_start func_ov10_02113a58
@@ -2433,8 +2433,8 @@ func_ov10_02113de0: ; 0x02113de0
 	.align 2, 0
 	thumb_func_end func_ov10_02113de0
 _02113e60: .word data_ov10_0211ebc4
-_02113e64: .word func_ov10_02113e6c
-_02113e68: .word func_ov10_02113e70
+_02113e64: .word func_ov10_02113e6c - 1
+_02113e68: .word func_ov10_02113e70 - 1
 
 	.global func_ov10_02113e6c
 	arm_func_start func_ov10_02113e6c
@@ -7373,7 +7373,7 @@ func_ov10_021174e0: ; 0x021174e0
 	.align 2, 0
 	arm_func_end func_ov10_021174e0
 _021174f8: .word data_ov10_0211eec4
-_021174fc: .word func_ov10_0211ccec
+_021174fc: .word func_ov10_0211ccec - 1
 
 	.global func_ov10_02117500
 	arm_func_start func_ov10_02117500
@@ -7388,7 +7388,7 @@ func_ov10_02117500: ; 0x02117500
 	.align 2, 0
 	arm_func_end func_ov10_02117500
 _0211751c: .word data_ov10_0211eec4
-_02117520: .word func_ov10_0211ccec
+_02117520: .word func_ov10_0211ccec - 1
 
 	.global func_ov10_02117524
 	arm_func_start func_ov10_02117524
@@ -7730,11 +7730,11 @@ func_ov10_02117874: ; 0x02117874
 	.align 2, 0
 	arm_func_end func_ov10_02117874
 _021179e0: .word func_ov10_02112d9c - 1
-_021179e4: .word func_ov10_02117a60
+_021179e4: .word func_ov10_02117a60 - 1
 _021179e8: .word func_ov10_02112da0 - 1
-_021179ec: .word func_ov10_02117a10
+_021179ec: .word func_ov10_02117a10 - 1
 _021179f0: .word func_ov10_02112da4 - 1
-_021179f4: .word func_ov10_021179f8
+_021179f4: .word func_ov10_021179f8 - 1
 
 	.global func_ov10_021179f8
 	arm_func_start func_ov10_021179f8
@@ -8306,7 +8306,7 @@ _02118148:
 	.align 2, 0
 	arm_func_end func_ov10_02118120
 _02118188: .word data_ov10_0211f400
-_0211818c: .word func_ov10_021183d8
+_0211818c: .word func_ov10_021183d8 - 1
 _02118190: .word func_ov10_02118070 - 1
 _02118194: .word data_027e08e4
 

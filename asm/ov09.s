@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "global.inc"
+    .include "include/ov09.inc"
 
 	.text
 
@@ -3357,8 +3357,8 @@ _021146ac: .word data_027e0e60
 _021146b0: .word data_027e0d38
 _021146b4: .word data_ov00_020e9f10
 _021146b8: .word data_ov00_020ea110
-_021146bc: .word func_ov09_021146cc
-_021146c0: .word func_ov09_021146d0
+_021146bc: .word func_ov09_021146cc - 1
+_021146c0: .word func_ov09_021146d0 - 1
 _021146c4: .word data_ov00_020eab04
 _021146c8: .word 0x00000cec
 
@@ -18309,7 +18309,7 @@ func_ov09_0211d0b0: ; 0x0211d0b0
 	.align 2, 0
 	arm_func_end func_ov09_0211d0b0
 _0211d11c: .word func_ov00_020b7d74
-_0211d120: .word func_ov09_0211d174
+_0211d120: .word func_ov09_0211d174 - 1
 _0211d124: .word data_ov09_0211e9a4
 
 	.global func_ov09_0211d128

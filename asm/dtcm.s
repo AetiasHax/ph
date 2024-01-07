@@ -1,5 +1,4 @@
     .include "macros/function.inc"
-    .include "global.inc"
 
 	.data
 	.global data_027e0000

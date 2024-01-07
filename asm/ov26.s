@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "global.inc"
+    .include "include/ov26.inc"
 
 	.text
 
@@ -8055,7 +8055,7 @@ _02173c40:
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c34
-_02173c48: .word func_ov26_02173cec
+_02173c48: .word func_ov26_02173cec + 1
 
 	.global func_ov26_02173c4c
 	thumb_func_start func_ov26_02173c4c
@@ -8065,7 +8065,7 @@ func_ov26_02173c4c: ; 0x02173c4c
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c4c
-_02173c54: .word func_ov26_02173dec
+_02173c54: .word func_ov26_02173dec + 1
 
 	.global func_ov26_02173c58
 	thumb_func_start func_ov26_02173c58
@@ -8096,7 +8096,7 @@ func_ov26_02173c7c: ; 0x02173c7c
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c7c
-_02173c84: .word func_ov26_02174170
+_02173c84: .word func_ov26_02174170 + 1
 
 	.global func_ov26_02173c88
 	thumb_func_start func_ov26_02173c88
@@ -8106,7 +8106,7 @@ func_ov26_02173c88: ; 0x02173c88
 	bx r3
 	nop
 	thumb_func_end func_ov26_02173c88
-_02173c90: .word func_ov26_02174258
+_02173c90: .word func_ov26_02174258 + 1
 
 	.global func_ov26_02173c94
 	thumb_func_start func_ov26_02173c94
@@ -12983,7 +12983,7 @@ _02177564:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 	thumb_func_end func_ov26_0217752c
-_0217757c: .word func_ov26_02177584
+_0217757c: .word func_ov26_02177584 + 1
 _02177580: .word func_ov26_02177588
 
 	.global func_ov26_02177584

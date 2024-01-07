@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "global.inc"
+    .include "include/ov03.inc"
 
 	.text
 
@@ -4370,8 +4370,8 @@ func_ov03_020f10b0: ; 0x020f10b0
 	.align 2, 0
 	thumb_func_end func_ov03_020f10b0
 _020f11fc: .word data_ov03_021000ac
-_020f1200: .word func_ov03_020f1220
-_020f1204: .word func_ov03_020f121c
+_020f1200: .word func_ov03_020f1220 - 1
+_020f1204: .word func_ov03_020f121c - 1
 
 	.global func_ov03_020f1208
 	arm_func_start func_ov03_020f1208
@@ -5342,7 +5342,7 @@ _020f1e98: .word data_027e0ce0
 _020f1e9c: .word func_ov03_020f1220 - 1
 _020f1ea0: .word func_ov03_020f121c - 1
 _020f1ea4: .word data_ov00_020e899c
-_020f1ea8: .word func_ov03_020f23b4
+_020f1ea8: .word func_ov03_020f23b4 - 1
 
 	.global func_ov03_020f1eac
 	thumb_func_start func_ov03_020f1eac
@@ -6748,7 +6748,7 @@ func_ov03_020f2d68: ; 0x020f2d68
 	.align 2, 0
 	arm_func_end func_ov03_020f2d68
 _020f2d98: .word data_027e0de4
-_020f2d9c: .word func_ov03_020f2da0
+_020f2d9c: .word func_ov03_020f2da0 - 1
 
 	.global func_ov03_020f2da0
 	arm_func_start func_ov03_020f2da0
@@ -11823,7 +11823,7 @@ func_ov03_020f5994: ; 0x020f5994
 	.align 2, 0
 	arm_func_end func_ov03_020f5994
 _020f59cc: .word data_027e0f90
-_020f59d0: .word func_ov03_020f59d4
+_020f59d0: .word func_ov03_020f59d4 - 1
 
 	.global func_ov03_020f59d4
 	arm_func_start func_ov03_020f59d4
@@ -12620,9 +12620,9 @@ _020f6366:
 	.align 2, 0
 	thumb_func_end func_ov03_020f6278
 _020f636c: .word data_ov00_020e899c
-_020f6370: .word func_ov03_020f7398
-_020f6374: .word func_ov03_020f7414
-_020f6378: .word func_ov03_020f7390
+_020f6370: .word func_ov03_020f7398 - 1
+_020f6374: .word func_ov03_020f7414 - 1
+_020f6378: .word func_ov03_020f7390 - 1
 _020f637c: .word data_027e0d38
 _020f6380: .word data_027e0ce0
 
@@ -14809,7 +14809,7 @@ func_ov03_020f7f0c: ; 0x020f7f0c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov03_020f7f0c
-_020f7f18: .word func_ov03_020f86cc
+_020f7f18: .word func_ov03_020f86cc - 1
 
 	.global func_ov03_020f7f1c
 	arm_func_start func_ov03_020f7f1c
@@ -14819,7 +14819,7 @@ func_ov03_020f7f1c: ; 0x020f7f1c
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov03_020f7f1c
-_020f7f28: .word func_ov03_020f8738
+_020f7f28: .word func_ov03_020f8738 - 1
 
 	.global func_ov03_020f7f2c
 	arm_func_start func_ov03_020f7f2c
@@ -16082,10 +16082,10 @@ _020f8d30: .word func_ov03_020f1220 - 1
 _020f8d34: .word gOverlayManager
 _020f8d38: .word 0x0000001a
 _020f8d3c: .word data_027e0ce0
-_020f8d40: .word func_ov03_020f8d50
-_020f8d44: .word func_ov03_020f8d64
+_020f8d40: .word func_ov03_020f8d50 - 1
+_020f8d44: .word func_ov03_020f8d64 - 1
 _020f8d48: .word 0xfffe0000
-_020f8d4c: .word func_ov03_020f9448
+_020f8d4c: .word func_ov03_020f9448 - 1
 
 	.global func_ov03_020f8d50
 	arm_func_start func_ov03_020f8d50
@@ -20024,7 +20024,7 @@ func_ov03_020fb6d4: ; 0x020fb6d4
 	.align 2, 0
 	arm_func_end func_ov03_020fb6d4
 _020fb6f8: .word data_027e0de4
-_020fb6fc: .word func_ov03_020fb700
+_020fb6fc: .word func_ov03_020fb700 - 1
 
 	.global func_ov03_020fb700
 	arm_func_start func_ov03_020fb700

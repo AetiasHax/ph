@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "global.inc"
+    .include "include/ov01.inc"
 
 	.text
 
@@ -6724,7 +6724,7 @@ func_ov01_020f33a4: ; 0x020f33a4
 	thumb_func_end func_ov01_020f33a4
 _020f33b8: .word data_ov01_020f96a0
 _020f33bc: .word data_ov01_020f96c0
-_020f33c0: .word func_ov01_020f33c4
+_020f33c0: .word func_ov01_020f33c4 + 1
 
 	.global func_ov01_020f33c4
 	thumb_func_start func_ov01_020f33c4
@@ -7369,7 +7369,7 @@ func_ov01_020f385c: ; 0x020f385c
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end func_ov01_020f385c
-_020f3888: .word func_ov01_020f38c0
+_020f3888: .word func_ov01_020f38c0 + 1
 _020f388c: .word data_ov01_020f8910
 
 	.global func_ov01_020f3890
