@@ -1019,6 +1019,6 @@
 .extern data_027e0618
 .extern gItemManager
 .extern func_01ffa0f4
-.extern _ZNK11ItemManager13HasBluePotionEv
+.extern _ZNK11ItemManager15HasPurplePotionEv
 .extern data_027e0618
 .extern gItemManager

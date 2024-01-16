@@ -1960,9 +1960,9 @@ _020ae5a4:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end _ZNK11ItemManager13HasAllPotionsEv
 
-	.global _ZNK11ItemManager13HasBluePotionEv
-	arm_func_start _ZNK11ItemManager13HasBluePotionEv
-_ZNK11ItemManager13HasBluePotionEv: ; 0x020ae5d0
+	.global _ZNK11ItemManager15HasPurplePotionEv
+	arm_func_start _ZNK11ItemManager15HasPurplePotionEv
+_ZNK11ItemManager15HasPurplePotionEv: ; 0x020ae5d0
 	mov r2, #0
 _020ae5d4:
 	add r1, r0, r2
@@ -1975,7 +1975,7 @@ _020ae5d4:
 	blt _020ae5d4
 	mov r0, #0
 	bx lr
-	arm_func_end _ZNK11ItemManager13HasBluePotionEv
+	arm_func_end _ZNK11ItemManager15HasPurplePotionEv
 
 	.global _ZN11ItemManager21LoadDungeonItemModelsEv
 	thumb_func_start _ZN11ItemManager21LoadDungeonItemModelsEv

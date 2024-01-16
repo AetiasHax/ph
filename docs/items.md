@@ -41,7 +41,7 @@ Might be inaccurate due to there being seemingly multiple IDs/enumerations for i
 `0x1f` | Hammer
 `0x20` | Grapple Hook
 `0x21` | Square Crystal
-`0x22` | Circle Crystal
+`0x22` | Round Crystal
 `0x23` | Triangle Crystal
 `0x24` | `fp`
 `0x25` | ---

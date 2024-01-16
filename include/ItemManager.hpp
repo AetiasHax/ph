@@ -142,7 +142,7 @@ enum ItemModelId_ {
     ItemModelId_Bomb,         // bomb
     ItemModelId_Bombchu,      // bomchu
     ItemModelId_RedPotion,    // rev_bin
-    ItemModelId_BluePotion,   // rev_binP
+    ItemModelId_PurplePotion, // rev_binP
     ItemModelId_YellowPotion, // rev_binY
     ItemModelId_Hammer,       // ham
     ItemModelId_RopeTop,      // ropetop
@@ -153,7 +153,7 @@ typedef u32 DungeonItemModelId;
 enum DungeonItemModelId_ {
     DungeonItemModelId_ForceGem,        // force
     DungeonItemModelId_BossKey,         // bosskey
-    DungeonItemModelId_CircleCrystal,   // switch_cstl_c_c
+    DungeonItemModelId_RoundCrystal,    // switch_cstl_c_c
     DungeonItemModelId_SquareCrystal,   // switch_cstl_s_c
     DungeonItemModelId_TriangleCrystal, // switch_cstl_t_c
     DungeonItemModelId_COUNT,
@@ -320,7 +320,7 @@ public:
     void SetPotion(u32 index, Potion potion);
     bool HasPotion(u32 index) const;
     bool HasAllPotions() const;
-    bool HasBluePotion() const;
+    bool HasPurplePotion() const;
     void UnequipPotion();
 
     // Unknown

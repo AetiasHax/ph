@@ -1632,7 +1632,7 @@
 .extern func_ov00_020a8bd8
 .extern func_ov00_020a8118
 .extern func_ov00_020a8c14
-.extern _ZNK11ItemManager13HasBluePotionEv
+.extern _ZNK11ItemManager15HasPurplePotionEv
 .extern func_ov00_020a8148
 .extern func_ov00_020a8148
 .extern func_ov00_020a8b04

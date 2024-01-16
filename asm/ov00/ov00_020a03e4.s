@@ -16703,7 +16703,7 @@ func_ov00_020acf28: ; 0x020acf28
 	bgt _020acf98
 	ldr r0, _020acfe4 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager13HasBluePotionEv
+	bl _ZNK11ItemManager15HasPurplePotionEv
 	cmp r0, #0
 	movne r0, #0xe
 	moveq r0, #0xf

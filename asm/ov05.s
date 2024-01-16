@@ -17166,7 +17166,7 @@ _0210f244:
 	bgt _0210f298
 	ldr r0, _0210f6c4 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager13HasBluePotionEv
+	bl _ZNK11ItemManager15HasPurplePotionEv
 	cmp r0, #0
 	beq _0210f298
 	mov r0, r6
