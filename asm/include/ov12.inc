@@ -700,8 +700,8 @@
 .extern data_02050f54
 .extern func_ov00_020a9bec
 .extern func_ov00_020b4944
-.extern _ZN11ItemManager14Shield_vfunc_38Ev
-.extern _ZN11ItemManager17EquipItem_vfunc_38Ev
+.extern _ZN11ItemManager15Shield_vfunc_38Ej
+.extern _ZN11ItemManager18EquipItem_vfunc_38Ej
 .extern gItemManager
 .extern func_ov00_020d7b20
 .extern data_ov00_020dc878

@@ -10803,12 +10803,12 @@ func_ov12_0211b8bc: ; 0x0211b8bc
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZN11ItemManager14Shield_vfunc_38Ev
+	bl _ZN11ItemManager15Shield_vfunc_38Ej
 _0211b96c:
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZN11ItemManager17EquipItem_vfunc_38Ev
+	bl _ZN11ItemManager18EquipItem_vfunc_38Ej
 _0211b97c:
 	ldr r0, [r5, #0x230]
 	mov r1, #0

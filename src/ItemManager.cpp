@@ -160,17 +160,13 @@ FairyId ItemManager::GetEquippedFairy() const {
 Navi* ItemManager::GetFairy(FairyId id) const {
     return this->mFairies[id];
 }
-#pragma interworking off
 
 extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();
 extern "C" void _ZN14OverlayManager13LoadEquipItemEj();
-NONMATCH void ItemManager::TickEquipItem(void) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/ItemManager/ItemManager_TickEquipItem.inc"
-    #else
+void ItemManager::TickEquipItem(void) {
     ItemFlag equip = this->GetEquippedItem();
     if (this->mEquipLoadTimer != 0) {
         this->mEquipLoadTimer -= 1;
@@ -186,5 +182,58 @@ NONMATCH void ItemManager::TickEquipItem(void) {
     if (equip != ItemFlag_None && this->mEquipLoadTimer == 0) {
         (*this->mEquipItems)[equip]->vfunc_30();
     }
-    #endif
+}
+
+void ItemManager::func_ov00_020ad528() {}
+
+ItemModel* ItemManager::GetItemModel(ItemModelId id) {
+    return this->mItemModels[id];
+}
+#pragma interworking off
+
+extern unk32 data_027e0fc4;
+extern "C" void* func_ov00_020bb3a8(unk32 param1, u32 index);
+extern "C" void func_ov00_020c0bdc(void *param1, unk32 param2);
+void ItemManager::func_ov00_020ad538(unk32 param1) const {
+    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
+    func_ov00_020c0bdc(unk1, param1);
+}
+
+void ItemManager::func_ov00_020ad560(unk32 param1) const {
+    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
+    func_ov00_020c0bdc(unk1, param1);
+}
+
+#pragma interworking on
+ItemModel* ItemManager::GetDungeonItemModel(u32 index) {
+    return this->mDungeonItemModels[index];
+}
+#pragma interworking off
+
+void ItemManager::func_ov00_020ad594(unk32 param1) const {
+    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
+    func_ov00_020c0bdc(unk1, param1);
+}
+
+void ItemManager::Sword_vfunc_38(unk32 param1) {
+    (*this->mEquipItems)[ItemFlag_OshusSword]->vfunc_38(param1);
+}
+
+void ItemManager::Shield_vfunc_38(unk32 param1) {
+    (*this->mEquipItems)[ItemFlag_WoodenShield]->vfunc_38(param1);
+}
+
+extern unk32 data_027e0618;
+void ItemManager::EquipItem_vfunc_38(unk32 param1) {
+    if (data_027e0618 != 6) {
+        this->Sword_vfunc_38(param1);
+        this->Shield_vfunc_38(param1);
+    }
+    if (data_027e0d38->mUnk_14 == 1) return;
+    
+    ItemFlag equip = this->GetEquippedItem();
+    if (equip == ItemFlag_None) return;
+    if (this->mEquipLoadTimer > 0) return;
+
+    (*this->mEquipItems)[equip]->vfunc_38(param1);
 }

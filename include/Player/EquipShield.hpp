@@ -29,7 +29,7 @@ public:
     /* 1c */ virtual void vfunc_1c(); // func_ov00_020c07f8
 
     /* 30 */ virtual void vfunc_30() override; // func_ov00_020c0804
-    /* 38 */ virtual void vfunc_38(unk32 param1, unk32 param2, unk32 param3) override; // func_ov00_020c086c
+    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020c086c
     /* 3c */ virtual bool vfunc_3c(void *param1, unk32 param2, unk32 param3) const; // func_ov00_020c0a88
     /* 50 */
 };

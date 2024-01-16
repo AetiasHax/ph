@@ -248,10 +248,10 @@ public:
     void ClearPrevEquippedItem();
     void TickEquipItem();
     ItemFlag GetEquippedItem() const;
-    void Sword_vfunc_38();
-    void Shield_vfunc_38();
-    void EquipItem_vfunc_38(unk32 param1, unk32 param2, unk32 param3);
-    void func_ov00_020ad678(unk32 *param1, ItemFlag equipId);
+    void Sword_vfunc_38(unk32 param1);
+    void Shield_vfunc_38(unk32 param1);
+    void EquipItem_vfunc_38(unk32 param1);
+    void func_ov00_020ad678(Vec3p *param1, ItemFlag equipId);
     void EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem* GetEquipItem(ItemFlag equipId);
     unk32 func_ov00_020ad790(unk32 param1);

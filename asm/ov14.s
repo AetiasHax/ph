@@ -42817,7 +42817,7 @@ func_ov14_021419d8: ; 0x021419d8
 	ldr r0, _02141a70 ; =gItemManager
 	ldrb r1, [r4, #0x4c0]
 	ldr r0, [r0]
-	bl _ZN11ItemManager17EquipItem_vfunc_38Ev
+	bl _ZN11ItemManager18EquipItem_vfunc_38Ej
 	ldrb r0, [r4, #0x4c0]
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}

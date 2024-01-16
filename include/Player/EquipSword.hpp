@@ -52,7 +52,7 @@ public:
     /* 28 */ virtual bool UpdateInUse(unk32 param1) override;
     /* 2c */ virtual u32 vfunc_2c() override; // func_ov00_020c0674
     /* 30 */ virtual void vfunc_30() override; // func_ov00_020bf538
-    /* 38 */ virtual void vfunc_38(unk32 param1, unk32 param2, unk32 param3) override; // func_ov00_020bff94
+    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020bff94
     /* 3c */ virtual bool vfunc_3c(void *param1, unk32 param2, unk32 param3) const override; // func_ov00_020c01dc
     /* 50 */
 };

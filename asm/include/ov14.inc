@@ -3271,7 +3271,7 @@
 .extern func_ov00_02083ee0
 .extern data_027e0e60
 .extern func_ov00_020b4944
-.extern _ZN11ItemManager17EquipItem_vfunc_38Ev
+.extern _ZN11ItemManager18EquipItem_vfunc_38Ej
 .extern gItemManager
 .extern func_ov05_02102c2c
 .extern data_ov00_020e9370
