@@ -3,6 +3,9 @@ REGION ?= EUR
 ifeq ($(REGION), EUR)
 	REGION_NAME := eur
 	REGION_SUFFIX := P
+else ifeq ($(REGION), USA)
+	REGION_NAME := usa
+	REGION_SUFFIX := E
 else
 	$(error Unknown region '$(REGION)')
 endif
