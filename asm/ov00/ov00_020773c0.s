@@ -1981,7 +1981,7 @@ _02078118:
 _0207811c:
     mov r0, #1
     lsl r0, r0, #0xe
-    bl func_0200022a
+    bl WaitByLoop
     b _02077ef4
 _02078126:
     add sp, #0x40
@@ -2043,7 +2043,7 @@ _02078192:
     beq _020781ac
     mov r0, #1
     lsl r0, r0, #0x12
-    bl func_0200022a
+    bl WaitByLoop
     b _02078192
 _020781ac:
     ldr r1, [sp]
@@ -2086,7 +2086,7 @@ _020781e4:
     beq _020781fe
     mov r0, #1
     lsl r0, r0, #0x12
-    bl func_0200022a
+    bl WaitByLoop
     b _020781e4
 _020781fe:
     pop {r3, r4, r5, r6, r7, pc}
@@ -2151,7 +2151,7 @@ _02078256:
     cmp r0, #1
     beq _0207826e
     add r0, r4, #0
-    bl func_0200022a
+    bl WaitByLoop
     b _02078256
 _0207826e:
     mov r0, #1
