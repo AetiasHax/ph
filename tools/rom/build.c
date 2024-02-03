@@ -8,7 +8,7 @@
 #include "util.h"
 #include "files.h"
 
-#define VERSION "1.0.1"
+#define VERSION "1.1"
 
 #define BUFFER_SIZE 1024 * 1024
 uint8_t *readBuffer = NULL;
@@ -184,6 +184,57 @@ void InitHeader(Header *pHeader, const BuildInfo *info) {
     memset(&pHeader->reserved7, 0, sizeof(pHeader->reserved7));
 }
 
+typedef struct {
+    uint32_t autoloadBlocksStart;
+    uint32_t autoloadBlocksEnd;
+    uint32_t autoloadCode;
+    uint32_t bssStart;
+    uint32_t bssEnd;
+} Arm9ModuleInfo;
+
+typedef struct {
+    uint32_t autoloadCallback;
+    uint32_t autoloadBlockInfos;
+    uint32_t entryAddr;
+    uint32_t baseAddr;
+    Arm9ModuleInfo moduleInfo;
+} Arm9Metadata;
+
+bool LoadArm9Metadata(Arm9Metadata *pMetadata) {
+    FILE *fp = fopen(ARM9_METADATA_FILE, "rb");
+    if (fp == NULL) FATAL("Failed to open ARM9 metadata '" ARM9_METADATA_FILE "'\n");
+    if (fread(pMetadata, sizeof(*pMetadata), 1, fp) != 1) FATAL("Failed to read ARM9 metadata '" ARM9_METADATA_FILE "'\n");
+    fclose(fp);
+    return true;
+}
+
+// Reads an entire file into a newly allocated buffer and writes it to *pBuffer if successful.
+// If pFileSize != NULL, this function writes the file's size into *pFileSize.
+// The buffer can be freed with free().
+bool ReadFile(const char *filePath, uint8_t **pBuffer, uint32_t *pFileSize) {
+    FILE *fp = fopen(filePath, "rb");
+    if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
+    fseek(fp, 0, SEEK_END);
+    size_t size = ftell(fp);
+    fseek(fp, 0, SEEK_SET);
+
+    uint8_t *buffer = malloc(size);
+    if (buffer == NULL) FATAL("Failed to allocate buffer for file '%s'\n", filePath);
+    uint8_t *current = buffer;
+    uint8_t *end = buffer + size;
+
+    while (current < end) {
+        size_t bytesRead = fread(current, 1, BUFFER_SIZE, fp);
+        if (bytesRead == 0) FATAL("Failed to read from file '%s'\n", filePath);
+        current += bytesRead;
+    }
+    fclose(fp);
+
+    *pBuffer = buffer;
+    if (pFileSize != NULL) *pFileSize = size;
+    return true;
+}
+
 bool AppendFile(FILE *fpRom, const char *filePath, size_t *pAddress, uint32_t *pFileSize) {
     assert(readBuffer != NULL);
 
@@ -204,6 +255,37 @@ bool AppendFile(FILE *fpRom, const char *filePath, size_t *pAddress, uint32_t *p
 
     *pAddress += size;
     if (pFileSize != NULL) *pFileSize = size;
+    return true;
+}
+
+bool WriteArm9Program(FILE *fpRom, size_t *pAddress, uint32_t *pFileSize, uint32_t *pSecureArea, const Arm9Metadata *metadata) {
+    size_t address = *pAddress;
+
+    uint8_t *arm9;
+    uint32_t fileSize;
+    if (!ReadFile(ARM9_PROGRAM_FILE, &arm9, &fileSize)) return false;
+
+    // Write module info, see spAutoloadBlockInfosStart in asm/main.s
+    // This might seem unsafe since the ARM9 program is compressed, but the addresses we're writing to are in the secure area,
+    // which is uncompressed.
+
+    size_t offset = metadata->autoloadBlockInfos;
+    // First five values, from spAutoloadBlockInfosStart to spBssEnd
+    memcpy(&arm9[offset], &metadata->moduleInfo, sizeof(metadata->moduleInfo));
+    offset += sizeof(metadata->moduleInfo);
+    // Last value, sCompressedCodeEnd
+    uint32_t compressedCodeEnd = 0x2000000 + fileSize;
+    memcpy(&arm9[offset], &compressedCodeEnd, sizeof(compressedCodeEnd));
+    offset += compressedCodeEnd;
+
+    if (fwrite(arm9, fileSize, 1, fpRom) != 1) FATAL("Failed to write ARM9 program\n");
+    address += fileSize;
+
+    memcpy(pSecureArea, arm9, SECURE_AREA_SIZE);
+    free(arm9);
+
+    *pAddress = address;
+    *pFileSize = fileSize;
     return true;
 }
 
@@ -661,25 +743,12 @@ bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t nu
     return true;
 }
 
-typedef struct {
-    uint32_t autoloadCallback;
-    uint32_t autoloadBlockInfos;
-    uint32_t entryAddr;
-    uint32_t baseAddr;
-} Arm9Metadata;
-
-bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios) {
+bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t *secureArea, const Arm9Metadata *metadata) {
     Header header;
     memcpy(&header, pHeader, sizeof(header));
 
     if (arm7bios != NULL) {
-        FILE *fp = fopen(ARM9_PROGRAM_FILE, "rb");
-        if (fp == NULL) FATAL("Failed to open ARM9 program '" ARM9_PROGRAM_FILE "'\n");
-        uint32_t secureArea[0x1000];
-        if (fread(secureArea, sizeof(secureArea), 1, fp) != 1) FATAL("Failed to read secure area\n");
-        fclose(fp);
-
-        fp = fopen(arm7bios, "rb");
+        FILE *fp = fopen(arm7bios, "rb");
         if (fp == NULL) FATAL("Failed to open ARM7 BIOS '%s'\n", arm7bios);
         fseek(fp, 0x30, SEEK_SET);
         uint8_t encKey[sizeof(Blowfish)];
@@ -694,18 +763,13 @@ bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios) {
         BlowfishEncrypt(&secureArea[0], &secureArea[1]);
         if (!BlowfishInit(encKey, pHeader, 2)) return false;
         BlowfishEncrypt(&secureArea[0], &secureArea[1]);
-        header.secureAreaCrc = Crc(secureArea, 0x4000);
+        header.secureAreaCrc = Crc(secureArea, SECURE_AREA_SIZE);
     }
 
-    FILE *fp = fopen(ARM9_METADATA_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open ARM9 metadata '" ARM9_METADATA_FILE "'\n");
-    Arm9Metadata metadata;
-    if (fread(&metadata, sizeof(metadata), 1, fp) != 1) FATAL("Failed to read ARM9 metadata '" ARM9_METADATA_FILE "'\n");
-    fclose(fp);
-    header.arm9.entry = metadata.entryAddr;
-    header.arm9.baseAddr = metadata.baseAddr;
-    header.arm9AutoloadCallback = metadata.autoloadCallback;
-    header.autoloadBlockInfosOffset = header.arm9.offset + metadata.autoloadBlockInfos;
+    header.arm9.entry = metadata->entryAddr;
+    header.arm9.baseAddr = metadata->baseAddr;
+    header.arm9AutoloadCallback = metadata->autoloadCallback;
+    header.autoloadBlockInfosOffset = header.arm9.offset + metadata->autoloadBlockInfos;
 
     header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
     
@@ -877,7 +941,11 @@ int main(int argc, char **argv) {
 
     if (!Align(512, fpRom, &address)) return 1;
     header.arm9.offset = address;
-    if (!AppendFile(fpRom, ARM9_PROGRAM_FILE, &address, &header.arm9.size)) return 1;
+    
+    Arm9Metadata metadata;
+    if (!LoadArm9Metadata(&metadata)) return 1;
+    uint32_t secureArea[SECURE_AREA_SIZE / sizeof(uint32_t)];
+    if (!WriteArm9Program(fpRom, &address, &header.arm9.size, secureArea, &metadata)) return 1;
     if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
 
 
@@ -986,7 +1054,7 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    if (!FinalizeHeader(fpRom, &header, arm7bios)) return false;
+    if (!FinalizeHeader(fpRom, &header, arm7bios, secureArea, &metadata)) return false;
     FreeFullPath(&arm7bios);
 
     if (chdir(rootDir) != 0) {

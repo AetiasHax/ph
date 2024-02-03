@@ -5,6 +5,8 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#define SECURE_AREA_SIZE 0x4000
+
 typedef struct {
     /* 00 */ uint32_t offset;
     /* 04 */ uint32_t entry;
