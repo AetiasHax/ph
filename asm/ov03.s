@@ -17540,9 +17540,12 @@ _020f9fe0: .word 0xffff7fff
 	.global func_ov03_020f9fe4
 	arm_func_start func_ov03_020f9fe4
 func_ov03_020f9fe4: ; 0x020f9fe4
+.ifdef EUR
 	stmdb sp!, {r3, lr}
+.endif
 	ldr r0, _020fa038 ; =data_027e05f4
 	ldr r0, [r0]
+.ifdef EUR
 	cmp r0, #5
 	addls pc, pc, r0, lsl #2
 	b _020fa030
@@ -17558,13 +17561,28 @@ _020fa014:
 	ldmia sp!, {r3, pc}
 _020fa01c:
 	blx func_0202ab48
+.endif
 	cmp r0, #2
+.ifdef EUR
 	moveq r0, #1
 	movne r0, #0
 	ldmia sp!, {r3, pc}
+.endif
+.ifdef USA
+    cmpne r0, #4
+    cmpne r0, #5
+    bne _020fa030
+    mov r0, #1
+    bx lr
+.endif
 _020fa030:
 	mov r0, #0
+.ifdef EUR
 	ldmia sp!, {r3, pc}
+.endif
+.ifdef USA
+    bx lr
+.endif
 	.align 2, 0
 	arm_func_end func_ov03_020f9fe4
 _020fa038: .word data_027e05f4
