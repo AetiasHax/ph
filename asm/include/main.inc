@@ -1111,3 +1111,4 @@
 .extern data_027e0d28
 .extern data_027e0d18
 .extern func_ov16_0211ffdc
+.extern gHeap

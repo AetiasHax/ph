@@ -264,10 +264,15 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
             file.write(f'AFTER({str(ov.after)})')
 
         file.write(f' > overlays/{ov.name}.bin\n')
+    file.write('\n')
+    file.write('    HEAP : ORIGIN = AFTER(ARM9,')
+    file.write(','.join(map(str, OVERLAYS)))
+    file.write(')\n')
     file.write('}\n')
     file.write('\n')
     file.write('SECTIONS {\n')
     file.write('    .arm9 : {\n')
+    file.write('        gHeap = ADDR(HEAP);\n')
     file.write('        . = ALIGN(32);\n')
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.text)\n')
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.init)\n')
@@ -373,6 +378,10 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
         file.write('WRITEW 0; ') # compression flags, overlay is compressed later
         file.write('\n')
     file.write('    } > OV_TABLE\n')
+    file.write('\n')
+    file.write('    .heap : {\n')
+    file.write('        gHeap = .;\n')
+    file.write('    } > HEAP\n')
     file.write('}\n')
 
 with open(f'{BUILD}arm9_objects.txt', 'w') as file:
