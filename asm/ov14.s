@@ -20078,11 +20078,18 @@ _0212fb88:
 	bl func_ov14_0213067c
 	cmp r0, #0
 	beq _0212fd7c
+.ifdef EUR
 	ldrh r1, [r5, #0x66]
 	ldr r0, _02130114 ; =0x0000ffff
 	cmp r1, r0
 	addlo r0, r1, #1
 	strloh r0, [r5, #0x66]
+.endif
+.ifdef USA
+    ldrh r0, [r5, #0x66]
+    add r0, r0, #1
+    strh r0, [r5, #0x66]
+.endif
 	ldrh r1, [r5, #0x26]
 	ldrh r0, [r5, #0x24]
 	ldrh r6, [r5, #0x66]
@@ -20136,11 +20143,18 @@ _0212fc6c:
 	bl func_ov14_021306e0
 	cmp r0, #0
 	beq _0212fd4c
+.ifdef EUR
 	ldrh r1, [r5, #0x68]
 	ldr r0, _02130114 ; =0x0000ffff
 	cmp r1, r0
 	addlo r0, r1, #1
 	strloh r0, [r5, #0x68]
+.endif
+.ifdef USA
+    ldrh r0, [r5, #0x68]
+    add r0, r0, #1
+    strh r0, [r5, #0x68]
+.endif
 	ldrh r1, [r5, #0x26]
 	ldrh r0, [r5, #0x24]
 	ldrh r6, [r5, #0x68]
@@ -20228,11 +20242,18 @@ _0212fdbc:
 	cmp r0, #0
 	beq _0212fdf8
 _0212fdd4:
+.ifdef EUR
 	ldrh r1, [r5, #0x64]
 	ldr r0, _02130114 ; =0x0000ffff
 	cmp r1, r0
 	addlo r0, r1, #1
 	strloh r0, [r5, #0x64]
+.endif
+.ifdef USA
+    ldrh r0, [r5, #0x64]
+    add r0, r0, #1
+    strh r0, [r5, #0x64]
+.endif
 	ldrh r0, [r5, #0x64]
 	cmp r0, #0x2d
 	addls sp, sp, #0x14
@@ -20298,11 +20319,18 @@ _0212febc:
 	cmp r0, #0
 	beq _0212fef8
 _0212fed4:
+.ifdef EUR
 	ldrh r1, [r5, #0x64]
 	ldr r0, _02130114 ; =0x0000ffff
 	cmp r1, r0
 	addlo r0, r1, #1
 	strloh r0, [r5, #0x64]
+.endif
+.ifdef USA
+    ldrh r0, [r5, #0x64]
+    add r0, r0, #1
+    strh r0, [r5, #0x64]
+.endif
 	ldrh r0, [r5, #0x64]
 	cmp r0, #0x2d
 	addls sp, sp, #0x14
@@ -20458,7 +20486,9 @@ _0213010c:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov14_0212fb30
+.ifdef EUR
 _02130114: .word 0x0000ffff
+.endif
 _02130118: .word 0x66666667
 _0213011c: .word data_027e0e60
 _02130120: .word data_027e0ffc
