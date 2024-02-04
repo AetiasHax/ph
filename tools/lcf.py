@@ -4,6 +4,9 @@ class Overlay:
         self.objects = objects
         self.after = after
         self.origin = origin
+    
+    def __str__(self) -> str:
+        return self.name
 
 def name(path: str): return path.split("/")[-1]
 
@@ -42,187 +45,187 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_020d5458.s',
     'asm/ov00/ov00_init.s'
 ])
-ov01 = Overlay(name='ov01', after=ov00, objects=[
+ov01 = Overlay(name='ov01', after=[ov00], objects=[
     'asm/ov01.s'
 ])
-ov02 = Overlay(name='ov02', after=ov00, objects=[
+ov02 = Overlay(name='ov02', after=[ov00], objects=[
     'asm/ov02.s'
 ])
-ov03 = Overlay(name='ov03', after=ov00, objects=[
+ov03 = Overlay(name='ov03', after=[ov00], objects=[
     'asm/ov03.s'
 ])
-ov04 = Overlay(name='ov04', after=ov03, objects=[
+ov04 = Overlay(name='ov04', after=[ov01, ov02, ov03], objects=[
     'asm/ov04.s'
 ])
-ov05 = Overlay(name='ov05', after=ov03, objects=[
+ov05 = Overlay(name='ov05', after=[ov01, ov02, ov03], objects=[
     'asm/ov05.s'
 ])
-ov06 = Overlay(name='ov06', after=ov03, objects=[
+ov06 = Overlay(name='ov06', after=[ov01, ov02, ov03], objects=[
     'asm/ov06.s'
 ])
-ov07 = Overlay(name='ov07', after=ov03, objects=[
+ov07 = Overlay(name='ov07', after=[ov01, ov02, ov03], objects=[
     'asm/ov07.s'
 ])
-ov08 = Overlay(name='ov08', after=ov05, objects=[
+ov08 = Overlay(name='ov08', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov08.s'
 ])
-ov09 = Overlay(name='ov09', after=ov05, objects=[
+ov09 = Overlay(name='ov09', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov09.s'
 ])
-ov10 = Overlay(name='ov10', after=ov05, objects=[
+ov10 = Overlay(name='ov10', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov10.s'
 ])
-ov11 = Overlay(name='ov11', after=ov05, objects=[
+ov11 = Overlay(name='ov11', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov11.s'
 ])
-ov12 = Overlay(name='ov12', after=ov05, objects=[
+ov12 = Overlay(name='ov12', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov12.s'
 ])
-ov13 = Overlay(name='ov13', after=ov05, objects=[
+ov13 = Overlay(name='ov13', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov13.s'
 ])
-ov14 = Overlay(name='ov14', after=ov09, objects=[
+ov14 = Overlay(name='ov14', after=[ov08, ov09, ov10, ov13], objects=[
     'asm/ov14.s'
 ])
-ov15 = Overlay(name='ov15', after=ov09, objects=[
+ov15 = Overlay(name='ov15', after=[ov08, ov09, ov10, ov13], objects=[
     'asm/ov15.s'
 ])
-ov16 = Overlay(name='ov16', after=ov09, objects=[
+ov16 = Overlay(name='ov16', after=[ov08, ov09, ov10, ov13], objects=[
     'asm/ov16.s'
 ])
-ov17 = Overlay(name='ov17', after=ov14, objects=[
+ov17 = Overlay(name='ov17', after=[ov14, ov16], objects=[
     'asm/ov17.s'
 ])
-ov18 = Overlay(name='ov18', after=ov14, objects=[
+ov18 = Overlay(name='ov18', after=[ov14, ov16], objects=[
     'asm/ov18.s'
 ])
-ov19 = Overlay(name='ov19', after=ov18, objects=[
+ov19 = Overlay(name='ov19', after=[ov17, ov18], objects=[
     'asm/ov19.s'
 ])
-ov20 = Overlay(name='ov20', after=ov18, objects=[
+ov20 = Overlay(name='ov20', after=[ov17, ov18], objects=[
     'asm/ov20.s'
 ])
-ov21 = Overlay(name='ov21', after=ov18, objects=[
+ov21 = Overlay(name='ov21', after=[ov17, ov18], objects=[
     'asm/ov21.s'
 ])
-ov22 = Overlay(name='ov22', after=ov18, objects=[
+ov22 = Overlay(name='ov22', after=[ov17, ov18], objects=[
     'asm/ov22.s'
 ])
-ov23 = Overlay(name='ov23', after=ov18, objects=[
+ov23 = Overlay(name='ov23', after=[ov17, ov18], objects=[
     'asm/ov23.s'
 ])
-ov24 = Overlay(name='ov24', after=ov18, objects=[
+ov24 = Overlay(name='ov24', after=[ov17, ov18], objects=[
     'asm/ov24.s'
 ])
-ov25 = Overlay(name='ov25', after=ov18, objects=[
+ov25 = Overlay(name='ov25', after=[ov17, ov18], objects=[
     'asm/ov25.s'
 ])
-ov26 = Overlay(name='ov26', after=ov18, objects=[
+ov26 = Overlay(name='ov26', after=[ov17, ov18], objects=[
     'asm/ov26.s'
 ])
-ov27 = Overlay(name='ov27', after=ov18, objects=[
+ov27 = Overlay(name='ov27', after=[ov17, ov18], objects=[
     'asm/ov27.s'
 ])
-ov28 = Overlay(name='ov28', after=ov18, objects=[
+ov28 = Overlay(name='ov28', after=[ov17, ov18], objects=[
     'asm/ov28.s'
 ])
-ov29 = Overlay(name='ov29', after=ov18, objects=[
+ov29 = Overlay(name='ov29', after=[ov17, ov18], objects=[
     'asm/ov29.s'
 ])
-ov30 = Overlay(name='ov30', after=ov29, objects=[
+ov30 = Overlay(name='ov30', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov30.s'
 ])
-ov31 = Overlay(name='ov31', after=ov29, objects=[
+ov31 = Overlay(name='ov31', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov31.s'
 ])
-ov32 = Overlay(name='ov32', after=ov29, objects=[
+ov32 = Overlay(name='ov32', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov32.s'
 ])
-ov33 = Overlay(name='ov33', after=ov29, objects=[
+ov33 = Overlay(name='ov33', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov33.s'
 ])
-ov34 = Overlay(name='ov34', after=ov29, objects=[
+ov34 = Overlay(name='ov34', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov34.s'
 ])
-ov35 = Overlay(name='ov35', after=ov29, objects=[
+ov35 = Overlay(name='ov35', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov35.s'
 ])
-ov36 = Overlay(name='ov36', after=ov29, objects=[
+ov36 = Overlay(name='ov36', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov36.s'
 ])
-ov37 = Overlay(name='ov37', after=ov29, objects=[
+ov37 = Overlay(name='ov37', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov37.s'
 ])
-ov38 = Overlay(name='ov38', after=ov29, objects=[
+ov38 = Overlay(name='ov38', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov38.s'
 ])
-ov39 = Overlay(name='ov39', after=ov29, objects=[
+ov39 = Overlay(name='ov39', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov39.s'
 ])
-ov40 = Overlay(name='ov40', after=ov29, objects=[
+ov40 = Overlay(name='ov40', after=[ov19, ov20, ov21, ov22, ov23, ov24, ov25, ov26, ov27, ov28, ov29], objects=[
     'asm/ov40.s'
 ])
-ov41 = Overlay(name='ov41', after=ov30, objects=[
+ov41 = Overlay(name='ov41', after=[ov30, ov31, ov32, ov33, ov34, ov35, ov36, ov37, ov38, ov39], objects=[
     'asm/ov41.s'
 ])
-ov42 = Overlay(name='ov42', after=ov30, objects=[
+ov42 = Overlay(name='ov42', after=[ov30, ov31, ov32, ov33, ov34, ov35, ov36, ov37, ov38, ov39], objects=[
     'asm/ov42.s'
 ])
-ov43 = Overlay(name='ov43', after=ov30, objects=[
+ov43 = Overlay(name='ov43', after=[ov30, ov31, ov32, ov33, ov34, ov35, ov36, ov37, ov38, ov39], objects=[
     'asm/ov43.s'
 ])
-ov44 = Overlay(name='ov44', after=ov30, objects=[
+ov44 = Overlay(name='ov44', after=[ov30, ov31, ov32, ov33, ov34, ov35, ov36, ov37, ov38, ov39], objects=[
     'asm/ov44.s'
 ])
-ov45 = Overlay(name='ov45', after=ov30, objects=[
+ov45 = Overlay(name='ov45', after=[ov30, ov31, ov32, ov33, ov34, ov35, ov36, ov37, ov38, ov39], objects=[
     'asm/ov45.s'
 ])
-ov46 = Overlay(name='ov46', after=ov44, objects=[
+ov46 = Overlay(name='ov46', after=[ov41, ov42, ov43, ov44, ov45], objects=[
     'asm/ov46.s'
 ])
-ov47 = Overlay(name='ov47', after=ov44, objects=[
+ov47 = Overlay(name='ov47', after=[ov41, ov42, ov43, ov44, ov45], objects=[
     'asm/ov47.s'
 ])
-ov48 = Overlay(name='ov48', after=ov44, objects=[
+ov48 = Overlay(name='ov48', after=[ov41, ov42, ov43, ov44, ov45], objects=[
     'asm/ov48.s'
 ])
-ov49 = Overlay(name='ov49', after=ov48, objects=[
+ov49 = Overlay(name='ov49', after=[ov46, ov47, ov48], objects=[
     'asm/ov49.s'
 ])
-ov50 = Overlay(name='ov50', after=ov48, objects=[
+ov50 = Overlay(name='ov50', after=[ov46, ov47, ov48], objects=[
     'asm/ov50.s'
 ])
-ov51 = Overlay(name='ov51', after=ov48, objects=[
+ov51 = Overlay(name='ov51', after=[ov46, ov47, ov48], objects=[
     'asm/ov51.s'
 ])
-ov52 = Overlay(name='ov52', after=ov48, objects=[
+ov52 = Overlay(name='ov52', after=[ov46, ov47, ov48], objects=[
     'asm/ov52.s'
 ])
-ov53 = Overlay(name='ov53', after=ov50, objects=[
+ov53 = Overlay(name='ov53', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov53.s'
 ])
-ov54 = Overlay(name='ov54', after=ov50, objects=[
+ov54 = Overlay(name='ov54', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov54.s'
 ])
-ov55 = Overlay(name='ov55', after=ov50, objects=[
+ov55 = Overlay(name='ov55', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov55.s'
 ])
-ov56 = Overlay(name='ov56', after=ov50, objects=[
+ov56 = Overlay(name='ov56', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov56.s'
 ])
-ov57 = Overlay(name='ov57', after=ov50, objects=[
+ov57 = Overlay(name='ov57', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov57.s'
 ])
-ov58 = Overlay(name='ov58', after=ov50, objects=[
+ov58 = Overlay(name='ov58', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov58.s'
 ])
-ov59 = Overlay(name='ov59', after=ov50, objects=[
+ov59 = Overlay(name='ov59', after=[ov49, ov50, ov51, ov52], objects=[
     'asm/ov59.s'
 ])
-ov60 = Overlay(name='ov60', after=ov12, objects=[
+ov60 = Overlay(name='ov60', after=[ov11, ov12], objects=[
     'asm/ov60.s'
 ])
-ov61 = Overlay(name='ov61', after=ov12, objects=[
+ov61 = Overlay(name='ov61', after=[ov11, ov12], objects=[
     'asm/ov61.s'
 ])
 
@@ -253,10 +256,13 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
         file.write(f'    {ov.name} : ORIGIN = ')
         if ov.origin is not None:
             file.write(hex(ov.origin))
-        elif type(ov.after) is Overlay:
-            file.write(f'AFTER({ov.after.name})')
-        elif type(ov.after) is str:
-            file.write(f'AFTER({ov.after})')
+        elif type(ov.after) is list:
+            file.write('AFTER(')
+            file.write(','.join(map(str, ov.after)))
+            file.write(')')
+        else:
+            file.write(f'AFTER({str(ov.after)})')
+
         file.write(f' > overlays/{ov.name}.bin\n')
     file.write('}\n')
     file.write('\n')
