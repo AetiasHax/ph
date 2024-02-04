@@ -348,10 +348,3 @@
 .extern func_020078d8
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020d556c
-.extern data_027e0fe0
-.extern func_ov00_020a956c
-.extern data_ov00_020e92c8
-.extern func_ov00_020a9998
-.extern func_ov00_020a19fc
-.extern data_027e0f88
-.extern data_027e0f78
