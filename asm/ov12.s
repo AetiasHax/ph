@@ -4751,14 +4751,9 @@ func_ov12_02116b1c: ; 0x02116b1c
 	add r0, r5, #0x21c
 	mov r1, #2
 	bl func_ov12_021169a8
-	arm_func_end func_ov12_02116b1c
-
-	.global func_ov12_02116b70
-	arm_func_start func_ov12_02116b70
-func_ov12_02116b70: ; 0x02116b70
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov12_02116b70
+	arm_func_end func_ov12_02116b1c
 _02116b74: .word data_ov12_02137d2c
 
 	.global func_ov12_02116b78
