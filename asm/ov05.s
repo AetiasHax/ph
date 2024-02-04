@@ -15166,13 +15166,13 @@ func_ov05_0210d6dc: ; 0x0210d6dc
 	ldr r1, [r3, #0x14c]
 	str r1, [r2, #8]
 	bx lr
-	arm_func_end func_ov05_0210d6dc
 _0210d714:
 	mov r0, #0
 	str r0, [r2]
 	str r0, [r2, #4]
 	str r0, [r2, #8]
 	bx lr
+	arm_func_end func_ov05_0210d6dc
 
 	.global func_ov05_0210d728
 	arm_func_start func_ov05_0210d728
