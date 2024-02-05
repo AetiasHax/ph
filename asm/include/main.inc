@@ -1112,3 +1112,14 @@
 .extern data_027e0d18
 .extern func_ov16_0211ffdc
 .extern gHeap
+.extern func_ov08_02112c20
+.extern func_ov09_02112c20
+.extern func_ov10_02112c20
+.extern data_ov10_0211e960
+.extern func_ov11_0212b934
+.extern func_ov07_02100ae0
+.extern data_ov07_02102920
+.extern func_ov12_02112d20
+.extern data_ov12_02134ea0
+.extern func_ov13_02114f78
+.extern data_ov13_021160b4
