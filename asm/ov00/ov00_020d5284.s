@@ -3917,6 +3917,21 @@ data_ov00_020df336: ; 0x020df336
 	.byte 0x88, 0x13
 
     .data
+.ifdef USA
+; This was moved down in EUR
+	.global data_ov00_020e9308
+data_ov00_020e9308: ; 0x020e9308
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov00_020e930c
+data_ov00_020e930c: ; 0x020e930c
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov00_020e9310
+data_ov00_020e9310: ; 0x020e9310
+	.byte 0x00, 0x00, 0x00, 0x00
+	.global data_ov00_020e9314
+data_ov00_020e9314: ; 0x020e9314
+	.byte 0x00, 0x00, 0x00, 0x00
+.endif
 	.global data_ov00_020e91bc
 data_ov00_020e91bc: ; 0x020e91bc
 	.ascii "EF8:/zdf_ripple.nsbta"
@@ -4147,6 +4162,8 @@ data_ov00_020e9300: ; 0x020e9300
 	.global data_ov00_020e9304
 data_ov00_020e9304: ; 0x020e9304
     .word func_ov00_020d52f8
+.ifdef EUR
+; This was at a lower address in USA
 	.global data_ov00_020e9308
 data_ov00_020e9308: ; 0x020e9308
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -4159,26 +4176,36 @@ data_ov00_020e9310: ; 0x020e9310
 	.global data_ov00_020e9314
 data_ov00_020e9314: ; 0x020e9314
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e9318
-data_ov00_020e9318: ; 0x020e9318
-	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e931c
-data_ov00_020e931c: ; 0x020e931c
-	.byte 0x00, 0x00, 0x00, 0x00
+.endif
 
     .sbss
+.ifdef USA
+; This was moved down in EUR
 	.global data_ov00_020ee6e8
 data_ov00_020ee6e8:
 	.space 0x4
 	.global data_ov00_020ee6ec
 data_ov00_020ee6ec:
+	.space 0xc
+.endif
+
+	.global data_ov00_020ee6c8
+data_ov00_020ee6c8:
+	.space 0xc
+	.global data_ov00_020ee6d4
+data_ov00_020ee6d4:
+	.space 0x14
+
+.ifdef EUR
+; This is at a lower address in USA
+	.global data_ov00_020ee6e8
+data_ov00_020ee6e8:
 	.space 0x4
-	.global data_ov00_020ee6f0
-data_ov00_020ee6f0:
-	.space 0x4
-	.global data_ov00_020ee6f4
-data_ov00_020ee6f4:
-	.space 0x4
+	.global data_ov00_020ee6ec
+data_ov00_020ee6ec:
+	.space 0xc
+.endif
+
 	.global data_ov00_020ee6f8
 data_ov00_020ee6f8:
 	.space 0x4

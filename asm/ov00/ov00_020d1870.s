@@ -306,7 +306,12 @@ _020d1d7c:
 _020d1d8c: .word data_027e0fe4
 _020d1d90: .word 0x00040001
 _020d1d94: .word 0x000300ff
+.ifdef EUR
 _020d1d98: .word 0x020af2d8
+.endif
+.ifdef USA
+_020d1d98: .word 0x020af278
+.endif
 _020d1d9c: .word data_027e0f64
 _020d1da0: .word gItemManager
 
@@ -6113,28 +6118,4 @@ data_ov00_020ee6c0:
 	.space 0x4
 	.global data_ov00_020ee6c4
 data_ov00_020ee6c4:
-	.space 0x4
-	.global data_ov00_020ee6c8
-data_ov00_020ee6c8:
-	.space 0x4
-	.global data_ov00_020ee6cc
-data_ov00_020ee6cc:
-	.space 0x4
-	.global data_ov00_020ee6d0
-data_ov00_020ee6d0:
-	.space 0x4
-	.global data_ov00_020ee6d4
-data_ov00_020ee6d4:
-	.space 0x4
-	.global data_ov00_020ee6d8
-data_ov00_020ee6d8:
-	.space 0x4
-	.global data_ov00_020ee6dc
-data_ov00_020ee6dc:
-	.space 0x4
-	.global data_ov00_020ee6e0
-data_ov00_020ee6e0:
-	.space 0x4
-	.global data_ov00_020ee6e4
-data_ov00_020ee6e4:
 	.space 0x4

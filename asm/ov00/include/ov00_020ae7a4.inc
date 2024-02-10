@@ -30,7 +30,7 @@
 .extern func_ov00_020a8c4c
 .extern func_ov00_020a8d40
 .extern func_ov00_020a8d40
-.extern func_ov15_02170660
+.extern func_ov21_02170660
 .extern func_ov00_020a8a4c
 .extern func_ov00_020a8c78
 .extern func_ov00_020a82ac

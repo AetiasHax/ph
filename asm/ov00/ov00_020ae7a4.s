@@ -224,7 +224,7 @@ _020aea40:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020aea90:
-	bl func_ov15_02170660
+	bl func_ov21_02170660
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020aea9c:
