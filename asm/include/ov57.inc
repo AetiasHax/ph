@@ -197,3 +197,6 @@
 .extern func_0204f8d4
 .extern func_ov00_020beba8
 .extern func_0204f8d4
+.extern func_ov00_020bec5c
+.extern func_ov00_020bedcc
+.extern func_ov00_020bed7c

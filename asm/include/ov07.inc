@@ -174,3 +174,11 @@
 .extern func_0203eb8c
 .extern func_02017394
 .extern func_0203eb8c
+.extern func_0202c0c4
+.extern func_ov01_020f7e10
+.extern func_ov01_020f7e24
+.extern data_ov00_020ee6ba
+.extern data_ov00_020ee6bb
+.extern data_ov00_020ee6bd
+.extern data_ov00_020ee6be
+.extern data_ov00_020ee6bf

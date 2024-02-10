@@ -316,3 +316,7 @@
 .extern func_020419d0
 .extern func_02041c18
 .extern func_0204198c
+.extern func_ov01_020efe20
+.extern func_ov01_020efe80
+.extern func_ov01_020efec0
+.extern func_ov01_020eff00

@@ -1162,7 +1162,7 @@ _02113a74:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov08_02113a40
-_02113aa0: .word 0x020d8795
+_02113aa0: .word data_ov00_020d8795
 _02113aa4: .word data_ov00_020d88b4
 
 	.global func_ov08_02113aa8
@@ -1221,25 +1221,25 @@ data_ov08_02113b40: ; 0x02113b40
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov08_02113b44
 data_ov08_02113b44: ; 0x02113b44
-	.byte 0x78, 0x2d, 0x11, 0x02
+    .word func_ov08_02112d78
 	.global data_ov08_02113b48
 data_ov08_02113b48: ; 0x02113b48
-	.byte 0xa8, 0x2d, 0x11, 0x02
+    .word func_ov08_02112da8 ; func_ov10_02112da8
 	.global data_ov08_02113b4c
 data_ov08_02113b4c: ; 0x02113b4c
-	.byte 0xe0, 0x2d, 0x11, 0x02
+    .word func_ov08_02112de0
 	.global data_ov08_02113b50
 data_ov08_02113b50: ; 0x02113b50
-	.byte 0xbd, 0xc0, 0x02, 0x02
+    .word func_0202c0bc
 	.global data_ov08_02113b54
 data_ov08_02113b54: ; 0x02113b54
-	.byte 0x84, 0x2e, 0x11, 0x02
+    .word func_ov08_02112e84
 	.global data_ov08_02113b58
 data_ov08_02113b58: ; 0x02113b58
-	.byte 0xc5, 0xc0, 0x02, 0x02
+    .word func_0202c0c4
 	.global data_ov08_02113b5c
 data_ov08_02113b5c: ; 0x02113b5c
-	.byte 0xc9, 0xc0, 0x02, 0x02
+    .word func_0202c0c8
 	.global data_ov08_02113b60
 data_ov08_02113b60: ; 0x02113b60
 	.ascii "SoundData/final_sound_data.sdat"

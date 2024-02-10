@@ -202,3 +202,4 @@
 .extern func_ov00_0207a2d8
 .extern func_0202f360
 .extern data_027e08e4
+.extern func_0202c0c4

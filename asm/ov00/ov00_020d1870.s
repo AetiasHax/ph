@@ -6109,10 +6109,28 @@ data_ov00_020ee6b4:
 	.space 0x4
 	.global data_ov00_020ee6b8
 data_ov00_020ee6b8:
-	.space 0x4
+	.space 0x1
+	.global data_ov00_020ee6b9
+data_ov00_020ee6b9:
+	.space 0x1
+	.global data_ov00_020ee6ba
+data_ov00_020ee6ba:
+	.space 0x1
+	.global data_ov00_020ee6bb
+data_ov00_020ee6bb:
+	.space 0x1
 	.global data_ov00_020ee6bc
 data_ov00_020ee6bc:
-	.space 0x4
+	.space 0x1
+	.global data_ov00_020ee6bd
+data_ov00_020ee6bd:
+	.space 0x1
+	.global data_ov00_020ee6be
+data_ov00_020ee6be:
+	.space 0x1
+	.global data_ov00_020ee6bf
+data_ov00_020ee6bf:
+	.space 0x1
 	.global data_ov00_020ee6c0
 data_ov00_020ee6c0:
 	.space 0x4

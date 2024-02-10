@@ -5378,7 +5378,10 @@ data_ov00_020d889c: ; 0x020d889c
 	.byte 0x00, 0x02, 0x00, 0x00
 	.global data_ov00_020d88a0
 data_ov00_020d88a0: ; 0x020d88a0
-	.byte 0x00, 0x00, 0x06, 0x00
+	.byte 0x00, 0x00
+    .global data_ov00_020d88a2
+data_ov00_020d88a2: ; 0x020d88a2
+    .byte 0x06, 0x00
 	.global data_ov00_020d88a4
 data_ov00_020d88a4: ; 0x020d88a4
 	.byte 0x28, 0x00
@@ -5683,7 +5686,16 @@ data_ov00_020ec7e8:
 	.space 0x4
 	.global data_ov00_020ec7ec
 data_ov00_020ec7ec:
-	.space 0x4
+	.space 0x1
+	.global data_ov00_020ec7ed
+data_ov00_020ec7ed:
+	.space 0x1
+	.global data_ov00_020ec7ee
+data_ov00_020ec7ee:
+	.space 0x1
+	.global data_ov00_020ec7ef
+data_ov00_020ec7ef:
+	.space 0x1
 	.global data_ov00_020ec7f0
 data_ov00_020ec7f0:
 	.space 0x4
