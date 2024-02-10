@@ -16527,7 +16527,14 @@ func_ov40_0218852c: ; 0x0218852c
 	moveq r1, #0x14
 	beq _02188548
 	blx func_0202ab48
+.ifdef EUR
 	mov r1, #0x11
+.endif
+.ifdef USA
+    cmp r0, #1
+    moveq r1, #0x11
+    movne r1, #0x14
+.endif
 _02188548:
 	ldr r0, _02188574 ; =data_ov40_021897d4
 	strh r1, [r0, #0x20]
@@ -16536,7 +16543,14 @@ _02188548:
 	moveq r1, #0x2d
 	beq _02188568
 	blx func_0202ab48
+.ifdef EUR
 	mov r1, #0x25
+.endif
+.ifdef USA
+    cmp r0, #1
+    moveq r1, #0x25
+    movne r1, #0x2d
+.endif
 _02188568:
 	ldr r0, _02188574 ; =data_ov40_021897d4
 	strh r1, [r0, #0x22]
