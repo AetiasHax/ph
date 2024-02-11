@@ -106,3 +106,5 @@
 .extern data_027e0ce0
 .extern data_02068cbc
 .extern func_0203f904
+.extern func_0202f25c
+.extern func_0203fe88

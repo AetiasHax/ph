@@ -859,7 +859,7 @@ _02199818: .word data_ov55_021998a0
 	.section .sinit, 4, 1, 4
 	.global data_ov55_0219981c
 data_ov55_0219981c: ; 0x0219981c
-	.byte 0xec, 0x97, 0x19, 0x02
+    .word func_ov55_021997ec
 
 	.data
 	.global data_ov55_02199840
@@ -908,28 +908,28 @@ data_ov55_0219986c: ; 0x0219986c
 	.byte 0x00
 	.global data_ov55_02199870
 data_ov55_02199870: ; 0x02199870
-	.byte 0x6c, 0x98, 0x19, 0x02
+    .word data_ov55_0219986c
 	.global data_ov55_02199874
 data_ov55_02199874: ; 0x02199874
-	.byte 0x68, 0x98, 0x19, 0x02
+    .word data_ov55_02199868
 	.global data_ov55_02199878
 data_ov55_02199878: ; 0x02199878
-	.byte 0x64, 0x98, 0x19, 0x02
+    .word data_ov55_02199864
 	.global data_ov55_0219987c
 data_ov55_0219987c: ; 0x0219987c
-	.byte 0x60, 0x98, 0x19, 0x02
+    .word data_ov55_02199860
 	.global data_ov55_02199880
 data_ov55_02199880: ; 0x02199880
-	.byte 0x5c, 0x98, 0x19, 0x02
+    .word data_ov55_0219985c
 	.global data_ov55_02199884
 data_ov55_02199884: ; 0x02199884
-	.byte 0x58, 0x98, 0x19, 0x02
+    .word data_ov55_02199858
 	.global data_ov55_02199888
 data_ov55_02199888: ; 0x02199888
-	.byte 0x54, 0x98, 0x19, 0x02
+    .word data_ov55_02199854
 	.global data_ov55_0219988c
 data_ov55_0219988c: ; 0x0219988c
-	.byte 0x50, 0x98, 0x19, 0x02
+    .word data_ov55_02199850
 	.global data_ov55_02199890
 data_ov55_02199890: ; 0x02199890
 	.byte 0x4c, 0x00, 0x00, 0x00

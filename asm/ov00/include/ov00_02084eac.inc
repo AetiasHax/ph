@@ -278,3 +278,7 @@
 .extern data_02056be4
 .extern data_027e077c
 .extern data_02056be4
+.extern func_ov05_0210199c
+.extern func_ov05_02101ab8
+.extern func_ov04_02103444
+.extern func_ov04_021034fc

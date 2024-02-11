@@ -510,7 +510,7 @@ func_ov56_02199328: ; 0x02199328
 	.align 2, 0
 	arm_func_end func_ov56_02199328
 _02199368: .word data_ov56_0219940c
-_0219936c: .word 0x020a95a5
+_0219936c: .word func_ov00_020a95a4
 _02199370: .word data_ov56_02199400
 _02199374: .word data_ov56_02199474
 _02199378: .word data_ov56_02199468
@@ -518,7 +518,7 @@ _02199378: .word data_ov56_02199468
 	.section .sinit, 4, 1, 4
 	.global data_ov56_0219937c
 data_ov56_0219937c: ; 0x0219937c
-	.byte 0x28, 0x93, 0x19, 0x02
+    .word func_ov56_02199328
 
 	.data
 	.global data_ov56_021993a0
@@ -555,28 +555,28 @@ data_ov56_021993bc: ; 0x021993bc
 	.byte 0x00
 	.global data_ov56_021993c0
 data_ov56_021993c0: ; 0x021993c0
-	.byte 0xbc, 0x93, 0x19, 0x02
+    .word data_ov56_021993bc
 	.global data_ov56_021993c4
 data_ov56_021993c4: ; 0x021993c4
-	.byte 0xb8, 0x93, 0x19, 0x02
+    .word data_ov56_021993b8
 	.global data_ov56_021993c8
 data_ov56_021993c8: ; 0x021993c8
-	.byte 0xb4, 0x93, 0x19, 0x02
+    .word data_ov56_021993b4
 	.global data_ov56_021993cc
 data_ov56_021993cc: ; 0x021993cc
-	.byte 0xb0, 0x93, 0x19, 0x02
+    .word data_ov56_021993b0
 	.global data_ov56_021993d0
 data_ov56_021993d0: ; 0x021993d0
-	.byte 0xac, 0x93, 0x19, 0x02
+    .word data_ov56_021993ac
 	.global data_ov56_021993d4
 data_ov56_021993d4: ; 0x021993d4
-	.byte 0xa8, 0x93, 0x19, 0x02
+    .word data_ov56_021993a8
 	.global data_ov56_021993d8
 data_ov56_021993d8: ; 0x021993d8
-	.byte 0xa4, 0x93, 0x19, 0x02
+    .word data_ov56_021993a4
 	.global data_ov56_021993dc
 data_ov56_021993dc: ; 0x021993dc
-	.byte 0xa0, 0x93, 0x19, 0x02
+    .word data_ov56_021993a0
 	.global data_ov56_021993e0
 data_ov56_021993e0: ; 0x021993e0
 	.byte 0x2e, 0x00, 0x00, 0x00

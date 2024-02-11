@@ -283,3 +283,5 @@
 .extern data_ov00_020e8404
 .extern data_ov00_020e8410
 .extern data_ov00_020e8428
+.extern func_ov00_020a9b6c
+.extern func_ov00_020a9b78

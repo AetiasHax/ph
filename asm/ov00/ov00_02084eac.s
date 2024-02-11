@@ -8091,31 +8091,31 @@ data_ov00_020e2540: ; 0x020e2540
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e2544
 data_ov00_020e2544: ; 0x020e2544
-	.byte 0xd4, 0x6c, 0x08, 0x02
+    .word func_ov00_02086cd4
 	.global data_ov00_020e2548
 data_ov00_020e2548: ; 0x020e2548
-	.byte 0xa8, 0x6d, 0x08, 0x02
+    .word func_ov00_02086da8
 	.global data_ov00_020e254c
 data_ov00_020e254c: ; 0x020e254c
-	.byte 0x9c, 0x19, 0x10, 0x02
+    .word func_ov05_0210199c ; func_ov06_0210199c, func_ov07_0210199c
 	.global data_ov00_020e2550
 data_ov00_020e2550: ; 0x020e2550
-	.byte 0xb8, 0x1a, 0x10, 0x02
+    .word func_ov05_02101ab8
 	.global data_ov00_020e2554
 data_ov00_020e2554: ; 0x020e2554
-	.byte 0x45, 0x34, 0x10, 0x02
+    .word func_ov04_02103444 ; data_ov06_02103444, data_ov07_02103444
 	.global data_ov00_020e2558
 data_ov00_020e2558: ; 0x020e2558
-	.byte 0xfd, 0x34, 0x10, 0x02
+    .word func_ov04_021034fc ; data_ov06_021034fc, data_ov07_021034fc
 	.global data_ov00_020e255c
 data_ov00_020e255c: ; 0x020e255c
-	.byte 0xa0, 0x70, 0x08, 0x02
+    .word func_ov00_020870a0
 	.global data_ov00_020e2560
 data_ov00_020e2560: ; 0x020e2560
-	.byte 0xc4, 0x70, 0x08, 0x02
+    .word func_ov00_020870c4
 	.global data_ov00_020e2564
 data_ov00_020e2564: ; 0x020e2564
-	.byte 0xd0, 0x70, 0x08, 0x02
+    .word func_ov00_020870d0
 	.global data_ov00_020e2568
 data_ov00_020e2568: ; 0x020e2568
 	.ascii "vector::at index out of range"

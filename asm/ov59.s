@@ -2589,28 +2589,28 @@ data_ov59_0219b15c: ; 0x0219b15c
 	.byte 0x00
 	.global data_ov59_0219b160
 data_ov59_0219b160: ; 0x0219b160
-	.byte 0x5c, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b15c
 	.global data_ov59_0219b164
 data_ov59_0219b164: ; 0x0219b164
-	.byte 0x58, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b158
 	.global data_ov59_0219b168
 data_ov59_0219b168: ; 0x0219b168
-	.byte 0x54, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b154
 	.global data_ov59_0219b16c
 data_ov59_0219b16c: ; 0x0219b16c
-	.byte 0x50, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b150
 	.global data_ov59_0219b170
 data_ov59_0219b170: ; 0x0219b170
-	.byte 0x4c, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b14c
 	.global data_ov59_0219b174
 data_ov59_0219b174: ; 0x0219b174
-	.byte 0x48, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b148
 	.global data_ov59_0219b178
 data_ov59_0219b178: ; 0x0219b178
-	.byte 0x44, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b144
 	.global data_ov59_0219b17c
 data_ov59_0219b17c: ; 0x0219b17c
-	.byte 0x40, 0xb1, 0x19, 0x02
+    .word data_ov59_0219b140
 	.global data_ov59_0219b180
 data_ov59_0219b180: ; 0x0219b180
 	.byte 0x39, 0x00, 0x00, 0x00

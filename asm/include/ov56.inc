@@ -56,3 +56,4 @@
 .extern func_0204f8d4
 .extern func_ov00_020a9588
 .extern func_0204f8d4
+.extern func_ov00_020a95a4

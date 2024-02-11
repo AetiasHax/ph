@@ -482,7 +482,7 @@ func_ov16_0211fc14: ; 0x0211fc14
 	.align 2, 0
 	arm_func_end func_ov16_0211fc14
 _0211fc84: .word data_027e0ce0
-_0211fc88: .word 0x0202f25d
+_0211fc88: .word func_0202f25c
 
 	.global func_ov16_0211fc8c
 	arm_func_start func_ov16_0211fc8c
@@ -777,7 +777,7 @@ func_ov16_0211ffe0: ; 0x0211ffe0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov16_0211ffe0
-_0211fffc: .word 0x0203fe89
+_0211fffc: .word func_0203fe88
 
 	.global func_ov16_02120000
 	arm_func_start func_ov16_02120000

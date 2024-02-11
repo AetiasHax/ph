@@ -129,3 +129,7 @@
 .extern data_ov00_020d88b4
 .extern func_020078c0
 .extern func_ov00_0207c170
+.extern data_ov00_020d8795
+.extern func_0202c0bc
+.extern func_0202c0c4
+.extern func_0202c0c8

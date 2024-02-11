@@ -12074,16 +12074,16 @@ data_ov60_02147710: ; 0x02147710
 	.byte 0xff, 0xff, 0xff, 0xff
 	.global data_ov60_02147714
 data_ov60_02147714: ; 0x02147714
-	.byte 0x20, 0xfe, 0x0e, 0x02
+    .word func_ov01_020efe20
 	.global data_ov60_02147718
 data_ov60_02147718: ; 0x02147718
-	.byte 0x80, 0xfe, 0x0e, 0x02
+    .word func_ov01_020efe80
 	.global data_ov60_0214771c
 data_ov60_0214771c: ; 0x0214771c
-	.byte 0xc0, 0xfe, 0x0e, 0x02
+    .word func_ov01_020efec0
 	.global data_ov60_02147720
 data_ov60_02147720: ; 0x02147720
-	.byte 0x00, 0xff, 0x0e, 0x02
+    .word func_ov01_020eff00
 	.global data_ov60_02147724
 data_ov60_02147724: ; 0x02147724
 	.ascii "brg"
@@ -12118,28 +12118,28 @@ data_ov60_02147740: ; 0x02147740
 	.byte 0x00
 	.global data_ov60_02147744
 data_ov60_02147744: ; 0x02147744
-	.byte 0x40, 0x77, 0x14, 0x02
+    .word data_ov60_02147740
 	.global data_ov60_02147748
 data_ov60_02147748: ; 0x02147748
-	.byte 0x3c, 0x77, 0x14, 0x02
+    .word data_ov60_0214773c
 	.global data_ov60_0214774c
 data_ov60_0214774c: ; 0x0214774c
-	.byte 0x38, 0x77, 0x14, 0x02
+    .word data_ov60_02147738
 	.global data_ov60_02147750
 data_ov60_02147750: ; 0x02147750
-	.byte 0x34, 0x77, 0x14, 0x02
+    .word data_ov60_02147734
 	.global data_ov60_02147754
 data_ov60_02147754: ; 0x02147754
-	.byte 0x30, 0x77, 0x14, 0x02
+    .word data_ov60_02147730
 	.global data_ov60_02147758
 data_ov60_02147758: ; 0x02147758
-	.byte 0x2c, 0x77, 0x14, 0x02
+    .word data_ov60_0214772c
 	.global data_ov60_0214775c
 data_ov60_0214775c: ; 0x0214775c
-	.byte 0x28, 0x77, 0x14, 0x02
+    .word data_ov60_02147728
 	.global data_ov60_02147760
 data_ov60_02147760: ; 0x02147760
-	.byte 0x24, 0x77, 0x14, 0x02
+    .word data_ov60_02147724
 	.global data_ov60_02147764
 data_ov60_02147764: ; 0x02147764
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -12148,61 +12148,61 @@ data_ov60_02147768: ; 0x02147768
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov60_0214776c
 data_ov60_0214776c: ; 0x0214776c
-	.byte 0x4c, 0x53, 0x14, 0x02
+    .word func_ov60_0214534c
 	.global data_ov60_02147770
 data_ov60_02147770: ; 0x02147770
-	.byte 0x90, 0x53, 0x14, 0x02
+    .word func_ov60_02145390
 	.global data_ov60_02147774
 data_ov60_02147774: ; 0x02147774
-	.byte 0xdc, 0x53, 0x14, 0x02
+    .word func_ov60_021453dc
 	.global data_ov60_02147778
 data_ov60_02147778: ; 0x02147778
-	.byte 0x88, 0x55, 0x14, 0x02
+    .word func_ov60_02145588
 	.global data_ov60_0214777c
 data_ov60_0214777c: ; 0x0214777c
-	.byte 0xa8, 0x55, 0x14, 0x02
+    .word func_ov60_021455a8
 	.global data_ov60_02147780
 data_ov60_02147780: ; 0x02147780
-	.byte 0xd4, 0x5a, 0x14, 0x02
+    .word func_ov60_02145ad4
 	.global data_ov60_02147784
 data_ov60_02147784: ; 0x02147784
-	.byte 0xa8, 0x56, 0x14, 0x02
+    .word func_ov60_021456a8
 	.global data_ov60_02147788
 data_ov60_02147788: ; 0x02147788
-	.byte 0xec, 0x56, 0x14, 0x02
+    .word func_ov60_021456ec
 	.global data_ov60_0214778c
 data_ov60_0214778c: ; 0x0214778c
-	.byte 0x64, 0x57, 0x14, 0x02
+    .word func_ov60_02145764
 	.global data_ov60_02147790
 data_ov60_02147790: ; 0x02147790
-	.byte 0xb8, 0x59, 0x14, 0x02
+    .word func_ov60_021459b8
 	.global data_ov60_02147794
 data_ov60_02147794: ; 0x02147794
-	.byte 0xd0, 0x59, 0x14, 0x02
+    .word func_ov60_021459d0
 	.global data_ov60_02147798
 data_ov60_02147798: ; 0x02147798
-	.byte 0xac, 0x59, 0x14, 0x02
+    .word func_ov60_021459ac
 	.global data_ov60_0214779c
 data_ov60_0214779c: ; 0x0214779c
-	.byte 0xec, 0x5a, 0x14, 0x02
+    .word func_ov60_02145aec
 	.global data_ov60_021477a0
 data_ov60_021477a0: ; 0x021477a0
-	.byte 0x74, 0x55, 0x14, 0x02
+    .word func_ov60_02145574
 	.global data_ov60_021477a4
 data_ov60_021477a4: ; 0x021477a4
-	.byte 0x94, 0x56, 0x14, 0x02
+    .word func_ov60_02145694
 	.global data_ov60_021477a8
 data_ov60_021477a8: ; 0x021477a8
-	.byte 0xf8, 0x5a, 0x14, 0x02
+    .word func_ov60_02145af8
 	.global data_ov60_021477ac
 data_ov60_021477ac: ; 0x021477ac
-	.byte 0x0c, 0x5b, 0x14, 0x02
+    .word func_ov60_02145b0c
 	.global data_ov60_021477b0
 data_ov60_021477b0: ; 0x021477b0
-	.byte 0x18, 0x5a, 0x14, 0x02
+    .word func_ov60_02145a18
 	.global data_ov60_021477b4
 data_ov60_021477b4: ; 0x021477b4
-	.byte 0x48, 0x5a, 0x14, 0x02
+    .word func_ov60_02145a48
 	.global data_ov60_021477b8
 data_ov60_021477b8: ; 0x021477b8
 	.ascii "/child.srl"

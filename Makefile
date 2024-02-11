@@ -1,9 +1,10 @@
-REGION ?= EUR
-
 ifeq ($(REGION), EUR)
 	REGION_NAME := eur
 	REGION_SUFFIX := P
-else
+else ifeq ($(REGION), USA)
+	REGION_NAME := usa
+	REGION_SUFFIX := E
+else ifneq ($(REGION),)
 	$(error Unknown region '$(REGION)')
 endif
 
@@ -49,6 +50,23 @@ ifeq ($(NONMATCHING),1)
 	CC_FLAGS += -DNONMATCHING
 endif
 
+.PHONY: help
+help:
+	@echo "Usage:"
+	@echo "make extract .................... Extracts provided base ROMs"
+	@echo "make extract REGION=(USA|EUR) ... Extracts specific base ROM"
+	@echo "make eur ........................ Builds European ROM"
+	@echo "make usa ........................ Builds American ROM"
+	@echo "make clean ...................... Clean up build files"
+
+.PHONY: eur
+eur:
+	$(MAKE) all REGION=EUR
+
+.PHONY: usa
+usa:
+	$(MAKE) all REGION=USA
+
 .PHONY: all
 all: tools rom
 	sha1sum $(NDS_FILE)
@@ -69,7 +87,12 @@ endif
 
 .PHONY: extract
 extract: tools
+ifeq (,$(REGION))
+	$(MAKE) extract REGION=EUR
+	$(MAKE) extract REGION=USA
+else ifneq (,$(wildcard $(BASE_ROM)))
 	$(TOOLS_DIR)/rom/extractrom -o $(BASE_DIR) -i $(BASE_ROM)
+endif
 
 .PHONY: arm9
 arm9: link

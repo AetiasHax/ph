@@ -857,3 +857,8 @@
 .extern func_0202c0b8
 .extern _ZN9SysObjectdlEPv
 .extern func_0202c0b8
+.extern data_02000000
+.extern func_0202c0bc
+.extern func_0202c0c0
+.extern func_0202c0c4
+.extern func_0202c0c8

@@ -5378,7 +5378,10 @@ data_ov00_020d889c: ; 0x020d889c
 	.byte 0x00, 0x02, 0x00, 0x00
 	.global data_ov00_020d88a0
 data_ov00_020d88a0: ; 0x020d88a0
-	.byte 0x00, 0x00, 0x06, 0x00
+	.byte 0x00, 0x00
+    .global data_ov00_020d88a2
+data_ov00_020d88a2: ; 0x020d88a2
+    .byte 0x06, 0x00
 	.global data_ov00_020d88a4
 data_ov00_020d88a4: ; 0x020d88a4
 	.byte 0x28, 0x00
@@ -5491,31 +5494,31 @@ data_ov00_020e201c: ; 0x020e201c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e2020
 data_ov00_020e2020: ; 0x020e2020
-	.byte 0x55, 0x9d, 0x07, 0x02
+    .word func_ov00_02079d54
 	.global data_ov00_020e2024
 data_ov00_020e2024: ; 0x020e2024
-	.byte 0x79, 0x9d, 0x07, 0x02
+    .word func_ov00_02079d78
 	.global data_ov00_020e2028
 data_ov00_020e2028: ; 0x020e2028
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e202c
 data_ov00_020e202c: ; 0x020e202c
-	.byte 0xbd, 0xc0, 0x02, 0x02
+    .word func_0202c0bc
 	.global data_ov00_020e2030
 data_ov00_020e2030: ; 0x020e2030
-	.byte 0xc1, 0xc0, 0x02, 0x02
+    .word func_0202c0c0
 	.global data_ov00_020e2034
 data_ov00_020e2034: ; 0x020e2034
-	.byte 0xc5, 0xc0, 0x02, 0x02
+    .word func_0202c0c4
 	.global data_ov00_020e2038
 data_ov00_020e2038: ; 0x020e2038
-	.byte 0xc9, 0xc0, 0x02, 0x02
+    .word func_0202c0c8
 	.global data_ov00_020e203c
 data_ov00_020e203c: ; 0x020e203c
-	.byte 0xc9, 0x9d, 0x07, 0x02
+    .word func_ov00_02079dc8
 	.global data_ov00_020e2040
 data_ov00_020e2040: ; 0x020e2040
-	.byte 0xd9, 0x9d, 0x07, 0x02
+    .word func_ov00_02079dd8
 	.global data_ov00_020e2044
 data_ov00_020e2044: ; 0x020e2044
 	.ascii "Menu/Bg/Color0.NCLR"
@@ -5683,7 +5686,16 @@ data_ov00_020ec7e8:
 	.space 0x4
 	.global data_ov00_020ec7ec
 data_ov00_020ec7ec:
-	.space 0x4
+	.space 0x1
+	.global data_ov00_020ec7ed
+data_ov00_020ec7ed:
+	.space 0x1
+	.global data_ov00_020ec7ee
+data_ov00_020ec7ee:
+	.space 0x1
+	.global data_ov00_020ec7ef
+data_ov00_020ec7ef:
+	.space 0x1
 	.global data_ov00_020ec7f0
 data_ov00_020ec7f0:
 	.space 0x4

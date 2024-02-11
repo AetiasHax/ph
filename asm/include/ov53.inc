@@ -107,3 +107,7 @@
 .extern func_ov00_02081f4c
 .extern _ZN9SysObjectdlEPv
 .extern func_0204f8d4
+.extern func_ov00_020bebd8
+.extern func_ov00_020bec5c
+.extern func_ov00_020bece0
+.extern func_ov00_020bedcc

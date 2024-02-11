@@ -1358,7 +1358,7 @@ _02079d24: .word 0xf000f000
     .rodata
 	.global data_ov00_020d878c
 data_ov00_020d878c: ; 0x020d878c
-	.byte 0xb4, 0x1f, 0x0e, 0x02
+    .word data_ov00_020e1fb4
 	.global data_ov00_020d8790
 data_ov00_020d8790: ; 0x020d8790
 	.byte 0x08

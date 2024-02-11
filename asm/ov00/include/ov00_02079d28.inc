@@ -273,3 +273,7 @@
 .extern func_ov00_020a3710
 .extern func_ov00_020a3710
 .extern func_ov00_0207d9cc
+.extern func_0202c0bc
+.extern func_0202c0c0
+.extern func_0202c0c4
+.extern func_0202c0c8
