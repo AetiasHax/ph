@@ -33,6 +33,7 @@
 typedef struct {
     uint8_t *pos;
     uint32_t totalBytesSaved;
+    uint8_t flags;
 } BlockInfo;
 
 bool FindSubsequence(const uint8_t *buf, const uint8_t *start, const uint8_t *end, size_t *pLen, size_t *pDist) {
@@ -92,13 +93,15 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
             flagCount = 0;
             *pFlags = flags;
             bytesSaved -= 1;
-            flags = 0;
             write -= 1;
             pFlags = write;
 
             blockInfos[numBlocks].pos = write;
             blockInfos[numBlocks].totalBytesSaved = bytesSaved;
+            blockInfos[numBlocks].flags = flags;
             numBlocks++;
+
+            flags = 0;
         }
     }
     if (flagCount != 0) {
@@ -114,8 +117,28 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
     size_t numIdentical = 0;
     for (int32_t i = 0; i < numBlocks - 1; ++i) {
         if (blockInfos[i].totalBytesSaved == bytesSaved) {
+            size_t flagBytesSaved = 0;
+            for (; i >= 0; --i, ++flagBytesSaved) {
+                // Save more bytes by ignoring blocks that have no length-distance pairs in them
+                if (blockInfos[i].flags != 0) break;
+            }
             numIdentical = blockInfos[i].pos - write;
             write += 1;
+
+            // See if it's possible to remove some chunks based on the number of flag bytes saved
+            flags = blockInfos[i].flags;
+            for (int32_t j = 0; j < 8 && flagBytesSaved > 0; ++j) {
+                if ((flags & 0x80) != 0) {
+                    if (flagBytesSaved < 2) break;
+                    numIdentical += 2;
+                    flagBytesSaved -= 2;
+                } else {
+                    numIdentical += 1;
+                    flagBytesSaved -= 1;
+                }
+                flags >>= 1;
+            }
+
             memcpy(write, src, numIdentical);
             while (write[numIdentical] == read[numIdentical]) {
                 numIdentical += 1;
@@ -125,7 +148,7 @@ bool Compress(const uint8_t *src, uint8_t *dst, size_t size, uint8_t **pResult, 
     }
     free(blockInfos);
     *pResult = write;
-    *pLen = size - (write - dst);
+    *pLen = writeEnd - write;
     *pNumIdentical = numIdentical;
     return true;
 }
