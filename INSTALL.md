@@ -30,10 +30,11 @@ below:
 | Version | File name         | SHA1                                       | 
 | ------- | ----------------- | ------------------------------------------ |
 | EUR     | `baserom_eur.nds` | `02be55db55cf254bd064d2b3eb368b92a5b4156d` |
+| USA     | `baserom_usa.nds` | `4c8f52dd719918bbcd46e73a8bae8628139c1b85` |
 
-Run `make extract` to extract from the base ROM. You only need to do this once.
+Run `make extract` to extract from all the base ROMs you've provided. You only need to do this once.
 
-Once you have extracted the base ROM, simply run `make` to rebuild it.
+Once you have extracted the base ROM, simply run `make eur` or `make usa` to rebuild it.
 
 ### Matching the base ROM
 
