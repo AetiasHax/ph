@@ -11611,7 +11611,7 @@ _021853bc: .word func_ov32_0218468c
 _021853c0: .word func_0203e7b4
 _021853c4: .word data_ov32_021862f0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov32_021853c8
 data_ov32_021853c8: ; 0x021853c8
     .word func_ov32_02184d3c

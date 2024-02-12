@@ -14554,7 +14554,7 @@ _02179818: .word func_ov29_02179208
 _0217981c: .word func_ov29_02179214
 _02179820: .word data_ov29_0217bd50
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov29_02179824
 data_ov29_02179824: ; 0x02179824
     .word func_ov29_021794b0

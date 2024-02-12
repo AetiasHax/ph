@@ -10879,7 +10879,7 @@ _021762c8: .word func_ov19_021756c4
 _021762cc: .word func_0203e7b4
 _021762d0: .word data_ov19_02177658
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov19_021762d4
 data_ov19_021762d4: ; 0x021762d4
     .word func_ov19_02175f04 ; func_ov26_02175f04

@@ -20773,7 +20773,7 @@ _0216b958: .word func_ov17_0216a818
 _0216b95c: .word func_0203ebc8
 _0216b960: .word data_ov17_0216d0f8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov17_0216b964
 data_ov17_0216b964: ; 0x0216b964
     .word func_ov17_0216b2c4

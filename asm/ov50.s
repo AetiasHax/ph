@@ -3997,7 +3997,7 @@ _0219899c: .word data_ov50_02198ad8
 _021989a0: .word func_ov00_020cceec
 _021989a4: .word data_ov50_02198ce0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov50_021989a8
 data_ov50_021989a8: ; 0x021989a8
     .word func_ov50_0219882c

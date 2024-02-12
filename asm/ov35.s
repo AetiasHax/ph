@@ -11988,7 +11988,7 @@ _021858f4: .word func_ov35_02184810
 _021858f8: .word func_0203e7b4
 _021858fc: .word data_ov35_02186fec
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov35_02185900
 data_ov35_02185900: ; 0x02185900
     .word func_ov35_02185668

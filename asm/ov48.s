@@ -6047,7 +6047,7 @@ _02194ac8: .word func_ov48_021940ac
 _02194acc: .word func_0203e7b4
 _02194ad0: .word data_ov48_021954d8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov48_02194ad4
 data_ov48_02194ad4: ; 0x02194ad4
     .word func_ov48_021946c0

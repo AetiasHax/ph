@@ -6637,7 +6637,7 @@ _0218e49c: .word func_ov45_0218c4c4
 _0218e4a0: .word func_0203e7b4
 _0218e4a4: .word data_ov45_0218edc8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov45_0218e4a8
 data_ov45_0218e4a8: ; 0x0218e4a8
     .word func_ov45_0218e3e8

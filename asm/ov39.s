@@ -13285,7 +13285,7 @@ _021869b0: .word data_ov39_02186cc0
 _021869b4: .word data_ov39_02186cc0
 _021869b8: .word data_ov39_02186a28
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov39_021869bc
 data_ov39_021869bc: ; 0x021869bc
     .word func_ov39_02186968

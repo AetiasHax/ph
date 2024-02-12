@@ -3112,7 +3112,7 @@ func_ov00_020e1e74: ; 0x020e1e74
 _020e1e80: .word func_ov08_021136ec
 _020e1e84: .word data_ov00_020eed2c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov00_020e1e88
 data_ov00_020e1e88: ; 0x020e1e88
     .word func_ov00_020df338

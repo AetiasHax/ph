@@ -4648,7 +4648,7 @@ _02170f58: .word func_ov21_02170974
 _02170f5c: .word func_0203ebc8
 _02170f60: .word data_ov21_02171ca8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov21_02170f64
 data_ov21_02170f64: ; 0x02170f64
     .word func_ov21_02170cec ; func_ov28_02170cec

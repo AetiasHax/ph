@@ -3612,7 +3612,7 @@ _02198468: .word func_ov49_02197cf4
 _0219846c: .word func_0203e7b4
 _02198470: .word data_ov49_0219896c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov49_02198474
 data_ov49_02198474: ; 0x02198474
     .word func_ov49_021982c8

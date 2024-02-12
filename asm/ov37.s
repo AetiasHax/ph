@@ -15573,7 +15573,7 @@ _021889a8: .word data_ov37_02188f00
 _021889ac: .word func_ov00_020cceec
 _021889b0: .word data_ov37_0218922c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov37_021889b4
 data_ov37_021889b4: ; 0x021889b4
     .word func_ov37_02188690

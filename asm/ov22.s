@@ -14797,7 +14797,7 @@ _02178fec: .word func_ov22_02178308
 _02178ff0: .word data_ov22_0217a620
 	.global data_ov22_02178ff4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 data_ov22_02178ff4: ; 0x02178ff4
     .word func_ov22_021789c8
 	.global data_ov22_02178ff8

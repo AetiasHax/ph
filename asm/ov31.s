@@ -8561,7 +8561,7 @@ _02182074: .word func_ov31_02181448
 _02182078: .word func_0203e7b4
 _0218207c: .word data_ov31_021841d4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov31_02182080
 data_ov31_02182080: ; 0x02182080
     .word func_ov31_02181b6c

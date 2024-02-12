@@ -14163,7 +14163,7 @@ _02178888: .word func_ov28_02177900
 _0217888c: .word func_0203e7b4
 _02178890: .word data_ov28_02179cb8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov28_02178894
 data_ov28_02178894: ; 0x02178894
     .word func_ov28_02178504

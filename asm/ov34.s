@@ -11318,7 +11318,7 @@ _02185a58: .word data_ov34_021863a0
 _02185a5c: .word data_02057200
 _02185a60: .word data_ov34_02186070
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov34_02185a64
 data_ov34_02185a64: ; 0x02185a64
     .word func_ov34_02185818

@@ -2222,7 +2222,7 @@ _0219aa04: .word data_ov57_0219ab1c
 _0219aa08: .word func_ov57_0219a980
 _0219aa0c: .word data_ov57_0219ab1c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov57_0219aa10
 data_ov57_0219aa10: ; 0x0219aa10
     .word func_ov57_0219a9a0

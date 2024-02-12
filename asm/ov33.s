@@ -5076,7 +5076,7 @@ _0217fe88: .word func_ov33_0217f658
 _0217fe8c: .word func_0203e7b4
 _0217fe90: .word data_ov33_02180618
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov33_0217fe94
 data_ov33_0217fe94: ; 0x0217fe94
     .word func_ov33_0217fb90

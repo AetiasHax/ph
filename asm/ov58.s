@@ -3368,7 +3368,7 @@ _0219ae70: .word data_ov58_0219aeec
 _0219ae74: .word func_ov58_0219a440
 _0219ae78: .word data_ov58_0219b0e4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov58_0219ae7c
 data_ov58_0219ae7c: ; 0x0219ae7c
     .word func_ov58_0219ad80

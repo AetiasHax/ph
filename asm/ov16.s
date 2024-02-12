@@ -915,7 +915,7 @@ data_ov16_0212014c: ; 0x0212014c
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov16_02120160

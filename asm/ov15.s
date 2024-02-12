@@ -127438,7 +127438,7 @@ func_ov15_021892b0: ; 0x021892b0
 	arm_func_end func_ov15_021892b0
 _021892cc: .word data_ov15_0218ebac
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov15_021892d0
 data_ov15_021892d0: ; 0x021892d0
     .word func_ov15_02187384

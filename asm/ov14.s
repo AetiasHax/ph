@@ -69191,7 +69191,7 @@ _02155840: .word func_ov14_02152880 - 1
 _02155844: .word func_0203ebc8
 _02155848: .word data_ov14_0215b488
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov14_0215584c
 data_ov14_0215584c: ; 0x0215584c
     .word func_ov14_021541ec

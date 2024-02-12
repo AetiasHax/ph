@@ -12952,7 +12952,7 @@ _02186c28: .word func_ov36_02185ffc
 _02186c2c: .word func_0203e7b4
 _02186c30: .word data_ov36_02186fc0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov36_02186c34
 data_ov36_02186c34: ; 0x02186c34
     .word func_ov36_02186bb4

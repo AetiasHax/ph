@@ -938,7 +938,7 @@ _02199948: .word data_ov54_02199a2c
 _0219994c: .word func_ov00_020a95a4
 _02199950: .word data_ov54_02199a20
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov54_02199954
 data_ov54_02199954: ; 0x02199954
     .word func_ov54_02199924

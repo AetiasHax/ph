@@ -14862,7 +14862,7 @@ _02188c54: .word func_ov38_021884dc
 _02188c58: .word func_0203e7b4
 _02188c5c: .word data_ov38_02189464
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov38_02188c60
 data_ov38_02188c60: ; 0x02188c60
     .word func_ov38_02188ae4

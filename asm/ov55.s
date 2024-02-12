@@ -856,7 +856,7 @@ _02199810: .word data_ov55_021998ac
 _02199814: .word func_ov00_020a95a4
 _02199818: .word data_ov55_021998a0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov55_0219981c
 data_ov55_0219981c: ; 0x0219981c
     .word func_ov55_021997ec

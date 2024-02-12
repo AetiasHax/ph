@@ -43075,7 +43075,7 @@ _020fffc0: .word func_ov03_020fbcc8 - 1
 _020fffc4: .word func_0203ebc8
 _020fffc8: .word data_ov03_02100ab8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov03_020fffcc
 data_ov03_020fffcc: ; 0x020fffcc
     .word func_ov03_020ffe28

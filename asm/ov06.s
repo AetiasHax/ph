@@ -5033,7 +5033,7 @@ data_ov06_0210398c: ; 0x0210398c
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov06_021039c0

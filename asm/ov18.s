@@ -20864,7 +20864,7 @@ _0216c040: .word func_ov18_0216a0e0
 _0216c044: .word func_0203e7b4
 _0216c048: .word data_ov18_0216d678
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov18_0216c04c
 data_ov18_0216c04c: ; 0x0216c04c
     .word func_ov18_0216b780

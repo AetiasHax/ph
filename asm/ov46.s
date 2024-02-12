@@ -5385,7 +5385,7 @@ _02194630: .word data_ov46_02194c68
 _02194634: .word data_02057200
 _02194638: .word data_ov46_02194a6c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov46_0219463c
 data_ov46_0219463c: ; 0x0219463c
     .word func_ov46_021944ac

@@ -16329,7 +16329,7 @@ _02188a20: .word func_ov30_021847b0
 _02188a24: .word func_0203e7b4
 _02188a28: .word data_ov30_02189530
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov30_02188a2c
 data_ov30_02188a2c: ; 0x02188a2c
     .word func_ov30_02188824 ; data_ov40_02188824

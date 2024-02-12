@@ -19213,7 +19213,7 @@ data_ov10_0211ea04: ; 0x0211ea04
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov10_0211ea20

@@ -15162,7 +15162,7 @@ data_ov01_020f88f2: ; 0x020f88f2
 
 	.section .init, 4, 1, 4
 	
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov01_020f8900
