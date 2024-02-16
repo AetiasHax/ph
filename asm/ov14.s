@@ -26658,7 +26658,7 @@ _021351c4:
 	mov r1, r0
 	ldr r2, [r5, #0x158]
 	mov r0, r6
-	bl _ZN11ItemManager8GiveAmmoEjj
+	bl _ZN11ItemManager8GiveAmmoEjt
 _021351ec:
 	ldr r0, _02135360 ; =data_ov00_020eec9c
 	mov r1, #0x100

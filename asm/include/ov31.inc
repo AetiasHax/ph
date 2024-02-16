@@ -285,15 +285,15 @@
 .extern func_ov00_0209779c
 .extern func_ov00_0209779c
 .extern data_027e0f74
-.extern _ZN11ItemManager8GiveAmmoEjj
+.extern _ZN11ItemManager8GiveAmmoEjt
 .extern gItemManager
 .extern func_ov00_0209779c
 .extern data_027e0f74
-.extern _ZN11ItemManager8GiveAmmoEjj
+.extern _ZN11ItemManager8GiveAmmoEjt
 .extern gItemManager
 .extern func_ov00_0209779c
 .extern data_027e0f74
-.extern _ZN11ItemManager8GiveAmmoEjj
+.extern _ZN11ItemManager8GiveAmmoEjt
 .extern gItemManager
 .extern func_ov00_0209779c
 .extern data_027e0f74
@@ -1481,3 +1481,4 @@
 .extern func_ov14_021448f4
 .extern func_ov14_021458cc
 .extern func_ov14_02145900
+.extern _ZN11ItemManager8GiveAmmoEjt

@@ -3,32 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager8GiveAmmoEjj
-	arm_func_start _ZN11ItemManager8GiveAmmoEjj
-_ZN11ItemManager8GiveAmmoEjj: ; 0x020ad73c
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r5, r0
-	mov r4, r1
-	ldr lr, [r5, #0xb0]
-	mov ip, r4, lsl #0x1
-	ldrh r3, [lr, ip]
-	add r2, r3, r2
-	strh r2, [lr, ip]
-	blx _ZNK11ItemManager10GetMaxAmmoEj
-	ldr r2, [r5, #0xb0]
-	mov r1, r4, lsl #0x1
-	ldrh r1, [r2, r1]
-	cmp r1, r0
-	ldmlsia sp!, {r3, r4, r5, pc}
-	mov r0, r5
-	mov r1, r4
-	blx _ZNK11ItemManager10GetMaxAmmoEj
-	ldr r2, [r5, #0xb0]
-	mov r1, r4, lsl #0x1
-	strh r0, [r2, r1]
-	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN11ItemManager8GiveAmmoEjj
-
 	.global _ZN11ItemManager18func_ov00_020ad790Ej
 	arm_func_start _ZN11ItemManager18func_ov00_020ad790Ej
 _ZN11ItemManager18func_ov00_020ad790Ej: ; 0x020ad790

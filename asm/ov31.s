@@ -5339,7 +5339,7 @@ func_ov31_0217fe00: ; 0x0217fe00
 	ldr r0, [r1]
 	mov r1, #5
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjj
+	bl _ZN11ItemManager8GiveAmmoEjt
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5373,7 +5373,7 @@ func_ov31_0217fe58: ; 0x0217fe58
 	ldr r0, [r1]
 	mov r1, #4
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjj
+	bl _ZN11ItemManager8GiveAmmoEjt
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5407,7 +5407,7 @@ func_ov31_0217feb0: ; 0x0217feb0
 	ldr r0, [r1]
 	mov r1, #7
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjj
+	bl _ZN11ItemManager8GiveAmmoEjt
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}

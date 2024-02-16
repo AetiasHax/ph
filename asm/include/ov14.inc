@@ -2016,7 +2016,7 @@
 .extern func_ov00_020c2d54
 .extern func_ov00_020c22b8
 .extern func_ov00_020cfbf0
-.extern _ZN11ItemManager8GiveAmmoEjj
+.extern _ZN11ItemManager8GiveAmmoEjt
 .extern func_ov00_020d7ad4
 .extern func_ov00_020c2c0c
 .extern func_ov00_020c2d54
@@ -7950,3 +7950,4 @@
 .extern func_ov00_0208ba50
 .extern func_ov00_0208c38c
 .extern func_ov00_0208c39c
+.extern _ZN11ItemManager8GiveAmmoEjt

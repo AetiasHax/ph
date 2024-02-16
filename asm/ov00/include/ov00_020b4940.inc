@@ -729,7 +729,7 @@
 .extern data_02050f54
 .extern _ZNK11ItemManager7GetAmmoEj
 .extern gItemManager
-.extern _ZN11ItemManager8GiveAmmoEjj
+.extern _ZN11ItemManager8GiveAmmoEjt
 .extern gItemManager
 .extern func_ov00_02093a1c
 .extern data_027e0f6c
@@ -1071,3 +1071,4 @@
 .extern func_ov04_0210bc28
 .extern func_ov04_0210bc94
 .extern func_ov04_021079dc
+.extern _ZN11ItemManager8GiveAmmoEjt

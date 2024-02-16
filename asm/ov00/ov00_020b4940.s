@@ -12942,7 +12942,7 @@ func_ov00_020beb5c: ; 0x020beb5c
 	mov r1, r0
 	mov r0, r4
 	mov r2, r5
-	bl _ZN11ItemManager8GiveAmmoEjj
+	bl _ZN11ItemManager8GiveAmmoEjt
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020beb5c

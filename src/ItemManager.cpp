@@ -267,3 +267,9 @@ u16 ItemManager::GetAmmo(ItemFlag equipId) const {
     return (*this->mAmmo)[equipId];
 }
 #pragma interworking off
+
+void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
+    (*this->mAmmo)[equipId] += amount;
+    if ((*this->mAmmo)[equipId] <= this->GetMaxAmmo(equipId)) return;
+    (*this->mAmmo)[equipId] = this->GetMaxAmmo(equipId);
+}
