@@ -1,6 +1,8 @@
 #ifndef PH_GLOBAL_H
 #define PH_GLOBAL_H
 
+#define NULL 0
+
 #define GET_FLAG(arr, pos) (((1 << ((pos) & 0x1f)) & (arr)[pos >> 5]) != 0)
 
 #ifdef NONMATCHING

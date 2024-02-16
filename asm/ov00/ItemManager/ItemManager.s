@@ -3,17 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager12GetEquipItemEj
-	arm_func_start _ZN11ItemManager12GetEquipItemEj
-_ZN11ItemManager12GetEquipItemEj: ; 0x020ad714
-	mvn r2, #0
-	cmp r1, r2
-	moveq r0, #0
-	ldrne r0, [r0, #0xac]
-	ldrne r0, [r0, r1, lsl #2]
-	bx lr
-	arm_func_end _ZN11ItemManager12GetEquipItemEj
-
 	.global _ZNK11ItemManager7GetAmmoEj
 	arm_func_start _ZNK11ItemManager7GetAmmoEj
 _ZNK11ItemManager7GetAmmoEj: ; 0x020ad72c

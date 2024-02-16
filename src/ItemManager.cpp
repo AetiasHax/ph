@@ -253,3 +253,13 @@ bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
 void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
     (*this->mEquipItems)[equipId]->vfunc_2c();
 }
+
+#pragma interworking on
+EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
+    if (equipId == ItemFlag_None) {
+        return NULL;
+    } else {
+        return (*this->mEquipItems)[equipId];
+    }
+}
+#pragma interworking off

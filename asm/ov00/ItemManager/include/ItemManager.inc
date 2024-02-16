@@ -81,3 +81,4 @@
 .extern data_ov00_020eec68
 .extern _ZN11ItemManager14Sword_vfunc_38Ej
 .extern _ZN11ItemManager15Shield_vfunc_38Ej
+.extern _ZN11ItemManager12GetEquipItemEj
