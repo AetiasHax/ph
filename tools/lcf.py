@@ -27,7 +27,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_02078e00.s',
     'asm/ov00/ov00_02079d28.s',
     'asm/ov00/ov00_0207cc84.s',
-    'asm/ov00/ov00_02084eac.s',
+    'asm/ov00/ov00_02084ebc.s',
     'asm/ov00/ov00_0208b220.s',
     'asm/ov00/ov00_02096160.s',
     'asm/ov00/ov00_0209afc4.s',
