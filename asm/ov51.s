@@ -3707,7 +3707,7 @@ _021984a4: .word func_ov51_021977d0
 _021984a8: .word func_0203e7b4
 _021984ac: .word data_ov51_02198b00
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov51_021984b0
 data_ov51_021984b0: ; 0x021984b0
     .word func_ov51_021982a0

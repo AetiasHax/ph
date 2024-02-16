@@ -515,7 +515,7 @@ _02199370: .word data_ov56_02199400
 _02199374: .word data_ov56_02199474
 _02199378: .word data_ov56_02199468
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov56_0219937c
 data_ov56_0219937c: ; 0x0219937c
     .word func_ov56_02199328

@@ -12054,7 +12054,7 @@ data_ov60_021476e8: ; 0x021476e8
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov60_02147700

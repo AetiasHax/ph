@@ -32,10 +32,10 @@ public:
     /* 30 */ virtual void vfunc_30() = 0;
     /* 34 */ virtual void vfunc_34(unk16 *param1); // func_ov00_020be96c
     /* 38 */ virtual void vfunc_38(unk32 param1) = 0;
-    /* 3c */ virtual bool vfunc_3c(void *param1, unk32 param2, unk32 param3) const; // func_ov00_020beb90
+    /* 3c */ virtual bool vfunc_3c(Vec4p *param1) const; // func_ov00_020beb90
     /* 40 */ virtual unk32 vfunc_40() const; // func_ov00_020be970
     /* 44 */ virtual unk32 vfunc_44(unk32 param1) const; // func_ov00_020be978
     /* 48 */ virtual unk32 vfunc_48(unk32 param1) const; // func_ov00_020be980
-    /* 4c */ virtual unk32 vfunc_4c() const; // func_ov00_020be988
+    /* 4c */ virtual s32 vfunc_4c() const; // func_ov00_020be988
     /* 50 */
 };

@@ -4224,7 +4224,7 @@ data_ov13_021160d4: ; 0x021160d4
 	.ascii "/Menu/Bg/pslnkDBg.bin"
 	.byte 0x00, 0x00, 0x00
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov13_021160ec
 data_ov13_021160ec: ; 0x021160ec
     .word func_ov13_02114b04

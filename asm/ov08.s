@@ -1194,7 +1194,7 @@ _02113ac0:
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov08_02113b00

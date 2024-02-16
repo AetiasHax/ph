@@ -583,7 +583,7 @@
 .extern func_ov00_020c5d74
 .extern func_ov00_020c2974
 .extern func_0202b154
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020cec60
 .extern data_027e0764
 .extern data_02050f54

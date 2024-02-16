@@ -64949,7 +64949,7 @@ data_ov11_0212ecff: ; 0x0212ecff
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov11_0212ed20

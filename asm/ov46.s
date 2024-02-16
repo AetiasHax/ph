@@ -4049,7 +4049,7 @@ func_ov46_02193574: ; 0x02193574
 	ldr r1, _02193b14 ; =0x0000019a
 	add r0, r4, #0x68
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [r4, #0x4c]
 	mov r0, #0x52
 	sub r1, r1, #0x800
@@ -5385,7 +5385,7 @@ _02194630: .word data_ov46_02194c68
 _02194634: .word data_02057200
 _02194638: .word data_ov46_02194a6c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov46_0219463c
 data_ov46_0219463c: ; 0x0219463c
     .word func_ov46_021944ac

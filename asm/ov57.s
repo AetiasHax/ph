@@ -925,7 +925,7 @@ _021998a4:
 	ldr r2, _021998ec ; =0x00000266
 	add r0, r4, #0x74
 	mov r1, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -2222,7 +2222,7 @@ _0219aa04: .word data_ov57_0219ab1c
 _0219aa08: .word func_ov57_0219a980
 _0219aa0c: .word data_ov57_0219ab1c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov57_0219aa10
 data_ov57_0219aa10: ; 0x0219aa10
     .word func_ov57_0219a9a0

@@ -3056,7 +3056,7 @@ func_ov20_021700b0: ; 0x021700b0
 	str r1, [sp]
 	mov r1, #0x1000
 	mov r2, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp]
 	str r0, [r4, #0x100]
 	add sp, sp, #4
@@ -13332,7 +13332,7 @@ _0217828c: .word func_ov20_021775d0
 _02178290: .word func_0203e7b4
 _02178294: .word data_ov20_0217970c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov20_02178298
 data_ov20_02178298: ; 0x02178298
     .word func_ov20_02177af4

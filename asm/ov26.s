@@ -14507,11 +14507,11 @@ _02178818:
 	ldr r1, [r5, #0x4c]
 	ldr r2, _02178984 ; =0x0000019a
 	add r0, r5, #0x48
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r2, [r5, #0x48]
 	ldr r1, _02178988 ; =0xffffeccd
 	add r0, r5, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	beq _02178924
 	ldr r0, [r5, #0x3c]
@@ -16828,7 +16828,7 @@ _0217a014: .word func_ov26_02178fb4
 _0217a018: .word func_0203ebc8
 _0217a01c: .word data_ov26_0217b5a8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov26_0217a020
 data_ov26_0217a020: ; 0x0217a020
     .word func_ov26_021797dc

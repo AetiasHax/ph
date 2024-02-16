@@ -20720,7 +20720,7 @@ func_ov09_0211e64c: ; 0x0211e64c
 	arm_func_end func_ov09_0211e64c
 _0211e65c: .word data_027e1094
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov09_0211e660
 data_ov09_0211e660: ; 0x0211e660
     .word func_ov09_0211e4a4

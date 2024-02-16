@@ -2552,7 +2552,7 @@ data_ov59_0219b120: ; 0x0219b120
 
 	.section .init, 4, 1, 4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 
 	.data
 	.global data_ov59_0219b140

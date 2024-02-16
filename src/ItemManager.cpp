@@ -237,3 +237,15 @@ void ItemManager::EquipItem_vfunc_38(unk32 param1) {
 
     (*this->mEquipItems)[equip]->vfunc_38(param1);
 }
+
+bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
+    Vec4p result;
+    if ((*this->mEquipItems)[equipId]->vfunc_3c(&result)) {
+        s32 step = (*this->mEquipItems)[equipId]->vfunc_4c();
+        if (step > 0) {
+            Approach_thunk(&result.y, param1->y, step);
+        }
+        return func_01ffec34(param1, &result);
+    }
+    return false;
+}

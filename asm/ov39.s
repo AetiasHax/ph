@@ -2061,7 +2061,7 @@ _0217d914:
 	ldr r2, _0217dd08 ; =0x0000011f
 	add r0, r5, #0x1e4
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 _0217d950:
 	mov r0, r5
 	bl func_ov39_0217e82c
@@ -5711,7 +5711,7 @@ _02180c00:
 	ldr r2, _02180f7c ; =0x0000019a
 	add r0, r5, #0x1c0
 	mov r1, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #0x280]
 	add r1, sp, #0x38
 	bl func_ov39_02185208
@@ -5750,7 +5750,7 @@ _02180c94:
 	ldr r2, _02180f7c ; =0x0000019a
 	add r0, r5, #0x1c0
 	mov r1, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #0x280]
 	add r1, sp, #0x38
 	bl func_ov39_02185208
@@ -5769,7 +5769,7 @@ _02180cdc:
 	ldr r2, _02180f7c ; =0x0000019a
 	add r0, r5, #0x1c0
 	mov r1, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #0x280]
 	add r1, sp, #0x38
 	bl func_ov39_02185208
@@ -7856,7 +7856,7 @@ _02182984:
 	ldr r2, _02182f20 ; =0x0000011f
 	add r0, r5, #0x1e4
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r5, #0x5e
 	add r0, r0, #0x100
 	mov r1, #0
@@ -7865,7 +7865,7 @@ _02182984:
 	add r0, r5, #0x1a8
 	mov r1, #0
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r5, #0x100
 	ldrh r0, [r0, #0x60]
 	ldr r2, _02182f24 ; =data_02050f54
@@ -8005,7 +8005,7 @@ _02182bc0:
 	ldr r1, _02182f44 ; =0x00001666
 	ldr r2, _02182f20 ; =0x0000011f
 	add r0, r5, #0x1e4
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r5, #0x5e
 	ldr r1, _02182f48 ; =0x0000251c
 	add r0, r0, #0x100
@@ -8018,7 +8018,7 @@ _02182bc0:
 	add r0, r5, #0x1a8
 	mov r1, #0x400
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #0x16c]
 	cmp r0, #0
 	mov r0, r5
@@ -8292,7 +8292,7 @@ func_ov39_02182ffc: ; 0x02182ffc
 	add r0, r4, #0x1a8
 	mov r1, #0
 	mov r2, #0x7b
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r4, #0x100
 	ldrh r0, [r0, #0x60]
 	ldr r2, _021830d4 ; =data_02050f54
@@ -13285,7 +13285,7 @@ _021869b0: .word data_ov39_02186cc0
 _021869b4: .word data_ov39_02186cc0
 _021869b8: .word data_ov39_02186a28
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov39_021869bc
 data_ov39_021869bc: ; 0x021869bc
     .word func_ov39_02186968

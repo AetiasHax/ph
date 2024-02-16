@@ -1507,7 +1507,7 @@ _0219a064: .word data_ov53_0219a5f0
 _0219a068: .word data_ov53_0219a670
 _0219a06c: .word data_ov53_0219a5e4
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov53_0219a070
 data_ov53_0219a070: ; 0x0219a070
     .word func_ov53_02199fc4

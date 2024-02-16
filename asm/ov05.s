@@ -20971,7 +20971,7 @@ func_ov05_02112420: ; 0x02112420
 _0211245c: .word data_02057200
 _02112460: .word data_ov05_02112954
 
-.section .sinit, 4, 1, 4
+.section .ctor, 4, 1, 4
 	.global data_ov05_02112464
 data_ov05_02112464: ; 0x02112464
     .word func_ov05_021123bc

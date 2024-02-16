@@ -16607,7 +16607,7 @@ _021885f8: .word func_ov40_02187380
 _021885fc: .word func_0203e7b4
 _02188600: .word data_ov40_0219a180
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov40_02188604
 data_ov40_02188604: ; 0x02188604
     .word func_ov40_02188360

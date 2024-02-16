@@ -30602,7 +30602,7 @@ func_ov04_0210fd7c: ; 0x0210fd7c
 _0210fd8c: .word data_ov04_02110cb4
 	.global data_ov04_0210fd90
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 data_ov04_0210fd90: ; 0x0210fd90
     .word func_ov04_0210fd58
 	.global data_ov04_0210fd94

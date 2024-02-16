@@ -4818,7 +4818,7 @@ _0218d5b4: .word func_ov43_0218b018
 _0218d5b8: .word func_0203e7b4
 _0218d5bc: .word data_ov43_0218db4c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov43_0218d5c0
 data_ov43_0218d5c0: ; 0x0218d5c0
     .word func_ov43_0218d414

@@ -7405,7 +7405,7 @@ _02125b20:
 	mov r2, r1, lsr #0xc
 	add r1, r5, #0x1000
 	orr r2, r2, r3, lsl #20
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r4, #0x200
 	ldrh r1, [r0, #0x88]
 	add r1, r1, #0x384
@@ -11046,7 +11046,7 @@ _021287f0:
 	mov r1, r3
 	add r0, r6, #0x84
 	mov r2, #0xa000
-	bl func_0202b0f4
+	bl Approach_thunk
 _02128800:
 	ldr r1, [r6, #0x84]
 	ldr r0, _021288c4 ; =0x01194000
@@ -17344,7 +17344,7 @@ _0212dbf4:
 	ldr r1, _0212dd14 ; =0x00000171
 	add r0, r4, #0x24c
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _0212dd18 ; =data_02050f54
 	ldr lr, [r4, #0x24c]
@@ -17509,7 +17509,7 @@ _0212de68:
 	add r0, r4, #0x24c
 	mov r1, #0
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _0212e060 ; =data_02050f54
 	ldr r7, [r4, #0x24c]
@@ -18621,7 +18621,7 @@ func_ov15_0212ed78: ; 0x0212ed78
 _0212ee2c:
 	ldr r2, [r5]
 	add r0, sb, #0x24c
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _0212ee94
 _0212ee3c:
 	bl func_ov00_020c2938
@@ -18646,7 +18646,7 @@ _0212ee3c:
 _0212ee88:
 	ldr r2, [r5]
 	add r0, sb, #0x24c
-	bl func_0202b0f4
+	bl Approach_thunk
 _0212ee94:
 	add r0, sb, #0x100
 	ldrsh r1, [r0, #0xd4]
@@ -20307,7 +20307,7 @@ _021305c8:
 	bge _021305e4
 	add r0, r4, #0x4b0
 	mov r2, #2
-	bl func_0202b0f4
+	bl Approach_thunk
 _021305e4:
 	ldr r0, [r4, #0x4b8]
 	cmp r0, #0
@@ -20334,7 +20334,7 @@ _02130628:
 	add r0, r4, #0x4b0
 	mov r1, #0
 	mov r2, #4
-	bl func_0202b0f4
+	bl Approach_thunk
 _02130644:
 	ldrb r0, [r4, #0x1a9]
 	cmp r0, #0
@@ -21631,12 +21631,12 @@ _02131840:
 	bge _021318bc
 	ldr r1, _02131934 ; =0x00000171
 	add r0, r4, #0x4b0
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _021318c8
 _021318bc:
 	add r0, r4, #0x4b0
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 _021318c8:
 	mov r0, r4
 	bl func_ov15_02130c38
@@ -21713,12 +21713,12 @@ _021319b0:
 	bge _021319d8
 	ldr r1, _02131edc ; =0x00000171
 	add r0, r4, #0x4b0
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _021319e4
 _021319d8:
 	add r0, r4, #0x4b0
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 _021319e4:
 	mov r0, r4
 	bl func_ov15_02130c38
@@ -21801,7 +21801,7 @@ _02131b10:
 	ldr r1, _02131ef8 ; =0x000002e2
 	add r0, r4, #0x4b0
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _02131efc ; =data_02050f54
 	ldr lr, [r4, #0x4b0]
@@ -22020,7 +22020,7 @@ _02131e50:
 	ldr r1, _02131ef8 ; =0x000002e2
 	add r0, r4, #0x4b0
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _02131efc ; =data_02050f54
 	ldr lr, [r4, #0x4b0]
@@ -28728,7 +28728,7 @@ _02137980:
 	orr r3, r3, r2, lsl #20
 	strh r3, [r4, #0x94]
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r4, #0x4e8]
 	cmp r0, #0
 	bne _02137b00
@@ -28782,7 +28782,7 @@ _02137a44:
 	mov r2, r0
 	add r0, r4, #0x78
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r4, #0x4e8]
 	cmp r0, #0
 	bne _02137b00
@@ -28803,7 +28803,7 @@ _02137ad4:
 	mov r2, r0
 	add r0, r4, #0x78
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 _02137b00:
 	ldr r0, _02137cb4 ; =data_027e0fac
 	ldr r3, _02137cb8 ; =0x00000333
@@ -42553,7 +42553,7 @@ _021436a4:
 	add r0, r5, #0x2b8
 	mov r1, #0
 	mov r2, #0x10
-	bl func_0202b0f4
+	bl Approach_thunk
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -42623,7 +42623,7 @@ _02143744:
 	add r0, r7, #0x2b8
 	mov r1, #0
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [r4, #0x4c]
 	ldr r0, [r7, #0x298]
 	add r6, r1, #0x800
@@ -43130,7 +43130,7 @@ _02143eb0:
 	mov r1, #0
 	mov r2, #1
 	ldr r5, [r4, #0x32c]
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r6, [r4, #0x32c]
 	sub r0, r5, r6
 	bl func_02042f68
@@ -43864,7 +43864,7 @@ func_ov15_021448f8: ; 0x021448f8
 	add r0, r0, #0x400
 	sub r1, r1, #0x800
 	mov r2, #0x14
-	bl func_0202b0f4
+	bl Approach_thunk
 _02144928:
 	add r0, r4, #0xc4
 	add r1, r4, #0xb8
@@ -44201,7 +44201,7 @@ _02144e00:
 	mov r2, #1
 	add r3, r4, r3
 	str r3, [sb, #0x4bc]
-	bl func_0202b0f4
+	bl Approach_thunk
 _02144e40:
 	ldr r0, [sb, #0x298]
 	mov r3, #0
@@ -44704,7 +44704,7 @@ _02145524:
 	add r0, sb, #0x5c
 	ldr r1, _02145834 ; =0x00000e39
 	add r0, r0, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sb, #0x460]
 	ldr r0, _02145838 ; =0x000023b0
 	sub r0, r0, r1
@@ -44744,7 +44744,7 @@ _02145524:
 	add r0, sb, #0x68
 	ldr r1, _021457f0 ; =0x0000028f
 	add r0, r0, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _021457d8 ; =data_027e0fac
 	ldr r8, [sp, #0x3c]
 	ldrh r2, [r0]
@@ -44787,7 +44787,7 @@ _02145524:
 	mov r8, sl, lsr #0xc
 	orr r8, r8, r3, lsl #20
 	add r1, r1, r8
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp, #0x40]
 	ldr r0, [sb, #0x4bc]
 	add r8, r1, #0xe9
@@ -44799,7 +44799,7 @@ _02145524:
 	mov r2, r0
 	add r0, sb, #0xbc
 	add r0, r0, #0x400
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r8, [sp, #0x44]
 	ldr r0, [sb, #0x4c0]
 	sub r1, r8, #0x6a
@@ -44829,7 +44829,7 @@ _02145524:
 	mov r3, r3, lsr #0xc
 	orr r3, r3, r1, lsl #20
 	add r1, r7, r3
-	bl func_0202b0f4
+	bl Approach_thunk
 _02145798:
 	mov r1, #0
 	str r1, [sp]
@@ -44913,7 +44913,7 @@ _02145898:
 	strne r1, [r0, #0x6c]
 	ldr r0, _02145930 ; =data_ov15_0218efd8
 	mov r1, #0x80
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _021458ec
 _021458c8:
 	ldrb r0, [r5, #0x352]
@@ -44930,7 +44930,7 @@ _021458ec:
 	mov r1, r4
 	ldr r2, [r0, #0x6c]
 	add r0, r5, #0x2e0
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _02145934 ; =data_027e0f64
 	add r1, r5, #0x2dc
 	ldr r0, [r0]
@@ -45165,7 +45165,7 @@ _02145c24:
 	add r0, r5, #0x32c
 	mov r1, #0
 	mov r2, #1
-	bl func_0202b0f4
+	bl Approach_thunk
 _02145c40:
 	mov r0, #0
 	str r0, [r5, #0x330]
@@ -65160,7 +65160,7 @@ func_ov15_02156b04: ; 0x02156b04
 	ldr r1, [r6, #0x2e4]
 	add r0, r6, #0x2e0
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrb r0, [r6, #0x2f2]
 	cmp r0, #0
 	beq _02156be4
@@ -68322,7 +68322,7 @@ _0215976c:
 	ldr r2, [r5, #0x6c]
 	add r0, r5, #0x64
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #0x64]
 	cmp r0, #0
 	addne sp, sp, #0x38
@@ -70101,7 +70101,7 @@ _0215afb4:
 	ldr r1, [sp, #8]
 	add r0, r4, #0x1c4
 	orr r2, r2, r3, lsl #20
-	bl func_0202b0f4
+	bl Approach_thunk
 	tst r0, #1
 	movne sl, #1
 	moveq sl, #0
@@ -70124,7 +70124,7 @@ _0215b004:
 	adc r3, r2, #0
 	mov r2, fp, lsr #0xc
 	orr r2, r2, r3, lsl #20
-	bl func_0202b0f4
+	bl Approach_thunk
 	tst sl, r0
 	add r0, sb, #1
 	mov r0, r0, lsl #0x10
@@ -70144,7 +70144,7 @@ _0215b004:
 	ldr r1, [sp, #4]
 	add r0, r4, #0x1dc
 	orr r2, r2, r3, lsl #20
-	bl func_0202b0f4
+	bl Approach_thunk
 	tst sl, r0
 	movne sl, #1
 	moveq sl, #0
@@ -70168,7 +70168,7 @@ _0215b0b0:
 	adc r3, r2, #0
 	mov r2, fp, lsr #0xc
 	orr r2, r2, r3, lsl #20
-	bl func_0202b0f4
+	bl Approach_thunk
 	tst sl, r0
 	add r0, sb, #1
 	mov r0, r0, lsl #0x10
@@ -70262,7 +70262,7 @@ _0215b248:
 	mov r1, r5
 	ldr r2, [r0, #4]
 	add r0, r4, #0x228
-	bl func_0202b0f4
+	bl Approach_thunk
 	add sp, sp, #0x40
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
@@ -70678,7 +70678,7 @@ _0215b7e8:
 	ldr r1, [r7, r8, lsl #2]
 	mov r0, sb
 	mov r2, r6
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrb r1, [r4, #0x200]
 	add r8, r8, #1
 	add sb, sb, #4
@@ -74437,11 +74437,11 @@ _0215ea34:
 	ldr r2, _0215f7d0 ; =0x00000889
 	add r0, sb, #0x3c8
 	mov r1, #0x10000
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r2, _0215f7d4 ; =0x00000444
 	add r0, sb, #0x3c4
 	mov r1, #0x14000
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, sb, #0x300
 	ldrsh r1, [r0, #0xdc]
 	ldr r2, _0215f7d4 ; =0x00000444
@@ -74670,7 +74670,7 @@ _0215ed88:
 	ldrsh r2, [r0, #0xda]
 	add r0, sb, #0x3c8
 	mov r1, #0x1c000
-	bl func_0202b0f4
+	bl Approach_thunk
 _0215edd8:
 	ldr r0, [sb, #0x3c8]
 	cmp r0, #0x14000
@@ -74794,11 +74794,11 @@ _0215ef7c:
 	ldr r2, _0215f7d0 ; =0x00000889
 	add r0, sb, #0x3c8
 	mov r1, #0x10000
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r2, _0215f7d0 ; =0x00000889
 	add r0, sb, #0x3c4
 	mov r1, #0x14000
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, sb, #0x48
 	add r1, sb, #0x60
 	mov r2, r0
@@ -74935,7 +74935,7 @@ _0215f158:
 	str r1, [sb, #0x4c]
 	add r0, sb, #0x3cc
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	beq _0215f1f4
 	mov r1, #5
@@ -75058,7 +75058,7 @@ _0215f35c:
 	ldr r2, _0215f808 ; =0x0000019a
 	add r0, sb, #0x4c
 	rsb r1, r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #5
 	strneb r0, [sb, #0x3ea]
@@ -79597,7 +79597,7 @@ _02163238:
 	add r0, r4, #0x234
 	mov r1, #0xf6
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _02163c34 ; =data_02050f54
 	ldr r6, [r4, #0x234]
@@ -79655,7 +79655,7 @@ _02163338:
 	strne r0, [r4, #0x24c]
 	add r0, r4, #0x234
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r6, _02163c34 ; =data_02050f54
 	ldr r2, [r4, #0x234]
@@ -79739,7 +79739,7 @@ _0216346c:
 	add r0, r4, #0x234
 	mov r1, #0
 	mov r2, #0x1f
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r6, _02163c34 ; =data_02050f54
 	ldr r2, [r4, #0x234]
@@ -79935,7 +79935,7 @@ _02163774:
 	add r0, r4, #0x234
 	mov r1, #0
 	mov r2, #0x14
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r1, _02163c34 ; =data_02050f54
 	ldr r3, [r4, #0x234]
@@ -80080,7 +80080,7 @@ _02163960:
 	add r0, r4, #0x234
 	mov r1, #0
 	mov r2, #0x1f
-	bl func_0202b0f4
+	bl Approach_thunk
 	bl func_ov15_0215cf38
 	cmp r0, #0
 	bne _02163b1c
@@ -80100,7 +80100,7 @@ _021639f0:
 	add r0, r4, #0x234
 	mov r1, #0
 	mov r2, #0x1f
-	bl func_0202b0f4
+	bl Approach_thunk
 	mov r0, #0x10000
 	ldr r1, [r4, #0x38c]
 	rsb r0, r0, #0
@@ -80164,7 +80164,7 @@ _02163a8c:
 	add r0, r4, #0x234
 	mov r1, #0x1ec
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	mov r0, r4
 	bl func_ov15_02163c88
 _02163b1c:
@@ -89038,7 +89038,7 @@ _0216b2fc:
 	ldr r1, _0216b34c ; =0x0000199a
 	add r0, r4, #0x4c
 	mov r2, #0x7b
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	ldr r0, [r4, #0x130]
@@ -89049,7 +89049,7 @@ _0216b324:
 	ldr r1, _0216b350 ; =0x00000333
 	add r0, r4, #0x4c
 	mov r2, #0x7b
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	ldr r0, [r4, #0x130]
@@ -91618,7 +91618,7 @@ _0216d64c:
 	add r0, r4, #0x17c
 	mov r1, #0
 	mov r2, #0x88
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x188]
@@ -95681,7 +95681,7 @@ _02170e3c:
 	add r0, r4, #0x4c
 	mov r1, #0x2000
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _02170fec ; =data_027e0f64
 	add r1, sp, #0xac
 	ldr r0, [r0]
@@ -95726,7 +95726,7 @@ _02170eec:
 	add r0, r4, #0x4c
 	mov r1, #0x2000
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _02170fec ; =data_027e0f64
 	add r1, sp, #0x44
 	ldr r0, [r0]
@@ -96324,7 +96324,7 @@ _02171790:
 	mov r1, r0
 	ldr r2, _0217192c ; =0x00000222
 	add r0, sp, #0xe4
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _02171930 ; =data_027e0f94
 	mov r1, #0
 	ldr r3, [r0]
@@ -96386,7 +96386,7 @@ _0217187c:
 	mov r1, r0
 	ldr r2, _0217192c ; =0x00000222
 	add r0, sp, #0x7c
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _02171930 ; =data_027e0f94
 	mov r1, #0
 	ldr r3, [r0]
@@ -96912,7 +96912,7 @@ func_ov15_02172014: ; 0x02172014
 	add r0, r4, #0x4c
 	mov r1, #0x800
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _02172058
 _0217203c:
 	ldr r0, [r4, #0x4c]
@@ -96921,7 +96921,7 @@ _0217203c:
 	movgt r2, #0x52
 	movle r2, #0xcd
 	add r0, r4, #0x4c
-	bl func_0202b0f4
+	bl Approach_thunk
 _02172058:
 	ldr r0, [r4, #0x4c]
 	cmp r0, #0x2000
@@ -98223,7 +98223,7 @@ func_ov15_0217317c: ; 0x0217317c
 	bge _02173264
 	add r0, sp, #0x24
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp, #0x24]
 	str r0, [r6, #0x520]
 _02173264:
@@ -105885,7 +105885,7 @@ _02179bc4:
 	add r0, r3, #0x400
 	add r1, r1, r8
 	add r5, r6, #0x72
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrb r1, [r6, #0x472]
 	orrs r0, r1, r0
 	add r0, r4, r7
@@ -109260,7 +109260,7 @@ func_ov15_0217ca04: ; 0x0217ca04
 	add r0, r4, #0x2dc
 	mov r2, #0x29
 	str r3, [r4, #0x4c]
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r2, r4, #0x200
 	ldr r0, _0217cea4 ; =data_027e0fac
 	ldrh r3, [r2, #0xe6]
@@ -116773,7 +116773,7 @@ _02182ff0:
 	bge _021830c0
 	add r0, sp, #0x28
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp, #0x28]
 	str r0, [r6, #0x328]
 _021830c0:
@@ -127438,7 +127438,7 @@ func_ov15_021892b0: ; 0x021892b0
 	arm_func_end func_ov15_021892b0
 _021892cc: .word data_ov15_0218ebac
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov15_021892d0
 data_ov15_021892d0: ; 0x021892d0
     .word func_ov15_02187384

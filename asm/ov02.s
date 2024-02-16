@@ -9896,7 +9896,7 @@ _020f6998: .word data_ov02_020f716c
 _020f699c: .word func_ov02_020f66d0
 _020f69a0: .word data_ov02_020f7160
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov02_020f69a4
 data_ov02_020f69a4: ; 0x020f69a4
     .word func_ov02_020f6978

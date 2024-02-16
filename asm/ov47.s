@@ -5278,7 +5278,7 @@ _021944dc: .word func_ov47_02193a54
 _021944e0: .word func_0203e7b4
 _021944e4: .word data_ov47_02194a6c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov47_021944e8
 data_ov47_021944e8: ; 0x021944e8
     .word func_ov47_021942f0

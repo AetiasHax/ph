@@ -182,7 +182,7 @@
 .extern func_ov00_020d4478
 .extern _ZN9SysObjectdlEPv
 .extern func_ov00_020d4494
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020c3070
 .extern func_01ff9bc4
 .extern func_01ff9bc4
@@ -283,7 +283,7 @@
 .extern func_01ff98e0
 .extern func_01ff98e0
 .extern func_ov26_0217287c
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov26_021727b4
 .extern func_ov00_020ceacc
 .extern func_ov00_0207c31c
@@ -302,8 +302,8 @@
 .extern data_027e0fc4
 .extern func_ov00_020d4964
 .extern func_ov00_020c313c
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
 .extern data_02050f54
 .extern func_ov00_020c3070
 .extern func_01ff9bc4
@@ -885,8 +885,8 @@
 .extern func_ov00_02083368
 .extern func_ov00_020840c4
 .extern data_027e0e60
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
 .extern func_ov00_020843ec
 .extern func_ov00_020843ec
 .extern func_ov00_020843ec
@@ -1030,7 +1030,7 @@
 .extern func_ov00_020cec60
 .extern func_ov00_020c198c
 .extern func_ov00_02097bac
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_0207a1c8
 .extern data_027e0ffc
 .extern data_027e0f74

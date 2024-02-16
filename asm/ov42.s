@@ -3991,7 +3991,7 @@ _0218c7ec: .word 0x4d544752
 _0218c7f0: .word func_ov42_0218b944
 _0218c7f4: .word data_ov42_0218cd68
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov42_0218c7f8
 data_ov42_0218c7f8: ; 0x0218c7f8
     .word func_ov42_0218c744

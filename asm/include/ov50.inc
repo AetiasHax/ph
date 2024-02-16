@@ -128,10 +128,10 @@
 .extern func_ov00_020c7764
 .extern func_ov00_020ceacc
 .extern data_027e0ffc
-.extern func_0202b0f4
-.extern func_0202b0f4
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
+.extern Approach_thunk
+.extern Approach_thunk
 .extern func_0202bfc0
 .extern func_ov00_020c3070
 .extern data_02050f54

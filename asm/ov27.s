@@ -14440,7 +14440,7 @@ _02179468: .word func_ov27_02178ae4
 _0217946c: .word func_0203ebc8
 _02179470: .word data_ov27_0217a1a8
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov27_02179474
 data_ov27_02179474: ; 0x02179474
     .word func_ov27_0217913c

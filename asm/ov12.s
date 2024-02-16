@@ -1881,7 +1881,7 @@ _02114398:
 	mov r2, r5, asr #0x1
 	mov r1, #0
 	str r3, [r6, #0x76c]
-	bl func_0202b0f4
+	bl Approach_thunk
 	bl func_ov12_02114b18
 	cmp r0, #0
 	beq _02114478
@@ -2048,7 +2048,7 @@ _021145fc:
 	mov r2, r7, asr #0x1
 	mov r1, #0
 	str r3, [r8, #0x76c]
-	bl func_0202b0f4
+	bl Approach_thunk
 	mov r0, #0xa
 	mul r0, r7, r0
 	ldr r1, [r8, #0x76c]
@@ -4293,7 +4293,7 @@ func_ov12_0211653c: ; 0x0211653c
 	mov r2, #0x2800
 	bne _02116594
 	mov r1, #0x1f000
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r6, #0x4c8]
 	cmp r0, #0x4f
 	bne _021165c0
@@ -4306,7 +4306,7 @@ func_ov12_0211653c: ; 0x0211653c
 	b _021165c0
 _02116594:
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r6, #0x4c8]
 	cmp r0, #0x52
 	bne _021165c0
@@ -16804,7 +16804,7 @@ _021207ec:
 	add r0, r4, #0x160
 	mov r1, #0x1000
 	mov r2, #0x240
-	bl func_0202b0f4
+	bl Approach_thunk
 	str r5, [r4, #0x158]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
@@ -29431,12 +29431,12 @@ func_ov12_0212ad0c: ; 0x0212ad0c
 	ldr r1, [r5, #0x22c]
 	ldr r2, [r5, #0x64]
 	add r1, r1, #0x8000
-	bl func_0202b0f4
+	bl Approach_thunk
 	mov r4, r0
 	add r0, r5, #0x64
 	mov r1, #0x800
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r4, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	bl func_ov12_0211cfe0
@@ -32102,7 +32102,7 @@ func_ov12_0212cdc4: ; 0x0212cdc4
 	ldr r1, [r4, #0x18]
 	ldr r2, [r4, #0x64]
 	add r0, r4, #0x4c
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldreq r0, [r4, #0x64]
 	subeq r0, r0, #0xcd
@@ -45268,7 +45268,7 @@ func_ov12_021358e0: ; 0x021358e0
 _021358ec: .word func_ov12_021341f0
 _021358f0: .word data_ov12_0213deb0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov12_021358f4
 data_ov12_021358f4: ; 0x021358f4
     .word func_ov12_021354cc

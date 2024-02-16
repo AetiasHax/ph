@@ -108,7 +108,7 @@
 .extern func_ov00_020d70a4
 .extern func_ov14_02145f0c
 .extern func_ov00_020c0e24
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020c0e24
 .extern func_ov00_020c0e24
 .extern func_ov00_020c0e24
@@ -148,9 +148,9 @@
 .extern func_ov00_02097738
 .extern func_ov14_0214aa0c
 .extern func_ov00_020c0e24
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_0202b3bc
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020c0e24
 .extern func_ov00_020c0e24
 .extern func_ov00_020c0e24
@@ -743,7 +743,7 @@
 .extern func_ov00_02098058
 .extern func_ov00_0207c1b0
 .extern func_ov00_020d77e4
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_02097bcc
 .extern data_027e0f74
 .extern data_027e0e58
@@ -1124,7 +1124,7 @@
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c1b0
 .extern func_ov00_020ceacc
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020ceacc
 .extern func_ov00_020b7e6c
 .extern func_ov00_020c5e20
@@ -1190,7 +1190,7 @@
 .extern data_027e0fe4
 .extern func_ov00_020c313c
 .extern func_ov00_020c2bf4
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_01ff9bc4
 .extern func_ov00_020ccf0c
 .extern func_01ff9e64

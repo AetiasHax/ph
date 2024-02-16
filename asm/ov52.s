@@ -2878,7 +2878,7 @@ _02197948: .word func_ov52_02196ddc
 _0219794c: .word func_0203e7b4
 _02197950: .word data_ov52_02197c74
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov52_02197954
 data_ov52_02197954: ; 0x02197954
     .word func_ov52_021978d4

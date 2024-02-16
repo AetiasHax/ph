@@ -3241,7 +3241,7 @@ func_ov00_0209e6f8: ; 0x0209e6f8
 	ldr r2, [r0, #0x3c]
 	ldr r1, [r4, #0x38]
 	add r0, r6, #0x24
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [r6, #0x24]
 	mov r0, r6
 	bl func_ov00_02090cb0

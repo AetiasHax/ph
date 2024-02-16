@@ -1194,8 +1194,8 @@
 .extern func_ov00_02098058
 .extern func_ov05_0210a018
 .extern func_ov00_02098058
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
 .extern func_ov00_020c7764
 .extern func_ov00_020ceacc
 .extern func_ov00_020bb68c

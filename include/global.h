@@ -17,4 +17,7 @@
 // `override` was added in C++11 before the DS, so we only use the keyword to indicate overriden functions
 #define override
 
+// Define .sbss variables by using #pragma section sbss begin|end
+#pragma define_section sbss ".data" ".sbss"
+
 #endif

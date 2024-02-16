@@ -4207,7 +4207,7 @@ func_ov19_02170dd8: ; 0x02170dd8
 	str r1, [sp]
 	mov r1, #0x1000
 	mov r2, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp]
 	str r0, [r4, #0x77c]
 	add sp, sp, #4
@@ -4718,7 +4718,7 @@ _0217148c:
 	ldr r2, _021714c8 ; =0x000002aa
 	add r0, r4, #0x17c
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x188]
@@ -7323,7 +7323,7 @@ _02173638:
 	ldr r2, _02173784 ; =0x00000666
 	add r0, r4, #0x64
 	rsb r1, r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	mov r1, #0
 	beq _02173674
@@ -7392,7 +7392,7 @@ _0217373c:
 	ldr r2, _02173784 ; =0x00000666
 	add r0, r4, #0x64
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addne sp, sp, #8
 	ldmneia sp!, {r4, pc}
@@ -10879,7 +10879,7 @@ _021762c8: .word func_ov19_021756c4
 _021762cc: .word func_0203e7b4
 _021762d0: .word data_ov19_02177658
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov19_021762d4
 data_ov19_021762d4: ; 0x021762d4
     .word func_ov19_02175f04 ; func_ov26_02175f04

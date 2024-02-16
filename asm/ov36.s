@@ -164,7 +164,7 @@ _0217bfa0:
 	ldr r2, _0217c008 ; =0x00000385
 	add r0, r4, #0x17c
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x188]
@@ -2518,7 +2518,7 @@ _0217df94:
 	add r0, r5, #0x68
 	mov r1, #0
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	beq _0217e030
 	ldr r0, _0217e3ac ; =data_027e103c
@@ -12952,7 +12952,7 @@ _02186c28: .word func_ov36_02185ffc
 _02186c2c: .word func_0203e7b4
 _02186c30: .word data_ov36_02186fc0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov36_02186c34
 data_ov36_02186c34: ; 0x02186c34
     .word func_ov36_02186bb4

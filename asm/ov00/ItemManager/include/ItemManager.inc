@@ -10,7 +10,7 @@
 .extern data_027e0fc4
 .extern data_027e0618
 .extern data_027e0d38
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_01ffec34
 .extern func_ov00_02078b40
 .extern func_ov15_02136670

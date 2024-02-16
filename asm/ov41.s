@@ -6200,7 +6200,7 @@ _0218e300: .word data_ov41_0218e85c
 _0218e304: .word func_ov00_020cceec
 _0218e308: .word data_ov41_0218eb44
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov41_0218e30c
 data_ov41_0218e30c: ; 0x0218e30c
     .word func_ov41_0218e098

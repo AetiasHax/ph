@@ -1584,7 +1584,7 @@ _02196a2c:
 	cmp r1, r0
 	beq _02196a94
 	mov r0, r3
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp, #0xc]
 	ldr r0, [r4, #0x48]
 	sub r0, r1, r0
@@ -1593,7 +1593,7 @@ _02196a2c:
 _02196a94:
 	ldr r1, [r4, #0x164]
 	add r0, sp, #0x14
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp, #0x14]
 	ldr r0, [r4, #0x50]
 	sub r0, r1, r0
@@ -1607,7 +1607,7 @@ _02196ab4:
 	ldr r1, [r4, #0x160]
 	ldr r2, [r4, #0x60]
 	mov r0, r3
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldrne r1, [r4, #0x160]
 	movne r0, #0
@@ -1621,7 +1621,7 @@ _02196af4:
 	ldr r1, [r4, #0x164]
 	ldr r2, [r4, #0x68]
 	add r0, sp, #8
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	bne _02196b24
 	ldr r1, [sp, #8]
@@ -3997,7 +3997,7 @@ _0219899c: .word data_ov50_02198ad8
 _021989a0: .word func_ov00_020cceec
 _021989a4: .word data_ov50_02198ce0
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov50_021989a8
 data_ov50_021989a8: ; 0x021989a8
     .word func_ov50_0219882c

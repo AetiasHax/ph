@@ -251,7 +251,7 @@ public:
     void Sword_vfunc_38(unk32 param1);
     void Shield_vfunc_38(unk32 param1);
     void EquipItem_vfunc_38(unk32 param1);
-    void func_ov00_020ad678(Vec3p *param1, ItemFlag equipId);
+    bool EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId);
     void EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem* GetEquipItem(ItemFlag equipId);
     unk32 func_ov00_020ad790(unk32 param1);
@@ -327,7 +327,7 @@ public:
     void func_ov00_020ae350() const;
     void GiveKeys(u32 amount);
     void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
-    void _ZN11ItemManager18func_ov00_020ae648Ejjj(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3);
 };
 
 extern ItemManager *gItemManager;

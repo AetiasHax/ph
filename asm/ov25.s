@@ -15078,7 +15078,7 @@ _02179b8c: .word data_ov25_0217a680
 _02179b90: .word func_ov00_020cceec
 _02179b94: .word data_ov25_0217aa04
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov25_02179b98
 data_ov25_02179b98: ; 0x02179b98
     .word func_ov25_02179680

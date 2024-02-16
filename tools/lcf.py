@@ -27,7 +27,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_02078e00.s',
     'asm/ov00/ov00_02079d28.s',
     'asm/ov00/ov00_0207cc84.s',
-    'asm/ov00/ov00_02084eac.s',
+    'asm/ov00/ov00_02084ebc.s',
     'asm/ov00/ov00_0208b220.s',
     'asm/ov00/ov00_02096160.s',
     'asm/ov00/ov00_0209afc4.s',
@@ -277,7 +277,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.text)\n')
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.init)\n')
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.rodata)\n')
-    for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.sinit)\n')
+    for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.ctor)\n')
     file.write('        . = ALIGN(32);\n')
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.data)\n')
     file.write('        . = ALIGN(32);\n')
@@ -348,7 +348,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
         for obj in ov.objects: file.write(f'        {name(obj)}.o(.init)\n')
         file.write('\n')
         file.write(f'        {ov.name}_sinit_start = .;\n')
-        for obj in ov.objects: file.write(f'        {name(obj)}.o(.sinit)\n')
+        for obj in ov.objects: file.write(f'        {name(obj)}.o(.ctor)\n')
         file.write('        WRITEW 0;\n')
         file.write(f'        {ov.name}_sinit_end = .;\n')
         file.write('\n')

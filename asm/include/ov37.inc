@@ -563,7 +563,7 @@
 .extern data_027e0e58
 .extern func_01ff9158
 .extern func_01ff9158
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020a95ec
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj

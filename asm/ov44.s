@@ -2816,7 +2816,7 @@ _0218b670:
 	ldr r1, [r0, #8]
 	ldr r2, _0218b6fc ; =0x0000019a
 	add r0, sp, #4
-	bl func_0202b0f4
+	bl Approach_thunk
 	mov r0, #0
 	str r0, [r4, #0x60]
 	ldr r1, [sp, #4]
@@ -2831,7 +2831,7 @@ _0218b6a8:
 	ldr r2, _0218b6fc ; =0x0000019a
 	add r0, sp, #0
 	str r3, [sp]
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r2, [sp]
 	ldr r1, [r4, #0x48]
 	mov r0, #0
@@ -7614,7 +7614,7 @@ _0218f1c0: .word func_ov44_0218e320
 _0218f1c4: .word func_0203e7b4
 _0218f1c8: .word data_ov44_0219001c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov44_0218f1cc
 data_ov44_0218f1cc: ; 0x0218f1cc
     .word func_ov44_0218ea9c

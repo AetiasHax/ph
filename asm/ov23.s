@@ -959,7 +959,7 @@ _0216e2d0:
 	add r0, sp, #4
 	mov r1, r1, asr #0xc
 	mov r2, #0x800
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp, #4]
 	ldr r0, [r4, #0x1e8]
 	str r1, [r0, #0x10]
@@ -978,7 +978,7 @@ _0216e328:
 	mov r1, #0x1000
 	str r2, [sp]
 	mov r2, #0x800
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp]
 	ldr r0, [r4, #0x1e8]
 	str r1, [r0, #0x10]
@@ -11800,7 +11800,7 @@ _0217724c:
 	ldr r1, _0217746c ; =0xfffffd9a
 	add r0, r4, #0x48
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addeq sp, sp, #4
 	ldmeqia sp!, {r3, r4, pc}
@@ -11816,7 +11816,7 @@ _02177288:
 	add r0, r4, #0x48
 	mov r1, #0
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldrne r0, [r4, #0x58]
 	cmpne r0, #0
@@ -11899,7 +11899,7 @@ _021773c0:
 	ldr r1, _0217746c ; =0xfffffd9a
 	add r0, r4, #0x48
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addeq sp, sp, #4
 	ldmeqia sp!, {r3, r4, pc}
@@ -11915,7 +11915,7 @@ _021773fc:
 	ldr r1, _02177470 ; =0xfffff19a
 	add r0, r4, #0x48
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	ldrne r0, [r4, #0x58]
 	cmpne r0, #0
@@ -15666,7 +15666,7 @@ _02179cd4: .word func_ov23_02177978
 _02179cd8: .word func_0203ebc8
 _02179cdc: .word data_ov23_0217ad6c
 
-	.section .sinit, 4, 1, 4
+	.section .ctor, 4, 1, 4
 	.global data_ov23_02179ce0
 data_ov23_02179ce0: ; 0x02179ce0
     .word func_ov23_02179698
