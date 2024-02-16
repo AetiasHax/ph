@@ -556,7 +556,7 @@
 .extern func_ov00_0208f030
 .extern gItemManager
 .extern _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
-.extern _ZN11ItemManager17EquipItem_vfunc_2cEj
+.extern _ZN11ItemManager18EquipItem_vfunc_2cEj
 .extern gItemManager
 .extern func_ov00_02083624
 .extern data_027e0e60

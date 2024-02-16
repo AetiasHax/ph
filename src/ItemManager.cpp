@@ -249,3 +249,7 @@ bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
     }
     return false;
 }
+
+void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
+    (*this->mEquipItems)[equipId]->vfunc_2c();
+}

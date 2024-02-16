@@ -3,18 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager17EquipItem_vfunc_2cEj
-	arm_func_start _ZN11ItemManager17EquipItem_vfunc_2cEj
-_ZN11ItemManager17EquipItem_vfunc_2cEj: ; 0x020ad6f8
-	stmdb sp!, {r3, lr}
-	ldr r0, [r0, #0xac]
-	ldr r0, [r0, r1, lsl #2]
-	ldr r1, [r0]
-	ldr r1, [r1, #0x2c]
-	blx r1
-	ldmia sp!, {r3, pc}
-	arm_func_end _ZN11ItemManager17EquipItem_vfunc_2cEj
-
 	.global _ZN11ItemManager12GetEquipItemEj
 	arm_func_start _ZN11ItemManager12GetEquipItemEj
 _ZN11ItemManager12GetEquipItemEj: ; 0x020ad714

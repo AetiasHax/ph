@@ -9668,7 +9668,7 @@ func_ov00_020a7cfc: ; 0x020a7cfc
 	ldmeqia sp!, {r3, pc}
 	ldr r0, _020a7d30 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZN11ItemManager17EquipItem_vfunc_2cEj
+	bl _ZN11ItemManager18EquipItem_vfunc_2cEj
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a7cfc
