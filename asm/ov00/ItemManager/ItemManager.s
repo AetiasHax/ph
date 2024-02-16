@@ -3,15 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager7GetAmmoEj
-	arm_func_start _ZNK11ItemManager7GetAmmoEj
-_ZNK11ItemManager7GetAmmoEj: ; 0x020ad72c
-	ldr r2, [r0, #0xb0]
-	mov r0, r1, lsl #0x1
-	ldrh r0, [r2, r0]
-	bx lr
-	arm_func_end _ZNK11ItemManager7GetAmmoEj
-
 	.global _ZN11ItemManager8GiveAmmoEjj
 	arm_func_start _ZN11ItemManager8GiveAmmoEjj
 _ZN11ItemManager8GiveAmmoEjj: ; 0x020ad73c

@@ -262,4 +262,8 @@ EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
         return (*this->mEquipItems)[equipId];
     }
 }
+
+u16 ItemManager::GetAmmo(ItemFlag equipId) const {
+    return (*this->mAmmo)[equipId];
+}
 #pragma interworking off
