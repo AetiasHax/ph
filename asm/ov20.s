@@ -3056,7 +3056,7 @@ func_ov20_021700b0: ; 0x021700b0
 	str r1, [sp]
 	mov r1, #0x1000
 	mov r2, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp]
 	str r0, [r4, #0x100]
 	add sp, sp, #4

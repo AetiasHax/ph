@@ -224,8 +224,8 @@
 .extern func_0202b154
 .extern func_ov00_020c3070
 .extern func_0202b154
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
 .extern data_027e0f94
 .extern func_0202b154
 .extern func_ov00_020c3070

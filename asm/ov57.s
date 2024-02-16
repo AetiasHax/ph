@@ -925,7 +925,7 @@ _021998a4:
 	ldr r2, _021998ec ; =0x00000266
 	add r0, r4, #0x74
 	mov r1, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0

@@ -610,7 +610,7 @@
 .extern data_027e0e60
 .extern func_ov00_02097b9c
 .extern func_ov00_02098058
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_0207c474
 .extern func_ov00_020b7e6c
 .extern func_ov00_02097bac
@@ -618,9 +618,9 @@
 .extern func_ov00_02098058
 .extern func_ov00_020ceacc
 .extern func_ov00_020cecd8
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_0208b9e4
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_0209809c
 .extern func_ov00_02097738
 .extern func_ov00_02097bbc

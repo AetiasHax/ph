@@ -224,7 +224,7 @@
 .extern func_ov00_020ceacc
 .extern data_027e0ffc
 .extern data_027e0e58
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0fe0
 .extern func_ov00_020ca668

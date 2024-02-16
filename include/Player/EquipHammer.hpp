@@ -31,7 +31,7 @@ public:
     /* 2c */ virtual unk32 vfunc_2c() override; // func_ov59_02198fcc
     /* 30 */ virtual void vfunc_30() override; // func_ov59_02198e6c
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_0v59_02198fc8
-    /* 3c */ virtual bool vfunc_3c(void *param1, unk32 param2, unk32 param3) const override; // func_ov14_0213ee10
-    /* 4c */ virtual unk32 vfunc_4c() const override; // func_ov14_0213eea8
+    /* 3c */ virtual bool vfunc_3c(Vec4p *param1) const override; // func_ov14_0213ee10
+    /* 4c */ virtual s32 vfunc_4c() const override; // func_ov14_0213eea8
     /* 50 */
 };

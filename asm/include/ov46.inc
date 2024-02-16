@@ -265,7 +265,7 @@
 .extern data_02050f54
 .extern func_ov00_020d5a68
 .extern data_027e0764
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_01ff9bc4
 .extern func_ov00_020c1fc8
 .extern func_ov00_020c243c

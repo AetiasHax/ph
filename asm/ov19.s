@@ -4207,7 +4207,7 @@ func_ov19_02170dd8: ; 0x02170dd8
 	str r1, [sp]
 	mov r1, #0x1000
 	mov r2, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [sp]
 	str r0, [r4, #0x77c]
 	add sp, sp, #4
@@ -4718,7 +4718,7 @@ _0217148c:
 	ldr r2, _021714c8 ; =0x000002aa
 	add r0, r4, #0x17c
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x188]
@@ -7323,7 +7323,7 @@ _02173638:
 	ldr r2, _02173784 ; =0x00000666
 	add r0, r4, #0x64
 	rsb r1, r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	mov r1, #0
 	beq _02173674
@@ -7392,7 +7392,7 @@ _0217373c:
 	ldr r2, _02173784 ; =0x00000666
 	add r0, r4, #0x64
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addne sp, sp, #8
 	ldmneia sp!, {r4, pc}

@@ -39,7 +39,7 @@
 .extern func_ov00_0207c1f8
 .extern func_ov14_0213d420
 .extern func_ov00_020ceacc
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern data_ov00_020eec9c
 .extern data_027e0e58
 .extern data_027e0ffc

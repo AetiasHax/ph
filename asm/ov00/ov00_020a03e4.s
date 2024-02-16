@@ -3165,7 +3165,7 @@ _020a2b28:
 	add r0, sp, #0
 	add r1, r1, #0x300
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp]
 	mov r0, r4
 	bl func_ov00_02090ae4
@@ -8215,13 +8215,13 @@ _020a6a50:
 	add r0, sl, #0x30
 	orr r1, r1, r2, lsl #20
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _020a6abc
 _020a6aac:
 	add r0, sl, #0x30
 	mov r1, #0
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 _020a6abc:
 	ldr r1, [sp, #0x80]
 	ldr r0, [sl, #0x30]
@@ -8232,7 +8232,7 @@ _020a6ad0:
 	add r0, sl, #0x30
 	mov r1, #0
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 _020a6ae0:
 	add r0, sl, #0x18
 	add r3, sp, #0x58
@@ -8334,11 +8334,11 @@ _020a6c2c:
 	mov r6, r7, asr #0x1
 	mov r1, r6
 	add r0, sl, #0x38
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r2, _020a6df4 ; =0x00000666
 	mov r1, r7
 	add r0, sl, #0x3c
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp sb, #0
 	streq r6, [sl, #0x38]
 	streq r7, [sl, #0x3c]
@@ -9646,13 +9646,13 @@ func_ov00_020a7c60: ; 0x020a7c60
 	arm_func_start func_ov00_020a7ce4
 func_ov00_020a7ce4: ; 0x020a7ce4
 	ldr r0, _020a7cf4 ; =gItemManager
-	ldr ip, _020a7cf8 ; =_ZN11ItemManager18func_ov00_020ad678Ejjj
+	ldr ip, _020a7cf8 ; =_ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a7ce4
 _020a7cf4: .word gItemManager
-_020a7cf8: .word _ZN11ItemManager18func_ov00_020ad678Ejjj
+_020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
 
 	.global func_ov00_020a7cfc
 	arm_func_start func_ov00_020a7cfc

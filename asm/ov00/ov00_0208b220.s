@@ -9299,7 +9299,7 @@ _02092704:
 	ldr r1, [r0, #0x18]
 	ldr r2, _020931ec ; =0x0000019a
 	mov r0, r6
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _02092750
 _0209272c:
 	mov r0, r4
@@ -9310,7 +9310,7 @@ _0209272c:
 	ldr r1, [r0, #0x18]
 	mov r0, r6
 	mov r2, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 _02092750:
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #0x15c]
@@ -9450,7 +9450,7 @@ _02092944:
 	bl func_ov00_02090e04
 	mov r1, r7
 	mov r2, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _02092b4c
 _0209295c:
 	add r0, sp, #0x100
@@ -9514,7 +9514,7 @@ _02092a2c:
 	ldr r1, [r0, #0x18]
 	mov r0, r5
 	mov r2, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _02092b4c
 _02092a50:
 	add r0, sp, #0x100
@@ -9550,7 +9550,7 @@ _02092ab4:
 	ldr r1, [r0, #0x18]
 	mov r0, r5
 	mov r2, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 	b _02092b4c
 _02092ad8:
 	ldrb r0, [r2, #0x2ed]
@@ -9567,7 +9567,7 @@ _02092af0:
 	ldr r1, [r0, #0x18]
 	mov r0, r5
 	mov r2, #0x1000
-	bl func_0202b0f4
+	bl Approach_thunk
 _02092b10:
 	ldr r0, [r4, #4]
 	ldr r0, [r0, #0x15c]

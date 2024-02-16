@@ -9530,7 +9530,7 @@ func_ov37_0218431c: ; 0x0218431c
 	str r1, [sp]
 	mov r1, #0x1000
 	mov r2, #0x44
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [sp]
 	add r0, r4, #0x1000
 	str r1, [r0, #0x5a8]

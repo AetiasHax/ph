@@ -3784,7 +3784,7 @@ func_ov00_020d4880: ; 0x020d4880
 	ldr r2, [r5, #0x174]
 	ldr r1, _020d4960 ; =0x00000fd7
 	add r0, r5, #0x170
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r1, [r5, #0x170]
 	mov r4, r0
 	sub r0, r1, #0x800
@@ -3914,7 +3914,7 @@ _020d4a44:
 	movle r2, r0
 	ldr r1, [r5, #0x17c]
 	add r0, r5, #0x90
-	bl func_0202b0f4
+	bl Approach_thunk
 _020d4a84:
 	ldrb r0, [r5, #0x11b]
 	strb r0, [r5, #0x183]
@@ -3971,7 +3971,7 @@ _020d4af0:
 	movle r2, r0
 	ldr r1, [r5, #0x17c]
 	add r0, r5, #0x90
-	bl func_0202b0f4
+	bl Approach_thunk
 _020d4b30:
 	ldrb r0, [r5, #0x11b]
 	strb r0, [r5, #0x183]

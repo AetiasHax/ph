@@ -141,7 +141,7 @@
 .extern func_ov00_02090e90
 .extern func_ov00_02090e54
 .extern func_ov00_02083ee0
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_02090ae4
 .extern func_ov00_02090ef0
 .extern func_ov00_02090eb4
@@ -423,9 +423,9 @@
 .extern func_01fffb4c
 .extern func_01fffbec
 .extern func_01ff9bc4
-.extern func_0202b0f4
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
+.extern Approach_thunk
 .extern func_01ff9bf8
 .extern func_01ffa0f4
 .extern func_ov00_02090e20
@@ -439,8 +439,8 @@
 .extern func_01ff9bf8
 .extern func_01ff9cec
 .extern func_ov00_02090a7c
-.extern func_0202b0f4
-.extern func_0202b0f4
+.extern Approach_thunk
+.extern Approach_thunk
 .extern func_ov00_02090c1c
 .extern func_ov00_02090c04
 .extern func_ov00_02090c10
@@ -555,7 +555,7 @@
 .extern func_01ffec34
 .extern func_ov00_0208f030
 .extern gItemManager
-.extern _ZN11ItemManager18func_ov00_020ad678Ejjj
+.extern _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
 .extern _ZN11ItemManager17EquipItem_vfunc_2cEj
 .extern gItemManager
 .extern func_ov00_02083624

@@ -164,7 +164,7 @@ _0217bfa0:
 	ldr r2, _0217c008 ; =0x00000385
 	add r0, r4, #0x17c
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x188]
@@ -2518,7 +2518,7 @@ _0217df94:
 	add r0, r5, #0x68
 	mov r1, #0
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	beq _0217e030
 	ldr r0, _0217e3ac ; =data_027e103c

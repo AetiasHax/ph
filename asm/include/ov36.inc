@@ -12,7 +12,7 @@
 .extern func_0201e544
 .extern func_ov00_020c0c9c
 .extern func_ov00_020c5d74
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020c0e04
 .extern func_ov00_020cec60
 .extern data_027e0ffc
@@ -199,7 +199,7 @@
 .extern func_ov00_020d70a4
 .extern data_027e0c68
 .extern data_ov00_020eec68
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_020cfc70
 .extern func_ov00_020bd0a8
 .extern func_01ff98e0

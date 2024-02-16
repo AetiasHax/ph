@@ -319,7 +319,7 @@ func_ov24_0216da80: ; 0x0216da80
 	ldr r1, [r5, #0x74]
 	add r0, r5, #0x1c
 	mov r2, #0xcd
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r5, #8]
 	cmp r0, #0
 	beq _0216dac8
@@ -916,7 +916,7 @@ _0216e258:
 	ldr r1, [r4, #0x164]
 	ldr r2, [r0, r2, lsl #2]
 	add r0, r4, #0x16c
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _0216e4b0 ; =data_027e0e60
 	ldr r1, [r4, #0x16c]
 	ldr r0, [r0]
@@ -994,7 +994,7 @@ _0216e378:
 	ldr r1, [r4, #0x168]
 	ldr r2, [r0, r2, lsl #2]
 	add r0, r4, #0x16c
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, _0216e4b0 ; =data_027e0e60
 	ldr r1, [r4, #0x16c]
 	ldr r0, [r0]
@@ -13761,7 +13761,7 @@ _02178a1c:
 	ldr r2, _02178aa0 ; =0x00000333
 	add r0, r4, #0x64
 	rsb r1, r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addeq sp, sp, #8
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -13777,7 +13777,7 @@ _02178a5c:
 	ldr r2, _02178aa0 ; =0x00000333
 	add r0, r4, #0x64
 	mov r1, #0
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	addeq sp, sp, #8
 	ldmeqia sp!, {r3, r4, r5, pc}

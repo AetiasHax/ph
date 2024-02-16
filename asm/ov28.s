@@ -830,7 +830,7 @@ _0216e228:
 	add r0, r4, #0x880
 	add r1, r2, r1
 	mov r2, #0x14
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	beq _0216e708
 	mov r0, #0
@@ -1553,7 +1553,7 @@ _0216ec00:
 	add r0, r0, #0x800
 	add r1, r1, #0xc00
 	mov r2, #0x29
-	bl func_0202b0f4
+	bl Approach_thunk
 	add r0, r5, #0xca
 	mov r1, #0x2000
 	ldr r2, _0216eec8 ; =0x0000011f
@@ -1581,7 +1581,7 @@ _0216ec64:
 	add r0, r0, #0x800
 	mov r2, #0x7b
 	movne r4, #1
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	movne r6, #1
 	cmp r4, #0
@@ -8516,7 +8516,7 @@ _02174428:
 	add r0, r4, #0x23c
 	mov r1, #0
 	mov r2, #0x52
-	bl func_0202b0f4
+	bl Approach_thunk
 	cmp r0, #0
 	bne _02174488
 	add r1, r4, #0x200
@@ -12148,7 +12148,7 @@ _021773a8:
 	ldr r1, _02177488 ; =0xffffe8cd
 	ldr r2, _0217748c ; =0x0000011f
 	add r0, r4, #0x4c
-	bl func_0202b0f4
+	bl Approach_thunk
 _021773b8:
 	ldr r0, [r4, #0x138]
 	cmp r0, #0x99
@@ -12845,7 +12845,7 @@ func_ov28_02177bec: ; 0x02177bec
 	add r0, r4, #0x188
 	mov r1, #0
 	mov r2, #0x21
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldrh r0, [r4, #0x78]
 	ldr r2, _02178040 ; =data_02050f54
 	ldr r6, [r4, #0x188]

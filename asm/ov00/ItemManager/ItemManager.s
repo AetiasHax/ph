@@ -3,45 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager18func_ov00_020ad678Ejjj
-	arm_func_start _ZN11ItemManager18func_ov00_020ad678Ejjj
-_ZN11ItemManager18func_ov00_020ad678Ejjj: ; 0x020ad678
-	stmdb sp!, {r4, r5, r6, lr}
-	sub sp, sp, #0x10
-	mov r6, r0
-	ldr r0, [r6, #0xac]
-	mov r4, r2
-	ldr r0, [r0, r4, lsl #2]
-	mov r5, r1
-	ldr r2, [r0]
-	add r1, sp, #0
-	ldr r2, [r2, #0x3c]
-	blx r2
-	cmp r0, #0
-	beq _020ad6ec
-	ldr r0, [r6, #0xac]
-	ldr r0, [r0, r4, lsl #2]
-	ldr r1, [r0]
-	ldr r1, [r1, #0x4c]
-	blx r1
-	mov r2, r0
-	cmp r2, #0
-	ble _020ad6d8
-	ldr r1, [r5, #4]
-	add r0, sp, #4
-	bl func_0202b0f4
-_020ad6d8:
-	add r1, sp, #0
-	mov r0, r5
-	bl func_01ffec34
-	add sp, sp, #0x10
-	ldmia sp!, {r4, r5, r6, pc}
-_020ad6ec:
-	mov r0, #0
-	add sp, sp, #0x10
-	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end _ZN11ItemManager18func_ov00_020ad678Ejjj
-
 	.global _ZN11ItemManager17EquipItem_vfunc_2cEj
 	arm_func_start _ZN11ItemManager17EquipItem_vfunc_2cEj
 _ZN11ItemManager17EquipItem_vfunc_2cEj: ; 0x020ad6f8

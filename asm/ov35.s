@@ -7333,7 +7333,7 @@ _02182360:
 	ldr r1, [r4, #0x540]
 	add r0, r0, #0x400
 	mov r2, #0x14
-	bl func_0202b0f4
+	bl Approach_thunk
 	ldr r0, [r4, #0x53c]
 	cmp r0, #0
 	bne _021823a0

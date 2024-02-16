@@ -161,7 +161,7 @@
 .extern data_027e0d38
 .extern func_ov00_02090a7c
 .extern func_ov00_02090a7c
-.extern func_0202b0f4
+.extern Approach_thunk
 .extern func_ov00_02090cb0
 .extern func_ov00_02090ca4
 .extern func_ov00_02090a7c
