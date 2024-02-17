@@ -304,3 +304,6 @@ ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
     #endif
 }
 
+THUMB ShipType ItemManager::GetEquippedShipPart(ShipPart part) const {
+    return this->mEquippedShipParts[part];
+}

@@ -3,15 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager19GetEquippedShipPartEj
-	thumb_func_start _ZNK11ItemManager19GetEquippedShipPartEj
-_ZNK11ItemManager19GetEquippedShipPartEj: ; 0x020ad8e0
-	lsl r1, r1, #2
-	add r0, r0, r1
-	ldr r0, [r0, #0x28]
-	bx lr
-	thumb_func_end _ZNK11ItemManager19GetEquippedShipPartEj
-
 	.global _ZN11ItemManager13EquipShipPartEjj
 	thumb_func_start _ZN11ItemManager13EquipShipPartEjj
 _ZN11ItemManager13EquipShipPartEjj: ; 0x020ad8e8
