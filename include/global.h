@@ -16,6 +16,9 @@
 #define NONMATCH
 #endif
 
+#define ARM _Pragma("thumb off")
+#define THUMB _Pragma("thumb on")
+
 // `override` was added in C++11 before the DS, so we only use the keyword to indicate overriden functions
 #define override
 

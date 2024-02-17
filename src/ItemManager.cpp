@@ -2,24 +2,21 @@
 
 extern u32 *data_027e0ce0[];
 
-#pragma thumb on
-ItemManager* ItemManager::Create() {
+THUMB ItemManager* ItemManager::Create() {
     gItemManager = new(data_027e0ce0[1], 4) ItemManager();
     return gItemManager;
 }
 
-void ItemManager::Destroy() {
+THUMB void ItemManager::Destroy() {
     delete gItemManager;
     gItemManager = 0;
 }
 
-#pragma interworking on
-void ItemManager::ClearPrevEquippedItem() {
+THUMB void ItemManager::ClearPrevEquippedItem() {
     this->mPrevEquippedItem = ItemFlag_None;
 }
-#pragma interworking off
 
-NONMATCH void ItemManager::Save(SaveItemManager *save) {
+THUMB NONMATCH void ItemManager::Save(SaveItemManager *save) {
     #ifndef NONMATCHING
     #include "../asm/ov00/ItemManager/ItemManager_Save.inc"
     #else
@@ -75,7 +72,7 @@ NONMATCH void ItemManager::Save(SaveItemManager *save) {
 }
 
 extern "C" bool _ZN11ItemManager7HasItemEj();
-NONMATCH void ItemManager::Load(const SaveItemManager *save) {
+THUMB NONMATCH void ItemManager::Load(const SaveItemManager *save) {
     #ifndef NONMATCHING
     #include "../asm/ov00/ItemManager/ItemManager_Load.inc"
     #else
@@ -148,16 +145,14 @@ NONMATCH void ItemManager::Load(const SaveItemManager *save) {
     }
     #endif
 }
-#pragma thumb off
 
-#pragma interworking on
-FairyId ItemManager::GetEquippedFairy() const {
+ARM FairyId ItemManager::GetEquippedFairy() const {
     FairyId fairy = this->mEquippedFairy;
     if (fairy == FairyId_None) return FairyId_Courage;
     return fairy;
 }
 
-Navi* ItemManager::GetFairy(FairyId id) const {
+ARM Navi* ItemManager::GetFairy(FairyId id) const {
     return this->mFairies[id];
 }
 
@@ -166,7 +161,7 @@ extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();
 extern "C" void _ZN14OverlayManager13LoadEquipItemEj();
-void ItemManager::TickEquipItem(void) {
+ARM void ItemManager::TickEquipItem(void) {
     ItemFlag equip = this->GetEquippedItem();
     if (this->mEquipLoadTimer != 0) {
         this->mEquipLoadTimer -= 1;
@@ -184,47 +179,44 @@ void ItemManager::TickEquipItem(void) {
     }
 }
 
-void ItemManager::func_ov00_020ad528() {}
+ARM void ItemManager::func_ov00_020ad528() {}
 
-ItemModel* ItemManager::GetItemModel(ItemModelId id) {
+ARM ItemModel* ItemManager::GetItemModel(ItemModelId id) {
     return this->mItemModels[id];
 }
-#pragma interworking off
 
 extern unk32 data_027e0fc4;
 extern "C" void* func_ov00_020bb3a8(unk32 param1, u32 index);
 extern "C" void func_ov00_020c0bdc(void *param1, unk32 param2);
-void ItemManager::func_ov00_020ad538(unk32 param1) const {
+ARM void ItemManager::func_ov00_020ad538(unk32 param1) const {
     void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
     func_ov00_020c0bdc(unk1, param1);
 }
 
-void ItemManager::func_ov00_020ad560(unk32 param1) const {
+ARM void ItemManager::func_ov00_020ad560(unk32 param1) const {
     void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
     func_ov00_020c0bdc(unk1, param1);
 }
 
-#pragma interworking on
-ItemModel* ItemManager::GetDungeonItemModel(u32 index) {
+ARM ItemModel* ItemManager::GetDungeonItemModel(u32 index) {
     return this->mDungeonItemModels[index];
 }
-#pragma interworking off
 
-void ItemManager::func_ov00_020ad594(unk32 param1) const {
+ARM void ItemManager::func_ov00_020ad594(unk32 param1) const {
     void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
     func_ov00_020c0bdc(unk1, param1);
 }
 
-void ItemManager::Sword_vfunc_38(unk32 param1) {
+ARM void ItemManager::Sword_vfunc_38(unk32 param1) {
     (*this->mEquipItems)[ItemFlag_OshusSword]->vfunc_38(param1);
 }
 
-void ItemManager::Shield_vfunc_38(unk32 param1) {
+ARM void ItemManager::Shield_vfunc_38(unk32 param1) {
     (*this->mEquipItems)[ItemFlag_WoodenShield]->vfunc_38(param1);
 }
 
 extern unk32 data_027e0618;
-void ItemManager::EquipItem_vfunc_38(unk32 param1) {
+ARM void ItemManager::EquipItem_vfunc_38(unk32 param1) {
     if (data_027e0618 != 6) {
         this->Sword_vfunc_38(param1);
         this->Shield_vfunc_38(param1);
@@ -238,7 +230,7 @@ void ItemManager::EquipItem_vfunc_38(unk32 param1) {
     (*this->mEquipItems)[equip]->vfunc_38(param1);
 }
 
-bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
+ARM bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
     Vec4p result;
     if ((*this->mEquipItems)[equipId]->vfunc_3c(&result)) {
         s32 step = (*this->mEquipItems)[equipId]->vfunc_4c();
@@ -250,12 +242,11 @@ bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
     return false;
 }
 
-void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
+ARM void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
     (*this->mEquipItems)[equipId]->vfunc_2c();
 }
 
-#pragma interworking on
-EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
+ARM EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
     if (equipId == ItemFlag_None) {
         return NULL;
     } else {
@@ -263,12 +254,11 @@ EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
     }
 }
 
-u16 ItemManager::GetAmmo(ItemFlag equipId) const {
+ARM u16 ItemManager::GetAmmo(ItemFlag equipId) const {
     return (*this->mAmmo)[equipId];
 }
-#pragma interworking off
 
-void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
+ARM void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
     (*this->mAmmo)[equipId] += amount;
     if ((*this->mAmmo)[equipId] <= this->GetMaxAmmo(equipId)) return;
     (*this->mAmmo)[equipId] = this->GetMaxAmmo(equipId);
