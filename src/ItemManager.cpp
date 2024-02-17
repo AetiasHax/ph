@@ -263,3 +263,44 @@ ARM void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
     if ((*this->mAmmo)[equipId] <= this->GetMaxAmmo(equipId)) return;
     (*this->mAmmo)[equipId] = this->GetMaxAmmo(equipId);
 }
+
+extern "C" unk32 func_ov00_02078b40(UnkStruct_027e0d38 *param1);
+extern void *data_027e10a4;
+extern "C" bool func_ov15_02136670(void *param1);
+extern unk8 data_ov29_0217a4ac[];
+extern void *data_027e0e60;
+extern "C" bool func_ov00_020849f8(void *param1);
+extern unk32 data_027e0fc8;
+extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
+extern "C" void _ZN11ItemManager12GetEquipItemEj();
+ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/ItemManager/ItemManager_func_ov00_020ad790.inc"
+    #else
+    unk32 unk1 = func_ov00_02078b40(data_027e0d38);
+    if (unk1 == 2) return func_ov15_02136670(data_027e10a4);
+    if (data_027e0d38->mUnk_14 == 1) return false;
+    // NONMATCH: OverlayId_29 should be in constant pool
+    if (gOverlayManager.mLoadedOverlays[OverlayIndex_6] == OverlayId_29 && data_ov29_0217a4ac[0x54] != 0) {
+        return false;
+    }
+    
+    ItemFlag equipId = this->mForcedItem;
+    bool unk2 = !func_ov00_020849f8(data_027e0e60);
+    if (
+        this->mEquippedItem != ItemFlag_None &&
+        (unk2 || this->mEquippedItem - 9 <= 1) &&
+        (data_027e0fc8 == 0 || func_ov00_020bbd80(data_027e0fc8, param1)) &&
+        this->HasItem(this->mEquippedItem)
+    ) {
+        equipId = this->mEquippedItem;
+    }
+    
+    if (equipId != ItemFlag_None) {
+        if (this->mEquipLoadTimer != 0) return param1 == 0;
+        return this->GetEquipItem(equipId)->IsUsable(param1);
+    }
+    return false;
+    #endif
+}
+

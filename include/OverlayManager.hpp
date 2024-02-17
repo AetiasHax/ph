@@ -88,9 +88,9 @@ enum OverlayIndex_ {
 };
 
 class OverlayManager {
+public:
     OverlayId mLoadedOverlays[OverlayIndex_COUNT];
 
-public:
     void Unload(OverlayIndex index);
     void Load(OverlayIndex index, OverlayId id);
     void LoadIfNotLoaded(OverlayIndex index, OverlayId id);

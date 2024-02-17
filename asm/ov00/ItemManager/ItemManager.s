@@ -3,103 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager18func_ov00_020ad790Ej
-	arm_func_start _ZN11ItemManager18func_ov00_020ad790Ej
-_ZN11ItemManager18func_ov00_020ad790Ej: ; 0x020ad790
-	stmdb sp!, {r4, r5, r6, lr}
-	ldr r2, _020ad8c4 ; =data_027e0d38
-	mov r6, r0
-	ldr r0, [r2]
-	mov r5, r1
-	bl func_ov00_02078b40
-	cmp r0, #2
-	bne _020ad7c0
-	ldr r0, _020ad8c8 ; =data_027e10a4
-	ldr r0, [r0]
-	bl func_ov15_02136670
-	ldmia sp!, {r4, r5, r6, pc}
-_020ad7c0:
-	ldr r0, _020ad8c4 ; =data_027e0d38
-	ldr r0, [r0]
-	ldr r0, [r0, #0x14]
-	cmp r0, #1
-	moveq r0, #0
-	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _020ad8cc ; =gOverlayManager
-	ldr r1, _020ad8d0 ; =0x0000001d
-	ldr r0, [r0, #0x18]
-	cmp r0, r1
-	bne _020ad800
-	ldr r0, _020ad8d4 ; =data_ov29_0217a4ac
-	ldrb r0, [r0, #0x54]
-	cmp r0, #0
-	movne r0, #0
-	ldmneia sp!, {r4, r5, r6, pc}
-_020ad800:
-	ldr r0, _020ad8d8 ; =data_027e0e60
-	ldr r4, [r6, #8]
-	ldr r0, [r0]
-	bl func_ov00_020849f8
-	cmp r0, #0
-	moveq r2, #1
-	ldr r1, [r6]
-	mvn r0, #0
-	movne r2, #0
-	cmp r1, r0
-	beq _020ad874
-	cmp r2, #0
-	bne _020ad840
-	sub r0, r1, #9
-	cmp r0, #1
-	bhi _020ad874
-_020ad840:
-	ldr r0, _020ad8dc ; =data_027e0fc8
-	ldr r0, [r0]
-	cmp r0, #0
-	beq _020ad860
-	mov r1, r5
-	bl func_ov00_020bbd80
-	cmp r0, #0
-	beq _020ad874
-_020ad860:
-	ldr r1, [r6]
-	mov r0, r6
-	bl _ZN11ItemManager7HasItemEj
-	cmp r0, #0
-	ldrne r4, [r6]
-_020ad874:
-	mvn r0, #0
-	cmp r4, r0
-	beq _020ad8bc
-	ldrh r0, [r6, #0x20]
-	cmp r0, #0
-	beq _020ad89c
-	cmp r5, #0
-	moveq r0, #1
-	movne r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
-_020ad89c:
-	mov r0, r6
-	mov r1, r4
-	bl _ZN11ItemManager12GetEquipItemEj
-	ldr r2, [r0]
-	mov r1, r5
-	ldr r2, [r2, #0x14]
-	blx r2
-	ldmia sp!, {r4, r5, r6, pc}
-_020ad8bc:
-	mov r0, #0
-	ldmia sp!, {r4, r5, r6, pc}
-	.align 2, 0
-	arm_func_end _ZN11ItemManager18func_ov00_020ad790Ej
-_020ad8c4: .word data_027e0d38
-_020ad8c8: .word data_027e10a4
-_020ad8cc: .word gOverlayManager
-_020ad8d0: .word 0x0000001d
-_020ad8d4: .word data_ov29_0217a4ac
-_020ad8d8: .word data_027e0e60
-_020ad8dc: .word data_027e0fc8
-
 	.global _ZNK11ItemManager19GetEquippedShipPartEj
 	thumb_func_start _ZNK11ItemManager19GetEquippedShipPartEj
 _ZNK11ItemManager19GetEquippedShipPartEj: ; 0x020ad8e0
@@ -1625,7 +1528,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
 
 	.global _ZN11ItemManager13ForceEquipItemEj
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEj

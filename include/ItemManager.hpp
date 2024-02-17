@@ -254,7 +254,7 @@ public:
     bool EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId);
     void EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem* GetEquipItem(ItemFlag equipId);
-    unk32 func_ov00_020ad790(unk32 param1);
+    bool func_ov00_020ad790(unk32 param1);
     bool SetEquippedItem(ItemFlag equipId);
     void EquipPreviousItem();
     void ForceEquipItem(ItemFlag equipId);
