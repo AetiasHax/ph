@@ -3,19 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager7HasItemEj
-	arm_func_start _ZNK11ItemManager7HasItemEj
-_ZNK11ItemManager7HasItemEj: ; 0x020ada78
-	mov r2, r1, lsr #0x5
-	add r0, r0, r2, lsl #2
-	ldr r2, [r0, #0x128]
-	and r1, r1, #0x1f
-	mov r0, #1
-	tst r2, r0, lsl r1
-	moveq r0, #0
-	bx lr
-	arm_func_end _ZNK11ItemManager7HasItemEj
-
 	.global _ZN11ItemManager7AddItemEj
 	thumb_func_start _ZN11ItemManager7AddItemEj
 _ZN11ItemManager7AddItemEj: ; 0x020ada98
@@ -1279,7 +1266,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
 
 	.global _ZN11ItemManager13ForceEquipItemEj
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEj
