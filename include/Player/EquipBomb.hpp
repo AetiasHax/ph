@@ -18,7 +18,7 @@ public:
     /* 04 */ virtual ~EquipBomb() override;
     /* 0c */ virtual ItemFlag GetId() const override;
 
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov55_02198d8c
 
     /* 30 */ virtual void vfunc_30() override; // func_ov55_02198da4

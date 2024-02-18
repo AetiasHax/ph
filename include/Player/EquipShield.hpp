@@ -24,7 +24,7 @@ public:
     /* 0c */ virtual ItemFlag GetId() const override;
     /* 10 */ virtual void vfunc_10() override; // func_ov00_020c076c
 
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov00_020c0770
     /* 1c */ virtual void vfunc_1c(); // func_ov00_020c07f8
 

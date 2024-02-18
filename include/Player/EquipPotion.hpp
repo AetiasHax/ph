@@ -16,7 +16,7 @@ public:
     /* 00 */ virtual void vfunc_00() override; // func_ov55_021991a8
     /* 04 */ virtual ~EquipPotion() override;
 
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov55_021991ac
     /* 1c */ virtual void vfunc_1c() override; // func_ov55_021991b0
 

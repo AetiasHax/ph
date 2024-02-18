@@ -21,7 +21,7 @@ public:
     /* 10 */ virtual void vfunc_10(); // func_ov04_0210ba88
 
     u16 GetAmmo();
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const;
     /* 18 */ virtual void vfunc_18() = 0;
     /* 1c */ virtual void vfunc_1c(); // func_ov00_020be8e0
     /* 20 */ virtual void GiveAmmo(u32 amount);

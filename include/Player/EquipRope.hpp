@@ -29,7 +29,7 @@ public:
     /* 10 */ virtual void vfunc_10() override; // func_ov14_0213d3a0
 
     u16 GetAmmo();
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov57_021992f4
     /* 1c */ virtual void vfunc_1c() override; // func_ov57_0219935c    
 

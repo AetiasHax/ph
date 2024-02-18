@@ -32,7 +32,7 @@ public:
     /* 0c */ virtual ItemFlag GetId() const override;
 
     bool CheckUsable(unk32 param1) const;
-    /* 14 */ virtual bool IsUsable(unk32 param1, unk32 param2) const override;
+    /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov58_0219903c
     /* 1c */ virtual void vfunc_1c() override; // func_ov58_02199060
 
