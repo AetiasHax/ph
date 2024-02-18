@@ -224,19 +224,19 @@ _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj: ; 0x020ada48
 	mov r4, r1
 	add r1, r4, #0x1a
 	mov r5, r0
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	movne r0, #2
 	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	add r1, r4, #0x17
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
 
-	.global _ZN11ItemManager7HasItemEj
-	arm_func_start _ZN11ItemManager7HasItemEj
-_ZN11ItemManager7HasItemEj: ; 0x020ada78
+	.global _ZNK11ItemManager7HasItemEj
+	arm_func_start _ZNK11ItemManager7HasItemEj
+_ZNK11ItemManager7HasItemEj: ; 0x020ada78
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x128]
@@ -245,7 +245,7 @@ _ZN11ItemManager7HasItemEj: ; 0x020ada78
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end _ZN11ItemManager7HasItemEj
+	arm_func_end _ZNK11ItemManager7HasItemEj
 
 	.global _ZN11ItemManager7AddItemEj
 	thumb_func_start _ZN11ItemManager7AddItemEj

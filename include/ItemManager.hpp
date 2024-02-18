@@ -22,7 +22,7 @@
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 
-typedef u32 FairyId;
+typedef s32 FairyId;
 enum FairyId_ {
     FairyId_None    = -1,
     FairyId_Courage = 0,
@@ -104,11 +104,6 @@ struct ShipPartPricesShown {
     /* c */
 };
 
-struct ShipParts {
-    /* 0 */ u8 parts[ShipType_COUNT];
-    /* 9 */
-};
-
 struct UnkStruct_027e0d38 {
     /* 00 */ unk8 mUnk_00;
     /* 01 */ unk8 mUnk_01[3]; // padding?
@@ -166,7 +161,7 @@ struct SaveItemManager {
     /* 14 */ ShipPartPricesShown shipPartPricesShown;
     /* 20 */ u32 treasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
     /* 24 */ u8 equippedShipParts[ShipPart_COUNT];
-    /* 2c */ ShipParts shipParts[ShipPart_COUNT];
+    /* 2c */ s8 shipParts[ShipPart_COUNT][ShipType_COUNT];
     /* 74 */ s8 treasure[Treasure_COUNT];
     /* 7c */ unk8 unk_7c[4];
     /* 80 */ u16 hourglassSeconds;
@@ -178,7 +173,7 @@ struct SaveItemManager {
     /* 93 */ u8 numBombs;
     /* 94 */ u8 numBombchus;
     /* 95 */ u8 numArrows;
-    /* 96 */ u8 equippedItem;
+    /* 96 */ s8 equippedItem;
     /* 97 */ Potion potions[NUM_POTIONS];
     /* 99 */ u8 numGems[Gem_COUNT];
     /* 9c */ u8 quiverSize;
@@ -202,7 +197,7 @@ private:
     /* 024 */ u8 mNumGems[Gem_COUNT];
     /* 027 */ unk8 mUnk_027; // padding?
     /* 028 */ ShipType mEquippedShipParts[ShipPart_COUNT];
-    /* 048 */ ShipParts mShipParts[ShipPart_COUNT];
+    /* 048 */ s8 mShipParts[ShipPart_COUNT][ShipType_COUNT];
     /* 090 */ s8 mTreasure[Treasure_COUNT];
     /* 098 */ u8 mUnk_098[6]; // max 99
     /* 09e */ u16 mUnk_09e[6]; // max 9999, corresponds with mUnk_098
@@ -283,8 +278,8 @@ public:
     // Ship
     ShipType GetEquippedShipPart(ShipPart part) const;
     void EquipShipPart(ShipPart part, ShipType type);
-    u8 GetShipPartCount(ShipPart part, ShipType type) const;
-    void SetShipPartCount(ShipPart part, ShipType type, u8 count);
+    s8 GetShipPartCount(ShipPart part, ShipType type) const;
+    void SetShipPartCount(ShipPart part, ShipType type, s8 count);
     bool HasShipPartPriceShown(u32 index) const;
     bool HasShipPartPriceShown(ShipPart part, ShipType type) const;
     void AddShipPartPriceShown(u32 index);

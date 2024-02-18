@@ -9498,7 +9498,7 @@ func_ov00_020a7b10: ; 0x020a7b10
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r5
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	ldrneb r1, [r6, #0x11]
 	strneb r1, [r0, #0x11a]
@@ -13722,7 +13722,7 @@ func_ov00_020aa818: ; 0x020aa818
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	bl func_ov00_020ba458
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -16262,7 +16262,7 @@ _020ac930:
 	ldr r0, _020ac9dc ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020ac9bc
 	ldr r0, _020ac9e0 ; =data_027e0f74

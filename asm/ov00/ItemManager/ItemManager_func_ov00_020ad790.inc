@@ -57,7 +57,7 @@ _020ad840:
 _020ad860:
 	ldr r1, [r6]
 	mov r0, r6
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	ldrne r4, [r6]
 _020ad874:

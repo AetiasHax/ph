@@ -572,7 +572,7 @@
 .extern func_ov00_020c5d74
 .extern func_01ffa0f4
 .extern func_ov00_020cc22c
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
 .extern func_ov00_020cadb0

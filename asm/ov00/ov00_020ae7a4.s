@@ -868,7 +868,7 @@ _020af1f8:
 	ldr r0, _020af288 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	beq _020af268
 	ldr r1, _020af294 ; =data_027e0f94
@@ -1580,7 +1580,7 @@ func_ov00_020afb6c: ; 0x020afb6c
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r6
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r5, #0
 	ldreqb r1, [sb, #0x81]
 	cmpeq r1, #0
@@ -1885,7 +1885,7 @@ func_ov00_020aff90: ; 0x020aff90
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r1, r6
@@ -2025,7 +2025,7 @@ func_ov00_020b014c: ; 0x020b014c
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r6
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	movs r6, r0
 	addeq sp, sp, #0x10
 	ldmeqia sp!, {r4, r5, r6, pc}

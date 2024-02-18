@@ -16,10 +16,7 @@ THUMB void ItemManager::ClearPrevEquippedItem() {
     this->mPrevEquippedItem = ItemFlag_None;
 }
 
-THUMB NONMATCH void ItemManager::Save(SaveItemManager *save) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/ItemManager/ItemManager_Save.inc"
-    #else
+THUMB void ItemManager::Save(SaveItemManager *save) {
     save->itemFlags = this->mItemFlags;
     save->numRupees = this->mNumRupees;
     for (s32 i = 0; i < NUM_POTIONS; ++i) {
@@ -34,23 +31,12 @@ THUMB NONMATCH void ItemManager::Save(SaveItemManager *save) {
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = this->mNumGems[i];
     }
-    u8 *saveEquippedParts = save->equippedShipParts;
-    const u32 *equippedParts = this->mEquippedShipParts;
-
-    s32 i = 0;
-    SaveItemManager *save2 = save;
-    ItemManager *this2 = this;
-    ShipParts (ItemManager::*shipParts)[ShipPart_COUNT] = &ItemManager::mShipParts;
-    for (; i < ShipPart_COUNT; ++i) {
+    for (s32 i = 0; i < ShipPart_COUNT; ++i) {
         save->equippedShipParts[i] = this->mEquippedShipParts[i];
         for (s32 j = 0; j < ShipType_COUNT; ++j) {
-            u8 shipPartCount = ((ItemManager*) ((u32)this2 + j)->*shipParts)[0].parts[0];
-            ((SaveItemManager*) ((u32)save2 + j))->shipParts[0].parts[0] = shipPartCount;
+            save->shipParts[i][j] = this->mShipParts[i][j];
         }
-        this2 = (ItemManager*) ((u32)this2 + sizeof(this2->mShipParts[0]));
-        save2 = (SaveItemManager*) ((u32)save2 + sizeof(save2->shipParts[0]));
     }
-
     save->shipPartPricesShown = this->mShipPartPricesShown;
     for (s32 i = 0; i < Treasure_COUNT; ++i) {
         save->treasure[i] = this->mTreasure[i];
@@ -68,14 +54,9 @@ THUMB NONMATCH void ItemManager::Save(SaveItemManager *save) {
         return;
     }
     save->equippedFairy = (u8) this->mEquippedFairy;
-    #endif
 }
 
-extern "C" bool _ZN11ItemManager7HasItemEj();
-THUMB NONMATCH void ItemManager::Load(const SaveItemManager *save) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/ItemManager/ItemManager_Load.inc"
-    #else
+THUMB void ItemManager::Load(const SaveItemManager *save) {
     this->mItemFlags = save->itemFlags;
     this->mNumRupees = save->numRupees;
     this->mHourglassSandFrames = save->hourglassSeconds <= MAX_HOURGLASS_SECONDS
@@ -97,25 +78,12 @@ THUMB NONMATCH void ItemManager::Load(const SaveItemManager *save) {
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         this->mNumGems[i] = save->numGems[i];
     }
-
-    s32 i = 0; // ip (r0)
-    ItemManager *this2 = this; // sp+0
-    const SaveItemManager *save2 = save; // r3
-    ItemManager *this3 = this; // r5
-    ShipParts (SaveItemManager::*shipParts)[ShipPart_COUNT] = &SaveItemManager::shipParts; // r7
-    do {
-        this2->mEquippedShipParts[0] = save->equippedShipParts[i];
+    for (s32 i = 0; i < ShipPart_COUNT; ++i) {
+        this->mEquippedShipParts[i] = save->equippedShipParts[i];
         for (s32 j = 0; j < ShipType_COUNT; ++j) {
-            u8 partCount = (((const SaveItemManager*) ((u32)save2 + j))->*shipParts)[0].parts[0];
-            ((ItemManager*) ((u32)this3 + j))->mShipParts[0].parts[0] = partCount;
+            this->mShipParts[i][j] = save->shipParts[i][j];
         }
-        save2 = (const SaveItemManager*) ((u32)save2 + sizeof(save->shipParts[0]));
-        this2 = (ItemManager*) ((u32)this2 + sizeof(this->mEquippedShipParts[0]));
-        ++i;
-        this3 = (ItemManager*) ((u32)this3 + sizeof(this->mShipParts[0]));
     }
-    while(i < ShipPart_COUNT);
-    
     this->mShipPartPricesShown = save->shipPartPricesShown;
     for (s32 i = 0; i < Treasure_COUNT; ++i) {
         this->mTreasure[i] = save->treasure[i];
@@ -143,7 +111,6 @@ THUMB NONMATCH void ItemManager::Load(const SaveItemManager *save) {
             this->mEquippedItem = ItemFlag_Boomerang;
         }
     }
-    #endif
 }
 
 ARM FairyId ItemManager::GetEquippedFairy() const {
@@ -272,6 +239,7 @@ extern void *data_027e0e60;
 extern "C" bool func_ov00_020849f8(void *param1);
 extern unk32 data_027e0fc8;
 extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
+extern "C" bool _ZNK11ItemManager7HasItemEj();
 extern "C" void _ZN11ItemManager12GetEquipItemEj();
 ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
     #ifndef NONMATCHING

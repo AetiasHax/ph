@@ -43,7 +43,7 @@
 .extern func_ov00_020a89bc
 .extern func_ov00_020af050
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020ba3b4
 .extern func_ov05_0210f808
 .extern func_ov00_020aeffc

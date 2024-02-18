@@ -586,7 +586,7 @@
 .extern data_027e0e60
 .extern func_ov00_0207c474
 .extern func_ov00_0207c474
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_0207c474
 .extern func_ov00_020b7e6c
 .extern func_ov00_020ceacc
@@ -1037,7 +1037,7 @@
 .extern func_01ff8aa0
 .extern func_01ff8e84
 .extern func_ov00_020b3ee8
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern data_02050f54
 .extern data_02051154
 .extern data_02051f54

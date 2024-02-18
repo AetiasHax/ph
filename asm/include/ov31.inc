@@ -62,9 +62,9 @@
 .extern func_ov00_020d77e4
 .extern gItemManager
 .extern data_ov00_020eec9c
-.extern _ZN11ItemManager7HasItemEj
-.extern _ZN11ItemManager7HasItemEj
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern _ZNK11ItemManager13HasAllPotionsEv
 .extern gItemManager
 .extern data_027e0fe4
@@ -85,9 +85,9 @@
 .extern func_ov14_02145e48
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern _ZN11ItemManager7HasItemEj
-.extern _ZN11ItemManager7HasItemEj
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_ov03_020f3d5c
 .extern func_ov03_020f3d5c
 .extern func_ov03_020f3d5c
@@ -365,7 +365,7 @@
 .extern func_ov00_02097760
 .extern func_ov00_02097760
 .extern func_ov00_02097760
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern data_027e0f74
 .extern gItemManager
 .extern func_ov18_02160a54

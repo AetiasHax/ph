@@ -4639,7 +4639,7 @@ _02104694:
 	beq _0210471c
 	ldr r0, [r6]
 	add r1, sb, #0x60
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _0210471c
 	ldr r0, [r6]
@@ -4772,7 +4772,7 @@ _0210485c:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0x15
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _021048a8
 	mov r2, #0
@@ -4832,7 +4832,7 @@ _0210493c:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0x16
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	addne sp, sp, #0x34
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -7074,7 +7074,7 @@ _02106810:
 	ldr r0, _02106890 ; =gItemManager
 	mov r1, #0x2d
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _02106874
 	ldr r0, [r6, #0x1c]
@@ -10295,21 +10295,21 @@ _02109420:
 	ldr r0, _02109524 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r4, r0
 	b _02109464
 _02109438:
 	ldr r0, _02109524 ; =gItemManager
 	mov r1, #2
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r4, r0
 	b _02109464
 _02109450:
 	ldr r0, _02109524 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r4, r0
 _02109464:
 	cmp r4, #0
@@ -10740,7 +10740,7 @@ func_ov05_021099dc: ; 0x021099dc
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldrsh r1, [r5, #0x80]
 	mov r4, r0
 	cmp r1, #4
@@ -12059,7 +12059,7 @@ _0210aba8:
 	ldr r0, _0210ad74 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r1, _0210ad74 ; =gItemManager
 	mov r4, r0
 	ldr r7, [r1]
@@ -12067,7 +12067,7 @@ _0210aba8:
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r7
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r5, r4
 	bne _0210ac7c
 	mov r0, #0x10000
@@ -12110,7 +12110,7 @@ _0210ac7c:
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, r5
 	mov r0, r6
 	beq _0210ad00
@@ -14073,7 +14073,7 @@ _0210c824:
 	ldr r2, [r7, #0x2c]
 	mov r1, #0
 	str r2, [sp, #0x14]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r1, _0210c950 ; =data_027e0e60
 	mov r4, r0
 	ldr r0, [r1]

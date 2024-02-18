@@ -6677,7 +6677,7 @@ _02172c54:
 	ldmeqia sp!, {r4, r5, pc}
 	ldr r0, _02172f10 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	beq _02172ee4
 	add r1, r5, #0x100
@@ -11391,7 +11391,7 @@ func_ov28_021768dc: ; 0x021768dc
 	ldr r0, _021769e4 ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x7ad]

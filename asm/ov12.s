@@ -8536,7 +8536,7 @@ _02119ac4:
 	ldr r0, _02119dc4 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r0, _02119dc8 ; =data_027e0fd4
 	ldr r4, [r0]
 	ldrb r0, [r4, #0x54]

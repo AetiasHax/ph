@@ -2910,7 +2910,7 @@ _0207b688:
 	ldr r0, _0207b818 ; =gItemManager
 	mov r1, #0x20
 	ldr r0, [r0]
-	blx _ZN11ItemManager7HasItemEj
+	blx _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _0207b6cc
 	ldrb r0, [r4, #0x12]

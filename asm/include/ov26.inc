@@ -124,7 +124,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern func_ov14_02143fc0
 .extern func_ov14_02144650
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_ov03_020f4b7c
 .extern gItemManager
 .extern data_027e077c
@@ -145,13 +145,13 @@
 .extern func_ov03_020fc014
 .extern func_020350b4
 .extern func_020351b8
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_ov00_020a5e9c
 .extern gItemManager
 .extern data_027e0d38
 .extern data_027e0fbc
 .extern func_020350ac
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_01ff9b4c
 .extern func_ov00_020d77e4
 .extern func_ov03_020fc078
@@ -335,7 +335,7 @@
 .extern func_ov00_020cc168
 .extern func_ov00_020cadb0
 .extern func_ov00_020cadb0
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
@@ -468,7 +468,7 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e04
 .extern func_ov14_02126b04
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern data_027e0ffc
 .extern gItemManager
 .extern func_ov14_02127188

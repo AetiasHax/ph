@@ -93,7 +93,7 @@ func_ov21_0216d784: ; 0x0216d784
 	ldr r1, _0216d7c0 ; =data_ov21_02170bd4
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	movne r0, #5
 	moveq r0, #0xc
@@ -151,14 +151,14 @@ func_ov21_0216d830: ; 0x0216d830
 	ldr r3, [r0, #0xb4]
 	ldr r2, _0216d850 ; =data_ov21_02170bd4
 	ldr r0, [r1]
-	ldr ip, _0216d854 ; =_ZN11ItemManager7HasItemEj
+	ldr ip, _0216d854 ; =_ZNK11ItemManager7HasItemEj
 	ldr r1, [r2, r3, lsl #2]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov21_0216d830
 _0216d84c: .word gItemManager
 _0216d850: .word data_ov21_02170bd4
-_0216d854: .word _ZN11ItemManager7HasItemEj
+_0216d854: .word _ZNK11ItemManager7HasItemEj
 
 	.global func_ov21_0216d858
 	arm_func_start func_ov21_0216d858

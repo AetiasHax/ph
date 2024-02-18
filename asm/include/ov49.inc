@@ -84,7 +84,7 @@
 .extern func_ov00_020bbc68
 .extern data_027e0fc8
 .extern func_01fffcd8
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern _ZN11ItemManager10RemoveItemEj
 .extern func_ov00_020d7ad4
 .extern func_ov00_020c5a24

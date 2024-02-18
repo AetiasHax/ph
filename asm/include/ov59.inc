@@ -1,6 +1,6 @@
 #pragma once
 .extern func_ov00_020beb30
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020a5e9c
 .extern func_ov00_020bc500
 .extern data_027e0fd4
@@ -17,7 +17,7 @@
 .extern func_ov00_020a8c78
 .extern func_0202b154
 .extern func_ov00_020a89bc
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020a8db8
 .extern func_ov00_020b0240
 .extern func_ov00_020a81ec
@@ -38,7 +38,7 @@
 .extern gItemManager
 .extern data_027e0fb8
 .extern func_01fffcec
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020b853c
 .extern gItemManager
 .extern func_ov00_020b0240
@@ -151,6 +151,6 @@
 .extern data_027e0f94
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern gItemManager
 .extern data_027e0fb8

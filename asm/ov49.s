@@ -856,7 +856,7 @@ func_ov49_02196008: ; 0x02196008
 	ldr r0, _021960f0 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _0219605c
 	ldr r0, _021960f0 ; =gItemManager

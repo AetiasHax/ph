@@ -396,7 +396,7 @@ _021991a8:
 	bl _ZNK11ItemManager16GetEquippedFairyEv
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	beq _0219920c
 	bl func_ov00_020ba3b4

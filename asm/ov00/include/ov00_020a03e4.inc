@@ -541,7 +541,7 @@
 .extern func_02019534
 .extern data_ov00_020e9360
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_0207c5d4
 .extern gItemManager
 .extern data_027e0e58
@@ -864,7 +864,7 @@
 .extern func_ov00_020af050
 .extern data_027e0fb8
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020ba458
 .extern gItemManager
 .extern func_01ff9bf8
@@ -988,7 +988,7 @@
 .extern func_ov00_020b7e6c
 .extern func_ov00_020b7e6c
 .extern func_ov05_021113c4
-.extern _ZN11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEj
 .extern func_ov00_02097760
 .extern func_ov00_0209779c
 .extern data_027e0e58

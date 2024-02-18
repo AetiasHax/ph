@@ -256,7 +256,7 @@ _020d1cdc:
 	ldr r0, _020d1da0 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	add r0, r0, #0x200
 	mov r1, #0
 	strh r1, [r0, #0x8a]
@@ -268,7 +268,7 @@ _020d1d08:
 	ldr r0, _020d1da0 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	add r0, r0, #0x200
 	mov r1, #1
 	strh r1, [r0, #0x8a]
@@ -280,7 +280,7 @@ _020d1d34:
 	ldr r0, _020d1da0 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	add r0, r0, #0x200
 	mov r1, #2
 	strh r1, [r0, #0x8a]
@@ -292,7 +292,7 @@ _020d1d60:
 	ldr r0, _020d1da0 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	add r0, r0, #0x200
 	mov r1, #3
 	strh r1, [r0, #0x8a]
@@ -879,7 +879,7 @@ _020d2560: ; jump table
 _020d2588:
 	ldr r0, _020d27d8 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r3, [r0]
 	mov r1, r4
 	ldr r3, [r3, #0x90]
@@ -894,7 +894,7 @@ _020d25bc:
 	ldr r0, _020d27d8 ; =gItemManager
 	sub r1, r2, #0x40
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r3, [r0]
 	mov r1, r4
 	ldr r3, [r3, #0x94]
@@ -911,7 +911,7 @@ _020d25f8:
 	ldr r0, _020d27d8 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r1, #1
 	strb r1, [r0, #0x28e]
 	add sp, sp, #8
@@ -960,7 +960,7 @@ _020d26ac:
 	ldr r0, _020d27d8 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r1, [r6, #4]
 	cmp r1, #0
 	beq _020d26d4
@@ -3121,7 +3121,7 @@ func_ov00_020d4058: ; 0x020d4058
 	bl func_ov00_020d4020
 	mov r1, r0
 	mov r0, r5
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r1, #0x10000
 	ldr r0, [r0, #0x23c]
 	rsb r1, r1, #0
@@ -3160,7 +3160,7 @@ func_ov00_020d40d8: ; 0x020d40d8
 	bl func_ov00_020d4020
 	mov r1, r0
 	mov r0, r5
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r1, [r4, #0x130]
 	cmp r1, #0
 	bne _020d4120
@@ -3217,7 +3217,7 @@ func_ov00_020d4134: ; 0x020d4134
 	bl func_ov00_020d4020
 	mov r1, r0
 	mov r0, r6
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	mov r1, r4
 	ldr r4, [r0]
 	add r3, r5, #0x48
@@ -3239,7 +3239,7 @@ _020d41f4:
 	bl func_ov00_020d4020
 	mov r1, r0
 	mov r0, r5
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	ldr r5, [r0]
 	mov r1, r4
 	ldr r5, [r5, #0xbc]
@@ -3319,7 +3319,7 @@ func_ov00_020d42e4: ; 0x020d42e4
 	bl func_ov00_020d4020
 	mov r1, r0
 	mov r0, r4
-	bl _ZNK11ItemManager8GetFairyEj
+	bl _ZNK11ItemManager8GetFairyEi
 	add r0, r0, #0x224
 	ldmia sp!, {r4, pc}
 	.align 2, 0

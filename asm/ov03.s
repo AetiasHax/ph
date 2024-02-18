@@ -5781,7 +5781,7 @@ _020f23e8:
 	ldr r0, _020f2518 ; =gItemManager
 	mov r1, #0x21
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	addeq sp, sp, #0x18
 	moveq r0, #1
@@ -16321,28 +16321,28 @@ _020f8fec: ; jump table
 _020f8ffc:
 	ldr r0, [sl]
 	mov r1, #0x21
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020f9058
 	b _020f91c0
 _020f9014:
 	ldr r0, [sl]
 	mov r1, #0x23
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020f9058
 	b _020f91c0
 _020f902c:
 	ldr r0, [sl]
 	mov r1, #0x22
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020f9058
 	b _020f91c0
 _020f9044:
 	ldr r0, [sl]
 	mov r1, #0x24
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _020f91c0
 _020f9058:
@@ -16467,7 +16467,7 @@ _020f91f4: ; jump table
 _020f9204:
 	ldr r0, [r4]
 	mov r1, #0x21
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _020f92c8
 	ldr r0, [sl]
@@ -16484,21 +16484,21 @@ _020f9204:
 _020f9244:
 	ldr r0, [r4]
 	mov r1, #0x23
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020f9288
 	b _020f92c8
 _020f925c:
 	ldr r0, [r4]
 	mov r1, #0x22
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	bne _020f9288
 	b _020f92c8
 _020f9274:
 	ldr r0, [r4]
 	mov r1, #0x24
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	cmp r0, #0
 	beq _020f92c8
 _020f9288:
@@ -16890,22 +16890,22 @@ _020f97b4:
 	ldr r0, _020f9a74 ; =gItemManager
 	mov r1, #0x21
 	ldr r0, [r0]
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	ldr r1, _020f9a74 ; =gItemManager
 	strb r0, [sp, #0x44]
 	ldr r0, [r1]
 	mov r1, #0x22
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	ldr r1, _020f9a74 ; =gItemManager
 	strb r0, [sp, #0x45]
 	ldr r0, [r1]
 	mov r1, #0x23
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	ldr r1, _020f9a74 ; =gItemManager
 	strb r0, [sp, #0x46]
 	ldr r0, [r1]
 	mov r1, #0x24
-	bl _ZN11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEj
 	strb r0, [sp, #0x47]
 	ldr r0, [sp, #0x10]
 	mov r5, #4

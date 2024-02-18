@@ -490,7 +490,7 @@
 .extern func_ov00_020c3674
 .extern func_ov05_0210e4e4
 .extern func_ov00_020a7c00
-.extern _ZNK11ItemManager8GetFairyEj
+.extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020b510c
 .extern func_ov00_020b50f8
 .extern func_ov00_020d77e4
