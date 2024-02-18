@@ -3,29 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager19SetTreasureSalvagedEj
-	thumb_func_start _ZN11ItemManager19SetTreasureSalvagedEj
-_ZN11ItemManager19SetTreasureSalvagedEj: ; 0x020adadc
-	push {r4, r5}
-	mov r2, #0x4e
-	lsl r2, r2, #2
-	add r2, r0, r2
-	lsr r0, r1, #5
-	lsl r0, r0, #2
-	mov r3, #0x1f
-	mov r4, #1
-	and r1, r3
-	add r3, r4, #0
-	ldr r5, [r2, r0]
-	lsl r3, r1
-	add r1, r5, #0
-	orr r1, r3
-	str r1, [r2, r0]
-	pop {r4, r5}
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager19SetTreasureSalvagedEj
-
 	.global _ZN11ItemManager10RemoveItemEj
 	thumb_func_start _ZN11ItemManager10RemoveItemEj
 _ZN11ItemManager10RemoveItemEj: ; 0x020adb00

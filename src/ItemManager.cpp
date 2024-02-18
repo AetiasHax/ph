@@ -369,3 +369,7 @@ THUMB void ItemManager::AddItem(ItemFlag item) {
 ARM bool ItemManager::IsTreasureSalvaged(u32 index) const {
     return GET_FLAG(&this->mSalvagedTreasureFlags, index);
 }
+
+THUMB void ItemManager::SetTreasureSalvaged(u32 index) {
+    SET_FLAG(&this->mSalvagedTreasureFlags, index);
+}
