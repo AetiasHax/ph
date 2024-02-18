@@ -3,13 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager19GetMaxTreasureCountEv
-	thumb_func_start _ZNK11ItemManager19GetMaxTreasureCountEv
-_ZNK11ItemManager19GetMaxTreasureCountEv: ; 0x020ad9e4
-	mov r0, #0x63
-	bx lr
-	thumb_func_end _ZNK11ItemManager19GetMaxTreasureCountEv
-
 	.global _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 	arm_func_start _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
 _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj: ; 0x020ad9e8
@@ -1333,7 +1326,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
 
 	.global _ZN11ItemManager13ForceEquipItemEj
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEj
