@@ -3746,7 +3746,7 @@ func_ov00_0209ed30: ; 0x0209ed30
 	mov r0, #0x1000
 	mov r5, r2
 	mov r4, r3
-	bl func_01ff98e0
+	bl Divide
 	sub r1, r7, r6
 	smull r0, r3, r1, r0
 	adds r6, r0, #0x800
@@ -3845,17 +3845,17 @@ func_ov00_0209ee88: ; 0x0209ee88
 	str r0, [sp, #0x1c]
 	str r3, [sp, #0x24]
 	str r2, [sp, #0x20]
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 	sub r0, sl, r7
 	mov r1, r4
 	str r0, [sp, #0x14]
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	sub fp, r8, r6
 	ldr r0, [sp, #0x1c]
 	mov r1, fp
-	bl func_01ff98e0
+	bl Divide
 	str r0, [sp, #0x28]
 	mov r0, r5, asr #0x1f
 	mov r1, r0, lsl #0xc
@@ -3872,7 +3872,7 @@ func_ov00_0209ee88: ; 0x0209ee88
 	sub r0, sb, sl
 	ldr r1, [sp, #0x18]
 	str r0, [sp, #0x10]
-	bl func_01ff98e0
+	bl Divide
 	str r0, [sp, #0x30]
 	mov r0, r4, asr #0x1f
 	mov r2, r0, lsl #0xc
@@ -3886,17 +3886,17 @@ func_ov00_0209ee88: ; 0x0209ee88
 	sub r0, sl, r6
 	mov fp, r4, asr #0x1f
 	str r0, [sp, #4]
-	bl func_01ff98e0
+	bl Divide
 	str r0, [sp, #0x34]
 	ldr r1, [sp, #0x18]
 	ldr r0, [sp, #0x14]
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #0x24]
 	str r0, [sp, #0x38]
 	sub r1, r8, r1
 	ldr r0, [sp, #0x1c]
 	str r1, [sp, #0xc]
-	bl func_01ff98e0
+	bl Divide
 	sub r1, sb, r6
 	str r1, [sp, #8]
 	ldr r1, [sp, #0x28]
@@ -3910,7 +3910,7 @@ func_ov00_0209ee88: ; 0x0209ee88
 	str r1, [sp, #0x48]
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #8]
-	bl func_01ff98e0
+	bl Divide
 	str r0, [sp, #0x40]
 	ldr r2, [sp, #0x34]
 	ldr r0, [sp, #0x24]
@@ -3938,14 +3938,14 @@ func_ov00_0209ee88: ; 0x0209ee88
 	mov r5, r8, lsr #0xc
 	orr r5, r5, r3, lsl #20
 	add r8, r2, r5
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #0x20]
 	mov r5, r0
 	mov r0, r1
 	sub r7, r1, r7
 	sub r0, r0, sl
 	mov r1, r7
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, [sp, #0x38]
 	str r0, [sp, #0x44]
 	umull sl, sb, r2, r4
@@ -3958,11 +3958,11 @@ func_ov00_0209ee88: ; 0x0209ee88
 	adc r2, sb, #0
 	mov r4, r3, lsr #0xc
 	orr r4, r4, r2, lsl #20
-	bl func_01ff98e0
+	bl Divide
 	mov sl, r0
 	ldr r0, [sp, #0x14]
 	mov r1, r7
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #0x40]
 	smull sb, r7, sl, r8
 	smull r3, lr, r1, r8
@@ -4391,7 +4391,7 @@ _0209f600:
 	mov r0, r1, lsr #0xc
 	ldr r1, [r7, #8]
 	orr r0, r0, r2, lsl #20
-	bl func_01ff98e0
+	bl Divide
 	add r0, r6, r0
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0209f634:

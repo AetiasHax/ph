@@ -544,7 +544,7 @@
 .extern func_ov14_0214aa0c
 .extern func_ov00_020c28ec
 .extern func_ov00_020c288c
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ffe1cc
 .extern func_ov00_020c29ec
 .extern func_ov14_0214aa0c
@@ -606,7 +606,7 @@
 .extern func_ov14_02145318
 .extern func_ov14_02145cac
 .extern func_01ff9958
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov14_02145178
 .extern func_ov00_020c5374
 .extern func_ov00_02084164

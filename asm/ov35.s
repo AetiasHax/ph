@@ -4575,7 +4575,7 @@ _0217fc10:
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	mov r0, #0x1f000
 	mov r1, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	add r0, r0, #0xff
 	mov r1, #0x1000
 	add r0, r0, #0xf00
@@ -6688,7 +6688,7 @@ _02181a0c:
 	bne _02181ad0
 	mov r0, #0x1f000
 	mov r1, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	add r0, r0, #0xff
 	mov r1, #0x1000
 	add r0, r0, #0xf00
@@ -6799,7 +6799,7 @@ _02181bbc:
 	ble _02181bf0
 	sub r0, r0, #0x2800
 	mov r1, #0x2800
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x1f4
 	b _02181bf0
 _02181bec:
@@ -7657,7 +7657,7 @@ _02182768:
 	mov r0, r0, lsl #0xc
 	rsb r0, r0, #0x64000
 	mov r1, #0x64000
-	bl func_01ff98e0
+	bl Divide
 	rsb r1, r0, #0x1000
 	mov r0, r4
 	str r1, [r4, #0x56c]

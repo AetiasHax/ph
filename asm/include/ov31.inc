@@ -433,9 +433,9 @@
 .extern data_027e0fec
 .extern func_ov14_02147870
 .extern func_ov14_02145100
-.extern func_01ff98e0
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
+.extern Divide
 .extern func_0200e2a4
 .extern func_0200e2a4
 .extern func_02017d30

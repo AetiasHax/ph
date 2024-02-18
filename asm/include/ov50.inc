@@ -289,7 +289,7 @@
 .extern func_ov00_020b7d74
 .extern func_0203e784
 .extern func_0204f8d4
-.extern func_01ff98e0
+.extern Divide
 .extern func_0203e7b4
 .extern func_0203e784
 .extern func_0204f8d4

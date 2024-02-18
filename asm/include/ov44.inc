@@ -110,7 +110,7 @@
 .extern func_ov00_020c38fc
 .extern func_ov00_020c53e8
 .extern func_ov00_020ce284
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020c3674
 .extern func_ov00_020c3674
 .extern data_027e0fe4
@@ -502,9 +502,9 @@
 .extern func_ov00_020c38fc
 .extern func_ov00_020c53e8
 .extern func_ov00_020ce284
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020c3674
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020c3674
 .extern func_ov00_020c28ec
 .extern data_027e0fe4

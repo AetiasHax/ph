@@ -224,7 +224,7 @@
 .extern func_ov00_0207c7e8
 .extern func_ov00_020c3180
 .extern data_027e0e5c
-.extern func_01ff98e0
+.extern Divide
 .extern func_02002c14
 .extern func_01ff9bf8
 .extern func_01ff9bf8

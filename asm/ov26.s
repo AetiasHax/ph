@@ -1517,7 +1517,7 @@ _0216e6f8:
 	ldrsh r0, [r5, #0xc]
 	mov r1, #0xa000
 	mov r0, r0, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 	mov r0, #0x11000
 	rsb r0, r0, #0
@@ -6292,7 +6292,7 @@ _021725ec:
 	ldmleia sp!, {r4, pc}
 	ldr r2, [r4, #0x70]
 	sub r0, r0, r2
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x70]
 	add r0, r1, r0
 	str r0, [r4, #0x70]
@@ -12668,7 +12668,7 @@ _0217717c:
 	ldr r0, _02177214 ; =data_ov00_020eec60
 	bl func_ov00_020d6be4
 	mov r1, #0xff
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	add r2, sp, #0
 	mov r0, r6
@@ -12734,7 +12734,7 @@ func_ov26_02177218: ; 0x02177218
 	ldmgeia sp!, {r3, r4, pc}
 	ldr r0, [r0, #0x18]
 	mov r1, #0x1e000
-	bl func_01ff98e0
+	bl Divide
 	add r0, r0, #0x800
 	mov r0, r0, asr #0xc
 	add r4, r0, #0x2e
@@ -14103,7 +14103,7 @@ func_ov26_021782ac: ; 0x021782ac
 	ldrb r5, [r1, r2, asr #1]
 	ble _02178354
 	mov r1, #0xe000
-	bl func_01ff98e0
+	bl Divide
 	rsb r0, r0, r0, lsl #7
 	add r0, r0, #0x800
 	mov r3, r0, asr #0xc

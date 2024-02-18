@@ -3054,7 +3054,7 @@ _020cbf64:
 	mov r1, r2, lsl #0xc
 	sub r0, r2, r0
 	mov r0, r0, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	ldr ip, [r4, #0x1b4]
 	rsb r1, ip, #0x1000
 	smull r3, r2, r1, r0
@@ -3114,7 +3114,7 @@ _020cc054:
 	sub r0, r2, r1
 	mov r0, r0, lsl #0xc
 	mov r1, r2, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	ldr ip, [r4, #0x1b4]
 	rsb r1, ip, #0x1000
 	smull r3, r2, r1, r0
@@ -5952,7 +5952,7 @@ func_ov00_020ce440: ; 0x020ce440
 	ldr r2, [sp, #0xc]
 	sub r1, r7, r0
 	add r0, r0, r2
-	bl func_01ff98e0
+	bl Divide
 	rsbs r0, r0, #0
 	movmi r0, #0
 	bmi _020ce4c8
@@ -6404,7 +6404,7 @@ _020ce9e8:
 	cmp r1, #0
 	beq _020cea00
 	mov r0, r2
-	bl func_01ff98e0
+	bl Divide
 _020cea00:
 	mov r0, r0, lsl #0x6
 	add r0, r0, #0x800
@@ -6724,7 +6724,7 @@ func_ov00_020cedbc: ; 0x020cedbc
 	beq _020cede8
 	sub r0, r1, r2
 	sub r1, r3, r2
-	bl func_01ff98e0
+	bl Divide
 _020cede8:
 	rsb r0, r0, r0, lsl #8
 	add r0, r0, #0x800
@@ -7760,7 +7760,7 @@ _020cf888:
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 _020cf8d0:
 	cmp r0, r6
 	movle r0, r6

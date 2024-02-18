@@ -871,7 +871,7 @@
 .extern data_027e0fc8
 .extern data_027e0e58
 .extern func_ov00_020c5ec0
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ff8214
 .extern func_01ff8124
 .extern func_01ff8690

@@ -8604,7 +8604,7 @@ _021747f8:
 	sub r0, r4, #0x8000
 	mov r1, #0x5000
 	strb r2, [r5, #0x1b8]
-	bl func_01ff98e0
+	bl Divide
 	str r0, [r5, #0x1bc]
 	cmp r0, #0x1000
 	movgt r0, #0x1000

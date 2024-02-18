@@ -1203,7 +1203,7 @@ _0216e668:
 	ble _0216e698
 	ldr r2, [r4, #0x6c]
 	sub r0, r0, r2
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x6c]
 	add r0, r1, r0
 _0216e698:
@@ -5715,7 +5715,7 @@ func_ov22_021721f8: ; 0x021721f8
 	ldr r0, [r4, #0x18]
 	mov r1, #0x4000
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	rsb r3, r0, #0x1000
 	mov r0, r3, asr #0x1f
 	mov r1, r0, lsl #0xb
@@ -11202,12 +11202,12 @@ func_ov22_0217687c: ; 0x0217687c
 	rsb r0, r0, #0
 	ldr r1, [sp, #0x18]
 	sub r0, r0, r2
-	bl func_01ff98e0
+	bl Divide
 	mov r7, r0
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x18]
 	rsb r0, r0, #0x5000
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, [sp, #0x2c]
 	ldr r1, [sp, #0x30]
 	str r2, [sp, #0x20]

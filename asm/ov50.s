@@ -3907,7 +3907,7 @@ func_ov50_0219882c: ; 0x0219882c
 	ldr r2, _0219888c ; =data_ov50_021989c0
 	mov r0, #0x10000000
 	str r1, [r2]
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _0219888c ; =data_ov50_021989c0
 	strh r0, [r1, #4]
 	ldmia sp!, {r3, pc}

@@ -1546,7 +1546,7 @@ _0218a868:
 	bl func_ov44_0218a2d0
 	mov r0, #0x1000
 	mov r1, #0x400
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x138]
 	cmp r1, r0, asr #12
 	ble _0218a8ec
@@ -6157,7 +6157,7 @@ _0218e018:
 	bl func_ov44_0218d988
 	ldr r1, _0218e198 ; =0x00000266
 	mov r0, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x138]
 	cmp r1, r0, asr #12
 	ble _0218e180
@@ -6174,7 +6174,7 @@ _0218e058:
 	bl func_ov44_0218d988
 	ldr r1, _0218e198 ; =0x00000266
 	mov r0, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x138]
 	cmp r1, r0, asr #12
 	ble _0218e180

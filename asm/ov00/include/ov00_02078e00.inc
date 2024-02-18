@@ -23,8 +23,8 @@
 .extern data_027e0e60
 .extern data_027e0184
 .extern func_ov03_020f06ac
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
 .extern data_027e0c38
 .extern func_ov00_02083394
 .extern func_ov00_020833a0

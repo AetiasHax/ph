@@ -62,8 +62,8 @@
 .extern func_01ff9958
 .extern func_01ff9f3c
 .extern func_020037b8
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
 .extern data_02050f54
 .extern func_01ff998c
 .extern func_0204f8d4

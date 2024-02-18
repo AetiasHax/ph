@@ -146,8 +146,8 @@
 .extern func_ov00_020a7b9c
 .extern func_ov00_020c070c
 .extern data_027e0ffc
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
 .extern func_ov00_02083ee0
 .extern func_ov00_020c87f8
 .extern func_ov00_020c3180
@@ -306,7 +306,7 @@
 .extern func_01ff9c2c
 .extern func_01ff9c2c
 .extern func_01ff9c2c
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_02093a1c
 .extern data_027e0f6c
 .extern func_ov00_02093a1c
@@ -328,7 +328,7 @@
 .extern data_ov00_020eec68
 .extern data_027e0f94
 .extern data_027e0f64
-.extern func_01ff98e0
+.extern Divide
 .extern data_027e0f64
 .extern data_02050f54
 .extern data_02050f54
@@ -358,7 +358,7 @@
 .extern func_ov00_020d8510
 .extern data_027e0e60
 .extern data_ov00_020eec9c
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ff9ec0
 .extern func_ov00_020d6594
 .extern func_0202cec8
@@ -403,7 +403,7 @@
 .extern func_ov14_02152220
 .extern gItemManager
 .extern data_027e0618
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_02079e04
 .extern func_ov03_020f3ff8
 .extern func_ov00_020a5e9c

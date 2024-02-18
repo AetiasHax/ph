@@ -8307,7 +8307,7 @@ _02117624:
 	sub r0, r4, r0
 	blx func_0200388c
 	add r1, r6, #0
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	add r0, r5, #0
 	neg r1, r1
@@ -15316,7 +15316,7 @@ func_ov09_0211b848: ; 0x0211b848
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 _0211b88c:
 	ldrsh r0, [r4, #0xa]
@@ -15348,7 +15348,7 @@ func_ov09_0211b8b0: ; 0x0211b8b0
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 _0211b8f0:
 	ldrsh r3, [r4, #0xc]
 	ldrsh r1, [r4, #0xa]
@@ -18114,7 +18114,7 @@ _0211cf30:
 	str r0, [r4, #8]
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, [sp, #0x10]
 	blx func_0200388c
@@ -18125,7 +18125,7 @@ _0211cf30:
 	mov r1, #0x5a
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, [sp, #0x14]
 	blx func_0200388c
@@ -18136,7 +18136,7 @@ _0211cf30:
 	mov r1, #0x5a
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, [sp, #0x18]
 	blx func_0200388c
@@ -18161,7 +18161,7 @@ _0211cf88:
 	mov r1, #0x5a
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, _0211d008 ; =data_ov09_0211e3bc
 	ldr r0, [r0, #0x10]
@@ -18173,7 +18173,7 @@ _0211cf88:
 	mov r1, #0x5a
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, _0211d008 ; =data_ov09_0211e3bc
 	ldr r0, [r0, #0x14]
@@ -18185,7 +18185,7 @@ _0211cf88:
 	mov r1, #0x5a
 	ldr r0, _0211d000 ; =0x0ffff000
 	lsl r1, r1, #0xe
-	blx func_01ff98e0
+	blx Divide
 	add r1, r0, #0
 	ldr r0, _0211d008 ; =data_ov09_0211e3bc
 	ldr r0, [r0, #0x18]

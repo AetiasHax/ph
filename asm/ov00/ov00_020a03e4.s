@@ -1345,7 +1345,7 @@ func_ov00_020a142c: ; 0x020a142c
 	ldrh r1, [r4, #4]
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	ldr r5, [r4, #8]
 	ldr r3, [r4, #0xc]
 	ldr r1, _020a1534 ; =0x02710000
@@ -2380,7 +2380,7 @@ func_ov00_020a1fd0: ; 0x020a1fd0
 	bgt _020a2118
 	rsb r0, r4, #0x2000
 	mov r1, #0x2000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r7, #4]
 	mov r4, r0
 	ldr r0, [r1, #0x15c]
@@ -2428,7 +2428,7 @@ _020a2118:
 	add r0, r4, r0
 	add r0, r0, #0x4000
 	mov r1, #0x4000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r7, #4]
 	mov r4, r0
 	ldr r0, [r1, #0x15c]
@@ -5194,7 +5194,7 @@ func_ov00_020a44d0: ; 0x020a44d0
 	ble _020a4524
 	ldr r0, [r6, #0x74]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r6, #0x74]
 	add r0, r1, r0
 	str r0, [r6, #0x74]
@@ -5215,7 +5215,7 @@ _020a4524:
 	ble _020a4574
 	ldr r0, [r6, #0x78]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r6, #0x78]
 	add r0, r1, r0
 	str r0, [r6, #0x78]
@@ -5989,7 +5989,7 @@ _020a4ed8:
 	sub r0, r2, r0
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x4
-	bl func_01ff98e0
+	bl Divide
 	add r2, r7, r6, lsl #1
 	ldrsh r1, [r2, #0x3c]
 	add r0, r0, #0x800
@@ -8029,7 +8029,7 @@ _020a67d0:
 	ldr r0, [r4, #0x34]
 	mov r1, r5
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x34]
 	add r0, r1, r0
 	str r0, [r4, #0x34]
@@ -9222,7 +9222,7 @@ func_ov00_020a7764: ; 0x020a7764
 	ble _020a77b8
 	ldr r0, [r6, #0x74]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r6, #0x74]
 	add r0, r1, r0
 	str r0, [r6, #0x74]
@@ -9235,7 +9235,7 @@ _020a77b8:
 	ble _020a77e8
 	ldr r0, [r6, #0x70]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r6, #0x70]
 	add r0, r1, r0
 	str r0, [r6, #0x70]
@@ -14610,7 +14610,7 @@ func_ov00_020ab4a4: ; 0x020ab4a4
 	bge _020ab4ec
 	sub r0, r0, #0x2000
 	mov r1, #0x5000
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 _020ab4ec:
 	mov r0, r6

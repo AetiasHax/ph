@@ -114,7 +114,7 @@
 .extern func_01ff9c2c
 .extern func_02007908
 .extern func_01ff9958
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ff9e64
 .extern func_01ff9bf8
 .extern func_01ff9bc4
@@ -751,7 +751,7 @@
 .extern func_01ff9bf8
 .extern func_01fffbec
 .extern func_01ff9cec
-.extern func_01ff98e0
+.extern Divide
 .extern func_01fffbec
 .extern func_01ff9bc4
 .extern func_ov09_021136c4

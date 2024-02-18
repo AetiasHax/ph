@@ -1,7 +1,7 @@
 #pragma once
 .extern func_01ff9bf8
 .extern func_01ff9cec
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020840c4
 .extern func_ov14_0213d248
 .extern func_ov00_020c3674

@@ -11445,7 +11445,7 @@ func_ov20_02176d48: ; 0x02176d48
 	rsb r0, r0, #0x1f
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x4
-	bl func_01ff98e0
+	bl Divide
 	add r1, r4, #0x100
 	ldrsh r2, [r1, #0xf0]
 	add r0, r0, #0x800

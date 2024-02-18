@@ -199,7 +199,7 @@
 .extern data_027e1098
 .extern data_027e0d3c
 .extern data_027e0f94
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d03f8
 .extern func_ov00_02078fd4
 .extern func_0202e740

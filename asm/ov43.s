@@ -3576,7 +3576,7 @@ _0218c59c:
 	bne _0218c634
 	mov r0, r5
 	mov r1, #0xb000
-	bl func_01ff98e0
+	bl Divide
 	str r0, [r4, #0x3d0]
 	mov r0, r4
 	mov r1, #6
@@ -4479,7 +4479,7 @@ _0218d230:
 	blt _0218d294
 	sub r0, r0, #0xd000
 	mov r1, #0xc000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _0218d2e4 ; =0x0000099a
 	mov r2, #0
 	umull ip, r3, r0, r1

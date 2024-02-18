@@ -601,7 +601,7 @@ func_ov32_0217c484: ; 0x0217c484
 	ldr r1, [r4, #0x30c]
 	ldr r0, [r1, #0x14]
 	ldr r1, [r1, #0x1c]
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r5, #8]
 	mov r6, r0
 	cmp r1, #0
@@ -807,7 +807,7 @@ func_ov32_0217c748: ; 0x0217c748
 	ldr r1, [r5, #0x30c]
 	ldr r0, [r1, #0x14]
 	ldr r1, [r1, #0x1c]
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	mov r0, r5
 	bl func_ov32_0217d304
@@ -3725,7 +3725,7 @@ _0217ecf4:
 	beq _0217ed94
 	ldr r0, [r4, #0x2a8]
 	mov r1, #0x22
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 	mov r0, #0
 	mov r1, #0x2b8
@@ -8220,7 +8220,7 @@ func_ov32_0218286c: ; 0x0218286c
 	beq _02182984
 	ldr r0, [r4, #0x9c]
 	mov r1, #0x23000
-	bl func_01ff98e0
+	bl Divide
 	mov r2, #0x5000
 	umull r1, ip, r0, r2
 	mov r3, #0
@@ -9893,7 +9893,7 @@ func_ov32_02183ecc: ; 0x02183ecc
 	ldrh r0, [r0, #0x2c]
 	mov r1, #0x1e000
 	mov r0, r0, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, _02183f7c ; =0x00e39000
 	add r3, r4, #0x200
 	umull lr, ip, r0, r2

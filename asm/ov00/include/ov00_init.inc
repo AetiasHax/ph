@@ -91,7 +91,7 @@
 .extern func_ov00_02093c9c
 .extern func_0203ebc8
 .extern data_ov00_020ecdcc
-.extern func_01ff98e0
+.extern Divide
 .extern data_ov00_020e2fa8
 .extern data_ov00_020e30ec
 .extern data_ov00_020e31ec
@@ -147,8 +147,8 @@
 .extern data_ov00_020ee148
 .extern data_ov00_020e5104
 .extern data_ov00_020ee13c
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
 .extern data_ov00_020e5134
 .extern func_0204f8d4
 .extern data_ov00_020e518c

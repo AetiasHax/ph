@@ -3093,7 +3093,7 @@ func_ov48_02192484: ; 0x02192484
 	mov r4, r0
 	ldr r0, _021925fc ; =0x000025c3
 	ldr r1, _02192600 ; =0x0000013f
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x340]
 	mov r7, #0
 	sub r1, r1, #1

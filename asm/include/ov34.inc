@@ -472,7 +472,7 @@
 .extern data_ov00_020eec68
 .extern data_027e0fc8
 .extern func_ov00_020cc940
-.extern func_01ff98e0
+.extern Divide
 .extern func_0202b154
 .extern func_0202b2e8
 .extern func_0202e58c
@@ -547,7 +547,7 @@
 .extern func_ov00_020d59f0
 .extern func_ov00_020d5c54
 .extern func_ov00_020d5cd8
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d59f0
 .extern func_ov00_020d59f0
 .extern func_ov00_020d59f0

@@ -3,30 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager18GetUnk_09e_DividedEj
-	thumb_func_start _ZNK11ItemManager18GetUnk_09e_DividedEj
-_ZNK11ItemManager18GetUnk_09e_DividedEj: ; 0x020ad944
-	push {r3, lr}
-	lsl r1, r1, #1
-	add r0, r0, r1
-	add r0, #0x9e
-	ldrh r0, [r0]
-	ldr r1, _020ad968 ; =0x000028a4
-	lsl r0, r0, #0xc
-	blx func_01ff98e0
-	mov r1, #2
-	lsl r1, r1, #0xa
-	add r0, r0, r1
-	asr r0, r0, #0xc
-	cmp r0, #1
-	bge _020ad964
-	mov r0, #1
-_020ad964:
-	pop {r3, pc}
-	nop
-	thumb_func_end _ZNK11ItemManager18GetUnk_09e_DividedEj
-_020ad968: .word 0x000028a4
-
 	.global _ZN11ItemManager10SetUnk_09eEjj
 	thumb_func_start _ZN11ItemManager10SetUnk_09eEjj
 _ZN11ItemManager10SetUnk_09eEjj: ; 0x020ad96c

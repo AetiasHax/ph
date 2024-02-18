@@ -1986,7 +1986,7 @@ func_ov49_02197020: ; 0x02197020
 	bne _021970ac
 	ldr r0, [r5, #0x138]
 	mov r1, #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x1800
 	rsb r1, r1, #0
 	umull ip, r3, r0, r1
@@ -2111,7 +2111,7 @@ _02197214:
 	ldrsb r0, [r0, #0xcc]
 	mov r1, #6
 	rsb r0, r0, #6
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _02197340 ; =0x00001333
 	mov r2, #0
 	umull ip, r3, r0, r1

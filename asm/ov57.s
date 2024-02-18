@@ -21,7 +21,7 @@ func_ov57_02198d00: ; 0x02198d00
 	movle r0, #0
 	ldmleia sp!, {r3, r4, r5, r6, pc}
 	mov r0, r6
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp]
 	ldr r3, [r4]
 	smull r2, r1, r0, r1

@@ -10045,7 +10045,7 @@ _0211aefc:
 	bge _0211af38
 	sub r0, r4, #0xa4
 	sub r1, r1, #0xa4
-	bl func_01ff98e0
+	bl Divide
 	mov r3, r0
 	mov r0, r5
 	ldr r4, [r0]
@@ -24226,7 +24226,7 @@ _021267f4:
 	add r0, r0, #0x1000
 	str r0, [r5, #0x34]
 	ldr r1, [r5, #0x30]
-	bl func_01ff98e0
+	bl Divide
 	mov r6, r0
 	ldr r0, [r5, #0x28]
 	ldr r1, [r5, #0x20]
@@ -27343,7 +27343,7 @@ _02129140:
 	add r0, r0, #0x1000
 	str r0, [r5, #0x34]
 	ldr r1, [r5, #0x30]
-	bl func_01ff98e0
+	bl Divide
 	mov r6, r0
 	ldr r0, [r5, #0x28]
 	ldr r1, [r5, #0x20]
@@ -27890,7 +27890,7 @@ func_ov12_02129760: ; 0x02129760
 	add r0, r4, r0
 	mov r1, r5
 	rsb r0, r0, #0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #0x30]
 	str r0, [r1]
 	mov r0, #1
@@ -28096,11 +28096,11 @@ _02129ad0:
 	mov sb, r0
 	mov r0, r7
 	add r1, r7, sb
-	bl func_01ff98e0
+	bl Divide
 	add r1, r7, sb
 	mov r7, r0
 	mov r0, sb
-	bl func_01ff98e0
+	bl Divide
 	add r2, sp, #0x80
 	rsb r0, r0, #0
 	add r1, sp, #0x5c
@@ -30873,7 +30873,7 @@ func_ov12_0212bf14: ; 0x0212bf14
 	add r1, sp, #0
 	bl func_01ff9c2c
 	mov r1, r6
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 	add r0, sp, #0xc
 	mov r1, r0
@@ -36371,7 +36371,7 @@ _02130530:
 _02130548:
 	sub r0, r6, #0x800
 	mov r1, #0x5800
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _021306a4 ; =0x00000d9a
 	mov fp, #0
 	umull r3, r2, r0, r1

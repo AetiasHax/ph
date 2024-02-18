@@ -296,7 +296,7 @@ public:
     // mUnk_098, mUnk_09e
     u8 GetUnk_098(u32 index) const;
     u16 GetUnk_09e(u32 index) const;
-    u32 GetUnk_09e_Divided(u32 index) const; // gets mUnk_09e value divided by 2.54, rounded half up
+    s32 GetUnk_09e_Divided(u32 index) const;
     void SetUnk_09e(u32 index, u16 value); // also increments the corresponding mUnk_098 value
 
     // Item

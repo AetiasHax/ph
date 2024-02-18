@@ -689,9 +689,9 @@ func_ov00_0207d5c4: ; 0x0207d5c4
 	movhi r1, r0
 	mov r1, r1, lsl #0xc
 	mov r0, #0x100000
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x40000
-	bl func_01ff98e0
+	bl Divide
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_0207d5c4
 
@@ -705,9 +705,9 @@ func_ov00_0207d5f0: ; 0x0207d5f0
 	movhi r1, r0
 	mov r1, r1, lsl #0xc
 	mov r0, #0xc0000
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x30000
-	bl func_01ff98e0
+	bl Divide
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_0207d5f0
 
@@ -3205,13 +3205,13 @@ func_ov00_0207f53c: ; 0x0207f53c
 	strh r0, [r5, #2]
 	ldr r0, [r4]
 	mov r1, #0x800
-	bl func_01ff98e0
+	bl Divide
 	add r0, r0, #0x800
 	mov r0, r0, asr #0xc
 	strh r0, [r5]
 	ldr r0, [r4, #8]
 	mov r1, #0x800
-	bl func_01ff98e0
+	bl Divide
 	add r0, r0, #0x800
 	mov r0, r0, asr #0xc
 	strh r0, [r5, #2]
@@ -7888,13 +7888,13 @@ func_ov00_02082d84: ; 0x02082d84
 	bl func_ov00_0208335c
 	mov r1, r0, lsl #0xc
 	mov r0, #0x100000
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	mov r0, r8
 	bl func_ov00_02083368
 	mov r1, r0, lsl #0xc
 	mov r0, #0xc0000
-	bl func_01ff98e0
+	bl Divide
 	ldrb r1, [r7]
 	mov r1, r1, lsl #0xc
 	smull r3, r2, r1, r4

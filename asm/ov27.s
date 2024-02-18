@@ -3143,7 +3143,7 @@ _021702a4:
 	ldr r0, _02170468 ; =0x0000019a
 	mov r1, #0x5000
 	str r0, [r4, #0x64]
-	bl func_01ff98e0
+	bl Divide
 	str r0, [r4, #0x6c]
 _021702c8:
 	ldr r1, _0217046c ; =0x000004cd
@@ -4102,7 +4102,7 @@ _02171010:
 _02171074:
 	mov r0, #0x3000
 	mov r1, r8
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x1f4
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -4298,7 +4298,7 @@ _02171324:
 	add r0, r3, r1
 	bl func_01ff9958
 	ldr r1, _02171388 ; =0x00000266
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sl, #0x1e8]
 	str r0, [r1, #0x10]
 	add sp, sp, #0x44
@@ -10909,7 +10909,7 @@ _02176b24:
 _02176b80:
 	mov r0, #0x3000
 	mov r1, r8
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x12c
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -12768,7 +12768,7 @@ _02178470:
 	bgt _021784e0
 	sub r0, r7, #0x10000
 	mov r1, #0xb000
-	bl func_01ff98e0
+	bl Divide
 	ldr r3, [r6, #0x45c]
 	rsb r1, r0, #0x1000
 	mov r0, r1, lsl #0x1
@@ -12797,7 +12797,7 @@ _021784e0:
 	bgt _02178548
 	sub r0, r7, #0x20000
 	mov r1, #0x3000
-	bl func_01ff98e0
+	bl Divide
 	ldr r3, [r6, #0x45c]
 	mov r2, r0, lsl #0x1
 	mov r1, r3, asr #0x1
@@ -12821,7 +12821,7 @@ _02178548:
 	bgt _02178588
 	sub r0, r7, #0x23000
 	mov r1, #0x3000
-	bl func_01ff98e0
+	bl Divide
 	rsb r0, r0, #0x1000
 	mov r0, r0, lsl #0x1
 	smull r1, r0, r5, r0

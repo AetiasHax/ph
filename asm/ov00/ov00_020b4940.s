@@ -518,7 +518,7 @@ _020b4e90:
 	ldr r1, [r7, #0x20]
 	mov r0, r4
 	sub r1, r8, r1
-	bl func_01ff98e0
+	bl Divide
 	smull r1, r0, r5, r0
 	adds r1, r1, #0x800
 	adc r0, r0, #0
@@ -611,7 +611,7 @@ _020b4fe8:
 	ldr r1, [r7, #0x28]
 	mov r0, r5
 	sub r1, r8, r1
-	bl func_01ff98e0
+	bl Divide
 	smull r1, r0, r4, r0
 	adds r1, r1, #0x800
 	adc r0, r0, #0
@@ -2199,7 +2199,7 @@ _020b6658:
 	bl func_01ff9cec
 	mov r1, r0
 	rsb r0, sb, #0
-	bl func_01ff98e0
+	bl Divide
 	add r1, sp, #0x1fc
 	mov r2, r6
 	mov r3, r6
@@ -3662,7 +3662,7 @@ _020b7ab0:
 	cmplt r1, #0x50
 	bge _020b7b24
 	mov r0, #0x50
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 	b _020b7b44
 _020b7b24:
@@ -3672,7 +3672,7 @@ _020b7b24:
 	blt _020b7b44
 	rsb r1, r1, #0xff
 	mov r0, #0x50
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 _020b7b44:
 	ldr r1, [sp, #0x18]
@@ -3680,7 +3680,7 @@ _020b7b44:
 	cmplt r1, #0x50
 	bge _020b7b64
 	mov r0, #0x50
-	bl func_01ff98e0
+	bl Divide
 	mov r6, r0
 	b _020b7b84
 _020b7b64:
@@ -3690,7 +3690,7 @@ _020b7b64:
 	blt _020b7b84
 	rsb r1, r1, #0xbf
 	mov r0, #0x50
-	bl func_01ff98e0
+	bl Divide
 	mov r6, r0
 _020b7b84:
 	ldr r0, _020b7d48 ; =data_027e077c
@@ -6138,7 +6138,7 @@ _020b983c:
 	mov r0, r4
 	bl func_ov00_020c28ec
 	mov r1, #0x4000
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0x1000
 	movgt r0, #0x1000
 	bgt _020b9860

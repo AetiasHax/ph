@@ -991,7 +991,7 @@ _0217cad0:
 	bl func_01ff9958
 	mov r1, r0
 	mov r0, r4
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 _0217cb0c:
 	add r1, sp, #0
@@ -10789,7 +10789,7 @@ func_ov38_021854e4: ; 0x021854e4
 	cmp r1, #0x800
 	ble _0218556c
 	mov r0, #0x800
-	bl func_01ff98e0
+	bl Divide
 	mov r1, r0
 	add r0, sp, #0xc
 	bl func_01fffbec

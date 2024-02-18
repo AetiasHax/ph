@@ -283,7 +283,7 @@ _02079074:
 	beq _020790e4
 	mov r0, r2
 	mov r1, r3
-	bl func_01ff98e0
+	bl Divide
 	mov r1, r0, asr #0x1f
 	mov r2, r1, lsl #0x14
 	mov r1, #0x800
@@ -313,7 +313,7 @@ _020790e4:
 	beq _0207913c
 	ldr r0, [sp, #0x28]
 	ldr r1, [sp, #0x2c]
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0xc0000
 	umull r6, r3, r0, r1
 	mov r2, #0

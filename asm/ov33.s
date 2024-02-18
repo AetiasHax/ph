@@ -737,7 +737,7 @@ func_ov33_0217c66c: ; 0x0217c66c
 	mov r4, r0
 	ldr r0, [r4, #0x138]
 	mov r1, #0x1e
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 	ldr r1, _0217c7fc ; =0x000002aa
 	mov r0, #0
@@ -2452,7 +2452,7 @@ _0217dcb8:
 	ldr r0, [r7]
 	mov r1, #0xa000
 	mov r0, r0, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	mov r1, r5
 	mov r3, r1

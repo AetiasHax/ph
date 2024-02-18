@@ -870,7 +870,7 @@
 .extern func_ov00_0207c444
 .extern data_027e0e58
 .extern func_0201e388
-.extern func_01ff98e0
+.extern Divide
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0fe0
 .extern func_ov00_020c1554

@@ -7381,7 +7381,7 @@ _02182508:
 	sub r0, r4, #0x7b000
 	rsb r0, r0, #0x3e000
 	mov r1, #0x3e000
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0x12
 	mul r1, r0, r1
 	add r0, r5, #0x2000

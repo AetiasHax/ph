@@ -191,7 +191,7 @@
 .extern data_027e0ffc
 .extern data_02050f54
 .extern func_ov00_020cc1f8
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ff8214
 .extern func_ov00_020cb160
 .extern func_ov00_020c5f80
@@ -203,7 +203,7 @@
 .extern func_ov14_0213b5f4
 .extern data_02050f54
 .extern data_ov00_020e9370
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ff8214
 .extern func_ov00_020a61ac
 .extern func_01ff9bc4

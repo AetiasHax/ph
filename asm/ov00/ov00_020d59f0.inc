@@ -106,7 +106,7 @@ func_ov00_020d5a68: ; 0x020d5a68
 	ldrsh r6, [r1, r2]
 	ldrsh r0, [r1, r0]
 	mov r1, r6
-	bl func_01ff98e0
+	bl Divide
 	mul r1, r7, r4
 	add r1, r1, #0x800
 	mov r1, r1, asr #0x10
@@ -115,7 +115,7 @@ func_ov00_020d5a68: ; 0x020d5a68
 	mov r1, r6
 	mov r4, r0
 	ldrsh r0, [r2, r3]
-	bl func_01ff98e0
+	bl Divide
 	mov r7, r0
 _020d5bac:
 	ldr r0, [sp]

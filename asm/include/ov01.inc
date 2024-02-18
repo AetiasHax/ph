@@ -390,7 +390,7 @@
 .extern data_ov00_020eec9c
 .extern data_027e0c68
 .extern func_ov00_020777d0
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ffbe34
 .extern func_020367ec
 .extern func_02036808
@@ -510,7 +510,7 @@
 .extern func_0202ab48
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectdlEPv
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d03f8
 .extern func_ov00_020d03f8
 .extern _ZN9SysObjectdlEPv

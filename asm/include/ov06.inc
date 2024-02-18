@@ -76,7 +76,7 @@
 .extern func_ov00_020d0594
 .extern func_01ff9b88
 .extern func_01ff9b88
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d03f8
 .extern func_01ffbe34
 .extern func_ov00_020d00c4

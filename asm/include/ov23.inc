@@ -756,7 +756,7 @@
 .extern func_0202e310
 .extern func_0202e310
 .extern func_ov00_020ceacc
-.extern func_01ff98e0
+.extern Divide
 .extern func_0202e310
 .extern func_ov00_020ceacc
 .extern func_0202e310

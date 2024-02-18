@@ -967,7 +967,7 @@ _0217c924:
 	bl func_01ff9958
 	sub r0, r0, #0xcd
 	mov r1, #0xcd
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0x1000
 	movgt r0, #0x1000
 	bgt _0217c98c
@@ -999,7 +999,7 @@ _0217c9b4:
 	add r0, r3, r1
 	bl func_01ff9958
 	mov r1, #0x52
-	bl func_01ff98e0
+	bl Divide
 _0217c9f0:
 	str r0, [r5, #0xec]
 	ldr r0, [r5, #0x15c]

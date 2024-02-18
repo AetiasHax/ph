@@ -158,9 +158,9 @@
 .extern data_027e0e60
 .extern func_ov00_02081f4c
 .extern func_ov00_0208e420
-.extern func_01ff98e0
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
+.extern Divide
 .extern func_01ff9958
 .extern func_01ff992c
 .extern func_01ff9958
@@ -190,7 +190,7 @@
 .extern func_01ff9158
 .extern func_01ff9c2c
 .extern data_027e0f94
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020a0848
 .extern func_0202b734
 .extern func_ov00_02083968

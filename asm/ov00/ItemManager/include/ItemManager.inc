@@ -22,7 +22,7 @@
 .extern data_ov29_0217a4ac
 .extern data_027e0e60
 .extern data_027e0fc8
-.extern func_01ff98e0
+.extern Divide
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern func_ov09_0211c144

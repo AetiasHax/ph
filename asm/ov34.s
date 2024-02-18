@@ -7299,7 +7299,7 @@ _02182480:
 	movge r0, #0x1000
 	bge _021824c8
 	mov r1, #0x44000
-	bl func_01ff98e0
+	bl Divide
 _021824c8:
 	add r1, r5, #0x1000
 	ldr ip, [r1, #0xa7c]
@@ -8623,7 +8623,7 @@ _02183690:
 	movlt r0, #0
 _02183710:
 	mov r1, #0xc000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _02183d04 ; =0x00005555
 	ldr r2, [sl, #0x22c]
 	mul r3, r0, r1

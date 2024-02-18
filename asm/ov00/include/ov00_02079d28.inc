@@ -259,9 +259,9 @@
 .extern data_027e0d38
 .extern data_027e0fcc
 .extern data_027e0f64
-.extern func_01ff98e0
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
+.extern Divide
 .extern func_ov00_020972e4
 .extern func_ov00_020972e4
 .extern func_02047024

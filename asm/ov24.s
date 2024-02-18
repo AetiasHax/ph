@@ -2952,7 +2952,7 @@ func_ov24_0216fc70: ; 0x0216fc70
 	ldr r0, _0216fd58 ; =0xfffff333
 	ldr r1, _0216fd5c ; =0x00000666
 	add r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r3, _0216fd60 ; =0xfffffe66
 	mvn ip, #0
 	umull r7, r6, r0, r3
@@ -4165,7 +4165,7 @@ func_ov24_02170cb0: ; 0x02170cb0
 	mov r4, r0
 	ldr r0, _02170cd8 ; =0x0000019a
 	mov r1, #0x73
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x22c]
 	str r0, [r1, #0x10]
 	mov r0, r4

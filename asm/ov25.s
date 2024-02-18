@@ -8216,7 +8216,7 @@ _02174510:
 _02174588:
 	sub r0, r5, #0x1000
 	mov r1, #0x2000
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0x1000
 	movgt r0, #0x1000
 	bgt _021745a8
@@ -9017,7 +9017,7 @@ _02175114:
 	bl func_01ff9958
 	ldr r1, _02175084 ; =0x00000171
 	sub r0, r0, #0x7b
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0x1000
 	movgt r0, #0x1000
 	bgt _0217518c

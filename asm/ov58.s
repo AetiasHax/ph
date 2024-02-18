@@ -2980,7 +2980,7 @@ func_ov58_0219aad0: ; 0x0219aad0
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 _0219ab10:
 	mov r0, #0x20000

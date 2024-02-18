@@ -7622,14 +7622,14 @@ func_ov31_02181610: ; 0x02181610
 	mov r4, r3, asr #0x5
 	ldr r7, [r2, #8]
 	ldr r8, [r2, #0xc]
-	bl func_01ff98e0
+	bl Divide
 	mul r1, r6, r0
 	add r1, r1, #0x800
 	add r0, r4, #0x1f
 	mov fp, r1, asr #0xc
 	mov r1, r0, lsl #0xc
 	mov r0, #0x1f000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #4]
 	mul r0, r1, r0
 	add r0, r0, #0x800
@@ -7637,7 +7637,7 @@ func_ov31_02181610: ; 0x02181610
 	mov r6, r0, asr #0xc
 	mov r0, #0x1f000
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	ldr r3, [sp, #0x30]
 	mov r1, sl, lsl #0x1b
 	mul r0, r3, r0

@@ -75,7 +75,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern func_ov00_020b7d74
 .extern data_027e0764
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d033c
 .extern data_027e0764
 .extern func_ov00_02083ee0
@@ -196,7 +196,7 @@
 .extern func_02037628
 .extern func_02036f68
 .extern data_027e0c68
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d033c
 .extern func_ov00_020d033c
 .extern func_0203493c

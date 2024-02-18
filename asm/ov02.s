@@ -4428,7 +4428,7 @@ func_ov02_020f2650: ; 0x020f2650
 	blx func_ov09_02113c20
 	mov r0, #0x800
 	ldr r1, _020f27b0 ; =0x00002333
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, [r4, #0x214]
 	mov r1, #0
 	mul r0, r2, r0
@@ -8840,7 +8840,7 @@ func_ov02_020f6190: ; 0x020f6190
 	str r2, [r4, #0x10]
 	ldr r2, [sp, #0xc]
 	str r2, [r4, #0x14]
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, [sp, #0x10]
 	mov r1, #0x168000
 	smull r3, r0, r2, r0
@@ -8853,7 +8853,7 @@ func_ov02_020f6190: ; 0x020f6190
 	mov r2, r0, asr #0xc
 	ldr r0, _020f6290 ; =0x0ffff000
 	strh r2, [r4, #0x1c]
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, [sp, #0x14]
 	mov r1, #0x168000
 	smull r3, r0, r2, r0
@@ -8866,7 +8866,7 @@ func_ov02_020f6190: ; 0x020f6190
 	mov r0, r0, asr #0xc
 	strh r0, [r4, #0x1e]
 	ldr r0, _020f6290 ; =0x0ffff000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [sp, #0x18]
 	smull r2, r0, r1, r0
 	adds r1, r2, #0x800

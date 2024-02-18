@@ -206,7 +206,7 @@
 .extern data_027e0ffc
 .extern func_ov00_020c2974
 .extern func_0202b154
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_02083ee0
 .extern func_ov00_0207c1b0
 .extern func_0202e58c
@@ -278,7 +278,7 @@
 .extern func_ov00_020c2974
 .extern func_0202b154
 .extern func_01ff9bf8
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ffa0f4
 .extern func_01ff9e64
 .extern func_01ff9e64
@@ -295,7 +295,7 @@
 .extern func_01ff9bf8
 .extern func_01ff9958
 .extern func_01ff9958
-.extern func_01ff98e0
+.extern Divide
 .extern data_027e0f94
 .extern data_02050f54
 .extern func_ov00_020c2974
@@ -830,7 +830,7 @@
 .extern func_ov00_020c2974
 .extern func_0202b154
 .extern func_01ff9bf8
-.extern func_01ff98e0
+.extern Divide
 .extern func_01ffa0f4
 .extern func_01ff9e64
 .extern func_01ff9e64
@@ -974,9 +974,9 @@
 .extern func_ov00_020c5f1c
 .extern func_ov00_020ceacc
 .extern func_ov00_020ceacc
-.extern func_01ff98e0
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
+.extern Divide
 .extern func_ov05_02102c2c
 .extern data_027e0ffc
 .extern data_02050f54

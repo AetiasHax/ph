@@ -305,3 +305,10 @@ THUMB u8 ItemManager::GetUnk_098(u32 index) const {
 THUMB u16 ItemManager::GetUnk_09e(u32 index) const {
     return this->mUnk_09e[index];
 }
+
+THUMB s32 ItemManager::GetUnk_09e_Divided(u32 index) const {
+    q20 quotient = Divide(INT_TO_Q20(this->mUnk_09e[index]), FLOAT_TO_Q20(2.54));
+    s32 result = ROUND_Q20(quotient);
+    if (result < 1) result = 1;
+    return result;
+}

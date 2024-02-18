@@ -3646,13 +3646,13 @@ func_ov00_0208df78: ; 0x0208df78
 	mov r1, #0xff000
 	mov fp, r3
 	ldr r4, [sp, #0x38]
-	bl func_01ff98e0
+	bl Divide
 	mov r1, #0xbf000
 	sub r2, r5, #0xbf
 	mov r5, r0
 	mov r0, r2, lsl #0xc
 	rsb r1, r1, #0
-	bl func_01ff98e0
+	bl Divide
 	cmp r5, #0
 	cmpge r0, #0
 	blt _0208dfcc
@@ -4351,7 +4351,7 @@ func_ov00_0208e87c: ; 0x0208e87c
 	ldr r0, [r6, #8]
 	ldr r1, [r5, #8]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208e984
 	cmp r0, #0x1000
@@ -4402,7 +4402,7 @@ _0208e984:
 	ldr r0, [r6, #8]
 	ldr r1, [r5, #8]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208ea4c
 	cmp r0, #0x1000
@@ -4454,7 +4454,7 @@ _0208ea4c:
 	ldr r0, [r6]
 	ldr r1, [r5]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208eb14
 	cmp r0, #0x1000
@@ -4504,7 +4504,7 @@ _0208eb14:
 	ldr r0, [r6]
 	ldr r1, [r5]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208ebd8
 	cmp r0, #0x1000
@@ -4554,7 +4554,7 @@ _0208ebd8:
 	ldr r0, [r6, #4]
 	ldr r1, [r5, #4]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208eca0
 	cmp r0, #0x1000
@@ -4605,7 +4605,7 @@ _0208eca0:
 	ldr r0, [r6, #4]
 	ldr r1, [r5, #4]
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	cmp r0, #0
 	blt _0208ed68
 	cmp r0, #0x1000
@@ -9692,7 +9692,7 @@ _02092c8c:
 	ldr r0, [r4, #0x5c]
 	mov r1, r5
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x5c]
 	add r0, r1, r0
 	str r0, [r4, #0x5c]
@@ -9786,7 +9786,7 @@ _02092e10:
 	ldr r0, [r4, #0x5c]
 	mov r1, r5
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r4, #0x5c]
 	add r0, r1, r0
 	str r0, [r4, #0x5c]
@@ -9884,7 +9884,7 @@ _02092f68:
 	movle r1, #0x1000
 	ble _02092fc4
 	rsb r0, r5, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	add r1, r5, r0
 _02092fc4:
 	mov r0, r4
@@ -10071,7 +10071,7 @@ func_ov00_0209320c: ; 0x0209320c
 	add r1, sp, #0
 	bl func_01ff9c2c
 	mov r1, r6
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 	add r0, sp, #0xc
 	mov r1, r0
@@ -12829,11 +12829,11 @@ func_ov00_02095278: ; 0x02095278
 	bl func_01ff9bf8
 	ldr r0, [sp, #0xc]
 	ldr r1, [r6, #0xc]
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0, asr #0xc
 	ldr r0, [sp, #0x14]
 	ldr r1, [r6, #0x10]
-	bl func_01ff98e0
+	bl Divide
 	mov r1, r0, asr #0xc
 	cmp r5, #0
 	ldrh r0, [r6, #2]
@@ -13187,7 +13187,7 @@ func_ov00_0209564c: ; 0x0209564c
 	mov r5, r2, lsl #0x10
 	str ip, [sp, #4]
 	str r4, [sp, #8]
-	bl func_01ff98e0
+	bl Divide
 	mov r1, r5, lsr #0x4
 	smull r2, r1, r0, r1
 	ldr r3, [sp]

@@ -2419,7 +2419,7 @@ func_ov00_020870d0: ; 0x020870d0
 	mov sb, r0
 	ldr r1, [sb, #8]
 	mov r0, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	ldrh r1, [sb, #4]
 	ldr r2, _02087268 ; =data_02050f54
 	mov r7, r0
@@ -2433,11 +2433,11 @@ func_ov00_020870d0: ; 0x020870d0
 	beq _02087120
 	mov r0, r3, lsl #0x1
 	ldrsh r0, [r2, r0]
-	bl func_01ff98e0
+	bl Divide
 _02087120:
 	mov r1, r0
 	mov r0, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	smull r1, r0, r7, r0
 	adds r1, r1, #0x800
 	adc r0, r0, #0
@@ -3908,7 +3908,7 @@ func_ov00_02088428: ; 0x02088428
 	mov r0, #0x1000
 	str r1, [r2, #0x14]
 	mov r1, #0x1e000
-	bl func_01ff98e0
+	bl Divide
 	mov r1, r0
 	ldr r0, [r4, #0x158]
 	bl func_ov00_020a0848

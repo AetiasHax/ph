@@ -12369,7 +12369,7 @@ func_ov01_020f6774: ; 0x020f6774
 	ldr r0, [r8, #0x10]
 	mov r1, #0xf000
 	mov r0, r0, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r7, r0
 	add r0, sp, #0xc
 	mov r4, #0
@@ -14069,7 +14069,7 @@ func_ov01_020f7e24: ; 0x020f7e24
 	add r0, r0, #0x1000
 	str r0, [r4, #0x34]
 	ldr r1, [r4, #0x30]
-	bl func_01ff98e0
+	bl Divide
 	mov r5, r0
 	ldr r0, [r4, #0x28]
 	ldr r1, [r4, #0x20]

@@ -393,7 +393,7 @@
 .extern func_ov09_02114218
 .extern func_ov09_02114218
 .extern func_ov09_02113c20
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov09_02113f40
 .extern func_ov09_02113c20
 .extern func_ov09_02113c20
@@ -794,9 +794,9 @@
 .extern func_020349cc
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020a9588
-.extern func_01ff98e0
-.extern func_01ff98e0
-.extern func_01ff98e0
+.extern Divide
+.extern Divide
+.extern Divide
 .extern _ZN9SysObjectdlEPv
 .extern func_01ff8230
 .extern func_01ff81f8

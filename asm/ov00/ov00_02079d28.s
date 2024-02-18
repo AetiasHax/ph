@@ -4886,7 +4886,7 @@ func_ov00_0207c91c: ; 0x0207c91c
 	rsbmi r0, r0, #0
 	mov r0, r0, lsl #0xc
 	mov r1, r5, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r4, r0
 	ldr r2, [r7, #8]
 	cmp r4, #0x1000
@@ -4895,7 +4895,7 @@ func_ov00_0207c91c: ; 0x0207c91c
 	ldr r0, [r7]
 	mov r1, r4
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r7]
 	add r0, r1, r0
 	str r0, [r7]
@@ -4907,7 +4907,7 @@ _0207c97c:
 	ldr r0, [r7, #4]
 	mov r1, r4
 	sub r0, r2, r0
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, [r7, #4]
 	add r0, r1, r0
 	str r0, [r7, #4]

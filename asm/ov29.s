@@ -313,21 +313,21 @@ func_ov29_0216d9b0: ; 0x0216d9b0
 	mov r6, r1, lsr #0x1
 	mov r1, #0x22000
 	ldr r5, [sb, #4]
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, _0216db1c ; =0x00000554
 	mov r1, #0x22000
 	mul r2, r0, r2
 	add r0, r2, #0x800
 	mov r7, r0, asr #0xc
 	mov r0, #0x1f000
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, _0216db1c ; =0x00000554
 	mov r1, #0x22000
 	mul r2, r0, r2
 	add r0, r2, #0x800
 	mov r8, r0, asr #0xc
 	mov r0, #0x1f000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _0216db1c ; =0x00000554
 	cmp r6, #0
 	mul r1, r0, r1
@@ -9838,7 +9838,7 @@ func_ov29_02175b4c: ; 0x02175b4c
 	bl func_01ff9cec
 	mov r1, r0
 	mov r0, #0x1000
-	bl func_01ff98e0
+	bl Divide
 	str r0, [r4, #0x2ac]
 	mov ip, #0
 	str ip, [r4, #0x2a8]
@@ -11475,7 +11475,7 @@ func_ov29_02177088: ; 0x02177088
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r3, r0
 _0217714c:
 	ldrb r0, [r4, #0x14]

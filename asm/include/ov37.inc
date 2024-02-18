@@ -483,7 +483,7 @@
 .extern func_ov00_0207c1b0
 .extern func_ov00_020ceacc
 .extern func_ov00_020ceacc
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020b7e6c
 .extern func_ov00_020b7e6c
 .extern func_0202e310

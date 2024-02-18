@@ -392,7 +392,7 @@ func_ov00_020df770: ; 0x020df770
 	stmdb sp!, {r3, lr}
 	mov r0, #0x1000
 	mov r1, #0x1e000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _020df78c ; =data_ov00_020e2fa8
 	str r0, [r1]
 	ldmia sp!, {r3, pc}
@@ -2138,12 +2138,12 @@ func_ov00_020e11d8: ; 0x020e11d8
 	stmdb sp!, {r3, lr}
 	mov r0, #0x8000
 	mov r1, #0xf000
-	bl func_01ff98e0
+	bl Divide
 	ldr r2, _020e1208 ; =data_ov00_020e5134
 	mov r1, #0xf000
 	str r0, [r2]
 	mov r0, #0xd000
-	bl func_01ff98e0
+	bl Divide
 	ldr r1, _020e1208 ; =data_ov00_020e5134
 	str r0, [r1, #4]
 	ldmia sp!, {r3, pc}

@@ -2070,7 +2070,7 @@ _02102384:
 	sub r1, r1, r2
 	mov r0, r0, lsl #0xc
 	mov r1, r1, lsl #0xc
-	bl func_01ff98e0
+	bl Divide
 	mov r2, r0
 _021023c4:
 	mov r0, #0

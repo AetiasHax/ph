@@ -53,7 +53,7 @@
 .extern data_027e0ffc
 .extern func_ov00_020c5118
 .extern func_ov00_020c5118
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d03c4
 .extern func_0202e58c
 .extern func_ov00_020c50f0
@@ -75,7 +75,7 @@
 .extern func_ov00_020c5118
 .extern func_ov00_020c5d74
 .extern func_ov00_020c5118
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d03c4
 .extern func_0202e58c
 .extern func_ov00_020c50d4
@@ -350,7 +350,7 @@
 .extern func_01fffcec
 .extern func_ov00_020b7e6c
 .extern func_ov14_0213d480
-.extern func_01ff98e0
+.extern Divide
 .extern func_ov00_020d033c
 .extern func_ov00_020c1e2c
 .extern data_027e0764
@@ -707,7 +707,7 @@
 .extern data_027e0618
 .extern func_01ff8214
 .extern func_01ff9bc4
-.extern func_01ff98e0
+.extern Divide
 .extern data_02050f54
 .extern func_ov00_02081f4c
 .extern _ZN9SysObjectdlEPv
@@ -825,7 +825,7 @@
 .extern func_ov00_020bd618
 .extern data_027e0fec
 .extern func_ov00_020ca8a4
-.extern func_01ff98e0
+.extern Divide
 .extern data_02050f54
 .extern func_ov00_020c3070
 .extern func_ov00_020ceacc
