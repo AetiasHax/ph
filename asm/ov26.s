@@ -4157,7 +4157,7 @@ func_ov26_02170894: ; 0x02170894
 	ldr r0, _02170934 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
+	bl _ZNK11ItemManager19GetActiveFairyLevelEi
 	cmp r0, #1
 	blt _021708e4
 _021708dc:

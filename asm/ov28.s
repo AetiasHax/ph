@@ -6309,7 +6309,7 @@ func_ov28_0217280c: ; 0x0217280c
 	mov r1, #1
 	mov r8, r2
 	str r3, [sl, #0x20c]
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	beq _02172870
 	cmp r0, #1
@@ -6322,7 +6322,7 @@ _02172870:
 _02172878:
 	mov r0, r7
 	mov r1, #2
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	beq _0217289c
 	cmp r0, #1
@@ -6335,7 +6335,7 @@ _0217289c:
 _021728a4:
 	mov r0, r7
 	mov r1, #0
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	beq _021728c8
 	cmp r0, #1
@@ -6422,7 +6422,7 @@ _02172998:
 	ldr r0, [r0]
 	add r2, r0, r1
 	ldrb r4, [r2, #0x24]
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	beq _021729d0
 	cmp r0, #1
@@ -6451,7 +6451,7 @@ _021729f4:
 	ldrb r2, [r2, #0x24]
 	cmp r2, #0x14
 	bne _02172a2c
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	moveq r0, #2
 	movne r0, #1
@@ -6479,7 +6479,7 @@ func_ov28_02172a44: ; 0x02172a44
 	ldr r1, _02172a84 ; =data_ov28_021782e0
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl _ZNK11ItemManager18func_ov00_020ada48Ei
+	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #2
 	movge r0, #1
 	ldmgeia sp!, {r3, pc}

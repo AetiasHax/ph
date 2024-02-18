@@ -336,7 +336,7 @@
 .extern func_ov00_020cadb0
 .extern func_ov00_020cadb0
 .extern _ZNK11ItemManager7HasItemEj
-.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
+.extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
 .extern func_ov00_020cb60c

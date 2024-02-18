@@ -3,9 +3,9 @@
 
 	.text
 
-	.global _ZNK11ItemManager18func_ov00_020ada48Ei
-	arm_func_start _ZNK11ItemManager18func_ov00_020ada48Ei
-_ZNK11ItemManager18func_ov00_020ada48Ei: ; 0x020ada48
+	.global _ZNK11ItemManager13GetFairyLevelEi
+	arm_func_start _ZNK11ItemManager13GetFairyLevelEi
+_ZNK11ItemManager13GetFairyLevelEi: ; 0x020ada48
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	add r1, r4, #0x1a
@@ -18,7 +18,7 @@ _ZNK11ItemManager18func_ov00_020ada48Ei: ; 0x020ada48
 	add r1, r4, #0x17
 	bl _ZNK11ItemManager7HasItemEj
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZNK11ItemManager18func_ov00_020ada48Ei
+	arm_func_end _ZNK11ItemManager13GetFairyLevelEi
 
 	.global _ZNK11ItemManager7HasItemEj
 	arm_func_start _ZNK11ItemManager7HasItemEj

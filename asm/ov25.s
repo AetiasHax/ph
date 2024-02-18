@@ -12901,7 +12901,7 @@ _021783b0:
 	ldr r0, _02178504 ; =gItemManager
 	mov r1, #2
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
+	bl _ZNK11ItemManager19GetActiveFairyLevelEi
 	cmp r0, #1
 	blt _02178404
 	bl func_ov25_0217850c

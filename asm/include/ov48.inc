@@ -42,7 +42,7 @@
 .extern func_ov00_020c5d74
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
-.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
+.extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
 .extern func_ov00_020cb60c
@@ -153,7 +153,7 @@
 .extern func_0204f8d4
 .extern func_01ffbf5c
 .extern func_ov00_020c288c
-.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
+.extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_01ff9e64
 .extern func_ov00_020a7c60
 .extern func_ov00_020c2974
@@ -230,7 +230,7 @@
 .extern func_01ff9bf8
 .extern func_01ff9bf8
 .extern func_02002c14
-.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
+.extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020c2a0c
 .extern func_ov00_020c2238
 .extern func_ov00_020c070c

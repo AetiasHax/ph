@@ -239,8 +239,8 @@ public:
     // Fairy
     FairyId GetEquippedFairy() const;
     Navi* GetFairy(FairyId id) const;
-    unk32 func_ov00_020ad9e8(FairyId id) const;
-    unk32 func_ov00_020ada48(FairyId id) const;
+    u32 GetActiveFairyLevel(FairyId id) const;
+    u32 GetFairyLevel(FairyId id) const;
 
     // Equip item
     void ClearPrevEquippedItem();

@@ -883,7 +883,7 @@
 .extern func_ov00_020c2bf4
 .extern func_ov00_02083ee0
 .extern func_ov00_020c1fc8
-.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
+.extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020c070c
 .extern func_ov00_020c1e2c
 .extern func_01fffd04
