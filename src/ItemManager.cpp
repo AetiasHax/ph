@@ -351,3 +351,9 @@ ARM u32 ItemManager::GetActiveFairyLevel(FairyId id) const {
     if (id == fairy) return this->GetFairyLevel(id);
     return 0;
 }
+
+ARM u32 ItemManager::GetFairyLevel(FairyId id) const {
+    if (this->HasItem(ItemFlag_FAIRY_LV2 + id)) return 2;
+    if (this->HasItem(ItemFlag_FAIRY_LV1 + id)) return 1;
+    return 0;
+}

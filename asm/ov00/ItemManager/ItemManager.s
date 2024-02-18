@@ -3,23 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager13GetFairyLevelEi
-	arm_func_start _ZNK11ItemManager13GetFairyLevelEi
-_ZNK11ItemManager13GetFairyLevelEi: ; 0x020ada48
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r4, r1
-	add r1, r4, #0x1a
-	mov r5, r0
-	bl _ZNK11ItemManager7HasItemEj
-	cmp r0, #0
-	movne r0, #2
-	ldmneia sp!, {r3, r4, r5, pc}
-	mov r0, r5
-	add r1, r4, #0x17
-	bl _ZNK11ItemManager7HasItemEj
-	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZNK11ItemManager13GetFairyLevelEi
-
 	.global _ZNK11ItemManager7HasItemEj
 	arm_func_start _ZNK11ItemManager7HasItemEj
 _ZNK11ItemManager7HasItemEj: ; 0x020ada78

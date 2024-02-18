@@ -26,9 +26,11 @@ enum ItemFlag_ {
     ItemFlag_CourageLv1       = 23,
     ItemFlag_PowerLv1         = 24,
     ItemFlag_WisdomLv1        = 25,
+    ItemFlag_FAIRY_LV1        = ItemFlag_CourageLv1,
     ItemFlag_CourageLv2       = 26,
     ItemFlag_PowerLv2         = 27,
     ItemFlag_WisdomLv2        = 28,
+    ItemFlag_FAIRY_LV2        = ItemFlag_CourageLv2,
 
     ItemFlag_Hourglass        = 32,
     ItemFlag_SeaChartSW       = 33,
