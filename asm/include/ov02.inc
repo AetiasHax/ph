@@ -266,7 +266,7 @@
 .extern func_0203493c
 .extern func_02032788
 .extern func_ov09_02118028
-.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
 .extern func_0203493c
 .extern func_0203493c
 .extern func_ov09_02118028

@@ -4644,7 +4644,7 @@ _02104694:
 	beq _0210471c
 	ldr r0, [r6]
 	and r1, sb, #0xff
-	bl _ZNK11ItemManager21HasShipPartPriceShownEj
+	bl _ZNK11ItemManager18IsTreasureSalvagedEj
 	cmp r0, #0
 	bne _0210471c
 	ldr r0, [r5]
@@ -4793,7 +4793,7 @@ _021048a8:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager21HasShipPartPriceShownEj
+	bl _ZNK11ItemManager18IsTreasureSalvagedEj
 	cmp r0, #0
 	addne sp, sp, #0x34
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}

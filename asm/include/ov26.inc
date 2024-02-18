@@ -1068,7 +1068,7 @@
 .extern data_027e0e60
 .extern data_027e0d3c
 .extern identifier, 
-.extern _ZNK11ItemManager21HasShipPartPriceShownEj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern func_ov00_0209d90c
 .extern func_ov00_02097760
 .extern func_ov00_02079680

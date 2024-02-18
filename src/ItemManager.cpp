@@ -365,3 +365,7 @@ ARM bool ItemManager::HasItem(ItemFlag item) const {
 THUMB void ItemManager::AddItem(ItemFlag item) {
     SET_FLAG(this->mItemFlags.flags, item);
 }
+
+ARM bool ItemManager::IsTreasureSalvaged(u32 index) const {
+    return GET_FLAG(&this->mSalvagedTreasureFlags, index);
+}

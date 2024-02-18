@@ -5128,7 +5128,7 @@ func_ov45_0218d4d4: ; 0x0218d4d4
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r4
-	blx _ZN11ItemManager21AddShipPartPriceShownEjj
+	blx _ZN11ItemManager19SetTreasureSalvagedEjj
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218d4d4
@@ -6012,7 +6012,7 @@ _0218de84:
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r6
-	blx _ZNK11ItemManager21HasShipPartPriceShownEjj
+	blx _ZNK11ItemManager18IsTreasureSalvagedEjj
 	cmp r0, #0
 	beq _0218df54
 	add ip, sp, #0x28

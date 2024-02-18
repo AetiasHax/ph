@@ -3082,7 +3082,7 @@
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern func_ov00_020d71a0
 .extern func_ov00_02097750
-.extern _ZN11ItemManager21AddShipPartPriceShownEj
+.extern _ZN11ItemManager19SetTreasureSalvagedEj
 .extern _ZN11ItemManager8GiveItemEjjj
 .extern func_01ff9bf8
 .extern func_01ffa0f4
@@ -3174,7 +3174,7 @@
 .extern func_ov00_020c1734
 .extern data_027e0d38
 .extern _ZNK11ItemManager7HasItemEj
-.extern _ZNK11ItemManager21HasShipPartPriceShownEj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern gItemManager
 .extern data_027e0fe4
 .extern data_027e0f94
@@ -6122,7 +6122,7 @@
 .extern func_ov09_0211ca20
 .extern func_ov09_0211cac0
 .extern _ZN11ItemManager8GiveItemEjjj
-.extern _ZN11ItemManager21AddShipPartPriceShownEj
+.extern _ZN11ItemManager19SetTreasureSalvagedEj
 .extern _ZN11ItemManager15LoadFanfareItemEj
 .extern gItemManager
 .extern data_027e0fe4

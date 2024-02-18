@@ -13278,7 +13278,7 @@ func_ov26_021778e8: ; 0x021778e8
 	ldr r0, _021779cc ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager21HasShipPartPriceShownEj
+	bl _ZNK11ItemManager18IsTreasureSalvagedEj
 	cmp r0, #0
 	addne sp, sp, #0xc
 	ldmneia sp!, {r3, r4, r5, r6, pc}

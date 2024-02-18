@@ -283,9 +283,7 @@ public:
     void EquipShipPart(ShipPart part, ShipType type);
     s8 GetShipPartCount(ShipPart part, ShipType type) const;
     void SetShipPartCount(ShipPart part, ShipType type, s8 count);
-    bool HasShipPartPriceShown(u32 index) const;
     bool HasShipPartPriceShown(ShipPart part, ShipType type) const;
-    void AddShipPartPriceShown(u32 index);
     void AddShipPartPriceShown(ShipPart part, ShipType type);
     u8 GetMaxShipPartCount() const;
 
@@ -294,6 +292,8 @@ public:
     void SetTreasureCount(Treasure treasure, s8 count);
     bool HasTreasurePriceShown(Treasure treasure) const;
     void AddTreasurePriceShown(Treasure treasure);
+    bool IsTreasureSalvaged(u32 index) const;
+    void SetTreasureSalvaged(u32 index);
     u8 GetMaxTreasureCount() const;
     
     // mUnk_098, mUnk_09e

@@ -3,22 +3,9 @@
 
 	.text
 
-	.global _ZNK11ItemManager21HasShipPartPriceShownEj
-	arm_func_start _ZNK11ItemManager21HasShipPartPriceShownEj
-_ZNK11ItemManager21HasShipPartPriceShownEj: ; 0x020adabc
-	mov r2, r1, lsr #5
-	add r0, r0, r2, lsl #2
-	ldr r2, [r0, #0x138]
-	and r1, r1, #0x1f
-	mov r0, #1
-	tst r2, r0, lsl r1
-	moveq r0, #0
-	bx lr
-	arm_func_end _ZNK11ItemManager21HasShipPartPriceShownEj
-
-	.global _ZN11ItemManager21AddShipPartPriceShownEj
-	thumb_func_start _ZN11ItemManager21AddShipPartPriceShownEj
-_ZN11ItemManager21AddShipPartPriceShownEj: ; 0x020adadc
+	.global _ZN11ItemManager19SetTreasureSalvagedEj
+	thumb_func_start _ZN11ItemManager19SetTreasureSalvagedEj
+_ZN11ItemManager19SetTreasureSalvagedEj: ; 0x020adadc
 	push {r4, r5}
 	mov r2, #0x4e
 	lsl r2, r2, #2
@@ -37,7 +24,7 @@ _ZN11ItemManager21AddShipPartPriceShownEj: ; 0x020adadc
 	pop {r4, r5}
 	bx lr
 	.align 2, 0
-	thumb_func_end _ZN11ItemManager21AddShipPartPriceShownEj
+	thumb_func_end _ZN11ItemManager19SetTreasureSalvagedEj
 
 	.global _ZN11ItemManager10RemoveItemEj
 	thumb_func_start _ZN11ItemManager10RemoveItemEj
@@ -1243,7 +1230,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
 
 	.global _ZN11ItemManager13ForceEquipItemEj
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEj
@@ -1646,9 +1633,9 @@ _020ae6de:
 _020ae6e8: .word gItemManager
 _020ae6ec: .word data_ov00_020eec68
 
-	.global _ZNK11ItemManager21HasShipPartPriceShownEjj
-	thumb_func_start _ZNK11ItemManager21HasShipPartPriceShownEjj
-_ZNK11ItemManager21HasShipPartPriceShownEjj: ; 0x020ae6f0
+	.global _ZNK11ItemManager18IsTreasureSalvagedEjj
+	thumb_func_start _ZNK11ItemManager18IsTreasureSalvagedEjj
+_ZNK11ItemManager18IsTreasureSalvagedEjj: ; 0x020ae6f0
 	push {r3, r4}
 	lsl r3, r1, #3
 	add r1, r1, r3
@@ -1672,11 +1659,11 @@ _020ae716:
 	add r0, r2, #0
 	pop {r3, r4}
 	bx lr
-	thumb_func_end _ZNK11ItemManager21HasShipPartPriceShownEjj
+	thumb_func_end _ZNK11ItemManager18IsTreasureSalvagedEjj
 
-	.global _ZN11ItemManager21AddShipPartPriceShownEjj
-	thumb_func_start _ZN11ItemManager21AddShipPartPriceShownEjj
-_ZN11ItemManager21AddShipPartPriceShownEjj: ; 0x020ae71c
+	.global _ZN11ItemManager19SetTreasureSalvagedEjj
+	thumb_func_start _ZN11ItemManager19SetTreasureSalvagedEjj
+_ZN11ItemManager19SetTreasureSalvagedEjj: ; 0x020ae71c
 	push {r4, r5}
 	lsl r3, r1, #3
 	add r1, r1, r3
@@ -1697,7 +1684,7 @@ _ZN11ItemManager21AddShipPartPriceShownEjj: ; 0x020ae71c
 	str r2, [r1, r0]
 	pop {r4, r5}
 	bx lr
-	thumb_func_end _ZN11ItemManager21AddShipPartPriceShownEjj
+	thumb_func_end _ZN11ItemManager19SetTreasureSalvagedEjj
 
 	.global _ZNK11ItemManager21HasTreasurePriceShownEj
 	thumb_func_start _ZNK11ItemManager21HasTreasurePriceShownEj

@@ -44581,7 +44581,7 @@ _02145390:
 	bhs _021453d4
 	ldr r0, _0214581c ; =gItemManager
 	ldr r0, [r0]
-	blx _ZN11ItemManager21AddShipPartPriceShownEj
+	blx _ZN11ItemManager19SetTreasureSalvagedEj
 	b _021453f8
 _021453d4:
 	sub r0, r1, #0x20
@@ -45653,7 +45653,7 @@ func_ov15_021461b0: ; 0x021461b0
 	ldr r0, _021462c4 ; =gItemManager
 	ldrh r1, [r5, r4]
 	ldr r0, [r0]
-	bl _ZNK11ItemManager21HasShipPartPriceShownEj
+	bl _ZNK11ItemManager18IsTreasureSalvagedEj
 	cmp r0, #0
 	beq _02146244
 	add sp, sp, #0x18
@@ -88246,7 +88246,7 @@ _0216a8f8:
 	bhs _0216a918
 	ldr r0, _0216a95c ; =gItemManager
 	ldr r0, [r0]
-	blx _ZN11ItemManager21AddShipPartPriceShownEj
+	blx _ZN11ItemManager19SetTreasureSalvagedEj
 	b _0216a93c
 _0216a918:
 	sub r0, r1, #0x20

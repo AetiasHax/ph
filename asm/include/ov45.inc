@@ -435,7 +435,7 @@
 .extern func_ov09_02113f40
 .extern func_ov09_02118028
 .extern identifier, 
-.extern _ZN11ItemManager21AddShipPartPriceShownEjj
+.extern _ZN11ItemManager19SetTreasureSalvagedEjj
 .extern gItemManager
 .extern func_ov09_021181f0
 .extern func_ov09_021183dc
@@ -503,7 +503,7 @@
 .extern func_02032788
 .extern func_ov09_02118028
 .extern identifier, 
-.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
 .extern func_0203493c
 .extern func_0203493c
 .extern func_ov09_02118028

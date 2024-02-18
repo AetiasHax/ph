@@ -318,7 +318,7 @@
 .extern func_ov00_0209d90c
 .extern func_02034a1c
 .extern _ZNK11ItemManager7HasItemEj
-.extern _ZNK11ItemManager21HasShipPartPriceShownEj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern func_ov00_0209d90c
 .extern func_ov00_02079680
 .extern func_02034984
@@ -336,7 +336,7 @@
 .extern func_ov00_02097760
 .extern _ZNK11ItemManager7HasItemEj
 .extern func_ov00_02097760
-.extern _ZNK11ItemManager21HasShipPartPriceShownEj
+.extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern func_ov00_0209d90c
 .extern func_ov00_02079680
 .extern func_02034984
