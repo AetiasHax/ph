@@ -9,7 +9,7 @@ typedef u32 q20;
 #define INT_TO_Q20(n) ((s32)((n) << 12))
 #define FLOAT_TO_Q20(n) ((s32)(((n) * 8192 + 1) / 2))
 
-#define ROUND_Q20(n) (((s32) n + 0x800) >> 12)
+#define ROUND_Q20(n) (((s32)(n) + 0x800) >> 12)
 
 typedef struct {
     /* 0 */ q20 x;
