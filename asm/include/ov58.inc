@@ -179,7 +179,7 @@
 .extern data_027e1098
 .extern func_0203516c
 .extern func_ov00_0207914c
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020d0594
 .extern func_ov00_020d054c
 .extern func_ov00_020d0594
@@ -206,7 +206,7 @@
 .extern func_ov00_02078fd4
 .extern func_ov00_02078fac
 .extern func_0202e740
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020d61b0
 .extern func_ov00_020792a0
 .extern func_ov00_020791dc

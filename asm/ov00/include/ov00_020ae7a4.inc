@@ -128,7 +128,7 @@
 .extern data_027e0e60
 .extern func_ov00_02097738
 .extern func_ov00_02097750
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020c3674
 .extern func_ov00_020c3674
 .extern func_ov00_020c28ec

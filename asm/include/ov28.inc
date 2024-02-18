@@ -1037,7 +1037,7 @@
 .extern func_01ff8aa0
 .extern func_01ff8e84
 .extern func_ov00_020b3ee8
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern data_02050f54
 .extern data_02051154
 .extern data_02051f54

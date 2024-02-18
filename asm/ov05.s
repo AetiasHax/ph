@@ -4639,7 +4639,7 @@ _02104694:
 	beq _0210471c
 	ldr r0, [r6]
 	add r1, sb, #0x60
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0210471c
 	ldr r0, [r6]
@@ -4772,7 +4772,7 @@ _0210485c:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0x15
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _021048a8
 	mov r2, #0
@@ -4832,7 +4832,7 @@ _0210493c:
 	ldr r0, _02104a38 ; =gItemManager
 	mov r1, #0x16
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	addne sp, sp, #0x34
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
@@ -7074,7 +7074,7 @@ _02106810:
 	ldr r0, _02106890 ; =gItemManager
 	mov r1, #0x2d
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _02106874
 	ldr r0, [r6, #0x1c]

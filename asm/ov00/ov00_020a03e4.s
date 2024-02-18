@@ -9646,13 +9646,13 @@ func_ov00_020a7c60: ; 0x020a7c60
 	arm_func_start func_ov00_020a7ce4
 func_ov00_020a7ce4: ; 0x020a7ce4
 	ldr r0, _020a7cf4 ; =gItemManager
-	ldr ip, _020a7cf8 ; =_ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
+	ldr ip, _020a7cf8 ; =_ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a7ce4
 _020a7cf4: .word gItemManager
-_020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pj
+_020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
 
 	.global func_ov00_020a7cfc
 	arm_func_start func_ov00_020a7cfc
@@ -9668,7 +9668,7 @@ func_ov00_020a7cfc: ; 0x020a7cfc
 	ldmeqia sp!, {r3, pc}
 	ldr r0, _020a7d30 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZN11ItemManager18EquipItem_vfunc_2cEj
+	bl _ZN11ItemManager18EquipItem_vfunc_2cEi
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a7cfc
@@ -10052,7 +10052,7 @@ func_ov00_020a8158: ; 0x020a8158
 _020a8168:
 	ldr r0, [r4]
 	mov r1, r6
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	cmp r0, #0
 	beq _020a818c
 	ldr r2, [r0]
@@ -11145,7 +11145,7 @@ func_ov00_020a8cec: ; 0x020a8cec
 	stmdb sp!, {r3, lr}
 	ldr r0, _020a8d24 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	cmp r0, #0
 	beq _020a8d1c
 	ldr r1, [r0]
@@ -11165,13 +11165,13 @@ _020a8d24: .word gItemManager
 	arm_func_start func_ov00_020a8d28
 func_ov00_020a8d28: ; 0x020a8d28
 	ldr r0, _020a8d38 ; =gItemManager
-	ldr ip, _020a8d3c ; =_ZN11ItemManager12GetEquipItemEj
+	ldr ip, _020a8d3c ; =_ZN11ItemManager12GetEquipItemEi
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020a8d28
 _020a8d38: .word gItemManager
-_020a8d3c: .word _ZN11ItemManager12GetEquipItemEj
+_020a8d3c: .word _ZN11ItemManager12GetEquipItemEi
 
 	.global func_ov00_020a8d40
 	arm_func_start func_ov00_020a8d40
@@ -16262,7 +16262,7 @@ _020ac930:
 	ldr r0, _020ac9dc ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _020ac9bc
 	ldr r0, _020ac9e0 ; =data_027e0f74
@@ -16427,7 +16427,7 @@ func_ov00_020acb6c: ; 0x020acb6c
 	ldr r0, _020ace74 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	cmp r0, #0
 	beq _020acbb0
 	bl func_ov00_020abf50

@@ -1546,7 +1546,7 @@ func_ov19_0216eacc: ; 0x0216eacc
 	ldr r0, _0216eb2c ; =gItemManager
 	mov r1, #0x16
 	ldr r0, [r0]
-	blx _ZN11ItemManager7AddItemEj
+	blx _ZN11ItemManager7AddItemEi
 	mov r4, #0
 _0216eafc:
 	add r0, r5, r4, lsl #2

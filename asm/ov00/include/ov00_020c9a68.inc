@@ -399,7 +399,7 @@
 .extern data_027e077c
 .extern data_02056be4
 .extern data_027e103c
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov14_02152220
 .extern gItemManager
 .extern data_027e0618

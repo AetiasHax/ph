@@ -2847,7 +2847,7 @@ _0219a92c:
 	ldr r0, _0219a994 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r0, [r0, #0x18]
 	cmp r0, #0
 	bgt _0219a954
@@ -3091,7 +3091,7 @@ _0219abb0:
 	cmp r2, r1
 	bhs _0219ac8e
 	mov r1, #7
-	blx _ZN11ItemManager12GetEquipItemEj
+	blx _ZN11ItemManager12GetEquipItemEi
 	add r4, r0, #0
 	beq _0219ac8e
 	ldr r0, _0219ac9c ; =data_027e0d78

@@ -1365,7 +1365,7 @@ _020af810:
 	beq _020af8b0
 	ldr r0, _020afac4 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	mov r5, r0
 _020af8b0:
 	ldr r0, _020afac8 ; =data_027e0fc8

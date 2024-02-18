@@ -792,9 +792,9 @@
 .extern data_ov00_020eec9c
 .extern data_027e0c68
 .extern func_ov00_02097760
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_020c3b2c
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern data_027e0d54
 .extern data_027e0c68
 .extern data_027e0764
@@ -815,7 +815,7 @@
 .extern func_ov05_02100ae0
 .extern func_ov00_020ab6c8
 .extern _ZN11ItemManager8GiveKeysEj
-.extern _ZN11ItemManager7AddItemEj
+.extern _ZN11ItemManager7AddItemEi
 .extern func_ov00_02087d98
 .extern func_ov00_02087d98
 .extern func_ov00_020d70a4

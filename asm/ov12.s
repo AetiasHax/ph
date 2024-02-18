@@ -9020,7 +9020,7 @@ _0211a1f0:
 	ldr r0, _0211a3ec ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x28]
@@ -9028,7 +9028,7 @@ _0211a1f0:
 	ldr r0, _0211a3ec ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x28]

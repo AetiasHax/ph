@@ -2,7 +2,7 @@
 
 #include "types.h"
 
-typedef u32 ItemFlag;
+typedef s32 ItemFlag;
 enum ItemFlag_ {
     ItemFlag_None             = -1,
     ItemFlag_OshusSword       = 0,

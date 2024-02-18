@@ -317,7 +317,7 @@
 .extern func_01ffbe34
 .extern func_ov00_0209d90c
 .extern func_02034a1c
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern func_ov00_0209d90c
 .extern func_ov00_02079680
@@ -334,13 +334,13 @@
 .extern data_027e0d3c
 .extern func_01ffbe34
 .extern func_ov00_02097760
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_02097760
 .extern _ZNK11ItemManager18IsTreasureSalvagedEj
 .extern func_ov00_0209d90c
 .extern func_ov00_02079680
 .extern func_02034984
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_02097760
 .extern func_02034698
 .extern func_ov00_02079680
@@ -577,7 +577,7 @@
 .extern func_ov00_020a8c78
 .extern func_ov00_020b0b0c
 .extern func_ov00_020a8d40
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern data_027e0fb8
 .extern gItemManager
 .extern func_ov00_020a8d6c

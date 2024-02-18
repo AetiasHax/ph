@@ -1115,7 +1115,7 @@ _0217cbd8:
 	ldr r0, _0217cd00 ; =gItemManager
 	mov r1, #4
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _0217cc80
 	ldr r1, _0217cd04 ; =0x00140054
@@ -1126,7 +1126,7 @@ _0217cc00:
 	ldr r0, _0217cd00 ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _0217cc80
 	ldr r1, _0217cd08 ; =0x00140053
@@ -1137,7 +1137,7 @@ _0217cc28:
 	ldr r0, _0217cd00 ; =gItemManager
 	mov r1, #7
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _0217cc80
 	ldr r1, _0217cd0c ; =0x00140055
@@ -1592,21 +1592,21 @@ _0217d1a4:
 _0217d1b4:
 	ldr r0, [fp]
 	mov r1, #4
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r8, r4
 	b _0217d25c
 _0217d1cc:
 	ldr r0, [fp]
 	mov r1, #5
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r8, r4
 	b _0217d25c
 _0217d1e4:
 	ldr r0, [fp]
 	mov r1, #7
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r8, r4
 	b _0217d25c
@@ -5339,7 +5339,7 @@ func_ov31_0217fe00: ; 0x0217fe00
 	ldr r0, [r1]
 	mov r1, #5
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjt
+	bl _ZN11ItemManager8GiveAmmoEit
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5373,7 +5373,7 @@ func_ov31_0217fe58: ; 0x0217fe58
 	ldr r0, [r1]
 	mov r1, #4
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjt
+	bl _ZN11ItemManager8GiveAmmoEit
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5407,7 +5407,7 @@ func_ov31_0217feb0: ; 0x0217feb0
 	ldr r0, [r1]
 	mov r1, #7
 	mov r2, #0xa
-	bl _ZN11ItemManager8GiveAmmoEjt
+	bl _ZN11ItemManager8GiveAmmoEit
 	mov r0, r4
 	bl func_ov31_0217fd54
 	ldmia sp!, {r4, pc}
@@ -5791,11 +5791,11 @@ func_ov31_021802a8: ; 0x021802a8
 	mov r1, #5
 	ldr r5, [r0]
 	mov r0, r5
-	bl _ZNK11ItemManager7GetAmmoEj
+	bl _ZNK11ItemManager7GetAmmoEi
 	mov r4, r0
 	mov r0, r5
 	mov r1, #5
-	blx _ZNK11ItemManager10GetMaxAmmoEj
+	blx _ZNK11ItemManager10GetMaxAmmoEi
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5819,11 +5819,11 @@ func_ov31_021802ec: ; 0x021802ec
 	mov r1, #4
 	ldr r5, [r0]
 	mov r0, r5
-	bl _ZNK11ItemManager7GetAmmoEj
+	bl _ZNK11ItemManager7GetAmmoEi
 	mov r4, r0
 	mov r0, r5
 	mov r1, #4
-	blx _ZNK11ItemManager10GetMaxAmmoEj
+	blx _ZNK11ItemManager10GetMaxAmmoEi
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -5847,11 +5847,11 @@ func_ov31_02180330: ; 0x02180330
 	mov r1, #7
 	ldr r5, [r0]
 	mov r0, r5
-	bl _ZNK11ItemManager7GetAmmoEj
+	bl _ZNK11ItemManager7GetAmmoEi
 	mov r4, r0
 	mov r0, r5
 	mov r1, #7
-	blx _ZNK11ItemManager10GetMaxAmmoEj
+	blx _ZNK11ItemManager10GetMaxAmmoEi
 	cmp r4, r0
 	movge r0, #1
 	movlt r0, #0
@@ -6459,7 +6459,7 @@ _02180930:
 	ldr r0, _0218095c ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	movne r0, #0x10
 	moveq r0, #0xe

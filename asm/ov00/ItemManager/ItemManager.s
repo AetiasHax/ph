@@ -495,7 +495,7 @@ _020ade7c:
 	orr r1, r3
 	str r1, [r0, r2]
 	mov r1, #0
-	blx _ZN11ItemManager12GetEquipItemEj
+	blx _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x20]
@@ -509,7 +509,7 @@ _020ade98:
 	orr r1, r3
 	str r1, [r0, r2]
 	mov r1, #1
-	blx _ZN11ItemManager12GetEquipItemEj
+	blx _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x20]
@@ -518,37 +518,37 @@ _020ade98:
 _020adeb4:
 	mov r1, #4
 	mov r2, #0xa
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adebe:
 	mov r1, #7
 	mov r2, #0xa
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adec8:
 	mov r1, #5
 	mov r2, #0x14
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020aded2:
 	mov r1, #2
 	mov r2, #1
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adedc:
 	mov r1, #3
 	mov r2, #1
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adee6:
 	mov r1, #8
 	mov r2, #1
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adef0:
 	mov r1, #6
 	mov r2, #1
-	bl _ZN11ItemManager13GiveEquipItemEjj
+	bl _ZN11ItemManager13GiveEquipItemEij
 	b _020ae222
 _020adefa:
 	mov r1, #0x4b
@@ -1007,9 +1007,9 @@ _020ae270:
 	nop
 _020ae274: .word data_027e0f74
 
-	.global _ZN11ItemManager13GiveEquipItemEjj
-	thumb_func_start _ZN11ItemManager13GiveEquipItemEjj
-_ZN11ItemManager13GiveEquipItemEjj: ; 0x020ae278
+	.global _ZN11ItemManager13GiveEquipItemEij
+	thumb_func_start _ZN11ItemManager13GiveEquipItemEij
+_ZN11ItemManager13GiveEquipItemEij: ; 0x020ae278
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r1, #0
 	str r2, [sp]
@@ -1030,7 +1030,7 @@ _ZN11ItemManager13GiveEquipItemEjj: ; 0x020ae278
 	mov r5, ip
 	orr r3, r5
 	str r3, [r2, r7]
-	blx _ZN11ItemManager12GetEquipItemEj
+	blx _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	ldr r1, [sp]
 	ldr r2, [r2, #0x20]
@@ -1046,7 +1046,7 @@ _ZN11ItemManager13GiveEquipItemEjj: ; 0x020ae278
 _020ae2bc:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end _ZN11ItemManager13GiveEquipItemEjj
+	thumb_func_end _ZN11ItemManager13GiveEquipItemEij
 
 	.global _ZN11ItemManager13UnequipPotionEv
 	thumb_func_start _ZN11ItemManager13UnequipPotionEv
@@ -1158,30 +1158,30 @@ _ZNK11ItemManager15GetEquippedItemEv: ; 0x020ae390
 	bx lr
 	arm_func_end _ZNK11ItemManager15GetEquippedItemEv
 
-	.global _ZN11ItemManager15SetEquippedItemEj
-	arm_func_start _ZN11ItemManager15SetEquippedItemEj
-_ZN11ItemManager15SetEquippedItemEj: ; 0x020ae3a8
+	.global _ZN11ItemManager15SetEquippedItemEi
+	arm_func_start _ZN11ItemManager15SetEquippedItemEi
+_ZN11ItemManager15SetEquippedItemEi: ; 0x020ae3a8
 	ldr r3, [r0]
 	mov r2, #2
 	stmia r0, {r1, r3}
 	strh r2, [r0, #0x20]
 	mov r0, #1
 	bx lr
-	arm_func_end _ZN11ItemManager15SetEquippedItemEj
+	arm_func_end _ZN11ItemManager15SetEquippedItemEi
 
 	.global _ZN11ItemManager17EquipPreviousItemEv
 	arm_func_start _ZN11ItemManager17EquipPreviousItemEv
 _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
-	ldr ip, _020ae3cc ; =_ZN11ItemManager15SetEquippedItemEj
+	ldr ip, _020ae3cc ; =_ZN11ItemManager15SetEquippedItemEi
 	ldr r1, [r0, #4]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi - 1
 
-	.global _ZN11ItemManager13ForceEquipItemEj
-	thumb_func_start _ZN11ItemManager13ForceEquipItemEj
-_ZN11ItemManager13ForceEquipItemEj: ; 0x020ae3d0
+	.global _ZN11ItemManager13ForceEquipItemEi
+	thumb_func_start _ZN11ItemManager13ForceEquipItemEi
+_ZN11ItemManager13ForceEquipItemEi: ; 0x020ae3d0
 	push {r3, r4, r5, r6, r7, lr}
 	mov r4, #0
 	add r6, r0, #0
@@ -1208,7 +1208,7 @@ _020ae3ee:
 	strh r0, [r6, #0x20]
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end _ZN11ItemManager13ForceEquipItemEj
+	thumb_func_end _ZN11ItemManager13ForceEquipItemEi
 
 	.global _ZN11ItemManager20ClearForcedEquipItemEv
 	thumb_func_start _ZN11ItemManager20ClearForcedEquipItemEv
@@ -1220,7 +1220,7 @@ _ZN11ItemManager20ClearForcedEquipItemEv: ; 0x020ae400
 	ldr r1, [r0]
 	cmp r1, r2
 	beq _020ae414
-	blx _ZN11ItemManager15SetEquippedItemEj
+	blx _ZN11ItemManager15SetEquippedItemEi
 	pop {r3, pc}
 _020ae414:
 	mov r0, #0
@@ -1233,14 +1233,14 @@ _ZN11ItemManager22UpdateSwordShieldInUseEv: ; 0x020ae418
 	stmdb sp!, {r4, lr}
 	mov r1, #0
 	mov r4, r0
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x28]
 	blx r2
 	mov r0, r4
 	mov r1, #1
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x28]
@@ -1267,7 +1267,7 @@ _ZN11ItemManager13UpgradeQuiverEv: ; 0x020ae458
 _020ae472:
 	add r0, r4, #0
 	mov r1, #5
-	bl _ZNK11ItemManager10GetMaxAmmoEj
+	bl _ZNK11ItemManager10GetMaxAmmoEi
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #0xa]
@@ -1294,7 +1294,7 @@ _ZN11ItemManager14UpgradeBombBagEv: ; 0x020ae484
 _020ae49e:
 	add r0, r4, #0
 	mov r1, #4
-	bl _ZNK11ItemManager10GetMaxAmmoEj
+	bl _ZNK11ItemManager10GetMaxAmmoEi
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #8]
@@ -1321,7 +1321,7 @@ _ZN11ItemManager17UpgradeBombchuBagEv: ; 0x020ae4b0
 _020ae4ca:
 	add r0, r4, #0
 	mov r1, #7
-	bl _ZNK11ItemManager10GetMaxAmmoEj
+	bl _ZNK11ItemManager10GetMaxAmmoEi
 	add r4, #0xb0
 	ldr r1, [r4]
 	strh r0, [r1, #0xe]

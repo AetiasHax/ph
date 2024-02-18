@@ -1420,7 +1420,7 @@ func_ov26_0216e5b4: ; 0x0216e5b4
 	ldr r0, _0216e628 ; =gItemManager
 	mov r1, #0x20
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0216e620
 	ldr r0, _0216e62c ; =data_027e077c
@@ -1693,7 +1693,7 @@ func_ov26_0216e8b8: ; 0x0216e8b8
 	ldr r0, _0216e9b8 ; =gItemManager
 	mov r1, #0x20
 	ldr r0, [r0]
-	blx _ZNK11ItemManager7HasItemEj
+	blx _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0216e986
 	ldr r0, _0216e9b8 ; =gItemManager
@@ -1785,7 +1785,7 @@ func_ov26_0216e9d0: ; 0x0216e9d0
 	mov r1, #0x20
 	ldr r0, [r0]
 	mov r5, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0216ea08
 	ldrb r0, [r6, #0xc2]
@@ -4151,7 +4151,7 @@ func_ov26_02170894: ; 0x02170894
 	ldr r0, _02170934 ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _021708dc
 	ldr r0, _02170934 ; =gItemManager
@@ -5599,7 +5599,7 @@ _02171cec:
 	ldr r1, _02171d24 ; =data_ov26_02179434
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	movne r0, #5
 	moveq r0, #0xc
@@ -7173,7 +7173,7 @@ _021731b8:
 	ldr r0, _021732bc ; =gItemManager
 	mov r1, #0x60
 	ldr r0, [r0]
-	blx _ZN11ItemManager7AddItemEj
+	blx _ZN11ItemManager7AddItemEi
 	add r0, sp, #0xc
 	bl func_ov00_0209a4f4
 	mov r2, #0

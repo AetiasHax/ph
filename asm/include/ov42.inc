@@ -17,7 +17,7 @@
 .extern func_ov00_02087400
 .extern func_ov00_02083918
 .extern func_ov00_02087400
-.extern _ZN11ItemManager13ForceEquipItemEj
+.extern _ZN11ItemManager13ForceEquipItemEi
 .extern func_020385b8
 .extern func_ov00_020ab6c8
 .extern func_ov00_020bcf50

@@ -11391,7 +11391,7 @@ func_ov28_021768dc: ; 0x021768dc
 	ldr r0, _021769e4 ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r4, #0x7ad]

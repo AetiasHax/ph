@@ -7647,7 +7647,7 @@ func_ov00_020cf750: ; 0x020cf750
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x21
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}

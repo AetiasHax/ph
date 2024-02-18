@@ -8,13 +8,13 @@
 .extern func_ov14_0212680c
 .extern _ZN9SysObjectdlEPv
 .extern func_ov14_02126b04
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern gItemManager
 .extern func_ov14_02127188
 .extern func_ov00_020ceacc
 .extern data_027e0ffc
 .extern gItemManager
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c1f8
 .extern data_027e0e58

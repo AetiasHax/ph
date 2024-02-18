@@ -536,8 +536,8 @@
 .extern func_ov00_020d7a84
 .extern func_ov00_020d8024
 .extern _ZN11ItemManager22UpdateSwordShieldInUseEv
-.extern _ZN11ItemManager12GetEquipItemEj
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020b8610
 .extern func_ov00_020b8610
 .extern func_ov00_0207c474

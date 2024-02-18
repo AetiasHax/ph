@@ -326,7 +326,7 @@ _02189918:
 	ldr r0, _02189afc ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	blx _ZN11ItemManager13ForceEquipItemEj
+	blx _ZN11ItemManager13ForceEquipItemEi
 	ldr r1, _02189b00 ; =data_027e0fc8
 	mov r0, r7
 	ldr r4, [r1]

@@ -171,7 +171,7 @@
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5e9c
 .extern func_ov00_0209d738
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov26_02173b7c
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5e9c

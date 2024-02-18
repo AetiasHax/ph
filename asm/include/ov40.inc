@@ -56,7 +56,7 @@
 .extern func_ov00_020a95a4
 .extern func_ov00_020c1730
 .extern data_027e0f6c
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_020c4588
 .extern func_ov00_020c42d8
 .extern func_020196fc
@@ -350,7 +350,7 @@
 .extern data_027e0e60
 .extern func_ov00_02097cf8
 .extern func_ov00_0209779c
-.extern _ZN11ItemManager7AddItemEj
+.extern _ZN11ItemManager7AddItemEi
 .extern data_027e0f74
 .extern gItemManager
 .extern func_ov05_02112268
@@ -431,8 +431,8 @@
 .extern func_ov00_020c0d4c
 .extern func_ov00_020a9dc0
 .extern func_ov00_020a9dc0
-.extern _ZNK11ItemManager7HasItemEj
-.extern _ZNK11ItemManager7HasItemEj
+.extern _ZNK11ItemManager7HasItemEi
+.extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_020aa0f0
 .extern func_ov00_020aa0f0
 .extern func_ov00_020aa0f0

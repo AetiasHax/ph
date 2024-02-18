@@ -7758,7 +7758,7 @@ _021828f4:
 	ldr r0, _02182944 ; =gItemManager
 	mov r1, #0x1d
 	ldr r0, [r0]
-	blx _ZN11ItemManager7AddItemEj
+	blx _ZN11ItemManager7AddItemEi
 	ldr r0, _02182938 ; =data_027e0f74
 	mov r1, #8
 	ldr r0, [r0]

@@ -79,7 +79,7 @@
 .extern data_027e0fc8
 .extern data_ov00_020eec68
 .extern func_ov00_0209779c
-.extern _ZN11ItemManager7AddItemEj
+.extern _ZN11ItemManager7AddItemEi
 .extern data_027e0f74
 .extern gItemManager
 .extern data_027e0ffc

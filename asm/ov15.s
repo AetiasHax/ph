@@ -2296,22 +2296,22 @@ _02121550:
 	ldr r0, _021216f8 ; =gItemManager
 	mov r1, #0x21
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr r1, _021216f8 ; =gItemManager
 	str r0, [sp, #0x10]
 	ldr r0, [r1]
 	mov r1, #0x23
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr r1, _021216f8 ; =gItemManager
 	mov fp, r0
 	ldr r0, [r1]
 	mov r1, #0x22
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr r1, _021216f8 ; =gItemManager
 	mov sl, r0
 	ldr r0, [r1]
 	mov r1, #0x24
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	mov r5, #0
 	ldr r1, _021216fc ; =data_027e0e60
 	mov r4, r0
@@ -12152,25 +12152,25 @@ _02129714:
 	ldr r0, _02129770 ; =gItemManager
 	mov r1, #0x21
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldmia sp!, {r4, pc}
 _02129728:
 	ldr r0, _02129770 ; =gItemManager
 	mov r1, #0x22
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldmia sp!, {r4, pc}
 _0212973c:
 	ldr r0, _02129770 ; =gItemManager
 	mov r1, #0x23
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldmia sp!, {r4, pc}
 _02129750:
 	ldr r0, _02129770 ; =gItemManager
 	mov r1, #0x24
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldmia sp!, {r4, pc}
 _02129764:
 	mov r0, #1
@@ -41551,7 +41551,7 @@ func_ov15_021428f0: ; 0x021428f0
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x2c
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
@@ -45645,7 +45645,7 @@ func_ov15_021461b0: ; 0x021461b0
 	ldrh r1, [r5, r4]
 	ldr r0, [r0]
 	add r1, r1, #0x60
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	addeq sp, sp, #0x18
 	moveq r0, #0
@@ -51996,12 +51996,12 @@ func_ov15_0214b86c: ; 0x0214b86c
 	ldr r0, _0214bb88 ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr r1, _0214bb88 ; =gItemManager
 	mov r7, r0
 	ldr r0, [r1]
 	mov r1, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0214b8c8
 	cmp r7, #0
@@ -60050,7 +60050,7 @@ func_ov15_02152358: ; 0x02152358
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x28
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, r7, r8, pc}
@@ -60395,7 +60395,7 @@ func_ov15_021527d4: ; 0x021527d4
 	ldr r0, _021529c0 ; =gItemManager
 	mov r1, #0x2f
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr ip, _021529c4 ; =data_027e0764
 	cmp r0, #0
 	ldr r2, [ip]
@@ -92740,12 +92740,12 @@ func_ov15_0216e534: ; 0x0216e534
 	str r1, [ip]
 	ldr r0, [r0]
 	mov r1, #0x25
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	mov r7, r0
 	ldr r0, _0216e694 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0216e5a4
 	cmp r7, #0
@@ -110851,7 +110851,7 @@ _0217dfa8:
 	bne _0217dfc4
 	ldr r0, [r4]
 	mov r1, r6
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0217dfe0
 _0217dfc4:
@@ -110931,7 +110931,7 @@ _0217e0ac:
 	ldr r0, _0217e1c4 ; =gItemManager
 	mov r1, #0x2c
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0217e1a4
 	ldr r0, _0217e1b8 ; =data_ov00_020eec9c
@@ -110959,7 +110959,7 @@ _0217e114:
 	ldr r0, _0217e1c4 ; =gItemManager
 	mov r1, #0x28
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0217e1a4
 	ldr r0, _0217e1b8 ; =data_ov00_020eec9c
@@ -110986,7 +110986,7 @@ _0217e178:
 	ldr r0, _0217e1c4 ; =gItemManager
 	mov r1, #0x2e
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0217e1a4
 	ldr r0, _0217e1b8 ; =data_ov00_020eec9c
@@ -111028,7 +111028,7 @@ _0217e1fc:
 	mov r1, #0x2c
 	ldr r0, [r0]
 	mvn r7, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r7, #4
 	beq _0217e228
@@ -111055,7 +111055,7 @@ _0217e260:
 	mov r1, #0x28
 	ldr r0, [r0]
 	mvn r7, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r7, #4
 	beq _0217e28c
@@ -111082,7 +111082,7 @@ _0217e2c4:
 	mov r1, #0x2e
 	ldr r0, [r0]
 	mvn r7, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r7, #4
 	beq _0217e2f0
@@ -111200,7 +111200,7 @@ _0217e42c:
 	ldr r0, _0217e4c0 ; =gItemManager
 	mov r1, #0x2e
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	movne r5, #0
 _0217e460:
@@ -112435,28 +112435,28 @@ _0217f564:
 	ldr r0, _0217f5fc ; =gItemManager
 	mov r1, #0x21
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0217f57c:
 	ldr r0, _0217f5fc ; =gItemManager
 	mov r1, #0x22
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0217f594:
 	ldr r0, _0217f5fc ; =gItemManager
 	mov r1, #0x23
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0217f5ac:
 	ldr r0, _0217f5fc ; =gItemManager
 	mov r1, #0x24
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0217f5c4:
@@ -117692,7 +117692,7 @@ func_ov15_02183cb4: ; 0x02183cb4
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x28
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}

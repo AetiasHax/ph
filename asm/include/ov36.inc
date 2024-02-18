@@ -654,9 +654,9 @@
 .extern data_027e0f64
 .extern data_027e0f74
 .extern data_027e0764
-.extern _ZN11ItemManager12GetEquipItemEj
-.extern _ZN11ItemManager12GetEquipItemEj
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
+.extern _ZN11ItemManager12GetEquipItemEi
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020ce2f0
 .extern func_01ff9bf8
 .extern func_01ffa0f4
@@ -685,7 +685,7 @@
 .extern func_01ff9bf8
 .extern func_01ffa0f4
 .extern func_ov14_02120998
-.extern _ZN11ItemManager12GetEquipItemEj
+.extern _ZN11ItemManager12GetEquipItemEi
 .extern func_ov00_020c71fc
 .extern func_ov00_02088000
 .extern func_ov00_020ceacc

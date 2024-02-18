@@ -625,7 +625,7 @@
 .extern func_ov00_02097b9c
 .extern func_ov00_02097bcc
 .extern func_ov00_0209779c
-.extern _ZN11ItemManager7AddItemEj
+.extern _ZN11ItemManager7AddItemEi
 .extern func_ov00_02097968
 .extern data_027e0f74
 .extern data_027e0e58

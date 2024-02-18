@@ -2888,7 +2888,7 @@ _0218b9b4:
 	ldr r0, _0218be0c ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _0218ba48
 	ldr r0, _0218be10 ; =data_027e0f74

@@ -100,7 +100,7 @@ THUMB void ItemManager::Load(const SaveItemManager *save) {
     if (this->mEquippedFairy >= FairyId_COUNT) {
         this->mEquippedFairy = FairyId_None;
     }
-    if (this->mEquippedItem - 9 <= 1) {
+    if ((u32) this->mEquippedItem - 9 <= 1) {
         if (this->HasItem(ItemFlag_Boomerang)) {
             this->mEquippedItem = ItemFlag_Boomerang;
         } else {
@@ -127,7 +127,7 @@ extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();
-extern "C" void _ZN14OverlayManager13LoadEquipItemEj();
+extern "C" void _ZN14OverlayManager13LoadEquipItemEi();
 ARM void ItemManager::TickEquipItem(void) {
     ItemFlag equip = this->GetEquippedItem();
     if (this->mEquipLoadTimer != 0) {
@@ -239,8 +239,8 @@ extern void *data_027e0e60;
 extern "C" bool func_ov00_020849f8(void *param1);
 extern unk32 data_027e0fc8;
 extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
-extern "C" bool _ZNK11ItemManager7HasItemEj();
-extern "C" void _ZN11ItemManager12GetEquipItemEj();
+extern "C" bool _ZNK11ItemManager7HasItemEi();
+extern "C" void _ZN11ItemManager12GetEquipItemEi();
 ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
     #ifndef NONMATCHING
     #include "../asm/ov00/ItemManager/ItemManager_func_ov00_020ad790.inc"
@@ -257,7 +257,7 @@ ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
     bool unk2 = !func_ov00_020849f8(data_027e0e60);
     if (
         this->mEquippedItem != ItemFlag_None &&
-        (unk2 || this->mEquippedItem - 9 <= 1) &&
+        (unk2 || (u32) this->mEquippedItem - 9 <= 1) &&
         (data_027e0fc8 == 0 || func_ov00_020bbd80(data_027e0fc8, param1)) &&
         this->HasItem(this->mEquippedItem)
     ) {
@@ -374,7 +374,7 @@ THUMB void ItemManager::SetTreasureSalvaged(u32 index) {
     SET_FLAG(&this->mSalvagedTreasureFlags, index);
 }
 
-THUMB void ItemManager::RemoveItem(s32 item) {
+THUMB void ItemManager::RemoveItem(ItemFlag item) {
     RESET_FLAG(this->mItemFlags.flags, item);
     if (item >= ItemFlag_EQUIP_START && item <= ItemFlag_EQUIP_END) {
         (*this->mAmmo)[item] = 0;

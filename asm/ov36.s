@@ -9017,7 +9017,7 @@ _02183c50:
 	ldr r0, _02184090 ; =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	add r1, sp, #0x48
 	ldr r2, [r2, #0x3c]
@@ -9027,7 +9027,7 @@ _02183c74:
 	ldr r0, _02184090 ; =gItemManager
 	mov r1, #8
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	add r1, sp, #0x48
 	ldr r2, [r2, #0x3c]
@@ -9037,7 +9037,7 @@ _02183c98:
 	ldr r0, _02184090 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	add r1, sp, #0x48
 	ldr r2, [r2, #0x3c]
@@ -9474,7 +9474,7 @@ _021842d4:
 	ldr r0, _02184420 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	add r1, sp, #0x14
 	ldr r2, [r2, #0x3c]

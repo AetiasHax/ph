@@ -26,7 +26,7 @@
 .extern data_02050f54
 .extern func_ov00_020c3180
 .extern func_ov00_0209779c
-.extern _ZN11ItemManager7AddItemEj
+.extern _ZN11ItemManager7AddItemEi
 .extern func_ov00_020c3180
 .extern data_027e0f74
 .extern gItemManager

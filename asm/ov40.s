@@ -388,7 +388,7 @@ func_ov40_0217c2b8: ; 0x0217c2b8
 	ldr r0, _0217c470 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	moveq r0, #0
 	streqb r0, [r6, #0x1c4]
@@ -8538,7 +8538,7 @@ _021827e8:
 	ldr r0, _0218281c ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	blx _ZN11ItemManager7AddItemEj
+	blx _ZN11ItemManager7AddItemEi
 _02182804:
 	mvn r0, #1
 	str r0, [r4, #0x10]
@@ -10151,12 +10151,12 @@ _02183ba8:
 	ldr r0, _02183d04 ; =gItemManager
 	mov r1, #0x25
 	ldr r0, [r0]
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	ldr r1, _02183d04 ; =gItemManager
 	mov r6, r0
 	ldr r0, [r1]
 	mov r1, #0
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	beq _02183bdc
 	cmp r6, #0

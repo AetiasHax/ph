@@ -57,7 +57,7 @@ _020ad840:
 _020ad860:
 	ldr r1, [r6]
 	mov r0, r6
-	bl _ZNK11ItemManager7HasItemEj
+	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	ldrne r4, [r6]
 _020ad874:
@@ -74,7 +74,7 @@ _020ad874:
 _020ad89c:
 	mov r0, r6
 	mov r1, r4
-	bl _ZN11ItemManager12GetEquipItemEj
+	bl _ZN11ItemManager12GetEquipItemEi
 	ldr r2, [r0]
 	mov r1, r5
 	ldr r2, [r2, #0x14]
