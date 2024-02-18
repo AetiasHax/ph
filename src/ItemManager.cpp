@@ -283,3 +283,8 @@ THUMB void ItemManager::EquipShipPart(ShipPart part, ShipType type) {
 THUMB s8 ItemManager::GetShipPartCount(ShipPart part, ShipType type) const {
     return this->mShipParts[part][type];
 }
+
+THUMB void ItemManager::SetShipPartCount(ShipPart part, ShipType type, s8 count) {
+    if (count > 99) count = 99;
+    this->mShipParts[part][type] = count;
+}

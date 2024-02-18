@@ -521,7 +521,7 @@
 .extern func_ov09_02118028
 .extern func_ov09_02118028
 .extern _ZNK11ItemManager16GetShipPartCountEjj
-.extern _ZN11ItemManager16SetShipPartCountEjjj
+.extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern data_ov09_0211f52c
 .extern gItemManager
 .extern func_ov09_02113f40

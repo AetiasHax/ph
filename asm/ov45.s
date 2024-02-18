@@ -6182,7 +6182,7 @@ func_ov45_0218e010: ; 0x0218e010
 	sub r3, r3, #1
 	mov r3, r3, lsl #0x18
 	mov r3, r3, asr #0x18
-	blx _ZN11ItemManager16SetShipPartCountEjjj
+	blx _ZN11ItemManager16SetShipPartCountEjjc
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218e010

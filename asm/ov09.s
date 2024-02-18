@@ -16982,7 +16982,7 @@ _0211c6d8:
 	add r1, r5, #0
 	mov r2, #0
 	mov r3, #1
-	bl _ZN11ItemManager16SetShipPartCountEjjj
+	bl _ZN11ItemManager16SetShipPartCountEjjc
 _0211c6f2:
 	add r5, r5, #1
 	cmp r5, #8
@@ -17428,7 +17428,7 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r5, #0
 	add r2, r4, #0
 	asr r3, r3, #0x18
-	bl _ZN11ItemManager16SetShipPartCountEjjj
+	bl _ZN11ItemManager16SetShipPartCountEjjc
 	pop {r4, r5, r6, pc}
 	nop
 	thumb_func_end func_ov09_0211c9a8
@@ -17496,7 +17496,7 @@ _0211ca3c:
 	ldr r0, [r0]
 	add r2, r4, #0
 	mov r3, #1
-	bl _ZN11ItemManager16SetShipPartCountEjjj
+	bl _ZN11ItemManager16SetShipPartCountEjjc
 	b _0211ca7c
 _0211ca5c:
 	ldr r0, _0211caa8 ; =gItemManager
@@ -17512,7 +17512,7 @@ _0211ca5c:
 	add r1, r5, #0
 	add r2, r4, #0
 	asr r3, r3, #0x18
-	bl _ZN11ItemManager16SetShipPartCountEjjj
+	bl _ZN11ItemManager16SetShipPartCountEjjc
 _0211ca7c:
 	ldr r0, _0211caac ; =data_ov09_0211f294
 	str r5, [r0]

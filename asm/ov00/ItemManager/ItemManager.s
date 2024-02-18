@@ -3,24 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager16SetShipPartCountEjjj
-	thumb_func_start _ZN11ItemManager16SetShipPartCountEjjj
-_ZN11ItemManager16SetShipPartCountEjjj: ; 0x020ad900
-	push {r3, r4}
-	cmp r3, #0x63
-	ble _020ad908
-	mov r3, #0x63
-_020ad908:
-	lsl r4, r1, #3
-	add r1, r1, r4
-	add r0, r0, r1
-	add r0, r0, r2
-	add r0, #0x48
-	strb r3, [r0]
-	pop {r3, r4}
-	bx lr
-	thumb_func_end _ZN11ItemManager16SetShipPartCountEjjj
-
 	.global _ZNK11ItemManager16GetTreasureCountEj
 	thumb_func_start _ZNK11ItemManager16GetTreasureCountEj
 _ZNK11ItemManager16GetTreasureCountEj: ; 0x020ad918
