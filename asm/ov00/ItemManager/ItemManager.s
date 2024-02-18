@@ -3,19 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager16GetShipPartCountEjj
-	thumb_func_start _ZNK11ItemManager16GetShipPartCountEjj
-_ZNK11ItemManager16GetShipPartCountEjj: ; 0x020ad8f0
-	lsl r3, r1, #3
-	add r1, r1, r3
-	add r0, r0, r1
-	add r1, r0, r2
-	mov r0, #0x48
-	ldrsb r0, [r1, r0]
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZNK11ItemManager16GetShipPartCountEjj
-
 	.global _ZN11ItemManager16SetShipPartCountEjjj
 	thumb_func_start _ZN11ItemManager16SetShipPartCountEjjj
 _ZN11ItemManager16SetShipPartCountEjjj: ; 0x020ad900

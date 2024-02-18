@@ -279,3 +279,7 @@ THUMB ShipType ItemManager::GetEquippedShipPart(ShipPart part) const {
 THUMB void ItemManager::EquipShipPart(ShipPart part, ShipType type) {
     this->mEquippedShipParts[part] = type;
 }
+
+THUMB s8 ItemManager::GetShipPartCount(ShipPart part, ShipType type) const {
+    return this->mShipParts[part][type];
+}
