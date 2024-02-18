@@ -1373,7 +1373,7 @@ func_ov45_0218a6ac: ; 0x0218a6ac
 	ldr r1, [r5, #0x1c]
 	mov r0, r4
 	mov r2, r2, asr #0x18
-	blx _ZN11ItemManager16SetTreasureCountEjj
+	blx _ZN11ItemManager16SetTreasureCountEjc
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218a6ac

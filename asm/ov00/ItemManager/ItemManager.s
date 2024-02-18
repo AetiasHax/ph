@@ -3,20 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager16SetTreasureCountEjj
-	thumb_func_start _ZN11ItemManager16SetTreasureCountEjj
-_ZN11ItemManager16SetTreasureCountEjj: ; 0x020ad920
-	cmp r2, #0x63
-	ble _020ad926
-	mov r2, #0x63
-_020ad926:
-	add r0, r0, r1
-	add r0, #0x90
-	strb r2, [r0]
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager16SetTreasureCountEjj
-
 	.global _ZNK11ItemManager10GetUnk_098Ej
 	thumb_func_start _ZNK11ItemManager10GetUnk_098Ej
 _ZNK11ItemManager10GetUnk_098Ej: ; 0x020ad930

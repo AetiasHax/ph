@@ -223,7 +223,7 @@
 .extern _ZNK11ItemManager16GetTreasureCountEj
 .extern func_ov03_020f3d80
 .extern _ZN11ItemManager10GiveRupeesEjj
-.extern _ZN11ItemManager16SetTreasureCountEjj
+.extern _ZN11ItemManager16SetTreasureCountEjc
 .extern gItemManager
 .extern data_027e0dbc
 .extern _ZNK11ItemManager16GetTreasureCountEj

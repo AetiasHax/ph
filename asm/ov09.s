@@ -17457,7 +17457,7 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	add r0, r4, #0
 	add r1, r5, #0
 	asr r2, r2, #0x18
-	bl _ZN11ItemManager16SetTreasureCountEjj
+	bl _ZN11ItemManager16SetTreasureCountEjc
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211c9e8
@@ -17567,7 +17567,7 @@ _0211cacc:
 	add r1, r5, #0
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN11ItemManager16SetTreasureCountEjj
+	bl _ZN11ItemManager16SetTreasureCountEjc
 	b _0211cb04
 _0211cae8:
 	ldr r0, _0211cb28 ; =gItemManager
@@ -17581,7 +17581,7 @@ _0211cae8:
 	add r0, r4, #0
 	add r1, r5, #0
 	asr r2, r2, #0x18
-	bl _ZN11ItemManager16SetTreasureCountEjj
+	bl _ZN11ItemManager16SetTreasureCountEjc
 _0211cb04:
 	ldr r0, _0211cb2c ; =data_ov09_0211f308
 	str r5, [r0]

@@ -3044,7 +3044,7 @@ _02192754:
 	ldr r0, [r0]
 	mov r1, r3, lsr #0x1c
 	mov r2, r2, asr #0x18
-	blx _ZN11ItemManager16SetTreasureCountEjj
+	blx _ZN11ItemManager16SetTreasureCountEjc
 _021927c4:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}

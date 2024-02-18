@@ -130,7 +130,7 @@
 .extern func_ov09_0211cb5c
 .extern func_020328a8
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZN11ItemManager16SetTreasureCountEjj
+.extern _ZN11ItemManager16SetTreasureCountEjc
 .extern gItemManager
 .extern func_ov09_02113f40
 .extern func_ov02_020f37e8

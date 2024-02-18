@@ -931,7 +931,7 @@
 .extern gItemManager
 .extern _ZN11ItemManager10GiveRupeesEjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZN11ItemManager16SetTreasureCountEjj
+.extern _ZN11ItemManager16SetTreasureCountEjc
 .extern gItemManager
 .extern _ZNK11ItemManager16GetShipPartCountEjj
 .extern _ZN11ItemManager16SetShipPartCountEjjc
@@ -941,9 +941,9 @@
 .extern gOverlayManager
 .extern data_027e1058
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZN11ItemManager16SetTreasureCountEjj
+.extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZN11ItemManager16SetTreasureCountEjj
+.extern _ZN11ItemManager16SetTreasureCountEjc
 .extern gItemManager
 .extern gOverlayManager
 .extern data_027e105c

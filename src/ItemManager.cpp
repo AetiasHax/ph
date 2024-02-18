@@ -292,3 +292,8 @@ THUMB void ItemManager::SetShipPartCount(ShipPart part, ShipType type, s8 count)
 THUMB s8 ItemManager::GetTreasureCount(Treasure treasure) const {
     return this->mTreasure[treasure];
 }
+
+THUMB void ItemManager::SetTreasureCount(Treasure treasure, s8 count) {
+    if (count > 99) count = 99;
+    this->mTreasure[treasure] = count;
+}
