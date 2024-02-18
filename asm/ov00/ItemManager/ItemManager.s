@@ -3,15 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager10GetUnk_098Ej
-	thumb_func_start _ZNK11ItemManager10GetUnk_098Ej
-_ZNK11ItemManager10GetUnk_098Ej: ; 0x020ad930
-	add r0, r0, r1
-	add r0, #0x98
-	ldrb r0, [r0]
-	bx lr
-	thumb_func_end _ZNK11ItemManager10GetUnk_098Ej
-
 	.global _ZNK11ItemManager10GetUnk_09eEj
 	thumb_func_start _ZNK11ItemManager10GetUnk_09eEj
 _ZNK11ItemManager10GetUnk_09eEj: ; 0x020ad938

@@ -297,3 +297,7 @@ THUMB void ItemManager::SetTreasureCount(Treasure treasure, s8 count) {
     if (count > 99) count = 99;
     this->mTreasure[treasure] = count;
 }
+
+THUMB u8 ItemManager::GetUnk_098(u32 index) const {
+    return this->mUnk_098[index];
+}
