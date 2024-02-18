@@ -3,15 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager16GetTreasureCountEj
-	thumb_func_start _ZNK11ItemManager16GetTreasureCountEj
-_ZNK11ItemManager16GetTreasureCountEj: ; 0x020ad918
-	add r1, r0, r1
-	mov r0, #0x90
-	ldrsb r0, [r1, r0]
-	bx lr
-	thumb_func_end _ZNK11ItemManager16GetTreasureCountEj
-
 	.global _ZN11ItemManager16SetTreasureCountEjj
 	thumb_func_start _ZN11ItemManager16SetTreasureCountEjj
 _ZN11ItemManager16SetTreasureCountEjj: ; 0x020ad920
