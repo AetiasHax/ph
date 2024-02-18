@@ -66,13 +66,20 @@ while i < len(sys.argv):
 
 
 try:
-    ctx = subprocess.check_output(['gcc', '-E', '-P', '-undef', '-dD', *CXX_FLAGS, in_file], cwd=root_dir, encoding=encoding)
+    ctx: str = subprocess.check_output(['gcc', '-E', '-P', '-undef', '-dD', *CXX_FLAGS, in_file], cwd=root_dir, encoding=encoding)
 except subprocess.CalledProcessError as e:
     eprint(f"Failed to preprocess '{in_file}'")
     if verbose: eprint(e)
     else: eprint("Use -v for more verbose error output")
     exit(1)
 
+
+lines = ctx.splitlines(True)
+for i in reversed(range(len(lines))):
+    if lines[i].startswith('#define __cplusplus'): lines.pop(i)
+    elif lines[i].startswith('#define __STDC_HOSTED__'): lines.pop(i)
+
+ctx = ''.join(lines)
 
 if out_file:
     try:
