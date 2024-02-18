@@ -301,3 +301,7 @@ THUMB void ItemManager::SetTreasureCount(Treasure treasure, s8 count) {
 THUMB u8 ItemManager::GetUnk_098(u32 index) const {
     return this->mUnk_098[index];
 }
+
+THUMB u16 ItemManager::GetUnk_09e(u32 index) const {
+    return this->mUnk_09e[index];
+}

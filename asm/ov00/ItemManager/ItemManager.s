@@ -3,17 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager10GetUnk_09eEj
-	thumb_func_start _ZNK11ItemManager10GetUnk_09eEj
-_ZNK11ItemManager10GetUnk_09eEj: ; 0x020ad938
-	lsl r1, r1, #1
-	add r0, r0, r1
-	add r0, #0x9e
-	ldrh r0, [r0]
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZNK11ItemManager10GetUnk_09eEj
-
 	.global _ZNK11ItemManager18GetUnk_09e_DividedEj
 	thumb_func_start _ZNK11ItemManager18GetUnk_09e_DividedEj
 _ZNK11ItemManager18GetUnk_09e_DividedEj: ; 0x020ad944
