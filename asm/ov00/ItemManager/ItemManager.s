@@ -3,13 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager19GetMaxShipPartCountEv
-	thumb_func_start _ZNK11ItemManager19GetMaxShipPartCountEv
-_ZNK11ItemManager19GetMaxShipPartCountEv: ; 0x020ad9e0
-	mov r0, #0x63
-	bx lr
-	thumb_func_end _ZNK11ItemManager19GetMaxShipPartCountEv
-
 	.global _ZNK11ItemManager19GetMaxTreasureCountEv
 	thumb_func_start _ZNK11ItemManager19GetMaxTreasureCountEv
 _ZNK11ItemManager19GetMaxTreasureCountEv: ; 0x020ad9e4

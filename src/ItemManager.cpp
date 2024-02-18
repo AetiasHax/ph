@@ -334,3 +334,7 @@ THUMB u16 ItemManager::GetMaxAmmo(ItemFlag equipId) const {
         default: return 1;
     }
 }
+
+THUMB u8 ItemManager::GetMaxShipPartCount() const {
+    return 99;
+}
