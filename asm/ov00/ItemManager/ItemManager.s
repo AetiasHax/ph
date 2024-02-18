@@ -3,36 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager10RemoveItemEj
-	thumb_func_start _ZN11ItemManager10RemoveItemEj
-_ZN11ItemManager10RemoveItemEj: ; 0x020adb00
-	push {r3, r4, r5, r6}
-	mov r2, #0x4a
-	lsl r2, r2, #2
-	add r4, r0, r2
-	lsr r2, r1, #5
-	mov r5, #0x1f
-	lsl r3, r2, #2
-	mov r6, #1
-	and r5, r1
-	ldr r2, [r4, r3]
-	lsl r6, r5
-	bic r2, r6
-	str r2, [r4, r3]
-	cmp r1, #0
-	blt _020adb2c
-	cmp r1, #0xb
-	bgt _020adb2c
-	add r0, #0xb0
-	ldr r2, [r0]
-	mov r3, #0
-	lsl r0, r1, #1
-	strh r3, [r2, r0]
-_020adb2c:
-	pop {r3, r4, r5, r6}
-	bx lr
-	thumb_func_end _ZN11ItemManager10RemoveItemEj
-
 	.global _ZN11ItemManager15LoadFanfareItemEj
 	thumb_func_start _ZN11ItemManager15LoadFanfareItemEj
 _ZN11ItemManager15LoadFanfareItemEj: ; 0x020adb30

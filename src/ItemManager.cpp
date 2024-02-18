@@ -373,3 +373,10 @@ ARM bool ItemManager::IsTreasureSalvaged(u32 index) const {
 THUMB void ItemManager::SetTreasureSalvaged(u32 index) {
     SET_FLAG(&this->mSalvagedTreasureFlags, index);
 }
+
+THUMB void ItemManager::RemoveItem(s32 item) {
+    RESET_FLAG(this->mItemFlags.flags, item);
+    if (item >= ItemFlag_EQUIP_START && item <= ItemFlag_EQUIP_END) {
+        (*this->mAmmo)[item] = 0;
+    }
+}

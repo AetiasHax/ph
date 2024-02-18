@@ -4,7 +4,8 @@
 #define NULL 0
 
 #define GET_FLAG(arr, pos) (((1 << ((pos) & 0x1f)) & (arr)[(pos) >> 5]) != 0)
-#define SET_FLAG(arr, pos) ((arr)[(pos) >> 5] |= 1 << ((pos) & 0x1f))
+#define SET_FLAG(arr, pos) ((arr)[((u32(pos))) >> 5] |= 1 << ((pos) & 0x1f))
+#define RESET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
 
 #ifdef NONMATCHING
 #define NONMATCH

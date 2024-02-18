@@ -862,7 +862,7 @@ func_ov49_02196008: ; 0x02196008
 	ldr r0, _021960f0 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	blx _ZN11ItemManager10RemoveItemEj
+	blx _ZN11ItemManager10RemoveItemEi
 	ldrb r0, [r4, #0x5c9]
 	add r0, r0, #1
 	strb r0, [r4, #0x5c9]
