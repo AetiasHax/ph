@@ -3,29 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager7AddItemEj
-	thumb_func_start _ZN11ItemManager7AddItemEj
-_ZN11ItemManager7AddItemEj: ; 0x020ada98
-	push {r4, r5}
-	mov r2, #0x4a
-	lsl r2, r2, #2
-	add r2, r0, r2
-	lsr r0, r1, #5
-	lsl r0, r0, #2
-	mov r3, #0x1f
-	mov r4, #1
-	and r1, r3
-	add r3, r4, #0
-	ldr r5, [r2, r0]
-	lsl r3, r1
-	add r1, r5, #0
-	orr r1, r3
-	str r1, [r2, r0]
-	pop {r4, r5}
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager7AddItemEj
-
 	.global _ZNK11ItemManager21HasShipPartPriceShownEj
 	arm_func_start _ZNK11ItemManager21HasShipPartPriceShownEj
 _ZNK11ItemManager21HasShipPartPriceShownEj: ; 0x020adabc
@@ -1266,7 +1243,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj - 1
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEj
 
 	.global _ZN11ItemManager13ForceEquipItemEj
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEj

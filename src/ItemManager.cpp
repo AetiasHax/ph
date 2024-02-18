@@ -361,3 +361,7 @@ ARM u32 ItemManager::GetFairyLevel(FairyId id) const {
 ARM bool ItemManager::HasItem(ItemFlag item) const {
     return GET_FLAG(this->mItemFlags.flags, item);
 }
+
+THUMB void ItemManager::AddItem(ItemFlag item) {
+    SET_FLAG(this->mItemFlags.flags, item);
+}
