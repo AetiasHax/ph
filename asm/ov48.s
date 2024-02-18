@@ -726,7 +726,7 @@ _02190838:
 	ldr r0, _021908a8 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	blt _02190878
 	mov r0, r5
@@ -2058,7 +2058,7 @@ _021918a4:
 	mov r1, #2
 	ldr r0, [r0]
 	mov r5, #0
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	blt _02191964
 	bl func_ov48_02191c50
@@ -3227,7 +3227,7 @@ _0219266c:
 	ldr r0, _02193160 ; =gItemManager
 	mov r1, #2
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	blt _02192714
 	mov r6, r5

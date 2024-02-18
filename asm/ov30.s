@@ -7002,7 +7002,7 @@ _0218146c:
 	ldr r0, _02181804 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	blt _021814b4
 	mov r2, #5

@@ -221,7 +221,9 @@ private:
     /* 138 */ u32 mSalvagedTreasureFlags;
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;
     /* 148 */ u32 mTreasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
-    /* 14c */ unk8 mUnk_14c[0x4];
+    /* 14c */ unk8 mUnk_14c;
+    /* 14d */ unk8 mUnk_14d;
+    /* 14e */ unk8 mUnk_14e[0x2];
     /* 150 */
 
 public:
@@ -237,7 +239,8 @@ public:
     // Fairy
     FairyId GetEquippedFairy() const;
     Navi* GetFairy(FairyId id) const;
-    unk32 _ZNK11ItemManager18func_ov00_020ad9e8Ej(FairyId id) const;
+    unk32 func_ov00_020ad9e8(FairyId id) const;
+    unk32 func_ov00_020ada48(FairyId id) const;
 
     // Equip item
     void ClearPrevEquippedItem();
@@ -300,7 +303,6 @@ public:
     void SetUnk_09e(u32 index, u16 value); // also increments the corresponding mUnk_098 value
 
     // Item
-    unk32 func_ov00_020ad9a48(ItemFlag item) const;
     bool HasItem(ItemFlag item) const;
     void AddItem(ItemFlag item);
     void RemoveItem(ItemFlag item);

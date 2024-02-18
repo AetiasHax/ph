@@ -8638,7 +8638,7 @@ func_ov20_021749dc: ; 0x021749dc
 	mov r6, r0
 	ldr r0, [r1]
 	mov r1, #2
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	movge r5, #1
 	ldrb r0, [r6, #0x446]
@@ -8703,7 +8703,7 @@ _02174a20:
 	str r4, [sp, #0x20]
 	str r3, [sp, #0x24]
 	str r2, [sp, #0x28]
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+	bl _ZNK11ItemManager18func_ov00_020ad9e8Ei
 	cmp r0, #1
 	movge r0, #3
 	strge r0, [sp, #0x2c]

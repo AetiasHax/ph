@@ -748,7 +748,7 @@
 .extern func_ov00_020c1e2c
 .extern func_ov00_020a7ce4
 .extern func_ov00_020bf008
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_ov00_020c2238
 .extern func_ov00_020cbd28
 .extern func_ov00_020ceacc

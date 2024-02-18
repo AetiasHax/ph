@@ -357,7 +357,7 @@
 .extern func_ov00_020c313c
 .extern func_ov00_020c2bf4
 .extern func_ov00_020c2a0c
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_ov00_020c2238
 .extern func_ov00_020c070c
 .extern func_ov00_020a7c1c

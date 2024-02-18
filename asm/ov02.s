@@ -1992,7 +1992,7 @@ _020f0928:
 	bl func_ov02_020eed40
 	mov r1, r0
 	mov r0, r6
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
+	bl _ZNK11ItemManager18func_ov00_020ada48Ei
 	cmp r0, #1
 	blt _020f0968
 	cmp r4, #2
@@ -2592,7 +2592,7 @@ func_ov02_020f0ffc: ; 0x020f0ffc
 	bl func_ov02_020eed40
 	mov r1, r0
 	mov r0, r7
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
+	bl _ZNK11ItemManager18func_ov00_020ada48Ei
 	cmp r0, #0
 	addle sp, sp, #0x28
 	ldmleia sp!, {r3, r4, r5, r6, r7, pc}

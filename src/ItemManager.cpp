@@ -342,3 +342,12 @@ THUMB u8 ItemManager::GetMaxShipPartCount() const {
 THUMB u8 ItemManager::GetMaxTreasureCount() const {
     return 99;
 }
+
+ARM unk32 ItemManager::func_ov00_020ad9e8(FairyId id) const {
+    if (this->mEquippedFairy == FairyId_None) return 0;
+    FairyId fairy = this->GetEquippedFairy();
+    if (fairy == FairyId_Courage && this->mUnk_14d != 0) return 0;
+    fairy = this->GetEquippedFairy();
+    if (id == fairy) return this->func_ov00_020ada48(id);
+    return 0;
+}

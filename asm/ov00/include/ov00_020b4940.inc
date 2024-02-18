@@ -469,7 +469,7 @@
 .extern data_027e0fd4
 .extern data_027e0fe4
 .extern data_027e0fd0
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_ov00_020acb6c
 .extern func_020385b8
 .extern func_ov00_020ab614
@@ -481,7 +481,7 @@
 .extern func_01fffcd8
 .extern gItemManager
 .extern func_ov00_02097bbc
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_02002c14
 .extern func_ov00_020acb6c
 .extern func_020385b8
@@ -756,7 +756,7 @@
 .extern func_ov00_0207c1f8
 .extern data_027e0e58
 .extern data_027e0d0c
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern gItemManager
 .extern func_0202af4c
 .extern func_01ff9bc4
@@ -783,7 +783,7 @@
 .extern func_ov14_0213dfbc
 .extern func_ov14_0213e144
 .extern func_ov00_02081f4c
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern data_ov00_020eec9c
 .extern gItemManager
 .extern data_027e0e60
@@ -817,14 +817,14 @@
 .extern data_02050f54
 .extern data_027e0e58
 .extern func_ov00_0207c444
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern gItemManager
 .extern func_ov00_02081f4c
 .extern _ZN9SysObjectdlEPv
 .extern data_027e0fb8
 .extern func_ov00_020ceacc
 .extern data_027e0ffc
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern gItemManager
 .extern func_0202e58c
 .extern _ZNK11ItemManager7HasItemEj
@@ -922,7 +922,7 @@
 .extern func_ov00_02097738
 .extern func_01ff9bf8
 .extern func_ov00_020a7cfc
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_ov00_020a7cfc
 .extern data_027e0f74
 .extern data_027e0f94

@@ -3,39 +3,9 @@
 
 	.text
 
-	.global _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
-	arm_func_start _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
-_ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj: ; 0x020ad9e8
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r5, r0
-	ldr r3, [r5, #0x10]
-	mvn r2, #0
-	cmp r3, r2
-	mov r4, r1
-	moveq r0, #0
-	ldmeqia sp!, {r3, r4, r5, pc}
-	bl _ZNK11ItemManager16GetEquippedFairyEv
-	cmp r0, #0
-	bne _020ada24
-	ldrb r0, [r5, #0x14d]
-	cmp r0, #0
-	movne r0, #0
-	ldmneia sp!, {r3, r4, r5, pc}
-_020ada24:
-	mov r0, r5
-	bl _ZNK11ItemManager16GetEquippedFairyEv
-	cmp r4, r0
-	movne r0, #0
-	ldmneia sp!, {r3, r4, r5, pc}
-	mov r0, r5
-	mov r1, r4
-	bl _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
-	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
-
-	.global _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
-	arm_func_start _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
-_ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj: ; 0x020ada48
+	.global _ZNK11ItemManager18func_ov00_020ada48Ei
+	arm_func_start _ZNK11ItemManager18func_ov00_020ada48Ei
+_ZNK11ItemManager18func_ov00_020ada48Ei: ; 0x020ada48
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	add r1, r4, #0x1a
@@ -48,7 +18,7 @@ _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj: ; 0x020ada48
 	add r1, r4, #0x17
 	bl _ZNK11ItemManager7HasItemEj
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9a48EjEj
+	arm_func_end _ZNK11ItemManager18func_ov00_020ada48Ei
 
 	.global _ZNK11ItemManager7HasItemEj
 	arm_func_start _ZNK11ItemManager7HasItemEj

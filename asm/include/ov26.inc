@@ -336,7 +336,7 @@
 .extern func_ov00_020cadb0
 .extern func_ov00_020cadb0
 .extern _ZNK11ItemManager7HasItemEj
-.extern _ZNK11ItemManager18_ZNK11ItemManager18func_ov00_020ad9e8EjEj
+.extern _ZNK11ItemManager18func_ov00_020ad9e8Ei
 .extern func_ov00_020cb60c
 .extern func_ov00_020cadb0
 .extern func_ov00_020cb60c
