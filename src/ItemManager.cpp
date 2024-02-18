@@ -322,3 +322,15 @@ THUMB void ItemManager::SetUnk_09e(u32 index, u16 value) {
         this->mUnk_09e[index] = value;
     }
 }
+
+const u16 sQuiverSizes[] = {20, 20, 30, 50};
+const u16 sBombBagSizes[] = {10, 20, 30};
+
+THUMB u16 ItemManager::GetMaxAmmo(ItemFlag equipId) const {
+    switch (equipId) {
+        case ItemFlag_Bow: return (sQuiverSizes + 1)[this->mQuiverSize];
+        case ItemFlag_BombBag: return sBombBagSizes[this->mBombBagSize];
+        case ItemFlag_BombchuBag: return sBombBagSizes[this->mBombchuBagSize];
+        default: return 1;
+    }
+}

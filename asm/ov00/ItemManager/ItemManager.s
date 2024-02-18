@@ -3,45 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager10GetMaxAmmoEj
-	thumb_func_start _ZNK11ItemManager10GetMaxAmmoEj
-_ZNK11ItemManager10GetMaxAmmoEj: ; 0x020ad9a0
-	cmp r1, #4
-	beq _020ad9ba
-	cmp r1, #5
-	beq _020ad9ae
-	cmp r1, #7
-	beq _020ad9c6
-	b _020ad9d2
-_020ad9ae:
-	add r0, #0xb4
-	ldrh r0, [r0]
-	lsl r1, r0, #1
-	ldr r0, _020ad9d8 ; =data_ov00_020dc6c6
-	ldrh r0, [r0, r1]
-	bx lr
-_020ad9ba:
-	add r0, #0xb6
-	ldrh r0, [r0]
-	lsl r1, r0, #1
-	ldr r0, _020ad9dc ; =data_ov00_020dc6cc
-	ldrh r0, [r0, r1]
-	bx lr
-_020ad9c6:
-	add r0, #0xb8
-	ldrh r0, [r0]
-	lsl r1, r0, #1
-	ldr r0, _020ad9dc ; =data_ov00_020dc6cc
-	ldrh r0, [r0, r1]
-	bx lr
-_020ad9d2:
-	mov r0, #1
-	bx lr
-	nop
-	thumb_func_end _ZNK11ItemManager10GetMaxAmmoEj
-_020ad9d8: .word data_ov00_020dc6c6
-_020ad9dc: .word data_ov00_020dc6cc
-
 	.global _ZNK11ItemManager19GetMaxShipPartCountEv
 	thumb_func_start _ZNK11ItemManager19GetMaxShipPartCountEv
 _ZNK11ItemManager19GetMaxShipPartCountEv: ; 0x020ad9e0
@@ -1885,30 +1846,6 @@ _ZN11ItemManager21AddTreasurePriceShownEj: ; 0x020ae76c
 	thumb_func_end _ZN11ItemManager21AddTreasurePriceShownEj
 
     .rodata
-	.global data_ov00_020dc6c4
-data_ov00_020dc6c4: ; 0x020dc6c4
-	.byte 0x14, 0x00
-	.global data_ov00_020dc6c6
-data_ov00_020dc6c6: ; 0x020dc6c6
-	.byte 0x14, 0x00
-	.global data_ov00_020dc6c8
-data_ov00_020dc6c8: ; 0x020dc6c8
-	.byte 0x1e, 0x00
-	.global data_ov00_020dc6ca
-data_ov00_020dc6ca: ; 0x020dc6ca
-	.byte 0x32, 0x00
-	.global data_ov00_020dc6cc
-data_ov00_020dc6cc: ; 0x020dc6cc
-	.byte 0x0a, 0x00
-	.global data_ov00_020dc6ce
-data_ov00_020dc6ce: ; 0x020dc6ce
-	.byte 0x14, 0x00
-	.global data_ov00_020dc6d0
-data_ov00_020dc6d0: ; 0x020dc6d0
-	.byte 0x1e, 0x00
-	.global data_ov00_020dc6d2
-data_ov00_020dc6d2: ; 0x020dc6d2
-	.byte 0x00, 0x00
 
     .data
 	.global data_ov00_020e5c58
