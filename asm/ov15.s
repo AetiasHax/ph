@@ -48309,7 +48309,7 @@ _02148540:
 	ldr r0, [r0]
 	ldr r1, [r4, #0x41c]
 	mov r2, r2, lsr #0x10
-	blx _ZN11ItemManager10SetUnk_09eEjj
+	blx _ZN11ItemManager10SetUnk_09eEjt
 	ldrb r0, [r4, #0x43d]
 	cmp r0, #0
 	beq _021485cc
@@ -48337,7 +48337,7 @@ _02148540:
 	mov r2, r1, lsr #0x10
 	mov r1, #5
 	str r3, [ip, #4]
-	blx _ZN11ItemManager10SetUnk_09eEjj
+	blx _ZN11ItemManager10SetUnk_09eEjt
 _021485cc:
 	mov r1, #0
 	str r1, [r4, #0x3fc]

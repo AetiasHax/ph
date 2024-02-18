@@ -3314,8 +3314,8 @@
 .extern func_01ffa0f4
 .extern func_0202b418
 .extern data_027e10a4
-.extern _ZN11ItemManager10SetUnk_09eEjj
-.extern _ZN11ItemManager10SetUnk_09eEjj
+.extern _ZN11ItemManager10SetUnk_09eEjt
+.extern _ZN11ItemManager10SetUnk_09eEjt
 .extern func_ov00_020c5d74
 .extern func_ov00_0207c444
 .extern func_02002c14

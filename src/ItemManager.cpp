@@ -312,3 +312,13 @@ THUMB s32 ItemManager::GetUnk_09e_Divided(u32 index) const {
     if (result < 1) result = 1;
     return result;
 }
+
+THUMB void ItemManager::SetUnk_09e(u32 index, u16 value) {
+    u8 count = this->mUnk_098[index] + 1;
+    if (count > 99) count = 99;
+    this->mUnk_098[index] = count;
+    if (value > this->mUnk_09e[index]) {
+        if (value > 9999) value = 9999;
+        this->mUnk_09e[index] = value;
+    }
+}

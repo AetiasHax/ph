@@ -3,39 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager10SetUnk_09eEjj
-	thumb_func_start _ZN11ItemManager10SetUnk_09eEjj
-_ZN11ItemManager10SetUnk_09eEjj: ; 0x020ad96c
-	push {r3, r4}
-	add r4, r0, #0
-	add r4, #0x98
-	ldrb r3, [r4, r1]
-	add r3, r3, #1
-	lsl r3, r3, #0x18
-	lsr r3, r3, #0x18
-	cmp r3, #0x63
-	bls _020ad980
-	mov r3, #0x63
-_020ad980:
-	strb r3, [r4, r1]
-	add r0, #0x9e
-	lsl r3, r1, #1
-	ldrh r1, [r0, r3]
-	cmp r2, r1
-	bls _020ad996
-	ldr r1, _020ad99c ; =0x0000270f
-	cmp r2, r1
-	bls _020ad994
-	add r2, r1, #0
-_020ad994:
-	strh r2, [r0, r3]
-_020ad996:
-	pop {r3, r4}
-	bx lr
-	nop
-	thumb_func_end _ZN11ItemManager10SetUnk_09eEjj
-_020ad99c: .word 0x0000270f
-
 	.global _ZNK11ItemManager10GetMaxAmmoEj
 	thumb_func_start _ZNK11ItemManager10GetMaxAmmoEj
 _ZNK11ItemManager10GetMaxAmmoEj: ; 0x020ad9a0
