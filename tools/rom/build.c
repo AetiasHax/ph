@@ -367,7 +367,7 @@ bool WriteArm9OverlayFiles(
     size_t address = *pAddress;
     char fileName[32];
 
-    if (chdir(OVERLAYS_SUBDIR) != 0) FATAL("Failed to enter overlays directory '" OVERLAYS_SUBDIR "'\n");
+    if (!ChangeDir(OVERLAYS_SUBDIR)) return false;
 
     for (size_t ovNum = 0; ovNum < numOverlays; ++ovNum) {
         sprintf(fileName, "ov%02ld.lz", ovNum);
@@ -383,7 +383,7 @@ bool WriteArm9OverlayFiles(
         fatEntries[fileId].endOffset = address;
     }
 
-    if (chdir("..") != 0) FATAL("Failed to leave overlays directory '" OVERLAYS_SUBDIR "'\n");
+    if (!ChangeDir("..")) return false;
 
     *pAddress = address;
     return true;
@@ -674,9 +674,9 @@ bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree
             entries[child->firstFileId].endOffset = address;
             continue;
         }
-        if (chdir(name) != 0) FATAL("Failed to enter assets directory '%s'\n", name);
+        if (!ChangeDir(name)) return false;
         if (!TraverseAndAppendAssets(fpRom, &address, child, entries, child->firstFileId)) return false;
-        if (chdir("..") != 0) FATAL("Failed to leave assets directory '%s'\n", name);
+        if (!ChangeDir("..")) return false;
     }
     
     *pAddress = address;
@@ -711,7 +711,7 @@ bool AppendAssets(
     assetsList[listSize] = '\0';
 
     char assetsDir[256];
-    if (getcwd(assetsDir, sizeof(assetsDir)) == NULL) FATAL("Failed to get assets directory\n");
+    if (!GetCurrentDir(assetsDir, sizeof(assetsDir))) FATAL("Failed to get assets directory\n");
 
     char *const listEnd = assetsList + listSize;
     for (char *path = assetsList, *next; path < listEnd; path = next) {
@@ -723,9 +723,9 @@ bool AppendAssets(
         // First file ID of root directory is given from number of overlays
         uint16_t firstFileId = subTree->entry == NULL ? numOverlays : subTree->firstFileId;
 
-        if (path[1] != '\0' && chdir(&path[1]) != 0) FATAL("Failed to enter assets directory '%s'\n", path);
+        if (path[1] != '\0' && !ChangeDir(&path[1])) return false;
         if (!TraverseAndAppendAssets(fpRom, &address, subTree, entries, firstFileId)) return false;
-        if (chdir(assetsDir) != 0) FATAL("Failed to leave assets directory '%s'\n", path);
+        if (!ChangeDir(assetsDir)) return false;
 
         subTree->addedToFat = true;
     }
@@ -884,7 +884,7 @@ int main(int argc, char **argv) {
 
     // --------------------- Set up ---------------------
     char rootDir[256];
-    if (getcwd(rootDir, sizeof(rootDir)) == NULL) {
+    if (!GetCurrentDir(rootDir, sizeof(rootDir))) {
         fprintf(stderr, "Failed to get root directory\n");
         return 1;
     }
@@ -921,23 +921,14 @@ int main(int argc, char **argv) {
 
     // --------------------- Get canonical file paths ---------------------
     if (assetsListFile != NULL && !AllocFullPath(assetsListFile, &assetsListFile)) return 1;
-    if (chdir(baseDir) != 0) {
-        fprintf(stderr, "Failed to enter base directory '%s'\n", baseDir);
-        return 1;
-    }
+    if (!ChangeDir(baseDir)) return 1;
     char *arm9overlayDataFile = NULL;
     if (!AllocFullPath(ARM9_OVERLAY_DATA_FILE, &arm9overlayDataFile)) return 1;
-    if (chdir(rootDir) != 0) {
-        fprintf(stderr, "Failed to leave base directory '%s'\n", baseDir);
-        return 1;
-    }
+    if (!ChangeDir(rootDir)) return 1;
 
 
     // --------------------- Write ARM9 program ---------------------
-    if (chdir(buildDir) != 0) {
-        fprintf(stderr, "Failed to enter build directory '%s'\n", buildDir);
-        return 1;
-    }
+    if (!ChangeDir(buildDir)) return 1;
 
     if (!Align(512, fpRom, &address)) return 1;
     header.arm9.offset = address;
@@ -957,15 +948,9 @@ int main(int argc, char **argv) {
     if (!WriteArm9Overlays(fpRom, &address, &header, arm9overlayDataFile, overlayEntries, &numOverlays)) return 1;
     FreeFullPath(&arm9overlayDataFile);
 
-    if (chdir(rootDir) != 0) {
-        fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
-        return 1;
-    }
+    if (!ChangeDir(rootDir)) return 1;
 
-    if (chdir(baseDir) != 0) {
-        fprintf(stderr, "Failed to enter base directory '%s'\n", baseDir);
-        return 1;
-    }
+    if (!ChangeDir(baseDir)) return 1;
 
 
     // --------------------- Write ARM7 program ---------------------
@@ -973,10 +958,7 @@ int main(int argc, char **argv) {
     header.arm7.offset = address;
     if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
 
-    if (chdir(ASSETS_SUBDIR) != 0) {
-        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir(ASSETS_SUBDIR)) return 1;
 
 
     // --------------------- Write file name table (FNT) ---------------------
@@ -999,10 +981,7 @@ int main(int argc, char **argv) {
     FatEntry *fatEntries = malloc(numFiles * sizeof(FatEntry));
     memcpy(fatEntries, overlayEntries, numOverlays * sizeof(*fatEntries));
 
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
 
     // --------------------- Write banner ---------------------
@@ -1010,10 +989,7 @@ int main(int argc, char **argv) {
     header.bannerOffset = address;
     if (!WriteBanner(fpRom, &address)) return false;
 
-    if (chdir(ASSETS_SUBDIR) != 0) {
-        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir(ASSETS_SUBDIR)) return 1;
 
 
     // --------------------- Write assets ---------------------
@@ -1027,15 +1003,9 @@ int main(int argc, char **argv) {
 
     if (!FreeFileTree(&root)) return false;
 
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
-    if (chdir(rootDir) != 0) {
-        fprintf(stderr, "Failed to leave base directory '%s'\n", baseDir);
-        return 1;
-    }
+    if (!ChangeDir(rootDir)) return 1;
 
 
     // --------------------- Write padding ---------------------
@@ -1049,18 +1019,12 @@ int main(int argc, char **argv) {
     char *arm7bios = NULL;
     if (arm7biosFile != NULL && !AllocFullPath(arm7biosFile, &arm7bios)) return 1;
 
-    if (chdir(buildDir) != 0) {
-        fprintf(stderr, "Failed to enter build directory '%s'\n", buildDir);
-        return 1;
-    }
+    if (!ChangeDir(buildDir)) return 1;
 
     if (!FinalizeHeader(fpRom, &header, arm7bios, secureArea, &metadata)) return false;
     FreeFullPath(&arm7bios);
 
-    if (chdir(rootDir) != 0) {
-        fprintf(stderr, "Failed to leave build directory '%s'\n", buildDir);
-        return 1;
-    }
+    if (!ChangeDir(rootDir)) return 1;
 
     free(readBuffer);
     fclose(fpRom);

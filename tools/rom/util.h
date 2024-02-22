@@ -1,5 +1,5 @@
-#ifndef __FS_H
-#define __FS_H
+#ifndef __UTIL_H
+#define __UTIL_H
 
 #include <stdbool.h>
 #include <stdlib.h>
@@ -16,11 +16,11 @@
 #define READ32(buf) (((uint8_t*) buf)[0] | (((uint8_t*) buf)[1] << 8) | (((uint8_t*) buf)[2] << 16) | (((uint8_t*) buf)[3] << 24))
 #define REVERSE32(val) ((val >> 24) | ((val & 0xff0000) >> 8) | ((val & 0xff00) << 8) | ((val & 0xff) << 24))
 
-#ifdef _WIN32
+#if defined(_WIN32) || defined(__MSYS__)
+#   define __UTIL_WINDOWS
 #	include <Windows.h>
-#	include <sys/stat.h>
-#	define mkdir(path, mode) mkdir(path)
 #elif __linux__
+#   define __UTIL_LINUX
 #   include <errno.h>
 #	include <sys/stat.h>
 #   include <iconv.h>
@@ -30,13 +30,48 @@
 #	error "Target platform not supported"
 #endif
 
+bool MakeDir(const char *dir) {
+#ifdef __UTIL_WINDOWS
+    if (CreateDirectoryA(dir, NULL)) return true;
+    if (GetLastError() == ERROR_ALREADY_EXISTS) return true;
+    FATAL("Failed to make directory '%s'\n", dir);
+#elif defined(__UTIL_LINUX)
+    struct stat dirStat;
+    if (stat(dir, &dirStat) != 0) {
+        if (mkdir(dir, 0777) != 0) FATAL("Failed to make directory '%s'\n", dir);
+        return true;
+    }
+    if (!S_ISDIR(dirStat.st_mode)) FATAL("Could not make directory '%s' due to a file with the same name\n", dir);
+    return true;
+#endif
+}
+
+bool GetCurrentDir(char *dir, size_t dirSize) {
+#ifdef __UTIL_WINDOWS
+    return GetCurrentDirectory(dirSize, dir) > 0;
+#elif defined(__UTIL_LINUX)
+    return getcwd(dir, dirSize) != NULL;
+#endif
+}
+
+bool ChangeDir(const char *dir) {
+#ifdef __UTIL_WINDOWS
+    if (SetCurrentDirectory(dir)) return true;
+#elif defined(__UTIL_LINUX)
+    if (chdir(dir) == 0) return true;
+#endif
+    char cwd[256];
+    if (!GetCurrentDir(cwd, sizeof(cwd))) strcpy(cwd, "[unknown]");
+    FATAL("Failed to enter directory '%s' from current directory '%s'\n", dir, cwd);
+}
+
 bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *pResultSize) {
-#ifdef _WIN32
+#ifdef __UTIL_WINDOWS
     size_t resultSize = WideCharToMultiByte(CP_UTF8, WC_ERR_INVALID_CHARS, in, inSize / sizeof(wchar_t), out, outSize, NULL, NULL);
     if (resultSize == 0) FATAL("Failed to convert to UTF-8\n");
     *pResultSize = resultSize;
     return true;
-#elif __linux__
+#elif defined(__UTIL_LINUX)
     iconv_t convDesc = iconv_open("UTF-8", "UTF-16");
     if (convDesc == (iconv_t) -1) FATAL("Failed to get conversion description to UTF-8\n");
     size_t remainingBytes = outSize;
@@ -50,11 +85,11 @@ bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *
 }
 
 bool Utf8ToWchar(char *in, size_t inSize, wchar_t *out, size_t outSize) {
-#ifdef _WIN32
+#ifdef __UTIL_WINDOWS
     size_t resultSize = MultiByteToWideChar(CP_UTF8, 0, in, inSize, out, outSize / sizeof(wchar_t));
     if (resultSize == 0) FATAL("Failed to convert from UTF-8: %d\n", GetLastError());
     return true;
-#elif __linux__
+#elif defined(__UTIL_LINUX)
     iconv_t convDesc = iconv_open("UTF-16", "UTF-8");
     if (convDesc == (iconv_t) -1) FATAL("Failed to get conversion description from UTF-8\n");
     size_t remainingBytes = outSize;
@@ -74,7 +109,7 @@ bool Utf8ToWchar(char *in, size_t inSize, wchar_t *out, size_t outSize) {
 }
 
 bool AllocFullPath(const char *path, char **pFullPath) {
-#ifdef _WIN32
+#ifdef __UTIL_WINDOWS
     if (path[0] == '/') {
         // Remove drive letter, e.g. /c/Projects/ph/ -> /Projects/ph/
         const char *root = strchr(path + 1, '/');
@@ -86,7 +121,7 @@ bool AllocFullPath(const char *path, char **pFullPath) {
     if (resultSize == 0 || resultSize > size) FATAL("Failed to get full path for '%s'\n", path);
     *pFullPath = fullPath;
     return true;
-#elif __linux__
+#elif defined(__UTIL_LINUX)
     char *fullPath = realpath(path, NULL);
     if (fullPath == NULL) FATAL("Failed to get full path for '%s'\n", path);
     *pFullPath = fullPath;

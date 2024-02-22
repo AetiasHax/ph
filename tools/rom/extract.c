@@ -24,16 +24,6 @@ void Indent(size_t depth) {
     }
 }
 
-bool MakeDir(const char *dir) {
-    struct stat dirStat;
-    if (stat(dir, &dirStat) != 0) {
-        if (mkdir(dir, 0777) != 0) FATAL("Failed to make directory '%s'\n", dir);
-        return true;
-    }
-    if (!S_ISDIR(dirStat.st_mode)) FATAL("Could not make directory '%s' due to a file with the same name\n", dir);
-    return true;
-}
-
 bool CheckRegion(const Header *pHeader, BuildInfo *pInfo) {
     Region region = pHeader->gamecode[3];
     if (
@@ -181,7 +171,7 @@ bool ExtractSubtable(
             printf("%s {\n", name);
         }
         if (!MakeDir(name)) return false;
-        if (chdir(name) != 0) FATAL("Failed to enter assets subdirectory '%s'\n", name);
+        if (!ChangeDir(name)) return false;
         
         uint16_t subdirId = READ_SUBDIR_ID(pSubEntry);
         uint16_t subdirIndex = subdirId & 0xfff;
@@ -205,7 +195,7 @@ bool ExtractSubtable(
             printf("}\n");
         }
 
-        if (chdir("..") != 0) FATAL("Failed to leave assets subdirectory '%s'\n", name);
+        if (!ChangeDir("..")) return false;
         subEntryAddr += sizeof(FntSubEntry) + pSubEntry->length + sizeof(subdirId);
         pSubEntry = (const FntSubEntry*) subEntryAddr;
     }
@@ -378,10 +368,7 @@ int main(int argc, const char **argv) {
     BuildInfo info;
     if (!CheckRegion(pHeader, &info)) return 1;
     if (!MakeDir(outDir)) return 1;
-    if (chdir(outDir) != 0) {
-        fprintf(stderr, "Failed to enter output directory '%s'\n", outDir);
-        return 1;
-    }
+    if (!ChangeDir(outDir)) return 1;
 
 
     // --------------------- Extract ARM7 program ---------------------
@@ -395,26 +382,17 @@ int main(int argc, const char **argv) {
 
     // --------------------- Extract assets ---------------------
     if (!MakeDir(ASSETS_SUBDIR)) return 1;
-    if (chdir(ASSETS_SUBDIR) != 0) {
-        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir(ASSETS_SUBDIR)) return 1;
     const uint8_t *fntStart = rom + pHeader->fileNames.offset;
     const uint8_t *fatStart = rom + pHeader->fileAllocs.offset;
     if (!ExtractAssets(rom, fatStart, fntStart)) return 1;
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
 
     // --------------------- Extract overlay data ---------------------
     if (!ExtractOverlayData(rom, pHeader)) return 1;
 
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave output directory '%s'\n", outDir);
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
     free(rom);
 }
