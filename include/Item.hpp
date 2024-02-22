@@ -88,7 +88,7 @@ enum ItemId_ {
     ItemId_Quiver = 40,
     ItemId_BigBombBag = 41,
     ItemId_BigBombchuBag = 42,
-
+    ItemId_Unk_43 = 43,
     ItemId_KingsKey = 44,
     ItemId_PowerGem = 45,
     ItemId_WisdomGem = 46,
@@ -135,8 +135,11 @@ enum ItemId_ {
     ItemId_GoldenCannon = 123,
     ItemId_GoldenHull = 124,
 
+    ItemId_Unk_126 = 126,
     ItemId_CycloneSlate = 127,
 
     ItemId_Rupoor10 = 129,
     ItemId_Rupoor50 = 130,
+
+    ItemId_Unk_133 = 133,
 };
