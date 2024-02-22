@@ -80,7 +80,7 @@ bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
         memcpy(entry->name, name, nameLength);
         WRITE_SUBDIR_ID(entry, 0);
 
-        if (chdir(name) != 0) FATAL("Failed to enter directory '%s'\n", name);
+        if (!ChangeDir(name)) return false;
 
         FileTree child;
         if (!MakeFileTree(&child)) return false;
@@ -89,7 +89,7 @@ bool _FileTreeFileCallback(const char *name, bool isDir, void *userData) {
         memcpy(&pTree->children[pTree->numChildren], &child, sizeof(child));
         pTree->numChildren += 1;
 
-        if (chdir("..") != 0) FATAL("Failed to leave directory '%s'\n", name);
+        if (!ChangeDir("..")) return false;
     } else {
         FntSubEntry *entry = malloc(sizeof(FntSubEntry) + nameLength);
         if (entry == NULL) FATAL("Failed to allocate FNT sub entry for file '%s'\n", name);
