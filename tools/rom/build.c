@@ -211,7 +211,7 @@ bool LoadArm9Metadata(Arm9Metadata *pMetadata) {
 // Reads an entire file into a newly allocated buffer and writes it to *pBuffer if successful.
 // If pFileSize != NULL, this function writes the file's size into *pFileSize.
 // The buffer can be freed with free().
-bool ReadFile(const char *filePath, uint8_t **pBuffer, uint32_t *pFileSize) {
+bool ReadFileAlloc(const char *filePath, uint8_t **pBuffer, uint32_t *pFileSize) {
     FILE *fp = fopen(filePath, "rb");
     if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
     fseek(fp, 0, SEEK_END);
@@ -263,7 +263,7 @@ bool WriteArm9Program(FILE *fpRom, size_t *pAddress, uint32_t *pFileSize, uint32
 
     uint8_t *arm9;
     uint32_t fileSize;
-    if (!ReadFile(ARM9_PROGRAM_FILE, &arm9, &fileSize)) return false;
+    if (!ReadFileAlloc(ARM9_PROGRAM_FILE, &arm9, &fileSize)) return false;
 
     // Write module info, see spAutoloadBlockInfosStart in asm/main.s
     // This might seem unsafe since the ARM9 program is compressed, but the addresses we're writing to are in the secure area,
