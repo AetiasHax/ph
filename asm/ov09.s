@@ -16249,9 +16249,9 @@ _0211c138: .word data_ov09_0211f30c
 _0211c13c: .word data_ov09_0211f36c
 _0211c140: .word data_ov09_0211f384
 
-	.global func_ov09_0211c144
-	thumb_func_start func_ov09_0211c144
-func_ov09_0211c144: ; 0x0211c144
+	.global LoadTreasureItemFanfare
+	thumb_func_start LoadTreasureItemFanfare
+LoadTreasureItemFanfare: ; 0x0211c144
 	push {r3, r4, r5, r6, lr}
 	sub sp, #0x5c
 	add r6, r0, #0
@@ -16301,7 +16301,7 @@ _0211c190:
 	add sp, #0x5c
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end func_ov09_0211c144
+	thumb_func_end LoadTreasureItemFanfare
 _0211c1a4: .word gItemManager
 
 	.global func_ov09_0211c1a8
@@ -17599,7 +17599,7 @@ _0211cb18:
 	add r1, r5, #0
 	ldr r0, [r0]
 	mov r3, #0
-	bl func_ov09_0211c144
+	bl LoadTreasureItemFanfare
 	pop {r3, r4, r5, pc}
 	nop
 	thumb_func_end func_ov09_0211cac0

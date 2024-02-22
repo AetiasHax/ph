@@ -9036,7 +9036,7 @@ func_ov02_020f644c: ; 0x020f644c
 	ldr r0, [r0]
 	mov r2, r4
 	mov r3, #0
-	blx func_ov09_0211c144
+	blx LoadTreasureItemFanfare
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov02_020f644c

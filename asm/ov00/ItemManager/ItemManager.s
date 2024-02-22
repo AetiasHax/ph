@@ -40,7 +40,7 @@ _020adb5c:
 	ldr r0, [r0]
 	mov r2, #1
 	mov r3, #0
-	bl func_ov09_0211c144
+	bl LoadTreasureItemFanfare
 	add r1, r0, #0
 	b _020adc7c
 _020adb76:

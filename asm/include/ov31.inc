@@ -215,7 +215,7 @@
 .extern func_ov00_020a9588
 .extern data_027e1058
 .extern data_027e0ce0
-.extern func_ov09_0211c144
+.extern LoadTreasureItemFanfare
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020a9588
 .extern data_027e105c

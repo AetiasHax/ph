@@ -804,7 +804,7 @@
 .extern func_01ff8214
 .extern func_01ff8690
 .extern data_02050f54
-.extern func_ov09_0211c144
+.extern LoadTreasureItemFanfare
 .extern data_027e105c
 .extern func_ov09_0211cebc
 .extern _ZN9SysObjectnwEmPjj

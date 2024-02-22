@@ -25,7 +25,7 @@
 .extern Divide
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern func_ov09_0211c144
+.extern LoadTreasureItemFanfare
 .extern func_0204713c
 .extern func_0204713c
 .extern func_0204713c

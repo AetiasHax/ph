@@ -3737,7 +3737,7 @@ func_ov31_0217eb34: ; 0x0217eb34
 	ldr r3, [r5, #0x178]
 	mov r0, r4
 	mov r2, #0
-	blx func_ov09_0211c144
+	blx LoadTreasureItemFanfare
 	ldr r1, _0217eb90 ; =data_027e0ce0
 	mov r4, r0
 	ldr r1, [r1, #4]
