@@ -69,7 +69,7 @@ bool ChangeDir(const char *dir) {
 typedef struct {
     const char *name;
 #ifdef __UTIL_WINDOWS
-    HFILE handle;
+    HANDLE handle;
 #elif defined(__UTIL_LINUX)
     FILE *fp;
 #endif
@@ -77,7 +77,7 @@ typedef struct {
 
 bool FileOpenRead(const char *name, File *file) {
 #ifdef __UTIL_WINDOWS
-    HFILE handle = CreateFileA(name, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    HANDLE handle = CreateFileA(name, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
     if (handle != INVALID_HANDLE_VALUE) {
         file->name = name;
         file->handle = handle;
@@ -96,7 +96,7 @@ bool FileOpenRead(const char *name, File *file) {
 
 bool FileOpenWrite(const char *name, File *file) {
 #ifdef __UTIL_WINDOWS
-    HFILE handle = CreateFileA(name, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    HANDLE handle = CreateFileA(name, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
     if (handle != INVALID_HANDLE_VALUE) {
         file->name = name;
         file->handle = handle;
