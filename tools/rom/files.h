@@ -18,7 +18,7 @@ typedef struct FileTree {
 bool MakeFileTree(FileTree *pTree);
 
 bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *userData) {
-#ifdef _WIN32
+#ifdef __UTIL_WINDOWS
     WIN32_FIND_DATAA findData;
     HANDLE hFind = FindFirstFileA("*", &findData);
     if (hFind == INVALID_HANDLE_VALUE) FATAL("Failed to open directory to iterate files\n");
@@ -30,7 +30,7 @@ bool IterFiles(bool (*callback)(const char *name, bool isDir, void*), void *user
         if (!callback(name, isDir, userData)) return false;
     } while (FindNextFileA(hFind, &findData));
     FindClose(hFind);
-#elif __linux__
+#elif defined(__UTIL_LINUX)
     DIR *dir = opendir(".");
     struct dirent *entry;
     while ((entry = readdir(dir)) != NULL) {
