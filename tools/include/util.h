@@ -128,8 +128,9 @@ void FileClose(File *file) {
 size_t FileRead(const File *file, void *buf, size_t size, size_t count) {
 #ifdef __UTIL_WINDOWS
     DWORD bytesRead;
-    if (ReadFile(file->handle, buf, size * count, &bytesRead, NULL)) return true;
-    if (bytesRead > 0) return bytesRead / size;
+    if (ReadFile(file->handle, buf, size * count, &bytesRead, NULL)) {
+        if (bytesRead > 0) return bytesRead / size;
+    }
 #elif defined(__UTIL_LINUX)
     size_t countRead = fread(buf, size, count, file->fp);
     if (countRead > 0) return countRead;
