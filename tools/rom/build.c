@@ -8,7 +8,7 @@
 #include "util.h"
 #include "files.h"
 
-#define VERSION "1.1"
+#define VERSION "1.1.1"
 
 #define BUFFER_SIZE 1024 * 1024
 uint8_t *readBuffer = NULL;
@@ -201,10 +201,10 @@ typedef struct {
 } Arm9Metadata;
 
 bool LoadArm9Metadata(Arm9Metadata *pMetadata) {
-    FILE *fp = fopen(ARM9_METADATA_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open ARM9 metadata '" ARM9_METADATA_FILE "'\n");
-    if (fread(pMetadata, sizeof(*pMetadata), 1, fp) != 1) FATAL("Failed to read ARM9 metadata '" ARM9_METADATA_FILE "'\n");
-    fclose(fp);
+    File file;
+    if (!FileOpenRead(ARM9_METADATA_FILE, &file)) return false;
+    if (FileRead(&file, pMetadata, sizeof(*pMetadata), 1) == 0) return false;
+    FileClose(&file);
     return true;
 }
 
@@ -212,11 +212,9 @@ bool LoadArm9Metadata(Arm9Metadata *pMetadata) {
 // If pFileSize != NULL, this function writes the file's size into *pFileSize.
 // The buffer can be freed with free().
 bool ReadFileAlloc(const char *filePath, uint8_t **pBuffer, uint32_t *pFileSize) {
-    FILE *fp = fopen(filePath, "rb");
-    if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
-    fseek(fp, 0, SEEK_END);
-    size_t size = ftell(fp);
-    fseek(fp, 0, SEEK_SET);
+    File file;
+    if (!FileOpenRead(filePath, &file)) return false;
+    size_t size = FileSize(&file);
 
     uint8_t *buffer = malloc(size);
     if (buffer == NULL) FATAL("Failed to allocate buffer for file '%s'\n", filePath);
@@ -224,41 +222,39 @@ bool ReadFileAlloc(const char *filePath, uint8_t **pBuffer, uint32_t *pFileSize)
     uint8_t *end = buffer + size;
 
     while (current < end) {
-        size_t bytesRead = fread(current, 1, BUFFER_SIZE, fp);
-        if (bytesRead == 0) FATAL("Failed to read from file '%s'\n", filePath);
+        size_t bytesRead = FileRead(&file, current, 1, BUFFER_SIZE);
+        if (bytesRead == 0) return false;
         current += bytesRead;
     }
-    fclose(fp);
+    FileClose(&file);
 
     *pBuffer = buffer;
     if (pFileSize != NULL) *pFileSize = size;
     return true;
 }
 
-bool AppendFile(FILE *fpRom, const char *filePath, size_t *pAddress, uint32_t *pFileSize) {
+bool AppendFile(File *rom, const char *filePath, size_t *pAddress, uint32_t *pFileSize) {
     assert(readBuffer != NULL);
 
-    FILE *fp = fopen(filePath, "rb");
-    if (fp == NULL) FATAL("Failed to open file '%s'\n", filePath);
-    fseek(fp, 0, SEEK_END);
-    size_t size = ftell(fp);
-    fseek(fp, 0, SEEK_SET);
+    File file;
+    if (!FileOpenRead(filePath, &file)) return false;
+    size_t size = FileSize(&file);
     
     size_t bytesWritten = 0;
     while (bytesWritten < size) {
-        size_t bytesRead = fread(readBuffer, 1, BUFFER_SIZE, fp);
-        if (bytesRead == 0) FATAL("Failed to read from file '%s'\n", filePath);
-        if (fwrite(readBuffer, bytesRead, 1, fpRom) != 1) FATAL("Failed to write file '%s' to output ROM\n", filePath);
+        size_t bytesRead = FileRead(&file, readBuffer, 1, BUFFER_SIZE);
+        if (bytesRead == 0) return false;
+        if (!FileWrite(rom, readBuffer, bytesRead, 1)) FATAL("Failed to write file '%s' to output ROM\n", filePath);
         bytesWritten += bytesRead;
     }
-    fclose(fp);
+    FileClose(&file);
 
     *pAddress += size;
     if (pFileSize != NULL) *pFileSize = size;
     return true;
 }
 
-bool WriteArm9Program(FILE *fpRom, size_t *pAddress, uint32_t *pFileSize, uint32_t *pSecureArea, const Arm9Metadata *metadata) {
+bool WriteArm9Program(File *rom, size_t *pAddress, uint32_t *pFileSize, uint32_t *pSecureArea, const Arm9Metadata *metadata) {
     size_t address = *pAddress;
 
     uint8_t *arm9;
@@ -278,7 +274,7 @@ bool WriteArm9Program(FILE *fpRom, size_t *pAddress, uint32_t *pFileSize, uint32
     memcpy(&arm9[offset], &compressedCodeEnd, sizeof(compressedCodeEnd));
     offset += compressedCodeEnd;
 
-    if (fwrite(arm9, fileSize, 1, fpRom) != 1) FATAL("Failed to write ARM9 program\n");
+    if (!FileWrite(rom, arm9, fileSize, 1)) FATAL("Failed to write ARM9 program\n");
     address += fileSize;
 
     memcpy(pSecureArea, arm9, SECURE_AREA_SIZE);
@@ -289,22 +285,23 @@ bool WriteArm9Program(FILE *fpRom, size_t *pAddress, uint32_t *pFileSize, uint32
     return true;
 }
 
-bool Align(size_t alignment, FILE *fpRom, size_t *pAddress) {
+bool Align(size_t alignment, File *rom, size_t *pAddress) {
     assert((alignment & (alignment - 1)) == 0);
 
     size_t mask = alignment - 1;
-    size_t address = ftell(fpRom);
+    size_t address = FileOffset(rom);
     size_t nextAddr = (address + mask) & ~mask;
+    char padValue = 0xff;
     while (address < nextAddr) {
-        if (fputc(0xff, fpRom) == -1) FATAL("Failed to pad output ROM at address 0x%lx\n", address);
-        address += 1;
+        if (!FileWrite(rom, &padValue, sizeof(padValue), 1)) FATAL("Failed to pad output ROM at address 0x%lx\n", address);
+        address += sizeof(padValue);
     }
     *pAddress = address;
     return true;
 }
 
 bool WriteArm9OverlayTable(
-    FILE *fpRom,
+    File *rom,
     size_t *pAddress,
     Header *pHeader,
     const char *overlayDataFile,
@@ -314,39 +311,36 @@ bool WriteArm9OverlayTable(
 ) {
     size_t address = *pAddress;
 
-    FILE *fp = fopen(ARM9_OVERLAY_TABLE_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open ARM9 overlay table '" ARM9_OVERLAY_TABLE_FILE "'\n");
-    fseek(fp, 0, SEEK_END);
-    size_t tableSize = ftell(fp);
+    File file;
+    if (!FileOpenRead(ARM9_OVERLAY_TABLE_FILE, &file)) {
+        FATAL("Failed to open ARM9 overlay table '" ARM9_OVERLAY_TABLE_FILE "'\n");
+    }
+    size_t tableSize = FileSize(&file);
     if (tableSize % sizeof(OverlayEntry) != 0) {
         FATAL("ARM9 overlay table has an invalid size (entries must be %ld bytes long)\n", sizeof(OverlayEntry));
     }
     size_t numOverlays = tableSize / sizeof(OverlayEntry);
-    fseek(fp, 0, SEEK_SET);
 
     OverlayEntry *entries = malloc(tableSize);
     if (entries == NULL) FATAL("Failed to allocate array for ARM9 overlay table entries");
-    if (fread(entries, tableSize, 1, fp) != 1) FATAL("Failed to read ARM9 overlay table '" ARM9_OVERLAY_TABLE_FILE "'\n");
-    fclose(fp);
+    if (FileRead(&file, entries, tableSize, 1) == 0) FATAL("Failed to read ARM9 overlay table '" ARM9_OVERLAY_TABLE_FILE "'\n");
+    FileClose(&file);
 
-    fp = fopen(overlayDataFile, "rb");
-    if (fp == NULL) FATAL("Failed to open ARM9 overlay data file '%s'\n", overlayDataFile);
-    fseek(fp, 0, SEEK_END);
-    size_t dataSize = ftell(fp);
+    if (!FileOpenRead(overlayDataFile, &file)) FATAL("Failed to open ARM9 overlay data file '%s'\n", overlayDataFile);
+    size_t dataSize = FileSize(&file);
     if (dataSize != numOverlays * sizeof(OverlayData)) {
         FATAL("ARM9 overlay data file has an invalid size (expected %ld overlays with %ld bytes each)\n", numOverlays, sizeof(OverlayData));
     }
-    fseek(fp, 0, SEEK_SET);
 
     OverlayData *data = malloc(dataSize);
     if (data == NULL) FATAL("Failed to allocate array for ARM9 overlay data entries\n");
-    if (fread(data, dataSize, 1, fp) != 1) FATAL("Failed to read ARM9 overlay data '%s'\n", overlayDataFile);
-    fclose(fp);
+    if (FileRead(&file, data, dataSize, 1) == 0) FATAL("Failed to read ARM9 overlay data '%s'\n", overlayDataFile);
+    FileClose(&file);
     for (size_t i = 0; i < numOverlays; ++i) {
         entries[i].fileId = data[i].fileId;
     }
 
-    if (fwrite(entries, tableSize, 1, fpRom) != 1) FATAL("Failed to write ARM9 overlay table\n");
+    if (!FileWrite(rom, entries, tableSize, 1)) FATAL("Failed to write ARM9 overlay table\n");
 
     *pAddress = address;
     *pEntries = entries;
@@ -357,7 +351,7 @@ bool WriteArm9OverlayTable(
 }
 
 bool WriteArm9OverlayFiles(
-    FILE *fpRom,
+    File *rom,
     size_t *pAddress, 
     size_t numOverlays,
     FatEntry *fatEntries,
@@ -371,10 +365,10 @@ bool WriteArm9OverlayFiles(
 
     for (size_t ovNum = 0; ovNum < numOverlays; ++ovNum) {
         sprintf(fileName, "ov%02ld.lz", ovNum);
-        if (!Align(512, fpRom, &address)) return false;
+        if (!Align(512, rom, &address)) return false;
         size_t startOffset = address;
         uint32_t fileSize = 0;
-        if (!AppendFile(fpRom, fileName, &address, &fileSize)) return false;
+        if (!AppendFile(rom, fileName, &address, &fileSize)) return false;
         table[ovNum].compressedSize = fileSize;
         table[ovNum].isCompressed = true;
         uint32_t fileId = data[ovNum].fileId;
@@ -389,16 +383,16 @@ bool WriteArm9OverlayFiles(
     return true;
 }
 
-bool RewriteArm9OverlayTable(FILE *fpRom, const Header *header, OverlayEntry *entries, size_t numEntries) {
-    size_t prevAddress = ftell(fpRom);
-    fseek(fpRom, header->arm9Overlays.offset, SEEK_SET);
-    if (fwrite(entries, sizeof(*entries), numEntries, fpRom) != numEntries) FATAL("Failed to rewrite ARM9 overlay table\n");
-    fseek(fpRom, prevAddress, SEEK_SET);
+bool RewriteArm9OverlayTable(File *rom, const Header *header, OverlayEntry *entries, size_t numEntries) {
+    size_t prevAddress = FileOffset(rom);
+    FileGoTo(rom, header->arm9Overlays.offset);
+    if (!FileWrite(rom, entries, sizeof(*entries), numEntries)) FATAL("Failed to rewrite ARM9 overlay table\n");
+    FileGoTo(rom, prevAddress);
     return true;
 }
 
 bool WriteArm9Overlays(
-    FILE *fpRom,
+    File *rom,
     size_t *pAddress,
     Header *pHeader,
     const char *overlayDataFile,
@@ -410,9 +404,9 @@ bool WriteArm9Overlays(
     OverlayEntry *entries;
     OverlayData *data;
     size_t numOverlays;
-    if (!WriteArm9OverlayTable(fpRom, &address, pHeader, overlayDataFile, &entries, &data, &numOverlays)) return false;
-    if (!WriteArm9OverlayFiles(fpRom, &address, numOverlays, fatEntries, entries, data)) return false;
-    if (!RewriteArm9OverlayTable(fpRom, pHeader, entries, numOverlays)) return false;
+    if (!WriteArm9OverlayTable(rom, &address, pHeader, overlayDataFile, &entries, &data, &numOverlays)) return false;
+    if (!WriteArm9OverlayFiles(rom, &address, numOverlays, fatEntries, entries, data)) return false;
+    if (!RewriteArm9OverlayTable(rom, pHeader, entries, numOverlays)) return false;
 
     free(data);
     free(entries);
@@ -539,7 +533,7 @@ bool WriteFntSubtable(FileTree *tree, FntContext *pContext) {
     return true;
 }
 
-bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId, size_t *pNumFiles) {
+bool WriteFnt(File *rom, size_t *pAddress, FileTree *pRoot, size_t firstFileId, size_t *pNumFiles) {
     size_t address = *pAddress;
 
     FntContext ctx;
@@ -567,9 +561,9 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
     for (size_t i = 0; i < ctx.tableSize; ++i) {
         ctx.table[i].subtableOffset += tableLength;
     }
-    if (fwrite(ctx.table, sizeof(FntEntry), ctx.tableSize, fpRom) != ctx.tableSize) FATAL("Failed to write FNT table\n");
+    if (!FileWrite(rom, ctx.table, sizeof(FntEntry), ctx.tableSize)) FATAL("Failed to write FNT table\n");
     address += ctx.tableSize * sizeof(FntEntry);
-    if (fwrite(ctx.subtable, ctx.subtableSize, 1, fpRom) != 1) FATAL("Failed to write FNT subtables\n");
+    if (!FileWrite(rom, ctx.subtable, ctx.subtableSize, 1)) FATAL("Failed to write FNT subtables\n");
     address += ctx.subtableSize;
 
     free(ctx.table);
@@ -580,14 +574,14 @@ bool WriteFnt(FILE *fpRom, size_t *pAddress, FileTree *pRoot, size_t firstFileId
     return true;
 }
 
-bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
+bool WriteFat(File *rom, size_t *pAddress, size_t numFiles) {
     size_t address = *pAddress;
 
     FatEntry blank;
     blank.startOffset = 0;
     blank.endOffset = 0;
     for (size_t i = 0; i < numFiles; ++i) {
-        if (fwrite(&blank, sizeof(blank), 1, fpRom) != 1) FATAL("Failed to write blank placeholder FAT entry\n");
+        if (!FileWrite(rom, &blank, sizeof(blank), 1)) FATAL("Failed to write blank placeholder FAT entry\n");
     }
     address += sizeof(blank) * numFiles;
 
@@ -595,47 +589,43 @@ bool WriteFat(FILE *fpRom, size_t *pAddress, size_t numFiles) {
     return true;
 }
 
-bool ReadTitle(const char *language, const char *file, wchar_t *title, size_t titleSize) {
+bool ReadTitle(const char *language, const char *titleFile, wchar_t *title, size_t titleSize) {
     char buf[1024];
     memset(buf, 0, sizeof(buf));
-    FILE *fp = fopen(file, "rb");
-    if (fp == NULL) FATAL("Failed to open %s banner title '%s'\n", language, file);
+    File file;
+    if (!FileOpenRead(titleFile, &file)) FATAL("Failed to open %s banner title '%s'\n", language, titleFile);
     
-    fseek(fp, 0, SEEK_END);
-    size_t fileSize = ftell(fp);
-    if (fileSize > sizeof(buf) - 1) FATAL("Buffer too small for %s banner title '%s'\n", language, file);
-    fseek(fp, 0, SEEK_SET);
+    size_t fileSize = FileSize(&file);
+    if (fileSize > sizeof(buf) - 1) FATAL("Buffer too small for %s banner title '%s'\n", language, titleFile);
 
-    if (fread(buf, fileSize, 1, fp) != 1) FATAL("Failed to read %s banner title '%s'\n", language, file);
-    fclose(fp);
+    if (FileRead(&file, buf, fileSize, 1) != 1) FATAL("Failed to read %s banner title '%s'\n", language, titleFile);
+    FileClose(&file);
 
     memset(title, 0, titleSize);
     if (!Utf8ToWchar(buf, fileSize, title, titleSize)) return false;
     return true;
 }
 
-bool WriteBanner(FILE *fpRom, size_t *pAddress) {
+bool WriteBanner(File *rom, size_t *pAddress) {
     size_t address = *pAddress;
 
-    FILE *fp;
+    File file;
 
     Banner banner;
     banner.version = 1;
     memset(banner.reserved0, 0, sizeof(banner.reserved0));
 
-    fp = fopen(ICON_BITMAP_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open banner icon bitmap '" ICON_BITMAP_FILE "'\n");
-    if (fread(banner.iconBitmap, sizeof(banner.iconBitmap), 1, fp) != 1) {
+    if (!FileOpenRead(ICON_BITMAP_FILE, &file)) FATAL("Failed to open banner icon bitmap '" ICON_BITMAP_FILE "'\n");
+    if (FileRead(&file, banner.iconBitmap, sizeof(banner.iconBitmap), 1) != 1) {
         FATAL("Failed to read banner icon bitmap '" ICON_BITMAP_FILE "'\n");
     }
-    fclose(fp);
+    FileClose(&file);
 
-    fp = fopen(ICON_PALETTE_FILE, "rb");
-    if (fp == NULL) FATAL("Failed to open banner icon palette '" ICON_PALETTE_FILE "'\n");
-    if (fread(banner.iconPalette, sizeof(banner.iconPalette), 1, fp) != 1) {
+    if (!FileOpenRead(ICON_PALETTE_FILE, &file)) FATAL("Failed to open banner icon palette '" ICON_PALETTE_FILE "'\n");
+    if (FileRead(&file, banner.iconPalette, sizeof(banner.iconPalette), 1) != 1) {
         FATAL("Failed to read banner icon palette '" ICON_PALETTE_FILE "'\n");
     }
-    fclose(fp);
+    FileClose(&file);
 
     if (!ReadTitle("Japanese", TITLE_JAP_FILE, banner.japaneseTitle, sizeof(banner.japaneseTitle))) return false;
     if (!ReadTitle("English", TITLE_ENG_FILE, banner.englishTitle, sizeof(banner.englishTitle))) return false;
@@ -648,14 +638,14 @@ bool WriteBanner(FILE *fpRom, size_t *pAddress) {
     uint8_t *crcEnd = (uint8_t*) &banner + sizeof(banner);
     banner.crc = Crc(crcStart, crcEnd - crcStart);
 
-    if (fwrite(&banner, sizeof(banner), 1, fpRom) != 1) FATAL("Failed to write banner\n");
+    if (!FileWrite(rom, &banner, sizeof(banner), 1)) FATAL("Failed to write banner\n");
     address += sizeof(banner);
 
     *pAddress = address;
     return true;
 }
 
-bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree, FatEntry *entries, uint16_t firstFileId) {
+bool TraverseAndAppendAssets(File *rom, size_t *pAddress, const FileTree *tree, FatEntry *entries, uint16_t firstFileId) {
     size_t address = *pAddress;
 
     for (size_t i = 0; i < tree->numChildren; ++i) {
@@ -666,16 +656,16 @@ bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree
         strncpy(name, entry->name, entry->length);
         name[entry->length] = '\0';
         if (!entry->isSubdir) {
-            if (!Align(512, fpRom, &address)) return false;
+            if (!Align(512, rom, &address)) return false;
             size_t startOffset = address;
-            if (!AppendFile(fpRom, name, &address, NULL)) return false;
+            if (!AppendFile(rom, name, &address, NULL)) return false;
             // For files, `firstFileId` is the ID of the file
             entries[child->firstFileId].startOffset = startOffset;
             entries[child->firstFileId].endOffset = address;
             continue;
         }
         if (!ChangeDir(name)) return false;
-        if (!TraverseAndAppendAssets(fpRom, &address, child, entries, child->firstFileId)) return false;
+        if (!TraverseAndAppendAssets(rom, &address, child, entries, child->firstFileId)) return false;
         if (!ChangeDir("..")) return false;
     }
     
@@ -684,7 +674,7 @@ bool TraverseAndAppendAssets(FILE *fpRom, size_t *pAddress, const FileTree *tree
 }
 
 bool AppendAssets(
-    FILE *fpRom,
+    File *rom,
     size_t *pAddress,
     FileTree *root,
     FatEntry *entries,
@@ -694,20 +684,18 @@ bool AppendAssets(
     size_t address = *pAddress;
 
     if (assetsListFile == NULL) {
-        if (!TraverseAndAppendAssets(fpRom, &address, root, entries, numOverlays)) return false;
+        if (!TraverseAndAppendAssets(rom, &address, root, entries, numOverlays)) return false;
         *pAddress = address;
         return true;
     }
 
-    FILE *fp = fopen(assetsListFile, "rb");
-    if (fp == NULL) FATAL("Failed to open assets list file '%s'\n", assetsListFile);
-    fseek(fp, 0, SEEK_END);
-    size_t listSize = ftell(fp);
+    File file;
+    if (!FileOpenRead(assetsListFile, &file)) FATAL("Failed to open assets list file '%s'\n", assetsListFile);
+    size_t listSize = FileSize(&file);
     char *assetsList = malloc(listSize + 1);
     if (assetsList == NULL) FATAL("Failed to allocate string for assets list file '%s'\n", assetsListFile);
-    fseek(fp, 0, SEEK_SET);
-    if (fread(assetsList, listSize, 1, fp) != 1) FATAL("Failed to read from assets list file '%s'\n", assetsListFile);
-    fclose(fp);
+    if (FileRead(&file, assetsList, listSize, 1) != 1) FATAL("Failed to read from assets list file '%s'\n", assetsListFile);
+    FileClose(&file);
     assetsList[listSize] = '\0';
 
     char assetsDir[256];
@@ -724,7 +712,7 @@ bool AppendAssets(
         uint16_t firstFileId = subTree->entry == NULL ? numOverlays : subTree->firstFileId;
 
         if (path[1] != '\0' && !ChangeDir(&path[1])) return false;
-        if (!TraverseAndAppendAssets(fpRom, &address, subTree, entries, firstFileId)) return false;
+        if (!TraverseAndAppendAssets(rom, &address, subTree, entries, firstFileId)) return false;
         if (!ChangeDir(assetsDir)) return false;
 
         subTree->addedToFat = true;
@@ -736,24 +724,25 @@ bool AppendAssets(
     return true;
 }
 
-bool RewriteFat(FILE *fpRom, size_t fatStart, const FatEntry *entries, size_t numFiles) {
-    fseek(fpRom, fatStart, SEEK_SET);
-    if (fwrite(entries, sizeof(*entries), numFiles, fpRom) != numFiles) FATAL("Failed to rewrite FAT table\n");
-    fseek(fpRom, 0, SEEK_END);
+bool RewriteFat(File *rom, size_t fatStart, const FatEntry *entries, size_t numFiles) {
+    size_t prevPos = FileOffset(rom);
+    FileGoTo(rom, fatStart);
+    if (!FileWrite(rom, entries, sizeof(*entries), numFiles)) FATAL("Failed to rewrite FAT table\n");
+    FileGoTo(rom, prevPos);
     return true;
 }
 
-bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t *secureArea, const Arm9Metadata *metadata) {
+bool FinalizeHeader(File *rom, Header *pHeader, const char *arm7bios, uint32_t *secureArea, const Arm9Metadata *metadata) {
     Header header;
     memcpy(&header, pHeader, sizeof(header));
 
     if (arm7bios != NULL) {
-        FILE *fp = fopen(arm7bios, "rb");
-        if (fp == NULL) FATAL("Failed to open ARM7 BIOS '%s'\n", arm7bios);
-        fseek(fp, 0x30, SEEK_SET);
+        File file;
+        if (!FileOpenRead(arm7bios, &file)) FATAL("Failed to open ARM7 BIOS '%s'\n", arm7bios);
+        FileGoTo(&file, 0x30);
         uint8_t encKey[sizeof(Blowfish)];
-        if (fread(&encKey, sizeof(encKey), 1, fp) != 1) FATAL("Failed to read encrypion key\n");
-        fclose(fp);
+        if (FileRead(&file, &encKey, sizeof(encKey), 1) != 1) FATAL("Failed to read encrypion key\n");
+        FileClose(&file);
 
         if (!BlowfishInit(encKey, pHeader, 3)) return false;
         for (size_t i = 2; i < 0x200; i += 2) {
@@ -773,13 +762,13 @@ bool FinalizeHeader(FILE *fpRom, Header *pHeader, const char *arm7bios, uint32_t
 
     header.headerCrc = Crc(&header, offsetof(Header, headerCrc));
     
-    size_t prevPos = ftell(fpRom);
-    fseek(fpRom, 0, SEEK_SET);
-    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
+    size_t prevPos = FileOffset(rom);
+    FileGoTo(rom, 0);
+    if (!FileWrite(rom, &header, sizeof(header), 1)) {
         fprintf(stderr, "Failed to rewrite header\n");
         return 1;
     }
-    fseek(fpRom, prevPos, SEEK_SET);
+    FileGoTo(rom, prevPos);
 
     memcpy(pHeader, &header, sizeof(header));
     return true;
@@ -889,8 +878,8 @@ int main(int argc, char **argv) {
         return 1;
     }
 
-    FILE *fpRom = fopen(romFile, "wb");
-    if (fpRom == NULL) {
+    File rom;
+    if (!FileOpenWrite(romFile, &rom)) {
         fprintf(stderr, "Failed to open output ROM file '%s'\n", romFile);
         return 1;
     }
@@ -912,7 +901,7 @@ int main(int argc, char **argv) {
     Header header;
     InitHeader(&header, &info);
 
-    if (fwrite(&header, sizeof(header), 1, fpRom) != 1) {
+    if (!FileWrite(&rom, &header, sizeof(header), 1)) {
         fprintf(stderr, "Failed to write NDS header\n");
         return 1;
     }
@@ -930,22 +919,22 @@ int main(int argc, char **argv) {
     // --------------------- Write ARM9 program ---------------------
     if (!ChangeDir(buildDir)) return 1;
 
-    if (!Align(512, fpRom, &address)) return 1;
+    if (!Align(512, &rom, &address)) return 1;
     header.arm9.offset = address;
     
     Arm9Metadata metadata;
     if (!LoadArm9Metadata(&metadata)) return 1;
     uint32_t secureArea[SECURE_AREA_SIZE / sizeof(uint32_t)];
-    if (!WriteArm9Program(fpRom, &address, &header.arm9.size, secureArea, &metadata)) return 1;
-    if (!AppendFile(fpRom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
+    if (!WriteArm9Program(&rom, &address, &header.arm9.size, secureArea, &metadata)) return 1;
+    if (!AppendFile(&rom, ARM9_FOOTER_FILE, &address, NULL)) return 1;
 
 
     // --------------------- Write ARM9 overlay table and overlay files ---------------------
-    if (!Align(512, fpRom, &address)) return 1;
+    if (!Align(512, &rom, &address)) return 1;
     header.arm9Overlays.offset = address;
     size_t numOverlays = 0;
     FatEntry overlayEntries[MAX_OVERLAYS];
-    if (!WriteArm9Overlays(fpRom, &address, &header, arm9overlayDataFile, overlayEntries, &numOverlays)) return 1;
+    if (!WriteArm9Overlays(&rom, &address, &header, arm9overlayDataFile, overlayEntries, &numOverlays)) return 1;
     FreeFullPath(&arm9overlayDataFile);
 
     if (!ChangeDir(rootDir)) return 1;
@@ -954,9 +943,9 @@ int main(int argc, char **argv) {
 
 
     // --------------------- Write ARM7 program ---------------------
-    if (!Align(512, fpRom, &address)) return 1;
+    if (!Align(512, &rom, &address)) return 1;
     header.arm7.offset = address;
-    if (!AppendFile(fpRom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
+    if (!AppendFile(&rom, ARM7_PROGRAM_FILE, &address, &header.arm7.size)) return 1;
 
     if (!ChangeDir(ASSETS_SUBDIR)) return 1;
 
@@ -966,17 +955,17 @@ int main(int argc, char **argv) {
     if (!MakeFileTree(&root)) return false;
     if (!SortFileTree(&root, CompareFileTreeNormal)) return false;
 
-    if (!Align(512, fpRom, &address)) return 1;
+    if (!Align(512, &rom, &address)) return 1;
     size_t numFiles = 0;
     header.fileNames.offset = address;
-    if (!WriteFnt(fpRom, &address, &root, numOverlays, &numFiles)) return 1;
+    if (!WriteFnt(&rom, &address, &root, numOverlays, &numFiles)) return 1;
     header.fileNames.size = address - header.fileNames.offset;
 
 
     // --------------------- Write file allocation table (FAT) ---------------------
-    if (!Align(512, fpRom, &address)) return 1;
+    if (!Align(512, &rom, &address)) return 1;
     header.fileAllocs.offset = address;
-    if (!WriteFat(fpRom, &address, numFiles)) return 1;
+    if (!WriteFat(&rom, &address, numFiles)) return 1;
     header.fileAllocs.size = address - header.fileAllocs.offset;
     FatEntry *fatEntries = malloc(numFiles * sizeof(FatEntry));
     memcpy(fatEntries, overlayEntries, numOverlays * sizeof(*fatEntries));
@@ -985,20 +974,20 @@ int main(int argc, char **argv) {
 
 
     // --------------------- Write banner ---------------------
-    if (!Align(512, fpRom, &address)) return false;
+    if (!Align(512, &rom, &address)) return false;
     header.bannerOffset = address;
-    if (!WriteBanner(fpRom, &address)) return false;
+    if (!WriteBanner(&rom, &address)) return false;
 
     if (!ChangeDir(ASSETS_SUBDIR)) return 1;
 
 
     // --------------------- Write assets ---------------------
-    if (!Align(512, fpRom, &address)) return false;
+    if (!Align(512, &rom, &address)) return false;
     if (!SortFileTree(&root, CompareFileTreeAscii)) return false;
-    if (!AppendAssets(fpRom, &address, &root, fatEntries, numOverlays, assetsListFile)) return false;
+    if (!AppendAssets(&rom, &address, &root, fatEntries, numOverlays, assetsListFile)) return false;
     if (assetsListFile != NULL) FreeFullPath(&assetsListFile);
 
-    if (!RewriteFat(fpRom, header.fileAllocs.offset, fatEntries, numFiles))
+    if (!RewriteFat(&rom, header.fileAllocs.offset, fatEntries, numFiles))
     free(fatEntries);
 
     if (!FreeFileTree(&root)) return false;
@@ -1012,7 +1001,7 @@ int main(int argc, char **argv) {
     header.romSize = address;
     header.capacity = 15 - __builtin_clz(header.romSize);
     size_t romEnd = 1 << (17 + header.capacity);
-    if (!Align(romEnd, fpRom, &address)) return 1;
+    if (!Align(romEnd, &rom, &address)) return 1;
 
 
     // --------------------- Update header ---------------------
@@ -1021,11 +1010,11 @@ int main(int argc, char **argv) {
 
     if (!ChangeDir(buildDir)) return 1;
 
-    if (!FinalizeHeader(fpRom, &header, arm7bios, secureArea, &metadata)) return false;
+    if (!FinalizeHeader(&rom, &header, arm7bios, secureArea, &metadata)) return false;
     FreeFullPath(&arm7bios);
 
     if (!ChangeDir(rootDir)) return 1;
 
     free(readBuffer);
-    fclose(fpRom);
+    FileClose(&rom);
 }

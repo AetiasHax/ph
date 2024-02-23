@@ -6,7 +6,8 @@
 #include <stdio.h>
 #include <string.h>
 
-#define FATAL(...) do { fprintf(stderr, __VA_ARGS__); return false; } while (0)
+#define PRINT_FATAL(...) fprintf(stderr, __VA_ARGS__)
+#define FATAL(...) do { PRINT_FATAL(__VA_ARGS__); return false; } while (0)
 
 #define WRITE16(buf,val) do { ((uint8_t*) buf)[0] = (val) & 0xFF; ((uint8_t*) buf)[1] = ((val) >> 8) & 0xFF; } while (0)
 #define WRITE24(buf,val) do { ((uint8_t*) buf)[0] = (val) & 0xFF; ((uint8_t*) buf)[1] = ((val) >> 8) & 0xFF; ((uint8_t*) buf)[2] = ((val) >> 16) & 0xFF; } while (0)
@@ -63,6 +64,121 @@ bool ChangeDir(const char *dir) {
     char cwd[256];
     if (!GetCurrentDir(cwd, sizeof(cwd))) strcpy(cwd, "[unknown]");
     FATAL("Failed to enter directory '%s' from current directory '%s'\n", dir, cwd);
+}
+
+typedef struct {
+    const char *name;
+#ifdef __UTIL_WINDOWS
+    HFILE handle;
+#elif defined(__UTIL_LINUX)
+    FILE *fp;
+#endif
+} File;
+
+bool FileOpenRead(const char *name, File *file) {
+#ifdef __UTIL_WINDOWS
+    HFILE handle = CreateFileA(name, GENERIC_READ, FILE_SHARE_READ, NULL, OPEN_EXISTING, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (handle != INVALID_HANDLE_VALUE) {
+        file->name = name;
+        file->handle = handle;
+        return true;
+    }
+#elif defined(__UTIL_LINUX)
+    FILE *fp = fopen(name, "rb");
+    if (fp != NULL) {
+        file->name = name;
+        file->fp = fp;
+        return true;
+    }
+#endif
+    FATAL("Failed to open file '%s' for reading\n", name);
+}
+
+bool FileOpenWrite(const char *name, File *file) {
+#ifdef __UTIL_WINDOWS
+    HFILE handle = CreateFileA(name, GENERIC_WRITE, 0, NULL, CREATE_ALWAYS, FILE_ATTRIBUTE_NORMAL, NULL);
+    if (handle != INVALID_HANDLE_VALUE) {
+        file->name = name;
+        file->handle = handle;
+        return true;
+    }
+#elif defined(__UTIL_LINUX)
+    FILE *fp = fopen(name, "wb");
+    if (fp != NULL) {
+        file->name = name;
+        file->fp = fp;
+        return true;
+    }
+#endif
+    FATAL("Failed to open file '%s' for writing\n", name);
+}
+
+void FileClose(File *file) {
+#ifdef __UTIL_WINDOWS
+    CloseHandle(file->handle);
+    file->name = NULL;
+    file->handle = NULL;
+#elif defined(__UTIL_LINUX)
+    fclose(file->fp);
+    file->name = NULL;
+    file->fp = NULL;
+#endif
+}
+
+size_t FileRead(const File *file, void *buf, size_t size, size_t count) {
+#ifdef __UTIL_WINDOWS
+    DWORD bytesRead;
+    if (ReadFile(file->handle, buf, size * count, &bytesRead, NULL)) return true;
+    if (bytesRead > 0) return bytesRead / size;
+#elif defined(__UTIL_LINUX)
+    size_t countRead = fread(buf, size, count, file->fp);
+    if (countRead > 0) return countRead;
+#endif
+    PRINT_FATAL("Failed to read %ld * %ld bytes from '%s'\n", count, size, file->name);
+    return 0;
+}
+
+bool FileWrite(const File *file, const void *buf, size_t size, size_t count) {
+#ifdef __UTIL_WINDOWS
+    if (WriteFile(file->handle, buf, size * count, NULL, NULL)) return true;
+#elif defined(__UTIL_LINUX)
+    if (fwrite(buf, size, count, file->fp) == count) return true;
+#endif
+    FATAL("Failed to write %ld * %ld bytes to '%s'\n", count, size, file->name);
+}
+
+size_t FileSize(const File *file) {
+#ifdef __UTIL_WINDOWS
+    DWORD sizeHigh;
+    DWORD sizeLow = GetFileSize(file->handle, &sizeHigh);
+    return sizeLow | (sizeHigh << 32);
+#elif defined(__UTIL_LINUX)
+    size_t pos = ftell(file->fp);
+    fseek(file->fp, 0, SEEK_END);
+    size_t size = ftell(file->fp);
+    fseek(file->fp, pos, SEEK_SET);
+    return size;
+#endif
+}
+
+size_t FileOffset(const File *file) {
+#ifdef __UTIL_WINDOWS
+    DWORD offsetHigh = 0;
+    DWORD offsetLow = SetFilePointer(file->handle, 0, &offsetHigh, FILE_CURRENT);
+    return offsetLow | (offsetHigh << 32);
+#elif defined(__UTIL_LINUX)
+    return ftell(file->fp);
+#endif
+}
+
+void FileGoTo(const File *file, size_t offset) {
+#ifdef __UTIL_WINDOWS
+    DWORD offsetHigh = offset >> 32;
+    DWORD offsetLow = offset & 0xffffffff;
+    SetFilePointer(file->handle, offsetHigh, &offsetHigh, FILE_BEGIN);
+#elif defined(__UTIL_LINUX)
+    fseek(file->fp, offset, SEEK_SET);
+#endif
 }
 
 bool WcharToUtf8(wchar_t *in, size_t inSize, char *out, size_t outSize, size_t *pResultSize) {
