@@ -151,7 +151,7 @@ size_t FileSize(const File *file) {
 #ifdef __UTIL_WINDOWS
     DWORD sizeHigh;
     DWORD sizeLow = GetFileSize(file->handle, &sizeHigh);
-    return sizeLow | (sizeHigh << 32);
+    return sizeLow | ((size_t)(sizeHigh) << 32);
 #elif defined(__UTIL_LINUX)
     size_t pos = ftell(file->fp);
     fseek(file->fp, 0, SEEK_END);
@@ -163,9 +163,9 @@ size_t FileSize(const File *file) {
 
 size_t FileOffset(const File *file) {
 #ifdef __UTIL_WINDOWS
-    DWORD offsetHigh = 0;
+    LONG offsetHigh = 0;
     DWORD offsetLow = SetFilePointer(file->handle, 0, &offsetHigh, FILE_CURRENT);
-    return offsetLow | (offsetHigh << 32);
+    return offsetLow | ((size_t)(offsetHigh) << 32);
 #elif defined(__UTIL_LINUX)
     return ftell(file->fp);
 #endif
@@ -173,9 +173,9 @@ size_t FileOffset(const File *file) {
 
 void FileGoTo(const File *file, size_t offset) {
 #ifdef __UTIL_WINDOWS
-    DWORD offsetHigh = offset >> 32;
-    DWORD offsetLow = offset & 0xffffffff;
-    SetFilePointer(file->handle, offsetHigh, &offsetHigh, FILE_BEGIN);
+    LONG offsetHigh = offset >> 32;
+    LONG offsetLow = offset & 0xffffffff;
+    SetFilePointer(file->handle, offsetLow, &offsetHigh, FILE_BEGIN);
 #elif defined(__UTIL_LINUX)
     fseek(file->fp, offset, SEEK_SET);
 #endif
