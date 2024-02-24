@@ -1,5 +1,5 @@
 CC := gcc
-CFLAGS := -g -Wall
+CFLAGS := -g -Wall -I../include
 
 ifneq ($(DEBUG),1)
 	CFLAGS += -O2 -DNDEBUG

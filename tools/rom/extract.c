@@ -8,7 +8,7 @@
 #include "ph.h"
 #include "util.h"
 
-#define VERSION "1.0.1"
+#define VERSION "1.0.2"
 #define INDENT 4
 
 // Command line flags for debugging purposes
@@ -22,16 +22,6 @@ void Indent(size_t depth) {
     for (size_t i = 0; i < depth; ++i) {
         puts(spaces);
     }
-}
-
-bool MakeDir(const char *dir) {
-    struct stat dirStat;
-    if (stat(dir, &dirStat) != 0) {
-        if (mkdir(dir, 0777) != 0) FATAL("Failed to make directory '%s'\n", dir);
-        return true;
-    }
-    if (!S_ISDIR(dirStat.st_mode)) FATAL("Could not make directory '%s' due to a file with the same name\n", dir);
-    return true;
 }
 
 bool CheckRegion(const Header *pHeader, BuildInfo *pInfo) {
@@ -51,43 +41,42 @@ bool CheckRegion(const Header *pHeader, BuildInfo *pInfo) {
 }
 
 bool ExtractArm7(const uint8_t *rom, ProgramOffset *pArm7) {
-    FILE *fp = fopen(ARM7_PROGRAM_FILE, "wb");
-    if (fp == NULL) FATAL("Failed to create ARM7 program '" ARM7_PROGRAM_FILE "'\n");
-    if (fwrite(rom + pArm7->offset, pArm7->size, 1, fp) != 1) FATAL("Failed to write ARM7 program '" ARM7_PROGRAM_FILE "'\n");
-    fclose(fp);
+    File file;
+    if (!FileOpenWrite(ARM7_PROGRAM_FILE, &file)) FATAL("Failed to create ARM7 program '" ARM7_PROGRAM_FILE "'\n");
+    if (!FileWrite(&file, rom + pArm7->offset, pArm7->size, 1)) FATAL("Failed to write ARM7 program '" ARM7_PROGRAM_FILE "'\n");
+    FileClose(&file);
     return true;
 }
 
-bool ExtractTitle(const char *language, const char *file, const wchar_t *title, size_t titleSize) {
+bool ExtractTitle(const char *language, const char *fileName, const wchar_t *title, size_t titleSize) {
     char buf[1024];
-    FILE *fp = fopen(file, "wb");
-    if (fp == NULL) FATAL("Failed to create %s banner title '%s'\n", language, file);
+    File file;
+    if (!FileOpenWrite(fileName, &file)) FATAL("Failed to create %s banner title '%s'\n", language, fileName);
 
     size_t resultSize = 0;
     if (!WcharToUtf8((wchar_t*) title, titleSize, buf, sizeof(buf), &resultSize)) return false;
-    if (fputs(buf, fp) == -1) FATAL("Failed to write %s banner title '%s'\n", language, file);
-    fclose(fp);
+    size_t len = strlen(buf);
+    if (!FileWrite(&file, buf, len, 1)) FATAL("Failed to write %s banner title '%s'\n", language, fileName);
+    FileClose(&file);
     return true;
 }
 
 bool ExtractBanner(const Banner *pBanner, const BuildInfo *pInfo) {
     if (!MakeDir(BANNER_SUBDIR)) return 1;
 
-    FILE *fp;
+    File file;
 
-    fp = fopen(ICON_BITMAP_FILE, "wb");
-    if (fp == NULL) FATAL("Failed to create banner icon bitmap '" ICON_BITMAP_FILE "'\n");
-    if (fwrite(pBanner->iconBitmap, sizeof(pBanner->iconBitmap), 1, fp) != 1) {
+    if (!FileOpenWrite(ICON_BITMAP_FILE, &file)) FATAL("Failed to create banner icon bitmap '" ICON_BITMAP_FILE "'\n");
+    if (!FileWrite(&file, pBanner->iconBitmap, sizeof(pBanner->iconBitmap), 1)) {
         FATAL("Failed to write banner icon bitmap '" ICON_BITMAP_FILE "'\n");
     }
-    fclose(fp);
+    FileClose(&file);
     
-    fp = fopen(ICON_PALETTE_FILE, "wb");
-    if (fp == NULL) FATAL("Failed to create banner icon palette '" ICON_PALETTE_FILE "'\n");
-    if (fwrite(pBanner->iconPalette, sizeof(pBanner->iconPalette), 1, fp) != 1) {
+    if (!FileOpenWrite(ICON_PALETTE_FILE, &file)) FATAL("Failed to create banner icon palette '" ICON_PALETTE_FILE "'\n");
+    if (!FileWrite(&file, pBanner->iconPalette, sizeof(pBanner->iconPalette), 1)) {
         FATAL("Failed to write banner icon palette '" ICON_PALETTE_FILE "'\n");
     }
-    fclose(fp);
+    FileClose(&file);
 
     if (!ExtractTitle("Japanese", TITLE_JAP_FILE, pBanner->japaneseTitle, sizeof(pBanner->japaneseTitle))) return false;
     if (!ExtractTitle("English", TITLE_ENG_FILE, pBanner->englishTitle, sizeof(pBanner->englishTitle))) return false;
@@ -157,10 +146,10 @@ bool ExtractSubtable(
             size_t fileSize = pFatEntry->endOffset - pFatEntry->startOffset;
             const uint8_t *pFileBytes = rom + pFatEntry->startOffset;
 
-            FILE *fp = fopen(name, "wb");
-            if (fp == NULL) FATAL("Failed to open assets file '%s'\n", name);
-            if (fwrite(pFileBytes, fileSize, 1, fp) != 1) FATAL("Failed to write to assets file '%s'\n", name);
-            fclose(fp);
+            File file;
+            if (!FileOpenWrite(name, &file)) FATAL("Failed to open assets file '%s'\n", name);
+            if (!FileWrite(&file, pFileBytes, fileSize, 1)) FATAL("Failed to write to assets file '%s'\n", name);
+            FileClose(&file);
 
             if (printFileAllocOrder) {
                 if (!GrowFilePathList(&ctx, fileId + 1)) return false;
@@ -181,7 +170,7 @@ bool ExtractSubtable(
             printf("%s {\n", name);
         }
         if (!MakeDir(name)) return false;
-        if (chdir(name) != 0) FATAL("Failed to enter assets subdirectory '%s'\n", name);
+        if (!ChangeDir(name)) return false;
         
         uint16_t subdirId = READ_SUBDIR_ID(pSubEntry);
         uint16_t subdirIndex = subdirId & 0xfff;
@@ -205,7 +194,7 @@ bool ExtractSubtable(
             printf("}\n");
         }
 
-        if (chdir("..") != 0) FATAL("Failed to leave assets subdirectory '%s'\n", name);
+        if (!ChangeDir("..")) return false;
         subEntryAddr += sizeof(FntSubEntry) + pSubEntry->length + sizeof(subdirId);
         pSubEntry = (const FntSubEntry*) subEntryAddr;
     }
@@ -281,17 +270,17 @@ bool ExtractOverlayData(const uint8_t *rom, const Header *header) {
     const OverlayEntry *entry = (OverlayEntry*) (rom + header->arm9Overlays.offset);
     const OverlayEntry *end = entry + header->arm9Overlays.size / sizeof(OverlayEntry);
 
-    FILE *fp = fopen(ARM9_OVERLAY_DATA_FILE, "wb");
-    if (fp == NULL) FATAL("Failed to open overlay data file '" ARM9_OVERLAY_DATA_FILE "'\n");
+    File file;
+    if (!FileOpenWrite(ARM9_OVERLAY_DATA_FILE, &file)) {
+        FATAL("Failed to open overlay data file '" ARM9_OVERLAY_DATA_FILE "'\n");
+    }
     for(; entry < end; ++entry) {
         OverlayData data;
         data.fileId = entry->fileId;
-        if (fwrite(&data, sizeof(data), 1, fp) != 1) {
-            FATAL("Failed to write overlay data to '" ARM9_OVERLAY_DATA_FILE "'\n");
-        }
+        if (!FileWrite(&file, &data, sizeof(data), 1)) FATAL("Failed to write overlay data to '" ARM9_OVERLAY_DATA_FILE "'\n");
     }
     
-    fclose(fp);
+    FileClose(&file);
     return true;
 }
 
@@ -353,24 +342,22 @@ int main(int argc, const char **argv) {
 
 
     // --------------------- Load ROM ---------------------
-    FILE *fpRom = fopen(romFile, "rb");
-    if (fpRom == NULL) {
+    File fileRom;
+    if (!FileOpenRead(romFile, &fileRom)) {
         fprintf(stderr, "Failed to open input ROM '%s'\n", romFile);
         return 1;
     }
-    fseek(fpRom, 0, SEEK_END);
-    size_t romSize = ftell(fpRom);
-    fseek(fpRom, 0, SEEK_SET);
+    size_t romSize = FileSize(&fileRom);
     uint8_t *rom = malloc(romSize);
     if (rom == NULL) {
         fprintf(stderr, "Failed to allocate buffer for '%s'\n", romFile);
         return 1;
     }
-    if (fread(rom, romSize, 1, fpRom) != 1) {
+    if (FileRead(&fileRom, rom, romSize, 1) != 1) {
         fprintf(stderr, "Failed to read from '%s'\n", romFile);
         return 1;
     }
-    fclose(fpRom);
+    FileClose(&fileRom);
 
 
     // --------------------- Set up ---------------------
@@ -378,10 +365,7 @@ int main(int argc, const char **argv) {
     BuildInfo info;
     if (!CheckRegion(pHeader, &info)) return 1;
     if (!MakeDir(outDir)) return 1;
-    if (chdir(outDir) != 0) {
-        fprintf(stderr, "Failed to enter output directory '%s'\n", outDir);
-        return 1;
-    }
+    if (!ChangeDir(outDir)) return 1;
 
 
     // --------------------- Extract ARM7 program ---------------------
@@ -395,26 +379,17 @@ int main(int argc, const char **argv) {
 
     // --------------------- Extract assets ---------------------
     if (!MakeDir(ASSETS_SUBDIR)) return 1;
-    if (chdir(ASSETS_SUBDIR) != 0) {
-        fprintf(stderr, "Failed to enter assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir(ASSETS_SUBDIR)) return 1;
     const uint8_t *fntStart = rom + pHeader->fileNames.offset;
     const uint8_t *fatStart = rom + pHeader->fileAllocs.offset;
     if (!ExtractAssets(rom, fatStart, fntStart)) return 1;
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave assets directory '" ASSETS_SUBDIR "'\n");
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
 
     // --------------------- Extract overlay data ---------------------
     if (!ExtractOverlayData(rom, pHeader)) return 1;
 
-    if (chdir("..") != 0) {
-        fprintf(stderr, "Failed to leave output directory '%s'\n", outDir);
-        return 1;
-    }
+    if (!ChangeDir("..")) return 1;
 
     free(rom);
 }
