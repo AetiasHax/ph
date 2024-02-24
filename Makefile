@@ -15,14 +15,12 @@ else
 endif
 
 ROOT       := $(shell pwd)
-BUILD_DIR  := $(ROOT)/build
+BUILD_DIR  := build
 TARGET_DIR := $(BUILD_DIR)/$(REGION_NAME)
-TOOLS_DIR  := $(ROOT)/tools
-BASE_DIR   := $(ROOT)/ph_$(REGION_NAME)
-LCF_FILE   := $(BUILD_DIR)/arm9_linker_script.lcf
-OBJS_FILE  := $(BUILD_DIR)/arm9_objects.txt
-ARM7_BIOS  := $(ROOT)/arm7_bios.bin
-ASSETS_TXT := $(ROOT)/assets.txt
+TOOLS_DIR  := tools
+BASE_DIR   := ph_$(REGION_NAME)
+ARM7_BIOS  := arm7_bios.bin
+ASSETS_TXT := assets.txt
 
 ASM_FILES := $(shell find asm -name *.s)
 CXX_FILES := $(shell find src -name *.cpp)
@@ -37,10 +35,12 @@ BASE_ROM := baserom_$(REGION_NAME).nds
 CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-MW_ASM     := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
-MW_CC      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
-MW_LD      := $(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
-MW_LICENSE := $(TOOLS_DIR)/mwccarm/license.dat
+MW_ASM     := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
+MW_CC      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
+MW_LD      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
+MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
+LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
+OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
 CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -nolink -d $(REGION) -char signed -lang=c++ -sym on
