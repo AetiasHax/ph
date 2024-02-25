@@ -1,6 +1,6 @@
 # Contribution guide
 - [Project structure](#project-structure)
-- [Decompiling a function](#decompiling-a-function)
+- [Decompiling](#decompiling)
 - [Code style](#code-style)
 - [Creating new `.c`/`.cpp` files](#creating-new-ccpp-files)
 - [Non-matching functions](#non-matching-functions)
@@ -39,8 +39,8 @@
 - `assets.txt`: The order of asset directories to put in the ROM
 - `*.sha1`: SHA-1 digests of different versions of the game
 
-## Decompiling a function
-WIP
+## Decompiling
+See [/docs/decompiling.md](/docs/decompiling.md).
 
 ## Creating new `.c`/`.cpp` files
 New source files must be added to the LCF (Linker Command File). This is done via `lcf.py`, which generates the LCF when
