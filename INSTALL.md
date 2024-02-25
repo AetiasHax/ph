@@ -9,14 +9,21 @@ Contents:
 
 ## Prerequisites
 
-1. Install the following:
-    - Python 3.11+ and `pip`
+1. Use one of these platforms:
+    - Windows (MSYS)
+    - Linux via WSL
+        - Recommended for Windows users
+    - Linux
+2. Install the following:
+    - Python 3.11+ and pip
     - GCC 9+
-2. Install the Python dependencies:
+    - Make
+    - **On Linux/WSL**: Wine
+3. Install the Python dependencies:
 ```shell
 python -m pip install -r tools/requirements.txt
 ```
-3. Run the setup script:
+4. Run the setup script:
 ```shell
 python tools/setup.py
 ```
