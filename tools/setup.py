@@ -8,7 +8,7 @@ import sys
 tools_path = Path(__file__).parent
 
 print('\nInstalling toolchain...')
-response = requests.get('https://cdn.discordapp.com/attachments/698589325620936736/845499146982129684/mwccarm.zip')
+response = requests.get('http://decomp.aetias.com/mwccarm.zip')
 zip_file = zipfile.ZipFile(io.BytesIO(response.content))
 zip_file.extractall(tools_path)
 
