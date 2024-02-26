@@ -10034,9 +10034,9 @@ _02145c28:
 	mov r0, r6
 	bl func_0200ee60
 	b _02145b3c
-	arm_func_end func_ov60_02145b2c
 _02145c50:
-	.byte 0xf8, 0x83, 0xbd, 0xe8
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
+	arm_func_end func_ov60_02145b2c
 _02145c54: .word data_ov60_02148580
 
 	.global func_ov60_02145c58

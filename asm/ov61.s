@@ -19705,9 +19705,9 @@ _0214e32c:
 	add r0, r0, #0x1000
 	bl func_0200e0c8
 	b _0214e0a4
-	arm_func_end func_ov61_0214e09c
 _0214e33c:
-	.byte 0xf8, 0x8f, 0xbd, 0xe8
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	arm_func_end func_ov61_0214e09c
 _0214e340: .word data_ov61_0217f368
 _0214e344: .word 0x00004e84
 _0214e348: .word 0x000082ea
@@ -30007,7 +30007,8 @@ _02156d8c:
 	b _02156d18
 	arm_func_end func_ov61_02156cfc
 _02156da4:
-	.byte 0x04, 0xd0, 0x8d, 0xe2, 0xf8, 0x87, 0xbd, 0xe8
+    add sp, sp, #4
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 
 	.global func_ov61_02156dac
 	arm_func_start func_ov61_02156dac
@@ -34301,9 +34302,9 @@ _0215a3d8:
 	sub r0, r4, r0
 	add r6, r6, r0
 	b _0215a3d8
-	arm_func_end func_ov61_0215a3bc
 _0215a424:
-	.byte 0x70, 0x80, 0xbd, 0xe8
+	ldmia sp!, {r4, r5, r6, pc}
+	arm_func_end func_ov61_0215a3bc
 
 	.global func_ov61_0215a428
 	arm_func_start func_ov61_0215a428
@@ -36631,9 +36632,9 @@ _0215c41c:
 	ldr r0, [r7, #0x20]
 	str r0, [r7, #0x1c]
 	b _0215c41c
-	arm_func_end func_ov61_0215c408
 _0215c474:
-	.byte 0xf8, 0x80, 0xbd, 0xe8
+	ldmia sp!, {r3, r4, r5, r6, r7, pc}
+	arm_func_end func_ov61_0215c408
 
 	.global func_ov61_0215c478
 	arm_func_start func_ov61_0215c478

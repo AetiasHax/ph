@@ -467,9 +467,9 @@ _0216dbfc:
 	ldmhiia sp!, {r4, r5, r6, pc}
 	add r3, r3, #1
 	b _0216dbe0
-	arm_func_end func_ov29_0216dba8
 _0216dc34:
-	.byte 0x70, 0x80, 0xbd, 0xe8
+	ldmia sp!, {r4, r5, r6, pc}
+	arm_func_end func_ov29_0216dba8
 
 	.global func_ov29_0216dc38
 	arm_func_start func_ov29_0216dc38

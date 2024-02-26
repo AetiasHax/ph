@@ -10848,9 +10848,9 @@ _020f539c:
 	add sb, sb, #0xc
 	add r8, r8, #1
 	b _020f5334
-	arm_func_end func_ov01_020f52fc
 _020f53a8:
-	.byte 0xf8, 0x8f, 0xbd, 0xe8
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	arm_func_end func_ov01_020f52fc
 _020f53ac: .word data_027e0d54
 
 	.global func_ov01_020f53b0
