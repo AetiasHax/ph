@@ -2869,7 +2869,7 @@ _01ffa584:
 	mov lr, pc
 	bx r3
 _01ffa5a8:
-	.byte 0x03, 0x10, 0xbd, 0xe8
+    ldmia sp!, {r0, r1, ip}
 _01ffa5ac:
 	str r1, [ip, #4]
 	mrs r2, spsr ; 13
@@ -2883,14 +2883,7 @@ _01ffa5ac:
 	ldmib sp!, {r2, r3}
 	stmib r0!, {r2, r3}
 	ldmib sp!, {r2, r3, ip, lr}
-	arm_func_end func_01ffa4e4
-	.global data_01ffa5dc
-data_01ffa5dc: ; 0x01ffa5dc
-	.byte 0xfc, 0x7f, 0xe0, 0xe9
-
-	.global func_01ffa5e0
-	arm_func_start func_01ffa5e0
-func_01ffa5e0: ; 0x01ffa5e0
+    stmib r0!, {r2, r3, r4, r5, r6, r7, r8, sb, sl, fp, ip, sp, lr} ^
 	stmib r0!, {lr}
 	mov r3, #0xd3
 	msr cpsr_c, r3 ; 16
@@ -2912,7 +2905,7 @@ func_01ffa5e0: ; 0x01ffa5e0
 	stmda sp!, {r0, r1, r2, r3, ip, lr}
 	ldmia sp!, {pc}
 	.align 2, 0
-	arm_func_end func_01ffa5e0
+	arm_func_end func_01ffa4e4
 _01ffa630: .word data_027e0220
 _01ffa634: .word data_027e02a0
 _01ffa638: .word func_02003564
