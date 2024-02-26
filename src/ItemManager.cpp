@@ -241,7 +241,7 @@ extern unk32 data_027e0fc8;
 extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
 extern "C" void _ZN11ItemManager12GetEquipItemEi();
-ARM NONMATCH bool ItemManager::func_ov00_020ad790(unk32 param1) {
+ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
     #ifndef NONMATCHING
     #include "../asm/ov00/ItemManager/ItemManager_func_ov00_020ad790.inc"
     #else

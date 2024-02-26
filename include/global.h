@@ -4,13 +4,15 @@
 #define NULL 0
 
 #define GET_FLAG(arr, pos) (((1 << ((pos) & 0x1f)) & (arr)[((u32)(pos)) >> 5]) != 0)
-#define SET_FLAG(arr, pos) ((arr)[((u32(pos))) >> 5] |= 1 << ((pos) & 0x1f))
+#define SET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] |= 1 << ((pos) & 0x1f))
 #define RESET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
 
+// NONMATCH(name) marks the function `name` as nonmatching
+// The reason for the macro is to easily detect it in progress.py
 #ifdef NONMATCHING
-#define NONMATCH
+#define NONMATCH(name) name
 #else
-#define NONMATCH asm
+#define NONMATCH(name) asm name
 #endif
 
 // Prevent the IDE from reporting errors that the compiler/linker won't report
