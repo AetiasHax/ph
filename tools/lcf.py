@@ -24,12 +24,6 @@ DTCM_OBJECTS = [
 
 ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_020773c0.s',
-    'asm/ov00/ov00_02084ebc.s',
-    'asm/ov00/ov00_0208b220.s',
-    'asm/ov00/ov00_02096160.s',
-    'asm/ov00/ov00_0209afc4.s',
-    'asm/ov00/ov00_0209bea0.s',
-    'asm/ov00/ov00_020a03e4.s',
     'src/ItemManager.cpp',
     'asm/ov00/ItemManager/ItemManager.s',
     'asm/ov00/ov00_020ae7a4.s',
