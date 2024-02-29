@@ -511,5 +511,5 @@ _020d6108:
 _020d6134: .word data_ov00_020ee6e8
 _020d6138: .word data_ov00_020e9308
 _020d613c: .word data_ov00_020e9308
-_020d6140: .word func_ov00_020d5c50
+_020d6140: .word func_ov00_020d5c50 - 1
 _020d6144: .word data_ov00_020ee6ec

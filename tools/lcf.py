@@ -27,13 +27,6 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/ItemManager.cpp',
     'asm/ov00/ItemManager/ItemManager.s',
     'asm/ov00/ov00_020ae7a4.s',
-    'asm/ov00/ov00_020b4940.s',
-    'asm/ov00/ov00_020c36b4.s',
-    'asm/ov00/ov00_020c43c8.s',
-    'asm/ov00/ov00_020c9a68.s',
-    'asm/ov00/ov00_020d0000.s',
-    'asm/ov00/ov00_020d1870.s',
-    'asm/ov00/ov00_020d5284.s',
     'asm/ov00/ov00_init.s'
 ])
 ov01 = Overlay(name='ov01', after=[ov00], objects=[
