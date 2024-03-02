@@ -1,4 +1,4 @@
-#include "ItemManager.hpp"
+#include "Item/ItemManager.hpp"
 
 extern u32 *data_027e0ce0[];
 

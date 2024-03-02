@@ -1,24 +1,14 @@
 #pragma once
 
+#include "global.h"
 #include "types.h"
 #include "lib/math.h"
-#include "global.h"
-#include "SysNew.hpp"
-#include "Item.hpp"
-#include "Player/EquipItem.hpp"
-#include "Player/EquipBomb.hpp"
-#include "Player/EquipBombchu.hpp"
-#include "Player/EquipBoomerang.hpp"
-#include "Player/EquipBow.hpp"
-#include "Player/EquipHammer.hpp"
-#include "Player/EquipItem.hpp"
-#include "Player/EquipPotion.hpp"
-#include "Player/EquipRope.hpp"
-#include "Player/EquipScoop.hpp"
-#include "Player/EquipShield.hpp"
-#include "Player/EquipSword.hpp"
+
 #include "Actors/Navi/Navi.hpp"
-#include "OverlayManager.hpp"
+#include "Item/Item.hpp"
+#include "Player/EquipItem.hpp"
+#include "System/SysNew.hpp"
+#include "System/OverlayManager.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 

@@ -2,8 +2,9 @@
 
 #include "types.h"
 #include "global.h"
-#include "Item.hpp"
-#include "SysNew.hpp"
+
+#include "Item/Item.hpp"
+#include "System/SysNew.hpp"
 
 class EquipItem : public SysObject {
 private:

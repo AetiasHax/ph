@@ -1,7 +1,8 @@
 #pragma once
 
 #include "types.h"
-#include "Item.hpp"
+
+#include "Item/Item.hpp"
 
 typedef u32 OverlayId;
 enum OverlayId_ {
