@@ -66,30 +66,29 @@ s32 MyClass::MyMethod(MyStruct *myStruct, s32 &anInteger) {
     // Opening brace { on the same line
     // Space after `if`, `while`, `for` and `switch`
     if (myStruct->isCool) {
-        // Access member fields using `this`
         // Class member fields are prefixed with "m"
-        this->mInteger = anInteger;
+        mInteger = anInteger;
     }
     // No space before asterisk * in pointer casts
     // Space after cast operator
-    this->mPointer = (u32*) &anInteger;
+    mPointer = (u32*) &anInteger;
 
     // Prefer pre-increment ++i
     // Use s32, s16, s8, etc. instead of int, short, char
     for (s32 i = 0; i < 10; ++i) {
         // Use `char` instead of s8 to indicate actual characters
         char ch = 'A' + i * 2;
-        this->mString[i] = ch;
+        mString[i] = ch;
     }
 
     // Put long conditions on new line
     if (
         // Add clarifying parentheses for bool operators
-        (this->mInteger > 10 && this->mPointer != NULL) ||
-        (this->mInteger < 5)
+        (mInteger > 10 && mPointer != NULL) ||
+        (mInteger < 5)
     ) {
         // Add clarifying parentheses for bitwise operators
-        this->mBool = ((this->mInteger >> 5) & 1) != 0;
+        mBool = ((mInteger >> 5) & 1) != 0;
     }
 
     do {
@@ -98,17 +97,17 @@ s32 MyClass::MyMethod(MyStruct *myStruct, s32 &anInteger) {
     // In do-while loops, `while` on same line as closing brace }
     } while (this->CanDoStuff());
 
-    switch (this->mInteger) {
+    switch (mInteger) {
         // Indent `case`
         // If possible, put braces after `case`
         case 8: {
-            return *this->mPointer;
+            return *mPointer;
         // If possible, put `break` after closing brace }
         } break;
     }
 
     // No parentheses around return value
-    return this->mInteger;
+    return mInteger;
 }
 ```
 
