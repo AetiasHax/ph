@@ -3072,7 +3072,7 @@
 .extern func_ov00_0207c1b0
 .extern func_ov00_020ceacc
 .extern func_0202e58c
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern func_ov03_020fb0b0
 .extern func_ov09_0211ca20
 .extern func_ov09_0211cac0
@@ -6126,7 +6126,7 @@
 .extern _ZN11ItemManager15LoadFanfareItemEj
 .extern gItemManager
 .extern data_027e0fe4
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern func_ov03_020fc10c
 .extern func_ov00_020d73bc
 .extern func_ov00_0207c1b0

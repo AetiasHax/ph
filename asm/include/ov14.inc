@@ -4618,7 +4618,7 @@
 .extern func_ov03_020fb118
 .extern func_ov00_020d71a0
 .extern data_ov09_0211f5dc
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern func_ov03_020fc10c
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern func_ov03_020fab60

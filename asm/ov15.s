@@ -44494,7 +44494,7 @@ _0214526c:
 	cmp r0, #0
 	beq _02145420
 	bl func_ov15_021464fc
-	blx func_ov00_020ad020
+	blx _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	movne r0, #0xb
 	strneb r0, [sb, #0x34d]
@@ -88280,7 +88280,7 @@ func_ov15_0216a968: ; 0x0216a968
 	sub sp, sp, #0x1c
 	mov r4, r0
 	ldr r0, [r4, #8]
-	blx func_ov00_020ad020
+	blx _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	beq _0216a994
 	ldr r0, _0216aa1c ; =data_027e0c68

@@ -48,7 +48,7 @@ enum ItemFlag_ {
     ItemFlag_COUNT            = 128,
 };
 
-typedef u32 ItemId;
+typedef s32 ItemId;
 enum ItemId_ {
     ItemId_SmallKey = 1,
     ItemId_GreenRupee = 2,
@@ -143,3 +143,8 @@ enum ItemId_ {
 
     ItemId_Unk_133 = 133,
 };
+
+namespace Item {
+    bool func_ov00_020ad020(ItemId item);
+    bool func_ov00_020ad068(ItemId item);
+}

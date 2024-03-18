@@ -61799,7 +61799,7 @@ func_ov14_021508b8: ; 0x021508b8
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4, #8]
-	bl func_ov00_020ad020
+	bl _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	beq _021508ce
 	ldr r0, _021508dc ; =data_027e0c68

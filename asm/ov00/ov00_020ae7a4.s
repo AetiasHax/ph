@@ -18238,7 +18238,7 @@ func_ov00_020bcefc: ; 0x020bcefc
 	ldmeqia sp!, {r3, pc}
 	bl func_ov00_020a914c
 	ldr r0, [r0, #0x74]
-	blx func_ov00_020ad068
+	blx _ZN4Item18func_ov00_020ad068Ei
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -18255,7 +18255,7 @@ func_ov00_020bcf2c: ; 0x020bcf2c
 	ldmeqia sp!, {r3, pc}
 	bl func_ov00_020a914c
 	ldr r0, [r0, #0x74]
-	blx func_ov00_020ad068
+	blx _ZN4Item18func_ov00_020ad068Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_020bcf2c
 

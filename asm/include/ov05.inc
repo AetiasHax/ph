@@ -829,7 +829,7 @@
 .extern func_ov09_0211ca20
 .extern _ZNK11ItemManager13HasAllPotionsEv
 .extern _ZNK11ItemManager13HasAllPotionsEv
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern func_ov03_020fb0b0
 .extern func_ov00_020a8138
 .extern func_ov00_020a8158
@@ -960,9 +960,9 @@
 .extern func_ov00_020a8360
 .extern func_ov00_020c1500
 .extern func_ov00_020a8390
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern _ZN11ItemManager8GiveItemEjjj
-.extern func_ov00_020ad020
+.extern _ZN4Item18func_ov00_020ad020Ei
 .extern func_ov00_020a8c78
 .extern func_ov00_020a8be8
 .extern func_ov00_020b4440

@@ -9700,7 +9700,7 @@ _02108bd0:
 	strne r0, [r4, #0x74]
 _02108be8:
 	ldr r0, [r4, #0x74]
-	blx func_ov00_020ad020
+	blx _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	ldr r1, [r4, #0x74]
 	beq _02108c14
@@ -10640,7 +10640,7 @@ _02109874:
 	b _021098bc
 _0210989c:
 	mov r0, r4
-	blx func_ov00_020ad020
+	blx _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	bne _021098bc
 	ldr r0, _021099cc ; =gItemManager
@@ -10649,7 +10649,7 @@ _0210989c:
 	blx _ZN11ItemManager8GiveItemEjjj
 _021098bc:
 	mov r0, r4
-	blx func_ov00_020ad020
+	blx _ZN4Item18func_ov00_020ad020Ei
 	cmp r0, #0
 	bne _02109914
 	ldr r0, _021099d0 ; =data_027e0c68

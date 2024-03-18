@@ -1167,9 +1167,9 @@
 .extern func_ov05_021096bc
 .extern func_ov00_020a914c
 .extern func_ov00_020a914c
-.extern func_ov00_020ad068
+.extern _ZN4Item18func_ov00_020ad068Ei
 .extern func_ov00_020a914c
-.extern func_ov00_020ad068
+.extern _ZN4Item18func_ov00_020ad068Ei
 .extern func_ov00_020a914c
 .extern func_ov00_020b3024
 .extern func_ov00_020a914c
