@@ -21224,7 +21224,7 @@ _0210afd8: .word data_ov04_02110bb4
 func_ov04_0210afdc: ; 0x0210afdc
 	push {r4, r5, r6, lr}
 	add r4, r0, #0
-	bl func_ov00_0207ac24
+	bl _ZN12TouchControlC2Ev
 	add r0, r4, #0
 	blx func_ov00_020b78a0
 	add r1, r4, #0

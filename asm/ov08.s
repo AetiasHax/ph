@@ -349,7 +349,7 @@ func_ov08_02113080: ; 0x02113080
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #8
 	mov r4, r0
-	blx func_ov00_0207ac24
+	blx _ZN12TouchControlC2Ev
 	blx func_0200a23c
 	bl func_0200dd94
 	cmp r0, #0

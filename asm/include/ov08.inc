@@ -44,7 +44,7 @@
 .extern func_020400c0
 .extern func_02040100
 .extern data_027e0ce0
-.extern func_ov00_0207ac24
+.extern _ZN12TouchControlC2Ev
 .extern func_0200a23c
 .extern func_0200dd94
 .extern func_0200a318

@@ -765,11 +765,11 @@
 .extern func_0200f248
 .extern func_0200a318
 .extern func_0200a53c
-.extern func_0200a9f4
+.extern WaitForTouchUpdate
 .extern func_0200aa0c
 .extern func_0200f248
 .extern func_0200a63c
-.extern func_0200a9f4
+.extern WaitForTouchUpdate
 .extern func_0200aa0c
 .extern func_0200a6d4
 .extern func_0200a8d0

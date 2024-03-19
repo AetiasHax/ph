@@ -24,10 +24,13 @@ DTCM_OBJECTS = [
 
 ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_020773c0.s',
+    'src/00_Core/Player/TouchControl.cpp',
+    'asm/ov00/Player/TouchControl.s',
+    'asm/ov00/ov00_0207af9c.s',
     'src/00_Core/Item/Item.cpp',
     'asm/ov00/Item/Item.s',
     'src/00_Core/Item/ItemManager.cpp',
-    'asm/ov00/ItemManager/ItemManager.s',
+    'asm/ov00/Item/ItemManager.s',
     'asm/ov00/ov00_020ae7a4.s',
     'asm/ov00/ov00_init.s'
 ])

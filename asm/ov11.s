@@ -51036,7 +51036,7 @@ _0212acea:
 	mov r3, #5
 	blx func_0200a53c
 	mov r0, #2
-	blx func_0200a9f4
+	blx WaitForTouchUpdate
 	mov r0, #2
 	blx func_0200aa0c
 	cmp r0, #0
@@ -51059,7 +51059,7 @@ func_ov11_0212ad20: ; 0x0212ad20
 _0212ad26:
 	blx func_0200a63c
 	add r0, r5, #0
-	blx func_0200a9f4
+	blx WaitForTouchUpdate
 	add r0, r4, #0
 	blx func_0200aa0c
 	cmp r0, #0

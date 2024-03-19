@@ -358,7 +358,7 @@
 .extern data_020683f4
 .extern data_027e0184
 .extern func_020078c0
-.extern func_0200a520
+.extern GetTouchStateFlags
 .extern data_027e0618
 .extern data_027e0618
 .extern data_027e0618
@@ -3718,3 +3718,4 @@
 .extern func_ov05_0210f708
 .extern func_ov05_0210f708
 .extern func_ov05_0210f708
+.extern func_ov00_0207c170

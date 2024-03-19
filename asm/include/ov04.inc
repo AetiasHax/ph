@@ -1594,7 +1594,7 @@
 .extern func_ov00_02078b40
 .extern data_027e0d38
 .extern data_027e0d44
-.extern func_ov00_0207ac24
+.extern _ZN12TouchControlC2Ev
 .extern func_ov00_020b78a0
 .extern func_0202e9f4
 .extern _ZN9SysObjectnwEmPjj

@@ -727,7 +727,7 @@
 .extern data_027e0fe4
 .extern func_ov00_02081f4c
 .extern _ZN9SysObjectdlEPv
-.extern func_ov00_0207aed0
+.extern _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
 .extern func_ov00_0208b180
 .extern func_01ffe468
 .extern func_01ffb7ec

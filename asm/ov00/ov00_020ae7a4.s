@@ -11163,7 +11163,7 @@ func_ov00_020b7924: ; 0x020b7924
 	ldr r1, _020b7d38 ; =data_027e0d84
 	mov r2, #2
 	mov r4, r0
-	bl func_ov00_0207aed0
+	bl _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
 	ldr r0, _020b7d3c ; =data_027e0f64
 	ldr r0, [r0]
 	bl func_ov00_0208b180

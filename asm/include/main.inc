@@ -487,7 +487,7 @@
 .extern data_027e0cbc
 .extern data_027e0c54
 .extern func_ov00_0207c0f0
-.extern func_ov00_0207ac24
+.extern _ZN12TouchControlC2Ev
 .extern func_ov00_0207bcb4
 .extern func_ov00_0207b288
 .extern func_ov00_0207a2e8
@@ -514,7 +514,7 @@
 .extern data_027e0dbc
 .extern data_027e071c
 .extern data_027e0618
-.extern func_ov00_0207af38
+.extern _ZN12TouchControl18func_ov00_0207af38Etb
 .extern func_ov00_0207b9dc
 .extern func_ov00_020d64ac
 .extern func_ov00_0207be84
