@@ -20,13 +20,22 @@ args = parser.parse_args()
 
 cc.extend([
     '-nolink',
+    '-proc', 'arm946e',
+    '-interworking',
+    '-char', 'signed',
+    '-msgstyle', 'gcc',
     '-dis',
     f'-I{include_dir}',
     '-DSTUBS',
     args.file
 ])
 
-output = subprocess.check_output(cc)
+try:
+    output = subprocess.check_output(cc)
+except subprocess.CalledProcessError as e:
+    print(e.stdout.decode())
+    exit(1)
+    
 output = output.decode()
 
 # print(output)
