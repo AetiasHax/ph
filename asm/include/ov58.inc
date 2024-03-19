@@ -18,7 +18,7 @@
 .extern _ZN11ItemManager12GetItemModelEj
 .extern func_ov00_020a9614
 .extern _ZN11ItemManager12GetItemModelEj
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_ov00_020c0c44
 .extern func_ov00_020c0e5c
 .extern func_ov00_020a97e0

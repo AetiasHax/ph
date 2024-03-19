@@ -84,8 +84,8 @@
 .extern _ZNK11ItemManager9HasPotionEj
 .extern _ZNK11ItemManager9HasPotionEj
 .extern func_ov00_02078b40
-.extern _ZN11ItemManager18func_ov00_020ad790Ej
-.extern _ZN11ItemManager18func_ov00_020ad790Ej
+.extern _ZN11ItemManager18func_ov00_020ad790Ei
+.extern _ZN11ItemManager18func_ov00_020ad790Ei
 .extern _ZNK11ItemManager8GetFairyEi
 .extern data_027e0f74
 .extern data_027e0c68
@@ -216,7 +216,7 @@
 .extern func_01ffe468
 .extern data_027e0f64
 .extern data_02050f54
-.extern _ZN11ItemManager18func_ov00_020ad790Ej
+.extern _ZN11ItemManager18func_ov00_020ad790Ei
 .extern _ZNK11ItemManager15GetEquippedItemEv
 .extern func_ov00_020cf330
 .extern func_01ff9cec
@@ -2343,7 +2343,7 @@
 .extern func_ov03_020f7e0c
 .extern func_ov03_020f7e18
 .extern func_ov09_0211cc8c
-.extern _ZN11ItemManager18func_ov00_020ad790Ej
+.extern _ZN11ItemManager18func_ov00_020ad790Ei
 .extern data_027e0fb8
 .extern gItemManager
 .extern func_ov00_020a5e9c

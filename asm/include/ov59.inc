@@ -44,7 +44,7 @@
 .extern func_ov00_020b0240
 .extern func_01ff9bf8
 .extern func_01ffa0f4
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_ov00_020b0240
 .extern func_01ff9bf8
 .extern func_01ffa0f4
@@ -106,7 +106,7 @@
 .extern data_027e0fe4
 .extern data_027e0d38
 .extern data_027e1038
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_0202b2f8
 .extern func_01ffbf5c
 .extern func_0202b2f8
@@ -134,10 +134,10 @@
 .extern func_ov00_020b0240
 .extern func_01ffbf5c
 .extern func_ov00_020b853c
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_ov00_020c0c44
 .extern func_ov00_020c0e5c
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_ov00_020c0c44
 .extern func_ov00_020c0e5c
 .extern data_027e0fd4

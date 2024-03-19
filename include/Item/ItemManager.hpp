@@ -155,7 +155,7 @@ struct SaveItemManager {
     /* 74 */ s8 treasure[Treasure_COUNT];
     /* 7c */ unk8 unk_7c[4];
     /* 80 */ u16 hourglassSeconds;
-    /* 82 */ unk16 unk_82[6];
+    /* 82 */ u16 unk_82[6];
     /* 8e */ u16 numRupees;
     /* 90 */ unk8 unk_90;
     /* 91 */ unk8 unk_91;
@@ -169,7 +169,7 @@ struct SaveItemManager {
     /* 9c */ u8 quiverSize;
     /* 9d */ u8 bombBagSize;
     /* 9e */ u8 bombchuBagSize;
-    /* 9f */ unk8 unk_9f[6];
+    /* 9f */ u8 unk_9f[6];
     /* a5 */ u8 equippedFairy;
     /* a6 */
 };
@@ -212,7 +212,7 @@ private:
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;
     /* 148 */ u32 mTreasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
     /* 14c */ unk8 mUnk_14c;
-    /* 14d */ unk8 mUnk_14d;
+    /* 14d */ u8 mUnk_14d;
     /* 14e */ unk8 mUnk_14e[0x2];
     /* 150 */
 

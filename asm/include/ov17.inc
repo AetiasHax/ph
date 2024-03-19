@@ -294,7 +294,7 @@
 .extern data_027e0ffc
 .extern data_027e0e58
 .extern func_ov00_020d4494
-.extern _ZNK11ItemManager18func_ov00_020ad594Ej
+.extern _ZNK11ItemManager18func_ov00_020ad594Ei
 .extern func_ov00_020bb378
 .extern func_ov00_020c0cc8
 .extern func_ov00_020c0e24

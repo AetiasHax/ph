@@ -3029,7 +3029,7 @@ _02121da8:
 	mov r5, r0
 	ldr r0, [r1]
 	ldr r1, _02121ea0 ; =data_ov14_02153b84
-	bl _ZNK11ItemManager18func_ov00_020ad560Ej
+	bl _ZNK11ItemManager18func_ov00_020ad560Ei
 	mov r6, r0
 	adds r0, r4, #0x15c
 	beq _02121de0
@@ -42847,7 +42847,7 @@ func_ov14_021419d8: ; 0x021419d8
 	ldr r0, _02141a70 ; =gItemManager
 	ldrb r1, [r4, #0x4c0]
 	ldr r0, [r0]
-	bl _ZN11ItemManager18EquipItem_vfunc_38Ej
+	bl _ZN11ItemManager18EquipItem_vfunc_38Ei
 	ldrb r0, [r4, #0x4c0]
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}

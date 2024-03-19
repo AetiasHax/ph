@@ -259,7 +259,7 @@
 .extern func_ov00_020c1730
 .extern _ZN9SysObjectdlEPv
 .extern _ZN11ItemManager12GetItemModelEj
-.extern _ZNK11ItemManager18func_ov00_020ad560Ej
+.extern _ZNK11ItemManager18func_ov00_020ad560Ei
 .extern func_ov00_020a9588
 .extern func_ov00_0208ccdc
 .extern func_ov00_0208cd0c
@@ -3271,7 +3271,7 @@
 .extern func_ov00_02083ee0
 .extern data_027e0e60
 .extern func_ov00_020b4944
-.extern _ZN11ItemManager18EquipItem_vfunc_38Ej
+.extern _ZN11ItemManager18EquipItem_vfunc_38Ei
 .extern gItemManager
 .extern func_ov05_02102c2c
 .extern data_ov00_020e9370

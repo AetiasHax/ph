@@ -4153,7 +4153,7 @@ func_ov17_0215e8f4: ; 0x0215e8f4
 	ldr r0, _0215e9dc ; =gItemManager
 	ldr r1, _0215e9e0 ; =data_ov17_0216b0ac
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ad594Ej
+	bl _ZNK11ItemManager18func_ov00_020ad594Ei
 	ldr r1, _0215e9e4 ; =data_027e0fc4
 	mov r5, r0
 	ldr r0, [r1]

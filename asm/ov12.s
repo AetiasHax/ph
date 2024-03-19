@@ -10798,12 +10798,12 @@ func_ov12_0211b8bc: ; 0x0211b8bc
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZN11ItemManager15Shield_vfunc_38Ej
+	bl _ZN11ItemManager15Shield_vfunc_38Ei
 _0211b96c:
 	ldr r0, _0211b994 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	bl _ZN11ItemManager18EquipItem_vfunc_38Ej
+	bl _ZN11ItemManager18EquipItem_vfunc_38Ei
 _0211b97c:
 	ldr r0, [r5, #0x230]
 	mov r1, #0
@@ -28695,7 +28695,7 @@ func_ov12_0212a2cc: ; 0x0212a2cc
 	ldr r0, _0212a458 ; =gItemManager
 	ldr r1, _0212a45c ; =data_ov12_02134914
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ad594Ej
+	bl _ZNK11ItemManager18func_ov00_020ad594Ei
 	ldr r1, _0212a460 ; =data_027e0fc4
 	mov r5, r0
 	ldr r0, [r1]

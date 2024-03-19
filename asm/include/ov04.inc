@@ -1161,7 +1161,7 @@
 .extern gItemManager
 .extern func_ov00_020b7d74
 .extern data_02057200
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern func_ov00_020c0c44
 .extern func_ov00_020c0e5c
 .extern func_ov00_020a9960
@@ -1696,7 +1696,7 @@
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020a9588
-.extern _ZNK11ItemManager18func_ov00_020ad538Ej
+.extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020c0e5c
 .extern func_ov00_020bb3f4

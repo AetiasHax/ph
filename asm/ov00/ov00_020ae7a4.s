@@ -803,7 +803,7 @@ _020af124:
 	ldr r0, _020af288 ; =gItemManager
 	strb r1, [r6, #0x7b]
 	ldr r0, [r0]
-	bl _ZN11ItemManager18func_ov00_020ad790Ej
+	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	ldrb r1, [r6, #0x7b]
 	tst r1, r0
 	movne r0, #1
@@ -854,7 +854,7 @@ _020af1f8:
 	ldr r0, _020af288 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager18func_ov00_020ad790Ej
+	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	ldrb r1, [r6, #0x7b]
 	tst r1, r0
 	movne r0, #1
@@ -2720,7 +2720,7 @@ func_ov00_020b0b0c: ; 0x020b0b0c
 	ldr r0, _020b0de0 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager18func_ov00_020ad790Ej
+	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	cmp r0, #0
 	beq _020b0b80
 	ldr r0, _020b0de0 ; =gItemManager
@@ -41816,7 +41816,7 @@ func_ov00_020cf444: ; 0x020cf444
 	ldr r0, _020cf484 ; =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
-	bl _ZN11ItemManager18func_ov00_020ad790Ej
+	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, pc}

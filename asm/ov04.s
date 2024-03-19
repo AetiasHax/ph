@@ -14471,7 +14471,7 @@ func_ov04_02107b64: ; 0x02107b64
 	ldr r0, _02107bf4 ; =gItemManager
 	ldr r1, _02107bf8 ; =data_ov00_020dc7d0
 	ldr r0, [r0]
-	blx _ZNK11ItemManager18func_ov00_020ad538Ej
+	blx _ZNK11ItemManager18func_ov00_020ad538Ei
 	add r1, r0, #0
 	mov r0, #0x2f
 	lsl r0, r0, #4
@@ -22725,7 +22725,7 @@ _0210bad0:
 	ldr r0, _0210bc08 ; =gItemManager
 	ldr r1, _0210bc10 ; =data_ov04_0210f940
 	ldr r0, [r0]
-	blx _ZNK11ItemManager18func_ov00_020ad538Ej
+	blx _ZNK11ItemManager18func_ov00_020ad538Ei
 	add r6, r0, #0
 	ldr r0, _0210bc0c ; =data_027e0ce0
 	mov r2, #4

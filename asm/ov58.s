@@ -236,7 +236,7 @@ func_ov58_02198fc0: ; 0x02198fc0
 	ldr r0, _02199020 ; =gItemManager
 	ldr r1, _02199030 ; =data_ov58_0219ad68
 	ldr r0, [r0]
-	blx _ZNK11ItemManager18func_ov00_020ad538Ej
+	blx _ZNK11ItemManager18func_ov00_020ad538Ei
 	add r1, r0, #0
 	ldr r0, _02199034 ; =data_ov58_0219b0a0
 	blx func_ov00_020c0c44

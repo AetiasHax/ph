@@ -4,7 +4,9 @@
 #include "types.h"
 
 // Q20.12 fixed point number
-typedef u32 q20;
+typedef s32 q20;
+// Q4.12 fixed point number
+typedef s16 q4;
 
 #define INT_TO_Q20(n) ((s32)((n) << 12))
 #define FLOAT_TO_Q20(n) ((s32)(((n) * 8192 + 1) / 2))
