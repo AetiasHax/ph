@@ -1,5 +1,8 @@
 #pragma once
 
+#include "global.h"
+#include "types.h"
+
 struct TouchStateFlags {
     u16 touchX;
     u16 touchY;

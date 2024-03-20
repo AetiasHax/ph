@@ -1,6 +1,6 @@
-#ifndef LIB_MATH_H
-#define LIB_MATH_H
+#pragma once
 
+#include "global.h"
 #include "types.h"
 
 // Q20.12 fixed point number
@@ -33,5 +33,3 @@ extern "C" u32 Divide(u32 a, u32 b);
 extern "C" bool Approach(unk32 *src, unk32 dest, unk32 step);
 extern "C" bool Approach_thunk(unk32 *src, unk32 dest, unk32 step);
 extern "C" bool func_01ffec34(Vec4p *param1, Vec4p *param2);
-
-#endif
