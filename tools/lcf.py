@@ -27,6 +27,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/00_Core/Player/TouchControl.cpp',
     'asm/ov00/Player/TouchControl.s',
     'asm/ov00/ov00_0207af9c.s',
+    'asm/ov00/Player/LinkDamage.s',
     'src/00_Core/Item/Item.cpp',
     'asm/ov00/Item/Item.s',
     'src/00_Core/Item/ItemManager.cpp',
