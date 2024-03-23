@@ -15446,7 +15446,7 @@ func_ov04_021082bc: ; 0x021082bc
 	sub sp, #4
 	add r5, r0, #0
 	bl func_ov04_0210add4
-	ldr r0, _021083d0 ; =data_ov00_020e5b68
+	ldr r0, _021083d0 ; =_ZTV15LinkStateDamage
 	add r2, r5, #0
 	ldr r3, _021083d4 ; =data_027e0d0c
 	str r0, [r5]
@@ -15575,7 +15575,7 @@ _021083c8:
 	pop {r3, r4, r5, r6, pc}
 	nop
 	thumb_func_end func_ov04_021082bc
-_021083d0: .word data_ov00_020e5b68
+_021083d0: .word _ZTV15LinkStateDamage
 _021083d4: .word data_027e0d0c
 _021083d8: .word func_ov00_020b7d74
 _021083dc: .word func_ov04_021079d4
@@ -15614,7 +15614,7 @@ _0210841c: .word data_ov00_020e5868
 func_ov04_02108420: ; 0x02108420
 	push {r4, lr}
 	add r4, r0, #0
-	ldr r0, _02108478 ; =data_ov00_020e5b68
+	ldr r0, _02108478 ; =_ZTV15LinkStateDamage
 	str r0, [r4]
 	add r0, r4, #0
 	add r0, #0x98
@@ -15653,7 +15653,7 @@ _0210843a:
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_02108420
-_02108478: .word data_ov00_020e5b68
+_02108478: .word _ZTV15LinkStateDamage
 _0210847c: .word func_ov00_020b7d74
 
 	.global func_ov04_02108480
@@ -15661,7 +15661,7 @@ _0210847c: .word func_ov00_020b7d74
 func_ov04_02108480: ; 0x02108480
 	push {r4, lr}
 	add r4, r0, #0
-	ldr r0, _021084e0 ; =data_ov00_020e5b68
+	ldr r0, _021084e0 ; =_ZTV15LinkStateDamage
 	str r0, [r4]
 	add r0, r4, #0
 	add r0, #0x98
@@ -15702,7 +15702,7 @@ _0210849a:
 	pop {r4, pc}
 	nop
 	thumb_func_end func_ov04_02108480
-_021084e0: .word data_ov00_020e5b68
+_021084e0: .word _ZTV15LinkStateDamage
 _021084e4: .word func_ov00_020b7d74
 
 	.global func_ov04_021084e8

@@ -1269,7 +1269,7 @@
 .extern func_ov00_020bb3f4
 .extern _ZN9SysObjectnwEmPjj
 .extern func_ov00_020bb42c
-.extern data_ov00_020e5b68
+.extern _ZTV15LinkStateDamage
 .extern data_027e0d0c
 .extern func_ov00_020b7d74
 .extern data_027e0d38
@@ -1286,7 +1286,7 @@
 .extern func_ov00_020b7d74
 .extern func_ov00_020a95a4
 .extern func_0204f754
-.extern data_ov00_020e5b68
+.extern _ZTV15LinkStateDamage
 .extern func_ov00_020b7d74
 .extern func_ov00_020b7d74
 .extern func_0204f754
@@ -1294,7 +1294,7 @@
 .extern func_ov00_020a95a4
 .extern func_0204f754
 .extern _ZN9SysObjectdlEPv
-.extern data_ov00_020e5b68
+.extern _ZTV15LinkStateDamage
 .extern func_ov00_020b7d74
 .extern func_ov00_020a5e9c
 .extern func_ov00_02078b40

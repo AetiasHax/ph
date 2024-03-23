@@ -1443,57 +1443,25 @@ data_ov00_020e5b60: ; 0x020e5b60
 	.global data_ov00_020e5b64
 data_ov00_020e5b64: ; 0x020e5b64
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e5b68
-data_ov00_020e5b68: ; 0x020e5b68
+	.global _ZTV15LinkStateDamage
+_ZTV15LinkStateDamage: ; 0x020e5b68
     .word _ZN15LinkStateDamage8vfunc_00Ev
-	.global data_ov00_020e5b6c
-data_ov00_020e5b6c: ; 0x020e5b6c
-    .word func_ov04_02108420 ; data_ov07_02108420
-	.global data_ov00_020e5b70
-data_ov00_020e5b70: ; 0x020e5b70
-    .word func_ov04_02108480 ; data_ov07_02108480
-	.global data_ov00_020e5b74
-data_ov00_020e5b74: ; 0x020e5b74
+    .word func_ov04_02108420
+    .word func_ov04_02108480
     .word _ZN15LinkStateDamage5GetIdEv - 1
-	.global data_ov00_020e5b78
-data_ov00_020e5b78: ; 0x020e5b78
     .word _ZN15LinkStateDamage20CreateDebugHierarchyEv
-	.global data_ov00_020e5b7c
-data_ov00_020e5b7c: ; 0x020e5b7c
     .word _ZN15LinkStateDamage12OnStateEnterEv - 1
-	.global data_ov00_020e5b80
-data_ov00_020e5b80: ; 0x020e5b80
     .word _ZN15LinkStateDamage12OnStateLeaveEi - 1
-	.global data_ov00_020e5b84
-data_ov00_020e5b84: ; 0x020e5b84
     .word func_ov05_0210ec3c
-	.global data_ov00_020e5b88
-data_ov00_020e5b88: ; 0x020e5b88
     .word _ZN15LinkStateDamage8vfunc_20Ei - 1
-	.global data_ov00_020e5b8c
-data_ov00_020e5b8c: ; 0x020e5b8c
     .word _ZN15LinkStateDamage8vfunc_24Ei - 1
-	.global data_ov00_020e5b90
-data_ov00_020e5b90: ; 0x020e5b90
     .word func_ov00_020a8108
-	.global data_ov00_020e5b94
-data_ov00_020e5b94: ; 0x020e5b94
     .word func_ov05_0210f704
-	.global data_ov00_020e5b98
-data_ov00_020e5b98: ; 0x020e5b98
     .word _ZN15LinkStateDamage8vfunc_30Ei - 1
-	.global data_ov00_020e5b9c
-data_ov00_020e5b9c: ; 0x020e5b9c
     .word func_ov00_020a8110
-	.global data_ov00_020e5ba0
-data_ov00_020e5ba0: ; 0x020e5ba0
     .word func_ov05_0210f70c
-	.global data_ov00_020e5ba4
-data_ov00_020e5ba4: ; 0x020e5ba4
     .word func_ov05_0210f714
-	.global data_ov00_020e5ba8
-data_ov00_020e5ba8: ; 0x020e5ba8
-    .word func_ov04_0210f6dc ; func_ov05_0210f6dc
+    .word func_ov05_0210f6dc
 	.global data_ov00_020e5bac
 data_ov00_020e5bac: ; 0x020e5bac
 	.ascii "ëOè¨É_ÉÅçƒê∂ë¨ìx"
