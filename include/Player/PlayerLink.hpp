@@ -11,6 +11,12 @@
 
 #include "Debug/DebugHierarchy.hpp"
 
+typedef s32 PlayerCharacter;
+enum PlayerCharacter_ {
+    PlayerCharacter_Link = 0,
+    PlayerCharacter_Gongoron = 1,
+};
+
 class PlayerLink: public PlayerLinkBase {
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
