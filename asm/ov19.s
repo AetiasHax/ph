@@ -10011,7 +10011,7 @@ func_ov19_02175a2c: ; 0x02175a2c
 	addeq sp, sp, #0x10
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r4
-	bl func_ov00_020a862c
+	bl _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
 	tst r0, #8
 	beq _02175af8
 	ldrsh r0, [r4, #0x10]
@@ -10026,7 +10026,7 @@ func_ov19_02175a2c: ; 0x02175a2c
 	subne r0, r0, #0x1e
 	strneh r0, [r4, #0x10]
 	mov r0, r4
-	bl func_ov00_020a84bc
+	bl _ZN13LinkStateBase18func_ov00_020a84bcEi
 	ldrsh r3, [r4, #0x10]
 	ldr r1, _02175c2c ; =0xb60b60b7
 	mov r2, #0x5a
@@ -10039,9 +10039,9 @@ func_ov19_02175a2c: ; 0x02175a2c
 	bne _02175ad8
 	mov r0, r4
 	mov r1, #2
-	bl func_ov00_020a8224
+	bl _ZN13LinkStateBase18func_ov00_020a8224Ei
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _02175c30 ; =data_ov00_020eec9c
 	mov r1, #0x124
@@ -10054,14 +10054,14 @@ _02175ad8:
 _02175ae8:
 	mov r0, r4
 	mov r1, #8
-	bl func_ov00_020a8668
+	bl _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
 	b _02175be8
 _02175af8:
 	ldrsh r5, [r4, #0x10]
 	cmp r5, #0
 	ble _02175be8
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r1, r4, #0x8c
 	mov r2, r5, lsl #0xc
 	bl func_0202b308
@@ -10074,7 +10074,7 @@ _02175af8:
 	ldr r1, _02175c34 ; =data_027e0e60
 	mov r0, r4
 	ldr r5, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	add r0, sp, #2
 	mov r1, r5
@@ -10107,24 +10107,24 @@ _02175af8:
 	sub r3, ip, r3
 	mul r2, r3, r2
 	str r2, [sp, #0xc]
-	bl func_ov00_020a8224
+	bl _ZN13LinkStateBase18func_ov00_020a8224Ei
 	bl func_ov19_02175c40
 	ldrsh r2, [r4, #0x18]
 	add r1, sp, #4
 	bl _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 	mov r0, r4
 	mov r1, #5
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 _02175be8:
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldrh r1, [r0, #0xa4]
 	bic r1, r1, #0xff
 	strh r1, [r0, #0xa4]
 	mov r0, r4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _02175c3c ; =data_027e0d0c
 	ldr r2, [r1]
 	str r2, [r0]

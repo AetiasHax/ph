@@ -41108,7 +41108,7 @@ func_ov12_02134300: ; 0x02134300
 	ldmeqia sp!, {r4, pc}
 	ldrb r1, [sp, #0x13]
 	mov r0, r4
-	bl func_ov00_020a85e0
+	bl _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -41132,7 +41132,7 @@ func_ov12_02134378: ; 0x02134378
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
-	bl func_ov00_020a85fc
+	bl _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov12_02134378

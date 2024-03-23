@@ -3800,7 +3800,7 @@ func_ov21_02170650: ; 0x02170650
 	.global func_ov21_02170660
 	arm_func_start func_ov21_02170660
 func_ov21_02170660: ; 0x02170660
-	ldr ip, _02170678 ; =func_ov00_020a8a4c
+	ldr ip, _02170678 ; =_ZN13LinkStateBase18func_ov00_020a8a4cEii
 	mov r3, #0
 	ldr r1, _0217067c ; =data_ov21_02171958
 	mov r2, #1
@@ -3808,7 +3808,7 @@ func_ov21_02170660: ; 0x02170660
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov21_02170660
-_02170678: .word func_ov00_020a8a4c
+_02170678: .word _ZN13LinkStateBase18func_ov00_020a8a4cEii
 _0217067c: .word data_ov21_02171958
 
 	.global func_ov21_02170680
@@ -3816,7 +3816,7 @@ _0217067c: .word data_ov21_02171958
 func_ov21_02170680: ; 0x02170680
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl func_ov00_020a862c
+	bl _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
 	tst r0, #4
 	beq _021706fc
 	ldrb r0, [r5, #0x28]
@@ -3828,11 +3828,11 @@ func_ov21_02170680: ; 0x02170680
 	strb r0, [r5, #0x28]
 _021706b0:
 	mov r0, r5
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0, #4]
 	mov r0, r5
-	bl func_ov00_020a8dcc
+	bl _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 	mov r4, r0
 	mov r0, r5
 	bl func_ov05_02107d74
@@ -3844,12 +3844,12 @@ _021706b0:
 	ldr r1, _02170710 ; =data_ov21_02171958
 	mov r0, r5
 	mov r2, #1
-	bl func_ov00_020a8a4c
+	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	ldmia sp!, {r3, r4, r5, pc}
 _021706fc:
 	mov r0, r5
 	mov r1, #0
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov21_02170680

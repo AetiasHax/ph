@@ -4759,7 +4759,7 @@ func_ov23_0217139c: ; 0x0217139c
 	ldr r1, _02171404 ; =data_027e0e58
 	mov r5, r0
 	ldr r4, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r3, r0
 	mov ip, #1
 	mov r0, r4
@@ -4769,13 +4769,13 @@ func_ov23_0217139c: ; 0x0217139c
 	bl func_ov00_0207c1f8
 	ldr r1, _02171408 ; =data_ov23_0217a2d0
 	mov r0, r5
-	bl func_ov00_020a8a90
+	bl _ZN13LinkStateBase18func_ov00_020a8a90Ei
 	mov r0, r5
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	ldr r1, _0217140c ; =0x0000019a
 	str r1, [r0, #0x20]
 	mov r0, r5
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #4
 	strh r1, [r0, #0x5a]
 	mov r0, #0
@@ -4806,7 +4806,7 @@ func_ov23_02171410: ; 0x02171410
 	bl func_01ff9cec
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	addeq sp, sp, #0x28
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
@@ -4817,7 +4817,7 @@ func_ov23_02171410: ; 0x02171410
 	addne sp, sp, #0x28
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	mov r0, r7
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [r6, #4]
 	ldr r0, _0217169c ; =0x50574253
 	cmp r1, r0
@@ -4856,7 +4856,7 @@ func_ov23_02171410: ; 0x02171410
 	bl func_01fffbec
 _02171510:
 	mov r0, r7
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [sp, #0xc]
 	str r1, [r0]
 	ldr r1, [sp, #0x10]
@@ -4864,7 +4864,7 @@ _02171510:
 	ldr r1, [sp, #0x14]
 	str r1, [r0, #8]
 	mov r0, r7
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _021716a0 ; =0x0000059a
 	str r1, [r0, #4]
 	ldr r0, [r5]
@@ -4872,7 +4872,7 @@ _02171510:
 	bl func_01ffa0f4
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	strh r4, [r0]
 	ldr r0, _02171698 ; =data_027e0fb8
 	ldr r0, [r0]
@@ -4880,7 +4880,7 @@ _02171510:
 	mov r0, r7
 	bl func_ov23_0217216c
 	mov r0, r7
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _021716a4 ; =data_027e0ffc
 	mov r1, #0x2d4
@@ -4923,7 +4923,7 @@ _02171594:
 	bl func_01fffbec
 _02171614:
 	mov r0, r7
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [sp]
 	str r1, [r0]
 	ldr r1, [sp, #4]
@@ -4931,7 +4931,7 @@ _02171614:
 	ldr r1, [sp, #8]
 	str r1, [r0, #8]
 	mov r0, r7
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _021716ac ; =0x000004cd
 	str r1, [r0, #4]
 	ldr r0, [r5]
@@ -4939,7 +4939,7 @@ _02171614:
 	bl func_01ffa0f4
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	strh r4, [r0]
 	ldr r0, _02171698 ; =data_027e0fb8
 	ldr r0, [r0]
@@ -4947,7 +4947,7 @@ _02171614:
 	mov r0, r7
 	bl func_ov23_0217216c
 	mov r0, r7
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _021716a4 ; =data_027e0ffc
 	mov r1, #0x2d4
@@ -4979,7 +4979,7 @@ func_ov23_021716b0: ; 0x021716b0
 	bl func_01ff9cec
 	mov r6, r0
 	mov r0, r5
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
@@ -4990,7 +4990,7 @@ func_ov23_021716b0: ; 0x021716b0
 	addne sp, sp, #0xc
 	ldmneia sp!, {r3, r4, r5, r6, pc}
 	mov r0, r5
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	cmp r6, #0x3000
 	addge sp, sp, #0xc
 	ldmgeia sp!, {r3, r4, r5, r6, pc}
@@ -5023,7 +5023,7 @@ func_ov23_021716b0: ; 0x021716b0
 	bl func_01fffbec
 _02171788:
 	mov r0, r5
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [sp]
 	str r1, [r0]
 	ldr r1, [sp, #4]
@@ -5031,7 +5031,7 @@ _02171788:
 	ldr r1, [sp, #8]
 	str r1, [r0, #8]
 	mov r0, r5
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _02171814 ; =0x000004cd
 	str r1, [r0, #4]
 	ldr r0, [r4]
@@ -5039,7 +5039,7 @@ _02171788:
 	bl func_01ffa0f4
 	mov r4, r0
 	mov r0, r5
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	strh r4, [r0]
 	ldr r0, _0217180c ; =data_027e0fb8
 	ldr r0, [r0]
@@ -5047,7 +5047,7 @@ _02171788:
 	mov r0, r5
 	bl func_ov23_0217216c
 	mov r0, r5
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _02171818 ; =data_027e0ffc
 	mov r1, #0x2d4
@@ -5068,7 +5068,7 @@ func_ov23_0217181c: ; 0x0217181c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x4c
 	mov r4, r0
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r2, [r0]
 	mov r1, #0
 	str r2, [sp, #0x40]
@@ -5078,7 +5078,7 @@ func_ov23_0217181c: ; 0x0217181c
 	mov r0, r4
 	str r2, [sp, #0x48]
 	str r1, [sp, #0x44]
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [r0]
 	str r1, [sp, #0x34]
 	ldr r1, [r0, #4]
@@ -5086,7 +5086,7 @@ func_ov23_0217181c: ; 0x0217181c
 	ldr r1, [r0, #8]
 	mov r0, r4
 	str r1, [sp, #0x3c]
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	ldr r1, [r4, #0x40]
 	beq _0217193c
@@ -5095,7 +5095,7 @@ func_ov23_0217181c: ; 0x0217181c
 	bicne r0, r0, #2
 	strne r0, [r1, #0x24]
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r1, [r4, #0x40]
 	cmp r1, #0
 	beq _021718ec
@@ -5132,7 +5132,7 @@ _021718ec:
 	movlt r5, #0
 _0217191c:
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _0217207c ; =data_027e0ffc
 	ldr r1, _02172080 ; =0x0000038b
@@ -5146,7 +5146,7 @@ _0217193c:
 	strne r0, [r1, #0x24]
 _0217194c:
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldr r1, [r0, #0x50]
 	cmp r1, #0
 	bgt _0217196c
@@ -5158,7 +5158,7 @@ _0217196c:
 	bl func_01ff9cec
 	mov r5, r0
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldr r1, _02172084 ; =data_ov23_0217a2c4
 	ldrsh r2, [r0]
 	ldr r1, [r1, #4]
@@ -5186,7 +5186,7 @@ _021719b0:
 	cmp r8, #0
 	beq _02171a18
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
 	add r0, sp, #0x28
 	add r2, sp, #0x1c
@@ -5228,7 +5228,7 @@ _02171a38:
 	beq _02171a94
 	mov r0, r4
 	mov r1, #5
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x4c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02171a94:
@@ -5247,7 +5247,7 @@ _02171a94:
 	beq _02171adc
 	mov r0, r4
 	mov r1, #2
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x4c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02171adc:
@@ -5261,12 +5261,12 @@ _02171adc:
 	beq _02171b10
 	mov r0, r4
 	mov r1, #3
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x4c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02171b10:
 	mov r0, r4
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	ldr r0, [r0, #0x20]
 	ldr r1, _02172094 ; =0x00000666
 	add r0, r0, #0x9a
@@ -5274,7 +5274,7 @@ _02171b10:
 	cmp r8, r1
 	movgt r8, r1
 	mov r0, r4
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	str r8, [r0, #0x20]
 	add r0, sp, #0x34
 	bl func_01ff9cec
@@ -5291,36 +5291,36 @@ _02171b10:
 	cmp r0, #0x1b
 	beq _02171b9c
 	mov r0, r4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	bgt _02171b9c
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldrsh r0, [r0, #0xc6]
 	cmp r0, #0
 	bge _02171bc4
 _02171b9c:
 	mov r0, r4
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	add r1, r0, #0x100
 	mov r2, #4
 	mov r0, r4
 	strh r2, [r1, #0xb4]
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #1
 	strb r1, [r0, #0xb9]
 	b _02171bd8
 _02171bc4:
 	mov r0, r4
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	add r0, r0, #0x100
 	mov r1, #0
 	strh r1, [r0, #0xb4]
 _02171bd8:
 	mov r0, r4
 	mov r8, #0
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02171c78
 	mov r0, r6, lsl #0x10
@@ -5367,7 +5367,7 @@ _02171c78:
 	cmp r8, #0
 	mov r0, r4
 	beq _02171ccc
-	bl func_ov00_020a8c64
+	bl _ZN13LinkStateBase18func_ov00_020a8c64Ev
 	ldr r1, _021720a8 ; =0x000002e1
 	str r1, [r0]
 	add r0, sp, #0x40
@@ -5381,15 +5381,15 @@ _02171c78:
 	strh r0, [r4, #0x24]
 	b _02171d34
 _02171ccc:
-	bl func_ov00_020a8c64
+	bl _ZN13LinkStateBase18func_ov00_020a8c64Ev
 	mov r1, #0xf6
 	str r1, [r0]
 	mov r0, r4
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02171d10
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldr r1, _02172084 ; =data_ov23_0217a2c4
 	ldrsh r2, [r0]
 	ldr r1, [r1, #8]
@@ -5410,7 +5410,7 @@ _02171d10:
 	strh r0, [r4, #0x24]
 _02171d34:
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldrsh r2, [r0]
 	ldrsh r1, [r4, #0x24]
 	add r1, r2, r1
@@ -5419,13 +5419,13 @@ _02171d34:
 	cmp r0, #0
 	beq _02171dec
 	mov r0, r4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	addgt sp, sp, #0x4c
 	ldmgtia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	mov r0, r4
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	addeq sp, sp, #0x4c
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -5441,7 +5441,7 @@ _02171d34:
 	cmpne r1, r0
 	beq _02171dd4
 	mov r0, r4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _021720b0 ; =data_027e0d0c
 	ldr r2, [r1]
 	str r2, [r0]
@@ -5475,11 +5475,11 @@ _02171e18:
 	ble _02171f20
 	mov r1, r6
 	mov r2, r7
-	bl func_ov00_020a82c4
+	bl _ZN13LinkStateBase12ApplyImpulseEii
 	cmp r8, #0
 	mov r0, r4
 	beq _02171ef0
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, r0
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
@@ -5490,9 +5490,9 @@ _02171e18:
 	ldrsh r3, [r2]
 	mov r0, r4
 	mov r2, r1
-	bl func_ov00_020a8238
+	bl _ZN13LinkStateBase6TurnToEsii
 	mov r0, r4
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r2, [r0]
 	mov r0, #0
 	ldr r1, _021720a0 ; =data_02050f54
@@ -5525,7 +5525,7 @@ _02171e18:
 	str r1, [sp, #0x48]
 	b _02171f14
 _02171ef0:
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02171f14
 	ldr r1, _02172084 ; =data_ov23_0217a2c4
@@ -5533,13 +5533,13 @@ _02171ef0:
 	ldrsh r3, [r1]
 	mov r1, r6
 	mov r2, r6
-	bl func_ov00_020a8238
+	bl _ZN13LinkStateBase6TurnToEsii
 _02171f14:
 	mov r0, r4
 	bl func_ov05_0210f758
 	b _02171f5c
 _02171f20:
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02171f5c
 	ldr r1, [sp, #0x48]
@@ -5551,18 +5551,18 @@ _02171f20:
 	bge _02171f5c
 	mov r0, r4
 	mov r1, #0
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x4c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02171f5c:
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldr r1, [r0, #0xd8]
 	ldr r0, _021720b8 ; =0x000004cd
 	cmp r1, r0
 	mov r0, r4
 	ble _02171fc0
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r5, r0
 	bl func_ov23_021720d4
 	add r1, r5, #0xfc
@@ -5570,9 +5570,9 @@ _02171f5c:
 	bl _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	mov r0, r4
 	mov r1, #5
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _0217207c ; =data_027e0ffc
 	ldr r1, _021720bc ; =0x000002d5
@@ -5581,17 +5581,17 @@ _02171f5c:
 	add sp, sp, #0x4c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02171fc0:
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldr r0, [r0, #0xd4]
 	cmp r0, #0x800
 	ble _02172004
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldrb r0, [r0, #0xce]
 	cmp r0, #0
 	beq _02172004
 	mov r0, r4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _021720c0 ; =0x000003ae
 	str r1, [r0, #4]
 	mov r0, r4
@@ -5600,7 +5600,7 @@ _02171fc0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _02172004:
 	mov r0, r4
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	addeq sp, sp, #0x4c
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -5608,9 +5608,9 @@ _02172004:
 	mov r1, r5
 	mov r2, r6
 	mov r3, #1
-	bl func_ov00_020a8680
+	bl _ZN13LinkStateBase18func_ov00_020a8680Eisb
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, r0
 	add r0, sp, #0
 	bl func_ov23_021720e4
@@ -5621,7 +5621,7 @@ _02172004:
 	addne sp, sp, #0x4c
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	mov r0, r4
-	bl func_ov00_020a8c64
+	bl _ZN13LinkStateBase18func_ov00_020a8c64Ev
 	ldr r1, [r0]
 	add r1, r1, #0x66
 	add r1, r1, #0x600
@@ -5688,27 +5688,27 @@ func_ov23_021720f0: ; 0x021720f0
 	strb r1, [r4, #0x2b]
 	bl func_ov00_020b7e6c
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #0
 	strb r1, [r0, #0x57]
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #0
 	str r1, [r0, #0x50]
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #0
 	strb r1, [r0, #0x56]
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, #0
 	strh r1, [r0, #0x5a]
 	mov r0, r4
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	mov r1, #0
 	str r1, [r0, #0x20]
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	mov r1, #0
 	strh r1, [r0]
 	ldmia sp!, {r4, pc}
@@ -5722,7 +5722,7 @@ func_ov23_0217216c: ; 0x0217216c
 	ldr r1, _021721dc ; =data_027e0e58
 	mov r5, r0
 	ldr r4, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov ip, #0
 	mov r2, r0
 	str ip, [sp]
@@ -5734,7 +5734,7 @@ func_ov23_0217216c: ; 0x0217216c
 	ldr r1, _021721dc ; =data_027e0e58
 	mov r0, r5
 	ldr r4, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -12589,7 +12589,7 @@ func_ov23_02177ba0: ; 0x02177ba0
 	add r1, sp, #0x78
 	bl func_ov00_020b1a4c
 	mov r0, r4
-	bl func_ov00_020a8bd8
+	bl _ZN13LinkStateBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _02177d24
 	ldr r1, _02177e14 ; =data_027e0fe4
@@ -13439,7 +13439,7 @@ _02178760:
 	mov r0, lr
 	mov r1, ip
 	mov r2, #1
-	bl func_ov00_020a8a4c
+	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	add sp, sp, #0x10
 	mov r0, #1
 	ldmia sp!, {r3, pc}
@@ -13460,36 +13460,36 @@ func_ov23_021787a4: ; 0x021787a4
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
 	mov r4, r0
-	bl func_ov00_020a8dcc
+	bl _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 	ldr r1, _021789e4 ; =data_ov23_0217ab20
 	ldr r1, [r1, #0x20]
 	cmp r1, r0
 	mov r0, r4
 	beq _021789bc
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	mov r0, r4
 	bge _021789a4
-	bl func_ov00_020a8b80
+	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	mov r0, r4
 	beq _021788b8
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	mov r1, #0
 	strh r1, [r0]
 	ldr r1, _021789e8 ; =data_ov23_0217ab40
 	mov r0, r4
 	mov r2, #1
-	bl func_ov00_020a8a4c
+	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	ldr r0, _021789ec ; =data_ov00_020eec9c
 	mov r1, #0xcf
 	bl func_ov00_020d7a84
 	mov r0, r4
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, r0
 	add r0, sp, #8
 	bl func_ov23_021720e4
@@ -13501,7 +13501,7 @@ func_ov23_021787a4: ; 0x021787a4
 	ldr r1, _021789f0 ; =data_027e0e58
 	mov r0, r4
 	ldr r5, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r4, #0
 	mov r2, r0
 	str r4, [sp]
@@ -13516,7 +13516,7 @@ _02178880:
 	ldr r1, _021789f0 ; =data_027e0e58
 	mov r0, r4
 	ldr r5, [r1]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r4, #0
 	mov r2, r0
 	str r4, [sp]
@@ -13528,7 +13528,7 @@ _02178880:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 _021788b8:
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r2, [r0]
 	ldr r1, _021789f8 ; =data_027e0e60
 	str r2, [sp, #0xc]
@@ -13538,7 +13538,7 @@ _021788b8:
 	ldr r1, [r0, #8]
 	mov r0, r4
 	str r1, [sp, #0x14]
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r5, r0
 	add r1, sp, #0xc
 	mov r0, r6
@@ -13550,7 +13550,7 @@ _021788b8:
 	cmp r6, #0
 	beq _02178938
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	smull r2, r1, r5, r6
 	adds r2, r2, #0x800
 	adc r1, r1, #0
@@ -13564,7 +13564,7 @@ _02178938:
 	cmp r5, #0
 	mov r0, r4
 	ble _02178990
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldrsh r1, [r0]
 	add r1, r1, #0x2d8
 	strh r1, [r0]
@@ -13572,7 +13572,7 @@ _02178938:
 	bl func_01ff991c
 	mov r5, r0
 	mov r0, r4
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldrsh r0, [r0]
 	add sp, sp, #0x18
 	sub r2, r0, #0x4000
@@ -13584,13 +13584,13 @@ _02178938:
 	str r1, [r4, #0xb0]
 	ldmia sp!, {r4, r5, r6, pc}
 _02178990:
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	mov r1, #0x4000
 	strh r1, [r0]
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 _021789a4:
-	bl func_ov00_020a8c84
+	bl _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	ldrsh r1, [r0]
 	add sp, sp, #0x18
 	add r1, r1, #0x2d8
@@ -13598,13 +13598,13 @@ _021789a4:
 	ldmia sp!, {r4, r5, r6, pc}
 _021789bc:
 	mov r1, #0
-	bl func_ov00_020a8b3c
+	bl _ZN13LinkStateBase18func_ov00_020a8b3cEi
 	cmp r0, #0
 	addeq sp, sp, #0x18
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r0, r4
 	mov r1, #0
-	bl func_ov00_020a8138
+	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
@@ -13622,22 +13622,22 @@ func_ov23_021789fc: ; 0x021789fc
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0x14
 	mov r5, r0
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0]
 	mov r0, r5
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0, #8]
 	mov r0, r5
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r1, _02178aa4 ; =data_027e0e60
 	add r3, sp, #8
 	ldr r4, [r1]
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	mov r0, r5
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	add r0, sp, #4
 	mov r1, r4
@@ -13673,7 +13673,7 @@ func_ov23_02178ab0: ; 0x02178ab0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x50
 	mov sl, r0
-	bl func_ov00_020a8d40
+	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r2, r0
 	ldr r1, _02179014 ; =data_027e0e60
 	add r0, sp, #8
@@ -13731,7 +13731,7 @@ _02178b10:
 	str r0, [r5, #8]
 	str r6, [sp, #0x3c]
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r2, [r0]
 	mov r1, r5
 	str r2, [sp, #0x2c]
@@ -13779,20 +13779,20 @@ _02178c2c:
 	add r0, sp, #0x44
 	bl func_01fffbec
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [sp, #0x44]
 	str r1, [r0]
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [sp, #0x4c]
 	b _02178c94
 _02178c78:
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0]
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 _02178c94:
 	str r1, [r0, #8]
@@ -13806,59 +13806,59 @@ _02178c94:
 	cmp r0, #0x2e
 	bne _02178e48
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r0, [r0]
 	cmp r0, #0x800
 	mov r0, sl
 	blt _02178ce4
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mvn r1, #0xcc
 	str r1, [r0]
 	b _02178d1c
 _02178ce4:
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, #0x800
 	ldr r0, [r0]
 	rsb r1, r1, #0
 	cmp r0, r1
 	mov r0, sl
 	bgt _02178d10
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0xcd
 	str r1, [r0]
 	b _02178d1c
 _02178d10:
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0]
 _02178d1c:
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r0, [r0, #8]
 	cmp r0, #0x5800
 	mov r0, sl
 	blt _02178d44
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mvn r1, #0xcc
 	str r1, [r0, #8]
 	b _02178d74
 _02178d44:
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r0, [r0, #8]
 	cmp r0, #0x4800
 	mov r0, sl
 	bgt _02178d68
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0xcd
 	str r1, [r0, #8]
 	b _02178d74
 _02178d68:
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0, #8]
 _02178d74:
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r1, [r0]
 	str r1, [sp, #0x20]
 	ldr r1, [r0, #4]
@@ -13866,12 +13866,12 @@ _02178d74:
 	ldr r1, [r0, #8]
 	mov r0, sl
 	str r1, [sp, #0x28]
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _02178e48
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0]
 	cmp r0, #0
 	ble _02178dcc
@@ -13881,7 +13881,7 @@ _02178d74:
 	b _02178de8
 _02178dcc:
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0]
 	cmp r0, #0
 	ldrlt r0, [sp, #0x20]
@@ -13909,12 +13909,12 @@ _02178de8:
 	cmp r0, #2
 	beq _02178e48
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, #0
 	str r1, [r0]
 _02178e48:
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r2, [r0, #4]
 	ldr r1, _02179024 ; =0xfffff99a
 	ldr r0, [sp]
@@ -13925,7 +13925,7 @@ _02178e48:
 	cmp r0, #0
 	bne _02178f00
 	mov r0, sl
-	bl func_ov00_020a8bd8
+	bl _ZN13LinkStateBase19GetCurrentCharacterEv
 	cmp r0, #0
 	beq _02178e90
 	cmp r0, #1
@@ -13935,25 +13935,25 @@ _02178e90:
 	ldr r1, _02179028 ; =data_ov23_0217ab30
 	mov r0, sl
 	mov r2, #1
-	bl func_ov00_020a8a4c
+	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	b _02178eb4
 _02178ea4:
 	ldr r1, _0217902c ; =data_ov23_0217ab20
 	mov r0, sl
 	mov r2, #1
-	bl func_ov00_020a8a4c
+	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 _02178eb4:
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	ldr r2, _02179024 ; =0xfffff99a
 	ldr r1, [sp]
 	add r1, r1, r2
 	str r1, [r0, #4]
 	mov r0, sl
-	bl func_ov00_020a8be8
+	bl _ZN13LinkStateBase20GetPlayerControlDataEv
 	mov r4, r0
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
 	mov r0, r4
 	ldr r3, [r0]
@@ -13964,12 +13964,12 @@ _02178eb4:
 	strb r0, [sl, #0x31]
 _02178f00:
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mvn r1, #0x7a
 	str r1, [r0, #4]
 _02178f10:
 	mov r0, sl
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r3, sp, #0x14
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -14009,19 +14009,19 @@ _02178f80:
 	addne sp, sp, #0x50
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0]
 	cmp r0, #0
 	bne _02178fd8
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r0, [r0, #8]
 	cmp r0, #0
 	addeq sp, sp, #0x50
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02178fd8:
 	mov r0, sl
-	bl func_ov00_020a8c58
+	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, r0
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
@@ -14029,7 +14029,7 @@ _02178fd8:
 	mov r1, r0, lsl #0x10
 	mov r0, sl
 	mov r4, r1, asr #0x10
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	mov r1, r4
 	mov r2, #0x3e8
 	bl func_0202b154

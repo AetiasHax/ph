@@ -2512,10 +2512,10 @@
 .extern func_ov00_020d716c
 .extern data_ov00_020eec68
 .extern func_ov00_020838e8
-.extern func_ov00_020a85e0
+.extern _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
 .extern data_027e0e60
 .extern func_ov00_02097738
-.extern func_ov00_020a85fc
+.extern _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
 .extern data_027e0f74
 .extern func_ov00_020d77e4
 .extern func_ov00_0207bd4c

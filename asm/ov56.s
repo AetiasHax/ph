@@ -304,7 +304,7 @@ func_ov56_021990c0: ; 0x021990c0
 	ldr r1, _02199110 ; =data_ov56_021993e0
 	mov r2, #1
 	mov r4, r0
-	bl func_ov00_020a89bc
+	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
 	mov r0, #0
 	ldr r1, _02199114 ; =data_027e0d0c
 	strh r0, [r4, #0x2c]
@@ -332,7 +332,7 @@ func_ov56_0219911c: ; 0x0219911c
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x20
 	mov r4, r0
-	bl func_ov00_020a8db8
+	bl _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev
 	ldr r1, _021992cc ; =data_ov56_021993c0
 	ldr r1, [r1, #0x20]
 	cmp r1, r0
@@ -352,7 +352,7 @@ func_ov56_0219911c: ; 0x0219911c
 	cmp r0, #0
 	beq _021991b0
 	mov r0, r4
-	bl func_ov00_020a8c78
+	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrsh r2, [r0]
 	mov r0, r5
 	mov r1, #0x80
@@ -361,7 +361,7 @@ func_ov56_0219911c: ; 0x0219911c
 	ldr r1, _021992d4 ; =data_ov56_021993f0
 	mov r0, r4
 	mov r2, #1
-	bl func_ov00_020a89bc
+	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
 	mov r0, #1
 	add sp, sp, #0x20
 	strh r0, [r4, #0x2c]
@@ -375,7 +375,7 @@ _021991b0:
 	cmp r0, #0
 	beq _02199210
 	mov r0, r4
-	bl func_ov00_020a8c4c
+	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
 	add r0, sp, #0x14
 	mov r2, #0x800
@@ -383,7 +383,7 @@ _021991b0:
 	strb r0, [r5, #0xc]
 	add r1, sp, #0x14
 	mov r0, r4
-	bl func_ov00_020a81ec
+	bl _ZN13LinkStateBase6LookAtEP5Vec3p
 	bl func_ov56_021992e8
 	bl func_ov56_02198ee8
 	cmp r0, #0
@@ -400,7 +400,7 @@ _02199210:
 _02199224:
 	mov r0, r4
 	mov r1, #1
-	bl func_ov00_020a8b3c
+	bl _ZN13LinkStateBase18func_ov00_020a8b3cEi
 	cmp r0, #0
 	beq _0219925c
 	ldrsh r0, [r4, #0x2c]
@@ -411,7 +411,7 @@ _02199224:
 	ldr r1, _021992d8 ; =data_ov56_021993e0
 	mov r0, r4
 	mov r2, #1
-	bl func_ov00_020a89bc
+	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
 _0219925c:
 	ldrb r0, [r4, #0x2a]
 	cmp r0, #0
@@ -465,7 +465,7 @@ _021992f4: .word func_01fffcec
 	arm_func_start func_ov56_021992f8
 func_ov56_021992f8: ; 0x021992f8
 	stmdb sp!, {r3, lr}
-	bl func_ov00_020a8dcc
+	bl _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 	ldr r1, _02199318 ; =data_ov56_021993c0
 	ldr r1, [r1, #0x20]
 	cmp r1, r0
