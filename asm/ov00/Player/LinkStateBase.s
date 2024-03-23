@@ -1537,54 +1537,22 @@ data_ov00_020e56a4: ; 0x020e56a4
 	.global data_ov00_020e56a8
 data_ov00_020e56a8: ; 0x020e56a8
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e56ac
-data_ov00_020e56ac: ; 0x020e56ac
+	.global _ZTV13LinkStateBase
+_ZTV13LinkStateBase: ; 0x020e56ac
     .word _ZN13LinkStateBase8vfunc_00Ev
-	.global data_ov00_020e56b0
-data_ov00_020e56b0: ; 0x020e56b0
-    .word func_ov04_0210ade4 ; data_ov07_0210ade4
-	.global data_ov00_020e56b4
-data_ov00_020e56b4: ; 0x020e56b4
-    .word func_ov04_0210ade8 ; data_ov07_0210ade8
-	.global data_ov00_020e56b8
-data_ov00_020e56b8: ; 0x020e56b8
+    .word func_ov04_0210ade4
+    .word func_ov04_0210ade8
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e56bc
-data_ov00_020e56bc: ; 0x020e56bc
-    .word func_ov04_0210adf8 ; data_ov07_0210adf8
-	.global data_ov00_020e56c0
-data_ov00_020e56c0: ; 0x020e56c0
+    .word func_ov04_0210adf8
     .word _ZN13LinkStateBase12OnStateEnterEv - 1
-	.global data_ov00_020e56c4
-data_ov00_020e56c4: ; 0x020e56c4
     .word _ZN13LinkStateBase12OnStateLeaveEi - 1
-	.global data_ov00_020e56c8
-data_ov00_020e56c8: ; 0x020e56c8
     .word func_ov05_0210f700
-	.global data_ov00_020e56cc
-data_ov00_020e56cc: ; 0x020e56cc
     .word _ZN13LinkStateBase8vfunc_20Ei - 1
-	.global data_ov00_020e56d0
-data_ov00_020e56d0: ; 0x020e56d0
     .word _ZN13LinkStateBase8vfunc_24Ei - 1
-	.global data_ov00_020e56d4
-data_ov00_020e56d4: ; 0x020e56d4
     .word _ZN13LinkStateBase8vfunc_28Ev - 1
-	.global data_ov00_020e56d8
-data_ov00_020e56d8: ; 0x020e56d8
     .word func_ov05_0210f704
-	.global data_ov00_020e56dc
-data_ov00_020e56dc: ; 0x020e56dc
     .word func_ov05_0210f708
-	.global data_ov00_020e56e0
-data_ov00_020e56e0: ; 0x020e56e0
     .word _ZN13LinkStateBase8vfunc_34EP5Vec3p - 1
-	.global data_ov00_020e56e4
-data_ov00_020e56e4: ; 0x020e56e4
     .word func_ov05_0210f70c
-	.global data_ov00_020e56e8
-data_ov00_020e56e8: ; 0x020e56e8
     .word func_ov05_0210f714
-	.global data_ov00_020e56ec
-data_ov00_020e56ec: ; 0x020e56ec
     .word func_ov05_0210f71c

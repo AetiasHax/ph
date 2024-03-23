@@ -1569,7 +1569,7 @@
 .extern func_0203780c
 .extern func_020350ac
 .extern _ZN9SysObjectdlEPv
-.extern data_ov00_020e56ac
+.extern _ZTV13LinkStateBase
 .extern _ZN9SysObjectdlEPv
 .extern func_0204f614
 .extern data_ov00_020e60c0

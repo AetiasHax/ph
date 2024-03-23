@@ -20927,7 +20927,7 @@ func_ov04_0210adb0: ; 0x0210adb0
 	.global func_ov04_0210add4
 	thumb_func_start func_ov04_0210add4
 func_ov04_0210add4: ; 0x0210add4
-	ldr r2, _0210ade0 ; =data_ov00_020e56ac
+	ldr r2, _0210ade0 ; =_ZTV13LinkStateBase
 	str r2, [r0]
 	mov r2, #0
 	str r2, [r0, #4]
@@ -20935,7 +20935,7 @@ func_ov04_0210add4: ; 0x0210add4
 	bx lr
 	.align 2, 0
 	thumb_func_end func_ov04_0210add4
-_0210ade0: .word data_ov00_020e56ac
+_0210ade0: .word _ZTV13LinkStateBase
 
 	.global func_ov04_0210ade4
 	thumb_func_start func_ov04_0210ade4
