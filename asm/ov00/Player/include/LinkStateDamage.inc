@@ -204,3 +204,4 @@
 .extern func_ov05_0210f70c
 .extern func_ov05_0210f714
 .extern func_ov04_0210f6dc
+.extern func_ov05_0210f6dc

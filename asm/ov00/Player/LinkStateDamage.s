@@ -1302,6 +1302,38 @@ data_ov00_020dc570: ; 0x020dc570
 	.byte 0x00, 0x00, 0x00, 0x00
 
     .data
+	.global data_ov00_020e5a8c
+data_ov00_020e5a8c: ; 0x020e5a8c
+	.ascii "fnl"
+	.byte 0x00
+	.global data_ov00_020e5a90
+data_ov00_020e5a90: ; 0x020e5a90
+	.ascii "bow"
+	.byte 0x00
+	.global data_ov00_020e5a94
+data_ov00_020e5a94: ; 0x020e5a94
+	.ascii "dco"
+	.byte 0x00
+	.global data_ov00_020e5a98
+data_ov00_020e5a98: ; 0x020e5a98
+	.ascii "can"
+	.byte 0x00
+	.global data_ov00_020e5a9c
+data_ov00_020e5a9c: ; 0x020e5a9c
+	.ascii "hul"
+	.byte 0x00
+	.global data_ov00_020e5aa0
+data_ov00_020e5aa0: ; 0x020e5aa0
+	.ascii "pdl"
+	.byte 0x00
+	.global data_ov00_020e5aa4
+data_ov00_020e5aa4: ; 0x020e5aa4
+	.ascii "anc"
+	.byte 0x00
+	.global data_ov00_020e5aa8
+data_ov00_020e5aa8: ; 0x020e5aa8
+	.ascii "brg"
+	.byte 0x00
 	.global data_ov00_020e5aac
 data_ov00_020e5aac: ; 0x020e5aac
     .word data_ov00_020e5aa4
