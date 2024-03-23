@@ -17008,7 +17008,7 @@ _020bc028:
 	bl func_ov00_020bc088
 	mov r1, r5
 	mov r2, r4
-	bl func_ov00_020acb6c
+	bl _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	mov r0, r6
 	mov r1, #5
 	bl func_ov00_020bb544
@@ -17112,7 +17112,7 @@ _020bc114:
 	bl func_ov00_020bc088
 	mov r1, r6
 	mov r2, #1
-	bl func_ov00_020acb6c
+	bl _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	mov r0, r7
 	mov r1, #5
 	bl func_ov00_020bb544
@@ -17214,7 +17214,7 @@ func_ov00_020bc280: ; 0x020bc280
 	bl func_ov00_020bc088
 	ldr r1, _020bc2d0 ; =data_027e0d0c
 	mov r2, r4
-	bl func_ov00_020ace90
+	bl _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 	mov r0, r5
 	mov r1, #5
 	bl func_ov00_020bb544

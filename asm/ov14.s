@@ -42300,7 +42300,7 @@ _0214128c:
 	cmp r0, #0
 	beq _021412a8
 	bl func_ov14_021415d4
-	bl func_ov00_020aca94
+	bl _ZN15LinkStateDamage18func_ov00_020aca94Ev
 	add sp, sp, #0x1e8
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _021412a8:

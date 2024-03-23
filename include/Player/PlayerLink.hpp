@@ -7,13 +7,15 @@
 #include "Player/PlayerLinkBase.hpp"
 #include "Player/MotionParams.hpp"
 
+#include "Actors/ActorManager.hpp"
+
 #include "Debug/DebugHierarchy.hpp"
 
 class PlayerLink: public PlayerLinkBase {
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
     /* 20 */ Vec3p mVel;
-    /* 2c */ unk8[2][2] mTilePos;
+    /* 2c */ unk8 mTilePos[2][2];
     /* 30 */ unk32 mAltitude;
     /* 34 */ unk8 mUnk_34[4];
     /* 38 */ s32 mUnk_38;

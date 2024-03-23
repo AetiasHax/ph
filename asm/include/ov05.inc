@@ -610,7 +610,7 @@
 .extern func_ov00_020b50e0
 .extern func_ov00_020a8d40
 .extern func_ov00_020a8d40
-.extern func_ov00_020acb6c
+.extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 .extern func_ov00_020a8138
 .extern func_ov00_020a8138
 .extern func_ov00_020a8c78
@@ -744,7 +744,7 @@
 .extern func_ov00_02083a1c
 .extern func_ov00_020b1bfc
 .extern func_ov00_020a8224
-.extern func_ov00_020ace90
+.extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 .extern func_ov00_020a82ac
 .extern func_ov00_020a8138
 .extern func_ov00_020a8d40
@@ -1593,8 +1593,8 @@
 .extern func_ov00_020a8138
 .extern func_ov00_020a8b3c
 .extern func_ov00_020a8138
-.extern func_ov00_020ac9e4
-.extern func_ov00_020ac9e4
+.extern _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
+.extern _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 .extern func_ov00_020a8c64
 .extern func_ov00_020a8b3c
 .extern func_ov00_020a8138

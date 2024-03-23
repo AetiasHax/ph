@@ -3233,7 +3233,7 @@
 .extern func_ov00_020a9e28
 .extern func_ov00_020c0d4c
 .extern func_ov00_020a9e28
-.extern func_ov00_020aca94
+.extern _ZN15LinkStateDamage18func_ov00_020aca94Ev
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager7HasItemEi
 .extern func_ov00_020aa124

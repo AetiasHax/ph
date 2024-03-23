@@ -5567,7 +5567,7 @@ _02171f5c:
 	bl func_ov23_021720d4
 	add r1, r5, #0xfc
 	mov r2, #0xb
-	bl func_ov00_020acb6c
+	bl _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	mov r0, r4
 	mov r1, #5
 	bl func_ov00_020a8138

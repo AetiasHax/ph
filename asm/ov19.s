@@ -10111,7 +10111,7 @@ _02175af8:
 	bl func_ov19_02175c40
 	ldrsh r2, [r4, #0x18]
 	add r1, sp, #4
-	bl func_ov00_020ace90
+	bl _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 	mov r0, r4
 	mov r1, #5
 	bl func_ov00_020a8138

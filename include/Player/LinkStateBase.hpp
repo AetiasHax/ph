@@ -18,7 +18,7 @@ enum LinkStateId_ {
     LinkStateId_Damage = 5,
     LinkStateId_ItemGet = 6,
     LinkStateId_COUNT
-}
+};
 
 class LinkStateBase : public SysObject {
 public:

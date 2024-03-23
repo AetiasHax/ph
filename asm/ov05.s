@@ -7464,7 +7464,7 @@ _02106d10:
 	bl func_ov05_021071f8
 	add r1, r4, #0xfc
 	mov r2, #0xc
-	bl func_ov00_020acb6c
+	bl _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	mov r0, r7
 	mov r1, #5
 	bl func_ov00_020a8138
@@ -8422,7 +8422,7 @@ _02107a18:
 	bl func_ov05_021071f8
 	ldrsh r2, [r4, #0x18]
 	add r1, sp, #4
-	bl func_ov00_020ace90
+	bl _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 	mov r0, r4
 	bl func_ov00_020a82ac
 	mov r0, r4
@@ -16825,14 +16825,14 @@ _0210ed28:
 _0210ed54:
 	mov r0, r6
 	mov r1, #0
-	bl func_ov00_020ac9e4
+	bl _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 _0210ed68:
 	ldr r1, _0210f690 ; =data_ov00_020dc558
 	mov r0, r6
 	ldr r1, [r1]
-	bl func_ov00_020ac9e4
+	bl _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 _0210ed80:

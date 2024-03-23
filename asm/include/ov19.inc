@@ -928,7 +928,7 @@
 .extern func_ov00_02083a1c
 .extern func_ov00_020b1bfc
 .extern func_ov00_020a8224
-.extern func_ov00_020ace90
+.extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 .extern func_ov00_020a8138
 .extern func_ov00_020a8d40
 .extern func_ov00_020a8c58

@@ -17,7 +17,7 @@ public:
     /* 18 */
 
     /* 00 */ virtual void vfunc_00() override;
-    /* 04 */ virtual ~LinkStateBase() override;
+    /* 04 */ virtual ~LinkStateMove() override;
     /* 0c */ virtual LinkStateId GetId() override;
     /* 10 */ virtual void CreateDebugHierarchy() override;
     /* 14 */ virtual void OnStateEnter() override;

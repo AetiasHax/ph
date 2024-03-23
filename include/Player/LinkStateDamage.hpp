@@ -3,6 +3,8 @@
 #include "global.h"
 #include "types.h"
 
+#include "lib/math.h"
+
 #include "Player/LinkStateBase.hpp"
 #include "Render/ModelRender.hpp"
 
@@ -27,7 +29,7 @@ class LinkStateDamage : public LinkStateBase {
     /* b4 */
 
     /* 00 */ virtual void vfunc_00() override;
-    /* 04 */ virtual ~LinkStateBase() override;
+    /* 04 */ virtual ~LinkStateDamage() override;
     /* 0c */ virtual LinkStateId GetId() override;
     /* 10 */ virtual void CreateDebugHierarchy() override;
     /* 14 */ virtual void OnStateEnter() override;
@@ -38,4 +40,13 @@ class LinkStateDamage : public LinkStateBase {
     /* 30 */ virtual void vfunc_30(unk32 param1) override;
     /* 40 */ virtual bool vfunc_40() override;
     /* 44 */
+
+    void func_ov00_020ac9e4(unk32 param1);
+    void func_ov00_020aca50();
+    void func_ov00_020aca94();
+
+    void func_ov00_020acb6c(Vec3p *param1, unk32 param2);
+    void func_ov00_020ace90(Vec3p *param1, unk32 param2);
+
+    void func_ov00_020acfe8(bool param1);
 };
