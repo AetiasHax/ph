@@ -19570,7 +19570,7 @@ func_ov05_02111358: ; 0x02111358
 	cmp r0, #0
 	bne _0211138c
 	bl func_ov05_02107870
-	bl func_ov00_020abf70
+	bl _ZN13LinkStateItem18func_ov00_020abf70Ev
 	cmp r0, #0
 	beq _02111394
 _0211138c:

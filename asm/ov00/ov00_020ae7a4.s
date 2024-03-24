@@ -12704,7 +12704,7 @@ _020b8978:
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	bl _ZN13LinkStateBase16GetLinkItemStateEv
-	bl func_ov00_020abd84
+	bl _ZN13LinkStateItem16IsHammerEquippedEv
 	mvn r1, #0
 	cmp r0, r1
 	bne _020b89f0
@@ -16292,7 +16292,7 @@ func_ov00_020bb6d4: ; 0x020bb6d4
 	ldr r0, [r2]
 	mov r2, #0x1000
 	bl func_ov00_020b44d4
-	bl func_ov00_020abf60
+	bl _ZN13LinkStateItem16GetLinkStateMoveEv
 	bl func_ov05_021113d0
 	ldr r1, [sp, #8]
 	add sp, sp, #0x10

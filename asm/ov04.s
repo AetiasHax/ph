@@ -18460,7 +18460,7 @@ func_ov04_02109a58: ; 0x02109a58
 	sub sp, #4
 	add r4, r0, #0
 	bl func_ov04_0210add4
-	ldr r0, _02109ad8 ; =data_ov00_020e5a48
+	ldr r0, _02109ad8 ; =_ZTV13LinkStateItem
 	ldr r3, _02109adc ; =func_ov04_021079d4
 	str r0, [r4]
 	ldr r0, _02109ae0 ; =data_02057200
@@ -18520,7 +18520,7 @@ func_ov04_02109a58: ; 0x02109a58
 	pop {r3, r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_02109a58
-_02109ad8: .word data_ov00_020e5a48
+_02109ad8: .word _ZTV13LinkStateItem
 _02109adc: .word func_ov04_021079d4
 _02109ae0: .word data_02057200
 _02109ae4: .word func_ov00_020b7d74

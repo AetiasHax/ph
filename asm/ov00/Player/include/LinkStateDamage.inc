@@ -142,7 +142,7 @@
 .extern func_ov00_0207b89c
 .extern data_ov00_020e9c88
 .extern _ZN11ItemManager12GetEquipItemEi
-.extern func_ov00_020abf50
+.extern _ZN13LinkStateItem15GetEquipBombchuEv
 .extern func_ov14_0213ec64
 .extern func_01ffa0f4
 .extern _ZN13LinkStateBase14GetPlayerAngleEv

@@ -816,7 +816,7 @@
 .extern func_ov00_02097738
 .extern func_ov00_02097750
 .extern _ZN13LinkStateBase16GetLinkItemStateEv
-.extern func_ov00_020abd84
+.extern _ZN13LinkStateItem16IsHammerEquippedEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
 .extern _ZNK11ItemManager16GetEquippedFairyEv
@@ -987,7 +987,7 @@
 .extern func_ov00_020b4558
 .extern func_01ffa0f4
 .extern func_ov00_020b44d4
-.extern func_ov00_020abf60
+.extern _ZN13LinkStateItem16GetLinkStateMoveEv
 .extern func_ov05_021113d0
 .extern data_027e0fd0
 .extern data_027e0fac

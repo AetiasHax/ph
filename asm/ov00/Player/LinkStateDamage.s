@@ -955,7 +955,7 @@ _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi: ; 0x020acb6c
 	bl _ZN11ItemManager12GetEquipItemEi
 	cmp r0, #0
 	beq _020acbb0
-	bl func_ov00_020abf50
+	bl _ZN13LinkStateItem15GetEquipBombchuEv
 	bl func_ov14_0213ec64
 _020acbb0:
 	str r4, [r6, #0x18]

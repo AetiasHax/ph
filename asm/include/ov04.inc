@@ -1397,7 +1397,7 @@
 .extern func_ov00_020d0530
 .extern func_ov00_020d0530
 .extern func_0204f614
-.extern data_ov00_020e5a48
+.extern _ZTV13LinkStateItem
 .extern data_02057200
 .extern func_ov00_020b7d74
 .extern func_0204f754

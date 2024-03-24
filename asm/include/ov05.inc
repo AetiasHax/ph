@@ -1931,7 +1931,7 @@
 .extern data_027e0fac
 .extern func_ov00_020bbb64
 .extern func_ov00_020b1e98
-.extern func_ov00_020abf70
+.extern _ZN13LinkStateItem18func_ov00_020abf70Ev
 .extern func_ov00_020bd318
 .extern _ZN13LinkStateBase18func_ov00_020a8ca4Ev
 .extern func_ov00_020a9180
