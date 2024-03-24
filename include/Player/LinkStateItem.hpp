@@ -4,6 +4,8 @@
 #include "types.h"
 
 #include "Player/LinkStateBase.hpp"
+#include "Player/LinkStateMove.hpp"
+#include "Player/EquipBombchu.hpp"
 #include "Item/Item.hpp"
 
 class LinkStateItem : public LinkStateBase {
@@ -35,7 +37,7 @@ public:
 
     /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~LinkStateItem() override;
-    /* 0c */ virtual LinkStateId GetId() = 0 override;
+    /* 0c */ virtual LinkStateId GetId() override;
     /* 14 */ virtual void OnStateEnter() override;
     /* 18 */ virtual void OnStateLeave(s32 param1) override;
     /* 1c */ virtual void vfunc_1c() override;
@@ -43,4 +45,9 @@ public:
     /* 24 */ virtual bool vfunc_24(s32 param1) override;
     /* 28 */ virtual bool vfunc_28() override;
     /* 44 */
+
+    s32 IsHammerEquipped(); // returns 0 if hammer is equipped, otherwise -1
+    EquipBombchu* GetEquipBombchu();
+    LinkStateMove* GetLinkStateMove();
+    bool func_ov00_020abf70();
 };
