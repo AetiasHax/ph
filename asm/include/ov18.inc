@@ -1102,7 +1102,7 @@
 .extern func_ov14_02145f0c
 .extern Approach_thunk
 .extern func_020385b8
-.extern func_ov00_020ab934
+.extern _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
 .extern func_ov14_02145f0c
 .extern data_027e0fc8
 .extern Approach_thunk

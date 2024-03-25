@@ -5178,7 +5178,7 @@ _021719b0:
 	mov r5, r0
 	bl func_020385b8
 	add r1, sp, #0x28
-	bl func_ov00_020ab770
+	bl _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 	cmp r0, #0
 	cmpeq r5, #0
 	movne r8, #1
@@ -13024,7 +13024,7 @@ func_ov23_02178174: ; 0x02178174
 	mov r1, #0
 	bl func_ov00_020bb544
 	bl func_020385b8
-	bl func_ov00_020ab6c8
+	bl _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
 	mov r0, r5
 	bl func_ov00_020bc46c
 	str r0, [sp]

@@ -9472,7 +9472,7 @@ func_ov12_0211a7d0: ; 0x0211a7d0
 	bl func_ov00_020bcdb8
 	bl func_020385b8
 	mov r1, #0
-	bl func_ov00_020ab614
+	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 	bl func_ov12_0211a964
 	mov r2, #0
 	strh r2, [r0, #0x12]

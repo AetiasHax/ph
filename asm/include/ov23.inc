@@ -429,7 +429,7 @@
 .extern _ZN13LinkStateBase15GetPlayer_Unk18Ev
 .extern func_ov00_020a9180
 .extern func_020385b8
-.extern func_ov00_020ab770
+.extern _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_01ff9bf8
 .extern func_01ffa0f4
@@ -1146,7 +1146,7 @@
 .extern func_ov00_020c3674
 .extern func_ov00_020bb544
 .extern func_020385b8
-.extern func_ov00_020ab6c8
+.extern _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
 .extern func_ov00_020bc46c
 .extern func_ov14_0213ec64
 .extern func_ov00_02083918

@@ -1535,7 +1535,7 @@
 .extern data_027e0f94
 .extern data_027e0fd8
 .extern func_02035064
-.extern data_ov00_020e5974
+.extern _ZTV13LinkStateGrab
 .extern func_020350ac
 .extern func_020350ac
 .extern _ZN9SysObjectdlEPv

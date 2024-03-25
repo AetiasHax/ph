@@ -816,7 +816,7 @@
 .extern data_ov00_020eec68
 .extern data_027e071c
 .extern func_020385b8
-.extern func_ov00_020ab6c8
+.extern _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
 .extern _ZN13LinkStateBase18func_ov00_020a82acEv
 .extern func_ov00_020af044
 .extern func_ov00_020cfbb0
@@ -1107,7 +1107,7 @@
 .extern _ZN13LinkStateBase18func_ov00_020a8994Ev
 .extern _ZN13LinkStateBase18func_ov00_020a8d6cEv
 .extern func_01ff9cec
-.extern func_ov00_020ab9b8
+.extern _ZN13LinkStateGrab18func_ov00_020ab9b8Ejb
 .extern _ZN13LinkStateBase18func_ov00_020a8b3cEi
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_01ff9bc4
@@ -1156,7 +1156,7 @@
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern func_0202b154
 .extern _ZN13LinkStateBase18func_ov00_020a81fcEv
-.extern func_ov00_020aa818
+.extern _ZN13LinkStateGrab18func_ov00_020aa818Ev
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_01ff9bf8
 .extern func_01ffa0f4
@@ -1196,7 +1196,7 @@
 .extern _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
 .extern _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
-.extern func_ov00_020aa844
+.extern _ZN13LinkStateGrab18func_ov00_020aa844EP5Actor
 .extern func_0203516c
 .extern data_027e0fe4
 .extern data_027e0f74
@@ -1215,7 +1215,7 @@
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
-.extern func_ov00_020aa844
+.extern _ZN13LinkStateGrab18func_ov00_020aa844EP5Actor
 .extern data_027e0fe4
 .extern data_027e0fb8
 .extern data_027e0f74
@@ -1253,7 +1253,7 @@
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern func_ov00_020af044
 .extern func_020385b8
-.extern func_ov00_020ab97c
+.extern _ZN13LinkStateGrab18func_ov00_020ab97cEP5Vec3p
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 .extern _ZN13LinkStateBase12GetPlayerPosEv
@@ -1338,7 +1338,7 @@
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern func_ov00_020a9180
 .extern func_020385b8
-.extern func_ov00_020ab770
+.extern _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 .extern func_01fffcd8
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern func_01fffcd8
@@ -1409,7 +1409,7 @@
 .extern _ZN13LinkStateBase6LookAtEP5Vec3p
 .extern func_ov00_020af044
 .extern func_020385b8
-.extern func_ov00_020ab8cc
+.extern _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern func_ov00_0208583c
 .extern _ZNK11ItemManager8GetFairyEi
@@ -1936,7 +1936,7 @@
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern func_ov00_020a9180
 .extern func_020385b8
-.extern func_ov00_020ab770
+.extern _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 .extern func_01fffcd8
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern func_ov00_02097738
@@ -1976,7 +1976,7 @@
 .extern func_ov00_020ceacc
 .extern func_020385b8
 .extern _ZN13LinkStateBase12GetPlayerVelEv
-.extern func_ov00_020ab614
+.extern _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase18func_ov00_020a8a4cEii
 .extern _ZN13LinkStateBase18func_ov00_020a8ad0Ei

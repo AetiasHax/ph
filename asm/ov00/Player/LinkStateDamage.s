@@ -581,7 +581,7 @@ _020ac64c:
 	bl func_ov00_020d716c
 	bl func_020385b8
 	mov r1, #0
-	bl func_ov00_020ab614
+	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 _020ac698:
 	mov r1, #0xf
 	ldr r0, _020ac7e0 ; =data_027e0db0

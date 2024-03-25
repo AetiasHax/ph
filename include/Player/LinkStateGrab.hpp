@@ -6,6 +6,7 @@
 #include "lib/math.h"
 
 #include "Player/LinkStateBase.hpp"
+#include "Player/LinkState4.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Actor/Actor.hpp"
 
@@ -32,4 +33,25 @@ public:
     /* 2c */ virtual void vfunc_2c(u16 *param1) override;
     /* 34 */ virtual bool vfunc_34(Vec3p *param1) override;
     /* 44 */
+
+    s32 GetGrabActorId();
+    bool func_ov00_020aa818();
+    void func_ov00_020aa844(Actor *param1);
+    LinkState4* GetLinkState4();
+    void SetGrabActorVelocity(Vec3p *velocity);
+    void SetBombVelocity(Vec3p *velocity);
+    void func_ov00_020ab6c8();
+    unk32 func_ov00_020ab770(Vec3p *param1);
+    unk32 func_ov00_020ab7bc(Vec3p *param1, Actor *actor);
+    void SetNormalizedThrowOffset(Vec3p *target);
+    void SetThrowOffset(Vec3p *target);
+    void func_ov00_020ab934(Vec3p *target);
+    void func_ov00_020ab97c(Vec3p *target);
+    void func_ov00_020ab9b8(u32 param1, bool param2);
+    void Grab(ActorRef *ref);
+    void func_ov00_020abba0(ActorRef *ref);
+    void func_ov00_020abbdc(ActorRef *ref); // duplicate of func_ov00_020abba0
+    void func_ov00_020abc18(ActorRef *ref);
+    bool func_ov00_020abc40();
+    bool func_ov00_020abc78(ActorRef *ref);
 };

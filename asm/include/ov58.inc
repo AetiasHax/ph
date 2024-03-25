@@ -152,7 +152,7 @@
 .extern func_ov14_0213ed94
 .extern func_ov00_02083c7c
 .extern func_020385b8
-.extern func_ov00_020ab8cc
+.extern _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
 .extern _ZN13LinkStateBase6LookAtEP5Vec3p
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase14GetPlayerAngleEv

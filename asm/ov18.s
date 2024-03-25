@@ -12822,7 +12822,7 @@ func_ov18_02165948: ; 0x02165948
 	beq _02165980
 	bl func_020385b8
 	add r1, r4, #0x48
-	bl func_ov00_020ab934
+	bl _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
 _02165980:
 	add r0, r4, #0x1d8
 	mov r1, #2

@@ -347,7 +347,7 @@ _02189918:
 	mov r0, #0
 	strb r0, [r7, #0x64]
 	bl func_020385b8
-	bl func_ov00_020ab6c8
+	bl _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
 	mov r0, r4
 	add r1, sp, #0x3c
 	mov r2, #0x800

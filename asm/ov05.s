@@ -9567,7 +9567,7 @@ func_ov05_021089f4: ; 0x021089f4
 	sub sp, sp, #0xc
 	mov r4, r0
 	bl func_020385b8
-	bl func_ov00_020ab6c8
+	bl _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
 	mov r0, r4
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	ldr r0, _02108ce0 ; =data_027e0fb8
@@ -11770,7 +11770,7 @@ _0210a798:
 	moveq r2, #1
 	movne r2, #0
 	mov r0, r4
-	bl func_ov00_020ab9b8
+	bl _ZN13LinkStateGrab18func_ov00_020ab9b8Ejb
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov05_0210a774
 
@@ -12134,7 +12134,7 @@ _0210ac7c:
 	add r1, sp, #0x18
 	bl _ZN13LinkStateBase18func_ov00_020a81fcEv
 	mov r0, r6
-	bl func_ov00_020aa818
+	bl _ZN13LinkStateGrab18func_ov00_020aa818Ev
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, pc}
 _0210ad00:
@@ -12503,7 +12503,7 @@ _0210b244:
 _0210b264:
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_020aa844
+	bl _ZN13LinkStateGrab18func_ov00_020aa844EP5Actor
 	add r0, r5, #0x24
 	bl func_0203516c
 	add sp, sp, #0x100
@@ -12594,7 +12594,7 @@ _0210b394:
 _0210b3a0:
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_020aa844
+	bl _ZN13LinkStateGrab18func_ov00_020aa844EP5Actor
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov05_0210b2a4
@@ -12901,7 +12901,7 @@ _0210b7b0:
 	bl func_ov00_020af044
 	bl func_020385b8
 	add r1, r5, #0x24
-	bl func_ov00_020ab97c
+	bl _ZN13LinkStateGrab18func_ov00_020ab97cEP5Vec3p
 	mov r0, r5
 	mov r1, #2
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
@@ -13486,7 +13486,7 @@ func_ov05_0210bf50: ; 0x0210bf50
 	mov r5, r0
 	bl func_020385b8
 	add r1, sp, #8
-	bl func_ov00_020ab770
+	bl _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 	cmp r0, #0
 	cmpeq r5, #0
 	movne r5, #1
@@ -14035,7 +14035,7 @@ _0210c7a8:
 	bl func_ov00_020af044
 	bl func_020385b8
 	add r1, r5, #0x18
-	bl func_ov00_020ab8cc
+	bl _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
 	add sp, sp, #0x78
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -19632,7 +19632,7 @@ func_ov05_021113dc: ; 0x021113dc
 	mov r7, r0
 	bl func_020385b8
 	add r1, sp, #0x4c
-	bl func_ov00_020ab770
+	bl _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
 	movs r8, r0
 	cmpeq r7, #0
 	moveq sb, #0
@@ -19991,7 +19991,7 @@ _02111944:
 	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r1, r0
 	mov r0, r6
-	bl func_ov00_020ab614
+	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 _02111960:
 	mov r0, r5
 	bl _ZN13LinkStateBase12GetGrabActorEv

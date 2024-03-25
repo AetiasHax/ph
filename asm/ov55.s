@@ -313,7 +313,7 @@ _0219907c:
 	bl func_01ff9bc4
 	bl func_020385b8
 	add r1, r4, #0x38
-	bl func_ov00_020ab8cc
+	bl _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
 	b _02199128
 _021990dc:
 	ldr r0, _021991a4 ; =data_027e0fb8
@@ -334,7 +334,7 @@ _021990dc:
 	bl func_01ff9bc4
 	bl func_020385b8
 	add r1, r4, #0x38
-	bl func_ov00_020ab908
+	bl _ZN13LinkStateGrab14SetThrowOffsetEP5Vec3p
 _02199128:
 	cmp r5, #0
 	beq _02199178

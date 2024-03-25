@@ -588,7 +588,7 @@
 .extern data_027e0f64
 .extern func_ov00_020bcdb8
 .extern func_020385b8
-.extern func_ov00_020ab614
+.extern _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 .extern func_ov00_02083664
 .extern func_ov00_020bb544
 .extern func_ov00_020b4460

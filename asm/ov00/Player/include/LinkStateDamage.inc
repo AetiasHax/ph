@@ -84,7 +84,7 @@
 .extern func_ov00_020a914c
 .extern func_ov00_020d716c
 .extern func_020385b8
-.extern func_ov00_020ab614
+.extern _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
 .extern func_ov00_02097ff4
 .extern _ZN13LinkStateBase18func_ov00_020a8d40Ev
 .extern _ZN13LinkStateBase25GetCurrentCharacterHealthEv

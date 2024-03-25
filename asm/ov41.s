@@ -3579,7 +3579,7 @@ func_ov41_0218c204: ; 0x0218c204
 	str r0, [sp, #8]
 	bl func_020385b8
 	add r1, sp, #0
-	bl func_ov00_020ab934
+	bl _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
 	mov r0, #1
 	strb r0, [r4, #0x52b]
 	add sp, sp, #0x18
@@ -4074,7 +4074,7 @@ func_ov41_0218c834: ; 0x0218c834
 	str r0, [sp, #0x14]
 	bl func_020385b8
 	add r1, sp, #0xc
-	bl func_ov00_020ab934
+	bl _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
 	b _0218cbd0
 _0218c9c4:
 	cmp r4, #0
@@ -4180,7 +4180,7 @@ _0218ca80:
 	str r0, [sp, #8]
 	bl func_020385b8
 	add r1, sp, #0
-	bl func_ov00_020ab934
+	bl _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
 	b _0218cbd0
 _0218cb5c:
 	cmp r4, #0
