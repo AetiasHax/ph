@@ -181,7 +181,7 @@ private:
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
     /* 00c */ u32 mHourglassSandFrames;
     /* 010 */ FairyId mEquippedFairy;
-    /* 014 */ Navi *mFairies[FairyId_COUNT];
+    /* 014 */ ActorNavi *mFairies[FairyId_COUNT];
     /* 020 */ u16 mEquipLoadTimer;
     /* 022 */ u16 mNumRupees;
     /* 024 */ u8 mNumGems[Gem_COUNT];
@@ -228,7 +228,7 @@ public:
 
     // Fairy
     FairyId GetEquippedFairy() const;
-    Navi* GetFairy(FairyId id) const;
+    ActorNavi* GetFairy(FairyId id) const;
     u32 GetActiveFairyLevel(FairyId id) const;
     u32 GetFairyLevel(FairyId id) const;
 

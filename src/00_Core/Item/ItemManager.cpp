@@ -119,7 +119,7 @@ ARM FairyId ItemManager::GetEquippedFairy() const {
     return fairy;
 }
 
-ARM Navi* ItemManager::GetFairy(FairyId id) const {
+ARM ActorNavi* ItemManager::GetFairy(FairyId id) const {
     return mFairies[id];
 }
 
