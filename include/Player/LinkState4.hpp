@@ -20,10 +20,10 @@ public:
     /* 20 */ unk32 mUnk_20;
     /* 24 */ unk8 mUnk_24[2];
     /* 26 */ unk16 mUnk_26;
-    /* 28 */ unk8 mUnk_24[4];
+    /* 28 */ unk8 mUnk_28[4];
     /* 2c */ unk32 mUnk_2c[5];
     /* 40 */ unk32 mUnk_40;
-    /* 44 */ unk32 mUnk_2c[0x10];
+    /* 44 */ unk32 mUnk_44[0x10];
     /* 84 */ void *mUnk_84;
     /* 88 */ unk32 mUnk_88;
     /* 8c */ unk8 mUnk_8c[0xc];
