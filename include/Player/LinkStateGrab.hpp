@@ -7,6 +7,7 @@
 
 #include "Player/LinkStateBase.hpp"
 #include "Actor/ActorManager.hpp"
+#include "Actor/Actor.hpp"
 
 class LinkStateGrab : public LinkStateBase {
 public:

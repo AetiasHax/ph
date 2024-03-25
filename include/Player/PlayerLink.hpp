@@ -7,7 +7,7 @@
 #include "Player/PlayerLinkBase.hpp"
 #include "Player/MotionParams.hpp"
 
-#include "Actors/ActorManager.hpp"
+#include "Actor/ActorManager.hpp"
 
 #include "Debug/DebugHierarchy.hpp"
 

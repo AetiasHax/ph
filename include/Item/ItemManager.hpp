@@ -4,7 +4,7 @@
 #include "types.h"
 #include "lib/math.h"
 
-#include "Actors/Navi/Navi.hpp"
+#include "Actor/ActorNavi.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipItem.hpp"
 #include "System/SysNew.hpp"

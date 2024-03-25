@@ -8,8 +8,8 @@
 #include "System/SysNew.hpp"
 #include "Player/PlayerLink.hpp"
 #include "Player/PlayerControlData.hpp"
-#include "Actors/Actor.hpp"
-#include "Actors/ActorManager.hpp"
+#include "Actor/Actor.hpp"
+#include "Actor/ActorManager.hpp"
 #include "Player/EquipItem.hpp"
 #include "Debug/DebugHierarchy.hpp"
 
