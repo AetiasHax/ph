@@ -2511,7 +2511,7 @@ func_ov58_0219a47c: ; 0x0219a47c
 	movs r4, r0
 	mov r0, r5
 	beq _0219a59c
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r1, [r4, #8]
 	str r1, [r0]
 	ldr r1, [r4, #0xc]

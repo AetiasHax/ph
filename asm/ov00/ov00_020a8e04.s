@@ -2275,7 +2275,7 @@ _020aa5c0:
 	b _020aa778
 _020aa5d4:
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	mov r0, r4
 	beq _020aa62c
@@ -2301,7 +2301,7 @@ _020aa62c:
 	b _020aa778
 _020aa634:
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	beq _020aa674
 	ldr r0, [r4, #0x18]
@@ -2423,7 +2423,7 @@ func_ov00_020aa7b0: ; 0x020aa7b0
 	bl func_ov00_020af050
 _020aa7d4:
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	ldr r1, [r4, #4]
 	cmp r1, #1
 	ldmneia sp!, {r4, pc}
@@ -2433,7 +2433,7 @@ _020aa7d4:
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	mov r0, r4
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	mvn r1, #0
 	str r1, [r0]
 	str r1, [r0, #4]
@@ -2718,7 +2718,7 @@ _020aac08:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020aac14:
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	movs r5, r0
 	beq _020aadbc
 	cmp r6, #0
@@ -2890,7 +2890,7 @@ _020aae90:
 	cmp r0, #2
 	bne _020aaf78
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	bne _020aaf78
 	add r3, sp, #0x5c
@@ -2994,7 +2994,7 @@ _020ab000:
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, r7, r8, pc}
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	bne _020ab170
 	mov r0, r4
@@ -3179,7 +3179,7 @@ _020ab2b0:
 	cmp r0, #0
 	bne _020ab320
 	mov r0, r4
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r1, [r6, #8]
 	mov r2, #1
 	str r1, [r0]
@@ -3429,7 +3429,7 @@ func_ov00_020ab614: ; 0x020ab614
 	sub sp, sp, #0xc
 	mov r5, r0
 	mov r4, r1
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	movs ip, r0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r4, r5, pc}
@@ -3445,7 +3445,7 @@ func_ov00_020ab614: ; 0x020ab614
 	mov r1, r4
 	blx r2
 	mov r0, r5
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	mvn r1, #0
 	str r1, [r0]
 	str r1, [r0, #4]
@@ -3461,7 +3461,7 @@ func_ov00_020ab680: ; 0x020ab680
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r1, [r0, #4]
@@ -3484,7 +3484,7 @@ _020ab6c4: .word 0x4b4f4b4f
 func_ov00_020ab6c8: ; 0x020ab6c8
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	ldr r2, [r0, #4]
@@ -3683,7 +3683,7 @@ func_ov00_020ab934: ; 0x020ab934
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r5
@@ -3706,7 +3706,7 @@ func_ov00_020ab97c: ; 0x020ab97c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r5
@@ -3728,7 +3728,7 @@ func_ov00_020ab9b8: ; 0x020ab9b8
 	mov r7, r0
 	mov r6, r1
 	mov r5, r2
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	movs r4, r0
 	addeq sp, sp, #0x18
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
@@ -3822,7 +3822,7 @@ _020aba70:
 	blx r2
 _020abb30:
 	mov r0, r7
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	mvn r1, #0
 	str r1, [r0]
 	str r1, [r0, #4]
@@ -3945,7 +3945,7 @@ func_ov00_020abc78: ; 0x020abc78
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r0, r5
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r4, r5, r6, pc}
@@ -3971,7 +3971,7 @@ _020abce0:
 	bl func_ov00_020c3674
 	mov r6, r0
 	mov r0, r5
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r2, [r4]
 	add r1, r6, #0x48
 	str r2, [r0]
@@ -3990,7 +3990,7 @@ _020abce0:
 	mov r1, #0xcb
 	bl func_ov00_020d7a84
 	mov r0, r5
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	ldr r1, [r0]
 	ldr r1, [r1, #0x58]
 	blx r1

@@ -70,8 +70,8 @@ unk8* LinkStateBase::func_ov00_020a8c64() {}
 s16* LinkStateBase::GetPlayerAngle() {}
 void* LinkStateBase::GetPlayer_Unk18() {}
 s32 LinkStateBase::Get_PlayerControlData_Unk32() {}
-Actor* LinkStateBase::func_ov00_020a8ca4() {}
-ActorRef* LinkStateBase::Get_PlayerLink_UnkRef_3c() {}
+Actor* LinkStateBase::GetGrabActor() {}
+ActorRef* LinkStateBase::GetGrabActorRef() {}
 unk32 LinkStateBase::Grab() {}
 s32 LinkStateBase::Get_PlayerLink_Unk44() {}
 bool LinkStateBase::IsEquipBeingUsed(ItemFlag id) {}

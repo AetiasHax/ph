@@ -225,7 +225,7 @@ func_ov55_02198f90: ; 0x02198f90
 	cmpne r1, #5
 	ldmneia sp!, {r3, r4, r5, pc}
 	mov r0, r5
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, _0219900c ; =data_027e0fb8
@@ -237,7 +237,7 @@ func_ov55_02198f90: ; 0x02198f90
 	bl func_ov55_02198e60
 	mov r4, r0
 	mov r0, r5
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r1, [r4, #8]
 	str r1, [r0]
 	ldr r1, [r4, #0xc]
@@ -339,7 +339,7 @@ _02199128:
 	cmp r5, #0
 	beq _02199178
 	mov r0, r4
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r1, [r5, #8]
 	str r1, [r0]
 	ldr r1, [r5, #0xc]

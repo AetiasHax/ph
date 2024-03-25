@@ -472,7 +472,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	movs r4, r0
 	beq _020a84a8
 	mov r0, r7
-	bl _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	bl _ZN13LinkStateBase15GetGrabActorRefEv
 	ldr r1, [r4, #8]
 	str r1, [r0]
 	ldr r1, [r4, #0xc]
@@ -1241,9 +1241,9 @@ _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev: ; 0x020a8c90
 	arm_func_end _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev
 _020a8ca0: .word data_027e0fcc
 
-	.global _ZN13LinkStateBase18func_ov00_020a8ca4Ev
-	arm_func_start _ZN13LinkStateBase18func_ov00_020a8ca4Ev
-_ZN13LinkStateBase18func_ov00_020a8ca4Ev: ; 0x020a8ca4
+	.global _ZN13LinkStateBase12GetGrabActorEv
+	arm_func_start _ZN13LinkStateBase12GetGrabActorEv
+_ZN13LinkStateBase12GetGrabActorEv: ; 0x020a8ca4
 	ldr r1, _020a8cbc ; =data_027e0fe4
 	ldr r2, [r0, #8]
 	ldr r0, [r1]
@@ -1251,17 +1251,17 @@ _ZN13LinkStateBase18func_ov00_020a8ca4Ev: ; 0x020a8ca4
 	add r1, r2, #0x3c
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 _020a8cbc: .word data_027e0fe4
 _020a8cc0: .word func_ov00_020c3674
 
-	.global _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
-	arm_func_start _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
-_ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv: ; 0x020a8cc4
+	.global _ZN13LinkStateBase15GetGrabActorRefEv
+	arm_func_start _ZN13LinkStateBase15GetGrabActorRefEv
+_ZN13LinkStateBase15GetGrabActorRefEv: ; 0x020a8cc4
 	ldr r0, [r0, #8]
 	add r0, r0, #0x3c
 	bx lr
-	arm_func_end _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+	arm_func_end _ZN13LinkStateBase15GetGrabActorRefEv
 
 	.global _ZN13LinkStateBase4GrabEv
 	arm_func_start _ZN13LinkStateBase4GrabEv

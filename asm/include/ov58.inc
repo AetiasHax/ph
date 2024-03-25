@@ -148,7 +148,7 @@
 .extern _ZN13LinkStateBase18func_ov00_020a89bcEii
 .extern data_027e1098
 .extern func_ov00_020cf01c
-.extern _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+.extern _ZN13LinkStateBase15GetGrabActorRefEv
 .extern func_ov14_0213ed94
 .extern func_ov00_02083c7c
 .extern func_020385b8

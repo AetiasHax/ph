@@ -348,7 +348,7 @@ func_ov00_020aec10: ; 0x020aec10
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	mov r4, r1
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	bne _020aecc8
 	ldrsh r0, [r5, #0x12]
@@ -398,7 +398,7 @@ _020aecc8:
 	cmp r0, #2
 	bne _020aed7c
 	mov r0, r5
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	bne _020aed70
 	mov r0, r5
@@ -4949,7 +4949,7 @@ _020b270c:
 	mov r1, #0
 	strh r1, [r0, #0xa4]
 	mov r0, r4
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	movne r3, #1
 	mov r1, #0
@@ -5450,7 +5450,7 @@ _020b2db8:
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r6, r1, asr #0x10
-	bl _ZN13LinkStateBase18func_ov00_020a8ca4Ev
+	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	movne ip, #1
 	moveq ip, #0

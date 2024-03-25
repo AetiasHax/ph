@@ -16,8 +16,8 @@
 .extern data_027e0fe8
 .extern data_027e0fe4
 .extern _ZN13LinkStateBase18func_ov00_020a89bcEii
-.extern _ZN13LinkStateBase18func_ov00_020a8ca4Ev
-.extern _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+.extern _ZN13LinkStateBase12GetGrabActorEv
+.extern _ZN13LinkStateBase15GetGrabActorRefEv
 .extern func_ov00_020af298
 .extern data_027e0fb8
 .extern func_01fffcec
@@ -35,7 +35,7 @@
 .extern func_01ff9bc4
 .extern func_020385b8
 .extern func_ov00_020ab908
-.extern _ZN13LinkStateBase24Get_PlayerLink_UnkRef_3cEv
+.extern _ZN13LinkStateBase15GetGrabActorRefEv
 .extern func_ov00_020af298
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern func_ov00_020b034c

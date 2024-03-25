@@ -113,8 +113,8 @@ public:
     s16* GetPlayerAngle();
     void* GetPlayer_Unk18();
     s32 Get_PlayerControlData_Unk32();
-    Actor* func_ov00_020a8ca4();
-    ActorRef* Get_PlayerLink_UnkRef_3c();
+    Actor* GetGrabActor();
+    ActorRef* GetGrabActorRef();
     unk32 Grab();
     s32 Get_PlayerLink_Unk44();
     bool IsEquipBeingUsed(ItemFlag id);
