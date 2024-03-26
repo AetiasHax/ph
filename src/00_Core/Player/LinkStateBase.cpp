@@ -32,7 +32,7 @@ void LinkStateBase::func_ov00_020a84bc(s32 param1) {}
 void LinkStateBase::func_ov00_020a8508() {}
 void LinkStateBase::func_ov00_020a853c(Vec3p *param1) {}
 void LinkStateBase::Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) {}
-void LinkStateBase::PlayerLinkBase_vfunc_38(Vec3p *pos) {}
+void LinkStateBase::PlayerBase_vfunc_38(Vec3p *pos) {}
 void LinkStateBase::PlayerLink_vfunc_74() {}
 void LinkStateBase::PlayerLink_vfunc_88() {}
 unk16 LinkStateBase::Get_PlayerLink_Unk48() {}

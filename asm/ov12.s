@@ -41108,7 +41108,7 @@ func_ov12_02134300: ; 0x02134300
 	ldmeqia sp!, {r4, pc}
 	ldrb r1, [sp, #0x13]
 	mov r0, r4
-	bl _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
+	bl _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0

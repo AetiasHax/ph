@@ -5,7 +5,7 @@
 
 #include "System/SysNew.hpp"
 
-class PlayerLinkBase : public SysObject {
+class PlayerBase : public SysObject {
     /* 00 (vtable) */
     /* 04 */ void *mUnk_04;
     /* 08 */ s16 mUnk_08;

@@ -75,7 +75,7 @@ public:
     void func_ov00_020a8508();
     void func_ov00_020a853c(Vec3p *param1);
     void Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5);
-    void PlayerLinkBase_vfunc_38(Vec3p *pos);
+    void PlayerBase_vfunc_38(Vec3p *pos);
     void PlayerLink_vfunc_74();
     void PlayerLink_vfunc_88();
     unk16 Get_PlayerLink_Unk48();

@@ -4,7 +4,7 @@
 #include "types.h"
 #include "lib/math.h"
 
-#include "Player/PlayerLinkBase.hpp"
+#include "Player/PlayerBase.hpp"
 #include "Player/MotionParams.hpp"
 
 #include "Actor/ActorManager.hpp"
@@ -17,7 +17,7 @@ enum PlayerCharacter_ {
     PlayerCharacter_Gongoron = 1,
 };
 
-class PlayerLink: public PlayerLinkBase {
+class PlayerLink: public PlayerBase {
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
     /* 20 */ Vec3p mVel;

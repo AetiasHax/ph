@@ -587,9 +587,9 @@ _ZN13LinkStateBase8TeleportEP5Vec3psibb: ; 0x020a85ac
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN13LinkStateBase8TeleportEP5Vec3psibb
 
-	.global _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
-	arm_func_start _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
-_ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p: ; 0x020a85e0
+	.global _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
+	arm_func_start _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
+_ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p: ; 0x020a85e0
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #8]
 	mov r2, #0
@@ -597,7 +597,7 @@ _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p: ; 0x020a85e0
 	ldr r3, [r3, #0x38]
 	blx r3
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN13LinkStateBase23PlayerLinkBase_vfunc_38EP5Vec3p
+	arm_func_end _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
 
 	.global _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
 	arm_func_start _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
