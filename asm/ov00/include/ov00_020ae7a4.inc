@@ -43,7 +43,7 @@
 .extern data_ov00_020eec9c
 .extern data_027e0e58
 .extern _ZN13LinkStateBase12OnStateLeaveEi
-.extern _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+.extern _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 .extern func_ov00_0207c444
 .extern _ZN13LinkStateBase18func_ov00_020a84bcEi
 .extern _ZN13LinkStateBase18func_ov00_020a8d40Ev
@@ -54,7 +54,7 @@
 .extern _ZN13LinkStateBase18func_ov00_020a8b80Ev
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase18func_ov00_020a8d40Ev
-.extern _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
+.extern _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 .extern _ZN13LinkStateBase19GetCurrentCharacterEv
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase19GetCurrentCharacterEv
@@ -317,7 +317,7 @@
 .extern func_0202ab78
 .extern _ZN13LinkStateBase18func_ov00_020a82acEv
 .extern _ZN13LinkStateBase18func_ov00_020a82acEv
-.extern _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+.extern _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 .extern _ZN13LinkStateBase12GetPlayerVelEv
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv

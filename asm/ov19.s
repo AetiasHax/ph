@@ -10011,7 +10011,7 @@ func_ov19_02175a2c: ; 0x02175a2c
 	addeq sp, sp, #0x10
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r4
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
 	tst r0, #8
 	beq _02175af8
 	ldrsh r0, [r4, #0x10]
@@ -10054,7 +10054,7 @@ _02175ad8:
 _02175ae8:
 	mov r0, r4
 	mov r1, #8
-	bl _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 	b _02175be8
 _02175af8:
 	ldrsh r5, [r4, #0x10]

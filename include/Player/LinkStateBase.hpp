@@ -6,7 +6,7 @@
 #include "lib/math.h"
 
 #include "System/SysNew.hpp"
-#include "Player/PlayerLink.hpp"
+#include "Player/PlayerLinkBase.hpp"
 #include "Player/PlayerControlData.hpp"
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
@@ -31,7 +31,7 @@ class LinkStateBase : public SysObject {
 public:
     /* 0 (vtable) */
     /* 4 */ unk32 mSubState;
-    /* 8 */ PlayerLink *mLink;
+    /* 8 */ PlayerLinkBase *mLink;
     /* c */
 
     /* 00 */ virtual void vfunc_00();
@@ -76,14 +76,14 @@ public:
     void func_ov00_020a853c(Vec3p *param1);
     void Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5);
     void PlayerBase_vfunc_38(Vec3p *pos);
-    void PlayerLink_vfunc_74();
-    void PlayerLink_vfunc_88();
-    unk16 Get_PlayerLink_Unk48();
+    void PlayerLinkBase_vfunc_74();
+    void PlayerLinkBase_vfunc_88();
+    unk16 Get_PlayerLinkBase_Unk48();
     bool func_ov00_020a8638(unk32 param1);
-    void Clear_PlayerLink_Unk48(u16 flags);
+    void Clear_PlayerLinkBase_Unk48(u16 flags);
     void func_ov00_020a8680(unk32 param1, unk16 param2, bool param3);
-    void PlayerLink_func_ov00_020bccc8();
-    bool PlayerLink_vfunc_58();
+    void PlayerLinkBase_func_ov00_020bccc8();
+    bool PlayerLinkBase_vfunc_58();
     bool func_ov00_020a8704(s16 *pAngle);
     bool func_ov00_020a8774(Vec3p *param1, s32 angle);
     void func_ov00_020a8844(Vec3p *param1, bool param2, bool param3);
@@ -98,8 +98,8 @@ public:
     void func_ov00_020a8b04(s32 param1, bool param2);
     void func_ov00_020a8b3c(s32 param1);
     bool func_ov00_020a8b80();
-    bool HasFlags_PlayerLink_Unk48(u16 flags);
-    unk8 Get_PlayerLink_Unk5e();
+    bool HasFlags_PlayerLinkBase_Unk48(u16 flags);
+    unk8 Get_PlayerLinkBase_Unk5e();
     unk32 Get_PlayerControlData_Unk004();
     PlayerCharacter GetCurrentCharacter();
     PlayerControlData* GetPlayerControlData();
@@ -116,7 +116,7 @@ public:
     Actor* GetGrabActor();
     ActorRef* GetGrabActorRef();
     unk32 Grab();
-    s32 Get_PlayerLink_Unk44();
+    s32 Get_PlayerLinkBase_Unk44();
     bool IsEquipBeingUsed(ItemFlag id);
     EquipItem* GetEquipItem(ItemFlag id);
     void* func_ov00_020a8d40();
@@ -125,7 +125,7 @@ public:
     s32 PlayerControlData_vfunc_14(s32 param1);
     unk32 Get_PlayerControlData_Unk100();
     unk32 Get_PlayerControlData_Unk120();
-    s32 Get_PlayerLink_Unk38();
+    s32 Get_PlayerLinkBase_Unk38();
     DebugHierarchy* GetDebugHierarchy0();
     DebugHierarchy* GetDebugHierarchy1();
 };

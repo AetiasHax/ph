@@ -616,7 +616,7 @@ _020ac6dc:
 	ldmleia sp!, {r4, r5, pc}
 _020ac70c:
 	mov r0, r4
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk38Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
 	ldr r0, [r0]
 	cmp r0, #0
 	addge sp, sp, #0x14
@@ -643,12 +643,12 @@ _020ac70c:
 	mov r0, r4
 	bhi _020ac788
 	mov r1, #1
-	bl _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
+	bl _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 _020ac788:
 	mov r1, #0
-	bl _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
+	bl _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0

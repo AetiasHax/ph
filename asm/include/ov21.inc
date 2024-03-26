@@ -295,7 +295,7 @@
 .extern func_ov00_0208b9cc
 .extern func_ov00_0207a1c8
 .extern _ZN13LinkStateBase18func_ov00_020a8a4cEii
-.extern _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
+.extern _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
 .extern func_ov05_02107c8c
 .extern _ZN13LinkStateBase12GetPlayerVelEv
 .extern _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev

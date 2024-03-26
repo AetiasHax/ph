@@ -353,7 +353,7 @@ _020aa684:
 	cmp r0, #0
 	mov r0, r4
 	beq _020aa6bc
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
 	mov r1, #0
 	str r1, [r0]
 	b _020aa6c4
@@ -382,7 +382,7 @@ _020aa704:
 	cmp r0, #0
 	beq _020aa720
 	mov r0, r4
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
 	mov r1, #1
 	str r1, [r0]
 _020aa720:
@@ -395,7 +395,7 @@ _020aa730:
 	cmp r0, #0
 	beq _020aa74c
 	mov r0, r4
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
 	mvn r1, #0
 	str r1, [r0]
 _020aa74c:
@@ -726,7 +726,7 @@ _ZN13LinkStateGrab8vfunc_20Ei: ; 0x020aabd8
 	mov r6, r1
 	mov r1, #2
 	mov r4, r0
-	bl _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020aac08
 	mov r0, r4

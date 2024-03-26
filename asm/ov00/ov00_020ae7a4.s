@@ -298,7 +298,7 @@ _020aeb54: ; jump table
 _020aeb7c:
 	mov r0, r4
 	mov r1, #1
-	bl _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 	ldr r0, _020aec0c ; =data_027e0e58
 	add r7, r4, #0x2c
 	ldr r5, [r0]
@@ -376,7 +376,7 @@ func_ov00_020aec10: ; 0x020aec10
 	bne _020aecc8
 	mov r0, r5
 	mov r1, #0x3f
-	bl _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020aecc8
 	ldr r0, _020aed88 ; =data_027e0618
@@ -4513,7 +4513,7 @@ _020b2144:
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	mov r0, r4
 	mov r1, #0x3f
-	bl _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, _020b2478 ; =data_027e0d0c

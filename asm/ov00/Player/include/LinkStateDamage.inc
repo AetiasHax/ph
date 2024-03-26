@@ -88,9 +88,9 @@
 .extern func_ov00_02097ff4
 .extern _ZN13LinkStateBase18func_ov00_020a8d40Ev
 .extern _ZN13LinkStateBase25GetCurrentCharacterHealthEv
-.extern _ZN13LinkStateBase20Get_PlayerLink_Unk38Ev
-.extern _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
-.extern _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
+.extern _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
+.extern _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
+.extern _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 .extern data_ov00_020eec9c
 .extern data_027e0e58
 .extern data_027e0618

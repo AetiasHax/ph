@@ -915,13 +915,13 @@
 .extern func_ov00_020a95ec
 .extern _ZN9SysObjectdlEPv
 .extern func_ov00_020aeef8
-.extern _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
+.extern _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
 .extern func_ov00_020b134c
 .extern _ZN13LinkStateBase18func_ov00_020a84bcEi
 .extern _ZN13LinkStateBase18func_ov00_020a8224Ei
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_ov00_020d7b20
-.extern _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+.extern _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_0202b308
 .extern _ZN13LinkStateBase12GetPlayerPosEv

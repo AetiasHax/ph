@@ -41132,7 +41132,7 @@ func_ov12_02134378: ; 0x02134378
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
-	bl _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
+	bl _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov12_02134378

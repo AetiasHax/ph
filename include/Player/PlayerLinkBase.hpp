@@ -17,7 +17,7 @@ enum PlayerCharacter_ {
     PlayerCharacter_Gongoron = 1,
 };
 
-class PlayerLink: public PlayerBase {
+class PlayerLinkBase: public PlayerBase {
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
     /* 20 */ Vec3p mVel;

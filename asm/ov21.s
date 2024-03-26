@@ -3816,7 +3816,7 @@ _0217067c: .word data_ov21_02171958
 func_ov21_02170680: ; 0x02170680
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
+	bl _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
 	tst r0, #4
 	beq _021706fc
 	ldrb r0, [r5, #0x28]

@@ -33,14 +33,14 @@ void LinkStateBase::func_ov00_020a8508() {}
 void LinkStateBase::func_ov00_020a853c(Vec3p *param1) {}
 void LinkStateBase::Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) {}
 void LinkStateBase::PlayerBase_vfunc_38(Vec3p *pos) {}
-void LinkStateBase::PlayerLink_vfunc_74() {}
-void LinkStateBase::PlayerLink_vfunc_88() {}
-unk16 LinkStateBase::Get_PlayerLink_Unk48() {}
+void LinkStateBase::PlayerLinkBase_vfunc_74() {}
+void LinkStateBase::PlayerLinkBase_vfunc_88() {}
+unk16 LinkStateBase::Get_PlayerLinkBase_Unk48() {}
 bool LinkStateBase::func_ov00_020a8638(unk32 param1) {}
-void LinkStateBase::Clear_PlayerLink_Unk48(u16 flags) {}
+void LinkStateBase::Clear_PlayerLinkBase_Unk48(u16 flags) {}
 void LinkStateBase::func_ov00_020a8680(unk32 param1, unk16 param2, bool param3) {}
-void LinkStateBase::PlayerLink_func_ov00_020bccc8() {}
-bool LinkStateBase::PlayerLink_vfunc_58() {}
+void LinkStateBase::PlayerLinkBase_func_ov00_020bccc8() {}
+bool LinkStateBase::PlayerLinkBase_vfunc_58() {}
 bool LinkStateBase::func_ov00_020a8704(s16 *pAngle) {}
 bool LinkStateBase::func_ov00_020a8774(Vec3p *param1, s32 angle) {}
 void LinkStateBase::func_ov00_020a8844(Vec3p *param1, bool param2, bool param3) {}
@@ -55,8 +55,8 @@ void LinkStateBase::func_ov00_020a8ad0(unk32 param1) {}
 void LinkStateBase::func_ov00_020a8b04(s32 param1, bool param2) {}
 void LinkStateBase::func_ov00_020a8b3c(s32 param1) {}
 bool LinkStateBase::func_ov00_020a8b80() {}
-bool LinkStateBase::HasFlags_PlayerLink_Unk48(u16 flags) {}
-unk8 LinkStateBase::Get_PlayerLink_Unk5e() {}
+bool LinkStateBase::HasFlags_PlayerLinkBase_Unk48(u16 flags) {}
+unk8 LinkStateBase::Get_PlayerLinkBase_Unk5e() {}
 unk32 LinkStateBase::Get_PlayerControlData_Unk004() {}
 PlayerCharacter LinkStateBase::GetCurrentCharacter() {}
 PlayerControlData* LinkStateBase::GetPlayerControlData() {}
@@ -73,7 +73,7 @@ s32 LinkStateBase::Get_PlayerControlData_Unk32() {}
 Actor* LinkStateBase::GetGrabActor() {}
 ActorRef* LinkStateBase::GetGrabActorRef() {}
 unk32 LinkStateBase::Grab() {}
-s32 LinkStateBase::Get_PlayerLink_Unk44() {}
+s32 LinkStateBase::Get_PlayerLinkBase_Unk44() {}
 bool LinkStateBase::IsEquipBeingUsed(ItemFlag id) {}
 EquipItem* LinkStateBase::GetEquipItem(ItemFlag id) {}
 void* LinkStateBase::func_ov00_020a8d40() {}
@@ -82,7 +82,7 @@ unk32 LinkStateBase::func_ov00_020a8d6c() {}
 s32 LinkStateBase::PlayerControlData_vfunc_14(s32 param1) {}
 unk32 LinkStateBase::Get_PlayerControlData_Unk100() {}
 unk32 LinkStateBase::Get_PlayerControlData_Unk120() {}
-s32 LinkStateBase::Get_PlayerLink_Unk38() {}
+s32 LinkStateBase::Get_PlayerLinkBase_Unk38() {}
 DebugHierarchy* LinkStateBase::GetDebugHierarchy0() {}
 DebugHierarchy* LinkStateBase::GetDebugHierarchy1() {}
 

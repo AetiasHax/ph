@@ -80,7 +80,7 @@ _020a8050:
 	beq _020a807c
 	mov r0, r6
 	mov r1, #0x3f
-	bl _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
+	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020a807c
 	bl func_ov00_020aeeac
@@ -599,35 +599,35 @@ _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p: ; 0x020a85e0
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
 
-	.global _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
-	arm_func_start _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
-_ZN13LinkStateBase19PlayerLink_vfunc_74Ev: ; 0x020a85fc
+	.global _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
+	arm_func_start _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
+_ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev: ; 0x020a85fc
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #8]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x74]
 	blx r1
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN13LinkStateBase19PlayerLink_vfunc_74Ev
+	arm_func_end _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
 
-	.global _ZN13LinkStateBase19PlayerLink_vfunc_88Ev
-	arm_func_start _ZN13LinkStateBase19PlayerLink_vfunc_88Ev
-_ZN13LinkStateBase19PlayerLink_vfunc_88Ev: ; 0x020a8614
+	.global _ZN13LinkStateBase23PlayerLinkBase_vfunc_88Ev
+	arm_func_start _ZN13LinkStateBase23PlayerLinkBase_vfunc_88Ev
+_ZN13LinkStateBase23PlayerLinkBase_vfunc_88Ev: ; 0x020a8614
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #8]
 	ldr r2, [r0]
 	ldr r2, [r2, #0x88]
 	blx r2
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN13LinkStateBase19PlayerLink_vfunc_88Ev
+	arm_func_end _ZN13LinkStateBase23PlayerLinkBase_vfunc_88Ev
 
-	.global _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
-	arm_func_start _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
-_ZN13LinkStateBase20Get_PlayerLink_Unk48Ev: ; 0x020a862c
+	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
+	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
+_ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev: ; 0x020a862c
 	ldr r0, [r0, #8]
 	ldrh r0, [r0, #0x48]
 	bx lr
-	arm_func_end _ZN13LinkStateBase20Get_PlayerLink_Unk48Ev
+	arm_func_end _ZN13LinkStateBase24Get_PlayerLinkBase_Unk48Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a8638Ei
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8638Ei
@@ -646,16 +646,16 @@ _ZN13LinkStateBase18func_ov00_020a8638Ei: ; 0x020a8638
 	ldmia sp!, {pc}
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8638Ei
 
-	.global _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
-	arm_func_start _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
-_ZN13LinkStateBase22Clear_PlayerLink_Unk48Et: ; 0x020a8668
+	.global _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
+	arm_func_start _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
+_ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et: ; 0x020a8668
 	ldr r2, [r0, #8]
 	mvn r0, r1
 	ldrh r1, [r2, #0x48]
 	and r0, r1, r0
 	strh r0, [r2, #0x48]
 	bx lr
-	arm_func_end _ZN13LinkStateBase22Clear_PlayerLink_Unk48Et
+	arm_func_end _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
 
 	.global _ZN13LinkStateBase18func_ov00_020a8680Eisb
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8680Eisb
@@ -687,26 +687,26 @@ _020a86bc:
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8680Eisb
 _020a86d8: .word data_027e0fd4
 
-	.global _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
-	arm_func_start _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
-_ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev: ; 0x020a86dc
+	.global _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
+	arm_func_start _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
+_ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev: ; 0x020a86dc
 	ldr ip, _020a86e8 ; =func_ov00_020bccc8
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase29PlayerLink_func_ov00_020bccc8Ev
+	arm_func_end _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 _020a86e8: .word func_ov00_020bccc8
 
-	.global _ZN13LinkStateBase19PlayerLink_vfunc_58Ev
-	arm_func_start _ZN13LinkStateBase19PlayerLink_vfunc_58Ev
-_ZN13LinkStateBase19PlayerLink_vfunc_58Ev: ; 0x020a86ec
+	.global _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
+	arm_func_start _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
+_ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev: ; 0x020a86ec
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #8]
 	ldr r3, [r0]
 	ldr r3, [r3, #0x58]
 	blx r3
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN13LinkStateBase19PlayerLink_vfunc_58Ev
+	arm_func_end _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a8704EPs
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8704EPs
@@ -1090,24 +1090,24 @@ _ZN13LinkStateBase18func_ov00_020a8b80Ev: ; 0x020a8b80
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b80Ev
 _020a8b9c: .word data_027e0fd4
 
-	.global _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
-	arm_func_start _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
-_ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et: ; 0x020a8ba0
+	.global _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
+	arm_func_start _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
+_ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et: ; 0x020a8ba0
 	ldr r0, [r0, #8]
 	ldrh r0, [r0, #0x48]
 	tst r0, r1
 	movne r0, #1
 	moveq r0, #0
 	bx lr
-	arm_func_end _ZN13LinkStateBase25HasFlags_PlayerLink_Unk48Et
+	arm_func_end _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 
-	.global _ZN13LinkStateBase20Get_PlayerLink_Unk5eEv
-	arm_func_start _ZN13LinkStateBase20Get_PlayerLink_Unk5eEv
-_ZN13LinkStateBase20Get_PlayerLink_Unk5eEv: ; 0x020a8bb8
+	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk5eEv
+	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk5eEv
+_ZN13LinkStateBase24Get_PlayerLinkBase_Unk5eEv: ; 0x020a8bb8
 	ldr r0, [r0, #8]
 	ldrb r0, [r0, #0x5e]
 	bx lr
-	arm_func_end _ZN13LinkStateBase20Get_PlayerLink_Unk5eEv
+	arm_func_end _ZN13LinkStateBase24Get_PlayerLinkBase_Unk5eEv
 
 	.global _ZN13LinkStateBase28Get_PlayerControlData_Unk004Ev
 	arm_func_start _ZN13LinkStateBase28Get_PlayerControlData_Unk004Ev
@@ -1273,13 +1273,13 @@ _ZN13LinkStateBase4GrabEv: ; 0x020a8cd0
 	arm_func_end _ZN13LinkStateBase4GrabEv
 _020a8cdc: .word func_ov00_020bc71c
 
-	.global _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
-	arm_func_start _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
-_ZN13LinkStateBase20Get_PlayerLink_Unk44Ev: ; 0x020a8ce0
+	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
+	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
+_ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev: ; 0x020a8ce0
 	ldr r0, [r0, #8]
 	add r0, r0, #0x44
 	bx lr
-	arm_func_end _ZN13LinkStateBase20Get_PlayerLink_Unk44Ev
+	arm_func_end _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
 
 	.global _ZN13LinkStateBase16IsEquipBeingUsedEi
 	arm_func_start _ZN13LinkStateBase16IsEquipBeingUsedEi
@@ -1391,13 +1391,13 @@ _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev: ; 0x020a8dcc
 	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 _020a8ddc: .word data_027e0fcc
 
-	.global _ZN13LinkStateBase20Get_PlayerLink_Unk38Ev
-	arm_func_start _ZN13LinkStateBase20Get_PlayerLink_Unk38Ev
-_ZN13LinkStateBase20Get_PlayerLink_Unk38Ev: ; 0x020a8de0
+	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
+	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
+_ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev: ; 0x020a8de0
 	ldr r0, [r0, #8]
 	add r0, r0, #0x38
 	bx lr
-	arm_func_end _ZN13LinkStateBase20Get_PlayerLink_Unk38Ev
+	arm_func_end _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
 
 	.global _ZN13LinkStateBase18GetDebugHierarchy0Ev
 	arm_func_start _ZN13LinkStateBase18GetDebugHierarchy0Ev
