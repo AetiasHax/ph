@@ -12,8 +12,8 @@ class PlayerBase : public SysObject {
     /* 0a */ s16 mHealth;
     /* 0c */ unk8 mUnk_0c[2];
     /* 0e */ unk16 mUnk_0e;
-    /* 10 */ unk8 mUnk_10;
-    /* 11 */ bool mUnk_11;
+    /* 10 */ bool mUpdatePos;
+    /* 11 */ bool mVisible;
     /* 12 */ bool mUnk_12;
     /* 13 */
 };
