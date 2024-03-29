@@ -21,4 +21,5 @@ translations. Feel free to contribute to this list!
 `ARRW` | Arrow
 `AMOS` | Armos
 `CHUC` | Chuchu
+`BMOS` | Beamos
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
