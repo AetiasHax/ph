@@ -21533,7 +21533,7 @@ _0210b20c: .word data_027e0f90
 func_ov04_0210b210: ; 0x0210b210
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0210b250 ; =data_ov00_020e55d8
+	ldr r0, _0210b250 ; =_ZTV10PlayerBase
 	mov r1, #0
 	str r0, [r4]
 	strh r1, [r4, #8]
@@ -21563,7 +21563,7 @@ _0210b23c:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_0210b210
-_0210b250: .word data_ov00_020e55d8
+_0210b250: .word _ZTV10PlayerBase
 _0210b254: .word data_027e0ce0
 
 	.global func_ov04_0210b258
@@ -21571,7 +21571,7 @@ _0210b254: .word data_027e0ce0
 func_ov04_0210b258: ; 0x0210b258
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0210b27c ; =data_ov00_020e55d8
+	ldr r0, _0210b27c ; =_ZTV10PlayerBase
 	str r0, [r4]
 	ldr r5, [r4, #4]
 	cmp r5, #0
@@ -21589,14 +21589,14 @@ _0210b278:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_0210b258
-_0210b27c: .word data_ov00_020e55d8
+_0210b27c: .word _ZTV10PlayerBase
 
 	.global func_ov04_0210b280
 	thumb_func_start func_ov04_0210b280
 func_ov04_0210b280: ; 0x0210b280
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0210b2ac ; =data_ov00_020e55d8
+	ldr r0, _0210b2ac ; =_ZTV10PlayerBase
 	str r0, [r4]
 	ldr r5, [r4, #4]
 	cmp r5, #0
@@ -21616,14 +21616,14 @@ _0210b2a0:
 	pop {r3, r4, r5, pc}
 	nop
 	thumb_func_end func_ov04_0210b280
-_0210b2ac: .word data_ov00_020e55d8
+_0210b2ac: .word _ZTV10PlayerBase
 
 	.global func_ov04_0210b2b0
 	thumb_func_start func_ov04_0210b2b0
 func_ov04_0210b2b0: ; 0x0210b2b0
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0210b2d4 ; =data_ov00_020e55d8
+	ldr r0, _0210b2d4 ; =_ZTV10PlayerBase
 	str r0, [r4]
 	ldr r5, [r4, #4]
 	cmp r5, #0
@@ -21641,7 +21641,7 @@ _0210b2d0:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_0210b2b0
-_0210b2d4: .word data_ov00_020e55d8
+_0210b2d4: .word _ZTV10PlayerBase
 
 	.global func_ov04_0210b2d8
 	thumb_func_start func_ov04_0210b2d8
