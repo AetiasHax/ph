@@ -249,7 +249,7 @@
 .extern func_ov00_020a61ac
 .extern func_01ff9bc4
 .extern func_01ff9bf8
-.extern func_ov00_020a7c60
+.extern _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 .extern data_02050f54
 .extern data_027e0f90
 .extern data_ov29_0217bd28
@@ -264,7 +264,7 @@
 .extern data_027e0c68
 .extern data_027e0e60
 .extern func_ov00_020c2974
-.extern func_ov00_020a7ce4
+.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern func_ov00_020bf008
 .extern func_ov00_020ceacc
 .extern func_ov00_020c71fc
@@ -578,7 +578,7 @@
 .extern data_02050f54
 .extern func_01ff9bf8
 .extern func_01ff9bc4
-.extern func_ov00_020a7cfc
+.extern _ZN10PlayerBase18EquipItem_vfunc_2cEv
 .extern func_ov09_02113698
 .extern data_027e0f90
 .extern data_ov29_0217a4ac
@@ -745,7 +745,7 @@
 .extern func_0202e310
 .extern func_01ff9bf8
 .extern func_01ffa0f4
-.extern func_ov00_020a7ce4
+.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern func_ov00_020c070c
 .extern func_ov00_020c1ef8
 .extern func_ov00_020ceacc

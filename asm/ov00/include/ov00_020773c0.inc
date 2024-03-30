@@ -1997,7 +1997,7 @@
 .extern func_ov00_0208949c
 .extern func_ov00_02089318
 .extern func_ov00_02089168
-.extern func_ov00_020a7b08
+.extern _ZN10PlayerBase12SetUpdatePosEb
 .extern func_ov00_02087d98
 .extern func_ov00_0207b2f0
 .extern func_ov00_0207b334
@@ -2022,8 +2022,8 @@
 .extern data_027e0f64
 .extern func_ov00_020bcdec
 .extern func_ov00_020bcdec
-.extern func_ov00_020a7b10
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern data_027e071c
 .extern data_027e0fc8
 .extern data_027e0f90
@@ -2032,8 +2032,8 @@
 .extern func_ov00_0207b334
 .extern data_027e0c68
 .extern data_027e0db0
-.extern func_ov00_020a7b10
-.extern func_ov00_020a7b08
+.extern _ZN10PlayerBase10SetVisibleEb
+.extern _ZN10PlayerBase12SetUpdatePosEb
 .extern func_ov00_02087d98
 .extern func_ov00_0207b334
 .extern func_ov00_020838e8

@@ -51,7 +51,7 @@
 .extern func_ov00_020c1d58
 .extern func_01ff9bf8
 .extern func_ov00_020c2a0c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern data_027e0f94
 .extern data_027e0f90
 .extern func_ov00_020c5f1c
@@ -155,10 +155,10 @@
 .extern func_ov00_020c288c
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_01ff9e64
-.extern func_ov00_020a7c60
+.extern _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 .extern func_ov00_020c2974
 .extern func_ov00_020c070c
-.extern func_ov00_020a7bac
+.extern _ZN10PlayerBase6LookAtEP5Vec3p
 .extern func_ov00_020c28ec
 .extern func_01ff9e64
 .extern func_01ff9bf8
@@ -259,7 +259,7 @@
 .extern func_ov00_020ceacc
 .extern func_ov00_020ceacc
 .extern func_ov00_020c2a0c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_01ff9bf8
 .extern func_02002c14
 .extern func_02002c14

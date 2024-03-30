@@ -972,7 +972,7 @@
 .extern func_ov00_020cb140
 .extern func_ov00_020c1d58
 .extern func_01ff9bf8
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern data_027e0f94
 .extern data_027e0f90
 .extern func_ov00_020c5d74

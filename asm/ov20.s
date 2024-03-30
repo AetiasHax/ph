@@ -936,7 +936,7 @@ _0216e3dc:
 	ldr r0, _0216e554 ; =data_027e0f90
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, r7
 	bl func_ov00_020c1b18
 	mov r0, #0x1f

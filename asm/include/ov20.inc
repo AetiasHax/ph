@@ -52,7 +52,7 @@
 .extern func_ov00_020c5d74
 .extern func_ov00_020c5d74
 .extern func_ov00_020c5d74
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_020c1b18
 .extern func_ov00_020c5d74
 .extern func_ov00_02087d34

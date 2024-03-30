@@ -92,7 +92,7 @@
 .extern func_ov00_020c5d74
 .extern func_ov00_020bd070
 .extern func_ov00_020cc960
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_020c1b18
 .extern func_ov00_020c5d74
 .extern func_ov00_0207c31c
@@ -866,11 +866,11 @@
 .extern data_027e0ffc
 .extern func_ov00_020c2974
 .extern func_01ff9bf8
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern data_027e0f94
 .extern data_027e0f90
 .extern func_01ff9bf8
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020cca50
 .extern data_027e0f94
 .extern data_027e0f90

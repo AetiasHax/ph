@@ -7626,7 +7626,7 @@ func_ov35_02182720: ; 0x02182720
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r0, [r4, #0x168]
 	mov r1, #0x32000
 	add r0, r0, #0xc

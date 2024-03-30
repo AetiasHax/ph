@@ -1542,7 +1542,7 @@
 .extern func_ov00_020af538
 .extern func_ov00_020bc46c
 .extern func_ov00_020afb6c
-.extern func_ov00_020a7c00
+.extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern func_ov00_020bc71c
 .extern func_ov00_020bc46c
 .extern func_ov00_020b5360

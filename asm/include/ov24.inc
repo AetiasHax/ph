@@ -746,7 +746,7 @@
 .extern func_ov00_020c3180
 .extern func_ov00_020c3674
 .extern func_ov00_020c1e2c
-.extern func_ov00_020a7ce4
+.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern func_ov00_020bf008
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020c2238

@@ -16582,7 +16582,7 @@ func_ov00_020bbabc: ; 0x020bbabc
 	ldrb r0, [r0, #0x26]
 	cmp r0, #0
 	beq _020bbb10
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r0, [r0, #0x40]
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
@@ -16613,7 +16613,7 @@ func_ov00_020bbb18: ; 0x020bbb18
 	ldrb r0, [r0, #0x26]
 	cmp r0, #0
 	beq _020bbb5c
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r0, [r0, #0x40]
 	cmp r0, #5
 	cmpne r0, #6
@@ -16855,7 +16855,7 @@ _020bbdd8:
 	moveq r1, #0
 	cmp r1, #0
 	bne _020bbe44
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r0, [r0, #0x40]
 	cmp r0, #7
 	cmpne r0, #8
@@ -17839,7 +17839,7 @@ func_ov00_020bca4c: ; 0x020bca4c
 	add r4, r0, #0
 	add r2, r1, #0
 	ldrh r1, [r4, #0xe]
-	blx func_ov00_020a7df4
+	blx _ZN10PlayerBase8TeleportEP5Vec3psibb
 	cmp r0, #0
 	beq _020bca86
 	add r0, r4, #0
@@ -17875,7 +17875,7 @@ _020bca90: .word data_027e0d3c
 func_ov00_020bca94: ; 0x020bca94
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020a7df4
+	bl _ZN10PlayerBase8TeleportEP5Vec3psibb
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
@@ -17886,7 +17886,7 @@ func_ov00_020bca94: ; 0x020bca94
 	mov r1, #1
 	strb r3, [r4, #0x5c]
 	strh r2, [r4, #0x48]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -17906,7 +17906,7 @@ func_ov00_020bcad8: ; 0x020bcad8
 	mov r5, r2
 	mov r4, r3
 	str ip, [sp, #4]
-	bl func_ov00_020a7e70
+	bl _ZN10PlayerBase18TeleportToEntranceEib
 	cmp r0, #0
 	beq _020bcc08
 	ldr r0, _020bcc14 ; =data_027e0d38
@@ -18010,7 +18010,7 @@ func_ov00_020bcc2c: ; 0x020bcc2c
 	ldrsh r2, [r2, #0x5a]
 	cmp r2, #4
 	bne _020bcc60
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	ldmia sp!, {r3, pc}
 _020bcc60:
 	mov r0, #0
@@ -18611,7 +18611,7 @@ func_ov00_020bd364: ; 0x020bd364
 	ldr r2, [r1, #0xc]
 	ldr r1, _020bd3ac ; =data_027e0f94
 	blx func_ov00_020b4c4c
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	mov r1, #0
 	strb r1, [r0, #0xb]
 	ldmia sp!, {r3, pc}
@@ -24742,7 +24742,7 @@ _020c1e9c:
 	ldr r0, _020c1ef4 ; =data_027e0f90
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -24776,7 +24776,7 @@ func_ov00_020c1ef8: ; 0x020c1ef8
 	ldr r0, _020c1f58 ; =data_027e0f90
 	mov r1, r6
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -24809,7 +24809,7 @@ func_ov00_020c1f5c: ; 0x020c1f5c
 	ldr r0, [r0]
 	mov r2, r5
 	mov r3, r4
-	bl func_ov00_020a7c60
+	bl _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -24860,7 +24860,7 @@ func_ov00_020c1fc8: ; 0x020c1fc8
 	strb r2, [sp, #0x48]
 	str r1, [sp, #0x58]
 	str r2, [sp, #0x5c]
-	bl func_ov00_020a7cfc
+	bl _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	mov r1, r5
 	ldr r5, [sp, #0x60]
 	ldr r3, [sp, #0x64]
@@ -24925,7 +24925,7 @@ _020c2110:
 	strb r2, [sp, #0x18]
 	str r1, [sp, #0x28]
 	str r2, [sp, #0x2c]
-	bl func_ov00_020a7cfc
+	bl _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	ldr lr, [sp, #0x60]
 	ldr ip, [sp, #0x64]
 	ldr r3, [sp, #0x68]
@@ -25016,7 +25016,7 @@ func_ov00_020c2238: ; 0x020c2238
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0xc
 	movne r0, #1
@@ -25049,7 +25049,7 @@ func_ov00_020c22b8: ; 0x020c22b8
 	ldr r0, _020c23bc ; =data_027e0f90
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1
@@ -25061,7 +25061,7 @@ _020c2308:
 	add r1, sp, #0
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1
@@ -25095,7 +25095,7 @@ _020c2384:
 	add r1, sp, #0
 	ldr r0, [r0]
 	mov r2, #8
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1
@@ -36837,7 +36837,7 @@ _020cb6fc:
 	strb r0, [sp, #4]
 	strb r0, [sp, #0x14]
 	strb r0, [sp, #0x15]
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	mov r1, #0xf6
 	mov r2, #0
 	bl func_ov00_020bf008
@@ -37372,14 +37372,14 @@ _020cbdfc:
 	ldrb r0, [r4, #0x15]
 	cmp r0, #0
 	beq _020cbe20
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	add r2, r5, #0x48
 	mov r1, #0x18c
 	mov r3, #0
 	bl func_ov00_020c070c
 	b _020cbec0
 _020cbe20:
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	add r2, r5, #0x48
 	mvn r1, #0
 	mov r3, #0
@@ -37389,14 +37389,14 @@ _020cbe38:
 	ldrb r0, [r4, #0x15]
 	cmp r0, #0
 	beq _020cbe5c
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	add r2, r5, #0x48
 	mov r1, #0x18c
 	mov r3, #0
 	bl func_ov00_020c070c
 	b _020cbec0
 _020cbe5c:
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	add r2, r5, #0x48
 	mvn r1, #0
 	mov r3, #0
@@ -60302,7 +60302,7 @@ data_ov00_020e6c88: ; 0x020e6c88
     .word func_ov00_020bb44c - 1
 	.global data_ov00_020e6c8c
 data_ov00_020e6c8c: ; 0x020e6c8c
-    .word func_ov00_020a7af0
+    .word _ZN10PlayerBase8vfunc_04Ev
 	.global data_ov00_020e6c90
 data_ov00_020e6c90: ; 0x020e6c90
     .word func_ov00_020bc6d4 - 1
@@ -60347,7 +60347,7 @@ data_ov00_020e6cc4: ; 0x020e6cc4
     .word func_ov00_020bca4c
 	.global data_ov00_020e6cc8
 data_ov00_020e6cc8: ; 0x020e6cc8
-    .word func_ov00_020a7d8c
+    .word _ZN10PlayerBase9AddHealthEs
 	.global data_ov00_020e6ccc
 data_ov00_020e6ccc: ; 0x020e6ccc
 	.byte 0x00, 0x00, 0x00, 0x00

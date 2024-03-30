@@ -489,7 +489,7 @@
 .extern data_027e0e60
 .extern func_ov00_020c3674
 .extern func_ov05_0210e4e4
-.extern func_ov00_020a7c00
+.extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern _ZNK11ItemManager8GetFairyEi
 .extern func_ov00_020b510c
 .extern func_ov00_020b50f8
@@ -526,7 +526,7 @@
 .extern func_ov00_020bccc8
 .extern func_ov00_020bbb64
 .extern func_ov00_020bcdb8
-.extern func_ov00_020a7c00
+.extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern func_ov00_020bbbd0
 .extern func_ov00_02097738
 .extern func_ov00_020d7b60
@@ -2268,7 +2268,7 @@
 .extern data_ov00_020eec9c
 .extern func_ov00_020c5e20
 .extern func_ov00_020c2a0c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020833f4
 .extern func_ov00_02083400
 .extern data_027e0f90
@@ -2630,7 +2630,7 @@
 .extern func_ov00_020bcad8
 .extern func_ov00_020bca94
 .extern func_ov00_020bca4c
-.extern func_ov00_020a7d8c
+.extern _ZN10PlayerBase9AddHealthEs
 .extern func_ov00_020bd5f0
 .extern func_ov00_020bc27c
 .extern func_ov00_020bc0a8

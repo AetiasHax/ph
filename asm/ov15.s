@@ -17385,7 +17385,7 @@ _0212dbf4:
 	ldr r0, _0212dd1c ; =data_027e0f90
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _0212dcf8
 _0212dcdc:
@@ -31478,7 +31478,7 @@ func_ov15_0213a184: ; 0x0213a184
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r2
-	bl func_ov00_020a7c00
+	bl _ZN10PlayerBase18func_ov00_020a7c00Ei
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _0213a454 ; =gItemManager
@@ -31706,7 +31706,7 @@ _0213a4b0:
 	mov r2, r6
 	mov r3, r5
 	str ip, [sp, #4]
-	bl func_ov00_020a7e70
+	bl _ZN10PlayerBase18TeleportToEntranceEib
 	cmp r0, #0
 	addeq sp, sp, #8
 	moveq r0, #0
@@ -97265,7 +97265,7 @@ func_ov15_021724d0: ; 0x021724d0
 	ldr r0, _021725c4 ; =data_027e0f90
 	add r1, sp, #0x1c
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x2c
 	ldmeqia sp!, {r3, r4, pc}
@@ -131913,13 +131913,13 @@ data_ov15_0218aaac: ; 0x0218aaac
     .word func_ov15_0213a604
 	.global data_ov15_0218aab0
 data_ov15_0218aab0: ; 0x0218aab0
-    .word func_ov00_020a7af0
+    .word _ZN10PlayerBase8vfunc_04Ev
 	.global data_ov15_0218aab4
 data_ov15_0218aab4: ; 0x0218aab4
-    .word func_ov00_020a7af8
+    .word _ZN10PlayerBase10GetEquipIdEv
 	.global data_ov15_0218aab8
 data_ov15_0218aab8: ; 0x0218aab8
-    .word func_ov00_020a7b00
+    .word _ZN10PlayerBase7CanMoveEv
 	.global data_ov15_0218aabc
 data_ov15_0218aabc: ; 0x0218aabc
     .word func_ov15_02139ef4
@@ -131952,13 +131952,13 @@ data_ov15_0218aae0: ; 0x0218aae0
     .word func_ov15_0213a480
 	.global data_ov15_0218aae4
 data_ov15_0218aae4: ; 0x0218aae4
-    .word func_ov00_020a7df4
+    .word _ZN10PlayerBase8TeleportEP5Vec3psibb
 	.global data_ov15_0218aae8
 data_ov15_0218aae8: ; 0x0218aae8
     .word func_ov15_0213a618
 	.global data_ov15_0218aaec
 data_ov15_0218aaec: ; 0x0218aaec
-    .word func_ov00_020a7d8c
+    .word _ZN10PlayerBase9AddHealthEs
 	.global data_ov15_0218aaf0
 data_ov15_0218aaf0: ; 0x0218aaf0
     .word func_ov15_021412b0

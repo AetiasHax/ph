@@ -709,7 +709,7 @@
 .extern data_02050f54
 .extern data_027e0e58
 .extern func_ov00_020c1d58
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern data_027e0f90
 .extern data_027e0fc8
 .extern data_02050f54

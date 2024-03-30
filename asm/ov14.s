@@ -11281,7 +11281,7 @@ _02128938:
 	ldr r0, _021289a0 ; =data_027e0f90
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, r7
 	mov r1, r6
 	bl func_ov14_02126b04
@@ -11347,7 +11347,7 @@ _02128a18:
 	ldr r0, _02128d70 ; =data_027e0f90
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	b _02128d64
 _02128a2c:
 	ldr r0, _02128d74 ; =data_027e0f74
@@ -18775,7 +18775,7 @@ _0212e97c:
 	ldr r0, _0212eb3c ; =data_027e0f90
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r0, _0212eb40 ; =data_027e0fe4
 	mov r1, #0
 	ldr r0, [r0]
@@ -18824,7 +18824,7 @@ _0212eacc:
 	ldr r0, _0212eb3c ; =data_027e0f90
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r0, _0212eb40 ; =data_027e0fe4
 	mov r2, #1
 	ldr r1, [r0]
@@ -39555,7 +39555,7 @@ func_ov14_0213f104: ; 0x0213f104
 	mov r4, r0
 	mov r7, r1
 	mov r6, r2
-	bl func_ov00_020a7c00
+	bl _ZN10PlayerBase18func_ov00_020a7c00Ei
 	movs r5, r0
 	beq _0213f170
 	ldr r0, _0213f318 ; =gItemManager
@@ -39873,7 +39873,7 @@ _0213f4f2:
 	blx func_ov05_02103ff0
 	add r0, r5, #0
 	mov r1, #0x20
-	blx func_ov00_020a7d34
+	blx _ZN10PlayerBase9SetHealthEs
 	cmp r4, #0
 	bne _0213f510
 	add r0, r5, #0
@@ -39977,7 +39977,7 @@ func_ov14_0213f5a8: ; 0x0213f5a8
 func_ov14_0213f5dc: ; 0x0213f5dc
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020a7d8c
+	bl _ZN10PlayerBase9AddHealthEs
 	ldr r0, _0213f5fc ; =data_027e0fbc
 	ldrsh r1, [r4, #0xa]
 	ldr r0, [r0]

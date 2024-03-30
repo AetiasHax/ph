@@ -3454,7 +3454,7 @@ _021703a4:
 	ldr r0, _02170560 ; =data_027e0f90
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, r4
 	bl func_ov00_020c1b18
 	mov r0, #0
@@ -9179,7 +9179,7 @@ _02174f38:
 	ldr r0, _0217558c ; =data_027e0f90
 	add r1, sp, #0x38
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _02174fa8
 	mov r0, r4

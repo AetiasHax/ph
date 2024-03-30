@@ -2,7 +2,7 @@
 .extern _ZN13LinkStateBase18GetDebugHierarchy0Ev
 .extern _ZN13LinkStateBase12GetEquipItemEi
 .extern _ZN13LinkStateBase12GetEquipItemEi
-.extern func_ov00_020a7b8c
+.extern _ZN10PlayerBase13GetEquipSwordEv
 .extern func_ov00_020c06b0
 .extern func_ov00_020d77e4
 .extern data_ov00_020eec9c
@@ -33,7 +33,7 @@
 .extern func_ov00_02083c7c
 .extern data_027e0fb8
 .extern data_027e0e60
-.extern func_ov00_020a7b8c
+.extern _ZN10PlayerBase13GetEquipSwordEv
 .extern data_027e0d78
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectdlEPv
@@ -266,7 +266,7 @@
 .extern func_ov00_020c2a0c
 .extern func_01ff9cec
 .extern func_ov00_020af044
-.extern func_ov00_020a7b8c
+.extern _ZN10PlayerBase13GetEquipSwordEv
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase19GetCurrentCharacterEv
 .extern func_ov23_02171410
@@ -322,7 +322,7 @@
 .extern func_ov00_020c3180
 .extern func_ov00_020aeffc
 .extern data_027e0fb8
-.extern func_ov00_020a7b8c
+.extern _ZN10PlayerBase13GetEquipSwordEv
 .extern func_ov00_020c2a0c
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_01ff9bf8

@@ -8530,7 +8530,7 @@ _02119ac4:
 	bl func_ov05_0210e4e4
 	mov r0, r6
 	mov r1, r5
-	bl func_ov00_020a7c00
+	bl _ZN10PlayerBase18func_ov00_020a7c00Ei
 	cmp r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, _02119dc4 ; =gItemManager
@@ -8800,7 +8800,7 @@ _02119e90:
 	moveq r2, #0
 	mov r0, r6
 	strb r2, [r6, #0x74]
-	bl func_ov00_020a7c00
+	bl _ZN10PlayerBase18func_ov00_020a7c00Ei
 	cmp r0, #0
 	beq _0211a378
 	cmp r4, #0
@@ -38118,7 +38118,7 @@ _02131c18:
 	ldr r0, _02131d74 ; =data_027e0f90
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	bne _02131c88
 	ldr r0, [r4, #0x748]
@@ -46212,7 +46212,7 @@ data_ov12_02135db4: ; 0x02135db4
     .word func_ov00_020bca4c
 	.global data_ov12_02135db8
 data_ov12_02135db8: ; 0x02135db8
-    .word func_ov00_020a7d8c
+    .word _ZN10PlayerBase9AddHealthEs
 	.global data_ov12_02135dbc
 data_ov12_02135dbc: ; 0x02135dbc
     .word func_ov12_0211933c

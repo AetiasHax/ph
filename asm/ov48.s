@@ -782,7 +782,7 @@ func_ov48_021908ac: ; 0x021908ac
 	ldr r0, [r0]
 	add r1, sp, #0
 	str r2, [sp, #0xc]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -2077,7 +2077,7 @@ _021918a4:
 	ldr r0, [r0]
 	add r1, sp, #0x44
 	add r2, sp, #0x38
-	bl func_ov00_020a7c60
+	bl _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	cmp r0, #0
 	beq _02191964
 	ldr r1, _02191c3c ; =data_027e0fac
@@ -2096,7 +2096,7 @@ _021918a4:
 	ldr r0, _02191c38 ; =data_027e0f90
 	add r1, r4, #0x48
 	ldr r0, [r0]
-	bl func_ov00_020a7bac
+	bl _ZN10PlayerBase6LookAtEP5Vec3p
 	mov r0, r4
 	bl func_ov00_020c28ec
 	sub r0, r0, #0x800
@@ -3568,7 +3568,7 @@ _02192b5c:
 	bl func_ov00_020c2a0c
 	ldr r0, [sl]
 	mov r1, r4
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _02192bc4
 	add r0, sp, #0x6c

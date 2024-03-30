@@ -360,7 +360,7 @@
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern func_ov00_020c2238
 .extern func_ov00_020c070c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020c3180
 .extern func_ov00_0207a1c8
 .extern data_027e0f94

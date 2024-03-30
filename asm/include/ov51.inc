@@ -89,7 +89,7 @@
 .extern func_ov00_0207c474
 .extern func_01ff9bf8
 .extern func_ov00_020c1ef8
-.extern func_ov00_020a7ce4
+.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern func_ov00_020b7e6c
 .extern func_ov00_020cec60
 .extern data_027e0e58

@@ -3072,7 +3072,7 @@ _0217e6dc:
 	mov r1, r5
 	mov r2, r6
 	mov r3, r8
-	bl func_ov00_020a7c60
+	bl _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	cmp r0, #0
 	movne sl, #1
 	cmp sl, #0
@@ -3513,7 +3513,7 @@ _0217ecdc:
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp, #0xc]
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	beq _0217edd8
 	ldr r0, [r4, #0x158]
@@ -8421,7 +8421,7 @@ func_ov39_021831d8: ; 0x021831d8
 	add r1, r1, #1
 	str r1, [r4, #0x174]
 	ldr r0, [r0]
-	bl func_ov00_020a7cfc
+	bl _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	add r1, r4, #0x100
 	ldrsh r2, [r1, #0x20]
 	add r0, r2, r0
@@ -11551,7 +11551,7 @@ func_ov39_02185c3c: ; 0x02185c3c
 	add r1, sp, #0x28
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	beq _02185d1c
 	bl func_ov39_02185ea8

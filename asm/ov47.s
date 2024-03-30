@@ -4816,7 +4816,7 @@ _02194028:
 	ldr r0, _0219410c ; =data_027e0f90
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _0219407c
 	ldr r0, _0219410c ; =data_027e0f90

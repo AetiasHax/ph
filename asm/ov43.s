@@ -1344,7 +1344,7 @@ func_ov43_0218a674: ; 0x0218a674
 	str sb, [sp, #0x1c]
 	add r2, sb, r3
 	str r2, [r1, #8]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _0218a7ac
 	ldr r0, _0218a858 ; =data_027e0fac

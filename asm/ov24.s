@@ -9726,7 +9726,7 @@ _021754f4:
 	ldr r0, [r0]
 	add r1, r3, #0x400
 	mov r2, #0
-	bl func_ov00_020a7ce4
+	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 	cmp r0, #0
 	beq _02175624
 	bl func_ov24_02170468

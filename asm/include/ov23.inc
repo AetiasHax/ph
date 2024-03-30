@@ -581,7 +581,7 @@
 .extern func_ov00_020cd52c
 .extern func_ov00_020cd62c
 .extern func_ov00_020c28ec
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020cca50
 .extern data_027e0f90
 .extern func_ov00_020c38fc
@@ -595,7 +595,7 @@
 .extern func_ov14_0212de74
 .extern data_027e0fe4
 .extern data_027e0e60
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020cca50
 .extern data_027e0f90
 .extern func_ov00_020c28ec

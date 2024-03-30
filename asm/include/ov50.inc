@@ -150,7 +150,7 @@
 .extern func_ov00_020c3674
 .extern data_027e0fe4
 .extern func_ov00_020c2a0c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020c37ec
 .extern data_027e0f90
 .extern data_027e0fe4

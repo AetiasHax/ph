@@ -1005,7 +1005,7 @@ _020aaff4:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020ab000:
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x14]
@@ -1600,7 +1600,7 @@ _ZN13LinkStateGrab18func_ov00_020ab7bcEP5Vec3pP5Actor: ; 0x020ab7bc
 	beq _020ab818
 	b _020ab8c0
 _020ab7fc:
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x14]

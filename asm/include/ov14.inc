@@ -824,7 +824,7 @@
 .extern func_0202b154
 .extern func_ov00_02097bcc
 .extern func_ov00_02097bcc
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern data_027e1048
 .extern data_ov03_02100634
 .extern data_027e0d78
@@ -834,7 +834,7 @@
 .extern data_027e0f74
 .extern data_02050f54
 .extern data_027e0f90
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_02097bcc
 .extern func_ov00_020ce8e4
 .extern func_ov00_0209a4f4
@@ -1412,14 +1412,14 @@
 .extern func_ov00_02087d34
 .extern func_ov00_02098074
 .extern func_ov00_020888e8
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_0202e740
 .extern func_020370d0
 .extern func_0202e740
 .extern func_ov00_02098074
 .extern func_ov00_0208ba08
 .extern func_0202e740
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_0208b180
 .extern func_ov00_020875f8
 .extern data_027e077c
@@ -2930,7 +2930,7 @@
 .extern func_ov00_020bd5fc
 .extern data_027e0fb8
 .extern data_ov00_020e5684
-.extern func_ov00_020a7c00
+.extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern _ZN11ItemManager13TickEquipItemEv
 .extern func_ov23_02178058
 .extern func_ov23_02178174
@@ -2987,7 +2987,7 @@
 .extern func_ov00_020bcdb8
 .extern func_ov00_02097ff4
 .extern func_ov05_02103ff0
-.extern func_ov00_020a7d34
+.extern _ZN10PlayerBase9SetHealthEs
 .extern func_ov00_020bbbd0
 .extern _ZN11ItemManager9SetPotionEjj
 .extern _ZN11ItemManager17EquipPreviousItemEv
@@ -3004,7 +3004,7 @@
 .extern data_027e0f64
 .extern func_ov00_020bc46c
 .extern func_ov23_02178174
-.extern func_ov00_020a7d8c
+.extern _ZN10PlayerBase9AddHealthEs
 .extern data_027e0fbc
 .extern func_ov00_020af298
 .extern func_ov05_02110bb4

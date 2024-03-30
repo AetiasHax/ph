@@ -817,7 +817,7 @@ _0217c814:
 	ldr r0, _0217c918 ; =data_027e0f90
 	mov r1, r2
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, r4
 	bl func_ov00_020c1b18
 	ldr r1, [r4, #0x14]
@@ -13800,7 +13800,7 @@ func_ov37_02187c5c: ; 0x02187c5c
 	str lr, [sp, #0x14]
 	str r3, [sp, #0x10]
 	str r2, [sp, #0x18]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x28
 	moveq r0, #0
@@ -13841,7 +13841,7 @@ func_ov37_02187cec: ; 0x02187cec
 	str lr, [sp, #0x10]
 	str ip, [sp, #0x14]
 	str r2, [sp, #0x18]
-	bl func_ov00_020a7c1c
+	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _02187d78
 	mov r0, r4

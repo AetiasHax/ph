@@ -249,12 +249,12 @@ _020a81e8: .word func_01fffcd8
 	.global _ZN13LinkStateBase6LookAtEP5Vec3p
 	arm_func_start _ZN13LinkStateBase6LookAtEP5Vec3p
 _ZN13LinkStateBase6LookAtEP5Vec3p: ; 0x020a81ec
-	ldr ip, _020a81f8 ; =func_ov00_020a7bac
+	ldr ip, _020a81f8 ; =_ZN10PlayerBase6LookAtEP5Vec3p
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN13LinkStateBase6LookAtEP5Vec3p
-_020a81f8: .word func_ov00_020a7bac
+_020a81f8: .word _ZN10PlayerBase6LookAtEP5Vec3p
 
 	.global _ZN13LinkStateBase18func_ov00_020a81fcEv
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a81fcEv
@@ -501,9 +501,9 @@ _ZN13LinkStateBase18func_ov00_020a84bcEi: ; 0x020a84bc
 	moveq r0, #0
 	mov r0, r0, lsl #0x10
 	mov r4, r0, asr #0x10
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	strh r4, [r0, #0x5c]
-	bl func_ov00_020a7b9c
+	bl _ZN10PlayerBase14GetEquipShieldEv
 	ldr r1, _020a8504 ; =data_027e0e58
 	strh r4, [r0, #0xe]
 	ldr r0, [r1]

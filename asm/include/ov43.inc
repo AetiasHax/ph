@@ -110,7 +110,7 @@
 .extern func_ov00_020c5d74
 .extern func_ov00_020c5d74
 .extern data_027e0764
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020c070c
 .extern func_ov00_020c1ef8
 .extern func_ov00_020ceacc

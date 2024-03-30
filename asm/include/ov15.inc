@@ -1115,7 +1115,7 @@
 .extern func_01ff9bc4
 .extern func_ov00_020c2a0c
 .extern func_ov00_020c28d4
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_ov00_020c198c
 .extern data_027e10a4
 .extern data_02050f54
@@ -2266,7 +2266,7 @@
 .extern data_027e1094
 .extern data_027e0fac
 .extern data_027e0fac
-.extern func_ov00_020a7c00
+.extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern _ZN11ItemManager18func_ov00_020ad528Ev
 .extern func_ov05_02103f4c
 .extern func_ov00_02097738
@@ -2285,7 +2285,7 @@
 .extern data_027e0f94
 .extern data_027e0d78
 .extern data_027e0fac
-.extern func_ov00_020a7e70
+.extern _ZN10PlayerBase18TeleportToEntranceEib
 .extern data_027e0fac
 .extern func_ov00_02097738
 .extern func_ov00_02097750
@@ -6839,7 +6839,7 @@
 .extern data_02050f54
 .extern func_ov00_020c1d58
 .extern func_ov00_020c2a0c
-.extern func_ov00_020a7c1c
+.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern func_01ff9bf8
 .extern data_027e0f90
 .extern data_027e0f94
@@ -9053,9 +9053,9 @@
 .extern func_ov00_020c322c
 .extern func_ov00_020a9ab8
 .extern data_ov12_0213a604
-.extern func_ov00_020a7af0
-.extern func_ov00_020a7af8
-.extern func_ov00_020a7b00
+.extern _ZN10PlayerBase8vfunc_04Ev
+.extern _ZN10PlayerBase10GetEquipIdEv
+.extern _ZN10PlayerBase7CanMoveEv
 .extern data_ov12_02139ef4
 .extern data_ov12_02139f50
 .extern data_ov12_02139f7c
@@ -9064,9 +9064,9 @@
 .extern data_ov12_0213a184
 .extern data_ov12_02139170
 .extern data_ov12_0213a480
-.extern func_ov00_020a7df4
+.extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern data_ov12_0213a618
-.extern func_ov00_020a7d8c
+.extern _ZN10PlayerBase9AddHealthEs
 .extern data_ov12_02139ab4
 .extern data_ov12_02139cd0
 .extern data_ov12_02139a80

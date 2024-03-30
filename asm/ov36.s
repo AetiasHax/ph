@@ -6739,7 +6739,7 @@ _02181b40:
 	ldr r0, _02181ba0 ; =data_027e0f90
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r1, [r4, #0x6b4]
 	mov r2, #0
 	strb r2, [r1, #0x11a]
@@ -6950,7 +6950,7 @@ _02181e34:
 	ldr r0, _02181f38 ; =data_027e0f90
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r0, _02181f24 ; =data_027e0e58
 	mov r1, #1
 	ldr r0, [r0]
@@ -7234,7 +7234,7 @@ _02182270:
 	ldr r0, _0218294c ; =data_027e0f90
 	mov r1, #0
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r0, #1
 	strb r0, [r4, #0x8aa]
 	mov r0, #0
@@ -7643,7 +7643,7 @@ _0218287c:
 	ldr r0, _0218294c ; =data_027e0f90
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	mov r3, #0
 	mov r0, #0xff
 	add r2, sp, #0x2c
@@ -7911,7 +7911,7 @@ func_ov36_02182c88: ; 0x02182c88
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0
-	bl func_ov00_020a7b10
+	bl _ZN10PlayerBase10SetVisibleEb
 	ldr r0, [r4, #0x168]
 	ldr r0, [r0, #0x14]
 	cmp r0, #0xa8000

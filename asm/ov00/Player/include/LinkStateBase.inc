@@ -19,7 +19,7 @@
 .extern _ZN11ItemManager22UpdateSwordShieldInUseEv
 .extern func_ov05_02106980
 .extern func_01fffcd8
-.extern func_ov00_020a7bac
+.extern _ZN10PlayerBase6LookAtEP5Vec3p
 .extern func_ov00_020bb810
 .extern func_ov00_020bbbd0
 .extern func_0202b154
@@ -41,8 +41,8 @@
 .extern func_ov00_020c3674
 .extern data_027e0fe8
 .extern data_027e0fe4
-.extern func_ov00_020a7b8c
-.extern func_ov00_020a7b9c
+.extern _ZN10PlayerBase13GetEquipSwordEv
+.extern _ZN10PlayerBase14GetEquipShieldEv
 .extern func_ov00_0207c5d4
 .extern data_027e0e58
 .extern data_027e0fcc

@@ -469,7 +469,7 @@
 .extern func_ov00_02087d34
 .extern func_ov00_02097810
 .extern func_ov00_020bc46c
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_0207c5d4
 .extern func_ov00_0209a508
 .extern data_027e103c
@@ -500,7 +500,7 @@
 .extern func_ov00_0207c5d4
 .extern func_ov00_020c198c
 .extern func_ov00_02097760
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_0207c5d4
 .extern func_ov00_0209779c
 .extern func_ov00_02097bcc
@@ -525,7 +525,7 @@
 .extern func_ov00_02097810
 .extern func_ov00_0209a508
 .extern func_ov00_02097b9c
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_0202b308
 .extern Divide
 .extern Divide
@@ -556,7 +556,7 @@
 .extern func_ov00_020ceacc
 .extern func_0202e58c
 .extern func_ov00_02097bcc
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_02083918
 .extern func_ov00_02083948
 .extern func_ov00_0208726c
@@ -586,7 +586,7 @@
 .extern data_ov00_020eec68
 .extern data_027e0d0c
 .extern data_027e0f74
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_ov00_0207c1b0
 .extern func_ov00_02088000
 .extern func_ov00_020ceacc

@@ -16250,7 +16250,7 @@ func_ov05_0210e4e4: ; 0x0210e4e4
 _0210e52c:
 	mov r0, r6
 	mov r1, r5
-	bl func_ov00_020a7c00
+	bl _ZN10PlayerBase18func_ov00_020a7c00Ei
 	cmp r0, #0
 	beq _0210e838
 	ldr r0, _0210e87c ; =data_027e0fcc

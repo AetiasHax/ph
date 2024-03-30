@@ -78,7 +78,7 @@ func_ov00_020a8e58: ; 0x020a8e58
 	mov r1, #1
 	ldr r2, [r2, #0x28]
 	blx r2
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	mvn r1, #0
 	bl func_ov00_020c06b0
 	ldr r0, _020a8ec8 ; =data_ov00_020eec9c
@@ -406,7 +406,7 @@ func_ov00_020a9210: ; 0x020a9210
 	str r1, [r4, #8]
 	ldmia sp!, {r4, r5, pc}
 _020a926c:
-	bl func_ov00_020a7b8c
+	bl _ZN10PlayerBase13GetEquipSwordEv
 	ldr r2, [r0]
 	mov r1, #1
 	ldr r2, [r2, #0x14]

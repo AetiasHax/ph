@@ -609,7 +609,7 @@
 .extern func_0202e58c
 .extern func_ov00_020c2974
 .extern func_0202b154
-.extern func_ov00_020a7b10
+.extern _ZN10PlayerBase10SetVisibleEb
 .extern func_0202e310
 .extern func_ov00_020ceacc
 .extern func_0202e58c
