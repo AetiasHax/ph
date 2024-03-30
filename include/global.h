@@ -17,7 +17,6 @@
 
 // Prevent the IDE from reporting errors that the compiler/linker won't report
 #ifdef __INTELLISENSE__
-#define NONMATCH
 #endif
 
 #define ARM _Pragma("thumb off")
