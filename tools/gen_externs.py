@@ -50,7 +50,7 @@ def get_unknown_symbols(file: Path):
     if len(symbols) == 0:
         return []
     
-    return symbols
+    return sorted(symbols)
 
 files_updated = 0
 inc_files_created = 0
