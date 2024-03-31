@@ -26,9 +26,9 @@
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern func_01ff9bc4
 .extern func_020385b8
-.extern _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
+.extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 .extern func_ov00_020b049c
-.extern _ZN13LinkStateGrab14SetThrowOffsetEP5Vec3p
+.extern _ZN17LinkStateInteract14SetThrowOffsetEP5Vec3p
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern func_ov00_020b034c
 .extern func_ov05_0210f808

@@ -571,7 +571,7 @@
 .extern func_ov00_020b4b90
 .extern func_ov00_020bd364
 .extern func_ov00_020bb544
-.extern _ZTV13LinkStateGrab
+.extern _ZTV17LinkStateInteract
 .extern func_020350ac
 .extern func_02037750
 .extern data_ov00_020e634c

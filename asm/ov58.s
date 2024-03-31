@@ -2541,7 +2541,7 @@ func_ov58_0219a47c: ; 0x0219a47c
 	bl func_ov00_02083c7c
 	bl func_020385b8
 	add r1, sp, #4
-	bl _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
+	bl _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 	mov r0, r5
 	add r1, sp, #4
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p

@@ -13,7 +13,7 @@
 .extern func_ov00_02087400
 .extern _ZN11ItemManager13ForceEquipItemEi
 .extern func_020385b8
-.extern _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
+.extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern func_ov00_020bcf50
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348

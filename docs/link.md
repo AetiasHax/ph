@@ -7,15 +7,15 @@ This file documents technical information about Link.
 State handlers contain data and functions to process Link's state. Only one state handler is active at a time, but data can be
 shared outside of the active state handler.
 
- Index | Name          | Description
--------|---------------|-------------
-0      | `LinkMove`    | Handles Link's movement.
-1      | `LinkItem`    | Handles item usage.
-2      | `LinkGrab`    | Handles grabbing objects.
-3      | `LinkState3`  | Unknown
-4      | `LinkState4`  | Unknown
-5      | `LinkDamage`  | Handles receiving damage.
-6      | `LinkItemGet` | Handles getting items.
+ Index | Name                | Description
+-------|---------------------|-------------
+0      | `LinkStateMove`     | Handles Link's movement.
+1      | `LinkStateItem`     | Handles item usage.
+2      | `LinkStateInteract` | Handles talking to NPCs and grabbing/pushing/pulling objects.
+3      | `LinkState3`        | Unknown
+4      | `LinkState4`        | Unknown
+5      | `LinkStateDamage`   | Handles receiving damage.
+6      | `LinkStateItemGet`  | Handles getting items.
 
 ## State hierarchy
 Link's states are organized in a hierarchical structure. Similar to actor IDs, states are labelled by 4-character IDs. In

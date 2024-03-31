@@ -127,7 +127,7 @@
 .extern func_ov14_0214aa0c
 .extern func_ov00_020c2974
 .extern func_020385b8
-.extern _ZN13LinkStateGrab18func_ov00_020ab934EP5Vec3p
+.extern _ZN17LinkStateInteract18func_ov00_020ab934EP5Vec3p
 .extern data_027e0f94
 .extern func_ov14_02145c7c
 .extern func_ov00_02083a1c

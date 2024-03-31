@@ -82,7 +82,7 @@
 .extern _ZN13LinkStateBase15GetGrabActorRefEv
 .extern func_ov14_0213ed94
 .extern func_020385b8
-.extern _ZN13LinkStateGrab24SetNormalizedThrowOffsetEP5Vec3p
+.extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 .extern _ZN13LinkStateBase6LookAtEP5Vec3p
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase14GetPlayerAngleEv

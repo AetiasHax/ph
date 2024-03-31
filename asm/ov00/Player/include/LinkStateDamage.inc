@@ -27,7 +27,7 @@
 .extern func_ov00_020d7424
 .extern func_ov00_020d716c
 .extern func_020385b8
-.extern _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+.extern _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 .extern func_ov00_02097ff4
 .extern _ZN13LinkStateBase25GetCurrentCharacterHealthEv
 .extern _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev

@@ -191,7 +191,7 @@
 .extern _ZN13LinkStateBase15GetPlayer_Unk18Ev
 .extern func_ov00_020a9180
 .extern func_020385b8
-.extern _ZN13LinkStateGrab18func_ov00_020ab770EP5Vec3p
+.extern _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
 .extern func_ov00_020b034c
 .extern func_ov00_020b0328
 .extern func_01fffcd8
@@ -378,7 +378,7 @@
 .extern data_027e0fd8
 .extern data_027e0fd0
 .extern func_ov00_020bb544
-.extern _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
+.extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern func_ov14_0213ec64
 .extern func_ov00_02083918
 .extern func_ov00_02083948

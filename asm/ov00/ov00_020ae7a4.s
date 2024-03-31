@@ -4645,7 +4645,7 @@ _020b2338:
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	bl func_020385b8
 	mov r1, #0
-	bl _ZN13LinkStateGrab15SetBombVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 	ldr r0, [r4, #0x64]
 	cmp r0, #0xf
 	addls pc, pc, r0, lsl #2
@@ -4898,7 +4898,7 @@ _020b2658:
 _020b2664:
 	bl func_020385b8
 	mov r1, #0
-	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	ldr r0, _020b2b94 ; =data_027e0d38
 	add r1, sp, #0
 	ldr r0, [r0]
@@ -4912,7 +4912,7 @@ _020b2688:
 	beq _020b26a4
 	bl func_020385b8
 	mov r1, #0
-	bl _ZN13LinkStateGrab15SetBombVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 _020b26a4:
 	ldr r0, _020b2b94 ; =data_027e0d38
 	add r1, sp, #0
@@ -15210,7 +15210,7 @@ _020bac10:
 	bl func_ov00_020c1908
 	bl func_020385b8
 	add r1, r6, #8
-	bl _ZN13LinkStateGrab4GrabEP8ActorRef
+	bl _ZN17LinkStateInteract4GrabEP8ActorRef
 	mov r0, r6
 	strb r5, [r6, #0x278]
 	ldr r2, [r0]
@@ -17018,7 +17018,7 @@ _020bc028:
 	bne _020bc060
 	bl func_020385b8
 	add r1, sp, #0
-	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 _020bc060:
 	ldr r0, _020bc084 ; =data_027e0fb8
 	ldr r0, [r0]
@@ -17118,7 +17118,7 @@ _020bc114:
 	bl func_ov00_020bb544
 	bl func_020385b8
 	add r1, sp, #0xc
-	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	ldr r0, _020bc1c4 ; =data_027e0fb8
 	ldr r0, [r0]
 	bl func_ov00_020af050
@@ -17139,7 +17139,7 @@ func_ov00_020bc1c8: ; 0x020bc1c8
 	mov r6, r1
 	mov r5, r2
 	mov r4, r3
-	bl _ZN13LinkStateGrab13GetLinkState4Ev
+	bl _ZN17LinkStateInteract13GetLinkState4Ev
 	mov r1, r6
 	mov r2, r5
 	mov r3, r4
@@ -17160,7 +17160,7 @@ _020bc20c: .word data_027e0fac
 	arm_func_start func_ov00_020bc210
 func_ov00_020bc210: ; 0x020bc210
 	stmdb sp!, {r3, lr}
-	bl _ZN13LinkStateGrab13GetLinkState4Ev
+	bl _ZN17LinkStateInteract13GetLinkState4Ev
 	mov r1, #1
 	strb r1, [r0, #0x28]
 	mov r0, r1
@@ -17638,7 +17638,7 @@ func_ov00_020bc7e0: ; 0x020bc7e0
 	mov r4, r1
 	bl func_020385b8
 	mov r1, r4
-	bl _ZN13LinkStateGrab18func_ov00_020abc78EP8ActorRef
+	bl _ZN17LinkStateInteract18func_ov00_020abc78EP8ActorRef
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020bc7e0
 
@@ -17647,7 +17647,7 @@ func_ov00_020bc7e0: ; 0x020bc7e0
 func_ov00_020bc7f8: ; 0x020bc7f8
 	stmdb sp!, {r3, lr}
 	bl func_020385b8
-	bl _ZN13LinkStateGrab20CreateDebugHierarchyEv
+	bl _ZN17LinkStateInteract20CreateDebugHierarchyEv
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_020bc7f8
 
@@ -18194,7 +18194,7 @@ func_ov00_020bce48: ; 0x020bce48
 	cmp r1, r0
 	beq _020bce9c
 	bl func_020385b8
-	bl _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
+	bl _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 _020bce9c:
 	bl func_ov00_020a914c
 	mov r1, r4
@@ -18341,7 +18341,7 @@ func_ov00_020bd030: ; 0x020bd030
 	mov r5, r0
 	mov r4, r1
 	bl func_020385b8
-	bl _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
+	bl _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 	bl func_ov00_020a914c
 	mov r2, r4
 	ldr r1, _020bd06c ; =data_ov00_020e62a8
@@ -18657,7 +18657,7 @@ _020bd408:
 	mov r0, #0
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	strb r0, [sp, #4]
-	bl _ZN13LinkStateGrab13GetLinkState4Ev
+	bl _ZN17LinkStateInteract13GetLinkState4Ev
 	add ip, sp, #4
 	mov r1, r6
 	mov r2, r5
@@ -18684,7 +18684,7 @@ _020bd484:
 	ldrb r0, [sp, #4]
 	cmp r0, #0
 	beq _020bd4b8
-	bl _ZN13LinkStateGrab13GetLinkState4Ev
+	bl _ZN17LinkStateInteract13GetLinkState4Ev
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x20]
@@ -18697,7 +18697,7 @@ _020bd484:
 _020bd4b8:
 	bl func_020385b8
 	ldr r1, _020bd4d4 ; =data_027e0fa0
-	bl _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	mov r0, #1
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -45392,7 +45392,7 @@ _020d1f74:
 	beq _020d1ff8
 	bl func_020385b8
 	mov r1, r7
-	bl _ZN13LinkStateGrab18func_ov00_020abc18EP8ActorRef
+	bl _ZN17LinkStateInteract18func_ov00_020abc18EP8ActorRef
 	b _020d1ff8
 _020d1fd8:
 	ldrb r4, [r8, #1]
@@ -45699,7 +45699,7 @@ _020d2400:
 	bl func_020385b8
 	add r1, r7, #0x20
 	add r1, r1, r4, lsl #3
-	bl _ZN13LinkStateGrab18func_ov00_020abbdcEP8ActorRef
+	bl _ZN17LinkStateInteract18func_ov00_020abbdcEP8ActorRef
 	add sp, sp, #8
 	mov r0, #2
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -46080,7 +46080,7 @@ _020d2934:
 	blt _020d2904
 	bl func_020385b8
 	mov r1, r6
-	bl _ZN13LinkStateGrab18func_ov00_020abba0EP8ActorRef
+	bl _ZN17LinkStateInteract18func_ov00_020abba0EP8ActorRef
 	ldrb r0, [r8, #0x54]
 	cmp r0, #0
 	beq _020d29c0

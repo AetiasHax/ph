@@ -229,7 +229,7 @@
 .extern func_ov00_0207b334
 .extern func_ov00_020838e8
 .extern func_ov05_02100ae0
-.extern _ZN13LinkStateGrab18func_ov00_020ab6c8Ev
+.extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern _ZN11ItemManager8GiveKeysEj
 .extern _ZN11ItemManager7AddItemEi
 .extern func_ov00_02087d98

@@ -20593,7 +20593,7 @@ func_ov04_0210ab44: ; 0x0210ab44
 	push {r4, lr}
 	add r4, r0, #0
 	bl func_ov04_0210add4
-	ldr r0, _0210ab84 ; =_ZTV13LinkStateGrab
+	ldr r0, _0210ab84 ; =_ZTV17LinkStateInteract
 	str r0, [r4]
 	mov r0, #0
 	str r0, [r4, #0xc]
@@ -20622,7 +20622,7 @@ func_ov04_0210ab44: ; 0x0210ab44
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_0210ab44
-_0210ab84: .word _ZTV13LinkStateGrab
+_0210ab84: .word _ZTV17LinkStateInteract
 
 	.global func_ov04_0210ab88
 	thumb_func_start func_ov04_0210ab88

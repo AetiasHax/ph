@@ -207,7 +207,7 @@
 .extern func_ov00_020bcc24
 .extern func_ov00_0208ae94
 .extern func_020385b8
-.extern _ZN13LinkStateGrab20SetGrabActorVelocityEP5Vec3p
+.extern _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 .extern func_ov00_02083664
 .extern func_ov00_020bb544
 .extern func_0202d77c
