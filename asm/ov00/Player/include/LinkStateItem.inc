@@ -10,7 +10,6 @@
 .extern func_ov54_021997f0
 .extern _ZN13LinkStateBase12GetEquipItemEi
 .extern _ZN13LinkStateBase18EquipItem_vfunc_28Ev
-.extern _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 .extern func_ov00_020b7e6c
 .extern func_ov00_020af050
 .extern data_027e103c
