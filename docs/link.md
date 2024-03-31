@@ -10,12 +10,12 @@ shared outside of the active state handler.
  Index | Name                | Description
 -------|---------------------|-------------
 0      | `LinkStateMove`     | Handles Link's movement.
-1      | `LinkStateItem`     | Handles item usage.
+1      | `LinkStateItem`     | Handles item usage, including sword and shield.
 2      | `LinkStateInteract` | Handles talking to NPCs and grabbing/pushing/pulling objects.
 3      | `LinkStateFollow`   | Handles moving toward objects.
-4      | `LinkStateRoll`     | Unknown
-5      | `LinkStateDamage`   | Handles receiving damage.
-6      | `LinkStateItemGet`  | Handles getting items.
+4      | `LinkStateRoll`     | Handles rolling and dizziness.
+5      | `LinkStateDamage`   | Handles receiving damage and knockback.
+6      | `LinkStateCutscene` | Handles being in a cutscene, transitions into new scenes and getting items.
 
 ## State hierarchy
 Link's states are organized in a hierarchical structure. Similar to actor IDs, states are labelled by 4-character IDs. In

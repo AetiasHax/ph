@@ -8,7 +8,7 @@
 #include "Player/LinkStateBase.hpp"
 #include "Item/Item.hpp"
 
-class LinkStateItemGet : public LinkStateBase {
+class LinkStateCutscene : public LinkStateBase {
 public:
     /* 00 (base) */
     /* 0c */ unk8 mUnk_08[0x24]; // non-documented struct
@@ -47,7 +47,7 @@ public:
     /* ac */
 
     /* 00 */ virtual void vfunc_00() override;
-    /* 04 */ virtual ~LinkStateItemGet() override;
+    /* 04 */ virtual ~LinkStateCutscene() override;
     /* 0c */ virtual LinkStateId GetId() override;
     /* 10 */ virtual void CreateDebugHierarchy() override;
     /* 14 */ virtual void OnStateEnter() override;
