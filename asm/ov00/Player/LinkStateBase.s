@@ -68,7 +68,7 @@ _020a8010: ; jump table
 _020a8030:
 	cmp r4, #0
 	beq _020a8048
-	bl func_ov00_020aeeac
+	bl _ZN13LinkStateRoll18func_ov00_020aeeacEv
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
@@ -83,7 +83,7 @@ _020a8050:
 	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020a807c
-	bl func_ov00_020aeeac
+	bl _ZN13LinkStateRoll18func_ov00_020aeeacEv
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}

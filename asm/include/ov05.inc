@@ -255,7 +255,7 @@
 .extern _ZN13LinkStateBase18func_ov00_020a8ad0Ei
 .extern _ZN13LinkStateBase18func_ov00_020a8994Ev
 .extern _ZN13LinkStateBase18func_ov00_020a8b04Eib
-.extern func_ov00_020aee58
+.extern _ZN13LinkStateRoll18func_ov00_020aee58Est
 .extern func_ov00_020bf330
 .extern func_ov00_020b034c
 .extern _ZN13LinkStateBase18func_ov00_020a8c64Ev
@@ -387,7 +387,7 @@
 .extern func_020197bc
 .extern func_0201987c
 .extern _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
-.extern func_ov00_020aee84
+.extern _ZN13LinkStateRoll18func_ov00_020aee84Ev
 .extern _ZN13LinkStateBase15GetGrabActorRefEv
 .extern _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
 .extern func_01ff9cec

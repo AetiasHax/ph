@@ -20975,7 +20975,7 @@ func_ov04_0210adfc: ; 0x0210adfc
 	sub sp, #4
 	add r4, r0, #0
 	bl func_ov04_0210add4
-	ldr r0, _0210ae70 ; =data_ov00_020e60c0
+	ldr r0, _0210ae70 ; =_ZTV13LinkStateRoll
 	mov r1, #0
 	str r0, [r4]
 	ldr r0, _0210ae74 ; =data_ov00_020dc6e0
@@ -21029,7 +21029,7 @@ _0210ae52:
 	pop {r3, r4, pc}
 	nop
 	thumb_func_end func_ov04_0210adfc
-_0210ae70: .word data_ov00_020e60c0
+_0210ae70: .word _ZTV13LinkStateRoll
 _0210ae74: .word data_ov00_020dc6e0
 _0210ae78: .word func_ov04_021079d4
 _0210ae7c: .word func_ov00_020b7d74

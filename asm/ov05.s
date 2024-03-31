@@ -6389,7 +6389,7 @@ _02105e4c:
 	bl func_ov05_02106634
 	mov r1, #2
 	mov r2, #1
-	bl func_ov00_020aee58
+	bl _ZN13LinkStateRoll18func_ov00_020aee58Est
 	b _02105f4c
 _02105e68:
 	ldrsh r1, [r4, #0x22]
@@ -6420,7 +6420,7 @@ _02105ebc:
 	bl func_ov05_02106634
 	mov r1, #5
 	mov r2, r5
-	bl func_ov00_020aee58
+	bl _ZN13LinkStateRoll18func_ov00_020aee58Est
 	b _02105f4c
 _02105edc:
 	ldrsh r1, [r4, #0x22]
@@ -6451,7 +6451,7 @@ _02105f30:
 	bl func_ov05_02106634
 	mov r1, #5
 	mov r2, r5
-	bl func_ov00_020aee58
+	bl _ZN13LinkStateRoll18func_ov00_020aee58Est
 _02105f4c:
 	mov r0, r4
 	mov r1, r6
@@ -11654,7 +11654,7 @@ func_ov05_0210a648: ; 0x0210a648
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_ov05_02106634
-	bl func_ov00_020aee84
+	bl _ZN13LinkStateRoll18func_ov00_020aee84Ev
 	ldr r0, [r4, #4]
 	ldr r1, _0210a68c ; =data_ov05_021128c4
 	add r1, r1, r0, lsl #3
@@ -13030,7 +13030,7 @@ func_ov05_0210b97c: ; 0x0210b97c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_ov05_02106634
-	bl func_ov00_020aee84
+	bl _ZN13LinkStateRoll18func_ov00_020aee84Ev
 	ldr r0, [r4, #4]
 	ldr r1, _0210b9c0 ; =data_ov05_02112a04
 	add r1, r1, r0, lsl #3
@@ -17674,7 +17674,7 @@ _0210f8dc:
 	ldr r2, [r2, #0x64]
 	blx r2
 	bl func_ov05_02106634
-	bl func_ov00_020aee84
+	bl _ZN13LinkStateRoll18func_ov00_020aee84Ev
 	bl func_ov05_02106634
 	bl func_ov05_02107fc0
 	cmp sb, #0

@@ -579,7 +579,7 @@
 .extern func_ov00_020d2cfc
 .extern data_ov00_020e57a4
 .extern _ZTV13LinkStateBase
-.extern data_ov00_020e60c0
+.extern _ZTV13LinkStateRoll
 .extern data_ov00_020dc6e0
 .extern data_ov00_020e5700
 .extern func_ov00_020bb1f8

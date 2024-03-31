@@ -1,5 +1,5 @@
 #pragma once
-.extern func_ov00_020aeeac
+.extern _ZN13LinkStateRoll18func_ov00_020aeeacEv
 .extern func_ov00_02097bbc
 .extern func_ov00_020af4a4
 .extern data_027e0f74
