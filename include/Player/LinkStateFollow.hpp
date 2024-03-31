@@ -7,20 +7,20 @@
 
 #include "Player/LinkStateBase.hpp"
 
-class LinkState3 : public LinkStateBase {
+class LinkStateFollow : public LinkStateBase {
 public:
     /* 00 (base) */
     /* 0c */ void *mUnk_0c;
     /* 10 */ unk32 mUnk_10;
     /* 14 */ unk8 mUnk_14[0x10];
-    /* 24 */ Vec3p mUnk_24;
+    /* 24 */ Vec3p mTarget;
     /* 30 */ unk8 mUnk_30[0x88]; // non-documented struct
     /* b8 */ unk8 mUnk_b8[0x2a]; // non-documented struct
     /* e2 */ unk8 mUnk_e2[2];
     /* e4 */
 
     /* 00 */ virtual void vfunc_00() override;
-    /* 04 */ virtual ~LinkState3() override;
+    /* 04 */ virtual ~LinkStateFollow() override;
     /* 0c */ virtual LinkStateId GetId() override;
     /* 14 */ virtual void OnStateEnter() override;
     /* 18 */ virtual void OnStateLeave(s32 param1) override;
