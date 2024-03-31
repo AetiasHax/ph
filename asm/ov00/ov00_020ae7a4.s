@@ -17139,7 +17139,7 @@ func_ov00_020bc1c8: ; 0x020bc1c8
 	mov r6, r1
 	mov r5, r2
 	mov r4, r3
-	bl _ZN17LinkStateInteract13GetLinkState4Ev
+	bl _ZN17LinkStateInteract16GetLinkStateRollEv
 	mov r1, r6
 	mov r2, r5
 	mov r3, r4
@@ -17160,7 +17160,7 @@ _020bc20c: .word data_027e0fac
 	arm_func_start func_ov00_020bc210
 func_ov00_020bc210: ; 0x020bc210
 	stmdb sp!, {r3, lr}
-	bl _ZN17LinkStateInteract13GetLinkState4Ev
+	bl _ZN17LinkStateInteract16GetLinkStateRollEv
 	mov r1, #1
 	strb r1, [r0, #0x28]
 	mov r0, r1
@@ -18657,7 +18657,7 @@ _020bd408:
 	mov r0, #0
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	strb r0, [sp, #4]
-	bl _ZN17LinkStateInteract13GetLinkState4Ev
+	bl _ZN17LinkStateInteract16GetLinkStateRollEv
 	add ip, sp, #4
 	mov r1, r6
 	mov r2, r5
@@ -18684,7 +18684,7 @@ _020bd484:
 	ldrb r0, [sp, #4]
 	cmp r0, #0
 	beq _020bd4b8
-	bl _ZN17LinkStateInteract13GetLinkState4Ev
+	bl _ZN17LinkStateInteract16GetLinkStateRollEv
 	ldr r2, [r0]
 	mov r1, #0
 	ldr r2, [r2, #0x20]

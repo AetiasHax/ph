@@ -6,7 +6,7 @@
 #include "lib/math.h"
 
 #include "Player/LinkStateBase.hpp"
-#include "Player/LinkState4.hpp"
+#include "Player/LinkStateRoll.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Actor/Actor.hpp"
 
@@ -37,7 +37,7 @@ public:
     s32 GetGrabActorId();
     bool func_ov00_020aa818();
     void func_ov00_020aa844(Actor *param1);
-    LinkState4* GetLinkState4();
+    LinkStateRoll* GetLinkStateRoll();
     void SetGrabActorVelocity(Vec3p *velocity);
     void SetBombVelocity(Vec3p *velocity);
     void func_ov00_020ab6c8();

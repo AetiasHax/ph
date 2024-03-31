@@ -267,7 +267,7 @@
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 .extern func_01fffcd8
-.extern _ZN17LinkStateInteract13GetLinkState4Ev
+.extern _ZN17LinkStateInteract16GetLinkStateRollEv
 .extern func_ov05_02107b74
 .extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 .extern func_ov05_0210a0c0

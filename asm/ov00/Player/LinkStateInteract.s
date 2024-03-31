@@ -1022,7 +1022,7 @@ _020ab000:
 	bl _ZN13LinkStateBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _020ab060
-	bl _ZN17LinkStateInteract13GetLinkState4Ev
+	bl _ZN17LinkStateInteract16GetLinkStateRollEv
 	add r2, sp, #0x50
 	mov r1, r6
 	bl func_ov23_02171410
@@ -1275,14 +1275,14 @@ _020ab3dc: .word 0x00001ccd
 _020ab3e0: .word 0x00001333
 _020ab3e4: .word 0x000018e4
 
-	.global _ZN17LinkStateInteract13GetLinkState4Ev
-	arm_func_start _ZN17LinkStateInteract13GetLinkState4Ev
-_ZN17LinkStateInteract13GetLinkState4Ev: ; 0x020ab3e8
+	.global _ZN17LinkStateInteract16GetLinkStateRollEv
+	arm_func_start _ZN17LinkStateInteract16GetLinkStateRollEv
+_ZN17LinkStateInteract16GetLinkStateRollEv: ; 0x020ab3e8
 	ldr ip, _020ab3f4 ; =func_01fffcd8
 	mov r0, #4
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract13GetLinkState4Ev
+	arm_func_end _ZN17LinkStateInteract16GetLinkStateRollEv
 _020ab3f4: .word func_01fffcd8
 
 	.global _ZN17LinkStateInteract8vfunc_24Ei

@@ -5,7 +5,7 @@
 
 #include "Player/LinkStateBase.hpp"
 
-class LinkState4 : public LinkStateBase {
+class LinkStateRoll : public LinkStateBase {
 public:
     /* 00 (base) */
     /* 0c */ unk16 mUnk_0c;
@@ -30,7 +30,7 @@ public:
     /* 98 */
 
     /* 00 */ virtual void vfunc_00() override;
-    /* 04 */ virtual ~LinkState4() override;
+    /* 04 */ virtual ~LinkStateRoll() override;
     /* 0c */ virtual LinkStateId GetId() override;
     /* 10 */ virtual void CreateDebugHierarchy() override;
     /* 14 */ virtual void OnStateEnter() override;

@@ -13,7 +13,7 @@ shared outside of the active state handler.
 1      | `LinkStateItem`     | Handles item usage.
 2      | `LinkStateInteract` | Handles talking to NPCs and grabbing/pushing/pulling objects.
 3      | `LinkStateFollow`   | Handles moving toward objects.
-4      | `LinkState4`        | Unknown
+4      | `LinkStateRoll`     | Unknown
 5      | `LinkStateDamage`   | Handles receiving damage.
 6      | `LinkStateItemGet`  | Handles getting items.
 
