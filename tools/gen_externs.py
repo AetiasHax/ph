@@ -22,6 +22,8 @@ tmp_file = '_gen_externs_tmp'
 tmp_obj_file = f'{tmp_file}.o'
 tmp_asm_file = f'{tmp_file}.s'
 
+MSG_UNKNOWN_IDENTIFIER = 'Unknown identifier,'
+
 if platform.system() == 'Windows': as_cmd = [str(as_path)]
 else: as_cmd = ['wine', str(as_path)]
 
@@ -46,7 +48,19 @@ def get_unknown_symbols(file: Path):
         output = e.stdout.decode()
 
     # Get unknown identifiers
-    symbols: list[str] = re.findall(r'Unknown identifier, (?:[\r\n]+\S+ )?(\S+)', output)
+    lines = output.splitlines()
+    symbol = ''
+    symbols: list[str] = []
+    for line in lines:
+        if not line.startswith(tmp_asm_file): continue
+        if ':' not in line: continue
+        line = line[line.index(':', len(tmp_asm_file) + 1) + 1:].strip()
+        if line.startswith(MSG_UNKNOWN_IDENTIFIER):
+            if symbol != '': symbols.append(symbol)
+            symbol = line[len(MSG_UNKNOWN_IDENTIFIER):].strip()
+        else:
+            symbol += line.strip()
+    if symbol != '': symbols.append(symbol)
     if len(symbols) == 0:
         return []
     
