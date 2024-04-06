@@ -141,6 +141,8 @@
 .extern data_ov00_020e9360
 .extern data_ov00_020e9370
 .extern data_ov00_020e9c88
+.extern data_ov00_020ee178
+.extern data_ov00_020ee184
 .extern data_ov09_0211f5b4
 .extern func_01ff80f8
 .extern func_01ff81f8
@@ -299,7 +301,9 @@
 .extern func_0202ea24
 .extern func_0202ea34
 .extern func_0202ea50
+.extern func_0203005c
 .extern func_020300cc
+.extern func_0203010c
 .extern func_020313c8
 .extern func_02033780
 .extern func_020337d8
@@ -373,6 +377,8 @@
 .extern func_0203e0c8
 .extern func_0203e1b0
 .extern func_0203e284
+.extern func_0203e784
+.extern func_0203e7b4
 .extern func_0203e868
 .extern func_0203efd8
 .extern func_0203f378
@@ -489,6 +495,7 @@
 .extern func_ov00_020a19fc
 .extern func_ov00_020a41e4
 .extern func_ov00_020a5e9c
+.extern func_ov00_020a5ef8
 .extern func_ov00_020a6110
 .extern func_ov00_020a8f2c
 .extern func_ov00_020a8f4c
@@ -614,6 +621,14 @@
 .extern func_ov05_02110228
 .extern func_ov05_0211058c
 .extern func_ov05_021113d0
+.extern func_ov08_021130d0
+.extern func_ov08_02113150
+.extern func_ov08_02113284
+.extern func_ov08_02113314
+.extern func_ov08_021133bc
+.extern func_ov08_02113460
+.extern func_ov08_021134b8
+.extern func_ov08_021136ec
 .extern func_ov09_0211b6e8
 .extern func_ov09_0211b6f8
 .extern func_ov09_0211b708

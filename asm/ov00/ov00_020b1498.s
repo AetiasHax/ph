@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/ov00_020ae7a4.inc"
+    .include "ov00/ov00_020b1498.inc"
 
 	.text
 
@@ -54867,6 +54867,1026 @@ data_ov00_020df334: ; 0x020df334
 	.global data_ov00_020df336
 data_ov00_020df336: ; 0x020df336
 	.byte 0x88, 0x13
+
+	.section .init, 4, 1, 4
+
+	.global func_ov00_020e1250
+	arm_func_start func_ov00_020e1250
+func_ov00_020e1250: ; 0x020e1250
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e127c ; =data_ov00_020ee184
+	ldr r1, _020e1280 ; =0x45464f42
+	ldr r2, _020e1284 ; =func_ov00_020a5ef8
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e127c ; =data_ov00_020ee184
+	ldr r1, _020e1288 ; =func_0203e7b4
+	ldr r2, _020e128c ; =data_ov00_020ee178
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1250
+_020e127c: .word data_ov00_020ee184
+_020e1280: .word 0x45464f42
+_020e1284: .word func_ov00_020a5ef8
+_020e1288: .word func_0203e7b4
+_020e128c: .word data_ov00_020ee178
+
+	.global func_ov00_020e1290
+	arm_func_start func_ov00_020e1290
+func_ov00_020e1290: ; 0x020e1290
+	stmdb sp!, {r3}
+	sub sp, sp, #0xc
+	ldr r0, _020e12cc ; =data_027e0d0c
+	add ip, sp, #0
+	ldmia r0, {r0, r1, r2}
+	stmia ip, {r0, r1, r2}
+	ldr r3, _020e12d0 ; =data_027e0f94
+	ldmia ip, {r0, r1, r2}
+	stmia r3, {r0, r1, r2}
+	ldr r3, _020e12d4 ; =data_027e0fa0
+	ldmia ip, {r0, r1, r2}
+	stmia r3, {r0, r1, r2}
+	add sp, sp, #0xc
+	ldmia sp!, {r3}
+	bx lr
+	.align 2, 0
+	arm_func_end func_ov00_020e1290
+_020e12cc: .word data_027e0d0c
+_020e12d0: .word data_027e0f94
+_020e12d4: .word data_027e0fa0
+
+	.global func_ov00_020e12d8
+	arm_func_start func_ov00_020e12d8
+func_ov00_020e12d8: ; 0x020e12d8
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e131c ; =data_ov00_020ee1ac
+	ldr r1, _020e1320 ; =0x4e415649
+	ldr r2, _020e1324 ; =func_ov00_020b80e0
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e131c ; =data_ov00_020ee1ac
+	ldr r1, _020e1328 ; =func_0203e7b4
+	ldr r2, _020e132c ; =data_ov00_020ee1a0
+	bl func_0204f8d4
+	ldr r0, _020e1330 ; =data_ov00_020ee1cc
+	bl func_ov00_020b8110
+	ldr r0, _020e1330 ; =data_ov00_020ee1cc
+	ldr r1, _020e1334 ; =func_ov00_020b8134
+	ldr r2, _020e1338 ; =data_ov00_020ee1c0
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e12d8
+_020e131c: .word data_ov00_020ee1ac
+_020e1320: .word 0x4e415649
+_020e1324: .word func_ov00_020b80e0
+_020e1328: .word func_0203e7b4
+_020e132c: .word data_ov00_020ee1a0
+_020e1330: .word data_ov00_020ee1cc
+_020e1334: .word func_ov00_020b8134
+_020e1338: .word data_ov00_020ee1c0
+
+	.global func_ov00_020e133c
+	arm_func_start func_ov00_020e133c
+func_ov00_020e133c: ; 0x020e133c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1368 ; =data_ov00_020ee1e4
+	ldr r1, _020e136c ; =0x46434e56
+	ldr r2, _020e1370 ; =func_ov00_020b862c
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1368 ; =data_ov00_020ee1e4
+	ldr r1, _020e1374 ; =func_0203e7b4
+	ldr r2, _020e1378 ; =data_ov00_020ee1d8
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e133c
+_020e1368: .word data_ov00_020ee1e4
+_020e136c: .word 0x46434e56
+_020e1370: .word func_ov00_020b862c
+_020e1374: .word func_0203e7b4
+_020e1378: .word data_ov00_020ee1d8
+
+	.global func_ov00_020e137c
+	arm_func_start func_ov00_020e137c
+func_ov00_020e137c: ; 0x020e137c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e19b4 ; =data_ov00_020e699c
+	str r0, [r3, #0x20c]
+	str r1, [r3, #0x210]
+	mov ip, #0
+	str ip, [r3, #0x214]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x218]
+	str r0, [r3, #0x20c]
+	ldr r0, _020e19bc ; =data_ov00_020ee408
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e19c4 ; =data_ov00_020ee2d4
+	strb ip, [r3, #0x21c]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e19c8 ; =data_ov00_020e69b0
+	str r0, [r3, #0x234]
+	str r1, [r3, #0x238]
+	mov ip, #0
+	str ip, [r3, #0x23c]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x240]
+	str r0, [r3, #0x234]
+	ldr r0, _020e19cc ; =data_ov00_020ee430
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e19d0 ; =data_ov00_020ee2a4
+	strb ip, [r3, #0x244]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e19d4 ; =data_ov00_020e69cc
+	str r0, [r3, #0x160]
+	str r1, [r3, #0x164]
+	mov r0, #0
+	str r0, [r3, #0x168]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x16c]
+	ldr r0, _020e19dc ; =data_ov00_020ee35c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e19e4 ; =data_ov00_020ee2e0
+	str ip, [r3, #0x160]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e19e8 ; =data_ov00_020e69dc
+	str r0, [r3, #0x170]
+	str r1, [r3, #0x174]
+	mov r0, #0
+	str r0, [r3, #0x178]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x17c]
+	ldr r0, _020e19ec ; =data_ov00_020ee36c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e19f0 ; =data_ov00_020ee2f8
+	str ip, [r3, #0x170]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r1, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r2, _020e19f4 ; =data_ov00_020e69ec
+	str r0, [r1, #0x270]
+	str r2, [r1, #0x274]
+	mov r3, #0
+	str r3, [r1, #0x278]
+	str r3, [r1, #0x27c]
+	ldr r2, _020e19b8 ; =data_0205785c
+	ldr r0, _020e19f8 ; =data_ov00_020ee46c
+	str r2, [r1, #0x270]
+	strb r3, [r1, #0x280]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e19fc ; =data_ov00_020ee2ec
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a00 ; =data_ov00_020e6a08
+	str r0, [r3, #0x298]
+	str r1, [r3, #0x29c]
+	mov ip, #0
+	str ip, [r3, #0x2a0]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x2a4]
+	str r0, [r3, #0x298]
+	ldr r0, _020e1a04 ; =data_ov00_020ee494
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a08 ; =data_ov00_020ee31c
+	strb ip, [r3, #0x2a8]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a0c ; =data_ov00_020e6a2c
+	str r0, [r3, #0x180]
+	str r1, [r3, #0x184]
+	mov r0, #0
+	str r0, [r3, #0x188]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x18c]
+	ldr r0, _020e1a10 ; =data_ov00_020ee37c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a14 ; =data_ov00_020ee268
+	str ip, [r3, #0x180]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a18 ; =data_ov00_020e6a3c
+	str r0, [r3, #0x190]
+	str r1, [r3, #0x194]
+	mov r0, #0
+	str r0, [r3, #0x198]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x19c]
+	ldr r0, _020e1a1c ; =data_ov00_020ee38c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a20 ; =data_ov00_020ee28c
+	str ip, [r3, #0x190]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a24 ; =data_ov00_020e6a4c
+	str r0, [r3, #0x1a0]
+	str r1, [r3, #0x1a4]
+	mov r0, #0
+	str r0, [r3, #0x1a8]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x1ac]
+	ldr r0, _020e1a28 ; =data_ov00_020ee39c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a2c ; =data_ov00_020ee2bc
+	str ip, [r3, #0x1a0]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r1, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r2, _020e1a30 ; =data_ov00_020e6a5c
+	str r0, [r1, #0x1b0]
+	str r2, [r1, #0x1b4]
+	mov r0, #0
+	str r0, [r1, #0x1b8]
+	str r0, [r1, #0x1bc]
+	ldr r2, _020e19d8 ; =data_02057840
+	ldr r0, _020e1a34 ; =data_ov00_020ee3ac
+	str r2, [r1, #0x1b0]
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a38 ; =data_ov00_020ee298
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a3c ; =data_ov00_020e6a6c
+	str r0, [r3, #0x1c0]
+	str r1, [r3, #0x1c4]
+	mov r0, #0
+	str r0, [r3, #0x1c8]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x1cc]
+	ldr r0, _020e1a40 ; =data_ov00_020ee3bc
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a44 ; =data_ov00_020ee214
+	str ip, [r3, #0x1c0]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a48 ; =data_ov00_020e6a7c
+	str r0, [r3, #0x150]
+	str r1, [r3, #0x154]
+	mov r0, #0
+	str r0, [r3, #0x158]
+	ldr ip, _020e19d8 ; =data_02057840
+	str r0, [r3, #0x15c]
+	ldr r0, _020e1a4c ; =data_ov00_020ee34c
+	ldr r1, _020e19e0 ; =func_0203010c
+	ldr r2, _020e1a50 ; =data_ov00_020ee208
+	str ip, [r3, #0x150]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a54 ; =data_ov00_020e6a8c
+	str r0, [r3, #0x1e4]
+	str r1, [r3, #0x1e8]
+	mov ip, #0
+	str ip, [r3, #0x1ec]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x1f0]
+	str r0, [r3, #0x1e4]
+	ldr r0, _020e1a58 ; =data_ov00_020ee3e0
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a5c ; =data_ov00_020ee340
+	strb ip, [r3, #0x1f4]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a60 ; =data_ov00_020e6aa8
+	str r0, [r3, #0x1f8]
+	str r1, [r3, #0x1fc]
+	mov ip, #0
+	str ip, [r3, #0x200]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x204]
+	str r0, [r3, #0x1f8]
+	ldr r0, _020e1a64 ; =data_ov00_020ee3f4
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a68 ; =data_ov00_020ee280
+	strb ip, [r3, #0x208]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r1, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r2, _020e1a6c ; =data_ov00_020e6ac4
+	str r0, [r1, #0x248]
+	str r2, [r1, #0x24c]
+	mov r3, #0
+	str r3, [r1, #0x250]
+	str r3, [r1, #0x254]
+	ldr r2, _020e19b8 ; =data_0205785c
+	ldr r0, _020e1a70 ; =data_ov00_020ee444
+	str r2, [r1, #0x248]
+	strb r3, [r1, #0x258]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a74 ; =data_ov00_020ee2b0
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a78 ; =data_ov00_020e6ae0
+	str r0, [r3, #0x25c]
+	str r1, [r3, #0x260]
+	mov ip, #0
+	str ip, [r3, #0x264]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x268]
+	str r0, [r3, #0x25c]
+	ldr r0, _020e1a7c ; =data_ov00_020ee458
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a80 ; =data_ov00_020ee250
+	strb ip, [r3, #0x26c]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a84 ; =data_ov00_020e6b04
+	str r0, [r3, #0x2ac]
+	str r1, [r3, #0x2b0]
+	mov ip, #0
+	str ip, [r3, #0x2b4]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x2b8]
+	str r0, [r3, #0x2ac]
+	ldr r0, _020e1a88 ; =data_ov00_020ee4a8
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a8c ; =data_ov00_020ee310
+	strb ip, [r3, #0x2bc]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a90 ; =data_ov00_020e6b24
+	str r0, [r3, #0x2c0]
+	str r1, [r3, #0x2c4]
+	mov ip, #0
+	str ip, [r3, #0x2c8]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x2cc]
+	str r0, [r3, #0x2c0]
+	ldr r0, _020e1a94 ; =data_ov00_020ee4bc
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1a98 ; =data_ov00_020ee1fc
+	strb ip, [r3, #0x2d0]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1a9c ; =data_ov00_020e6b40
+	str r0, [r3, #0x2d4]
+	str r1, [r3, #0x2d8]
+	mov ip, #0
+	str ip, [r3, #0x2dc]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x2e0]
+	str r0, [r3, #0x2d4]
+	ldr r0, _020e1aa0 ; =data_ov00_020ee4d0
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1aa4 ; =data_ov00_020ee244
+	strb ip, [r3, #0x2e4]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r1, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r2, _020e1aa8 ; =data_ov00_020e6b5c
+	str r0, [r1, #0x1d0]
+	str r2, [r1, #0x1d4]
+	mov r3, #0
+	str r3, [r1, #0x1d8]
+	str r3, [r1, #0x1dc]
+	ldr r2, _020e19b8 ; =data_0205785c
+	ldr r0, _020e1aac ; =data_ov00_020ee3cc
+	str r2, [r1, #0x1d0]
+	strb r3, [r1, #0x1e0]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1ab0 ; =data_ov00_020ee328
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1ab4 ; =data_ov00_020e6b78
+	str r0, [r3, #0x220]
+	str r1, [r3, #0x224]
+	mov ip, #0
+	str ip, [r3, #0x228]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x22c]
+	str r0, [r3, #0x220]
+	ldr r0, _020e1ab8 ; =data_ov00_020ee41c
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1abc ; =data_ov00_020ee334
+	strb ip, [r3, #0x230]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1ac0 ; =data_ov00_020e6b94
+	str r0, [r3, #0x284]
+	str r1, [r3, #0x288]
+	mov ip, #0
+	str ip, [r3, #0x28c]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x290]
+	str r0, [r3, #0x284]
+	ldr r0, _020e1ac4 ; =data_ov00_020ee480
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1ac8 ; =data_ov00_020ee2c8
+	strb ip, [r3, #0x294]
+	bl func_0204f8d4
+	ldr r0, _020e19ac ; =data_02057878
+	ldr r3, _020e19b0 ; =data_ov00_020ee1fc
+	ldr r1, _020e1acc ; =data_ov00_020e6ba8
+	str r0, [r3, #0x2e8]
+	str r1, [r3, #0x2ec]
+	mov ip, #0
+	str ip, [r3, #0x2f0]
+	ldr r0, _020e19b8 ; =data_0205785c
+	str ip, [r3, #0x2f4]
+	str r0, [r3, #0x2e8]
+	ldr r0, _020e1ad0 ; =data_ov00_020ee4e4
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1ad4 ; =data_ov00_020ee220
+	strb ip, [r3, #0x2f8]
+	bl func_0204f8d4
+	ldr r2, _020e1ad8 ; =data_ov00_020e6bbc
+	ldr r0, _020e1adc ; =data_ov00_020ee4f8
+	mov ip, #0
+	ldr r3, _020e19b8 ; =data_0205785c
+	str r2, [r0, #4]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1ae0 ; =data_ov00_020ee25c
+	str r3, [r0]
+	str ip, [r0, #8]
+	str ip, [r0, #0xc]
+	strb ip, [r0, #0x10]
+	bl func_0204f8d4
+	ldr r0, _020e1ae4 ; =data_ov00_020ee50c
+	mov r2, #0
+	ldr r3, _020e1ae8 ; =data_ov00_020e6bd8
+	ldr r1, _020e19b8 ; =data_0205785c
+	str r2, [r0, #8]
+	str r2, [r0, #0xc]
+	stmia r0, {r1, r3}
+	strb r2, [r0, #0x10]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1aec ; =data_ov00_020ee22c
+	bl func_0204f8d4
+	ldr r0, _020e1af0 ; =data_ov00_020ee520
+	mov ip, #0
+	ldr lr, _020e1af4 ; =data_ov00_020e6bec
+	ldr r3, _020e19b8 ; =data_0205785c
+	str ip, [r0, #8]
+	str ip, [r0, #0xc]
+	stmia r0, {r3, lr}
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1af8 ; =data_ov00_020ee304
+	strb ip, [r0, #0x10]
+	bl func_0204f8d4
+	ldr r0, _020e1afc ; =data_ov00_020ee534
+	mov ip, #0
+	ldr lr, _020e1b00 ; =data_ov00_020e6c00
+	ldr r3, _020e19b8 ; =data_0205785c
+	str ip, [r0, #8]
+	str ip, [r0, #0xc]
+	stmia r0, {r3, lr}
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1b04 ; =data_ov00_020ee274
+	strb ip, [r0, #0x10]
+	bl func_0204f8d4
+	ldr r2, _020e1b08 ; =data_ov00_020e6c1c
+	ldr r0, _020e1b0c ; =data_ov00_020ee548
+	mov ip, #0
+	ldr r3, _020e19b8 ; =data_0205785c
+	str r2, [r0, #4]
+	ldr r1, _020e19c0 ; =func_0203005c
+	ldr r2, _020e1b10 ; =data_ov00_020ee238
+	str r3, [r0]
+	str ip, [r0, #8]
+	str ip, [r0, #0xc]
+	strb ip, [r0, #0x10]
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e137c
+_020e19ac: .word data_02057878
+_020e19b0: .word data_ov00_020ee1fc
+_020e19b4: .word data_ov00_020e699c
+_020e19b8: .word data_0205785c
+_020e19bc: .word data_ov00_020ee408
+_020e19c0: .word func_0203005c
+_020e19c4: .word data_ov00_020ee2d4
+_020e19c8: .word data_ov00_020e69b0
+_020e19cc: .word data_ov00_020ee430
+_020e19d0: .word data_ov00_020ee2a4
+_020e19d4: .word data_ov00_020e69cc
+_020e19d8: .word data_02057840
+_020e19dc: .word data_ov00_020ee35c
+_020e19e0: .word func_0203010c
+_020e19e4: .word data_ov00_020ee2e0
+_020e19e8: .word data_ov00_020e69dc
+_020e19ec: .word data_ov00_020ee36c
+_020e19f0: .word data_ov00_020ee2f8
+_020e19f4: .word data_ov00_020e69ec
+_020e19f8: .word data_ov00_020ee46c
+_020e19fc: .word data_ov00_020ee2ec
+_020e1a00: .word data_ov00_020e6a08
+_020e1a04: .word data_ov00_020ee494
+_020e1a08: .word data_ov00_020ee31c
+_020e1a0c: .word data_ov00_020e6a2c
+_020e1a10: .word data_ov00_020ee37c
+_020e1a14: .word data_ov00_020ee268
+_020e1a18: .word data_ov00_020e6a3c
+_020e1a1c: .word data_ov00_020ee38c
+_020e1a20: .word data_ov00_020ee28c
+_020e1a24: .word data_ov00_020e6a4c
+_020e1a28: .word data_ov00_020ee39c
+_020e1a2c: .word data_ov00_020ee2bc
+_020e1a30: .word data_ov00_020e6a5c
+_020e1a34: .word data_ov00_020ee3ac
+_020e1a38: .word data_ov00_020ee298
+_020e1a3c: .word data_ov00_020e6a6c
+_020e1a40: .word data_ov00_020ee3bc
+_020e1a44: .word data_ov00_020ee214
+_020e1a48: .word data_ov00_020e6a7c
+_020e1a4c: .word data_ov00_020ee34c
+_020e1a50: .word data_ov00_020ee208
+_020e1a54: .word data_ov00_020e6a8c
+_020e1a58: .word data_ov00_020ee3e0
+_020e1a5c: .word data_ov00_020ee340
+_020e1a60: .word data_ov00_020e6aa8
+_020e1a64: .word data_ov00_020ee3f4
+_020e1a68: .word data_ov00_020ee280
+_020e1a6c: .word data_ov00_020e6ac4
+_020e1a70: .word data_ov00_020ee444
+_020e1a74: .word data_ov00_020ee2b0
+_020e1a78: .word data_ov00_020e6ae0
+_020e1a7c: .word data_ov00_020ee458
+_020e1a80: .word data_ov00_020ee250
+_020e1a84: .word data_ov00_020e6b04
+_020e1a88: .word data_ov00_020ee4a8
+_020e1a8c: .word data_ov00_020ee310
+_020e1a90: .word data_ov00_020e6b24
+_020e1a94: .word data_ov00_020ee4bc
+_020e1a98: .word data_ov00_020ee1fc
+_020e1a9c: .word data_ov00_020e6b40
+_020e1aa0: .word data_ov00_020ee4d0
+_020e1aa4: .word data_ov00_020ee244
+_020e1aa8: .word data_ov00_020e6b5c
+_020e1aac: .word data_ov00_020ee3cc
+_020e1ab0: .word data_ov00_020ee328
+_020e1ab4: .word data_ov00_020e6b78
+_020e1ab8: .word data_ov00_020ee41c
+_020e1abc: .word data_ov00_020ee334
+_020e1ac0: .word data_ov00_020e6b94
+_020e1ac4: .word data_ov00_020ee480
+_020e1ac8: .word data_ov00_020ee2c8
+_020e1acc: .word data_ov00_020e6ba8
+_020e1ad0: .word data_ov00_020ee4e4
+_020e1ad4: .word data_ov00_020ee220
+_020e1ad8: .word data_ov00_020e6bbc
+_020e1adc: .word data_ov00_020ee4f8
+_020e1ae0: .word data_ov00_020ee25c
+_020e1ae4: .word data_ov00_020ee50c
+_020e1ae8: .word data_ov00_020e6bd8
+_020e1aec: .word data_ov00_020ee22c
+_020e1af0: .word data_ov00_020ee520
+_020e1af4: .word data_ov00_020e6bec
+_020e1af8: .word data_ov00_020ee304
+_020e1afc: .word data_ov00_020ee534
+_020e1b00: .word data_ov00_020e6c00
+_020e1b04: .word data_ov00_020ee274
+_020e1b08: .word data_ov00_020e6c1c
+_020e1b0c: .word data_ov00_020ee548
+_020e1b10: .word data_ov00_020ee238
+
+	.global func_ov00_020e1b14
+	arm_func_start func_ov00_020e1b14
+func_ov00_020e1b14: ; 0x020e1b14
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1b40 ; =data_ov00_020ee568
+	ldr r1, _020e1b44 ; =0x41434f42
+	ldr r2, _020e1b48 ; =func_ov00_020be198
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1b40 ; =data_ov00_020ee568
+	ldr r1, _020e1b4c ; =func_0203e7b4
+	ldr r2, _020e1b50 ; =data_ov00_020ee55c
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1b14
+_020e1b40: .word data_ov00_020ee568
+_020e1b44: .word 0x41434f42
+_020e1b48: .word func_ov00_020be198
+_020e1b4c: .word func_0203e7b4
+_020e1b50: .word data_ov00_020ee55c
+
+	.global func_ov00_020e1b54
+	arm_func_start func_ov00_020e1b54
+func_ov00_020e1b54: ; 0x020e1b54
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1b80 ; =data_ov00_020ee59c
+	ldr r1, _020e1b84 ; =0x57534e56
+	ldr r2, _020e1b88 ; =func_ov00_020c0b64
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1b80 ; =data_ov00_020ee59c
+	ldr r1, _020e1b8c ; =func_0203e7b4
+	ldr r2, _020e1b90 ; =data_ov00_020ee590
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1b54
+_020e1b80: .word data_ov00_020ee59c
+_020e1b84: .word 0x57534e56
+_020e1b88: .word func_ov00_020c0b64
+_020e1b8c: .word func_0203e7b4
+_020e1b90: .word data_ov00_020ee590
+
+	.global func_ov00_020e1b94
+	arm_func_start func_ov00_020e1b94
+func_ov00_020e1b94: ; 0x020e1b94
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1bc0 ; =data_ov00_020ee5bc
+	ldr r1, _020e1bc4 ; =0x45465756
+	ldr r2, _020e1bc8 ; =func_ov00_020c96a4
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1bc0 ; =data_ov00_020ee5bc
+	ldr r1, _020e1bcc ; =func_0203e7b4
+	ldr r2, _020e1bd0 ; =data_ov00_020ee5b0
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1b94
+_020e1bc0: .word data_ov00_020ee5bc
+_020e1bc4: .word 0x45465756
+_020e1bc8: .word func_ov00_020c96a4
+_020e1bcc: .word func_0203e7b4
+_020e1bd0: .word data_ov00_020ee5b0
+
+	.global func_ov00_020e1bd4
+	arm_func_start func_ov00_020e1bd4
+func_ov00_020e1bd4: ; 0x020e1bd4
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1c00 ; =data_ov00_020ee5dc
+	ldr r1, _020e1c04 ; =0x45465250
+	ldr r2, _020e1c08 ; =func_ov00_020c9ca4
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1c00 ; =data_ov00_020ee5dc
+	ldr r1, _020e1c0c ; =func_0203e7b4
+	ldr r2, _020e1c10 ; =data_ov00_020ee5d0
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1bd4
+_020e1c00: .word data_ov00_020ee5dc
+_020e1c04: .word 0x45465250
+_020e1c08: .word func_ov00_020c9ca4
+_020e1c0c: .word func_0203e7b4
+_020e1c10: .word data_ov00_020ee5d0
+
+	.global func_ov00_020e1c14
+	arm_func_start func_ov00_020e1c14
+func_ov00_020e1c14: ; 0x020e1c14
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1c40 ; =data_ov00_020ee5fc
+	ldr r1, _020e1c44 ; =0x4c4f4e44
+	ldr r2, _020e1c48 ; =func_ov00_020ca20c
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1c40 ; =data_ov00_020ee5fc
+	ldr r1, _020e1c4c ; =func_0203e7b4
+	ldr r2, _020e1c50 ; =data_ov00_020ee5f0
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1c14
+_020e1c40: .word data_ov00_020ee5fc
+_020e1c44: .word 0x4c4f4e44
+_020e1c48: .word func_ov00_020ca20c
+_020e1c4c: .word func_0203e7b4
+_020e1c50: .word data_ov00_020ee5f0
+
+	.global func_ov00_020e1c54
+	arm_func_start func_ov00_020e1c54
+func_ov00_020e1c54: ; 0x020e1c54
+	ldr ip, _020e1c60 ; =func_ov00_020ce704
+	ldr r0, _020e1c64 ; =data_027e0ffc
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1c54
+_020e1c60: .word func_ov00_020ce704 + 1
+_020e1c64: .word data_027e0ffc
+
+	.global func_ov00_020e1c68
+	arm_func_start func_ov00_020e1c68
+func_ov00_020e1c68: ; 0x020e1c68
+	ldr r0, _020e1c88 ; =data_ov00_020e8964
+	mov r1, #0
+	str r1, [r0, #0x20]
+	str r1, [r0, #0x24]
+	str r1, [r0, #0x28]
+	mov r1, #0xc0
+	str r1, [r0, #0x2c]
+	bx lr
+	.align 2, 0
+	arm_func_end func_ov00_020e1c68
+_020e1c88: .word data_ov00_020e8964
+
+	.global func_ov00_020e1c8c
+	arm_func_start func_ov00_020e1c8c
+func_ov00_020e1c8c: ; 0x020e1c8c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1cb8 ; =data_ov00_020ee61c
+	ldr r1, _020e1cbc ; =0x4d534741
+	ldr r2, _020e1cc0 ; =func_ov00_020d3020
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1cb8 ; =data_ov00_020ee61c
+	ldr r1, _020e1cc4 ; =func_0203e7b4
+	ldr r2, _020e1cc8 ; =data_ov00_020ee610
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1c8c
+_020e1cb8: .word data_ov00_020ee61c
+_020e1cbc: .word 0x4d534741
+_020e1cc0: .word func_ov00_020d3020
+_020e1cc4: .word func_0203e7b4
+_020e1cc8: .word data_ov00_020ee610
+
+	.global func_ov00_020e1ccc
+	arm_func_start func_ov00_020e1ccc
+func_ov00_020e1ccc: ; 0x020e1ccc
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1cf8 ; =data_ov00_020ee63c
+	ldr r1, _020e1cfc ; =0x464d5347
+	ldr r2, _020e1d00 ; =func_ov00_020d32e4
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1cf8 ; =data_ov00_020ee63c
+	ldr r1, _020e1d04 ; =func_0203e7b4
+	ldr r2, _020e1d08 ; =data_ov00_020ee630
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1ccc
+_020e1cf8: .word data_ov00_020ee63c
+_020e1cfc: .word 0x464d5347
+_020e1d00: .word func_ov00_020d32e4
+_020e1d04: .word func_0203e7b4
+_020e1d08: .word data_ov00_020ee630
+
+	.global func_ov00_020e1d0c
+	arm_func_start func_ov00_020e1d0c
+func_ov00_020e1d0c: ; 0x020e1d0c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1d38 ; =data_ov00_020ee65c
+	ldr r1, _020e1d3c ; =0x4e4d5347
+	ldr r2, _020e1d40 ; =func_ov00_020d3fc8
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1d38 ; =data_ov00_020ee65c
+	ldr r1, _020e1d44 ; =func_0203e7b4
+	ldr r2, _020e1d48 ; =data_ov00_020ee650
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1d0c
+_020e1d38: .word data_ov00_020ee65c
+_020e1d3c: .word 0x4e4d5347
+_020e1d40: .word func_ov00_020d3fc8
+_020e1d44: .word func_0203e7b4
+_020e1d48: .word data_ov00_020ee650
+
+	.global func_ov00_020e1d4c
+	arm_func_start func_ov00_020e1d4c
+func_ov00_020e1d4c: ; 0x020e1d4c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1d70 ; =data_ov00_020ee67c
+	mov r1, #4
+	bl func_ov00_020d433c
+	ldr r0, _020e1d70 ; =data_ov00_020ee67c
+	ldr r1, _020e1d74 ; =func_ov00_020d435c
+	ldr r2, _020e1d78 ; =data_ov00_020ee670
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1d4c
+_020e1d70: .word data_ov00_020ee67c
+_020e1d74: .word func_ov00_020d435c
+_020e1d78: .word data_ov00_020ee670
+
+	.global func_ov00_020e1d7c
+	arm_func_start func_ov00_020e1d7c
+func_ov00_020e1d7c: ; 0x020e1d7c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1d9c ; =data_ov00_020ee698
+	bl func_ov08_021130d0
+	ldr r0, _020e1d9c ; =data_ov00_020ee698
+	ldr r1, _020e1da0 ; =func_ov00_020d50f8
+	ldr r2, _020e1da4 ; =data_ov00_020ee68c
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1d7c
+_020e1d9c: .word data_ov00_020ee698
+_020e1da0: .word func_ov00_020d50f8
+_020e1da4: .word data_ov00_020ee68c
+
+	.global func_ov00_020e1da8
+	arm_func_start func_ov00_020e1da8
+func_ov00_020e1da8: ; 0x020e1da8
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1dd4 ; =data_ov00_020ee6d4
+	ldr r1, _020e1dd8 ; =0x4546524c
+	ldr r2, _020e1ddc ; =func_ov00_020d5284
+	mov r3, #0
+	bl func_0203e784
+	ldr r0, _020e1dd4 ; =data_ov00_020ee6d4
+	ldr r1, _020e1de0 ; =func_0203e7b4
+	ldr r2, _020e1de4 ; =data_ov00_020ee6c8
+	bl func_0204f8d4
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1da8
+_020e1dd4: .word data_ov00_020ee6d4
+_020e1dd8: .word 0x4546524c
+_020e1ddc: .word func_ov00_020d5284
+_020e1de0: .word func_0203e7b4
+_020e1de4: .word data_ov00_020ee6c8
+
+	.global func_ov00_020e1de8
+	arm_func_start func_ov00_020e1de8
+func_ov00_020e1de8: ; 0x020e1de8
+	ldr ip, _020e1df4 ; =func_ov08_021134b8
+	ldr r0, _020e1df8 ; =data_ov00_020ee6f8
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1de8
+_020e1df4: .word func_ov08_021134b8
+_020e1df8: .word data_ov00_020ee6f8
+
+	.global func_ov00_020e1dfc
+	arm_func_start func_ov00_020e1dfc
+func_ov00_020e1dfc: ; 0x020e1dfc
+	ldr ip, _020e1e08 ; =func_ov08_02113150
+	ldr r0, _020e1e0c ; =data_ov00_020ee734
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1dfc
+_020e1e08: .word func_ov08_02113150
+_020e1e0c: .word data_ov00_020ee734
+
+	.global func_ov00_020e1e10
+	arm_func_start func_ov00_020e1e10
+func_ov00_020e1e10: ; 0x020e1e10
+	ldr ip, _020e1e1c ; =func_ov08_021133bc
+	ldr r0, _020e1e20 ; =data_ov00_020ee820
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e10
+_020e1e1c: .word func_ov08_021133bc
+_020e1e20: .word data_ov00_020ee820
+
+	.global func_ov00_020e1e24
+	arm_func_start func_ov00_020e1e24
+func_ov00_020e1e24: ; 0x020e1e24
+	ldr ip, _020e1e30 ; =func_ov08_02113460
+	ldr r0, _020e1e34 ; =data_ov00_020eec60
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e24
+_020e1e30: .word func_ov08_02113460
+_020e1e34: .word data_ov00_020eec60
+
+	.global func_ov00_020e1e38
+	arm_func_start func_ov00_020e1e38
+func_ov00_020e1e38: ; 0x020e1e38
+	ldr ip, _020e1e44 ; =func_ov00_020d6c04
+	ldr r0, _020e1e48 ; =data_ov00_020eec64
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e38
+_020e1e44: .word func_ov00_020d6c04
+_020e1e48: .word data_ov00_020eec64
+
+	.global func_ov00_020e1e4c
+	arm_func_start func_ov00_020e1e4c
+func_ov00_020e1e4c: ; 0x020e1e4c
+	ldr ip, _020e1e58 ; =func_ov08_02113284
+	ldr r0, _020e1e5c ; =data_ov00_020eec68
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e4c
+_020e1e58: .word func_ov08_02113284
+_020e1e5c: .word data_ov00_020eec68
+
+	.global func_ov00_020e1e60
+	arm_func_start func_ov00_020e1e60
+func_ov00_020e1e60: ; 0x020e1e60
+	ldr ip, _020e1e6c ; =func_ov08_02113314
+	ldr r0, _020e1e70 ; =data_ov00_020eec9c
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e60
+_020e1e6c: .word func_ov08_02113314
+_020e1e70: .word data_ov00_020eec9c
+
+	.global func_ov00_020e1e74
+	arm_func_start func_ov00_020e1e74
+func_ov00_020e1e74: ; 0x020e1e74
+	ldr ip, _020e1e80 ; =func_ov08_021136ec
+	ldr r0, _020e1e84 ; =data_ov00_020eed2c
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020e1e74
+_020e1e80: .word func_ov08_021136ec
+_020e1e84: .word data_ov00_020eed2c
+
+	.section .ctor, 4, 1, 4
+	.global data_ov00_020e1f00
+data_ov00_020e1f00: ; 0x020e1f00
+    .word func_ov00_020e1250
+	.global data_ov00_020e1f04
+data_ov00_020e1f04: ; 0x020e1f04
+    .word func_ov00_020e1290
+	.global data_ov00_020e1f08
+data_ov00_020e1f08: ; 0x020e1f08
+    .word func_ov00_020e12d8
+	.global data_ov00_020e1f0c
+data_ov00_020e1f0c: ; 0x020e1f0c
+    .word func_ov00_020e133c
+	.global data_ov00_020e1f10
+data_ov00_020e1f10: ; 0x020e1f10
+    .word func_ov00_020e137c
+	.global data_ov00_020e1f14
+data_ov00_020e1f14: ; 0x020e1f14
+    .word func_ov00_020e1b14
+	.global data_ov00_020e1f18
+data_ov00_020e1f18: ; 0x020e1f18
+    .word func_ov00_020e1b54
+	.global data_ov00_020e1f1c
+data_ov00_020e1f1c: ; 0x020e1f1c
+    .word func_ov00_020e1b94
+	.global data_ov00_020e1f20
+data_ov00_020e1f20: ; 0x020e1f20
+    .word func_ov00_020e1bd4
+	.global data_ov00_020e1f24
+data_ov00_020e1f24: ; 0x020e1f24
+    .word func_ov00_020e1c14
+	.global data_ov00_020e1f28
+data_ov00_020e1f28: ; 0x020e1f28
+    .word func_ov00_020e1c54
+	.global data_ov00_020e1f2c
+data_ov00_020e1f2c: ; 0x020e1f2c
+    .word func_ov00_020e1c68
+	.global data_ov00_020e1f30
+data_ov00_020e1f30: ; 0x020e1f30
+    .word func_ov00_020e1c8c
+	.global data_ov00_020e1f34
+data_ov00_020e1f34: ; 0x020e1f34
+    .word func_ov00_020e1ccc
+	.global data_ov00_020e1f38
+data_ov00_020e1f38: ; 0x020e1f38
+    .word func_ov00_020e1d0c
+	.global data_ov00_020e1f3c
+data_ov00_020e1f3c: ; 0x020e1f3c
+    .word func_ov00_020e1d4c
+	.global data_ov00_020e1f40
+data_ov00_020e1f40: ; 0x020e1f40
+    .word func_ov00_020e1d7c
+	.global data_ov00_020e1f44
+data_ov00_020e1f44: ; 0x020e1f44
+    .word func_ov00_020e1da8
+	.global data_ov00_020e1f48
+data_ov00_020e1f48: ; 0x020e1f48
+    .word func_ov00_020e1de8
+	.global data_ov00_020e1f4c
+data_ov00_020e1f4c: ; 0x020e1f4c
+    .word func_ov00_020e1dfc
+	.global data_ov00_020e1f50
+data_ov00_020e1f50: ; 0x020e1f50
+    .word func_ov00_020e1e10
+	.global data_ov00_020e1f54
+data_ov00_020e1f54: ; 0x020e1f54
+    .word func_ov00_020e1e24
+	.global data_ov00_020e1f58
+data_ov00_020e1f58: ; 0x020e1f58
+    .word func_ov00_020e1e38
+	.global data_ov00_020e1f5c
+data_ov00_020e1f5c: ; 0x020e1f5c
+    .word func_ov00_020e1e4c
+	.global data_ov00_020e1f60
+data_ov00_020e1f60: ; 0x020e1f60
+    .word func_ov00_020e1e60
+	.global data_ov00_020e1f64
+data_ov00_020e1f64: ; 0x020e1f64
+    .word func_ov00_020e1e74
 
     .data
 	.global data_ov00_020e6150

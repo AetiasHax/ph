@@ -52,8 +52,7 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/00_Core/Player/PlayerControl.cpp',
     'asm/ov00/Player/PlayerControl.s',
 
-    'asm/ov00/ov00_020ae7a4.s',
-    'asm/ov00/ov00_init.s'
+    'asm/ov00/ov00_020b1498.s',
 ])
 ov01 = Overlay(name='ov01', after=[ov00], objects=[
     'asm/ov01.s'

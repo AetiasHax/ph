@@ -23,12 +23,16 @@
 .extern data_027e0d38
 .extern data_027e0d3c
 .extern data_027e0d40
+.extern data_027e0d48
+.extern data_027e0d54
 .extern data_027e0e28
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f74
 .extern data_027e0f7c
 .extern data_027e1054
+.extern data_ov00_020ec718
+.extern data_ov00_020ec7dc
 .extern func_01ff9b4c
 .extern func_01ff9bc4
 .extern func_02000b60
@@ -124,6 +128,7 @@
 .extern func_02042bb8
 .extern func_0204366c
 .extern func_02047280
+.extern func_0204f8d4
 .extern func_ov00_0207bc48
 .extern func_ov00_0207c170
 .extern func_ov00_02082e1c
@@ -150,6 +155,8 @@
 .extern func_ov03_020f0b8c
 .extern func_ov03_020f4b7c
 .extern func_ov04_02100b6c
+.extern func_ov08_02112ee0
+.extern func_ov08_02113a40
 .extern func_ov09_021136c4
 .extern func_ov09_0211d860
 .extern func_ov09_0211d8a0

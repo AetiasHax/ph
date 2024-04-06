@@ -2387,29 +2387,3 @@ data_ov00_020e58e0: ; 0x020e58e0
 	.global data_ov00_020e58e4
 data_ov00_020e58e4: ; 0x020e58e4
     .word func_ov00_020a9eb4 - 1
-
-    .sbss
-	.global data_ov00_020ee178
-data_ov00_020ee178:
-	.space 0x4
-	.global data_ov00_020ee17c
-data_ov00_020ee17c:
-	.space 0x4
-	.global data_ov00_020ee180
-data_ov00_020ee180:
-	.space 0x4
-	.global data_ov00_020ee184
-data_ov00_020ee184:
-	.space 0x4
-	.global data_ov00_020ee188
-data_ov00_020ee188:
-	.space 0x4
-	.global data_ov00_020ee18c
-data_ov00_020ee18c:
-	.space 0x4
-	.global data_ov00_020ee190
-data_ov00_020ee190:
-	.space 0x4
-	.global data_ov00_020ee194
-data_ov00_020ee194:
-	.space 0x4
