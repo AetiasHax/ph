@@ -64,7 +64,7 @@ def get_unknown_symbols(file: Path):
             elif not skip:
                 symbol += line.strip()
         symbols.add(symbol)
-        symbols.remove('')
+        if '' in symbols: symbols.remove('')
         if len(symbols) == 0:
             return []
     
