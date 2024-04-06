@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov35.inc"
+    .include "ov35.inc"
 
 	.text
 
@@ -6474,7 +6474,7 @@ func_ov35_0218174c: ; 0x0218174c
 	bl func_ov35_02182fa8
 	ldr r0, _021817fc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	beq _02181788
 	ldr r0, _02181800 ; =data_027e0fc8
@@ -7477,7 +7477,7 @@ func_ov35_02182560: ; 0x02182560
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #1
-	bl func_ov00_020af454
+	bl _ZN13PlayerControl14CheckTouchFastEj
 	cmp r0, #0
 	beq _02182598
 	ldr r0, _02182610 ; =data_027e0fc8

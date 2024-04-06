@@ -1,3 +1,4 @@
+    .include "dtcm.inc"
     .include "macros/function.inc"
 
 	.data

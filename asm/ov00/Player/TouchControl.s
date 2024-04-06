@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/TouchControl.inc"
+    .include "ov00/Player/TouchControl.inc"
 
 	.text
 

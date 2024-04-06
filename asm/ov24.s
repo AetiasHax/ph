@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov24.inc"
+    .include "ov24.inc"
 
 	.text
 
@@ -13291,7 +13291,7 @@ func_ov24_02178348: ; 0x02178348
 _021783f8:
 	mov r0, r6
 	mov r1, #1
-	bl func_ov00_020af42c
+	bl _ZN13PlayerControl13CheckTouchingEj
 	cmp r0, #0
 	beq _0217866c
 	mvn r1, #0

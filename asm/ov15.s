@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov15.inc"
+    .include "ov15.inc"
 
 	.text
 
@@ -27176,7 +27176,7 @@ func_ov15_021364b0: ; 0x021364b0
 	cmp r1, #0
 	addeq sp, sp, #0x20
 	ldmeqia sp!, {r4, pc}
-	bl func_ov00_020b137c
+	bl _ZN13PlayerControl11IsTappedNowEv
 	cmp r0, #0
 	ldrneb r0, [r4, #0x26c]
 	cmpne r0, #0
@@ -29307,7 +29307,7 @@ _02138224:
 	blt _02138268
 	ldr r0, _021382f8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1214
+	bl _ZN13PlayerControl17IsNotUntouchedNowEv
 	cmp r0, #0
 	beq _02138268
 	ldr r0, _021382fc ; =data_ov00_020eec9c
@@ -30146,7 +30146,7 @@ _02138e84:
 	beq _02138e9c
 	ldr r0, _02138fc0 ; =data_027e0fb8
 	ldr r0, [r0]
-	blx func_ov00_020aef68
+	blx _ZN13PlayerControl9UpdateAimEv
 	b _02138eb8
 _02138e9c:
 	mov r0, r4
@@ -30418,7 +30418,7 @@ _0213922c:
 	bl func_ov15_02135d78
 	ldr r0, _021394f0 ; =data_027e0fb8
 	ldr r0, [r0]
-	blx func_ov00_020aef68
+	blx _ZN13PlayerControl9UpdateAimEv
 	b _021393f4
 _02139268:
 	ldr r0, _021394e8 ; =data_027e0d38
@@ -30525,7 +30525,7 @@ _021392cc:
 _021393f4:
 	ldr r0, _021394f0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	ldr r1, [r5]
 	add r0, sp, #0x24
 	str r1, [sp, #0x24]
@@ -31547,7 +31547,7 @@ _0213a260:
 	streqb r0, [r5, #0x26c]
 	ldr r0, _0213a46c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af2d4
+	bl _ZN13PlayerControl18func_ov00_020af2d4Ejb
 	cmp r0, #0
 	moveq r0, #0
 	streqb r0, [r5, #0x26c]
@@ -34884,7 +34884,7 @@ func_ov15_0213cfb4: ; 0x0213cfb4
 	ldr r0, [r2]
 	mov r2, r1
 	mov r1, #1
-	bl func_ov00_020af538
+	bl _ZN13PlayerControl18func_ov00_020af538Ev
 	mov r0, r4
 	bl func_ov15_0213dbb8
 	mov r0, r4
@@ -54742,7 +54742,7 @@ _0214da40:
 	beq _0214da70
 	ldr r0, _0214dbe8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _0214da74
@@ -54888,7 +54888,7 @@ func_ov15_0214dc1c: ; 0x0214dc1c
 	beq _0214dc74
 	ldr r0, _0214dca8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _0214dc78
@@ -55025,7 +55025,7 @@ _0214de3c:
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
-	bl func_ov00_020af2d4
+	bl _ZN13PlayerControl18func_ov00_020af2d4Ejb
 	cmp r0, #0
 	beq _0214dec4
 	ldr r0, _0214e070 ; =data_027e0fb8

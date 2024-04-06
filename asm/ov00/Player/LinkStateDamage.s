@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/LinkStateDamage.inc"
+    .include "ov00/Player/LinkStateDamage.inc"
 
     .text
 

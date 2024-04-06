@@ -1,3 +1,4 @@
+    .include "ov00/Item/Item.inc"
     .include "macros/function.inc"
 
 	.text

@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/PlayerBase.inc"
+    .include "ov00/Player/PlayerBase.inc"
 
     .text
 
@@ -358,7 +358,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	ldr r0, _020a7f78 ; =data_027e0fb8
 	str r5, [r1, #8]
 	ldr r0, [r0]
-	blx func_ov00_020aef68
+	blx _ZN13PlayerControl9UpdateAimEv
 	ldr r0, _020a7f7c ; =data_027e0fe4
 	ldrb r1, [sp, #0x18]
 	ldr r0, [r0]

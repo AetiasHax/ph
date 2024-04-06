@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov55.inc"
+    .include "ov55.inc"
 
 	.text
 
@@ -248,7 +248,7 @@ func_ov55_02198f90: ; 0x02198f90
 	blx r1
 	ldr r0, _0219900c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov55_02198f90
@@ -299,7 +299,7 @@ _0219907c:
 	ldr r0, _021991a4 ; =data_027e0fb8
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020b05e8
+	bl _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 	cmp r0, #0
 	beq _021990dc
 	bl func_ov55_02199010
@@ -320,7 +320,7 @@ _021990dc:
 	add r1, sp, #8
 	ldr r0, [r0]
 	mov r2, r5
-	bl func_ov00_020b049c
+	bl _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 	cmp r0, #0
 	beq _02199128
 	bl func_ov55_02199010
@@ -350,7 +350,7 @@ _02199128:
 	blx r1
 	ldr r0, _021991a4 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
 	mov r1, #2
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
@@ -359,7 +359,7 @@ _02199128:
 _02199178:
 	ldr r0, _021991a4 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r1, r0
 	mov r0, r4
 	mov r2, #0

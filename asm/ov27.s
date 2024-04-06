@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov27.inc"
+    .include "ov27.inc"
 
 	.text
 
@@ -3456,7 +3456,7 @@ _02170630:
 	bl func_ov00_0207c474
 	ldr r0, _021708c8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	beq _0217078c
 	ldr r0, _021708b8 ; =data_027e0fc8

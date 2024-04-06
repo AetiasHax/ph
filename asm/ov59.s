@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov59.inc"
+    .include "ov59.inc"
 
 	.text
 
@@ -360,7 +360,7 @@ _021990c4:
 	beq _021992d0
 	ldr r0, [r0]
 	add r1, r6, #0x38
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	cmp r0, #0
 	beq _021992d0
 	ldr r0, [r5, #0x18]
@@ -397,7 +397,7 @@ _02199180:
 	ldr r0, _021992f8 ; =data_027e0fb8
 	add r1, r6, #0x38
 	ldr r0, [r0]
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	cmp r0, #0
 	beq _021992d0
 _021991c4:
@@ -422,7 +422,7 @@ _02199204:
 	ldr r0, _021992f8 ; =data_027e0fb8
 	add r1, r6, #0x38
 	ldr r0, [r0]
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	mov r0, r5
 	bl func_ov59_02198e90
 	ldrb r0, [r6, #0x27]
@@ -437,7 +437,7 @@ _0219923c:
 	ldr r0, _021992f8 ; =data_027e0fb8
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020af42c
+	bl _ZN13PlayerControl13CheckTouchingEj
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -554,7 +554,7 @@ _021993b4:
 	ldr r0, _0219a064 ; =data_027e0fb8
 	add r1, sp, #0xb0
 	ldr r0, [r0]
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	add r0, sp, #0xb0
 	add r2, sp, #0xa4
 	add r1, r4, #0x48
@@ -585,7 +585,7 @@ _02199408:
 	ldr r0, _0219a064 ; =data_027e0fb8
 	add r1, sp, #0x98
 	ldr r0, [r0]
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	ldr r1, _0219a070 ; =data_027e0f94
 	add r0, sp, #0x98
 	add r2, sp, #0x8c
@@ -2265,7 +2265,7 @@ _0219ad18:
 	ldr r0, [r0]
 	add r1, sp, #0x44
 	str r2, [sp, #0x54]
-	bl func_ov00_020b0240
+	bl _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	mov r6, #0
 	ldr r1, _0219aefc ; =0x0000ffff
 	ldr lr, [sp, #0x54]

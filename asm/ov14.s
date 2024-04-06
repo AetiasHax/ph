@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov14.inc"
+    .include "ov14.inc"
 
 	.text
 
@@ -1089,7 +1089,7 @@ func_ov14_02120300: ; 0x02120300
 _02120360:
 	ldr r0, _02120750 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	moveq r0, #0
 	streq r0, [r6, #0x1a8]
@@ -2599,7 +2599,7 @@ _02121838:
 	beq _02121868
 	ldr r0, _021219d0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _0212186c
@@ -2738,7 +2738,7 @@ func_ov14_021219f8: ; 0x021219f8
 	beq _02121a50
 	ldr r0, _02121a84 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _02121a54
@@ -4674,7 +4674,7 @@ _02123460:
 	beq _02123484
 	ldr r0, _0212355c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _02123488
@@ -5181,7 +5181,7 @@ _02123ab0:
 	beq _02123ad4
 	ldr r0, _02123ba0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1338
+	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
 	movne r0, #1
 	bne _02123ad8
@@ -40025,7 +40025,7 @@ _0213f644:
 	ldr r1, _0213f714 ; =data_027e0fb8
 	strb r2, [r0, #0x28]
 	ldr r0, [r1]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	bl func_ov14_0213f724
 	bl func_ov05_02110bb4
 	ldr r1, _0213f708 ; =data_027e0fd4

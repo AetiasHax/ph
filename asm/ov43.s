@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov43.inc"
+    .include "ov43.inc"
 
 	.text
 

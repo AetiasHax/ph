@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/LinkStateInteract.inc"
+    .include "ov00/Player/LinkStateInteract.inc"
 
     .text
 
@@ -282,7 +282,7 @@ _020aa590:
 _020aa5a0:
 	ldr r0, _020aa78c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	ldr r1, _020aa790 ; =data_ov00_020e592c
 	mov r0, r4
 	mov r2, #1
@@ -345,7 +345,7 @@ _020aa674:
 _020aa684:
 	ldr r0, _020aa78c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	ldr r0, _020aa7a8 ; =data_027e0fe4
 	add r1, r4, #0x10
 	ldr r0, [r0]
@@ -406,7 +406,7 @@ _020aa74c:
 _020aa75c:
 	ldr r0, _020aa78c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	b _020aa778
 _020aa76c:
 	mov r0, r4
@@ -441,7 +441,7 @@ _ZN17LinkStateInteract12OnStateLeaveEi: ; 0x020aa7b0
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
 	beq _020aa7d4
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _020aa7d4:
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetGrabActorEv
@@ -810,7 +810,7 @@ _020aacf4:
 	ldr r0, _020ab3cc ; =data_027e0fb8
 	add r1, r4, #0x18
 	ldr r0, [r0]
-	bl func_ov00_020b05e8
+	bl _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 	cmp r0, #0
 	beq _020aad64
 _020aad3c:
@@ -831,7 +831,7 @@ _020aad64:
 	mov r2, r5
 	ldr r0, [r0]
 	add r1, r4, #0x18
-	bl func_ov00_020b049c
+	bl _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 	cmp r0, #0
 	beq _020aadb0
 _020aad88:
@@ -867,7 +867,7 @@ _020aadbc:
 	ldr r2, _020ab3cc ; =data_027e0fb8
 	ldr r1, [r0, #0xe0]
 	ldr r0, [r2]
-	bl func_ov00_020b0ad0
+	bl _ZN13PlayerControl18func_ov00_020b0ad0EP5Actor
 	cmp r0, #0
 	beq _020aae2c
 	mov r0, r4
@@ -897,12 +897,12 @@ _020aae54:
 	ldr r1, [r6, #0x12c]
 	ldr r0, [r0]
 	moveq r2, #0
-	bl func_ov00_020afe88
+	bl _ZN13PlayerControl18func_ov00_020afe88Eib
 	cmp r0, #0
 	bne _020aae90
 	ldr r0, _020ab3cc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	add sp, sp, #0xc8
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
@@ -999,7 +999,7 @@ _020aafd8:
 	bge _020aaff4
 	ldr r0, _020ab3cc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 _020aaff4:
 	add sp, sp, #0xc8
 	mov r0, #0
@@ -1120,7 +1120,7 @@ _020ab170:
 	strb r1, [r2, #0x79]
 	strb r1, [r2, #0x7b]
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, #3
 	str r0, [r4, #4]
 	ldr r1, [sp, #0x14]
@@ -1253,7 +1253,7 @@ _020ab38c:
 _020ab398:
 	ldr r0, _020ab3cc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	add sp, sp, #0xc8
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
@@ -1561,7 +1561,7 @@ _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p: ; 0x020ab770
 	mov r6, r0
 	ldr r0, [r2]
 	mov r5, r1
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	movs r4, r0
 	beq _020ab7a8
 	mov r0, r6

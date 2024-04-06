@@ -1,4 +1,4 @@
-    .include "ov00/Player/include/LinkStateRoll.inc"
+    .include "ov00/Player/LinkStateRoll.inc"
     .include "macros/function.inc"
 
     .text
@@ -117,7 +117,7 @@ _020ae7e8:
 _020ae8f0:
 	ldr r0, _020aeb18 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	ldr r1, _020aeb1c ; =data_ov00_020e6078
 	mov r0, r4
 	mov r2, #1
@@ -366,7 +366,7 @@ _ZN13LinkStateRoll8vfunc_20Ei: ; 0x020aec10
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	mov r1, r0
 	mov r0, r6
-	bl func_ov00_020b12d0
+	bl _ZN13PlayerControl18func_ov00_020b12d0EPs
 	cmp r0, #0
 	beq _020aecc8
 	mov r0, r5
@@ -421,12 +421,12 @@ _020aed08:
 	blt _020aed70
 	ldr r0, _020aed84 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, #0
 	ble _020aed70
 	ldr r0, _020aed84 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r2, #0
 	mov r1, r0
 	mov r0, r5
@@ -496,7 +496,7 @@ _020aee14:
 	bl func_ov05_0211139c
 	cmp r0, #0
 	bne _020aee48
-	bl _ZN13LinkStateRoll18func_ov00_020aeeacEv
+	bl _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 	cmp r0, #0
 	beq _020aee48
 	mov r0, #1
@@ -541,33 +541,6 @@ _ZN13LinkStateRoll18func_ov00_020aee84Ev: ; 0x020aee84
 	strgth r1, [r0, #0x12]
 	bx lr
 	arm_func_end _ZN13LinkStateRoll18func_ov00_020aee84Ev
-
-	.global _ZN13LinkStateRoll18func_ov00_020aeeacEv
-	arm_func_start _ZN13LinkStateRoll18func_ov00_020aeeacEv
-_ZN13LinkStateRoll18func_ov00_020aeeacEv: ; 0x020aeeac
-	ldr r0, _020aeef0 ; =data_027e077c
-	ldr r2, _020aeef4 ; =data_02056be4
-	ldr r1, [r0]
-	mov r3, r1
-	ldrb r1, [r2, r1]
-	tst r1, #1
-	bne _020aeed4
-	ldrb r1, [r2, r3]
-	tst r1, #4
-	beq _020aeedc
-_020aeed4:
-	mov r0, #0
-	bx lr
-_020aeedc:
-	ldr r0, [r0, #4]
-	cmp r3, r0
-	moveq r0, #1
-	movne r0, #0
-	bx lr
-	.align 2, 0
-	arm_func_end _ZN13LinkStateRoll18func_ov00_020aeeacEv
-_020aeef0: .word data_027e077c
-_020aeef4: .word data_02056be4
 
     .data
 	.global data_ov00_020e6078

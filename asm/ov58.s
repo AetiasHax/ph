@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov58.inc"
+    .include "ov58.inc"
 
 	.text
 
@@ -306,7 +306,7 @@ func_ov58_0219906c: ; 0x0219906c
 	strh r1, [r0]
 	ldr r0, _02199158 ; =data_027e0fb8
 	ldr r0, [r0]
-	blx func_ov00_020b11dc
+	blx _ZN13PlayerControl14IsUntouchedNowEv
 	cmp r0, #0
 	bne _02199094
 	add r0, r5, #0

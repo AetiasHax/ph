@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/include/ov00_init.inc"
+    .include "ov00/ov00_init.inc"
 
 	.section .init, 4, 1, 4
 	.global func_ov00_020df338

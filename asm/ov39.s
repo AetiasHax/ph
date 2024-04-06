@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov39.inc"
+    .include "ov39.inc"
 
 	.text
 
@@ -7316,7 +7316,7 @@ func_ov39_02182284: ; 0x02182284
 	bl func_ov39_0217f278
 	ldr r0, _021823e8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	beq _021822c8
 	ldr r0, _021823ec ; =data_027e0fc8

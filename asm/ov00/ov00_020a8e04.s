@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/include/ov00_020a8e04.inc"
+    .include "ov00/ov00_020a8e04.inc"
 
     .text
 
@@ -227,7 +227,7 @@ func_ov00_020a9028: ; 0x020a9028
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
 	beq _020a904c
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _020a904c:
 	ldr r0, [r5, #4]
 	cmp r0, #6
@@ -351,7 +351,7 @@ func_ov00_020a9180: ; 0x020a9180
 	mov r0, r3
 	strb r2, [sp]
 	strb r2, [sp, #1]
-	bl func_ov00_020af01c
+	bl _ZN13PlayerControl18func_ov00_020af01cEPc
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -2387,3 +2387,29 @@ data_ov00_020e58e0: ; 0x020e58e0
 	.global data_ov00_020e58e4
 data_ov00_020e58e4: ; 0x020e58e4
     .word func_ov00_020a9eb4 - 1
+
+    .sbss
+	.global data_ov00_020ee178
+data_ov00_020ee178:
+	.space 0x4
+	.global data_ov00_020ee17c
+data_ov00_020ee17c:
+	.space 0x4
+	.global data_ov00_020ee180
+data_ov00_020ee180:
+	.space 0x4
+	.global data_ov00_020ee184
+data_ov00_020ee184:
+	.space 0x4
+	.global data_ov00_020ee188
+data_ov00_020ee188:
+	.space 0x4
+	.global data_ov00_020ee18c
+data_ov00_020ee18c:
+	.space 0x4
+	.global data_ov00_020ee190
+data_ov00_020ee190:
+	.space 0x4
+	.global data_ov00_020ee194
+data_ov00_020ee194:
+	.space 0x4

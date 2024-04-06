@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov56.inc"
+    .include "ov56.inc"
 
 	.text
 
@@ -316,7 +316,7 @@ func_ov56_021990c0: ; 0x021990c0
 	ldr r1, [r1, #8]
 	str r1, [r4, #0x4c]
 	ldr r0, [r0]
-	bl func_ov00_020b021c
+	bl _ZN13PlayerControl6SetAimEv
 	mov r0, #0
 	strb r0, [r4, #0x2a]
 	ldmia sp!, {r4, pc}
@@ -345,7 +345,7 @@ func_ov56_0219911c: ; 0x0219911c
 	ldr r0, _021992d0 ; =data_027e0fb8
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020af42c
+	bl _ZN13PlayerControl13CheckTouchingEj
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -371,7 +371,7 @@ _021991b0:
 	add r1, sp, #0x14
 	ldr r0, [r0]
 	add r2, r4, #0x44
-	bl func_ov00_020b0e54
+	bl _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 	cmp r0, #0
 	beq _02199210
 	mov r0, r4

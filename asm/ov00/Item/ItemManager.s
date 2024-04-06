@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Item/include/ItemManager.inc"
+    .include "ov00/Item/ItemManager.inc"
 
 	.text
 

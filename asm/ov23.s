@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov23.inc"
+    .include "ov23.inc"
 
 	.text
 
@@ -4876,7 +4876,7 @@ _02171510:
 	strh r4, [r0]
 	ldr r0, _02171698 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r7
 	bl func_ov23_0217216c
 	mov r0, r7
@@ -4943,7 +4943,7 @@ _02171614:
 	strh r4, [r0]
 	ldr r0, _02171698 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r7
 	bl func_ov23_0217216c
 	mov r0, r7
@@ -5043,7 +5043,7 @@ _02171788:
 	strh r4, [r0]
 	ldr r0, _0217180c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r5
 	bl func_ov23_0217216c
 	mov r0, r5
@@ -5201,11 +5201,11 @@ _021719b0:
 _02171a18:
 	ldr r0, _02172088 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	ldr r1, _02172088 ; =data_027e0fb8
 	mov r5, r0
 	ldr r0, [r1]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	mov r6, r0
 _02171a38:
 	ldr r0, _0217208c ; =0x0000059a
@@ -5434,7 +5434,7 @@ _02171d34:
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
 	beq _02171de0
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	cmp r0, #0
 	ldrne r1, [r0, #4]
 	ldrne r0, _021720ac ; =0x50574253
@@ -5452,7 +5452,7 @@ _02171d34:
 _02171dd4:
 	ldr r0, _02172088 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _02171de0:
 	mov r0, #0
 	strb r0, [r4, #0x2b]
@@ -5463,12 +5463,12 @@ _02171dec:
 	ldr r1, [r0, #0xa0]
 	cmp r1, #0
 	bne _02171e18
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	cmp r0, #0
 	bne _02171e18
 	ldr r0, _02172088 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _02171e18:
 	cmp r5, #0x7b
 	mov r0, r4
@@ -12742,7 +12742,7 @@ func_ov23_02177e24: ; 0x02177e24
 	ldr r1, [r1]
 	cmp r2, r1
 	blt _02177e50
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	ldr r1, _02177e5c ; =0x0000099a
 	cmp r0, r1
 	movge r0, #1

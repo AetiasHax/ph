@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/LinkStateBase.inc"
+    .include "ov00/Player/LinkStateBase.inc"
     
     .text
 
@@ -68,7 +68,7 @@ _020a8010: ; jump table
 _020a8030:
 	cmp r4, #0
 	beq _020a8048
-	bl _ZN13LinkStateRoll18func_ov00_020aeeacEv
+	bl _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
@@ -83,7 +83,7 @@ _020a8050:
 	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020a807c
-	bl _ZN13LinkStateRoll18func_ov00_020aeeacEv
+	bl _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
@@ -113,7 +113,7 @@ _020a80c8:
 	beq _020a80e8
 	ldr r0, _020a8104 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af4a4
+	bl _ZN13PlayerControl18func_ov00_020af4a4Ev
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}

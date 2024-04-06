@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov04.inc"
+    .include "ov04.inc"
 
 	.text
 
@@ -14962,7 +14962,7 @@ func_ov04_02107e9c: ; 0x02107e9c
 _02107ef6:
 	ldr r0, _02107f34 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020aef30
+	bl _ZN13PlayerControl18func_ov00_020aef30Ev
 	ldr r0, _02107f2c ; =gItemManager
 	ldr r0, [r0]
 	bl _ZN11ItemManager21ClearPrevEquippedItemEv

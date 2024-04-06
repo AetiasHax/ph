@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov19.inc"
+    .include "ov19.inc"
 
 	.text
 
@@ -10006,7 +10006,7 @@ func_ov19_02175a2c: ; 0x02175a2c
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x10
 	mov r4, r0
-	bl func_ov00_020aeef8
+	bl _ZN13PlayerControl18func_ov00_020aeef8Ev
 	cmp r0, #0
 	addeq sp, sp, #0x10
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -10019,7 +10019,7 @@ func_ov19_02175a2c: ; 0x02175a2c
 	ble _02175ae8
 	ldr r0, _02175c28 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	ldrnesh r0, [r4, #0x10]
 	mov r1, #0

@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov57.inc"
+    .include "ov57.inc"
 
 	.text
 
@@ -1360,7 +1360,7 @@ func_ov57_02199e64: ; 0x02199e64
 	mov r2, #0
 	ldr r0, [r0]
 	strb r2, [r1]
-	bl func_ov00_020b021c
+	bl _ZN13PlayerControl6SetAimEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov57_02199e64
@@ -1430,7 +1430,7 @@ _02199f58:
 	beq _02199fb8
 	ldr r0, _0219a1e8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldrb r0, [r4, #0x6a]
 	cmp r0, #0
 	beq _02199fb8
@@ -1458,7 +1458,7 @@ _02199fe4:
 	bne _0219a180
 	ldr r0, _0219a1e8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r6
 	bl func_ov14_02123960
 	mov r0, r5
@@ -1496,7 +1496,7 @@ _0219a07c:
 	ldr r0, _0219a1e8 ; =data_027e0fb8
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020af3fc
+	bl _ZN13PlayerControl17CheckUntouchedNowEj
 	cmp r0, #0
 	ldrneb r0, [r4, #0x68]
 	mov r1, #0
@@ -1525,7 +1525,7 @@ _0219a0d4:
 	ldr r0, _0219a1e8 ; =data_027e0fb8
 	add r1, sp, #0x2c
 	ldr r0, [r0]
-	bl func_ov00_020b1058
+	bl _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 	cmp r0, #0
 	beq _0219a168
 	add r1, sp, #0x2c
@@ -1624,7 +1624,7 @@ func_ov57_0219a208: ; 0x0219a208
 	ldr r1, _0219a320 ; =data_027e0fb8
 	str r2, [r0, #8]
 	ldr r0, [r1]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
 	mov r1, #0
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
@@ -1670,7 +1670,7 @@ _0219a2b4:
 _0219a300:
 	ldr r0, _0219a320 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
 	mov r1, #0
 	bl _ZN13LinkStateBase15ChangeLinkStateEi

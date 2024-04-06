@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov53.inc"
+    .include "ov53.inc"
 
 	.text
 
@@ -833,7 +833,7 @@ func_ov53_02199730: ; 0x02199730
 	ldr r1, [r1, #8]
 	str r1, [r4, #0x4c]
 	ldr r0, [r0]
-	bl func_ov00_020b021c
+	bl _ZN13PlayerControl6SetAimEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov53_02199730
@@ -860,7 +860,7 @@ func_ov53_0219977c: ; 0x0219977c
 	ldr r0, [r0]
 	add r3, r5, #0x44
 	mov r2, #0x800
-	bl func_ov00_020b0f88
+	bl _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
 	cmp r0, #0
 	beq _0219980c
 	ldr r0, [r4, #0x1c]
@@ -884,7 +884,7 @@ _021997ec:
 _0219980c:
 	ldr r0, _021999fc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b11dc
+	bl _ZN13PlayerControl14IsUntouchedNowEv
 	cmp r0, #0
 	beq _02199850
 	ldr r0, [r4, #0x1c]
@@ -955,7 +955,7 @@ _0219990c:
 	beq _02199938
 	ldr r0, _021999fc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r5
 	bl func_ov05_02105d94
 	add sp, sp, #0x44

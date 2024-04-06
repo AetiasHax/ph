@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov05.inc"
+    .include "ov05.inc"
 
 	.text
 
@@ -5965,7 +5965,7 @@ func_ov05_02105850: ; 0x02105850
 	ldr r0, _02105bf0 ; =data_027e0fb8
 	strb r1, [r6, #0x25]
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r4
 	bl func_ov00_020bf028
 	cmp r0, #0
@@ -6041,12 +6041,12 @@ _02105968:
 	beq _02105b6c
 	ldr r0, _02105bf0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	cmp r0, #0
 	beq _021059e0
 	ldr r0, _02105bf0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	mov r5, r0
 	mov r0, r6
 	bl _ZN13LinkStateBase12GetPlayerPosEv
@@ -6480,7 +6480,7 @@ _02105f4c:
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 	ldr r0, _021065f0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	ldr r1, _021065f4 ; =0x00000ccd
 	cmp r0, r1
 	blt _02105fd8
@@ -6840,7 +6840,7 @@ _021064e0:
 _021064f4:
 	ldr r0, _021065f0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r7, r0
 	mov r0, r4
 	bl _ZN13LinkStateBase18func_ov00_020a8c64Ev
@@ -6853,7 +6853,7 @@ _021064f4:
 	ble _0210653c
 	ldr r0, _021065f0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	mov r1, r0
 	b _02106554
 _0210653c:
@@ -7042,7 +7042,7 @@ func_ov05_02106740: ; 0x02106740
 	mov r0, r7
 	add r3, r6, #0x1c
 	str ip, [sp]
-	bl func_ov00_020b0b0c
+	bl _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb
 	cmp r0, #0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r4, r5, r6, r7, pc}
@@ -7248,7 +7248,7 @@ func_ov05_02106a50: ; 0x02106a50
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
 	beq _02106a84
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _02106a84:
 	mov r0, #4
 	bl func_01fffcd8
@@ -7360,7 +7360,7 @@ func_ov05_02106bbc: ; 0x02106bbc
 	ldr r0, _02106c6c ; =data_027e0fb8
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020af01c
+	bl _ZN13PlayerControl18func_ov00_020af01cEPc
 	cmp r0, #0
 	beq _02106c64
 	mov r0, r5
@@ -7547,7 +7547,7 @@ _02106e0c:
 	blt _02106ee0
 	ldr r0, _021071dc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	ldr r1, _021071e0 ; =0x00000ccd
 	cmp r0, r1
 	blt _02106eac
@@ -7754,7 +7754,7 @@ _02107188:
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
 	mov r0, r4
-	bl func_ov00_020b014c
+	bl _ZN13PlayerControl18func_ov00_020b014cEv
 	ldr r0, _021071f4 ; =data_027e103c
 	mov r1, #1
 	ldr r0, [r0]
@@ -7807,7 +7807,7 @@ func_ov05_02107214: ; 0x02107214
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #1
-	bl func_ov00_020af454
+	bl _ZN13PlayerControl14CheckTouchFastEj
 	cmp r0, #0
 	movne r0, #5
 	strneh r0, [r4, #0xe]
@@ -7922,7 +7922,7 @@ func_ov05_021073b8: ; 0x021073b8
 	ldr r1, _0210759c ; =data_027e0fb8
 	mov r5, r0
 	ldr r0, [r1]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r4, r0
 	cmp r4, #0
 	ble _02107430
@@ -7931,7 +7931,7 @@ func_ov05_021073b8: ; 0x021073b8
 	ldr r1, _0210759c ; =data_027e0fb8
 	ldr r6, [r0]
 	ldr r0, [r1]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	smull r1, r2, r4, r6
 	adds r3, r1, #0x800
 	mov r1, r0
@@ -7999,7 +7999,7 @@ _021074c8:
 	bl _ZN13LinkStateBase6TurnToEsii
 	ldr r0, _0210759c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	sub r0, r0, r6
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
@@ -8255,7 +8255,7 @@ func_ov05_02107880: ; 0x02107880
 	mov r5, r0
 	ldr r0, [r1]
 	mov r1, #1
-	bl func_ov00_020af454
+	bl _ZN13PlayerControl14CheckTouchFastEj
 	cmp r0, #0
 	beq _021078b4
 	mov r0, r5
@@ -8350,7 +8350,7 @@ _021079d0:
 	ble _02107a08
 	ldr r0, _02107b64 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	beq _02107b1c
 	ldrsh r1, [r4, #0x10]
@@ -8857,7 +8857,7 @@ func_ov05_02108094: ; 0x02108094
 	ldr r0, _02108184 ; =data_027e0fb8
 	mov r1, #1
 	ldr r0, [r0]
-	bl func_ov00_020af454
+	bl _ZN13PlayerControl14CheckTouchFastEj
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
@@ -9572,7 +9572,7 @@ func_ov05_021089f4: ; 0x021089f4
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	ldr r0, _02108ce0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	ldr r0, [r4, #0x74]
 	cmp r0, #0x87
 	bne _02108a70
@@ -9962,7 +9962,7 @@ func_ov05_02108f38: ; 0x02108f38
 	ldmgeia sp!, {r4, pc}
 	ldr r0, _02108f94 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b1214
+	bl _ZN13PlayerControl17IsNotUntouchedNowEv
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 _02108f88:
@@ -11142,7 +11142,7 @@ _02109f78:
 func_ov05_02109f88: ; 0x02109f88
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020aeef8
+	bl _ZN13PlayerControl18func_ov00_020aeef8Ev
 	cmp r0, #0
 	beq _02109fdc
 	ldrsh r0, [r4, #0x7e]
@@ -12432,7 +12432,7 @@ _0210ae98:
 	add r1, sp, #0x1c
 	add r3, sp, #8
 	mov r0, r6
-	bl func_ov00_020b0778
+	bl _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 	cmp r0, #0
 	beq _0210b244
 	ldr r1, [sp, #8]
@@ -12548,7 +12548,7 @@ func_ov05_0210b2a4: ; 0x0210b2a4
 _0210b2fc:
 	ldr r0, _0210b3b4 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0ab4
+	bl _ZN13PlayerControl16CheckNotTouchingEv
 	cmp r0, #0
 	bne _0210b324
 	ldr r0, _0210b3b8 ; =data_027e0f74
@@ -12784,7 +12784,7 @@ _0210b5f4:
 _0210b608:
 	ldr r0, _0210b95c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r5
 	bl _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 	ldr r1, _0210b960 ; =data_ov05_02112984
@@ -12807,7 +12807,7 @@ _0210b634:
 	ldr r1, _0210b95c ; =data_027e0fb8
 	strh r2, [r0]
 	ldr r0, [r1]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	ldr r1, _0210b964 ; =data_ov05_021129f4
 	mov r0, r5
 	mov r2, #1
@@ -12817,7 +12817,7 @@ _0210b634:
 _0210b684:
 	ldr r0, _0210b95c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	ldr r1, _0210b968 ; =data_027e0e60
 	add r0, sp, #0x12
 	ldr r4, [r1]
@@ -12898,7 +12898,7 @@ _0210b79c:
 _0210b7b0:
 	ldr r0, _0210b95c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	bl func_020385b8
 	add r1, r5, #0x24
 	bl _ZN17LinkStateInteract18func_ov00_020ab97cEP5Vec3p
@@ -13156,7 +13156,7 @@ _0210bb10:
 	ldmeqia sp!, {r3, r4, pc}
 	ldr r0, _0210bb4c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r4
 	mov r1, #0
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
@@ -13239,7 +13239,7 @@ _0210bc18:
 	add r1, sp, #0x20
 	add r3, sp, #4
 	mov r0, r6
-	bl func_ov00_020b0778
+	bl _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 	cmp r0, #0
 	beq _0210bccc
 	mov r0, #0x1000
@@ -13359,7 +13359,7 @@ _0210bdd8:
 _0210bdec:
 	ldr r0, _0210bf44 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0ab4
+	bl _ZN13PlayerControl16CheckNotTouchingEv
 	cmp r0, #0
 	bne _0210be14
 	ldr r0, _0210bf48 ; =data_027e0f74
@@ -13523,7 +13523,7 @@ _0210c004:
 _0210c040:
 	ldr r0, _0210c200 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, #0xcd
 	addle sp, sp, #0x14
 	ldmleia sp!, {r4, r5, r6, r7, r8, sb, pc}
@@ -13533,7 +13533,7 @@ _0210c040:
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	mov r5, r0
 	mov r0, r6
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	strh r0, [r5]
 	bl func_ov05_0210b96c
 	bl func_ov14_0213d420
@@ -13546,7 +13546,7 @@ _0210c040:
 	beq _0210c19c
 	ldr r0, _0210c200 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	ldrsh r1, [r4, #0x16]
 	sub r0, r1, r0
 	mov r0, r0, lsl #0x10
@@ -13611,7 +13611,7 @@ _0210c040:
 _0210c19c:
 	ldr r0, _0210c200 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b13c4
+	bl _ZN13PlayerControl18func_ov00_020b13c4Ev
 	cmp r0, #0
 	addeq sp, sp, #0x14
 	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, pc}
@@ -13659,7 +13659,7 @@ func_ov05_0210c20c: ; 0x0210c20c
 	add r1, sp, #8
 	strb r2, [sp, #8]
 	strb r2, [sp, #9]
-	bl func_ov00_020af01c
+	bl _ZN13PlayerControl18func_ov00_020af01cEPc
 	cmp r0, #0
 	beq _0210c2a8
 	ldr r0, _0210c950 ; =data_027e0e60
@@ -13787,12 +13787,12 @@ _0210c3f8:
 	ldr r0, [r0]
 	moveq r2, #0
 	mov r1, r6
-	bl func_ov00_020afeec
+	bl _ZN13PlayerControl18func_ov00_020afeecEib
 	cmp r0, #0
 	bne _0210c454
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	add sp, sp, #0x78
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -13829,7 +13829,7 @@ _0210c4b4:
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	add sp, sp, #0x78
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -13839,7 +13839,7 @@ _0210c4d8:
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	ldr r1, [r7, #0x24]
 	ldr r0, _0210c950 ; =data_027e0e60
 	str r1, [sp, #0x3c]
@@ -13994,7 +13994,7 @@ _0210c680:
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	add sp, sp, #0x78
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -14011,7 +14011,7 @@ _0210c738:
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	mov r0, r7
 	add r2, r7, #0x24
 	mov r1, #0
@@ -14032,7 +14032,7 @@ _0210c788:
 _0210c7a8:
 	ldr r0, _0210c94c ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af044
+	bl _ZN13PlayerControl9SetUnk_80Ev
 	bl func_020385b8
 	add r1, r5, #0x18
 	bl _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
@@ -14131,7 +14131,7 @@ _0210c88c:
 	ldr r0, [r1]
 	sub r1, r3, r2
 	str r1, [sp, #0x50]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	add sp, sp, #0x78
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -16237,7 +16237,7 @@ func_ov05_0210e4e4: ; 0x0210e4e4
 	ldr r0, _0210e878 ; =data_027e0fb8
 	mov r1, r2
 	ldr r0, [r0]
-	bl func_ov00_020af538
+	bl _ZN13PlayerControl18func_ov00_020af538Ev
 	ldr r1, _0210e878 ; =data_027e0fb8
 	mov r0, r6
 	ldr r4, [r1]
@@ -16246,7 +16246,7 @@ func_ov05_0210e4e4: ; 0x0210e4e4
 	moveq r1, #1
 	movne r1, #0
 	mov r0, r4
-	bl func_ov00_020afb6c
+	bl _ZN13PlayerControl18func_ov00_020afb6cEv
 _0210e52c:
 	mov r0, r6
 	mov r1, r5
@@ -16799,7 +16799,7 @@ _0210ecd0:
 	ldmltia sp!, {r4, r5, r6, pc}
 	ldr r0, _0210f688 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	ldr r1, _0210f68c ; =0x00000ccd
 	cmp r0, r1
 	addlt sp, sp, #0x20
@@ -16945,7 +16945,7 @@ _0210eedc:
 	ldr r1, _0210f688 ; =data_027e0fb8
 	str r2, [r0, #0x24]
 	ldr r0, [r1]
-	bl func_ov00_020b134c
+	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
 	bne _0210ef34
 	mov r0, r6
@@ -17424,7 +17424,7 @@ _0210f5d8:
 	ldr r1, _0210f688 ; =data_027e0fb8
 	strb r2, [r0, #0xbe]
 	ldr r0, [r1]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r6
 	mov r1, #0
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
@@ -17647,7 +17647,7 @@ _0210f884:
 	ble _0210f89c
 	ldr r0, _021101d8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0328
+	bl _ZN13PlayerControl13GetTouchAngleEv
 	mov r5, r0
 _0210f89c:
 	ldr r0, [sl, #8]
@@ -17770,7 +17770,7 @@ _0210fa38:
 	ldr r0, _021101d8 ; =data_027e0fb8
 	mov r1, r6
 	ldr r0, [r0]
-	bl func_ov00_020afad8
+	bl _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 	cmp r0, #0
 	beq _0210fc30
 _0210fa80:
@@ -17888,7 +17888,7 @@ _0210fc04:
 _0210fc30:
 	ldr r0, _021101d8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	mov sb, #0
 	b _0210fc74
 _0210fc44:
@@ -17898,7 +17898,7 @@ _0210fc44:
 	beq _0210fc74
 	ldr r0, _021101d8 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b129c
+	bl _ZN13PlayerControl18func_ov00_020b129cEv
 	mov r3, r0
 	mov r0, sl
 	mov r1, sb
@@ -18258,7 +18258,7 @@ _0211016c:
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
 	mov r0, r5
-	bl func_ov00_020b014c
+	bl _ZN13PlayerControl18func_ov00_020b014cEv
 _021101a8:
 	ldr r0, _0211021c ; =data_027e103c
 	mov r1, #1
@@ -19745,7 +19745,7 @@ _02111594:
 	beq _021116a4
 	ldr r0, _02111a68 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b0418
+	bl _ZN13PlayerControl18func_ov00_020b0418Ev
 	mov r7, r0
 	mov r0, r5
 	bl func_ov00_020a8f2c
@@ -19849,12 +19849,12 @@ _021116a4:
 _02111734:
 	ldr r0, _02111a68 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	b _02111960
 _02111744:
 	ldr r0, _02111a68 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r6, #0
 	movne r3, #1
 	mov r1, r0
@@ -20086,7 +20086,7 @@ func_ov05_02111a98: ; 0x02111a98
 	ldr r1, _02111af4 ; =data_027e0fb8
 	mov r4, r0
 	ldr r0, [r1]
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	cmp r0, #0
 	bne _02111aec
 	ldr r0, _02111af4 ; =data_027e0fb8

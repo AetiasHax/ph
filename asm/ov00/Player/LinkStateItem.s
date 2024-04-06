@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "ov00/Player/include/LinkStateItem.inc"
+    .include "ov00/Player/LinkStateItem.inc"
 
     .text
 
@@ -150,7 +150,7 @@ _020abf20:
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
 	beq _020abf38
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _020abf38:
 	mov r0, #0
 	strb r0, [r5, #0x26]

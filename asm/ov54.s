@@ -1,5 +1,5 @@
     .include "macros/function.inc"
-    .include "include/ov54.inc"
+    .include "ov54.inc"
 
 	.text
 
@@ -70,7 +70,7 @@ func_ov54_02198d68: ; 0x02198d68
 	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, _02198e00 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	ldr r1, _02198e00 ; =data_027e0fb8
 	cmp r5, #0
 	ldr r1, [r1]
@@ -389,7 +389,7 @@ _021991a8:
 	ldrb r1, [r2, #0x79]
 	strb r1, [r2, #0x7b]
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 	ldr r0, _021992c4 ; =gItemManager
 	ldr r4, [r0]
 	mov r0, r4
@@ -414,19 +414,19 @@ _0219920c:
 _02199218:
 	ldr r0, _021992c0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020aeffc
+	bl _ZN13PlayerControl14GetFollowActorEv
 	cmp r0, #0
 	beq _02199244
 	ldr r0, _021992c0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af298
+	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	add sp, sp, #0x30
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _02199244:
 	ldr r0, _021992c0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, r4
 	blt _02199284
 	ldr r0, [r7, #0x58]
@@ -434,7 +434,7 @@ _02199244:
 	bne _02199284
 	ldr r0, _021992c0 ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020b034c
+	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r2, #0
 	mov r1, r0
 	mov r0, r7
@@ -830,7 +830,7 @@ func_ov54_021997f0: ; 0x021997f0
 	ldr r4, [r0, #0xa0]
 	strb r2, [sp]
 	strb r2, [sp, #1]
-	bl func_ov00_020af01c
+	bl _ZN13PlayerControl18func_ov00_020af01cEPc
 	cmp r0, #0
 	beq _02199898
 	ldr r0, _021998d0 ; =data_027e0e60
@@ -863,7 +863,7 @@ _02199884:
 	beq _02199898
 	ldr r0, _021998cc ; =data_027e0fb8
 	ldr r0, [r0]
-	bl func_ov00_020af050
+	bl _ZN13PlayerControl13StopFollowingEv
 _02199898:
 	ldr r0, _021998cc ; =data_027e0fb8
 	ldr r3, [r0]
