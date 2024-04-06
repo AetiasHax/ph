@@ -26,4 +26,7 @@ public:
     /* 24 */ virtual bool vfunc_24(s32 param1) override;
     /* 3c */ virtual bool vfunc_3c() override;
     /* 44 */
+
+    bool func_ov00_020a8f2c();
+    bool func_ov00_020a8f4c();
 };

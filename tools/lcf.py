@@ -34,6 +34,8 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/Player/PlayerBase.s',
     'src/00_Core/Player/LinkStateBase.cpp',
     'asm/ov00/Player/LinkStateBase.s',
+    'src/00_Core/Player/LinkStateMove.cpp',
+    'asm/ov00/Player/LinkStateMove.s',
 
     'asm/ov00/ov00_020a8e04.s',
 

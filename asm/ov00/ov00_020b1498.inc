@@ -46,6 +46,8 @@
 .extern _ZN13LinkStateBase8vfunc_34EP5Vec3p
 .extern _ZN13LinkStateItem16GetLinkStateMoveEv
 .extern _ZN13LinkStateItem16IsHammerEquippedEv
+.extern _ZN13LinkStateMove18func_ov00_020a8f2cEv
+.extern _ZN13LinkStateMove18func_ov00_020a8f4cEv
 .extern _ZN13PlayerControl13GetTouchAngleEv
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern _ZN13PlayerControl18func_ov00_020aeef8Ev
@@ -497,8 +499,6 @@
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5ef8
 .extern func_ov00_020a6110
-.extern func_ov00_020a8f2c
-.extern func_ov00_020a8f4c
 .extern func_ov00_020a914c
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588

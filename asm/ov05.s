@@ -19748,7 +19748,7 @@ _02111594:
 	bl _ZN13PlayerControl18func_ov00_020b0418Ev
 	mov r7, r0
 	mov r0, r5
-	bl func_ov00_020a8f2c
+	bl _ZN13LinkStateMove18func_ov00_020a8f2cEv
 	cmp r0, #0
 	bne _021115cc
 	cmp r7, #0

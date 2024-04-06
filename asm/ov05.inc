@@ -74,6 +74,7 @@
 .extern _ZN13LinkStateBase9AddHealthEs
 .extern _ZN13LinkStateBase9GetHealthEv
 .extern _ZN13LinkStateItem18func_ov00_020abf70Ev
+.extern _ZN13LinkStateMove18func_ov00_020a8f2cEv
 .extern _ZN13LinkStateRoll18func_ov00_020aee58Est
 .extern _ZN13LinkStateRoll18func_ov00_020aee84Ev
 .extern _ZN13PlayerControl13GetTouchAngleEv
@@ -392,7 +393,6 @@
 .extern func_ov00_020a4e30
 .extern func_ov00_020a4f38
 .extern func_ov00_020a5e9c
-.extern func_ov00_020a8f2c
 .extern func_ov00_020a8f80
 .extern func_ov00_020a9180
 .extern func_ov00_020a9210

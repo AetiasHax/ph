@@ -13029,27 +13029,27 @@ _020bb9c4: .word func_ov00_020b45e0
 	arm_func_start func_ov00_020bb9c8
 func_ov00_020bb9c8: ; 0x020bb9c8
 	ldr r0, _020bb9dc ; =data_027e0fdc
-	ldr ip, _020bb9e0 ; =func_ov00_020a8f2c
+	ldr ip, _020bb9e0 ; =_ZN13LinkStateMove18func_ov00_020a8f2cEv
 	ldr r0, [r0]
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020bb9c8
 _020bb9dc: .word data_027e0fdc
-_020bb9e0: .word func_ov00_020a8f2c
+_020bb9e0: .word _ZN13LinkStateMove18func_ov00_020a8f2cEv
 
 	.global func_ov00_020bb9e4
 	arm_func_start func_ov00_020bb9e4
 func_ov00_020bb9e4: ; 0x020bb9e4
 	ldr r0, _020bb9f8 ; =data_027e0fdc
-	ldr ip, _020bb9fc ; =func_ov00_020a8f4c
+	ldr ip, _020bb9fc ; =_ZN13LinkStateMove18func_ov00_020a8f4cEv
 	ldr r0, [r0]
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_020bb9e4
 _020bb9f8: .word data_027e0fdc
-_020bb9fc: .word func_ov00_020a8f4c
+_020bb9fc: .word _ZN13LinkStateMove18func_ov00_020a8f4cEv
 
 	.global func_ov00_020bba00
 	arm_func_start func_ov00_020bba00
