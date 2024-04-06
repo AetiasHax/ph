@@ -17,6 +17,7 @@
 .extern _ZTV13LinkStateItem
 .extern _ZTV13LinkStateRoll
 .extern _ZTV15LinkStateDamage
+.extern _ZTV15LinkStateFollow
 .extern _ZTV17LinkStateInteract
 .extern data_02056924
 .extern data_02057200
@@ -130,7 +131,6 @@
 .extern data_ov00_020e5454
 .extern data_ov00_020e54a4
 .extern data_ov00_020e5700
-.extern data_ov00_020e57a4
 .extern data_ov00_020e5868
 .extern data_ov00_020e5878
 .extern data_ov00_020e6300

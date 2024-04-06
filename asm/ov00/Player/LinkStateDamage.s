@@ -569,12 +569,12 @@ _020ac64c:
 	bne _020ac698
 	ldr r0, _020ac7d8 ; =data_027e0c54
 	ldrb r5, [r0]
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	strb r5, [r0, #0xa7]
 	ldr r0, _020ac7dc ; =data_ov00_020eec68
 	bl func_ov00_020d7424
 	mov r5, r0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	str r5, [r0, #0x98]
 	ldr r0, _020ac7dc ; =data_ov00_020eec68
 	mov r1, #5

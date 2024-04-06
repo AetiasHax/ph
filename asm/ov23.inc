@@ -26,6 +26,7 @@
 .extern _ZN13PlayerControl18func_ov00_020b034cEv
 .extern _ZN13PlayerControl9SetUnk_80Ev
 .extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
+.extern _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
 .extern _ZN9SysObjectdlEPv
@@ -238,7 +239,6 @@
 .extern func_ov00_020a42cc
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a61ac
-.extern func_ov00_020a9180
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

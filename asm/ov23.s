@@ -5174,7 +5174,7 @@ _0217196c:
 _021719b0:
 	bl func_ov23_021720c4
 	add r1, sp, #0x28
-	bl func_ov00_020a9180
+	bl _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 	mov r5, r0
 	bl func_020385b8
 	add r1, sp, #0x28

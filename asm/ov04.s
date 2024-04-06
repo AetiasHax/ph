@@ -20864,7 +20864,7 @@ func_ov04_0210ad58: ; 0x0210ad58
 	push {r4, lr}
 	add r4, r0, #0
 	bl func_ov04_0210add4
-	ldr r0, _0210ad90 ; =data_ov00_020e57a4
+	ldr r0, _0210ad90 ; =_ZTV15LinkStateFollow
 	mov r1, #0
 	str r0, [r4]
 	str r1, [r4, #0xc]
@@ -20887,7 +20887,7 @@ func_ov04_0210ad58: ; 0x0210ad58
 	pop {r4, pc}
 	nop
 	thumb_func_end func_ov04_0210ad58
-_0210ad90: .word data_ov00_020e57a4
+_0210ad90: .word _ZTV15LinkStateFollow
 
 	.global func_ov04_0210ad94
 	thumb_func_start func_ov04_0210ad94

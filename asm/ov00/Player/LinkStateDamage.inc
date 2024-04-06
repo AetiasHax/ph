@@ -26,6 +26,7 @@
 .extern _ZN13LinkStateBase8vfunc_28Ev
 .extern _ZN13LinkStateBase8vfunc_34EP5Vec3p
 .extern _ZN13LinkStateItem15GetEquipBombchuEv
+.extern _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 .extern _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 .extern _ZNK11ItemManager15HasPurplePotionEv
 .extern _ZNK11ItemManager7HasItemEi
@@ -57,7 +58,6 @@
 .extern func_ov00_0209779c
 .extern func_ov00_02097ff4
 .extern func_ov00_020a5e9c
-.extern func_ov00_020a914c
 .extern func_ov00_020b7e6c
 .extern func_ov00_020c0e24
 .extern func_ov00_020c7764

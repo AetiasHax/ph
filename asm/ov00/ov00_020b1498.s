@@ -13118,7 +13118,7 @@ func_ov00_020bba80: ; 0x020bba80
 	cmp r0, #6
 	movne r0, #1
 	ldmneia sp!, {r3, pc}
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	bl func_ov00_020b1eec
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_020bba80
@@ -13228,7 +13228,7 @@ func_ov00_020bbb78: ; 0x020bbb78
 	bl func_ov00_020bc500
 	cmp r0, #6
 	beq _020bbbb0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r0, [r0, #0x38]
 	cmp r0, #0
 	movlt r0, #1
@@ -13823,12 +13823,12 @@ _020bc2e8: ; jump table
 	b _020bc2f8 ; case 2
 	b _020bc308 ; case 3
 _020bc2f8:
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r4
 	bl func_ov05_0210a0c0
 	ldmia sp!, {r4, pc}
 _020bc308:
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	bl func_ov22_02175958
 	mov r0, #1
 	ldmia sp!, {r4, pc}
@@ -13849,7 +13849,7 @@ func_ov00_020bc320: ; 0x020bc320
 	mov r5, r3
 	bl func_ov00_020b1d70
 	mov r4, r0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r4
 	mov r2, r6
 	mov r3, r5
@@ -14391,7 +14391,7 @@ func_ov00_020bc960: ; 0x020bc960
 	ldr r0, [r0]
 	bl func_ov00_020c35d8
 	mov r4, r0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r6
 	mov r2, r5
 	mov r3, r4
@@ -14511,7 +14511,7 @@ _020bcb44:
 	mov r0, r7
 	mov r1, r6
 	bl func_ov00_020bc8b8
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020b38dc
@@ -14777,7 +14777,7 @@ func_ov00_020bce48: ; 0x020bce48
 	bl func_020385b8
 	bl _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 _020bce9c:
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r4
 	bl func_ov05_021096bc
 	cmp r0, #0
@@ -14797,7 +14797,7 @@ func_ov00_020bcec8: ; 0x020bcec8
 	bl func_ov00_020bc500
 	cmp r0, #6
 	bne _020bcef4
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, [r0, #4]
 	mov r0, #1
 	cmp r1, #0xa
@@ -14817,7 +14817,7 @@ func_ov00_020bcefc: ; 0x020bcefc
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r0, [r0, #0x74]
 	blx _ZN4Item18func_ov00_020ad068Ei
 	cmp r0, #0
@@ -14834,7 +14834,7 @@ func_ov00_020bcf2c: ; 0x020bcf2c
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r0, [r0, #0x74]
 	blx _ZN4Item18func_ov00_020ad068Ei
 	ldmia sp!, {r3, pc}
@@ -14847,7 +14847,7 @@ func_ov00_020bcf50: ; 0x020bcf50
 	mov r5, r1
 	mov r4, r2
 	mov r6, r0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020b3024
@@ -14865,7 +14865,7 @@ func_ov00_020bcf84: ; 0x020bcf84
 	mov r5, r1
 	mov r4, r2
 	mov r6, r0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020b305c
@@ -14886,21 +14886,21 @@ func_ov00_020bcfb8: ; 0x020bcfb8
 	beq _020bd01c
 	cmp r4, #0
 	beq _020bcff4
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, _020bd024 ; =data_ov00_020e6298
 	mov r2, #0
 	bl func_ov00_020b2f48
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r1, #1
 	strb r1, [r0, #0xaa]
 	b _020bd004
 _020bcff4:
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, _020bd028 ; =data_ov00_020e6288
 	mov r2, #0
 	bl func_ov00_020b2f48
 _020bd004:
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, _020bd02c ; =0x0000011d
 	mov r2, #3
 	bl func_ov00_020b2ce4
@@ -14923,7 +14923,7 @@ func_ov00_020bd030: ; 0x020bd030
 	mov r4, r1
 	bl func_020385b8
 	bl _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	mov r2, r4
 	ldr r1, _020bd06c ; =data_ov00_020e62a8
 	mov r3, #0
@@ -14943,7 +14943,7 @@ func_ov00_020bd070: ; 0x020bd070
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, _020bd0a4 ; =data_ov00_020e62b8
 	mov r2, r4
 	mov r3, #1
@@ -14961,7 +14961,7 @@ _020bd0a4: .word data_ov00_020e62b8
 	arm_func_start func_ov00_020bd0a8
 func_ov00_020bd0a8: ; 0x020bd0a8
 	stmdb sp!, {r3, lr}
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	bl func_ov00_020b2f9c
 	mov r0, #1
 	ldmia sp!, {r3, pc}
@@ -15096,7 +15096,7 @@ func_ov00_020bd268: ; 0x020bd268
 	ldr r0, [r0, #4]
 	cmp r0, #0xc
 	bne _020bd2b0
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r1, [r0, #4]
 	cmp r1, #0xc
 	bne _020bd2ac
@@ -15128,7 +15128,7 @@ func_ov00_020bd2bc: ; 0x020bd2bc
 _020bd2e4:
 	cmp r5, #0
 	bne _020bd2fc
-	bl func_ov00_020a914c
+	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r0, [r0, #0x38]
 	cmp r0, #0
 	movlt r4, #0

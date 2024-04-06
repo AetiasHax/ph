@@ -5,7 +5,9 @@
 
 #include "lib/math.h"
 
+#include "Actor/Actor.hpp"
 #include "Player/LinkStateBase.hpp"
+#include "Player/LinkStateCutscene.hpp"
 
 class LinkStateFollow : public LinkStateBase {
 public:
@@ -31,4 +33,9 @@ public:
     /* 2c */ virtual void vfunc_2c(u16 *param1) override;
     /* 34 */ virtual bool vfunc_34(Vec3p *param1) override;
     /* 44 */
+
+    void MoveTowardTarget();
+    LinkStateCutscene* GetLinkStateCutscene();
+    bool func_ov00_020a9180(Vec3p *param1);
+    bool func_ov00_020a9210(Vec3p *param1, Actor *param2);
 };

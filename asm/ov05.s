@@ -13482,7 +13482,7 @@ func_ov05_0210bf50: ; 0x0210bf50
 	bl func_ov05_02110228
 	bl func_ov05_0210aaf8
 	add r1, sp, #8
-	bl func_ov00_020a9180
+	bl _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 	mov r5, r0
 	bl func_020385b8
 	add r1, sp, #8
@@ -13761,7 +13761,7 @@ _0210c398:
 	add r1, sp, #0x54
 	mov r0, r7
 	mov r2, r5
-	bl func_ov00_020a9210
+	bl _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 	mov r0, r7
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
@@ -18069,7 +18069,7 @@ _0210fed4:
 	b _0210feec
 _0210fee4:
 	bl func_ov05_0210aaf8
-	bl func_ov00_020a8f80
+	bl _ZN15LinkStateFollow16MoveTowardTargetEv
 _0210feec:
 	mov r0, sl
 	bl _ZN13LinkStateBase19GetCurrentCharacterEv
@@ -19628,7 +19628,7 @@ func_ov05_021113dc: ; 0x021113dc
 	mov r6, r0
 	bl func_ov05_0210aaf8
 	add r1, sp, #0x4c
-	bl func_ov00_020a9180
+	bl _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 	mov r7, r0
 	bl func_020385b8
 	add r1, sp, #0x4c

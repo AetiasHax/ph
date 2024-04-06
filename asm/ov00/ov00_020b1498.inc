@@ -54,6 +54,7 @@
 .extern _ZN13PlayerControl18func_ov00_020b034cEv
 .extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 .extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
+.extern _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 .extern _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 .extern _ZN17LinkStateInteract16GetLinkStateRollEv
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
@@ -499,7 +500,6 @@
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a5ef8
 .extern func_ov00_020a6110
-.extern func_ov00_020a914c
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

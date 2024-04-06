@@ -393,9 +393,9 @@
 .extern func_ov00_020a4e30
 .extern func_ov00_020a4f38
 .extern func_ov00_020a5e9c
-.extern func_ov00_020a8f80
-.extern func_ov00_020a9180
-.extern func_ov00_020a9210
+.extern _ZN15LinkStateFollow16MoveTowardTargetEv
+.extern _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
+.extern _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
 .extern func_ov00_020a990c
