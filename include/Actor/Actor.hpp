@@ -20,7 +20,8 @@ public:
     /* 014 */ unk32 mUnk_014;
     /* 018 */ unk32 mUnk_018;
     /* 01c */ unk32 mUnk_01c;
-    /* 020 */ unk8 mUnk_020[0x14];
+    /* 020 */ unk32 mUnk_020;
+    /* 024 */ unk8 mUnk_024[0x10];
     /* 034 */ unk32 mUnk_034;
     /* 038 */ unk32 mUnk_038;
     /* 03c */ unk32 mUnk_03c;
