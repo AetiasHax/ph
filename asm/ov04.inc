@@ -6,6 +6,7 @@
 .extern _ZN11ItemManager6CreateEv
 .extern _ZN11ItemManager7DestroyEv
 .extern _ZN12TouchControlC2Ev
+.extern _ZN12TouchGestureC2Ev
 .extern _ZN13PlayerControl18func_ov00_020aef30Ev
 .extern _ZN14OverlayManager4LoadEjj
 .extern _ZN14OverlayManager6UnloadEj
@@ -527,7 +528,6 @@
 .extern func_ov00_020a731c
 .extern func_ov00_020a7344
 .extern func_ov00_020a7648
-.extern func_ov00_020a92a4
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

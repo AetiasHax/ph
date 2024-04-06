@@ -21343,7 +21343,7 @@ func_ov04_0210afdc: ; 0x0210afdc
 	blx _ZN9SysObjectnwEmPjj
 	cmp r0, #0
 	beq _0210b0da
-	blx func_ov00_020a92a4
+	blx _ZN12TouchGestureC2Ev
 _0210b0da:
 	add r1, r4, #0
 	add r1, #0xd0

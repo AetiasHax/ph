@@ -9,7 +9,6 @@
 .extern data_027e045c
 .extern data_027e0468
 .extern data_027e0ce0
-.extern data_027e0d78
 .extern data_ov00_020e9360
 .extern func_01ff80d4
 .extern func_01ff81f8

@@ -38,6 +38,8 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/Player/LinkStateMove.s',
     'src/00_Core/Player/LinkStateFollow.cpp',
     'asm/ov00/Player/LinkStateFollow.s',
+    'src/00_Core/Player/TouchGesture.cpp',
+    'asm/ov00/Player/TouchGesture.s',
 
     'asm/ov00/ov00_020a8e04.s',
 
