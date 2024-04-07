@@ -96,10 +96,10 @@ public:
     /* 08 */ virtual bool vfunc_08();
     /* 0c */ virtual void vfunc_0c();
     /* 10 */ virtual void vfunc_10();
-    /* 14 */ virtual void vfunc_14(u32 param1, unk32 param2, unk32 param3);
-    /* 18 */ virtual void vfunc_18(u32 param1, unk32 param2, unk32 param3);
+    /* 14 */ virtual void vfunc_14(u32 param1);
+    /* 18 */ virtual void vfunc_18(u32 param1);
     /* 1c */ virtual void vfunc_1c(u16 param1);
-    /* 20 */ virtual void vfunc_20(u32 param1, unk32 param2, unk32 param3);
+    /* 20 */ virtual void vfunc_20(s32 param1);
     /* 24 */ virtual void vfunc_24();
     /* 28 */ virtual void vfunc_28();
     /* 2c */ virtual s32 vfunc_2c();

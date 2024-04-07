@@ -232,5 +232,5 @@
 .extern func_ov00_020d7c6c
 .extern func_ov00_020d7d18
 .extern func_ov05_02102c2c
-.extern func_ov14_0213b5f4
+.extern _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 .extern gItemManager

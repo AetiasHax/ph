@@ -2056,7 +2056,7 @@ _02197158:
 	mov r1, #0
 	sub r0, r0, #1
 	mov r3, #1
-	bl func_ov14_0213b5f4
+	bl _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 	b _021971bc
 _02197180:
 	bl func_02018450
@@ -2073,7 +2073,7 @@ _02197180:
 	add r2, sp, #0x18
 	mov r3, r1
 	sub r0, r0, #1
-	bl func_ov14_0213b5f4
+	bl _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 _021971bc:
 	mov r0, #1
 	add sp, sp, #0x60
