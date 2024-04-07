@@ -100,7 +100,12 @@ ov13 = Overlay(name='ov13', after=[ov04, ov05, ov06, ov07], objects=[
     'asm/ov13.s'
 ])
 ov14 = Overlay(name='ov14', after=[ov08, ov09, ov10, ov13], objects=[
-    'asm/ov14.s'
+    'asm/ov14/ov14_0211f640.s',
+
+    'src/14_Land/Actor/ActorRupee.cpp',
+    'asm/ov14/Actor/ActorRupee.s',
+
+    'asm/ov14/ov14_0213b778.s',
 ])
 ov15 = Overlay(name='ov15', after=[ov08, ov09, ov10, ov13], objects=[
     'asm/ov15.s'
