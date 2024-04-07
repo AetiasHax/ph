@@ -2,6 +2,9 @@
 
 #ifdef STUBS
 
+Resource ActorRupee::gResource;
+ActorType ActorRupee::gType;
+
 ActorRupee* ActorRupee::Create() {}
 ActorRupee::ActorRupee() {}
 bool ActorRupee::vfunc_08() {}

@@ -3515,7 +3515,7 @@ data_ov06_021031ac: ; 0x021031ac
     .word data_ov14_0215b1c0
 	.global data_ov06_021031b0
 data_ov06_021031b0: ; 0x021031b0
-    .word data_ov14_0215b200
+    .word _ZN10ActorRupee5gTypeE
 	.global data_ov06_021031b4
 data_ov06_021031b4: ; 0x021031b4
     .word data_ov17_0216cf0c ; data_ov18_0216cf0c

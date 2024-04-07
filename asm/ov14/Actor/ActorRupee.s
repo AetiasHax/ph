@@ -26,7 +26,7 @@ _ZN10ActorRupeeC2Ev: ; 0x0213ae98
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_ov00_020c1554
-	ldr r1, _0213aec8 ; =data_ov14_021589e4
+	ldr r1, _0213aec8 ; =_ZTV10ActorRupee
 	mov r0, #8
 	str r1, [r4]
 	str r0, [r4, #0x158]
@@ -37,7 +37,7 @@ _ZN10ActorRupeeC2Ev: ; 0x0213ae98
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end _ZN10ActorRupeeC2Ev
-_0213aec8: .word data_ov14_021589e4
+_0213aec8: .word _ZTV10ActorRupee
 
 	.global _ZN10ActorRupee8vfunc_08Ev
 	arm_func_start _ZN10ActorRupee8vfunc_08Ev
@@ -736,14 +736,14 @@ data_ov14_02153e28: ; 0x02153e28
 	arm_func_start func_ov14_0215517c
 func_ov14_0215517c: ; 0x0215517c
 	stmdb sp!, {r3, lr}
-	ldr r0, _021551bc ; =data_ov14_0215b200
+	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
 	ldr r1, _021551c0 ; =0x52555059
 	ldr r2, _021551c4 ; =_ZN10ActorRupee6CreateEv
 	mov r3, #0
 	bl func_0203e784
-	ldr r0, _021551bc ; =data_ov14_0215b200
+	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
 	ldr r1, _021551c8 ; =func_0203e7b4
-	ldr r2, _021551cc ; =data_ov14_0215b1f4
+	ldr r2, _021551cc ; =_ZN10ActorRupee9gResourceE
 	bl func_0204f8d4
 	ldr r2, _021551d0 ; =0x000003bb
 	ldr r0, _021551d4 ; =data_ov14_021589b4
@@ -753,11 +753,11 @@ func_ov14_0215517c: ; 0x0215517c
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov14_0215517c
-_021551bc: .word data_ov14_0215b200
+_021551bc: .word _ZN10ActorRupee5gTypeE
 _021551c0: .word 0x52555059
 _021551c4: .word _ZN10ActorRupee6CreateEv
 _021551c8: .word func_0203e7b4
-_021551cc: .word data_ov14_0215b1f4
+_021551cc: .word _ZN10ActorRupee9gResourceE
 _021551d0: .word 0x000003bb
 _021551d4: .word data_ov14_021589b4
 
@@ -829,14 +829,10 @@ data_ov14_021589d4: ; 0x021589d4
 	.global data_ov14_021589d8
 data_ov14_021589d8: ; 0x021589d8
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_021589dc
-data_ov14_021589dc: ; 0x021589dc
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_021589e0
-data_ov14_021589e0: ; 0x021589e0
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov14_021589e4
-data_ov14_021589e4: ; 0x021589e4
+	.global _ZTV10ActorRupee
+_ZTV10ActorRupee: ; 0x021589e4
     .word _ZN10ActorRupeeD2Ev
 	.global data_ov14_021589e8
 data_ov14_021589e8: ; 0x021589e8
@@ -972,9 +968,9 @@ data_ov14_02158a94: ; 0x02158a94
     .word func_ov00_020c322c
 
     .bss
-	.global data_ov14_0215b1f4
-data_ov14_0215b1f4:
+	.global _ZN10ActorRupee9gResourceE
+_ZN10ActorRupee9gResourceE:
 	.space 0xc
-	.global data_ov14_0215b200
-data_ov14_0215b200:
+	.global _ZN10ActorRupee5gTypeE
+_ZN10ActorRupee5gTypeE:
 	.space 0x14

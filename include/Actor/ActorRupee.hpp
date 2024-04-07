@@ -4,7 +4,9 @@
 #include "types.h"
 #include "lib/math.h"
 
+#include "System/Resource.hpp"
 #include "Actor/Actor.hpp"
+#include "Actor/ActorType.hpp"
 #include "Item/Item.hpp"
 
 typedef u32 RupeeId;
@@ -22,6 +24,9 @@ enum RupeeId_ {
 
 class ActorRupee : public Actor {
 public:
+    static Resource gResource;
+    static ActorType gType;
+
     /* 000 (base) */
     /* 158 */ RupeeId mRupeeId;
     /* 15c */ unk16 mUnk_15c;

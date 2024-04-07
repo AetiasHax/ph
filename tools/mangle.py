@@ -40,6 +40,20 @@ output = output.decode()
 
 # print(output)
 
-mangled_names: list[str] = re.findall(r'.text +(_Z\S+)', output)
-for name in mangled_names:
-    print(name)
+mangled_funcs: list[str] = re.findall(r'.text +(_Z\S+)', output)
+mangled_data: list[str] = re.findall(r'(?:.data|.bss) +(_Z\S+)', output)
+
+if len(mangled_funcs) > 0:
+    print('Functions:')
+    print()
+    for func in mangled_funcs:
+        print(func)
+    print()
+    print()
+if len(mangled_data) > 0:
+    print('Data:')
+    print()
+    for data in mangled_data:
+        print(data)
+    print()
+    print()
