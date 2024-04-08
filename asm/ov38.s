@@ -1770,7 +1770,7 @@ _0217d5e0:
 	ldr r1, _0217d6d4 ; =data_ov38_02188cc0
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x1000
 	bl func_ov00_020c45b0
 	add r1, sp, #0

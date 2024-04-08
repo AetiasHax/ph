@@ -2654,10 +2654,10 @@ _0218b6ac:
 	blx func_0202ab38
 	mov r1, r0
 	add r0, sp, #4
-	bl func_02047024
+	bl strcpy
 	ldr r1, _0218b7e8 ; =data_ov42_0218ca6c
 	add r0, sp, #4
-	bl func_0204713c
+	bl strcat
 	ldr r1, _0218b7ec ; =data_ov42_0218ca88
 	mov r0, r4
 	add r2, sp, #4
@@ -2681,7 +2681,7 @@ _0218b6ac:
 	blx func_ov04_02105cd0
 	ldr r1, _0218b7f8 ; =data_ov42_0218cab4
 	add r0, sp, #4
-	bl func_0204713c
+	bl strcat
 	add sp, sp, #0x84
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0

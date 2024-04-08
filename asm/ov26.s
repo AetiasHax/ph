@@ -2590,7 +2590,7 @@ _0216f490:
 	add r0, sp, #0
 	mov r1, r4
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	add r1, sp, #0
 	mov r0, r8
 	bl func_0201e544
@@ -7350,7 +7350,7 @@ func_ov26_021733d0: ; 0x021733d0
 	ldr r2, [r0]
 	ldr r0, [r1, #0x20]
 	add r1, r2, #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -13250,7 +13250,7 @@ _0217789c:
 	ldr r1, [r4]
 	mov r0, r6
 	add r1, r1, #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	moveq r7, r8
 	beq _021778d4

@@ -184,7 +184,7 @@ func_ov49_021956f4: ; 0x021956f4
 	ldr r1, _021957bc ; =data_ov49_0219872c
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0
 	bl func_0201e544
@@ -243,7 +243,7 @@ func_ov49_021957c0: ; 0x021957c0
 	ldr r1, _0219588c ; =data_ov49_0219874c
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

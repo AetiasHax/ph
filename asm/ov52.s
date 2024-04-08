@@ -1661,7 +1661,7 @@ func_ov52_021969d4: ; 0x021969d4
 	ldr r1, _02196a7c ; =data_ov52_02197a20
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x2800
 	bl func_ov00_020c45b0
 	add r1, sp, #0

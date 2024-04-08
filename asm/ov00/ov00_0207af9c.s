@@ -2933,12 +2933,12 @@ _0207ca54:
 	.global func_ov00_0207ca68
 	arm_func_start func_ov00_0207ca68
 func_ov00_0207ca68: ; 0x0207ca68
-	ldr ip, _0207ca74 ; =func_02047024
+	ldr ip, _0207ca74 ; =strcpy
 	add r0, r0, #0xc
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov00_0207ca68
-_0207ca74: .word func_02047024
+_0207ca74: .word strcpy
 
 	.global func_ov00_0207ca78
 	arm_func_start func_ov00_0207ca78
@@ -4847,7 +4847,7 @@ _0207e218:
 	add r1, r4, r7
 	add r0, r8, r0
 	add r0, r0, r6, lsl #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	addeq sp, sp, #0x14
 	moveq r0, r6
@@ -4968,7 +4968,7 @@ _0207e3d0:
 	add r1, r4, r7
 	add r0, r8, r0
 	add r0, r0, r6, lsl #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	addeq sp, sp, #0x14
 	moveq r0, r6
@@ -44611,7 +44611,7 @@ func_ov00_0209d81c: ; 0x0209d81c
 _0209d82c:
 	ldr r1, [r5, r4, lsl #2]
 	mov r0, r6
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	moveq r0, r4
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -54870,14 +54870,14 @@ _020a59dc:
 	b _020a5a08
 _020a5a00:
 	mov r0, r4
-	bl func_02047024
+	bl strcpy
 _020a5a08:
 	ldr r1, [r5, #8]
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldr r1, _020a5a28 ; =data_ov00_020e529c
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a59b8
@@ -54892,16 +54892,16 @@ func_ov00_020a5a2c: ; 0x020a5a2c
 	mov r4, r1
 	ldr r1, [r5, #4]
 	mov r0, r4
-	bl func_02047024
+	bl strcpy
 	ldr r1, _020a5a6c ; =data_ov00_020e52a4
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldr r1, [r5, #8]
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldr r1, _020a5a70 ; =data_ov00_020e52a8
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a5a2c
@@ -54932,14 +54932,14 @@ _020a5a98:
 	b _020a5ac4
 _020a5abc:
 	mov r0, r4
-	bl func_02047024
+	bl strcpy
 _020a5ac4:
 	ldr r1, [r5, #8]
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldr r1, _020a5ae4 ; =data_ov00_020e52b8
 	mov r0, r4
-	bl func_0204713c
+	bl strcat
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a5a74
@@ -54955,17 +54955,17 @@ func_ov00_020a5ae8: ; 0x020a5ae8
 	ldr r1, [r6, #4]
 	mov r0, r5
 	mov r4, r2
-	bl func_02047024
+	bl strcpy
 	ldr r1, _020a5b30 ; =data_ov00_020e52f0
 	mov r0, r5
-	bl func_0204713c
+	bl strcat
 	ldr r1, [r6, #8]
 	mov r0, r5
-	bl func_0204713c
+	bl strcat
 	ldr r1, _020a5b34 ; =data_ov00_020e52e0
 	mov r0, r5
 	ldr r1, [r1, r4, lsl #2]
-	bl func_0204713c
+	bl strcat
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020a5ae8

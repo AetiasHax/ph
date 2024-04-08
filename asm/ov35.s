@@ -417,7 +417,7 @@ _0217c290:
 	ldr r1, [r1, r5, lsl #2]
 	add r0, sp, #0x38
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r4
 	add r1, sp, #0x38
 	bl func_0201e544

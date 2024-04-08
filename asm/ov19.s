@@ -4290,7 +4290,7 @@ func_ov19_02170eb8: ; 0x02170eb8
 	ldr r1, _02170f44 ; =data_ov19_02176608
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	add r1, sp, #0
 	mov r0, r4
 	bl func_0201e544
@@ -4475,7 +4475,7 @@ func_ov19_02171124: ; 0x02171124
 	ldr r1, _021711b0 ; =data_ov19_0217662c
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	add r1, sp, #0
 	mov r0, r4
 	bl func_0201e544
@@ -4663,7 +4663,7 @@ func_ov19_02171330: ; 0x02171330
 	ldr r1, _0217144c ; =data_ov19_02176650
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544
@@ -4879,7 +4879,7 @@ func_ov19_02171644: ; 0x02171644
 	ldr r1, _02171780 ; =data_ov19_02176720
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544
@@ -9767,7 +9767,7 @@ func_ov19_02175740: ; 0x02175740
 	mov r4, r0
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r4
 	add r1, sp, #0
 	bl func_0201e544

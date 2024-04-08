@@ -12,7 +12,7 @@
 .extern data_ov00_020eec68
 .extern func_020196bc
 .extern func_020196fc
-.extern func_0204713c
+.extern strcat
 .extern func_ov00_02079ffc
 .extern func_ov00_02084b08
 .extern func_ov00_02084b14

@@ -4168,7 +4168,7 @@ func_ov44_0218c758: ; 0x0218c758
 	ldr r1, _0218c834 ; =data_ov44_0218fc20
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

@@ -12422,7 +12422,7 @@ func_ov14_0212991c: ; 0x0212991c
 _02129960:
 	ldr r0, [r6, r8, lsl #2]
 	mov r1, sl
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	bne _02129988
 	cmp sb, r5

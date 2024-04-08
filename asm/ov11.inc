@@ -188,9 +188,9 @@
 .extern func_02043594
 .extern func_02043600
 .extern func_0204366c
-.extern func_02047008
-.extern func_02047024
-.extern func_020470ec
+.extern strlen
+.extern strcpy
+.extern strncpy
 .extern func_0204902c
 .extern func_0204afd0
 .extern func_ov00_02077af8

@@ -127,7 +127,7 @@
 .extern func_020426d4
 .extern func_02042bb8
 .extern func_0204366c
-.extern func_02047280
+.extern strncmp
 .extern func_0204f8d4
 .extern func_ov00_0207bc48
 .extern func_ov00_0207c170

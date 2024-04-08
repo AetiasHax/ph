@@ -4044,7 +4044,7 @@ func_ov05_02103f8c: ; 0x02103f8c
 	add r0, r0, #0x52
 	mov r1, r4
 	add r0, r0, #0x200
-	bl func_02047024
+	bl strcpy
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov05_02103f8c
 
@@ -4436,7 +4436,7 @@ func_ov05_021043c0: ; 0x021043c0
 	ldr r1, [r1]
 	add r0, r0, #0x200
 	add r1, r1, #4
-	bl func_02047024
+	bl strcpy
 _021043f0:
 	str r5, [r4, #0x244]
 	mov r1, #0x14000
@@ -4523,7 +4523,7 @@ _021044e8:
 	ldr r1, [r1]
 	add r0, r0, #0x200
 	add r1, r1, #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	addne sp, sp, #8
 	ldmneia sp!, {r4, pc}

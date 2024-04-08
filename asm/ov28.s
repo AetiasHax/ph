@@ -365,23 +365,23 @@ func_ov28_0216db74: ; 0x0216db74
 	mov r1, r2
 	mov r7, r3
 	strb r5, [sp, #0x10]
-	bl func_0204713c
+	bl strcat
 	ldr r1, _0216dc20 ; =data_ov28_02178b30
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	mov r1, r7
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	ldr r1, _0216dc24 ; =data_ov28_02178b34
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	blx func_02016fe8
 	mov r5, r0
 	ldr r1, _0216dc28 ; =data_ov28_02178b3c
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544
@@ -417,23 +417,23 @@ func_ov28_0216dc2c: ; 0x0216dc2c
 	mov r1, r2
 	mov r7, r3
 	strb r5, [sp, #0x10]
-	bl func_0204713c
+	bl strcat
 	ldr r1, _0216dcdc ; =data_ov28_02178b48
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	mov r1, r7
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	ldr r1, _0216dce0 ; =data_ov28_02178b4c
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	blx func_02016fe8
 	mov r5, r0
 	ldr r1, _0216dce4 ; =data_ov28_02178b54
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544
@@ -2086,7 +2086,7 @@ func_ov28_0216f2ec: ; 0x0216f2ec
 	ldr r1, _0216f38c ; =data_ov28_02178920
 	add r0, sp, #0
 	ldr r1, [r1, r4, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r6, #0x2000
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -2177,7 +2177,7 @@ func_ov28_0216f410: ; 0x0216f410
 	ldr r1, _0216f4b0 ; =data_ov28_02178928
 	add r0, sp, #0
 	ldr r1, [r1, r4, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r6, #0x2400
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -2267,7 +2267,7 @@ func_ov28_0216f534: ; 0x0216f534
 	ldr r1, _0216f5d0 ; =data_ov28_02178938
 	add r0, sp, #0
 	ldr r1, [r1, r4, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r6, #0x2840
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -2358,7 +2358,7 @@ func_ov28_0216f654: ; 0x0216f654
 	ldr r1, _0216f6f4 ; =data_ov28_02178944
 	add r0, sp, #0
 	ldr r1, [r1, r4, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r6, #0x2800
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -2449,7 +2449,7 @@ func_ov28_0216f778: ; 0x0216f778
 	ldr r1, _0216f818 ; =data_ov28_02178954
 	add r0, sp, #0
 	ldr r1, [r1, r4, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r6, #0x2800
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -10269,23 +10269,23 @@ func_ov28_02175a10: ; 0x02175a10
 	mov r0, #0
 	strb r0, [sp, #0x10]
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	ldr r1, _02175ad8 ; =data_ov28_021798e0
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	mov r1, r4
-	bl func_0204713c
+	bl strcat
 	ldr r1, _02175adc ; =data_ov28_021798e4
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	blx func_02016fe8
 	mov r1, r4
 	mov r4, r0
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r4
 	add r1, sp, #0
 	bl func_0201e544
@@ -10321,7 +10321,7 @@ func_ov28_02175ae0: ; 0x02175ae0
 	ldr r1, _02175b84 ; =data_ov28_021797b8
 	add r0, sp, #0
 	ldr r1, [r1, r7, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r5, #0x3000
 	bl func_ov00_020c45b0
 	add r1, sp, #0

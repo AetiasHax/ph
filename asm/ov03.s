@@ -3801,7 +3801,7 @@ _020f0b18:
 	add r1, sp, #0
 	ldr r0, [r0]
 	add r0, r0, #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	bne _020f0b74
 	ldr r0, _020f0b84 ; =data_027e0e60
@@ -10257,7 +10257,7 @@ func_ov03_020f4b7c: ; 0x020f4b7c
 	ldmeqia sp!, {r3, pc}
 	add r0, r0, #0x10
 	add r1, r2, #4
-	bl func_0204716c
+	bl strcmp
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -19916,10 +19916,10 @@ _020fb4fa:
 	bl func_0202ab38
 	add r1, r0, #0
 	add r0, sp, #4
-	blx func_02047024
+	blx strcpy
 	ldr r1, _020fb5bc ; =data_ov03_0210098c
 	add r0, sp, #4
-	blx func_0204713c
+	blx strcat
 	ldr r1, _020fb5c0 ; =data_ov03_021009a8
 	add r0, r4, #0
 	add r2, sp, #4

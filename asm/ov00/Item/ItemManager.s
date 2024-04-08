@@ -149,25 +149,25 @@ _020adc2a:
 	ldr r1, _020adc94 ; =data_ov00_020e5df8
 	add r0, sp, #0x8c
 	ldr r1, [r1, #0x10]
-	blx func_0204713c
+	blx strcat
 	add r0, sp, #0x8c
 	add r1, r4, #0
-	blx func_0204713c
+	blx strcat
 	ldr r1, _020adc94 ; =data_ov00_020e5df8
 	add r0, sp, #0x8c
 	ldr r1, [r1, #0x14]
-	blx func_0204713c
+	blx strcat
 	ldr r1, _020adc94 ; =data_ov00_020e5df8
 	add r0, sp, #0xc
 	ldr r1, [r1, #0x10]
-	blx func_0204713c
+	blx strcat
 	add r0, sp, #0xc
 	add r1, r4, #0
-	blx func_0204713c
+	blx strcat
 	ldr r1, _020adc94 ; =data_ov00_020e5df8
 	add r0, sp, #0xc
 	ldr r1, [r1, #0x18]
-	blx func_0204713c
+	blx strcat
 	mov r3, #0
 	str r3, [sp]
 	str r3, [sp, #4]

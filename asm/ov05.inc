@@ -295,8 +295,8 @@
 .extern func_020385d0
 .extern func_0203fab0
 .extern func_020435b4
-.extern func_02047024
-.extern func_0204716c
+.extern strcpy
+.extern strcmp
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_02078b40

@@ -65,7 +65,7 @@
 .extern func_02036edc
 .extern func_0203e784
 .extern func_0203e7b4
-.extern func_02047024
+.extern strcpy
 .extern func_0204f8d4
 .extern func_ov00_02079470
 .extern func_ov00_02079e68

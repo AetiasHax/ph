@@ -220,8 +220,8 @@
 .extern func_0203eb0c
 .extern func_0203eba8
 .extern func_0203ebc8
-.extern func_020470ec
-.extern func_0204713c
+.extern strncpy
+.extern strcat
 .extern func_0204f558
 .extern func_0204f614
 .extern func_0204f754

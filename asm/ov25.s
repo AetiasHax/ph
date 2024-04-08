@@ -4856,7 +4856,7 @@ func_ov25_0217187c: ; 0x0217187c
 	ldr r1, _02171980 ; =data_ov25_02179da8
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0
 	bl func_0201e544
@@ -4967,7 +4967,7 @@ func_ov25_02171a08: ; 0x02171a08
 	ldr r1, _02171aa8 ; =data_ov25_02179dc8
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r4
 	add r1, sp, #0
 	bl func_0201e544

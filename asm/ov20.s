@@ -8886,7 +8886,7 @@ func_ov20_02174cfc: ; 0x02174cfc
 	ldr r1, _02174dc4 ; =data_ov20_02178df0
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0
 	bl func_0201e544

@@ -82,7 +82,7 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_02042f68
-.extern func_020470ec
+.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4

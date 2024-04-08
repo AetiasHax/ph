@@ -191,7 +191,7 @@ func_ov32_0217bf74: ; 0x0217bf74
 	ldr r1, _0217c06c ; =data_ov32_02185410
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0
 	bl func_0201e544
@@ -4157,7 +4157,7 @@ func_ov32_0217f27c: ; 0x0217f27c
 	ldr r1, _0217f374 ; =data_ov32_021859a4
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0
 	bl func_0201e544

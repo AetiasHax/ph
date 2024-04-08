@@ -841,7 +841,7 @@ func_ov51_02195f30: ; 0x02195f30
 	ldr r1, _02196000 ; =data_ov51_0219884c
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

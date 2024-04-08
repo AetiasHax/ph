@@ -136,8 +136,8 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0203fe60
-.extern func_020470ec
-.extern func_0204716c
+.extern strncpy
+.extern strcmp
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4

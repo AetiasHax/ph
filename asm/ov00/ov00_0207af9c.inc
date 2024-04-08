@@ -231,9 +231,9 @@
 .extern func_020435b4
 .extern func_02043600
 .extern func_02045810
-.extern func_02047024
-.extern func_0204713c
-.extern func_0204716c
+.extern strcpy
+.extern strcat
+.extern strcmp
 .extern func_0204dd9c
 .extern func_0204f558
 .extern func_0204f614

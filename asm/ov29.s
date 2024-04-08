@@ -390,7 +390,7 @@ func_ov29_0216db20: ; 0x0216db20
 	bl func_020078f4
 	add r0, sp, #0
 	mov r1, r4
-	bl func_02047024
+	bl strcpy
 	add r1, sp, #0
 	mov r0, r5
 	bl func_0201e388
@@ -3172,7 +3172,7 @@ _02170070:
 	bl func_020078f4
 	ldr r1, [sp]
 	mov r0, r7
-	bl func_02047024
+	bl strcpy
 	add r0, r4, #0x3400
 	bl func_ov00_020c45b0
 	mov r1, r7
@@ -5686,7 +5686,7 @@ func_ov29_02172254: ; 0x02172254
 	ldr r1, _02172304 ; =data_ov29_02179c3c
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x3400
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -9461,7 +9461,7 @@ func_ov29_02175678: ; 0x02175678
 	ldr r1, _02175720 ; =data_ov29_02179f20
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x3000
 	bl func_ov00_020c45b0
 	add r1, sp, #0
@@ -10903,7 +10903,7 @@ func_ov29_021769b8: ; 0x021769b8
 	ldr r1, _02176a60 ; =data_ov29_0217a0d0
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x3000
 	bl func_ov00_020c45b0
 	add r1, sp, #0

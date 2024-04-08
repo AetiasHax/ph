@@ -2875,10 +2875,10 @@ _02115098:
 	blx func_0202ab38
 	mov r1, r0
 	add r0, sp, #0x2c
-	bl func_02047024
+	bl strcpy
 	ldr r1, _02115390 ; =data_ov13_021160bc
 	add r0, sp, #0x2c
-	bl func_0204713c
+	bl strcat
 	mov r0, #1
 	str r0, [sp]
 	ldr r0, _02115394 ; =data_ov13_02116140
@@ -2907,10 +2907,10 @@ _02115098:
 	blx func_0202ab38
 	mov r1, r0
 	add r0, sp, #0x2c
-	bl func_02047024
+	bl strcpy
 	ldr r1, _021153a0 ; =data_ov13_021160d4
 	add r0, sp, #0x2c
-	bl func_0204713c
+	bl strcat
 	mov r0, #1
 	str r0, [sp]
 	ldr r0, _021153a4 ; =data_ov13_02116154

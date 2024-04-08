@@ -257,7 +257,7 @@ func_ov39_0217c0b4: ; 0x0217c0b4
 	ldr r1, _0217c160 ; =data_ov39_02186bcc
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	b _0217c108
 _0217c0ec:
 	ldr r0, _0217c164 ; =data_ov39_02186bdc
@@ -266,7 +266,7 @@ _0217c0ec:
 	ldr r1, _0217c168 ; =data_ov39_02186bf8
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 _0217c108:
 	add r1, sp, #0
 	mov r0, r4

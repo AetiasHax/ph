@@ -1099,7 +1099,7 @@ _0217cc38:
 	ldr r1, _0217ce08 ; =data_ov34_02185f48
 	add r0, sp, #0x38
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	add r1, sp, #0x38
 	mov r0, r6
 	bl func_0201e544
@@ -1119,7 +1119,7 @@ _0217cc38:
 	ldr r1, _0217ce10 ; =data_ov34_02185f64
 	add r0, sp, #0x28
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #0x28
 	bl func_0201e544
@@ -1143,7 +1143,7 @@ _0217cce4:
 	ldr r1, _0217ce18 ; =data_ov34_02185f80
 	add r0, sp, #0x18
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	add r1, sp, #0x18
 	mov r0, r6
 	bl func_0201e544
@@ -1163,7 +1163,7 @@ _0217cce4:
 	ldr r1, _0217ce20 ; =data_ov34_02185f9c
 	add r0, sp, #8
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r6
 	add r1, sp, #8
 	bl func_0201e544
@@ -9065,7 +9065,7 @@ _02183d94:
 	ldr r1, _02183e98 ; =data_ov34_02185ac0
 	add r0, sp, #0
 	ldr r1, [r1, r5, lsl #2]
-	bl func_02047024
+	bl strcpy
 	add r0, r7, #0x2c00
 	bl func_ov00_020c45b0
 	add r1, sp, #0

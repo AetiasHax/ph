@@ -13774,23 +13774,23 @@ func_ov14_02145b18: ; 0x02145b18
 	mov r1, r2
 	mov r7, r3
 	strb r5, [sp, #0x10]
-	bl func_0204713c
+	bl strcat
 	ldr r1, _02145bc4 ; =data_ov14_021596b8
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	mov r1, r7
-	bl func_0204713c
+	bl strcat
 	ldr r1, _02145bc8 ; =data_ov14_021596bc
 	add r0, sp, #0x10
-	bl func_0204713c
+	bl strcat
 	add r0, sp, #0x10
 	blx func_02016fe8
 	mov r5, r0
 	mov r1, r7
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

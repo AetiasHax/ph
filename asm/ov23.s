@@ -2118,7 +2118,7 @@ func_ov23_0216f0f4: ; 0x0216f0f4
 	ldr r1, _0216f194 ; =data_ov23_0217a214
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

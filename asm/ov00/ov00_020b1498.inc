@@ -386,9 +386,9 @@
 .extern func_0203efd8
 .extern func_0203f378
 .extern func_02042f74
-.extern func_02047024
-.extern func_020470ec
-.extern func_0204713c
+.extern strcpy
+.extern strncpy
+.extern strcat
 .extern func_0204b068
 .extern func_0204b0a4
 .extern func_0204f558

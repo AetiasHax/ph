@@ -3752,7 +3752,7 @@ _02078e5e:
 	add r1, r4, #0
 	mov r2, #0x40
 	mov r6, #1
-	blx func_02047280
+	blx strncmp
 	cmp r0, #0
 	bne _02078e7e
 	ldr r0, _02078f2c ; =gOverlayManager

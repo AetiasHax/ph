@@ -351,9 +351,9 @@
 .extern func_02043594
 .extern func_020435b4
 .extern func_02043600
-.extern func_02047008
-.extern func_02047024
-.extern func_0204713c
+.extern strlen
+.extern strcpy
+.extern strcat
 .extern func_0204dd9c
 .extern func_0204f558
 .extern func_0204f614

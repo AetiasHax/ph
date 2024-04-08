@@ -4220,7 +4220,7 @@ func_ov22_02170e20: ; 0x02170e20
 	ldr r1, _02170ef4 ; =data_ov22_021793cc
 	add r0, sp, #4
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #4
 	bl func_0201e544
@@ -13099,7 +13099,7 @@ func_ov22_0217802c: ; 0x0217802c
 	ldr r1, _0217814c ; =data_ov22_0217a054
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544

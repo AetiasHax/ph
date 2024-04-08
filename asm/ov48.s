@@ -64,7 +64,7 @@ func_ov48_02190070: ; 0x02190070
 	ldr r1, _02190170 ; =data_ov48_02194d08
 	add r0, sp, #4
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #4
 	bl func_0201e544
@@ -5422,7 +5422,7 @@ func_ov48_021942d4: ; 0x021942d4
 	ldr r1, _0219439c ; =data_ov48_021953a4
 	add r0, sp, #0x10
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0x10
 	bl func_0201e544
@@ -5437,7 +5437,7 @@ func_ov48_021942d4: ; 0x021942d4
 	ldr r1, _021943a4 ; =data_ov48_021953c0
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #0
 	bl func_0201e544
@@ -5545,7 +5545,7 @@ func_ov48_02194468: ; 0x02194468
 	ldr r1, _02194508 ; =data_ov48_021953e0
 	add r0, sp, #0
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r4
 	add r1, sp, #0
 	bl func_0201e544

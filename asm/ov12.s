@@ -4203,7 +4203,7 @@ func_ov12_021162dc: ; 0x021162dc
 	add r0, sp, #4
 	ldr r1, _021164d8 ; =data_ov12_02135cb4
 	mov r2, #0x10
-	bl func_020470ec
+	bl strncpy
 	mov r0, r5
 	add r1, sp, #4
 	bl func_0201e544
@@ -31787,7 +31787,7 @@ _0212c9d8:
 	add r0, sp, #0
 	mov r2, #0x10
 	strb r3, [ip]
-	bl func_020470ec
+	bl strncpy
 	add r0, sp, #0x10
 	blx func_02016fe8
 	add r1, sp, #0

@@ -63,8 +63,8 @@
 .extern func_020385b8
 .extern func_0203e784
 .extern func_0203e7b4
-.extern func_02047024
-.extern func_0204713c
+.extern strcpy
+.extern strcat
 .extern func_0204f8d4
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207bb1c
