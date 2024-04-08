@@ -1,6 +1,8 @@
 #ifndef _C_STRING_H
 #define _C_STRING_H
 
+typedef unsigned int size_t;
+
 size_t strlen(const char *str);
 char* strcpy(char *dest, const char *src);
 char* strncpy(char *dest, const char *src, size_t num);
