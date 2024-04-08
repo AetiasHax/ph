@@ -9,6 +9,7 @@
 #include "Player/EquipItem.hpp"
 #include "System/SysNew.hpp"
 #include "System/OverlayManager.hpp"
+#include "Render/ModelRender.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 
@@ -143,7 +144,6 @@ enum DungeonItemModelId_ {
     DungeonItemModelId_TriangleCrystal, // switch_cstl_t_c
     DungeonItemModelId_COUNT,
 };
-struct ItemModel;
 
 struct SaveItemManager {
     /* 00 */ ItemFlags itemFlags;
@@ -202,7 +202,7 @@ private:
     /* 0be */ unk8 mUnk_0be[2]; // padding?
     /* 0c0 */ ItemModel *mItemModels[ItemModelId_COUNT];
     /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModelId_COUNT]; // non-null in dungeons/caves
-    /* 114 */ void *mUnk_114;
+    /* 114 */ ModelRender *mUnk_114;
     /* 118 */ ItemId mFanfareItem;
     /* 11c */ unk32 mUnk_11c;
     /* 120 */ void *mFanfareItemModel;
