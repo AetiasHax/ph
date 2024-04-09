@@ -8,9 +8,10 @@ else ifneq ($(REGION),)
 	$(error Unknown region '$(REGION)')
 endif
 
+PYTHON ?= python
+
 ifeq ($(OS),Windows_NT)
 	WINE :=
-	PYTHON ?= python
 else
 	WINE := wine
 	PYTHON ?= python3.11
