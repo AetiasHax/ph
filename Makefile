@@ -44,7 +44,7 @@ LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
-CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -nolink -d $(REGION) -char signed -lang=c++ -sym on -msgstyle gcc
+CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -i- -i libs/c/include -nolink -d $(REGION) -char signed -lang=c++ -sym on -msgstyle gcc
 LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
 ifeq ($(NONMATCHING),1)
