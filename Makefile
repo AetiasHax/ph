@@ -8,14 +8,14 @@ else ifneq ($(REGION),)
 	$(error Unknown region '$(REGION)')
 endif
 
-PYTHON ?= python
-
 ifeq ($(OS),Windows_NT)
 	WINE :=
 else
 	WINE := wine
 	PYTHON ?= python3.11
 endif
+
+PYTHON ?= python
 
 ROOT       := $(shell pwd)
 BUILD_DIR  := build
