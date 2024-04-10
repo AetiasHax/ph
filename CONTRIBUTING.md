@@ -136,4 +136,5 @@ be inserted instead of `asm.inc`.
 When contributing non-matching functions to this project, please build in both modes and fix any build errors you may get.
 Delete the `.o` file between building in each mode so that the `Makefile` runs the compiler both times.
 
-> [!NOTE] The inline assembler does not function the same as the standalone assembler. [See differences here.](inline_assembler.md#differences-from-standalone-assembler)
+> [!NOTE] 
+> The inline assembler does not function the same as the standalone assembler. [See differences here.](docs/inline_assembler.md#differences-from-standalone-assembler)
