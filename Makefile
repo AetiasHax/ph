@@ -12,7 +12,10 @@ ifeq ($(OS),Windows_NT)
 	WINE :=
 else
 	WINE := wine
+	PYTHON ?= python3.11
 endif
+
+PYTHON ?= python
 
 ROOT       := $(shell pwd)
 BUILD_DIR  := build
@@ -110,7 +113,7 @@ clean:
 
 .PHONY: lcf
 lcf: setup $(TOOLS_DIR)/lcf.py
-	python $(TOOLS_DIR)/lcf.py
+	$(PYTHON) $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
@@ -135,4 +138,4 @@ $(OV_LZS): %.lz: %.bin
 gen_externs: $(ASM_INCS)
 
 $(ASM_INCS): %.inc: %.s
-	python $(TOOLS_DIR)/gen_externs.py $<
+	$(PYTHON) $(TOOLS_DIR)/gen_externs.py $<
