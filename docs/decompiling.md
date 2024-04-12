@@ -36,6 +36,6 @@ _0211bf50: .word data_ov09_0211f59c
     project.
 
 ## The Ghidra project
-We use a shared Ghidra project to analyze the game and decompile functions. We can't give access to the Ghidra server just yet,
-so come back here later for instructions on how to access it.
-
+We use a shared Ghidra project to analyze the game and decompile functions. To gain access to the project, install
+[Ghidra version 10.2.3](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_10.2.3_build) and request access
+from @aetias on Discord.

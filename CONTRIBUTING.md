@@ -9,7 +9,7 @@
 - `asm/`: Non-decompiled assembly code
     - `ovXX/`: Code for overlay `XX`
         - `*.s`: Source file in assembly
-        - `include/*.inc`: External symbols imported by respective source file
+        - `*.inc`: External symbols imported by respective source file
 - `build/`: Build output
     - `arm9_linker_script.lcf`: Linker command file for ARM9 program, specifies the order to put code and data into the ROM
     - `arm9_objects.txt`: List of object files to pass to the linker
@@ -30,10 +30,14 @@
 - `src/`: Source C/C++ files
 - `tools/`: Tools for this project
     - `compress/`: Compresses code before it is put in the ROM
+    - `include/`: Common C code for multiple tools
     - `mwccarm/`: Compiler toolchain
     - `rom/`: Extracts and builds ROMs
+    - `gen_externs.py`: Generates `.inc` files, use `make gen_externs` to run it
     - `lcf.py`: Generates `arm9_linker_script.lcf`
+    - `m2ctx.py`: Generates context for decomp.me
     - `patch_mwcc.py`: Patches bugs in the toolchain
+    - `progress.py`: Computes decompilation progress
     - `requirements.txt`: Python libraries
     - `setup.py`: Sets up the project
 - `assets.txt`: The order of asset directories to put in the ROM

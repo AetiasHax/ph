@@ -25,8 +25,8 @@ bx lr
 The built-in `ldconst` instruction will be replaced by an ARM load instruction and also append a pool constant to the function.
 
 ### Data sections
-Directives such as `.section`, `.data` and `.bss` are not supported in the inline assembler. There might be a way to change
-section with a `#pragma`, but there's no need to. Data should only be defined in standalone assembly or C/C++.
+Directives such as `.section`, `.data` and `.bss` are not supported in the inline assembler. It's possible to change section
+with a `#pragma`, but there's no need to. Data should only be defined in standalone assembly or C/C++.
 
 ### Comments
 Inline assembly is handled by the compiler, so comments must be in C/C++ format. This means using `//` and `/* */` instead of
