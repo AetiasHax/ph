@@ -468,7 +468,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	ldr r0, _020a84b8 ; =data_027e0fe4
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r4, r0
 	beq _020a84a8
 	mov r0, r7
@@ -1247,13 +1247,13 @@ _ZN13LinkStateBase12GetGrabActorEv: ; 0x020a8ca4
 	ldr r1, _020a8cbc ; =data_027e0fe4
 	ldr r2, [r0, #8]
 	ldr r0, [r1]
-	ldr ip, _020a8cc0 ; =func_ov00_020c3674
+	ldr ip, _020a8cc0 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x3c
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 _020a8cbc: .word data_027e0fe4
-_020a8cc0: .word func_ov00_020c3674
+_020a8cc0: .word _ZN12ActorManager8GetActorEP8ActorRef
 
 	.global _ZN13LinkStateBase15GetGrabActorRefEv
 	arm_func_start _ZN13LinkStateBase15GetGrabActorRefEv

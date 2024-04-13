@@ -1,4 +1,6 @@
 #pragma once
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -65,7 +67,6 @@
 .extern func_02036edc
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strcpy
 .extern func_0204f8d4
 .extern func_ov00_02079470
 .extern func_ov00_02079e68
@@ -143,8 +144,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3894
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0
@@ -210,3 +209,4 @@
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
 .extern gOverlayManager
+.extern strcpy

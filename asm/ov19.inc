@@ -4,6 +4,10 @@
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern _ZN11ItemManager7AddItemEi
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager18func_ov00_020c3b2cEPi
+.extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern _ZN13LinkStateBase12GetPlayerVelEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
@@ -49,7 +53,7 @@
 .extern data_ov00_020e2dd8
 .extern data_ov00_020e2e3c
 .extern data_ov00_020e2f04
-.extern data_ov00_020e72f0
+.extern _ZTV11ActorFilter
 .extern data_ov00_020e9360
 .extern data_ov00_020e9370
 .extern data_ov00_020ec9d4
@@ -96,7 +100,6 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_02042f74
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -283,10 +286,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c38fc
-.extern func_ov00_020c3b2c
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c50d4
@@ -371,3 +370,4 @@
 .extern func_ov17_02168660
 .extern func_ov17_021687f0
 .extern gItemManager
+.extern strncpy

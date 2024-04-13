@@ -156,7 +156,7 @@ func_ov58_02198efc: ; 0x02198efc
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, r2
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	beq _02198f60
 	ldr r2, [r0, #4]

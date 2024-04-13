@@ -1,6 +1,7 @@
 #pragma once
 .extern _ZN11ItemManager13ForceEquipItemEi
 .extern _ZN11ItemManager20ClearForcedEquipItemEv
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -63,8 +64,6 @@
 .extern func_020385b8
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strcpy
-.extern strcat
 .extern func_0204f8d4
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207bb1c
@@ -125,7 +124,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c5f1c
@@ -189,3 +187,5 @@
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
 .extern gItemManager
+.extern strcat
+.extern strcpy

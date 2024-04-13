@@ -2,6 +2,10 @@
 .extern Approach_thunk
 .extern Divide
 .extern _ZN11ItemManager18func_ov00_020ae4dcEj
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager18func_ov00_020c3b2cEPi
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern data_02050f54
@@ -269,10 +273,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
-.extern func_ov00_020c3b2c
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0

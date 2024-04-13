@@ -4,6 +4,8 @@
 .extern _ZN10PlayerBase18EquipItem_vfunc_2cEv
 .extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13PlayerControl14IsTouchingFastEv
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -84,7 +86,6 @@
 .extern func_02038718
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -210,8 +211,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c5c2c
@@ -262,3 +261,4 @@
 .extern func_ov29_02177ff0
 .extern func_ov29_02178060
 .extern gItemManager
+.extern strncpy

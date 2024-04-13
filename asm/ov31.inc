@@ -166,7 +166,7 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020ceacc

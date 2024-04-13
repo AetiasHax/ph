@@ -274,7 +274,7 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
-.extern func_ov00_020c3dd0
+.extern _ZN12ActorManager14Actor_vfunc_28Ev
 .extern func_ov00_020cef40
 .extern func_ov00_020cf270
 .extern func_ov00_020cf330

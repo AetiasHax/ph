@@ -196,7 +196,7 @@ _02198f60:
 	ldr r0, _02198fbc ; =data_027e0fe4
 	add r1, r4, #0xc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -625,7 +625,7 @@ _02199490:
 	ldr r0, _021994bc ; =data_027e0fe4
 	add r1, r1, #0xc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -1224,7 +1224,7 @@ _02199cf8:
 	ldr r0, _02199d50 ; =data_027e0fe4
 	mov r1, sb
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _02199d2c
 	mov r1, r4

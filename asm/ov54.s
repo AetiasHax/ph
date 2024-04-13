@@ -312,7 +312,7 @@ _02199050:
 	ldr r3, [r7, #0x40]
 	mov r2, r4
 	str r3, [sp, #0x20]
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	cmp r0, #0
 	bgt _021990c4
 	ldr r0, _02199290 ; =data_027e0e60
@@ -540,11 +540,11 @@ _02199394:
 	ldr r1, [r1]
 	add r0, sp, #8
 	add r3, r4, #0x38
-	bl func_ov00_020c38fc
+	bl _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 	ldr r0, _021997c0 ; =data_027e0fe4
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r5, r0
 	beq _0219978c
 	bl func_ov14_021383c0

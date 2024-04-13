@@ -140,9 +140,9 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
-.extern func_ov00_020c38fc
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c5ec0

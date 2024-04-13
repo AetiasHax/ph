@@ -239,7 +239,7 @@ func_ov53_02198fd4: ; 0x02198fd4
 	stmdb sp!, {r3, lr}
 	ldr r0, _0219900c ; =data_027e0fe4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	ldr r2, [r0, #4]
@@ -493,7 +493,7 @@ _021992a8:
 	mov r1, r5
 	str r3, [sp, #8]
 	str r2, [sp, #0xc]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _021992ec
 	mov r1, r4
@@ -765,7 +765,7 @@ _02199518:
 	ldr r0, [r0]
 	ldr r1, _021996f8 ; =data_ov53_0219a5e4
 	mov r2, #0
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, _021996e4 ; =data_ov53_0219a580
 	ldrh r1, [r0, #0x40]
 	ldrh r0, [r0, #0x6c]

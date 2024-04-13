@@ -888,7 +888,7 @@ func_ov21_0216e128: ; 0x0216e128
 	ldr r0, _0216e1d8 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

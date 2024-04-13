@@ -3,6 +3,9 @@
 .extern _ZN11ItemManager10GiveRupeesEjj
 .extern _ZN11ItemManager7AddItemEi
 .extern _ZN11ItemManager8GiveKeysEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager18func_ov00_020c3b2cEPi
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN12TouchControl18func_ov00_0207af38Etb
 .extern _ZN12TouchControlC2Ev
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
@@ -325,9 +328,6 @@
 .extern func_ov00_020a5e9c
 .extern func_ov00_020bce48
 .extern func_ov00_020bcec8
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
-.extern func_ov00_020c3b2c
 .extern func_ov00_020ce704
 .extern func_ov00_020cec60
 .extern func_ov00_020cef9c

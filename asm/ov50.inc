@@ -2,6 +2,10 @@
 .extern Approach_thunk
 .extern Divide
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern data_02050f54
@@ -137,10 +141,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c38fc
 .extern func_ov00_020c4588
 .extern func_ov00_020c5374
 .extern func_ov00_020c5c98

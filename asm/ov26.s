@@ -485,7 +485,7 @@ func_ov26_0216db44: ; 0x0216db44
 	ldr r2, _0216db9c ; =0x43574d42
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #4]
@@ -787,7 +787,7 @@ func_ov26_0216de8c: ; 0x0216de8c
 	ldr r2, _0216dee4 ; =0x434f4253
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #4]
@@ -12415,7 +12415,7 @@ func_ov26_02176db0: ; 0x02176db0
 	ldr r0, _02176e74 ; =data_027e0fe4
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	addeq sp, sp, #0x30
 	mvneq r0, #0
@@ -12446,7 +12446,7 @@ func_ov26_02176e78: ; 0x02176e78
 	blt _02176f30
 	ldr r0, _02176f38 ; =data_027e0fe4
 	ldr r0, [r0]
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	moveq r0, #1
 	ldmeqia sp!, {r4, pc}

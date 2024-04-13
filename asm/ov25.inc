@@ -1,6 +1,10 @@
 #pragma once
 .extern Divide
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
@@ -36,7 +40,7 @@
 .extern data_027e10b8
 .extern data_ov00_020e2dd8
 .extern data_ov00_020e2f04
-.extern data_ov00_020e72f0
+.extern _ZTV11ActorFilter
 .extern data_ov00_020e8398
 .extern data_ov00_020e892c
 .extern data_ov00_020e8b08
@@ -82,7 +86,6 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_02042f68
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -255,10 +258,6 @@
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0
@@ -412,3 +411,4 @@
 .extern func_ov30_02187304
 .extern func_ov30_02187340
 .extern gItemManager
+.extern strncpy

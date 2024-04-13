@@ -20,7 +20,7 @@
 .extern data_027e0fe8
 .extern data_027e0fec
 .extern data_027e0ffc
-.extern data_ov00_020e72f0
+.extern _ZTV11ActorFilter
 .extern data_ov00_020e892c
 .extern func_01ff81f8
 .extern func_01ff8214
@@ -146,8 +146,8 @@
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c5c98

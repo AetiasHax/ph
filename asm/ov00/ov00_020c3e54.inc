@@ -5,6 +5,9 @@
 .extern _ZN10PlayerBase14GetEquipShieldEv
 .extern _ZN11ItemManager15SetEquippedItemEi
 .extern _ZN11ItemManager18func_ov00_020ad790Ei
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020abba0EP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020abbdcEP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020abc18EP8ActorRef
@@ -595,9 +598,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
 .extern func_ov01_020f8658
 .extern func_ov03_020f13b0
 .extern func_ov03_020f3f94

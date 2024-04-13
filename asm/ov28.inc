@@ -1,5 +1,7 @@
 #pragma once
 .extern Approach_thunk
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -93,9 +95,6 @@
 .extern func_0203e7b4
 .extern func_0203eba8
 .extern func_0203ebc8
-.extern strcpy
-.extern strncpy
-.extern strcat
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -276,8 +275,6 @@
 .extern func_ov00_020c3180
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0
 .extern func_ov00_020c47cc
@@ -405,3 +402,6 @@
 .extern func_ov14_0214aa2c
 .extern gItemManager
 .extern gOverlayManager
+.extern strcat
+.extern strcpy
+.extern strncpy

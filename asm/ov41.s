@@ -381,7 +381,7 @@ _02189a34:
 	ldr r2, _02189b04 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0x18
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #0x18]
 	ldr r1, _02189b00 ; =data_027e0fe4
 	str r0, [r4, #0x180]
@@ -390,7 +390,7 @@ _02189a34:
 	str r2, [r4, #0x184]
 	ldr r1, [r1]
 	ldr r2, _02189b08 ; =0x4c4e424b
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r2, [sp, #8]
 	ldr r1, [sp, #0xc]
 	mvn r0, #0
@@ -402,7 +402,7 @@ _02189a34:
 	ldr r2, _02189b0c ; =0x4c4e4232
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp]
 	ldr r0, [sp, #4]
 	str r1, [sp, #0x18]
@@ -418,7 +418,7 @@ _02189ac0:
 	ldr r2, _02189b04 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0x10
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #0x10]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #0x14]
@@ -886,7 +886,7 @@ func_ov41_0218a064: ; 0x0218a064
 	ldr r1, [r1]
 	ldr r2, _0218a0a4 ; =0x4e415649
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp]
 	mov r0, #1
 	str r1, [r4, #0x180]
@@ -3215,7 +3215,7 @@ _0218be84:
 	ldr r0, _0218bf0c ; =data_027e0fe4
 	mov r1, sb
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0218bef4
 	ldrb r1, [r0, #0x1f8]
@@ -3390,7 +3390,7 @@ func_ov41_0218c0dc: ; 0x0218c0dc
 _0218c0ec:
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0218c104
 	bl func_ov00_020c3180
@@ -3534,7 +3534,7 @@ func_ov41_0218c204: ; 0x0218c204
 	ldr r0, _0218c3cc ; =data_027e0fe4
 	add r1, r4, #0x530
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0218c374
 	ldrb r1, [r4, #0x52b]
@@ -4009,7 +4009,7 @@ func_ov41_0218c834: ; 0x0218c834
 	ldr r0, _0218cbe8 ; =data_027e0fe4
 	add r1, r1, #0x400
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	ldr r1, _0218cbec ; =data_027e0e60
 	mov r4, r0
 	ldr r0, [r1]

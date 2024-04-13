@@ -1,6 +1,10 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase10GetStateIdEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern _ZN13LinkStateBase12GetPlayerVelEv
@@ -92,7 +96,6 @@
 .extern func_0203e7b4
 .extern func_0203eba8
 .extern func_0203ebc8
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -289,10 +292,6 @@
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0
@@ -475,3 +474,4 @@
 .extern func_ov34_0217bf0c
 .extern func_ov34_0217bf34
 .extern func_ov46_02193fac
+.extern strncpy

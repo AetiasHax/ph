@@ -274,10 +274,10 @@
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3484
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
+.extern _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c56d8

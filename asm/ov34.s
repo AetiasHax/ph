@@ -1237,11 +1237,11 @@ func_ov34_0217ce2c: ; 0x0217ce2c
 	ldr r2, _0217ceac ; =0x54534e4d
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217cea8 ; =data_027e0fe4
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r4, #0x1000
 	str r0, [r1, #0xd70]
 	ldr r2, [r4, #0x4c]

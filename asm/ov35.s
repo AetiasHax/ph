@@ -186,7 +186,7 @@ _0217bfa0:
 	beq _0217bfc4
 	ldr r0, [r8]
 	mov r1, r5
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	strneb sb, [r0, #0x118]
 _0217bfc4:
@@ -269,7 +269,7 @@ _0217c0c8:
 	beq _0217c0ec
 	ldr r0, [r8]
 	mov r1, r5
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	strneb sb, [r0, #0x118]
 _0217c0ec:
@@ -344,7 +344,7 @@ func_ov35_0217c1d4: ; 0x0217c1d4
 	mov sl, r0
 	ldr r0, [r1]
 	add r1, sl, #0x34
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	str r0, [sl, #0x234]
 	addeq sp, sp, #0x48
@@ -478,7 +478,7 @@ _0217c3c8:
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	ldr r0, [r8]
 	mov r1, r6
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r2, sl, r7, lsl #2
 	add r1, r7, #1
 	and r7, r1, #0xff
@@ -873,7 +873,7 @@ _0217c958:
 	add r1, r7, #0x238
 	ldr r0, [r0]
 	add r1, r1, r2, lsl #3
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r1, #0
 	strneb r1, [r0, #0x118]
@@ -1099,7 +1099,7 @@ _0217cc90:
 	beq _0217ccc8
 	ldr r0, [r7]
 	mov r1, r4
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0217ccbc
 	add r1, r6, #0x48
@@ -2160,7 +2160,7 @@ func_ov35_0217da38: ; 0x0217da38
 	ldr r0, _0217dab8 ; =data_027e0fe4
 	add r1, r4, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	ldrneb r1, [r0, #0x563]
 	subne r1, r1, #1
@@ -2201,7 +2201,7 @@ func_ov35_0217dac0: ; 0x0217dac0
 	ldr r0, _0217db48 ; =data_027e0fe4
 	add r1, r4, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	ldrneb r1, [r0, #0x563]
 	subne r1, r1, #1
@@ -2296,7 +2296,7 @@ func_ov35_0217db50: ; 0x0217db50
 	ldr r0, _0217dc78 ; =data_027e0fe4
 	add r1, r4, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	ldrneb r1, [r0, #0x563]
 	addne r1, r1, #1
@@ -2327,7 +2327,7 @@ func_ov35_0217dc7c: ; 0x0217dc7c
 	ldr r0, _0217dcec ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0217dcdc
 	ldr r0, [r0, #0x130]
@@ -2362,7 +2362,7 @@ func_ov35_0217dcf0: ; 0x0217dcf0
 	ldr r0, _0217e2c0 ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r4, r0
 	addeq sp, sp, #0x10
 	moveq r0, #1
@@ -3676,7 +3676,7 @@ _0217ee08:
 	ldr r0, _0217f054 ; =data_027e0fe4
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	str r0, [r4, #0x4e4]
 	addeq sp, sp, #0x3c
@@ -3752,7 +3752,7 @@ _0217ef90:
 	ldr r0, _0217f054 ; =data_027e0fe4
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r1, #0
 	strneb r1, [r0, #0x118]
@@ -10150,7 +10150,7 @@ func_ov35_021849dc: ; 0x021849dc
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x34
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x158]
 	cmp r0, #0
 	moveq r0, #0

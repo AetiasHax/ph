@@ -1,5 +1,7 @@
 #pragma once
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020ab934EP5Vec3p
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -176,8 +178,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c3894
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c47cc

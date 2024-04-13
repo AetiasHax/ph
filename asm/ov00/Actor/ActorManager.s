@@ -2,9 +2,9 @@
     .include "macros/function.inc"
 
     .text
-	.global func_ov00_020c33d4
-	arm_func_start func_ov00_020c33d4
-func_ov00_020c33d4: ; 0x020c33d4
+	.global _ZN12ActorManager11DeleteActorEjb
+	arm_func_start _ZN12ActorManager11DeleteActorEjb
+_ZN12ActorManager11DeleteActorEjb: ; 0x020c33d4
 	stmdb sp!, {r4, r5, r6, lr}
 	movs r4, r2
 	mov r6, r0
@@ -53,11 +53,11 @@ _020c3470:
 	mov r0, r0, lsr #0x10
 	str r0, [r6, #4]
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_020c33d4
+	arm_func_end _ZN12ActorManager11DeleteActorEjb
 
-	.global func_ov00_020c3484
-	arm_func_start func_ov00_020c3484
-func_ov00_020c3484: ; 0x020c3484
+	.global _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
+	arm_func_start _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
+_ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori: ; 0x020c3484
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
 	mov sl, r0
 	mvn r3, #0
@@ -120,14 +120,14 @@ _020c3560:
 	blo _020c34e8
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020c3484
+	arm_func_end _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 _020c3570: .word data_027e103c
 _020c3574: .word data_027e077c
 _020c3578: .word data_02056be4
 
-	.global func_ov00_020c357c
-	arm_func_start func_ov00_020c357c
-func_ov00_020c357c: ; 0x020c357c
+	.global _ZN12ActorManager14Actor_vfunc_10Ej
+	arm_func_start _ZN12ActorManager14Actor_vfunc_10Ej
+_ZN12ActorManager14Actor_vfunc_10Ej: ; 0x020c357c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r5, r0
 	ldr r0, [r5, #4]
@@ -153,11 +153,11 @@ _020c35c0:
 	add r7, r7, #4
 	blt _020c359c
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
-	arm_func_end func_ov00_020c357c
+	arm_func_end _ZN12ActorManager14Actor_vfunc_10Ej
 
-	.global func_ov00_020c35d8
-	arm_func_start func_ov00_020c35d8
-func_ov00_020c35d8: ; 0x020c35d8
+	.global _ZN12ActorManager13FindActorByIdEj
+	arm_func_start _ZN12ActorManager13FindActorByIdEj
+_ZN12ActorManager13FindActorByIdEj: ; 0x020c35d8
 	stmdb sp!, {r3, lr}
 	cmp r1, #0
 	mov ip, #0
@@ -201,11 +201,11 @@ _020c3660:
 _020c366c:
 	mov r0, ip
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020c35d8
+	arm_func_end _ZN12ActorManager13FindActorByIdEj
 
-	.global func_ov00_020c3674
-	arm_func_start func_ov00_020c3674
-func_ov00_020c3674: ; 0x020c3674
+	.global _ZN12ActorManager8GetActorEP8ActorRef
+	arm_func_start _ZN12ActorManager8GetActorEP8ActorRef
+_ZN12ActorManager8GetActorEP8ActorRef: ; 0x020c3674
 	ldr r2, [r1, #4]
 	cmp r2, #0
 	movlt r0, #0
@@ -223,11 +223,11 @@ func_ov00_020c3674: ; 0x020c3674
 _020c36ac:
 	mov r0, #0
 	bx lr
-	arm_func_end func_ov00_020c3674
+	arm_func_end _ZN12ActorManager8GetActorEP8ActorRef
 
-	.global func_ov00_020c36b4
-	arm_func_start func_ov00_020c36b4
-func_ov00_020c36b4: ; 0x020c36b4
+	.global _ZN11ActorFilter6FilterEP5Actor
+	arm_func_start _ZN11ActorFilter6FilterEP5Actor
+_ZN11ActorFilter6FilterEP5Actor: ; 0x020c36b4
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x18
 	mov r5, r0
@@ -310,11 +310,11 @@ _020c37e0:
 	mov r0, #1
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020c36b4
+	arm_func_end _ZN11ActorFilter6FilterEP5Actor
 
-	.global func_ov00_020c37ec
-	arm_func_start func_ov00_020c37ec
-func_ov00_020c37ec: ; 0x020c37ec
+	.global _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	arm_func_start _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+_ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList: ; 0x020c37ec
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	movs r7, r2
 	mov r4, #0
@@ -361,11 +361,11 @@ _020c3880:
 _020c388c:
 	mov r0, r4
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
-	arm_func_end func_ov00_020c37ec
+	arm_func_end _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 
-	.global func_ov00_020c3894
-	arm_func_start func_ov00_020c3894
-func_ov00_020c3894: ; 0x020c3894
+	.global _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+	arm_func_start _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+_ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j: ; 0x020c3894
 	stmdb sp!, {r3, lr}
 	mvn r3, #0
 	str r3, [r0]
@@ -394,11 +394,11 @@ _020c38ec:
 	cmp ip, lr
 	blo _020c38b8
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020c3894
+	arm_func_end _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 
-	.global func_ov00_020c38fc
-	arm_func_start func_ov00_020c38fc
-func_ov00_020c38fc: ; 0x020c38fc
+	.global _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
+	arm_func_start _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
+_ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p: ; 0x020c38fc
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
 	mvn r4, #0
 	mov sb, r0
@@ -437,31 +437,31 @@ _020c397c:
 	cmp r5, r6
 	blo _020c3930
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
-	arm_func_end func_ov00_020c38fc
+	arm_func_end _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 
-	.global func_ov00_020c398c
-	arm_func_start func_ov00_020c398c
-func_ov00_020c398c: ; 0x020c398c
+	.global _ZN12ActorManager18func_ov00_020c398cEv
+	arm_func_start _ZN12ActorManager18func_ov00_020c398cEv
+_ZN12ActorManager18func_ov00_020c398cEv: ; 0x020c398c
 	ldr ip, _020c3998 ; =func_ov00_020c3f08
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_020c398c
+	arm_func_end _ZN12ActorManager18func_ov00_020c398cEv
 _020c3998: .word func_ov00_020c3f08
 
-	.global func_ov00_020c399c
-	arm_func_start func_ov00_020c399c
-func_ov00_020c399c: ; 0x020c399c
+	.global _ZN12ActorManager18func_ov00_020c399cEv
+	arm_func_start _ZN12ActorManager18func_ov00_020c399cEv
+_ZN12ActorManager18func_ov00_020c399cEv: ; 0x020c399c
 	ldr ip, _020c39a8 ; =func_ov00_020c3f3c
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_020c399c
+	arm_func_end _ZN12ActorManager18func_ov00_020c399cEv
 _020c39a8: .word func_ov00_020c3f3c
 
-	.global func_ov00_020c39ac
-	arm_func_start func_ov00_020c39ac
-func_ov00_020c39ac: ; 0x020c39ac
+	.global _ZN12ActorManager18func_ov00_020c39acEjPjb
+	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPjb
+_ZN12ActorManager18func_ov00_020c39acEjPjb: ; 0x020c39ac
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x10
 	movs r8, r2
@@ -506,7 +506,7 @@ _020c3a14:
 	mov r1, r8
 	ldr r0, [r0, r5, lsl #2]
 	ldr r0, [r0, #4]
-	bl func_ov00_020c3e1c
+	bl _ZN12ActorManager16ActorTypeIsOneOfEjPj
 	cmp r7, r0
 	beq _020c3b08
 _020c3a60:
@@ -563,11 +563,11 @@ _020c3b20:
 	mov r0, r4
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
-	arm_func_end func_ov00_020c39ac
+	arm_func_end _ZN12ActorManager18func_ov00_020c39acEjPjb
 
-	.global func_ov00_020c3b2c
-	arm_func_start func_ov00_020c3b2c
-func_ov00_020c3b2c: ; 0x020c3b2c
+	.global _ZN12ActorManager18func_ov00_020c3b2cEPi
+	arm_func_start _ZN12ActorManager18func_ov00_020c3b2cEPi
+_ZN12ActorManager18func_ov00_020c3b2cEPi: ; 0x020c3b2c
 	stmdb sp!, {r4, lr}
 	cmp r1, #0
 	movne r2, #0
@@ -605,11 +605,11 @@ _020c3b94:
 _020c3ba8:
 	mov r0, lr
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_020c3b2c
+	arm_func_end _ZN12ActorManager18func_ov00_020c3b2cEPi
 
-	.global func_ov00_020c3bb0
-	arm_func_start func_ov00_020c3bb0
-func_ov00_020c3bb0: ; 0x020c3bb0
+	.global _ZN12ActorManager18func_ov00_020c3bb0EiPi
+	arm_func_start _ZN12ActorManager18func_ov00_020c3bb0EiPi
+_ZN12ActorManager18func_ov00_020c3bb0EiPi: ; 0x020c3bb0
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0xd4
 	movs sl, r2
@@ -694,12 +694,12 @@ _020c3cd8:
 	add sp, sp, #0xd4
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020c3bb0
+	arm_func_end _ZN12ActorManager18func_ov00_020c3bb0EiPi
 _020c3ce4: .word data_027e0e60
 
-	.global func_ov00_020c3ce8
-	arm_func_start func_ov00_020c3ce8
-func_ov00_020c3ce8: ; 0x020c3ce8
+	.global _ZN12ActorManager18func_ov00_020c3ce8Eii
+	arm_func_start _ZN12ActorManager18func_ov00_020c3ce8Eii
+_ZN12ActorManager18func_ov00_020c3ce8Eii: ; 0x020c3ce8
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0xcc
 	ldr r3, _020c3dcc ; =data_027e0e60
@@ -762,12 +762,12 @@ _020c3db0:
 	add sp, sp, #0xcc
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020c3ce8
+	arm_func_end _ZN12ActorManager18func_ov00_020c3ce8Eii
 _020c3dcc: .word data_027e0e60
 
-	.global func_ov00_020c3dd0
-	arm_func_start func_ov00_020c3dd0
-func_ov00_020c3dd0: ; 0x020c3dd0
+	.global _ZN12ActorManager14Actor_vfunc_28Ev
+	arm_func_start _ZN12ActorManager14Actor_vfunc_28Ev
+_ZN12ActorManager14Actor_vfunc_28Ev: ; 0x020c3dd0
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrh r0, [r6]
@@ -789,11 +789,11 @@ _020c3e04:
 	cmp r4, r0
 	blt _020c3dec
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_020c3dd0
+	arm_func_end _ZN12ActorManager14Actor_vfunc_28Ev
 
-	.global func_ov00_020c3e1c
-	arm_func_start func_ov00_020c3e1c
-func_ov00_020c3e1c: ; 0x020c3e1c
+	.global _ZN12ActorManager16ActorTypeIsOneOfEjPj
+	arm_func_start _ZN12ActorManager16ActorTypeIsOneOfEjPj
+_ZN12ActorManager16ActorTypeIsOneOfEjPj: ; 0x020c3e1c
 	ldr ip, [r1]
 	ldr r2, _020c3e50 ; =0x4e554c4c
 	mov r3, #0
@@ -810,7 +810,7 @@ _020c3e48:
 	mov r0, r3
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_020c3e1c
+	arm_func_end _ZN12ActorManager16ActorTypeIsOneOfEjPj
 _020c3e50: .word 0x4e554c4c
 
     .data
@@ -876,6 +876,6 @@ data_ov00_020e72e8: ; 0x020e72e8
 	.global data_ov00_020e72ec
 data_ov00_020e72ec: ; 0x020e72ec
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e72f0
-data_ov00_020e72f0: ; 0x020e72f0
-    .word func_ov00_020c36b4
+	.global _ZTV11ActorFilter
+_ZTV11ActorFilter: ; 0x020e72f0
+    .word _ZN11ActorFilter6FilterEP5Actor

@@ -441,10 +441,10 @@
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
 .extern func_ov00_020c2a0c
-.extern func_ov00_020c33d4
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
+.extern _ZN12ActorManager11DeleteActorEjb
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern func_ov00_020c3eb0
 .extern func_ov00_020ce2f0
 .extern func_ov00_020ce8e4

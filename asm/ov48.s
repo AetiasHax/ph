@@ -1359,7 +1359,7 @@ func_ov48_02190e80: ; 0x02190e80
 	ldr r0, _02190f68 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	blx func_ov00_020c3674
+	blx _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #0x53
 	lsl r1, r1, #4
 	str r0, [r4, r1]
@@ -2598,7 +2598,7 @@ _02191ed2:
 	ldr r0, _02192054 ; =data_027e0fe4
 	add r1, sp, #0x20
 	ldr r0, [r0]
-	blx func_ov00_020c3674
+	blx _ZN12ActorManager8GetActorEP8ActorRef
 	ldr r1, _02192058 ; =0x0000052c
 	str r0, [r5, r1]
 	add r0, r1, #0
@@ -4822,7 +4822,7 @@ _02193b5c:
 	mov r2, #0
 	add r1, sp, #0x258
 	mvn r3, #0
-	ldr r5, _02193f38 ; =data_ov00_020e72f0
+	ldr r5, _02193f38 ; =_ZTV11ActorFilter
 	ldr r4, _02193f3c ; =0x424f4d42
 	add r6, sp, #0x1a4
 	mov r0, #0x10
@@ -4851,7 +4851,7 @@ _02193bd4:
 	add r1, sp, #0x224
 	ldr r0, [r0]
 	add r2, sp, #0x198
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, [sp, #0x1a0]
 	mov r5, #0
 	cmp r0, #0
@@ -4863,7 +4863,7 @@ _02193c18:
 	ldr r1, [sp, #0x198]
 	ldr r0, [fp]
 	add r1, r1, sb
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r6, r0
 	beq _02193cfc
 	mov r1, r4
@@ -4926,7 +4926,7 @@ _02193cfc:
 	cmp r5, r0
 	blt _02193c18
 _02193d10:
-	ldr r5, _02193f38 ; =data_ov00_020e72f0
+	ldr r5, _02193f38 ; =_ZTV11ActorFilter
 	mov r2, #0
 	add r1, sp, #0x184
 	mvn r3, #0
@@ -4958,7 +4958,7 @@ _02193d68:
 	add r1, sp, #0x150
 	ldr r0, [r0]
 	add r2, sp, #0xc4
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, [sp, #0xcc]
 	mov r5, #0
 	cmp r0, #0
@@ -4971,7 +4971,7 @@ _02193dac:
 	ldr r1, [sp, #0xc4]
 	ldr r0, [r0]
 	add r1, r1, sb
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r6, r0
 	beq _02193e8c
 	mov r1, r4
@@ -5077,7 +5077,7 @@ _02193f28: .word data_02050f54
 _02193f2c: .word data_027e0e58
 _02193f30: .word 0x000004cd
 _02193f34: .word data_ov48_02194688
-_02193f38: .word data_ov00_020e72f0
+_02193f38: .word _ZTV11ActorFilter
 _02193f3c: .word 0x424f4d42
 _02193f40: .word data_027e0fe4
 _02193f44: .word 0x424d5459

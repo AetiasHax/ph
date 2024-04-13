@@ -9,6 +9,9 @@
 .extern _ZN11ItemManager18EquipItem_vfunc_38Ei
 .extern _ZN11ItemManager19GetDungeonItemModelEj
 .extern _ZN11ItemManager22UpdateSwordShieldInUseEv
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
 .extern _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
@@ -535,9 +538,6 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c5288

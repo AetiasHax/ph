@@ -88,7 +88,7 @@
 .extern data_ov00_020e2e3c
 .extern data_ov00_020e2f04
 .extern data_ov00_020e5684
-.extern data_ov00_020e72f0
+.extern _ZTV11ActorFilter
 .extern data_ov00_020e899c
 .extern data_ov00_020e8b08
 .extern data_ov00_020e9360
@@ -545,12 +545,12 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
-.extern func_ov00_020c3b2c
-.extern func_ov00_020c3bb0
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager18func_ov00_020c3b2cEPi
+.extern _ZN12ActorManager18func_ov00_020c3bb0EiPi
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0

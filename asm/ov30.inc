@@ -30,7 +30,7 @@
 .extern data_027e0ffc
 .extern data_027e1038
 .extern data_027e10b4
-.extern data_ov00_020e72f0
+.extern _ZTV11ActorFilter
 .extern data_ov00_020e8398
 .extern data_ov00_020eec68
 .extern data_ov00_020eec9c
@@ -182,10 +182,10 @@
 .extern func_ov00_020c31fc
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c38fc
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0

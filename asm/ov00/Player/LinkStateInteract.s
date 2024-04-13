@@ -349,7 +349,7 @@ _020aa684:
 	ldr r0, _020aa7a8 ; =data_027e0fe4
 	add r1, r4, #0x10
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	mov r0, r4
 	beq _020aa6bc
@@ -859,7 +859,7 @@ _020aadbc:
 	str r2, [sp, #0x14]
 	ldr r2, [r3, #0x88]
 	str r2, [sp, #0x18]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r6, r0
 	bne _020aae38
 	mov r0, r4
@@ -1989,7 +1989,7 @@ _020abce0:
 	ldr r0, _020abd70 ; =data_027e0fe4
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r6, r0
 	mov r0, r5
 	bl _ZN13LinkStateBase15GetGrabActorRefEv

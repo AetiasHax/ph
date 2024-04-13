@@ -4840,7 +4840,7 @@ _0217fb0c:
 	ldr r1, [r0]
 	add r0, sp, #4
 	mov r2, r4
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #4]
 	mvn r0, #0
 	str r1, [r5, #0xdc]
@@ -4872,7 +4872,7 @@ _0217fb98:
 	ldr r0, _0217fbcc ; =data_027e0fe4
 	add r1, r5, #0xdc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add sp, sp, #0x7c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
@@ -4896,7 +4896,7 @@ func_ov40_0217fbd0: ; 0x0217fbd0
 	ldr r2, _0217fc00 ; =data_027e0fe4
 	add r1, r0, #0xdc
 	ldr r0, [r2]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r1, #0
 	strneb r1, [r0, #0x118]
@@ -4994,7 +4994,7 @@ func_ov40_0217fd14: ; 0x0217fd14
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0xdc
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov lr, #0
 	mov ip, #1
 	mov r3, #2
@@ -5063,7 +5063,7 @@ func_ov40_0217fe04: ; 0x0217fe04
 	ldr r0, _0217fe70 ; =data_027e0fe4
 	add r1, r4, #0xdc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r1, #0
 	strneb r1, [r0, #0x118]
@@ -5098,7 +5098,7 @@ func_ov40_0217fe74: ; 0x0217fe74
 	ldr r2, _0217febc ; =data_027e0fe4
 	add r1, r0, #0xdc
 	ldr r0, [r2]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	mvneq r0, #0
 	ldmeqia sp!, {r4, pc}
@@ -5127,7 +5127,7 @@ func_ov40_0217fec0: ; 0x0217fec0
 	ldr r2, _0217ff1c ; =data_027e0fe4
 	add r1, r0, #0xdc
 	ldr r0, [r2]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -5154,7 +5154,7 @@ func_ov40_0217ff20: ; 0x0217ff20
 	ldr r2, _0217ff70 ; =data_027e0fe4
 	add r1, r0, #0xdc
 	ldr r0, [r2]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -5178,7 +5178,7 @@ func_ov40_0217ff74: ; 0x0217ff74
 	ldr r0, _0218005c ; =data_027e0fe4
 	add r1, r4, #0xdc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov lr, #0
 	mov ip, #1
 	mov r3, #2
@@ -5241,7 +5241,7 @@ func_ov40_02180060: ; 0x02180060
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0xdc
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0218008c
 	ldr r1, [r0]

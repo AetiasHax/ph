@@ -5,6 +5,11 @@
 .extern _ZN11ItemManager4LoadEPK15SaveItemManager
 .extern _ZN11ItemManager6CreateEv
 .extern _ZN11ItemManager7DestroyEv
+.extern _ZN12ActorManager11DeleteActorEjb
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN12TouchControlC2Ev
 .extern _ZN12TouchGestureC2Ev
 .extern _ZN13PlayerControl18func_ov00_020aef30Ev
@@ -351,9 +356,6 @@
 .extern func_02043594
 .extern func_020435b4
 .extern func_02043600
-.extern strlen
-.extern strcpy
-.extern strcat
 .extern func_0204dd9c
 .extern func_0204f558
 .extern func_0204f614
@@ -580,11 +582,6 @@
 .extern func_ov00_020c3348
 .extern func_ov00_020c3388
 .extern func_ov00_020c33b0
-.extern func_ov00_020c33d4
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
 .extern func_ov00_020c3f9c
 .extern func_ov00_020c3fd4
 .extern func_ov00_020c4014
@@ -718,3 +715,6 @@
 .extern gItemManager
 .extern gOverlayManager
 .extern gPlayerAnimHandler
+.extern strcat
+.extern strcpy
+.extern strlen

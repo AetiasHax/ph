@@ -17,6 +17,13 @@
 .extern _ZN11ItemManager13UnequipPotionEv
 .extern _ZN11ItemManager4SaveEP15SaveItemManager
 .extern _ZN11ItemManager8GiveAmmoEit
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN12ActorManager18func_ov00_020c398cEv
+.extern _ZN12ActorManager18func_ov00_020c399cEv
+.extern _ZN12ActorManager18func_ov00_020c39acEjPjb
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
 .extern _ZN13LinkStateBase10GetStateIdEv
 .extern _ZN13LinkStateBase12GetGrabActorEv
@@ -322,13 +329,6 @@
 .extern func_ov00_020a98bc
 .extern func_ov00_020a9968
 .extern func_ov00_020a9aac
-.extern func_ov00_020c35d8
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c3894
-.extern func_ov00_020c398c
-.extern func_ov00_020c399c
-.extern func_ov00_020c39ac
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c45b0

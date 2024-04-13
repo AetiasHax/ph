@@ -632,7 +632,7 @@ func_ov51_02195c80: ; 0x02195c80
 	ldr r0, _02195e98 ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	bne _02195cfc
 	mov r0, r5
@@ -2216,7 +2216,7 @@ func_ov51_021970a0: ; 0x021970a0
 	ldr r0, _02197278 ; =data_027e0fe4
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r6, r0
 	beq _021971e4
 	bl func_ov51_02197088

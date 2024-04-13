@@ -3362,7 +3362,7 @@ _021702f8:
 	add r1, sp, #0x10
 	ldr r0, [r0]
 	add r2, sp, #0x20
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, [sp, #0x18]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #0x1c]
@@ -3372,7 +3372,7 @@ _0217034c:
 	ldr r2, _021703c0 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #8
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #8]
 	ldr r0, [sp, #0xc]
 	str r1, [sp, #0x18]
@@ -3386,7 +3386,7 @@ _02170380:
 	ldr r2, _021703c0 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp]
 	ldr r0, [sp, #4]
 	str r1, [sp, #0x18]
@@ -6751,7 +6751,7 @@ _02172f1c:
 	add r1, sp, #4
 	ldr r0, [r0]
 	add r2, sp, #0x20
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r1, [sp, #0xc]
 	mvn r0, #0
 	cmp r1, r0
@@ -6759,7 +6759,7 @@ _02172f1c:
 	ldr r0, _0217307c ; =data_027e0fe4
 	add r1, sp, #0xc
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x73c]
 	ldrb r0, [r4, #0xa4]
 	cmp r0, #0
@@ -7689,7 +7689,7 @@ func_ov22_02173ab0: ; 0x02173ab0
 	ldr r0, _02173c14 ; =data_027e0fe4
 	add r1, r4, #0x364
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x360]
 	ldr r0, [r4, #0x360]
 	cmp r0, #0
@@ -8239,7 +8239,7 @@ _0217436c:
 	ldr r0, _0217462c ; =data_027e0fe4
 	add r1, r5, #0x364
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	bne _021744c8
 	mov r0, r5
@@ -8777,7 +8777,7 @@ func_ov22_02174990: ; 0x02174990
 	str r1, [r4, #0x164]
 	ldr r0, [r0]
 	add r1, r4, #0x34
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x278]
 	mov r0, #3
 	strb r0, [r4, #0x1a8]
@@ -9643,7 +9643,7 @@ func_ov22_0217556c: ; 0x0217556c
 	blt _021755cc
 	ldr r0, _021755d4 ; =data_027e0fe4
 	ldr r0, [r0]
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	beq _021755cc
 	ldr r1, [r0, #4]

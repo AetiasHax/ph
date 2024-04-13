@@ -3203,7 +3203,7 @@ func_ov09_02114554: ; 0x02114554
 	ldr r0, _021146a8 ; =data_027e0fe4
 	str r1, [sp, #4]
 	ldr r0, [r0]
-	blx func_ov00_020c3dd0
+	blx _ZN12ActorManager14Actor_vfunc_28Ev
 	mov r0, #0
 	str r0, [sp, #8]
 	ldr r0, _021146ac ; =data_027e0e60

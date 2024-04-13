@@ -185,7 +185,7 @@ _0216d8d0:
 	bl func_ov00_020c4048
 	ldr r0, [r4]
 	mov r1, r6
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, sl, sb, lsl #2
 	str r0, [r1, #0xa40]
 	mov r1, sb
@@ -4704,7 +4704,7 @@ func_ov20_02171640: ; 0x02171640
 	mov r2, r0
 	ldr r0, [r1]
 	add r1, r2, #0x34
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	bl func_ov20_0216f720
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -5766,7 +5766,7 @@ _021724cc:
 	ldr r0, _02172554 ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	bne _021724fc
 	mov r0, r5
@@ -6033,11 +6033,11 @@ _021727fc:
 	ldr r2, _02172950 ; =0x564c4352
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217294c ; =data_027e0fe4
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _02172850
 	ldr r1, [r0, #0x48]
@@ -7421,11 +7421,11 @@ func_ov20_02173a80: ; 0x02173a80
 	mov r6, r0
 	ldr r2, _02173bc4 ; =0x524d4654
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _02173bc0 ; =data_027e0fe4
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r4, r0
 	cmp r5, #4
 	addls pc, pc, r5, lsl #2
@@ -7540,7 +7540,7 @@ _02173c14:
 	ldr r2, _02173cd8 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0x10
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #0x10]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #0x14]
@@ -7551,7 +7551,7 @@ _02173c3c:
 	ldr r2, _02173cd8 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #8
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #8]
 	ldr r0, _02173cd4 ; =data_027e0fe4
 	str r1, [r4, #0x180]
@@ -7573,7 +7573,7 @@ _02173c3c:
 	str lr, [sp, #0x20]
 	str ip, [sp]
 	str r3, [sp, #4]
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, [sp, #8]
 	str r0, [r4, #0x188]
 	ldr r0, [sp, #0xc]
@@ -9965,11 +9965,11 @@ _02175b0c:
 	ldr r2, _02175f2c ; =0x564c4352
 	add r0, sp, #4
 	str r3, [sp, #0xc8]
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _02175f28 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	ldr r5, [r4, #0x138]
 	ldr r2, [r0, #0x48]
 	cmp r5, #0x96
@@ -10645,7 +10645,7 @@ func_ov20_021763b4: ; 0x021763b4
 	ldr r2, _0217640c ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #4]

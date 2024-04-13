@@ -1265,28 +1265,28 @@ _0217cdc8:
 func_ov31_0217cdd8: ; 0x0217cdd8
 	ldr r2, _0217cdf0 ; =data_027e0fe4
 	add r3, r0, #0x70
-	ldr ip, _0217cdf4 ; =func_ov00_020c3674
+	ldr ip, _0217cdf4 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	ldr r0, [r2]
 	add r1, r3, r1, lsl #3
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov31_0217cdd8
 _0217cdf0: .word data_027e0fe4
-_0217cdf4: .word func_ov00_020c3674
+_0217cdf4: .word _ZN12ActorManager8GetActorEP8ActorRef
 
 	.global func_ov31_0217cdf8
 	arm_func_start func_ov31_0217cdf8
 func_ov31_0217cdf8: ; 0x0217cdf8
 	ldr r2, _0217ce10 ; =data_027e0fe4
 	add r3, r0, #0x70
-	ldr ip, _0217ce14 ; =func_ov00_020c3674
+	ldr ip, _0217ce14 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	ldr r0, [r2]
 	add r1, r3, r1, lsl #3
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov31_0217cdf8
 _0217ce10: .word data_027e0fe4
-_0217ce14: .word func_ov00_020c3674
+_0217ce14: .word _ZN12ActorManager8GetActorEP8ActorRef
 
 	.global func_ov31_0217ce18
 	arm_func_start func_ov31_0217ce18

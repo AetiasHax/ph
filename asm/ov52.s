@@ -2116,7 +2116,7 @@ _02196fa4:
 	mov r1, r0
 	ldr r0, _02197084 ; =data_027e0fe4
 	ldr r0, [r0]
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	beq _0219705c
 	mov r1, #3
@@ -2234,7 +2234,7 @@ _021971b0:
 	ldr r2, _02197228 ; =0x47524d47
 	ldr r1, [r1]
 	add r0, sp, #0xc
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #0xc]
 	ldr r0, [sp, #0x10]
 	str r1, [sp, #0x14]
@@ -2248,7 +2248,7 @@ _021971d4:
 	str r2, [r4, #0x18c]
 	ldr r1, [r1]
 	ldr r2, _02197230 ; =0x4e415649
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #4]
 	ldr r0, [sp, #8]
 	str r1, [sp, #0x14]

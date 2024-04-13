@@ -915,7 +915,7 @@ _0217c978:
 	ldr r0, _0217cbe4 ; =data_027e0fe4
 	mov r1, r6
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r5, r0
 	add r0, r8, r4
 	add r0, r0, #0x2000
@@ -1009,7 +1009,7 @@ _0217cadc:
 	ldr r0, _0217cbe4 ; =data_027e0fe4
 	mov r1, r7
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r6, r0
 	add r0, r8, #0x21c
 	mov r1, sl
@@ -4243,7 +4243,7 @@ func_ov37_0217f8a4: ; 0x0217f8a4
 _0217f8bc:
 	ldr r0, [r4]
 	mov r1, r7
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	add r6, r6, #1
 	strneb r5, [r0, #0x118]
@@ -4312,7 +4312,7 @@ func_ov37_0217f980: ; 0x0217f980
 _0217f998:
 	ldr r0, [r4]
 	mov r1, r7
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	add r6, r6, #1
 	strneb r5, [r0, #0x118]
@@ -4355,7 +4355,7 @@ func_ov37_0217f9c4: ; 0x0217f9c4
 	ldr r0, _0217fa88 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r4, #0x2000
 	str r0, [r1, #0xf98]
 	add r1, sp, #4
@@ -4369,7 +4369,7 @@ func_ov37_0217f9c4: ; 0x0217f9c4
 	ldr r0, _0217fa88 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r4, #0x2000
 	str r0, [r1, #0xf9c]
 	add sp, sp, #0x38
@@ -4432,7 +4432,7 @@ func_ov37_0217fab8: ; 0x0217fab8
 	add r1, r4, #0x2ec
 	ldr r0, [r0]
 	add r1, r1, #0x2c00
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r4, #0x2000
 	ldr r1, [r1, #0xfa8]
 	cmp r1, #1
@@ -4473,7 +4473,7 @@ func_ov37_0217fbac: ; 0x0217fbac
 	add r1, r0, #0x2ec
 	ldr r0, [r2]
 	add r1, r1, #0x2c00
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r1, #0
 	strneb r1, [r0, #0x118]
@@ -4516,7 +4516,7 @@ func_ov37_0217fbd8: ; 0x0217fbd8
 	ldr r0, _0217fcb4 ; =data_027e0fe4
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _0217fc6c
 	mov r1, r5
@@ -11819,7 +11819,7 @@ _021861b4:
 	ldr r0, _0218620c ; =data_027e0fe4
 	mov r1, r2
 	ldr r0, [r0]
-	bl func_ov00_020c35d8
+	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
 	beq _02186200
 	ldr r2, [r0, #4]
@@ -11913,7 +11913,7 @@ func_ov37_021862d0: ; 0x021862d0
 	add r1, r4, #4
 	ldr r0, [r0]
 	add r1, r1, #0x400
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _02186300
 	bl func_ov00_020c3180
@@ -11968,7 +11968,7 @@ func_ov37_02186390: ; 0x02186390
 	add r1, r4, #4
 	ldr r0, [r0]
 	add r1, r1, #0x400
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _021863c0
 	bl func_ov00_020c3180
@@ -12104,7 +12104,7 @@ func_ov37_02186458: ; 0x02186458
 	add r1, r4, #4
 	ldr r0, [r0]
 	add r1, r1, #0x400
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r4, #0x1a
 	add r0, r4, #0x48
 	add r1, r1, #0x400
@@ -12242,7 +12242,7 @@ func_ov37_02186720: ; 0x02186720
 	ldr r0, _02186850 ; =data_027e0fe4
 	add r1, r4, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r1, sp, #0x38
 	add r0, r0, #0x48
 	bl func_ov00_020ce2f0
@@ -12974,7 +12974,7 @@ _021870d0:
 	add r1, r5, #4
 	ldr r0, [r0]
 	add r1, r1, #0x400
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r3, sp, #0x44
 	add r1, r5, #0x48
 	mov r4, r0
@@ -13382,7 +13382,7 @@ _021876bc:
 	ldr r0, _02187744 ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r2, r0, #0x2000
 	mov r3, #1
 	mov r0, r5
@@ -13396,7 +13396,7 @@ _02187700:
 	ldr r0, _02187744 ; =data_027e0fe4
 	add r1, r5, #0x34
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add r2, r0, #0x2000
 	mov r3, #1
 	mov r0, r5
@@ -13482,7 +13482,7 @@ func_ov37_021877c0: ; 0x021877c0
 	ldr r0, _021878a0 ; =data_027e0fe4
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs ip, r0
 	beq _0218786c
 	add r7, sp, #0x10

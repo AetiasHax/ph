@@ -4,6 +4,7 @@
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager7AddItemEi
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13PlayerControl14CheckTouchFastEj
 .extern _ZN13PlayerControl14IsTouchingFastEv
 .extern _ZN9SysObjectdlEPv
@@ -91,7 +92,6 @@
 .extern func_02036ce4
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -231,7 +231,6 @@
 .extern func_ov00_020c3200
 .extern func_ov00_020c322c
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
 .extern func_ov00_020c53b0
@@ -298,3 +297,4 @@
 .extern func_ov17_02168660
 .extern func_ov17_021687f0
 .extern gItemManager
+.extern strncpy
