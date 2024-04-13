@@ -19,7 +19,28 @@ translations. Feel free to contribute to this list!
 `HART` | Heart
 `BOMB` | Bomb
 `ARRW` | Arrow
+`TMAP` | Treasure Map
+`NKEY` | Small Key
+`DGTG` | | Diggable spot
+`ITBT` | | 10 Bombchus shop item
+`ITBM` | | 10 Bombs shop item
+`ITTR` | | Random treasure shop item
+`ITHU` | | Heart container shop item
+`ITAP` | | Quiver shop item
+`ITBB` | | Bomb bag shop item
+`ITPB` | | Red potion shop item
+`ITSR` | | Courage (green) gem shop item
+`ITSL` | | Shield shop item
+`ITSO` | | Sold out sign in shop
 `AMOS` | Armos
 `CHUC` | Chuchu
+`LKLK` | Like Like
 `BMOS` | Beamos
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
+`LNBK` | Linebeck
+`WBLK` | Wind Block | The blocks in the Wind Temple that blow air
+`DRUM` | Drum | Storage drum on the Ghost Ship
+`KOKO` | Cucco
+`POST` | Mailbox
+`PSTM` | Postman
+`CROW` | Crow | Bird that steals rupees
