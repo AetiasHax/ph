@@ -8741,7 +8741,7 @@ _02174910:
 	blo _02174910
 	ldr r0, _021749e8 ; =data_027e0fe4
 	mov lr, #0
-	ldr r6, _021749ec ; =_ZTV11ActorFilter
+	ldr r6, _021749ec ; =_ZTV11FilterActor
 	add ip, sp, #0x40
 	ldr r5, _021749f0 ; =0x4d4c4457
 	add r4, sp, #0x54
@@ -8793,7 +8793,7 @@ _021749dc:
 	.align 2, 0
 	arm_func_end func_ov19_021748fc
 _021749e8: .word data_027e0fe4
-_021749ec: .word _ZTV11ActorFilter
+_021749ec: .word _ZTV11FilterActor
 _021749f0: .word 0x4d4c4457
 
 	.global func_ov19_021749f4

@@ -2550,7 +2550,7 @@ _0216f6bc:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
 _0216f6f4:
-	ldr r4, _0216f890 ; =_ZTV11ActorFilter
+	ldr r4, _0216f890 ; =_ZTV11FilterActor
 	mov r1, #0
 	add r0, sp, #0x188
 	mvn r3, #0
@@ -2660,7 +2660,7 @@ _0216f880: .word 0x00000733
 _0216f884: .word data_027e0fe4
 _0216f888: .word 0x4e545250
 _0216f88c: .word 0x50534241
-_0216f890: .word _ZTV11ActorFilter
+_0216f890: .word _ZTV11FilterActor
 _0216f894: .word 0x414d4f53
 
 	.global func_ov23_0216f898
@@ -6551,7 +6551,7 @@ func_ov23_02172b88: ; 0x02172b88
 	sub sp, sp, #0x48
 	ldr r0, _02172bf4 ; =data_027e0fe4
 	mov r2, #0
-	ldr r4, _02172bf8 ; =_ZTV11ActorFilter
+	ldr r4, _02172bf8 ; =_ZTV11FilterActor
 	add r3, sp, #0x34
 	mvn ip, #0
 	ldr lr, _02172bfc ; =0x424f4d42
@@ -6577,7 +6577,7 @@ func_ov23_02172b88: ; 0x02172b88
 	.align 2, 0
 	arm_func_end func_ov23_02172b88
 _02172bf4: .word data_027e0fe4
-_02172bf8: .word _ZTV11ActorFilter
+_02172bf8: .word _ZTV11FilterActor
 _02172bfc: .word 0x424f4d42
 
 	.global func_ov23_02172c00
@@ -6990,7 +6990,7 @@ func_ov23_02173124: ; 0x02173124
 	mov r3, #0
 	bl func_ov00_020ceacc
 _021731a4:
-	ldr r4, _021734d0 ; =_ZTV11ActorFilter
+	ldr r4, _021734d0 ; =_ZTV11FilterActor
 	mov r1, #0
 	add r0, sp, #0xf8
 	mvn r2, #0
@@ -7202,7 +7202,7 @@ _021734a8:
 	arm_func_end func_ov23_02173124
 _021734c8: .word data_02050f54
 _021734cc: .word data_027e0ffc
-_021734d0: .word _ZTV11ActorFilter
+_021734d0: .word _ZTV11FilterActor
 _021734d4: .word 0x424f4d42
 _021734d8: .word data_027e0fe4
 _021734dc: .word 0x00000733

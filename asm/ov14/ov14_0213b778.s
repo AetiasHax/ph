@@ -20,7 +20,7 @@ _0213b794:
 	blo _0213b794
 	ldr r0, _0213b8fc ; =data_027e0fe4
 	mov r6, #0
-	ldr r5, _0213b900 ; =_ZTV11ActorFilter
+	ldr r5, _0213b900 ; =_ZTV11FilterActor
 	add r3, sp, #0x40
 	str r1, [sp, #0x10]
 	add sb, sp, #0x54
@@ -110,7 +110,7 @@ _0213b8f0:
 	.align 2, 0
 	arm_func_end func_ov14_0213b778
 _0213b8fc: .word data_027e0fe4
-_0213b900: .word _ZTV11ActorFilter
+_0213b900: .word _ZTV11FilterActor
 
 	.global func_ov14_0213b904
 	arm_func_start func_ov14_0213b904

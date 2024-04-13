@@ -40,7 +40,7 @@
 .extern data_027e10b8
 .extern data_ov00_020e2dd8
 .extern data_ov00_020e2f04
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e8398
 .extern data_ov00_020e892c
 .extern data_ov00_020e8b08

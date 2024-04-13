@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Actor/FilterActorBase.hpp"
 #include "Physics/AABB.hpp"
 #include "Physics/Sphere.hpp"
 
@@ -13,15 +14,6 @@ struct ActorRef {
     /* 8 */
 };
 
-class ActorFilterBase {
-public:
-    /* 0 (vtable) */
-    /* 4 */
-
-    /* 0 */ virtual bool Filter(Actor *actor) = 0;
-    /* 4 */
-};
-
 struct ActorManager_UnkStruct_68 {
     /* 0 */ u32 unk_0;
     /* 4 */ u32 unk_4;
@@ -29,7 +21,7 @@ struct ActorManager_UnkStruct_68 {
     /* c */
 };
 
-class ActorFilter : public ActorFilterBase {
+class FilterActor : public FilterActorBase {
     /* 00 (base) */
     /* 04 */ u32 mType;
     /* 08 */ s32 mUnk_08;

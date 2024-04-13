@@ -16,7 +16,7 @@
 .extern data_027e0fec
 .extern data_027e0ff0
 .extern data_027e0ffc
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e8398
 .extern data_ov00_020e892c
 .extern data_ov00_020e9370

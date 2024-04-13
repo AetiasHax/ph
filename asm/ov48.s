@@ -4822,7 +4822,7 @@ _02193b5c:
 	mov r2, #0
 	add r1, sp, #0x258
 	mvn r3, #0
-	ldr r5, _02193f38 ; =_ZTV11ActorFilter
+	ldr r5, _02193f38 ; =_ZTV11FilterActor
 	ldr r4, _02193f3c ; =0x424f4d42
 	add r6, sp, #0x1a4
 	mov r0, #0x10
@@ -4926,7 +4926,7 @@ _02193cfc:
 	cmp r5, r0
 	blt _02193c18
 _02193d10:
-	ldr r5, _02193f38 ; =_ZTV11ActorFilter
+	ldr r5, _02193f38 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x184
 	mvn r3, #0
@@ -5077,7 +5077,7 @@ _02193f28: .word data_02050f54
 _02193f2c: .word data_027e0e58
 _02193f30: .word 0x000004cd
 _02193f34: .word data_ov48_02194688
-_02193f38: .word _ZTV11ActorFilter
+_02193f38: .word _ZTV11FilterActor
 _02193f3c: .word 0x424f4d42
 _02193f40: .word data_027e0fe4
 _02193f44: .word 0x424d5459

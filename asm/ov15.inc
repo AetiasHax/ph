@@ -111,7 +111,7 @@
 .extern data_ov00_020e2f04
 .extern data_ov00_020e2f68
 .extern data_ov00_020e5868
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e83cc
 .extern data_ov00_020e899c
 .extern data_ov00_020e9360

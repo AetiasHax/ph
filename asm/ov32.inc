@@ -42,7 +42,7 @@
 .extern data_ov00_020e2e3c
 .extern data_ov00_020e2f04
 .extern data_ov00_020e2f98
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e9370
 .extern func_01ff81f8
 .extern func_01ff8214

@@ -225,9 +225,9 @@ _020c36ac:
 	bx lr
 	arm_func_end _ZN12ActorManager8GetActorEP8ActorRef
 
-	.global _ZN11ActorFilter6FilterEP5Actor
-	arm_func_start _ZN11ActorFilter6FilterEP5Actor
-_ZN11ActorFilter6FilterEP5Actor: ; 0x020c36b4
+	.global _ZN11FilterActor6FilterEP5Actor
+	arm_func_start _ZN11FilterActor6FilterEP5Actor
+_ZN11FilterActor6FilterEP5Actor: ; 0x020c36b4
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x18
 	mov r5, r0
@@ -310,7 +310,7 @@ _020c37e0:
 	mov r0, #1
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN11ActorFilter6FilterEP5Actor
+	arm_func_end _ZN11FilterActor6FilterEP5Actor
 
 	.global _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	arm_func_start _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
@@ -876,6 +876,6 @@ data_ov00_020e72e8: ; 0x020e72e8
 	.global data_ov00_020e72ec
 data_ov00_020e72ec: ; 0x020e72ec
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global _ZTV11ActorFilter
-_ZTV11ActorFilter: ; 0x020e72f0
-    .word _ZN11ActorFilter6FilterEP5Actor
+	.global _ZTV11FilterActor
+_ZTV11FilterActor: ; 0x020e72f0
+    .word _ZN11FilterActor6FilterEP5Actor

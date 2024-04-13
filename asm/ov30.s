@@ -8365,7 +8365,7 @@ func_ov30_02182634: ; 0x02182634
 	mov r1, #0
 	add r0, sp, #0x128
 	mvn r2, #0
-	ldr r5, _02182abc ; =_ZTV11ActorFilter
+	ldr r5, _02182abc ; =_ZTV11FilterActor
 	ldr r3, _02182ac0 ; =0x424f4d42
 	str r5, [sp, #0xf4]
 	add r5, sp, #0x74
@@ -8619,7 +8619,7 @@ _02182960:
 	arm_func_end func_ov30_02182634
 _02182ab4: .word 0x0000ffff
 _02182ab8: .word data_027e0e60
-_02182abc: .word _ZTV11ActorFilter
+_02182abc: .word _ZTV11FilterActor
 _02182ac0: .word 0x424f4d42
 _02182ac4: .word data_027e0fe4
 _02182ac8: .word data_02050f54
@@ -9414,7 +9414,7 @@ func_ov30_021833ec: ; 0x021833ec
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
 _02183448:
-	ldr r3, _02183804 ; =_ZTV11ActorFilter
+	ldr r3, _02183804 ; =_ZTV11FilterActor
 	mvn r5, #0
 	mov r6, #0
 	add r1, sp, #0x2a8
@@ -9499,7 +9499,7 @@ _02183578:
 	add r8, r8, #8
 	blt _02183524
 _0218358c:
-	ldr r7, _02183804 ; =_ZTV11ActorFilter
+	ldr r7, _02183804 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x1d4
 	mvn r3, #0
@@ -9568,7 +9568,7 @@ _0218367c:
 	add r8, r8, #8
 	blt _02183628
 _02183690:
-	ldr r7, _02183804 ; =_ZTV11ActorFilter
+	ldr r7, _02183804 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x100
 	mvn r3, #0
@@ -9670,7 +9670,7 @@ _021837f4:
 	.align 2, 0
 	arm_func_end func_ov30_021833ec
 _02183800: .word 0x43485334
-_02183804: .word _ZTV11ActorFilter
+_02183804: .word _ZTV11FilterActor
 _02183808: .word 0x464f5243
 _0218380c: .word data_027e0fe4
 _02183810: .word 0x43525953
@@ -11486,7 +11486,7 @@ _02184b38:
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02184b4c:
-	ldr r6, _02185258 ; =_ZTV11ActorFilter
+	ldr r6, _02185258 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x490
 	mvn r3, #0
@@ -11586,7 +11586,7 @@ _02184cac:
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02184cc0:
-	ldr r6, _02185258 ; =_ZTV11ActorFilter
+	ldr r6, _02185258 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x3bc
 	mvn r3, #0
@@ -11684,7 +11684,7 @@ _02184e18:
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02184e2c:
-	ldr r6, _02185258 ; =_ZTV11ActorFilter
+	ldr r6, _02185258 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x2e8
 	mvn r3, #0
@@ -11779,7 +11779,7 @@ _02184f78:
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02184f8c:
-	ldr r6, _02185258 ; =_ZTV11ActorFilter
+	ldr r6, _02185258 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x214
 	mvn r3, #0
@@ -11874,7 +11874,7 @@ _021850d8:
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _021850ec:
-	ldr r6, _02185258 ; =_ZTV11ActorFilter
+	ldr r6, _02185258 ; =_ZTV11FilterActor
 	mov r2, #0
 	add r1, sp, #0x140
 	mvn r3, #0
@@ -11974,7 +11974,7 @@ _02185240:
 _0218524c: .word data_ov30_02188b08
 _02185250: .word data_027e0fe4
 _02185254: .word data_027e0e60
-_02185258: .word _ZTV11ActorFilter
+_02185258: .word _ZTV11FilterActor
 _0218525c: .word 0x57544352
 _02185260: .word 0x43485352
 _02185264: .word 0x43485332

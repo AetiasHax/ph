@@ -30,7 +30,7 @@
 .extern data_027e0ffc
 .extern data_027e1038
 .extern data_027e10b4
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e8398
 .extern data_ov00_020eec68
 .extern data_ov00_020eec9c

@@ -80,7 +80,7 @@
 .extern data_ov00_020e26b4
 .extern data_ov00_020e2dd8
 .extern data_ov00_020e2f04
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e899c
 .extern data_ov00_020e8b08
 .extern data_ov00_020e9360

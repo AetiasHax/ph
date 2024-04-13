@@ -53,7 +53,7 @@
 .extern data_ov00_020e2dd8
 .extern data_ov00_020e2e3c
 .extern data_ov00_020e2f04
-.extern _ZTV11ActorFilter
+.extern _ZTV11FilterActor
 .extern data_ov00_020e9360
 .extern data_ov00_020e9370
 .extern data_ov00_020ec9d4

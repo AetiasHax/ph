@@ -10255,7 +10255,7 @@ func_ov32_0218439c: ; 0x0218439c
 	mov r4, r0
 	add r3, sp, #0x70
 	mvn r5, #0
-	ldr r7, _02184540 ; =_ZTV11ActorFilter
+	ldr r7, _02184540 ; =_ZTV11FilterActor
 	ldr r6, _02184544 ; =0x42454530
 	ldr r0, [r1]
 	add r1, sp, #0x3c
@@ -10355,7 +10355,7 @@ func_ov32_0218439c: ; 0x0218439c
 	.align 2, 0
 	arm_func_end func_ov32_0218439c
 _0218453c: .word data_027e0fe4
-_02184540: .word _ZTV11ActorFilter
+_02184540: .word _ZTV11FilterActor
 _02184544: .word 0x42454530
 _02184548: .word data_02050f54
 _0218454c: .word 0x0000019a
