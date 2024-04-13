@@ -1,5 +1,6 @@
 #pragma once
 .extern Divide
+.extern _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern _ZN11ItemManager10GiveRupeesEjj
 .extern _ZN11ItemManager10RemoveItemEi
@@ -48,7 +49,6 @@
 .extern func_0202e58c
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strncpy
 .extern func_0204f754
 .extern func_0204f8d4
 .extern func_ov00_02079e68
@@ -232,5 +232,5 @@
 .extern func_ov00_020d7c6c
 .extern func_ov00_020d7d18
 .extern func_ov05_02102c2c
-.extern _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 .extern gItemManager
+.extern strncpy

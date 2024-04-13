@@ -83,7 +83,6 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_02042f68
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -427,3 +426,4 @@
 .extern func_ov17_02168660
 .extern func_ov17_021687f0
 .extern gItemManager
+.extern strncpy

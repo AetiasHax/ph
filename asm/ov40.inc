@@ -190,10 +190,6 @@
 .extern func_020435b4
 .extern func_02043600
 .extern func_0204366c
-.extern strcpy
-.extern strcat
-.extern strcmp
-.extern strncmp
 .extern func_0204dd9c
 .extern func_0204f614
 .extern func_0204f754
@@ -375,3 +371,7 @@
 .extern func_ov09_0211cc74
 .extern func_ov09_0211cc98
 .extern gItemManager
+.extern strcat
+.extern strcmp
+.extern strcpy
+.extern strncmp

@@ -60,8 +60,6 @@
 .extern func_0202e58c
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strcpy
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -252,3 +250,5 @@
 .extern func_ov22_0217740c
 .extern func_ov22_02177450
 .extern func_ov22_0217746c
+.extern strcpy
+.extern strncpy

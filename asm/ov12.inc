@@ -240,7 +240,6 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0203f904
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -762,3 +761,4 @@
 .extern gItemManager
 .extern gOverlayManager
 .extern gPlayerAnimHandler
+.extern strncpy

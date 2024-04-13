@@ -136,8 +136,6 @@
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0203fe60
-.extern strncpy
-.extern strcmp
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -539,3 +537,5 @@
 .extern func_ov30_02183f84
 .extern func_ov30_02183fd4
 .extern gItemManager
+.extern strcmp
+.extern strncpy

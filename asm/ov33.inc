@@ -51,7 +51,6 @@
 .extern func_02038b40
 .extern func_0203e784
 .extern func_0203e7b4
-.extern strncpy
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f8d4
@@ -250,3 +249,4 @@
 .extern func_ov14_02145f0c
 .extern func_ov18_02160a54
 .extern func_ov18_02160a64
+.extern strncpy

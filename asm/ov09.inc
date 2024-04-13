@@ -183,8 +183,6 @@
 .extern func_02043594
 .extern func_020435b4
 .extern func_02043600
-.extern strcat
-.extern strcmp
 .extern func_0204dd9c
 .extern func_0204f614
 .extern func_0204f754
@@ -455,3 +453,5 @@
 .extern func_ov29_0216dcf4
 .extern gItemManager
 .extern gOverlayManager
+.extern strcat
+.extern strcmp

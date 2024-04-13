@@ -102,6 +102,9 @@
 .extern _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 .extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 .extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
+.extern _ZN15LinkStateFollow16MoveTowardTargetEv
+.extern _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
+.extern _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 .extern _ZN17LinkStateInteract18func_ov00_020aa818Ev
 .extern _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
@@ -295,8 +298,6 @@
 .extern func_020385d0
 .extern func_0203fab0
 .extern func_020435b4
-.extern strcpy
-.extern strcmp
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_02078b40
@@ -393,9 +394,6 @@
 .extern func_ov00_020a4e30
 .extern func_ov00_020a4f38
 .extern func_ov00_020a5e9c
-.extern _ZN15LinkStateFollow16MoveTowardTargetEv
-.extern _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
-.extern _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
 .extern func_ov00_020a990c
@@ -580,3 +578,5 @@
 .extern func_ov59_021990a4
 .extern gItemManager
 .extern gOverlayManager
+.extern strcmp
+.extern strcpy
