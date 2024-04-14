@@ -60,6 +60,11 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/ov00_020b1498.s',
 
+    'asm/ov00/Actor/Actor.s',
+    'src/00_Core/Actor/Actor.cpp',
+
+    'asm/ov00/ov00_020c3348.s',
+
     'asm/ov00/Actor/ActorManager.s',
     'src/00_Core/Actor/ActorManager.cpp',
 
