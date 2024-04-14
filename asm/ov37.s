@@ -3662,7 +3662,7 @@ _0217f0ac:
 	add r0, r4, #0x3bc
 	add r0, r0, #0x2c00
 	bl func_ov00_020b7e6c
-	ldr r0, _0217f11c ; =data_027e0f74
+	ldr r0, _0217f11c ; =gAdventureFlags
 	mov r1, #0xf
 	ldr r0, [r0]
 	bl func_ov00_02097968
@@ -3685,7 +3685,7 @@ _0217f10c: .word 0x00001023
 _0217f110: .word 0x00001024
 _0217f114: .word 0x00001025
 _0217f118: .word 0x0000030d
-_0217f11c: .word data_027e0f74
+_0217f11c: .word gAdventureFlags
 
 	.global func_ov37_0217f120
 	arm_func_start func_ov37_0217f120

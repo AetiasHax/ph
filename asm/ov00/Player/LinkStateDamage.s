@@ -589,7 +589,7 @@ _020ac698:
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	bgt _020ac6c8
-	ldr r0, _020ac7e4 ; =data_027e0f74
+	ldr r0, _020ac7e4 ; =gAdventureFlags
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
@@ -672,7 +672,7 @@ _020ac7d4: .word data_027e0618
 _020ac7d8: .word data_027e0c54
 _020ac7dc: .word data_ov00_020eec68
 _020ac7e0: .word data_027e0db0
-_020ac7e4: .word data_027e0f74
+_020ac7e4: .word gAdventureFlags
 _020ac7e8: .word data_027e077c
 _020ac7ec: .word data_02056be4
 
@@ -790,13 +790,13 @@ _020ac930:
 	bl _ZNK11ItemManager7HasItemEi
 	cmp r0, #0
 	bne _020ac9bc
-	ldr r0, _020ac9e0 ; =data_027e0f74
+	ldr r0, _020ac9e0 ; =gAdventureFlags
 	mov r1, #0xff
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _020ac9bc
-	ldr r0, _020ac9e0 ; =data_027e0f74
+	ldr r0, _020ac9e0 ; =gAdventureFlags
 	mov r1, #0xf
 	ldr r0, [r0]
 	mov r2, #1
@@ -813,7 +813,7 @@ _020ac9d0: .word data_027e0e58
 _020ac9d4: .word data_ov00_020eec9c
 _020ac9d8: .word data_027e0618
 _020ac9dc: .word gItemManager
-_020ac9e0: .word data_027e0f74
+_020ac9e0: .word gAdventureFlags
 
 	.global _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020ac9e4Ei

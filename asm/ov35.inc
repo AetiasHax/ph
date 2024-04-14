@@ -80,7 +80,7 @@
 .extern data_027e0e58
 .extern data_027e0e60
 .extern data_027e0f64
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fac

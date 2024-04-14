@@ -101,7 +101,7 @@
 .extern data_027e0e2c
 .extern data_027e0e60
 .extern data_027e0f64
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f7c
 .extern data_027e0f80
 .extern data_027e0f84

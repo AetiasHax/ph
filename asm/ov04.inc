@@ -70,7 +70,7 @@
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f70
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0f7c
 .extern data_027e0f90

@@ -3222,7 +3222,7 @@ func_ov15_02122140: ; 0x02122140
 	ldrsh r0, [r4, #0x78]
 	cmp r0, #0
 	beq _02122170
-	ldr r0, _0212229c ; =data_027e0f74
+	ldr r0, _0212229c ; =gAdventureFlags
 	mov r1, #0x30
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -3314,7 +3314,7 @@ _02122240:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02122140
-_0212229c: .word data_027e0f74
+_0212229c: .word gAdventureFlags
 _021222a0: .word data_027e0d0c
 _021222a4: .word 0x53454f43
 _021222a8: .word 0x53454b45
@@ -8266,14 +8266,14 @@ _02126628:
 	.global func_ov15_02126638
 	arm_func_start func_ov15_02126638
 func_ov15_02126638: ; 0x02126638
-	ldr r0, _0212664c ; =data_027e0f74
+	ldr r0, _0212664c ; =gAdventureFlags
 	ldr ip, _02126650 ; =func_ov00_02097760
 	mov r1, #0x32
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov15_02126638
-_0212664c: .word data_027e0f74
+_0212664c: .word gAdventureFlags
 _02126650: .word func_ov00_02097760
 
 	.global func_ov15_02126654
@@ -16114,7 +16114,7 @@ func_ov15_0212ca38: ; 0x0212ca38
 	strb r1, [r4, #0x1a9]
 	ldr r0, [r0]
 	bl func_ov15_02184644
-	ldr r0, _0212cdf4 ; =data_027e0f74
+	ldr r0, _0212cdf4 ; =gAdventureFlags
 	mov r1, #0x37
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -16355,7 +16355,7 @@ _0212cde4:
 	.align 2, 0
 	arm_func_end func_ov15_0212ca38
 _0212cdf0: .word data_027e0fe4
-_0212cdf4: .word data_027e0f74
+_0212cdf4: .word gAdventureFlags
 _0212cdf8: .word data_ov15_0218a484
 _0212cdfc: .word data_027e0fec
 _0212ce00: .word 0x0000ffff
@@ -16629,7 +16629,7 @@ _0212d0d8:
 	ldr r2, [sp, #0x54]
 	str r3, [sp, #0xec]
 	mov r3, #2
-	ldr r0, _0212d298 ; =data_027e0f74
+	ldr r0, _0212d298 ; =gAdventureFlags
 	ldrb r1, [sp, #0x60]
 	ldrb r7, [sp, #0x61]
 	ldrb r6, [sp, #0x62]
@@ -16681,7 +16681,7 @@ _0212d278:
 _0212d28c: .word data_027e0fe4
 _0212d290: .word data_027e0f64
 _0212d294: .word data_027e0f94
-_0212d298: .word data_027e0f74
+_0212d298: .word gAdventureFlags
 
 	.global func_ov15_0212d29c
 	arm_func_start func_ov15_0212d29c
@@ -17615,7 +17615,7 @@ _0212df28:
 	strb r3, [sp, #0x1c]
 	strb r2, [sp, #0x1d]
 	bl func_ov15_021413f8
-	ldr r0, _0212e074 ; =data_027e0f74
+	ldr r0, _0212e074 ; =gAdventureFlags
 	mov r1, #0x81
 	ldr r0, [r0]
 	mov r2, #1
@@ -17641,7 +17641,7 @@ _0212e064: .word data_027e0c68
 _0212e068: .word 0x00050022
 _0212e06c: .word data_027e0e60
 _0212e070: .word data_027e10a4
-_0212e074: .word data_027e0f74
+_0212e074: .word gAdventureFlags
 
 	.global func_ov15_0212e078
 	arm_func_start func_ov15_0212e078
@@ -19011,7 +19011,7 @@ func_ov15_0212f368: ; 0x0212f368
 	arm_func_start func_ov15_0212f36c
 func_ov15_0212f36c: ; 0x0212f36c
 	stmdb sp!, {r3, lr}
-	ldr r0, _0212f390 ; =data_027e0f74
+	ldr r0, _0212f390 ; =gAdventureFlags
 	mov r1, #0x37
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19021,7 +19021,7 @@ func_ov15_0212f36c: ; 0x0212f36c
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0212f36c
-_0212f390: .word data_027e0f74
+_0212f390: .word gAdventureFlags
 _0212f394: .word data_ov15_02185dc0
 
 	.global func_ov15_0212f398
@@ -19365,7 +19365,7 @@ func_ov15_0212f7b0: ; 0x0212f7b0
 	bl func_ov15_021845e8
 	mov r1, #7
 	str r1, [r4, #0x130]
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	mov r1, #0x37
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19376,7 +19376,7 @@ func_ov15_0212f7b0: ; 0x0212f7b0
 	ldrh r0, [r4, #0x24]
 	cmp r0, #0
 	bne _0212f824
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	ldr r1, _0212fc10 ; =0x0000010f
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19480,7 +19480,7 @@ _0212f824:
 	ldrh r0, [r4, #0x26]
 	cmp r0, #0
 	beq _0212fad4
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	mov r1, #0xa
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19488,7 +19488,7 @@ _0212f824:
 	addeq sp, sp, #0x5c
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, pc}
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	ldr r1, _0212fc10 ; =0x0000010f
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19501,7 +19501,7 @@ _0212f824:
 	bl _ZN5Actor18func_Ov00_020c1bfcEi
 	cmp r0, #0
 	beq _0212fab4
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	mov r1, #0xb8
 	ldr r0, [r0]
 	mov r2, #0
@@ -19567,14 +19567,14 @@ _0212fad4:
 	ldr r1, _0212fc10 ; =0x0000010f
 	cmp r0, #0
 	beq _0212fbc8
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	addne sp, sp, #0x5c
 	movne r0, #0
 	ldmneia sp!, {r4, r5, pc}
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	mov r1, #0xb8
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -19627,7 +19627,7 @@ _0212fbb0:
 	str r4, [r0]
 	b _0212fbe4
 _0212fbc8:
-	ldr r0, _0212fc0c ; =data_027e0f74
+	ldr r0, _0212fc0c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -19647,7 +19647,7 @@ _0212fbe4:
 	.align 2, 0
 	arm_func_end func_ov15_0212f7b0
 _0212fc08: .word data_027e0fe4
-_0212fc0c: .word data_027e0f74
+_0212fc0c: .word gAdventureFlags
 _0212fc10: .word 0x0000010f
 _0212fc14: .word data_027e10a0
 _0212fc18: .word 0x00002666
@@ -19943,7 +19943,7 @@ _0212fe8c:
 	str r8, [sp, #0x21c]
 	ldr r8, [sp, #0x1a0]
 	str r0, [sp, #0x240]
-	ldr r0, _0213053c ; =data_027e0f74
+	ldr r0, _0213053c ; =gAdventureFlags
 	ldrb r7, [sp, #0x1bc]
 	ldrb r6, [sp, #0x1bd]
 	ldrb lr, [sp, #0x1be]
@@ -20225,7 +20225,7 @@ _02130220:
 	strb r3, [sp, #0x13a]
 	ldrb r7, [sp, #0xa7]
 	ldrb r6, [sp, #0xa8]
-	ldr r0, _0213053c ; =data_027e0f74
+	ldr r0, _0213053c ; =gAdventureFlags
 	mov r3, #0x5c
 	mov r2, #0
 	ldr r0, [r0]
@@ -20259,7 +20259,7 @@ _0213052c: .word data_027e0d0c
 _02130530: .word 0x0000ffff
 _02130534: .word data_027e0f94
 _02130538: .word data_027e0f64
-_0213053c: .word data_027e0f74
+_0213053c: .word gAdventureFlags
 _02130540: .word data_027e0e60
 _02130544: .word data_027e10a4
 _02130548: .word 0xffffc568
@@ -20466,13 +20466,13 @@ func_ov15_021307e8: ; 0x021307e8
 	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _021308b0
-	ldr r0, _02130908 ; =data_027e0f74
+	ldr r0, _02130908 ; =gAdventureFlags
 	ldr r1, [r5, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	bne _02130848
-	ldr r0, _02130908 ; =data_027e0f74
+	ldr r0, _02130908 ; =gAdventureFlags
 	ldr r1, [r5, #0x48c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -20538,7 +20538,7 @@ _021308f4:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021307e8
-_02130908: .word data_027e0f74
+_02130908: .word gAdventureFlags
 _0213090c: .word data_ov15_0218a5a0
 _02130910: .word data_ov15_0218a5ac
 _02130914: .word data_ov15_02185e40
@@ -20569,7 +20569,7 @@ func_ov15_0213091c: ; 0x0213091c
 	cmp r0, #0
 	addne sp, sp, #0x1c
 	ldmneia sp!, {r4, r5, pc}
-	ldr r0, _02130a10 ; =data_027e0f74
+	ldr r0, _02130a10 ; =gAdventureFlags
 	mov r1, #0x14
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -20610,7 +20610,7 @@ func_ov15_0213091c: ; 0x0213091c
 	.align 2, 0
 	arm_func_end func_ov15_0213091c
 _02130a0c: .word 0x0000ffff
-_02130a10: .word data_027e0f74
+_02130a10: .word gAdventureFlags
 _02130a14: .word data_027e0f64
 _02130a18: .word data_027e0f94
 
@@ -20631,7 +20631,7 @@ func_ov15_02130a1c: ; 0x02130a1c
 	ldrh r0, [r4, #0x24]
 	cmp r0, #0
 	bne _02130a70
-	ldr r0, _02130bb4 ; =data_027e0f74
+	ldr r0, _02130bb4 ; =gAdventureFlags
 	mov r1, #0x14
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -20724,7 +20724,7 @@ _02130b30:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02130a1c
-_02130bb4: .word data_027e0f74
+_02130bb4: .word gAdventureFlags
 _02130bb8: .word data_027e0f94
 
 	.global func_ov15_02130bbc
@@ -20736,7 +20736,7 @@ func_ov15_02130bbc: ; 0x02130bbc
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r4, pc}
-	ldr r0, _02130c30 ; =data_027e0f74
+	ldr r0, _02130c30 ; =gAdventureFlags
 	mov r1, #0x14
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -20762,7 +20762,7 @@ _02130c28:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02130bbc
-_02130c30: .word data_027e0f74
+_02130c30: .word gAdventureFlags
 _02130c34: .word data_027e0f94
 
 	.global func_ov15_02130c38
@@ -21156,7 +21156,7 @@ _02131170:
 	ldmneia sp!, {r3, r4, pc}
 	ldr r2, [r4, #0x30]
 	ldr r1, [r4, #0x330]
-	ldr r0, _021311c0 ; =data_027e0f74
+	ldr r0, _021311c0 ; =gAdventureFlags
 	str r2, [r1, #0x1a0]
 	ldr r0, [r0]
 	ldr r1, _021311c4 ; =0x0000010f
@@ -21170,7 +21170,7 @@ _02131170:
 	arm_func_end func_ov15_02131020
 _021311b8: .word data_027e0f94
 _021311bc: .word data_027e0fe4
-_021311c0: .word data_027e0f74
+_021311c0: .word gAdventureFlags
 _021311c4: .word 0x0000010f
 
 	.global func_ov15_021311c8
@@ -21343,7 +21343,7 @@ _021312b0:
 	str r3, [sp, #0x220]
 	strb r6, [sp, #0x262]
 	strb r5, [sp, #0x263]
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldrb r3, [sp, #0x1d0]
 	mov r2, #0x5c
 	ldr r0, [r0]
@@ -21353,13 +21353,13 @@ _021312b0:
 	strb r8, [sp, #0x1ea]
 	bl func_ov00_02097810
 	str r0, [r4, #0x48c]
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021314a8
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -21478,7 +21478,7 @@ _021315c0:
 	ldr r8, [sp, #0x9c]
 	str r3, [sp, #0x120]
 	ldr r3, [sp, #0xa0]
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldrb r7, [sp, #0xb4]
 	ldrb r6, [sp, #0xb5]
 	ldrb r5, [sp, #0xb6]
@@ -21512,13 +21512,13 @@ _021315c0:
 	strb r2, [sp, #0xd2]
 	bl func_ov00_02097810
 	str r0, [r4, #0x488]
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x48c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02131714
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x48c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -21573,13 +21573,13 @@ _02131740:
 	mov r0, r4
 	mov r1, #0
 	bl _ZN5Actor10SetUnk_11cEc
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021317fc
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -21646,7 +21646,7 @@ _021318c8:
 	rsb r0, r0, #0
 	cmp r1, r0
 	bge _021318fc
-	ldr r0, _02131920 ; =data_027e0f74
+	ldr r0, _02131920 ; =gAdventureFlags
 	mov r1, #0xb8
 	ldr r0, [r0]
 	mov r2, #1
@@ -21663,7 +21663,7 @@ _02131910: .word data_027e0f64
 _02131914: .word data_027e0c68
 _02131918: .word 0x00050020
 _0213191c: .word 0x00001770
-_02131920: .word data_027e0f74
+_02131920: .word gAdventureFlags
 _02131924: .word data_027e0e2c
 _02131928: .word func_ov15_0212f3cc
 _0213192c: .word 0x00050021
@@ -21750,7 +21750,7 @@ _021319e4:
 	strb r3, [r1, #0x239]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	mvn ip, #0
 	mov r3, #0x32
 	ldr r0, [r0]
@@ -21856,13 +21856,13 @@ _02131b98:
 	str r0, [r4, #0x138]
 	mov r0, #3
 	strb r0, [r4, #0x490]
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02131c1c
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -21870,7 +21870,7 @@ _02131c1c:
 	add r0, sp, #0x28
 	bl func_ov00_0209a4f4
 	mov r3, #0
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	mvn lr, #0
 	mov ip, #0x32
 	mov r2, #6
@@ -21932,7 +21932,7 @@ _02131ce8:
 _02131d08:
 	mov r0, r4
 	bl _ZN5Actor20IncreaseActiveFramesEv
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -21982,13 +21982,13 @@ _02131d84:
 	cmp r0, #0x1000000
 	addne sp, sp, #0x188
 	ldmneia sp!, {r4, pc}
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02131df8
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	ldr r1, [r4, #0x488]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -22002,7 +22002,7 @@ _02131df8:
 	str r2, [r4, #0x488]
 	mov r1, #0
 	strb r1, [r4, #0x4c9]
-	ldr r0, _02131ee4 ; =data_027e0f74
+	ldr r0, _02131ee4 ; =gAdventureFlags
 	add r1, r2, #0x110
 	ldr r0, [r0]
 	mov r2, #1
@@ -22057,7 +22057,7 @@ _02131ed0:
 _02131ed8: .word data_027e0f94
 _02131edc: .word 0x00000171
 _02131ee0: .word data_027e0d0c
-_02131ee4: .word data_027e0f74
+_02131ee4: .word gAdventureFlags
 _02131ee8: .word 0x0000ffff
 _02131eec: .word data_027e0c68
 _02131ef0: .word 0x00050049
@@ -22757,7 +22757,7 @@ func_ov15_0213287c: ; 0x0213287c
 	beq _021328dc
 	mov r1, #0
 	strb r1, [r4, #0x118]
-	ldr r0, _02132948 ; =data_027e0f74
+	ldr r0, _02132948 ; =gAdventureFlags
 	mov r1, #0xb8
 	ldr r0, [r0]
 	mov r2, #1
@@ -22794,7 +22794,7 @@ _021328dc:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0213287c
-_02132948: .word data_027e0f74
+_02132948: .word gAdventureFlags
 
 	.global func_ov15_0213294c
 	arm_func_start func_ov15_0213294c
@@ -23053,7 +23053,7 @@ func_ov15_02132c48: ; 0x02132c48
 	beq _02132c80
 	cmp r0, #1
 	bne _02132c80
-	ldr r0, _02132de4 ; =data_027e0f74
+	ldr r0, _02132de4 ; =gAdventureFlags
 	mov r1, #0x1d
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -23154,7 +23154,7 @@ _02132db8:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02132c48
-_02132de4: .word data_027e0f74
+_02132de4: .word gAdventureFlags
 _02132de8: .word data_027e0d0c
 
 	.global func_ov15_02132dec
@@ -23299,7 +23299,7 @@ _02132f8c:
 	mov r6, #0x32
 	mov lr, #0
 	mov ip, #2
-	ldr r0, _02133090 ; =data_027e0f74
+	ldr r0, _02133090 ; =gAdventureFlags
 	str r7, [sp, #0x18]
 	strb r6, [sp, #0x1d]
 	strb lr, [sp, #0x1e]
@@ -23341,7 +23341,7 @@ _02133080: .word data_027e0764
 _02133084: .word 0x00000666
 _02133088: .word data_027e10a4
 _0213308c: .word data_027e0f94
-_02133090: .word data_027e0f74
+_02133090: .word gAdventureFlags
 
 	.global func_ov15_02133094
 	arm_func_start func_ov15_02133094
@@ -23409,7 +23409,7 @@ func_ov15_02133150: ; 0x02133150
 	ldr r0, [r5, #0x130]
 	cmp r0, #8
 	beq _0213318c
-	ldr r0, _02133208 ; =data_027e0f74
+	ldr r0, _02133208 ; =gAdventureFlags
 	ldr r1, [r5, #0x36c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -23451,7 +23451,7 @@ _021331f4:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02133150
-_02133208: .word data_027e0f74
+_02133208: .word gAdventureFlags
 _0213320c: .word data_ov15_0218a6e0
 _02133210: .word data_ov15_0218a6ec
 _02133214: .word data_027e0f94
@@ -23763,7 +23763,7 @@ _02133630:
 	mov r1, #5
 	strb r2, [r7, #0x376]
 	bl func_ov15_02132dec
-	ldr r0, _02133ccc ; =data_027e0f74
+	ldr r0, _02133ccc ; =gAdventureFlags
 	mov r1, #0x36
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -23852,13 +23852,13 @@ _021337c8:
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov15_021413d4
-	ldr r0, _02133ccc ; =data_027e0f74
+	ldr r0, _02133ccc ; =gAdventureFlags
 	ldr r1, [r7, #0x36c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02133828
-	ldr r0, _02133ccc ; =data_027e0f74
+	ldr r0, _02133ccc ; =gAdventureFlags
 	ldr r1, [r7, #0x36c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -24148,7 +24148,7 @@ _02133c00:
 	bne _02133c6c
 	mov r1, #0
 	strb r1, [r7, #0x373]
-	ldr r0, _02133ccc ; =data_027e0f74
+	ldr r0, _02133ccc ; =gAdventureFlags
 	strb r1, [r7, #0x374]
 	ldr r0, [r0]
 	mov r1, #0x36
@@ -24184,7 +24184,7 @@ _02133cbc: .word data_02050f54
 _02133cc0: .word 0x00000aab
 _02133cc4: .word data_027e10a4
 _02133cc8: .word data_027e0ffc
-_02133ccc: .word data_027e0f74
+_02133ccc: .word gAdventureFlags
 _02133cd0: .word data_027e0d0c
 _02133cd4: .word 0x0000ffff
 _02133cd8: .word data_027e0764
@@ -26296,7 +26296,7 @@ _021358f4: .word data_ov00_020eec9c
 	arm_func_start func_ov15_021358f8
 func_ov15_021358f8: ; 0x021358f8
 	stmdb sp!, {r3, lr}
-	ldr r0, _0213592c ; =data_027e0f74
+	ldr r0, _0213592c ; =gAdventureFlags
 	mov r1, #0x14
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -26311,7 +26311,7 @@ _02135924:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021358f8
-_0213592c: .word data_027e0f74
+_0213592c: .word gAdventureFlags
 
 	.global func_ov15_02135930
 	arm_func_start func_ov15_02135930
@@ -27277,7 +27277,7 @@ func_ov15_02136630: ; 0x02136630
 	arm_func_start func_ov15_02136670
 func_ov15_02136670: ; 0x02136670
 	stmdb sp!, {r4, lr}
-	ldr r1, _021366a8 ; =data_027e0f74
+	ldr r1, _021366a8 ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x30
@@ -27292,7 +27292,7 @@ func_ov15_02136670: ; 0x02136670
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02136670
-_021366a8: .word data_027e0f74
+_021366a8: .word gAdventureFlags
 
 	.global func_ov15_021366ac
 	arm_func_start func_ov15_021366ac
@@ -27506,7 +27506,7 @@ func_ov15_021368d8: ; 0x021368d8
 	bl func_ov15_02137928
 	ldmia sp!, {r4, pc}
 _021368f4:
-	ldr r0, _02136a68 ; =data_027e0f74
+	ldr r0, _02136a68 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -27531,7 +27531,7 @@ _02136944:
 	ldrb r0, [r4, #0x25f]
 	cmp r0, #0
 	bne _02136988
-	ldr r0, _02136a68 ; =data_027e0f74
+	ldr r0, _02136a68 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -27609,7 +27609,7 @@ _02136a54:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021368d8
-_02136a68: .word data_027e0f74
+_02136a68: .word gAdventureFlags
 _02136a6c: .word data_027e0e2c
 
 	.global func_ov15_02136a70
@@ -29000,7 +29000,7 @@ _02137d98:
 	str r1, [r4, #0x268]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _02137df0 ; =data_027e0f74
+	ldr r0, _02137df0 ; =gAdventureFlags
 	mvn r4, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -29018,7 +29018,7 @@ _02137d98:
 	arm_func_end func_ov15_02137d1c
 _02137de8: .word data_027e0d38
 _02137dec: .word data_ov00_020eec68
-_02137df0: .word data_027e0f74
+_02137df0: .word gAdventureFlags
 
 	.global func_ov15_02137df4
 	arm_func_start func_ov15_02137df4
@@ -31511,13 +31511,13 @@ func_ov15_0213a184: ; 0x0213a184
 	strb r0, [r5, #0x4f1]
 	strb r4, [r5, #0x26d]
 	and r1, r4, #0xff
-	ldr r0, _0213a460 ; =data_027e0f74
+	ldr r0, _0213a460 ; =gAdventureFlags
 	strb r1, [r5, #0x26c]
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
 	bne _0213a254
-	ldr r0, _0213a460 ; =data_027e0f74
+	ldr r0, _0213a460 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -31673,7 +31673,7 @@ _0213a404:
 _0213a454: .word gItemManager
 _0213a458: .word data_027e077c
 _0213a45c: .word data_027e103c
-_0213a460: .word data_027e0f74
+_0213a460: .word gAdventureFlags
 _0213a464: .word data_027e0e2c
 _0213a468: .word data_027e0d38
 _0213a46c: .word data_027e0fb8
@@ -31778,13 +31778,13 @@ func_ov15_0213a560: ; 0x0213a560
 	arm_func_start func_ov15_0213a570
 func_ov15_0213a570: ; 0x0213a570
 	stmdb sp!, {r4, lr}
-	ldr r1, _0213a5e0 ; =data_027e0f74
+	ldr r1, _0213a5e0 ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	bl func_ov00_02097738
 	cmp r0, #0
 	bne _0213a5d0
-	ldr r0, _0213a5e0 ; =data_027e0f74
+	ldr r0, _0213a5e0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -31809,7 +31809,7 @@ _0213a5d8:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0213a570
-_0213a5e0: .word data_027e0f74
+_0213a5e0: .word gAdventureFlags
 _0213a5e4: .word data_027e0e2c
 
 	.global func_ov15_0213a5e8
@@ -35469,7 +35469,7 @@ _0213d70c: .word data_027e0f94
 	arm_func_start func_ov15_0213d710
 func_ov15_0213d710: ; 0x0213d710
 	stmdb sp!, {r4, lr}
-	ldr r1, _0213d86c ; =data_027e0f74
+	ldr r1, _0213d86c ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	bl func_ov00_02097738
@@ -35567,7 +35567,7 @@ _0213d854:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0213d710
-_0213d86c: .word data_027e0f74
+_0213d86c: .word gAdventureFlags
 _0213d870: .word data_027e0d38
 _0213d874: .word data_027e10a4
 _0213d878: .word data_027e103c
@@ -36836,7 +36836,7 @@ _0213e95c:
 	ldrh r1, [r4, #0x20]
 	cmp r1, #0
 	beq _0213e98c
-	ldr r0, _0213ea48 ; =data_027e0f74
+	ldr r0, _0213ea48 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -36897,7 +36897,7 @@ _0213e998:
 _0213ea3c: .word data_027e0d0c
 _0213ea40: .word 0x000010cd
 _0213ea44: .word 0xfffff99a
-_0213ea48: .word data_027e0f74
+_0213ea48: .word gAdventureFlags
 _0213ea4c: .word 0x00001555
 
 	.global func_ov15_0213ea50
@@ -37111,7 +37111,7 @@ _0213eac8:
 	ldr ip, [sp, #0x10c]
 	str r6, [sp, #0x198]
 	mov r6, #0x5c
-	ldr r1, _0213f4b0 ; =data_027e0f74
+	ldr r1, _0213f4b0 ; =gAdventureFlags
 	str r0, [sp, #0xc4]
 	str r0, [sp, #0x158]
 	ldr r0, [r1]
@@ -37262,7 +37262,7 @@ _0213eac8:
 	ldr r1, [sp, #0x3c]
 	str r0, [sp, #0x188]
 	and r5, r1, #0xff
-	ldr r0, _0213f4b0 ; =data_027e0f74
+	ldr r0, _0213f4b0 ; =gAdventureFlags
 	str sb, [sp, #0x198]
 	ldr sb, [sp, #0x28]
 	ldr r1, [sp, #0x1c]
@@ -37583,7 +37583,7 @@ _0213f4a0: .word 0x000010cd
 _0213f4a4: .word 0x0000017a
 _0213f4a8: .word data_027e0f64
 _0213f4ac: .word 0x00001388
-_0213f4b0: .word data_027e0f74
+_0213f4b0: .word gAdventureFlags
 _0213f4b4: .word data_027e0f94
 _0213f4b8: .word data_027e0e60
 _0213f4bc: .word data_027e0e58
@@ -38212,13 +38212,13 @@ _0213fd5c:
 	ldr r0, [r0]
 	mov r2, r1
 	bl func_ov00_020cfae8
-	ldr r0, _0213fef8 ; =data_027e0f74
+	ldr r0, _0213fef8 ; =gAdventureFlags
 	ldr r1, [r5, #0x2fc]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0213fdd8
-	ldr r0, _0213fef8 ; =data_027e0f74
+	ldr r0, _0213fef8 ; =gAdventureFlags
 	ldr r1, [r5, #0x2fc]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -38229,7 +38229,7 @@ _0213fde0:
 	ldrb r0, [r5, #0x344]
 	cmp r0, #1
 	bne _0213fe04
-	ldr r0, _0213fef8 ; =data_027e0f74
+	ldr r0, _0213fef8 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -38302,7 +38302,7 @@ _0213fedc:
 	arm_func_end func_ov15_0213fce8
 _0213fef0: .word data_027e0c68
 _0213fef4: .word data_027e103c
-_0213fef8: .word data_027e0f74
+_0213fef8: .word gAdventureFlags
 _0213fefc: .word data_ov00_020e83cc
 
 	.global func_ov15_0213ff00
@@ -38657,7 +38657,7 @@ _021403e0:
 	ldrh r1, [r4, #0x20]
 	cmp r1, #0
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _02140420 ; =data_027e0f74
+	ldr r0, _02140420 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -38672,7 +38672,7 @@ _021403e0:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021403bc
-_02140420: .word data_027e0f74
+_02140420: .word gAdventureFlags
 
 	.global func_ov15_02140424
 	arm_func_start func_ov15_02140424
@@ -38783,7 +38783,7 @@ _02140598: .word 0x0000ffff
 func_ov15_0214059c: ; 0x0214059c
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xbc
-	ldr r1, _021407ac ; =data_027e0f74
+	ldr r1, _021407ac ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, [r4, #0x2f8]
@@ -38835,7 +38835,7 @@ _021405e4:
 	ldr r1, _021407bc ; =data_027e0f64
 	mov r3, #0x32
 	mvn ip, #0
-	ldr r0, _021407ac ; =data_027e0f74
+	ldr r0, _021407ac ; =gAdventureFlags
 	ldr r1, [r1]
 	strb r3, [sp, #0x15]
 	strb r2, [sp, #0x16]
@@ -38922,7 +38922,7 @@ _0214079c:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0214059c
-_021407ac: .word data_027e0f74
+_021407ac: .word gAdventureFlags
 _021407b0: .word data_ov15_02190458
 _021407b4: .word data_027e10a4
 _021407b8: .word data_027e0f68
@@ -39188,7 +39188,7 @@ func_ov15_021408bc: ; 0x021408bc
 	ldr sl, [sp, #0x7c]
 	str lr, [sp, #0x108]
 	mov lr, #0x5c
-	ldr r1, _02140bfc ; =data_027e0f74
+	ldr r1, _02140bfc ; =gAdventureFlags
 	str r0, [sp, #0x34]
 	str r0, [sp, #0xc8]
 	ldr r0, [r1]
@@ -39227,7 +39227,7 @@ _02140bec: .word 0x00000122
 _02140bf0: .word data_027e0f64
 _02140bf4: .word 0x0000157c
 _02140bf8: .word 0xfffff448
-_02140bfc: .word data_027e0f74
+_02140bfc: .word gAdventureFlags
 
 	.global func_ov15_02140c00
 	arm_func_start func_ov15_02140c00
@@ -41530,7 +41530,7 @@ func_ov15_021428bc: ; 0x021428bc
 	arm_func_start func_ov15_021428c4
 func_ov15_021428c4: ; 0x021428c4
 	stmdb sp!, {r4, lr}
-	ldr r1, _021428ec ; =data_027e0f74
+	ldr r1, _021428ec ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, [r4, #0x348]
@@ -41541,7 +41541,7 @@ func_ov15_021428c4: ; 0x021428c4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021428c4
-_021428ec: .word data_027e0f74
+_021428ec: .word gAdventureFlags
 
 	.global func_ov15_021428f0
 	arm_func_start func_ov15_021428f0
@@ -42584,7 +42584,7 @@ _021436f8:
 	strb r1, [r7, #0x34d]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _02143a28 ; =data_027e0f74
+	ldr r0, _02143a28 ; =gAdventureFlags
 	mvn r5, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -42738,7 +42738,7 @@ _02143924:
 	beq _02143954
 	bl func_ov15_02146c70
 _02143954:
-	ldr r0, _02143a28 ; =data_027e0f74
+	ldr r0, _02143a28 ; =gAdventureFlags
 	ldr r1, [r7, #0x348]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -42794,7 +42794,7 @@ _021439bc:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021436c4
-_02143a28: .word data_027e0f74
+_02143a28: .word gAdventureFlags
 _02143a2c: .word 0xfffffccd
 _02143a30: .word data_027e0ffc
 _02143a34: .word 0x000003d3
@@ -42854,13 +42854,13 @@ _02143a90:
 	str r0, [r4, #0x2bc]
 	str r0, [r4, #0x2c0]
 _02143af8:
-	ldr r0, _02143d2c ; =data_027e0f74
+	ldr r0, _02143d2c ; =gAdventureFlags
 	ldr r1, _02143d30 ; =0x00000112
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	bne _02143b70
-	ldr r0, _02143d2c ; =data_027e0f74
+	ldr r0, _02143d2c ; =gAdventureFlags
 	ldr r1, _02143d30 ; =0x00000112
 	ldr r0, [r0]
 	mov r2, #1
@@ -43008,7 +43008,7 @@ _02143cfc:
 	.align 2, 0
 	arm_func_end func_ov15_02143a44
 _02143d28: .word data_ov00_020eec9c
-_02143d2c: .word data_027e0f74
+_02143d2c: .word gAdventureFlags
 _02143d30: .word 0x00000112
 _02143d34: .word data_027e0c68
 _02143d38: .word data_ov15_02186130
@@ -43241,7 +43241,7 @@ _02144020:
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _02144160 ; =data_027e0f74
+	ldr r0, _02144160 ; =gAdventureFlags
 	mvn ip, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -43311,7 +43311,7 @@ _02144110:
 	.align 2, 0
 	arm_func_end func_ov15_02143ff8
 _0214415c: .word data_ov00_020eec68
-_02144160: .word data_027e0f74
+_02144160: .word gAdventureFlags
 _02144164: .word data_ov15_02186130
 _02144168: .word 0x0000059a
 
@@ -43350,7 +43350,7 @@ _021441a8:
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _021442dc ; =data_027e0f74
+	ldr r0, _021442dc ; =gAdventureFlags
 	mvn ip, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -43415,7 +43415,7 @@ _0214428c:
 	.align 2, 0
 	arm_func_end func_ov15_0214416c
 _021442d8: .word data_ov00_020eec68
-_021442dc: .word data_027e0f74
+_021442dc: .word gAdventureFlags
 _021442e0: .word data_027e0c68
 
 	.global func_ov15_021442e4
@@ -43457,7 +43457,7 @@ _02144344:
 	strb r1, [r4, #0x34d]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _02144530 ; =data_027e0f74
+	ldr r0, _02144530 ; =gAdventureFlags
 	mvn r5, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -43579,7 +43579,7 @@ _02144524:
 	.align 2, 0
 	arm_func_end func_ov15_021442e4
 _0214452c: .word data_ov00_020eec9c
-_02144530: .word data_027e0f74
+_02144530: .word gAdventureFlags
 _02144534: .word data_ov15_0218613c
 _02144538: .word data_ov15_02186130
 _0214453c: .word data_027e0ffc
@@ -43627,7 +43627,7 @@ _021445a4:
 	bl func_ov00_0209a4f4
 	mov r3, #1
 	mov r2, #0
-	ldr r0, _0214475c ; =data_027e0f74
+	ldr r0, _0214475c ; =gAdventureFlags
 	mvn ip, #0
 	ldr r0, [r0]
 	add r1, sp, #0x18
@@ -43737,7 +43737,7 @@ _02144754:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02144574
-_0214475c: .word data_027e0f74
+_0214475c: .word gAdventureFlags
 _02144760: .word data_027e0fa0
 _02144764: .word data_027e0ffc
 _02144768: .word 0x000003ea
@@ -43973,7 +43973,7 @@ _02144a40:
 	strb r0, [sp, #0x12a]
 	strb r1, [sp, #0x11e]
 	ldr r1, [sb, #0x450]
-	ldr r0, _021457d0 ; =data_027e0f74
+	ldr r0, _021457d0 ; =gAdventureFlags
 	str r1, [sp, #0x140]
 	ldr r1, [sb, #0x454]
 	ldr r0, [r0]
@@ -44568,7 +44568,7 @@ _02145370:
 _02145390:
 	ldr r0, _02145820 ; =data_ov00_020eec68
 	bl func_ov00_020d71a0
-	ldr r0, _021457d0 ; =data_027e0f74
+	ldr r0, _021457d0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -44847,7 +44847,7 @@ _02145798:
 	.align 2, 0
 	arm_func_end func_ov15_021449b0
 _021457cc: .word data_027e0f64
-_021457d0: .word data_027e0f74
+_021457d0: .word gAdventureFlags
 _021457d4: .word data_027e0f94
 _021457d8: .word data_027e0fac
 _021457dc: .word 0xfffffccd
@@ -44984,7 +44984,7 @@ _02145960:
 	ldrb r0, [r0, #0xc]
 	cmp r0, #0
 	beq _021459f8
-	ldr r0, _02145b5c ; =data_027e0f74
+	ldr r0, _02145b5c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -45102,7 +45102,7 @@ _02145ac8:
 	arm_func_end func_ov15_02145938
 _02145b54: .word data_027e0d38
 _02145b58: .word data_027e0d78
-_02145b5c: .word data_027e0f74
+_02145b5c: .word gAdventureFlags
 _02145b60: .word data_027e0fa0
 _02145b64: .word data_ov15_02186154
 _02145b68: .word data_ov00_020eec9c
@@ -45760,7 +45760,7 @@ _02146324: ; jump table
 	b _02146488 ; case 14
 	b _02146498 ; case 15
 _02146364:
-	ldr r0, _021464ec ; =data_027e0f74
+	ldr r0, _021464ec ; =gAdventureFlags
 	mov r1, #0x16
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -45877,7 +45877,7 @@ _021464bc:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02146308
-_021464ec: .word data_027e0f74
+_021464ec: .word gAdventureFlags
 _021464f0: .word data_ov15_0218f400
 _021464f4: .word data_ov15_0218b31c
 _021464f8: .word data_ov15_0218b320
@@ -47911,7 +47911,7 @@ _02147f18:
 	cmp r4, #1
 	addle sp, sp, #0x1c
 	ldmleia sp!, {r4, r5, r6, r7, r8, sb, pc}
-	ldr r0, _0214807c ; =data_027e0f74
+	ldr r0, _0214807c ; =gAdventureFlags
 	add r1, r1, #0xf3
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -47958,7 +47958,7 @@ _02148000:
 _02148070: .word data_027e10a4
 _02148074: .word data_027e0764
 _02148078: .word 0x0000071c
-_0214807c: .word data_027e0f74
+_0214807c: .word gAdventureFlags
 
 	.global func_ov15_02148080
 	arm_func_start func_ov15_02148080
@@ -53415,7 +53415,7 @@ func_ov15_0214ca50: ; 0x0214ca50
 	moveq r2, #1
 	cmp r2, #0
 	beq _0214ca9c
-	ldr r0, _0214cab0 ; =data_027e0f74
+	ldr r0, _0214cab0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -53428,7 +53428,7 @@ _0214ca9c:
 _0214caa4: .word data_027e077c
 _0214caa8: .word data_02056be4
 _0214caac: .word data_027e0618
-_0214cab0: .word data_027e0f74
+_0214cab0: .word gAdventureFlags
 
 	.global func_ov15_0214cab4
 	arm_func_start func_ov15_0214cab4
@@ -56215,7 +56215,7 @@ func_ov15_0214eedc: ; 0x0214eedc
 func_ov15_0214ef04: ; 0x0214ef04
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
 	sub sp, sp, #0x48
-	ldr r1, _0214f10c ; =data_027e0f74
+	ldr r1, _0214f10c ; =gAdventureFlags
 	mov r7, r0
 	ldr r0, [r1]
 	mov r1, #0x37
@@ -56351,7 +56351,7 @@ _0214f0d0:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0214ef04
-_0214f10c: .word data_027e0f74
+_0214f10c: .word gAdventureFlags
 _0214f110: .word data_027e0ff0
 
 	.global func_ov15_0214f114
@@ -56364,7 +56364,7 @@ func_ov15_0214f114: ; 0x0214f114
 	cmp r0, #0
 	addeq sp, sp, #8
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _0214f194 ; =data_027e0f74
+	ldr r0, _0214f194 ; =gAdventureFlags
 	ldr r1, _0214f198 ; =0x0000010f
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -56391,7 +56391,7 @@ func_ov15_0214f114: ; 0x0214f114
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0214f114
-_0214f194: .word data_027e0f74
+_0214f194: .word gAdventureFlags
 _0214f198: .word 0x0000010f
 _0214f19c: .word data_027e0fe4
 _0214f1a0: .word 0x4647474e
@@ -56444,7 +56444,7 @@ _0214f1e8:
 	strb r2, [r1, #0x239]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	mvn ip, #0
 	mov r3, #0x32
 	ldr r0, [r0]
@@ -56496,7 +56496,7 @@ _0214f2e4:
 	strb r2, [r1, #0x239]
 	bl func_ov00_0209a4f4
 	mov r3, #0
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	mvn lr, #0
 	mov ip, #0x32
 	mov r2, #2
@@ -56596,13 +56596,13 @@ _0214f43c:
 	str r0, [r4, #0x130]
 	mov r0, #0
 	str r0, [r4, #0x138]
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	ldr r1, [r4, #0x1a8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0214f4bc
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	ldr r1, [r4, #0x1a8]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -56610,7 +56610,7 @@ _0214f4bc:
 	add r0, sp, #0x14
 	bl func_ov00_0209a4f4
 	mov r3, #0
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	mvn lr, #0
 	mov ip, #0x32
 	mov r2, #6
@@ -56696,7 +56696,7 @@ _0214f5ec:
 _0214f5fc:
 	mov r0, r4
 	bl _ZN5Actor20IncreaseActiveFramesEv
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	ldr r1, [r4, #0x1a8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -56752,13 +56752,13 @@ _0214f68c:
 	cmp r0, #0x1000000
 	addne sp, sp, #0x224
 	ldmneia sp!, {r3, r4, pc}
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	ldr r1, [r4, #0x1a8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0214f6fc
-	ldr r0, _0214f72c ; =data_027e0f74
+	ldr r0, _0214f72c ; =gAdventureFlags
 	ldr r1, [r4, #0x1a8]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -56778,7 +56778,7 @@ _0214f724:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0214f1a4
-_0214f72c: .word data_027e0f74
+_0214f72c: .word gAdventureFlags
 _0214f730: .word data_027e0c68
 _0214f734: .word 0x00050049
 _0214f738: .word data_027e0f64
@@ -56972,7 +56972,7 @@ _0214f9d0: .word data_027e0ff0
 func_ov15_0214f9d4: ; 0x0214f9d4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x60
-	ldr r1, _0214fbdc ; =data_027e0f74
+	ldr r1, _0214fbdc ; =gAdventureFlags
 	str r0, [sp]
 	ldr r0, [r1]
 	ldr r1, _0214fbe0 ; =0x0000010f
@@ -57105,7 +57105,7 @@ _0214fbb8:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0214f9d4
-_0214fbdc: .word data_027e0f74
+_0214fbdc: .word gAdventureFlags
 _0214fbe0: .word 0x0000010f
 _0214fbe4: .word data_027e10a4
 _0214fbe8: .word data_027e0f94
@@ -58233,7 +58233,7 @@ _02150b84:
 	ldr r0, [r0, #0x2c]
 	cmp r0, #4
 	beq _02150df8
-	ldr r0, _02150e9c ; =data_027e0f74
+	ldr r0, _02150e9c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -58362,7 +58362,7 @@ _02150c24:
 	strb r3, [sp, #0x114]
 	str r2, [sp, #0x118]
 	strb r1, [sp, #0x9a]
-	ldr r0, _02150e9c ; =data_027e0f74
+	ldr r0, _02150e9c ; =gAdventureFlags
 	add r1, sp, #0x84
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -58408,7 +58408,7 @@ _02150df8:
 	ldrb r0, [r5, #0x2a3]
 	cmp r0, #0
 	bne _02150e5c
-	ldr r0, _02150e9c ; =data_027e0f74
+	ldr r0, _02150e9c ; =gAdventureFlags
 	ldr r1, [r5, #0x294]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -58434,7 +58434,7 @@ _02150e64:
 	arm_func_end func_ov15_021509b8
 _02150e94: .word data_027e0d3c
 _02150e98: .word data_027e10a4
-_02150e9c: .word data_027e0f74
+_02150e9c: .word gAdventureFlags
 _02150ea0: .word data_027e0c68
 _02150ea4: .word 0x00050007
 _02150ea8: .word data_027e103c
@@ -60220,7 +60220,7 @@ _02152590:
 	bl func_ov00_0209a4f4
 	mov r3, #1
 	mov r2, #0
-	ldr r0, _02152684 ; =data_027e0f74
+	ldr r0, _02152684 ; =gAdventureFlags
 	mvn r5, #0
 	ldr r0, [r0]
 	add r1, sp, #0x18
@@ -60281,7 +60281,7 @@ _0215265c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02152560
-_02152684: .word data_027e0f74
+_02152684: .word gAdventureFlags
 _02152688: .word data_027e0e60
 _0215268c: .word data_027e0d38
 _02152690: .word data_027e0fa0
@@ -60385,7 +60385,7 @@ func_ov15_021527d4: ; 0x021527d4
 	cmp r4, r1
 	addeq sp, sp, #0x48
 	ldmeqia sp!, {r4, r5, r6, r7, r8, pc}
-	ldr r0, _021529b8 ; =data_027e0f74
+	ldr r0, _021529b8 ; =gAdventureFlags
 	ldr r1, _021529bc ; =0x00000111
 	ldr r0, [r0]
 	mov r5, #0
@@ -60435,7 +60435,7 @@ _02152890:
 _021528b0:
 	cmp r5, #4
 	bne _021528d0
-	ldr r0, _021529b8 ; =data_027e0f74
+	ldr r0, _021529b8 ; =gAdventureFlags
 	mov r1, #0xe
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -60502,7 +60502,7 @@ _021528d0:
 	arm_func_end func_ov15_021527d4
 _021529b0: .word data_027e1060
 _021529b4: .word 0x0000ffff
-_021529b8: .word data_027e0f74
+_021529b8: .word gAdventureFlags
 _021529bc: .word 0x00000111
 _021529c0: .word gItemManager
 _021529c4: .word data_027e0764
@@ -60607,7 +60607,7 @@ _02152abc:
 	str r2, [r5, #0x398]
 	bl func_ov00_0209a4f4
 	mov r2, #0
-	ldr r0, _0215346c ; =data_027e0f74
+	ldr r0, _0215346c ; =gAdventureFlags
 	mvn r6, #0
 	mov r3, #1
 	ldr r0, [r0]
@@ -61029,11 +61029,11 @@ _021530c4:
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	bl func_ov00_020875f8
-	ldr r0, _0215346c ; =data_027e0f74
+	ldr r0, _0215346c ; =gAdventureFlags
 	ldr r1, [r5, #0x348]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
-	ldr r0, _0215346c ; =data_027e0f74
+	ldr r0, _0215346c ; =gAdventureFlags
 	ldr r1, _0215349c ; =0x00000111
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -61240,7 +61240,7 @@ _02153454:
 	arm_func_end func_ov15_02152a48
 _02153464: .word data_027e0fe4
 _02153468: .word data_027e0f94
-_0215346c: .word data_027e0f74
+_0215346c: .word gAdventureFlags
 _02153470: .word data_027e0f64
 _02153474: .word data_027e0fac
 _02153478: .word data_02050f54
@@ -61492,7 +61492,7 @@ func_ov15_02153790: ; 0x02153790
 	bl func_ov00_0209a4f4
 	mov r3, #1
 	mov r2, #0
-	ldr r0, _02153924 ; =data_027e0f74
+	ldr r0, _02153924 ; =gAdventureFlags
 	mvn r5, #0
 	ldr r0, [r0]
 	add r1, sp, #0xc
@@ -61548,14 +61548,14 @@ _02153898:
 	ldr r0, [r5, #0x41c]
 	cmp r0, #4
 	bne _021538d8
-	ldr r0, _02153924 ; =data_027e0f74
+	ldr r0, _02153924 ; =gAdventureFlags
 	mov r1, #0xe
 	ldr r0, [r0]
 	mov r2, #1
 	bl func_ov00_0209779c
 _021538d8:
 	ldr r1, _02153930 ; =0x00003fff
-	ldr r0, _02153924 ; =data_027e0f74
+	ldr r0, _02153924 ; =gAdventureFlags
 	str r1, [r4, #0x3c8]
 	ldr r0, [r0]
 	ldr r1, _02153934 ; =0x00000111
@@ -61575,7 +61575,7 @@ _021538d8:
 	.align 2, 0
 	arm_func_end func_ov15_02153790
 _02153920: .word data_027e0f64
-_02153924: .word data_027e0f74
+_02153924: .word gAdventureFlags
 _02153928: .word data_027e0f94
 _0215392c: .word data_027e0fe4
 _02153930: .word 0x00003fff
@@ -63948,7 +63948,7 @@ _02155abc:
 	mov r0, r5
 	mov r1, #1
 	bl _ZN5Actor10SetUnk_11cEc
-	ldr r0, _02155b80 ; =data_027e0f74
+	ldr r0, _02155b80 ; =gAdventureFlags
 	ldr r1, _02155b84 ; =0x00000101
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -63980,7 +63980,7 @@ _02155b70: .word data_027e0fe8
 _02155b74: .word 0x42554949
 _02155b78: .word data_027e0c68
 _02155b7c: .word 0x00050035
-_02155b80: .word data_027e0f74
+_02155b80: .word gAdventureFlags
 _02155b84: .word 0x00000101
 
 	.global func_ov15_02155b88
@@ -64132,7 +64132,7 @@ _02155da4:
 	ldrb r0, [r6, #0x2f5]
 	cmp r0, #0
 	beq _02155fec
-	ldr r0, _02156178 ; =data_027e0f74
+	ldr r0, _02156178 ; =gAdventureFlags
 	ldr r1, _0215617c ; =0x00000101
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -64145,13 +64145,13 @@ _02155da4:
 _02155dd8:
 	mov r0, r6
 	bl _ZN5Actor20IncreaseActiveFramesEv
-	ldr r0, _02156178 ; =data_027e0f74
+	ldr r0, _02156178 ; =gAdventureFlags
 	ldr r1, _0215617c ; =0x00000101
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	bne _02155fa0
-	ldr r0, _02156178 ; =data_027e0f74
+	ldr r0, _02156178 ; =gAdventureFlags
 	ldr r1, _0215617c ; =0x00000101
 	ldr r0, [r0]
 	mov r2, #1
@@ -64245,7 +64245,7 @@ _02155dd8:
 	strb r3, [sp, #0x10e]
 	strb r2, [sp, #0x10f]
 	strb r1, [sp, #0x110]
-	ldr r0, _02156178 ; =data_027e0f74
+	ldr r0, _02156178 ; =gAdventureFlags
 	mov r2, #0x5c
 	ldr r0, [r0]
 	add r1, sp, #0x80
@@ -64387,7 +64387,7 @@ _0215615c:
 	.align 2, 0
 	arm_func_end func_ov15_02155b88
 _02156174: .word 0xfffff99a
-_02156178: .word data_027e0f74
+_02156178: .word gAdventureFlags
 _0215617c: .word 0x00000101
 _02156180: .word data_027e0f64
 _02156184: .word 0x00000171
@@ -64406,7 +64406,7 @@ func_ov15_0215619c: ; 0x0215619c
 	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _021561f0
-	ldr r0, _02156204 ; =data_027e0f74
+	ldr r0, _02156204 ; =gAdventureFlags
 	ldr r1, [r5, #0x2d4]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -64430,7 +64430,7 @@ _021561f0:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0215619c
-_02156204: .word data_027e0f74
+_02156204: .word gAdventureFlags
 _02156208: .word data_ov15_0218c0e4
 _0215620c: .word data_ov15_0218c0f0
 
@@ -65862,7 +65862,7 @@ _02157548:
 	and r0, r1, r0
 	cmp r0, #0x1000000
 	ldmneia sp!, {r4, pc}
-	ldr r0, _021575ac ; =data_027e0f74
+	ldr r0, _021575ac ; =gAdventureFlags
 	ldr r1, [r4, #0x2d4]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -65873,7 +65873,7 @@ _02157548:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021574f4
-_021575ac: .word data_027e0f74
+_021575ac: .word gAdventureFlags
 
 	.global func_ov15_021575b0
 	arm_func_start func_ov15_021575b0
@@ -69308,7 +69308,7 @@ func_ov15_0215a440: ; 0x0215a440
 func_ov15_0215a478: ; 0x0215a478
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x30
-	ldr r1, _0215a748 ; =data_027e0f74
+	ldr r1, _0215a748 ; =gAdventureFlags
 	mov sl, r0
 	ldr r0, [r1]
 	ldr r2, _0215a74c ; =data_027e10a8
@@ -69495,7 +69495,7 @@ _0215a6b0:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0215a478
-_0215a748: .word data_027e0f74
+_0215a748: .word gAdventureFlags
 _0215a74c: .word data_027e10a8
 _0215a750: .word data_ov15_021865c8
 _0215a754: .word data_ov15_021865dc
@@ -69522,7 +69522,7 @@ func_ov15_0215a768: ; 0x0215a768
 	cmp r0, #0
 	mov r1, #0x37
 	beq _0215a820
-	ldr r0, _0215a8c0 ; =data_027e0f74
+	ldr r0, _0215a8c0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -69556,14 +69556,14 @@ _0215a7f8:
 	strb r1, [r0]
 	b _0215a860
 _0215a820:
-	ldr r0, _0215a8c0 ; =data_027e0f74
+	ldr r0, _0215a8c0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _0215a858
 	mov r1, #0
 	strb r1, [r4, #0x118]
-	ldr r0, _0215a8c0 ; =data_027e0f74
+	ldr r0, _0215a8c0 ; =gAdventureFlags
 	mov r1, #0x17c
 	ldr r0, [r0]
 	mov r2, #1
@@ -69600,7 +69600,7 @@ _0215a860:
 	.align 2, 0
 	arm_func_end func_ov15_0215a768
 _0215a8bc: .word data_027e0e60
-_0215a8c0: .word data_027e0f74
+_0215a8c0: .word gAdventureFlags
 _0215a8c4: .word data_ov15_021865e8
 _0215a8c8: .word data_ov15_021865fc
 _0215a8cc: .word data_027e10a8
@@ -70005,7 +70005,7 @@ _0215ae58:
 	b _0215ae94
 _0215ae78:
 	mov r5, #0
-	ldr r0, _0215b28c ; =data_027e0f74
+	ldr r0, _0215b28c ; =gAdventureFlags
 	strb r5, [r4, #0x118]
 	ldr r0, [r0]
 	mov r1, #0x17c
@@ -70277,7 +70277,7 @@ _0215b27c: .word data_ov15_021865c8
 _0215b280: .word data_ov15_021865e8
 _0215b284: .word data_ov15_021865dc
 _0215b288: .word data_ov15_021865fc
-_0215b28c: .word data_027e0f74
+_0215b28c: .word gAdventureFlags
 _0215b290: .word data_ov15_0218c478
 _0215b294: .word data_027e0e58
 _0215b298: .word 0x0005000e
@@ -71013,20 +71013,20 @@ func_ov15_0215bc20: ; 0x0215bc20
 	arm_func_start func_ov15_0215bc48
 func_ov15_0215bc48: ; 0x0215bc48
 	stmdb sp!, {r4, lr}
-	ldr r1, _0215bcec ; =data_027e0f74
+	ldr r1, _0215bcec ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, _0215bcf0 ; =0x00000186
 	mov r2, #0
 	bl func_ov00_0209779c
-	ldr r0, _0215bcec ; =data_027e0f74
+	ldr r0, _0215bcec ; =gAdventureFlags
 	mov r1, #0x37
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r4, pc}
-	ldr r0, _0215bcec ; =data_027e0f74
+	ldr r0, _0215bcec ; =gAdventureFlags
 	mov r1, #0x14
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -71055,7 +71055,7 @@ func_ov15_0215bc48: ; 0x0215bc48
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0215bc48
-_0215bcec: .word data_027e0f74
+_0215bcec: .word gAdventureFlags
 _0215bcf0: .word 0x00000186
 
 	.global func_ov15_0215bcf4
@@ -71128,13 +71128,13 @@ func_ov15_0215bdac: ; 0x0215bdac
 	ldrb r0, [r4, #0x1bb]
 	cmp r0, #1
 	bne _0215be34
-	ldr r0, _0215be44 ; =data_027e0f74
+	ldr r0, _0215be44 ; =gAdventureFlags
 	ldr r1, [r4, #0x1b4]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0215be04
-	ldr r0, _0215be44 ; =data_027e0f74
+	ldr r0, _0215be44 ; =gAdventureFlags
 	ldr r1, [r4, #0x1b4]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -71158,7 +71158,7 @@ _0215be34:
 	.align 2, 0
 	arm_func_end func_ov15_0215bdac
 _0215be40: .word data_027e10a4
-_0215be44: .word data_027e0f74
+_0215be44: .word gAdventureFlags
 _0215be48: .word data_027e103c
 
 	.global func_ov15_0215be4c
@@ -71196,7 +71196,7 @@ _0215be90:
 	ldr r1, [r0]
 	mvn r5, #0
 	strb r3, [sp, #0x10d]
-	ldr r0, _0215c330 ; =data_027e0f74
+	ldr r0, _0215c330 ; =gAdventureFlags
 	strb r2, [sp, #0x10e]
 	strb r2, [sp, #0x10f]
 	str r5, [sp, #0x108]
@@ -71294,7 +71294,7 @@ _0215bf70:
 	strb r3, [sp, #0x14]
 	strb r2, [sp, #0x15]
 	bl func_ov15_021413f8
-	ldr r0, _0215c330 ; =data_027e0f74
+	ldr r0, _0215c330 ; =gAdventureFlags
 	ldr r1, _0215c344 ; =0x00000186
 	ldr r0, [r0]
 	mov r2, #1
@@ -71391,7 +71391,7 @@ _0215c154:
 	mov r3, #0x32
 	ldr r1, [r0]
 	mvn ip, #0
-	ldr r0, _0215c330 ; =data_027e0f74
+	ldr r0, _0215c330 ; =gAdventureFlags
 	strb r3, [sp, #0x5d]
 	strb r2, [sp, #0x5e]
 	strb r2, [sp, #0x5f]
@@ -71472,13 +71472,13 @@ _0215c29c:
 	mov r2, #1
 	strb r2, [r4, #0x1bc]
 	bl _ZN5Actor18func_ov00_020c1c20Eiii
-	ldr r0, _0215c330 ; =data_027e0f74
+	ldr r0, _0215c330 ; =gAdventureFlags
 	ldr r1, [r4, #0x1b4]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0215c31c
-	ldr r0, _0215c330 ; =data_027e0f74
+	ldr r0, _0215c330 ; =gAdventureFlags
 	ldr r1, [r4, #0x1b4]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -71491,7 +71491,7 @@ _0215c324:
 	.align 2, 0
 	arm_func_end func_ov15_0215be4c
 _0215c32c: .word data_027e0f64
-_0215c330: .word data_027e0f74
+_0215c330: .word gAdventureFlags
 _0215c334: .word data_027e10a4
 _0215c338: .word data_027e0c68
 _0215c33c: .word 0x0005004a
@@ -71604,7 +71604,7 @@ _0215c474:
 	mov r3, #0x32
 	ldr r1, [r0]
 	mvn ip, #0
-	ldr r0, _0215c580 ; =data_027e0f74
+	ldr r0, _0215c580 ; =gAdventureFlags
 	strb r3, [sp, #0x2d]
 	strb r2, [sp, #0x2e]
 	strb r2, [sp, #0x2f]
@@ -71649,7 +71649,7 @@ _0215c570: .word data_027e103c
 _0215c574: .word data_027e0f94
 _0215c578: .word data_027e0e60
 _0215c57c: .word data_027e0f64
-_0215c580: .word data_027e0f74
+_0215c580: .word gAdventureFlags
 
 	.global func_ov15_0215c584
 	arm_func_start func_ov15_0215c584
@@ -71679,7 +71679,7 @@ func_ov15_0215c584: ; 0x0215c584
 	strb ip, [sp, #0xa]
 	strb ip, [sp, #0xb]
 	ldr r3, [r0, #4]
-	ldr r0, _0215c698 ; =data_027e0f74
+	ldr r0, _0215c698 ; =gAdventureFlags
 	ldr r1, [r3, #0x26c]
 	ldr r0, [r0]
 	str r1, [sp, #0x20]
@@ -71727,7 +71727,7 @@ _0215c660:
 	arm_func_end func_ov15_0215c584
 _0215c690: .word data_027e0e60
 _0215c694: .word data_027e0f64
-_0215c698: .word data_027e0f74
+_0215c698: .word gAdventureFlags
 _0215c69c: .word data_027e10a4
 _0215c6a0: .word data_027e103c
 
@@ -73678,7 +73678,7 @@ _0215deb8:
 	cmp r0, #3
 	bne _0215dfa4
 	ldrsb r2, [r4, #0x2c]
-	ldr r0, _0215dfec ; =data_027e0f74
+	ldr r0, _0215dfec ; =gAdventureFlags
 	ldr r1, _0215dff0 ; =data_ov15_02186700
 	ldr r0, [r0]
 	ldr r1, [r1, r2, lsl #2]
@@ -73714,7 +73714,7 @@ _0215dfdc: .word data_027e0764
 _0215dfe0: .word 0x55555556
 _0215dfe4: .word data_027e0d0c
 _0215dfe8: .word 0x00001666
-_0215dfec: .word data_027e0f74
+_0215dfec: .word gAdventureFlags
 _0215dff0: .word data_ov15_02186700
 _0215dff4: .word 0x0000ffff
 
@@ -76188,7 +76188,7 @@ _02160348:
 	strh r0, [r4, #0x7a]
 	mov r2, #1
 	strb r2, [r4, #0x3ee]
-	ldr r0, _021603dc ; =data_027e0f74
+	ldr r0, _021603dc ; =gAdventureFlags
 	ldrsb r3, [r4, #0x2c]
 	ldr r1, _021603e0 ; =data_ov15_02186700
 	ldr r0, [r0]
@@ -76224,7 +76224,7 @@ _021603d0:
 	.align 2, 0
 	arm_func_end func_ov15_0216031c
 _021603d8: .word 0x00000333
-_021603dc: .word data_027e0f74
+_021603dc: .word gAdventureFlags
 _021603e0: .word data_ov15_02186700
 
 	.global func_ov15_021603e4
@@ -76620,7 +76620,7 @@ func_ov15_021607fc: ; 0x021607fc
 	ldrh r1, [r4, #0x24]
 	cmp r1, #0
 	beq _02160838
-	ldr r0, _02160c08 ; =data_027e0f74
+	ldr r0, _02160c08 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -76640,13 +76640,13 @@ _02160838:
 	bl func_ov00_020a5e9c
 	cmp r0, #8
 	bne _021608b4
-	ldr r0, _02160c08 ; =data_027e0f74
+	ldr r0, _02160c08 ; =gAdventureFlags
 	mov r1, #0xb3
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _02160898
-	ldr r0, _02160c08 ; =data_027e0f74
+	ldr r0, _02160c08 ; =gAdventureFlags
 	mov r1, #0xa7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -76882,7 +76882,7 @@ _02160b18:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021607fc
-_02160c08: .word data_027e0f74
+_02160c08: .word gAdventureFlags
 _02160c0c: .word data_027e0d38
 _02160c10: .word data_ov15_0218672c
 _02160c14: .word data_027e0fec
@@ -77060,7 +77060,7 @@ _02160e64:
 	ldr r0, [r0, #0x2c]
 	cmp r0, #4
 	beq _021610c0
-	ldr r0, _02161170 ; =data_027e0f74
+	ldr r0, _02161170 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -77175,7 +77175,7 @@ _02160ef8:
 	mov r3, #0x5c
 	str r2, [sp, #0xf0]
 	mov r2, #0
-	ldr r1, _02161170 ; =data_027e0f74
+	ldr r1, _02161170 ; =gAdventureFlags
 	str r0, [sp, #0x14]
 	str r0, [sp, #0xa8]
 	ldr r0, [r1]
@@ -77229,7 +77229,7 @@ _021610c0:
 	ldr r0, [r5, #0x130]
 	cmp r0, #1
 	beq _02161124
-	ldr r0, _02161170 ; =data_027e0f74
+	ldr r0, _02161170 ; =gAdventureFlags
 	ldr r1, [r5, #0x390]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -77258,7 +77258,7 @@ _0216112c:
 	arm_func_end func_ov15_02160d70
 _02161168: .word data_027e0d3c
 _0216116c: .word data_027e10a4
-_02161170: .word data_027e0f74
+_02161170: .word gAdventureFlags
 _02161174: .word data_027e0c68
 _02161178: .word 0x00050007
 _0216117c: .word data_027e103c
@@ -77835,13 +77835,13 @@ func_ov15_02161904: ; 0x02161904
 	arm_func_start func_ov15_02161920
 func_ov15_02161920: ; 0x02161920
 	stmdb sp!, {r3, lr}
-	ldr r0, _02161964 ; =data_027e0f74
+	ldr r0, _02161964 ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _02161954
-	ldr r0, _02161964 ; =data_027e0f74
+	ldr r0, _02161964 ; =gAdventureFlags
 	mov r1, #0xf5
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -77855,7 +77855,7 @@ _0216195c:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02161920
-_02161964: .word data_027e0f74
+_02161964: .word gAdventureFlags
 _02161968: .word data_ov15_02186780
 
 	.global func_ov15_0216196c
@@ -77974,24 +77974,24 @@ func_ov15_02161ac0: ; 0x02161ac0
 	ldr r1, _02161b94 ; =data_ov15_0218cc1c
 	mov r4, r0
 	str r1, [r4]
-	ldr r0, _02161b98 ; =data_027e0f74
+	ldr r0, _02161b98 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02161af8
-	ldr r0, _02161b98 ; =data_027e0f74
+	ldr r0, _02161b98 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
 _02161af8:
-	ldr r0, _02161b98 ; =data_027e0f74
+	ldr r0, _02161b98 ; =gAdventureFlags
 	ldr r1, [r4, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02161b20
-	ldr r0, _02161b98 ; =data_027e0f74
+	ldr r0, _02161b98 ; =gAdventureFlags
 	ldr r1, [r4, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -78029,7 +78029,7 @@ _02161b34:
 	.align 2, 0
 	arm_func_end func_ov15_02161ac0
 _02161b94: .word data_ov15_0218cc1c
-_02161b98: .word data_027e0f74
+_02161b98: .word gAdventureFlags
 _02161b9c: .word data_027e0e2c
 
 	.global func_ov15_02161ba0
@@ -78039,24 +78039,24 @@ func_ov15_02161ba0: ; 0x02161ba0
 	ldr r1, _02161c7c ; =data_ov15_0218cc1c
 	mov r4, r0
 	str r1, [r4]
-	ldr r0, _02161c80 ; =data_027e0f74
+	ldr r0, _02161c80 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02161bd8
-	ldr r0, _02161c80 ; =data_027e0f74
+	ldr r0, _02161c80 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
 _02161bd8:
-	ldr r0, _02161c80 ; =data_027e0f74
+	ldr r0, _02161c80 ; =gAdventureFlags
 	ldr r1, [r4, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02161c00
-	ldr r0, _02161c80 ; =data_027e0f74
+	ldr r0, _02161c80 ; =gAdventureFlags
 	ldr r1, [r4, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -78096,7 +78096,7 @@ _02161c14:
 	.align 2, 0
 	arm_func_end func_ov15_02161ba0
 _02161c7c: .word data_ov15_0218cc1c
-_02161c80: .word data_027e0f74
+_02161c80: .word gAdventureFlags
 _02161c84: .word data_027e0e2c
 
 	.global func_ov15_02161c88
@@ -78104,14 +78104,14 @@ _02161c84: .word data_027e0e2c
 func_ov15_02161c88: ; 0x02161c88
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #0x6c
-	ldr r1, _02162424 ; =data_027e0f74
+	ldr r1, _02162424 ; =gAdventureFlags
 	mov sl, r0
 	ldr r0, [r1]
 	mov r1, #0x1f
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _02161cc4
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	mov r1, #0xf5
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -78236,13 +78236,13 @@ _02161cd0:
 	cmp r0, #0
 	mov r1, #0x62
 	bne _02161eac
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	mov r2, #0
 	ldr r0, [r0]
 	bl func_ov00_0209779c
 	b _02161f2c
 _02161eac:
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
@@ -78272,14 +78272,14 @@ _02161f00:
 	strb r5, [r1, #0x38]
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _02161f18:
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	mov r1, #0x62
 	ldr r0, [r0]
 	mov r2, #0
 	bl func_ov00_0209779c
 _02161f2c:
 	ldr r1, _02162438 ; =data_027e0fe4
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	ldr r2, [r1]
 	mov r1, #0x52
 	strb r5, [r2, #0x38]
@@ -78287,7 +78287,7 @@ _02161f2c:
 	bl func_ov00_02097760
 	cmp r0, #0
 	beq _02161f88
-	ldr r0, _02162424 ; =data_027e0f74
+	ldr r0, _02162424 ; =gAdventureFlags
 	mov r1, #0x37
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -78621,7 +78621,7 @@ _021623c4:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02161c88
-_02162424: .word data_027e0f74
+_02162424: .word gAdventureFlags
 _02162428: .word data_027e0fec
 _0216242c: .word 0x00000999
 _02162430: .word data_027e0e60
@@ -78833,7 +78833,7 @@ _021626dc:
 	mov r1, r5
 	mov r2, #0
 	bl func_ov15_0216463c
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	add r1, sp, #0xb4
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -78857,7 +78857,7 @@ _02162744:
 	mov r1, r5
 	mov r2, #3
 	bl func_ov15_0216463c
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	add r1, sp, #4
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -79002,13 +79002,13 @@ _02162984:
 	ldr r0, _02162dfc ; =data_ov00_020eec68
 	mov r1, #0x1e
 	bl func_ov00_020d716c
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	ldr r1, [r5, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021629c0
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	ldr r1, [r5, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -79105,7 +79105,7 @@ _021629c0:
 	streqb r0, [sp, #0x2fa]
 	movne r0, #0
 	strneb r0, [sp, #0x2fa]
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	add r1, sp, #0x2e4
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -79242,7 +79242,7 @@ _02162b58:
 	ldrb r3, [sp, #0x1c7]
 	ldrb r2, [sp, #0x1c8]
 	str r0, [sp, #0x248]
-	ldr r0, _02162de0 ; =data_027e0f74
+	ldr r0, _02162de0 ; =gAdventureFlags
 	str r1, [sp, #0x230]
 	ldr r1, [sp, #0x1b0]
 	str sb, [sp, #0x238]
@@ -79283,7 +79283,7 @@ _02162dc4:
 	.align 2, 0
 	arm_func_end func_ov15_02162688
 _02162ddc: .word 0x0000ffff
-_02162de0: .word data_027e0f74
+_02162de0: .word gAdventureFlags
 _02162de4: .word data_027e0c68
 _02162de8: .word 0x00050014
 _02162dec: .word data_027e0e2c
@@ -79329,7 +79329,7 @@ _02162e74:
 	ldr r0, [r4, #0x138]
 	cmp r0, #0x3c
 	blt _02163b90
-	ldr r0, _02163c2c ; =data_027e0f74
+	ldr r0, _02163c2c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -79431,7 +79431,7 @@ _02162f64:
 	bl func_ov15_02164478
 	cmp r0, #0
 	beq _02163050
-	ldr r0, _02163c2c ; =data_027e0f74
+	ldr r0, _02163c2c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -80029,7 +80029,7 @@ _02163854:
 	strb r3, [sp, #0x4c]
 	strb r2, [sp, #0x4d]
 	bl func_ov15_021413f8
-	ldr r0, _02163c2c ; =data_027e0f74
+	ldr r0, _02163c2c ; =gAdventureFlags
 	mov r1, #0x62
 	ldr r0, [r0]
 	mov r2, #1
@@ -80240,7 +80240,7 @@ _02163bf4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02162e14
-_02163c2c: .word data_027e0f74
+_02163c2c: .word gAdventureFlags
 _02163c30: .word data_027e0c68
 _02163c34: .word data_02050f54
 _02163c38: .word data_027e0fe4
@@ -80376,20 +80376,20 @@ _02163dc4:
 	mov r2, #1
 	strb r3, [r6, #0x254]
 	bl func_ov15_0216463c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	add r1, sp, #0x324
 	ldr r0, [r0]
 	bl func_ov00_02097810
 	str r0, [r6, #0x244]
 	add r0, sp, #0x324
 	bl func_ov00_0209a508
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02163e4c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80423,20 +80423,20 @@ _02163e90:
 	mov r1, r6
 	mov r2, #2
 	bl func_ov15_0216463c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	add r1, sp, #0x274
 	ldr r0, [r0]
 	bl func_ov00_02097810
 	str r0, [r6, #0x240]
 	add r0, sp, #0x274
 	bl func_ov00_0209a508
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02163efc
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80459,7 +80459,7 @@ _02163f14:
 	mov r1, r6
 	mov r2, #3
 	bl func_ov15_0216463c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	add r1, sp, #0x1c4
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -80467,7 +80467,7 @@ _02163f14:
 	add r0, sp, #0x1c4
 	bl func_ov00_0209a508
 	ldr r1, [r6, #0x48]
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	str r1, [r6, #0x368]
 	ldr r1, [r6, #0x4c]
 	str r1, [r6, #0x36c]
@@ -80478,7 +80478,7 @@ _02163f14:
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02163f9c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80487,7 +80487,7 @@ _02163f9c:
 	mov r1, r6
 	mov r2, #4
 	bl func_ov15_0216463c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	add r1, sp, #0x114
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -80550,13 +80550,13 @@ _0216406c:
 	add r1, r6, #0x374
 	strb r3, [r6, #0x3d0]
 	bl func_02036ce4
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021640c4
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80666,7 +80666,7 @@ _021640c4:
 	mov r1, r6
 	mov r2, #5
 	bl func_ov15_0216463c
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	add r1, sp, #0x64
 	ldr r0, [r0]
 	bl func_ov00_02097810
@@ -80693,13 +80693,13 @@ _02164294:
 	str r0, [r6, #0x288]
 	str r0, [r6, #0x28c]
 _021642cc:
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021642f4
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80720,13 +80720,13 @@ _02164324:
 	ldrb r0, [r6, #0x11c]
 	cmp r0, #0
 	bne _02164388
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02164358
-	ldr r0, _021643a8 ; =data_027e0f74
+	ldr r0, _021643a8 ; =gAdventureFlags
 	ldr r1, [r6, #0x244]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80754,7 +80754,7 @@ _02164388:
 	arm_func_end func_ov15_02163d10
 _021643a0: .word data_027e0f94
 _021643a4: .word data_027e0f64
-_021643a8: .word data_027e0f74
+_021643a8: .word gAdventureFlags
 _021643ac: .word data_027e0c68
 _021643b0: .word 0x00050015
 _021643b4: .word 0x00050016
@@ -80793,13 +80793,13 @@ _02164410:
 	strb r1, [r0, #0x16]
 	strb r1, [r4, #0x3d1]
 	strb r1, [r4, #0x3d0]
-	ldr r0, _02164474 ; =data_027e0f74
+	ldr r0, _02164474 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02164458
-	ldr r0, _02164474 ; =data_027e0f74
+	ldr r0, _02164474 ; =gAdventureFlags
 	ldr r1, [r4, #0x240]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -80813,7 +80813,7 @@ _02164458:
 	.align 2, 0
 	arm_func_end func_ov15_021643e4
 _02164470: .word data_027e0e2c
-_02164474: .word data_027e0f74
+_02164474: .word gAdventureFlags
 
 	.global func_ov15_02164478
 	arm_func_start func_ov15_02164478
@@ -80827,7 +80827,7 @@ func_ov15_02164478: ; 0x02164478
 	ldrb r0, [r0, #0x34]
 	cmp r0, #0
 	bne _021644c4
-	ldr r0, _021645f0 ; =data_027e0f74
+	ldr r0, _021645f0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -80917,7 +80917,7 @@ _021645e0:
 	.align 2, 0
 	arm_func_end func_ov15_02164478
 _021645ec: .word data_027e0d38
-_021645f0: .word data_027e0f74
+_021645f0: .word gAdventureFlags
 _021645f4: .word data_027e10a4
 _021645f8: .word data_027e0f94
 _021645fc: .word 0x0000ffff
@@ -82110,14 +82110,14 @@ _02165620:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _0216569c:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r1, [r5, #0xd8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	addeq sp, sp, #0x24
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82136,7 +82136,7 @@ _0216569c:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _02165700:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82155,7 +82155,7 @@ _02165700:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _02165748:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82183,7 +82183,7 @@ _0216579c:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _021657b0:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82202,7 +82202,7 @@ _021657b0:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _021657f8:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82238,7 +82238,7 @@ _02165840:
 	cmp r1, #0x1000000
 	addne sp, sp, #0x24
 	ldmneia sp!, {r3, r4, r5, r6, pc}
-	ldr r2, _02165a28 ; =data_027e0f74
+	ldr r2, _02165a28 ; =gAdventureFlags
 	mov r1, r0, asr #0x10
 	ldr r0, [r2]
 	bl func_ov00_020980bc
@@ -82254,7 +82254,7 @@ _021658b4:
 	ldr r0, [r5, #0xa8]
 	cmp r0, #0xa000
 	bgt _021658f0
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82267,7 +82267,7 @@ _021658b4:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _021658f0:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82290,7 +82290,7 @@ _02165938:
 	ldr r0, [r5, #0xa8]
 	cmp r0, #0xa000
 	bgt _02165974
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82303,7 +82303,7 @@ _02165938:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _02165974:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02098058
 	ldr r2, [r5, #8]
@@ -82323,7 +82323,7 @@ _0216599c:
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _021659bc:
-	ldr r0, _02165a28 ; =data_027e0f74
+	ldr r0, _02165a28 ; =gAdventureFlags
 	ldr r1, [r5, #0xd8]
 	ldr r0, [r0]
 	bl func_ov00_02097bac
@@ -82353,7 +82353,7 @@ _02165a18: .word data_ov15_0218f8cc
 _02165a1c: .word func_ov15_02165a34
 _02165a20: .word data_ov15_0218f8c0
 _02165a24: .word data_027e0e60
-_02165a28: .word data_027e0f74
+_02165a28: .word gAdventureFlags
 _02165a2c: .word data_ov15_021867d8
 _02165a30: .word data_027e0c68
 
@@ -82430,7 +82430,7 @@ _02165af4:
 	sub r0, r0, #0x96
 	str r0, [sp, #0x180]
 _02165b24:
-	ldr r0, _02165e24 ; =data_027e0f74
+	ldr r0, _02165e24 ; =gAdventureFlags
 	mov r3, #0
 	mov r5, #0x1e
 	mov r2, #6
@@ -82579,7 +82579,7 @@ _02165d4c:
 	mov r2, r3
 	bl func_020370d0
 _02165d5c:
-	ldr r0, _02165e24 ; =data_027e0f74
+	ldr r0, _02165e24 ; =gAdventureFlags
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov00_020980bc
@@ -82635,7 +82635,7 @@ _02165e14:
 	.align 2, 0
 	arm_func_end func_ov15_02165a48
 _02165e20: .word data_ov15_021867d8
-_02165e24: .word data_027e0f74
+_02165e24: .word gAdventureFlags
 _02165e28: .word data_ov00_020eec9c
 _02165e2c: .word data_027e0e58
 _02165e30: .word data_027e0f94
@@ -83776,7 +83776,7 @@ func_ov15_02166ba0: ; 0x02166ba0
 	arm_func_start func_ov15_02166bd0
 func_ov15_02166bd0: ; 0x02166bd0
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _02166cf8 ; =data_027e0f74
+	ldr r1, _02166cf8 ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x30
@@ -83853,7 +83853,7 @@ _02166ce8:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02166bd0
-_02166cf8: .word data_027e0f74
+_02166cf8: .word gAdventureFlags
 _02166cfc: .word 0xfffffe66
 _02166d00: .word 0x000004cd
 _02166d04: .word data_ov15_02186844
@@ -86682,7 +86682,7 @@ func_ov15_02169358: ; 0x02169358
 	mov r2, #1
 	mov r4, r0
 	bl _ZN5Actor18func_ov00_020c1c20Eiii
-	ldr r0, _021694e4 ; =data_027e0f74
+	ldr r0, _021694e4 ; =gAdventureFlags
 	mov r1, #0xb7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -86777,7 +86777,7 @@ func_ov15_02169358: ; 0x02169358
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02169358
-_021694e4: .word data_027e0f74
+_021694e4: .word gAdventureFlags
 _021694e8: .word data_027e0fec
 _021694ec: .word data_027e0d0c
 _021694f0: .word data_027e0f6c
@@ -86909,7 +86909,7 @@ func_ov15_02169684: ; 0x02169684
 	and r0, r1, r0
 	cmp r0, #0x1000000
 	bne _021696cc
-	ldr r0, _02169700 ; =data_027e0f74
+	ldr r0, _02169700 ; =gAdventureFlags
 	ldr r1, [r4, #0x2d8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -86932,7 +86932,7 @@ _021696e0:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02169684
-_02169700: .word data_027e0f74
+_02169700: .word gAdventureFlags
 _02169704: .word data_ov15_0218d1bc
 _02169708: .word data_ov15_0218d1c8
 
@@ -87386,7 +87386,7 @@ _02169c3c:
 	ldrb ip, [sp, #0x64]
 	str r3, [sp, #0xe4]
 	ldr r3, [sp, #0x58]
-	ldr r1, _02169e5c ; =data_027e0f74
+	ldr r1, _02169e5c ; =gAdventureFlags
 	str r3, [sp, #0xec]
 	mov r3, #0x5c
 	str r0, [sp, #0x14]
@@ -87405,13 +87405,13 @@ _02169c3c:
 	bl func_ov00_0209a508
 	b _02169e2c
 _02169dc8:
-	ldr r0, _02169e5c ; =data_027e0f74
+	ldr r0, _02169e5c ; =gAdventureFlags
 	ldr r1, [r5, #0x2d8]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02169df0
-	ldr r0, _02169e5c ; =data_027e0f74
+	ldr r0, _02169e5c ; =gAdventureFlags
 	ldr r1, [r5, #0x2d8]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -87446,7 +87446,7 @@ _02169e4c: .word data_027e0c68
 _02169e50: .word 0x00050023
 _02169e54: .word data_027e0f64
 _02169e58: .word 0x00000bb8
-_02169e5c: .word data_027e0f74
+_02169e5c: .word gAdventureFlags
 _02169e60: .word 0x00050024
 
 	.global func_ov15_02169e64
@@ -87634,7 +87634,7 @@ _0216a0a4:
 	beq _0216a0cc
 	bl func_ov15_02168d58
 _0216a0cc:
-	ldr r0, _0216a0fc ; =data_027e0f74
+	ldr r0, _0216a0fc ; =gAdventureFlags
 	mov r1, #0xb7
 	ldr r0, [r0]
 	mov r2, #1
@@ -87649,7 +87649,7 @@ _0216a0ec: .word data_027e10a4
 _0216a0f0: .word data_027e0d3c
 _0216a0f4: .word data_027e103c
 _0216a0f8: .word data_027e0fe4
-_0216a0fc: .word data_027e0f74
+_0216a0fc: .word gAdventureFlags
 
 	.global func_ov15_0216a100
 	arm_func_start func_ov15_0216a100
@@ -87979,7 +87979,7 @@ func_ov15_0216a590: ; 0x0216a590
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
 	sub sp, sp, #8
 	mov r0, #1
-	ldr r1, _0216a734 ; =data_027e0f74
+	ldr r1, _0216a734 ; =gAdventureFlags
 	str r0, [sp, #4]
 	ldr r0, [r1]
 	ldr r1, [sp, #4]
@@ -88062,13 +88062,13 @@ _0216a6a8:
 _0216a6c4:
 	cmp fp, #0
 	bne _0216a704
-	ldr r0, _0216a734 ; =data_027e0f74
+	ldr r0, _0216a734 ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #1
 	bne _0216a6fc
-	ldr r0, _0216a734 ; =data_027e0f74
+	ldr r0, _0216a734 ; =gAdventureFlags
 	mov r1, #0x52
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -88093,7 +88093,7 @@ _0216a728:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0216a590
-_0216a734: .word data_027e0f74
+_0216a734: .word gAdventureFlags
 _0216a738: .word data_027e0c68
 _0216a73c: .word data_ov09_0211f5b4
 _0216a740: .word data_027e0d38
@@ -88365,7 +88365,7 @@ func_ov15_0216aa84: ; 0x0216aa84
 	mov r5, r0
 	mov r4, r1
 	blx func_ov03_020fab5c
-	ldr r0, _0216aad0 ; =data_027e0f74
+	ldr r0, _0216aad0 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -88384,7 +88384,7 @@ _0216aac4:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0216aa84
-_0216aad0: .word data_027e0f74
+_0216aad0: .word gAdventureFlags
 _0216aad4: .word data_ov09_0211f5dc
 _0216aad8: .word data_ov00_020eec68
 
@@ -91841,7 +91841,7 @@ func_ov15_0216d8c8: ; 0x0216d8c8
 	cmp r0, #0
 	addeq sp, sp, #0x18
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _0216d964 ; =data_027e0f74
+	ldr r0, _0216d964 ; =gAdventureFlags
 	mov r1, #0x100
 	ldr r0, [r0]
 	mov r2, #1
@@ -91852,7 +91852,7 @@ func_ov15_0216d8c8: ; 0x0216d8c8
 	arm_func_end func_ov15_0216d8c8
 _0216d95c: .word data_027e0e60
 _0216d960: .word data_027e0d38
-_0216d964: .word data_027e0f74
+_0216d964: .word gAdventureFlags
 
 	.global func_ov15_0216d968
 	arm_func_start func_ov15_0216d968
@@ -91905,7 +91905,7 @@ _0216d9b0:
 	bl func_ov05_02100ae0
 	cmp r0, #0
 	beq _0216da38
-	ldr r0, _0216daa0 ; =data_027e0f74
+	ldr r0, _0216daa0 ; =gAdventureFlags
 	mov r1, #0x56
 	ldr r0, [r0]
 	mov r2, #1
@@ -91940,7 +91940,7 @@ _0216da84:
 _0216da94: .word data_027e0c68
 _0216da98: .word data_027e0e60
 _0216da9c: .word data_027e0d38
-_0216daa0: .word data_027e0f74
+_0216daa0: .word gAdventureFlags
 _0216daa4: .word data_027e0fe4
 
 	.global func_ov15_0216daa8
@@ -92198,7 +92198,7 @@ _0216de0c:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 _0216de14:
-	ldr r0, _0216de3c ; =data_027e0f74
+	ldr r0, _0216de3c ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -92211,7 +92211,7 @@ _0216de30:
 	.align 2, 0
 	arm_func_end func_ov15_0216dd8c
 _0216de38: .word data_027e0c68
-_0216de3c: .word data_027e0f74
+_0216de3c: .word gAdventureFlags
 
 	.global func_ov15_0216de40
 	arm_func_start func_ov15_0216de40
@@ -93640,7 +93640,7 @@ _0216f158:
 	bl func_01ff9bc4
 	add r0, r4, #0x15c
 	bl func_ov00_020c5e20
-	ldr r0, _0216f324 ; =data_027e0f74
+	ldr r0, _0216f324 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097750
 	cmp r0, #0
@@ -93743,7 +93743,7 @@ _0216f2b4:
 _0216f318: .word data_027e10a4
 _0216f31c: .word data_027e0fac
 _0216f320: .word data_027e0f94
-_0216f324: .word data_027e0f74
+_0216f324: .word gAdventureFlags
 _0216f328: .word 0x55555556
 
 	.global func_ov15_0216f32c
@@ -94695,7 +94695,7 @@ _0216fe54:
 	ldr r0, [sp, #0x270]
 	ldrb r6, [sp, #0x280]
 	str r0, [sp, #0x304]
-	ldr r0, _02170638 ; =data_027e0f74
+	ldr r0, _02170638 ; =gAdventureFlags
 	ldrb lr, [sp, #0x281]
 	ldrb ip, [sp, #0x282]
 	ldrb r3, [sp, #0x283]
@@ -94742,13 +94742,13 @@ _0216fe54:
 	bl func_ov00_0209a508
 	b _0217060c
 _0217007c:
-	ldr r0, _02170638 ; =data_027e0f74
+	ldr r0, _02170638 ; =gAdventureFlags
 	ldr r1, [r5, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _021700a4
-	ldr r0, _02170638 ; =data_027e0f74
+	ldr r0, _02170638 ; =gAdventureFlags
 	ldr r1, [r5, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -94907,7 +94907,7 @@ _0217029c:
 	add r6, sp, #0x4c
 	ldmia r0, {r0, r1, r2}
 	stmia r6, {r0, r1, r2}
-	ldr r0, _02170638 ; =data_027e0f74
+	ldr r0, _02170638 ; =gAdventureFlags
 	str r7, [sp, #0x174]
 	ldr r7, [sp, #0x4c]
 	ldr r6, [sp, #0x50]
@@ -95059,7 +95059,7 @@ _021703e8:
 	ldr r0, [sp, #0xa8]
 	ldr sb, [sp, #0xa0]
 	str r0, [sp, #0x13c]
-	ldr r0, _02170638 ; =data_027e0f74
+	ldr r0, _02170638 ; =gAdventureFlags
 	ldrb r8, [sp, #0xb8]
 	ldrb r7, [sp, #0xb9]
 	ldrb r6, [sp, #0xba]
@@ -95117,7 +95117,7 @@ _02170628: .word data_027e103c
 _0217062c: .word data_027e0e60
 _02170630: .word data_027e0f94
 _02170634: .word data_027e0f64
-_02170638: .word data_027e0f74
+_02170638: .word gAdventureFlags
 _0217063c: .word data_027e10a4
 _02170640: .word data_027e0fac
 _02170644: .word data_02050f54
@@ -95178,13 +95178,13 @@ func_ov15_021706b4: ; 0x021706b4
 	and r0, r1, r0
 	cmp r0, #0x1000000
 	bne _02170734
-	ldr r0, _02170750 ; =data_027e0f74
+	ldr r0, _02170750 ; =gAdventureFlags
 	ldr r1, [r5, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	bne _02170734
-	ldr r0, _02170750 ; =data_027e0f74
+	ldr r0, _02170750 ; =gAdventureFlags
 	ldr r1, [r5, #0x540]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -95201,7 +95201,7 @@ _0217073c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_021706b4
-_02170750: .word data_027e0f74
+_02170750: .word gAdventureFlags
 
 	.global func_ov15_02170754
 	arm_func_start func_ov15_02170754
@@ -95604,7 +95604,7 @@ _02170ac8:
 	ldrb r3, [sp, #0x177]
 	ldrb r2, [sp, #0x178]
 	str r0, [sp, #0x1f4]
-	ldr r0, _02170ff8 ; =data_027e0f74
+	ldr r0, _02170ff8 ; =gAdventureFlags
 	str r1, [sp, #0x1d8]
 	ldr r1, [sp, #0x15c]
 	str sb, [sp, #0x1e0]
@@ -95632,13 +95632,13 @@ _02170ac8:
 	strb sl, [sp, #0x192]
 	bl func_ov00_02097810
 	str r0, [r4, #0x540]
-	ldr r0, _02170ff8 ; =data_027e0f74
+	ldr r0, _02170ff8 ; =gAdventureFlags
 	ldr r1, [r4, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02170db8
-	ldr r0, _02170ff8 ; =data_027e0f74
+	ldr r0, _02170ff8 ; =gAdventureFlags
 	ldr r1, [r4, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -95767,13 +95767,13 @@ _02170eec:
 	cmp r0, #0x1000000
 	addne sp, sp, #0x294
 	ldmneia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
-	ldr r0, _02170ff8 ; =data_027e0f74
+	ldr r0, _02170ff8 ; =gAdventureFlags
 	ldr r1, [r4, #0x540]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02170fc4
-	ldr r0, _02170ff8 ; =data_027e0f74
+	ldr r0, _02170ff8 ; =gAdventureFlags
 	ldr r1, [r4, #0x540]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -95794,7 +95794,7 @@ _02170fe8: .word 0x00050027
 _02170fec: .word data_027e0f64
 _02170ff0: .word data_02050f54
 _02170ff4: .word 0x0000276c
-_02170ff8: .word data_027e0f74
+_02170ff8: .word gAdventureFlags
 _02170ffc: .word data_ov15_02190458
 _02171000: .word data_ov00_020eec68
 _02171004: .word 0x00050028
@@ -96206,7 +96206,7 @@ _021715ac:
 	mov r1, #1
 	bl _ZN5Actor10SetUnk_11cEc
 	ldrb r1, [r4, #0x56c]
-	ldr r0, _02171918 ; =data_027e0f74
+	ldr r0, _02171918 ; =gAdventureFlags
 	add r1, r1, #1
 	strb r1, [r4, #0x56c]
 	ldr r0, [r0]
@@ -96214,7 +96214,7 @@ _021715ac:
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0217161c
-	ldr r0, _02171918 ; =data_027e0f74
+	ldr r0, _02171918 ; =gAdventureFlags
 	ldr r1, [r4, #0x53c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -96286,7 +96286,7 @@ _02171640:
 	ldr r1, _02171928 ; =data_027e0f64
 	mov r3, #0x32
 	mvn ip, #0
-	ldr r0, _02171918 ; =data_027e0f74
+	ldr r0, _02171918 ; =gAdventureFlags
 	ldr r1, [r1]
 	strb r3, [sp, #0x141]
 	strb r2, [sp, #0x142]
@@ -96418,7 +96418,7 @@ _02171908: .word 0x000002e9
 _0217190c: .word 0x0000ffff
 _02171910: .word data_027e0c68
 _02171914: .word 0x00050029
-_02171918: .word data_027e0f74
+_02171918: .word gAdventureFlags
 _0217191c: .word data_ov15_02190458
 _02171920: .word data_027e10a4
 _02171924: .word data_027e0f68
@@ -101518,7 +101518,7 @@ _02175e80: ; jump table
 	b _021760a4 ; case 6
 	b _0217601c ; case 7
 _02175ea0:
-	ldr r0, _021760dc ; =data_027e0f74
+	ldr r0, _021760dc ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097738
 	cmp r0, #0
@@ -101673,7 +101673,7 @@ _021760a4:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02175e48
-_021760dc: .word data_027e0f74
+_021760dc: .word gAdventureFlags
 _021760e0: .word data_027e0de4
 _021760e4: .word func_ov15_02176118
 _021760e8: .word data_ov15_0218dd94
@@ -102795,7 +102795,7 @@ func_ov15_0217708c: ; 0x0217708c
 	mov r0, #1
 	str r0, [sp]
 	ldr fp, [sp]
-	ldr r1, _021771fc ; =data_027e0f74
+	ldr r1, _021771fc ; =gAdventureFlags
 	mov r4, fp
 	ldr r0, [r1]
 	mov r5, fp
@@ -102866,13 +102866,13 @@ _02177170:
 _02177198:
 	cmp r4, #0
 	bne _021771d4
-	ldr r0, _021771fc ; =data_027e0f74
+	ldr r0, _021771fc ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #1
 	bne _021771d0
-	ldr r0, _021771fc ; =data_027e0f74
+	ldr r0, _021771fc ; =gAdventureFlags
 	mov r1, #0x52
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -102894,7 +102894,7 @@ _021771f4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0217708c
-_021771fc: .word data_027e0f74
+_021771fc: .word gAdventureFlags
 _02177200: .word data_027e0c68
 _02177204: .word data_ov09_0211f5b4
 _02177208: .word data_027e0d38
@@ -103010,14 +103010,14 @@ func_ov15_02177330: ; 0x02177330
 	bl func_ov00_020a5e9c
 	cmp r0, #0x32
 	beq _02177390
-	ldr r0, _021773a0 ; =data_027e0f74
+	ldr r0, _021773a0 ; =gAdventureFlags
 	mov r1, #0xf8
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	movne r4, #2
 	bne _02177390
-	ldr r0, _021773a0 ; =data_027e0f74
+	ldr r0, _021773a0 ; =gAdventureFlags
 	mov r1, #0xf7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -103033,7 +103033,7 @@ _02177390:
 	.align 2, 0
 	arm_func_end func_ov15_02177330
 _0217739c: .word data_027e0d38
-_021773a0: .word data_027e0f74
+_021773a0: .word gAdventureFlags
 _021773a4: .word data_ov15_02186dac
 
 	.global func_ov15_021773a8
@@ -103319,13 +103319,13 @@ func_ov15_021776c4: ; 0x021776c4
 	bl func_ov00_020a5e9c
 	cmp r0, #0x32
 	beq _02177774
-	ldr r0, _021777fc ; =data_027e0f74
+	ldr r0, _021777fc ; =gAdventureFlags
 	mov r1, #0xf8
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	bne _0217774c
-	ldr r0, _021777fc ; =data_027e0f74
+	ldr r0, _021777fc ; =gAdventureFlags
 	mov r1, #0xf7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -103379,7 +103379,7 @@ _021777ec: .word data_027e0e60
 _021777f0: .word data_027e0f6c
 _021777f4: .word data_027e0d38
 _021777f8: .word data_027e10b0
-_021777fc: .word data_027e0f74
+_021777fc: .word gAdventureFlags
 _02177800: .word data_ov00_020eec68
 _02177804: .word data_ov15_02190458
 
@@ -103408,13 +103408,13 @@ func_ov15_02177808: ; 0x02177808
 	bl func_ov00_020a5e9c
 	cmp r0, #0x32
 	beq _021778b8
-	ldr r0, _02177948 ; =data_027e0f74
+	ldr r0, _02177948 ; =gAdventureFlags
 	mov r1, #0xf8
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #0
 	bne _02177890
-	ldr r0, _02177948 ; =data_027e0f74
+	ldr r0, _02177948 ; =gAdventureFlags
 	mov r1, #0xf7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -103470,7 +103470,7 @@ _02177938: .word data_027e0e60
 _0217793c: .word data_027e0f6c
 _02177940: .word data_027e0d38
 _02177944: .word data_027e10b0
-_02177948: .word data_027e0f74
+_02177948: .word gAdventureFlags
 _0217794c: .word data_ov00_020eec68
 _02177950: .word data_ov15_02190458
 
@@ -103626,7 +103626,7 @@ func_ov15_02177964: ; 0x02177964
 	cmp r0, #0x32
 	beq _02177c5c
 	mov r1, #0x5e
-	ldr r0, _02177f0c ; =data_027e0f74
+	ldr r0, _02177f0c ; =gAdventureFlags
 	strh r1, [r4, #0x7a]
 	ldr r0, [r0]
 	mov r1, #0xf8
@@ -103644,7 +103644,7 @@ func_ov15_02177964: ; 0x02177964
 	str r0, [sp, #0xc]
 	b _02177c20
 _02177bd4:
-	ldr r0, _02177f0c ; =data_027e0f74
+	ldr r0, _02177f0c ; =gAdventureFlags
 	mov r1, #0xf7
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -103856,7 +103856,7 @@ _02177efc: .word data_027e0764
 _02177f00: .word 0x0000a332
 _02177f04: .word 0x00003666
 _02177f08: .word data_027e0d38
-_02177f0c: .word data_027e0f74
+_02177f0c: .word gAdventureFlags
 _02177f10: .word data_027e103c
 _02177f14: .word data_ov15_02186dc4
 _02177f18: .word data_027e0fe8
@@ -103990,7 +103990,7 @@ _021780a0:
 	bl func_ov00_020cf9dc
 	b _02178114
 _021780c8:
-	ldr r0, _0217813c ; =data_027e0f74
+	ldr r0, _0217813c ; =gAdventureFlags
 	mov r1, #0xf8
 	ldr r0, [r0]
 	mov r2, #1
@@ -104023,7 +104023,7 @@ _0217812c: .word data_027e0fe4
 _02178130: .word data_027e0d0c
 _02178134: .word 0x00000ccd
 _02178138: .word data_027e103c
-_0217813c: .word data_027e0f74
+_0217813c: .word gAdventureFlags
 _02178140: .word data_027e0c68
 _02178144: .word 0x00050047
 
@@ -104122,7 +104122,7 @@ func_ov15_02178258: ; 0x02178258
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
 	bl func_ov15_0217a680
-	ldr r0, _02178390 ; =data_027e0f74
+	ldr r0, _02178390 ; =gAdventureFlags
 	ldr r1, [r4, #0x370]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -104195,7 +104195,7 @@ _021782bc:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02178258
-_02178390: .word data_027e0f74
+_02178390: .word gAdventureFlags
 _02178394: .word data_027e077c
 _02178398: .word data_027e0f94
 _0217839c: .word data_027e0f6c
@@ -104567,13 +104567,13 @@ _021788cc:
 _02178910:
 	cmp r2, #0xb4
 	ble _02178954
-	ldr r0, _021789c0 ; =data_027e0f74
+	ldr r0, _021789c0 ; =gAdventureFlags
 	ldr r1, [r5, #0x370]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02178940
-	ldr r0, _021789c0 ; =data_027e0f74
+	ldr r0, _021789c0 ; =gAdventureFlags
 	ldr r1, [r5, #0x370]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -104613,7 +104613,7 @@ _021789b0: .word data_027e0ffc
 _021789b4: .word 0x00000461
 _021789b8: .word 0xffffc4cd
 _021789bc: .word 0xffffe4a8
-_021789c0: .word data_027e0f74
+_021789c0: .word gAdventureFlags
 
 	.global func_ov15_021789c4
 	arm_func_start func_ov15_021789c4
@@ -104698,7 +104698,7 @@ func_ov15_02178a6c: ; 0x02178a6c
 	cmp r0, #0x1000000
 	bne _02178b18
 	mov r1, #0
-	ldr r0, _02178b68 ; =data_027e0f74
+	ldr r0, _02178b68 ; =gAdventureFlags
 	strb r1, [r4, #0x474]
 	ldr r0, [r0]
 	mov r1, #0x18
@@ -104733,7 +104733,7 @@ _02178b18:
 	arm_func_end func_ov15_02178a6c
 _02178b60: .word data_027e0ffc
 _02178b64: .word 0x00000461
-_02178b68: .word data_027e0f74
+_02178b68: .word gAdventureFlags
 _02178b6c: .word data_027e103c
 _02178b70: .word data_027e10a4
 _02178b74: .word data_ov15_0218ddcc
@@ -104857,7 +104857,7 @@ _02178cfc:
 	bl _ZN5Actor18func_ov00_020c198cEv
 	cmp r0, #0
 	beq _02178d40
-	ldr r0, _02178d70 ; =data_027e0f74
+	ldr r0, _02178d70 ; =gAdventureFlags
 	mov r1, #0x18
 	ldr r0, [r0]
 	bl func_ov00_02097968
@@ -104878,7 +104878,7 @@ _02178d40:
 _02178d64: .word data_027e0e60
 _02178d68: .word data_ov15_0218ddcc
 _02178d6c: .word data_ov15_0218ddc8
-_02178d70: .word data_027e0f74
+_02178d70: .word gAdventureFlags
 
 	.global func_ov15_02178d74
 	arm_func_start func_ov15_02178d74
@@ -106839,7 +106839,7 @@ func_ov15_0217a850: ; 0x0217a850
 	ldr r7, [sp, #0x70]
 	ldr r6, [sp, #0x74]
 	mov fp, #0x5c
-	ldr r1, _0217aa2c ; =data_027e0f74
+	ldr r1, _0217aa2c ; =gAdventureFlags
 	str r0, [sp, #0xf4]
 	ldr r0, [r1]
 	add r1, sp, #0x80
@@ -106865,7 +106865,7 @@ func_ov15_0217a850: ; 0x0217a850
 _0217aa20: .word data_027e0e60
 _0217aa24: .word data_027e0f64
 _0217aa28: .word 0x000024cd
-_0217aa2c: .word data_027e0f74
+_0217aa2c: .word gAdventureFlags
 
 	.global func_ov15_0217aa30
 	arm_func_start func_ov15_0217aa30
@@ -111138,7 +111138,7 @@ func_ov15_0217e354: ; 0x0217e354
 	arm_func_start func_ov15_0217e368
 func_ov15_0217e368: ; 0x0217e368
 	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
-	ldr r0, _0217e4a4 ; =data_027e0f74
+	ldr r0, _0217e4a4 ; =gAdventureFlags
 	mov r4, #1
 	ldr r0, [r0]
 	mov r5, r4
@@ -111206,13 +111206,13 @@ _0217e42c:
 _0217e460:
 	cmp r5, #0
 	bne _0217e49c
-	ldr r0, _0217e4a4 ; =data_027e0f74
+	ldr r0, _0217e4a4 ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
 	bl func_ov00_02097760
 	cmp r0, #1
 	bne _0217e498
-	ldr r0, _0217e4a4 ; =data_027e0f74
+	ldr r0, _0217e4a4 ; =gAdventureFlags
 	mov r1, #0x52
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -111225,7 +111225,7 @@ _0217e49c:
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0217e368
-_0217e4a4: .word data_027e0f74
+_0217e4a4: .word gAdventureFlags
 _0217e4a8: .word data_027e0c68
 _0217e4ac: .word data_ov09_0211f5b4
 _0217e4b0: .word data_027e0d38
@@ -112380,7 +112380,7 @@ func_ov15_0217f47c: ; 0x0217f47c
 	ldmgeia sp!, {r3, r4, r5, r6, r7, pc}
 	mov r0, #0x28
 	mul r4, r1, r0
-	ldr r0, _0217f5d0 ; =data_027e0f74
+	ldr r0, _0217f5d0 ; =gAdventureFlags
 	ldr r1, _0217f5d4 ; =data_ov15_0218e6f0
 	ldr r0, [r0]
 	ldr r1, [r1, r4]
@@ -112465,7 +112465,7 @@ _0217f5c4:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov15_0217f47c
-_0217f5d0: .word data_027e0f74
+_0217f5d0: .word gAdventureFlags
 _0217f5d4: .word data_ov15_0218e6f0
 _0217f5d8: .word data_ov15_0218e6e8
 _0217f5dc: .word data_ov15_0218e6ea
@@ -113329,7 +113329,7 @@ _02180058:
 	beq _021800c0
 	b _021800fc
 _02180078:
-	ldr r0, _02180334 ; =data_027e0f74
+	ldr r0, _02180334 ; =gAdventureFlags
 	mov r1, #0x1e
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -113339,7 +113339,7 @@ _02180078:
 	mov r0, sl
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _0218009c:
-	ldr r0, _02180334 ; =data_027e0f74
+	ldr r0, _02180334 ; =gAdventureFlags
 	mov r1, #0x33
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -113349,7 +113349,7 @@ _0218009c:
 	mov r0, sl
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 _021800c0:
-	ldr r0, _02180334 ; =data_027e0f74
+	ldr r0, _02180334 ; =gAdventureFlags
 	mov r1, #0x33
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -113525,7 +113525,7 @@ _02180324:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
 	.align 2, 0
 _02180330: .word data_027e0d0c
-_02180334: .word data_027e0f74
+_02180334: .word gAdventureFlags
 _02180338: .word data_027e0dcc
 _0218033c: .word 0xcccccccd
 _02180340: .word 0x00000708
@@ -113702,7 +113702,7 @@ _02180424:
 	mov r8, #0x32
 	mov r7, #0
 	mov r6, #2
-	ldr r0, _02180adc ; =data_027e0f74
+	ldr r0, _02180adc ; =gAdventureFlags
 	str sb, [sp, #0x208]
 	strb r8, [sp, #0x20d]
 	strb r7, [sp, #0x20e]
@@ -113931,7 +113931,7 @@ _021806b8:
 	ldrb r3, [sp, #0x14f]
 	ldrb r2, [sp, #0x150]
 	str r0, [sp, #0x1cc]
-	ldr r0, _02180adc ; =data_027e0f74
+	ldr r0, _02180adc ; =gAdventureFlags
 	str r1, [sp, #0x1b4]
 	ldr r1, [sp, #0x134]
 	str sb, [sp, #0x1bc]
@@ -114010,7 +114010,7 @@ _02180a3c:
 	mov r8, #0x32
 	mov r7, #0
 	mov r6, #2
-	ldr r0, _02180adc ; =data_027e0f74
+	ldr r0, _02180adc ; =gAdventureFlags
 	str sb, [sp, #0x40]
 	strb r8, [sp, #0x45]
 	strb r7, [sp, #0x46]
@@ -114039,7 +114039,7 @@ _02180acc: .word data_027e0d0c
 _02180ad0: .word data_027e10a4
 _02180ad4: .word data_027e0f94
 _02180ad8: .word data_027e0f64
-_02180adc: .word data_027e0f74
+_02180adc: .word gAdventureFlags
 _02180ae0: .word data_027e0764
 _02180ae4: .word data_027e0c68
 _02180ae8: .word 0x00050048
@@ -114423,20 +114423,20 @@ _02180fc0:
 	ldr r0, [r4, #0x390]
 	cmp r0, #0
 	bge _021810a4
-	ldr r0, _0218137c ; =data_027e0f74
+	ldr r0, _0218137c ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _02181038
-	ldr r0, _0218137c ; =data_027e0f74
+	ldr r0, _0218137c ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
 _02181038:
 	add r0, sp, #0x64
 	bl func_ov00_0209a4f4
-	ldr r0, _0218137c ; =data_027e0f74
+	ldr r0, _0218137c ; =gAdventureFlags
 	ldr r5, [sp, #0x58]
 	ldr r3, [sp, #0x5c]
 	ldr r2, [sp, #0x60]
@@ -114632,7 +114632,7 @@ _021812e4:
 	add sp, sp, #0x114
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
 _02181338:
-	ldr r0, _0218137c ; =data_027e0f74
+	ldr r0, _0218137c ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -114651,7 +114651,7 @@ _0218136c: .word data_ov15_0218e8c8
 _02181370: .word data_02050f54
 _02181374: .word data_ov00_020eec9c
 _02181378: .word 0x0000025d
-_0218137c: .word data_027e0f74
+_0218137c: .word gAdventureFlags
 _02181380: .word 0x00000aab
 _02181384: .word 0x00000133
 _02181388: .word data_027e10a4
@@ -114785,7 +114785,7 @@ _021814f0:
 	ldmneia sp!, {r4, pc}
 	mov r0, #0
 	strb r0, [r4, #0x400]
-	ldr r0, _02181570 ; =data_027e0f74
+	ldr r0, _02181570 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -114799,7 +114799,7 @@ _021814f0:
 	arm_func_end func_ov15_02181440
 _02181568: .word data_027e0f64
 _0218156c: .word data_027e0c68
-_02181570: .word data_027e0f74
+_02181570: .word gAdventureFlags
 
 	.global func_ov15_02181574
 	arm_func_start func_ov15_02181574
@@ -114979,7 +114979,7 @@ func_ov15_02181618: ; 0x02181618
 	str r6, [sp, #0xb8]
 	ldr r6, [sp, #0x40]
 	str r0, [sp, #0xdc]
-	ldr r0, _021818c8 ; =data_027e0f74
+	ldr r0, _021818c8 ; =gAdventureFlags
 	ldrb r5, [sp, #0x60]
 	ldrb lr, [sp, #0x61]
 	ldrb ip, [sp, #0x62]
@@ -115033,7 +115033,7 @@ _021818b0:
 	arm_func_end func_ov15_02181618
 _021818c0: .word data_027e0f94
 _021818c4: .word data_027e0f64
-_021818c8: .word data_027e0f74
+_021818c8: .word gAdventureFlags
 
 	.global func_ov15_021818cc
 	arm_func_start func_ov15_021818cc
@@ -115247,7 +115247,7 @@ func_ov15_02181b5c: ; 0x02181b5c
 	cmp r0, #0x5000
 	addge sp, sp, #0x14
 	ldmgeia sp!, {r3, r4, pc}
-	ldr r0, _02181c48 ; =data_027e0f74
+	ldr r0, _02181c48 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
@@ -115263,7 +115263,7 @@ func_ov15_02181b5c: ; 0x02181b5c
 	addeq sp, sp, #0x14
 	ldmeqia sp!, {r3, r4, pc}
 _02181c10:
-	ldr r0, _02181c48 ; =data_027e0f74
+	ldr r0, _02181c48 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -115279,7 +115279,7 @@ _02181c10:
 _02181c3c: .word data_027e0f94
 _02181c40: .word data_027e0f64
 _02181c44: .word 0x00000133
-_02181c48: .word data_027e0f74
+_02181c48: .word gAdventureFlags
 
 	.global func_ov15_02181c4c
 	arm_func_start func_ov15_02181c4c
@@ -115296,7 +115296,7 @@ func_ov15_02181c4c: ; 0x02181c4c
 	blt _02181c9c
 	cmp r0, #2
 	ldmneia sp!, {r4, pc}
-	ldr r0, _02181cb4 ; =data_027e0f74
+	ldr r0, _02181cb4 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
 	mvn r0, #0
@@ -115313,7 +115313,7 @@ _02181c9c:
 	.align 2, 0
 	arm_func_end func_ov15_02181c4c
 _02181cb0: .word data_027e0fe4
-_02181cb4: .word data_027e0f74
+_02181cb4: .word gAdventureFlags
 
 	.global func_ov15_02181cb8
 	arm_func_start func_ov15_02181cb8
@@ -115768,7 +115768,7 @@ _02182140:
 	str r2, [sp, #0xf4]
 	ldr r2, [sp, #0x7c]
 	str r0, [sp, #0x118]
-	ldr r0, _02182588 ; =data_027e0f74
+	ldr r0, _02182588 ; =gAdventureFlags
 	str r1, [sp, #0xf8]
 	ldr r1, [sp, #0x80]
 	str sl, [sp, #0x100]
@@ -115877,7 +115877,7 @@ _021824dc:
 	str r0, [r4, #0x37c]
 	mov r0, #4
 	strb r0, [r4, #0x39e]
-	ldr r0, _02182588 ; =data_027e0f74
+	ldr r0, _02182588 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -115915,7 +115915,7 @@ _02182548:
 _0218257c: .word data_027e0e60
 _02182580: .word data_027e0f94
 _02182584: .word data_027e0f64
-_02182588: .word data_027e0f74
+_02182588: .word gAdventureFlags
 _0218258c: .word data_027e10a4
 
 	.global func_ov15_02182590
@@ -115975,13 +115975,13 @@ _02182644:
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov15_021413d4
-	ldr r0, _021826a8 ; =data_027e0f74
+	ldr r0, _021826a8 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097b9c
 	cmp r0, #0
 	beq _0218268c
-	ldr r0, _021826a8 ; =data_027e0f74
+	ldr r0, _021826a8 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -115995,7 +115995,7 @@ _0218268c:
 _0218269c: .word data_027e10a4
 _021826a0: .word data_027e0f94
 _021826a4: .word 0x00000aab
-_021826a8: .word data_027e0f74
+_021826a8: .word gAdventureFlags
 
 	.global func_ov15_021826ac
 	arm_func_start func_ov15_021826ac
@@ -116969,7 +116969,7 @@ _02183374: ; jump table
 	b _02183384 ; case 2
 	b _02183550 ; case 3
 _02183384:
-	ldr r0, _02183568 ; =data_027e0f74
+	ldr r0, _02183568 ; =gAdventureFlags
 	ldr r1, [r4, #0x38c]
 	ldr r0, [r0]
 	bl func_ov00_02097bcc
@@ -117059,7 +117059,7 @@ _02183384:
 	strb lr, [sp, #0xf4]
 	strb ip, [sp, #0xf5]
 	strb r3, [sp, #0xf6]
-	ldr r0, _02183568 ; =data_027e0f74
+	ldr r0, _02183568 ; =gAdventureFlags
 	ldrb ip, [sp, #0x63]
 	ldrb r3, [sp, #0x64]
 	mov r2, #0x5c
@@ -117095,7 +117095,7 @@ _0218355c:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov15_02183350
-_02183568: .word data_027e0f74
+_02183568: .word gAdventureFlags
 _0218356c: .word data_027e0f64
 _02183570: .word 0x00001770
 _02183574: .word 0x000009c4
@@ -117778,7 +117778,7 @@ _02183de4:
 	moveq r5, #0
 	cmp r0, #1
 	bne _02183fbc
-	ldr r0, _021840f4 ; =data_027e0f74
+	ldr r0, _021840f4 ; =gAdventureFlags
 	mov r1, #0x15c
 	ldr r0, [r0]
 	bl func_ov00_02097760
@@ -117973,7 +117973,7 @@ _021840e4: .word data_027e0ff0
 _021840e8: .word data_027e0764
 _021840ec: .word data_027e0d38
 _021840f0: .word data_027e1060
-_021840f4: .word data_027e0f74
+_021840f4: .word gAdventureFlags
 _021840f8: .word 0x000005dd
 _021840fc: .word data_027e1070
 _02184100: .word data_027e1080

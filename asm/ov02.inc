@@ -30,7 +30,7 @@
 .extern data_027e0d44
 .extern data_027e0d78
 .extern data_027e0e60
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f88
 .extern data_027e0f8c
 .extern data_027e0fbc

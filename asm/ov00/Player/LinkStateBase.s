@@ -91,7 +91,7 @@ _020a807c:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _020a8084:
-	ldr r0, _020a80f8 ; =data_027e0f74
+	ldr r0, _020a80f8 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl func_ov00_02097bbc
 	cmp r0, #0
@@ -125,7 +125,7 @@ _020a80f0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end _ZN13LinkStateBase8vfunc_24Ei
-_020a80f8: .word data_027e0f74
+_020a80f8: .word gAdventureFlags
 _020a80fc: .word data_027e0c68
 _020a8100: .word data_027e0f64
 _020a8104: .word data_027e0fb8
