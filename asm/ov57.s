@@ -202,7 +202,7 @@ _02198f60:
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
 	add r1, sp, #0
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, [sp]
 	mov r0, #1
 	str r1, [r4]
@@ -1228,7 +1228,7 @@ _02199cf8:
 	cmp r0, #0
 	beq _02199d2c
 	mov r1, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldrsh r1, [sl, #0x6c]
 	mov r0, sl
 	str r1, [sp]
@@ -1790,7 +1790,7 @@ func_ov57_0219a460: ; 0x0219a460
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r1, _0219a55c ; =data_ov14_02155df8
 	ldr r0, _0219a560 ; =gItemManager
 	str r1, [r4]
@@ -2059,7 +2059,7 @@ _0219a7f8:
 _0219a830:
 	add r0, sp, #0x14
 	mov r1, r5
-	bl func_ov00_020c23c4
+	bl _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0

@@ -5,8 +5,60 @@
 
 #include "lib/math.h"
 
+#include "Actor/ActorRef.hpp"
+#include "Actor/FilterActorBase.hpp"
 #include "Physics/Cylinder.hpp"
 #include "Physics/Transform.hpp"
+#include "Player/EquipBoomerang.hpp"
+
+struct Actor_UnkStruct_020 {
+    /* 00 */ unk16 mUnk_00[4];
+    /* 08 */ unk8 mUnk_08[2];
+    /* 0a */ unk8 mUnk_0a[2];
+    /* 0c */ unk8 mUnk_0c;
+    /* 0c */ unk8 mUnk_0d;
+    /* 0c */ unk8 mUnk_0e;
+    /* 0c */ unk8 mUnk_0f;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */
+};
+
+struct Actor_UnkStruct_09c {
+    /* 0 */ unk16 mUnk_0;
+    /* 2 */ unk8 mUnk_2;
+    /* 3 */ unk8 mUnk_3;
+    /* 4 */ unk32 mUnk_4;
+    /* 8 */
+
+    Actor_UnkStruct_09c();
+};
+
+struct Actor_UnkStruct_0a4 {
+    /* 00 */ bool mUnk_00;
+    /* 01 */ bool mUnk_01;
+    /* 01 */ bool mUnk_02;
+    /* 01 */ bool mUnk_03;
+    /* 04 */ Vec3p mUnk_04;
+    /* 10 */ s32 mUnk_10;
+    /* 14 */
+};
+
+class KillPickupItemActors : public FilterActorBase {
+    /* 0 (base) */
+    /* 4 */
+
+    /* 0 */ virtual bool Filter(Actor *actor) override;
+    /* 4 */
+};
+
+typedef u32 PlayerCollide;
+enum PlayerCollide_ {
+    PlayerCollide_Player = 0x1,
+    PlayerCollide_Sword = 0x2,
+    PlayerCollide_Shield = 0x4,
+    PlayerCollide_Gongoron = 0x8,
+    PlayerCollide_Hammer = 0x10,
+};
 
 class Actor {
 public:
@@ -20,8 +72,7 @@ public:
     /* 014 */ unk32 mUnk_014;
     /* 018 */ unk32 mUnk_018;
     /* 01c */ unk32 mUnk_01c;
-    /* 020 */ unk32 mUnk_020;
-    /* 024 */ unk8 mUnk_024[0x10];
+    /* 020 */ Actor_UnkStruct_020 mUnk_020;
     /* 034 */ unk32 mUnk_034;
     /* 038 */ unk32 mUnk_038;
     /* 03c */ unk32 mUnk_03c;
@@ -30,21 +81,15 @@ public:
     /* 048 */ Vec3p mPos;
     /* 054 */ Vec3p mPrevPos;
     /* 060 */ Vec3p mVel;
-    /* 06c */ unk32 mUnk_06c;
-    /* 070 */ unk32 mUnk_070;
+    /* 06c */ unk32 mGravity;
+    /* 070 */ unk32 mMaxFall;
     /* 074 */ unk32 mUnk_074;
-    /* 078 */ unk16 mUnk_078;
+    /* 078 */ s16 mRotation;
     /* 07a */ unk16 mUnk_07a;
     /* 07c */ Cylinder mHitbox;
     /* 08c */ Cylinder mUnk_08c;
-    /* 09c */ unk16 mUnk_09c;
-    /* 09e */ unk8 mUnk_09e;
-    /* 09f */ unk8 mUnk_09f;
-    /* 0a4 */ unk8 mUnk_0a4[0x4];
-    /* 0a8 */ unk32 mUnk_0a8;
-    /* 0ac */ unk32 mUnk_0ac;
-    /* 0b0 */ unk32 mUnk_0b0;
-    /* 0b4 */ unk32 mUnk_0b4;
+    /* 09c */ Actor_UnkStruct_09c mUnk_09c;
+    /* 0a4 */ Actor_UnkStruct_0a4 mUnk_0a4;
     /* 0b8 */ unk8 mUnk_0b8[0x24];
     /* 0dc */ unk16 mUnk_0dc;
     /* 0de */ unk16 mUnk_0de;
@@ -78,24 +123,24 @@ public:
     /* 125 */ unk8 mUnk_125;
     /* 126 */ unk16 mUnk_126;
     /* 128 */ bool mUnk_128;
-    /* 129 */ unk8 mUnk_129;
+    /* 129 */ bool mUnk_129;
     /* 12a */ unk8 mUnk_12a;
     /* 12b */ unk8 mUnk_12b;
     /* 12c */ unk32 mUnk_12c;
     /* 130 */ unk32 mUnk_130;
     /* 134 */ unk32 mUnk_134;
-    /* 138 */ unk32 mUnk_138;
+    /* 138 */ unk32 mActiveFrames;
     /* 13c */ unk32 mUnk_13c;
     /* 140 */ unk32 mUnk_140;
     /* 144 */ unk32 mUnk_144;
-    /* 148 */
-
-    Actor();
+    /* 148 */ Vec3p mWallTouch;
+    /* 154 */ u32 mInactive;
+    /* 158 */
 
     /* 00 */ virtual ~Actor();
     /* 08 */ virtual bool vfunc_08();
     /* 0c */ virtual void vfunc_0c();
-    /* 10 */ virtual void vfunc_10();
+    /* 10 */ virtual void vfunc_10(u32 param1);
     /* 14 */ virtual void vfunc_14(u32 param1);
     /* 18 */ virtual void vfunc_18(u32 param1);
     /* 1c */ virtual void vfunc_1c(u16 param1);
@@ -109,7 +154,7 @@ public:
     /* 3c */ virtual bool CollidesWithLink();
     /* 40 */ virtual bool IsHitboxTouched(bool param1);
     /* 44 */ virtual bool CollidesWith(const Actor *other);
-    /* 48 */ virtual bool vfunc_48();
+    /* 48 */ virtual bool vfunc_48(unk32 param1);
     /* 4c */ virtual bool vfunc_4c(unk32 *param1);
     /* 50 */ virtual Vec3p* GetPos();
     /* 54 */ virtual void vfunc_54();
@@ -129,12 +174,70 @@ public:
     /* 8c */ virtual void vfunc_8c();
     /* 90 */ virtual bool vfunc_90();
     /* 94 */ virtual void vfunc_94();
-    /* 98 */ virtual void vfunc_98();
-    /* 9c */ virtual void vfunc_9c();
+    /* 98 */ virtual bool vfunc_98();
+    /* 9c */ virtual bool vfunc_9c();
     /* a0 */ virtual bool TrySetTransform(Transform *transform);
     /* a4 */ virtual void SetTransform(Transform *transform);
     /* a8 */ virtual void vfunc_a8();
     /* ac */ virtual void vfunc_ac();
     /* b0 */ virtual void vfunc_b0();
     /* b4 */
+    
+    Actor();
+    void func_ov00_020c1788();
+    void SetUnk_129(bool value);
+    void SetUnk_11c(unk8 value);
+    bool func_ov00_020c195c();
+    bool func_ov00_020c198c();
+    void KillPickupItemActors();
+    void func_Ov00_020c1bfc(s32 param1);
+    void func_ov00_020c1c20(s32 param1, unk32 param2, unk32 param3);
+    bool IsNearLink();
+    void func_ov00_020c1cf8();
+    bool func_ov00_020c1d58();
+    bool func_ov00_020c1da0(s32 param1, Vec3p *param2);
+    bool func_ov00_020c1e2c(s32 param1, Vec3p *param2);
+    bool func_ov00_020c1ef8(Cylinder *param1, Vec3p *param2, s32 param3, s32 param4);
+    bool func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *param4, s32 param5, s32 param6);
+    bool func_ov00_020c1fc8(PlayerCollide flags);
+    bool CollidesWithShield(Cylinder *param1);
+    bool CollidesWithPlayer(PlayerCollide flags);
+    static void func_ov00_020c23c4(ActorRef *ref, Actor *actor);
+    static void func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder);
+    bool func_ov00_020c243c(unk32 param1, s32 *param2);
+    bool func_ov00_020c27a8(unk32 param1);
+    bool IsFollowedByLink();
+    void StopLinkFollow();
+    bool IsGrabbed();
+    s32 XzDistanceTo(Vec3p *vec);
+    s32 DistanceToLink();
+    s32 XzDistanceToLink();
+    s32 GetAngleTo(Vec3p *vec);
+    s32 GetAngleToLink();
+    void func_ov00_020c2988(Vec3p *param1, s32 param2, Vec3p *param3);
+    void ResetWallTouch();
+    bool func_ov00_020c29ec(s32 param1);
+    void GetHitbox(Cylinder *param1);
+    void GetUnk_08c(Cylinder *param1);
+    void IncreaseActiveFrames();
+    bool func_ov00_020c2c0c();
+    bool func_ov00_020c2c70();
+    EquipBoomerang* GetEquipBoomerang();
+    bool func_ov00_020c2d54();
+    bool func_ov00_020c2de4();
+    bool func_ov00_020c2e7c();
+    bool func_ov00_020c2ebc();
+    bool func_ov00_020c2ed4();
+    void ApplyGravity();
+    bool func_ov00_020c3094();
+    bool func_ov00_020c3118(unk16 param1);
+    bool func_ov00_020c313c(u32 param1);
+    void func_ov00_020c3158();
+    void Kill();
+    void KillInBounds();
+    void func_ov00_020c31c0(unk32 param1);
+    void vfunc_ac_Thunk();
+    void func_ov00_020c3200(s32 param1);
+    void GetLinkPos(Vec3p *result);
+    void GetLinkDummyPos(Vec3p *result);
 };

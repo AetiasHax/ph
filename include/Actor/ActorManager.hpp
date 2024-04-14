@@ -4,15 +4,10 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Actor/ActorRef.hpp"
 #include "Actor/FilterActorBase.hpp"
 #include "Physics/AABB.hpp"
 #include "Physics/Sphere.hpp"
-
-struct ActorRef {
-    /* 0 */ s32 id;
-    /* 4 */ s32 index;
-    /* 8 */
-};
 
 struct ActorManager_UnkStruct_68 {
     /* 0 */ u32 unk_0;
@@ -87,7 +82,7 @@ public:
     void Actor_vfunc_10(u32 param1);
     Actor* FindActorById(u32 id);
     Actor* GetActor(ActorRef *ref);
-    s32 FilterActors(ActorFilterBase *filter, ActorList *filteredActors);
+    s32 FilterActors(FilterActorBase *filter, ActorList *filteredActors);
     static void FindActorByType(ActorRef *ref, ActorManager *manager, u32 type);
     static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, u32 type, Vec3p *pos);
     void func_ov00_020c398c();

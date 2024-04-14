@@ -880,7 +880,7 @@ _020af944:
 	strb r1, [sb, #0x80]
 	mov r1, #0xf
 	strh r1, [sb, #0xa8]
-	bl func_ov00_020c28ec
+	bl _ZN5Actor16XzDistanceToLinkEv
 	mov r4, r0
 _020af97c:
 	ldr r0, _020afad0 ; =data_027e0e60
@@ -1059,7 +1059,7 @@ _020afbcc:
 	mov r6, r0
 	add r1, sp, #0x10
 	mov r0, r5
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [sp, #0x14]
 	mov r1, #0
 	add r0, r0, #0x66

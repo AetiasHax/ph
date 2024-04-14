@@ -3,7 +3,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "Actor/Actor.hpp"
+class Actor;
 
 class FilterActorBase {
 public:

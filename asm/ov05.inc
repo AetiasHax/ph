@@ -440,7 +440,7 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
-.extern func_ov00_020c2a0c
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN12ActorManager11DeleteActorEjb
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef

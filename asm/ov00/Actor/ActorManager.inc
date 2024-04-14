@@ -1,4 +1,8 @@
 #pragma once
+.extern _ZN5Actor10SetUnk_129Eb
+.extern _ZN5Actor14DistanceToLinkEv
+.extern _ZN5Actor14StopLinkFollowEv
+.extern _ZN5Actor18func_ov00_020c27a8Ei
 .extern data_02056be4
 .extern data_027e077c
 .extern data_027e0e60
@@ -8,10 +12,6 @@
 .extern func_ov00_0208e72c
 .extern func_ov00_0208e7a4
 .extern func_ov00_0208f318
-.extern func_ov00_020c1898
-.extern func_ov00_020c27a8
-.extern func_ov00_020c2840
-.extern func_ov00_020c28d4
 .extern func_ov00_020c3ef0
 .extern func_ov00_020c3f08
 .extern func_ov00_020c3f3c

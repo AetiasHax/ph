@@ -12705,7 +12705,7 @@ func_ov05_0210b4f4: ; 0x0210b4f4
 	mov r5, r0
 	add r1, sp, #0
 	mov r0, r2
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, [sp, #4]
 	mov r0, r5
 	str r1, [r4, #4]

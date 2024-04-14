@@ -56,9 +56,9 @@
 .extern func_020350b4
 .extern func_020351b8
 .extern func_ov00_020ba458
-.extern func_ov00_020c1908
-.extern func_ov00_020c2a0c
-.extern func_ov00_020c3180
+.extern _ZN5Actor10SetUnk_11cEc
+.extern _ZN5Actor9GetHitboxEP8Cylinder
+.extern _ZN5Actor4KillEv
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020d7a84
 .extern func_ov00_020d7b20

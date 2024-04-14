@@ -76,9 +76,9 @@
 .extern func_ov00_020bed7c
 .extern func_ov00_020bedcc
 .extern func_ov00_020c1500
-.extern func_ov00_020c1554
-.extern func_ov00_020c23c4
-.extern func_ov00_020c2a0c
+.extern _ZN5ActorC2Ev
+.extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern func_ov00_020c3348
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048

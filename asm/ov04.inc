@@ -15,6 +15,8 @@
 .extern _ZN13PlayerControl18func_ov00_020aef30Ev
 .extern _ZN14OverlayManager4LoadEjj
 .extern _ZN14OverlayManager6UnloadEj
+.extern _ZN5ActorC2Ev
+.extern _ZN5ActorD2Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager18func_ov00_020ad538Ei
@@ -577,8 +579,6 @@
 .extern func_ov00_020c0c9c
 .extern func_ov00_020c0e5c
 .extern func_ov00_020c1500
-.extern func_ov00_020c1554
-.extern func_ov00_020c1730
 .extern func_ov00_020c3348
 .extern func_ov00_020c3388
 .extern func_ov00_020c33b0

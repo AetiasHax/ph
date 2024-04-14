@@ -7,7 +7,7 @@ void ActorManager::func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3)
 void ActorManager::Actor_vfunc_10(u32 param1) {}
 Actor* ActorManager::FindActorById(u32 id) {}
 Actor* ActorManager::GetActor(ActorRef *ref) {}
-bool ActorFilter::Filter(Actor *actor) {}
+bool FilterActor::Filter(Actor *actor) {}
 s32 ActorManager::FilterActors(ActorFilterBase *filter, ActorList *filteredActors) {}
 void ActorManager::FindActorByType(ActorRef *ref, ActorManager *manager, u32 type) {}
 void ActorManager::FindNearestActorOfType(ActorRef *ref, ActorManager *manager, u32 type, Vec3p *pos) {}

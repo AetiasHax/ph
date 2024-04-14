@@ -16,7 +16,7 @@ _ZN12ActorManager11DeleteActorEjb: ; 0x020c33d4
 	bl func_ov00_020c3f54
 	ldr r0, [r6, #0x10]
 	ldr r0, [r0, r5, lsl #2]
-	bl func_ov00_020c2840
+	bl _ZN5Actor14StopLinkFollowEv
 _020c3404:
 	ldr r0, [r6, #0x10]
 	ldr r0, [r0, r5, lsl #2]
@@ -90,7 +90,7 @@ _020c34e8:
 	cmpne r1, #0
 	beq _020c3560
 	mov r1, sb
-	bl func_ov00_020c27a8
+	bl _ZN5Actor18func_ov00_020c27a8Ei
 	cmp r0, #0
 	beq _020c3560
 	ldr r0, [r6]
@@ -105,7 +105,7 @@ _020c34e8:
 	cmp r0, #0
 	beq _020c3560
 	ldr r0, [r6]
-	bl func_ov00_020c28d4
+	bl _ZN5Actor14DistanceToLinkEv
 	cmp r0, r5
 	bge _020c3560
 	ldr r1, [r6]
@@ -747,7 +747,7 @@ _020c3d64:
 	beq _020c3da0
 	ldr r0, [r7]
 	mov r1, sl
-	bl func_ov00_020c1898
+	bl _ZN5Actor10SetUnk_129Eb
 _020c3da0:
 	add r8, r8, #1
 	cmp r8, r5

@@ -26,7 +26,7 @@ _0219006c: .word data_027e0fe0
 func_ov47_02190070: ; 0x02190070
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r1, _0219008c ; =data_ov47_02194508
 	mov r0, r4
 	str r1, [r4]
@@ -40,7 +40,7 @@ _0219008c: .word data_ov47_02194508
 func_ov47_02190090: ; 0x02190090
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl func_ov00_020c1734
+	bl _ZN5Actor8vfunc_08Ev
 	mov r1, #0
 	ldr ip, _02190108 ; =0x0000019a
 	str r1, [r5, #0x7c]
@@ -157,11 +157,11 @@ func_ov47_02190214: ; 0x02190214
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r5, r0
 	mov r4, r1
-	bl func_ov00_020c313c
+	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _021902e4
 	mov r0, r5
-	bl func_ov00_020c1cf8
+	bl _ZN5Actor18func_ov00_020c1cf8Ev
 	ldr r0, [r5, #0x154]
 	cmp r0, #0
 	cmpne r0, #1
@@ -206,7 +206,7 @@ func_ov47_02190214: ; 0x02190214
 	str r2, [r5, #0x138]
 _021902dc:
 	mov r0, r5
-	bl func_ov00_020c2bf4
+	bl _ZN5Actor20IncreaseActiveFramesEv
 _021902e4:
 	mov r1, r4
 	add r0, r5, #0xa4
@@ -224,7 +224,7 @@ _02190300: .word data_027e0764
 func_ov47_02190304: ; 0x02190304
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	bl _ZN9SysObjectdlEPv
 	mov r0, r4
@@ -236,7 +236,7 @@ func_ov47_02190304: ; 0x02190304
 func_ov47_02190320: ; 0x02190320
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov47_02190320
@@ -410,7 +410,7 @@ func_ov47_02190554: ; 0x02190554
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r1, _021905e8 ; =data_ov47_021945c4
 	ldr r0, _021905ec ; =data_027e0fec
 	str r1, [r4]
@@ -498,7 +498,7 @@ _02190650:
 	add r0, r6, #0x158
 	blx func_ov00_020b3ea8
 	mov r0, r6
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r6
 	bl _ZN9SysObjectdlEPv
 	mov r0, r6
@@ -536,7 +536,7 @@ _021906c8:
 	add r0, r6, #0x158
 	blx func_ov00_020b3ea8
 	mov r0, r6
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r6
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
@@ -550,7 +550,7 @@ func_ov47_02190704: ; 0x02190704
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r0
-	bl func_ov00_020c1734
+	bl _ZN5Actor8vfunc_08Ev
 	mov r1, #0
 	ldr lr, _02190870 ; =0x0000099a
 	str r1, [r5, #0x7c]
@@ -703,7 +703,7 @@ func_ov47_02190914: ; 0x02190914
 	ldrb r1, [r4, #0x17c]
 	cmp r1, #0
 	beq _02190930
-	bl func_ov00_020c3070
+	bl _ZN5Actor12ApplyGravityEv
 _02190930:
 	ldr r1, _02190dd8 ; =0x42494752
 	ldr r2, _02190ddc ; =0x00001666
@@ -1112,7 +1112,7 @@ _02190f18:
 	bl func_ov00_0207c1b0
 _02190f34:
 	mov r0, r4
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -1130,11 +1130,11 @@ func_ov47_02190f58: ; 0x02190f58
 	sub sp, sp, #0x10
 	mov r5, r0
 	mov r4, r1
-	bl func_ov00_020c313c
+	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _021910cc
 	mov r0, r5
-	bl func_ov00_020c1cf8
+	bl _ZN5Actor18func_ov00_020c1cf8Ev
 	ldr r0, [r5, #0x154]
 	cmp r0, #0
 	cmpne r0, #1
@@ -1147,11 +1147,11 @@ func_ov47_02190f58: ; 0x02190f58
 	str r1, [r5, #0x58]
 	ldr r1, [r5, #0x50]
 	str r1, [r5, #0x5c]
-	bl func_ov00_020c2bf4
+	bl _ZN5Actor20IncreaseActiveFramesEv
 	mov r0, r5
 	mov r1, #2
 	mov r2, #0
-	bl func_ov00_020c1e2c
+	bl _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 	cmp r0, #0
 	beq _02190fdc
 	ldr r0, _021910e4 ; =data_027e0ffc
@@ -1223,7 +1223,7 @@ _021910a8:
 	bl func_ov00_020d7c8c
 _021910c4:
 	mov r0, r5
-	bl func_ov00_020c31a0
+	bl _ZN5Actor12KillInBoundsEv
 _021910cc:
 	mov r1, r4
 	add r0, r5, #0xa4
@@ -1567,11 +1567,11 @@ func_ov47_02191548: ; 0x02191548
 	sub sp, sp, #0xc
 	mov r1, #1
 	mov r4, r0
-	bl func_ov00_020c1bfc
+	bl _ZN5Actor18func_Ov00_020c1bfcEi
 	cmp r0, #0
 	beq _02191578
 	mov r0, r4
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	add sp, sp, #0xc
 	mov r0, #0
 	ldmia sp!, {r3, r4, pc}
@@ -1581,7 +1581,7 @@ _02191578:
 	bl func_ov00_020ca8a4
 	mov r0, r4
 	mov r1, #0x1a
-	bl func_ov00_020c3200
+	bl _ZN5Actor18func_ov00_020c3200Ei
 	mov r0, #0
 	str r0, [r4, #0x8c]
 	mov r1, #0x800
@@ -1796,7 +1796,7 @@ func_ov47_02191794: ; 0x02191794
 	str r6, [r4, #0x60]
 	orr r2, r2, r1, lsl #20
 	str r2, [r4, #0x68]
-	bl func_ov00_020c3070
+	bl _ZN5Actor12ApplyGravityEv
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0x104]
@@ -1913,7 +1913,7 @@ _02191928: .word 0x0000071c
 	arm_func_start func_ov47_0219192c
 func_ov47_0219192c: ; 0x0219192c
 	stmdb sp!, {r3, lr}
-	bl func_ov00_020c28ec
+	bl _ZN5Actor16XzDistanceToLinkEv
 	subs r1, r0, #0x3800
 	ldr r0, _02191950 ; =0x0000019a
 	rsbmi r1, r1, #0
@@ -2849,7 +2849,7 @@ _02192564:
 	mov r0, r6
 	mov r1, #1
 	mov r2, #0
-	bl func_ov00_020c1da0
+	bl _ZN5Actor18func_ov00_020c1da0EiP5Vec3p
 _02192584:
 	ldr r0, [r6, #0x130]
 	cmp r0, #0x15
@@ -2884,7 +2884,7 @@ _021925ec:
 	beq _0219260c
 	mov r0, r6
 	mov r1, #0
-	bl func_ov00_020c1bfc
+	bl _ZN5Actor18func_Ov00_020c1bfcEi
 	cmp r0, #1
 	bne _02192ecc
 _0219260c:
@@ -3077,7 +3077,7 @@ _021928ac:
 	bl func_ov47_02191720
 	mov r0, r6
 	add r1, r6, #0x338
-	bl func_ov00_020c288c
+	bl _ZN5Actor12XzDistanceToEP5Vec3p
 	ldr r1, _02192f84 ; =0x0000019a
 	cmp r0, r1
 	mov r0, r6
@@ -3501,7 +3501,7 @@ _02192eb4:
 	mov r1, #1
 	mov r0, r6
 	mov r2, r1
-	bl func_ov00_020c1c20
+	bl _ZN5Actor18func_ov00_020c1c20Eiii
 _02192ecc:
 	ldr r0, [r6, #0x130]
 	cmp r0, #1
@@ -3774,7 +3774,7 @@ func_ov47_02193234: ; 0x02193234
 	ldr r3, _02193290 ; =func_ov00_020b7d74
 	bl func_0204f754
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	bl _ZN9SysObjectdlEPv
 	mov r0, r4
@@ -3804,7 +3804,7 @@ func_ov47_02193294: ; 0x02193294
 	ldr r3, _021932e8 ; =func_ov00_020b7d74
 	bl func_0204f754
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -4504,7 +4504,7 @@ func_ov47_02193bbc: ; 0x02193bbc
 func_ov47_02193c24: ; 0x02193c24
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r0, _02193c54 ; =data_ov47_0219491c
 	mov r1, r4
 	str r0, [r4]
@@ -4641,7 +4641,7 @@ _02193de8: .word 0x000004cd
 func_ov47_02193dec: ; 0x02193dec
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020c3070
+	bl _ZN5Actor12ApplyGravityEv
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
@@ -4739,7 +4739,7 @@ _02193f20:
 	ldr r0, [r0]
 	bl func_ov00_0207c444
 	mov r0, r4
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	add sp, sp, #0x20
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -4759,7 +4759,7 @@ func_ov47_02193f50: ; 0x02193f50
 	add r1, r4, #0x158
 	bl func_ov00_0207c444
 	mov r0, r4
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov47_02193f50
@@ -4772,7 +4772,7 @@ func_ov47_02193f78: ; 0x02193f78
 	sub sp, sp, #0x10
 	mov r5, r0
 	mov r4, r1
-	bl func_ov00_020c313c
+	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _021940ec
 	ldr r1, [r5, #0x48]
@@ -4782,12 +4782,12 @@ func_ov47_02193f78: ; 0x02193f78
 	str r1, [r5, #0x58]
 	ldr r1, [r5, #0x50]
 	str r1, [r5, #0x5c]
-	bl func_ov00_020c2bf4
+	bl _ZN5Actor20IncreaseActiveFramesEv
 	mov r0, r5
 	bl func_ov47_02193dec
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, _02194104 ; =data_027e0f94
 	ldr r0, _02194108 ; =gItemManager
 	ldr r2, [r1, #4]
@@ -4799,7 +4799,7 @@ func_ov47_02193f78: ; 0x02193f78
 	blt _02194028
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020c2238
+	bl _ZN5Actor18CollidesWithShieldEP8Cylinder
 	cmp r0, #0
 	beq _02194028
 	bl func_ov47_02192340
@@ -4861,7 +4861,7 @@ _021940d0:
 	cmp r0, #0x96
 	ble _021940ec
 	mov r0, r5
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 _021940ec:
@@ -4920,7 +4920,7 @@ func_ov47_0219417c: ; 0x0219417c
 	add r0, r4, #0x158
 	bl func_ov00_020b7d74
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	bl _ZN9SysObjectdlEPv
 	mov r0, r4
@@ -4937,7 +4937,7 @@ func_ov47_021941ac: ; 0x021941ac
 	add r0, r4, #0x158
 	bl func_ov00_020b7d74
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov47_021941ac
@@ -5310,130 +5310,130 @@ data_ov47_02194510: ; 0x02194510
     .word func_ov47_02190090
 	.global data_ov47_02194514
 data_ov47_02194514: ; 0x02194514
-    .word func_ov00_020c173c
+    .word _ZN5Actor8vfunc_0cEv
 	.global data_ov47_02194518
 data_ov47_02194518: ; 0x02194518
-    .word func_ov00_020c1740
+    .word _ZN5Actor8vfunc_10Ej
 	.global data_ov47_0219451c
 data_ov47_0219451c: ; 0x0219451c
     .word func_ov47_02190214
 	.global data_ov47_02194520
 data_ov47_02194520: ; 0x02194520
-    .word func_ov00_020c17bc
+    .word _ZN5Actor8vfunc_18Ej
 	.global data_ov47_02194524
 data_ov47_02194524: ; 0x02194524
-    .word func_ov00_020c17d4
+    .word _ZN5Actor8vfunc_1cEt
 	.global data_ov47_02194528
 data_ov47_02194528: ; 0x02194528
-    .word func_ov00_020c1894
+    .word _ZN5Actor8vfunc_20Ei
 	.global data_ov47_0219452c
 data_ov47_0219452c: ; 0x0219452c
-    .word func_ov00_020c1744
+    .word _ZN5Actor8vfunc_24Ev
 	.global data_ov47_02194530
 data_ov47_02194530: ; 0x02194530
-    .word func_ov00_020c1748
+    .word _ZN5Actor8vfunc_28Ev
 	.global data_ov47_02194534
 data_ov47_02194534: ; 0x02194534
-    .word func_ov00_020c17a8
+    .word _ZN5Actor8vfunc_2cEv
 	.global data_ov47_02194538
 data_ov47_02194538: ; 0x02194538
-    .word func_ov00_020c17b0
+    .word _ZN5Actor8vfunc_30Ev
 	.global data_ov47_0219453c
 data_ov47_0219453c: ; 0x0219453c
-    .word func_ov00_020c174c
+    .word _ZN5Actor12GetOffsetPosEP5Vec3p
 	.global data_ov47_02194540
 data_ov47_02194540: ; 0x02194540
-    .word func_ov00_020c177c
+    .word _ZN5Actor8vfunc_38Ev
 	.global data_ov47_02194544
 data_ov47_02194544: ; 0x02194544
-    .word func_ov00_020c27e4
+    .word _ZN5Actor16CollidesWithLinkEv
 	.global data_ov47_02194548
 data_ov47_02194548: ; 0x02194548
-    .word func_ov00_020c3004
+    .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_0219454c
 data_ov47_0219454c: ; 0x0219454c
-    .word func_ov00_020c2744
+    .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_02194550
 data_ov47_02194550: ; 0x02194550
-    .word func_ov00_020c1c48
+    .word _ZN5Actor8vfunc_48Ei
 	.global data_ov47_02194554
 data_ov47_02194554: ; 0x02194554
-    .word func_ov00_020c1c50
+    .word _ZN5Actor8vfunc_4cEPi
 	.global data_ov47_02194558
 data_ov47_02194558: ; 0x02194558
-    .word func_ov00_020c310c
+    .word _ZN5Actor6GetPosEv
 	.global data_ov47_0219455c
 data_ov47_0219455c: ; 0x0219455c
-    .word func_ov00_020c3114
+    .word _ZN5Actor8vfunc_54Ev
 	.global data_ov47_02194560
 data_ov47_02194560: ; 0x02194560
-    .word func_ov00_020c18a8
+    .word _ZN5Actor10SetUnk_11bEv
 	.global data_ov47_02194564
 data_ov47_02194564: ; 0x02194564
-    .word func_ov00_020c18c4
+    .word _ZN5Actor11SetVelocityEP5Vec3p
 	.global data_ov47_02194568
 data_ov47_02194568: ; 0x02194568
-    .word func_ov00_020c18fc
+    .word _ZN5Actor8vfunc_60Ev
 	.global data_ov47_0219456c
 data_ov47_0219456c: ; 0x0219456c
-    .word func_ov00_020c1904
+    .word _ZN5Actor8vfunc_64Ev
 	.global data_ov47_02194570
 data_ov47_02194570: ; 0x02194570
-    .word func_ov00_020c1910
+    .word _ZN5Actor8vfunc_68Ev
 	.global data_ov47_02194574
 data_ov47_02194574: ; 0x02194574
-    .word func_ov00_020c1914
+    .word _ZN5Actor8vfunc_6cEv
 	.global data_ov47_02194578
 data_ov47_02194578: ; 0x02194578
-    .word func_ov00_020c191c
+    .word _ZN5Actor8vfunc_70Ev
 	.global data_ov47_0219457c
 data_ov47_0219457c: ; 0x0219457c
-    .word func_ov00_020c1924
+    .word _ZN5Actor8vfunc_74Ev
 	.global data_ov47_02194580
 data_ov47_02194580: ; 0x02194580
-    .word func_ov00_020c192c
+    .word _ZN5Actor8vfunc_78Ev
 	.global data_ov47_02194584
 data_ov47_02194584: ; 0x02194584
-    .word func_ov00_020c1928
+    .word _ZN5Actor8vfunc_7cEv
 	.global data_ov47_02194588
 data_ov47_02194588: ; 0x02194588
-    .word func_ov00_020c1934
+    .word _ZN5Actor8vfunc_80Ev
 	.global data_ov47_0219458c
 data_ov47_0219458c: ; 0x0219458c
-    .word func_ov00_020c1938
+    .word _ZN5Actor8vfunc_84Ev
 	.global data_ov47_02194590
 data_ov47_02194590: ; 0x02194590
-    .word func_ov00_020c193c
+    .word _ZN5Actor8vfunc_88Ev
 	.global data_ov47_02194594
 data_ov47_02194594: ; 0x02194594
-    .word func_ov00_020c1940
+    .word _ZN5Actor8vfunc_8cEv
 	.global data_ov47_02194598
 data_ov47_02194598: ; 0x02194598
-    .word func_ov00_020c1948
+    .word _ZN5Actor8vfunc_90Ev
 	.global data_ov47_0219459c
 data_ov47_0219459c: ; 0x0219459c
-    .word func_ov00_020c1950
+    .word _ZN5Actor8vfunc_94Ev
 	.global data_ov47_021945a0
 data_ov47_021945a0: ; 0x021945a0
-    .word func_ov00_020c1954
+    .word _ZN5Actor8vfunc_98Ev
 	.global data_ov47_021945a4
 data_ov47_021945a4: ; 0x021945a4
-    .word func_ov00_020c1958
+    .word _ZN5Actor8vfunc_9cEv
 	.global data_ov47_021945a8
 data_ov47_021945a8: ; 0x021945a8
-    .word func_ov00_020c1b6c
+    .word _ZN5Actor15TrySetTransformEP9Transform
 	.global data_ov47_021945ac
 data_ov47_021945ac: ; 0x021945ac
-    .word func_ov00_020c1bb4
+    .word _ZN5Actor12SetTransformEP9Transform
 	.global data_ov47_021945b0
 data_ov47_021945b0: ; 0x021945b0
-    .word func_ov00_020c1bf8
+    .word _ZN5Actor8vfunc_a8Ev
 	.global data_ov47_021945b4
 data_ov47_021945b4: ; 0x021945b4
-    .word func_ov00_020c31fc
+    .word _ZN5Actor8vfunc_acEv
 	.global data_ov47_021945b8
 data_ov47_021945b8: ; 0x021945b8
-    .word func_ov00_020c322c
+    .word _ZN5Actor8vfunc_b0Ev
 	.global data_ov47_021945bc
 data_ov47_021945bc: ; 0x021945bc
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -5451,130 +5451,130 @@ data_ov47_021945cc: ; 0x021945cc
     .word func_ov47_02190704
 	.global data_ov47_021945d0
 data_ov47_021945d0: ; 0x021945d0
-    .word func_ov00_020c173c
+    .word _ZN5Actor8vfunc_0cEv
 	.global data_ov47_021945d4
 data_ov47_021945d4: ; 0x021945d4
-    .word func_ov00_020c1740
+    .word _ZN5Actor8vfunc_10Ej
 	.global data_ov47_021945d8
 data_ov47_021945d8: ; 0x021945d8
     .word func_ov47_02190f58
 	.global data_ov47_021945dc
 data_ov47_021945dc: ; 0x021945dc
-    .word func_ov00_020c17bc
+    .word _ZN5Actor8vfunc_18Ej
 	.global data_ov47_021945e0
 data_ov47_021945e0: ; 0x021945e0
-    .word func_ov00_020c17d4
+    .word _ZN5Actor8vfunc_1cEt
 	.global data_ov47_021945e4
 data_ov47_021945e4: ; 0x021945e4
     .word func_ov47_021910fc
 	.global data_ov47_021945e8
 data_ov47_021945e8: ; 0x021945e8
-    .word func_ov00_020c1744
+    .word _ZN5Actor8vfunc_24Ev
 	.global data_ov47_021945ec
 data_ov47_021945ec: ; 0x021945ec
-    .word func_ov00_020c1748
+    .word _ZN5Actor8vfunc_28Ev
 	.global data_ov47_021945f0
 data_ov47_021945f0: ; 0x021945f0
-    .word func_ov00_020c17a8
+    .word _ZN5Actor8vfunc_2cEv
 	.global data_ov47_021945f4
 data_ov47_021945f4: ; 0x021945f4
-    .word func_ov00_020c17b0
+    .word _ZN5Actor8vfunc_30Ev
 	.global data_ov47_021945f8
 data_ov47_021945f8: ; 0x021945f8
-    .word func_ov00_020c174c
+    .word _ZN5Actor12GetOffsetPosEP5Vec3p
 	.global data_ov47_021945fc
 data_ov47_021945fc: ; 0x021945fc
-    .word func_ov00_020c177c
+    .word _ZN5Actor8vfunc_38Ev
 	.global data_ov47_02194600
 data_ov47_02194600: ; 0x02194600
-    .word func_ov00_020c27e4
+    .word _ZN5Actor16CollidesWithLinkEv
 	.global data_ov47_02194604
 data_ov47_02194604: ; 0x02194604
-    .word func_ov00_020c3004
+    .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_02194608
 data_ov47_02194608: ; 0x02194608
-    .word func_ov00_020c2744
+    .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_0219460c
 data_ov47_0219460c: ; 0x0219460c
-    .word func_ov00_020c1c48
+    .word _ZN5Actor8vfunc_48Ei
 	.global data_ov47_02194610
 data_ov47_02194610: ; 0x02194610
-    .word func_ov00_020c1c50
+    .word _ZN5Actor8vfunc_4cEPi
 	.global data_ov47_02194614
 data_ov47_02194614: ; 0x02194614
-    .word func_ov00_020c310c
+    .word _ZN5Actor6GetPosEv
 	.global data_ov47_02194618
 data_ov47_02194618: ; 0x02194618
-    .word func_ov00_020c3114
+    .word _ZN5Actor8vfunc_54Ev
 	.global data_ov47_0219461c
 data_ov47_0219461c: ; 0x0219461c
-    .word func_ov00_020c18a8
+    .word _ZN5Actor10SetUnk_11bEv
 	.global data_ov47_02194620
 data_ov47_02194620: ; 0x02194620
-    .word func_ov00_020c18c4
+    .word _ZN5Actor11SetVelocityEP5Vec3p
 	.global data_ov47_02194624
 data_ov47_02194624: ; 0x02194624
-    .word func_ov00_020c18fc
+    .word _ZN5Actor8vfunc_60Ev
 	.global data_ov47_02194628
 data_ov47_02194628: ; 0x02194628
-    .word func_ov00_020c1904
+    .word _ZN5Actor8vfunc_64Ev
 	.global data_ov47_0219462c
 data_ov47_0219462c: ; 0x0219462c
-    .word func_ov00_020c1910
+    .word _ZN5Actor8vfunc_68Ev
 	.global data_ov47_02194630
 data_ov47_02194630: ; 0x02194630
-    .word func_ov00_020c1914
+    .word _ZN5Actor8vfunc_6cEv
 	.global data_ov47_02194634
 data_ov47_02194634: ; 0x02194634
-    .word func_ov00_020c191c
+    .word _ZN5Actor8vfunc_70Ev
 	.global data_ov47_02194638
 data_ov47_02194638: ; 0x02194638
-    .word func_ov00_020c1924
+    .word _ZN5Actor8vfunc_74Ev
 	.global data_ov47_0219463c
 data_ov47_0219463c: ; 0x0219463c
-    .word func_ov00_020c192c
+    .word _ZN5Actor8vfunc_78Ev
 	.global data_ov47_02194640
 data_ov47_02194640: ; 0x02194640
-    .word func_ov00_020c1928
+    .word _ZN5Actor8vfunc_7cEv
 	.global data_ov47_02194644
 data_ov47_02194644: ; 0x02194644
-    .word func_ov00_020c1934
+    .word _ZN5Actor8vfunc_80Ev
 	.global data_ov47_02194648
 data_ov47_02194648: ; 0x02194648
-    .word func_ov00_020c1938
+    .word _ZN5Actor8vfunc_84Ev
 	.global data_ov47_0219464c
 data_ov47_0219464c: ; 0x0219464c
-    .word func_ov00_020c193c
+    .word _ZN5Actor8vfunc_88Ev
 	.global data_ov47_02194650
 data_ov47_02194650: ; 0x02194650
-    .word func_ov00_020c1940
+    .word _ZN5Actor8vfunc_8cEv
 	.global data_ov47_02194654
 data_ov47_02194654: ; 0x02194654
-    .word func_ov00_020c1948
+    .word _ZN5Actor8vfunc_90Ev
 	.global data_ov47_02194658
 data_ov47_02194658: ; 0x02194658
-    .word func_ov00_020c1950
+    .word _ZN5Actor8vfunc_94Ev
 	.global data_ov47_0219465c
 data_ov47_0219465c: ; 0x0219465c
-    .word func_ov00_020c1954
+    .word _ZN5Actor8vfunc_98Ev
 	.global data_ov47_02194660
 data_ov47_02194660: ; 0x02194660
-    .word func_ov00_020c1958
+    .word _ZN5Actor8vfunc_9cEv
 	.global data_ov47_02194664
 data_ov47_02194664: ; 0x02194664
-    .word func_ov00_020c1b6c
+    .word _ZN5Actor15TrySetTransformEP9Transform
 	.global data_ov47_02194668
 data_ov47_02194668: ; 0x02194668
-    .word func_ov00_020c1bb4
+    .word _ZN5Actor12SetTransformEP9Transform
 	.global data_ov47_0219466c
 data_ov47_0219466c: ; 0x0219466c
-    .word func_ov00_020c1bf8
+    .word _ZN5Actor8vfunc_a8Ev
 	.global data_ov47_02194670
 data_ov47_02194670: ; 0x02194670
-    .word func_ov00_020c31fc
+    .word _ZN5Actor8vfunc_acEv
 	.global data_ov47_02194674
 data_ov47_02194674: ; 0x02194674
-    .word func_ov00_020c322c
+    .word _ZN5Actor8vfunc_b0Ev
 	.global data_ov47_02194678
 data_ov47_02194678: ; 0x02194678
 	.byte 0x00, 0x00, 0x00, 0x00
@@ -5768,7 +5768,7 @@ data_ov47_02194768: ; 0x02194768
     .word func_ov00_020caa00
 	.global data_ov47_0219476c
 data_ov47_0219476c: ; 0x0219476c
-    .word func_ov00_020c173c
+    .word _ZN5Actor8vfunc_0cEv
 	.global data_ov47_02194770
 data_ov47_02194770: ; 0x02194770
     .word func_ov00_020ca7e8
@@ -5780,37 +5780,37 @@ data_ov47_02194778: ; 0x02194778
     .word func_ov00_020cad30
 	.global data_ov47_0219477c
 data_ov47_0219477c: ; 0x0219477c
-    .word func_ov00_020c17d4
+    .word _ZN5Actor8vfunc_1cEt
 	.global data_ov47_02194780
 data_ov47_02194780: ; 0x02194780
     .word func_ov00_020cb1c0
 	.global data_ov47_02194784
 data_ov47_02194784: ; 0x02194784
-    .word func_ov00_020c1744
+    .word _ZN5Actor8vfunc_24Ev
 	.global data_ov47_02194788
 data_ov47_02194788: ; 0x02194788
-    .word func_ov00_020c1748
+    .word _ZN5Actor8vfunc_28Ev
 	.global data_ov47_0219478c
 data_ov47_0219478c: ; 0x0219478c
-    .word func_ov00_020c17a8
+    .word _ZN5Actor8vfunc_2cEv
 	.global data_ov47_02194790
 data_ov47_02194790: ; 0x02194790
-    .word func_ov00_020c17b0
+    .word _ZN5Actor8vfunc_30Ev
 	.global data_ov47_02194794
 data_ov47_02194794: ; 0x02194794
-    .word func_ov00_020c174c
+    .word _ZN5Actor12GetOffsetPosEP5Vec3p
 	.global data_ov47_02194798
 data_ov47_02194798: ; 0x02194798
-    .word func_ov00_020c177c
+    .word _ZN5Actor8vfunc_38Ev
 	.global data_ov47_0219479c
 data_ov47_0219479c: ; 0x0219479c
-    .word func_ov00_020c27e4
+    .word _ZN5Actor16CollidesWithLinkEv
 	.global data_ov47_021947a0
 data_ov47_021947a0: ; 0x021947a0
-    .word func_ov00_020c3004
+    .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_021947a4
 data_ov47_021947a4: ; 0x021947a4
-    .word func_ov00_020c2744
+    .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_021947a8
 data_ov47_021947a8: ; 0x021947a8
     .word func_ov47_02191fac
@@ -5819,76 +5819,76 @@ data_ov47_021947ac: ; 0x021947ac
     .word func_ov00_020ca840
 	.global data_ov47_021947b0
 data_ov47_021947b0: ; 0x021947b0
-    .word func_ov00_020c310c
+    .word _ZN5Actor6GetPosEv
 	.global data_ov47_021947b4
 data_ov47_021947b4: ; 0x021947b4
-    .word func_ov00_020c3114
+    .word _ZN5Actor8vfunc_54Ev
 	.global data_ov47_021947b8
 data_ov47_021947b8: ; 0x021947b8
-    .word func_ov00_020c18a8
+    .word _ZN5Actor10SetUnk_11bEv
 	.global data_ov47_021947bc
 data_ov47_021947bc: ; 0x021947bc
-    .word func_ov00_020c18c4
+    .word _ZN5Actor11SetVelocityEP5Vec3p
 	.global data_ov47_021947c0
 data_ov47_021947c0: ; 0x021947c0
-    .word func_ov00_020c18fc
+    .word _ZN5Actor8vfunc_60Ev
 	.global data_ov47_021947c4
 data_ov47_021947c4: ; 0x021947c4
-    .word func_ov00_020c1904
+    .word _ZN5Actor8vfunc_64Ev
 	.global data_ov47_021947c8
 data_ov47_021947c8: ; 0x021947c8
-    .word func_ov00_020c1910
+    .word _ZN5Actor8vfunc_68Ev
 	.global data_ov47_021947cc
 data_ov47_021947cc: ; 0x021947cc
-    .word func_ov00_020c1914
+    .word _ZN5Actor8vfunc_6cEv
 	.global data_ov47_021947d0
 data_ov47_021947d0: ; 0x021947d0
-    .word func_ov00_020c191c
+    .word _ZN5Actor8vfunc_70Ev
 	.global data_ov47_021947d4
 data_ov47_021947d4: ; 0x021947d4
-    .word func_ov00_020c1924
+    .word _ZN5Actor8vfunc_74Ev
 	.global data_ov47_021947d8
 data_ov47_021947d8: ; 0x021947d8
-    .word func_ov00_020c192c
+    .word _ZN5Actor8vfunc_78Ev
 	.global data_ov47_021947dc
 data_ov47_021947dc: ; 0x021947dc
-    .word func_ov00_020c1928
+    .word _ZN5Actor8vfunc_7cEv
 	.global data_ov47_021947e0
 data_ov47_021947e0: ; 0x021947e0
-    .word func_ov00_020c1934
+    .word _ZN5Actor8vfunc_80Ev
 	.global data_ov47_021947e4
 data_ov47_021947e4: ; 0x021947e4
-    .word func_ov00_020c1938
+    .word _ZN5Actor8vfunc_84Ev
 	.global data_ov47_021947e8
 data_ov47_021947e8: ; 0x021947e8
-    .word func_ov00_020c193c
+    .word _ZN5Actor8vfunc_88Ev
 	.global data_ov47_021947ec
 data_ov47_021947ec: ; 0x021947ec
-    .word func_ov00_020c1940
+    .word _ZN5Actor8vfunc_8cEv
 	.global data_ov47_021947f0
 data_ov47_021947f0: ; 0x021947f0
-    .word func_ov00_020c1948
+    .word _ZN5Actor8vfunc_90Ev
 	.global data_ov47_021947f4
 data_ov47_021947f4: ; 0x021947f4
-    .word func_ov00_020c1950
+    .word _ZN5Actor8vfunc_94Ev
 	.global data_ov47_021947f8
 data_ov47_021947f8: ; 0x021947f8
-    .word func_ov00_020c1954
+    .word _ZN5Actor8vfunc_98Ev
 	.global data_ov47_021947fc
 data_ov47_021947fc: ; 0x021947fc
-    .word func_ov00_020c1958
+    .word _ZN5Actor8vfunc_9cEv
 	.global data_ov47_02194800
 data_ov47_02194800: ; 0x02194800
-    .word func_ov00_020c1b6c
+    .word _ZN5Actor15TrySetTransformEP9Transform
 	.global data_ov47_02194804
 data_ov47_02194804: ; 0x02194804
-    .word func_ov00_020c1bb4
+    .word _ZN5Actor12SetTransformEP9Transform
 	.global data_ov47_02194808
 data_ov47_02194808: ; 0x02194808
-    .word func_ov00_020c1bf8
+    .word _ZN5Actor8vfunc_a8Ev
 	.global data_ov47_0219480c
 data_ov47_0219480c: ; 0x0219480c
-    .word func_ov00_020c31fc
+    .word _ZN5Actor8vfunc_acEv
 	.global data_ov47_02194810
 data_ov47_02194810: ; 0x02194810
     .word func_ov47_02193220
@@ -6109,130 +6109,130 @@ data_ov47_02194924: ; 0x02194924
     .word func_ov47_02193c6c
 	.global data_ov47_02194928
 data_ov47_02194928: ; 0x02194928
-    .word func_ov00_020c173c
+    .word _ZN5Actor8vfunc_0cEv
 	.global data_ov47_0219492c
 data_ov47_0219492c: ; 0x0219492c
-    .word func_ov00_020c1740
+    .word _ZN5Actor8vfunc_10Ej
 	.global data_ov47_02194930
 data_ov47_02194930: ; 0x02194930
     .word func_ov47_02193f78
 	.global data_ov47_02194934
 data_ov47_02194934: ; 0x02194934
-    .word func_ov00_020c17bc
+    .word _ZN5Actor8vfunc_18Ej
 	.global data_ov47_02194938
 data_ov47_02194938: ; 0x02194938
-    .word func_ov00_020c17d4
+    .word _ZN5Actor8vfunc_1cEt
 	.global data_ov47_0219493c
 data_ov47_0219493c: ; 0x0219493c
     .word func_ov47_02194110
 	.global data_ov47_02194940
 data_ov47_02194940: ; 0x02194940
-    .word func_ov00_020c1744
+    .word _ZN5Actor8vfunc_24Ev
 	.global data_ov47_02194944
 data_ov47_02194944: ; 0x02194944
-    .word func_ov00_020c1748
+    .word _ZN5Actor8vfunc_28Ev
 	.global data_ov47_02194948
 data_ov47_02194948: ; 0x02194948
-    .word func_ov00_020c17a8
+    .word _ZN5Actor8vfunc_2cEv
 	.global data_ov47_0219494c
 data_ov47_0219494c: ; 0x0219494c
-    .word func_ov00_020c17b0
+    .word _ZN5Actor8vfunc_30Ev
 	.global data_ov47_02194950
 data_ov47_02194950: ; 0x02194950
-    .word func_ov00_020c174c
+    .word _ZN5Actor12GetOffsetPosEP5Vec3p
 	.global data_ov47_02194954
 data_ov47_02194954: ; 0x02194954
-    .word func_ov00_020c177c
+    .word _ZN5Actor8vfunc_38Ev
 	.global data_ov47_02194958
 data_ov47_02194958: ; 0x02194958
-    .word func_ov00_020c27e4
+    .word _ZN5Actor16CollidesWithLinkEv
 	.global data_ov47_0219495c
 data_ov47_0219495c: ; 0x0219495c
-    .word func_ov00_020c3004
+    .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_02194960
 data_ov47_02194960: ; 0x02194960
-    .word func_ov00_020c2744
+    .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_02194964
 data_ov47_02194964: ; 0x02194964
-    .word func_ov00_020c1c48
+    .word _ZN5Actor8vfunc_48Ei
 	.global data_ov47_02194968
 data_ov47_02194968: ; 0x02194968
-    .word func_ov00_020c1c50
+    .word _ZN5Actor8vfunc_4cEPi
 	.global data_ov47_0219496c
 data_ov47_0219496c: ; 0x0219496c
-    .word func_ov00_020c310c
+    .word _ZN5Actor6GetPosEv
 	.global data_ov47_02194970
 data_ov47_02194970: ; 0x02194970
-    .word func_ov00_020c3114
+    .word _ZN5Actor8vfunc_54Ev
 	.global data_ov47_02194974
 data_ov47_02194974: ; 0x02194974
-    .word func_ov00_020c18a8
+    .word _ZN5Actor10SetUnk_11bEv
 	.global data_ov47_02194978
 data_ov47_02194978: ; 0x02194978
-    .word func_ov00_020c18c4
+    .word _ZN5Actor11SetVelocityEP5Vec3p
 	.global data_ov47_0219497c
 data_ov47_0219497c: ; 0x0219497c
-    .word func_ov00_020c18fc
+    .word _ZN5Actor8vfunc_60Ev
 	.global data_ov47_02194980
 data_ov47_02194980: ; 0x02194980
-    .word func_ov00_020c1904
+    .word _ZN5Actor8vfunc_64Ev
 	.global data_ov47_02194984
 data_ov47_02194984: ; 0x02194984
-    .word func_ov00_020c1910
+    .word _ZN5Actor8vfunc_68Ev
 	.global data_ov47_02194988
 data_ov47_02194988: ; 0x02194988
-    .word func_ov00_020c1914
+    .word _ZN5Actor8vfunc_6cEv
 	.global data_ov47_0219498c
 data_ov47_0219498c: ; 0x0219498c
-    .word func_ov00_020c191c
+    .word _ZN5Actor8vfunc_70Ev
 	.global data_ov47_02194990
 data_ov47_02194990: ; 0x02194990
-    .word func_ov00_020c1924
+    .word _ZN5Actor8vfunc_74Ev
 	.global data_ov47_02194994
 data_ov47_02194994: ; 0x02194994
-    .word func_ov00_020c192c
+    .word _ZN5Actor8vfunc_78Ev
 	.global data_ov47_02194998
 data_ov47_02194998: ; 0x02194998
-    .word func_ov00_020c1928
+    .word _ZN5Actor8vfunc_7cEv
 	.global data_ov47_0219499c
 data_ov47_0219499c: ; 0x0219499c
-    .word func_ov00_020c1934
+    .word _ZN5Actor8vfunc_80Ev
 	.global data_ov47_021949a0
 data_ov47_021949a0: ; 0x021949a0
-    .word func_ov00_020c1938
+    .word _ZN5Actor8vfunc_84Ev
 	.global data_ov47_021949a4
 data_ov47_021949a4: ; 0x021949a4
-    .word func_ov00_020c193c
+    .word _ZN5Actor8vfunc_88Ev
 	.global data_ov47_021949a8
 data_ov47_021949a8: ; 0x021949a8
-    .word func_ov00_020c1940
+    .word _ZN5Actor8vfunc_8cEv
 	.global data_ov47_021949ac
 data_ov47_021949ac: ; 0x021949ac
-    .word func_ov00_020c1948
+    .word _ZN5Actor8vfunc_90Ev
 	.global data_ov47_021949b0
 data_ov47_021949b0: ; 0x021949b0
-    .word func_ov00_020c1950
+    .word _ZN5Actor8vfunc_94Ev
 	.global data_ov47_021949b4
 data_ov47_021949b4: ; 0x021949b4
-    .word func_ov00_020c1954
+    .word _ZN5Actor8vfunc_98Ev
 	.global data_ov47_021949b8
 data_ov47_021949b8: ; 0x021949b8
-    .word func_ov00_020c1958
+    .word _ZN5Actor8vfunc_9cEv
 	.global data_ov47_021949bc
 data_ov47_021949bc: ; 0x021949bc
-    .word func_ov00_020c1b6c
+    .word _ZN5Actor15TrySetTransformEP9Transform
 	.global data_ov47_021949c0
 data_ov47_021949c0: ; 0x021949c0
-    .word func_ov00_020c1bb4
+    .word _ZN5Actor12SetTransformEP9Transform
 	.global data_ov47_021949c4
 data_ov47_021949c4: ; 0x021949c4
-    .word func_ov00_020c1bf8
+    .word _ZN5Actor8vfunc_a8Ev
 	.global data_ov47_021949c8
 data_ov47_021949c8: ; 0x021949c8
-    .word func_ov00_020c31fc
+    .word _ZN5Actor8vfunc_acEv
 	.global data_ov47_021949cc
 data_ov47_021949cc: ; 0x021949cc
-    .word func_ov00_020c322c
+    .word _ZN5Actor8vfunc_b0Ev
 	.global data_ov47_021949d0
 data_ov47_021949d0: ; 0x021949d0
 	.byte 0x00, 0x00, 0x00, 0x00

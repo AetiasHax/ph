@@ -14050,7 +14050,7 @@ _0210780c: .word 0x57534e56
 func_ov04_02107810: ; 0x02107810
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
-	blx func_ov00_020c1554
+	blx _ZN5ActorC2Ev
 	ldr r0, _021078f4 ; =data_ov00_020e67e4
 	mov r1, #0
 	str r0, [r5]
@@ -14187,7 +14187,7 @@ func_ov04_0210790c: ; 0x0210790c
 	add r0, r4, r0
 	bl func_ov00_020a95ec
 	add r0, r4, #0
-	blx func_ov00_020c1730
+	blx _ZN5ActorD2Ev
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0
@@ -14219,7 +14219,7 @@ func_ov04_0210794c: ; 0x0210794c
 	add r0, r4, r0
 	bl func_ov00_020a95ec
 	add r0, r4, #0
-	blx func_ov00_020c1730
+	blx _ZN5ActorD2Ev
 	add r0, r4, #0
 	blx _ZN9SysObjectdlEPv
 	add r0, r4, #0
@@ -14253,7 +14253,7 @@ func_ov04_02107994: ; 0x02107994
 	add r0, r4, r0
 	bl func_ov00_020a95ec
 	add r0, r4, #0
-	blx func_ov00_020c1730
+	blx _ZN5ActorD2Ev
 	add r0, r4, #0
 	pop {r4, pc}
 	.align 2, 0

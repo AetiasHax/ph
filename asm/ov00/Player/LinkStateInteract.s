@@ -532,7 +532,7 @@ _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
 	add r1, sp, #0x10
 	mov r8, sb, asr #0x1f
 	add r4, r2, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	smull r1, r0, r6, sb
 	adds r1, r1, #0x800
 	adc r0, r0, #0
@@ -979,7 +979,7 @@ _020aaf88:
 	bl func_01ff9bf8
 	add r1, sp, #0x40
 	mov r0, r6
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r6, #0x12c]
 	cmp r0, #6
 	addls pc, pc, r0, lsl #2
@@ -1234,7 +1234,7 @@ _020ab32c:
 	beq _020ab38c
 	mov r0, r6
 	mov r1, #1
-	bl func_ov00_020c1908
+	bl _ZN5Actor10SetUnk_11cEc
 	mov r0, #6
 	str r0, [r4, #4]
 	ldr r1, [sp, #0x14]
@@ -1537,7 +1537,7 @@ _020ab734:
 	cmp r2, r1
 	bne _020ab748
 _020ab740:
-	bl func_ov00_020c3180
+	bl _ZN5Actor4KillEv
 	ldmia sp!, {r4, pc}
 _020ab748:
 	mov r0, r4
@@ -1610,7 +1610,7 @@ _020ab7fc:
 _020ab818:
 	add r1, sp, #0
 	mov r0, r2
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r2, sp, #0x10

@@ -148,7 +148,7 @@ _02198e8c:
 _02198eb8:
 	add r1, sp, #0
 	mov r0, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, [r5, #4]
 	add r0, sp, #0
 	bl func_01ffec34
@@ -497,7 +497,7 @@ _021992a8:
 	cmp r0, #0
 	beq _021992ec
 	mov r1, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldrsh r1, [sl, #0x2c]
 	mov r0, sl
 	str r1, [sp]
@@ -1082,7 +1082,7 @@ func_ov53_02199ac8: ; 0x02199ac8
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r1, _02199b64 ; =data_ov14_02155cfc
 	ldr r0, _02199b68 ; =gItemManager
 	str r1, [r4]

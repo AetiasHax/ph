@@ -55,7 +55,7 @@ class PlayerLinkBase: public PlayerBase {
     /* 24 */ void vfunc_24() override;
     /* 28 */ void vfunc_28(s32 param1) override;
     /* 2c */ void vfunc_2c(s32 param1, unk8 param2) override;
-    /* 30 */ void vfunc_30(s32 param1, Vec3p *param2, s32 param3) override;
+    /* 30 */ bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) override;
     /* 34 */ bool Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) override;
     /* 38 */ bool TeleportToEntrance(unk32 entranceId, bool param2) override;
     /* 3c */ bool TeleportToLastEntrance(bool param1) override;
