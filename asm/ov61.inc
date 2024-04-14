@@ -86,14 +86,6 @@
 .extern func_02045b48
 .extern func_02045b7c
 .extern func_02046eb0
-.extern strlen
-.extern strcpy
-.extern strncpy
-.extern strcat
-.extern strcmp
-.extern strncmp
-.extern strchr
-.extern strstr
 .extern func_02048688
 .extern func_02048ecc
 .extern func_02048f64
@@ -150,3 +142,11 @@
 .extern func_ov01_020f5578
 .extern func_ov12_021135e0
 .extern func_ov12_021136bc
+.extern strcat
+.extern strchr
+.extern strcmp
+.extern strcpy
+.extern strlen
+.extern strncmp
+.extern strncpy
+.extern strstr

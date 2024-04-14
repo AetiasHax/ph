@@ -26,7 +26,7 @@
 .extern func_ov00_0208ae94
 .extern func_ov00_0208f030
 .extern func_ov00_02097700
-.extern func_ov00_020c357c
+.extern _ZN12ActorManager14Actor_vfunc_10Ej
 .extern func_ov04_0210b258
 .extern func_ov04_0210b280
 .extern gItemManager

@@ -36,7 +36,7 @@ public:
     /* 24 */ virtual void vfunc_24() = 0;
     /* 28 */ virtual void vfunc_28(s32 param1) = 0;
     /* 2c */ virtual void vfunc_2c(s32 param1, unk8 param2) = 0;
-    /* 30 */ virtual void vfunc_30() = 0;
+    /* 30 */ virtual bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) = 0;
     /* 34 */ virtual bool Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5);
     /* 38 */ virtual bool TeleportToEntrance(unk32 entranceId, bool param2);
     /* 3c */ virtual bool TeleportToLastEntrance(bool param1);

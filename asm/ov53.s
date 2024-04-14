@@ -148,7 +148,7 @@ _02198e8c:
 _02198eb8:
 	add r1, sp, #0
 	mov r0, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, [r5, #4]
 	add r0, sp, #0
 	bl func_01ffec34
@@ -239,7 +239,7 @@ func_ov53_02198fd4: ; 0x02198fd4
 	stmdb sp!, {r3, lr}
 	ldr r0, _0219900c ; =data_027e0fe4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
 	ldr r2, [r0, #4]
@@ -493,11 +493,11 @@ _021992a8:
 	mov r1, r5
 	str r3, [sp, #8]
 	str r2, [sp, #0xc]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _021992ec
 	mov r1, r4
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldrsh r1, [sl, #0x2c]
 	mov r0, sl
 	str r1, [sp]
@@ -765,7 +765,7 @@ _02199518:
 	ldr r0, [r0]
 	ldr r1, _021996f8 ; =data_ov53_0219a5e4
 	mov r2, #0
-	bl func_ov00_020c37ec
+	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	ldr r0, _021996e4 ; =data_ov53_0219a580
 	ldrh r1, [r0, #0x40]
 	ldrh r0, [r0, #0x6c]
@@ -1082,7 +1082,7 @@ func_ov53_02199ac8: ; 0x02199ac8
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r1, _02199b64 ; =data_ov14_02155cfc
 	ldr r0, _02199b68 ; =gItemManager
 	str r1, [r4]

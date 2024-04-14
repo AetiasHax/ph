@@ -79,7 +79,7 @@ _02198dc0:
 	beq _02198de4
 	ldr r0, [r4]
 	mov r1, r7
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	streq r5, [r7]
 	streq r5, [r7, #4]
@@ -195,7 +195,7 @@ _02198f40:
 	ldr r0, _02198f74 ; =data_027e0fe4
 	mov r1, r4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	add sp, sp, #0x3c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0

@@ -362,7 +362,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	ldr r0, _020a7f7c ; =data_027e0fe4
 	ldrb r1, [sp, #0x18]
 	ldr r0, [r0]
-	bl func_ov00_020c357c
+	bl _ZN12ActorManager14Actor_vfunc_10Ej
 	ldrb r0, [sp, #0x18]
 	cmp r0, #0
 	beq _020a7f40

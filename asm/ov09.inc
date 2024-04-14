@@ -183,8 +183,6 @@
 .extern func_02043594
 .extern func_020435b4
 .extern func_02043600
-.extern strcat
-.extern strcmp
 .extern func_0204dd9c
 .extern func_0204f614
 .extern func_0204f754
@@ -276,7 +274,7 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
-.extern func_ov00_020c3dd0
+.extern _ZN12ActorManager14Actor_vfunc_28Ev
 .extern func_ov00_020cef40
 .extern func_ov00_020cf270
 .extern func_ov00_020cf330
@@ -455,3 +453,5 @@
 .extern func_ov29_0216dcf4
 .extern gItemManager
 .extern gOverlayManager
+.extern strcat
+.extern strcmp

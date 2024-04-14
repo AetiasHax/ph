@@ -60,7 +60,7 @@
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048
 .extern func_ov04_0210ade4
 .extern func_ov04_0210ade8

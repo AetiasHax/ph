@@ -1000,7 +1000,7 @@ _02199968:
 	ldr r2, _0219a098 ; =0x57534253
 	ldr r1, [r1]
 	add r0, sp, #0x14
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #0x14]
 	mvn r0, #0
 	cmp r1, r0
@@ -1011,7 +1011,7 @@ _02199968:
 	ldr r0, _0219a094 ; =data_027e0fe4
 	add r1, sp, #0x14
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	beq _02199b00
 	ldr r1, _0219a064 ; =data_027e0fb8

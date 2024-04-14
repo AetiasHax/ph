@@ -44,11 +44,11 @@ func_ov39_0217bdc8: ; 0x0217bdc8
 	ldr r2, _0217bf10 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0x10
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217bf0c ; =data_027e0fe4
 	add r1, sp, #0x10
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #1
 	strb r1, [r0, #0x28d]
 	strb r1, [r0, #0x3c1]
@@ -60,7 +60,7 @@ func_ov39_0217bdc8: ; 0x0217bdc8
 	ldr r2, _0217bf18 ; =0x57534e56
 	ldr r1, [r1]
 	add r0, sp, #8
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #8]
 	str r0, [sp, #0x14]
@@ -68,14 +68,14 @@ func_ov39_0217bdc8: ; 0x0217bdc8
 	str r1, [sp, #0x10]
 	ldr r0, [r0]
 	add r1, sp, #0x10
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #1
 	strb r1, [r0, #0x28d]
 	ldr r1, _0217bf0c ; =data_027e0fe4
 	ldr r2, _0217bf1c ; =0x46434e56
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
 	str r0, [sp, #0x14]
@@ -83,7 +83,7 @@ func_ov39_0217bdc8: ; 0x0217bdc8
 	str r1, [sp, #0x10]
 	ldr r0, [r0]
 	add r1, sp, #0x10
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #1
 	strb r1, [r0, #0x28d]
 	ldr r0, _0217bf20 ; =data_ov00_020eec9c
@@ -141,11 +141,11 @@ func_ov39_0217bf30: ; 0x0217bf30
 	ldr r1, [r1]
 	ldr r2, _0217c020 ; =0x4e415649
 	add r0, sp, #0x10
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217c01c ; =data_027e0fe4
 	add r1, sp, #0x10
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #0
 	strb r1, [r0, #0x28d]
 	strb r1, [r0, #0x3c1]
@@ -153,7 +153,7 @@ func_ov39_0217bf30: ; 0x0217bf30
 	ldr r2, _0217c024 ; =0x57534e56
 	ldr r1, [r1]
 	add r0, sp, #8
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217c01c ; =data_027e0fe4
 	ldr r1, [sp, #8]
 	ldr r2, [sp, #0xc]
@@ -161,14 +161,14 @@ func_ov39_0217bf30: ; 0x0217bf30
 	ldr r0, [r0]
 	add r1, sp, #0x10
 	str r2, [sp, #0x14]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #0
 	strb r1, [r0, #0x28d]
 	ldr r1, _0217c01c ; =data_027e0fe4
 	ldr r2, _0217c028 ; =0x46434e56
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
 	str r0, [sp, #0x14]
@@ -176,7 +176,7 @@ func_ov39_0217bf30: ; 0x0217bf30
 	str r1, [sp, #0x10]
 	ldr r0, [r0]
 	add r1, sp, #0x10
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r1, #0
 	strb r1, [r0, #0x28d]
 	ldr r0, _0217c02c ; =data_ov00_020eec9c
@@ -1194,7 +1194,7 @@ func_ov39_0217cd00: ; 0x0217cd00
 func_ov39_0217cd14: ; 0x0217cd14
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl func_ov00_020c1554
+	bl _ZN5ActorC2Ev
 	ldr r3, _0217cf68 ; =data_ov39_02186a38
 	add r1, r5, #0x158
 	mov r0, #0
@@ -1473,7 +1473,7 @@ func_ov39_0217d018: ; 0x0217d018
 	ldr r3, _0217d10c ; =func_ov39_0217cfe8
 	bl func_0204f754
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -1541,7 +1541,7 @@ func_ov39_0217d110: ; 0x0217d110
 	ldr r3, _0217d20c ; =func_ov39_0217cfe8
 	bl func_0204f754
 	mov r0, r4
-	bl func_ov00_020c1730
+	bl _ZN5ActorD2Ev
 	mov r0, r4
 	bl _ZN9SysObjectdlEPv
 	mov r0, r4
@@ -1704,7 +1704,7 @@ func_ov39_0217d210: ; 0x0217d210
 	ldr r0, _0217d530 ; =data_027e0fe4
 	add r1, sp, #4
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x284]
 _0217d46c:
 	add r0, r4, #0x7c
@@ -1791,11 +1791,11 @@ func_ov39_0217d534: ; 0x0217d534
 	ldr r2, _0217d5d0 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0
-	bl func_ov00_020c3894
+	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r0, _0217d5cc ; =data_027e0fe4
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	str r0, [r4, #0x280]
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
@@ -1875,7 +1875,7 @@ func_ov39_0217d684: ; 0x0217d684
 _0217d6b4:
 	mov r0, r4
 	mov r1, r5
-	bl func_ov00_020c313c
+	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _0217d6dc
 	ldr r1, [r4, #0x158]
@@ -1915,7 +1915,7 @@ func_ov39_0217d704: ; 0x0217d704
 _0217d734:
 	mov r0, r4
 	mov r1, r5
-	bl func_ov00_020c313c
+	bl _ZN5Actor18func_ov00_020c313cEj
 	cmp r0, #0
 	beq _0217d768
 	ldr r0, [r4, #0x158]
@@ -1995,11 +1995,11 @@ _0217d83c:
 	bne _0217d86c
 	mov r0, r5
 	mov r1, #0x12
-	bl func_ov00_020c1fc8
+	bl _ZN5Actor18func_ov00_020c1fc8Ej
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl func_ov00_020c243c
+	bl _ZN5Actor18func_ov00_020c243cEiPi
 _0217d86c:
 	ldr r0, [r5, #0x158]
 	tst r0, #0x40
@@ -2034,7 +2034,7 @@ _0217d8cc:
 	mov r0, r5
 	bl func_ov39_02185aa4
 	mov r0, r5
-	bl func_ov00_020c2bf4
+	bl _ZN5Actor20IncreaseActiveFramesEv
 	ldr r0, [r5, #0x130]
 	ldr r1, _0217dcfc ; =data_ov39_0218646c
 	add r1, r1, r0, lsl #3
@@ -2089,7 +2089,7 @@ _0217d9a4:
 	cmp r0, #0x10
 	bne _0217da40
 	mov r0, r5
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	ldr r2, [r5, #0x48]
 	ldr r1, _0217dd0c ; =data_027e0f64
 	str r2, [sp, #0x54]
@@ -2594,7 +2594,7 @@ _0217e05c:
 	b _0217e274
 _0217e120:
 	mov r0, r4
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	strh r0, [r4, #0x78]
 	mov r0, r4
 	mov r1, #9
@@ -2711,7 +2711,7 @@ func_ov39_0217e298: ; 0x0217e298
 	ldrb r1, [r4, #0xc9c]
 	cmp r1, #0
 	ldmneia sp!, {r4, pc}
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	mov r1, r0
 	ldr r2, _0217e2c4 ; =0x000005dc
 	add r0, r4, #0x78
@@ -2827,7 +2827,7 @@ func_ov39_0217e404: ; 0x0217e404
 	ldr r1, [r4, #0x158]
 	orr r1, r1, #0x100000
 	str r1, [r4, #0x158]
-	bl func_ov00_020c28ec
+	bl _ZN5Actor16XzDistanceToLinkEv
 	str r0, [r4, #0x1e0]
 _0217e42c:
 	ldr r0, [r4, #0x1e0]
@@ -3124,11 +3124,11 @@ func_ov39_0217e82c: ; 0x0217e82c
 	cmp r1, #7
 	ldmeqia sp!, {r4, pc}
 	mov r1, #0x12
-	bl func_ov00_020c1fc8
+	bl _ZN5Actor18func_ov00_020c1fc8Ej
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl func_ov00_020c243c
+	bl _ZN5Actor18func_ov00_020c243cEiPi
 	ldr r0, [r4, #0x130]
 	cmp r0, #0x10
 	ldmneia sp!, {r4, pc}
@@ -3139,11 +3139,11 @@ func_ov39_0217e82c: ; 0x0217e82c
 	mov r0, r4
 	mov r1, #2
 	mov r2, #0
-	bl func_ov00_020c1e2c
+	bl _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	sub r2, r0, #0x8000
 	add r1, r4, #0x100
 	mov r0, r4
@@ -3495,7 +3495,7 @@ func_ov39_0217ec98: ; 0x0217ec98
 _0217ecdc:
 	ldrsh r5, [r4, #0x78]
 	mov r0, r4
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	subs r1, r0, r5
 	ldr r0, _0217ede4 ; =0x0000471c
 	rsbmi r1, r1, #0
@@ -3858,7 +3858,7 @@ func_ov39_0217f10c: ; 0x0217f10c
 	str r3, [sp, #0xc]
 	bl func_0202b308
 	mov r0, r5
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	add r0, r0, #0x8000
 	mov r0, r0, lsl #0x10
 	mov r2, r0, asr #0x10
@@ -4343,7 +4343,7 @@ func_ov39_0217f810: ; 0x0217f810
 	str r1, [r0, #0x5c]
 	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
 _0217f868:
-	bl func_ov00_020c281c
+	bl _ZN5Actor16IsFollowedByLinkEv
 	cmp r0, #0
 	beq _0217f97c
 	ldr r0, [r4, #0x158]
@@ -4885,7 +4885,7 @@ _0217ff8c: ; jump table
 	b _02180e94 ; case 12
 _0217ffc0:
 	mov r0, r5
-	bl func_ov00_020c198c
+	bl _ZN5Actor18func_ov00_020c198cEv
 	cmp r0, #0
 	beq _021802bc
 	ldr r0, _02180f1c ; =data_027e071c
@@ -5180,7 +5180,7 @@ _021803e0:
 	bl func_02036ce4
 	mov r0, r5
 	mov r1, #1
-	bl func_ov00_020c1908
+	bl _ZN5Actor10SetUnk_11cEc
 _02180450:
 	mov r0, #0x10000
 	ldr r1, [r5, #0xc1c]
@@ -5230,7 +5230,7 @@ _02180450:
 	bl func_02036ce4
 	mov r0, r5
 	mov r1, #1
-	bl func_ov00_020c1908
+	bl _ZN5Actor10SetUnk_11cEc
 	ldr r0, _02180f20 ; =data_027e0fc8
 	ldr r0, [r0]
 	bl func_ov00_020bb9b0
@@ -5262,13 +5262,13 @@ _02180528:
 	ldr r1, [r5, #0x280]
 	mov r0, r5
 	add r1, r1, #0x48
-	bl func_ov00_020c2938
+	bl _ZN5Actor10GetAngleToEP5Vec3p
 	add r1, r5, #0x100
 	strh r0, [r1, #0x62]
 	ldr r1, [r5, #0x280]
 	mov r0, r5
 	add r1, r1, #0x48
-	bl func_ov00_020c288c
+	bl _ZN5Actor12XzDistanceToEP5Vec3p
 	str r0, [r5, #0x1b8]
 	ldr r1, [r5, #0x280]
 	ldr r0, _02180f50 ; =0x0000199a
@@ -5427,7 +5427,7 @@ _021807c4:
 	bl func_02036ce4
 	mov r0, r5
 	mov r1, #1
-	bl func_ov00_020c1908
+	bl _ZN5Actor10SetUnk_11cEc
 	add sp, sp, #0x130
 	ldmia sp!, {r4, r5, r6, pc}
 _02180814:
@@ -6481,7 +6481,7 @@ _02181640:
 	mov r0, r4
 	bic r1, r1, #0x10000
 	str r1, [r4, #0x158]
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	strh r0, [r4, #0x78]
 	ldr r1, [r4, #0x158]
 	tst r1, #0x40
@@ -6687,7 +6687,7 @@ func_ov39_0218199c: ; 0x0218199c
 	mov r4, #1
 	mov sl, r0
 	mov r5, r4
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	mov r6, #0
 	add r0, r0, #0x8000
 	mov r0, r0, lsl #0x10
@@ -7036,7 +7036,7 @@ func_ov39_02181e98: ; 0x02181e98
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x20
 	mov r4, r0
-	bl func_ov00_020c281c
+	bl _ZN5Actor16IsFollowedByLinkEv
 	cmp r0, #0
 	ldrne r0, [r4, #0x158]
 	bicne r0, r0, #0x4000000
@@ -7791,7 +7791,7 @@ func_ov39_02182888: ; 0x02182888
 	add r1, r4, #0x100
 	mov r2, #0
 	strh r2, [r1, #0x5e]
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	add r1, r4, #0x100
 	strh r0, [r1, #0x60]
 	mov r1, #0
@@ -8023,7 +8023,7 @@ _02182bc0:
 	cmp r0, #0
 	mov r0, r5
 	beq _02182cb8
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	ldr r1, [r5, #0x16c]
 	mov r4, r0
 	mov r1, r1, lsl #0xc
@@ -8056,7 +8056,7 @@ _02182c84:
 	str r0, [r5, #0x16c]
 	b _02182ccc
 _02182cb8:
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	mov r1, r0
 	add r0, r5, #0x160
 	mov r2, #0x12c
@@ -8239,7 +8239,7 @@ _02182f54: .word 0x0000103e
 func_ov39_02182f58: ; 0x02182f58
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r0
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	strh r0, [r4, #0x78]
 	ldrsh r2, [r4, #0x78]
 	add r1, r4, #0x100
@@ -9036,7 +9036,7 @@ func_ov39_021838c4: ; 0x021838c4
 	str r3, [sp, #0x24]
 	str r2, [sp, #0x18]
 	str r1, [sp, #0x1c]
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	mov fp, #0
 	ldr r6, [sp, #0xc]
 	ldr r5, [sp, #0x10]
@@ -9218,7 +9218,7 @@ func_ov39_02183ccc: ; 0x02183ccc
 	str r1, [r7, #0x2c4]
 	sub r1, r1, #0x3e8
 	str r1, [r7, #0x2c8]
-	bl func_ov00_020c2974
+	bl _ZN5Actor14GetAngleToLinkEv
 	ldr r1, _0218430c ; =data_027e0f64
 	str r0, [r7, #0x2cc]
 	ldr r0, [r1]
@@ -10658,7 +10658,7 @@ func_ov39_02185194: ; 0x02185194
 	b _021851d4
 _021851b4:
 	ldr r1, _02185204 ; =data_ov39_02186cf0
-	bl func_ov00_020c288c
+	bl _ZN5Actor12XzDistanceToEP5Vec3p
 	cmp r0, #0x20
 	movle r2, #0xcd
 	ldr r1, _02185204 ; =data_ov39_02186cf0
@@ -10804,7 +10804,7 @@ _02185374:
 	mov r2, r0
 	bl func_01ff9bc4
 	mov r0, r4
-	bl func_ov00_020c2bf4
+	bl _ZN5Actor20IncreaseActiveFramesEv
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0xe0]
@@ -11582,7 +11582,7 @@ _02185d1c:
 	str r4, [sp, #0x20]
 	mov r3, #2
 	str r3, [sp]
-	bl func_ov00_020c1ef8
+	bl _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
 	cmp r0, #0
 	beq _02185d8c
 	ldr r0, _02185e9c ; =data_027e0ffc
@@ -13379,7 +13379,7 @@ data_ov39_02186a44: ; 0x02186a44
     .word func_ov39_0217d534
 	.global data_ov39_02186a48
 data_ov39_02186a48: ; 0x02186a48
-    .word func_ov00_020c1740
+    .word _ZN5Actor8vfunc_10Ej
 	.global data_ov39_02186a4c
 data_ov39_02186a4c: ; 0x02186a4c
     .word func_ov39_0217d684
@@ -13388,118 +13388,118 @@ data_ov39_02186a50: ; 0x02186a50
     .word func_ov39_0217d704
 	.global data_ov39_02186a54
 data_ov39_02186a54: ; 0x02186a54
-    .word func_ov00_020c17d4
+    .word _ZN5Actor8vfunc_1cEt
 	.global data_ov39_02186a58
 data_ov39_02186a58: ; 0x02186a58
     .word func_ov39_0217dd1c
 	.global data_ov39_02186a5c
 data_ov39_02186a5c: ; 0x02186a5c
-    .word func_ov00_020c1744
+    .word _ZN5Actor8vfunc_24Ev
 	.global data_ov39_02186a60
 data_ov39_02186a60: ; 0x02186a60
-    .word func_ov00_020c1748
+    .word _ZN5Actor8vfunc_28Ev
 	.global data_ov39_02186a64
 data_ov39_02186a64: ; 0x02186a64
-    .word func_ov00_020c17a8
+    .word _ZN5Actor8vfunc_2cEv
 	.global data_ov39_02186a68
 data_ov39_02186a68: ; 0x02186a68
-    .word func_ov00_020c17b0
+    .word _ZN5Actor8vfunc_30Ev
 	.global data_ov39_02186a6c
 data_ov39_02186a6c: ; 0x02186a6c
-    .word func_ov00_020c174c
+    .word _ZN5Actor12GetOffsetPosEP5Vec3p
 	.global data_ov39_02186a70
 data_ov39_02186a70: ; 0x02186a70
-    .word func_ov00_020c177c
+    .word _ZN5Actor8vfunc_38Ev
 	.global data_ov39_02186a74
 data_ov39_02186a74: ; 0x02186a74
-    .word func_ov00_020c27e4
+    .word _ZN5Actor16CollidesWithLinkEv
 	.global data_ov39_02186a78
 data_ov39_02186a78: ; 0x02186a78
-    .word func_ov00_020c3004
+    .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov39_02186a7c
 data_ov39_02186a7c: ; 0x02186a7c
-    .word func_ov00_020c2744
+    .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov39_02186a80
 data_ov39_02186a80: ; 0x02186a80
     .word func_ov39_0217dfc0
 	.global data_ov39_02186a84
 data_ov39_02186a84: ; 0x02186a84
-    .word func_ov00_020c1c50
+    .word _ZN5Actor8vfunc_4cEPi
 	.global data_ov39_02186a88
 data_ov39_02186a88: ; 0x02186a88
-    .word func_ov00_020c310c
+    .word _ZN5Actor6GetPosEv
 	.global data_ov39_02186a8c
 data_ov39_02186a8c: ; 0x02186a8c
-    .word func_ov00_020c3114
+    .word _ZN5Actor8vfunc_54Ev
 	.global data_ov39_02186a90
 data_ov39_02186a90: ; 0x02186a90
-    .word func_ov00_020c18a8
+    .word _ZN5Actor10SetUnk_11bEv
 	.global data_ov39_02186a94
 data_ov39_02186a94: ; 0x02186a94
-    .word func_ov00_020c18c4
+    .word _ZN5Actor11SetVelocityEP5Vec3p
 	.global data_ov39_02186a98
 data_ov39_02186a98: ; 0x02186a98
-    .word func_ov00_020c18fc
+    .word _ZN5Actor8vfunc_60Ev
 	.global data_ov39_02186a9c
 data_ov39_02186a9c: ; 0x02186a9c
-    .word func_ov00_020c1904
+    .word _ZN5Actor8vfunc_64Ev
 	.global data_ov39_02186aa0
 data_ov39_02186aa0: ; 0x02186aa0
-    .word func_ov00_020c1910
+    .word _ZN5Actor8vfunc_68Ev
 	.global data_ov39_02186aa4
 data_ov39_02186aa4: ; 0x02186aa4
-    .word func_ov00_020c1914
+    .word _ZN5Actor8vfunc_6cEv
 	.global data_ov39_02186aa8
 data_ov39_02186aa8: ; 0x02186aa8
-    .word func_ov00_020c191c
+    .word _ZN5Actor8vfunc_70Ev
 	.global data_ov39_02186aac
 data_ov39_02186aac: ; 0x02186aac
-    .word func_ov00_020c1924
+    .word _ZN5Actor8vfunc_74Ev
 	.global data_ov39_02186ab0
 data_ov39_02186ab0: ; 0x02186ab0
-    .word func_ov00_020c192c
+    .word _ZN5Actor8vfunc_78Ev
 	.global data_ov39_02186ab4
 data_ov39_02186ab4: ; 0x02186ab4
-    .word func_ov00_020c1928
+    .word _ZN5Actor8vfunc_7cEv
 	.global data_ov39_02186ab8
 data_ov39_02186ab8: ; 0x02186ab8
-    .word func_ov00_020c1934
+    .word _ZN5Actor8vfunc_80Ev
 	.global data_ov39_02186abc
 data_ov39_02186abc: ; 0x02186abc
-    .word func_ov00_020c1938
+    .word _ZN5Actor8vfunc_84Ev
 	.global data_ov39_02186ac0
 data_ov39_02186ac0: ; 0x02186ac0
-    .word func_ov00_020c193c
+    .word _ZN5Actor8vfunc_88Ev
 	.global data_ov39_02186ac4
 data_ov39_02186ac4: ; 0x02186ac4
-    .word func_ov00_020c1940
+    .word _ZN5Actor8vfunc_8cEv
 	.global data_ov39_02186ac8
 data_ov39_02186ac8: ; 0x02186ac8
-    .word func_ov00_020c1948
+    .word _ZN5Actor8vfunc_90Ev
 	.global data_ov39_02186acc
 data_ov39_02186acc: ; 0x02186acc
-    .word func_ov00_020c1950
+    .word _ZN5Actor8vfunc_94Ev
 	.global data_ov39_02186ad0
 data_ov39_02186ad0: ; 0x02186ad0
-    .word func_ov00_020c1954
+    .word _ZN5Actor8vfunc_98Ev
 	.global data_ov39_02186ad4
 data_ov39_02186ad4: ; 0x02186ad4
-    .word func_ov00_020c1958
+    .word _ZN5Actor8vfunc_9cEv
 	.global data_ov39_02186ad8
 data_ov39_02186ad8: ; 0x02186ad8
-    .word func_ov00_020c1b6c
+    .word _ZN5Actor15TrySetTransformEP9Transform
 	.global data_ov39_02186adc
 data_ov39_02186adc: ; 0x02186adc
-    .word func_ov00_020c1bb4
+    .word _ZN5Actor12SetTransformEP9Transform
 	.global data_ov39_02186ae0
 data_ov39_02186ae0: ; 0x02186ae0
-    .word func_ov00_020c1bf8
+    .word _ZN5Actor8vfunc_a8Ev
 	.global data_ov39_02186ae4
 data_ov39_02186ae4: ; 0x02186ae4
-    .word func_ov00_020c31fc
+    .word _ZN5Actor8vfunc_acEv
 	.global data_ov39_02186ae8
 data_ov39_02186ae8: ; 0x02186ae8
-    .word func_ov00_020c322c
+    .word _ZN5Actor8vfunc_b0Ev
 	.global data_ov39_02186aec
 data_ov39_02186aec: ; 0x02186aec
 	.byte 0x00, 0x00, 0x00, 0x00

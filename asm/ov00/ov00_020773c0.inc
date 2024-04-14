@@ -127,7 +127,6 @@
 .extern func_020426d4
 .extern func_02042bb8
 .extern func_0204366c
-.extern strncmp
 .extern func_0204f8d4
 .extern func_ov00_0207bc48
 .extern func_ov00_0207c170
@@ -162,3 +161,4 @@
 .extern func_ov09_0211d8a0
 .extern func_ov29_02178f1c
 .extern gOverlayManager
+.extern strncmp

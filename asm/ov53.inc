@@ -57,11 +57,11 @@
 .extern func_ov00_020bed7c
 .extern func_ov00_020bedcc
 .extern func_ov00_020c1500
-.extern func_ov00_020c1554
-.extern func_ov00_020c2a0c
+.extern _ZN5ActorC2Ev
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern func_ov00_020c4048
 .extern func_ov00_020ceacc
 .extern func_ov00_020d61b0

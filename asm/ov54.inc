@@ -1,5 +1,8 @@
 #pragma once
 .extern _ZN11ItemManager12GetItemModelEj
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase18func_ov00_020a82acEv
@@ -52,9 +55,6 @@
 .extern func_ov00_020b7e6c
 .extern func_ov00_020ba3b4
 .extern func_ov00_020be8e4
-.extern func_ov00_020c3674
-.extern func_ov00_020c37ec
-.extern func_ov00_020c38fc
 .extern func_ov00_020d7a84
 .extern func_ov05_02106bbc
 .extern func_ov05_0210f808

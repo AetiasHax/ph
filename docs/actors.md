@@ -12,15 +12,20 @@ translations. Feel free to contribute to this list!
 
  ID    | Translation  | Meaning
 -------|--------------|---------
+`SWOB`
+`EVIC`
 `NAVI` | Navi         | Spirit of Courage (Ciela)
 `FCNV` | Force Navi   | Spirit of Power (Leaf)
 `WSNV` | Wisdom Navi  | Spirit of Wisdom (Neri)
-`RUPY` | Rupee
-`HART` | Heart
-`BOMB` | Bomb
-`ARRW` | Arrow
+`ACOB`
+`EFWV` | Effect Wave?
+`EFRP` | Effect Ripple?
+`EFRL`
+`LOND`
+`FMSG` | F Message?
+`NMSG` | N Message?
+`CMSG` | C Message?
 `TMAP` | Treasure Map
-`NKEY` | Small Key
 `DGTG` | | Diggable spot
 `ITBT` | | 10 Bombchus shop item
 `ITBM` | | 10 Bombs shop item
@@ -32,15 +37,67 @@ translations. Feel free to contribute to this list!
 `ITSR` | | Courage (green) gem shop item
 `ITSL` | | Shield shop item
 `ITSO` | | Sold out sign in shop
-`AMOS` | Armos
-`CHUC` | Chuchu
-`LKLK` | Like Like
-`BMOS` | Beamos
+`BTCH`
+`BTRF`
+`BTDC`
+`HART` | Heart
+`RUPY` | Rupee
+`BOMB` | Bomb
+`ARRW` | Arrow
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
-`LNBK` | Linebeck
+`PSBL` | Push Block
 `WBLK` | Wind Block | The blocks in the Wind Temple that blow air
 `DRUM` | Drum | Storage drum on the Ghost Ship
+`NKEY` | Small Key
+`WBSS`
+`MLDW` | Sandworm
+`FBSS`
+`FBS1`
+`VLRG`
+`TEKT` | Tektite
+`PLSV` | Pols Voice
+`YETI` | Yook
+`HPLP`
+`HLMK`
+`AMOS` | Armos
+`HNKS`
+`PMET`
+`STLF` | Stalfos
+`STLP`
+`STLW` | Stalfos Warrior
+`STLH`
+`CBS0`
+`EGST`
+`SPDR`
+`WTCR`
+`GO1M`
+`CHUC` | ChuChu
+`ICHC`
+`GELL` | Gel
+`BEE0` | Bee
+`BEEH` | Bee Hive
+`ICHH`
+`POON`
+`FLTB`
 `KOKO` | Cucco
+`GROK`
+`RYDM`
+`WSBS`
+`WSBH`
+`KMDB`
+`PBZK`
+`SNAK` | Rope | The purple snake enemy
+`RAT1`
+`OCTA` | Octorok
+`KETH` | Keese
+`RAT0` | Rat
+`FSHM`
+`BBLE` | Bubble?
+`BMOS` | Beamos
+`TAIL`
+`LKLK` | Like Like
+`CROW` | Crow | Bird that steals rupees
+`FIRS`
+`LNBK` | Linebeck
 `POST` | Mailbox
 `PSTM` | Postman
-`CROW` | Crow | Bird that steals rupees

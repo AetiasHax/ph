@@ -57,7 +57,7 @@
 .extern func_ov00_020c0d68
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern func_ov00_020c3674
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048
 .extern func_ov00_020cf9dc
 .extern func_ov00_020d71a0

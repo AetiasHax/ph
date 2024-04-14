@@ -107,7 +107,7 @@
 .extern func_ov00_020c0e5c
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern func_ov00_020c35d8
+.extern _ZN12ActorManager13FindActorByIdEj
 .extern func_ov00_020c4048
 .extern func_ov00_020cf01c
 .extern func_ov00_020d00c4

@@ -1,6 +1,10 @@
 #pragma once
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager18func_ov00_020ad790Ei
+.extern _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
+.extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN5Actor16XzDistanceToLinkEv
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZNK11ItemManager15GetEquippedItemEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
@@ -59,10 +63,6 @@
 .extern func_ov00_020baca8
 .extern func_ov00_020bad18
 .extern func_ov00_020bc46c
-.extern func_ov00_020c28ec
-.extern func_ov00_020c2a0c
-.extern func_ov00_020c3484
-.extern func_ov00_020c3674
 .extern func_ov00_020cebcc
 .extern func_ov00_020ced64
 .extern func_ov00_020ced7c

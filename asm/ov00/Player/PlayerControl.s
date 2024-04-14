@@ -160,13 +160,13 @@ _ZN13PlayerControl14GetFollowActorEv: ; 0x020aeffc
 	ldr r1, _020af014 ; =data_027e0fe4
 	mov r2, r0
 	ldr r0, [r1]
-	ldr ip, _020af018 ; =func_ov00_020c3674
+	ldr ip, _020af018 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x84
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN13PlayerControl14GetFollowActorEv
 _020af014: .word data_027e0fe4
-_020af018: .word func_ov00_020c3674
+_020af018: .word _ZN12ActorManager8GetActorEP8ActorRef
 
 	.global _ZN13PlayerControl18func_ov00_020af01cEPc
 	arm_func_start _ZN13PlayerControl18func_ov00_020af01cEPc
@@ -837,7 +837,7 @@ _020af8b0:
 	ldr r0, _020afacc ; =data_027e0fe4
 	add r1, r1, #0x3c
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	cmp r0, #0
 	movne r8, #1
 _020af8dc:
@@ -847,7 +847,7 @@ _020af8dc:
 	ldr r0, _020afacc ; =data_027e0fe4
 	add r1, sb, #0x8c
 	ldr r0, [r0]
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r6, r0
 	mov r7, r4
 	beq _020af97c
@@ -880,7 +880,7 @@ _020af944:
 	strb r1, [sb, #0x80]
 	mov r1, #0xf
 	strh r1, [sb, #0xa8]
-	bl func_ov00_020c28ec
+	bl _ZN5Actor16XzDistanceToLinkEv
 	mov r4, r0
 _020af97c:
 	ldr r0, _020afad0 ; =data_027e0e60
@@ -949,7 +949,7 @@ _020afa68:
 	add r0, sp, #0
 	ldr r1, [r1]
 	mov r2, r4
-	bl func_ov00_020c3484
+	bl _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 	ldr r0, [sp]
 	str r0, [sb, #0x8c]
 	ldr r0, [sp, #4]
@@ -1033,7 +1033,7 @@ _ZN13PlayerControl18func_ov00_020afb6cEv: ; 0x020afb6c
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, sb, #0x84
-	bl func_ov00_020c3674
+	bl _ZN12ActorManager8GetActorEP8ActorRef
 	ldr r1, _020afe74 ; =gItemManager
 	mov r5, r0
 	ldr r6, [r1]
@@ -1059,7 +1059,7 @@ _020afbcc:
 	mov r6, r0
 	add r1, sp, #0x10
 	mov r0, r5
-	bl func_ov00_020c2a0c
+	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [sp, #0x14]
 	mov r1, #0
 	add r0, r0, #0x66
