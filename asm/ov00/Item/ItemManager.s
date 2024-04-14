@@ -3,41 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
-	thumb_func_start _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
-_ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p: ; 0x020adca8
-	mov r2, #0x46
-	lsl r2, r2, #2
-	ldr r0, [r0, r2]
-	cmp r0, #0x1b
-	bgt _020adcc4
-	cmp r0, #0x1a
-	blt _020adcbe
-	beq _020adcc8
-	cmp r0, #0x1b
-	beq _020adcc8
-	b _020adcd4
-_020adcbe:
-	cmp r0, #9
-	beq _020adcc8
-	b _020adcd4
-_020adcc4:
-	cmp r0, #0x82
-	bne _020adcd4
-_020adcc8:
-	ldr r0, _020adcd8 ; =0x00001666
-	str r0, [r1]
-	str r0, [r1, #4]
-	str r0, [r1, #8]
-	mov r0, #1
-	bx lr
-_020adcd4:
-	mov r0, #0
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
-_020adcd8: .word 0x00001666
-
 	.global _ZN11ItemManager8GiveItemEjjj
 	thumb_func_start _ZN11ItemManager8GiveItemEjjj
 _ZN11ItemManager8GiveItemEjjj: ; 0x020adcdc

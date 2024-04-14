@@ -443,3 +443,18 @@ THUMB void ItemManager::LoadFanfareItem(ItemId id) {
     }
     mUnk_114->vfunc_0c(model);
 }
+
+THUMB bool ItemManager::GetFanfareItemScale(Vec3p *scale) const {
+    switch (mFanfareItem) {
+        case ItemId_BigGreenRupee:
+        case ItemId_BigRedRupee:
+        case ItemId_GoldRupee:
+        case ItemId_Rupoor50:
+            scale->x = FLOAT_TO_Q20(1.4);
+            scale->y = FLOAT_TO_Q20(1.4);
+            scale->z = FLOAT_TO_Q20(1.4);
+            return true;
+    }
+    return false;
+}
+
