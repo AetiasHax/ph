@@ -1,5 +1,9 @@
 #pragma once
 
+extern "C" {
+    #include <string.h>
+}
+
 #include "global.h"
 #include "types.h"
 #include "lib/math.h"

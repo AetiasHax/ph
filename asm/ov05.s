@@ -9726,7 +9726,7 @@ _02108c34:
 	ldr r0, _02108cf0 ; =gItemManager
 	ldr r1, [r4, #0x74]
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	ldr r0, [r4, #0x74]
 	mov r2, #1
 	cmp r0, #0x81
@@ -9884,7 +9884,7 @@ _02108e44:
 	ldr r0, _02108e88 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov05_02108e08

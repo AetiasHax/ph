@@ -44543,7 +44543,7 @@ _02145334:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	mov r0, r6
 	mov r1, #1
 	bl func_ov15_0216e168
@@ -88262,7 +88262,7 @@ _0216a93c:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	mov r0, r5
 	bl func_ov15_0216a968
 	add sp, sp, #4

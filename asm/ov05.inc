@@ -2,7 +2,7 @@
 .extern Divide
 .extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern _ZN11ItemManager12GetItemModelEj
-.extern _ZN11ItemManager15LoadFanfareItemEj
+.extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern _ZN11ItemManager8GiveItemEjjj
 .extern _ZN13LinkStateBase10GetStateIdEv

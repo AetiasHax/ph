@@ -380,3 +380,66 @@ THUMB void ItemManager::RemoveItem(ItemFlag item) {
         (*mAmmo)[item] = 0;
     }
 }
+
+extern ItemModel **data_027e1058;
+extern ItemModel **data_027e105c;
+extern "C" ItemModel* func_ov00_02079ffc(void*, const char *modelName, const char *textureName, unk32 param4, unk8 param5, unk8 param6, bool param7);
+extern "C" ItemModel* LoadTreasureItemFanfare(ItemModel**, s32 treasureType, bool, bool);
+extern const char *sUnknownItemModelNames[];
+extern const char *data_ov00_020e5dd4[];
+extern const char *data_ov00_020e5db4[];
+extern const char *sItemModelNames[];
+extern const char *sSpecialItemModelNames[];
+THUMB void ItemManager::LoadFanfareItem(ItemId id) {
+    mFanfareItem = id;
+    
+    ItemModel *model;
+    if (
+        id == ItemId_Unk_43 ||
+        id == ItemId_Cannon ||
+        (id >= ItemId_GOLDEN_SHIP_START && id <= ItemId_GOLDEN_SHIP_END) ||
+        id == ItemId_Unk_126 ||
+        id == ItemId_Unk_133
+    ) {
+        model = *data_027e1058;
+    } else if (
+        id >= ItemId_TREASURE_START &&
+        id <= ItemId_TREASURE_END
+    ) {
+        model = LoadTreasureItemFanfare(data_027e105c, id - ItemId_TREASURE_START, true, false);
+    } else if (id == ItemId_Unk_125) {
+        model = *data_027e105c;
+    } else {
+        char modelName[0x80] = {};
+        char textureName[0x80] = {};
+        const char *itemName = NULL;
+        if (id == ItemId_Quiver && (s32) mQuiverSize >= 1) {
+            itemName = sSpecialItemModelNames[1];
+        } else if (id == ItemId_BigBombBag && (s32) mBombBagSize >= 1) {
+            itemName = sSpecialItemModelNames[2];
+        } else if (id == ItemId_BigBombchuBag && (s32) mBombchuBagSize >= 1) {
+            itemName = sSpecialItemModelNames[3];
+        } else if (id == ItemId_HerosNewClothes) {
+            itemName = sUnknownItemModelNames[11];
+        } else if (id < ItemId_Unk_70) {
+            itemName = sItemModelNames[id];
+        } else if (id >= ItemId_SwordsmanScroll && id < ItemId_GoldenChimney) {
+            itemName = data_ov00_020e5db4[id - ItemId_SwordsmanScroll];
+        } else if (id >= ItemId_CycloneSlate && id < ItemId_Unk_136) {
+            itemName = data_ov00_020e5dd4[id - ItemId_CycloneSlate];
+        } else if (id >= ItemId_TREASURE_CHART_START && id <= ItemId_TREASURE_CHART_END) {
+            itemName = sSpecialItemModelNames[0];
+        }
+        if (!itemName) {
+            itemName = sUnknownItemModelNames[8];
+        }
+        strcat(modelName, sSpecialItemModelNames[4]);
+        strcat(modelName, itemName);
+        strcat(modelName, sSpecialItemModelNames[5]);
+        strcat(textureName, sSpecialItemModelNames[4]);
+        strcat(textureName, itemName);
+        strcat(textureName, sSpecialItemModelNames[6]);
+        model = func_ov00_02079ffc(mFanfareItemModel, modelName, textureName, 0, 0, 0, true);
+    }
+    mUnk_114->vfunc_0c(model);
+}

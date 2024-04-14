@@ -11,7 +11,7 @@
 .extern _ZN10PlayerBase9AddHealthEs
 .extern _ZN11ItemManager10GiveRupeesEjj
 .extern _ZN11ItemManager10SetUnk_09eEjt
-.extern _ZN11ItemManager15LoadFanfareItemEj
+.extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager18func_ov00_020ad528Ev
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern _ZN11ItemManager19SetTreasureSalvagedEj

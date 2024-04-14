@@ -7,7 +7,7 @@
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager13TickEquipItemEv
-.extern _ZN11ItemManager15LoadFanfareItemEj
+.extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager15SetEquippedItemEi
 .extern _ZN11ItemManager17EquipPreviousItemEv
 .extern _ZN11ItemManager18EquipItem_vfunc_38Ei

@@ -3,202 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager15LoadFanfareItemEj
-	thumb_func_start _ZN11ItemManager15LoadFanfareItemEj
-_ZN11ItemManager15LoadFanfareItemEj: ; 0x020adb30
-	push {r4, r5, lr}
-	sub sp, #0x10c
-	add r5, r0, #0
-	mov r0, #0x46
-	lsl r0, r0, #2
-	str r1, [r5, r0]
-	cmp r1, #0x2b
-	beq _020adb54
-	cmp r1, #0x25
-	beq _020adb54
-	cmp r1, #0x79
-	blt _020adb4c
-	cmp r1, #0x7c
-	ble _020adb54
-_020adb4c:
-	cmp r1, #0x7e
-	beq _020adb54
-	cmp r1, #0x85
-	bne _020adb5c
-_020adb54:
-	ldr r0, _020adc8c ; =data_027e1058
-	ldr r0, [r0]
-	ldr r1, [r0]
-	b _020adc7c
-_020adb5c:
-	cmp r1, #0x30
-	blt _020adb76
-	cmp r1, #0x37
-	bgt _020adb76
-	ldr r0, _020adc90 ; =data_027e105c
-	sub r1, #0x30
-	ldr r0, [r0]
-	mov r2, #1
-	mov r3, #0
-	bl LoadTreasureItemFanfare
-	add r1, r0, #0
-	b _020adc7c
-_020adb76:
-	cmp r1, #0x7d
-	bne _020adb82
-	ldr r0, _020adc90 ; =data_027e105c
-	ldr r0, [r0]
-	ldr r1, [r0]
-	b _020adc7c
-_020adb82:
-	add r3, sp, #0x8c
-	mov r2, #0x80
-	mov r0, #0
-_020adb88:
-	strb r0, [r3]
-	add r3, r3, #1
-	sub r2, r2, #1
-	bne _020adb88
-	add r3, sp, #0xc
-	mov r2, #0x80
-	mov r0, #0
-_020adb96:
-	strb r0, [r3]
-	add r3, r3, #1
-	sub r2, r2, #1
-	bne _020adb96
-	mov r4, #0
-	cmp r1, #0x28
-	bne _020adbb4
-	add r0, r5, #0
-	add r0, #0xb4
-	ldrh r0, [r0]
-	cmp r0, #1
-	blt _020adbb4
-	ldr r0, _020adc94 ; =data_ov00_020e5df8
-	ldr r4, [r0, #4]
-	b _020adc22
-_020adbb4:
-	cmp r1, #0x29
-	bne _020adbc8
-	add r0, r5, #0
-	add r0, #0xb6
-	ldrh r0, [r0]
-	cmp r0, #1
-	blt _020adbc8
-	ldr r0, _020adc94 ; =data_ov00_020e5df8
-	ldr r4, [r0, #8]
-	b _020adc22
-_020adbc8:
-	cmp r1, #0x2a
-	bne _020adbdc
-	add r0, r5, #0
-	add r0, #0xb8
-	ldrh r0, [r0]
-	cmp r0, #1
-	blt _020adbdc
-	ldr r0, _020adc94 ; =data_ov00_020e5df8
-	ldr r4, [r0, #0xc]
-	b _020adc22
-_020adbdc:
-	cmp r1, #0x3e
-	bne _020adbe6
-	ldr r0, _020adc98 ; =data_ov00_020e5c78
-	ldr r4, [r0, #0x2c]
-	b _020adc22
-_020adbe6:
-	cmp r1, #0x46
-	bge _020adbf2
-	ldr r0, _020adc9c ; =data_ov00_020e5c9c
-	lsl r1, r1, #2
-	ldr r4, [r0, r1]
-	b _020adc22
-_020adbf2:
-	cmp r1, #0x71
-	blt _020adc04
-	cmp r1, #0x79
-	bge _020adc04
-	sub r1, #0x71
-	ldr r0, _020adca0 ; =data_ov00_020e5db4
-	lsl r1, r1, #2
-	ldr r4, [r0, r1]
-	b _020adc22
-_020adc04:
-	cmp r1, #0x7f
-	blt _020adc16
-	cmp r1, #0x88
-	bge _020adc16
-	sub r1, #0x7f
-	ldr r0, _020adca4 ; =data_ov00_020e5dd4
-	lsl r1, r1, #2
-	ldr r4, [r0, r1]
-	b _020adc22
-_020adc16:
-	cmp r1, #0x4b
-	blt _020adc22
-	cmp r1, #0x6a
-	bgt _020adc22
-	ldr r0, _020adc94 ; =data_ov00_020e5df8
-	ldr r4, [r0]
-_020adc22:
-	cmp r4, #0
-	bne _020adc2a
-	ldr r0, _020adc98 ; =data_ov00_020e5c78
-	ldr r4, [r0, #0x20]
-_020adc2a:
-	ldr r1, _020adc94 ; =data_ov00_020e5df8
-	add r0, sp, #0x8c
-	ldr r1, [r1, #0x10]
-	blx strcat
-	add r0, sp, #0x8c
-	add r1, r4, #0
-	blx strcat
-	ldr r1, _020adc94 ; =data_ov00_020e5df8
-	add r0, sp, #0x8c
-	ldr r1, [r1, #0x14]
-	blx strcat
-	ldr r1, _020adc94 ; =data_ov00_020e5df8
-	add r0, sp, #0xc
-	ldr r1, [r1, #0x10]
-	blx strcat
-	add r0, sp, #0xc
-	add r1, r4, #0
-	blx strcat
-	ldr r1, _020adc94 ; =data_ov00_020e5df8
-	add r0, sp, #0xc
-	ldr r1, [r1, #0x18]
-	blx strcat
-	mov r3, #0
-	str r3, [sp]
-	str r3, [sp, #4]
-	mov r0, #1
-	str r0, [sp, #8]
-	mov r0, #0x12
-	lsl r0, r0, #4
-	ldr r0, [r5, r0]
-	add r1, sp, #0x8c
-	add r2, sp, #0xc
-	bl func_ov00_02079ffc
-	add r1, r0, #0
-_020adc7c:
-	mov r0, #0x45
-	lsl r0, r0, #2
-	ldr r0, [r5, r0]
-	ldr r2, [r0]
-	ldr r2, [r2, #0xc]
-	blx r2
-	add sp, #0x10c
-	pop {r4, r5, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager15LoadFanfareItemEj
-_020adc8c: .word data_027e1058
-_020adc90: .word data_027e105c
-_020adc94: .word data_ov00_020e5df8
-_020adc98: .word data_ov00_020e5c78
-_020adc9c: .word data_ov00_020e5c9c
-_020adca0: .word data_ov00_020e5db4
-_020adca4: .word data_ov00_020e5dd4
-
 	.global _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 	thumb_func_start _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p: ; 0x020adca8
@@ -1717,8 +1521,8 @@ data_ov00_020e5c70: ; 0x020e5c70
 data_ov00_020e5c74: ; 0x020e5c74
 	.ascii "anc"
 	.byte 0x00
-	.global data_ov00_020e5c78
-data_ov00_020e5c78: ; 0x020e5c78
+	.global sUnknownItemModelNames
+sUnknownItemModelNames: ; 0x020e5c78
     .word data_ov00_020e5c74
 	.global data_ov00_020e5c7c
 data_ov00_020e5c7c: ; 0x020e5c7c
@@ -1744,8 +1548,8 @@ data_ov00_020e5c94: ; 0x020e5c94
 	.global data_ov00_020e5c98
 data_ov00_020e5c98: ; 0x020e5c98
     .word data_ov00_020e5e14
-	.global data_ov00_020e5c9c
-data_ov00_020e5c9c: ; 0x020e5c9c
+	.global sItemModelNames
+sItemModelNames: ; 0x020e5c9c
     .word data_ov00_020e5e18
 	.global data_ov00_020e5ca0
 data_ov00_020e5ca0: ; 0x020e5ca0
@@ -2005,8 +1809,8 @@ data_ov00_020e5df0: ; 0x020e5df0
 	.global data_ov00_020e5df4
 data_ov00_020e5df4: ; 0x020e5df4
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e5df8
-data_ov00_020e5df8: ; 0x020e5df8
+	.global sSpecialItemModelNames
+sSpecialItemModelNames: ; 0x020e5df8
     .word data_ov00_020e6030
 	.global data_ov00_020e5dfc
 data_ov00_020e5dfc: ; 0x020e5dfc

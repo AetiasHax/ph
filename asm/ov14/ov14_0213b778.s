@@ -26983,7 +26983,7 @@ _0215074c:
 	ldr r0, _02150764 ; =gItemManager
 	add r1, r4, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager15LoadFanfareItemEj
+	bl _ZN11ItemManager15LoadFanfareItemEi
 	add r0, r5, #0
 	mov r1, #0
 	bl func_ov14_02150848
