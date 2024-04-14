@@ -25,6 +25,18 @@ translations. Feel free to contribute to this list!
 `FMSG` | F Message?
 `NMSG` | N Message?
 `CMSG` | C Message?
+`TMAP` | Treasure Map
+`DGTG` | | Diggable spot
+`ITBT` | | 10 Bombchus shop item
+`ITBM` | | 10 Bombs shop item
+`ITTR` | | Random treasure shop item
+`ITHU` | | Heart container shop item
+`ITAP` | | Quiver shop item
+`ITBB` | | Bomb bag shop item
+`ITPB` | | Red potion shop item
+`ITSR` | | Courage (green) gem shop item
+`ITSL` | | Shield shop item
+`ITSO` | | Sold out sign in shop
 `BTCH`
 `BTRF`
 `BTDC`
@@ -34,8 +46,9 @@ translations. Feel free to contribute to this list!
 `ARRW` | Arrow
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
 `PSBL` | Push Block
-`DRUM`
-`NKEY`
+`WBLK` | Wind Block | The blocks in the Wind Temple that blow air
+`DRUM` | Drum | Storage drum on the Ghost Ship
+`NKEY` | Small Key
 `WBSS`
 `MLDW` | Sandworm
 `FBSS`
@@ -83,5 +96,8 @@ translations. Feel free to contribute to this list!
 `BMOS` | Beamos
 `TAIL`
 `LKLK` | Like Like
-`CROW` | Crow
+`CROW` | Crow | Bird that steals rupees
 `FIRS`
+`LNBK` | Linebeck
+`POST` | Mailbox
+`PSTM` | Postman
