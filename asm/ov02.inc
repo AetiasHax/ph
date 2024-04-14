@@ -30,7 +30,6 @@
 .extern data_027e0d44
 .extern data_027e0d78
 .extern data_027e0e60
-.extern gAdventureFlags
 .extern data_027e0f88
 .extern data_027e0f8c
 .extern data_027e0fbc
@@ -259,4 +258,5 @@
 .extern func_ov09_0211d090
 .extern func_ov45_0218a284
 .extern func_ov45_0218db94
+.extern gAdventureFlags
 .extern gItemManager

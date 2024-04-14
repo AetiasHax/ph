@@ -83,7 +83,6 @@
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
-.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0f84
 .extern data_027e0f90
@@ -474,4 +473,5 @@
 .extern func_ov34_0217bf0c
 .extern func_ov34_0217bf34
 .extern func_ov46_02193fac
+.extern gAdventureFlags
 .extern strncpy

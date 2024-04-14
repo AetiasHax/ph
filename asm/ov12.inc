@@ -105,7 +105,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f68
-.extern gAdventureFlags
 .extern data_027e0f84
 .extern data_027e0f90
 .extern data_027e0f94
@@ -758,6 +757,7 @@
 .extern func_ov61_02179ce4
 .extern func_ov61_02179ee4
 .extern func_ov61_02179f88
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern gPlayerAnimHandler

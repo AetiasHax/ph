@@ -112,7 +112,6 @@
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f70
-.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0f84
 .extern data_027e0f90
@@ -516,6 +515,7 @@
 .extern func_ov57_0219a6b8
 .extern func_ov57_0219a850
 .extern func_ov58_0219ab28
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern strcmp

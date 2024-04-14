@@ -4,6 +4,7 @@
 .extern _ZN11ItemManager13EquipShipPartEjj
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc
+.extern _ZN12ActorManager14Actor_vfunc_28Ev
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -43,7 +44,6 @@
 .extern data_027e0e58
 .extern data_027e0e60
 .extern data_027e0f64
-.extern gAdventureFlags
 .extern data_027e0f90
 .extern data_027e0fbc
 .extern data_027e0fe4
@@ -274,7 +274,6 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
-.extern _ZN12ActorManager14Actor_vfunc_28Ev
 .extern func_ov00_020cef40
 .extern func_ov00_020cf270
 .extern func_ov00_020cf330
@@ -451,6 +450,7 @@
 .extern func_ov17_021600f0
 .extern func_ov18_02160a74
 .extern func_ov29_0216dcf4
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern strcat

@@ -75,7 +75,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f6c
-.extern gAdventureFlags
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fa0
@@ -275,5 +274,6 @@
 .extern func_ov14_02146634
 .extern func_ov17_02168660
 .extern func_ov17_021687f0
+.extern gAdventureFlags
 .extern gItemManager
 .extern strncpy

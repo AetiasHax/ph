@@ -101,7 +101,6 @@
 .extern data_027e0e2c
 .extern data_027e0e60
 .extern data_027e0f64
-.extern gAdventureFlags
 .extern data_027e0f7c
 .extern data_027e0f80
 .extern data_027e0f84
@@ -418,6 +417,7 @@
 .extern func_ov16_021200fc
 .extern func_ov16_02120130
 .extern func_ov18_02169634
+.extern gAdventureFlags
 .extern gHeap
 .extern gItemManager
 .extern gOverlayManager

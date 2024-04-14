@@ -85,7 +85,6 @@
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
-.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0f84
 .extern data_027e0f94
@@ -400,6 +399,7 @@
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
 .extern func_ov14_0214aa2c
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern strcat
