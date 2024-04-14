@@ -23,9 +23,9 @@ contribute to this list!
 `16` | ---             | -    |
 `17` | ---             | 5    |
 `18` | ---             | 5    |
-`19` | ---             | -    |
-`20` | ---             | -    |
-`21` | ---             | -    |
+`19` | ---             | 6    |
+`20` | ---             | 6    |
+`21` | ---             | 6    |
 `22` | ---             | 6    |
 `23` | ---             | 6    |
 `24` | ---             | -    |
@@ -47,23 +47,23 @@ contribute to this list!
 `40` | ---             | 7    |
 `41` | ---             | 8    |
 `42` | ---             | -    |
-`43` | ---             | -    |
+`43` | ---             | 8    |
 `44` | ---             | 8    |
 `45` | ---             | 8    |
 `46` | ---             | 9    |
-`47` | ---             | -    |
+`47` | ---             | 9    |
 `48` | ---             | 9    |
 `49` | ---             | 9    |
 `50` | ---             | 10   |
 `51` | ---             | 10   |
 `52` | ---             | 10   |
-`53` | PlayerBoomerang | 11   | Handles the boomerang.
-`54` | PlayerScoop     | 11   | Handles the shovel.
-`55` | PlayerBomb      | 11   | Handles bombs and potions.
-`56` | PlayerBow       | 11   | Handles the bow.
-`57` | PlayerRope      | 11   | Handles the grappling hook.
-`58` | PlayerBombchu   | 11   | Handles bombchus.
-`59` | PlayerHammer    | 11   | Handles the hammer.
+`53` | Boomerang       | 11   | Handles the boomerang.
+`54` | Scoop           | 11   | Handles the shovel.
+`55` | Bomb            | 11   | Handles bombs and potions.
+`56` | Bow             | 11   | Handles the bow.
+`57` | Rope            | 11   | Handles the grappling hook.
+`58` | Bombchu         | 11   | Handles bombchus.
+`59` | Hammer          | 11   | Handles the hammer.
 `60` | ---             | 12   |
 `61` | ---             | 12   |
 

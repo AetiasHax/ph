@@ -12,14 +12,76 @@ translations. Feel free to contribute to this list!
 
  ID    | Translation  | Meaning
 -------|--------------|---------
+`SWOB`
+`EVIC`
 `NAVI` | Navi         | Spirit of Courage (Ciela)
 `FCNV` | Force Navi   | Spirit of Power (Leaf)
 `WSNV` | Wisdom Navi  | Spirit of Wisdom (Neri)
-`RUPY` | Rupee
+`ACOB`
+`EFWV` | Effect Wave?
+`EFRP` | Effect Ripple?
+`EFRL`
+`LOND`
+`FMSG` | F Message?
+`NMSG` | N Message?
+`CMSG` | C Message?
+`BTCH`
+`BTRF`
+`BTDC`
 `HART` | Heart
+`RUPY` | Rupee
 `BOMB` | Bomb
 `ARRW` | Arrow
-`AMOS` | Armos
-`CHUC` | Chuchu
-`BMOS` | Beamos
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
+`PSBL` | Push Block
+`DRUM`
+`NKEY`
+`WBSS`
+`MLDW` | Sandworm
+`FBSS`
+`FBS1`
+`VLRG`
+`TEKT` | Tektite
+`PLSV` | Pols Voice
+`YETI` | Yook
+`HPLP`
+`HLMK`
+`AMOS` | Armos
+`HNKS`
+`PMET`
+`STLF` | Stalfos
+`STLP`
+`STLW` | Stalfos Warrior
+`STLH`
+`CBS0`
+`EGST`
+`SPDR`
+`WTCR`
+`GO1M`
+`CHUC` | ChuChu
+`ICHC`
+`GELL` | Gel
+`BEE0` | Bee
+`BEEH` | Bee Hive
+`ICHH`
+`POON`
+`FLTB`
+`KOKO` | Cucco
+`GROK`
+`RYDM`
+`WSBS`
+`WSBH`
+`KMDB`
+`PBZK`
+`SNAK` | Rope | The purple snake enemy
+`RAT1`
+`OCTA` | Octorok
+`KETH` | Keese
+`RAT0` | Rat
+`FSHM`
+`BBLE` | Bubble?
+`BMOS` | Beamos
+`TAIL`
+`LKLK` | Like Like
+`CROW` | Crow
+`FIRS`
