@@ -26937,7 +26937,7 @@ _021506e6:
 	ldr r0, _02150764 ; =gItemManager
 	add r1, r4, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager8GiveItemEjjj
+	bl _ZN11ItemManager8GiveItemEi
 	ldr r2, _02150760 ; =data_027e1058
 	add r0, r5, #0
 	ldr r2, [r2]
@@ -26978,7 +26978,7 @@ _02150742:
 	ldr r0, _02150764 ; =gItemManager
 	add r1, r4, #0
 	ldr r0, [r0]
-	bl _ZN11ItemManager8GiveItemEjjj
+	bl _ZN11ItemManager8GiveItemEi
 _0215074c:
 	ldr r0, _02150764 ; =gItemManager
 	add r1, r4, #0

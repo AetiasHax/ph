@@ -300,7 +300,7 @@ public:
     bool HasItem(ItemFlag item) const;
     void AddItem(ItemFlag item);
     void RemoveItem(ItemFlag item);
-    void GiveItem(ItemId id, unk32 param2, unk32 param3);
+    void GiveItem(ItemId id);
     void GiveEquipItem(ItemFlag item, u16 ammo);
 
     // Rupees

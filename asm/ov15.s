@@ -44538,7 +44538,7 @@ _0214531c:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _02145334:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
@@ -44602,7 +44602,7 @@ _021453f8:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, #0x26
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _0214541c:
 	bl func_ov15_021465e8
 _02145420:
@@ -88238,7 +88238,7 @@ _0216a8e8:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _0216a8f8:
 	bl func_ov15_02146578
 	mov r1, r0

@@ -12,7 +12,7 @@
 .extern _ZN11ItemManager17EquipPreviousItemEv
 .extern _ZN11ItemManager18EquipItem_vfunc_38Ei
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
-.extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN11ItemManager8GiveItemEi
 .extern _ZN11ItemManager9SetPotionEjj
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
 .extern _ZN15LinkStateDamage18func_ov00_020aca94Ev

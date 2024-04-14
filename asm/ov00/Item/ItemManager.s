@@ -3,9 +3,9 @@
 
 	.text
 
-	.global _ZN11ItemManager8GiveItemEjjj
-	thumb_func_start _ZN11ItemManager8GiveItemEjjj
-_ZN11ItemManager8GiveItemEjjj: ; 0x020adcdc
+	.global _ZN11ItemManager8GiveItemEi
+	thumb_func_start _ZN11ItemManager8GiveItemEi
+_ZN11ItemManager8GiveItemEi: ; 0x020adcdc
 	push {r3, r4, r5, lr}
 	cmp r1, #0x76
 	bgt _020addd2
@@ -182,7 +182,7 @@ _020addfc:
 _020addfe:
 	cmp r1, #0x7b
 	bne _020ade04
-	thumb_func_end _ZN11ItemManager8GiveItemEjjj
+	thumb_func_end _ZN11ItemManager8GiveItemEi
 _020ade02:
 	b _020ae198
 _020ade04:

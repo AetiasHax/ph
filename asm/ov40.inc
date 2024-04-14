@@ -2,7 +2,7 @@
 .extern Divide
 .extern FastDivide
 .extern _ZN11ItemManager7AddItemEi
-.extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN11ItemManager8GiveItemEi
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager7HasItemEi

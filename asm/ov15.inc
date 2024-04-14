@@ -15,7 +15,7 @@
 .extern _ZN11ItemManager18func_ov00_020ad528Ev
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern _ZN11ItemManager19SetTreasureSalvagedEj
-.extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN11ItemManager8GiveItemEi
 .extern _ZN13PlayerControl11IsTappedNowEv
 .extern _ZN13PlayerControl13IsNotTouchingEv
 .extern _ZN13PlayerControl13StopFollowingEv

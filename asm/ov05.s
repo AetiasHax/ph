@@ -10646,7 +10646,7 @@ _0210989c:
 	ldr r0, _021099cc ; =gItemManager
 	ldr r1, [r5, #0x74]
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _021098bc:
 	mov r0, r4
 	blx _ZN4Item18func_ov00_020ad020Ei
