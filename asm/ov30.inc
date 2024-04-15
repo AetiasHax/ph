@@ -148,9 +148,9 @@
 .extern func_ov00_02087d34
 .extern func_ov00_020884b4
 .extern func_ov00_02093a1c
-.extern func_ov00_02097760
-.extern func_ov00_0209779c
-.extern func_ov00_02098058
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a5e9c

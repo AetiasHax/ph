@@ -139,7 +139,7 @@
 .extern func_ov00_02083588
 .extern func_ov00_020849c0
 .extern func_ov00_02088074
-.extern func_ov00_02097c50
+.extern _ZN14AdventureFlags15Get_FlagsUnk_48Ei
 .extern func_ov00_0209d738
 .extern func_ov00_0209d758
 .extern func_ov00_0209d768

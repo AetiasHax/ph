@@ -3665,7 +3665,7 @@ _0217f0ac:
 	ldr r0, _0217f11c ; =gAdventureFlags
 	mov r1, #0xf
 	ldr r0, [r0]
-	bl func_ov00_02097968
+	bl _ZN14AdventureFlags18func_ov00_02097968Ei
 	mov r0, r4
 	bl func_ov00_020cc960
 	mov r0, r4

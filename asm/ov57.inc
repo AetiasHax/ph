@@ -60,7 +60,7 @@
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c
 .extern func_ov00_02093a1c
-.extern func_ov00_02097738
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern func_ov00_020b1d3c
 .extern func_ov00_020b41c4
 .extern func_ov00_020bba28

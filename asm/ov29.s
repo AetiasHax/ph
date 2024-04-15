@@ -630,7 +630,7 @@ func_ov29_0216ddb0: ; 0x0216ddb0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	ldr r0, _0216dfec ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	addne sp, sp, #4
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, pc}
@@ -11287,7 +11287,7 @@ func_ov29_02176ea8: ; 0x02176ea8
 	ldr r1, _02176fac ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}

@@ -140,7 +140,7 @@
 .extern func_ov00_0208cd48
 .extern func_ov00_02093a5c
 .extern func_ov00_02094824
-.extern func_ov00_02097760
+.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

@@ -187,13 +187,13 @@ _ZN13LinkStateItem18func_ov00_020abf70Ev: ; 0x020abf70
 	ldr r1, _020abf88 ; =gAdventureFlags
 	mov r2, r0
 	ldr r0, [r1]
-	ldr ip, _020abf8c ; =func_ov00_02097b9c
+	ldr ip, _020abf8c ; =_ZN14AdventureFlags18func_ov00_02097b9cEv
 	ldr r1, [r2, #0x5c]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN13LinkStateItem18func_ov00_020abf70Ev
 _020abf88: .word gAdventureFlags
-_020abf8c: .word func_ov00_02097b9c
+_020abf8c: .word _ZN14AdventureFlags18func_ov00_02097b9cEv
 
 	.global _ZN13LinkStateItem8vfunc_28Ev
 	arm_func_start _ZN13LinkStateItem8vfunc_28Ev

@@ -158,8 +158,8 @@
 .extern func_ov00_020875f8
 .extern func_ov00_020888e8
 .extern func_ov00_0208b180
-.extern func_ov00_02097760
-.extern func_ov00_0209779c
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a9588
 .extern func_ov00_020bc500
 .extern func_ov00_020bcdec

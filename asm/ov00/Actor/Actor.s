@@ -805,7 +805,7 @@ _ZN5Actor18func_ov00_020c1d58Ev: ; 0x020c1d58
 	stmdb sp!, {r3, lr}
 	ldr r0, _020c1d98 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r3, pc}
@@ -998,7 +998,7 @@ _ZN5Actor18func_ov00_020c1fc8Ej: ; 0x020c1fc8
 	mov r4, r0
 	ldr r0, [r2]
 	mov r6, r1
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	addne sp, sp, #0x6c
 	movne r0, #0
@@ -1326,7 +1326,7 @@ _ZN5Actor18func_ov00_020c243cEiPi: ; 0x020c243c
 	ldr r0, _020c26f0 ; =gAdventureFlags
 	mov r5, r1
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	addne sp, sp, #0x18
 	movne r0, #0

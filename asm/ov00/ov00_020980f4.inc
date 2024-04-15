@@ -312,9 +312,9 @@
 .extern func_ov00_02090f24
 .extern func_ov00_02090f74
 .extern func_ov00_0209320c
-.extern func_ov00_02097628
-.extern func_ov00_02097760
-.extern func_ov00_0209779c
+.extern _ZN14AdventureFlags6ExistsEv
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a956c
 .extern func_ov00_020a95ec
 .extern func_ov00_020a960c

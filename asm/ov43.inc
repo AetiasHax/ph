@@ -101,9 +101,9 @@
 .extern func_ov00_02083770
 .extern func_ov00_02087d34
 .extern func_ov00_02093a1c
-.extern func_ov00_02097810
-.extern func_ov00_02097b9c
-.extern func_ov00_02097bcc
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a9588

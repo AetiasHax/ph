@@ -594,7 +594,7 @@ _020ac698:
 	ldr r0, [r0]
 	mov r2, r1
 	mov r3, #0
-	bl func_ov00_02097ff4
+	bl _ZN14AdventureFlags18func_ov00_02097ff4Ebb
 _020ac6c8:
 	mov r0, r4
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
@@ -793,14 +793,14 @@ _020ac930:
 	ldr r0, _020ac9e0 ; =gAdventureFlags
 	mov r1, #0xff
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	beq _020ac9bc
 	ldr r0, _020ac9e0 ; =gAdventureFlags
 	mov r1, #0xf
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_0209779c
+	bl _ZN14AdventureFlags3SetEjb
 _020ac9bc:
 	cmp r4, #5
 	movne r0, #0

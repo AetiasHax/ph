@@ -1035,7 +1035,7 @@ _02199a44:
 	ldmneia sp!, {r4, r5, pc}
 	ldr r0, _02199ac8 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	addne sp, sp, #0x74
 	ldmneia sp!, {r4, r5, pc}

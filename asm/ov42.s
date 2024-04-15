@@ -2158,7 +2158,7 @@ _0218b0a4:
 	ldr r0, _0218b0d8 ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	mov r0, #0x65
 	beq _0218b0cc

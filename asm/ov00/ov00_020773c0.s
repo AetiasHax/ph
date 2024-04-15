@@ -3376,7 +3376,7 @@ func_ov00_02078b88: ; 0x02078b88
     bge _02078bb8
     ldr r0, _02078bc0 ; =gAdventureFlags
     ldr r0, [r0]
-    bl func_ov00_02097c50
+    bl _ZN14AdventureFlags15Get_FlagsUnk_48Ei
     cmp r0, #0
     movne r0, #1
     ldmneia sp!, {r3, pc}

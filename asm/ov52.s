@@ -93,12 +93,12 @@ func_ov52_021955e4: ; 0x021955e4
 	ldmneia sp!, {r3, pc}
 	ldr r0, _02195640 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	ldmneia sp!, {r3, pc}
 	ldr r0, _02195640 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097750
+	bl _ZN14AdventureFlags18func_ov00_02097750Ev
 	cmp r0, #0
 	ldmneia sp!, {r3, pc}
 	ldr r0, _02195644 ; =data_ov52_02197c40
@@ -339,7 +339,7 @@ func_ov52_02195870: ; 0x02195870
 	mov r1, #0x100
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_0209779c
+	bl _ZN14AdventureFlags3SetEjb
 	mov r0, #1
 	strb r0, [r4, #0x12]
 	ldmia sp!, {r4, pc}
@@ -391,7 +391,7 @@ func_ov52_02195908: ; 0x02195908
 	ldr r0, [r1]
 	mov r1, #0x100
 	mov r2, #0
-	bl func_ov00_0209779c
+	bl _ZN14AdventureFlags3SetEjb
 	mov r0, r4
 	bl func_ov52_021958a0
 	mov r2, #1
@@ -626,7 +626,7 @@ _02195c5c:
 	ldmneia sp!, {r4, pc}
 	ldr r0, _02195d24 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	ldr r0, _02195d20 ; =data_027e0e60
@@ -735,7 +735,7 @@ func_ov52_02195da0: ; 0x02195da0
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
 	ldr r0, _02196108 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	beq _02195dec
 	bl func_ov03_020fb44c
@@ -1013,14 +1013,14 @@ func_ov52_02196198: ; 0x02196198
 	ldr r0, _021963fc ; =gAdventureFlags
 	ldr r1, _02196400 ; =0x0000011d
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	bne _021961e4
 	ldr r0, _021963fc ; =gAdventureFlags
 	ldr r1, _02196400 ; =0x0000011d
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_0209779c
+	bl _ZN14AdventureFlags3SetEjb
 	mov r4, #0x2a
 	b _021963a4
 _021961e4:
@@ -2020,7 +2020,7 @@ func_ov52_02196ea8: ; 0x02196ea8
 	ldr r0, [r1]
 	mov r1, #0x9f
 	mov r2, #0
-	bl func_ov00_0209779c
+	bl _ZN14AdventureFlags3SetEjb
 	mov r1, #0x46
 	mov r2, r1
 	add r0, r4, #0x1d8
@@ -2066,7 +2066,7 @@ _02196f6c:
 	ldr r0, _0219706c ; =gAdventureFlags
 	mov r1, #0x100
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	bne _02196fa4
 	bl func_ov52_02195754
@@ -2372,7 +2372,7 @@ func_ov52_02197330: ; 0x02197330
 	ldr r0, _021973b0 ; =gAdventureFlags
 	mov r1, #0x9e
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	beq _021973a0
 	ldr r0, _021973b4 ; =data_ov09_0211f5b4
@@ -2438,7 +2438,7 @@ func_ov52_021973f8: ; 0x021973f8
 	ldr r0, _02197490 ; =gAdventureFlags
 	mov r1, #0x9e
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	beq _02197480
 	ldr r0, _02197494 ; =data_ov09_0211f5b4
@@ -2504,7 +2504,7 @@ func_ov52_021974e0: ; 0x021974e0
 	ldr r0, _02197560 ; =gAdventureFlags
 	mov r1, #0x9e
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	beq _02197550
 	ldr r0, _02197564 ; =data_ov09_0211f5b4
@@ -2534,7 +2534,7 @@ func_ov52_02197568: ; 0x02197568
 	ldr r0, _021975b4 ; =gAdventureFlags
 	mov r1, #0x9f
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	ldrne r0, _021975b8 ; =0x00870006
 	ldmneia sp!, {r4, pc}

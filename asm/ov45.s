@@ -216,7 +216,7 @@ func_ov45_02189764: ; 0x02189764
 	ldr r0, _0218988c ; =gAdventureFlags
 	ldr r1, _02189890 ; =0x0000010a
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	mov r0, r4
 	beq _02189868
@@ -1717,7 +1717,7 @@ func_ov45_0218aaf8: ; 0x0218aaf8
 	ldr r0, _0218ab48 ; =gAdventureFlags
 	mov r1, #0x15
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
@@ -2249,7 +2249,7 @@ func_ov45_0218b100: ; 0x0218b100
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0x15
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}

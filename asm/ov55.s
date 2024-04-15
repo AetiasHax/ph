@@ -691,7 +691,7 @@ _021994d4:
 	strb r3, [sp, #0x11b]
 	strb r2, [sp, #0x11c]
 	str fp, [sp, #0x120]
-	bl func_ov00_02097810
+	bl _ZN14AdventureFlags18func_Ov00_02097810Ei
 	ldr r2, _02199650 ; =data_027e103c
 	str r0, [r4, #0x5c]
 	mov r1, #1
@@ -725,7 +725,7 @@ func_ov55_02199654: ; 0x02199654
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, [r4, #0x5c]
-	bl func_ov00_02097b9c
+	bl _ZN14AdventureFlags18func_ov00_02097b9cEv
 	cmp r0, #0
 	addeq sp, sp, #0x68
 	ldmeqia sp!, {r4, pc}
@@ -760,7 +760,7 @@ _021996d4:
 	ldr r0, _02199794 ; =gAdventureFlags
 	ldr r1, [r4, #0x5c]
 	ldr r0, [r0]
-	bl func_ov00_02097bcc
+	bl _ZN14AdventureFlags18func_ov00_02097bccEv
 	mvn r2, #0
 	mov r0, r4
 	mov r1, #0

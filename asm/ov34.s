@@ -903,7 +903,7 @@ _0217c950:
 	ldr r0, _0217cde8 ; =gAdventureFlags
 	mov r1, #0xd
 	ldr r0, [r0]
-	bl func_ov00_02097c18
+	bl _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
 	cmp r0, #0
 	beq _0217c998
 	ldrb r0, [r5, #0x2b]
@@ -7547,7 +7547,7 @@ _02182814:
 	ldr r0, _02182afc ; =gAdventureFlags
 	mov r1, #0xd
 	ldr r0, [r0]
-	bl func_ov00_02097968
+	bl _ZN14AdventureFlags18func_ov00_02097968Ei
 _02182848:
 	add r0, r4, #0xf8
 	add r0, r0, #0x1c00

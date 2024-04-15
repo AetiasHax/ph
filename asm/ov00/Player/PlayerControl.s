@@ -219,7 +219,7 @@ _ZN13PlayerControl18func_ov00_020af06cEv: ; 0x020af06c
 	ldr r0, _020af27c ; =gAdventureFlags
 	strneb r5, [r6, #0x7b]
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	ldreq r0, _020af280 ; =data_027e0c68
 	ldreqb r0, [r0, #4]
@@ -588,7 +588,7 @@ _ZN13PlayerControl18func_ov00_020af538Ev: ; 0x020af538
 	beq _020af57c
 	ldr r0, _020af6c4 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	ldreq r0, _020af6c8 ; =data_027e0c68
 	ldreqb r0, [r0, #4]
@@ -754,12 +754,12 @@ _ZN13PlayerControl18func_ov00_020af778Ev: ; 0x020af778
 	beq _020af7b8
 	ldr r0, _020afabc ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	bne _020af7b8
 	ldr r0, _020afabc ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097750
+	bl _ZN14AdventureFlags18func_ov00_02097750Ev
 	cmp r0, #0
 	beq _020af7cc
 _020af7b8:

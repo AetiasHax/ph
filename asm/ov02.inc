@@ -123,7 +123,7 @@
 .extern func_ov00_0208df74
 .extern func_ov00_0208e420
 .extern func_ov00_0208e4f4
-.extern func_ov00_02097760
+.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_0209cd80
 .extern func_ov00_020a19fc
 .extern func_ov00_020a1a24

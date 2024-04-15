@@ -25,7 +25,7 @@
 .extern func_ov00_02083ee0
 .extern func_ov00_0208ae94
 .extern func_ov00_0208f030
-.extern func_ov00_02097700
+.extern _ZN14AdventureFlags18func_ov00_02097700Ev
 .extern _ZN12ActorManager14Actor_vfunc_10Ej
 .extern func_ov04_0210b258
 .extern func_ov04_0210b280

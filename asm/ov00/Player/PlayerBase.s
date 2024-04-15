@@ -371,7 +371,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	bl func_ov00_02082af4
 	ldr r0, _020a7f80 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097700
+	bl _ZN14AdventureFlags18func_ov00_02097700Ev
 _020a7f40:
 	ldrb r0, [sp, #0x1c]
 	cmp r0, #0

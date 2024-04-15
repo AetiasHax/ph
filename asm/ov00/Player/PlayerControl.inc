@@ -52,8 +52,8 @@
 .extern func_ov00_02085108
 .extern func_ov00_02085594
 .extern func_ov00_0208b180
-.extern func_ov00_02097738
-.extern func_ov00_02097750
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
 .extern func_ov00_020a5e9c
 .extern func_ov00_020b78a0
 .extern func_ov00_020b7924

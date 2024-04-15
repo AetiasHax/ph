@@ -128,10 +128,10 @@
 .extern func_ov00_020838e8
 .extern func_ov00_02084b38
 .extern func_ov00_0208d01c
-.extern func_ov00_02097738
-.extern func_ov00_02097750
-.extern func_ov00_02097760
-.extern func_ov00_0209779c
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
 .extern func_ov00_020a9acc

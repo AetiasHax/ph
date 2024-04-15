@@ -32,7 +32,7 @@
 .extern func_0202e58c
 .extern func_ov00_0207c5d4
 .extern func_ov00_0208b180
-.extern func_ov00_02097bbc
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
 .extern func_ov00_020a5e9c
 .extern func_ov00_020b1498
 .extern func_ov00_020b1a4c
