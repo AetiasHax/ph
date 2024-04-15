@@ -73,4 +73,6 @@ class PlayerLinkBase: public PlayerBase {
     /* 80 */ virtual void SetUnk_5e();
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
+    public:
+        bool PlayItemCutscene(ItemId cutsceneItemId);
 };

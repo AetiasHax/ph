@@ -11,8 +11,26 @@
 #include "Physics/Transform.hpp"
 #include "Player/EquipBoomerang.hpp"
 
+class Actor_UnkStruct_012 {
+    public:
+        /* 00 */ u16 mUnk_00;
+        /* 02 */ u8 mUnk_02;
+        /* 03 */ u8 mUnk_03;
+        /* 04 */ u32 mUnk_04;
+        /* 08 */ u32 mUnk_08;
+        /* 0c */ u32 mUnk_0c;
+        /* 10 */ u8 mUnk_10;
+        /* 11 */ u8 mUnk_11;
+        /* 12 */ u8 mUnk_12[0x2];
+        /* 14 */ u32 mUnk_14;
+        /* 18 */ u32 mUnk_18;
+        /* 1c */
+
+        Actor_UnkStruct_012();
+};
+
 struct Actor_UnkStruct_020 {
-    /* 00 */ unk16 mUnk_00[4];
+    /* 00 */ u16 mUnk_00[4];
     /* 08 */ unk8 mUnk_08[2];
     /* 0a */ unk8 mUnk_0a[2];
     /* 0c */ unk8 mUnk_0c;
@@ -24,7 +42,7 @@ struct Actor_UnkStruct_020 {
 };
 
 struct Actor_UnkStruct_09c {
-    /* 0 */ unk16 mUnk_0;
+    /* 0 */ u16 mUnk_0;
     /* 2 */ unk8 mUnk_2;
     /* 3 */ unk8 mUnk_3;
     /* 4 */ unk32 mUnk_4;
@@ -36,8 +54,8 @@ struct Actor_UnkStruct_09c {
 struct Actor_UnkStruct_0a4 {
     /* 00 */ bool mUnk_00;
     /* 01 */ bool mUnk_01;
-    /* 01 */ bool mUnk_02;
-    /* 01 */ bool mUnk_03;
+    /* 02 */ bool mUnk_02;
+    /* 03 */ bool mUnk_03;
     /* 04 */ Vec3p mUnk_04;
     /* 10 */ s32 mUnk_10;
     /* 14 */
@@ -58,9 +76,15 @@ enum PlayerCollide_ {
     PlayerCollide_Shield = 0x4,
     PlayerCollide_Gongoron = 0x8,
     PlayerCollide_Hammer = 0x10,
+    
+    PlayerCollide_PickupFlags = PlayerCollide_Hammer | PlayerCollide_Gongoron | PlayerCollide_Sword | PlayerCollide_Player,
 };
 
-class Actor {
+#include "System/SysNew.hpp"
+
+#include "Item/Item.hpp"
+
+class Actor : public SysObject {
 public:
     /* 000 (vtable) */
     /* 004 */ unk32 mType;
@@ -103,7 +127,7 @@ public:
     /* 109 */ unk8 mUnk_109;
     /* 10a */ unk8 mUnk_10a[0x6];
     /* 110 */ unk8 mUnk_110;
-    /* 111 */ unk8 mUnk_111;
+    /* 111 */ bool mUnk_111;
     /* 112 */ unk8 mUnk_112;
     /* 113 */ unk8 mUnk_113;
     /* 114 */ unk8 mUnk_114;
