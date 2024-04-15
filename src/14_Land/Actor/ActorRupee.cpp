@@ -355,15 +355,10 @@ void ActorRupee::vfunc_18(bool param1) {
     func_ov00_0207a1c8(&mUnk_0a4.mUnk_00, param1, &mPos);
 }
 
+#define VFUNC20_COND (param1 ? mUnk_0a4.mUnk_01 : mUnk_0a4.mUnk_00)
 void ActorRupee::vfunc_20(bool param1) {
-    if (param1 ? mUnk_0a4.mUnk_01 : mUnk_0a4.mUnk_00) {
-        if (mUnk_130 == 2 && mActiveFrames % 8 < 4) {
-            return;
-        }
-
-        if (param1 ? mUnk_0a4.mUnk_01 : mUnk_0a4.mUnk_00) {
-            func_ov14_0213b5f4(mRupeeId, param1, &mPos, true);
-        }
+    if (VFUNC20_COND && !(mUnk_130 == 2 && mActiveFrames % 8 < 4) && VFUNC20_COND) {
+        func_ov14_0213b5f4(mRupeeId, param1, &mPos, true);
     }
 }
 
