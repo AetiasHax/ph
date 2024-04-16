@@ -1033,9 +1033,9 @@ _02199a44:
 	cmp r4, #0
 	addne sp, sp, #0x74
 	ldmneia sp!, {r4, r5, pc}
-	ldr r0, _02199ac8 ; =data_027e0f74
+	ldr r0, _02199ac8 ; =gAdventureFlags
 	ldr r0, [r0]
-	bl func_ov00_02097738
+	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	addne sp, sp, #0x74
 	ldmneia sp!, {r4, r5, pc}
@@ -1065,7 +1065,7 @@ _02199a44:
 _02199abc: .word data_ov57_0219a994
 _02199ac0: .word data_02050f54
 _02199ac4: .word data_027e03c8
-_02199ac8: .word data_027e0f74
+_02199ac8: .word gAdventureFlags
 _02199acc: .word data_027e0de4
 _02199ad0: .word func_ov57_021990ec
 _02199ad4: .word func_ov57_021990f8

@@ -900,10 +900,10 @@ func_ov34_0217c920: ; 0x0217c920
 	movne r0, #0
 	ldmneia sp!, {r3, r4, r5, r6, r7, pc}
 _0217c950:
-	ldr r0, _0217cde8 ; =data_027e0f74
+	ldr r0, _0217cde8 ; =gAdventureFlags
 	mov r1, #0xd
 	ldr r0, [r0]
-	bl func_ov00_02097c18
+	bl _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
 	cmp r0, #0
 	beq _0217c998
 	ldrb r0, [r5, #0x2b]
@@ -1205,7 +1205,7 @@ _0217cd8c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov34_0217c920
-_0217cde8: .word data_027e0f74
+_0217cde8: .word gAdventureFlags
 _0217cdec: .word 0x00001e66
 _0217cdf0: .word data_027e0d0c
 _0217cdf4: .word data_ov34_021861a0
@@ -7544,10 +7544,10 @@ _02182814:
 	ldr r1, [r1, #0x54]
 	cmp r1, r0
 	bne _02182848
-	ldr r0, _02182afc ; =data_027e0f74
+	ldr r0, _02182afc ; =gAdventureFlags
 	mov r1, #0xd
 	ldr r0, [r0]
-	bl func_ov00_02097968
+	bl _ZN14AdventureFlags18func_ov00_02097968Ei
 _02182848:
 	add r0, r4, #0xf8
 	add r0, r0, #0x1c00
@@ -7729,7 +7729,7 @@ _02182aec: .word 0x00003b33
 _02182af0: .word 0x00001003
 _02182af4: .word data_027e0e58
 _02182af8: .word data_ov34_021861a0
-_02182afc: .word data_027e0f74
+_02182afc: .word gAdventureFlags
 _02182b00: .word 0x00001005
 _02182b04: .word 0x00001006
 _02182b08: .word 0x00001004

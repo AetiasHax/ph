@@ -5,6 +5,10 @@
 .extern _ZN11ItemManager15LoadFanfareItemEj
 .extern _ZN11ItemManager18func_ov00_020ae648Ejjj
 .extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN12ActorManager11DeleteActorEjb
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager13FindActorByIdEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase10GetStateIdEv
 .extern _ZN13LinkStateBase12ApplyImpulseEii
 .extern _ZN13LinkStateBase12GetEquipItemEi
@@ -114,6 +118,7 @@
 .extern _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 .extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 .extern _ZN4Item18func_ov00_020ad020Ei
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN9SysObjectdlEPv
 .extern _ZNK11ItemManager13HasAllPotionsEv
 .extern _ZNK11ItemManager15HasPurplePotionEv
@@ -159,7 +164,6 @@
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f70
-.extern data_027e0f74
 .extern data_027e0f78
 .extern data_027e0f7c
 .extern data_027e0f88
@@ -369,12 +373,12 @@
 .extern func_ov00_0208cb84
 .extern func_ov00_0208df2c
 .extern func_ov00_02095fe0
-.extern func_ov00_02097738
-.extern func_ov00_02097750
-.extern func_ov00_02097760
-.extern func_ov00_02097810
-.extern func_ov00_02097bbc
-.extern func_ov00_02097ff4
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097ff4Ebb
 .extern func_ov00_020981b8
 .extern func_ov00_02098694
 .extern func_ov00_02098890
@@ -440,11 +444,6 @@
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
 .extern func_ov00_020c1500
-.extern _ZN5Actor9GetHitboxEP8Cylinder
-.extern _ZN12ActorManager11DeleteActorEjb
-.extern _ZN12ActorManager13FindActorByIdEj
-.extern _ZN12ActorManager8GetActorEP8ActorRef
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern func_ov00_020c3eb0
 .extern func_ov00_020ce2f0
 .extern func_ov00_020ce8e4
@@ -576,6 +575,7 @@
 .extern func_ov58_0219a5c8
 .extern func_ov59_0219907c
 .extern func_ov59_021990a4
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern strcmp

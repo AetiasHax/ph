@@ -2155,10 +2155,10 @@ func_ov42_0218b084: ; 0x0218b084
 	bl func_ov42_0218b0dc
 	ldmia sp!, {r3, pc}
 _0218b0a4:
-	ldr r0, _0218b0d8 ; =data_027e0f74
+	ldr r0, _0218b0d8 ; =gAdventureFlags
 	mov r1, #0x1f
 	ldr r0, [r0]
-	bl func_ov00_02097760
+	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
 	mov r0, #0x65
 	beq _0218b0cc
@@ -2171,7 +2171,7 @@ _0218b0cc:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov42_0218b084
-_0218b0d8: .word data_027e0f74
+_0218b0d8: .word gAdventureFlags
 
 	.global func_ov42_0218b0dc
 	arm_func_start func_ov42_0218b0dc

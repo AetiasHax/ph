@@ -3374,9 +3374,9 @@ func_ov00_02078b88: ; 0x02078b88
     blt _02078bb8
     cmp r1, #0x21
     bge _02078bb8
-    ldr r0, _02078bc0 ; =data_027e0f74
+    ldr r0, _02078bc0 ; =gAdventureFlags
     ldr r0, [r0]
-    bl func_ov00_02097c50
+    bl _ZN14AdventureFlags15Get_FlagsUnk_48Ei
     cmp r0, #0
     movne r0, #1
     ldmneia sp!, {r3, pc}
@@ -3385,7 +3385,7 @@ _02078bb8:
     ldmia sp!, {r3, pc}
     .align 2, 0
     arm_func_end func_ov00_02078b88
-_02078bc0: .word data_027e0f74
+_02078bc0: .word gAdventureFlags
 
     .global func_ov00_02078bc4
     thumb_func_start func_ov00_02078bc4

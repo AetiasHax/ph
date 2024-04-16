@@ -660,7 +660,7 @@ _021994d4:
 	str r1, [sp, #0x100]
 	ldr r1, [sp, #0x78]
 	str r0, [sp, #0x110]
-	ldr r0, _0219964c ; =data_027e0f74
+	ldr r0, _0219964c ; =gAdventureFlags
 	ldrb r5, [sp, #0x84]
 	ldrb lr, [sp, #0x85]
 	ldrb ip, [sp, #0x86]
@@ -691,7 +691,7 @@ _021994d4:
 	strb r3, [sp, #0x11b]
 	strb r2, [sp, #0x11c]
 	str r11, [sp, #0x120]
-	bl func_ov00_02097810
+	bl _ZN14AdventureFlags18func_Ov00_02097810Ei
 	ldr r2, _02199650 ; =data_027e103c
 	str r0, [r4, #0x5c]
 	mov r1, #1
@@ -713,7 +713,7 @@ _0219963c: .word data_027e0c54
 _02199640: .word data_027e0e60
 _02199644: .word 0x0000105b
 _02199648: .word 0x0000038e
-_0219964c: .word data_027e0f74
+_0219964c: .word gAdventureFlags
 _02199650: .word data_027e103c
 
 	.global func_ov55_02199654
@@ -721,11 +721,11 @@ _02199650: .word data_027e103c
 func_ov55_02199654: ; 0x02199654
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x68
-	ldr r1, _02199794 ; =data_027e0f74
+	ldr r1, _02199794 ; =gAdventureFlags
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, [r4, #0x5c]
-	bl func_ov00_02097b9c
+	bl _ZN14AdventureFlags18func_ov00_02097b9cEv
 	cmp r0, #0
 	addeq sp, sp, #0x68
 	ldmeqia sp!, {r4, pc}
@@ -757,10 +757,10 @@ _021996d4:
 	bl _ZN13LinkStateBase18func_ov00_020a8b3cEi
 	cmp r0, #0
 	beq _02199714
-	ldr r0, _02199794 ; =data_027e0f74
+	ldr r0, _02199794 ; =gAdventureFlags
 	ldr r1, [r4, #0x5c]
 	ldr r0, [r0]
-	bl func_ov00_02097bcc
+	bl _ZN14AdventureFlags18func_ov00_02097bccEv
 	mvn r2, #0
 	mov r0, r4
 	mov r1, #0
@@ -806,7 +806,7 @@ _02199784:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov55_02199654
-_02199794: .word data_027e0f74
+_02199794: .word gAdventureFlags
 _02199798: .word data_027e0f64
 _0219979c: .word 0x00000e39
 _021997a0: .word data_ov55_02199890

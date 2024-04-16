@@ -8,7 +8,7 @@
 .extern data_027e0e58
 .extern data_027e0e60
 .extern data_027e0f64
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f94
 .extern data_027e0fa0
 .extern data_027e0fac
@@ -25,7 +25,7 @@
 .extern func_ov00_02083ee0
 .extern func_ov00_0208ae94
 .extern func_ov00_0208f030
-.extern func_ov00_02097700
+.extern _ZN14AdventureFlags18func_ov00_02097700Ev
 .extern _ZN12ActorManager14Actor_vfunc_10Ej
 .extern func_ov04_0210b258
 .extern func_ov04_0210b280

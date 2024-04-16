@@ -2,6 +2,7 @@
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager17EquipPreviousItemEv
 .extern _ZN11ItemManager9SetPotionEjj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
@@ -22,7 +23,6 @@
 .extern data_027e0c54
 .extern data_027e0e60
 .extern data_027e0f64
-.extern data_027e0f74
 .extern data_027e0f90
 .extern data_027e0fb8
 .extern data_027e0fcc
@@ -39,9 +39,9 @@
 .extern func_0204f8d4
 .extern func_ov00_02083f44
 .extern func_ov00_02087d34
-.extern func_ov00_02097810
-.extern func_ov00_02097b9c
-.extern func_ov00_02097bcc
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a9588
@@ -57,7 +57,6 @@
 .extern func_ov00_020c0d68
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048
 .extern func_ov00_020cf9dc
 .extern func_ov00_020d71a0
@@ -65,4 +64,5 @@
 .extern func_ov05_02103ff0
 .extern func_ov05_0210f808
 .extern func_ov05_02110228
+.extern gAdventureFlags
 .extern gItemManager

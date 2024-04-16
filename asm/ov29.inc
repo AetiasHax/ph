@@ -81,7 +81,7 @@
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
-.extern data_027e0f74
+.extern gAdventureFlags
 .extern data_027e0f84
 .extern data_027e0f90
 .extern data_027e0f94
@@ -235,7 +235,7 @@
 .extern func_ov00_02093a5c
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
-.extern func_ov00_02097738
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a61ac
 .extern func_ov00_020a9588
