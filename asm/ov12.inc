@@ -105,7 +105,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f68
-.extern data_027e0f74
 .extern data_027e0f84
 .extern data_027e0f90
 .extern data_027e0f94
@@ -433,11 +432,11 @@
 .extern func_ov00_02090e10
 .extern func_ov00_02090f64
 .extern func_ov00_02094824
-.extern func_ov00_02097738
-.extern func_ov00_02097750
-.extern func_ov00_02097810
-.extern func_ov00_02097bbc
-.extern func_ov00_02097bcc
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a61ac
@@ -758,6 +757,7 @@
 .extern func_ov61_02179ce4
 .extern func_ov61_02179ee4
 .extern func_ov61_02179f88
+.extern gAdventureFlags
 .extern gItemManager
 .extern gOverlayManager
 .extern gPlayerAnimHandler

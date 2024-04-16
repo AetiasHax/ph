@@ -30,7 +30,6 @@
 .extern data_027e0d44
 .extern data_027e0d78
 .extern data_027e0e60
-.extern data_027e0f74
 .extern data_027e0f88
 .extern data_027e0f8c
 .extern data_027e0fbc
@@ -124,7 +123,7 @@
 .extern func_ov00_0208df74
 .extern func_ov00_0208e420
 .extern func_ov00_0208e4f4
-.extern func_ov00_02097760
+.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_0209cd80
 .extern func_ov00_020a19fc
 .extern func_ov00_020a1a24
@@ -259,4 +258,5 @@
 .extern func_ov09_0211d090
 .extern func_ov45_0218a284
 .extern func_ov45_0218db94
+.extern gAdventureFlags
 .extern gItemManager

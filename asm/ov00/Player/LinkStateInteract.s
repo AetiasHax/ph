@@ -483,7 +483,7 @@ _020aa840: .word gItemManager
 	.global _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x2c
 	mov r4, r1
 	mov r5, r0
@@ -506,7 +506,7 @@ _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
 	ldr r3, _020aabd0 ; =data_02050f54
 	mov r1, r0, lsl #0x1
 	ldrsh r1, [r3, r1]
-	ldrsh sb, [r3, r2]
+	ldrsh r9, [r3, r2]
 	ldr r6, [sp, #0x20]
 	str r1, [sp]
 	mov r1, r1, asr #0x1f
@@ -524,16 +524,16 @@ _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
 	str r1, [sp, #0xc]
 	ldr r7, [sp, #0x28]
 	orr r2, r2, r3, lsl #20
-	smull r4, r3, r7, sb
+	smull r4, r3, r7, r9
 	adds r4, r4, #0x800
 	adc r3, r3, #0
 	mov r4, r4, lsr #0xc
 	orr r4, r4, r3, lsl #20
 	add r1, sp, #0x10
-	mov r8, sb, asr #0x1f
+	mov r8, r9, asr #0x1f
 	add r4, r2, r4
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	smull r1, r0, r6, sb
+	smull r1, r0, r6, r9
 	adds r1, r1, #0x800
 	adc r0, r0, #0
 	mov r2, r1, lsr #0xc
@@ -583,10 +583,10 @@ _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
 	movgt r4, r1
 	mov r0, r5
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	umull r3, r2, r4, sb
+	umull r3, r2, r4, r9
 	mla r2, r4, r8, r2
 	mov r1, r4, asr #0x1f
-	mla r2, r1, sb, r2
+	mla r2, r1, r9, r2
 	adds r3, r3, #0x800
 	adc r1, r2, #0
 	mov r2, r3, lsr #0xc
@@ -622,10 +622,10 @@ _020aaa04:
 	movlt r4, r1
 	mov r0, r5
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	umull r3, r2, r4, sb
+	umull r3, r2, r4, r9
 	mla r2, r4, r8, r2
 	mov r1, r4, asr #0x1f
-	mla r2, r1, sb, r2
+	mla r2, r1, r9, r2
 	adds r3, r3, #0x800
 	adc r1, r2, #0
 	mov r2, r3, lsr #0xc
@@ -641,11 +641,11 @@ _020aaa98:
 	cmp r7, r4
 	movle r4, r7
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	umull r3, r2, r4, sb
+	umull r3, r2, r4, r9
 	adds r3, r3, #0x800
 	mla r2, r4, r8, r2
 	mov r1, r4, asr #0x1f
-	mla r2, r1, sb, r2
+	mla r2, r1, r9, r2
 	adc r2, r2, #0
 	mov r3, r3, lsr #0xc
 	ldr r1, _020aabd4 ; =0x00000155
@@ -672,20 +672,20 @@ _020aaa98:
 	orr r2, r2, r1, lsl #20
 	add r1, r3, r2
 	str r1, [r0, #8]
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 _020aab34:
 	addge sp, sp, #0x2c
-	ldmgeia sp!, {r4, r5, r6, r7, r8, sb, pc}
+	ldmgeia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	mvn r4, #0x154
 	cmp r7, r4
 	movge r4, r7
 	mov r0, r5
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	umull r3, r2, r4, sb
+	umull r3, r2, r4, r9
 	adds r3, r3, #0x800
 	mla r2, r4, r8, r2
 	mov r1, r4, asr #0x1f
-	mla r2, r1, sb, r2
+	mla r2, r1, r9, r2
 	adc r2, r2, #0
 	mov r3, r3, lsr #0xc
 	mvn r1, #0x154
@@ -712,7 +712,7 @@ _020aab34:
 	add r1, r3, r2
 	str r1, [r0, #8]
 	add sp, sp, #0x2c
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
 	arm_func_end _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 _020aabd0: .word data_02050f54
@@ -1345,7 +1345,7 @@ _020ab49c:
 	.global _ZN17LinkStateInteract8vfunc_34EP5Vec3p
 	arm_func_start _ZN17LinkStateInteract8vfunc_34EP5Vec3p
 _ZN17LinkStateInteract8vfunc_34EP5Vec3p: ; 0x020ab4a4
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	mov r6, r0
 	mov r4, r1
 	bl _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
@@ -1390,10 +1390,10 @@ _020ab4ec:
 	mov r8, r0, lsl #0x1
 	mov r2, r8, lsl #0x1
 	mov r0, r5, lsl #0x1
-	ldrsh sb, [ip, r0]
+	ldrsh r9, [ip, r0]
 	adds r5, r1, #0x800
 	add r8, r8, #1
-	umull r1, r0, sb, r6
+	umull r1, r0, r9, r6
 	mov r5, r5, lsr #0xc
 	ldrsh r2, [ip, r2]
 	mov r8, r8, lsl #0x1
@@ -1403,8 +1403,8 @@ _020ab4ec:
 	mla lr, r3, r6, lr
 	adc r3, lr, #0
 	orr r5, r5, r3, lsl #20
-	mla r0, sb, r7, r0
-	mov r3, sb, asr #0x1f
+	mla r0, r9, r7, r0
+	mov r3, r9, asr #0x1f
 	mla r0, r3, r6, r0
 	smull r7, r6, r2, r5
 	smull r3, r2, ip, r5
@@ -1437,7 +1437,7 @@ _020ab5f4:
 	str r0, [r4, #4]
 _020ab604:
 	mov r0, #1
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
 	arm_func_end _ZN17LinkStateInteract8vfunc_34EP5Vec3p
 _020ab60c: .word data_02050f54
