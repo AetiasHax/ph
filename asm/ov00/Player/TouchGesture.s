@@ -54,7 +54,7 @@ _020a9314:
 	.global _ZN12TouchGesture6UpdateEPv
 	arm_func_start _ZN12TouchGesture6UpdateEPv
 _ZN12TouchGesture6UpdateEPv: ; 0x020a9334
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	ldrsh r2, [r1, #0x60]
 	cmp r2, #0
 	ble _020a9350
@@ -119,38 +119,38 @@ _020a93cc:
 	mov r8, r7
 	mov r1, r2
 _020a9428:
-	add sb, r0, r1, lsl #1
-	ldrsh r10, [sb, #0x10]
-	ldrsh sb, [sb, #0x2c]
+	add r9, r0, r1, lsl #1
+	ldrsh r10, [r9, #0x10]
+	ldrsh r9, [r9, #0x2c]
 	add r2, r2, r10
-	cmp sb, r3
-	movlt r3, sb
+	cmp r9, r3
+	movlt r3, r9
 	blt _020a944c
-	cmp sb, ip
-	movgt ip, sb
+	cmp r9, ip
+	movgt ip, r9
 _020a944c:
-	add sb, r0, r1, lsl #1
-	ldrsh sb, [sb, #0x48]
-	cmp sb, lr
-	movlt lr, sb
+	add r9, r0, r1, lsl #1
+	ldrsh r9, [r9, #0x48]
+	cmp r9, lr
+	movlt lr, r9
 	blt _020a9468
-	cmp sb, r4
-	movgt r4, sb
+	cmp r9, r4
+	movgt r4, r9
 _020a9468:
-	add sb, r0, r1, lsl #1
-	ldrsh r11, [sb, #0x48]
-	ldrsh r10, [sb, #0x2c]
-	add sb, r10, r11
+	add r9, r0, r1, lsl #1
+	ldrsh r11, [r9, #0x48]
+	ldrsh r10, [r9, #0x2c]
+	add r9, r10, r11
 	sub r10, r10, r11
-	mov sb, sb, lsl #0x10
+	mov r9, r9, lsl #0x10
 	mov r10, r10, lsl #0x10
-	cmp r5, sb, asr #16
-	mov sb, sb, asr #0x10
+	cmp r5, r9, asr #16
+	mov r9, r9, asr #0x10
 	mov r10, r10, asr #0x10
-	movgt r5, sb
+	movgt r5, r9
 	bgt _020a94a0
-	cmp sb, r6
-	movgt r6, sb
+	cmp r9, r6
+	movgt r6, r9
 _020a94a0:
 	cmp r10, r7
 	movlt r7, r10
@@ -171,21 +171,21 @@ _020a94b4:
 	subge r3, r8, r7
 	strb r1, [r0, #4]
 	cmpge r3, #0x46
-	ldmltia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmltia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r3, _020a952c ; =0xffff2aab
 	cmp r2, r3
 	bge _020a9508
 	mov r2, #1
 	strb r2, [r0, #4]
 	str r1, [r0, #8]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _020a9508:
 	rsb r1, r3, #0
 	cmp r2, r1
 	movgt r1, #1
 	strgtb r1, [r0, #4]
 	strgt r1, [r0, #8]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN12TouchGesture6UpdateEPv
 _020a9520: .word 0xffffd555

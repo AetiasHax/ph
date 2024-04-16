@@ -771,7 +771,7 @@ func_ov08_021135b8: ; 0x021135b8
 	.global func_ov08_021135bc
 	arm_func_start func_ov08_021135bc
 func_ov08_021135bc: ; 0x021135bc
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #8
 	mov r10, r0
 	mov r8, #0
@@ -782,7 +782,7 @@ func_ov08_021135bc: ; 0x021135bc
 	strh r8, [r10, #0xe]
 	mov r0, #0x1000
 	strh r0, [r10, #0x10]
-	mov sb, r1
+	mov r9, r1
 	strh r8, [r10, #0x12]
 	mov r5, r7, lsr #0x11
 	mov r6, #1
@@ -793,7 +793,7 @@ _02113600:
 	cmp r8, r0
 	bge _02113648
 	mov r0, #0x10
-	mov r1, sb
+	mov r1, r9
 	mov r2, #4
 	bl _ZN9SysObjectnwEmPjj
 	cmp r0, #0
@@ -821,7 +821,7 @@ _02113650:
 	bl func_ov00_020a1a3c
 	mov r0, r10
 	add sp, sp, #8
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	arm_func_end func_ov08_021135bc
 
 	.global func_ov08_02113678

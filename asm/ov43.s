@@ -1293,7 +1293,7 @@ _0218a670: .word data_027e0764
 	.global func_ov43_0218a674
 	arm_func_start func_ov43_0218a674
 func_ov43_0218a674: ; 0x0218a674
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x24
 	ldr r1, _0218a84c ; =0x0000099a
 	mov r4, r0
@@ -1316,7 +1316,7 @@ func_ov43_0218a674: ; 0x0218a674
 	ldr r1, [r4, #0x4c]
 	adds r0, r0, #0x800
 	str r1, [sp, #0x18]
-	ldr sb, [r4, #0x50]
+	ldr r9, [r4, #0x50]
 	ldr r2, _0218a854 ; =data_027e0f90
 	mov r8, r0, lsr #0xc
 	ldr r0, [r2]
@@ -1341,8 +1341,8 @@ func_ov43_0218a674: ; 0x0218a674
 	adc r2, ip, #0
 	mov r3, r5, lsr #0xc
 	orr r3, r3, r2, lsl #20
-	str sb, [sp, #0x1c]
-	add r2, sb, r3
+	str r9, [sp, #0x1c]
+	add r2, r9, r3
 	str r2, [r1, #8]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
@@ -1371,7 +1371,7 @@ _0218a784:
 	mov r3, #0
 	bl func_ov00_020c070c
 	add sp, sp, #0x24
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218a7ac:
 	ldrh r0, [r4, #0x78]
 	mov r1, #0
@@ -1395,7 +1395,7 @@ _0218a7ac:
 	bl _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
 	cmp r0, #0
 	addeq sp, sp, #0x24
-	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmeqia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r1, [r4, #4]
 	ldr r0, _0218a864 ; =0x50424c4e
 	mov r3, #0
@@ -1406,14 +1406,14 @@ _0218a7ac:
 	mov r1, #0x3b0
 	bl func_ov00_020ceacc
 	add sp, sp, #0x24
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218a834:
 	ldr r0, _0218a868 ; =data_027e0ffc
 	add r2, r4, #0x48
 	mov r1, #0x3b8
 	bl func_ov00_020ceacc
 	add sp, sp, #0x24
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov43_0218a674
 _0218a84c: .word 0x0000099a
@@ -4126,7 +4126,7 @@ _0218cd64:
 	.global func_ov43_0218cd7c
 	arm_func_start func_ov43_0218cd7c
 func_ov43_0218cd7c: ; 0x0218cd7c
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x18
 	mov r10, r0
 	ldrsh r4, [r10, #0x78]
@@ -4134,7 +4134,7 @@ func_ov43_0218cd7c: ; 0x0218cd7c
 	ldr r0, _0218cf84 ; =data_027e0fc8
 	strh r4, [r8]
 	ldr r0, [r0]
-	mov sb, r1
+	mov r9, r1
 	mov r7, r3
 	ldr r6, [sp, #0x40]
 	bl func_ov00_020bc46c
@@ -4153,7 +4153,7 @@ func_ov43_0218cd7c: ; 0x0218cd7c
 	ldmib r0, {r4, r5}
 	bne _0218cdfc
 	mvn r0, #0x80000000
-	str r0, [sb]
+	str r0, [r9]
 	mov r1, #0
 	mov r3, r0
 	strh r1, [r8]
@@ -4162,7 +4162,7 @@ _0218cdfc:
 	add r0, r10, #0x48
 	add r1, r1, #0x48
 	bl func_ov00_020ce2f0
-	str r0, [sb]
+	str r0, [r9]
 	ldr r1, [r10, #0x3c0]
 	mov r0, r10
 	add r1, r1, #0x48
@@ -4200,7 +4200,7 @@ _0218ce58:
 _0218ce8c:
 	mov r0, r10
 	bl _ZN5Actor16XzDistanceToLinkEv
-	str r0, [sb]
+	str r0, [r9]
 	mov r0, r10
 	bl _ZN5Actor14GetAngleToLinkEv
 	ldr r2, _0218cf88 ; =data_027e0f94
@@ -4228,7 +4228,7 @@ _0218ceac:
 	beq _0218cf40
 	add sp, sp, #0x18
 	mov r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218cf04:
 	ldr r2, _0218cf8c ; =data_027e0e60
 	str r0, [sp]
@@ -4244,27 +4244,27 @@ _0218cf04:
 	cmp r0, #0
 	addne sp, sp, #0x18
 	movne r0, #0
-	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218cf40:
 	ldrb r0, [r10, #0x3e6]
 	cmp r0, #0
 	bne _0218cf64
-	ldr r0, [sb]
+	ldr r0, [r9]
 	cmp r0, #0xa800
 	ble _0218cf78
 	add sp, sp, #0x18
 	mov r0, #0
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218cf64:
 	ldr r0, [r7]
 	cmp r0, #0x7000
 	addgt sp, sp, #0x18
 	movgt r0, #0
-	ldmgtia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmgtia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0218cf78:
 	mov r0, #1
 	add sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov43_0218cd7c
 _0218cf84: .word data_027e0fc8
