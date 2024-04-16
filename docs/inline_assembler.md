@@ -9,20 +9,27 @@ to contribute to the list!
 - [Comments](#comments)
 
 ### Pool constants
-There is no `.word` or other data directives in the inline assembler. Instead, use the built-in `dcd` instruction:
+There is no `.word` or other data directives in the inline assembler. Instead, there are three built-in instructions you can
+use:
+
+#### `dcd`: Emits a literal 32-bit value
 ```asm
 mov r0, [pc, #0]
 bx lr
 dcd 0x1234
 ```
 
-This can also be written as:
+#### `ldconst`: Loads a literal 32-bit value
 ```asm
 ldconst 0x1234
 bx lr
 ```
+This code is equivalent to the above example using `dcd`.
 
-The built-in `ldconst` instruction will be replaced by an ARM load instruction and also append a pool constant to the function.
+#### `lda`: Loads the address to a symbol
+```
+lda r0, data_ov00_02abcdef
+```
 
 ### Data sections
 Directives such as `.section`, `.data` and `.bss` are not supported in the inline assembler. It's possible to change section
