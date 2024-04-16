@@ -7363,7 +7363,7 @@ _02181944:
 _0218195c:
 	ldr r9, _021819e8 ; =data_ov30_021887d0
 	add lr, sp, #0x20
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	mov ip, lr
 	stmia lr!, {r0, r1, r2, r3}
 	ldr r9, [r9]

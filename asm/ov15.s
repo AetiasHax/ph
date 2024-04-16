@@ -105396,9 +105396,9 @@ func_ov15_0217934c: ; 0x0217934c
 	str r1, [sp, #0x94]
 	str r0, [sp, #0x9c]
 	mov r7, r8
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	ldmia r9, {r0, r1, r2, r3}
 	stmia r8, {r0, r1, r2, r3}
@@ -105422,9 +105422,9 @@ func_ov15_0217934c: ; 0x0217934c
 	mov r8, r7
 	str r1, [sp, #0x88]
 	str r0, [sp, #0x90]
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	ldmia r9, {r0, r1, r2, r3}
 	stmia r8, {r0, r1, r2, r3}

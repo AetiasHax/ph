@@ -5077,9 +5077,9 @@ _02115750:
 	ldr r10, [sp, #0xc]
 	add r9, sp, #0x7c
 	ldmia r10!, {r0, r1, r2, r3}
-	stmia sb!, {r0, r1, r2, r3}
+	stmia r9!, {r0, r1, r2, r3}
 	ldmia r10!, {r0, r1, r2, r3}
-	stmia sb!, {r0, r1, r2, r3}
+	stmia r9!, {r0, r1, r2, r3}
 	ldmia r10, {r0, r1, r2, r3}
 	mov lr, r11
 	stmia r9, {r0, r1, r2, r3}

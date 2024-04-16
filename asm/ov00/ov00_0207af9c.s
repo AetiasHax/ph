@@ -36016,7 +36016,7 @@ _02096c8c:
 	str r1, [lr, #0xc]
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	ldr r0, [r9]
 	cmp ip, r4
@@ -36172,7 +36172,7 @@ _02096e74:
 	str r0, [lr, #0xc]
 	ldmia ip, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	ldr r0, [r9]
 	add lr, lr, #0x30

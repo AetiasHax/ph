@@ -1813,7 +1813,7 @@ _0210223c:
 	ldr r0, [ip, #0x2c]
 	str r0, [lr, #0x2c]
 _02102310:
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	subs r7, r7, #1
 	bne _02102310

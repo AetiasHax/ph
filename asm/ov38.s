@@ -9543,7 +9543,7 @@ _02184374:
 	strh r0, [sp, #0x7c]
 	ldr r7, _02184560 ; =0x021793cc
 	str r8, [sp, #0x18]
-	ldmia sb!, {r0, r1, r2, r3}
+	ldmia r9!, {r0, r1, r2, r3}
 	stmia r8!, {r0, r1, r2, r3}
 	ldr r0, [r7]
 	mov r4, #0
