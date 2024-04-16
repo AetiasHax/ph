@@ -435,21 +435,21 @@ _021991e8: .word 0x00007a29
 	.global func_ov53_021991ec
 	arm_func_start func_ov53_021991ec
 func_ov53_021991ec: ; 0x021991ec
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x2c
 	ldr r5, _02199304 ; =data_ov53_0219a580
-	mov sl, r0
-	ldrh sb, [r5, #0x42]
+	mov r10, r0
+	ldrh r9, [r5, #0x42]
 	ldrh r0, [r5, #0x40]
-	cmp sb, r0
+	cmp r9, r0
 	bge _02199280
 	ldr r8, _02199308 ; =data_ov53_0219a5bc
 	ldr r4, _0219930c ; =data_027e0e60
 	add r6, sp, #0x20
-	mov fp, #2
+	mov r11, #2
 	add r7, sp, #4
 _02199220:
-	add r0, r8, sb, lsl #1
+	add r0, r8, r9, lsl #1
 	ldrb r3, [r0, #8]
 	ldrb r2, [r0, #9]
 	ldr r0, [r4]
@@ -462,25 +462,25 @@ _02199220:
 	ldr r3, [r0]
 	mov r1, r6
 	ldr r3, [r3, #0x64]
-	mov r2, fp
+	mov r2, r11
 	blx r3
-	ldrsh r1, [sl, #0x2c]
-	mov r0, sl
+	ldrsh r1, [r10, #0x2c]
+	mov r0, r10
 	str r1, [sp]
 	ldmia r6, {r1, r2, r3}
 	bl func_ov00_020be9e4
 _02199270:
 	ldrh r0, [r5, #0x40]
-	add sb, sb, #1
-	cmp sb, r0
+	add r9, r9, #1
+	cmp r9, r0
 	blt _02199220
 _02199280:
-	ldr sb, _02199304 ; =data_ov53_0219a580
-	ldrh r7, [sb, #0x6e]
-	ldrh r0, [sb, #0x6c]
+	ldr r9, _02199304 ; =data_ov53_0219a580
+	ldrh r7, [r9, #0x6e]
+	ldrh r0, [r9, #0x6c]
 	cmp r7, r0
 	addge sp, sp, #0x2c
-	ldmgeia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmgeia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r6, _02199310 ; =data_ov53_0219a5e4
 	ldr r8, _02199314 ; =data_027e0fe4
 	add r4, sp, #0x10
@@ -498,18 +498,18 @@ _021992a8:
 	beq _021992ec
 	mov r1, r4
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	ldrsh r1, [sl, #0x2c]
-	mov r0, sl
+	ldrsh r1, [r10, #0x2c]
+	mov r0, r10
 	str r1, [sp]
 	ldmia r4, {r1, r2, r3}
 	bl func_ov00_020be9e4
 _021992ec:
-	ldrh r0, [sb, #0x6c]
+	ldrh r0, [r9, #0x6c]
 	add r7, r7, #1
 	cmp r7, r0
 	blt _021992a8
 	add sp, sp, #0x2c
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov53_021991ec
 _02199304: .word data_ov53_0219a580
