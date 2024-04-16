@@ -58,17 +58,17 @@ _020c3470:
 	.global _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 	arm_func_start _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori: ; 0x020c3484
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
-	mov sl, r0
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, lr}
+	mov r10, r0
 	mvn r3, #0
-	str r3, [sl]
+	str r3, [r10]
 	ldr r0, _020c3570 ; =data_027e103c
-	str r3, [sl, #4]
+	str r3, [r10, #4]
 	ldr r0, [r0]
 	mov sb, r2
 	ldrb r0, [r0, #0x24]
 	cmp r0, #0
-	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmeqia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	ldr r0, _020c3574 ; =data_027e077c
 	ldr r2, _020c3578 ; =data_02056be4
 	ldr r0, [r0]
@@ -81,7 +81,7 @@ _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori: ; 0x020c3484
 	moveq r8, #0
 	add r7, r6, r0, lsl #2
 	cmp r6, r7
-	ldmhsia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmhsia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	mov r4, #0
 _020c34e8:
 	ldr r0, [r6]
@@ -111,14 +111,14 @@ _020c34e8:
 	ldr r1, [r6]
 	mov r5, r0
 	ldr r0, [r1, #8]
-	str r0, [sl]
+	str r0, [r10]
 	ldr r0, [r1, #0xc]
-	str r0, [sl, #4]
+	str r0, [r10, #4]
 _020c3560:
 	add r6, r6, #4
 	cmp r6, r7
 	blo _020c34e8
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 _020c3570: .word data_027e103c
@@ -462,26 +462,26 @@ _020c39a8: .word func_ov00_020c3f3c
 	.global _ZN12ActorManager18func_ov00_020c39acEjPjb
 	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPjb
 _ZN12ActorManager18func_ov00_020c39acEjPjb: ; 0x020c39ac
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x10
 	movs r8, r2
-	mov sl, r0
+	mov r10, r0
 	mov sb, r1
 	mov r7, r3
 	bne _020c39d8
 	cmp r7, #0
 	addne sp, sp, #0x10
 	movne r0, #0
-	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 _020c39d8:
-	ldr r0, [sl, #0x10]
+	ldr r0, [r10, #0x10]
 	mov r4, #0
 	ldr r11, [r0, sb, lsl #2]
 	cmp r11, #0
 	ldrneb r0, [r11, #0x118]
 	cmpne r0, #0
 	beq _020c3b20
-	ldr r0, [sl, #4]
+	ldr r0, [r10, #4]
 	cmp r8, #0
 	cmpeq r7, #0
 	moveq r6, #1
@@ -491,18 +491,18 @@ _020c39d8:
 	ble _020c3b20
 _020c3a14:
 	cmp r5, sb
-	ldrne r0, [sl, #0x10]
+	ldrne r0, [r10, #0x10]
 	ldrne r0, [r0, r5, lsl #2]
 	cmpne r0, #0
 	beq _020c3b08
-	ldr r0, [sl, #0x14]
+	ldr r0, [r10, #0x14]
 	mov r1, r5
 	bl func_ov00_020c3f08
 	cmp r0, #0
 	beq _020c3b08
 	cmp r6, #0
 	bne _020c3a60
-	ldr r0, [sl, #0x10]
+	ldr r0, [r10, #0x10]
 	mov r1, r8
 	ldr r0, [r0, r5, lsl #2]
 	ldr r0, [r0, #4]
@@ -510,7 +510,7 @@ _020c3a14:
 	cmp r7, r0
 	beq _020c3b08
 _020c3a60:
-	ldr r0, [sl, #0x10]
+	ldr r0, [r10, #0x10]
 	add r3, sp, #0
 	ldr r0, [r0, r5, lsl #2]
 	add ip, r0, #0x7c
@@ -519,9 +519,9 @@ _020c3a60:
 	ldr r0, [ip, #0xc]
 	mov r1, r5
 	str r0, [sp, #0xc]
-	ldr r0, [sl, #0x14]
+	ldr r0, [r10, #0x14]
 	bl func_ov00_020c3ef0
-	ldr r1, [sl, #0x10]
+	ldr r1, [r10, #0x10]
 	ldr r3, [r0]
 	ldr r2, [r1, r5, lsl #2]
 	mov r1, r11
@@ -532,14 +532,14 @@ _020c3a60:
 	str r3, [r2, #0x84]
 	ldr r0, [r0, #0xc]
 	str r0, [r2, #0x88]
-	ldr r0, [sl, #0x10]
+	ldr r0, [r10, #0x10]
 	ldr r0, [r0, r5, lsl #2]
 	ldr r2, [r0]
 	ldr r2, [r2, #0x44]
 	blx r2
 	cmp r0, #0
-	ldrne r0, [sl, #0x10]
-	ldr r1, [sl, #0x10]
+	ldrne r0, [r10, #0x10]
+	ldr r1, [r10, #0x10]
 	ldrne r4, [r0, r5, lsl #2]
 	ldr r0, [sp]
 	ldr r1, [r1, r5, lsl #2]
@@ -555,14 +555,14 @@ _020c3a60:
 _020c3b08:
 	add r0, r5, #1
 	mov r0, r0, lsl #0x10
-	ldr r1, [sl, #4]
+	ldr r1, [r10, #4]
 	mov r5, r0, lsr #0x10
 	cmp r1, r0, lsr #16
 	bgt _020c3a14
 _020c3b20:
 	mov r0, r4
 	add sp, sp, #0x10
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	arm_func_end _ZN12ActorManager18func_ov00_020c39acEjPjb
 
 	.global _ZN12ActorManager18func_ov00_020c3b2cEPi
@@ -610,12 +610,12 @@ _020c3ba8:
 	.global _ZN12ActorManager18func_ov00_020c3bb0EiPi
 	arm_func_start _ZN12ActorManager18func_ov00_020c3bb0EiPi
 _ZN12ActorManager18func_ov00_020c3bb0EiPi: ; 0x020c3bb0
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0xd4
-	movs sl, r2
+	movs r10, r2
 	str r0, [sp]
 	movne r0, #0
-	strne r0, [sl]
+	strne r0, [r10]
 	ldr r0, _020c3ce4 ; =data_027e0e60
 	add r2, sp, #0x14
 	ldr r0, [r0]
@@ -625,7 +625,7 @@ _ZN12ActorManager18func_ov00_020c3bb0EiPi: ; 0x020c3bb0
 	cmp r5, #0
 	addle sp, sp, #0xd4
 	movle r0, #0
-	ldmleia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmleia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	ldr r0, [sp]
 	mov r11, #0
 	ldr r0, [r0, #4]
@@ -669,15 +669,15 @@ _020c3c44:
 _020c3c88:
 	cmp r6, #0
 	beq _020c3cb8
-	cmp sl, #0
+	cmp r10, #0
 	beq _020c3cb4
 	ldr r0, [r7]
 	add r0, r0, #0x100
 	ldrsh r0, [r0, #0x20]
 	cmp r0, #0
-	ldrgt r0, [sl]
+	ldrgt r0, [r10]
 	addgt r0, r0, #1
-	strgt r0, [sl]
+	strgt r0, [r10]
 _020c3cb4:
 	add r11, r11, #1
 _020c3cb8:
@@ -692,7 +692,7 @@ _020c3cb8:
 _020c3cd8:
 	mov r0, r11
 	add sp, sp, #0xd4
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN12ActorManager18func_ov00_020c3bb0EiPi
 _020c3ce4: .word data_027e0e60
@@ -700,25 +700,25 @@ _020c3ce4: .word data_027e0e60
 	.global _ZN12ActorManager18func_ov00_020c3ce8Eii
 	arm_func_start _ZN12ActorManager18func_ov00_020c3ce8Eii
 _ZN12ActorManager18func_ov00_020c3ce8Eii: ; 0x020c3ce8
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0xcc
 	ldr r3, _020c3dcc ; =data_027e0e60
 	mov r11, r0
 	ldr r0, [r3]
-	mov sl, r2
+	mov r10, r2
 	add r2, sp, #0xc
 	mov r3, #8
 	bl func_ov00_020836cc
 	mov r5, r0
 	cmp r5, #0
 	addle sp, sp, #0xcc
-	ldmleia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmleia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	ldr r0, [r11, #4]
 	ldr r7, [r11, #0x10]
 	cmp r0, #0
 	mov r6, #0
 	addle sp, sp, #0xcc
-	ldmleia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmleia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	add r4, sp, #0
 _020c3d38:
 	ldr r1, [r7]
@@ -746,7 +746,7 @@ _020c3d64:
 	cmp r0, #0
 	beq _020c3da0
 	ldr r0, [r7]
-	mov r1, sl
+	mov r1, r10
 	bl _ZN5Actor10SetUnk_129Eb
 _020c3da0:
 	add r8, r8, #1
@@ -760,7 +760,7 @@ _020c3db0:
 	add r7, r7, #4
 	blt _020c3d38
 	add sp, sp, #0xcc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN12ActorManager18func_ov00_020c3ce8Eii
 _020c3dcc: .word data_027e0e60

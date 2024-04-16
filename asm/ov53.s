@@ -435,10 +435,10 @@ _021991e8: .word 0x00007a29
 	.global func_ov53_021991ec
 	arm_func_start func_ov53_021991ec
 func_ov53_021991ec: ; 0x021991ec
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x2c
 	ldr r5, _02199304 ; =data_ov53_0219a580
-	mov sl, r0
+	mov r10, r0
 	ldrh sb, [r5, #0x42]
 	ldrh r0, [r5, #0x40]
 	cmp sb, r0
@@ -464,8 +464,8 @@ _02199220:
 	ldr r3, [r3, #0x64]
 	mov r2, r11
 	blx r3
-	ldrsh r1, [sl, #0x2c]
-	mov r0, sl
+	ldrsh r1, [r10, #0x2c]
+	mov r0, r10
 	str r1, [sp]
 	ldmia r6, {r1, r2, r3}
 	bl func_ov00_020be9e4
@@ -480,7 +480,7 @@ _02199280:
 	ldrh r0, [sb, #0x6c]
 	cmp r7, r0
 	addge sp, sp, #0x2c
-	ldmgeia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmgeia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	ldr r6, _02199310 ; =data_ov53_0219a5e4
 	ldr r8, _02199314 ; =data_027e0fe4
 	add r4, sp, #0x10
@@ -498,8 +498,8 @@ _021992a8:
 	beq _021992ec
 	mov r1, r4
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	ldrsh r1, [sl, #0x2c]
-	mov r0, sl
+	ldrsh r1, [r10, #0x2c]
+	mov r0, r10
 	str r1, [sp]
 	ldmia r4, {r1, r2, r3}
 	bl func_ov00_020be9e4
@@ -509,7 +509,7 @@ _021992ec:
 	cmp r7, r0
 	blt _021992a8
 	add sp, sp, #0x2c
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov53_021991ec
 _02199304: .word data_ov53_0219a580

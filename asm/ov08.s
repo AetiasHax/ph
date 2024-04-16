@@ -771,25 +771,25 @@ func_ov08_021135b8: ; 0x021135b8
 	.global func_ov08_021135bc
 	arm_func_start func_ov08_021135bc
 func_ov08_021135bc: ; 0x021135bc
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #8
-	mov sl, r0
+	mov r10, r0
 	mov r8, #0
 	mov r0, #2
-	str r0, [sl]
+	str r0, [r10]
 	mov r7, #0x2000
 	rsb r7, r7, #0
-	strh r8, [sl, #0xe]
+	strh r8, [r10, #0xe]
 	mov r0, #0x1000
-	strh r0, [sl, #0x10]
+	strh r0, [r10, #0x10]
 	mov sb, r1
-	strh r8, [sl, #0x12]
+	strh r8, [r10, #0x12]
 	mov r5, r7, lsr #0x11
 	mov r6, #1
 	mov r4, r8
 	mov r11, r8
 _02113600:
-	ldr r0, [sl]
+	ldr r0, [r10]
 	cmp r8, r0
 	bge _02113648
 	mov r0, #0x10
@@ -805,23 +805,23 @@ _02113600:
 	str r6, [sp, #4]
 	bl func_ov08_021136c0
 _0211363c:
-	add r1, sl, r8, lsl #2
+	add r1, r10, r8, lsl #2
 	str r0, [r1, #4]
 	b _02113650
 _02113648:
-	add r0, sl, r8, lsl #2
+	add r0, r10, r8, lsl #2
 	str r4, [r0, #4]
 _02113650:
-	add r0, sl, r8
+	add r0, r10, r8
 	add r8, r8, #1
 	strb r11, [r0, #0xc]
 	cmp r8, #2
 	blt _02113600
-	mov r0, sl
+	mov r0, r10
 	bl func_ov00_020a1a3c
-	mov r0, sl
+	mov r0, r10
 	add sp, sp, #8
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	arm_func_end func_ov08_021135bc
 
 	.global func_ov08_02113678

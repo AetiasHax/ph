@@ -280,7 +280,7 @@ _0216d9ac: .word func_02017d30
 	.global func_ov29_0216d9b0
 	arm_func_start func_ov29_0216d9b0
 func_ov29_0216d9b0: ; 0x0216d9b0
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	ldr r3, [r1, #0x2c]
 	ldr r4, [r1, #0x38]
 	mov r3, r3, lsl #0x10
@@ -342,19 +342,19 @@ _0216da94:
 	add r2, r2, #1
 	add r4, r4, #2
 	mov r0, r3, asr #0x5
-	mov sl, r3, asr #0xa
+	mov r10, r3, asr #0xa
 	and r3, r3, #0x1f
 	and r0, r0, #0x1f
-	and sl, sl, #0x1f
+	and r10, r10, #0x1f
 	add r0, r3, r0
-	add sl, sl, r0
-	mul r0, sl, r7
+	add r10, r10, r0
+	mul r0, r10, r7
 	add r0, r0, #0x3000
 	mov r3, r0, asr #0xc
-	mul r0, sl, r8
+	mul r0, r10, r8
 	add r0, r0, #0x3000
 	mov ip, r0, asr #0xc
-	mul r0, sl, lr
+	mul r0, r10, lr
 	add r0, r0, #0x3000
 	cmp r3, #0x1f
 	movgt r3, r1
@@ -372,7 +372,7 @@ _0216db0c:
 	ldr r0, [sb, #4]
 	ldr r1, [sb, #0xc]
 	bl func_0200e2a4
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_0216d9b0
 _0216db1c: .word 0x00000554
@@ -1764,7 +1764,7 @@ _0216ed7c: .word 0x000004cd
 	.global func_ov29_0216ed80
 	arm_func_start func_ov29_0216ed80
 func_ov29_0216ed80: ; 0x0216ed80
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x38
 	ldr r6, _0216f124 ; =data_027e0764
 	mov r7, #0
@@ -1777,24 +1777,24 @@ func_ov29_0216ed80: ; 0x0216ed80
 	mla r8, r4, r3, r8
 	adds sb, r2, r5
 	ldr r5, [r6, #0x14]
-	umull r3, sl, r11, sb
+	umull r3, r10, r11, sb
 	adc r8, r5, r8
-	mla sl, r11, r8, sl
+	mla r10, r11, r8, r10
 	mov r1, #0xb5
 	adds r2, r2, r3
 	umull r11, r3, r8, r1
-	mla sl, r4, sb, sl
+	mla r10, r4, sb, r10
 	str sb, [r6]
 	stmia r6, {r2, r8}
-	adc sl, r5, sl
-	umull r4, r5, sl, r1
+	adc r10, r5, r10
+	umull r4, r5, r10, r1
 	mla r3, r8, r7, r3
 	mov r2, r7
 	mla r3, r2, r1, r3
-	mla r5, sl, r7, r5
+	mla r5, r10, r7, r5
 	mla r5, r2, r1, r5
 	sub r3, r3, #0x5a
-	str sl, [r6, #4]
+	str r10, [r6, #4]
 	add r1, r3, #0x96
 	str r1, [r0, #0x4e4]
 	ldr r1, _0216f128 ; =data_027e0d38
@@ -1803,7 +1803,7 @@ func_ov29_0216ed80: ; 0x0216ed80
 	ldr r1, [r1, #0x14]
 	cmp r1, #1
 	addeq sp, sp, #0x38
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	ldr r1, _0216f12c ; =data_ov29_021798e8
 	ldr r8, [r0, #0x50]
 	ldr r2, [r1]
@@ -1817,15 +1817,15 @@ func_ov29_0216ed80: ; 0x0216ed80
 	ble _0216ee98
 	ldr r11, [r6]
 	ldmib r6, {r7, r8}
-	umull sl, sb, r8, r11
+	umull r10, sb, r8, r11
 	mla sb, r8, r7, sb
 	ldr r7, [r6, #0x10]
 	ldr r8, [r6, #0x14]
-	adds sl, r7, sl
+	adds r10, r7, r10
 	ldr r7, [r6, #0xc]
 	mla sb, r7, r11, sb
 	adc r7, r8, sb
-	str sl, [r6]
+	str r10, [r6]
 	str r7, [r6, #4]
 	cmp lr, #0
 	beq _0216ee98
@@ -1849,12 +1849,12 @@ _0216ee98:
 	ble _0216ef18
 	ldr r8, _0216f124 ; =data_027e0764
 	ldr sb, [r8]
-	ldmib r8, {r4, sl}
-	umull r2, r1, sl, sb
-	mla r1, sl, r4, r1
-	ldr sl, [r8, #0xc]
+	ldmib r8, {r4, r10}
+	umull r2, r1, r10, sb
+	mla r1, r10, r4, r1
+	ldr r10, [r8, #0xc]
 	ldr r4, [r8, #0x10]
-	mla r1, sl, sb, r1
+	mla r1, r10, sb, r1
 	ldr sb, [r8, #0x14]
 	adds r2, r4, r2
 	adc r1, sb, r1
@@ -1920,13 +1920,13 @@ _0216efa0:
 	ldr r6, _0216f124 ; =data_027e0764
 	ldr r7, [r6]
 	ldmib r6, {r5, r8}
-	umull sl, sb, r8, r7
+	umull r10, sb, r8, r7
 	mla sb, r8, r5, sb
 	ldr r5, [r6, #0xc]
 	ldr r8, [r6, #0x10]
 	mla sb, r5, r7, sb
 	ldr r5, [r6, #0x14]
-	adds r7, r8, sl
+	adds r7, r8, r10
 	adc r5, r5, sb
 	str r7, [r6]
 	str r5, [r6, #4]
@@ -1977,7 +1977,7 @@ _0216f074:
 	mov r3, #2
 	bl func_ov00_0207c1b0
 	add sp, sp, #0x38
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 _0216f0c4:
 	cmp ip, #0
 	strgt r2, [sp, #0x14]
@@ -2002,7 +2002,7 @@ _0216f0c4:
 	mov r3, #2
 	bl func_ov00_0207c1b0
 	add sp, sp, #0x38
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_0216ed80
 _0216f124: .word data_027e0764
@@ -3127,7 +3127,7 @@ _0216ffe4: .word 0x474f3154
 	.global func_ov29_0216ffe8
 	arm_func_start func_ov29_0216ffe8
 func_ov29_0216ffe8: ; 0x0216ffe8
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0xb8
 	ldr r0, _02170130 ; =data_027e0fec
 	ldr r0, [r0]
@@ -3156,7 +3156,7 @@ _02170040:
 	ldr r11, [r1, r0, lsl #2]
 	ldr r1, _0217013c ; =data_ov29_02179ad0
 	cmp r11, #0
-	ldr sl, [r1, r0, lsl #2]
+	ldr r10, [r1, r0, lsl #2]
 	ldr r1, _02170140 ; =data_ov29_02179ac8
 	ldr r0, [r1, r0, lsl #2]
 	str r0, [sp]
@@ -3191,13 +3191,13 @@ _02170070:
 	mov r1, r6
 	bl func_ov00_020a97e0
 	mov r0, r5
-	mov r1, sl
+	mov r1, r10
 	bl func_ov00_020a9960
 	mov r0, r5
 	bl func_ov00_020a9968
 	add r8, r8, #1
 	add sb, sb, #0x1000
-	add sl, sl, #0x58
+	add r10, r10, #0x58
 	cmp r8, r11
 	blt _02170070
 _02170104:
@@ -3211,7 +3211,7 @@ _02170104:
 	add r0, sp, #0x5c
 	blx func_ov00_020a95a4
 	add sp, sp, #0xb8
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_0216ffe8
 _02170130: .word data_027e0fec
@@ -3395,7 +3395,7 @@ _02170368: .word data_ov29_021793a0
 	.global func_ov29_0217036c
 	arm_func_start func_ov29_0217036c
 func_ov29_0217036c: ; 0x0217036c
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, lr}
 	mov r3, #0
 	str r3, [r0, #0x130]
 	ldr r2, [r1]
@@ -3419,13 +3419,13 @@ func_ov29_0217036c: ; 0x0217036c
 	str r3, [r0, #0x24c]
 	ldr r2, [r6]
 	ldmib r6, {r1, r7}
-	umull sl, sb, r7, r2
+	umull r10, sb, r7, r2
 	mla sb, r7, r1, sb
 	ldr r1, [r6, #0xc]
 	ldr r7, [r6, #0x10]
 	mla sb, r1, r2, sb
 	ldr r1, [r6, #0x14]
-	adds r2, r7, sl
+	adds r2, r7, r10
 	adc sb, r1, sb
 	umull r7, r1, sb, ip
 	mla r1, sb, r3, r1
@@ -3454,7 +3454,7 @@ func_ov29_0217036c: ; 0x0217036c
 	ldr r1, [r5, #0x14]
 	str r2, [r0, #0x158]
 	str r1, [r0, #0x15c]
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov29_0217036c
 _0217045c: .word data_027e0764
@@ -3738,7 +3738,7 @@ _0217084c: .word 0x00000433
 	.global func_ov29_02170850
 	arm_func_start func_ov29_02170850
 func_ov29_02170850: ; 0x02170850
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	mov r4, #2
 	str r4, [r0, #0x130]
 	add r8, r0, #0x200
@@ -3787,20 +3787,20 @@ func_ov29_02170850: ; 0x02170850
 	ldr r2, [r0, #0x50]
 	str r2, [r0, #0x23c]
 	str r3, [r0, #0x24c]
-	ldr sl, [r5]
+	ldr r10, [r5]
 	ldmib r5, {sb, r11}
-	umull r8, r2, r11, sl
+	umull r8, r2, r11, r10
 	mla r2, r11, sb, r2
 	ldr sb, [r5, #0xc]
 	ldr r11, [r5, #0x10]
-	mla r2, sb, sl, r2
+	mla r2, sb, r10, r2
 	ldr sb, [r5, #0x14]
 	adds r8, r11, r8
-	adc sl, sb, r2
-	umull sb, r2, sl, r1
-	mla r2, sl, r3, r2
+	adc r10, sb, r2
+	umull sb, r2, r10, r1
+	mla r2, r10, r3, r2
 	mla r2, r7, r1, r2
-	stmia r5, {r8, sl}
+	stmia r5, {r8, r10}
 	umull r5, r1, r2, ip
 	adds r5, r5, #0x800
 	mla r1, r2, r3, r1
@@ -3826,7 +3826,7 @@ func_ov29_02170850: ; 0x02170850
 	ldr r1, [r4, #0x24]
 	str r2, [r0, #0x158]
 	str r1, [r0, #0x15c]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_02170850
 _021709b4: .word data_027e0764
@@ -7393,7 +7393,7 @@ _021739d0: .word data_ov29_02179db0
 	.global func_ov29_021739d4
 	arm_func_start func_ov29_021739d4
 func_ov29_021739d4: ; 0x021739d4
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x2c
 	mov r4, r0
 	ldr r0, [r4, #0x288]
@@ -7724,7 +7724,7 @@ _02173e68:
 	ldrsh r1, [r6, #2]
 	add r5, r5, r5, lsr #31
 	smull r7, sb, r0, r3
-	adds sl, r7, #0x800
+	adds r10, r7, #0x800
 	mov r5, r5, lsl #0xf
 	mov r5, r5, lsr #0x10
 	mov r5, r5, asr #0x4
@@ -7735,8 +7735,8 @@ _02173e68:
 	smull r11, r7, r1, r2
 	adc ip, sb, #0
 	adds r11, r11, #0x800
-	mov sb, sl, lsr #0xc
-	ldrsh sl, [r6, r5]
+	mov sb, r10, lsr #0xc
+	ldrsh r10, [r6, r5]
 	orr sb, sb, ip, lsl #20
 	ldrsh r8, [r6, r8]
 	adc r5, r7, #0
@@ -7744,7 +7744,7 @@ _02173e68:
 	orr r7, r7, r5, lsl #20
 	smull r6, r5, r7, r8
 	adds r6, r6, #0x800
-	smull lr, ip, sb, sl
+	smull lr, ip, sb, r10
 	smull r3, r11, r1, r3
 	smull r2, r1, r0, r2
 	adc r0, r5, #0
@@ -7764,14 +7764,14 @@ _02173e68:
 	adc r0, r1, #0
 	mov r1, r3, lsr #0xc
 	orr r1, r1, r0, lsl #20
-	smull r3, r0, r1, sl
+	smull r3, r0, r1, r10
 	adds r5, r3, #0x800
 	adc r3, r0, #0
 	mov r0, r5, lsr #0xc
 	orr r0, r0, r3, lsl #20
 	smull r6, r5, r1, r8
-	smull r3, r1, r7, sl
-	smull sl, r7, r2, sl
+	smull r3, r1, r7, r10
+	smull r10, r7, r2, r10
 	smull ip, r11, r2, r8
 	smull r8, r2, sb, r8
 	adds ip, ip, #0x800
@@ -7780,7 +7780,7 @@ _02173e68:
 	orr r11, r11, sb, lsl #20
 	add r0, r0, r11
 	str r0, [r4, #0x214]
-	adds sb, sl, #0x800
+	adds sb, r10, #0x800
 	adc r0, r7, #0
 	mov r7, sb, lsr #0xc
 	orr r7, r7, r0, lsl #20
@@ -7804,7 +7804,7 @@ _02173e68:
 	add r1, r4, #0x244
 	bl func_ov38_021854e4
 	add sp, sp, #0x2c
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_021739d4
 _02173ffc: .word 0xfffff555
@@ -8015,7 +8015,7 @@ _021742dc: .word 0x00000e39
 	.global func_ov29_021742e0
 	arm_func_start func_ov29_021742e0
 func_ov29_021742e0: ; 0x021742e0
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x24
 	mov r4, r0
 	ldr r0, [r4, #0x288]
@@ -8209,7 +8209,7 @@ _02174578:
 	ldrsh r1, [r6, #2]
 	add r5, r5, r5, lsr #31
 	smull r7, sb, r0, r3
-	adds sl, r7, #0x800
+	adds r10, r7, #0x800
 	mov r5, r5, lsl #0xf
 	mov r5, r5, lsr #0x10
 	mov r5, r5, asr #0x4
@@ -8220,8 +8220,8 @@ _02174578:
 	smull r11, r7, r1, r2
 	adc ip, sb, #0
 	adds r11, r11, #0x800
-	mov sb, sl, lsr #0xc
-	ldrsh sl, [r6, r5]
+	mov sb, r10, lsr #0xc
+	ldrsh r10, [r6, r5]
 	orr sb, sb, ip, lsl #20
 	ldrsh r8, [r6, r8]
 	adc r5, r7, #0
@@ -8229,7 +8229,7 @@ _02174578:
 	orr r7, r7, r5, lsl #20
 	smull r6, r5, r7, r8
 	adds r6, r6, #0x800
-	smull lr, ip, sb, sl
+	smull lr, ip, sb, r10
 	smull r3, r11, r1, r3
 	smull r2, r1, r0, r2
 	adc r0, r5, #0
@@ -8249,14 +8249,14 @@ _02174578:
 	adc r0, r1, #0
 	mov r1, r3, lsr #0xc
 	orr r1, r1, r0, lsl #20
-	smull r3, r0, r1, sl
+	smull r3, r0, r1, r10
 	adds r5, r3, #0x800
 	adc r3, r0, #0
 	mov r0, r5, lsr #0xc
 	orr r0, r0, r3, lsl #20
 	smull r6, r5, r1, r8
-	smull r3, r1, r7, sl
-	smull sl, r7, r2, sl
+	smull r3, r1, r7, r10
+	smull r10, r7, r2, r10
 	smull ip, r11, r2, r8
 	smull r8, r2, sb, r8
 	adds ip, ip, #0x800
@@ -8265,7 +8265,7 @@ _02174578:
 	orr r11, r11, sb, lsl #20
 	add r0, r0, r11
 	str r0, [sp, #0xc]
-	adds sb, sl, #0x800
+	adds sb, r10, #0x800
 	adc r0, r7, #0
 	mov r7, sb, lsr #0xc
 	orr r7, r7, r0, lsl #20
@@ -8295,7 +8295,7 @@ _02174578:
 	add r1, r4, #0x244
 	bl func_ov38_021854e4
 	add sp, sp, #0x24
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_021742e0
 _0217471c: .word 0x000038e4
@@ -8463,7 +8463,7 @@ _0217494c: .word data_02050f54
 	.global func_ov29_02174950
 	arm_func_start func_ov29_02174950
 func_ov29_02174950: ; 0x02174950
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x10
 	mov r4, r0
 	add r0, r4, #0x244
@@ -8518,14 +8518,14 @@ func_ov29_02174950: ; 0x02174950
 	mov sb, sb, lsr #0xc
 	adds r7, r7, #0x800
 	orr sb, sb, r8, lsl #20
-	ldrsh sl, [r5, #2]
+	ldrsh r10, [r5, #2]
 	ldrsh r8, [r5]
 	smull r3, r11, r1, r3
 	adc r5, r6, #0
 	mov r7, r7, lsr #0xc
 	orr r7, r7, r5, lsl #20
 	smull r6, r5, r7, r8
-	smull lr, ip, sb, sl
+	smull lr, ip, sb, r10
 	smull r2, r1, r0, r2
 	adds r6, r6, #0x800
 	adc r0, r5, #0
@@ -8545,22 +8545,22 @@ func_ov29_02174950: ; 0x02174950
 	adc r0, r1, #0
 	mov r1, r3, lsr #0xc
 	orr r1, r1, r0, lsl #20
-	smull r3, r0, r1, sl
+	smull r3, r0, r1, r10
 	adds r5, r3, #0x800
 	adc r3, r0, #0
 	mov r0, r5, lsr #0xc
 	smull ip, r11, r2, r8
 	orr r0, r0, r3, lsl #20
 	smull r6, r5, r1, r8
-	smull r3, r1, r7, sl
-	smull sl, r7, r2, sl
+	smull r3, r1, r7, r10
+	smull r10, r7, r2, r10
 	adds ip, ip, #0x800
 	smull r8, r2, sb, r8
 	adc sb, r11, #0
 	mov r11, ip, lsr #0xc
 	orr r11, r11, sb, lsl #20
 	add r0, r0, r11
-	adds sb, sl, #0x800
+	adds sb, r10, #0x800
 	str r0, [sp, #4]
 	adc r0, r7, #0
 	mov r7, sb, lsr #0xc
@@ -8606,13 +8606,13 @@ _02174b2c:
 	adc r8, r8, #0
 	mov r11, sb, lsr #0xc
 	adds r7, r7, #0x800
-	ldrsh sl, [r5, #0x1c]
+	ldrsh r10, [r5, #0x1c]
 	ldrsh ip, [r5, #0x1e]
 	smull r3, lr, r1, r3
 	adc r5, r6, #0
 	mov sb, r7, lsr #0xc
 	orr sb, sb, r5, lsl #20
-	smull r5, r7, sb, sl
+	smull r5, r7, sb, r10
 	orr r11, r11, r8, lsl #20
 	adds r8, r5, #0x800
 	smull r2, r1, r0, r2
@@ -8639,11 +8639,11 @@ _02174b2c:
 	adc r3, r0, #0
 	mov r0, r5, lsr #0xc
 	orr r0, r0, r3, lsl #20
-	smull r6, r5, r1, sl
+	smull r6, r5, r1, r10
 	smull r3, r1, sb, ip
 	smull r8, r7, r2, ip
-	smull ip, sb, r2, sl
-	smull sl, r2, r11, sl
+	smull ip, sb, r2, r10
+	smull r10, r2, r11, r10
 	adds r11, ip, #0x800
 	adc sb, sb, #0
 	mov r11, r11, lsr #0xc
@@ -8663,7 +8663,7 @@ _02174b2c:
 	str r0, [sp, #8]
 	adc r0, r1, #0
 	mov r3, r3, lsr #0xc
-	adds r1, sl, #0x800
+	adds r1, r10, #0x800
 	orr r3, r3, r0, lsl #20
 	adc r0, r2, #0
 	mov r1, r1, lsr #0xc
@@ -8681,7 +8681,7 @@ _02174c88:
 	add r1, r4, #0x244
 	bl func_ov38_021854e4
 	add sp, sp, #0x10
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_02174950
 _02174cb4: .word data_02050f54
@@ -9249,7 +9249,7 @@ _021753a8: .word data_ov29_02179f4c
 	.global func_ov29_021753ac
 	arm_func_start func_ov29_021753ac
 func_ov29_021753ac: ; 0x021753ac
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x68
 	ldr r3, _0217558c ; =data_027e0d0c
 	mov r4, r0
@@ -9320,7 +9320,7 @@ func_ov29_021753ac: ; 0x021753ac
 	mla r6, r5, r3, r6
 	ldr r0, [r0]
 	ldr sb, [r2, #0x10]
-	ldrsh sl, [r0, #0x78]
+	ldrsh r10, [r0, #0x78]
 	mla r6, lr, ip, r6
 	ldr r8, [r2, #0x14]
 	adds r3, sb, r7
@@ -9334,7 +9334,7 @@ func_ov29_021753ac: ; 0x021753ac
 	ldr r0, _021755a8 ; =0xfffffc72
 	add r1, r4, #0x200
 	add r0, r3, r0
-	add r0, sl, r0
+	add r0, r10, r0
 	strh r0, [r1, #0xbe]
 	ldr r0, _021755ac ; =0xffffe38e
 	strh r0, [r1, #0xbc]
@@ -9368,7 +9368,7 @@ func_ov29_021753ac: ; 0x021753ac
 	bl func_ov29_02175724
 	mov r0, #1
 	add sp, sp, #0x68
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_021753ac
 _0217558c: .word data_027e0d0c
@@ -10590,10 +10590,10 @@ _021765ec: .word data_027e0fe4
 	.global func_ov29_021765f0
 	arm_func_start func_ov29_021765f0
 func_ov29_021765f0: ; 0x021765f0
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0xc
-	mov sl, r0
-	ldrb r7, [sl, #0x14]
+	mov r10, r0
+	ldrb r7, [r10, #0x14]
 	mov sb, r1
 	add r0, r7, #2
 	cmp r7, r0
@@ -10602,7 +10602,7 @@ func_ov29_021765f0: ; 0x021765f0
 	add r5, sp, #2
 	mov r11, #1
 _0217661c:
-	ldrb r8, [sl, #0x15]
+	ldrb r8, [r10, #0x15]
 	add r0, r8, #2
 	cmp r8, r0
 	bge _021766a4
@@ -10634,24 +10634,24 @@ _02176668:
 	mov r3, #0x35
 	bl func_ov00_02084d24
 _02176690:
-	ldrb r0, [sl, #0x15]
+	ldrb r0, [r10, #0x15]
 	add r8, r8, #1
 	add r0, r0, #2
 	cmp r8, r0
 	blt _02176630
 _021766a4:
-	ldrb r0, [sl, #0x14]
+	ldrb r0, [r10, #0x14]
 	add r7, r7, #1
 	add r0, r0, #2
 	cmp r7, r0
 	blt _0217661c
 _021766b8:
-	ldrh r4, [sl, #0x2a]
+	ldrh r4, [r10, #0x2a]
 	ldr r1, _02176788 ; =data_027e0f6c
 	add r0, sp, #8
 	ldr r1, [r1]
 	mov r2, r4
-	ldrh r5, [sl, #0x28]
+	ldrh r5, [r10, #0x28]
 	bl func_ov00_02093a4c
 	ldr r1, _02176788 ; =data_027e0f6c
 	add r0, sp, #4
@@ -10678,7 +10678,7 @@ _021766b8:
 	str r3, [sp, #4]
 	bl func_ov00_02093a3c
 	add sp, sp, #0xc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 _0217673c:
 	ldr r0, _02176788 ; =data_027e0f6c
 	ldr r1, [sp, #8]
@@ -10697,7 +10697,7 @@ _0217673c:
 	str r3, [sp, #4]
 	bl func_ov00_02093a3c
 	add sp, sp, #0xc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov29_021765f0
 _02176784: .word data_027e0e60
@@ -13773,14 +13773,14 @@ _02179000: .word data_ov29_0217bd70
 	.global func_ov29_02179004
 	arm_func_start func_ov29_02179004
 func_ov29_02179004: ; 0x02179004
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, lr}
 	sub sp, sp, #0x24
 	ldr r1, _021791f4 ; =data_ov29_0217bd50
 	mov r4, r0
 	ldr r0, [r1, #0xc]
 	cmp r0, #0
 	addeq sp, sp, #0x24
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, pc}
 	ldrsh r0, [r4, #0x56]
 	mov r1, #0x100
 	mov r0, r0, lsl #0xd
@@ -13807,7 +13807,7 @@ func_ov29_02179004: ; 0x02179004
 	str r1, [sp, #4]
 	movs r0, #0x14
 	addeq sp, sp, #0x24
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, pc}
 	ldr r0, [sp, #0x18]
 	str r6, [sp, #0x20]
 	mov r0, r0, asr #0x1f
@@ -13836,32 +13836,32 @@ _021790ac:
 	smull r2, r1, r0, r1
 	ldr r0, [sp, #0x20]
 	mov r3, sb, asr #0x1f
-	sub sl, r6, r0
-	mov r0, sl, asr #0x1
-	add r0, sl, r0, lsr #30
-	mov sl, r0, asr #0x2
+	sub r10, r6, r0
+	mov r0, r10, asr #0x1
+	add r0, r10, r0, lsr #30
+	mov r10, r0, asr #0x2
 	ldr r0, _02179200 ; =data_ov29_0217949c
-	ldr r0, [r0, sl, lsl #2]
-	ldr sl, [sp, #0x18]
-	umull lr, ip, sl, sb
-	mla ip, sl, r3, ip
+	ldr r0, [r0, r10, lsl #2]
+	ldr r10, [sp, #0x18]
+	umull lr, ip, r10, sb
+	mla ip, r10, r3, ip
 	ldr r3, [sp, #0x1c]
-	adds sl, lr, #0x800
+	adds r10, lr, #0x800
 	mla ip, r3, sb, ip
 	adc sb, ip, #0
-	mov r3, sl, lsr #0xc
+	mov r3, r10, lsr #0xc
 	orr r3, r3, sb, lsl #20
 	adds sb, r2, #0x800
 	adc r1, r1, #0
 	mov r2, sb, lsr #0xc
 	orr r2, r2, r1, lsl #20
 	sub r3, r3, r2
-	umull sl, sb, r7, r3
-	adds r1, sl, #0x80000000
+	umull r10, sb, r7, r3
+	adds r1, r10, #0x80000000
 	mov r2, r3, asr #0x1f
 	mla sb, r7, r2, sb
 	ldr r1, [sp, #0xc]
-	ldr sl, [sp, #0x10]
+	ldr r10, [sp, #0x10]
 	mla sb, r1, r3, sb
 	adc r1, sb, #0
 	str r1, [r4, #4]
@@ -13870,22 +13870,22 @@ _021790ac:
 	rsb ip, r1, #0
 	smull r2, r1, r3, r1
 	mov r3, ip, asr #0x1f
-	umull sb, lr, sl, ip
-	mla lr, sl, r3, lr
+	umull sb, lr, r10, ip
+	mla lr, r10, r3, lr
 	ldr r3, [sp, #0x14]
-	adds sl, sb, #0x800
+	adds r10, sb, #0x800
 	mla lr, r3, ip, lr
 	adc sb, lr, #0
-	mov r3, sl, lsr #0xc
+	mov r3, r10, lsr #0xc
 	orr r3, r3, sb, lsl #20
 	adds sb, r2, #0x800
 	adc r1, r1, #0
 	mov r2, sb, lsr #0xc
 	orr r2, r2, r1, lsl #20
 	sub r3, r3, r2
-	umull sl, sb, r8, r3
+	umull r10, sb, r8, r3
 	mov r2, r3, asr #0x1f
-	adds r1, sl, #0x80000000
+	adds r1, r10, #0x80000000
 	mla sb, r8, r2, sb
 	ldr r1, [sp, #4]
 	mla sb, r1, r3, sb
@@ -13898,7 +13898,7 @@ _021791dc:
 	cmp r6, r0
 	bne _021790ac
 	add sp, sp, #0x24
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov29_02179004
 _021791f4: .word data_ov29_0217bd50

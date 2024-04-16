@@ -5435,7 +5435,7 @@ _02171d0c: .word data_027e0f6c
 	.global func_ov28_02171d10
 	arm_func_start func_ov28_02171d10
 func_ov28_02171d10: ; 0x02171d10
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, lr}
 	sub sp, sp, #0x70
 	mov sb, r0
 	ldr r1, [sb, #0x18]
@@ -5545,7 +5545,7 @@ func_ov28_02171d10: ; 0x02171d10
 	add r0, r7, #2
 	cmp r7, r0
 	bge _02171f28
-	ldr sl, _02171f74 ; =data_027e0e60
+	ldr r10, _02171f74 ; =data_027e0e60
 	add r5, sp, #4
 	mov r4, #1
 _02171ed4:
@@ -5555,7 +5555,7 @@ _02171ed4:
 	bge _02171f14
 	and r6, r7, #0xff
 _02171ee8:
-	ldr r0, [sl]
+	ldr r0, [r10]
 	mov r1, r5
 	mov r2, r4
 	strb r6, [sp, #4]
@@ -5584,14 +5584,14 @@ _02171f28:
 	mov r2, #0
 	blx r3
 	add sp, sp, #0x70
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 _02171f58:
 	mov r1, #0
 	ldr r3, [r3, #0x80]
 	mov r2, r1
 	blx r3
 	add sp, sp, #0x70
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov28_02171d10
 _02171f70: .word data_027e0f6c
@@ -5854,7 +5854,7 @@ func_ov28_02172250: ; 0x02172250
 	.global func_ov28_02172280
 	arm_func_start func_ov28_02172280
 func_ov28_02172280: ; 0x02172280
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, lr}
 	sub sp, sp, #0x54
 	mov sb, r0
 	ldr r1, [sb, #0x18]
@@ -5927,7 +5927,7 @@ func_ov28_02172280: ; 0x02172280
 	add r0, r7, #2
 	cmp r7, r0
 	bge _02172404
-	ldr sl, _02172450 ; =data_027e0e60
+	ldr r10, _02172450 ; =data_027e0e60
 	add r5, sp, #4
 	mov r4, #1
 _021723b0:
@@ -5937,7 +5937,7 @@ _021723b0:
 	bge _021723f0
 	and r6, r7, #0xff
 _021723c4:
-	ldr r0, [sl]
+	ldr r0, [r10]
 	mov r1, r5
 	mov r2, r4
 	strb r6, [sp, #4]
@@ -5966,14 +5966,14 @@ _02172404:
 	mov r2, #0
 	blx r3
 	add sp, sp, #0x54
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, pc}
 _02172434:
 	mov r1, #0
 	ldr r3, [r3, #0x80]
 	mov r2, r1
 	blx r3
 	add sp, sp, #0x54
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov28_02172280
 _0217244c: .word 0x0000059a
@@ -6291,34 +6291,34 @@ _02172808: .word 0x000001ad
 	.global func_ov28_0217280c
 	arm_func_start func_ov28_0217280c
 func_ov28_0217280c: ; 0x0217280c
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, r10, lr}
 	ldr r3, _021728fc ; =gItemManager
 	mov sb, r1
 	ldr r7, [r3]
-	mov sl, r0
+	mov r10, r0
 	ldrb r4, [r7, #0x25]
 	ldrb r5, [r7, #0x26]
 	ldrb r6, [r7, #0x24]
 	mov r3, #0
 	mov r0, r7
-	str r4, [sl, #0x1f8]
-	str r5, [sl, #0x1fc]
-	str r6, [sl, #0x200]
-	str r3, [sl, #0x204]
-	str r3, [sl, #0x208]
+	str r4, [r10, #0x1f8]
+	str r5, [r10, #0x1fc]
+	str r6, [r10, #0x200]
+	str r3, [r10, #0x204]
+	str r3, [r10, #0x208]
 	mov r1, #1
 	mov r8, r2
-	str r3, [sl, #0x20c]
+	str r3, [r10, #0x20c]
 	bl _ZNK11ItemManager13GetFairyLevelEi
 	cmp r0, #0
 	beq _02172870
 	cmp r0, #1
 	rsbeq r0, r4, #0x14
-	streq r0, [sl, #0x204]
+	streq r0, [r10, #0x204]
 	b _02172878
 _02172870:
 	rsb r0, r4, #0xa
-	str r0, [sl, #0x204]
+	str r0, [r10, #0x204]
 _02172878:
 	mov r0, r7
 	mov r1, #2
@@ -6327,11 +6327,11 @@ _02172878:
 	beq _0217289c
 	cmp r0, #1
 	rsbeq r0, r5, #0x14
-	streq r0, [sl, #0x208]
+	streq r0, [r10, #0x208]
 	b _021728a4
 _0217289c:
 	rsb r0, r5, #0xa
-	str r0, [sl, #0x208]
+	str r0, [r10, #0x208]
 _021728a4:
 	mov r0, r7
 	mov r1, #0
@@ -6340,23 +6340,23 @@ _021728a4:
 	beq _021728c8
 	cmp r0, #1
 	rsbeq r0, r6, #0x14
-	streq r0, [sl, #0x20c]
+	streq r0, [r10, #0x20c]
 	b _021728d0
 _021728c8:
 	rsb r0, r6, #0xa
-	str r0, [sl, #0x20c]
+	str r0, [r10, #0x20c]
 _021728d0:
-	add r3, sl, #0x1f8
-	mov r0, sl
+	add r3, r10, #0x1f8
+	mov r0, r10
 	mov r1, sb
 	mov r2, r8
 	str r3, [r8, #0x38]
 	mov r3, #6
 	strh r3, [r8, #0x3c]
 	bl func_ov14_02144d70
-	mov r0, sl
+	mov r0, r10
 	bl func_ov28_02172b40
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov28_0217280c
 _021728fc: .word gItemManager

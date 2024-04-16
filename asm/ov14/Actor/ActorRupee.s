@@ -42,7 +42,7 @@ _0213aec8: .word _ZTV10ActorRupee
 	.global _ZN10ActorRupee8vfunc_08Ev
 	arm_func_start _ZN10ActorRupee8vfunc_08Ev
 _ZN10ActorRupee8vfunc_08Ev: ; 0x0213aecc
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, lr}
 	sub sp, sp, #0x18
 	mov r4, r0
 	ldrh r0, [r4, #0x20]
@@ -113,16 +113,16 @@ _0213afb4:
 	ldr r3, _0213b108 ; =data_027e0764
 	ldr r8, [r3, #0x10]
 	ldr r6, [r3, #0xc]
-	adds sl, r8, sb
+	adds r10, r8, sb
 	ldr r11, [r3, #0x14]
 	mla r0, r6, r5, r0
-	umull r3, lr, r7, sl
+	umull r3, lr, r7, r10
 	adc sb, r11, r0
 	adds r0, r8, r3
 	str r0, [sp, #0x14]
 	ldr r0, _0213b108 ; =data_027e0764
 	mla lr, r7, sb, lr
-	str sl, [r0]
+	str r10, [r0]
 	ldr r3, [sp, #0x14]
 	str sb, [r0, #4]
 	str r3, [r0]
@@ -131,7 +131,7 @@ _0213afb4:
 	umull r0, r5, sb, r0
 	str r0, [sp, #4]
 	mla r5, sb, r2, r5
-	mla lr, r6, sl, lr
+	mla lr, r6, r10, lr
 	ldr r0, [sp, #0x10]
 	mov r3, r2
 	mla r5, r3, r0, r5
@@ -140,14 +140,14 @@ _0213afb4:
 	ldr r5, [sp, #0x14]
 	ldr r0, _0213b108 ; =data_027e0764
 	adc sb, r11, lr
-	umull sl, r5, r7, r5
+	umull r10, r5, r7, r5
 	mla r5, r7, sb, r5
 	ldr r7, [sp, #0x14]
 	rsb r1, r1, #0x334
 	str sb, [r0, #4]
 	umull r0, r3, sb, r1
 	mla r5, r6, r7, r5
-	mov r6, sl
+	mov r6, r10
 	adds r6, r8, r6
 	adc r7, r11, r5
 	ldr r5, _0213b108 ; =data_027e0764
@@ -169,7 +169,7 @@ _0213afb4:
 	mov r0, r4
 	str r2, [r4, #0x64]
 	ldr r2, [sp]
-	str sl, [sp, #0xc]
+	str r10, [sp, #0xc]
 	str r2, [r4, #0x68]
 	bl _ZN10ActorRupee18func_ov14_0213b204Ei
 	b _0213b0f4
@@ -189,7 +189,7 @@ _0213b0e8:
 _0213b0f4:
 	mov r0, #1
 	add sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN10ActorRupee8vfunc_08Ev
 _0213b100: .word data_ov14_021589b4
