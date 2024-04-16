@@ -4,33 +4,39 @@
 Resource ActorRupee::gResource;
 ActorType ActorRupee::gType;
 
+static u32 data_ov14_021589d4 = 0x00000000;
+
+static u32 data_ov14_021589d8[] = {
+    0x00000000,
+    0x00000000,
+    0x00000000,
+};
+
+static char data_ov14_021589b4[] = "anc";
+
 extern u32 **data_027e0fe0[];
-extern u32 data_ov14_021589b4[];
 
 
-u32 func_01fffd04(void*, u32);
-void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
+extern "C" void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
+extern "C" u32 func_01fffd04(void*, u32);
 
 extern u32 data_ov00_020e9370[];
-bool func_ov00_020c313c();
-void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
+extern "C" bool func_ov00_020c313c();
+extern "C" void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
 
 // ---
 
-void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
-void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
+extern "C" void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
+extern "C" void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
                u32 param_6, int param_7, char param_8, char param_9, char param_10);
 
-void func_ov00_020d7ad4(u32* param1, u32 param2);
-void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
-u16 GetRupeeValue(RupeeId id);
+extern "C" void func_ov00_020d7ad4(u32* param1, u32 param2);
+extern "C" void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
+extern "C" u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
+
 extern u32 data_ov00_020eec9c[];
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern void *data_027e0e60;
-
-// void func_ov05_02102c2c(int param_1, int param_2, Vec3p *param_3);
-// void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, s16 param_5);
-// extern u32 sRupeePalettes[];
 
 ActorRupee* ActorRupee::Create() {
     ActorRupee* newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
@@ -45,6 +51,13 @@ ActorRupee::ActorRupee() {
 
 // https://decomp.me/scratch/1qjCc
 extern "C" void _ZN10ActorRupee18func_ov14_0213b204Ei();
+extern "C" void _ZN10ActorRupee18func_ov14_0213b70cEj();
+extern "C" void _ZN10ActorRupee8vfunc_14Ei();
+extern "C" void _ZN10ActorRupee8vfunc_18Ej();
+extern "C" void _ZN10ActorRupee8vfunc_20Ei();
+extern "C" void _ZN10ActorRupee8vfunc_60Ev();
+extern "C" void _ZN10ActorRupee8vfunc_64Ev();
+extern "C" u32 data_027e0764[];
 bool NONMATCH(ActorRupee::vfunc_08)() {
     #ifndef NONMATCHING
     #include "../../../asm/ov14/Actor/ActorRupee_vfunc_08.inc"
@@ -62,7 +75,7 @@ bool NONMATCH(ActorRupee::vfunc_08)() {
 
     mRupeeId = mUnk_020.mUnk_00[0];
 
-    dVar5 = func_ov14_0213b70c(mRupeeId) ? data_ov14_021589b4[9] : FLOAT_TO_Q20(0.666);
+    dVar5 = func_ov14_0213b70c(mRupeeId) ? data_ov14_021589d8[0] : FLOAT_TO_Q20(0.666);
     iVar7 = (s32)dVar5 >> 1;
 
     mHitbox.pos.x = 0;
@@ -237,6 +250,7 @@ void ActorRupee::func_ov14_0213b204(unk32 param1) {
     mUnk_130 = param1;
 }
 
+extern "C" void _ZN11ItemManager10GiveRupeesEjj();
 void ActorRupee::Update(bool param1) {
     ItemId cutsceneItemId;
     s32 uVar3;
@@ -258,7 +272,7 @@ void ActorRupee::Update(bool param1) {
             }
         } else {
             ItemManager* pItem = gItemManager;
-            rupeeValue = GetRupeeValue(mRupeeId);
+            rupeeValue = func_ov00_020c5a24(mRupeeId);
             pItem->GiveRupees(rupeeValue, false);
             uVar3 = -1;
 
@@ -390,8 +404,8 @@ void ActorRupee::func_ov14_0213b6a4(RupeeId id, Actor_UnkStruct_012 *param2) {
     if (func_ov14_0213b70c(id)) {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;
-        param2->mUnk_14 = data_ov14_021589b4[0x8];
-        param2->mUnk_18 = data_ov14_021589b4[0x9];
+        param2->mUnk_14 = data_ov14_021589d4; // data_ov14_021589b4[8]
+        param2->mUnk_18 = data_ov14_021589d8[0]; // data_ov14_021589b4[9]
     } else {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;

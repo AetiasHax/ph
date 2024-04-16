@@ -1,16 +1,16 @@
 
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x18
 	mov r4, r0
 	ldrh r0, [r4, #0x20]
 	str r0, [r4, #0x158]
 	bl _ZN10ActorRupee18func_ov14_0213b70cEj
 	cmp r0, #0
-	ldconst r0, data_ov14_021589b4
+	lda r0, data_ov14_021589b4
 	mov r2, #0
 	ldrne r0, [r0, #0x24]
 	str r2, [r4, #0x7c]
-	ldconst r0, 0x00000aa8
+	ldconst r0, #0x00000aa8
 	mov r5, r0, asr #0x1
 	str r5, [r4, #0x80]
 	str r2, [r4, #0x84]
@@ -61,54 +61,54 @@ _0213af98:
 	bl _ZN10ActorRupee18func_ov14_0213b204Ei
 	b _0213b0f4
 _0213afb4:
-	ldconst r0, data_027e0764
+	lda r0, data_027e0764
 	mvn ip, #0x110
 	ldr r5, [r0]
 	ldmib r0, {r3, r7}
-	umull sb, r0, r7, r5
+	umull r9, r0, r7, r5
 	mla r0, r7, r3, r0
-	ldconst r3, data_027e0764
+	lda r3, data_027e0764
 	ldr r8, [r3, #0x10]
 	ldr r6, [r3, #0xc]
-	adds sl, r8, sb
-	ldr fp, [r3, #0x14]
+	adds r10, r8, r9
+	ldr r11, [r3, #0x14]
 	mla r0, r6, r5, r0
-	umull r3, lr, r7, sl
-	adc sb, fp, r0
+	umull r3, lr, r7, r10
+	adc r9, r11, r0
 	adds r0, r8, r3
 	str r0, [sp, #0x14]
-	ldconst r0, data_027e0764
-	mla lr, r7, sb, lr
-	str sl, [r0]
+	lda r0, data_027e0764
+	mla lr, r7, r9, lr
+	str r10, [r0]
 	ldr r3, [sp, #0x14]
-	str sb, [r0, #4]
+	str r9, [r0, #4]
 	str r3, [r0]
 	rsb r0, r1, #0x224
 	str r0, [sp, #0x10]
-	umull r0, r5, sb, r0
+	umull r0, r5, r9, r0
 	str r0, [sp, #4]
-	mla r5, sb, r2, r5
-	mla lr, r6, sl, lr
+	mla r5, r9, r2, r5
+	mla lr, r6, r10, lr
 	ldr r0, [sp, #0x10]
 	mov r3, r2
 	mla r5, r3, r0, r5
 	add r0, r5, ip
 	str r0, [sp]
 	ldr r5, [sp, #0x14]
-	ldconst r0, data_027e0764
-	adc sb, fp, lr
-	umull sl, r5, r7, r5
-	mla r5, r7, sb, r5
+	lda r0, data_027e0764
+	adc r9, r11, lr
+	umull r10, r5, r7, r5
+	mla r5, r7, r9, r5
 	ldr r7, [sp, #0x14]
 	rsb r1, r1, #0x334
-	str sb, [r0, #4]
-	umull r0, r3, sb, r1
+	str r9, [r0, #4]
+	umull r0, r3, r9, r1
 	mla r5, r6, r7, r5
-	mov r6, sl
+	mov r6, r10
 	adds r6, r8, r6
-	adc r7, fp, r5
-	ldconst r5, data_027e0764
-	mla r3, sb, r2, r3
+	adc r7, r11, r5
+	lda r5, data_027e0764
+	mla r3, r9, r2, r3
 	mov r0, r2
 	mla r3, r0, r1, r3
 	add r0, r3, #0x55
@@ -126,7 +126,7 @@ _0213afb4:
 	mov r0, r4
 	str r2, [r4, #0x64]
 	ldr r2, [sp]
-	str sl, [sp, #0xc]
+	str r10, [sp, #0xc]
 	str r2, [r4, #0x68]
 	bl _ZN10ActorRupee18func_ov14_0213b204Ei
 	b _0213b0f4
@@ -146,4 +146,4 @@ _0213b0e8:
 _0213b0f4:
 	mov r0, #1
 	add sp, sp, #0x18
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
