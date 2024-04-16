@@ -39,9 +39,9 @@ bool AdventureFlags::func_ov00_02097e6c() {}
 bool AdventureFlags::func_ov00_02097e7c() {}
 bool AdventureFlags::func_ov00_02097ea4() {}
 unk32 AdventureFlags::func_ov00_02097ecc() {}
-void*AdventureFlags:: func_ov00_02097f8c() {}
-void*AdventureFlags:: func_ov00_02097fac() {}
-void*AdventureFlags:: func_ov00_02097fd0() {}
+void* AdventureFlags::func_ov00_02097f8c() {}
+void* AdventureFlags::func_ov00_02097fac() {}
+void* AdventureFlags::func_ov00_02097fd0() {}
 void AdventureFlags::func_ov00_02097ff4(bool param1, bool param2) {}
 unk32 AdventureFlags::func_ov00_02098058() {}
 bool AdventureFlags::func_ov00_02098064(unk32 param1) {}

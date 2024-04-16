@@ -3,6 +3,7 @@
 #include "global.h"
 #include "types.h"
 
+#include "Cutscene/CutsceneHandler.hpp"
 #include "Render/FadeControl.hpp"
 #include "System/SysNew.hpp"
 
@@ -46,7 +47,7 @@ struct FlagsUnk {
 
 class AdventureFlags : public SysObject {
     /* 00 */ unk32 mFlags[16];
-    /* 40 */ void *mUnk_40; // contains a fade control
+    /* 40 */ CutsceneHandler *mCutsceneHandler;
     /* 44 */ void *mUnk_44;
     /* 48 */
 
