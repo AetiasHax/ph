@@ -100,3 +100,5 @@ class AdventureFlags : public SysObject {
     void func_ov00_020980bc(s32 param1);
     void func_ov00_020980d0();
 };
+
+extern AdventureFlags *gAdventureFlags;
