@@ -2724,7 +2724,7 @@ _0216f7c4: .word 0x00000477
 	.global func_ov21_0216f7c8
 	arm_func_start func_ov21_0216f7c8
 func_ov21_0216f7c8: ; 0x0216f7c8
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x118
 	mov sl, r0
 	ldr r0, [sl, #0x224]
@@ -2733,14 +2733,14 @@ func_ov21_0216f7c8: ; 0x0216f7c8
 	cmpeq r0, #0
 	addeq sp, sp, #0x118
 	moveq r0, #0
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	mov r0, sl
 	mov r1, #0
 	bl func_01fffd04
 	cmp r0, #0
 	addeq sp, sp, #0x118
 	moveq r0, #0
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	add r0, sl, #0x48
 	add r1, sl, #0x54
 	add r2, sl, #0x60
@@ -2749,7 +2749,7 @@ func_ov21_0216f7c8: ; 0x0216f7c8
 	cmp r0, #0x1e
 	addlt sp, sp, #0x118
 	movlt r0, #0
-	ldmltia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmltia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	ldr r0, _0216fb80 ; =0x0000ffff
 	mov r5, #0
 	add r4, sp, #0x48
@@ -2804,7 +2804,7 @@ func_ov21_0216f7c8: ; 0x0216f7c8
 	cmp r0, #0
 	addne sp, sp, #0x118
 	movne r0, #0
-	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmneia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	ldr r0, _0216fb88 ; =data_ov21_02171bb4
 	ldr r0, [r0, #0x20]
 	tst r0, #1
@@ -2880,7 +2880,7 @@ _0216f9c0:
 	str r2, [sp, #0x44]
 	mov r6, #0x800
 	mov r5, #0xd
-	mov fp, r8
+	mov r11, r8
 	add r7, sp, #0x30
 _0216fa3c:
 	ldr r1, [sp, #0x3c]
@@ -2907,8 +2907,8 @@ _0216fa3c:
 	add r1, sp, #0x58
 	stmia sp, {r0, r6}
 	str r5, [sp, #8]
-	str fp, [sp, #0xc]
-	str fp, [sp, #0x10]
+	str r11, [sp, #0xc]
+	str r11, [sp, #0x10]
 	ldr r0, [r4]
 	mov r2, r7
 	add r3, sp, #0x3c
@@ -2916,7 +2916,7 @@ _0216fa3c:
 	cmp r0, #0
 	addeq sp, sp, #0x118
 	moveq r0, #1
-	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0216fac4:
 	add r8, r8, #1
 	cmp r8, #4
@@ -2967,7 +2967,7 @@ _0216fb60:
 _0216fb74:
 	mov r0, #0
 	add sp, sp, #0x118
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov21_0216f7c8
 _0216fb80: .word 0x0000ffff
@@ -3037,7 +3037,7 @@ _0216fc58: .word data_027e0fc8
 	.global func_ov21_0216fc5c
 	arm_func_start func_ov21_0216fc5c
 func_ov21_0216fc5c: ; 0x0216fc5c
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x44
 	mov r4, r2
 	ldr r2, [r4]
@@ -3051,7 +3051,7 @@ func_ov21_0216fc5c: ; 0x0216fc5c
 	mov r2, r3
 	bl func_ov21_02170050
 	add sp, sp, #0x44
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0216fc98:
 	ldrb r0, [sp, #0x68]
 	cmp r0, #0
@@ -3062,7 +3062,7 @@ _0216fc98:
 	mov r2, r4
 	bl func_ov21_021701b0
 	add sp, sp, #0x44
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0216fcc0:
 	ldr r0, _0216fffc ; =data_ov21_02171bb4
 	ldr r0, [r0, #0x54]
@@ -3194,7 +3194,7 @@ _0216fe2c:
 	ldr r2, [sp, #0x28]
 	add sp, sp, #0x44
 	str r2, [r1, #4]
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0216fec4:
 	rsb r0, r0, #0
 	str r0, [sp, #8]
@@ -3217,7 +3217,7 @@ _0216fee4:
 	subge r2, r2, #8
 _0216ff0c:
 	ldr r0, _02170004 ; =data_ov21_02171780
-	ldr fp, [sp, #0x1c]
+	ldr r11, [sp, #0x1c]
 	add r1, r0, r2, lsl #3
 	ldr r2, [r0, r2, lsl #3]
 	ldr r0, [r1, #4]
@@ -3253,14 +3253,14 @@ _0216ff48:
 	add sp, sp, #0x44
 	stmia r0, {r1, sb}
 	mov r0, #1
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0216ff9c:
 	add r6, r6, #1
 	cmp r6, #1
 	ble _0216ff48
 	add r8, r8, #1
-	add fp, fp, #1
-	cmp fp, #1
+	add r11, r11, #1
+	cmp r11, #1
 	ble _0216ff44
 _0216ffb8:
 	ldr r0, [sp, #0x14]
@@ -3280,7 +3280,7 @@ _0216ffdc:
 	ble _0216fe2c
 	mov r0, #0
 	add sp, sp, #0x44
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov21_0216fc5c
 _0216fffc: .word data_ov21_02171bb4
@@ -3313,7 +3313,7 @@ func_ov21_0217004c: ; 0x0217004c
 	.global func_ov21_02170050
 	arm_func_start func_ov21_02170050
 func_ov21_02170050: ; 0x02170050
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x28
 	mov sl, r1
 	ldr r1, [sl]
@@ -3321,19 +3321,19 @@ func_ov21_02170050: ; 0x02170050
 	str r1, [sp, #8]
 	ldr r3, [sl, #4]
 	ldr r1, _021701a4 ; =data_027e0d3c
-	mov fp, r0
+	mov r11, r0
 	ldr r0, [r1]
 	add r1, sp, #8
 	add r2, sp, #0x1c
 	str r3, [sp, #0xc]
 	bl func_ov00_020793b8
-	ldr r1, [fp, #0x48]
+	ldr r1, [r11, #0x48]
 	ldr r0, _021701a8 ; =data_027e0e60
 	str r1, [sp, #0x10]
-	ldr r1, [fp, #0x4c]
+	ldr r1, [r11, #0x4c]
 	ldr r0, [r0]
 	str r1, [sp, #0x14]
-	ldr r3, [fp, #0x50]
+	ldr r3, [r11, #0x50]
 	add r1, sp, #0x10
 	mov r2, #0
 	str r3, [sp, #0x18]
@@ -3377,7 +3377,7 @@ _02170108:
 	bl func_ov00_02079ab4
 	cmp r0, #0
 	beq _02170174
-	mov r0, fp
+	mov r0, r11
 	add r1, sp, #8
 	bl func_ov21_02170388
 	cmp r0, #0
@@ -3389,7 +3389,7 @@ _02170108:
 	ldr r2, [sp, #0xc]
 	add sp, sp, #0x28
 	str r2, [r1, #4]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _02170174:
 	add r5, r5, #1
 	cmp r5, r6
@@ -3404,7 +3404,7 @@ _0217018c:
 	bgt _021700b8
 	mov r0, #0
 	add sp, sp, #0x28
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov21_02170050
 _021701a4: .word data_027e0d3c
@@ -3414,7 +3414,7 @@ _021701ac: .word data_027e103c
 	.global func_ov21_021701b0
 	arm_func_start func_ov21_021701b0
 func_ov21_021701b0: ; 0x021701b0
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x28
 	mov sb, r1
 	ldr r2, [sb]
@@ -3451,11 +3451,11 @@ _0217022c:
 	mov r0, r5
 	cmp r0, r6
 	bgt _02170304
-	rsb fp, r4, #0
+	rsb r11, r4, #0
 _02170240:
 	cmp r4, #0
 	movge r0, r4
-	movlt r0, fp
+	movlt r0, r11
 	cmp r0, r6
 	bge _02170268
 	cmp r5, #0
@@ -3499,7 +3499,7 @@ _02170268:
 	ldr r2, [sp, #0xc]
 	add sp, sp, #0x28
 	str r2, [r1, #4]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _021702f8:
 	add r5, r5, #1
 	cmp r5, r6
@@ -3514,7 +3514,7 @@ _02170310:
 	bgt _02170218
 	mov r0, #0
 	add sp, sp, #0x28
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov21_021701b0
 _02170328: .word data_027e0d3c

@@ -1186,10 +1186,10 @@ _02199c74: .word 0x00002ccd
 	.global func_ov57_02199c78
 	arm_func_start func_ov57_02199c78
 func_ov57_02199c78: ; 0x02199c78
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x20
 	mov sl, r0
-	ldr fp, _02199d4c ; =data_027e0e60
+	ldr r11, _02199d4c ; =data_027e0e60
 	mov r7, sl
 	add r8, sl, #0x2c
 	add sb, sl, #0x24
@@ -1204,7 +1204,7 @@ _02199ca0:
 	beq _02199cf8
 	b _02199d2c
 _02199cb8:
-	ldr r0, [fp]
+	ldr r0, [r11]
 	mov r1, r8
 	bl func_ov00_020840c4
 	cmp r0, #0
@@ -1242,7 +1242,7 @@ _02199d2c:
 	add sb, sb, #0x1c
 	blt _02199ca0
 	add sp, sp, #0x20
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov57_02199c78
 _02199d4c: .word data_027e0e60
@@ -1882,7 +1882,7 @@ _0219a5a8: .word data_ov57_0219ab28
 	.global func_ov57_0219a5ac
 	arm_func_start func_ov57_0219a5ac
 func_ov57_0219a5ac: ; 0x0219a5ac
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0xc
 	mov sl, r0
 	bl func_ov57_02199ecc
@@ -1893,7 +1893,7 @@ func_ov57_0219a5ac: ; 0x0219a5ac
 	bl func_ov57_0219939c
 	cmp r0, #0
 	beq _0219a664
-	ldr fp, _0219a6b0 ; =0x00000666
+	ldr r11, _0219a6b0 ; =0x00000666
 	add r5, sl, #0x164
 	add r4, sl, #0x100
 	mov r6, #0x2d
@@ -1906,7 +1906,7 @@ _0219a5ec:
 	mov r7, r0
 	cmp r1, #0
 	beq _0219a63c
-	cmp r7, fp
+	cmp r7, r11
 	ble _0219a63c
 	add r1, sp, #0
 	mov r0, sl
@@ -1918,7 +1918,7 @@ _0219a5ec:
 	sub r2, r2, #0x8000
 	strh r2, [r1, #0x70]
 	mov r0, r7
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 _0219a63c:
 	strh r6, [r4, #0x68]
 	ldrsh r2, [r5]
@@ -1950,7 +1950,7 @@ _0219a698:
 	bl func_ov14_02123e48
 	mov r0, #0
 	add sp, sp, #0xc
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov57_0219a5ac
 _0219a6b0: .word 0x00000666

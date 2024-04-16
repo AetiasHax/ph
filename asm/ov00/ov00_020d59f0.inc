@@ -273,14 +273,14 @@ func_ov00_020d5cd8: ; 0x020d5cd8
 	.global func_ov00_020d5dc4
 	arm_func_start func_ov00_020d5dc4
 func_ov00_020d5dc4: ; 0x020d5dc4
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	ldr r4, [r0]
 	ldr r5, [r1]
-	ldmib r1, {r3, fp, lr}
+	ldmib r1, {r3, r11, lr}
 	ldmib r0, {r2, sl, ip}
 	mul sb, r4, lr
 	mul r1, ip, r5
-	mul r6, r2, fp
+	mul r6, r2, r11
 	add sb, sb, #0x800
 	mul r7, r2, lr
 	mul r8, ip, r3
@@ -303,12 +303,12 @@ func_ov00_020d5dc4: ; 0x020d5dc4
 	add sb, r7, sb, asr #12
 	mul r7, r4, r3
 	mul r3, r2, r3
-	mul r6, ip, fp
+	mul r6, ip, r11
 	mul lr, ip, lr
 	mul ip, r4, r5
-	mul r8, r4, fp
+	mul r8, r4, r11
 	mul r4, r2, r5
-	mul r2, sl, fp
+	mul r2, sl, r11
 	add sl, r1, #0x800
 	add r1, r8, #0x800
 	sub r1, sb, r1, asr #12
@@ -330,17 +330,17 @@ func_ov00_020d5dc4: ; 0x020d5dc4
 	str r5, [r0, #8]
 	sub r1, r3, r1, asr #12
 	str r1, [r0, #0xc]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	arm_func_end func_ov00_020d5dc4
 
 	.global func_ov00_020d5eac
 	arm_func_start func_ov00_020d5eac
 func_ov00_020d5eac: ; 0x020d5eac
-	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	ldr r5, [r1]
 	ldr r4, [r0, #0xc]
 	ldr r2, [r0, #8]
-	ldmib r1, {r3, fp, lr}
+	ldmib r1, {r3, r11, lr}
 	ldmia r0, {r6, ip}
 	mul sl, r5, r4
 	mul r1, lr, r6
@@ -354,11 +354,11 @@ func_ov00_020d5eac: ; 0x020d5eac
 	add sl, sl, r1, asr #12
 	add r7, r7, #0x800
 	add r7, sl, r7, asr #12
-	mul sl, fp, ip
+	mul sl, r11, ip
 	add sl, sl, #0x800
 	sub r7, r7, sl, asr #12
-	mul sl, fp, r6
-	mul r1, fp, r4
+	mul sl, r11, r6
+	mul r1, r11, r4
 	str r7, [r0]
 	mul r4, lr, r4
 	mul r7, lr, r2
@@ -372,12 +372,12 @@ func_ov00_020d5eac: ; 0x020d5eac
 	add sl, r8, sl, asr #12
 	mul r8, r5, ip
 	mul r5, r3, ip
-	mul r2, fp, r2
-	add fp, r1, #0x800
+	mul r2, r11, r2
+	add r11, r1, #0x800
 	add r1, sb, #0x800
 	add r3, lr, #0x800
 	add sb, r7, #0x800
-	mov r7, fp, asr #0xc
+	mov r7, r11, asr #0xc
 	sub r1, sl, r1, asr #12
 	str r1, [r0, #4]
 	add r8, r8, #0x800
@@ -394,7 +394,7 @@ func_ov00_020d5eac: ; 0x020d5eac
 	str r5, [r0, #8]
 	sub r1, r3, r1, asr #12
 	str r1, [r0, #0xc]
-	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	arm_func_end func_ov00_020d5eac
 
 	.global func_ov00_020d5f98

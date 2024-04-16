@@ -544,7 +544,7 @@ _021993b4: .word data_027e0fcc
 	.global func_ov55_021993b8
 	arm_func_start func_ov55_021993b8
 func_ov55_021993b8: ; 0x021993b8
-	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, fp, lr}
+	stmdb sp!, {r4, r5, r6, r7, r8, sb, sl, r11, lr}
 	sub sp, sp, #0x13c
 	mov r4, r0
 	mvn r1, #0
@@ -671,7 +671,7 @@ _021994d4:
 	str r1, [sp, #0x10c]
 	mov r1, #1
 	strb r1, [sp, #0xa0]
-	mov fp, #0x5c
+	mov r11, #0x5c
 	ldr r0, [r0]
 	add r1, sp, #0x8c
 	str r6, [sp, #0x114]
@@ -690,7 +690,7 @@ _021994d4:
 	strb ip, [sp, #0x11a]
 	strb r3, [sp, #0x11b]
 	strb r2, [sp, #0x11c]
-	str fp, [sp, #0x120]
+	str r11, [sp, #0x120]
 	bl func_ov00_02097810
 	ldr r2, _02199650 ; =data_027e103c
 	str r0, [r4, #0x5c]
@@ -705,7 +705,7 @@ _021994d4:
 	strb r2, [r1, #0x2a]
 	bl func_ov00_0209a508
 	add sp, sp, #0x13c
-	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, fp, pc}
+	ldmia sp!, {r4, r5, r6, r7, r8, sb, sl, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov55_021993b8
 _02199638: .word data_027e0f64
