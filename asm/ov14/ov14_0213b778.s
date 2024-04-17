@@ -4744,7 +4744,7 @@ func_ov14_0213ef2c: ; 0x0213ef2c
 	add r0, r4, #0
 	add r0, #0x80
 	strb r1, [r0]
-	ldr r0, _0213ef5c ; =data_027e0fbc
+	ldr r0, _0213ef5c ; =gHealthManager
 	ldr r1, [r0]
 	mov r0, #2
 	ldrsh r0, [r1, r0]
@@ -4754,7 +4754,7 @@ func_ov14_0213ef2c: ; 0x0213ef2c
 	nop
 	thumb_func_end func_ov14_0213ef2c
 _0213ef58: .word data_ov14_02159084
-_0213ef5c: .word data_027e0fbc
+_0213ef5c: .word gHealthManager
 
 	.global func_ov14_0213ef60
 	thumb_func_start func_ov14_0213ef60
@@ -4768,7 +4768,7 @@ func_ov14_0213ef60: ; 0x0213ef60
 	bl func_0202e7fc
 	mov r0, #0xa
 	ldrsh r1, [r4, r0]
-	ldr r0, _0213ef90 ; =data_027e0fbc
+	ldr r0, _0213ef90 ; =gHealthManager
 	ldr r0, [r0]
 	strh r1, [r0, #2]
 	add r0, r4, #0
@@ -4780,7 +4780,7 @@ func_ov14_0213ef60: ; 0x0213ef60
 _0213ef84: .word data_ov14_02159084
 _0213ef88: .word data_ov14_0215b248
 _0213ef8c: .word data_027e077c
-_0213ef90: .word data_027e0fbc
+_0213ef90: .word gHealthManager
 
 	.global func_ov14_0213ef94
 	thumb_func_start func_ov14_0213ef94
@@ -4794,7 +4794,7 @@ func_ov14_0213ef94: ; 0x0213ef94
 	bl func_0202e7fc
 	mov r0, #0xa
 	ldrsh r1, [r4, r0]
-	ldr r0, _0213efcc ; =data_027e0fbc
+	ldr r0, _0213efcc ; =gHealthManager
 	ldr r0, [r0]
 	strh r1, [r0, #2]
 	add r0, r4, #0
@@ -4808,7 +4808,7 @@ func_ov14_0213ef94: ; 0x0213ef94
 _0213efc0: .word data_ov14_02159084
 _0213efc4: .word data_ov14_0215b248
 _0213efc8: .word data_027e077c
-_0213efcc: .word data_027e0fbc
+_0213efcc: .word gHealthManager
 
 	.global func_ov14_0213efd0
 	thumb_func_start func_ov14_0213efd0
@@ -5365,14 +5365,14 @@ func_ov14_0213f5dc: ; 0x0213f5dc
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl _ZN10PlayerBase9AddHealthEs
-	ldr r0, _0213f5fc ; =data_027e0fbc
+	ldr r0, _0213f5fc ; =gHealthManager
 	ldrsh r1, [r4, #0xa]
 	ldr r0, [r0]
 	strh r1, [r0, #2]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov14_0213f5dc
-_0213f5fc: .word data_027e0fbc
+_0213f5fc: .word gHealthManager
 
 	.global func_ov14_0213f600
 	arm_func_start func_ov14_0213f600

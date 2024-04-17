@@ -3580,7 +3580,7 @@ _0211483a:
 	strb r0, [r1]
 	add r0, sp, #0x48
 	bl func_ov00_0207a38c
-	ldr r0, _02114988 ; =data_027e0fbc
+	ldr r0, _02114988 ; =gHealthManager
 	add r1, sp, #0x48
 	ldr r0, [r0]
 	bl func_ov00_020b7ffc
@@ -3706,7 +3706,7 @@ _02114960:
 	thumb_func_end func_ov09_02114810
 _02114980: .word data_027e0dbc
 _02114984: .word data_ov00_020e9ec0
-_02114988: .word data_027e0fbc
+_02114988: .word gHealthManager
 _0211498c: .word data_ov00_020e9e18
 _02114990: .word data_ov09_0211f5b4
 _02114994: .word data_ov00_020e9f08

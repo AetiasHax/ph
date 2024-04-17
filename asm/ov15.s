@@ -30916,7 +30916,7 @@ _021398f0:
 	str r0, [r4, #0xa4]
 	str r0, [r4, #0xa8]
 	str r0, [r4, #0xac]
-	ldr ip, _02139a70 ; =data_027e0fbc
+	ldr ip, _02139a70 ; =gHealthManager
 	add r3, r4, #0x300
 	ldr r2, [ip]
 	add r1, r4, #0x60
@@ -30958,7 +30958,7 @@ _02139a60: .word func_ov15_02139a80
 _02139a64: .word func_ov15_02139a94
 _02139a68: .word func_020350ac
 _02139a6c: .word func_02035064
-_02139a70: .word data_027e0fbc
+_02139a70: .word gHealthManager
 _02139a74: .word data_027e10a4
 _02139a78: .word data_027e0d38
 _02139a7c: .word data_027e0ce0
@@ -30994,7 +30994,7 @@ func_ov15_02139ab4: ; 0x02139ab4
 	ldr r1, _02139cb8 ; =data_ov15_0218aaac
 	mov r4, r0
 	str r1, [r4]
-	ldr r1, _02139cbc ; =data_027e0fbc
+	ldr r1, _02139cbc ; =gHealthManager
 	ldrsh r3, [r4, #0xa]
 	ldr r2, [r1]
 	add r0, r4, #0x300
@@ -31123,7 +31123,7 @@ _02139af4:
 	.align 2, 0
 	arm_func_end func_ov15_02139ab4
 _02139cb8: .word data_ov15_0218aaac
-_02139cbc: .word data_027e0fbc
+_02139cbc: .word gHealthManager
 _02139cc0: .word data_027e10a4
 _02139cc4: .word func_020350ac
 _02139cc8: .word func_ov15_02139a80
@@ -31136,7 +31136,7 @@ func_ov15_02139cd0: ; 0x02139cd0
 	ldr r1, _02139edc ; =data_ov15_0218aaac
 	mov r4, r0
 	str r1, [r4]
-	ldr r1, _02139ee0 ; =data_027e0fbc
+	ldr r1, _02139ee0 ; =gHealthManager
 	ldrsh r3, [r4, #0xa]
 	ldr r2, [r1]
 	add r0, r4, #0x300
@@ -31267,7 +31267,7 @@ _02139d10:
 	.align 2, 0
 	arm_func_end func_ov15_02139cd0
 _02139edc: .word data_ov15_0218aaac
-_02139ee0: .word data_027e0fbc
+_02139ee0: .word gHealthManager
 _02139ee4: .word data_027e10a4
 _02139ee8: .word func_020350ac
 _02139eec: .word func_ov15_02139a80
@@ -31827,13 +31827,13 @@ func_ov15_0213a5e8: ; 0x0213a5e8
 	.global func_ov15_0213a604
 	arm_func_start func_ov15_0213a604
 func_ov15_0213a604: ; 0x0213a604
-	ldr r0, _0213a614 ; =data_027e0fbc
+	ldr r0, _0213a614 ; =gHealthManager
 	ldr r0, [r0]
 	ldrsh r0, [r0, #4]
 	bx lr
 	.align 2, 0
 	arm_func_end func_ov15_0213a604
-_0213a614: .word data_027e0fbc
+_0213a614: .word gHealthManager
 
 	.global func_ov15_0213a618
 	arm_func_start func_ov15_0213a618

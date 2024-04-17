@@ -1707,7 +1707,7 @@ func_ov26_0216e8b8: ; 0x0216e8b8
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0216e98e
-	ldr r0, _0216e9c0 ; =data_027e0fbc
+	ldr r0, _0216e9c0 ; =gHealthManager
 	ldr r0, [r0]
 	ldrh r1, [r0, #0xa]
 	mov r0, #2
@@ -1762,7 +1762,7 @@ _0216e9b0:
 	thumb_func_end func_ov26_0216e8b8
 _0216e9b8: .word gItemManager
 _0216e9bc: .word data_027e0d38
-_0216e9c0: .word data_027e0fbc
+_0216e9c0: .word gHealthManager
 
 	.global func_ov26_0216e9c4
 	thumb_func_start func_ov26_0216e9c4
@@ -2101,7 +2101,7 @@ _0216edf8:
 	mov r1, #0x3c
 	add r0, r0, #0x3b
 	bl func_01ff9b4c
-	ldr r1, _0216ee38 ; =data_027e0fbc
+	ldr r1, _0216ee38 ; =gHealthManager
 	mov r2, #1
 	ldr r3, [r1]
 	mov r0, r0, lsl #0x10
@@ -2115,7 +2115,7 @@ _0216edf8:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov26_0216edb4
-_0216ee38: .word data_027e0fbc
+_0216ee38: .word gHealthManager
 
 	.global func_ov26_0216ee3c
 	arm_func_start func_ov26_0216ee3c
@@ -8769,7 +8769,7 @@ _02174196:
 	ldrb r1, [r1]
 	cmp r1, #0
 	beq _02174204
-	ldr r1, _02174250 ; =data_027e0fbc
+	ldr r1, _02174250 ; =gHealthManager
 	ldr r1, [r1]
 	ldrh r2, [r1, #0xa]
 	mov r1, #2
@@ -8867,7 +8867,7 @@ _0217424e:
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end func_ov26_02174170
-_02174250: .word data_027e0fbc
+_02174250: .word gHealthManager
 _02174254: .word gItemManager
 
 	.global func_ov26_02174258

@@ -5,7 +5,7 @@
 .extern data_027e0e60
 .extern gAdventureFlags
 .extern data_027e0f78
-.extern data_027e0fbc
+.extern gHealthManager
 .extern data_027e103c
 .extern data_027e1058
 .extern data_027e105c

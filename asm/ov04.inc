@@ -76,7 +76,7 @@
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0fb8
-.extern data_027e0fbc
+.extern gHealthManager
 .extern data_027e0fc0
 .extern data_027e0fc4
 .extern data_027e0fc8

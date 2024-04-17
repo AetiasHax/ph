@@ -18659,7 +18659,7 @@ _020d274c:
 	mov r1, #0x3c
 	bl func_01ff9b4c
 	sub r0, r4, r0
-	ldr r2, _020d27e8 ; =data_027e0fbc
+	ldr r2, _020d27e8 ; =gHealthManager
 	ldr r1, _020d27ec ; =0x00007fff
 	mov r0, r0, lsl #0x10
 	and r1, r1, r0, lsr #16
@@ -18688,7 +18688,7 @@ _020d27d8: .word gItemManager
 _020d27dc: .word data_027e0f64
 _020d27e0: .word data_ov00_020df294
 _020d27e4: .word data_027e103c
-_020d27e8: .word data_027e0fbc
+_020d27e8: .word gHealthManager
 _020d27ec: .word 0x00007fff
 
 	.global func_ov00_020d27f0

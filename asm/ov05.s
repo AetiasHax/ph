@@ -9487,7 +9487,7 @@ func_ov05_021088c8: ; 0x021088c8
 	bl func_020385d0
 	cmp r0, #0
 	beq _0210899c
-	ldr r1, _021089a8 ; =data_027e0fbc
+	ldr r1, _021089a8 ; =gHealthManager
 	ldr r4, _021089ac ; =0x88888889
 	ldr r1, [r1]
 	mov ip, #0x3c
@@ -9534,7 +9534,7 @@ _0210899c:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 	arm_func_end func_ov05_021088c8
-_021089a8: .word data_027e0fbc
+_021089a8: .word gHealthManager
 _021089ac: .word 0x88888889
 _021089b0: .word 0x66666667
 _021089b4: .word 0x00007fff
@@ -10610,11 +10610,11 @@ _02109828:
 	bl _ZN13LinkStateBase18func_ov00_020a8360Ei
 	b _021098bc
 _02109834:
-	ldr r0, _021099bc ; =data_027e0fbc
+	ldr r0, _021099bc ; =gHealthManager
 	mov r1, #4
 	ldr r0, [r0]
 	blx func_ov00_020b804c
-	ldr r1, _021099bc ; =data_027e0fbc
+	ldr r1, _021099bc ; =gHealthManager
 	mov r0, r5
 	ldr r1, [r1]
 	ldrsh r1, [r1]
@@ -10719,7 +10719,7 @@ _021099a4:
 	.align 2, 0
 	arm_func_end func_ov05_021097b0
 _021099b8: .word 0x464f5243
-_021099bc: .word data_027e0fbc
+_021099bc: .word gHealthManager
 _021099c0: .word data_027e103c
 _021099c4: .word 0x424b4559
 _021099c8: .word 0x43525953

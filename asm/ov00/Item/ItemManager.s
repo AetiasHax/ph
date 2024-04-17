@@ -505,7 +505,7 @@ _020ae04e:
 	ldr r0, [r0]
 	mov r2, #1
 	blx _ZN14AdventureFlags3SetEjb
-	ldr r0, _020ae248 ; =data_027e0fbc
+	ldr r0, _020ae248 ; =gHealthManager
 	mov r1, #5
 	ldr r0, [r0]
 	strh r1, [r0, #8]
@@ -756,7 +756,7 @@ _020ae222:
 	b _020ae258
 	nop
 _020ae244: .word gAdventureFlags
-_020ae248: .word data_027e0fbc
+_020ae248: .word gHealthManager
 _020ae24c: .word 0x00000126
 _020ae250: .word 0x00000127
 _020ae254: .word 0x00000129

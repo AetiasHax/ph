@@ -12594,13 +12594,13 @@ func_ov00_020bb44c: ; 0x020bb44c
 	ldrb r0, [r0, #0x12]
 	cmp r0, #0
 	movne r0, #0xc
-	ldreq r0, _020bb468 ; =data_027e0fbc
+	ldreq r0, _020bb468 ; =gHealthManager
 	ldreq r0, [r0]
 	ldreqsh r0, [r0]
 	bx lr
 	.align 2, 0
 	arm_func_end func_ov00_020bb44c
-_020bb468: .word data_027e0fbc
+_020bb468: .word gHealthManager
 
 	.global func_ov00_020bb46c
 	arm_func_start func_ov00_020bb46c

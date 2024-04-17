@@ -32,7 +32,7 @@
 .extern data_027e0e60
 .extern data_027e0f88
 .extern data_027e0f8c
-.extern data_027e0fbc
+.extern gHealthManager
 .extern data_027e1044
 .extern data_027e1050
 .extern data_027e1058
