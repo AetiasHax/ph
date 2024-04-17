@@ -4,7 +4,7 @@
 Resource ActorRupee::gResource;
 ActorType ActorRupee::gType;
 
-static u32 data_ov14_021589d4 = 0x00000000;
+static u32 data_ov14_021589d4[] = { 0x00000000 };
 
 static u32 data_ov14_021589d8[] = {
     0x00000000,
@@ -12,7 +12,7 @@ static u32 data_ov14_021589d8[] = {
     0x00000000,
 };
 
-static char data_ov14_021589b4[] = "anc";
+static char* data_ov14_021589b4 = "anc";
 
 extern u32 **data_027e0fe0[];
 
@@ -23,8 +23,6 @@ extern "C" u32 func_01fffd04(void*, u32);
 extern u32 data_ov00_020e9370[];
 extern "C" bool func_ov00_020c313c();
 extern "C" void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
-
-// ---
 
 extern "C" void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
 extern "C" void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
@@ -37,6 +35,9 @@ extern "C" u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
 extern u32 data_ov00_020eec9c[];
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern void *data_027e0e60;
+
+extern "C" bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
+extern "C" void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
 
 ActorRupee* ActorRupee::Create() {
     ActorRupee* newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
@@ -250,7 +251,7 @@ void ActorRupee::func_ov14_0213b204(unk32 param1) {
     mUnk_130 = param1;
 }
 
-extern "C" void _ZN11ItemManager10GiveRupeesEjj();
+extern "C" void _ZN11ItemManager10GiveRupeesEjj(ItemManager* implicit, u16 amount, unk32 param2);
 void ActorRupee::Update(bool param1) {
     ItemId cutsceneItemId;
     s32 uVar3;
@@ -265,7 +266,7 @@ void ActorRupee::Update(bool param1) {
         cutsceneItemId = GetRupeeCutsceneItemId();
 
         if (cutsceneItemId >= 0) {
-            if (data_027e0fc8->PlayItemCutscene(cutsceneItemId)) {
+            if (/*data_027e0fc8->*/func_ov00_020bce48(data_027e0fc8, cutsceneItemId)) {
                 Kill();
             } else {
                 func_ov14_0213b204(3);
@@ -273,7 +274,8 @@ void ActorRupee::Update(bool param1) {
         } else {
             ItemManager* pItem = gItemManager;
             rupeeValue = func_ov00_020c5a24(mRupeeId);
-            pItem->GiveRupees(rupeeValue, false);
+            _ZN11ItemManager10GiveRupeesEjj(pItem, rupeeValue, false); // GiveRupees
+            // pItem->GiveRupees(rupeeValue, false); // giverupees
             uVar3 = -1;
 
             switch (mRupeeId) {
@@ -318,7 +320,7 @@ void ActorRupee::Update(bool param1) {
             break;
         case 3:
             PlayerLinkBase* pLink = data_027e0fc8;
-            if (pLink->PlayItemCutscene(GetRupeeCutsceneItemId())) {
+            if (/*pLink->*/func_ov00_020bce48(pLink, GetRupeeCutsceneItemId())) {
                 Kill();
             }
             break;
@@ -389,6 +391,7 @@ void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, boo
         0xC, // RupeeId_Rupoor50
     };
 
+    func_ov00_0207a13c(&unk_class);
     func_ov14_0213b6a4(id, &unk_class);
     func_0202bc38(param2, param3, data_ov14_02153e28[id], &unk_class, 0);
 
@@ -404,8 +407,8 @@ void ActorRupee::func_ov14_0213b6a4(RupeeId id, Actor_UnkStruct_012 *param2) {
     if (func_ov14_0213b70c(id)) {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;
-        param2->mUnk_14 = data_ov14_021589d4; // data_ov14_021589b4[8]
-        param2->mUnk_18 = data_ov14_021589d8[0]; // data_ov14_021589b4[9]
+        param2->mUnk_14 = data_ov14_021589d4[8]; // data_ov14_021589b4[8]
+        param2->mUnk_18 = data_ov14_021589d8[8]; // data_ov14_021589b4[9]
     } else {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;

@@ -30,7 +30,7 @@ public:
 
     /* 000 (base) */
     /* 158 */ RupeeId mRupeeId;
-    /* 15c */ s16 mUnk_15c;
+    /* 15c */ u16 mUnk_15c;
     /* 15e */ unk16 mUnk_15e;
     /* 160 */
 

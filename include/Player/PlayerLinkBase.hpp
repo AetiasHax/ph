@@ -74,5 +74,5 @@ class PlayerLinkBase: public PlayerBase {
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
     public:
-        bool PlayItemCutscene(ItemId cutsceneItemId);
+        bool func_ov00_020bce48(ItemId cutsceneItemId); // PlayItemCutscene
 };

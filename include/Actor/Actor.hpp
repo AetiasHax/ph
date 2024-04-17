@@ -11,22 +11,20 @@
 #include "Physics/Transform.hpp"
 #include "Player/EquipBoomerang.hpp"
 
-class Actor_UnkStruct_012 {
-    public:
-        /* 00 */ u16 mUnk_00;
-        /* 02 */ u8 mUnk_02;
-        /* 03 */ u8 mUnk_03;
-        /* 04 */ u32 mUnk_04;
-        /* 08 */ u32 mUnk_08;
-        /* 0c */ u32 mUnk_0c;
-        /* 10 */ u8 mUnk_10;
-        /* 11 */ u8 mUnk_11;
-        /* 12 */ u8 mUnk_12[0x2];
-        /* 14 */ u32 mUnk_14;
-        /* 18 */ u32 mUnk_18;
-        /* 1c */
 
-        Actor_UnkStruct_012();
+struct Actor_UnkStruct_012 {
+    /* 00 */ u16 mUnk_00;
+    /* 02 */ u8 mUnk_02;
+    /* 03 */ u8 mUnk_03;
+    /* 04 */ u32 mUnk_04;
+    /* 08 */ u32 mUnk_08;
+    /* 0c */ u32 mUnk_0c;
+    /* 10 */ u8 mUnk_10;
+    /* 11 */ u8 mUnk_11;
+    /* 12 */ u8 mUnk_12[0x2];
+    /* 14 */ u32 mUnk_14;
+    /* 18 */ u32 mUnk_18;
+    /* 1c */
 };
 
 struct Actor_UnkStruct_020 {
