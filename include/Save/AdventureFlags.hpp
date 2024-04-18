@@ -23,7 +23,7 @@ enum AdventureFlag_ {
 
     /* 0x30 */ AdventureFlag_Cannon = 48,
 
-    /* 0x7d */ AdventureFlag_Azurine = 126,
+    /* 0x7d */ AdventureFlag_Azurine = 125,
     /* 0x7e */ AdventureFlag_Crimsonine = 126,
     /* 0x7f */ AdventureFlag_Aquanine = 127,
     /* 0x80 */ AdventureFlag_Unk_128 = 128,

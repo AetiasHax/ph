@@ -8,7 +8,7 @@
 .extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern _ZN10PlayerBase8vfunc_04Ev
 .extern _ZN10PlayerBase9AddHealthEs
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsi
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager13UnequipPotionEv

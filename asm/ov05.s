@@ -9681,7 +9681,7 @@ _02108b9c:
 	str r0, [r4, #0x74]
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	b _02108be8
 _02108bb4:
 	ldr r0, _02108cf0 ; =gItemManager

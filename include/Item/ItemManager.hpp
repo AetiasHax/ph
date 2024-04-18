@@ -307,7 +307,7 @@ public:
 
     // Rupees
     u32 GetMaxRupees() const;
-    void GiveRupees(u16 amount, unk32 param2);
+    void GiveRupees(s16 amount, unk32 param2);
 
     // Potion
     void SetPotion(u32 index, Potion potion);

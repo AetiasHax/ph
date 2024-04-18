@@ -16992,9 +16992,9 @@ _0211c6f2:
 	thumb_func_end func_ov09_0211c6b4
 _0211c6fc: .word gItemManager
 
-	.global func_ov09_0211c700
-	thumb_func_start func_ov09_0211c700
-func_ov09_0211c700: ; 0x0211c700
+	.global EquipLinebeckCannon
+	thumb_func_start EquipLinebeckCannon
+EquipLinebeckCannon: ; 0x0211c700
 	push {r3, lr}
 	ldr r0, _0211c720 ; =gItemManager
 	mov r1, #3
@@ -17010,7 +17010,7 @@ func_ov09_0211c700: ; 0x0211c700
 _0211c71c:
 	pop {r3, pc}
 	nop
-	thumb_func_end func_ov09_0211c700
+	thumb_func_end EquipLinebeckCannon
 _0211c720: .word gItemManager
 
 	.global func_ov09_0211c724
@@ -17414,7 +17414,7 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r0, #0
 	add r0, r6, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEjj
+	blx _ZN11ItemManager10GiveRupeesEsi
 	ldr r0, _0211c9e4 ; =gItemManager
 	add r1, r5, #0
 	ldr r6, [r0]
@@ -17445,7 +17445,7 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEjj
+	blx _ZN11ItemManager10GiveRupeesEsi
 	ldr r0, _0211ca1c ; =gItemManager
 	add r1, r5, #0
 	ldr r4, [r0]
@@ -17463,9 +17463,9 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	thumb_func_end func_ov09_0211c9e8
 _0211ca1c: .word gItemManager
 
-	.global func_ov09_0211ca20
-	thumb_func_start func_ov09_0211ca20
-func_ov09_0211ca20: ; 0x0211ca20
+	.global GiveShipPart
+	thumb_func_start GiveShipPart
+GiveShipPart: ; 0x0211ca20
 	push {r3, r4, r5, r6, lr}
 	sub sp, #4
 	add r5, r0, #0
@@ -17538,7 +17538,7 @@ _0211ca94:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end func_ov09_0211ca20
+	thumb_func_end GiveShipPart
 _0211caa8: .word gItemManager
 _0211caac: .word data_ov09_0211f294
 _0211cab0: .word data_ov09_0211f298

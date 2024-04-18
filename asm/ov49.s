@@ -894,7 +894,7 @@ _02196068:
 	mov r0, r5
 	rsb r1, r1, #0
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsi
 	ldrb r1, [r4, #0x5c9]
 	ldr r0, _021960f0 ; =gItemManager
 	add r1, r1, #1

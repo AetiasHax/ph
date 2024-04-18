@@ -239,7 +239,7 @@
 .extern func_ov09_0211c9a0
 .extern func_ov09_0211c9a8
 .extern func_ov09_0211c9e8
-.extern func_ov09_0211ca20
+.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cb3c
 .extern func_ov09_0211cb5c

@@ -1976,7 +1976,7 @@ func_ov45_0218ad80: ; 0x0218ad80
 	add r0, ip, r0, asr #1
 	sub r1, lr, r1
 	mov r4, #0x2b
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	b _0218ae0c
 _0218ae00:
 	sub r0, lr, #0x48

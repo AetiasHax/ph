@@ -5280,7 +5280,7 @@ _0213f516:
 	ldr r0, _0213f598 ; =gItemManager
 	mov r2, #0
 	ldr r0, [r0]
-	blx _ZN11ItemManager9SetPotionEjj
+	blx _ZN11ItemManager9SetPotionEjh
 	b _0213f534
 _0213f52c:
 	add r1, r1, #1

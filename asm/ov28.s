@@ -2701,7 +2701,7 @@ _0216faf8:
 	blx func_ov09_0211c724
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 _0216fb20:
 	mov r0, r4
 	add sp, sp, #0xc

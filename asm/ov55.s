@@ -432,7 +432,7 @@ _02199244:
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	mov r2, #0
-	bl _ZN11ItemManager9SetPotionEjj
+	bl _ZN11ItemManager9SetPotionEjh
 	ldr r0, _0219926c ; =gItemManager
 	ldr r0, [r0]
 	bl _ZN11ItemManager17EquipPreviousItemEv

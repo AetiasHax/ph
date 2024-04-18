@@ -224,7 +224,7 @@ enum ItemId_ {
     /* 0x80 */ ItemId_Unk_128 = 128,
     /* 0x81 */ ItemId_Rupoor10 = 129,
     /* 0x82 */ ItemId_Rupoor50 = 130,
-
+    /* 0x83 */ ItemId_Unk_131 = 131,
     /* 0x84 */ ItemId_Unk_132 = 132,
     /* 0x85 */ ItemId_Unk_133 = 133,
     /* 0x86 */ ItemId_Unk_134 = 134,

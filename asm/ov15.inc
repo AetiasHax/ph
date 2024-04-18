@@ -9,7 +9,7 @@
 .extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern _ZN10PlayerBase8vfunc_04Ev
 .extern _ZN10PlayerBase9AddHealthEs
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsi
 .extern _ZN11ItemManager10SetUnk_09eEjt
 .extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager18func_ov00_020ad528Ev
@@ -892,7 +892,7 @@
 .extern func_ov09_0211c6b4
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern func_ov09_0211ca20
+.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cc74
 .extern func_ov09_0211cc98

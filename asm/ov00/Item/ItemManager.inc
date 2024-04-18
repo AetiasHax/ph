@@ -21,6 +21,6 @@
 .extern func_ov00_020cf374
 .extern func_ov00_020d73bc
 .extern func_ov05_02104004
-.extern func_ov09_0211c700
-.extern func_ov09_0211ca20
+.extern EquipLinebeckCannon
+.extern GiveShipPart
 .extern gItemManager
