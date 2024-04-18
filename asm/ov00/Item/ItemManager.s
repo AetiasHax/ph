@@ -3,22 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager13UnequipPotionEv
-	thumb_func_start _ZN11ItemManager13UnequipPotionEv
-_ZN11ItemManager13UnequipPotionEv: ; 0x020ae2c0
-	push {r3, lr}
-	ldr r1, [r0]
-	cmp r1, #9
-	beq _020ae2cc
-	cmp r1, #0xa
-	bne _020ae2d0
-_020ae2cc:
-	blx _ZN11ItemManager17EquipPreviousItemEv
-_020ae2d0:
-	pop {r3, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager13UnequipPotionEv
-
 	.global _ZNK11ItemManager12GetMaxRupeesEv
 	arm_func_start _ZNK11ItemManager12GetMaxRupeesEv
 _ZNK11ItemManager12GetMaxRupeesEv: ; 0x020ae2d4
@@ -132,7 +116,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi - 1
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi
 
 	.global _ZN11ItemManager13ForceEquipItemEi
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEi

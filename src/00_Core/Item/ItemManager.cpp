@@ -747,3 +747,12 @@ THUMB void ItemManager::GiveEquipItem(ItemFlag item, u16 ammo) {
         this->mEquipLoadTimer = 1;
     }
 }
+
+THUMB void ItemManager::UnequipPotion() {
+    switch (mEquippedItem) {
+        case ItemFlag_PotionA:
+        case ItemFlag_PotionB: {
+            this->EquipPreviousItem();
+        } break;
+    }
+}
