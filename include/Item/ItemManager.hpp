@@ -9,8 +9,10 @@ extern "C" {
 #include "lib/math.h"
 
 #include "Actor/ActorNavi.hpp"
+#include "Save/AdventureFlags.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipItem.hpp"
+#include "Player/HealthManager.hpp"
 #include "System/SysNew.hpp"
 #include "System/OverlayManager.hpp"
 #include "Render/ModelRender.hpp"
@@ -83,7 +85,7 @@ typedef u8 Potion;
 enum Potion_ {
     Potion_None,
     Potion_Red,
-    Potion_Blue,
+    Potion_Purple,
     Potion_Yellow,
     Potion_COUNT,
 };
