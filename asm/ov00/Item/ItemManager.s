@@ -3,47 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager13GiveEquipItemEit
-	thumb_func_start _ZN11ItemManager13GiveEquipItemEit
-_ZN11ItemManager13GiveEquipItemEit: ; 0x020ae278
-	push {r3, r4, r5, r6, r7, lr}
-	add r6, r1, #0
-	str r2, [sp]
-	lsl r2, r6, #0x10
-	lsr r5, r2, #0x10
-	mov r2, #0x4a
-	lsr r3, r5, #5
-	add r4, r0, #0
-	lsl r2, r2, #2
-	add r2, r4, r2
-	lsl r7, r3, #2
-	ldr r3, [r2, r7]
-	mov ip, r3
-	mov r3, #0x1f
-	and r5, r3
-	mov r3, #1
-	lsl r3, r5
-	mov r5, ip
-	orr r3, r5
-	str r3, [r2, r7]
-	blx _ZN11ItemManager12GetEquipItemEi
-	ldr r2, [r0]
-	ldr r1, [sp]
-	ldr r2, [r2, #0x20]
-	blx r2
-	mov r0, #0
-	ldr r1, [r4]
-	mvn r0, r0
-	cmp r1, r0
-	bne _020ae2bc
-	str r6, [r4]
-	mov r0, #1
-	strh r0, [r4, #0x20]
-_020ae2bc:
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager13GiveEquipItemEit
-
 	.global _ZN11ItemManager13UnequipPotionEv
 	thumb_func_start _ZN11ItemManager13UnequipPotionEv
 _ZN11ItemManager13UnequipPotionEv: ; 0x020ae2c0

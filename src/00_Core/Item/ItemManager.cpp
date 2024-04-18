@@ -491,12 +491,12 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_OshusSword: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_OshusSword);
+            SET_FLAG(mItemFlags.flags, ItemFlag_OshusSword);
             this->GetEquipItem(ItemFlag_OshusSword)->GiveAmmo(1);
         } break;
 
         case ItemId_WoodenShield: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_WoodenShield);
+            SET_FLAG(mItemFlags.flags, ItemFlag_WoodenShield);
             this->GetEquipItem(ItemFlag_WoodenShield)->GiveAmmo(1);
         } break;
 
@@ -529,49 +529,49 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_PhantomHourglass: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_Hourglass);
+            SET_FLAG(mItemFlags.flags, ItemFlag_Hourglass);
             gAdventureFlags->Set(AdventureFlag_Hourglass, true);
         } break;
 
         case ItemId_SWSeaChart: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SeaChartSW);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SeaChartSW);
             gAdventureFlags->Set(AdventureFlag_SWSeaChart, true);
         } break;
 
         case ItemId_NWSeaChart: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SeaChartNW);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SeaChartNW);
             gAdventureFlags->Set(AdventureFlag_NWSeaChart, true);
         } break;
 
         case ItemId_SESeaChart: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SeaChartSE);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SeaChartSE);
             gAdventureFlags->Set(AdventureFlag_SESeaChart, true);
         } break;
 
         case ItemId_NESeaChart: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SeaChartNE);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SeaChartNE);
             gAdventureFlags->Set(AdventureFlag_NESeaChart, true);
         } break;
 
         case ItemId_FishingRod: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_FishingRod);
+            SET_FLAG(mItemFlags.flags, ItemFlag_FishingRod);
             gAdventureFlags->Set(AdventureFlag_FishingRod, true);
         } break;
 
         case ItemId_Cannon: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_Cannon);
+            SET_FLAG(mItemFlags.flags, ItemFlag_Cannon);
             gAdventureFlags->Set(AdventureFlag_Cannon, true);
             GiveShipPart(ShipPart_Cannon, ShipType_Linebeck);
             EquipLinebeckCannon();
         } break;
 
         case ItemId_SunKey: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SunKey);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SunKey);
             gAdventureFlags->Set(AdventureFlag_SunKey, true);
         } break;
 
         case ItemId_Unk_39: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_Unk_39);
+            SET_FLAG(mItemFlags.flags, ItemFlag_Unk_39);
             gAdventureFlags->Set(AdventureFlag_Unk_23, true);
         } break;
 
@@ -588,33 +588,33 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_KingsKey: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_KingsKey);
+            SET_FLAG(mItemFlags.flags, ItemFlag_KingsKey);
         } break;
 
         case ItemId_GhostKey: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_GhostKey);
+            SET_FLAG(mItemFlags.flags, ItemFlag_GhostKey);
         } break;
 
         case ItemId_PowerGem: {
-            this->mNumGems[Gem_Power] += 1;
+            mNumGems[Gem_Power] += 1;
         } break;
 
         case ItemId_WisdomGem: {
-            this->mNumGems[Gem_Wisdom] += 1;
+            mNumGems[Gem_Wisdom] += 1;
         } break;
 
         case ItemId_CourageGem: {
-            this->mNumGems[Gem_Courage] += 1;
+            mNumGems[Gem_Courage] += 1;
         } break;
 
         case ItemId_SalvageArm: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SalvageArm);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SalvageArm);
             gAdventureFlags->Set(AdventureFlag_SalvageArm, true);
             gHealthManager->mSalvageArmHealth = 5;
         } break;
 
         case ItemId_SwordsmanScroll: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_SwordsmansScroll);
+            SET_FLAG(mItemFlags.flags, ItemFlag_SwordsmansScroll);
         } break;
 
         case ItemId_Crimsonine: {
@@ -630,32 +630,32 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_SpiritOfPowerUpgradeLvl1: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_PowerLv1);
+            SET_FLAG(mItemFlags.flags, ItemFlag_PowerLv1);
         } break;
 
         case ItemId_SpiritOfWisdomUpgradeLvl1: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_WisdomLv1);
+            SET_FLAG(mItemFlags.flags, ItemFlag_WisdomLv1);
         } break;
 
         case ItemId_SpiritOfCourageUpgradeLvl1: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_CourageLv1);
+            SET_FLAG(mItemFlags.flags, ItemFlag_CourageLv1);
         } break;
 
         case ItemId_SpiritOfPowerUpgradeLvl2: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_PowerLv2);
+            SET_FLAG(mItemFlags.flags, ItemFlag_PowerLv2);
         } break;
 
         case ItemId_SpiritOfWisdomUpgradeLvl2: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_WisdomLv2);
+            SET_FLAG(mItemFlags.flags, ItemFlag_WisdomLv2);
         } break;
 
         case ItemId_SpiritOfCourageUpgradeLvl2: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_CourageLv2);
+            SET_FLAG(mItemFlags.flags, ItemFlag_CourageLv2);
         } break;
 
         case ItemId_RedPotion: {
             for (s32 i = 0; i < 2; ++i) {
-                if (this->mPotions[i] != Potion_None) continue;
+                if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Red);
                 break;
             }
@@ -663,7 +663,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
 
         case ItemId_PurplePotion: {
             for (s32 i = 0; i < 2; ++i) {
-                if (this->mPotions[i] != Potion_None) continue;
+                if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Purple);
                 break;
             }
@@ -671,14 +671,14 @@ THUMB void ItemManager::GiveItem(ItemId id) {
 
         case ItemId_YellowPotion: {
             for (s32 i = 0; i < 2; ++i) {
-                if (this->mPotions[i] != Potion_None) continue;
+                if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Yellow);
                 break;
             }
         } break;
         
         case ItemId_SandOfHours: {
-            this->mHourglassSandFrames += 3600;
+            mHourglassSandFrames += 3600;
         } break;
         
         case ItemId_GoldenChimney: {
@@ -702,11 +702,11 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_CycloneSlate: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_CycloneSlate);
+            SET_FLAG(mItemFlags.flags, ItemFlag_CycloneSlate);
         } break;
 
         case ItemId_Unk_128: {
-            SET_FLAG(this->mItemFlags.flags, ItemFlag_Unk_47);
+            SET_FLAG(mItemFlags.flags, ItemFlag_Unk_47);
         } break;
 
         case ItemId_Rupoor10: {
@@ -725,7 +725,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
 
         default: {
             if (ItemId_TREASURE_CHART_START <= id && id <= ItemId_TREASURE_CHART_END) {
-                SET_FLAG(this->mItemFlags.flags, id + ItemFlag_TREASURE_CHART_START - ItemId_TreasureChart1);
+                SET_FLAG(mItemFlags.flags, id + ItemFlag_TREASURE_CHART_START - ItemId_TREASURE_CHART_START);
             }
         } break;
     }
@@ -735,5 +735,15 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         gAdventureFlags->Get(AdventureFlag_Aquanine)
     ) {
         gAdventureFlags->Set(AdventureFlag_Unk_128, true);
+    }
+}
+
+THUMB void ItemManager::GiveEquipItem(ItemFlag item, u16 ammo) {
+    u16 flag = item;
+    SET_FLAG(mItemFlags.flags, flag);
+    this->GetEquipItem(item)->GiveAmmo(ammo);
+    if (mEquippedItem == ItemFlag_None) {
+        this->mEquippedItem = item;
+        this->mEquipLoadTimer = 1;
     }
 }
