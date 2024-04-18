@@ -2,6 +2,7 @@
 .extern Divide
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager12GetItemModelEj
+.extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase15GetGrabActorRefEv
@@ -107,7 +108,6 @@
 .extern func_ov00_020c0e5c
 .extern func_ov00_020c1500
 .extern func_ov00_020c3348
-.extern _ZN12ActorManager13FindActorByIdEj
 .extern func_ov00_020c4048
 .extern func_ov00_020cf01c
 .extern func_ov00_020d00c4

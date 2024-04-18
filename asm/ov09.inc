@@ -5,6 +5,12 @@
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZN12ActorManager14Actor_vfunc_28Ev
+.extern _ZN14AdventureFlags15Get_FlagsUnk_00EiP9FlagsUnk2
+.extern _ZN14AdventureFlags15Get_FlagsUnk_4aEi
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097eccEv
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags6CopyToEPi
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
@@ -45,7 +51,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f90
-.extern gHealthManager
 .extern data_027e0fe4
 .extern data_027e0ffc
 .extern data_027e103c
@@ -233,12 +238,6 @@
 .extern func_ov00_02083ee0
 .extern func_ov00_020848b8
 .extern func_ov00_02087d34
-.extern _ZN14AdventureFlags6CopyToEPi
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags15Get_FlagsUnk_4aEi
-.extern _ZN14AdventureFlags15Get_FlagsUnk_00EiP9FlagsUnk2
-.extern _ZN14AdventureFlags18func_ov00_02097eccEv
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a61ac
 .extern func_ov00_020a956c
@@ -451,6 +450,7 @@
 .extern func_ov18_02160a74
 .extern func_ov29_0216dcf4
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern gOverlayManager
 .extern strcat

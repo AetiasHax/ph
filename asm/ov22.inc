@@ -11,6 +11,12 @@
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase18func_ov00_020a8954EbPi
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bacEv
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
+.extern _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN5Actor10GetAngleToEP5Vec3p
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -239,12 +245,6 @@
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
 .extern func_ov00_02094884
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bacEv
-.extern _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
-.extern _ZN14AdventureFlags18func_ov00_02098058Ev
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a6110

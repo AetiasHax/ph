@@ -14,6 +14,11 @@
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase19PlayerBase_vfunc_38EP5Vec3p
 .extern _ZN13LinkStateBase23PlayerLinkBase_vfunc_74Ev
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 .extern _ZN5Actor10GetAngleToEP5Vec3p
@@ -432,11 +437,6 @@
 .extern func_ov00_02090e10
 .extern func_ov00_02090f64
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags18func_ov00_02097750Ev
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a61ac

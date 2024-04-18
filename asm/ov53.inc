@@ -1,5 +1,7 @@
 #pragma once
 .extern _ZN11ItemManager12GetItemModelEj
+.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase18func_ov00_020a81fcEv
 .extern _ZN13LinkStateBase18func_ov00_020a89bcEii
@@ -11,6 +13,8 @@
 .extern _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
 .extern _ZN13PlayerControl6SetAimEv
+.extern _ZN5Actor9GetHitboxEP8Cylinder
+.extern _ZN5ActorC2Ev
 .extern _ZN9SysObjectdlEPv
 .extern data_02050f54
 .extern data_027e0d0c
@@ -57,11 +61,7 @@
 .extern func_ov00_020bed7c
 .extern func_ov00_020bedcc
 .extern func_ov00_020c1500
-.extern _ZN5ActorC2Ev
-.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern func_ov00_020c3348
-.extern _ZN12ActorManager8GetActorEP8ActorRef
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern func_ov00_020c4048
 .extern func_ov00_020ceacc
 .extern func_ov00_020d61b0

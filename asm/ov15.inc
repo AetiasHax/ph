@@ -1,6 +1,7 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern GiveShipPart
 .extern _ZN10PlayerBase10GetEquipIdEv
 .extern _ZN10PlayerBase18TeleportToEntranceEib
 .extern _ZN10PlayerBase18func_ov00_020a7c00Ei
@@ -28,6 +29,17 @@
 .extern _ZN13PlayerControl18func_ov00_020af2d4Ejb
 .extern _ZN13PlayerControl18func_ov00_020af538Ev
 .extern _ZN13PlayerControl9UpdateAimEv
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags18func_ov00_02097968Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bacEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
+.extern _ZN14AdventureFlags18func_ov00_020980bcEi
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN4Item18func_ov00_020ad020Ei
 .extern _ZN5Actor10GetAngleToEP5Vec3p
 .extern _ZN5Actor10SetUnk_11bEv
@@ -150,7 +162,6 @@
 .extern data_027e0fac
 .extern data_027e0fb0
 .extern data_027e0fb8
-.extern gHealthManager
 .extern data_027e0fc4
 .extern data_027e0fe0
 .extern data_027e0fe4
@@ -540,17 +551,6 @@
 .extern func_ov00_0209549c
 .extern func_ov00_02095720
 .extern func_ov00_02095764
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags18func_ov00_02097750Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097968Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bacEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
-.extern _ZN14AdventureFlags18func_ov00_02098058Ev
-.extern _ZN14AdventureFlags18func_ov00_020980bcEi
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_0209c1e4
@@ -892,7 +892,6 @@
 .extern func_ov09_0211c6b4
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cc74
 .extern func_ov09_0211cc98
@@ -908,6 +907,7 @@
 .extern func_ov09_0211d668
 .extern func_ov09_0211d794
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern strcat
 .extern strncpy

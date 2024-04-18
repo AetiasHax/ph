@@ -5,6 +5,10 @@
 .extern _ZN11ItemManager10GiveRupeesEsi
 .extern _ZN11ItemManager10RemoveItemEi
 .extern _ZN11ItemManager12GetItemModelEj
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
 .extern _ZN5Actor12ApplyGravityEv
@@ -121,10 +125,6 @@
 .extern func_ov00_02083fb0
 .extern func_ov00_02088000
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02098058Ev
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a61ac

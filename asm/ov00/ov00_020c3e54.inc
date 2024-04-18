@@ -8,6 +8,15 @@
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097968Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bacEv
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEi
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN17LinkStateInteract18func_ov00_020abba0EP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020abbdcEP8ActorRef
 .extern _ZN17LinkStateInteract18func_ov00_020abc18EP8ActorRef
@@ -116,7 +125,6 @@
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0fb8
-.extern gHealthManager
 .extern data_027e0fc8
 .extern data_027e0fd4
 .extern data_027e0fe0
@@ -523,15 +531,6 @@
 .extern func_ov00_02089b00
 .extern func_ov00_02093a1c
 .extern func_ov00_020965c0
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097968Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bacEv
-.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEi
 .extern func_ov00_020985c0
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
@@ -669,6 +668,7 @@
 .extern func_ov26_021767ec
 .extern func_ov29_0216d918
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern gOverlayManager
 .extern strcat

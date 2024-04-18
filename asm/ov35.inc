@@ -7,6 +7,13 @@
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13PlayerControl14CheckTouchFastEj
 .extern _ZN13PlayerControl14IsTouchingFastEv
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097968Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags18func_ov00_02097ff4Ebb
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -170,13 +177,6 @@
 .extern func_ov00_02089318
 .extern func_ov00_0208b158
 .extern func_ov00_0208e7a4
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097968Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
-.extern _ZN14AdventureFlags18func_ov00_02097ff4Ebb
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a6110

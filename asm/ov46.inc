@@ -5,6 +5,8 @@
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
 .extern _ZN5Actor12ApplyGravityEv
@@ -127,8 +129,6 @@
 .extern func_ov00_02093a5c
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

@@ -8,6 +8,10 @@
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN12TouchControl18func_ov00_0207af38Etb
 .extern _ZN12TouchControlC2Ev
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
+.extern _ZN14AdventureFlags6ExistsEv
 .extern _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 .extern _ZNK11ItemManager7HasItemEi
 .extern data_027e0000
@@ -318,10 +322,6 @@
 .extern func_ov00_0208b180
 .extern func_ov00_0208cae8
 .extern func_ov00_0208caf8
-.extern _ZN14AdventureFlags6ExistsEv
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_0209d728
 .extern func_ov00_0209d90c
 .extern func_ov00_020a5e9c
