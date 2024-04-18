@@ -15332,7 +15332,7 @@ func_ov00_020bd510: ; 0x020bd510
 	ldmltia sp!, {r3, r4, r5, pc}
 	rsb r1, r2, #0
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEsi
+	bl _ZN11ItemManager10GiveRupeesEsb
 	mvn lr, #0
 	mov r3, #0
 	str r3, [sp, #0xc]

@@ -1049,7 +1049,7 @@ _0217cae4:
 	ldr r0, [r0]
 	rsb r1, r1, #0
 	mov r2, #1
-	bl _ZN11ItemManager10GiveRupeesEsi
+	bl _ZN11ItemManager10GiveRupeesEsb
 	bl func_ov31_0217cf1c
 	ldr r0, [r0, #0x470]
 	cmp r0, #0

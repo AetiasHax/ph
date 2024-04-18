@@ -1,6 +1,6 @@
 #pragma once
 .extern Divide
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager13EquipShipPartEjj
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc

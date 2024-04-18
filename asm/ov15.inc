@@ -10,7 +10,7 @@
 .extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern _ZN10PlayerBase8vfunc_04Ev
 .extern _ZN10PlayerBase9AddHealthEs
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager10SetUnk_09eEjt
 .extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager18func_ov00_020ad528Ev

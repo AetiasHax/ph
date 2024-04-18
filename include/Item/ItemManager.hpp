@@ -306,8 +306,8 @@ public:
     void GiveEquipItem(ItemFlag item, u16 ammo);
 
     // Rupees
-    u32 GetMaxRupees() const;
-    void GiveRupees(s16 amount, unk32 param2);
+    s32 GetMaxRupees() const;
+    void GiveRupees(s16 amount, bool param2);
 
     // Potion
     void SetPotion(u32 index, Potion potion);

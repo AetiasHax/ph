@@ -1,6 +1,6 @@
 #pragma once
 .extern Divide
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager7AddItemEi
 .extern _ZN11ItemManager8GiveKeysEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j

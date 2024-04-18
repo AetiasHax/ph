@@ -3,43 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager10GiveRupeesEsi
-	arm_func_start _ZN11ItemManager10GiveRupeesEsi
-_ZN11ItemManager10GiveRupeesEsi: ; 0x020ae2e0
-	stmdb sp!, {r4, r5, r6, lr}
-	mov r6, r0
-	ldrh r3, [r6, #0x22]
-	mov r5, r2
-	add r4, r3, r1
-	bl _ZNK11ItemManager12GetMaxRupeesEv
-	cmp r4, r0
-	ble _020ae310
-	mov r0, r6
-	bl _ZNK11ItemManager12GetMaxRupeesEv
-	mov r4, r0
-	b _020ae318
-_020ae310:
-	cmp r4, #0
-	movlt r4, #0
-_020ae318:
-	ldr r0, _020ae34c ; =data_027e103c
-	mov r1, #1
-	ldr r0, [r0]
-	bl func_ov00_020cf374
-	cmp r5, #0
-	ldrneh r0, [r6, #0x22]
-	cmpne r0, r4
-	beq _020ae344
-	ldr r0, _020ae34c ; =data_027e103c
-	ldr r0, [r0]
-	bl func_ov05_02104004
-_020ae344:
-	strh r4, [r6, #0x22]
-	ldmia sp!, {r4, r5, r6, pc}
-	.align 2, 0
-	arm_func_end _ZN11ItemManager10GiveRupeesEsi
-_020ae34c: .word data_027e103c
-
 	.global _ZNK11ItemManager18func_ov00_020ae350Ev
 	arm_func_start _ZNK11ItemManager18func_ov00_020ae350Ev
 _ZNK11ItemManager18func_ov00_020ae350Ev: ; 0x020ae350

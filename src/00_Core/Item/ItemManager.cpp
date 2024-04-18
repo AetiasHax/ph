@@ -757,6 +757,28 @@ THUMB void ItemManager::UnequipPotion() {
     }
 }
 
-ARM u32 ItemManager::GetMaxRupees() const {
+ARM s32 ItemManager::GetMaxRupees() const {
     return 9999;
+}
+
+
+extern void *data_027e103c;
+extern "C" s32 func_ov00_020cf374(void *param1, bool param2);
+extern "C" void func_ov05_02104004(void *param1);
+ARM void ItemManager::GiveRupees(s16 amount, bool param2) {
+    s32 newRupees = mNumRupees + amount;
+    if (newRupees > this->GetMaxRupees()) {
+        newRupees = this->GetMaxRupees();
+    } else if (newRupees < 0) {
+        newRupees = 0;
+    }
+
+    s32 currRupees = func_ov00_020cf374(data_027e103c, true);
+    if (param2) {
+        currRupees = mNumRupees;
+        if (currRupees != newRupees) {
+            func_ov05_02104004(data_027e103c);
+        }
+    }
+    mNumRupees = newRupees;
 }

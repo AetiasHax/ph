@@ -2,7 +2,7 @@
 .extern Divide
 .extern GiveShipPart
 .extern LoadTreasureItemFanfare
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager8GiveAmmoEit
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags3GetEj

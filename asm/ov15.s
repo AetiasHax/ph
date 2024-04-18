@@ -54185,7 +54185,7 @@ func_ov15_0214d358: ; 0x0214d358
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEsi
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldr r1, [r4, #0x158]
 	ldr r0, _0214d3dc ; =data_ov00_020eec9c
 	add r1, r1, #0xfa
@@ -99853,7 +99853,7 @@ func_ov15_02174794: ; 0x02174794
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEsi
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldr r1, [r4, #0x2c]
 	ldr r0, _02174878 ; =data_ov00_020eec9c
 	add r1, r1, #0xfa

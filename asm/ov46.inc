@@ -1,6 +1,6 @@
 #pragma once
 .extern Approach_thunk
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p

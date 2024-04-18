@@ -1,5 +1,5 @@
 #pragma once
-.extern _ZN11ItemManager10GiveRupeesEsi
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
 .extern _ZN5Actor12ApplyGravityEv

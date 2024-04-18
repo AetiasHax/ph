@@ -17414,7 +17414,7 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r0, #0
 	add r0, r6, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEsi
+	blx _ZN11ItemManager10GiveRupeesEsb
 	ldr r0, _0211c9e4 ; =gItemManager
 	add r1, r5, #0
 	ldr r6, [r0]
@@ -17445,7 +17445,7 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEsi
+	blx _ZN11ItemManager10GiveRupeesEsb
 	ldr r0, _0211ca1c ; =gItemManager
 	add r1, r5, #0
 	ldr r4, [r0]
