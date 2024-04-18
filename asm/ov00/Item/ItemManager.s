@@ -3,15 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager12GetMaxRupeesEv
-	arm_func_start _ZNK11ItemManager12GetMaxRupeesEv
-_ZNK11ItemManager12GetMaxRupeesEv: ; 0x020ae2d4
-	ldr r0, _020ae2dc ; =0x0000270f
-	bx lr
-	.align 2, 0
-	arm_func_end _ZNK11ItemManager12GetMaxRupeesEv
-_020ae2dc: .word 0x0000270f
-
 	.global _ZN11ItemManager10GiveRupeesEsi
 	arm_func_start _ZN11ItemManager10GiveRupeesEsi
 _ZN11ItemManager10GiveRupeesEsi: ; 0x020ae2e0

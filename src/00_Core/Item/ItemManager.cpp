@@ -756,3 +756,7 @@ THUMB void ItemManager::UnequipPotion() {
         } break;
     }
 }
+
+ARM u32 ItemManager::GetMaxRupees() const {
+    return 9999;
+}
