@@ -1,8 +1,21 @@
 # Decompiling
 This document describes how you can start decompiling code and contribute to the project. Feel free to ask for help if you get
 stuck or need assistance.
+- [Pick a source file](#pick-a-source-file)
 - [Decompiling a function](#decompiling-a-function)
 - [The Ghidra project](#the-ghidra-project)
+
+## Pick a source file
+See the `decomp` tag in the [issue tracker](https://github.com/AetiasHax/ph/issues?q=is%3Aopen+is%3Aissue+label%3Adecomp) for
+a list of delinked source files that are ready to be decompiled. This list grows as more source files are delinked from the
+rest of the Assembly code.
+
+You can claim a source file by leaving a comment on its issue, so that GitHub allows us to assign you to it. This indicates
+that you are currently decompiling that source file.
+
+If you want to unclaim the file, leave another comment so we can be certain that the source file is available to be claimed
+again. Remember to make a pull request of any notable progress you made on the source file, which can include
+[non-matching functions](/CONTRIBUTING.md#non-matching-functions).
 
 ## Decompiling a function
 Say you've found a function you want to decompile. Here are the steps we recommend for decompiling it:
