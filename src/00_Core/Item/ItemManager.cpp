@@ -761,7 +761,6 @@ ARM s32 ItemManager::GetMaxRupees() const {
     return 9999;
 }
 
-
 extern void *data_027e103c;
 extern "C" s32 func_ov00_020cf374(void *param1, bool param2);
 extern "C" void func_ov05_02104004(void *param1);
@@ -781,4 +780,9 @@ ARM void ItemManager::GiveRupees(s16 amount, bool param2) {
         }
     }
     mNumRupees = newRupees;
+}
+
+extern "C" unk32 func_ov00_02084b14(void *param1);
+ARM unk32 ItemManager::func_ov00_020ae350() const {
+    return func_ov00_02084b14(data_027e0e60);
 }

@@ -3,18 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager18func_ov00_020ae350Ev
-	arm_func_start _ZNK11ItemManager18func_ov00_020ae350Ev
-_ZNK11ItemManager18func_ov00_020ae350Ev: ; 0x020ae350
-	ldr r0, _020ae360 ; =data_027e0e60
-	ldr ip, _020ae364 ; =func_ov00_02084b14
-	ldr r0, [r0]
-	bx ip
-	.align 2, 0
-	arm_func_end _ZNK11ItemManager18func_ov00_020ae350Ev
-_020ae360: .word data_027e0e60
-_020ae364: .word func_ov00_02084b14
-
 	.global _ZN11ItemManager8GiveKeysEj
 	thumb_func_start _ZN11ItemManager8GiveKeysEj
 _ZN11ItemManager8GiveKeysEj: ; 0x020ae368
@@ -70,7 +58,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi - 1
 
 	.global _ZN11ItemManager13ForceEquipItemEi
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEi
