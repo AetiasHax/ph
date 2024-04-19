@@ -4,6 +4,15 @@
 Resource ActorRupee::gResource;
 ActorType ActorRupee::gType;
 
+static char data_ov14_021589b4[] = "anc";
+static char data_ov14_021589b8[] = "bow";
+static char data_ov14_021589bc[] = "hul";
+static char data_ov14_021589c0[] = "can";
+static char data_ov14_021589c4[] = "dco";
+static char data_ov14_021589c8[] = "pdl";
+static char data_ov14_021589cc[] = "fnl";
+static char data_ov14_021589d0[] = "brg";
+
 static u32 data_ov14_021589d4[] = { 0x00000000 };
 
 static u32 data_ov14_021589d8[] = {
@@ -12,43 +21,71 @@ static u32 data_ov14_021589d8[] = {
     0x00000000,
 };
 
-static char* data_ov14_021589b4 = "anc";
 
 extern u32 **data_027e0fe0[];
 
-
 extern "C" void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
 extern "C" u32 func_01fffd04(void*, u32);
-
 extern u32 data_ov00_020e9370[];
 extern "C" bool func_ov00_020c313c();
 extern "C" void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
-
 extern "C" void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
 extern "C" void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
                u32 param_6, int param_7, char param_8, char param_9, char param_10);
-
 extern "C" void func_ov00_020d7ad4(u32* param1, u32 param2);
 extern "C" void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
 extern "C" u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
-
 extern u32 data_ov00_020eec9c[];
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern void *data_027e0e60;
-
 extern "C" bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
 extern "C" void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
+extern "C" void _ZN5ActorD2Ev();
+extern "C" void _ZN9SysObjectdlEPv();
+extern "C" ActorRupee* _ZN5ActorC2Ev(ActorRupee *thisx);
+extern "C" void _ZN10ActorRupeeD2Ev();
+extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
+
+extern "C" {
+    void func_0203e784(ActorType *param_1, u32 type, ActorCreateFunc createFunc, void* param_4);
+    void func_0203e7b4();
+    void func_0204f8d4(void *object, void *cleanupFunc, Resource *resource);
+}
+
+#pragma section init begin
+void func_ov14_0215517c() {
+    func_0203e784(&ActorRupee::gType, 0x52555059, (ActorCreateFunc)ActorRupee::Create, NULL);
+    func_0204f8d4(&ActorRupee::gType, func_0203e7b4, &ActorRupee::gResource);
+    data_ov14_021589d8[7] = 0x000003bb;
+    data_ov14_021589d8[8] = 0x00000eeb;
+}
+#pragma section init end
+
+#pragma section pinit begin
+extern "C" void* data_ov14_0215591c = func_ov14_0215517c;
+#pragma section pinit end
 
 ActorRupee* ActorRupee::Create() {
     ActorRupee* newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
     return newRupee;
 }
 
-// match?
-ActorRupee::ActorRupee() {
-    mRupeeId = 8;
-    mUnk_15c = 0;
+extern "C" asm ActorRupee* _ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
+#ifndef NONMATCHING
+    #include "../../../asm/ov14/Actor/ActorRupee_ActorRupee.inc"
+#else
+    _ZN5ActorC2Ev(thisx);
+    _ZTV10ActorRupee = thisx;
+    thisx->mRupeeId = 8;
+    thisx->mUnk_15c = 0;
+    return thisx;
+#endif
 }
+
+// ActorRupee::ActorRupee() {
+//     mRupeeId = 8;
+//     mUnk_15c = 0;
+// }
 
 // https://decomp.me/scratch/1qjCc
 extern "C" void _ZN10ActorRupee18func_ov14_0213b204Ei();
@@ -380,7 +417,7 @@ void ActorRupee::vfunc_20(bool param1) {
 
 void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, bool param4) {
     Actor_UnkStruct_012 unk_class;
-    static u32 data_ov14_02153e28[] = { // sRupeePalettes
+    static const u32 data_ov14_02153e28[] = { // sRupeePalettes
         0x9, // RupeeId_Green
         0xA, // RupeeId_Blue
         0x8, // RupeeId_Red
@@ -432,4 +469,16 @@ bool ActorRupee::func_ov14_0213b70c(RupeeId id) {
     return false;
 }
 
-ActorRupee::~ActorRupee() {}
+extern "C" asm void _ZN10ActorRupeeD0Ev() {
+    #ifndef NONMATCHING
+    #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD0Ev.inc"
+    #endif
+}
+
+extern "C" asm void _ZN10ActorRupeeD2Ev() {
+    #ifndef NONMATCHING
+    #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD2Ev.inc"
+    #endif
+}
+
+// ActorRupee::~ActorRupee() {}

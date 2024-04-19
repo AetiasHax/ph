@@ -44,7 +44,7 @@ public:
     /* b4 */
 
     static ActorRupee* Create();
-    ActorRupee();
+    ActorRupee(void);
     void Move();
     ItemId GetRupeeCutsceneItemId();
     void func_ov14_0213b204(unk32 param1);
