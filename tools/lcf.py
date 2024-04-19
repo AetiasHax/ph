@@ -30,6 +30,11 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/ov00_0207af9c.s',
 
+    'src/00_Core/Save/AdventureFlags.cpp',
+    'asm/ov00/Save/AdventureFlags.s',
+
+    'asm/ov00/ov00_020980f4.s',
+
     'src/00_Core/Player/PlayerBase.cpp',
     'asm/ov00/Player/PlayerBase.s',
     'src/00_Core/Player/LinkStateBase.cpp',

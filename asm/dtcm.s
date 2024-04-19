@@ -3947,8 +3947,8 @@ data_027e0f6c:
 	.global data_027e0f70
 data_027e0f70:
 	.space 0x4
-	.global data_027e0f74
-data_027e0f74:
+	.global gAdventureFlags
+gAdventureFlags:
 	.space 0x4
 	.global data_027e0f78
 data_027e0f78:

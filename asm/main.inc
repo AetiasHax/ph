@@ -101,7 +101,6 @@
 .extern data_027e0e2c
 .extern data_027e0e60
 .extern data_027e0f64
-.extern data_027e0f74
 .extern data_027e0f7c
 .extern data_027e0f80
 .extern data_027e0f84
@@ -319,10 +318,10 @@
 .extern func_ov00_0208b180
 .extern func_ov00_0208cae8
 .extern func_ov00_0208caf8
-.extern func_ov00_02097628
-.extern func_ov00_02097738
-.extern func_ov00_02097760
-.extern func_ov00_0209779c
+.extern _ZN14AdventureFlags6ExistsEv
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_0209d728
 .extern func_ov00_0209d90c
 .extern func_ov00_020a5e9c
@@ -418,6 +417,7 @@
 .extern func_ov16_021200fc
 .extern func_ov16_02120130
 .extern func_ov18_02169634
+.extern gAdventureFlags
 .extern gHeap
 .extern gItemManager
 .extern gOverlayManager

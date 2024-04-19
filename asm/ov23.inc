@@ -114,7 +114,6 @@
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f70
-.extern data_027e0f74
 .extern data_027e0f84
 .extern data_027e0f90
 .extern data_027e0f94
@@ -285,14 +284,14 @@
 .extern func_ov00_02094824
 .extern func_ov00_02094884
 .extern func_ov00_020965c0
-.extern func_ov00_02097738
-.extern func_ov00_02097750
-.extern func_ov00_02097760
-.extern func_ov00_02097810
-.extern func_ov00_02097b9c
-.extern func_ov00_02097bac
-.extern func_ov00_02097bcc
-.extern func_ov00_02098058
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bacEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a41e4
@@ -574,5 +573,6 @@
 .extern func_ov17_0216a734
 .extern func_ov52_02195754
 .extern func_ov52_02195b5c
+.extern gAdventureFlags
 .extern gItemManager
 .extern strncpy

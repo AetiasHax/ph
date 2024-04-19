@@ -2,6 +2,7 @@
 .extern Approach_thunk
 .extern Divide
 .extern _ZN11ItemManager12GetItemModelEj
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetPlayerVelEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
 .extern _ZN13LinkStateBase18EquipItem_vfunc_28Ev
@@ -18,6 +19,9 @@
 .extern _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
 .extern _ZN13PlayerControl6SetAimEv
+.extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
+.extern _ZN5Actor9GetHitboxEP8Cylinder
+.extern _ZN5ActorC2Ev
 .extern _ZN9SysObjectdlEPv
 .extern data_02050f54
 .extern data_027e03c8
@@ -27,7 +31,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f6c
-.extern data_027e0f74
 .extern data_027e0f94
 .extern data_027e0fb8
 .extern data_027e0fc8
@@ -57,7 +60,7 @@
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c
 .extern func_ov00_02093a1c
-.extern func_ov00_02097738
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern func_ov00_020b1d3c
 .extern func_ov00_020b41c4
 .extern func_ov00_020bba28
@@ -76,11 +79,7 @@
 .extern func_ov00_020bed7c
 .extern func_ov00_020bedcc
 .extern func_ov00_020c1500
-.extern _ZN5ActorC2Ev
-.extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
-.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern func_ov00_020c3348
-.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020c4048
 .extern func_ov00_020ceacc
 .extern func_ov00_020cec60
@@ -102,4 +101,5 @@
 .extern func_ov14_0213dda0
 .extern func_ov14_0213e544
 .extern func_ov14_0213e55c
+.extern gAdventureFlags
 .extern gItemManager
