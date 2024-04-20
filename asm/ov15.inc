@@ -114,6 +114,7 @@
 .extern _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZTV11FilterActor
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02051f54
 .extern data_02053f54
@@ -388,7 +389,6 @@
 .extern func_0204dd9c
 .extern func_0204f614
 .extern func_0204f754
-.extern func_0204f8d4
 .extern func_ov00_02078b40
 .extern func_ov00_02078fac
 .extern func_ov00_02078ffc

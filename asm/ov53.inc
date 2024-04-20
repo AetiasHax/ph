@@ -16,6 +16,7 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN9SysObjectdlEPv
+.extern __register_global_object
 .extern data_02050f54
 .extern data_027e0d0c
 .extern data_027e0de4
@@ -37,7 +38,6 @@
 .extern func_01fffcec
 .extern func_0202b4e4
 .extern func_0204f614
-.extern func_0204f8d4
 .extern func_ov00_0207bb1c
 .extern func_ov00_02081f4c
 .extern func_ov00_02083ee0

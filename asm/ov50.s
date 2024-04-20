@@ -2524,7 +2524,7 @@ func_ov50_0219769c: ; 0x0219769c
 	ldr r1, _0219775c ; =func_ov50_02197768
 	ldr r2, _02197760 ; =data_ov50_02198cf0
 	str ip, [r3, #0x3c]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02197750 ; =data_ov50_02198cc0
 	ldr r1, [r0, #0x2c]
 	orr r1, r1, #1
@@ -3902,7 +3902,7 @@ func_ov50_0219882c: ; 0x0219882c
 	ldr r0, _02198874 ; =data_ov50_02198cac
 	ldr r1, _02198880 ; =func_0203e7b4
 	ldr r2, _02198884 ; =data_ov50_02198ca0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _02198888 ; =0x00004b5c
 	ldr r2, _0219888c ; =data_ov50_021989c0
 	mov r0, #0x10000000
@@ -3934,7 +3934,7 @@ func_ov50_02198890: ; 0x02198890
 	ldr r0, _02198984 ; =data_ov50_02198ccc
 	ldr r1, _02198990 ; =func_0203e7b4
 	ldr r2, _02198994 ; =data_ov50_02198cc0
-	bl func_0204f8d4
+	bl __register_global_object
 	mov ip, #1
 	str ip, [sp]
 	ldr r1, _02198998 ; =0x00001b33
@@ -3982,7 +3982,7 @@ func_ov50_02198890: ; 0x02198890
 	ldr r0, _0219899c ; =data_ov50_02198ad8
 	ldr r1, _021989a0 ; =func_ov00_020cceec
 	ldr r2, _021989a4 ; =data_ov50_02198ce0
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0

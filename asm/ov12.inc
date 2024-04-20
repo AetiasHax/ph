@@ -79,6 +79,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager18func_ov00_020ad594Ei
 .extern _ZNK11ItemManager8GetFairyEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02056be4
 .extern data_02057200
@@ -303,7 +304,6 @@
 .extern func_0203f904
 .extern func_0204f614
 .extern func_0204f754
-.extern func_0204f8d4
 .extern func_ov00_020777d0
 .extern func_ov00_02077830
 .extern func_ov00_0207784c

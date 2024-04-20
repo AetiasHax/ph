@@ -58,6 +58,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager18func_ov00_020ae350Ev
 .extern _ZNK11ItemManager7HasItemEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02056be4
 .extern data_02057b18
@@ -237,7 +238,6 @@
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f7b0
-.extern func_0204f8d4
 .extern func_ov00_02078b40
 .extern func_ov00_02078e00
 .extern func_ov00_02078fac

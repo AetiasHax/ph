@@ -744,7 +744,7 @@ func_ov14_0215517c: ; 0x0215517c
 	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
 	ldr r1, _021551c8 ; =func_0203e7b4
 	ldr r2, _021551cc ; =_ZN10ActorRupee9gResourceE
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r2, _021551d0 ; =0x000003bb
 	ldr r0, _021551d4 ; =data_ov14_021589b4
 	add r1, r2, #0xb30

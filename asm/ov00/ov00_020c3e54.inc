@@ -91,6 +91,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager8GetFairyEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_020561f4
 .extern data_02056be4
@@ -485,7 +486,6 @@
 .extern func_0204f558
 .extern func_0204f614
 .extern func_0204f754
-.extern func_0204f8d4
 .extern func_ov00_02078b40
 .extern func_ov00_02078e00
 .extern func_ov00_02079470

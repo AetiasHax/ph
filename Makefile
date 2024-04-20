@@ -26,10 +26,12 @@ ARM7_BIOS  := arm7_bios.bin
 ASSETS_TXT := assets.txt
 
 ASM_FILES := $(shell find asm -name *.s)
-CXX_FILES := $(shell find src -name *.cpp)
+CXX_FILES := $(shell find src -name *.cpp) $(shell find libs -name *.cpp)
+C_FILES := $(shell find src -name *.c) $(shell find libs -name *.c)
 ASM_OBJS = $(ASM_FILES:%.s=$(TARGET_DIR)/%.s.o)
 ASM_INCS = $(ASM_FILES:%.s=%.inc)
 CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.o)
+C_OBJS = $(C_FILES:%.c=$(TARGET_DIR)/%.c.o)
 
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
@@ -47,7 +49,9 @@ LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
-CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -i- -i libs/c/include -nolink -d $(REGION) -char signed -lang=c++ -sym on -msgstyle gcc
+CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -i- -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -char signed -sym on -msgstyle gcc
+C_FLAGS := -lang=c
+CXX_FLAGS := -lang=c++
 LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
 ifeq ($(NONMATCHING),1)
@@ -121,10 +125,14 @@ $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 
 $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
+
+$(C_OBJS): $(TARGET_DIR)/%.o: %
+	mkdir -p $(dir $@)
+	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
 
 .PHONY: link
-link: lcf $(ASM_OBJS) $(CXX_OBJS)
+link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
 	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
 
 .PHONY: compress

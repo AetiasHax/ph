@@ -4712,7 +4712,7 @@ func_ov43_0218d414: ; 0x0218d414
 	ldr r0, _0218d544 ; =data_ov43_0218db0c
 	ldr r1, _0218d550 ; =func_0203e7b4
 	ldr r2, _0218d554 ; =data_ov43_0218db00
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _0218d558 ; =data_ov43_0218db2c
 	ldr r1, _0218d55c ; =0x55424c4e
 	ldr r2, _0218d560 ; =func_ov43_021895a0
@@ -4721,7 +4721,7 @@ func_ov43_0218d414: ; 0x0218d414
 	ldr r0, _0218d558 ; =data_ov43_0218db2c
 	ldr r1, _0218d550 ; =func_0203e7b4
 	ldr r2, _0218d564 ; =data_ov43_0218db20
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r0, #1
 	str r0, [sp]
 	str r0, [sp, #4]
@@ -4775,7 +4775,7 @@ func_ov43_0218d414: ; 0x0218d414
 	ldr r0, _0218d574 ; =data_ov43_0218d5e0
 	ldr r1, _0218d578 ; =func_ov00_020cceec
 	ldr r2, _0218d57c ; =data_ov43_0218db40
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -4808,7 +4808,7 @@ func_ov43_0218d580: ; 0x0218d580
 	ldr r0, _0218d5ac ; =data_ov43_0218db58
 	ldr r1, _0218d5b8 ; =func_0203e7b4
 	ldr r2, _0218d5bc ; =data_ov43_0218db4c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov43_0218d580

@@ -5,6 +5,9 @@
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags18func_ov00_02098058Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN5Actor10GetAngleToEP5Vec3p
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -70,6 +73,7 @@
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZTV11FilterActor
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02063e4c
 .extern data_027e0764
@@ -131,7 +135,6 @@
 .extern func_0203e7b4
 .extern func_0204f558
 .extern func_0204f754
-.extern func_0204f8d4
 .extern func_ov00_02079470
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c1f8
@@ -148,9 +151,6 @@
 .extern func_ov00_02087d34
 .extern func_ov00_020884b4
 .extern func_ov00_02093a1c
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
-.extern _ZN14AdventureFlags18func_ov00_02098058Ev
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a5e9c

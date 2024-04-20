@@ -11811,7 +11811,7 @@ func_ov35_02185668: ; 0x02185668
 	ldr r0, _021856c8 ; =data_ov35_02185ecc
 	ldr r1, _021856d4 ; =func_0203e7b4
 	ldr r2, _021856d8 ; =data_ov35_02185ec0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r3, _021856dc ; =data_ov35_0218595c
 	mov r0, #0
 	str r0, [r3, #0x18]
@@ -11822,7 +11822,7 @@ func_ov35_02185668: ; 0x02185668
 	ldr r1, _021856e8 ; =func_ov35_0217cd98
 	ldr r2, _021856ec ; =data_ov35_02185ee0
 	str ip, [r3, #0x24]
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -11850,7 +11850,7 @@ func_ov35_021856f0: ; 0x021856f0
 	ldr r0, _0218571c ; =data_ov35_02185ef8
 	ldr r1, _02185728 ; =func_0203e7b4
 	ldr r2, _0218572c ; =data_ov35_02185eec
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov35_021856f0
@@ -11872,7 +11872,7 @@ func_ov35_02185730: ; 0x02185730
 	ldr r0, _02185858 ; =data_ov35_02186f9c
 	ldr r1, _02185864 ; =func_0203e7b4
 	ldr r2, _02185868 ; =data_ov35_02186f90
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr ip, _0218586c ; =0x00002333
 	ldr r3, _02185870 ; =data_ov35_02185c70
 	mov r0, #0
@@ -11884,7 +11884,7 @@ func_ov35_02185730: ; 0x02185730
 	ldr r1, _02185878 ; =func_ov35_0217cd98
 	ldr r2, _0218587c ; =data_ov35_02186fb0
 	str ip, [r3, #0x2c]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r3, _02185870 ; =data_ov35_02185c70
 	mov r0, #0
 	ldr ip, _02185880 ; =0x00001666
@@ -11895,7 +11895,7 @@ func_ov35_02185730: ; 0x02185730
 	ldr r1, _02185878 ; =func_ov35_0217cd98
 	ldr r2, _02185888 ; =data_ov35_02186fbc
 	str ip, [r3, #0x3c]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r2, _0218588c ; =0x00000d53
 	ldr r3, _02185890 ; =0xfffffb55
 	ldr r1, _02185870 ; =data_ov35_02185c70
@@ -11908,7 +11908,7 @@ func_ov35_02185730: ; 0x02185730
 	str r2, [r1, #0x4c]
 	ldr r1, _02185878 ; =func_ov35_0217cd98
 	ldr r2, _0218589c ; =data_ov35_02186fc8
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r2, #0
 	ldr r0, _02185870 ; =data_ov35_02185c70
 	ldr r1, _021858a0 ; =0x00000d07
@@ -11921,7 +11921,7 @@ func_ov35_02185730: ; 0x02185730
 	ldr r0, _021858a8 ; =data_ov35_02185cc0
 	ldr r1, _02185878 ; =func_ov35_0217cd98
 	ldr r2, _021858ac ; =data_ov35_02186fd4
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _021858b0 ; =data_027e0d0c
 	ldr r0, _02185870 ; =data_ov35_02185c70
 	ldr r3, [r1]
@@ -11935,7 +11935,7 @@ func_ov35_02185730: ; 0x02185730
 	ldr r0, _021858b8 ; =data_ov35_02185cd0
 	ldr r1, _02185878 ; =func_ov35_0217cd98
 	ldr r2, _021858bc ; =data_ov35_02186fe0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov35_02185730
@@ -11978,7 +11978,7 @@ func_ov35_021858c0: ; 0x021858c0
 	ldr r0, _021858ec ; =data_ov35_02186ff8
 	ldr r1, _021858f8 ; =func_0203e7b4
 	ldr r2, _021858fc ; =data_ov35_02186fec
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov35_021858c0

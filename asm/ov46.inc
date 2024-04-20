@@ -58,6 +58,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02057200
 .extern data_027e0160
@@ -117,7 +118,6 @@
 .extern func_02037628
 .extern func_0203e784
 .extern func_0203e7b4
-.extern func_0204f8d4
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207ba90
