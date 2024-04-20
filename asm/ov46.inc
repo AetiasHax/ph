@@ -5,6 +5,8 @@
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
 .extern _ZN5Actor12ApplyGravityEv
@@ -56,6 +58,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02057200
 .extern data_027e0160
@@ -115,7 +118,6 @@
 .extern func_02037628
 .extern func_0203e784
 .extern func_0203e7b4
-.extern __register_global_object
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207ba90
@@ -127,8 +129,6 @@
 .extern func_ov00_02093a5c
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

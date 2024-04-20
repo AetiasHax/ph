@@ -2,6 +2,7 @@
 .extern Divide
 .extern LoadTreasureItemFanfare
 .extern _ZN11ItemManager13EquipShipPartEjj
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager10GetMaxAmmoEi
@@ -14,6 +15,7 @@
 .extern _ZNK11ItemManager19GetEquippedShipPartEj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern _ZNK11ItemManager7HasItemEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02057200
 .extern data_020691a0
@@ -112,7 +114,6 @@
 .extern func_0203d77c
 .extern func_0204f614
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_0207b1fc
 .extern func_ov00_020847e0
 .extern func_ov00_0208de04
@@ -123,7 +124,6 @@
 .extern func_ov00_0208df74
 .extern func_ov00_0208e420
 .extern func_ov00_0208e4f4
-.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_0209cd80
 .extern func_ov00_020a19fc
 .extern func_ov00_020a1a24

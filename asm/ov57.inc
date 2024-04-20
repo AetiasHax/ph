@@ -19,10 +19,12 @@
 .extern _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
 .extern _ZN13PlayerControl6SetAimEv
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN9SysObjectdlEPv
+.extern __register_global_object
 .extern data_02050f54
 .extern data_027e03c8
 .extern data_027e0d0c
@@ -50,7 +52,6 @@
 .extern func_0202af4c
 .extern func_0202b2f8
 .extern func_0202d95c
-.extern __register_global_object
 .extern func_ov00_0207a188
 .extern func_ov00_0207bb1c
 .extern func_ov00_0207c1f8
@@ -60,7 +61,6 @@
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c
 .extern func_ov00_02093a1c
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern func_ov00_020b1d3c
 .extern func_ov00_020b41c4
 .extern func_ov00_020bba28

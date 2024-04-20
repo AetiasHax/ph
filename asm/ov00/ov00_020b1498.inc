@@ -50,6 +50,14 @@
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern _ZN13PlayerControl18func_ov00_020aeef8Ev
 .extern _ZN13PlayerControl18func_ov00_020b034cEv
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 .extern _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 .extern _ZN15LinkStateFollow20GetLinkStateCutsceneEv
@@ -121,6 +129,7 @@
 .extern _ZNK11ItemManager7GetAmmoEi
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager8GetFairyEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02051f54
 .extern data_02052f54
@@ -275,7 +284,6 @@
 .extern func_0203e7b4
 .extern func_0204f614
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_02078b40
 .extern func_ov00_02079878
 .extern func_ov00_02079e3c
@@ -325,14 +333,6 @@
 .extern func_ov00_0208b988
 .extern func_ov00_0208f70c
 .extern func_ov00_02093a1c
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags18func_ov00_02097750Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_0209cbd4

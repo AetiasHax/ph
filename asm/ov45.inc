@@ -3,6 +3,7 @@
 .extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZN11ItemManager19SetTreasureSalvagedEjj
 .extern _ZN11ItemManager21AddTreasurePriceShownEj
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -47,6 +48,7 @@
 .extern _ZNK11ItemManager16GetTreasureCountEj
 .extern _ZNK11ItemManager18IsTreasureSalvagedEjj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
+.extern __register_global_object
 .extern data_020691a0
 .extern data_027e0618
 .extern data_027e077c
@@ -107,13 +109,11 @@
 .extern func_0203d77c
 .extern func_0203e784
 .extern func_0203e7b4
-.extern __register_global_object
 .extern func_ov00_0207b1fc
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c474
 .extern func_ov00_0208726c
 .extern func_ov00_02087338
-.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
 .extern func_ov00_020a9aec
