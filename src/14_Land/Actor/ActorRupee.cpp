@@ -1,17 +1,46 @@
 #include "Actor/ActorRupee.hpp"
 #include "Item/ItemManager.hpp"
 
-Resource ActorRupee::gResource;
-ActorType ActorRupee::gType;
 
-static char data_ov14_021589b4[] = "anc";
-static char data_ov14_021589b8[] = "bow";
-static char data_ov14_021589bc[] = "hul";
-static char data_ov14_021589c0[] = "can";
-static char data_ov14_021589c4[] = "dco";
-static char data_ov14_021589c8[] = "pdl";
-static char data_ov14_021589cc[] = "fnl";
-static char data_ov14_021589d0[] = "brg";
+extern "C" {
+    void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
+    u32 func_01fffd04(void*, u32);
+    bool func_ov00_020c313c();
+    void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
+    void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
+    void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
+        u32 param_6, int param_7, char param_8, char param_9, char param_10);
+    void func_ov00_020d7ad4(u32* param1, u32 param2);
+    void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
+    u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
+    bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
+    void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
+    void _ZN5ActorD2Ev();
+    void _ZN9SysObjectdlEPv();
+    ActorRupee* _ZN5ActorC2Ev(ActorRupee *thisx);
+    void _ZN10ActorRupeeD2Ev();
+    void func_0203e784(ActorType *param_1, u32 type, ActorCreateFunc createFunc, void* param_4);
+    void func_0203e7b4();
+    void func_0204f8d4(void *object, void *cleanupFunc, Resource *resource);
+}
+
+static char data_ov14_02158998[] = "fnl";
+static char data_ov14_02158994[] = "brg";
+static char data_ov14_0215899c[] = "pdl";
+static char data_ov14_021589a0[] = "dco";
+static char data_ov14_021589a4[] = "can";
+static char data_ov14_021589a8[] = "hul";
+static char data_ov14_021589ac[] = "bow";
+static char data_ov14_021589b0[] = "anc";
+
+static char* data_ov14_021589d0 = data_ov14_021589b0;
+static char* data_ov14_021589cc = data_ov14_021589ac;
+static char* data_ov14_021589c8 = data_ov14_021589a8;
+static char* data_ov14_021589c4 = data_ov14_021589a4;
+static char* data_ov14_021589c0 = data_ov14_021589a0;
+static char* data_ov14_021589bc = data_ov14_0215899c;
+static char* data_ov14_021589b8 = data_ov14_02158998;
+static char* data_ov14_021589b4 = data_ov14_02158994;
 
 static u32 data_ov14_021589d4[] = { 0x00000000 };
 
@@ -21,36 +50,16 @@ static u32 data_ov14_021589d8[] = {
     0x00000000,
 };
 
-
-extern u32 **data_027e0fe0[];
-
-extern "C" void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
-extern "C" u32 func_01fffd04(void*, u32);
-extern u32 data_ov00_020e9370[];
-extern "C" bool func_ov00_020c313c();
-extern "C" void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
-extern "C" void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
-extern "C" void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
-               u32 param_6, int param_7, char param_8, char param_9, char param_10);
-extern "C" void func_ov00_020d7ad4(u32* param1, u32 param2);
-extern "C" void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
-extern "C" u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
-extern u32 data_ov00_020eec9c[];
-extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
-extern void *data_027e0e60;
-extern "C" bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
-extern "C" void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
-extern "C" void _ZN5ActorD2Ev();
-extern "C" void _ZN9SysObjectdlEPv();
-extern "C" ActorRupee* _ZN5ActorC2Ev(ActorRupee *thisx);
-extern "C" void _ZN10ActorRupeeD2Ev();
 extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
 
-extern "C" {
-    void func_0203e784(ActorType *param_1, u32 type, ActorCreateFunc createFunc, void* param_4);
-    void func_0203e7b4();
-    void func_0204f8d4(void *object, void *cleanupFunc, Resource *resource);
-}
+extern u32 data_ov00_020e9370[];
+extern u32 data_ov00_020eec9c[];
+extern void *data_027e0e60;
+extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
+extern u32 **data_027e0fe0[];
+
+Resource ActorRupee::gResource;
+ActorType ActorRupee::gType;
 
 #pragma section init begin
 void func_ov14_0215517c() {
