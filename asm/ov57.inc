@@ -50,7 +50,7 @@
 .extern func_0202af4c
 .extern func_0202b2f8
 .extern func_0202d95c
-.extern func_0204f8d4
+.extern __register_global_object
 .extern func_ov00_0207a188
 .extern func_ov00_0207bb1c
 .extern func_ov00_0207c1f8

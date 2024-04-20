@@ -2191,7 +2191,7 @@ func_ov57_0219a9a0: ; 0x0219a9a0
 	ldr r0, _0219a9c0 ; =data_ov57_0219ab0c
 	ldr r1, _0219a9c4 ; =func_ov57_02199e50
 	ldr r2, _0219a9c8 ; =data_ov57_0219ab00
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov57_0219a9a0
@@ -2212,7 +2212,7 @@ func_ov57_0219a9cc: ; 0x0219a9cc
 	ldr r1, _0219aa08 ; =func_ov57_0219a980
 	ldr r2, _0219aa0c ; =data_ov57_0219ab1c
 	str ip, [r3, #0xc]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov57_0219a9cc

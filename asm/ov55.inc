@@ -36,7 +36,7 @@
 .extern func_01fffcec
 .extern func_02019570
 .extern func_020385b8
-.extern func_0204f8d4
+.extern __register_global_object
 .extern func_ov00_02083f44
 .extern func_ov00_02087d34
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei

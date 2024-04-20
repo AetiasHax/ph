@@ -11166,7 +11166,7 @@ func_ov34_02185818: ; 0x02185818
 	ldr r0, _02185938 ; =data_ov34_021861ac
 	ldr r1, _02185944 ; =func_0203e7b4
 	ldr r2, _02185948 ; =data_ov34_021861a0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r3, _0218594c ; =data_ov34_021861a0
 	mov ip, #0
 	str ip, [r3, #0x2c]
@@ -11177,7 +11177,7 @@ func_ov34_02185818: ; 0x02185818
 	str ip, [r3, #0x34]
 	mov ip, #0x1000
 	str ip, [r3, #0x38]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _0218595c ; =data_02057200
 	ldr r0, _02185960 ; =data_ov34_02185aa0
 	ldr r3, [r1]
@@ -11258,14 +11258,14 @@ func_ov34_02185974: ; 0x02185974
 	ldr r0, _021859bc ; =data_ov34_02186374
 	ldr r1, _021859c8 ; =func_0203e7b4
 	ldr r2, _021859cc ; =data_ov34_02186368
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021859d0 ; =data_ov34_02186394
 	mov r1, #0
 	bl func_ov00_020bebc0
 	ldr r0, _021859d0 ; =data_ov34_02186394
 	ldr r1, _021859d4 ; =func_ov34_02185020
 	ldr r2, _021859d8 ; =data_ov34_02186388
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov34_02185974
@@ -11291,7 +11291,7 @@ func_ov34_021859dc: ; 0x021859dc
 	ldr r0, _02185a48 ; =data_ov34_021863ac
 	ldr r1, _02185a54 ; =func_0203e7b4
 	ldr r2, _02185a58 ; =data_ov34_021863a0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _02185a5c ; =data_02057200
 	ldr r0, _02185a60 ; =data_ov34_02186070
 	ldr r2, [r1]

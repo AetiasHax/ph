@@ -112,7 +112,7 @@
 .extern func_0203d77c
 .extern func_0204f614
 .extern func_0204f754
-.extern func_0204f8d4
+.extern __register_global_object
 .extern func_ov00_0207b1fc
 .extern func_ov00_020847e0
 .extern func_ov00_0208de04

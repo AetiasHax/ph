@@ -6019,7 +6019,7 @@ func_ov41_0218e098: ; 0x0218e098
 	ldr r0, _0218e0c4 ; =data_ov41_0218ea8c
 	ldr r1, _0218e0d0 ; =func_0203e7b4
 	ldr r2, _0218e0d4 ; =data_ov41_0218ea80
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218e098
@@ -6041,7 +6041,7 @@ func_ov41_0218e0d8: ; 0x0218e0d8
 	ldr r0, _0218e11c ; =data_ov41_0218eaac
 	ldr r1, _0218e128 ; =func_0203e7b4
 	ldr r2, _0218e12c ; =data_ov41_0218eaa0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _0218e130 ; =data_02057200
 	ldr r0, _0218e134 ; =data_ov41_0218e444
 	ldr r2, [r1]
@@ -6071,7 +6071,7 @@ func_ov41_0218e138: ; 0x0218e138
 	ldr r0, _0218e164 ; =data_ov41_0218eacc
 	ldr r1, _0218e170 ; =func_0203e7b4
 	ldr r2, _0218e174 ; =data_ov41_0218eac0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218e138
@@ -6093,7 +6093,7 @@ func_ov41_0218e178: ; 0x0218e178
 	ldr r0, _0218e1a4 ; =data_ov41_0218eaec
 	ldr r1, _0218e1b0 ; =func_0203e7b4
 	ldr r2, _0218e1b4 ; =data_ov41_0218eae0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218e178
@@ -6115,7 +6115,7 @@ func_ov41_0218e1b8: ; 0x0218e1b8
 	ldr r0, _0218e1e4 ; =data_ov41_0218eb10
 	ldr r1, _0218e1f0 ; =func_0203e7b4
 	ldr r2, _0218e1f4 ; =data_ov41_0218eb04
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218e1b8
@@ -6138,7 +6138,7 @@ func_ov41_0218e1f8: ; 0x0218e1f8
 	ldr r0, _0218e2e8 ; =data_ov41_0218eb30
 	ldr r1, _0218e2f4 ; =func_0203e7b4
 	ldr r2, _0218e2f8 ; =data_ov41_0218eb24
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r0, #0xc
 	str r0, [sp]
 	ldr r3, _0218e2fc ; =0x00001b33
@@ -6185,7 +6185,7 @@ func_ov41_0218e1f8: ; 0x0218e1f8
 	ldr r0, _0218e300 ; =data_ov41_0218e85c
 	ldr r1, _0218e304 ; =func_ov00_020cceec
 	ldr r2, _0218e308 ; =data_ov41_0218eb44
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0

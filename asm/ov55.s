@@ -848,7 +848,7 @@ func_ov55_021997ec: ; 0x021997ec
 	ldr r0, _02199810 ; =data_ov55_021998ac
 	ldr r1, _02199814 ; =func_ov00_020a95a4
 	ldr r2, _02199818 ; =data_ov55_021998a0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov55_021997ec

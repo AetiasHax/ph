@@ -2309,7 +2309,7 @@ func_ov23_0216f2a4: ; 0x0216f2a4
 	ldr r1, _0216f3fc ; =func_ov23_0216f1d0
 	ldr r2, _0216f400 ; =data_ov23_0217ac50
 	str ip, [r3, #0x3c]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _0216f3f0 ; =data_ov23_0217ac20
 	ldr r1, [r0, #0x2c]
 	orr r1, r1, #1
@@ -9826,7 +9826,7 @@ func_ov23_02175878: ; 0x02175878
 	str ip, [r3, #0x34]
 	mov ip, #0
 	str ip, [r3, #0x38]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021758e4 ; =data_ov23_0217acac
 	ldr r1, [r0, #0x24]
 	orr r1, r1, #1
@@ -15212,7 +15212,7 @@ func_ov23_02179698: ; 0x02179698
 	ldr r0, _02179798 ; =data_ov23_0217ab6c
 	ldr r1, _021797a4 ; =func_0203e7b4
 	ldr r2, _021797a8 ; =data_ov23_0217ab60
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021797ac ; =data_ov23_0217ab8c
 	ldr r1, _021797b0 ; =0x47524e57
 	ldr r2, _021797b4 ; =func_ov23_0216e818
@@ -15221,7 +15221,7 @@ func_ov23_02179698: ; 0x02179698
 	ldr r0, _021797ac ; =data_ov23_0217ab8c
 	ldr r1, _021797a4 ; =func_0203e7b4
 	ldr r2, _021797b8 ; =data_ov23_0217ab80
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021797bc ; =data_ov23_0217abac
 	ldr r1, _021797c0 ; =0x47524e43
 	ldr r2, _021797c4 ; =func_ov23_0216e848
@@ -15230,7 +15230,7 @@ func_ov23_02179698: ; 0x02179698
 	ldr r0, _021797bc ; =data_ov23_0217abac
 	ldr r1, _021797a4 ; =func_0203e7b4
 	ldr r2, _021797c8 ; =data_ov23_0217aba0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021797cc ; =data_ov23_0217abcc
 	ldr r1, _021797d0 ; =0x47524342
 	ldr r2, _021797d4 ; =func_ov23_0216e878
@@ -15239,7 +15239,7 @@ func_ov23_02179698: ; 0x02179698
 	ldr r0, _021797cc ; =data_ov23_0217abcc
 	ldr r1, _021797a4 ; =func_0203e7b4
 	ldr r2, _021797d8 ; =data_ov23_0217abc0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021797dc ; =data_ov23_0217abec
 	ldr r1, _021797e0 ; =0x47524d47
 	ldr r2, _021797e4 ; =func_ov23_0216e8a8
@@ -15248,7 +15248,7 @@ func_ov23_02179698: ; 0x02179698
 	ldr r0, _021797dc ; =data_ov23_0217abec
 	ldr r1, _021797a4 ; =func_0203e7b4
 	ldr r2, _021797e8 ; =data_ov23_0217abe0
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -15289,7 +15289,7 @@ func_ov23_021797ec: ; 0x021797ec
 	ldr r0, _02179830 ; =data_ov23_0217ac0c
 	ldr r1, _0217983c ; =func_0203e7b4
 	ldr r2, _02179840 ; =data_ov23_0217ac00
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _02179844 ; =data_02057200
 	ldr r0, _02179848 ; =data_ov23_02179ed8
 	ldr r2, [r1]
@@ -15320,7 +15320,7 @@ func_ov23_0217984c: ; 0x0217984c
 	ldr r0, _02179954 ; =data_ov23_0217ac2c
 	ldr r1, _02179960 ; =func_0203e7b4
 	ldr r2, _02179964 ; =data_ov23_0217ac20
-	bl func_0204f8d4
+	bl __register_global_object
 	mov ip, #1
 	str ip, [sp]
 	ldr r1, _02179968 ; =0x00001333
@@ -15373,7 +15373,7 @@ func_ov23_0217984c: ; 0x0217984c
 	ldr r0, _0217996c ; =data_ov23_0217a030
 	ldr r1, _02179970 ; =func_ov00_020cceec
 	ldr r2, _02179974 ; =data_ov23_0217ac40
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15414,7 +15414,7 @@ func_ov23_02179998: ; 0x02179998
 	ldr r0, _021799c4 ; =data_ov23_0217ac6c
 	ldr r1, _021799d0 ; =func_0203e7b4
 	ldr r2, _021799d4 ; =data_ov23_0217ac60
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179998
@@ -15437,7 +15437,7 @@ func_ov23_021799d8: ; 0x021799d8
 	ldr r0, _02179ae0 ; =data_ov23_0217ac8c
 	ldr r1, _02179aec ; =func_0203e7b4
 	ldr r2, _02179af0 ; =data_ov23_0217ac80
-	bl func_0204f8d4
+	bl __register_global_object
 	mov ip, #1
 	str ip, [sp]
 	mov r2, #2
@@ -15490,7 +15490,7 @@ func_ov23_021799d8: ; 0x021799d8
 	ldr r0, _02179afc ; =data_ov23_0217a3e0
 	ldr r1, _02179b00 ; =func_ov00_020cceec
 	ldr r2, _02179b04 ; =data_ov23_0217aca0
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15518,7 +15518,7 @@ func_ov23_02179b08: ; 0x02179b08
 	ldr r0, _02179b34 ; =data_ov23_0217acb8
 	ldr r1, _02179b40 ; =func_0203e7b4
 	ldr r2, _02179b44 ; =data_ov23_0217acac
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179b08
@@ -15539,7 +15539,7 @@ func_ov23_02179b48: ; 0x02179b48
 	ldr r0, _02179b70 ; =data_ov23_0217ace8
 	ldr r1, _02179b78 ; =func_0203ebc8
 	ldr r2, _02179b7c ; =data_ov23_0217acf0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179b48
@@ -15559,7 +15559,7 @@ func_ov23_02179b80: ; 0x02179b80
 	ldr r0, _02179bd4 ; =data_ov23_0217acfc
 	ldr r1, _02179bdc ; =func_0203ebc8
 	ldr r2, _02179be0 ; =data_ov23_0217ad04
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr ip, _02179be4 ; =0xfffffd9a
 	ldr r3, _02179be8 ; =data_ov23_0217a7b0
 	mov r0, #0
@@ -15570,7 +15570,7 @@ func_ov23_02179b80: ; 0x02179b80
 	str ip, [r3, #4]
 	rsb ip, ip, #0
 	str ip, [r3, #8]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179b80
@@ -15596,7 +15596,7 @@ func_ov23_02179bf8: ; 0x02179bf8
 	ldr r0, _02179c24 ; =data_ov23_0217ad28
 	ldr r1, _02179c30 ; =func_0203e7b4
 	ldr r2, _02179c34 ; =data_ov23_0217ad1c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179bf8
@@ -15617,7 +15617,7 @@ func_ov23_02179c38: ; 0x02179c38
 	ldr r0, _02179c60 ; =data_ov23_0217ad3c
 	ldr r1, _02179c68 ; =func_0203ebc8
 	ldr r2, _02179c6c ; =data_ov23_0217ad44
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179c38
@@ -15637,7 +15637,7 @@ func_ov23_02179c70: ; 0x02179c70
 	ldr r0, _02179c98 ; =data_ov23_0217ad50
 	ldr r1, _02179ca0 ; =func_0203ebc8
 	ldr r2, _02179ca4 ; =data_ov23_0217ad58
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179c70
@@ -15657,7 +15657,7 @@ func_ov23_02179ca8: ; 0x02179ca8
 	ldr r0, _02179cd0 ; =data_ov23_0217ad64
 	ldr r1, _02179cd8 ; =func_0203ebc8
 	ldr r2, _02179cdc ; =data_ov23_0217ad6c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov23_02179ca8

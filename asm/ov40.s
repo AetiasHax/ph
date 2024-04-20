@@ -16342,7 +16342,7 @@ func_ov40_02188360: ; 0x02188360
 	ldr r0, _0218838c ; =data_ov40_02189acc
 	ldr r1, _02188398 ; =func_0203e7b4
 	ldr r2, _0218839c ; =data_ov40_02189ac0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_02188360
@@ -16364,7 +16364,7 @@ func_ov40_021883a0: ; 0x021883a0
 	ldr r0, _021883cc ; =data_ov40_0219a0ec
 	ldr r1, _021883d8 ; =func_0203e7b4
 	ldr r2, _021883dc ; =data_ov40_0219a0e0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_021883a0
@@ -16386,7 +16386,7 @@ func_ov40_021883e0: ; 0x021883e0
 	ldr r0, _0218840c ; =data_ov40_0219a10c
 	ldr r1, _02188418 ; =func_0203e7b4
 	ldr r2, _0218841c ; =data_ov40_0219a100
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_021883e0
@@ -16408,7 +16408,7 @@ func_ov40_02188420: ; 0x02188420
 	ldr r0, _0218844c ; =data_ov40_0219a12c
 	ldr r1, _02188458 ; =func_0203e7b4
 	ldr r2, _0218845c ; =data_ov40_0219a120
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_02188420
@@ -16471,7 +16471,7 @@ func_ov40_021884ac: ; 0x021884ac
 	ldr r0, _021884d8 ; =data_ov40_0219a14c
 	ldr r1, _021884e4 ; =func_0203e7b4
 	ldr r2, _021884e8 ; =data_ov40_0219a140
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_021884ac
@@ -16493,7 +16493,7 @@ func_ov40_021884ec: ; 0x021884ec
 	ldr r0, _02188518 ; =data_ov40_0219a16c
 	ldr r1, _02188524 ; =func_0203e7b4
 	ldr r2, _02188528 ; =data_ov40_0219a160
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_021884ec
@@ -16597,7 +16597,7 @@ func_ov40_021885c4: ; 0x021885c4
 	ldr r0, _021885f0 ; =data_ov40_0219a18c
 	ldr r1, _021885fc ; =func_0203e7b4
 	ldr r2, _02188600 ; =data_ov40_0219a180
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov40_021885c4
