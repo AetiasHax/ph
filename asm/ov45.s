@@ -6583,7 +6583,7 @@ func_ov45_0218e3e8: ; 0x0218e3e8
 	ldr r0, _0218e414 ; =data_ov45_0218ed8c
 	ldr r1, _0218e420 ; =func_0203e7b4
 	ldr r2, _0218e424 ; =data_ov45_0218ed80
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218e3e8
@@ -6605,7 +6605,7 @@ func_ov45_0218e428: ; 0x0218e428
 	ldr r0, _0218e454 ; =data_ov45_0218edb0
 	ldr r1, _0218e460 ; =func_0203e7b4
 	ldr r2, _0218e464 ; =data_ov45_0218eda4
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218e428
@@ -6627,7 +6627,7 @@ func_ov45_0218e468: ; 0x0218e468
 	ldr r0, _0218e494 ; =data_ov45_0218edd4
 	ldr r1, _0218e4a0 ; =func_0203e7b4
 	ldr r2, _0218e4a4 ; =data_ov45_0218edc8
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov45_0218e468

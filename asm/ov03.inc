@@ -3,6 +3,12 @@
 .extern FastDivide
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager18func_ov00_020ad790Ei
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN14OverlayManager6UnloadEj
 .extern _ZN5Actor10SetUnk_11bEv
@@ -52,6 +58,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager18func_ov00_020ae350Ev
 .extern _ZNK11ItemManager7HasItemEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02056be4
 .extern data_02057b18
@@ -231,7 +238,6 @@
 .extern func_0204f614
 .extern func_0204f754
 .extern func_0204f7b0
-.extern func_0204f8d4
 .extern func_ov00_02078b40
 .extern func_ov00_02078e00
 .extern func_ov00_02078fac
@@ -307,12 +313,6 @@
 .extern func_ov00_0208c38c
 .extern func_ov00_0208c39c
 .extern func_ov00_0208ca00
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bbcEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_0209d748

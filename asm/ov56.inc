@@ -21,7 +21,7 @@
 .extern func_01ffa9fc
 .extern func_01fffcd8
 .extern func_01fffcec
-.extern func_0204f8d4
+.extern __register_global_object
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c
 .extern func_ov00_020a9588

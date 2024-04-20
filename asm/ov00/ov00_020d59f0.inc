@@ -419,7 +419,7 @@ func_ov00_020d5f98: ; 0x020d5f98
 	str ip, [r3, #8]
 	mov ip, #0x1000
 	str ip, [r3, #0xc]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _020d6134 ; =data_ov00_020ee6e8
 	ldr r1, [r0]
 	orr r1, r1, #1

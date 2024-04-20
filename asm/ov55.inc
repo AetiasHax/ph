@@ -18,8 +18,12 @@
 .extern _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 .extern _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern _ZN17LinkStateInteract14SetThrowOffsetEP5Vec3p
 .extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
+.extern __register_global_object
 .extern data_027e0c54
 .extern data_027e0e60
 .extern data_027e0f64
@@ -36,12 +40,8 @@
 .extern func_01fffcec
 .extern func_02019570
 .extern func_020385b8
-.extern func_0204f8d4
 .extern func_ov00_02083f44
 .extern func_ov00_02087d34
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a9588

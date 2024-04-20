@@ -1254,7 +1254,7 @@ func_ov53_02199cc8: ; 0x02199cc8
 	str ip, [r3, #0x10]
 	mov ip, #0
 	str ip, [r3, #0x1c]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02199f64 ; =data_ov53_0219a670
 	ldr r1, [r0]
 	orr r1, r1, #1
@@ -1478,7 +1478,7 @@ _02199fe4:
 	ldr r2, _0219a05c ; =data_ov53_0219a5b0
 	strh r3, [ip, #6]
 	strh r3, [ip, #4]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _0219a048 ; =data_ov53_0219a180
 	ldr r1, _0219a060 ; =data_ov53_0219a0c8
 	ldr r2, _0219a064 ; =data_ov53_0219a5f0

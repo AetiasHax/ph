@@ -15355,7 +15355,7 @@ func_ov37_02188690: ; 0x02188690
 	ldr r0, _02188790 ; =data_ov37_0218916c
 	ldr r1, _0218879c ; =func_0203e7b4
 	ldr r2, _021887a0 ; =data_ov37_02189160
-	bl func_0204f8d4
+	bl __register_global_object
 	mov lr, #0
 	str lr, [sp]
 	mov ip, #1
@@ -15406,7 +15406,7 @@ func_ov37_02188690: ; 0x02188690
 	ldr r0, _021887a8 ; =data_ov37_02188a20
 	ldr r1, _021887ac ; =func_ov00_020cceec
 	ldr r2, _021887b0 ; =data_ov37_02189180
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15433,14 +15433,14 @@ func_ov37_021887b4: ; 0x021887b4
 	ldr r0, _021887fc ; =data_ov37_021891a0
 	ldr r1, _02188808 ; =func_0203e7b4
 	ldr r2, _0218880c ; =data_ov37_02189194
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02188810 ; =data_ov37_021891c0
 	mov r1, #0
 	bl func_ov00_020bebc0
 	ldr r0, _02188810 ; =data_ov37_021891c0
 	ldr r1, _02188814 ; =func_ov37_02185054
 	ldr r2, _02188818 ; =data_ov37_021891b4
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov37_021887b4
@@ -15465,7 +15465,7 @@ func_ov37_0218881c: ; 0x0218881c
 	ldr r0, _02188848 ; =data_ov37_021891d8
 	ldr r1, _02188854 ; =func_0203e7b4
 	ldr r2, _02188858 ; =data_ov37_021891cc
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov37_0218881c
@@ -15487,7 +15487,7 @@ func_ov37_0218885c: ; 0x0218885c
 	ldr r0, _02188888 ; =data_ov37_021891f8
 	ldr r1, _02188894 ; =func_0203e7b4
 	ldr r2, _02188898 ; =data_ov37_021891ec
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov37_0218885c
@@ -15510,7 +15510,7 @@ func_ov37_0218889c: ; 0x0218889c
 	ldr r0, _02188994 ; =data_ov37_02189218
 	ldr r1, _021889a0 ; =func_0203e7b4
 	ldr r2, _021889a4 ; =data_ov37_0218920c
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r2, #0
 	str r2, [sp]
 	mov r1, #1
@@ -15559,7 +15559,7 @@ func_ov37_0218889c: ; 0x0218889c
 	ldr r0, _021889a8 ; =data_ov37_02188f00
 	ldr r1, _021889ac ; =func_ov00_020cceec
 	ldr r2, _021889b0 ; =data_ov37_0218922c
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0

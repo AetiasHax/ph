@@ -13270,7 +13270,7 @@ func_ov39_02186968: ; 0x02186968
 	ldr r0, _021869a0 ; =data_ov39_02186ccc
 	ldr r1, _021869ac ; =func_0203e7b4
 	ldr r2, _021869b0 ; =data_ov39_02186cc0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _021869b4 ; =data_ov39_02186cc0
 	ldr r1, _021869b8 ; =data_ov39_02186a28
 	str r1, [r0, #0x20]
