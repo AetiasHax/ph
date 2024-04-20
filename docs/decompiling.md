@@ -39,6 +39,7 @@ _0211bf50: .word data_ov09_0211f59c
     - If no suitable header file exists, make a new one and put any structs and types you need in there.
 1. Paste the context into decomp.me, and create the scratch.
 1. Copy the `CC_FLAGS` from `Makefile` into the arguments field in decomp.me.
+    - Also copy `CXX_FLAGS` if your function comes from a `.cpp` file. Otherwise, copy `C_FLAGS` if it's a `.c` file.
     - Replace the `-d $(REGION)` flag with whichever region you intend to decompile for. You can also delete the flag entirely
     if the function contains no region differences.
 1. Decompile the function and try to get a 100% match.
