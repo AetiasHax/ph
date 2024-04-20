@@ -80,6 +80,8 @@ lines = ctx.splitlines(True)
 for i in reversed(range(len(lines))):
     if lines[i].startswith('#define __cplusplus'): lines.pop(i)
     elif lines[i].startswith('#define __STDC_HOSTED__'): lines.pop(i)
+    elif lines[i].startswith('#define __STDC__'): lines.pop(i)
+    elif lines[i].startswith('#define __STDC_VERSION__'): lines.pop(i)
 
 ctx = ''.join(lines)
 
