@@ -930,7 +930,7 @@ func_ov54_02199924: ; 0x02199924
 	ldr r0, _02199948 ; =data_ov54_02199a2c
 	ldr r1, _0219994c ; =0x020a95a5
 	ldr r2, _02199950 ; =data_ov54_02199a20
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov54_02199924

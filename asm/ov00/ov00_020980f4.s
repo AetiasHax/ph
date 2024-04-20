@@ -21968,7 +21968,7 @@ func_ov00_020e105c: ; 0x020e105c
 	ldr r0, _020e1088 ; =data_ov00_020ee0f4
 	ldr r1, _020e1094 ; =func_0203e7b4
 	ldr r2, _020e1098 ; =data_ov00_020ee0e8
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020e105c
@@ -21989,7 +21989,7 @@ func_ov00_020e109c: ; 0x020e109c
 	ldr r0, _020e10c4 ; =data_ov00_020ee108
 	ldr r1, _020e10cc ; =func_0203ebc8
 	ldr r2, _020e10d0 ; =data_ov00_020ee110
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020e109c
@@ -22010,7 +22010,7 @@ func_ov00_020e10d4: ; 0x020e10d4
 	ldr r0, _020e1100 ; =data_ov00_020ee128
 	ldr r1, _020e110c ; =func_0203e7b4
 	ldr r2, _020e1110 ; =data_ov00_020ee11c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020e10d4
@@ -22043,14 +22043,14 @@ func_ov00_020e1128: ; 0x020e1128
 	str ip, [r3]
 	mov ip, #0x60
 	str ip, [r3, #4]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _020e11c0 ; =data_ov00_020e50f4
 	mov r3, #0
 	ldr r1, _020e11b8 ; =func_ov00_02086cd0
 	ldr r2, _020e11c4 ; =data_ov00_020ee154
 	str r3, [r0]
 	str r3, [r0, #4]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _020e11c8 ; =data_ov00_020e50fc
 	mov ip, #0x80
 	mov r3, #0x60
@@ -22058,7 +22058,7 @@ func_ov00_020e1128: ; 0x020e1128
 	ldr r2, _020e11cc ; =data_ov00_020ee148
 	str ip, [r0]
 	str r3, [r0, #4]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _020e11d0 ; =data_ov00_020e5104
 	mov ip, #0x80
 	mov r3, #0
@@ -22066,7 +22066,7 @@ func_ov00_020e1128: ; 0x020e1128
 	ldr r2, _020e11d4 ; =data_ov00_020ee13c
 	str ip, [r0]
 	str r3, [r0, #4]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020e1128
@@ -22114,7 +22114,7 @@ func_ov00_020e120c: ; 0x020e120c
 	str ip, [r3, #4]
 	mov ip, #0x28000
 	str ip, [r3, #8]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020e120c

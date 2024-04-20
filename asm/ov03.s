@@ -43045,7 +43045,7 @@ func_ov03_020fff54: ; 0x020fff54
 	ldr r0, _020fff80 ; =data_ov03_02100a98
 	ldr r1, _020fff8c ; =func_0203e7b4
 	ldr r2, _020fff90 ; =data_ov03_02100a8c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov03_020fff54
@@ -43066,7 +43066,7 @@ func_ov03_020fff94: ; 0x020fff94
 	ldr r0, _020fffbc ; =data_ov03_02100ab0
 	ldr r1, _020fffc4 ; =func_0203ebc8
 	ldr r2, _020fffc8 ; =data_ov03_02100ab8
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov03_020fff94

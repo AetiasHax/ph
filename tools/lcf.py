@@ -11,7 +11,11 @@ class Overlay:
 def name(path: str): return path.split("/")[-1]
 
 ARM9_OBJECTS = [
-    'asm/main.s'
+    'asm/main/main_02000000.s',
+
+    'libs/cpp/src/__register_global_object.c',
+
+    'asm/main/main_0204f8f4.s',
 ]
 
 ITCM_OBJECTS = [

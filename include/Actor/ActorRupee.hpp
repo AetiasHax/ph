@@ -4,7 +4,6 @@
 #include "types.h"
 #include "lib/math.h"
 
-#include "System/Resource.hpp"
 #include "Actor/Actor.hpp"
 #include "Actor/ActorType.hpp"
 #include "Item/ItemManager.hpp"
@@ -25,7 +24,6 @@ enum RupeeId_ {
 
 class ActorRupee : public Actor {
 public:
-    static Resource gResource;
     static ActorType gType;
 
     /* 000 (base) */

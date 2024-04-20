@@ -498,14 +498,14 @@ func_ov56_02199328: ; 0x02199328
 	ldr r0, _02199368 ; =data_ov56_0219940c
 	ldr r1, _0219936c ; =0x020a95a5
 	ldr r2, _02199370 ; =data_ov56_02199400
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02199374 ; =data_ov56_02199474
 	mov r1, #0
 	blx func_ov00_020a9588
 	ldr r0, _02199374 ; =data_ov56_02199474
 	ldr r1, _0219936c ; =0x020a95a5
 	ldr r2, _02199378 ; =data_ov56_02199468
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov56_02199328

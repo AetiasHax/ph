@@ -6927,7 +6927,7 @@ func_ov00_020df34c: ; 0x020df34c
 	ldr r0, _020df36c ; =data_027e0d54
 	ldr r1, _020df370 ; =func_ov00_0207a2fc
 	ldr r2, _020df374 ; =data_027e0d48
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020df34c

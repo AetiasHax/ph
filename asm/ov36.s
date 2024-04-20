@@ -12920,7 +12920,7 @@ func_ov36_02186bb4: ; 0x02186bb4
 	ldr r0, _02186be0 ; =data_ov36_02186fac
 	ldr r1, _02186bec ; =func_0203e7b4
 	ldr r2, _02186bf0 ; =data_ov36_02186fa0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov36_02186bb4
@@ -12942,7 +12942,7 @@ func_ov36_02186bf4: ; 0x02186bf4
 	ldr r0, _02186c20 ; =data_ov36_02186fcc
 	ldr r1, _02186c2c ; =func_0203e7b4
 	ldr r2, _02186c30 ; =data_ov36_02186fc0
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov36_02186bf4

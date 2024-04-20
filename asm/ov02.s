@@ -9888,7 +9888,7 @@ func_ov02_020f6978: ; 0x020f6978
 	ldr r0, _020f6998 ; =data_ov02_020f716c
 	ldr r1, _020f699c ; =func_ov02_020f66d0
 	ldr r2, _020f69a0 ; =data_ov02_020f7160
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov02_020f6978

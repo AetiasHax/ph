@@ -12047,7 +12047,7 @@ func_ov24_021773cc: ; 0x021773cc
 	ldr r1, _0217749c ; =func_ov24_021774a4
 	ldr r2, _021774a0 ; =data_ov24_0217b0dc
 	str ip, [r3, #0x30]
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02177490 ; =data_ov24_0217b0b8
 	ldr r1, [r0, #0x20]
 	orr r1, r1, #1
@@ -14998,7 +14998,7 @@ func_ov24_021795d0: ; 0x021795d0
 	ldr r0, _021795f8 ; =data_ov24_0217af60
 	ldr r1, _02179600 ; =func_0203ebc8
 	ldr r2, _02179604 ; =data_ov24_0217af68
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_021795d0
@@ -15019,7 +15019,7 @@ func_ov24_02179608: ; 0x02179608
 	ldr r0, _021796f4 ; =data_ov24_0217af80
 	ldr r1, _02179700 ; =func_0203e7b4
 	ldr r2, _02179704 ; =data_ov24_0217af74
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r3, _02179708 ; =data_ov24_021791d4
 	ldr r0, _0217970c ; =0x00001333
 	ldr r2, [r3]
@@ -15092,7 +15092,7 @@ func_ov24_02179714: ; 0x02179714
 	ldr r0, _02179764 ; =data_ov24_0217afa0
 	ldr r1, _02179770 ; =func_0203e7b4
 	ldr r2, _02179774 ; =data_ov24_0217af94
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r0, _02179778 ; =data_ov24_0217afc0
 	ldr r1, _0217977c ; =0x4d55544f
 	ldr r2, _02179780 ; =func_ov24_0216e92c
@@ -15101,7 +15101,7 @@ func_ov24_02179714: ; 0x02179714
 	ldr r0, _02179778 ; =data_ov24_0217afc0
 	ldr r1, _02179770 ; =func_0203e7b4
 	ldr r2, _02179784 ; =data_ov24_0217afb4
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179714
@@ -15126,7 +15126,7 @@ func_ov24_02179788: ; 0x02179788
 	ldr r0, _021797b0 ; =data_ov24_0217afd4
 	ldr r1, _021797b8 ; =func_0203ebc8
 	ldr r2, _021797bc ; =data_ov24_0217afdc
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179788
@@ -15148,7 +15148,7 @@ func_ov24_021797c0: ; 0x021797c0
 	ldr r0, _0217984c ; =data_ov24_0217aff4
 	ldr r1, _02179858 ; =func_0203e7b4
 	ldr r2, _0217985c ; =data_ov24_0217afe8
-	bl func_0204f8d4
+	bl __register_global_object
 	ldr r1, _02179860 ; =data_02057200
 	ldr r0, _02179864 ; =data_ov24_0217a1a8
 	ldr r2, [r1]
@@ -15196,7 +15196,7 @@ func_ov24_02179868: ; 0x02179868
 	ldr r0, _02179954 ; =data_ov24_0217b014
 	ldr r1, _02179960 ; =func_0203e7b4
 	ldr r2, _02179964 ; =data_ov24_0217b008
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r1, #1
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -15242,7 +15242,7 @@ func_ov24_02179868: ; 0x02179868
 	ldr r0, _02179968 ; =data_ov24_0217a38c
 	ldr r1, _0217996c ; =func_ov00_020cceec
 	ldr r2, _02179970 ; =data_ov24_0217b028
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15269,7 +15269,7 @@ func_ov24_02179974: ; 0x02179974
 	ldr r0, _02179a68 ; =data_ov24_0217b040
 	ldr r1, _02179a74 ; =func_0203e7b4
 	ldr r2, _02179a78 ; =data_ov24_0217b034
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r1, #1
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -15317,7 +15317,7 @@ func_ov24_02179974: ; 0x02179974
 	ldr r0, _02179a80 ; =data_ov24_0217a52c
 	ldr r1, _02179a84 ; =func_ov00_020cceec
 	ldr r2, _02179a88 ; =data_ov24_0217b054
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15345,7 +15345,7 @@ func_ov24_02179a8c: ; 0x02179a8c
 	ldr r0, _02179b80 ; =data_ov24_0217b06c
 	ldr r1, _02179b8c ; =func_0203e7b4
 	ldr r2, _02179b90 ; =data_ov24_0217b060
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r1, #1
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -15393,7 +15393,7 @@ func_ov24_02179a8c: ; 0x02179a8c
 	ldr r0, _02179b98 ; =data_ov24_0217a70c
 	ldr r1, _02179b9c ; =func_ov00_020cceec
 	ldr r2, _02179ba0 ; =data_ov24_0217b080
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15421,7 +15421,7 @@ func_ov24_02179ba4: ; 0x02179ba4
 	ldr r0, _02179c98 ; =data_ov24_0217b098
 	ldr r1, _02179ca4 ; =func_0203e7b4
 	ldr r2, _02179ca8 ; =data_ov24_0217b08c
-	bl func_0204f8d4
+	bl __register_global_object
 	mov r3, #0
 	str r3, [sp]
 	mov r1, #1
@@ -15469,7 +15469,7 @@ func_ov24_02179ba4: ; 0x02179ba4
 	ldr r0, _02179cb0 ; =data_ov24_0217a908
 	ldr r1, _02179cb4 ; =func_ov00_020cceec
 	ldr r2, _02179cb8 ; =data_ov24_0217b0ac
-	bl func_0204f8d4
+	bl __register_global_object
 	add sp, sp, #0x84
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -15496,7 +15496,7 @@ func_ov24_02179cbc: ; 0x02179cbc
 	ldr r0, _02179ce8 ; =data_ov24_0217b0c4
 	ldr r1, _02179cf4 ; =func_0203e7b4
 	ldr r2, _02179cf8 ; =data_ov24_0217b0b8
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179cbc
@@ -15517,7 +15517,7 @@ func_ov24_02179cfc: ; 0x02179cfc
 	ldr r0, _02179d24 ; =data_ov24_0217b0ec
 	ldr r1, _02179d2c ; =func_0203ebc8
 	ldr r2, _02179d30 ; =data_ov24_0217b0f4
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179cfc
@@ -15537,7 +15537,7 @@ func_ov24_02179d34: ; 0x02179d34
 	ldr r0, _02179d5c ; =data_ov24_0217b100
 	ldr r1, _02179d64 ; =func_0203ebc8
 	ldr r2, _02179d68 ; =data_ov24_0217b108
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179d34
@@ -15558,7 +15558,7 @@ func_ov24_02179d6c: ; 0x02179d6c
 	ldr r0, _02179d98 ; =data_ov24_0217b120
 	ldr r1, _02179da4 ; =func_0203e7b4
 	ldr r2, _02179da8 ; =data_ov24_0217b114
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179d6c
@@ -15579,7 +15579,7 @@ func_ov24_02179dac: ; 0x02179dac
 	ldr r0, _02179dd4 ; =data_ov24_0217b134
 	ldr r1, _02179ddc ; =func_0203ebc8
 	ldr r2, _02179de0 ; =data_ov24_0217b13c
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179dac
@@ -15599,7 +15599,7 @@ func_ov24_02179de4: ; 0x02179de4
 	ldr r0, _02179e0c ; =data_ov24_0217b148
 	ldr r1, _02179e14 ; =func_0203ebc8
 	ldr r2, _02179e18 ; =data_ov24_0217b150
-	bl func_0204f8d4
+	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov24_02179de4
