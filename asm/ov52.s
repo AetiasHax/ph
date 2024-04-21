@@ -2842,9 +2842,9 @@ func_ov52_021978d4: ; 0x021978d4
 	ldr r1, _02197904 ; =0x4154474d
 	ldr r2, _02197908 ; =func_ov52_02196510
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02197900 ; =data_ov52_02197c54
-	ldr r1, _0219790c ; =func_0203e7b4
+	ldr r1, _0219790c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02197910 ; =data_ov52_02197c48
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -2853,7 +2853,7 @@ func_ov52_021978d4: ; 0x021978d4
 _02197900: .word data_ov52_02197c54
 _02197904: .word 0x4154474d
 _02197908: .word func_ov52_02196510
-_0219790c: .word func_0203e7b4
+_0219790c: .word _ZN9ActorTypeD1Ev
 _02197910: .word data_ov52_02197c48
 
 	.global func_ov52_02197914
@@ -2864,9 +2864,9 @@ func_ov52_02197914: ; 0x02197914
 	ldr r1, _02197944 ; =0x4154474e
 	ldr r2, _02197948 ; =func_ov52_02196ddc
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02197940 ; =data_ov52_02197c80
-	ldr r1, _0219794c ; =func_0203e7b4
+	ldr r1, _0219794c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02197950 ; =data_ov52_02197c74
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -2875,7 +2875,7 @@ func_ov52_02197914: ; 0x02197914
 _02197940: .word data_ov52_02197c80
 _02197944: .word 0x4154474e
 _02197948: .word func_ov52_02196ddc
-_0219794c: .word func_0203e7b4
+_0219794c: .word _ZN9ActorTypeD1Ev
 _02197950: .word data_ov52_02197c74
 
 	.section .ctor, 4, 1, 4

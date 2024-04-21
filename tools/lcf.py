@@ -13,6 +13,11 @@ def name(path: str): return path.split("/")[-1]
 ARM9_OBJECTS = [
     'asm/main/main_02000000.s',
 
+    'asm/main/Actor/ActorType.s',
+    'src/Main/Actor/ActorType.cpp',
+
+    'asm/main/main_0203e8a0.s',
+
     'libs/cpp/src/__register_global_object.c',
 
     'asm/main/main_0204f8f4.s',
@@ -325,6 +330,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     for obj in ARM9_OBJECTS: file.write(f'        {name(obj)}.o(.sbss)\n')
     file.write('        . = ALIGN(32);\n')
     file.write('        arm9_bss_end = .;\n')
+    file.write('        . = ALIGN(32);\n')
     file.write('    } > ARM9\n')
     file.write('\n')
     file.write('    .itcm : {\n')
@@ -337,6 +343,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('        . = ALIGN(32);\n')
     for obj in ITCM_OBJECTS: file.write(f'        {name(obj)}.o(.bss)\n')
     for obj in ITCM_OBJECTS: file.write(f'        {name(obj)}.o(.sbss)\n')
+    file.write('        . = ALIGN(32);\n')
     file.write('    } > ITCM\n')
     file.write('\n')
     file.write('    .dtcm : {\n')
@@ -351,6 +358,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
     file.write('        . = ALIGN(32);\n')
     for obj in DTCM_OBJECTS: file.write(f'        {name(obj)}.o(.bss)\n')
     for obj in DTCM_OBJECTS: file.write(f'        {name(obj)}.o(.sbss)\n')
+    file.write('        . = ALIGN(32);\n')
     file.write('    } > DTCM\n')
     file.write('\n')
     file.write('    .autoloads : {\n')
@@ -403,6 +411,7 @@ with open(f'{BUILD}arm9_linker_script.lcf', 'w') as file:
         for obj in ov.objects: file.write(f'        {name(obj)}.o(.sbss)\n')
         file.write(f'        {ov.name}_bss_end = .;\n')
         file.write(f'        {ov.name}_bss_size = {ov.name}_bss_end - {ov.name}_bss_start;\n')
+        file.write('        . = ALIGN(32);\n')
         file.write('    } > ' + ov.name + '\n')
         file.write('\n')
     file.write('    .arm9_ovt : {\n')

@@ -70,8 +70,6 @@
 .extern func_020400f4
 .extern func_02040100
 .extern func_02040464
-.extern strcpy
-.extern strcat
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207a294
@@ -113,3 +111,5 @@
 .extern func_ov01_020f802c
 .extern func_ov01_020f8434
 .extern func_ov01_020f8500
+.extern strcat
+.extern strcpy

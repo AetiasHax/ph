@@ -116,8 +116,8 @@
 .extern func_02036ce4
 .extern func_02036f68
 .extern func_02037628
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207ba90

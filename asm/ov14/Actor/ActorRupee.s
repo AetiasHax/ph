@@ -740,9 +740,9 @@ func_ov14_0215517c: ; 0x0215517c
 	ldr r1, _021551c0 ; =0x52555059
 	ldr r2, _021551c4 ; =_ZN10ActorRupee6CreateEv
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
-	ldr r1, _021551c8 ; =func_0203e7b4
+	ldr r1, _021551c8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021551cc ; =_ZN10ActorRupee9gResourceE
 	bl __register_global_object
 	ldr r2, _021551d0 ; =0x000003bb
@@ -756,7 +756,7 @@ func_ov14_0215517c: ; 0x0215517c
 _021551bc: .word _ZN10ActorRupee5gTypeE
 _021551c0: .word 0x52555059
 _021551c4: .word _ZN10ActorRupee6CreateEv
-_021551c8: .word func_0203e7b4
+_021551c8: .word _ZN9ActorTypeD1Ev
 _021551cc: .word _ZN10ActorRupee9gResourceE
 _021551d0: .word 0x000003bb
 _021551d4: .word data_ov14_021589b4

@@ -11162,9 +11162,9 @@ func_ov34_02185818: ; 0x02185818
 	ldr r1, _0218593c ; =0x47524f4b
 	ldr r2, _02185940 ; =func_ov34_0217bd80
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02185938 ; =data_ov34_021861ac
-	ldr r1, _02185944 ; =func_0203e7b4
+	ldr r1, _02185944 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02185948 ; =data_ov34_021861a0
 	bl __register_global_object
 	ldr r3, _0218594c ; =data_ov34_021861a0
@@ -11233,7 +11233,7 @@ func_ov34_02185818: ; 0x02185818
 _02185938: .word data_ov34_021861ac
 _0218593c: .word 0x47524f4b
 _02185940: .word func_ov34_0217bd80
-_02185944: .word func_0203e7b4
+_02185944: .word _ZN9ActorTypeD1Ev
 _02185948: .word data_ov34_021861a0
 _0218594c: .word data_ov34_021861a0
 _02185950: .word data_ov34_021861cc
@@ -11254,9 +11254,9 @@ func_ov34_02185974: ; 0x02185974
 	ldr r1, _021859c0 ; =0x47524f42
 	ldr r2, _021859c4 ; =func_ov34_02184728
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021859bc ; =data_ov34_02186374
-	ldr r1, _021859c8 ; =func_0203e7b4
+	ldr r1, _021859c8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021859cc ; =data_ov34_02186368
 	bl __register_global_object
 	ldr r0, _021859d0 ; =data_ov34_02186394
@@ -11272,7 +11272,7 @@ func_ov34_02185974: ; 0x02185974
 _021859bc: .word data_ov34_02186374
 _021859c0: .word 0x47524f42
 _021859c4: .word func_ov34_02184728
-_021859c8: .word func_0203e7b4
+_021859c8: .word _ZN9ActorTypeD1Ev
 _021859cc: .word data_ov34_02186368
 _021859d0: .word data_ov34_02186394
 _021859d4: .word func_ov34_02185020
@@ -11287,9 +11287,9 @@ func_ov34_021859dc: ; 0x021859dc
 	ldr r1, _02185a4c ; =0x47524254
 	ldr r2, _02185a50 ; =func_ov34_02185034
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02185a48 ; =data_ov34_021863ac
-	ldr r1, _02185a54 ; =func_0203e7b4
+	ldr r1, _02185a54 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02185a58 ; =data_ov34_021863a0
 	bl __register_global_object
 	ldr r1, _02185a5c ; =data_02057200
@@ -11313,7 +11313,7 @@ func_ov34_021859dc: ; 0x021859dc
 _02185a48: .word data_ov34_021863ac
 _02185a4c: .word 0x47524254
 _02185a50: .word func_ov34_02185034
-_02185a54: .word func_0203e7b4
+_02185a54: .word _ZN9ActorTypeD1Ev
 _02185a58: .word data_ov34_021863a0
 _02185a5c: .word data_02057200
 _02185a60: .word data_ov34_02186070
