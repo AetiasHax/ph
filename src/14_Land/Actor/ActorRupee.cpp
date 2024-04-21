@@ -2,6 +2,9 @@
 #include "Item/ItemManager.hpp"
 
 
+
+// char* data_ov14_021589b4 = *data_ov14_02158994;
+
 extern "C" {
     void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
     u32 func_01fffd04(void*, u32);
@@ -19,37 +22,13 @@ extern "C" {
     void _ZN9SysObjectdlEPv();
     ActorRupee* _ZN5ActorC2Ev(ActorRupee *thisx);
     void _ZN10ActorRupeeD2Ev();
-    void func_0203e784(ActorType *param_1, u32 type, ActorCreateFunc createFunc, void* param_4);
-    void func_0203e7b4();
-    void func_0204f8d4(void *object, void *cleanupFunc, Resource *resource);
+
+    u32 data_ov14_021589b4;
+    u32 data_ov14_021589d4;
+    u32 data_ov14_021589d8;
 }
 
-static char data_ov14_02158998[] = "fnl";
-static char data_ov14_02158994[] = "brg";
-static char data_ov14_0215899c[] = "pdl";
-static char data_ov14_021589a0[] = "dco";
-static char data_ov14_021589a4[] = "can";
-static char data_ov14_021589a8[] = "hul";
-static char data_ov14_021589ac[] = "bow";
-static char data_ov14_021589b0[] = "anc";
-
-static char* data_ov14_021589d0 = data_ov14_021589b0;
-static char* data_ov14_021589cc = data_ov14_021589ac;
-static char* data_ov14_021589c8 = data_ov14_021589a8;
-static char* data_ov14_021589c4 = data_ov14_021589a4;
-static char* data_ov14_021589c0 = data_ov14_021589a0;
-static char* data_ov14_021589bc = data_ov14_0215899c;
-static char* data_ov14_021589b8 = data_ov14_02158998;
-static char* data_ov14_021589b4 = data_ov14_02158994;
-
-static u32 data_ov14_021589d4[] = { 0x00000000 };
-
-static u32 data_ov14_021589d8[] = {
-    0x00000000,
-    0x00000000,
-    0x00000000,
-};
-
+/* inline */ char *data_ov14_02158994[8] = { "brg", "fnl", "pdl", "dco", "can", "hul", "bow", "anc" }; // gShipParts
 extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
 
 extern u32 data_ov00_020e9370[];
@@ -58,21 +37,12 @@ extern void *data_027e0e60;
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern u32 **data_027e0fe0[];
 
-Resource ActorRupee::gResource;
-ActorType ActorRupee::gType;
+ActorType ActorRupee::gType = ActorType(ActorTypeId_Rupee, (ActorCreateFunc)ActorRupee::Create, NULL);
+ActorType_UnkClass data_ov14_021589f4 = ActorType_UnkClass(0x3bb, 0xeeb);
 
-#pragma section init begin
-void func_ov14_0215517c() {
-    func_0203e784(&ActorRupee::gType, 0x52555059, (ActorCreateFunc)ActorRupee::Create, NULL);
-    func_0204f8d4(&ActorRupee::gType, func_0203e7b4, &ActorRupee::gResource);
-    data_ov14_021589d8[7] = 0x000003bb;
-    data_ov14_021589d8[8] = 0x00000eeb;
-}
-#pragma section init end
-
-#pragma section pinit begin
-extern "C" void* data_ov14_0215591c = func_ov14_0215517c;
-#pragma section pinit end
+// #pragma section pinit begin
+// extern "C" void* data_ov14_0215591c = func_ov14_0215517c;
+// #pragma section pinit end
 
 ActorRupee* ActorRupee::Create() {
     ActorRupee* newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
@@ -453,8 +423,8 @@ void ActorRupee::func_ov14_0213b6a4(RupeeId id, Actor_UnkStruct_012 *param2) {
     if (func_ov14_0213b70c(id)) {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;
-        param2->mUnk_14 = data_ov14_021589d4[8]; // data_ov14_021589b4[8]
-        param2->mUnk_18 = data_ov14_021589d8[8]; // data_ov14_021589b4[9]
+        param2->mUnk_14 = data_ov14_021589f4.unk_00;
+        param2->mUnk_18 = data_ov14_021589f4.unk_04;
     } else {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;

@@ -65,6 +65,16 @@ enum ActorTypeId_ {
     ActorTypeId_Postman = __ACTOR_TYPE_ID('P','S','T','M'),
 };
 
+class ActorType_UnkClass {
+    public:
+        u32 unk_00;
+        u32 unk_04;
+        u32 unk_08;
+        u32 unk_0C;
+        u32 unk_10;
+        ActorType_UnkClass(u32 unk_00, u32 unk_04): unk_00(unk_00), unk_04(unk_04) {}
+};
+
 typedef Actor* (*ActorCreateFunc)();
 
 struct ActorType {
