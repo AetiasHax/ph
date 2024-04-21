@@ -39,8 +39,8 @@
 .extern func_0202bb98
 .extern func_0202bba8
 .extern func_0202bbbc
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_0204f614
 .extern func_0204f754
 .extern __register_global_object

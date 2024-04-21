@@ -9722,7 +9722,7 @@ func_ov04_021057b4: ; 0x021057b4
 	add r7, sp, #0x10
 _021057e6:
 	ldr r0, [r7]
-	blx func_0203e868
+	blx _ZN9ActorType4FindEj
 	cmp r0, #0
 	beq _02105804
 	ldr r1, [r0, #8]
@@ -9732,7 +9732,7 @@ _021057e6:
 	blx func_ov00_020c42ec
 	b _0210580a
 _021057fe:
-	blx func_0203e7c8
+	blx _ZN9ActorType13func_0203e7c8Ev
 	b _0210580a
 _02105804:
 	ldr r0, [r7]

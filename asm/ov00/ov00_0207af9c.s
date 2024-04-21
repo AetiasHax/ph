@@ -38610,9 +38610,9 @@ func_ov00_020df678: ; 0x020df678
 	ldr r1, _020df6a8 ; =0x53574f42
 	ldr r2, _020df6ac ; =func_ov00_0208fa70
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _020df6a4 ; =data_ov00_020ecd70
-	ldr r1, _020df6b0 ; =func_0203e7b4
+	ldr r1, _020df6b0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020df6b4 ; =data_ov00_020ecd64
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -38621,7 +38621,7 @@ func_ov00_020df678: ; 0x020df678
 _020df6a4: .word data_ov00_020ecd70
 _020df6a8: .word 0x53574f42
 _020df6ac: .word func_ov00_0208fa70
-_020df6b0: .word func_0203e7b4
+_020df6b0: .word _ZN9ActorTypeD1Ev
 _020df6b4: .word data_ov00_020ecd64
 
 	.global func_ov00_020df6b8
@@ -38632,9 +38632,9 @@ func_ov00_020df6b8: ; 0x020df6b8
 	ldr r1, _020df6e8 ; =0x53574453
 	ldr r2, _020df6ec ; =func_ov00_020903a8
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _020df6e4 ; =data_ov00_020ecd90
-	ldr r1, _020df6f0 ; =func_0203e7b4
+	ldr r1, _020df6f0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020df6f4 ; =data_ov00_020ecd84
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -38643,7 +38643,7 @@ func_ov00_020df6b8: ; 0x020df6b8
 _020df6e4: .word data_ov00_020ecd90
 _020df6e8: .word 0x53574453
 _020df6ec: .word func_ov00_020903a8
-_020df6f0: .word func_0203e7b4
+_020df6f0: .word _ZN9ActorTypeD1Ev
 _020df6f4: .word data_ov00_020ecd84
 
 	.global func_ov00_020df6f8
@@ -38654,9 +38654,9 @@ func_ov00_020df6f8: ; 0x020df6f8
 	ldr r1, _020df728 ; =0x45564943
 	ldr r2, _020df72c ; =func_ov00_020904f4
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _020df724 ; =data_ov00_020ecdb0
-	ldr r1, _020df730 ; =func_0203e7b4
+	ldr r1, _020df730 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020df734 ; =data_ov00_020ecda4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -38665,7 +38665,7 @@ func_ov00_020df6f8: ; 0x020df6f8
 _020df724: .word data_ov00_020ecdb0
 _020df728: .word 0x45564943
 _020df72c: .word func_ov00_020904f4
-_020df730: .word func_0203e7b4
+_020df730: .word _ZN9ActorTypeD1Ev
 _020df734: .word data_ov00_020ecda4
 
 	.global func_ov00_020df738

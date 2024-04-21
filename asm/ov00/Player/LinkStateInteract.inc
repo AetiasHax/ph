@@ -1,6 +1,7 @@
 #pragma once
 .extern Divide
 .extern _ZN10PlayerBase13GetEquipSwordEv
+.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase10GetStateIdEv
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv
@@ -35,6 +36,9 @@
 .extern _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 .extern _ZN13PlayerControl18func_ov00_020b0ad0EP5Actor
 .extern _ZN13PlayerControl9SetUnk_80Ev
+.extern _ZN5Actor10SetUnk_11cEc
+.extern _ZN5Actor4KillEv
+.extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
 .extern data_02050f54
@@ -56,10 +60,6 @@
 .extern func_020350b4
 .extern func_020351b8
 .extern func_ov00_020ba458
-.extern _ZN5Actor10SetUnk_11cEc
-.extern _ZN5Actor9GetHitboxEP8Cylinder
-.extern _ZN5Actor4KillEv
-.extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern func_ov00_020d7a84
 .extern func_ov00_020d7b20
 .extern func_ov04_0210ab88

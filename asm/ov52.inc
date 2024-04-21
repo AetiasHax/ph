@@ -1,6 +1,10 @@
 #pragma once
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_02097750Ev
+.extern _ZN14AdventureFlags3GetEj
+.extern _ZN14AdventureFlags3SetEjb
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
@@ -52,8 +56,11 @@
 .extern _ZN5Actor8vfunc_b0Ev
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02063e4c
 .extern data_027e0618
@@ -64,7 +71,6 @@
 .extern data_027e0e58
 .extern data_027e0e60
 .extern data_027e0f68
-.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0fa0
 .extern data_027e0fb8
@@ -115,9 +121,6 @@
 .extern func_02034bc8
 .extern func_020367ec
 .extern func_02036edc
-.extern func_0203e784
-.extern func_0203e7b4
-.extern __register_global_object
 .extern func_ov00_02079470
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
@@ -128,10 +131,6 @@
 .extern func_ov00_020838e8
 .extern func_ov00_02084b38
 .extern func_ov00_0208d01c
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
-.extern _ZN14AdventureFlags18func_ov00_02097750Ev
-.extern _ZN14AdventureFlags3GetEj
-.extern _ZN14AdventureFlags3SetEjb
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
 .extern func_ov00_020a9acc
@@ -208,5 +207,6 @@
 .extern func_ov14_02145f0c
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
+.extern gAdventureFlags
 .extern gOverlayManager
 .extern strcpy

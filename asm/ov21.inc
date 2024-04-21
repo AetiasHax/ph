@@ -57,9 +57,12 @@
 .extern _ZN5Actor8vfunc_b0Ev
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager7HasItemEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_027e0764
 .extern data_027e077c
@@ -109,12 +112,9 @@
 .extern func_0202bc10
 .extern func_0202e310
 .extern func_0202e58c
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_020791dc
 .extern func_ov00_020792a0
 .extern func_ov00_020793b8

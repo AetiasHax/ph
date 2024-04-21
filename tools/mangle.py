@@ -40,8 +40,8 @@ output = output.decode()
 
 # print(output)
 
-mangled_funcs: list[str] = re.findall(r'.text +(_Z\S+)', output)
-mangled_data: list[str] = re.findall(r'(?:.data|.bss) +(_Z\S+)', output)
+mangled_funcs: list[str] = re.findall(r'.text +([^\$ ]\S+)', output)
+mangled_data: list[str] = re.findall(r'(?:.data|.bss) +([^\. ]\S+)', output)
 
 if len(mangled_funcs) > 0:
     print('Functions:')
