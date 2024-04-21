@@ -100,8 +100,8 @@
 .extern func_0202dc38
 .extern func_0202e310
 .extern func_0202e58c
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_02042f74
 .extern func_0204f614
 .extern func_0204f754

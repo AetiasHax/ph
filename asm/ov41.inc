@@ -2,6 +2,7 @@
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags3GetEj
 .extern _ZN17LinkStateInteract18func_ov00_020ab934EP5Vec3p
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
@@ -59,9 +60,12 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager7HasItemEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02057200
 .extern data_027e0764
@@ -73,7 +77,6 @@
 .extern data_027e0e60
 .extern data_027e0f68
 .extern data_027e0f6c
-.extern gAdventureFlags
 .extern data_027e0f78
 .extern data_027e0f90
 .extern data_027e0f94
@@ -122,11 +125,8 @@
 .extern func_02036f68
 .extern func_02037628
 .extern func_020385b8
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0204f614
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c31c
@@ -140,7 +140,6 @@
 .extern func_ov00_0208cd48
 .extern func_ov00_02093a5c
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags3GetEj
 .extern func_ov00_020a956c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
@@ -304,4 +303,5 @@
 .extern func_ov14_0214aa0c
 .extern func_ov26_02175f30
 .extern func_ov26_02175f68
+.extern gAdventureFlags
 .extern gItemManager

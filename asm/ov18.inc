@@ -203,8 +203,8 @@
 .extern func_0203d1b4
 .extern func_0203d7e0
 .extern func_0203e2e8
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_02043594

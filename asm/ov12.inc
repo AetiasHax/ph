@@ -75,6 +75,8 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager18func_ov00_020ad594Ei
@@ -297,8 +299,6 @@
 .extern func_020385b8
 .extern func_02038b40
 .extern func_0203d77c
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0203f904

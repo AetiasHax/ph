@@ -6,6 +6,9 @@
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
+.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
+.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
+.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern _ZN5Actor10GetUnk_08cEP8Cylinder
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -60,8 +63,11 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5Actor9IsGrabbedEv
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02054954
 .extern data_027e0194
@@ -70,7 +76,6 @@
 .extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f6c
-.extern gAdventureFlags
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fac
@@ -103,11 +108,8 @@
 .extern func_0202bfc0
 .extern func_0202db30
 .extern func_0202e310
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0204f614
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c1f8
@@ -126,9 +128,6 @@
 .extern func_ov00_02093a5c
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
-.extern _ZN14AdventureFlags18func_Ov00_02097810Ei
-.extern _ZN14AdventureFlags18func_ov00_02097b9cEv
-.extern _ZN14AdventureFlags18func_ov00_02097bccEv
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508
 .extern func_ov00_020a95a4
@@ -191,3 +190,4 @@
 .extern func_ov14_021482c0
 .extern func_ov14_02148334
 .extern func_ov14_02148364
+.extern gAdventureFlags
