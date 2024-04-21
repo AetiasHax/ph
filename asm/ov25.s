@@ -437,7 +437,7 @@ _0216db80:
 	str r3, [sp, #0x18]
 	ldr r3, [r4, #0x1c]
 	str r3, [sp, #0x1c]
-	bl func_ov00_02083f44
+	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	str r0, [r4, #0x18]
 	ldr r0, _0216dcd4 ; =data_027e0fac
 	add r2, r4, #0x14
@@ -615,7 +615,7 @@ _0216de80:
 	add r2, sp, #0
 	ldr r0, [r0]
 	mov r1, #1
-	bl func_ov00_020836bc
+	bl _ZN10MapManager18func_ov00_020836bcEjPi
 	ldr r1, [sp]
 	add r0, r4, #0x3a4
 	str r1, [r4, #0x620]
@@ -4564,7 +4564,7 @@ func_ov25_02171508: ; 0x02171508
 	mov r4, r1
 	mov r1, #1
 	mov r2, #3
-	bl func_ov00_02084be0
+	bl _ZN10MapManager18func_ov00_02084be0Eii
 	cmp r0, #0
 	addne sp, sp, #0x38
 	movne r0, #0
@@ -7980,7 +7980,7 @@ _021741f4:
 	add r2, sp, #0xe8
 	mov r1, #0xd
 	str r3, [sp, #0xf0]
-	bl func_ov00_02083770
+	bl _ZN10MapManager18func_ov00_02083770Eji
 	cmp r0, #0
 	beq _02174248
 	mov r0, r4
@@ -8060,7 +8060,7 @@ _02174328:
 	ldr r0, _0217507c ; =data_027e0e60
 	add r1, sp, #0x10
 	ldr r0, [r0]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	mov r0, r4
 	bne _02174368
@@ -8081,7 +8081,7 @@ _02174374:
 	ldr r0, _0217507c ; =data_027e0e60
 	add r1, sp, #0xe
 	ldr r0, [r0]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	beq _021743d4
 	ldr r5, [r4, #0x138]
@@ -8875,7 +8875,7 @@ _02174ee8:
 	strb r6, [sp, #0x137]
 	strb r6, [sp, #0x138]
 	strb r6, [sp, #0x139]
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	ldr r0, _021750b4 ; =data_027e0d38
 	mov r3, #0x17
 	ldr r0, [r0]
@@ -9110,7 +9110,7 @@ _02175278:
 	ldr r0, _0217507c ; =data_027e0e60
 	add r1, sp, #0xc
 	ldr r0, [r0]
-	bl func_ov00_02084164
+	bl _ZN10MapManager18func_ov00_02084164Ev
 	cmp r0, #0
 	addeq sp, sp, #0x340
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
@@ -9870,7 +9870,7 @@ func_ov25_02175c54: ; 0x02175c54
 	add r2, sp, #0
 	ldr r0, [r0]
 	mov r1, #1
-	bl func_ov00_020836bc
+	bl _ZN10MapManager18func_ov00_020836bcEjPi
 	add r4, r11, #0x100
 	ldrsh r0, [r4, #0x78]
 	ldr r7, [sp]
@@ -10449,7 +10449,7 @@ _021763e4:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #5
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 _0217641c:
 	ldr r0, [r4, #0x130]
 	cmp r0, #0xd
@@ -11628,7 +11628,7 @@ func_ov25_021772ec: ; 0x021772ec
 	add r0, sp, #4
 	ldr r1, [r1]
 	add r2, r2, #0x48
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	ldrb r3, [sp, #4]
 	ldrb r1, [r4, #8]
 	ldrb r2, [sp, #5]
@@ -11940,7 +11940,7 @@ _021775e8:
 	str r3, [sp, #4]
 	ldr r3, [r4, #0x50]
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	add r0, r0, #0x800
 	str r0, [r4, #0x4c]
 _021776c0:
@@ -12869,7 +12869,7 @@ _0217831c:
 	str lr, [sp]
 	str ip, [sp, #4]
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x10]
 	ldr r0, [r5, #0x178]
 	cmp r0, #0
@@ -13323,7 +13323,7 @@ func_ov25_021788a4: ; 0x021788a4
 	ldr r2, [r4, #0x88]
 	str r2, [r4, #0x98]
 	ldr r0, [r0]
-	bl func_ov00_0208344c
+	bl _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
 	ldr r2, [sp, #0x14]
 	ldr r1, [sp, #0x10]
 	ldr r0, [sp, #0xc]

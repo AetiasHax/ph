@@ -1,6 +1,11 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_02083780Ei
+.extern _ZN10MapManager18func_ov00_02084be0Eii
+.extern _ZN10MapManager18func_ov00_02084cc8Ei
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
@@ -159,11 +164,6 @@
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f58
 .extern func_ov00_02081f6c
-.extern func_ov00_020836dc
-.extern func_ov00_02083780
-.extern func_ov00_02083ee0
-.extern func_ov00_02084be0
-.extern func_ov00_02084cc8
 .extern func_ov00_020875f8
 .extern func_ov00_02087d34
 .extern func_ov00_020888e8

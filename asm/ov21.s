@@ -515,7 +515,7 @@ _0216dcb0: .word data_027e0f94
 	arm_func_start func_ov21_0216dcb4
 func_ov21_0216dcb4: ; 0x0216dcb4
 	ldr r2, _0216dccc ; =data_027e0e60
-	ldr ip, _0216dcd0 ; =func_ov00_020836dc
+	ldr ip, _0216dcd0 ; =_ZN10MapManager18func_ov00_020836dcEii
 	ldrh r1, [r0, #0x22]
 	ldr r0, [r2]
 	mov r2, #0
@@ -523,7 +523,7 @@ func_ov21_0216dcb4: ; 0x0216dcb4
 	.align 2, 0
 	arm_func_end func_ov21_0216dcb4
 _0216dccc: .word data_027e0e60
-_0216dcd0: .word func_ov00_020836dc
+_0216dcd0: .word _ZN10MapManager18func_ov00_020836dcEii
 
 	.global func_ov21_0216dcd4
 	arm_func_start func_ov21_0216dcd4
@@ -926,7 +926,7 @@ func_ov21_0216e208: ; 0x0216e208
 	ldrh r1, [r4, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
@@ -2896,7 +2896,7 @@ _0216fa3c:
 	ldr r1, [r4]
 	add r0, sp, #0x14
 	mov r2, r7
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	ldrb r0, [sp, #0x14]
 	ldrb r1, [sp, #0x15]
 	ldr r2, _0216fbb4 ; =func_ov00_020b1940
@@ -3337,7 +3337,7 @@ func_ov21_02170050: ; 0x02170050
 	add r1, sp, #0x10
 	mov r2, #0
 	str r3, [sp, #0x18]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	mov r6, #0xc
 _021700b8:
 	rsb r4, r6, #0
@@ -3438,7 +3438,7 @@ func_ov21_021701b0: ; 0x021701b0
 	add r1, sp, #0x10
 	mov r2, #0
 	str r3, [sp, #0x18]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	mov r6, #0xf
 _02170218:
 	rsb r4, r6, #0
@@ -3568,11 +3568,11 @@ func_ov21_02170388: ; 0x02170388
 	add r0, sp, #0
 	ldr r1, [r1]
 	add r2, sp, #4
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	ldr r0, _021703fc ; =data_027e0e60
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02083e58
+	bl _ZN10MapManager16MapData_vfunc_60Ev
 	cmp r0, #0
 	addgt sp, sp, #0x10
 	movgt r0, #0
@@ -3580,7 +3580,7 @@ func_ov21_02170388: ; 0x02170388
 	ldr r0, _021703fc ; =data_027e0e60
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02084088
+	bl _ZN10MapManager16MapData_vfunc_54Ev
 	cmp r0, #0x14
 	movne r0, #0
 	moveq r0, #1

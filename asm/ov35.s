@@ -2807,7 +2807,7 @@ func_ov35_0217e320: ; 0x0217e320
 	ldr r0, [r0]
 	add r1, sp, #0x18
 	mov r2, #0
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x28]
 	mov r3, #0x800
 	str r3, [sp]
@@ -8086,7 +8086,7 @@ _02182d84:
 	add r2, sp, #0x94
 	ldr r0, [r0]
 	mov r1, #1
-	bl func_ov00_020836bc
+	bl _ZN10MapManager18func_ov00_020836bcEjPi
 	ldr r5, [sp, #0xac]
 	ldr r3, [sp, #0xb0]
 	ldr r2, [sp, #0xb4]
@@ -9259,7 +9259,7 @@ _02183d8c:
 	str ip, [sp, #0x18]
 	str r3, [sp, #0x1c]
 	str r8, [sp, #0x20]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x28]
 	str r5, [sp]
 	ldrsh r1, [r7, #0x78]

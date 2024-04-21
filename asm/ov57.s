@@ -146,7 +146,7 @@ _02198ea4:
 	ldr r0, _02198fb8 ; =data_027e0e60
 	add r1, r4, #0x14
 	ldr r0, [r0]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	movs r6, r0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -616,7 +616,7 @@ _02199470:
 	ldr r0, _021994b8 ; =data_027e0e60
 	add r1, r1, #0x14
 	ldr r0, [r0]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -1206,7 +1206,7 @@ _02199ca0:
 _02199cb8:
 	ldr r0, [r11]
 	mov r1, r8
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	beq _02199d2c
 	ldr r3, [r0]

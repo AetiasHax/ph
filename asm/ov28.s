@@ -3517,7 +3517,7 @@ func_ov28_021704b0: ; 0x021704b0
 	ldr r0, [r0]
 	mov r2, r1
 	mov r3, r1
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	b _02170604
 _02170524:
 	ldr r0, _02170624 ; =gAdventureFlags
@@ -3537,7 +3537,7 @@ _02170524:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #2
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	b _02170604
 _02170570:
 	ldr r0, _02170624 ; =gAdventureFlags
@@ -3557,7 +3557,7 @@ _02170570:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #3
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	b _02170604
 _021705bc:
 	ldr r0, _02170624 ; =gAdventureFlags
@@ -3577,7 +3577,7 @@ _021705bc:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #4
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 _02170604:
 	add r0, r4, #0x74
 	add r0, r0, #0x400
@@ -3950,10 +3950,10 @@ _021709a4:
 	mov r0, r6
 	add r1, sp, #0
 	str r3, [sp, #8]
-	bl func_ov00_02083f44
+	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	mov r5, r0
 	mov r0, r6
-	bl func_ov00_02084120
+	bl _ZN10MapManager17GetMapData_Unk_4cEv
 	add r0, r5, r0
 	str r0, [r4, #0x4c]
 	ldrsb r0, [r4, #0x2c]
@@ -5560,7 +5560,7 @@ _02171ee8:
 	mov r2, r4
 	strb r6, [sp, #4]
 	strb r8, [sp, #5]
-	bl func_ov00_02082680
+	bl _ZN10MapManager18func_ov00_02082680Eii
 	ldrb r0, [r9, #0x15]
 	add r8, r8, #1
 	add r0, r0, #1
@@ -5664,7 +5664,7 @@ _02172008:
 	add r1, r4, #0x38
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020843ec
+	bl _ZN10MapManager18func_ov00_020843ecEPi
 	mov r0, #0xc
 	strb r0, [r4, #0x12]
 	b _021720c4
@@ -5689,7 +5689,7 @@ _02172068:
 	add r1, r4, #0x38
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020843ec
+	bl _ZN10MapManager18func_ov00_020843ecEPi
 	mov r0, #1
 	strb r0, [r4, #0x12]
 _021720c4:
@@ -5942,7 +5942,7 @@ _021723c4:
 	mov r2, r4
 	strb r6, [sp, #4]
 	strb r8, [sp, #5]
-	bl func_ov00_02082680
+	bl _ZN10MapManager18func_ov00_02082680Eii
 	ldrb r0, [r9, #0x15]
 	add r8, r8, #1
 	add r0, r0, #1
@@ -6065,7 +6065,7 @@ _02172528:
 	add r1, r4, #0x38
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020843ec
+	bl _ZN10MapManager18func_ov00_020843ecEPi
 	ldr r0, [r4, #4]
 	orr r0, r0, #0x14
 	str r0, [r4, #4]
@@ -6088,7 +6088,7 @@ _02172580:
 	add r1, r4, #0x38
 	ldr r0, [r0]
 	mov r2, #1
-	bl func_ov00_020843ec
+	bl _ZN10MapManager18func_ov00_020843ecEPi
 	ldr r0, [r4, #4]
 	bic r0, r0, #4
 	bic r0, r0, #0x10
@@ -6540,7 +6540,7 @@ func_ov28_02172af8: ; 0x02172af8
 	ldrh r1, [r4, #0x20]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
@@ -6615,7 +6615,7 @@ func_ov28_02172bc8: ; 0x02172bc8
 	ldrh r1, [r4, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	mov r0, r4
@@ -8457,7 +8457,7 @@ func_ov28_021742b0: ; 0x021742b0
 	add r1, r4, #0x48
 	mov r2, #1
 	mov r3, #0
-	bl func_ov00_02084a5c
+	bl _ZN10MapManager8SpawnNPCEP5Vec3pii
 	add r0, sp, #0
 	bl func_ov00_0209a508
 	add sp, sp, #0xb0
@@ -8965,7 +8965,7 @@ func_ov28_0217496c: ; 0x0217496c
 	strb lr, [sp, #0x13]
 	strb lr, [sp, #0x14]
 	strb lr, [sp, #0x15]
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	ldr r0, _02174a10 ; =gOverlayManager
 	ldr r2, _02174a14 ; =0x00000004
 	mov r1, #2
@@ -8975,7 +8975,7 @@ func_ov28_0217496c: ; 0x0217496c
 	ldr r0, [r0]
 	add r1, sp, #0
 	strb r2, [sp, #0x15]
-	bl func_ov00_02082b3c
+	bl _ZN10MapManager18func_ov00_02082b3cEi
 	ldr r0, _02174a10 ; =gOverlayManager
 	ldr r2, _02174a18 ; =0x00000005
 	mov r1, #2
@@ -9507,7 +9507,7 @@ _0217504c:
 	add r1, ip, r3
 	and r1, r1, #0xff
 	mov r3, #0
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	mov r1, #0
 	str r1, [r4, #0x130]
 	ldr r0, _021750a0 ; =data_ov28_02179684
@@ -9623,7 +9623,7 @@ _02175184:
 	ldr r0, [r0]
 	and r1, r1, #0xff
 	mov r3, #1
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	ldr r0, _02175260 ; =data_ov28_02179684
 	mov r5, #0
 	ldr r1, [r0, #0x18]
@@ -9731,7 +9731,7 @@ _02175308:
 	ldr r0, _021753dc ; =data_027e0e60
 	ldrb r2, [r4, #0x29]
 	ldr r0, [r0]
-	bl func_ov00_02084be0
+	bl _ZN10MapManager18func_ov00_02084be0Eii
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	ldr r0, [r4, #0x1bc]
@@ -9749,7 +9749,7 @@ _02175364:
 	add r1, ip, r3
 	and r1, r1, #0xff
 	mov r3, #0
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	mov r0, r4
 	bl func_ov28_02175028
 	bl func_ov28_02174948
@@ -9796,7 +9796,7 @@ func_ov28_021753f0: ; 0x021753f0
 	add r1, ip, r3
 	and r1, r1, #0xff
 	mov r3, #0
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	ldr r1, _02175468 ; =data_ov28_02178348
 	add r0, r4, #0x1c0
 	ldr r1, [r1]
@@ -12084,7 +12084,7 @@ _021772b0:
 	ldrh r1, [r4, #0x20]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	beq _02177408
 	mov r0, r4

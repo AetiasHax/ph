@@ -1,4 +1,7 @@
 #pragma once
+.extern _ZN10MapManager16MapData_vfunc_78Ev
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager18func_ov00_02083c7cEP5Vec3pi
 .extern _ZN10PlayerBase13GetEquipSwordEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv
 .extern _ZN13LinkStateBase12GetPlayerVelEv
@@ -14,9 +17,6 @@
 .extern func_01fffcd8
 .extern func_0202b308
 .extern func_0202d95c
-.extern func_ov00_02083a1c
-.extern func_ov00_02083c7c
-.extern func_ov00_020840c4
 .extern func_ov04_0210ad94
 .extern func_ov04_0210adb0
 .extern func_ov04_0210adf8

@@ -297,7 +297,7 @@ _02189894:
 	add r2, sp, #0x48
 	ldr r0, [r0]
 	mov r1, #0x42
-	bl func_ov00_02083918
+	bl _ZN10MapManager18func_ov00_02083918EiPi
 	cmp r0, #0
 	beq _021898e0
 	ldr r0, _02189af8 ; =data_027e0f64
@@ -312,7 +312,7 @@ _021898e0:
 	add r2, sp, #0x64
 	ldr r0, [r0]
 	mov r1, #0x43
-	bl func_ov00_02083918
+	bl _ZN10MapManager18func_ov00_02083918EiPi
 	cmp r0, #0
 	beq _02189918
 	ldr r0, _02189af8 ; =data_027e0f64

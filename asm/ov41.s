@@ -3837,7 +3837,7 @@ _0218c680:
 	add r0, sp, #4
 	ldr r1, [r1]
 	add r2, sp, #0x1c
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	mov r2, #0
 	sub r1, r2, #1
 	mov r0, #1
@@ -3866,7 +3866,7 @@ _0218c6cc:
 	add r2, sp, #4
 	ldr r0, [r0]
 	mov r1, #2
-	bl func_ov00_020828c0
+	bl _ZN10MapManager16MapData_vfunc_7cEv
 	add r4, r4, #1
 	cmp r4, #4
 	blt _0218c608
@@ -4015,7 +4015,7 @@ func_ov41_0218c834: ; 0x0218c834
 	ldr r0, [r1]
 	mov r1, r5
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	bne _0218ca3c
 	mov r0, r6
@@ -4749,7 +4749,7 @@ func_ov41_0218d210: ; 0x0218d210
 	ldr r0, [r0]
 	ldr r1, [r6, #0x514]
 	add r2, sp, #0
-	bl func_ov00_02083770
+	bl _ZN10MapManager18func_ov00_02083770Eji
 	cmp r0, #0
 	moveq r5, #1
 _0218d2b8:
@@ -4936,7 +4936,7 @@ _0218d438:
 	str r3, [sp, #4]
 	ldr r3, [r4, #0x50]
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	add sp, sp, #0x3c
 	str r0, [r4, #0x4c]
 	ldmia sp!, {r3, r4, pc}
@@ -5143,7 +5143,7 @@ _0218d7c0:
 	add r1, sp, #4
 	str r2, [sp, #0xc]
 	mov r2, #1
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr r1, [r4, #0x4c]
 	cmp r1, r0
 	movge r0, #1

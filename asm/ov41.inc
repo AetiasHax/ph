@@ -1,4 +1,9 @@
 #pragma once
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager16MapData_vfunc_7cEv
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_02083770Eji
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
@@ -132,11 +137,6 @@
 .extern func_ov00_0207c31c
 .extern func_ov00_0207c7e8
 .extern func_ov00_02081f4c
-.extern func_ov00_020828c0
-.extern func_ov00_020836dc
-.extern func_ov00_02083770
-.extern func_ov00_02083a1c
-.extern func_ov00_02083ee0
 .extern func_ov00_0208cd48
 .extern func_ov00_02093a5c
 .extern func_ov00_02094824

@@ -32,7 +32,7 @@ _020ad800:
 	lda r0, data_027e0e60
 	ldr r4, [r6, #8]
 	ldr r0, [r0]
-	bl func_ov00_020849f8
+	bl _ZN10MapManager18func_ov00_020849f8Ei
 	cmp r0, #0
 	moveq r2, #1
 	ldr r1, [r6]

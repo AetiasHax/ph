@@ -702,7 +702,7 @@ _02195db4:
 	str lr, [sp]
 	str ip, [sp, #4]
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x10]
 	ldr r0, [r5, #0x15c]
 	cmp r0, #0
@@ -2549,11 +2549,11 @@ _02197588:
 	ldr r5, [r2]
 	add r2, r4, #0x48
 	mov r1, r5
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0xc
 	mov r0, r5
 	mov r2, #1
-	bl func_ov00_020826a0
+	bl _ZN10MapManager18func_ov00_020826a0Eiii
 	ldr r0, [r4, #0x154]
 	cmp r0, #0
 	addgt sp, sp, #0x48

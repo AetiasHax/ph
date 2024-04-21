@@ -8,7 +8,7 @@
 .extern func_ov00_0207b2f0
 .extern func_ov00_0207b334
 .extern func_ov00_0207ba94
-.extern func_ov00_020838f8
+.extern _ZN10MapManager18func_ov00_020838f8EPi
 .extern func_ov00_020980f4
 .extern func_ov00_020980f8
 .extern func_ov00_020980fc

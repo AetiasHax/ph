@@ -6543,10 +6543,10 @@ func_ov44_0218e4a0: ; 0x0218e4a0
 	add r0, sp, #0
 	mov r1, r5
 	add r2, r4, #0x48
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	beq _0218e4ec
 	ldr r0, [r0, #4]

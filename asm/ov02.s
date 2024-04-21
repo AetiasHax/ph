@@ -6631,7 +6631,7 @@ _020f430c:
 	bl func_ov00_020a1abc
 	ldr r0, _020f4ce8 ; =data_027e0e60
 	ldr r0, [r0]
-	bl func_ov00_020847e0
+	bl _ZN10MapManager18func_ov00_020847e0Ev
 	str r0, [r7, #0x2c]
 	ldr r0, _020f4cec ; =data_027e0f8c
 	ldr r1, _020f4cf0 ; =0x020ecdf6

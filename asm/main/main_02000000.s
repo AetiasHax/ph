@@ -58489,7 +58489,7 @@ func_0202bf58: ; 0x0202bf58
 	ldr ip, [r1, #8]
 	add r1, sp, #0xc
 	str ip, [sp, #8]
-	bl func_ov00_02086044
+	bl _ZN10MapManager18func_ov00_02086044Eiii
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -76862,7 +76862,7 @@ _020382e8:
 	ldr r0, [r0]
 	ldr r1, [r4, #4]
 	add r2, sp, #0
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	cmp r0, #0
 	beq _02038368
 	ldr r0, _020385a0 ; =data_027e0d38
@@ -76955,7 +76955,7 @@ _02038444:
 _0203846c:
 	ldr r0, _0203859c ; =data_027e0e60
 	ldr r0, [r0]
-	bl func_ov00_02084740
+	bl _ZN10MapManager18func_ov00_02084740Ev
 	mov r1, r0
 	ldr r2, [r4, #4]
 	ldr r0, _020385ac ; =data_ov00_020eec68
@@ -80340,7 +80340,7 @@ _0203acc0:
 	add r1, sp, #8
 	ldr r0, [r0]
 	and r2, r2, #0xff
-	bl func_ov00_02082614
+	bl _ZN10MapManager18func_ov00_02082614Eii
 	ldr r0, _0203ae94 ; =data_027e103c
 	add r1, sp, #8
 	ldr r0, [r0]

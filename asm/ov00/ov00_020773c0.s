@@ -3878,7 +3878,7 @@ func_ov00_02078f80: ; 0x02078f80
 	ldr r1, _02078fa8 ; =data_027e0e60
 	mov r4, r0
 	ldr r0, [r1]
-	bl func_ov00_02083588
+	bl _ZN10MapManager18func_ov00_02083588Ev
 	ldr r1, [r4, #0x44]
 	cmp r1, r0
 	movne r0, #1
@@ -4045,16 +4045,16 @@ func_ov00_0207914c: ; 0x0207914c
 	mov r0, r7
 	mov r9, r2
 	mov r8, r3
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r6, r0
 	mov r0, r7
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r5, r0
 	mov r0, r7
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	ldr r1, [r10, #8]
 	sub r0, r0, r5
 	sub r1, r1, r5
@@ -4104,16 +4104,16 @@ func_ov00_0207920c: ; 0x0207920c
 	mov r0, r7
 	mov r9, r2
 	mov r8, r3
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r6, r0
 	mov r0, r7
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r5, r0
 	mov r0, r7
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	sub r3, r4, r6
 	ldr r1, [r10, #8]
 	sub r0, r0, r5
@@ -4164,19 +4164,19 @@ _020792f4:
 	ldr r0, _020793b4 ; =data_027e0e60
 	ldr r6, [r0]
 	mov r0, r6
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r5, r0
 	mov r0, r6
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r4, r0
 	mov r0, r6
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	sub r2, r0, r5
 	mov r0, r6
 	mov r1, r2, asr #0x7
 	add r1, r2, r1, lsr #24
 	mov r6, r1, asr #0x8
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	sub r0, r0, r4
 	mov r1, #0xc0
 	bl func_01ff9b4c
@@ -4344,13 +4344,13 @@ _02079564:
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_02082e1c
+	bl _ZN10MapManager18func_ov00_02082e1cEPiS0_
 	cmp r0, #0
 	movne r0, #0
 	bne _02079614
 	ldr r0, _0207967c ; =data_027e0e60
 	ldr r0, [r0]
-	bl func_ov00_020849c0
+	bl _ZN10MapManager18func_ov00_020849c0Ev
 	cmp r0, #0
 	beq _020795f8
 	ldrb r0, [sp, #0x38]
@@ -4361,7 +4361,7 @@ _02079564:
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_0208306c
+	bl _ZN10MapManager18func_ov00_0208306cEv
 	ldr r1, [r4]
 	mov r0, #0xc0000
 	mov r1, r1, lsl #0xc
@@ -4514,7 +4514,7 @@ func_ov00_0207977c: ; 0x0207977c
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_02082e1c
+	bl _ZN10MapManager18func_ov00_02082e1cEPiS0_
 	cmp r0, #0
 	beq _0207984c
 	mov r0, r8

@@ -109,8 +109,8 @@
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_02083a1c
-.extern func_ov00_020840c4
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager16MapData_vfunc_78Ev
 .extern func_ov00_020a95a4
 .extern func_ov00_020a9b6c
 .extern func_ov00_020a9b78

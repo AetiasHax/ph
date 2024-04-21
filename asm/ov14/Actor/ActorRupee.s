@@ -440,7 +440,7 @@ _0213b3cc:
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl func_ov00_02083fb0
+	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3

@@ -598,7 +598,7 @@ func_ov55_021993b8: ; 0x021993b8
 	str r10, [sp, #0xc]
 	str r9, [sp, #0x10]
 	str r3, [sp, #0x14]
-	bl func_ov00_02083f44
+	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	cmp r0, r8
 	bge _021994cc
 	ldr r0, _02199640 ; =data_027e0e60
@@ -610,7 +610,7 @@ func_ov55_021993b8: ; 0x021993b8
 	str r10, [sp]
 	str r9, [sp, #4]
 	str r3, [sp, #8]
-	bl func_ov00_02083f44
+	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	cmp r0, r8
 	movlt r6, r5
 _021994cc:

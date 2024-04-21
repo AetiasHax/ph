@@ -1,4 +1,9 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager18func_ov00_02083c7cEP5Vec3pi
+.extern _ZN10MapManager18func_ov00_02084ebcEi
+.extern _ZN10MapManager18func_ov00_02085594Ev
+.extern _ZN10MapManager18func_ov00_02085a34Eii
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
@@ -21,6 +26,7 @@
 .extern _ZN13PlayerControl20UpdateUsingEquipItemEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02054654
 .extern data_027e0d38
@@ -38,14 +44,8 @@
 .extern func_01ffa9fc
 .extern func_01fffcec
 .extern func_0202af4c
-.extern __register_global_object
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c2e8
-.extern func_ov00_02083a1c
-.extern func_ov00_02083c7c
-.extern func_ov00_02084ebc
-.extern func_ov00_02085594
-.extern func_ov00_02085a34
 .extern func_ov00_020a5e9c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4

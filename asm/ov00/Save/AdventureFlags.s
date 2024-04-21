@@ -328,7 +328,7 @@ _ZN14AdventureFlags18func_ov00_02097968Ei: ; 0x02097968
 	ldr r0, _02097a40 ; =data_027e0e60
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_020838f8
+	bl _ZN10MapManager18func_ov00_020838f8EPi
 	strb r0, [sp, #0x26]
 	ldr r0, [r5, #0x44]
 	add r1, sp, #0x18

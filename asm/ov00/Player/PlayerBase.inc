@@ -20,9 +20,9 @@
 .extern func_01ffec34
 .extern func_01fffcec
 .extern func_ov00_0207c5d4
-.extern func_ov00_02082af4
-.extern func_ov00_02083624
-.extern func_ov00_02083ee0
+.extern _ZN10MapManager18func_ov00_02082af4Ev
+.extern _ZN10MapManager14GetEntrancePosEP5Vec3pi
+.extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern func_ov00_0208ae94
 .extern func_ov00_0208f030
 .extern _ZN14AdventureFlags18func_ov00_02097700Ev

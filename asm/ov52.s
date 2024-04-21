@@ -401,7 +401,7 @@ func_ov52_02195908: ; 0x02195908
 	strb r3, [r4, #0xc]
 	ldr r0, [r0]
 	mov r1, #0x1e
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	mov r1, #0
 	ldr r0, _02195a08 ; =data_027e0e60
 	str r1, [sp, #4]
@@ -419,7 +419,7 @@ func_ov52_02195908: ; 0x02195908
 	ldr r0, [r0]
 	add r2, sp, #0
 	mov r1, #2
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	ldr r0, _02195a0c ; =gOverlayManager
 	ldr r2, _02195a10 ; =0x00000004
 	mov r1, #2
@@ -427,7 +427,7 @@ func_ov52_02195908: ; 0x02195908
 	ldr r0, _02195a08 ; =data_027e0e60
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02082b3c
+	bl _ZN10MapManager18func_ov00_02082b3cEi
 	ldr r0, _02195a0c ; =gOverlayManager
 	ldr r2, _02195a14 ; =0x00000005
 	mov r1, #2
@@ -495,7 +495,7 @@ _02195a60:
 	strb r4, [sp, #0x13]
 	strb r4, [sp, #0x14]
 	strb r4, [sp, #0x15]
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	ldr r0, _02195b3c ; =gOverlayManager
 	ldr r2, _02195b40 ; =0x00000004
 	mov r1, #2
@@ -503,7 +503,7 @@ _02195a60:
 	ldr r0, _02195b38 ; =data_027e0e60
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02082b3c
+	bl _ZN10MapManager18func_ov00_02082b3cEi
 	ldr r0, _02195b3c ; =gOverlayManager
 	ldr r2, _02195b44 ; =0x00000005
 	mov r1, #2
@@ -553,13 +553,13 @@ func_ov52_02195b5c: ; 0x02195b5c
 	mov r1, #0x1f
 	mov r2, #1
 	mov r3, #0
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	ldr r0, _02195ba8 ; =data_027e0e60
 	mov r1, #0x1e
 	ldr r0, [r0]
 	mov r2, #1
 	mov r3, #0
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	ldr r0, _02195bac ; =data_ov09_0211f5b4
 	blx func_ov03_020f4048
 	mov r0, #2
@@ -599,7 +599,7 @@ _02195be0:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #0x1f
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	mov r0, #1
 	strb r0, [r4, #0xc]
 	b _02195ca4
@@ -608,7 +608,7 @@ _02195c20:
 	mov r1, #5
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	beq _02195ca4
 	ldrb r0, [r4, #0x11]
@@ -634,7 +634,7 @@ _02195c5c:
 	ldr r0, [r0]
 	mov r3, r2
 	mov r1, #0x1e
-	bl func_ov00_02084b38
+	bl _ZN10MapManager18func_ov00_02084b38Eiii
 	mov r0, #3
 	strb r0, [r4, #0xc]
 _02195ca0:

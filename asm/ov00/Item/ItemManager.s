@@ -1114,13 +1114,13 @@ _020ae34c: .word data_027e103c
 	arm_func_start _ZNK11ItemManager18func_ov00_020ae350Ev
 _ZNK11ItemManager18func_ov00_020ae350Ev: ; 0x020ae350
 	ldr r0, _020ae360 ; =data_027e0e60
-	ldr ip, _020ae364 ; =func_ov00_02084b14
+	ldr ip, _020ae364 ; =_ZN10MapManager10GetNumKeysEv
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZNK11ItemManager18func_ov00_020ae350Ev
 _020ae360: .word data_027e0e60
-_020ae364: .word func_ov00_02084b14
+_020ae364: .word _ZN10MapManager10GetNumKeysEv
 
 	.global _ZN11ItemManager8GiveKeysEj
 	thumb_func_start _ZN11ItemManager8GiveKeysEj
@@ -1129,7 +1129,7 @@ _ZN11ItemManager8GiveKeysEj: ; 0x020ae368
 	ldr r0, _020ae38c ; =data_027e0e60
 	add r4, r1, #0
 	ldr r0, [r0]
-	blx func_ov00_02084b14
+	blx _ZN10MapManager10GetNumKeysEv
 	add r1, r4, r0
 	cmp r1, #8
 	blt _020ae37c
@@ -1141,7 +1141,7 @@ _020ae37c:
 _020ae382:
 	ldr r0, _020ae38c ; =data_027e0e60
 	ldr r0, [r0]
-	blx func_ov00_02084b08
+	blx _ZN10MapManager10SetNumKeysEi
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end _ZN11ItemManager8GiveKeysEj

@@ -273,7 +273,7 @@ _0217c040:
 	mov r1, #0x45
 	ldr r0, [r0]
 	add r2, sp, #0x50
-	bl func_ov00_02083918
+	bl _ZN10MapManager18func_ov00_02083918EiPi
 	cmp r0, #0
 	beq _0217c0f0
 	ldr r0, _0217c214 ; =data_027e0f64

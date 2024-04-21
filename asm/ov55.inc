@@ -40,7 +40,7 @@
 .extern func_01fffcec
 .extern func_02019570
 .extern func_020385b8
-.extern func_ov00_02083f44
+.extern _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 .extern func_ov00_02087d34
 .extern func_ov00_0209a4f4
 .extern func_ov00_0209a508

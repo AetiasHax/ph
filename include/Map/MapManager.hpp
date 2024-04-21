@@ -3,6 +3,9 @@
 #include "global.h"
 #include "types.h"
 
+#include "lib/math.h"
+
+#include "Physics/AABB.hpp"
 #include "System/SysNew.hpp"
 
 struct MapManager_Unk1 {
@@ -23,10 +26,10 @@ struct MapManager_Unk2 {
 
 class MapDataBase : public SysObject {
 public:
-    /* 00 */ virtual ~MapData();
+    /* 00 */ virtual ~MapDataBase();
 
-    MapData();
-    MapData(uint param1, uint param2);
+    MapDataBase();
+    MapDataBase(u32 param1, u32 param2);
 };
 
 class MapManager : public SysObject {

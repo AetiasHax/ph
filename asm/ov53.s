@@ -456,7 +456,7 @@ _02199220:
 	mov r1, r7
 	strb r3, [sp, #4]
 	strb r2, [sp, #5]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	beq _02199270
 	ldr r3, [r0]
@@ -1275,7 +1275,7 @@ _02199d28:
 	ldr r3, [r5, #0x50]
 	add r1, sp, #0
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr r1, [r5, #0x4c]
 	cmp r1, r0
 	movlt r6, #1

@@ -620,7 +620,7 @@ _ZN12ActorManager18func_ov00_020c3bb0EiPi: ; 0x020c3bb0
 	add r2, sp, #0x14
 	ldr r0, [r0]
 	mov r3, #8
-	bl func_ov00_020836cc
+	bl _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 	mov r5, r0
 	cmp r5, #0
 	addle sp, sp, #0xd4
@@ -708,7 +708,7 @@ _ZN12ActorManager18func_ov00_020c3ce8Eii: ; 0x020c3ce8
 	mov r10, r2
 	add r2, sp, #0xc
 	mov r3, #8
-	bl func_ov00_020836cc
+	bl _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 	mov r5, r0
 	cmp r5, #0
 	addle sp, sp, #0xcc

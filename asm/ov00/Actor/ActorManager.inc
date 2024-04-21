@@ -1,4 +1,5 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 .extern _ZN5Actor10SetUnk_129Eb
 .extern _ZN5Actor14DistanceToLinkEv
 .extern _ZN5Actor14StopLinkFollowEv
@@ -8,7 +9,6 @@
 .extern data_027e0e60
 .extern data_027e103c
 .extern func_01ff9ec0
-.extern func_ov00_020836cc
 .extern func_ov00_0208e72c
 .extern func_ov00_0208e7a4
 .extern func_ov00_0208f318

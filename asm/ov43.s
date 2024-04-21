@@ -2999,7 +2999,7 @@ _0218bd3c:
 	ldrh r1, [r4, #0x26]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	beq _0218c970
 	ldr r0, [r4, #0x3d4]
@@ -3815,7 +3815,7 @@ _0218c920:
 	ldrh r1, [r4, #0x26]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	addeq sp, sp, #0x150
 	moveq r0, #1
@@ -4220,7 +4220,7 @@ _0218ceac:
 	ldrh r1, [r10, #0x26]
 	ldr r0, [r0]
 	add r2, sp, #0xc
-	bl func_ov00_02083770
+	bl _ZN10MapManager18func_ov00_02083770Eji
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -4237,7 +4237,7 @@ _0218cf04:
 	str r1, [sp, #4]
 	ldrh r1, [r10, #0x26]
 	add r2, sp, #0
-	bl func_ov00_02083770
+	bl _ZN10MapManager18func_ov00_02083770Eji
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0

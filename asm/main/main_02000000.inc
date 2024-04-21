@@ -375,10 +375,10 @@
 .extern func_ov00_0207bcb4
 .extern func_ov00_0207be84
 .extern func_ov00_0207c0f0
-.extern func_ov00_02082614
-.extern func_ov00_020838e8
-.extern func_ov00_02084740
-.extern func_ov00_02086044
+.extern _ZN10MapManager18func_ov00_02082614Eii
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
+.extern _ZN10MapManager18func_ov00_02084740Ev
+.extern _ZN10MapManager18func_ov00_02086044Eiii
 .extern func_ov00_02087d98
 .extern func_ov00_02089068
 .extern func_ov00_0208b180

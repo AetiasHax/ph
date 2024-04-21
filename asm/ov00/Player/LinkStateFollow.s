@@ -33,7 +33,7 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	ldr r2, _020a9020 ; =data_027e0e60
 	add r1, r0, #0xc4
 	ldr r0, [r2]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	movs r4, r0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r4, r5, pc}
@@ -87,10 +87,10 @@ _020a904c:
 	ldr r4, [r1]
 	add r2, r5, #0x24
 	mov r1, r4
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0
 	mov r0, r4
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	movs r4, r0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r1, [r0]
@@ -213,7 +213,7 @@ _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p: ; 0x020a9180
 	strb r1, [r3, #1]
 	ldr r2, [r3]
 	mov r1, r4
-	bl func_ov00_02083c7c
+	bl _ZN10MapManager18func_ov00_02083c7cEP5Vec3pi
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 _020a91f0:

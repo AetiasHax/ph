@@ -1,4 +1,9 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_02083570Eii
+.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+.extern _ZN10MapManager18func_ov00_02084b38Eiii
+.extern _ZN10MapManager18func_ov00_02084be0Eii
+.extern _ZN10MapManager18func_ov00_02084c5cEii
 .extern _ZN10PlayerBase18EquipItem_vfunc_2cEv
 .extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -10,6 +15,7 @@
 .extern _ZN12ActorManager18func_ov00_020c39acEjPjb
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13PlayerControl13StopFollowingEv
+.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern data_02050f54
@@ -20,7 +26,6 @@
 .extern data_027e0d0c
 .extern data_027e0d3c
 .extern data_027e0e60
-.extern gAdventureFlags
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fac
@@ -47,13 +52,7 @@
 .extern func_ov00_0207a188
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207b89c
-.extern func_ov00_02083570
-.extern func_ov00_02083ef8
-.extern func_ov00_02084b38
-.extern func_ov00_02084be0
-.extern func_ov00_02084c5c
 .extern func_ov00_02087ef0
-.extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern func_ov00_020bc46c
 .extern func_ov00_020bc7f8
 .extern func_ov00_020bc854
@@ -73,4 +72,5 @@
 .extern func_ov14_0213dadc
 .extern func_ov14_0213ddd4
 .extern func_ov14_0213defc
+.extern gAdventureFlags
 .extern gItemManager

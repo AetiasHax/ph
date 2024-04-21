@@ -162,8 +162,8 @@
 .extern func_ov00_0207c358
 .extern func_ov00_0207c444
 .extern func_ov00_0207c7e8
-.extern func_ov00_02084b38
-.extern func_ov00_02084be0
+.extern _ZN10MapManager18func_ov00_02084b38Eiii
+.extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern func_ov00_02087d34
 .extern func_ov00_02087d84
 .extern func_ov00_02088000
