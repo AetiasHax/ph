@@ -73,7 +73,7 @@
 .extern data_027e0ce0
 .extern data_027e0d3c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f68
 .extern data_027e0f78
 .extern data_027e0fa0

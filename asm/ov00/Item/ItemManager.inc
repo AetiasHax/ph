@@ -6,7 +6,7 @@
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN14AdventureFlags3SetEjb
 .extern _ZNK11ItemManager10GetMaxAmmoEi
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f78
 .extern data_027e0fbc
 .extern data_027e103c

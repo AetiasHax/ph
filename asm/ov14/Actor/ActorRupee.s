@@ -431,7 +431,7 @@ _0213b3cc:
 	cmp r0, #0
 	beq _0213b4fc
 	ldr r1, [r5, #0x48]
-	ldr r0, _0213b518 ; =data_027e0e60
+	ldr r0, _0213b518 ; =gMapManager
 	str r1, [sp, #4]
 	ldr r2, [r5, #0x4c]
 	ldr r1, [r0]
@@ -517,7 +517,7 @@ _0213b4fc:
 _0213b50c: .word data_027e0fc8
 _0213b510: .word gItemManager
 _0213b514: .word data_ov00_020eec9c
-_0213b518: .word data_027e0e60
+_0213b518: .word gMapManager
 
 	.global _ZN10ActorRupee8vfunc_14Ej
 	arm_func_start _ZN10ActorRupee8vfunc_14Ej

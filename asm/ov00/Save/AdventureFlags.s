@@ -325,7 +325,7 @@ _ZN14AdventureFlags18func_ov00_02097968Ei: ; 0x02097968
 	strb ip, [sp, #0x14]
 	strb ip, [sp, #0x15]
 	bl _ZN14AdventureFlags15Get_FlagsUnk_00EiP9FlagsUnk2
-	ldr r0, _02097a40 ; =data_027e0e60
+	ldr r0, _02097a40 ; =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_020838f8EPi
@@ -342,7 +342,7 @@ _ZN14AdventureFlags18func_ov00_02097968Ei: ; 0x02097968
 	.align 2, 0
 	arm_func_end _ZN14AdventureFlags18func_ov00_02097968Ei
 _02097a3c: .word data_027e0db0
-_02097a40: .word data_027e0e60
+_02097a40: .word gMapManager
 
 	.global _ZN14AdventureFlags18func_ov00_02097a44Eii
 	arm_func_start _ZN14AdventureFlags18func_ov00_02097a44Eii

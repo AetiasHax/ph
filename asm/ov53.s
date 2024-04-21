@@ -444,7 +444,7 @@ func_ov53_021991ec: ; 0x021991ec
 	cmp r9, r0
 	bge _02199280
 	ldr r8, _02199308 ; =data_ov53_0219a5bc
-	ldr r4, _0219930c ; =data_027e0e60
+	ldr r4, _0219930c ; =gMapManager
 	add r6, sp, #0x20
 	mov r11, #2
 	add r7, sp, #4
@@ -514,7 +514,7 @@ _021992ec:
 	arm_func_end func_ov53_021991ec
 _02199304: .word data_ov53_0219a580
 _02199308: .word data_ov53_0219a5bc
-_0219930c: .word data_027e0e60
+_0219930c: .word gMapManager
 _02199310: .word data_ov53_0219a5e4
 _02199314: .word data_027e0fe4
 
@@ -742,7 +742,7 @@ _02199518:
 	str r1, [sp, #0xc]
 	mov r0, #0
 	str r0, [sp, #0x10]
-	ldr r0, _021996ec ; =data_027e0e60
+	ldr r0, _021996ec ; =gMapManager
 	add r1, sp, #0x60
 	ldr r0, [r0]
 	add r2, sp, #0x44
@@ -788,7 +788,7 @@ _021996dc: .word 0x0000019f
 _021996e0: .word 0x0000ffff
 _021996e4: .word data_ov53_0219a580
 _021996e8: .word data_ov53_0219a5bc
-_021996ec: .word data_027e0e60
+_021996ec: .word gMapManager
 _021996f0: .word data_027e0fe4
 _021996f4: .word data_ov53_0219a180
 _021996f8: .word data_ov53_0219a5e4
@@ -1206,7 +1206,7 @@ func_ov53_02199c48: ; 0x02199c48
 	mov lr, #0
 	str r2, [sp, #0x24]
 	ldr r2, [r0, #0x50]
-	ldr ip, _02199cc4 ; =data_027e0e60
+	ldr ip, _02199cc4 ; =gMapManager
 	str r2, [sp, #0x28]
 	ldr r3, [r0, #0x54]
 	add r2, sp, #0x20
@@ -1230,7 +1230,7 @@ func_ov53_02199c48: ; 0x02199c48
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov53_02199c48
-_02199cc4: .word data_027e0e60
+_02199cc4: .word gMapManager
 
 	.global func_ov53_02199cc8
 	arm_func_start func_ov53_02199cc8
@@ -1267,7 +1267,7 @@ _02199d28:
 	str r2, [r0, #0x1c]
 	str r2, [r0, #0x18]
 	ldr r1, [r5, #0x48]
-	ldr r0, _02199f78 ; =data_027e0e60
+	ldr r0, _02199f78 ; =gMapManager
 	str r1, [sp]
 	ldr r1, [r5, #0x4c]
 	ldr r0, [r0]
@@ -1417,7 +1417,7 @@ _02199f68: .word data_ov53_0219a680
 _02199f6c: .word data_ov53_0219a15c
 _02199f70: .word func_ov53_02199f88
 _02199f74: .word data_ov53_0219a674
-_02199f78: .word data_027e0e60
+_02199f78: .word gMapManager
 _02199f7c: .word data_027e0ffc
 _02199f80: .word 0x0000019d
 _02199f84: .word 0x00000555

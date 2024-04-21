@@ -1767,7 +1767,7 @@ func_ov39_0217d534: ; 0x0217d534
 	sub sp, sp, #0x14
 	mov r4, r0
 	ldr r1, [r4, #0x4c]
-	ldr r0, _0217d5c4 ; =data_027e0e60
+	ldr r0, _0217d5c4 ; =gMapManager
 	add r1, r1, #0x3000
 	str r1, [r4, #0x4c]
 	ldr r1, [r4, #0x48]
@@ -1801,7 +1801,7 @@ func_ov39_0217d534: ; 0x0217d534
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov39_0217d534
-_0217d5c4: .word data_027e0e60
+_0217d5c4: .word gMapManager
 _0217d5c8: .word data_027e0f94
 _0217d5cc: .word data_027e0fe4
 _0217d5d0: .word 0x4e415649
@@ -3453,7 +3453,7 @@ func_ov39_0217ec34: ; 0x0217ec34
 	ldr r0, _0217ec88 ; =data_027e0c68
 	add r1, r5, #0xc60
 	bl func_02036ce4
-	ldr r0, _0217ec8c ; =data_027e0e60
+	ldr r0, _0217ec8c ; =gMapManager
 	mov r1, r4
 	ldr r0, [r0]
 	mov r2, #1
@@ -3463,7 +3463,7 @@ func_ov39_0217ec34: ; 0x0217ec34
 	.align 2, 0
 	arm_func_end func_ov39_0217ec34
 _0217ec88: .word data_027e0c68
-_0217ec8c: .word data_027e0e60
+_0217ec8c: .word gMapManager
 
 	.global func_ov39_0217ec90
 	arm_func_start func_ov39_0217ec90
@@ -3989,7 +3989,7 @@ _0217f3b8:
 	orr r0, r0, #4
 	str r0, [r4, #0x158]
 _0217f3c4:
-	ldr r0, _0217f47c ; =data_027e0e60
+	ldr r0, _0217f47c ; =gMapManager
 	mov r1, #3
 	ldr r0, [r0]
 	mov r2, #1
@@ -4000,7 +4000,7 @@ _0217f3c4:
 	ldr r0, [r0]
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _0217f47c ; =data_027e0e60
+	ldr r0, _0217f47c ; =gMapManager
 	mov r1, #3
 	ldr r0, [r0]
 	mov r2, #1
@@ -4038,7 +4038,7 @@ _0217f40c:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov39_0217f32c
-_0217f47c: .word data_027e0e60
+_0217f47c: .word gMapManager
 _0217f480: .word data_ov29_0217bd28
 _0217f484: .word gItemManager
 
@@ -7582,13 +7582,13 @@ func_ov39_021825e8: ; 0x021825e8
 	add r0, r4, #0x3ec
 	add r0, r0, #0x400
 	bl func_ov39_0217ca2c
-	ldr r0, _02182670 ; =data_027e0e60
+	ldr r0, _02182670 ; =gMapManager
 	mov r1, #1
 	ldr r0, [r0]
 	mov r2, r1
 	mov r3, #0
 	bl _ZN10MapManager18func_ov00_02084b38Eiii
-	ldr r0, _02182670 ; =data_027e0e60
+	ldr r0, _02182670 ; =gMapManager
 	mov r1, #2
 	ldr r0, [r0]
 	mov r2, #1
@@ -7607,7 +7607,7 @@ func_ov39_021825e8: ; 0x021825e8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov39_021825e8
-_02182670: .word data_027e0e60
+_02182670: .word gMapManager
 
 	.global func_ov39_02182674
 	arm_func_start func_ov39_02182674

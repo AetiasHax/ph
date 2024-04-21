@@ -56,7 +56,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern __register_global_object
 .extern data_027e0764
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0fc8
 .extern data_027e0fe0
 .extern data_ov00_020e9370

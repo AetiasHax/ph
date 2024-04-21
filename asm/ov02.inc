@@ -31,7 +31,7 @@
 .extern data_027e0d0c
 .extern data_027e0d44
 .extern data_027e0d78
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f88
 .extern data_027e0f8c
 .extern data_027e0fbc

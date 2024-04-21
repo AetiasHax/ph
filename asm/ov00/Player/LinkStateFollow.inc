@@ -10,7 +10,7 @@
 .extern _ZN13LinkStateBase8vfunc_24Ei
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern _ZN13PlayerControl18func_ov00_020af01cEPc
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0fb8
 .extern func_01ff9bf8
 .extern func_01ff9cec

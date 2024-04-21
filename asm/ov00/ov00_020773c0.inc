@@ -26,7 +26,7 @@
 .extern data_027e0d48
 .extern data_027e0d54
 .extern data_027e0e28
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern gAdventureFlags
 .extern data_027e0f7c

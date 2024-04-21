@@ -3206,7 +3206,7 @@ func_ov09_02114554: ; 0x02114554
 	blx _ZN12ActorManager14Actor_vfunc_28Ev
 	mov r0, #0
 	str r0, [sp, #8]
-	ldr r0, _021146ac ; =data_027e0e60
+	ldr r0, _021146ac ; =gMapManager
 	add r1, sp, #0x14
 	ldr r7, [r0]
 	ldr r0, [sp, #8]
@@ -3345,7 +3345,7 @@ _02114688:
 	ldr r1, [sp, #8]
 	add r0, r5, #0
 	bl func_ov09_02114520
-	ldr r0, _021146ac ; =data_027e0e60
+	ldr r0, _021146ac ; =gMapManager
 	ldr r0, [r0]
 	blx _ZN10MapManager18func_ov00_02082adcEv
 	add sp, #0x1ec
@@ -3353,7 +3353,7 @@ _02114688:
 	.align 2, 0
 	thumb_func_end func_ov09_02114554
 _021146a8: .word data_027e0fe4
-_021146ac: .word data_027e0e60
+_021146ac: .word gMapManager
 _021146b0: .word data_027e0d38
 _021146b4: .word data_ov00_020e9f10
 _021146b8: .word data_ov00_020ea110
@@ -16510,7 +16510,7 @@ _0211c3d4: .word data_027e0ce0
 func_ov09_0211c3d8: ; 0x0211c3d8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0211c418 ; =data_027e0e60
+	ldr r0, _0211c418 ; =gMapManager
 	ldr r0, [r0]
 	blx _ZN10MapManager18func_ov00_020848b8Ev
 	strb r0, [r4, #0xa]
@@ -16541,7 +16541,7 @@ _0211c416:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211c3d8
-_0211c418: .word data_027e0e60
+_0211c418: .word gMapManager
 
 	.global func_ov09_0211c41c
 	thumb_func_start func_ov09_0211c41c
@@ -18378,7 +18378,7 @@ func_ov09_0211d180: ; 0x0211d180
 	str r2, [sp, #0x94]
 	add r3, r2, r1
 	ldr r9, [r4, #8]
-	ldr r1, _0211d658 ; =data_027e0e60
+	ldr r1, _0211d658 ; =gMapManager
 	mov r5, r0
 	ldr r0, [r1]
 	add r1, sp, #0x90
@@ -18690,7 +18690,7 @@ _0211d628:
 	.align 2, 0
 	arm_func_end func_ov09_0211d180
 _0211d654: .word 0xfffffccd
-_0211d658: .word data_027e0e60
+_0211d658: .word gMapManager
 _0211d65c: .word 0x00000385
 _0211d660: .word 0xfffff4a4
 _0211d664: .word 0x0000099a
@@ -18850,7 +18850,7 @@ func_ov09_0211d860: ; 0x0211d860
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x40
 	add r6, r0, #0
-	ldr r0, _0211d89c ; =data_027e0e60
+	ldr r0, _0211d89c ; =gMapManager
 	mov r5, #0
 	ldr r4, [r0]
 	add r7, sp, #0
@@ -18879,7 +18879,7 @@ _0211d88a:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211d860
-_0211d89c: .word data_027e0e60
+_0211d89c: .word gMapManager
 
 	.global func_ov09_0211d8a0
 	thumb_func_start func_ov09_0211d8a0

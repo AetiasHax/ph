@@ -27,7 +27,7 @@ _02190070: .word 0x000004dc
 func_ov46_02190074: ; 0x02190074
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x14
-	ldr r1, _021901cc ; =data_027e0e60
+	ldr r1, _021901cc ; =gMapManager
 	mov r6, r0
 	ldr r5, [r1]
 	add r0, sp, #0
@@ -129,7 +129,7 @@ _021901b4:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov46_02190074
-_021901cc: .word data_027e0e60
+_021901cc: .word gMapManager
 _021901d0: .word 0x0000036d
 _021901d4: .word 0x0000036e
 _021901d8: .word 0x0000036f
@@ -750,7 +750,7 @@ _021909a8: .word 0x000004d8
 func_ov46_021909ac: ; 0x021909ac
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x14
-	ldr r1, _02190b04 ; =data_027e0e60
+	ldr r1, _02190b04 ; =gMapManager
 	mov r6, r0
 	ldr r5, [r1]
 	add r0, sp, #0
@@ -852,7 +852,7 @@ _02190aec:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov46_021909ac
-_02190b04: .word data_027e0e60
+_02190b04: .word gMapManager
 _02190b08: .word 0x0000036d
 _02190b0c: .word 0x0000036e
 _02190b10: .word 0x0000036f

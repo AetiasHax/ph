@@ -585,7 +585,7 @@ func_ov55_021993b8: ; 0x021993b8
 	mov r5, #0
 	cmp r0, #0
 	bne _021994d4
-	ldr r0, _02199640 ; =data_027e0e60
+	ldr r0, _02199640 ; =gMapManager
 	ldr r9, [sp, #0x1c]
 	ldr r7, [sp, #0x20]
 	ldr r10, [sp, #0x18]
@@ -601,7 +601,7 @@ func_ov55_021993b8: ; 0x021993b8
 	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	cmp r0, r8
 	bge _021994cc
-	ldr r0, _02199640 ; =data_027e0e60
+	ldr r0, _02199640 ; =gMapManager
 	ldr r10, [sp, #0x18]
 	ldr r0, [r0]
 	add r3, r7, #0x3000
@@ -710,7 +710,7 @@ _021994d4:
 	arm_func_end func_ov55_021993b8
 _02199638: .word data_027e0f64
 _0219963c: .word data_027e0c54
-_02199640: .word data_027e0e60
+_02199640: .word gMapManager
 _02199644: .word 0x0000105b
 _02199648: .word 0x0000038e
 _0219964c: .word gAdventureFlags

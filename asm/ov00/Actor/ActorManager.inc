@@ -6,7 +6,7 @@
 .extern _ZN5Actor18func_ov00_020c27a8Ei
 .extern data_02056be4
 .extern data_027e077c
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e103c
 .extern func_01ff9ec0
 .extern func_ov00_0208e72c

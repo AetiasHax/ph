@@ -112,21 +112,21 @@ func_ov54_02198e04: ; 0x02198e04
 	.global func_ov54_02198e08
 	arm_func_start func_ov54_02198e08
 func_ov54_02198e08: ; 0x02198e08
-	ldr r0, _02198e1c ; =data_027e0e60
+	ldr r0, _02198e1c ; =gMapManager
 	ldr ip, _02198e20 ; =_ZN10MapManager18func_ov00_02085a34Eii
 	mov r2, #1
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end func_ov54_02198e08
-_02198e1c: .word data_027e0e60
+_02198e1c: .word gMapManager
 _02198e20: .word _ZN10MapManager18func_ov00_02085a34Eii
 
 	.global func_ov54_02198e24
 	arm_func_start func_ov54_02198e24
 func_ov54_02198e24: ; 0x02198e24
 	stmdb sp!, {r3, lr}
-	ldr r0, _02198e48 ; =data_027e0e60
+	ldr r0, _02198e48 ; =gMapManager
 	mov r2, #2
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02085a34Eii
@@ -136,7 +136,7 @@ func_ov54_02198e24: ; 0x02198e24
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_ov54_02198e24
-_02198e48: .word data_027e0e60
+_02198e48: .word gMapManager
 
 	.global func_ov54_02198e4c
 	arm_func_start func_ov54_02198e4c
@@ -228,7 +228,7 @@ func_ov54_02198efc: ; 0x02198efc
 	mov r6, r5
 	cmp r4, r0
 	beq _02198fb4
-	ldr r1, _02199290 ; =data_027e0e60
+	ldr r1, _02199290 ; =gMapManager
 	add r0, sp, #0xc
 	ldr r1, [r1]
 	add r2, r7, #0x38
@@ -315,7 +315,7 @@ _02199050:
 	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 	cmp r0, #0
 	bgt _021990c4
-	ldr r0, _02199290 ; =data_027e0e60
+	ldr r0, _02199290 ; =gMapManager
 	add r1, r7, #0x38
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02085594Ev
@@ -446,7 +446,7 @@ _02199284:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov54_02198efc
-_02199290: .word data_027e0e60
+_02199290: .word gMapManager
 _02199294: .word 0x00000333
 _02199298: .word data_ov54_02199a00
 _0219929c: .word data_027e0fe4
@@ -833,7 +833,7 @@ func_ov54_021997f0: ; 0x021997f0
 	bl _ZN13PlayerControl18func_ov00_020af01cEPc
 	cmp r0, #0
 	beq _02199898
-	ldr r0, _021998d0 ; =data_027e0e60
+	ldr r0, _021998d0 ; =gMapManager
 	ldrb r2, [sp]
 	ldrb r1, [sp, #1]
 	ldr r0, [r0]
@@ -846,7 +846,7 @@ func_ov54_021997f0: ; 0x021997f0
 	cmp r4, #0
 	mov r4, #1
 	beq _02199884
-	ldr r0, _021998d0 ; =data_027e0e60
+	ldr r0, _021998d0 ; =gMapManager
 	ldr ip, [sp, #0x10]
 	ldr r3, [sp, #0x14]
 	ldr r2, [sp, #0x18]
@@ -881,7 +881,7 @@ _02199898:
 	.align 2, 0
 	arm_func_end func_ov54_021997f0
 _021998cc: .word data_027e0fb8
-_021998d0: .word data_027e0e60
+_021998d0: .word gMapManager
 
 	.global func_ov54_021998d4
 	arm_func_start func_ov54_021998d4

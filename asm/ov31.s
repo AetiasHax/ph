@@ -269,7 +269,7 @@ _0217c040:
 	mov r2, ip
 	mov r1, #0x44
 	bl func_ov00_02087338
-	ldr r0, _0217c218 ; =data_027e0e60
+	ldr r0, _0217c218 ; =gMapManager
 	mov r1, #0x45
 	ldr r0, [r0]
 	add r2, sp, #0x50
@@ -362,7 +362,7 @@ _0217c184:
 	.align 2, 0
 	arm_func_end func_ov31_0217bfb4
 _0217c214: .word data_027e0f64
-_0217c218: .word data_027e0e60
+_0217c218: .word gMapManager
 _0217c21c: .word 0x0000ffff
 _0217c220: .word data_027e0fc8
 

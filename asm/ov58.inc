@@ -20,7 +20,7 @@
 .extern data_027e0d3c
 .extern data_027e0d78
 .extern data_027e0de4
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f6c
 .extern data_027e0f94
 .extern data_027e0fb8

@@ -4243,7 +4243,7 @@ _02085188:
 	cmp r0, r7
 	blt _02085250
 	ldr r0, [sp, #0xc]
-	ldr r11, _02085278 ; =data_027e0e60
+	ldr r11, _02085278 ; =gMapManager
 	and r5, r0, #0xff
 _020851a4:
 	ldr r0, [r11]
@@ -4304,7 +4304,7 @@ _02085268:
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02085108EPi
 _02085274: .word data_027e0f64
-_02085278: .word data_027e0e60
+_02085278: .word gMapManager
 
 	.global _ZN10MapManager18func_ov00_0208527cEv
 	arm_func_start _ZN10MapManager18func_ov00_0208527cEv
@@ -4362,7 +4362,7 @@ _ZN10MapManager18func_ov00_0208527cEv: ; 0x0208527c
 	ldr r0, [sp, #8]
 	cmp r11, r0
 	bgt _020853e8
-	ldr r4, _020853f8 ; =data_027e0e60
+	ldr r4, _020853f8 ; =gMapManager
 	add r6, sp, #0x10
 _02085358:
 	ldr r8, [sp, #4]
@@ -4411,7 +4411,7 @@ _020853e8:
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_0208527cEv
 _020853f4: .word data_027e0f64
-_020853f8: .word data_027e0e60
+_020853f8: .word gMapManager
 
 	.global _ZN10MapManager18func_ov00_020853fcEv
 	arm_func_start _ZN10MapManager18func_ov00_020853fcEv
@@ -4482,7 +4482,7 @@ _020854e4:
 	ldr r0, [sp, #8]
 	and r6, r0, #0xff
 _020854fc:
-	ldr r0, _02085590 ; =data_027e0e60
+	ldr r0, _02085590 ; =gMapManager
 	add r1, sp, #0x10
 	ldr r0, [r0]
 	strb r6, [sp, #0x10]
@@ -4524,7 +4524,7 @@ _02085580:
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020853fcEv
 _0208558c: .word data_027e0f64
-_02085590: .word data_027e0e60
+_02085590: .word gMapManager
 
 	.global _ZN10MapManager18func_ov00_02085594Ev
 	arm_func_start _ZN10MapManager18func_ov00_02085594Ev
@@ -5362,7 +5362,7 @@ _02086164:
 	ldr r1, [sp, #4]
 	cmp r0, r1
 	ble _020861ec
-	ldr r0, _02086280 ; =data_027e0e60
+	ldr r0, _02086280 ; =gMapManager
 	add r1, sp, #0x12
 	ldr r0, [r0]
 	add r2, sp, #0x68
@@ -5432,7 +5432,7 @@ _02086274:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02086044Eiii
-_02086280: .word data_027e0e60
+_02086280: .word gMapManager
 
 	.global _ZN10MapManager18func_ov00_02086284EPiP5Vec3pS2_itS2_S2_
 	arm_func_start _ZN10MapManager18func_ov00_02086284EPiP5Vec3pS2_itS2_S2_

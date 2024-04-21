@@ -6629,7 +6629,7 @@ _020f430c:
 	ldr r0, _020f4ce4 ; =data_027e0f88
 	ldr r0, [r0]
 	bl func_ov00_020a1abc
-	ldr r0, _020f4ce8 ; =data_027e0e60
+	ldr r0, _020f4ce8 ; =gMapManager
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_020847e0Ev
 	str r0, [r7, #0x2c]
@@ -7282,7 +7282,7 @@ _020f4cd8: .word data_ov09_0211ee20
 _020f4cdc: .word data_ov09_0211ee24
 _020f4ce0: .word data_ov09_0211ee28
 _020f4ce4: .word data_027e0f88
-_020f4ce8: .word data_027e0e60
+_020f4ce8: .word gMapManager
 _020f4cec: .word data_027e0f8c
 _020f4cf0: .word data_ov00_020ecdf6
 _020f4cf4: .word data_ov00_020ee0a0

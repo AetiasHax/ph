@@ -285,7 +285,7 @@ _020a7de4:
 _ZN10PlayerBase8TeleportEP5Vec3psibb: ; 0x020a7df4
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x1c
-	ldr r3, _020a7e6c ; =data_027e0e60
+	ldr r3, _020a7e6c ; =gMapManager
 	mov r5, r0
 	mov r4, r1
 	mov lr, #0xff
@@ -315,7 +315,7 @@ _ZN10PlayerBase8TeleportEP5Vec3psibb: ; 0x020a7df4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end _ZN10PlayerBase8TeleportEP5Vec3psibb
-_020a7e6c: .word data_027e0e60
+_020a7e6c: .word gMapManager
 
 	.global _ZN10PlayerBase18TeleportToEntranceEib
 	arm_func_start _ZN10PlayerBase18TeleportToEntranceEib
@@ -328,7 +328,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	mov r4, r2
 	str r0, [r3]
 	ldr r1, [r5, #4]
-	ldr r0, _020a7f68 ; =data_027e0e60
+	ldr r0, _020a7f68 ; =gMapManager
 	str r1, [r3, #4]
 	ldr r2, [r5, #8]
 	add r1, sp, #0
@@ -366,7 +366,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	ldrb r0, [sp, #0x18]
 	cmp r0, #0
 	beq _020a7f40
-	ldr r0, _020a7f68 ; =data_027e0e60
+	ldr r0, _020a7f68 ; =gMapManager
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02082af4Ev
 	ldr r0, _020a7f80 ; =gAdventureFlags
@@ -386,7 +386,7 @@ _020a7f58:
 	.align 2, 0
 	arm_func_end _ZN10PlayerBase18TeleportToEntranceEib
 _020a7f64: .word data_027e0f94
-_020a7f68: .word data_027e0e60
+_020a7f68: .word gMapManager
 _020a7f6c: .word data_027e0fac
 _020a7f70: .word data_027e0fa0
 _020a7f74: .word data_027e0fb0

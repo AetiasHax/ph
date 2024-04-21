@@ -692,7 +692,7 @@ _02195db4:
 	add r3, sp, #0xc
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldr r0, _02195e9c ; =data_027e0e60
+	ldr r0, _02195e9c ; =gMapManager
 	ldr lr, [sp, #0xc]
 	ldr ip, [sp, #0x10]
 	ldr r3, [sp, #0x14]
@@ -751,7 +751,7 @@ _02195e80:
 	.align 2, 0
 	arm_func_end func_ov51_02195c80
 _02195e98: .word data_027e0fe4
-_02195e9c: .word data_027e0e60
+_02195e9c: .word gMapManager
 
 	.global func_ov51_02195ea0
 	arm_func_start func_ov51_02195ea0
@@ -1993,7 +1993,7 @@ func_ov51_02196e18: ; 0x02196e18
 	ldmia r1, {r0, r1, r2}
 	mov r9, #0
 	stmia r8, {r0, r1, r2}
-	ldr r4, _02196f04 ; =data_027e0e60
+	ldr r4, _02196f04 ; =gMapManager
 	mov r5, r9
 	mov r7, #0xa000
 	mov r6, #0x800
@@ -2048,7 +2048,7 @@ _02196ee0:
 	.align 2, 0
 	arm_func_end func_ov51_02196e18
 _02196f00: .word data_027e0f94
-_02196f04: .word data_027e0e60
+_02196f04: .word gMapManager
 
 	.global func_ov51_02196f08
 	arm_func_start func_ov51_02196f08
@@ -2542,7 +2542,7 @@ _02197588:
 	add r1, r4, #0x100
 	ldrsh ip, [r1, #0xd0]
 	ldrsh r3, [r1, #0xd2]
-	ldr r2, _02197634 ; =data_027e0e60
+	ldr r2, _02197634 ; =gMapManager
 	add r0, sp, #0xc
 	add r3, ip, r3
 	strh r3, [r1, #0xd0]
@@ -2584,7 +2584,7 @@ _02197588:
 	arm_func_end func_ov51_02197314
 _0219762c: .word 0x0000099a
 _02197630: .word data_ov51_02198280
-_02197634: .word data_027e0e60
+_02197634: .word gMapManager
 _02197638: .word 0x000007ae
 _0219763c: .word data_027e0ff8
 

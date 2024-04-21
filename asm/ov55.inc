@@ -25,7 +25,7 @@
 .extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 .extern __register_global_object
 .extern data_027e0c54
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f90
 .extern data_027e0fb8

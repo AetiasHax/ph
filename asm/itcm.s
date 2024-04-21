@@ -9181,7 +9181,7 @@ func_01fffd04: ; 0x01fffd04
 	ldr r0, [sp, #0x4c]
 	ldr r1, [sp, #0x44]
 	str r0, [sp, #0x34]
-	ldr r0, _01ffff04 ; =data_027e0e60
+	ldr r0, _01ffff04 ; =gMapManager
 	ldr r3, [sp, #0x48]
 	ldr r2, [sp, #0x54]
 	str r1, [sp, #0x2c]
@@ -9212,7 +9212,7 @@ _01fffdf4:
 	mov ip, #0
 	str r0, [sp, #0x24]
 	ldr r1, [r6, #0x50]
-	ldr r0, _01ffff04 ; =data_027e0e60
+	ldr r0, _01ffff04 ; =gMapManager
 	str r1, [sp, #0x28]
 	ldr r1, [r6, #0x54]
 	add r2, sp, #0x20
@@ -9277,7 +9277,7 @@ _01fffef8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_01fffd04
-_01ffff04: .word data_027e0e60
+_01ffff04: .word gMapManager
 
 	.global func_01ffff08
 	arm_func_start func_01ffff08

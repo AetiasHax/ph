@@ -3833,7 +3833,7 @@ _0218c668:
 	str r1, [sp, #0x24]
 	str r0, [sp, #0x1c]
 _0218c680:
-	ldr r1, _0218c71c ; =data_027e0e60
+	ldr r1, _0218c71c ; =gMapManager
 	add r0, sp, #4
 	ldr r1, [r1]
 	add r2, sp, #0x1c
@@ -3862,7 +3862,7 @@ _0218c6cc:
 	blo _0218c6cc
 	add r1, sp, #8
 	str r1, [sp]
-	ldr r0, _0218c71c ; =data_027e0e60
+	ldr r0, _0218c71c ; =gMapManager
 	add r2, sp, #4
 	ldr r0, [r0]
 	mov r1, #2
@@ -3876,7 +3876,7 @@ _0218c6cc:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218c5e0
-_0218c71c: .word data_027e0e60
+_0218c71c: .word gMapManager
 
 	.global func_ov41_0218c720
 	arm_func_start func_ov41_0218c720
@@ -4010,7 +4010,7 @@ func_ov41_0218c834: ; 0x0218c834
 	add r1, r1, #0x400
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
-	ldr r1, _0218cbec ; =data_027e0e60
+	ldr r1, _0218cbec ; =gMapManager
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, r5
@@ -4222,7 +4222,7 @@ _0218cbdc: .word data_027e0f68
 _0218cbe0: .word gAdventureFlags
 _0218cbe4: .word data_027e0fc8
 _0218cbe8: .word data_027e0fe4
-_0218cbec: .word data_027e0e60
+_0218cbec: .word gMapManager
 _0218cbf0: .word data_02050f54
 _0218cbf4: .word 0x4b4f4b4f
 
@@ -4742,7 +4742,7 @@ func_ov41_0218d210: ; 0x0218d210
 	ldr r3, [sp, #0xc]
 	ldr r2, [sp, #0x10]
 	ldr r1, [sp, #0x14]
-	ldr r0, _0218d31c ; =data_027e0e60
+	ldr r0, _0218d31c ; =gMapManager
 	str r2, [sp, #4]
 	str r3, [sp]
 	str r1, [sp, #8]
@@ -4781,7 +4781,7 @@ _0218d2fc:
 _0218d310: .word data_027e0f94
 _0218d314: .word data_027e0f90
 _0218d318: .word data_027e0fac
-_0218d31c: .word data_027e0e60
+_0218d31c: .word gMapManager
 _0218d320: .word 0xffff8001
 
 	.global func_ov41_0218d324
@@ -4921,7 +4921,7 @@ _0218d438:
 	ldr r0, [r0]
 	bl func_ov00_020c47cc
 	ldr r1, [r0, #4]
-	ldr r3, _0218d618 ; =data_027e0e60
+	ldr r3, _0218d618 ; =gMapManager
 	str r1, [r4, #0x48]
 	ldr r2, [r0, #8]
 	add r1, sp, #0
@@ -5006,7 +5006,7 @@ _0218d608:
 	arm_func_end func_ov41_0218d3e0
 _0218d610: .word data_ov00_020e8398
 _0218d614: .word data_027e0ff0
-_0218d618: .word data_027e0e60
+_0218d618: .word gMapManager
 
 	.global func_ov41_0218d61c
 	arm_func_start func_ov41_0218d61c
@@ -5134,7 +5134,7 @@ _0218d790:
 	b _0218d970
 _0218d7c0:
 	ldr r1, [r4, #0x48]
-	ldr r0, _0218d97c ; =data_027e0e60
+	ldr r0, _0218d97c ; =gMapManager
 	str r1, [sp, #4]
 	ldr r1, [r4, #0x4c]
 	ldr r0, [r0]
@@ -5253,7 +5253,7 @@ _0218d970:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov41_0218d668
-_0218d97c: .word data_027e0e60
+_0218d97c: .word gMapManager
 _0218d980: .word data_027e0ffc
 _0218d984: .word 0x00000309
 _0218d988: .word data_027e103c

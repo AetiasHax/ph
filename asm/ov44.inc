@@ -68,7 +68,7 @@
 .extern data_027e0194
 .extern data_027e0764
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f94
 .extern data_027e0fe0
 .extern data_027e0fe4

@@ -3,7 +3,7 @@
 .extern data_027e0c68
 .extern data_027e0db0
 .extern data_027e0dbc
-.extern data_027e0e60
+.extern gMapManager
 .extern func_0204f754
 .extern func_ov00_0207b2f0
 .extern func_ov00_0207b334

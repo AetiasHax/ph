@@ -846,7 +846,7 @@ func_ov33_0217c808: ; 0x0217c808
 	sub sp, sp, #0xc
 	mov r4, r0
 	ldr r1, [r4, #0x48]
-	ldr r0, _0217c8ec ; =data_027e0e60
+	ldr r0, _0217c8ec ; =gMapManager
 	str r1, [sp]
 	ldr r1, [r4, #0x4c]
 	ldr r0, [r0]
@@ -901,7 +901,7 @@ func_ov33_0217c808: ; 0x0217c808
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217c808
-_0217c8ec: .word data_027e0e60
+_0217c8ec: .word gMapManager
 _0217c8f0: .word data_02050f54
 _0217c8f4: .word 0x00000666
 _0217c8f8: .word data_027e0ffc
@@ -917,7 +917,7 @@ func_ov33_0217c8fc: ; 0x0217c8fc
 	mov r3, #0
 	str r0, [sp, #0x18]
 	ldr r1, [r4, #0x4c]
-	ldr r0, _0217c988 ; =data_027e0e60
+	ldr r0, _0217c988 ; =gMapManager
 	str r1, [sp, #0x1c]
 	ldr r2, [r4, #0x50]
 	add r1, sp, #0x18
@@ -947,7 +947,7 @@ _0217c97c:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217c8fc
-_0217c988: .word data_027e0e60
+_0217c988: .word gMapManager
 
 	.global func_ov33_0217c98c
 	arm_func_start func_ov33_0217c98c
@@ -1126,7 +1126,7 @@ _0217cb94: ; jump table
 	b _0217cc8c ; case 3
 	b _0217ccc8 ; case 4
 _0217cba8:
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	ldrh r1, [r5, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
@@ -1162,7 +1162,7 @@ _0217cc24:
 	mov r0, r5
 	bl func_ov33_0217c98c
 	ldr r1, [r5, #0x48]
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	str r1, [sp, #0x1c]
 	ldr r1, [r5, #0x4c]
 	ldr r0, [r0]
@@ -1276,7 +1276,7 @@ _0217cdbc: ; jump table
 	b _0217ceb4 ; case 3
 	b _0217cef0 ; case 4
 _0217cdd0:
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	ldrh r1, [r5, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
@@ -1312,7 +1312,7 @@ _0217ce4c:
 	mov r0, r5
 	bl func_ov33_0217c98c
 	ldr r1, [r5, #0x48]
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	str r1, [sp, #0x10]
 	ldr r1, [r5, #0x4c]
 	ldr r0, [r0]
@@ -1368,7 +1368,7 @@ _0217cf08:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217ca88
-_0217cf20: .word data_027e0e60
+_0217cf20: .word gMapManager
 _0217cf24: .word data_027e0ffc
 _0217cf28: .word 0x000001fb
 

@@ -233,3 +233,5 @@ public:
     bool func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7, Vec3p *param_8);
     bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7, Vec3p *param_8, Vec3p *param_9);
 };
+
+extern MapManager *gMapManager;
