@@ -14307,9 +14307,9 @@ func_ov22_021789c8: ; 0x021789c8
 	ldr r1, _021789f8 ; =0x424c4152
 	ldr r2, _021789fc ; =func_ov22_0216d6a0
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021789f4 ; =data_ov22_0217a40c
-	ldr r1, _02178a00 ; =func_0203e7b4
+	ldr r1, _02178a00 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178a04 ; =data_ov22_0217a400
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14318,7 +14318,7 @@ func_ov22_021789c8: ; 0x021789c8
 _021789f4: .word data_ov22_0217a40c
 _021789f8: .word 0x424c4152
 _021789fc: .word func_ov22_0216d6a0
-_02178a00: .word func_0203e7b4
+_02178a00: .word _ZN9ActorTypeD1Ev
 _02178a04: .word data_ov22_0217a400
 
 	.global func_ov22_02178a08
@@ -14370,27 +14370,27 @@ func_ov22_02178a78: ; 0x02178a78
 	ldr r1, _02178b30 ; =0x534e574d
 	ldr r2, _02178b34 ; =func_ov22_0216f2d4
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178b2c ; =data_ov22_0217a454
-	ldr r1, _02178b38 ; =func_0203e7b4
+	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b3c ; =data_ov22_0217a448
 	bl __register_global_object
 	ldr r0, _02178b40 ; =data_ov22_0217a474
 	ldr r1, _02178b44 ; =0x534e4d42
 	ldr r2, _02178b48 ; =func_ov22_0216f308
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178b40 ; =data_ov22_0217a474
-	ldr r1, _02178b38 ; =func_0203e7b4
+	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b4c ; =data_ov22_0217a468
 	bl __register_global_object
 	ldr r0, _02178b50 ; =data_ov22_0217a494
 	ldr r1, _02178b54 ; =0x534e4d59
 	ldr r2, _02178b58 ; =func_ov22_0216f33c
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178b50 ; =data_ov22_0217a494
-	ldr r1, _02178b38 ; =func_0203e7b4
+	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b5c ; =data_ov22_0217a488
 	bl __register_global_object
 	ldr r1, _02178b60 ; =data_02057200
@@ -14414,7 +14414,7 @@ func_ov22_02178a78: ; 0x02178a78
 _02178b2c: .word data_ov22_0217a454
 _02178b30: .word 0x534e574d
 _02178b34: .word func_ov22_0216f2d4
-_02178b38: .word func_0203e7b4
+_02178b38: .word _ZN9ActorTypeD1Ev
 _02178b3c: .word data_ov22_0217a448
 _02178b40: .word data_ov22_0217a474
 _02178b44: .word 0x534e4d42
@@ -14436,9 +14436,9 @@ func_ov22_02178b68: ; 0x02178b68
 	ldr r1, _02178c74 ; =0x59455449
 	ldr r2, _02178c78 ; =func_ov22_021713bc
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178c70 ; =data_ov22_0217a4b4
-	ldr r1, _02178c7c ; =func_0203e7b4
+	ldr r1, _02178c7c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178c80 ; =data_ov22_0217a4a8
 	bl __register_global_object
 	mov ip, #1
@@ -14501,7 +14501,7 @@ func_ov22_02178b68: ; 0x02178b68
 _02178c70: .word data_ov22_0217a4b4
 _02178c74: .word 0x59455449
 _02178c78: .word func_ov22_021713bc
-_02178c7c: .word func_0203e7b4
+_02178c7c: .word _ZN9ActorTypeD1Ev
 _02178c80: .word data_ov22_0217a4a8
 _02178c84: .word 0x00000b33
 _02178c88: .word 0x00001555
@@ -14517,9 +14517,9 @@ func_ov22_02178c98: ; 0x02178c98
 	ldr r1, _02178cc8 ; =0x48504c50
 	ldr r2, _02178ccc ; =func_ov22_02173758
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178cc4 ; =data_ov22_0217a4e0
-	ldr r1, _02178cd0 ; =func_0203e7b4
+	ldr r1, _02178cd0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178cd4 ; =data_ov22_0217a4d4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14528,7 +14528,7 @@ func_ov22_02178c98: ; 0x02178c98
 _02178cc4: .word data_ov22_0217a4e0
 _02178cc8: .word 0x48504c50
 _02178ccc: .word func_ov22_02173758
-_02178cd0: .word func_0203e7b4
+_02178cd0: .word _ZN9ActorTypeD1Ev
 _02178cd4: .word data_ov22_0217a4d4
 
 	.global func_ov22_02178cd8
@@ -14539,9 +14539,9 @@ func_ov22_02178cd8: ; 0x02178cd8
 	ldr r1, _02178d08 ; =0x484c4d4b
 	ldr r2, _02178d0c ; =func_ov22_021748a0
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178d04 ; =data_ov22_0217a500
-	ldr r1, _02178d10 ; =func_0203e7b4
+	ldr r1, _02178d10 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178d14 ; =data_ov22_0217a4f4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14550,7 +14550,7 @@ func_ov22_02178cd8: ; 0x02178cd8
 _02178d04: .word data_ov22_0217a500
 _02178d08: .word 0x484c4d4b
 _02178d0c: .word func_ov22_021748a0
-_02178d10: .word func_0203e7b4
+_02178d10: .word _ZN9ActorTypeD1Ev
 _02178d14: .word data_ov22_0217a4f4
 
 	.global func_ov22_02178d18
@@ -14561,9 +14561,9 @@ func_ov22_02178d18: ; 0x02178d18
 	ldr r1, _02178d48 ; =0x49434645
 	ldr r2, _02178d4c ; =func_ov22_02174dbc
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178d44 ; =data_ov22_0217a520
-	ldr r1, _02178d50 ; =func_0203e7b4
+	ldr r1, _02178d50 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178d54 ; =data_ov22_0217a514
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14572,7 +14572,7 @@ func_ov22_02178d18: ; 0x02178d18
 _02178d44: .word data_ov22_0217a520
 _02178d48: .word 0x49434645
 _02178d4c: .word func_ov22_02174dbc
-_02178d50: .word func_0203e7b4
+_02178d50: .word _ZN9ActorTypeD1Ev
 _02178d54: .word data_ov22_0217a514
 
 	.global func_ov22_02178d58
@@ -14603,9 +14603,9 @@ func_ov22_02178d90: ; 0x02178d90
 	ldr r1, _02178dc0 ; =0x534e4546
 	ldr r2, _02178dc4 ; =func_ov22_0217562c
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178dbc ; =data_ov22_0217a554
-	ldr r1, _02178dc8 ; =func_0203e7b4
+	ldr r1, _02178dc8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178dcc ; =data_ov22_0217a548
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14614,7 +14614,7 @@ func_ov22_02178d90: ; 0x02178d90
 _02178dbc: .word data_ov22_0217a554
 _02178dc0: .word 0x534e4546
 _02178dc4: .word func_ov22_0217562c
-_02178dc8: .word func_0203e7b4
+_02178dc8: .word _ZN9ActorTypeD1Ev
 _02178dcc: .word data_ov22_0217a548
 
 	.global func_ov22_02178dd0
@@ -14625,9 +14625,9 @@ func_ov22_02178dd0: ; 0x02178dd0
 	ldr r1, _02178e00 ; =0x42524d49
 	ldr r2, _02178e04 ; =func_ov22_02175a78
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178dfc ; =data_ov22_0217a578
-	ldr r1, _02178e08 ; =func_0203e7b4
+	ldr r1, _02178e08 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178e0c ; =data_ov22_0217a56c
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14636,7 +14636,7 @@ func_ov22_02178dd0: ; 0x02178dd0
 _02178dfc: .word data_ov22_0217a578
 _02178e00: .word 0x42524d49
 _02178e04: .word func_ov22_02175a78
-_02178e08: .word func_0203e7b4
+_02178e08: .word _ZN9ActorTypeD1Ev
 _02178e0c: .word data_ov22_0217a56c
 
 	.global func_ov22_02178e10
@@ -14688,9 +14688,9 @@ func_ov22_02178e80: ; 0x02178e80
 	ldr r1, _02178ef8 ; =0x54534e4d
 	ldr r2, _02178efc ; =func_ov22_021769d4
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178ef4 ; =data_ov22_0217a5c0
-	ldr r1, _02178f00 ; =func_0203e7b4
+	ldr r1, _02178f00 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178f04 ; =data_ov22_0217a5b4
 	bl __register_global_object
 	ldr r1, _02178f08 ; =data_02057200
@@ -14716,7 +14716,7 @@ func_ov22_02178e80: ; 0x02178e80
 _02178ef4: .word data_ov22_0217a5c0
 _02178ef8: .word 0x54534e4d
 _02178efc: .word func_ov22_021769d4
-_02178f00: .word func_0203e7b4
+_02178f00: .word _ZN9ActorTypeD1Ev
 _02178f04: .word data_ov22_0217a5b4
 _02178f08: .word data_02057200
 _02178f0c: .word data_ov22_02179d5c
@@ -14769,18 +14769,18 @@ func_ov22_02178f80: ; 0x02178f80
 	ldr r1, _02178fd4 ; =0x59455457
 	ldr r2, _02178fd8 ; =func_ov22_021782d8
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178fd0 ; =data_ov22_0217a60c
-	ldr r1, _02178fdc ; =func_0203e7b4
+	ldr r1, _02178fdc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178fe0 ; =data_ov22_0217a600
 	bl __register_global_object
 	ldr r0, _02178fe4 ; =data_ov22_0217a62c
 	ldr r1, _02178fe8 ; =0x59455442
 	ldr r2, _02178fec ; =func_ov22_02178308
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02178fe4 ; =data_ov22_0217a62c
-	ldr r1, _02178fdc ; =func_0203e7b4
+	ldr r1, _02178fdc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178ff0 ; =data_ov22_0217a620
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -14789,7 +14789,7 @@ func_ov22_02178f80: ; 0x02178f80
 _02178fd0: .word data_ov22_0217a60c
 _02178fd4: .word 0x59455457
 _02178fd8: .word func_ov22_021782d8
-_02178fdc: .word func_0203e7b4
+_02178fdc: .word _ZN9ActorTypeD1Ev
 _02178fe0: .word data_ov22_0217a600
 _02178fe4: .word data_ov22_0217a62c
 _02178fe8: .word 0x59455442

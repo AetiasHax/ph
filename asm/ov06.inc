@@ -1,5 +1,6 @@
 #pragma once
 .extern Divide
+.extern _ZN10ActorRupee5gTypeE
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern data_02068e7c
@@ -93,7 +94,6 @@
 .extern data_ov14_0215b1a0
 .extern data_ov14_0215b1c0
 .extern data_ov14_0215b1e0
-.extern _ZN10ActorRupee5gTypeE
 .extern data_ov14_0215b220
 .extern data_ov14_0215b240
 .extern data_ov14_0215b258

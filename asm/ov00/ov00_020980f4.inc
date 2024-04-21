@@ -56,6 +56,8 @@
 .extern _ZN5Actor8vfunc_b0Ev
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern __register_global_object
@@ -170,8 +172,6 @@
 .extern func_0202ea50
 .extern func_0203005c
 .extern func_0203010c
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0203eba8
 .extern func_0203ebc8
 .extern func_0203fe60

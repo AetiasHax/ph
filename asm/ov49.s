@@ -3496,9 +3496,9 @@ func_ov49_021982c8: ; 0x021982c8
 	ldr r1, _021983d0 ; =0x4c4b4c4b
 	ldr r2, _021983d4 ; =func_ov49_02195500
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021983cc ; =data_ov49_0219892c
-	ldr r1, _021983d8 ; =func_0203e7b4
+	ldr r1, _021983d8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021983dc ; =data_ov49_02198920
 	bl __register_global_object
 	mov r4, #1
@@ -3560,7 +3560,7 @@ func_ov49_021982c8: ; 0x021982c8
 _021983cc: .word data_ov49_0219892c
 _021983d0: .word 0x4c4b4c4b
 _021983d4: .word func_ov49_02195500
-_021983d8: .word func_0203e7b4
+_021983d8: .word _ZN9ActorTypeD1Ev
 _021983dc: .word data_ov49_02198920
 _021983e0: .word 0x00001b33
 _021983e4: .word 0x00001555
@@ -3576,9 +3576,9 @@ func_ov49_021983f4: ; 0x021983f4
 	ldr r1, _02198424 ; =0x4e534844
 	ldr r2, _02198428 ; =func_ov49_0219763c
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02198420 ; =data_ov49_02198958
-	ldr r1, _0219842c ; =func_0203e7b4
+	ldr r1, _0219842c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02198430 ; =data_ov49_0219894c
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -3587,7 +3587,7 @@ func_ov49_021983f4: ; 0x021983f4
 _02198420: .word data_ov49_02198958
 _02198424: .word 0x4e534844
 _02198428: .word func_ov49_0219763c
-_0219842c: .word func_0203e7b4
+_0219842c: .word _ZN9ActorTypeD1Ev
 _02198430: .word data_ov49_0219894c
 
 	.global func_ov49_02198434
@@ -3598,9 +3598,9 @@ func_ov49_02198434: ; 0x02198434
 	ldr r1, _02198464 ; =0x45514152
 	ldr r2, _02198468 ; =func_ov49_02197cf4
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02198460 ; =data_ov49_02198978
-	ldr r1, _0219846c ; =func_0203e7b4
+	ldr r1, _0219846c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02198470 ; =data_ov49_0219896c
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -3609,7 +3609,7 @@ func_ov49_02198434: ; 0x02198434
 _02198460: .word data_ov49_02198978
 _02198464: .word 0x45514152
 _02198468: .word func_ov49_02197cf4
-_0219846c: .word func_0203e7b4
+_0219846c: .word _ZN9ActorTypeD1Ev
 _02198470: .word data_ov49_0219896c
 
 	.section .ctor, 4, 1, 4
