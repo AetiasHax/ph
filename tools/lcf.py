@@ -39,6 +39,11 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/ov00_0207af9c.s',
 
+    'asm/ov00/Map/MapManager.s',
+    'src/00_Core/Map/MapManager.cpp',
+
+    'asm/ov00/ov00_02086cd0.s',
+
     'src/00_Core/Save/AdventureFlags.cpp',
     'asm/ov00/Save/AdventureFlags.s',
 
