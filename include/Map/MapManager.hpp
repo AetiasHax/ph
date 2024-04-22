@@ -5,6 +5,7 @@
 
 #include "lib/math.h"
 
+#include "Map/Course.hpp"
 #include "Physics/AABB.hpp"
 #include "System/SysNew.hpp"
 
@@ -24,16 +25,28 @@ struct MapManager_Unk2 {
     ~MapManager_Unk2();
 };
 
-class MapDataBase : public SysObject {
+class MapBase : public SysObject {
 public:
-    /* 00 */ virtual ~MapDataBase();
+    /* 00 */ virtual ~MapBase();
 
-    MapDataBase();
-    MapDataBase(u32 param1, u32 param2);
+    MapBase();
+    MapBase(u32 param1, u32 param2);
 };
 
 class MapManager : public SysObject {
 public:
+    /* 00 */ Course *mCourse;
+    /* 04 */ MapBase *mMap;
+    /* 08 */ unk8 mUnk_08;
+    /* 09 */ unk8 mUnk_09;
+    /* 0a */ unk8 mUnk_0a;
+    /* 0b */ unk8 mUnk_0b;
+    /* 0c */ unk8 mUnk_0c;
+    /* 0d */ unk8 mUnk_0d;
+    /* 0e */ unk8 mUnk_0e;
+    /* 0f */ unk8 mUnk_0f;
+    /* 10 */
+
     void func_ov00_020820ec(unk32 *param_2);
     void func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4);
     unk8 func_ov00_0208210c(unk32 param_2, unk32 param_3);
