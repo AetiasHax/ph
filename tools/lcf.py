@@ -37,7 +37,12 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/00_Core/Player/TouchControl.cpp',
     'asm/ov00/Player/TouchControl.s',
 
-    'asm/ov00/ov00_0207af9c.s',
+    'asm/ov00/ov00_0207afa0.s',
+
+    'asm/ov00/Map/Course.s',
+    'src/00_Core/Map/Course.cpp',
+
+    'asm/ov00/ov00_0207da38.s',
 
     'asm/ov00/Map/MapManager.s',
     'src/00_Core/Map/MapManager.cpp',

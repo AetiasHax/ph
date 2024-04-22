@@ -21658,6 +21658,1763 @@ data_ov00_020db054: ; 0x020db054
 data_ov00_020db056: ; 0x020db056
 	.byte 0x00, 0x00
 
+    .section .init, 4, 1, 4
+	.global func_ov00_020df640
+	arm_func_start func_ov00_020df640
+func_ov00_020df640: ; 0x020df640
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df668 ; =data_ov00_020ecd50
+	ldr r2, _020df66c ; =func_ov00_0208f69c
+	mov r1, #4
+	bl func_0203eba8
+	ldr r0, _020df668 ; =data_ov00_020ecd50
+	ldr r1, _020df670 ; =func_0203ebc8
+	ldr r2, _020df674 ; =data_ov00_020ecd58
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df640
+_020df668: .word data_ov00_020ecd50
+_020df66c: .word func_ov00_0208f69c
+_020df670: .word func_0203ebc8
+_020df674: .word data_ov00_020ecd58
+
+	.global func_ov00_020df678
+	arm_func_start func_ov00_020df678
+func_ov00_020df678: ; 0x020df678
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df6a4 ; =data_ov00_020ecd70
+	ldr r1, _020df6a8 ; =0x53574f42
+	ldr r2, _020df6ac ; =func_ov00_0208fa70
+	mov r3, #0
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	ldr r0, _020df6a4 ; =data_ov00_020ecd70
+	ldr r1, _020df6b0 ; =_ZN9ActorTypeD1Ev
+	ldr r2, _020df6b4 ; =data_ov00_020ecd64
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df678
+_020df6a4: .word data_ov00_020ecd70
+_020df6a8: .word 0x53574f42
+_020df6ac: .word func_ov00_0208fa70
+_020df6b0: .word _ZN9ActorTypeD1Ev
+_020df6b4: .word data_ov00_020ecd64
+
+	.global func_ov00_020df6b8
+	arm_func_start func_ov00_020df6b8
+func_ov00_020df6b8: ; 0x020df6b8
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df6e4 ; =data_ov00_020ecd90
+	ldr r1, _020df6e8 ; =0x53574453
+	ldr r2, _020df6ec ; =func_ov00_020903a8
+	mov r3, #0
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	ldr r0, _020df6e4 ; =data_ov00_020ecd90
+	ldr r1, _020df6f0 ; =_ZN9ActorTypeD1Ev
+	ldr r2, _020df6f4 ; =data_ov00_020ecd84
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df6b8
+_020df6e4: .word data_ov00_020ecd90
+_020df6e8: .word 0x53574453
+_020df6ec: .word func_ov00_020903a8
+_020df6f0: .word _ZN9ActorTypeD1Ev
+_020df6f4: .word data_ov00_020ecd84
+
+	.global func_ov00_020df6f8
+	arm_func_start func_ov00_020df6f8
+func_ov00_020df6f8: ; 0x020df6f8
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df724 ; =data_ov00_020ecdb0
+	ldr r1, _020df728 ; =0x45564943
+	ldr r2, _020df72c ; =func_ov00_020904f4
+	mov r3, #0
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	ldr r0, _020df724 ; =data_ov00_020ecdb0
+	ldr r1, _020df730 ; =_ZN9ActorTypeD1Ev
+	ldr r2, _020df734 ; =data_ov00_020ecda4
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df6f8
+_020df724: .word data_ov00_020ecdb0
+_020df728: .word 0x45564943
+_020df72c: .word func_ov00_020904f4
+_020df730: .word _ZN9ActorTypeD1Ev
+_020df734: .word data_ov00_020ecda4
+
+	.global func_ov00_020df738
+	arm_func_start func_ov00_020df738
+func_ov00_020df738: ; 0x020df738
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df760 ; =data_ov00_020ecdc4
+	ldr r2, _020df764 ; =func_ov00_02093c9c
+	mov r1, #0x1a
+	bl func_0203eba8
+	ldr r0, _020df760 ; =data_ov00_020ecdc4
+	ldr r1, _020df768 ; =func_0203ebc8
+	ldr r2, _020df76c ; =data_ov00_020ecdcc
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df738
+_020df760: .word data_ov00_020ecdc4
+_020df764: .word func_ov00_02093c9c
+_020df768: .word func_0203ebc8
+_020df76c: .word data_ov00_020ecdcc
+
+	.global func_ov00_020df770
+	arm_func_start func_ov00_020df770
+func_ov00_020df770: ; 0x020df770
+	stmdb sp!, {r3, lr}
+	mov r0, #0x1000
+	mov r1, #0x1e000
+	bl Divide
+	ldr r1, _020df78c ; =data_ov00_020e2fa8
+	str r0, [r1]
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df770
+_020df78c: .word data_ov00_020e2fa8
+
+	.global func_ov00_020df790
+	arm_func_start func_ov00_020df790
+func_ov00_020df790: ; 0x020df790
+	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
+	sub sp, sp, #0x238
+	sub sp, sp, #0x400
+	add r3, sp, #0x600
+	ldr r7, _020e0758 ; =data_ov00_020e30ec
+	mov r0, #0
+	add r3, r3, #8
+	mov r1, #0x3c
+	strh r0, [r3, #0x28]
+	str r1, [r7, #0x20]
+	mov r2, #0xfb
+	mov r10, #1
+	str r2, [r7, #0x24]
+	str r10, [r7, #0x28]
+	ldrsh r2, [r3, #0x28]
+	mov r4, #0xff
+	rsb lr, r4, #0xfd
+	str r0, [r7, #0x2c]
+	strh r0, [r3, #0x10]
+	strh r2, [r7, #0x30]
+	strb r10, [r7, #0x32]
+	add r2, sp, #0x500
+	strb r0, [r7, #0x33]
+	add r2, r2, #8
+	strh r0, [r2, #0xf8]
+	strb r4, [r7, #0x34]
+	strb r0, [r7, #0x35]
+	str r1, [r7, #0x38]
+	str r0, [r7, #0x3c]
+	str r0, [r7, #0x40]
+	ldrsh r3, [r3, #0x10]
+	mov r5, #0x34
+	str lr, [r7, #0x44]
+	strh r3, [r7, #0x48]
+	strb r10, [r7, #0x4a]
+	strb r0, [r7, #0x4b]
+	strb r4, [r7, #0x4c]
+	strb r0, [r7, #0x4d]
+	str r5, [r7, #0x6c]
+	str r0, [r7, #0x70]
+	str r10, [r7, #0x74]
+	ldrsh r3, [r2, #0xf8]
+	str r10, [r7, #0x78]
+	strh r3, [r7, #0x7c]
+	mov r3, #0xfb
+	str r1, [sp, #0x620]
+	str r3, [sp, #0x624]
+	str r10, [sp, #0x628]
+	str r0, [sp, #0x62c]
+	strb r10, [sp, #0x632]
+	strb r0, [sp, #0x633]
+	strb r4, [sp, #0x634]
+	strb r0, [sp, #0x635]
+	str r1, [sp, #0x608]
+	str r0, [sp, #0x60c]
+	str r0, [sp, #0x610]
+	str lr, [sp, #0x614]
+	strb r10, [sp, #0x61a]
+	strb r0, [sp, #0x61b]
+	strb r4, [sp, #0x61c]
+	strb r0, [sp, #0x61d]
+	str r5, [sp, #0x5f0]
+	str r0, [sp, #0x5f4]
+	str r10, [sp, #0x5f8]
+	str r10, [sp, #0x5fc]
+	strb r0, [sp, #0x602]
+	strb r0, [sp, #0x603]
+	strb r4, [sp, #0x604]
+	strb r0, [sp, #0x605]
+	strb r0, [r7, #0x7e]
+	and ip, r0, #0xff
+	strb ip, [r7, #0x7f]
+	and r3, r4, #0xff
+	strh r0, [r2, #0xe0]
+	strb r3, [r7, #0x80]
+	mov r9, #0xb
+	strb ip, [r7, #0x81]
+	str r9, [r7, #0x84]
+	str r0, [r7, #0x88]
+	str r10, [r7, #0x8c]
+	ldrsh r5, [r2, #0xe0]
+	mov r1, #2
+	str r1, [r7, #0x90]
+	strh r0, [r2, #0xc8]
+	strh r5, [r7, #0x94]
+	strb ip, [r7, #0x96]
+	strb ip, [r7, #0x97]
+	strb r3, [r7, #0x98]
+	strb ip, [r7, #0x99]
+	str r9, [r7, #0xb8]
+	str r0, [r7, #0xbc]
+	str r10, [r7, #0xc0]
+	ldrsh r5, [r2, #0xc8]
+	str r1, [r7, #0xc4]
+	strh r5, [r7, #0xc8]
+	strb ip, [r7, #0xca]
+	strb ip, [r7, #0xcb]
+	strb r3, [r7, #0xcc]
+	strb ip, [r7, #0xcd]
+	str r9, [r7, #0xd0]
+	str r1, [sp, #0x5e4]
+	str r1, [sp, #0x5cc]
+	mov r1, #0x1d
+	str r0, [r7, #0xd4]
+	str r9, [sp, #0x5d8]
+	str r0, [sp, #0x5dc]
+	str r10, [sp, #0x5e0]
+	strb r0, [sp, #0x5ea]
+	strb r0, [sp, #0x5eb]
+	strb r4, [sp, #0x5ec]
+	strb r0, [sp, #0x5ed]
+	str r9, [sp, #0x5c0]
+	str r0, [sp, #0x5c4]
+	str r10, [sp, #0x5c8]
+	strb r0, [sp, #0x5d2]
+	strb r0, [sp, #0x5d3]
+	strb r4, [sp, #0x5d4]
+	strb r0, [sp, #0x5d5]
+	str r9, [sp, #0x5a8]
+	str r0, [sp, #0x5ac]
+	str r10, [sp, #0x5b0]
+	str r1, [sp, #0x5b4]
+	strh r0, [r2, #0xb0]
+	strb r0, [sp, #0x5ba]
+	strb r0, [sp, #0x5bb]
+	strb r4, [sp, #0x5bc]
+	strb r0, [sp, #0x5bd]
+	str r10, [r7, #0xd8]
+	ldrsh r5, [r2, #0xb0]
+	mov r6, #2
+	mov r8, r6
+	str r1, [r7, #0xdc]
+	strh r5, [r7, #0xe0]
+	strb ip, [r7, #0xe2]
+	strb ip, [r7, #0xe3]
+	strh r0, [r2, #0x98]
+	strb r3, [r7, #0xe4]
+	strb ip, [r7, #0xe5]
+	str r9, [r7, #0x104]
+	str r0, [r7, #0x108]
+	str r10, [r7, #0x10c]
+	strh r0, [r2, #0x80]
+	ldrsh r5, [r2, #0x98]
+	mov r1, #3
+	ldr r6, _020e075c ; =data_ov00_020e31ec
+	str r1, [r7, #0x110]
+	ldr r1, _020e075c ; =data_ov00_020e31ec
+	str r9, [sp, #0x590]
+	strh r5, [r1, #0x14]
+	mov r1, #0xa
+	strb r1, [r7, #0x116]
+	strb ip, [r7, #0x117]
+	strb r3, [r7, #0x118]
+	strb ip, [r7, #0x119]
+	mov r1, #3
+	str r9, [r7, #0x11c]
+	str r1, [sp, #0x59c]
+	mov r1, #0xa
+	str r0, [r7, #0x120]
+	mov r5, #0x25
+	str r0, [r7, #0x124]
+	strb r1, [sp, #0x5a2]
+	strb r1, [sp, #0x58a]
+	mov r1, #2
+	strb r1, [sp, #0x58b]
+	mov r1, #4
+	str r1, [sp, #0x56c]
+	str r0, [sp, #0x594]
+	str r10, [sp, #0x598]
+	strb r0, [sp, #0x5a3]
+	strb r4, [sp, #0x5a4]
+	strb r0, [sp, #0x5a5]
+	str r9, [sp, #0x578]
+	str r0, [sp, #0x57c]
+	str r0, [sp, #0x580]
+	str lr, [sp, #0x584]
+	strb r4, [sp, #0x58c]
+	strb r0, [sp, #0x58d]
+	str lr, [r7, #0x128]
+	str r5, [sp, #0x560]
+	str r0, [sp, #0x564]
+	str r10, [sp, #0x568]
+	strh r0, [r2, #0x68]
+	mov r1, #2
+	strb r0, [sp, #0x572]
+	strb r4, [sp, #0x574]
+	strb r0, [sp, #0x575]
+	strb r1, [sp, #0x573]
+	ldrsh r1, [r2, #0x80]
+	strh r1, [r6, #0x2c]
+	mov r1, #0xa
+	strb r1, [r7, #0x12e]
+	strb r8, [r7, #0x12f]
+	strb r3, [r7, #0x130]
+	strb ip, [r7, #0x131]
+	str r5, [r7, #0x150]
+	str r0, [r7, #0x154]
+	str r10, [r7, #0x158]
+	mov r1, #4
+	str r1, [r7, #0x15c]
+	str r5, [sp, #0x548]
+	str r0, [sp, #0x54c]
+	str r0, [sp, #0x550]
+	str lr, [sp, #0x554]
+	strh r0, [r2, #0x50]
+	mov r1, #2
+	strb r1, [sp, #0x55b]
+	strb r0, [sp, #0x55a]
+	strb r4, [sp, #0x55c]
+	strb r0, [sp, #0x55d]
+	str r5, [sp, #0x530]
+	str r0, [sp, #0x534]
+	str r10, [sp, #0x538]
+	strh r0, [r2, #0x38]
+	mov r1, #3
+	strb r1, [sp, #0x543]
+	strb r0, [sp, #0x542]
+	strb r4, [sp, #0x544]
+	strb r0, [sp, #0x545]
+	str r5, [sp, #0x518]
+	str r0, [sp, #0x51c]
+	str r0, [sp, #0x520]
+	str lr, [sp, #0x524]
+	strh r0, [r2, #0x20]
+	strb r0, [sp, #0x52a]
+	ldrsh r6, [r2, #0x68]
+	ldr r1, _020e075c ; =data_ov00_020e31ec
+	strh r6, [r1, #0x60]
+	strb ip, [r7, #0x162]
+	strb r8, [r7, #0x163]
+	strb r3, [r7, #0x164]
+	strb ip, [r7, #0x165]
+	str r5, [r7, #0x168]
+	str r0, [r7, #0x16c]
+	str r0, [r7, #0x170]
+	str lr, [r7, #0x174]
+	ldrsh r6, [r2, #0x50]
+	strh r6, [r1, #0x78]
+	strb ip, [r7, #0x17a]
+	strb r8, [r7, #0x17b]
+	strb r3, [r7, #0x17c]
+	strb ip, [r7, #0x17d]
+	str r5, [r7, #0x19c]
+	str r0, [r7, #0x1a0]
+	mov r1, #5
+	str r10, [r7, #0x1a4]
+	str r1, [sp, #0x53c]
+	str r1, [r7, #0x1a8]
+	mov r1, #3
+	mov r11, r1
+	ldrsh r6, [r2, #0x38]
+	ldr r1, _020e075c ; =data_ov00_020e31ec
+	strh r6, [r1, #0xac]
+	strb ip, [r7, #0x1ae]
+	strb r11, [r7, #0x1af]
+	strb r3, [r7, #0x1b0]
+	strb ip, [r7, #0x1b1]
+	str r5, [r7, #0x1b4]
+	str r0, [r7, #0x1b8]
+	str r0, [r7, #0x1bc]
+	ldrsh r1, [r2, #0x20]
+	mov r5, #3
+	add r6, sp, #0x400
+	strb r5, [sp, #0x52b]
+	ldr r5, _020e075c ; =data_ov00_020e31ec
+	str lr, [r7, #0x1c0]
+	strh r1, [r5, #0xc4]
+	mov r1, #0x2b
+	strb r4, [sp, #0x52c]
+	strb r0, [sp, #0x52d]
+	str r1, [sp, #0x500]
+	str r0, [sp, #0x504]
+	str r10, [sp, #0x508]
+	strh r0, [r2, #8]
+	strb r0, [sp, #0x512]
+	strb r10, [sp, #0x513]
+	strb r4, [sp, #0x514]
+	strb r0, [sp, #0x515]
+	str r1, [sp, #0x4e8]
+	str r0, [sp, #0x4ec]
+	str r0, [sp, #0x4f0]
+	str lr, [sp, #0x4f4]
+	add r6, r6, #8
+	strh r0, [r6, #0xf0]
+	strb ip, [r7, #0x1c6]
+	strb r11, [r7, #0x1c7]
+	strb r3, [r7, #0x1c8]
+	strb ip, [r7, #0x1c9]
+	str r1, [r7, #0x1e8]
+	str r0, [r7, #0x1ec]
+	mov r1, #6
+	str r10, [r7, #0x1f0]
+	strb r0, [sp, #0x4fa]
+	strb r10, [sp, #0x4fb]
+	strb r4, [sp, #0x4fc]
+	strb r0, [sp, #0x4fd]
+	str r0, [sp, #0x4d4]
+	str r10, [sp, #0x4d8]
+	str r1, [sp, #0x50c]
+	str r1, [r7, #0x1f4]
+	ldrsh r2, [r2, #8]
+	ldr r1, _020e075c ; =data_ov00_020e31ec
+	and r5, r10, #0xff
+	strh r2, [r1, #0xf8]
+	strb ip, [r7, #0x1fa]
+	strb r5, [r7, #0x1fb]
+	strb r3, [r7, #0x1fc]
+	strb ip, [r7, #0x1fd]
+	mov r1, #0x2b
+	str r1, [r7, #0x200]
+	str r0, [r7, #0x204]
+	str r0, [r7, #0x208]
+	ldrsh r2, [r6, #0xf0]
+	mov r1, #0x2a
+	str r1, [sp, #0x4d0]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	str lr, [r7, #0x20c]
+	strh r2, [r1, #0x10]
+	strb ip, [r7, #0x212]
+	strb r5, [r7, #0x213]
+	strb r3, [r7, #0x214]
+	strb ip, [r7, #0x215]
+	strh r0, [r6, #0xd8]
+	mov r1, #2
+	strb r1, [sp, #0x4e3]
+	mov r1, #0x2a
+	str r1, [r7, #0x234]
+	str r0, [r7, #0x238]
+	str r1, [sp, #0x4b8]
+	strb r0, [sp, #0x4e2]
+	strb r4, [sp, #0x4e4]
+	strb r0, [sp, #0x4e5]
+	str r10, [r7, #0x23c]
+	str r0, [sp, #0x4bc]
+	str r0, [sp, #0x4c0]
+	str lr, [sp, #0x4c4]
+	strh r0, [r6, #0xc0]
+	mov r1, #2
+	strb r1, [sp, #0x4cb]
+	strb r0, [sp, #0x4ca]
+	strb r4, [sp, #0x4cc]
+	strb r0, [sp, #0x4cd]
+	str r0, [sp, #0x4a4]
+	str r10, [sp, #0x4a8]
+	strh r0, [r6, #0xa8]
+	mov r1, #3
+	strb r1, [sp, #0x4b3]
+	mov r1, #7
+	strb r0, [sp, #0x4b2]
+	strb r4, [sp, #0x4b4]
+	strb r0, [sp, #0x4b5]
+	str r1, [sp, #0x4dc]
+	str r1, [r7, #0x240]
+	ldrsh r2, [r6, #0xd8]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	strh r2, [r1, #0x44]
+	strb ip, [r7, #0x246]
+	strb r8, [r7, #0x247]
+	strb r3, [r7, #0x248]
+	strb ip, [r7, #0x249]
+	mov r1, #0x2a
+	str r1, [r7, #0x24c]
+	str r0, [r7, #0x250]
+	str r0, [r7, #0x254]
+	mov r1, #0x2c
+	str r1, [sp, #0x4a0]
+	str lr, [r7, #0x258]
+	ldrsh r2, [r6, #0xc0]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	strh r2, [r1, #0x5c]
+	strb ip, [r7, #0x25e]
+	strb r8, [r7, #0x25f]
+	strb r3, [r7, #0x260]
+	strb ip, [r7, #0x261]
+	mov r1, #0x2c
+	str r1, [r7, #0x280]
+	str r0, [r7, #0x284]
+	mov r1, #8
+	str r10, [r7, #0x288]
+	str r1, [sp, #0x4ac]
+	str r1, [r7, #0x28c]
+	ldrsh r2, [r6, #0xa8]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	strh r2, [r1, #0x90]
+	strb ip, [r7, #0x292]
+	strb r11, [r7, #0x293]
+	strb r3, [r7, #0x294]
+	strb ip, [r7, #0x295]
+	mov r1, #0x2c
+	str r1, [sp, #0x488]
+	str r1, [r7, #0x298]
+	strh r0, [r6, #0x90]
+	str r0, [r7, #0x29c]
+	str r0, [r7, #0x2a0]
+	ldrsh r2, [r6, #0x90]
+	mov r1, #3
+	strb r1, [sp, #0x49b]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	str lr, [r7, #0x2a4]
+	strh r2, [r1, #0xa8]
+	mov r1, #0xc
+	str r0, [sp, #0x48c]
+	str r0, [sp, #0x490]
+	str lr, [sp, #0x494]
+	strb r0, [sp, #0x49a]
+	strb r4, [sp, #0x49c]
+	strb r0, [sp, #0x49d]
+	str r1, [sp, #0x470]
+	str r0, [sp, #0x474]
+	str r10, [sp, #0x478]
+	strh r0, [r6, #0x78]
+	str r1, [sp, #0x458]
+	mov r1, #0xa
+	str r1, [sp, #0x464]
+	strb r0, [sp, #0x482]
+	strb r0, [sp, #0x483]
+	strb r4, [sp, #0x484]
+	strb r0, [sp, #0x485]
+	str r0, [sp, #0x45c]
+	str r10, [sp, #0x460]
+	strh r0, [r6, #0x60]
+	strb ip, [r7, #0x2aa]
+	strb r11, [r7, #0x2ab]
+	strb r3, [r7, #0x2ac]
+	strb ip, [r7, #0x2ad]
+	mov r1, #0xc
+	str r1, [r7, #0x2cc]
+	str r0, [r7, #0x2d0]
+	mov r1, #9
+	str r10, [r7, #0x2d4]
+	strb r0, [sp, #0x46a]
+	strb r0, [sp, #0x46b]
+	strb r4, [sp, #0x46c]
+	strb r0, [sp, #0x46d]
+	str r1, [sp, #0x47c]
+	str r1, [r7, #0x2d8]
+	ldrsh r2, [r6, #0x78]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	strh r2, [r1, #0xdc]
+	strb ip, [r7, #0x2de]
+	strb ip, [r7, #0x2df]
+	strb r3, [r7, #0x2e0]
+	strb ip, [r7, #0x2e1]
+	mov r1, #0xc
+	str r1, [r7, #0x2e4]
+	str r0, [r7, #0x2e8]
+	str r10, [r7, #0x2ec]
+	mov r1, #0xa
+	str r1, [r7, #0x2f0]
+	ldrsh r2, [r6, #0x60]
+	ldr r1, _020e0760 ; =data_ov00_020e32ec
+	strh r2, [r1, #0xf4]
+	strb ip, [r7, #0x2f6]
+	strb ip, [r7, #0x2f7]
+	strb r3, [r7, #0x2f8]
+	strb ip, [r7, #0x2f9]
+	strh r0, [r6, #0x48]
+	mov r1, #0xc
+	str r1, [r7, #0x318]
+	str r0, [r7, #0x31c]
+	str r10, [r7, #0x320]
+	ldrsh r2, [r6, #0x48]
+	str r1, [sp, #0x440]
+	mov r1, #0xa
+	str r0, [sp, #0x444]
+	str r10, [sp, #0x448]
+	str r1, [sp, #0x44c]
+	str r1, [r7, #0x324]
+	strb r0, [sp, #0x452]
+	strb r0, [sp, #0x453]
+	strb r4, [sp, #0x454]
+	strb r0, [sp, #0x455]
+	str r0, [sp, #0x428]
+	str r10, [sp, #0x42c]
+	str r0, [sp, #0x430]
+	str lr, [sp, #0x434]
+	strh r0, [r6, #0x30]
+	strb r0, [sp, #0x43a]
+	strb r10, [sp, #0x43b]
+	strb r4, [sp, #0x43c]
+	strb r0, [sp, #0x43d]
+	str r0, [sp, #0x414]
+	str r10, [sp, #0x418]
+	str r9, [sp, #0x41c]
+	strh r0, [r6, #0x18]
+	mov r1, #4
+	strb r1, [sp, #0x422]
+	ldr r1, _020e0764 ; =data_ov00_020e33ec
+	strb r0, [sp, #0x423]
+	strh r2, [r1, #0x28]
+	strb ip, [r7, #0x32a]
+	strb ip, [r7, #0x32b]
+	strb r3, [r7, #0x32c]
+	strb ip, [r7, #0x32d]
+	str r0, [r7, #0x330]
+	str r10, [r7, #0x334]
+	str r0, [r7, #0x338]
+	strb r4, [sp, #0x424]
+	strb r0, [sp, #0x425]
+	str lr, [r7, #0x33c]
+	ldrsh r2, [r6, #0x30]
+	strh r2, [r1, #0x40]
+	strb ip, [r7, #0x342]
+	strb r5, [r7, #0x343]
+	strb r3, [r7, #0x344]
+	mov r1, #0x29
+	strb ip, [r7, #0x345]
+	str r1, [r7, #0x364]
+	str r0, [r7, #0x368]
+	str r1, [sp, #0x410]
+	str r10, [r7, #0x36c]
+	str r1, [sp, #0x3f8]
+	mov r1, #0xc
+	str r1, [sp, #0x404]
+	mov r1, #4
+	strb r1, [sp, #0x40a]
+	mov r1, #0x29
+	str r1, [sp, #0x3e0]
+	mov r1, #0xc
+	str r1, [sp, #0x3ec]
+	str r9, [r7, #0x370]
+	str r0, [sp, #0x3e4]
+	str r10, [sp, #0x3e8]
+	add r5, sp, #0x308
+	strh r0, [r5, #0xe8]
+	mov r1, #4
+	strb r1, [sp, #0x3f2]
+	strb r0, [sp, #0x3f3]
+	strb r4, [sp, #0x3f4]
+	strb r0, [sp, #0x3f5]
+	str r1, [sp, #0x3c8]
+	str r0, [sp, #0x3cc]
+	str r0, [sp, #0x3d0]
+	str lr, [sp, #0x3d4]
+	strh r0, [r5, #0xd0]
+	strb r0, [sp, #0x3da]
+	strb r0, [sp, #0x3db]
+	strb r4, [sp, #0x3dc]
+	strb r0, [sp, #0x3dd]
+	ldrsh r1, [r6, #0x18]
+	ldr r2, _020e0764 ; =data_ov00_020e33ec
+	strh r0, [r6]
+	str r1, [sp]
+	mov r1, #4
+	mov r1, r1
+	str r1, [sp, #4]
+	ldr r1, [sp]
+	str r0, [sp, #0x3fc]
+	strh r1, [r2, #0x74]
+	ldr r1, [sp, #4]
+	ldrsh r2, [r6]
+	strb r1, [r7, #0x376]
+	strb ip, [r7, #0x377]
+	strb r3, [r7, #0x378]
+	strb ip, [r7, #0x379]
+	mov r1, #0x29
+	str r1, [r7, #0x37c]
+	str r0, [r7, #0x380]
+	str r10, [r7, #0x384]
+	mov r1, #0xc
+	str r1, [r7, #0x388]
+	ldr r1, _020e0764 ; =data_ov00_020e33ec
+	str r10, [sp, #0x400]
+	strh r2, [r1, #0x8c]
+	ldr r1, [sp, #4]
+	strb r0, [sp, #0x40b]
+	strb r1, [r7, #0x38e]
+	strb ip, [r7, #0x38f]
+	strb r3, [r7, #0x390]
+	strb ip, [r7, #0x391]
+	mov r1, #0x29
+	str r1, [r7, #0x3b0]
+	str r0, [r7, #0x3b4]
+	str r10, [r7, #0x3b8]
+	mov r1, #0xc
+	str r1, [r7, #0x3bc]
+	ldrsh r2, [r5, #0xe8]
+	ldr r1, _020e0764 ; =data_ov00_020e33ec
+	strb r4, [sp, #0x40c]
+	strh r2, [r1, #0xc0]
+	ldr r1, [sp, #4]
+	strb r0, [sp, #0x40d]
+	strb r1, [r7, #0x3c2]
+	strb ip, [r7, #0x3c3]
+	strb r3, [r7, #0x3c4]
+	strb ip, [r7, #0x3c5]
+	mov r1, #4
+	str r1, [r7, #0x3c8]
+	str r0, [r7, #0x3cc]
+	str r0, [r7, #0x3d0]
+	ldrsh r2, [r5, #0xd0]
+	ldr r1, _020e0764 ; =data_ov00_020e33ec
+	str lr, [r7, #0x3d4]
+	strh r2, [r1, #0xd8]
+	strb ip, [r7, #0x3da]
+	strb ip, [r7, #0x3db]
+	strb r3, [r7, #0x3dc]
+	str r0, [sp, #0x3b4]
+	strb ip, [r7, #0x3dd]
+	strh r0, [r5, #0xb8]
+	mov r1, #0x2d
+	str r1, [r7, #0x3fc]
+	str r0, [r7, #0x400]
+	mov r2, #0x2d
+	mov r1, #0xd
+	str r2, [sp, #0x3b0]
+	mov r2, #2
+	str r10, [r7, #0x404]
+	str r10, [sp, #0x3b8]
+	str r1, [sp, #0x3bc]
+	str r1, [r7, #0x408]
+	strb r0, [sp, #0x3c2]
+	strb r2, [sp, #0x3c3]
+	strb r4, [sp, #0x3c4]
+	strb r0, [sp, #0x3c5]
+	strh r0, [r5, #0xa0]
+	mov r1, #0x2d
+	str r1, [sp, #0x398]
+	mov r1, r2
+	strb r1, [sp, #0x3ab]
+	mov r1, #0x2e
+	str r1, [sp, #0x380]
+	str r0, [sp, #0x39c]
+	str r0, [sp, #0x3a0]
+	str lr, [sp, #0x3a4]
+	strb r0, [sp, #0x3aa]
+	strb r4, [sp, #0x3ac]
+	strb r0, [sp, #0x3ad]
+	str r0, [sp, #0x384]
+	str r10, [sp, #0x388]
+	strh r0, [r5, #0x88]
+	strb r0, [sp, #0x392]
+	ldrsh r2, [r5, #0xb8]
+	ldr r1, _020e0768 ; =data_ov00_020e34ec
+	strh r2, [r1, #0xc]
+	strb ip, [r7, #0x40e]
+	strb r8, [r7, #0x40f]
+	strb r3, [r7, #0x410]
+	strb ip, [r7, #0x411]
+	mov r1, #0x2d
+	str r1, [r7, #0x414]
+	str r0, [r7, #0x418]
+	str r0, [r7, #0x41c]
+	str lr, [r7, #0x420]
+	ldrsh r2, [r5, #0xa0]
+	ldr r1, _020e0768 ; =data_ov00_020e34ec
+	strh r2, [r1, #0x24]
+	strb ip, [r7, #0x426]
+	strb r8, [r7, #0x427]
+	strb r3, [r7, #0x428]
+	mov r1, #0xe
+	strb ip, [r7, #0x429]
+	str r1, [sp, #0x38c]
+	mov r2, #2
+	strb r2, [sp, #0x393]
+	mov r2, #0x2e
+	str r2, [r7, #0x448]
+	str r0, [r7, #0x44c]
+	str r10, [r7, #0x450]
+	str r1, [r7, #0x454]
+	mov r1, r2
+	str r1, [sp, #0x368]
+	strb r4, [sp, #0x394]
+	strb r0, [sp, #0x395]
+	str r0, [sp, #0x36c]
+	str r0, [sp, #0x370]
+	str lr, [sp, #0x374]
+	strh r0, [r5, #0x70]
+	mov r1, #2
+	strb r1, [sp, #0x37b]
+	strb r0, [sp, #0x37a]
+	strb r4, [sp, #0x37c]
+	strb r0, [sp, #0x37d]
+	str r0, [sp, #0x354]
+	str r10, [sp, #0x358]
+	strh r0, [r5, #0x58]
+	mov r1, #3
+	strb r1, [sp, #0x363]
+	strb r0, [sp, #0x362]
+	strb r4, [sp, #0x364]
+	strb r0, [sp, #0x365]
+	str r0, [sp, #0x33c]
+	str r0, [sp, #0x340]
+	ldrsh r2, [r5, #0x88]
+	ldr r1, _020e0768 ; =data_ov00_020e34ec
+	strh r2, [r1, #0x58]
+	strb ip, [r7, #0x45a]
+	strb r8, [r7, #0x45b]
+	strb r3, [r7, #0x45c]
+	strb ip, [r7, #0x45d]
+	mov r1, #0x2e
+	str r1, [r7, #0x460]
+	mov r1, #0x2f
+	str r0, [r7, #0x464]
+	str r0, [r7, #0x468]
+	str lr, [r7, #0x46c]
+	str r1, [sp, #0x350]
+	str r1, [sp, #0x338]
+	ldrsh r2, [r5, #0x70]
+	ldr r1, _020e0768 ; =data_ov00_020e34ec
+	strh r2, [r1, #0x70]
+	strb ip, [r7, #0x472]
+	strb r8, [r7, #0x473]
+	strb r3, [r7, #0x474]
+	strb ip, [r7, #0x475]
+	mov r1, #0x2f
+	str r1, [r7, #0x494]
+	str r0, [r7, #0x498]
+	mov r1, #0xf
+	str r10, [r7, #0x49c]
+	str r1, [sp, #0x35c]
+	str r1, [r7, #0x4a0]
+	ldrsh r2, [r5, #0x58]
+	ldr r1, _020e0768 ; =data_ov00_020e34ec
+	strh r2, [r1, #0xa4]
+	strb ip, [r7, #0x4a6]
+	strb r11, [r7, #0x4a7]
+	strb r3, [r7, #0x4a8]
+	strb ip, [r7, #0x4a9]
+	mov r1, #0x2f
+	str r1, [r7, #0x4ac]
+	strh r0, [r5, #0x40]
+	str r0, [r7, #0x4b0]
+	str r0, [r7, #0x4b4]
+	ldrsh r1, [r5, #0x40]
+	mov r2, #3
+	strb r2, [sp, #0x34b]
+	ldr r2, _020e0768 ; =data_ov00_020e34ec
+	str lr, [r7, #0x4b8]
+	strh r1, [r2, #0xbc]
+	str lr, [sp, #0x344]
+	strb r0, [sp, #0x34a]
+	strb r4, [sp, #0x34c]
+	strb r0, [sp, #0x34d]
+	strb ip, [r7, #0x4be]
+	strh r0, [r5, #0x28]
+	strb r11, [r7, #0x4bf]
+	strb r3, [r7, #0x4c0]
+	strb ip, [r7, #0x4c1]
+	str r9, [r7, #0x4e0]
+	str r0, [r7, #0x4e4]
+	str r10, [r7, #0x4e8]
+	strh r0, [r5, #0x10]
+	ldrsh r1, [r5, #0x28]
+	mov r2, #0x10
+	str r2, [sp, #0x32c]
+	str r2, [r7, #0x4ec]
+	ldr r2, _020e0768 ; =data_ov00_020e34ec
+	str r9, [sp, #0x320]
+	strh r1, [r2, #0xf0]
+	mov r1, #0xa
+	mov r6, r1
+	strb r6, [r7, #0x4f2]
+	strb r8, [r7, #0x4f3]
+	strb r3, [r7, #0x4f4]
+	strb ip, [r7, #0x4f5]
+	str r9, [r7, #0x4f8]
+	str r0, [r7, #0x4fc]
+	str r0, [sp, #0x324]
+	str r10, [sp, #0x328]
+	str r0, [r7, #0x500]
+	ldrsh r1, [r5, #0x10]
+	ldr r2, _020e076c ; =data_ov00_020e35ec
+	str lr, [r7, #0x504]
+	strh r1, [r2, #8]
+	strb r6, [r7, #0x50a]
+	strb r8, [r7, #0x50b]
+	strb r3, [r7, #0x50c]
+	mov r1, #0xa
+	strb r1, [sp, #0x332]
+	mov r1, #2
+	strb r1, [sp, #0x333]
+	mov r1, #0xa
+	strb r1, [sp, #0x31a]
+	mov r1, #2
+	strb r4, [sp, #0x334]
+	strb r0, [sp, #0x335]
+	str r9, [sp, #0x308]
+	str r0, [sp, #0x30c]
+	str r0, [sp, #0x310]
+	str lr, [sp, #0x314]
+	strb r1, [sp, #0x31b]
+	strb r4, [sp, #0x31c]
+	strb r0, [sp, #0x31d]
+	strb ip, [r7, #0x50d]
+	add r5, sp, #0x208
+	mov r8, #0x31
+	strh r0, [r5, #0xf8]
+	str r8, [r7, #0x52c]
+	str r0, [r7, #0x530]
+	str r10, [r7, #0x534]
+	ldrsh r1, [r5, #0xf8]
+	mov r6, #0x11
+	str r6, [r7, #0x538]
+	str r8, [sp, #0x2f0]
+	strh r1, [r2, #0x3c]
+	strh r0, [r5, #0xe0]
+	strb ip, [r7, #0x53e]
+	strb ip, [r7, #0x53f]
+	strb r3, [r7, #0x540]
+	strb ip, [r7, #0x541]
+	mov r8, #4
+	str r8, [r7, #0x544]
+	str r0, [r7, #0x548]
+	str r10, [r7, #0x54c]
+	strh r0, [r5, #0xc8]
+	ldrsh r8, [r5, #0xe0]
+	mov r1, #0x12
+	str r1, [r7, #0x550]
+	str r6, [sp, #0x2fc]
+	strh r8, [r2, #0x54]
+	strb ip, [r7, #0x556]
+	strb ip, [r7, #0x557]
+	strb r3, [r7, #0x558]
+	strb ip, [r7, #0x559]
+	mov r6, #4
+	str r6, [r7, #0x578]
+	str r0, [r7, #0x57c]
+	str r10, [r7, #0x580]
+	ldrsh r6, [r5, #0xc8]
+	str r1, [r7, #0x584]
+	strh r6, [r2, #0x88]
+	mov r6, #4
+	str r0, [sp, #0x2f4]
+	str r10, [sp, #0x2f8]
+	strb r0, [sp, #0x302]
+	strb r0, [sp, #0x303]
+	strb r4, [sp, #0x304]
+	strb r0, [sp, #0x305]
+	str r6, [sp, #0x2d8]
+	str r0, [sp, #0x2dc]
+	str r10, [sp, #0x2e0]
+	str r1, [sp, #0x2e4]
+	strb r0, [sp, #0x2ea]
+	strb r0, [sp, #0x2eb]
+	strb r4, [sp, #0x2ec]
+	strb r0, [sp, #0x2ed]
+	str r6, [sp, #0x2c0]
+	str r0, [sp, #0x2c4]
+	str r10, [sp, #0x2c8]
+	str r1, [sp, #0x2cc]
+	strb r0, [sp, #0x2d2]
+	strb r0, [sp, #0x2d3]
+	strb r4, [sp, #0x2d4]
+	strb r0, [sp, #0x2d5]
+	strb ip, [r7, #0x58a]
+	strb ip, [r7, #0x58b]
+	strh r0, [r5, #0xb0]
+	strb r3, [r7, #0x58c]
+	strb ip, [r7, #0x58d]
+	mov r1, #0x37
+	str r1, [r7, #0x590]
+	str r0, [r7, #0x594]
+	str r10, [r7, #0x598]
+	strh r0, [r5, #0x98]
+	ldrsh r6, [r5, #0xb0]
+	mov r8, #0x37
+	mov r1, #0x33
+	str r8, [sp, #0x2a8]
+	mov r8, #0x19
+	str r0, [sp, #0x2ac]
+	str r10, [sp, #0x2b0]
+	str r8, [sp, #0x2b4]
+	strb r0, [sp, #0x2ba]
+	strb r0, [sp, #0x2bb]
+	strb r4, [sp, #0x2bc]
+	strb r0, [sp, #0x2bd]
+	str r8, [r7, #0x59c]
+	strh r6, [r2, #0xa0]
+	strb ip, [r7, #0x5a2]
+	strb ip, [r7, #0x5a3]
+	strb r3, [r7, #0x5a4]
+	strb ip, [r7, #0x5a5]
+	str r1, [r7, #0x5c4]
+	str r0, [r7, #0x5c8]
+	mov r6, #0x13
+	str r1, [sp, #0x290]
+	str r0, [sp, #0x294]
+	str r10, [sp, #0x298]
+	str r6, [sp, #0x29c]
+	strb r0, [sp, #0x2a2]
+	strb r0, [sp, #0x2a3]
+	strb r4, [sp, #0x2a4]
+	strb r0, [sp, #0x2a5]
+	str r10, [r7, #0x5cc]
+	str r6, [r7, #0x5d0]
+	ldrsh r8, [r5, #0x98]
+	mov r6, #0xfb
+	str r1, [sp, #0x278]
+	str r6, [sp, #0x27c]
+	strh r8, [r2, #0xd4]
+	strb ip, [r7, #0x5d6]
+	strb ip, [r7, #0x5d7]
+	strb r3, [r7, #0x5d8]
+	strb ip, [r7, #0x5d9]
+	str r1, [r7, #0x5dc]
+	str r6, [r7, #0x5e0]
+	mov r6, #0x1c
+	str r10, [sp, #0x280]
+	str r6, [sp, #0x284]
+	strh r0, [r5, #0x80]
+	strb r0, [sp, #0x28a]
+	strb r0, [sp, #0x28b]
+	strb r4, [sp, #0x28c]
+	strb r0, [sp, #0x28d]
+	str r10, [r7, #0x5e4]
+	str r6, [r7, #0x5e8]
+	str r0, [sp, #0x264]
+	str r10, [sp, #0x268]
+	strh r0, [r5, #0x68]
+	strb r0, [sp, #0x272]
+	strb r0, [sp, #0x273]
+	strb r4, [sp, #0x274]
+	strb r0, [sp, #0x275]
+	str r0, [sp, #0x24c]
+	str r10, [sp, #0x250]
+	strh r0, [r5, #0x50]
+	strb r0, [sp, #0x25a]
+	strb r0, [sp, #0x25b]
+	strb r4, [sp, #0x25c]
+	strb r0, [sp, #0x25d]
+	str r0, [sp, #0x234]
+	str r10, [sp, #0x238]
+	strh r0, [r5, #0x38]
+	strb r0, [sp, #0x242]
+	strb r0, [sp, #0x243]
+	strb r4, [sp, #0x244]
+	strb r0, [sp, #0x245]
+	ldrsh r6, [r5, #0x80]
+	strh r6, [r2, #0xec]
+	strb ip, [r7, #0x5ee]
+	strb ip, [r7, #0x5ef]
+	mov r2, #0x36
+	str r2, [sp, #0x260]
+	str r2, [sp, #0x248]
+	str r2, [sp, #0x230]
+	strb r3, [r7, #0x5f0]
+	strb ip, [r7, #0x5f1]
+	str r2, [r7, #0x610]
+	str r0, [r7, #0x614]
+	str r10, [r7, #0x618]
+	mov r2, #0x14
+	str r2, [sp, #0x26c]
+	str r2, [r7, #0x61c]
+	ldrsh r6, [r5, #0x68]
+	ldr r2, _020e0770 ; =data_ov00_020e36ec
+	strh r6, [r2, #0x20]
+	strb ip, [r7, #0x622]
+	strb ip, [r7, #0x623]
+	strb r3, [r7, #0x624]
+	strb ip, [r7, #0x625]
+	mov r2, #0x36
+	str r2, [r7, #0x628]
+	str r0, [r7, #0x62c]
+	str r10, [r7, #0x630]
+	mov r2, #0x15
+	str r2, [sp, #0x254]
+	str r2, [r7, #0x634]
+	str r2, [sp, #0x23c]
+	ldrsh r8, [r5, #0x50]
+	ldr r6, _020e0770 ; =data_ov00_020e36ec
+	strh r8, [r6, #0x38]
+	strb ip, [r7, #0x63a]
+	strb ip, [r7, #0x63b]
+	strb r3, [r7, #0x63c]
+	strb ip, [r7, #0x63d]
+	mov r6, #0x36
+	str r6, [r7, #0x65c]
+	str r0, [r7, #0x660]
+	str r10, [r7, #0x664]
+	str r2, [r7, #0x668]
+	mov r2, r6
+	str r2, [sp, #0x218]
+	str r0, [sp, #0x21c]
+	str r0, [sp, #0x220]
+	str lr, [sp, #0x224]
+	strh r0, [r5, #0x20]
+	strb r0, [sp, #0x22a]
+	strb r0, [sp, #0x22b]
+	strb r4, [sp, #0x22c]
+	strb r0, [sp, #0x22d]
+	str r0, [sp, #0x204]
+	str r10, [sp, #0x208]
+	strh r0, [r5, #8]
+	mov r2, #4
+	strb r2, [sp, #0x213]
+	strb r0, [sp, #0x212]
+	strb r4, [sp, #0x214]
+	strb r0, [sp, #0x215]
+	str r0, [sp, #0x1ec]
+	str r0, [sp, #0x1f0]
+	str lr, [sp, #0x1f4]
+	add r2, sp, #0x108
+	strh r0, [r2, #0xf0]
+	strb r0, [sp, #0x1fa]
+	ldrsh r8, [r5, #0x38]
+	ldr r6, _020e0770 ; =data_ov00_020e36ec
+	strh r8, [r6, #0x6c]
+	strb ip, [r7, #0x66e]
+	strb ip, [r7, #0x66f]
+	strb r3, [r7, #0x670]
+	strb ip, [r7, #0x671]
+	mov r6, #0x36
+	str r6, [r7, #0x674]
+	str r0, [r7, #0x678]
+	str r0, [r7, #0x67c]
+	str lr, [r7, #0x680]
+	ldrsh r8, [r5, #0x20]
+	ldr r6, _020e0770 ; =data_ov00_020e36ec
+	b _020e0774
+	.align 2, 0
+	arm_func_end func_ov00_020df790
+_020e0758: .word data_ov00_020e30ec
+_020e075c: .word data_ov00_020e31ec
+_020e0760: .word data_ov00_020e32ec
+_020e0764: .word data_ov00_020e33ec
+_020e0768: .word data_ov00_020e34ec
+_020e076c: .word data_ov00_020e35ec
+_020e0770: .word data_ov00_020e36ec
+_020e0774:
+	strh r8, [r6, #0x84]
+	strb ip, [r7, #0x686]
+	strb ip, [r7, #0x687]
+	strb r3, [r7, #0x688]
+	strb ip, [r7, #0x689]
+	mov r6, #0x26
+	str r6, [sp, #0x200]
+	str r6, [r7, #0x6a8]
+	str r0, [r7, #0x6ac]
+	str r10, [r7, #0x6b0]
+	str r6, [sp, #0x1e8]
+	mov r6, #0x16
+	str r6, [sp, #0x20c]
+	str r6, [r7, #0x6b4]
+	ldrsh r6, [r5, #8]
+	ldr r5, _020e0770 ; =data_ov00_020e36ec
+	strh r6, [r5, #0xb8]
+	ldr r5, [sp, #4]
+	strb ip, [r7, #0x6ba]
+	strb r5, [r7, #0x6bb]
+	strb r3, [r7, #0x6bc]
+	strb ip, [r7, #0x6bd]
+	mov r5, #0x26
+	str r5, [r7, #0x6c0]
+	mov r5, #4
+	strb r5, [sp, #0x1fb]
+	strb r4, [sp, #0x1fc]
+	strb r0, [sp, #0x1fd]
+	str r0, [r7, #0x6c4]
+	str r0, [r7, #0x6c8]
+	str lr, [r7, #0x6cc]
+	mov r5, #0xfb
+	str r5, [sp, #0x1d4]
+	str r10, [sp, #0x1d8]
+	strh r0, [r2, #0xd8]
+	str r5, [sp, #0x1bc]
+	strb r0, [sp, #0x1e2]
+	strb r0, [sp, #0x1e3]
+	strb r4, [sp, #0x1e4]
+	strb r0, [sp, #0x1e5]
+	str r10, [sp, #0x1c0]
+	strh r0, [r2, #0xc0]
+	strb r0, [sp, #0x1ca]
+	strb r0, [sp, #0x1cb]
+	strb r4, [sp, #0x1cc]
+	strb r0, [sp, #0x1cd]
+	str r1, [sp, #0x1a0]
+	str r0, [sp, #0x1a4]
+	str r10, [sp, #0x1a8]
+	ldrsh r6, [r2, #0xf0]
+	ldr r5, _020e0770 ; =data_ov00_020e36ec
+	strh r6, [r5, #0xd0]
+	ldr r5, [sp, #4]
+	strb ip, [r7, #0x6d2]
+	strb r5, [r7, #0x6d3]
+	strb r3, [r7, #0x6d4]
+	strb ip, [r7, #0x6d5]
+	mov r6, #0x35
+	str r6, [sp, #0x1d0]
+	str r6, [r7, #0x6f4]
+	mov r5, #0xfb
+	str r5, [r7, #0x6f8]
+	str r10, [r7, #0x6fc]
+	mov r5, #0x17
+	str r6, [sp, #0x1b8]
+	str r5, [sp, #0x1dc]
+	str r5, [r7, #0x700]
+	str r5, [sp, #0x1c4]
+	ldrsh r8, [r2, #0xd8]
+	ldr r5, _020e0e94 ; =data_ov00_020e37ec
+	strh r8, [r5, #4]
+	strb ip, [r7, #0x706]
+	strb ip, [r7, #0x707]
+	strb r3, [r7, #0x708]
+	strb ip, [r7, #0x709]
+	str r6, [r7, #0x70c]
+	mov r6, #0xfb
+	str r6, [r7, #0x710]
+	str r10, [r7, #0x714]
+	mov r6, #0x17
+	str r6, [r7, #0x718]
+	ldrsh r6, [r2, #0xc0]
+	strh r6, [r5, #0x1c]
+	strb ip, [r7, #0x71e]
+	strb ip, [r7, #0x71f]
+	strb r3, [r7, #0x720]
+	strb ip, [r7, #0x721]
+	strh r0, [r2, #0xa8]
+	strb r0, [sp, #0x1b2]
+	strb r0, [sp, #0x1b3]
+	strb r4, [sp, #0x1b4]
+	strb r0, [sp, #0x1b5]
+	str r1, [r7, #0x740]
+	str r0, [r7, #0x744]
+	str r10, [r7, #0x748]
+	str r1, [sp, #0x188]
+	str r0, [sp, #0x18c]
+	str r10, [sp, #0x190]
+	strh r0, [r2, #0x90]
+	mov r6, #0x37
+	str r6, [sp, #0x170]
+	mov r6, #0x19
+	str r6, [sp, #0x17c]
+	strb r0, [sp, #0x19a]
+	strb r0, [sp, #0x19b]
+	strb r4, [sp, #0x19c]
+	strb r0, [sp, #0x19d]
+	str r0, [sp, #0x174]
+	str r10, [sp, #0x178]
+	strh r0, [r2, #0x78]
+	mov r6, #0x18
+	strb r0, [sp, #0x182]
+	strb r0, [sp, #0x183]
+	strb r4, [sp, #0x184]
+	strb r0, [sp, #0x185]
+	str r6, [sp, #0x1ac]
+	str r6, [r7, #0x74c]
+	ldrsh r6, [r2, #0xa8]
+	strh r6, [r5, #0x50]
+	strb ip, [r7, #0x752]
+	strb ip, [r7, #0x753]
+	strb r3, [r7, #0x754]
+	strb ip, [r7, #0x755]
+	str r1, [r7, #0x758]
+	str r0, [r7, #0x75c]
+	str r10, [r7, #0x760]
+	mov r6, #0x1a
+	str r6, [sp, #0x194]
+	str r6, [r7, #0x764]
+	ldrsh r8, [r2, #0x90]
+	strh r8, [r5, #0x68]
+	strb ip, [r7, #0x76a]
+	strb ip, [r7, #0x76b]
+	strb r3, [r7, #0x76c]
+	strb ip, [r7, #0x76d]
+	mov r8, #0x37
+	str r8, [r7, #0x78c]
+	str r0, [r7, #0x790]
+	str r10, [r7, #0x794]
+	mov r8, #0x19
+	str r8, [r7, #0x798]
+	ldrsh r8, [r2, #0x78]
+	strh r8, [r5, #0x9c]
+	strb ip, [r7, #0x79e]
+	strb ip, [r7, #0x79f]
+	strb r3, [r7, #0x7a0]
+	strb ip, [r7, #0x7a1]
+	str r0, [sp, #0x15c]
+	str r0, [sp, #0x160]
+	str lr, [sp, #0x164]
+	strh r0, [r2, #0x60]
+	strb r0, [sp, #0x16a]
+	strb r0, [sp, #0x16b]
+	strb r4, [sp, #0x16c]
+	strb r0, [sp, #0x16d]
+	str r1, [sp, #0x140]
+	str r0, [sp, #0x144]
+	str r10, [sp, #0x148]
+	str r6, [sp, #0x14c]
+	strh r0, [r2, #0x48]
+	strb r0, [sp, #0x152]
+	strb r0, [sp, #0x153]
+	strb r4, [sp, #0x154]
+	strb r0, [sp, #0x155]
+	str r1, [sp, #0x128]
+	str r0, [sp, #0x12c]
+	str r10, [sp, #0x130]
+	strh r0, [r2, #0x30]
+	mov r8, #0x32
+	strb r0, [sp, #0x13a]
+	strb r0, [sp, #0x13b]
+	strb r4, [sp, #0x13c]
+	strb r0, [sp, #0x13d]
+	str r8, [sp, #0x158]
+	str r8, [r7, #0x7a4]
+	str r0, [r7, #0x7a8]
+	str r0, [r7, #0x7ac]
+	str lr, [r7, #0x7b0]
+	ldrsh r8, [r2, #0x60]
+	strh r8, [r5, #0xb4]
+	strb ip, [r7, #0x7b6]
+	strb ip, [r7, #0x7b7]
+	strb r3, [r7, #0x7b8]
+	strb ip, [r7, #0x7b9]
+	str r1, [r7, #0x7d8]
+	str r0, [r7, #0x7dc]
+	str r10, [r7, #0x7e0]
+	str r6, [r7, #0x7e4]
+	ldrsh r6, [r2, #0x48]
+	strh r6, [r5, #0xe8]
+	strb ip, [r7, #0x7ea]
+	strb ip, [r7, #0x7eb]
+	strb r3, [r7, #0x7ec]
+	strb ip, [r7, #0x7ed]
+	str r1, [r7, #0x7f0]
+	str r0, [r7, #0x7f4]
+	str r10, [r7, #0x7f8]
+	ldrsh r8, [r2, #0x30]
+	mov r6, #0x1b
+	ldr r5, _020e0e98 ; =data_ov00_020e38ec
+	str r6, [sp, #0x134]
+	str r6, [r7, #0x7fc]
+	strh r8, [r5]
+	strb ip, [r7, #0x802]
+	str r1, [sp, #0x110]
+	str r0, [sp, #0x114]
+	str r10, [sp, #0x118]
+	str r6, [sp, #0x11c]
+	strh r0, [r2, #0x18]
+	strb r0, [sp, #0x122]
+	strb r0, [sp, #0x123]
+	strb r4, [sp, #0x124]
+	strb r0, [sp, #0x125]
+	strb ip, [r7, #0x803]
+	strb r3, [r7, #0x804]
+	strb ip, [r7, #0x805]
+	str r1, [r7, #0x824]
+	str r0, [r7, #0x828]
+	str r10, [r7, #0x82c]
+	str r6, [r7, #0x830]
+	ldrsh r6, [r2, #0x18]
+	strh r0, [r2]
+	ldrsh r2, [r2]
+	strh r6, [r5, #0x34]
+	strb ip, [r7, #0x836]
+	strb ip, [r7, #0x837]
+	strb r3, [r7, #0x838]
+	strb ip, [r7, #0x839]
+	str r1, [r7, #0x83c]
+	str r0, [r7, #0x840]
+	str r0, [r7, #0x844]
+	str lr, [r7, #0x848]
+	strh r2, [r5, #0x4c]
+	strb ip, [r7, #0x84e]
+	strb ip, [r7, #0x84f]
+	strb r3, [r7, #0x850]
+	strb ip, [r7, #0x851]
+	mov r8, #0xfb
+	str r8, [sp, #0xe4]
+	mov r8, #0x1c
+	str r1, [sp, #0xf8]
+	str r1, [sp, #0xe0]
+	str r1, [r7, #0x870]
+	mov r1, #0xfb
+	str r1, [r7, #0x874]
+	str r0, [sp, #0xfc]
+	str r0, [sp, #0x100]
+	str lr, [sp, #0x104]
+	strb r0, [sp, #0x10a]
+	strb r0, [sp, #0x10b]
+	strb r4, [sp, #0x10c]
+	strb r0, [sp, #0x10d]
+	str r10, [sp, #0xe8]
+	str r8, [sp, #0xec]
+	strh r0, [sp, #0xf0]
+	strb r0, [sp, #0xf2]
+	strb r0, [sp, #0xf3]
+	strb r4, [sp, #0xf4]
+	strb r0, [sp, #0xf5]
+	str r10, [r7, #0x878]
+	ldrsh r2, [sp, #0xf0]
+	mov r1, r8
+	str r1, [r7, #0x87c]
+	strh r2, [r5, #0x80]
+	strb ip, [r7, #0x882]
+	strb ip, [r7, #0x883]
+	strb r3, [r7, #0x884]
+	strb ip, [r7, #0x885]
+	mov r1, #0x36
+	str r1, [r7, #0x888]
+	strh r0, [sp, #0xd8]
+	str r0, [r7, #0x88c]
+	ldrsh r2, [sp, #0xd8]
+	str r10, [r7, #0x890]
+	mov r1, #0x14
+	str r1, [r7, #0x894]
+	strh r2, [r5, #0x98]
+	strb ip, [r7, #0x89a]
+	strb ip, [r7, #0x89b]
+	strb r3, [r7, #0x89c]
+	strb ip, [r7, #0x89d]
+	strh r0, [sp, #0xc0]
+	str r9, [r7, #0x8bc]
+	str r0, [r7, #0x8c0]
+	ldrsh r2, [sp, #0xc0]
+	str r10, [r7, #0x8c4]
+	mov r1, #0x1d
+	str r1, [r7, #0x8c8]
+	strh r2, [r5, #0xcc]
+	strb ip, [r7, #0x8ce]
+	mov r1, #0x36
+	strb ip, [r7, #0x8cf]
+	str r1, [sp, #0xc8]
+	mov r1, #0x14
+	strb r3, [r7, #0x8d0]
+	str r1, [sp, #0xd4]
+	mov r1, #0x1d
+	str r0, [sp, #0xcc]
+	str r10, [sp, #0xd0]
+	strb r0, [sp, #0xda]
+	strb r0, [sp, #0xdb]
+	strb r4, [sp, #0xdc]
+	strb r0, [sp, #0xdd]
+	str r9, [sp, #0xb0]
+	str r0, [sp, #0xb4]
+	str r10, [sp, #0xb8]
+	str r1, [sp, #0xbc]
+	strb r0, [sp, #0xc2]
+	strb r0, [sp, #0xc3]
+	strb r4, [sp, #0xc4]
+	strb r0, [sp, #0xc5]
+	strb ip, [r7, #0x8d1]
+	str r9, [sp, #0x98]
+	str r0, [sp, #0x9c]
+	str r0, [sp, #0xa0]
+	str lr, [sp, #0xa4]
+	strh r0, [sp, #0xa8]
+	strb r0, [sp, #0xaa]
+	strb r0, [sp, #0xab]
+	strb r4, [sp, #0xac]
+	strb r0, [sp, #0xad]
+	str r9, [r7, #0x8d4]
+	str r0, [r7, #0x8d8]
+	str r0, [r7, #0x8dc]
+	ldrsh r1, [sp, #0xa8]
+	str lr, [r7, #0x8e0]
+	strh r0, [sp, #0x90]
+	strh r1, [r5, #0xe4]
+	strb ip, [r7, #0x8e6]
+	strb ip, [r7, #0x8e7]
+	strb r3, [r7, #0x8e8]
+	strb ip, [r7, #0x8e9]
+	str r9, [r7, #0x908]
+	str r0, [r7, #0x90c]
+	mov r2, #0x1e
+	str r10, [r7, #0x910]
+	ldrsh r6, [sp, #0x90]
+	ldr r5, _020e0e9c ; =data_ov00_020e39ec
+	str r2, [r7, #0x914]
+	strh r6, [r5, #0x18]
+	strb ip, [r7, #0x91a]
+	strb ip, [r7, #0x91b]
+	strb r3, [r7, #0x91c]
+	mov r1, #0x47
+	strb ip, [r7, #0x91d]
+	strh r0, [sp, #0x78]
+	str r1, [r7, #0x920]
+	str r0, [r7, #0x924]
+	str r0, [r7, #0x928]
+	mov r6, #0x1f
+	ldrsh r8, [sp, #0x78]
+	str lr, [r7, #0x92c]
+	str r9, [sp, #0x80]
+	strh r8, [r5, #0x30]
+	strb ip, [r7, #0x932]
+	strb ip, [r7, #0x933]
+	strb r3, [r7, #0x934]
+	str r0, [sp, #0x84]
+	str r10, [sp, #0x88]
+	str r2, [sp, #0x8c]
+	strb r0, [sp, #0x92]
+	strb r0, [sp, #0x93]
+	strb r4, [sp, #0x94]
+	strb r0, [sp, #0x95]
+	str r1, [sp, #0x68]
+	str r0, [sp, #0x6c]
+	str r0, [sp, #0x70]
+	str lr, [sp, #0x74]
+	strb r0, [sp, #0x7a]
+	strb r0, [sp, #0x7b]
+	strb r4, [sp, #0x7c]
+	strb r0, [sp, #0x7d]
+	strb ip, [r7, #0x935]
+	str r9, [sp, #0x50]
+	str r0, [sp, #0x54]
+	str r10, [sp, #0x58]
+	str r6, [sp, #0x5c]
+	strh r0, [sp, #0x60]
+	strb r0, [sp, #0x62]
+	str r9, [r7, #0x954]
+	str r0, [r7, #0x958]
+	str r10, [r7, #0x95c]
+	str r6, [r7, #0x960]
+	ldrsh r2, [sp, #0x60]
+	mov r6, #0x20
+	strh r0, [sp, #0x48]
+	strh r2, [r5, #0x64]
+	strb ip, [r7, #0x966]
+	strb ip, [r7, #0x967]
+	strb r3, [r7, #0x968]
+	strb ip, [r7, #0x969]
+	str r1, [r7, #0x96c]
+	str r0, [r7, #0x970]
+	str r0, [r7, #0x974]
+	ldrsh r2, [sp, #0x48]
+	str lr, [r7, #0x978]
+	strh r0, [sp, #0x30]
+	strh r2, [r5, #0x7c]
+	strb ip, [r7, #0x97e]
+	strb ip, [r7, #0x97f]
+	strb r3, [r7, #0x980]
+	strb ip, [r7, #0x981]
+	str r9, [r7, #0x9a0]
+	str r0, [r7, #0x9a4]
+	str r10, [r7, #0x9a8]
+	ldrsh r2, [sp, #0x30]
+	str r6, [r7, #0x9ac]
+	strh r0, [sp, #0x18]
+	strh r2, [r5, #0xb0]
+	strb ip, [r7, #0x9b2]
+	strb ip, [r7, #0x9b3]
+	strb r3, [r7, #0x9b4]
+	strb ip, [r7, #0x9b5]
+	str r1, [r7, #0x9b8]
+	str r0, [r7, #0x9bc]
+	str r0, [r7, #0x9c0]
+	str r1, [sp, #0x38]
+	str r1, [sp, #8]
+	ldrsh r1, [sp, #0x18]
+	str lr, [r7, #0x9c4]
+	ldr r2, _020e0ea0 ; =data_ov00_020ecdd8
+	strh r1, [r5, #0xc8]
+	strb ip, [r7, #0x9ca]
+	strb ip, [r7, #0x9cb]
+	strb r3, [r7, #0x9cc]
+	ldr r1, _020e0ea4 ; =_ZN14AdventureFlags18func_ov00_020980d0Ev
+	strb r0, [sp, #0x63]
+	strb r4, [sp, #0x64]
+	strb r0, [sp, #0x65]
+	str r0, [sp, #0x3c]
+	str r0, [sp, #0x40]
+	str lr, [sp, #0x44]
+	strb r0, [sp, #0x4a]
+	strb r0, [sp, #0x4b]
+	strb r4, [sp, #0x4c]
+	strb r0, [sp, #0x4d]
+	str r9, [sp, #0x20]
+	str r0, [sp, #0x24]
+	str r10, [sp, #0x28]
+	str r6, [sp, #0x2c]
+	strb r0, [sp, #0x32]
+	strb r0, [sp, #0x33]
+	strb r4, [sp, #0x34]
+	strb r0, [sp, #0x35]
+	str r0, [sp, #0xc]
+	str r0, [sp, #0x10]
+	str lr, [sp, #0x14]
+	strb r0, [sp, #0x1a]
+	strb r0, [sp, #0x1b]
+	strb r4, [sp, #0x1c]
+	strb r0, [sp, #0x1d]
+	strb ip, [r7, #0x9cd]
+	bl __register_global_object
+	add sp, sp, #0x238
+	add sp, sp, #0x400
+	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
+	.align 2, 0
+_020e0e94: .word data_ov00_020e37ec
+_020e0e98: .word data_ov00_020e38ec
+_020e0e9c: .word data_ov00_020e39ec
+_020e0ea0: .word data_ov00_020ecdd8
+_020e0ea4: .word _ZN14AdventureFlags18func_ov00_020980d0Ev
+
+	.global func_ov00_020e0ea8
+	arm_func_start func_ov00_020e0ea8
+func_ov00_020e0ea8: ; 0x020e0ea8
+	ldr r2, _020e1024 ; =data_ov00_020dbf88
+	ldr r1, _020e1028 ; =data_ov00_020ecde4
+	ldmia r2, {r0, r3}
+	str r0, [r1]
+	str r3, [r1, #0x68]
+	ldr r0, [r2, #8]
+	ldr r3, [r2, #0xc]
+	str r0, [r1, #0xd0]
+	str r3, [r1, #0x138]
+	ldr r0, [r2, #0x10]
+	ldr r3, [r2, #0x14]
+	str r0, [r1, #0x1a0]
+	str r3, [r1, #0x208]
+	ldr r0, [r2, #0x18]
+	ldr r3, [r2, #0x1c]
+	str r0, [r1, #0x270]
+	str r3, [r1, #0x2d8]
+	ldr r0, [r2, #0x20]
+	ldr r3, [r2, #0x24]
+	str r0, [r1, #0x340]
+	str r3, [r1, #0x3a8]
+	ldr r0, [r2, #0x28]
+	ldr r3, [r2, #0x2c]
+	str r0, [r1, #0x410]
+	str r3, [r1, #0x478]
+	ldr r0, [r2, #0x30]
+	ldr r3, [r2, #0x34]
+	str r0, [r1, #0x4e0]
+	str r3, [r1, #0x548]
+	ldr r0, [r2, #0x38]
+	ldr r3, [r2, #0x3c]
+	str r0, [r1, #0x5b0]
+	str r3, [r1, #0x618]
+	ldr r0, [r2, #0x40]
+	ldr r3, [r2, #0x44]
+	str r0, [r1, #0x680]
+	str r3, [r1, #0x6e8]
+	ldr r0, [r2, #0x48]
+	ldr r3, [r2, #0x4c]
+	str r0, [r1, #0x750]
+	str r3, [r1, #0x7b8]
+	ldr r0, [r2, #0x50]
+	ldr r3, [r2, #0x54]
+	str r0, [r1, #0x820]
+	ldr r0, [r2, #0x58]
+	str r3, [r1, #0x888]
+	str r0, [r1, #0x8f0]
+	ldr r3, [r2, #0x5c]
+	ldr r0, _020e102c ; =data_ov00_020edde4
+	str r3, [r1, #0x958]
+	ldr r3, [r2, #0x60]
+	str r3, [r1, #0x9c0]
+	ldr r3, [r2, #0x64]
+	str r3, [r1, #0xa28]
+	ldr r3, [r2, #0x68]
+	str r3, [r1, #0xa90]
+	ldr r3, [r2, #0x6c]
+	str r3, [r1, #0xaf8]
+	ldr r3, [r2, #0x70]
+	str r3, [r1, #0xb60]
+	ldr r3, [r2, #0x74]
+	str r3, [r1, #0xbc8]
+	ldr r3, [r2, #0x78]
+	str r3, [r1, #0xc30]
+	ldr r3, [r2, #0x7c]
+	str r3, [r1, #0xc98]
+	ldr r3, [r2, #0x80]
+	str r3, [r1, #0xd00]
+	ldr r3, [r2, #0x84]
+	str r3, [r1, #0xd68]
+	ldr r3, [r2, #0x88]
+	str r3, [r1, #0xdd0]
+	ldr r3, [r2, #0x8c]
+	str r3, [r1, #0xe38]
+	ldr r3, [r2, #0x90]
+	str r3, [r1, #0xea0]
+	ldr r3, [r2, #0x94]
+	str r3, [r1, #0xf08]
+	ldr r3, [r2, #0x98]
+	str r3, [r1, #0xf70]
+	ldr r3, [r2, #0x9c]
+	str r3, [r1, #0xfd8]
+	ldr r1, [r2, #0xa0]
+	str r1, [r0, #0x40]
+	ldr r1, [r2, #0xa4]
+	str r1, [r0, #0xa8]
+	ldr r1, [r2, #0xa8]
+	str r1, [r0, #0x110]
+	ldr r1, [r2, #0xac]
+	str r1, [r0, #0x178]
+	ldr r1, [r2, #0xb0]
+	str r1, [r0, #0x1e0]
+	ldr r1, [r2, #0xb4]
+	str r1, [r0, #0x248]
+	bx lr
+	.align 2, 0
+	arm_func_end func_ov00_020e0ea8
+_020e1024: .word data_ov00_020dbf88
+_020e1028: .word data_ov00_020ecde4
+_020e102c: .word data_ov00_020edde4
+
+	.global func_ov00_020e1030
+	arm_func_start func_ov00_020e1030
+func_ov00_020e1030: ; 0x020e1030
+	stmdb sp!, {r3, lr}
+	ldr r0, _020e1050 ; =data_ov00_020ee0a0
+	bl func_ov08_0211351c
+	ldr r0, _020e1050 ; =data_ov00_020ee0a0
+	ldr r1, _020e1054 ; =func_ov08_021135b8
+	ldr r2, _020e1058 ; =data_ov00_020ee094
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020e1030
+_020e1050: .word data_ov00_020ee0a0
+_020e1054: .word func_ov08_021135b8
+_020e1058: .word data_ov00_020ee094
+
+    .section .ctor, 4, 1, 4
+	.global data_ov00_020e1ec0
+data_ov00_020e1ec0: ; 0x020e1ec0
+    .word func_ov00_020df640
+	.global data_ov00_020e1ec4
+data_ov00_020e1ec4: ; 0x020e1ec4
+    .word func_ov00_020df678
+	.global data_ov00_020e1ec8
+data_ov00_020e1ec8: ; 0x020e1ec8
+    .word func_ov00_020df6b8
+	.global data_ov00_020e1ecc
+data_ov00_020e1ecc: ; 0x020e1ecc
+    .word func_ov00_020df6f8
+	.global data_ov00_020e1ed0
+data_ov00_020e1ed0: ; 0x020e1ed0
+    .word func_ov00_020df738
+	.global data_ov00_020e1ed4
+data_ov00_020e1ed4: ; 0x020e1ed4
+    .word func_ov00_020df770
+	.global data_ov00_020e1ed8
+data_ov00_020e1ed8: ; 0x020e1ed8
+    .word func_ov00_020df790
+	.global data_ov00_020e1edc
+data_ov00_020e1edc: ; 0x020e1edc
+    .word func_ov00_020e0ea8
+	.global data_ov00_020e1ee0
+data_ov00_020e1ee0: ; 0x020e1ee0
+    .word func_ov00_020e1030
+
     .data
     
 	.global data_ov00_020e253c

@@ -42,6 +42,7 @@
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags15Get_FlagsUnk_00EiP9FlagsUnk2
 .extern _ZN14AdventureFlags18func_ov00_02097738Ev
+.extern _ZN14AdventureFlags18func_ov00_020980d0Ev
 .extern _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -90,8 +91,11 @@
 .extern _ZN5Actor8vfunc_b0Ev
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_02056be4
 .extern data_02063e4c
@@ -103,7 +107,6 @@
 .extern data_027e0d38
 .extern data_027e0d3c
 .extern data_027e0d44
-.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
@@ -122,6 +125,16 @@
 .extern data_027e0fe8
 .extern data_027e103c
 .extern data_027e10a4
+.extern data_ov00_020dbf88
+.extern data_ov00_020e31ec
+.extern data_ov00_020e32ec
+.extern data_ov00_020e33ec
+.extern data_ov00_020e34ec
+.extern data_ov00_020e35ec
+.extern data_ov00_020e36ec
+.extern data_ov00_020e37ec
+.extern data_ov00_020e38ec
+.extern data_ov00_020e39ec
 .extern data_ov00_020e9370
 .extern data_ov00_020ea110
 .extern data_ov00_020eab04
@@ -193,6 +206,8 @@
 .extern func_020350b4
 .extern func_0203516c
 .extern func_020351b8
+.extern func_0203eba8
+.extern func_0203ebc8
 .extern func_02042d50
 .extern func_02043594
 .extern func_020435b4
@@ -261,6 +276,8 @@
 .extern func_ov05_02101ab8
 .extern func_ov05_02102c2c
 .extern func_ov05_02103f4c
+.extern func_ov08_0211351c
+.extern func_ov08_021135b8
 .extern func_ov14_02125934
 .extern func_ov14_02125948
 .extern func_ov15_0214c3c4
@@ -269,3 +286,4 @@
 .extern func_ov18_0216ac24
 .extern func_ov18_0216ad38
 .extern gAdventureFlags
+.extern gMapManager

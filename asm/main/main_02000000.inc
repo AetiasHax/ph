@@ -1,5 +1,9 @@
 #pragma once
 .extern Divide
+.extern _ZN10MapManager18func_ov00_02082614Eii
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
+.extern _ZN10MapManager18func_ov00_02084740Ev
+.extern _ZN10MapManager18func_ov00_02086044Eiii
 .extern _ZN11ItemManager10GiveRupeesEjj
 .extern _ZN11ItemManager7AddItemEi
 .extern _ZN11ItemManager8GiveKeysEj
@@ -111,7 +115,6 @@
 .extern data_027e0dbc
 .extern data_027e0e28
 .extern data_027e0e2c
-.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f7c
 .extern data_027e0f80
@@ -375,10 +378,6 @@
 .extern func_ov00_0207bcb4
 .extern func_ov00_0207be84
 .extern func_ov00_0207c0f0
-.extern _ZN10MapManager18func_ov00_02082614Eii
-.extern _ZN10MapManager18func_ov00_020838e8EjPi
-.extern _ZN10MapManager18func_ov00_02084740Ev
-.extern _ZN10MapManager18func_ov00_02086044Eiii
 .extern func_ov00_02087d98
 .extern func_ov00_02089068
 .extern func_ov00_0208b180
@@ -477,6 +476,7 @@
 .extern gAdventureFlags
 .extern gHeap
 .extern gItemManager
+.extern gMapManager
 .extern gOverlayManager
 .extern gpBuildDate
 .extern strcat

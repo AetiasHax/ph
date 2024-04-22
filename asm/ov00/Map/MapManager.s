@@ -6467,6 +6467,111 @@ data_ov00_020d8aa0: ; 0x020d8aa0
 data_ov00_020d8aa4: ; 0x020d8aa4
 	.byte 0x9a, 0x01, 0x00, 0x00
 
+    .section .init, 4, 1, 4
+	.global func_ov00_020df4cc
+	arm_func_start func_ov00_020df4cc
+func_ov00_020df4cc: ; 0x020df4cc
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df5f0 ; =0x00005fff
+	ldr r3, _020df5f4 ; =data_ov00_020e24a4
+	mov ip, #0
+	str r0, [r3, #0x20]
+	ldr r0, _020df5f8 ; =data_ov00_020e24c8
+	ldr r1, _020df5fc ; =func_ov00_02086cd0
+	ldr r2, _020df600 ; =data_ov00_020ec964
+	str ip, [r3, #0x24]
+	mov ip, #0x60
+	str ip, [r3, #0x28]
+	bl __register_global_object
+	ldr r0, _020df604 ; =data_ov00_020e24d0
+	mov r3, #0
+	ldr r1, _020df5fc ; =func_ov00_02086cd0
+	ldr r2, _020df608 ; =data_ov00_020ec970
+	str r3, [r0]
+	str r3, [r0, #4]
+	bl __register_global_object
+	ldr r0, _020df60c ; =data_ov00_020e24d8
+	mov ip, #0x80
+	mov r3, #0x60
+	ldr r1, _020df5fc ; =func_ov00_02086cd0
+	ldr r2, _020df610 ; =data_ov00_020ec97c
+	str ip, [r0]
+	str r3, [r0, #4]
+	bl __register_global_object
+	ldr r0, _020df614 ; =data_ov00_020e24e0
+	mov ip, #0x80
+	mov r3, #0
+	ldr r1, _020df5fc ; =func_ov00_02086cd0
+	ldr r2, _020df618 ; =data_ov00_020ec988
+	str ip, [r0]
+	str r3, [r0, #4]
+	bl __register_global_object
+	mov r2, #0x80000
+	rsb r2, r2, #0
+	ldr r0, _020df5f4 ; =data_ov00_020e24a4
+	add r1, r2, #0x20000
+	str r2, [r0, #0x44]
+	str r1, [r0, #0x48]
+	ldr r0, _020df61c ; =data_ov00_020e24e8
+	ldr r1, _020df620 ; =func_ov00_0207dd9c
+	ldr r2, _020df624 ; =data_ov00_020ec994
+	bl __register_global_object
+	ldr r0, _020df628 ; =data_ov00_020e24f0
+	mov r1, #0x80000
+	rsb r1, r1, #0
+	str r1, [r0]
+	add r1, r1, #0x20000
+	str r1, [r0, #4]
+	ldr r1, _020df620 ; =func_ov00_0207dd9c
+	ldr r2, _020df62c ; =data_ov00_020ec9a0
+	bl __register_global_object
+	ldr r0, _020df630 ; =data_ov00_020e24f8
+	mov r1, #0x80000
+	rsb r1, r1, #0
+	str r1, [r0]
+	add r1, r1, #0x20000
+	str r1, [r0, #4]
+	ldr r1, _020df620 ; =func_ov00_0207dd9c
+	ldr r2, _020df634 ; =data_ov00_020ec9ac
+	bl __register_global_object
+	ldr r0, _020df638 ; =data_ov00_020e2500
+	mov r1, #0x80000
+	rsb r1, r1, #0
+	str r1, [r0]
+	add r1, r1, #0x20000
+	str r1, [r0, #4]
+	ldr r1, _020df620 ; =func_ov00_0207dd9c
+	ldr r2, _020df63c ; =data_ov00_020ec9b8
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df4cc
+_020df5f0: .word 0x00005fff
+_020df5f4: .word data_ov00_020e24a4
+_020df5f8: .word data_ov00_020e24c8
+_020df5fc: .word func_ov00_02086cd0
+_020df600: .word data_ov00_020ec964
+_020df604: .word data_ov00_020e24d0
+_020df608: .word data_ov00_020ec970
+_020df60c: .word data_ov00_020e24d8
+_020df610: .word data_ov00_020ec97c
+_020df614: .word data_ov00_020e24e0
+_020df618: .word data_ov00_020ec988
+_020df61c: .word data_ov00_020e24e8
+_020df620: .word func_ov00_0207dd9c
+_020df624: .word data_ov00_020ec994
+_020df628: .word data_ov00_020e24f0
+_020df62c: .word data_ov00_020ec9a0
+_020df630: .word data_ov00_020e24f8
+_020df634: .word data_ov00_020ec9ac
+_020df638: .word data_ov00_020e2500
+_020df63c: .word data_ov00_020ec9b8
+
+    .section .ctor, 4, 1, 4
+	.global data_ov00_020e1ebc
+data_ov00_020e1ebc: ; 0x020e1ebc
+    .word func_ov00_020df4cc
+
     .data
 	.global data_ov00_020e24c4
 data_ov00_020e24c4: ; 0x020e24c4
