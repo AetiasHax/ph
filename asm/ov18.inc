@@ -231,8 +231,8 @@
 .extern func_ov00_0207c2e8
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
-.extern func_ov00_0207d634
-.extern func_ov00_0207d6ec
+.extern _ZN6Course18func_ov00_0207d634Ei
+.extern _ZN6Course18func_ov00_0207d6ecEv
 .extern func_ov00_0207da38
 .extern func_ov00_0207ddf4
 .extern func_ov00_0207e060

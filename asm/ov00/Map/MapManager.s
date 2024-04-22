@@ -6,22 +6,22 @@
 	.global _ZN10MapManager18func_ov00_020820ecEPi
 	arm_func_start _ZN10MapManager18func_ov00_020820ecEPi
 _ZN10MapManager18func_ov00_020820ecEPi: ; 0x020820ec
-	ldr ip, _020820f8 ; =func_ov00_0207ca00
+	ldr ip, _020820f8 ; =_ZN6Course18GetDungeonProgressEP14CourseProgress
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020820ecEPi
-_020820f8: .word func_ov00_0207ca00
+_020820f8: .word _ZN6Course18GetDungeonProgressEP14CourseProgress
 
 	.global _ZN10MapManager18func_ov00_020820fcEiii
 	arm_func_start _ZN10MapManager18func_ov00_020820fcEiii
 _ZN10MapManager18func_ov00_020820fcEiii: ; 0x020820fc
-	ldr ip, _02082108 ; =func_ov00_0207ca28
+	ldr ip, _02082108 ; =_ZN6Course18func_ov00_0207ca28Eiii
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020820fcEiii
-_02082108: .word func_ov00_0207ca28
+_02082108: .word _ZN6Course18func_ov00_0207ca28Eiii
 
 	.global _ZN10MapManager18func_ov00_0208210cEii
 	arm_func_start _ZN10MapManager18func_ov00_0208210cEii
@@ -468,7 +468,7 @@ _ZN10MapManager18func_ov00_02082614Eii: ; 0x02082614
 	mov r3, r1
 	mov r1, r2
 	mov r2, #0
-	bl func_ov00_0207ce20
+	bl _ZN6Course18func_ov00_0207ce20Eiiii
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02082614Eii
 
@@ -874,12 +874,12 @@ _02082ac8: .word data_027e0d38
 	.global _ZN10MapManager18func_ov00_02082accEv
 	arm_func_start _ZN10MapManager18func_ov00_02082accEv
 _ZN10MapManager18func_ov00_02082accEv: ; 0x02082acc
-	ldr ip, _02082ad8 ; =func_ov00_0207d7bc
+	ldr ip, _02082ad8 ; =_ZN6Course18func_ov00_0207d7bcEv
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02082accEv
-_02082ad8: .word func_ov00_0207d7bc
+_02082ad8: .word _ZN6Course18func_ov00_0207d7bcEv
 
 	.global _ZN10MapManager18func_ov00_02082adcEv
 	arm_func_start _ZN10MapManager18func_ov00_02082adcEv
@@ -926,7 +926,7 @@ _ZN10MapManager18func_ov00_02082b3cEi: ; 0x02082b3c
 	ldrb r2, [r5, #0x12]
 	ldr r1, [r6]
 	add r0, sp, #0
-	bl func_ov00_0207cb7c
+	bl _ZN6Course18func_ov00_0207cb7cEiPS_i
 	mov r0, r6
 	bl _ZN10MapManager20GetCourseData_Unk_1cEv
 	ldrb r1, [sp]
@@ -981,11 +981,11 @@ _02082bac:
 	ldrb r7, [r5, #0x12]
 	ldr r0, [r6]
 	mov r4, #0
-	bl func_ov00_0207d778
+	bl _ZN6Course18func_ov00_0207d778Ev
 	mov r1, r7
 	mov r7, r0
 	ldr r0, [r6]
-	bl func_ov00_0207d788
+	bl _ZN6Course18func_ov00_0207d788Ev
 	cmp r7, r0
 	ldrb r2, [sp]
 	ldr r1, [r6]
@@ -1155,7 +1155,7 @@ _ZN10MapManager18func_ov00_02082e1cEPiS0_: ; 0x02082e1c
 	mov r6, r2
 	cmp r1, #0
 	beq _02083050
-	bl func_ov00_0207d47c
+	bl _ZN6Course18func_ov00_0207d47cEv
 	cmp r0, #0
 	bne _02083038
 	mvn r1, #0xff
@@ -1219,18 +1219,18 @@ _02082f1c:
 	add r2, sp, #0xc
 	add r3, sp, #8
 	mov r1, r4
-	bl func_ov00_0207d518
+	bl _ZN6Course18func_ov00_0207d518EiPiS0_
 	cmp r0, #0
 	ldr r0, [r8]
 	bne _02082fc0
 	add r2, sp, #0xc
 	add r3, sp, #8
 	mov r1, r5
-	bl func_ov00_0207d518
+	bl _ZN6Course18func_ov00_0207d518EiPiS0_
 	ldr r1, [r8]
 	add r0, sp, #6
 	mov r2, r5
-	bl func_ov00_0207cb7c
+	bl _ZN6Course18func_ov00_0207cb7cEiPS_i
 	ldrb r1, [sp, #7]
 	add r0, sp, #4
 	add r2, sp, #0x28
@@ -1239,7 +1239,7 @@ _02082f1c:
 	mov r1, r8
 	bl _ZN10MapManager18func_ov00_02083a54EiPS_iii
 	ldr r0, [r8]
-	bl func_ov00_0207d5c4
+	bl _ZN6Course18func_ov00_0207d5c4Ev
 	ldrb r1, [sp, #4]
 	ldr r3, [sp, #0xc]
 	mov r1, r1, lsl #0xc
@@ -1252,12 +1252,12 @@ _02082f1c:
 	add r0, r3, r0, asr #12
 	str r0, [r7]
 	ldr r0, [r8]
-	bl func_ov00_0207d5f0
+	bl _ZN6Course18func_ov00_0207d5f0Ev
 	ldrb r1, [sp, #5]
 	ldr r3, [sp, #8]
 	b _02083008
 _02082fc0:
-	bl func_ov00_0207d5c4
+	bl _ZN6Course18func_ov00_0207d5c4Ev
 	ldr r2, [r8, #4]
 	ldr r1, [sp, #0xc]
 	ldrb r2, [r2, #0x1b]
@@ -1271,7 +1271,7 @@ _02082fc0:
 	add r0, r1, r0, asr #12
 	str r0, [r7]
 	ldr r0, [r8]
-	bl func_ov00_0207d5f0
+	bl _ZN6Course18func_ov00_0207d5f0Ev
 	ldr r1, [r8, #4]
 	ldr r3, [sp, #8]
 	ldrb r1, [r1, #0x1c]
@@ -1513,12 +1513,12 @@ _ZN10MapManager21GetCourseData_Unk_25cEv: ; 0x0208330c
 	.global _ZN10MapManager18func_ov00_02083318Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083318Ei
 _ZN10MapManager18func_ov00_02083318Ei: ; 0x02083318
-	ldr ip, _02083324 ; =func_ov00_0207d4e4
+	ldr ip, _02083324 ; =_ZN6Course18func_ov00_0207d4e4Ei
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02083318Ei
-_02083324: .word func_ov00_0207d4e4
+_02083324: .word _ZN6Course18func_ov00_0207d4e4Ei
 
 	.global _ZN10MapManager18func_ov00_02083328Ev
 	arm_func_start _ZN10MapManager18func_ov00_02083328Ev
@@ -1528,7 +1528,7 @@ _ZN10MapManager18func_ov00_02083328Ev: ; 0x02083328
 	bl _ZN10MapManager18func_ov00_02082d08Ev
 	mov r1, r0
 	ldr r0, [r4]
-	bl func_ov00_0207d4e4
+	bl _ZN6Course18func_ov00_0207d4e4Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02083328Ev
 
@@ -1738,7 +1738,7 @@ _ZN10MapManager18func_ov00_020834bcEP5Vec3pii: ; 0x020834bc
 	add r2, r4, r3
 	mov r4, r1
 	ldrb r1, [r2, #0x20]
-	bl func_ov00_0207cbd8
+	bl _ZN6Course18func_ov00_0207cbd8Ei
 	ldr r1, [r0]
 	str r1, [r4]
 	ldr r1, [r0, #4]
@@ -1768,7 +1768,7 @@ _ZN10MapManager18func_ov00_02083524EP5Vec3pii: ; 0x02083524
 	add r2, ip, r3
 	mov r4, r1
 	ldrb r1, [r2, #0x20]
-	bl func_ov00_0207cbd8
+	bl _ZN6Course18func_ov00_0207cbd8Ei
 	ldr r1, [r0]
 	str r1, [r4]
 	ldr r1, [r0, #4]
@@ -1781,12 +1781,12 @@ _ZN10MapManager18func_ov00_02083524EP5Vec3pii: ; 0x02083524
 	.global _ZN10MapManager18func_ov00_02083560EiPS_j
 	arm_func_start _ZN10MapManager18func_ov00_02083560EiPS_j
 _ZN10MapManager18func_ov00_02083560EiPS_j: ; 0x02083560
-	ldr ip, _0208356c ; =func_ov00_0207cb7c
+	ldr ip, _0208356c ; =_ZN6Course18func_ov00_0207cb7cEiPS_i
 	ldr r1, [r1]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02083560EiPS_j
-_0208356c: .word func_ov00_0207cb7c
+_0208356c: .word _ZN6Course18func_ov00_0207cb7cEiPS_i
 
 	.global _ZN10MapManager18func_ov00_02083570Eii
 	arm_func_start _ZN10MapManager18func_ov00_02083570Eii
@@ -1807,29 +1807,29 @@ _ZN10MapManager18func_ov00_02083588Ev: ; 0x02083588
 	bl _ZN10MapManager18func_ov00_02082d08Ev
 	mov r1, r0
 	ldr r0, [r4]
-	bl func_ov00_0207cc6c
+	bl _ZN6Course18func_ov00_0207cc6cEv
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02083588Ev
 
 	.global _ZN10MapManager18func_ov00_020835a4Ev
 	arm_func_start _ZN10MapManager18func_ov00_020835a4Ev
 _ZN10MapManager18func_ov00_020835a4Ev: ; 0x020835a4
-	ldr ip, _020835b0 ; =func_ov00_0207d61c
+	ldr ip, _020835b0 ; =_ZN6Course18func_ov00_0207d61cEv
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020835a4Ev
-_020835b0: .word func_ov00_0207d61c
+_020835b0: .word _ZN6Course18func_ov00_0207d61cEv
 
 	.global _ZN10MapManager18func_ov00_020835b4Ev
 	arm_func_start _ZN10MapManager18func_ov00_020835b4Ev
 _ZN10MapManager18func_ov00_020835b4Ev: ; 0x020835b4
-	ldr ip, _020835c0 ; =func_ov00_0207d628
+	ldr ip, _020835c0 ; =_ZN6Course15GetUnk_c8_Unk_4Ev
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020835b4Ev
-_020835c0: .word func_ov00_0207d628
+_020835c0: .word _ZN6Course15GetUnk_c8_Unk_4Ev
 
 	.global _ZN10MapManager18func_ov00_020835c4Eii
 	arm_func_start _ZN10MapManager18func_ov00_020835c4Eii
@@ -1840,49 +1840,49 @@ _ZN10MapManager18func_ov00_020835c4Eii: ; 0x020835c4
 	ldr r0, [r0]
 	mov r3, r2
 	mov r2, #0
-	bl func_ov00_0207d404
+	bl _ZN6Course18func_ov00_0207d404Eiii
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_020835c4Eii
 
 	.global _ZN10MapManager18func_ov00_020835e4EiPiS0_
 	arm_func_start _ZN10MapManager18func_ov00_020835e4EiPiS0_
 _ZN10MapManager18func_ov00_020835e4EiPiS0_: ; 0x020835e4
-	ldr ip, _020835f0 ; =func_ov00_0207caa8
+	ldr ip, _020835f0 ; =_ZN6Course18func_ov00_0207caa8Eiii
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020835e4EiPiS0_
-_020835f0: .word func_ov00_0207caa8
+_020835f0: .word _ZN6Course18func_ov00_0207caa8Eiii
 
 	.global _ZN10MapManager18func_ov00_020835f4Ei
 	arm_func_start _ZN10MapManager18func_ov00_020835f4Ei
 _ZN10MapManager18func_ov00_020835f4Ei: ; 0x020835f4
-	ldr ip, _02083600 ; =func_ov00_0207cb30
+	ldr ip, _02083600 ; =_ZN6Course18func_ov00_0207cb30Ei
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_020835f4Ei
-_02083600: .word func_ov00_0207cb30
+_02083600: .word _ZN6Course18func_ov00_0207cb30Ei
 
 	.global _ZN10MapManager18func_ov00_02083604Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083604Ei
 _ZN10MapManager18func_ov00_02083604Ei: ; 0x02083604
-	ldr ip, _02083610 ; =func_ov00_0207cbe8
+	ldr ip, _02083610 ; =_ZN6Course18func_ov00_0207cbe8Ei
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02083604Ei
-_02083610: .word func_ov00_0207cbe8
+_02083610: .word _ZN6Course18func_ov00_0207cbe8Ei
 
 	.global _ZN10MapManager18func_ov00_02083614Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083614Ei
 _ZN10MapManager18func_ov00_02083614Ei: ; 0x02083614
-	ldr ip, _02083620 ; =func_ov00_0207cc24
+	ldr ip, _02083620 ; =_ZN6Course18func_ov00_0207cc24Ei
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02083614Ei
-_02083620: .word func_ov00_0207cc24
+_02083620: .word _ZN6Course18func_ov00_0207cc24Ei
 
 	.global _ZN10MapManager14GetEntrancePosEP5Vec3pi
 	arm_func_start _ZN10MapManager14GetEntrancePosEP5Vec3pi
@@ -3579,7 +3579,7 @@ _ZN10MapManager18func_ov00_0208499cEv: ; 0x0208499c
 	movne r0, #0
 	ldmneia sp!, {r4, pc}
 	ldr r0, [r4]
-	bl func_ov00_0207d47c
+	bl _ZN6Course18func_ov00_0207d47cEv
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN10MapManager18func_ov00_0208499cEv
 
@@ -3771,17 +3771,17 @@ _02084b8c:
 _02084bb0:
 	ldr r0, [r0]
 	mov r2, r3
-	bl func_ov00_0207d8b4
+	bl _ZN6Course18func_ov00_0207d8b4Ev
 	ldmia sp!, {r3, pc}
 _02084bc0:
 	ldr r0, [r0]
 	mov r2, r3
-	bl func_ov00_0207d7dc
+	bl _ZN6Course18func_ov00_0207d7dcEii
 	ldmia sp!, {r3, pc}
 _02084bd0:
 	ldr r0, [r0]
 	mov r2, r3
-	bl func_ov00_0207d848
+	bl _ZN6Course18func_ov00_0207d848Eii
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084b38Eiii
 
@@ -3812,15 +3812,15 @@ _02084c0c:
 	ldmia sp!, {r3, pc}
 _02084c30:
 	ldr r0, [r0]
-	bl func_ov00_0207d8d4
+	bl _ZN6Course18func_ov00_0207d8d4Ei
 	ldmia sp!, {r3, pc}
 _02084c3c:
 	ldr r0, [r0]
-	bl func_ov00_0207d828
+	bl _ZN6Course18func_ov00_0207d828Ei
 	ldmia sp!, {r3, pc}
 _02084c48:
 	ldr r0, [r0]
-	bl func_ov00_0207d894
+	bl _ZN6Course18func_ov00_0207d894Ei
 	ldmia sp!, {r3, pc}
 _02084c54:
 	mov r0, #0
@@ -3830,22 +3830,22 @@ _02084c54:
 	.global _ZN10MapManager18func_ov00_02084c5cEii
 	arm_func_start _ZN10MapManager18func_ov00_02084c5cEii
 _ZN10MapManager18func_ov00_02084c5cEii: ; 0x02084c5c
-	ldr ip, _02084c68 ; =func_ov00_0207d8ec
+	ldr ip, _02084c68 ; =_ZN6Course18func_ov00_0207d8ecEv
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02084c5cEii
-_02084c68: .word func_ov00_0207d8ec
+_02084c68: .word _ZN6Course18func_ov00_0207d8ecEv
 
 	.global _ZN10MapManager18func_ov00_02084c6cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c6cEi
 _ZN10MapManager18func_ov00_02084c6cEi: ; 0x02084c6c
-	ldr ip, _02084c78 ; =func_ov00_0207d90c
+	ldr ip, _02084c78 ; =_ZN6Course18func_ov00_0207d90cEi
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02084c6cEi
-_02084c78: .word func_ov00_0207d90c
+_02084c78: .word _ZN6Course18func_ov00_0207d90cEi
 
 	.global _ZN10MapManager18func_ov00_02084c7cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c7cEi
@@ -3854,7 +3854,7 @@ _ZN10MapManager18func_ov00_02084c7cEi: ; 0x02084c7c
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d924
+	bl _ZN6Course18func_ov00_0207d924Ev
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084c7cEi
 
@@ -3866,7 +3866,7 @@ _ZN10MapManager18func_ov00_02084c94Ei: ; 0x02084c94
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d944
+	bl _ZN6Course18func_ov00_0207d944Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084c94Ei
 
@@ -3877,7 +3877,7 @@ _ZN10MapManager18func_ov00_02084cb0Ei: ; 0x02084cb0
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d95c
+	bl _ZN6Course18func_ov00_0207d95cEv
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cb0Ei
 
@@ -3889,7 +3889,7 @@ _ZN10MapManager18func_ov00_02084cc8Ei: ; 0x02084cc8
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d97c
+	bl _ZN6Course18func_ov00_0207d97cEi
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cc8Ei
 
@@ -3900,7 +3900,7 @@ _ZN10MapManager18func_ov00_02084ce4Ei: ; 0x02084ce4
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d994
+	bl _ZN6Course18func_ov00_0207d994Ev
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084ce4Ei
 
@@ -3912,7 +3912,7 @@ _ZN10MapManager18func_ov00_02084cfcEi: ; 0x02084cfc
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl func_ov00_0207d9b4
+	bl _ZN6Course18func_ov00_0207d9b4Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cfcEi
 

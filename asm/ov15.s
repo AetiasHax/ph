@@ -11705,7 +11705,7 @@ _02129058:
 	add r0, sp, #8
 	mov r1, r4
 	mov r2, r6
-	bl func_ov00_0207cb7c
+	bl _ZN6Course18func_ov00_0207cb7cEiPS_i
 	strb r6, [r7, #0x13]
 	ldrb r3, [sp, #9]
 	ldrb r2, [sp, #8]
@@ -11724,7 +11724,7 @@ _02129058:
 	mov r0, r4
 	mov r1, r6
 	add r3, r3, #0xa8
-	bl func_ov00_0207ce20
+	bl _ZN6Course18func_ov00_0207ce20Eiiii
 	mov r0, #0
 	str r0, [sp, #0xc]
 	add r0, sp, #0x400
@@ -11749,7 +11749,7 @@ _02129058:
 	mov r0, r4
 	mov r1, r6
 	add r3, sp, #0x10
-	bl func_ov00_0207ce20
+	bl _ZN6Course18func_ov00_0207ce20Eiiii
 	ldr r0, _0212923c ; =data_027e0f6c
 	add r1, sp, #0x10
 	ldr r0, [r0]
@@ -11761,7 +11761,7 @@ _02129058:
 	mov r0, r4
 	mov r1, r6
 	mov r2, #1
-	bl func_ov00_0207ca78
+	bl _ZN6Course18func_ov00_0207ca78Ev
 	mov r0, r7
 	ldr r1, [r0]
 	ldr r1, [r1, #0x14]
@@ -11773,7 +11773,7 @@ _02129058:
 	mov r1, r6
 	mov r0, r4
 	add r3, r3, #0xa8
-	bl func_ov00_0207ce20
+	bl _ZN6Course18func_ov00_0207ce20Eiiii
 	ldr r0, _02129240 ; =data_027e103c
 	add r1, sp, #0x400
 	ldr r0, [r0]
@@ -11783,7 +11783,7 @@ _02129058:
 	cmp r0, #0
 	beq _02129210
 	mov r0, r4
-	bl func_ov00_0207d7bc
+	bl _ZN6Course18func_ov00_0207d7bcEv
 _02129210:
 	mov r0, r7
 	mov r1, r4
@@ -11869,7 +11869,7 @@ func_ov15_0212925c: ; 0x0212925c
 _02129300:
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	beq _021296ac
 	ldr r1, _021296c4 ; =data_027e0ce0
@@ -11895,7 +11895,7 @@ _0212935c:
 	str r0, [r1, #0x188]
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d6ec
+	bl _ZN6Course18func_ov00_0207d6ecEv
 	mov r1, #0
 	str r1, [sp, #0x10]
 	mov r1, #0x47
@@ -11922,7 +11922,7 @@ _0212935c:
 	str r0, [sp, #0x18]
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	beq _021293f8
 	mov r0, r9
@@ -12044,7 +12044,7 @@ _0212953c:
 _02129598:
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	beq _021295ec
 	mov r0, r9
@@ -12096,7 +12096,7 @@ _0212960c:
 	bl func_ov00_02093a5c
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	beq _0212969c
 	mov r0, r9

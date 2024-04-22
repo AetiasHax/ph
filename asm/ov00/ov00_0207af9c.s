@@ -2893,9 +2893,9 @@ _0207c9d8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov00_0207c91c
 
-	.global func_ov00_0207ca00
-	arm_func_start func_ov00_0207ca00
-func_ov00_0207ca00: ; 0x0207ca00
+	.global _ZN6Course18GetDungeonProgressEP14CourseProgress
+	arm_func_start _ZN6Course18GetDungeonProgressEP14CourseProgress
+_ZN6Course18GetDungeonProgressEP14CourseProgress: ; 0x0207ca00
 	ldr r2, [r0, #0x268]
 	str r2, [r1]
 	ldr r2, [r0, #4]
@@ -2906,11 +2906,11 @@ func_ov00_0207ca00: ; 0x0207ca00
 	ldrb r0, [r0, #0x25d]
 	strb r0, [r1, #5]
 	bx lr
-	arm_func_end func_ov00_0207ca00
+	arm_func_end _ZN6Course18GetDungeonProgressEP14CourseProgress
 
-	.global func_ov00_0207ca28
-	arm_func_start func_ov00_0207ca28
-func_ov00_0207ca28: ; 0x0207ca28
+	.global _ZN6Course18func_ov00_0207ca28Eiii
+	arm_func_start _ZN6Course18func_ov00_0207ca28Eiii
+_ZN6Course18func_ov00_0207ca28Eiii: ; 0x0207ca28
 	stmdb sp!, {r3, lr}
 	ldr ip, [r0, #4]
 	add r0, r0, r1, lsl #2
@@ -2928,25 +2928,25 @@ _0207ca54:
 	mov r3, #0
 	bl func_ov00_020972e4
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207ca28
+	arm_func_end _ZN6Course18func_ov00_0207ca28Eiii
 
-	.global func_ov00_0207ca68
-	arm_func_start func_ov00_0207ca68
-func_ov00_0207ca68: ; 0x0207ca68
+	.global _ZN6Course13SetCourseNameEPc
+	arm_func_start _ZN6Course13SetCourseNameEPc
+_ZN6Course13SetCourseNameEPc: ; 0x0207ca68
 	ldr ip, _0207ca74 ; =strcpy
 	add r0, r0, #0xc
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_0207ca68
+	arm_func_end _ZN6Course13SetCourseNameEPc
 _0207ca74: .word strcpy
 
-	.global func_ov00_0207ca78
-	arm_func_start func_ov00_0207ca78
-func_ov00_0207ca78: ; 0x0207ca78
+	.global _ZN6Course18func_ov00_0207ca78Ev
+	arm_func_start _ZN6Course18func_ov00_0207ca78Ev
+_ZN6Course18func_ov00_0207ca78Ev: ; 0x0207ca78
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r2
-	bl func_ov00_0207d9cc
+	bl _ZN6Course18func_ov00_0207d9ccEi
 	movs r1, r0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	strb r4, [r1]
@@ -2955,11 +2955,11 @@ func_ov00_0207ca78: ; 0x0207ca78
 	mov r2, #1
 	bl func_ov00_020a3510
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207ca78
+	arm_func_end _ZN6Course18func_ov00_0207ca78Ev
 
-	.global func_ov00_0207caa8
-	arm_func_start func_ov00_0207caa8
-func_ov00_0207caa8: ; 0x0207caa8
+	.global _ZN6Course18func_ov00_0207caa8Eiii
+	arm_func_start _ZN6Course18func_ov00_0207caa8Eiii
+_ZN6Course18func_ov00_0207caa8Eiii: ; 0x0207caa8
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -2994,11 +2994,11 @@ func_ov00_0207caa8: ; 0x0207caa8
 	strh r1, [r4, #6]
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207caa8
+	arm_func_end _ZN6Course18func_ov00_0207caa8Eiii
 
-	.global func_ov00_0207cb30
-	arm_func_start func_ov00_0207cb30
-func_ov00_0207cb30: ; 0x0207cb30
+	.global _ZN6Course18func_ov00_0207cb30Ei
+	arm_func_start _ZN6Course18func_ov00_0207cb30Ei
+_ZN6Course18func_ov00_0207cb30Ei: ; 0x0207cb30
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -3018,12 +3018,12 @@ func_ov00_0207cb30: ; 0x0207cb30
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207cb30
+	arm_func_end _ZN6Course18func_ov00_0207cb30Ei
 _0207cb78: .word 0x0000ffff
 
-	.global func_ov00_0207cb7c
-	arm_func_start func_ov00_0207cb7c
-func_ov00_0207cb7c: ; 0x0207cb7c
+	.global _ZN6Course18func_ov00_0207cb7cEiPS_i
+	arm_func_start _ZN6Course18func_ov00_0207cb7cEiPS_i
+_ZN6Course18func_ov00_0207cb7cEiPS_i: ; 0x0207cb7c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov lr, #0
 	mov r5, r1
@@ -3049,20 +3049,20 @@ _0207cb90:
 	strb r1, [r0]
 	strb r2, [r0, #1]
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207cb7c
+	arm_func_end _ZN6Course18func_ov00_0207cb7cEiPS_i
 
-	.global func_ov00_0207cbd8
-	arm_func_start func_ov00_0207cbd8
-func_ov00_0207cbd8: ; 0x0207cbd8
+	.global _ZN6Course18func_ov00_0207cbd8Ei
+	arm_func_start _ZN6Course18func_ov00_0207cbd8Ei
+_ZN6Course18func_ov00_0207cbd8Ei: ; 0x0207cbd8
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207d9cc
+	bl _ZN6Course18func_ov00_0207d9ccEi
 	add r0, r0, #0x14
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207cbd8
+	arm_func_end _ZN6Course18func_ov00_0207cbd8Ei
 
-	.global func_ov00_0207cbe8
-	arm_func_start func_ov00_0207cbe8
-func_ov00_0207cbe8: ; 0x0207cbe8
+	.global _ZN6Course18func_ov00_0207cbe8Ei
+	arm_func_start _ZN6Course18func_ov00_0207cbe8Ei
+_ZN6Course18func_ov00_0207cbe8Ei: ; 0x0207cbe8
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -3078,11 +3078,11 @@ func_ov00_0207cbe8: ; 0x0207cbe8
 	bl func_ov00_020a3710
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207cbe8
+	arm_func_end _ZN6Course18func_ov00_0207cbe8Ei
 
-	.global func_ov00_0207cc24
-	arm_func_start func_ov00_0207cc24
-func_ov00_0207cc24: ; 0x0207cc24
+	.global _ZN6Course18func_ov00_0207cc24Ei
+	arm_func_start _ZN6Course18func_ov00_0207cc24Ei
+_ZN6Course18func_ov00_0207cc24Ei: ; 0x0207cc24
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -3101,22 +3101,22 @@ func_ov00_0207cc24: ; 0x0207cc24
 	moveq r0, #0
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207cc24
+	arm_func_end _ZN6Course18func_ov00_0207cc24Ei
 
-	.global func_ov00_0207cc6c
-	arm_func_start func_ov00_0207cc6c
-func_ov00_0207cc6c: ; 0x0207cc6c
+	.global _ZN6Course18func_ov00_0207cc6cEv
+	arm_func_start _ZN6Course18func_ov00_0207cc6cEv
+_ZN6Course18func_ov00_0207cc6cEv: ; 0x0207cc6c
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207d9cc
+	bl _ZN6Course18func_ov00_0207d9ccEi
 	cmp r0, #0
 	moveq r0, #0
 	ldrne r0, [r0, #8]
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207cc6c
+	arm_func_end _ZN6Course18func_ov00_0207cc6cEv
 
-	.global func_ov00_0207cc84
-	arm_func_start func_ov00_0207cc84
-func_ov00_0207cc84: ; 0x0207cc84
+	.global _ZN6Course14GetMCSFilePathEiii
+	arm_func_start _ZN6Course14GetMCSFilePathEiii
+_ZN6Course14GetMCSFilePathEiii: ; 0x0207cc84
 	stmdb sp!, {r3, lr}
 	mov lr, r0
 	mov ip, r2
@@ -3178,7 +3178,7 @@ _0207cd3c:
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207cc84
+	arm_func_end _ZN6Course14GetMCSFilePathEiii
 _0207cd58: .word data_ov00_020e2508
 _0207cd5c: .word data_ov00_020e2058
 _0207cd60: .word data_ov00_020e2070
@@ -3187,9 +3187,9 @@ _0207cd68: .word data_ov00_020e20a4
 _0207cd6c: .word data_ov00_020e20c0
 _0207cd70: .word data_ov00_020e20d8
 
-	.global func_ov00_0207cd74
-	arm_func_start func_ov00_0207cd74
-func_ov00_0207cd74: ; 0x0207cd74
+	.global _ZN6Course14GetMRCFilePathEiii
+	arm_func_start _ZN6Course14GetMRCFilePathEiii
+_ZN6Course14GetMRCFilePathEiii: ; 0x0207cd74
 	stmdb sp!, {r4, lr}
 	mov r4, r2
 	cmp r3, #3
@@ -3233,7 +3233,7 @@ _0207cde0:
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207cd74
+	arm_func_end _ZN6Course14GetMRCFilePathEiii
 _0207ce08: .word data_ov00_020e250c
 _0207ce0c: .word data_ov00_020e20ec
 _0207ce10: .word data_ov00_020e2104
@@ -3241,9 +3241,9 @@ _0207ce14: .word data_ov00_020e211c
 _0207ce18: .word data_027e0f7c
 _0207ce1c: .word data_ov00_020e2134
 
-	.global func_ov00_0207ce20
-	arm_func_start func_ov00_0207ce20
-func_ov00_0207ce20: ; 0x0207ce20
+	.global _ZN6Course18func_ov00_0207ce20Eiiii
+	arm_func_start _ZN6Course18func_ov00_0207ce20Eiiii
+_ZN6Course18func_ov00_0207ce20Eiiii: ; 0x0207ce20
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #8
 	ldr ip, [sp, #0x10]
@@ -3252,14 +3252,14 @@ func_ov00_0207ce20: ; 0x0207ce20
 	mov r3, r2
 	ldr r1, [r0]
 	mov r2, ip
-	bl func_ov00_0207ce4c
+	bl _ZN6Course18func_ov00_0207ce4cEccccii
 	add sp, sp, #8
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207ce20
+	arm_func_end _ZN6Course18func_ov00_0207ce20Eiiii
 
-	.global func_ov00_0207ce4c
-	arm_func_start func_ov00_0207ce4c
-func_ov00_0207ce4c: ; 0x0207ce4c
+	.global _ZN6Course18func_ov00_0207ce4cEccccii
+	arm_func_start _ZN6Course18func_ov00_0207ce4cEccccii
+_ZN6Course18func_ov00_0207ce4cEccccii: ; 0x0207ce4c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #8
 	ldr r4, _0207d3ac ; =data_027e0f7c
@@ -3344,7 +3344,7 @@ _0207cf38:
 	mov r4, #4
 	moveq r2, #0
 	str r4, [sp, #4]
-	bl func_ov00_0207ce4c
+	bl _ZN6Course18func_ov00_0207ce4cEccccii
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207cf98:
@@ -3357,7 +3357,7 @@ _0207cf98:
 	mov r2, r5
 	mov r3, r4
 	str r7, [sp]
-	bl func_ov00_0207ce20
+	bl _ZN6Course18func_ov00_0207ce20Eiiii
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207cfc8:
@@ -3627,7 +3627,7 @@ _0207d364:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207ce4c
+	arm_func_end _ZN6Course18func_ov00_0207ce4cEccccii
 _0207d3ac: .word data_027e0f7c
 _0207d3b0: .word 0x66666667
 _0207d3b4: .word data_ov00_020e233c
@@ -3651,9 +3651,9 @@ _0207d3f8: .word data_ov00_020e22b8
 _0207d3fc: .word data_ov00_020e22d4
 _0207d400: .word data_ov00_020e22e8
 
-	.global func_ov00_0207d404
-	arm_func_start func_ov00_0207d404
-func_ov00_0207d404: ; 0x0207d404
+	.global _ZN6Course18func_ov00_0207d404Eiii
+	arm_func_start _ZN6Course18func_ov00_0207d404Eiii
+_ZN6Course18func_ov00_0207d404Eiii: ; 0x0207d404
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
 	mov r6, r0
@@ -3680,26 +3680,26 @@ func_ov00_0207d404: ; 0x0207d404
 	ldr r1, [sp, #8]
 	mov r0, r6
 	mov r3, r5
-	bl func_ov00_0207ce4c
+	bl _ZN6Course18func_ov00_0207ce4cEccccii
 	mov r0, #1
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_0207d404
+	arm_func_end _ZN6Course18func_ov00_0207d404Eiii
 
-	.global func_ov00_0207d47c
-	arm_func_start func_ov00_0207d47c
-func_ov00_0207d47c: ; 0x0207d47c
-	ldr ip, _0207d48c ; =func_ov00_0207d490
+	.global _ZN6Course18func_ov00_0207d47cEv
+	arm_func_start _ZN6Course18func_ov00_0207d47cEv
+_ZN6Course18func_ov00_0207d47cEv: ; 0x0207d47c
+	ldr ip, _0207d48c ; =_ZN6Course18func_ov00_0207d490Eii
 	ldrb r1, [r0, #0x1c]
 	ldrb r2, [r0, #0x1d]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_0207d47c
-_0207d48c: .word func_ov00_0207d490
+	arm_func_end _ZN6Course18func_ov00_0207d47cEv
+_0207d48c: .word _ZN6Course18func_ov00_0207d490Eii
 
-	.global func_ov00_0207d490
-	arm_func_start func_ov00_0207d490
-func_ov00_0207d490: ; 0x0207d490
+	.global _ZN6Course18func_ov00_0207d490Eii
+	arm_func_start _ZN6Course18func_ov00_0207d490Eii
+_ZN6Course18func_ov00_0207d490Eii: ; 0x0207d490
 	ldrb r3, [r0, #0x25c]
 	cmp r3, #0
 	moveq r0, #1
@@ -3722,29 +3722,29 @@ func_ov00_0207d490: ; 0x0207d490
 _0207d4dc:
 	mov r0, #0
 	bx lr
-	arm_func_end func_ov00_0207d490
+	arm_func_end _ZN6Course18func_ov00_0207d490Eii
 
-	.global func_ov00_0207d4e4
-	arm_func_start func_ov00_0207d4e4
-func_ov00_0207d4e4: ; 0x0207d4e4
+	.global _ZN6Course18func_ov00_0207d4e4Ei
+	arm_func_start _ZN6Course18func_ov00_0207d4e4Ei
+_ZN6Course18func_ov00_0207d4e4Ei: ; 0x0207d4e4
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
 	mov r2, r1
 	add r0, sp, #0
 	mov r1, r4
-	bl func_ov00_0207cb7c
+	bl _ZN6Course18func_ov00_0207cb7cEiPS_i
 	ldrb r1, [sp]
 	ldrb r2, [sp, #1]
 	mov r0, r4
-	bl func_ov00_0207d490
+	bl _ZN6Course18func_ov00_0207d490Eii
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
-	arm_func_end func_ov00_0207d4e4
+	arm_func_end _ZN6Course18func_ov00_0207d4e4Ei
 
-	.global func_ov00_0207d518
-	arm_func_start func_ov00_0207d518
-func_ov00_0207d518: ; 0x0207d518
+	.global _ZN6Course18func_ov00_0207d518EiPiS0_
+	arm_func_start _ZN6Course18func_ov00_0207d518EiPiS0_
+_ZN6Course18func_ov00_0207d518EiPiS0_: ; 0x0207d518
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r4, r1
 	mov r7, r0
@@ -3756,11 +3756,11 @@ func_ov00_0207d518: ; 0x0207d518
 	add r0, sp, #0
 	mov r1, r7
 	mov r2, r4
-	bl func_ov00_0207cb7c
+	bl _ZN6Course18func_ov00_0207cb7cEiPS_i
 	ldrb r1, [sp]
 	ldrb r2, [sp, #1]
 	mov r0, r7
-	bl func_ov00_0207d490
+	bl _ZN6Course18func_ov00_0207d490Eii
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
@@ -3788,11 +3788,11 @@ func_ov00_0207d518: ; 0x0207d518
 	str r1, [r5]
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
-	arm_func_end func_ov00_0207d518
+	arm_func_end _ZN6Course18func_ov00_0207d518EiPiS0_
 
-	.global func_ov00_0207d5c4
-	arm_func_start func_ov00_0207d5c4
-func_ov00_0207d5c4: ; 0x0207d5c4
+	.global _ZN6Course18func_ov00_0207d5c4Ev
+	arm_func_start _ZN6Course18func_ov00_0207d5c4Ev
+_ZN6Course18func_ov00_0207d5c4Ev: ; 0x0207d5c4
 	stmdb sp!, {r3, lr}
 	ldrb r1, [r0, #0x86]
 	ldrb r0, [r0, #0x87]
@@ -3804,11 +3804,11 @@ func_ov00_0207d5c4: ; 0x0207d5c4
 	mov r1, #0x40000
 	bl Divide
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207d5c4
+	arm_func_end _ZN6Course18func_ov00_0207d5c4Ev
 
-	.global func_ov00_0207d5f0
-	arm_func_start func_ov00_0207d5f0
-func_ov00_0207d5f0: ; 0x0207d5f0
+	.global _ZN6Course18func_ov00_0207d5f0Ev
+	arm_func_start _ZN6Course18func_ov00_0207d5f0Ev
+_ZN6Course18func_ov00_0207d5f0Ev: ; 0x0207d5f0
 	stmdb sp!, {r3, lr}
 	ldrb r1, [r0, #0x87]
 	ldrb r0, [r0, #0x86]
@@ -3820,27 +3820,27 @@ func_ov00_0207d5f0: ; 0x0207d5f0
 	mov r1, #0x30000
 	bl Divide
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207d5f0
+	arm_func_end _ZN6Course18func_ov00_0207d5f0Ev
 
-	.global func_ov00_0207d61c
-	arm_func_start func_ov00_0207d61c
-func_ov00_0207d61c: ; 0x0207d61c
+	.global _ZN6Course18func_ov00_0207d61cEv
+	arm_func_start _ZN6Course18func_ov00_0207d61cEv
+_ZN6Course18func_ov00_0207d61cEv: ; 0x0207d61c
 	ldr r0, [r0, #0xc8]
 	ldr r0, [r0]
 	bx lr
-	arm_func_end func_ov00_0207d61c
+	arm_func_end _ZN6Course18func_ov00_0207d61cEv
 
-	.global func_ov00_0207d628
-	arm_func_start func_ov00_0207d628
-func_ov00_0207d628: ; 0x0207d628
+	.global _ZN6Course15GetUnk_c8_Unk_4Ev
+	arm_func_start _ZN6Course15GetUnk_c8_Unk_4Ev
+_ZN6Course15GetUnk_c8_Unk_4Ev: ; 0x0207d628
 	ldr r0, [r0, #0xc8]
 	ldr r0, [r0, #4]
 	bx lr
-	arm_func_end func_ov00_0207d628
+	arm_func_end _ZN6Course15GetUnk_c8_Unk_4Ev
 
-	.global func_ov00_0207d634
-	arm_func_start func_ov00_0207d634
-func_ov00_0207d634: ; 0x0207d634
+	.global _ZN6Course18func_ov00_0207d634Ei
+	arm_func_start _ZN6Course18func_ov00_0207d634Ei
+_ZN6Course18func_ov00_0207d634Ei: ; 0x0207d634
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrb r4, [r6, #0x1c]
@@ -3868,20 +3868,20 @@ _0207d67c:
 	mov r0, r6
 	mov r1, r4
 	mov r2, r5
-	bl func_ov00_0207d490
+	bl _ZN6Course18func_ov00_0207d490Eii
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r0, r6
 	mov r1, r4
 	mov r2, r5
-	bl func_ov00_0207d6ac
+	bl _ZN6Course18func_ov00_0207d6acEii
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_0207d634
+	arm_func_end _ZN6Course18func_ov00_0207d634Ei
 
-	.global func_ov00_0207d6ac
-	arm_func_start func_ov00_0207d6ac
-func_ov00_0207d6ac: ; 0x0207d6ac
+	.global _ZN6Course18func_ov00_0207d6acEii
+	arm_func_start _ZN6Course18func_ov00_0207d6acEii
+_ZN6Course18func_ov00_0207d6acEii: ; 0x0207d6ac
 	cmp r1, #0
 	cmpge r2, #0
 	blt _0207d6c4
@@ -3900,35 +3900,35 @@ _0207d6cc:
 	movne r0, #1
 	moveq r0, #0
 	bx lr
-	arm_func_end func_ov00_0207d6ac
+	arm_func_end _ZN6Course18func_ov00_0207d6acEii
 
-	.global func_ov00_0207d6ec
-	arm_func_start func_ov00_0207d6ec
-func_ov00_0207d6ec: ; 0x0207d6ec
+	.global _ZN6Course18func_ov00_0207d6ecEv
+	arm_func_start _ZN6Course18func_ov00_0207d6ecEv
+_ZN6Course18func_ov00_0207d6ecEv: ; 0x0207d6ec
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, r1
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	moveq r0, #0xff
 	ldmeqia sp!, {r4, r5, r6, pc}
 	mov r0, r6
 	mov r1, r5
-	bl func_ov00_0207d758
+	bl _ZN6Course18func_ov00_0207d758Ei
 	mov r4, r0
 	mov r0, r6
 	mov r1, r5
-	bl func_ov00_0207d738
+	bl _ZN6Course18func_ov00_0207d738Ei
 	mov r1, #0xa
 	mla r1, r0, r1, r6
 	add r0, r1, r4
 	ldrb r0, [r0, #0x20]
 	ldmia sp!, {r4, r5, r6, pc}
-	arm_func_end func_ov00_0207d6ec
+	arm_func_end _ZN6Course18func_ov00_0207d6ecEv
 
-	.global func_ov00_0207d738
-	arm_func_start func_ov00_0207d738
-func_ov00_0207d738: ; 0x0207d738
+	.global _ZN6Course18func_ov00_0207d738Ei
+	arm_func_start _ZN6Course18func_ov00_0207d738Ei
+_ZN6Course18func_ov00_0207d738Ei: ; 0x0207d738
 	cmp r1, #0
 	ldrb r0, [r0, #0x1c]
 	beq _0207d750
@@ -3938,11 +3938,11 @@ func_ov00_0207d738: ; 0x0207d738
 _0207d750:
 	add r0, r0, #1
 	bx lr
-	arm_func_end func_ov00_0207d738
+	arm_func_end _ZN6Course18func_ov00_0207d738Ei
 
-	.global func_ov00_0207d758
-	arm_func_start func_ov00_0207d758
-func_ov00_0207d758: ; 0x0207d758
+	.global _ZN6Course18func_ov00_0207d758Ei
+	arm_func_start _ZN6Course18func_ov00_0207d758Ei
+_ZN6Course18func_ov00_0207d758Ei: ; 0x0207d758
 	cmp r1, #2
 	ldrb r0, [r0, #0x1d]
 	beq _0207d770
@@ -3952,58 +3952,58 @@ func_ov00_0207d758: ; 0x0207d758
 _0207d770:
 	add r0, r0, #1
 	bx lr
-	arm_func_end func_ov00_0207d758
+	arm_func_end _ZN6Course18func_ov00_0207d758Ei
 
-	.global func_ov00_0207d778
-	arm_func_start func_ov00_0207d778
-func_ov00_0207d778: ; 0x0207d778
+	.global _ZN6Course18func_ov00_0207d778Ev
+	arm_func_start _ZN6Course18func_ov00_0207d778Ev
+_ZN6Course18func_ov00_0207d778Ev: ; 0x0207d778
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	ldrh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207d778
+	arm_func_end _ZN6Course18func_ov00_0207d778Ev
 
-	.global func_ov00_0207d788
-	arm_func_start func_ov00_0207d788
-func_ov00_0207d788: ; 0x0207d788
+	.global _ZN6Course18func_ov00_0207d788Ev
+	arm_func_start _ZN6Course18func_ov00_0207d788Ev
+_ZN6Course18func_ov00_0207d788Ev: ; 0x0207d788
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207d9cc
+	bl _ZN6Course18func_ov00_0207d9ccEi
 	cmp r0, #0
 	ldreq r0, _0207d7a0 ; =0x0000ffff
 	ldrneh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207d788
+	arm_func_end _ZN6Course18func_ov00_0207d788Ev
 _0207d7a0: .word 0x0000ffff
 
-	.global func_ov00_0207d7a4
-	arm_func_start func_ov00_0207d7a4
-func_ov00_0207d7a4: ; 0x0207d7a4
+	.global _ZN6Course18func_ov00_0207d7a4Ev
+	arm_func_start _ZN6Course18func_ov00_0207d7a4Ev
+_ZN6Course18func_ov00_0207d7a4Ev: ; 0x0207d7a4
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207d9cc
+	bl _ZN6Course18func_ov00_0207d9ccEi
 	cmp r0, #0
 	moveq r0, #0
 	ldrne r0, [r0, #0xc]
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_0207d7a4
+	arm_func_end _ZN6Course18func_ov00_0207d7a4Ev
 
-	.global func_ov00_0207d7bc
-	arm_func_start func_ov00_0207d7bc
-func_ov00_0207d7bc: ; 0x0207d7bc
+	.global _ZN6Course18func_ov00_0207d7bcEv
+	arm_func_start _ZN6Course18func_ov00_0207d7bcEv
+_ZN6Course18func_ov00_0207d7bcEv: ; 0x0207d7bc
 	stmdb sp!, {r3, lr}
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	ldr r2, _0207d7d8 ; =data_027e103c
 	ldrh r1, [r0, #4]
 	ldr r0, [r2]
 	bl func_ov00_020cf414
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_0207d7bc
+	arm_func_end _ZN6Course18func_ov00_0207d7bcEv
 _0207d7d8: .word data_027e103c
 
-	.global func_ov00_0207d7dc
-	arm_func_start func_ov00_0207d7dc
-func_ov00_0207d7dc: ; 0x0207d7dc
+	.global _ZN6Course18func_ov00_0207d7dcEii
+	arm_func_start _ZN6Course18func_ov00_0207d7dcEii
+_ZN6Course18func_ov00_0207d7dcEii: ; 0x0207d7dc
 	cmp r2, #0
 	beq _0207d804
 	add ip, r0, #0x264
@@ -4024,11 +4024,11 @@ _0207d804:
 	and r0, r1, r0
 	str r0, [r3, r2, lsl #2]
 	bx lr
-	arm_func_end func_ov00_0207d7dc
+	arm_func_end _ZN6Course18func_ov00_0207d7dcEii
 
-	.global func_ov00_0207d828
-	arm_func_start func_ov00_0207d828
-func_ov00_0207d828: ; 0x0207d828
+	.global _ZN6Course18func_ov00_0207d828Ei
+	arm_func_start _ZN6Course18func_ov00_0207d828Ei
+_ZN6Course18func_ov00_0207d828Ei: ; 0x0207d828
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x264]
@@ -4037,11 +4037,11 @@ func_ov00_0207d828: ; 0x0207d828
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end func_ov00_0207d828
+	arm_func_end _ZN6Course18func_ov00_0207d828Ei
 
-	.global func_ov00_0207d848
-	arm_func_start func_ov00_0207d848
-func_ov00_0207d848: ; 0x0207d848
+	.global _ZN6Course18func_ov00_0207d848Eii
+	arm_func_start _ZN6Course18func_ov00_0207d848Eii
+_ZN6Course18func_ov00_0207d848Eii: ; 0x0207d848
 	cmp r2, #0
 	beq _0207d870
 	add ip, r0, #0x268
@@ -4062,11 +4062,11 @@ _0207d870:
 	and r0, r1, r0
 	str r0, [r3, r2, lsl #2]
 	bx lr
-	arm_func_end func_ov00_0207d848
+	arm_func_end _ZN6Course18func_ov00_0207d848Eii
 
-	.global func_ov00_0207d894
-	arm_func_start func_ov00_0207d894
-func_ov00_0207d894: ; 0x0207d894
+	.global _ZN6Course18func_ov00_0207d894Ei
+	arm_func_start _ZN6Course18func_ov00_0207d894Ei
+_ZN6Course18func_ov00_0207d894Ei: ; 0x0207d894
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x268]
@@ -4075,131 +4075,131 @@ func_ov00_0207d894: ; 0x0207d894
 	tst r2, r0, lsl r1
 	moveq r0, #0
 	bx lr
-	arm_func_end func_ov00_0207d894
+	arm_func_end _ZN6Course18func_ov00_0207d894Ei
 
-	.global func_ov00_0207d8b4
-	arm_func_start func_ov00_0207d8b4
-func_ov00_0207d8b4: ; 0x0207d8b4
+	.global _ZN6Course18func_ov00_0207d8b4Ev
+	arm_func_start _ZN6Course18func_ov00_0207d8b4Ev
+_ZN6Course18func_ov00_0207d8b4Ev: ; 0x0207d8b4
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_0209740c
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207d8b4
+	arm_func_end _ZN6Course18func_ov00_0207d8b4Ev
 
-	.global func_ov00_0207d8d4
-	arm_func_start func_ov00_0207d8d4
-func_ov00_0207d8d4: ; 0x0207d8d4
+	.global _ZN6Course18func_ov00_0207d8d4Ei
+	arm_func_start _ZN6Course18func_ov00_0207d8d4Ei
+_ZN6Course18func_ov00_0207d8d4Ei: ; 0x0207d8d4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r4
 	bl func_ov00_02097458
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_0207d8d4
+	arm_func_end _ZN6Course18func_ov00_0207d8d4Ei
 
-	.global func_ov00_0207d8ec
-	arm_func_start func_ov00_0207d8ec
-func_ov00_0207d8ec: ; 0x0207d8ec
+	.global _ZN6Course18func_ov00_0207d8ecEv
+	arm_func_start _ZN6Course18func_ov00_0207d8ecEv
+_ZN6Course18func_ov00_0207d8ecEv: ; 0x0207d8ec
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_02097478
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207d8ec
+	arm_func_end _ZN6Course18func_ov00_0207d8ecEv
 
-	.global func_ov00_0207d90c
-	arm_func_start func_ov00_0207d90c
-func_ov00_0207d90c: ; 0x0207d90c
+	.global _ZN6Course18func_ov00_0207d90cEi
+	arm_func_start _ZN6Course18func_ov00_0207d90cEi
+_ZN6Course18func_ov00_0207d90cEi: ; 0x0207d90c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r4
 	bl func_ov00_020974c4
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_0207d90c
+	arm_func_end _ZN6Course18func_ov00_0207d90cEi
 
-	.global func_ov00_0207d924
-	arm_func_start func_ov00_0207d924
-func_ov00_0207d924: ; 0x0207d924
+	.global _ZN6Course18func_ov00_0207d924Ev
+	arm_func_start _ZN6Course18func_ov00_0207d924Ev
+_ZN6Course18func_ov00_0207d924Ev: ; 0x0207d924
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020974e4
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207d924
+	arm_func_end _ZN6Course18func_ov00_0207d924Ev
 
-	.global func_ov00_0207d944
-	arm_func_start func_ov00_0207d944
-func_ov00_0207d944: ; 0x0207d944
+	.global _ZN6Course18func_ov00_0207d944Ei
+	arm_func_start _ZN6Course18func_ov00_0207d944Ei
+_ZN6Course18func_ov00_0207d944Ei: ; 0x0207d944
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r4
 	bl func_ov00_02097530
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_0207d944
+	arm_func_end _ZN6Course18func_ov00_0207d944Ei
 
-	.global func_ov00_0207d95c
-	arm_func_start func_ov00_0207d95c
-func_ov00_0207d95c: ; 0x0207d95c
+	.global _ZN6Course18func_ov00_0207d95cEv
+	arm_func_start _ZN6Course18func_ov00_0207d95cEv
+_ZN6Course18func_ov00_0207d95cEv: ; 0x0207d95c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_02097550
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207d95c
+	arm_func_end _ZN6Course18func_ov00_0207d95cEv
 
-	.global func_ov00_0207d97c
-	arm_func_start func_ov00_0207d97c
-func_ov00_0207d97c: ; 0x0207d97c
+	.global _ZN6Course18func_ov00_0207d97cEi
+	arm_func_start _ZN6Course18func_ov00_0207d97cEi
+_ZN6Course18func_ov00_0207d97cEi: ; 0x0207d97c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r4
 	bl func_ov00_0209759c
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_0207d97c
+	arm_func_end _ZN6Course18func_ov00_0207d97cEi
 
-	.global func_ov00_0207d994
-	arm_func_start func_ov00_0207d994
-func_ov00_0207d994: ; 0x0207d994
+	.global _ZN6Course18func_ov00_0207d994Ev
+	arm_func_start _ZN6Course18func_ov00_0207d994Ev
+_ZN6Course18func_ov00_0207d994Ev: ; 0x0207d994
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020975bc
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_0207d994
+	arm_func_end _ZN6Course18func_ov00_0207d994Ev
 
-	.global func_ov00_0207d9b4
-	arm_func_start func_ov00_0207d9b4
-func_ov00_0207d9b4: ; 0x0207d9b4
+	.global _ZN6Course18func_ov00_0207d9b4Ei
+	arm_func_start _ZN6Course18func_ov00_0207d9b4Ei
+_ZN6Course18func_ov00_0207d9b4Ei: ; 0x0207d9b4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl func_ov00_0207da14
+	bl _ZN6Course18func_ov00_0207da14Ev
 	mov r1, r4
 	bl func_ov00_02097608
 	ldmia sp!, {r4, pc}
-	arm_func_end func_ov00_0207d9b4
+	arm_func_end _ZN6Course18func_ov00_0207d9b4Ei
 
-	.global func_ov00_0207d9cc
-	arm_func_start func_ov00_0207d9cc
-func_ov00_0207d9cc: ; 0x0207d9cc
+	.global _ZN6Course18func_ov00_0207d9ccEi
+	arm_func_start _ZN6Course18func_ov00_0207d9ccEi
+_ZN6Course18func_ov00_0207d9ccEi: ; 0x0207d9cc
 	ldrb r2, [r0, #0xb0]
 	mov ip, #0
 	cmp r2, #0
@@ -4221,22 +4221,22 @@ _0207d9fc:
 _0207da0c:
 	mov r0, #0
 	bx lr
-	arm_func_end func_ov00_0207d9cc
+	arm_func_end _ZN6Course18func_ov00_0207d9ccEi
 
-	.global func_ov00_0207da14
-	arm_func_start func_ov00_0207da14
-func_ov00_0207da14: ; 0x0207da14
+	.global _ZN6Course18func_ov00_0207da14Ev
+	arm_func_start _ZN6Course18func_ov00_0207da14Ev
+_ZN6Course18func_ov00_0207da14Ev: ; 0x0207da14
 	ldrb r3, [r0, #0x1c]
 	mov r1, #0xa
 	ldrb r2, [r0, #0x1d]
 	mla r1, r3, r1, r0
 	add r1, r1, r2
-	ldr ip, _0207da34 ; =func_ov00_0207d9cc
+	ldr ip, _0207da34 ; =_ZN6Course18func_ov00_0207d9ccEi
 	ldrb r1, [r1, #0x20]
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov00_0207da14
-_0207da34: .word func_ov00_0207d9cc
+	arm_func_end _ZN6Course18func_ov00_0207da14Ev
+_0207da34: .word _ZN6Course18func_ov00_0207d9ccEi
 
 	.global func_ov00_0207da38
 	arm_func_start func_ov00_0207da38
@@ -4457,7 +4457,7 @@ func_ov00_0207dce4: ; 0x0207dce4
 	mov r2, r3, lsl #0xc
 	str r5, [sp]
 	str r2, [sp, #4]
-	bl func_ov00_0207cbd8
+	bl _ZN6Course18func_ov00_0207cbd8Ei
 	mov ip, r5
 	add r5, sp, #0x20
 	ldmia r0, {r0, r1, r2}

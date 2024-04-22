@@ -345,7 +345,7 @@ func_ov18_0215b86c: ; 0x0215b86c
 _0215b934:
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d634
+	bl _ZN6Course18func_ov00_0207d634Ei
 	cmp r0, #0
 	beq _0215bd54
 	ldr r1, _0215bd74 ; =data_027e0ce0
@@ -371,7 +371,7 @@ _0215b990:
 	str r0, [r1, #0x190]
 	mov r0, r8
 	mov r1, r7
-	bl func_ov00_0207d6ec
+	bl _ZN6Course18func_ov00_0207d6ecEv
 	mov r1, #0
 	str r1, [sp, #0xc]
 	mov r1, #0x47
