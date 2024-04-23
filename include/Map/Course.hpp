@@ -31,7 +31,7 @@ class Course : public SysObject {
     /* 01d */ unk8 mUnk_01d;
     /* 01e */ unk8 mUnk_01e;
     /* 01f */ unk8 mUnk_01f;
-    /* 020 */ unk8 mUnk_020[0x64];
+    /* 020 */ unk8 mUnk_020[10][10];
     /* 084 */ s8 mUnk_084;
     /* 084 */ s8 mUnk_085;
     /* 084 */ s8 mUnk_086;
@@ -51,8 +51,7 @@ class Course : public SysObject {
     /* 0c0 */ unk32 mUnk_0c0;
     /* 0c4 */ unk32 mUnk_0c4;
     /* 0c8 */ void *mUnk_0c8;
-    /* 0cc */ unk32 mUnk_0cc;
-    /* 0d0 */ unk8 mUnk_0d0[0x18c];
+    /* 0cc */ unk32 mUnk_0cc[100];
     /* 25c */ bool mUnk_25c;
     /* 25d */ bool mBlueWarpOpen;
     /* 25e */ unk8 mUnk_25e;
