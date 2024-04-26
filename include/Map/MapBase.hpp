@@ -9,7 +9,15 @@
 
 #include "Map/Entrance.hpp"
 #include "Map/TriggerBase.hpp"
+#include "Map/Exit.hpp"
+#include "Map/CameraViewpoint.hpp"
 #include "System/SysNew.hpp"
+
+#define MAX_ENTRANCES 0x40
+#define MAX_TRIGGERS 0x40
+#define MAX_EXITS 0x40
+#define MAX_VIEWPOINTS 8
+#define MAX_MAP_UNK_130 0x20
 
 struct MapBase_Unk_180 {
     /* 0 */ unk32 mUnk_0;
@@ -67,13 +75,11 @@ public:
     /* 0d0 */ Vec3p mUnk_0d0;
     /* 0dc */ Vec3p mUnk_0dc;
     /* 0e8 */ Vec3p mUnk_0e8;
-    /* 0f4 */ u32 mUnk_0f4;
-    /* 0f8 */ unk32 mUnk_0f8;
-    /* 0fc */ u32 mUnk_0fc;
+    /* 0f4 */ Vec3p mUnk_0f4;
     /* 100 */ std::vector<Entrance> mEntrances;
     /* 10c */ std::vector<TriggerBase*> mTriggers;
-    /* 118 */ std::vector<Todo> mUnk_118;
-    /* 124 */ std::vector<Todo> mUnk_124;
+    /* 118 */ std::vector<Exit> mExits;
+    /* 124 */ std::vector<CameraViewpoint> mViewpoints;
     /* 130 */ std::vector<TriggerBase*> mUnk_130;
     /* 13c */ unk32 mUnk_13c;
     /* 140 */ unk32 mUnk_140;
