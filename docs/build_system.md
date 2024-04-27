@@ -27,7 +27,7 @@ provide yourself. It extracts the following data:
 Files in the `/asm/` directory with the `.s` extension is assembly code. These files are grouped into modules, which consists
 of overlays, a main module, an Instruction TCM (ITCM) module and a Data TCM (DTCM) module.
 
-> [!INFO]
+> [!NOTE]
 > For interested readers:  
 > All modules are loaded into RAM. This is different from the DS predecessor, the Game Boy Advance (GBA), in which all code was
 > simply on the ROM at all times. As a result, the GBA's RAM only consisted of variable data.
