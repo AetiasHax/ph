@@ -85,6 +85,7 @@ all: tools rom
 tools:
 	cd $(TOOLS_DIR)/compress && $(MAKE)
 	cd $(TOOLS_DIR)/rom && $(MAKE)
+	cd $(TOOLS_DIR)/elf && $(MAKE)
 
 .PHONY: rom
 rom: arm9
@@ -126,6 +127,7 @@ $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
+	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 $(C_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
