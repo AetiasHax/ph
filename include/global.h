@@ -15,6 +15,9 @@
 #define NONMATCH(name) asm name
 #endif
 
+// KILL(name) causes a function to be excluded from the output ROM, see elfkill.cpp
+#define KILL(name)
+
 // Prevent the IDE from reporting errors that the compiler/linker won't report
 #ifdef __INTELLISENSE__
 #endif
@@ -27,5 +30,8 @@
 
 // Define .sbss variables by using #pragma section sbss begin|end
 #pragma define_section sbss ".data" ".sbss"
+
+// Force variables to be in .data by using #pragma section force_data begin|end
+#pragma define_section force_data ".data" ".data"
 
 #endif
