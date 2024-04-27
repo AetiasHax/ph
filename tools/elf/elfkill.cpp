@@ -181,16 +181,25 @@ bool FindSymbolsToKill(const char *srcFile, std::unordered_set<std::string> &out
 bool KillFunctionSymbols(
     const elfio &elf,
     std::vector<Symbol> &symbols,
-    const std::unordered_set<std::string> &symbolsToKill
+    std::unordered_set<std::string> &symbolsToKill,
+    const char *srcFile
 ) {
     for (Symbol &symbol : symbols) {
         auto it = symbolsToKill.find(symbol.name);
         if (it == symbolsToKill.end()) continue;
 
         if (!symbol.section.SetName(elf, ".dead")) return false;
+        symbolsToKill.erase(it);
     }
 
-    return true;
+    if (symbolsToKill.empty()) return true;
+
+    std::cerr << srcFile << ": the following functions couldn't be killed because they do not exist:\n";
+    for (const std::string &symbolToKill : symbolsToKill) {
+        std::cerr << "  " << symbolToKill << '\n';
+    }
+    std::cerr << std::endl;
+    return false;
 }
 
 bool DeleteElf(const char *elfFile) {
@@ -270,7 +279,7 @@ int main(int argc, const char **argv) {
         DeleteElf(elfFile);
         return 1;
     }
-    if (!KillFunctionSymbols(elf, symbols, symbolsToKill)) {
+    if (!KillFunctionSymbols(elf, symbols, symbolsToKill, srcFile)) {
         DeleteElf(elfFile);
         return 1;
     }
