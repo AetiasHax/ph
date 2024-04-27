@@ -132,6 +132,7 @@ $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 $(C_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
+	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
