@@ -45,11 +45,8 @@ public:
     /* 013 */ unk8 mUnk_013;
     /* 014 */ unk8 mUnk_014;
     /* 015 */ unk8 mUnk_015;
-    /* 016 */ unk8 mUnk_016;
-    /* 017 */ unk8 mUnk_017;
-    /* 017 */ unk8 mUnk_017;
-    /* 018 */ unk8 mUnk_018;
-    /* 019 */ unk8 mUnk_019;
+    /* 016 */ unk8 mUnk_016[2];
+    /* 018 */ unk8 mUnk_018[2];
     /* 01a */ unk8 mUnk_01a;
     /* 01b */ unk8 mUnk_01b;
     /* 01c */ unk8 mUnk_01c;
