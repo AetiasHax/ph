@@ -5,6 +5,15 @@ import pyperclip
 import subprocess
 import os
 from pathlib import Path
+import argparse
+
+parser = argparse.ArgumentParser(description="Generates a context for decomp.me")
+parser.add_argument('file', help="Input file to preprocess")
+parser.add_argument('-f', type=str, dest='out_file', required=False, help='Output context file')
+parser.add_argument('-c', action=argparse.BooleanOptionalAction, dest='clipboard', required=False, help='Copy output to clipboard')
+parser.add_argument('-e', type=str, dest='encoding', required=False, default="Shift-JIS", help='Input file encoding')
+parser.add_argument('-v', action=argparse.BooleanOptionalAction, dest='verbose', required=False, help='Verbose error output')
+args = parser.parse_args()
 
 CXX_FLAGS = [
     '-nostdinc',
@@ -15,63 +24,19 @@ CXX_FLAGS = [
 script_dir = Path(os.path.dirname(os.path.realpath(__file__)))
 root_dir = script_dir / ".."
 
-program = os.path.basename(sys.argv[0])
-
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-def print_usage():
-    eprint(f"Usage: {program} INFILE [-f OUTFILE] [-c] [-e ENCODING] [-v]")
-    eprint("    INFILE     \tInput file to preprocess")
-    eprint("    -f OUTFILE \tOutput context file")
-    eprint("    -c         \tCopy output to clipboard")
-    eprint("    -e ENCODING\tInput file encoding (Default: Shift-JIS)")
-    eprint("    -v         \tVerbose error output")
-
-if len(sys.argv) == 1:
-    print_usage()
-    exit(1)
-
-
-in_file = None
-out_file = None
-clipboard = False
-encoding = "Shift-JIS"
-verbose = False
-i = 1
-while i < len(sys.argv):
-    arg = sys.argv[i]
-    if arg == "-f":
-        i += 1
-        if i >= len(sys.argv):
-            eprint("Expected output file after -f")
-            exit(1)
-        out_file = sys.argv[i]
-    elif arg == "-c":
-        clipboard = True
-    elif arg == "-e":
-        i += 1
-        if i >= len(sys.argv):
-            eprint("Expected input file encoding after -e")
-            exit(1)
-        encoding = sys.argv[i]
-    elif arg == "-v":
-        verbose = True
-    elif arg.startswith("-"):
-        eprint(f"Unknown option '{arg}'")
-    elif in_file is None:
-        in_file = arg
-    else:
-        eprint(f"Duplicate input file '{arg}'")
-        exit(1)
-    i += 1
-
-
 try:
-    ctx: str = subprocess.check_output(['gcc', '-E', '-P', '-undef', '-dD', *CXX_FLAGS, in_file], cwd=root_dir, encoding=encoding)
+    ctx: str = subprocess.check_output([
+        'gcc',
+        '-E', '-P', '-fworking-directory', '-undef', '-dD',
+        *CXX_FLAGS,
+        args.file
+    ], cwd=root_dir, encoding=args.encoding)
 except subprocess.CalledProcessError as e:
-    eprint(f"Failed to preprocess '{in_file}'")
-    if verbose: eprint(e)
+    eprint(f"Failed to preprocess '{args.file}'")
+    if args.verbose: eprint(e)
     else: eprint("Use -v for more verbose error output")
     exit(1)
 
@@ -85,17 +50,17 @@ for i in reversed(range(len(lines))):
 
 ctx = ''.join(lines)
 
-if out_file:
+if args.out_file:
     try:
-        with open(out_file, "w") as file:
+        with open(args.out_file, "w") as file:
             file.write(ctx)
     except OSError as e:
-        eprint(f"Failed to write file '{out_file}'")
-        if verbose: eprint(e)
+        eprint(f"Failed to write file '{args.out_file}'")
+        if args.verbose: eprint(e)
         else: eprint("Use -v for more verbose error output")
         exit(1)
-if clipboard:
+if args.clipboard:
     pyperclip.copy(ctx)
     eprint("Copied context to clipboard")
-if out_file is None and not clipboard:
+if args.out_file is None and not args.clipboard:
     print(ctx)
