@@ -7,7 +7,7 @@
 
 #include "System/SysNew.hpp"
 
-class Course_Unk_cc : public SysObject {
+class MapData : public SysObject {
 public:
     /* 00 */ char mUnk_00;
     /* 01 */ s8 mMap;
@@ -17,7 +17,7 @@ public:
     /* 08 */ unk32 mUnk_08;
     /* 0c */ unk32 mUnk_0c;
     /* 10 */ unk8 mUnk_10[4];
-    /* 14 */ Vec3p mUnk_14;
+    /* 14 */ Vec3p mCenter;
     /* 20 */ unk32 mFlags0[1];
     /* 24 */ unk32 mFlags1[8];
     /* 44 */ unk32 mFlags2[2];

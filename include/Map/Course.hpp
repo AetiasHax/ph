@@ -50,7 +50,7 @@ class Course : public SysObject {
     /* 0c0 */ unk32 mUnk_0c0;
     /* 0c4 */ unk32 mUnk_0c4;
     /* 0c8 */ Course_Unk_c8 *mUnk_0c8;
-    /* 0cc */ Course_Unk_cc *mUnk_0cc[100];
+    /* 0cc */ MapData *mMapData[100];
     /* 25c */ bool mUnk_25c;
     /* 25d */ bool mBlueWarpOpen;
     /* 25e */ unk8 mUnk_25e;
