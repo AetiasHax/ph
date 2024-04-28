@@ -95,7 +95,6 @@
 .extern data_027e0d38
 .extern data_027e0db0
 .extern data_027e0de4
-.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f78
@@ -360,6 +359,7 @@
 .extern func_ov40_021833c4
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager
 .extern gOverlayManager
 .extern strcat
 .extern strcmp

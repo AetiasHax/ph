@@ -419,11 +419,11 @@
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
 .extern func_ov00_0207c518
-.extern _ZN6Course18func_ov00_0207ca78Ev
-.extern _ZN6Course18func_ov00_0207cb7cEiPS_i
-.extern _ZN6Course18func_ov00_0207ce20Eiiii
-.extern _ZN6Course18func_ov00_0207d634Ei
-.extern _ZN6Course18func_ov00_0207d6ecEv
+.extern _ZN6Course18func_ov00_0207ca78Eici
+.extern _ZN6Course14FindMapGridPosEP5Vec2bPS_j
+.extern _ZN6Course18func_ov00_0207ce20EiiPci
+.extern _ZN6Course23IsAdjacentMapOnMainGridEi
+.extern _ZN6Course14GetAdjacentMapEi
 .extern _ZN6Course18func_ov00_0207d7bcEv
 .extern func_ov00_0207da38
 .extern func_ov00_0207dce4
