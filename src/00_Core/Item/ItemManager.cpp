@@ -816,3 +816,9 @@ THUMB void ItemManager::ForceEquipItem(ItemFlag equipId) {
     mForcedItem = equipId;
     mEquipLoadTimer = 1;
 }
+
+THUMB bool ItemManager::ClearForcedEquipItem() {
+    mForcedItem = ItemFlag_None;
+    if (mEquippedItem != ItemFlag_None) return this->SetEquippedItem(mEquippedItem);
+    return false;
+}

@@ -3,23 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager20ClearForcedEquipItemEv
-	thumb_func_start _ZN11ItemManager20ClearForcedEquipItemEv
-_ZN11ItemManager20ClearForcedEquipItemEv: ; 0x020ae400
-	push {r3, lr}
-	mov r2, #0
-	mvn r2, r2
-	str r2, [r0, #8]
-	ldr r1, [r0]
-	cmp r1, r2
-	beq _020ae414
-	blx _ZN11ItemManager15SetEquippedItemEi
-	pop {r3, pc}
-_020ae414:
-	mov r0, #0
-	pop {r3, pc}
-	thumb_func_end _ZN11ItemManager20ClearForcedEquipItemEv
-
 	.global _ZN11ItemManager22UpdateSwordShieldInUseEv
 	arm_func_start _ZN11ItemManager22UpdateSwordShieldInUseEv
 _ZN11ItemManager22UpdateSwordShieldInUseEv: ; 0x020ae418
