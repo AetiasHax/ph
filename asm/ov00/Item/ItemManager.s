@@ -3,17 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager15SetEquippedItemEi
-	arm_func_start _ZN11ItemManager15SetEquippedItemEi
-_ZN11ItemManager15SetEquippedItemEi: ; 0x020ae3a8
-	ldr r3, [r0]
-	mov r2, #2
-	stmia r0, {r1, r3}
-	strh r2, [r0, #0x20]
-	mov r0, #1
-	bx lr
-	arm_func_end _ZN11ItemManager15SetEquippedItemEi
-
 	.global _ZN11ItemManager17EquipPreviousItemEv
 	arm_func_start _ZN11ItemManager17EquipPreviousItemEv
 _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0

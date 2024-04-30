@@ -793,6 +793,13 @@ THUMB void ItemManager::GiveKeys(u32 amount) {
 }
 
 ARM ItemFlag ItemManager::GetEquippedItem() const {
-    if (this->mForcedItem != ItemFlag_None) return this->mForcedItem;
-    return this->mEquippedItem;
+    if (mForcedItem != ItemFlag_None) return mForcedItem;
+    return mEquippedItem;
+}
+
+ARM bool ItemManager::SetEquippedItem(ItemFlag equipId) {
+    mPrevEquippedItem = mEquippedItem;
+    mEquippedItem = equipId;
+    mEquipLoadTimer = 2;
+    return true;
 }
