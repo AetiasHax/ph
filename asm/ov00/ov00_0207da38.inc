@@ -1,7 +1,7 @@
 #pragma once
 .extern Divide
 .extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
-.extern _ZN6Course14Find_Unk_cc_14Ei
+.extern _ZN6Course13FindMapCenterEi
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern data_027e0618

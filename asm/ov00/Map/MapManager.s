@@ -981,11 +981,11 @@ _02082bac:
 	ldrb r7, [r5, #0x12]
 	ldr r0, [r6]
 	mov r4, #0
-	bl _ZN6Course21FindCurrent_Unk_cc_04Ev
+	bl _ZN6Course25FindCurrentMapData_Unk_04Ev
 	mov r1, r7
 	mov r7, r0
 	ldr r0, [r6]
-	bl _ZN6Course14Find_Unk_cc_04Ei
+	bl _ZN6Course18FindMapData_Unk_04Ei
 	cmp r7, r0
 	ldrb r2, [sp]
 	ldr r1, [r6]
@@ -1738,7 +1738,7 @@ _ZN10MapManager18func_ov00_020834bcEP5Vec3pii: ; 0x020834bc
 	add r2, r4, r3
 	mov r4, r1
 	ldrb r1, [r2, #0x20]
-	bl _ZN6Course14Find_Unk_cc_14Ei
+	bl _ZN6Course13FindMapCenterEi
 	ldr r1, [r0]
 	str r1, [r4]
 	ldr r1, [r0, #4]
@@ -1768,7 +1768,7 @@ _ZN10MapManager18func_ov00_02083524EP5Vec3pii: ; 0x02083524
 	add r2, ip, r3
 	mov r4, r1
 	ldrb r1, [r2, #0x20]
-	bl _ZN6Course14Find_Unk_cc_14Ei
+	bl _ZN6Course13FindMapCenterEi
 	ldr r1, [r0]
 	str r1, [r4]
 	ldr r1, [r0, #4]
@@ -1807,7 +1807,7 @@ _ZN10MapManager18func_ov00_02083588Ev: ; 0x02083588
 	bl _ZN10MapManager18func_ov00_02082d08Ev
 	mov r1, r0
 	ldr r0, [r4]
-	bl _ZN6Course14Find_Unk_cc_08Ev
+	bl _ZN6Course18FindMapData_Unk_08Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02083588Ev
 
@@ -3771,7 +3771,7 @@ _02084b8c:
 _02084bb0:
 	ldr r0, [r0]
 	mov r2, r3
-	bl _ZN6Course15SetFlag0_Unk_ccEib
+	bl _ZN6Course15SetMapDataFlag0Eib
 	ldmia sp!, {r3, pc}
 _02084bc0:
 	ldr r0, [r0]
@@ -3812,7 +3812,7 @@ _02084c0c:
 	ldmia sp!, {r3, pc}
 _02084c30:
 	ldr r0, [r0]
-	bl _ZN6Course15GetFlag0_Unk_ccEi
+	bl _ZN6Course15GetMapDataFlag0Ei
 	ldmia sp!, {r3, pc}
 _02084c3c:
 	ldr r0, [r0]
@@ -3830,22 +3830,22 @@ _02084c54:
 	.global _ZN10MapManager18func_ov00_02084c5cEii
 	arm_func_start _ZN10MapManager18func_ov00_02084c5cEii
 _ZN10MapManager18func_ov00_02084c5cEii: ; 0x02084c5c
-	ldr ip, _02084c68 ; =_ZN6Course15SetFlag1_Unk_ccEib
+	ldr ip, _02084c68 ; =_ZN6Course15SetMapDataFlag1Eib
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02084c5cEii
-_02084c68: .word _ZN6Course15SetFlag1_Unk_ccEib
+_02084c68: .word _ZN6Course15SetMapDataFlag1Eib
 
 	.global _ZN10MapManager18func_ov00_02084c6cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c6cEi
 _ZN10MapManager18func_ov00_02084c6cEi: ; 0x02084c6c
-	ldr ip, _02084c78 ; =_ZN6Course15GetFlag1_Unk_ccEi
+	ldr ip, _02084c78 ; =_ZN6Course15GetMapDataFlag1Ei
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN10MapManager18func_ov00_02084c6cEi
-_02084c78: .word _ZN6Course15GetFlag1_Unk_ccEi
+_02084c78: .word _ZN6Course15GetMapDataFlag1Ei
 
 	.global _ZN10MapManager18func_ov00_02084c7cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c7cEi
@@ -3854,7 +3854,7 @@ _ZN10MapManager18func_ov00_02084c7cEi: ; 0x02084c7c
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course15SetFlag2_Unk_ccEib
+	bl _ZN6Course15SetMapDataFlag2Eib
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084c7cEi
 
@@ -3866,7 +3866,7 @@ _ZN10MapManager18func_ov00_02084c94Ei: ; 0x02084c94
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course15GetFlag2_Unk_ccEi
+	bl _ZN6Course15GetMapDataFlag2Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084c94Ei
 
@@ -3877,7 +3877,7 @@ _ZN10MapManager18func_ov00_02084cb0Ei: ; 0x02084cb0
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course15SetFlag3_Unk_ccEib
+	bl _ZN6Course15SetMapDataFlag3Eib
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cb0Ei
 
@@ -3889,7 +3889,7 @@ _ZN10MapManager18func_ov00_02084cc8Ei: ; 0x02084cc8
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course18func_ov00_0207d97cEi
+	bl _ZN6Course15GetMapDataFlag3Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cc8Ei
 
@@ -3900,7 +3900,7 @@ _ZN10MapManager18func_ov00_02084ce4Ei: ; 0x02084ce4
 	cmp r1, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course18func_ov00_0207d994Eii
+	bl _ZN6Course15SetMapDataFlag4Eii
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084ce4Ei
 
@@ -3912,7 +3912,7 @@ _ZN10MapManager18func_ov00_02084cfcEi: ; 0x02084cfc
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	ldr r0, [r0]
-	bl _ZN6Course15GetFlag3_Unk_ccEi
+	bl _ZN6Course15GetMapDataFlag4Ei
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084cfcEi
 

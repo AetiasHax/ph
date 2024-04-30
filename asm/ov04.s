@@ -24951,7 +24951,7 @@ func_ov04_0210cc58: ; 0x0210cc58
 	bne _0210cc72
 	add r0, r1, #0
 	add r1, r2, #0
-	blx _ZN6Course14Find_Unk_cc_0cEi
+	blx _ZN6Course18FindMapData_Unk_0cEi
 	add r1, r0, #0
 	ldr r0, _0210cc78 ; =gOverlayManager
 	bl func_ov03_020faa64
@@ -29104,7 +29104,7 @@ func_ov04_0210f07c: ; 0x0210f07c
 	ldrb r1, [r4]
 	cmp r1, #0xff
 	beq _0210f0f4
-	blx _ZN6Course11Find_Unk_ccEj
+	blx _ZN6Course11FindMapDataEj
 	cmp r0, #0
 	bne _0210f0f4
 	ldr r1, _0210f0f8 ; =data_027e0ce0

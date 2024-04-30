@@ -4,7 +4,7 @@
 #include "types.h"
 
 #include "Map/Course_Unk_c8.hpp"
-#include "Map/Course_Unk_cc.hpp"
+#include "Map/MapData.hpp"
 #include "Physics/AABB.hpp"
 #include "System/SysNew.hpp"
 
@@ -67,10 +67,10 @@ class Course : public SysObject {
     bool func_ov00_0207caa8(s32 param_2, unk32 *param_3, unk8 *param_4);
     unk32 func_ov00_0207cb30(s32 param_2);
     static void FindMapGridPos(Vec2b *pos, Course *param_2, u32 map);
-    Vec3p* Find_Unk_cc_14(unk32 param_2);
+    Vec3p* FindMapCenter(unk32 map);
     void func_ov00_0207cbe8(s32 param_2);
     unk8 func_ov00_0207cc24(s32 param_2);
-    unk32 Find_Unk_cc_08();
+    unk32 FindMapData_Unk_08(unk32 map);
     void GetMCSFilePath(unk32 buf, s32 fileIndex, unk32 fileType);
     void GetMRCFilePath(unk32 param_2, unk32 buf, unk32 param_4);
     void func_ov00_0207ce20(unk32 param_2, unk32 param_3, char *param_4, unk32 param_5);
@@ -89,24 +89,24 @@ class Course : public SysObject {
     unk8 GetAdjacentMap(unk32 dir);
     u32 GetAdjacentMapX(s32 ir);
     u32 GetAdjacentMapY(s32 dir);
-    u16 FindCurrent_Unk_cc_04();
-    u32 Find_Unk_cc_04(unk32 param_2);
-    unk32 Find_Unk_cc_0c(unk32 map);
+    u16 FindCurrentMapData_Unk_04();
+    u32 FindMapData_Unk_04(unk32 param_2);
+    unk32 FindMapData_Unk_0c(unk32 map);
     void func_ov00_0207d7bc();
     void SetFlag0(u32 index, bool value);
     bool GetFlag0(u32 index);
     void SetFlag1(u32 index, bool value);
     bool SetFlag1(u32 index);
-    void SetFlag0_Unk_cc(unk32 index, bool value);
-    bool GetFlag0_Unk_cc(unk32 param_2);
-    void SetFlag1_Unk_cc(unk32 param_2, bool param_3);
-    bool GetFlag1_Unk_cc(unk32 param_2);
-    void SetFlag2_Unk_cc(unk32 param_2, bool param_3);
-    bool GetFlag2_Unk_cc(unk32 param_2);
-    void SetFlag3_Unk_cc(unk32 param_2, bool param_3);
-    bool func_ov00_0207d97c(unk32 param_2);
-    void func_ov00_0207d994(unk32 param_2, unk32 param_3);
-    bool GetFlag3_Unk_cc(unk32 param_2);
-    Course_Unk_cc* Find_Unk_cc(u32 map);
-    Course_Unk_cc* FindCurrent_Unk_cc();
+    void SetMapDataFlag0(unk32 index, bool value);
+    bool GetMapDataFlag0(unk32 param_2);
+    void SetMapDataFlag1(unk32 param_2, bool param_3);
+    bool GetMapDataFlag1(unk32 param_2);
+    void SetMapDataFlag2(unk32 param_2, bool param_3);
+    bool GetMapDataFlag2(unk32 param_2);
+    void SetMapDataFlag3(unk32 param_2, bool param_3);
+    bool GetMapDataFlag3(unk32 param_2);
+    void SetMapDataFlag4(unk32 param_2, unk32 param_3);
+    bool GetMapDataFlag4(unk32 param_2);
+    MapData* FindMapData(u32 map);
+    MapData* FindCurrentMapData();
 };

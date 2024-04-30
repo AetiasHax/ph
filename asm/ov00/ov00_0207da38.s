@@ -222,7 +222,7 @@ func_ov00_0207dce4: ; 0x0207dce4
 	mov r2, r3, lsl #0xc
 	str r5, [sp]
 	str r2, [sp, #4]
-	bl _ZN6Course14Find_Unk_cc_14Ei
+	bl _ZN6Course13FindMapCenterEi
 	mov ip, r5
 	add r5, sp, #0x20
 	ldmia r0, {r0, r1, r2}

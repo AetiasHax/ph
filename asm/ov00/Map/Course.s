@@ -56,7 +56,7 @@ _ZN6Course18func_ov00_0207ca78Eici: ; 0x0207ca78
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r2
-	bl _ZN6Course11Find_Unk_ccEj
+	bl _ZN6Course11FindMapDataEj
 	movs r1, r0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	strb r4, [r1]
@@ -161,14 +161,14 @@ _0207cb90:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end _ZN6Course14FindMapGridPosEP5Vec2bPS_j
 
-	.global _ZN6Course14Find_Unk_cc_14Ei
-	arm_func_start _ZN6Course14Find_Unk_cc_14Ei
-_ZN6Course14Find_Unk_cc_14Ei: ; 0x0207cbd8
+	.global _ZN6Course13FindMapCenterEi
+	arm_func_start _ZN6Course13FindMapCenterEi
+_ZN6Course13FindMapCenterEi: ; 0x0207cbd8
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course11Find_Unk_ccEj
+	bl _ZN6Course11FindMapDataEj
 	add r0, r0, #0x14
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN6Course14Find_Unk_cc_14Ei
+	arm_func_end _ZN6Course13FindMapCenterEi
 
 	.global _ZN6Course18func_ov00_0207cbe8Ei
 	arm_func_start _ZN6Course18func_ov00_0207cbe8Ei
@@ -213,16 +213,16 @@ _ZN6Course18func_ov00_0207cc24Ei: ; 0x0207cc24
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN6Course18func_ov00_0207cc24Ei
 
-	.global _ZN6Course14Find_Unk_cc_08Ev
-	arm_func_start _ZN6Course14Find_Unk_cc_08Ev
-_ZN6Course14Find_Unk_cc_08Ev: ; 0x0207cc6c
+	.global _ZN6Course18FindMapData_Unk_08Ei
+	arm_func_start _ZN6Course18FindMapData_Unk_08Ei
+_ZN6Course18FindMapData_Unk_08Ei: ; 0x0207cc6c
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course11Find_Unk_ccEj
+	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
 	moveq r0, #0
 	ldrne r0, [r0, #8]
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN6Course14Find_Unk_cc_08Ev
+	arm_func_end _ZN6Course18FindMapData_Unk_08Ei
 
 	.global _ZN6Course14GetMCSFilePathEiii
 	arm_func_start _ZN6Course14GetMCSFilePathEiii
@@ -1064,44 +1064,44 @@ _0207d770:
 	bx lr
 	arm_func_end _ZN6Course15GetAdjacentMapYEi
 
-	.global _ZN6Course21FindCurrent_Unk_cc_04Ev
-	arm_func_start _ZN6Course21FindCurrent_Unk_cc_04Ev
-_ZN6Course21FindCurrent_Unk_cc_04Ev: ; 0x0207d778
+	.global _ZN6Course25FindCurrentMapData_Unk_04Ev
+	arm_func_start _ZN6Course25FindCurrentMapData_Unk_04Ev
+_ZN6Course25FindCurrentMapData_Unk_04Ev: ; 0x0207d778
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	ldrh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN6Course21FindCurrent_Unk_cc_04Ev
+	arm_func_end _ZN6Course25FindCurrentMapData_Unk_04Ev
 
-	.global _ZN6Course14Find_Unk_cc_04Ei
-	arm_func_start _ZN6Course14Find_Unk_cc_04Ei
-_ZN6Course14Find_Unk_cc_04Ei: ; 0x0207d788
+	.global _ZN6Course18FindMapData_Unk_04Ei
+	arm_func_start _ZN6Course18FindMapData_Unk_04Ei
+_ZN6Course18FindMapData_Unk_04Ei: ; 0x0207d788
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course11Find_Unk_ccEj
+	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
 	ldreq r0, _0207d7a0 ; =0x0000ffff
 	ldrneh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course14Find_Unk_cc_04Ei
+	arm_func_end _ZN6Course18FindMapData_Unk_04Ei
 _0207d7a0: .word 0x0000ffff
 
-	.global _ZN6Course14Find_Unk_cc_0cEi
-	arm_func_start _ZN6Course14Find_Unk_cc_0cEi
-_ZN6Course14Find_Unk_cc_0cEi: ; 0x0207d7a4
+	.global _ZN6Course18FindMapData_Unk_0cEi
+	arm_func_start _ZN6Course18FindMapData_Unk_0cEi
+_ZN6Course18FindMapData_Unk_0cEi: ; 0x0207d7a4
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course11Find_Unk_ccEj
+	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
 	moveq r0, #0
 	ldrne r0, [r0, #0xc]
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN6Course14Find_Unk_cc_0cEi
+	arm_func_end _ZN6Course18FindMapData_Unk_0cEi
 
 	.global _ZN6Course18func_ov00_0207d7bcEv
 	arm_func_start _ZN6Course18func_ov00_0207d7bcEv
 _ZN6Course18func_ov00_0207d7bcEv: ; 0x0207d7bc
 	stmdb sp!, {r3, lr}
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	ldr r2, _0207d7d8 ; =data_027e103c
 	ldrh r1, [r0, #4]
 	ldr r0, [r2]
@@ -1187,129 +1187,129 @@ _ZN6Course8SetFlag1Ej: ; 0x0207d894
 	bx lr
 	arm_func_end _ZN6Course8SetFlag1Ej
 
-	.global _ZN6Course15SetFlag0_Unk_ccEib
-	arm_func_start _ZN6Course15SetFlag0_Unk_ccEib
-_ZN6Course15SetFlag0_Unk_ccEib: ; 0x0207d8b4
+	.global _ZN6Course15SetMapDataFlag0Eib
+	arm_func_start _ZN6Course15SetMapDataFlag0Eib
+_ZN6Course15SetMapDataFlag0Eib: ; 0x0207d8b4
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_0209740c
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN6Course15SetFlag0_Unk_ccEib
+	arm_func_end _ZN6Course15SetMapDataFlag0Eib
 
-	.global _ZN6Course15GetFlag0_Unk_ccEi
-	arm_func_start _ZN6Course15GetFlag0_Unk_ccEi
-_ZN6Course15GetFlag0_Unk_ccEi: ; 0x0207d8d4
+	.global _ZN6Course15GetMapDataFlag0Ei
+	arm_func_start _ZN6Course15GetMapDataFlag0Ei
+_ZN6Course15GetMapDataFlag0Ei: ; 0x0207d8d4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r4
 	bl func_ov00_02097458
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN6Course15GetFlag0_Unk_ccEi
+	arm_func_end _ZN6Course15GetMapDataFlag0Ei
 
-	.global _ZN6Course15SetFlag1_Unk_ccEib
-	arm_func_start _ZN6Course15SetFlag1_Unk_ccEib
-_ZN6Course15SetFlag1_Unk_ccEib: ; 0x0207d8ec
+	.global _ZN6Course15SetMapDataFlag1Eib
+	arm_func_start _ZN6Course15SetMapDataFlag1Eib
+_ZN6Course15SetMapDataFlag1Eib: ; 0x0207d8ec
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_02097478
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN6Course15SetFlag1_Unk_ccEib
+	arm_func_end _ZN6Course15SetMapDataFlag1Eib
 
-	.global _ZN6Course15GetFlag1_Unk_ccEi
-	arm_func_start _ZN6Course15GetFlag1_Unk_ccEi
-_ZN6Course15GetFlag1_Unk_ccEi: ; 0x0207d90c
+	.global _ZN6Course15GetMapDataFlag1Ei
+	arm_func_start _ZN6Course15GetMapDataFlag1Ei
+_ZN6Course15GetMapDataFlag1Ei: ; 0x0207d90c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r4
 	bl func_ov00_020974c4
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN6Course15GetFlag1_Unk_ccEi
+	arm_func_end _ZN6Course15GetMapDataFlag1Ei
 
-	.global _ZN6Course15SetFlag2_Unk_ccEib
-	arm_func_start _ZN6Course15SetFlag2_Unk_ccEib
-_ZN6Course15SetFlag2_Unk_ccEib: ; 0x0207d924
+	.global _ZN6Course15SetMapDataFlag2Eib
+	arm_func_start _ZN6Course15SetMapDataFlag2Eib
+_ZN6Course15SetMapDataFlag2Eib: ; 0x0207d924
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020974e4
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN6Course15SetFlag2_Unk_ccEib
+	arm_func_end _ZN6Course15SetMapDataFlag2Eib
 
-	.global _ZN6Course15GetFlag2_Unk_ccEi
-	arm_func_start _ZN6Course15GetFlag2_Unk_ccEi
-_ZN6Course15GetFlag2_Unk_ccEi: ; 0x0207d944
+	.global _ZN6Course15GetMapDataFlag2Ei
+	arm_func_start _ZN6Course15GetMapDataFlag2Ei
+_ZN6Course15GetMapDataFlag2Ei: ; 0x0207d944
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r4
 	bl func_ov00_02097530
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN6Course15GetFlag2_Unk_ccEi
+	arm_func_end _ZN6Course15GetMapDataFlag2Ei
 
-	.global _ZN6Course15SetFlag3_Unk_ccEib
-	arm_func_start _ZN6Course15SetFlag3_Unk_ccEib
-_ZN6Course15SetFlag3_Unk_ccEib: ; 0x0207d95c
+	.global _ZN6Course15SetMapDataFlag3Eib
+	arm_func_start _ZN6Course15SetMapDataFlag3Eib
+_ZN6Course15SetMapDataFlag3Eib: ; 0x0207d95c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_02097550
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN6Course15SetFlag3_Unk_ccEib
+	arm_func_end _ZN6Course15SetMapDataFlag3Eib
 
-	.global _ZN6Course18func_ov00_0207d97cEi
-	arm_func_start _ZN6Course18func_ov00_0207d97cEi
-_ZN6Course18func_ov00_0207d97cEi: ; 0x0207d97c
+	.global _ZN6Course15GetMapDataFlag3Ei
+	arm_func_start _ZN6Course15GetMapDataFlag3Ei
+_ZN6Course15GetMapDataFlag3Ei: ; 0x0207d97c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r4
 	bl func_ov00_0209759c
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN6Course18func_ov00_0207d97cEi
+	arm_func_end _ZN6Course15GetMapDataFlag3Ei
 
-	.global _ZN6Course18func_ov00_0207d994Eii
-	arm_func_start _ZN6Course18func_ov00_0207d994Eii
-_ZN6Course18func_ov00_0207d994Eii: ; 0x0207d994
+	.global _ZN6Course15SetMapDataFlag4Eii
+	arm_func_start _ZN6Course15SetMapDataFlag4Eii
+_ZN6Course15SetMapDataFlag4Eii: ; 0x0207d994
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r5
 	mov r2, r4
 	bl func_ov00_020975bc
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN6Course18func_ov00_0207d994Eii
+	arm_func_end _ZN6Course15SetMapDataFlag4Eii
 
-	.global _ZN6Course15GetFlag3_Unk_ccEi
-	arm_func_start _ZN6Course15GetFlag3_Unk_ccEi
-_ZN6Course15GetFlag3_Unk_ccEi: ; 0x0207d9b4
+	.global _ZN6Course15GetMapDataFlag4Ei
+	arm_func_start _ZN6Course15GetMapDataFlag4Ei
+_ZN6Course15GetMapDataFlag4Ei: ; 0x0207d9b4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
-	bl _ZN6Course18FindCurrent_Unk_ccEv
+	bl _ZN6Course18FindCurrentMapDataEv
 	mov r1, r4
 	bl func_ov00_02097608
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN6Course15GetFlag3_Unk_ccEi
+	arm_func_end _ZN6Course15GetMapDataFlag4Ei
 
-	.global _ZN6Course11Find_Unk_ccEj
-	arm_func_start _ZN6Course11Find_Unk_ccEj
-_ZN6Course11Find_Unk_ccEj: ; 0x0207d9cc
+	.global _ZN6Course11FindMapDataEj
+	arm_func_start _ZN6Course11FindMapDataEj
+_ZN6Course11FindMapDataEj: ; 0x0207d9cc
 	ldrb r2, [r0, #0xb0]
 	mov ip, #0
 	cmp r2, #0
@@ -1331,22 +1331,22 @@ _0207d9fc:
 _0207da0c:
 	mov r0, #0
 	bx lr
-	arm_func_end _ZN6Course11Find_Unk_ccEj
+	arm_func_end _ZN6Course11FindMapDataEj
 
-	.global _ZN6Course18FindCurrent_Unk_ccEv
-	arm_func_start _ZN6Course18FindCurrent_Unk_ccEv
-_ZN6Course18FindCurrent_Unk_ccEv: ; 0x0207da14
+	.global _ZN6Course18FindCurrentMapDataEv
+	arm_func_start _ZN6Course18FindCurrentMapDataEv
+_ZN6Course18FindCurrentMapDataEv: ; 0x0207da14
 	ldrb r3, [r0, #0x1c]
 	mov r1, #0xa
 	ldrb r2, [r0, #0x1d]
 	mla r1, r3, r1, r0
 	add r1, r1, r2
-	ldr ip, _0207da34 ; =_ZN6Course11Find_Unk_ccEj
+	ldr ip, _0207da34 ; =_ZN6Course11FindMapDataEj
 	ldrb r1, [r1, #0x20]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN6Course18FindCurrent_Unk_ccEv
-_0207da34: .word _ZN6Course11Find_Unk_ccEj
+	arm_func_end _ZN6Course18FindCurrentMapDataEv
+_0207da34: .word _ZN6Course11FindMapDataEj
 
     .data
 	.global data_ov00_020e2058

@@ -9,7 +9,7 @@
 
 class CameraViewpoint : public SysObject {
     /* 00 */ unk32 mUnk_00;
-    /* 04 */ unk8 mUnk_04
+    /* 04 */ unk8 mUnk_04;
     /* 05 */ unk8 mUnk_05[3];
     /* 08 */ Vec3p mPos;
     /* 14 */ unk16 mUnk_14;

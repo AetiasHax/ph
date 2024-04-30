@@ -57,10 +57,10 @@
 .extern _ZN14OverlayManager6UnloadEj
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
-.extern _ZN6Course11Find_Unk_ccEj
+.extern _ZN6Course11FindMapDataEj
 .extern _ZN6Course13SetCourseNameEPc
 .extern _ZN6Course14FindMapGridPosEP5Vec2bPS_j
-.extern _ZN6Course14Find_Unk_cc_0cEi
+.extern _ZN6Course18FindMapData_Unk_0cEi
 .extern _ZN6Course14GetMCSFilePathEiii
 .extern _ZN6Course14GetMRCFilePathEiii
 .extern _ZN6Course15IsMapInMainGridEj
