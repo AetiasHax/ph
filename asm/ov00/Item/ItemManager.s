@@ -3,33 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager14UpgradeBombBagEv
-	thumb_func_start _ZN11ItemManager14UpgradeBombBagEv
-_ZN11ItemManager14UpgradeBombBagEv: ; 0x020ae484
-	push {r4, lr}
-	add r4, r0, #0
-	add r0, #0xb6
-	ldrh r0, [r0]
-	cmp r0, #2
-	bhs _020ae49e
-	add r0, r4, #0
-	add r0, #0xb6
-	ldrh r0, [r0]
-	add r1, r0, #1
-	add r0, r4, #0
-	add r0, #0xb6
-	strh r1, [r0]
-_020ae49e:
-	add r0, r4, #0
-	mov r1, #4
-	bl _ZNK11ItemManager10GetMaxAmmoEi
-	add r4, #0xb0
-	ldr r1, [r4]
-	strh r0, [r1, #8]
-	pop {r4, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager14UpgradeBombBagEv
-
 	.global _ZN11ItemManager17UpgradeBombchuBagEv
 	thumb_func_start _ZN11ItemManager17UpgradeBombchuBagEv
 _ZN11ItemManager17UpgradeBombchuBagEv: ; 0x020ae4b0

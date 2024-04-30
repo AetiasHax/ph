@@ -832,3 +832,8 @@ THUMB void ItemManager::UpgradeQuiver() {
     if (mQuiverSize < MAX_AMMO_UPGRADE) mQuiverSize += 1;
     (*mAmmo)[ItemFlag_Bow] = this->GetMaxAmmo(ItemFlag_Bow);
 }
+
+THUMB void ItemManager::UpgradeBombBag() {
+    if (mBombBagSize < MAX_AMMO_UPGRADE) mBombBagSize += 1;
+    (*mAmmo)[ItemFlag_BombBag] = this->GetMaxAmmo(ItemFlag_BombBag);
+}
