@@ -177,7 +177,7 @@
 .extern data_ov00_020dc7cc
 .extern data_ov00_020dc7d0
 .extern data_ov00_020e233c
-.extern data_ov00_020e2348
+.extern _ZTV7MapBase
 .extern data_ov00_020e2508
 .extern data_ov00_020e250c
 .extern data_ov00_020e2544

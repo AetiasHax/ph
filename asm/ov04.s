@@ -23144,7 +23144,7 @@ func_ov04_0210bde4: ; 0x0210bde4
 func_ov04_0210be04: ; 0x0210be04
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0210bf94 ; =data_ov00_020e2348
+	ldr r0, _0210bf94 ; =_ZTV7MapBase
 	mov r3, #0
 	str r0, [r4]
 	mov r0, #1
@@ -23338,7 +23338,7 @@ _0210bf8e:
 	pop {r3, r4, r5, pc}
 	nop
 	thumb_func_end func_ov04_0210be04
-_0210bf94: .word data_ov00_020e2348
+_0210bf94: .word _ZTV7MapBase
 _0210bf98: .word 0x00001333
 _0210bf9c: .word func_ov04_02101684 - 1
 _0210bfa0: .word func_ov04_0210bde4 - 1

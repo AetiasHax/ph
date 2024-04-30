@@ -6,7 +6,7 @@
 	arm_func_start _ZN7MapBaseD1Ev
 _ZN7MapBaseD1Ev: ; 0x0207da38
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207db0c ; =data_ov00_020e2348
+	ldr r1, _0207db0c ; =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -64,7 +64,7 @@ _0207dac0:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end _ZN7MapBaseD1Ev
-_0207db0c: .word data_ov00_020e2348
+_0207db0c: .word _ZTV7MapBase
 _0207db10: .word data_ov00_020ec81c
 _0207db14: .word _ZN15MapBase_Unk_180D1Ev
 
@@ -78,7 +78,7 @@ _ZN15MapBase_Unk_180D1Ev: ; 0x0207db18
 	arm_func_start _ZN7MapBaseD0Ev
 _ZN7MapBaseD0Ev: ; 0x0207db1c
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207dbf8 ; =data_ov00_020e2348
+	ldr r1, _0207dbf8 ; =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -138,7 +138,7 @@ _0207dba4:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end _ZN7MapBaseD0Ev
-_0207dbf8: .word data_ov00_020e2348
+_0207dbf8: .word _ZTV7MapBase
 _0207dbfc: .word data_ov00_020ec81c
 _0207dc00: .word _ZN15MapBase_Unk_180D1Ev
 
@@ -146,7 +146,7 @@ _0207dc00: .word _ZN15MapBase_Unk_180D1Ev
 	arm_func_start _ZN7MapBaseD2Ev
 _ZN7MapBaseD2Ev: ; 0x0207dc04
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207dcd8 ; =data_ov00_020e2348
+	ldr r1, _0207dcd8 ; =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -204,7 +204,7 @@ _0207dc8c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end _ZN7MapBaseD2Ev
-_0207dcd8: .word data_ov00_020e2348
+_0207dcd8: .word _ZTV7MapBase
 _0207dcdc: .word data_ov00_020ec81c
 _0207dce0: .word _ZN15MapBase_Unk_180D1Ev
 
@@ -4221,8 +4221,8 @@ data_ov00_020e2340: ; 0x020e2340
 	.global data_ov00_020e2344
 data_ov00_020e2344: ; 0x020e2344
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global data_ov00_020e2348
-data_ov00_020e2348: ; 0x020e2348
+	.global _ZTV7MapBase
+_ZTV7MapBase: ; 0x020e2348
     .word _ZN7MapBaseD2Ev
 	.global data_ov00_020e234c
 data_ov00_020e234c: ; 0x020e234c
@@ -4386,241 +4386,16 @@ data_ov00_020ec820:
 	.space 0x4
 	.global data_ov00_020ec824
 data_ov00_020ec824:
-	.space 0x4
-	.global data_ov00_020ec828
-data_ov00_020ec828:
-	.space 0x4
-	.global data_ov00_020ec82c
-data_ov00_020ec82c:
-	.space 0x4
-	.global data_ov00_020ec830
-data_ov00_020ec830:
-	.space 0x4
-	.global data_ov00_020ec834
-data_ov00_020ec834:
-	.space 0x4
-	.global data_ov00_020ec838
-data_ov00_020ec838:
-	.space 0x4
-	.global data_ov00_020ec83c
-data_ov00_020ec83c:
-	.space 0x4
-	.global data_ov00_020ec840
-data_ov00_020ec840:
-	.space 0x4
-	.global data_ov00_020ec844
-data_ov00_020ec844:
-	.space 0x4
-	.global data_ov00_020ec848
-data_ov00_020ec848:
-	.space 0x4
-	.global data_ov00_020ec84c
-data_ov00_020ec84c:
-	.space 0x4
-	.global data_ov00_020ec850
-data_ov00_020ec850:
-	.space 0x4
-	.global data_ov00_020ec854
-data_ov00_020ec854:
-	.space 0x4
-	.global data_ov00_020ec858
-data_ov00_020ec858:
-	.space 0x4
-	.global data_ov00_020ec85c
-data_ov00_020ec85c:
-	.space 0x4
-	.global data_ov00_020ec860
-data_ov00_020ec860:
-	.space 0x4
+	.space 0x40
 	.global data_ov00_020ec864
 data_ov00_020ec864:
-	.space 0x4
-	.global data_ov00_020ec868
-data_ov00_020ec868:
-	.space 0x4
-	.global data_ov00_020ec86c
-data_ov00_020ec86c:
-	.space 0x4
-	.global data_ov00_020ec870
-data_ov00_020ec870:
-	.space 0x4
-	.global data_ov00_020ec874
-data_ov00_020ec874:
-	.space 0x4
-	.global data_ov00_020ec878
-data_ov00_020ec878:
-	.space 0x4
-	.global data_ov00_020ec87c
-data_ov00_020ec87c:
-	.space 0x4
-	.global data_ov00_020ec880
-data_ov00_020ec880:
-	.space 0x4
-	.global data_ov00_020ec884
-data_ov00_020ec884:
-	.space 0x4
-	.global data_ov00_020ec888
-data_ov00_020ec888:
-	.space 0x4
-	.global data_ov00_020ec88c
-data_ov00_020ec88c:
-	.space 0x4
-	.global data_ov00_020ec890
-data_ov00_020ec890:
-	.space 0x4
-	.global data_ov00_020ec894
-data_ov00_020ec894:
-	.space 0x4
-	.global data_ov00_020ec898
-data_ov00_020ec898:
-	.space 0x4
-	.global data_ov00_020ec89c
-data_ov00_020ec89c:
-	.space 0x4
-	.global data_ov00_020ec8a0
-data_ov00_020ec8a0:
-	.space 0x4
+	.space 0x40
 	.global data_ov00_020ec8a4
 data_ov00_020ec8a4:
-	.space 0x4
-	.global data_ov00_020ec8a8
-data_ov00_020ec8a8:
-	.space 0x4
-	.global data_ov00_020ec8ac
-data_ov00_020ec8ac:
-	.space 0x4
-	.global data_ov00_020ec8b0
-data_ov00_020ec8b0:
-	.space 0x4
-	.global data_ov00_020ec8b4
-data_ov00_020ec8b4:
-	.space 0x4
-	.global data_ov00_020ec8b8
-data_ov00_020ec8b8:
-	.space 0x4
-	.global data_ov00_020ec8bc
-data_ov00_020ec8bc:
-	.space 0x4
-	.global data_ov00_020ec8c0
-data_ov00_020ec8c0:
-	.space 0x4
-	.global data_ov00_020ec8c4
-data_ov00_020ec8c4:
-	.space 0x4
-	.global data_ov00_020ec8c8
-data_ov00_020ec8c8:
-	.space 0x4
-	.global data_ov00_020ec8cc
-data_ov00_020ec8cc:
-	.space 0x4
-	.global data_ov00_020ec8d0
-data_ov00_020ec8d0:
-	.space 0x4
-	.global data_ov00_020ec8d4
-data_ov00_020ec8d4:
-	.space 0x4
-	.global data_ov00_020ec8d8
-data_ov00_020ec8d8:
-	.space 0x4
-	.global data_ov00_020ec8dc
-data_ov00_020ec8dc:
-	.space 0x4
-	.global data_ov00_020ec8e0
-data_ov00_020ec8e0:
-	.space 0x4
+	.space 0x40
 	.global data_ov00_020ec8e4
 data_ov00_020ec8e4:
-	.space 0x4
-	.global data_ov00_020ec8e8
-data_ov00_020ec8e8:
-	.space 0x4
-	.global data_ov00_020ec8ec
-data_ov00_020ec8ec:
-	.space 0x4
-	.global data_ov00_020ec8f0
-data_ov00_020ec8f0:
-	.space 0x4
-	.global data_ov00_020ec8f4
-data_ov00_020ec8f4:
-	.space 0x4
-	.global data_ov00_020ec8f8
-data_ov00_020ec8f8:
-	.space 0x4
-	.global data_ov00_020ec8fc
-data_ov00_020ec8fc:
-	.space 0x4
-	.global data_ov00_020ec900
-data_ov00_020ec900:
-	.space 0x4
-	.global data_ov00_020ec904
-data_ov00_020ec904:
-	.space 0x4
-	.global data_ov00_020ec908
-data_ov00_020ec908:
-	.space 0x4
-	.global data_ov00_020ec90c
-data_ov00_020ec90c:
-	.space 0x4
-	.global data_ov00_020ec910
-data_ov00_020ec910:
-	.space 0x4
-	.global data_ov00_020ec914
-data_ov00_020ec914:
-	.space 0x4
-	.global data_ov00_020ec918
-data_ov00_020ec918:
-	.space 0x4
-	.global data_ov00_020ec91c
-data_ov00_020ec91c:
-	.space 0x4
-	.global data_ov00_020ec920
-data_ov00_020ec920:
-	.space 0x4
+	.space 0x40
 	.global data_ov00_020ec924
 data_ov00_020ec924:
-	.space 0x4
-	.global data_ov00_020ec928
-data_ov00_020ec928:
-	.space 0x4
-	.global data_ov00_020ec92c
-data_ov00_020ec92c:
-	.space 0x4
-	.global data_ov00_020ec930
-data_ov00_020ec930:
-	.space 0x4
-	.global data_ov00_020ec934
-data_ov00_020ec934:
-	.space 0x4
-	.global data_ov00_020ec938
-data_ov00_020ec938:
-	.space 0x4
-	.global data_ov00_020ec93c
-data_ov00_020ec93c:
-	.space 0x4
-	.global data_ov00_020ec940
-data_ov00_020ec940:
-	.space 0x4
-	.global data_ov00_020ec944
-data_ov00_020ec944:
-	.space 0x4
-	.global data_ov00_020ec948
-data_ov00_020ec948:
-	.space 0x4
-	.global data_ov00_020ec94c
-data_ov00_020ec94c:
-	.space 0x4
-	.global data_ov00_020ec950
-data_ov00_020ec950:
-	.space 0x4
-	.global data_ov00_020ec954
-data_ov00_020ec954:
-	.space 0x4
-	.global data_ov00_020ec958
-data_ov00_020ec958:
-	.space 0x4
-	.global data_ov00_020ec95c
-data_ov00_020ec95c:
-	.space 0x4
-	.global data_ov00_020ec960
-data_ov00_020ec960:
-	.space 0x4
+	.space 0x40
