@@ -791,3 +791,8 @@ THUMB void ItemManager::GiveKeys(u32 amount) {
     if (keys <= 0) keys = 0;
     gMapManager->SetNumKeys(keys);
 }
+
+ARM ItemFlag ItemManager::GetEquippedItem() const {
+    if (this->mForcedItem != ItemFlag_None) return this->mForcedItem;
+    return this->mEquippedItem;
+}

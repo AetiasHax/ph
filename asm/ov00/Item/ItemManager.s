@@ -2,16 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-	.global _ZNK11ItemManager15GetEquippedItemEv
-	arm_func_start _ZNK11ItemManager15GetEquippedItemEv
-_ZNK11ItemManager15GetEquippedItemEv: ; 0x020ae390
-	ldr r2, [r0, #8]
-	mvn r1, #0
-	cmp r2, r1
-	ldreq r2, [r0]
-	mov r0, r2
-	bx lr
-	arm_func_end _ZNK11ItemManager15GetEquippedItemEv
 
 	.global _ZN11ItemManager15SetEquippedItemEi
 	arm_func_start _ZN11ItemManager15SetEquippedItemEi
