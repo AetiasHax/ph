@@ -837,3 +837,8 @@ THUMB void ItemManager::UpgradeBombBag() {
     if (mBombBagSize < MAX_AMMO_UPGRADE) mBombBagSize += 1;
     (*mAmmo)[ItemFlag_BombBag] = this->GetMaxAmmo(ItemFlag_BombBag);
 }
+
+THUMB void ItemManager::UpgradeBombchuBag() {
+    if (mBombchuBagSize < MAX_AMMO_UPGRADE) mBombchuBagSize += 1;
+    (*mAmmo)[ItemFlag_BombchuBag] = this->GetMaxAmmo(ItemFlag_BombchuBag);
+}
