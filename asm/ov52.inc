@@ -1,4 +1,8 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_02082b3cEi
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
+.extern _ZN10MapManager18func_ov00_02084b38Eiii
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN14AdventureFlags18func_ov00_02097738Ev
@@ -69,7 +73,6 @@
 .extern data_027e0ce0
 .extern data_027e0d3c
 .extern data_027e0e58
-.extern data_027e0e60
 .extern data_027e0f68
 .extern data_027e0f78
 .extern data_027e0fa0
@@ -126,10 +129,6 @@
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207b89c
 .extern func_ov00_0207c1b0
-.extern func_ov00_02082b3c
-.extern func_ov00_020836dc
-.extern func_ov00_020838e8
-.extern func_ov00_02084b38
 .extern func_ov00_0208d01c
 .extern func_ov00_020a9588
 .extern func_ov00_020a95a4
@@ -208,5 +207,6 @@
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
 .extern gAdventureFlags
+.extern gMapManager
 .extern gOverlayManager
 .extern strcpy

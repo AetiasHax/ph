@@ -2798,7 +2798,7 @@ func_ov35_0217e320: ; 0x0217e320
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldr r2, [sp, #0x24]
-	ldr r0, _0217e3d4 ; =data_027e0e60
+	ldr r0, _0217e3d4 ; =gMapManager
 	ldr r1, [sp, #0x28]
 	str r2, [sp, #0x18]
 	ldr r2, [sp, #0x2c]
@@ -2807,7 +2807,7 @@ func_ov35_0217e320: ; 0x0217e320
 	ldr r0, [r0]
 	add r1, sp, #0x18
 	mov r2, #0
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x28]
 	mov r3, #0x800
 	str r3, [sp]
@@ -2826,7 +2826,7 @@ func_ov35_0217e320: ; 0x0217e320
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov35_0217e320
-_0217e3d4: .word data_027e0e60
+_0217e3d4: .word gMapManager
 _0217e3d8: .word data_ov00_020e9370
 
 	.global func_ov35_0217e3dc
@@ -8082,11 +8082,11 @@ _02182d70:
 	str r1, [sp, #0xac]
 	str r0, [sp, #0xb4]
 _02182d84:
-	ldr r0, _02182f94 ; =data_027e0e60
+	ldr r0, _02182f94 ; =gMapManager
 	add r2, sp, #0x94
 	ldr r0, [r0]
 	mov r1, #1
-	bl func_ov00_020836bc
+	bl _ZN10MapManager18func_ov00_020836bcEjPi
 	ldr r5, [sp, #0xac]
 	ldr r3, [sp, #0xb0]
 	ldr r2, [sp, #0xb4]
@@ -8177,7 +8177,7 @@ _02182e40:
 	str r8, [sp, #0xc]
 	mov r1, #1
 	str r1, [sp, #0x10]
-	ldr r0, _02182f94 ; =data_027e0e60
+	ldr r0, _02182f94 ; =gMapManager
 	add r1, sp, #0xb8
 	ldr r0, [r0]
 	add r2, sp, #0x28
@@ -8217,7 +8217,7 @@ _02182e40:
 _02182f88: .word data_027e0f64
 _02182f8c: .word data_027e0f94
 _02182f90: .word data_027e0764
-_02182f94: .word data_027e0e60
+_02182f94: .word gMapManager
 _02182f98: .word 0x0000ffff
 _02182f9c: .word 0x0000099a
 _02182fa0: .word data_027e0fe8
@@ -9242,7 +9242,7 @@ _02183d8c:
 	adc r0, r0, #0
 	mov r1, r1, lsr #0xc
 	ldr r2, [sp, #0x24]
-	ldr lr, _02183e90 ; =data_027e0e60
+	ldr lr, _02183e90 ; =gMapManager
 	adds r8, ip, #0x800
 	orr r1, r1, r0, lsl #20
 	add ip, r2, r1
@@ -9259,7 +9259,7 @@ _02183d8c:
 	str ip, [sp, #0x18]
 	str r3, [sp, #0x1c]
 	str r8, [sp, #0x20]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	str r0, [sp, #0x28]
 	str r5, [sp]
 	ldrsh r1, [r7, #0x78]
@@ -9293,7 +9293,7 @@ _02183e80: .word 0x0000019a
 _02183e84: .word 0x00000ccd
 _02183e88: .word 0x00000555
 _02183e8c: .word data_02050f54
-_02183e90: .word data_027e0e60
+_02183e90: .word gMapManager
 _02183e94: .word data_ov00_020e9370
 
 	.global func_ov35_02183e98

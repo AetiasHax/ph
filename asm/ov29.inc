@@ -1,6 +1,15 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern _ZN10MapManager16MapData_vfunc_6cEv
+.extern _ZN10MapManager18Set_MapData_Unk_16Eci
+.extern _ZN10MapManager18func_ov00_02082680Eii
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_02083908EcPi
+.extern _ZN10MapManager18func_ov00_02083928EPci
+.extern _ZN10MapManager18func_ov00_02083938Ei
+.extern _ZN10MapManager18func_ov00_020846a4Ev
+.extern _ZN10MapManager18func_ov00_02084d24Ecci
 .extern _ZN11ItemManager18func_ov00_020ae4dcEj
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
@@ -81,7 +90,6 @@
 .extern data_027e0d38
 .extern data_027e0db0
 .extern data_027e0e58
-.extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
@@ -185,15 +193,6 @@
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_02082680
-.extern func_ov00_020836dc
-.extern func_ov00_02083908
-.extern func_ov00_02083928
-.extern func_ov00_02083938
-.extern func_ov00_02083948
-.extern func_ov00_02083f80
-.extern func_ov00_020846a4
-.extern func_ov00_02084d24
 .extern func_ov00_02087400
 .extern func_ov00_0208b5a4
 .extern func_ov00_0208b5bc
@@ -391,4 +390,5 @@
 .extern func_ov38_02185720
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager
 .extern strcpy

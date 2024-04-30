@@ -643,10 +643,10 @@ _020af5c4:
 	mov r0, r4
 	bl _ZN13PlayerControl13StopFollowingEv
 _020af620:
-	ldr r0, _020af6d8 ; =data_027e0e60
+	ldr r0, _020af6d8 ; =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02085108
+	bl _ZN10MapManager18func_ov00_02085108EPi
 	cmp r0, #3
 	cmpne r0, #7
 	moveq r0, #1
@@ -695,7 +695,7 @@ _020af6c8: .word data_027e0c68
 _020af6cc: .word data_027e0fac
 _020af6d0: .word data_027e0ffc
 _020af6d4: .word 0x0000010a
-_020af6d8: .word data_027e0e60
+_020af6d8: .word gMapManager
 _020af6dc: .word data_027e103c
 _020af6e0: .word data_027e05f8
 
@@ -721,11 +721,11 @@ _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: ; 0x020af6e4
 	str r0, [r4, #0x84]
 	str r0, [r4, #0x88]
 _020af72c:
-	ldr r1, _020af774 ; =data_027e0e60
+	ldr r1, _020af774 ; =gMapManager
 	add r0, sp, #0
 	ldr r1, [r1]
 	mov r2, r6
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	ldrb r0, [sp]
 	mov r2, #1
 	mov r1, #0
@@ -741,7 +741,7 @@ _020af72c:
 	.align 2, 0
 	arm_func_end _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
 _020af770: .word data_027e0f94
-_020af774: .word data_027e0e60
+_020af774: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020af778Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af778Ev
@@ -883,10 +883,10 @@ _020af944:
 	bl _ZN5Actor16XzDistanceToLinkEv
 	mov r4, r0
 _020af97c:
-	ldr r0, _020afad0 ; =data_027e0e60
+	ldr r0, _020afad0 ; =gMapManager
 	add r1, sp, #8
 	ldr r0, [r0]
-	bl func_ov00_02085108
+	bl _ZN10MapManager18func_ov00_02085108EPi
 	ldr r2, _020afad4 ; =data_027e0f94
 	mov r1, r0
 	ldr r0, [r2, #4]
@@ -974,7 +974,7 @@ _020afac0: .word data_027e0f90
 _020afac4: .word gItemManager
 _020afac8: .word data_027e0fc8
 _020afacc: .word data_027e0fe4
-_020afad0: .word data_027e0e60
+_020afad0: .word gMapManager
 _020afad4: .word data_027e0f94
 
 	.global _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
@@ -999,10 +999,10 @@ _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p: ; 0x020afad8
 	blx r1
 	cmp r0, #3
 	bne _020afb48
-	ldr r0, _020afb68 ; =data_027e0e60
+	ldr r0, _020afb68 ; =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl func_ov00_02085594
+	bl _ZN10MapManager18func_ov00_02085594Ev
 	cmp r0, #0
 	movne r0, #1
 	add sp, sp, #0xc
@@ -1020,7 +1020,7 @@ _020afb54:
 	arm_func_end _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 _020afb60: .word data_027e0f94
 _020afb64: .word data_027e0f90
-_020afb68: .word data_027e0e60
+_020afb68: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020afb6cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020afb6cEv
@@ -1136,10 +1136,10 @@ _020afcf4:
 	ldrb r0, [r9, #0x81]
 	cmp r0, #0
 	beq _020afe24
-	ldr r0, _020afe84 ; =data_027e0e60
+	ldr r0, _020afe84 ; =gMapManager
 	add r1, r9, #0x9c
 	ldr r0, [r0]
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	str r0, [r9, #0xa0]
 	cmp r0, #0
 	beq _020afd88
@@ -1173,7 +1173,7 @@ _020afd5c:
 	b _020afdc4
 _020afd88:
 	ldr r1, _020afe78 ; =data_027e0f94
-	ldr r0, _020afe84 ; =data_027e0e60
+	ldr r0, _020afe84 ; =gMapManager
 	ldr r1, [r1, #4]
 	ldr r0, [r0]
 	str r1, [sp, #8]
@@ -1184,7 +1184,7 @@ _020afd88:
 	strb r3, [r5]
 	strb r2, [r5, #1]
 	ldr r2, [r5]
-	bl func_ov00_02083c7c
+	bl _ZN10MapManager18func_ov00_02083c7cEP5Vec3pi
 	mov r5, #2
 	mov r6, #3
 _020afdc4:
@@ -1242,7 +1242,7 @@ _020afe74: .word gItemManager
 _020afe78: .word data_027e0f94
 _020afe7c: .word data_027e0fc8
 _020afe80: .word data_027e0ffc
-_020afe84: .word data_027e0e60
+_020afe84: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020afe88Eib
 	arm_func_start _ZN13PlayerControl18func_ov00_020afe88Eib
@@ -1864,24 +1864,24 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	str r3, [sp, #4]
 	str r1, [sp, #0xc]
 _020b06e0:
-	ldr r1, _020b0774 ; =data_027e0e60
+	ldr r1, _020b0774 ; =gMapManager
 	add r0, sp, #0
 	ldr r1, [r1]
 	add r2, sp, #4
-	bl func_ov00_02083a1c
-	ldr r0, _020b0774 ; =data_027e0e60
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+	ldr r0, _020b0774 ; =gMapManager
 	ldrb r1, [sp]
 	ldr r0, [r0]
-	bl func_ov00_02083c24
+	bl _ZN10MapManager18func_ov00_02083c24Ei
 	ldr r1, [sp, #4]
-	ldr r2, _020b0774 ; =data_027e0e60
+	ldr r2, _020b0774 ; =gMapManager
 	sub r0, r0, r1
 	add r0, r0, r0, lsr #31
 	add r3, r1, r0, asr #1
 	ldrb r1, [sp, #1]
 	ldr r0, [r2]
 	str r3, [sp, #4]
-	bl func_ov00_02083c50
+	bl _ZN10MapManager18func_ov00_02083c50Ei
 	ldr r2, [sp, #0xc]
 	mov r1, r4
 	sub r0, r0, r2
@@ -1904,7 +1904,7 @@ _020b0764: .word 0x00000333
 _020b0768: .word data_027e0f94
 _020b076c: .word data_027e0fac
 _020b0770: .word data_02050f54
-_020b0774: .word data_027e0e60
+_020b0774: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji

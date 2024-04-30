@@ -1,4 +1,9 @@
 #pragma once
+.extern _ZN10MapManager16MapData_vfunc_54Ev
+.extern _ZN10MapManager16MapData_vfunc_60Ev
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetPlayerVelEv
 .extern _ZN13LinkStateBase15ChangeLinkStateEi
@@ -68,7 +73,7 @@
 .extern data_027e077c
 .extern data_027e0d3c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f84
@@ -123,11 +128,6 @@
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207c1f8
 .extern func_ov00_02081f4c
-.extern func_ov00_020836dc
-.extern func_ov00_02083a1c
-.extern func_ov00_02083e58
-.extern func_ov00_02083ee0
-.extern func_ov00_02084088
 .extern func_ov00_0208b5a4
 .extern func_ov00_0208b5bc
 .extern func_ov00_0208b694

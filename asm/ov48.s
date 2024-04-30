@@ -2035,7 +2035,7 @@ _021917c4:
 	ldr r0, _02191c1c ; =data_ov48_02195468
 	add r1, sp, #0xb4
 	str r0, [sp, #0xc]
-	ldr r0, _02191c30 ; =data_027e0e60
+	ldr r0, _02191c30 ; =gMapManager
 	str r6, [sp, #0x10]
 	ldr r0, [r0]
 	add r2, sp, #0x20
@@ -2296,7 +2296,7 @@ _02191c20: .word func_ov48_02191c60
 _02191c24: .word data_ov48_0219545c
 _02191c28: .word 0x0000ffff
 _02191c2c: .word 0x00000333
-_02191c30: .word data_027e0e60
+_02191c30: .word gMapManager
 _02191c34: .word gItemManager
 _02191c38: .word data_027e0f90
 _02191c3c: .word data_027e0fac
