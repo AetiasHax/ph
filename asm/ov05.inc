@@ -1,5 +1,6 @@
 #pragma once
 .extern Divide
+.extern GiveShipPart
 .extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern _ZN10MapManager16MapData_vfunc_78Ev
 .extern _ZN10MapManager16MapData_vfunc_84Ev
@@ -148,6 +149,8 @@
 .extern _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 .extern _ZN4Item18func_ov00_020ad020Ei
 .extern _ZN5Actor9GetHitboxEP8Cylinder
+.extern _ZN7MapBase18func_ov00_0207dea0Eb
+.extern _ZN7MapBase18func_ov00_02080de8Ei
 .extern _ZN9SysObjectdlEPv
 .extern _ZNK11ItemManager13HasAllPotionsEv
 .extern _ZNK11ItemManager15HasPurplePotionEv
@@ -201,7 +204,6 @@
 .extern data_027e0fac
 .extern data_027e0fb0
 .extern data_027e0fb8
-.extern gHealthManager
 .extern data_027e0fc0
 .extern data_027e0fc8
 .extern data_027e0fcc
@@ -360,8 +362,6 @@
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c358
 .extern func_ov00_0207c444
-.extern _ZN7MapBase18func_ov00_0207dea0Eb
-.extern _ZN7MapBase18func_ov00_02080de8Ei
 .extern func_ov00_02081f4c
 .extern func_ov00_0208726c
 .extern func_ov00_020872e8
@@ -509,7 +509,6 @@
 .extern func_ov09_02118cd4
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov12_02134208
 .extern func_ov14_02127df4
@@ -575,6 +574,7 @@
 .extern func_ov59_0219907c
 .extern func_ov59_021990a4
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern gMapManager
 .extern gOverlayManager

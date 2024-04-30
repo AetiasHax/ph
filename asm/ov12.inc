@@ -1,6 +1,7 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern PlaySoundEffect
 .extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern _ZN10MapManager17GetMapData_Unk_48Ev
 .extern _ZN10MapManager17Get_MapData_Unk28Ev
@@ -632,7 +633,6 @@
 .extern func_ov00_020d70a4
 .extern func_ov00_020d716c
 .extern func_ov00_020d7180
-.extern PlaySoundEffect
 .extern func_ov00_020d7404
 .extern func_ov00_020d77e4
 .extern func_ov00_020d7a84
