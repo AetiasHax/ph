@@ -9,7 +9,8 @@ from pathlib import Path
 CXX_FLAGS = [
     '-nostdinc',
     '-Iinclude',
-    '-Ilibs/c/include'
+    '-Ilibs/c/include',
+    '-Ilibs/cpp/include'
 ]
 
 script_dir = Path(os.path.dirname(os.path.realpath(__file__)))
