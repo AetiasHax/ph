@@ -3,27 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager9HasPotionEj
-	arm_func_start _ZNK11ItemManager9HasPotionEj
-_ZNK11ItemManager9HasPotionEj: ; 0x020ae564
-	add r0, r0, r1
-	ldrb r0, [r0, #0xbc]
-	cmp r0, #3
-	addls pc, pc, r0, lsl #2
-	b _020ae590
-_020ae578: ; jump table
-	b _020ae590 ; case 0
-	b _020ae588 ; case 1
-	b _020ae588 ; case 2
-	b _020ae588 ; case 3
-_020ae588:
-	mov r0, #1
-	bx lr
-_020ae590:
-	mov r0, #0
-	bx lr
-	arm_func_end _ZNK11ItemManager9HasPotionEj
-
 	.global _ZNK11ItemManager13HasAllPotionsEv
 	arm_func_start _ZNK11ItemManager13HasAllPotionsEv
 _ZNK11ItemManager13HasAllPotionsEv: ; 0x020ae598

@@ -1,7 +1,5 @@
 #pragma once
-.extern _ZN11ItemManager12GetEquipItemEi
-.extern _ZN11ItemManager15SetEquippedItemEi
-.extern _ZNK11ItemManager10GetMaxAmmoEi
+.extern _ZNK11ItemManager9HasPotionEj
 .extern data_027e0f78
 .extern data_ov00_020eec68
 .extern func_020196bc
