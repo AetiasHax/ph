@@ -12,7 +12,7 @@
 .extern _ZNK11ItemManager13GetFairyLevelEi
 .extern _ZNK11ItemManager16GetShipPartCountEjj
 .extern _ZNK11ItemManager18GetUnk_09e_DividedEj
-.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
+.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
 .extern _ZNK11ItemManager19GetEquippedShipPartEj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern _ZNK11ItemManager7HasItemEi

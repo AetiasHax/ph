@@ -3,34 +3,6 @@
 
 	.text
 
-	.global _ZNK11ItemManager18IsTreasureSalvagedEjj
-	thumb_func_start _ZNK11ItemManager18IsTreasureSalvagedEjj
-_ZNK11ItemManager18IsTreasureSalvagedEjj: ; 0x020ae6f0
-	push {r3, r4}
-	lsl r3, r1, #3
-	add r1, r1, r3
-	add r4, r2, r1
-	mov r2, #1
-	mov r1, #0x1f
-	add r3, r4, #0
-	and r3, r1
-	add r1, r2, #0
-	lsl r1, r3
-	lsr r3, r4, #5
-	lsl r3, r3, #2
-	add r3, r0, r3
-	mov r0, #0x4f
-	lsl r0, r0, #2
-	ldr r0, [r3, r0]
-	tst r0, r1
-	bne _020ae716
-	mov r2, #0
-_020ae716:
-	add r0, r2, #0
-	pop {r3, r4}
-	bx lr
-	thumb_func_end _ZNK11ItemManager18IsTreasureSalvagedEjj
-
 	.global _ZN11ItemManager19SetTreasureSalvagedEjj
 	thumb_func_start _ZN11ItemManager19SetTreasureSalvagedEjj
 _ZN11ItemManager19SetTreasureSalvagedEjj: ; 0x020ae71c

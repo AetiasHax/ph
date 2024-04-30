@@ -46,7 +46,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager16GetShipPartCountEjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
+.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern __register_global_object
 .extern data_020691a0

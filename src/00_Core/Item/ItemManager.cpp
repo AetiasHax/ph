@@ -965,3 +965,7 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
     }
     PlaySoundEffect(&data_ov00_020eec68, sfx);
 }
+
+THUMB bool ItemManager::HasShipPartPriceShown(ShipPart part, ShipType type) const {
+    return GET_FLAG(mShipPartPricesShown.flags, part * ShipType_COUNT + type);
+}

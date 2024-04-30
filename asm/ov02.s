@@ -2883,7 +2883,7 @@ _020f1424:
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r6
-	blx _ZNK11ItemManager18IsTreasureSalvagedEjj
+	blx _ZNK11ItemManager21HasShipPartPriceShownEjj
 	cmp r0, #0
 	beq _020f14f4
 	add ip, sp, #0x28
