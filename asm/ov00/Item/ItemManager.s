@@ -2,22 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-	.global _ZNK11ItemManager15HasPurplePotionEv
-	arm_func_start _ZNK11ItemManager15HasPurplePotionEv
-_ZNK11ItemManager15HasPurplePotionEv: ; 0x020ae5d0
-	mov r2, #0
-_020ae5d4:
-	add r1, r0, r2
-	ldrb r1, [r1, #0xbc]
-	cmp r1, #2
-	moveq r0, #1
-	bxeq lr
-	add r2, r2, #1
-	cmp r2, #2
-	blt _020ae5d4
-	mov r0, #0
-	bx lr
-	arm_func_end _ZNK11ItemManager15HasPurplePotionEv
 
 	.global _ZN11ItemManager21LoadDungeonItemModelsEv
 	thumb_func_start _ZN11ItemManager21LoadDungeonItemModelsEv

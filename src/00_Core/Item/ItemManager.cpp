@@ -882,3 +882,10 @@ ARM bool ItemManager::HasAllPotions() const {
     }
     return true;
 }
+
+ARM bool ItemManager::HasPurplePotion() const {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
+        if (mPotions[i] == Potion_Purple) return true;
+    }
+    return false;
+}
