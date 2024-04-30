@@ -3,16 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager17EquipPreviousItemEv
-	arm_func_start _ZN11ItemManager17EquipPreviousItemEv
-_ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
-	ldr ip, _020ae3cc ; =_ZN11ItemManager15SetEquippedItemEi
-	ldr r1, [r0, #4]
-	bx ip
-	.align 2, 0
-	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi
-
 	.global _ZN11ItemManager13ForceEquipItemEi
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEi
 _ZN11ItemManager13ForceEquipItemEi: ; 0x020ae3d0

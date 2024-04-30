@@ -803,3 +803,7 @@ ARM bool ItemManager::SetEquippedItem(ItemFlag equipId) {
     mEquipLoadTimer = 2;
     return true;
 }
+
+ARM void ItemManager::EquipPreviousItem() {
+    this->SetEquippedItem(mPrevEquippedItem);
+}
