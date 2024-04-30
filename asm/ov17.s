@@ -221,7 +221,7 @@ _0215b64a:
 	lsl r0, r0, #2
 	str r1, [r5, r0]
 	add r0, r5, #0
-	blx func_ov00_0207da38
+	blx _ZN7MapBaseD1Ev
 	add r0, r5, #0
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -298,7 +298,7 @@ _0215b6de:
 	lsl r0, r0, #2
 	str r1, [r5, r0]
 	add r0, r5, #0
-	blx func_ov00_0207da38
+	blx _ZN7MapBaseD1Ev
 	add r0, r5, #0
 	blx _ZN9SysObjectdlEPv
 	add r0, r5, #0
@@ -476,7 +476,7 @@ _0215b850:
 	mov r3, #0
 	strb r7, [sp, #8]
 	strb r8, [sp, #9]
-	bl func_ov00_0207f588
+	bl _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
 	mov r0, r10
 	ldr r3, [r0]
 	mov r1, r5
@@ -493,7 +493,7 @@ _0215b850:
 	mov r1, r10
 	mov r2, r5
 	mov r3, #1
-	bl func_ov00_0207f588
+	bl _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
 	mov r0, r10
 	ldr r3, [r0]
 	mov r1, r5
@@ -510,7 +510,7 @@ _0215b850:
 	mov r1, r10
 	mov r2, r5
 	mov r3, #2
-	bl func_ov00_0207f588
+	bl _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
 	mov r0, r10
 	ldr r3, [r0]
 	mov r1, r5
@@ -527,7 +527,7 @@ _0215b850:
 	mov r1, r10
 	mov r2, r5
 	mov r3, #3
-	bl func_ov00_0207f588
+	bl _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
 	mov r0, r10
 	ldr r3, [r0]
 	mov r1, r5
@@ -606,7 +606,7 @@ func_ov17_0215ba1c: ; 0x0215ba1c
 	mov r4, r2
 	mov r6, r0
 	mov r5, r1
-	bl func_ov00_0207f4a4
+	bl _ZN7MapBase18func_ov00_0207f4a4EP5Vec2si
 	cmp r4, #0
 	cmpne r0, #0
 	mov r0, r6
@@ -20901,7 +20901,7 @@ data_ov17_0216ba14: ; 0x0216ba14
     .word func_ov17_0215b708 + 1
 	.global data_ov17_0216ba18
 data_ov17_0216ba18: ; 0x0216ba18
-    .word func_ov00_0207ddf4
+    .word _ZN7MapBase8vfunc_18Ev
 	.global data_ov17_0216ba1c
 data_ov17_0216ba1c: ; 0x0216ba1c
     .word func_ov17_0215b764
@@ -20937,13 +20937,13 @@ data_ov17_0216ba44: ; 0x0216ba44
     .word func_ov04_0210cb00 ; data_ov07_0210cb00
 	.global data_ov17_0216ba48
 data_ov17_0216ba48: ; 0x0216ba48
-    .word func_ov00_0207e46c
+    .word _ZN7MapBase8vfunc_48Ev
 	.global data_ov17_0216ba4c
 data_ov17_0216ba4c: ; 0x0216ba4c
     .word func_ov17_0215bd74
 	.global data_ov17_0216ba50
 data_ov17_0216ba50: ; 0x0216ba50
-    .word func_ov00_0207e488
+    .word _ZN7MapBase8vfunc_50Ev
 	.global data_ov17_0216ba54
 data_ov17_0216ba54: ; 0x0216ba54
     .word func_ov17_0215ba58
@@ -20958,19 +20958,19 @@ data_ov17_0216ba60: ; 0x0216ba60
     .word func_ov17_0215bac8
 	.global data_ov17_0216ba64
 data_ov17_0216ba64: ; 0x0216ba64
-    .word func_ov00_0207e4b0
+    .word _ZN7MapBase8vfunc_64Ev
 	.global data_ov17_0216ba68
 data_ov17_0216ba68: ; 0x0216ba68
-    .word func_ov00_0207e4b8
+    .word _ZN7MapBase8vfunc_68Eii
 	.global data_ov17_0216ba6c
 data_ov17_0216ba6c: ; 0x0216ba6c
-    .word func_ov00_0207e970
+    .word _ZN7MapBase8vfunc_6cEiii
 	.global data_ov17_0216ba70
 data_ov17_0216ba70: ; 0x0216ba70
-    .word func_ov00_0207ee14
+    .word _ZN7MapBase8vfunc_70EP5Vec3p
 	.global data_ov17_0216ba74
 data_ov17_0216ba74: ; 0x0216ba74
-    .word func_ov00_0207eff4
+    .word _ZN7MapBase8vfunc_74EP5Vec3p
 	.global data_ov17_0216ba78
 data_ov17_0216ba78: ; 0x0216ba78
     .word func_ov17_0215bbbc
@@ -20982,16 +20982,16 @@ data_ov17_0216ba80: ; 0x0216ba80
     .word func_ov17_0215bd30
 	.global data_ov17_0216ba84
 data_ov17_0216ba84: ; 0x0216ba84
-    .word func_ov00_0207f364
+    .word _ZN7MapBase8vfunc_84Ei
 	.global data_ov17_0216ba88
 data_ov17_0216ba88: ; 0x0216ba88
-    .word func_ov00_0207f324
+    .word _ZN7MapBase8vfunc_88Ev
 	.global data_ov17_0216ba8c
 data_ov17_0216ba8c: ; 0x0216ba8c
-    .word func_ov00_0207f32c
+    .word _ZN7MapBase8vfunc_8cEv
 	.global data_ov17_0216ba90
 data_ov17_0216ba90: ; 0x0216ba90
-    .word func_ov00_0207f3c4
+    .word _ZN7MapBase8vfunc_90Eiii
 	.global data_ov17_0216ba94
 data_ov17_0216ba94: ; 0x0216ba94
     .word func_ov17_0215b7c4
@@ -21000,10 +21000,10 @@ data_ov17_0216ba98: ; 0x0216ba98
     .word func_ov17_0215bb34
 	.global data_ov17_0216ba9c
 data_ov17_0216ba9c: ; 0x0216ba9c
-    .word func_ov00_0207f334
+    .word _ZN7MapBase8vfunc_9cEv
 	.global data_ov17_0216baa0
 data_ov17_0216baa0: ; 0x0216baa0
-    .word func_ov00_0207f338
+    .word _ZN7MapBase8vfunc_a0Ev
 	.global data_ov17_0216baa4
 data_ov17_0216baa4: ; 0x0216baa4
     .word func_ov17_0215b994
@@ -21015,13 +21015,13 @@ data_ov17_0216baac: ; 0x0216baac
     .word func_ov17_0215ba1c
 	.global data_ov17_0216bab0
 data_ov17_0216bab0: ; 0x0216bab0
-    .word func_ov00_0207e060
+    .word _ZN7MapBase8vfunc_b0Eii
 	.global data_ov17_0216bab4
 data_ov17_0216bab4: ; 0x0216bab4
-    .word func_ov00_0207e444
+    .word _ZN7MapBase8vfunc_b4Ev
 	.global data_ov17_0216bab8
 data_ov17_0216bab8: ; 0x0216bab8
-    .word func_ov00_020807d4
+    .word _ZN7MapBase8vfunc_b8Ev
 	.global data_ov17_0216babc
 data_ov17_0216babc: ; 0x0216babc
     .word func_ov17_0215bb14

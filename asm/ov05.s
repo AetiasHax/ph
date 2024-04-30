@@ -20205,7 +20205,7 @@ func_ov05_02111c00: ; 0x02111c00
 	ldmeqia sp!, {r4, r5, pc}
 	mov r0, r5
 	mov r1, r4
-	bl func_ov00_02080de8
+	bl _ZN7MapBase18func_ov00_02080de8Ei
 	ldr r0, _02111c68 ; =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
@@ -20607,7 +20607,7 @@ _02112190:
 	blt _021120c8
 	ldr r0, [r4]
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	ldrh r0, [r4, #0x16]
 	cmp r0, #0
 	moveq r0, #0

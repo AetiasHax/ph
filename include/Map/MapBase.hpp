@@ -7,6 +7,7 @@
 
 #include "lib/math.h"
 
+#include "Map/Course.hpp"
 #include "Map/Entrance.hpp"
 #include "Map/TriggerBase.hpp"
 #include "Map/Exit.hpp"
@@ -22,6 +23,25 @@
 struct MapBase_Unk_180 {
     /* 0 */ unk32 mUnk_0;
     /* 4 */
+
+    ~MapBase_Unk_180();
+};
+
+struct MapBase_Unk1 {
+    /* 00 */ s32 mUnk_00;
+    /* 04 */ Exit mExit_04;
+    /* 1c */ Exit mExit_1c;
+    /* 34 */
+
+    void func_ov00_02080324(s32 param_2, s32 param_3, s32 param_4);
+};
+
+struct MapBase_Unk2 {
+    /* 00 */ TriggerBase **mTrigger;
+    /* 04 */ Vec3p mVec;
+    /* 10 */
+
+    void func_ov00_02080ad0(TriggerBase **param_2, TriggerBase **param_3);
 };
 
 class MapBase : public SysObject {
@@ -96,5 +116,122 @@ public:
     /* 1ae */ unk8 mUnk_1ae[2];
     /* 1b0 */
 
+    /* 00 */ virtual ~MapBase();
+    /* 08 */ virtual void vfunc_08(u32 param_2, u32 param_3, Course *param_4);
+    /* 0c */ virtual void vfunc_0c(Course *param_2);
+    /* 10 */ virtual void vfunc_10();
+    /* 14 */ virtual void vfunc_14();
+    /* 18 */ virtual void vfunc_18();
+    /* 1c */ virtual void vfunc_1c(bool param_2);
+    /* 20 */ virtual void vfunc_20(s32 param_2);
+    /* 24 */ virtual void vfunc_24();
+    /* 28 */ virtual void vfunc_28(s32 param_2);
+    /* 2c */ virtual void vfunc_2c();
+    /* 30 */ virtual void vfunc_30(s32 param_2);
+    /* 34 */ virtual bool vfunc_34(char *param_2);
+    /* 38 */ virtual void vfunc_38();
+    /* 3c */ virtual void vfunc_3c();
+    /* 40 */ virtual void vfunc_40();
+    /* 44 */ virtual void vfunc_44();
+    /* 48 */ virtual void vfunc_48();
+    /* 4c */ virtual void vfunc_4c() = 0;
+    /* 50 */ virtual unk32 vfunc_50();
+    /* 54 */ virtual unk32 vfunc_54();
+    /* 58 */ virtual unk32 vfunc_58();
+    /* 5c */ virtual unk32 vfunc_5c();
+    /* 60 */ virtual unk32 vfunc_60();
+    /* 64 */ virtual unk32 vfunc_64();
+    /* 68 */ virtual unk8 vfunc_68(unk32 param_2, unk32 param_3);
+    /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
+    /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
+    /* 74 */ virtual s32* vfunc_74(Vec3p *param_2);
+    /* 78 */ virtual unk32 vfunc_78();
+    /* 7c */ virtual unk32 vfunc_7c();
+    /* 80 */ virtual unk32 vfunc_80();
+    /* 84 */ virtual void vfunc_84(unk32 param_2);
+    /* 88 */ virtual unk32 vfunc_88();
+    /* 8c */ virtual unk32 vfunc_8c();
+    /* 90 */ virtual unk8 vfunc_90(unk32 param_2, unk32 param_3, unk32 param_4);
+    /* 94 */ virtual void vfunc_94();
+    /* 98 */ virtual void vfunc_98();
+    /* 9c */ virtual void vfunc_9c();
+    /* a0 */ virtual void vfunc_a0();
+    /* a4 */ virtual unk32 vfunc_a4();
+    /* a8 */ virtual void vfunc_a8();
+    /* ac */ virtual void vfunc_ac();
+    /* b0 */ virtual unk8 vfunc_b0(unk32 param_2, unk32 param_3);
+    /* b4 */ virtual void vfunc_b4();
+    /* b8 */ virtual unk32 vfunc_b8();
+    /* bc */ virtual void vfunc_bc();
+    /* c0 */ virtual void vfunc_c0();
+    /* c4 */
 
+    void SetBounds(unk32 map, unk32 course);
+    void GetMapFilePath(char *courseName, unk32 num1, unk32 buf);
+    void func_ov00_0207ddf8(bool param_2);
+    void func_ov00_0207de68(unk32 param_2);
+    void func_ov00_0207de88();
+    void func_ov00_0207dea0(bool param_2);
+    bool func_ov00_0207e08c(unk32 param_2, unk32 param_3);
+    s32 func_ov00_0207e0f0(unk32 param_2);
+    s32 func_ov00_0207e28c(unk32 param_2);
+    static unk8 func_ov00_0207e940(unk8 *param_1);
+    static unk8 func_ov00_0207e968();
+    static unk8 func_ov00_0207e96c();
+    static unk8 func_ov00_0207f100();
+    bool func_ov00_0207f104(unk32 param_2, unk32 param_3);
+    unk32 func_ov00_0207f1f4(Vec3p *param_2, unk32 *param_3);
+    unk8 func_ov00_0207f38c(unk32 param_2);
+    void func_ov00_0207f4a4(Vec2s *param_2, unk32 param_3);
+    static void func_ov00_0207f53c(Vec2s *param_1, MapBase *param_2, Vec3p *param_3);
+    static void func_ov00_0207f588(Vec2s *param_1, MapBase *param_2, Vec2b *param_3, unk32 param_4);
+    void func_ov00_0207f630(Vec2s *param_2, Vec3p *param_3);
+    unk8 GetTileStartX(unk32 x);
+    unk8 GetTileStartZ(unk32 z);
+    s32 GetTileEndX(unk32 x);
+    s32 GetTileEndZ(unk32 z);
+    void GetTileBounds(Vec2b *tilePos, AABB *bounds);
+    unk8 GetClampedTileX(unk32 worldX);
+    unk8 GetClampedTileY(unk32 worldZ);
+    unk8 GetTileX(unk32 worldX);
+    unk8 GetTileY(unk32 worldZ);
+    bool IsInBounds(Vec3p *tileWorldPos);
+    s32 AddEntrance(Entrance *param_2);
+    unk8 FindEntrance(unk32 id);
+    unk8 func_ov00_0207f924(unk32 param_2);
+    unk8 func_ov00_0207f934();
+    unk8 func_ov00_0207f948(unk32 param_2);
+    void AddTrigger(TriggerParams *param_2);
+    s32 GetTriggerBoundingBox(unk32 param_2, AABB *param_3);
+    unk8 GetTriggerBoundingBoxes(unk32 param_2, AABB *param_3, unk32 param_4);
+    unk32 GetOverlappingTrigger(Vec3p *param_2);
+    unk8 FindTrigger(unk32 type);
+    unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase * *triggers, unk32 capacity);
+    bool IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3);
+    bool AnyTrigger_func_0c(unk32 type);
+    unk8 Trigger_vfunc_08();
+    bool AddTrigger(unk32 param_2);
+    bool func_ov00_0207ff88(unk32 param_2);
+    void func_ov00_0208005c(s32 param_2, s32 param_3, unk32 param_4);
+    void func_ov00_0208006c(unk32 param_2, s32 param_3);
+    void func_ov00_0208007c(s32 param_2, s32 param_3);
+    void func_ov00_0208008c(u32 param_2);
+    unk8 AddExit(Exit *param_2);
+    unk8 func_ov00_02080140(Exit *param_2);
+    bool FindExit(unk32 param_2, Exit *param_3);
+    unk8 AddCameraViewpoint(CameraViewpoint *param_2);
+    bool FindViewpoint_Unk_4(unk8 id, CameraViewpoint *param_3);
+    bool FindViewpoint_Unk_0(unk32 param_2, CameraViewpoint *param_3);
+    void GetCurrentViewpoint(CameraViewpoint *param_2, unk32 param_3);
+    unk8 GetCurrentViewpoint_Unk_00(s32 param_2);
+    bool func_ov00_02080824(unk32 param_2, unk32 param_3);
+    bool AddUnk_130(unk32 param_2);
+    bool func_ov00_020809b8(unk32 param_2);
+    unk8 func_ov00_02080a78(Vec3p *param_2);
+    unk8 func_ov00_02080b24(Vec2b *param_2);
+    void func_ov00_02080d08(unk32 param_2);
+    bool TriggerOfType_vfunc_10(unk32 type);
+    void func_ov00_02080de4();
+    unk8 func_ov00_02080de8(unk32 param_2);
+    void func_ov00_02080edc();
 };

@@ -360,8 +360,8 @@
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c358
 .extern func_ov00_0207c444
-.extern func_ov00_0207dea0
-.extern func_ov00_02080de8
+.extern _ZN7MapBase18func_ov00_0207dea0Eb
+.extern _ZN7MapBase18func_ov00_02080de8Ei
 .extern func_ov00_02081f4c
 .extern func_ov00_0208726c
 .extern func_ov00_020872e8

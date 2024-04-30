@@ -11583,7 +11583,7 @@ _02128f30:
 	str r0, [r5, #0x198]
 _02128f38:
 	mov r0, r5
-	bl func_ov00_0207da38
+	bl _ZN7MapBaseD1Ev
 	mov r0, r5
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
@@ -11647,7 +11647,7 @@ _02128ffc:
 	str r0, [r5, #0x198]
 _02129004:
 	mov r0, r5
-	bl func_ov00_0207da38
+	bl _ZN7MapBaseD1Ev
 	mov r0, r5
 	bl _ZN9SysObjectdlEPv
 	mov r0, r5
@@ -11681,7 +11681,7 @@ _02129058:
 	mov r0, r7
 	mov r2, r6
 	add r1, r4, #0xc
-	bl func_ov00_0207dda0
+	bl _ZN7MapBase14GetMapFilePathEPcii
 	mov r0, #0x10
 	str r0, [sp]
 	mov r0, #1
@@ -11698,10 +11698,10 @@ _02129058:
 	mov r0, r7
 	mov r1, r6
 	mov r2, r4
-	bl func_ov00_0207dce4
+	bl _ZN7MapBase9SetBoundsEii
 	mov r0, r7
 	mov r1, #0
-	bl func_ov00_0207ddf8
+	bl _ZN7MapBase18func_ov00_0207ddf8Eb
 	add r0, sp, #8
 	mov r1, r4
 	mov r2, r6
@@ -11790,7 +11790,7 @@ _02129210:
 	bl func_ov15_0212925c
 	mov r0, r7
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, sp, #0x128
 	add sp, sp, #0x400
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
@@ -12055,7 +12055,7 @@ _02129598:
 	mov r0, r9
 	add r1, sp, #0x14
 	mov r5, #4
-	bl func_ov00_02080140
+	bl _ZN7MapBase18func_ov00_02080140EP4Exit
 	ldr r1, [sp, #0x10]
 	strb r0, [sp, #0x28]
 	and r0, r0, #0xff
@@ -12807,7 +12807,7 @@ _02129df8:
 	mov r3, #0x10
 	movne r4, #0
 	str ip, [sp, #0x48]
-	bl func_ov00_0207fce0
+	bl _ZN7MapBase22GetOverlappingTriggersEP5Vec3pPP11TriggerBasei
 	cmp r0, #0
 	bne _02129e90
 	ldr r0, [r5, #0x144]
@@ -12828,7 +12828,7 @@ _02129df8:
 	bl func_ov15_0212c718
 	mov r0, r5
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _02129e90:
@@ -12890,7 +12890,7 @@ _02129eec:
 	bl func_ov15_0212c718
 	mov r0, r5
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _02129f74:
@@ -12906,7 +12906,7 @@ _02129f74:
 	bl func_ov15_0212c718
 	mov r0, r5
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _02129fb0:
@@ -12922,7 +12922,7 @@ _02129fb0:
 	bl func_ov15_0212c718
 	mov r0, r5
 	mov r1, #0
-	bl func_ov00_0207dea0
+	bl _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
@@ -130484,7 +130484,7 @@ data_ov15_0218a294: ; 0x0218a294
     .word func_ov15_021299a8
 	.global data_ov15_0218a298
 data_ov15_0218a298: ; 0x0218a298
-    .word func_ov00_0207e46c
+    .word _ZN7MapBase8vfunc_48Ev
 	.global data_ov15_0218a29c
 data_ov15_0218a29c: ; 0x0218a29c
     .word func_ov15_02129ff4
@@ -130496,7 +130496,7 @@ data_ov15_0218a2a4: ; 0x0218a2a4
     .word func_ov15_021299e4
 	.global data_ov15_0218a2a8
 data_ov15_0218a2a8: ; 0x0218a2a8
-    .word func_ov00_0207e498
+    .word _ZN7MapBase8vfunc_58Ev
 	.global data_ov15_0218a2ac
 data_ov15_0218a2ac: ; 0x0218a2ac
     .word func_ov15_021299ec
@@ -130505,7 +130505,7 @@ data_ov15_0218a2b0: ; 0x0218a2b0
     .word func_ov15_021299f4
 	.global data_ov15_0218a2b4
 data_ov15_0218a2b4: ; 0x0218a2b4
-    .word func_ov00_0207e4b0
+    .word _ZN7MapBase8vfunc_64Ev
 	.global data_ov15_0218a2b8
 data_ov15_0218a2b8: ; 0x0218a2b8
     .word func_ov15_021299fc
@@ -130541,10 +130541,10 @@ data_ov15_0218a2e0: ; 0x0218a2e0
     .word func_ov15_02129b2c
 	.global data_ov15_0218a2e4
 data_ov15_0218a2e4: ; 0x0218a2e4
-    .word func_ov00_0207f4a0
+    .word _ZN7MapBase8vfunc_94Ev
 	.global data_ov15_0218a2e8
 data_ov15_0218a2e8: ; 0x0218a2e8
-    .word func_ov00_02080d78
+    .word _ZN7MapBase8vfunc_98Ev
 	.global data_ov15_0218a2ec
 data_ov15_0218a2ec: ; 0x0218a2ec
     .word func_ov15_02129b50
@@ -130553,13 +130553,13 @@ data_ov15_0218a2f0: ; 0x0218a2f0
     .word func_ov15_02129c04
 	.global data_ov15_0218a2f4
 data_ov15_0218a2f4: ; 0x0218a2f4
-    .word func_ov00_0207f33c
+    .word _ZN7MapBase8vfunc_a4Ev
 	.global data_ov15_0218a2f8
 data_ov15_0218a2f8: ; 0x0218a2f8
-    .word func_ov00_0207f344
+    .word _ZN7MapBase8vfunc_a8Ev
 	.global data_ov15_0218a2fc
 data_ov15_0218a2fc: ; 0x0218a2fc
-    .word func_ov00_0207f348
+    .word _ZN7MapBase8vfunc_acEv
 	.global data_ov15_0218a300
 data_ov15_0218a300: ; 0x0218a300
     .word func_ov15_02129b38
@@ -130571,10 +130571,10 @@ data_ov15_0218a308: ; 0x0218a308
     .word func_ov15_02129b30
 	.global data_ov15_0218a30c
 data_ov15_0218a30c: ; 0x0218a30c
-    .word func_ov00_02080d74
+    .word _ZN7MapBase8vfunc_bcEv
 	.global data_ov15_0218a310
 data_ov15_0218a310: ; 0x0218a310
-    .word func_ov00_02080d7c
+    .word _ZN7MapBase8vfunc_c0Ev
 	.global data_ov15_0218a314
 data_ov15_0218a314: ; 0x0218a314
 	.ascii "M01"

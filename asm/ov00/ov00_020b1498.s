@@ -7002,8 +7002,8 @@ func_ov00_020b6ea0: ; 0x020b6ea0
 	cmp r5, #1
 	moveq r0, #1
 	streqb r0, [r4, #0xce]
-	ldr r1, _020b7328 ; =func_ov00_0207e968
-	ldr r3, _020b732c ; =func_ov00_0207e96c
+	ldr r1, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _020b732c ; =_ZN7MapBase18func_ov00_0207e96cEv
 	str r1, [sp]
 	add r0, sp, #0x90
 	mov r1, #3
@@ -7125,7 +7125,7 @@ _020b7000:
 	movlt r0, #0
 	cmp r0, #0
 	beq _020b70fc
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x90
 	mov r1, #3
 	mov r2, #0x10
@@ -7152,7 +7152,7 @@ _020b70fc:
 _020b7138:
 	cmp r2, #0
 	bge _020b7160
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x90
 	mov r1, #3
 	mov r2, #0x10
@@ -7164,7 +7164,7 @@ _020b7160:
 	cmp r5, #2
 	mov r1, #3
 	bne _020b7188
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x90
 	mov r2, #0x10
 	bl func_0204f754
@@ -7177,13 +7177,13 @@ _020b7188:
 	add r0, sp, #0x90
 	mov r2, #0x10
 	blt _020b71d8
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	bl func_0204f754
 	add sp, sp, #0xc4
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, pc}
 _020b71b0:
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	mov r5, #1
 	add r0, sp, #0x90
 	mov r1, #3
@@ -7194,7 +7194,7 @@ _020b71b0:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, pc}
 _020b71d8:
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	bl func_0204f754
 	b _020b7318
 _020b71e4:
@@ -7207,8 +7207,8 @@ _020b71f0:
 	ldrsh r0, [r4, #0x5a]
 	cmp r0, #4
 	bne _020b7318
-	ldr r1, _020b7328 ; =func_ov00_0207e968
-	ldr r3, _020b732c ; =func_ov00_0207e96c
+	ldr r1, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _020b732c ; =_ZN7MapBase18func_ov00_0207e96cEv
 	str r1, [sp]
 	add r0, sp, #0x44
 	mov r1, #3
@@ -7270,7 +7270,7 @@ _020b71f0:
 	rsb r6, r0, #0
 	cmp r6, r5
 	movle r6, r5
-	ldr r3, _020b7328 ; =func_ov00_0207e968
+	ldr r3, _020b7328 ; =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x44
 	mov r1, #3
 	mov r2, #0x10
@@ -7283,8 +7283,8 @@ _020b7318:
 	.align 2, 0
 	arm_func_end func_ov00_020b6ea0
 _020b7324: .word data_027e0f6c
-_020b7328: .word func_ov00_0207e968
-_020b732c: .word func_ov00_0207e96c
+_020b7328: .word _ZN7MapBase18func_ov00_0207e968Ev
+_020b732c: .word _ZN7MapBase18func_ov00_0207e96cEv
 _020b7330: .word data_02050f54
 _020b7334: .word gMapManager
 _020b7338: .word 0x00000e66

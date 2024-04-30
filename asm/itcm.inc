@@ -49,8 +49,8 @@
 .extern func_0202b2e8
 .extern func_0204f614
 .extern func_0204f754
-.extern func_ov00_0207e968
-.extern func_ov00_0207e96c
+.extern _ZN7MapBase18func_ov00_0207e968Ev
+.extern _ZN7MapBase18func_ov00_0207e96cEv
 .extern func_ov00_02081ef4
 .extern _ZN10MapManager17Get_MapData_Unk28Ev
 .extern _ZN10MapManager17Get_MapData_Unk2aEv

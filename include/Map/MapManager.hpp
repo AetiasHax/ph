@@ -6,6 +6,7 @@
 #include "lib/math.h"
 
 #include "Map/Course.hpp"
+#include "Map/MapBase.hpp"
 #include "Physics/AABB.hpp"
 #include "System/SysNew.hpp"
 
@@ -23,14 +24,6 @@ struct MapManager_Unk2 {
     /* 8 */
 
     ~MapManager_Unk2();
-};
-
-class MapBase : public SysObject {
-public:
-    /* 00 */ virtual ~MapBase();
-
-    MapBase();
-    MapBase(u32 param1, u32 param2);
 };
 
 class MapManager : public SysObject {

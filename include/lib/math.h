@@ -20,6 +20,12 @@ typedef struct {
 } Vec2b;
 
 typedef struct {
+    /* 0 */ s16 x;
+    /* 1 */ s16 y;
+    /* 2 */
+} Vec2s;
+
+typedef struct {
     /* 0 */ q20 x;
     /* 4 */ q20 y;
     /* 8 */ q20 z;

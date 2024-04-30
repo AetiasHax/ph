@@ -16511,7 +16511,7 @@ _02108bae:
 	bne _02108bae
 	add r0, r6, #0
 	add r1, sp, #0
-	blx func_ov00_0207f958
+	blx _ZN7MapBase10AddTriggerEP13TriggerParams
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
@@ -16768,7 +16768,7 @@ _02108d7c:
 	strb r2, [r0, #0x15]
 	add r0, r7, #0
 	add r1, sp, #0
-	blx func_ov00_0208009c
+	blx _ZN7MapBase7AddExitEP4Exit
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
@@ -17834,7 +17834,7 @@ _021094b2:
 	add r1, sp, #0x14
 	str r0, [sp, #0x24]
 	ldr r0, [sp, #4]
-	blx func_ov00_0207f844
+	blx _ZN7MapBase11AddEntranceEP8Entrance
 	add r0, r4, #1
 	lsl r0, r0, #0x10
 	lsr r4, r0, #0x10
@@ -18037,7 +18037,7 @@ _021095ec:
 	strh r1, [r0, #0x1a]
 	ldr r0, [sp, #4]
 	add r1, sp, #0x3c
-	blx func_ov00_0208046c
+	blx _ZN7MapBase18AddCameraViewpointEP15CameraViewpoint
 	add r0, r5, #1
 	lsl r0, r0, #0x10
 	lsr r5, r0, #0x10
@@ -23356,7 +23356,7 @@ func_ov04_0210bfa8: ; 0x0210bfa8
 	mov r1, #1
 	strb r1, [r4, #4]
 	strb r2, [r4, #8]
-	blx func_ov00_02080de4
+	blx _ZN7MapBase18func_ov00_02080de4Ev
 	ldr r0, _0210c0f0 ; =data_027e0d38
 	ldr r2, [r0]
 	ldr r0, [r2, #0x14]
@@ -23510,7 +23510,7 @@ _0210c0dc:
 	mov r0, #0
 	strh r0, [r4, #0x30]
 	add r0, r4, #0
-	blx func_ov00_02080edc
+	blx _ZN7MapBase18func_ov00_02080edcEv
 	add sp, #0x60
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -23673,7 +23673,7 @@ _0210c218:
 	add r1, #0xc
 	add r2, r6, #0
 	add r3, sp
-	blx func_ov00_0207dda0
+	blx _ZN7MapBase14GetMapFilePathEPcii
 	mov r0, #0x10
 	str r0, [sp]
 	mov r0, #1
@@ -23692,10 +23692,10 @@ _0210c218:
 	add r0, r5, #0
 	add r1, r6, #0
 	add r2, r4, #0
-	blx func_ov00_0207dce4
+	blx _ZN7MapBase9SetBoundsEii
 	add r0, r5, #0
 	mov r1, #0
-	blx func_ov00_0207ddf8
+	blx _ZN7MapBase18func_ov00_0207ddf8Eb
 	add r0, sp, #8
 	add r1, r4, #0
 	add r2, r6, #0
@@ -23859,7 +23859,7 @@ _0210c370:
 _0210c3c4:
 	add r0, r5, #0
 	mov r1, #1
-	blx func_ov00_0207dea0
+	blx _ZN7MapBase18func_ov00_0207dea0Eb
 	add sp, #0x1fc
 	add sp, #0x1fc
 	add sp, #0x1c8

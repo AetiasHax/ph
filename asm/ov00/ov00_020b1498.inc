@@ -146,6 +146,8 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN7MapBase18func_ov00_0207e968Ev
+.extern _ZN7MapBase18func_ov00_0207e96cEv
 .extern _ZN9ActorTypeC1EjPFP5ActorvEPv
 .extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
@@ -183,7 +185,6 @@
 .extern data_027e0d84
 .extern data_027e0e58
 .extern data_027e0e5c
-.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f78
@@ -322,8 +323,6 @@
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
-.extern func_ov00_0207e968
-.extern func_ov00_0207e96c
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f50
 .extern func_ov00_020872e8
@@ -460,5 +459,6 @@
 .extern func_ov59_0219b020
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager
 .extern gOverlayManager
 .extern strcat
