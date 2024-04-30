@@ -56,7 +56,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager15GetEquippedItemEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
-.extern _ZNK11ItemManager18func_ov00_020ae350Ev
+.extern _ZNK11ItemManager10GetNumKeysEv
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
 .extern data_02050f54

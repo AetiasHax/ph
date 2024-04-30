@@ -317,9 +317,11 @@ public:
     bool HasPurplePotion() const;
     void UnequipPotion();
 
-    // Unknown
-    unk32 func_ov00_020ae350() const;
+    // Keys
+    unk32 GetNumKeys() const;
     void GiveKeys(u32 amount);
+
+    // Unknown
     void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
     void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3);
 };

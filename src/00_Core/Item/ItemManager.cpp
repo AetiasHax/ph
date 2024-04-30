@@ -1,4 +1,5 @@
 #include "Item/ItemManager.hpp"
+#include "Map/MapManager.hpp"
 
 extern u32 *data_027e0ce0[];
 
@@ -781,7 +782,6 @@ ARM void ItemManager::GiveRupees(s16 amount, bool param2) {
     mNumRupees = newRupees;
 }
 
-extern "C" unk32 func_ov00_02084b14(void *param1);
-ARM unk32 ItemManager::func_ov00_020ae350() const {
-    return func_ov00_02084b14(data_027e0e60);
+ARM unk32 ItemManager::GetNumKeys() const {
+    return gMapManager->GetNumKeys();
 }

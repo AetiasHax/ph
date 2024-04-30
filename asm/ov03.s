@@ -12689,7 +12689,7 @@ func_ov03_020f63d4: ; 0x020f63d4
 	bl func_ov03_020f5d48
 	ldr r0, _020f6414 ; =gItemManager
 	ldr r0, [r0]
-	blx _ZNK11ItemManager18func_ov00_020ae350Ev
+	blx _ZNK11ItemManager10GetNumKeysEv
 	mov r1, #0x79
 	lsl r1, r1, #2
 	str r0, [r4, r1]
@@ -13183,7 +13183,7 @@ func_ov03_020f6a88: ; 0x020f6a88
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, _020f6b10 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ae350Ev
+	bl _ZNK11ItemManager10GetNumKeysEv
 	ldr r1, [r5, #0x1e4]
 	mov r4, r0
 	subs r0, r4, r1
