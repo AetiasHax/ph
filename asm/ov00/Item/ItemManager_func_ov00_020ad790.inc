@@ -29,10 +29,10 @@ _020ad7c0:
 	movne r0, #0
 	ldmneia sp!, {r4, r5, r6, pc}
 _020ad800:
-	lda r0, data_027e0e60
+	lda r0, gMapManager
 	ldr r4, [r6, #8]
 	ldr r0, [r0]
-	bl func_ov00_020849f8
+	bl _ZN10MapManager18func_ov00_020849f8Ei
 	cmp r0, #0
 	moveq r2, #1
 	ldr r1, [r6]

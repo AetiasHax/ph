@@ -3548,8 +3548,8 @@ data_027e0e58:
 	.global data_027e0e5c
 data_027e0e5c:
 	.space 0x4
-	.global data_027e0e60
-data_027e0e60:
+	.global gMapManager
+gMapManager:
 	.space 0x4
 	.global data_027e0e64
 data_027e0e64:

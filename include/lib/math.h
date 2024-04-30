@@ -14,6 +14,18 @@ typedef s16 q4;
 #define ROUND_Q20(n) (((s32)(n) + 0x800) >> 12)
 
 typedef struct {
+    /* 0 */ s8 x;
+    /* 1 */ s8 y;
+    /* 2 */
+} Vec2b;
+
+typedef struct {
+    /* 0 */ s16 x;
+    /* 1 */ s16 y;
+    /* 2 */
+} Vec2s;
+
+typedef struct {
     /* 0 */ q20 x;
     /* 4 */ q20 y;
     /* 8 */ q20 z;

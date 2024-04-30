@@ -1,5 +1,8 @@
 #pragma once
 .extern Approach_thunk
+.extern _ZN10MapManager16MapData_vfunc_78Ev
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
@@ -55,6 +58,8 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
@@ -69,7 +74,6 @@
 .extern data_027e0d38
 .extern data_027e0dbc
 .extern data_027e0e58
-.extern data_027e0e60
 .extern data_027e0f6c
 .extern data_027e0f94
 .extern data_027e0fc8
@@ -116,16 +120,11 @@
 .extern func_02036ce4
 .extern func_02036f68
 .extern func_02037628
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207ba90
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c1f8
-.extern func_ov00_02083a1c
-.extern func_ov00_02083fb0
-.extern func_ov00_020840c4
 .extern func_ov00_02093a5c
 .extern func_ov00_02093af0
 .extern func_ov00_02094824
@@ -232,3 +231,4 @@
 .extern func_ov34_0217bf5c
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager

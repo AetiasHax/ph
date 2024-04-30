@@ -431,7 +431,7 @@ _0213b3cc:
 	cmp r0, #0
 	beq _0213b4fc
 	ldr r1, [r5, #0x48]
-	ldr r0, _0213b518 ; =data_027e0e60
+	ldr r0, _0213b518 ; =gMapManager
 	str r1, [sp, #4]
 	ldr r2, [r5, #0x4c]
 	ldr r1, [r0]
@@ -440,7 +440,7 @@ _0213b3cc:
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl func_ov00_02083fb0
+	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3
@@ -517,7 +517,7 @@ _0213b4fc:
 _0213b50c: .word data_027e0fc8
 _0213b510: .word gItemManager
 _0213b514: .word data_ov00_020eec9c
-_0213b518: .word data_027e0e60
+_0213b518: .word gMapManager
 
 	.global _ZN10ActorRupee8vfunc_14Ej
 	arm_func_start _ZN10ActorRupee8vfunc_14Ej
@@ -740,9 +740,9 @@ func_ov14_0215517c: ; 0x0215517c
 	ldr r1, _021551c0 ; =0x52555059
 	ldr r2, _021551c4 ; =_ZN10ActorRupee6CreateEv
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
-	ldr r1, _021551c8 ; =func_0203e7b4
+	ldr r1, _021551c8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021551cc ; =_ZN10ActorRupee9gResourceE
 	bl __register_global_object
 	ldr r2, _021551d0 ; =0x000003bb
@@ -756,7 +756,7 @@ func_ov14_0215517c: ; 0x0215517c
 _021551bc: .word _ZN10ActorRupee5gTypeE
 _021551c0: .word 0x52555059
 _021551c4: .word _ZN10ActorRupee6CreateEv
-_021551c8: .word func_0203e7b4
+_021551c8: .word _ZN9ActorTypeD1Ev
 _021551cc: .word _ZN10ActorRupee9gResourceE
 _021551d0: .word 0x000003bb
 _021551d4: .word data_ov14_021589b4

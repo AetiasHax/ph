@@ -133,7 +133,7 @@
 .extern data_027e0d38
 .extern data_027e0e58
 .extern data_027e0e5c
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fac
@@ -162,8 +162,8 @@
 .extern func_0201e544
 .extern func_0202b154
 .extern func_0202e58c
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207a1c8

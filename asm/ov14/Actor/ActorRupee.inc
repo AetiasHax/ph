@@ -1,4 +1,5 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -49,10 +50,13 @@
 .extern _ZN5Actor8vfunc_b0Ev
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern __register_global_object
 .extern data_027e0764
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0fc8
 .extern data_027e0fe0
 .extern data_ov00_020e9370
@@ -60,12 +64,8 @@
 .extern func_01ff9bc4
 .extern func_01fffd04
 .extern func_0202bc38
-.extern func_0203e784
-.extern func_0203e7b4
-.extern __register_global_object
 .extern func_ov00_0207a13c
 .extern func_ov00_0207a1c8
-.extern func_ov00_02083fb0
 .extern func_ov00_020bce48
 .extern func_ov00_020c5a24
 .extern func_ov00_020d7ad4

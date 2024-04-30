@@ -6579,9 +6579,9 @@ func_ov45_0218e3e8: ; 0x0218e3e8
 	ldr r1, _0218e418 ; =0x54524144
 	ldr r2, _0218e41c ; =func_ov45_02189560
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _0218e414 ; =data_ov45_0218ed8c
-	ldr r1, _0218e420 ; =func_0203e7b4
+	ldr r1, _0218e420 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0218e424 ; =data_ov45_0218ed80
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -6590,7 +6590,7 @@ func_ov45_0218e3e8: ; 0x0218e3e8
 _0218e414: .word data_ov45_0218ed8c
 _0218e418: .word 0x54524144
 _0218e41c: .word func_ov45_02189560
-_0218e420: .word func_0203e7b4
+_0218e420: .word _ZN9ActorTypeD1Ev
 _0218e424: .word data_ov45_0218ed80
 
 	.global func_ov45_0218e428
@@ -6601,9 +6601,9 @@ func_ov45_0218e428: ; 0x0218e428
 	ldr r1, _0218e458 ; =0x54524142
 	ldr r2, _0218e45c ; =func_ov45_0218a838
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _0218e454 ; =data_ov45_0218edb0
-	ldr r1, _0218e460 ; =func_0203e7b4
+	ldr r1, _0218e460 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0218e464 ; =data_ov45_0218eda4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -6612,7 +6612,7 @@ func_ov45_0218e428: ; 0x0218e428
 _0218e454: .word data_ov45_0218edb0
 _0218e458: .word 0x54524142
 _0218e45c: .word func_ov45_0218a838
-_0218e460: .word func_0203e7b4
+_0218e460: .word _ZN9ActorTypeD1Ev
 _0218e464: .word data_ov45_0218eda4
 
 	.global func_ov45_0218e468
@@ -6623,9 +6623,9 @@ func_ov45_0218e468: ; 0x0218e468
 	ldr r1, _0218e498 ; =0x4a554447
 	ldr r2, _0218e49c ; =func_ov45_0218c4c4
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _0218e494 ; =data_ov45_0218edd4
-	ldr r1, _0218e4a0 ; =func_0203e7b4
+	ldr r1, _0218e4a0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0218e4a4 ; =data_ov45_0218edc8
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -6634,7 +6634,7 @@ func_ov45_0218e468: ; 0x0218e468
 _0218e494: .word data_ov45_0218edd4
 _0218e498: .word 0x4a554447
 _0218e49c: .word func_ov45_0218c4c4
-_0218e4a0: .word func_0203e7b4
+_0218e4a0: .word _ZN9ActorTypeD1Ev
 _0218e4a4: .word data_ov45_0218edc8
 
 	.section .ctor, 4, 1, 4

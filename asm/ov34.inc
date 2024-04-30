@@ -71,7 +71,7 @@
 .extern data_027e0764
 .extern data_027e0d0c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f94
@@ -118,8 +118,8 @@
 .extern func_0202e310
 .extern func_0202e544
 .extern func_0202e58c
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207a1c8
@@ -129,11 +129,11 @@
 .extern func_ov00_0207c31c
 .extern func_ov00_0207c444
 .extern func_ov00_02081f4c
-.extern func_ov00_02083908
-.extern func_ov00_02083948
-.extern func_ov00_02083a1c
-.extern func_ov00_02083ee0
-.extern func_ov00_02084088
+.extern _ZN10MapManager18func_ov00_02083908EcPi
+.extern _ZN10MapManager18Set_MapData_Unk_16Eci
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager16MapData_vfunc_54Ev
 .extern func_ov00_02087400
 .extern func_ov00_02087d34
 .extern func_ov00_02087d84

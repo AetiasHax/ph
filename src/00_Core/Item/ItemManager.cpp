@@ -235,8 +235,7 @@ extern "C" unk32 func_ov00_02078b40(UnkStruct_027e0d38 *param1);
 extern void *data_027e10a4;
 extern "C" bool func_ov15_02136670(void *param1);
 extern unk8 data_ov29_0217a4ac[];
-extern void *data_027e0e60;
-extern "C" bool func_ov00_020849f8(void *param1);
+extern "C" bool _ZN10MapManager18func_ov00_020849f8Ei(void *param1);
 extern unk32 data_027e0fc8;
 extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
@@ -254,7 +253,7 @@ ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
     }
     
     ItemFlag equipId = mForcedItem;
-    bool unk2 = !func_ov00_020849f8(data_027e0e60);
+    bool unk2 = !gMapManager->func_ov00_020849f8();
     if (
         mEquippedItem != ItemFlag_None &&
         (unk2 || (u32) mEquippedItem - 9 <= 1) &&

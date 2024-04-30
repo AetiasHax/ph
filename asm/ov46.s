@@ -27,16 +27,16 @@ _02190070: .word 0x000004dc
 func_ov46_02190074: ; 0x02190074
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x14
-	ldr r1, _021901cc ; =data_027e0e60
+	ldr r1, _021901cc ; =gMapManager
 	mov r6, r0
 	ldr r5, [r1]
 	add r0, sp, #0
 	mov r1, r5
 	mov r2, r6
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	movs r7, r0
 	ldr r4, _021901d0 ; =0x0000036d
 	beq _021900d8
@@ -60,7 +60,7 @@ _021900d8:
 	ldr r3, [r6, #8]
 	mov r1, r5
 	str r3, [sp, #0x10]
-	bl func_ov00_02083fb0
+	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
 	ldr r0, [sp, #4]
 	and r0, r0, #0x1f
 	cmp r0, #0xe
@@ -129,7 +129,7 @@ _021901b4:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov46_02190074
-_021901cc: .word data_027e0e60
+_021901cc: .word gMapManager
 _021901d0: .word 0x0000036d
 _021901d4: .word 0x0000036e
 _021901d8: .word 0x0000036f
@@ -750,16 +750,16 @@ _021909a8: .word 0x000004d8
 func_ov46_021909ac: ; 0x021909ac
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x14
-	ldr r1, _02190b04 ; =data_027e0e60
+	ldr r1, _02190b04 ; =gMapManager
 	mov r6, r0
 	ldr r5, [r1]
 	add r0, sp, #0
 	mov r1, r5
 	mov r2, r6
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	movs r7, r0
 	ldr r4, _02190b08 ; =0x0000036d
 	beq _02190a10
@@ -783,7 +783,7 @@ _02190a10:
 	ldr r3, [r6, #8]
 	mov r1, r5
 	str r3, [sp, #0x10]
-	bl func_ov00_02083fb0
+	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
 	ldr r0, [sp, #4]
 	and r0, r0, #0x1f
 	cmp r0, #0xe
@@ -852,7 +852,7 @@ _02190aec:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov46_021909ac
-_02190b04: .word data_027e0e60
+_02190b04: .word gMapManager
 _02190b08: .word 0x0000036d
 _02190b0c: .word 0x0000036e
 _02190b10: .word 0x0000036f
@@ -5269,9 +5269,9 @@ func_ov46_021944ac: ; 0x021944ac
 	ldr r1, _021944dc ; =0x4c4e424b
 	ldr r2, _021944e0 ; =func_ov46_02190040
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _021944d8 ; =data_ov46_02194bac
-	ldr r1, _021944e4 ; =func_0203e7b4
+	ldr r1, _021944e4 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021944e8 ; =data_ov46_02194ba0
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -5280,7 +5280,7 @@ func_ov46_021944ac: ; 0x021944ac
 _021944d8: .word data_ov46_02194bac
 _021944dc: .word 0x4c4e424b
 _021944e0: .word func_ov46_02190040
-_021944e4: .word func_0203e7b4
+_021944e4: .word _ZN9ActorTypeD1Ev
 _021944e8: .word data_ov46_02194ba0
 
 	.global func_ov46_021944ec
@@ -5291,9 +5291,9 @@ func_ov46_021944ec: ; 0x021944ec
 	ldr r1, _0219451c ; =0x4c4e4232
 	ldr r2, _02194520 ; =func_ov46_02190978
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02194518 ; =data_ov46_02194bcc
-	ldr r1, _02194524 ; =func_0203e7b4
+	ldr r1, _02194524 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194528 ; =data_ov46_02194bc0
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
@@ -5302,7 +5302,7 @@ func_ov46_021944ec: ; 0x021944ec
 _02194518: .word data_ov46_02194bcc
 _0219451c: .word 0x4c4e4232
 _02194520: .word func_ov46_02190978
-_02194524: .word func_0203e7b4
+_02194524: .word _ZN9ActorTypeD1Ev
 _02194528: .word data_ov46_02194bc0
 
 	.global func_ov46_0219452c
@@ -5314,9 +5314,9 @@ func_ov46_0219452c: ; 0x0219452c
 	ldr r1, _02194594 ; =0x4d524848
 	ldr r2, _02194598 ; =func_ov46_02191e5c
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02194590 ; =data_ov46_02194c54
-	ldr r1, _0219459c ; =func_0203e7b4
+	ldr r1, _0219459c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021945a0 ; =data_ov46_02194c48
 	bl __register_global_object
 	ldr r1, _021945a4 ; =data_02057200
@@ -5338,7 +5338,7 @@ func_ov46_0219452c: ; 0x0219452c
 _02194590: .word data_ov46_02194c54
 _02194594: .word 0x4d524848
 _02194598: .word func_ov46_02191e5c
-_0219459c: .word func_0203e7b4
+_0219459c: .word _ZN9ActorTypeD1Ev
 _021945a0: .word data_ov46_02194c48
 _021945a4: .word data_02057200
 _021945a8: .word data_ov46_02194900
@@ -5352,9 +5352,9 @@ func_ov46_021945ac: ; 0x021945ac
 	ldr r1, _02194624 ; =0x54534e49
 	ldr r2, _02194628 ; =func_ov46_02192930
 	mov r3, #0
-	bl func_0203e784
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
 	ldr r0, _02194620 ; =data_ov46_02194c74
-	ldr r1, _0219462c ; =func_0203e7b4
+	ldr r1, _0219462c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194630 ; =data_ov46_02194c68
 	bl __register_global_object
 	ldr r1, _02194634 ; =data_02057200
@@ -5380,7 +5380,7 @@ func_ov46_021945ac: ; 0x021945ac
 _02194620: .word data_ov46_02194c74
 _02194624: .word 0x54534e49
 _02194628: .word func_ov46_02192930
-_0219462c: .word func_0203e7b4
+_0219462c: .word _ZN9ActorTypeD1Ev
 _02194630: .word data_ov46_02194c68
 _02194634: .word data_02057200
 _02194638: .word data_ov46_02194a6c

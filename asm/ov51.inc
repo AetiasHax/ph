@@ -61,7 +61,7 @@
 .extern data_02050f54
 .extern data_027e0764
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f6c
 .extern data_027e0f90
 .extern data_027e0f94
@@ -95,8 +95,8 @@
 .extern func_0202bb98
 .extern func_0202bba8
 .extern func_0202bbbc
-.extern func_0203e784
-.extern func_0203e7b4
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern func_0204f614
 .extern func_0204f754
 .extern __register_global_object
@@ -108,9 +108,9 @@
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f58
 .extern func_ov00_02081f6c
-.extern func_ov00_020826a0
-.extern func_ov00_02083a1c
-.extern func_ov00_02083ee0
+.extern _ZN10MapManager18func_ov00_020826a0Eiii
+.extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
+.extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern func_ov00_0208e6b0
 .extern func_ov00_0208e82c
 .extern func_ov00_02093a5c

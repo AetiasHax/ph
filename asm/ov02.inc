@@ -1,6 +1,7 @@
 #pragma once
 .extern Divide
 .extern LoadTreasureItemFanfare
+.extern _ZN10MapManager18func_ov00_020847e0Ev
 .extern _ZN11ItemManager13EquipShipPartEjj
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN9SysObjectdlEPv
@@ -31,7 +32,6 @@
 .extern data_027e0d0c
 .extern data_027e0d44
 .extern data_027e0d78
-.extern data_027e0e60
 .extern data_027e0f88
 .extern data_027e0f8c
 .extern gHealthManager
@@ -115,7 +115,6 @@
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207b1fc
-.extern func_ov00_020847e0
 .extern func_ov00_0208de04
 .extern func_ov00_0208dec8
 .extern func_ov00_0208def0
@@ -260,3 +259,4 @@
 .extern func_ov45_0218db94
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager

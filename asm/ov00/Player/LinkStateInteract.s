@@ -940,7 +940,7 @@ _020aae90:
 	add r2, r6, #0x8c
 	str r1, [sp, #0x28]
 	ldr r1, [r6, #0x4c]
-	ldr r5, _020ab3d8 ; =data_027e0e60
+	ldr r5, _020ab3d8 ; =gMapManager
 	str r1, [sp, #0x2c]
 	ldr r3, [r6, #0x50]
 	add r1, sp, #0x68
@@ -1270,7 +1270,7 @@ _020ab3c8: .word 0x000004cd
 _020ab3cc: .word data_027e0fb8
 _020ab3d0: .word data_027e0fe4
 _020ab3d4: .word 0x0000ffff
-_020ab3d8: .word data_027e0e60
+_020ab3d8: .word gMapManager
 _020ab3dc: .word 0x00001ccd
 _020ab3e0: .word 0x00001333
 _020ab3e4: .word 0x000018e4

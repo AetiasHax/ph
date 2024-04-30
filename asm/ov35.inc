@@ -1,6 +1,8 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager18func_ov00_020836bcEjPi
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager7AddItemEi
@@ -70,8 +72,11 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZN5ActorC2Ev
 .extern _ZN5ActorD2Ev
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern __register_global_object
 .extern data_02050f54
 .extern data_027e0194
 .extern data_027e037c
@@ -85,7 +90,7 @@
 .extern data_027e0c68
 .extern data_027e0d0c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f90
 .extern data_027e0f94
@@ -152,11 +157,8 @@
 .extern func_0203608c
 .extern func_02036140
 .extern func_02036ce4
-.extern func_0203e784
-.extern func_0203e7b4
 .extern func_0204f614
 .extern func_0204f754
-.extern __register_global_object
 .extern func_ov00_02079e68
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207b89c
@@ -164,8 +166,6 @@
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_020836bc
-.extern func_ov00_02083ee0
 .extern func_ov00_02087584
 .extern func_ov00_020875f8
 .extern func_ov00_02087d34

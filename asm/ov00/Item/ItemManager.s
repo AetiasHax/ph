@@ -2,15 +2,14 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-
 	.global _ZN11ItemManager8GiveKeysEj
 	thumb_func_start _ZN11ItemManager8GiveKeysEj
 _ZN11ItemManager8GiveKeysEj: ; 0x020ae368
 	push {r4, lr}
-	ldr r0, _020ae38c ; =data_027e0e60
+	ldr r0, _020ae38c ; =gMapManager
 	add r4, r1, #0
 	ldr r0, [r0]
-	blx func_ov00_02084b14
+	blx _ZN10MapManager10GetNumKeysEv
 	add r1, r4, r0
 	cmp r1, #8
 	blt _020ae37c
@@ -20,13 +19,13 @@ _020ae37c:
 	bgt _020ae382
 	mov r1, #0
 _020ae382:
-	ldr r0, _020ae38c ; =data_027e0e60
+	ldr r0, _020ae38c ; =gMapManager
 	ldr r0, [r0]
-	blx func_ov00_02084b08
+	blx _ZN10MapManager10SetNumKeysEi
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end _ZN11ItemManager8GiveKeysEj
-_020ae38c: .word data_027e0e60
+_020ae38c: .word gMapManager
 
 	.global _ZNK11ItemManager15GetEquippedItemEv
 	arm_func_start _ZNK11ItemManager15GetEquippedItemEv

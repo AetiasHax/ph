@@ -11,6 +11,7 @@ extern "C" {
 #include "Actor/ActorNavi.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "Item/Item.hpp"
+#include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
 #include "Player/HealthManager.hpp"
 #include "System/SysNew.hpp"
