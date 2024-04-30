@@ -9,6 +9,7 @@ extern "C" {
 #include "lib/math.h"
 
 #include "Actor/ActorNavi.hpp"
+#include "DTCM/UnkStruct_027e0f78.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "Item/Item.hpp"
 #include "Map/MapManager.hpp"

@@ -889,3 +889,28 @@ ARM bool ItemManager::HasPurplePotion() const {
     }
     return false;
 }
+
+extern "C" void func_020196bc(ItemModel *param1, unk32 param2);
+extern "C" void func_020196fc(ItemModel *param1, unk32 param2);
+THUMB void ItemManager::LoadDungeonItemModels() {
+    for (s32 i = 0; i < DungeonItemModelId_COUNT; ++i) {
+        if (mDungeonItemModels[i] == NULL) continue;
+
+        u16 unk1, unk2;
+        switch (i) {
+            case DungeonItemModelId_RoundCrystal:
+            case DungeonItemModelId_SquareCrystal:
+            case DungeonItemModelId_TriangleCrystal: {
+                unk1 = data_027e0f78->mUnk_1e;
+                unk2 = data_027e0f78->mUnk_1c;
+            } break;
+
+            default: {
+                unk1 = data_027e0f78->mUnk_1a;
+                unk2 = data_027e0f78->mUnk_18;
+            } break;
+        }
+        func_020196bc(mDungeonItemModels[i], unk1);
+        func_020196fc(mDungeonItemModels[i], unk2);
+    }
+}

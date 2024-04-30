@@ -3,51 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager21LoadDungeonItemModelsEv
-	thumb_func_start _ZN11ItemManager21LoadDungeonItemModelsEv
-_ZN11ItemManager21LoadDungeonItemModelsEv: ; 0x020ae5fc
-	push {r3, r4, r5, r6, r7, lr}
-	ldr r7, _020ae644 ; =data_027e0f78
-	add r5, r0, #0
-	mov r4, #0
-_020ae604:
-	mov r0, #1
-	lsl r0, r0, #8
-	ldr r0, [r5, r0]
-	cmp r0, #0
-	beq _020ae638
-	cmp r4, #2
-	beq _020ae61a
-	cmp r4, #3
-	beq _020ae61a
-	cmp r4, #4
-	bne _020ae622
-_020ae61a:
-	ldr r2, [r7]
-	ldrh r1, [r2, #0x1e]
-	ldrh r6, [r2, #0x1c]
-	b _020ae628
-_020ae622:
-	ldr r2, [r7]
-	ldrh r1, [r2, #0x1a]
-	ldrh r6, [r2, #0x18]
-_020ae628:
-	blx func_020196bc
-	mov r0, #1
-	lsl r0, r0, #8
-	ldr r0, [r5, r0]
-	add r1, r6, #0
-	blx func_020196fc
-_020ae638:
-	add r4, r4, #1
-	add r5, r5, #4
-	cmp r4, #5
-	blt _020ae604
-	pop {r3, r4, r5, r6, r7, pc}
-	nop
-	thumb_func_end _ZN11ItemManager21LoadDungeonItemModelsEv
-_020ae644: .word data_027e0f78
-
 	.global _ZN11ItemManager18func_ov00_020ae648Ejjj
 	thumb_func_start _ZN11ItemManager18func_ov00_020ae648Ejjj
 _ZN11ItemManager18func_ov00_020ae648Ejjj: ; 0x020ae648
