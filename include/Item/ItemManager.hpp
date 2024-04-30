@@ -21,6 +21,7 @@ extern "C" {
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2
 #define MAX_UNK_0BA 9
+#define MAX_POTIONS 2
 
 typedef s32 FairyId;
 enum FairyId_ {
@@ -207,7 +208,7 @@ private:
     /* 0b6 */ u16 mBombBagSize;
     /* 0b8 */ u16 mBombchuBagSize;
     /* 0ba */ u16 mUnk_0ba; // only between 0 and 9
-    /* 0bc */ Potion mPotions[2];
+    /* 0bc */ Potion mPotions[MAX_POTIONS];
     /* 0be */ unk8 mUnk_0be[2]; // padding?
     /* 0c0 */ ItemModel *mItemModels[ItemModelId_COUNT];
     /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModelId_COUNT]; // non-null in dungeons/caves

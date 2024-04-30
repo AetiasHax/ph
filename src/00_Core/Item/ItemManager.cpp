@@ -653,7 +653,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_RedPotion: {
-            for (s32 i = 0; i < 2; ++i) {
+            for (s32 i = 0; i < MAX_POTIONS; ++i) {
                 if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Red);
                 break;
@@ -661,7 +661,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_PurplePotion: {
-            for (s32 i = 0; i < 2; ++i) {
+            for (s32 i = 0; i < MAX_POTIONS; ++i) {
                 if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Purple);
                 break;
@@ -669,7 +669,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         } break;
 
         case ItemId_YellowPotion: {
-            for (s32 i = 0; i < 2; ++i) {
+            for (s32 i = 0; i < MAX_POTIONS; ++i) {
                 if (mPotions[i] != Potion_None) continue;
                 this->SetPotion(i, Potion_Yellow);
                 break;
@@ -874,4 +874,11 @@ ARM bool ItemManager::HasPotion(u32 index) const {
         default:
             return false;
     }
+}
+
+ARM bool ItemManager::HasAllPotions() const {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
+        if (!this->HasPotion(i)) return false;
+    }
+    return true;
 }

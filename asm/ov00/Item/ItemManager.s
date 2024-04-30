@@ -2,27 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-
-	.global _ZNK11ItemManager13HasAllPotionsEv
-	arm_func_start _ZNK11ItemManager13HasAllPotionsEv
-_ZNK11ItemManager13HasAllPotionsEv: ; 0x020ae598
-	stmdb sp!, {r3, r4, r5, lr}
-	mov r5, r0
-	mov r4, #0
-_020ae5a4:
-	mov r0, r5
-	mov r1, r4
-	bl _ZNK11ItemManager9HasPotionEj
-	cmp r0, #0
-	moveq r0, #0
-	ldmeqia sp!, {r3, r4, r5, pc}
-	add r4, r4, #1
-	cmp r4, #2
-	blt _020ae5a4
-	mov r0, #1
-	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZNK11ItemManager13HasAllPotionsEv
-
 	.global _ZNK11ItemManager15HasPurplePotionEv
 	arm_func_start _ZNK11ItemManager15HasPurplePotionEv
 _ZNK11ItemManager15HasPurplePotionEv: ; 0x020ae5d0
