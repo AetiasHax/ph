@@ -3,37 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager13ForceEquipItemEi
-	thumb_func_start _ZN11ItemManager13ForceEquipItemEi
-_ZN11ItemManager13ForceEquipItemEi: ; 0x020ae3d0
-	push {r3, r4, r5, r6, r7, lr}
-	mov r4, #0
-	add r6, r0, #0
-	add r7, r1, #0
-	add r5, r4, #0
-_020ae3da:
-	cmp r4, r7
-	beq _020ae3ee
-	add r0, r6, #0
-	add r0, #0xac
-	ldr r0, [r0]
-	mov r1, #0
-	ldr r0, [r0, r5]
-	ldr r2, [r0]
-	ldr r2, [r2, #0x28]
-	blx r2
-_020ae3ee:
-	add r4, r4, #1
-	add r5, r5, #4
-	cmp r4, #0xb
-	blt _020ae3da
-	str r7, [r6, #8]
-	mov r0, #1
-	strh r0, [r6, #0x20]
-	pop {r3, r4, r5, r6, r7, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager13ForceEquipItemEi
-
 	.global _ZN11ItemManager20ClearForcedEquipItemEv
 	thumb_func_start _ZN11ItemManager20ClearForcedEquipItemEv
 _ZN11ItemManager20ClearForcedEquipItemEv: ; 0x020ae400

@@ -807,3 +807,12 @@ ARM bool ItemManager::SetEquippedItem(ItemFlag equipId) {
 ARM void ItemManager::EquipPreviousItem() {
     this->SetEquippedItem(mPrevEquippedItem);
 }
+
+THUMB void ItemManager::ForceEquipItem(ItemFlag equipId) {
+    for (ItemFlag i = ItemFlag_EQUIP_START; i < ItemFlag_EQUIP_END; ++i) {
+        if (i == equipId) continue;
+        (*mEquipItems)[i - ItemFlag_EQUIP_START]->UpdateInUse(0);
+    }
+    mForcedItem = equipId;
+    mEquipLoadTimer = 1;
+}

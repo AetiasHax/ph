@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN10MapManager18func_ov00_02083918EiPi
-.extern _ZN11ItemManager13ForceEquipItemEi
+.extern _ZN11ItemManager14ForceEquipItemEi
 .extern _ZN11ItemManager20ClearForcedEquipItemEv
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags3GetEj
