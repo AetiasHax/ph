@@ -3,34 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager9SetPotionEjh
-	arm_func_start _ZN11ItemManager9SetPotionEjh
-_ZN11ItemManager9SetPotionEjh: ; 0x020ae50c
-	add r3, r0, r1
-	strb r2, [r3, #0xbc]
-	cmp r2, #0
-	add r1, r1, #9
-	bne _020ae544
-	add r3, r0, #0x128
-	mov r2, r1, lsr #0x5
-	and r0, r1, #0x1f
-	mov r1, #1
-	mvn r0, r1, lsl r0
-	ldr r1, [r3, r2, lsl #2]
-	and r0, r1, r0
-	str r0, [r3, r2, lsl #2]
-	bx lr
-_020ae544:
-	add ip, r0, #0x128
-	mov r3, r1, lsr #0x5
-	and r0, r1, #0x1f
-	ldr r2, [ip, r3, lsl #2]
-	mov r1, #1
-	orr r0, r2, r1, lsl r0
-	str r0, [ip, r3, lsl #2]
-	bx lr
-	arm_func_end _ZN11ItemManager9SetPotionEjh
-
 	.global _ZNK11ItemManager9HasPotionEj
 	arm_func_start _ZNK11ItemManager9HasPotionEj
 _ZNK11ItemManager9HasPotionEj: ; 0x020ae564

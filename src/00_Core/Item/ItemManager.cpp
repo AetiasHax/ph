@@ -853,3 +853,12 @@ ARM void ItemManager::func_ov00_020ae4dc(s32 param1) {
         mUnk_0ba = newValue;
     }
 }
+
+ARM void ItemManager::SetPotion(u32 index, Potion potion) {
+    mPotions[index] = potion;
+    if (potion == Potion_None) {
+        RESET_FLAG(mItemFlags.flags, index + ItemFlag_PotionA);
+    } else {
+        SET_FLAG(mItemFlags.flags, index + ItemFlag_PotionA);
+    }
+}
