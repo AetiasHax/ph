@@ -2,31 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-	.global _ZN11ItemManager8GiveKeysEj
-	thumb_func_start _ZN11ItemManager8GiveKeysEj
-_ZN11ItemManager8GiveKeysEj: ; 0x020ae368
-	push {r4, lr}
-	ldr r0, _020ae38c ; =gMapManager
-	add r4, r1, #0
-	ldr r0, [r0]
-	blx _ZN10MapManager10GetNumKeysEv
-	add r1, r4, r0
-	cmp r1, #8
-	blt _020ae37c
-	mov r1, #8
-_020ae37c:
-	cmp r1, #0
-	bgt _020ae382
-	mov r1, #0
-_020ae382:
-	ldr r0, _020ae38c ; =gMapManager
-	ldr r0, [r0]
-	blx _ZN10MapManager10SetNumKeysEi
-	pop {r4, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager8GiveKeysEj
-_020ae38c: .word gMapManager
-
 	.global _ZNK11ItemManager15GetEquippedItemEv
 	arm_func_start _ZNK11ItemManager15GetEquippedItemEv
 _ZNK11ItemManager15GetEquippedItemEv: ; 0x020ae390
@@ -57,7 +32,7 @@ _ZN11ItemManager17EquipPreviousItemEv: ; 0x020ae3c0
 	bx ip
 	.align 2, 0
 	arm_func_end _ZN11ItemManager17EquipPreviousItemEv
-_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi - 1
+_020ae3cc: .word _ZN11ItemManager15SetEquippedItemEi
 
 	.global _ZN11ItemManager13ForceEquipItemEi
 	thumb_func_start _ZN11ItemManager13ForceEquipItemEi

@@ -1,5 +1,4 @@
 #include "Item/ItemManager.hpp"
-#include "Map/MapManager.hpp"
 
 extern u32 *data_027e0ce0[];
 
@@ -784,4 +783,11 @@ ARM void ItemManager::GiveRupees(s16 amount, bool param2) {
 
 ARM unk32 ItemManager::GetNumKeys() const {
     return gMapManager->GetNumKeys();
+}
+
+THUMB void ItemManager::GiveKeys(u32 amount) {
+    s32 keys = amount + gMapManager->GetNumKeys();
+    if (keys >= MAX_KEYS) keys = MAX_KEYS;
+    if (keys <= 0) keys = 0;
+    gMapManager->SetNumKeys(keys);
 }
