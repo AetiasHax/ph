@@ -19,6 +19,7 @@ extern "C" {
 #include "Render/ModelRender.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
+#define MAX_AMMO_UPGRADE 2
 
 typedef s32 FairyId;
 enum FairyId_ {

@@ -3,33 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager13UpgradeQuiverEv
-	thumb_func_start _ZN11ItemManager13UpgradeQuiverEv
-_ZN11ItemManager13UpgradeQuiverEv: ; 0x020ae458
-	push {r4, lr}
-	add r4, r0, #0
-	add r0, #0xb4
-	ldrh r0, [r0]
-	cmp r0, #2
-	bhs _020ae472
-	add r0, r4, #0
-	add r0, #0xb4
-	ldrh r0, [r0]
-	add r1, r0, #1
-	add r0, r4, #0
-	add r0, #0xb4
-	strh r1, [r0]
-_020ae472:
-	add r0, r4, #0
-	mov r1, #5
-	bl _ZNK11ItemManager10GetMaxAmmoEi
-	add r4, #0xb0
-	ldr r1, [r4]
-	strh r0, [r1, #0xa]
-	pop {r4, pc}
-	.align 2, 0
-	thumb_func_end _ZN11ItemManager13UpgradeQuiverEv
-
 	.global _ZN11ItemManager14UpgradeBombBagEv
 	thumb_func_start _ZN11ItemManager14UpgradeBombBagEv
 _ZN11ItemManager14UpgradeBombBagEv: ; 0x020ae484

@@ -827,3 +827,8 @@ ARM void ItemManager::UpdateSwordShieldInUse() {
     this->GetEquipItem(ItemFlag_OshusSword)->UpdateInUse(1);
     this->GetEquipItem(ItemFlag_WoodenShield)->UpdateInUse(1);
 }
+
+THUMB void ItemManager::UpgradeQuiver() {
+    if (mQuiverSize < MAX_AMMO_UPGRADE) mQuiverSize += 1;
+    (*mAmmo)[ItemFlag_Bow] = this->GetMaxAmmo(ItemFlag_Bow);
+}
