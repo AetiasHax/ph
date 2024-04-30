@@ -41,6 +41,8 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/Map/Course.s',
     'src/00_Core/Map/Course.cpp',
+    'asm/ov00/Map/MapBase.s',
+    'src/00_Core/Map/MapBase.cpp',
 
     'asm/ov00/ov00_0207da38.s',
 
