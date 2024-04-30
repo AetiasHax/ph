@@ -3,23 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager18func_ov00_020ae4dcEj
-	arm_func_start _ZN11ItemManager18func_ov00_020ae4dcEj
-_ZN11ItemManager18func_ov00_020ae4dcEj: ; 0x020ae4dc
-	ldrh r3, [r0, #0xba]
-	add r2, r3, r1
-	cmp r2, #9
-	movgt r1, #9
-	strgth r1, [r0, #0xba]
-	bxgt lr
-	rsb r1, r1, #0
-	cmp r3, r1
-	movlt r1, #0
-	strlth r1, [r0, #0xba]
-	strgeh r2, [r0, #0xba]
-	bx lr
-	arm_func_end _ZN11ItemManager18func_ov00_020ae4dcEj
-
 	.global _ZN11ItemManager9SetPotionEjh
 	arm_func_start _ZN11ItemManager9SetPotionEjh
 _ZN11ItemManager9SetPotionEjh: ; 0x020ae50c

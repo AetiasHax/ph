@@ -20,6 +20,7 @@ extern "C" {
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2
+#define MAX_UNK_0BA 9
 
 typedef s32 FairyId;
 enum FairyId_ {
@@ -205,7 +206,7 @@ private:
     /* 0b4 */ u16 mQuiverSize;
     /* 0b6 */ u16 mBombBagSize;
     /* 0b8 */ u16 mBombchuBagSize;
-    /* 0ba */ unk16 mUnk_0ba; // only between 0 and 9
+    /* 0ba */ u16 mUnk_0ba; // only between 0 and 9
     /* 0bc */ Potion mPotions[2];
     /* 0be */ unk8 mUnk_0be[2]; // padding?
     /* 0c0 */ ItemModel *mItemModels[ItemModelId_COUNT];
@@ -323,7 +324,7 @@ public:
     void GiveKeys(u32 amount);
 
     // Unknown
-    void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
+    void func_ov00_020ae4dc(s32 param1);
     void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3);
 };
 

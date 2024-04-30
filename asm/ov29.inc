@@ -10,7 +10,7 @@
 .extern _ZN10MapManager18func_ov00_02083938Ei
 .extern _ZN10MapManager18func_ov00_020846a4Ev
 .extern _ZN10MapManager18func_ov00_02084d24Ecci
-.extern _ZN11ItemManager18func_ov00_020ae4dcEj
+.extern _ZN11ItemManager18func_ov00_020ae4dcEi
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager18func_ov00_020c3b2cEPi

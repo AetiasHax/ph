@@ -842,3 +842,14 @@ THUMB void ItemManager::UpgradeBombchuBag() {
     if (mBombchuBagSize < MAX_AMMO_UPGRADE) mBombchuBagSize += 1;
     (*mAmmo)[ItemFlag_BombchuBag] = this->GetMaxAmmo(ItemFlag_BombchuBag);
 }
+
+ARM void ItemManager::func_ov00_020ae4dc(s32 param1) {
+    s32 newValue = mUnk_0ba + param1;
+    if (newValue > MAX_UNK_0BA) {
+        mUnk_0ba = MAX_UNK_0BA;
+    } else if (mUnk_0ba < -param1) {
+        mUnk_0ba = 0;
+    } else {
+        mUnk_0ba = newValue;
+    }
+}
