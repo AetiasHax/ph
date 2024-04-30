@@ -2,31 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-	.global _ZNK11ItemManager21HasTreasurePriceShownEj
-	thumb_func_start _ZNK11ItemManager21HasTreasurePriceShownEj
-_ZNK11ItemManager21HasTreasurePriceShownEj: ; 0x020ae744
-	push {r3, r4}
-	add r4, r1, #0
-	lsr r1, r1, #5
-	lsl r1, r1, #2
-	mov r2, #0x1f
-	add r1, r0, r1
-	mov r0, #0x52
-	lsl r0, r0, #2
-	mov r3, #1
-	and r4, r2
-	add r2, r3, #0
-	lsl r2, r4
-	ldr r0, [r1, r0]
-	tst r0, r2
-	bne _020ae764
-	mov r3, #0
-_020ae764:
-	add r0, r3, #0
-	pop {r3, r4}
-	bx lr
-	.align 2, 0
-	thumb_func_end _ZNK11ItemManager21HasTreasurePriceShownEj
 
 	.global _ZN11ItemManager21AddTreasurePriceShownEj
 	thumb_func_start _ZN11ItemManager21AddTreasurePriceShownEj

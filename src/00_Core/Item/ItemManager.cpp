@@ -973,3 +973,7 @@ THUMB bool ItemManager::HasShipPartPriceShown(ShipPart part, ShipType type) cons
 THUMB void ItemManager::AddShipPartPriceShown(ShipPart part, ShipType type) {
     SET_FLAG(mShipPartPricesShown.flags, part * ShipType_COUNT + type);
 }
+
+THUMB bool ItemManager::HasTreasurePriceShown(Treasure treasure) const {
+    return GET_FLAG(mTreasurePriceShownFlags, treasure);
+}
