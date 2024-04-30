@@ -2,32 +2,6 @@
     .include "ov00/Item/ItemManager.inc"
 
 	.text
-
-	.global _ZN11ItemManager19SetTreasureSalvagedEjj
-	thumb_func_start _ZN11ItemManager19SetTreasureSalvagedEjj
-_ZN11ItemManager19SetTreasureSalvagedEjj: ; 0x020ae71c
-	push {r4, r5}
-	lsl r3, r1, #3
-	add r1, r1, r3
-	add r2, r2, r1
-	mov r1, #0x4f
-	lsl r1, r1, #2
-	add r1, r0, r1
-	lsr r0, r2, #5
-	lsl r0, r0, #2
-	mov r3, #0x1f
-	mov r4, #1
-	and r2, r3
-	add r3, r4, #0
-	ldr r5, [r1, r0]
-	lsl r3, r2
-	add r2, r5, #0
-	orr r2, r3
-	str r2, [r1, r0]
-	pop {r4, r5}
-	bx lr
-	thumb_func_end _ZN11ItemManager19SetTreasureSalvagedEjj
-
 	.global _ZNK11ItemManager21HasTreasurePriceShownEj
 	thumb_func_start _ZNK11ItemManager21HasTreasurePriceShownEj
 _ZNK11ItemManager21HasTreasurePriceShownEj: ; 0x020ae744

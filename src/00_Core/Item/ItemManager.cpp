@@ -969,3 +969,7 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
 THUMB bool ItemManager::HasShipPartPriceShown(ShipPart part, ShipType type) const {
     return GET_FLAG(mShipPartPricesShown.flags, part * ShipType_COUNT + type);
 }
+
+THUMB void ItemManager::AddShipPartPriceShown(ShipPart part, ShipType type) {
+    SET_FLAG(mShipPartPricesShown.flags, part * ShipType_COUNT + type);
+}

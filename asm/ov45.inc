@@ -1,7 +1,7 @@
 #pragma once
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc
-.extern _ZN11ItemManager19SetTreasureSalvagedEjj
+.extern _ZN11ItemManager21AddShipPartPriceShownEjj
 .extern _ZN11ItemManager21AddTreasurePriceShownEj
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN5Actor10SetUnk_11bEv
