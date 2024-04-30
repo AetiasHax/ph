@@ -8276,7 +8276,7 @@ _02173dac:
 	str r0, [r4, #0x78]
 	ldr r0, _02173de8 ; =data_ov00_020eec68
 	mov r1, #0x4c
-	blx func_ov00_020d73bc
+	blx PlaySoundEffect
 	pop {r3, r4, r5, pc}
 	nop
 	thumb_func_end func_ov26_02173cec

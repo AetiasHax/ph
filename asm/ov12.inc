@@ -632,7 +632,7 @@
 .extern func_ov00_020d70a4
 .extern func_ov00_020d716c
 .extern func_ov00_020d7180
-.extern func_ov00_020d73bc
+.extern PlaySoundEffect
 .extern func_ov00_020d7404
 .extern func_ov00_020d77e4
 .extern func_ov00_020d7a84

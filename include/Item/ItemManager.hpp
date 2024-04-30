@@ -15,6 +15,7 @@ extern "C" {
 #include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
 #include "Player/HealthManager.hpp"
+#include "Sound/Sfx.hpp"
 #include "System/SysNew.hpp"
 #include "System/OverlayManager.hpp"
 #include "Render/ModelRender.hpp"
@@ -222,7 +223,7 @@ private:
     /* 138 */ u32 mSalvagedTreasureFlags;
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;
     /* 148 */ u32 mTreasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
-    /* 14c */ unk8 mUnk_14c;
+    /* 14c */ bool mUnk_14c;
     /* 14d */ u8 mUnk_14d;
     /* 14e */ unk8 mUnk_14e[0x2];
     /* 150 */
@@ -278,6 +279,7 @@ public:
     void LoadFanfareItem(ItemId id);
     bool GetFanfareItemScale(Vec3p *pScale) const;
     void LoadDungeonItemModels();
+    static void PlayItemFanfareSfx(ItemId item);
 
     // Ship
     ShipType GetEquippedShipPart(ShipPart part) const;
@@ -327,7 +329,6 @@ public:
 
     // Unknown
     void func_ov00_020ae4dc(s32 param1);
-    void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3);
 };
 
 extern ItemManager *gItemManager;

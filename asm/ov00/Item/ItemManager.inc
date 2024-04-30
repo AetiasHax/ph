@@ -4,5 +4,5 @@
 .extern data_ov00_020eec68
 .extern func_020196bc
 .extern func_020196fc
-.extern func_ov00_020d73bc
+.extern PlaySoundEffect
 .extern gItemManager

@@ -112,7 +112,7 @@ _0217bed4:
 	bl func_ov00_0207c5d4
 	ldr r0, _0217bf2c ; =data_ov00_020eec68
 	mov r1, #0xd2
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	ldr r1, [r4, #8]
 	ldr r0, [r1, #0x158]
 	bic r0, r0, #0x4000000

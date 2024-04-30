@@ -10245,7 +10245,7 @@ _02109354:
 	cmp r0, #0
 	beq _02109380
 	ldr r0, [r5, #0x74]
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 _02109380:
 	mov r0, r5
 	bl _ZN13LinkStateBase18func_ov00_020a8d50Ev

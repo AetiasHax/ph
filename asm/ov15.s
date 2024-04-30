@@ -42710,7 +42710,7 @@ _0214389c:
 	ldr r0, _02143a38 ; =data_ov00_020eec68
 	mov r1, #0xda
 	str r2, [r7, #0x378]
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 _021438f4:
 	ldr r0, [r7, #0x20]
 	bl func_ov15_02149acc
@@ -43237,7 +43237,7 @@ _02144020:
 	bl func_ov00_020d716c
 	ldr r0, _0214415c ; =data_ov00_020eec68
 	mov r1, #0xdb
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
@@ -43346,7 +43346,7 @@ _021441a8:
 	bl func_ov00_020d716c
 	ldr r0, _021442d8 ; =data_ov00_020eec68
 	mov r1, #0xdb
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
@@ -44561,7 +44561,7 @@ _02145370:
 	mov r4, r0
 	bl func_ov03_020fc10c
 	mov r0, r4
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #0x10
 	strb r0, [r9, #0x34d]
 	b _02145420
@@ -61729,7 +61729,7 @@ _02153b28:
 	bl func_ov15_02153938
 	ldr r0, [r4, #0x41c]
 	add r0, r0, #0x46
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #5
 	strb r0, [r5, #0x436]
 	b _02153d74
@@ -62211,7 +62211,7 @@ _02154254:
 	bl func_ov15_02153938
 	ldr r0, [r5, #0x41c]
 	add r0, r0, #0x46
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #5
 	strb r0, [r4, #0x436]
 	b _02154304
@@ -62311,7 +62311,7 @@ _02154374:
 	bl func_ov00_020d716c
 	ldr r0, _02154620 ; =data_ov00_020eec68
 	mov r1, #0xde
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	mov r0, #1
 	strb r0, [r5, #0x436]
 	mov r0, #0
@@ -88292,7 +88292,7 @@ _0216a994:
 	bl func_ov03_020fc10c
 	ldr r0, _0216aa24 ; =data_ov00_020eec68
 	mov r1, #0x28
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	mov r1, #0
 	sub r0, r1, #0x1000
 	str r0, [sp, #0x18]

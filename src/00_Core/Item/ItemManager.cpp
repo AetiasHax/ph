@@ -716,7 +716,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
             this->GiveRupees(-50, true);
         } break;
         
-        case ItemId_Unk_0: break;
+        case ItemId_None: break;
         case ItemId_Unk_5: break;
         case ItemId_Unk_16: break;
         case ItemId_Unk_131: break;
@@ -913,4 +913,55 @@ THUMB void ItemManager::LoadDungeonItemModels() {
         func_020196bc(mDungeonItemModels[i], unk1);
         func_020196fc(mDungeonItemModels[i], unk2);
     }
+}
+
+extern unk32 data_ov00_020eec68;
+extern "C" void PlaySoundEffect(void *param1, SfxId sfx);
+THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
+    if (gItemManager->mUnk_14c == true) {
+        gItemManager->mUnk_14c = false;
+        return;
+    }
+    SfxId sfx;
+    switch (item) {
+        case ItemId_PowerGem:
+        case ItemId_WisdomGem:
+        case ItemId_CourageGem: {
+            sfx = SfxId_FanfareGem;
+        } break;
+
+        case ItemId_GoldRupee: {
+            sfx = SfxId_FanfareGoldRupee;
+        } break;
+        
+        case ItemId_SmallKey:
+        case ItemId_GreenRupee:
+        case ItemId_BlueRupee:
+        case ItemId_RedRupee: {
+            sfx = SfxId_FanfareRupee;
+        } break;
+
+        case ItemId_Rupoor10: 
+        case ItemId_Rupoor50: {
+            sfx = SfxId_FanfareRupoor;
+        } break;
+
+        case ItemId_None:
+        case ItemId_HerosNewClothes: {
+            sfx = SfxId_FanfareNothing;
+        } break;
+
+        case ItemId_HeartContainer: {
+            sfx = SfxId_FanfareHeartContainer;
+        } break;
+        
+        default: {
+            sfx = SfxId_FanfareDefault;
+        } break;
+    }
+    if (gItemManager->mUnk_11c != 0) {
+        sfx = gItemManager->mUnk_11c;
+        gItemManager->mUnk_11c = 0;
+    }
+    PlaySoundEffect(&data_ov00_020eec68, sfx);
 }

@@ -24429,9 +24429,9 @@ _020d73b0:
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020d7394
 
-	.global func_ov00_020d73bc
-	arm_func_start func_ov00_020d73bc
-func_ov00_020d73bc: ; 0x020d73bc
+	.global PlaySoundEffect
+	arm_func_start PlaySoundEffect
+PlaySoundEffect: ; 0x020d73bc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r5, r0
@@ -24445,7 +24445,7 @@ func_ov00_020d73bc: ; 0x020d73bc
 	str ip, [sp]
 	bl func_ov00_020d6d30
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_ov00_020d73bc
+	arm_func_end PlaySoundEffect
 
 	.global func_ov00_020d73f0
 	arm_func_start func_ov00_020d73f0

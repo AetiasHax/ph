@@ -1892,14 +1892,14 @@ _0216ee88:
 _0216eea4:
 	ldr r0, _0216eeec ; =data_ov00_020eec68
 	mov r1, #0xc2
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add sp, sp, #8
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}
 _0216eebc:
 	ldr r0, _0216eeec ; =data_ov00_020eec68
 	mov r1, #0xc4
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add sp, sp, #8
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}

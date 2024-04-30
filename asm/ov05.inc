@@ -26,7 +26,7 @@
 .extern _ZN10PlayerBase18func_ov00_020a7c00Ei
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager15LoadFanfareItemEi
-.extern _ZN11ItemManager18func_ov00_020ae648Ejjj
+.extern _ZN11ItemManager18PlayItemFanfareSfxEi
 .extern _ZN11ItemManager8GiveItemEi
 .extern _ZN12ActorManager11DeleteActorEjb
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList

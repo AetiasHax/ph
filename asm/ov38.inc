@@ -217,7 +217,7 @@
 .extern func_ov00_020d5f98
 .extern func_ov00_020d70a4
 .extern func_ov00_020d716c
-.extern func_ov00_020d73bc
+.extern PlaySoundEffect
 .extern func_ov00_020d73f0
 .extern func_ov00_020d7c8c
 .extern func_ov00_020d7d18

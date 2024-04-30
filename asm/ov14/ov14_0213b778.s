@@ -27197,7 +27197,7 @@ _021508ce:
 	ldr r0, [r4, #8]
 	blx func_ov03_020fc10c
 	ldr r0, [r4, #8]
-	bl _ZN11ItemManager18func_ov00_020ae648Ejjj
+	bl _ZN11ItemManager18PlayItemFanfareSfxEi
 	pop {r4, pc}
 	.align 2, 0
 	thumb_func_end func_ov14_021508b8

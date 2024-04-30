@@ -14,7 +14,7 @@
 .extern _ZN11ItemManager10SetUnk_09eEjt
 .extern _ZN11ItemManager15LoadFanfareItemEi
 .extern _ZN11ItemManager18func_ov00_020ad528Ev
-.extern _ZN11ItemManager18func_ov00_020ae648Ejjj
+.extern _ZN11ItemManager18PlayItemFanfareSfxEi
 .extern _ZN11ItemManager19SetTreasureSalvagedEj
 .extern _ZN11ItemManager8GiveItemEi
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
@@ -723,7 +723,7 @@
 .extern func_ov00_020d70a4
 .extern func_ov00_020d716c
 .extern func_ov00_020d71a0
-.extern func_ov00_020d73bc
+.extern PlaySoundEffect
 .extern func_ov00_020d7424
 .extern func_ov00_020d74bc
 .extern func_ov00_020d77e4
