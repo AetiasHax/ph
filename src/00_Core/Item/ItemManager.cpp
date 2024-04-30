@@ -822,3 +822,8 @@ THUMB bool ItemManager::ClearForcedEquipItem() {
     if (mEquippedItem != ItemFlag_None) return this->SetEquippedItem(mEquippedItem);
     return false;
 }
+
+ARM void ItemManager::UpdateSwordShieldInUse() {
+    this->GetEquipItem(ItemFlag_OshusSword)->UpdateInUse(1);
+    this->GetEquipItem(ItemFlag_WoodenShield)->UpdateInUse(1);
+}

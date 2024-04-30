@@ -3,27 +3,6 @@
 
 	.text
 
-	.global _ZN11ItemManager22UpdateSwordShieldInUseEv
-	arm_func_start _ZN11ItemManager22UpdateSwordShieldInUseEv
-_ZN11ItemManager22UpdateSwordShieldInUseEv: ; 0x020ae418
-	stmdb sp!, {r4, lr}
-	mov r1, #0
-	mov r4, r0
-	bl _ZN11ItemManager12GetEquipItemEi
-	ldr r2, [r0]
-	mov r1, #1
-	ldr r2, [r2, #0x28]
-	blx r2
-	mov r0, r4
-	mov r1, #1
-	bl _ZN11ItemManager12GetEquipItemEi
-	ldr r2, [r0]
-	mov r1, #1
-	ldr r2, [r2, #0x28]
-	blx r2
-	ldmia sp!, {r4, pc}
-	arm_func_end _ZN11ItemManager22UpdateSwordShieldInUseEv
-
 	.global _ZN11ItemManager13UpgradeQuiverEv
 	thumb_func_start _ZN11ItemManager13UpgradeQuiverEv
 _ZN11ItemManager13UpgradeQuiverEv: ; 0x020ae458
