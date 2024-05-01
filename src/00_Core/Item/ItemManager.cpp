@@ -1,7 +1,8 @@
 #include "Item/ItemManager.hpp"
 
-extern u32 *data_027e0ce0[];
+static const char *sShipPartTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
 
+extern u32 *data_027e0ce0[];
 THUMB ItemManager* ItemManager::Create() {
     gItemManager = new(data_027e0ce0[1], 4) ItemManager();
     return gItemManager;
@@ -384,11 +385,109 @@ extern ItemModel **data_027e1058;
 extern ItemModel **data_027e105c;
 extern "C" ItemModel* func_ov00_02079ffc(void*, const char *modelName, const char *textureName, unk32 param4, unk8 param5, unk8 param6, bool param7);
 extern "C" ItemModel* LoadTreasureItemFanfare(ItemModel**, s32 treasureType, bool, bool);
-extern const char *sUnknownItemModelNames[];
-extern const char *data_ov00_020e5dd4[];
-extern const char *data_ov00_020e5db4[];
-extern const char *sItemModelNames[];
-extern const char *sSpecialItemModelNames[];
+static char *sDefaultItemModel = "key";
+static char *sItemModelNames[70] = {
+    [ItemId_None]              = "key",
+    [ItemId_SmallKey]          = "key",
+    [ItemId_GreenRupee]        = "rupee_g",
+    [ItemId_OshusSword]        = "swA",
+    [ItemId_WoodenShield]      = "shA",
+    [ItemId_Unk_5]             = NULL,
+    [ItemId_Unk_6]             = "force_y",
+    [ItemId_BombBag]           = "bomb\0\0\0",
+    [ItemId_Bow]               = "bow",
+    [ItemId_BigGreenRupee]     = "rupee_g",
+    [ItemId_HeartContainer]    = "heart_utu\0\0",
+    [ItemId_Unk_11]            = NULL,
+    [ItemId_Boomerang]         = "boomerang\0\0",
+    [ItemId_Scoop]             = "scp",
+    [ItemId_BombchuBag]        = "bomchu\0",
+    [ItemId_BossKey]           = "bosskey",
+    [ItemId_Unk_16]            = "rev_bin",
+    [ItemId_Unk_17]            = NULL,
+    [ItemId_PhantomHourglass]  = NULL,
+    [ItemId_SWSeaChart]        = "mapSea\0",
+    [ItemId_NWSeaChart]        = "mapSea\0",
+    [ItemId_SESeaChart]        = "mapSea\0",
+    [ItemId_NESeaChart]        = "mapSea\0",
+    [ItemId_Unk_23]            = NULL,
+    [ItemId_BlueRupee]         = "rupee_b",
+    [ItemId_RedRupee]          = "rupee_r",
+    [ItemId_BigRedRupee]       = "rupee_r",
+    [ItemId_GoldRupee]         = "rupee_go\0\0\0",
+    [ItemId_Unk_28]            = "force_y",
+    [ItemId_Unk_29]            = "force_r",
+    [ItemId_Unk_30]            = "force_b",
+    [ItemId_Hammer]            = "ham",
+    [ItemId_Rope]              = "rope\0\0\0",
+    [ItemId_SquareCrystal]     = "cstl_c\0",
+    [ItemId_RoundCrystal]      = "cstl_s\0",
+    [ItemId_TriangleCrystal]   = "cstl_t\0",
+    [ItemId_FishingRod]        = "fp\0",
+    [ItemId_Cannon]            = NULL,
+    [ItemId_SunKey]            = "key_su\0",
+    [ItemId_Unk_39]            = NULL,
+    [ItemId_Quiver]            = "arrowpod\0\0\0",
+    [ItemId_BigBombBag]        = "bmbagM\0",
+    [ItemId_BigBombchuBag]     = "bcbagM\0",
+    [ItemId_Unk_43]            = NULL,
+    [ItemId_KingsKey]          = "key_ki\0",
+    [ItemId_PowerGem]          = "minaP\0\0",
+    [ItemId_WisdomGem]         = "minaC\0\0",
+    [ItemId_CourageGem]        = "minaY\0\0",
+    [ItemId_PinkCoral]         = NULL,
+    [ItemId_WhitePearlLoop]    = NULL,
+    [ItemId_DarkPearlLoop]     = NULL,
+    [ItemId_ZoraScale]         = NULL,
+    [ItemId_GoronAmber]        = NULL,
+    [ItemId_RutoCrown]         = NULL,
+    [ItemId_HelmarocPlume]     = NULL,
+    [ItemId_RegalRing]         = NULL,
+    [ItemId_GhostKey]          = "key_gh\0",
+    [ItemId_FreebieCard]       = "tic_tada\0\0\0",
+    [ItemId_ComplimentCard]    = "tic_ohome\0\0",
+    [ItemId_ComplimentaryCard] = "tic_rare\0\0\0",
+    [ItemId_RegalNecklace]     = "neckl\0\0",
+    [ItemId_SalvageArm]        = "slvarm\0",
+    [ItemId_HerosNewClothes]   = NULL,
+    [ItemId_Kaleidoscope]      = "telescope\0\0",
+    [ItemId_GuardNotebook]     = "notebook\0\0\0",
+    [ItemId_JolenesLetter]     = "letter\0",
+    [ItemId_PrizePostcard]     = "card\0\0\0",
+    [ItemId_WoodHeart]         = "marron\0",
+    [ItemId_PhantomSwordBlade] = "swBedge",
+    [ItemId_PhantomSword]      = NULL,
+};
+static char *sItemModelNames2[8] = {
+    [ItemId_SwordsmanScroll - ItemId_SwordsmanScroll] = "makimono\0\0\0",
+    [ItemId_Crimsonine - ItemId_SwordsmanScroll]      = "hagaH\0\0",
+    [ItemId_Azurine - ItemId_SwordsmanScroll]         = "hagaK\0\0",
+    [ItemId_Aquanine - ItemId_SwordsmanScroll]        = "hagaS\0\0",
+    [ItemId_RedPotion - ItemId_SwordsmanScroll]       = "rev_bin",
+    [ItemId_PurplePotion - ItemId_SwordsmanScroll]    = "rev_binP\0\0\0",
+    [ItemId_YellowPotion - ItemId_SwordsmanScroll]    = "rev_binY\0\0\0",
+    [ItemId_SandOfHours - ItemId_SwordsmanScroll]     = "sand_m\0",
+};
+static char *sItemModelNames3[9] = {
+    [ItemId_CycloneSlate - ItemId_CycloneSlate] = "compass",
+    [ItemId_Unk_128 - ItemId_CycloneSlate]      = "lure\0\0\0",
+    [ItemId_Rupoor10 - ItemId_CycloneSlate]     = "rupee_bb\0\0\0",
+    [ItemId_Rupoor50 - ItemId_CycloneSlate]     = "rupee_bb\0\0\0",
+    [ItemId_Unk_131 - ItemId_CycloneSlate]      = NULL,
+    [ItemId_Unk_132 - ItemId_CycloneSlate]      = NULL,
+    [ItemId_Unk_133 - ItemId_CycloneSlate]      = NULL,
+    [ItemId_Unk_134 - ItemId_CycloneSlate]      = NULL,
+    [ItemId_Unk_135 - ItemId_CycloneSlate]      = NULL,
+};
+char *sSpecialItemModelNames[7] = {
+    "mapTakara\0\0",
+    "arrowpodL\0\0",
+    "bmbagL\0",
+    "bcbagL\0",
+    "Player/get/gd_\0",
+    ".nsbmd\0",
+    ".nsbtx\0",
+};
 THUMB void ItemManager::LoadFanfareItem(ItemId id) {
     mFanfareItem = id;
     
@@ -419,18 +518,18 @@ THUMB void ItemManager::LoadFanfareItem(ItemId id) {
         } else if (id == ItemId_BigBombchuBag && (s32) mBombchuBagSize >= 1) {
             itemName = sSpecialItemModelNames[3];
         } else if (id == ItemId_HerosNewClothes) {
-            itemName = sUnknownItemModelNames[11];
+            itemName = sShipPartTypes[11];
         } else if (id < ItemId_Unk_70) {
             itemName = sItemModelNames[id];
         } else if (id >= ItemId_SwordsmanScroll && id < ItemId_GoldenChimney) {
-            itemName = data_ov00_020e5db4[id - ItemId_SwordsmanScroll];
+            itemName = sItemModelNames2[id - ItemId_SwordsmanScroll];
         } else if (id >= ItemId_CycloneSlate && id < ItemId_Unk_136) {
-            itemName = data_ov00_020e5dd4[id - ItemId_CycloneSlate];
+            itemName = sItemModelNames3[id - ItemId_CycloneSlate];
         } else if (id >= ItemId_TREASURE_CHART_START && id <= ItemId_TREASURE_CHART_END) {
             itemName = sSpecialItemModelNames[0];
         }
         if (!itemName) {
-            itemName = sUnknownItemModelNames[8];
+            itemName = sDefaultItemModel;
         }
         strcat(modelName, sSpecialItemModelNames[4]);
         strcat(modelName, itemName);
