@@ -927,36 +927,36 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
         case ItemId_PowerGem:
         case ItemId_WisdomGem:
         case ItemId_CourageGem: {
-            sfx = SfxId_FanfareGem;
+            sfx = SfxId_Fanfare_Gem;
         } break;
 
         case ItemId_GoldRupee: {
-            sfx = SfxId_FanfareGoldRupee;
+            sfx = SfxId_Fanfare_GoldRupee;
         } break;
         
         case ItemId_SmallKey:
         case ItemId_GreenRupee:
         case ItemId_BlueRupee:
         case ItemId_RedRupee: {
-            sfx = SfxId_FanfareRupee;
+            sfx = SfxId_Fanfare_Rupee;
         } break;
 
         case ItemId_Rupoor10: 
         case ItemId_Rupoor50: {
-            sfx = SfxId_FanfareRupoor;
+            sfx = SfxId_Fanfare_Rupoor;
         } break;
 
         case ItemId_None:
         case ItemId_HerosNewClothes: {
-            sfx = SfxId_FanfareNothing;
+            sfx = SfxId_Fanfare_Nothing_2;
         } break;
 
         case ItemId_HeartContainer: {
-            sfx = SfxId_FanfareHeartContainer;
+            sfx = SfxId_Fanfare_HeartContainer;
         } break;
         
         default: {
-            sfx = SfxId_FanfareDefault;
+            sfx = SfxId_Fanfare_Treasure;
         } break;
     }
     if (gItemManager->mFanfareSfx != SfxId_None) {
