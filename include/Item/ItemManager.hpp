@@ -216,16 +216,16 @@ private:
     /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModelId_COUNT]; // non-null in dungeons/caves
     /* 114 */ ModelRender *mUnk_114;
     /* 118 */ ItemId mFanfareItem;
-    /* 11c */ unk32 mUnk_11c;
+    /* 11c */ SfxId mFanfareSfx;
     /* 120 */ void *mFanfareItemModel;
     /* 124 */ void *mUnk_124;
     /* 128 */ ItemFlags mItemFlags;
     /* 138 */ u32 mSalvagedTreasureFlags;
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;
     /* 148 */ u32 mTreasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
-    /* 14c */ bool mUnk_14c;
+    /* 14c */ bool mMuteNextFanfare;
     /* 14d */ u8 mUnk_14d;
-    /* 14e */ unk8 mUnk_14e[0x2];
+    /* 14e */ unk8 mUnk_14e[0x2]; // padding?
     /* 150 */
 
 public:

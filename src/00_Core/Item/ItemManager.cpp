@@ -918,8 +918,8 @@ THUMB void ItemManager::LoadDungeonItemModels() {
 extern unk32 data_ov00_020eec68;
 extern "C" void PlaySoundEffect(void *param1, SfxId sfx);
 THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
-    if (gItemManager->mUnk_14c == true) {
-        gItemManager->mUnk_14c = false;
+    if (gItemManager->mMuteNextFanfare == true) {
+        gItemManager->mMuteNextFanfare = false;
         return;
     }
     SfxId sfx;
@@ -959,9 +959,9 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
             sfx = SfxId_FanfareDefault;
         } break;
     }
-    if (gItemManager->mUnk_11c != 0) {
-        sfx = gItemManager->mUnk_11c;
-        gItemManager->mUnk_11c = 0;
+    if (gItemManager->mFanfareSfx != SfxId_None) {
+        sfx = gItemManager->mFanfareSfx;
+        gItemManager->mFanfareSfx = SfxId_None;
     }
     PlaySoundEffect(&data_ov00_020eec68, sfx);
 }
