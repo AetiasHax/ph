@@ -616,11 +616,11 @@ _ZN12ActorManager18func_ov00_020c3bb0EiPi: ; 0x020c3bb0
 	str r0, [sp]
 	movne r0, #0
 	strne r0, [r10]
-	ldr r0, _020c3ce4 ; =data_027e0e60
+	ldr r0, _020c3ce4 ; =gMapManager
 	add r2, sp, #0x14
 	ldr r0, [r0]
 	mov r3, #8
-	bl func_ov00_020836cc
+	bl _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 	mov r5, r0
 	cmp r5, #0
 	addle sp, sp, #0xd4
@@ -695,20 +695,20 @@ _020c3cd8:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN12ActorManager18func_ov00_020c3bb0EiPi
-_020c3ce4: .word data_027e0e60
+_020c3ce4: .word gMapManager
 
 	.global _ZN12ActorManager18func_ov00_020c3ce8Eii
 	arm_func_start _ZN12ActorManager18func_ov00_020c3ce8Eii
 _ZN12ActorManager18func_ov00_020c3ce8Eii: ; 0x020c3ce8
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xcc
-	ldr r3, _020c3dcc ; =data_027e0e60
+	ldr r3, _020c3dcc ; =gMapManager
 	mov r11, r0
 	ldr r0, [r3]
 	mov r10, r2
 	add r2, sp, #0xc
 	mov r3, #8
-	bl func_ov00_020836cc
+	bl _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 	mov r5, r0
 	cmp r5, #0
 	addle sp, sp, #0xcc
@@ -763,7 +763,7 @@ _020c3db0:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end _ZN12ActorManager18func_ov00_020c3ce8Eii
-_020c3dcc: .word data_027e0e60
+_020c3dcc: .word gMapManager
 
 	.global _ZN12ActorManager14Actor_vfunc_28Ev
 	arm_func_start _ZN12ActorManager14Actor_vfunc_28Ev

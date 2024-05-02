@@ -30,7 +30,7 @@
 .extern data_027e0d0c
 .extern data_027e0de4
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f94
@@ -57,7 +57,7 @@
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c444
 .extern func_ov00_02081f4c
-.extern func_ov00_020840c4
+.extern _ZN10MapManager16MapData_vfunc_78Ev
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c
 .extern func_ov00_02093a1c

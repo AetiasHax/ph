@@ -42,4 +42,5 @@ public:
     bool func_ov00_0207aeac();
     void UpdateConditionally(TouchState *state, u16 speed);
     void func_ov00_0207af38(u16 speed, bool param2);
+    ~TouchControl();
 };

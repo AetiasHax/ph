@@ -1,6 +1,6 @@
 #include "Actor/ActorRupee.hpp"
 #include "Item/ItemManager.hpp"
-
+#include "Map/MapManager.hpp"
 
 
 // char* data_ov14_021589b4 = *data_ov14_02158994;
@@ -33,7 +33,6 @@ extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
 
 extern u32 data_ov00_020e9370[];
 extern u32 data_ov00_020eec9c[];
-extern void *data_027e0e60;
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern u32 **data_027e0fe0[];
 
@@ -326,7 +325,7 @@ void ActorRupee::Update(bool param1) {
             Move();
             if (mUnk_111) {
                 local_1c = mPos;
-                func_ov00_02083fb0(&local_20, data_027e0e60, &local_1c);
+                func_ov00_02083fb0(&local_20, gMapManager, &local_1c);
                 if (((local_20 >> 5) & 3) == 2) {
                     Kill();
                 } else {
