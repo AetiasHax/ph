@@ -49,8 +49,8 @@ LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
 ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
-CC_FLAGS  := -proc arm946e -interworking -O4,p -enum int -i include -i- -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -char signed -sym on -msgstyle gcc -RTTI off
-C_FLAGS := -lang=c
+CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
+C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
 LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
@@ -85,6 +85,7 @@ all: tools rom
 tools:
 	cd $(TOOLS_DIR)/compress && $(MAKE)
 	cd $(TOOLS_DIR)/rom && $(MAKE)
+	cd $(TOOLS_DIR)/elf && $(MAKE)
 
 .PHONY: rom
 rom: arm9
@@ -126,10 +127,12 @@ $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
+	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 $(C_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
+	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)

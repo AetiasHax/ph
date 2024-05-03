@@ -1,7 +1,8 @@
 #pragma once
 .extern Divide
+.extern GiveShipPart
 .extern LoadTreasureItemFanfare
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager8GiveAmmoEit
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags3GetEj
@@ -72,7 +73,7 @@
 .extern data_027e0d78
 .extern data_027e0dbc
 .extern data_027e0e28
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f94
 .extern data_027e0fc8
@@ -153,7 +154,7 @@
 .extern func_ov00_0207b89c
 .extern func_ov00_0207ba90
 .extern func_ov00_0207bc48
-.extern func_ov00_02083918
+.extern _ZN10MapManager18func_ov00_02083918EiPi
 .extern func_ov00_0208726c
 .extern func_ov00_02087338
 .extern func_ov00_02087400
@@ -183,7 +184,6 @@
 .extern func_ov09_0211c1a8
 .extern func_ov09_0211c980
 .extern func_ov09_0211c9a0
-.extern func_ov09_0211ca20
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cca4
 .extern func_ov09_0211ccb4

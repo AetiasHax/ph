@@ -13,8 +13,8 @@ def name(path: str): return path.split("/")[-1]
 ARM9_OBJECTS = [
     'asm/main/main_02000000.s',
 
-    'asm/main/Actor/ActorType.s',
     'src/Main/Actor/ActorType.cpp',
+    'asm/main/Actor/ActorType.s',
 
     'asm/main/main_0203e8a0.s',
 
@@ -37,7 +37,19 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/00_Core/Player/TouchControl.cpp',
     'asm/ov00/Player/TouchControl.s',
 
-    'asm/ov00/ov00_0207af9c.s',
+    'asm/ov00/ov00_0207afa0.s',
+
+    'asm/ov00/Map/Course.s',
+    'src/00_Core/Map/Course.cpp',
+    'asm/ov00/Map/MapBase.s',
+    'src/00_Core/Map/MapBase.cpp',
+
+    'asm/ov00/ov00_0207da38.s',
+
+    'asm/ov00/Map/MapManager.s',
+    'src/00_Core/Map/MapManager.cpp',
+
+    'asm/ov00/ov00_02086cd0.s',
 
     'src/00_Core/Save/AdventureFlags.cpp',
     'asm/ov00/Save/AdventureFlags.s',
@@ -66,7 +78,6 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'src/00_Core/Item/Item.cpp',
     'asm/ov00/Item/Item.s',
     'src/00_Core/Item/ItemManager.cpp',
-    'asm/ov00/Item/ItemManager.s',
     'src/00_Core/Player/LinkStateRoll.cpp',
     'asm/ov00/Player/LinkStateRoll.s',
     'src/00_Core/Player/PlayerControl.cpp',
@@ -74,13 +85,13 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/ov00_020b1498.s',
 
-    'asm/ov00/Actor/Actor.s',
     'src/00_Core/Actor/Actor.cpp',
+    'asm/ov00/Actor/Actor.s',
 
     'asm/ov00/ov00_020c3348.s',
 
-    'asm/ov00/Actor/ActorManager.s',
     'src/00_Core/Actor/ActorManager.cpp',
+    'asm/ov00/Actor/ActorManager.s',
 
     'asm/ov00/ov00_020c3e54.s',
 ])

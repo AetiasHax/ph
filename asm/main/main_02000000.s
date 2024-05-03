@@ -58474,7 +58474,7 @@ func_0202bf58: ; 0x0202bf58
 	mov r0, #0
 	ldmmiia sp!, {r3, pc}
 	ldr ip, [r2]
-	ldr r0, _0202bfbc ; =data_027e0e60
+	ldr r0, _0202bfbc ; =gMapManager
 	str ip, [sp, #0xc]
 	ldr ip, [r2, #4]
 	ldr r0, [r0]
@@ -58489,12 +58489,12 @@ func_0202bf58: ; 0x0202bf58
 	ldr ip, [r1, #8]
 	add r1, sp, #0xc
 	str ip, [sp, #8]
-	bl func_ov00_02086044
+	bl _ZN10MapManager18func_ov00_02086044Eiii
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_0202bf58
-_0202bfbc: .word data_027e0e60
+_0202bfbc: .word gMapManager
 
 	.global func_0202bfc0
 	arm_func_start func_0202bfc0
@@ -76814,7 +76814,7 @@ _0203826c:
 	ldr r1, [r4, #4]
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	add sp, sp, #0x18
 	mov r0, #2
 	ldmia sp!, {r3, r4, r5, pc}
@@ -76848,7 +76848,7 @@ _020382e8:
 	mov r3, #0
 	sub r2, r3, #2
 	mov r5, #0x47
-	ldr r0, _0203859c ; =data_027e0e60
+	ldr r0, _0203859c ; =gMapManager
 	mov r1, #0xff
 	str r2, [sp, #0xc]
 	str r5, [sp]
@@ -76862,7 +76862,7 @@ _020382e8:
 	ldr r0, [r0]
 	ldr r1, [r4, #4]
 	add r2, sp, #0
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	cmp r0, #0
 	beq _02038368
 	ldr r0, _020385a0 ; =data_027e0d38
@@ -76953,9 +76953,9 @@ _02038444:
 	mov r0, #2
 	ldmia sp!, {r3, r4, r5, pc}
 _0203846c:
-	ldr r0, _0203859c ; =data_027e0e60
+	ldr r0, _0203859c ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_02084740
+	bl _ZN10MapManager18func_ov00_02084740Ev
 	mov r1, r0
 	ldr r2, [r4, #4]
 	ldr r0, _020385ac ; =data_ov00_020eec68
@@ -77039,7 +77039,7 @@ _0203858c: .word data_027e0618
 _02038590: .word gItemManager
 _02038594: .word data_027e0db0
 _02038598: .word data_027e0c68
-_0203859c: .word data_027e0e60
+_0203859c: .word gMapManager
 _020385a0: .word data_027e0d38
 _020385a4: .word data_027e0f64
 _020385a8: .word data_020569e0
@@ -80336,11 +80336,11 @@ _0203ac8c:
 	b _0203ad24
 _0203acc0:
 	ldrh r2, [r5, #6]
-	ldr r0, _0203ae9c ; =data_027e0e60
+	ldr r0, _0203ae9c ; =gMapManager
 	add r1, sp, #8
 	ldr r0, [r0]
 	and r2, r2, #0xff
-	bl func_ov00_02082614
+	bl _ZN10MapManager18func_ov00_02082614Eii
 	ldr r0, _0203ae94 ; =data_027e103c
 	add r1, sp, #8
 	ldr r0, [r0]
@@ -80465,7 +80465,7 @@ _0203ae8c: .word 0x00020001
 _0203ae90: .word 0xffff0001
 _0203ae94: .word data_027e103c
 _0203ae98: .word data_027e0d3c
-_0203ae9c: .word data_027e0e60
+_0203ae9c: .word gMapManager
 _0203aea0: .word data_02057ed0
 _0203aea4: .word data_027e0c68
 
@@ -113908,19 +113908,23 @@ data_02057664: ; 0x02057664
 	.byte 0x00
 	.global data_02057670
 data_02057670: ; 0x02057670
-	.ascii "ƒƒ‚ƒŠƒKƒiƒC.file"
+	; string "ãƒ¡ãƒ¢ãƒªã‚¬ãƒŠã‚¤.file"
+	.byte 0x83, 0x81, 0x83, 0x82, 0x83, 0x8a, 0x83, 0x4b, 0x83, 0x69, 0x83, 0x43, 0x2e, 0x66, 0x69, 0x6c, 0x65
 	.byte 0x00, 0x00, 0x00
 	.global data_02057684
 data_02057684: ; 0x02057684
-	.ascii "ƒVƒj"
+	; string "ã‚·ãƒ‹"
+	.byte 0x83, 0x56, 0x83, 0x6a
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205768c
 data_0205768c: ; 0x0205768c
-	.ascii "ƒIƒL"
+	; string "ã‚ªã‚­"
+	.byte 0x83, 0x49, 0x83, 0x4c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057694
 data_02057694: ; 0x02057694
-	.ascii "ƒlƒ‹"
+	; string "ãƒãƒ«"
+	.byte 0x83, 0x6c, 0x83, 0x8b
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205769c
 data_0205769c: ; 0x0205769c
@@ -113940,7 +113944,8 @@ data_020576e4: ; 0x020576e4
 	.byte 0x00, 0x00
 	.global data_020576f0
 data_020576f0: ; 0x020576f0
-	.ascii "ƒƒ‚ƒŠƒKƒiƒC.%s"
+	; string "ãƒ¡ãƒ¢ãƒªã‚¬ãƒŠã‚¤.%s"
+	.byte 0x83, 0x81, 0x83, 0x82, 0x83, 0x8a, 0x83, 0x4b, 0x83, 0x69, 0x83, 0x43, 0x2e, 0x25, 0x73
 	.byte 0x00
 	.global data_02057700
 data_02057700: ; 0x02057700
@@ -113959,11 +113964,13 @@ data_02057710: ; 0x02057710
 	.byte 0x00, 0x00, 0x00
 	.global data_02057718
 data_02057718: ; 0x02057718
-	.ascii "ƒR[ƒX:"
+	; string "ã‚³ãƒ¼ã‚¹:"
+	.byte 0x83, 0x52, 0x81, 0x5b, 0x83, 0x58, 0x3a
 	.byte 0x00
 	.global data_02057720
 data_02057720: ; 0x02057720
-	.ascii "ƒR[ƒXƒiƒV"
+	; string "ã‚³ãƒ¼ã‚¹ãƒŠã‚·"
+	.byte 0x83, 0x52, 0x81, 0x5b, 0x83, 0x58, 0x83, 0x69, 0x83, 0x56
 	.byte 0x00, 0x00
 	.global data_0205772c
 data_0205772c: ; 0x0205772c
@@ -113983,11 +113990,13 @@ data_02057744: ; 0x02057744
 	.byte 0x00, 0x00
 	.global data_02057750
 data_02057750: ; 0x02057750
-	.ascii "ƒŒƒCƒKƒCƒ`ƒ…ƒE(%d,%d)"
+	; string "ãƒ¬ã‚¤ã‚¬ã‚¤ãƒãƒ¥ã‚¦(%d,%d)"
+	.byte 0x83, 0x8c, 0x83, 0x43, 0x83, 0x4b, 0x83, 0x43, 0x83, 0x60, 0x83, 0x85, 0x83, 0x45, 0x28, 0x25, 0x64, 0x2c, 0x25, 0x64, 0x29
 	.byte 0x00, 0x00, 0x00
 	.global data_02057768
 data_02057768: ; 0x02057768
-	.ascii "ƒŒƒCƒKƒC ƒnƒbƒZƒC"
+	; string "ãƒ¬ã‚¤ã‚¬ã‚¤ ãƒãƒƒã‚»ã‚¤"
+	.byte 0x83, 0x8c, 0x83, 0x43, 0x83, 0x4b, 0x83, 0x43, 0x20, 0x83, 0x6e, 0x83, 0x62, 0x83, 0x5a, 0x83, 0x43
 	.byte 0x00, 0x00, 0x00
 	.global data_0205777c
 data_0205777c: ; 0x0205777c

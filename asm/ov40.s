@@ -4428,7 +4428,7 @@ _0217f5a4:
 	mov r1, r1, lsl #0x8
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x10
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 	add sp, sp, #8
 	ldmia sp!, {r3, pc}
 _0217f5c4:
@@ -4789,10 +4789,10 @@ func_ov40_0217fa44: ; 0x0217fa44
 	bne _0217fb0c
 	strb r1, [r5, #0xd6]
 	strb r1, [r5, #0xd7]
-	ldr r0, _0217fbb4 ; =data_027e0e60
+	ldr r0, _0217fbb4 ; =gMapManager
 	add r1, sp, #0x70
 	ldr r0, [r0]
-	bl func_ov00_0208344c
+	bl _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
 	add r0, sp, #0x44
 	bl func_ov00_020c1500
 	mvn r1, #0
@@ -4849,10 +4849,10 @@ _0217fb0c:
 	ldr r1, [r5, #0xdc]
 	cmp r1, r0
 	bne _0217fb98
-	ldr r0, _0217fbb4 ; =data_027e0e60
+	ldr r0, _0217fbb4 ; =gMapManager
 	add r1, sp, #0x38
 	ldr r0, [r0]
-	bl func_ov00_0208344c
+	bl _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
 	add r0, sp, #0xc
 	bl func_ov00_020c1500
 	mvn r1, #0
@@ -4878,7 +4878,7 @@ _0217fb98:
 	.align 2, 0
 	arm_func_end func_ov40_0217fa44
 _0217fbb0: .word 0x444d4348
-_0217fbb4: .word data_027e0e60
+_0217fbb4: .word gMapManager
 _0217fbb8: .word 0x444d5452
 _0217fbbc: .word 0x444d4b53
 _0217fbc0: .word 0x444d5350
@@ -8485,7 +8485,7 @@ func_ov40_02182694: ; 0x02182694
 	mov r3, #0x47
 	sub r2, r3, #0x49
 	mov r1, #0xff
-	ldr r0, _021827ac ; =data_027e0e60
+	ldr r0, _021827ac ; =gMapManager
 	str r2, [sp, #0xc]
 	str r3, [sp]
 	str r4, [sp, #4]
@@ -8498,7 +8498,7 @@ func_ov40_02182694: ; 0x02182694
 	ldrb r1, [r5, #0xf]
 	ldr r0, [r0]
 	add r2, sp, #0
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	cmp r0, #0
 	beq _02182798
 	ldr r0, [sp, #4]
@@ -8512,7 +8512,7 @@ _02182798:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	arm_func_end func_ov40_02182694
-_021827ac: .word data_027e0e60
+_021827ac: .word gMapManager
 
 	.global func_ov40_021827b0
 	arm_func_start func_ov40_021827b0
@@ -11718,7 +11718,7 @@ func_ov40_02184fb4: ; 0x02184fb4
 	str r0, [r4, #0x84]
 	str r0, [r4, #0x88]
 	ldr r1, [r4, #0x7c]
-	ldr r0, _02185028 ; =data_027e0e60
+	ldr r0, _02185028 ; =gMapManager
 	str r1, [r4, #0x8c]
 	ldr r2, [r4, #0x80]
 	add r1, sp, #0xc
@@ -11728,7 +11728,7 @@ func_ov40_02184fb4: ; 0x02184fb4
 	ldr r2, [r4, #0x88]
 	str r2, [r4, #0x98]
 	ldr r0, [r0]
-	bl func_ov00_0208344c
+	bl _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
 	ldr r1, [sp, #0xc]
 	mov r0, #1
 	str r1, [r4, #0x48]
@@ -11740,7 +11740,7 @@ func_ov40_02184fb4: ; 0x02184fb4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov40_02184fb4
-_02185028: .word data_027e0e60
+_02185028: .word gMapManager
 
 	.global func_ov40_0218502c
 	arm_func_start func_ov40_0218502c
@@ -12505,9 +12505,9 @@ func_ov40_02185878: ; 0x02185878
 	beq _02185b10
 	b _02185b38
 _021858c8:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_020846a4
+	bl _ZN10MapManager18func_ov00_020846a4Ev
 	sub r0, r0, #0xd
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
@@ -12518,11 +12518,11 @@ _021858e4: ; jump table
 	b _02185994 ; case 2
 	b _02185994 ; case 3
 _021858f4:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0xd
-	bl func_ov00_02082650
+	bl _ZN10MapManager18func_ov00_02082650Eiii
 	ldr r0, _02185b44 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097c08Ev
@@ -12542,54 +12542,54 @@ _02185924: ; jump table
 	b _0218594c ; case 8
 	b _02185964 ; case 9
 _0218594c:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x2b
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185964:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x2c
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _0218597c:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x1d
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185994:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0xf
-	bl func_ov00_02082650
-	ldr r0, _02185b40 ; =data_027e0e60
+	bl _ZN10MapManager18func_ov00_02082650Eiii
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #4
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _021859c0:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #6
-	bl func_ov00_02082650
-	ldr r0, _02185b40 ; =data_027e0e60
+	bl _ZN10MapManager18func_ov00_02082650Eiii
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #4
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _021859ec:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_020846a4
+	bl _ZN10MapManager18func_ov00_020846a4Ev
 	sub r0, r0, #0xd
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
@@ -12600,11 +12600,11 @@ _02185a08: ; jump table
 	b _02185ab8 ; case 2
 	b _02185ab8 ; case 3
 _02185a18:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0xe
-	bl func_ov00_02082650
+	bl _ZN10MapManager18func_ov00_02082650Eiii
 	ldr r0, _02185b44 ; =gAdventureFlags
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097c08Ev
@@ -12624,67 +12624,67 @@ _02185a48: ; jump table
 	b _02185a70 ; case 8
 	b _02185a88 ; case 9
 _02185a70:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x25
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185a88:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x2d
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185aa0:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x25
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185ab8:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0x10
-	bl func_ov00_02082650
-	ldr r0, _02185b40 ; =data_027e0e60
+	bl _ZN10MapManager18func_ov00_02082650Eiii
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #2
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185ae4:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #2
-	bl func_ov00_02082650
-	ldr r0, _02185b40 ; =data_027e0e60
+	bl _ZN10MapManager18func_ov00_02082650Eiii
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #2
-	bl func_ov00_02082660
+	bl _ZN10MapManager18func_ov00_02082660Eii
 	b _02185b38
 _02185b10:
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_020846a4
+	bl _ZN10MapManager18func_ov00_020846a4Ev
 	cmp r0, #0xe
 	bne _02185b38
-	ldr r0, _02185b40 ; =data_027e0e60
+	ldr r0, _02185b40 ; =gMapManager
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0xe
-	bl func_ov00_02082670
+	bl _ZN10MapManager18func_ov00_02082670Eii
 _02185b38:
 	str r4, [r6, #0x158]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 	arm_func_end func_ov40_02185878
-_02185b40: .word data_027e0e60
+_02185b40: .word gMapManager
 _02185b44: .word gAdventureFlags
 
 	.global func_ov40_02185b48

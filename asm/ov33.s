@@ -846,7 +846,7 @@ func_ov33_0217c808: ; 0x0217c808
 	sub sp, sp, #0xc
 	mov r4, r0
 	ldr r1, [r4, #0x48]
-	ldr r0, _0217c8ec ; =data_027e0e60
+	ldr r0, _0217c8ec ; =gMapManager
 	str r1, [sp]
 	ldr r1, [r4, #0x4c]
 	ldr r0, [r0]
@@ -855,7 +855,7 @@ func_ov33_0217c808: ; 0x0217c808
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp, #8]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	add r1, r0, #0x800
 	mov r0, r4
 	str r1, [r4, #0x4c]
@@ -901,7 +901,7 @@ func_ov33_0217c808: ; 0x0217c808
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217c808
-_0217c8ec: .word data_027e0e60
+_0217c8ec: .word gMapManager
 _0217c8f0: .word data_02050f54
 _0217c8f4: .word 0x00000666
 _0217c8f8: .word data_027e0ffc
@@ -917,7 +917,7 @@ func_ov33_0217c8fc: ; 0x0217c8fc
 	mov r3, #0
 	str r0, [sp, #0x18]
 	ldr r1, [r4, #0x4c]
-	ldr r0, _0217c988 ; =data_027e0e60
+	ldr r0, _0217c988 ; =gMapManager
 	str r1, [sp, #0x1c]
 	ldr r2, [r4, #0x50]
 	add r1, sp, #0x18
@@ -947,7 +947,7 @@ _0217c97c:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217c8fc
-_0217c988: .word data_027e0e60
+_0217c988: .word gMapManager
 
 	.global func_ov33_0217c98c
 	arm_func_start func_ov33_0217c98c
@@ -1126,11 +1126,11 @@ _0217cb94: ; jump table
 	b _0217cc8c ; case 3
 	b _0217ccc8 ; case 4
 _0217cba8:
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	ldrh r1, [r5, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	beq _0217cf08
 	mov r0, r5
@@ -1162,7 +1162,7 @@ _0217cc24:
 	mov r0, r5
 	bl func_ov33_0217c98c
 	ldr r1, [r5, #0x48]
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	str r1, [sp, #0x1c]
 	ldr r1, [r5, #0x4c]
 	ldr r0, [r0]
@@ -1171,7 +1171,7 @@ _0217cc24:
 	add r1, sp, #0x1c
 	str r2, [sp, #0x24]
 	mov r2, #0
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr r1, [r5, #0x4c]
 	add r0, r0, #0x800
 	cmp r1, r0
@@ -1276,11 +1276,11 @@ _0217cdbc: ; jump table
 	b _0217ceb4 ; case 3
 	b _0217cef0 ; case 4
 _0217cdd0:
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	ldrh r1, [r5, #0x22]
 	ldr r0, [r0]
 	mov r2, #0
-	bl func_ov00_020836dc
+	bl _ZN10MapManager18func_ov00_020836dcEii
 	cmp r0, #0
 	beq _0217cf08
 	mov r0, r5
@@ -1312,7 +1312,7 @@ _0217ce4c:
 	mov r0, r5
 	bl func_ov33_0217c98c
 	ldr r1, [r5, #0x48]
-	ldr r0, _0217cf20 ; =data_027e0e60
+	ldr r0, _0217cf20 ; =gMapManager
 	str r1, [sp, #0x10]
 	ldr r1, [r5, #0x4c]
 	ldr r0, [r0]
@@ -1321,7 +1321,7 @@ _0217ce4c:
 	add r1, sp, #0x10
 	str r2, [sp, #0x18]
 	mov r2, #0
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr r1, [r5, #0x4c]
 	add r0, r0, #0x800
 	cmp r1, r0
@@ -1368,7 +1368,7 @@ _0217cf08:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217ca88
-_0217cf20: .word data_027e0e60
+_0217cf20: .word gMapManager
 _0217cf24: .word data_027e0ffc
 _0217cf28: .word 0x000001fb
 
@@ -1755,7 +1755,7 @@ _0217d3b0:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 _0217d3d0:
-	ldr r0, _0217d3f4 ; =data_027e0fbc
+	ldr r0, _0217d3f4 ; =gHealthManager
 	mov r2, #5
 	ldr r1, [r0]
 	mov r0, #1
@@ -1767,7 +1767,7 @@ _0217d3e8:
 	.align 2, 0
 	arm_func_end func_ov33_0217d394
 _0217d3f0: .word data_027e0e28
-_0217d3f4: .word data_027e0fbc
+_0217d3f4: .word gHealthManager
 
 	.global func_ov33_0217d3f8
 	arm_func_start func_ov33_0217d3f8
@@ -1780,7 +1780,7 @@ func_ov33_0217d3f8: ; 0x0217d3f8
 	beq _0217d444
 	cmp r1, #0x1f
 	bne _0217d484
-	ldr r1, _0217d48c ; =data_027e0fbc
+	ldr r1, _0217d48c ; =gHealthManager
 	ldr r1, [r1]
 	ldrsh r1, [r1, #8]
 	mov r1, r1, lsl #0x18
@@ -1793,7 +1793,7 @@ _0217d43c:
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 _0217d444:
-	ldr r0, _0217d48c ; =data_027e0fbc
+	ldr r0, _0217d48c ; =gHealthManager
 	ldr r0, [r0]
 	ldrsh r0, [r0, #4]
 	sub r1, r0, #0x10
@@ -1815,7 +1815,7 @@ _0217d484:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217d3f8
-_0217d48c: .word data_027e0fbc
+_0217d48c: .word gHealthManager
 
 	.global func_ov33_0217d490
 	arm_func_start func_ov33_0217d490

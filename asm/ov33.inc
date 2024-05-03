@@ -68,14 +68,13 @@
 .extern data_027e0c68
 .extern data_027e0e28
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
 .extern data_027e0f94
 .extern data_027e0fa0
 .extern data_027e0fac
-.extern data_027e0fbc
 .extern data_027e0fc8
 .extern data_027e0fe0
 .extern data_027e0fe4
@@ -115,8 +114,8 @@
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_020836dc
-.extern func_ov00_02083ee0
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern func_ov00_0208726c
 .extern func_ov00_02087338
 .extern func_ov00_020876bc
@@ -249,4 +248,5 @@
 .extern func_ov14_02145f0c
 .extern func_ov18_02160a54
 .extern func_ov18_02160a64
+.extern gHealthManager
 .extern strncpy

@@ -3206,7 +3206,7 @@ func_ov09_02114554: ; 0x02114554
 	blx _ZN12ActorManager14Actor_vfunc_28Ev
 	mov r0, #0
 	str r0, [sp, #8]
-	ldr r0, _021146ac ; =data_027e0e60
+	ldr r0, _021146ac ; =gMapManager
 	add r1, sp, #0x14
 	ldr r7, [r0]
 	ldr r0, [sp, #8]
@@ -3218,7 +3218,7 @@ func_ov09_02114554: ; 0x02114554
 	blx func_020078f4
 	add r0, r7, #0
 	add r1, sp, #0x14
-	blx func_ov00_020820ec
+	blx _ZN10MapManager18func_ov00_020820ecEPi
 	ldr r0, _021146b0 ; =data_027e0d38
 	ldr r0, [r0]
 	add r0, #0xc
@@ -3242,7 +3242,7 @@ func_ov09_02114554: ; 0x02114554
 	str r0, [sp, #8]
 _021145b6:
 	add r0, r7, #0
-	blx func_ov00_02082908
+	blx _ZN10MapManager20GetCourseData_Unk_b0Ev
 	add r4, sp, #0x1c
 	str r0, [sp, #0xc]
 	mov r0, #0
@@ -3271,7 +3271,7 @@ _021145f2:
 	add r1, r4, #0
 	add r2, sp, #0x10
 	add r3, sp, #0x1c
-	blx func_ov00_020820fc
+	blx _ZN10MapManager18func_ov00_020820fcEiii
 	add r0, sp, #0x10
 	ldrh r1, [r0]
 	cmp r1, #0xcf
@@ -3323,7 +3323,7 @@ _02114634:
 	ldr r1, [sp, #4]
 	add r0, r7, #0
 	add r2, r4, #0
-	blx func_ov00_0208210c
+	blx _ZN10MapManager18func_ov00_0208210cEii
 	mov r0, #0x71
 	lsl r0, r0, #2
 	str r0, [sp]
@@ -3345,15 +3345,15 @@ _02114688:
 	ldr r1, [sp, #8]
 	add r0, r5, #0
 	bl func_ov09_02114520
-	ldr r0, _021146ac ; =data_027e0e60
+	ldr r0, _021146ac ; =gMapManager
 	ldr r0, [r0]
-	blx func_ov00_02082adc
+	blx _ZN10MapManager18func_ov00_02082adcEv
 	add sp, #0x1ec
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_02114554
 _021146a8: .word data_027e0fe4
-_021146ac: .word data_027e0e60
+_021146ac: .word gMapManager
 _021146b0: .word data_027e0d38
 _021146b4: .word data_ov00_020e9f10
 _021146b8: .word data_ov00_020ea110
@@ -3580,7 +3580,7 @@ _0211483a:
 	strb r0, [r1]
 	add r0, sp, #0x48
 	bl func_ov00_0207a38c
-	ldr r0, _02114988 ; =data_027e0fbc
+	ldr r0, _02114988 ; =gHealthManager
 	add r1, sp, #0x48
 	ldr r0, [r0]
 	bl func_ov00_020b7ffc
@@ -3706,7 +3706,7 @@ _02114960:
 	thumb_func_end func_ov09_02114810
 _02114980: .word data_027e0dbc
 _02114984: .word data_ov00_020e9ec0
-_02114988: .word data_027e0fbc
+_02114988: .word gHealthManager
 _0211498c: .word data_ov00_020e9e18
 _02114990: .word data_ov09_0211f5b4
 _02114994: .word data_ov00_020e9f08
@@ -16510,9 +16510,9 @@ _0211c3d4: .word data_027e0ce0
 func_ov09_0211c3d8: ; 0x0211c3d8
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
-	ldr r0, _0211c418 ; =data_027e0e60
+	ldr r0, _0211c418 ; =gMapManager
 	ldr r0, [r0]
-	blx func_ov00_020848b8
+	blx _ZN10MapManager18func_ov00_020848b8Ev
 	strb r0, [r4, #0xa]
 	ldr r5, [r4, #4]
 	cmp r5, #0
@@ -16541,7 +16541,7 @@ _0211c416:
 	pop {r3, r4, r5, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211c3d8
-_0211c418: .word data_027e0e60
+_0211c418: .word gMapManager
 
 	.global func_ov09_0211c41c
 	thumb_func_start func_ov09_0211c41c
@@ -16992,9 +16992,9 @@ _0211c6f2:
 	thumb_func_end func_ov09_0211c6b4
 _0211c6fc: .word gItemManager
 
-	.global func_ov09_0211c700
-	thumb_func_start func_ov09_0211c700
-func_ov09_0211c700: ; 0x0211c700
+	.global EquipLinebeckCannon
+	thumb_func_start EquipLinebeckCannon
+EquipLinebeckCannon: ; 0x0211c700
 	push {r3, lr}
 	ldr r0, _0211c720 ; =gItemManager
 	mov r1, #3
@@ -17010,7 +17010,7 @@ func_ov09_0211c700: ; 0x0211c700
 _0211c71c:
 	pop {r3, pc}
 	nop
-	thumb_func_end func_ov09_0211c700
+	thumb_func_end EquipLinebeckCannon
 _0211c720: .word gItemManager
 
 	.global func_ov09_0211c724
@@ -17414,7 +17414,7 @@ func_ov09_0211c9a8: ; 0x0211c9a8
 	add r1, r0, #0
 	add r0, r6, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEjj
+	blx _ZN11ItemManager10GiveRupeesEsb
 	ldr r0, _0211c9e4 ; =gItemManager
 	add r1, r5, #0
 	ldr r6, [r0]
@@ -17445,7 +17445,7 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	add r1, r0, #0
 	add r0, r4, #0
 	mov r2, #1
-	blx _ZN11ItemManager10GiveRupeesEjj
+	blx _ZN11ItemManager10GiveRupeesEsb
 	ldr r0, _0211ca1c ; =gItemManager
 	add r1, r5, #0
 	ldr r4, [r0]
@@ -17463,9 +17463,9 @@ func_ov09_0211c9e8: ; 0x0211c9e8
 	thumb_func_end func_ov09_0211c9e8
 _0211ca1c: .word gItemManager
 
-	.global func_ov09_0211ca20
-	thumb_func_start func_ov09_0211ca20
-func_ov09_0211ca20: ; 0x0211ca20
+	.global GiveShipPart
+	thumb_func_start GiveShipPart
+GiveShipPart: ; 0x0211ca20
 	push {r3, r4, r5, r6, lr}
 	sub sp, #4
 	add r5, r0, #0
@@ -17538,7 +17538,7 @@ _0211ca94:
 	add sp, #4
 	pop {r3, r4, r5, r6, pc}
 	.align 2, 0
-	thumb_func_end func_ov09_0211ca20
+	thumb_func_end GiveShipPart
 _0211caa8: .word gItemManager
 _0211caac: .word data_ov09_0211f294
 _0211cab0: .word data_ov09_0211f298
@@ -18378,14 +18378,14 @@ func_ov09_0211d180: ; 0x0211d180
 	str r2, [sp, #0x94]
 	add r3, r2, r1
 	ldr r9, [r4, #8]
-	ldr r1, _0211d658 ; =data_027e0e60
+	ldr r1, _0211d658 ; =gMapManager
 	mov r5, r0
 	ldr r0, [r1]
 	add r1, sp, #0x90
 	mov r2, r6
 	str r3, [sp, #0x94]
 	str r9, [sp, #0x98]
-	bl func_ov00_02083ee0
+	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr r1, [sp, #0x94]
 	cmp r1, r0
 	movle r6, #1
@@ -18690,7 +18690,7 @@ _0211d628:
 	.align 2, 0
 	arm_func_end func_ov09_0211d180
 _0211d654: .word 0xfffffccd
-_0211d658: .word data_027e0e60
+_0211d658: .word gMapManager
 _0211d65c: .word 0x00000385
 _0211d660: .word 0xfffff4a4
 _0211d664: .word 0x0000099a
@@ -18850,7 +18850,7 @@ func_ov09_0211d860: ; 0x0211d860
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x40
 	add r6, r0, #0
-	ldr r0, _0211d89c ; =data_027e0e60
+	ldr r0, _0211d89c ; =gMapManager
 	mov r5, #0
 	ldr r4, [r0]
 	add r7, sp, #0
@@ -18858,7 +18858,7 @@ _0211d86e:
 	add r0, r4, #0
 	add r1, r7, #0
 	add r2, r5, #0
-	blx func_ov00_02082614
+	blx _ZN10MapManager18func_ov00_02082614Eii
 	add r0, r7, #0
 	add r1, r6, #0
 	blx strcmp
@@ -18879,7 +18879,7 @@ _0211d88a:
 	pop {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 	thumb_func_end func_ov09_0211d860
-_0211d89c: .word data_027e0e60
+_0211d89c: .word gMapManager
 
 	.global func_ov09_0211d8a0
 	thumb_func_start func_ov09_0211d8a0

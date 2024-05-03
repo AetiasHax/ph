@@ -2,7 +2,7 @@
 .extern Divide
 .extern _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager10RemoveItemEi
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei
@@ -76,7 +76,7 @@
 .extern data_02052f54
 .extern data_027e0764
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f90
 .extern data_027e0f94
@@ -118,11 +118,11 @@
 .extern func_ov00_0207c1b0
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_020836dc
-.extern func_ov00_020839b4
-.extern func_ov00_020839c4
-.extern func_ov00_02083ee0
-.extern func_ov00_02083fb0
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_020839b4Ei
+.extern _ZN10MapManager18func_ov00_020839c4Ei
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern func_ov00_02088000
 .extern func_ov00_02094824
 .extern func_ov00_0209a4f4

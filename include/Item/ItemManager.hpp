@@ -1,17 +1,29 @@
 #pragma once
 
+extern "C" {
+    #include <string.h>
+}
+
 #include "global.h"
 #include "types.h"
 #include "lib/math.h"
 
 #include "Actor/ActorNavi.hpp"
+#include "DTCM/UnkStruct_027e0f78.hpp"
+#include "Save/AdventureFlags.hpp"
 #include "Item/Item.hpp"
+#include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
+#include "Player/HealthManager.hpp"
+#include "Sound/Sfx.hpp"
 #include "System/SysNew.hpp"
 #include "System/OverlayManager.hpp"
 #include "Render/ModelRender.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
+#define MAX_AMMO_UPGRADE 2
+#define MAX_UNK_0BA 9
+#define MAX_POTIONS 2
 
 typedef s32 FairyId;
 enum FairyId_ {
@@ -79,7 +91,7 @@ typedef u8 Potion;
 enum Potion_ {
     Potion_None,
     Potion_Red,
-    Potion_Blue,
+    Potion_Purple,
     Potion_Yellow,
     Potion_COUNT,
 };
@@ -197,23 +209,23 @@ private:
     /* 0b4 */ u16 mQuiverSize;
     /* 0b6 */ u16 mBombBagSize;
     /* 0b8 */ u16 mBombchuBagSize;
-    /* 0ba */ unk16 mUnk_0ba; // only between 0 and 9
-    /* 0bc */ Potion mPotions[2];
+    /* 0ba */ u16 mUnk_0ba; // only between 0 and 9
+    /* 0bc */ Potion mPotions[MAX_POTIONS];
     /* 0be */ unk8 mUnk_0be[2]; // padding?
     /* 0c0 */ ItemModel *mItemModels[ItemModelId_COUNT];
     /* 100 */ ItemModel *mDungeonItemModels[DungeonItemModelId_COUNT]; // non-null in dungeons/caves
     /* 114 */ ModelRender *mUnk_114;
     /* 118 */ ItemId mFanfareItem;
-    /* 11c */ unk32 mUnk_11c;
+    /* 11c */ SfxId mFanfareSfx;
     /* 120 */ void *mFanfareItemModel;
     /* 124 */ void *mUnk_124;
     /* 128 */ ItemFlags mItemFlags;
     /* 138 */ u32 mSalvagedTreasureFlags;
     /* 13c */ ShipPartPricesShown mShipPartPricesShown;
     /* 148 */ u32 mTreasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
-    /* 14c */ unk8 mUnk_14c;
+    /* 14c */ bool mMuteNextFanfare;
     /* 14d */ u8 mUnk_14d;
-    /* 14e */ unk8 mUnk_14e[0x2];
+    /* 14e */ unk8 mUnk_14e[0x2]; // padding?
     /* 150 */
 
 public:
@@ -267,6 +279,7 @@ public:
     void LoadFanfareItem(ItemId id);
     bool GetFanfareItemScale(Vec3p *pScale) const;
     void LoadDungeonItemModels();
+    static void PlayItemFanfareSfx(ItemId item);
 
     // Ship
     ShipType GetEquippedShipPart(ShipPart part) const;
@@ -296,12 +309,12 @@ public:
     bool HasItem(ItemFlag item) const;
     void AddItem(ItemFlag item);
     void RemoveItem(ItemFlag item);
-    void GiveItem(ItemId id, unk32 param2, unk32 param3);
+    void GiveItem(ItemId id);
     void GiveEquipItem(ItemFlag item, u16 ammo);
 
     // Rupees
-    u32 GetMaxRupees() const;
-    void GiveRupees(u16 amount, unk32 param2);
+    s32 GetMaxRupees() const;
+    void GiveRupees(s16 amount, bool param2);
 
     // Potion
     void SetPotion(u32 index, Potion potion);
@@ -310,11 +323,12 @@ public:
     bool HasPurplePotion() const;
     void UnequipPotion();
 
-    // Unknown
-    void func_ov00_020ae350() const;
+    // Keys
+    unk32 GetNumKeys() const;
     void GiveKeys(u32 amount);
-    void func_ov00_020ae4dc(unk32 param1); // sets mUnk_0ba
-    void func_ov00_020ae648(unk32 param1, unk32 param2, unk32 param3);
+
+    // Unknown
+    void func_ov00_020ae4dc(s32 param1);
 };
 
 extern ItemManager *gItemManager;

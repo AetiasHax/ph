@@ -294,3 +294,32 @@ _0207af84:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end _ZN12TouchControl18func_ov00_0207af38Etb
+
+	.global _ZN12TouchControlD1Ev
+	arm_func_start _ZN12TouchControlD1Ev
+_ZN12TouchControlD1Ev: ; 0x0207af9c
+	bx lr
+	arm_func_end _ZN12TouchControlD1Ev
+
+    .section .init, 4, 1, 4
+	.global func_ov00_020df38c
+	arm_func_start func_ov00_020df38c
+func_ov00_020df38c: ; 0x020df38c
+	stmdb sp!, {r3, lr}
+	ldr r0, _020df3ac ; =data_027e0d78
+	bl func_ov08_02113080
+	ldr r0, _020df3ac ; =data_027e0d78
+	ldr r1, _020df3b0 ; =_ZN12TouchControlD1Ev
+	ldr r2, _020df3b4 ; =data_027e0d6c
+	bl __register_global_object
+	ldmia sp!, {r3, pc}
+	.align 2, 0
+	arm_func_end func_ov00_020df38c
+_020df3ac: .word data_027e0d78
+_020df3b0: .word _ZN12TouchControlD1Ev - 1
+_020df3b4: .word data_027e0d6c
+
+	.section .ctor, 4, 1, 4
+	.global data_ov00_020e1e90
+data_ov00_020e1e90: ; 0x020e1e90
+    .word func_ov00_020df378

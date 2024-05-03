@@ -2,7 +2,7 @@
 .extern Divide
 .extern FastDivide
 .extern _ZN11ItemManager7AddItemEi
-.extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN11ItemManager8GiveItemEi
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags15Get_FlagsUnk_18EiP9FlagsUnk2
@@ -89,7 +89,7 @@
 .extern data_027e0de4
 .extern data_027e0e2c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f78
@@ -260,12 +260,12 @@
 .extern func_ov00_0207c074
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c444
-.extern func_ov00_02082650
-.extern func_ov00_02082660
-.extern func_ov00_02082670
-.extern func_ov00_0208344c
-.extern func_ov00_020838e8
-.extern func_ov00_020846a4
+.extern _ZN10MapManager18func_ov00_02082650Eiii
+.extern _ZN10MapManager18func_ov00_02082660Eii
+.extern _ZN10MapManager18func_ov00_02082670Eii
+.extern _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
+.extern _ZN10MapManager18func_ov00_020846a4Ev
 .extern func_ov00_02089b08
 .extern func_ov00_02089b50
 .extern func_ov00_02089b88

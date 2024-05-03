@@ -1,6 +1,7 @@
 #pragma once
 .extern Divide
 .extern LoadTreasureItemFanfare
+.extern _ZN10MapManager18func_ov00_020847e0Ev
 .extern _ZN11ItemManager13EquipShipPartEjj
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN9SysObjectdlEPv
@@ -11,8 +12,8 @@
 .extern _ZNK11ItemManager13GetFairyLevelEi
 .extern _ZNK11ItemManager16GetShipPartCountEjj
 .extern _ZNK11ItemManager18GetUnk_09e_DividedEj
-.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
 .extern _ZNK11ItemManager19GetEquippedShipPartEj
+.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
@@ -31,10 +32,8 @@
 .extern data_027e0d0c
 .extern data_027e0d44
 .extern data_027e0d78
-.extern data_027e0e60
 .extern data_027e0f88
 .extern data_027e0f8c
-.extern data_027e0fbc
 .extern data_027e1044
 .extern data_027e1050
 .extern data_027e1058
@@ -115,7 +114,6 @@
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207b1fc
-.extern func_ov00_020847e0
 .extern func_ov00_0208de04
 .extern func_ov00_0208dec8
 .extern func_ov00_0208def0
@@ -259,4 +257,6 @@
 .extern func_ov45_0218a284
 .extern func_ov45_0218db94
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
+.extern gMapManager

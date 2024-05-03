@@ -293,11 +293,11 @@ _02189894:
 	strh r1, [r0, #0x18]
 	cmp r3, #2
 	blo _02189894
-	ldr r0, _02189af4 ; =data_027e0e60
+	ldr r0, _02189af4 ; =gMapManager
 	add r2, sp, #0x48
 	ldr r0, [r0]
 	mov r1, #0x42
-	bl func_ov00_02083918
+	bl _ZN10MapManager18func_ov00_02083918EiPi
 	cmp r0, #0
 	beq _021898e0
 	ldr r0, _02189af8 ; =data_027e0f64
@@ -308,11 +308,11 @@ _02189894:
 	mov r3, r2
 	bl func_ov00_02087400
 _021898e0:
-	ldr r0, _02189af4 ; =data_027e0e60
+	ldr r0, _02189af4 ; =gMapManager
 	add r2, sp, #0x64
 	ldr r0, [r0]
 	mov r1, #0x43
-	bl func_ov00_02083918
+	bl _ZN10MapManager18func_ov00_02083918EiPi
 	cmp r0, #0
 	beq _02189918
 	ldr r0, _02189af8 ; =data_027e0f64
@@ -326,7 +326,7 @@ _02189918:
 	ldr r0, _02189afc ; =gItemManager
 	mov r1, #5
 	ldr r0, [r0]
-	blx _ZN11ItemManager13ForceEquipItemEi
+	blx _ZN11ItemManager14ForceEquipItemEi
 	ldr r1, _02189b00 ; =data_027e0fc8
 	mov r0, r7
 	ldr r4, [r1]
@@ -447,7 +447,7 @@ _02189a74:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
 	arm_func_end func_ov42_02189834
-_02189af4: .word data_027e0e60
+_02189af4: .word gMapManager
 _02189af8: .word data_027e0f64
 _02189afc: .word gItemManager
 _02189b00: .word data_027e0fc8

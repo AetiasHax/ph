@@ -1,5 +1,10 @@
 #pragma once
 .extern Divide
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager17GetMapData_Unk_d0EP5Vec3p
+.extern _ZN10MapManager18func_ov00_020836bcEjPi
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
@@ -88,7 +93,7 @@
 .extern data_027e0d38
 .extern data_027e0dbc
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f84
@@ -175,11 +180,6 @@
 .extern func_ov00_02081f50
 .extern func_ov00_02081f58
 .extern func_ov00_02081f6c
-.extern func_ov00_0208344c
-.extern func_ov00_020836bc
-.extern func_ov00_020836dc
-.extern func_ov00_020838e8
-.extern func_ov00_02083ee0
 .extern func_ov00_020872e8
 .extern func_ov00_020875f8
 .extern func_ov00_02087d34

@@ -1,5 +1,15 @@
 #pragma once
 .extern Approach_thunk
+.extern _ZN10MapManager17GetMapData_Unk_4cEv
+.extern _ZN10MapManager18func_ov00_02082680Eii
+.extern _ZN10MapManager18func_ov00_02082b3cEi
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_020838e8EjPi
+.extern _ZN10MapManager18func_ov00_02083f44EP5Vec3p
+.extern _ZN10MapManager18func_ov00_020843ecEPi
+.extern _ZN10MapManager18func_ov00_02084b38Eiii
+.extern _ZN10MapManager18func_ov00_02084be0Eii
+.extern _ZN10MapManager8SpawnNPCEP5Vec3pii
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei
@@ -92,7 +102,6 @@
 .extern data_027e0c68
 .extern data_027e0ce0
 .extern data_027e0e58
-.extern data_027e0e60
 .extern data_027e0f64
 .extern data_027e0f68
 .extern data_027e0f6c
@@ -171,16 +180,6 @@
 .extern func_ov00_0207c31c
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
-.extern func_ov00_02082680
-.extern func_ov00_02082b3c
-.extern func_ov00_020836dc
-.extern func_ov00_020838e8
-.extern func_ov00_02083f44
-.extern func_ov00_02084120
-.extern func_ov00_020843ec
-.extern func_ov00_02084a5c
-.extern func_ov00_02084b38
-.extern func_ov00_02084be0
 .extern func_ov00_0208726c
 .extern func_ov00_020876bc
 .extern func_ov00_02087ab0
@@ -323,7 +322,7 @@
 .extern func_ov09_0211c45c
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern func_ov09_0211ca20
+.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov14_02120ac4
 .extern func_ov14_021231d4
@@ -401,6 +400,7 @@
 .extern func_ov14_0214aa2c
 .extern gAdventureFlags
 .extern gItemManager
+.extern gMapManager
 .extern gOverlayManager
 .extern strcat
 .extern strcpy
