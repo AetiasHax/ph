@@ -76,13 +76,13 @@ inc_files_created = 0
 def generate_externs(file: Path):
     global inc_files_created
 
-    with tempfile.NamedTemporaryFile('w', suffix='.s', delete=True, encoding='Shift-JIS') as tmp_asm_file:
+    with tempfile.NamedTemporaryFile('w', suffix='.s', delete=True) as tmp_asm_file:
         file_name = file.name.rsplit('.', 1)[0]
         inc_file_name = f'{file_name}.inc'
         inc_path = file.parent / inc_file_name
 
         # Comment out '.include ".../my_file.inc"
-        with open(file, 'r', encoding='Shift-JIS') as f:
+        with open(file, 'r') as f:
             contents = f.read()
         lines = contents.splitlines()
         has_inc_file = False
@@ -112,7 +112,7 @@ def generate_externs(file: Path):
         if not has_inc_file:
             relative_inc_path = inc_path.relative_to('asm/')
             lines.insert(0, f'    .include "{relative_inc_path}"')
-            with open(file, 'w', encoding='Shift-JIS') as f:
+            with open(file, 'w') as f:
                 for line in lines:
                     f.write(line)
                     f.write('\n')

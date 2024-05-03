@@ -35,7 +35,7 @@ lines_updated = 0
 
 def rename_in_file(file: Path):
     global files_updated, lines_updated
-    with open(file, 'r', encoding="Shift-JIS") as f:
+    with open(file, 'r') as f:
         contents = f.read()
     has_symbol = any(contents.find(symbol) >= 0 for symbol in symbols_to_rename.keys())
     if not has_symbol: return
@@ -49,7 +49,7 @@ def rename_in_file(file: Path):
             lines_updated += 1
     print()
     files_updated += 1
-    with open(file, 'w', encoding="Shift-JIS") as f:
+    with open(file, 'w') as f:
         for line in lines:
             f.write(line)
             f.write('\n')
