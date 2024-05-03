@@ -3035,7 +3035,7 @@ _02192754:
 	strb r2, [r5, #0x48b]
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldrb r2, [r5, #0x48a]
 	ldr r0, _021927d0 ; =gItemManager
 	sub r1, r4, #1

@@ -167,7 +167,7 @@
 .extern func_ov05_021082e4
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern func_ov09_0211ca20
+.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov14_021448f4
 .extern func_ov14_02144a90

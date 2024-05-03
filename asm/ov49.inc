@@ -2,7 +2,7 @@
 .extern Divide
 .extern _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager10RemoveItemEi
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei

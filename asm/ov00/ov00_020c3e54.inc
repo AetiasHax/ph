@@ -148,7 +148,6 @@
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0fb8
-.extern data_027e0fbc
 .extern data_027e0fc8
 .extern data_027e0fd4
 .extern data_027e0fe0
@@ -668,6 +667,7 @@
 .extern func_ov26_021767ec
 .extern func_ov29_0216d918
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern gMapManager
 .extern gOverlayManager

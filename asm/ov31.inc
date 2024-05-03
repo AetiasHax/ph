@@ -1,7 +1,8 @@
 #pragma once
 .extern Divide
+.extern GiveShipPart
 .extern LoadTreasureItemFanfare
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager8GiveAmmoEit
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags3GetEj
@@ -183,7 +184,6 @@
 .extern func_ov09_0211c1a8
 .extern func_ov09_0211c980
 .extern func_ov09_0211c9a0
-.extern func_ov09_0211ca20
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cca4
 .extern func_ov09_0211ccb4

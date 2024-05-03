@@ -1,7 +1,7 @@
 #pragma once
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc
-.extern _ZN11ItemManager19SetTreasureSalvagedEjj
+.extern _ZN11ItemManager21AddShipPartPriceShownEjj
 .extern _ZN11ItemManager21AddTreasurePriceShownEj
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN5Actor10SetUnk_11bEv
@@ -46,7 +46,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager16GetShipPartCountEjj
 .extern _ZNK11ItemManager16GetTreasureCountEj
-.extern _ZNK11ItemManager18IsTreasureSalvagedEjj
+.extern _ZNK11ItemManager21HasShipPartPriceShownEjj
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern __register_global_object
 .extern data_020691a0
@@ -239,7 +239,7 @@
 .extern func_ov09_0211c9a0
 .extern func_ov09_0211c9a8
 .extern func_ov09_0211c9e8
-.extern func_ov09_0211ca20
+.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov09_0211cb3c
 .extern func_ov09_0211cb5c

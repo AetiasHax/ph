@@ -4,7 +4,7 @@
 .extern _ZN10MapManager18func_ov00_020838e8EjPi
 .extern _ZN10MapManager18func_ov00_02084740Ev
 .extern _ZN10MapManager18func_ov00_02086044Eiii
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager7AddItemEi
 .extern _ZN11ItemManager8GiveKeysEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j

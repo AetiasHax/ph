@@ -75,7 +75,6 @@
 .extern data_027e0f94
 .extern data_027e0fa0
 .extern data_027e0fac
-.extern data_027e0fbc
 .extern data_027e0fc8
 .extern data_027e0fe0
 .extern data_027e0fe4
@@ -249,4 +248,5 @@
 .extern func_ov14_02145f0c
 .extern func_ov18_02160a54
 .extern func_ov18_02160a64
+.extern gHealthManager
 .extern strncpy

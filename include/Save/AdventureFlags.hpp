@@ -9,7 +9,33 @@
 
 typedef u32 AdventureFlag;
 enum AdventureFlag_ {
-    AdventureFlag_COUNT = 391,
+    /* 0x09 */ AdventureFlag_SWSeaChart = 9,
+    /* 0x0a */ AdventureFlag_NWSeaChart = 10,
+    /* 0x0b */ AdventureFlag_SESeaChart = 11,
+    /* 0x0c */ AdventureFlag_NESeaChart = 12,
+
+    /* 0x13 */ AdventureFlag_Hourglass = 19,
+
+    /* 0x16 */ AdventureFlag_SunKey = 22,
+    /* 0x17 */ AdventureFlag_Unk_23 = 23,
+
+    /* 0x2b */ AdventureFlag_FishingRod = 43,
+
+    /* 0x30 */ AdventureFlag_Cannon = 48,
+
+    /* 0x7d */ AdventureFlag_Azurine = 125,
+    /* 0x7e */ AdventureFlag_Crimsonine = 126,
+    /* 0x7f */ AdventureFlag_Aquanine = 127,
+    /* 0x80 */ AdventureFlag_Unk_128 = 128,
+
+    /* 0x8c */ AdventureFlag_SalvageArm = 140,
+
+    /* 0x126 */ AdventureFlag_ReceivedGoldenChimney = 294,
+    /* 0x127 */ AdventureFlag_ReceivedGoldenHandrail = 295,
+    /* 0x128 */ AdventureFlag_ReceivedGoldenCannon = 296,
+    /* 0x129 */ AdventureFlag_ReceivedGoldenHull = 297,
+
+    /* 0x187 */ AdventureFlag_COUNT = 391,
 };
 
 struct FlagsUnk2 {
@@ -46,6 +72,7 @@ struct FlagsUnk {
 };
 
 class AdventureFlags : public SysObject {
+public:
     /* 00 */ unk32 mFlags[16];
     /* 40 */ CutsceneHandler *mCutsceneHandler;
     /* 44 */ void *mUnk_44;

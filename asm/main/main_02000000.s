@@ -76814,7 +76814,7 @@ _0203826c:
 	ldr r1, [r4, #4]
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	add sp, sp, #0x18
 	mov r0, #2
 	ldmia sp!, {r3, r4, r5, pc}

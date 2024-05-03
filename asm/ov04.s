@@ -7771,7 +7771,7 @@ _0210482c:
 _02104840:
 	bl func_ov04_02105a64
 	bl func_ov04_021084e8
-	ldr r0, _021049b0 ; =data_027e0fbc
+	ldr r0, _021049b0 ; =gHealthManager
 	ldr r1, [sp, #8]
 	ldr r0, [r0]
 	bl func_ov04_02107f48
@@ -7918,7 +7918,7 @@ _021049a0: .word data_ov12_02137c64
 _021049a4: .word data_027e077c
 _021049a8: .word 0x04000304
 _021049ac: .word 0xffff7fff
-_021049b0: .word data_027e0fbc
+_021049b0: .word gHealthManager
 _021049b4: .word data_ov00_020e9360
 _021049b8: .word data_027e0e5c
 _021049bc: .word data_027e0d04
@@ -8001,7 +8001,7 @@ _02104a3c:
 	ldr r0, _02104afc ; =data_ov00_020e9370
 	bl func_ov04_0210694c
 	bl func_ov00_02079df0
-	ldr r0, _02104b00 ; =data_027e0fbc
+	ldr r0, _02104b00 ; =gHealthManager
 	ldr r0, [r0]
 	bl func_ov04_02108008
 	bl func_ov04_02105a8c
@@ -8029,7 +8029,7 @@ _02104af0: .word data_027e0c68
 _02104af4: .word data_027e103c
 _02104af8: .word data_02068e64
 _02104afc: .word data_ov00_020e9370
-_02104b00: .word data_027e0fbc
+_02104b00: .word gHealthManager
 _02104b04: .word data_027e0cbc
 
 	.global func_ov04_02104b08
@@ -14886,19 +14886,19 @@ func_ov04_02107e54: ; 0x02107e54
 	beq _02107e6a
 	bl func_ov04_02107e9c
 _02107e6a:
-	ldr r1, _02107e74 ; =data_027e0fbc
+	ldr r1, _02107e74 ; =gHealthManager
 	str r0, [r1]
 	pop {r3, pc}
 	.align 2, 0
 	thumb_func_end func_ov04_02107e54
 _02107e70: .word data_027e0ce0
-_02107e74: .word data_027e0fbc
+_02107e74: .word gHealthManager
 
 	.global func_ov04_02107e78
 	thumb_func_start func_ov04_02107e78
 func_ov04_02107e78: ; 0x02107e78
 	push {r4, lr}
-	ldr r0, _02107e98 ; =data_027e0fbc
+	ldr r0, _02107e98 ; =gHealthManager
 	ldr r4, [r0]
 	cmp r4, #0
 	beq _02107e8e
@@ -14907,13 +14907,13 @@ func_ov04_02107e78: ; 0x02107e78
 	add r0, r4, #0
 	blx _ZN9SysObjectdlEPv
 _02107e8e:
-	ldr r0, _02107e98 ; =data_027e0fbc
+	ldr r0, _02107e98 ; =gHealthManager
 	mov r1, #0
 	str r1, [r0]
 	pop {r4, pc}
 	nop
 	thumb_func_end func_ov04_02107e78
-_02107e98: .word data_027e0fbc
+_02107e98: .word gHealthManager
 
 	.global func_ov04_02107e9c
 	thumb_func_start func_ov04_02107e9c

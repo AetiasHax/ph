@@ -1497,7 +1497,7 @@ _020f01e4:
 	mov r1, #9
 	str r6, [sp]
 	bl func_0203493c
-	ldr r0, _020f0730 ; =data_027e0fbc
+	ldr r0, _020f0730 ; =gHealthManager
 	ldr r0, [r0]
 	ldrb r0, [r0, #0xe]
 	cmp r0, #0
@@ -1508,7 +1508,7 @@ _020f01e4:
 	mov r1, #0xa
 	str r6, [sp]
 	bl func_0203493c
-	ldr r0, _020f0730 ; =data_027e0fbc
+	ldr r0, _020f0730 ; =gHealthManager
 	mov r1, #0x3c
 	ldr r0, [r0]
 	ldrh r6, [r0, #0xc]
@@ -1842,7 +1842,7 @@ _020f0720: .word gItemManager
 _020f0724: .word gAdventureFlags
 _020f0728: .word 0x91a2b3c5
 _020f072c: .word 0x88888889
-_020f0730: .word data_027e0fbc
+_020f0730: .word gHealthManager
 
 	.global func_ov02_020f0734
 	arm_func_start func_ov02_020f0734
@@ -2883,7 +2883,7 @@ _020f1424:
 	mov r1, r0
 	ldr r2, [r5, #0x1c]
 	mov r0, r6
-	blx _ZNK11ItemManager18IsTreasureSalvagedEjj
+	blx _ZNK11ItemManager21HasShipPartPriceShownEjj
 	cmp r0, #0
 	beq _020f14f4
 	add ip, sp, #0x28
@@ -5052,10 +5052,10 @@ func_ov02_020f2e84: ; 0x020f2e84
 	bl func_ov00_020d77e4
 	mov r0, #1
 	blx func_ov09_0211bf3c
-	ldr r0, _020f2f18 ; =data_027e0fbc
+	ldr r0, _020f2f18 ; =gHealthManager
 	ldr r0, [r0]
 	blx func_ov00_020b8060
-	ldr r0, _020f2f18 ; =data_027e0fbc
+	ldr r0, _020f2f18 ; =gHealthManager
 	ldr r1, [r0]
 	ldrsh r0, [r1, #4]
 	strh r0, [r1, #6]
@@ -5065,7 +5065,7 @@ func_ov02_020f2e84: ; 0x020f2e84
 _020f2f0c: .word gItemManager
 _020f2f10: .word data_ov02_020f6c80
 _020f2f14: .word data_ov00_020eec9c
-_020f2f18: .word data_027e0fbc
+_020f2f18: .word gHealthManager
 
 	.global func_ov02_020f2f1c
 	arm_func_start func_ov02_020f2f1c

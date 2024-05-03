@@ -77,7 +77,6 @@
 .extern data_027e0194
 .extern data_027e0764
 .extern data_027e0e58
-.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f90
@@ -191,3 +190,4 @@
 .extern func_ov14_02148334
 .extern func_ov14_02148364
 .extern gAdventureFlags
+.extern gMapManager

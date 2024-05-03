@@ -20651,7 +20651,7 @@ _021239cc:
 	bl func_ov12_02124dfc
 	mov r1, r0
 	ldr r0, _02123a20 ; =data_ov00_020eec68
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	b _02123a04
 _021239ec:
 	ldrb r0, [r6, #0x370]
@@ -20659,7 +20659,7 @@ _021239ec:
 	beq _02123a04
 	ldr r0, _02123a20 ; =data_ov00_020eec68
 	mov r1, #0x2b
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 _02123a04:
 	mov r0, #7
 	str r0, [r6, #0xc]

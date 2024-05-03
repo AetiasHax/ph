@@ -1,7 +1,7 @@
 #pragma once
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager17EquipPreviousItemEv
-.extern _ZN11ItemManager9SetPotionEjj
+.extern _ZN11ItemManager9SetPotionEjh
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetGrabActorEv
 .extern _ZN13LinkStateBase12GetPlayerPosEv

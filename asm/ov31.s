@@ -1049,7 +1049,7 @@ _0217cae4:
 	ldr r0, [r0]
 	rsb r1, r1, #0
 	mov r2, #1
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	bl func_ov31_0217cf1c
 	ldr r0, [r0, #0x470]
 	cmp r0, #0
@@ -5443,7 +5443,7 @@ func_ov31_0217ff08: ; 0x0217ff08
 	bl func_ov31_02180260
 	mov r1, r0
 	mov r0, r4
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	bl func_ov31_0217bdb8
 	bl func_ov31_0217bd80
 	cmp r0, #0

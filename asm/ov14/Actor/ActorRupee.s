@@ -371,7 +371,7 @@ _0213b2f8:
 	mov r1, r0
 	mov r0, r6
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldr r0, [r5, #0x158]
 	mvn r1, #0
 	cmp r0, #0

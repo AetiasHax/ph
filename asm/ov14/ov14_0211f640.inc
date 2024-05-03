@@ -137,9 +137,9 @@
 .extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
+.extern _ZNK11ItemManager10GetNumKeysEv
 .extern _ZNK11ItemManager15GetEquippedItemEv
 .extern _ZNK11ItemManager18func_ov00_020ad560Ei
-.extern _ZNK11ItemManager18func_ov00_020ae350Ev
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
 .extern data_02050f54

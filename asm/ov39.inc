@@ -230,7 +230,7 @@
 .extern func_ov00_020d18f4
 .extern func_ov00_020d1980
 .extern func_ov00_020d716c
-.extern func_ov00_020d73bc
+.extern PlaySoundEffect
 .extern func_ov00_020d73f0
 .extern func_ov00_020d77e4
 .extern func_ov00_020d7ad4

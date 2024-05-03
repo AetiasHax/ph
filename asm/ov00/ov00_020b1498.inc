@@ -33,7 +33,7 @@
 .extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern _ZN10PlayerBase8vfunc_04Ev
 .extern _ZN10PlayerBase9AddHealthEs
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager13UnequipPotionEv
@@ -193,7 +193,7 @@
 .extern data_027e0fa0
 .extern data_027e0fac
 .extern data_027e0fb8
-.extern data_027e0fbc
+.extern gHealthManager
 .extern data_027e0fc4
 .extern data_027e0fc8
 .extern data_027e0fcc

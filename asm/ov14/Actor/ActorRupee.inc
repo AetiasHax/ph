@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
 .extern _ZN5Actor12ApplyGravityEv

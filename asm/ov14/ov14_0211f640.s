@@ -10454,7 +10454,7 @@ func_ov14_02127df4: ; 0x02127df4
 	ldmneia sp!, {r3, pc}
 	ldr r0, _02127e24 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ae350Ev
+	bl _ZNK11ItemManager10GetNumKeysEv
 	cmp r0, #0
 	movgt r0, #1
 	movle r0, #0
@@ -10474,7 +10474,7 @@ func_ov14_02127e28: ; 0x02127e28
 	ldmneia sp!, {r4, pc}
 	ldr r0, _02127eb4 ; =gItemManager
 	ldr r0, [r0]
-	bl _ZNK11ItemManager18func_ov00_020ae350Ev
+	bl _ZNK11ItemManager10GetNumKeysEv
 	cmp r0, #0
 	mvnle r0, #0
 	ldmleia sp!, {r4, pc}

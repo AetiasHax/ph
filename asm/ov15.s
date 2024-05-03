@@ -30916,7 +30916,7 @@ _021398f0:
 	str r0, [r4, #0xa4]
 	str r0, [r4, #0xa8]
 	str r0, [r4, #0xac]
-	ldr ip, _02139a70 ; =data_027e0fbc
+	ldr ip, _02139a70 ; =gHealthManager
 	add r3, r4, #0x300
 	ldr r2, [ip]
 	add r1, r4, #0x60
@@ -30958,7 +30958,7 @@ _02139a60: .word func_ov15_02139a80
 _02139a64: .word func_ov15_02139a94
 _02139a68: .word func_020350ac
 _02139a6c: .word func_02035064
-_02139a70: .word data_027e0fbc
+_02139a70: .word gHealthManager
 _02139a74: .word data_027e10a4
 _02139a78: .word data_027e0d38
 _02139a7c: .word data_027e0ce0
@@ -30994,7 +30994,7 @@ func_ov15_02139ab4: ; 0x02139ab4
 	ldr r1, _02139cb8 ; =data_ov15_0218aaac
 	mov r4, r0
 	str r1, [r4]
-	ldr r1, _02139cbc ; =data_027e0fbc
+	ldr r1, _02139cbc ; =gHealthManager
 	ldrsh r3, [r4, #0xa]
 	ldr r2, [r1]
 	add r0, r4, #0x300
@@ -31123,7 +31123,7 @@ _02139af4:
 	.align 2, 0
 	arm_func_end func_ov15_02139ab4
 _02139cb8: .word data_ov15_0218aaac
-_02139cbc: .word data_027e0fbc
+_02139cbc: .word gHealthManager
 _02139cc0: .word data_027e10a4
 _02139cc4: .word func_020350ac
 _02139cc8: .word func_ov15_02139a80
@@ -31136,7 +31136,7 @@ func_ov15_02139cd0: ; 0x02139cd0
 	ldr r1, _02139edc ; =data_ov15_0218aaac
 	mov r4, r0
 	str r1, [r4]
-	ldr r1, _02139ee0 ; =data_027e0fbc
+	ldr r1, _02139ee0 ; =gHealthManager
 	ldrsh r3, [r4, #0xa]
 	ldr r2, [r1]
 	add r0, r4, #0x300
@@ -31267,7 +31267,7 @@ _02139d10:
 	.align 2, 0
 	arm_func_end func_ov15_02139cd0
 _02139edc: .word data_ov15_0218aaac
-_02139ee0: .word data_027e0fbc
+_02139ee0: .word gHealthManager
 _02139ee4: .word data_027e10a4
 _02139ee8: .word func_020350ac
 _02139eec: .word func_ov15_02139a80
@@ -31827,13 +31827,13 @@ func_ov15_0213a5e8: ; 0x0213a5e8
 	.global func_ov15_0213a604
 	arm_func_start func_ov15_0213a604
 func_ov15_0213a604: ; 0x0213a604
-	ldr r0, _0213a614 ; =data_027e0fbc
+	ldr r0, _0213a614 ; =gHealthManager
 	ldr r0, [r0]
 	ldrsh r0, [r0, #4]
 	bx lr
 	.align 2, 0
 	arm_func_end func_ov15_0213a604
-_0213a614: .word data_027e0fbc
+_0213a614: .word gHealthManager
 
 	.global func_ov15_0213a618
 	arm_func_start func_ov15_0213a618
@@ -42710,7 +42710,7 @@ _0214389c:
 	ldr r0, _02143a38 ; =data_ov00_020eec68
 	mov r1, #0xda
 	str r2, [r7, #0x378]
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 _021438f4:
 	ldr r0, [r7, #0x20]
 	bl func_ov15_02149acc
@@ -43237,7 +43237,7 @@ _02144020:
 	bl func_ov00_020d716c
 	ldr r0, _0214415c ; =data_ov00_020eec68
 	mov r1, #0xdb
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
@@ -43346,7 +43346,7 @@ _021441a8:
 	bl func_ov00_020d716c
 	ldr r0, _021442d8 ; =data_ov00_020eec68
 	mov r1, #0xdb
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	add r0, sp, #0
 	bl func_ov00_0209a4f4
 	mov r2, #0
@@ -44522,7 +44522,7 @@ _021452d4:
 	bl func_ov15_0214651c
 	mov r1, r0
 	mov r0, r4
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	b _02145334
 _02145300:
 	cmp r5, #0x30
@@ -44538,12 +44538,12 @@ _0214531c:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _02145334:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, r5
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	mov r0, r6
 	mov r1, #1
 	bl func_ov15_0216e168
@@ -44561,7 +44561,7 @@ _02145370:
 	mov r4, r0
 	bl func_ov03_020fc10c
 	mov r0, r4
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #0x10
 	strb r0, [r9, #0x34d]
 	b _02145420
@@ -44602,7 +44602,7 @@ _021453f8:
 	ldr r0, _0214581c ; =gItemManager
 	mov r1, #0x26
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _0214541c:
 	bl func_ov15_021465e8
 _02145420:
@@ -54185,7 +54185,7 @@ func_ov15_0214d358: ; 0x0214d358
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldr r1, [r4, #0x158]
 	ldr r0, _0214d3dc ; =data_ov00_020eec9c
 	add r1, r1, #0xfa
@@ -61729,7 +61729,7 @@ _02153b28:
 	bl func_ov15_02153938
 	ldr r0, [r4, #0x41c]
 	add r0, r0, #0x46
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #5
 	strb r0, [r5, #0x436]
 	b _02153d74
@@ -62211,7 +62211,7 @@ _02154254:
 	bl func_ov15_02153938
 	ldr r0, [r5, #0x41c]
 	add r0, r0, #0x46
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 	mov r0, #5
 	strb r0, [r4, #0x436]
 	b _02154304
@@ -62311,7 +62311,7 @@ _02154374:
 	bl func_ov00_020d716c
 	ldr r0, _02154620 ; =data_ov00_020eec68
 	mov r1, #0xde
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	mov r0, #1
 	strb r0, [r5, #0x436]
 	mov r0, #0
@@ -88224,7 +88224,7 @@ _0216a8a8:
 	bl func_ov15_0214651c
 	mov r1, r0
 	mov r0, r6
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	b _0216a8f8
 _0216a8cc:
 	cmp r4, #0x30
@@ -88238,7 +88238,7 @@ _0216a8e8:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _0216a8f8:
 	bl func_ov15_02146578
 	mov r1, r0
@@ -88262,7 +88262,7 @@ _0216a93c:
 	ldr r0, _0216a95c ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	mov r0, r5
 	bl func_ov15_0216a968
 	add sp, sp, #4
@@ -88292,7 +88292,7 @@ _0216a994:
 	bl func_ov03_020fc10c
 	ldr r0, _0216aa24 ; =data_ov00_020eec68
 	mov r1, #0x28
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	mov r1, #0
 	sub r0, r1, #0x1000
 	str r0, [sp, #0x18]
@@ -99853,7 +99853,7 @@ func_ov15_02174794: ; 0x02174794
 	mov r1, r0
 	mov r0, r5
 	mov r2, #0
-	bl _ZN11ItemManager10GiveRupeesEjj
+	bl _ZN11ItemManager10GiveRupeesEsb
 	ldr r1, [r4, #0x2c]
 	ldr r0, _02174878 ; =data_ov00_020eec9c
 	add r1, r1, #0xfa

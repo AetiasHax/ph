@@ -1755,7 +1755,7 @@ _0217d3b0:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 _0217d3d0:
-	ldr r0, _0217d3f4 ; =data_027e0fbc
+	ldr r0, _0217d3f4 ; =gHealthManager
 	mov r2, #5
 	ldr r1, [r0]
 	mov r0, #1
@@ -1767,7 +1767,7 @@ _0217d3e8:
 	.align 2, 0
 	arm_func_end func_ov33_0217d394
 _0217d3f0: .word data_027e0e28
-_0217d3f4: .word data_027e0fbc
+_0217d3f4: .word gHealthManager
 
 	.global func_ov33_0217d3f8
 	arm_func_start func_ov33_0217d3f8
@@ -1780,7 +1780,7 @@ func_ov33_0217d3f8: ; 0x0217d3f8
 	beq _0217d444
 	cmp r1, #0x1f
 	bne _0217d484
-	ldr r1, _0217d48c ; =data_027e0fbc
+	ldr r1, _0217d48c ; =gHealthManager
 	ldr r1, [r1]
 	ldrsh r1, [r1, #8]
 	mov r1, r1, lsl #0x18
@@ -1793,7 +1793,7 @@ _0217d43c:
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 _0217d444:
-	ldr r0, _0217d48c ; =data_027e0fbc
+	ldr r0, _0217d48c ; =gHealthManager
 	ldr r0, [r0]
 	ldrsh r0, [r0, #4]
 	sub r1, r0, #0x10
@@ -1815,7 +1815,7 @@ _0217d484:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov33_0217d3f8
-_0217d48c: .word data_027e0fbc
+_0217d48c: .word gHealthManager
 
 	.global func_ov33_0217d490
 	arm_func_start func_ov33_0217d490

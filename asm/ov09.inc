@@ -1,6 +1,6 @@
 #pragma once
 .extern Divide
-.extern _ZN11ItemManager10GiveRupeesEjj
+.extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager13EquipShipPartEjj
 .extern _ZN11ItemManager16SetShipPartCountEjjc
 .extern _ZN11ItemManager16SetTreasureCountEjc
@@ -52,7 +52,6 @@
 .extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f90
-.extern data_027e0fbc
 .extern data_027e0fe4
 .extern data_027e0ffc
 .extern data_027e103c
@@ -451,6 +450,7 @@
 .extern func_ov18_02160a74
 .extern func_ov29_0216dcf4
 .extern gAdventureFlags
+.extern gHealthManager
 .extern gItemManager
 .extern gOverlayManager
 .extern strcat

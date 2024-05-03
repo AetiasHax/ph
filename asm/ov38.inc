@@ -1,6 +1,7 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern PlaySoundEffect
 .extern _ZN10MapManager18func_ov00_02084b38Eiii
 .extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
@@ -217,7 +218,6 @@
 .extern func_ov00_020d5f98
 .extern func_ov00_020d70a4
 .extern func_ov00_020d716c
-.extern func_ov00_020d73bc
 .extern func_ov00_020d73f0
 .extern func_ov00_020d7c8c
 .extern func_ov00_020d7d18

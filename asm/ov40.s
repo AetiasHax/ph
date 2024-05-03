@@ -4428,7 +4428,7 @@ _0217f5a4:
 	mov r1, r1, lsl #0x8
 	ldr r0, [r0]
 	mov r1, r1, lsr #0x10
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 	add sp, sp, #8
 	ldmia sp!, {r3, pc}
 _0217f5c4:

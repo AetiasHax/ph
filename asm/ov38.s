@@ -208,7 +208,7 @@ func_ov38_0217bf48: ; 0x0217bf48
 	bl func_ov00_020d8388
 	ldr r0, _0217c048 ; =data_ov00_020eec68
 	mov r1, #0xcf
-	bl func_ov00_020d73bc
+	bl PlaySoundEffect
 	ldr r0, _0217c04c ; =data_ov38_021891e0
 	ldr r0, [r0, #0x58]
 	bl func_ov38_02184a18

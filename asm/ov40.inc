@@ -2,7 +2,7 @@
 .extern Divide
 .extern FastDivide
 .extern _ZN11ItemManager7AddItemEi
-.extern _ZN11ItemManager8GiveItemEjjj
+.extern _ZN11ItemManager8GiveItemEi
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags15Get_FlagsUnk_18EiP9FlagsUnk2

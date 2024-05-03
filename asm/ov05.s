@@ -9487,7 +9487,7 @@ func_ov05_021088c8: ; 0x021088c8
 	bl func_020385d0
 	cmp r0, #0
 	beq _0210899c
-	ldr r1, _021089a8 ; =data_027e0fbc
+	ldr r1, _021089a8 ; =gHealthManager
 	ldr r4, _021089ac ; =0x88888889
 	ldr r1, [r1]
 	mov ip, #0x3c
@@ -9534,7 +9534,7 @@ _0210899c:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 	arm_func_end func_ov05_021088c8
-_021089a8: .word data_027e0fbc
+_021089a8: .word gHealthManager
 _021089ac: .word 0x88888889
 _021089b0: .word 0x66666667
 _021089b4: .word 0x00007fff
@@ -9681,7 +9681,7 @@ _02108b9c:
 	str r0, [r4, #0x74]
 	ldr r0, [sp, #4]
 	ldr r1, [sp]
-	blx func_ov09_0211ca20
+	blx GiveShipPart
 	b _02108be8
 _02108bb4:
 	ldr r0, _02108cf0 ; =gItemManager
@@ -9726,7 +9726,7 @@ _02108c34:
 	ldr r0, _02108cf0 ; =gItemManager
 	ldr r1, [r4, #0x74]
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	ldr r0, [r4, #0x74]
 	mov r2, #1
 	cmp r0, #0x81
@@ -9884,7 +9884,7 @@ _02108e44:
 	ldr r0, _02108e88 ; =gItemManager
 	mov r1, r4
 	ldr r0, [r0]
-	blx _ZN11ItemManager15LoadFanfareItemEj
+	blx _ZN11ItemManager15LoadFanfareItemEi
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov05_02108e08
@@ -10245,7 +10245,7 @@ _02109354:
 	cmp r0, #0
 	beq _02109380
 	ldr r0, [r5, #0x74]
-	blx _ZN11ItemManager18func_ov00_020ae648Ejjj
+	blx _ZN11ItemManager18PlayItemFanfareSfxEi
 _02109380:
 	mov r0, r5
 	bl _ZN13LinkStateBase18func_ov00_020a8d50Ev
@@ -10610,11 +10610,11 @@ _02109828:
 	bl _ZN13LinkStateBase18func_ov00_020a8360Ei
 	b _021098bc
 _02109834:
-	ldr r0, _021099bc ; =data_027e0fbc
+	ldr r0, _021099bc ; =gHealthManager
 	mov r1, #4
 	ldr r0, [r0]
 	blx func_ov00_020b804c
-	ldr r1, _021099bc ; =data_027e0fbc
+	ldr r1, _021099bc ; =gHealthManager
 	mov r0, r5
 	ldr r1, [r1]
 	ldrsh r1, [r1]
@@ -10646,7 +10646,7 @@ _0210989c:
 	ldr r0, _021099cc ; =gItemManager
 	ldr r1, [r5, #0x74]
 	ldr r0, [r0]
-	blx _ZN11ItemManager8GiveItemEjjj
+	blx _ZN11ItemManager8GiveItemEi
 _021098bc:
 	mov r0, r4
 	blx _ZN4Item18func_ov00_020ad020Ei
@@ -10719,7 +10719,7 @@ _021099a4:
 	.align 2, 0
 	arm_func_end func_ov05_021097b0
 _021099b8: .word 0x464f5243
-_021099bc: .word data_027e0fbc
+_021099bc: .word gHealthManager
 _021099c0: .word data_027e103c
 _021099c4: .word 0x424b4559
 _021099c8: .word 0x43525953
