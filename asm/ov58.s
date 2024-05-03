@@ -1881,7 +1881,7 @@ _02199d50:
 	add r0, sp, #0x60
 	ldr r1, [r1]
 	add r2, r7, #0
-	blx _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	blx _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r1, [sp, #0x60]
 	ldr r0, [sp, #0x60]
 	lsr r2, r1, #5
@@ -2014,7 +2014,7 @@ _02199e54:
 	add r2, sp, #0x74
 	str r0, [sp, #0x7c]
 	add r0, sp, #0x5c
-	blx _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	blx _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #0x5c]
 	ldr r2, [sp, #0x5c]
 	lsr r1, r0, #5

@@ -2746,9 +2746,9 @@ _ZN10MapManager16MapData_vfunc_70Ev: ; 0x02083f98
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager16MapData_vfunc_70Ev
 
-	.global _ZN10MapManager18func_ov00_02083fb0EiPS_i
-	arm_func_start _ZN10MapManager18func_ov00_02083fb0EiPS_i
-_ZN10MapManager18func_ov00_02083fb0EiPS_i: ; 0x02083fb0
+	.global _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
+	arm_func_start _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
+_ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p: ; 0x02083fb0
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r1
 	mov r4, r0
@@ -2777,7 +2777,7 @@ _ZN10MapManager18func_ov00_02083fb0EiPS_i: ; 0x02083fb0
 	bl func_ov00_02093a1c
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	arm_func_end _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 _0208401c: .word 0x0000ffff
 _02084020: .word data_027e0f6c
 

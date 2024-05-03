@@ -5462,7 +5462,7 @@ func_ov19_02171e64: ; 0x02171e64
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3

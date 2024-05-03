@@ -982,7 +982,7 @@ _02199968:
 	str r6, [sp, #0x38]
 	str r5, [sp, #0x64]
 	str r5, [sp, #0x40]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	bl func_ov59_02198e2c
 	ldrb r1, [r0, #0x27]
 	mov r2, #0

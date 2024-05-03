@@ -2,7 +2,7 @@
 .extern Approach_thunk
 .extern _ZN10MapManager16MapData_vfunc_78Ev
 .extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
-.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
+.extern _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 .extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN11ItemManager16SetTreasureCountEjc
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j

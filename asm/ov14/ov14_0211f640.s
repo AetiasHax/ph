@@ -6080,7 +6080,7 @@ _02124668:
 	add r0, sp, #0x1c
 	add r2, sp, #0x68
 	str r3, [sp, #0x70]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r1, [r5, #0x48]
 	ldr r0, _02124c54 ; =gMapManager
 	str r1, [sp, #0x5c]
@@ -6318,7 +6318,7 @@ _021249a4:
 	add r0, sp, #0x10
 	add r2, sp, #0x2c
 	str r3, [sp, #0x34]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #0x10]
 	mov r1, r0
 	mov r0, r0, lsr #0x5
@@ -31114,7 +31114,7 @@ func_ov14_02138b18: ; 0x02138b18
 	add r0, sp, #0xc
 	add r2, sp, #0x1c
 	str r3, [sp, #0x24]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #0xc]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3
@@ -33299,7 +33299,7 @@ _0213a68c:
 	add r0, sp, #0
 	add r2, sp, #0x38
 	str r3, [sp, #0x40]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3
@@ -33681,7 +33681,7 @@ _0213ab94:
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3

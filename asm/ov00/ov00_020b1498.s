@@ -605,7 +605,7 @@ func_ov00_020b1ba4: ; 0x020b1ba4
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x9
 	and r0, r0, #3
@@ -6545,7 +6545,7 @@ _020b6830:
 	add r0, sp, #0x1c
 	add r2, sp, #0x50
 	str r3, [sp, #0x58]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #0x1c]
 	mov r1, r0
 	mov r0, r0, lsr #0x5

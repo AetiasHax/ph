@@ -171,7 +171,7 @@ public:
     void func_ov00_02083f44(Vec3p *param_2);
     unk8 MapData_vfunc_6c();
     unk8 MapData_vfunc_70();
-    static unk8 func_ov00_02083fb0(unk32 param_1, MapManager *param_2, unk32 param_3);
+    static unk8 func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
     void func_ov00_02084024(unk32 param_2, AABB *param_3);
     unk8 MapData_vfunc_54();
     unk8 func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4);

@@ -78,7 +78,7 @@
 .extern _ZN10MapManager16MapData_vfunc_68Ev
 .extern _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 .extern _ZN10MapManager16MapData_vfunc_6cEv
-.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
+.extern _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 .extern _ZN10MapManager16MapData_vfunc_54Ev
 .extern _ZN10MapManager18func_ov00_020840dcEv
 .extern _ZN10MapManager18func_ov00_0208499cEv
