@@ -1,5 +1,6 @@
 #include "Actor/ActorRupee.hpp"
 #include "Item/ItemManager.hpp"
+#include "Map/MapManager.hpp"
 
 
 
@@ -14,7 +15,6 @@ extern "C" {
     void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
         u32 param_6, int param_7, char param_8, char param_9, char param_10);
     void func_ov00_020d7ad4(u32* param1, u32 param2);
-    void func_ov00_02083fb0(u32* param1, void* param2, Vec3p* param3);
     u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
     bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
     void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
@@ -33,7 +33,6 @@ extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
 
 extern u32 data_ov00_020e9370[];
 extern u32 data_ov00_020eec9c[];
-extern void *data_027e0e60;
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern u32 **data_027e0fe0[];
 
@@ -267,7 +266,7 @@ void ActorRupee::func_ov14_0213b204(unk32 param1) {
     mUnk_130 = param1;
 }
 
-extern "C" void _ZN11ItemManager10GiveRupeesEjj(ItemManager* implicit, u16 amount, unk32 param2);
+extern "C" void _ZN11ItemManager10GiveRupeesEsb(ItemManager* implicit, u16 amount, unk32 param2);
 void ActorRupee::Update(bool param1) {
     ItemId cutsceneItemId;
     s32 uVar3;
@@ -290,8 +289,7 @@ void ActorRupee::Update(bool param1) {
         } else {
             ItemManager* pItem = gItemManager;
             rupeeValue = func_ov00_020c5a24(mRupeeId);
-            _ZN11ItemManager10GiveRupeesEjj(pItem, rupeeValue, false); // GiveRupees
-            // pItem->GiveRupees(rupeeValue, false); // giverupees
+            pItem->GiveRupees(rupeeValue, false); // giverupees
             uVar3 = -1;
 
             switch (mRupeeId) {
@@ -326,7 +324,7 @@ void ActorRupee::Update(bool param1) {
             Move();
             if (mUnk_111) {
                 local_1c = mPos;
-                func_ov00_02083fb0(&local_20, data_027e0e60, &local_1c);
+                MapManager::func_ov00_02083fb0(&local_20, gMapManager, &local_1c);
                 if (((local_20 >> 5) & 3) == 2) {
                     Kill();
                 } else {
