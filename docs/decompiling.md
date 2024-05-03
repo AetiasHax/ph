@@ -2,6 +2,7 @@
 This document describes how you can start decompiling code and contribute to the project. Feel free to ask for help if you get
 stuck or need assistance.
 - [Pick a source file](#pick-a-source-file)
+- [Decompiling a source file](#decompiling-a-source-file)
 - [Decompiling a function](#decompiling-a-function)
 - [Decompiling `.init` functions](#decompiling-init-functions)
 - [The Ghidra project](#the-ghidra-project)
@@ -18,13 +19,24 @@ If you want to unclaim the file, leave another comment so we can be certain that
 again. Remember to make a pull request of any notable progress you made on the source file, which can include
 [non-matching functions](/CONTRIBUTING.md#non-matching-functions).
 
+## Decompiling a source file
+It can be tricky to fully decompile an assembly file into a C/C++ source file, so here's some advice to make it easier:
+- C/C++ code is built before assembly code
+    - This means you can take one function from the top of your assembly file, decompile it, and append it to the bottom of
+    your C/C++ file.
+- Build the ROM often
+    - We recommend building every time you decompile a function.
+    - This is because functions can sometimes match in decomp.me, but not when building.
+    - If your ROM doesn't match, it's easier to know which function is wrong if it's the only function added since the last
+    successful build.
+
 ## Decompiling a function
 Say you've found a function you want to decompile. Here are the steps we recommend for decompiling it:
 1. Visit [decomp.me](https://decomp.me/) and start decomping.
 1. Under the platforms, select "Nintendo DS".
-1. Select compiler version `2.0sp1p5`.
-1. Copy and paste the target assembly for your function, including the `func_start` and `func_end` macros, and the pool constants.
-For example:
+1. Select compiler preset "Phantom Hourglass".
+1. Copy and paste the target assembly for your function, including the `func_start` and `func_end` macros, and the pool
+constants. For example:
 ```arm
 	.global func_ov09_0211bf48
 	thumb_func_start func_ov09_0211bf48
@@ -36,13 +48,9 @@ func_ov09_0211bf48: ; 0x0211bf48
 	thumb_func_end func_ov09_0211bf48
 _0211bf50: .word data_ov09_0211f59c
 ```
-6. Run `m2ctx.py include/MyHeader.hpp -c` to generate a context and put it in your clipboard.
+5. Run `m2ctx.py include/MyHeader.hpp -c` to generate a context and put it in your clipboard.
     - If no suitable header file exists, make a new one and put any structs and types you need in there.
 1. Paste the context into decomp.me, and create the scratch.
-1. Copy the `CC_FLAGS` from `Makefile` into the arguments field in decomp.me.
-    - Also copy `CXX_FLAGS` if your function comes from a `.cpp` file. Otherwise, copy `C_FLAGS` if it's a `.c` file.
-    - Replace the `-d $(REGION)` flag with whichever region you intend to decompile for. You can also delete the flag entirely
-    if the function contains no region differences.
 1. Decompile the function and try to get a 100% match.
     - There's no ARM decompiler in decomp.me yet, but Ghidra does the job quite well. See [the Ghidra section](#the-ghidra-project)
     for more info.
@@ -69,6 +77,18 @@ is 12 (`0xc`) bytes long and is also implicit, so we don't need to define it our
 
 > [!IMPORTANT]
 > An important thing to keep in mind is that a static initializer can construct multiple global objects.
+
+## Decompiling data
+> [!NOTE]
+> Under construction! It's not fully clear how data is decompiled, as the compiler is strict on how it orders global variables.
+> Feel free to contribute to this section or provide us with more information!
+
+Other than `.text` and `.init` which contain code, there are the following sections for data:
+- `.rodata`: Global or static constants
+- `.data`: Global or static variables
+- `.bss`/`.sbss`: Global or static uninitialized variables
+
+You can see examples of these data sections in the [compilation section in `build_system.md`](/docs/build_system.md#compiling-code).
 
 ## The Ghidra project
 We use a shared Ghidra project to analyze the game and decompile functions. To gain access to the project, install
