@@ -43632,279 +43632,348 @@ data_ov03_02100260: ; 0x02100260
 	.byte 0x00, 0x00, 0x00
 	.global data_ov03_02100264
 data_ov03_02100264: ; 0x02100264
-	.ascii "Çæ"
+	; string "„Å†"
+	.byte 0x82, 0xbe
 	.byte 0x00, 0x00
 	.global data_ov03_02100268
 data_ov03_02100268: ; 0x02100268
-	.ascii "Ç›"
+	; string "„Åø"
+	.byte 0x82, 0xdd
 	.byte 0x00, 0x00
 	.global data_ov03_0210026c
 data_ov03_0210026c: ; 0x0210026c
-	.ascii "Ç¿"
+	; string "„Å¢"
+	.byte 0x82, 0xc0
 	.byte 0x00, 0x00
 	.global data_ov03_02100270
 data_ov03_02100270: ; 0x02100270
-	.ascii "Ç√"
+	; string "„Å•"
+	.byte 0x82, 0xc3
 	.byte 0x00, 0x00
 	.global data_ov03_02100274
 data_ov03_02100274: ; 0x02100274
-	.ascii "Ç‡"
+	; string "„ÇÇ"
+	.byte 0x82, 0xe0
 	.byte 0x00, 0x00
 	.global data_ov03_02100278
 data_ov03_02100278: ; 0x02100278
-	.ascii "Ç‚"
+	; string "„ÇÑ"
+	.byte 0x82, 0xe2
 	.byte 0x00, 0x00
 	.global data_ov03_0210027c
 data_ov03_0210027c: ; 0x0210027c
-	.ascii "Ç≈"
+	; string "„Åß"
+	.byte 0x82, 0xc5
 	.byte 0x00, 0x00
 	.global data_ov03_02100280
 data_ov03_02100280: ; 0x02100280
-	.ascii "Ç‰"
+	; string "„ÇÜ"
+	.byte 0x82, 0xe4
 	.byte 0x00, 0x00
 	.global data_ov03_02100284
 data_ov03_02100284: ; 0x02100284
-	.ascii "Ç«"
+	; string "„Å©"
+	.byte 0x82, 0xc7
 	.byte 0x00, 0x00
 	.global data_ov03_02100288
 data_ov03_02100288: ; 0x02100288
-	.ascii "ÇÔ"
+	; string "„Çë"
+	.byte 0x82, 0xef
 	.byte 0x00, 0x00
 	.global data_ov03_0210028c
 data_ov03_0210028c: ; 0x0210028c
-	.ascii "ÇÊ"
+	; string "„Çà"
+	.byte 0x82, 0xe6
 	.byte 0x00, 0x00
 	.global data_ov03_02100290
 data_ov03_02100290: ; 0x02100290
-	.ascii "ÇÓ"
+	; string "„Çê"
+	.byte 0x82, 0xee
 	.byte 0x00, 0x00
 	.global data_ov03_02100294
 data_ov03_02100294: ; 0x02100294
-	.ascii "ÇŒ"
+	; string "„Å∞"
+	.byte 0x82, 0xce
 	.byte 0x00, 0x00
 	.global data_ov03_02100298
 data_ov03_02100298: ; 0x02100298
-	.ascii "ÇÁ"
+	; string "„Çâ"
+	.byte 0x82, 0xe7
 	.byte 0x00, 0x00
 	.global data_ov03_0210029c
 data_ov03_0210029c: ; 0x0210029c
-	.ascii "Çﬂ"
+	; string "„ÇÅ"
+	.byte 0x82, 0xdf
 	.byte 0x00, 0x00
 	.global data_ov03_021002a0
 data_ov03_021002a0: ; 0x021002a0
-	.ascii "Çﬁ"
+	; string "„ÇÄ"
+	.byte 0x82, 0xde
 	.byte 0x00, 0x00
 	.global data_ov03_021002a4
 data_ov03_021002a4: ; 0x021002a4
-	.ascii "ÇË"
+	; string "„Çä"
+	.byte 0x82, 0xe8
 	.byte 0x00, 0x00
 	.global data_ov03_021002a8
 data_ov03_021002a8: ; 0x021002a8
-	.ascii "Ç‹"
+	; string "„Åæ"
+	.byte 0x82, 0xdc
 	.byte 0x00, 0x00
 	.global data_ov03_021002ac
 data_ov03_021002ac: ; 0x021002ac
-	.ascii "ÇŸ"
+	; string "„Åª"
+	.byte 0x82, 0xd9
 	.byte 0x00, 0x00
 	.global data_ov03_021002b0
 data_ov03_021002b0: ; 0x021002b0
-	.ascii "Ç÷"
+	; string "„Å∏"
+	.byte 0x82, 0xd6
 	.byte 0x00, 0x00
 	.global data_ov03_021002b4
 data_ov03_021002b4: ; 0x021002b4
-	.ascii "Ç—"
+	; string "„Å≥"
+	.byte 0x82, 0xd1
 	.byte 0x00, 0x00
 	.global data_ov03_021002b8
 data_ov03_021002b8: ; 0x021002b8
-	.ascii "ÇÈ"
+	; string "„Çã"
+	.byte 0x82, 0xe9
 	.byte 0x00, 0x00
 	.global data_ov03_021002bc
 data_ov03_021002bc: ; 0x021002bc
-	.ascii "ÇÍ"
+	; string "„Çå"
+	.byte 0x82, 0xea
 	.byte 0x00, 0x00
 	.global data_ov03_021002c0
 data_ov03_021002c0: ; 0x021002c0
-	.ascii "Ç‘"
+	; string "„Å∂"
+	.byte 0x82, 0xd4
 	.byte 0x00, 0x00
 	.global data_ov03_021002c4
 data_ov03_021002c4: ; 0x021002c4
-	.ascii "ÇÎ"
+	; string "„Çç"
+	.byte 0x82, 0xeb
 	.byte 0x00, 0x00
 	.global data_ov03_021002c8
 data_ov03_021002c8: ; 0x021002c8
-	.ascii "ÇÌ"
+	; string "„Çè"
+	.byte 0x82, 0xed
 	.byte 0x00, 0x00
 	.global data_ov03_021002cc
 data_ov03_021002cc: ; 0x021002cc
-	.ascii "Ç◊"
+	; string "„Åπ"
+	.byte 0x82, 0xd7
 	.byte 0x00, 0x00
 	.global data_ov03_021002d0
 data_ov03_021002d0: ; 0x021002d0
-	.ascii "Ç"
+	; string "„Çí"
+	.byte 0x82, 0xf0
 	.byte 0x00, 0x00
 	.global data_ov03_021002d4
 data_ov03_021002d4: ; 0x021002d4
-	.ascii "Ç¶"
+	; string "„Åà"
+	.byte 0x82, 0xa6
 	.byte 0x00, 0x00
 	.global data_ov03_021002d8
 data_ov03_021002d8: ; 0x021002d8
-	.ascii "ÇÒ"
+	; string "„Çì"
+	.byte 0x82, 0xf1
 	.byte 0x00, 0x00
 	.global data_ov03_021002dc
 data_ov03_021002dc: ; 0x021002dc
-	.ascii "Ç⁄"
+	; string "„Åº"
+	.byte 0x82, 0xda
 	.byte 0x00, 0x00
 	.global data_ov03_021002e0
 data_ov03_021002e0: ; 0x021002e0
-	.ascii "Åô"
+	; string "‚òÜ"
+	.byte 0x81, 0x99
 	.byte 0x00, 0x00
 	.global data_ov03_021002e4
 data_ov03_021002e4: ; 0x021002e4
-	.ascii "Åá"
+	; string "‚àû"
+	.byte 0x81, 0x87
 	.byte 0x00, 0x00
 	.global data_ov03_021002e8
 data_ov03_021002e8: ; 0x021002e8
-	.ascii "Çœ"
+	; string "„Å±"
+	.byte 0x82, 0xcf
 	.byte 0x00, 0x00
 	.global data_ov03_021002ec
 data_ov03_021002ec: ; 0x021002ec
-	.ascii "Ç±"
+	; string "„Åì"
+	.byte 0x82, 0xb1
 	.byte 0x00, 0x00
 	.global data_ov03_021002f0
 data_ov03_021002f0: ; 0x021002f0
-	.ascii "Ç™"
+	; string "„Åå"
+	.byte 0x82, 0xaa
 	.byte 0x00, 0x00
 	.global data_ov03_021002f4
 data_ov03_021002f4: ; 0x021002f4
-	.ascii "Ç≥"
+	; string "„Åï"
+	.byte 0x82, 0xb3
 	.byte 0x00, 0x00
 	.global data_ov03_021002f8
 data_ov03_021002f8: ; 0x021002f8
-	.ascii "Çµ"
+	; string "„Åó"
+	.byte 0x82, 0xb5
 	.byte 0x00, 0x00
 	.global data_ov03_021002fc
 data_ov03_021002fc: ; 0x021002fc
-	.ascii "Ç¨"
+	; string "„Åé"
+	.byte 0x82, 0xac
 	.byte 0x00, 0x00
 	.global data_ov03_02100300
 data_ov03_02100300: ; 0x02100300
-	.ascii "ÇØ"
+	; string "„Åë"
+	.byte 0x82, 0xaf
 	.byte 0x00, 0x00
 	.global data_ov03_02100304
 data_ov03_02100304: ; 0x02100304
-	.ascii "Ç≠"
+	; string "„Åè"
+	.byte 0x82, 0xad
 	.byte 0x00, 0x00
 	.global data_ov03_02100308
 data_ov03_02100308: ; 0x02100308
-	.ascii "Ç´"
+	; string "„Åç"
+	.byte 0x82, 0xab
 	.byte 0x00, 0x00
 	.global data_ov03_0210030c
 data_ov03_0210030c: ; 0x0210030c
-	.ascii "Ç©"
+	; string "„Åã"
+	.byte 0x82, 0xa9
 	.byte 0x00, 0x00
 	.global data_ov03_02100310
 data_ov03_02100310: ; 0x02100310
-	.ascii "Ç®"
+	; string "„Åä"
+	.byte 0x82, 0xa8
 	.byte 0x00, 0x00
 	.global data_ov03_02100314
 data_ov03_02100314: ; 0x02100314
-	.ascii "Ç“"
+	; string "„Å¥"
+	.byte 0x82, 0xd2
 	.byte 0x00, 0x00
 	.global data_ov03_02100318
 data_ov03_02100318: ; 0x02100318
-	.ascii "Ç§"
+	; string "„ÅÜ"
+	.byte 0x82, 0xa4
 	.byte 0x00, 0x00
 	.global data_ov03_0210031c
 data_ov03_0210031c: ; 0x0210031c
-	.ascii "Ç¢"
+	; string "„ÅÑ"
+	.byte 0x82, 0xa2
 	.byte 0x00, 0x00
 	.global data_ov03_02100320
 data_ov03_02100320: ; 0x02100320
-	.ascii "Ç†"
+	; string "„ÅÇ"
+	.byte 0x82, 0xa0
 	.byte 0x00, 0x00
 	.global data_ov03_02100324
 data_ov03_02100324: ; 0x02100324
-	.ascii "Ç∑"
+	; string "„Åô"
+	.byte 0x82, 0xb7
 	.byte 0x00, 0x00
 	.global data_ov03_02100328
 data_ov03_02100328: ; 0x02100328
-	.ascii "Çπ"
+	; string "„Åõ"
+	.byte 0x82, 0xb9
 	.byte 0x00, 0x00
 	.global data_ov03_0210032c
 data_ov03_0210032c: ; 0x0210032c
-	.ascii "ÇÆ"
+	; string "„Åê"
+	.byte 0x82, 0xae
 	.byte 0x00, 0x00
 	.global data_ov03_02100330
 data_ov03_02100330: ; 0x02100330
-	.ascii "Çª"
+	; string "„Åù"
+	.byte 0x82, 0xbb
 	.byte 0x00, 0x00
 	.global data_ov03_02100334
 data_ov03_02100334: ; 0x02100334
-	.ascii "ÇΩ"
+	; string "„Åü"
+	.byte 0x82, 0xbd
 	.byte 0x00, 0x00
 	.global data_ov03_02100338
 data_ov03_02100338: ; 0x02100338
-	.ascii "Ç∞"
+	; string "„Åí"
+	.byte 0x82, 0xb0
 	.byte 0x00, 0x00
 	.global data_ov03_0210033c
 data_ov03_0210033c: ; 0x0210033c
-	.ascii "Ç’"
+	; string "„Å∑"
+	.byte 0x82, 0xd5
 	.byte 0x00, 0x00
 	.global data_ov03_02100340
 data_ov03_02100340: ; 0x02100340
-	.ascii "Çø"
+	; string "„Å°"
+	.byte 0x82, 0xbf
 	.byte 0x00, 0x00
 	.global data_ov03_02100344
 data_ov03_02100344: ; 0x02100344
-	.ascii "Ç¬"
+	; string "„Å§"
+	.byte 0x82, 0xc2
 	.byte 0x00, 0x00
 	.global data_ov03_02100348
 data_ov03_02100348: ; 0x02100348
-	.ascii "Ç≤"
+	; string "„Åî"
+	.byte 0x82, 0xb2
 	.byte 0x00, 0x00
 	.global data_ov03_0210034c
 data_ov03_0210034c: ; 0x0210034c
-	.ascii "Çƒ"
+	; string "„Å¶"
+	.byte 0x82, 0xc4
 	.byte 0x00, 0x00
 	.global data_ov03_02100350
 data_ov03_02100350: ; 0x02100350
-	.ascii "Ç∆"
+	; string "„Å®"
+	.byte 0x82, 0xc6
 	.byte 0x00, 0x00
 	.global data_ov03_02100354
 data_ov03_02100354: ; 0x02100354
-	.ascii "Ç¥"
+	; string "„Åñ"
+	.byte 0x82, 0xb4
 	.byte 0x00, 0x00
 	.global data_ov03_02100358
 data_ov03_02100358: ; 0x02100358
-	.ascii "Çÿ"
+	; string "„Å∫"
+	.byte 0x82, 0xd8
 	.byte 0x00, 0x00
 	.global data_ov03_0210035c
 data_ov03_0210035c: ; 0x0210035c
-	.ascii "Ç»"
+	; string "„Å™"
+	.byte 0x82, 0xc8
 	.byte 0x00, 0x00
 	.global data_ov03_02100360
 data_ov03_02100360: ; 0x02100360
-	.ascii "Ç…"
+	; string "„Å´"
+	.byte 0x82, 0xc9
 	.byte 0x00, 0x00
 	.global data_ov03_02100364
 data_ov03_02100364: ; 0x02100364
-	.ascii "Ç∂"
+	; string "„Åò"
+	.byte 0x82, 0xb6
 	.byte 0x00, 0x00
 	.global data_ov03_02100368
 data_ov03_02100368: ; 0x02100368
-	.ascii "Ç "
+	; string "„Å¨"
+	.byte 0x82, 0xca
 	.byte 0x00, 0x00
 	.global data_ov03_0210036c
 data_ov03_0210036c: ; 0x0210036c
-	.ascii "Ç∏"
+	; string "„Åö"
+	.byte 0x82, 0xb8
 	.byte 0x00, 0x00
 	.global data_ov03_02100370
 data_ov03_02100370: ; 0x02100370
-	.ascii "Ç€"
+	; string "„ÅΩ"
+	.byte 0x82, 0xdb
 	.byte 0x00, 0x00
 	.global data_ov03_02100374
 data_ov03_02100374: ; 0x02100374
-	.ascii "Ç∫"
+	; string "„Åú"
+	.byte 0x82, 0xba
 	.byte 0x00, 0x00
 	.global data_ov03_02100378
 data_ov03_02100378: ; 0x02100378
@@ -43912,27 +43981,33 @@ data_ov03_02100378: ; 0x02100378
 	.byte 0x00, 0x00
 	.global data_ov03_0210037c
 data_ov03_0210037c: ; 0x0210037c
-	.ascii "ÇÕ"
+	; string "„ÅØ"
+	.byte 0x82, 0xcd
 	.byte 0x00, 0x00
 	.global data_ov03_02100380
 data_ov03_02100380: ; 0x02100380
-	.ascii "ÇÀ"
+	; string "„Å≠"
+	.byte 0x82, 0xcb
 	.byte 0x00, 0x00
 	.global data_ov03_02100384
 data_ov03_02100384: ; 0x02100384
-	.ascii "Ç–"
+	; string "„Å≤"
+	.byte 0x82, 0xd0
 	.byte 0x00, 0x00
 	.global data_ov03_02100388
 data_ov03_02100388: ; 0x02100388
-	.ascii "Ç”"
+	; string "„Åµ"
+	.byte 0x82, 0xd3
 	.byte 0x00, 0x00
 	.global data_ov03_0210038c
 data_ov03_0210038c: ; 0x0210038c
-	.ascii "Çº"
+	; string "„Åû"
+	.byte 0x82, 0xbc
 	.byte 0x00, 0x00
 	.global data_ov03_02100390
 data_ov03_02100390: ; 0x02100390
-	.ascii "ÇÃ"
+	; string "„ÅÆ"
+	.byte 0x82, 0xcc
 	.byte 0x00, 0x00
 	.global data_ov03_02100394
 data_ov03_02100394: ; 0x02100394
