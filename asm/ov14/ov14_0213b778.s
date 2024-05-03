@@ -34356,7 +34356,8 @@ data_ov14_0215923c: ; 0x0215923c
 	.byte 0x00, 0x00
 	.global data_ov14_02159244
 data_ov14_02159244: ; 0x02159244
-	.ascii "‘¬“x"
+	; string "é€Ÿåº¦"
+	.byte 0x91, 0xac, 0x93, 0x78
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov14_0215924c
 data_ov14_0215924c: ; 0x0215924c

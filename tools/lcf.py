@@ -13,8 +13,8 @@ def name(path: str): return path.split("/")[-1]
 ARM9_OBJECTS = [
     'asm/main/main_02000000.s',
 
-    'asm/main/Actor/ActorType.s',
     'src/Main/Actor/ActorType.cpp',
+    'asm/main/Actor/ActorType.s',
 
     'asm/main/main_0203e8a0.s',
 
@@ -85,13 +85,13 @@ ov00 = Overlay(name='ov00', after='ARM9', objects=[
 
     'asm/ov00/ov00_020b1498.s',
 
-    'asm/ov00/Actor/Actor.s',
     'src/00_Core/Actor/Actor.cpp',
+    'asm/ov00/Actor/Actor.s',
 
     'asm/ov00/ov00_020c3348.s',
 
-    'asm/ov00/Actor/ActorManager.s',
     'src/00_Core/Actor/ActorManager.cpp',
+    'asm/ov00/Actor/ActorManager.s',
 
     'asm/ov00/ov00_020c3e54.s',
 ])
