@@ -3875,10 +3875,10 @@ _02078f7c: .word data_027e1054
 	arm_func_start func_ov00_02078f80
 func_ov00_02078f80: ; 0x02078f80
 	stmdb sp!, {r4, lr}
-	ldr r1, _02078fa8 ; =data_027e0e60
+	ldr r1, _02078fa8 ; =gMapManager
 	mov r4, r0
 	ldr r0, [r1]
-	bl func_ov00_02083588
+	bl _ZN10MapManager18func_ov00_02083588Ev
 	ldr r1, [r4, #0x44]
 	cmp r1, r0
 	movne r0, #1
@@ -3886,7 +3886,7 @@ func_ov00_02078f80: ; 0x02078f80
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 	arm_func_end func_ov00_02078f80
-_02078fa8: .word data_027e0e60
+_02078fa8: .word gMapManager
 
 	.global func_ov00_02078fac
 	arm_func_start func_ov00_02078fac
@@ -4038,23 +4038,23 @@ _02079148: .word data_027e0c38
 func_ov00_0207914c: ; 0x0207914c
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
-	ldr r4, _020791d8 ; =data_027e0e60
+	ldr r4, _020791d8 ; =gMapManager
 	mov r11, r0
 	ldr r7, [r4]
 	mov r10, r1
 	mov r0, r7
 	mov r9, r2
 	mov r8, r3
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r6, r0
 	mov r0, r7
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r5, r0
 	mov r0, r7
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	ldr r1, [r10, #8]
 	sub r0, r0, r5
 	sub r1, r1, r5
@@ -4073,7 +4073,7 @@ func_ov00_0207914c: ; 0x0207914c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov00_0207914c
-_020791d8: .word data_027e0e60
+_020791d8: .word gMapManager
 
 	.global func_ov00_020791dc
 	arm_func_start func_ov00_020791dc
@@ -4097,23 +4097,23 @@ func_ov00_020791dc: ; 0x020791dc
 func_ov00_0207920c: ; 0x0207920c
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
-	ldr r4, _0207929c ; =data_027e0e60
+	ldr r4, _0207929c ; =gMapManager
 	mov r11, r0
 	ldr r7, [r4]
 	mov r10, r1
 	mov r0, r7
 	mov r9, r2
 	mov r8, r3
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r6, r0
 	mov r0, r7
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r5, r0
 	mov r0, r7
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	mov r4, r0
 	mov r0, r7
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	sub r3, r4, r6
 	ldr r1, [r10, #8]
 	sub r0, r0, r5
@@ -4133,7 +4133,7 @@ func_ov00_0207920c: ; 0x0207920c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 	arm_func_end func_ov00_0207920c
-_0207929c: .word data_027e0e60
+_0207929c: .word gMapManager
 
 	.global func_ov00_020792a0
 	arm_func_start func_ov00_020792a0
@@ -4161,22 +4161,22 @@ _020792d4:
 	ldr r0, [r0, #0x14]
 	add r9, r9, r0
 _020792f4:
-	ldr r0, _020793b4 ; =data_027e0e60
+	ldr r0, _020793b4 ; =gMapManager
 	ldr r6, [r0]
 	mov r0, r6
-	bl func_ov00_02083394
+	bl _ZN10MapManager13GetCourseMinXEv
 	mov r5, r0
 	mov r0, r6
-	bl func_ov00_020833a0
+	bl _ZN10MapManager13GetCourseMinZEv
 	mov r4, r0
 	mov r0, r6
-	bl func_ov00_020833ac
+	bl _ZN10MapManager13GetCourseMaxXEv
 	sub r2, r0, r5
 	mov r0, r6
 	mov r1, r2, asr #0x7
 	add r1, r2, r1, lsr #24
 	mov r6, r1, asr #0x8
-	bl func_ov00_020833b8
+	bl _ZN10MapManager13GetCourseMaxZEv
 	sub r0, r0, r4
 	mov r1, #0xc0
 	bl func_01ff9b4c
@@ -4212,7 +4212,7 @@ _02079368:
 	.align 2, 0
 	arm_func_end func_ov00_020792a0
 _020793b0: .word data_027e0c38
-_020793b4: .word data_027e0e60
+_020793b4: .word gMapManager
 
 	.global func_ov00_020793b8
 	arm_func_start func_ov00_020793b8
@@ -4340,28 +4340,28 @@ _0207955c:
 	mov r0, #0
 	b _02079614
 _02079564:
-	ldr r0, _0207967c ; =data_027e0e60
+	ldr r0, _0207967c ; =gMapManager
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_02082e1c
+	bl _ZN10MapManager18func_ov00_02082e1cEPiS0_
 	cmp r0, #0
 	movne r0, #0
 	bne _02079614
-	ldr r0, _0207967c ; =data_027e0e60
+	ldr r0, _0207967c ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_020849c0
+	bl _ZN10MapManager18func_ov00_020849c0Ev
 	cmp r0, #0
 	beq _020795f8
 	ldrb r0, [sp, #0x38]
 	cmp r0, #0
 	moveq r0, #0
 	beq _02079614
-	ldr r0, _0207967c ; =data_027e0e60
+	ldr r0, _0207967c ; =gMapManager
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_0208306c
+	bl _ZN10MapManager18func_ov00_0208306cEv
 	ldr r1, [r4]
 	mov r0, #0xc0000
 	mov r1, r1, lsl #0xc
@@ -4415,7 +4415,7 @@ _0207966c: .word data_027e0e28
 _02079670: .word data_027e0d38
 _02079674: .word gOverlayManager
 _02079678: .word 0x00000003
-_0207967c: .word data_027e0e60
+_0207967c: .word gMapManager
 
 	.global func_ov00_02079680
 	arm_func_start func_ov00_02079680
@@ -4510,11 +4510,11 @@ func_ov00_0207977c: ; 0x0207977c
 	bl func_ov00_02078b88
 	cmp r0, #0
 	bne _0207984c
-	ldr r0, _0207986c ; =data_027e0e60
+	ldr r0, _0207986c ; =gMapManager
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, r4
-	bl func_ov00_02082e1c
+	bl _ZN10MapManager18func_ov00_02082e1cEPiS0_
 	cmp r0, #0
 	beq _0207984c
 	mov r0, r8
@@ -4555,7 +4555,7 @@ _0207984c:
 	arm_func_end func_ov00_0207977c
 _02079864: .word data_027e0e28
 _02079868: .word data_027e0d38
-_0207986c: .word data_027e0e60
+_0207986c: .word gMapManager
 _02079870: .word data_027e0c38
 _02079874: .word data_027e080c
 
@@ -6935,6 +6935,17 @@ _020df36c: .word data_027e0d54
 _020df370: .word func_ov00_0207a2fc - 1
 _020df374: .word data_027e0d48
 
+	.global func_ov00_020df378
+	arm_func_start func_ov00_020df378
+func_ov00_020df378: ; 0x020df378
+	ldr ip, _020df384 ; =func_ov08_02113a0c
+	ldr r0, _020df388 ; =data_ov00_020e9370
+	bx ip
+	.align 2, 0
+	arm_func_end func_ov00_020df378
+_020df384: .word func_ov08_02113a0c
+_020df388: .word data_ov00_020e9370
+
 	.section .ctor, 4, 1, 4
 	.global data_ov00_020e1e88
 data_ov00_020e1e88: ; 0x020e1e88
@@ -7089,4 +7100,1738 @@ data_ov00_020e9360:
 	.space 0x4
 	.global data_ov00_020e9364
 data_ov00_020e9364:
+	.space 0x4
+	.global data_ov00_020e9368
+data_ov00_020e9368:
+	.space 0x4
+	.global data_ov00_020e936c
+data_ov00_020e936c:
+	.space 0x4
+	.global data_ov00_020e9370
+data_ov00_020e9370:
+	.space 0x4
+	.global data_ov00_020e9374
+data_ov00_020e9374:
+	.space 0x4
+	.global data_ov00_020e9378
+data_ov00_020e9378:
+	.space 0x4
+	.global data_ov00_020e937c
+data_ov00_020e937c:
+	.space 0x4
+	.global data_ov00_020e9380
+data_ov00_020e9380:
+	.space 0x4
+	.global data_ov00_020e9384
+data_ov00_020e9384:
+	.space 0x4
+	.global data_ov00_020e9388
+data_ov00_020e9388:
+	.space 0x4
+	.global data_ov00_020e938c
+data_ov00_020e938c:
+	.space 0x4
+	.global data_ov00_020e9390
+data_ov00_020e9390:
+	.space 0x4
+	.global data_ov00_020e9394
+data_ov00_020e9394:
+	.space 0x4
+	.global data_ov00_020e9398
+data_ov00_020e9398:
+	.space 0x4
+	.global data_ov00_020e939c
+data_ov00_020e939c:
+	.space 0x4
+	.global data_ov00_020e93a0
+data_ov00_020e93a0:
+	.space 0x4
+	.global data_ov00_020e93a4
+data_ov00_020e93a4:
+	.space 0x4
+	.global data_ov00_020e93a8
+data_ov00_020e93a8:
+	.space 0x4
+	.global data_ov00_020e93ac
+data_ov00_020e93ac:
+	.space 0x4
+	.global data_ov00_020e93b0
+data_ov00_020e93b0:
+	.space 0x4
+	.global data_ov00_020e93b4
+data_ov00_020e93b4:
+	.space 0x4
+	.global data_ov00_020e93b8
+data_ov00_020e93b8:
+	.space 0x4
+	.global data_ov00_020e93bc
+data_ov00_020e93bc:
+	.space 0x4
+	.global data_ov00_020e93c0
+data_ov00_020e93c0:
+	.space 0x4
+	.global data_ov00_020e93c4
+data_ov00_020e93c4:
+	.space 0x4
+	.global data_ov00_020e93c8
+data_ov00_020e93c8:
+	.space 0x4
+	.global data_ov00_020e93cc
+data_ov00_020e93cc:
+	.space 0x4
+	.global data_ov00_020e93d0
+data_ov00_020e93d0:
+	.space 0x4
+	.global data_ov00_020e93d4
+data_ov00_020e93d4:
+	.space 0x4
+	.global data_ov00_020e93d8
+data_ov00_020e93d8:
+	.space 0x4
+	.global data_ov00_020e93dc
+data_ov00_020e93dc:
+	.space 0x4
+	.global data_ov00_020e93e0
+data_ov00_020e93e0:
+	.space 0x4
+	.global data_ov00_020e93e4
+data_ov00_020e93e4:
+	.space 0x4
+	.global data_ov00_020e93e8
+data_ov00_020e93e8:
+	.space 0x4
+	.global data_ov00_020e93ec
+data_ov00_020e93ec:
+	.space 0x4
+	.global data_ov00_020e93f0
+data_ov00_020e93f0:
+	.space 0x4
+	.global data_ov00_020e93f4
+data_ov00_020e93f4:
+	.space 0x4
+	.global data_ov00_020e93f8
+data_ov00_020e93f8:
+	.space 0x4
+	.global data_ov00_020e93fc
+data_ov00_020e93fc:
+	.space 0x4
+	.global data_ov00_020e9400
+data_ov00_020e9400:
+	.space 0x4
+	.global data_ov00_020e9404
+data_ov00_020e9404:
+	.space 0x4
+	.global data_ov00_020e9408
+data_ov00_020e9408:
+	.space 0x4
+	.global data_ov00_020e940c
+data_ov00_020e940c:
+	.space 0x4
+	.global data_ov00_020e9410
+data_ov00_020e9410:
+	.space 0x4
+	.global data_ov00_020e9414
+data_ov00_020e9414:
+	.space 0x4
+	.global data_ov00_020e9418
+data_ov00_020e9418:
+	.space 0x4
+	.global data_ov00_020e941c
+data_ov00_020e941c:
+	.space 0x4
+	.global data_ov00_020e9420
+data_ov00_020e9420:
+	.space 0x4
+	.global data_ov00_020e9424
+data_ov00_020e9424:
+	.space 0x4
+	.global data_ov00_020e9428
+data_ov00_020e9428:
+	.space 0x4
+	.global data_ov00_020e942c
+data_ov00_020e942c:
+	.space 0x4
+	.global data_ov00_020e9430
+data_ov00_020e9430:
+	.space 0x4
+	.global data_ov00_020e9434
+data_ov00_020e9434:
+	.space 0x4
+	.global data_ov00_020e9438
+data_ov00_020e9438:
+	.space 0x4
+	.global data_ov00_020e943c
+data_ov00_020e943c:
+	.space 0x4
+	.global data_ov00_020e9440
+data_ov00_020e9440:
+	.space 0x4
+	.global data_ov00_020e9444
+data_ov00_020e9444:
+	.space 0x4
+	.global data_ov00_020e9448
+data_ov00_020e9448:
+	.space 0x4
+	.global data_ov00_020e944c
+data_ov00_020e944c:
+	.space 0x4
+	.global data_ov00_020e9450
+data_ov00_020e9450:
+	.space 0x4
+	.global data_ov00_020e9454
+data_ov00_020e9454:
+	.space 0x4
+	.global data_ov00_020e9458
+data_ov00_020e9458:
+	.space 0x4
+	.global data_ov00_020e945c
+data_ov00_020e945c:
+	.space 0x4
+	.global data_ov00_020e9460
+data_ov00_020e9460:
+	.space 0x4
+	.global data_ov00_020e9464
+data_ov00_020e9464:
+	.space 0x4
+	.global data_ov00_020e9468
+data_ov00_020e9468:
+	.space 0x4
+	.global data_ov00_020e946c
+data_ov00_020e946c:
+	.space 0x4
+	.global data_ov00_020e9470
+data_ov00_020e9470:
+	.space 0x4
+	.global data_ov00_020e9474
+data_ov00_020e9474:
+	.space 0x4
+	.global data_ov00_020e9478
+data_ov00_020e9478:
+	.space 0x4
+	.global data_ov00_020e947c
+data_ov00_020e947c:
+	.space 0x4
+	.global data_ov00_020e9480
+data_ov00_020e9480:
+	.space 0x4
+	.global data_ov00_020e9484
+data_ov00_020e9484:
+	.space 0x4
+	.global data_ov00_020e9488
+data_ov00_020e9488:
+	.space 0x4
+	.global data_ov00_020e948c
+data_ov00_020e948c:
+	.space 0x4
+	.global data_ov00_020e9490
+data_ov00_020e9490:
+	.space 0x4
+	.global data_ov00_020e9494
+data_ov00_020e9494:
+	.space 0x4
+	.global data_ov00_020e9498
+data_ov00_020e9498:
+	.space 0x4
+	.global data_ov00_020e949c
+data_ov00_020e949c:
+	.space 0x4
+	.global data_ov00_020e94a0
+data_ov00_020e94a0:
+	.space 0x4
+	.global data_ov00_020e94a4
+data_ov00_020e94a4:
+	.space 0x4
+	.global data_ov00_020e94a8
+data_ov00_020e94a8:
+	.space 0x4
+	.global data_ov00_020e94ac
+data_ov00_020e94ac:
+	.space 0x4
+	.global data_ov00_020e94b0
+data_ov00_020e94b0:
+	.space 0x4
+	.global data_ov00_020e94b4
+data_ov00_020e94b4:
+	.space 0x4
+	.global data_ov00_020e94b8
+data_ov00_020e94b8:
+	.space 0x4
+	.global data_ov00_020e94bc
+data_ov00_020e94bc:
+	.space 0x4
+	.global data_ov00_020e94c0
+data_ov00_020e94c0:
+	.space 0x4
+	.global data_ov00_020e94c4
+data_ov00_020e94c4:
+	.space 0x4
+	.global data_ov00_020e94c8
+data_ov00_020e94c8:
+	.space 0x4
+	.global data_ov00_020e94cc
+data_ov00_020e94cc:
+	.space 0x4
+	.global data_ov00_020e94d0
+data_ov00_020e94d0:
+	.space 0x4
+	.global data_ov00_020e94d4
+data_ov00_020e94d4:
+	.space 0x4
+	.global data_ov00_020e94d8
+data_ov00_020e94d8:
+	.space 0x4
+	.global data_ov00_020e94dc
+data_ov00_020e94dc:
+	.space 0x4
+	.global data_ov00_020e94e0
+data_ov00_020e94e0:
+	.space 0x4
+	.global data_ov00_020e94e4
+data_ov00_020e94e4:
+	.space 0x4
+	.global data_ov00_020e94e8
+data_ov00_020e94e8:
+	.space 0x4
+	.global data_ov00_020e94ec
+data_ov00_020e94ec:
+	.space 0x4
+	.global data_ov00_020e94f0
+data_ov00_020e94f0:
+	.space 0x4
+	.global data_ov00_020e94f4
+data_ov00_020e94f4:
+	.space 0x4
+	.global data_ov00_020e94f8
+data_ov00_020e94f8:
+	.space 0x4
+	.global data_ov00_020e94fc
+data_ov00_020e94fc:
+	.space 0x4
+	.global data_ov00_020e9500
+data_ov00_020e9500:
+	.space 0x4
+	.global data_ov00_020e9504
+data_ov00_020e9504:
+	.space 0x4
+	.global data_ov00_020e9508
+data_ov00_020e9508:
+	.space 0x4
+	.global data_ov00_020e950c
+data_ov00_020e950c:
+	.space 0x4
+	.global data_ov00_020e9510
+data_ov00_020e9510:
+	.space 0x4
+	.global data_ov00_020e9514
+data_ov00_020e9514:
+	.space 0x4
+	.global data_ov00_020e9518
+data_ov00_020e9518:
+	.space 0x4
+	.global data_ov00_020e951c
+data_ov00_020e951c:
+	.space 0x4
+	.global data_ov00_020e9520
+data_ov00_020e9520:
+	.space 0x4
+	.global data_ov00_020e9524
+data_ov00_020e9524:
+	.space 0x4
+	.global data_ov00_020e9528
+data_ov00_020e9528:
+	.space 0x4
+	.global data_ov00_020e952c
+data_ov00_020e952c:
+	.space 0x4
+	.global data_ov00_020e9530
+data_ov00_020e9530:
+	.space 0x4
+	.global data_ov00_020e9534
+data_ov00_020e9534:
+	.space 0x4
+	.global data_ov00_020e9538
+data_ov00_020e9538:
+	.space 0x4
+	.global data_ov00_020e953c
+data_ov00_020e953c:
+	.space 0x4
+	.global data_ov00_020e9540
+data_ov00_020e9540:
+	.space 0x4
+	.global data_ov00_020e9544
+data_ov00_020e9544:
+	.space 0x4
+	.global data_ov00_020e9548
+data_ov00_020e9548:
+	.space 0x4
+	.global data_ov00_020e954c
+data_ov00_020e954c:
+	.space 0x4
+	.global data_ov00_020e9550
+data_ov00_020e9550:
+	.space 0x4
+	.global data_ov00_020e9554
+data_ov00_020e9554:
+	.space 0x4
+	.global data_ov00_020e9558
+data_ov00_020e9558:
+	.space 0x4
+	.global data_ov00_020e955c
+data_ov00_020e955c:
+	.space 0x4
+	.global data_ov00_020e9560
+data_ov00_020e9560:
+	.space 0x4
+	.global data_ov00_020e9564
+data_ov00_020e9564:
+	.space 0x4
+	.global data_ov00_020e9568
+data_ov00_020e9568:
+	.space 0x4
+	.global data_ov00_020e956c
+data_ov00_020e956c:
+	.space 0x4
+	.global data_ov00_020e9570
+data_ov00_020e9570:
+	.space 0x4
+	.global data_ov00_020e9574
+data_ov00_020e9574:
+	.space 0x4
+	.global data_ov00_020e9578
+data_ov00_020e9578:
+	.space 0x4
+	.global data_ov00_020e957c
+data_ov00_020e957c:
+	.space 0x4
+	.global data_ov00_020e9580
+data_ov00_020e9580:
+	.space 0x4
+	.global data_ov00_020e9584
+data_ov00_020e9584:
+	.space 0x4
+	.global data_ov00_020e9588
+data_ov00_020e9588:
+	.space 0x4
+	.global data_ov00_020e958c
+data_ov00_020e958c:
+	.space 0x4
+	.global data_ov00_020e9590
+data_ov00_020e9590:
+	.space 0x4
+	.global data_ov00_020e9594
+data_ov00_020e9594:
+	.space 0x4
+	.global data_ov00_020e9598
+data_ov00_020e9598:
+	.space 0x4
+	.global data_ov00_020e959c
+data_ov00_020e959c:
+	.space 0x4
+	.global data_ov00_020e95a0
+data_ov00_020e95a0:
+	.space 0x4
+	.global data_ov00_020e95a4
+data_ov00_020e95a4:
+	.space 0x4
+	.global data_ov00_020e95a8
+data_ov00_020e95a8:
+	.space 0x4
+	.global data_ov00_020e95ac
+data_ov00_020e95ac:
+	.space 0x4
+	.global data_ov00_020e95b0
+data_ov00_020e95b0:
+	.space 0x4
+	.global data_ov00_020e95b4
+data_ov00_020e95b4:
+	.space 0x4
+	.global data_ov00_020e95b8
+data_ov00_020e95b8:
+	.space 0x4
+	.global data_ov00_020e95bc
+data_ov00_020e95bc:
+	.space 0x4
+	.global data_ov00_020e95c0
+data_ov00_020e95c0:
+	.space 0x4
+	.global data_ov00_020e95c4
+data_ov00_020e95c4:
+	.space 0x4
+	.global data_ov00_020e95c8
+data_ov00_020e95c8:
+	.space 0x4
+	.global data_ov00_020e95cc
+data_ov00_020e95cc:
+	.space 0x4
+	.global data_ov00_020e95d0
+data_ov00_020e95d0:
+	.space 0x4
+	.global data_ov00_020e95d4
+data_ov00_020e95d4:
+	.space 0x4
+	.global data_ov00_020e95d8
+data_ov00_020e95d8:
+	.space 0x4
+	.global data_ov00_020e95dc
+data_ov00_020e95dc:
+	.space 0x4
+	.global data_ov00_020e95e0
+data_ov00_020e95e0:
+	.space 0x4
+	.global data_ov00_020e95e4
+data_ov00_020e95e4:
+	.space 0x4
+	.global data_ov00_020e95e8
+data_ov00_020e95e8:
+	.space 0x4
+	.global data_ov00_020e95ec
+data_ov00_020e95ec:
+	.space 0x4
+	.global data_ov00_020e95f0
+data_ov00_020e95f0:
+	.space 0x4
+	.global data_ov00_020e95f4
+data_ov00_020e95f4:
+	.space 0x4
+	.global data_ov00_020e95f8
+data_ov00_020e95f8:
+	.space 0x4
+	.global data_ov00_020e95fc
+data_ov00_020e95fc:
+	.space 0x4
+	.global data_ov00_020e9600
+data_ov00_020e9600:
+	.space 0x4
+	.global data_ov00_020e9604
+data_ov00_020e9604:
+	.space 0x4
+	.global data_ov00_020e9608
+data_ov00_020e9608:
+	.space 0x4
+	.global data_ov00_020e960c
+data_ov00_020e960c:
+	.space 0x4
+	.global data_ov00_020e9610
+data_ov00_020e9610:
+	.space 0x4
+	.global data_ov00_020e9614
+data_ov00_020e9614:
+	.space 0x4
+	.global data_ov00_020e9618
+data_ov00_020e9618:
+	.space 0x4
+	.global data_ov00_020e961c
+data_ov00_020e961c:
+	.space 0x4
+	.global data_ov00_020e9620
+data_ov00_020e9620:
+	.space 0x4
+	.global data_ov00_020e9624
+data_ov00_020e9624:
+	.space 0x4
+	.global data_ov00_020e9628
+data_ov00_020e9628:
+	.space 0x4
+	.global data_ov00_020e962c
+data_ov00_020e962c:
+	.space 0x4
+	.global data_ov00_020e9630
+data_ov00_020e9630:
+	.space 0x4
+	.global data_ov00_020e9634
+data_ov00_020e9634:
+	.space 0x4
+	.global data_ov00_020e9638
+data_ov00_020e9638:
+	.space 0x4
+	.global data_ov00_020e963c
+data_ov00_020e963c:
+	.space 0x4
+	.global data_ov00_020e9640
+data_ov00_020e9640:
+	.space 0x4
+	.global data_ov00_020e9644
+data_ov00_020e9644:
+	.space 0x4
+	.global data_ov00_020e9648
+data_ov00_020e9648:
+	.space 0x4
+	.global data_ov00_020e964c
+data_ov00_020e964c:
+	.space 0x4
+	.global data_ov00_020e9650
+data_ov00_020e9650:
+	.space 0x4
+	.global data_ov00_020e9654
+data_ov00_020e9654:
+	.space 0x4
+	.global data_ov00_020e9658
+data_ov00_020e9658:
+	.space 0x4
+	.global data_ov00_020e965c
+data_ov00_020e965c:
+	.space 0x4
+	.global data_ov00_020e9660
+data_ov00_020e9660:
+	.space 0x4
+	.global data_ov00_020e9664
+data_ov00_020e9664:
+	.space 0x4
+	.global data_ov00_020e9668
+data_ov00_020e9668:
+	.space 0x4
+	.global data_ov00_020e966c
+data_ov00_020e966c:
+	.space 0x4
+	.global data_ov00_020e9670
+data_ov00_020e9670:
+	.space 0x4
+	.global data_ov00_020e9674
+data_ov00_020e9674:
+	.space 0x4
+	.global data_ov00_020e9678
+data_ov00_020e9678:
+	.space 0x4
+	.global data_ov00_020e967c
+data_ov00_020e967c:
+	.space 0x4
+	.global data_ov00_020e9680
+data_ov00_020e9680:
+	.space 0x4
+	.global data_ov00_020e9684
+data_ov00_020e9684:
+	.space 0x4
+	.global data_ov00_020e9688
+data_ov00_020e9688:
+	.space 0x4
+	.global data_ov00_020e968c
+data_ov00_020e968c:
+	.space 0x4
+	.global data_ov00_020e9690
+data_ov00_020e9690:
+	.space 0x4
+	.global data_ov00_020e9694
+data_ov00_020e9694:
+	.space 0x4
+	.global data_ov00_020e9698
+data_ov00_020e9698:
+	.space 0x4
+	.global data_ov00_020e969c
+data_ov00_020e969c:
+	.space 0x4
+	.global data_ov00_020e96a0
+data_ov00_020e96a0:
+	.space 0x4
+	.global data_ov00_020e96a4
+data_ov00_020e96a4:
+	.space 0x4
+	.global data_ov00_020e96a8
+data_ov00_020e96a8:
+	.space 0x4
+	.global data_ov00_020e96ac
+data_ov00_020e96ac:
+	.space 0x4
+	.global data_ov00_020e96b0
+data_ov00_020e96b0:
+	.space 0x4
+	.global data_ov00_020e96b4
+data_ov00_020e96b4:
+	.space 0x4
+	.global data_ov00_020e96b8
+data_ov00_020e96b8:
+	.space 0x4
+	.global data_ov00_020e96bc
+data_ov00_020e96bc:
+	.space 0x4
+	.global data_ov00_020e96c0
+data_ov00_020e96c0:
+	.space 0x4
+	.global data_ov00_020e96c4
+data_ov00_020e96c4:
+	.space 0x4
+	.global data_ov00_020e96c8
+data_ov00_020e96c8:
+	.space 0x4
+	.global data_ov00_020e96cc
+data_ov00_020e96cc:
+	.space 0x4
+	.global data_ov00_020e96d0
+data_ov00_020e96d0:
+	.space 0x4
+	.global data_ov00_020e96d4
+data_ov00_020e96d4:
+	.space 0x4
+	.global data_ov00_020e96d8
+data_ov00_020e96d8:
+	.space 0x4
+	.global data_ov00_020e96dc
+data_ov00_020e96dc:
+	.space 0x4
+	.global data_ov00_020e96e0
+data_ov00_020e96e0:
+	.space 0x4
+	.global data_ov00_020e96e4
+data_ov00_020e96e4:
+	.space 0x4
+	.global data_ov00_020e96e8
+data_ov00_020e96e8:
+	.space 0x4
+	.global data_ov00_020e96ec
+data_ov00_020e96ec:
+	.space 0x4
+	.global data_ov00_020e96f0
+data_ov00_020e96f0:
+	.space 0x4
+	.global data_ov00_020e96f4
+data_ov00_020e96f4:
+	.space 0x4
+	.global data_ov00_020e96f8
+data_ov00_020e96f8:
+	.space 0x4
+	.global data_ov00_020e96fc
+data_ov00_020e96fc:
+	.space 0x4
+	.global data_ov00_020e9700
+data_ov00_020e9700:
+	.space 0x4
+	.global data_ov00_020e9704
+data_ov00_020e9704:
+	.space 0x4
+	.global data_ov00_020e9708
+data_ov00_020e9708:
+	.space 0x4
+	.global data_ov00_020e970c
+data_ov00_020e970c:
+	.space 0x4
+	.global data_ov00_020e9710
+data_ov00_020e9710:
+	.space 0x4
+	.global data_ov00_020e9714
+data_ov00_020e9714:
+	.space 0x4
+	.global data_ov00_020e9718
+data_ov00_020e9718:
+	.space 0x4
+	.global data_ov00_020e971c
+data_ov00_020e971c:
+	.space 0x4
+	.global data_ov00_020e9720
+data_ov00_020e9720:
+	.space 0x4
+	.global data_ov00_020e9724
+data_ov00_020e9724:
+	.space 0x4
+	.global data_ov00_020e9728
+data_ov00_020e9728:
+	.space 0x4
+	.global data_ov00_020e972c
+data_ov00_020e972c:
+	.space 0x4
+	.global data_ov00_020e9730
+data_ov00_020e9730:
+	.space 0x4
+	.global data_ov00_020e9734
+data_ov00_020e9734:
+	.space 0x4
+	.global data_ov00_020e9738
+data_ov00_020e9738:
+	.space 0x4
+	.global data_ov00_020e973c
+data_ov00_020e973c:
+	.space 0x4
+	.global data_ov00_020e9740
+data_ov00_020e9740:
+	.space 0x4
+	.global data_ov00_020e9744
+data_ov00_020e9744:
+	.space 0x4
+	.global data_ov00_020e9748
+data_ov00_020e9748:
+	.space 0x4
+	.global data_ov00_020e974c
+data_ov00_020e974c:
+	.space 0x4
+	.global data_ov00_020e9750
+data_ov00_020e9750:
+	.space 0x4
+	.global data_ov00_020e9754
+data_ov00_020e9754:
+	.space 0x4
+	.global data_ov00_020e9758
+data_ov00_020e9758:
+	.space 0x4
+	.global data_ov00_020e975c
+data_ov00_020e975c:
+	.space 0x4
+	.global data_ov00_020e9760
+data_ov00_020e9760:
+	.space 0x4
+	.global data_ov00_020e9764
+data_ov00_020e9764:
+	.space 0x4
+	.global data_ov00_020e9768
+data_ov00_020e9768:
+	.space 0x4
+	.global data_ov00_020e976c
+data_ov00_020e976c:
+	.space 0x4
+	.global data_ov00_020e9770
+data_ov00_020e9770:
+	.space 0x4
+	.global data_ov00_020e9774
+data_ov00_020e9774:
+	.space 0x4
+	.global data_ov00_020e9778
+data_ov00_020e9778:
+	.space 0x4
+	.global data_ov00_020e977c
+data_ov00_020e977c:
+	.space 0x4
+	.global data_ov00_020e9780
+data_ov00_020e9780:
+	.space 0x4
+	.global data_ov00_020e9784
+data_ov00_020e9784:
+	.space 0x4
+	.global data_ov00_020e9788
+data_ov00_020e9788:
+	.space 0x4
+	.global data_ov00_020e978c
+data_ov00_020e978c:
+	.space 0x4
+	.global data_ov00_020e9790
+data_ov00_020e9790:
+	.space 0x4
+	.global data_ov00_020e9794
+data_ov00_020e9794:
+	.space 0x4
+	.global data_ov00_020e9798
+data_ov00_020e9798:
+	.space 0x4
+	.global data_ov00_020e979c
+data_ov00_020e979c:
+	.space 0x4
+	.global data_ov00_020e97a0
+data_ov00_020e97a0:
+	.space 0x4
+	.global data_ov00_020e97a4
+data_ov00_020e97a4:
+	.space 0x4
+	.global data_ov00_020e97a8
+data_ov00_020e97a8:
+	.space 0x4
+	.global data_ov00_020e97ac
+data_ov00_020e97ac:
+	.space 0x4
+	.global data_ov00_020e97b0
+data_ov00_020e97b0:
+	.space 0x4
+	.global data_ov00_020e97b4
+data_ov00_020e97b4:
+	.space 0x4
+	.global data_ov00_020e97b8
+data_ov00_020e97b8:
+	.space 0x4
+	.global data_ov00_020e97bc
+data_ov00_020e97bc:
+	.space 0x4
+	.global data_ov00_020e97c0
+data_ov00_020e97c0:
+	.space 0x4
+	.global data_ov00_020e97c4
+data_ov00_020e97c4:
+	.space 0x4
+	.global data_ov00_020e97c8
+data_ov00_020e97c8:
+	.space 0x4
+	.global data_ov00_020e97cc
+data_ov00_020e97cc:
+	.space 0x4
+	.global data_ov00_020e97d0
+data_ov00_020e97d0:
+	.space 0x4
+	.global data_ov00_020e97d4
+data_ov00_020e97d4:
+	.space 0x4
+	.global data_ov00_020e97d8
+data_ov00_020e97d8:
+	.space 0x4
+	.global data_ov00_020e97dc
+data_ov00_020e97dc:
+	.space 0x4
+	.global data_ov00_020e97e0
+data_ov00_020e97e0:
+	.space 0x4
+	.global data_ov00_020e97e4
+data_ov00_020e97e4:
+	.space 0x4
+	.global data_ov00_020e97e8
+data_ov00_020e97e8:
+	.space 0x4
+	.global data_ov00_020e97ec
+data_ov00_020e97ec:
+	.space 0x4
+	.global data_ov00_020e97f0
+data_ov00_020e97f0:
+	.space 0x4
+	.global data_ov00_020e97f4
+data_ov00_020e97f4:
+	.space 0x4
+	.global data_ov00_020e97f8
+data_ov00_020e97f8:
+	.space 0x4
+	.global data_ov00_020e97fc
+data_ov00_020e97fc:
+	.space 0x4
+	.global data_ov00_020e9800
+data_ov00_020e9800:
+	.space 0x4
+	.global data_ov00_020e9804
+data_ov00_020e9804:
+	.space 0x4
+	.global data_ov00_020e9808
+data_ov00_020e9808:
+	.space 0x4
+	.global data_ov00_020e980c
+data_ov00_020e980c:
+	.space 0x4
+	.global data_ov00_020e9810
+data_ov00_020e9810:
+	.space 0x4
+	.global data_ov00_020e9814
+data_ov00_020e9814:
+	.space 0x4
+	.global data_ov00_020e9818
+data_ov00_020e9818:
+	.space 0x4
+	.global data_ov00_020e981c
+data_ov00_020e981c:
+	.space 0x4
+	.global data_ov00_020e9820
+data_ov00_020e9820:
+	.space 0x4
+	.global data_ov00_020e9824
+data_ov00_020e9824:
+	.space 0x4
+	.global data_ov00_020e9828
+data_ov00_020e9828:
+	.space 0x4
+	.global data_ov00_020e982c
+data_ov00_020e982c:
+	.space 0x4
+	.global data_ov00_020e9830
+data_ov00_020e9830:
+	.space 0x4
+	.global data_ov00_020e9834
+data_ov00_020e9834:
+	.space 0x4
+	.global data_ov00_020e9838
+data_ov00_020e9838:
+	.space 0x4
+	.global data_ov00_020e983c
+data_ov00_020e983c:
+	.space 0x4
+	.global data_ov00_020e9840
+data_ov00_020e9840:
+	.space 0x4
+	.global data_ov00_020e9844
+data_ov00_020e9844:
+	.space 0x4
+	.global data_ov00_020e9848
+data_ov00_020e9848:
+	.space 0x4
+	.global data_ov00_020e984c
+data_ov00_020e984c:
+	.space 0x4
+	.global data_ov00_020e9850
+data_ov00_020e9850:
+	.space 0x4
+	.global data_ov00_020e9854
+data_ov00_020e9854:
+	.space 0x4
+	.global data_ov00_020e9858
+data_ov00_020e9858:
+	.space 0x4
+	.global data_ov00_020e985c
+data_ov00_020e985c:
+	.space 0x4
+	.global data_ov00_020e9860
+data_ov00_020e9860:
+	.space 0x4
+	.global data_ov00_020e9864
+data_ov00_020e9864:
+	.space 0x4
+	.global data_ov00_020e9868
+data_ov00_020e9868:
+	.space 0x4
+	.global data_ov00_020e986c
+data_ov00_020e986c:
+	.space 0x4
+	.global data_ov00_020e9870
+data_ov00_020e9870:
+	.space 0x4
+	.global data_ov00_020e9874
+data_ov00_020e9874:
+	.space 0x4
+	.global data_ov00_020e9878
+data_ov00_020e9878:
+	.space 0x4
+	.global data_ov00_020e987c
+data_ov00_020e987c:
+	.space 0x4
+	.global data_ov00_020e9880
+data_ov00_020e9880:
+	.space 0x4
+	.global data_ov00_020e9884
+data_ov00_020e9884:
+	.space 0x4
+	.global data_ov00_020e9888
+data_ov00_020e9888:
+	.space 0x4
+	.global data_ov00_020e988c
+data_ov00_020e988c:
+	.space 0x4
+	.global data_ov00_020e9890
+data_ov00_020e9890:
+	.space 0x4
+	.global data_ov00_020e9894
+data_ov00_020e9894:
+	.space 0x4
+	.global data_ov00_020e9898
+data_ov00_020e9898:
+	.space 0x4
+	.global data_ov00_020e989c
+data_ov00_020e989c:
+	.space 0x4
+	.global data_ov00_020e98a0
+data_ov00_020e98a0:
+	.space 0x4
+	.global data_ov00_020e98a4
+data_ov00_020e98a4:
+	.space 0x4
+	.global data_ov00_020e98a8
+data_ov00_020e98a8:
+	.space 0x4
+	.global data_ov00_020e98ac
+data_ov00_020e98ac:
+	.space 0x4
+	.global data_ov00_020e98b0
+data_ov00_020e98b0:
+	.space 0x4
+	.global data_ov00_020e98b4
+data_ov00_020e98b4:
+	.space 0x4
+	.global data_ov00_020e98b8
+data_ov00_020e98b8:
+	.space 0x4
+	.global data_ov00_020e98bc
+data_ov00_020e98bc:
+	.space 0x4
+	.global data_ov00_020e98c0
+data_ov00_020e98c0:
+	.space 0x4
+	.global data_ov00_020e98c4
+data_ov00_020e98c4:
+	.space 0x4
+	.global data_ov00_020e98c8
+data_ov00_020e98c8:
+	.space 0x4
+	.global data_ov00_020e98cc
+data_ov00_020e98cc:
+	.space 0x4
+	.global data_ov00_020e98d0
+data_ov00_020e98d0:
+	.space 0x4
+	.global data_ov00_020e98d4
+data_ov00_020e98d4:
+	.space 0x4
+	.global data_ov00_020e98d8
+data_ov00_020e98d8:
+	.space 0x4
+	.global data_ov00_020e98dc
+data_ov00_020e98dc:
+	.space 0x4
+	.global data_ov00_020e98e0
+data_ov00_020e98e0:
+	.space 0x4
+	.global data_ov00_020e98e4
+data_ov00_020e98e4:
+	.space 0x4
+	.global data_ov00_020e98e8
+data_ov00_020e98e8:
+	.space 0x4
+	.global data_ov00_020e98ec
+data_ov00_020e98ec:
+	.space 0x4
+	.global data_ov00_020e98f0
+data_ov00_020e98f0:
+	.space 0x4
+	.global data_ov00_020e98f4
+data_ov00_020e98f4:
+	.space 0x4
+	.global data_ov00_020e98f8
+data_ov00_020e98f8:
+	.space 0x4
+	.global data_ov00_020e98fc
+data_ov00_020e98fc:
+	.space 0x4
+	.global data_ov00_020e9900
+data_ov00_020e9900:
+	.space 0x4
+	.global data_ov00_020e9904
+data_ov00_020e9904:
+	.space 0x4
+	.global data_ov00_020e9908
+data_ov00_020e9908:
+	.space 0x4
+	.global data_ov00_020e990c
+data_ov00_020e990c:
+	.space 0x4
+	.global data_ov00_020e9910
+data_ov00_020e9910:
+	.space 0x4
+	.global data_ov00_020e9914
+data_ov00_020e9914:
+	.space 0x4
+	.global data_ov00_020e9918
+data_ov00_020e9918:
+	.space 0x4
+	.global data_ov00_020e991c
+data_ov00_020e991c:
+	.space 0x4
+	.global data_ov00_020e9920
+data_ov00_020e9920:
+	.space 0x4
+	.global data_ov00_020e9924
+data_ov00_020e9924:
+	.space 0x4
+	.global data_ov00_020e9928
+data_ov00_020e9928:
+	.space 0x4
+	.global data_ov00_020e992c
+data_ov00_020e992c:
+	.space 0x4
+	.global data_ov00_020e9930
+data_ov00_020e9930:
+	.space 0x4
+	.global data_ov00_020e9934
+data_ov00_020e9934:
+	.space 0x4
+	.global data_ov00_020e9938
+data_ov00_020e9938:
+	.space 0x4
+	.global data_ov00_020e993c
+data_ov00_020e993c:
+	.space 0x4
+	.global data_ov00_020e9940
+data_ov00_020e9940:
+	.space 0x4
+	.global data_ov00_020e9944
+data_ov00_020e9944:
+	.space 0x4
+	.global data_ov00_020e9948
+data_ov00_020e9948:
+	.space 0x4
+	.global data_ov00_020e994c
+data_ov00_020e994c:
+	.space 0x4
+	.global data_ov00_020e9950
+data_ov00_020e9950:
+	.space 0x4
+	.global data_ov00_020e9954
+data_ov00_020e9954:
+	.space 0x4
+	.global data_ov00_020e9958
+data_ov00_020e9958:
+	.space 0x4
+	.global data_ov00_020e995c
+data_ov00_020e995c:
+	.space 0x4
+	.global data_ov00_020e9960
+data_ov00_020e9960:
+	.space 0x4
+	.global data_ov00_020e9964
+data_ov00_020e9964:
+	.space 0x4
+	.global data_ov00_020e9968
+data_ov00_020e9968:
+	.space 0x4
+	.global data_ov00_020e996c
+data_ov00_020e996c:
+	.space 0x4
+	.global data_ov00_020e9970
+data_ov00_020e9970:
+	.space 0x4
+	.global data_ov00_020e9974
+data_ov00_020e9974:
+	.space 0x4
+	.global data_ov00_020e9978
+data_ov00_020e9978:
+	.space 0x4
+	.global data_ov00_020e997c
+data_ov00_020e997c:
+	.space 0x4
+	.global data_ov00_020e9980
+data_ov00_020e9980:
+	.space 0x4
+	.global data_ov00_020e9984
+data_ov00_020e9984:
+	.space 0x4
+	.global data_ov00_020e9988
+data_ov00_020e9988:
+	.space 0x4
+	.global data_ov00_020e998c
+data_ov00_020e998c:
+	.space 0x4
+	.global data_ov00_020e9990
+data_ov00_020e9990:
+	.space 0x4
+	.global data_ov00_020e9994
+data_ov00_020e9994:
+	.space 0x4
+	.global data_ov00_020e9998
+data_ov00_020e9998:
+	.space 0x4
+	.global data_ov00_020e999c
+data_ov00_020e999c:
+	.space 0x4
+	.global data_ov00_020e99a0
+data_ov00_020e99a0:
+	.space 0x4
+	.global data_ov00_020e99a4
+data_ov00_020e99a4:
+	.space 0x4
+	.global data_ov00_020e99a8
+data_ov00_020e99a8:
+	.space 0x4
+	.global data_ov00_020e99ac
+data_ov00_020e99ac:
+	.space 0x4
+	.global data_ov00_020e99b0
+data_ov00_020e99b0:
+	.space 0x4
+	.global data_ov00_020e99b4
+data_ov00_020e99b4:
+	.space 0x4
+	.global data_ov00_020e99b8
+data_ov00_020e99b8:
+	.space 0x4
+	.global data_ov00_020e99bc
+data_ov00_020e99bc:
+	.space 0x4
+	.global data_ov00_020e99c0
+data_ov00_020e99c0:
+	.space 0x4
+	.global data_ov00_020e99c4
+data_ov00_020e99c4:
+	.space 0x4
+	.global data_ov00_020e99c8
+data_ov00_020e99c8:
+	.space 0x4
+	.global data_ov00_020e99cc
+data_ov00_020e99cc:
+	.space 0x4
+	.global data_ov00_020e99d0
+data_ov00_020e99d0:
+	.space 0x4
+	.global data_ov00_020e99d4
+data_ov00_020e99d4:
+	.space 0x4
+	.global data_ov00_020e99d8
+data_ov00_020e99d8:
+	.space 0x4
+	.global data_ov00_020e99dc
+data_ov00_020e99dc:
+	.space 0x4
+	.global data_ov00_020e99e0
+data_ov00_020e99e0:
+	.space 0x4
+	.global data_ov00_020e99e4
+data_ov00_020e99e4:
+	.space 0x4
+	.global data_ov00_020e99e8
+data_ov00_020e99e8:
+	.space 0x4
+	.global data_ov00_020e99ec
+data_ov00_020e99ec:
+	.space 0x4
+	.global data_ov00_020e99f0
+data_ov00_020e99f0:
+	.space 0x4
+	.global data_ov00_020e99f4
+data_ov00_020e99f4:
+	.space 0x4
+	.global data_ov00_020e99f8
+data_ov00_020e99f8:
+	.space 0x4
+	.global data_ov00_020e99fc
+data_ov00_020e99fc:
+	.space 0x4
+	.global data_ov00_020e9a00
+data_ov00_020e9a00:
+	.space 0x4
+	.global data_ov00_020e9a04
+data_ov00_020e9a04:
+	.space 0x4
+	.global data_ov00_020e9a08
+data_ov00_020e9a08:
+	.space 0x4
+	.global data_ov00_020e9a0c
+data_ov00_020e9a0c:
+	.space 0x4
+	.global data_ov00_020e9a10
+data_ov00_020e9a10:
+	.space 0x4
+	.global data_ov00_020e9a14
+data_ov00_020e9a14:
+	.space 0x4
+	.global data_ov00_020e9a18
+data_ov00_020e9a18:
+	.space 0x4
+	.global data_ov00_020e9a1c
+data_ov00_020e9a1c:
+	.space 0x4
+	.global data_ov00_020e9a20
+data_ov00_020e9a20:
+	.space 0x4
+	.global data_ov00_020e9a24
+data_ov00_020e9a24:
+	.space 0x4
+	.global data_ov00_020e9a28
+data_ov00_020e9a28:
+	.space 0x4
+	.global data_ov00_020e9a2c
+data_ov00_020e9a2c:
+	.space 0x4
+	.global data_ov00_020e9a30
+data_ov00_020e9a30:
+	.space 0x4
+	.global data_ov00_020e9a34
+data_ov00_020e9a34:
+	.space 0x4
+	.global data_ov00_020e9a38
+data_ov00_020e9a38:
+	.space 0x4
+	.global data_ov00_020e9a3c
+data_ov00_020e9a3c:
+	.space 0x4
+	.global data_ov00_020e9a40
+data_ov00_020e9a40:
+	.space 0x4
+	.global data_ov00_020e9a44
+data_ov00_020e9a44:
+	.space 0x4
+	.global data_ov00_020e9a48
+data_ov00_020e9a48:
+	.space 0x4
+	.global data_ov00_020e9a4c
+data_ov00_020e9a4c:
+	.space 0x4
+	.global data_ov00_020e9a50
+data_ov00_020e9a50:
+	.space 0x4
+	.global data_ov00_020e9a54
+data_ov00_020e9a54:
+	.space 0x4
+	.global data_ov00_020e9a58
+data_ov00_020e9a58:
+	.space 0x4
+	.global data_ov00_020e9a5c
+data_ov00_020e9a5c:
+	.space 0x4
+	.global data_ov00_020e9a60
+data_ov00_020e9a60:
+	.space 0x4
+	.global data_ov00_020e9a64
+data_ov00_020e9a64:
+	.space 0x4
+	.global data_ov00_020e9a68
+data_ov00_020e9a68:
+	.space 0x4
+	.global data_ov00_020e9a6c
+data_ov00_020e9a6c:
+	.space 0x4
+	.global data_ov00_020e9a70
+data_ov00_020e9a70:
+	.space 0x4
+	.global data_ov00_020e9a74
+data_ov00_020e9a74:
+	.space 0x4
+	.global data_ov00_020e9a78
+data_ov00_020e9a78:
+	.space 0x4
+	.global data_ov00_020e9a7c
+data_ov00_020e9a7c:
+	.space 0x4
+	.global data_ov00_020e9a80
+data_ov00_020e9a80:
+	.space 0x4
+	.global data_ov00_020e9a84
+data_ov00_020e9a84:
+	.space 0x4
+	.global data_ov00_020e9a88
+data_ov00_020e9a88:
+	.space 0x4
+	.global data_ov00_020e9a8c
+data_ov00_020e9a8c:
+	.space 0x4
+	.global data_ov00_020e9a90
+data_ov00_020e9a90:
+	.space 0x4
+	.global data_ov00_020e9a94
+data_ov00_020e9a94:
+	.space 0x4
+	.global data_ov00_020e9a98
+data_ov00_020e9a98:
+	.space 0x4
+	.global data_ov00_020e9a9c
+data_ov00_020e9a9c:
+	.space 0x4
+	.global data_ov00_020e9aa0
+data_ov00_020e9aa0:
+	.space 0x4
+	.global data_ov00_020e9aa4
+data_ov00_020e9aa4:
+	.space 0x4
+	.global data_ov00_020e9aa8
+data_ov00_020e9aa8:
+	.space 0x4
+	.global data_ov00_020e9aac
+data_ov00_020e9aac:
+	.space 0x4
+	.global data_ov00_020e9ab0
+data_ov00_020e9ab0:
+	.space 0x4
+	.global data_ov00_020e9ab4
+data_ov00_020e9ab4:
+	.space 0x4
+	.global data_ov00_020e9ab8
+data_ov00_020e9ab8:
+	.space 0x4
+	.global data_ov00_020e9abc
+data_ov00_020e9abc:
+	.space 0x4
+	.global data_ov00_020e9ac0
+data_ov00_020e9ac0:
+	.space 0x4
+	.global data_ov00_020e9ac4
+data_ov00_020e9ac4:
+	.space 0x4
+	.global data_ov00_020e9ac8
+data_ov00_020e9ac8:
+	.space 0x4
+	.global data_ov00_020e9acc
+data_ov00_020e9acc:
+	.space 0x4
+	.global data_ov00_020e9ad0
+data_ov00_020e9ad0:
+	.space 0x4
+	.global data_ov00_020e9ad4
+data_ov00_020e9ad4:
+	.space 0x4
+	.global data_ov00_020e9ad8
+data_ov00_020e9ad8:
+	.space 0x4
+	.global data_ov00_020e9adc
+data_ov00_020e9adc:
+	.space 0x4
+	.global data_ov00_020e9ae0
+data_ov00_020e9ae0:
+	.space 0x4
+	.global data_ov00_020e9ae4
+data_ov00_020e9ae4:
+	.space 0x4
+	.global data_ov00_020e9ae8
+data_ov00_020e9ae8:
+	.space 0x4
+	.global data_ov00_020e9aec
+data_ov00_020e9aec:
+	.space 0x4
+	.global data_ov00_020e9af0
+data_ov00_020e9af0:
+	.space 0x4
+	.global data_ov00_020e9af4
+data_ov00_020e9af4:
+	.space 0x4
+	.global data_ov00_020e9af8
+data_ov00_020e9af8:
+	.space 0x4
+	.global data_ov00_020e9afc
+data_ov00_020e9afc:
+	.space 0x4
+	.global data_ov00_020e9b00
+data_ov00_020e9b00:
+	.space 0x4
+	.global data_ov00_020e9b04
+data_ov00_020e9b04:
+	.space 0x4
+	.global data_ov00_020e9b08
+data_ov00_020e9b08:
+	.space 0x4
+	.global data_ov00_020e9b0c
+data_ov00_020e9b0c:
+	.space 0x4
+	.global data_ov00_020e9b10
+data_ov00_020e9b10:
+	.space 0x4
+	.global data_ov00_020e9b14
+data_ov00_020e9b14:
+	.space 0x4
+	.global data_ov00_020e9b18
+data_ov00_020e9b18:
+	.space 0x4
+	.global data_ov00_020e9b1c
+data_ov00_020e9b1c:
+	.space 0x4
+	.global data_ov00_020e9b20
+data_ov00_020e9b20:
+	.space 0x4
+	.global data_ov00_020e9b24
+data_ov00_020e9b24:
+	.space 0x4
+	.global data_ov00_020e9b28
+data_ov00_020e9b28:
+	.space 0x4
+	.global data_ov00_020e9b2c
+data_ov00_020e9b2c:
+	.space 0x4
+	.global data_ov00_020e9b30
+data_ov00_020e9b30:
+	.space 0x4
+	.global data_ov00_020e9b34
+data_ov00_020e9b34:
+	.space 0x4
+	.global data_ov00_020e9b38
+data_ov00_020e9b38:
+	.space 0x4
+	.global data_ov00_020e9b3c
+data_ov00_020e9b3c:
+	.space 0x4
+	.global data_ov00_020e9b40
+data_ov00_020e9b40:
+	.space 0x4
+	.global data_ov00_020e9b44
+data_ov00_020e9b44:
+	.space 0x4
+	.global data_ov00_020e9b48
+data_ov00_020e9b48:
+	.space 0x4
+	.global data_ov00_020e9b4c
+data_ov00_020e9b4c:
+	.space 0x4
+	.global data_ov00_020e9b50
+data_ov00_020e9b50:
+	.space 0x4
+	.global data_ov00_020e9b54
+data_ov00_020e9b54:
+	.space 0x4
+	.global data_ov00_020e9b58
+data_ov00_020e9b58:
+	.space 0x4
+	.global data_ov00_020e9b5c
+data_ov00_020e9b5c:
+	.space 0x4
+	.global data_ov00_020e9b60
+data_ov00_020e9b60:
+	.space 0x4
+	.global data_ov00_020e9b64
+data_ov00_020e9b64:
+	.space 0x4
+	.global data_ov00_020e9b68
+data_ov00_020e9b68:
+	.space 0x4
+	.global data_ov00_020e9b6c
+data_ov00_020e9b6c:
+	.space 0x4
+	.global data_ov00_020e9b70
+data_ov00_020e9b70:
+	.space 0x4
+	.global data_ov00_020e9b74
+data_ov00_020e9b74:
+	.space 0x4
+	.global data_ov00_020e9b78
+data_ov00_020e9b78:
+	.space 0x4
+	.global data_ov00_020e9b7c
+data_ov00_020e9b7c:
+	.space 0x4
+	.global data_ov00_020e9b80
+data_ov00_020e9b80:
+	.space 0x4
+	.global data_ov00_020e9b84
+data_ov00_020e9b84:
+	.space 0x4
+	.global data_ov00_020e9b88
+data_ov00_020e9b88:
+	.space 0x4
+	.global data_ov00_020e9b8c
+data_ov00_020e9b8c:
+	.space 0x4
+	.global data_ov00_020e9b90
+data_ov00_020e9b90:
+	.space 0x4
+	.global data_ov00_020e9b94
+data_ov00_020e9b94:
+	.space 0x4
+	.global data_ov00_020e9b98
+data_ov00_020e9b98:
+	.space 0x4
+	.global data_ov00_020e9b9c
+data_ov00_020e9b9c:
+	.space 0x4
+	.global data_ov00_020e9ba0
+data_ov00_020e9ba0:
+	.space 0x4
+	.global data_ov00_020e9ba4
+data_ov00_020e9ba4:
+	.space 0x4
+	.global data_ov00_020e9ba8
+data_ov00_020e9ba8:
+	.space 0x4
+	.global data_ov00_020e9bac
+data_ov00_020e9bac:
+	.space 0x4
+	.global data_ov00_020e9bb0
+data_ov00_020e9bb0:
+	.space 0x4
+	.global data_ov00_020e9bb4
+data_ov00_020e9bb4:
+	.space 0x4
+	.global data_ov00_020e9bb8
+data_ov00_020e9bb8:
+	.space 0x4
+	.global data_ov00_020e9bbc
+data_ov00_020e9bbc:
+	.space 0x4
+	.global data_ov00_020e9bc0
+data_ov00_020e9bc0:
+	.space 0x4
+	.global data_ov00_020e9bc4
+data_ov00_020e9bc4:
+	.space 0x4
+	.global data_ov00_020e9bc8
+data_ov00_020e9bc8:
+	.space 0x4
+	.global data_ov00_020e9bcc
+data_ov00_020e9bcc:
+	.space 0x4
+	.global data_ov00_020e9bd0
+data_ov00_020e9bd0:
+	.space 0x4
+	.global data_ov00_020e9bd4
+data_ov00_020e9bd4:
+	.space 0x4
+	.global data_ov00_020e9bd8
+data_ov00_020e9bd8:
+	.space 0x4
+	.global data_ov00_020e9bdc
+data_ov00_020e9bdc:
+	.space 0x4
+	.global data_ov00_020e9be0
+data_ov00_020e9be0:
+	.space 0x4
+	.global data_ov00_020e9be4
+data_ov00_020e9be4:
+	.space 0x4
+	.global data_ov00_020e9be8
+data_ov00_020e9be8:
+	.space 0x4
+	.global data_ov00_020e9bec
+data_ov00_020e9bec:
+	.space 0x4
+	.global data_ov00_020e9bf0
+data_ov00_020e9bf0:
+	.space 0x4
+	.global data_ov00_020e9bf4
+data_ov00_020e9bf4:
+	.space 0x4
+	.global data_ov00_020e9bf8
+data_ov00_020e9bf8:
+	.space 0x4
+	.global data_ov00_020e9bfc
+data_ov00_020e9bfc:
+	.space 0x4
+	.global data_ov00_020e9c00
+data_ov00_020e9c00:
+	.space 0x4
+	.global data_ov00_020e9c04
+data_ov00_020e9c04:
+	.space 0x4
+	.global data_ov00_020e9c08
+data_ov00_020e9c08:
+	.space 0x4
+	.global data_ov00_020e9c0c
+data_ov00_020e9c0c:
+	.space 0x4
+	.global data_ov00_020e9c10
+data_ov00_020e9c10:
+	.space 0x4
+	.global data_ov00_020e9c14
+data_ov00_020e9c14:
+	.space 0x4
+	.global data_ov00_020e9c18
+data_ov00_020e9c18:
+	.space 0x4
+	.global data_ov00_020e9c1c
+data_ov00_020e9c1c:
+	.space 0x4
+	.global data_ov00_020e9c20
+data_ov00_020e9c20:
+	.space 0x4
+	.global data_ov00_020e9c24
+data_ov00_020e9c24:
+	.space 0x4
+	.global data_ov00_020e9c28
+data_ov00_020e9c28:
+	.space 0x4
+	.global data_ov00_020e9c2c
+data_ov00_020e9c2c:
+	.space 0x4
+	.global data_ov00_020e9c30
+data_ov00_020e9c30:
+	.space 0x4
+	.global data_ov00_020e9c34
+data_ov00_020e9c34:
+	.space 0x4
+	.global data_ov00_020e9c38
+data_ov00_020e9c38:
+	.space 0x4
+	.global data_ov00_020e9c3c
+data_ov00_020e9c3c:
+	.space 0x4
+	.global data_ov00_020e9c40
+data_ov00_020e9c40:
+	.space 0x4
+	.global data_ov00_020e9c44
+data_ov00_020e9c44:
+	.space 0x4
+	.global data_ov00_020e9c48
+data_ov00_020e9c48:
+	.space 0x4
+	.global data_ov00_020e9c4c
+data_ov00_020e9c4c:
+	.space 0x4
+	.global data_ov00_020e9c50
+data_ov00_020e9c50:
+	.space 0x4
+	.global data_ov00_020e9c54
+data_ov00_020e9c54:
+	.space 0x4
+	.global data_ov00_020e9c58
+data_ov00_020e9c58:
+	.space 0x4
+	.global data_ov00_020e9c5c
+data_ov00_020e9c5c:
+	.space 0x4
+	.global data_ov00_020e9c60
+data_ov00_020e9c60:
+	.space 0x4
+	.global data_ov00_020e9c64
+data_ov00_020e9c64:
+	.space 0x4
+	.global data_ov00_020e9c68
+data_ov00_020e9c68:
+	.space 0x4
+	.global data_ov00_020e9c6c
+data_ov00_020e9c6c:
 	.space 0x4

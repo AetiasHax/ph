@@ -6,6 +6,7 @@
 
 #include "Actor/ActorNavi.hpp"
 #include "Item/Item.hpp"
+#include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
 #include "System/SysNew.hpp"
 #include "System/OverlayManager.hpp"

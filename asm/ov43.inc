@@ -62,7 +62,7 @@
 .extern data_027e0c68
 .extern data_027e0d0c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f6c
 .extern data_027e0f90
@@ -97,8 +97,8 @@
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
 .extern func_ov00_02081f50
-.extern func_ov00_020836dc
-.extern func_ov00_02083770
+.extern _ZN10MapManager18func_ov00_020836dcEii
+.extern _ZN10MapManager18func_ov00_02083770Eji
 .extern func_ov00_02087d34
 .extern func_ov00_02093a1c
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei

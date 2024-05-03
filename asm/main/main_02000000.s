@@ -58474,7 +58474,7 @@ func_0202bf58: ; 0x0202bf58
 	mov r0, #0
 	ldmmiia sp!, {r3, pc}
 	ldr ip, [r2]
-	ldr r0, _0202bfbc ; =data_027e0e60
+	ldr r0, _0202bfbc ; =gMapManager
 	str ip, [sp, #0xc]
 	ldr ip, [r2, #4]
 	ldr r0, [r0]
@@ -58489,12 +58489,12 @@ func_0202bf58: ; 0x0202bf58
 	ldr ip, [r1, #8]
 	add r1, sp, #0xc
 	str ip, [sp, #8]
-	bl func_ov00_02086044
+	bl _ZN10MapManager18func_ov00_02086044Eiii
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 	arm_func_end func_0202bf58
-_0202bfbc: .word data_027e0e60
+_0202bfbc: .word gMapManager
 
 	.global func_0202bfc0
 	arm_func_start func_0202bfc0
@@ -76848,7 +76848,7 @@ _020382e8:
 	mov r3, #0
 	sub r2, r3, #2
 	mov r5, #0x47
-	ldr r0, _0203859c ; =data_027e0e60
+	ldr r0, _0203859c ; =gMapManager
 	mov r1, #0xff
 	str r2, [sp, #0xc]
 	str r5, [sp]
@@ -76862,7 +76862,7 @@ _020382e8:
 	ldr r0, [r0]
 	ldr r1, [r4, #4]
 	add r2, sp, #0
-	bl func_ov00_020838e8
+	bl _ZN10MapManager18func_ov00_020838e8EjPi
 	cmp r0, #0
 	beq _02038368
 	ldr r0, _020385a0 ; =data_027e0d38
@@ -76953,9 +76953,9 @@ _02038444:
 	mov r0, #2
 	ldmia sp!, {r3, r4, r5, pc}
 _0203846c:
-	ldr r0, _0203859c ; =data_027e0e60
+	ldr r0, _0203859c ; =gMapManager
 	ldr r0, [r0]
-	bl func_ov00_02084740
+	bl _ZN10MapManager18func_ov00_02084740Ev
 	mov r1, r0
 	ldr r2, [r4, #4]
 	ldr r0, _020385ac ; =data_ov00_020eec68
@@ -77039,7 +77039,7 @@ _0203858c: .word data_027e0618
 _02038590: .word gItemManager
 _02038594: .word data_027e0db0
 _02038598: .word data_027e0c68
-_0203859c: .word data_027e0e60
+_0203859c: .word gMapManager
 _020385a0: .word data_027e0d38
 _020385a4: .word data_027e0f64
 _020385a8: .word data_020569e0
@@ -80336,11 +80336,11 @@ _0203ac8c:
 	b _0203ad24
 _0203acc0:
 	ldrh r2, [r5, #6]
-	ldr r0, _0203ae9c ; =data_027e0e60
+	ldr r0, _0203ae9c ; =gMapManager
 	add r1, sp, #8
 	ldr r0, [r0]
 	and r2, r2, #0xff
-	bl func_ov00_02082614
+	bl _ZN10MapManager18func_ov00_02082614Eii
 	ldr r0, _0203ae94 ; =data_027e103c
 	add r1, sp, #8
 	ldr r0, [r0]
@@ -80465,7 +80465,7 @@ _0203ae8c: .word 0x00020001
 _0203ae90: .word 0xffff0001
 _0203ae94: .word data_027e103c
 _0203ae98: .word data_027e0d3c
-_0203ae9c: .word data_027e0e60
+_0203ae9c: .word gMapManager
 _0203aea0: .word data_02057ed0
 _0203aea4: .word data_027e0c68
 

@@ -6537,16 +6537,16 @@ _0218e49c: .word 0xfffff852
 func_ov44_0218e4a0: ; 0x0218e4a0
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0x4c
-	ldr r1, _0218e588 ; =data_027e0e60
+	ldr r1, _0218e588 ; =gMapManager
 	mov r4, r0
 	ldr r5, [r1]
 	add r0, sp, #0
 	mov r1, r5
 	add r2, r4, #0x48
-	bl func_ov00_02083a1c
+	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r1, sp, #0
 	mov r0, r5
-	bl func_ov00_020840c4
+	bl _ZN10MapManager16MapData_vfunc_78Ev
 	cmp r0, #0
 	beq _0218e4ec
 	ldr r0, [r0, #4]
@@ -6596,7 +6596,7 @@ _0218e4ec:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 	arm_func_end func_ov44_0218e4a0
-_0218e588: .word data_027e0e60
+_0218e588: .word gMapManager
 _0218e58c: .word _ZTV11FilterActor
 _0218e590: .word 0x5053424c
 _0218e594: .word data_027e0fe4

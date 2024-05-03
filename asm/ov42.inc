@@ -1,4 +1,5 @@
 #pragma once
+.extern _ZN10MapManager18func_ov00_02083918EiPi
 .extern _ZN11ItemManager13ForceEquipItemEi
 .extern _ZN11ItemManager20ClearForcedEquipItemEv
 .extern _ZN12ActorManager8GetActorEP8ActorRef
@@ -61,7 +62,7 @@
 .extern data_027e0d44
 .extern data_027e0de4
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f78
 .extern data_027e0f94
@@ -112,7 +113,6 @@
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207bb1c
 .extern func_ov00_0207c1b0
-.extern func_ov00_02083918
 .extern func_ov00_0208726c
 .extern func_ov00_02087400
 .extern func_ov00_020a61ac

@@ -1,6 +1,8 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
+.extern _ZN10MapManager16MapData_vfunc_68Ev
+.extern _ZN10MapManager18func_ov00_020836bcEjPi
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN11ItemManager7AddItemEi
@@ -88,7 +90,7 @@
 .extern data_027e0c68
 .extern data_027e0d0c
 .extern data_027e0e58
-.extern data_027e0e60
+.extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f90
 .extern data_027e0f94
@@ -164,8 +166,6 @@
 .extern func_ov00_0207c444
 .extern func_ov00_0207c474
 .extern func_ov00_02081f4c
-.extern func_ov00_020836bc
-.extern func_ov00_02083ee0
 .extern func_ov00_02087584
 .extern func_ov00_020875f8
 .extern func_ov00_02087d34
