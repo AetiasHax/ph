@@ -3,7 +3,6 @@
 #include "Map/MapManager.hpp"
 
 
-
 // char* data_ov14_021589b4 = *data_ov14_02158994;
 
 extern "C" {
