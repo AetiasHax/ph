@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN10MapManager16MapData_vfunc_68Ev
-.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
+.extern _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 .extern _ZN10MapManager18func_ov00_020858b0Ev
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef

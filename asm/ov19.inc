@@ -7,7 +7,7 @@
 .extern _ZN10MapManager18func_ov00_02083770Eji
 .extern _ZN10MapManager18func_ov00_02083780Ei
 .extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
-.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
+.extern _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 .extern _ZN10MapManager18func_ov00_02084d24Ecci
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder

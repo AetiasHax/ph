@@ -105,5 +105,6 @@ void Actor::vfunc_b0() {}
 void Actor::GetLinkPos(Vec3p *result) {}
 void Actor::GetLinkDummyPos(Vec3p *result) {}
 Actor_UnkStruct_09c::Actor_UnkStruct_09c() {}
+Actor_UnkStruct_012::Actor_UnkStruct_012() {}
 
 #endif

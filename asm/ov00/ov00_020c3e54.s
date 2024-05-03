@@ -933,7 +933,7 @@ _020c498c:
 	str lr, [sp, #8]
 	str ip, [sp, #0xc]
 	str r3, [sp, #0x10]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #4]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3
@@ -1665,7 +1665,7 @@ func_ov00_020c5288: ; 0x020c5288
 	ldr r3, [r5, #8]
 	mov r1, r4
 	str r3, [sp, #0x10]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #4]
 	mov r0, r0, lsr #0x9
 	and r0, r0, #3
@@ -10465,7 +10465,7 @@ func_ov00_020cc27c: ; 0x020cc27c
 	add r0, sp, #0
 	add r2, sp, #4
 	str r3, [sp, #0xc]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3

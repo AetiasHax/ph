@@ -60,7 +60,7 @@ _021900d8:
 	ldr r3, [r6, #8]
 	mov r1, r5
 	str r3, [sp, #0x10]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #4]
 	and r0, r0, #0x1f
 	cmp r0, #0xe
@@ -783,7 +783,7 @@ _02190a10:
 	ldr r3, [r6, #8]
 	mov r1, r5
 	str r3, [sp, #0x10]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #4]
 	and r0, r0, #0x1f
 	cmp r0, #0xe

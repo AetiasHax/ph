@@ -122,7 +122,7 @@
 .extern _ZN10MapManager18func_ov00_020839b4Ei
 .extern _ZN10MapManager18func_ov00_020839c4Ei
 .extern _ZN10MapManager16MapData_vfunc_68Ev
-.extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
+.extern _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 .extern func_ov00_02088000
 .extern func_ov00_02094824
 .extern func_ov00_0209a4f4

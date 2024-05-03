@@ -2641,7 +2641,7 @@ _02102e24:
 	ldr r1, [sp, #0x44]
 	add r0, sp, #0x74
 	add r2, sp, #0x78
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	add r0, sp, #0x74
 	bl func_ov05_02103b2c
 	cmp r0, #2
@@ -12408,7 +12408,7 @@ _0210ae98:
 	str r7, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r3, [sp, #0x18]
-	bl _ZN10MapManager18func_ov00_02083fb0EiPS_i
+	bl _ZN10MapManager18func_ov00_02083fb0EPjPS_P5Vec3p
 	ldr r0, [sp, #0xc]
 	mov r0, r0, lsr #0x5
 	and r0, r0, #3

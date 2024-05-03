@@ -387,7 +387,7 @@ extern "C" ItemModel* func_ov00_02079ffc(void*, const char *modelName, const cha
 extern "C" ItemModel* LoadTreasureItemFanfare(ItemModel**, s32 treasureType, bool, bool);
 static char *sDefaultItemModel = "key";
 static char *sItemModelNames[70] = {
-    [ItemId_None]              = "key",
+    [ItemId_Nothing]           = "key",
     [ItemId_SmallKey]          = "key",
     [ItemId_GreenRupee]        = "rupee_g",
     [ItemId_OshusSword]        = "swA",
@@ -815,7 +815,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
             this->GiveRupees(-50, true);
         } break;
         
-        case ItemId_None: break;
+        case ItemId_Nothing: break;
         case ItemId_Unk_5: break;
         case ItemId_Unk_16: break;
         case ItemId_Unk_131: break;
@@ -1045,7 +1045,7 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
             sfx = SfxId_Fanfare_Rupoor;
         } break;
 
-        case ItemId_None:
+        case ItemId_Nothing:
         case ItemId_HerosNewClothes: {
             sfx = SfxId_Fanfare_Nothing_2;
         } break;
