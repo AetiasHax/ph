@@ -21964,7 +21964,7 @@ func_ov00_020e105c: ; 0x020e105c
 	ldr r1, _020e108c ; =0x43414d41
 	ldr r2, _020e1090 ; =func_ov00_0209e8b8
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _020e1088 ; =data_ov00_020ee0f4
 	ldr r1, _020e1094 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020e1098 ; =data_ov00_020ee0e8
@@ -22006,7 +22006,7 @@ func_ov00_020e10d4: ; 0x020e10d4
 	ldr r1, _020e1104 ; =0x5357524e
 	ldr r2, _020e1108 ; =func_ov00_020a1c98
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _020e1100 ; =data_ov00_020ee128
 	ldr r1, _020e110c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020e1110 ; =data_ov00_020ee11c

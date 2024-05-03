@@ -2842,7 +2842,7 @@ func_ov52_021978d4: ; 0x021978d4
 	ldr r1, _02197904 ; =0x4154474d
 	ldr r2, _02197908 ; =func_ov52_02196510
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02197900 ; =data_ov52_02197c54
 	ldr r1, _0219790c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02197910 ; =data_ov52_02197c48
@@ -2864,7 +2864,7 @@ func_ov52_02197914: ; 0x02197914
 	ldr r1, _02197944 ; =0x4154474e
 	ldr r2, _02197948 ; =func_ov52_02196ddc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02197940 ; =data_ov52_02197c80
 	ldr r1, _0219794c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02197950 ; =data_ov52_02197c74

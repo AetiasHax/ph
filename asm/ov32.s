@@ -11153,7 +11153,7 @@ func_ov32_02184d3c: ; 0x02184d3c
 	ldr r1, _02184e44 ; =0x43485543
 	ldr r2, _02184e48 ; =func_ov32_0217c81c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02184e40 ; =data_ov32_021861ec
 	ldr r1, _02184e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02184e50 ; =data_ov32_021861e0
@@ -11234,7 +11234,7 @@ func_ov32_02184e68: ; 0x02184e68
 	ldr r1, _02184f6c ; =0x49434843
 	ldr r2, _02184f70 ; =func_ov32_0217dd10
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02184f68 ; =data_ov32_02186218
 	ldr r1, _02184f74 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02184f78 ; =data_ov32_0218620c
@@ -11314,7 +11314,7 @@ func_ov32_02184f90: ; 0x02184f90
 	ldr r1, _02185094 ; =0x47454c4c
 	ldr r2, _02185098 ; =func_ov32_0217f878
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02185090 ; =data_ov32_02186244
 	ldr r1, _0218509c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021850a0 ; =data_ov32_02186238
@@ -11450,7 +11450,7 @@ func_ov32_02185168: ; 0x02185168
 	ldr r1, _0218525c ; =0x42454530
 	ldr r2, _02185260 ; =func_ov32_02183034
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02185258 ; =data_ov32_021862a4
 	ldr r1, _02185264 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02185268 ; =data_ov32_02186298
@@ -11524,7 +11524,7 @@ func_ov32_02185278: ; 0x02185278
 	ldr r1, _0218536c ; =0x42454548
 	ldr r2, _02185370 ; =func_ov32_02183d28
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02185368 ; =data_ov32_021862d0
 	ldr r1, _02185374 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02185378 ; =data_ov32_021862c4
@@ -11597,7 +11597,7 @@ func_ov32_02185388: ; 0x02185388
 	ldr r1, _021853b8 ; =0x49434848
 	ldr r2, _021853bc ; =func_ov32_0218468c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021853b4 ; =data_ov32_021862fc
 	ldr r1, _021853c0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021853c4 ; =data_ov32_021862f0
