@@ -2,6 +2,7 @@
 This document describes how you can start decompiling code and contribute to the project. Feel free to ask for help if you get
 stuck or need assistance.
 - [Pick a source file](#pick-a-source-file)
+- [Decompiling a source file](#decompiling-a-source-file)
 - [Decompiling a function](#decompiling-a-function)
 - [Decompiling `.init` functions](#decompiling-init-functions)
 - [The Ghidra project](#the-ghidra-project)
@@ -18,13 +19,24 @@ If you want to unclaim the file, leave another comment so we can be certain that
 again. Remember to make a pull request of any notable progress you made on the source file, which can include
 [non-matching functions](/CONTRIBUTING.md#non-matching-functions).
 
+## Decompiling a source file
+It can be tricky to fully decompile an assembly file into a C/C++ source file, so here's some advice to make it easier:
+- C/C++ code is built before assembly code
+    - This means you can take one function from the top of your assembly file, decompile it, and append it to the bottom of
+    your C/C++ file.
+- Build the ROM often
+    - We recommend building every time you decompile a function.
+    - This is because functions can sometimes match in decomp.me, but not when building.
+    - If your ROM doesn't match, it's easier to know which function is wrong if it's the only function added since the last
+    successful build.
+
 ## Decompiling a function
 Say you've found a function you want to decompile. Here are the steps we recommend for decompiling it:
 1. Visit [decomp.me](https://decomp.me/) and start decomping.
 1. Under the platforms, select "Nintendo DS".
 1. Select compiler preset "Phantom Hourglass".
-1. Copy and paste the target assembly for your function, including the `func_start` and `func_end` macros, and the pool constants.
-For example:
+1. Copy and paste the target assembly for your function, including the `func_start` and `func_end` macros, and the pool
+constants. For example:
 ```arm
 	.global func_ov09_0211bf48
 	thumb_func_start func_ov09_0211bf48
