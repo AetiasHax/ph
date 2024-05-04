@@ -1,7 +1,6 @@
 #include "Actor/ActorType.hpp"
 
 ActorTypeList sActorTypeList;
-ActorTypeList sActorTypeList2;
 
 // Kill duplicate dtors
 KILL(_ZN9ActorTypeC2EjPFP5ActorvEPFivE)
@@ -39,13 +38,10 @@ ARM void ActorType::Register() {
     *tail = this;
 }
 
-ARM void NONMATCH(ActorType::Unregister)() {
-    #ifndef NONMATCHING
-    #include "../asm/main/Actor/ActorType_Unregister.inc"
-    #else
+ARM void ActorType::Unregister() {
     ActorType *actorType;
 
-    ActorType **current = &sActorTypeList2.head;
+    ActorType **current = &sActorTypeList.head;
     ActorType **previous = NULL;
 
     for (actorType = sActorTypeList.head; actorType != NULL; actorType = actorType->next) {
@@ -57,7 +53,6 @@ ARM void NONMATCH(ActorType::Unregister)() {
     if (previous != NULL) {
         (*previous)->next = this->next;
     }
-    #endif
 }
 
 ARM ActorType *ActorType::Find(ActorTypeId id) {
