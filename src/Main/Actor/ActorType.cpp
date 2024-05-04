@@ -29,7 +29,7 @@ ARM unk32 ActorType::func_0203e7c8() {
 
 ARM void ActorType::Register() {
     ActorType *actorType;
-    ActorType **tail = &sActorTypeList.tail;
+    ActorType **tail = &sActorTypeList.head;
 
     for (actorType = sActorTypeList.head; actorType != NULL; actorType = actorType->next) {
         tail = &actorType->next;
