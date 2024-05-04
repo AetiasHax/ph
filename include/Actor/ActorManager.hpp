@@ -44,7 +44,7 @@ struct ActorList {
 class ActorManager {
 public:
     /* 00 */ u16 mMaxActors;
-    /* 02 */ unk16 mNumActors;
+    /* 02 */ u16 mNumActors;
     /* 04 */ unk32 mMaxActorIndex;
     /* 08 */ s32 mCacheEmptyActorIndex;
     /* 0c */ unk32 mNextActorId;
