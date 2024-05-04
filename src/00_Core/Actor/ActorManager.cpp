@@ -1,6 +1,5 @@
 #include "Actor/ActorManager.hpp"
 
-void ActorManager::DeleteActor(u32 index, bool param2) {}
 void ActorManager::func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3) {}
 void ActorManager::Actor_vfunc_10(u32 param1) {}
 Actor* ActorManager::FindActorById(u32 id) {}
@@ -18,3 +17,40 @@ void ActorManager::func_ov00_020c3ce8(unk32 param1, unk32 param2) {}
 void ActorManager::Actor_vfunc_28() {}
 bool ActorManager::ActorTypeIsOneOf(u32 type, ActorTypeId *types) {}
 
+
+extern void func_ov00_020c3f54(void *, u32 param2);
+
+ARM void ActorManager::DeleteActor(u32 index, bool param2) {
+    if (!param2) {
+        func_ov00_020c3f54(this->mUnk_14, index & 0xffff);
+        this->mActorTable[index]->StopLinkFollow();
+    }
+
+    if (this->mActorTable[index] != NULL) {
+        delete this->mActorTable[index];
+    }
+    
+    this->mActorTable[index] = NULL;
+
+    if (param2) {
+        return;
+    }
+
+    this->mNumActors--;
+    
+    if (index + 1 != this->mMaxActorIndex) {
+        return;
+    }
+
+    int i = index - 1;
+
+    while (i >= 0) {
+        if (this->mActorTable[i] != NULL) {
+            break;
+        }
+        i--;
+    }
+
+    this->mMaxActorIndex = i + 1 & 0xffff;
+    return;
+}
