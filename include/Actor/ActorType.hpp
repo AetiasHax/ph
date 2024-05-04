@@ -70,14 +70,14 @@ typedef Actor* (*ActorCreateFunc)();
 struct ActorType {
     /* 00 */ ActorTypeId id;
     /* 04 */ ActorCreateFunc create;
-    /* 08 */ void *unk_08;
+    /* 08 */ unk32 (*unk_08)();
     /* 0c */ unk32 unk_0c;
     /* 10 */ ActorType *next;
     /* 14 */
 
-    ActorType(ActorTypeId id, ActorCreateFunc create, void *unk_08);
+    ActorType(ActorTypeId id, ActorCreateFunc create, unk32 (*unk_08)());
     ~ActorType();
-    void func_0203e7c8();
+    unk32 func_0203e7c8();
     void Register();
     void Unregister();
     static ActorType* Find(ActorTypeId id);

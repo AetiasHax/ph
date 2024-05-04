@@ -13266,7 +13266,7 @@ func_ov39_02186968: ; 0x02186968
 	ldr r1, _021869a4 ; =0x474f4354
 	ldr r2, _021869a8 ; =func_ov39_0217bd80
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021869a0 ; =data_ov39_02186ccc
 	ldr r1, _021869ac ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021869b0 ; =data_ov39_02186cc0

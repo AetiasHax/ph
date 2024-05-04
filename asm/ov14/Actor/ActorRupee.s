@@ -740,7 +740,7 @@ func_ov14_0215517c: ; 0x0215517c
 	ldr r1, _021551c0 ; =0x52555059
 	ldr r2, _021551c4 ; =_ZN10ActorRupee6CreateEv
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021551bc ; =_ZN10ActorRupee5gTypeE
 	ldr r1, _021551c8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021551cc ; =_ZN10ActorRupee9gResourceE

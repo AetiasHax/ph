@@ -14307,7 +14307,7 @@ func_ov22_021789c8: ; 0x021789c8
 	ldr r1, _021789f8 ; =0x424c4152
 	ldr r2, _021789fc ; =func_ov22_0216d6a0
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021789f4 ; =data_ov22_0217a40c
 	ldr r1, _02178a00 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178a04 ; =data_ov22_0217a400
@@ -14370,7 +14370,7 @@ func_ov22_02178a78: ; 0x02178a78
 	ldr r1, _02178b30 ; =0x534e574d
 	ldr r2, _02178b34 ; =func_ov22_0216f2d4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178b2c ; =data_ov22_0217a454
 	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b3c ; =data_ov22_0217a448
@@ -14379,7 +14379,7 @@ func_ov22_02178a78: ; 0x02178a78
 	ldr r1, _02178b44 ; =0x534e4d42
 	ldr r2, _02178b48 ; =func_ov22_0216f308
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178b40 ; =data_ov22_0217a474
 	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b4c ; =data_ov22_0217a468
@@ -14388,7 +14388,7 @@ func_ov22_02178a78: ; 0x02178a78
 	ldr r1, _02178b54 ; =0x534e4d59
 	ldr r2, _02178b58 ; =func_ov22_0216f33c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178b50 ; =data_ov22_0217a494
 	ldr r1, _02178b38 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178b5c ; =data_ov22_0217a488
@@ -14436,7 +14436,7 @@ func_ov22_02178b68: ; 0x02178b68
 	ldr r1, _02178c74 ; =0x59455449
 	ldr r2, _02178c78 ; =func_ov22_021713bc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178c70 ; =data_ov22_0217a4b4
 	ldr r1, _02178c7c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178c80 ; =data_ov22_0217a4a8
@@ -14517,7 +14517,7 @@ func_ov22_02178c98: ; 0x02178c98
 	ldr r1, _02178cc8 ; =0x48504c50
 	ldr r2, _02178ccc ; =func_ov22_02173758
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178cc4 ; =data_ov22_0217a4e0
 	ldr r1, _02178cd0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178cd4 ; =data_ov22_0217a4d4
@@ -14539,7 +14539,7 @@ func_ov22_02178cd8: ; 0x02178cd8
 	ldr r1, _02178d08 ; =0x484c4d4b
 	ldr r2, _02178d0c ; =func_ov22_021748a0
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178d04 ; =data_ov22_0217a500
 	ldr r1, _02178d10 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178d14 ; =data_ov22_0217a4f4
@@ -14561,7 +14561,7 @@ func_ov22_02178d18: ; 0x02178d18
 	ldr r1, _02178d48 ; =0x49434645
 	ldr r2, _02178d4c ; =func_ov22_02174dbc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178d44 ; =data_ov22_0217a520
 	ldr r1, _02178d50 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178d54 ; =data_ov22_0217a514
@@ -14603,7 +14603,7 @@ func_ov22_02178d90: ; 0x02178d90
 	ldr r1, _02178dc0 ; =0x534e4546
 	ldr r2, _02178dc4 ; =func_ov22_0217562c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178dbc ; =data_ov22_0217a554
 	ldr r1, _02178dc8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178dcc ; =data_ov22_0217a548
@@ -14625,7 +14625,7 @@ func_ov22_02178dd0: ; 0x02178dd0
 	ldr r1, _02178e00 ; =0x42524d49
 	ldr r2, _02178e04 ; =func_ov22_02175a78
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178dfc ; =data_ov22_0217a578
 	ldr r1, _02178e08 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178e0c ; =data_ov22_0217a56c
@@ -14688,7 +14688,7 @@ func_ov22_02178e80: ; 0x02178e80
 	ldr r1, _02178ef8 ; =0x54534e4d
 	ldr r2, _02178efc ; =func_ov22_021769d4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178ef4 ; =data_ov22_0217a5c0
 	ldr r1, _02178f00 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178f04 ; =data_ov22_0217a5b4
@@ -14769,7 +14769,7 @@ func_ov22_02178f80: ; 0x02178f80
 	ldr r1, _02178fd4 ; =0x59455457
 	ldr r2, _02178fd8 ; =func_ov22_021782d8
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178fd0 ; =data_ov22_0217a60c
 	ldr r1, _02178fdc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178fe0 ; =data_ov22_0217a600
@@ -14778,7 +14778,7 @@ func_ov22_02178f80: ; 0x02178f80
 	ldr r1, _02178fe8 ; =0x59455442
 	ldr r2, _02178fec ; =func_ov22_02178308
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02178fe4 ; =data_ov22_0217a62c
 	ldr r1, _02178fdc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02178ff0 ; =data_ov22_0217a620

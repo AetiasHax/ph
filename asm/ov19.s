@@ -10590,7 +10590,7 @@ func_ov19_02175f04: ; 0x02175f04
 	ldr r1, _02176000 ; =0x57425353
 	ldr r2, _02176004 ; =func_ov19_0216d6a0
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02175ffc ; =data_ov19_02176e8c
 	ldr r1, _02176008 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0217600c ; =data_ov19_02176e80
@@ -10666,7 +10666,7 @@ func_ov19_02176020: ; 0x02176020
 	ldr r1, _02176050 ; =0x57425341
 	ldr r2, _02176054 ; =func_ov19_02171614
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _0217604c ; =data_ov19_02176ebc
 	ldr r1, _02176058 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0217605c ; =data_ov19_02176eb0
@@ -10688,7 +10688,7 @@ func_ov19_02176060: ; 0x02176060
 	ldr r1, _02176090 ; =0x57425354
 	ldr r2, _02176094 ; =func_ov19_02171fb0
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _0217608c ; =data_ov19_021775bc
 	ldr r1, _02176098 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0217609c ; =data_ov19_021775b0
@@ -10710,7 +10710,7 @@ func_ov19_021760a0: ; 0x021760a0
 	ldr r1, _021760d0 ; =0x574e4152
 	ldr r2, _021760d4 ; =func_ov19_021724b4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021760cc ; =data_ov19_021775dc
 	ldr r1, _021760d8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021760dc ; =data_ov19_021775d0
@@ -10793,7 +10793,7 @@ func_ov19_02176188: ; 0x02176188
 	ldr r1, _02176278 ; =0x4d4c4457
 	ldr r2, _0217627c ; =func_ov19_02174078
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02176274 ; =data_ov19_02177638
 	ldr r1, _02176280 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02176284 ; =data_ov19_0217762c
@@ -10865,7 +10865,7 @@ func_ov19_02176294: ; 0x02176294
 	ldr r1, _021762c4 ; =0x45465357
 	ldr r2, _021762c8 ; =func_ov19_021756c4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021762c0 ; =data_ov19_02177664
 	ldr r1, _021762cc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021762d0 ; =data_ov19_02177658

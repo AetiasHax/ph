@@ -14,7 +14,6 @@ ARM9_OBJECTS = [
     'asm/main/main_02000000.s',
 
     'src/Main/Actor/ActorType.cpp',
-    'asm/main/Actor/ActorType.s',
 
     'asm/main/main_0203e8a0.s',
 

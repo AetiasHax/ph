@@ -3898,7 +3898,7 @@ func_ov50_0219882c: ; 0x0219882c
 	ldr r1, _02198878 ; =0x42494752
 	ldr r2, _0219887c ; =func_ov50_02195500
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02198874 ; =data_ov50_02198cac
 	ldr r1, _02198880 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02198884 ; =data_ov50_02198ca0
@@ -3930,7 +3930,7 @@ func_ov50_02198890: ; 0x02198890
 	ldr r1, _02198988 ; =0x43524f57
 	ldr r2, _0219898c ; =func_ov50_02197580
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02198984 ; =data_ov50_02198ccc
 	ldr r1, _02198990 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02198994 ; =data_ov50_02198cc0

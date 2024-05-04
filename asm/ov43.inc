@@ -90,7 +90,7 @@
 .extern func_0202e58c
 .extern func_02036ce4
 .extern func_02036da8
-.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 .extern _ZN9ActorTypeD1Ev
 .extern func_0204f754
 .extern __register_global_object

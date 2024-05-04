@@ -148,7 +148,7 @@
 .extern _ZN5ActorD2Ev
 .extern _ZN7MapBase18func_ov00_0207e968Ev
 .extern _ZN7MapBase18func_ov00_0207e96cEv
-.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 .extern _ZN9ActorTypeD1Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
