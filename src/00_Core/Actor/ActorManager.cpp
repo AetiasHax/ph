@@ -141,3 +141,45 @@ void NONMATCH(ActorManager::Actor_vfunc_10)(u32 param1) {
     return;
     #endif
 }
+
+Actor* NONMATCH(ActorManager::FindActorById)(s32 id) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/Actor/ActorManager_Actor_FindActorById.inc"
+    #else
+    u32 actorId;
+    s32 cacheIndex;
+    Actor *actor;
+    Actor **pActor;
+    Actor **lastActor;
+
+    actor = NULL;
+    if (id >= 0) {
+        cacheIndex = this->mCacheEmptyActorIndex;
+        if ((cacheIndex >= 0) && (cacheIndex < this->mMaxActorIndex)) {
+            pActor = this->mActorTable;
+            actor = this->mActorTable[cacheIndex];
+            if (actor != NULL) {
+                pActor = (Actor**)(u32)actor->mAlive;
+                if (pActor != NULL && id == actor->mId) {
+                    return actor;
+                }
+            }
+        }
+        pActor = this->mActorTable;
+        actorId = this->mMaxActorIndex;
+        lastActor = pActor + actorId;
+
+        for (; pActor < lastActor; pActor = pActor + 1) {
+          if (*pActor != NULL) {
+            actorId = (u32)(*pActor)->mAlive;
+            if (actorId != 0 && id == (*pActor)->mId) {
+                actor = *pActor;
+                break;
+            }
+          }
+        }
+    }
+
+    return actor;
+    #endif
+}
