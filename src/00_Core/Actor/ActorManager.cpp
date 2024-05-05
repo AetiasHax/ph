@@ -183,3 +183,24 @@ Actor* NONMATCH(ActorManager::FindActorById)(s32 id) {
     return actor;
     #endif
 }
+
+Actor* ActorManager::GetActor(ActorRef *ref) {
+    Actor *pActor;
+    u32 alive;
+
+    alive = ref->index;
+
+    if ((s32)alive < 0) {
+        return NULL;
+    }
+
+    pActor = this->mActorTable[alive];
+    if (pActor != NULL) {
+        alive = pActor->mAlive;
+        if (alive != 0 && ref->id == pActor->mId) {
+            return pActor;
+        }   
+    }
+
+    return NULL;
+}
