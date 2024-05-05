@@ -80,7 +80,7 @@ public:
     void DeleteActor(u32 index, bool param2);
     static void func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3);
     void Actor_vfunc_10(u32 param1);
-    Actor* FindActorById(u32 id);
+    Actor* FindActorById(s32 id);
     Actor* GetActor(ActorRef *ref);
     s32 FilterActors(FilterActorBase *filter, ActorList *filteredActors);
     static void FindActorByType(ActorRef *ref, ActorManager *manager, ActorTypeId type);
