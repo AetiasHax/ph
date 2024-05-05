@@ -1,7 +1,6 @@
 #include "Actor/ActorManager.hpp"
 
 void ActorManager::func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3) {}
-void ActorManager::Actor_vfunc_10(u32 param1) {}
 Actor* ActorManager::FindActorById(u32 id) {}
 Actor* ActorManager::GetActor(ActorRef *ref) {}
 bool FilterActor::Filter(Actor *actor) {}
@@ -53,4 +52,31 @@ ARM void ActorManager::DeleteActor(u32 index, bool param2) {
 
     this->mMaxActorIndex = i + 1 & 0xffff;
     return;
+}
+
+void NONMATCH(ActorManager::Actor_vfunc_10)(u32 param1) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/Actor/ActorManager_Actor_vfunc_10.inc"
+    #else
+    Actor *actor;
+    Actor **currentActor;
+    u32 uVar1;
+    int i;
+
+    uVar1 = param1;
+
+    currentActor = this->mActorTable;
+
+    for (i = 0; i < this->mMaxActorIndex; ++i) {
+        actor = *currentActor;
+        if (actor != NULL) {
+            uVar1 = actor->mAlive;
+            if (uVar1 != 0) {
+                actor->vfunc_10(param1);
+            }
+        }
+        currentActor = currentActor + 1;
+    }
+    return;
+    #endif
 }
