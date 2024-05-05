@@ -59,3 +59,29 @@ ARM void ActorManager::DeleteActor(u32 index, bool param2) {
     return;
 }
 
+void NONMATCH(ActorManager::Actor_vfunc_10)(u32 param1) {
+    #ifndef NONMATCHING
+    #include "../asm/ov00/Actor/ActorManager_Actor_vfunc_10.inc"
+    #else
+    Actor *actor;
+    Actor **currentActor;
+    u32 uVar1;
+    int i;
+
+    uVar1 = param1;
+
+    currentActor = this->mActorTable;
+
+    for (i = 0; i < this->mMaxActorIndex; ++i) {
+        actor = *currentActor;
+        if (actor != NULL) {
+            uVar1 = actor->mAlive;
+            if (uVar1 != 0) {
+                actor->vfunc_10(param1);
+            }
+        }
+        currentActor = currentActor + 1;
+    }
+    return;
+    #endif
+}
