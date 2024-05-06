@@ -204,3 +204,17 @@ Actor* ActorManager::GetActor(ActorRef *ref) {
 
     return NULL;
 }
+
+void ActorManager::Actor_vfunc_28() {
+    int i;
+    Actor **pActor;
+
+    pActor = this->mActorTable;
+
+    for (i = 0; i < this->mMaxActors; i++) {
+        if (*pActor != NULL) {
+            (*pActor)->vfunc_28();
+        }
+        pActor = pActor + 1;
+    }
+}
