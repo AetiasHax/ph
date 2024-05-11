@@ -92,7 +92,7 @@ public:
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);
     void func_ov00_020c3ce8(unk32 param1, unk32 param2);
     void Actor_vfunc_28();
-    static bool ActorTypeIsOneOf(u32 type, ActorTypeId *types);
+    static bool ActorTypeIsOneOf(char *type,char **types);
 };
 
 extern ActorManager *gActorManager;

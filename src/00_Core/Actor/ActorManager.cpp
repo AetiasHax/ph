@@ -218,3 +218,20 @@ void ActorManager::Actor_vfunc_28() {
         pActor = pActor + 1;
     }
 }
+
+char nullStr[] = "LLUN";
+
+ARM bool ActorManager::ActorTypeIsOneOf(char *type, char **types) {
+    int i;
+    bool found = false;
+
+    for (i = 0; *types != nullStr; i++) {
+        if (type == *types) {
+            found = true;
+            break;
+        }
+        types += 1;
+    }
+
+    return found;
+}
