@@ -115,18 +115,12 @@ static void NONMATCH(func_ov00_020c3484)(ActorRef *ref, Actor *actor, unk32 para
     #endif
 }
 
-void NONMATCH(ActorManager::Actor_vfunc_10)(u32 param1) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/Actor/ActorManager_Actor_vfunc_10.inc"
-    #else
+ARM void ActorManager::Actor_vfunc_10(u32 param1) {
     Actor *actor;
-    Actor **currentActor;
-    u32 uVar1;
     int i;
 
-    uVar1 = param1;
-
-    currentActor = this->mActorTable;
+    u32 uVar1 = param1;
+    Actor **currentActor = this->mActorTable;
 
     for (i = 0; i < this->mMaxActorIndex; ++i) {
         actor = *currentActor;
@@ -136,10 +130,9 @@ void NONMATCH(ActorManager::Actor_vfunc_10)(u32 param1) {
                 actor->vfunc_10(param1);
             }
         }
-        currentActor = currentActor + 1;
+        currentActor += 1;
     }
     return;
-    #endif
 }
 
 Actor* NONMATCH(ActorManager::FindActorById)(s32 id) {
