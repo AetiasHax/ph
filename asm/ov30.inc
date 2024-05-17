@@ -131,7 +131,7 @@
 .extern func_020367ec
 .extern func_02036da8
 .extern func_02036edc
-.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 .extern _ZN9ActorTypeD1Ev
 .extern func_0204f558
 .extern func_0204f754

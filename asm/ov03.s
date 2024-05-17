@@ -43041,7 +43041,7 @@ func_ov03_020fff54: ; 0x020fff54
 	ldr r1, _020fff84 ; =0x4d544354
 	ldr r2, _020fff88 ; =func_ov03_020fb41c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _020fff80 ; =data_ov03_02100a98
 	ldr r1, _020fff8c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _020fff90 ; =data_ov03_02100a8c

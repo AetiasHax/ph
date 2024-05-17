@@ -5759,7 +5759,7 @@ func_ov48_021946c0: ; 0x021946c0
 	ldr r1, _021947b4 ; =0x42424c45
 	ldr r2, _021947b8 ; =func_ov48_02190040
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021947b0 ; =data_ov48_0219540c
 	ldr r1, _021947bc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021947c0 ; =data_ov48_02195400
@@ -5833,7 +5833,7 @@ func_ov48_021947d0: ; 0x021947d0
 	ldr r1, _021948d8 ; =0x424d4f53
 	ldr r2, _021948dc ; =func_ov48_02190c34
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021948d4 ; =data_ov48_02195438
 	ldr r1, _021948e0 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021948e4 ; =data_ov48_0219542c
@@ -5913,7 +5913,7 @@ func_ov48_021948f8: ; 0x021948f8
 	ldr r1, _021949f4 ; =0x5441494c
 	ldr r2, _021949f8 ; =func_ov48_02191d48
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021949f0 ; =data_ov48_02195478
 	ldr r1, _021949fc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194a00 ; =data_ov48_0219546c
@@ -5989,7 +5989,7 @@ func_ov48_02194a14: ; 0x02194a14
 	ldr r1, _02194a44 ; =0x46495242
 	ldr r2, _02194a48 ; =func_ov48_02193414
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02194a40 ; =data_ov48_021954a4
 	ldr r1, _02194a4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194a50 ; =data_ov48_02195498
@@ -6011,7 +6011,7 @@ func_ov48_02194a54: ; 0x02194a54
 	ldr r1, _02194a84 ; =0x54414c42
 	ldr r2, _02194a88 ; =func_ov48_02193fd4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02194a80 ; =data_ov48_021954c4
 	ldr r1, _02194a8c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194a90 ; =data_ov48_021954b8
@@ -6033,7 +6033,7 @@ func_ov48_02194a94: ; 0x02194a94
 	ldr r1, _02194ac4 ; =0x424d5345
 	ldr r2, _02194ac8 ; =func_ov48_021940ac
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02194ac0 ; =data_ov48_021954e4
 	ldr r1, _02194acc ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02194ad0 ; =data_ov48_021954d8

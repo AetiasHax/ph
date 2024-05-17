@@ -14194,7 +14194,7 @@ func_ov27_0217913c: ; 0x0217913c
 	ldr r1, _02179178 ; =0x50524c44
 	ldr r2, _0217917c ; =func_ov27_0216d6a0
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02179174 ; =data_ov27_0217a0cc
 	ldr r1, _02179180 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02179184 ; =data_ov27_0217a0c0
@@ -14221,7 +14221,7 @@ func_ov27_02179190: ; 0x02179190
 	ldr r1, _021791c0 ; =0x504c5344
 	ldr r2, _021791c4 ; =func_ov27_02171d0c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021791bc ; =data_ov27_0217a0ec
 	ldr r1, _021791c8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021791cc ; =data_ov27_0217a0e0
@@ -14243,7 +14243,7 @@ func_ov27_021791d0: ; 0x021791d0
 	ldr r1, _02179200 ; =0x504c4c42
 	ldr r2, _02179204 ; =func_ov27_02172d14
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021791fc ; =data_ov27_0217a10c
 	ldr r1, _02179208 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0217920c ; =data_ov27_0217a100
@@ -14266,7 +14266,7 @@ func_ov27_02179210: ; 0x02179210
 	ldr r1, _02179288 ; =0x574e4452
 	ldr r2, _0217928c ; =func_ov27_02174014
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02179284 ; =data_ov27_0217a12c
 	ldr r1, _02179290 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02179294 ; =data_ov27_0217a120
@@ -14307,7 +14307,7 @@ func_ov27_021792a0: ; 0x021792a0
 	ldr r1, _021792d0 ; =0x46534d4e
 	ldr r2, _021792d4 ; =func_ov27_02174a94
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _021792cc ; =data_ov27_0217a14c
 	ldr r1, _021792d8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021792dc ; =data_ov27_0217a140
@@ -14330,7 +14330,7 @@ func_ov27_021792e0: ; 0x021792e0
 	ldr r1, _021793a0 ; =0x464c4e4b
 	ldr r2, _021793a4 ; =func_ov27_02174d6c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _0217939c ; =data_ov27_0217a16c
 	ldr r1, _021793a8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _021793ac ; =data_ov27_0217a160
@@ -14391,7 +14391,7 @@ func_ov27_021793bc: ; 0x021793bc
 	ldr r1, _02179424 ; =0x47444d4e
 	ldr r2, _02179428 ; =func_ov27_02177ca4
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02179420 ; =data_ov27_0217a18c
 	ldr r1, _0217942c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02179430 ; =data_ov27_0217a180

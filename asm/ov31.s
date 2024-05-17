@@ -8220,7 +8220,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e44 ; =0x4954444d
 	ldr r2, _02181e48 ; =func_ov31_0217dbdc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e40 ; =data_ov31_02183e94
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181e50 ; =data_ov31_02183e88
@@ -8229,7 +8229,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e58 ; =0x4954534f
 	ldr r2, _02181e5c ; =func_ov31_0217dc1c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e54 ; =data_ov31_02183eb4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181e60 ; =data_ov31_02183ea8
@@ -8238,7 +8238,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e68 ; =0x49544855
 	ldr r2, _02181e6c ; =func_ov31_0217dc5c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e64 ; =data_ov31_02183ed4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181e70 ; =data_ov31_02183ec8
@@ -8247,7 +8247,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e78 ; =0x49544152
 	ldr r2, _02181e7c ; =func_ov31_0217dc9c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e74 ; =data_ov31_02183ef4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181e80 ; =data_ov31_02183ee8
@@ -8256,7 +8256,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e88 ; =0x4954424d
 	ldr r2, _02181e8c ; =func_ov31_0217dcdc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e84 ; =data_ov31_02183f14
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181e90 ; =data_ov31_02183f08
@@ -8265,7 +8265,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181e98 ; =0x49544254
 	ldr r2, _02181e9c ; =func_ov31_0217dd1c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181e94 ; =data_ov31_02183f34
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ea0 ; =data_ov31_02183f28
@@ -8274,7 +8274,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181ea8 ; =0x49544150
 	ldr r2, _02181eac ; =func_ov31_0217dd5c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ea4 ; =data_ov31_02183f54
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181eb0 ; =data_ov31_02183f48
@@ -8283,7 +8283,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181eb8 ; =0x49544242
 	ldr r2, _02181ebc ; =func_ov31_0217dd9c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181eb4 ; =data_ov31_02183f74
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ec0 ; =data_ov31_02183f68
@@ -8292,7 +8292,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181ec8 ; =0x49544232
 	ldr r2, _02181ecc ; =func_ov31_0217dddc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ec4 ; =data_ov31_02183f94
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ed0 ; =data_ov31_02183f88
@@ -8301,7 +8301,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181ed8 ; =0x49545452
 	ldr r2, _02181edc ; =func_ov31_0217de1c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ed4 ; =data_ov31_02183fb4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ee0 ; =data_ov31_02183fa8
@@ -8310,7 +8310,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181ee8 ; =0x49545350
 	ldr r2, _02181eec ; =func_ov31_0217de4c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ee4 ; =data_ov31_02183fd4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ef0 ; =data_ov31_02183fc8
@@ -8319,7 +8319,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181ef8 ; =0x49545352
 	ldr r2, _02181efc ; =func_ov31_0217de7c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ef4 ; =data_ov31_02183ff4
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f00 ; =data_ov31_02183fe8
@@ -8328,7 +8328,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181f08 ; =0x4954534c
 	ldr r2, _02181f0c ; =func_ov31_0217debc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181f04 ; =data_ov31_02184014
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f10 ; =data_ov31_02184008
@@ -8337,7 +8337,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181f18 ; =0x49545042
 	ldr r2, _02181f1c ; =func_ov31_0217defc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181f14 ; =data_ov31_02184034
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f20 ; =data_ov31_02184028
@@ -8346,7 +8346,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181f28 ; =0x4954424b
 	ldr r2, _02181f2c ; =func_ov31_0217df3c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181f24 ; =data_ov31_02184054
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f30 ; =data_ov31_02184048
@@ -8355,7 +8355,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181f38 ; =0x49544343
 	ldr r2, _02181f3c ; =func_ov31_0217df7c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181f34 ; =data_ov31_02184074
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f40 ; =data_ov31_02184068
@@ -8364,7 +8364,7 @@ func_ov31_02181b6c: ; 0x02181b6c
 	ldr r1, _02181f48 ; =0x49544259
 	ldr r2, _02181f4c ; =func_ov31_0217dfbc
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181f44 ; =data_ov31_02184094
 	ldr r1, _02181e4c ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181f50 ; =data_ov31_02184088
@@ -8477,7 +8477,7 @@ func_ov31_02181f58: ; 0x02181f58
 	ldr r1, _02181fd0 ; =0x4954534e
 	ldr r2, _02181fd4 ; =func_ov31_02180708
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181fcc ; =data_ov31_02184160
 	ldr r1, _02181fd8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181fdc ; =data_ov31_02184154
@@ -8486,7 +8486,7 @@ func_ov31_02181f58: ; 0x02181f58
 	ldr r1, _02181fe4 ; =0x49545332
 	ldr r2, _02181fe8 ; =func_ov31_0218074c
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181fe0 ; =data_ov31_02184180
 	ldr r1, _02181fd8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181fec ; =data_ov31_02184174
@@ -8495,7 +8495,7 @@ func_ov31_02181f58: ; 0x02181f58
 	ldr r1, _02181ff4 ; =0x49545333
 	ldr r2, _02181ff8 ; =func_ov31_02180790
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _02181ff0 ; =data_ov31_021841a0
 	ldr r1, _02181fd8 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _02181ffc ; =data_ov31_02184194
@@ -8525,7 +8525,7 @@ func_ov31_02182000: ; 0x02182000
 	ldr r1, _02182030 ; =0x53495453
 	ldr r2, _02182034 ; =func_ov31_02180a84
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _0218202c ; =data_ov31_021841c0
 	ldr r1, _02182038 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0218203c ; =data_ov31_021841b4
@@ -8547,7 +8547,7 @@ func_ov31_02182040: ; 0x02182040
 	ldr r1, _02182070 ; =0x54455452
 	ldr r2, _02182074 ; =func_ov31_02181448
 	mov r3, #0
-	bl _ZN9ActorTypeC1EjPFP5ActorvEPv
+	bl _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 	ldr r0, _0218206c ; =data_ov31_021841e0
 	ldr r1, _02182078 ; =_ZN9ActorTypeD1Ev
 	ldr r2, _0218207c ; =data_ov31_021841d4

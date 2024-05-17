@@ -221,7 +221,7 @@
 .extern func_0203d77c
 .extern func_0203d7b8
 .extern func_0203d7e0
-.extern _ZN9ActorTypeC1EjPFP5ActorvEPv
+.extern _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 .extern _ZN9ActorTypeD1Ev
 .extern func_0203eadc
 .extern func_0203eba8
