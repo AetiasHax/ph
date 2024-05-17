@@ -26,9 +26,9 @@ _020aeedc:
 	movne r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 _020aeef0: .word data_027e077c
 _020aeef4: .word data_02056be4
+	arm_func_end _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 
 	.global _ZN13PlayerControl18func_ov00_020aeef8Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020aeef8Ev
@@ -47,8 +47,8 @@ _ZN13PlayerControl18func_ov00_020aeef8Ev: ; 0x020aeef8
 	bl _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020aeef8Ev
 _020aef2c: .word data_027e077c
+	arm_func_end _ZN13PlayerControl18func_ov00_020aeef8Ev
 
 	.global _ZN13PlayerControl18func_ov00_020aef30Ev
 	thumb_func_start _ZN13PlayerControl18func_ov00_020aef30Ev
@@ -75,10 +75,10 @@ _020aef56:
 	add sp, #0xc
 	pop {r3, r4, pc}
 	nop
-	thumb_func_end _ZN13PlayerControl18func_ov00_020aef30Ev
 _020aef5c: .word 0x504c5952
 _020aef60: .word data_ov00_020e6148
 _020aef64: .word 0x5043544c
+	thumb_func_end _ZN13PlayerControl18func_ov00_020aef30Ev
 
 	.global _ZN13PlayerControl9UpdateAimEv
 	thumb_func_start _ZN13PlayerControl9UpdateAimEv
@@ -149,10 +149,10 @@ _020aefde:
 	str r1, [r4]
 	pop {r4, pc}
 	nop
-	thumb_func_end _ZN13PlayerControl9UpdateAimEv
 _020aeff0: .word data_027e0d0c
 _020aeff4: .word data_027e0d38
 _020aeff8: .word data_027e103c
+	thumb_func_end _ZN13PlayerControl9UpdateAimEv
 
 	.global _ZN13PlayerControl14GetFollowActorEv
 	arm_func_start _ZN13PlayerControl14GetFollowActorEv
@@ -164,9 +164,9 @@ _ZN13PlayerControl14GetFollowActorEv: ; 0x020aeffc
 	add r1, r2, #0x84
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl14GetFollowActorEv
 _020af014: .word data_027e0fe4
 _020af018: .word _ZN12ActorManager8GetActorEP8ActorRef
+	arm_func_end _ZN13PlayerControl14GetFollowActorEv
 
 	.global _ZN13PlayerControl18func_ov00_020af01cEPc
 	arm_func_start _ZN13PlayerControl18func_ov00_020af01cEPc
@@ -347,7 +347,6 @@ _020af268:
 	strneb r0, [r6, #0x79]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af06cEv
 _020af27c: .word gAdventureFlags
 _020af280: .word data_027e0c68
 _020af284: .word data_027e0d38
@@ -355,6 +354,7 @@ _020af288: .word gItemManager
 _020af28c: .word data_027e05f8
 _020af290: .word data_027e103c
 _020af294: .word data_027e0f94
+	arm_func_end _ZN13PlayerControl18func_ov00_020af06cEv
 
 	.global _ZN13PlayerControl20UpdateUsingEquipItemEv
 	arm_func_start _ZN13PlayerControl20UpdateUsingEquipItemEv
@@ -375,8 +375,8 @@ _020af2c4:
 	strb r0, [r4, #0x79]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl20UpdateUsingEquipItemEv
 _020af2d0: .word data_027e05f8
+	arm_func_end _ZN13PlayerControl20UpdateUsingEquipItemEv
 
 	.global _ZN13PlayerControl18func_ov00_020af2d4Ejb
 	arm_func_start _ZN13PlayerControl18func_ov00_020af2d4Ejb
@@ -446,11 +446,11 @@ _020af3ac:
 	moveq r0, #0
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af2d4Ejb
 _020af3bc: .word data_027e0d38
 _020af3c0: .word data_027e077c
 _020af3c4: .word data_02056be4
 _020af3c8: .word data_027e103c
+	arm_func_end _ZN13PlayerControl18func_ov00_020af2d4Ejb
 
 	.global _ZN13PlayerControl15CheckTouchedNowEj
 	arm_func_start _ZN13PlayerControl15CheckTouchedNowEj
@@ -568,11 +568,11 @@ _020af520:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af4a4Ev
 _020af528: .word data_027e0d38
 _020af52c: .word data_027e0e2c
 _020af530: .word data_027e103c
 _020af534: .word data_027e077c
+	arm_func_end _ZN13PlayerControl18func_ov00_020af4a4Ev
 
 	.global _ZN13PlayerControl18func_ov00_020af538Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af538Ev
@@ -689,7 +689,6 @@ _020af694:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af538Ev
 _020af6c4: .word gAdventureFlags
 _020af6c8: .word data_027e0c68
 _020af6cc: .word data_027e0fac
@@ -698,6 +697,7 @@ _020af6d4: .word 0x0000010a
 _020af6d8: .word gMapManager
 _020af6dc: .word data_027e103c
 _020af6e0: .word data_027e05f8
+	arm_func_end _ZN13PlayerControl18func_ov00_020af538Ev
 
 	.global _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
 	arm_func_start _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
@@ -739,9 +739,9 @@ _020af72c:
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
 _020af770: .word data_027e0f94
 _020af774: .word gMapManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
 
 	.global _ZN13PlayerControl18func_ov00_020af778Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af778Ev
@@ -968,7 +968,6 @@ _020afaa8:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020af778Ev
 _020afabc: .word gAdventureFlags
 _020afac0: .word data_027e0f90
 _020afac4: .word gItemManager
@@ -976,6 +975,7 @@ _020afac8: .word data_027e0fc8
 _020afacc: .word data_027e0fe4
 _020afad0: .word gMapManager
 _020afad4: .word data_027e0f94
+	arm_func_end _ZN13PlayerControl18func_ov00_020af778Ev
 
 	.global _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
@@ -1017,10 +1017,10 @@ _020afb54:
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 _020afb60: .word data_027e0f94
 _020afb64: .word data_027e0f90
 _020afb68: .word gMapManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 
 	.global _ZN13PlayerControl18func_ov00_020afb6cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020afb6cEv
@@ -1236,13 +1236,13 @@ _020afe64:
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020afb6cEv
 _020afe70: .word data_027e0fe4
 _020afe74: .word gItemManager
 _020afe78: .word data_027e0f94
 _020afe7c: .word data_027e0fc8
 _020afe80: .word data_027e0ffc
 _020afe84: .word gMapManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020afb6cEv
 
 	.global _ZN13PlayerControl18func_ov00_020afe88Eib
 	arm_func_start _ZN13PlayerControl18func_ov00_020afe88Eib
@@ -1275,8 +1275,8 @@ _020afee0:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020afe88Eib
 _020afee8: .word data_027e0fcc
+	arm_func_end _ZN13PlayerControl18func_ov00_020afe88Eib
 
 	.global _ZN13PlayerControl18func_ov00_020afeecEib
 	arm_func_start _ZN13PlayerControl18func_ov00_020afeecEib
@@ -1326,8 +1326,8 @@ _020aff7c:
 	movne r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020afeecEib
 _020aff8c: .word data_027e0fcc
+	arm_func_end _ZN13PlayerControl18func_ov00_020afeecEib
 
 	.global _ZN13PlayerControl18func_ov00_020aff90Eii
 	arm_func_start _ZN13PlayerControl18func_ov00_020aff90Eii
@@ -1354,9 +1354,9 @@ _ZN13PlayerControl18func_ov00_020aff90Eii: ; 0x020aff90
 	bl func_ov00_020baca8
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020aff90Eii
 _020affe4: .word data_027e0d38
 _020affe8: .word gItemManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020aff90Eii
 
 	.global _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_
@@ -1506,10 +1506,10 @@ _ZN13PlayerControl18func_ov00_020b014cEv: ; 0x020b014c
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b014cEv
 _020b0210: .word data_ov00_020ee198
 _020b0214: .word data_027e0f64
 _020b0218: .word gItemManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020b014cEv
 
 	.global _ZN13PlayerControl6SetAimEv
 	arm_func_start _ZN13PlayerControl6SetAimEv
@@ -1523,8 +1523,8 @@ _ZN13PlayerControl6SetAimEv: ; 0x020b021c
 	str r1, [r0, #0xb8]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl6SetAimEv
 _020b023c: .word data_027e0d0c
+	arm_func_end _ZN13PlayerControl6SetAimEv
 
 	.global _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	arm_func_start _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
@@ -1587,10 +1587,10 @@ _020b02f8:
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 _020b031c: .word data_027e0d38
 _020b0320: .word data_027e0f94
 _020b0324: .word data_027e0f64
+	arm_func_end _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 
 	.global _ZN13PlayerControl13GetTouchAngleEv
 	arm_func_start _ZN13PlayerControl13GetTouchAngleEv
@@ -1662,9 +1662,9 @@ _020b0408:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b034cEv
 _020b0410: .word data_ov00_020e6124
 _020b0414: .word data_027e05f8
+	arm_func_end _ZN13PlayerControl18func_ov00_020b034cEv
 
 	.global _ZN13PlayerControl18func_ov00_020b0418Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0418Ev
@@ -1699,12 +1699,12 @@ _020b0454:
 	add r0, r0, #0xa00
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b0418Ev
 _020b0488: .word data_ov00_020eec60
 _020b048c: .word 0x00000aaa
 _020b0490: .word 0x51eb851f
 _020b0494: .word 0x00000556
 _020b0498: .word 0x10624dd3
+	arm_func_end _ZN13PlayerControl18func_ov00_020b0418Ev
 
 	.global _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 	arm_func_start _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
@@ -1792,11 +1792,11 @@ _020b05d0:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 _020b05d8: .word data_027e0f94
 _020b05dc: .word data_027e0d0c
 _020b05e0: .word data_027e0fac
 _020b05e4: .word data_02050f54
+	arm_func_end _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 
 	.global _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
@@ -1899,12 +1899,12 @@ _020b0758:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 _020b0764: .word 0x00000333
 _020b0768: .word data_027e0f94
 _020b076c: .word data_027e0fac
 _020b0770: .word data_02050f54
 _020b0774: .word gMapManager
+	arm_func_end _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 
 	.global _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
@@ -2129,9 +2129,9 @@ _020b0aa0:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 _020b0aac: .word data_027e0f64
 _020b0ab0: .word data_02050f54
+	arm_func_end _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 
 	.global _ZN13PlayerControl16CheckNotTouchingEv
 	arm_func_start _ZN13PlayerControl16CheckNotTouchingEv
@@ -2362,9 +2362,9 @@ _020b0dd4:
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb
 _020b0de0: .word gItemManager
 _020b0de4: .word data_027e103c
+	arm_func_end _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb
 
 	.global _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
@@ -2396,8 +2396,8 @@ _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p: ; 0x020b0de8
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
 _020b0e50: .word 0x2aaaaaab
+	arm_func_end _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
 
 	.global _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
@@ -2484,8 +2484,8 @@ _020b0f78:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 _020b0f84: .word data_027e0f94
+	arm_func_end _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 
 	.global _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
@@ -2649,8 +2649,8 @@ _020b11cc:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 _020b11d8: .word data_027e0f94
+	arm_func_end _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 
 	.global _ZN13PlayerControl14IsUntouchedNowEv
 	arm_func_start _ZN13PlayerControl14IsUntouchedNowEv
@@ -2670,8 +2670,8 @@ _020b1208:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl14IsUntouchedNowEv
 _020b1210: .word data_027e103c
+	arm_func_end _ZN13PlayerControl14IsUntouchedNowEv
 
 	.global _ZN13PlayerControl17IsNotUntouchedNowEv
 	arm_func_start _ZN13PlayerControl17IsNotUntouchedNowEv
@@ -2689,8 +2689,8 @@ _ZN13PlayerControl17IsNotUntouchedNowEv: ; 0x020b1214
 	moveq r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl17IsNotUntouchedNowEv
 _020b1244: .word data_027e05f8
+	arm_func_end _ZN13PlayerControl17IsNotUntouchedNowEv
 
 	.global _ZN13PlayerControl18func_ov00_020b1248EPi
 	arm_func_start _ZN13PlayerControl18func_ov00_020b1248EPi
@@ -2795,8 +2795,8 @@ _ZN13PlayerControl14IsTouchingFastEv: ; 0x020b134c
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl14IsTouchingFastEv
 _020b1378: .word data_ov00_020eec9c
+	arm_func_end _ZN13PlayerControl14IsTouchingFastEv
 
 	.global _ZN13PlayerControl11IsTappedNowEv
 	arm_func_start _ZN13PlayerControl11IsTappedNowEv
@@ -2880,8 +2880,8 @@ _020b1428:
 	movge r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13PlayerControl18func_ov00_020b13c4Ev
 _020b1494: .word data_ov00_020e6124
+	arm_func_end _ZN13PlayerControl18func_ov00_020b13c4Ev
 
     .data
 	.global data_ov00_020e6104

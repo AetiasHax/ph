@@ -34,8 +34,8 @@ _ZN12TouchControlC2Ev: ; 0x0207ac24
 	strh r3, [r0, #0x34]
 	bx lr
 	nop
-	thumb_func_end _ZN12TouchControlC2Ev
 _0207ac5c: .word 0x0000ffff
+	thumb_func_end _ZN12TouchControlC2Ev
 
 	.global _ZN12TouchControl13IncreaseSpeedEs
 	arm_func_start _ZN12TouchControl13IncreaseSpeedEs
@@ -124,8 +124,8 @@ _0207ad68:
 	str r1, [r0, #0x28]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN12TouchControl11UpdateFlagsEt
 _0207ad8c: .word 0x0000ffff
+	arm_func_end _ZN12TouchControl11UpdateFlagsEt
 
 	.global _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
 	arm_func_start _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
@@ -189,8 +189,8 @@ _0207ae5c:
 	mov r1, r2
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
 _0207ae68: .word _ZN12TouchControl11UpdateFlagsEt - 1
+	arm_func_end _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
 
 	.global _ZN12TouchControl6UpdateEP10TouchStatet
 	arm_func_start _ZN12TouchControl6UpdateEP10TouchStatet
@@ -211,8 +211,8 @@ _ZN12TouchControl6UpdateEP10TouchStatet: ; 0x0207ae6c
 	str r3, [r0, #0x14]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN12TouchControl6UpdateEP10TouchStatet
 _0207aea8: .word _ZN12TouchControl11UpdateFlagsEt - 1
+	arm_func_end _ZN12TouchControl6UpdateEP10TouchStatet
 
 	.global _ZN12TouchControl18func_ov00_0207aeacEv
 	arm_func_start _ZN12TouchControl18func_ov00_0207aeacEv
@@ -226,8 +226,8 @@ _ZN12TouchControl18func_ov00_0207aeacEv: ; 0x0207aeac
 	movne r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN12TouchControl18func_ov00_0207aeacEv
 _0207aecc: .word 0x027fffa8
+	arm_func_end _ZN12TouchControl18func_ov00_0207aeacEv
 
 	.global _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
 	arm_func_start _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
@@ -314,10 +314,10 @@ func_ov00_020df38c: ; 0x020df38c
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020df38c
 _020df3ac: .word data_027e0d78
 _020df3b0: .word _ZN12TouchControlD1Ev - 1
 _020df3b4: .word data_027e0d6c
+	arm_func_end func_ov00_020df38c
 
 	.section .ctor, 4, 1, 4
 	.global data_ov00_020e1e90

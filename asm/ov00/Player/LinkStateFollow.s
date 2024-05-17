@@ -61,9 +61,9 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateFollow16MoveTowardTargetEv
 _020a9020: .word gMapManager
 _020a9024: .word 0x00000155
+	arm_func_end _ZN15LinkStateFollow16MoveTowardTargetEv
 
 	.global _ZN15LinkStateFollow12OnStateLeaveEi
 	arm_func_start _ZN15LinkStateFollow12OnStateLeaveEi
@@ -102,9 +102,9 @@ _020a904c:
 	bl func_ov14_0214bd08
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateFollow12OnStateLeaveEi
 _020a90a8: .word data_027e0fb8
 _020a90ac: .word gMapManager
+	arm_func_end _ZN15LinkStateFollow12OnStateLeaveEi
 
 	.global _ZN15LinkStateFollow8vfunc_24Ei
 	arm_func_start _ZN15LinkStateFollow8vfunc_24Ei
@@ -168,8 +168,8 @@ _ZN15LinkStateFollow20GetLinkStateCutsceneEv: ; 0x020a914c
 	mov r0, #6
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 _020a9158: .word func_01fffcd8
+	arm_func_end _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 
 	.global _ZN15LinkStateFollow8vfunc_34EP5Vec3p
 	arm_func_start _ZN15LinkStateFollow8vfunc_34EP5Vec3p
@@ -224,9 +224,9 @@ _020a91f0:
 	moveq r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 _020a9208: .word data_027e0fb8
 _020a920c: .word gMapManager
+	arm_func_end _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 
 	.global _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 	arm_func_start _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor

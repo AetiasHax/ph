@@ -47,8 +47,8 @@ _ZN6Course13SetCourseNameEPc: ; 0x0207ca68
 	add r0, r0, #0xc
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN6Course13SetCourseNameEPc
 _0207ca74: .word strcpy
+	arm_func_end _ZN6Course13SetCourseNameEPc
 
 	.global _ZN6Course18func_ov00_0207ca78Eici
 	arm_func_start _ZN6Course18func_ov00_0207ca78Eici
@@ -128,8 +128,8 @@ _ZN6Course18func_ov00_0207cb30Ei: ; 0x0207cb30
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course18func_ov00_0207cb30Ei
 _0207cb78: .word 0x0000ffff
+	arm_func_end _ZN6Course18func_ov00_0207cb30Ei
 
 	.global _ZN6Course14FindMapGridPosEP5Vec2bPS_j
 	arm_func_start _ZN6Course14FindMapGridPosEP5Vec2bPS_j
@@ -288,7 +288,6 @@ _0207cd3c:
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course14GetMCSFilePathEiii
 _0207cd58: .word data_ov00_020e2508
 _0207cd5c: .word data_ov00_020e2058
 _0207cd60: .word data_ov00_020e2070
@@ -296,6 +295,7 @@ _0207cd64: .word data_ov00_020e208c
 _0207cd68: .word data_ov00_020e20a4
 _0207cd6c: .word data_ov00_020e20c0
 _0207cd70: .word data_ov00_020e20d8
+	arm_func_end _ZN6Course14GetMCSFilePathEiii
 
 	.global _ZN6Course14GetMRCFilePathEiii
 	arm_func_start _ZN6Course14GetMRCFilePathEiii
@@ -343,13 +343,13 @@ _0207cde0:
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course14GetMRCFilePathEiii
 _0207ce08: .word data_ov00_020e250c
 _0207ce0c: .word data_ov00_020e20ec
 _0207ce10: .word data_ov00_020e2104
 _0207ce14: .word data_ov00_020e211c
 _0207ce18: .word data_027e0f7c
 _0207ce1c: .word data_ov00_020e2134
+	arm_func_end _ZN6Course14GetMRCFilePathEiii
 
 	.global _ZN6Course18func_ov00_0207ce20EiiPci
 	arm_func_start _ZN6Course18func_ov00_0207ce20EiiPci
@@ -737,7 +737,6 @@ _0207d364:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course18func_ov00_0207ce4cEiiiPci
 _0207d3ac: .word data_027e0f7c
 _0207d3b0: .word 0x66666667
 _0207d3b4: .word data_ov00_020e233c
@@ -760,6 +759,7 @@ _0207d3f4: .word data_ov00_020e229c
 _0207d3f8: .word data_ov00_020e22b8
 _0207d3fc: .word data_ov00_020e22d4
 _0207d400: .word data_ov00_020e22e8
+	arm_func_end _ZN6Course18func_ov00_0207ce4cEiiiPci
 
 	.global _ZN6Course18func_ov00_0207d404Eiii
 	arm_func_start _ZN6Course18func_ov00_0207d404Eiii
@@ -804,8 +804,8 @@ _ZN6Course22IsCurrentMapInMainGridEv: ; 0x0207d47c
 	ldrb r2, [r0, #0x1d]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN6Course22IsCurrentMapInMainGridEv
 _0207d48c: .word _ZN6Course12IsInMainGridEii
+	arm_func_end _ZN6Course22IsCurrentMapInMainGridEv
 
 	.global _ZN6Course12IsInMainGridEii
 	arm_func_start _ZN6Course12IsInMainGridEii
@@ -1083,8 +1083,8 @@ _ZN6Course18FindMapData_Unk_04Ei: ; 0x0207d788
 	ldrneh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course18FindMapData_Unk_04Ei
 _0207d7a0: .word 0x0000ffff
+	arm_func_end _ZN6Course18FindMapData_Unk_04Ei
 
 	.global _ZN6Course18FindMapData_Unk_0cEi
 	arm_func_start _ZN6Course18FindMapData_Unk_0cEi
@@ -1108,8 +1108,8 @@ _ZN6Course18func_ov00_0207d7bcEv: ; 0x0207d7bc
 	bl func_ov00_020cf414
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN6Course18func_ov00_0207d7bcEv
 _0207d7d8: .word data_027e103c
+	arm_func_end _ZN6Course18func_ov00_0207d7bcEv
 
 	.global _ZN6Course8SetFlag0Ejb
 	arm_func_start _ZN6Course8SetFlag0Ejb
@@ -1345,8 +1345,8 @@ _ZN6Course18FindCurrentMapDataEv: ; 0x0207da14
 	ldrb r1, [r1, #0x20]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN6Course18FindCurrentMapDataEv
 _0207da34: .word _ZN6Course11FindMapDataEj
+	arm_func_end _ZN6Course18FindCurrentMapDataEv
 
     .data
 	.global data_ov00_020e2058

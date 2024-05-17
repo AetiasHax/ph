@@ -64,9 +64,9 @@ _ZN10PlayerBase10SetVisibleEb: ; 0x020a7b10
 	bl func_ov00_0207c5d4
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase10SetVisibleEb
 _020a7b84: .word gItemManager
 _020a7b88: .word data_027e0e58
+	arm_func_end _ZN10PlayerBase10SetVisibleEb
 
 	.global _ZN10PlayerBase13GetEquipSwordEv
 	arm_func_start _ZN10PlayerBase13GetEquipSwordEv
@@ -75,8 +75,8 @@ _ZN10PlayerBase13GetEquipSwordEv: ; 0x020a7b8c
 	mov r0, #0
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase13GetEquipSwordEv
 _020a7b98: .word func_01fffcec
+	arm_func_end _ZN10PlayerBase13GetEquipSwordEv
 
 	.global _ZN10PlayerBase14GetEquipShieldEv
 	arm_func_start _ZN10PlayerBase14GetEquipShieldEv
@@ -85,8 +85,8 @@ _ZN10PlayerBase14GetEquipShieldEv: ; 0x020a7b9c
 	mov r0, #1
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase14GetEquipShieldEv
 _020a7ba8: .word func_01fffcec
+	arm_func_end _ZN10PlayerBase14GetEquipShieldEv
 
 	.global _ZN10PlayerBase6LookAtEP5Vec3p
 	arm_func_start _ZN10PlayerBase6LookAtEP5Vec3p
@@ -111,9 +111,9 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase6LookAtEP5Vec3p
 _020a7bf8: .word data_027e0f94
 _020a7bfc: .word data_027e0fac
+	arm_func_end _ZN10PlayerBase6LookAtEP5Vec3p
 
 	.global _ZN10PlayerBase18func_ov00_020a7c00Ei
 	arm_func_start _ZN10PlayerBase18func_ov00_020a7c00Ei
@@ -125,8 +125,8 @@ _ZN10PlayerBase18func_ov00_020a7c00Ei: ; 0x020a7c00
 	movne r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase18func_ov00_020a7c00Ei
 _020a7c18: .word data_027e0c54
+	arm_func_end _ZN10PlayerBase18func_ov00_020a7c00Ei
 
 	.global _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	arm_func_start _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -196,9 +196,9 @@ _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi: ; 0x020a7ce4
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 _020a7cf4: .word gItemManager
 _020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
+	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
 
 	.global _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	arm_func_start _ZN10PlayerBase18EquipItem_vfunc_2cEv
@@ -217,8 +217,8 @@ _ZN10PlayerBase18EquipItem_vfunc_2cEv: ; 0x020a7cfc
 	bl _ZN11ItemManager18EquipItem_vfunc_2cEi
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_2cEv
 _020a7d30: .word gItemManager
+	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_2cEv
 
 	.global _ZN10PlayerBase9SetHealthEs
 	arm_func_start _ZN10PlayerBase9SetHealthEs
@@ -314,8 +314,8 @@ _ZN10PlayerBase8TeleportEP5Vec3psibb: ; 0x020a7df4
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase8TeleportEP5Vec3psibb
 _020a7e6c: .word gMapManager
+	arm_func_end _ZN10PlayerBase8TeleportEP5Vec3psibb
 
 	.global _ZN10PlayerBase18TeleportToEntranceEib
 	arm_func_start _ZN10PlayerBase18TeleportToEntranceEib
@@ -384,7 +384,6 @@ _020a7f58:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10PlayerBase18TeleportToEntranceEib
 _020a7f64: .word data_027e0f94
 _020a7f68: .word gMapManager
 _020a7f6c: .word data_027e0fac
@@ -394,6 +393,7 @@ _020a7f78: .word data_027e0fb8
 _020a7f7c: .word data_027e0fe4
 _020a7f80: .word gAdventureFlags
 _020a7f84: .word data_027e0f64
+	arm_func_end _ZN10PlayerBase18TeleportToEntranceEib
 
 	.global _ZN10PlayerBase22TeleportToLastEntranceEb
 	arm_func_start _ZN10PlayerBase22TeleportToLastEntranceEb

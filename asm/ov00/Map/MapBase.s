@@ -63,10 +63,10 @@ _0207dac0:
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBaseD1Ev
 _0207db0c: .word _ZTV7MapBase
 _0207db10: .word data_ov00_020ec81c
 _0207db14: .word _ZN15MapBase_Unk_180D1Ev
+	arm_func_end _ZN7MapBaseD1Ev
 
 	.global _ZN15MapBase_Unk_180D1Ev
 	arm_func_start _ZN15MapBase_Unk_180D1Ev
@@ -137,10 +137,10 @@ _0207dba4:
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBaseD0Ev
 _0207dbf8: .word _ZTV7MapBase
 _0207dbfc: .word data_ov00_020ec81c
 _0207dc00: .word _ZN15MapBase_Unk_180D1Ev
+	arm_func_end _ZN7MapBaseD0Ev
 
 	.global _ZN7MapBaseD2Ev
 	arm_func_start _ZN7MapBaseD2Ev
@@ -203,10 +203,10 @@ _0207dc8c:
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBaseD2Ev
 _0207dcd8: .word _ZTV7MapBase
 _0207dcdc: .word data_ov00_020ec81c
 _0207dce0: .word _ZN15MapBase_Unk_180D1Ev
+	arm_func_end _ZN7MapBaseD2Ev
 
 	.global _ZN7MapBase9SetBoundsEii
 	arm_func_start _ZN7MapBase9SetBoundsEii
@@ -288,9 +288,9 @@ _ZN7MapBase14GetMapFilePathEPcii: ; 0x0207dda0
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase14GetMapFilePathEPcii
 _0207ddec: .word 0x66666667
 _0207ddf0: .word data_ov00_020e2410
+	arm_func_end _ZN7MapBase14GetMapFilePathEPcii
 
 	.global _ZN7MapBase8vfunc_18Ev
 	arm_func_start _ZN7MapBase8vfunc_18Ev
@@ -472,7 +472,6 @@ _0207e01c:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0207dea0Eb
 _0207e044: .word data_027e0f78
 _0207e048: .word data_027e0f88
 _0207e04c: .word data_ov00_020ecde4
@@ -480,6 +479,7 @@ _0207e050: .word data_ov00_020ee0a0
 _0207e054: .word data_027e0d38
 _0207e058: .word data_027e0e58
 _0207e05c: .word data_027e0f8c
+	arm_func_end _ZN7MapBase18func_ov00_0207dea0Eb
 
 	.global _ZN7MapBase8vfunc_b0Eii
 	arm_func_start _ZN7MapBase8vfunc_b0Eii
@@ -775,8 +775,8 @@ _ZN7MapBase8vfunc_b4Ev: ; 0x0207e444
 	bl func_0201e4cc
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_b4Ev
 _0207e468: .word data_ov00_020ec81c
+	arm_func_end _ZN7MapBase8vfunc_b4Ev
 
 	.global _ZN7MapBase8vfunc_48Ev
 	arm_func_start _ZN7MapBase8vfunc_48Ev
@@ -1139,12 +1139,12 @@ _0207e8f4:
 	add sp, sp, #0x7c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_68Eii
 _0207e92c: .word gMapManager
 _0207e930: .word data_027e0f6c
 _0207e934: .word data_ov00_020ec824
 _0207e938: .word _ZN7MapBase18func_ov00_0207e968Ev
 _0207e93c: .word _ZN7MapBase18func_ov00_0207e96cEv
+	arm_func_end _ZN7MapBase8vfunc_68Eii
 
 	.global _ZN7MapBase18func_ov00_0207e940EPc
 	arm_func_start _ZN7MapBase18func_ov00_0207e940EPc
@@ -1159,8 +1159,8 @@ _ZN7MapBase18func_ov00_0207e940EPc: ; 0x0207e940
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0207e940EPc
 _0207e964: .word _ZN7MapBase18func_ov00_0207e968Ev
+	arm_func_end _ZN7MapBase18func_ov00_0207e940EPc
 
 	.global _ZN7MapBase18func_ov00_0207e968Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207e968Ev
@@ -1486,12 +1486,12 @@ _0207edd0:
 	add sp, sp, #0xc4
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_6cEiii
 _0207ee00: .word gMapManager
 _0207ee04: .word data_027e0f6c
 _0207ee08: .word data_ov00_020ec864
 _0207ee0c: .word _ZN7MapBase18func_ov00_0207e968Ev
 _0207ee10: .word _ZN7MapBase18func_ov00_0207e96cEv
+	arm_func_end _ZN7MapBase8vfunc_6cEiii
 
 	.global _ZN7MapBase8vfunc_70EP5Vec3p
 	arm_func_start _ZN7MapBase8vfunc_70EP5Vec3p
@@ -1614,13 +1614,13 @@ _0207efbc:
 	add sp, sp, #0x74
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_70EP5Vec3p
 _0207efdc: .word gMapManager
 _0207efe0: .word data_027e0f6c
 _0207efe4: .word data_ov00_020ec8a4
 _0207efe8: .word _ZN7MapBase18func_ov00_0207e968Ev
 _0207efec: .word _ZN7MapBase18func_ov00_0207e96cEv
 _0207eff0: .word 0x0000ffff
+	arm_func_end _ZN7MapBase8vfunc_70EP5Vec3p
 
 	.global _ZN7MapBase8vfunc_74EP5Vec3p
 	arm_func_start _ZN7MapBase8vfunc_74EP5Vec3p
@@ -1693,10 +1693,10 @@ _0207f0e8:
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_74EP5Vec3p
 _0207f0f4: .word gMapManager
 _0207f0f8: .word data_027e0f6c
 _0207f0fc: .word data_ov00_020ec8e4
+	arm_func_end _ZN7MapBase8vfunc_74EP5Vec3p
 
 	.global _ZN7MapBase18func_ov00_0207f100Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207f100Ev
@@ -1768,8 +1768,8 @@ _0207f1cc:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0207f104Eii
 _0207f1f0: .word gMapManager
+	arm_func_end _ZN7MapBase18func_ov00_0207f104Eii
 
 	.global _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
 	arm_func_start _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
@@ -1851,10 +1851,10 @@ _0207f30c:
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
 _0207f318: .word gMapManager
 _0207f31c: .word data_027e0f6c
 _0207f320: .word data_ov00_020ec924
+	arm_func_end _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
 
 	.global _ZN7MapBase8vfunc_88Ev
 	arm_func_start _ZN7MapBase8vfunc_88Ev
@@ -1954,8 +1954,8 @@ _ZN7MapBase18func_ov00_0207f38cEi: ; 0x0207f38c
 	bl func_ov00_0208d820
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0207f38cEi
 _0207f3c0: .word data_027e0f68
+	arm_func_end _ZN7MapBase18func_ov00_0207f38cEi
 
 	.global _ZN7MapBase8vfunc_90Eiii
 	arm_func_start _ZN7MapBase8vfunc_90Eiii
@@ -2255,8 +2255,8 @@ _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB: ; 0x0207f6cc
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB
 _0207f774: .word 0xffffeccd
+	arm_func_end _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB
 
 	.global _ZN7MapBase15GetClampedTileXEi
 	arm_func_start _ZN7MapBase15GetClampedTileXEi
@@ -2529,8 +2529,8 @@ _0207fa7c:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase10AddTriggerEP13TriggerParams
 _0207faa4: .word data_027e0ce0
+	arm_func_end _ZN7MapBase10AddTriggerEP13TriggerParams
 
 	.global _ZN11TriggerBase8vfunc_08Ev
 	arm_func_start _ZN11TriggerBase8vfunc_08Ev
@@ -3001,8 +3001,8 @@ _ZN7MapBase18func_ov00_0208005cEiii: ; 0x0208005c
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0208005cEiii
 _02080068: .word func_ov00_0209c1e4
+	arm_func_end _ZN7MapBase18func_ov00_0208005cEiii
 
 	.global _ZN7MapBase18func_ov00_0208006cEii
 	arm_func_start _ZN7MapBase18func_ov00_0208006cEii
@@ -3011,8 +3011,8 @@ _ZN7MapBase18func_ov00_0208006cEii: ; 0x0208006c
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0208006cEii
 _02080078: .word func_ov00_0209c2b4
+	arm_func_end _ZN7MapBase18func_ov00_0208006cEii
 
 	.global _ZN7MapBase18func_ov00_0208007cEii
 	arm_func_start _ZN7MapBase18func_ov00_0208007cEii
@@ -3021,8 +3021,8 @@ _ZN7MapBase18func_ov00_0208007cEii: ; 0x0208007c
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0208007cEii
 _02080088: .word func_ov00_0209c2d0
+	arm_func_end _ZN7MapBase18func_ov00_0208007cEii
 
 	.global _ZN7MapBase18func_ov00_0208008cEj
 	arm_func_start _ZN7MapBase18func_ov00_0208008cEj
@@ -3031,8 +3031,8 @@ _ZN7MapBase18func_ov00_0208008cEj: ; 0x0208008c
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_0208008cEj
 _02080098: .word func_ov00_0209c8e4
+	arm_func_end _ZN7MapBase18func_ov00_0208008cEj
 
 	.global _ZN7MapBase7AddExitEP4Exit
 	arm_func_start _ZN7MapBase7AddExitEP4Exit
@@ -3588,8 +3588,8 @@ _02080818:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase8vfunc_b8Ev
 _02080820: .word data_027e0618
+	arm_func_end _ZN7MapBase8vfunc_b8Ev
 
 	.global _ZN7MapBase18func_ov00_02080824Eii
 	arm_func_start _ZN7MapBase18func_ov00_02080824Eii
@@ -4127,9 +4127,9 @@ _02080ec8:
 	strb r4, [r0, #0x5c]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_02080de8Ei
 _02080ed4: .word data_027e0f64
 _02080ed8: .word 0x00001c72
+	arm_func_end _ZN7MapBase18func_ov00_02080de8Ei
 
 	.global _ZN7MapBase18func_ov00_02080edcEv
 	arm_func_start _ZN7MapBase18func_ov00_02080edcEv
@@ -4152,8 +4152,8 @@ _02080f10:
 	strb r0, [r4, #5]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN7MapBase18func_ov00_02080edcEv
 _02080f1c: .word data_027e0d38
+	arm_func_end _ZN7MapBase18func_ov00_02080edcEv
 
     .data
 	.global data_ov00_020e22fc

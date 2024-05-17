@@ -23,8 +23,8 @@ _ZN13LinkStateRoll20CreateDebugHierarchyEv: ; 0x020ae79c
 	ldr r3, _020ae7a0 ; =_ZN13LinkStateBase18GetDebugHierarchy0Ev
 	bx r3
 	.align 2, 0
-	thumb_func_end _ZN13LinkStateRoll20CreateDebugHierarchyEv
 _020ae7a0: .word _ZN13LinkStateBase18GetDebugHierarchy0Ev
+	thumb_func_end _ZN13LinkStateRoll20CreateDebugHierarchyEv
 
 	.global _ZN13LinkStateRoll12OnStateEnterEv
 	arm_func_start _ZN13LinkStateRoll12OnStateEnterEv
@@ -262,7 +262,6 @@ _020aeb08:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateRoll12OnStateEnterEv
 _020aeb10: .word data_02050f54
 _020aeb14: .word 0x0000019a
 _020aeb18: .word data_027e0fb8
@@ -273,6 +272,7 @@ _020aeb28: .word data_027e0e58
 _020aeb2c: .word 0x00002aab
 _020aeb30: .word data_ov00_020e6098
 _020aeb34: .word data_ov00_020e60a8
+	arm_func_end _ZN13LinkStateRoll12OnStateEnterEv
 
 	.global _ZN13LinkStateRoll12OnStateLeaveEi
 	arm_func_start _ZN13LinkStateRoll12OnStateLeaveEi
@@ -339,8 +339,8 @@ _020aebf4:
 	bne _020aebf4
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateRoll12OnStateLeaveEi
 _020aec0c: .word data_027e0e58
+	arm_func_end _ZN13LinkStateRoll12OnStateLeaveEi
 
 	.global _ZN13LinkStateRoll8vfunc_20Ei
 	arm_func_start _ZN13LinkStateRoll8vfunc_20Ei
@@ -444,10 +444,10 @@ _020aed7c:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateRoll8vfunc_20Ei
 _020aed84: .word data_027e0fb8
 _020aed88: .word data_027e0618
 _020aed8c: .word 0x0000099a
+	arm_func_end _ZN13LinkStateRoll8vfunc_20Ei
 
 	.global _ZN13LinkStateRoll8vfunc_24Ei
 	arm_func_start _ZN13LinkStateRoll8vfunc_24Ei
