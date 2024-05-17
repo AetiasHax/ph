@@ -227,7 +227,6 @@ _ZN17LinkStateInteract14GetGrabActorIdEv: ; 0x020aa35c
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	nop
-	thumb_func_end _ZN17LinkStateInteract14GetGrabActorIdEv
 _020aa4f0: .word data_ov00_020e59b8
 _020aa4f4: .word 0x4c475242
 _020aa4f8: .word data_ov00_020e5940
@@ -245,6 +244,7 @@ _020aa524: .word data_ov00_020e5a20
 _020aa528: .word data_ov00_020e5a34
 _020aa52c: .word data_ov00_020e5928
 _020aa530: .word 0x4c505348
+	thumb_func_end _ZN17LinkStateInteract14GetGrabActorIdEv
 
 	.global _ZN17LinkStateInteract12OnStateEnterEv
 	arm_func_start _ZN17LinkStateInteract12OnStateEnterEv
@@ -419,7 +419,6 @@ _020aa778:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract12OnStateEnterEv
 _020aa78c: .word data_027e0fb8
 _020aa790: .word data_ov00_020e592c
 _020aa794: .word data_ov00_020e593c
@@ -429,6 +428,7 @@ _020aa7a0: .word data_ov00_020e595c
 _020aa7a4: .word data_ov00_020e594c
 _020aa7a8: .word data_027e0fe4
 _020aa7ac: .word data_ov00_020e5908
+	arm_func_end _ZN17LinkStateInteract12OnStateEnterEv
 
 	.global _ZN17LinkStateInteract12OnStateLeaveEi
 	arm_func_start _ZN17LinkStateInteract12OnStateLeaveEi
@@ -460,8 +460,8 @@ _020aa7d4:
 	str r1, [r0, #4]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract12OnStateLeaveEi
 _020aa814: .word data_027e0fb8
+	arm_func_end _ZN17LinkStateInteract12OnStateLeaveEi
 
 	.global _ZN17LinkStateInteract18func_ov00_020aa818Ev
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020aa818Ev
@@ -477,8 +477,8 @@ _ZN17LinkStateInteract18func_ov00_020aa818Ev: ; 0x020aa818
 	bl func_ov00_020ba458
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020aa818Ev
 _020aa840: .word gItemManager
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020aa818Ev
 
 	.global _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
@@ -714,9 +714,9 @@ _020aab34:
 	add sp, sp, #0x2c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 _020aabd0: .word data_02050f54
 _020aabd4: .word 0x00000155
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor
 
 	.global _ZN17LinkStateInteract8vfunc_20Ei
 	arm_func_start _ZN17LinkStateInteract8vfunc_20Ei
@@ -1262,7 +1262,6 @@ _020ab3b0:
 	add sp, sp, #0xc8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract8vfunc_20Ei
 _020ab3bc: .word gItemManager
 _020ab3c0: .word data_027e0d0c
 _020ab3c4: .word data_02050f54
@@ -1274,6 +1273,7 @@ _020ab3d8: .word gMapManager
 _020ab3dc: .word 0x00001ccd
 _020ab3e0: .word 0x00001333
 _020ab3e4: .word 0x000018e4
+	arm_func_end _ZN17LinkStateInteract8vfunc_20Ei
 
 	.global _ZN17LinkStateInteract16GetLinkStateRollEv
 	arm_func_start _ZN17LinkStateInteract16GetLinkStateRollEv
@@ -1282,8 +1282,8 @@ _ZN17LinkStateInteract16GetLinkStateRollEv: ; 0x020ab3e8
 	mov r0, #4
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract16GetLinkStateRollEv
 _020ab3f4: .word func_01fffcd8
+	arm_func_end _ZN17LinkStateInteract16GetLinkStateRollEv
 
 	.global _ZN17LinkStateInteract8vfunc_24Ei
 	arm_func_start _ZN17LinkStateInteract8vfunc_24Ei
@@ -1439,9 +1439,9 @@ _020ab604:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract8vfunc_34EP5Vec3p
 _020ab60c: .word data_02050f54
 _020ab610: .word 0x00000b33
+	arm_func_end _ZN17LinkStateInteract8vfunc_34EP5Vec3p
 
 	.global _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	arm_func_start _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
@@ -1473,8 +1473,8 @@ _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p: ; 0x020ab614
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 _020ab67c: .word data_027e0d0c
+	arm_func_end _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 
 	.global _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 	arm_func_start _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
@@ -1496,9 +1496,9 @@ _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p: ; 0x020ab680
 	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 _020ab6c0: .word 0x424f4d42
 _020ab6c4: .word 0x4b4f4b4f
+	arm_func_end _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p
 
 	.global _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
@@ -1545,13 +1545,13 @@ _020ab748:
 	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 _020ab758: .word 0x4b4f4b4f
 _020ab75c: .word 0x424f4d42
 _020ab760: .word 0x4452554d
 _020ab764: .word 0x54415255
 _020ab768: .word 0x53544e45
 _020ab76c: .word 0x54535542
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 
 	.global _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
@@ -1577,8 +1577,8 @@ _020ab7b0:
 	ldr r0, [r4, #0x12c]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
 _020ab7b8: .word data_027e0fb8
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab770EP5Vec3p
 
 	.global _ZN17LinkStateInteract18func_ov00_020ab7bcEP5Vec3pP5Actor
 	arm_func_start _ZN17LinkStateInteract18func_ov00_020ab7bcEP5Vec3pP5Actor
@@ -1856,12 +1856,12 @@ _020abb30:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab9b8Ejb
 _020abb64: .word 0x424b4559
 _020abb68: .word 0x464f5243
 _020abb6c: .word 0x0000028f
 _020abb70: .word data_02050f54
 _020abb74: .word data_ov00_020eec9c
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020ab9b8Ejb
 
 	.global _ZN17LinkStateInteract4GrabEP8ActorRef
 	arm_func_start _ZN17LinkStateInteract4GrabEP8ActorRef
@@ -2022,10 +2022,10 @@ _020abce0:
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN17LinkStateInteract18func_ov00_020abc78EP8ActorRef
 _020abd6c: .word data_027e0fb8
 _020abd70: .word data_027e0fe4
 _020abd74: .word data_ov00_020eec9c
+	arm_func_end _ZN17LinkStateInteract18func_ov00_020abc78EP8ActorRef
 
     .rodata
 	.global data_ov00_020dc528

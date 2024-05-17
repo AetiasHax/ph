@@ -17,8 +17,8 @@ _ZN10ActorRupee6CreateEv: ; 0x0213ae68
 	bl _ZN10ActorRupeeC2Ev
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee6CreateEv
 _0213ae94: .word data_027e0fe0
+	arm_func_end _ZN10ActorRupee6CreateEv
 
 	.global _ZN10ActorRupeeC2Ev
 	arm_func_start _ZN10ActorRupeeC2Ev
@@ -36,8 +36,8 @@ _ZN10ActorRupeeC2Ev: ; 0x0213ae98
 	strh r2, [r1, #0x5c]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupeeC2Ev
 _0213aec8: .word _ZTV10ActorRupee
+	arm_func_end _ZN10ActorRupeeC2Ev
 
 	.global _ZN10ActorRupee8vfunc_08Ev
 	arm_func_start _ZN10ActorRupee8vfunc_08Ev
@@ -191,10 +191,10 @@ _0213b0f4:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee8vfunc_08Ev
 _0213b100: .word data_ov14_021589b4
 _0213b104: .word 0x00000aa8
 _0213b108: .word data_027e0764
+	arm_func_end _ZN10ActorRupee8vfunc_08Ev
 
 	.global _ZN10ActorRupee8vfunc_60Ev
 	arm_func_start _ZN10ActorRupee8vfunc_60Ev
@@ -203,8 +203,8 @@ _ZN10ActorRupee8vfunc_60Ev: ; 0x0213b10c
 	ldr r0, [r0, #0x158]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee8vfunc_60Ev
 _0213b118: .word _ZN10ActorRupee18func_ov14_0213b70cEj
+	arm_func_end _ZN10ActorRupee8vfunc_60Ev
 
 	.global _ZN10ActorRupee8vfunc_64Ev
 	arm_func_start _ZN10ActorRupee8vfunc_64Ev
@@ -513,11 +513,11 @@ _0213b4fc:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee6UpdateEb
 _0213b50c: .word data_027e0fc8
 _0213b510: .word gItemManager
 _0213b514: .word data_ov00_020eec9c
 _0213b518: .word gMapManager
+	arm_func_end _ZN10ActorRupee6UpdateEb
 
 	.global _ZN10ActorRupee8vfunc_14Ej
 	arm_func_start _ZN10ActorRupee8vfunc_14Ej
@@ -636,10 +636,10 @@ _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb: ; 0x0213b5f4
 	add sp, sp, #0x34
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 _0213b698: .word data_ov14_02153e28
 _0213b69c: .word 0x000004cd
 _0213b6a0: .word data_ov00_020e9370
+	arm_func_end _ZN10ActorRupee18func_ov14_0213b5f4EjiP5Vec3pb
 
 	.global _ZN10ActorRupee18func_ov14_0213b6a4EjPv
 	arm_func_start _ZN10ActorRupee18func_ov14_0213b6a4EjPv
@@ -670,9 +670,9 @@ _0213b6e4:
 	str r0, [r4, #0x18]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10ActorRupee18func_ov14_0213b6a4EjPv
 _0213b704: .word data_ov14_021589b4
 _0213b708: .word 0x00000aa8
+	arm_func_end _ZN10ActorRupee18func_ov14_0213b6a4EjPv
 
 	.global _ZN10ActorRupee18func_ov14_0213b70cEj
 	arm_func_start _ZN10ActorRupee18func_ov14_0213b70cEj
@@ -752,7 +752,6 @@ func_ov14_0215517c: ; 0x0215517c
 	str r1, [r0, #0x24]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov14_0215517c
 _021551bc: .word _ZN10ActorRupee5gTypeE
 _021551c0: .word 0x52555059
 _021551c4: .word _ZN10ActorRupee6CreateEv
@@ -760,6 +759,7 @@ _021551c8: .word _ZN9ActorTypeD1Ev
 _021551cc: .word _ZN10ActorRupee9gResourceE
 _021551d0: .word 0x000003bb
 _021551d4: .word data_ov14_021589b4
+	arm_func_end func_ov14_0215517c
 
     .section .ctor, 4, 1, 4
 	.global data_ov14_0215591c

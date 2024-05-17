@@ -16,9 +16,9 @@ func_ov55_02198d00: ; 0x02198d00
 	bl func_ov00_020a9614
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02198d00
 _02198d24: .word gItemManager
 _02198d28: .word data_ov55_021998ac
+	arm_func_end func_ov55_02198d00
 
 	.global func_ov55_02198d2c
 	arm_func_start func_ov55_02198d2c
@@ -89,8 +89,8 @@ _02198de4:
 	bne _02198dc0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02198da4
 _02198df4: .word data_027e0fe4
+	arm_func_end func_ov55_02198da4
 
 	.global func_ov55_02198df8
 	arm_func_start func_ov55_02198df8
@@ -121,8 +121,8 @@ func_ov55_02198df8: ; 0x02198df8
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02198df8
 _02198e5c: .word data_ov55_021998ac
+	arm_func_end func_ov55_02198df8
 
 	.global func_ov55_02198e60
 	arm_func_start func_ov55_02198e60
@@ -199,10 +199,10 @@ _02198f40:
 	add sp, sp, #0x3c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02198e60
 _02198f6c: .word data_027e0fe8
 _02198f70: .word 0x424f4d42
 _02198f74: .word data_027e0fe4
+	arm_func_end func_ov55_02198e60
 
 	.global func_ov55_02198f78
 	arm_func_start func_ov55_02198f78
@@ -212,9 +212,9 @@ func_ov55_02198f78: ; 0x02198f78
 	mov r2, #1
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov55_02198f78
 _02198f88: .word _ZN13LinkStateBase18func_ov00_020a89bcEii
 _02198f8c: .word data_ov55_02199840
+	arm_func_end func_ov55_02198f78
 
 	.global func_ov55_02198f90
 	arm_func_start func_ov55_02198f90
@@ -251,8 +251,8 @@ func_ov55_02198f90: ; 0x02198f90
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02198f90
 _0219900c: .word data_027e0fb8
+	arm_func_end func_ov55_02198f90
 
 	.global func_ov55_02199010
 	arm_func_start func_ov55_02199010
@@ -261,8 +261,8 @@ func_ov55_02199010: ; 0x02199010
 	mov r0, #4
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov55_02199010
 _0219901c: .word func_01fffcec
+	arm_func_end func_ov55_02199010
 
 	.global func_ov55_02199020
 	arm_func_start func_ov55_02199020
@@ -368,9 +368,9 @@ _02199178:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02199020
 _021991a0: .word data_ov55_02199840
 _021991a4: .word data_027e0fb8
+	arm_func_end func_ov55_02199020
 
 	.global func_ov55_021991a8
 	arm_func_start func_ov55_021991a8
@@ -438,10 +438,10 @@ _02199244:
 	bl _ZN11ItemManager17EquipPreviousItemEv
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov55_021991b0
 _02199268: .word data_027e103c
 _0219926c: .word gItemManager
 _02199270: .word data_027e0f90
+	arm_func_end func_ov55_021991b0
 
 	.global func_ov55_02199274
 	arm_func_start func_ov55_02199274
@@ -534,12 +534,12 @@ _02199374:
 	add sp, sp, #0x60
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02199278
 _021993a4: .word gItemManager
 _021993a8: .word data_ov55_021997b0
 _021993ac: .word data_ov55_021997c4
 _021993b0: .word data_ov55_021997d8
 _021993b4: .word data_027e0fcc
+	arm_func_end func_ov55_02199278
 
 	.global func_ov55_021993b8
 	arm_func_start func_ov55_021993b8
@@ -707,7 +707,6 @@ _021994d4:
 	add sp, sp, #0x13c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov55_021993b8
 _02199638: .word data_027e0f64
 _0219963c: .word data_027e0c54
 _02199640: .word gMapManager
@@ -715,6 +714,7 @@ _02199644: .word 0x0000105b
 _02199648: .word 0x0000038e
 _0219964c: .word gAdventureFlags
 _02199650: .word data_027e103c
+	arm_func_end func_ov55_021993b8
 
 	.global func_ov55_02199654
 	arm_func_start func_ov55_02199654
@@ -805,7 +805,6 @@ _02199784:
 	add sp, sp, #0x68
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov55_02199654
 _02199794: .word gAdventureFlags
 _02199798: .word data_027e0f64
 _0219979c: .word 0x00000e39
@@ -813,6 +812,7 @@ _021997a0: .word data_ov55_02199890
 _021997a4: .word data_ov00_020eec9c
 _021997a8: .word 0x0000011b
 _021997ac: .word data_ov00_020eec68
+	arm_func_end func_ov55_02199654
 
 	.rodata
 	.global data_ov55_021997b0
@@ -851,10 +851,10 @@ func_ov55_021997ec: ; 0x021997ec
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov55_021997ec
 _02199810: .word data_ov55_021998ac
 _02199814: .word func_ov00_020a95a4
 _02199818: .word data_ov55_021998a0
+	arm_func_end func_ov55_021997ec
 
 	.section .ctor, 4, 1, 4
 	.global data_ov55_0219981c

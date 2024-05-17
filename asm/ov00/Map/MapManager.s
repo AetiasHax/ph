@@ -10,8 +10,8 @@ _ZN10MapManager18func_ov00_020820ecEPi: ; 0x020820ec
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020820ecEPi
 _020820f8: .word _ZN6Course18GetDungeonProgressEP14CourseProgress
+	arm_func_end _ZN10MapManager18func_ov00_020820ecEPi
 
 	.global _ZN10MapManager18func_ov00_020820fcEiii
 	arm_func_start _ZN10MapManager18func_ov00_020820fcEiii
@@ -20,8 +20,8 @@ _ZN10MapManager18func_ov00_020820fcEiii: ; 0x020820fc
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020820fcEiii
 _02082108: .word _ZN6Course18func_ov00_0207ca28Eiii
+	arm_func_end _ZN10MapManager18func_ov00_020820fcEiii
 
 	.global _ZN10MapManager18func_ov00_0208210cEii
 	arm_func_start _ZN10MapManager18func_ov00_0208210cEii
@@ -154,10 +154,10 @@ _02082190:
 	add sp, sp, #0x30
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208210cEii
 _02082300: .word data_027e0d38
 _02082304: .word data_027e0f70
 _02082308: .word data_027e0f7c
+	arm_func_end _ZN10MapManager18func_ov00_0208210cEii
 
 	.global _ZN10MapManager18func_ov00_0208230cEi
 	arm_func_start _ZN10MapManager18func_ov00_0208230cEi
@@ -214,8 +214,8 @@ _ZN10MapManager18func_ov00_020823a4Ei: ; 0x020823a4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020823a4Ei
 _020823b0: .word _ZN7MapBase18func_ov00_0207de68Ei
+	arm_func_end _ZN10MapManager18func_ov00_020823a4Ei
 
 	.global _ZN10MapManager18func_ov00_020823b4Ev
 	arm_func_start _ZN10MapManager18func_ov00_020823b4Ev
@@ -224,8 +224,8 @@ _ZN10MapManager18func_ov00_020823b4Ev: ; 0x020823b4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020823b4Ev
 _020823c0: .word _ZN7MapBase18func_ov00_0207de88Ev
+	arm_func_end _ZN10MapManager18func_ov00_020823b4Ev
 
 	.global _ZN10MapManager18func_ov00_020823c4EPii
 	arm_func_start _ZN10MapManager18func_ov00_020823c4EPii
@@ -234,8 +234,8 @@ _ZN10MapManager18func_ov00_020823c4EPii: ; 0x020823c4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020823c4EPii
 _020823d0: .word _ZN7MapBase18func_ov00_0207e08cEii
+	arm_func_end _ZN10MapManager18func_ov00_020823c4EPii
 
 	.global _ZN10MapManager18func_ov00_020823d4Ei
 	arm_func_start _ZN10MapManager18func_ov00_020823d4Ei
@@ -244,8 +244,8 @@ _ZN10MapManager18func_ov00_020823d4Ei: ; 0x020823d4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020823d4Ei
 _020823e0: .word _ZN7MapBase18func_ov00_0207e0f0Ei
+	arm_func_end _ZN10MapManager18func_ov00_020823d4Ei
 
 	.global _ZN10MapManager18func_ov00_020823e4Ei
 	arm_func_start _ZN10MapManager18func_ov00_020823e4Ei
@@ -254,8 +254,8 @@ _ZN10MapManager18func_ov00_020823e4Ei: ; 0x020823e4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020823e4Ei
 _020823f0: .word _ZN7MapBase18func_ov00_0207e28cEi
+	arm_func_end _ZN10MapManager18func_ov00_020823e4Ei
 
 	.global _ZN10MapManager16MapData_vfunc_b4Ev
 	arm_func_start _ZN10MapManager16MapData_vfunc_b4Ev
@@ -399,8 +399,8 @@ _ZN10MapManager18func_ov00_02082538Ev: ; 0x02082538
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082538Ev
 _02082590: .word data_027e0f94
+	arm_func_end _ZN10MapManager18func_ov00_02082538Ev
 
 	.global _ZN10MapManager18func_ov00_02082594Ev
 	arm_func_start _ZN10MapManager18func_ov00_02082594Ev
@@ -410,9 +410,9 @@ _ZN10MapManager18func_ov00_02082594Ev: ; 0x02082594
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082594Ev
 _020825a4: .word data_027e0f68
 _020825a8: .word func_ov00_0208d620
+	arm_func_end _ZN10MapManager18func_ov00_02082594Ev
 
 	.global _ZN10MapManager18func_ov00_020825acEv
 	arm_func_start _ZN10MapManager18func_ov00_020825acEv
@@ -422,9 +422,9 @@ _ZN10MapManager18func_ov00_020825acEv: ; 0x020825ac
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020825acEv
 _020825bc: .word data_027e0f68
 _020825c0: .word func_ov00_0208d680
+	arm_func_end _ZN10MapManager18func_ov00_020825acEv
 
 	.global _ZN10MapManager17GetCourseFilePathEPcS0_
 	arm_func_start _ZN10MapManager17GetCourseFilePathEPcS0_
@@ -436,9 +436,9 @@ _ZN10MapManager17GetCourseFilePathEPcS0_: ; 0x020825c4
 	mov r2, r3
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager17GetCourseFilePathEPcS0_
 _020825dc: .word func_0200c8d0
 _020825e0: .word data_ov00_020e2528
+	arm_func_end _ZN10MapManager17GetCourseFilePathEPcS0_
 
 	.global _ZN10MapManager18func_ov00_020825e4Eii
 	arm_func_start _ZN10MapManager18func_ov00_020825e4Eii
@@ -455,8 +455,8 @@ _ZN10MapManager18func_ov00_020825e4Eii: ; 0x020825e4
 	bl _ZN10MapManager17GetCourseFilePathEPcS0_
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020825e4Eii
 _02082610: .word data_027e0f7c
+	arm_func_end _ZN10MapManager18func_ov00_020825e4Eii
 
 	.global _ZN10MapManager18func_ov00_02082614Eii
 	arm_func_start _ZN10MapManager18func_ov00_02082614Eii
@@ -490,8 +490,8 @@ _ZN10MapManager18func_ov00_02082650Eiii: ; 0x02082650
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082650Eiii
 _0208265c: .word _ZN7MapBase18func_ov00_0208005cEiii
+	arm_func_end _ZN10MapManager18func_ov00_02082650Eiii
 
 	.global _ZN10MapManager18func_ov00_02082660Eii
 	arm_func_start _ZN10MapManager18func_ov00_02082660Eii
@@ -500,8 +500,8 @@ _ZN10MapManager18func_ov00_02082660Eii: ; 0x02082660
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082660Eii
 _0208266c: .word _ZN7MapBase18func_ov00_0208007cEii
+	arm_func_end _ZN10MapManager18func_ov00_02082660Eii
 
 	.global _ZN10MapManager18func_ov00_02082670Eii
 	arm_func_start _ZN10MapManager18func_ov00_02082670Eii
@@ -510,8 +510,8 @@ _ZN10MapManager18func_ov00_02082670Eii: ; 0x02082670
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082670Eii
 _0208267c: .word _ZN7MapBase18func_ov00_0208006cEii
+	arm_func_end _ZN10MapManager18func_ov00_02082670Eii
 
 	.global _ZN10MapManager18func_ov00_02082680Eii
 	arm_func_start _ZN10MapManager18func_ov00_02082680Eii
@@ -615,8 +615,8 @@ _020827b4:
 	str r0, [r6, #4]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager9CreateMapEiii
 _020827bc: .word data_027e0ce0
+	arm_func_end _ZN10MapManager9CreateMapEiii
 
 	.global _ZN10MapManager10DestroyMapEv
 	arm_func_start _ZN10MapManager10DestroyMapEv
@@ -697,10 +697,10 @@ _02082890:
 	bl func_ov00_020d72b8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082808Ev
 _020828b4: .word data_027e0d38
 _020828b8: .word data_ov15_02190458
 _020828bc: .word data_ov00_020eec68
+	arm_func_end _ZN10MapManager18func_ov00_02082808Ev
 
 	.global _ZN10MapManager16MapData_vfunc_7cEv
 	arm_func_start _ZN10MapManager16MapData_vfunc_7cEv
@@ -733,8 +733,8 @@ _ZN10MapManager18func_ov00_020828f8EPi: ; 0x020828f8
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020828f8EPi
 _02082904: .word _ZN7MapBase18func_ov00_0207f38cEi
+	arm_func_end _ZN10MapManager18func_ov00_020828f8EPi
 
 	.global _ZN10MapManager20GetCourseData_Unk_b0Ev
 	arm_func_start _ZN10MapManager20GetCourseData_Unk_b0Ev
@@ -868,8 +868,8 @@ _02082ac0:
 	add sp, sp, #0x34
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082914Ei
 _02082ac8: .word data_027e0d38
+	arm_func_end _ZN10MapManager18func_ov00_02082914Ei
 
 	.global _ZN10MapManager18func_ov00_02082accEv
 	arm_func_start _ZN10MapManager18func_ov00_02082accEv
@@ -878,8 +878,8 @@ _ZN10MapManager18func_ov00_02082accEv: ; 0x02082acc
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082accEv
 _02082ad8: .word _ZN6Course18func_ov00_0207d7bcEv
+	arm_func_end _ZN10MapManager18func_ov00_02082accEv
 
 	.global _ZN10MapManager18func_ov00_02082adcEv
 	arm_func_start _ZN10MapManager18func_ov00_02082adcEv
@@ -889,9 +889,9 @@ _ZN10MapManager18func_ov00_02082adcEv: ; 0x02082adc
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082adcEv
 _02082aec: .word data_027e0f70
 _02082af0: .word func_ov00_02096418
+	arm_func_end _ZN10MapManager18func_ov00_02082adcEv
 
 	.global _ZN10MapManager18func_ov00_02082af4Ev
 	arm_func_start _ZN10MapManager18func_ov00_02082af4Ev
@@ -914,8 +914,8 @@ _ZN10MapManager18func_ov00_02082af4Ev: ; 0x02082af4
 	strb r0, [r4, #0xb]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082af4Ev
 _02082b38: .word data_027e0f68
+	arm_func_end _ZN10MapManager18func_ov00_02082af4Ev
 
 	.global _ZN10MapManager18func_ov00_02082b3cEi
 	arm_func_start _ZN10MapManager18func_ov00_02082b3cEi
@@ -1030,7 +1030,6 @@ _02082cd8:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082b3cEi
 _02082ce0: .word data_027e0d38
 _02082ce4: .word gAdventureFlags
 _02082ce8: .word data_027e0f64
@@ -1041,6 +1040,7 @@ _02082cf8: .word data_027e0f78
 _02082cfc: .word data_027e103c
 _02082d00: .word data_027e0f90
 _02082d04: .word data_027e0c68
+	arm_func_end _ZN10MapManager18func_ov00_02082b3cEi
 
 	.global _ZN10MapManager18func_ov00_02082d08Ev
 	arm_func_start _ZN10MapManager18func_ov00_02082d08Ev
@@ -1097,8 +1097,8 @@ _ZN10MapManager18func_ov00_02082d74Ei: ; 0x02082d74
 	mov r0, r1
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082d74Ei
 _02082d80: .word func_ov00_02078bc4
+	arm_func_end _ZN10MapManager18func_ov00_02082d74Ei
 
 	.global _ZN10MapManager18func_ov00_02082d84Ev
 	arm_func_start _ZN10MapManager18func_ov00_02082d84Ev
@@ -1303,8 +1303,8 @@ _02083050:
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02082e1cEPiS0_
 _02083068: .word data_027e0d38
+	arm_func_end _ZN10MapManager18func_ov00_02082e1cEPiS0_
 
 	.global _ZN10MapManager18func_ov00_0208306cEv
 	arm_func_start _ZN10MapManager18func_ov00_0208306cEv
@@ -1370,9 +1370,9 @@ _02083138:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208306cEv
 _02083154: .word data_027e0f94
 _02083158: .word data_027e0d38
+	arm_func_end _ZN10MapManager18func_ov00_0208306cEv
 
 	.global _ZN10MapManager18func_ov00_0208315cEPiS0_
 	arm_func_start _ZN10MapManager18func_ov00_0208315cEPiS0_
@@ -1436,9 +1436,9 @@ _02083220:
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208315cEPiS0_
 _0208323c: .word data_027e0f94
 _02083240: .word data_027e0d38
+	arm_func_end _ZN10MapManager18func_ov00_0208315cEPiS0_
 
 	.global _ZN10MapManager18func_ov00_02083244EjPiS0_S0_
 	arm_func_start _ZN10MapManager18func_ov00_02083244EjPiS0_S0_
@@ -1463,9 +1463,9 @@ _ZN10MapManager18func_ov00_02083244EjPiS0_S0_: ; 0x02083244
 	str r1, [r0]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083244EjPiS0_S0_
 _02083290: .word data_ov00_020e24e8
 _02083294: .word data_ov00_020e24ec
+	arm_func_end _ZN10MapManager18func_ov00_02083244EjPiS0_S0_
 
 	.global _ZN10MapManager18func_ov00_02083298EjPiS0_S0_
 	arm_func_start _ZN10MapManager18func_ov00_02083298EjPiS0_S0_
@@ -1496,11 +1496,11 @@ _ZN10MapManager18func_ov00_02083298EjPiS0_S0_: ; 0x02083298
 	str r1, [r0]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083298EjPiS0_S0_
 _020832fc: .word data_ov00_020e24e8
 _02083300: .word data_ov00_020e24c8
 _02083304: .word data_ov00_020e24ec
 _02083308: .word data_ov00_020e24cc
+	arm_func_end _ZN10MapManager18func_ov00_02083298EjPiS0_S0_
 
 	.global _ZN10MapManager21GetCourseData_Unk_25cEv
 	arm_func_start _ZN10MapManager21GetCourseData_Unk_25cEv
@@ -1517,8 +1517,8 @@ _ZN10MapManager18func_ov00_02083318Ei: ; 0x02083318
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083318Ei
 _02083324: .word _ZN6Course15IsMapInMainGridEj
+	arm_func_end _ZN10MapManager18func_ov00_02083318Ei
 
 	.global _ZN10MapManager18func_ov00_02083328Ev
 	arm_func_start _ZN10MapManager18func_ov00_02083328Ev
@@ -1724,8 +1724,8 @@ _ZN10MapManager18func_ov00_0208346cEP4AABB: ; 0x0208346c
 	str r0, [r4, #4]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208346cEP4AABB
 _020834b8: .word 0x00001333
+	arm_func_end _ZN10MapManager18func_ov00_0208346cEP4AABB
 
 	.global _ZN10MapManager18func_ov00_020834bcEP5Vec3pii
 	arm_func_start _ZN10MapManager18func_ov00_020834bcEP5Vec3pii
@@ -1785,8 +1785,8 @@ _ZN10MapManager18func_ov00_02083560EiPS_j: ; 0x02083560
 	ldr r1, [r1]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083560EiPS_j
 _0208356c: .word _ZN6Course14FindMapGridPosEP5Vec2bPS_j
+	arm_func_end _ZN10MapManager18func_ov00_02083560EiPS_j
 
 	.global _ZN10MapManager18func_ov00_02083570Eii
 	arm_func_start _ZN10MapManager18func_ov00_02083570Eii
@@ -1818,8 +1818,8 @@ _ZN10MapManager18func_ov00_020835a4Ev: ; 0x020835a4
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020835a4Ev
 _020835b0: .word _ZN6Course13Get_Unk_c8_00Ev
+	arm_func_end _ZN10MapManager18func_ov00_020835a4Ev
 
 	.global _ZN10MapManager18func_ov00_020835b4Ev
 	arm_func_start _ZN10MapManager18func_ov00_020835b4Ev
@@ -1828,8 +1828,8 @@ _ZN10MapManager18func_ov00_020835b4Ev: ; 0x020835b4
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020835b4Ev
 _020835c0: .word _ZN6Course13Get_Unk_c8_04Ev
+	arm_func_end _ZN10MapManager18func_ov00_020835b4Ev
 
 	.global _ZN10MapManager18func_ov00_020835c4Eii
 	arm_func_start _ZN10MapManager18func_ov00_020835c4Eii
@@ -1851,8 +1851,8 @@ _ZN10MapManager18func_ov00_020835e4EiPiS0_: ; 0x020835e4
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020835e4EiPiS0_
 _020835f0: .word _ZN6Course18func_ov00_0207caa8EiPiPc
+	arm_func_end _ZN10MapManager18func_ov00_020835e4EiPiS0_
 
 	.global _ZN10MapManager18func_ov00_020835f4Ei
 	arm_func_start _ZN10MapManager18func_ov00_020835f4Ei
@@ -1861,8 +1861,8 @@ _ZN10MapManager18func_ov00_020835f4Ei: ; 0x020835f4
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020835f4Ei
 _02083600: .word _ZN6Course18func_ov00_0207cb30Ei
+	arm_func_end _ZN10MapManager18func_ov00_020835f4Ei
 
 	.global _ZN10MapManager18func_ov00_02083604Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083604Ei
@@ -1871,8 +1871,8 @@ _ZN10MapManager18func_ov00_02083604Ei: ; 0x02083604
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083604Ei
 _02083610: .word _ZN6Course18func_ov00_0207cbe8Ei
+	arm_func_end _ZN10MapManager18func_ov00_02083604Ei
 
 	.global _ZN10MapManager18func_ov00_02083614Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083614Ei
@@ -1881,8 +1881,8 @@ _ZN10MapManager18func_ov00_02083614Ei: ; 0x02083614
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083614Ei
 _02083620: .word _ZN6Course18func_ov00_0207cc24Ei
+	arm_func_end _ZN10MapManager18func_ov00_02083614Ei
 
 	.global _ZN10MapManager14GetEntrancePosEP5Vec3pi
 	arm_func_start _ZN10MapManager14GetEntrancePosEP5Vec3pi
@@ -1939,8 +1939,8 @@ _ZN10MapManager18func_ov00_020836bcEjPi: ; 0x020836bc
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020836bcEjPi
 _020836c8: .word _ZN7MapBase21GetTriggerBoundingBoxEiP4AABB
+	arm_func_end _ZN10MapManager18func_ov00_020836bcEjPi
 
 	.global _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 	arm_func_start _ZN10MapManager18func_ov00_020836ccEjP4AABBj
@@ -1949,8 +1949,8 @@ _ZN10MapManager18func_ov00_020836ccEjP4AABBj: ; 0x020836cc
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 _020836d8: .word _ZN7MapBase23GetTriggerBoundingBoxesEiP4AABBi
+	arm_func_end _ZN10MapManager18func_ov00_020836ccEjP4AABBj
 
 	.global _ZN10MapManager18func_ov00_020836dcEii
 	arm_func_start _ZN10MapManager18func_ov00_020836dcEii
@@ -1993,9 +1993,9 @@ _02083750:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020836dcEii
 _02083768: .word data_027e0f94
 _0208376c: .word data_027e0fe4
+	arm_func_end _ZN10MapManager18func_ov00_020836dcEii
 
 	.global _ZN10MapManager18func_ov00_02083770Eji
 	arm_func_start _ZN10MapManager18func_ov00_02083770Eji
@@ -2004,8 +2004,8 @@ _ZN10MapManager18func_ov00_02083770Eji: ; 0x02083770
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083770Eji
 _0208377c: .word _ZN7MapBase23IsTriggerTypeOverlappedEiP5Vec3p
+	arm_func_end _ZN10MapManager18func_ov00_02083770Eji
 
 	.global _ZN10MapManager18func_ov00_02083780Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083780Ei
@@ -2014,8 +2014,8 @@ _ZN10MapManager18func_ov00_02083780Ei: ; 0x02083780
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083780Ei
 _0208378c: .word _ZN7MapBase21GetOverlappingTriggerEP5Vec3p
+	arm_func_end _ZN10MapManager18func_ov00_02083780Ei
 
 	.global _ZN10MapManager18func_ov00_02083790Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083790Ei
@@ -2062,11 +2062,11 @@ _0208381c:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083790Ei
 _02083830: .word data_027e0f64
 _02083834: .word data_027e0d38
 _02083838: .word data_027e0d3c
 _0208383c: .word data_027e0fe4
+	arm_func_end _ZN10MapManager18func_ov00_02083790Ei
 
 	.global _ZN10MapManager18func_ov00_02083840Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083840Ei
@@ -2104,10 +2104,10 @@ _020838ac:
 	bl _ZN7MapBase22TriggerOfType_vfunc_10Ei
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083840Ei
 _020838bc: .word data_027e0f64
 _020838c0: .word data_027e0d3c
 _020838c4: .word data_027e0fe4
+	arm_func_end _ZN10MapManager18func_ov00_02083840Ei
 
 	.global _ZN10MapManager18func_ov00_020838c8Ei
 	arm_func_start _ZN10MapManager18func_ov00_020838c8Ei
@@ -2116,8 +2116,8 @@ _ZN10MapManager18func_ov00_020838c8Ei: ; 0x020838c8
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020838c8Ei
 _020838d4: .word _ZN7MapBase10AddTriggerEi
+	arm_func_end _ZN10MapManager18func_ov00_020838c8Ei
 
 	.global _ZN10MapManager18func_ov00_020838d8Ei
 	arm_func_start _ZN10MapManager18func_ov00_020838d8Ei
@@ -2126,8 +2126,8 @@ _ZN10MapManager18func_ov00_020838d8Ei: ; 0x020838d8
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020838d8Ei
 _020838e4: .word _ZN7MapBase18func_ov00_0207ff88Ei
+	arm_func_end _ZN10MapManager18func_ov00_020838d8Ei
 
 	.global _ZN10MapManager18func_ov00_020838e8EjPi
 	arm_func_start _ZN10MapManager18func_ov00_020838e8EjPi
@@ -2136,8 +2136,8 @@ _ZN10MapManager18func_ov00_020838e8EjPi: ; 0x020838e8
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020838e8EjPi
 _020838f4: .word _ZN7MapBase8FindExitEiP4Exit
+	arm_func_end _ZN10MapManager18func_ov00_020838e8EjPi
 
 	.global _ZN10MapManager18func_ov00_020838f8EPi
 	arm_func_start _ZN10MapManager18func_ov00_020838f8EPi
@@ -2146,8 +2146,8 @@ _ZN10MapManager18func_ov00_020838f8EPi: ; 0x020838f8
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020838f8EPi
 _02083904: .word _ZN7MapBase18func_ov00_02080140EP4Exit
+	arm_func_end _ZN10MapManager18func_ov00_020838f8EPi
 
 	.global _ZN10MapManager18func_ov00_02083908EcPi
 	arm_func_start _ZN10MapManager18func_ov00_02083908EcPi
@@ -2156,8 +2156,8 @@ _ZN10MapManager18func_ov00_02083908EcPi: ; 0x02083908
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083908EcPi
 _02083914: .word _ZN7MapBase19FindViewpoint_Unk_4EcP15CameraViewpoint
+	arm_func_end _ZN10MapManager18func_ov00_02083908EcPi
 
 	.global _ZN10MapManager18func_ov00_02083918EiPi
 	arm_func_start _ZN10MapManager18func_ov00_02083918EiPi
@@ -2166,8 +2166,8 @@ _ZN10MapManager18func_ov00_02083918EiPi: ; 0x02083918
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083918EiPi
 _02083924: .word _ZN7MapBase19FindViewpoint_Unk_0EiP15CameraViewpoint
+	arm_func_end _ZN10MapManager18func_ov00_02083918EiPi
 
 	.global _ZN10MapManager18func_ov00_02083928EPci
 	arm_func_start _ZN10MapManager18func_ov00_02083928EPci
@@ -2176,8 +2176,8 @@ _ZN10MapManager18func_ov00_02083928EPci: ; 0x02083928
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083928EPci
 _02083934: .word _ZN7MapBase19GetCurrentViewpointEP15CameraViewpointi
+	arm_func_end _ZN10MapManager18func_ov00_02083928EPci
 
 	.global _ZN10MapManager18func_ov00_02083938Ei
 	arm_func_start _ZN10MapManager18func_ov00_02083938Ei
@@ -2186,8 +2186,8 @@ _ZN10MapManager18func_ov00_02083938Ei: ; 0x02083938
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083938Ei
 _02083944: .word _ZN7MapBase26GetCurrentViewpoint_Unk_00Ei
+	arm_func_end _ZN10MapManager18func_ov00_02083938Ei
 
 	.global _ZN10MapManager18Set_MapData_Unk_16Eci
 	arm_func_start _ZN10MapManager18Set_MapData_Unk_16Eci
@@ -2205,8 +2205,8 @@ _ZN10MapManager18func_ov00_02083958Ei: ; 0x02083958
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083958Ei
 _02083964: .word _ZN7MapBase18func_ov00_0207f924Ei
+	arm_func_end _ZN10MapManager18func_ov00_02083958Ei
 
 	.global _ZN10MapManager18func_ov00_02083968EjPc
 	arm_func_start _ZN10MapManager18func_ov00_02083968EjPc
@@ -2215,8 +2215,8 @@ _ZN10MapManager18func_ov00_02083968EjPc: ; 0x02083968
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083968EjPc
 _02083974: .word _ZN7MapBase18func_ov00_02080824Eii
+	arm_func_end _ZN10MapManager18func_ov00_02083968EjPc
 
 	.global _ZN10MapManager18func_ov00_02083978EiP5Vec3p
 	arm_func_start _ZN10MapManager18func_ov00_02083978EiP5Vec3p
@@ -2245,8 +2245,8 @@ _ZN10MapManager18func_ov00_020839b4Ei: ; 0x020839b4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020839b4Ei
 _020839c0: .word _ZN7MapBase10AddUnk_130Ei
+	arm_func_end _ZN10MapManager18func_ov00_020839b4Ei
 
 	.global _ZN10MapManager18func_ov00_020839c4Ei
 	arm_func_start _ZN10MapManager18func_ov00_020839c4Ei
@@ -2255,8 +2255,8 @@ _ZN10MapManager18func_ov00_020839c4Ei: ; 0x020839c4
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020839c4Ei
 _020839d0: .word _ZN7MapBase18func_ov00_020809b8Ei
+	arm_func_end _ZN10MapManager18func_ov00_020839c4Ei
 
 	.global _ZN10MapManager18func_ov00_020839d4Ev
 	arm_func_start _ZN10MapManager18func_ov00_020839d4Ev
@@ -2721,8 +2721,8 @@ _ZN10MapManager18func_ov00_02083f44EP5Vec3p: ; 0x02083f44
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 _02083f7c: .word data_ov00_020e24a4
+	arm_func_end _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 
 	.global _ZN10MapManager16MapData_vfunc_6cEv
 	arm_func_start _ZN10MapManager16MapData_vfunc_6cEv
@@ -2777,9 +2777,9 @@ _ZN10MapManager18func_ov00_02083fb0EiPS_i: ; 0x02083fb0
 	bl func_ov00_02093a1c
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02083fb0EiPS_i
 _0208401c: .word 0x0000ffff
 _02084020: .word data_027e0f6c
+	arm_func_end _ZN10MapManager18func_ov00_02083fb0EiPS_i
 
 	.global _ZN10MapManager18func_ov00_02084024EiP4AABB
 	arm_func_start _ZN10MapManager18func_ov00_02084024EiP4AABB
@@ -2894,8 +2894,8 @@ _ZN10MapManager18func_ov00_0208412cEv: ; 0x0208412c
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208412cEv
 _02084138: .word _ZN7MapBase18func_ov00_0207f934Ev
+	arm_func_end _ZN10MapManager18func_ov00_0208412cEv
 
 	.global _ZN10MapManager18func_ov00_0208413cEi
 	arm_func_start _ZN10MapManager18func_ov00_0208413cEi
@@ -2904,8 +2904,8 @@ _ZN10MapManager18func_ov00_0208413cEi: ; 0x0208413c
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208413cEi
 _02084148: .word _ZN7MapBase18func_ov00_0207f948Ei
+	arm_func_end _ZN10MapManager18func_ov00_0208413cEi
 
 	.global _ZN10MapManager16MapData_vfunc_58Ev
 	arm_func_start _ZN10MapManager16MapData_vfunc_58Ev
@@ -3358,8 +3358,8 @@ _02084734:
 	mov r0, r2
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084700Ev
 _0208473c: .word data_027e0fe4
+	arm_func_end _ZN10MapManager18func_ov00_02084700Ev
 
 	.global _ZN10MapManager18func_ov00_02084740Ev
 	arm_func_start _ZN10MapManager18func_ov00_02084740Ev
@@ -3404,10 +3404,10 @@ _020847b4:
 	add sp, sp, #0x1bc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084740Ev
 _020847d4: .word data_027e0d38
 _020847d8: .word data_027e0f94
 _020847dc: .word data_ov00_020d88f0
+	arm_func_end _ZN10MapManager18func_ov00_02084740Ev
 
 	.global _ZN10MapManager18func_ov00_020847e0Ev
 	arm_func_start _ZN10MapManager18func_ov00_020847e0Ev
@@ -3525,8 +3525,8 @@ _ZN10MapManager18func_ov00_02084924Ej: ; 0x02084924
 	ldr r0, [r0, #4]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084924Ej
 _02084930: .word _ZN7MapBase18func_ov00_0208008cEj
+	arm_func_end _ZN10MapManager18func_ov00_02084924Ej
 
 	.global _ZN10MapManager18func_ov00_02084934Ev
 	arm_func_start _ZN10MapManager18func_ov00_02084934Ev
@@ -3634,8 +3634,8 @@ _02084a44:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020849f8Ei
 _02084a4c: .word data_027e0d38
+	arm_func_end _ZN10MapManager18func_ov00_020849f8Ei
 
 	.global _ZN10MapManager18func_ov00_02084a50Ev
 	arm_func_start _ZN10MapManager18func_ov00_02084a50Ev
@@ -3673,9 +3673,9 @@ _ZN10MapManager8SpawnNPCEP5Vec3pii: ; 0x02084a5c
 	add sp, sp, #0x30
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager8SpawnNPCEP5Vec3pii
 _02084abc: .word data_027e0fe8
 _02084ac0: .word 0x45564943
+	arm_func_end _ZN10MapManager8SpawnNPCEP5Vec3pii
 
 	.global _ZN10MapManager18func_ov00_02084ac4Ej
 	arm_func_start _ZN10MapManager18func_ov00_02084ac4Ej
@@ -3696,9 +3696,9 @@ _ZN10MapManager18func_ov00_02084ac4Ej: ; 0x02084ac4
 	moveq r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084ac4Ej
 _02084b00: .word data_027e0fe4
 _02084b04: .word 0x45564943
+	arm_func_end _ZN10MapManager18func_ov00_02084ac4Ej
 
 	.global _ZN10MapManager10SetNumKeysEi
 	arm_func_start _ZN10MapManager10SetNumKeysEi
@@ -3834,8 +3834,8 @@ _ZN10MapManager18func_ov00_02084c5cEii: ; 0x02084c5c
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084c5cEii
 _02084c68: .word _ZN6Course15SetMapDataFlag1Eib
+	arm_func_end _ZN10MapManager18func_ov00_02084c5cEii
 
 	.global _ZN10MapManager18func_ov00_02084c6cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c6cEi
@@ -3844,8 +3844,8 @@ _ZN10MapManager18func_ov00_02084c6cEi: ; 0x02084c6c
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084c6cEi
 _02084c78: .word _ZN6Course15GetMapDataFlag1Ei
+	arm_func_end _ZN10MapManager18func_ov00_02084c6cEi
 
 	.global _ZN10MapManager18func_ov00_02084c7cEi
 	arm_func_start _ZN10MapManager18func_ov00_02084c7cEi
@@ -4029,7 +4029,6 @@ _02084de4:
 	add sp, sp, #0x38
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084d4cEiiP5Vec3p
 _02084ea0: .word data_027e0f64
 _02084ea4: .word data_ov00_020ec964
 _02084ea8: .word data_ov00_020e2510
@@ -4037,6 +4036,7 @@ _02084eac: .word data_ov00_020e24a4
 _02084eb0: .word _ZN7MapBase18func_ov00_0207e968Ev
 _02084eb4: .word data_ov00_020ec9c8
 _02084eb8: .word 0x0000019a
+	arm_func_end _ZN10MapManager18func_ov00_02084d4cEiiP5Vec3p
 
 	.global _ZN10MapManager18func_ov00_02084ebcEi
 	arm_func_start _ZN10MapManager18func_ov00_02084ebcEi
@@ -4198,9 +4198,9 @@ _020850f4:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02084ebcEi
 _02085100: .word 0x0000ffff
 _02085104: .word data_027e0f6c
+	arm_func_end _ZN10MapManager18func_ov00_02084ebcEi
 
 	.global _ZN10MapManager18func_ov00_02085108EPi
 	arm_func_start _ZN10MapManager18func_ov00_02085108EPi
@@ -4302,9 +4302,9 @@ _02085268:
 	add sp, sp, #0x2c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02085108EPi
 _02085274: .word data_027e0f64
 _02085278: .word gMapManager
+	arm_func_end _ZN10MapManager18func_ov00_02085108EPi
 
 	.global _ZN10MapManager18func_ov00_0208527cEv
 	arm_func_start _ZN10MapManager18func_ov00_0208527cEv
@@ -4409,9 +4409,9 @@ _020853e8:
 	add sp, sp, #0x2c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208527cEv
 _020853f4: .word data_027e0f64
 _020853f8: .word gMapManager
+	arm_func_end _ZN10MapManager18func_ov00_0208527cEv
 
 	.global _ZN10MapManager18func_ov00_020853fcEv
 	arm_func_start _ZN10MapManager18func_ov00_020853fcEv
@@ -4522,9 +4522,9 @@ _02085580:
 	add sp, sp, #0x2c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020853fcEv
 _0208558c: .word data_027e0f64
 _02085590: .word gMapManager
+	arm_func_end _ZN10MapManager18func_ov00_020853fcEv
 
 	.global _ZN10MapManager18func_ov00_02085594Ev
 	arm_func_start _ZN10MapManager18func_ov00_02085594Ev
@@ -4712,9 +4712,9 @@ _02085828:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02085594Ev
 _02085834: .word 0x0000ffff
 _02085838: .word data_027e0f6c
+	arm_func_end _ZN10MapManager18func_ov00_02085594Ev
 
 	.global _ZN10MapManager18func_ov00_0208583cEiP5Vec3pi
 	arm_func_start _ZN10MapManager18func_ov00_0208583cEiP5Vec3pi
@@ -4748,8 +4748,8 @@ _ZN10MapManager18func_ov00_0208583cEiP5Vec3pi: ; 0x0208583c
 	blx r2
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_0208583cEiP5Vec3pi
 _020858ac: .word data_027e077c
+	arm_func_end _ZN10MapManager18func_ov00_0208583cEiP5Vec3pi
 
 	.global _ZN10MapManager18func_ov00_020858b0Ev
 	arm_func_start _ZN10MapManager18func_ov00_020858b0Ev
@@ -4857,9 +4857,9 @@ _02085a20:
 	add sp, sp, #0x1c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_020858b0Ev
 _02085a2c: .word data_027e0f64
 _02085a30: .word data_027e0f94
+	arm_func_end _ZN10MapManager18func_ov00_020858b0Ev
 
 	.global _ZN10MapManager18func_ov00_02085a34Eii
 	arm_func_start _ZN10MapManager18func_ov00_02085a34Eii
@@ -5274,9 +5274,9 @@ _02085fb8:
 	add sp, sp, #0xfc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02085c60Eiiii
 _0208603c: .word data_027e0d3c
 _02086040: .word 0x0000ffff
+	arm_func_end _ZN10MapManager18func_ov00_02085c60Eiiii
 
 	.global _ZN10MapManager18func_ov00_02086044Eiii
 	arm_func_start _ZN10MapManager18func_ov00_02086044Eiii
@@ -5431,8 +5431,8 @@ _02086274:
 	add sp, sp, #0xb0
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN10MapManager18func_ov00_02086044Eiii
 _02086280: .word gMapManager
+	arm_func_end _ZN10MapManager18func_ov00_02086044Eiii
 
 	.global _ZN10MapManager18func_ov00_02086284EPiP5Vec3pS2_itS2_S2_
 	arm_func_start _ZN10MapManager18func_ov00_02086284EPiP5Vec3pS2_itS2_S2_
@@ -6545,7 +6545,6 @@ func_ov00_020df4cc: ; 0x020df4cc
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov00_020df4cc
 _020df5f0: .word 0x00005fff
 _020df5f4: .word data_ov00_020e24a4
 _020df5f8: .word data_ov00_020e24c8
@@ -6566,6 +6565,7 @@ _020df630: .word data_ov00_020e24f8
 _020df634: .word data_ov00_020ec9ac
 _020df638: .word data_ov00_020e2500
 _020df63c: .word data_ov00_020ec9b8
+	arm_func_end func_ov00_020df4cc
 
     .section .ctor, 4, 1, 4
 	.global data_ov00_020e1ebc

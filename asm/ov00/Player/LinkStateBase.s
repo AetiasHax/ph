@@ -124,11 +124,11 @@ _020a80f0:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase8vfunc_24Ei
 _020a80f8: .word gAdventureFlags
 _020a80fc: .word data_027e0c68
 _020a8100: .word data_027e0f64
 _020a8104: .word data_027e0fb8
+	arm_func_end _ZN13LinkStateBase8vfunc_24Ei
 
 	.global _ZN13LinkStateBase8vfunc_28Ev
 	arm_func_start _ZN13LinkStateBase8vfunc_28Ev
@@ -151,8 +151,8 @@ _ZN13LinkStateBase17GiveControlToLinkEv: ; 0x020a8118
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase17GiveControlToLinkEv
 _020a8124: .word func_ov23_02178354
+	arm_func_end _ZN13LinkStateBase17GiveControlToLinkEv
 
 	.global _ZN13LinkStateBase18SetPlayerCharacterEi
 	arm_func_start _ZN13LinkStateBase18SetPlayerCharacterEi
@@ -161,8 +161,8 @@ _ZN13LinkStateBase18SetPlayerCharacterEi: ; 0x020a8128
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18SetPlayerCharacterEi
 _020a8134: .word func_ov00_020bd364
+	arm_func_end _ZN13LinkStateBase18SetPlayerCharacterEi
 
 	.global _ZN13LinkStateBase15ChangeLinkStateEi
 	arm_func_start _ZN13LinkStateBase15ChangeLinkStateEi
@@ -171,8 +171,8 @@ _ZN13LinkStateBase15ChangeLinkStateEi: ; 0x020a8138
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase15ChangeLinkStateEi
 _020a8144: .word func_ov00_020bb544
+	arm_func_end _ZN13LinkStateBase15ChangeLinkStateEi
 
 	.global _ZN13LinkStateBase18ChangeLinkSubStateEii
 	arm_func_start _ZN13LinkStateBase18ChangeLinkSubStateEii
@@ -181,8 +181,8 @@ _ZN13LinkStateBase18ChangeLinkSubStateEii: ; 0x020a8148
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18ChangeLinkSubStateEii
 _020a8154: .word func_ov00_020bb594
+	arm_func_end _ZN13LinkStateBase18ChangeLinkSubStateEii
 
 	.global _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 	arm_func_start _ZN13LinkStateBase18EquipItem_vfunc_28Ev
@@ -207,8 +207,8 @@ _020a818c:
 	blt _020a8168
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 _020a819c: .word gItemManager
+	arm_func_end _ZN13LinkStateBase18EquipItem_vfunc_28Ev
 
 	.global _ZN13LinkStateBase22UpdateSwordShieldInUseEv
 	arm_func_start _ZN13LinkStateBase22UpdateSwordShieldInUseEv
@@ -218,9 +218,9 @@ _ZN13LinkStateBase22UpdateSwordShieldInUseEv: ; 0x020a81a0
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase22UpdateSwordShieldInUseEv
 _020a81b0: .word gItemManager
 _020a81b4: .word _ZN11ItemManager22UpdateSwordShieldInUseEv
+	arm_func_end _ZN13LinkStateBase22UpdateSwordShieldInUseEv
 
 	.global _ZN13LinkStateBase18func_ov00_020a81b8Eii
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a81b8Eii
@@ -243,8 +243,8 @@ _ZN13LinkStateBase16GetLinkItemStateEv: ; 0x020a81dc
 	mov r0, #1
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase16GetLinkItemStateEv
 _020a81e8: .word func_01fffcd8
+	arm_func_end _ZN13LinkStateBase16GetLinkItemStateEv
 
 	.global _ZN13LinkStateBase6LookAtEP5Vec3p
 	arm_func_start _ZN13LinkStateBase6LookAtEP5Vec3p
@@ -253,8 +253,8 @@ _ZN13LinkStateBase6LookAtEP5Vec3p: ; 0x020a81ec
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase6LookAtEP5Vec3p
 _020a81f8: .word _ZN10PlayerBase6LookAtEP5Vec3p
+	arm_func_end _ZN13LinkStateBase6LookAtEP5Vec3p
 
 	.global _ZN13LinkStateBase18func_ov00_020a81fcEv
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a81fcEv
@@ -263,8 +263,8 @@ _ZN13LinkStateBase18func_ov00_020a81fcEv: ; 0x020a81fc
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a81fcEv
 _020a8208: .word func_ov00_020bb810
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a81fcEv
 
 	.global _ZN13LinkStateBase9AddHealthEs
 	arm_func_start _ZN13LinkStateBase9AddHealthEs
@@ -285,8 +285,8 @@ _ZN13LinkStateBase18func_ov00_020a8224Ei: ; 0x020a8224
 	mov r2, #1
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8224Ei
 _020a8234: .word func_ov00_020bbbd0
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8224Ei
 
 	.global _ZN13LinkStateBase6TurnToEsii
 	arm_func_start _ZN13LinkStateBase6TurnToEsii
@@ -307,9 +307,9 @@ _ZN13LinkStateBase6TurnToEsii: ; 0x020a8238
 	bl func_ov00_020b4558
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase6TurnToEsii
 _020a8274: .word data_027e0fac
 _020a8278: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase6TurnToEsii
 
 	.global _ZN13LinkStateBase18func_ov00_020a827cEij
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a827cEij
@@ -319,9 +319,9 @@ _ZN13LinkStateBase18func_ov00_020a827cEij: ; 0x020a827c
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a827cEij
 _020a828c: .word data_027e0fcc
 _020a8290: .word func_ov00_020b4558
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a827cEij
 
 	.global _ZN13LinkStateBase18func_ov00_020a8294Eij
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8294Eij
@@ -331,9 +331,9 @@ _ZN13LinkStateBase18func_ov00_020a8294Eij: ; 0x020a8294
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8294Eij
 _020a82a4: .word data_027e0fcc
 _020a82a8: .word func_ov00_020b44d4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8294Eij
 
 	.global _ZN13LinkStateBase18func_ov00_020a82acEv
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a82acEv
@@ -387,9 +387,9 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	str r0, [r5, #0x28]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase12ApplyImpulseEii
 _020a8358: .word data_027e0d0c
 _020a835c: .word data_02050f54
+	arm_func_end _ZN13LinkStateBase12ApplyImpulseEii
 
 	.global _ZN13LinkStateBase18func_ov00_020a8360Ei
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8360Ei
@@ -486,9 +486,9 @@ _020a84a8:
 	add sp, sp, #0x38
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8390EiPv
 _020a84b4: .word data_027e0fe8
 _020a84b8: .word data_027e0fe4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8390EiPv
 
 	.global _ZN13LinkStateBase18func_ov00_020a84bcEi
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a84bcEi
@@ -512,8 +512,8 @@ _ZN13LinkStateBase18func_ov00_020a84bcEi: ; 0x020a84bc
 	bl func_ov00_0207c5d4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a84bcEi
 _020a8504: .word data_027e0e58
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a84bcEi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8508Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8508Ev
@@ -531,8 +531,8 @@ _ZN13LinkStateBase18func_ov00_020a8508Ev: ; 0x020a8508
 	blx r3
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8508Ev
 _020a8538: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8508Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p
@@ -566,8 +566,8 @@ _020a8578:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p
 _020a85a8: .word data_027e0d38
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p
 
 	.global _ZN13LinkStateBase8TeleportEP5Vec3psibb
 	arm_func_start _ZN13LinkStateBase8TeleportEP5Vec3psibb
@@ -684,8 +684,8 @@ _020a86bc:
 	strh r1, [r0, #0xa2]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8680Eisb
 _020a86d8: .word data_027e0fd4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8680Eisb
 
 	.global _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 	arm_func_start _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
@@ -694,8 +694,8 @@ _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev: ; 0x020a86dc
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 _020a86e8: .word func_ov00_020bccc8
+	arm_func_end _ZN13LinkStateBase33PlayerLinkBase_func_ov00_020bccc8Ev
 
 	.global _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
 	arm_func_start _ZN13LinkStateBase23PlayerLinkBase_vfunc_58Ev
@@ -797,8 +797,8 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi
 _020a8840: .word data_02050f54
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
@@ -870,10 +870,10 @@ _020a8904:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
 _020a8948: .word data_027e0fb8
 _020a894c: .word data_027e0618
 _020a8950: .word data_027e0f64
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
 
 	.global _ZN13LinkStateBase18func_ov00_020a8954EbPi
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8954EbPi
@@ -893,9 +893,9 @@ _ZN13LinkStateBase18func_ov00_020a8954EbPi: ; 0x020a8954
 	str r0, [r4]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8954EbPi
 _020a898c: .word data_ov00_020e5650
 _020a8990: .word data_ov00_020e5674
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8954EbPi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8994Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8994Ev
@@ -910,8 +910,8 @@ _ZN13LinkStateBase18func_ov00_020a8994Ev: ; 0x020a8994
 	bl _ZN13LinkStateBase15ChangeLinkStateEi
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8994Ev
 _020a89b8: .word data_ov00_020dc510
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8994Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a89bcEii
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a89bcEii
@@ -981,8 +981,8 @@ _ZN13LinkStateBase18func_ov00_020a8a4cEii: ; 0x020a8a4c
 	strneh r0, [r1, #0xe]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8a4cEii
 _020a8a8c: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8a4cEii
 
 	.global _ZN13LinkStateBase18func_ov00_020a8a90Ei
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8a90Ei
@@ -994,9 +994,9 @@ _ZN13LinkStateBase18func_ov00_020a8a90Ei: ; 0x020a8a90
 	mov r3, #1
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8a90Ei
 _020a8aa8: .word data_027e0fcc
 _020a8aac: .word func_ov00_020b45f8
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8a90Ei
 
 	.global _ZN13LinkStateBase18func_ov00_020a8ab0Ei
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8ab0Ei
@@ -1008,9 +1008,9 @@ _ZN13LinkStateBase18func_ov00_020a8ab0Ei: ; 0x020a8ab0
 	mov r3, r2
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8ab0Ei
 _020a8ac8: .word data_027e0fcc
 _020a8acc: .word func_ov00_020b464c
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8ab0Ei
 
 	.global _ZN13LinkStateBase18func_ov00_020a8ad0Ei
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8ad0Ei
@@ -1028,8 +1028,8 @@ _ZN13LinkStateBase18func_ov00_020a8ad0Ei: ; 0x020a8ad0
 	bl func_ov00_020c0e24
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8ad0Ei
 _020a8b00: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8ad0Ei
 
 	.global _ZN13LinkStateBase18func_ov00_020a8b04Eib
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8b04Eib
@@ -1049,8 +1049,8 @@ _020a8b28:
 	bl func_0202e310
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b04Eib
 _020a8b38: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b04Eib
 
 	.global _ZN13LinkStateBase18func_ov00_020a8b3cEi
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8b3cEi
@@ -1073,8 +1073,8 @@ _020a8b74:
 	mov r0, r4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b3cEi
 _020a8b7c: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b3cEi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8b80Ev
@@ -1087,8 +1087,8 @@ _ZN13LinkStateBase18func_ov00_020a8b80Ev: ; 0x020a8b80
 	movlt r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b80Ev
 _020a8b9c: .word data_027e0fd4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8b80Ev
 
 	.global _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	arm_func_start _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
@@ -1117,8 +1117,8 @@ _ZN13LinkStateBase28Get_PlayerControlData_Unk004Ev: ; 0x020a8bc4
 	add r0, r0, #4
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk004Ev
 _020a8bd4: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk004Ev
 
 	.global _ZN13LinkStateBase19GetCurrentCharacterEv
 	arm_func_start _ZN13LinkStateBase19GetCurrentCharacterEv
@@ -1127,8 +1127,8 @@ _ZN13LinkStateBase19GetCurrentCharacterEv: ; 0x020a8bd8
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase19GetCurrentCharacterEv
 _020a8be4: .word func_ov00_020bc46c
+	arm_func_end _ZN13LinkStateBase19GetCurrentCharacterEv
 
 	.global _ZN13LinkStateBase20GetPlayerControlDataEv
 	arm_func_start _ZN13LinkStateBase20GetPlayerControlDataEv
@@ -1137,8 +1137,8 @@ _ZN13LinkStateBase20GetPlayerControlDataEv: ; 0x020a8be8
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase20GetPlayerControlDataEv
 _020a8bf4: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase20GetPlayerControlDataEv
 
 	.global _ZN13LinkStateBase10GetStateIdEv
 	arm_func_start _ZN13LinkStateBase10GetStateIdEv
@@ -1147,8 +1147,8 @@ _ZN13LinkStateBase10GetStateIdEv: ; 0x020a8bf8
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase10GetStateIdEv
 _020a8c04: .word func_ov00_020bc500
+	arm_func_end _ZN13LinkStateBase10GetStateIdEv
 
 	.global _ZN13LinkStateBase9GetHealthEv
 	arm_func_start _ZN13LinkStateBase9GetHealthEv
@@ -1179,9 +1179,9 @@ _ZN13LinkStateBase18func_ov00_020a8c34Ev: ; 0x020a8c34
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8c34Ev
 _020a8c44: .word data_027e0fd4
 _020a8c48: .word func_ov00_020b5268
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8c34Ev
 
 	.global _ZN13LinkStateBase12GetPlayerPosEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerPosEv
@@ -1189,8 +1189,8 @@ _ZN13LinkStateBase12GetPlayerPosEv: ; 0x020a8c4c
 	ldr r0, _020a8c54 ; =data_027e0f94
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase12GetPlayerPosEv
 _020a8c54: .word data_027e0f94
+	arm_func_end _ZN13LinkStateBase12GetPlayerPosEv
 
 	.global _ZN13LinkStateBase12GetPlayerVelEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerVelEv
@@ -1198,8 +1198,8 @@ _ZN13LinkStateBase12GetPlayerVelEv: ; 0x020a8c58
 	ldr r0, _020a8c60 ; =data_027e0fa0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase12GetPlayerVelEv
 _020a8c60: .word data_027e0fa0
+	arm_func_end _ZN13LinkStateBase12GetPlayerVelEv
 
 	.global _ZN13LinkStateBase18func_ov00_020a8c64Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8c64Ev
@@ -1209,8 +1209,8 @@ _ZN13LinkStateBase18func_ov00_020a8c64Ev: ; 0x020a8c64
 	add r0, r0, #0x90
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8c64Ev
 _020a8c74: .word data_027e0fd4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8c64Ev
 
 	.global _ZN13LinkStateBase14GetPlayerAngleEv
 	arm_func_start _ZN13LinkStateBase14GetPlayerAngleEv
@@ -1218,8 +1218,8 @@ _ZN13LinkStateBase14GetPlayerAngleEv: ; 0x020a8c78
 	ldr r0, _020a8c80 ; =data_027e0fac
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase14GetPlayerAngleEv
 _020a8c80: .word data_027e0fac
+	arm_func_end _ZN13LinkStateBase14GetPlayerAngleEv
 
 	.global _ZN13LinkStateBase15GetPlayer_Unk18Ev
 	arm_func_start _ZN13LinkStateBase15GetPlayer_Unk18Ev
@@ -1227,8 +1227,8 @@ _ZN13LinkStateBase15GetPlayer_Unk18Ev: ; 0x020a8c84
 	ldr r0, _020a8c8c ; =data_027e0fb0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase15GetPlayer_Unk18Ev
 _020a8c8c: .word data_027e0fb0
+	arm_func_end _ZN13LinkStateBase15GetPlayer_Unk18Ev
 
 	.global _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev
 	arm_func_start _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev
@@ -1238,8 +1238,8 @@ _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev: ; 0x020a8c90
 	ldrsh r0, [r0, #0x32]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev
 _020a8ca0: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase27Get_PlayerControlData_Unk32Ev
 
 	.global _ZN13LinkStateBase12GetGrabActorEv
 	arm_func_start _ZN13LinkStateBase12GetGrabActorEv
@@ -1251,9 +1251,9 @@ _ZN13LinkStateBase12GetGrabActorEv: ; 0x020a8ca4
 	add r1, r2, #0x3c
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 _020a8cbc: .word data_027e0fe4
 _020a8cc0: .word _ZN12ActorManager8GetActorEP8ActorRef
+	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 
 	.global _ZN13LinkStateBase15GetGrabActorRefEv
 	arm_func_start _ZN13LinkStateBase15GetGrabActorRefEv
@@ -1270,8 +1270,8 @@ _ZN13LinkStateBase4GrabEv: ; 0x020a8cd0
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase4GrabEv
 _020a8cdc: .word func_ov00_020bc71c
+	arm_func_end _ZN13LinkStateBase4GrabEv
 
 	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
 	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk44Ev
@@ -1300,8 +1300,8 @@ _020a8d1c:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase16IsEquipBeingUsedEi
 _020a8d24: .word gItemManager
+	arm_func_end _ZN13LinkStateBase16IsEquipBeingUsedEi
 
 	.global _ZN13LinkStateBase12GetEquipItemEi
 	arm_func_start _ZN13LinkStateBase12GetEquipItemEi
@@ -1311,9 +1311,9 @@ _ZN13LinkStateBase12GetEquipItemEi: ; 0x020a8d28
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase12GetEquipItemEi
 _020a8d38: .word gItemManager
 _020a8d3c: .word _ZN11ItemManager12GetEquipItemEi
+	arm_func_end _ZN13LinkStateBase12GetEquipItemEi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8d40Ev
@@ -1322,8 +1322,8 @@ _ZN13LinkStateBase18func_ov00_020a8d40Ev: ; 0x020a8d40
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d40Ev
 _020a8d4c: .word data_027e0fd4
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d40Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a8d50Ev
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8d50Ev
@@ -1334,9 +1334,9 @@ _ZN13LinkStateBase18func_ov00_020a8d50Ev: ; 0x020a8d50
 	ldr r0, [r0, #0x138]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d50Ev
 _020a8d64: .word data_027e0fcc
 _020a8d68: .word func_ov00_020c0d68
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d50Ev
 
 	.global _ZN13LinkStateBase18func_ov00_020a8d6cEv
 	arm_func_start _ZN13LinkStateBase18func_ov00_020a8d6cEv
@@ -1347,9 +1347,9 @@ _ZN13LinkStateBase18func_ov00_020a8d6cEv: ; 0x020a8d6c
 	ldr r0, [r0, #0x118]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d6cEv
 _020a8d80: .word data_027e0fcc
 _020a8d84: .word func_ov00_020c0d68
+	arm_func_end _ZN13LinkStateBase18func_ov00_020a8d6cEv
 
 	.global _ZN13LinkStateBase26PlayerControlData_vfunc_14Ei
 	arm_func_start _ZN13LinkStateBase26PlayerControlData_vfunc_14Ei
@@ -1366,8 +1366,8 @@ _ZN13LinkStateBase26PlayerControlData_vfunc_14Ei: ; 0x020a8d88
 	moveq r0, #0x1000
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase26PlayerControlData_vfunc_14Ei
 _020a8db4: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase26PlayerControlData_vfunc_14Ei
 
 	.global _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev
 	arm_func_start _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev
@@ -1377,8 +1377,8 @@ _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev: ; 0x020a8db8
 	ldr r0, [r0, #0x100]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev
 _020a8dc8: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk100Ev
 
 	.global _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 	arm_func_start _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
@@ -1388,8 +1388,8 @@ _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev: ; 0x020a8dcc
 	ldr r0, [r0, #0x120]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 _020a8ddc: .word data_027e0fcc
+	arm_func_end _ZN13LinkStateBase28Get_PlayerControlData_Unk120Ev
 
 	.global _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev
 	arm_func_start _ZN13LinkStateBase24Get_PlayerLinkBase_Unk38Ev

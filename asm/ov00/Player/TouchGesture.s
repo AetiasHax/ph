@@ -27,9 +27,9 @@ _020a92d4:
 	blt _020a92d4
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN12TouchGestureC2Ev
 _020a92f4: .word data_ov00_020e5808
 _020a92f8: .word data_ov00_020e57f0
+	arm_func_end _ZN12TouchGestureC2Ev
 
 	.global _ZN12TouchGesture17ResetTouchHistoryEv
 	arm_func_start _ZN12TouchGesture17ResetTouchHistoryEv
@@ -187,11 +187,11 @@ _020a9508:
 	strgt r1, [r0, #8]
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN12TouchGesture6UpdateEPv
 _020a9520: .word 0xffffd555
 _020a9524: .word data_027e0d78
 _020a9528: .word 0x92492493
 _020a952c: .word 0xffff2aab
+	arm_func_end _ZN12TouchGesture6UpdateEPv
 
 	.global _ZN12TouchGestureD1Ev
 	arm_func_start _ZN12TouchGestureD1Ev

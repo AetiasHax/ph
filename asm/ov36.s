@@ -18,9 +18,9 @@ func_ov36_0217bd80: ; 0x0217bd80
 	bl func_ov36_0217ccd8
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217bd80
 _0217bdac: .word data_027e0fe0
 _0217bdb0: .word 0x00001b10
+	arm_func_end func_ov36_0217bd80
 
 	.global func_ov36_0217bdb4
 	arm_func_start func_ov36_0217bdb4
@@ -56,8 +56,8 @@ func_ov36_0217bdb4: ; 0x0217bdb4
 	strh r2, [r0, #0x54]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217bdb4
 _0217be2c: .word data_02050f54
+	arm_func_end func_ov36_0217bdb4
 
 	.global func_ov36_0217be30
 	arm_func_start func_ov36_0217be30
@@ -131,7 +131,6 @@ func_ov36_0217be30: ; 0x0217be30
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217be30
 _0217bf40: .word data_ov36_02186e6c
 _0217bf44: .word data_ov36_02186e80
 _0217bf48: .word 0x000014cd
@@ -140,6 +139,7 @@ _0217bf50: .word data_ov36_02186b1c
 _0217bf54: .word data_ov36_02186b30
 _0217bf58: .word data_ov36_02186ea0
 _0217bf5c: .word data_ov36_02186eb8
+	arm_func_end func_ov36_0217be30
 
 	.global func_ov36_0217bf60
 	arm_func_start func_ov36_0217bf60
@@ -188,11 +188,11 @@ _0217bfbc:
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217bf60
 _0217c004: .word 0x000014cd
 _0217c008: .word 0x00000385
 _0217c00c: .word data_027e0ffc
 _0217c010: .word 0x000002cf
+	arm_func_end func_ov36_0217bf60
 
 	.global func_ov36_0217c014
 	arm_func_start func_ov36_0217c014
@@ -220,8 +220,8 @@ func_ov36_0217c014: ; 0x0217c014
 	bl func_020197fc
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c014
 _0217c06c: .word data_ov00_020e9360
+	arm_func_end func_ov36_0217c014
 
 	.global func_ov36_0217c070
 	arm_func_start func_ov36_0217c070
@@ -268,10 +268,10 @@ func_ov36_0217c070: ; 0x0217c070
 	add sp, sp, #0x48
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c070
 _0217c114: .word 0xfffffc39
 _0217c118: .word 0x00000ccd
 _0217c11c: .word data_02050f54
+	arm_func_end func_ov36_0217c070
 
 	.global func_ov36_0217c120
 	arm_func_start func_ov36_0217c120
@@ -286,9 +286,9 @@ func_ov36_0217c120: ; 0x0217c120
 	str r1, [r4]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c120
 _0217c144: .word data_ov36_02186adc
 _0217c148: .word data_ov36_02186e58
+	arm_func_end func_ov36_0217c120
 
 	.global func_ov36_0217c14c
 	arm_func_start func_ov36_0217c14c
@@ -298,8 +298,8 @@ func_ov36_0217c14c: ; 0x0217c14c
 	strh r1, [r0, #4]
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_0217c14c
 _0217c15c: .word data_ov36_02186d0c
+	arm_func_end func_ov36_0217c14c
 
 	.global func_ov36_0217c160
 	arm_func_start func_ov36_0217c160
@@ -320,8 +320,8 @@ _0217c190:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_0217c160
 _0217c198: .word 0x47524d47
+	arm_func_end func_ov36_0217c160
 
 	.global func_ov36_0217c19c
 	arm_func_start func_ov36_0217c19c
@@ -361,8 +361,8 @@ func_ov36_0217c1b4: ; 0x0217c1b4
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c1b4
 _0217c1fc: .word data_ov36_02186e10
+	arm_func_end func_ov36_0217c1b4
 
 	.global func_ov36_0217c200
 	arm_func_start func_ov36_0217c200
@@ -372,8 +372,8 @@ func_ov36_0217c200: ; 0x0217c200
 	mov r2, #2
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov36_0217c200
 _0217c210: .word func_ov00_020a9998
+	arm_func_end func_ov36_0217c200
 
 	.global func_ov36_0217c214
 	arm_func_start func_ov36_0217c214
@@ -385,8 +385,8 @@ func_ov36_0217c214: ; 0x0217c214
 	add r0, r0, #0x178
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov36_0217c214
 _0217c22c: .word func_ov36_0217c274
+	arm_func_end func_ov36_0217c214
 
 	.global func_ov36_0217c230
 	arm_func_start func_ov36_0217c230
@@ -398,8 +398,8 @@ func_ov36_0217c230: ; 0x0217c230
 	add r0, r0, #0x178
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov36_0217c230
 _0217c248: .word func_ov36_0217c51c
+	arm_func_end func_ov36_0217c230
 
 	.global func_ov36_0217c24c
 	arm_func_start func_ov36_0217c24c
@@ -413,9 +413,9 @@ func_ov36_0217c24c: ; 0x0217c24c
 	strb r2, [r0, #0x90]
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_0217c24c
 _0217c26c: .word func_ov36_0217c214
 _0217c270: .word func_ov36_0217c230
+	arm_func_end func_ov36_0217c24c
 
 	.global func_ov36_0217c274
 	arm_func_start func_ov36_0217c274
@@ -594,12 +594,12 @@ _0217c4c4:
 	add sp, sp, #0xb4
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c274
 _0217c508: .word data_ov36_02186b44
 _0217c50c: .word data_ov36_02186b58
 _0217c510: .word data_ov36_02186b6c
 _0217c514: .word data_ov36_02186b80
 _0217c518: .word data_02050f54
+	arm_func_end func_ov36_0217c274
 
 	.global func_ov36_0217c51c
 	arm_func_start func_ov36_0217c51c
@@ -638,8 +638,8 @@ _0217c558:
 	str r0, [r1, #0xc]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c51c
 _0217c59c: .word data_ov36_02186b94
+	arm_func_end func_ov36_0217c51c
 
 	.global func_ov36_0217c5a0
 	arm_func_start func_ov36_0217c5a0
@@ -750,9 +750,9 @@ _0217c6e8:
 	add sp, sp, #0x60
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c630
 _0217c6fc: .word 0x00000266
 _0217c700: .word 0x000004cd
+	arm_func_end func_ov36_0217c630
 
 	.global func_ov36_0217c704
 	arm_func_start func_ov36_0217c704
@@ -809,13 +809,13 @@ func_ov36_0217c704: ; 0x0217c704
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c704
 _0217c7d0: .word data_ov36_02186848
 _0217c7d4: .word 0x00000333
 _0217c7d8: .word data_027e0fec
 _0217c7dc: .word data_ov36_02186ec8
 _0217c7e0: .word data_ov36_02186edc
 _0217c7e4: .word data_ov36_02186c80
+	arm_func_end func_ov36_0217c704
 
 	.global func_ov36_0217c7e8
 	arm_func_start func_ov36_0217c7e8
@@ -826,8 +826,8 @@ func_ov36_0217c7e8: ; 0x0217c7e8
 	add r0, r0, #0x214
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov36_0217c7e8
 _0217c7fc: .word func_ov00_020c0e04
+	arm_func_end func_ov36_0217c7e8
 
 	.global func_ov36_0217c800
 	arm_func_start func_ov36_0217c800
@@ -908,8 +908,8 @@ _0217c900:
 	bl func_ov00_020c5e20
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217c800
 _0217c918: .word 0x00000333
+	arm_func_end func_ov36_0217c800
 
 	.global func_ov36_0217c91c
 	arm_func_start func_ov36_0217c91c
@@ -1364,7 +1364,6 @@ func_ov36_0217ccd8: ; 0x0217ccd8
 	str r1, [r4, #0x878]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217ccd8
 _0217cf94: .word data_ov36_02186d18
 _0217cf98: .word data_ov36_02186dec
 _0217cf9c: .word func_ov00_020a9b4c
@@ -1377,6 +1376,7 @@ _0217cfb4: .word func_ov36_0217d294
 _0217cfb8: .word data_ov00_020e2f04
 _0217cfbc: .word data_ov00_020e2e3c
 _0217cfc0: .word data_ov36_02186dd4
+	arm_func_end func_ov36_0217ccd8
 
 	.global func_ov36_0217cfc4
 	arm_func_start func_ov36_0217cfc4
@@ -1433,8 +1433,8 @@ func_ov36_0217d01c: ; 0x0217d01c
 	str r1, [r4]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d01c
 _0217d040: .word data_ov36_02186e00
+	arm_func_end func_ov36_0217d01c
 
 	.global func_ov36_0217d044
 	arm_func_start func_ov36_0217d044
@@ -1508,12 +1508,12 @@ func_ov36_0217d044: ; 0x0217d044
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d044
 _0217d154: .word data_ov36_02186d18
 _0217d158: .word data_027e0f6c
 _0217d15c: .word func_ov00_020b7d74
 _0217d160: .word func_ov36_0217cfec
 _0217d164: .word func_ov00_020a9b4c
+	arm_func_end func_ov36_0217d044
 
 	.global func_ov36_0217d168
 	arm_func_start func_ov36_0217d168
@@ -1589,12 +1589,12 @@ func_ov36_0217d168: ; 0x0217d168
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d168
 _0217d280: .word data_ov36_02186d18
 _0217d284: .word data_027e0f6c
 _0217d288: .word func_ov00_020b7d74
 _0217d28c: .word func_ov36_0217cfec
 _0217d290: .word func_ov00_020a9b4c
+	arm_func_end func_ov36_0217d168
 
 	.global func_ov36_0217d294
 	arm_func_start func_ov36_0217d294
@@ -1858,7 +1858,6 @@ _0217d56c:
 	add sp, sp, #0x70
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d2a0
 _0217d680: .word gAdventureFlags
 _0217d684: .word data_027e0fe8
 _0217d688: .word 0x4c4f4e44
@@ -1874,6 +1873,7 @@ _0217d6ac: .word data_027e0fec
 _0217d6b0: .word gMapManager
 _0217d6b4: .word 0x0000011e
 _0217d6b8: .word 0x0000011f
+	arm_func_end func_ov36_0217d2a0
 
 	.global func_ov36_0217d6bc
 	arm_func_start func_ov36_0217d6bc
@@ -1947,11 +1947,11 @@ _0217d7b4:
 	str r4, [r5, #0x130]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d6bc
 _0217d7c4: .word 0x00001ccd
 _0217d7c8: .word 0x0000219a
 _0217d7cc: .word 0x00001333
 _0217d7d0: .word data_ov36_02186698
+	arm_func_end func_ov36_0217d6bc
 
 	.global func_ov36_0217d7d4
 	arm_func_start func_ov36_0217d7d4
@@ -2103,11 +2103,11 @@ _0217d9d8:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217d810
 _0217d9f8: .word data_027e077c
 _0217d9fc: .word data_02050f54
 _0217da00: .word data_027e0f6c
 _0217da04: .word 0x0000199a
+	arm_func_end func_ov36_0217d810
 
 	.global func_ov36_0217da08
 	arm_func_start func_ov36_0217da08
@@ -2139,8 +2139,8 @@ _0217da60:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217da08
 _0217da68: .word gAdventureFlags
+	arm_func_end func_ov36_0217da08
 
 	.global func_ov36_0217da6c
 	arm_func_start func_ov36_0217da6c
@@ -2340,13 +2340,13 @@ _0217dbac:
 	add sp, sp, #0x60
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217da6c
 _0217dd64: .word data_027e0fc8
 _0217dd68: .word data_027e0f64
 _0217dd6c: .word data_ov36_02186768
 _0217dd70: .word data_02050f54
 _0217dd74: .word 0x0000099a
 _0217dd78: .word data_027e0ff8
+	arm_func_end func_ov36_0217da6c
 
 	.global func_ov36_0217dd7c
 	arm_func_start func_ov36_0217dd7c
@@ -2390,8 +2390,8 @@ _0217ddf0:
 	str r0, [r4, #0x138]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217dd98
 _0217ddfc: .word gMapManager
+	arm_func_end func_ov36_0217dd98
 
 	.global func_ov36_0217de00
 	arm_func_start func_ov36_0217de00
@@ -2445,10 +2445,10 @@ func_ov36_0217de00: ; 0x0217de00
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217de00
 _0217dec0: .word data_027e0c68
 _0217dec4: .word data_ov36_02186c84
 _0217dec8: .word data_ov00_020eec68
+	arm_func_end func_ov36_0217de00
 
 	.global func_ov36_0217decc
 	arm_func_start func_ov36_0217decc
@@ -2780,7 +2780,6 @@ _0217e37c:
 	add sp, sp, #0x44
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217decc
 _0217e3a4: .word data_027e0fc8
 _0217e3a8: .word 0xffffe99a
 _0217e3ac: .word data_027e103c
@@ -2796,6 +2795,7 @@ _0217e3d0: .word gAdventureFlags
 _0217e3d4: .word data_027e0fe4
 _0217e3d8: .word 0x504c444d
 _0217e3dc: .word 0x0000199a
+	arm_func_end func_ov36_0217decc
 
 	.global func_ov36_0217e3e0
 	arm_func_start func_ov36_0217e3e0
@@ -2866,11 +2866,11 @@ func_ov36_0217e3e0: ; 0x0217e3e0
 	str r2, [r4, #0x68]
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217e3e0
 _0217e4e4: .word data_ov36_02186c88
 _0217e4e8: .word data_027e0764
 _0217e4ec: .word data_02050f54
 _0217e4f0: .word 0x00000112
+	arm_func_end func_ov36_0217e3e0
 
 	.global func_ov36_0217e4f4
 	arm_func_start func_ov36_0217e4f4
@@ -2994,10 +2994,10 @@ _0217e694:
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217e4f4
 _0217e6ac: .word data_027e0764
 _0217e6b0: .word data_02050f54
 _0217e6b4: .word 0x00000112
+	arm_func_end func_ov36_0217e4f4
 
 	.global func_ov36_0217e6b8
 	arm_func_start func_ov36_0217e6b8
@@ -3037,11 +3037,11 @@ _0217e6e0:
 	str r1, [r4, #0x68]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217e6b8
 _0217e73c: .word data_027e0ffc
 _0217e740: .word 0x000002c2
 _0217e744: .word data_ov36_02186c8c
 _0217e748: .word data_027e0d0c
+	arm_func_end func_ov36_0217e6b8
 
 	.global func_ov36_0217e74c
 	arm_func_start func_ov36_0217e74c
@@ -3101,10 +3101,10 @@ func_ov36_0217e7a4: ; 0x0217e7a4
 	str r1, [r4, #0x878]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217e7a4
 _0217e80c: .word data_ov36_02186c90
 _0217e810: .word data_027e0d0c
 _0217e814: .word 0x00000b33
+	arm_func_end func_ov36_0217e7a4
 
 	.global func_ov36_0217e818
 	arm_func_start func_ov36_0217e818
@@ -3316,7 +3316,6 @@ _0217eacc:
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217e818
 _0217eb34: .word 0x00000337
 _0217eb38: .word 0x00000112
 _0217eb3c: .word data_027e0fc8
@@ -3326,6 +3325,7 @@ _0217eb48: .word 0x0000219a
 _0217eb4c: .word gMapManager
 _0217eb50: .word data_02050f54
 _0217eb54: .word data_027e0e58
+	arm_func_end func_ov36_0217e818
 
 	.global func_ov36_0217eb58
 	arm_func_start func_ov36_0217eb58
@@ -3419,7 +3419,6 @@ func_ov36_0217eb58: ; 0x0217eb58
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217eb58
 _0217ecb8: .word data_02050f54
 _0217ecbc: .word 0x000024cd
 _0217ecc0: .word func_ov36_0217bdb4
@@ -3432,6 +3431,7 @@ _0217ecd8: .word data_027e0f64
 _0217ecdc: .word data_027e0ffc
 _0217ece0: .word 0x000002ce
 _0217ece4: .word data_027e1038
+	arm_func_end func_ov36_0217eb58
 
 	.global func_ov36_0217ece8
 	arm_func_start func_ov36_0217ece8
@@ -3464,8 +3464,8 @@ _0217ed40:
 	bl func_ov36_02183204
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217ece8
 _0217ed4c: .word data_ov36_02186c98
+	arm_func_end func_ov36_0217ece8
 
 	.global func_ov36_0217ed50
 	arm_func_start func_ov36_0217ed50
@@ -3586,10 +3586,10 @@ _0217eef8:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217ed50
 _0217ef04: .word data_ov36_02186c9c
 _0217ef08: .word data_027e0d0c
 _0217ef0c: .word gMapManager
+	arm_func_end func_ov36_0217ed50
 
 	.global func_ov36_0217ef10
 	arm_func_start func_ov36_0217ef10
@@ -3647,8 +3647,8 @@ func_ov36_0217ef7c: ; 0x0217ef7c
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217ef7c
 _0217efbc: .word data_ov36_02186ca0
+	arm_func_end func_ov36_0217ef7c
 
 	.global func_ov36_0217efc0
 	arm_func_start func_ov36_0217efc0
@@ -3720,10 +3720,10 @@ _0217f0a8:
 	bl func_ov36_02183204
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217efc0
 _0217f0b4: .word data_027e0fc8
 _0217f0b8: .word 0x00001555
 _0217f0bc: .word 0x00002aab
+	arm_func_end func_ov36_0217efc0
 
 	.global func_ov36_0217f0c0
 	arm_func_start func_ov36_0217f0c0
@@ -3746,9 +3746,9 @@ func_ov36_0217f0c0: ; 0x0217f0c0
 	str r1, [r4, #0x68]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f0c0
 _0217f104: .word data_ov36_02186ca4
 _0217f108: .word data_027e0d0c
+	arm_func_end func_ov36_0217f0c0
 
 	.global func_ov36_0217f10c
 	arm_func_start func_ov36_0217f10c
@@ -3826,11 +3826,11 @@ _0217f1a0:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f178
 _0217f20c: .word data_027e0d0c
 _0217f210: .word data_ov36_02186ca8
 _0217f214: .word data_027e0ffc
 _0217f218: .word 0x000002c3
+	arm_func_end func_ov36_0217f178
 
 	.global func_ov36_0217f21c
 	arm_func_start func_ov36_0217f21c
@@ -3956,11 +3956,11 @@ _0217f3a4:
 	add sp, sp, #0x48
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f21c
 _0217f3f0: .word data_027e0fe8
 _0217f3f4: .word 0x50424652
 _0217f3f8: .word 0xffffeaab
 _0217f3fc: .word data_027e0ffc
+	arm_func_end func_ov36_0217f21c
 
 	.global func_ov36_0217f400
 	arm_func_start func_ov36_0217f400
@@ -3970,8 +3970,8 @@ func_ov36_0217f400: ; 0x0217f400
 	str r1, [r0, #4]
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_0217f400
 _0217f410: .word data_ov36_02186d00
+	arm_func_end func_ov36_0217f400
 
 	.global func_ov36_0217f414
 	arm_func_start func_ov36_0217f414
@@ -4002,8 +4002,8 @@ _0217f46c:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f414
 _0217f474: .word 0x424f4d42
+	arm_func_end func_ov36_0217f414
 
 	.global func_ov36_0217f478
 	arm_func_start func_ov36_0217f478
@@ -4017,8 +4017,8 @@ func_ov36_0217f478: ; 0x0217f478
 	bl func_ov00_020c54a0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f478
 _0217f498: .word 0x00001770
+	arm_func_end func_ov36_0217f478
 
 	.global func_ov36_0217f49c
 	arm_func_start func_ov36_0217f49c
@@ -4045,8 +4045,8 @@ func_ov36_0217f49c: ; 0x0217f49c
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f49c
 _0217f4f0: .word data_027e0d0c
+	arm_func_end func_ov36_0217f49c
 
 	.global func_ov36_0217f4f4
 	arm_func_start func_ov36_0217f4f4
@@ -4349,7 +4349,6 @@ _0217f940:
 	add sp, sp, #0x7c
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f4f4
 _0217f96c: .word data_027e0fe4
 _0217f970: .word data_027e0f64
 _0217f974: .word data_027e0ffc
@@ -4361,6 +4360,7 @@ _0217f988: .word 0x000002c5
 _0217f98c: .word 0x009c4000
 _0217f990: .word data_027e0fe8
 _0217f994: .word 0x50424652
+	arm_func_end func_ov36_0217f4f4
 
 	.global func_ov36_0217f998
 	arm_func_start func_ov36_0217f998
@@ -4386,9 +4386,9 @@ func_ov36_0217f998: ; 0x0217f998
 	str r1, [r4, #0x878]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f998
 _0217f9e8: .word data_027e0d0c
 _0217f9ec: .word data_ov36_02186cac
+	arm_func_end func_ov36_0217f998
 
 	.global func_ov36_0217f9f0
 	arm_func_start func_ov36_0217f9f0
@@ -4647,7 +4647,6 @@ _0217fd8c:
 	add sp, sp, #0x38
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217f9f0
 _0217fdb8: .word data_027e0f64
 _0217fdbc: .word data_027e0ffc
 _0217fdc0: .word 0x000001ad
@@ -4662,6 +4661,7 @@ _0217fde0: .word 0x000002cb
 _0217fde4: .word 0x00000ccd
 _0217fde8: .word data_02050f54
 _0217fdec: .word 0x000002c7
+	arm_func_end func_ov36_0217f9f0
 
 	.global func_ov36_0217fdf0
 	arm_func_start func_ov36_0217fdf0
@@ -4684,9 +4684,9 @@ func_ov36_0217fdf0: ; 0x0217fdf0
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217fdf0
 _0217fe34: .word data_027e0d0c
 _0217fe38: .word data_ov36_02186cb4
+	arm_func_end func_ov36_0217fdf0
 
 	.global func_ov36_0217fe3c
 	arm_func_start func_ov36_0217fe3c
@@ -4791,13 +4791,13 @@ _0217ff88:
 	add sp, sp, #0x48
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217fe3c
 _0217ffc4: .word data_027e0ffc
 _0217ffc8: .word 0x000002c5
 _0217ffcc: .word data_02050f54
 _0217ffd0: .word 0x009c4000
 _0217ffd4: .word data_027e0fe8
 _0217ffd8: .word 0x50424652
+	arm_func_end func_ov36_0217fe3c
 
 	.global func_ov36_0217ffdc
 	arm_func_start func_ov36_0217ffdc
@@ -4840,9 +4840,9 @@ _02180050:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0217ffdc
 _02180064: .word 0x00000333
 _02180068: .word data_ov36_02186cb8
+	arm_func_end func_ov36_0217ffdc
 
 	.global func_ov36_0218006c
 	arm_func_start func_ov36_0218006c
@@ -4916,9 +4916,9 @@ func_ov36_0218011c: ; 0x0218011c
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218011c
 _02180160: .word data_027e0d0c
 _02180164: .word data_ov36_02186cbc
+	arm_func_end func_ov36_0218011c
 
 	.global func_ov36_02180168
 	arm_func_start func_ov36_02180168
@@ -4949,8 +4949,8 @@ _021801b8:
 	bl func_ov36_02183204
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02180168
 _021801c4: .word data_ov36_02186cc0
+	arm_func_end func_ov36_02180168
 
 	.global func_ov36_021801c8
 	arm_func_start func_ov36_021801c8
@@ -5147,7 +5147,6 @@ _02180458:
 	str r1, [r5, #0x878]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021801c8
 _0218048c: .word 0x00000dac
 _02180490: .word data_027e0ffc
 _02180494: .word 0x000002c9
@@ -5155,6 +5154,7 @@ _02180498: .word data_027e0f64
 _0218049c: .word 0x00000333
 _021804a0: .word 0x00000e66
 _021804a4: .word data_ov36_02186cc4
+	arm_func_end func_ov36_021801c8
 
 	.global func_ov36_021804a8
 	arm_func_start func_ov36_021804a8
@@ -5213,8 +5213,8 @@ _02180564:
 	bl func_ov36_02183204
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021804a8
 _0218056c: .word data_ov36_02186cc8
+	arm_func_end func_ov36_021804a8
 
 	.global func_ov36_02180570
 	arm_func_start func_ov36_02180570
@@ -5244,8 +5244,8 @@ _021805a4:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02180570
 _021805c8: .word data_ov36_02186ccc
+	arm_func_end func_ov36_02180570
 
 	.global func_ov36_021805cc
 	arm_func_start func_ov36_021805cc
@@ -5287,8 +5287,8 @@ _02180644:
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021805cc
 _02180654: .word data_ov36_02186cd0
+	arm_func_end func_ov36_021805cc
 
 	.global func_ov36_02180658
 	arm_func_start func_ov36_02180658
@@ -5512,7 +5512,6 @@ _0218091c:
 	add sp, sp, #0xd4
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02180664
 _02180980: .word data_027e0d0c
 _02180984: .word data_ov36_02186cd4
 _02180988: .word data_ov36_02186838
@@ -5525,6 +5524,7 @@ _021809a0: .word data_027e0c68
 _021809a4: .word 0x0069032e
 _021809a8: .word data_027e0ffc
 _021809ac: .word 0x000002ca
+	arm_func_end func_ov36_02180664
 
 	.global func_ov36_021809b0
 	arm_func_start func_ov36_021809b0
@@ -5753,7 +5753,6 @@ _02180ce0:
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021809b0
 _02180d00: .word data_027e0e58
 _02180d04: .word data_027e0f64
 _02180d08: .word data_027e0ffc
@@ -5761,6 +5760,7 @@ _02180d0c: .word 0x000002c7
 _02180d10: .word 0x000002c1
 _02180d14: .word data_027e0fc8
 _02180d18: .word gAdventureFlags
+	arm_func_end func_ov36_021809b0
 
 	.global func_ov36_02180d1c
 	arm_func_start func_ov36_02180d1c
@@ -5830,9 +5830,9 @@ func_ov36_02180d1c: ; 0x02180d1c
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02180d1c
 _02180e1c: .word data_027e0e58
 _02180e20: .word 0x00000ccd
+	arm_func_end func_ov36_02180d1c
 
 	.global func_ov36_02180e24
 	arm_func_start func_ov36_02180e24
@@ -5969,12 +5969,12 @@ _02181000:
 	add sp, sp, #0x48
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02180e24
 _02181020: .word 0x00000ccd
 _02181024: .word data_027e0ffc
 _02181028: .word 0x000002c1
 _0218102c: .word data_027e0fe4
 _02181030: .word data_02050f54
+	arm_func_end func_ov36_02180e24
 
 	.global func_ov36_02181034
 	arm_func_start func_ov36_02181034
@@ -6324,7 +6324,6 @@ _021814ec:
 	add sp, sp, #0x118
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218108c
 _02181540: .word gAdventureFlags
 _02181544: .word gItemManager
 _02181548: .word data_027e0f64
@@ -6336,6 +6335,7 @@ _0218155c: .word data_027e0ffc
 _02181560: .word 0x000002cb
 _02181564: .word 0x000001ad
 _02181568: .word data_027e1038
+	arm_func_end func_ov36_0218108c
 
 	.global func_ov36_0218156c
 	arm_func_start func_ov36_0218156c
@@ -6479,10 +6479,10 @@ _0218166c:
 	add sp, sp, #0x118
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218156c
 _02181784: .word data_ov36_02186cdc
 _02181788: .word data_027e0f64
 _0218178c: .word gAdventureFlags
+	arm_func_end func_ov36_0218156c
 
 	.global func_ov36_02181790
 	arm_func_start func_ov36_02181790
@@ -6560,12 +6560,12 @@ _02181848:
 	str r0, [r4, #0x878]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02181790
 _021818a0: .word data_ov36_02186ce0
 _021818a4: .word gAdventureFlags
 _021818a8: .word data_027e0ffc
 _021818ac: .word 0x000002c6
 _021818b0: .word data_027e0f64
+	arm_func_end func_ov36_02181790
 
 	.global func_ov36_021818b4
 	arm_func_start func_ov36_021818b4
@@ -6753,7 +6753,6 @@ _02181b40:
 	add sp, sp, #0x118
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021818b4
 _02181b80: .word data_027e103c
 _02181b84: .word data_027e0d0c
 _02181b88: .word gAdventureFlags
@@ -6764,6 +6763,7 @@ _02181b98: .word 0x00000dac
 _02181b9c: .word data_027e0fc8
 _02181ba0: .word data_027e0f90
 _02181ba4: .word data_027e0e58
+	arm_func_end func_ov36_021818b4
 
 	.global func_ov36_02181ba8
 	arm_func_start func_ov36_02181ba8
@@ -6992,7 +6992,6 @@ _02181e34:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02181ba8
 _02181f08: .word gAdventureFlags
 _02181f0c: .word data_027e0ffc
 _02181f10: .word 0x000002cb
@@ -7006,6 +7005,7 @@ _02181f2c: .word data_027e071c
 _02181f30: .word gMapManager
 _02181f34: .word 0x0000011e
 _02181f38: .word data_027e0f90
+	arm_func_end func_ov36_02181ba8
 
 	.global func_ov36_02181f3c
 	arm_func_start func_ov36_02181f3c
@@ -7046,9 +7046,9 @@ func_ov36_02181f3c: ; 0x02181f3c
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02181f3c
 _02181fc8: .word gMapManager
 _02181fcc: .word data_027e0f64
+	arm_func_end func_ov36_02181f3c
 
 	.global func_ov36_02181fd0
 	arm_func_start func_ov36_02181fd0
@@ -7683,7 +7683,6 @@ _02182940:
 	add sp, sp, #0x228
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02181fd0
 _02182948: .word gAdventureFlags
 _0218294c: .word data_027e0f90
 _02182950: .word 0x00000bb8
@@ -7702,6 +7701,7 @@ _02182980: .word 0x00001003
 _02182984: .word 0x000002c2
 _02182988: .word 0x000002cd
 _0218298c: .word gMapManager
+	arm_func_end func_ov36_02181fd0
 
 	.global func_ov36_02182990
 	arm_func_start func_ov36_02182990
@@ -7891,7 +7891,6 @@ _02182a7c:
 	add sp, sp, #0x124
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02182990
 _02182c64: .word gMapManager
 _02182c68: .word data_027e0f64
 _02182c6c: .word data_027e0ffc
@@ -7901,6 +7900,7 @@ _02182c78: .word data_027e0d0c
 _02182c7c: .word gAdventureFlags
 _02182c80: .word 0x0000038e
 _02182c84: .word 0x00000dac
+	arm_func_end func_ov36_02182990
 
 	.global func_ov36_02182c88
 	arm_func_start func_ov36_02182c88
@@ -8001,7 +8001,6 @@ _02182de4:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02182c88
 _02182df4: .word data_027e0f90
 _02182df8: .word data_027e0e58
 _02182dfc: .word data_027e0f64
@@ -8009,6 +8008,7 @@ _02182e00: .word data_027e0ffc
 _02182e04: .word 0x000002c7
 _02182e08: .word 0x0000019a
 _02182e0c: .word data_027e0fc8
+	arm_func_end func_ov36_02182c88
 
 	.global func_ov36_02182e10
 	arm_func_start func_ov36_02182e10
@@ -8100,7 +8100,6 @@ _02182f20:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02182e10
 _02182f64: .word data_027e0e58
 _02182f68: .word 0x0000100f
 _02182f6c: .word 0x00001010
@@ -8110,6 +8109,7 @@ _02182f78: .word 0x00001012
 _02182f7c: .word 0x00001013
 _02182f80: .word data_027e0ffc
 _02182f84: .word 0x0000030d
+	arm_func_end func_ov36_02182e10
 
 	.global func_ov36_02182f88
 	arm_func_start func_ov36_02182f88
@@ -8171,10 +8171,10 @@ _02183030:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02182f88
 _02183064: .word 0x0000099a
 _02183068: .word data_027e0e58
 _0218306c: .word gAdventureFlags
+	arm_func_end func_ov36_02182f88
 
 	.global func_ov36_02183070
 	arm_func_start func_ov36_02183070
@@ -8210,8 +8210,8 @@ _021830d0:
 	strh r1, [r0, #0x8e]
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02183070
 _021830e4: .word data_027e0764
+	arm_func_end func_ov36_02183070
 
 	.global func_ov36_021830e8
 	arm_func_start func_ov36_021830e8
@@ -8291,9 +8291,9 @@ _021831f4:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021830e8
 _021831fc: .word data_027e0fc8
 _02183200: .word 0x00001555
+	arm_func_end func_ov36_021830e8
 
 	.global func_ov36_02183204
 	arm_func_start func_ov36_02183204
@@ -8499,12 +8499,12 @@ _021834e8:
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02183204
 _021834f0: .word data_027e0fc8
 _021834f4: .word 0x00000333
 _021834f8: .word data_027e0ffc
 _021834fc: .word data_027e0fa0
 _02183500: .word 0x00002aab
+	arm_func_end func_ov36_02183204
 
 	.global func_ov36_02183504
 	arm_func_start func_ov36_02183504
@@ -8837,7 +8837,6 @@ _021839f4:
 	add sp, sp, #0x14c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02183504
 _02183a08: .word data_027e0fe4
 _02183a0c: .word 0x424d5459
 _02183a10: .word data_02050f54
@@ -8847,6 +8846,7 @@ _02183a1c: .word 0x00001e84
 _02183a20: .word 0x0000038e
 _02183a24: .word gAdventureFlags
 _02183a28: .word 0x00000333
+	arm_func_end func_ov36_02183504
 
 	.global func_ov36_02183a2c
 	arm_func_start func_ov36_02183a2c
@@ -8950,8 +8950,8 @@ _02183b18:
 	mov r0, r1
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02183a74
 _02183b78: .word data_027e0764
+	arm_func_end func_ov36_02183a74
 
 	.global func_ov36_02183b7c
 	arm_func_start func_ov36_02183b7c
@@ -9307,7 +9307,6 @@ _02184078:
 	add sp, sp, #0x58
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02183b7c
 _0218408c: .word 0x424d5459
 _02184090: .word gItemManager
 _02184094: .word data_027e0f94
@@ -9318,6 +9317,7 @@ _021840a4: .word 0x5342454d
 _021840a8: .word data_027e0ffc
 _021840ac: .word 0x0000019d
 _021840b0: .word 0x524f5045
+	arm_func_end func_ov36_02183b7c
 
 	.global func_ov36_021840b4
 	arm_func_start func_ov36_021840b4
@@ -9326,8 +9326,8 @@ func_ov36_021840b4: ; 0x021840b4
 	mov r0, #0
 	bx ip
 	.align 2, 0
-	arm_func_end func_ov36_021840b4
 _021840c0: .word func_01fffcec
+	arm_func_end func_ov36_021840b4
 
 	.global func_ov36_021840c4
 	arm_func_start func_ov36_021840c4
@@ -9552,7 +9552,6 @@ _021843fc:
 	add sp, sp, #0x30
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021840c4
 _02184408: .word data_027e0ffc
 _0218440c: .word 0x0000019d
 _02184410: .word 0x524f5045
@@ -9562,6 +9561,7 @@ _0218441c: .word 0x00000ccd
 _02184420: .word gItemManager
 _02184424: .word data_027e0f64
 _02184428: .word 0x000002cb
+	arm_func_end func_ov36_021840c4
 
 	.global func_ov36_0218442c
 	arm_func_start func_ov36_0218442c
@@ -9689,13 +9689,13 @@ _02184508:
 	add sp, sp, #0x54
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218442c
 _0218460c: .word 0x0000ffff
 _02184610: .word data_027e0d3c
 _02184614: .word data_02063e4c
 _02184618: .word data_027e0c68
 _0218461c: .word data_02050f54
 _02184620: .word data_027e0c38
+	arm_func_end func_ov36_0218442c
 
 	.global func_ov36_02184624
 	arm_func_start func_ov36_02184624
@@ -9883,13 +9883,13 @@ _02184898:
 	add sp, sp, #0xcc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02184624
 _021848e4: .word data_02050f54
 _021848e8: .word 0x00000333
 _021848ec: .word 0x0000219a
 _021848f0: .word 0x00000b34
 _021848f4: .word data_ov00_020e9370
 _021848f8: .word 0x00001666
+	arm_func_end func_ov36_02184624
 
 	.global func_ov36_021848fc
 	arm_func_start func_ov36_021848fc
@@ -9899,8 +9899,8 @@ func_ov36_021848fc: ; 0x021848fc
 	strb r1, [r0, #4]
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_021848fc
 _0218490c: .word data_ov36_02186cf4
+	arm_func_end func_ov36_021848fc
 
 	.global func_ov36_02184910
 	arm_func_start func_ov36_02184910
@@ -9915,8 +9915,8 @@ func_ov36_02184910: ; 0x02184910
 	movne r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov36_02184910
 _02184934: .word 0x47524d47
+	arm_func_end func_ov36_02184910
 
 	.global func_ov36_02184938
 	arm_func_start func_ov36_02184938
@@ -9965,9 +9965,9 @@ _021849d0:
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02184938
 _021849dc: .word data_027e0fe4
 _021849e0: .word 0x4e415649
+	arm_func_end func_ov36_02184938
 
 	.global func_ov36_021849e4
 	arm_func_start func_ov36_021849e4
@@ -10242,12 +10242,12 @@ _02184dc8:
 	add sp, sp, #0x118
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02184a64
 _02184dd8: .word gAdventureFlags
 _02184ddc: .word data_027e0f64
 _02184de0: .word gMapManager
 _02184de4: .word 0x0000038e
 _02184de8: .word 0x00001e84
+	arm_func_end func_ov36_02184a64
 
 	.global func_ov36_02184dec
 	arm_func_start func_ov36_02184dec
@@ -10347,9 +10347,9 @@ _02184f2c:
 	str r0, [r5, #0x854]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02184e10
 _02184f3c: .word data_027e103c
 _02184f40: .word data_027e0fc8
+	arm_func_end func_ov36_02184e10
 
 	.global func_ov36_02184f44
 	arm_func_start func_ov36_02184f44
@@ -10428,8 +10428,8 @@ _02185040:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02184f44
 _0218504c: .word gMapManager
+	arm_func_end func_ov36_02184f44
 
 	.global func_ov36_02185050
 	arm_func_start func_ov36_02185050
@@ -10465,9 +10465,9 @@ _021850ac:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185050
 _021850c0: .word data_027e0fc8
 _021850c4: .word data_027e0f94
+	arm_func_end func_ov36_02185050
 
 	.global func_ov36_021850c8
 	arm_func_start func_ov36_021850c8
@@ -10544,9 +10544,9 @@ _021851bc:
 	bl func_ov00_020ceacc
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021850c8
 _021851d4: .word data_027e0ffc
 _021851d8: .word data_027e0f64
+	arm_func_end func_ov36_021850c8
 
 	.global func_ov36_021851dc
 	arm_func_start func_ov36_021851dc
@@ -10592,8 +10592,8 @@ _0218525c:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021851dc
 _02185270: .word 0x00000666
+	arm_func_end func_ov36_021851dc
 
 	.global func_ov36_02185274
 	arm_func_start func_ov36_02185274
@@ -10633,8 +10633,8 @@ _02185294:
 	str r2, [r0, #0x68]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185274
 _021852f8: .word data_02050f54
+	arm_func_end func_ov36_02185274
 
 	.global func_ov36_021852fc
 	arm_func_start func_ov36_021852fc
@@ -10712,8 +10712,8 @@ _021853d0:
 	strneh r1, [r0, #0x8c]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021852fc
 _0218540c: .word data_027e0fc8
+	arm_func_end func_ov36_021852fc
 
 	.global func_ov36_02185410
 	arm_func_start func_ov36_02185410
@@ -10782,8 +10782,8 @@ func_ov36_0218543c: ; 0x0218543c
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218543c
 _021854e4: .word data_02050f54
+	arm_func_end func_ov36_0218543c
 
 	.global func_ov36_021854e8
 	arm_func_start func_ov36_021854e8
@@ -10826,10 +10826,10 @@ func_ov36_021854e8: ; 0x021854e8
 	str r0, [r4, #0x878]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021854e8
 _0218557c: .word data_027e0fc8
 _02185580: .word data_027e0c68
 _02185584: .word 0x00690332
+	arm_func_end func_ov36_021854e8
 
 	.global func_ov36_02185588
 	arm_func_start func_ov36_02185588
@@ -10922,8 +10922,8 @@ _0218568c:
 	strh r0, [r1, #0x98]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021855ec
 _021856c8: .word data_02050f54
+	arm_func_end func_ov36_021855ec
 
 	.global func_ov36_021856cc
 	arm_func_start func_ov36_021856cc
@@ -11032,11 +11032,11 @@ _0218581c:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021856cc
 _02185854: .word data_027e0fa0
 _02185858: .word data_027e0fcc
 _0218585c: .word data_027e0f94
 _02185860: .word data_027e0fc8
+	arm_func_end func_ov36_021856cc
 
 	.global func_ov36_02185864
 	arm_func_start func_ov36_02185864
@@ -11080,8 +11080,8 @@ _021858e4:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185864
 _021858ec: .word data_027e0764
+	arm_func_end func_ov36_02185864
 
 	.global func_ov36_021858f0
 	arm_func_start func_ov36_021858f0
@@ -11228,8 +11228,8 @@ _02185af4:
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021858f0
 _02185b14: .word 0x00000ccd
+	arm_func_end func_ov36_021858f0
 
 	.global func_ov36_02185b18
 	arm_func_start func_ov36_02185b18
@@ -11260,8 +11260,8 @@ _02185b50:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185b18
 _02185b78: .word data_027e0e58
+	arm_func_end func_ov36_02185b18
 
 	.global func_ov36_02185b7c
 	arm_func_start func_ov36_02185b7c
@@ -11331,11 +11331,11 @@ _02185bc0:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185b7c
 _02185c74: .word 0xffffe99a
 _02185c78: .word 0x00001666
 _02185c7c: .word func_ov36_0217bdb4
 _02185c80: .word data_027e0e58
+	arm_func_end func_ov36_02185b7c
 
 	.global func_ov36_02185c84
 	arm_func_start func_ov36_02185c84
@@ -11478,12 +11478,12 @@ _02185da4:
 	add sp, sp, #0x68
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185c84
 _02185ea4: .word 0x00001333
 _02185ea8: .word 0x00000266
 _02185eac: .word 0xfffff19a
 _02185eb0: .word data_027e0e58
 _02185eb4: .word 0x00000e66
+	arm_func_end func_ov36_02185c84
 
 	.global func_ov36_02185eb8
 	arm_func_start func_ov36_02185eb8
@@ -11550,12 +11550,12 @@ func_ov36_02185eb8: ; 0x02185eb8
 	add sp, sp, #0x2c
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185eb8
 _02185fac: .word 0xfffff19a
 _02185fb0: .word 0x00000266
 _02185fb4: .word 0x00001333
 _02185fb8: .word data_027e0e58
 _02185fbc: .word 0x00000e66
+	arm_func_end func_ov36_02185eb8
 
 	.global func_ov36_02185fc0
 	arm_func_start func_ov36_02185fc0
@@ -11602,8 +11602,8 @@ func_ov36_02185ffc: ; 0x02185ffc
 	bl func_ov36_0218602c
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02185ffc
 _02186028: .word data_027e0fe0
+	arm_func_end func_ov36_02185ffc
 
 	.global func_ov36_0218602c
 	arm_func_start func_ov36_0218602c
@@ -11627,8 +11627,8 @@ func_ov36_0218602c: ; 0x0218602c
 	str r1, [r4, #0x178]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end func_ov36_0218602c
 _02186074: .word data_ov36_02186eec
+	arm_func_end func_ov36_0218602c
 
 	.global func_ov36_02186078
 	arm_func_start func_ov36_02186078
@@ -11786,11 +11786,11 @@ _021861c8:
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02186110
 _021862a8: .word 0x00001004
 _021862ac: .word data_027e0d0c
 _021862b0: .word 0x00001007
 _021862b4: .word data_02050f54
+	arm_func_end func_ov36_02186110
 
 	.global func_ov36_021862b8
 	arm_func_start func_ov36_021862b8
@@ -12032,11 +12032,11 @@ _02186620:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov36_021862b8
 _02186638: .word data_027e0e58
 _0218663c: .word 0x00000333
 _02186640: .word data_027e0fe4
 _02186644: .word data_ov36_02186ba8
+	arm_func_end func_ov36_021862b8
 
 	.global func_ov36_02186648
 	arm_func_start func_ov36_02186648
@@ -12063,9 +12063,9 @@ _02186688:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02186648
 _02186690: .word 0x424f4d42
 _02186694: .word 0x424d5459
+	arm_func_end func_ov36_02186648
 
 	.rodata
 	.global data_ov36_02186698
@@ -12923,12 +12923,12 @@ func_ov36_02186bb4: ; 0x02186bb4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02186bb4
 _02186be0: .word data_ov36_02186fac
 _02186be4: .word 0x50574253
 _02186be8: .word func_ov36_0217bd80
 _02186bec: .word _ZN9ActorTypeD1Ev
 _02186bf0: .word data_ov36_02186fa0
+	arm_func_end func_ov36_02186bb4
 
 	.global func_ov36_02186bf4
 	arm_func_start func_ov36_02186bf4
@@ -12945,12 +12945,12 @@ func_ov36_02186bf4: ; 0x02186bf4
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end func_ov36_02186bf4
 _02186c20: .word data_ov36_02186fcc
 _02186c24: .word 0x50424652
 _02186c28: .word func_ov36_02185ffc
 _02186c2c: .word _ZN9ActorTypeD1Ev
 _02186c30: .word data_ov36_02186fc0
+	arm_func_end func_ov36_02186bf4
 
 	.section .ctor, 4, 1, 4
 	.global data_ov36_02186c34

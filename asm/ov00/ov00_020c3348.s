@@ -53,9 +53,9 @@ _020c33a2:
 	str r0, [r1]
 	pop {r4, pc}
 	.align 2, 0
-	thumb_func_end func_ov00_020c3388
 _020c33a8: .word data_027e0ce0
 _020c33ac: .word data_027e0fe0
+	thumb_func_end func_ov00_020c3388
 
 	.global func_ov00_020c33b0
 	thumb_func_start func_ov00_020c33b0
@@ -75,8 +75,8 @@ _020c33c6:
 	str r1, [r0]
 	pop {r4, pc}
 	nop
-	thumb_func_end func_ov00_020c33b0
 _020c33d0: .word data_027e0fe0
+	thumb_func_end func_ov00_020c33b0
 
     .rodata
 	.global data_ov00_020dd3f8

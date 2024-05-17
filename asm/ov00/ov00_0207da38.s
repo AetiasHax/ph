@@ -347,9 +347,9 @@ _0208136c:
 	add sp, sp, #0x10
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_020812bc
 _02081380: .word 0x15555555
 _02081384: .word 0xcccccccd
+	arm_func_end func_ov00_020812bc
 
 	.global func_ov00_02081388
 	arm_func_start func_ov00_02081388
@@ -525,10 +525,10 @@ _020815d4:
 	add sp, sp, #0x10
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_02081524
 _020815e8: .word 0x0ccccccc
 _020815ec: .word 0x04444444
 _020815f0: .word 0xcccccccd
+	arm_func_end func_ov00_02081524
 
 	.global func_ov00_020815f4
 	arm_func_start func_ov00_020815f4
@@ -723,10 +723,10 @@ _0208188c:
 	add sp, sp, #0x10
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_020817dc
 _020818a0: .word 0x0aaaaaaa
 _020818a4: .word 0x038e38e3
 _020818a8: .word 0xcccccccd
+	arm_func_end func_ov00_020817dc
 
 	.global func_ov00_020818ac
 	arm_func_start func_ov00_020818ac
@@ -920,10 +920,10 @@ _02081b40:
 	add sp, sp, #0x10
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_02081a90
 _02081b54: .word 0x09249249
 _02081b58: .word 0x030c30c3
 _02081b5c: .word 0xcccccccd
+	arm_func_end func_ov00_02081a90
 
 	.global func_ov00_02081b60
 	arm_func_start func_ov00_02081b60
@@ -1018,9 +1018,9 @@ _02081c34:
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov00_02081c18
 _02081c58: .word 0x09249249
 _02081c5c: .word data_027e0ce0
+	arm_func_end func_ov00_02081c18
 
 	.global func_ov00_02081c60
 	arm_func_start func_ov00_02081c60
@@ -1082,9 +1082,9 @@ _02081cec:
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov00_02081cd0
 _02081d10: .word 0x0aaaaaaa
 _02081d14: .word data_027e0ce0
+	arm_func_end func_ov00_02081cd0
 
 	.global func_ov00_02081d18
 	arm_func_start func_ov00_02081d18
@@ -1146,9 +1146,9 @@ _02081da4:
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov00_02081d88
 _02081dc8: .word 0x0ccccccc
 _02081dcc: .word data_027e0ce0
+	arm_func_end func_ov00_02081d88
 
 	.global func_ov00_02081dd0
 	arm_func_start func_ov00_02081dd0
@@ -1208,8 +1208,8 @@ _02081e58:
 	str r4, [r5, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end func_ov00_02081e3c
 _02081e78: .word data_027e0ce0
+	arm_func_end func_ov00_02081e3c
 
 	.global func_ov00_02081e7c
 	arm_func_start func_ov00_02081e7c
@@ -1301,8 +1301,8 @@ func_ov00_02081ef4: ; 0x02081ef4
 	strb r2, [r0, #0x5d]
 	bx lr
 	.align 2, 0
-	arm_func_end func_ov00_02081ef4
 _02081f34: .word 0x0000ffff
+	arm_func_end func_ov00_02081ef4
 
 	.global func_ov00_02081f38
 	arm_func_start func_ov00_02081f38
@@ -1390,7 +1390,6 @@ _02081fcc:
 _02081fe4:
 	cmp r0, #0x38
 	bne _02081ffc
-	arm_func_end func_ov00_02081f80
 _02081fec:
 	mov r0, r4
 	ldr r1, [r0]
@@ -1399,6 +1398,7 @@ _02081fec:
 _02081ffc:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
+	arm_func_end func_ov00_02081f80
 
 	.global func_ov00_02082004
 	arm_func_start func_ov00_02082004
@@ -1442,7 +1442,6 @@ _02082054:
 _02082064:
 	cmp r0, #0x1c
 	bne _0208207c
-	arm_func_end func_ov00_02082014
 _0208206c:
 	mov r0, r4
 	ldr r1, [r0]
@@ -1451,6 +1450,7 @@ _0208206c:
 _0208207c:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
+	arm_func_end func_ov00_02082014
 
 	.global func_ov00_02082084
 	arm_func_start func_ov00_02082084

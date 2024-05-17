@@ -49,10 +49,10 @@ _ZN13LinkStateMove20CreateDebugHierarchyEv: ; 0x020a8e10
 	add sp, #0x14
 	pop {r4, r5, pc}
 	nop
-	thumb_func_end _ZN13LinkStateMove20CreateDebugHierarchyEv
 _020a8e4c: .word data_ov00_020e5744
 _020a8e50: .word 0x4c4d4f56
 _020a8e54: .word data_ov00_020e56f0
+	thumb_func_end _ZN13LinkStateMove20CreateDebugHierarchyEv
 
 	.global _ZN13LinkStateMove12OnStateEnterEv
 	arm_func_start _ZN13LinkStateMove12OnStateEnterEv
@@ -86,8 +86,8 @@ _ZN13LinkStateMove12OnStateEnterEv: ; 0x020a8e58
 	bl func_ov00_020d77e4
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateMove12OnStateEnterEv
 _020a8ec8: .word data_ov00_020eec9c
+	arm_func_end _ZN13LinkStateMove12OnStateEnterEv
 
 	.global _ZN13LinkStateMove12OnStateLeaveEi
 	arm_func_start _ZN13LinkStateMove12OnStateLeaveEi
@@ -136,8 +136,8 @@ _ZN13LinkStateMove18func_ov00_020a8f2cEv: ; 0x020a8f2c
 	movle r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN13LinkStateMove18func_ov00_020a8f2cEv
 _020a8f48: .word data_ov00_020e56f0
+	arm_func_end _ZN13LinkStateMove18func_ov00_020a8f2cEv
 
 	.global _ZN13LinkStateMove18func_ov00_020a8f4cEv
 	arm_func_start _ZN13LinkStateMove18func_ov00_020a8f4cEv

@@ -120,10 +120,10 @@ _020c3560:
 	blo _020c34e8
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
-	arm_func_end _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 _020c3570: .word data_027e103c
 _020c3574: .word data_027e077c
 _020c3578: .word data_02056be4
+	arm_func_end _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
 
 	.global _ZN12ActorManager14Actor_vfunc_10Ej
 	arm_func_start _ZN12ActorManager14Actor_vfunc_10Ej
@@ -446,8 +446,8 @@ _ZN12ActorManager18func_ov00_020c398cEv: ; 0x020c398c
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN12ActorManager18func_ov00_020c398cEv
 _020c3998: .word func_ov00_020c3f08
+	arm_func_end _ZN12ActorManager18func_ov00_020c398cEv
 
 	.global _ZN12ActorManager18func_ov00_020c399cEv
 	arm_func_start _ZN12ActorManager18func_ov00_020c399cEv
@@ -456,8 +456,8 @@ _ZN12ActorManager18func_ov00_020c399cEv: ; 0x020c399c
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN12ActorManager18func_ov00_020c399cEv
 _020c39a8: .word func_ov00_020c3f3c
+	arm_func_end _ZN12ActorManager18func_ov00_020c399cEv
 
 	.global _ZN12ActorManager18func_ov00_020c39acEjPjb
 	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPjb
@@ -694,8 +694,8 @@ _020c3cd8:
 	add sp, sp, #0xd4
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN12ActorManager18func_ov00_020c3bb0EiPi
 _020c3ce4: .word gMapManager
+	arm_func_end _ZN12ActorManager18func_ov00_020c3bb0EiPi
 
 	.global _ZN12ActorManager18func_ov00_020c3ce8Eii
 	arm_func_start _ZN12ActorManager18func_ov00_020c3ce8Eii
@@ -762,8 +762,8 @@ _020c3db0:
 	add sp, sp, #0xcc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-	arm_func_end _ZN12ActorManager18func_ov00_020c3ce8Eii
 _020c3dcc: .word gMapManager
+	arm_func_end _ZN12ActorManager18func_ov00_020c3ce8Eii
 
 	.global _ZN12ActorManager14Actor_vfunc_28Ev
 	arm_func_start _ZN12ActorManager14Actor_vfunc_28Ev
@@ -810,8 +810,8 @@ _020c3e48:
 	mov r0, r3
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN12ActorManager16ActorTypeIsOneOfEjPj
 _020c3e50: .word 0x4e554c4c
+	arm_func_end _ZN12ActorManager16ActorTypeIsOneOfEjPj
 
     .data
 	.global data_ov00_020e72a8

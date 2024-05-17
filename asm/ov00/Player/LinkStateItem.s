@@ -156,10 +156,10 @@ _020abf38:
 	strb r0, [r5, #0x26]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN13LinkStateItem12OnStateLeaveEi
 _020abf44: .word data_027e103c
 _020abf48: .word data_027e1098
 _020abf4c: .word data_027e0fb8
+	arm_func_end _ZN13LinkStateItem12OnStateLeaveEi
 
 	.global _ZN13LinkStateItem15GetEquipBombchuEv
 	arm_func_start _ZN13LinkStateItem15GetEquipBombchuEv
@@ -168,8 +168,8 @@ _ZN13LinkStateItem15GetEquipBombchuEv: ; 0x020abf50
 	mov r0, #7
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateItem15GetEquipBombchuEv
 _020abf5c: .word func_01fffcec
+	arm_func_end _ZN13LinkStateItem15GetEquipBombchuEv
 
 	.global _ZN13LinkStateItem16GetLinkStateMoveEv
 	arm_func_start _ZN13LinkStateItem16GetLinkStateMoveEv
@@ -178,8 +178,8 @@ _ZN13LinkStateItem16GetLinkStateMoveEv: ; 0x020abf60
 	mov r0, #0
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateItem16GetLinkStateMoveEv
 _020abf6c: .word func_01fffcd8
+	arm_func_end _ZN13LinkStateItem16GetLinkStateMoveEv
 
 	.global _ZN13LinkStateItem18func_ov00_020abf70Ev
 	arm_func_start _ZN13LinkStateItem18func_ov00_020abf70Ev
@@ -191,9 +191,9 @@ _ZN13LinkStateItem18func_ov00_020abf70Ev: ; 0x020abf70
 	ldr r1, [r2, #0x5c]
 	bx ip
 	.align 2, 0
-	arm_func_end _ZN13LinkStateItem18func_ov00_020abf70Ev
 _020abf88: .word gAdventureFlags
 _020abf8c: .word _ZN14AdventureFlags18func_ov00_02097b9cEv
+	arm_func_end _ZN13LinkStateItem18func_ov00_020abf70Ev
 
 	.global _ZN13LinkStateItem8vfunc_28Ev
 	arm_func_start _ZN13LinkStateItem8vfunc_28Ev

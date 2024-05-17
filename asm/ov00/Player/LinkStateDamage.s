@@ -230,7 +230,6 @@ _ZN15LinkStateDamage20CreateDebugHierarchyEv: ; 0x020abfa8
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
-	thumb_func_end _ZN15LinkStateDamage20CreateDebugHierarchyEv
 _020ac178: .word data_ov00_020e5aac
 _020ac17c: .word data_ov00_020e5bac
 _020ac180: .word 0x4c444d47
@@ -249,6 +248,7 @@ _020ac1b0: .word data_ov00_020e5c34
 _020ac1b4: .word data_ov00_020e5aec
 _020ac1b8: .word data_ov00_020e5c44
 _020ac1bc: .word data_ov00_020e5ae0
+	thumb_func_end _ZN15LinkStateDamage20CreateDebugHierarchyEv
 
 	.global _ZN15LinkStateDamage12OnStateEnterEv
 	arm_func_start _ZN15LinkStateDamage12OnStateEnterEv
@@ -652,7 +652,6 @@ _020ac788:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage12OnStateEnterEv
 _020ac798: .word 0x0000023d
 _020ac79c: .word data_ov00_020e5b50
 _020ac7a0: .word data_ov00_020eec9c
@@ -675,6 +674,7 @@ _020ac7e0: .word data_027e0db0
 _020ac7e4: .word gAdventureFlags
 _020ac7e8: .word data_027e077c
 _020ac7ec: .word data_02056be4
+	arm_func_end _ZN15LinkStateDamage12OnStateEnterEv
 
 	.global _ZN15LinkStateDamage12OnStateLeaveEi
 	arm_func_start _ZN15LinkStateDamage12OnStateLeaveEi
@@ -808,12 +808,12 @@ _020ac9bc:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage12OnStateLeaveEi
 _020ac9d0: .word data_027e0e58
 _020ac9d4: .word data_ov00_020eec9c
 _020ac9d8: .word data_027e0618
 _020ac9dc: .word gItemManager
 _020ac9e0: .word gAdventureFlags
+	arm_func_end _ZN15LinkStateDamage12OnStateLeaveEi
 
 	.global _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
@@ -846,8 +846,8 @@ _020aca1c:
 	bl func_ov05_0210f7b8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 _020aca4c: .word data_027e0d38
+	arm_func_end _ZN15LinkStateDamage18func_ov00_020ac9e4Ei
 
 	.global _ZN15LinkStateDamage18func_ov00_020aca50Ev
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020aca50Ev
@@ -899,9 +899,9 @@ _ZN15LinkStateDamage18func_ov00_020aca94Ev: ; 0x020aca94
 	bl func_02019534
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage18func_ov00_020aca94Ev
 _020acaf4: .word data_ov00_020dc560
 _020acaf8: .word data_ov00_020e9360
+	arm_func_end _ZN15LinkStateDamage18func_ov00_020aca94Ev
 
 	.global _ZN15LinkStateDamage8vfunc_30Ei
 	arm_func_start _ZN15LinkStateDamage8vfunc_30Ei
@@ -933,9 +933,9 @@ _ZN15LinkStateDamage8vfunc_30Ei: ; 0x020acafc
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage8vfunc_30Ei
 _020acb64: .word _ZN15LinkStateDamage18func_ov00_020aca50Ev - 1
 _020acb68: .word data_ov00_020e9c88
+	arm_func_end _ZN15LinkStateDamage8vfunc_30Ei
 
 	.global _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
@@ -1145,7 +1145,6 @@ _020ace44:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 _020ace70: .word data_027e0618
 _020ace74: .word gItemManager
 _020ace78: .word 0x0000028f
@@ -1154,6 +1153,7 @@ _020ace80: .word 0x00000548
 _020ace84: .word 0x0000019a
 _020ace88: .word 0x00000266
 _020ace8c: .word 0x00000333
+	arm_func_end _ZN15LinkStateDamage18func_ov00_020acb6cEP5Vec3pi
 
 	.global _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi
@@ -1260,9 +1260,9 @@ _020acfd8:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage8vfunc_20Ei
 _020acfe0: .word data_027e0618
 _020acfe4: .word gItemManager
+	arm_func_end _ZN15LinkStateDamage8vfunc_20Ei
 
 	.global _ZN15LinkStateDamage18func_ov00_020acfe8Eb
 	arm_func_start _ZN15LinkStateDamage18func_ov00_020acfe8Eb
@@ -1279,9 +1279,9 @@ _020ad004:
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-	arm_func_end _ZN15LinkStateDamage18func_ov00_020acfe8Eb
 _020ad010: .word data_ov00_020e5b00
 _020ad014: .word data_ov00_020e5af0
+	arm_func_end _ZN15LinkStateDamage18func_ov00_020acfe8Eb
 
 	.global _ZN15LinkStateDamage5GetIdEv
 	arm_func_start _ZN15LinkStateDamage5GetIdEv

@@ -18,8 +18,8 @@ _ZN9ActorTypeC1EjPFP5ActorvEPv: ; 0x0203e784
 	str r4, [r1, #4]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-	arm_func_end _ZN9ActorTypeC1EjPFP5ActorvEPv
 _0203e7b0: .word sActorTypeList
+	arm_func_end _ZN9ActorTypeC1EjPFP5ActorvEPv
 
 	.global _ZN9ActorTypeD1Ev
 	arm_func_start _ZN9ActorTypeD1Ev
@@ -60,9 +60,9 @@ _0203e808:
 	str r0, [r2]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN9ActorType8RegisterEv
 _0203e810: .word sActorTypeList
 _0203e814: .word sActorTypeList
+	arm_func_end _ZN9ActorType8RegisterEv
 
 	.global _ZN9ActorType10UnregisterEv
 	arm_func_start _ZN9ActorType10UnregisterEv
@@ -88,9 +88,9 @@ _0203e84c:
 	strne r1, [r0, #0x10]
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN9ActorType10UnregisterEv
 _0203e860: .word sActorTypeList
 _0203e864: .word sActorTypeList
+	arm_func_end _ZN9ActorType10UnregisterEv
 
 	.global _ZN9ActorType4FindEj
 	arm_func_start _ZN9ActorType4FindEj
@@ -111,8 +111,8 @@ _0203e894:
 	mov r0, #0
 	bx lr
 	.align 2, 0
-	arm_func_end _ZN9ActorType4FindEj
 _0203e89c: .word sActorTypeList
+	arm_func_end _ZN9ActorType4FindEj
 
     .bss
 	.global sActorTypeList
