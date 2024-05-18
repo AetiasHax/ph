@@ -51,7 +51,7 @@ _020ad840:
 	cmp r0, #0
 	beq _020ad860
 	mov r1, r5
-	bl func_ov00_020bbd80
+	bl _ZN14PlayerLinkBase18func_ov00_020bbd80Ei
 	cmp r0, #0
 	beq _020ad874
 _020ad860:

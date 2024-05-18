@@ -1,4 +1,5 @@
 #include "Item/ItemManager.hpp"
+#include "Player/PlayerLinkBase.hpp"
 
 static const char *sShipPartTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
 
@@ -237,8 +238,7 @@ extern void *data_027e10a4;
 extern "C" bool func_ov15_02136670(void *param1);
 extern unk8 data_ov29_0217a4ac[];
 extern "C" bool _ZN10MapManager18func_ov00_020849f8Ei(void *param1);
-extern unk32 data_027e0fc8;
-extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
+extern "C" bool _ZN14PlayerLinkBase18func_ov00_020bbd80Ei(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
 extern "C" void _ZN11ItemManager12GetEquipItemEi();
 ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
@@ -258,7 +258,7 @@ ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
     if (
         mEquippedItem != ItemFlag_None &&
         (unk2 || (u32) mEquippedItem - 9 <= 1) &&
-        (data_027e0fc8 == 0 || func_ov00_020bbd80(data_027e0fc8, param1)) &&
+        (gPlayerLink == 0 || gPlayerLink->func_ov00_020bbd80(param1)) &&
         this->HasItem(mEquippedItem)
     ) {
         equipId = mEquippedItem;

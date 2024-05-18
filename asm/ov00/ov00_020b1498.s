@@ -13389,9 +13389,9 @@ func_ov00_020bbd60: ; 0x020bbd60
 _020bbd7c: .word data_027e0fd4
 	arm_func_end func_ov00_020bbd60
 
-	.global func_ov00_020bbd80
-	arm_func_start func_ov00_020bbd80
-func_ov00_020bbd80: ; 0x020bbd80
+	.global _ZN14PlayerLinkBase18func_ov00_020bbd80Ei
+	arm_func_start _ZN14PlayerLinkBase18func_ov00_020bbd80Ei
+_ZN14PlayerLinkBase18func_ov00_020bbd80Ei: ; 0x020bbd80
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r2, _020bbe80 ; =gOverlayManager
 	ldr r3, _020bbe84 ; =0x00000005
@@ -13467,7 +13467,7 @@ _020bbe84: .word 0x00000005
 _020bbe88: .word data_027e0fd4
 _020bbe8c: .word data_027e0fe4
 _020bbe90: .word 0x424f4d42
-	arm_func_end func_ov00_020bbd80
+	arm_func_end _ZN14PlayerLinkBase18func_ov00_020bbd80Ei
 
 	.global func_ov00_020bbe94
 	arm_func_start func_ov00_020bbe94

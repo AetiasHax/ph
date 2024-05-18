@@ -75,6 +75,7 @@ public:
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
 
+    bool func_ov00_020bbd80(s32 param1);
     void func_ov00_020bc854(Vec3p *param1);
 };
 
