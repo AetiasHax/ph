@@ -6210,7 +6210,7 @@ _02180d14:
 	bl _ZN5Actor18CollidesWithPlayerEj
 	cmp r0, #0
 	beq _02180dc8
-	ldr r0, _02180df4 ; =data_027e0fc8
+	ldr r0, _02180df4 ; =gPlayerLink
 	mov r5, #0
 	ldr r0, [r0]
 	ldr r1, [r0]
@@ -6243,7 +6243,7 @@ _02180d8c:
 	cmp r5, #0
 	bne _02180dc8
 	mov r3, #0
-	ldr r0, _02180df4 ; =data_027e0fc8
+	ldr r0, _02180df4 ; =gPlayerLink
 	str r3, [sp]
 	ldr r0, [r0]
 	add r2, r4, #8
@@ -6269,7 +6269,7 @@ _02180dec:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_02180df4: .word data_027e0fc8
+_02180df4: .word gPlayerLink
 	arm_func_end func_ov32_02180c7c
 
 	.global func_ov32_02180df8

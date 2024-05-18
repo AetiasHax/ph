@@ -19,6 +19,7 @@ enum PlayerCharacter_ {
 };
 
 class PlayerLinkBase: public PlayerBase {
+public:
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
     /* 20 */ Vec3p mVel;
@@ -73,4 +74,8 @@ class PlayerLinkBase: public PlayerBase {
     /* 80 */ virtual void SetUnk_5e();
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
+
+    void func_ov00_020bc854(Vec3p *param1);
 };
+
+extern PlayerLinkBase *gPlayerLink;

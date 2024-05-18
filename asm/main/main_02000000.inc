@@ -121,7 +121,7 @@
 .extern data_027e0f84
 .extern data_027e0f8c
 .extern data_027e0f94
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fe0
 .extern data_027e0fe4
 .extern data_027e0ffc

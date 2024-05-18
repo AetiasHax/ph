@@ -2312,13 +2312,13 @@ func_ov52_0219726c: ; 0x0219726c
 	cmp r0, #0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r3, r4, pc}
-	ldr r0, _02197308 ; =data_027e0fc8
+	ldr r0, _02197308 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc500
 	cmp r0, #6
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r3, r4, pc}
-	ldr r0, _02197308 ; =data_027e0fc8
+	ldr r0, _02197308 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bd318
 	cmp r0, #0
@@ -2329,7 +2329,7 @@ func_ov52_0219726c: ; 0x0219726c
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02197308: .word data_027e0fc8
+_02197308: .word gPlayerLink
 	arm_func_end func_ov52_0219726c
 
 	.global func_ov52_0219730c
@@ -2574,7 +2574,7 @@ _021975fc:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 _02197604:
-	ldr r0, _02197660 ; =data_027e0fc8
+	ldr r0, _02197660 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc500
 	cmp r0, #6
@@ -2588,7 +2588,7 @@ _02197604:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 _02197638:
-	ldr r0, _02197660 ; =data_027e0fc8
+	ldr r0, _02197660 ; =gPlayerLink
 	mov r1, #0x2b
 	ldr r0, [r0]
 	bl func_ov00_020bce48
@@ -2600,7 +2600,7 @@ _02197658:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02197660: .word data_027e0fc8
+_02197660: .word gPlayerLink
 	arm_func_end func_ov52_021975bc
 
 	.global func_ov52_02197664

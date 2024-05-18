@@ -77,7 +77,7 @@
 .extern data_027e0f78
 .extern data_027e0fa0
 .extern data_027e0fb8
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fe0
 .extern data_027e0fe4
 .extern data_027e0fe8

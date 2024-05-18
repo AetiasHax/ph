@@ -4010,8 +4010,8 @@ data_027e0fc0:
 	.global data_027e0fc4
 data_027e0fc4:
 	.space 0x4
-	.global data_027e0fc8
-data_027e0fc8:
+	.global gPlayerLink
+gPlayerLink:
 	.space 0x4
 	.global data_027e0fcc
 data_027e0fcc:

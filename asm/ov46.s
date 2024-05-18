@@ -1315,7 +1315,7 @@ _021910c8:
 	cmp r1, #0
 	bne _02191258
 	ldrsh r1, [r0, #0xce]
-	ldr r0, _021912ac ; =data_027e0fc8
+	ldr r0, _021912ac ; =gPlayerLink
 	ldr r4, [r0]
 	cmp r1, #4
 	addls pc, pc, r1, lsl #2
@@ -1430,7 +1430,7 @@ _02191260:
 	add r1, sp, #0x10
 	ldr r2, [r2, #0x34]
 	blx r2
-	ldr r0, _021912ac ; =data_027e0fc8
+	ldr r0, _021912ac ; =gPlayerLink
 	add r1, sp, #0x10
 	ldr r0, [r0]
 	mov r2, #0x400
@@ -1440,7 +1440,7 @@ _02191260:
 	.align 2, 0
 _021912a4: .word 0x00000aab
 _021912a8: .word 0x00000133
-_021912ac: .word data_027e0fc8
+_021912ac: .word gPlayerLink
 _021912b0: .word data_027e0fcc
 	arm_func_end func_ov46_02190f54
 

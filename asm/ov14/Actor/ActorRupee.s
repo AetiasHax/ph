@@ -351,7 +351,7 @@ _ZN10ActorRupee6UpdateEb: ; 0x0213b254
 	bl _ZN10ActorRupee22GetRupeeCutsceneItemIdEv
 	movs r1, r0
 	bmi _0213b2f8
-	ldr r0, _0213b50c ; =data_027e0fc8
+	ldr r0, _0213b50c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bce48
 	cmp r0, #0
@@ -454,7 +454,7 @@ _0213b42c:
 	bl _ZN10ActorRupee18func_ov14_0213b204Ei
 	b _0213b4fc
 _0213b438:
-	ldr r1, _0213b50c ; =data_027e0fc8
+	ldr r1, _0213b50c ; =gPlayerLink
 	mov r0, r5
 	ldr r4, [r1]
 	bl _ZN10ActorRupee22GetRupeeCutsceneItemIdEv
@@ -513,7 +513,7 @@ _0213b4fc:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0213b50c: .word data_027e0fc8
+_0213b50c: .word gPlayerLink
 _0213b510: .word gItemManager
 _0213b514: .word data_ov00_020eec9c
 _0213b518: .word gMapManager

@@ -615,7 +615,7 @@ _02195d2c:
 	cmp r0, #0
 	addeq sp, sp, #0x3c
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
-	ldr r0, _021960a4 ; =data_027e0fc8
+	ldr r0, _021960a4 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba00
 	cmp r0, #0
@@ -852,7 +852,7 @@ _0219609c:
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_021960a4: .word data_027e0fc8
+_021960a4: .word gPlayerLink
 _021960a8: .word 0x00001333
 _021960ac: .word gAdventureFlags
 _021960b0: .word data_027e0f64
@@ -938,7 +938,7 @@ _02196184:
 	cmp r0, #0
 	addeq sp, sp, #0xbc
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, pc}
-	ldr r0, _021963e8 ; =data_027e0fc8
+	ldr r0, _021963e8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba48
 	add sp, sp, #0xbc
@@ -948,7 +948,7 @@ _021961e4:
 	bl _ZN5Actor9IsGrabbedEv
 	cmp r0, #0
 	beq _02196200
-	ldr r0, _021963e8 ; =data_027e0fc8
+	ldr r0, _021963e8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba48
 _02196200:
@@ -1010,7 +1010,7 @@ _021962c8:
 	bl _ZN5Actor9IsGrabbedEv
 	cmp r0, #0
 	beq _021962e4
-	ldr r0, _021963e8 ; =data_027e0fc8
+	ldr r0, _021963e8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba48
 _021962e4:
@@ -1074,7 +1074,7 @@ _021963ac:
 	cmp r0, #0
 	addeq sp, sp, #0xbc
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, pc}
-	ldr r0, _021963e8 ; =data_027e0fc8
+	ldr r0, _021963e8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba48
 _021963d4:
@@ -1084,7 +1084,7 @@ _021963d4:
 _021963dc: .word data_027e0ffc
 _021963e0: .word 0x00000396
 _021963e4: .word gMapManager
-_021963e8: .word data_027e0fc8
+_021963e8: .word gPlayerLink
 _021963ec: .word gAdventureFlags
 	arm_func_end func_ov50_021960c8
 
@@ -1786,7 +1786,7 @@ func_ov50_02196d28: ; 0x02196d28
 	ldrsh r0, [r2]
 	mov r5, r1
 	bl func_0202bbbc
-	ldr r1, _02196d90 ; =data_027e0fc8
+	ldr r1, _02196d90 ; =gPlayerLink
 	mov r4, r0
 	ldr r0, [r1]
 	bl func_ov00_020bba14
@@ -1808,7 +1808,7 @@ _02196d64:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _02196d8c: .word data_027e0fac
-_02196d90: .word data_027e0fc8
+_02196d90: .word gPlayerLink
 	arm_func_end func_ov50_02196d28
 
 	.global func_ov50_02196d94
@@ -3300,7 +3300,7 @@ _02197ff8:
 	mov r5, lr, lsr #0xc
 	orr r3, r3, r6, lsl #20
 	orr r5, r5, r0, lsl #20
-	ldr ip, _0219858c ; =data_027e0fc8
+	ldr ip, _0219858c ; =gPlayerLink
 	add r2, sp, #0x2c
 	ldr r0, [ip]
 	str r1, [sp, #0x30]
@@ -3620,7 +3620,7 @@ _0219857c: .word data_027e0f94
 _02198580: .word data_027e0764
 _02198584: .word data_02050f54
 _02198588: .word 0x0000019a
-_0219858c: .word data_027e0fc8
+_0219858c: .word gPlayerLink
 _02198590: .word data_027e0fe4
 _02198594: .word 0x52555059
 	arm_func_end func_ov50_02197fd4

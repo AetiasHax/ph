@@ -19432,7 +19432,7 @@ _0210a16c:
 	ldr r0, _0210a474 ; =data_ov04_021104a0
 	str r0, [r5]
 _0210a186:
-	ldr r0, _0210a478 ; =data_027e0fc8
+	ldr r0, _0210a478 ; =gPlayerLink
 	str r5, [r4, #0x6c]
 	str r4, [r0]
 	ldr r0, _0210a47c ; =data_027e0fcc
@@ -19804,7 +19804,7 @@ _0210a468: .word data_02057878
 _0210a46c: .word data_ov04_02110934
 _0210a470: .word data_0205785c
 _0210a474: .word data_ov04_021104a0
-_0210a478: .word data_027e0fc8
+_0210a478: .word gPlayerLink
 _0210a47c: .word data_027e0fcc
 _0210a480: .word data_027e0fd0
 _0210a484: .word data_027e0fd4
@@ -20144,7 +20144,7 @@ _0210a7c4:
 	str r0, [r1]
 	ldr r1, _0210a7ec ; =data_027e0fdc
 	str r0, [r1]
-	ldr r1, _0210a800 ; =data_027e0fc8
+	ldr r1, _0210a800 ; =gPlayerLink
 	str r0, [r1]
 	add r0, r6, #0
 	bl func_ov04_0210b2b0
@@ -20157,7 +20157,7 @@ _0210a7f0: .word data_027e0fd8
 _0210a7f4: .word data_027e0fd4
 _0210a7f8: .word data_027e0fcc
 _0210a7fc: .word data_027e0fd0
-_0210a800: .word data_027e0fc8
+_0210a800: .word gPlayerLink
 	thumb_func_end func_ov04_0210a734
 
 	.global func_ov04_0210a804
@@ -20253,7 +20253,7 @@ _0210a894:
 	str r0, [r1]
 	ldr r1, _0210a8c4 ; =data_027e0fdc
 	str r0, [r1]
-	ldr r1, _0210a8d8 ; =data_027e0fc8
+	ldr r1, _0210a8d8 ; =gPlayerLink
 	str r0, [r1]
 	add r0, r6, #0
 	bl func_ov04_0210b2b0
@@ -20268,7 +20268,7 @@ _0210a8c8: .word data_027e0fd8
 _0210a8cc: .word data_027e0fd4
 _0210a8d0: .word data_027e0fcc
 _0210a8d4: .word data_027e0fd0
-_0210a8d8: .word data_027e0fc8
+_0210a8d8: .word gPlayerLink
 	thumb_func_end func_ov04_0210a804
 
 	.global func_ov04_0210a8dc
@@ -20364,7 +20364,7 @@ _0210a96c:
 	str r0, [r1]
 	ldr r1, _0210a994 ; =data_027e0fdc
 	str r0, [r1]
-	ldr r1, _0210a9a8 ; =data_027e0fc8
+	ldr r1, _0210a9a8 ; =gPlayerLink
 	str r0, [r1]
 	add r0, r6, #0
 	bl func_ov04_0210b2b0
@@ -20377,7 +20377,7 @@ _0210a998: .word data_027e0fd8
 _0210a99c: .word data_027e0fd4
 _0210a9a0: .word data_027e0fcc
 _0210a9a4: .word data_027e0fd0
-_0210a9a8: .word data_027e0fc8
+_0210a9a8: .word gPlayerLink
 	thumb_func_end func_ov04_0210a8dc
 
 	.global func_ov04_0210a9ac

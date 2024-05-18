@@ -829,7 +829,7 @@ _020af810:
 	bl _ZN11ItemManager12GetEquipItemEi
 	mov r5, r0
 _020af8b0:
-	ldr r0, _020afac8 ; =data_027e0fc8
+	ldr r0, _020afac8 ; =gPlayerLink
 	mov r8, #0
 	ldr r1, [r0]
 	cmp r1, #0
@@ -971,7 +971,7 @@ _020afaa8:
 _020afabc: .word gAdventureFlags
 _020afac0: .word data_027e0f90
 _020afac4: .word gItemManager
-_020afac8: .word data_027e0fc8
+_020afac8: .word gPlayerLink
 _020afacc: .word data_027e0fe4
 _020afad0: .word gMapManager
 _020afad4: .word data_027e0f94
@@ -1111,7 +1111,7 @@ _020afc84:
 _020afc9c:
 	cmp r7, #0
 	beq _020afcf4
-	ldr r0, _020afe7c ; =data_027e0fc8
+	ldr r0, _020afe7c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -1190,7 +1190,7 @@ _020afd88:
 _020afdc4:
 	cmp r5, #0
 	beq _020afe10
-	ldr r0, _020afe7c ; =data_027e0fc8
+	ldr r0, _020afe7c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -1239,7 +1239,7 @@ _020afe64:
 _020afe70: .word data_027e0fe4
 _020afe74: .word gItemManager
 _020afe78: .word data_027e0f94
-_020afe7c: .word data_027e0fc8
+_020afe7c: .word gPlayerLink
 _020afe80: .word data_027e0ffc
 _020afe84: .word gMapManager
 	arm_func_end _ZN13PlayerControl18func_ov00_020afb6cEv

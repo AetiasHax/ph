@@ -57,7 +57,7 @@
 .extern __register_global_object
 .extern data_027e0764
 .extern gMapManager
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fe0
 .extern data_ov00_020e9370
 .extern data_ov00_020eec9c

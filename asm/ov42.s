@@ -327,7 +327,7 @@ _02189918:
 	mov r1, #5
 	ldr r0, [r0]
 	blx _ZN11ItemManager14ForceEquipItemEi
-	ldr r1, _02189b00 ; =data_027e0fc8
+	ldr r1, _02189b00 ; =gPlayerLink
 	mov r0, r7
 	ldr r4, [r1]
 	bl func_ov42_02189560
@@ -449,7 +449,7 @@ _02189a74:
 _02189af4: .word gMapManager
 _02189af8: .word data_027e0f64
 _02189afc: .word gItemManager
-_02189b00: .word data_027e0fc8
+_02189b00: .word gPlayerLink
 _02189b04: .word data_ov42_0218c6f4
 _02189b08: .word 0x4d544748
 _02189b0c: .word data_027e0fe8
@@ -608,7 +608,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	ldrb r0, [r4, #0x64]
 	cmp r0, #0
 	bne _02189d64
-	ldr r0, _02189e4c ; =data_027e0fc8
+	ldr r0, _02189e4c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc500
 	cmp r0, #6
@@ -620,7 +620,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	ldr r0, _02189e50 ; =data_027e0fb8
 	strb r3, [r4, #0x64]
 	ldr r1, [r0]
-	ldr r0, _02189e4c ; =data_027e0fc8
+	ldr r0, _02189e4c ; =gPlayerLink
 	strb r3, [r1, #0x79]
 	strb r3, [r1, #0x7b]
 	ldr r0, [r0]
@@ -694,7 +694,7 @@ _02189e44:
 	bl func_ov42_02189e88
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02189e4c: .word data_027e0fc8
+_02189e4c: .word gPlayerLink
 _02189e50: .word data_027e0fb8
 _02189e54: .word data_027e0f94
 _02189e58: .word data_ov00_020eec9c

@@ -61,7 +61,7 @@ _02198da4:
 	bl func_ov00_020a5e9c
 	cmp r0, #0x2f
 	beq _02198e10
-	ldr r0, _02198e24 ; =data_027e0fc8
+	ldr r0, _02198e24 ; =gPlayerLink
 	mov r4, #0
 	ldr r0, [r0]
 	bl func_ov00_020bc500
@@ -85,7 +85,7 @@ _02198e10:
 _02198e18: .word data_027e0fd4
 _02198e1c: .word gItemManager
 _02198e20: .word data_027e0d38
-_02198e24: .word data_027e0fc8
+_02198e24: .word gPlayerLink
 _02198e28: .word data_027e0fd0
 	arm_func_end func_ov59_02198d00
 

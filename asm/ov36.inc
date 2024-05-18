@@ -82,7 +82,7 @@
 .extern data_027e0f90
 .extern data_027e0f94
 .extern data_027e0fa0
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fcc
 .extern data_027e0fd4
 .extern data_027e0fe0

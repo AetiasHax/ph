@@ -400,7 +400,7 @@ _02199138:
 	ldr r0, [r5, #0x34]
 	str r0, [r5, #0x28]
 _02199144:
-	ldr r0, _0219916c ; =data_027e0fc8
+	ldr r0, _0219916c ; =gPlayerLink
 	add r5, #0x20
 	mov r2, #2
 	ldr r0, [r0]
@@ -416,7 +416,7 @@ _0219915c: .word data_027e103c
 _02199160: .word data_ov58_0219b0a0
 _02199164: .word data_027e077c
 _02199168: .word 0x00000333
-_0219916c: .word data_027e0fc8
+_0219916c: .word gPlayerLink
 	thumb_func_end func_ov58_0219906c
 
 	.global func_ov58_02199170
@@ -626,7 +626,7 @@ _02199314:
 	ldmleia sp!, {r3, r4, r5, pc}
 	cmp r4, #0
 	beq _021993e0
-	ldr r0, _021993f8 ; =data_027e0fc8
+	ldr r0, _021993f8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba28
 	cmp r0, #0
@@ -679,7 +679,7 @@ _021993e8: .word gMapManager
 _021993ec: .word data_027e0c54
 _021993f0: .word data_027e0d38
 _021993f4: .word data_027e0fd4
-_021993f8: .word data_027e0fc8
+_021993f8: .word gPlayerLink
 _021993fc: .word data_027e077c
 	arm_func_end func_ov58_021992c4
 

@@ -6626,7 +6626,7 @@ func_ov00_0208c3a4: ; 0x0208c3a4
 	cmp r0, #0
 	movle r0, #0
 	ldmleia sp!, {r3, pc}
-	ldr r0, _0208c464 ; =data_027e0fc8
+	ldr r0, _0208c464 ; =gPlayerLink
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0208c448
@@ -6643,7 +6643,7 @@ _0208c454: .word data_027e0c68
 _0208c458: .word data_027e077c
 _0208c45c: .word data_027e103c
 _0208c460: .word data_027e0f90
-_0208c464: .word data_027e0fc8
+_0208c464: .word gPlayerLink
 	arm_func_end func_ov00_0208c3a4
 
 	.global func_ov00_0208c468
@@ -6671,7 +6671,7 @@ func_ov00_0208c468: ; 0x0208c468
 	cmp r0, #0
 	movle r0, #0
 	ldmleia sp!, {r3, pc}
-	ldr r0, _0208c4f4 ; =data_027e0fc8
+	ldr r0, _0208c4f4 ; =gPlayerLink
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0208c4e0
@@ -6686,7 +6686,7 @@ _0208c4e0:
 _0208c4e8: .word data_027e077c
 _0208c4ec: .word data_027e103c
 _0208c4f0: .word data_027e0f90
-_0208c4f4: .word data_027e0fc8
+_0208c4f4: .word gPlayerLink
 	arm_func_end func_ov00_0208c468
 
 	.global func_ov00_0208c4f8

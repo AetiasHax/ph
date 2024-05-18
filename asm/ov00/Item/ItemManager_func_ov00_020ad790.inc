@@ -46,7 +46,7 @@ _020ad800:
 	cmp r0, #1
 	bhi _020ad874
 _020ad840:
-	lda r0, data_027e0fc8
+	lda r0, gPlayerLink
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _020ad860

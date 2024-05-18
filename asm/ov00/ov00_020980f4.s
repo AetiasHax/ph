@@ -704,7 +704,7 @@ func_ov00_020989a8: ; 0x020989a8
 	bne _02098a34
 	mov r0, #0
 	strb r0, [r4, #0x20]
-	ldr r0, _02098b24 ; =data_027e0fc8
+	ldr r0, _02098b24 ; =gPlayerLink
 	ldrsh r2, [r4, #0x24]
 	ldr r0, [r0]
 	add r1, r4, #0x30
@@ -718,7 +718,7 @@ _02098a04:
 	mov r0, #0
 	strb r0, [r4, #0x20]
 	str r0, [r4, #0x28]
-	ldr r0, _02098b24 ; =data_027e0fc8
+	ldr r0, _02098b24 ; =gPlayerLink
 	ldrsh r2, [r4, #0x24]
 	ldr r0, [r0]
 	add r1, r4, #0x30
@@ -788,7 +788,7 @@ _02098af0:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02098b20: .word data_027e071c
-_02098b24: .word data_027e0fc8
+_02098b24: .word gPlayerLink
 _02098b28: .word data_027e0f90
 _02098b2c: .word data_027e0fe4
 _02098b30: .word data_027e0f68

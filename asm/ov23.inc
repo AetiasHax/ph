@@ -153,7 +153,7 @@
 .extern data_027e0fa0
 .extern data_027e0fac
 .extern data_027e0fb8
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fcc
 .extern data_027e0fd0
 .extern data_027e0fd4

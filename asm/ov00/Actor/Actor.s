@@ -465,14 +465,14 @@ _ZN5Actor18func_ov00_020c195cEv: ; 0x020c195c
 	cmp r1, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}
-	ldr r2, _020c1988 ; =data_027e0fc8
+	ldr r2, _020c1988 ; =gPlayerLink
 	add r1, r0, #0x48
 	ldr r0, [r2]
 	bl func_ov00_020bc854
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_020c1988: .word data_027e0fc8
+_020c1988: .word gPlayerLink
 	arm_func_end _ZN5Actor18func_ov00_020c195cEv
 
 	.global _ZN5Actor18func_ov00_020c198cEv
@@ -506,7 +506,7 @@ _020c19ec:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 _020c19f4:
-	ldr r0, _020c1a2c ; =data_027e0fc8
+	ldr r0, _020c1a2c ; =gPlayerLink
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _020c1a14
@@ -522,7 +522,7 @@ _020c1a1c: .word data_027e077c
 _020c1a20: .word data_02056be4
 _020c1a24: .word data_027e103c
 _020c1a28: .word data_027e0f90
-_020c1a2c: .word data_027e0fc8
+_020c1a2c: .word gPlayerLink
 	arm_func_end _ZN5Actor18func_ov00_020c198cEv
 
 	.global _ZN20KillPickupItemActors6FilterEP5Actor
@@ -1113,7 +1113,7 @@ _020c218c:
 	bl _ZN5Actor18CollidesWithPlayerEj
 	cmp r0, #0
 	beq _020c2218
-	ldr r0, _020c2234 ; =data_027e0fc8
+	ldr r0, _020c2234 ; =gPlayerLink
 	mov r2, r5
 	ldr r0, [r0]
 	mov r1, #0xb
@@ -1152,7 +1152,7 @@ _020c2224: .word gAdventureFlags
 _020c2228: .word data_027e0f94
 _020c222c: .word data_027e0f90
 _020c2230: .word gItemManager
-_020c2234: .word data_027e0fc8
+_020c2234: .word gPlayerLink
 	arm_func_end _ZN5Actor18func_ov00_020c1fc8Ej
 
 	.global _ZN5Actor18CollidesWithShieldEP8Cylinder
@@ -1241,7 +1241,7 @@ _020c2334:
 	ldmneia sp!, {r3, r4, r5, pc}
 _020c2358:
 	tst r4, #8
-	ldrne r0, _020c23c0 ; =data_027e0fc8
+	ldrne r0, _020c23c0 ; =gPlayerLink
 	ldrne r0, [r0]
 	cmpne r0, #0
 	beq _020c2384
@@ -1269,7 +1269,7 @@ _020c23b0:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020c23bc: .word data_027e0f90
-_020c23c0: .word data_027e0fc8
+_020c23c0: .word gPlayerLink
 	arm_func_end _ZN5Actor18CollidesWithPlayerEj
 
 	.global _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
@@ -1641,7 +1641,7 @@ _020c2860: .word data_027e0fb8
 	arm_func_start _ZN5Actor9IsGrabbedEv
 _ZN5Actor9IsGrabbedEv: ; 0x020c2864
 	stmdb sp!, {r4, lr}
-	ldr r1, _020c2888 ; =data_027e0fc8
+	ldr r1, _020c2888 ; =gPlayerLink
 	ldr r4, [r0, #8]
 	ldr r0, [r1]
 	bl func_ov00_020bc7f8
@@ -1650,7 +1650,7 @@ _ZN5Actor9IsGrabbedEv: ; 0x020c2864
 	movne r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_020c2888: .word data_027e0fc8
+_020c2888: .word gPlayerLink
 	arm_func_end _ZN5Actor9IsGrabbedEv
 
 	.global _ZN5Actor12XzDistanceToEP5Vec3p
@@ -1993,7 +1993,7 @@ _ZN5Actor18func_ov00_020c2c70Ev: ; 0x020c2c70
 	bl func_0202d95c
 	b _020c2d00
 _020c2cbc:
-	ldr r0, _020c2d3c ; =data_027e0fc8
+	ldr r0, _020c2d3c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #1
@@ -2028,7 +2028,7 @@ _020c2d00:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020c2d3c: .word data_027e0fc8
+_020c2d3c: .word gPlayerLink
 _020c2d40: .word data_027e0f94
 	arm_func_end _ZN5Actor18func_ov00_020c2c70Ev
 
@@ -2476,7 +2476,7 @@ _ZN5Actor8vfunc_b0Ev: ; 0x020c322c
 	arm_func_start _ZN5Actor10GetLinkPosEP5Vec3p
 _ZN5Actor10GetLinkPosEP5Vec3p: ; 0x020c3230
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _020c3288 ; =data_027e0fc8
+	ldr r2, _020c3288 ; =gPlayerLink
 	mov r5, r0
 	ldr r0, [r2]
 	mov r4, r1
@@ -2499,7 +2499,7 @@ _020c3268:
 	str r0, [r4, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020c3288: .word data_027e0fc8
+_020c3288: .word gPlayerLink
 _020c328c: .word data_027e0f94
 	arm_func_end _ZN5Actor10GetLinkPosEP5Vec3p
 

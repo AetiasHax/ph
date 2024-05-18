@@ -205,7 +205,7 @@
 .extern data_027e0fb0
 .extern data_027e0fb8
 .extern data_027e0fc0
-.extern data_027e0fc8
+.extern gPlayerLink
 .extern data_027e0fcc
 .extern data_027e0fd0
 .extern data_027e0fd4

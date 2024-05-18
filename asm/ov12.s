@@ -7938,24 +7938,24 @@ func_ov12_02119348: ; 0x02119348
 	.global func_ov12_0211934c
 	arm_func_start func_ov12_0211934c
 func_ov12_0211934c: ; 0x0211934c
-	ldr r0, _02119358 ; =data_027e0fc8
+	ldr r0, _02119358 ; =gPlayerLink
 	ldr r0, [r0]
 	bx lr
 	.align 2, 0
-_02119358: .word data_027e0fc8
+_02119358: .word gPlayerLink
 	arm_func_end func_ov12_0211934c
 
 	.global func_ov12_0211935c
 	arm_func_start func_ov12_0211935c
 func_ov12_0211935c: ; 0x0211935c
-	ldr r1, _02119374 ; =data_027e0fc8
+	ldr r1, _02119374 ; =gPlayerLink
 	mov r2, r0
 	ldr r0, [r1]
 	ldr ip, _02119378 ; =func_ov12_0211a748
 	ldr r1, [r2]
 	bx ip
 	.align 2, 0
-_02119374: .word data_027e0fc8
+_02119374: .word gPlayerLink
 _02119378: .word func_ov12_0211a748
 	arm_func_end func_ov12_0211935c
 

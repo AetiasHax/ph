@@ -3266,7 +3266,7 @@ _0218c128:
 	ldr r0, _0218c99c ; =data_ov00_020eec9c
 	mov r1, #0x3a
 	bl func_ov00_020d77e4
-	ldr r0, _0218c9a0 ; =data_027e0fc8
+	ldr r0, _0218c9a0 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #1
@@ -3843,7 +3843,7 @@ _0218c990: .word data_027e0d0c
 _0218c994: .word data_027e0c68
 _0218c998: .word 0x00690330
 _0218c99c: .word data_ov00_020eec9c
-_0218c9a0: .word data_027e0fc8
+_0218c9a0: .word gPlayerLink
 _0218c9a4: .word 0x000c00a4
 _0218c9a8: .word data_027e0764
 _0218c9ac: .word 0x00fffe00
@@ -3945,7 +3945,7 @@ _0218cab4:
 	ldr r0, [r5, #0x3bc]
 	cmp r0, #0
 	beq _0218cb0c
-	ldr r0, _0218cd24 ; =data_027e0fc8
+	ldr r0, _0218cd24 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -3966,7 +3966,7 @@ _0218cb0c:
 	mov r1, #4
 	bl func_ov43_0218b7b8
 _0218cb34:
-	ldr r0, _0218cd24 ; =data_027e0fc8
+	ldr r0, _0218cd24 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -4093,7 +4093,7 @@ _0218cd10:
 	.align 2, 0
 _0218cd1c: .word 0x50424652
 _0218cd20: .word 0x50425a4b
-_0218cd24: .word data_027e0fc8
+_0218cd24: .word gPlayerLink
 _0218cd28: .word data_027e0f64
 _0218cd2c: .word gAdventureFlags
 _0218cd30: .word 0x00000333
@@ -4131,7 +4131,7 @@ func_ov43_0218cd7c: ; 0x0218cd7c
 	mov r10, r0
 	ldrsh r4, [r10, #0x78]
 	mov r8, r2
-	ldr r0, _0218cf84 ; =data_027e0fc8
+	ldr r0, _0218cf84 ; =gPlayerLink
 	strh r4, [r8]
 	ldr r0, [r0]
 	mov r9, r1
@@ -4266,7 +4266,7 @@ _0218cf78:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_0218cf84: .word data_027e0fc8
+_0218cf84: .word gPlayerLink
 _0218cf88: .word data_027e0f94
 _0218cf8c: .word gMapManager
 	arm_func_end func_ov43_0218cd7c
@@ -4295,12 +4295,12 @@ func_ov43_0218cf90: ; 0x0218cf90
 	ldr r0, [r4, #0x130]
 	cmp r0, #7
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _0218d028 ; =data_027e0fc8
+	ldr r0, _0218d028 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #1
 	bne _0218d014
-	ldr r0, _0218d028 ; =data_027e0fc8
+	ldr r0, _0218d028 ; =gPlayerLink
 	mov r1, #0
 	ldr r0, [r0]
 	mov r2, r1
@@ -4314,7 +4314,7 @@ _0218d014:
 	strb r0, [r1, #0x8a8]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d028: .word data_027e0fc8
+_0218d028: .word gPlayerLink
 	arm_func_end func_ov43_0218cf90
 
 	.global func_ov43_0218d02c
@@ -4325,7 +4325,7 @@ func_ov43_0218d02c: ; 0x0218d02c
 	ldrb r0, [r4, #0x3e6]
 	cmp r0, #0
 	beq _0218d054
-	ldr r0, _0218d084 ; =data_027e0fc8
+	ldr r0, _0218d084 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #1
@@ -4334,7 +4334,7 @@ _0218d054:
 	ldrb r0, [r4, #0x3e6]
 	cmp r0, #0
 	bne _0218d07c
-	ldr r0, _0218d084 ; =data_027e0fc8
+	ldr r0, _0218d084 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #1
@@ -4346,7 +4346,7 @@ _0218d07c:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d084: .word data_027e0fc8
+_0218d084: .word gPlayerLink
 	arm_func_end func_ov43_0218d02c
 
 	.global func_ov43_0218d088
@@ -4390,7 +4390,7 @@ _0218d0e4:
 	cmp r2, r1
 	addne sp, sp, #0x1c
 	ldmneia sp!, {r3, r4, pc}
-	ldr r3, _0218d1a0 ; =data_027e0fc8
+	ldr r3, _0218d1a0 ; =gPlayerLink
 	add r0, r0, #0x48
 	add ip, sp, #0x10
 	ldmia r0, {r0, r1, r2}
@@ -4425,7 +4425,7 @@ _0218d168:
 	.align 2, 0
 _0218d198: .word data_027e0fe4
 _0218d19c: .word 0x504c444d
-_0218d1a0: .word data_027e0fc8
+_0218d1a0: .word gPlayerLink
 _0218d1a4: .word data_ov00_020eec9c
 _0218d1a8: .word data_027e0c68
 _0218d1ac: .word 0x000c00a6

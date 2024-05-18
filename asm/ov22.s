@@ -12350,12 +12350,12 @@ _021777f8: .word func_ov22_02177328
 	.global func_ov22_021777fc
 	arm_func_start func_ov22_021777fc
 func_ov22_021777fc: ; 0x021777fc
-	ldr r0, _0217780c ; =data_027e0fc8
+	ldr r0, _0217780c ; =gPlayerLink
 	ldr ip, _02177810 ; =func_ov00_020bbd60
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
-_0217780c: .word data_027e0fc8
+_0217780c: .word gPlayerLink
 _02177810: .word func_ov00_020bbd60
 	arm_func_end func_ov22_021777fc
 

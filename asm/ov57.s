@@ -316,12 +316,12 @@ func_ov57_021990b4: ; 0x021990b4
 	cmp r4, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _021990e8 ; =data_027e0fc8
+	ldr r0, _021990e8 ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bba28
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_021990e8: .word data_027e0fc8
+_021990e8: .word gPlayerLink
 	arm_func_end func_ov57_021990b4
 
 	.global func_ov57_021990ec
