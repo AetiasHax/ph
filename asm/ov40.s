@@ -16725,7 +16725,7 @@ data_ov40_021886a0: ; 0x021886a0
     .word func_ov40_0217d3f8
 	.global data_ov40_021886a4
 data_ov40_021886a4: ; 0x021886a4
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_021886a8
 data_ov40_021886a8: ; 0x021886a8
     .word func_ov40_0217d40c
@@ -18179,7 +18179,7 @@ data_ov40_021891ec: ; 0x021891ec
     .word func_ov40_02184188
 	.global data_ov40_021891f0
 data_ov40_021891f0: ; 0x021891f0
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_021891f4
 data_ov40_021891f4: ; 0x021891f4
     .word func_ov40_0218419c
@@ -18501,7 +18501,7 @@ data_ov40_02189398: ; 0x02189398
     .word func_ov40_0217d3f8
 	.global data_ov40_0218939c
 data_ov40_0218939c: ; 0x0218939c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_021893a0
 data_ov40_021893a0: ; 0x021893a0
     .word func_ov40_02184dc4
@@ -18655,7 +18655,7 @@ data_ov40_02189478: ; 0x02189478
     .word func_ov40_0218502c
 	.global data_ov40_0218947c
 data_ov40_0218947c: ; 0x0218947c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_02189480
 data_ov40_02189480: ; 0x02189480
     .word func_ov40_02185040
@@ -19017,7 +19017,7 @@ data_ov40_02189650: ; 0x02189650
     .word func_ov40_0217d3f8
 	.global data_ov40_02189654
 data_ov40_02189654: ; 0x02189654
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_02189658
 data_ov40_02189658: ; 0x02189658
     .word func_ov40_02185514
@@ -19167,7 +19167,7 @@ data_ov40_02189718: ; 0x02189718
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov40_0218971c
 data_ov40_0218971c: ; 0x0218971c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_02189720
 data_ov40_02189720: ; 0x02189720
     .word _ZN5Actor8vfunc_20Ei
@@ -19579,7 +19579,7 @@ data_ov40_02189948: ; 0x02189948
     .word func_ov40_0217d3f8
 	.global data_ov40_0218994c
 data_ov40_0218994c: ; 0x0218994c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov40_02189950
 data_ov40_02189950: ; 0x02189950
     .word func_ov40_0218755c

@@ -16905,7 +16905,7 @@ data_ov26_0217a080: ; 0x0217a080
     .word func_ov14_02144b64
 	.global data_ov26_0217a084
 data_ov26_0217a084: ; 0x0217a084
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217a088
 data_ov26_0217a088: ; 0x0217a088
     .word func_ov14_02145100
@@ -17100,7 +17100,7 @@ data_ov26_0217a184: ; 0x0217a184
     .word func_ov14_02144b64
 	.global data_ov26_0217a188
 data_ov26_0217a188: ; 0x0217a188
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217a18c
 data_ov26_0217a18c: ; 0x0217a18c
     .word func_ov26_0216dd38
@@ -17295,7 +17295,7 @@ data_ov26_0217a288: ; 0x0217a288
     .word func_ov14_02144b64
 	.global data_ov26_0217a28c
 data_ov26_0217a28c: ; 0x0217a28c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217a290
 data_ov26_0217a290: ; 0x0217a290
     .word func_ov14_02145100
@@ -17490,7 +17490,7 @@ data_ov26_0217a38c: ; 0x0217a38c
     .word func_ov14_02144b64
 	.global data_ov26_0217a390
 data_ov26_0217a390: ; 0x0217a390
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217a394
 data_ov26_0217a394: ; 0x0217a394
     .word func_ov14_02145100
@@ -19599,7 +19599,7 @@ data_ov26_0217aec8: ; 0x0217aec8
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov26_0217aecc
 data_ov26_0217aecc: ; 0x0217aecc
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217aed0
 data_ov26_0217aed0: ; 0x0217aed0
     .word func_ov26_02177ba8 ; func_ov28_02177ba8
@@ -19848,7 +19848,7 @@ data_ov26_0217afa8: ; 0x0217afa8
     .word func_ov26_02177f94
 	.global data_ov26_0217afac
 data_ov26_0217afac: ; 0x0217afac
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217afb0
 data_ov26_0217afb0: ; 0x0217afb0
     .word func_ov26_02177fa8
@@ -20001,7 +20001,7 @@ data_ov26_0217b074: ; 0x0217b074
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov26_0217b078
 data_ov26_0217b078: ; 0x0217b078
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov26_0217b07c
 data_ov26_0217b07c: ; 0x0217b07c
     .word _ZN5Actor8vfunc_20Ei

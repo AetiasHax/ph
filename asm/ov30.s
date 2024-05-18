@@ -18035,7 +18035,7 @@ data_ov30_02189390: ; 0x02189390
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov30_02189394
 data_ov30_02189394: ; 0x02189394
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov30_02189398
 data_ov30_02189398: ; 0x02189398
     .word _ZN5Actor8vfunc_20Ei

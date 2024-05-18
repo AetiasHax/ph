@@ -44952,7 +44952,7 @@ data_ov03_02100894: ; 0x02100894
     .word func_ov03_020fbb34 - 1
 	.global data_ov03_02100898
 data_ov03_02100898: ; 0x02100898
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov03_0210089c
 data_ov03_0210089c: ; 0x0210089c
     .word func_ov03_020fbca8 - 1

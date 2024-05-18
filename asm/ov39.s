@@ -13388,7 +13388,7 @@ data_ov39_02186a50: ; 0x02186a50
     .word func_ov39_0217d704
 	.global data_ov39_02186a54
 data_ov39_02186a54: ; 0x02186a54
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov39_02186a58
 data_ov39_02186a58: ; 0x02186a58
     .word func_ov39_0217dd1c

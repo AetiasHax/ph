@@ -3275,7 +3275,7 @@ data_ov52_02197b50: ; 0x02197b50
     .word func_ov14_02144b64
 	.global data_ov52_02197b54
 data_ov52_02197b54: ; 0x02197b54
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov52_02197b58
 data_ov52_02197b58: ; 0x02197b58
     .word func_ov14_02145100

@@ -50682,7 +50682,7 @@ data_ov12_0213783c: ; 0x0213783c
     .word func_ov00_020d3b44
 	.global data_ov12_02137840
 data_ov12_02137840: ; 0x02137840
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov12_02137844
 data_ov12_02137844: ; 0x02137844
     .word _ZN5Actor8vfunc_20Ei

@@ -16,7 +16,7 @@
 .extern _ZN5Actor6GetPosEv
 .extern _ZN5Actor8vfunc_0cEv
 .extern _ZN5Actor8vfunc_10Ej
-.extern _ZN5Actor8vfunc_1cEt
+.extern _ZN5Actor8vfunc_1cEPt
 .extern _ZN5Actor8vfunc_24Ev
 .extern _ZN5Actor8vfunc_28Ev
 .extern _ZN5Actor8vfunc_2cEv

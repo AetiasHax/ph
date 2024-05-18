@@ -4083,7 +4083,7 @@ data_ov50_02198a1c: ; 0x02198a1c
     .word func_ov50_02195cd4
 	.global data_ov50_02198a20
 data_ov50_02198a20: ; 0x02198a20
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov50_02198a24
 data_ov50_02198a24: ; 0x02198a24
     .word func_ov50_021963f0
@@ -4368,7 +4368,7 @@ data_ov50_02198b98: ; 0x02198b98
     .word func_ov00_020cad30
 	.global data_ov50_02198b9c
 data_ov50_02198b9c: ; 0x02198b9c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov50_02198ba0
 data_ov50_02198ba0: ; 0x02198ba0
     .word func_ov00_020cb1c0

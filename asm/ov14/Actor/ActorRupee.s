@@ -854,7 +854,7 @@ data_ov14_021589fc: ; 0x021589fc
     .word _ZN10ActorRupee8vfunc_18Ej
 	.global data_ov14_02158a00
 data_ov14_02158a00: ; 0x02158a00
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov14_02158a04
 data_ov14_02158a04: ; 0x02158a04
     .word _ZN10ActorRupee8vfunc_20Ei

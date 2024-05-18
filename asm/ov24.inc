@@ -60,7 +60,7 @@
 .extern _ZN5Actor8vfunc_10Ej
 .extern _ZN5Actor8vfunc_14Ej
 .extern _ZN5Actor8vfunc_18Ej
-.extern _ZN5Actor8vfunc_1cEt
+.extern _ZN5Actor8vfunc_1cEPt
 .extern _ZN5Actor8vfunc_24Ev
 .extern _ZN5Actor8vfunc_28Ev
 .extern _ZN5Actor8vfunc_2cEv

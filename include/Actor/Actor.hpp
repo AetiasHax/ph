@@ -66,8 +66,8 @@ public:
     /* 004 */ unk32 mType;
     /* 008 */ unk32 mId;
     /* 00c */ unk32 mIndex;
-    /* 010 */ unk8 mUnk_010;
-    /* 011 */ unk8 mUnk_011;
+    /* 010 */ u8 mUnk_010;
+    /* 011 */ u8 mUnk_011;
     /* 012 */ unk16 mUnk_012;
     /* 014 */ unk32 mUnk_014;
     /* 018 */ unk32 mUnk_018;
@@ -116,7 +116,7 @@ public:
     /* 11b */ unk8 mUnk_11b;
     /* 11c */ unk8 mUnk_11c;
     /* 11d */ unk8 mUnk_11d;
-    /* 11e */ q4 yOffset;
+    /* 11e */ q4 mYOffset;
     /* 120 */ s16 mUnk_120;
     /* 122 */ unk16 mUnk_122;
     /* 124 */ unk8 mUnk_124;
@@ -143,7 +143,7 @@ public:
     /* 10 */ virtual void vfunc_10(u32 param1);
     /* 14 */ virtual void vfunc_14(u32 param1);
     /* 18 */ virtual void vfunc_18(u32 param1);
-    /* 1c */ virtual void vfunc_1c(u16 param1);
+    /* 1c */ virtual void vfunc_1c(u16 *param1);
     /* 20 */ virtual void vfunc_20(s32 param1);
     /* 24 */ virtual void vfunc_24();
     /* 28 */ virtual void vfunc_28();
@@ -184,7 +184,7 @@ public:
     /* b4 */
     
     Actor();
-    void func_ov00_020c1788();
+    unk8 func_ov00_020c1788();
     void SetUnk_129(bool value);
     void SetUnk_11c(unk8 value);
     bool func_ov00_020c195c();

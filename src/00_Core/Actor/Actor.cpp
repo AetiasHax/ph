@@ -1,22 +1,79 @@
 #include "Actor/Actor.hpp"
+#include "Map/MapManager.hpp"
 
-#ifdef STUBS
 
+KILL(_ZN5ActorC1Ev)
 Actor::Actor() {}
 Actor::~Actor() {}
-bool Actor::vfunc_08() {}
+
+bool Actor::vfunc_08() {
+    return true;
+}
+
 void Actor::vfunc_0c() {}
 void Actor::vfunc_10(u32 param1) {}
 void Actor::vfunc_24() {}
 void Actor::vfunc_28() {}
-void Actor::GetOffsetPos(Vec3p *pos) {}
-unk32 Actor::vfunc_38() {}
-void Actor::func_ov00_020c1788() {}
+
+void Actor::GetOffsetPos(Vec3p *pos) {
+    *pos = mPos;
+    pos->y += mYOffset;
+}
+
+extern unk32 func_ov00_02087ef0();
+unk32 Actor::vfunc_38() {
+    return func_ov00_02087ef0();
+}
+
+unk8 Actor::func_ov00_020c1788() {
+    return gMapManager->func_ov00_02083570(mUnk_010, mUnk_011);
+}
+
 s32 Actor::vfunc_2c() {}
 unk32 Actor::vfunc_30() {}
 void Actor::vfunc_14(u32 param1) {}
-void Actor::vfunc_18(u32 param1) {}
-void Actor::vfunc_1c(u16 param1) {}
+
+extern void func_ov00_0207a1c8(Actor_UnkStruct_0a4 *param1, u32 param2, Vec3p *param3);
+void Actor::vfunc_18(u32 param1) {
+    func_ov00_0207a1c8(&mUnk_0a4, param1, &mPos);
+}
+
+struct UnkStruct1 {
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk8 mUnk_08;
+    /* 09 */ unk8 mUnk_09;
+    /* 0a */ unk8 mUnk_0a;
+    /* 0b */ unk8 mUnk_0b;
+    /* 0c */ unk32 mUnk_0c;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk8 mUnk_14;
+    /* 15 */ unk8 mUnk_15;
+    /* 16 */ unk16 mUnk_16;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk32 mUnk_1c;
+    /* 20 */
+};
+extern void *data_027e0d3c;
+extern void *data_02063e4c;
+extern "C" bool func_ov00_02079470(void *param1, Vec3p *param2, unk32 param3, unk32 param4, unk32 *param5, unk32 *param6, unk32 param7, unk32 param8);
+extern "C" void func_01ffbe34(UnkStruct1 *param1);
+extern "C" void func_020313c8(void *param1, unk32 *param2, unk32 *param3, u32 param4, UnkStruct1 *param5);
+void Actor::vfunc_1c(u16 *param1) {
+    unk16 unk1 = mUnk_129 ? mUnk_126 : mUnk_07a;
+    if (unk1 != -1) {
+        if ((*param1 & 4) == 0 && (*param1 & 8) == 0) return;
+        unk32 unk2;
+        unk32 unk3;
+        if (func_ov00_02079470(data_027e0d3c, &mPos, 0, 0, &unk2, &unk3, 0, 0)) {
+            UnkStruct1 unk4;
+            func_01ffbe34(&unk4);
+            unk4.mUnk_04 = 1;
+            func_020313c8(data_02063e4c, &unk2, &unk3, unk1, &unk4);
+        }
+    }
+}
+
 void Actor::vfunc_20(s32 param1) {}
 void Actor::SetUnk_129(bool value) {}
 void Actor::SetUnk_11b() {}
@@ -106,4 +163,3 @@ void Actor::GetLinkPos(Vec3p *result) {}
 void Actor::GetLinkDummyPos(Vec3p *result) {}
 Actor_UnkStruct_09c::Actor_UnkStruct_09c() {}
 
-#endif

@@ -15772,7 +15772,7 @@ data_ov37_02188ac0: ; 0x02188ac0
     .word func_ov37_0217d68c
 	.global data_ov37_02188ac4
 data_ov37_02188ac4: ; 0x02188ac4
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov37_02188ac8
 data_ov37_02188ac8: ; 0x02188ac8
     .word func_ov37_0217f120
@@ -16192,7 +16192,7 @@ data_ov37_02188cec: ; 0x02188cec
     .word func_ov37_0218494c
 	.global data_ov37_02188cf0
 data_ov37_02188cf0: ; 0x02188cf0
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov37_02188cf4
 data_ov37_02188cf4: ; 0x02188cf4
     .word func_ov37_02184bc0
@@ -16333,7 +16333,7 @@ data_ov37_02188da8: ; 0x02188da8
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov37_02188dac
 data_ov37_02188dac: ; 0x02188dac
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov37_02188db0
 data_ov37_02188db0: ; 0x02188db0
     .word _ZN5Actor8vfunc_20Ei
@@ -16474,7 +16474,7 @@ data_ov37_02188e64: ; 0x02188e64
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov37_02188e68
 data_ov37_02188e68: ; 0x02188e68
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov37_02188e6c
 data_ov37_02188e6c: ; 0x02188e6c
     .word _ZN5Actor8vfunc_20Ei
@@ -16711,7 +16711,7 @@ data_ov37_02188fa0: ; 0x02188fa0
     .word func_ov00_020cad30
 	.global data_ov37_02188fa4
 data_ov37_02188fa4: ; 0x02188fa4
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov37_02188fa8
 data_ov37_02188fa8: ; 0x02188fa8
     .word func_ov00_020cb1c0

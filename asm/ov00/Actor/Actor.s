@@ -247,9 +247,9 @@ _ZN5Actor8vfunc_18Ej: ; 0x020c17bc
 _020c17d0: .word func_ov00_0207a1c8
 	arm_func_end _ZN5Actor8vfunc_18Ej
 
-	.global _ZN5Actor8vfunc_1cEt
-	arm_func_start _ZN5Actor8vfunc_1cEt
-_ZN5Actor8vfunc_1cEt: ; 0x020c17d4
+	.global _ZN5Actor8vfunc_1cEPt
+	arm_func_start _ZN5Actor8vfunc_1cEPt
+_ZN5Actor8vfunc_1cEPt: ; 0x020c17d4
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x38
 	mov ip, r0
@@ -300,7 +300,7 @@ _020c181c:
 _020c1888: .word 0x0000ffff
 _020c188c: .word data_027e0d3c
 _020c1890: .word data_02063e4c
-	arm_func_end _ZN5Actor8vfunc_1cEt
+	arm_func_end _ZN5Actor8vfunc_1cEPt
 
 	.global _ZN5Actor8vfunc_20Ei
 	arm_func_start _ZN5Actor8vfunc_20Ei
@@ -2842,7 +2842,7 @@ data_ov00_020e720c: ; 0x020e720c
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov00_020e7210
 data_ov00_020e7210: ; 0x020e7210
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov00_020e7214
 data_ov00_020e7214: ; 0x020e7214
     .word _ZN5Actor8vfunc_20Ei

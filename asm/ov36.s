@@ -13470,7 +13470,7 @@ data_ov36_02186f04: ; 0x02186f04
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov36_02186f08
 data_ov36_02186f08: ; 0x02186f08
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov36_02186f0c
 data_ov36_02186f0c: ; 0x02186f0c
     .word _ZN5Actor8vfunc_20Ei
