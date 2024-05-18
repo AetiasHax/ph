@@ -468,7 +468,7 @@ _ZN5Actor18func_ov00_020c195cEv: ; 0x020c195c
 	ldr r2, _020c1988 ; =gPlayerLink
 	add r1, r0, #0x48
 	ldr r0, [r2]
-	bl func_ov00_020bc854
+	bl _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0

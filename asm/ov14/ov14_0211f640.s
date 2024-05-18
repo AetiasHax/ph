@@ -30714,7 +30714,7 @@ _02138610:
 	ldr r0, _021389c8 ; =gPlayerLink
 	add r1, r5, #0x48
 	ldr r0, [r0]
-	bl func_ov00_020bc854
+	bl _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 	mov r0, r5
 	bl func_ov14_02138d6c
 	add sp, sp, #0xb0
@@ -30987,7 +30987,7 @@ func_ov14_021389d8: ; 0x021389d8
 	ldr r0, _02138a10 ; =gPlayerLink
 	add r1, r4, #0x48
 	ldr r0, [r0]
-	bl func_ov00_020bc854
+	bl _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 	mov r0, r4
 	bl func_ov14_02138d6c
 	ldmia sp!, {r4, pc}

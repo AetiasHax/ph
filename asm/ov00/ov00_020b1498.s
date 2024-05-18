@@ -14262,9 +14262,9 @@ func_ov00_020bc84c: ; 0x020bc84c
 	bx lr
 	arm_func_end func_ov00_020bc84c
 
-	.global func_ov00_020bc854
-	arm_func_start func_ov00_020bc854
-func_ov00_020bc854: ; 0x020bc854
+	.global _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
+	arm_func_start _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
+_ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p: ; 0x020bc854
 	stmdb sp!, {r4, lr}
 	ldr r0, _020bc8ac ; =data_027e0fcc
 	mov r4, r1
@@ -14291,7 +14291,7 @@ func_ov00_020bc854: ; 0x020bc854
 _020bc8ac: .word data_027e0fcc
 _020bc8b0: .word data_027e0f94
 _020bc8b4: .word data_027e0fd0
-	arm_func_end func_ov00_020bc854
+	arm_func_end _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 
 	.global func_ov00_020bc8b8
 	arm_func_start func_ov00_020bc8b8

@@ -409,7 +409,7 @@
 .extern func_ov00_020bbe94
 .extern func_ov00_020bc46c
 .extern func_ov00_020bc494
-.extern func_ov00_020bc854
+.extern _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 .extern func_ov00_020bcdec
 .extern func_ov00_020bce48
 .extern func_ov00_020bd618
