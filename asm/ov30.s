@@ -1545,7 +1545,7 @@ _0217d098: .word 0x43525053
 func_ov30_0217d09c: ; 0x0217d09c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x58
-	ldr r3, _0217d388 ; =data_027e0f90
+	ldr r3, _0217d388 ; =gPlayer
 	mov r7, r0
 	ldr r0, [r3]
 	mov r6, r1
@@ -1742,7 +1742,7 @@ _0217d37c:
 	add sp, sp, #0x58
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_0217d388: .word data_027e0f90
+_0217d388: .word gPlayer
 _0217d38c: .word data_027e0f94
 _0217d390: .word gMapManager
 _0217d394: .word 0xffff8001
@@ -1766,7 +1766,7 @@ func_ov30_0217d3a4: ; 0x0217d3a4
 func_ov30_0217d3b8: ; 0x0217d3b8
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x20
-	ldr r1, _0217d4d8 ; =data_027e0f90
+	ldr r1, _0217d4d8 ; =gPlayer
 	mov r5, r0
 	ldr r0, [r1]
 	ldr r4, _0217d4dc ; =data_027e0f94
@@ -1837,7 +1837,7 @@ func_ov30_0217d3b8: ; 0x0217d3b8
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0217d4d8: .word data_027e0f90
+_0217d4d8: .word gPlayer
 _0217d4dc: .word data_027e0f94
 _0217d4e0: .word gMapManager
 _0217d4e4: .word 0x0000019a
@@ -8197,7 +8197,7 @@ func_ov30_02182454: ; 0x02182454
 	arm_func_start func_ov30_02182474
 func_ov30_02182474: ; 0x02182474
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _021824bc ; =data_027e0f90
+	ldr r1, _021824bc ; =gPlayer
 	mov r5, r0
 	ldr r0, [r1]
 	ldr r4, _021824c0 ; =data_027e0f94
@@ -8215,7 +8215,7 @@ func_ov30_02182474: ; 0x02182474
 	bl func_ov00_020c54a0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_021824bc: .word data_027e0f90
+_021824bc: .word gPlayer
 _021824c0: .word data_027e0f94
 _021824c4: .word 0x00001b33
 _021824c8: .word 0x00001555
@@ -8641,7 +8641,7 @@ func_ov30_02182ae4: ; 0x02182ae4
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _02182b44 ; =data_027e0f90
+	ldr r0, _02182b44 ; =gPlayer
 	mov r1, r6
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -8658,7 +8658,7 @@ func_ov30_02182ae4: ; 0x02182ae4
 	blx ip
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_02182b44: .word data_027e0f90
+_02182b44: .word gPlayer
 _02182b48: .word gPlayerLink
 	arm_func_end func_ov30_02182ae4
 

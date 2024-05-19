@@ -9720,7 +9720,7 @@ _021754f4:
 	mov r1, r1, lsr #0xc
 	orr r1, r1, r0, lsl #20
 	ldr r2, [r3, #0x408]
-	ldr r0, _02175ecc ; =data_027e0f90
+	ldr r0, _02175ecc ; =gPlayer
 	add r1, r2, r1
 	str r1, [r3, #0x408]
 	ldr r0, [r0]
@@ -10331,7 +10331,7 @@ _02175ebc: .word data_027e0fe4
 _02175ec0: .word data_ov24_021792e4
 _02175ec4: .word 0x00000b33
 _02175ec8: .word data_02050f54
-_02175ecc: .word data_027e0f90
+_02175ecc: .word gPlayer
 _02175ed0: .word gItemManager
 _02175ed4: .word data_027e0ffc
 _02175ed8: .word 0x0000ffff

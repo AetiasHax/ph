@@ -3451,7 +3451,7 @@ _021703a4:
 	mov r3, r2
 	mov r1, #1
 	blx func_ov00_0207b2f0
-	ldr r0, _02170560 ; =data_027e0f90
+	ldr r0, _02170560 ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -3555,7 +3555,7 @@ _02170540:
 _02170554: .word data_027e0c54
 _02170558: .word func_ov05_02102a80
 _0217055c: .word data_027e0db0
-_02170560: .word data_027e0f90
+_02170560: .word gPlayer
 _02170564: .word gMapManager
 _02170568: .word data_027e0f64
 _0217056c: .word 0x00001555
@@ -9176,7 +9176,7 @@ _02174f38:
 	add r1, sp, #0x38
 	mov r0, r4
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	ldr r0, _0217558c ; =data_027e0f90
+	ldr r0, _0217558c ; =gPlayer
 	add r1, sp, #0x38
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -9603,7 +9603,7 @@ _02175574:
 _02175580: .word data_027e0ffc
 _02175584: .word 0x0000024a
 _02175588: .word gMapManager
-_0217558c: .word data_027e0f90
+_0217558c: .word gPlayer
 _02175590: .word 0x00000333
 _02175594: .word gPlayerLink
 _02175598: .word data_ov19_02175e4c

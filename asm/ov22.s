@@ -5038,7 +5038,7 @@ func_ov22_02171944: ; 0x02171944
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
 	ldr r1, _02171998 ; =data_027e0f94
-	ldr r3, _0217199c ; =data_027e0f90
+	ldr r3, _0217199c ; =gPlayer
 	mov r4, r0
 	add ip, sp, #0
 	ldmia r1, {r0, r1, r2}
@@ -5058,7 +5058,7 @@ func_ov22_02171944: ; 0x02171944
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 _02171998: .word data_027e0f94
-_0217199c: .word data_027e0f90
+_0217199c: .word gPlayer
 	arm_func_end func_ov22_02171944
 
 	.global func_ov22_021719a0

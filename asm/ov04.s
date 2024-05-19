@@ -3391,7 +3391,7 @@ func_ov04_021024c4: ; 0x021024c4
 	add r0, r5, #0
 	add r1, sp, #0x10
 	blx _ZN10MapManager14GetEntrancePosEP5Vec3pi
-	ldr r0, _021025bc ; =data_027e0f90
+	ldr r0, _021025bc ; =gPlayer
 	ldrb r1, [r4, #0x13]
 	ldr r0, [r0]
 	mov r2, #0
@@ -3467,7 +3467,7 @@ _021025ae:
 	nop
 _021025b4: .word data_027e0ff0
 _021025b8: .word data_027e0f6c
-_021025bc: .word data_027e0f90
+_021025bc: .word gPlayer
 _021025c0: .word data_027e0fe4
 _021025c4: .word data_027e0d38
 _021025c8: .word data_027e0f70
@@ -7877,7 +7877,7 @@ _02104920:
 	ldr r0, _02104a04 ; =data_027e0f68
 	ldr r0, [r0]
 	bl func_ov04_02102aa0
-	ldr r0, _02104a08 ; =data_027e0f90
+	ldr r0, _02104a08 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x1c]
@@ -7939,7 +7939,7 @@ _021049f8: .word data_027e1048
 _021049fc: .word data_027e0f78
 _02104a00: .word gMapManager
 _02104a04: .word data_027e0f68
-_02104a08: .word data_027e0f90
+_02104a08: .word gPlayer
 _02104a0c: .word data_027e0fc0
 _02104a10: .word data_ov00_020ee734
 	thumb_func_end func_ov04_021046dc
@@ -21510,7 +21510,7 @@ _0210b1ee:
 	thumb_func_start func_ov04_0210b1f0
 func_ov04_0210b1f0: ; 0x0210b1f0
 	push {r3, lr}
-	ldr r0, _0210b20c ; =data_027e0f90
+	ldr r0, _0210b20c ; =gPlayer
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0210b208
@@ -21519,13 +21519,13 @@ func_ov04_0210b1f0: ; 0x0210b1f0
 	ldr r1, [r1, #0x54]
 	blx r1
 _0210b202:
-	ldr r0, _0210b20c ; =data_027e0f90
+	ldr r0, _0210b20c ; =gPlayer
 	mov r1, #0
 	str r1, [r0]
 _0210b208:
 	pop {r3, pc}
 	nop
-_0210b20c: .word data_027e0f90
+_0210b20c: .word gPlayer
 	thumb_func_end func_ov04_0210b1f0
 
 	.global func_ov04_0210b210
@@ -23955,7 +23955,7 @@ func_ov04_0210c3fc: ; 0x0210c3fc
 	ldr r0, [r0]
 	add r2, sp, #0x18
 	bl func_ov04_02104ffc
-	ldr r0, _0210c514 ; =data_027e0f90
+	ldr r0, _0210c514 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x20]
@@ -23996,7 +23996,7 @@ _0210c504: .word data_027e0fec
 _0210c508: .word data_027e0c68
 _0210c50c: .word data_027e0cbc
 _0210c510: .word data_027e103c
-_0210c514: .word data_027e0f90
+_0210c514: .word gPlayer
 _0210c518: .word data_027e0618
 _0210c51c: .word data_ov09_0211f5b4
 _0210c520: .word data_ov09_0211f530

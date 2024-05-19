@@ -3968,8 +3968,8 @@ data_027e0f88:
 	.global data_027e0f8c
 data_027e0f8c:
 	.space 0x4
-	.global data_027e0f90
-data_027e0f90:
+	.global gPlayer
+gPlayer:
 	.space 0x4
 	.global data_027e0f94
 data_027e0f94:

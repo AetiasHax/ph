@@ -51,7 +51,7 @@
 .extern data_027e0e58
 .extern gMapManager
 .extern data_027e0f64
-.extern data_027e0f90
+.extern gPlayer
 .extern data_027e0fe4
 .extern data_027e0ffc
 .extern data_027e103c

@@ -6736,7 +6736,7 @@ _021818fc:
 	ldr r3, [r3, #0x7c]
 	blx r3
 _02181b40:
-	ldr r0, _02181ba0 ; =data_027e0f90
+	ldr r0, _02181ba0 ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -6761,7 +6761,7 @@ _02181b90: .word data_027e0f64
 _02181b94: .word 0x0000038e
 _02181b98: .word 0x00000dac
 _02181b9c: .word gPlayerLink
-_02181ba0: .word data_027e0f90
+_02181ba0: .word gPlayer
 _02181ba4: .word data_027e0e58
 	arm_func_end func_ov36_021818b4
 
@@ -6947,7 +6947,7 @@ _02181e34:
 	cmpeq r0, #0
 	addne sp, sp, #0x14
 	ldmneia sp!, {r3, r4, pc}
-	ldr r0, _02181f38 ; =data_027e0f90
+	ldr r0, _02181f38 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7004,7 +7004,7 @@ _02181f28: .word 0x000002c7
 _02181f2c: .word data_027e071c
 _02181f30: .word gMapManager
 _02181f34: .word 0x0000011e
-_02181f38: .word data_027e0f90
+_02181f38: .word gPlayer
 	arm_func_end func_ov36_02181ba8
 
 	.global func_ov36_02181f3c
@@ -7231,7 +7231,7 @@ _02182270:
 	cmp r0, #0
 	addeq sp, sp, #0x228
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
-	ldr r0, _0218294c ; =data_027e0f90
+	ldr r0, _0218294c ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7640,7 +7640,7 @@ _0218287c:
 	bl _ZN14AdventureFlags18func_ov00_02097bccEv
 	mvn r1, #0
 	str r1, [r4, #0x66c]
-	ldr r0, _0218294c ; =data_027e0f90
+	ldr r0, _0218294c ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7684,7 +7684,7 @@ _02182940:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
 _02182948: .word gAdventureFlags
-_0218294c: .word data_027e0f90
+_0218294c: .word gPlayer
 _02182950: .word 0x00000bb8
 _02182954: .word data_027e0f64
 _02182958: .word data_ov36_02186ce8
@@ -7907,7 +7907,7 @@ _02182c84: .word 0x00000dac
 func_ov36_02182c88: ; 0x02182c88
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0x14
-	ldr r1, _02182df4 ; =data_027e0f90
+	ldr r1, _02182df4 ; =gPlayer
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0
@@ -8001,7 +8001,7 @@ _02182de4:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02182df4: .word data_027e0f90
+_02182df4: .word gPlayer
 _02182df8: .word data_027e0e58
 _02182dfc: .word data_027e0f64
 _02182e00: .word data_027e0ffc

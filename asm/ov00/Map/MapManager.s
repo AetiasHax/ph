@@ -1012,7 +1012,7 @@ _02082c90:
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_020976c8Ev
 	ldrb r1, [r5, #0x13]
-	ldr r0, _02082d00 ; =data_027e0f90
+	ldr r0, _02082d00 ; =gPlayer
 	mov r2, #0
 	strb r1, [r6, #0xc]
 	ldr r0, [r0]
@@ -1038,7 +1038,7 @@ _02082cf0: .word data_027e0f68
 _02082cf4: .word data_027e0f6c
 _02082cf8: .word data_027e0f78
 _02082cfc: .word data_027e103c
-_02082d00: .word data_027e0f90
+_02082d00: .word gPlayer
 _02082d04: .word data_027e0c68
 	arm_func_end _ZN10MapManager18func_ov00_02082b3cEi
 

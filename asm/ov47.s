@@ -4813,13 +4813,13 @@ func_ov47_02193f78: ; 0x02193f78
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 _02194028:
-	ldr r0, _0219410c ; =data_027e0f90
+	ldr r0, _0219410c ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
 	cmp r0, #0
 	beq _0219407c
-	ldr r0, _0219410c ; =data_027e0f90
+	ldr r0, _0219410c ; =gPlayer
 	ldrb r1, [r5, #0x124]
 	ldr r0, [r0]
 	add r2, r5, #0x60
@@ -4874,7 +4874,7 @@ _021940ec:
 	.align 2, 0
 _02194104: .word data_027e0f94
 _02194108: .word gItemManager
-_0219410c: .word data_027e0f90
+_0219410c: .word gPlayer
 	arm_func_end func_ov47_02193f78
 
 	.global func_ov47_02194110

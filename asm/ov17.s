@@ -7459,7 +7459,7 @@ func_ov17_021611cc: ; 0x021611cc
 	ldr r0, [r4, #0xb4]
 	cmp r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, _021612a4 ; =data_027e0f90
+	ldr r0, _021612a4 ; =gPlayer
 	mov r1, #0x3e8
 	ldr r0, [r0]
 	rsb r1, r1, #0
@@ -7489,7 +7489,7 @@ _0216127c:
 	bl func_ov00_020bcfb8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_021612a4: .word data_027e0f90
+_021612a4: .word gPlayer
 _021612a8: .word gAdventureFlags
 _021612ac: .word gPlayerLink
 	arm_func_end func_ov17_021611cc

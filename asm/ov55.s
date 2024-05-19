@@ -405,7 +405,7 @@ func_ov55_021991b0: ; 0x021991b0
 	beq _0219922c
 	b _02199244
 _021991f4:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x18
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -413,7 +413,7 @@ _021991f4:
 	blx r2
 	b _02199244
 _02199210:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x20
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -421,7 +421,7 @@ _02199210:
 	blx r2
 	b _02199244
 _0219922c:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x3e8
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -440,7 +440,7 @@ _02199244:
 	.align 2, 0
 _02199268: .word data_027e103c
 _0219926c: .word gItemManager
-_02199270: .word data_027e0f90
+_02199270: .word gPlayer
 	arm_func_end func_ov55_021991b0
 
 	.global func_ov55_02199274

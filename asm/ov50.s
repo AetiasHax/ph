@@ -1916,7 +1916,7 @@ func_ov50_02196ee4: ; 0x02196ee4
 	add r1, sp, #0x18
 	mov r4, r0
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	ldr r0, _02196f70 ; =data_027e0f90
+	ldr r0, _02196f70 ; =gPlayer
 	add r1, sp, #0x18
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -1947,7 +1947,7 @@ func_ov50_02196ee4: ; 0x02196ee4
 	add sp, sp, #0x28
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02196f70: .word data_027e0f90
+_02196f70: .word gPlayer
 _02196f74: .word data_ov50_021989f0
 _02196f78: .word data_027e0fe4
 	arm_func_end func_ov50_02196ee4

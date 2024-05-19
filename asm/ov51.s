@@ -1181,7 +1181,7 @@ _02196324:
 	blt _02196324
 	add r0, r10, #0x6c
 	ldr r11, _021964f8 ; =0x000004cd
-	ldr r4, _021964fc ; =data_027e0f90
+	ldr r4, _021964fc ; =gPlayer
 	mov r8, r10
 	add r9, r0, #0x400
 	mov r7, #0
@@ -1270,7 +1270,7 @@ _021964e0:
 	.align 2, 0
 _021964f4: .word data_027e0e58
 _021964f8: .word 0x000004cd
-_021964fc: .word data_027e0f90
+_021964fc: .word gPlayer
 _02196500: .word data_027e0f94
 _02196504: .word data_027e0ffc
 _02196508: .word 0x00000262
@@ -3446,7 +3446,7 @@ func_ov51_02198184: ; 0x02198184
 	add r1, sp, #0x1c
 	ldr r2, [r2, #0x20]
 	blx r2
-	ldr r0, _02198264 ; =data_027e0f90
+	ldr r0, _02198264 ; =gPlayer
 	add r1, sp, #0xc
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -3497,7 +3497,7 @@ _0219824c:
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02198264: .word data_027e0f90
+_02198264: .word gPlayer
 	arm_func_end func_ov51_02198184
 
 	.rodata

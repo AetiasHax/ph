@@ -4713,7 +4713,7 @@ func_ov41_0218d210: ; 0x0218d210
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
 	ldr r1, _0218d310 ; =data_027e0f94
-	ldr r3, _0218d314 ; =data_027e0f90
+	ldr r3, _0218d314 ; =gPlayer
 	mov r6, r0
 	add r4, sp, #0xc
 	ldmia r1, {r0, r1, r2}
@@ -4778,7 +4778,7 @@ _0218d2fc:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _0218d310: .word data_027e0f94
-_0218d314: .word data_027e0f90
+_0218d314: .word gPlayer
 _0218d318: .word data_027e0fac
 _0218d31c: .word gMapManager
 _0218d320: .word 0xffff8001
@@ -4797,7 +4797,7 @@ func_ov41_0218d324: ; 0x0218d324
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldr r0, [r4, #0x510]
-	ldr r1, _0218d394 ; =data_027e0f90
+	ldr r1, _0218d394 ; =gPlayer
 	add r0, r0, r0, lsr #31
 	mov r2, r0, asr #0x1
 	ldr r0, [r1]
@@ -4817,7 +4817,7 @@ _0218d388:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d394: .word data_027e0f90
+_0218d394: .word gPlayer
 	arm_func_end func_ov41_0218d324
 
 	.global func_ov41_0218d398

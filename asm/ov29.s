@@ -566,7 +566,7 @@ func_ov29_0216dcf4: ; 0x0216dcf4
 	ldreq r0, [r4, #0x38]
 	cmpeq r0, #4
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, _0216dd5c ; =data_027e0f90
+	ldr r0, _0216dd5c ; =gPlayer
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0xa]
 	cmp r0, #0
@@ -582,7 +582,7 @@ func_ov29_0216dcf4: ; 0x0216dcf4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _0216dd58: .word data_027e0618
-_0216dd5c: .word data_027e0f90
+_0216dd5c: .word gPlayer
 	arm_func_end func_ov29_0216dcf4
 
 	.global func_ov29_0216dd60

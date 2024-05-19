@@ -933,7 +933,7 @@ _0216e3b4:
 	add sp, sp, #0x124
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0216e3dc:
-	ldr r0, _0216e554 ; =data_027e0f90
+	ldr r0, _0216e554 ; =gPlayer
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -1030,7 +1030,7 @@ _0216e544: .word data_027e0f94
 _0216e548: .word data_027e0764
 _0216e54c: .word 0x00008001
 _0216e550: .word gMapManager
-_0216e554: .word data_027e0f90
+_0216e554: .word gPlayer
 _0216e558: .word data_027e0f64
 _0216e55c: .word 0x00001555
 _0216e560: .word 0x00001006

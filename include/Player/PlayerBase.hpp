@@ -59,3 +59,5 @@ public:
     void EquipItem_vfunc_2c();
     void SetHealth(s16 health);
 };
+
+extern PlayerBase *gPlayer;

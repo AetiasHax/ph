@@ -6490,7 +6490,7 @@ _02181788:
 	ldr r1, [r4, #0x548]
 	cmp r1, #1
 	bne _021817c4
-	ldr r0, _02181804 ; =data_027e0f90
+	ldr r0, _02181804 ; =gPlayer
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0xa]
 	cmp r0, #1
@@ -6518,7 +6518,7 @@ _021817c4:
 	.align 2, 0
 _021817fc: .word data_027e0fb8
 _02181800: .word gPlayerLink
-_02181804: .word data_027e0f90
+_02181804: .word gPlayer
 _02181808: .word data_ov00_020eec9c
 _0218180c: .word data_027e0f94
 	arm_func_end func_ov35_0218174c
@@ -7493,7 +7493,7 @@ _02182598:
 	ldr r1, [r4, #0x548]
 	cmp r1, #1
 	bne _021825d4
-	ldr r0, _02182614 ; =data_027e0f90
+	ldr r0, _02182614 ; =gPlayer
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0xa]
 	cmp r0, #1
@@ -7521,7 +7521,7 @@ _021825d4:
 	.align 2, 0
 _0218260c: .word data_027e0fb8
 _02182610: .word gPlayerLink
-_02182614: .word data_027e0f90
+_02182614: .word gPlayer
 _02182618: .word data_ov00_020eec9c
 _0218261c: .word data_027e0f94
 	arm_func_end func_ov35_02182560
@@ -7622,7 +7622,7 @@ _0218271c: .word 0x0000071c
 func_ov35_02182720: ; 0x02182720
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
-	ldr r1, _02182820 ; =data_027e0f90
+	ldr r1, _02182820 ; =gPlayer
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #0
@@ -7689,7 +7689,7 @@ _02182814:
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02182820: .word data_027e0f90
+_02182820: .word gPlayer
 _02182824: .word data_027e0ffc
 _02182828: .word 0x00000229
 _0218282c: .word 0x0000019a

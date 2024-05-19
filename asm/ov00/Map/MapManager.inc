@@ -51,7 +51,7 @@
 .extern data_027e0f70
 .extern data_027e0f78
 .extern data_027e0f7c
-.extern data_027e0f90
+.extern gPlayer
 .extern data_027e0f94
 .extern data_027e0fe4
 .extern data_027e0fe8

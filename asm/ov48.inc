@@ -134,7 +134,7 @@
 .extern data_027e0e58
 .extern data_027e0e5c
 .extern gMapManager
-.extern data_027e0f90
+.extern gPlayer
 .extern data_027e0f94
 .extern data_027e0fac
 .extern data_027e0fe0

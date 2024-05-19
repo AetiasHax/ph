@@ -5799,7 +5799,7 @@ func_ov40_02180680: ; 0x02180680
 	str ip, [sp, #0x6c]
 	str lr, [sp, #0x70]
 	bl func_ov40_02180a18
-	ldr r0, _02180748 ; =data_027e0f90
+	ldr r0, _02180748 ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -5813,7 +5813,7 @@ func_ov40_02180680: ; 0x02180680
 	add sp, sp, #0x74
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02180748: .word data_027e0f90
+_02180748: .word gPlayer
 	arm_func_end func_ov40_02180680
 
 	.global func_ov40_0218074c
@@ -5925,7 +5925,7 @@ func_ov40_0218081c: ; 0x0218081c
 	str ip, [sp, #0x6c]
 	str lr, [sp, #0x70]
 	bl func_ov40_02180a18
-	ldr r0, _021808e4 ; =data_027e0f90
+	ldr r0, _021808e4 ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -5939,21 +5939,21 @@ func_ov40_0218081c: ; 0x0218081c
 	add sp, sp, #0x74
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_021808e4: .word data_027e0f90
+_021808e4: .word gPlayer
 	arm_func_end func_ov40_0218081c
 
 	.global func_ov40_021808e8
 	arm_func_start func_ov40_021808e8
 func_ov40_021808e8: ; 0x021808e8
 	stmdb sp!, {r3, lr}
-	ldr r0, _02180904 ; =data_027e0f90
+	ldr r0, _02180904 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #0x4c]
 	blx r1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_02180904: .word data_027e0f90
+_02180904: .word gPlayer
 	arm_func_end func_ov40_021808e8
 
 	.global func_ov40_02180908

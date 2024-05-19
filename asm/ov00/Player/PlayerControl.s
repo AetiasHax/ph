@@ -815,7 +815,7 @@ _020af810:
 	movne r4, #1
 	cmpne r0, #0
 	beq _020af8b0
-	ldr r0, _020afac0 ; =data_027e0f90
+	ldr r0, _020afac0 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
@@ -969,7 +969,7 @@ _020afaa8:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
 _020afabc: .word gAdventureFlags
-_020afac0: .word data_027e0f90
+_020afac0: .word gPlayer
 _020afac4: .word gItemManager
 _020afac8: .word gPlayerLink
 _020afacc: .word data_027e0fe4
@@ -992,7 +992,7 @@ _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p: ; 0x020afad8
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
 	beq _020afb54
-	ldr r0, _020afb64 ; =data_027e0f90
+	ldr r0, _020afb64 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
@@ -1018,7 +1018,7 @@ _020afb54:
 	ldmia sp!, {pc}
 	.align 2, 0
 _020afb60: .word data_027e0f94
-_020afb64: .word data_027e0f90
+_020afb64: .word gPlayer
 _020afb68: .word gMapManager
 	arm_func_end _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 

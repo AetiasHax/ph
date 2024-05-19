@@ -13683,7 +13683,7 @@ func_ov25_02178d0c: ; 0x02178d0c
 	add r2, sp, #0
 	add r1, r4, #0x34c
 	bl func_01ff9bf8
-	ldr r0, _02178d88 ; =data_027e0f90
+	ldr r0, _02178d88 ; =gPlayer
 	add r1, r4, #0x34c
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -13691,7 +13691,7 @@ func_ov25_02178d0c: ; 0x02178d0c
 	addeq sp, sp, #0xc
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, pc}
-	ldr r0, _02178d88 ; =data_027e0f90
+	ldr r0, _02178d88 ; =gPlayer
 	ldrb r1, [r4, #0x124]
 	ldr r0, [r0]
 	add r2, sp, #0
@@ -13703,7 +13703,7 @@ func_ov25_02178d0c: ; 0x02178d0c
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 _02178d84: .word data_027e0f94
-_02178d88: .word data_027e0f90
+_02178d88: .word gPlayer
 	arm_func_end func_ov25_02178d0c
 
 	.global func_ov25_02178d8c

@@ -1992,7 +1992,7 @@ _02102544:
 _02102598:
 	mov r2, #0
 _0210259c:
-	ldr r0, _021026d4 ; =data_027e0f90
+	ldr r0, _021026d4 ; =gPlayer
 	mov r1, r8
 	ldr r0, [r0]
 	ldr r3, [r0]
@@ -2077,7 +2077,7 @@ _021026c4: .word data_027e0ff8
 _021026c8: .word data_027e071c
 _021026cc: .word data_027e0e2c
 _021026d0: .word data_027e0d04
-_021026d4: .word data_027e0f90
+_021026d4: .word gPlayer
 _021026d8: .word data_027e0f64
 _021026dc: .word data_027e0f78
 _021026e0: .word gMapManager
@@ -2148,7 +2148,7 @@ _02102798:
 	ldrneb r0, [r5, #1]
 	cmpne r0, #0
 	bne _021027d8
-	ldr r0, _0210281c ; =data_027e0f90
+	ldr r0, _0210281c ; =gPlayer
 	mov r1, r4
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -2173,7 +2173,7 @@ _021027d8:
 	.align 2, 0
 _02102814: .word data_027e103c
 _02102818: .word data_027e0c54
-_0210281c: .word data_027e0f90
+_0210281c: .word gPlayer
 _02102820: .word data_027e0fe4
 _02102824: .word gMapManager
 	arm_func_end func_ov05_0210274c
@@ -2271,7 +2271,7 @@ _0210294c:
 	ldr r0, [r0]
 	bl func_ov05_021011fc
 _02102978:
-	ldr r0, _02102a60 ; =data_027e0f90
+	ldr r0, _02102a60 ; =gPlayer
 	mov r1, r8
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -2333,7 +2333,7 @@ _02102a50: .word data_027e0de8
 _02102a54: .word data_027e0f88
 _02102a58: .word data_027e0f64
 _02102a5c: .word gMapManager
-_02102a60: .word data_027e0f90
+_02102a60: .word gPlayer
 _02102a64: .word data_027e0fe4
 _02102a68: .word data_027e0618
 _02102a6c: .word data_027e1048

@@ -14694,7 +14694,7 @@ _0211b164:
 	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	bne _0211b34c
-	ldr r0, _0211b378 ; =data_027e0f90
+	ldr r0, _0211b378 ; =gPlayer
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0xa]
 	cmp r0, #0
@@ -14837,7 +14837,7 @@ _0211b368: .word gAdventureFlags
 _0211b36c: .word data_027e0db0
 _0211b370: .word data_027e0d38
 _0211b374: .word data_ov00_020eec9c
-_0211b378: .word data_027e0f90
+_0211b378: .word gPlayer
 _0211b37c: .word data_027e077c
 _0211b380: .word 0x00000c71
 _0211b384: .word data_027e103c
@@ -15706,7 +15706,7 @@ func_ov09_0211bd14: ; 0x0211bd14
 	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	bne _0211bd40
-	ldr r0, _0211bd54 ; =data_027e0f90
+	ldr r0, _0211bd54 ; =gPlayer
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0xa]
 	cmp r0, #0
@@ -15719,7 +15719,7 @@ _0211bd48:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _0211bd50: .word gAdventureFlags
-_0211bd54: .word data_027e0f90
+_0211bd54: .word gPlayer
 	arm_func_end func_ov09_0211bd14
 
 	.global func_ov09_0211bd58

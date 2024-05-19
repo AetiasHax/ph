@@ -6375,7 +6375,7 @@ func_ov23_02172928: ; 0x02172928
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldr r0, _02172990 ; =data_027e0f90
+	ldr r0, _02172990 ; =gPlayer
 	ldr r2, _02172994 ; =0x0000099a
 	ldr r0, [r0]
 	mov r1, r3
@@ -6394,7 +6394,7 @@ _02172984:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02172990: .word data_027e0f90
+_02172990: .word gPlayer
 _02172994: .word 0x0000099a
 	arm_func_end func_ov23_02172928
 
@@ -6510,7 +6510,7 @@ func_ov23_02172b18: ; 0x02172b18
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_ov23_02173014
-	ldr r0, _02172b5c ; =data_027e0f90
+	ldr r0, _02172b5c ; =gPlayer
 	add r1, r4, #0x184
 	ldr r0, [r0]
 	add r1, r1, #0x400
@@ -6526,7 +6526,7 @@ _02172b54:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02172b5c: .word data_027e0f90
+_02172b5c: .word gPlayer
 	arm_func_end func_ov23_02172b18
 
 	.global func_ov23_02172b60
@@ -9863,7 +9863,7 @@ func_ov23_021758f8: ; 0x021758f8
 	arm_func_start func_ov23_0217590c
 func_ov23_0217590c: ; 0x0217590c
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _02175970 ; =data_027e0f90
+	ldr r2, _02175970 ; =gPlayer
 	mov r5, r0
 	ldr r0, [r2]
 	mov r4, r1
@@ -9888,7 +9888,7 @@ func_ov23_0217590c: ; 0x0217590c
 	blx ip
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_02175970: .word data_027e0f90
+_02175970: .word gPlayer
 _02175974: .word gPlayerLink
 	arm_func_end func_ov23_0217590c
 

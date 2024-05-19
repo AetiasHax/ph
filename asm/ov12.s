@@ -2245,7 +2245,7 @@ _02114924:
 	beq _02114a78
 	cmp r7, #1
 	bne _02114964
-	ldr r0, _02114a9c ; =data_027e0f90
+	ldr r0, _02114a9c ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #4]
@@ -2338,7 +2338,7 @@ _02114a78:
 _02114a90: .word 0x00005555
 _02114a94: .word data_027e0f94
 _02114a98: .word data_ov12_02137c64
-_02114a9c: .word data_027e0f90
+_02114a9c: .word gPlayer
 _02114aa0: .word 0x0000019a
 	arm_func_end func_ov12_021148a8
 
@@ -7895,7 +7895,7 @@ _021192dc:
 	arm_func_start func_ov12_021192f4
 func_ov12_021192f4: ; 0x021192f4
 	stmdb sp!, {r3, lr}
-	ldr r0, _02119334 ; =data_027e0f90
+	ldr r0, _02119334 ; =gPlayer
 	ldr r0, [r0]
 	cmp r0, #0
 	ldmneia sp!, {r3, pc}
@@ -7908,11 +7908,11 @@ func_ov12_021192f4: ; 0x021192f4
 	beq _02119328
 	bl func_ov12_021193b0
 _02119328:
-	ldr r1, _02119334 ; =data_027e0f90
+	ldr r1, _02119334 ; =gPlayer
 	str r0, [r1]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_02119334: .word data_027e0f90
+_02119334: .word gPlayer
 _02119338: .word data_027e0ce0
 	arm_func_end func_ov12_021192f4
 
@@ -34665,7 +34665,7 @@ func_ov12_0212ee64: ; 0x0212ee64
 	ldr r0, [ip, #0x130]
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
-	ldr r0, _0212eeb4 ; =data_027e0f90
+	ldr r0, _0212eeb4 ; =gPlayer
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x10]
 	cmp r0, #0
@@ -34681,7 +34681,7 @@ func_ov12_0212ee64: ; 0x0212ee64
 	blx ip
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_0212eeb4: .word data_027e0f90
+_0212eeb4: .word gPlayer
 _0212eeb8: .word data_027e0fcc
 	arm_func_end func_ov12_0212ee64
 
@@ -38115,7 +38115,7 @@ _02131c18:
 	bl func_ov12_02120108
 	cmp r0, #0
 	beq _02131c88
-	ldr r0, _02131d74 ; =data_027e0f90
+	ldr r0, _02131d74 ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
@@ -38188,7 +38188,7 @@ _02131d64:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02131d70: .word data_ov12_02137c64
-_02131d74: .word data_027e0f90
+_02131d74: .word gPlayer
 _02131d78: .word gMapManager
 	arm_func_end func_ov12_02131bdc
 

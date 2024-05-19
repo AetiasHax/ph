@@ -141,7 +141,7 @@ _0209828c:
 	ldrb r0, [r4, #0x12]
 	cmp r0, #0
 	beq _020982a8
-	ldr r0, _020985ac ; =data_027e0f90
+	ldr r0, _020985ac ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase12SetUpdatePosEb
@@ -350,7 +350,7 @@ _02098574:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 _020985a8: .word data_027e0f64
-_020985ac: .word data_027e0f90
+_020985ac: .word gPlayer
 _020985b0: .word data_027e0c54
 _020985b4: .word data_027e0db0
 _020985b8: .word gMapManager
@@ -742,7 +742,7 @@ _02098a34:
 	cmp r2, #0
 	beq _02098a8c
 	mov r1, #0
-	ldr r0, _02098b28 ; =data_027e0f90
+	ldr r0, _02098b28 ; =gPlayer
 	strb r1, [r4, #0x21]
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -769,7 +769,7 @@ _02098abc:
 	ldrb r0, [r4, #0x21]
 	cmp r0, #0
 	beq _02098af0
-	ldr r0, _02098b28 ; =data_027e0f90
+	ldr r0, _02098b28 ; =gPlayer
 	strb r1, [r4, #0x21]
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -789,7 +789,7 @@ _02098af0:
 	.align 2, 0
 _02098b20: .word data_027e071c
 _02098b24: .word gPlayerLink
-_02098b28: .word data_027e0f90
+_02098b28: .word gPlayer
 _02098b2c: .word data_027e0fe4
 _02098b30: .word data_027e0f68
 	arm_func_end func_ov00_020989a8
@@ -1357,7 +1357,7 @@ _02099240:
 _02099244:
 	cmp r1, #0
 	beq _0209925c
-	ldr r0, _020994b4 ; =data_027e0f90
+	ldr r0, _020994b4 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -1378,7 +1378,7 @@ _02099288:
 _0209928c:
 	cmp r1, #0
 	beq _020992a4
-	ldr r0, _020994b4 ; =data_027e0f90
+	ldr r0, _020994b4 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase12SetUpdatePosEb
@@ -1528,7 +1528,7 @@ _020994a4:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020994b4: .word data_027e0f90
+_020994b4: .word gPlayer
 _020994b8: .word data_027e0fe4
 _020994bc: .word data_027e0f68
 _020994c0: .word data_027e0f64

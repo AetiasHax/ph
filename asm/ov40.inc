@@ -94,7 +94,7 @@
 .extern data_027e0f6c
 .extern data_027e0f78
 .extern data_027e0f80
-.extern data_027e0f90
+.extern gPlayer
 .extern data_027e0fc4
 .extern data_027e0fcc
 .extern data_027e0fe0

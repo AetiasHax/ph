@@ -103,7 +103,7 @@
 .extern data_027e0f84
 .extern data_027e0f88
 .extern data_027e0f8c
-.extern data_027e0f90
+.extern gPlayer
 .extern data_027e0f94
 .extern data_027e0fa0
 .extern data_027e0fac

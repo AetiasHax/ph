@@ -1514,7 +1514,7 @@ _0217cfc0:
 _0217cfc4:
 	mov r0, r5
 	bl func_ov32_0217d188
-	ldr r0, _0217d170 ; =data_027e0f90
+	ldr r0, _0217d170 ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #4]
@@ -1623,7 +1623,7 @@ _0217d0f8:
 	blx r1
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0217d170: .word data_027e0f90
+_0217d170: .word gPlayer
 _0217d174: .word gMapManager
 _0217d178: .word 0x0000071c
 _0217d17c: .word data_027e0764
@@ -3054,7 +3054,7 @@ func_ov32_0217e3c4: ; 0x0217e3c4
 _0217e3e0:
 	mov r4, #0x46
 _0217e3e4:
-	ldr r0, _0217e58c ; =data_027e0f90
+	ldr r0, _0217e58c ; =gPlayer
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #4]
@@ -3164,7 +3164,7 @@ _0217e514:
 	blx r1
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0217e58c: .word data_027e0f90
+_0217e58c: .word gPlayer
 _0217e590: .word gMapManager
 _0217e594: .word 0x0000071c
 _0217e598: .word data_027e0764
@@ -3840,7 +3840,7 @@ _0217ee34:
 	mov r0, r2, asr #0x1f
 	orr r3, r3, r11, lsl #20
 	str r0, [sp, #8]
-	ldr r0, _0217efcc ; =data_027e0f90
+	ldr r0, _0217efcc ; =gPlayer
 	add r1, sp, #0x1c
 	add r10, r10, r3
 	mov r3, r1
@@ -3921,7 +3921,7 @@ _0217ef94:
 	.align 2, 0
 _0217efc4: .word 0x00007fff
 _0217efc8: .word data_02050f54
-_0217efcc: .word data_027e0f90
+_0217efcc: .word gPlayer
 _0217efd0: .word data_027e0fac
 _0217efd4: .word 0x00005555
 	arm_func_end func_ov32_0217eddc
@@ -5180,7 +5180,7 @@ func_ov32_0217feac: ; 0x0217feac
 	mov r0, r6
 	bl func_ov32_02180af0
 	mov r1, #2
-	ldr r0, _02180044 ; =data_027e0f90
+	ldr r0, _02180044 ; =gPlayer
 	str r1, [r6, #0x12c]
 	ldr r0, [r0]
 	mov r4, #0
@@ -5271,7 +5271,7 @@ _0217ffd0:
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02180044: .word data_027e0f90
+_02180044: .word gPlayer
 _02180048: .word data_027e0f94
 _0218004c: .word gMapManager
 _02180050: .word data_027e0764
@@ -7621,7 +7621,7 @@ _02182080:
 	ldr r0, [r0, #4]
 	add r3, sp, #0xc
 	bl func_ov00_020888e8
-	ldr r0, _021822a4 ; =data_027e0f90
+	ldr r0, _021822a4 ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7705,7 +7705,7 @@ _0218223c:
 	ldr r0, _02182294 ; =data_027e077c
 	mov r1, #1
 	bl func_0202e740
-	ldr r0, _021822a4 ; =data_027e0f90
+	ldr r0, _021822a4 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7730,7 +7730,7 @@ _02182294: .word data_027e077c
 _02182298: .word data_027e103c
 _0218229c: .word data_027e0f64
 _021822a0: .word 0x00003c72
-_021822a4: .word data_027e0f90
+_021822a4: .word gPlayer
 _021822a8: .word data_027e0c68
 _021822ac: .word 0x0000039a
 	arm_func_end func_ov32_02181d00

@@ -1317,7 +1317,7 @@ func_ov43_0218a674: ; 0x0218a674
 	adds r0, r0, #0x800
 	str r1, [sp, #0x18]
 	ldr r9, [r4, #0x50]
-	ldr r2, _0218a854 ; =data_027e0f90
+	ldr r2, _0218a854 ; =gPlayer
 	mov r8, r0, lsr #0xc
 	ldr r0, [r2]
 	add r2, r1, #0x800
@@ -1417,7 +1417,7 @@ _0218a834:
 	.align 2, 0
 _0218a84c: .word 0x0000099a
 _0218a850: .word data_02050f54
-_0218a854: .word data_027e0f90
+_0218a854: .word gPlayer
 _0218a858: .word data_027e0fac
 _0218a85c: .word 0xffff8001
 _0218a860: .word 0x00005555

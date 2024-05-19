@@ -7095,7 +7095,7 @@ _02173010:
 	ldr r0, [r0, #4]
 	add r3, sp, #0xbc
 	bl func_ov00_020888e8
-	ldr r0, _021732b0 ; =data_027e0f90
+	ldr r0, _021732b0 ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7146,7 +7146,7 @@ _02173160:
 	ldr r0, _02173294 ; =data_027e077c
 	mov r1, #1
 	bl func_0202e740
-	ldr r0, _021732b0 ; =data_027e0f90
+	ldr r0, _021732b0 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -7230,7 +7230,7 @@ _021732a0: .word 0x00001555
 _021732a4: .word 0x00001733
 _021732a8: .word 0xfffff99a
 _021732ac: .word gAdventureFlags
-_021732b0: .word data_027e0f90
+_021732b0: .word gPlayer
 _021732b4: .word data_027e0fe4
 _021732b8: .word data_027e0c68
 _021732bc: .word gItemManager
@@ -9777,7 +9777,7 @@ _02174d14:
 	ldr r0, [r0, #4]
 	add r3, sp, #0xbc
 	bl func_ov00_020888e8
-	ldr r0, _02174ff0 ; =data_027e0f90
+	ldr r0, _02174ff0 ; =gPlayer
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -9840,7 +9840,7 @@ _02174ea4:
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	bl func_ov00_020875f8
-	ldr r0, _02174ff0 ; =data_027e0f90
+	ldr r0, _02174ff0 ; =gPlayer
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN10PlayerBase10SetVisibleEb
@@ -9922,7 +9922,7 @@ _02174fe0: .word data_027e0f64
 _02174fe4: .word 0x0000071c
 _02174fe8: .word 0x0000199a
 _02174fec: .word gAdventureFlags
-_02174ff0: .word data_027e0f90
+_02174ff0: .word gPlayer
 _02174ff4: .word data_027e0c68
 _02174ff8: .word data_027e1048
 _02174ffc: .word data_027e104c
