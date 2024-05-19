@@ -751,7 +751,7 @@ _02098a8c:
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r2, #0
-	ldr r0, _02098b2c ; =data_027e0fe4
+	ldr r0, _02098b2c ; =gActorManager
 	strb r2, [r4, #0x22]
 	ldr r1, [r0]
 	ldr r0, _02098b30 ; =data_027e0f68
@@ -778,7 +778,7 @@ _02098af0:
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r2, #0
-	ldr r0, _02098b2c ; =data_027e0fe4
+	ldr r0, _02098b2c ; =gActorManager
 	strb r2, [r4, #0x22]
 	ldr r1, [r0]
 	ldr r0, _02098b30 ; =data_027e0f68
@@ -790,7 +790,7 @@ _02098af0:
 _02098b20: .word data_027e071c
 _02098b24: .word gPlayerLink
 _02098b28: .word gPlayer
-_02098b2c: .word data_027e0fe4
+_02098b2c: .word gActorManager
 _02098b30: .word data_027e0f68
 	arm_func_end func_ov00_020989a8
 
@@ -1399,7 +1399,7 @@ _020992d0:
 _020992d4:
 	cmp r1, #0
 	beq _020992f8
-	ldr r0, _020994b8 ; =data_027e0fe4
+	ldr r0, _020994b8 ; =gActorManager
 	mov r2, #1
 	ldr r1, [r0]
 	ldr r0, _020994bc ; =data_027e0f68
@@ -1494,7 +1494,7 @@ _020993b4:
 	ldr r1, [sp, #0xc]
 	cmp r1, #1
 	bne _02099484
-	ldr r1, _020994b8 ; =data_027e0fe4
+	ldr r1, _020994b8 ; =gActorManager
 	ldr r2, _020994d4 ; =0x414e4353
 	ldr r1, [r1]
 	add r0, sp, #0
@@ -1503,7 +1503,7 @@ _020993b4:
 	mvn r0, #0
 	cmp r1, r0
 	beq _020994a4
-	ldr r0, _020994b8 ; =data_027e0fe4
+	ldr r0, _020994b8 ; =gActorManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1529,7 +1529,7 @@ _020994a4:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _020994b4: .word gPlayer
-_020994b8: .word data_027e0fe4
+_020994b8: .word gActorManager
 _020994bc: .word data_027e0f68
 _020994c0: .word data_027e0f64
 _020994c4: .word data_027e0c68

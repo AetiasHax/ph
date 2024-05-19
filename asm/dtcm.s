@@ -4031,8 +4031,8 @@ data_027e0fdc:
 	.global data_027e0fe0
 data_027e0fe0:
 	.space 0x4
-	.global data_027e0fe4
-data_027e0fe4:
+	.global gActorManager
+gActorManager:
 	.space 0x4
 	.global data_027e0fe8
 data_027e0fe8:

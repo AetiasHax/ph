@@ -33,7 +33,7 @@
 .extern data_027e0fac
 .extern gPlayerLink
 .extern data_027e0fcc
-.extern data_027e0fe4
+.extern gActorManager
 .extern data_027e0ffc
 .extern data_027e103c
 .extern data_ov00_020eec60

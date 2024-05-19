@@ -94,3 +94,5 @@ public:
     void Actor_vfunc_28();
     static bool ActorTypeIsOneOf(u32 type, u32 *types);
 };
+
+extern ActorManager *gActorManager;

@@ -123,7 +123,7 @@
 .extern data_027e0f94
 .extern gPlayerLink
 .extern data_027e0fe0
-.extern data_027e0fe4
+.extern gActorManager
 .extern data_027e0ffc
 .extern data_027e103c
 .extern data_027e1054

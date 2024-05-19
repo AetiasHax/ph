@@ -885,7 +885,7 @@ func_ov21_0216e128: ; 0x0216e128
 	ldr r1, _0216e1d4 ; =0x4e4b4559
 	mov r2, r5
 	bl func_ov00_020c4048
-	ldr r0, _0216e1d8 ; =data_027e0fe4
+	ldr r0, _0216e1d8 ; =gActorManager
 	add r1, sp, #4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -897,7 +897,7 @@ func_ov21_0216e128: ; 0x0216e128
 	.align 2, 0
 _0216e1d0: .word data_027e0fe8
 _0216e1d4: .word 0x4e4b4559
-_0216e1d8: .word data_027e0fe4
+_0216e1d8: .word gActorManager
 	arm_func_end func_ov21_0216e128
 
 	.global func_ov21_0216e1dc

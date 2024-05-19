@@ -301,7 +301,7 @@ _02199050:
 	cmpeq r6, #0
 	bne _021990c4
 	ldr r1, _02199298 ; =data_ov54_02199a00
-	ldr r0, _0219929c ; =data_027e0fe4
+	ldr r0, _0219929c ; =gActorManager
 	str r1, [sp, #0x14]
 	ldr r1, [r7, #0x38]
 	ldr r0, [r0]
@@ -448,7 +448,7 @@ _02199284:
 _02199290: .word gMapManager
 _02199294: .word 0x00000333
 _02199298: .word data_ov54_02199a00
-_0219929c: .word data_027e0fe4
+_0219929c: .word gActorManager
 _021992a0: .word data_ov54_021999c8
 _021992a4: .word func_ov54_02198ee0
 _021992a8: .word data_027e0e58
@@ -535,13 +535,13 @@ _02199394:
 	bl func_ov00_020a5e9c
 	cmp r0, #0x18
 	bne _0219978c
-	ldr r1, _021997c0 ; =data_027e0fe4
+	ldr r1, _021997c0 ; =gActorManager
 	ldr r2, _021997c4 ; =0x44475447
 	ldr r1, [r1]
 	add r0, sp, #8
 	add r3, r4, #0x38
 	bl _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
-	ldr r0, _021997c0 ; =data_027e0fe4
+	ldr r0, _021997c0 ; =gActorManager
 	add r1, sp, #8
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -798,7 +798,7 @@ _021997b0: .word 0x00000ccd
 _021997b4: .word data_027e0fb8
 _021997b8: .word data_ov00_020eec9c
 _021997bc: .word data_027e0d38
-_021997c0: .word data_027e0fe4
+_021997c0: .word gActorManager
 _021997c4: .word 0x44475447
 _021997c8: .word 0x00000406
 _021997cc: .word data_02050f54

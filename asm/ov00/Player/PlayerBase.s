@@ -359,7 +359,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	str r5, [r1, #8]
 	ldr r0, [r0]
 	blx _ZN13PlayerControl9UpdateAimEv
-	ldr r0, _020a7f7c ; =data_027e0fe4
+	ldr r0, _020a7f7c ; =gActorManager
 	ldrb r1, [sp, #0x18]
 	ldr r0, [r0]
 	bl _ZN12ActorManager14Actor_vfunc_10Ej
@@ -390,7 +390,7 @@ _020a7f6c: .word data_027e0fac
 _020a7f70: .word data_027e0fa0
 _020a7f74: .word data_027e0fb0
 _020a7f78: .word data_027e0fb8
-_020a7f7c: .word data_027e0fe4
+_020a7f7c: .word gActorManager
 _020a7f80: .word gAdventureFlags
 _020a7f84: .word data_027e0f64
 	arm_func_end _ZN10PlayerBase18TeleportToEntranceEib

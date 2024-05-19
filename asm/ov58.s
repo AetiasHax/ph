@@ -152,7 +152,7 @@ func_ov58_02198ef8: ; 0x02198ef8
 func_ov58_02198efc: ; 0x02198efc
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x18
-	ldr r1, _02198f6c ; =data_027e0fe4
+	ldr r1, _02198f6c ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, r2
@@ -180,7 +180,7 @@ _02198f60:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02198f6c: .word data_027e0fe4
+_02198f6c: .word gActorManager
 _02198f70: .word 0x50574253
 	arm_func_end func_ov58_02198efc
 

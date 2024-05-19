@@ -1233,12 +1233,12 @@ func_ov34_0217ce2c: ; 0x0217ce2c
 	cmp r0, #0
 	addeq sp, sp, #8
 	ldmeqia sp!, {r4, pc}
-	ldr r1, _0217cea8 ; =data_027e0fe4
+	ldr r1, _0217cea8 ; =gActorManager
 	ldr r2, _0217ceac ; =0x54534e4d
 	ldr r1, [r1]
 	add r0, sp, #0
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
-	ldr r0, _0217cea8 ; =data_027e0fe4
+	ldr r0, _0217cea8 ; =gActorManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1258,7 +1258,7 @@ func_ov34_0217ce2c: ; 0x0217ce2c
 	add sp, sp, #8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0217cea8: .word data_027e0fe4
+_0217cea8: .word gActorManager
 _0217ceac: .word 0x54534e4d
 	arm_func_end func_ov34_0217ce2c
 

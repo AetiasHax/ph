@@ -2114,7 +2114,7 @@ _02196fa4:
 	add r3, sp, #0x18
 	bl func_ov00_020c4048
 	mov r1, r0
-	ldr r0, _02197084 ; =data_027e0fe4
+	ldr r0, _02197084 ; =gActorManager
 	ldr r0, [r0]
 	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
@@ -2137,7 +2137,7 @@ _02197074: .word data_027e0fe8
 _02197078: .word 0x4d544354
 _0219707c: .word 0x00870005
 _02197080: .word 0x47524d47
-_02197084: .word data_027e0fe4
+_02197084: .word gActorManager
 	arm_func_end func_ov52_02196ea8
 
 	.global func_ov52_02197088
@@ -2230,7 +2230,7 @@ func_ov52_02197118: ; 0x02197118
 	bl func_ov00_020c4048
 	b _021971d4
 _021971b0:
-	ldr r1, _0219722c ; =data_027e0fe4
+	ldr r1, _0219722c ; =gActorManager
 	ldr r2, _02197228 ; =0x47524d47
 	ldr r1, [r1]
 	add r0, sp, #0xc
@@ -2241,7 +2241,7 @@ _021971b0:
 	str r0, [sp, #0x18]
 _021971d4:
 	ldr r0, [sp, #0x14]
-	ldr r1, _0219722c ; =data_027e0fe4
+	ldr r1, _0219722c ; =gActorManager
 	str r0, [r4, #0x188]
 	ldr r2, [sp, #0x18]
 	add r0, sp, #4
@@ -2263,7 +2263,7 @@ _021971d4:
 _02197220: .word 0x00870005
 _02197224: .word data_027e0fe8
 _02197228: .word 0x47524d47
-_0219722c: .word data_027e0fe4
+_0219722c: .word gActorManager
 _02197230: .word 0x4e415649
 	arm_func_end func_ov52_02197118
 

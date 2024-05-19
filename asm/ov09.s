@@ -3200,7 +3200,7 @@ func_ov09_02114554: ; 0x02114554
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x1ec
 	add r5, r0, #0
-	ldr r0, _021146a8 ; =data_027e0fe4
+	ldr r0, _021146a8 ; =gActorManager
 	str r1, [sp, #4]
 	ldr r0, [r0]
 	blx _ZN12ActorManager14Actor_vfunc_28Ev
@@ -3351,7 +3351,7 @@ _02114688:
 	add sp, #0x1ec
 	pop {r4, r5, r6, r7, pc}
 	.align 2, 0
-_021146a8: .word data_027e0fe4
+_021146a8: .word gActorManager
 _021146ac: .word gMapManager
 _021146b0: .word data_027e0d38
 _021146b4: .word data_ov00_020e9f10

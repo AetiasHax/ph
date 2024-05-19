@@ -777,7 +777,7 @@ func_ov00_0207b5bc: ; 0x0207b5bc
 _0207b5fa:
 	cmp r2, #0
 	beq _0207b6cc
-	ldr r1, _0207b800 ; =data_027e0fe4
+	ldr r1, _0207b800 ; =gActorManager
 	ldr r2, _0207b804 ; =0x414e4353
 	ldr r1, [r1]
 	add r0, sp, #0
@@ -787,7 +787,7 @@ _0207b5fa:
 	mvn r0, r0
 	cmp r1, r0
 	beq _0207b6cc
-	ldr r0, _0207b800 ; =data_027e0fe4
+	ldr r0, _0207b800 ; =gActorManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	blx _ZN12ActorManager8GetActorEP8ActorRef
@@ -1018,7 +1018,7 @@ _0207b7f0:
 	add sp, #0x20
 	pop {r4, r5, r6, pc}
 	nop
-_0207b800: .word data_027e0fe4
+_0207b800: .word gActorManager
 _0207b804: .word 0x414e4353
 _0207b808: .word gMapManager
 _0207b80c: .word data_027e0f94

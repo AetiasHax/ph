@@ -346,7 +346,7 @@ _020aa684:
 	ldr r0, _020aa78c ; =data_027e0fb8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl9SetUnk_80Ev
-	ldr r0, _020aa7a8 ; =data_027e0fe4
+	ldr r0, _020aa7a8 ; =gActorManager
 	add r1, r4, #0x10
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -426,7 +426,7 @@ _020aa798: .word data_ov00_020eec9c
 _020aa79c: .word 0x00000125
 _020aa7a0: .word data_ov00_020e595c
 _020aa7a4: .word data_ov00_020e594c
-_020aa7a8: .word data_027e0fe4
+_020aa7a8: .word gActorManager
 _020aa7ac: .word data_ov00_020e5908
 	arm_func_end _ZN17LinkStateInteract12OnStateEnterEv
 
@@ -851,7 +851,7 @@ _020aadb0:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020aadbc:
 	ldr r1, _020ab3cc ; =data_027e0fb8
-	ldr r0, _020ab3d0 ; =data_027e0fe4
+	ldr r0, _020ab3d0 ; =gActorManager
 	ldr r3, [r1]
 	ldr r0, [r0]
 	ldr r2, [r3, #0x84]
@@ -1267,7 +1267,7 @@ _020ab3c0: .word data_027e0d0c
 _020ab3c4: .word data_02050f54
 _020ab3c8: .word 0x000004cd
 _020ab3cc: .word data_027e0fb8
-_020ab3d0: .word data_027e0fe4
+_020ab3d0: .word gActorManager
 _020ab3d4: .word 0x0000ffff
 _020ab3d8: .word gMapManager
 _020ab3dc: .word 0x00001ccd
@@ -1986,7 +1986,7 @@ _020abcd8:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, pc}
 _020abce0:
-	ldr r0, _020abd70 ; =data_027e0fe4
+	ldr r0, _020abd70 ; =gActorManager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -2023,7 +2023,7 @@ _020abce0:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _020abd6c: .word data_027e0fb8
-_020abd70: .word data_027e0fe4
+_020abd70: .word gActorManager
 _020abd74: .word data_ov00_020eec9c
 	arm_func_end _ZN17LinkStateInteract18func_ov00_020abc78EP8ActorRef
 

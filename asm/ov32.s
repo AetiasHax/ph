@@ -2920,7 +2920,7 @@ func_ov32_0217e10c: ; 0x0217e10c
 	add r2, r4, #0x48
 	add r3, sp, #8
 	bl func_ov00_020c4048
-	ldr r0, _0217e268 ; =data_027e0fe4
+	ldr r0, _0217e268 ; =gActorManager
 	add r1, r4, #0xec
 	ldr r0, [r0]
 	add r1, r1, #0x400
@@ -2936,7 +2936,7 @@ _0217e258: .word data_027e0f6c
 _0217e25c: .word data_ov32_02185738
 _0217e260: .word data_027e0fe8
 _0217e264: .word 0x49434848
-_0217e268: .word data_027e0fe4
+_0217e268: .word gActorManager
 	arm_func_end func_ov32_0217e10c
 
 	.global func_ov32_0217e26c
@@ -4940,7 +4940,7 @@ _0217fbcc:
 	strb r0, [r4, #0x1a2]
 	mov r0, r4
 	bl func_ov32_0217fca0
-	ldr r1, _0217fc88 ; =data_027e0fe4
+	ldr r1, _0217fc88 ; =gActorManager
 	str r0, [r4, #0x404]
 	ldr r0, [r1]
 	add r1, r4, #0x34
@@ -4985,7 +4985,7 @@ _0217fbcc:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0217fc84: .word 0x0000270f
-_0217fc88: .word data_027e0fe4
+_0217fc88: .word gActorManager
 	arm_func_end func_ov32_0217fb90
 
 	.global func_ov32_0217fc8c
@@ -7768,7 +7768,7 @@ func_ov32_021822c0: ; 0x021822c0
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 _021822fc:
-	ldr r0, _02182380 ; =data_027e0fe4
+	ldr r0, _02182380 ; =gActorManager
 	ldr r0, [r0]
 	bl _ZN12ActorManager13FindActorByIdEj
 	cmp r0, #0
@@ -7806,7 +7806,7 @@ _02182378:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02182380: .word data_027e0fe4
+_02182380: .word gActorManager
 _02182384: .word 0x424c5354
 _02182388: .word 0x41525257
 _0218238c: .word 0x424d524e
@@ -10250,7 +10250,7 @@ _02184398: .word data_ov00_020e9370
 func_ov32_0218439c: ; 0x0218439c
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x84
-	ldr r1, _0218453c ; =data_027e0fe4
+	ldr r1, _0218453c ; =gActorManager
 	mov r2, #0
 	mov r4, r0
 	add r3, sp, #0x70
@@ -10276,7 +10276,7 @@ func_ov32_0218439c: ; 0x0218439c
 	movgt r0, #0
 	ldmgtia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r1, [r4, #8]
-	ldr r0, _0218453c ; =data_027e0fe4
+	ldr r0, _0218453c ; =gActorManager
 	str r1, [sp, #0x44]
 	ldr r3, [r4, #0xc]
 	ldr r0, [r0]
@@ -10353,7 +10353,7 @@ func_ov32_0218439c: ; 0x0218439c
 	add sp, sp, #0x84
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_0218453c: .word data_027e0fe4
+_0218453c: .word gActorManager
 _02184540: .word _ZTV11FilterActor
 _02184544: .word 0x42454530
 _02184548: .word data_02050f54
@@ -10593,7 +10593,7 @@ func_ov32_0218477c: ; 0x0218477c
 	ldr r2, _0218487c ; =data_027e0d0c
 	str r0, [r4, #0x164]
 	ldr r1, [r2]
-	ldr r0, _02184884 ; =data_027e0fe4
+	ldr r0, _02184884 ; =gActorManager
 	str r1, [r4, #0x60]
 	ldr r3, [r2, #4]
 	add r1, r4, #0x34
@@ -10613,7 +10613,7 @@ func_ov32_0218477c: ; 0x0218477c
 _02184878: .word 0x00000666
 _0218487c: .word data_027e0d0c
 _02184880: .word data_027e0fec
-_02184884: .word data_027e0fe4
+_02184884: .word gActorManager
 	arm_func_end func_ov32_0218477c
 
 	.global func_ov32_02184888

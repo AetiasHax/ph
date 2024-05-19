@@ -71,7 +71,7 @@ func_ov55_02198da4: ; 0x02198da4
 	add r6, r0, #0x24
 	cmp r7, r6
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
-	ldr r4, _02198df4 ; =data_027e0fe4
+	ldr r4, _02198df4 ; =gActorManager
 	mvn r5, #0
 _02198dc0:
 	ldr r0, [r7]
@@ -89,7 +89,7 @@ _02198de4:
 	bne _02198dc0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02198df4: .word data_027e0fe4
+_02198df4: .word gActorManager
 	arm_func_end func_ov55_02198da4
 
 	.global func_ov55_02198df8
@@ -192,7 +192,7 @@ _02198f40:
 	mov r1, #0
 	ldr r2, [r2, #0x28]
 	blx r2
-	ldr r0, _02198f74 ; =data_027e0fe4
+	ldr r0, _02198f74 ; =gActorManager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -201,7 +201,7 @@ _02198f40:
 	.align 2, 0
 _02198f6c: .word data_027e0fe8
 _02198f70: .word 0x424f4d42
-_02198f74: .word data_027e0fe4
+_02198f74: .word gActorManager
 	arm_func_end func_ov55_02198e60
 
 	.global func_ov55_02198f78

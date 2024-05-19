@@ -74923,13 +74923,13 @@ _02036b24:
 	cmp r3, #0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
-	ldr r0, _02036bac ; =data_027e0fe4
+	ldr r0, _02036bac ; =gActorManager
 	ldr r2, _02036bb0 ; =data_0205691c
 	ldr r1, [r0]
 	ldr r2, [r2, r3, lsl #2]
 	add r0, sp, #4
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
-	ldr r0, _02036bac ; =data_027e0fe4
+	ldr r0, _02036bac ; =gActorManager
 	add r1, sp, #4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -74952,7 +74952,7 @@ _02036b24:
 _02036ba0: .word data_027e0c54
 _02036ba4: .word data_027e077c
 _02036ba8: .word data_02056be4
-_02036bac: .word data_027e0fe4
+_02036bac: .word gActorManager
 _02036bb0: .word data_0205691c
 _02036bb4: .word data_02056918
 _02036bb8: .word data_027e0ffc
@@ -76484,7 +76484,7 @@ _02037d64:
 	mov r0, r0, asr #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 _02037d90:
-	ldr r0, _02037f54 ; =data_027e0fe4
+	ldr r0, _02037f54 ; =gActorManager
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZN12ActorManager18func_ov00_020c3b2cEPi
@@ -76605,7 +76605,7 @@ _02037f44: .word data_027e0764
 _02037f48: .word gAdventureFlags
 _02037f4c: .word data_027e0cb4
 _02037f50: .word gItemManager
-_02037f54: .word data_027e0fe4
+_02037f54: .word gActorManager
 	arm_func_end func_02037b88
 
 	.global func_02037f58

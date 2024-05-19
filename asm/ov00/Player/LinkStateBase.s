@@ -465,7 +465,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	add r3, sp, #0xc
 	str r4, [sp]
 	bl func_ov00_020c4048
-	ldr r0, _020a84b8 ; =data_027e0fe4
+	ldr r0, _020a84b8 ; =gActorManager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -487,7 +487,7 @@ _020a84a8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020a84b4: .word data_027e0fe8
-_020a84b8: .word data_027e0fe4
+_020a84b8: .word gActorManager
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8390EiPv
 
 	.global _ZN13LinkStateBase18func_ov00_020a84bcEi
@@ -1244,14 +1244,14 @@ _020a8ca0: .word data_027e0fcc
 	.global _ZN13LinkStateBase12GetGrabActorEv
 	arm_func_start _ZN13LinkStateBase12GetGrabActorEv
 _ZN13LinkStateBase12GetGrabActorEv: ; 0x020a8ca4
-	ldr r1, _020a8cbc ; =data_027e0fe4
+	ldr r1, _020a8cbc ; =gActorManager
 	ldr r2, [r0, #8]
 	ldr r0, [r1]
 	ldr ip, _020a8cc0 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x3c
 	bx ip
 	.align 2, 0
-_020a8cbc: .word data_027e0fe4
+_020a8cbc: .word gActorManager
 _020a8cc0: .word _ZN12ActorManager8GetActorEP8ActorRef
 	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 

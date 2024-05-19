@@ -30,7 +30,7 @@
 .extern gPlayer
 .extern data_027e0fb8
 .extern data_027e0fcc
-.extern data_027e0fe4
+.extern gActorManager
 .extern data_027e0fe8
 .extern data_027e103c
 .extern data_ov00_020eec68

@@ -159,7 +159,7 @@ func_ov20_0216d848: ; 0x0216d848
 	bl func_ov00_020cb140
 	ldr r11, _0216da04 ; =0x46425331
 	ldr r5, _0216da08 ; =data_027e0fe8
-	ldr r4, _0216da0c ; =data_027e0fe4
+	ldr r4, _0216da0c ; =gActorManager
 	mov r9, #0
 	add r8, sp, #0x18
 	mvn r7, #0
@@ -246,7 +246,7 @@ _0216d9fc: .word gAdventureFlags
 _0216da00: .word data_ov20_02178320
 _0216da04: .word 0x46425331
 _0216da08: .word data_027e0fe8
-_0216da0c: .word data_027e0fe4
+_0216da0c: .word gActorManager
 _0216da10: .word data_02050f54
 _0216da14: .word 0x55555556
 	arm_func_end func_ov20_0216d848
@@ -4700,7 +4700,7 @@ _0217163c: .word 0x46425334
 	arm_func_start func_ov20_02171640
 func_ov20_02171640: ; 0x02171640
 	stmdb sp!, {r3, lr}
-	ldr r1, _02171660 ; =data_027e0fe4
+	ldr r1, _02171660 ; =gActorManager
 	mov r2, r0
 	ldr r0, [r1]
 	add r1, r2, #0x34
@@ -4708,7 +4708,7 @@ func_ov20_02171640: ; 0x02171640
 	bl func_ov20_0216f720
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_02171660: .word data_027e0fe4
+_02171660: .word gActorManager
 	arm_func_end func_ov20_02171640
 
 	.global func_ov20_02171664
@@ -5763,7 +5763,7 @@ _02172494:
 _021724cc:
 	mov r0, r5
 	bl _ZN5Actor12KillInBoundsEv
-	ldr r0, _02172554 ; =data_027e0fe4
+	ldr r0, _02172554 ; =gActorManager
 	add r1, r5, #0x34
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -5798,7 +5798,7 @@ _02172544: .word data_027e0ffc
 _02172548: .word data_027e0e58
 _0217254c: .word 0x00000261
 _02172550: .word data_027e0f64
-_02172554: .word data_027e0fe4
+_02172554: .word gActorManager
 _02172558: .word 0x46425353
 	arm_func_end func_ov20_021720b8
 
@@ -6029,12 +6029,12 @@ _021727fc:
 	add r3, sp, #8
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldr r1, _0217294c ; =data_027e0fe4
+	ldr r1, _0217294c ; =gActorManager
 	ldr r2, _02172950 ; =0x564c4352
 	ldr r1, [r1]
 	add r0, sp, #0
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
-	ldr r0, _0217294c ; =data_027e0fe4
+	ldr r0, _0217294c ; =gActorManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -6115,7 +6115,7 @@ _02172940:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_0217294c: .word data_027e0fe4
+_0217294c: .word gActorManager
 _02172950: .word 0x564c4352
 _02172954: .word data_027e0ffc
 _02172958: .word data_027e0764
@@ -7415,14 +7415,14 @@ _02173a7c: .word data_ov20_021779dc
 func_ov20_02173a80: ; 0x02173a80
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #8
-	ldr r2, _02173bc0 ; =data_027e0fe4
+	ldr r2, _02173bc0 ; =gActorManager
 	mov r5, r1
 	ldr r1, [r2]
 	mov r6, r0
 	ldr r2, _02173bc4 ; =0x524d4654
 	add r0, sp, #0
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
-	ldr r0, _02173bc0 ; =data_027e0fe4
+	ldr r0, _02173bc0 ; =gActorManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -7503,7 +7503,7 @@ _02173bb4:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_02173bc0: .word data_027e0fe4
+_02173bc0: .word gActorManager
 _02173bc4: .word 0x524d4654
 _02173bc8: .word data_ov00_020e8b08
 	arm_func_end func_ov20_02173a80
@@ -7536,7 +7536,7 @@ func_ov20_02173bf4: ; 0x02173bf4
 	beq _02173c3c
 	b _02173cbc
 _02173c14:
-	ldr r1, _02173cd4 ; =data_027e0fe4
+	ldr r1, _02173cd4 ; =gActorManager
 	ldr r2, _02173cd8 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0x10
@@ -7547,13 +7547,13 @@ _02173c14:
 	str r0, [r4, #0x184]
 	b _02173cc8
 _02173c3c:
-	ldr r1, _02173cd4 ; =data_027e0fe4
+	ldr r1, _02173cd4 ; =gActorManager
 	ldr r2, _02173cd8 ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #8
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	ldr r1, [sp, #8]
-	ldr r0, _02173cd4 ; =data_027e0fe4
+	ldr r0, _02173cd4 ; =gActorManager
 	str r1, [r4, #0x180]
 	ldr r1, [sp, #0xc]
 	mvn r7, #0
@@ -7588,7 +7588,7 @@ _02173cc8:
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-_02173cd4: .word data_027e0fe4
+_02173cd4: .word gActorManager
 _02173cd8: .word 0x4e415649
 _02173cdc: .word data_ov20_021789c4
 _02173ce0: .word 0x4c4e424b
@@ -9958,7 +9958,7 @@ _02175b0c:
 	str r1, [sp, #0xc8]
 	bl func_ov00_020c3348
 	ldr r1, [r4, #8]
-	ldr r0, _02175f28 ; =data_027e0fe4
+	ldr r0, _02175f28 ; =gActorManager
 	str r1, [sp, #0xc4]
 	ldr r3, [r4, #0xc]
 	ldr r1, [r0]
@@ -9966,7 +9966,7 @@ _02175b0c:
 	add r0, sp, #4
 	str r3, [sp, #0xc8]
 	bl _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
-	ldr r0, _02175f28 ; =data_027e0fe4
+	ldr r0, _02175f28 ; =gActorManager
 	add r1, sp, #4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -10222,7 +10222,7 @@ _02175f18: .word data_027e077c
 _02175f1c: .word gAdventureFlags
 _02175f20: .word data_027e0ffc
 _02175f24: .word 0x00000391
-_02175f28: .word data_027e0fe4
+_02175f28: .word gActorManager
 _02175f2c: .word 0x564c4352
 _02175f30: .word 0xfffffe66
 _02175f34: .word data_027e0fe8
@@ -10641,7 +10641,7 @@ func_ov20_021763b4: ; 0x021763b4
 	mov r4, r0
 	cmp r1, #0
 	bne _021763f0
-	ldr r1, _02176408 ; =data_027e0fe4
+	ldr r1, _02176408 ; =gActorManager
 	ldr r2, _0217640c ; =0x4e415649
 	ldr r1, [r1]
 	add r0, sp, #0
@@ -10660,7 +10660,7 @@ _021763fc:
 	add sp, sp, #8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02176408: .word data_027e0fe4
+_02176408: .word gActorManager
 _0217640c: .word 0x4e415649
 	arm_func_end func_ov20_021763b4
 

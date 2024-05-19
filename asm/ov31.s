@@ -1263,28 +1263,28 @@ _0217cdc8:
 	.global func_ov31_0217cdd8
 	arm_func_start func_ov31_0217cdd8
 func_ov31_0217cdd8: ; 0x0217cdd8
-	ldr r2, _0217cdf0 ; =data_027e0fe4
+	ldr r2, _0217cdf0 ; =gActorManager
 	add r3, r0, #0x70
 	ldr ip, _0217cdf4 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	ldr r0, [r2]
 	add r1, r3, r1, lsl #3
 	bx ip
 	.align 2, 0
-_0217cdf0: .word data_027e0fe4
+_0217cdf0: .word gActorManager
 _0217cdf4: .word _ZN12ActorManager8GetActorEP8ActorRef
 	arm_func_end func_ov31_0217cdd8
 
 	.global func_ov31_0217cdf8
 	arm_func_start func_ov31_0217cdf8
 func_ov31_0217cdf8: ; 0x0217cdf8
-	ldr r2, _0217ce10 ; =data_027e0fe4
+	ldr r2, _0217ce10 ; =gActorManager
 	add r3, r0, #0x70
 	ldr ip, _0217ce14 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	ldr r0, [r2]
 	add r1, r3, r1, lsl #3
 	bx ip
 	.align 2, 0
-_0217ce10: .word data_027e0fe4
+_0217ce10: .word gActorManager
 _0217ce14: .word _ZN12ActorManager8GetActorEP8ActorRef
 	arm_func_end func_ov31_0217cdf8
 
@@ -6650,7 +6650,7 @@ func_ov31_02180ac8: ; 0x02180ac8
 	add r0, r4, #0x1d8
 	bl func_ov14_02145a74
 	ldr r1, _02180bb4 ; =data_ov31_02181ad4
-	ldr r0, _02180bb8 ; =data_027e0fe4
+	ldr r0, _02180bb8 ; =gActorManager
 	str r1, [r4, #0x408]
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x29]
@@ -6707,7 +6707,7 @@ _02180b90:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02180bb4: .word data_ov31_02181ad4
-_02180bb8: .word data_027e0fe4
+_02180bb8: .word gActorManager
 _02180bbc: .word data_ov31_02181ac8
 _02180bc0: .word data_027e0dbc
 _02180bc4: .word data_ov31_02181abc
@@ -6806,7 +6806,7 @@ _02180cf8: ; jump table
 	b _02180d70 ; case 3
 	b _02180d78 ; case 4
 _02180d0c:
-	ldr r0, _02180dd4 ; =data_027e0fe4
+	ldr r0, _02180dd4 ; =gActorManager
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x29]
 	cmp r0, #0
@@ -6838,7 +6838,7 @@ _02180d70:
 	mov r0, #0xa
 	ldmia sp!, {r3, pc}
 _02180d78:
-	ldr r0, _02180dd4 ; =data_027e0fe4
+	ldr r0, _02180dd4 ; =gActorManager
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x29]
 	cmp r0, #0
@@ -6864,7 +6864,7 @@ _02180dcc:
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_02180dd4: .word data_027e0fe4
+_02180dd4: .word gActorManager
 _02180dd8: .word gAdventureFlags
 	arm_func_end func_ov31_02180ce8
 

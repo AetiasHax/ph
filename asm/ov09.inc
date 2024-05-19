@@ -52,7 +52,7 @@
 .extern gMapManager
 .extern data_027e0f64
 .extern gPlayer
-.extern data_027e0fe4
+.extern gActorManager
 .extern data_027e0ffc
 .extern data_027e103c
 .extern data_027e1040

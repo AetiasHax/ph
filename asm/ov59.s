@@ -996,7 +996,7 @@ _02199968:
 	ldrb r0, [r1, #0x1d]
 	cmp r0, #0
 	beq _02199b70
-	ldr r1, _0219a094 ; =data_027e0fe4
+	ldr r1, _0219a094 ; =gActorManager
 	ldr r2, _0219a098 ; =0x57534253
 	ldr r1, [r1]
 	add r0, sp, #0x14
@@ -1008,7 +1008,7 @@ _02199968:
 	movne r0, #0
 	cmp r0, #0
 	bne _02199b38
-	ldr r0, _0219a094 ; =data_027e0fe4
+	ldr r0, _0219a094 ; =gActorManager
 	add r1, sp, #0x14
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1410,7 +1410,7 @@ _0219a084: .word 0x0000ffff
 _0219a088: .word gMapManager
 _0219a08c: .word 0xfffff999
 _0219a090: .word 0x00000666
-_0219a094: .word data_027e0fe4
+_0219a094: .word gActorManager
 _0219a098: .word 0x57534253
 _0219a09c: .word 0x0000099a
 _0219a0a0: .word 0x00000b33

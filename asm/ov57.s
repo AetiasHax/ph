@@ -193,7 +193,7 @@ _02198f54:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _02198f60:
-	ldr r0, _02198fbc ; =data_027e0fe4
+	ldr r0, _02198fbc ; =gActorManager
 	add r1, r4, #0xc
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -218,7 +218,7 @@ _02198fac:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 _02198fb8: .word gMapManager
-_02198fbc: .word data_027e0fe4
+_02198fbc: .word gActorManager
 	arm_func_end func_ov57_02198e80
 
 	.global func_ov57_02198fc0
@@ -622,7 +622,7 @@ _02199470:
 	moveq r0, #0
 	ldmia sp!, {r3, pc}
 _02199490:
-	ldr r0, _021994bc ; =data_027e0fe4
+	ldr r0, _021994bc ; =gActorManager
 	add r1, r1, #0xc
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -635,7 +635,7 @@ _021994b0:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _021994b8: .word gMapManager
-_021994bc: .word data_027e0fe4
+_021994bc: .word gActorManager
 	arm_func_end func_ov57_02199454
 
 	.global func_ov57_021994c0
@@ -1221,7 +1221,7 @@ _02199cb8:
 	bl func_ov00_020be9e4
 	b _02199d2c
 _02199cf8:
-	ldr r0, _02199d50 ; =data_027e0fe4
+	ldr r0, _02199d50 ; =gActorManager
 	mov r1, r9
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1245,7 +1245,7 @@ _02199d2c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _02199d4c: .word gMapManager
-_02199d50: .word data_027e0fe4
+_02199d50: .word gActorManager
 	arm_func_end func_ov57_02199c78
 
 	.global func_ov57_02199d54

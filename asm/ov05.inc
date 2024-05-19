@@ -209,7 +209,7 @@
 .extern data_027e0fcc
 .extern data_027e0fd0
 .extern data_027e0fd4
-.extern data_027e0fe4
+.extern gActorManager
 .extern data_027e0ff4
 .extern data_027e0ff8
 .extern data_027e0ffc

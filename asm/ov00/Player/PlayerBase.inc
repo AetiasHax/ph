@@ -14,7 +14,7 @@
 .extern data_027e0fac
 .extern data_027e0fb0
 .extern data_027e0fb8
-.extern data_027e0fe4
+.extern gActorManager
 .extern func_01ff9bf8
 .extern func_01ffa0f4
 .extern func_01ffec34

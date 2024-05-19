@@ -157,14 +157,14 @@ _020aeff8: .word data_027e103c
 	.global _ZN13PlayerControl14GetFollowActorEv
 	arm_func_start _ZN13PlayerControl14GetFollowActorEv
 _ZN13PlayerControl14GetFollowActorEv: ; 0x020aeffc
-	ldr r1, _020af014 ; =data_027e0fe4
+	ldr r1, _020af014 ; =gActorManager
 	mov r2, r0
 	ldr r0, [r1]
 	ldr ip, _020af018 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x84
 	bx ip
 	.align 2, 0
-_020af014: .word data_027e0fe4
+_020af014: .word gActorManager
 _020af018: .word _ZN12ActorManager8GetActorEP8ActorRef
 	arm_func_end _ZN13PlayerControl14GetFollowActorEv
 
@@ -834,7 +834,7 @@ _020af8b0:
 	ldr r1, [r0]
 	cmp r1, #0
 	beq _020af8dc
-	ldr r0, _020afacc ; =data_027e0fe4
+	ldr r0, _020afacc ; =gActorManager
 	add r1, r1, #0x3c
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -844,7 +844,7 @@ _020af8dc:
 	cmp r4, #0
 	mov r4, #0
 	beq _020afa68
-	ldr r0, _020afacc ; =data_027e0fe4
+	ldr r0, _020afacc ; =gActorManager
 	add r1, r9, #0x8c
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -945,7 +945,7 @@ _020afa18:
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 _020afa68:
-	ldr r1, _020afacc ; =data_027e0fe4
+	ldr r1, _020afacc ; =gActorManager
 	add r0, sp, #0
 	ldr r1, [r1]
 	mov r2, r4
@@ -972,7 +972,7 @@ _020afabc: .word gAdventureFlags
 _020afac0: .word gPlayer
 _020afac4: .word gItemManager
 _020afac8: .word gPlayerLink
-_020afacc: .word data_027e0fe4
+_020afacc: .word gActorManager
 _020afad0: .word gMapManager
 _020afad4: .word data_027e0f94
 	arm_func_end _ZN13PlayerControl18func_ov00_020af778Ev
@@ -1029,7 +1029,7 @@ _ZN13PlayerControl18func_ov00_020afb6cEv: ; 0x020afb6c
 	sub sp, sp, #0x20
 	mov r9, r0
 	bl _ZN13PlayerControl18func_ov00_020af778Ev
-	ldr r1, _020afe70 ; =data_027e0fe4
+	ldr r1, _020afe70 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r9, #0x84
@@ -1236,7 +1236,7 @@ _020afe64:
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-_020afe70: .word data_027e0fe4
+_020afe70: .word gActorManager
 _020afe74: .word gItemManager
 _020afe78: .word data_027e0f94
 _020afe7c: .word gPlayerLink

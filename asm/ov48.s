@@ -1356,7 +1356,7 @@ func_ov48_02190e80: ; 0x02190e80
 	ldr r0, [r0]
 	add r3, sp, #0x1c
 	blx func_ov00_020c4048
-	ldr r0, _02190f68 ; =data_027e0fe4
+	ldr r0, _02190f68 ; =gActorManager
 	add r1, sp, #4
 	ldr r0, [r0]
 	blx _ZN12ActorManager8GetActorEP8ActorRef
@@ -1396,7 +1396,7 @@ _02190f58: .word data_ov48_02194d50
 _02190f5c: .word 0x00000534
 _02190f60: .word 0x424d5345
 _02190f64: .word data_027e0fe8
-_02190f68: .word data_027e0fe4
+_02190f68: .word gActorManager
 	thumb_func_end func_ov48_02190e80
 
 	.global func_ov48_02190f6c
@@ -2595,7 +2595,7 @@ _02191ed2:
 	add r3, sp, #0x58
 	ldr r0, [r0]
 	blx func_ov00_020c4048
-	ldr r0, _02192054 ; =data_027e0fe4
+	ldr r0, _02192054 ; =gActorManager
 	add r1, sp, #0x20
 	ldr r0, [r0]
 	blx _ZN12ActorManager8GetActorEP8ActorRef
@@ -2756,7 +2756,7 @@ _02192044: .word 0x000004b4
 _02192048: .word 0x000004ac
 _0219204c: .word 0x54414c42
 _02192050: .word data_027e0fe8
-_02192054: .word data_027e0fe4
+_02192054: .word gActorManager
 _02192058: .word 0x0000052c
 _0219205c: .word 0x00000666
 	thumb_func_end func_ov48_02191e10
@@ -4847,7 +4847,7 @@ _02193bd4:
 	add r6, r6, #8
 	cmp r6, r0
 	blo _02193bd4
-	ldr r0, _02193f40 ; =data_027e0fe4
+	ldr r0, _02193f40 ; =gActorManager
 	add r1, sp, #0x224
 	ldr r0, [r0]
 	add r2, sp, #0x198
@@ -4856,7 +4856,7 @@ _02193bd4:
 	mov r5, #0
 	cmp r0, #0
 	ble _02193d10
-	ldr r11, _02193f40 ; =data_027e0fe4
+	ldr r11, _02193f40 ; =gActorManager
 	mov r9, r5
 	add r4, sp, #0x84
 _02193c18:
@@ -4954,7 +4954,7 @@ _02193d68:
 	add r6, r6, #8
 	cmp r6, r0
 	blo _02193d68
-	ldr r0, _02193f40 ; =data_027e0fe4
+	ldr r0, _02193f40 ; =gActorManager
 	add r1, sp, #0x150
 	ldr r0, [r0]
 	add r2, sp, #0xc4
@@ -4967,7 +4967,7 @@ _02193d68:
 	add r4, sp, #0x74
 	mov r11, #1
 _02193dac:
-	ldr r0, _02193f40 ; =data_027e0fe4
+	ldr r0, _02193f40 ; =gActorManager
 	ldr r1, [sp, #0xc4]
 	ldr r0, [r0]
 	add r1, r1, r9
@@ -5078,7 +5078,7 @@ _02193f30: .word 0x000004cd
 _02193f34: .word data_ov48_02194688
 _02193f38: .word _ZTV11FilterActor
 _02193f3c: .word 0x424f4d42
-_02193f40: .word data_027e0fe4
+_02193f40: .word gActorManager
 _02193f44: .word 0x424d5459
 	arm_func_end func_ov48_02193658
 
