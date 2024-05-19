@@ -3495,7 +3495,7 @@ func_ov41_0218c1c4: ; 0x0218c1c4
 func_ov41_0218c204: ; 0x0218c204
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x18
-	ldr r1, _0218c3bc ; =data_027e0f94
+	ldr r1, _0218c3bc ; =gPlayerPos
 	ldr r3, _0218c3c0 ; =gPlayerLink
 	mov r4, r0
 	add ip, sp, #0xc
@@ -3607,7 +3607,7 @@ _0218c3b0:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218c3bc: .word data_027e0f94
+_0218c3bc: .word gPlayerPos
 _0218c3c0: .word gPlayerLink
 _0218c3c4: .word 0x0000319a
 _0218c3c8: .word gAdventureFlags
@@ -4712,7 +4712,7 @@ _0218d20c: .word 0x0000071c
 func_ov41_0218d210: ; 0x0218d210
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
-	ldr r1, _0218d310 ; =data_027e0f94
+	ldr r1, _0218d310 ; =gPlayerPos
 	ldr r3, _0218d314 ; =gPlayer
 	mov r6, r0
 	add r4, sp, #0xc
@@ -4777,7 +4777,7 @@ _0218d2fc:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0218d310: .word data_027e0f94
+_0218d310: .word gPlayerPos
 _0218d314: .word gPlayer
 _0218d318: .word data_027e0fac
 _0218d31c: .word gMapManager

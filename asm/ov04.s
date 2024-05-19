@@ -878,7 +878,7 @@ func_ov04_02101188: ; 0x02101188
 	mov r0, #0
 	ldrsh r0, [r1, r0]
 	strh r0, [r5, #0x36]
-	ldr r0, _02101380 ; =data_027e0f94
+	ldr r0, _02101380 ; =gPlayerPos
 	ldr r1, [r0]
 	str r1, [r5, #0x38]
 	ldr r1, [r0, #4]
@@ -1085,7 +1085,7 @@ _02101370:
 _02101374: .word 0x027ffc3c
 _02101378: .word data_027e0d38
 _0210137c: .word data_027e0fac
-_02101380: .word data_027e0f94
+_02101380: .word gPlayerPos
 _02101384: .word data_027e0618
 _02101388: .word gMapManager
 _0210138c: .word data_027e077c
@@ -20545,7 +20545,7 @@ _0210aad6:
 	mov r1, #0
 	add r0, #0x5d
 	strb r1, [r0]
-	ldr r0, _0210ab1c ; =data_027e0f94
+	ldr r0, _0210ab1c ; =gPlayerPos
 	ldr r1, [r0]
 	str r1, [r5, #0x14]
 	ldr r1, [r0, #4]
@@ -20559,7 +20559,7 @@ _0210ab0c: .word data_027e0fdc
 _0210ab10: .word data_027e0fd4
 _0210ab14: .word data_027e0fd8
 _0210ab18: .word data_027e0fcc
-_0210ab1c: .word data_027e0f94
+_0210ab1c: .word gPlayerPos
 	thumb_func_end func_ov04_0210a9ac
 
 	.global func_ov04_0210ab20

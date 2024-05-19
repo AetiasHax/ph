@@ -199,7 +199,7 @@
 .extern data_027e0f7c
 .extern data_027e0f88
 .extern gPlayer
-.extern data_027e0f94
+.extern gPlayerPos
 .extern data_027e0fa0
 .extern data_027e0fac
 .extern data_027e0fb0

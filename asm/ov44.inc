@@ -69,7 +69,7 @@
 .extern data_027e0764
 .extern data_027e0e58
 .extern gMapManager
-.extern data_027e0f94
+.extern gPlayerPos
 .extern data_027e0fe0
 .extern gActorManager
 .extern data_027e0fe8

@@ -3876,7 +3876,7 @@ _020f0c38:
 	mov r1, #1
 	str r1, [sp]
 	ldr r0, _020f0e30 ; =data_027e0d3c
-	ldr r1, _020f0e34 ; =data_027e0f94
+	ldr r1, _020f0e34 ; =gPlayerPos
 	ldr r0, [r0]
 	add r2, sp, #0x20
 	add r3, sp, #0x1c
@@ -4008,7 +4008,7 @@ _020f0e20:
 	.align 2, 0
 _020f0e2c: .word data_027e0c54
 _020f0e30: .word data_027e0d3c
-_020f0e34: .word data_027e0f94
+_020f0e34: .word gPlayerPos
 _020f0e38: .word 0x00001ccd
 _020f0e3c: .word gMapManager
 _020f0e40: .word 0x00002ccd
@@ -17348,7 +17348,7 @@ func_ov03_020f9e50: ; 0x020f9e50
 	ldr r0, _020f9ec8 ; =data_027e0d3c
 	str r2, [sp, #0xc]
 	ldr r0, [r0]
-	ldr r1, _020f9ecc ; =data_027e0f94
+	ldr r1, _020f9ecc ; =gPlayerPos
 	add r3, r2, #0
 	blx func_ov00_02079470
 	mov r3, #0
@@ -17399,7 +17399,7 @@ _020f9ebc:
 	pop {r3, r4, r5, r6, r7, pc}
 	nop
 _020f9ec8: .word data_027e0d3c
-_020f9ecc: .word data_027e0f94
+_020f9ecc: .word gPlayerPos
 _020f9ed0: .word data_ov03_021007cc
 _020f9ed4: .word 0x0000024d
 	thumb_func_end func_ov03_020f9e50

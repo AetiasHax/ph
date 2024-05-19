@@ -752,7 +752,7 @@ _0216e0e0:
 	add sp, sp, #0x124
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0216e120:
-	ldr r0, _0216e544 ; =data_027e0f94
+	ldr r0, _0216e544 ; =gPlayerPos
 	add r3, sp, #0x68
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -1026,7 +1026,7 @@ _0216e534: .word data_02050f54
 _0216e538: .word 0x55555556
 _0216e53c: .word data_ov20_02177878
 _0216e540: .word data_027e0ffc
-_0216e544: .word data_027e0f94
+_0216e544: .word gPlayerPos
 _0216e548: .word data_027e0764
 _0216e54c: .word 0x00008001
 _0216e550: .word gMapManager
@@ -2382,7 +2382,7 @@ func_ov20_0216f82c: ; 0x0216f82c
 	mov r4, r0
 	add r0, r4, #0xa00
 	ldrsh r0, [r0, #0x70]
-	ldr r1, _0216f894 ; =data_027e0f94
+	ldr r1, _0216f894 ; =gPlayerPos
 	add r2, sp, #0
 	add r0, r4, r0, lsl #2
 	ldr r0, [r0, #0xa40]
@@ -2405,7 +2405,7 @@ _0216f870:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0216f894: .word data_027e0f94
+_0216f894: .word gPlayerPos
 	arm_func_end func_ov20_0216f82c
 
 	.global func_ov20_0216f898
@@ -2588,7 +2588,7 @@ func_ov20_0216fa6c: ; 0x0216fa6c
 	str r1, [sp, #0x30]
 	bl func_ov00_020c3348
 	ldr r1, [r4, #8]
-	ldr r0, _0216fb84 ; =data_027e0f94
+	ldr r0, _0216fb84 ; =gPlayerPos
 	str r1, [sp, #0x2c]
 	ldr r4, [r4, #0xc]
 	add r3, sp, #4
@@ -2648,7 +2648,7 @@ func_ov20_0216fa6c: ; 0x0216fa6c
 	add sp, sp, #0x3c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_0216fb84: .word data_027e0f94
+_0216fb84: .word gPlayerPos
 _0216fb88: .word data_027e0764
 _0216fb8c: .word 0x00004001
 _0216fb90: .word data_027e0fe8
@@ -3567,7 +3567,7 @@ _021706a0:
 	ldrsh r5, [r1, r2]
 	mov r0, r0, lsl #0x1
 	ldrsh ip, [r1, r0]
-	ldr r2, _0217073c ; =data_027e0f94
+	ldr r2, _0217073c ; =gPlayerPos
 	add r1, sp, #0
 	add r3, sp, #0xc
 	mov r0, #0x3800
@@ -3591,7 +3591,7 @@ _0217072c: .word 0xffffce39
 _02170730: .word 0x0000071c
 _02170734: .word 0xfffff8e4
 _02170738: .word data_02050f54
-_0217073c: .word data_027e0f94
+_0217073c: .word gPlayerPos
 	arm_func_end func_ov20_021705ec
 
 	.global func_ov20_02170740
@@ -4909,7 +4909,7 @@ func_ov20_021718bc: ; 0x021718bc
 	beq _021719b8
 	b _021719c0
 _021718dc:
-	ldr r0, _021719d4 ; =data_027e0f94
+	ldr r0, _021719d4 ; =gPlayerPos
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -4975,7 +4975,7 @@ _021719c0:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_021719d4: .word data_027e0f94
+_021719d4: .word gPlayerPos
 _021719d8: .word 0x00000333
 	arm_func_end func_ov20_021718bc
 
@@ -7661,7 +7661,7 @@ func_ov20_02173ce4: ; 0x02173ce4
 	ldr r1, [sp, #0x44]
 	add r0, sp, #0x3c
 	add r2, r1, #0x1000
-	ldr r1, _02173e34 ; =data_027e0f94
+	ldr r1, _02173e34 ; =gPlayerPos
 	str r2, [sp, #0x44]
 	bl func_01ff9ec0
 	mov r4, r0
@@ -7683,7 +7683,7 @@ _02173e20:
 	.align 2, 0
 _02173e2c: .word 0x0000ffff
 _02173e30: .word gMapManager
-_02173e34: .word data_027e0f94
+_02173e34: .word gPlayerPos
 	arm_func_end func_ov20_02173ce4
 
 	.global func_ov20_02173e38
@@ -8680,7 +8680,7 @@ _02174a20:
 	ldr r0, [r6, #0x15c]
 	cmp r0, #0
 	bne _02174b28
-	ldr r1, _02174ba4 ; =data_027e0f94
+	ldr r1, _02174ba4 ; =gPlayerPos
 	add r2, sp, #0x34
 	add r0, r6, #0x48
 	bl func_01ff9bf8
@@ -8730,7 +8730,7 @@ _02174b28:
 _02174b4c:
 	cmp r2, #0
 	bne _02174b88
-	ldr r0, _02174ba4 ; =data_027e0f94
+	ldr r0, _02174ba4 ; =gPlayerPos
 	add r2, sp, #0x10
 	add r1, r6, #0x54
 	bl func_01ff9bf8
@@ -8752,7 +8752,7 @@ _02174b94: .word gItemManager
 _02174b98: .word 0x000008a4
 _02174b9c: .word 0x00000733
 _02174ba0: .word gMapManager
-_02174ba4: .word data_027e0f94
+_02174ba4: .word gPlayerPos
 	arm_func_end func_ov20_021749dc
 
 	.global func_ov20_02174ba8
@@ -9867,7 +9867,7 @@ _021759c4:
 	add sp, sp, #0x19c
 	ldmia sp!, {r4, r5, pc}
 _021759e8:
-	ldr r0, _02175f10 ; =data_027e0f94
+	ldr r0, _02175f10 ; =gPlayerPos
 	add r3, sp, #0xe0
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -10216,7 +10216,7 @@ _02175ec8:
 	add sp, sp, #0x19c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_02175f10: .word data_027e0f94
+_02175f10: .word gPlayerPos
 _02175f14: .word gMapManager
 _02175f18: .word data_027e077c
 _02175f1c: .word gAdventureFlags

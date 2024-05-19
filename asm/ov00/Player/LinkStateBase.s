@@ -1186,10 +1186,10 @@ _020a8c48: .word func_ov00_020b5268
 	.global _ZN13LinkStateBase12GetPlayerPosEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerPosEv
 _ZN13LinkStateBase12GetPlayerPosEv: ; 0x020a8c4c
-	ldr r0, _020a8c54 ; =data_027e0f94
+	ldr r0, _020a8c54 ; =gPlayerPos
 	bx lr
 	.align 2, 0
-_020a8c54: .word data_027e0f94
+_020a8c54: .word gPlayerPos
 	arm_func_end _ZN13LinkStateBase12GetPlayerPosEv
 
 	.global _ZN13LinkStateBase12GetPlayerVelEv

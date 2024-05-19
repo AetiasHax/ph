@@ -696,7 +696,7 @@ func_ov49_02195e10: ; 0x02195e10
 	add r2, r4, #0x48
 	mov r1, #0x308
 	bl func_ov00_020cec60
-	ldr r0, _02195e98 ; =data_027e0f94
+	ldr r0, _02195e98 ; =gPlayerPos
 	add ip, sp, #0xc
 	ldmia r0, {r0, r1, r2}
 	stmia ip, {r0, r1, r2}
@@ -721,7 +721,7 @@ func_ov49_02195e10: ; 0x02195e10
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02195e94: .word data_027e0ffc
-_02195e98: .word data_027e0f94
+_02195e98: .word gPlayerPos
 _02195e9c: .word 0x0000071c
 	arm_func_end func_ov49_02195e10
 

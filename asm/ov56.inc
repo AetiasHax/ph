@@ -13,7 +13,7 @@
 .extern data_027e0764
 .extern data_027e0d0c
 .extern data_027e0f64
-.extern data_027e0f94
+.extern gPlayerPos
 .extern data_027e0fb8
 .extern data_027e0fe8
 .extern data_027e0ffc

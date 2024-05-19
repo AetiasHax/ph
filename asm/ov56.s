@@ -425,7 +425,7 @@ _0219925c:
 	cmp r0, #0
 	addeq sp, sp, #0x20
 	ldmeqia sp!, {r3, r4, r5, pc}
-	ldr r1, _021992e0 ; =data_027e0f94
+	ldr r1, _021992e0 ; =gPlayerPos
 	add r2, sp, #8
 	add r0, r4, #0x44
 	bl func_01ff9bc4
@@ -447,7 +447,7 @@ _021992d0: .word data_027e0fb8
 _021992d4: .word data_ov56_021993f0
 _021992d8: .word data_ov56_021993e0
 _021992dc: .word data_027e0f64
-_021992e0: .word data_027e0f94
+_021992e0: .word gPlayerPos
 _021992e4: .word data_027e0d0c
 	arm_func_end func_ov56_0219911c
 

@@ -75932,7 +75932,7 @@ func_02037628: ; 0x02037628
 	streq r2, [r0, #4]
 	streq r2, [r0, #8]
 	beq _0203767c
-	ldr r1, _020376b4 ; =data_027e0f94
+	ldr r1, _020376b4 ; =gPlayerPos
 	ldr r2, [r1]
 	str r2, [r0]
 	ldr r2, [r1, #4]
@@ -75956,7 +75956,7 @@ _020376a8:
 	bx lr
 	.align 2, 0
 _020376b0: .word data_027e0d38
-_020376b4: .word data_027e0f94
+_020376b4: .word gPlayerPos
 _020376b8: .word data_027e077c
 _020376bc: .word data_02056be4
 	arm_func_end func_02037628

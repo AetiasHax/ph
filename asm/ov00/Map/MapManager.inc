@@ -52,7 +52,7 @@
 .extern data_027e0f78
 .extern data_027e0f7c
 .extern gPlayer
-.extern data_027e0f94
+.extern gPlayerPos
 .extern gActorManager
 .extern data_027e0fe8
 .extern data_027e103c

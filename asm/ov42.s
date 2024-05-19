@@ -624,7 +624,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	strb r3, [r1, #0x79]
 	strb r3, [r1, #0x7b]
 	ldr r0, [r0]
-	ldr r1, _02189e54 ; =data_027e0f94
+	ldr r1, _02189e54 ; =gPlayerPos
 	rsb r2, r2, #0
 	bl func_ov00_020bcdec
 	ldmia sp!, {r4, pc}
@@ -696,7 +696,7 @@ _02189e44:
 	.align 2, 0
 _02189e4c: .word gPlayerLink
 _02189e50: .word data_027e0fb8
-_02189e54: .word data_027e0f94
+_02189e54: .word gPlayerPos
 _02189e58: .word data_ov00_020eec9c
 _02189e5c: .word 0x88888889
 	arm_func_end func_ov42_02189cf8

@@ -3971,15 +3971,9 @@ data_027e0f8c:
 	.global gPlayer
 gPlayer:
 	.space 0x4
-	.global data_027e0f94
-data_027e0f94:
-	.space 0x4
-	.global data_027e0f98
-data_027e0f98:
-	.space 0x4
-	.global data_027e0f9c
-data_027e0f9c:
-	.space 0x4
+	.global gPlayerPos
+gPlayerPos:
+	.space 0xc
 	.global data_027e0fa0
 data_027e0fa0:
 	.space 0x4

@@ -770,7 +770,7 @@ func_ov48_021908ac: ; 0x021908ac
 	addeq sp, sp, #0x1c
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, pc}
-	ldr r0, _0219093c ; =data_027e0f94
+	ldr r0, _0219093c ; =gPlayerPos
 	add r2, sp, #0x10
 	add r1, r5, #0x54
 	bl func_01ff9bf8
@@ -798,7 +798,7 @@ func_ov48_021908ac: ; 0x021908ac
 	add sp, sp, #0x1c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0219093c: .word data_027e0f94
+_0219093c: .word gPlayerPos
 _02190940: .word gPlayer
 _02190944: .word 0x000004cd
 	arm_func_end func_ov48_021908ac
@@ -1929,7 +1929,7 @@ _02191694:
 	ldrnesh r1, [r0, #0xf8]
 	subne r1, r1, #0xb6
 	strh r1, [r0, #0xf8]
-	ldr r0, _02191c0c ; =data_027e0f94
+	ldr r0, _02191c0c ; =gPlayerPos
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	mov r0, r4
@@ -2286,7 +2286,7 @@ _02191be4:
 _02191c00: .word 0x41525257
 _02191c04: .word data_02050f54
 _02191c08: .word 0xfffffccd
-_02191c0c: .word data_027e0f94
+_02191c0c: .word gPlayerPos
 _02191c10: .word 0x00000666
 _02191c14: .word data_ov48_0219542c
 _02191c18: .word data_ov00_020e892c
@@ -2972,14 +2972,14 @@ _02192324: .word func_ov00_020cd0a8
 func_ov48_02192328: ; 0x02192328
 	ldr ip, _02192344 ; =func_ov00_020cd120
 	add r0, r0, #0x138
-	ldr r1, _02192348 ; =data_027e0f94
+	ldr r1, _02192348 ; =gPlayerPos
 	ldr r2, _0219234c ; =0x0000013f
 	ldr r3, _02192350 ; =0x0000071c
 	add r0, r0, #0x400
 	bx ip
 	.align 2, 0
 _02192344: .word func_ov00_020cd120
-_02192348: .word data_027e0f94
+_02192348: .word gPlayerPos
 _0219234c: .word 0x0000013f
 _02192350: .word 0x0000071c
 	arm_func_end func_ov48_02192328
@@ -3277,7 +3277,7 @@ _02192714:
 	ldr r1, _02193168 ; =0x00000247
 	add r2, r9, #0x48
 	bl func_ov00_020cec60
-	ldr r0, _0219316c ; =data_027e0f94
+	ldr r0, _0219316c ; =gPlayerPos
 	add r3, sp, #0x6c
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -3984,7 +3984,7 @@ _02193154:
 _02193160: .word gItemManager
 _02193164: .word data_027e0ffc
 _02193168: .word 0x00000247
-_0219316c: .word data_027e0f94
+_0219316c: .word gPlayerPos
 _02193170: .word gPlayer
 _02193174: .word 0x00000191
 _02193178: .word 0x5342454d

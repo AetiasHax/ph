@@ -7857,7 +7857,7 @@ _020b7ab0:
 	str r0, [sp, #0x10]
 	add r1, r4, #0x44
 	str r1, [sp, #0x14]
-	ldr r0, _020b7d44 ; =data_027e0f94
+	ldr r0, _020b7d44 ; =gPlayerPos
 	mov r1, r7
 	ldr r2, [r0, #4]
 	mov r0, r8
@@ -8021,7 +8021,7 @@ _020b7d24:
 _020b7d38: .word data_027e0d84
 _020b7d3c: .word data_027e0f64
 _020b7d40: .word gPlayer
-_020b7d44: .word data_027e0f94
+_020b7d44: .word gPlayerPos
 _020b7d48: .word data_027e077c
 	arm_func_end func_ov00_020b7924
 
@@ -10087,7 +10087,7 @@ _020b9444:
 	mov r2, #0
 	cmp r0, #0
 	beq _020b94e8
-	ldr r0, _020b974c ; =data_027e0f94
+	ldr r0, _020b974c ; =gPlayerPos
 	str r2, [sp]
 	ldr r1, [r0]
 	str r1, [r7, #0x158]
@@ -10264,7 +10264,7 @@ _020b9738:
 _020b9740: .word gAdventureFlags
 _020b9744: .word data_027e0c68
 _020b9748: .word gPlayerLink
-_020b974c: .word data_027e0f94
+_020b974c: .word gPlayerPos
 _020b9750: .word gActorManager
 _020b9754: .word data_ov00_020e67d8
 _020b9758: .word gMapManager
@@ -11607,7 +11607,7 @@ _020ba914:
 	ldr r0, _020bac5c ; =data_ov00_020eec9c
 	bl func_ov00_020d77e4
 _020ba958:
-	ldr r0, _020bac60 ; =data_027e0f94
+	ldr r0, _020bac60 ; =gPlayerPos
 	add r3, sp, #0x18
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -11806,7 +11806,7 @@ _020bac50: .word gPlayerLink
 _020bac54: .word gAdventureFlags
 _020bac58: .word data_027e0c68
 _020bac5c: .word data_ov00_020eec9c
-_020bac60: .word data_027e0f94
+_020bac60: .word gPlayerPos
 _020bac64: .word data_027e0d38
 _020bac68: .word data_027e0f64
 _020bac6c: .word gMapManager
@@ -12610,7 +12610,7 @@ func_ov00_020bb46c: ; 0x020bb46c
 	mov r5, r0
 	ldr r3, [r2]
 	mov r4, r1
-	ldr r0, _020bb4d4 ; =data_027e0f94
+	ldr r0, _020bb4d4 ; =gPlayerPos
 	mov r2, r4
 	add r1, r3, #0x34
 	bl func_01ff9bc4
@@ -12632,7 +12632,7 @@ func_ov00_020bb46c: ; 0x020bb46c
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020bb4d0: .word data_027e0fcc
-_020bb4d4: .word data_027e0f94
+_020bb4d4: .word gPlayerPos
 _020bb4d8: .word data_027e0fd0
 	arm_func_end func_ov00_020bb46c
 
@@ -12988,7 +12988,7 @@ func_ov00_020bb948: ; 0x020bb948
 	sub sp, sp, #0xc
 	mov r4, r1
 	mov r5, r0
-	ldr r1, _020bb9a0 ; =data_027e0f94
+	ldr r1, _020bb9a0 ; =gPlayerPos
 	add r2, sp, #0
 	mov r0, r4
 	bl func_01ff9bf8
@@ -13007,7 +13007,7 @@ func_ov00_020bb948: ; 0x020bb948
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_020bb9a0: .word data_027e0f94
+_020bb9a0: .word gPlayerPos
 _020bb9a4: .word data_027e0fac
 _020bb9a8: .word 0x0000071c
 _020bb9ac: .word 0x000004cd
@@ -13553,7 +13553,7 @@ _020bbf48:
 	cmp r0, #0
 	bne _020bbff4
 	ldr r0, _020bc078 ; =data_027e0fcc
-	ldr r2, _020bc07c ; =data_027e0f94
+	ldr r2, _020bc07c ; =gPlayerPos
 	ldr r0, [r0]
 	mov r1, #1
 	ldr r3, [r0]
@@ -13609,7 +13609,7 @@ _020bc060:
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
 _020bc078: .word data_027e0fcc
-_020bc07c: .word data_027e0f94
+_020bc07c: .word gPlayerPos
 _020bc080: .word data_027e0fa0
 _020bc084: .word data_027e0fb8
 	arm_func_end func_ov00_020bbed4
@@ -13844,7 +13844,7 @@ func_ov00_020bc320: ; 0x020bc320
 	mov r7, r0
 	mov r0, r1
 	mov r6, r2
-	ldr r1, _020bc394 ; =data_027e0f94
+	ldr r1, _020bc394 ; =gPlayerPos
 	mov r2, #0
 	mov r5, r3
 	bl func_ov00_020b1d70
@@ -13872,7 +13872,7 @@ _020bc384:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_020bc394: .word data_027e0f94
+_020bc394: .word gPlayerPos
 	arm_func_end func_ov00_020bc320
 
 	.global func_ov00_020bc398
@@ -13883,7 +13883,7 @@ func_ov00_020bc398: ; 0x020bc398
 	mov r4, r0
 	mov r0, r1
 	mov r5, r2
-	ldr r1, _020bc460 ; =data_027e0f94
+	ldr r1, _020bc460 ; =gPlayerPos
 	mov r2, #0
 	bl func_ov00_020b1d70
 	cmp r5, #0
@@ -13931,7 +13931,7 @@ _020bc40c:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020bc460: .word data_027e0f94
+_020bc460: .word gPlayerPos
 _020bc464: .word gMapManager
 _020bc468: .word data_027e0fac
 	arm_func_end func_ov00_020bc398
@@ -14019,7 +14019,7 @@ func_ov00_020bc520: ; 0x020bc520
 	bl func_ov00_020bb9c8
 	cmp r0, #0
 	beq _020bc6b4
-	ldr r1, _020bc6c0 ; =data_027e0f94
+	ldr r1, _020bc6c0 ; =gPlayerPos
 	mov r0, r7
 	ldr r2, [r1, #4]
 	ldr r3, [r1]
@@ -14119,7 +14119,7 @@ _020bc6b4:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_020bc6c0: .word data_027e0f94
+_020bc6c0: .word gPlayerPos
 _020bc6c4: .word data_027e0fac
 _020bc6c8: .word 0x66666667
 _020bc6cc: .word 0x0b60b60b
@@ -14269,7 +14269,7 @@ _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p: ; 0x020bc854
 	ldr r0, _020bc8ac ; =data_027e0fcc
 	mov r4, r1
 	ldr r1, [r0]
-	ldr r0, _020bc8b0 ; =data_027e0f94
+	ldr r0, _020bc8b0 ; =gPlayerPos
 	mov r2, r4
 	add r1, r1, #0x34
 	bl func_01ff9bc4
@@ -14289,7 +14289,7 @@ _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p: ; 0x020bc854
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _020bc8ac: .word data_027e0fcc
-_020bc8b0: .word data_027e0f94
+_020bc8b0: .word gPlayerPos
 _020bc8b4: .word data_027e0fd0
 	arm_func_end _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 
@@ -14533,20 +14533,20 @@ _020bcb98:
 	ldr r2, [r0]
 	ldr r0, [r1]
 	ldr r2, [r2, #0xc]
-	ldr r1, _020bcc20 ; =data_027e0f94
+	ldr r1, _020bcc20 ; =gPlayerPos
 	blx func_ov00_020b4c4c
 	ldr r0, _020bcc1c ; =data_027e0fd4
 	ldr r0, [r0]
 	blx func_ov00_020b4d00
 	ldr r0, _020bcc18 ; =data_027e0fcc
-	ldr r1, _020bcc20 ; =data_027e0f94
+	ldr r1, _020bcc20 ; =gPlayerPos
 	ldr r0, [r0]
 	ldr r2, [r0]
 	ldr r2, [r2, #0x5c]
 	blx r2
 	cmp r4, #0xfd
 	beq _020bcbfc
-	ldr r0, _020bcc20 ; =data_027e0f94
+	ldr r0, _020bcc20 ; =gPlayerPos
 	ldr r1, [r0]
 	str r1, [r7, #0x14]
 	ldr r1, [r0, #4]
@@ -14565,7 +14565,7 @@ _020bcc08:
 _020bcc14: .word data_027e0d38
 _020bcc18: .word data_027e0fcc
 _020bcc1c: .word data_027e0fd4
-_020bcc20: .word data_027e0f94
+_020bcc20: .word gPlayerPos
 	arm_func_end func_ov00_020bcad8
 
 	.global func_ov00_020bcc24
@@ -14728,7 +14728,7 @@ _020bcde8: .word gAdventureFlags
 func_ov00_020bcdec: ; 0x020bcdec
 	stmdb sp!, {r4, lr}
 	ldr r3, [r1]
-	ldr ip, _020bce38 ; =data_027e0f94
+	ldr ip, _020bce38 ; =gPlayerPos
 	ldr r0, _020bce3c ; =data_027e0fcc
 	str r3, [ip]
 	ldr lr, [r1, #4]
@@ -14746,7 +14746,7 @@ func_ov00_020bcdec: ; 0x020bcdec
 	strh r4, [r0]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_020bce38: .word data_027e0f94
+_020bce38: .word gPlayerPos
 _020bce3c: .word data_027e0fcc
 _020bce40: .word data_027e0fd4
 _020bce44: .word data_027e0fac
@@ -14974,7 +14974,7 @@ func_ov00_020bd0bc: ; 0x020bd0bc
 	sub sp, sp, #0xc
 	mov r0, r1
 	mov r4, r2
-	ldr r1, _020bd250 ; =data_027e0f94
+	ldr r1, _020bd250 ; =gPlayerPos
 	add r2, sp, #0
 	bl func_01ff9bf8
 	cmp r4, #0
@@ -15075,7 +15075,7 @@ _020bd234:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
-_020bd250: .word data_027e0f94
+_020bd250: .word gPlayerPos
 _020bd254: .word 0x0000099a
 _020bd258: .word data_027e0fcc
 _020bd25c: .word data_027e0fa0
@@ -15190,7 +15190,7 @@ func_ov00_020bd364: ; 0x020bd364
 	ldr r0, [r0]
 	str r1, [r2]
 	ldr r2, [r1, #0xc]
-	ldr r1, _020bd3ac ; =data_027e0f94
+	ldr r1, _020bd3ac ; =gPlayerPos
 	blx func_ov00_020b4c4c
 	bl _ZN10PlayerBase14GetEquipShieldEv
 	mov r1, #0
@@ -15200,7 +15200,7 @@ func_ov00_020bd364: ; 0x020bd364
 _020bd3a0: .word data_027e0fd8
 _020bd3a4: .word data_027e0fd4
 _020bd3a8: .word data_027e0fcc
-_020bd3ac: .word data_027e0f94
+_020bd3ac: .word gPlayerPos
 	arm_func_end func_ov00_020bd364
 
 	.global func_ov00_020bd3b0
@@ -15291,7 +15291,7 @@ _020bd4d4: .word data_027e0fa0
 	arm_func_start func_ov00_020bd4d8
 func_ov00_020bd4d8: ; 0x020bd4d8
 	ldr r2, [r1]
-	ldr r0, _020bd4f8 ; =data_027e0f94
+	ldr r0, _020bd4f8 ; =gPlayerPos
 	str r2, [r0]
 	ldr r2, [r1, #4]
 	str r2, [r0, #4]
@@ -15299,7 +15299,7 @@ func_ov00_020bd4d8: ; 0x020bd4d8
 	str r1, [r0, #8]
 	bx lr
 	.align 2, 0
-_020bd4f8: .word data_027e0f94
+_020bd4f8: .word gPlayerPos
 	arm_func_end func_ov00_020bd4d8
 
 	.global func_ov00_020bd4fc
@@ -15336,7 +15336,7 @@ func_ov00_020bd510: ; 0x020bd510
 	mvn lr, #0
 	mov r3, #0
 	str r3, [sp, #0xc]
-	ldr r0, _020bd5e8 ; =data_027e0f94
+	ldr r0, _020bd5e8 ; =gPlayerPos
 	add ip, sp, #4
 	add r2, sp, #0xc
 	mov r1, r5
@@ -15371,7 +15371,7 @@ func_ov00_020bd510: ; 0x020bd510
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020bd5e4: .word gItemManager
-_020bd5e8: .word data_027e0f94
+_020bd5e8: .word gPlayerPos
 _020bd5ec: .word gActorManager
 	arm_func_end func_ov00_020bd510
 
@@ -17001,10 +17001,10 @@ func_ov00_020be988: ; 0x020be988
 	.global func_ov00_020be990
 	arm_func_start func_ov00_020be990
 func_ov00_020be990: ; 0x020be990
-	ldr r0, _020be998 ; =data_027e0f94
+	ldr r0, _020be998 ; =gPlayerPos
 	bx lr
 	.align 2, 0
-_020be998: .word data_027e0f94
+_020be998: .word gPlayerPos
 	arm_func_end func_ov00_020be990
 
 	.global func_ov00_020be99c
@@ -21549,7 +21549,7 @@ func_ov00_020e1290: ; 0x020e1290
 	add ip, sp, #0
 	ldmia r0, {r0, r1, r2}
 	stmia ip, {r0, r1, r2}
-	ldr r3, _020e12d0 ; =data_027e0f94
+	ldr r3, _020e12d0 ; =gPlayerPos
 	ldmia ip, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldr r3, _020e12d4 ; =data_027e0fa0
@@ -21560,7 +21560,7 @@ func_ov00_020e1290: ; 0x020e1290
 	bx lr
 	.align 2, 0
 _020e12cc: .word data_027e0d0c
-_020e12d0: .word data_027e0f94
+_020e12d0: .word gPlayerPos
 _020e12d4: .word data_027e0fa0
 	arm_func_end func_ov00_020e1290
 

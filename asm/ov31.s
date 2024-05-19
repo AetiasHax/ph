@@ -2353,7 +2353,7 @@ func_ov31_0217dab8: ; 0x0217dab8
 	ldmia r0, {r0, r1, r2}
 	add r3, sp, #0xc
 	stmia r3, {r0, r1, r2}
-	ldr lr, _0217db44 ; =data_027e0f94
+	ldr lr, _0217db44 ; =gPlayerPos
 	ldr r3, [sp, #0x14]
 	add ip, sp, #0
 	ldmia lr, {r0, r1, r2}
@@ -2383,7 +2383,7 @@ func_ov31_0217dab8: ; 0x0217dab8
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_0217db44: .word data_027e0f94
+_0217db44: .word gPlayerPos
 	arm_func_end func_ov31_0217dab8
 
 	.global func_ov31_0217db48

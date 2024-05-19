@@ -388,7 +388,7 @@ _ZN10MapManager18func_ov00_02082538Ev: ; 0x02082538
 	addeq sp, sp, #0xc
 	addeq r0, r0, #0x1a0
 	ldmeqia sp!, {r3, r4, pc}
-	ldr r1, _02082590 ; =data_027e0f94
+	ldr r1, _02082590 ; =gPlayerPos
 	add r0, sp, #0
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
@@ -399,7 +399,7 @@ _ZN10MapManager18func_ov00_02082538Ev: ; 0x02082538
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02082590: .word data_027e0f94
+_02082590: .word gPlayerPos
 	arm_func_end _ZN10MapManager18func_ov00_02082538Ev
 
 	.global _ZN10MapManager18func_ov00_02082594Ev
@@ -1324,7 +1324,7 @@ _ZN10MapManager18func_ov00_0208306cEv: ; 0x0208306c
 	add r0, r3, #2
 	cmp ip, r0
 	bne _02083138
-	ldr r1, _02083154 ; =data_027e0f94
+	ldr r1, _02083154 ; =gPlayerPos
 	add r0, sp, #4
 	ldr r2, [r1, #4]
 	ldr r3, [r1]
@@ -1370,7 +1370,7 @@ _02083138:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_02083154: .word data_027e0f94
+_02083154: .word gPlayerPos
 _02083158: .word data_027e0d38
 	arm_func_end _ZN10MapManager18func_ov00_0208306cEv
 
@@ -1392,7 +1392,7 @@ _ZN10MapManager18func_ov00_0208315cEPiS0_: ; 0x0208315c
 	add r1, r3, #2
 	cmp ip, r1
 	bne _02083220
-	ldr r1, _0208323c ; =data_027e0f94
+	ldr r1, _0208323c ; =gPlayerPos
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
 	str r3, [sp, #0x10]
@@ -1436,7 +1436,7 @@ _02083220:
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_0208323c: .word data_027e0f94
+_0208323c: .word gPlayerPos
 _02083240: .word data_027e0d38
 	arm_func_end _ZN10MapManager18func_ov00_0208315cEPiS0_
 
@@ -1962,7 +1962,7 @@ _ZN10MapManager18func_ov00_020836dcEii: ; 0x020836dc
 	mov r4, r1
 	cmpne r2, #1
 	bne _02083718
-	ldr r0, _02083768 ; =data_027e0f94
+	ldr r0, _02083768 ; =gPlayerPos
 	ldr r2, [r0]
 	ldr r1, [r0, #4]
 	str r2, [sp]
@@ -1993,7 +1993,7 @@ _02083750:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_02083768: .word data_027e0f94
+_02083768: .word gPlayerPos
 _0208376c: .word gActorManager
 	arm_func_end _ZN10MapManager18func_ov00_020836dcEii
 
@@ -3374,7 +3374,7 @@ _ZN10MapManager18func_ov00_02084740Ev: ; 0x02084740
 	bl func_ov00_02078b40
 	cmp r0, #2
 	beq _020847a8
-	ldr r0, _020847d8 ; =data_027e0f94
+	ldr r0, _020847d8 ; =gPlayerPos
 	add r1, sp, #0
 	ldr r3, [r0]
 	ldr r2, [r0, #4]
@@ -3405,7 +3405,7 @@ _020847b4:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _020847d4: .word data_027e0d38
-_020847d8: .word data_027e0f94
+_020847d8: .word gPlayerPos
 _020847dc: .word data_ov00_020d88f0
 	arm_func_end _ZN10MapManager18func_ov00_02084740Ev
 
@@ -4788,7 +4788,7 @@ _020858f8:
 	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	ldrb r3, [sp, #0x18]
 	ldrb r2, [sp, #0x19]
-	ldr r1, _02085a30 ; =data_027e0f94
+	ldr r1, _02085a30 ; =gPlayerPos
 	add r0, r3, #1
 	sub r7, r3, #1
 	str r0, [sp, #4]
@@ -4858,7 +4858,7 @@ _02085a20:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _02085a2c: .word data_027e0f64
-_02085a30: .word data_027e0f94
+_02085a30: .word gPlayerPos
 	arm_func_end _ZN10MapManager18func_ov00_020858b0Ev
 
 	.global _ZN10MapManager18func_ov00_02085a34Eii

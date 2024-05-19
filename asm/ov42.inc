@@ -65,7 +65,7 @@
 .extern gMapManager
 .extern data_027e0f64
 .extern data_027e0f78
-.extern data_027e0f94
+.extern gPlayerPos
 .extern data_027e0fb8
 .extern gPlayerLink
 .extern data_027e0fe0

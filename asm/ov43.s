@@ -581,7 +581,7 @@ _02189c88: .word 0x0000071c
 func_ov43_02189c8c: ; 0x02189c8c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x18
-	ldr ip, _02189e78 ; =data_027e0f94
+	ldr ip, _02189e78 ; =gPlayerPos
 	add r3, sp, #0xc
 	mov r7, r0
 	mov r6, r1
@@ -709,7 +709,7 @@ _02189e58:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02189e78: .word data_027e0f94
+_02189e78: .word gPlayerPos
 _02189e7c: .word data_02050f54
 _02189e80: .word 0xffff8001
 _02189e84: .word 0x00000ccd
@@ -4146,7 +4146,7 @@ func_ov43_0218cd7c: ; 0x0218cd7c
 	mov r0, r10
 	bl _ZN5Actor14GetAngleToLinkEv
 	strh r0, [r6]
-	ldr r0, _0218cf88 ; =data_027e0f94
+	ldr r0, _0218cf88 ; =gPlayerPos
 	ldr r1, [r10, #0x3c0]
 	ldr r11, [r0]
 	cmp r1, #0
@@ -4203,7 +4203,7 @@ _0218ce8c:
 	str r0, [r9]
 	mov r0, r10
 	bl _ZN5Actor14GetAngleToLinkEv
-	ldr r2, _0218cf88 ; =data_027e0f94
+	ldr r2, _0218cf88 ; =gPlayerPos
 	strh r0, [r8]
 	ldmia r2, {r0, r1, r3}
 _0218ceac:
@@ -4267,7 +4267,7 @@ _0218cf78:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0218cf84: .word gPlayerLink
-_0218cf88: .word data_027e0f94
+_0218cf88: .word gPlayerPos
 _0218cf8c: .word gMapManager
 	arm_func_end func_ov43_0218cd7c
 

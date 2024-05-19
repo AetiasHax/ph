@@ -4788,7 +4788,7 @@ func_ov47_02193f78: ; 0x02193f78
 	add r1, sp, #0
 	mov r0, r5
 	bl _ZN5Actor9GetHitboxEP8Cylinder
-	ldr r1, _02194104 ; =data_027e0f94
+	ldr r1, _02194104 ; =gPlayerPos
 	ldr r0, _02194108 ; =gItemManager
 	ldr r2, [r1, #4]
 	ldr r0, [r0]
@@ -4872,7 +4872,7 @@ _021940ec:
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_02194104: .word data_027e0f94
+_02194104: .word gPlayerPos
 _02194108: .word gItemManager
 _0219410c: .word gPlayer
 	arm_func_end func_ov47_02193f78

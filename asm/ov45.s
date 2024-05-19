@@ -4349,7 +4349,7 @@ func_ov45_0218cb5c: ; 0x0218cb5c
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldr r0, [sp, #0x18]
-	ldr r1, _0218cbbc ; =data_027e0f94
+	ldr r1, _0218cbbc ; =gPlayerPos
 	add r2, r0, #0x1000
 	mov r0, r3
 	str r2, [sp, #0x18]
@@ -4366,7 +4366,7 @@ func_ov45_0218cb5c: ; 0x0218cb5c
 	add sp, sp, #0x1c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0218cbbc: .word data_027e0f94
+_0218cbbc: .word gPlayerPos
 	arm_func_end func_ov45_0218cb5c
 
 	.global func_ov45_0218cbc0

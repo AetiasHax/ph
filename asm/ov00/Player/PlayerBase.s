@@ -94,7 +94,7 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	stmdb sp!, {lr}
 	sub sp, sp, #0xc
 	mov r0, r1
-	ldr r1, _020a7bf8 ; =data_027e0f94
+	ldr r1, _020a7bf8 ; =gPlayerPos
 	add r2, sp, #0
 	bl func_01ff9bf8
 	ldr r0, [sp]
@@ -111,7 +111,7 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
-_020a7bf8: .word data_027e0f94
+_020a7bf8: .word gPlayerPos
 _020a7bfc: .word data_027e0fac
 	arm_func_end _ZN10PlayerBase6LookAtEP5Vec3p
 
@@ -324,7 +324,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	sub sp, sp, #0xc
 	mov r5, r1
 	ldr r0, [r5]
-	ldr r3, _020a7f64 ; =data_027e0f94
+	ldr r3, _020a7f64 ; =gPlayerPos
 	mov r4, r2
 	str r0, [r3]
 	ldr r1, [r5, #4]
@@ -346,7 +346,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	ldr r2, _020a7f6c ; =data_027e0fac
 	cmp ip, r0
 	movle ip, r0
-	ldr r3, _020a7f64 ; =data_027e0f94
+	ldr r3, _020a7f64 ; =gPlayerPos
 	ldr r1, _020a7f70 ; =data_027e0fa0
 	mov r5, #0
 	ldr r0, _020a7f74 ; =data_027e0fb0
@@ -384,7 +384,7 @@ _020a7f58:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_020a7f64: .word data_027e0f94
+_020a7f64: .word gPlayerPos
 _020a7f68: .word gMapManager
 _020a7f6c: .word data_027e0fac
 _020a7f70: .word data_027e0fa0

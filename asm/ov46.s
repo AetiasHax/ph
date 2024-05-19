@@ -2241,7 +2241,7 @@ _02191b68:
 	str r1, [sp, #0x40]
 	mla r5, r4, ip, r5
 	ldr r4, [sp, #0x40]
-	ldr r0, _02191e54 ; =data_027e0f94
+	ldr r0, _02191e54 ; =gPlayerPos
 	mla r5, r4, r3, r5
 	adds r4, r6, #0x800
 	adc r3, r5, #0
@@ -2285,7 +2285,7 @@ _02191e44: .word data_ov46_02194c2c
 _02191e48: .word data_ov46_02194c14
 _02191e4c: .word data_ov46_02194c20
 _02191e50: .word 0x0000059a
-_02191e54: .word data_027e0f94
+_02191e54: .word gPlayerPos
 _02191e58: .word data_ov46_02194c38
 	arm_func_end func_ov46_0219194c
 

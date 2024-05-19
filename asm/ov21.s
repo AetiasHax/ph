@@ -487,7 +487,7 @@ _0216dc54: .word func_ov00_020b7d74
 func_ov21_0216dc58: ; 0x0216dc58
 	stmdb sp!, {lr}
 	sub sp, sp, #0xc
-	ldr r1, _0216dcb0 ; =data_027e0f94
+	ldr r1, _0216dcb0 ; =gPlayerPos
 	mov ip, r0
 	ldr r2, [r1, #4]
 	ldr r3, [r1]
@@ -508,7 +508,7 @@ func_ov21_0216dc58: ; 0x0216dc58
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
-_0216dcb0: .word data_027e0f94
+_0216dcb0: .word gPlayerPos
 	arm_func_end func_ov21_0216dc58
 
 	.global func_ov21_0216dcb4
@@ -1077,7 +1077,7 @@ _0216e3d8: .word data_ov21_021710a0
 func_ov21_0216e3dc: ; 0x0216e3dc
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
-	ldr r1, _0216e460 ; =data_027e0f94
+	ldr r1, _0216e460 ; =gPlayerPos
 	mov r4, r0
 	add r3, sp, #0
 	ldmia r1, {r0, r1, r2}
@@ -1112,7 +1112,7 @@ _0216e44c:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0216e460: .word data_027e0f94
+_0216e460: .word gPlayerPos
 	arm_func_end func_ov21_0216e3dc
 
 	.global func_ov21_0216e464
@@ -1417,7 +1417,7 @@ _0216e830:
 	ldr r0, [r0, #0x14]
 	cmp r0, #0x15000
 	bge _0216e868
-	ldr r1, _0216e8d4 ; =data_027e0f94
+	ldr r1, _0216e8d4 ; =gPlayerPos
 	mov r0, r4
 	bl _ZN5Actor10GetAngleToEP5Vec3p
 	mov r1, r0
@@ -1456,7 +1456,7 @@ _0216e8c4: .word data_02050f54
 _0216e8c8: .word 0x000009be
 _0216e8cc: .word data_027e0ffc
 _0216e8d0: .word 0x0000024f
-_0216e8d4: .word data_027e0f94
+_0216e8d4: .word gPlayerPos
 _0216e8d8: .word 0x00000aab
 _0216e8dc: .word 0x00000c51
 	arm_func_end func_ov21_0216e74c

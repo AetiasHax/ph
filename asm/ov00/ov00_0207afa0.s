@@ -807,7 +807,7 @@ _0207b62c:
 	add r1, r5, #0
 	add r1, #0x56
 	strb r0, [r1]
-	ldr r0, _0207b80c ; =data_027e0f94
+	ldr r0, _0207b80c ; =gPlayerPos
 	ldr r1, [r0]
 	str r1, [r5, #0x5c]
 	ldr r1, [r0, #4]
@@ -997,7 +997,7 @@ _0207b740:
 	add r0, r5, #0
 	add r0, #0x9d
 	strb r1, [r0]
-	ldr r1, _0207b80c ; =data_027e0f94
+	ldr r1, _0207b80c ; =gPlayerPos
 	add r0, r5, #0
 	ldr r2, [r1]
 	add r0, #0xa0
@@ -1021,7 +1021,7 @@ _0207b7f0:
 _0207b800: .word gActorManager
 _0207b804: .word 0x414e4353
 _0207b808: .word gMapManager
-_0207b80c: .word data_027e0f94
+_0207b80c: .word gPlayerPos
 _0207b810: .word data_027e0fac
 _0207b814: .word data_027e0f7c
 _0207b818: .word gItemManager
@@ -2679,7 +2679,7 @@ _0207c800: .word data_ov00_020d88cc
 func_ov00_0207c804: ; 0x0207c804
 	push {r3, r4, r5, r6, lr}
 	sub sp, #0x24
-	ldr r3, _0207c8d0 ; =data_027e0f94
+	ldr r3, _0207c8d0 ; =gPlayerPos
 	add r6, r2, #0
 	add r5, r0, #0
 	add r4, r1, #0
@@ -2781,7 +2781,7 @@ _0207c8c8:
 	add sp, #0x24
 	pop {r3, r4, r5, r6, pc}
 	nop
-_0207c8d0: .word data_027e0f94
+_0207c8d0: .word gPlayerPos
 _0207c8d4: .word data_027e0d38
 _0207c8d8: .word 0x0000019a
 _0207c8dc: .word data_027e0fcc

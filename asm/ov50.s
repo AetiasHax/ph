@@ -2704,7 +2704,7 @@ _021978f8: .word data_02050f54
 func_ov50_021978fc: ; 0x021978fc
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x18
-	ldr r1, _021979a8 ; =data_027e0f94
+	ldr r1, _021979a8 ; =gPlayerPos
 	mov r4, r0
 	add r3, sp, #0xc
 	ldmia r1, {r0, r1, r2}
@@ -2746,7 +2746,7 @@ func_ov50_021978fc: ; 0x021978fc
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_021979a8: .word data_027e0f94
+_021979a8: .word gPlayerPos
 _021979ac: .word 0x00000333
 _021979b0: .word 0x0000071c
 	arm_func_end func_ov50_021978fc
@@ -3245,7 +3245,7 @@ _02197ff8:
 	bl _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 	cmp r0, #0
 	beq _02198130
-	ldr r0, _0219857c ; =data_027e0f94
+	ldr r0, _0219857c ; =gPlayerPos
 	add r2, sp, #0x2c
 	add r1, r4, #0x54
 	bl func_01ff9bf8
@@ -3616,7 +3616,7 @@ _02198570:
 	add sp, sp, #0x38
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_0219857c: .word data_027e0f94
+_0219857c: .word gPlayerPos
 _02198580: .word data_027e0764
 _02198584: .word data_02050f54
 _02198588: .word 0x0000019a
