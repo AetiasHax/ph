@@ -17385,7 +17385,7 @@ _0212dbf4:
 	ldr r0, _0212dd1c ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _0212dcf8
 _0212dcdc:
@@ -97265,7 +97265,7 @@ func_ov15_021724d0: ; 0x021724d0
 	ldr r0, _021725c4 ; =gPlayer
 	add r1, sp, #0x1c
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x2c
 	ldmeqia sp!, {r3, r4, pc}

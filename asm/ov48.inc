@@ -1,6 +1,6 @@
 #pragma once
 .extern Divide
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 .extern _ZN10PlayerBase6LookAtEP5Vec3p
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList

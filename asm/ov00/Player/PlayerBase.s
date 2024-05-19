@@ -128,9 +128,9 @@ _ZN10PlayerBase18func_ov00_020a7c00Ei: ; 0x020a7c00
 _020a7c18: .word data_027e0c54
 	arm_func_end _ZN10PlayerBase18func_ov00_020a7c00Ei
 
-	.global _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-	arm_func_start _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-_ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder: ; 0x020a7c1c
+	.global _ZN10PlayerBase12CollidesWithEP8Cylinder
+	arm_func_start _ZN10PlayerBase12CollidesWithEP8Cylinder
+_ZN10PlayerBase12CollidesWithEP8Cylinder: ; 0x020a7c1c
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x10
 	ldr r2, [r0]
@@ -148,7 +148,7 @@ _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder: ; 0x020a7c1c
 	bl func_01ffec34
 	add sp, sp, #0x10
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	arm_func_end _ZN10PlayerBase12CollidesWithEP8Cylinder
 
 	.global _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	arm_func_start _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i

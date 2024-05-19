@@ -4803,7 +4803,7 @@ func_ov41_0218d324: ; 0x0218d324
 	ldr r0, [r1]
 	mov r1, r3
 	str r2, [sp, #0xc]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _0218d388
 	mov r0, r4

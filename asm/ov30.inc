@@ -1,6 +1,6 @@
 #pragma once
 .extern Divide
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p

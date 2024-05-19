@@ -7,7 +7,7 @@
 .extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern _ZN10MapManager18func_ov00_02084cc8Ei
 .extern _ZN10PlayerBase10SetVisibleEb
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef

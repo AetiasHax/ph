@@ -11,7 +11,7 @@ EquipSword* PlayerBase::GetEquipSword() {}
 EquipShield* PlayerBase::GetEquipShield() {}
 void PlayerBase::LookAt(Vec3p *target) {}
 bool PlayerBase::func_ov00_020a7c00(s32 param1) {}
-bool PlayerBase::func_ov00_020a7c1c(Cylinder *cylinder) {}
+bool PlayerBase::CollidesWith(Cylinder *cylinder) {}
 bool PlayerBase::func_ov00_020a7c60(Vec3p *param1, Vec3p *param2, s32 param3) {}
 void PlayerBase::EquipItem_vfunc_3c(Cylinder *cylinder, ItemFlag equipId) {}
 void PlayerBase::EquipItem_vfunc_2c() {}

@@ -21,7 +21,7 @@
 .extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern _ZN10MapManager18func_ov00_020840a0Ecci
 .extern _ZN10PlayerBase18func_ov00_020a7c00Ei
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN10PlayerBase9AddHealthEs
 .extern _ZN11ItemManager12GetEquipItemEi
 .extern _ZN11ItemManager15Shield_vfunc_38Ei

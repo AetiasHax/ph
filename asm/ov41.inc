@@ -4,7 +4,7 @@
 .extern _ZN10MapManager18func_ov00_020836dcEii
 .extern _ZN10MapManager18func_ov00_02083770Eji
 .extern _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags3GetEj

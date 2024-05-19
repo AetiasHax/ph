@@ -29,7 +29,7 @@
 .extern _ZN10PlayerBase13GetEquipSwordEv
 .extern _ZN10PlayerBase14GetEquipShieldEv
 .extern _ZN10PlayerBase18TeleportToEntranceEib
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN10PlayerBase8TeleportEP5Vec3psibb
 .extern _ZN10PlayerBase8vfunc_04Ev
 .extern _ZN10PlayerBase9AddHealthEs

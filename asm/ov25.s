@@ -13686,7 +13686,7 @@ func_ov25_02178d0c: ; 0x02178d0c
 	ldr r0, _02178d88 ; =gPlayer
 	add r1, r4, #0x34c
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0xc
 	moveq r0, #0

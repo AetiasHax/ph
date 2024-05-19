@@ -38118,7 +38118,7 @@ _02131c18:
 	ldr r0, _02131d74 ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	bne _02131c88
 	ldr r0, [r4, #0x748]

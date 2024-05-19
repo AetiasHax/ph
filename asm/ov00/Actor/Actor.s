@@ -905,7 +905,7 @@ _020c1e9c:
 	ldr r0, _020c1ef4 ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -939,7 +939,7 @@ _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii: ; 0x020c1ef8
 	ldr r0, _020c1f58 ; =gPlayer
 	mov r1, r6
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -1212,7 +1212,7 @@ _ZN5Actor18CollidesWithPlayerEj: ; 0x020c22b8
 	ldr r0, _020c23bc ; =gPlayer
 	add r1, sp, #0
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1

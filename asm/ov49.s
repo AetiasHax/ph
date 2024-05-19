@@ -1368,7 +1368,7 @@ func_ov49_02196710: ; 0x02196710
 	ldr r0, [r0]
 	add r1, sp, #0x98
 	str r2, [sp, #0xa4]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02196788
 	mov r0, r5
@@ -1679,7 +1679,7 @@ _02196bec:
 	ldr r0, _02196ff0 ; =gPlayer
 	add r1, sp, #0x70
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02196c54
 	mov r0, r5

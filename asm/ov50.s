@@ -1919,7 +1919,7 @@ func_ov50_02196ee4: ; 0x02196ee4
 	ldr r0, _02196f70 ; =gPlayer
 	add r1, sp, #0x18
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addne sp, sp, #0x28
 	movne r0, #1

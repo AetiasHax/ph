@@ -3858,7 +3858,7 @@ _0217ee34:
 	add r3, r9, r3
 	mov r2, r1
 	str r3, [r2, #8]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _0217ef50
 	ldr r0, _0217efd0 ; =data_027e0fac

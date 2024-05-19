@@ -9179,7 +9179,7 @@ _02174f38:
 	ldr r0, _0217558c ; =gPlayer
 	add r1, sp, #0x38
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02174fa8
 	mov r0, r4

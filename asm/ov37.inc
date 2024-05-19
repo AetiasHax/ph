@@ -5,7 +5,7 @@
 .extern _ZN10MapManager18Set_MapData_Unk_16Eci
 .extern _ZN10MapManager18func_ov00_02083908EcPi
 .extern _ZN10PlayerBase10SetVisibleEb
-.extern _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+.extern _ZN10PlayerBase12CollidesWithEP8Cylinder
 .extern _ZN11ItemManager12GetItemModelEj
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef

@@ -6380,7 +6380,7 @@ func_ov23_02172928: ; 0x02172928
 	ldr r0, [r0]
 	mov r1, r3
 	str r2, [sp, #0xc]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02172984
 	mov r0, r4
@@ -6514,7 +6514,7 @@ func_ov23_02172b18: ; 0x02172b18
 	add r1, r4, #0x184
 	ldr r0, [r0]
 	add r1, r1, #0x400
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02172b54
 	mov r0, r4

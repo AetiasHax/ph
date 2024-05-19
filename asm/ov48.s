@@ -782,7 +782,7 @@ func_ov48_021908ac: ; 0x021908ac
 	ldr r0, [r0]
 	add r1, sp, #0
 	str r2, [sp, #0xc]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	addeq sp, sp, #0x1c
 	moveq r0, #0
@@ -3568,7 +3568,7 @@ _02192b5c:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r10]
 	mov r1, r4
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _02192bc4
 	add r0, sp, #0x6c

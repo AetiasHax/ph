@@ -8644,7 +8644,7 @@ func_ov30_02182ae4: ; 0x02182ae4
 	ldr r0, _02182b44 ; =gPlayer
 	mov r1, r6
 	ldr r0, [r0]
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}

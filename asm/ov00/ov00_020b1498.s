@@ -14591,7 +14591,7 @@ func_ov00_020bcc2c: ; 0x020bcc2c
 	ldrsh r2, [r2, #0x5a]
 	cmp r2, #4
 	bne _020bcc60
-	bl _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	ldmia sp!, {r3, pc}
 _020bcc60:
 	mov r0, #0
