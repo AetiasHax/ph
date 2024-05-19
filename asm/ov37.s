@@ -4562,7 +4562,7 @@ func_ov37_0217fccc: ; 0x0217fccc
 	mov r1, #1
 	mov r4, r0
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	bl _ZN5Actor4KillEv
 	ldmia sp!, {r4, pc}

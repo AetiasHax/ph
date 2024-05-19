@@ -525,9 +525,9 @@ _020c1a28: .word gPlayer
 _020c1a2c: .word gPlayerLink
 	arm_func_end _ZN5Actor18func_ov00_020c198cEv
 
-	.global _ZN20KillPickupItemActors6FilterEP5Actor
-	arm_func_start _ZN20KillPickupItemActors6FilterEP5Actor
-_ZN20KillPickupItemActors6FilterEP5Actor: ; 0x020c1a30
+	.global _ZN17KillPickupsFilter6FilterEP5Actor
+	arm_func_start _ZN17KillPickupsFilter6FilterEP5Actor
+_ZN17KillPickupsFilter6FilterEP5Actor: ; 0x020c1a30
 	stmdb sp!, {r3, lr}
 	ldr ip, [r1, #4]
 	ldr r3, _020c1af8 ; =0x464c414c
@@ -595,7 +595,7 @@ _020c1b08: .word 0x424f4d42
 _020c1b0c: .word 0x464c544d
 _020c1b10: .word 0x48415254
 _020c1b14: .word 0x52555059
-	arm_func_end _ZN20KillPickupItemActors6FilterEP5Actor
+	arm_func_end _ZN17KillPickupsFilter6FilterEP5Actor
 
 	.global _ZN5Actor20KillPickupItemActorsEv
 	arm_func_start _ZN5Actor20KillPickupItemActorsEv
@@ -612,7 +612,7 @@ _020c1b2c:
 	cmp r2, r0
 	blo _020c1b2c
 	ldr r0, _020c1b64 ; =gActorManager
-	ldr r3, _020c1b68 ; =_ZTV20KillPickupItemActors
+	ldr r3, _020c1b68 ; =_ZTV17KillPickupsFilter
 	ldr r0, [r0]
 	add r1, sp, #0
 	mov r2, #0
@@ -622,7 +622,7 @@ _020c1b2c:
 	ldmia sp!, {pc}
 	.align 2, 0
 _020c1b64: .word gActorManager
-_020c1b68: .word _ZTV20KillPickupItemActors
+_020c1b68: .word _ZTV17KillPickupsFilter
 	arm_func_end _ZN5Actor20KillPickupItemActorsEv
 
 	.global _ZN5Actor15TrySetTransformEP9Transform
@@ -691,9 +691,9 @@ _020c1c18: .word gMapManager
 _020c1c1c: .word _ZN10MapManager18func_ov00_02084be0Eii
 	arm_func_end _ZN5Actor18func_Ov00_020c1bfcEi
 
-	.global _ZN5Actor18func_ov00_020c1c20Eiii
-	arm_func_start _ZN5Actor18func_ov00_020c1c20Eiii
-_ZN5Actor18func_ov00_020c1c20Eiii: ; 0x020c1c20
+	.global _ZN5Actor18func_ov00_020c1c20Eii
+	arm_func_start _ZN5Actor18func_ov00_020c1c20Eii
+_ZN5Actor18func_ov00_020c1c20Eii: ; 0x020c1c20
 	stmdb sp!, {r3, lr}
 	add ip, r0, r1
 	ldr r0, _020c1c44 ; =gMapManager
@@ -705,7 +705,7 @@ _ZN5Actor18func_ov00_020c1c20Eiii: ; 0x020c1c20
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _020c1c44: .word gMapManager
-	arm_func_end _ZN5Actor18func_ov00_020c1c20Eiii
+	arm_func_end _ZN5Actor18func_ov00_020c1c20Eii
 
 	.global _ZN5Actor8vfunc_48Ei
 	arm_func_start _ZN5Actor8vfunc_48Ei
@@ -2814,9 +2814,9 @@ data_ov00_020e71dc: ; 0x020e71dc
     .word data_ov00_020e71a0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00
-	.global _ZTV20KillPickupItemActors
-_ZTV20KillPickupItemActors: ; 0x020e71e8
-    .word _ZN20KillPickupItemActors6FilterEP5Actor
+	.global _ZTV17KillPickupsFilter
+_ZTV17KillPickupsFilter: ; 0x020e71e8
+    .word _ZN17KillPickupsFilter6FilterEP5Actor
 	.byte 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global _ZTV5Actor

@@ -10921,12 +10921,12 @@ func_ov00_0208fc10: ; 0x0208fc10
 _0208fc38:
 	mov r1, #0
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	b _0208fc74
 _0208fc48:
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldr r0, [r4, #0x158]
 	cmp r0, #0
 	moveq r0, #0
@@ -11559,7 +11559,7 @@ func_ov00_0209048c: ; 0x0209048c
 	bne _020904bc
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, #0
 	strb r0, [r4, #0x118]
 _020904bc:

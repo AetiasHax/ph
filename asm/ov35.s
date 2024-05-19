@@ -3607,7 +3607,7 @@ _0217edc0:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _0217edf4:
 	mov r0, r4
 	bl _ZN5Actor4KillEv

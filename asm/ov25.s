@@ -8826,7 +8826,7 @@ _02174e90:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	bl func_ov14_0214591c
 	mov r0, r4

@@ -3522,7 +3522,7 @@ func_ov26_02170068: ; 0x02170068
 	ldmeqia sp!, {r3, pc}
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov26_02170068
 

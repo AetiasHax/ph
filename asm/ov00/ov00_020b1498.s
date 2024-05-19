@@ -16521,7 +16521,7 @@ _020be3e4:
 	mov r1, #1
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r5
 	bl _ZN5Actor4KillEv
 	ldmia sp!, {r3, r4, r5, pc}

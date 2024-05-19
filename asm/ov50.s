@@ -1055,7 +1055,7 @@ _02196358:
 	mov r0, r5
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldrh r0, [r5, #0x20]
 	cmp r0, #1
 	bne _0219639c

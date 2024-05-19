@@ -2002,7 +2002,7 @@ func_ov19_0216f0a8: ; 0x0216f0a8
 	ldmeqia sp!, {r3, pc}
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov19_0216f0a8
 

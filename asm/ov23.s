@@ -8076,7 +8076,7 @@ _02174120:
 	mov r1, #1
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldr r0, _021741ac ; =gMapManager
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02084740Ev

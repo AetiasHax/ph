@@ -80,7 +80,7 @@
 .extern _ZN5Actor16XzDistanceToLinkEv
 .extern _ZN5Actor18func_Ov00_020c1bfcEi
 .extern _ZN5Actor18func_ov00_020c198cEv
-.extern _ZN5Actor18func_ov00_020c1c20Eiii
+.extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 .extern _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
 .extern _ZN5Actor18func_ov00_020c243cEiPi

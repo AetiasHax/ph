@@ -10157,7 +10157,7 @@ func_ov30_02183e30: ; 0x02183e30
 	ldmeqia sp!, {r3, pc}
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov30_02183e30
 
@@ -11387,13 +11387,13 @@ _021849cc:
 	mov r0, r4
 	bne _021849f4
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _021849f4:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11475,13 +11475,13 @@ _02184b10:
 	mov r0, r4
 	beq _02184b38
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02184b38:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11575,13 +11575,13 @@ _02184c84:
 	mov r0, r4
 	beq _02184cac
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02184cac:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11673,13 +11673,13 @@ _02184df0:
 	mov r0, r4
 	bne _02184e18
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02184e18:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11768,13 +11768,13 @@ _02184f50:
 	mov r0, r4
 	bne _02184f78
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02184f78:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11863,13 +11863,13 @@ _021850b0:
 	mov r0, r4
 	bne _021850d8
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _021850d8:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
@@ -11958,13 +11958,13 @@ _02185210:
 	mov r0, r4
 	bne _02185238
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _02185238:
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02185240:
 	add sp, sp, #0x1bc
 	add sp, sp, #0x400

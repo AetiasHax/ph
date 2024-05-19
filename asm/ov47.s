@@ -3501,7 +3501,7 @@ _02192eb4:
 	mov r1, #1
 	mov r0, r6
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02192ecc:
 	ldr r0, [r6, #0x130]
 	cmp r0, #1

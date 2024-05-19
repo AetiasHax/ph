@@ -16141,7 +16141,7 @@ _0212ca94:
 	mov r5, r0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	cmp r5, #0
 	beq _0212cb0c
 	ldr r0, _0212cdf0 ; =gActorManager
@@ -17623,7 +17623,7 @@ _0212df28:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _0212e03c:
 	ldr r1, _0212e070 ; =data_027e10a4
 	mov r0, #1
@@ -21589,7 +21589,7 @@ _021317fc:
 	mov r1, #0
 	mov r2, #1
 	str r3, [r4, #0x488]
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r1, #5
 	sub r0, r1, #6
 	strb r1, [r4, #0x490]
@@ -36782,7 +36782,7 @@ func_ov15_0213e87c: ; 0x0213e87c
 	beq _0213e89c
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _0213e89c:
 	mov r1, #1
 	mov r0, r4
@@ -38714,7 +38714,7 @@ func_ov15_02140424: ; 0x02140424
 	mov r0, r4
 	mov r1, #1
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _021404bc:
 	ldr r0, _0214058c ; =data_027e103c
 	ldr r0, [r0]
@@ -38734,7 +38734,7 @@ _021404bc:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02140508:
 	mov r0, r4
 	bl func_ov15_02140e5c
@@ -38909,7 +38909,7 @@ _0214075c:
 	mov r1, #1
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _0214078c:
 	mov r0, r4
 	bl _ZN5Actor4KillEv
@@ -38958,7 +38958,7 @@ func_ov15_021407f4: ; 0x021407f4
 	ldmneia sp!, {r3, pc}
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _02140818: .word data_027e0c68
@@ -39286,7 +39286,7 @@ func_ov15_02140c60: ; 0x02140c60
 	mov r0, r5
 	mov r1, #1
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02140cb4: .word data_027e0d3c
@@ -39313,7 +39313,7 @@ func_ov15_02140cb8: ; 0x02140cb8
 	mov r1, #1
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02140d08: .word data_027e0d3c
@@ -71471,7 +71471,7 @@ _0215c29c:
 	strb r1, [r4, #0x1b9]
 	mov r2, #1
 	strb r2, [r4, #0x1bc]
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldr r0, _0215c330 ; =gAdventureFlags
 	ldr r1, [r4, #0x1b4]
 	ldr r0, [r0]
@@ -71697,7 +71697,7 @@ _0215c620:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r1, #1
 	ldr r0, _0215c69c ; =data_027e10a4
 	strb r1, [r4, #0x1ba]
@@ -78263,7 +78263,7 @@ _02161ee4:
 	mov r1, #1
 	mov r0, r10
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02161f00:
 	ldr r1, _02162438 ; =gActorManager
 	add sp, sp, #0x6c
@@ -78997,7 +78997,7 @@ _0216296c:
 	beq _02162984
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02162984:
 	ldr r0, _02162dfc ; =data_ov00_020eec68
 	mov r1, #0x1e
@@ -86681,7 +86681,7 @@ func_ov15_02169358: ; 0x02169358
 	mov r1, #0
 	mov r2, #1
 	mov r4, r0
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldr r0, _021694e4 ; =gAdventureFlags
 	mov r1, #0xb7
 	ldr r0, [r0]
@@ -87235,7 +87235,7 @@ _02169ae4:
 	mov r0, r5
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02169b40:
 	ldr r0, _02169e48 ; =data_027e103c
 	ldr r0, [r0]
@@ -87261,7 +87261,7 @@ _02169b50:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02169ba0:
 	ldr r0, _02169e4c ; =data_027e0c68
 	ldr r2, _02169e50 ; =0x00050023
@@ -87302,7 +87302,7 @@ _02169be4:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	b _02169e2c
 _02169c3c:
 	add r0, sp, #0x68
@@ -87621,7 +87621,7 @@ _0216a088:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _0216a0a4:
 	ldr r0, _0216a0f4 ; =data_027e103c
 	ldr r0, [r0]
@@ -96352,7 +96352,7 @@ _02171818:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldr r0, _02171934 ; =data_027e0d3c
 	ldr r0, [r0]
 	bl func_ov00_02078fac
@@ -115893,7 +115893,7 @@ _0218251c:
 	bne _02182548
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, #0
 	strb r0, [r4, #0x118]
 _02182548:

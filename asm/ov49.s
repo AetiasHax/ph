@@ -2776,7 +2776,7 @@ _02197a88:
 	mov r0, r5
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r5
 	bl _ZN5Actor4KillEv
 	add sp, sp, #0x10
@@ -3285,14 +3285,14 @@ _021980e0:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	b _02198144
 _02198114:
 	mvn r3, #0
 	mov r1, #0
 	mov r2, #1
 	str r3, [r4, #0x158]
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	cmp r5, #0
 	bne _0219813c
 	ldr r0, _02198158 ; =gPlayerLink

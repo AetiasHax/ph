@@ -8785,7 +8785,7 @@ func_ov28_0217475c: ; 0x0217475c
 	mov r0, r4
 	mov r2, r1
 	strb r3, [r4, #0x1c1]
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	bl func_ov28_021746cc
 	add r0, r4, #0x48

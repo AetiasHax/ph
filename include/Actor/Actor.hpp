@@ -6,15 +6,17 @@
 #include "lib/math.h"
 
 #include "Actor/ActorRef.hpp"
+#include "Actor/ActorType.hpp"
 #include "Actor/FilterActorBase.hpp"
 #include "Physics/Cylinder.hpp"
 #include "Physics/Transform.hpp"
 #include "Player/EquipBoomerang.hpp"
+#include "System/SysNew.hpp"
 
 struct Actor_UnkStruct_020 {
     /* 00 */ unk16 mUnk_00[4];
-    /* 08 */ unk8 mUnk_08[2];
-    /* 0a */ unk8 mUnk_0a[2];
+    /* 08 */ u8 mUnk_08[2];
+    /* 0a */ u8 mUnk_0a[2];
     /* 0c */ unk8 mUnk_0c;
     /* 0c */ unk8 mUnk_0d;
     /* 0c */ unk8 mUnk_0e;
@@ -43,9 +45,10 @@ struct Actor_UnkStruct_0a4 {
     /* 14 */
 };
 
-class KillPickupItemActors : public FilterActorBase {
+class KillPickupsFilter : public FilterActorBase {
+public:
     /* 0 (base) */
-    /* 4 */
+    /* 4 */ ActorRef mUnk_4[20];
 
     /* 0 */ virtual bool Filter(Actor *actor) override;
     /* 4 */
@@ -60,10 +63,10 @@ enum PlayerCollide_ {
     PlayerCollide_Hammer = 0x10,
 };
 
-class Actor {
+class Actor : public SysObject {
 public:
     /* 000 (vtable) */
-    /* 004 */ unk32 mType;
+    /* 004 */ ActorTypeId mType;
     /* 008 */ unk32 mId;
     /* 00c */ unk32 mIndex;
     /* 010 */ u8 mUnk_010;
@@ -85,7 +88,7 @@ public:
     /* 070 */ unk32 mMaxFall;
     /* 074 */ unk32 mUnk_074;
     /* 078 */ s16 mRotation;
-    /* 07a */ unk16 mUnk_07a;
+    /* 07a */ u16 mUnk_07a;
     /* 07c */ Cylinder mHitbox;
     /* 08c */ Cylinder mUnk_08c;
     /* 09c */ Actor_UnkStruct_09c mUnk_09c;
@@ -113,7 +116,7 @@ public:
     /* 118 */ bool mAlive;
     /* 119 */ unk8 mUnk_119;
     /* 11a */ bool mVisible;
-    /* 11b */ unk8 mUnk_11b;
+    /* 11b */ bool mUnk_11b;
     /* 11c */ unk8 mUnk_11c;
     /* 11d */ unk8 mUnk_11d;
     /* 11e */ q4 mYOffset;
@@ -121,7 +124,7 @@ public:
     /* 122 */ unk16 mUnk_122;
     /* 124 */ unk8 mUnk_124;
     /* 125 */ unk8 mUnk_125;
-    /* 126 */ unk16 mUnk_126;
+    /* 126 */ u16 mUnk_126;
     /* 128 */ bool mUnk_128;
     /* 129 */ bool mUnk_129;
     /* 12a */ unk8 mUnk_12a;
@@ -158,7 +161,7 @@ public:
     /* 4c */ virtual bool vfunc_4c(unk32 *param1);
     /* 50 */ virtual Vec3p* GetPos();
     /* 54 */ virtual void vfunc_54();
-    /* 58 */ virtual void SetUnk_11b();
+    /* 58 */ virtual bool SetUnk_11b();
     /* 5c */ virtual bool SetVelocity(Vec3p *vel);
     /* 60 */ virtual bool vfunc_60();
     /* 64 */ virtual void vfunc_64();
@@ -171,7 +174,7 @@ public:
     /* 80 */ virtual void vfunc_80();
     /* 84 */ virtual void vfunc_84();
     /* 88 */ virtual void vfunc_88();
-    /* 8c */ virtual void vfunc_8c();
+    /* 8c */ virtual bool vfunc_8c();
     /* 90 */ virtual bool vfunc_90();
     /* 94 */ virtual void vfunc_94();
     /* 98 */ virtual bool vfunc_98();
@@ -191,7 +194,7 @@ public:
     bool func_ov00_020c198c();
     void KillPickupItemActors();
     void func_Ov00_020c1bfc(s32 param1);
-    void func_ov00_020c1c20(s32 param1, unk32 param2, unk32 param3);
+    void func_ov00_020c1c20(s32 param1, unk32 param2);
     bool IsNearLink();
     void func_ov00_020c1cf8();
     bool func_ov00_020c1d58();

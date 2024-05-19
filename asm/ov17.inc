@@ -29,7 +29,7 @@
 .extern _ZN5Actor18CollidesWithPlayerEj
 .extern _ZN5Actor18func_Ov00_020c1bfcEi
 .extern _ZN5Actor18func_ov00_020c198cEv
-.extern _ZN5Actor18func_ov00_020c1c20Eiii
+.extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
 .extern _ZN5Actor18func_ov00_020c2c0cEv
 .extern _ZN5Actor18func_ov00_020c2c70Ev

@@ -6764,7 +6764,7 @@ func_ov17_02160954: ; 0x02160954
 	mov r4, r0
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	bl _ZN5Actor4KillEv
 	ldmia sp!, {r4, pc}
@@ -7109,7 +7109,7 @@ _02160dd0:
 	mov r0, r5
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r5
 	bl _ZN5Actor4KillEv
 	add sp, sp, #0x20
@@ -13525,7 +13525,7 @@ _02165de8:
 	mov r1, #1
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	b _02165e2c
 _02165dfc:
 	ldr r0, _02165e38 ; =data_027e0f6c
@@ -13539,7 +13539,7 @@ _02165dfc:
 	mov r1, #1
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 _02165e2c:
 	mov r0, #1
 	add sp, sp, #0xb0

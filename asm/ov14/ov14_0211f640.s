@@ -30488,7 +30488,7 @@ func_ov14_02138380: ; 0x02138380
 	mov r1, #1
 	mov r4, r0
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	ldrh r0, [r4, #0x20]
 	cmp r0, #0x4b
 	blt _021383b0

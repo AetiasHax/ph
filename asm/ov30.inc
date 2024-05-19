@@ -22,7 +22,7 @@
 .extern _ZN5Actor16CollidesWithLinkEv
 .extern _ZN5Actor16XzDistanceToLinkEv
 .extern _ZN5Actor18func_Ov00_020c1bfcEi
-.extern _ZN5Actor18func_ov00_020c1c20Eiii
+.extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1d58Ev
 .extern _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
 .extern _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder

@@ -9888,7 +9888,7 @@ _021759e8:
 	mov r0, r4
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	mov r1, #1
 	bl func_ov20_02175960

@@ -3,8 +3,6 @@
 #include "global.h"
 #include "types.h"
 
-#include "Actor/Actor.hpp"
-
 #define __ACTOR_TYPE_ID(a,b,c,d) (((a) << 24) | ((b) << 16) | ((c) << 8) | (d))
 
 typedef u32 ActorTypeId;
@@ -63,8 +61,16 @@ enum ActorTypeId_ {
     ActorTypeId_Linebeck = __ACTOR_TYPE_ID('L','N','B','K'),
     ActorTypeId_Mailbox = __ACTOR_TYPE_ID('P','O','S','T'),
     ActorTypeId_Postman = __ACTOR_TYPE_ID('P','S','T','M'),
+
+    ActorTypeId_BMRN = __ACTOR_TYPE_ID('B','M','R','N'),
+    ActorTypeId_BMTY = __ACTOR_TYPE_ID('B','M','T','Y'),
+    ActorTypeId_FLAL = __ACTOR_TYPE_ID('F','L','A','L'),
+    ActorTypeId_FLBM = __ACTOR_TYPE_ID('F','L','B','M'),
+    ActorTypeId_FLBT = __ACTOR_TYPE_ID('F','L','B','T'),
+    ActorTypeId_FLTM = __ACTOR_TYPE_ID('F','L','T','M'),
 };
 
+class Actor;
 typedef Actor* (*ActorCreateFunc)();
 
 struct ActorType {

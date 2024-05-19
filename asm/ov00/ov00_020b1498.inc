@@ -107,7 +107,7 @@
 .extern _ZN5Actor16CollidesWithLinkEv
 .extern _ZN5Actor16XzDistanceToLinkEv
 .extern _ZN5Actor18func_Ov00_020c1bfcEi
-.extern _ZN5Actor18func_ov00_020c1c20Eiii
+.extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor20IncreaseActiveFramesEv
 .extern _ZN5Actor4KillEv

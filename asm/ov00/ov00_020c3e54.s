@@ -20420,7 +20420,7 @@ func_ov00_020d3ca8: ; 0x020d3ca8
 	stmdb sp!, {r3, lr}
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	arm_func_end func_ov00_020d3ca8

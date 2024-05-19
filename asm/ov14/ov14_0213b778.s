@@ -21584,7 +21584,7 @@ _0214c168:
 	mov r1, #1
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mov r0, r4
 	bl _ZN5Actor4KillEv
 	ldmia sp!, {r4, pc}
@@ -22415,7 +22415,7 @@ _0214cbdc:
 _0214cc10:
 	mov r1, #1
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mvn r0, #0
 	str r0, [r4, #0x158]
 	mov r0, #0
@@ -26137,7 +26137,7 @@ _0214fd28:
 _0214fd38:
 	mov r1, #0
 	mov r2, #1
-	bl _ZN5Actor18func_ov00_020c1c20Eiii
+	bl _ZN5Actor18func_ov00_020c1c20Eii
 	mvn r1, #0
 	mov r0, r4
 	str r1, [r4, #0x158]
