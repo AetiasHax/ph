@@ -44,7 +44,7 @@
 .extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1d58Ev
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
-.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
 .extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
 .extern _ZN5Actor18func_ov00_020c29ecEi

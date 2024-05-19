@@ -2471,7 +2471,7 @@ _0216f780:
 	add r1, r4, #0x48
 	add r2, r2, #0x400
 	str ip, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	mov r0, #0
 	str r0, [sp]
 	add r1, r4, #0x23c

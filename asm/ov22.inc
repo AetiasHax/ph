@@ -53,7 +53,7 @@
 .extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1da0EiP5Vec3p
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
-.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c2e7cEv
 .extern _ZN5Actor18func_ov00_020c2ed4Ev
 .extern _ZN5Actor18func_ov00_020c313cEj

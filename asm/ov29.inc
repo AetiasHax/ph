@@ -28,7 +28,7 @@
 .extern _ZN5Actor15TrySetTransformEP9Transform
 .extern _ZN5Actor16CollidesWithLinkEv
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
-.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
 .extern _ZN5Actor18func_ov00_020c243cEiPi
 .extern _ZN5Actor18func_ov00_020c2ebcEv

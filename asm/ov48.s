@@ -2133,7 +2133,7 @@ _02191984:
 	mov r0, r4
 	rsb r3, r5, #0x334
 	str r5, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 _021919dc:
 	mov r0, #1
 	strb r0, [r4, #0x514]
@@ -4724,7 +4724,7 @@ _02193924:
 	str r5, [sp, #4]
 	str r2, [sp, #8]
 	add r2, r10, #0x1cc
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	ldr r0, [r10, #0x158]
 	cmp r0, #1
 	bne _02193b5c
@@ -4809,7 +4809,7 @@ _02193924:
 	ldr r3, _02193f30 ; =0x000004cd
 	add r1, r10, #0x48
 	add r2, r10, #0x1d8
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 _02193b5c:
 	ldr r0, _02193f34 ; =data_ov48_02194688
 	add r3, sp, #0x94

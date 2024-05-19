@@ -5251,7 +5251,7 @@ func_ov27_02171f3c: ; 0x02171f3c
 	add r2, r6, #0x368
 	mov r3, #0x400
 	str r5, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	mov r0, r6
 	bl func_ov27_0217296c
 	b _0217245c
@@ -5297,7 +5297,7 @@ _02172018:
 	add r2, r6, #0x368
 	mov r3, #0x400
 	str r5, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	b _0217245c
 _021720c4:
 	bl func_ov27_0216f358

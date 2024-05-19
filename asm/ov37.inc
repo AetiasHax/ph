@@ -26,7 +26,7 @@
 .extern _ZN5Actor18func_Ov00_020c1bfcEi
 .extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
-.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+.extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
 .extern _ZN5Actor18func_ov00_020c243cEiPi
 .extern _ZN5Actor18func_ov00_020c313cEj

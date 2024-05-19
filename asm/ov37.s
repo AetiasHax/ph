@@ -9886,7 +9886,7 @@ func_ov37_02184758: ; 0x02184758
 	add r1, sp, #0x18
 	add r2, sp, #0xc
 	mov r0, r4
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	cmp r0, #0
 	addeq sp, sp, #0x24
 	moveq r0, #0

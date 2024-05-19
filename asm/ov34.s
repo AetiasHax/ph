@@ -5690,7 +5690,7 @@ _02180d84:
 	add r1, r1, #0x1c00
 	add r2, r4, #0x1d40
 	str r5, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	mov r0, r4
 	add r1, r4, #0x1000
 	mov r2, #0

@@ -2623,7 +2623,7 @@ _02114dc8:
 	mov r0, r6
 	mov r3, #0x800
 	str r5, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	mov r2, r5
 	movs r5, r0
 	strb r2, [r6, #0x77c]

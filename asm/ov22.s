@@ -12415,7 +12415,7 @@ func_ov22_02177814: ; 0x02177814
 	add r2, sp, #0x18
 	mov r0, r4
 	mov r3, r3, asr #0x1
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	cmp r0, #0
 	beq _02177908
 	mov r0, #1

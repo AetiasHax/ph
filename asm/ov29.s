@@ -5486,7 +5486,7 @@ _02171f74:
 	mov r0, r5
 	mov r3, #0x800
 	str ip, [sp, #8]
-	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	bl _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 	cmp r0, #0
 	movne r4, #0
 _02172028:

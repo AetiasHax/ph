@@ -118,11 +118,11 @@ public:
     /* 11a */ bool mVisible;
     /* 11b */ bool mUnk_11b;
     /* 11c */ unk8 mUnk_11c;
-    /* 11d */ unk8 mUnk_11d;
+    /* 11d */ bool mUnk_11d;
     /* 11e */ q4 mYOffset;
     /* 120 */ s16 mUnk_120;
     /* 122 */ unk16 mUnk_122;
-    /* 124 */ unk8 mUnk_124;
+    /* 124 */ u8 mUnk_124;
     /* 125 */ unk8 mUnk_125;
     /* 126 */ u16 mUnk_126;
     /* 128 */ bool mUnk_128;
@@ -201,7 +201,7 @@ public:
     bool func_ov00_020c1da0(s32 param1, Vec3p *param2);
     bool func_ov00_020c1e2c(s32 param1, Vec3p *param2);
     bool func_ov00_020c1ef8(Cylinder *param1, Vec3p *param2, s32 param3, s32 param4);
-    bool func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *param4, s32 param5, s32 param6);
+    bool func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *param4, u8 param5, s32 param6);
     bool func_ov00_020c1fc8(PlayerCollide flags);
     bool CollidesWithShield(Cylinder *param1);
     bool CollidesWithPlayer(PlayerCollide flags);

@@ -1,7 +1,12 @@
+extern "C" {
+    #include <stdlib.h>
+}
+
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Map/MapManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
+#include "Save/AdventureFlags.hpp"
 
 KILL(_ZN5ActorC1Ev)
 Actor::Actor() {}
@@ -224,15 +229,95 @@ void Actor::func_ov00_020c1c20(s32 param1, unk32 param2) {
     gMapManager->func_ov00_02084b38(mUnk_020.mUnk_0a[param1], mUnk_020.mUnk_08[param1], param2);
 }
 
-bool Actor::vfunc_48(unk32 param1) {}
-bool Actor::vfunc_4c(unk32 *param1) {}
-bool Actor::IsNearLink() {}
-void Actor::func_ov00_020c1cf8() {}
-bool Actor::func_ov00_020c1d58() {}
-bool Actor::func_ov00_020c1da0(s32 param1, Vec3p *param2) {}
-bool Actor::func_ov00_020c1e2c(s32 param1, Vec3p *param2) {}
-bool Actor::func_ov00_020c1ef8(Cylinder *param1, Vec3p *param2, s32 param3, s32 param4) {}
-bool Actor::func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *param4, s32 param5, s32 param6) {}
+bool Actor::vfunc_48(unk32 param1) {
+    return true;
+}
+
+extern "C" void func_ov00_020c8398(ActorTypeId type, Vec3p *pos, unk32 param2);
+bool Actor::vfunc_4c(unk32 *param1) {
+    if ((*param1 & 0x1f) == 0x8) {
+        func_ov00_020c8398(mType, &mPos, 1);
+        this->Kill();
+        return true;
+    }
+    this->Kill();
+    return true;
+}
+
+bool Actor::IsNearLink() {
+    Vec3p playerPos = gPlayerPos;
+    q20 z = playerPos.z;
+    q20 dx = abs(playerPos.x - mPos.x);
+    if (dx > FLOAT_TO_Q20(10.0)) return false;
+    q20 dz = abs(playerPos.z - mPos.z);
+    return dz <= FLOAT_TO_Q20(10.0);
+}
+
+void Actor::func_ov00_020c1cf8() {
+    if ((!mUnk_0a4.mUnk_00 && !mUnk_0a4.mUnk_01) || !(mUnk_129 != true && mUnk_11d != true && mUnk_11b != true)) {
+        mInactive = 0;
+    } else {
+        if (this->IsNearLink()) {
+            mInactive = 1;
+        } else {
+            mInactive = 2;
+        }
+    }
+}
+
+bool Actor::func_ov00_020c1d58() {
+    if (gAdventureFlags->func_ov00_02097738()) return false;
+    return gPlayer->vfunc_04() != false;
+}
+
+bool Actor::func_ov00_020c1da0(s32 param1, Vec3p *param2) {
+    if (!this->func_ov00_020c1d58()) return false;
+
+    Vec3p vec;
+    if (param2) {
+        vec = *param2;
+    } else {
+        Vec3p_Sub(&gPlayerPos, &mPrevPos, &vec);
+    }
+
+    return gPlayer->vfunc_30(mUnk_124, &vec, param1);
+}
+
+bool Actor::func_ov00_020c1e2c(s32 param1, Vec3p *param2) {
+    if (!this->func_ov00_020c1d58()) return false;
+    if (mHitbox.size < 0) return false;
+
+    Vec3p vec;
+    if (param2) {
+        vec = *param2;
+    } else {
+        Vec3p_Sub(&gPlayerPos, &mPrevPos, &vec);
+    }
+
+    Cylinder hitbox;
+    this->GetHitbox(&hitbox);
+    if (gPlayer->CollidesWith(&hitbox)) {
+        return gPlayer->vfunc_30(mUnk_124, &vec, param1);
+    }
+    return false;
+}
+
+bool Actor::func_ov00_020c1ef8(Cylinder *param1, Vec3p *param2, s32 param3, s32 param4) {
+    if (!this->func_ov00_020c1d58()) return false;
+    if (gPlayer->CollidesWith(param1)) {
+        return gPlayer->vfunc_30(param3, param2, param4);
+    }
+    return false;
+}
+
+bool Actor::func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *param4, u8 param5, s32 param6) {
+    if (!this->func_ov00_020c1d58()) return false;
+    if (gPlayer->func_ov00_020a7c60(param1, param2, param3)) {
+        return gPlayer->vfunc_30(param5, param4, param6);
+    }
+    return false;
+}
+
 bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {}
 bool Actor::CollidesWithShield(Cylinder *param1) {}
 bool Actor::CollidesWithPlayer(PlayerCollide flags) {}

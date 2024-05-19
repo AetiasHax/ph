@@ -956,9 +956,9 @@ _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii: ; 0x020c1ef8
 _020c1f58: .word gPlayer
 	arm_func_end _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
 
-	.global _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
-	arm_func_start _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
-_ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii: ; 0x020c1f5c
+	.global _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
+	arm_func_start _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
+_ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi: ; 0x020c1f5c
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r1
 	mov r5, r2
@@ -987,7 +987,7 @@ _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii: ; 0x020c1f5c
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _020c1fc4: .word gPlayer
-	arm_func_end _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_ii
+	arm_func_end _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 
 	.global _ZN5Actor18func_ov00_020c1fc8Ej
 	arm_func_start _ZN5Actor18func_ov00_020c1fc8Ej
