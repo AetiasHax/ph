@@ -1376,7 +1376,7 @@ _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_: ; 0x020affec
 	add r3, sp, #0x24
 	add r1, r7, #0x44
 	add r2, r7, #0x38
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, sp, #0x18
 	mov r1, #0
 	str r1, [r0]
@@ -1390,7 +1390,7 @@ _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_: ; 0x020affec
 	ldr r2, [r4, #8]
 	sub r1, r2, r1
 	str r1, [sp, #0x20]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, r5
 	bgt _020b008c
 	ldr r0, [sp, #0x24]
@@ -1411,7 +1411,7 @@ _020b008c:
 	str r1, [sp, #0xc]
 	ldr r1, [r7, #0x4c]
 	str r1, [sp, #0x14]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	bl func_01ff991c
 	mov r4, r0
 	ldr r1, [sp, #0xc]
@@ -1430,7 +1430,7 @@ _020b008c:
 	add r0, sp, #0x18
 	add r1, sp, #0xc
 	str r3, [sp, #0xc]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r3, r6
 	mov r7, r0
 	add r0, sp, #0xc
@@ -1441,7 +1441,7 @@ _020b008c:
 	mov r1, r6
 	add r2, sp, #0x24
 	str r4, [sp, #4]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add sp, sp, #0x30
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _020b0134:
@@ -1729,9 +1729,9 @@ _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
 	ldr r1, _020b05d8 ; =gPlayerPos
 	mov r0, r4
 	mov r2, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r4
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x1400
 	movge r0, #1
 	ldmgeia sp!, {r3, r4, r5, r6, r7, pc}
@@ -1890,7 +1890,7 @@ _020b06e0:
 	add r0, sp, #4
 	mov r2, r5
 	str r3, [sp, #0xc]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add sp, sp, #0x10
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}
@@ -2245,7 +2245,7 @@ _020b0bf8:
 	str r2, [sp, #0x18]
 	str r1, [sp, #0x1c]
 	str r3, [sp, #0x20]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0xa000
 	addlt sp, sp, #0x24
 	movlt r0, #0
@@ -2320,7 +2320,7 @@ _020b0cd8:
 	mov r4, r3, asr #0x10
 	mov r3, ip, lsl #0xc
 	str r3, [sp, #4]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r7, #0x58]
 	cmp r0, #0xa000
 	bgt _020b0d7c
@@ -2419,7 +2419,7 @@ _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_: ; 0x020b0e54
 	mov r2, #0x800
 	bl func_ov00_020b7d4c
 	add r0, sp, #0
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r5, r0
 	cmp r5, #0x4000
 	ble _020b0ed0
@@ -2505,7 +2505,7 @@ _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_: ; 0x020b0f88
 	mov r2, r6
 	bl func_ov00_020b7d4c
 	add r0, sp, #0
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r6, r0
 	cmp r6, #0x4000
 	ble _020b0ffc
@@ -2568,7 +2568,7 @@ _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_: ; 0x020b1058
 	beq _020b1140
 	ldr r1, _020b11d8 ; =gPlayerPos
 	add r2, sp, #0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr ip, [sp]
 	ldr r3, [sp, #4]
 	mov r2, ip, asr #0x1f
@@ -2609,7 +2609,7 @@ _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_: ; 0x020b1058
 	str r0, [sp, #0x14]
 _020b1140:
 	add r0, sp, #0xc
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r6, r0
 	cmp r6, #0x4000
 	ble _020b117c

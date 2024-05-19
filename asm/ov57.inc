@@ -42,9 +42,9 @@
 .extern data_ov00_020eec9c
 .extern data_ov14_02155df8
 .extern func_01ff8aa0
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
 .extern func_01ff9ec0
 .extern func_01ffa9fc
 .extern func_01ffbe78

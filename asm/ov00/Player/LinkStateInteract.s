@@ -491,7 +491,7 @@ _ZN17LinkStateInteract18func_ov00_020aa844EP5Actor: ; 0x020aa844
 	mov r1, r0
 	add r2, sp, #0x20
 	add r0, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r5
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r6, [r0]
@@ -918,7 +918,7 @@ _020aae90:
 	add r1, r6, #0x60
 	add r2, r6, #0x48
 	mov r0, #0x6000
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	mov r0, #0
 	ldr r1, _020ab3d4 ; =0x0000ffff
 	strh r0, [sp, #0x94]
@@ -976,7 +976,7 @@ _020aaf88:
 	mov r1, r0
 	add r0, sp, #0x5c
 	add r2, sp, #0x50
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r1, sp, #0x40
 	mov r0, r6
 	bl _ZN5Actor9GetHitboxEP8Cylinder
@@ -994,7 +994,7 @@ _020aafbc: ; jump table
 	b _020ab398 ; case 6
 _020aafd8:
 	add r0, sp, #0x50
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x800
 	bge _020aaff4
 	ldr r0, _020ab3cc ; =data_027e0fb8
@@ -1031,7 +1031,7 @@ _020ab000:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020ab060:
 	add r0, sp, #0x50
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, [sp, #0x4c]
 	mov r5, r0
 	add r0, r1, #0x3800
@@ -1105,7 +1105,7 @@ _020ab160:
 	b _020ab1d8
 _020ab170:
 	add r0, sp, #0x50
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x4000
 	bge _020ab1d8
 	mov r0, r4
@@ -1113,7 +1113,7 @@ _020ab170:
 	mov r1, r0
 	add r0, r6, #0x48
 	add r2, r4, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, _020ab3cc ; =data_027e0fb8
 	mov r1, #0
 	ldr r2, [r0]
@@ -1136,7 +1136,7 @@ _020ab1d8:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020ab1e4:
 	add r0, sp, #0x50
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x400
 	bge _020ab2a4
 	mov r0, r4
@@ -1144,7 +1144,7 @@ _020ab1e4:
 	mov r1, r0
 	add r0, sp, #0x40
 	add r2, sp, #0x34
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x34]
 	cmp r0, #0
 	ldreq r0, [sp, #0x3c]
@@ -1190,7 +1190,7 @@ _020ab2a4:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _020ab2b0:
 	add r0, sp, #0x50
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, [sp, #0x4c]
 	add r1, r1, #0xc00
 	cmp r0, r1
@@ -1615,7 +1615,7 @@ _020ab818:
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r2, sp, #0x10
 	mov r1, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [sp, #0xc]
 	ldr r0, [sp, #0x10]
 	add r2, r1, #0x66
@@ -1672,7 +1672,7 @@ _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p: ; 0x020ab8cc
 	mov r1, r0
 	mov r0, r4
 	add r2, r5, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r5, #0x18
 	mov r2, r0
 	mov r1, #0x1000
@@ -1692,7 +1692,7 @@ _ZN17LinkStateInteract14SetThrowOffsetEP5Vec3p: ; 0x020ab908
 	mov r1, r0
 	mov r0, r4
 	add r2, r5, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #3
 	str r0, [r5, #4]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -1712,7 +1712,7 @@ _ZN17LinkStateInteract18func_ov00_020ab934EP5Vec3p: ; 0x020ab934
 	mov r1, r0
 	mov r0, r4
 	add r2, r5, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r2, #3
 	mov r0, r5
 	mov r1, #2
@@ -1735,7 +1735,7 @@ _ZN17LinkStateInteract18func_ov00_020ab97cEP5Vec3p: ; 0x020ab97c
 	mov r1, r0
 	mov r0, r4
 	add r2, r5, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #4
 	str r0, [r5, #4]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -1765,7 +1765,7 @@ _ZN17LinkStateInteract18func_ov00_020ab9b8Ejb: ; 0x020ab9b8
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r2, sp, #0xc
 	add r1, r7, #0x18
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r1, [r4, #4]
 	ldr r0, _020abb64 ; =0x424b4559
 	cmp r1, r0

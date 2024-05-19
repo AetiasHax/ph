@@ -95,7 +95,7 @@
 .extern func_01ff8214
 .extern func_01ff8690
 .extern func_01ff9158
-.extern func_01ff9bc4
+.extern Vec3p_Add
 .extern func_01ff9ec0
 .extern func_01fffbec
 .extern func_01fffcd8

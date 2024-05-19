@@ -757,7 +757,7 @@ _02199518:
 	mov r1, ip
 	mov r2, ip
 	str r3, [sp, #0x34]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, _021996f0 ; =gActorManager
 	ldr r1, _021996f4 ; =data_ov53_0219a180
 	add r2, sp, #0x28
@@ -911,7 +911,7 @@ _02199850:
 	ldr r1, _02199a08 ; =gPlayerPos
 	add r2, sp, #0x2c
 	add r0, r5, #0x44
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]
@@ -985,7 +985,7 @@ _02199938:
 	add r0, sp, #0x20
 	ldr r1, _02199a08 ; =gPlayerPos
 	mov r2, r0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r4
 	str r0, [sp]
 	add r0, r5, #0x44
@@ -996,7 +996,7 @@ _02199938:
 	ldr r1, _02199a08 ; =gPlayerPos
 	add r0, r5, #0x44
 	add r2, sp, #0x14
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]

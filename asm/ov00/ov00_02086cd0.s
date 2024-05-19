@@ -1521,7 +1521,7 @@ func_ov00_02088074: ; 0x02088074
 _020880ac:
 	mov r0, r6
 	mov r1, r4
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	add r1, r8, r5, lsl #4
 	ldr r2, [r1, #0x118]
 	ldr r1, [r7, #0xc]
@@ -2704,11 +2704,11 @@ _020890ec:
 	add r0, sp, #0x34
 	add r1, sp, #0xc
 	add r2, sp, #0x24
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x40
 	add r1, sp, #0xc
 	add r2, sp, #0x18
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	b _0208912c
 _02089120:
 	add sp, sp, #0x4c
@@ -3541,7 +3541,7 @@ func_ov00_02089b94: ; 0x02089b94
 	str r6, [sp]
 	str lr, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
@@ -3594,7 +3594,7 @@ func_ov00_02089c50: ; 0x02089c50
 	str r6, [sp]
 	str lr, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
@@ -3993,11 +3993,11 @@ _0208a2cc:
 	add r0, r4, #0x260
 	add r1, sp, #4
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r4, #0x26c
 	add r1, sp, #4
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
@@ -4999,7 +4999,7 @@ _0208af04:
 	add r1, sp, #0x20
 	mov r0, r3
 	mov r2, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
 	bl func_01ffa0f4
@@ -5800,7 +5800,7 @@ func_ov00_0208b930: ; 0x0208b930
 	add r2, sp, #0xc
 	add r1, ip, #0x18
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
 	bl func_01ffa0f4
@@ -5828,7 +5828,7 @@ func_ov00_0208b988: ; 0x0208b988
 	add r0, sp, #0
 	add r1, ip, #0x18
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -9212,7 +9212,7 @@ func_ov00_0208e514: ; 0x0208e514
 	mov r0, #0xc
 	mla r1, r2, r0, r1
 	add r0, r4, #8
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	str r0, [r4, #0x14]
 	ldr r0, [r4, #0x48]
 	ldrh r3, [r4, #2]
@@ -9222,11 +9222,11 @@ func_ov00_0208e514: ; 0x0208e514
 	mla r0, r3, r1, ip
 	mla r1, r2, r1, ip
 	add r2, r4, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r4, #0x18
 	add r1, r4, #8
 	mov r2, r0
-	bl func_01ff9c68
+	bl Vec3p_Cross
 	add r0, r4, #0x18
 	bl func_01fffb4c
 	ldr r1, [r4, #0x48]
@@ -9235,7 +9235,7 @@ func_ov00_0208e514: ; 0x0208e514
 	mov r1, #0xc
 	mla r1, r2, r1, r3
 	add r0, r4, #0x18
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	str r0, [r4, #0x24]
 	ldr r0, [r4, #0x48]
 	ldrh r2, [r4, #4]
@@ -9245,11 +9245,11 @@ func_ov00_0208e514: ; 0x0208e514
 	mla r0, r2, r1, ip
 	mla r1, r3, r1, ip
 	add r2, r4, #0x28
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r4, #0x28
 	add r1, r4, #8
 	mov r2, r0
-	bl func_01ff9c68
+	bl Vec3p_Cross
 	add r0, r4, #0x28
 	bl func_01fffb4c
 	ldr r1, [r4, #0x48]
@@ -9258,7 +9258,7 @@ func_ov00_0208e514: ; 0x0208e514
 	mov r1, #0xc
 	mla r1, r2, r1, r3
 	add r0, r4, #0x28
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	str r0, [r4, #0x34]
 	ldr r0, [r4, #0x48]
 	ldrh r3, [r4]
@@ -9268,11 +9268,11 @@ func_ov00_0208e514: ; 0x0208e514
 	mla r0, r3, r1, ip
 	mla r1, r2, r1, ip
 	add r2, r4, #0x38
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r4, #0x38
 	add r1, r4, #8
 	mov r2, r0
-	bl func_01ff9c68
+	bl Vec3p_Cross
 	add r0, r4, #0x38
 	bl func_01fffb4c
 	ldr r0, [r4, #0x48]
@@ -9281,7 +9281,7 @@ func_ov00_0208e514: ; 0x0208e514
 	mov r0, #0xc
 	mla r1, r2, r0, r1
 	add r0, r4, #0x38
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	str r0, [r4, #0x44]
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_0208e514
@@ -9450,11 +9450,11 @@ func_ov00_0208e82c: ; 0x0208e82c
 	str r3, [sp, #0x18]
 	str r3, [sp, #0x1c]
 	str r3, [sp, #0x20]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r1, sp, #0x18
 	add r2, sp, #0xc
 	add r0, r5, #0xc
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0
 	mov r1, r4
 	bl func_ov00_0208e72c
@@ -9488,7 +9488,7 @@ func_ov00_0208e87c: ; 0x0208e87c
 	str r0, [sp, #0x44]
 	add r1, sp, #0x3c
 	mov r0, r5
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208e984
 	ldr r2, [sp, #0x5c]
@@ -9539,7 +9539,7 @@ _0208e984:
 	str r3, [sp, #0x30]
 	str r3, [sp, #0x34]
 	str r2, [sp, #0x38]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208ea4c
 	ldr r2, [sp, #0x50]
@@ -9591,7 +9591,7 @@ _0208ea4c:
 	str r3, [sp, #0x24]
 	str r2, [sp, #0x28]
 	str r2, [sp, #0x2c]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208eb14
 	ldr r2, [sp, #0x54]
@@ -9641,7 +9641,7 @@ _0208eb14:
 	str r3, [sp, #0x18]
 	str r2, [sp, #0x1c]
 	str r2, [sp, #0x20]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208ebd8
 	ldr r2, [sp, #0x48]
@@ -9691,7 +9691,7 @@ _0208ebd8:
 	str r3, [sp, #0xc]
 	str r2, [sp, #0x10]
 	str r3, [sp, #0x14]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208eca0
 	ldr r2, [sp, #0x58]
@@ -9742,7 +9742,7 @@ _0208eca0:
 	str r3, [sp]
 	str r2, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, #0
 	ble _0208ed68
 	ldr r2, [sp, #0x4c]
@@ -9828,11 +9828,11 @@ func_ov00_0208edd8: ; 0x0208edd8
 	mov r5, r0
 	mov r2, r5
 	mov r4, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r5, #0xc
 	mov r1, r4
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov00_0208edd8
 
@@ -9848,14 +9848,14 @@ func_ov00_0208ee00: ; 0x0208ee00
 	str r4, [sp, #0xc]
 	str r4, [sp, #0x10]
 	str r4, [sp, #0x14]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r5, #0xc
 	add r1, sp, #0
 	mov r2, r0
 	str r4, [sp]
 	str r4, [sp, #4]
 	str r4, [sp, #8]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov00_0208ee00
@@ -9896,11 +9896,11 @@ func_ov00_0208ee90: ; 0x0208ee90
 	mov r4, r3
 	ldr r7, [sp, #0x38]
 	ldr r6, [sp, #0x3c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, sp, #0
 	mov r0, r4
 	mov r1, r8
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0xc
 	ldr r3, [r9, #0xc]
 	ldr r2, [r5, #0xc]
@@ -9911,7 +9911,7 @@ func_ov00_0208ee90: ; 0x0208ee90
 	adc r2, r2, #0
 	mov r8, r3, lsr #0xc
 	orr r8, r8, r2, lsl #20
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	cmp r0, r8
 	bgt _0208ef1c
 	mov r0, #0
@@ -9923,7 +9923,7 @@ func_ov00_0208ee90: ; 0x0208ee90
 _0208ef1c:
 	add r0, sp, #0
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r4, r0
 	cmp r4, #0
 	addle sp, sp, #0x18
@@ -9931,11 +9931,11 @@ _0208ef1c:
 	ldmleia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	add r0, sp, #0xc
 	add r1, sp, #0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r5, r0, lsl #0x1
 	add r0, sp, #0xc
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	smull r1, r2, r5, r5
 	adds r3, r1, #0x800
 	sub r0, r0, r8
@@ -10008,14 +10008,14 @@ func_ov00_0208f030: ; 0x0208f030
 	mov r0, r5
 	mov r1, r7
 	add r4, r3, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, sp, #0x10
 	mov r0, r6
 	mov r1, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x10
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	movs r6, r0
 	bne _0208f0b4
 	ldr r3, [r7, #0xc]
@@ -10034,11 +10034,11 @@ func_ov00_0208f030: ; 0x0208f030
 _0208f0b4:
 	add r0, sp, #0x10
 	add r1, sp, #0x1c
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r5, r0
 	add r0, sp, #0x1c
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	smull r2, r1, r5, r5
 	adds r7, r2, #0x800
 	smull r2, r3, r4, r4
@@ -10109,14 +10109,14 @@ func_ov00_0208f1a0: ; 0x0208f1a0
 	mov r0, r6
 	mov r1, r7
 	add r5, r3, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, sp, #0x10
 	mov r0, r8
 	mov r1, r6
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x10
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	movs r4, r0
 	bne _0208f224
 	ldr r3, [r7, #0xc]
@@ -10135,11 +10135,11 @@ func_ov00_0208f1a0: ; 0x0208f1a0
 _0208f224:
 	add r0, sp, #0x10
 	add r1, sp, #0x1c
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r6, r0
 	add r0, sp, #0x1c
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	smull r1, r3, r6, r6
 	adds r6, r1, #0x800
 	smull r2, r1, r5, r5
@@ -10321,7 +10321,7 @@ func_ov00_0208f478: ; 0x0208f478
 	mov r0, r8
 	mov r1, r9
 	mov r6, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r5, [sp, #0x14]
 	smull r3, r2, r0, r0
@@ -10361,15 +10361,15 @@ _0208f538:
 _0208f544:
 	add r0, sp, #0x18
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r4, r0
 	add r0, sp, #0xc
 	add r1, sp, #0x18
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r5, r0, lsl #0x1
 	add r0, sp, #0xc
 	mov r1, r0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	sub r1, r0, r10
 	smull r2, r0, r5, r5
 	adds r3, r2, #0x800
@@ -10425,7 +10425,7 @@ _0208f628:
 	mov r0, r3
 	mov r1, r7
 	mov r2, r3
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [r7, #4]
 	ldr r3, [r8, #4]
 	smull r1, r0, r4, r0
@@ -11265,7 +11265,7 @@ _02090004:
 	sub r3, r8, #5
 	mov r3, r3, lsl #0xc
 	str r3, [sp, #0x5c]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	cmp r5, #0xa
 	bge _020902d4
 	ldr r1, _02090320 ; =gMapManager
@@ -12737,7 +12737,7 @@ func_ov00_02090f74: ; 0x02090f74
 	str r3, [sp, #0x18]
 	ldr r3, [ip, #0x268]
 	str r3, [sp, #0x1c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r4, #4]
 	add r1, sp, #8
 	bl func_ov00_02087df8
@@ -13958,7 +13958,7 @@ func_ov00_02091fe8: ; 0x02091fe8
 	str r3, [sp, #4]
 	ldr r3, [r4, #0x274]
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [sp, #0x2c]
 	add r0, sp, #0
 	rsb r1, r1, #0
@@ -13989,7 +13989,7 @@ _02092098:
 	add r0, sp, #0
 	add r1, sp, #0xc
 	mov r2, r6
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp, #0x18]
 	mov r1, #0
 	str r0, [r5]
@@ -14202,7 +14202,7 @@ _02092368:
 	add r2, sp, #0x38
 	add r0, r5, #0x40
 	add r1, r5, #0x4c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r5, #4]
 	ldr r0, [sp, #0x38]
 	ldr r6, [r1, #0x15c]
@@ -14223,7 +14223,7 @@ _020923dc:
 	add r2, sp, #0x2c
 	add r0, r5, #8
 	add r1, r5, #0x4c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r5, #4]
 	ldr r0, [sp, #0x2c]
 	ldr r6, [r1, #0x15c]
@@ -14252,7 +14252,7 @@ _0209242c:
 	mov r0, r3
 	mov r2, r3
 	add r1, r5, #0x40
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r5, #4]
 	ldr r0, [sp, #0x14]
 	ldr r7, [r1, #0x15c]
@@ -14317,11 +14317,11 @@ func_ov00_020924b8: ; 0x020924b8
 	ldrh r5, [r3]
 	moveq r6, #0xa000
 	moveq r7, #0xd000
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x29
 	blt _02092684
 	add r0, sp, #0xe8
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, _020931e4 ; =0x0000028f
 	cmp r0, r1
 	bge _02092684
@@ -14340,12 +14340,12 @@ func_ov00_020924b8: ; 0x020924b8
 	add r0, sp, #0xe8
 	str r3, [sp, #0xe8]
 	str r1, [sp, #0xf0]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r6, r0
 	add r0, r4, #0x28
-	bl func_01ff9cec
+	bl Vec3p_Length
 	add r0, r4, #0x1c
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, r6
 	ble _02092634
 	ldr r2, [sp, #0xe8]
@@ -14390,7 +14390,7 @@ _02092658:
 	add r0, sp, #0x100
 	add r1, r4, #0x1c
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp, #0xe8]
 	str r0, [r4, #0x28]
 	ldr r0, [sp, #0xec]
@@ -14402,7 +14402,7 @@ _02092684:
 	add r0, sp, #0x100
 	add r1, r4, #0x1c
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [r4, #0x1c]
 	str r0, [r4, #0x28]
 	ldr r0, [r4, #0x20]
@@ -14521,7 +14521,7 @@ _02092824:
 	mov r0, r3
 	mov r2, r3
 	add r1, r4, #0x40
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #4]
 	ldr r0, [sp, #0xc4]
 	ldr r7, [r1, #0x15c]
@@ -14535,7 +14535,7 @@ _02092824:
 	add r1, r1, r5, asr #16
 	mov r1, r1, lsl #0x10
 	mov r5, r1, asr #0x10
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r7, r0
 	mov r0, r4
 	bl func_ov00_02090a7c
@@ -14604,7 +14604,7 @@ _0209295c:
 	mov r0, r3
 	mov r2, r3
 	add r1, r4, #0x40
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #4]
 	ldr r0, [sp, #0xac]
 	ldr r7, [r1, #0x15c]
@@ -14628,7 +14628,7 @@ _020929c8:
 	add r2, sp, #0xa0
 	add r0, r4, #0x40
 	add r1, r4, #0x4c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #4]
 	ldr r0, [sp, #0xa0]
 	ldr r7, [r1, #0x15c]
@@ -14664,7 +14664,7 @@ _02092a50:
 	add r0, sp, #0x100
 	add r2, sp, #0x94
 	add r1, r4, #0x4c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #4]
 	ldr r0, [sp, #0x94]
 	ldr r7, [r1, #0x15c]
@@ -14871,7 +14871,7 @@ _02092d00:
 	mov r0, r3
 	mov r2, r3
 	add r1, sp, #0x7c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x64
 	bl func_01fffb4c
 	add r0, sp, #0x64
@@ -14880,13 +14880,13 @@ _02092d00:
 	add r0, sp, #0x7c
 	add r1, sp, #0x64
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x7c
 	add r1, sp, #0x70
 	add r2, sp, #0x58
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x58
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r5, r0
 	cmp r5, #0x5000
 	blt _02092df4
@@ -14907,7 +14907,7 @@ _02092d00:
 	add r0, sp, #0x7c
 	add r1, sp, #0x58
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _02092df4:
 	ldr r2, [sp, #0x7c]
 	ldr r1, [sp, #0x80]
@@ -14969,19 +14969,19 @@ _02092e60:
 	mov r0, r3
 	mov r2, r3
 	add r1, sp, #0x40
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x34
 	mov r1, #0x800
 	bl func_01fffbec
 	add r0, sp, #0x34
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r5, r0
 	ldr r0, _020931fc ; =0x00001ccd
 	cmp r5, r0
 	blt _02092f28
 	add r0, sp, #0x34
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	ldr r0, _02093200 ; =0xffffe333
 	add r1, r5, r0
 	rsb r0, r0, #0
@@ -14993,7 +14993,7 @@ _02092f28:
 	add r0, r4, #0x34
 	add r1, sp, #0x34
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #0x3c
 	str r0, [r4, #0x18]
 	ldr r0, [r4, #0x34]
@@ -15200,26 +15200,26 @@ func_ov00_0209320c: ; 0x0209320c
 	mov r6, r1
 	mov r4, r0
 	mov r7, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, sp, #0
 	mov r0, r5
 	mov r1, r6
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [sp, #0x38]
 	add r0, sp, #0
 	bl func_01fffbec
 	add r0, sp, #0xc
-	bl func_01ff9cec
+	bl Vec3p_Length
 	mov r6, r0
 	add r0, sp, #0xc
 	add r1, sp, #0
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	mov r1, r6
 	bl Divide
 	mov r5, r0
 	add r0, sp, #0xc
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	ldr r3, [sp, #0x30]
 	sub r2, r7, r6
 	smull lr, ip, r3, r2
@@ -15245,7 +15245,7 @@ func_ov00_0209320c: ; 0x0209320c
 	mov r0, r4
 	mov r2, r4
 	add r1, sp, #0xc
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	arm_func_end func_ov00_0209320c
@@ -15439,7 +15439,7 @@ func_ov00_02093508: ; 0x02093508
 	str r3, [sp, #4]
 	ldr r3, [r4, #0x274]
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r4, #0x200
 	ldrsh r1, [r0, #0x26]
 	add r0, sp, #0
@@ -15459,7 +15459,7 @@ func_ov00_02093508: ; 0x02093508
 	mov r2, r7
 	add r0, sp, #0xc
 	add r1, sp, #0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp, #0x28]
 	ldr r1, [sp, #0x98]
 	sub r0, r0, r8, asr #16
@@ -16195,7 +16195,7 @@ _02093e70:
 	str r4, [sp, #0x34]
 	str r3, [sp, #0x38]
 	str r4, [sp, #0x3c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r3, r4
 	add r2, r3, #0x1800
 	add r0, sp, #0x58
@@ -16204,7 +16204,7 @@ _02093e70:
 	mov r2, r0
 	str r3, [sp, #0x28]
 	str r3, [sp, #0x30]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #0
 	bic r0, r0, #0x1f
 	orr r1, r0, #7
@@ -17395,15 +17395,15 @@ func_ov00_02094c10: ; 0x02094c10
 	add r1, sp, #0
 	add r2, sp, #0xc
 	mov r0, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, r5, #0x14
 	add r1, sp, #0xc
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r5, #0x20
 	add r1, sp, #0xc
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov00_02094c10
@@ -17970,7 +17970,7 @@ func_ov00_02095278: ; 0x02095278
 	add r0, sp, #0xc
 	add r1, sp, #0
 	mov r2, r0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [r6, #0xc]
 	bl Divide
@@ -18626,7 +18626,7 @@ _02095a2c:
 	add r1, sp, #0x64
 	mov r2, r11
 	str r5, [sp, #0x6c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #0x1000
 	str r0, [sp, #0x58]
 	mov r0, #0x5000
@@ -18635,7 +18635,7 @@ _02095a2c:
 	add r1, sp, #0x58
 	mov r2, r0
 	str r5, [sp, #0x60]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	cmp r9, #0
 	beq _02095c74
 	cmp r6, #0x3000
@@ -18664,7 +18664,7 @@ _02095ac0:
 	add r1, sp, #0x4c
 	mov r2, r11
 	str r5, [sp, #0x54]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #0
 	str r0, [sp, #0x40]
 	mov r0, #0x5000
@@ -18673,7 +18673,7 @@ _02095ac0:
 	add r1, sp, #0x40
 	mov r2, r0
 	str r5, [sp, #0x48]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	cmp r9, #0
 	beq _02095c74
 	cmp r6, #0x3000
@@ -18702,7 +18702,7 @@ _02095b54:
 	add r1, sp, #0x34
 	mov r2, r11
 	str r4, [sp, #0x34]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #0x5000
 	str r0, [sp, #0x2c]
 	mov r0, #0x1000
@@ -18711,7 +18711,7 @@ _02095b54:
 	add r1, sp, #0x28
 	mov r2, r0
 	str r4, [sp, #0x28]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	cmp r9, #0
 	beq _02095c74
 	cmp r6, #0x3000
@@ -18740,7 +18740,7 @@ _02095be8:
 	add r1, sp, #0x1c
 	mov r2, r11
 	str r4, [sp, #0x1c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #0x5000
 	str r0, [sp, #0x14]
 	mov r0, #0
@@ -18749,7 +18749,7 @@ _02095be8:
 	add r1, sp, #0x10
 	mov r2, r0
 	str r4, [sp, #0x10]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	cmp r9, #0
 	beq _02095c74
 	cmp r6, #0x3000
@@ -19128,14 +19128,14 @@ _020960b0:
 	mov r0, r5
 	mov r1, r6
 	mov r2, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r4]
 	mov r1, r11
 	bl _ZN10MapManager17GetMapData_Unk_dcEP5Vec3p
 	mov r0, r5
 	mov r1, r11
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r2, r7
 	mov r0, r10
 	mov r1, r5

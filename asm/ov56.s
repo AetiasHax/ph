@@ -428,7 +428,7 @@ _0219925c:
 	ldr r1, _021992e0 ; =gPlayerPos
 	add r2, sp, #8
 	add r0, r4, #0x44
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r1, #0
 	str r1, [sp]
 	str r1, [sp, #4]

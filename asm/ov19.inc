@@ -147,10 +147,10 @@
 .extern func_01ff8690
 .extern func_01ff9158
 .extern func_01ff9958
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9d4c
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Normalize
+.extern Vec3p_Axpy
 .extern func_01ffa0f4
 .extern func_01ffa9fc
 .extern func_01fffbec
@@ -177,7 +177,7 @@
 .extern func_020370d0
 .extern func_0203eba8
 .extern func_0203ebc8
-.extern func_02042f74
+.extern abs
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_02079e68

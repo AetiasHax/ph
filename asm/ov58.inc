@@ -36,10 +36,10 @@
 .extern data_ov00_020ee6f8
 .extern data_ov00_020eec9c
 .extern data_ov14_02155fb0
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
-.extern func_01ff9d4c
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
+.extern Vec3p_Normalize
 .extern func_01ffbe34
 .extern func_01ffbe78
 .extern func_01ffbf5c

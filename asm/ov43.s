@@ -597,7 +597,7 @@ func_ov43_02189c8c: ; 0x02189c8c
 	add r0, r7, #0x48
 	add r1, sp, #0xc
 	add r2, sp, #0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
 	bl func_01ffa0f4
@@ -644,11 +644,11 @@ _02189d70:
 	add r2, sp, #0xc
 	mov r0, r4
 	mov r3, r1
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, sp, #0
 	add r1, r7, #0x48
 	mov r2, r0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0
 	mov r3, #0
 	mov r1, r5
@@ -3141,7 +3141,7 @@ _0218bf54:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	bl func_ov00_020cc45c
 	mov r0, r4
@@ -3636,7 +3636,7 @@ _0218c690:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	bl func_ov00_020cc45c
 	mov r0, r4
@@ -3728,7 +3728,7 @@ _0218c7e8:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	bl func_ov00_020cc45c
 	mov r0, r4

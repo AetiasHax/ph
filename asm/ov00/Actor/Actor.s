@@ -750,7 +750,7 @@ _ZN5Actor10IsNearLinkEv: ; 0x020c1c94
 	ldr r1, [sp]
 	ldr r0, [r4, #0x48]
 	sub r0, r1, r0
-	bl func_02042f74
+	bl abs
 	cmp r0, #0xa000
 	addgt sp, sp, #0xc
 	movgt r0, #0
@@ -758,7 +758,7 @@ _ZN5Actor10IsNearLinkEv: ; 0x020c1c94
 	ldr r1, [sp, #8]
 	ldr r0, [r4, #0x50]
 	sub r0, r1, r0
-	bl func_02042f74
+	bl abs
 	cmp r0, #0xa000
 	movle r0, #1
 	movgt r0, #0
@@ -849,7 +849,7 @@ _020c1dec:
 	ldr r0, _020c1e24 ; =gPlayerPos
 	add r2, sp, #0
 	add r1, r6, #0x54
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 _020c1dfc:
 	ldr r0, _020c1e28 ; =gPlayer
 	ldrb r1, [r6, #0x124]
@@ -897,7 +897,7 @@ _020c1e8c:
 	ldr r0, _020c1ef0 ; =gPlayerPos
 	add r2, sp, #0x10
 	add r1, r5, #0x54
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 _020c1e9c:
 	add r1, sp, #0
 	mov r0, r5
@@ -1010,7 +1010,7 @@ _ZN5Actor18func_ov00_020c1fc8Ej: ; 0x020c1fc8
 	ldr r1, _020c2228 ; =gPlayerPos
 	add r2, sp, #0x60
 	add r0, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r4
 	and r1, r6, #2
 	bl _ZN5Actor18CollidesWithPlayerEj
@@ -1164,7 +1164,7 @@ _ZN5Actor18CollidesWithShieldEP8Cylinder: ; 0x020c2238
 	ldr r1, _020c22ac ; =gPlayerPos
 	add r2, sp, #0
 	add r0, r0, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, _020c22b0 ; =data_027e0fac
 	ldr r0, [sp]
 	ldrsh r4, [r1]
@@ -1372,7 +1372,7 @@ _020c2508:
 	add r2, sp, #4
 	add r0, r7, #0x48
 	add r1, r5, #0x54
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 _020c2518:
 	ldrb r0, [r5, #0x125]
 	ldr r1, _020c2704 ; =0x43424c53
@@ -1786,7 +1786,7 @@ _ZN5Actor18func_ov00_020c29ecEi: ; 0x020c29ec
 	stmdb sp!, {r4, lr}
 	add r0, r0, #0x148
 	mov r4, r1
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, r4
 	movgt r0, #1
 	movle r0, #0
@@ -1983,9 +1983,9 @@ _ZN5Actor18func_ov00_020c2c70Ev: ; 0x020c2c70
 	add r2, sp, #0xc
 	add r0, r4, #0x48
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0xc
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x1000
 	ble _020c2d00
 	add r0, sp, #0xc
@@ -2004,18 +2004,18 @@ _020c2cbc:
 	add r0, sp, #0
 	add r2, sp, #0xc
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	b _020c2d00
 _020c2cf0:
 	ldr r0, _020c2d40 ; =gPlayerPos
 	add r2, sp, #0xc
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 _020c2d00:
 	add r0, r5, #0x48
 	add r1, sp, #0xc
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp, #0xc]
 	cmp r4, #0
 	str r0, [r5, #0x60]
@@ -2098,9 +2098,9 @@ _ZN5Actor18func_ov00_020c2de4Ev: ; 0x020c2de4
 	beq _020c2e30
 	add r0, r4, #0x48
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, #0x1000
 	ble _020c2e3c
 	add r0, sp, #0
@@ -2110,12 +2110,12 @@ _ZN5Actor18func_ov00_020c2de4Ev: ; 0x020c2de4
 _020c2e30:
 	ldr r0, _020c2e78 ; =gPlayerPos
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 _020c2e3c:
 	add r0, r5, #0x48
 	add r1, sp, #0
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp]
 	cmp r4, #0
 	str r0, [r5, #0x60]
@@ -2198,7 +2198,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	ldr r3, [sp, #0x18]
 	mov r2, r0
 	str r3, [r4, #0x68]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #1
 	bl func_01fffd04

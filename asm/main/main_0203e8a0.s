@@ -8710,13 +8710,13 @@ func_02042f68: ; 0x02042f68
 	bx lr
 	arm_func_end func_02042f68
 
-	.global func_02042f74
-	arm_func_start func_02042f74
-func_02042f74: ; 0x02042f74
+	.global abs
+	arm_func_start abs
+abs: ; 0x02042f74
 	cmp r0, #0
 	rsblt r0, r0, #0
 	bx lr
-	arm_func_end func_02042f74
+	arm_func_end abs
 
 	.global func_02042f80
 	arm_func_start func_02042f80

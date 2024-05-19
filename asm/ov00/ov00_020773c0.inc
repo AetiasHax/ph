@@ -42,7 +42,7 @@
 .extern data_ov00_020ec718
 .extern data_ov00_020ec7dc
 .extern func_01ff9b4c
-.extern func_01ff9bc4
+.extern Vec3p_Add
 .extern func_02000b60
 .extern func_02002bac
 .extern func_02002bf4

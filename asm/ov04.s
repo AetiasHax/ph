@@ -2211,7 +2211,7 @@ _02101bda:
 	add r0, r5, #0
 	add r1, r7, #0
 	add r2, r5, #0
-	blx func_01ff9bc4
+	blx Vec3p_Add
 	add r4, r4, #1
 	add r5, #0xc
 	cmp r4, r6
@@ -11352,7 +11352,7 @@ _021063a4:
 	add r0, r0, #4
 	add r1, r1, #4
 	add r2, sp, #0x1c
-	blx func_01ff9bf8
+	blx Vec3p_Sub
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
 	blx func_01ffa0f4
@@ -18197,7 +18197,7 @@ _02109820:
 	lsl r1, r1, #4
 	add r1, r6, r1
 	add r2, r0, #0
-	blx func_01ff9bc4
+	blx Vec3p_Add
 	add r0, sp, #0x3c
 	blx func_ov00_020c1500
 	mov r1, #0

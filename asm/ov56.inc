@@ -17,7 +17,7 @@
 .extern data_027e0fb8
 .extern data_027e0fe8
 .extern data_027e0ffc
-.extern func_01ff9bc4
+.extern Vec3p_Add
 .extern func_01ffa9fc
 .extern func_01fffcd8
 .extern func_01fffcec

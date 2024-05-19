@@ -81,9 +81,9 @@
 .extern data_ov00_020e9370
 .extern func_01ff8214
 .extern func_01ff9958
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Axpy
 .extern func_01ffa0f4
 .extern func_01fffcec
 .extern func_01fffd04
@@ -102,7 +102,7 @@
 .extern func_0202e58c
 .extern _ZN9ActorTypeC1EjPFP5ActorvEPFivE
 .extern _ZN9ActorTypeD1Ev
-.extern func_02042f74
+.extern abs
 .extern func_0204f614
 .extern func_0204f754
 .extern func_ov00_0207a1c8

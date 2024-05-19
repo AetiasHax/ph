@@ -59,11 +59,11 @@
 .extern data_ov00_020e24a4
 .extern data_ov00_020eec68
 .extern data_ov15_02190458
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
-.extern func_01ff9d4c
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
+.extern Vec3p_Normalize
+.extern Vec3p_Axpy
 .extern func_01ff9ec0
 .extern func_01ffbe78
 .extern func_01ffe61c

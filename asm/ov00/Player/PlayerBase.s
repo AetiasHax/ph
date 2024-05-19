@@ -96,7 +96,7 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	mov r0, r1
 	ldr r1, _020a7bf8 ; =gPlayerPos
 	add r2, sp, #0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	cmp r0, #0
 	ldreq r0, [sp, #8]

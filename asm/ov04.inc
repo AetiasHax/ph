@@ -272,8 +272,8 @@
 .extern data_ov40_0218827c
 .extern data_ov40_0218a0e0
 .extern func_01ff892c
-.extern func_01ff9bc4
-.extern func_01ff9bf8
+.extern Vec3p_Add
+.extern Vec3p_Sub
 .extern func_01ff9ec0
 .extern func_01ffa0f4
 .extern func_01ffa8d4

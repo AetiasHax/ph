@@ -146,11 +146,11 @@
 .extern func_01ff81f8
 .extern func_01ff8214
 .extern func_01ff992c
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9c68
-.extern func_01ff9d4c
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Cross
+.extern Vec3p_Normalize
+.extern Vec3p_Axpy
 .extern func_01ffa0f4
 .extern func_01ffbf5c
 .extern func_01fffcec

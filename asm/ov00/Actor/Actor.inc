@@ -34,9 +34,9 @@
 .extern gActorManager
 .extern data_027e103c
 .extern data_ov00_020e9c88
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
 .extern func_01ff9ec0
 .extern func_01ffa0f4
 .extern func_01ffbe34
@@ -47,7 +47,7 @@
 .extern func_0202b894
 .extern func_0202d95c
 .extern func_020313c8
-.extern func_02042f74
+.extern abs
 .extern func_ov00_02079470
 .extern func_ov00_0207a188
 .extern func_ov00_0207a1c8

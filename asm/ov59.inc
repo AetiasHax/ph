@@ -32,8 +32,8 @@
 .extern data_ov00_020e9370
 .extern func_01ff8214
 .extern func_01ff88b0
-.extern func_01ff9bc4
-.extern func_01ff9bf8
+.extern Vec3p_Add
+.extern Vec3p_Sub
 .extern func_01ffa0f4
 .extern func_01ffbf5c
 .extern func_01fffcd8

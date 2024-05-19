@@ -291,7 +291,7 @@ func_ov59_02198ffc: ; 0x02198ffc
 	add r0, sp, #0xc
 	str r2, [sp, #8]
 	mov r2, r0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
 	bl func_01ffa0f4
@@ -558,7 +558,7 @@ _021993b4:
 	add r0, sp, #0xb0
 	add r2, sp, #0xa4
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xa4]
 	ldr r1, [sp, #0xac]
 	bl func_01ffa0f4
@@ -589,7 +589,7 @@ _02199408:
 	ldr r1, _0219a070 ; =gPlayerPos
 	add r0, sp, #0x98
 	add r2, sp, #0x8c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x8c]
 	ldr r1, [sp, #0x94]
 	bl func_01ffa0f4
@@ -896,7 +896,7 @@ _021998b8:
 	str r3, [sp, #0x78]
 	ldr r3, [r5, #0xc4]
 	str r3, [sp, #0x7c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x68]
 	ldr r1, [sp, #0x70]
 	bl func_01ffa0f4
@@ -2111,7 +2111,7 @@ func_ov59_0219aa08: ; 0x0219aa08
 	add r0, r5, #0x334
 	add r1, sp, #0x54
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr lr, [r5, #0x344]
 	ldr r2, [r5, #0x338]
 	ldr r3, _0219aba0 ; =0x00000333

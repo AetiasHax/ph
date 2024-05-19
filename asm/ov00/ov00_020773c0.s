@@ -5675,7 +5675,7 @@ func_ov00_0207a1c8: ; 0x0207a1c8
 	add r2, sp, #0
 	add r0, r5, #4
 	str r3, [sp, #0xc]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _0207a1f8:
 	ldr r0, _0207a28c ; =data_027e0c54
 	mov r2, #1

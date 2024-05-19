@@ -1483,7 +1483,7 @@ _021967ec:
 	mov r0, r5
 	bl func_ov52_0219699c
 	ldr r0, _021968a8 ; =data_027e0fa0
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, _021968ac ; =0x0000019a
 	cmp r0, r1
 	ble _0219682c
@@ -1568,7 +1568,7 @@ func_ov52_021968c4: ; 0x021968c4
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov52_021968c4

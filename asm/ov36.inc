@@ -105,10 +105,10 @@
 .extern func_01ff892c
 .extern func_01ff8e84
 .extern func_01ff9158
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
-.extern func_01ff9d4c
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
+.extern Vec3p_Normalize
 .extern func_01ffa0f4
 .extern func_01ffbe34
 .extern func_01ffe1cc

@@ -670,7 +670,7 @@ _0217c574:
 	add r1, sp, #0x24
 	add r0, r0, #0x48
 	mov r2, r1
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r1, [sp, #0x24]
 	ldr r0, [sp, #0x28]
 	str r1, [sp, #0xc]
@@ -4098,10 +4098,10 @@ func_ov31_0217ee74: ; 0x0217ee74
 	str lr, [sp, #0xc]
 	str ip, [sp, #0x10]
 	str r3, [sp, #0x14]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r9
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	ldrb r0, [r5, #0x174]
 	mov r1, #0x400
 	cmp r0, #1
@@ -4111,7 +4111,7 @@ func_ov31_0217ee74: ; 0x0217ee74
 	add r0, r5, #0x48
 	mov r1, r9
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r2, [sp, #0x28]
 	ldr r0, [r5, #0x4c]
 	cmp r0, r2
@@ -4128,7 +4128,7 @@ _0217ef70:
 	add r0, r5, #0x48
 	mov r1, r9
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r2, [r5, #0x18]
 	ldr r0, [r5, #0x4c]
 	cmp r0, r2
@@ -4584,7 +4584,7 @@ _0217f4cc:
 	add r0, sp, #0x48
 	add r1, r4, #0x260
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, _0217f634 ; =data_ov31_02183e88
 	str r5, [sp, #0x3c]
 	ldr r0, [r0, #0x2c8]
@@ -4610,7 +4610,7 @@ _0217f4cc:
 	add r1, sp, #0x48
 	add r0, r6, #0x48
 	mov r2, r1
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x24
 	mov r1, r4
 	blx func_ov09_0211d090

@@ -117,10 +117,10 @@
 .extern func_01ff9158
 .extern func_01ff991c
 .extern func_01ff9b88
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9cec
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Length
+.extern Vec3p_Axpy
 .extern func_01ff9ec0
 .extern func_01ffa0f4
 .extern func_01ffa9fc

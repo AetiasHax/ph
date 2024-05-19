@@ -428,7 +428,7 @@ _020ac400:
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r1, r5, #0x34
 	add r2, sp, #8
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r1, sp, #8
 	str r1, [sp]
 	mov r0, #1
@@ -861,7 +861,7 @@ _ZN15LinkStateDamage18func_ov00_020aca50Ev: ; 0x020aca50
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	add r2, sp, #0
 	add r1, r4, #0x1c
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r5, #0x3c
 	ldr r2, [r0]
 	add r1, sp, #0
@@ -1141,7 +1141,7 @@ _020ace44:
 	mov r2, r0
 	add r1, sp, #0
 	mov r0, r4
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0

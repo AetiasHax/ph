@@ -500,7 +500,7 @@ func_ov51_02195b00: ; 0x02195b00
 	mov r0, r3
 	add r1, r5, #0x48
 	add r2, r5, #0x60
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, #0
 	str r1, [r5, #0x64]
 	ldr r0, [r5, #0x60]
@@ -515,7 +515,7 @@ func_ov51_02195b00: ; 0x02195b00
 _02195b60:
 	add r0, r5, #0x60
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	ldr r2, [r5, #0x60]
 	ldr r0, _02195c04 ; =0x0000011f
 	mov r1, #0
@@ -628,7 +628,7 @@ func_ov51_02195c80: ; 0x02195c80
 	add r0, r5, #0x48
 	add r1, r5, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, _02195e98 ; =gActorManager
 	add r1, r5, #0x34
 	ldr r0, [r0]
@@ -1198,7 +1198,7 @@ _021963d4:
 	mov r2, r6
 	str r3, [sp, #0xc]
 	str r11, [sp, #0x10]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #5
 	str r0, [sp]
 	ldrb r3, [r10, #0x124]
@@ -1514,7 +1514,7 @@ func_ov51_021967e8: ; 0x021967e8
 	mov r0, r1
 	add r2, sp, #0x18
 	add r1, r6, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
 	bl func_01ffa0f4
@@ -1962,7 +1962,7 @@ func_ov51_02196dc4: ; 0x02196dc4
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov51_02196dc4
 
@@ -2225,7 +2225,7 @@ func_ov51_021970a0: ; 0x021970a0
 	add r2, sp, #0x14
 	add r0, r6, #0x48
 	add r1, r7, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r2, [sp, #0x1c]
 	ldr ip, [sp, #0x14]
 	smull r1, r0, r2, r2
@@ -3056,7 +3056,7 @@ _02197c48:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #0
 	str r0, [sp]
 	ldr r3, [r4, #8]
@@ -3280,7 +3280,7 @@ _02197f48:
 	mov r1, r6
 	mov r2, r7
 	mov r3, r7
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r4, #0x158
 	ldr ip, [r0]
 	mov r1, r11
@@ -3304,7 +3304,7 @@ _02197f94:
 	mov r2, r3
 	sub r0, r0, #1
 	mov r0, r0, lsl #0xb
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r1, [sp, #0x40]
 	ldr r0, _0219801c ; =0x000004cd
 	sub r1, r1, #0xd7
@@ -3464,7 +3464,7 @@ func_ov51_02198184: ; 0x02198184
 	add r1, sp, #0
 	add r0, sp, #0xc
 	mov r2, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, #0
 	str r1, [sp, #4]
 	ldr r0, [r4, #0x74]

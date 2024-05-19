@@ -441,7 +441,7 @@ _020d5ff8:
 	beq _020d6108
 	add r0, sp, #0xc
 	mov r1, r4
-	bl func_01ff9c2c
+	bl Vec3p_Dot
 	add r0, r0, #0x1000
 	mov r0, r0, lsl #0x1
 	bl func_01ff9958
@@ -449,7 +449,7 @@ _020d5ff8:
 	add r0, sp, #0xc
 	add r1, sp, #0x18
 	add r2, sp, #0
-	bl func_01ff9c68
+	bl Vec3p_Cross
 	cmp r4, #0
 	rsblt r0, r4, #0
 	movge r0, r4

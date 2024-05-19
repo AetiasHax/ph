@@ -221,7 +221,7 @@ _ZN10ActorRupee4MoveEv: ; 0x0213b120
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #1
 	strb r0, [r4, #0x9f]
 	ldr r0, [r4, #0x98]

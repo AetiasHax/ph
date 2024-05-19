@@ -91,9 +91,9 @@
 .extern data_ov22_0217a5d4
 .extern func_01ff88b0
 .extern func_01ff9158
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Axpy
 .extern func_01ff9ec0
 .extern func_01ffa0f4
 .extern func_01ffa9fc

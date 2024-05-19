@@ -42,11 +42,11 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	mov r1, r0
 	add r2, sp, #0
 	add r0, r4, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, #0
 	add r0, sp, #0
 	str r1, [sp, #4]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, _020a9024 ; =0x00000155
 	cmp r0, r1
 	addlt sp, sp, #0xc

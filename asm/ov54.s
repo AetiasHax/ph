@@ -275,7 +275,7 @@ _02198fcc:
 	add r0, sp, #0x24
 	sub r1, r2, r1
 	str r1, [sp, #0x2c]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, _02199294 ; =0x00000333
 	cmp r0, r1
 	movle r6, #1
@@ -758,7 +758,7 @@ _021996f8:
 	mov r1, r0
 	add r0, sp, #0x1c
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #0
 	str r0, [sp]
 	str r0, [sp, #4]

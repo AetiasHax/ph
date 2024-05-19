@@ -1958,7 +1958,7 @@ _0217d570:
 	ldr r1, [r5, #0x60]
 	add r0, sp, #0x1c
 	strh r1, [sp, #8]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	strh r0, [sp, #0xa]
 	ldr r1, [r5, #0x68]
 	add r0, sp, #8
@@ -2954,11 +2954,11 @@ func_ov32_0217e26c: ; 0x0217e26c
 	str r3, [sp]
 	str r3, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0xc
 	add r1, sp, #0
 	add r2, r4, #0xc
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_ov32_0217e26c
@@ -3566,7 +3566,7 @@ _0217eaa0:
 	ldr r1, [r5, #0x60]
 	add r0, sp, #0x34
 	strh r1, [sp, #0x2c]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	strh r0, [sp, #0x2e]
 	add r0, sp, #0x2c
 	ldr r2, [r5, #0x68]
@@ -5721,7 +5721,7 @@ func_ov32_021804a4: ; 0x021804a4
 	orr r4, r4, r3, lsl #20
 	add r3, r9, r4
 	str r3, [sp, #0x20]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x18
 	bl func_ov00_020c5288
 	cmp r0, #0
@@ -6290,7 +6290,7 @@ func_ov32_02180e08: ; 0x02180e08
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [r4, #0x29c]
 	cmp r0, #4
 	beq _02180e3c
@@ -7890,7 +7890,7 @@ func_ov32_02182448: ; 0x02182448
 	add r0, r4, #0x78
 	add r1, r4, #0x18
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0218248c: .word data_ov32_02185c10
@@ -7976,7 +7976,7 @@ func_ov32_0218252c: ; 0x0218252c
 	add r0, sp, #0x24
 	add r1, r4, #0x78
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r1, _0218269c ; =gMapManager
 	mov r0, r4
 	ldr r5, [r1]
@@ -8204,7 +8204,7 @@ func_ov32_0218286c: ; 0x0218286c
 	str r3, [sp, #0x18]
 	str ip, [sp, #0x1c]
 	str lr, [sp, #0x20]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r4, #0xa8
 	ldr r3, [r0]
 	add r1, sp, #0x24
@@ -9183,12 +9183,12 @@ func_ov32_02183540: ; 0x02183540
 	add r2, sp, #0
 	add r0, r4, #0x230
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, r4, #0x60
 	add r1, sp, #0
 	mov r3, r2
 	mov r0, #0xcd
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r4, #0x60
 	ldr r2, _0218359c ; =0x00000333
 	mov r3, r0
@@ -9401,16 +9401,16 @@ func_ov32_02183818: ; 0x02183818
 	add r0, sp, #0x18
 	add r1, r4, #0x230
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x18
 	add r2, sp, #0xc
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r2, r4, #0x60
 	add r1, sp, #0xc
 	mov r3, r2
 	mov r0, #0xcd
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r4, #0x60
 	ldr r1, _021838d0 ; =0x00000333
 	mov r2, r0

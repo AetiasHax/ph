@@ -93,8 +93,8 @@
 .extern data_ov09_0211f5b4
 .extern func_01ff80d4
 .extern func_01ff8214
-.extern func_01ff9bc4
-.extern func_01ff9cec
+.extern Vec3p_Add
+.extern Vec3p_Length
 .extern func_01ffbe34
 .extern func_020078f4
 .extern func_020196bc

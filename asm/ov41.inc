@@ -109,9 +109,9 @@
 .extern func_01ff8214
 .extern func_01ff8e84
 .extern func_01ff9158
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9e64
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Axpy
 .extern func_01ffa0f4
 .extern func_01fffcec
 .extern func_02018450

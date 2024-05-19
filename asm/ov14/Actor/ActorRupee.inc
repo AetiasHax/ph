@@ -61,7 +61,7 @@
 .extern data_027e0fe0
 .extern data_ov00_020e9370
 .extern data_ov00_020eec9c
-.extern func_01ff9bc4
+.extern Vec3p_Add
 .extern func_01fffd04
 .extern func_0202bc38
 .extern func_ov00_0207a13c

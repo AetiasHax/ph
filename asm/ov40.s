@@ -810,7 +810,7 @@ _0217c850:
 	str r6, [sp, #0x2c]
 	str r5, [sp, #0x30]
 	str r3, [sp, #0x34]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x68
 	mov r5, #0
 	mov r3, #0x5000
@@ -819,7 +819,7 @@ _0217c850:
 	str r6, [sp, #0x20]
 	str r5, [sp, #0x24]
 	str r3, [sp, #0x28]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	b _0217c8e4
 _0217c8a0:
 	add r0, sp, #0x74
@@ -830,7 +830,7 @@ _0217c8a0:
 	str r5, [sp, #0x14]
 	str r3, [sp, #0x18]
 	str r5, [sp, #0x1c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x68
 	mov r3, #0
 	add r1, sp, #8
@@ -838,7 +838,7 @@ _0217c8a0:
 	str r5, [sp, #8]
 	str r3, [sp, #0xc]
 	str r5, [sp, #0x10]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _0217c8e4:
 	add r0, sp, #0x74
 	add r6, sp, #0x50
@@ -970,7 +970,7 @@ _0217caac:
 	str ip, [sp, #0x24]
 	str r5, [sp, #0x28]
 	str r3, [sp, #0x2c]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x48
 	mov ip, #0xa000
 	mov r5, #0
@@ -980,7 +980,7 @@ _0217caac:
 	str ip, [sp, #0x18]
 	str r5, [sp, #0x1c]
 	str r3, [sp, #0x20]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	b _0217cb44
 _0217cb00:
 	add r0, sp, #0x54
@@ -991,7 +991,7 @@ _0217cb00:
 	str r5, [sp, #0xc]
 	str r3, [sp, #0x10]
 	str r5, [sp, #0x14]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x48
 	mov r3, #0
 	add r1, sp, #0
@@ -999,7 +999,7 @@ _0217cb00:
 	str r5, [sp]
 	str r3, [sp, #4]
 	str r5, [sp, #8]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _0217cb44:
 	add r0, sp, #0x54
 	add r5, sp, #0x30
@@ -12247,7 +12247,7 @@ func_ov40_02185514: ; 0x02185514
 	str lr, [sp, #0x4c]
 	str ip, [sp, #0x50]
 	str ip, [r5, #0x804]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, #1
 	strb r0, [r5, #0x7f8]
 	add sp, sp, #0x78

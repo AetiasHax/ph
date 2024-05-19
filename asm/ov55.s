@@ -310,7 +310,7 @@ _0219907c:
 	mov r1, r0
 	add r0, sp, #8
 	add r2, r4, #0x38
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	bl func_020385b8
 	add r1, r4, #0x38
 	bl _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
@@ -331,7 +331,7 @@ _021990dc:
 	mov r1, r0
 	add r0, sp, #8
 	add r2, r4, #0x38
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	bl func_020385b8
 	add r1, r4, #0x38
 	bl _ZN17LinkStateInteract14SetThrowOffsetEP5Vec3p

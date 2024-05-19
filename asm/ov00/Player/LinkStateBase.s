@@ -754,7 +754,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	mov r1, r0
 	add r2, sp, #0
 	mov r0, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r6
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, r4, lsl #0x10

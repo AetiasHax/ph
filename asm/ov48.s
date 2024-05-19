@@ -773,7 +773,7 @@ func_ov48_021908ac: ; 0x021908ac
 	ldr r0, _0219093c ; =gPlayerPos
 	add r2, sp, #0x10
 	add r1, r5, #0x54
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r1, sp, #0
 	mov r0, r5
 	bl _ZN5Actor9GetHitboxEP8Cylinder
@@ -1859,7 +1859,7 @@ func_ov48_02191478: ; 0x02191478
 	str ip, [sp, #0x84]
 	str r7, [sp, #0x88]
 	str r6, [sp, #0x8c]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldrsh r1, [r5, #0x78]
 	add r0, sp, #0x90
 	sub r3, sp, #8
@@ -1979,7 +1979,7 @@ _02191694:
 	str r5, [sp, #0x4c]
 	str r0, [sp, #0x48]
 	ldr r0, [r4, #0x518]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r3, _02191c14 ; =data_ov48_0219542c
 	ldr r1, [sp, #0x48]
 	ldr r0, [r3, #0x2c]
@@ -2071,7 +2071,7 @@ _021918a4:
 	add r1, sp, #0x5c
 	add r3, sp, #0x38
 	add r2, r4, #0x48
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r0, _02191c38 ; =gPlayer
 	ldr r3, _02191c2c ; =0x00000333
 	ldr r0, [r0]
@@ -2116,13 +2116,13 @@ _02191984:
 	add r1, sp, #0x5c
 	add r3, sp, #0x38
 	add r2, r4, #0x48
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	cmp r5, #0
 	bne _021919dc
 	add r0, sp, #0x78
 	add r2, sp, #0x50
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x50
 	str r0, [sp]
 	ldrb r0, [r4, #0x124]
@@ -2769,7 +2769,7 @@ func_ov48_02192060: ; 0x02192060
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	bl func_ov00_020cc3fc
 	mov r0, r4
@@ -3012,7 +3012,7 @@ func_ov48_02192354: ; 0x02192354
 	str r5, [sp]
 	str lr, [sp, #4]
 	str ip, [sp, #8]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r4, #0x138
 	ldr r2, _021923e0 ; =0x0000013f
 	ldr r3, _021923e4 ; =0x0000071c
@@ -3132,7 +3132,7 @@ _021924c0:
 	add r2, sp, #0x18
 	add r0, r0, #0x400
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #0x4ac]
 	add r0, r4, #0xc4
 	str r1, [r5, #0x48]
@@ -3150,7 +3150,7 @@ _021924c0:
 	str r1, [r5, #0x68]
 	ldr r5, [r4, #0x530]
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r4, #0x4c4]
 	add r0, r4, #0xdc
 	str r1, [r5, #0x48]
@@ -3168,7 +3168,7 @@ _021924c0:
 	str r1, [r5, #0x68]
 	ldr r5, [r4, #0x534]
 	add r1, r5, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r4, #0x4dc]
 	str r0, [r5, #0x48]
 	ldr r0, [r4, #0x4e0]
@@ -3574,7 +3574,7 @@ _02192b5c:
 	add r0, sp, #0x6c
 	add r2, sp, #0x38
 	add r1, r8, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, _02193170 ; =gPlayer
 	ldrb r1, [r9, #0x124]
 	ldr r0, [r0]
@@ -3632,12 +3632,12 @@ _02192c34:
 	mov r0, r6
 	mov r1, r7
 	mov r2, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r11
 	mov r1, r5
 	mov r2, r7
 	mov r3, r6
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r1, [r9, #0x340]
 	ldr r0, [r9, #0x338]
 	add r0, r1, r0
@@ -3723,7 +3723,7 @@ _02192da4:
 	mov r2, r4
 	add r0, r10, #0x400
 	add r1, r9, #0x4d0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	ldreq r0, [sp, #0x10]
@@ -3731,7 +3731,7 @@ _02192da4:
 	beq _02192e18
 	mov r0, r4
 	mov r1, r4
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	b _02192e18
 _02192de0:
 	add r1, r8, #1
@@ -3739,7 +3739,7 @@ _02192de0:
 	mla r0, r1, r0, r11
 	mov r1, r6
 	mov r2, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	ldreq r0, [sp, #0x10]
@@ -3747,13 +3747,13 @@ _02192de0:
 	beq _02192e18
 	mov r0, r4
 	mov r1, r4
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 _02192e18:
 	mov r0, r5
 	mov r1, r4
 	mov r2, r6
 	mov r3, r7
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r8, #1
 	mov r0, r0, lsl #0x10
 	mov r8, r0, asr #0x10
@@ -4051,7 +4051,7 @@ _02193240:
 	bne _021932c4
 	mov r1, r9
 	add r2, sp, #0x54
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x54]
 	ldr r1, [sp, #0x5c]
 	bl func_01ffa0f4
@@ -4080,7 +4080,7 @@ _02193240:
 _021932c4:
 	mov r1, r9
 	add r2, sp, #0x24
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x2c]
 	bl func_01ffa0f4
@@ -4549,7 +4549,7 @@ _02193758:
 	mov r3, r5
 	mov r0, r0, lsl #0xb
 	add r2, r10, #0x48
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r1, [sp, #0xb0]
 	ldr r0, [r11]
 	add r1, r1, #0x800
@@ -4588,7 +4588,7 @@ _021937e8:
 	mov r3, r5
 	rsb r0, r0, #0
 	add r2, r10, #0x48
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r1, [sp, #0xb0]
 	ldr r0, [r11]
 	add r1, r1, #0x800
@@ -5594,10 +5594,10 @@ func_ov48_0219451c: ; 0x0219451c
 	mov r0, r2
 	add r2, sp, #0x24
 	mov r4, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x24
 	add r1, sp, #0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	ldr r1, [sp]
 	ldr r6, [sp, #8]
 	rsb r2, r1, #0
@@ -5607,11 +5607,11 @@ func_ov48_0219451c: ; 0x0219451c
 	str r6, [sp, #0x18]
 	str r3, [sp, #0x1c]
 	str r2, [sp, #0x20]
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	add r0, sp, #0
 	add r1, sp, #0x18
 	add r2, sp, #0xc
-	bl func_01ff9c68
+	bl Vec3p_Cross
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x18]
 	str r0, [sp, #0x34]

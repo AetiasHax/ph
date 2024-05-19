@@ -23,7 +23,7 @@
 .extern data_027e0fd4
 .extern gActorManager
 .extern data_027e0fe8
-.extern func_01ff9bf8
+.extern Vec3p_Sub
 .extern func_01ffa0f4
 .extern func_01ffe468
 .extern func_01fffcd8

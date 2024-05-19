@@ -101,8 +101,8 @@
 .extern func_01ff9a18
 .extern func_01ff9a50
 .extern func_01ff9b4c
-.extern func_01ff9bc4
-.extern func_01ff9bf8
+.extern Vec3p_Add
+.extern Vec3p_Sub
 .extern func_01ffa8d4
 .extern func_01ffa9fc
 .extern func_01ffbe34

@@ -2352,7 +2352,7 @@ _02083ab4:
 	ldr r3, [r5, #8]
 	add r2, sp, #0xc
 	str r3, [sp, #8]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r6, #4]
 	ldr r1, [sp, #0x14]
 	bl _ZN7MapBase15GetClampedTileYEi
@@ -2802,11 +2802,11 @@ _ZN10MapManager18func_ov00_02084024EiP4AABB: ; 0x02084024
 	mov r0, r5
 	mov r2, r5
 	str r4, [sp, #8]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r5, #0xc
 	mov r2, r0
 	add r1, sp, #0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	arm_func_end _ZN10MapManager18func_ov00_02084024EiP4AABB
@@ -3075,7 +3075,7 @@ _ZN10MapManager18func_ov00_0208433cEP5Vec3pi: ; 0x0208433c
 	add r0, sp, #0x10
 	add r1, sp, #4
 	mov r2, r0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r5, #4]
 	add r0, sp, #0
 	add r2, sp, #0x10
@@ -3103,7 +3103,7 @@ _ZN10MapManager18func_ov00_0208439cEv: ; 0x0208439c
 	add r1, sp, #0
 	mov r0, r4
 	mov r2, r4
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r5
 	mov r1, r4
 	mov r2, #1
@@ -3988,7 +3988,7 @@ _02084de4:
 	add r1, sp, #0x2c
 	mov r0, r3
 	mov r2, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, _02084ea8 ; =data_ov00_020e2510
 	add r1, sp, #0x2c
 	add r2, sp, #0x14
@@ -4008,7 +4008,7 @@ _02084de4:
 	mov r3, r4
 	str r0, [r4, #8]
 	ldr r0, [sp, #4]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	ldr r0, [sp, #4]
 	cmp r0, #0
 	addge sp, sp, #0x38
@@ -4024,7 +4024,7 @@ _02084de4:
 	mov r2, r4
 	mov r3, r4
 	str ip, [r4, #8]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	mov r0, #1
 	add sp, sp, #0x38
 	ldmia sp!, {r4, pc}
@@ -5063,7 +5063,7 @@ _ZN10MapManager18func_ov00_02085c60Eiiii: ; 0x02085c60
 	mov r1, r4
 	mov r0, r3
 	mov r2, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, #0xc000
 	mov r2, #0
 	umull r5, r3, r11, r1
@@ -5075,12 +5075,12 @@ _ZN10MapManager18func_ov00_02085c60Eiiii: ; 0x02085c60
 	mov r5, r2, lsr #0xc
 	add r0, sp, #0x58
 	orr r5, r5, r1, lsl #20
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, r5
 	ble _02085d9c
 	add r0, sp, #0x58
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	add r0, sp, #0x58
 	mov r1, r5
 	bl func_01fffbec
@@ -5093,7 +5093,7 @@ _ZN10MapManager18func_ov00_02085c60Eiiii: ; 0x02085c60
 	str r1, [sp, #0x90]
 	add r1, sp, #0x58
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [sp, #0x8c]
 	ldr r1, [sp, #0x88]
 	str r0, [sp, #0x74]
@@ -5110,7 +5110,7 @@ _02085d9c:
 	str ip, [sp, #0x58]
 	str r5, [sp, #0x5c]
 	str r3, [sp, #0x60]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, r4, lsl #0xb
 	mov r0, #0x800
 	adds r2, r0, r11, lsl #11
@@ -5119,12 +5119,12 @@ _02085d9c:
 	adc r1, r1, #0
 	mov r5, r2, lsr #0xc
 	orr r5, r5, r1, lsl #20
-	bl func_01ff9cec
+	bl Vec3p_Length
 	cmp r0, r11
 	blt _02085e30
 	add r0, sp, #0x58
 	mov r1, r0
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	add r0, sp, #0x58
 	mov r1, r5
 	bl func_01fffbec
@@ -5137,7 +5137,7 @@ _02085d9c:
 	str r2, [sp, #0x78]
 	add r1, sp, #0x58
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _02085e30:
 	mov r4, #0
 	mov r0, r11, lsl #0x1
@@ -5173,14 +5173,14 @@ _02085e48:
 	str r2, [sp, #0x34]
 	ldr r2, [r9, #0x14]
 	str r2, [sp, #0x38]
-	bl func_01ff9d4c
+	bl Vec3p_Normalize
 	add r0, sp, #0x30
 	mov r1, r11
 	bl func_01fffbec
 	add r0, sp, #0x3c
 	add r1, sp, #0x30
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r1, [sp, #0x3c]
 	ldr r2, _02086040 ; =0x0000ffff
 	str r1, [r9]
@@ -5332,7 +5332,7 @@ _ZN10MapManager18func_ov00_02086044Eiii: ; 0x02086044
 	mov r0, r4
 	mov r1, r3
 	add r2, sp, #0x80
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r9]
 	mov r0, r10
 	bl _ZN10MapManager18func_ov00_020839d4Ev
@@ -5372,7 +5372,7 @@ _02086164:
 	ldr r0, [sp]
 	mov r1, r9
 	add r2, sp, #0x5c
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r1, [r9]
 	add r0, sp, #0x68
 	str r1, [sp, #0x28]
@@ -5475,7 +5475,7 @@ _020862d0:
 	sub r6, r2, r0
 	mov r0, r8
 	mov r2, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x140
 	bl func_01fffb4c
 	cmp r0, #0
@@ -5492,7 +5492,7 @@ _02086340:
 	add r1, sp, #0x140
 	mov r0, r8
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x14c
 	add r3, sp, #0x128
 	ldmia r0, {r0, r1, r2}
@@ -5500,7 +5500,7 @@ _02086340:
 	add r2, sp, #0x134
 	mov r0, r7
 	mov r1, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x134
 	bl func_01fffb4c
 	ldr r1, [sp, #0x134]
@@ -5570,7 +5570,7 @@ _02086464:
 	sub r6, r2, r0
 	mov r0, r8
 	mov r2, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x108
 	bl func_01fffb4c
 	cmp r0, #0
@@ -5587,7 +5587,7 @@ _020864b0:
 	add r1, sp, #0x108
 	mov r0, r8
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x114
 	add r3, sp, #0xf0
 	ldmia r0, {r0, r1, r2}
@@ -5597,7 +5597,7 @@ _020864b0:
 	str r0, [sp, #0xf4]
 	mov r0, r7
 	mov r1, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0xfc
 	bl func_01fffb4c
 	ldr r1, [sp, #0xfc]
@@ -5627,7 +5627,7 @@ _02086520:
 	str r2, [sp, #0xc8]
 	mov r0, r8
 	mov r2, r1
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0xc0
 	add r3, sp, #0xb4
 	ldmia r0, {r0, r1, r2}
@@ -5990,7 +5990,7 @@ _ZN10MapManager18func_ov00_02086a84EPiP5Vec3pS2_iiiS2_S2_: ; 0x02086a84
 	ldr r6, [sp, #0xa4]
 	ldr r5, [sp, #0xac]
 	ldr r4, [sp, #0xb0]
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r9
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
@@ -6024,7 +6024,7 @@ _02086ae0:
 	sub r6, r2, r0
 	add r2, sp, #0x5c
 	mov r0, r8
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x5c
 	bl func_01fffb4c
 	cmp r0, #0
@@ -6041,7 +6041,7 @@ _02086b5c:
 	add r1, sp, #0x5c
 	mov r0, r8
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	b _02086b98
 _02086b7c:
 	add r0, sp, #0x78
@@ -6050,7 +6050,7 @@ _02086b7c:
 	add r1, sp, #0x78
 	mov r0, r7
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _02086b98:
 	add r0, sp, #0x68
 	add r3, sp, #0x44
@@ -6059,7 +6059,7 @@ _02086b98:
 	add r2, sp, #0x50
 	mov r0, r7
 	mov r1, r3
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x50
 	bl func_01fffb4c
 	ldr r1, [sp, #0x50]
@@ -6088,7 +6088,7 @@ _02086be4:
 	add r1, sp, #0x78
 	mov r0, r7
 	mov r2, r5
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x30
 	add r3, sp, #0x24
 	ldmia r0, {r0, r1, r2}
@@ -6098,7 +6098,7 @@ _02086be4:
 	str r2, [sp, #0x28]
 	mov r0, r7
 	mov r2, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r4
 	bl func_01fffb4c
 	add sp, sp, #0x84
@@ -6119,11 +6119,11 @@ _02086c64:
 	add r1, sp, #0x78
 	mov r2, r5
 	mov r0, r7
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r7
 	add r1, sp, #0
 	mov r2, r4
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r4
 	bl func_01fffb4c
 	add sp, sp, #0x84

@@ -5538,11 +5538,11 @@ _020f34a8:
 	add r0, r5, #0x158
 	add r1, r5, #0x14c
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, r5, #0x188
 	add r1, r5, #0x17c
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _020f34c8:
 	mov r0, r5
 	ldr r1, [r0]

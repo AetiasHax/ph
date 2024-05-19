@@ -95,9 +95,9 @@
 .extern data_ov00_020eed2c
 .extern func_01ff8aa0
 .extern func_01ff9158
-.extern func_01ff9bc4
-.extern func_01ff9bf8
-.extern func_01ff9c2c
+.extern Vec3p_Add
+.extern Vec3p_Sub
+.extern Vec3p_Dot
 .extern func_01ffa0f4
 .extern func_01ffbe78
 .extern func_01ffbf5c
