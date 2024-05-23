@@ -7348,7 +7348,7 @@ func_ov30_021818b8: ; 0x021818b8
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	add r0, sp, #0x44
 	add r1, sp, #0x34
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02181944
 	mov r0, r4
@@ -7384,7 +7384,7 @@ _0218195c:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	mov r0, r11
 	mov r1, r8
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _021819cc
 	mov r0, r9
@@ -8298,7 +8298,7 @@ _021825a0:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	add r0, sp, #0x24
 	add r1, r4, #0x860
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02182618
 	add r0, r4, #0x48
@@ -8414,7 +8414,7 @@ _02182778:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	mov r1, r8
 	add r0, r4, #0x860
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _021827c0
 	mov r0, r9

@@ -151,7 +151,7 @@ _02198eb8:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r1, [r5, #4]
 	add r0, sp, #0
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02198f2c
 	mov r0, r4

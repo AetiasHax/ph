@@ -10028,7 +10028,7 @@ func_ov00_0208f030: ; 0x0208f030
 	ldr r2, [r5, #8]
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	add sp, sp, #0x28
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 _0208f0b4:
@@ -10129,7 +10129,7 @@ func_ov00_0208f1a0: ; 0x0208f1a0
 	ldr r2, [r6, #8]
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	add sp, sp, #0x28
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0208f224:
@@ -16980,11 +16980,11 @@ _020948c4: .word func_01ffebe0
 	.global func_ov00_020948c8
 	arm_func_start func_ov00_020948c8
 func_ov00_020948c8: ; 0x020948c8
-	ldr ip, _020948d4 ; =func_01ffec34
+	ldr ip, _020948d4 ; =_ZN8Cylinder8OverlapsEPS_
 	add r0, r0, #0x14
 	bx ip
 	.align 2, 0
-_020948d4: .word func_01ffec34
+_020948d4: .word _ZN8Cylinder8OverlapsEPS_
 	arm_func_end func_ov00_020948c8
 
 	.global func_ov00_020948d8

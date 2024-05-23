@@ -145,7 +145,7 @@ _ZN10PlayerBase12CollidesWithEP8Cylinder: ; 0x020a7c1c
 	ldmltia sp!, {r4, pc}
 	add r1, sp, #0
 	mov r0, r4
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	add sp, sp, #0x10
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN10PlayerBase12CollidesWithEP8Cylinder
@@ -188,17 +188,17 @@ _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i: ; 0x020a7c60
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 
-	.global _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
-	arm_func_start _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
-_ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi: ; 0x020a7ce4
+	.global _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
+	arm_func_start _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
+_ZN10PlayerBase17EquipCollidesWithEP8Cylinderi: ; 0x020a7ce4
 	ldr r0, _020a7cf4 ; =gItemManager
-	ldr ip, _020a7cf8 ; =_ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
+	ldr ip, _020a7cf8 ; =_ZN11ItemManager17EquipCollidesWithEP8Cylinderi
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 _020a7cf4: .word gItemManager
-_020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
-	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+_020a7cf8: .word _ZN11ItemManager17EquipCollidesWithEP8Cylinderi
+	arm_func_end _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 
 	.global _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	arm_func_start _ZN10PlayerBase18EquipItem_vfunc_2cEv

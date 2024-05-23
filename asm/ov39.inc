@@ -5,7 +5,7 @@
 .extern _ZN10MapManager18func_ov00_02084b38Eiii
 .extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern _ZN10PlayerBase18EquipItem_vfunc_2cEv
-.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+.extern _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 .extern _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef

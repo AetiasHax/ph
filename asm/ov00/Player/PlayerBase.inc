@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN11ItemManager18EquipItem_vfunc_2cEi
-.extern _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
+.extern _ZN11ItemManager17EquipCollidesWithEP8Cylinderi
 .extern _ZN13PlayerControl9UpdateAimEv
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
@@ -17,7 +17,7 @@
 .extern gActorManager
 .extern Vec3p_Sub
 .extern Atan2
-.extern func_01ffec34
+.extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffcec
 .extern func_ov00_0207c5d4
 .extern _ZN10MapManager18func_ov00_02082af4Ev

@@ -13,7 +13,7 @@
 .extern _ZN10MapManager18func_ov00_02084b38Eiii
 .extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern _ZN10MapManager18func_ov00_02084d24Ecci
-.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+.extern _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori
@@ -141,7 +141,7 @@
 .extern Atan2
 .extern func_01ffb7ec
 .extern func_01ffbf5c
-.extern func_01ffec34
+.extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffcd8
 .extern func_01fffcec
 .extern func_01fffd04

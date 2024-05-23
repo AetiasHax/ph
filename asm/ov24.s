@@ -3692,7 +3692,7 @@ _021705fc:
 	bne _02170684
 	add r0, sp, #0
 	add r1, sp, #0x10
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02170684
 	mov r0, r5
@@ -9726,7 +9726,7 @@ _021754f4:
 	ldr r0, [r0]
 	add r1, r3, #0x400
 	mov r2, #0
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	beq _02175624
 	bl func_ov24_02170468

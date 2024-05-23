@@ -6430,7 +6430,7 @@ func_ov23_02172998: ; 0x02172998
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	add r0, sp, #0xc
 	add r1, sp, #0x1c
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02172a44
 	add r0, r4, #0x48
@@ -7050,7 +7050,7 @@ _02173260:
 	ldr r0, [sp, #0xc]
 	add r1, sp, #0x1c
 	add r0, r0, #0x400
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02173330
 	ldrh r1, [r6, #0x78]
@@ -12653,7 +12653,7 @@ _02177c5c:
 	str r1, [sp, #0x58]
 	mov r1, r3
 	str lr, [sp, #0x50]
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	beq _02177df0
 	ldr r0, [r4, #0x14]

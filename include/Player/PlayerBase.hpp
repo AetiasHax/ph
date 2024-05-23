@@ -55,7 +55,7 @@ public:
     bool func_ov00_020a7c00(s32 param1);
     bool CollidesWith(Cylinder *cylinder);
     bool func_ov00_020a7c60(Vec3p *param1, Vec3p *param2, s32 param3);
-    void EquipItem_vfunc_3c(Cylinder *cylinder, ItemFlag equipId);
+    bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
     void EquipItem_vfunc_2c();
     void SetHealth(s16 health);
 };

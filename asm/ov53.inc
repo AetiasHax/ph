@@ -34,7 +34,7 @@
 .extern func_01ff9ec0
 .extern func_01ffa9fc
 .extern func_01ffbe78
-.extern func_01ffec34
+.extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffcec
 .extern func_0202b4e4
 .extern func_0204f614

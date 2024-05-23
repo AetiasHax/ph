@@ -102,7 +102,7 @@
 .extern Vec3p_Axpy
 .extern func_01ff9ec0
 .extern Atan2
-.extern func_01ffec34
+.extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffbec
 .extern func_01fffd04
 .extern func_0202b154

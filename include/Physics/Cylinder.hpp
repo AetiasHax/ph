@@ -8,4 +8,6 @@
 struct Cylinder {
     Vec3p pos;
     q20 size; // height and radius
+
+    bool Overlaps(Cylinder *other);
 };

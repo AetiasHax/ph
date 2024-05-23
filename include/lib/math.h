@@ -63,4 +63,3 @@ extern "C" u32 FastDivide(u32 a, u32 b);
 extern "C" u32 Divide(u32 a, u32 b);
 extern "C" bool Approach(unk32 *src, unk32 dest, unk32 step);
 extern "C" bool Approach_thunk(unk32 *src, unk32 dest, unk32 step);
-extern "C" bool func_01ffec34(Vec4p *param1, Vec4p *param2);

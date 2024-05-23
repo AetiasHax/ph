@@ -2128,7 +2128,7 @@ func_ov50_021971a4: ; 0x021971a4
 	bl _ZN5Actor10GetUnk_08cEP8Cylinder
 	add r1, sp, #0
 	add r0, r4, #4
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

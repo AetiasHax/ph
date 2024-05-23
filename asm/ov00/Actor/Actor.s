@@ -1179,7 +1179,7 @@ _ZN5Actor18CollidesWithShieldEP8Cylinder: ; 0x020c2238
 	mov r1, r5
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0xc
 	movne r0, #1
@@ -1224,7 +1224,7 @@ _020c2308:
 	add r1, sp, #0
 	ldr r0, [r0]
 	mov r2, #0
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1
@@ -1258,7 +1258,7 @@ _020c2384:
 	add r1, sp, #0
 	ldr r0, [r0]
 	mov r2, #8
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1
@@ -1558,7 +1558,7 @@ _ZN5Actor12CollidesWithEPKS_: ; 0x020c2744
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	add r0, sp, #0x10
 	add r1, sp, #0
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	cmp r0, #0
 	movne r4, #1
 _020c279c:

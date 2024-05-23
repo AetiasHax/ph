@@ -30,6 +30,6 @@ public:
 
     /* 30 */ virtual void vfunc_30() override; // func_ov00_020c0804
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020c086c
-    /* 3c */ virtual bool vfunc_3c(Vec4p *param1) const; // func_ov00_020c0a88
+    /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const; // func_ov00_020c0a88
     /* 50 */
 };

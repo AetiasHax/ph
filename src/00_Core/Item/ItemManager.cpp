@@ -199,14 +199,14 @@ ARM void ItemManager::EquipItem_vfunc_38(unk32 param1) {
     (*mEquipItems)[equip]->vfunc_38(param1);
 }
 
-ARM bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
-    Vec4p result;
-    if ((*mEquipItems)[equipId]->vfunc_3c(&result)) {
+ARM bool ItemManager::EquipCollidesWith(Cylinder *hitbox, ItemFlag equipId) {
+    Cylinder equipHitbox;
+    if ((*mEquipItems)[equipId]->GetHitbox(&equipHitbox)) {
         s32 step = (*mEquipItems)[equipId]->vfunc_4c();
         if (step > 0) {
-            Approach_thunk(&result.y, param1->y, step);
+            Approach_thunk(&equipHitbox.pos.y, hitbox->pos.y, step);
         }
-        return func_01ffec34(param1, &result);
+        return hitbox->Overlaps(&equipHitbox);
     }
     return false;
 }

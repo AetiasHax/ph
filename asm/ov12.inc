@@ -208,7 +208,7 @@
 .extern func_01ffbe34
 .extern func_01ffbe78
 .extern func_01ffbf5c
-.extern func_01ffec34
+.extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffb4c
 .extern func_01fffbec
 .extern func_01fffcd8

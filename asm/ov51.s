@@ -1209,7 +1209,7 @@ _021963d4:
 	ldr r0, [r4]
 	mov r1, r5
 	mov r2, #0
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	beq _02196450
 	ldr r0, [r4]

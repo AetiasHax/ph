@@ -3513,7 +3513,7 @@ _0217ecdc:
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp, #0xc]
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	beq _0217edd8
 	ldr r0, [r4, #0x158]
@@ -11551,7 +11551,7 @@ func_ov39_02185c3c: ; 0x02185c3c
 	add r1, sp, #0x28
 	ldr r0, [r0]
 	mov r2, #1
-	bl _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+	bl _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 	cmp r0, #0
 	beq _02185d1c
 	bl func_ov39_02185ea8

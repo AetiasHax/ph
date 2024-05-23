@@ -1,5 +1,5 @@
 #pragma once
-.extern _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+.extern _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p

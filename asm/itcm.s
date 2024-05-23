@@ -7903,9 +7903,9 @@ func_01ffebe0: ; 0x01ffebe0
 	ldmia sp!, {r3, r4, pc}
 	arm_func_end func_01ffebe0
 
-	.global func_01ffec34
-	arm_func_start func_01ffec34
-func_01ffec34: ; 0x01ffec34
+	.global _ZN8Cylinder8OverlapsEPS_
+	arm_func_start _ZN8Cylinder8OverlapsEPS_
+_ZN8Cylinder8OverlapsEPS_: ; 0x01ffec34
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r1
@@ -7923,7 +7923,7 @@ func_01ffec34: ; 0x01ffec34
 	movle ip, #1
 	mov r0, ip
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end func_01ffec34
+	arm_func_end _ZN8Cylinder8OverlapsEPS_
 
 	.global func_01ffec78
 	arm_func_start func_01ffec78
