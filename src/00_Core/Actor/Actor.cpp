@@ -7,6 +7,7 @@ extern "C" {
 #include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
+#include "Player/PlayerControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
 KILL(_ZN5ActorC1Ev)
@@ -523,24 +524,133 @@ bool Actor::CollidesWithLink() {
 }
 
 bool Actor::IsFollowedByLink() {
-    // return mRef.id == gPlayerControl->mFollowRef.id;
+    return mRef.id == gPlayerControl->mFollowRef.id;
 }
 
-void Actor::StopLinkFollow() {}
-bool Actor::IsGrabbed() {}
-s32 Actor::XzDistanceTo(Vec3p *vec) {}
-s32 Actor::DistanceToLink() {}
-s32 Actor::XzDistanceToLink() {}
-s32 Actor::GetAngleTo(Vec3p *vec) {}
-s32 Actor::GetAngleToLink() {}
-void Actor::func_ov00_020c2988(Vec3p *param1, s32 param2, Vec3p *param3) {}
-void Actor::ResetWallTouch() {}
-bool Actor::func_ov00_020c29ec(s32 param1) {}
-void Actor::GetHitbox(Cylinder *param1) {}
-void Actor::GetUnk_08c(Cylinder *param1) {}
-void Actor::IncreaseActiveFrames() {}
+void Actor::StopLinkFollow() {
+    if (!this->IsFollowedByLink()) return;
+    gPlayerControl->StopFollowing();
+}
+
+bool Actor::IsGrabbed() {
+    s32 id = mRef.id;
+    return id == gPlayerLink->GetGrabActorId();
+}
+
+q20 Actor::XzDistanceTo(Vec3p *vec) {
+    Vec3p src;
+    src.z = mPos.z;
+    src.x = mPos.x;
+    src.y = 0;
+
+    Vec3p dest;
+    dest.z = vec->z;
+    dest.x = vec->x;
+    dest.y = 0;
+
+    return Vec3p_Distance(&src, &dest);
+}
+
+q20 Actor::DistanceToLink() {
+    return Vec3p_Distance(&mPos, &gPlayerPos);
+}
+
+q20 Actor::XzDistanceToLink() {
+    Vec3p src;
+    src.z = mPos.z;
+    src.x = mPos.x;
+    src.y = 0;
+    Vec3p dest = gPlayerPos;
+    dest.y = 0;
+    return Vec3p_Distance(&src, &dest);
+}
+
+s32 Actor::GetAngleTo(Vec3p *vec) {
+    s32 angle = mAngle;
+    q20 dx = vec->x - mPos.x;
+    q20 dz = vec->z - mPos.z;
+    if (dx != 0 || dz != 0) {
+        angle = Atan2(dx, dz);
+    }
+    return (s16)angle;
+}
+
+s32 Actor::GetAngleToLink() {
+    return this->GetAngleTo(&gPlayerPos);
+}
+
+extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
+void Actor::func_ov00_020c2988(Vec3p *param1, q20 param2, Vec3p *param3) {
+    param3->x = param1->x - mPos.x;
+    param3->y = 0;
+    param3->z = param1->z - mPos.z;
+    q20 dist = this->XzDistanceTo(param1) < param2;
+    if (dist < param2) param2 = dist;
+    func_0202d95c(param3, param2);
+}
+
+void Actor::ResetWallTouch() {
+    mWallTouch.x = 0;
+    mWallTouch.y = 0;
+    mWallTouch.z = 0;
+}
+
+bool Actor::func_ov00_020c29ec(q20 param1) {
+    return Vec3p_Length(&mWallTouch) > param1;
+}
+
+void Actor::GetHitbox(Cylinder *hitbox) {
+    hitbox->size = mHitbox.size;
+    u16 angle = mAngle;
+    hitbox->pos.x = mPos.x;
+    hitbox->pos.y = mPos.y;
+    hitbox->pos.z = mPos.z;
+    hitbox->pos.y += mHitbox.pos.y;
+
+    Vec3p_Rotate(&mHitbox.pos, mAngle, &hitbox->pos);
+}
+
+void Actor::GetUnk_08c(Cylinder *param1) {
+    param1->size = mUnk_08c.size;
+    u16 angle = mAngle;
+    param1->pos.x = mPos.x;
+    param1->pos.y = mPos.y;
+    param1->pos.z = mPos.z;
+    param1->pos.y += mUnk_08c.pos.y;
+
+    Vec3p_Rotate(&mUnk_08c.pos, mAngle, &param1->pos);
+}
+
+void Actor::IncreaseActiveFrames() {
+    mActiveFrames += 1;
+    if (mActiveFrames < 0) mActiveFrames = 0;
+}
+
 bool Actor::func_ov00_020c2c0c() {}
-bool Actor::func_ov00_020c2c70() {}
+
+bool Actor::func_ov00_020c2c70() {
+    Vec3p vel;
+    Actor *boomerang = this->GetEquipBoomerang()->GetActor();
+    if (boomerang) {
+        Vec3p_Sub(&boomerang->mPos, &mPos, &vel);
+        if (Vec3p_Length(&vel) > FLOAT_TO_Q20(1.0)) {
+            func_0202d95c(&vel, FLOAT_TO_Q20(1.0));
+        }
+    } else {
+        PlayerCharacter character = gPlayerLink->GetCurrentCharacter();
+        if (character == PlayerCharacter_Gongoron) {
+            Vec3p pos;
+            this->GetLinkPos(&pos);
+            Vec3p_Sub(&pos, &mPos, &vel);
+        } else {
+            Vec3p_Sub(&gPlayerPos, &mPos, &vel);
+        }
+    }
+    Vec3p_Add(&mPos, &vel, &mPos);
+    mVel = vel;
+    return boomerang != NULL;
+}
+
 EquipBoomerang* Actor::GetEquipBoomerang() {}
 bool Actor::func_ov00_020c2d54() {}
 bool Actor::func_ov00_020c2de4() {}
