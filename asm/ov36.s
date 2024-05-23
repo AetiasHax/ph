@@ -11190,7 +11190,7 @@ _02185a24:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	bne _021859d0
 	ldr r1, [sp, #0x28]
@@ -11215,7 +11215,7 @@ _02185a24:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, pc}
 _02185af4:
@@ -11224,7 +11224,7 @@ _02185af4:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	add sp, sp, #0x34
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -12023,7 +12023,7 @@ _021865f4:
 	ldr r1, _02186644 ; =data_ov36_02186ba8
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 _02186620:
 	mov r1, r4
 	add r0, r5, #0xa4

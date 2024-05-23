@@ -673,7 +673,7 @@ _0217c6b0:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	ldr r0, _0217c700 ; =data_027e0ff4
 	mov r1, r4
 	ldr r0, [r0]
@@ -8306,7 +8306,7 @@ func_ov35_0218307c: ; 0x0218307c
 	ldr r1, _021830c0 ; =data_ov35_02185374
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	orrs r0, r4, r0
 	movne r0, #1
 	moveq r0, #0
@@ -10226,7 +10226,7 @@ func_ov35_02184aa4: ; 0x02184aa4
 	ldr r1, _02184b10 ; =data_ov35_02185640
 	mov r0, r4
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02184b10: .word data_ov35_02185640

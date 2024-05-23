@@ -2155,7 +2155,7 @@ _0216f544:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	add sp, sp, #0x20
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -9234,7 +9234,7 @@ _02175454:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 _021754a4:
 	ldr r0, _02175554 ; =gMapManager
 	ldrh r1, [r4, #0x20]

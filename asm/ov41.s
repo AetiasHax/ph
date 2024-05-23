@@ -1254,7 +1254,7 @@ func_ov41_0218a4d8: ; 0x0218a4d8
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _0218a510
 _0218a508:
@@ -2405,7 +2405,7 @@ func_ov41_0218b34c: ; 0x0218b34c
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _0218b384
 _0218b37c:

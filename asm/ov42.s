@@ -1689,12 +1689,12 @@ func_ov42_0218aab0: ; 0x0218aab0
 	.global func_ov42_0218aad4
 	arm_func_start func_ov42_0218aad4
 func_ov42_0218aad4: ; 0x0218aad4
-	ldr ip, _0218aae4 ; =_ZN5Actor18func_ov00_020c243cEPjPi
+	ldr ip, _0218aae4 ; =_ZN5Actor18func_ov00_020c243cEPjPPS_
 	mov r1, #0
 	mov r2, r1
 	bx ip
 	.align 2, 0
-_0218aae4: .word _ZN5Actor18func_ov00_020c243cEPjPi
+_0218aae4: .word _ZN5Actor18func_ov00_020c243cEPjPPS_
 	arm_func_end func_ov42_0218aad4
 
 	.global func_ov42_0218aae8
@@ -3813,7 +3813,7 @@ func_ov42_0218c620: ; 0x0218c620
 	ldmneia sp!, {r3, pc}
 	ldr r1, _0218c640 ; =data_ov42_0218c73c
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _0218c640: .word data_ov42_0218c73c

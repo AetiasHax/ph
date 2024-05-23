@@ -10545,7 +10545,7 @@ func_ov37_021850cc: ; 0x021850cc
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _02185104
 _021850fc:
@@ -13034,7 +13034,7 @@ _021870d0:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _0218738c
 _021871e8:

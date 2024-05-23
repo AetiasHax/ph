@@ -25,7 +25,7 @@
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
 .extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
-.extern _ZN5Actor18func_ov00_020c243cEPjPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPPS_
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor20IncreaseActiveFramesEv
 .extern _ZN5Actor20KillPickupItemActorsEv

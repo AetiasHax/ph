@@ -34,7 +34,6 @@
 #define __ACTOR_TYPE_2 '2'
 #define __ACTOR_TYPE_3 '3'
 #define __ACTOR_TYPE_4 '4'
-#define __ACTOR_TYPE_4 '4'
 #define __ACTOR_TYPE_5 '5'
 #define __ACTOR_TYPE_6 '6'
 #define __ACTOR_TYPE_7 '7'
@@ -106,13 +105,25 @@ enum ActorTypeId_ {
     ActorTypeId_Mailbox = __ACTOR_TYPE_ID(P,O,S,T),
     ActorTypeId_Postman = __ACTOR_TYPE_ID(P,S,T,M),
 
+    ActorTypeId_BIGR = __ACTOR_TYPE_ID(B,I,G,R),
+    ActorTypeId_BKEY = __ACTOR_TYPE_ID(B,K,E,Y),
+    ActorTypeId_BLST = __ACTOR_TYPE_ID(B,L,S,T),
     ActorTypeId_BMRN = __ACTOR_TYPE_ID(B,M,R,N),
     ActorTypeId_BMTY = __ACTOR_TYPE_ID(B,M,T,Y),
+    ActorTypeId_BTRF = __ACTOR_TYPE_ID(B,T,R,F),
+    ActorTypeId_CBLS = __ACTOR_TYPE_ID(C,B,L,S),
     ActorTypeId_FLAL = __ACTOR_TYPE_ID(F,L,A,L),
     ActorTypeId_FLBM = __ACTOR_TYPE_ID(F,L,B,M),
     ActorTypeId_FLBT = __ACTOR_TYPE_ID(F,L,B,T),
+    ActorTypeId_FLTB = __ACTOR_TYPE_ID(F,L,T,B),
     ActorTypeId_FLTM = __ACTOR_TYPE_ID(F,L,T,M),
+    ActorTypeId_FORC = __ACTOR_TYPE_ID(F,O,R,C),
+    ActorTypeId_ROPE = __ACTOR_TYPE_ID(R,O,P,E),
     ActorTypeId_SBEM = __ACTOR_TYPE_ID(S,B,E,M),
+    ActorTypeId_STNE = __ACTOR_TYPE_ID(S,T,N,E),
+    ActorTypeId_TARU = __ACTOR_TYPE_ID(T,A,R,U),
+    ActorTypeId_TSBH = __ACTOR_TYPE_ID(T,S,B,H),
+    ActorTypeId_TSUB = __ACTOR_TYPE_ID(T,S,U,B),
     ActorTypeId_VLR0 = __ACTOR_TYPE_ID(V,L,R,0),
 };
 

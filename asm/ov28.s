@@ -4339,12 +4339,12 @@ _02170f08:
 	.global func_ov28_02170f10
 	arm_func_start func_ov28_02170f10
 func_ov28_02170f10: ; 0x02170f10
-	ldr ip, _02170f20 ; =_ZN5Actor18func_ov00_020c243cEPjPi
+	ldr ip, _02170f20 ; =_ZN5Actor18func_ov00_020c243cEPjPPS_
 	mov r1, #0
 	mov r2, r1
 	bx ip
 	.align 2, 0
-_02170f20: .word _ZN5Actor18func_ov00_020c243cEPjPi
+_02170f20: .word _ZN5Actor18func_ov00_020c243cEPjPPS_
 	arm_func_end func_ov28_02170f10
 
 	.global func_ov28_02170f24
@@ -7501,7 +7501,7 @@ func_ov28_021736d0: ; 0x021736d0
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	mov r0, r4
@@ -9383,7 +9383,7 @@ func_ov28_02174ec4: ; 0x02174ec4
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	bne _02174f18
 	mov r0, r4

@@ -212,7 +212,7 @@ public:
     bool CollidesWithPlayer(PlayerCollide flags);
     static void func_ov00_020c23c4(ActorRef *ref, Actor *actor);
     static void func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder);
-    bool func_ov00_020c243c(ActorTypeId *actorTypes, s32 *param2);
+    bool func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result);
     bool func_ov00_020c27a8(unk32 param1);
     bool IsFollowedByLink();
     void StopLinkFollow();

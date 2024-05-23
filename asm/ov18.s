@@ -12729,7 +12729,7 @@ func_ov18_0216585c: ; 0x0216585c
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	mov r0, r4

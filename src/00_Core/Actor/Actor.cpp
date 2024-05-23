@@ -421,34 +421,96 @@ void Actor::func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder) 
     gActorManager->func_ov00_020c399c(actor->mRef.index, cylinder);
 }
 
-bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, s32 *param2) {
-    if (param2) *param2 = 0;
+bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result) {
+    if (result) *result = NULL;
     if (gAdventureFlags->func_ov00_02097738()) return false;
-    if (mHitbox.size < 0) return false;
-    Actor *actor = gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false);
-    if (!actor) return false;
-    
-    Knockback knockback;
-    knockback.mUnk_10 = 0xb;
+    if (mHitbox.size >= 0) {
+        Actor *actor = gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false);
+        if (actor) {
+            Knockback knockback;
+            knockback.mUnk_10 = 0xb;
+            knockback.mUnk_00 = 0;
+            knockback.mUnk_14 = 0;
 
-    Vec3p vec;
-    if (actor->mType != ActorTypeId_Arrow && actor->mType != ActorTypeId_SBEM) {
-        Vec3p_Sub(&mPos, &actor->mPrevPos, &vec);
-    } else {
-        vec.x = SIN(actor->mAngle);
-        vec.z = COS(actor->mAngle);
-        vec.y = 0;
-    }
+            Vec3p vec;
+            if (actor->mType != ActorTypeId_Arrow && actor->mType != ActorTypeId_SBEM) {
+                Vec3p_Sub(&mPos, &actor->mPrevPos, &vec);
+            } else {
+                vec.x = SIN(actor->mAngle);
+                vec.z = COS(actor->mAngle);
+                vec.y = 0;
+            }
 
-    switch (actor->mType) {
-        case ActorTypeId_VLR0: {
-            knockback.mUnk_10 = 4;
-        } break;
-    }
-    this->vfunc_48(&knockback);
+            switch (actor->mType) {
+                case ActorTypeId_SBEM: {
+                    knockback.mUnk_10 = 1;
+                } break;
+
+                case ActorTypeId_Arrow: {
+                    knockback.mUnk_10 = 7;
+                } break;
+
+                case ActorTypeId_BMRN: {
+                    knockback.mUnk_10 = 5;
+                } break;
+
+                case ActorTypeId_ROPE: {
+                    knockback.mUnk_10 = 8;
+                } break;
+
+                case ActorTypeId_Bomb:
+                case ActorTypeId_BLST:
+                case ActorTypeId_BMTY:
+                case ActorTypeId_CBLS: {
+                    knockback.mUnk_10 = 6;
+                } break;
+
+                case ActorTypeId_TSBH:
+                case ActorTypeId_BIGR:
+                case ActorTypeId_BTRF:
+                case ActorTypeId_STNE:
+                case ActorTypeId_TARU:
+                case ActorTypeId_BKEY:
+                case ActorTypeId_FORC:
+                case ActorTypeId_FLTB:
+                {
+                    knockback.mUnk_10 = 10;
+                } break;
+
+                case ActorTypeId_VLR0: {
+                    knockback.mUnk_10 = 4;
+                } break;
+
+                case ActorTypeId_TSUB: {
+                    knockback.mUnk_10 = 11;
+                } break;
+            }
+
+            if (this->vfunc_48(&knockback)) {
+                actor->mUnk_040 = this->mRef;
+                if (result) *result = actor;
+                return true;
+            }
+        }
+    }   
+    return false;
 }
 
-bool Actor::CollidesWith(const Actor *other) {}
+bool Actor::CollidesWith(const Actor *other) {
+    // bool collides = false;
+    // if (other->mAlive) {
+    //     if (other->mHitbox.size >= 0 && mHitbox.size >= 0) {
+    //         Cylinder a, b;
+    //         this->GetHitbox(&a);
+    //         other->GetHitbox(&b);
+    //         if (a.Overlaps(&b)) {
+    //             collides = true;
+    //         }
+    //     }
+    // }
+    // return collides;
+}
+
 bool Actor::func_ov00_020c27a8(unk32 param1) {}
 bool Actor::CollidesWithLink() {}
 bool Actor::IsFollowedByLink() {}

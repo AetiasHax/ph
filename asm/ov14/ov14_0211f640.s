@@ -935,7 +935,7 @@ func_ov14_02120118: ; 0x02120118
 _02120154:
 	ldr r1, _0212017c ; =data_ov14_02153b54
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4
@@ -3566,7 +3566,7 @@ _021225a4:
 	ldr r1, _02122aec ; =data_ov14_02153bdc
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _021225cc
 	mov r0, r5
@@ -3577,7 +3577,7 @@ _021225cc:
 	ldr r1, _02122af0 ; =data_ov14_02153be8
 	add r2, sp, #8
 	mov r0, r5
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _02122650
 	ldr r1, [sp, #8]
@@ -6159,7 +6159,7 @@ _021247b0:
 	ldr r1, _02124c5c ; =data_ov14_02153bfc
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEPjPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPPS_
 	cmp r0, #0
 	beq _021247d8
 	mov r0, r5

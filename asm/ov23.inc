@@ -83,7 +83,7 @@
 .extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 .extern _ZN5Actor18func_ov00_020c1ef8EP8CylinderP5Vec3pii
-.extern _ZN5Actor18func_ov00_020c243cEPjPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPPS_
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor4KillEv
 .extern _ZN5Actor6GetPosEv
