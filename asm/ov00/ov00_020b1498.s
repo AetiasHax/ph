@@ -14223,14 +14223,14 @@ func_ov00_020bc7e0: ; 0x020bc7e0
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020bc7e0
 
-	.global func_ov00_020bc7f8
-	arm_func_start func_ov00_020bc7f8
-func_ov00_020bc7f8: ; 0x020bc7f8
+	.global _ZN14PlayerLinkBase14GetGrabActorIdEv
+	arm_func_start _ZN14PlayerLinkBase14GetGrabActorIdEv
+_ZN14PlayerLinkBase14GetGrabActorIdEv: ; 0x020bc7f8
 	stmdb sp!, {r3, lr}
 	bl func_020385b8
 	bl _ZN17LinkStateInteract20CreateDebugHierarchyEv
 	ldmia sp!, {r3, pc}
-	arm_func_end func_ov00_020bc7f8
+	arm_func_end _ZN14PlayerLinkBase14GetGrabActorIdEv
 
 	.global func_ov00_020bc808
 	arm_func_start func_ov00_020bc808

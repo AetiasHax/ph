@@ -54,7 +54,7 @@
 .extern func_ov00_0207b89c
 .extern func_ov00_02087ef0
 .extern func_ov00_020bc46c
-.extern func_ov00_020bc7f8
+.extern _ZN14PlayerLinkBase14GetGrabActorIdEv
 .extern _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 .extern _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
 .extern func_ov00_020bd304

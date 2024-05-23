@@ -1644,7 +1644,7 @@ _ZN5Actor9IsGrabbedEv: ; 0x020c2864
 	ldr r1, _020c2888 ; =gPlayerLink
 	ldr r4, [r0, #8]
 	ldr r0, [r1]
-	bl func_ov00_020bc7f8
+	bl _ZN14PlayerLinkBase14GetGrabActorIdEv
 	cmp r4, r0
 	moveq r0, #1
 	movne r0, #0
