@@ -2192,9 +2192,9 @@ _0213d154: .word gActorManager
 _0213d158: .word 0x504c444d
 	arm_func_end func_ov14_0213d0bc
 
-	.global func_ov14_0213d15c
-	arm_func_start func_ov14_0213d15c
-func_ov14_0213d15c: ; 0x0213d15c
+	.global _ZN14EquipBoomerang8GetActorEv
+	arm_func_start _ZN14EquipBoomerang8GetActorEv
+_ZN14EquipBoomerang8GetActorEv: ; 0x0213d15c
 	ldr r1, _0213d174 ; =gActorManager
 	mov r2, r0
 	ldr r0, [r1]
@@ -2204,7 +2204,7 @@ func_ov14_0213d15c: ; 0x0213d15c
 	.align 2, 0
 _0213d174: .word gActorManager
 _0213d178: .word _ZN12ActorManager8GetActorEP8ActorRef
-	arm_func_end func_ov14_0213d15c
+	arm_func_end _ZN14EquipBoomerang8GetActorEv
 
 	.global func_ov14_0213d17c
 	arm_func_start func_ov14_0213d17c

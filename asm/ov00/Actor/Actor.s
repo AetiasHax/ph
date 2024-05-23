@@ -1977,7 +1977,7 @@ _ZN5Actor18func_ov00_020c2c70Ev: ; 0x020c2c70
 	sub sp, sp, #0x18
 	mov r5, r0
 	bl _ZN5Actor17GetEquipBoomerangEv
-	bl func_ov14_0213d15c
+	bl _ZN14EquipBoomerang8GetActorEv
 	movs r4, r0
 	beq _020c2cbc
 	add r2, sp, #0xc

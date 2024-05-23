@@ -1144,7 +1144,7 @@ _0216e6bc:
 	cmp r0, #0
 	beq _0216e6fc
 	bl func_ov20_0216f4b4
-	bl func_ov14_0213d15c
+	bl _ZN14EquipBoomerang8GetActorEv
 	bl func_ov14_021231e0
 	mov r0, r4
 	bl func_ov20_0216f9d0
@@ -4424,7 +4424,7 @@ _0217128c:
 	cmp r0, #0x2000
 	bge _02171360
 	bl func_ov20_0216f4b4
-	bl func_ov14_0213d15c
+	bl _ZN14EquipBoomerang8GetActorEv
 	ldr r0, [r0, #0x130]
 	cmp r0, #0
 	beq _02171360

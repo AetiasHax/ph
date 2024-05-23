@@ -73,6 +73,6 @@
 .extern func_ov14_021235bc
 .extern func_ov14_0213d098
 .extern func_ov14_0213d0bc
-.extern func_ov14_0213d15c
+.extern _ZN14EquipBoomerang8GetActorEv
 .extern func_ov14_0213d1b0
 .extern gItemManager

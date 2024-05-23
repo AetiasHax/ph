@@ -63,7 +63,7 @@
 .extern func_ov00_020c5924
 .extern func_ov00_020c8398
 .extern func_ov05_02103f4c
-.extern func_ov14_0213d15c
+.extern _ZN14EquipBoomerang8GetActorEv
 .extern func_ov14_0213d420
 .extern func_ov14_0213d440
 .extern func_ov14_0213d480

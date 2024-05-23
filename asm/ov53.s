@@ -336,7 +336,7 @@ _021990cc: .word data_ov53_0219a1b0
 func_ov53_021990d0: ; 0x021990d0
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov14_0213d15c
+	bl _ZN14EquipBoomerang8GetActorEv
 	cmp r0, #0
 	ldmneia sp!, {r4, pc}
 	mov r0, r4
@@ -380,7 +380,7 @@ _02199138: .word data_ov53_0219a5e4
 func_ov53_0219913c: ; 0x0219913c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov14_0213d15c
+	bl _ZN14EquipBoomerang8GetActorEv
 	cmp r0, #0
 	bne _02199158
 	mov r0, r4

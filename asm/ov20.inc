@@ -365,7 +365,7 @@
 .extern func_ov14_02127984
 .extern func_ov14_02127a14
 .extern func_ov14_02127ac4
-.extern func_ov14_0213d15c
+.extern _ZN14EquipBoomerang8GetActorEv
 .extern func_ov14_0213d184
 .extern func_ov14_021448d4
 .extern func_ov14_021448dc
