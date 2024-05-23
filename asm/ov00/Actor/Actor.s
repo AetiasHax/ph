@@ -1296,7 +1296,7 @@ _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder: ; 0x020c23d4
 	ldr r0, [r0]
 	ldr r1, [r4, #0xc]
 	mov r5, r2
-	bl _ZN12ActorManager18func_ov00_020c398cEv
+	bl _ZN12ActorManager18func_ov00_020c398cEj
 	cmp r0, #0
 	mvneq r0, #0
 	streq r0, [r6]
@@ -1308,7 +1308,7 @@ _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder: ; 0x020c23d4
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	mov r2, r5
-	bl _ZN12ActorManager18func_ov00_020c399cEv
+	bl _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _020c2438: .word gActorManager

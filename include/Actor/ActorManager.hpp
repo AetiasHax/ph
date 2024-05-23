@@ -85,8 +85,8 @@ public:
     s32 FilterActors(FilterActorBase *filter, ActorList *filteredActors);
     static void FindActorByType(ActorRef *ref, ActorManager *manager, u32 type);
     static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, u32 type, Vec3p *pos);
-    void func_ov00_020c398c();
-    void func_ov00_020c399c();
+    bool func_ov00_020c398c(u32 index);
+    void func_ov00_020c399c(u32 index, Cylinder *cylinder);
     void func_ov00_020c39ac(u32 index, u32 *actorTypes, bool param3);
     s32 func_ov00_020c3b2c(s32 *param1);
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);

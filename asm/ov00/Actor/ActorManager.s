@@ -439,25 +439,25 @@ _020c397c:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 	arm_func_end _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 
-	.global _ZN12ActorManager18func_ov00_020c398cEv
-	arm_func_start _ZN12ActorManager18func_ov00_020c398cEv
-_ZN12ActorManager18func_ov00_020c398cEv: ; 0x020c398c
+	.global _ZN12ActorManager18func_ov00_020c398cEj
+	arm_func_start _ZN12ActorManager18func_ov00_020c398cEj
+_ZN12ActorManager18func_ov00_020c398cEj: ; 0x020c398c
 	ldr ip, _020c3998 ; =func_ov00_020c3f08
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
 _020c3998: .word func_ov00_020c3f08
-	arm_func_end _ZN12ActorManager18func_ov00_020c398cEv
+	arm_func_end _ZN12ActorManager18func_ov00_020c398cEj
 
-	.global _ZN12ActorManager18func_ov00_020c399cEv
-	arm_func_start _ZN12ActorManager18func_ov00_020c399cEv
-_ZN12ActorManager18func_ov00_020c399cEv: ; 0x020c399c
+	.global _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
+	arm_func_start _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
+_ZN12ActorManager18func_ov00_020c399cEjP8Cylinder: ; 0x020c399c
 	ldr ip, _020c39a8 ; =func_ov00_020c3f3c
 	ldr r0, [r0, #0x14]
 	bx ip
 	.align 2, 0
 _020c39a8: .word func_ov00_020c3f3c
-	arm_func_end _ZN12ActorManager18func_ov00_020c399cEv
+	arm_func_end _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
 
 	.global _ZN12ActorManager18func_ov00_020c39acEjPjb
 	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPjb
