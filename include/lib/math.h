@@ -56,8 +56,11 @@ typedef struct {
 } Mat3p;
 
 #define DEG_TO_ANG(n) ((n) * 0x10000 / 360)
+#define SIN(n) (gSinCosTable[2 * ((n) >> 4)])
+#define COS(n) (gSinCosTable[2 * ((n) >> 4) + 1])
 
 extern "C" s16 Atan2(s32 x, s32 y);
+extern s16 gSinCosTable[];
 
 extern "C" u32 FastDivide(u32 a, u32 b);
 extern "C" u32 Divide(u32 a, u32 b);

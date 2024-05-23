@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN9SysObjectdlEPv
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e016c
 .extern data_027e0194
 .extern data_027e037c

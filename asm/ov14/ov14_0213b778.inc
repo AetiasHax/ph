@@ -138,7 +138,7 @@
 .extern _ZNK11ItemManager9HasPotionEj
 .extern _ZTV11FilterActor
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02056be4
 .extern data_02057200
 .extern data_02063e4c

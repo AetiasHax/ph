@@ -622,7 +622,7 @@ _02189d1c:
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _02189e7c ; =data_02050f54
+	ldr r1, _02189e7c ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r2, [r1, r2]
@@ -710,7 +710,7 @@ _02189e58:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02189e78: .word gPlayerPos
-_02189e7c: .word data_02050f54
+_02189e7c: .word gSinCosTable
 _02189e80: .word 0xffff8001
 _02189e84: .word 0x00000ccd
 	arm_func_end func_ov43_02189c8c
@@ -1300,7 +1300,7 @@ func_ov43_0218a674: ; 0x0218a674
 	str r1, [sp, #0x20]
 	ldrh r0, [r4, #0x78]
 	ldr r10, [r4, #0x48]
-	ldr r3, _0218a850 ; =data_02050f54
+	ldr r3, _0218a850 ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r5, r0, lsl #0x1
 	add r0, r5, #1
@@ -1375,7 +1375,7 @@ _0218a784:
 _0218a7ac:
 	ldrh r0, [r4, #0x78]
 	mov r1, #0
-	ldr r3, _0218a850 ; =data_02050f54
+	ldr r3, _0218a850 ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
@@ -1416,7 +1416,7 @@ _0218a834:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0218a84c: .word 0x0000099a
-_0218a850: .word data_02050f54
+_0218a850: .word gSinCosTable
 _0218a854: .word gPlayer
 _0218a858: .word gPlayerAngle
 _0218a85c: .word 0xffff8001
@@ -3456,7 +3456,7 @@ _0218c3bc:
 	bl func_ov43_0218b7b8
 _0218c400:
 	ldrh r0, [r4, #0x78]
-	ldr r2, _0218c9c4 ; =data_02050f54
+	ldr r2, _0218c9c4 ; =gSinCosTable
 	mov r1, #0
 	mov r0, r0, asr #0x4
 	mov r0, r0, lsl #0x1
@@ -3582,7 +3582,7 @@ _0218c59c:
 	mov r1, #6
 	bl func_ov43_0218b7b8
 	ldrh r0, [r4, #0x78]
-	ldr r3, _0218c9c4 ; =data_02050f54
+	ldr r3, _0218c9c4 ; =gSinCosTable
 	ldr r1, [r4, #0x3d0]
 	mov r0, r0, asr #0x4
 	mov r5, r0, lsl #0x1
@@ -3691,7 +3691,7 @@ _0218c730:
 	bl func_ov00_020ceacc
 _0218c76c:
 	ldrh r0, [r4, #0x78]
-	ldr r3, _0218c9c4 ; =data_02050f54
+	ldr r3, _0218c9c4 ; =gSinCosTable
 	ldr r1, [r4, #0x3d0]
 	mov r0, r0, asr #0x4
 	mov r5, r0, lsl #0x1
@@ -3852,7 +3852,7 @@ _0218c9b4: .word 0x00000333
 _0218c9b8: .word 0x00000222
 _0218c9bc: .word 0x0000038e
 _0218c9c0: .word 0x00000133
-_0218c9c4: .word data_02050f54
+_0218c9c4: .word gSinCosTable
 _0218c9c8: .word data_027e0ffc
 _0218c9cc: .word 0x00000327
 _0218c9d0: .word gAdventureFlags

@@ -1862,7 +1862,7 @@ func_ov52_02196c4c: ; 0x02196c4c
 	bl func_020196fc
 	ldrh r1, [r4, #0x78]
 	add r0, r4, #0x1bc
-	ldr r3, _02196d28 ; =data_02050f54
+	ldr r3, _02196d28 ; =gSinCosTable
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r1, r2, lsl #0x1
@@ -1882,7 +1882,7 @@ func_ov52_02196c4c: ; 0x02196c4c
 	.align 2, 0
 _02196d20: .word data_ov00_020e9360
 _02196d24: .word data_027e0f78
-_02196d28: .word data_02050f54
+_02196d28: .word gSinCosTable
 	arm_func_end func_ov52_02196c4c
 
 	.global func_ov52_02196d2c

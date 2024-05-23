@@ -15,7 +15,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager18func_ov00_020ad538Ei
 .extern _ZNK11ItemManager8GetFairyEi
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0d38
 .extern data_027e0e58
 .extern gMapManager

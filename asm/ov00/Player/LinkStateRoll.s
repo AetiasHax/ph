@@ -69,7 +69,7 @@ _020ae7e8:
 	mov r1, r5, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r6, r2, lsl #0x1
-	ldr r5, _020aeb10 ; =data_02050f54
+	ldr r5, _020aeb10 ; =gSinCosTable
 	add r2, r2, #1
 	mov r2, r2, lsl #0x1
 	ldrsh lr, [r5, r2]
@@ -262,7 +262,7 @@ _020aeb08:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_020aeb10: .word data_02050f54
+_020aeb10: .word gSinCosTable
 _020aeb14: .word 0x0000019a
 _020aeb18: .word data_027e0fb8
 _020aeb1c: .word data_ov00_020e6078

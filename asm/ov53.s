@@ -1151,7 +1151,7 @@ func_ov53_02199b94: ; 0x02199b94
 	strh r2, [r4, #0x9c]
 	bl func_ov14_0212357c
 	ldrh r1, [r4, #0x78]
-	ldr r2, _02199c30 ; =data_02050f54
+	ldr r2, _02199c30 ; =gSinCosTable
 	mov r0, #0x800
 	mov r1, r1, asr #0x4
 	mov ip, r1, lsl #0x1
@@ -1181,7 +1181,7 @@ func_ov53_02199b94: ; 0x02199b94
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02199c30: .word data_02050f54
+_02199c30: .word gSinCosTable
 	arm_func_end func_ov53_02199b94
 
 	.global func_ov53_02199c34

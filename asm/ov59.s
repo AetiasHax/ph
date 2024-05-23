@@ -602,7 +602,7 @@ _02199408:
 	mvn r1, #0
 	str r3, [r4, #0x15c]
 	ldr r6, [sp, #0xa0]
-	ldr r3, _0219a078 ; =data_02050f54
+	ldr r3, _0219a078 ; =gSinCosTable
 	str r6, [r4, #0x160]
 	ldr r8, [r4, #0x344]
 	ldrh r2, [r2, #0x40]
@@ -823,7 +823,7 @@ _021997a4:
 	adds ip, r7, #0x800
 	mla r0, r5, r1, r0
 	add r1, r2, #1
-	ldr r7, _0219a078 ; =data_02050f54
+	ldr r7, _0219a078 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r1, r1, lsl #0x1
 	ldrsh r3, [r7, r2]
@@ -952,7 +952,7 @@ _02199968:
 	adds r1, lr, #0x800
 	add r6, ip, #1
 	str r2, [sp, #0x3c]
-	ldr lr, _0219a078 ; =data_02050f54
+	ldr lr, _0219a078 ; =gSinCosTable
 	mov ip, ip, lsl #0x1
 	mov r5, r6, lsl #0x1
 	ldrsh ip, [lr, ip]
@@ -1403,7 +1403,7 @@ _0219a068: .word gItemManager
 _0219a06c: .word data_ov59_0219b110
 _0219a070: .word gPlayerPos
 _0219a074: .word 0xfffff99a
-_0219a078: .word data_02050f54
+_0219a078: .word gSinCosTable
 _0219a07c: .word data_027e0e58
 _0219a080: .word data_027e0ffc
 _0219a084: .word 0x0000ffff
@@ -1465,7 +1465,7 @@ func_ov59_0219a0ac: ; 0x0219a0ac
 	add r1, r10, #0x300
 	str r0, [sp, #0x90]
 	ldr r7, [r10, #0x48]
-	ldr r2, _0219a9f8 ; =data_02050f54
+	ldr r2, _0219a9f8 ; =gSinCosTable
 	str r7, [sp, #0x7c]
 	ldr r0, [r10, #0x4c]
 	mov r9, #1
@@ -1588,7 +1588,7 @@ _0219a24c:
 	mov r7, r5, lsr #0x10
 	mov r8, r2, lsl #0x1
 	add r2, r8, #1
-	ldr r5, _0219a9f8 ; =data_02050f54
+	ldr r5, _0219a9f8 ; =gSinCosTable
 	mov r8, r8, lsl #0x1
 	mov r2, r2, lsl #0x1
 	ldrsh r8, [r5, r8]
@@ -1724,7 +1724,7 @@ _0219a4ec:
 	adds r3, r3, #0x800
 	mla r2, r4, r0, r2
 	add r9, r11, #1
-	ldr r5, _0219a9f8 ; =data_02050f54
+	ldr r5, _0219a9f8 ; =gSinCosTable
 	mov r7, r11, lsl #0x1
 	mov r4, r9, lsl #0x1
 	ldrsh r11, [r5, r7]
@@ -2032,7 +2032,7 @@ _0219a9e8: .word gItemManager
 _0219a9ec: .word data_ov59_0219b110
 _0219a9f0: .word gPlayerPos
 _0219a9f4: .word 0x00000666
-_0219a9f8: .word data_02050f54
+_0219a9f8: .word gSinCosTable
 _0219a9fc: .word gMapManager
 _0219aa00: .word 0xfffff99a
 _0219aa04: .word 0x0000ffff
@@ -2058,7 +2058,7 @@ func_ov59_0219aa08: ; 0x0219aa08
 	add r0, r0, #0x300
 	str r0, [sp, #0x58]
 	ldrsh r1, [r1, #0x40]
-	ldr r3, _0219ab98 ; =data_02050f54
+	ldr r3, _0219ab98 ; =gSinCosTable
 	add r0, sp, #0x30
 	sub r1, r1, #0x4000
 	mov r1, r1, lsl #0x10
@@ -2142,7 +2142,7 @@ func_ov59_0219aa08: ; 0x0219aa08
 	add sp, sp, #0x60
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_0219ab98: .word data_02050f54
+_0219ab98: .word gSinCosTable
 _0219ab9c: .word 0x00000666
 _0219aba0: .word 0x00000333
 _0219aba4: .word data_ov00_020e9370

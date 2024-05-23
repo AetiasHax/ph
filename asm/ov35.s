@@ -2657,7 +2657,7 @@ _0217e168:
 	bl func_0202b154
 _0217e174:
 	ldrh r1, [r5, #0x78]
-	ldr r2, _0217e2f4 ; =data_02050f54
+	ldr r2, _0217e2f4 ; =gSinCosTable
 	ldr r0, _0217e2f8 ; =0x00000133
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
@@ -2758,7 +2758,7 @@ _0217e2e4: .word 0x00fe9400
 _0217e2e8: .word 0xffff80b6
 _0217e2ec: .word 0x00000222
 _0217e2f0: .word 0x00000444
-_0217e2f4: .word data_02050f54
+_0217e2f4: .word gSinCosTable
 _0217e2f8: .word 0x00000133
 _0217e2fc: .word data_027e0ffc
 _0217e300: .word 0x00000231
@@ -3052,7 +3052,7 @@ func_ov35_0217e6bc: ; 0x0217e6bc
 	mov r0, r0, asr #0x4
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
-	ldr r2, _0217e728 ; =data_02050f54
+	ldr r2, _0217e728 ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r1, [r2, r1]
@@ -3069,7 +3069,7 @@ func_ov35_0217e6bc: ; 0x0217e6bc
 	add sp, sp, #0x10
 	bx lr
 	.align 2, 0
-_0217e728: .word data_02050f54
+_0217e728: .word gSinCosTable
 	arm_func_end func_ov35_0217e6bc
 
 	.global func_ov35_0217e72c
@@ -3287,7 +3287,7 @@ _0217e96c: .word data_027e0fe0
 func_ov35_0217e970: ; 0x0217e970
 	stmdb sp!, {r4, lr}
 	ldrh r2, [r1]
-	ldr r3, _0217e9e8 ; =data_02050f54
+	ldr r3, _0217e9e8 ; =gSinCosTable
 	mov r1, #0x800
 	mov r2, r2, asr #0x4
 	mov r4, r2, lsl #0x1
@@ -3316,7 +3316,7 @@ func_ov35_0217e970: ; 0x0217e970
 	strh r2, [r0, #0x54]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0217e9e8: .word data_02050f54
+_0217e9e8: .word gSinCosTable
 	arm_func_end func_ov35_0217e970
 
 	.global func_ov35_0217e9ec
@@ -4160,7 +4160,7 @@ _0217f5f8:
 	ldr r0, _021800b8 ; =data_027e0d0c
 	str r1, [r4, #0x53c]
 	ldr r1, [r0]
-	ldr r5, _021800bc ; =data_02050f54
+	ldr r5, _021800bc ; =gSinCosTable
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
 	str r1, [r4, #0x64]
@@ -4275,7 +4275,7 @@ _0217f790:
 	b _02180974
 _0217f7bc:
 	ldrh r1, [r4, #0x78]
-	ldr r2, _021800bc ; =data_02050f54
+	ldr r2, _021800bc ; =gSinCosTable
 	ldr r0, _021800e0 ; =0x00000171
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
@@ -4365,7 +4365,7 @@ _0217f8d0:
 	ldr r2, _021800e8 ; =0xfffff333
 	str r1, [r4, #0x50c]
 	ldr r3, [r4, #0x4c]
-	ldr r1, _021800bc ; =data_02050f54
+	ldr r1, _021800bc ; =gSinCosTable
 	str r3, [r4, #0x510]
 	ldr r3, [r4, #0x50]
 	add r2, r0, r2
@@ -4457,7 +4457,7 @@ _0217fa0c:
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldr r0, [sp, #0x60]
-	ldr r5, _021800bc ; =data_02050f54
+	ldr r5, _021800bc ; =gSinCosTable
 	str r0, [r4, #0x48]
 	ldr r0, [sp, #0x64]
 	ldr r2, _021800f0 ; =0x00001ccd
@@ -4752,7 +4752,7 @@ _0217fee0:
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	ldrh r1, [r4, #0x78]
-	ldr r2, _021800bc ; =data_02050f54
+	ldr r2, _021800bc ; =gSinCosTable
 	ldr r0, _02180108 ; =0x00001b33
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
@@ -4866,7 +4866,7 @@ _021800ac: .word gPlayerLink
 _021800b0: .word data_027e071c
 _021800b4: .word 0x00000333
 _021800b8: .word data_027e0d0c
-_021800bc: .word data_02050f54
+_021800bc: .word gSinCosTable
 _021800c0: .word data_027e0c54
 _021800c4: .word func_ov35_0217e9ec
 _021800c8: .word data_027e0ffc
@@ -4902,7 +4902,7 @@ _0218010c:
 	stmia r3, {r0, r1, r2}
 	ldrh r0, [r4, #0x78]
 	mov lr, #0
-	ldr r2, _021800bc ; =data_02050f54
+	ldr r2, _021800bc ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r3, r0, lsl #0x1
 	mov r0, r3, lsl #0x1
@@ -5764,7 +5764,7 @@ _02180d74:
 	mov r0, #5
 	strb r0, [r4, #0x3b8]
 	ldrh r2, [r4, #0x78]
-	ldr r3, _02180eb4 ; =data_02050f54
+	ldr r3, _02180eb4 ; =gSinCosTable
 	rsb r1, r0, #0x338
 	mov r2, r2, asr #0x4
 	mov r6, r2, lsl #0x1
@@ -5845,7 +5845,7 @@ _02180e8c:
 	add sp, sp, #8
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02180eb4: .word data_02050f54
+_02180eb4: .word gSinCosTable
 _02180eb8: .word data_027e0ffc
 _02180ebc: .word data_027e0c54
 _02180ec0: .word func_ov35_0217e9ec
@@ -5878,7 +5878,7 @@ func_ov35_02180ec4: ; 0x02180ec4
 	ldr r0, _02180fc4 ; =data_027e0d0c
 	str r1, [r4, #0x53c]
 	ldr r1, [r0]
-	ldr ip, _02180fcc ; =data_02050f54
+	ldr ip, _02180fcc ; =gSinCosTable
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
 	str r1, [r4, #0x64]
@@ -5921,7 +5921,7 @@ func_ov35_02180ec4: ; 0x02180ec4
 	.align 2, 0
 _02180fc4: .word data_027e0d0c
 _02180fc8: .word 0x00000666
-_02180fcc: .word data_02050f54
+_02180fcc: .word gSinCosTable
 	arm_func_end func_ov35_02180ec4
 
 	.global func_ov35_02180fd0
@@ -6272,7 +6272,7 @@ _02181484:
 	mov r2, #0x2d8
 	bl func_0202b154
 	ldrh r1, [r4, #0x78]
-	ldr r2, _0218156c ; =data_02050f54
+	ldr r2, _0218156c ; =gSinCosTable
 	ldr r0, _02181570 ; =0x00000171
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
@@ -6323,7 +6323,7 @@ _02181530:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 _02181568: .word data_027e0764
-_0218156c: .word data_02050f54
+_0218156c: .word gSinCosTable
 _02181570: .word 0x00000171
 _02181574: .word data_027e0ffc
 	arm_func_end func_ov35_02181410
@@ -6595,7 +6595,7 @@ _021818ec:
 	mvn r0, #0
 	str r0, [r4, #0x544]
 	ldrh r2, [r4, #0x78]
-	ldr r3, _0218198c ; =data_02050f54
+	ldr r3, _0218198c ; =gSinCosTable
 	ldr r1, _02181990 ; =0xffffe4cd
 	mov r2, r2, asr #0x4
 	mov r5, r2, lsl #0x1
@@ -6633,7 +6633,7 @@ _021818ec:
 	.align 2, 0
 _02181984: .word data_027e0c54
 _02181988: .word gAdventureFlags
-_0218198c: .word data_02050f54
+_0218198c: .word gSinCosTable
 _02181990: .word 0xffffe4cd
 	arm_func_end func_ov35_0218187c
 
@@ -6948,7 +6948,7 @@ _02181dd8:
 	str lr, [r4, #0x538]
 	add r0, r4, #0x500
 	ldrh r1, [r0, #0x5c]
-	ldr r3, _02181e84 ; =data_02050f54
+	ldr r3, _02181e84 ; =gSinCosTable
 	mov r1, r1, asr #0x4
 	mov ip, r1, lsl #0x1
 	mov r1, ip, lsl #0x1
@@ -6989,7 +6989,7 @@ _02181e60:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_02181e84: .word data_02050f54
+_02181e84: .word gSinCosTable
 	arm_func_end func_ov35_02181d1c
 
 	.global func_ov35_02181e88
@@ -7357,7 +7357,7 @@ _021823ac:
 	bne _0218243c
 	mov r0, r5, asr #0x4
 	mov ip, r0, lsl #0x1
-	ldr r3, _02182468 ; =data_02050f54
+	ldr r3, _02182468 ; =gSinCosTable
 	mov r0, ip, lsl #0x1
 	ldrsh r2, [r3, r0]
 	ldr r1, [r4, #0x53c]
@@ -7399,7 +7399,7 @@ _0218243c:
 	.align 2, 0
 _02182460: .word 0x00000171
 _02182464: .word data_027e0764
-_02182468: .word data_02050f54
+_02182468: .word gSinCosTable
 _0218246c: .word data_027e0ffc
 _02182470: .word data_027e0d0c
 	arm_func_end func_ov35_0218221c
@@ -7415,7 +7415,7 @@ func_ov35_02182474: ; 0x02182474
 	mov r2, #0x5b0
 	bl func_0202b154
 	ldr r0, _02182554 ; =gPlayerPos
-	ldr ip, _02182558 ; =data_02050f54
+	ldr ip, _02182558 ; =gSinCosTable
 	ldr r2, [r0]
 	ldr r1, _0218255c ; =0xffffe333
 	str r2, [r4, #0x48]
@@ -7465,7 +7465,7 @@ func_ov35_02182474: ; 0x02182474
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02182554: .word gPlayerPos
-_02182558: .word data_02050f54
+_02182558: .word gSinCosTable
 _0218255c: .word 0xffffe333
 	arm_func_end func_ov35_02182474
 
@@ -9228,7 +9228,7 @@ _02183d74:
 _02183d8c:
 	ldrh r0, [r7, #0x78]
 	ldr r3, [sp, #0x28]
-	ldr r2, _02183e8c ; =data_02050f54
+	ldr r2, _02183e8c ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
@@ -9291,7 +9291,7 @@ _02183e7c: .word 0xffffe4cd
 _02183e80: .word 0x0000019a
 _02183e84: .word 0x00000ccd
 _02183e88: .word 0x00000555
-_02183e8c: .word data_02050f54
+_02183e8c: .word gSinCosTable
 _02183e90: .word gMapManager
 _02183e94: .word data_ov00_020e9370
 	arm_func_end func_ov35_02183848
@@ -9391,7 +9391,7 @@ _02183f70:
 	bl func_01ff8988
 	add r0, r4, #0x400
 	ldrh r1, [r0, #0x1c]
-	ldr r3, _02184050 ; =data_02050f54
+	ldr r3, _02184050 ; =gSinCosTable
 	add r0, sp, #4
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -9423,7 +9423,7 @@ _02183f70:
 	.align 2, 0
 _02184048: .word data_ov00_020e9360
 _0218404c: .word 0x00001666
-_02184050: .word data_02050f54
+_02184050: .word gSinCosTable
 	arm_func_end func_ov35_02183f0c
 
 	.global func_ov35_02184054
@@ -9514,7 +9514,7 @@ _02184174:
 	cmp r0, #1
 	bhi _021841e0
 	ldr r0, [r4, #0x48]
-	ldr r2, _02184230 ; =data_02050f54
+	ldr r2, _02184230 ; =gSinCosTable
 	str r0, [sp]
 	ldr r0, [r4, #0x4c]
 	ldr r1, _02184234 ; =0x0000011f
@@ -9559,7 +9559,7 @@ _021841fc:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_02184230: .word data_02050f54
+_02184230: .word gSinCosTable
 _02184234: .word 0x0000011f
 	arm_func_end func_ov35_02184140
 
@@ -9590,7 +9590,7 @@ func_ov35_02184238: ; 0x02184238
 	mov r0, r1, asr #0x4
 	mov r2, r0, lsl #0x1
 	bne _02184314
-	ldr r1, _02184430 ; =data_02050f54
+	ldr r1, _02184430 ; =gSinCosTable
 	add r0, r2, #1
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
@@ -9622,7 +9622,7 @@ func_ov35_02184238: ; 0x02184238
 	str r0, [sp, #0x18]
 	b _02184398
 _02184314:
-	ldr r1, _02184430 ; =data_02050f54
+	ldr r1, _02184430 ; =gSinCosTable
 	add r0, r2, #1
 	mov r2, r2, lsl #0x1
 	ldrsh r5, [r1, r2]
@@ -9696,7 +9696,7 @@ _02184420:
 	add sp, sp, #0x28
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02184430: .word data_02050f54
+_02184430: .word gSinCosTable
 _02184434: .word data_027e0e58
 _02184438: .word data_027e0ffc
 _0218443c: .word 0x0000022b
@@ -9714,7 +9714,7 @@ func_ov35_02184440: ; 0x02184440
 	ldmneia sp!, {r3, r4, r5, r6, pc}
 	ldrsh r0, [r0, #0x78]
 	ldr r2, _02184510 ; =0x000004cd
-	ldr r3, _02184514 ; =data_02050f54
+	ldr r3, _02184514 ; =gSinCosTable
 	add r0, r0, #0x358
 	add r0, r0, #0x1800
 	mov r0, r0, lsl #0x10
@@ -9759,7 +9759,7 @@ func_ov35_02184440: ; 0x02184440
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 _02184510: .word 0x000004cd
-_02184514: .word data_02050f54
+_02184514: .word gSinCosTable
 _02184518: .word gPlayerLink
 	arm_func_end func_ov35_02184440
 
@@ -10343,7 +10343,7 @@ _02184c7c:
 	add r1, sp, #0x18
 	bl func_01ff9ec0
 	mov r2, r7, asr #0x4
-	ldr r1, _02184d5c ; =data_02050f54
+	ldr r1, _02184d5c ; =gSinCosTable
 	mov r2, r2, lsl #0x2
 	ldrsh r2, [r1, r2]
 	ldr r1, [sp, #0x24]
@@ -10397,7 +10397,7 @@ _02184d3c:
 _02184d50: .word data_027e0ffc
 _02184d54: .word 0x0000019d
 _02184d58: .word 0x41525257
-_02184d5c: .word data_02050f54
+_02184d5c: .word gSinCosTable
 	arm_func_end func_ov35_02184b28
 
 	.global func_ov35_02184d60
@@ -10613,7 +10613,7 @@ func_ov35_02184f74: ; 0x02184f74
 	str r5, [r6, #0x50]
 	mov r5, r1, lsl #0x1
 	add r1, r1, #1
-	ldr r3, _02185098 ; =data_02050f54
+	ldr r3, _02185098 ; =gSinCosTable
 	mov r2, r1, lsl #0x1
 	ldrsh r1, [r3, r5]
 	ldrsh r2, [r3, r2]
@@ -10638,7 +10638,7 @@ func_ov35_02184f74: ; 0x02184f74
 	.align 2, 0
 _02185090: .word data_ov35_02185604
 _02185094: .word data_ov35_021855f8
-_02185098: .word data_02050f54
+_02185098: .word gSinCosTable
 	arm_func_end func_ov35_02184f74
 
 	.global func_ov35_0218509c

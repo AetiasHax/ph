@@ -5249,7 +5249,7 @@ func_ov02_020f30f8: ; 0x020f30f8
 	strh r2, [r4, #0x16]
 	ldrsh r1, [r4, #0x16]
 	ldrsh ip, [r4, #0x14]
-	ldr r0, _020f31ec ; =data_02050f54
+	ldr r0, _020f31ec ; =gSinCosTable
 	add r1, r1, r1, lsr #31
 	mov r2, r1, lsl #0xf
 	add r1, ip, ip, lsr #31
@@ -5300,7 +5300,7 @@ func_ov02_020f30f8: ; 0x020f30f8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020f31e8: .word data_ov09_0211f530
-_020f31ec: .word data_02050f54
+_020f31ec: .word gSinCosTable
 	arm_func_end func_ov02_020f30f8
 
 	.global func_ov02_020f31f0
@@ -5574,7 +5574,7 @@ func_ov02_020f34e8: ; 0x020f34e8
 	ldr r1, _020f35d4 ; =data_027e0384
 	str r2, [sp, #8]
 	str r1, [sp, #0xc]
-	ldr r2, _020f35d8 ; =data_02050f54
+	ldr r2, _020f35d8 ; =gSinCosTable
 	mov r3, r3, lsl #0x1
 	mov r1, r0, lsl #0x1
 	ldrsh r0, [r2, r3]
@@ -5619,7 +5619,7 @@ func_ov02_020f34e8: ; 0x020f34e8
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020f35d4: .word data_027e0384
-_020f35d8: .word data_02050f54
+_020f35d8: .word gSinCosTable
 _020f35dc: .word data_027e037c
 _020f35e0: .word data_027e03c8
 	arm_func_end func_ov02_020f34e8
@@ -8950,7 +8950,7 @@ func_ov02_020f6324: ; 0x020f6324
 	addlt sp, sp, #0x54
 	ldmltia sp!, {r3, r4, pc}
 	ldrh r1, [r4, #0x20]
-	ldr r3, _020f6428 ; =data_02050f54
+	ldr r3, _020f6428 ; =gSinCosTable
 	add r0, sp, #0x30
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -8961,7 +8961,7 @@ func_ov02_020f6324: ; 0x020f6324
 	ldrsh r2, [r3, r2]
 	blx func_01ff8230
 	ldrh r1, [r4, #0x1c]
-	ldr r3, _020f6428 ; =data_02050f54
+	ldr r3, _020f6428 ; =gSinCosTable
 	add r0, sp, #0xc
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -8977,7 +8977,7 @@ func_ov02_020f6324: ; 0x020f6324
 	bl func_01ff8690
 	ldrh r2, [r4, #0x22]
 	ldrh r1, [r4, #0x1e]
-	ldr r3, _020f6428 ; =data_02050f54
+	ldr r3, _020f6428 ; =gSinCosTable
 	add r0, sp, #0xc
 	add r1, r2, r1
 	mov r1, r1, lsl #0x10
@@ -9008,7 +9008,7 @@ func_ov02_020f6324: ; 0x020f6324
 	add sp, sp, #0x54
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_020f6428: .word data_02050f54
+_020f6428: .word gSinCosTable
 	arm_func_end func_ov02_020f6324
 
 	.global func_ov02_020f642c

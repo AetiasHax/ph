@@ -69,7 +69,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02051054
 .extern data_02057840
 .extern data_0205785c

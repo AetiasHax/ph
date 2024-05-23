@@ -1,5 +1,5 @@
 #pragma once
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02054f54
 .extern data_02055058
 .extern data_0205ada4

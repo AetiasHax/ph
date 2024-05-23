@@ -97,7 +97,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02051f54
 .extern data_02057200
 .extern data_027e0764

@@ -81,7 +81,7 @@
 .extern _ZNK11ItemManager16GetTreasureCountEj
 .extern _ZNK11ItemManager19GetMaxTreasureCountEv
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02057200
 .extern data_027e0618
 .extern data_027e0764

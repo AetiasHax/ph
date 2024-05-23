@@ -100,7 +100,7 @@ func_ov00_020d5a68: ; 0x020d5a68
 	mov r2, r4, asr #0x4
 	add r0, r1, #0x800
 	mov r0, r0, asr #0x10
-	ldr r1, _020d5c4c ; =data_02050f54
+	ldr r1, _020d5c4c ; =gSinCosTable
 	mov r2, r2, lsl #0x2
 	mov r0, r0, lsl #0x2
 	ldrsh r6, [r1, r2]
@@ -110,7 +110,7 @@ func_ov00_020d5a68: ; 0x020d5a68
 	mul r1, r7, r4
 	add r1, r1, #0x800
 	mov r1, r1, asr #0x10
-	ldr r2, _020d5c4c ; =data_02050f54
+	ldr r2, _020d5c4c ; =gSinCosTable
 	mov r3, r1, lsl #0x2
 	mov r1, r6
 	mov r4, r0
@@ -160,7 +160,7 @@ _020d5bac:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 	arm_func_end func_ov00_020d5a68
-_020d5c4c: .word data_02050f54
+_020d5c4c: .word gSinCosTable
 
 	.global func_ov00_020d5c50
 	arm_func_start func_ov00_020d5c50

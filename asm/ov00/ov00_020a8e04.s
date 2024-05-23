@@ -858,7 +858,7 @@ _020a9c94:
 	bne _020a9d48
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _020a9dbc ; =data_02050f54
+	ldr r1, _020a9dbc ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r3, [r1, r0]
@@ -873,7 +873,7 @@ _020a9c94:
 	mov r0, r8, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _020a9dbc ; =data_02050f54
+	ldr r1, _020a9dbc ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r3, [r1, r0]
@@ -890,7 +890,7 @@ _020a9c94:
 _020a9d48:
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
-	ldr r2, _020a9dbc ; =data_02050f54
+	ldr r2, _020a9dbc ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r1, [r2, r1]
@@ -904,7 +904,7 @@ _020a9d48:
 	mov r0, r8, asr #0x4
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
-	ldr r2, _020a9dbc ; =data_02050f54
+	ldr r2, _020a9dbc ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r1, [r2, r1]
@@ -918,7 +918,7 @@ _020a9d48:
 	add sp, sp, #0x94
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_020a9dbc: .word data_02050f54
+_020a9dbc: .word gSinCosTable
 	arm_func_end func_ov00_020a9c14
 
 	.global func_ov00_020a9dc0

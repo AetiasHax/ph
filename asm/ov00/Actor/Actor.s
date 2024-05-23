@@ -1356,7 +1356,7 @@ _ZN5Actor18func_ov00_020c243cEPjPi: ; 0x020c243c
 	bne _020c2508
 	ldrh r0, [r5, #0x78]
 	mov r1, #0
-	ldr r3, _020c2700 ; =data_02050f54
+	ldr r3, _020c2700 ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
@@ -1517,7 +1517,7 @@ _020c26f0: .word gAdventureFlags
 _020c26f4: .word gActorManager
 _020c26f8: .word 0x41525257
 _020c26fc: .word 0x5342454d
-_020c2700: .word data_02050f54
+_020c2700: .word gSinCosTable
 _020c2704: .word 0x43424c53
 _020c2708: .word 0x424c5354
 _020c270c: .word 0x42494752
@@ -1798,7 +1798,7 @@ _ZN5Actor18func_ov00_020c29ecEi: ; 0x020c29ec
 _ZN5Actor9GetHitboxEP8Cylinder: ; 0x020c2a0c
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r2, [r0, #0x88]
-	ldr r3, _020c2afc ; =data_02050f54
+	ldr r3, _020c2afc ; =gSinCosTable
 	str r2, [r1, #0xc]
 	ldrh r4, [r0, #0x78]
 	ldr r2, [r0, #0x48]
@@ -1857,7 +1857,7 @@ _ZN5Actor9GetHitboxEP8Cylinder: ; 0x020c2a0c
 	str r0, [r1, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020c2afc: .word data_02050f54
+_020c2afc: .word gSinCosTable
 	arm_func_end _ZN5Actor9GetHitboxEP8Cylinder
 
 	.global _ZN5Actor10GetUnk_08cEP8Cylinder
@@ -1865,7 +1865,7 @@ _020c2afc: .word data_02050f54
 _ZN5Actor10GetUnk_08cEP8Cylinder: ; 0x020c2b00
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r2, [r0, #0x98]
-	ldr r3, _020c2bf0 ; =data_02050f54
+	ldr r3, _020c2bf0 ; =gSinCosTable
 	str r2, [r1, #0xc]
 	ldrh r4, [r0, #0x78]
 	ldr r2, [r0, #0x48]
@@ -1924,7 +1924,7 @@ _ZN5Actor10GetUnk_08cEP8Cylinder: ; 0x020c2b00
 	str r0, [r1, #8]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020c2bf0: .word data_02050f54
+_020c2bf0: .word gSinCosTable
 	arm_func_end _ZN5Actor10GetUnk_08cEP8Cylinder
 
 	.global _ZN5Actor20IncreaseActiveFramesEv

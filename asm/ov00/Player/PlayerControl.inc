@@ -18,7 +18,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
 .extern _ZNK11ItemManager9HasPotionEj
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02056be4
 .extern data_027e05f8
 .extern data_027e077c

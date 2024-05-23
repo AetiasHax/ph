@@ -981,7 +981,7 @@ _02199920:
 	mov r1, r3
 	bl func_0202af4c
 	ldrh r1, [r5, #0x6e]
-	ldr r3, _02199ac0 ; =data_02050f54
+	ldr r3, _02199ac0 ; =gSinCosTable
 	add r0, sp, #0x38
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -1062,7 +1062,7 @@ _02199a44:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _02199abc: .word data_ov57_0219a994
-_02199ac0: .word data_02050f54
+_02199ac0: .word gSinCosTable
 _02199ac4: .word data_027e03c8
 _02199ac8: .word gAdventureFlags
 _02199acc: .word data_027e0de4

@@ -6,7 +6,7 @@
 .extern _ZN11ItemManager22UpdateSwordShieldInUseEv
 .extern _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 .extern _ZN13PlayerControl18func_ov00_020af4a4Ev
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0618
 .extern data_027e0c68
 .extern data_027e0d0c

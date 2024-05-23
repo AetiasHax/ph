@@ -58,7 +58,7 @@
 .extern _ZN5ActorD2Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0764
 .extern data_027e0e58
 .extern gMapManager

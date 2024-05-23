@@ -1164,7 +1164,7 @@ func_ov05_0210199c: ; 0x0210199c
 	ldr r1, _02101aa8 ; =data_027e0384
 	str r2, [sp, #8]
 	str r1, [sp, #0xc]
-	ldr r2, _02101aac ; =data_02050f54
+	ldr r2, _02101aac ; =gSinCosTable
 	mov r3, r3, lsl #0x1
 	mov r1, r0, lsl #0x1
 	ldrsh r0, [r2, r3]
@@ -1216,7 +1216,7 @@ func_ov05_0210199c: ; 0x0210199c
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _02101aa8: .word data_027e0384
-_02101aac: .word data_02050f54
+_02101aac: .word gSinCosTable
 _02101ab0: .word data_027e037c
 _02101ab4: .word data_027e03c8
 	arm_func_end func_ov05_0210199c
@@ -3584,24 +3584,24 @@ func_ov05_02103ad4: ; 0x02103ad4
 	mov r0, r0, asr #0x4
 	mov r0, r0, lsl #0x1
 	add r1, r0, #1
-	ldr r0, _02103af0 ; =data_02050f54
+	ldr r0, _02103af0 ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	ldrsh r0, [r0, r1]
 	bx lr
 	.align 2, 0
-_02103af0: .word data_02050f54
+_02103af0: .word gSinCosTable
 	arm_func_end func_ov05_02103ad4
 
 	.global func_ov05_02103af4
 	arm_func_start func_ov05_02103af4
 func_ov05_02103af4: ; 0x02103af4
 	mov r1, r0, asr #0x4
-	ldr r0, _02103b08 ; =data_02050f54
+	ldr r0, _02103b08 ; =gSinCosTable
 	mov r1, r1, lsl #0x2
 	ldrsh r0, [r0, r1]
 	bx lr
 	.align 2, 0
-_02103b08: .word data_02050f54
+_02103b08: .word gSinCosTable
 	arm_func_end func_ov05_02103af4
 
 	.global func_ov05_02103b0c
@@ -5325,7 +5325,7 @@ func_ov05_02104f28: ; 0x02104f28
 	str r1, [sp, #8]
 	add r0, r8, #0x200
 	ldrh r3, [r0, #0x48]
-	ldr r2, _0210513c ; =data_02050f54
+	ldr r2, _0210513c ; =gSinCosTable
 	mov r4, #0xc000
 	mov r3, r3, asr #0x4
 	mov r3, r3, lsl #0x2
@@ -5399,7 +5399,7 @@ _021050cc:
 _02105130: .word data_027e0f64
 _02105134: .word gPlayerPos
 _02105138: .word data_ov00_020e9360
-_0210513c: .word data_02050f54
+_0210513c: .word gSinCosTable
 	arm_func_end func_ov05_02104f28
 
 	.global func_ov05_02105140
@@ -6102,7 +6102,7 @@ _02105a38:
 	mov r1, r5, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r7, r2, lsl #0x1
-	ldr r5, _02105c10 ; =data_02050f54
+	ldr r5, _02105c10 ; =gSinCosTable
 	add r2, r2, #1
 	mov r2, r2, lsl #0x1
 	ldrsh lr, [r5, r7]
@@ -6210,7 +6210,7 @@ _02105c00: .word 0x00000113
 _02105c04: .word 0x00000666
 _02105c08: .word data_ov05_021124f0
 _02105c0c: .word gMapManager
-_02105c10: .word data_02050f54
+_02105c10: .word gSinCosTable
 _02105c14: .word 0x00000266
 _02105c18: .word 0x00000115
 _02105c1c: .word 0x00000116
@@ -6281,7 +6281,7 @@ _02105ce4:
 	mov r1, r6, asr #0x4
 	mov r2, r1, lsl #0x1
 	add r1, r2, #1
-	ldr r3, _02105d80 ; =data_02050f54
+	ldr r3, _02105d80 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	ldrsh r2, [r3, r2]
 	mov r1, r1, lsl #0x1
@@ -6313,7 +6313,7 @@ _02105ce4:
 	.align 2, 0
 _02105d78: .word data_ov05_021124f0
 _02105d7c: .word data_ov05_021125ac
-_02105d80: .word data_02050f54
+_02105d80: .word gSinCosTable
 	arm_func_end func_ov05_02105c28
 
 	.global func_ov05_02105d84
@@ -6555,7 +6555,7 @@ _02106074:
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
 	add r1, r2, #1
-	ldr r3, _02106604 ; =data_02050f54
+	ldr r3, _02106604 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r1, r1, lsl #0x1
 	ldrsh r2, [r3, r2]
@@ -6911,7 +6911,7 @@ _021065f4: .word 0x00000ccd
 _021065f8: .word data_ov05_0211257c
 _021065fc: .word data_ov05_0211258c
 _02106600: .word 0x00000266
-_02106604: .word data_02050f54
+_02106604: .word gSinCosTable
 _02106608: .word data_ov05_021124f0
 _0210660c: .word data_ov05_021125fc
 _02106610: .word data_ov05_0211255c
@@ -8004,7 +8004,7 @@ _021074c8:
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
 	mov r1, r0, asr #0x4
-	ldr r0, _021075b0 ; =data_02050f54
+	ldr r0, _021075b0 ; =gSinCosTable
 	mov r1, r1, lsl #0x2
 	ldrsh r0, [r0, r1]
 	mov r3, #0
@@ -8049,7 +8049,7 @@ _021075a0: .word 0x0000030a
 _021075a4: .word 0x00000614
 _021075a8: .word data_ov00_020eec9c
 _021075ac: .word 0x00002aab
-_021075b0: .word data_02050f54
+_021075b0: .word gSinCosTable
 _021075b4: .word data_ov05_021126ac
 _021075b8: .word data_ov05_021126d4
 	arm_func_end func_ov05_021073b8
@@ -8126,7 +8126,7 @@ _02107664:
 	movle r4, #0
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r0, [r0]
-	ldr r2, _0210785c ; =data_02050f54
+	ldr r2, _0210785c ; =gSinCosTable
 	add r1, sp, #0xc
 	mov r0, r0, asr #0x4
 	mov r0, r0, lsl #0x1
@@ -8230,7 +8230,7 @@ _021077e8:
 _02107850: .word data_027e0e58
 _02107854: .word 0x0000011f
 _02107858: .word data_ov05_0211274c
-_0210785c: .word data_02050f54
+_0210785c: .word gSinCosTable
 _02107860: .word data_ov05_021126ac
 _02107864: .word gActorManager
 _02107868: .word 0x00000614
@@ -11347,7 +11347,7 @@ _0210a208:
 	add r0, r2, r0
 	str r0, [sp, #0x6c]
 	ldr r0, [r3, #0x28]
-	ldr r3, _0210a4c0 ; =data_02050f54
+	ldr r3, _0210a4c0 ; =gSinCosTable
 	add r0, r1, r0
 	str r0, [sp, #0x70]
 	ldrh r1, [r5, #0x78]
@@ -11515,7 +11515,7 @@ _0210a4ac:
 _0210a4b4: .word gItemManager
 _0210a4b8: .word data_ov05_02112308
 _0210a4bc: .word data_ov05_02112770
-_0210a4c0: .word data_02050f54
+_0210a4c0: .word gSinCosTable
 _0210a4c4: .word data_ov00_020e9c88
 _0210a4c8: .word func_ov05_0210a4d4
 _0210a4cc: .word data_ov05_021122f0
@@ -11552,7 +11552,7 @@ func_ov05_0210a4e0: ; 0x0210a4e0
 	add r0, r2, r0
 	str r0, [sp, #0x34]
 	ldr r0, [r3, #0x28]
-	ldr r3, _0210a604 ; =data_02050f54
+	ldr r3, _0210a604 ; =gSinCosTable
 	add r0, r1, r0
 	str r0, [sp, #0x38]
 	ldrh r1, [r4, #0x78]
@@ -11609,7 +11609,7 @@ _0210a5e4:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _0210a600: .word data_ov05_02112770
-_0210a604: .word data_02050f54
+_0210a604: .word gSinCosTable
 _0210a608: .word gItemManager
 _0210a60c: .word data_ov00_020e9360
 	arm_func_end func_ov05_0210a4e0
@@ -12263,7 +12263,7 @@ _0210ae98:
 	mov r0, r5
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r0, [r0]
-	ldr r3, _0210b288 ; =data_02050f54
+	ldr r3, _0210b288 ; =gSinCosTable
 	mov r1, #0x800
 	mov r0, r0, asr #0x4
 	mov r7, r0, lsl #0x1
@@ -12338,7 +12338,7 @@ _0210ae98:
 	sub ip, r0, #0x1800
 	add r0, r1, #1
 	mov r2, r1, lsl #0x1
-	ldr r1, _0210b288 ; =data_02050f54
+	ldr r1, _0210b288 ; =gSinCosTable
 	mov r0, r0, lsl #0x1
 	ldrsh r7, [r1, r2]
 	ldrsh r6, [r1, r0]
@@ -12511,7 +12511,7 @@ _0210b264:
 	.align 2, 0
 _0210b280: .word gActorManager
 _0210b284: .word gAdventureFlags
-_0210b288: .word data_02050f54
+_0210b288: .word gSinCosTable
 _0210b28c: .word 0x0000ffff
 _0210b290: .word gMapManager
 _0210b294: .word data_027e0fb8
@@ -13570,7 +13570,7 @@ _0210c040:
 	mov r1, r5, asr #0x4
 	mov r1, r1, lsl #0x1
 	add r2, r1, #1
-	ldr r3, _0210c204 ; =data_02050f54
+	ldr r3, _0210c204 ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	ldrsh r6, [r3, r1]
 	ldr r1, _0210c208 ; =0x0000019a
@@ -13636,7 +13636,7 @@ _0210c19c:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
 _0210c200: .word data_027e0fb8
-_0210c204: .word data_02050f54
+_0210c204: .word gSinCosTable
 _0210c208: .word 0x0000019a
 	arm_func_end func_ov05_0210bf50
 
@@ -14273,7 +14273,7 @@ _0210cacc:
 	str r1, [r4, #4]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r1, [r0]
-	ldr r5, _0210cb7c ; =data_02050f54
+	ldr r5, _0210cb7c ; =gSinCosTable
 	mov r0, #0x800
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -14305,7 +14305,7 @@ _0210cacc:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0210cb7c: .word data_02050f54
+_0210cb7c: .word gSinCosTable
 	arm_func_end func_ov05_0210ca80
 
 	.global func_ov05_0210cb80
@@ -15064,7 +15064,7 @@ _0210d4e8:
 	mov r1, r1, lsr #0x10
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
-	ldr r1, _0210d6d8 ; =data_02050f54
+	ldr r1, _0210d6d8 ; =gSinCosTable
 	mov r2, r3, lsl #0x1
 	ldrsh r2, [r1, r2]
 	add r1, r1, r3, lsl #1
@@ -15146,7 +15146,7 @@ _0210d6c4:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0210d6d4: .word data_027e0764
-_0210d6d8: .word data_02050f54
+_0210d6d8: .word gSinCosTable
 	arm_func_end func_ov05_0210d474
 
 	.global func_ov05_0210d6dc
@@ -16983,7 +16983,7 @@ _0210ef74:
 	mov r2, r0, lsl #0x1
 	add r1, r2, #1
 	ldr r0, _0210f69c ; =data_ov00_020dc550
-	ldr r3, _0210f6a0 ; =data_02050f54
+	ldr r3, _0210f6a0 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r1, r1, lsl #0x1
 	ldrsh r2, [r3, r2]
@@ -17463,7 +17463,7 @@ _0210f690: .word data_ov00_020dc558
 _0210f694: .word 0x000002aa
 _0210f698: .word data_ov00_020e5adc
 _0210f69c: .word data_ov00_020dc550
-_0210f6a0: .word data_02050f54
+_0210f6a0: .word gSinCosTable
 _0210f6a4: .word data_ov00_020dc554
 _0210f6a8: .word 0x88888889
 _0210f6ac: .word data_027e0c54
@@ -17710,7 +17710,7 @@ _0210f8dc:
 	mov r0, r0, asr #0x4
 	mov r0, r0, lsl #0x1
 	add r1, r0, #1
-	ldr r0, _021101dc ; =data_02050f54
+	ldr r0, _021101dc ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	ldrsh r1, [r0, r1]
 	ldr r0, _021101e0 ; =data_ov05_02112acc
@@ -18003,7 +18003,7 @@ _0210fdcc:
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
 	mov r1, r0, asr #0x4
-	ldr r0, _021101dc ; =data_02050f54
+	ldr r0, _021101dc ; =gSinCosTable
 	add r0, r0, r1, lsl #2
 	ldrsh r1, [r0, #2]
 	mov r0, r1, asr #0x1f
@@ -18276,7 +18276,7 @@ _021101cc:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _021101d8: .word data_027e0fb8
-_021101dc: .word data_02050f54
+_021101dc: .word gSinCosTable
 _021101e0: .word data_ov05_02112acc
 _021101e4: .word 0x00000ccd
 _021101e8: .word func_ov05_02110220
@@ -19087,7 +19087,7 @@ _02110c50:
 	strh r1, [sp, #0x16]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r2, [r0]
-	ldr r1, _02110e00 ; =data_02050f54
+	ldr r1, _02110e00 ; =gSinCosTable
 	mov r0, r5
 	mov r2, r2, asr #0x4
 	mov r2, r2, lsl #0x2
@@ -19096,7 +19096,7 @@ _02110c50:
 	strh r1, [sp, #0x12]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r2, [r0]
-	ldr r1, _02110e00 ; =data_02050f54
+	ldr r1, _02110e00 ; =gSinCosTable
 	mov r0, r5
 	mov r2, r2, asr #0x4
 	mov r2, r2, lsl #0x1
@@ -19136,7 +19136,7 @@ _02110d30:
 	strh r1, [sp, #0x10]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r2, [r0]
-	ldr r1, _02110e00 ; =data_02050f54
+	ldr r1, _02110e00 ; =gSinCosTable
 	mov r0, r5
 	mov r2, r2, asr #0x4
 	mov r2, r2, lsl #0x2
@@ -19145,7 +19145,7 @@ _02110d30:
 	strh r1, [sp, #0xc]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r2, [r0]
-	ldr r1, _02110e00 ; =data_02050f54
+	ldr r1, _02110e00 ; =gSinCosTable
 	mov r0, r5
 	mov r2, r2, asr #0x4
 	mov r2, r2, lsl #0x1
@@ -19172,7 +19172,7 @@ _02110df0: .word data_027e0fd4
 _02110df4: .word 0x00000253
 _02110df8: .word 0x000001e7
 _02110dfc: .word data_ov05_021123a0
-_02110e00: .word data_02050f54
+_02110e00: .word gSinCosTable
 _02110e04: .word func_ov05_0210f6e4
 _02110e08: .word data_027e0e58
 	arm_func_end func_ov05_02110be8
@@ -19212,7 +19212,7 @@ func_ov05_02110e28: ; 0x02110e28
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
 	add r1, r2, #1
-	ldr r3, _02110f40 ; =data_02050f54
+	ldr r3, _02110f40 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	ldrsh r2, [r3, r2]
 	mov r1, r1, lsl #0x1
@@ -19265,7 +19265,7 @@ _02110ef4:
 	bl _ZN13LinkStateBase18func_ov00_020a8ab0Ei
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02110f40: .word data_02050f54
+_02110f40: .word gSinCosTable
 _02110f44: .word data_ov00_020eec9c
 _02110f48: .word data_ov05_02112b24
 _02110f4c: .word data_ov00_020e5694

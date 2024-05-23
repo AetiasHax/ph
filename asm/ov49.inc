@@ -72,7 +72,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02052f54
 .extern data_027e0764
 .extern data_027e0e58

@@ -27,7 +27,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02054654
 .extern data_027e0d38
 .extern data_027e0e58

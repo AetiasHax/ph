@@ -18,7 +18,7 @@
 .extern _ZN14AdventureFlags18func_ov00_02097738Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZNK11ItemManager19GetActiveFairyLevelEi
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02056be4
 .extern data_02063e4c
 .extern data_027e077c

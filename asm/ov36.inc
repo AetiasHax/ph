@@ -66,7 +66,7 @@
 .extern _ZN5ActorD2Ev
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02063e4c
 .extern data_027e071c
 .extern data_027e0764

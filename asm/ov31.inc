@@ -63,7 +63,7 @@
 .extern _ZNK11ItemManager7GetAmmoEi
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_0205785c
 .extern data_02057878
 .extern data_027e071c

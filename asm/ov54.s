@@ -620,7 +620,7 @@ _021994d0:
 	mov r0, r4
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
 	ldrh r1, [r0]
-	ldr r2, _021997cc ; =data_02050f54
+	ldr r2, _021997cc ; =gSinCosTable
 	ldr r0, [sp, #0x28]
 	mov r1, r1, asr #0x4
 	mov r3, r1, lsl #0x1
@@ -801,7 +801,7 @@ _021997bc: .word data_027e0d38
 _021997c0: .word gActorManager
 _021997c4: .word 0x44475447
 _021997c8: .word 0x00000406
-_021997cc: .word data_02050f54
+_021997cc: .word gSinCosTable
 _021997d0: .word data_027e0e58
 _021997d4: .word 0x00000255
 _021997d8: .word 0x00000256

@@ -1661,7 +1661,7 @@ func_ov41_0218a9c0: ; 0x0218a9c0
 	bl func_020196fc
 	ldrh r1, [r4, #0x78]
 	add r0, r4, #0x1c4
-	ldr r3, _0218aab4 ; =data_02050f54
+	ldr r3, _0218aab4 ; =gSinCosTable
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r1, r2, lsl #0x1
@@ -1694,7 +1694,7 @@ func_ov41_0218a9c0: ; 0x0218a9c0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0218aab0: .word data_027e0f78
-_0218aab4: .word data_02050f54
+_0218aab4: .word gSinCosTable
 _0218aab8: .word 0x00000666
 _0218aabc: .word data_ov00_020e9370
 	arm_func_end func_ov41_0218a9c0
@@ -2239,7 +2239,7 @@ _0218b130:
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
 	ldr r3, [sp, #0xc]
-	ldr r2, _0218b1e4 ; =data_02050f54
+	ldr r2, _0218b1e4 ; =gSinCosTable
 	mov r1, r1, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r1, [r2, r1]
@@ -2271,7 +2271,7 @@ _0218b130:
 _0218b1d8: .word data_027e0e5c
 _0218b1dc: .word data_027e0ffc
 _0218b1e0: .word 0x00000191
-_0218b1e4: .word data_02050f54
+_0218b1e4: .word gSinCosTable
 	arm_func_end func_ov41_0218b0d8
 
 	.global func_ov41_0218b1e8
@@ -3551,7 +3551,7 @@ func_ov41_0218c204: ; 0x0218c204
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _0218c3d0 ; =data_02050f54
+	ldr r1, _0218c3d0 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r3, [r1, r2]
@@ -3612,7 +3612,7 @@ _0218c3c0: .word gPlayerLink
 _0218c3c4: .word 0x0000319a
 _0218c3c8: .word gAdventureFlags
 _0218c3cc: .word gActorManager
-_0218c3d0: .word data_02050f54
+_0218c3d0: .word gSinCosTable
 	arm_func_end func_ov41_0218c204
 
 	.global func_ov41_0218c3d4
@@ -4046,7 +4046,7 @@ func_ov41_0218c834: ; 0x0218c834
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _0218cbf0 ; =data_02050f54
+	ldr r1, _0218cbf0 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r3, [r1, r2]
@@ -4152,7 +4152,7 @@ _0218ca80:
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _0218cbf0 ; =data_02050f54
+	ldr r1, _0218cbf0 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	mov r0, r0, lsl #0x1
 	ldrsh r3, [r1, r2]
@@ -4222,7 +4222,7 @@ _0218cbe0: .word gAdventureFlags
 _0218cbe4: .word gPlayerLink
 _0218cbe8: .word gActorManager
 _0218cbec: .word gMapManager
-_0218cbf0: .word data_02050f54
+_0218cbf0: .word gSinCosTable
 _0218cbf4: .word 0x4b4f4b4f
 	arm_func_end func_ov41_0218c834
 
@@ -4540,7 +4540,7 @@ func_ov41_0218cfa8: ; 0x0218cfa8
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
 	mov lr, #0
-	ldr r1, _0218d01c ; =data_02050f54
+	ldr r1, _0218d01c ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	ldrsh r5, [r1, r2]
 	mov r0, r0, lsl #0x1
@@ -4560,7 +4560,7 @@ func_ov41_0218cfa8: ; 0x0218cfa8
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0218d01c: .word data_02050f54
+_0218d01c: .word gSinCosTable
 	arm_func_end func_ov41_0218cfa8
 
 	.global func_ov41_0218d020
@@ -4576,7 +4576,7 @@ func_ov41_0218d020: ; 0x0218d020
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
 	mov lr, #0
-	ldr r1, _0218d0a8 ; =data_02050f54
+	ldr r1, _0218d0a8 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	ldrsh r5, [r1, r2]
 	mov r0, r0, lsl #0x1
@@ -4601,7 +4601,7 @@ func_ov41_0218d020: ; 0x0218d020
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0218d0a8: .word data_02050f54
+_0218d0a8: .word gSinCosTable
 	arm_func_end func_ov41_0218d020
 
 	.global func_ov41_0218d0ac
@@ -4680,7 +4680,7 @@ _0218d19c:
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
 	add r0, r2, #1
-	ldr r1, _0218d204 ; =data_02050f54
+	ldr r1, _0218d204 ; =gSinCosTable
 	mov r2, r2, lsl #0x1
 	ldrsh lr, [r1, r2]
 	mov r0, r0, lsl #0x1
@@ -4702,7 +4702,7 @@ _0218d19c:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0218d204: .word data_02050f54
+_0218d204: .word gSinCosTable
 _0218d208: .word 0x0000023d
 _0218d20c: .word 0x0000071c
 	arm_func_end func_ov41_0218d11c
@@ -5308,7 +5308,7 @@ func_ov41_0218d9ec: ; 0x0218d9ec
 	ldmia r1, {r0, r1, r2}
 	stmia r4, {r0, r1, r2}
 	ldr r0, _0218daf4 ; =0x00000ccd
-	ldr r4, _0218daf8 ; =data_02050f54
+	ldr r4, _0218daf8 ; =gSinCosTable
 	str r0, [r3, #0x510]
 	ldrh r1, [r3, #0x78]
 	ldr r0, [r3, #0x48]
@@ -5368,7 +5368,7 @@ func_ov41_0218d9ec: ; 0x0218d9ec
 	.align 2, 0
 _0218daf0: .word data_ov41_0218e038
 _0218daf4: .word 0x00000ccd
-_0218daf8: .word data_02050f54
+_0218daf8: .word gSinCosTable
 	arm_func_end func_ov41_0218d9ec
 
 	.global func_ov41_0218dafc

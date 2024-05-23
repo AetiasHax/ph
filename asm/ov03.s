@@ -13287,7 +13287,7 @@ _020f6bc8:
 	mov r0, r0, lsr #0x10
 	mov r0, r0, asr #0x4
 	mov r3, r0, lsl #0x2
-	ldr r1, _020f6d2c ; =data_02050f54
+	ldr r1, _020f6d2c ; =gSinCosTable
 	mov r2, #0x800
 	ldrsh r1, [r1, r3]
 	mov r0, #0x1000
@@ -13360,7 +13360,7 @@ _020f6cfc:
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, pc}
 	.align 2, 0
 _020f6d28: .word data_027e0d38
-_020f6d2c: .word data_02050f54
+_020f6d2c: .word gSinCosTable
 _020f6d30: .word gAdventureFlags
 	arm_func_end func_ov03_020f6b18
 

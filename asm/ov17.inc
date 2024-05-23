@@ -78,7 +78,7 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern _ZNK11ItemManager18func_ov00_020ad594Ei
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02063e4c
 .extern data_027e0618
 .extern data_027e071c

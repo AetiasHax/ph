@@ -4340,7 +4340,7 @@ _0217f1c8:
 	bl func_01ff80d4
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x68]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x78
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4356,7 +4356,7 @@ _0217f1c8:
 	bl func_01ff8690
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x6a]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x54
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4372,7 +4372,7 @@ _0217f1c8:
 	bl func_01ff8690
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x6c]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x30
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4400,7 +4400,7 @@ _0217f1c8:
 	add r1, r1, #1
 	mov r0, r0, asr #0x4
 	mov r2, r1, lsl #0x1
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	mov r1, r0, lsl #0x2
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
@@ -4424,7 +4424,7 @@ _0217f1c8:
 	add r1, r1, #1
 	mov r0, r0, asr #0x4
 	mov r2, r1, lsl #0x1
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	mov r1, r0, lsl #0x2
 	ldrsh r1, [r3, r1]
 	ldrsh r2, [r3, r2]
@@ -4436,7 +4436,7 @@ _0217f1c8:
 	bl func_01ff8690
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x6e]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x78
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4452,7 +4452,7 @@ _0217f1c8:
 	bl func_01ff8690
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x70]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x54
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4468,7 +4468,7 @@ _0217f1c8:
 	bl func_01ff8690
 	add r0, r6, #0x100
 	ldrh r1, [r0, #0x72]
-	ldr r3, _0217f450 ; =data_02050f54
+	ldr r3, _0217f450 ; =gSinCosTable
 	add r0, sp, #0x30
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -4498,7 +4498,7 @@ _0217f1c8:
 _0217f444: .word data_ov31_02183e88
 _0217f448: .word data_ov00_020e9360
 _0217f44c: .word 0x0000199a
-_0217f450: .word data_02050f54
+_0217f450: .word gSinCosTable
 	arm_func_end func_ov31_0217f120
 
 	.global func_ov31_0217f454

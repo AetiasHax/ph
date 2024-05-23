@@ -4364,7 +4364,7 @@ func_01ffb7ec: ; 0x01ffb7ec
 	sub sp, sp, #0x30
 	ldrh r4, [sp, #0x58]
 	mov r10, r0
-	ldr lr, _01ffbbc8 ; =data_02050f54
+	ldr lr, _01ffbbc8 ; =gSinCosTable
 	mov r0, r4, asr #0x4
 	mov ip, r0, lsl #0x1
 	add r0, ip, #1
@@ -4619,7 +4619,7 @@ _01ffbb98:
 	add sp, sp, #0x30
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_01ffbbc8: .word data_02050f54
+_01ffbbc8: .word gSinCosTable
 	arm_func_end func_01ffb7ec
 
 	.global func_01ffbbcc

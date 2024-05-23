@@ -2589,7 +2589,7 @@ func_ov40_0217df74: ; 0x0217df74
 	mov r4, r0
 	str r3, [r4, #0x5c]
 	ldr r0, [r1, #4]
-	ldr r3, _0217dfec ; =data_02050f54
+	ldr r3, _0217dfec ; =gSinCosTable
 	str r0, [r4, #0x60]
 	ldr r1, [r1, #8]
 	add r0, r4, #0x6c
@@ -2614,7 +2614,7 @@ func_ov40_0217df74: ; 0x0217df74
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0217dfec: .word data_02050f54
+_0217dfec: .word gSinCosTable
 	arm_func_end func_ov40_0217df74
 
 	.global func_ov40_0217dff0
@@ -10188,7 +10188,7 @@ _02183c24:
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
 	mov r5, r1, lsl #0x1
-	ldr r3, _02183d08 ; =data_02050f54
+	ldr r3, _02183d08 ; =gSinCosTable
 	mov r2, r0, lsl #0x1
 	mov r0, r4
 	mov r1, #0
@@ -10240,7 +10240,7 @@ _02183c24:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02183d04: .word gItemManager
-_02183d08: .word data_02050f54
+_02183d08: .word gSinCosTable
 	arm_func_end func_ov40_02183a6c
 
 	.global func_ov40_02183d0c
@@ -12191,7 +12191,7 @@ func_ov40_02185514: ; 0x02185514
 	addeq sp, sp, #0x78
 	ldmeqia sp!, {r4, r5, r6, r7, r8, pc}
 	ldrh r1, [r5, #0x78]
-	ldr r3, _02185628 ; =data_02050f54
+	ldr r3, _02185628 ; =gSinCosTable
 	add r0, sp, #0x54
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -12253,7 +12253,7 @@ func_ov40_02185514: ; 0x02185514
 	add sp, sp, #0x78
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_02185628: .word data_02050f54
+_02185628: .word gSinCosTable
 	arm_func_end func_ov40_02185514
 
 	.global func_ov40_0218562c
@@ -14140,7 +14140,7 @@ _02186df8:
 	add r0, r2, r0
 	str r0, [r4, #0xc]
 	ldrsh r0, [r4, #8]
-	ldr r2, _02186f88 ; =data_02050f54
+	ldr r2, _02186f88 ; =gSinCosTable
 	smulbb r0, r0, r1
 	mov r0, r0, lsl #0x10
 	mov r0, r0, lsr #0x10
@@ -14159,7 +14159,7 @@ _02186e50:
 	mov r1, #0xc000
 	bl Divide
 	ldr r2, [r4, #0xc]
-	ldr r1, _02186f88 ; =data_02050f54
+	ldr r1, _02186f88 ; =gSinCosTable
 	add r0, r2, r0
 	str r0, [r4, #0xc]
 	ldrsh r0, [r4, #8]
@@ -14237,7 +14237,7 @@ _02186f0c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02186f84: .word 0x00000924
-_02186f88: .word data_02050f54
+_02186f88: .word gSinCosTable
 _02186f8c: .word data_027e0c38
 _02186f90: .word 0x00007fff
 	arm_func_end func_ov40_02186cfc

@@ -355,7 +355,7 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	mov r1, r1, asr #0x4
 	mov r4, r1, lsl #0x1
 	ldr r3, _020a8358 ; =data_027e0d0c
-	ldr lr, _020a835c ; =data_02050f54
+	ldr lr, _020a835c ; =gSinCosTable
 	mov r1, r4, lsl #0x1
 	ldrsh ip, [lr, r1]
 	add r1, r4, #1
@@ -388,7 +388,7 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _020a8358: .word data_027e0d0c
-_020a835c: .word data_02050f54
+_020a835c: .word gSinCosTable
 	arm_func_end _ZN13LinkStateBase12ApplyImpulseEii
 
 	.global _ZN13LinkStateBase18func_ov00_020a8360Ei
@@ -763,7 +763,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	ldr r0, [r0, #0x2c]
 	mov r2, r1, lsl #0x1
 	rsb lr, r0, #0
-	ldr r3, _020a8840 ; =data_02050f54
+	ldr r3, _020a8840 ; =gSinCosTable
 	add r1, r2, #1
 	mov r0, r2, lsl #0x1
 	ldrsh r2, [r3, r0]
@@ -797,7 +797,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_020a8840: .word data_02050f54
+_020a8840: .word gSinCosTable
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb

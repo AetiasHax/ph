@@ -17,7 +17,7 @@
 .extern _ZN5ActorC2Ev
 .extern _ZN9SysObjectdlEPv
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0d0c
 .extern data_027e0de4
 .extern gMapManager

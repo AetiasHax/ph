@@ -115,7 +115,7 @@
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager8GetFairyEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_020561f4
 .extern data_02056be4
 .extern data_02057840

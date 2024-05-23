@@ -4777,7 +4777,7 @@ func_ov09_0211530c: ; 0x0211530c
 	bl func_ov00_020a9624
 	ldrh r1, [r9, #0x94]
 	mov r4, r0
-	ldr r3, _02115404 ; =data_02050f54
+	ldr r3, _02115404 ; =gSinCosTable
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r1, r2, lsl #0x1
@@ -4825,7 +4825,7 @@ func_ov09_0211530c: ; 0x0211530c
 	add sp, sp, #0x3c
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
-_02115404: .word data_02050f54
+_02115404: .word gSinCosTable
 	arm_func_end func_ov09_0211530c
 
 	.global func_ov09_02115408
@@ -5068,7 +5068,7 @@ _021156e8:
 	bl func_ov09_02115e38
 	add r0, r6, #0x5c
 	add r11, r6, #0x1ac
-	ldr r7, _02115a9c ; =data_02050f54
+	ldr r7, _02115a9c ; =gSinCosTable
 	str r0, [sp, #0xc]
 	mov r4, #0
 	add r8, sp, #0xac
@@ -5291,7 +5291,7 @@ _02115a44:
 	add sp, sp, #0xdc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
-_02115a9c: .word data_02050f54
+_02115a9c: .word gSinCosTable
 _02115aa0: .word data_ov09_0211e870
 	arm_func_end func_ov09_021156a4
 
@@ -17932,7 +17932,7 @@ func_ov09_0211cd40: ; 0x0211cd40
 	bl func_01ffa8d4
 	ldrh r0, [r4, #0x58]
 	mov r5, #0x190000
-	ldr r2, _0211ce60 ; =data_02050f54
+	ldr r2, _0211ce60 ; =gSinCosTable
 	mov r0, r0, asr #0x4
 	mov r1, r0, lsl #0x1
 	str r5, [sp]
@@ -17999,7 +17999,7 @@ func_ov09_0211cd40: ; 0x0211cd40
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0211ce60: .word data_02050f54
+_0211ce60: .word gSinCosTable
 _0211ce64: .word 0x00001555
 _0211ce68: .word data_027e037c
 _0211ce6c: .word data_027e03c8
@@ -18213,7 +18213,7 @@ func_ov09_0211d00c: ; 0x0211d00c
 	add r4, r1, #0
 	add r5, r0, #0
 	ldrh r0, [r4, #0x14]
-	ldr r3, _0211d08c ; =data_02050f54
+	ldr r3, _0211d08c ; =gSinCosTable
 	asr r0, r0, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -18224,7 +18224,7 @@ func_ov09_0211d00c: ; 0x0211d00c
 	add r0, sp, #0x24
 	bl func_01ff8230
 	ldrh r0, [r4, #0x10]
-	ldr r3, _0211d08c ; =data_02050f54
+	ldr r3, _0211d08c ; =gSinCosTable
 	asr r0, r0, #4
 	lsl r2, r0, #1
 	lsl r1, r2, #1
@@ -18240,7 +18240,7 @@ func_ov09_0211d00c: ; 0x0211d00c
 	blx func_01ff8690
 	ldrh r1, [r4, #0x16]
 	ldrh r0, [r4, #0x12]
-	ldr r3, _0211d08c ; =data_02050f54
+	ldr r3, _0211d08c ; =gSinCosTable
 	add r0, r1, r0
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -18269,7 +18269,7 @@ _0211d07c:
 	add sp, #0x48
 	pop {r3, r4, r5, pc}
 	.align 2, 0
-_0211d08c: .word data_02050f54
+_0211d08c: .word gSinCosTable
 	thumb_func_end func_ov09_0211d00c
 
 	.global func_ov09_0211d090

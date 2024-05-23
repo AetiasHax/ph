@@ -160,7 +160,7 @@
 .extern _ZNK11ItemManager19GetFanfareItemScaleEP5Vec3p
 .extern _ZNK11ItemManager7HasItemEi
 .extern _ZNK11ItemManager8GetFairyEi
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02056be4
 .extern data_02057200
 .extern data_020691a0

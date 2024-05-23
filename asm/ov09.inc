@@ -19,7 +19,7 @@
 .extern _ZNK11ItemManager16GetTreasureCountEj
 .extern _ZNK11ItemManager19GetEquippedShipPartEj
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02057200
 .extern data_0205785c
 .extern data_02057878

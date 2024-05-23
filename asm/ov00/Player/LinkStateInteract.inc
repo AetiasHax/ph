@@ -41,7 +41,7 @@
 .extern _ZN5Actor9GetHitboxEP8Cylinder
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0d0c
 .extern gMapManager
 .extern data_027e0fb8
