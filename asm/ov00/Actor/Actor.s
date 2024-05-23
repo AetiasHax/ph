@@ -1165,7 +1165,7 @@ _ZN5Actor18CollidesWithShieldEP8Cylinder: ; 0x020c2238
 	add r2, sp, #0
 	add r0, r0, #0x48
 	bl Vec3p_Sub
-	ldr r1, _020c22b0 ; =data_027e0fac
+	ldr r1, _020c22b0 ; =gPlayerAngle
 	ldr r0, [sp]
 	ldrsh r4, [r1]
 	ldr r1, [sp, #8]
@@ -1190,7 +1190,7 @@ _020c22a0:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _020c22ac: .word gPlayerPos
-_020c22b0: .word data_027e0fac
+_020c22b0: .word gPlayerAngle
 _020c22b4: .word gPlayer
 	arm_func_end _ZN5Actor18CollidesWithShieldEP8Cylinder
 

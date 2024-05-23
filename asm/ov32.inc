@@ -96,8 +96,8 @@
 .extern data_027e0f84
 .extern gPlayer
 .extern gPlayerPos
-.extern data_027e0fa0
-.extern data_027e0fac
+.extern gPlayerVel
+.extern gPlayerAngle
 .extern gPlayerLink
 .extern data_027e0fe0
 .extern gActorManager

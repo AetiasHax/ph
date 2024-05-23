@@ -8391,7 +8391,7 @@ _02183338:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
 _02183360:
-	ldr r1, _021834fc ; =data_027e0fa0
+	ldr r1, _021834fc ; =gPlayerVel
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
 	bl func_01ffa0f4
@@ -8502,7 +8502,7 @@ _021834e8:
 _021834f0: .word gPlayerLink
 _021834f4: .word 0x00000333
 _021834f8: .word data_027e0ffc
-_021834fc: .word data_027e0fa0
+_021834fc: .word gPlayerVel
 _02183500: .word 0x00002aab
 	arm_func_end func_ov36_02183204
 
@@ -10934,7 +10934,7 @@ func_ov36_021856cc: ; 0x021856cc
 	mov r6, r2
 	cmp r1, #0
 	beq _021857a8
-	ldr r1, _02185854 ; =data_027e0fa0
+	ldr r1, _02185854 ; =gPlayerVel
 	ldr r0, _02185858 ; =data_027e0fcc
 	ldmia r1, {r2, r5}
 	str r5, [sp, #0x10]
@@ -10988,7 +10988,7 @@ _0218577c:
 	b _0218581c
 _021857a8:
 	bl _ZN5Actor14GetAngleToLinkEv
-	ldr r1, _02185854 ; =data_027e0fa0
+	ldr r1, _02185854 ; =gPlayerVel
 	mov r4, r0, lsl #0x10
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
@@ -11032,7 +11032,7 @@ _0218581c:
 	add sp, sp, #0x18
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02185854: .word data_027e0fa0
+_02185854: .word gPlayerVel
 _02185858: .word data_027e0fcc
 _0218585c: .word gPlayerPos
 _02185860: .word gPlayerLink

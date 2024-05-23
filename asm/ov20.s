@@ -9452,7 +9452,7 @@ _02175420:
 _021754a0:
 	cmp r0, #0x96
 	bge _02175528
-	ldr r0, _021755ec ; =data_027e0fac
+	ldr r0, _021755ec ; =gPlayerAngle
 	ldrsh r2, [r0]
 	add r0, r2, #0xab
 	add r0, r0, #0x6a00
@@ -9539,7 +9539,7 @@ _021755d8:
 _021755e0: .word data_027e0f64
 _021755e4: .word data_027e0e58
 _021755e8: .word gPlayerLink
-_021755ec: .word data_027e0fac
+_021755ec: .word gPlayerAngle
 _021755f0: .word 0xffff9555
 	arm_func_end func_ov20_02175324
 

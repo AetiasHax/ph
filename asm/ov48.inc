@@ -136,7 +136,7 @@
 .extern gMapManager
 .extern gPlayer
 .extern gPlayerPos
-.extern data_027e0fac
+.extern gPlayerAngle
 .extern data_027e0fe0
 .extern gActorManager
 .extern data_027e0fe8

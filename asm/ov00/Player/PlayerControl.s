@@ -634,7 +634,7 @@ _020af5c4:
 	ldreqb r0, [r4, #0x81]
 	cmpeq r0, #0
 	beq _020af620
-	ldr r1, _020af6cc ; =data_027e0fac
+	ldr r1, _020af6cc ; =gPlayerAngle
 	ldr r0, _020af6d0 ; =data_027e0ffc
 	ldrsh r2, [r1]
 	ldr r1, _020af6d4 ; =0x0000010a
@@ -691,7 +691,7 @@ _020af694:
 	.align 2, 0
 _020af6c4: .word gAdventureFlags
 _020af6c8: .word data_027e0c68
-_020af6cc: .word data_027e0fac
+_020af6cc: .word gPlayerAngle
 _020af6d0: .word data_027e0ffc
 _020af6d4: .word 0x0000010a
 _020af6d8: .word gMapManager
@@ -1740,7 +1740,7 @@ _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
 	cmp r0, #0x400
 	bge _020b05bc
 	ldr r1, _020b05dc ; =data_027e0d0c
-	ldr r0, _020b05e0 ; =data_027e0fac
+	ldr r0, _020b05e0 ; =gPlayerAngle
 	ldr r2, [r1]
 	ldr ip, _020b05e4 ; =data_02050f54
 	str r2, [r4]
@@ -1794,7 +1794,7 @@ _020b05d0:
 	.align 2, 0
 _020b05d8: .word gPlayerPos
 _020b05dc: .word data_027e0d0c
-_020b05e0: .word data_027e0fac
+_020b05e0: .word gPlayerAngle
 _020b05e4: .word data_02050f54
 	arm_func_end _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 
@@ -1830,7 +1830,7 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	ldmgtia sp!, {r4, r5, r6, pc}
 	cmp r0, #0x400
 	bge _020b06e0
-	ldr r1, _020b076c ; =data_027e0fac
+	ldr r1, _020b076c ; =gPlayerAngle
 	ldr r0, [r4, #4]
 	ldrh r2, [r1]
 	ldr r3, _020b0770 ; =data_02050f54
@@ -1901,7 +1901,7 @@ _020b0758:
 	.align 2, 0
 _020b0764: .word 0x00000333
 _020b0768: .word gPlayerPos
-_020b076c: .word data_027e0fac
+_020b076c: .word gPlayerAngle
 _020b0770: .word data_02050f54
 _020b0774: .word gMapManager
 	arm_func_end _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p

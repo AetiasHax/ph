@@ -813,7 +813,7 @@ _0207b62c:
 	ldr r1, [r0, #4]
 	str r1, [r5, #0x60]
 	ldr r0, [r0, #8]
-	ldr r1, _0207b810 ; =data_027e0fac
+	ldr r1, _0207b810 ; =gPlayerAngle
 	str r0, [r5, #0x64]
 	mov r0, #0
 	ldrsh r1, [r1, r0]
@@ -1022,7 +1022,7 @@ _0207b800: .word gActorManager
 _0207b804: .word 0x414e4353
 _0207b808: .word gMapManager
 _0207b80c: .word gPlayerPos
-_0207b810: .word data_027e0fac
+_0207b810: .word gPlayerAngle
 _0207b814: .word data_027e0f7c
 _0207b818: .word gItemManager
 _0207b81c: .word data_ov09_0211f5dc

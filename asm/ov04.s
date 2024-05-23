@@ -874,7 +874,7 @@ func_ov04_02101188: ; 0x02101188
 	add r0, r5, #0
 	add r0, #0x31
 	strb r1, [r0]
-	ldr r1, _0210137c ; =data_027e0fac
+	ldr r1, _0210137c ; =gPlayerAngle
 	mov r0, #0
 	ldrsh r0, [r1, r0]
 	strh r0, [r5, #0x36]
@@ -1084,7 +1084,7 @@ _02101370:
 	.align 2, 0
 _02101374: .word 0x027ffc3c
 _02101378: .word data_027e0d38
-_0210137c: .word data_027e0fac
+_0210137c: .word gPlayerAngle
 _02101380: .word gPlayerPos
 _02101384: .word data_027e0618
 _02101388: .word gMapManager

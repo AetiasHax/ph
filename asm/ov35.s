@@ -8744,7 +8744,7 @@ _02183680:
 	cmp r0, #0
 	bne _021836c4
 	ldr r1, _02183758 ; =gPlayerPos
-	ldr r0, _0218375c ; =data_027e0fac
+	ldr r0, _0218375c ; =gPlayerAngle
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
 	str r3, [sp, #0x18]
@@ -8797,7 +8797,7 @@ _0218374c:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _02183758: .word gPlayerPos
-_0218375c: .word data_027e0fac
+_0218375c: .word gPlayerAngle
 _02183760: .word 0x00005554
 	arm_func_end func_ov35_0218361c
 

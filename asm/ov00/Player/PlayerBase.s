@@ -106,13 +106,13 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
 	bl func_01ffa0f4
-	ldr r1, _020a7bfc ; =data_027e0fac
+	ldr r1, _020a7bfc ; =gPlayerAngle
 	strh r0, [r1]
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
 _020a7bf8: .word gPlayerPos
-_020a7bfc: .word data_027e0fac
+_020a7bfc: .word gPlayerAngle
 	arm_func_end _ZN10PlayerBase6LookAtEP5Vec3p
 
 	.global _ZN10PlayerBase18func_ov00_020a7c00Ei
@@ -343,11 +343,11 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	str r3, [sp, #8]
 	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr ip, [r5, #4]
-	ldr r2, _020a7f6c ; =data_027e0fac
+	ldr r2, _020a7f6c ; =gPlayerAngle
 	cmp ip, r0
 	movle ip, r0
 	ldr r3, _020a7f64 ; =gPlayerPos
-	ldr r1, _020a7f70 ; =data_027e0fa0
+	ldr r1, _020a7f70 ; =gPlayerVel
 	mov r5, #0
 	ldr r0, _020a7f74 ; =data_027e0fb0
 	str r5, [r1]
@@ -386,8 +386,8 @@ _020a7f58:
 	.align 2, 0
 _020a7f64: .word gPlayerPos
 _020a7f68: .word gMapManager
-_020a7f6c: .word data_027e0fac
-_020a7f70: .word data_027e0fa0
+_020a7f6c: .word gPlayerAngle
+_020a7f70: .word gPlayerVel
 _020a7f74: .word data_027e0fb0
 _020a7f78: .word data_027e0fb8
 _020a7f7c: .word gActorManager

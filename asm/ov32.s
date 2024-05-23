@@ -3861,7 +3861,7 @@ _0217ee34:
 	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _0217ef50
-	ldr r0, _0217efd0 ; =data_027e0fac
+	ldr r0, _0217efd0 ; =gPlayerAngle
 	ldrsh r1, [r7, #0x78]
 	ldrsh r0, [r0]
 	sub r0, r1, r0
@@ -3922,7 +3922,7 @@ _0217ef94:
 _0217efc4: .word 0x00007fff
 _0217efc8: .word data_02050f54
 _0217efcc: .word gPlayer
-_0217efd0: .word data_027e0fac
+_0217efd0: .word gPlayerAngle
 _0217efd4: .word 0x00005555
 	arm_func_end func_ov32_0217eddc
 
@@ -5604,7 +5604,7 @@ func_ov32_021804a4: ; 0x021804a4
 	ldrsh r1, [r0, #0xfc]
 	ldrsh r2, [r10, #0x78]
 	ldr r0, _0218084c ; =0x0000071c
-	ldr r3, _02180850 ; =data_027e0fac
+	ldr r3, _02180850 ; =gPlayerAngle
 	smlabb r1, r1, r0, r2
 	strh r1, [r10, #0x78]
 	ldr r0, _02180854 ; =gPlayerPos
@@ -5682,7 +5682,7 @@ func_ov32_021804a4: ; 0x021804a4
 	str r0, [sp]
 	mov r0, r8
 	ldr r8, _0218085c ; =0x00000333
-	ldr r1, _02180860 ; =data_027e0fa0
+	ldr r1, _02180860 ; =gPlayerVel
 	umull ip, r8, r7, r8
 	str ip, [sp, #0xc]
 	mov ip, #0
@@ -5841,11 +5841,11 @@ _02180840:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0218084c: .word 0x0000071c
-_02180850: .word data_027e0fac
+_02180850: .word gPlayerAngle
 _02180854: .word gPlayerPos
 _02180858: .word data_02050f54
 _0218085c: .word 0x00000333
-_02180860: .word data_027e0fa0
+_02180860: .word gPlayerVel
 _02180864: .word data_027e0f6c
 _02180868: .word 0x0000ffff
 _0218086c: .word 0x00000a66

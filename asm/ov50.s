@@ -1140,7 +1140,7 @@ _02196494: .word data_ov00_020e9370
 	arm_func_start func_ov50_02196498
 func_ov50_02196498: ; 0x02196498
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _021964cc ; =data_027e0fac
+	ldr r2, _021964cc ; =gPlayerAngle
 	mov r5, r0
 	ldrsh r0, [r2]
 	mov r4, r1
@@ -1153,7 +1153,7 @@ func_ov50_02196498: ; 0x02196498
 	bl func_ov14_02148334
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_021964cc: .word data_027e0fac
+_021964cc: .word gPlayerAngle
 	arm_func_end func_ov50_02196498
 
 	.global func_ov50_021964d0
@@ -1781,7 +1781,7 @@ _02196d24: .word data_02050f54
 	arm_func_start func_ov50_02196d28
 func_ov50_02196d28: ; 0x02196d28
 	stmdb sp!, {r4, r5, r6, lr}
-	ldr r2, _02196d8c ; =data_027e0fac
+	ldr r2, _02196d8c ; =gPlayerAngle
 	mov r6, r0
 	ldrsh r0, [r2]
 	mov r5, r1
@@ -1807,7 +1807,7 @@ _02196d64:
 	str r0, [r6, #0x164]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_02196d8c: .word data_027e0fac
+_02196d8c: .word gPlayerAngle
 _02196d90: .word gPlayerLink
 	arm_func_end func_ov50_02196d28
 

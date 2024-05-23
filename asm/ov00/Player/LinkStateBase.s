@@ -292,11 +292,11 @@ _020a8234: .word func_ov00_020bbbd0
 	arm_func_start _ZN13LinkStateBase6TurnToEsii
 _ZN13LinkStateBase6TurnToEsii: ; 0x020a8238
 	stmdb sp!, {r4, lr}
-	ldr r0, _020a8274 ; =data_027e0fac
+	ldr r0, _020a8274 ; =gPlayerAngle
 	mov r4, r2
 	mov r2, r3
 	bl func_0202b154
-	ldr r0, _020a8274 ; =data_027e0fac
+	ldr r0, _020a8274 ; =gPlayerAngle
 	ldr r1, _020a8278 ; =data_027e0fcc
 	ldrsh r3, [r0]
 	ldr r0, [r1]
@@ -307,7 +307,7 @@ _ZN13LinkStateBase6TurnToEsii: ; 0x020a8238
 	bl func_ov00_020b4558
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_020a8274: .word data_027e0fac
+_020a8274: .word gPlayerAngle
 _020a8278: .word data_027e0fcc
 	arm_func_end _ZN13LinkStateBase6TurnToEsii
 
@@ -1195,10 +1195,10 @@ _020a8c54: .word gPlayerPos
 	.global _ZN13LinkStateBase12GetPlayerVelEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerVelEv
 _ZN13LinkStateBase12GetPlayerVelEv: ; 0x020a8c58
-	ldr r0, _020a8c60 ; =data_027e0fa0
+	ldr r0, _020a8c60 ; =gPlayerVel
 	bx lr
 	.align 2, 0
-_020a8c60: .word data_027e0fa0
+_020a8c60: .word gPlayerVel
 	arm_func_end _ZN13LinkStateBase12GetPlayerVelEv
 
 	.global _ZN13LinkStateBase18func_ov00_020a8c64Ev
@@ -1215,10 +1215,10 @@ _020a8c74: .word data_027e0fd4
 	.global _ZN13LinkStateBase14GetPlayerAngleEv
 	arm_func_start _ZN13LinkStateBase14GetPlayerAngleEv
 _ZN13LinkStateBase14GetPlayerAngleEv: ; 0x020a8c78
-	ldr r0, _020a8c80 ; =data_027e0fac
+	ldr r0, _020a8c80 ; =gPlayerAngle
 	bx lr
 	.align 2, 0
-_020a8c80: .word data_027e0fac
+_020a8c80: .word gPlayerAngle
 	arm_func_end _ZN13LinkStateBase14GetPlayerAngleEv
 
 	.global _ZN13LinkStateBase15GetPlayer_Unk18Ev

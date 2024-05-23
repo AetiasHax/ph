@@ -30,7 +30,7 @@
 .extern data_027e0f64
 .extern gPlayer
 .extern gPlayerPos
-.extern data_027e0fac
+.extern gPlayerAngle
 .extern gPlayerLink
 .extern data_027e0fcc
 .extern gActorManager

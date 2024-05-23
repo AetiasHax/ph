@@ -1347,7 +1347,7 @@ func_ov43_0218a674: ; 0x0218a674
 	bl _ZN10PlayerBase12CollidesWithEP8Cylinder
 	cmp r0, #0
 	beq _0218a7ac
-	ldr r0, _0218a858 ; =data_027e0fac
+	ldr r0, _0218a858 ; =gPlayerAngle
 	ldrsh r2, [r4, #0x78]
 	ldrsh r0, [r0]
 	ldr r1, _0218a85c ; =0xffff8001
@@ -1418,7 +1418,7 @@ _0218a834:
 _0218a84c: .word 0x0000099a
 _0218a850: .word data_02050f54
 _0218a854: .word gPlayer
-_0218a858: .word data_027e0fac
+_0218a858: .word gPlayerAngle
 _0218a85c: .word 0xffff8001
 _0218a860: .word 0x00005555
 _0218a864: .word 0x50424c4e

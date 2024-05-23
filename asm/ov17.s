@@ -8901,7 +8901,7 @@ func_ov17_021624e0: ; 0x021624e0
 	cmp r1, #1
 	moveq r0, #1
 	bxeq lr
-	ldr r1, _0216252c ; =data_027e0fac
+	ldr r1, _0216252c ; =gPlayerAngle
 	ldrsh r0, [r0, #0xc]
 	ldrsh r1, [r1]
 	sub r1, r1, #0x8000
@@ -8919,7 +8919,7 @@ _02162524:
 	mov r0, #1
 	bx lr
 	.align 2, 0
-_0216252c: .word data_027e0fac
+_0216252c: .word gPlayerAngle
 	arm_func_end func_ov17_021624e0
 
 	.global func_ov17_02162530

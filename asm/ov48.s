@@ -2080,7 +2080,7 @@ _021918a4:
 	bl _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	cmp r0, #0
 	beq _02191964
-	ldr r1, _02191c3c ; =data_027e0fac
+	ldr r1, _02191c3c ; =gPlayerAngle
 	mov r0, r4
 	ldrsh r6, [r1]
 	bl _ZN5Actor14GetAngleToLinkEv
@@ -2298,7 +2298,7 @@ _02191c2c: .word 0x00000333
 _02191c30: .word gMapManager
 _02191c34: .word gItemManager
 _02191c38: .word gPlayer
-_02191c3c: .word data_027e0fac
+_02191c3c: .word gPlayerAngle
 _02191c40: .word 0x00000b33
 _02191c44: .word data_027e0e58
 _02191c48: .word data_027e0ffc

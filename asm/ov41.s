@@ -4719,7 +4719,7 @@ func_ov41_0218d210: ; 0x0218d210
 	ldmia r1, {r0, r1, r2}
 	stmia r4, {r0, r1, r2}
 	ldr r0, [r3]
-	ldr r1, _0218d318 ; =data_027e0fac
+	ldr r1, _0218d318 ; =gPlayerAngle
 	ldr r2, [r0]
 	ldrsh r4, [r1]
 	ldr r2, [r2, #4]
@@ -4779,7 +4779,7 @@ _0218d2fc:
 	.align 2, 0
 _0218d310: .word gPlayerPos
 _0218d314: .word gPlayer
-_0218d318: .word data_027e0fac
+_0218d318: .word gPlayerAngle
 _0218d31c: .word gMapManager
 _0218d320: .word 0xffff8001
 	arm_func_end func_ov41_0218d210

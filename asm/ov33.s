@@ -3194,7 +3194,7 @@ func_ov33_0217e640: ; 0x0217e640
 	mov r4, r0
 	ldmia r1, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
-	ldr ip, _0217e6f0 ; =data_027e0fa0
+	ldr ip, _0217e6f0 ; =gPlayerVel
 	add r3, sp, #4
 	ldmia ip, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -3233,7 +3233,7 @@ _0217e6c8:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 _0217e6ec: .word gPlayerPos
-_0217e6f0: .word data_027e0fa0
+_0217e6f0: .word gPlayerVel
 _0217e6f4: .word 0x000024cd
 _0217e6f8: .word 0x000038a4
 	arm_func_end func_ov33_0217e640
@@ -3892,7 +3892,7 @@ _0217efbc:
 	b _0217f1b8
 _0217efd8:
 	bl _ZN5Actor18func_ov00_020c195cEv
-	ldr r1, _0217f3d4 ; =data_027e0fac
+	ldr r1, _0217f3d4 ; =gPlayerAngle
 	ldr r0, _0217f3d8 ; =gPlayerLink
 	ldrsh r1, [r1]
 	strh r1, [r4, #0x78]
@@ -4168,7 +4168,7 @@ _0217f3c0:
 	.align 2, 0
 _0217f3cc: .word data_027e0ffc
 _0217f3d0: .word 0x00000242
-_0217f3d4: .word data_027e0fac
+_0217f3d4: .word gPlayerAngle
 _0217f3d8: .word gPlayerLink
 _0217f3dc: .word data_ov33_0217fb80
 _0217f3e0: .word data_02050f54

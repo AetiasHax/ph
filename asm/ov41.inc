@@ -85,7 +85,7 @@
 .extern data_027e0f78
 .extern gPlayer
 .extern gPlayerPos
-.extern data_027e0fac
+.extern gPlayerAngle
 .extern gPlayerLink
 .extern data_027e0fd0
 .extern data_027e0fe0

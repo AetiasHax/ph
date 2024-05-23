@@ -1482,7 +1482,7 @@ _02196768:
 _021967ec:
 	mov r0, r5
 	bl func_ov52_0219699c
-	ldr r0, _021968a8 ; =data_027e0fa0
+	ldr r0, _021968a8 ; =gPlayerVel
 	bl Vec3p_Length
 	ldr r1, _021968ac ; =0x0000019a
 	cmp r0, r1
@@ -1533,7 +1533,7 @@ _02196890:
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_021968a8: .word data_027e0fa0
+_021968a8: .word gPlayerVel
 _021968ac: .word 0x0000019a
 _021968b0: .word 0x0000099a
 _021968b4: .word data_027e0ff8

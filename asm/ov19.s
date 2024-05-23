@@ -8543,7 +8543,7 @@ _0217467c:
 	ldr r4, _0217478c ; =gPlayerPos
 	add r0, r7, #0x48
 	mov r1, r4
-	ldr r5, _02174790 ; =data_027e0fa0
+	ldr r5, _02174790 ; =gPlayerVel
 	bl func_ov00_020ce2f0
 	ldr r1, [r7, #0x34c]
 	cmp r1, #0
@@ -8613,7 +8613,7 @@ _0217475c:
 _02174784: .word gActorManager
 _02174788: .word 0x424f4d42
 _0217478c: .word gPlayerPos
-_02174790: .word data_027e0fa0
+_02174790: .word gPlayerVel
 _02174794: .word 0x0000019a
 _02174798: .word gMapManager
 	arm_func_end func_ov19_021745b8

@@ -10,8 +10,8 @@
 .extern data_027e0f64
 .extern gAdventureFlags
 .extern gPlayerPos
-.extern data_027e0fa0
-.extern data_027e0fac
+.extern gPlayerVel
+.extern gPlayerAngle
 .extern data_027e0fb0
 .extern data_027e0fb8
 .extern gActorManager

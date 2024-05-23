@@ -3698,7 +3698,7 @@ func_ov26_0217027c: ; 0x0217027c
 	mov r2, #0
 	str r2, [r4, #0x60]
 	str r2, [r4, #0x68]
-	ldr r1, _02170318 ; =data_027e0fac
+	ldr r1, _02170318 ; =gPlayerAngle
 	str r2, [r4, #0x64]
 	ldrsh r5, [r1]
 	bl _ZN5Actor14GetAngleToLinkEv
@@ -3733,7 +3733,7 @@ func_ov26_0217027c: ; 0x0217027c
 	strh r0, [r4, #0x9c]
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02170318: .word data_027e0fac
+_02170318: .word gPlayerAngle
 _0217031c: .word data_027e0764
 	arm_func_end func_ov26_0217027c
 
@@ -3747,7 +3747,7 @@ func_ov26_02170320: ; 0x02170320
 	ldrsh r3, [r4, #0x78]
 	ldrsh r2, [r6, #0xea]
 	ldr r0, _02170574 ; =0x0000071c
-	ldr r1, _02170578 ; =data_027e0fac
+	ldr r1, _02170578 ; =gPlayerAngle
 	smlabb r0, r2, r0, r3
 	strh r0, [r4, #0x78]
 	ldrsh r0, [r6, #0xe8]
@@ -3805,7 +3805,7 @@ func_ov26_02170320: ; 0x02170320
 	mov r1, r1, asr #0x4
 	mov r1, r1, lsl #0x2
 	ldrsh r8, [r3, r1]
-	ldr r1, _02170588 ; =data_027e0fa0
+	ldr r1, _02170588 ; =gPlayerVel
 	mov r2, r0
 	mov r5, r8, asr #0x1f
 	mov r9, r5, lsl #0xa
@@ -3891,11 +3891,11 @@ func_ov26_02170320: ; 0x02170320
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _02170574: .word 0x0000071c
-_02170578: .word data_027e0fac
+_02170578: .word gPlayerAngle
 _0217057c: .word data_02050f54
 _02170580: .word 0x0000019a
 _02170584: .word gPlayerPos
-_02170588: .word data_027e0fa0
+_02170588: .word gPlayerVel
 _0217058c: .word gMapManager
 	arm_func_end func_ov26_02170320
 
@@ -14873,7 +14873,7 @@ func_ov26_02178cbc: ; 0x02178cbc
 	bl func_ov14_021418ec
 	cmp r0, #0
 	beq _02178d78
-	ldr r1, _02178e38 ; =data_027e0fa0
+	ldr r1, _02178e38 ; =gPlayerVel
 	add r0, sp, #0x14
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
@@ -14920,7 +14920,7 @@ _02178d78:
 	cmp r0, #0
 	addeq sp, sp, #0x2c
 	ldmeqia sp!, {r4, r5, pc}
-	ldr r1, _02178e38 ; =data_027e0fa0
+	ldr r1, _02178e38 ; =gPlayerVel
 	add r0, sp, #8
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
@@ -14963,7 +14963,7 @@ _02178e0c:
 	add sp, sp, #0x2c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_02178e38: .word data_027e0fa0
+_02178e38: .word gPlayerVel
 _02178e3c: .word 0x00000102
 _02178e40: .word data_027e1038
 _02178e44: .word data_027e0e58

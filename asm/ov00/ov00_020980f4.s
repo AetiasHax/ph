@@ -4795,7 +4795,7 @@ func_ov00_0209be6c: ; 0x0209be6c
 	mov r3, #0
 	mov r4, r0
 	bl func_ov00_020908f8
-	ldr r1, _0209be9c ; =data_027e0fac
+	ldr r1, _0209be9c ; =gPlayerAngle
 	mov r0, r4
 	ldrsh r1, [r1]
 	sub r1, r1, #0x8000
@@ -4804,7 +4804,7 @@ func_ov00_0209be6c: ; 0x0209be6c
 	bl func_ov00_02090ac8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0209be9c: .word data_027e0fac
+_0209be9c: .word gPlayerAngle
 	arm_func_end func_ov00_0209be6c
 
 	.global func_ov00_0209bea0
@@ -4813,7 +4813,7 @@ func_ov00_0209bea0: ; 0x0209bea0
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x18
 	ldr r2, _0209bf44 ; =gPlayerPos
-	ldr r1, _0209bf48 ; =data_027e0fa0
+	ldr r1, _0209bf48 ; =gPlayerVel
 	ldr r4, [r2]
 	ldr r3, [r2, #4]
 	str r4, [sp, #0xc]
@@ -4829,7 +4829,7 @@ func_ov00_0209bea0: ; 0x0209bea0
 	mov r4, r0
 	str r3, [sp, #4]
 	bl func_ov00_02090e10
-	ldr r2, _0209bf4c ; =data_027e0fac
+	ldr r2, _0209bf4c ; =gPlayerAngle
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
 	ldrsh r5, [r2]
@@ -4853,8 +4853,8 @@ func_ov00_0209bea0: ; 0x0209bea0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _0209bf44: .word gPlayerPos
-_0209bf48: .word data_027e0fa0
-_0209bf4c: .word data_027e0fac
+_0209bf48: .word gPlayerVel
+_0209bf4c: .word gPlayerAngle
 	arm_func_end func_ov00_0209bea0
 
 	.global func_ov00_0209bf50
@@ -6106,7 +6106,7 @@ func_ov00_0209ce78: ; 0x0209ce78
 	mov r0, r4
 	bl func_ov00_02090b68
 _0209cee4:
-	ldr r1, _0209cf60 ; =data_027e0fac
+	ldr r1, _0209cf60 ; =gPlayerAngle
 	mov r0, r4
 	ldrsh r1, [r1]
 	sub r1, r1, #0x8000
@@ -6138,7 +6138,7 @@ _0209cee4:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _0209cf5c: .word gPlayerPos
-_0209cf60: .word data_027e0fac
+_0209cf60: .word gPlayerAngle
 	arm_func_end func_ov00_0209ce78
 
 	.global func_ov00_0209cf64
@@ -6147,7 +6147,7 @@ func_ov00_0209cf64: ; 0x0209cf64
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x48
 	ldr r2, _0209d098 ; =gPlayerPos
-	ldr r1, _0209d09c ; =data_027e0fa0
+	ldr r1, _0209d09c ; =gPlayerVel
 	ldr r4, [r2]
 	ldr r3, [r2, #4]
 	str r4, [sp, #0x3c]
@@ -6223,7 +6223,7 @@ func_ov00_0209cf64: ; 0x0209cf64
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _0209d098: .word gPlayerPos
-_0209d09c: .word data_027e0fa0
+_0209d09c: .word gPlayerVel
 _0209d0a0: .word data_ov00_020e2fa8
 	arm_func_end func_ov00_0209cf64
 
@@ -6324,7 +6324,7 @@ _0209d1b8:
 _0209d1cc:
 	cmp r5, #1
 	bne _0209d1ec
-	ldr r0, _0209d284 ; =data_027e0fac
+	ldr r0, _0209d284 ; =gPlayerAngle
 	ldrsh r0, [r0]
 	sub r0, r0, #0x8000
 	mov r0, r0, lsl #0x10
@@ -6336,7 +6336,7 @@ _0209d1ec:
 	mov r8, r0, asr #0x10
 	b _0209d210
 _0209d1fc:
-	ldr r0, _0209d284 ; =data_027e0fac
+	ldr r0, _0209d284 ; =gPlayerAngle
 	ldrsh r0, [r0]
 	sub r0, r0, #0x8000
 	mov r0, r0, lsl #0x10
@@ -6374,7 +6374,7 @@ _0209d26c:
 	bl func_ov00_020908f8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_0209d284: .word data_027e0fac
+_0209d284: .word gPlayerAngle
 	arm_func_end func_ov00_0209d134
 
 	.global func_ov00_0209d288
@@ -12660,7 +12660,7 @@ func_ov00_020a1fd0: ; 0x020a1fd0
 	ldr r3, [r7, #0x1c]
 	ldr r2, [r7, #0x20]
 	ldr r0, [r7, #0x18]
-	ldr r1, _020a2220 ; =data_027e0fac
+	ldr r1, _020a2220 ; =gPlayerAngle
 	str r4, [sp, #4]
 	str r2, [sp, #8]
 	str r0, [sp]
@@ -12804,7 +12804,7 @@ _020a21d0:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, pc}
 	.align 2, 0
-_020a2220: .word data_027e0fac
+_020a2220: .word gPlayerAngle
 _020a2224: .word gMapManager
 	arm_func_end func_ov00_020a1fd0
 
@@ -12886,7 +12886,7 @@ func_ov00_020a22d0: ; 0x020a22d0
 	ldr r1, _020a239c ; =gPlayerPos
 	str r0, [r5, #0x1c]
 	ldr r0, [r1]
-	ldr r3, _020a23a0 ; =data_027e0fac
+	ldr r3, _020a23a0 ; =gPlayerAngle
 	str r0, [r5, #0x20]
 	ldr r2, [r1, #4]
 	mov r0, r5
@@ -12931,7 +12931,7 @@ _020a238c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _020a239c: .word gPlayerPos
-_020a23a0: .word data_027e0fac
+_020a23a0: .word gPlayerAngle
 	arm_func_end func_ov00_020a22d0
 
 	.global func_ov00_020a23a4

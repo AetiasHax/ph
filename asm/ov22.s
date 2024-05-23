@@ -647,7 +647,7 @@ func_ov22_0216ded8: ; 0x0216ded8
 	mov r5, r0
 	cmp r1, #0
 	beq _0216df08
-	ldr r0, _0216e150 ; =data_027e0fac
+	ldr r0, _0216e150 ; =gPlayerAngle
 	ldrsh r0, [r0]
 	bl func_0202bbbc
 	str r0, [r5, #0x164]
@@ -814,7 +814,7 @@ _0216e108:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_0216e150: .word data_027e0fac
+_0216e150: .word gPlayerAngle
 _0216e154: .word data_027e0764
 _0216e158: .word data_027e0e58
 _0216e15c: .word 0x00000245

@@ -3974,18 +3974,13 @@ gPlayer:
 	.global gPlayerPos
 gPlayerPos:
 	.space 0xc
-	.global data_027e0fa0
-data_027e0fa0:
-	.space 0x4
-	.global data_027e0fa4
-data_027e0fa4:
-	.space 0x4
-	.global data_027e0fa8
-data_027e0fa8:
-	.space 0x4
-	.global data_027e0fac
-data_027e0fac:
-	.space 0x4
+	.global gPlayerVel
+gPlayerVel:
+	.space 0xc
+	.global gPlayerAngle
+gPlayerAngle:
+	.space 0x2
+	.space 0x2
 	.global data_027e0fb0
 data_027e0fb0:
 	.space 0x4

@@ -190,8 +190,8 @@
 .extern data_027e0f78
 .extern gPlayer
 .extern gPlayerPos
-.extern data_027e0fa0
-.extern data_027e0fac
+.extern gPlayerVel
+.extern gPlayerAngle
 .extern data_027e0fb8
 .extern gHealthManager
 .extern data_027e0fc4

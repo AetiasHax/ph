@@ -439,7 +439,7 @@ _0216db80:
 	str r3, [sp, #0x1c]
 	bl _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	str r0, [r4, #0x18]
-	ldr r0, _0216dcd4 ; =data_027e0fac
+	ldr r0, _0216dcd4 ; =gPlayerAngle
 	add r2, r4, #0x14
 	ldrsh r4, [r0]
 	add r1, sp, #4
@@ -456,7 +456,7 @@ _0216db80:
 _0216dcc8: .word data_027e0fe8
 _0216dccc: .word gPlayerPos
 _0216dcd0: .word gMapManager
-_0216dcd4: .word data_027e0fac
+_0216dcd4: .word gPlayerAngle
 	arm_func_end func_ov25_0216daa4
 
 	.global func_ov25_0216dcd8
@@ -3798,7 +3798,7 @@ _021709d4:
 	bl _ZN5Actor14GetAngleToLinkEv
 	ldr r1, _02170d54 ; =gPlayerLink
 	sub r3, r0, #0x8000
-	ldr r2, _02170d5c ; =data_027e0fac
+	ldr r2, _02170d5c ; =gPlayerAngle
 	ldr r0, [r1]
 	mvn r1, #0
 	strh r3, [r2]
@@ -3997,7 +3997,7 @@ _02170d38:
 	.align 2, 0
 _02170d54: .word gPlayerLink
 _02170d58: .word data_027e0fb8
-_02170d5c: .word data_027e0fac
+_02170d5c: .word gPlayerAngle
 _02170d60: .word data_ov25_0217a880
 _02170d64: .word data_027e0ff0
 _02170d68: .word gAdventureFlags
