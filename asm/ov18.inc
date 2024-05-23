@@ -139,7 +139,7 @@
 .extern Vec3p_Add
 .extern Vec3p_Sub
 .extern Vec3p_Length
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern Atan2
 .extern func_01ffa8d4
 .extern func_01ffa9fc

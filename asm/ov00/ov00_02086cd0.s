@@ -206,7 +206,7 @@ func_ov00_02086ed4: ; 0x02086ed4
 	add r0, sp, #0x24
 	mov r1, r3
 	str ip, [sp, #0x1c]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0xa000
 	bge _02086fb0
 	ldr r0, _02087080 ; =data_027e0d38
@@ -3154,7 +3154,7 @@ _0208970c:
 	str r3, [sp, #0x48]
 	str r2, [sp, #0x4c]
 	str r8, [sp, #0x50]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0
 	bne _02089770
 	add sp, sp, #0x130
@@ -11275,7 +11275,7 @@ _02090004:
 	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
 	add r0, sp, #0x74
 	add r1, sp, #0x5c
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x2000
 	blt _02090144
 	ldr r0, _02090320 ; =gMapManager
@@ -11390,7 +11390,7 @@ _0209025c:
 	add r0, sp, #0x24
 	str r3, [sp, #0x2c]
 	str r2, [sp, #0x28]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1800
 	sublt r6, r6, #1
 	addlt r5, r5, #1
@@ -11736,7 +11736,7 @@ _02090688:
 _020906a8:
 	ldr r1, _0209076c ; =gPlayerPos
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	bgt _020906fc
 	mov r0, r4
@@ -11749,7 +11749,7 @@ _020906cc:
 	blt _020906fc
 	ldr r1, _0209076c ; =gPlayerPos
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	ble _020906fc
 	mov r0, r4

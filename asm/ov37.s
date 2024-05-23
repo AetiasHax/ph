@@ -12559,7 +12559,7 @@ func_ov37_02186b68: ; 0x02186b68
 	add r0, r4, #0xc
 	add r1, sp, #0x2c
 	add r0, r0, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r1, r4, #0xc
 	mov r5, r0
 	add r0, r1, #0x400

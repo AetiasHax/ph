@@ -22561,7 +22561,7 @@ func_020104b8: ; 0x020104b8
 	add r2, r2, r2, lsr #31
 	mov r2, r2, asr #0x1
 	str r2, [r6, #0x30]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r0, r0, r0, lsr #31
 	mov r0, r0, asr #0x1
 	str r0, [r6, #0x60]
@@ -57329,7 +57329,7 @@ func_0202b03c: ; 0x0202b03c
 	mov r4, #0
 	ble _0202b0e8
 	ldr r1, [sp, #0x28]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r6
 	bgt _0202b0e8
 	cmp r5, #0x168000

@@ -7197,7 +7197,7 @@ _0212586c:
 	bl func_ov15_02123524
 	add r0, r5, #0x15c
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r3, sp, #0x24
 	add r1, r5, #0x168
 	mov r6, r0
@@ -7617,7 +7617,7 @@ _02125e44:
 	add r1, sp, #0x18
 	add r0, r5, #0x48
 	str r2, [sp, #0x1c]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02125f7c ; =0x0000019a
 	cmp r0, r1
 	bge _02125eb4
@@ -8054,7 +8054,7 @@ func_ov15_02126398: ; 0x02126398
 	ldr r2, [r4, #0x1c]
 	add r0, r4, #0x18
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0xa8]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
@@ -10146,7 +10146,7 @@ func_ov15_02127ba8: ; 0x02127ba8
 	ldr r2, [r4, #0x1c]
 	add r0, r4, #0x18
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x80]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
@@ -10700,7 +10700,7 @@ func_ov15_021282e8: ; 0x021282e8
 	ldr r2, [r4, #0x1c]
 	add r0, r4, #0x18
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x80]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
@@ -11467,7 +11467,7 @@ func_ov15_02128d8c: ; 0x02128d8c
 	ldr r2, [r4, #0x1c]
 	add r0, r4, #0x18
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x80]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
@@ -14301,7 +14301,7 @@ func_ov15_0212b30c: ; 0x0212b30c
 	add r1, sp, #0xc
 	str r2, [sp, #8]
 	str r3, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x20000
 	addlt sp, sp, #0x18
 	movlt r0, #0
@@ -20644,7 +20644,7 @@ _02130a70:
 	bne _02130aa8
 	ldr r0, _02130bb8 ; =gPlayerPos
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0xa000
 	addge sp, sp, #0x34
 	ldmgeia sp!, {r3, r4, pc}
@@ -20745,7 +20745,7 @@ func_ov15_02130bbc: ; 0x02130bbc
 	ldmeqia sp!, {r4, pc}
 	ldr r0, _02130c34 ; =gPlayerPos
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x6000
 	bge _02130c28
 	mov r0, r4
@@ -24373,7 +24373,7 @@ func_ov15_02133e98: ; 0x02133e98
 	mov r0, r3
 	orr r5, r5, r1, lsl #20
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r5
 	bge _02133f5c
 	ldrh r0, [r4, #0x22]
@@ -25390,7 +25390,7 @@ _02134c70:
 	beq _02134cdc
 	ldr r1, _02134cf8 ; =gPlayerPos
 	add r0, r6, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, #0xa
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -25430,7 +25430,7 @@ func_ov15_02134cfc: ; 0x02134cfc
 	beq _02134d5c
 	ldr r1, _02134d68 ; =gPlayerPos
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, #0xa
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -25950,7 +25950,7 @@ func_ov15_0213543c: ; 0x0213543c
 	bne _02135470
 	ldr r1, _02135480 ; =gPlayerPos
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, #0xa
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -26207,7 +26207,7 @@ func_ov15_021356e8: ; 0x021356e8
 	ldr r2, [r0, #0x50]
 	add r0, sp, #0
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0xd000
 	ldrlt r0, _021358dc ; =0x0000051f
 	cmplt r5, r0
@@ -34928,7 +34928,7 @@ _0213d024:
 	add r1, sp, #0x18
 	mov r0, r5
 	str r2, [sp, #0x20]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	subs r8, r8, r0
 	bmi _0213d09c
 	ldrh r1, [r9, #0xc]
@@ -35278,7 +35278,7 @@ _0213d44c:
 _0213d488:
 	mov r0, r4
 	mov r1, r6
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r7
 	movle r0, #2
 	ldmleia sp!, {r3, r4, r5, r6, r7, pc}
@@ -35334,7 +35334,7 @@ _0213d53c:
 	mov r0, #0xc
 	smlabb r0, r2, r0, r1
 	ldr r1, _0213d5e8 ; =gPlayerPos
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x2000
 	bge _0213d5b4
 	ldrsh r0, [r5, #0xe]
@@ -35412,7 +35412,7 @@ _0213d648:
 	ldr r0, [r10, #4]
 	mov r1, r4
 	add r0, r0, r8
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r7
 	movlt r7, r0
 	add r0, r5, #1
@@ -43870,7 +43870,7 @@ _02144928:
 	add r1, r4, #0xb8
 	add r0, r0, #0x400
 	add r1, r1, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r3, r4, #0xb8
 	add r1, r4, #0xc4
 	str r0, [r4, #0x468]
@@ -46736,7 +46736,7 @@ func_ov15_02146efc: ; 0x02146efc
 	ldr r2, [r0, #0x1c]
 	add r0, r0, #0x18
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x30000
 	movle r0, #1
 	movgt r0, #0
@@ -48567,7 +48567,7 @@ _021488b4:
 	str r2, [sp, #8]
 	ldr r2, [r5, #0x50]
 	str r2, [sp, #0xc]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r4
 	ble _021489b4
 	smull r0, r2, r4, r4
@@ -57821,7 +57821,7 @@ _02150578:
 	bl func_ov00_020c6940
 	add r0, sp, #0x48
 	add r1, sp, #0x64
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x32000
 	bge _021505d4
 	cmp r9, #0
@@ -60300,7 +60300,7 @@ func_ov15_02152694: ; 0x02152694
 	add r0, r4, #0xc4
 	mov r1, ip
 	add r0, r0, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r3, r4, #0xb8
 	add r1, r4, #0xc4
 	str r0, [r4, #0x468]
@@ -69432,7 +69432,7 @@ _0215a5f8:
 	str r3, [sp, #4]
 	ldr r2, [r2, #0xc]
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, [r10, #0x1ec]
 	add r1, r10, r1, lsl #2
 	str r0, [r1, #0x214]
@@ -69443,7 +69443,7 @@ _0215a5f8:
 _0215a680:
 	add r0, r10, #0x48
 	add r1, r2, #4
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r0, r0, lsl #0x1
 	str r0, [r10, #0x224]
 	str r0, [r10, #0x220]
@@ -71796,7 +71796,7 @@ _0215c710:
 	str r2, [sp, #0xc]
 	ldr r2, [r10, #8]
 	str r2, [sp, #0x10]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r7
 	ble _0215c7a8
 	ldr r3, [sp, #0x38]
@@ -71861,7 +71861,7 @@ _0215c824:
 	str r2, [sp, #8]
 	ldr r2, [r10, #8]
 	str r2, [sp, #0xc]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r7
 	ble _0215c888
 	ldr r3, [sp, #0x28]
@@ -72264,7 +72264,7 @@ _0215cda8:
 	add r1, sp, #0xc
 	str r3, [sp, #0x18]
 	str r2, [sp, #0x20]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, [r4]
 	cmp r0, r1
 	bge _0215ced0
@@ -78473,7 +78473,7 @@ _021621c4:
 	bl func_ov00_020c6940
 	add r0, sp, #0x44
 	add r1, sp, #0x60
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x32000
 	bge _02162220
 	cmp r9, #0
@@ -98230,7 +98230,7 @@ _02173264:
 	add r1, r6, #0x11c
 	add r0, sp, #0x2c
 	add r1, r1, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, r7, asr #0x4
 	mov r3, r1, lsl #0x1
 	add r1, r3, #1
@@ -98522,7 +98522,7 @@ _021736a4:
 	mov r1, r5
 	str r3, [sp, #0x10]
 	str r2, [sp, #0x14]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x18]
 	ldr r2, [sp, #0x10]
 	ldr r0, [r5, #4]
@@ -105360,7 +105360,7 @@ func_ov15_0217934c: ; 0x0217934c
 	orr r3, r3, r2, lsl #20
 	add r2, r5, r3
 	str r2, [sp, #0xa8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, [sp, #0xb8]
 	add r1, r1, #0x2000
 	cmp r0, r1
@@ -109046,7 +109046,7 @@ _0217c738:
 	beq _0217c7a4
 	ldr r1, _0217c7f4 ; =gPlayerPos
 	add r0, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, #0xa
 	mul r1, r0, r1
 	add r0, r1, #0x800
@@ -115243,7 +115243,7 @@ func_ov15_02181b5c: ; 0x02181b5c
 	bl func_0202b2e8
 	ldr r1, _02181c3c ; =gPlayerPos
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x5000
 	addge sp, sp, #0x14
 	ldmgeia sp!, {r3, r4, pc}
@@ -116071,7 +116071,7 @@ _021827a8:
 	mov r1, r5
 	str r3, [sp, #0x10]
 	str r2, [sp, #0x14]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x18]
 	ldr r2, [sp, #0x10]
 	ldr r0, [r5, #4]
@@ -116779,7 +116779,7 @@ _02182ff0:
 _021830c0:
 	add r0, sp, #0x30
 	add r1, r6, #0x324
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, r7, asr #0x4
 	mov r3, r1, lsl #0x1
 	add r1, r3, #1
@@ -118716,7 +118716,7 @@ func_ov15_02184a40: ; 0x02184a40
 	tst r0, #0xff
 	ldmneia sp!, {r3, r4, r5, pc}
 	ldr r0, _02184a88 ; =gPlayerPos
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, r0
 	mov r0, r5
 	mov r2, r4
@@ -119656,7 +119656,7 @@ func_ov15_02185638: ; 0x02185638
 	stmia r4, {r0, r1, r2}
 	mov r0, r4
 	mov r1, r5
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x28000
 	movle r4, #0x7f
 	ble _021856c0

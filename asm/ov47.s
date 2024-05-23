@@ -759,7 +759,7 @@ _02190964:
 	bl Vec3p_Add
 	add r0, sp, #0x84
 	add r1, sp, #0x78
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02190ddc ; =0x00001666
 	cmp r0, r1
 	bgt _02190a84

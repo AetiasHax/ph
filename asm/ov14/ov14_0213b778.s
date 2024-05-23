@@ -3786,7 +3786,7 @@ _0213e42c:
 _0213e44c:
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r4
 	ldrsh r0, [r10, #0xa]
 	bge _0213e484
@@ -4178,7 +4178,7 @@ _0213e788:
 	bhs _0213ea5c
 	add r1, r6, r5, lsl #2
 	ldr r1, [r1, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r1, #0x3c000
 	umull r7, r3, r0, r1
 	mov r1, #0
@@ -21834,7 +21834,7 @@ func_ov14_0214c450: ; 0x0214c450
 	ldr r2, [r1, #8]
 	mov r1, r4
 	str r2, [r4, #0x14]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r4, #0x18]
 	mov r0, #0
 	str r0, [r4, #0x1c]

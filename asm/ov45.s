@@ -4353,7 +4353,7 @@ func_ov45_0218cb5c: ; 0x0218cb5c
 	add r2, r0, #0x1000
 	mov r0, r3
 	str r2, [sp, #0x18]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r4, r0
 	add r1, sp, #0
 	mov r0, r5

@@ -713,7 +713,7 @@ _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: ; 0x020af6e4
 	cmp r5, #0
 	ble _020af72c
 	ldr r0, _020af770 ; =gPlayerPos
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r5
 	addge sp, sp, #4
 	ldmgeia sp!, {r3, r4, r5, r6, pc}
@@ -1055,7 +1055,7 @@ _020afbcc:
 	beq _020afce8
 	ldr r0, _020afe78 ; =gPlayerPos
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r6, r0
 	add r1, sp, #0x10
 	mov r0, r5
@@ -1210,7 +1210,7 @@ _020afdc4:
 _020afe10:
 	ldr r0, _020afe78 ; =gPlayerPos
 	add r1, sp, #4
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r6, r0
 	b _020afe2c
 _020afe24:
@@ -1823,7 +1823,7 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	ldr r2, [r1, #4]
 	add r0, sp, #4
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1400
 	addgt sp, sp, #0x10
 	movgt r0, #0

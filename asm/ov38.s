@@ -2020,7 +2020,7 @@ func_ov38_0217d918: ; 0x0217d918
 	bl Vec3p_Add
 	add r0, r7, #0x48
 	add r1, r7, #0x14
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x3000
 	bge _0217d9f0
 	add r1, sp, #0xc

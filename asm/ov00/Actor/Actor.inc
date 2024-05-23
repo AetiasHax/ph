@@ -37,7 +37,7 @@
 .extern Vec3p_Add
 .extern Vec3p_Sub
 .extern Vec3p_Length
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern Atan2
 .extern func_01ffbe34
 .extern _ZN8Cylinder8OverlapsEPS_

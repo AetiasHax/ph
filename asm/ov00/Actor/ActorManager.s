@@ -423,7 +423,7 @@ _020c3930:
 	bne _020c397c
 	mov r1, r7
 	add r0, r2, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r4
 	bge _020c397c
 	ldr r1, [r5]

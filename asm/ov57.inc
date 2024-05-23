@@ -45,7 +45,7 @@
 .extern Vec3p_Add
 .extern Vec3p_Sub
 .extern Vec3p_Length
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern func_01ffa9fc
 .extern func_01ffbe78
 .extern func_01fffcec

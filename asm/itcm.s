@@ -2328,9 +2328,9 @@ Vec3p_Axpy: ; 0x01ff9e64
 	ldmia sp!, {r4, pc}
 	arm_func_end Vec3p_Axpy
 
-	.global func_01ff9ec0
-	arm_func_start func_01ff9ec0
-func_01ff9ec0: ; 0x01ff9ec0
+	.global Vec3p_Distance
+	arm_func_start Vec3p_Distance
+Vec3p_Distance: ; 0x01ff9ec0
 	stmdb sp!, {r4, lr}
 	ldr r3, [r0, #4]
 	ldr r2, [r1, #4]
@@ -2364,7 +2364,7 @@ _01ff9f14:
 	.align 2, 0
 _01ff9f34: .word 0x040002b0
 _01ff9f38: .word 0x040002b4
-	arm_func_end func_01ff9ec0
+	arm_func_end Vec3p_Distance
 
 	.global func_01ff9f3c
 	arm_func_start func_01ff9f3c
@@ -7649,7 +7649,7 @@ _01ffe874:
 	ldr r3, [r3, #8]
 	mov r1, r9
 	mla r0, r2, r0, r3
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r8
 	movge r0, #0
 	blt _01ffe8c8

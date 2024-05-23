@@ -44,7 +44,7 @@
 .extern data_ov09_0211f5dc
 .extern func_01ff892c
 .extern func_01ff9b4c
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern func_01ffa8d4
 .extern func_01ffe468
 .extern func_02004730

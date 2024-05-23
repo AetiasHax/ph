@@ -18475,7 +18475,7 @@ _020a6970:
 	str r2, [sp, #0x10]
 	str r4, [sp, #0x14]
 	str r3, [sp, #0x18]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r4, r0
 	cmp r4, #0x1800
 	bgt _020a6ad0

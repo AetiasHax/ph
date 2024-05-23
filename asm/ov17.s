@@ -4513,7 +4513,7 @@ _0215edf4:
 _0215ee1c:
 	ldr r0, _0215ee58 ; =gPlayerPos
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	ble _0215ee3c
 	mov r0, r4
@@ -5167,7 +5167,7 @@ _0215f6a4:
 _0215f6cc:
 	ldr r0, _0215f714 ; =gPlayerPos
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	ble _0215f6ec
 	mov r0, r4
@@ -13871,7 +13871,7 @@ func_ov17_0216622c: ; 0x0216622c
 	add r1, sp, #0xc
 	str r3, [sp, #8]
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	movlt r0, #1
 	movge r0, #0
@@ -15512,7 +15512,7 @@ func_ov17_02167878: ; 0x02167878
 	ldr r2, [r2, #8]
 	add r0, r0, #0x18
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x4000
 	movge r0, #1
 	movlt r0, #0
@@ -17644,7 +17644,7 @@ func_ov17_02169354: ; 0x02169354
 	bl Vec3p_Add
 	add r0, sp, #0
 	mov r1, r5
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02169408 ; =0x00000b33
 	cmp r0, r1
 	addge sp, sp, #0x18
@@ -18420,7 +18420,7 @@ func_ov17_02169d4c: ; 0x02169d4c
 	str r2, [sp, #0x18]
 	ldr r2, [r4, #0x50]
 	str r2, [sp, #0x1c]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	bge _02169e50
 	ldr r0, [sp]

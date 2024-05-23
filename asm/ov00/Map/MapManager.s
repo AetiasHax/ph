@@ -4495,7 +4495,7 @@ _020854fc:
 	beq _0208555c
 	mov r1, r10
 	add r0, r5, #0x18
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, [r9]
 	mov r4, r0
 	cmp r4, r1
@@ -5468,7 +5468,7 @@ _020862d0:
 	stmia r3, {r0, r1, r2}
 	mov r0, r8
 	mov r1, r3
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r2, [sp, #0x158]
 	add r1, sp, #0x140
 	add r2, r2, r6
@@ -5538,7 +5538,7 @@ _020863a8:
 	beq _02086464
 	add r0, sp, #0x108
 	mov r1, r8
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, [sp, #0x120]
 	cmp r0, r1
 	bgt _02086464
@@ -5563,7 +5563,7 @@ _020863a8:
 _02086464:
 	add r1, sp, #0x108
 	mov r0, r8
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r2, [sp, #0x120]
 	add r1, sp, #0x108
 	add r2, r2, r6
@@ -6016,7 +6016,7 @@ _02086ae0:
 	stmia r3, {r0, r1, r2}
 	mov r0, r8
 	mov r1, r3
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r3, [sp, #0x74]
 	ldr r2, [sp, #0xa0]
 	add r1, sp, #0x68

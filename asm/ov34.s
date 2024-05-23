@@ -1900,7 +1900,7 @@ _0217d740:
 	mov r0, r4
 	str r3, [sp, #0x8c]
 	str r2, [sp, #0x88]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	bge _0217de8c
 	ldr r0, _0217de98 ; =data_ov34_021861a0
@@ -3514,7 +3514,7 @@ _0217ee90:
 	stmia r4, {r0, r1, r2}
 	mov r1, r4
 	add r0, r8, #0x1c00
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r5
 	movlt r5, r0
 	strlt r6, [r9, #0xd74]

@@ -1671,7 +1671,7 @@ _ZN5Actor12XzDistanceToEP5Vec3p: ; 0x020c288c
 	str r2, [sp]
 	str ip, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN5Actor12XzDistanceToEP5Vec3p
@@ -1679,12 +1679,12 @@ _ZN5Actor12XzDistanceToEP5Vec3p: ; 0x020c288c
 	.global _ZN5Actor14DistanceToLinkEv
 	arm_func_start _ZN5Actor14DistanceToLinkEv
 _ZN5Actor14DistanceToLinkEv: ; 0x020c28d4
-	ldr ip, _020c28e4 ; =func_01ff9ec0
+	ldr ip, _020c28e4 ; =Vec3p_Distance
 	ldr r1, _020c28e8 ; =gPlayerPos
 	add r0, r0, #0x48
 	bx ip
 	.align 2, 0
-_020c28e4: .word func_01ff9ec0
+_020c28e4: .word Vec3p_Distance
 _020c28e8: .word gPlayerPos
 	arm_func_end _ZN5Actor14DistanceToLinkEv
 
@@ -1706,7 +1706,7 @@ _ZN5Actor16XzDistanceToLinkEv: ; 0x020c28ec
 	str r2, [sp, #0x10]
 	str lr, [sp, #0x14]
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add sp, sp, #0x18
 	ldmia sp!, {r3, pc}
 	.align 2, 0

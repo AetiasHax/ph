@@ -45,7 +45,7 @@
 .extern Vec3p_Dot
 .extern Vec3p_Length
 .extern Vec3p_Axpy
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern Atan2
 .extern func_01ffe468
 .extern func_02002c14

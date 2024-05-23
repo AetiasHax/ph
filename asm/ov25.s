@@ -786,7 +786,7 @@ func_ov25_0216e0dc: ; 0x0216e0dc
 	bl func_0202b154
 	mov r1, r4
 	add r0, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _0216e170 ; =0x0000019a
 	cmp r0, r1
 	bge _0216e124
@@ -888,7 +888,7 @@ func_ov25_0216e238: ; 0x0216e238
 	bl func_0202b154
 	mov r1, r5
 	add r0, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _0216e374 ; =0x0000019a
 	cmp r0, r1
 	bge _0216e288
@@ -11081,7 +11081,7 @@ func_ov25_02176c10: ; 0x02176c10
 	bl _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 	add r0, r5, #0x14
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x5000
 	ble _02176c94
 	mov r0, r5

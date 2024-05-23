@@ -2904,7 +2904,7 @@ func_ov33_0217e1c8: ; 0x0217e1c8
 _0217e29c:
 	add r0, r4, #0x14
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x3000
 	ble _0217e36c
 	mov r0, r4

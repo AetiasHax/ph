@@ -10341,7 +10341,7 @@ _02184c7c:
 	mov r4, r0
 	add r0, sp, #0xc
 	add r1, sp, #0x18
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r2, r7, asr #0x4
 	ldr r1, _02184d5c ; =gSinCosTable
 	mov r2, r2, lsl #0x2

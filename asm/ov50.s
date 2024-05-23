@@ -3453,7 +3453,7 @@ _021982d4:
 	mov r5, r0
 	add r0, r4, #0x48
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	bge _02198340
 	mov r0, r5

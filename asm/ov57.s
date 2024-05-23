@@ -680,7 +680,7 @@ _02199500:
 	beq _02199564
 	add r0, r4, #0x78
 	add r1, r4, #0x18
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0xb000
 	ble _02199590
 _02199564:
@@ -707,7 +707,7 @@ _02199590:
 	beq _021995c4
 	add r0, r4, #0x18
 	add r1, r4, #0x34
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0xb000
 	ble _021995fc
 _021995c4:
@@ -1901,7 +1901,7 @@ func_ov57_0219a5ac: ; 0x0219a5ac
 _0219a5ec:
 	mov r1, r8
 	add r0, r10, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldrh r1, [r4, #0x68]
 	mov r7, r0
 	cmp r1, #0
@@ -2088,7 +2088,7 @@ func_ov57_0219a850: ; 0x0219a850
 _0219a888:
 	add r1, sp, #4
 	add r0, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _0219a95c ; =0x00000e66
 	cmp r0, r1
 	bgt _0219a918

@@ -7663,7 +7663,7 @@ func_ov20_02173ce4: ; 0x02173ce4
 	add r2, r1, #0x1000
 	ldr r1, _02173e34 ; =gPlayerPos
 	str r2, [sp, #0x44]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r4, r0
 	add r1, sp, #0x14
 	mov r0, r6

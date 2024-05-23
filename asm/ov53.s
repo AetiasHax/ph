@@ -664,7 +664,7 @@ func_ov53_021994cc: ; 0x021994cc
 	bl func_ov53_0219902c
 	mov r1, r0
 	mov r0, r5
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	ble _021996cc
 _02199518:
@@ -1357,7 +1357,7 @@ _02199e50:
 	ble _02199ed4
 	mov r1, r3
 	add r0, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02199f84 ; =0x00000555
 	cmp r0, r1
 	ble _02199ed4

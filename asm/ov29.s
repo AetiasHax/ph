@@ -12383,7 +12383,7 @@ func_ov29_02177db4: ; 0x02177db4
 	bl func_0202b2e8
 	add r0, sp, #0
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02177e94 ; =0x00000ccd
 	ldr ip, [r4, #0x48]
 	ldr r3, [r4, #0x54]
@@ -12501,7 +12501,7 @@ func_ov29_02177f28: ; 0x02177f28
 _02177f98:
 	add r0, sp, #0
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02177fe8 ; =0x00000ccd
 	cmp r0, r1
 	bge _02177fc4

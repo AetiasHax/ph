@@ -3701,7 +3701,7 @@ _02170778:
 	ldr r2, [r1, #0x10]
 	add r1, r4, #0x54
 	str r2, [sp, #4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r0, r0, r0, lsl #2
 	mov r0, r0, lsl #0xe
 	add r1, r0, #0x800

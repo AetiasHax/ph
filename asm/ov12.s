@@ -2261,7 +2261,7 @@ _02114964:
 _02114974:
 	mov r0, r5
 	add r1, r10, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1c00
 	ble _021149a0
 	ldr r0, _02114aa0 ; =0x0000019a

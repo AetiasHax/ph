@@ -1453,7 +1453,7 @@ _0219689c:
 	bgt _021968bc
 	add r0, r5, #0x14
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x8000
 	ble _02196e34
 _021968bc:
@@ -1476,7 +1476,7 @@ _021968e4:
 	blt _0219690c
 	add r0, r5, #0x14
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x2000
 	ble _02196918
 _0219690c:
@@ -1492,7 +1492,7 @@ _02196918:
 _0219692c:
 	add r0, r5, #0x14
 	add r1, r5, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x200
 	mov r0, r5
 	bge _0219695c

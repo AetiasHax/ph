@@ -6430,7 +6430,7 @@ _020b6658:
 	mov r0, r6
 	orr r5, r5, r1, lsl #20
 	add r1, r7, #0xac
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r5
 	blt _020b6808
 _020b66e0:

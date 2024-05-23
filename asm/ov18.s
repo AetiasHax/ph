@@ -8916,7 +8916,7 @@ _02162658:
 	ldr r2, [r1, #8]
 	add r1, r5, #0x18
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	bgt _02162708
 	ldr r0, [r4]
@@ -13844,7 +13844,7 @@ func_ov18_02166700: ; 0x02166700
 	mov r4, r1
 	add r0, r0, #0x400
 	add r1, r5, #0x4e0
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r1, r5, #0xf8
 	str r0, [r5, #0x490]
 	add r0, r1, #0x400
@@ -14076,13 +14076,13 @@ func_ov18_021669a0: ; 0x021669a0
 	add r1, r4, #0x4e0
 	str r2, [r4, #0x508]
 	ldr r8, [sp, #0x4c]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r2, r4, #0xf8
 	add r1, r4, #0x104
 	mov r6, r0
 	add r0, r1, #0x400
 	add r1, r2, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r7, r0
 	cmp r6, #0
 	mov r1, r8
@@ -14610,7 +14610,7 @@ _0216712c:
 	str r3, [sp, #0x48]
 	str r4, [sp, #0x4c]
 	str r2, [sp, #0x50]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x4000
 	bge _02167354
 	ldrb r0, [r6, #0x474]

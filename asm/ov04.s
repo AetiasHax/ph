@@ -11864,7 +11864,7 @@ _02106742:
 	add r1, sp, #0x38
 	str r0, [sp, #0x40]
 	add r0, sp, #0x44
-	blx func_01ff9ec0
+	blx Vec3p_Distance
 	mov r1, #1
 	lsl r1, r1, #0xc
 	cmp r0, r1

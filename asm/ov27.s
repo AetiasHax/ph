@@ -6010,7 +6010,7 @@ func_ov27_02172ab8: ; 0x02172ab8
 	str r2, [sp, #4]
 	ldr r2, [r4, #0x50]
 	str r2, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02172ccc ; =0x00002666
 	cmp r0, r1
 	bge _02172b58

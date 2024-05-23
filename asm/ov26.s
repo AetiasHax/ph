@@ -14095,7 +14095,7 @@ func_ov26_021782ac: ; 0x021782ac
 	stmia r3, {r0, r1, r2}
 	mov r0, r3
 	mov r1, r5
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	rsb r0, r0, #0xe000
 	ldrb r2, [r4, #1]
 	ldr r1, _021783ac ; =data_ov26_0217968c
@@ -15010,7 +15010,7 @@ _02178ea8:
 	ble _02178ecc
 	mov r0, r7
 	mov r1, r8
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1200
 	ldmltia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
 _02178ecc:

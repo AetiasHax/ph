@@ -9691,7 +9691,7 @@ func_ov30_02183818: ; 0x02183818
 	ldr r6, [r5, #0x98]
 	add r0, r5, #0x48
 	add r1, r4, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, r6
 	bge _021838ec
 	ldr r1, [r4, #4]

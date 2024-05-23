@@ -8004,7 +8004,7 @@ func_ov32_0218252c: ; 0x0218252c
 	str r3, [r4, #0x88]
 	add r1, r4, #0x84
 	str r2, [r4, #0x8c]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _021826a4 ; =data_027e0e58
 	str r0, [r4, #0x9c]
 	ldr r0, [r1]

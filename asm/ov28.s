@@ -4057,7 +4057,7 @@ func_ov28_02170b54: ; 0x02170b54
 	add r1, r4, #0xfc
 	add r0, r0, #0x400
 	add r1, r1, #0x400
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	add r3, r4, #0xfc
 	add r1, r4, #0x108
 	str r0, [r4, #0x4a8]
@@ -7195,7 +7195,7 @@ func_ov28_02173330: ; 0x02173330
 	str ip, [sp]
 	str r4, [sp, #4]
 	str r3, [sp, #8]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	mov r4, r0
 	ldr r0, _021733c0 ; =data_ov00_020eec68
 	bl func_ov00_020d7180

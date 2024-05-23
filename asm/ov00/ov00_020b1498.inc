@@ -234,7 +234,7 @@
 .extern Vec3p_Length
 .extern Vec3p_Normalize
 .extern Vec3p_Axpy
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern Atan2
 .extern func_01ffa9fc
 .extern func_01ffb7ec

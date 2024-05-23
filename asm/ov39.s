@@ -5413,7 +5413,7 @@ _021807c4:
 	ldr r1, [r5, #0x280]
 	add r0, sp, #0x44
 	add r1, r1, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r1, _02180f58 ; =0x00000333
 	cmp r0, r1
 	addge sp, sp, #0x130
@@ -9393,7 +9393,7 @@ _02183f0c:
 	add r0, sp, #0x2c
 	add r1, r7, #0x220
 	str r2, [sp, #0x30]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [sp, #0x5c]
 	str r0, [r7, #0x1dc]
 	mov r0, #0
@@ -9851,7 +9851,7 @@ _021845e0:
 	add r0, sp, #8
 	add r1, sp, #0x20
 	str r2, [sp, #0xa4]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [sp, #0xac]
 	add r0, sp, #8
 	add r1, sp, #0x14
@@ -9866,7 +9866,7 @@ _021845e0:
 	str r0, [sp, #0x3c]
 	add r0, sp, #8
 	add r1, sp, #0x14
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	ldr r2, [sp, #0xa4]
 	ldr r1, [sp, #0x3c]
 	str r0, [sp, #0x44]

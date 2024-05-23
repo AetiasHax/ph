@@ -19303,7 +19303,7 @@ func_ov14_0212f08c: ; 0x0212f08c
 	str r2, [sp, #0xc]
 	ldr r2, [r6, #0x50]
 	str r2, [sp, #0x10]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	bgt _0212f154
 	ldr r4, [r6, #0x158]

@@ -287,7 +287,7 @@ _02198fcc:
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r1, r0
 	add r0, r7, #0x38
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x1000
 	bge _021991f8
 _02199050:
@@ -558,7 +558,7 @@ _02199394:
 	str r2, [sp, #0x14]
 	ldr r2, [r5, #0x50]
 	str r2, [sp, #0x18]
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	bgt _0219978c
 	ldr r0, _021997b8 ; =data_ov00_020eec9c
@@ -896,7 +896,7 @@ func_ov54_021998d4: ; 0x021998d4
 	ldmneia sp!, {r3, pc}
 	add r0, r0, #4
 	add r1, r1, #0x48
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	cmp r0, #0x800
 	movle r0, #1
 	movgt r0, #0

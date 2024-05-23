@@ -1086,7 +1086,7 @@ func_ov00_0207b89c: ; 0x0207b89c
 	add r1, r3, r1, lsl #2
 	ldr r1, [r1, #4]
 	add r1, r1, #0x260
-	bl func_01ff9ec0
+	bl Vec3p_Distance
 	str r0, [r5, #8]
 	ldr r0, [r4, #0x180]
 	add r0, r0, #1
