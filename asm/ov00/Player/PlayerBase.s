@@ -355,7 +355,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	str ip, [r3, #4]
 	strh r4, [r2]
 	str r5, [r1, #4]
-	ldr r0, _020a7f78 ; =data_027e0fb8
+	ldr r0, _020a7f78 ; =gPlayerControl
 	str r5, [r1, #8]
 	ldr r0, [r0]
 	blx _ZN13PlayerControl9UpdateAimEv
@@ -389,7 +389,7 @@ _020a7f68: .word gMapManager
 _020a7f6c: .word gPlayerAngle
 _020a7f70: .word gPlayerVel
 _020a7f74: .word data_027e0fb0
-_020a7f78: .word data_027e0fb8
+_020a7f78: .word gPlayerControl
 _020a7f7c: .word gActorManager
 _020a7f80: .word gAdventureFlags
 _020a7f84: .word data_027e0f64

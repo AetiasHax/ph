@@ -10938,7 +10938,7 @@ _02176560:
 	ldmia sp!, {r4, pc}
 _0217656c:
 	ldr r2, [r4, #0x1c]
-	ldr r1, _02176638 ; =data_027e0fb8
+	ldr r1, _02176638 ; =gPlayerControl
 	add ip, r2, #0x800
 	ldr lr, [r4, #0x20]
 	ldr r3, [r4, #0x18]
@@ -10991,7 +10991,7 @@ _0217662c:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02176638: .word data_027e0fb8
+_02176638: .word gPlayerControl
 _0217663c: .word data_027e0e58
 _02176640: .word 0x0000025d
 _02176644: .word 0x0000025e

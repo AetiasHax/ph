@@ -152,7 +152,7 @@
 .extern gPlayerPos
 .extern gPlayerVel
 .extern gPlayerAngle
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gPlayerLink
 .extern data_027e0fcc
 .extern data_027e0fd0

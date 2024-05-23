@@ -425,7 +425,7 @@ _02189a74:
 	moveq r0, #5
 	movne r0, #0x78
 	str r0, [r7, #0x60]
-	ldr r0, _02189b14 ; =data_027e0fb8
+	ldr r0, _02189b14 ; =gPlayerControl
 	ldr r1, [r0]
 	ldr r0, _02189b18 ; =data_ov00_020eec68
 	strb r2, [r1, #0x7a]
@@ -454,7 +454,7 @@ _02189b04: .word data_ov42_0218c6f4
 _02189b08: .word 0x4d544748
 _02189b0c: .word data_027e0fe8
 _02189b10: .word 0x4d544752
-_02189b14: .word data_027e0fb8
+_02189b14: .word gPlayerControl
 _02189b18: .word data_ov00_020eec68
 _02189b1c: .word data_027e0ffc
 	arm_func_end func_ov42_02189834
@@ -465,7 +465,7 @@ func_ov42_02189b20: ; 0x02189b20
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	mov r1, #0
-	ldr r0, _02189b7c ; =data_027e0fb8
+	ldr r0, _02189b7c ; =gPlayerControl
 	strb r1, [r4, #0x65]
 	ldr r0, [r0]
 	strb r1, [r0, #0x79]
@@ -486,7 +486,7 @@ func_ov42_02189b20: ; 0x02189b20
 	strb r2, [r0, #0x24]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02189b7c: .word data_027e0fb8
+_02189b7c: .word gPlayerControl
 _02189b80: .word data_027e0ffc
 	arm_func_end func_ov42_02189b20
 
@@ -536,7 +536,7 @@ _02189be4:
 	blx _ZN11ItemManager20ClearForcedEquipItemEv
 	bl func_ov42_02189ce8
 	mov r1, #0
-	ldr r2, _02189cd4 ; =data_027e0fb8
+	ldr r2, _02189cd4 ; =gPlayerControl
 	strb r1, [r0, #0xb]
 	ldr r2, [r2]
 	mov r3, #1
@@ -581,7 +581,7 @@ _02189c88:
 	.align 2, 0
 _02189ccc: .word gActorManager
 _02189cd0: .word gItemManager
-_02189cd4: .word data_027e0fb8
+_02189cd4: .word gPlayerControl
 _02189cd8: .word data_027e0f64
 _02189cdc: .word data_ov09_0211f5b4
 _02189ce0: .word data_ov00_020eec68
@@ -617,7 +617,7 @@ func_ov42_02189cf8: ; 0x02189cf8
 	bl func_ov42_0218aa8c
 	mov r3, #1
 	mov r2, #0x8000
-	ldr r0, _02189e50 ; =data_027e0fb8
+	ldr r0, _02189e50 ; =gPlayerControl
 	strb r3, [r4, #0x64]
 	ldr r1, [r0]
 	ldr r0, _02189e4c ; =gPlayerLink
@@ -695,7 +695,7 @@ _02189e44:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02189e4c: .word gPlayerLink
-_02189e50: .word data_027e0fb8
+_02189e50: .word gPlayerControl
 _02189e54: .word gPlayerPos
 _02189e58: .word data_ov00_020eec9c
 _02189e5c: .word 0x88888889
@@ -705,7 +705,7 @@ _02189e5c: .word 0x88888889
 	arm_func_start func_ov42_02189e60
 func_ov42_02189e60: ; 0x02189e60
 	stmdb sp!, {r3, lr}
-	ldr r0, _02189e84 ; =data_027e0fb8
+	ldr r0, _02189e84 ; =gPlayerControl
 	mov r1, #0
 	ldr r0, [r0]
 	strb r1, [r0, #0x79]
@@ -714,7 +714,7 @@ func_ov42_02189e60: ; 0x02189e60
 	bl func_ov42_0218afa8
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_02189e84: .word data_027e0fb8
+_02189e84: .word gPlayerControl
 	arm_func_end func_ov42_02189e60
 
 	.global func_ov42_02189e88

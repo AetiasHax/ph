@@ -115,7 +115,7 @@ _020ae7e8:
 	ldr r1, _020aeb14 ; =0x0000019a
 	str r1, [r0, #4]
 _020ae8f0:
-	ldr r0, _020aeb18 ; =data_027e0fb8
+	ldr r0, _020aeb18 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13StopFollowingEv
 	ldr r1, _020aeb1c ; =data_ov00_020e6078
@@ -264,7 +264,7 @@ _020aeb08:
 	.align 2, 0
 _020aeb10: .word gSinCosTable
 _020aeb14: .word 0x0000019a
-_020aeb18: .word data_027e0fb8
+_020aeb18: .word gPlayerControl
 _020aeb1c: .word data_ov00_020e6078
 _020aeb20: .word data_ov00_020eec9c
 _020aeb24: .word data_ov00_020e6088
@@ -360,7 +360,7 @@ _ZN13LinkStateRoll8vfunc_20Ei: ; 0x020aec10
 	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _020aecc8
-	ldr r1, _020aed84 ; =data_027e0fb8
+	ldr r1, _020aed84 ; =gPlayerControl
 	mov r0, r5
 	ldr r6, [r1]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -419,12 +419,12 @@ _020aed08:
 	ldr r0, _020aed8c ; =0x0000099a
 	cmp r1, r0
 	blt _020aed70
-	ldr r0, _020aed84 ; =data_027e0fb8
+	ldr r0, _020aed84 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, #0
 	ble _020aed70
-	ldr r0, _020aed84 ; =data_027e0fb8
+	ldr r0, _020aed84 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r2, #0
@@ -444,7 +444,7 @@ _020aed7c:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020aed84: .word data_027e0fb8
+_020aed84: .word gPlayerControl
 _020aed88: .word data_027e0618
 _020aed8c: .word 0x0000099a
 	arm_func_end _ZN13LinkStateRoll8vfunc_20Ei

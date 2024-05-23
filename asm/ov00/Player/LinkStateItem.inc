@@ -5,7 +5,7 @@
 .extern _ZN13LinkStateBase8vfunc_34EP5Vec3p
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern gAdventureFlags
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e103c
 .extern data_027e1098
 .extern func_01fffcd8

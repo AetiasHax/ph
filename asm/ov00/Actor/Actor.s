@@ -1610,7 +1610,7 @@ _ZN5Actor16CollidesWithLinkEv: ; 0x020c27e4
 	.global _ZN5Actor16IsFollowedByLinkEv
 	arm_func_start _ZN5Actor16IsFollowedByLinkEv
 _ZN5Actor16IsFollowedByLinkEv: ; 0x020c281c
-	ldr r1, _020c283c ; =data_027e0fb8
+	ldr r1, _020c283c ; =gPlayerControl
 	ldr r2, [r0, #8]
 	ldr r0, [r1]
 	ldr r0, [r0, #0x84]
@@ -1619,7 +1619,7 @@ _ZN5Actor16IsFollowedByLinkEv: ; 0x020c281c
 	movne r0, #0
 	bx lr
 	.align 2, 0
-_020c283c: .word data_027e0fb8
+_020c283c: .word gPlayerControl
 	arm_func_end _ZN5Actor16IsFollowedByLinkEv
 
 	.global _ZN5Actor14StopLinkFollowEv
@@ -1629,12 +1629,12 @@ _ZN5Actor14StopLinkFollowEv: ; 0x020c2840
 	bl _ZN5Actor16IsFollowedByLinkEv
 	cmp r0, #0
 	ldmeqia sp!, {r3, pc}
-	ldr r0, _020c2860 ; =data_027e0fb8
+	ldr r0, _020c2860 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13StopFollowingEv
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_020c2860: .word data_027e0fb8
+_020c2860: .word gPlayerControl
 	arm_func_end _ZN5Actor14StopLinkFollowEv
 
 	.global _ZN5Actor9IsGrabbedEv

@@ -3790,7 +3790,7 @@ _021709d4:
 	mov r0, r4
 	str r2, [r1, #0x10]
 	bl func_ov25_0216ef9c
-	ldr r1, _02170d58 ; =data_027e0fb8
+	ldr r1, _02170d58 ; =gPlayerControl
 	mov r0, r4
 	ldr r1, [r1]
 	mov r2, #1
@@ -3996,7 +3996,7 @@ _02170d38:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02170d54: .word gPlayerLink
-_02170d58: .word data_027e0fb8
+_02170d58: .word gPlayerControl
 _02170d5c: .word gPlayerAngle
 _02170d60: .word data_ov25_0217a880
 _02170d64: .word data_027e0ff0

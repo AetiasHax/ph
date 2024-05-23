@@ -6078,7 +6078,7 @@ func_ov03_020f2774: ; 0x020f2774
 	bl func_ov00_02078b40
 	cmp r0, #2
 	beq _020f27d0
-	ldr r0, _020f27e4 ; =data_027e0fb8
+	ldr r0, _020f27e4 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -6091,7 +6091,7 @@ _020f27d0:
 	.align 2, 0
 _020f27dc: .word data_027e103c
 _020f27e0: .word data_027e0d38
-_020f27e4: .word data_027e0fb8
+_020f27e4: .word gPlayerControl
 	arm_func_end func_ov03_020f2774
 
 	.global func_ov03_020f27e8
@@ -13615,7 +13615,7 @@ _020f7068:
 	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	cmp r0, #0
 	beq _020f70ac
-	ldr r0, _020f70c0 ; =data_027e0fb8
+	ldr r0, _020f70c0 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -13633,7 +13633,7 @@ _020f70ac:
 	.align 2, 0
 _020f70b8: .word data_027e103c
 _020f70bc: .word gItemManager
-_020f70c0: .word data_027e0fb8
+_020f70c0: .word gPlayerControl
 _020f70c4: .word data_027e05f8
 	arm_func_end func_ov03_020f7020
 

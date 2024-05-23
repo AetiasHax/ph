@@ -228,7 +228,7 @@ func_ov45_02189764: ; 0x02189764
 	mov r0, r4
 	mov r1, #1
 	bl _ZN5Actor10SetUnk_11cEc
-	ldr r0, _02189894 ; =data_027e0fb8
+	ldr r0, _02189894 ; =gPlayerControl
 	mov r1, #0
 	ldr r0, [r0]
 	strb r1, [r0, #0x78]
@@ -247,7 +247,7 @@ _02189884: .word data_ov45_0218e4c0
 _02189888: .word data_ov45_0218e4c4
 _0218988c: .word gAdventureFlags
 _02189890: .word 0x0000010a
-_02189894: .word data_027e0fb8
+_02189894: .word gPlayerControl
 	arm_func_end func_ov45_02189764
 
 	.global func_ov45_02189898
@@ -520,7 +520,7 @@ _02189c18:
 	blx r1
 	cmp r0, #0
 	beq _02189c54
-	ldr r0, _02189d1c ; =data_027e0fb8
+	ldr r0, _02189d1c ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	strb r1, [r0, #0x78]
@@ -584,7 +584,7 @@ _02189d0c: .word 0x00000101
 _02189d10: .word 0x00000102
 _02189d14: .word 0x00000103
 _02189d18: .word 0x0000011f
-_02189d1c: .word data_027e0fb8
+_02189d1c: .word gPlayerControl
 	arm_func_end func_ov45_02189ab4
 
 	.global func_ov45_02189d20

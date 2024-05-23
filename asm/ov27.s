@@ -3454,7 +3454,7 @@ _02170630:
 	add r1, r1, #0x400
 	add r2, sp, #0x14
 	bl func_ov00_0207c474
-	ldr r0, _021708c8 ; =data_027e0fb8
+	ldr r0, _021708c8 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
@@ -3547,7 +3547,7 @@ _021708b8: .word gPlayerLink
 _021708bc: .word data_027e0ffc
 _021708c0: .word 0x00000239
 _021708c4: .word data_027e0e58
-_021708c8: .word data_027e0fb8
+_021708c8: .word gPlayerControl
 _021708cc: .word data_027e0f64
 _021708d0: .word gPlayer
 	arm_func_end func_ov27_02170480
@@ -11514,7 +11514,7 @@ _02177370:
 	mov r1, #1
 	ldr r0, [r0]
 	bl func_ov05_02103fc8
-	ldr r1, _02177678 ; =data_027e0fb8
+	ldr r1, _02177678 ; =gPlayerControl
 	ldr r0, _0217767c ; =data_027e0cbc
 	ldr r1, [r1]
 	mov r2, #0
@@ -11546,7 +11546,7 @@ _021773f4:
 	mov r1, #0
 	ldr r0, [r0]
 	bl func_ov05_02103fc8
-	ldr r0, _02177678 ; =data_027e0fb8
+	ldr r0, _02177678 ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	strb r1, [r0, #0x7a]
@@ -11689,7 +11689,7 @@ _02177664:
 	.align 2, 0
 _02177670: .word gPlayer
 _02177674: .word data_027e103c
-_02177678: .word data_027e0fb8
+_02177678: .word gPlayerControl
 _0217767c: .word data_027e0cbc
 _02177680: .word gAdventureFlags
 _02177684: .word data_027e0f64

@@ -14960,7 +14960,7 @@ func_ov04_02107e9c: ; 0x02107e9c
 	ldr r0, [r0]
 	bl _ZN11ItemManager4LoadEPK15SaveItemManager
 _02107ef6:
-	ldr r0, _02107f34 ; =data_027e0fb8
+	ldr r0, _02107f34 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020aef30Ev
 	ldr r0, _02107f2c ; =gItemManager
@@ -14981,7 +14981,7 @@ _02107f24: .word data_ov00_020e9e98
 _02107f28: .word data_ov00_020e9e94
 _02107f2c: .word gItemManager
 _02107f30: .word data_ov00_020e9e18
-_02107f34: .word data_027e0fb8
+_02107f34: .word gPlayerControl
 	thumb_func_end func_ov04_02107e9c
 
 	.global func_ov04_02107f38
@@ -15071,7 +15071,7 @@ _02107fda:
 	ldr r0, _02108000 ; =gItemManager
 	ldr r0, [r0]
 	bl func_ov04_02107314
-	ldr r0, _02108004 ; =data_027e0fb8
+	ldr r0, _02108004 ; =gPlayerControl
 	ldr r0, [r0]
 	bl func_ov04_0210b184
 	pop {r3, r4, r5, pc}
@@ -15082,7 +15082,7 @@ _02107ff4: .word data_ov09_0211f530
 _02107ff8: .word data_027e0d38
 _02107ffc: .word data_027e0f7c
 _02108000: .word gItemManager
-_02108004: .word data_027e0fb8
+_02108004: .word gPlayerControl
 	thumb_func_end func_ov04_02107f48
 
 	.global func_ov04_02108008
@@ -15090,7 +15090,7 @@ _02108004: .word data_027e0fb8
 func_ov04_02108008: ; 0x02108008
 	push {r3, lr}
 	bl func_ov04_0210b1f0
-	ldr r0, _0210804c ; =data_027e0fb8
+	ldr r0, _0210804c ; =gPlayerControl
 	ldr r0, [r0]
 	bl func_ov04_0210b1d0
 	ldr r0, _02108050 ; =gItemManager
@@ -15115,7 +15115,7 @@ _02108034:
 _02108048:
 	pop {r3, pc}
 	nop
-_0210804c: .word data_027e0fb8
+_0210804c: .word gPlayerControl
 _02108050: .word gItemManager
 _02108054: .word data_027e0618
 _02108058: .word data_ov09_0211f530
@@ -21415,19 +21415,19 @@ func_ov04_0210b13c: ; 0x0210b13c
 	beq _0210b152
 	bl func_ov04_0210afdc
 _0210b152:
-	ldr r1, _0210b15c ; =data_027e0fb8
+	ldr r1, _0210b15c ; =gPlayerControl
 	str r0, [r1]
 	pop {r3, pc}
 	.align 2, 0
 _0210b158: .word data_027e0ce0
-_0210b15c: .word data_027e0fb8
+_0210b15c: .word gPlayerControl
 	thumb_func_end func_ov04_0210b13c
 
 	.global func_ov04_0210b160
 	thumb_func_start func_ov04_0210b160
 func_ov04_0210b160: ; 0x0210b160
 	push {r4, lr}
-	ldr r0, _0210b180 ; =data_027e0fb8
+	ldr r0, _0210b180 ; =gPlayerControl
 	ldr r4, [r0]
 	cmp r4, #0
 	beq _0210b176
@@ -21436,12 +21436,12 @@ func_ov04_0210b160: ; 0x0210b160
 	add r0, r4, #0
 	blx _ZN9SysObjectdlEPv
 _0210b176:
-	ldr r0, _0210b180 ; =data_027e0fb8
+	ldr r0, _0210b180 ; =gPlayerControl
 	mov r1, #0
 	str r1, [r0]
 	pop {r4, pc}
 	nop
-_0210b180: .word data_027e0fb8
+_0210b180: .word gPlayerControl
 	thumb_func_end func_ov04_0210b160
 
 	.global func_ov04_0210b184
@@ -21452,7 +21452,7 @@ func_ov04_0210b184: ; 0x0210b184
 	mov r1, #0
 	add r0, #0x79
 	strb r1, [r0]
-	ldr r0, _0210b1c0 ; =data_027e0fb8
+	ldr r0, _0210b1c0 ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	add r0, #0x78
@@ -21477,7 +21477,7 @@ _0210b1b6:
 _0210b1bc:
 	pop {r4, pc}
 	nop
-_0210b1c0: .word data_027e0fb8
+_0210b1c0: .word gPlayerControl
 _0210b1c4: .word gOverlayManager
 _0210b1c8: .word 0x0000001d
 _0210b1cc: .word data_027e0ce0

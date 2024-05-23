@@ -304,7 +304,7 @@ func_ov58_0219906c: ; 0x0219906c
 	add r0, r5, #0
 	add r0, #0x44
 	strh r1, [r0]
-	ldr r0, _02199158 ; =data_027e0fb8
+	ldr r0, _02199158 ; =gPlayerControl
 	ldr r0, [r0]
 	blx _ZN13PlayerControl14IsUntouchedNowEv
 	cmp r0, #0
@@ -411,7 +411,7 @@ _02199154:
 	add sp, #0xc
 	pop {r4, r5, pc}
 	.align 2, 0
-_02199158: .word data_027e0fb8
+_02199158: .word gPlayerControl
 _0219915c: .word data_027e103c
 _02199160: .word data_ov58_0219b0a0
 _02199164: .word data_027e077c
@@ -2545,7 +2545,7 @@ func_ov58_0219a47c: ; 0x0219a47c
 	mov r0, r5
 	add r1, sp, #4
 	bl _ZN13LinkStateBase6LookAtEP5Vec3p
-	ldr r0, _0219a5b4 ; =data_027e0fb8
+	ldr r0, _0219a5b4 ; =gPlayerControl
 	mov r1, #0
 	ldr r2, [r0]
 	mov r0, r5
@@ -2569,7 +2569,7 @@ _0219a59c:
 _0219a5a8: .word data_027e077c
 _0219a5ac: .word data_027e103c
 _0219a5b0: .word gMapManager
-_0219a5b4: .word data_027e0fb8
+_0219a5b4: .word gPlayerControl
 	arm_func_end func_ov58_0219a47c
 
 	.global func_ov58_0219a5b8
@@ -2730,7 +2730,7 @@ _0219a790:
 	ldr r0, _0219a814 ; =data_ov00_020eec9c
 	mov r1, #0x11
 	bl func_ov00_020d77e4
-	ldr r0, _0219a818 ; =data_027e0fb8
+	ldr r0, _0219a818 ; =gPlayerControl
 	mov r1, #0
 	ldr r2, [r0]
 	mov r0, #1
@@ -2765,7 +2765,7 @@ _0219a80c:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0219a814: .word data_ov00_020eec9c
-_0219a818: .word data_027e0fb8
+_0219a818: .word gPlayerControl
 _0219a81c: .word data_027e1098
 	arm_func_end func_ov58_0219a76c
 

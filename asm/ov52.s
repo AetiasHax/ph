@@ -432,7 +432,7 @@ func_ov52_02195908: ; 0x02195908
 	ldr r2, _02195a14 ; =0x00000005
 	mov r1, #2
 	blx _ZN14OverlayManager15LoadIfNotLoadedEjj
-	ldr r1, _02195a18 ; =data_027e0fb8
+	ldr r1, _02195a18 ; =gPlayerControl
 	mov r2, #0
 	ldr r3, [r1]
 	ldr r0, _02195a1c ; =data_027e103c
@@ -453,7 +453,7 @@ _02195a08: .word gMapManager
 _02195a0c: .word gOverlayManager
 _02195a10: .word 0x00000004
 _02195a14: .word 0x00000005
-_02195a18: .word data_027e0fb8
+_02195a18: .word gPlayerControl
 _02195a1c: .word data_027e103c
 	arm_func_end func_ov52_02195908
 
@@ -508,7 +508,7 @@ _02195a60:
 	ldr r2, _02195b44 ; =0x00000005
 	mov r1, #2
 	blx _ZN14OverlayManager15LoadIfNotLoadedEjj
-	ldr r0, _02195b48 ; =data_027e0fb8
+	ldr r0, _02195b48 ; =gPlayerControl
 	mov r1, r4
 	ldr r3, [r0]
 	ldr r0, _02195b4c ; =data_ov52_02197c6c
@@ -536,7 +536,7 @@ _02195b38: .word gMapManager
 _02195b3c: .word gOverlayManager
 _02195b40: .word 0x00000004
 _02195b44: .word 0x00000005
-_02195b48: .word data_027e0fb8
+_02195b48: .word gPlayerControl
 _02195b4c: .word data_ov52_02197c6c
 _02195b50: .word data_ov52_02197c68
 _02195b54: .word data_ov52_02197c70

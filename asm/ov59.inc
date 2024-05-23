@@ -20,7 +20,7 @@
 .extern data_027e0e58
 .extern gMapManager
 .extern gPlayerPos
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gPlayerLink
 .extern data_027e0fd0
 .extern data_027e0fd4

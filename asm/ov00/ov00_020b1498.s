@@ -3167,7 +3167,7 @@ _020b3dbc:
 	mov r0, #0
 	bx lr
 _020b3dc4:
-	ldr r0, _020b3de0 ; =data_027e0fb8
+	ldr r0, _020b3de0 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x7d]
 	cmp r0, #0
@@ -3175,7 +3175,7 @@ _020b3dc4:
 	movne r0, #0
 	bx lr
 	.align 2, 0
-_020b3de0: .word data_027e0fb8
+_020b3de0: .word gPlayerControl
 	arm_func_end func_ov00_020b3d6c
 
 	.global func_ov00_020b3de4
@@ -5250,7 +5250,7 @@ func_ov00_020b5514: ; 0x020b5514
 	cmp r0, #0
 	beq _020b5630
 _020b5540:
-	ldr r0, _020b5c80 ; =data_027e0fb8
+	ldr r0, _020b5c80 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, #0
@@ -5265,7 +5265,7 @@ _020b5540:
 	str r2, [sp, #0x6c]
 	str r1, [sp, #0x68]
 	bl Vec3p_Length
-	ldr r1, _020b5c80 ; =data_027e0fb8
+	ldr r1, _020b5c80 ; =gPlayerControl
 	mov r7, r0
 	ldr r0, [r1]
 	bl _ZN13PlayerControl13GetTouchAngleEv
@@ -5735,7 +5735,7 @@ _020b5c68:
 	add sp, sp, #0x70
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_020b5c80: .word data_027e0fb8
+_020b5c80: .word gPlayerControl
 _020b5c84: .word 0x0000071c
 _020b5c88: .word gSinCosTable
 _020b5c8c: .word gAdventureFlags
@@ -13601,7 +13601,7 @@ _020bc028:
 	add r1, sp, #0
 	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 _020bc060:
-	ldr r0, _020bc084 ; =data_027e0fb8
+	ldr r0, _020bc084 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13StopFollowingEv
 	mov r0, #1
@@ -13611,7 +13611,7 @@ _020bc060:
 _020bc078: .word data_027e0fcc
 _020bc07c: .word gPlayerPos
 _020bc080: .word gPlayerVel
-_020bc084: .word data_027e0fb8
+_020bc084: .word gPlayerControl
 	arm_func_end func_ov00_020bbed4
 
 	.global func_ov00_020bc088
@@ -13700,7 +13700,7 @@ _020bc114:
 	bl func_020385b8
 	add r1, sp, #0xc
 	bl _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
-	ldr r0, _020bc1c4 ; =data_027e0fb8
+	ldr r0, _020bc1c4 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13StopFollowingEv
 	mov r0, #1
@@ -13710,7 +13710,7 @@ _020bc114:
 _020bc1b8: .word gAdventureFlags
 _020bc1bc: .word gPlayerVel
 _020bc1c0: .word data_ov00_020dc858
-_020bc1c4: .word data_027e0fb8
+_020bc1c4: .word gPlayerControl
 	arm_func_end func_ov00_020bc0a8
 
 	.global func_ov00_020bc1c8
@@ -15061,7 +15061,7 @@ _020bd1ec:
 	strb r4, [r0, #0x28]
 	cmp r4, #0
 	bne _020bd234
-	ldr r0, _020bd260 ; =data_027e0fb8
+	ldr r0, _020bd260 ; =gPlayerControl
 	mov r1, #0
 	ldr r0, [r0]
 	strb r1, [r0, #0x79]
@@ -15079,7 +15079,7 @@ _020bd250: .word gPlayerPos
 _020bd254: .word 0x0000099a
 _020bd258: .word data_027e0fcc
 _020bd25c: .word gPlayerVel
-_020bd260: .word data_027e0fb8
+_020bd260: .word gPlayerControl
 _020bd264: .word data_027e0fd4
 	arm_func_end func_ov00_020bd0bc
 
@@ -19230,7 +19230,7 @@ func_ov00_020c06d8: ; 0x020c06d8
 	arm_func_start func_ov00_020c06e0
 func_ov00_020c06e0: ; 0x020c06e0
 	stmdb sp!, {r3, lr}
-	ldr r1, _020c0708 ; =data_027e0fb8
+	ldr r1, _020c0708 ; =gPlayerControl
 	ldr r1, [r1]
 	ldrb r1, [r1, #0x79]
 	cmp r1, #0
@@ -19240,7 +19240,7 @@ func_ov00_020c06e0: ; 0x020c06e0
 	bl func_ov00_020be8e4
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_020c0708: .word data_027e0fb8
+_020c0708: .word gPlayerControl
 	arm_func_end func_ov00_020c06e0
 
 	.global func_ov00_020c070c

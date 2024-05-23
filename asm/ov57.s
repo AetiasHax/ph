@@ -1355,7 +1355,7 @@ func_ov57_02199e64: ; 0x02199e64
 	bl func_ov57_02199ecc
 	mov r1, #1
 	bl func_ov57_021992b4
-	ldr r0, _02199ec4 ; =data_027e0fb8
+	ldr r0, _02199ec4 ; =gPlayerControl
 	ldr r1, _02199ec8 ; =data_ov57_0219ab14
 	mov r2, #0
 	ldr r0, [r0]
@@ -1365,7 +1365,7 @@ func_ov57_02199e64: ; 0x02199e64
 	.align 2, 0
 _02199ebc: .word data_ov57_0219aa60
 _02199ec0: .word data_027e0d0c
-_02199ec4: .word data_027e0fb8
+_02199ec4: .word gPlayerControl
 _02199ec8: .word data_ov57_0219ab14
 	arm_func_end func_ov57_02199e64
 
@@ -1401,7 +1401,7 @@ func_ov57_02199edc: ; 0x02199edc
 	mov r0, r5
 	mov r2, #1
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
-	ldr r0, _0219a1e8 ; =data_027e0fb8
+	ldr r0, _0219a1e8 ; =gPlayerControl
 	mov r1, #0
 	ldr r0, [r0]
 	strb r1, [r0, #0x7a]
@@ -1428,7 +1428,7 @@ _02199f58:
 	ldrb r0, [r4, #0x69]
 	cmp r0, #0
 	beq _02199fb8
-	ldr r0, _0219a1e8 ; =data_027e0fb8
+	ldr r0, _0219a1e8 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldrb r0, [r4, #0x6a]
@@ -1456,7 +1456,7 @@ _02199fe4:
 	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	bne _0219a180
-	ldr r0, _0219a1e8 ; =data_027e0fb8
+	ldr r0, _0219a1e8 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r6
@@ -1493,7 +1493,7 @@ _0219a054:
 	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
 	b _0219a180
 _0219a07c:
-	ldr r0, _0219a1e8 ; =data_027e0fb8
+	ldr r0, _0219a1e8 ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN13PlayerControl17CheckUntouchedNowEj
@@ -1522,7 +1522,7 @@ _0219a0d4:
 	cmp r0, #0
 	addne r1, r4, #0x18
 	str r1, [sp]
-	ldr r0, _0219a1e8 ; =data_027e0fb8
+	ldr r0, _0219a1e8 ; =gPlayerControl
 	add r1, sp, #0x2c
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
@@ -1590,7 +1590,7 @@ _0219a180:
 	.align 2, 0
 _0219a1e0: .word data_ov57_0219ab14
 _0219a1e4: .word data_ov57_0219aa40
-_0219a1e8: .word data_027e0fb8
+_0219a1e8: .word gPlayerControl
 _0219a1ec: .word data_ov57_0219aa40
 _0219a1f0: .word data_ov57_0219aa60
 _0219a1f4: .word data_ov57_0219aa70
@@ -1621,7 +1621,7 @@ func_ov57_0219a208: ; 0x0219a208
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
 	mov r2, #0
-	ldr r1, _0219a320 ; =data_027e0fb8
+	ldr r1, _0219a320 ; =gPlayerControl
 	str r2, [r0, #8]
 	ldr r0, [r1]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
@@ -1668,7 +1668,7 @@ _0219a2b4:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 _0219a300:
-	ldr r0, _0219a320 ; =data_027e0fb8
+	ldr r0, _0219a320 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
@@ -1677,7 +1677,7 @@ _0219a300:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0219a320: .word data_027e0fb8
+_0219a320: .word gPlayerControl
 _0219a324: .word data_ov57_0219ab14
 _0219a328: .word data_ov00_020eec9c
 	arm_func_end func_ov57_0219a208
@@ -1694,13 +1694,13 @@ func_ov57_0219a32c: ; 0x0219a32c
 	mov r0, r4
 	bl func_ov14_0213db60
 _0219a34c:
-	ldr r0, _0219a360 ; =data_027e0fb8
+	ldr r0, _0219a360 ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	strb r1, [r0, #0x7a]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0219a360: .word data_027e0fb8
+_0219a360: .word gPlayerControl
 	arm_func_end func_ov57_0219a32c
 
 	.global func_ov57_0219a364

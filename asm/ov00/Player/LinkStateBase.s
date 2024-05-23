@@ -111,7 +111,7 @@ _020a8084:
 _020a80c8:
 	cmp r4, #0
 	beq _020a80e8
-	ldr r0, _020a8104 ; =data_027e0fb8
+	ldr r0, _020a8104 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020af4a4Ev
 	cmp r0, #0
@@ -127,7 +127,7 @@ _020a80f0:
 _020a80f8: .word gAdventureFlags
 _020a80fc: .word data_027e0c68
 _020a8100: .word data_027e0f64
-_020a8104: .word data_027e0fb8
+_020a8104: .word gPlayerControl
 	arm_func_end _ZN13LinkStateBase8vfunc_24Ei
 
 	.global _ZN13LinkStateBase8vfunc_28Ev
@@ -805,7 +805,7 @@ _020a8840: .word gSinCosTable
 _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb: ; 0x020a8844
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
-	ldr r4, _020a8948 ; =data_027e0fb8
+	ldr r4, _020a8948 ; =gPlayerControl
 	mov r6, r0
 	ldr r0, [r4]
 	mov r5, r2
@@ -870,7 +870,7 @@ _020a8904:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020a8948: .word data_027e0fb8
+_020a8948: .word gPlayerControl
 _020a894c: .word data_027e0618
 _020a8950: .word data_027e0f64
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb

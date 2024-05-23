@@ -6472,7 +6472,7 @@ func_ov35_0218174c: ; 0x0218174c
 	mov r1, #1
 	mov r4, r0
 	bl func_ov35_02182fa8
-	ldr r0, _021817fc ; =data_027e0fb8
+	ldr r0, _021817fc ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
@@ -6516,7 +6516,7 @@ _021817c4:
 	str r0, [r4, #0x548]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_021817fc: .word data_027e0fb8
+_021817fc: .word gPlayerControl
 _02181800: .word gPlayerLink
 _02181804: .word gPlayer
 _02181808: .word data_ov00_020eec9c
@@ -7473,7 +7473,7 @@ _0218255c: .word 0xffffe333
 	arm_func_start func_ov35_02182560
 func_ov35_02182560: ; 0x02182560
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218260c ; =data_027e0fb8
+	ldr r1, _0218260c ; =gPlayerControl
 	mov r4, r0
 	ldr r0, [r1]
 	mov r1, #1
@@ -7519,7 +7519,7 @@ _021825d4:
 	str r0, [r4, #0x548]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218260c: .word data_027e0fb8
+_0218260c: .word gPlayerControl
 _02182610: .word gPlayerLink
 _02182614: .word gPlayer
 _02182618: .word data_ov00_020eec9c

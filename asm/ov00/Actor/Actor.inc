@@ -29,7 +29,7 @@
 .extern gPlayer
 .extern gPlayerPos
 .extern gPlayerAngle
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gPlayerLink
 .extern gActorManager
 .extern data_027e103c

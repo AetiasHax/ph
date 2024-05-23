@@ -228,7 +228,7 @@ func_ov55_02198f90: ; 0x02198f90
 	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, _0219900c ; =data_027e0fb8
+	ldr r0, _0219900c ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -246,12 +246,12 @@ func_ov55_02198f90: ; 0x02198f90
 	ldr r1, [r0]
 	ldr r1, [r1, #0x58]
 	blx r1
-	ldr r0, _0219900c ; =data_027e0fb8
+	ldr r0, _0219900c ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0219900c: .word data_027e0fb8
+_0219900c: .word gPlayerControl
 	arm_func_end func_ov55_02198f90
 
 	.global func_ov55_02199010
@@ -296,7 +296,7 @@ _0219907c:
 	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02199128
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	add r1, sp, #8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
@@ -316,7 +316,7 @@ _0219907c:
 	bl _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 	b _02199128
 _021990dc:
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	add r1, sp, #8
 	ldr r0, [r0]
 	mov r2, r5
@@ -348,7 +348,7 @@ _02199128:
 	ldr r1, [r0]
 	ldr r1, [r1, #0x58]
 	blx r1
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
@@ -357,7 +357,7 @@ _02199128:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 _02199178:
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r1, r0
@@ -369,7 +369,7 @@ _02199178:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _021991a0: .word data_ov55_02199840
-_021991a4: .word data_027e0fb8
+_021991a4: .word gPlayerControl
 	arm_func_end func_ov55_02199020
 
 	.global func_ov55_021991a8

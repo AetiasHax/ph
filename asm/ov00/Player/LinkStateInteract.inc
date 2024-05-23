@@ -44,7 +44,7 @@
 .extern gSinCosTable
 .extern data_027e0d0c
 .extern gMapManager
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gActorManager
 .extern data_ov00_020eec9c
 .extern Vec3p_Add

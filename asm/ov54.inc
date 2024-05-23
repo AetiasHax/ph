@@ -32,7 +32,7 @@
 .extern data_027e0d38
 .extern data_027e0e58
 .extern gMapManager
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e0fcc
 .extern data_027e0fd4
 .extern gActorManager

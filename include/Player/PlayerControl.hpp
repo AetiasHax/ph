@@ -126,3 +126,5 @@ public:
     bool IsTappedNow();
     bool func_ov00_020b13c4();
 };
+
+extern PlayerControl *gPlayerControl;

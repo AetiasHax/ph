@@ -18,7 +18,7 @@
 .extern gPlayerVel
 .extern gPlayerAngle
 .extern data_027e0fb0
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e0fcc
 .extern data_027e0fd4
 .extern gActorManager

@@ -237,7 +237,7 @@ _0216d92c: .word data_ov29_0217a4ac
 func_ov29_0216d930: ; 0x0216d930
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	ldr r0, _0216d984 ; =data_027e0fb8
+	ldr r0, _0216d984 ; =gPlayerControl
 	movs r4, r1
 	moveq r2, #1
 	movne r2, #0
@@ -258,7 +258,7 @@ _0216d968:
 	strb r4, [r5, #0x54]
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0216d984: .word data_027e0fb8
+_0216d984: .word gPlayerControl
 _0216d988: .word data_027e103c
 	arm_func_end func_ov29_0216d930
 

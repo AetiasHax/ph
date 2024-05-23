@@ -28,7 +28,7 @@
 .extern gMapManager
 .extern data_027e0f64
 .extern gPlayer
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e0fcc
 .extern gActorManager
 .extern data_027e0fe8

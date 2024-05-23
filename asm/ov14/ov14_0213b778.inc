@@ -169,7 +169,7 @@
 .extern gPlayer
 .extern gPlayerPos
 .extern gPlayerVel
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e0fc0
 .extern data_027e0fc4
 .extern gPlayerLink

@@ -1308,7 +1308,7 @@ _0213c634:
 	cmpeq r0, #0
 	movne r0, #0
 	ldmneia sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
-	ldr r0, _0213c8d4 ; =data_027e0fb8
+	ldr r0, _0213c8d4 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -1456,7 +1456,7 @@ _0213c8c4: .word data_027e103c
 _0213c8c8: .word 0x000002ff
 _0213c8cc: .word data_027e077c
 _0213c8d0: .word data_027e0c68
-_0213c8d4: .word data_027e0fb8
+_0213c8d4: .word gPlayerControl
 _0213c8d8: .word 0x00020010
 _0213c8dc: .word data_ov00_020eec9c
 _0213c8e0: .word gItemManager
@@ -1954,7 +1954,7 @@ func_ov14_0213cf2c: ; 0x0213cf2c
 	cmp r0, #0
 	movne r0, #0
 	ldmneia sp!, {r4, pc}
-	ldr r0, _0213cf84 ; =data_027e0fb8
+	ldr r0, _0213cf84 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -1965,7 +1965,7 @@ func_ov14_0213cf2c: ; 0x0213cf2c
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0213cf80: .word data_027e103c
-_0213cf84: .word data_027e0fb8
+_0213cf84: .word gPlayerControl
 	arm_func_end func_ov14_0213cf2c
 
 	.global func_ov14_0213cf88
@@ -4914,7 +4914,7 @@ _0213f0b4: .word data_027e0fd8
 	arm_func_start func_ov14_0213f0b8
 func_ov14_0213f0b8: ; 0x0213f0b8
 	stmdb sp!, {r4, lr}
-	ldr r1, _0213f0fc ; =data_027e0fb8
+	ldr r1, _0213f0fc ; =gPlayerControl
 	mov r2, #0
 	ldr r1, [r1]
 	mov r4, r0
@@ -4931,7 +4931,7 @@ func_ov14_0213f0b8: ; 0x0213f0b8
 	blx func_ov00_020bd5fc
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0213f0fc: .word data_027e0fb8
+_0213f0fc: .word gPlayerControl
 _0213f100: .word data_ov00_020e5684
 	arm_func_end func_ov14_0213f0b8
 
@@ -5409,7 +5409,7 @@ _0213f644:
 	bl func_ov14_0213f724
 	mov r2, #0
 	strb r2, [r0, #0x27]
-	ldr r1, _0213f714 ; =data_027e0fb8
+	ldr r1, _0213f714 ; =gPlayerControl
 	strb r2, [r0, #0x28]
 	ldr r0, [r1]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
@@ -5449,7 +5449,7 @@ _0213f6e4:
 _0213f708: .word data_027e0fd4
 _0213f70c: .word 0x000003ae
 _0213f710: .word gPlayerVel
-_0213f714: .word data_027e0fb8
+_0213f714: .word gPlayerControl
 _0213f718: .word data_027e0e58
 _0213f71c: .word gPlayerPos
 _0213f720: .word 0x000001a7

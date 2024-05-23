@@ -3987,8 +3987,8 @@ data_027e0fb0:
 	.global gItemManager
 gItemManager:
 	.space 0x4
-	.global data_027e0fb8
-data_027e0fb8:
+	.global gPlayerControl
+gPlayerControl:
 	.space 0x4
 	.global gHealthManager
 gHealthManager:

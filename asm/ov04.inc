@@ -136,7 +136,7 @@
 .extern gPlayer
 .extern gPlayerPos
 .extern gPlayerAngle
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gHealthManager
 .extern data_027e0fc0
 .extern data_027e0fc4

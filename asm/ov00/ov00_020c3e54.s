@@ -14526,7 +14526,7 @@ func_ov00_020cf42c: ; 0x020cf42c
 	arm_func_start func_ov00_020cf444
 func_ov00_020cf444: ; 0x020cf444
 	stmdb sp!, {r3, lr}
-	ldr r0, _020cf480 ; =data_027e0fb8
+	ldr r0, _020cf480 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -14542,7 +14542,7 @@ _020cf478:
 	mov r0, #0
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_020cf480: .word data_027e0fb8
+_020cf480: .word gPlayerControl
 _020cf484: .word gItemManager
 	arm_func_end func_ov00_020cf444
 

@@ -7314,7 +7314,7 @@ func_ov39_02182284: ; 0x02182284
 	bl func_ov39_0217f10c
 	mov r0, r4
 	bl func_ov39_0217f278
-	ldr r0, _021823e8 ; =data_027e0fb8
+	ldr r0, _021823e8 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl14IsTouchingFastEv
 	cmp r0, #0
@@ -7400,7 +7400,7 @@ _0218233c:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_021823e8: .word data_027e0fb8
+_021823e8: .word gPlayerControl
 _021823ec: .word gPlayerLink
 _021823f0: .word gPlayerPos
 _021823f4: .word data_027e0ffc

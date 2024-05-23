@@ -13,7 +13,7 @@
 .extern gPlayerVel
 .extern gPlayerAngle
 .extern data_027e0fb0
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern gActorManager
 .extern Vec3p_Sub
 .extern Atan2

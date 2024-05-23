@@ -544,7 +544,7 @@ func_ov53_02199318: ; 0x02199318
 _02199368:
 	cmp r5, #0
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, _021993d8 ; =data_027e0fb8
+	ldr r0, _021993d8 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x7d]
 	cmp r0, #0
@@ -571,7 +571,7 @@ _02199368:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _021993d4: .word data_ov53_0219a180
-_021993d8: .word data_027e0fb8
+_021993d8: .word gPlayerControl
 _021993dc: .word data_027e0de4
 _021993e0: .word func_ov53_02199014
 _021993e4: .word func_ov53_02199020
@@ -825,7 +825,7 @@ func_ov53_02199730: ; 0x02199730
 	mov r4, r0
 	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
 	ldr r1, _02199774 ; =data_027e0d0c
-	ldr r0, _02199778 ; =data_027e0fb8
+	ldr r0, _02199778 ; =gPlayerControl
 	ldr r2, [r1]
 	str r2, [r4, #0x44]
 	ldr r2, [r1, #4]
@@ -838,7 +838,7 @@ func_ov53_02199730: ; 0x02199730
 	.align 2, 0
 _02199770: .word data_ov53_0219a0f4
 _02199774: .word data_027e0d0c
-_02199778: .word data_027e0fb8
+_02199778: .word gPlayerControl
 	arm_func_end func_ov53_02199730
 
 	.global func_ov53_0219977c
@@ -855,7 +855,7 @@ func_ov53_0219977c: ; 0x0219977c
 	ldr r1, [r1, #8]
 	cmp r1, r0
 	bne _021998b0
-	ldr r0, _021999fc ; =data_027e0fb8
+	ldr r0, _021999fc ; =gPlayerControl
 	add r1, sp, #0x38
 	ldr r0, [r0]
 	add r3, r5, #0x44
@@ -882,7 +882,7 @@ _021997ec:
 	bl _ZN13LinkStateBase18func_ov00_020a81fcEv
 	b _02199850
 _0219980c:
-	ldr r0, _021999fc ; =data_027e0fb8
+	ldr r0, _021999fc ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl14IsUntouchedNowEv
 	cmp r0, #0
@@ -953,7 +953,7 @@ _0219990c:
 	bl _ZN13LinkStateBase18func_ov00_020a8b3cEi
 	cmp r0, #0
 	beq _02199938
-	ldr r0, _021999fc ; =data_027e0fb8
+	ldr r0, _021999fc ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r5
@@ -1011,7 +1011,7 @@ _02199938:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _021999f8: .word data_ov53_0219a0ec
-_021999fc: .word data_027e0fb8
+_021999fc: .word gPlayerControl
 _02199a00: .word data_ov53_0219a104
 _02199a04: .word data_027e0f64
 _02199a08: .word gPlayerPos

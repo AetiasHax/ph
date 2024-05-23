@@ -309,7 +309,7 @@ func_ov56_021990c0: ; 0x021990c0
 	ldr r1, _02199114 ; =data_027e0d0c
 	strh r0, [r4, #0x2c]
 	ldr r2, [r1]
-	ldr r0, _02199118 ; =data_027e0fb8
+	ldr r0, _02199118 ; =gPlayerControl
 	str r2, [r4, #0x44]
 	ldr r2, [r1, #4]
 	str r2, [r4, #0x48]
@@ -323,7 +323,7 @@ func_ov56_021990c0: ; 0x021990c0
 	.align 2, 0
 _02199110: .word data_ov56_021993e0
 _02199114: .word data_027e0d0c
-_02199118: .word data_027e0fb8
+_02199118: .word gPlayerControl
 	arm_func_end func_ov56_021990c0
 
 	.global func_ov56_0219911c
@@ -342,7 +342,7 @@ func_ov56_0219911c: ; 0x0219911c
 	mov r5, r0
 	cmp r1, #5
 	ble _021991b0
-	ldr r0, _021992d0 ; =data_027e0fb8
+	ldr r0, _021992d0 ; =gPlayerControl
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13CheckTouchingEj
@@ -367,7 +367,7 @@ func_ov56_0219911c: ; 0x0219911c
 	strh r0, [r4, #0x2c]
 	ldmia sp!, {r3, r4, r5, pc}
 _021991b0:
-	ldr r0, _021992d0 ; =data_027e0fb8
+	ldr r0, _021992d0 ; =gPlayerControl
 	add r1, sp, #0x14
 	ldr r0, [r0]
 	add r2, r4, #0x44
@@ -443,7 +443,7 @@ _0219925c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _021992cc: .word data_ov56_021993c0
-_021992d0: .word data_027e0fb8
+_021992d0: .word gPlayerControl
 _021992d4: .word data_ov56_021993f0
 _021992d8: .word data_ov56_021993e0
 _021992dc: .word data_027e0f64

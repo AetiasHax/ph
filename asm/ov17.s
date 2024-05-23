@@ -15761,7 +15761,7 @@ _02167b9c:
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, pc}
 _02167bd4:
-	ldr r0, _02167ccc ; =data_027e0fb8
+	ldr r0, _02167ccc ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13IsNotTouchingEv
 	cmp r0, #0
@@ -15827,7 +15827,7 @@ _02167cbc:
 	.align 2, 0
 _02167cc4: .word gAdventureFlags
 _02167cc8: .word gActorManager
-_02167ccc: .word data_027e0fb8
+_02167ccc: .word gPlayerControl
 _02167cd0: .word data_027e0f64
 	arm_func_end func_ov17_02167aac
 

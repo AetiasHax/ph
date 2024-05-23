@@ -11,7 +11,7 @@
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern _ZN13PlayerControl18func_ov00_020af01cEPc
 .extern gMapManager
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern Vec3p_Sub
 .extern Vec3p_Length
 .extern func_01fffcd8
