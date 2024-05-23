@@ -5282,7 +5282,7 @@ _02180528:
 	str r0, [sp, #0x50]
 	str r2, [sp, #0x54]
 	str r1, [sp, #0x58]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x100
 	strh r0, [r1, #0x60]
 	add r0, sp, #0x50
@@ -7899,7 +7899,7 @@ _02182984:
 	strne r0, [r5, #0x1a8]
 	ldr r0, [r5, #0x60]
 	ldr r1, [r5, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x100
 	strh r0, [r1, #0x60]
 	ldrsh r1, [r1, #0x5e]
@@ -8130,7 +8130,7 @@ _02182d98:
 	beq _02182de4
 	ldr r0, [r5, #0x60]
 	ldr r1, [r5, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x100
 	strh r0, [r1, #0x60]
 _02182de4:
@@ -8326,7 +8326,7 @@ func_ov39_02182ffc: ; 0x02182ffc
 	strne r0, [r4, #0x1a8]
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x100
 	strh r0, [r1, #0x60]
 	ldr r0, [r4, #0x7fc]
@@ -9845,7 +9845,7 @@ _021845e0:
 	ldr r2, [sp, #0x24]
 	mov r1, r0
 	sub r0, r3, r2
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r2, r0, asr #0x10
 	add r0, sp, #8
@@ -9860,7 +9860,7 @@ _021845e0:
 	ldr r2, [sp, #0xc]
 	ldr r0, [sp, #0x18]
 	sub r0, r2, r0
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	str r0, [sp, #0x3c]
@@ -11540,7 +11540,7 @@ func_ov39_02185c3c: ; 0x02185c3c
 	ldr r0, [sp, #0x1c]
 	ldrsh r4, [r1]
 	ldr r1, [sp, #0x24]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsbs r1, r4, r0, asr #16
 	ldr r0, _02185e90 ; =0x000031c7

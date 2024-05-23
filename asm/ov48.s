@@ -2926,11 +2926,11 @@ _021921cc:
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
 	bge _021922b8
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	ldmia sp!, {r4, pc}
 _021922b8:
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r4, #0x78]
 	mov r0, r0, lsl #0x10
 	sub r1, r1, #0x8000
@@ -4054,7 +4054,7 @@ _02193240:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x54]
 	ldr r1, [sp, #0x5c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -4083,7 +4083,7 @@ _021932c4:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x2c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10

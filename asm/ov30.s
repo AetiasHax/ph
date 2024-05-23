@@ -1596,7 +1596,7 @@ func_ov30_0217d09c: ; 0x0217d09c
 	ldrsh r8, [r0, #0x40]
 	ldr r0, [sp, #0x4c]
 	ldr r1, [sp, #0x54]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r8, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -1626,7 +1626,7 @@ _0217d1b0:
 	ldrsh r5, [r0, #0x40]
 	ldr r0, [sp, #0x4c]
 	ldr r1, [sp, #0x54]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r5, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -1654,7 +1654,7 @@ _0217d220:
 	ldrsh r5, [r0, #0x40]
 	ldr r0, [sp, #0x4c]
 	ldr r1, [sp, #0x54]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r5, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -1892,7 +1892,7 @@ func_ov30_0217d4e8: ; 0x0217d4e8
 	ldrsh r6, [r0, #0x40]
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r6, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -1920,7 +1920,7 @@ _0217d5e0:
 	ldrsh r6, [r0, #0x40]
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r6, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -6894,7 +6894,7 @@ func_ov30_021812f0: ; 0x021812f0
 	mov r4, r0
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r4, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02181360 ; =0xffff8001
@@ -8108,7 +8108,7 @@ func_ov30_0218237c: ; 0x0218237c
 	bl func_ov30_0217c588
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x800
 	strh r0, [r1, #0x40]
 	add sp, sp, #0xc
@@ -8796,7 +8796,7 @@ func_ov30_02182cb4: ; 0x02182cb4
 	beq _02182d34
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	sub r0, r0, #0x8000
@@ -14014,11 +14014,11 @@ _02186ed8:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r5, r0, lsl #0x10
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x18]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	rsb r0, r0, r5, asr #16

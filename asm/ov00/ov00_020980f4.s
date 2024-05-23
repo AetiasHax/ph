@@ -4833,7 +4833,7 @@ func_ov00_0209bea0: ; 0x0209bea0
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
 	ldrsh r5, [r2]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r4
 	bl func_ov00_02090a7c
 	ldr r1, [r0, #0x30]
@@ -6165,7 +6165,7 @@ func_ov00_0209cf64: ; 0x0209cf64
 	bl func_ov00_02090e10
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x38]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, sp, #0x3c
 	mov r0, r4
 	bl func_ov00_02090c28
@@ -12999,7 +12999,7 @@ _020a23d8:
 	mov r6, r0
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r10, r0, lsl #0x10
 	add r0, sp, #0x1c
 	add r3, sp, #4
@@ -13014,7 +13014,7 @@ _020a23d8:
 	rsb r1, r1, #0
 	str r0, [sp, #4]
 	str r1, [sp, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	ldr r0, [sp, #0x104]
@@ -18565,7 +18565,7 @@ _020a6ae0:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x58]
 	ldr r1, [sp, #0x60]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r2, r0, lsl #0x10
 	add r1, sp, #0x7c
 	mov r0, r10
@@ -18614,7 +18614,7 @@ _020a6b9c:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x40]
 	ldr r1, [sp, #0x48]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, _020a6de4 ; =gPlayerPos
 	mov r0, r0, lsl #0x10
 	ldr r2, [r1]

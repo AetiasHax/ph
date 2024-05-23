@@ -965,7 +965,7 @@ _020acbb0:
 	str r0, [sp]
 	str r2, [sp, #4]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r7, r0, lsl #0x10
 	mov r0, r6
 	mov r4, r7, asr #0x10
@@ -1049,7 +1049,7 @@ _020acce4:
 	str r1, [r0, #8]
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r4, r0
 	mov r0, r6
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -1173,7 +1173,7 @@ _ZN15LinkStateDamage18func_ov00_020ace90EP5Vec3pi: ; 0x020ace90
 	str r1, [r0, #8]
 	ldr r0, [r6]
 	ldr r1, [r6, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r6, r1, asr #0x10

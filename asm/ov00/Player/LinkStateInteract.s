@@ -307,7 +307,7 @@ _020aa5d4:
 	bl func_ov00_020d7b20
 	ldr r0, [r4, #0x18]
 	ldr r1, [r4, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r5, r0
 	mov r0, r4
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -327,7 +327,7 @@ _020aa634:
 	beq _020aa674
 	ldr r0, [r4, #0x18]
 	ldr r1, [r4, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r5, r0
 	mov r0, r4
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -1039,7 +1039,7 @@ _020ab060:
 	bge _020ab1d8
 	ldr r0, [sp, #0x50]
 	ldr r1, [sp, #0x58]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, _020ab3dc ; =0x00001ccd
 	mov r0, r0, lsl #0x10
 	cmp r5, r1
@@ -1152,7 +1152,7 @@ _020ab1e4:
 	beq _020ab278
 	ldr r0, [sp, #0x34]
 	ldr r1, [sp, #0x3c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r6, r0, lsl #0x10
 	mov r0, r6, asr #0x10
 	bl func_0202bbbc
@@ -1621,7 +1621,7 @@ _020ab818:
 	add r2, r1, #0x66
 	ldr r1, [sp, #0x18]
 	add r4, r2, #0x600
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	bl func_0202bbbc

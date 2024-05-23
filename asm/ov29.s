@@ -6299,7 +6299,7 @@ _02172ad8:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -9417,7 +9417,7 @@ func_ov29_021755b4: ; 0x021755b4
 	bl func_01ff9958
 	mov r1, r0
 	mov r0, r6
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r5, #0x2bc

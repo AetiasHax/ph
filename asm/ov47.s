@@ -2442,7 +2442,7 @@ _02191fc8: ; jump table
 _02191fe4:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02192310 ; =0xffff8001
@@ -2524,7 +2524,7 @@ _021920f0:
 _02192110:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02192310 ; =0xffff8001
@@ -2564,7 +2564,7 @@ _02192188:
 _021921a4:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r2, _02192310 ; =0xffff8001

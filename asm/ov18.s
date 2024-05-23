@@ -13853,7 +13853,7 @@ func_ov18_02166700: ; 0x02166700
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	str r0, [r5, #0x48c]
@@ -13867,7 +13867,7 @@ func_ov18_02166700: ; 0x02166700
 	bl Vec3p_Length
 	mov r1, r0
 	ldr r0, [sp, #0x1c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	cmp r4, #0
@@ -14517,7 +14517,7 @@ func_ov18_02166f20: ; 0x02166f20
 	sub r0, r1, r0
 	ldr r1, [r4, #0x50]
 	sub r1, r2, r1
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}

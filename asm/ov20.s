@@ -762,7 +762,7 @@ _0216e120:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x5c]
 	ldr r1, [sp, #0x64]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	str r0, [sp, #0x10]
 	ldr r0, _0216e548 ; =data_027e0764
@@ -2390,7 +2390,7 @@ func_ov20_0216f82c: ; 0x0216f82c
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r2, r0, asr #0x10
 	mov r1, #0
@@ -3612,7 +3612,7 @@ func_ov20_02170740: ; 0x02170740
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10

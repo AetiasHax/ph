@@ -2230,7 +2230,7 @@ _0218b130:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r4]
 	ldr r1, [r4, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10

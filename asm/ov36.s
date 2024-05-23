@@ -3273,7 +3273,7 @@ _0217ea64:
 	beq _0217eacc
 	ldr r0, [r6, #0xc4]
 	ldr r1, [r6, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r6, #0x78]
 	mov r0, r0, lsl #0x10
 	rsb r0, r1, r0, asr #16
@@ -3501,7 +3501,7 @@ func_ov36_0217ed50: ; 0x0217ed50
 	beq _0217ede8
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -8394,7 +8394,7 @@ _02183360:
 	ldr r1, _021834fc ; =gPlayerVel
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x800
 	ldrsh r1, [r1, #0x9a]
 	mov r0, r0, lsl #0x10
@@ -9071,7 +9071,7 @@ _02183ce8:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x30]
 	ldr r1, [sp, #0x38]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr ip, [r6, #0x864]
 	ldrsh r2, [r6, #0x78]
@@ -9266,7 +9266,7 @@ _02183fd0:
 	ldr r1, [r6, #0x50]
 	sub r0, r3, r0
 	sub r1, r2, r1
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	ldr r0, [r5, #0x14]
 	mov r1, r1, asr #0x10
@@ -9418,7 +9418,7 @@ _02184160:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x2c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -10992,7 +10992,7 @@ _021857a8:
 	mov r4, r0, lsl #0x10
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	add r0, r0, #0x8000

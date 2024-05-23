@@ -80,7 +80,7 @@
 .extern Vec3p_Add
 .extern Vec3p_Sub
 .extern Vec3p_Axpy
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01fffcec
 .extern func_01fffd04
 .extern func_0201e544

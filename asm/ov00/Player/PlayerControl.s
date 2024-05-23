@@ -2273,7 +2273,7 @@ _020b0c5c:
 	ble _020b0cd8
 	ldr r0, [r7, #0x50]
 	ldr r1, [r7, #0x54]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, [sp, #0x38]
 	ldrsh r2, [r6]
 	cmp r1, #0
@@ -2292,7 +2292,7 @@ _020b0c5c:
 _020b0cd8:
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh lr, [r6]
 	add r1, sp, #0xc
 	mov ip, #0

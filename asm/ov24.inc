@@ -138,7 +138,7 @@
 .extern Vec3p_Dot
 .extern Vec3p_Length
 .extern Vec3p_Axpy
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffb7ec
 .extern func_01ffbf5c
 .extern func_01ffec34

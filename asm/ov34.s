@@ -3240,7 +3240,7 @@ func_ov34_0217ea88: ; 0x0217ea88
 	bl Vec3p_Sub
 	ldr r0, [sp, #4]
 	ldr r1, [sp, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -3324,7 +3324,7 @@ func_ov34_0217eb94: ; 0x0217eb94
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x3c]
 	ldr r1, [sp, #0x44]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -3604,7 +3604,7 @@ func_ov34_0217ef88: ; 0x0217ef88
 _0217eff8:
 	ldr r1, [sp, #0x18]
 	str r0, [sp, #0x10]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -3735,7 +3735,7 @@ func_ov34_0217f120: ; 0x0217f120
 _0217f1d0:
 	ldr r1, [sp, #0x24]
 	str r0, [sp, #0x1c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -4034,7 +4034,7 @@ _0217f604:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x18]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -4185,7 +4185,7 @@ func_ov34_0217f7c8: ; 0x0217f7c8
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x74]
 	ldr r1, [sp, #0x7c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r5, #0x1d80
@@ -4876,7 +4876,7 @@ _02180200:
 _02180258:
 	ldr r1, [sp, #0x18]
 	str r0, [sp, #0x10]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r4, #0x1d80
@@ -5027,7 +5027,7 @@ func_ov34_021803c0: ; 0x021803c0
 _02180468:
 	ldr r1, [sp, #0x4c]
 	str r0, [sp, #0x44]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	add r0, r5, #0x1d80
@@ -5305,7 +5305,7 @@ func_ov34_02180854: ; 0x02180854
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x14]
 	rsb r0, r0, #0
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr r1, _02180994 ; =0x000031c7
 	mov r4, r0, asr #0x10
@@ -5318,7 +5318,7 @@ func_ov34_02180854: ; 0x02180854
 _021808a8:
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr r1, _02180994 ; =0x000031c7
 	mov r6, r0, asr #0x10
@@ -6574,7 +6574,7 @@ func_ov34_02181a00: ; 0x02181a00
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x38]
 	ldr r1, [sp, #0x40]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r6, #0x1d00
 	ldrsh r2, [r1, #0x86]
 	mov r0, r0, lsl #0x10
@@ -9950,7 +9950,7 @@ func_ov34_02184950: ; 0x02184950
 	bl func_ov00_020b18d8
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add sp, sp, #0x34
 	strh r0, [r4, #0x78]
 	ldmia sp!, {r3, r4, pc}

@@ -8846,7 +8846,7 @@ func_ov17_021623e8: ; 0x021623e8
 	str r0, [sp]
 	str r2, [sp, #4]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r4, #0x60]
 	mov r0, r0, lsl #0x10
 	cmp r1, #0

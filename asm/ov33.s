@@ -3926,7 +3926,7 @@ _0217f040:
 	beq _0217f06c
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x300
 	strh r0, [r1, #0xdc]
 	b _0217f1b8

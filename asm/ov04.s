@@ -11355,7 +11355,7 @@ _021063a4:
 	blx Vec3p_Sub
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
-	blx func_01ffa0f4
+	blx Atan2
 	strh r0, [r4]
 	add r7, r7, #1
 	add r5, r5, #4

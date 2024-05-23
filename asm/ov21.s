@@ -3143,7 +3143,7 @@ _0216fddc:
 	str r0, [sp, #0x2c]
 	str r2, [sp, #0x30]
 	str r1, [sp, #0x34]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	bl func_0202bc10

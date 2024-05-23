@@ -3309,7 +3309,7 @@ _0217012c:
 _0217013c:
 	ldr r0, [r2]
 	ldr r1, [r2, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x300
 	strh r0, [r1, #0x52]
 	add r0, r4, #0x318
@@ -3453,7 +3453,7 @@ _021702f0:
 	ldr r1, [r5, #0x50]
 	sub r1, r2, r1
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	ldr r0, [r4, #0x14]
 	mov r1, r1, asr #0x10
@@ -5742,7 +5742,7 @@ _02172078:
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -5779,7 +5779,7 @@ _021720f4:
 	beq _021721e0
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -5801,7 +5801,7 @@ _02172148:
 	beq _021721e0
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -5819,7 +5819,7 @@ _0217219c:
 	beq _021721e0
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -7266,7 +7266,7 @@ _02173524:
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -7295,7 +7295,7 @@ _02173594:
 	beq _02173660
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -7313,7 +7313,7 @@ _021735d8:
 	beq _02173660
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -7331,7 +7331,7 @@ _0217361c:
 	beq _02173660
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -7715,7 +7715,7 @@ func_ov24_02173b18: ; 0x02173b18
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x24]
 	ldr r1, [sp, #0x2c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldrsh r2, [r4, #0x78]
 	mov r3, r0, asr #0x10
@@ -9114,7 +9114,7 @@ _02174d24: ; jump table
 _02174d44:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02175204 ; =0xffff8001
@@ -9142,7 +9142,7 @@ _02174d84:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9180,7 +9180,7 @@ _02174e00:
 _02174e38:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02175204 ; =0xffff8001
@@ -9208,7 +9208,7 @@ _02174e78:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9237,7 +9237,7 @@ _02174ed4:
 _02174f10:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02175204 ; =0xffff8001
@@ -9265,7 +9265,7 @@ _02174f50:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9301,7 +9301,7 @@ _02174ff0:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9346,7 +9346,7 @@ _02175094:
 	ldmeqia sp!, {r3, r4, r5, pc}
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9383,7 +9383,7 @@ _02175110:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9405,7 +9405,7 @@ _02175164:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10
@@ -9423,7 +9423,7 @@ _021751b8:
 	beq _021751fc
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r5
 	mov r1, r1, asr #0x10

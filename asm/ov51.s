@@ -1517,7 +1517,7 @@ func_ov51_021967e8: ; 0x021967e8
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r3, r0, asr #0x10
 	mov r0, r3, lsl #0x10
@@ -1659,7 +1659,7 @@ func_ov51_02196924: ; 0x02196924
 	str r3, [sp, #0x60]
 	ldr r2, [r2, #0x48]
 	str r2, [sp, #0x64]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	sub r0, r0, #0x8000
@@ -2201,7 +2201,7 @@ func_ov51_021970a0: ; 0x021970a0
 	beq _02197260
 	ldr r0, [r7, #0x60]
 	ldr r1, [r7, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	bl func_0202bbbc
@@ -2245,7 +2245,7 @@ func_ov51_021970a0: ; 0x021970a0
 	ble _021971d8
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x1c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	sub r0, r5, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -2284,7 +2284,7 @@ _021971e4:
 	stmia r3, {r0, r1, r2}
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0x10]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	sub r0, r5, r0, asr #16
 	mov r0, r0, lsl #0x10

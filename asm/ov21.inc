@@ -98,7 +98,7 @@
 .extern Vec3p_Add
 .extern Vec3p_Sub
 .extern Vec3p_Dot
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffbe78
 .extern func_01ffbf5c
 .extern func_01fffd04

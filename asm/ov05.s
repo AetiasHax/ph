@@ -12121,7 +12121,7 @@ _0210ac7c:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r6
 	mov r4, r1, asr #0x10
@@ -12145,7 +12145,7 @@ _0210ad00:
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r6
 	mov r4, r1, asr #0x10
@@ -16974,7 +16974,7 @@ _0210ef74:
 	ldr r1, [r0]
 	ldrsh r0, [r1, #0x72]
 	ldrsh r1, [r1, #0x74]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -17638,7 +17638,7 @@ func_ov05_0210f808: ; 0x0210f808
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x2c]
 	ldr r1, [sp, #0x34]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r5, r0, asr #0x10
 	b _0210f89c
@@ -17699,7 +17699,7 @@ _0210f8dc:
 	mov r1, r0
 	ldr r0, [r1, #0x114]
 	ldr r1, [r1, #0x11c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	sub r0, r0, #0x8000
@@ -17842,7 +17842,7 @@ _0210fa80:
 	beq _0210fbf0
 	ldr r0, [sp, #0x40]
 	ldr r1, [sp, #0x48]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	sub r1, r5, r0, asr #16
 	mov r1, r1, lsl #0x10
@@ -17931,7 +17931,7 @@ _0210fc74:
 	bl _ZN13LinkStateBase18func_ov00_020a8294Eij
 	ldr r0, [sp, #0x20]
 	ldr r1, [sp, #0x28]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	sub r0, r0, #0x8000
@@ -20135,7 +20135,7 @@ func_ov05_02111af8: ; 0x02111af8
 	ldrsh r6, [r5, #0x18]
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r6, r0, asr #16
 	mov r0, r0, lsl #0x10

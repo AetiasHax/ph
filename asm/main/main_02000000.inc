@@ -282,7 +282,7 @@
 .extern Vec3p_Normalize
 .extern func_01ff9ec0
 .extern func_01ff9f3c
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffa29c
 .extern func_01ffa2dc
 .extern func_01ffa34c

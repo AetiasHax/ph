@@ -1055,7 +1055,7 @@ _020ef474:
 	add r2, r7, #0
 	ldrsh r2, [r6, r2]
 	sub r1, r1, r2
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x5c]
 	b _020ef524
 _020ef4b8:
@@ -1114,7 +1114,7 @@ _020ef50e:
 	ldrsh r2, [r5, r1]
 	ldr r1, [sp, #0xc]
 	sub r1, r2, r1
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x5c]
 _020ef524:
 	ldr r0, [sp, #0x40]
@@ -1180,7 +1180,7 @@ _020ef58e:
 	ldrsh r2, [r5, r1]
 	ldr r1, [sp, #4]
 	sub r1, r2, r1
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x5c]
 	b _020ef5e4
 _020ef5a6:
@@ -1209,7 +1209,7 @@ _020ef5a6:
 	ldrsh r2, [r5, r2]
 	sub r1, r3, r1
 	sub r0, r0, r2
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x5c]
 	b _020ef5e4
 _020ef5e0:
@@ -2205,7 +2205,7 @@ _020efcc6:
 	lsl r0, r0, #0xc
 	sub r1, r1, r2
 	lsl r1, r1, #0xc
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x1c]
 	b _020efdee
 _020efce6:
@@ -2264,7 +2264,7 @@ _020efd1a:
 	lsl r0, r0, #0xc
 	sub r1, r2, r1
 	lsl r1, r1, #0xc
-	blx func_01ffa0f4
+	blx Atan2
 	ldr r1, [sp, #0x1c]
 	sub r0, r1, r0
 	lsl r0, r0, #0x10
@@ -2285,7 +2285,7 @@ _020efd5c:
 	lsl r0, r0, #0xc
 	sub r1, r2, r1
 	lsl r1, r1, #0xc
-	blx func_01ffa0f4
+	blx Atan2
 	str r0, [sp, #0x1c]
 	lsl r0, r5, #1
 	strh r6, [r7, r0]
@@ -2297,7 +2297,7 @@ _020efd82:
 _020efd88:
 	lsl r0, r2, #0xc
 	lsl r1, r1, #0xc
-	blx func_01ffa0f4
+	blx Atan2
 	ldr r1, [sp, #0x1c]
 	sub r1, r1, r0
 	lsl r1, r1, #0x10

@@ -128,7 +128,7 @@
 .extern func_01ff9b24
 .extern func_01ff9b4c
 .extern func_01ff9b88
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffa8d4
 .extern func_01ffb7ec
 .extern func_01ffbe34

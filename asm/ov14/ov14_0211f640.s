@@ -1036,7 +1036,7 @@ _02120248:
 	bl func_ov00_020ceacc
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	mov r0, #0
 	str r0, [r4, #0x19c]
@@ -1196,7 +1196,7 @@ _021204e4:
 _021204f0:
 	ldr r0, [r6, #0xc4]
 	ldr r1, [r6, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r6
 	mov r1, r1, asr #0x10
@@ -1229,7 +1229,7 @@ _02120560:
 	beq _0212058c
 	ldr r0, [r6, #0xc4]
 	ldr r1, [r6, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r6
 	mov r1, r1, asr #0x10
@@ -1756,7 +1756,7 @@ func_ov14_02120c98: ; 0x02120c98
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	mov r0, r1, lsl #0x10
@@ -1911,7 +1911,7 @@ _02120e94:
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r1, r1, asr #0x10
@@ -3501,11 +3501,11 @@ _02122488:
 	beq _02122510
 	ldr r0, [sp, #0x80]
 	ldr r1, [sp, #0x88]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r6, r0, lsl #0x10
 	ldr r0, [r5, #0x60]
 	ldr r1, [r5, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, [r5, #0x60]
 	mov r0, r0, lsl #0x10
 	str r1, [sp, #0x74]
@@ -3592,7 +3592,7 @@ _021225cc:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x68]
 	ldr r1, [sp, #0x70]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x200
 	strh r0, [r1, #0x68]
 	ldrsh r2, [r1, #0x68]
@@ -5384,7 +5384,7 @@ func_ov14_02123cd0: ; 0x02123cd0
 	beq _02123e08
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	add sp, sp, #0xc
 	mov r0, #0
@@ -5409,7 +5409,7 @@ _02123d9c:
 	beq _02123e08
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	sub r0, r0, #0x8000
@@ -6125,7 +6125,7 @@ _02124724:
 	bl Vec3p_Add
 	ldr r0, [r5, #0x60]
 	ldr r1, [r5, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r5, #0x78]
 	add r0, r5, #0x100
 	ldrsh r1, [r0, #0x7c]
@@ -16934,7 +16934,7 @@ _0212d2b0:
 	str r2, [r5, #0x78]
 	ldr r0, [r4]
 	ldr r1, [r4, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r5, #0x62]
 	mov r0, #0
 	strh r0, [r5, #0x5c]

@@ -2749,7 +2749,7 @@ func_ov14_0213d63c: ; 0x0213d63c
 	ldr r1, [r4, #8]
 	sub r0, r3, r0
 	sub r1, r2, r1
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	ldmia sp!, {r4, pc}
@@ -3658,7 +3658,7 @@ func_ov14_0213e20c: ; 0x0213e20c
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r5, #0xc]
 	mov r0, r0, lsl #0x10
 	sub r0, r1, r0, asr #16
@@ -3927,7 +3927,7 @@ _0213e62c:
 	ldr r1, [sp, #0x40]
 	sub r0, r0, r8
 	sub r1, r1, r9
-	bl func_01ffa0f4
+	bl Atan2
 	mov r2, r10, lsl #0x1
 	ldr r8, [sp, #0x4c]
 	ldr r1, [sp, #0x44]
@@ -19586,7 +19586,7 @@ _0214a77c:
 	sub r0, r5, r0
 	sub r1, r3, r1
 	mov r5, r2, asr #0x10
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r1, r8, r0, asr #16
 	mov r1, r1, lsl #0x10
@@ -19618,7 +19618,7 @@ _0214a808:
 	bl func_ov00_020ce2f0
 	mov r1, r0
 	mov r0, r11
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	cmp r9, #0
 	mov r9, r0, asr #0x10
@@ -21145,7 +21145,7 @@ func_ov14_0214bbdc: ; 0x0214bbdc
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr r1, _0214bc94 ; =0x00000fa5
 	mov r2, r0, asr #0x10
@@ -21286,7 +21286,7 @@ func_ov14_0214bd7c: ; 0x0214bd7c
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x18]
 	ldr r1, [sp, #0x20]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr r1, _0214be60 ; =0x00003555
 	mov r2, r0, asr #0x10
@@ -21907,7 +21907,7 @@ func_ov14_0214c55c: ; 0x0214c55c
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r4, r0, asr #0x10
 	ldrsh r2, [sp, #0x28]
@@ -22188,7 +22188,7 @@ func_ov14_0214c948: ; 0x0214c948
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r5, r0, asr #0x10
 	ldrsh r2, [sp, #0x28]
@@ -27858,7 +27858,7 @@ func_ov14_02151084: ; 0x02151084
 	str r0, [sp]
 	str r2, [sp, #4]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	movs r1, r0, asr #0x10
 	bmi _02151104

@@ -728,7 +728,7 @@ _ZN13LinkStateBase18func_ov00_020a8704EPs: ; 0x020a8704
 	beq _020a876c
 	ldr r0, [r5, #0x64]
 	ldr r1, [r5, #0x6c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r5, r0, lsl #0x10
 	mov r0, r6
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -785,7 +785,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	add r1, r2, r1
 	str r0, [sp]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r4, r0, asr #16
 	mov r0, r0, lsl #0x10

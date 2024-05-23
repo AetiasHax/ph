@@ -294,7 +294,7 @@ func_ov59_02198ffc: ; 0x02198ffc
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r4
 	mov r4, r1, asr #0x10
@@ -561,7 +561,7 @@ _021993b4:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xa4]
 	ldr r1, [sp, #0xac]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x300
 	strh r0, [r1, #0x40]
 	ldr r0, [r4, #0x344]
@@ -592,7 +592,7 @@ _02199408:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x8c]
 	ldr r1, [sp, #0x94]
-	bl func_01ffa0f4
+	bl Atan2
 	add r2, r4, #0x300
 	strh r0, [r2, #0x40]
 	ldr r1, [sp, #0x98]
@@ -899,7 +899,7 @@ _021998b8:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x68]
 	ldr r1, [sp, #0x70]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x300
 	strh r0, [r1, #0x40]
 	ldr r0, [r4, #0x348]

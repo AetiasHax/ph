@@ -4067,7 +4067,7 @@ func_ov28_02170b54: ; 0x02170b54
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x14]
 	ldr r1, [sp, #0x1c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	str r0, [r4, #0x4a4]
@@ -4081,7 +4081,7 @@ func_ov28_02170b54: ; 0x02170b54
 	bl Vec3p_Length
 	mov r1, r0
 	ldr r0, [sp, #0x18]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	str r0, [r4, #0x4a0]
@@ -4403,7 +4403,7 @@ func_ov28_02170fa0: ; 0x02170fa0
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r4]
 	ldr r1, [r4, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -12524,7 +12524,7 @@ _0217783c:
 	add r1, r1, r0
 	mov r0, r4
 	sub r1, r2, r1
-	bl func_01ffa0f4
+	bl Atan2
 	rsb r0, r0, #0x4000
 	mov r0, r0, lsl #0x10
 	ldr r2, _021778b8 ; =0x00001555
@@ -13029,7 +13029,7 @@ _02177ed8:
 	beq _02177f5c
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r3, _0217804c ; =data_027e0764
 	ldr r1, _02178050 ; =0x00004001
 	ldr r5, [r3]

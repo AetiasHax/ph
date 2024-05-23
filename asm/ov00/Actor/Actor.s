@@ -1169,7 +1169,7 @@ _ZN5Actor18CollidesWithShieldEP8Cylinder: ; 0x020c2238
 	ldr r0, [sp]
 	ldrsh r4, [r1]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsbs r0, r4, r0, asr #16
 	rsbmi r0, r0, #0
@@ -1726,7 +1726,7 @@ _ZN5Actor10GetAngleToEP5Vec3p: ; 0x020c2938
 	subs r0, r3, r2
 	cmpeq r1, #0
 	beq _020c296c
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r4, r0, asr #0x10
 _020c296c:

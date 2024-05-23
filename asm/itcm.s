@@ -2498,9 +2498,9 @@ _01ffa0ec: .word 0xffffda4d
 _01ffa0f0: .word data_02054f54
 	arm_func_end func_01ff9f3c
 
-	.global func_01ffa0f4
-	arm_func_start func_01ffa0f4
-func_01ffa0f4: ; 0x01ffa0f4
+	.global Atan2
+	arm_func_start Atan2
+Atan2: ; 0x01ffa0f4
 	stmdb sp!, {r4, lr}
 	cmp r0, #0
 	ble _01ffa188
@@ -2624,7 +2624,7 @@ _01ffa274:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _01ffa298: .word data_02055058
-	arm_func_end func_01ffa0f4
+	arm_func_end Atan2
 
 	.global func_01ffa29c
 	arm_func_start func_01ffa29c

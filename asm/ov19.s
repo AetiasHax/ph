@@ -641,7 +641,7 @@ func_ov19_0216df14: ; 0x0216df14
 	bl Vec3p_Sub
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -1137,7 +1137,7 @@ _0216e46c:
 	str r0, [sp, #0x3c]
 	ldr r0, [sp, #0x38]
 	ldr r1, [sp, #0x40]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -1608,7 +1608,7 @@ _0216eb88:
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -5143,7 +5143,7 @@ _021719a4:
 _02171a04:
 	ldr r0, [r5, #0x60]
 	ldr r1, [r5, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x200
 	strh r0, [r1, #0xec]
 _02171a18:

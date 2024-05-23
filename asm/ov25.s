@@ -723,7 +723,7 @@ func_ov25_0216e024: ; 0x0216e024
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	ldr r2, _0216e088 ; =0x0000071c
@@ -831,7 +831,7 @@ func_ov25_0216e174: ; 0x0216e174
 	bl Vec3p_Sub
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10
@@ -3252,7 +3252,7 @@ _02170278:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	ldr r1, _021703b4 ; =0x00000e39
 	mov r2, r0, asr #0x10
@@ -5630,7 +5630,7 @@ _0217229c:
 	beq _02172370
 	ldr r0, [r5, #0xc4]
 	ldr r1, [r5, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x100
 	strh r0, [r1, #0x70]
 	ldr r0, _021724e0 ; =data_027e0ffc
@@ -12488,7 +12488,7 @@ func_ov25_02177dc4: ; 0x02177dc4
 	str r0, [r4, #0x64]
 	ldr r0, [r4, #0x60]
 	ldr r1, [r4, #0x68]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r4, #0x100
 	strh r0, [r1, #0x5c]
 	ldrh r1, [r1, #0x5c]

@@ -147,7 +147,7 @@
 .extern Vec3p_Normalize
 .extern Vec3p_Axpy
 .extern func_01ff9ec0
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffe1cc
 .extern func_01fffcd8
 .extern func_01fffcec

@@ -893,7 +893,7 @@ _0216e2b8:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x44]
 	ldr r1, [sp, #0x4c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	ldr r1, [sp, #0x18c]
@@ -1030,7 +1030,7 @@ _0216e4f4:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x38]
 	ldr r1, [sp, #0x40]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	ldr r1, [sp, #0x74]
@@ -1476,7 +1476,7 @@ _0216eb54:
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r2, #0xfa0
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
@@ -1700,7 +1700,7 @@ _0216eee8:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0x3c]
 	ldr r1, [sp, #0x44]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, [r6, #0x130]
 	mov r0, r0, lsl #0x10
 	cmp r1, #0xa
@@ -1960,7 +1960,7 @@ _0216f2a0:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r4, r0
 	ldr r0, _0216f32c ; =data_027e0ffc
 	add r2, r6, #0x48
@@ -4111,7 +4111,7 @@ _02171074:
 _02171094:
 	ldr r0, [sp, #0x2c]
 	ldr r1, [sp, #0x34]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	cmp r9, #0
@@ -4766,7 +4766,7 @@ _021718e0:
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r2, #0xfa0
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
@@ -5357,7 +5357,7 @@ _02172154:
 	str r0, [sp, #0x50]
 	str r2, [sp, #0x54]
 	str r1, [sp, #0x58]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	ldrsh r0, [r6, #0x78]
 	mov r2, r1, asr #0x10
@@ -9399,7 +9399,7 @@ func_ov27_02175660: ; 0x02175660
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	ldr r2, _02175814 ; =0x0000038e
@@ -10921,7 +10921,7 @@ _02176ba4:
 _02176ba8:
 	ldr r0, [sp, #0x2c]
 	ldr r1, [sp, #0x34]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	cmp r9, #0
@@ -11752,7 +11752,7 @@ _0217772c:
 	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	ldr r1, [sp, #0x14]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, [r6, #0x10]
 	mov r0, r0, lsl #0x10
 	cmp r1, #7

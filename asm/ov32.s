@@ -7918,7 +7918,7 @@ func_ov32_02182490: ; 0x02182490
 	str r0, [sp]
 	str r2, [sp, #4]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r4, #0xc]
 	mov r0, r0, lsl #0x10
 	rsbs r1, r1, r0, asr #16

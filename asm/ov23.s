@@ -4869,7 +4869,7 @@ _02171510:
 	str r1, [r0, #4]
 	ldr r0, [r5]
 	ldr r1, [r5, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r4, r0
 	mov r0, r7
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -4936,7 +4936,7 @@ _02171614:
 	str r1, [r0, #4]
 	ldr r0, [r5]
 	ldr r1, [r5, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r4, r0
 	mov r0, r7
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -5036,7 +5036,7 @@ _02171788:
 	str r1, [r0, #4]
 	ldr r0, [r4]
 	ldr r1, [r4, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r4, r0
 	mov r0, r5
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -5194,7 +5194,7 @@ _021719b0:
 	ldr r0, [sp, #0x1c]
 	ldr r1, [sp, #0x24]
 	mov r5, #0x1000
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r6, r0, asr #0x10
 	b _02171a38
@@ -5483,7 +5483,7 @@ _02171e18:
 	mov r1, r0
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r2, _02172084 ; =data_ov23_0217a2c4
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
@@ -7266,7 +7266,7 @@ _0217356c:
 _021735ac:
 	ldr r0, [r5, #4]
 	ldr r1, [r5, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r4, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _021738a0 ; =0xffff8001
@@ -9595,7 +9595,7 @@ _021754bc:
 	ldr r1, [r1, #0x50]
 	sub r0, r3, r0
 	sub r1, r2, r1
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r6, #0x78]
 	mov r0, r0, lsl #0x10
 	rsb r0, r1, r0, asr #16
@@ -13362,7 +13362,7 @@ func_ov23_02178630: ; 0x02178630
 	ldr r1, _02178718 ; =gPlayerVel
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, _0217871c ; =gPlayerAngle
 	strh r0, [r1]
 _0217867c:
@@ -13401,7 +13401,7 @@ _021786f8:
 	ldr r1, _02178718 ; =gPlayerVel
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, _0217871c ; =gPlayerAngle
 	strh r0, [r1]
 	ldmia sp!, {r4, pc}
@@ -14025,7 +14025,7 @@ _02178fd8:
 	mov r1, r0
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r1, r0, lsl #0x10
 	mov r0, r10
 	mov r4, r1, asr #0x10

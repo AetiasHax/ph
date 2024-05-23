@@ -2185,7 +2185,7 @@ _0217dbbc:
 	str r0, [r4, #0x68]
 	ldr r0, [sp, #0x10]
 	ldr r1, [sp, #0x18]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r2, #0x400
 	mov ip, #0xb6
@@ -2832,7 +2832,7 @@ func_ov38_0217e4e0: ; 0x0217e4e0
 	strh r3, [r1, #0x96]
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r7, #0x1000
 	ldr r2, _0217e67c ; =0x00011fd7
 	strh r0, [r1, #0x94]
@@ -8984,7 +8984,7 @@ _02183bf4:
 	bl _ZN5Actor9GetHitboxEP8Cylinder
 	ldr r0, [r4]
 	ldr r1, [r4, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	mov r0, r0, lsl #0x10

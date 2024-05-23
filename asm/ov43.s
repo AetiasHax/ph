@@ -600,7 +600,7 @@ func_ov43_02189c8c: ; 0x02189c8c
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	cmp r6, #0
@@ -660,7 +660,7 @@ _02189d70:
 	ldr r1, [sp, #8]
 	str r1, [r7, #0x68]
 	ldr r0, [r7, #0x60]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r7, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02189e80 ; =0xffff8001

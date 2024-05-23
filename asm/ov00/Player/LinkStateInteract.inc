@@ -51,7 +51,7 @@
 .extern Vec3p_Sub
 .extern Vec3p_Length
 .extern Vec3p_Axpy
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffbe78
 .extern func_01fffcd8
 .extern func_0202bba8

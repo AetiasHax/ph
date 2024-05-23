@@ -109,7 +109,7 @@
 .extern Vec3p_Sub
 .extern Vec3p_Axpy
 .extern func_01ff9ec0
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffbe34
 .extern func_01ffbf5c
 .extern func_01ffe1cc

@@ -5172,7 +5172,7 @@ func_ov22_02171aa0: ; 0x02171aa0
 _02171adc:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r2, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	ldr r1, _02171dbc ; =0xffff8001
@@ -8190,7 +8190,7 @@ _02174294:
 	beq _021742f4
 	ldr r0, [r5, #0xc4]
 	ldr r1, [r5, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	rsb r0, r1, r0, asr #16
@@ -8536,7 +8536,7 @@ func_ov22_0217474c: ; 0x0217474c
 	ldr r0, [r1]
 	ldr r1, [r1, #8]
 	mov r4, r2
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [sp]
 	add r1, sp, #0
 	mov r0, r5

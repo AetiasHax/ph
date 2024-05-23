@@ -105,7 +105,7 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	ldmeqia sp!, {pc}
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, _020a7bfc ; =gPlayerAngle
 	strh r0, [r1]
 	add sp, sp, #0xc

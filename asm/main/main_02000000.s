@@ -57341,7 +57341,7 @@ func_0202b03c: ; 0x0202b03c
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	sub r0, r7, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -57888,13 +57888,13 @@ func_0202b734: ; 0x0202b734
 	bl func_01ff9ac4
 	mov r0, r5
 	mov r1, r7
-	bl func_01ffa0f4
+	bl Atan2
 	ldr r1, [sp, #0x20]
 	strh r0, [r1]
 	bl func_01ff9af8
 	mov r1, r0
 	mov r0, r6
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r9]
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 	arm_func_end func_0202b734

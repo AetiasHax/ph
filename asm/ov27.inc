@@ -133,7 +133,7 @@
 .extern Vec3p_Normalize
 .extern Vec3p_Axpy
 .extern func_01ff9ec0
-.extern func_01ffa0f4
+.extern Atan2
 .extern func_01ffbe34
 .extern func_01ffbe78
 .extern func_01fffb4c

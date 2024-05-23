@@ -2853,7 +2853,7 @@ func_ov12_0211514c: ; 0x0211514c
 _02115174:
 	ldr r0, [r4, #4]
 	ldr r1, [r4, #0xc]
-	bl func_01ffa0f4
+	bl Atan2
 	ldrsh r1, [r5, #0x78]
 	mov r0, r0, lsl #0x10
 	sub r0, r1, r0, asr #16
@@ -34623,7 +34623,7 @@ _0212ed88:
 	beq _0212ee30
 	mov r2, #1
 	strb r2, [r5, #0x165]
-	bl func_01ffa0f4
+	bl Atan2
 	add r1, r5, #0x100
 	strh r0, [r1, #0x68]
 	ldrsh r2, [r5, #0x78]

@@ -4603,7 +4603,7 @@ _0218cc18:
 	ldmeqia sp!, {r3, r4, pc}
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
@@ -4636,7 +4636,7 @@ func_ov44_0218cc70: ; 0x0218cc70
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	ldr r2, _0218cd94 ; =0x0000038e
@@ -4997,7 +4997,7 @@ _0218d168:
 	beq _0218d234
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	mov r0, r4
 	mov r1, #0
@@ -5037,7 +5037,7 @@ _0218d1fc:
 	beq _0218d234
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	mov r0, r4
 	mov r1, #0
@@ -5597,7 +5597,7 @@ func_ov44_0218d87c: ; 0x0218d87c
 	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	bl func_0202bbbc
