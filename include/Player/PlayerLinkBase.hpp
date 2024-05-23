@@ -69,7 +69,7 @@ public:
     /* 6c */ virtual void vfunc_6c();
     /* 70 */ virtual void vfunc_70(s32 param1, Vec3p *param2, unk32 param3);
     /* 74 */ virtual void vfunc_74();
-    /* 78 */ virtual bool vfunc_78();
+    /* 78 */ virtual unk32 vfunc_78();
     /* 7c */ virtual void vfunc_7c();
     /* 80 */ virtual void SetUnk_5e();
     /* 84 */ virtual void ResetUnk_5e();
@@ -78,6 +78,7 @@ public:
     bool func_ov00_020bbd80(s32 param1);
     void func_ov00_020bc854(Vec3p *param1);
     bool func_ov00_020bd304();
+    bool GongoronCollidesWith(Cylinder *hitbox);
 };
 
 extern PlayerLinkBase *gPlayerLink;

@@ -1246,7 +1246,7 @@ _020c2358:
 	cmpne r0, #0
 	beq _020c2384
 	add r1, sp, #0
-	bl func_ov00_020bcc2c
+	bl _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
 	cmp r0, #0
 	addne sp, sp, #0x10
 	movne r0, #1

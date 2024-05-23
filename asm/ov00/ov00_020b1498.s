@@ -14577,9 +14577,9 @@ func_ov00_020bcc24: ; 0x020bcc24
 _020bcc28: .word func_ov00_020bcdb8
 	thumb_func_end func_ov00_020bcc24
 
-	.global func_ov00_020bcc2c
-	arm_func_start func_ov00_020bcc2c
-func_ov00_020bcc2c: ; 0x020bcc2c
+	.global _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
+	arm_func_start _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
+_ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder: ; 0x020bcc2c
 	stmdb sp!, {r3, lr}
 	ldr r2, _020bcc68 ; =data_027e0fd8
 	ldr r2, [r2]
@@ -14599,7 +14599,7 @@ _020bcc60:
 	.align 2, 0
 _020bcc68: .word data_027e0fd8
 _020bcc6c: .word data_027e0fd4
-	arm_func_end func_ov00_020bcc2c
+	arm_func_end _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
 
 	.global func_ov00_020bcc70
 	arm_func_start func_ov00_020bcc70
