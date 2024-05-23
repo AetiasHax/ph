@@ -16225,7 +16225,7 @@ data_ov37_02188d18: ; 0x02188d18
     .word func_ov37_0218468c
 	.global data_ov37_02188d1c
 data_ov37_02188d1c: ; 0x02188d1c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov37_02188d20
 data_ov37_02188d20: ; 0x02188d20
     .word _ZN5Actor8vfunc_4cEPi

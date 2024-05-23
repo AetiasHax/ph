@@ -72,7 +72,7 @@
 .extern _ZN5Actor8vfunc_2cEv
 .extern _ZN5Actor8vfunc_30Ev
 .extern _ZN5Actor8vfunc_38Ev
-.extern _ZN5Actor8vfunc_48Ei
+.extern _ZN5Actor8vfunc_48EP9Knockback
 .extern _ZN5Actor8vfunc_4cEPi
 .extern _ZN5Actor8vfunc_54Ev
 .extern _ZN5Actor8vfunc_60Ev

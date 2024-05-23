@@ -23091,7 +23091,7 @@ data_ov00_020e65a4: ; 0x020e65a4
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e65a8
 data_ov00_020e65a8: ; 0x020e65a8
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e65ac
 data_ov00_020e65ac: ; 0x020e65ac
     .word _ZN5Actor8vfunc_4cEPi
@@ -23304,7 +23304,7 @@ data_ov00_020e66c0: ; 0x020e66c0
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e66c4
 data_ov00_020e66c4: ; 0x020e66c4
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e66c8
 data_ov00_020e66c8: ; 0x020e66c8
     .word _ZN5Actor8vfunc_4cEPi
@@ -23582,7 +23582,7 @@ data_ov00_020e6828: ; 0x020e6828
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e682c
 data_ov00_020e682c: ; 0x020e682c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e6830
 data_ov00_020e6830: ; 0x020e6830
     .word _ZN5Actor8vfunc_4cEPi
@@ -24213,7 +24213,7 @@ data_ov00_020e6d88: ; 0x020e6d88
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e6d8c
 data_ov00_020e6d8c: ; 0x020e6d8c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e6d90
 data_ov00_020e6d90: ; 0x020e6d90
     .word _ZN5Actor8vfunc_4cEPi
@@ -24845,7 +24845,7 @@ data_ov00_020e70e4: ; 0x020e70e4
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e70e8
 data_ov00_020e70e8: ; 0x020e70e8
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e70ec
 data_ov00_020e70ec: ; 0x020e70ec
     .word _ZN5Actor8vfunc_4cEPi

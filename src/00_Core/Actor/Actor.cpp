@@ -208,7 +208,7 @@ void Actor::KillPickupItemActors() {
 bool Actor::TrySetTransform(Transform *transform) {
     mPrevPos = mPos;
     mPos = transform->pos;
-    mRotation = transform->rotation;
+    mAngle = transform->angle;
     mVisible = transform->visible;
     return true;
 }
@@ -216,7 +216,7 @@ bool Actor::TrySetTransform(Transform *transform) {
 void Actor::SetTransform(Transform *transform) {
     mPrevPos = mPos;
     mPos = transform->pos;
-    mRotation = transform->rotation;
+    mAngle = transform->angle;
     mVisible = transform->visible;
 }
 
@@ -230,7 +230,7 @@ void Actor::func_ov00_020c1c20(s32 param1, unk32 param2) {
     gMapManager->func_ov00_02084b38(mUnk_020.mUnk_0a[param1], mUnk_020.mUnk_08[param1], param2);
 }
 
-bool Actor::vfunc_48(unk32 param1) {
+bool Actor::vfunc_48(Knockback *param1) {
     return true;
 }
 
@@ -319,13 +319,6 @@ bool Actor::func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *
     return false;
 }
 
-struct Knockback {
-    u8 mUnk_0c;
-    Vec3p vec;
-    unk32 mUnk_10;
-    unk32 mUnk_14;
-};
-
 bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
     if (gAdventureFlags->func_ov00_02097738()) return false;
     bool result = false;
@@ -334,17 +327,17 @@ bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
         Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
         if (this->CollidesWithPlayer(flags & PlayerCollide_Sword)) {
             Knockback knockback;
-            knockback.mUnk_0c = 0;
+            knockback.mUnk_00 = 0;
             knockback.mUnk_10 = 0xb;
             knockback.mUnk_14 = 0;
             gPlayer->EquipItem_vfunc_2c();
             knockback.vec = vecFromPlayer;
-            result = this->vfunc_48((unk32) &knockback);
+            result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Shield)) {
             Knockback knockback;
             knockback.mUnk_10 = 0xb;
             knockback.mUnk_14 = 0;
-            knockback.mUnk_0c = 0;
+            knockback.mUnk_00 = 0;
             knockback.vec = vecFromPlayer;
             s32 wisdomLvl = gItemManager->GetActiveFairyLevel(FairyId_Wisdom);
             if (wisdomLvl >= 1) {
@@ -352,18 +345,18 @@ bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
             } else {
                 knockback.mUnk_10 = 2;
             }
-            result = this->vfunc_48((unk32) &knockback);
+            result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Hammer)) {
             Knockback knockback;
-            knockback.mUnk_0c = 0;
+            knockback.mUnk_00 = 0;
             knockback.mUnk_10 = 0xb;
             knockback.mUnk_14 = 0;
             gPlayer->EquipItem_vfunc_2c();
             knockback.vec = vecFromPlayer;
-            result = this->vfunc_48((unk32) &knockback);
+            result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Gongoron)) {
             Knockback knockback;
-            knockback.mUnk_0c = 0;
+            knockback.mUnk_00 = 0;
             knockback.mUnk_10 = 0xb;
             knockback.mUnk_14 = 0;
             u8 unk1 = gPlayerLink->vfunc_78();
@@ -373,7 +366,7 @@ bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
             } else {
                 knockback.mUnk_10 = 2;
             }
-            result = this->vfunc_48((unk32) &knockback);
+            result = this->vfunc_48(&knockback);
         }
     }
     return result;
@@ -431,7 +424,28 @@ void Actor::func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder) 
 bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, s32 *param2) {
     if (param2) *param2 = 0;
     if (gAdventureFlags->func_ov00_02097738()) return false;
-    if (mHitbox.size < 0 || !gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false)) return false;
+    if (mHitbox.size < 0) return false;
+    Actor *actor = gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false);
+    if (!actor) return false;
+    
+    Knockback knockback;
+    knockback.mUnk_10 = 0xb;
+
+    Vec3p vec;
+    if (actor->mType != ActorTypeId_Arrow && actor->mType != ActorTypeId_SBEM) {
+        Vec3p_Sub(&mPos, &actor->mPrevPos, &vec);
+    } else {
+        vec.x = SIN(actor->mAngle);
+        vec.z = COS(actor->mAngle);
+        vec.y = 0;
+    }
+
+    switch (actor->mType) {
+        case ActorTypeId_VLR0: {
+            knockback.mUnk_10 = 4;
+        } break;
+    }
+    this->vfunc_48(&knockback);
 }
 
 bool Actor::CollidesWith(const Actor *other) {}

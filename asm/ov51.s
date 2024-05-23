@@ -3787,7 +3787,7 @@ data_ov51_0219852c: ; 0x0219852c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov51_02198530
 data_ov51_02198530: ; 0x02198530
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov51_02198534
 data_ov51_02198534: ; 0x02198534
     .word _ZN5Actor8vfunc_4cEPi
@@ -4666,7 +4666,7 @@ data_ov51_021989bc: ; 0x021989bc
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov51_021989c0
 data_ov51_021989c0: ; 0x021989c0
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov51_021989c4
 data_ov51_021989c4: ; 0x021989c4
     .word _ZN5Actor8vfunc_4cEPi

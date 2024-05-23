@@ -5355,7 +5355,7 @@ data_ov47_0219454c: ; 0x0219454c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_02194550
 data_ov47_02194550: ; 0x02194550
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov47_02194554
 data_ov47_02194554: ; 0x02194554
     .word _ZN5Actor8vfunc_4cEPi
@@ -5496,7 +5496,7 @@ data_ov47_02194608: ; 0x02194608
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_0219460c
 data_ov47_0219460c: ; 0x0219460c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov47_02194610
 data_ov47_02194610: ; 0x02194610
     .word _ZN5Actor8vfunc_4cEPi
@@ -6154,7 +6154,7 @@ data_ov47_02194960: ; 0x02194960
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov47_02194964
 data_ov47_02194964: ; 0x02194964
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov47_02194968
 data_ov47_02194968: ; 0x02194968
     .word _ZN5Actor8vfunc_4cEPi

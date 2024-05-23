@@ -10081,7 +10081,7 @@ _02175be0:
 _02175bec:
 	mov r0, r5
 	mov r1, r4
-	bl _ZN5Actor8vfunc_48Ei
+	bl _ZN5Actor8vfunc_48EP9Knockback
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _02175bfc: .word 0x424d5459
@@ -15887,7 +15887,7 @@ data_ov23_02179e08: ; 0x02179e08
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov23_02179e0c
 data_ov23_02179e0c: ; 0x02179e0c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov23_02179e10
 data_ov23_02179e10: ; 0x02179e10
     .word _ZN5Actor8vfunc_4cEPi
@@ -16168,7 +16168,7 @@ data_ov23_02179f74: ; 0x02179f74
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov23_02179f78
 data_ov23_02179f78: ; 0x02179f78
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov23_02179f7c
 data_ov23_02179f7c: ; 0x02179f7c
     .word _ZN5Actor8vfunc_4cEPi
@@ -16886,7 +16886,7 @@ data_ov23_0217a33c: ; 0x0217a33c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov23_0217a340
 data_ov23_0217a340: ; 0x0217a340
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov23_0217a344
 data_ov23_0217a344: ; 0x0217a344
     .word _ZN5Actor8vfunc_4cEPi
@@ -17926,7 +17926,7 @@ data_ov23_0217a89c: ; 0x0217a89c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov23_0217a8a0
 data_ov23_0217a8a0: ; 0x0217a8a0
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov23_0217a8a4
 data_ov23_0217a8a4: ; 0x0217a8a4
     .word _ZN5Actor8vfunc_4cEPi

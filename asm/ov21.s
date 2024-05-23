@@ -5225,7 +5225,7 @@ data_ov21_02171270: ; 0x02171270
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_02171274
 data_ov21_02171274: ; 0x02171274
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_02171278
 data_ov21_02171278: ; 0x02171278
     .word _ZN5Actor8vfunc_4cEPi
@@ -5420,7 +5420,7 @@ data_ov21_02171374: ; 0x02171374
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_02171378
 data_ov21_02171378: ; 0x02171378
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_0217137c
 data_ov21_0217137c: ; 0x0217137c
     .word _ZN5Actor8vfunc_4cEPi
@@ -5615,7 +5615,7 @@ data_ov21_02171478: ; 0x02171478
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_0217147c
 data_ov21_0217147c: ; 0x0217147c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_02171480
 data_ov21_02171480: ; 0x02171480
     .word _ZN5Actor8vfunc_4cEPi
@@ -5810,7 +5810,7 @@ data_ov21_0217157c: ; 0x0217157c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_02171580
 data_ov21_02171580: ; 0x02171580
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_02171584
 data_ov21_02171584: ; 0x02171584
     .word _ZN5Actor8vfunc_4cEPi
@@ -6005,7 +6005,7 @@ data_ov21_02171680: ; 0x02171680
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_02171684
 data_ov21_02171684: ; 0x02171684
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_02171688
 data_ov21_02171688: ; 0x02171688
     .word _ZN5Actor8vfunc_4cEPi
@@ -6288,7 +6288,7 @@ data_ov21_0217180c: ; 0x0217180c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_02171810
 data_ov21_02171810: ; 0x02171810
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_02171814
 data_ov21_02171814: ; 0x02171814
     .word _ZN5Actor8vfunc_4cEPi
@@ -6606,7 +6606,7 @@ data_ov21_021719b4: ; 0x021719b4
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov21_021719b8
 data_ov21_021719b8: ; 0x021719b8
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov21_021719bc
 data_ov21_021719bc: ; 0x021719bc
     .word _ZN5Actor8vfunc_4cEPi

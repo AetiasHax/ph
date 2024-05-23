@@ -63,6 +63,13 @@ enum PlayerCollide_ {
     PlayerCollide_Hammer = 0x10,
 };
 
+struct Knockback {
+    /* 00 */ u8 mUnk_00;
+    /* 04 */ Vec3p vec;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk32 mUnk_14;
+};
+
 class Actor : public SysObject {
 public:
     /* 000 (vtable) */
@@ -85,7 +92,7 @@ public:
     /* 06c */ unk32 mGravity;
     /* 070 */ unk32 mMaxFall;
     /* 074 */ unk32 mUnk_074;
-    /* 078 */ s16 mRotation;
+    /* 078 */ s16 mAngle;
     /* 07a */ u16 mUnk_07a;
     /* 07c */ Cylinder mHitbox;
     /* 08c */ Cylinder mUnk_08c;
@@ -155,7 +162,7 @@ public:
     /* 3c */ virtual bool CollidesWithLink();
     /* 40 */ virtual bool IsHitboxTouched(bool param1);
     /* 44 */ virtual bool CollidesWith(const Actor *other);
-    /* 48 */ virtual bool vfunc_48(unk32 param1);
+    /* 48 */ virtual bool vfunc_48(Knockback *param1);
     /* 4c */ virtual bool vfunc_4c(unk32 *param1);
     /* 50 */ virtual Vec3p* GetPos();
     /* 54 */ virtual void vfunc_54();

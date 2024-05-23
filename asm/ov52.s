@@ -3308,7 +3308,7 @@ data_ov52_02197b7c: ; 0x02197b7c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov52_02197b80
 data_ov52_02197b80: ; 0x02197b80
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov52_02197b84
 data_ov52_02197b84: ; 0x02197b84
     .word _ZN5Actor8vfunc_4cEPi

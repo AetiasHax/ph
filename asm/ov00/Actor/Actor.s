@@ -707,12 +707,12 @@ _ZN5Actor18func_ov00_020c1c20Eii: ; 0x020c1c20
 _020c1c44: .word gMapManager
 	arm_func_end _ZN5Actor18func_ov00_020c1c20Eii
 
-	.global _ZN5Actor8vfunc_48Ei
-	arm_func_start _ZN5Actor8vfunc_48Ei
-_ZN5Actor8vfunc_48Ei: ; 0x020c1c48
+	.global _ZN5Actor8vfunc_48EP9Knockback
+	arm_func_start _ZN5Actor8vfunc_48EP9Knockback
+_ZN5Actor8vfunc_48EP9Knockback: ; 0x020c1c48
 	mov r0, #1
 	bx lr
-	arm_func_end _ZN5Actor8vfunc_48Ei
+	arm_func_end _ZN5Actor8vfunc_48EP9Knockback
 
 	.global _ZN5Actor8vfunc_4cEPi
 	arm_func_start _ZN5Actor8vfunc_4cEPi
@@ -2875,7 +2875,7 @@ data_ov00_020e7238: ; 0x020e7238
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov00_020e723c
 data_ov00_020e723c: ; 0x020e723c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov00_020e7240
 data_ov00_020e7240: ; 0x020e7240
     .word _ZN5Actor8vfunc_4cEPi

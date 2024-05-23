@@ -7,6 +7,6 @@
 
 struct Transform {
     Vec3p pos;
-    s16 rotation;
+    s16 angle;
     bool visible;
 };

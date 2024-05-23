@@ -14786,7 +14786,7 @@ data_ov29_0217994c: ; 0x0217994c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_02179950
 data_ov29_02179950: ; 0x02179950
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_02179954
 data_ov29_02179954: ; 0x02179954
     .word _ZN5Actor8vfunc_4cEPi
@@ -14951,7 +14951,7 @@ data_ov29_02179a28: ; 0x02179a28
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_02179a2c
 data_ov29_02179a2c: ; 0x02179a2c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_02179a30
 data_ov29_02179a30: ; 0x02179a30
     .word _ZN5Actor8vfunc_4cEPi
@@ -15184,7 +15184,7 @@ data_ov29_02179b64: ; 0x02179b64
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_02179b68
 data_ov29_02179b68: ; 0x02179b68
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_02179b6c
 data_ov29_02179b6c: ; 0x02179b6c
     .word _ZN5Actor8vfunc_4cEPi
@@ -15923,7 +15923,7 @@ data_ov29_02179f90: ; 0x02179f90
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_02179f94
 data_ov29_02179f94: ; 0x02179f94
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_02179f98
 data_ov29_02179f98: ; 0x02179f98
     .word _ZN5Actor8vfunc_4cEPi
@@ -16224,7 +16224,7 @@ data_ov29_0217a138: ; 0x0217a138
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_0217a13c
 data_ov29_0217a13c: ; 0x0217a13c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_0217a140
 data_ov29_0217a140: ; 0x0217a140
     .word _ZN5Actor8vfunc_4cEPi
@@ -16572,7 +16572,7 @@ data_ov29_0217a30c: ; 0x0217a30c
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_0217a310
 data_ov29_0217a310: ; 0x0217a310
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_0217a314
 data_ov29_0217a314: ; 0x0217a314
     .word _ZN5Actor8vfunc_4cEPi
@@ -16725,7 +16725,7 @@ data_ov29_0217a3d8: ; 0x0217a3d8
     .word _ZN5Actor12CollidesWithEPKS_
 	.global data_ov29_0217a3dc
 data_ov29_0217a3dc: ; 0x0217a3dc
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov29_0217a3e0
 data_ov29_0217a3e0: ; 0x0217a3e0
     .word _ZN5Actor8vfunc_4cEPi
