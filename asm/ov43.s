@@ -3268,7 +3268,7 @@ _0218c128:
 	bl func_ov00_020d77e4
 	ldr r0, _0218c9a0 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _0218c32c
 	ldr r2, [r4, #0x3c0]
@@ -3947,7 +3947,7 @@ _0218cab4:
 	beq _0218cb0c
 	ldr r0, _0218cd24 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _0218cb0c
 	mov r0, #0
@@ -3968,7 +3968,7 @@ _0218cb0c:
 _0218cb34:
 	ldr r0, _0218cd24 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _0218cd10
 	cmp r4, #0
@@ -4137,7 +4137,7 @@ func_ov43_0218cd7c: ; 0x0218cd7c
 	mov r9, r1
 	mov r7, r3
 	ldr r6, [sp, #0x40]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _0218ce34
 	mov r0, r10
@@ -4297,7 +4297,7 @@ func_ov43_0218cf90: ; 0x0218cf90
 	ldmeqia sp!, {r4, pc}
 	ldr r0, _0218d028 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _0218d014
 	ldr r0, _0218d028 ; =gPlayerLink
@@ -4327,7 +4327,7 @@ func_ov43_0218d02c: ; 0x0218d02c
 	beq _0218d054
 	ldr r0, _0218d084 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	beq _0218d074
 _0218d054:
@@ -4336,7 +4336,7 @@ _0218d054:
 	bne _0218d07c
 	ldr r0, _0218d084 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	beq _0218d07c
 _0218d074:
@@ -4396,7 +4396,7 @@ _0218d0e4:
 	ldmia r0, {r0, r1, r2}
 	stmia ip, {r0, r1, r2}
 	ldr r0, [r3]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _0218d168
 	ldr r0, _0218d1a4 ; =data_ov00_020eec9c

@@ -1995,7 +1995,7 @@ _ZN5Actor18func_ov00_020c2c70Ev: ; 0x020c2c70
 _020c2cbc:
 	ldr r0, _020c2d3c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _020c2cf0
 	add r1, sp, #0
@@ -2482,7 +2482,7 @@ _ZN5Actor10GetLinkPosEP5Vec3p: ; 0x020c3230
 	mov r4, r1
 	cmp r0, #0
 	beq _020c3268
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	beq _020c3268
 	mov r0, r5

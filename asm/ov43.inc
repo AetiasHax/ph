@@ -114,7 +114,7 @@
 .extern func_ov00_020b7d74
 .extern func_ov00_020b7df0
 .extern func_ov00_020b7e6c
-.extern func_ov00_020bc46c
+.extern _ZN14PlayerLinkBase19GetCurrentCharacterEv
 .extern func_ov00_020c070c
 .extern func_ov00_020c0c08
 .extern func_ov00_020c0cc8

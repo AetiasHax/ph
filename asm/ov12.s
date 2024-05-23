@@ -9396,7 +9396,7 @@ _0211a6f8:
 	bl func_ov00_020bbed4
 	mov r5, r0
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r1, r0
 	mov r0, r4
 	bl func_ov00_020bc48c

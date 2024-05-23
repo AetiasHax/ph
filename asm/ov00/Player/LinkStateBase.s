@@ -555,7 +555,7 @@ _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p: ; 0x020a853c
 _020a8578:
 	ldr r4, [r4, #8]
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r2, r0
 	add r1, sp, #0
 	mov r0, r4
@@ -1123,11 +1123,11 @@ _020a8bd4: .word data_027e0fcc
 	.global _ZN13LinkStateBase19GetCurrentCharacterEv
 	arm_func_start _ZN13LinkStateBase19GetCurrentCharacterEv
 _ZN13LinkStateBase19GetCurrentCharacterEv: ; 0x020a8bd8
-	ldr ip, _020a8be4 ; =func_ov00_020bc46c
+	ldr ip, _020a8be4 ; =_ZN14PlayerLinkBase19GetCurrentCharacterEv
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-_020a8be4: .word func_ov00_020bc46c
+_020a8be4: .word _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	arm_func_end _ZN13LinkStateBase19GetCurrentCharacterEv
 
 	.global _ZN13LinkStateBase20GetPlayerControlDataEv
@@ -1164,7 +1164,7 @@ _ZN13LinkStateBase25GetCurrentCharacterHealthEv: ; 0x020a8c14
 	stmdb sp!, {r4, lr}
 	ldr r4, [r0, #8]
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r1, r0
 	mov r0, r4
 	bl func_ov00_020bc48c

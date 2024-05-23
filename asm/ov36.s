@@ -2160,7 +2160,7 @@ func_ov36_0217da6c: ; 0x0217da6c
 	bgt _0217dafc
 	ldr r0, _0217dd64 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	beq _0217dac0
 	ldr r0, [r4, #0x878]
@@ -2716,7 +2716,7 @@ _0217e2a4:
 	ldr r0, _0217e3a4 ; =gPlayerLink
 	str r1, [r5, #0x66c]
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _0217e2dc
 	ldr r0, _0217e3a4 ; =gPlayerLink
@@ -3171,7 +3171,7 @@ _0217e868:
 	str r1, [r6, #0x878]
 	str r4, [r6, #0x138]
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _0217e934
 	ldr r0, _0217eb3c ; =gPlayerLink
@@ -3657,7 +3657,7 @@ func_ov36_0217efc0: ; 0x0217efc0
 	ldr r1, _0217f0b4 ; =gPlayerLink
 	mov r6, r0
 	ldr r0, [r1]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	mov r0, r6
 	bne _0217f0a0
@@ -5694,7 +5694,7 @@ _02180bd0:
 	bic r1, r1, #1
 	str r1, [r4, #0x878]
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _02180c58
 	ldr r0, _02180d14 ; =gPlayerLink
@@ -6725,7 +6725,7 @@ _021818fc:
 	ldr r0, _02181b9c ; =gPlayerLink
 	str r2, [r1, #0x10]
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _02181b40
 	ldr r0, _02181b9c ; =gPlayerLink
@@ -8224,7 +8224,7 @@ func_ov36_021830e8: ; 0x021830e8
 	moveq r4, #1
 	ldr r0, [r0]
 	movne r4, #0
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r4, r0
 	bne _021831f4
 	mov r0, r5
@@ -10289,7 +10289,7 @@ func_ov36_02184e10: ; 0x02184e10
 _02184e60:
 	ldr r0, _02184f40 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	ldr r0, [r5, #0x878]
 	bne _02184ed4
@@ -10439,7 +10439,7 @@ func_ov36_02185050: ; 0x02185050
 	ldr r1, _021850c0 ; =gPlayerLink
 	mov r4, r0
 	ldr r0, [r1]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _02185090
 	ldr r0, _021850c4 ; =gPlayerPos
@@ -10810,7 +10810,7 @@ func_ov36_021854e8: ; 0x021854e8
 	ldmneia sp!, {r4, pc}
 	ldr r0, _0218557c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	ldmneia sp!, {r4, pc}
 	add r1, r4, #0x3b4

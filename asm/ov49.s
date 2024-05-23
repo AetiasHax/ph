@@ -1666,7 +1666,7 @@ _02196ac0:
 	bl Vec3p_Add
 	ldr r0, _02196fec ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	movne r4, #1
 	ldr r0, [r5, #0x138]

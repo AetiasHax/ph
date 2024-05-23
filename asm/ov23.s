@@ -10545,7 +10545,7 @@ func_ov23_02176190: ; 0x02176190
 	bne _02176204
 	ldr r0, _0217620c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	ldr r0, _0217620c ; =gPlayerLink
 	moveq r1, #1
@@ -10703,7 +10703,7 @@ func_ov23_021763c0: ; 0x021763c0
 	bne _02176440
 	ldr r0, _0217648c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _02176440
 _021763f4:
@@ -12571,7 +12571,7 @@ func_ov23_02177ba0: ; 0x02177ba0
 	ldr r6, [r4, #8]
 	mov r5, r1
 	mov r0, r6
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r6, #0x2c
 	mov r1, r0, lsl #0x1
 	add r3, r2, r0, lsl #1
@@ -12973,7 +12973,7 @@ _0217811c:
 	ldmia sp!, {r4, pc}
 _02178124:
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _0217814c
 	mov r0, r4
@@ -13026,7 +13026,7 @@ func_ov23_02178174: ; 0x02178174
 	bl func_020385b8
 	bl _ZN17LinkStateInteract18func_ov00_020ab6c8Ev
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	str r0, [sp]
 	mov r0, r4
 	ldr r1, _02178310 ; =gPlayerPos
@@ -13160,7 +13160,7 @@ func_ov23_02178354: ; 0x02178354
 	bl _ZN12ActorManager8GetActorEP8ActorRef
 	mov r4, r0
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	str r0, [sp]
 	ldr r1, _02178408 ; =gPlayerPos
 	ldr r2, _0217840c ; =gPlayerAngle
@@ -13213,7 +13213,7 @@ func_ov23_02178420: ; 0x02178420
 	cmp r1, #0
 	addeq sp, sp, #0x2c
 	ldmeqia sp!, {r4, r5, pc}
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	addne sp, sp, #0x2c
 	ldmneia sp!, {r4, r5, pc}

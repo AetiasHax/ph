@@ -4625,7 +4625,7 @@ _02123394:
 	bl func_ov14_021235bc
 	ldr r0, _02123554 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #1
 	bne _02123440
 	ldr r2, [sp, #0x44]
@@ -29815,7 +29815,7 @@ _02137af4:
 	ldr r0, _02137c00 ; =gPlayerLink
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r5, #0x2c
 	ldrb r3, [r2, r0, lsl #1]
 	ldrb r1, [r4, #0x170]
@@ -29834,7 +29834,7 @@ _02137af4:
 	ldr r0, _02137c00 ; =gPlayerLink
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r5, #0x2c
 	ldrb r1, [r2, r0, lsl #1]
 	add r0, r2, r0, lsl #1
@@ -30059,7 +30059,7 @@ _02137e34:
 	ldr r0, _02137fb8 ; =gPlayerLink
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r5, #0x2c
 	ldrb r3, [r2, r0, lsl #1]
 	ldrb r1, [r4, #0x170]
@@ -30078,7 +30078,7 @@ _02137e34:
 	ldr r0, _02137fb8 ; =gPlayerLink
 	ldr r5, [r0]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r5, #0x2c
 	ldrb r1, [r2, r0, lsl #1]
 	add r0, r2, r0, lsl #1
@@ -30205,7 +30205,7 @@ func_ov14_02138000: ; 0x02138000
 	mov r4, r0
 	ldr r5, [r1]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r2, r5, #0x2c
 	ldrb r3, [r2, r0, lsl #1]
 	ldrb r1, [r4, #0x170]
@@ -33190,7 +33190,7 @@ _0213a588:
 	ldr r0, _0213a810 ; =gPlayerLink
 	ldr r4, [r0]
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r1, r0
 	mov r0, r4
 	mov r2, #4

@@ -80,6 +80,7 @@ public:
     bool func_ov00_020bd304();
     bool GongoronCollidesWith(Cylinder *hitbox);
     s32 GetGrabActorId();
+    PlayerCharacter GetCurrentCharacter();
 };
 
 extern PlayerLinkBase *gPlayerLink;

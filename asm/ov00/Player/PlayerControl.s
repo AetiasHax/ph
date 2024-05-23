@@ -1113,7 +1113,7 @@ _020afc9c:
 	beq _020afcf4
 	ldr r0, _020afe7c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _020afcf4
 	add r1, sp, #0x10
@@ -1192,7 +1192,7 @@ _020afdc4:
 	beq _020afe10
 	ldr r0, _020afe7c ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	cmp r0, #0
 	bne _020afe10
 	add r1, sp, #4

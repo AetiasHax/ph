@@ -2996,7 +2996,7 @@ func_ov21_0216fbc0: ; 0x0216fbc0
 	mov r4, r0
 	ldr r5, [r1]
 	mov r0, r5
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	add r1, r5, #0x2c
 	ldrb r0, [r1, r0, lsl #1]
 	cmp r0, #0x1e
