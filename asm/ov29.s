@@ -5194,7 +5194,7 @@ _02171bfc:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov29_02171bd8
 
@@ -5227,7 +5227,7 @@ _02171c68:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	ldmia sp!, {r4, pc}
 _02171ca4:
 	ldrb r0, [r4, #0x334]
@@ -5390,7 +5390,7 @@ _02171eb8:
 	mov r1, #0
 	mov r0, r6
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
@@ -5498,7 +5498,7 @@ _02172028:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _0217204c:
 	add r0, r5, #0x290
 	bl func_0202e58c
@@ -6767,7 +6767,7 @@ func_ov29_02173098: ; 0x02173098
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _02173108:
 	ldr r0, [r4, #0x284]
 	cmp r0, #0

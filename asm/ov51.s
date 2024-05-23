@@ -653,7 +653,7 @@ _02195d14:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	bne _02195e80
 	mov r0, r5
@@ -2417,7 +2417,7 @@ func_ov51_02197314: ; 0x02197314
 	mov r1, r3
 	mov r0, r4
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _021973d8:
 	add r0, r4, #0x100
 	ldrsh r1, [r0, #0xd6]

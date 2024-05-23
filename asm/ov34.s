@@ -9439,7 +9439,7 @@ _02184310:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	bne _0218434c
 	mov r0, r5

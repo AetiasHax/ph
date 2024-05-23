@@ -9,6 +9,10 @@ struct ActorRef {
     /* 8 */
 
     inline ActorRef() {
+        this->Reset();
+    }
+
+    inline void Reset() {
         id = -1;
         index = -1;
     }

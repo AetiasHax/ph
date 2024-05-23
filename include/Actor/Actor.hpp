@@ -67,8 +67,7 @@ class Actor : public SysObject {
 public:
     /* 000 (vtable) */
     /* 004 */ ActorTypeId mType;
-    /* 008 */ unk32 mId;
-    /* 00c */ unk32 mIndex;
+    /* 008 */ ActorRef mRef;
     /* 010 */ u8 mUnk_010;
     /* 011 */ u8 mUnk_011;
     /* 012 */ unk16 mUnk_012;
@@ -79,8 +78,7 @@ public:
     /* 034 */ unk32 mUnk_034;
     /* 038 */ unk32 mUnk_038;
     /* 03c */ unk32 mUnk_03c;
-    /* 040 */ unk32 mUnk_040;
-    /* 044 */ unk32 mUnk_044;
+    /* 040 */ ActorRef mUnk_040;
     /* 048 */ Vec3p mPos;
     /* 054 */ Vec3p mPrevPos;
     /* 060 */ Vec3p mVel;
@@ -207,7 +205,7 @@ public:
     bool CollidesWithPlayer(PlayerCollide flags);
     static void func_ov00_020c23c4(ActorRef *ref, Actor *actor);
     static void func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder);
-    bool func_ov00_020c243c(unk32 param1, s32 *param2);
+    bool func_ov00_020c243c(ActorTypeId *actorTypes, s32 *param2);
     bool func_ov00_020c27a8(unk32 param1);
     bool IsFollowedByLink();
     void StopLinkFollow();

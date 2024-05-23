@@ -9572,7 +9572,7 @@ _021754bc:
 	add r2, sp, #0
 	ldr r1, [r0, #0x20]
 	mov r0, r6
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _021755b8
 	ldr r1, [sp]

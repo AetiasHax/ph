@@ -4088,7 +4088,7 @@ func_ov46_02193574: ; 0x02193574
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	bne _0219367c
 	ldr r0, [r4, #0x158]

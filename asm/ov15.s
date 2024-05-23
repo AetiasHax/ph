@@ -5033,7 +5033,7 @@ func_ov15_02123a9c: ; 0x02123a9c
 	ldr r1, [r5, #0x158]
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	bne _02123b10
 	mov r0, r5
@@ -6716,7 +6716,7 @@ func_ov15_02125210: ; 0x02125210
 	ble _02125270
 	add r2, sp, #0
 	mov r1, r4
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _02125270
 	ldr r1, [sp]
@@ -23361,7 +23361,7 @@ func_ov15_02133094: ; 0x02133094
 	ldr r3, [r5, #0x50]
 	mov r2, r1
 	str r3, [r5, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r5
 	ldr r1, [r0]
 	ldr r1, [r1, #0xb4]
@@ -25459,7 +25459,7 @@ func_ov15_02134d6c: ; 0x02134d6c
 	bne _02134dd0
 	ldr r1, _02135104 ; =data_ov15_02185ea0
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _02134dd0
 	ldrb r0, [r4, #0x217]
@@ -34572,7 +34572,7 @@ _0213cbd8:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _0213cbf0:
 	ldr r0, [r5, #0x284]
 	sub r0, r0, #1
@@ -37704,7 +37704,7 @@ func_ov15_0213f5cc: ; 0x0213f5cc
 	str r3, [r4, #0x64]
 	ldr r3, [r5, #0x68]
 	str r3, [r4, #0x68]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _0213f658:
 	ldr r0, [r5, #0x130]
 	ldr r1, _0213f7b0 ; =data_ov15_02185fcc
@@ -39727,7 +39727,7 @@ func_ov15_021411c4: ; 0x021411c4
 	ldr r3, [sp, #8]
 	mov r2, r1
 	str r3, [r4, #0x50]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -56084,7 +56084,7 @@ func_ov15_0214ed58: ; 0x0214ed58
 	ldr r3, [r4, #0x50]
 	mov r2, r1
 	str r3, [r4, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0xb4]
@@ -58086,7 +58086,7 @@ _02150954:
 	ldr r3, [r5, #0x50]
 	mov r2, r1
 	str r3, [r5, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r5
 	ldr r1, [r0]
 	ldr r1, [r1, #0xb4]
@@ -64373,7 +64373,7 @@ _02156144:
 	mov r1, #0
 	mov r0, r6
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _02156154:
 	add r0, r6, #0x1b4
 	bl func_ov00_020c5e20
@@ -76967,7 +76967,7 @@ _02160d04:
 	ldr r3, [r5, #0x50]
 	mov r2, r1
 	str r3, [r5, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r5
 	ldr r1, [r0]
 	ldr r1, [r1, #0xb4]
@@ -83046,7 +83046,7 @@ func_ov15_0216629c: ; 0x0216629c
 	ldr r1, _02166390 ; =data_ov15_021867f0
 	mov r0, r5
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _0216633c
 _02166328:
@@ -86817,7 +86817,7 @@ _02169544:
 	mov r0, r10
 	mov r2, r1
 	str r3, [r10, #0x2d4]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	ldr r0, [r10, #0x130]
 	cmp r0, #3
 	beq _02169648
@@ -89524,12 +89524,12 @@ _0216b9c0: .word data_027e0d78
 	.global func_ov15_0216b9c4
 	arm_func_start func_ov15_0216b9c4
 func_ov15_0216b9c4: ; 0x0216b9c4
-	ldr ip, _0216b9d4 ; =_ZN5Actor18func_ov00_020c243cEiPi
+	ldr ip, _0216b9d4 ; =_ZN5Actor18func_ov00_020c243cEPjPi
 	ldr r1, _0216b9d8 ; =data_ov15_02186a38
 	mov r2, #0
 	bx ip
 	.align 2, 0
-_0216b9d4: .word _ZN5Actor18func_ov00_020c243cEiPi
+_0216b9d4: .word _ZN5Actor18func_ov00_020c243cEPjPi
 _0216b9d8: .word data_ov15_02186a38
 	arm_func_end func_ov15_0216b9c4
 
@@ -95226,7 +95226,7 @@ _02170790:
 	ldr r1, _021707e0 ; =data_ov15_02186c7c
 	mov r0, r4
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r4
 	bl func_ov15_021724d0
 	add r0, r4, #0x158
@@ -98811,7 +98811,7 @@ _02173a50:
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _02173b28
 	ldr r0, [r4, #0x160]
@@ -104096,7 +104096,7 @@ _02178204:
 	ldr r3, [r4, #0x50]
 	mov r2, r1
 	str r3, [r4, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0xb4]
@@ -107908,7 +107908,7 @@ func_ov15_0217b7d8: ; 0x0217b7d8
 	ldr r3, [r4, #0x50]
 	mov r2, r1
 	str r3, [r4, #0x5c]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r4
 	bl func_ov15_0217b3cc
 	ldmia sp!, {r4, pc}
@@ -109070,7 +109070,7 @@ _0217c7a4:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r0, r5
 	bl _ZN5Actor12ApplyGravityEv
 	add r0, r5, #0x48

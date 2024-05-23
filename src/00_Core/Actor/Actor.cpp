@@ -4,6 +4,7 @@ extern "C" {
 
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
+#include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
 #include "Save/AdventureFlags.hpp"
@@ -318,12 +319,121 @@ bool Actor::func_ov00_020c1f5c(Vec3p *param1, Vec3p *param2, s32 param3, Vec3p *
     return false;
 }
 
-bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {}
-bool Actor::CollidesWithShield(Cylinder *param1) {}
-bool Actor::CollidesWithPlayer(PlayerCollide flags) {}
-void Actor::func_ov00_020c23c4(ActorRef *ref, Actor *actor) {}
-void Actor::func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder) {}
-bool Actor::func_ov00_020c243c(unk32 param1, s32 *param2) {}
+struct Knockback {
+    u8 mUnk_0c;
+    Vec3p vec;
+    unk32 mUnk_10;
+    unk32 mUnk_14;
+};
+
+bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
+    if (gAdventureFlags->func_ov00_02097738()) return false;
+    bool result = false;
+    if (mHitbox.size >= 0) {
+        Vec3p vecFromPlayer;
+        Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
+        if (this->CollidesWithPlayer(flags & PlayerCollide_Sword)) {
+            Knockback knockback;
+            knockback.mUnk_0c = 0;
+            knockback.mUnk_10 = 0xb;
+            knockback.mUnk_14 = 0;
+            gPlayer->EquipItem_vfunc_2c();
+            knockback.vec = vecFromPlayer;
+            result = this->vfunc_48((unk32) &knockback);
+        } else if (this->CollidesWithPlayer(flags & PlayerCollide_Shield)) {
+            Knockback knockback;
+            knockback.mUnk_10 = 0xb;
+            knockback.mUnk_14 = 0;
+            knockback.mUnk_0c = 0;
+            knockback.vec = vecFromPlayer;
+            s32 wisdomLvl = gItemManager->GetActiveFairyLevel(FairyId_Wisdom);
+            if (wisdomLvl >= 1) {
+                knockback.mUnk_10 = 3;
+            } else {
+                knockback.mUnk_10 = 2;
+            }
+            result = this->vfunc_48((unk32) &knockback);
+        } else if (this->CollidesWithPlayer(flags & PlayerCollide_Hammer)) {
+            Knockback knockback;
+            knockback.mUnk_0c = 0;
+            knockback.mUnk_10 = 0xb;
+            knockback.mUnk_14 = 0;
+            gPlayer->EquipItem_vfunc_2c();
+            knockback.vec = vecFromPlayer;
+            result = this->vfunc_48((unk32) &knockback);
+        } else if (this->CollidesWithPlayer(flags & PlayerCollide_Gongoron)) {
+            Knockback knockback;
+            knockback.mUnk_0c = 0;
+            knockback.mUnk_10 = 0xb;
+            knockback.mUnk_14 = 0;
+            u8 unk1 = gPlayerLink->vfunc_78();
+            knockback.vec = vecFromPlayer;
+            if (unk1 != 0) {
+                knockback.mUnk_10 = 9;
+            } else {
+                knockback.mUnk_10 = 2;
+            }
+            result = this->vfunc_48((unk32) &knockback);
+        }
+    }
+    return result;
+}
+
+bool Actor::CollidesWithShield(Cylinder *param1) {
+    Vec3p vecFromPlayer;
+    Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
+    s32 currAngle = gPlayerAngle;
+    s32 angle = Atan2(vecFromPlayer.x, vecFromPlayer.z);
+    s32 angleDiff = (s16)angle - currAngle;
+    if (angleDiff < 0) angleDiff = -angleDiff;
+    if (angleDiff <= DEG_TO_ANG(90) && gPlayer->EquipCollidesWith(param1, ItemFlag_WoodenShield)) {
+        return true;
+    }
+    return false;
+}
+
+bool Actor::CollidesWithPlayer(PlayerCollide flags) {
+    if (flags != 0 && mHitbox.size >= 0) {
+        Cylinder hitbox;
+        this->GetHitbox(&hitbox);
+        if (flags & PlayerCollide_Player) {
+            if (gPlayer->CollidesWith(&hitbox)) return true;
+        }
+        if (flags & PlayerCollide_Sword) {
+            if (gPlayer->EquipCollidesWith(&hitbox, ItemFlag_OshusSword)) return true;
+        }
+        if (flags & PlayerCollide_Shield) {
+            if (this->CollidesWithShield(&hitbox)) return true;
+        }
+        if (flags & PlayerCollide_Gongoron) {
+            if (gPlayerLink && gPlayerLink->GongoronCollidesWith(&hitbox)) return true;
+        }
+        if (flags & PlayerCollide_Hammer) {
+            if (gPlayer->EquipCollidesWith(&hitbox, ItemFlag_Hammer)) return true;
+        }
+    }
+    return false;
+}
+
+void Actor::func_ov00_020c23c4(ActorRef *ref, Actor *actor) {
+    Actor::func_ov00_020c23d4(ref, actor, &actor->mHitbox);
+}
+
+void Actor::func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylinder) {
+    *ref = actor->mUnk_040;
+    if (!gActorManager->func_ov00_020c398c(actor->mRef.index)) {
+        ref->Reset();
+    }
+    actor->mUnk_040.Reset();
+    gActorManager->func_ov00_020c399c(actor->mRef.index, cylinder);
+}
+
+bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, s32 *param2) {
+    if (param2) *param2 = 0;
+    if (gAdventureFlags->func_ov00_02097738()) return false;
+    if (mHitbox.size < 0 || !gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false)) return false;
+}
+
 bool Actor::CollidesWith(const Actor *other) {}
 bool Actor::func_ov00_020c27a8(unk32 param1) {}
 bool Actor::CollidesWithLink() {}

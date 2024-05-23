@@ -1796,7 +1796,7 @@ func_ov48_02191478: ; 0x02191478
 	mov r1, #0
 	ldr r0, [r4, #0x530]
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _021915f8
 	ldr r2, [r4, #0x530]
@@ -3340,7 +3340,7 @@ _02192804:
 	mov r1, #0
 	mov r0, r8
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _02192b5c
 _0219283c:
@@ -4818,7 +4818,7 @@ _02193b5c:
 	mov r0, r10
 	mov r1, r3
 	mov r2, #0
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	mov r2, #0
 	add r1, sp, #0x258
 	mvn r3, #0

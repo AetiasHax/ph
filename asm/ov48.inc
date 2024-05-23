@@ -22,7 +22,7 @@
 .extern _ZN5Actor18func_ov00_020c1d58Ev
 .extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
-.extern _ZN5Actor18func_ov00_020c243cEiPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPi
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor18func_ov00_020c3200Ei
 .extern _ZN5Actor20IncreaseActiveFramesEv
@@ -82,7 +82,7 @@
 .extern _ZN5Actor18func_ov00_020c1d58Ev
 .extern _ZN5Actor18func_ov00_020c1f5cEP5Vec3pS1_iS1_hi
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
-.extern _ZN5Actor18func_ov00_020c243cEiPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPi
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor18func_ov00_020c3200Ei
 .extern _ZN5Actor20IncreaseActiveFramesEv

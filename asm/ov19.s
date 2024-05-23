@@ -1671,7 +1671,7 @@ _0216ec94:
 	mov r0, r4
 	mov r2, r1
 	str r3, [r4, #0x88]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	b _0216ece8
 _0216ecbc:
 	ldr r2, [r4, #0x158]
@@ -9216,7 +9216,7 @@ _02174fa8:
 	add r2, sp, #8
 	mov r0, r4
 	str r3, [r4, #0x88]
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _02174ff8
 	mov r0, r4

@@ -1314,9 +1314,9 @@ _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder: ; 0x020c23d4
 _020c2438: .word gActorManager
 	arm_func_end _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder
 
-	.global _ZN5Actor18func_ov00_020c243cEiPi
-	arm_func_start _ZN5Actor18func_ov00_020c243cEiPi
-_ZN5Actor18func_ov00_020c243cEiPi: ; 0x020c243c
+	.global _ZN5Actor18func_ov00_020c243cEPjPi
+	arm_func_start _ZN5Actor18func_ov00_020c243cEPjPi
+_ZN5Actor18func_ov00_020c243cEPjPi: ; 0x020c243c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x18
 	movs r6, r2
@@ -1534,7 +1534,7 @@ _020c2734: .word 0x54534248
 _020c2738: .word 0x54415255
 _020c273c: .word 0x54535542
 _020c2740: .word 0x564c5230
-	arm_func_end _ZN5Actor18func_ov00_020c243cEiPi
+	arm_func_end _ZN5Actor18func_ov00_020c243cEPjPi
 
 	.global _ZN5Actor12CollidesWithEPKS_
 	arm_func_start _ZN5Actor12CollidesWithEPKS_

@@ -53,7 +53,7 @@
 .extern _ZN5Actor18func_ov00_020c1e2cEiP5Vec3p
 .extern _ZN5Actor18func_ov00_020c23c4EP8ActorRefPS_
 .extern _ZN5Actor18func_ov00_020c23d4EP8ActorRefPS_P8Cylinder
-.extern _ZN5Actor18func_ov00_020c243cEiPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPi
 .extern _ZN5Actor18func_ov00_020c29ecEi
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor18func_ov00_020c31c0Ei

@@ -1999,7 +1999,7 @@ _0217d83c:
 	mov r1, #0
 	mov r0, r5
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 _0217d86c:
 	ldr r0, [r5, #0x158]
 	tst r0, #0x40
@@ -3128,7 +3128,7 @@ func_ov39_0217e82c: ; 0x0217e82c
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	ldr r0, [r4, #0x130]
 	cmp r0, #0x10
 	ldmneia sp!, {r4, pc}

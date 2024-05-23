@@ -9468,7 +9468,7 @@ func_ov00_020cb58c: ; 0x020cb58c
 	mov r1, #0
 	mov r0, r4
 	mov r2, r1
-	bl _ZN5Actor18func_ov00_020c243cEiPi
+	bl _ZN5Actor18func_ov00_020c243cEPjPi
 	cmp r0, #0
 	beq _020cb604
 _020cb5fc:

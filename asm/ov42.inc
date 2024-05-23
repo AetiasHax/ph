@@ -14,7 +14,7 @@
 .extern _ZN5Actor15IsHitboxTouchedEb
 .extern _ZN5Actor15TrySetTransformEP9Transform
 .extern _ZN5Actor16CollidesWithLinkEv
-.extern _ZN5Actor18func_ov00_020c243cEiPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPi
 .extern _ZN5Actor18func_ov00_020c313cEj
 .extern _ZN5Actor6GetPosEv
 .extern _ZN5Actor8vfunc_08Ev

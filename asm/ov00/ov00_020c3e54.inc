@@ -63,7 +63,7 @@
 .extern _ZN5Actor18func_ov00_020c1c20Eii
 .extern _ZN5Actor18func_ov00_020c1cf8Ev
 .extern _ZN5Actor18func_ov00_020c1fc8Ej
-.extern _ZN5Actor18func_ov00_020c243cEiPi
+.extern _ZN5Actor18func_ov00_020c243cEPjPi
 .extern _ZN5Actor18func_ov00_020c29ecEi
 .extern _ZN5Actor18func_ov00_020c3118Es
 .extern _ZN5Actor18func_ov00_020c313cEj
