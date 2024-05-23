@@ -32856,7 +32856,7 @@ data_ov14_02158ae0: ; 0x02158ae0
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02158ae4
 data_ov14_02158ae4: ; 0x02158ae4
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02158ae8
 data_ov14_02158ae8: ; 0x02158ae8
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -34891,7 +34891,7 @@ data_ov14_02159500: ; 0x02159500
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159504
 data_ov14_02159504: ; 0x02159504
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02159508
 data_ov14_02159508: ; 0x02159508
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -35074,7 +35074,7 @@ data_ov14_021595f4: ; 0x021595f4
     .word func_ov14_02145974
 	.global data_ov14_021595f8
 data_ov14_021595f8: ; 0x021595f8
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_021595fc
 data_ov14_021595fc: ; 0x021595fc
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -35381,7 +35381,7 @@ data_ov14_02159784: ; 0x02159784
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159788
 data_ov14_02159788: ; 0x02159788
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_0215978c
 data_ov14_0215978c: ; 0x0215978c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -35636,7 +35636,7 @@ data_ov14_021598d8: ; 0x021598d8
     .word func_ov14_02145974
 	.global data_ov14_021598dc
 data_ov14_021598dc: ; 0x021598dc
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_021598e0
 data_ov14_021598e0: ; 0x021598e0
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -35966,7 +35966,7 @@ data_ov14_02159a90: ; 0x02159a90
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159a94
 data_ov14_02159a94: ; 0x02159a94
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02159a98
 data_ov14_02159a98: ; 0x02159a98
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -36113,7 +36113,7 @@ data_ov14_02159b54: ; 0x02159b54
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159b58
 data_ov14_02159b58: ; 0x02159b58
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02159b5c
 data_ov14_02159b5c: ; 0x02159b5c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -36484,7 +36484,7 @@ data_ov14_02159d38: ; 0x02159d38
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159d3c
 data_ov14_02159d3c: ; 0x02159d3c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02159d40
 data_ov14_02159d40: ; 0x02159d40
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -36763,7 +36763,7 @@ data_ov14_02159eac: ; 0x02159eac
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02159eb0
 data_ov14_02159eb0: ; 0x02159eb0
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02159eb4
 data_ov14_02159eb4: ; 0x02159eb4
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -37021,7 +37021,7 @@ data_ov14_0215a004: ; 0x0215a004
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_0215a008
 data_ov14_0215a008: ; 0x0215a008
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_0215a00c
 data_ov14_0215a00c: ; 0x0215a00c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -37936,7 +37936,7 @@ data_ov14_0215a4b8: ; 0x0215a4b8
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_0215a4bc
 data_ov14_0215a4bc: ; 0x0215a4bc
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_0215a4c0
 data_ov14_0215a4c0: ; 0x0215a4c0
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -38391,7 +38391,7 @@ data_ov14_0215a70c: ; 0x0215a70c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_0215a710
 data_ov14_0215a710: ; 0x0215a710
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_0215a714
 data_ov14_0215a714: ; 0x0215a714
     .word _ZN5Actor8vfunc_48EP9Knockback

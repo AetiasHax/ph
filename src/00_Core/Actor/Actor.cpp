@@ -496,24 +496,36 @@ bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result) {
     return false;
 }
 
-bool Actor::CollidesWith(const Actor *other) {
-    // bool collides = false;
-    // if (other->mAlive) {
-    //     if (other->mHitbox.size >= 0 && mHitbox.size >= 0) {
-    //         Cylinder a, b;
-    //         this->GetHitbox(&a);
-    //         other->GetHitbox(&b);
-    //         if (a.Overlaps(&b)) {
-    //             collides = true;
-    //         }
-    //     }
-    // }
-    // return collides;
+bool Actor::CollidesWith(Actor *other) {
+    bool collides = false;
+    if (other->mAlive) {
+        if (other->mHitbox.size >= 0 && mHitbox.size >= 0) {
+            Cylinder a, b;
+            this->GetHitbox(&a);
+            other->GetHitbox(&b);
+            if (a.Overlaps(&b)) collides = true;
+        }
+    }
+    return collides;
 }
 
-bool Actor::func_ov00_020c27a8(unk32 param1) {}
-bool Actor::CollidesWithLink() {}
-bool Actor::IsFollowedByLink() {}
+bool Actor::func_ov00_020c27a8(unk32 param1) {
+    if (mUnk_11b) return false;
+    if (param1 == 0) return mUnk_12c != 0;
+    return mUnk_12c == param1;
+}
+
+bool Actor::CollidesWithLink() {
+    Cylinder hitbox;
+    this->GetHitbox(&hitbox);
+    // Link's hitbox has a radius of 1, hence why they add 1.0 here
+    return this->DistanceToLink() < hitbox.size + FLOAT_TO_Q20(1.0);
+}
+
+bool Actor::IsFollowedByLink() {
+    // return mRef.id == gPlayerControl->mFollowRef.id;
+}
+
 void Actor::StopLinkFollow() {}
 bool Actor::IsGrabbed() {}
 s32 Actor::XzDistanceTo(Vec3p *vec) {}

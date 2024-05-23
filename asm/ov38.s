@@ -15454,7 +15454,7 @@ data_ov38_02188f78: ; 0x02188f78
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov38_02188f7c
 data_ov38_02188f7c: ; 0x02188f7c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov38_02188f80
 data_ov38_02188f80: ; 0x02188f80
     .word func_ov38_02183d68
@@ -15781,7 +15781,7 @@ data_ov38_02189168: ; 0x02189168
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov38_0218916c
 data_ov38_0218916c: ; 0x0218916c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov38_02189170
 data_ov38_02189170: ; 0x02189170
     .word _ZN5Actor8vfunc_48EP9Knockback

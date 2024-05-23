@@ -3096,7 +3096,7 @@ data_ov52_02197a6c: ; 0x02197a6c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov52_02197a70
 data_ov52_02197a70: ; 0x02197a70
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov52_02197a74
 data_ov52_02197a74: ; 0x02197a74
     .word func_ov52_02196978
@@ -3305,7 +3305,7 @@ data_ov52_02197b78: ; 0x02197b78
     .word func_ov14_02145974
 	.global data_ov52_02197b7c
 data_ov52_02197b7c: ; 0x02197b7c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov52_02197b80
 data_ov52_02197b80: ; 0x02197b80
     .word _ZN5Actor8vfunc_48EP9Knockback

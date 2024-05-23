@@ -161,7 +161,7 @@ public:
     /* 38 */ virtual unk32 vfunc_38();
     /* 3c */ virtual bool CollidesWithLink();
     /* 40 */ virtual bool IsHitboxTouched(bool param1);
-    /* 44 */ virtual bool CollidesWith(const Actor *other);
+    /* 44 */ virtual bool CollidesWith(Actor *other);
     /* 48 */ virtual bool vfunc_48(Knockback *param1);
     /* 4c */ virtual bool vfunc_4c(unk32 *param1);
     /* 50 */ virtual Vec3p* GetPos();

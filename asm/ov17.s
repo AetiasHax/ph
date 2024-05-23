@@ -21473,7 +21473,7 @@ data_ov17_0216bd04: ; 0x0216bd04
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216bd08
 data_ov17_0216bd08: ; 0x0216bd08
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216bd0c
 data_ov17_0216bd0c: ; 0x0216bd0c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -21679,7 +21679,7 @@ data_ov17_0216be0c: ; 0x0216be0c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216be10
 data_ov17_0216be10: ; 0x0216be10
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216be14
 data_ov17_0216be14: ; 0x0216be14
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -21897,7 +21897,7 @@ data_ov17_0216bf24: ; 0x0216bf24
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216bf28
 data_ov17_0216bf28: ; 0x0216bf28
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216bf2c
 data_ov17_0216bf2c: ; 0x0216bf2c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -22127,7 +22127,7 @@ data_ov17_0216c04c: ; 0x0216c04c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216c050
 data_ov17_0216c050: ; 0x0216c050
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216c054
 data_ov17_0216c054: ; 0x0216c054
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -23707,7 +23707,7 @@ data_ov17_0216c87c: ; 0x0216c87c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216c880
 data_ov17_0216c880: ; 0x0216c880
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216c884
 data_ov17_0216c884: ; 0x0216c884
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -23848,7 +23848,7 @@ data_ov17_0216c938: ; 0x0216c938
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov17_0216c93c
 data_ov17_0216c93c: ; 0x0216c93c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov17_0216c940
 data_ov17_0216c940: ; 0x0216c940
     .word _ZN5Actor8vfunc_48EP9Knockback

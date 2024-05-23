@@ -16954,7 +16954,7 @@ data_ov30_02188d64: ; 0x02188d64
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_02188d68
 data_ov30_02188d68: ; 0x02188d68
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_02188d6c
 data_ov30_02188d6c: ; 0x02188d6c
     .word func_ov30_02181364 ; data_ov61_02181364
@@ -17158,7 +17158,7 @@ data_ov30_02188e74: ; 0x02188e74
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_02188e78
 data_ov30_02188e78: ; 0x02188e78
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_02188e7c
 data_ov30_02188e7c: ; 0x02188e7c
     .word func_ov30_02181364 ; data_ov61_02181364
@@ -17362,7 +17362,7 @@ data_ov30_02188f84: ; 0x02188f84
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_02188f88
 data_ov30_02188f88: ; 0x02188f88
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_02188f8c
 data_ov30_02188f8c: ; 0x02188f8c
     .word func_ov30_02181364 ; data_ov61_02181364
@@ -17566,7 +17566,7 @@ data_ov30_02189094: ; 0x02189094
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_02189098
 data_ov30_02189098: ; 0x02189098
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_0218909c
 data_ov30_0218909c: ; 0x0218909c
     .word func_ov30_02181364 ; data_ov61_02181364
@@ -17770,7 +17770,7 @@ data_ov30_021891a4: ; 0x021891a4
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_021891a8
 data_ov30_021891a8: ; 0x021891a8
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_021891ac
 data_ov30_021891ac: ; 0x021891ac
     .word func_ov30_02181364 ; data_ov61_02181364
@@ -18065,7 +18065,7 @@ data_ov30_021893b8: ; 0x021893b8
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov30_021893bc
 data_ov30_021893bc: ; 0x021893bc
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov30_021893c0
 data_ov30_021893c0: ; 0x021893c0
     .word _ZN5Actor8vfunc_48EP9Knockback

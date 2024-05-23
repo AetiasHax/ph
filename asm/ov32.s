@@ -12002,7 +12002,7 @@ data_ov32_021855ec: ; 0x021855ec
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_021855f0
 data_ov32_021855f0: ; 0x021855f0
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_021855f4
 data_ov32_021855f4: ; 0x021855f4
     .word func_ov32_0217d478
@@ -12401,7 +12401,7 @@ data_ov32_02185800: ; 0x02185800
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_02185804
 data_ov32_02185804: ; 0x02185804
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_02185808
 data_ov32_02185808: ; 0x02185808
     .word func_ov32_0217e730 ; data_ov61_0217e730
@@ -12980,7 +12980,7 @@ data_ov32_02185b14: ; 0x02185b14
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_02185b18
 data_ov32_02185b18: ; 0x02185b18
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_02185b1c
 data_ov32_02185b1c: ; 0x02185b1c
     .word func_ov32_02180c00 ; data_ov61_02180c00
@@ -13625,7 +13625,7 @@ data_ov32_02185e70: ; 0x02185e70
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_02185e74
 data_ov32_02185e74: ; 0x02185e74
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_02185e78
 data_ov32_02185e78: ; 0x02185e78
     .word func_ov00_020caeb4
@@ -13925,7 +13925,7 @@ data_ov32_02186000: ; 0x02186000
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_02186004
 data_ov32_02186004: ; 0x02186004
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_02186008
 data_ov32_02186008: ; 0x02186008
     .word func_ov32_0218408c
@@ -14129,7 +14129,7 @@ data_ov32_02186110: ; 0x02186110
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov32_02186114
 data_ov32_02186114: ; 0x02186114
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov32_02186118
 data_ov32_02186118: ; 0x02186118
     .word func_ov32_02184888 ; func_ov34_02184888, func_ov35_02184888

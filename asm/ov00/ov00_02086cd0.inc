@@ -51,7 +51,7 @@
 .extern _ZN14AdventureFlags20Get_FlagsUnk_30_FlagEi
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor11SetVelocityEP5Vec3p
-.extern _ZN5Actor12CollidesWithEPKS_
+.extern _ZN5Actor12CollidesWithEPS_
 .extern _ZN5Actor12GetOffsetPosEP5Vec3p
 .extern _ZN5Actor12SetTransformEP9Transform
 .extern _ZN5Actor15IsHitboxTouchedEb

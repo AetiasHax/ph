@@ -1536,9 +1536,9 @@ _020c273c: .word 0x54535542
 _020c2740: .word 0x564c5230
 	arm_func_end _ZN5Actor18func_ov00_020c243cEPjPPS_
 
-	.global _ZN5Actor12CollidesWithEPKS_
-	arm_func_start _ZN5Actor12CollidesWithEPKS_
-_ZN5Actor12CollidesWithEPKS_: ; 0x020c2744
+	.global _ZN5Actor12CollidesWithEPS_
+	arm_func_start _ZN5Actor12CollidesWithEPS_
+_ZN5Actor12CollidesWithEPS_: ; 0x020c2744
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x20
 	mov r5, r1
@@ -1565,7 +1565,7 @@ _020c279c:
 	mov r0, r4
 	add sp, sp, #0x20
 	ldmia sp!, {r3, r4, r5, pc}
-	arm_func_end _ZN5Actor12CollidesWithEPKS_
+	arm_func_end _ZN5Actor12CollidesWithEPS_
 
 	.global _ZN5Actor18func_ov00_020c27a8Ei
 	arm_func_start _ZN5Actor18func_ov00_020c27a8Ei
@@ -2872,7 +2872,7 @@ data_ov00_020e7234: ; 0x020e7234
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov00_020e7238
 data_ov00_020e7238: ; 0x020e7238
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov00_020e723c
 data_ov00_020e723c: ; 0x020e723c
     .word _ZN5Actor8vfunc_48EP9Knockback

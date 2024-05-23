@@ -5352,7 +5352,7 @@ data_ov47_02194548: ; 0x02194548
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_0219454c
 data_ov47_0219454c: ; 0x0219454c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov47_02194550
 data_ov47_02194550: ; 0x02194550
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -5493,7 +5493,7 @@ data_ov47_02194604: ; 0x02194604
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_02194608
 data_ov47_02194608: ; 0x02194608
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov47_0219460c
 data_ov47_0219460c: ; 0x0219460c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -5810,7 +5810,7 @@ data_ov47_021947a0: ; 0x021947a0
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_021947a4
 data_ov47_021947a4: ; 0x021947a4
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov47_021947a8
 data_ov47_021947a8: ; 0x021947a8
     .word func_ov47_02191fac
@@ -6151,7 +6151,7 @@ data_ov47_0219495c: ; 0x0219495c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov47_02194960
 data_ov47_02194960: ; 0x02194960
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov47_02194964
 data_ov47_02194964: ; 0x02194964
     .word _ZN5Actor8vfunc_48EP9Knockback

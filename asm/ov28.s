@@ -14365,7 +14365,7 @@ data_ov28_021789a8: ; 0x021789a8
     .word func_ov14_02145974
 	.global data_ov28_021789ac
 data_ov28_021789ac: ; 0x021789ac
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_021789b0
 data_ov28_021789b0: ; 0x021789b0
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -14726,7 +14726,7 @@ data_ov28_02178c08: ; 0x02178c08
     .word func_ov14_02145974
 	.global data_ov28_02178c0c
 data_ov28_02178c0c: ; 0x02178c0c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02178c10
 data_ov28_02178c10: ; 0x02178c10
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -14921,7 +14921,7 @@ data_ov28_02178d0c: ; 0x02178d0c
     .word func_ov14_02145974
 	.global data_ov28_02178d10
 data_ov28_02178d10: ; 0x02178d10
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02178d14
 data_ov28_02178d14: ; 0x02178d14
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -15116,7 +15116,7 @@ data_ov28_02178e10: ; 0x02178e10
     .word func_ov14_02145974
 	.global data_ov28_02178e14
 data_ov28_02178e14: ; 0x02178e14
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02178e18
 data_ov28_02178e18: ; 0x02178e18
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -15311,7 +15311,7 @@ data_ov28_02178f14: ; 0x02178f14
     .word func_ov14_02145974
 	.global data_ov28_02178f18
 data_ov28_02178f18: ; 0x02178f18
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02178f1c
 data_ov28_02178f1c: ; 0x02178f1c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -15574,7 +15574,7 @@ data_ov28_02179068: ; 0x02179068
     .word func_ov14_02145974
 	.global data_ov28_0217906c
 data_ov28_0217906c: ; 0x0217906c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02179070
 data_ov28_02179070: ; 0x02179070
     .word func_ov28_02170f24
@@ -16071,7 +16071,7 @@ data_ov28_021792f4: ; 0x021792f4
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_021792f8
 data_ov28_021792f8: ; 0x021792f8
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_021792fc
 data_ov28_021792fc: ; 0x021792fc
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -16310,7 +16310,7 @@ data_ov28_02179428: ; 0x02179428
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_0217942c
 data_ov28_0217942c: ; 0x0217942c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02179430
 data_ov28_02179430: ; 0x02179430
     .word func_ov28_021739f0
@@ -16541,7 +16541,7 @@ data_ov28_0217955c: ; 0x0217955c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_02179560
 data_ov28_02179560: ; 0x02179560
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02179564
 data_ov28_02179564: ; 0x02179564
     .word func_ov28_021740cc
@@ -16855,7 +16855,7 @@ data_ov28_021796f4: ; 0x021796f4
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_021796f8
 data_ov28_021796f8: ; 0x021796f8
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_021796fc
 data_ov28_021796fc: ; 0x021796fc
     .word func_ov28_02174fc4
@@ -17059,7 +17059,7 @@ data_ov28_02179804: ; 0x02179804
     .word func_ov14_02145974
 	.global data_ov28_02179808
 data_ov28_02179808: ; 0x02179808
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_0217980c
 data_ov28_0217980c: ; 0x0217980c
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -17292,7 +17292,7 @@ data_ov28_02179940: ; 0x02179940
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_02179944
 data_ov28_02179944: ; 0x02179944
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02179948
 data_ov28_02179948: ; 0x02179948
     .word _ZN5Actor8vfunc_48EP9Knockback
@@ -17517,7 +17517,7 @@ data_ov28_02179a6c: ; 0x02179a6c
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov28_02179a70
 data_ov28_02179a70: ; 0x02179a70
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov28_02179a74
 data_ov28_02179a74: ; 0x02179a74
     .word _ZN5Actor8vfunc_48EP9Knockback

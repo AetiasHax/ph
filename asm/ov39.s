@@ -13418,7 +13418,7 @@ data_ov39_02186a78: ; 0x02186a78
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov39_02186a7c
 data_ov39_02186a7c: ; 0x02186a7c
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov39_02186a80
 data_ov39_02186a80: ; 0x02186a80
     .word func_ov39_0217dfc0

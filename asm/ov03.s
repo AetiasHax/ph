@@ -44982,7 +44982,7 @@ data_ov03_021008bc: ; 0x021008bc
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov03_021008c0
 data_ov03_021008c0: ; 0x021008c0
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov03_021008c4
 data_ov03_021008c4: ; 0x021008c4
     .word _ZN5Actor8vfunc_48EP9Knockback
