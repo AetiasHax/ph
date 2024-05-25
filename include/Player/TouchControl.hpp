@@ -3,6 +3,7 @@
 #include "global.h"
 #include "types.h"
 #include "lib/touch.h"
+#include "lib/math.h"
 
 typedef u16 TouchFlags;
 enum TouchFlag_ {
@@ -43,4 +44,7 @@ public:
     void UpdateConditionally(TouchState *state, u16 speed);
     void func_ov00_0207af38(u16 speed, bool param2);
     ~TouchControl();
+
+    static bool func_0202b864(Vec3p *param1, s32 size, unk8 param3);
+    static bool func_0202b894(Vec3p *param1, s32 size, unk8 param3);
 };

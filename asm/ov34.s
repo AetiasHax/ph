@@ -8344,12 +8344,12 @@ _021832fc:
 	mov r2, #8
 	beq _02183324
 	ldr r1, [sp, #0xc]
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	mov r2, r0
 	b _02183330
 _02183324:
 	ldr r1, [sp, #0xc]
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	mov r2, r0
 _02183330:
 	mov r0, r2

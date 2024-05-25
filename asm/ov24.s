@@ -1826,11 +1826,11 @@ func_ov24_0216ee18: ; 0x0216ee18
 	mov r2, #8
 	mov r1, ip
 	beq _0216ee74
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	mov r1, r0
 	b _0216ee7c
 _0216ee74:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	mov r1, r0
 _0216ee7c:
 	mov r0, r1

@@ -13665,13 +13665,13 @@ func_ov14_02145974: ; 0x02145974
 	str r0, [sp, #0x1c]
 	add r0, sp, #0x28
 	beq _02145a34
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	bne _02145a1c
 	ldr r1, [sp, #0x24]
 	add r0, sp, #0x18
 	mov r2, #8
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	beq _02145a28
 _02145a1c:
@@ -13683,13 +13683,13 @@ _02145a28:
 	mov r0, #0
 	ldmia sp!, {r4, pc}
 _02145a34:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	cmp r0, #0
 	bne _02145a58
 	ldr r1, [sp, #0x24]
 	add r0, sp, #0x18
 	mov r2, #8
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	cmp r0, #0
 	beq _02145a64
 _02145a58:

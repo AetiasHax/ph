@@ -57936,9 +57936,9 @@ func_0202b7e4: ; 0x0202b7e4
 	ldmia sp!, {r3, pc}
 	arm_func_end func_0202b7e4
 
-	.global func_0202b864
-	arm_func_start func_0202b864
-func_0202b864: ; 0x0202b864
+	.global _ZN12TouchControl13func_0202b864EP5Vec3pic
+	arm_func_start _ZN12TouchControl13func_0202b864EP5Vec3pic
+_ZN12TouchControl13func_0202b864EP5Vec3pic: ; 0x0202b864
 	stmdb sp!, {r3, lr}
 	ldr r3, _0202b890 ; =data_027e0d78
 	ldrh ip, [r3, #0x34]
@@ -57952,11 +57952,11 @@ func_0202b864: ; 0x0202b864
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _0202b890: .word data_027e0d78
-	arm_func_end func_0202b864
+	arm_func_end _ZN12TouchControl13func_0202b864EP5Vec3pic
 
-	.global func_0202b894
-	arm_func_start func_0202b894
-func_0202b894: ; 0x0202b894
+	.global _ZN12TouchControl13func_0202b894EP5Vec3pic
+	arm_func_start _ZN12TouchControl13func_0202b894EP5Vec3pic
+_ZN12TouchControl13func_0202b894EP5Vec3pic: ; 0x0202b894
 	stmdb sp!, {r3, lr}
 	ldr r3, _0202b8e0 ; =data_027e0d78
 	ldrb ip, [r3, #0xc]
@@ -57979,17 +57979,17 @@ _0202b8bc:
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _0202b8e0: .word data_027e0d78
-	arm_func_end func_0202b894
+	arm_func_end _ZN12TouchControl13func_0202b894EP5Vec3pic
 
 	.global func_0202b8e4
 	arm_func_start func_0202b8e4
 func_0202b8e4: ; 0x0202b8e4
-	ldr ip, _0202b8f4 ; =func_0202b894
+	ldr ip, _0202b8f4 ; =_ZN12TouchControl13func_0202b894EP5Vec3pic
 	mov r2, r1
 	ldr r1, [r0, #0xc]
 	bx ip
 	.align 2, 0
-_0202b8f4: .word func_0202b894
+_0202b8f4: .word _ZN12TouchControl13func_0202b894EP5Vec3pic
 	arm_func_end func_0202b8e4
 
 	.global func_0202b8f8

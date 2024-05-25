@@ -43,8 +43,8 @@
 .extern _ZN8Cylinder8OverlapsEPS_
 .extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_01fffd04
-.extern func_0202b864
-.extern func_0202b894
+.extern _ZN12TouchControl13func_0202b864EP5Vec3pic
+.extern _ZN12TouchControl13func_0202b894EP5Vec3pic
 .extern func_0202d95c
 .extern func_020313c8
 .extern abs

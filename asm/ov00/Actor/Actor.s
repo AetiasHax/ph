@@ -2273,11 +2273,11 @@ _ZN5Actor15IsHitboxTouchedEb: ; 0x020c3004
 	mov r2, #8
 	mov r1, ip
 	beq _020c305c
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	mov r1, r0
 	b _020c3064
 _020c305c:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	mov r1, r0
 _020c3064:
 	mov r0, r1

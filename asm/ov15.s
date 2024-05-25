@@ -58997,11 +58997,11 @@ func_ov15_021515bc: ; 0x021515bc
 	ldr r1, _0215167c ; =0x00000b33
 	mov r2, #8
 	beq _0215166c
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _0215166c:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
@@ -77768,11 +77768,11 @@ func_ov15_021617a8: ; 0x021617a8
 	ldr r1, _0216187c ; =0x00000b33
 	mov r2, #8
 	beq _0216186c
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 _0216186c:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	.align 2, 0
@@ -84567,12 +84567,12 @@ func_ov15_02167690: ; 0x02167690
 	mov r2, #8
 	beq _021676d4
 	ldr r1, [sp, #0xc]
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	mov r1, r0
 	b _021676e0
 _021676d4:
 	ldr r1, [sp, #0xc]
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	mov r1, r0
 _021676e0:
 	mov r0, r1
@@ -89249,10 +89249,10 @@ func_ov15_0216b58c: ; 0x0216b58c
 	mov r2, #8
 	mov r1, r4
 	beq _0216b5e4
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	b _0216b5e8
 _0216b5e4:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 _0216b5e8:
 	cmp r0, #0
 	addeq sp, sp, #0x80

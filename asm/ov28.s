@@ -6625,7 +6625,7 @@ func_ov28_02172bc8: ; 0x02172bc8
 	add r0, r4, #0x48
 	mov r1, #0x1000
 	mov r2, #8
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4

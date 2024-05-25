@@ -2415,7 +2415,7 @@ _0217db78:
 	beq _0217dbac
 	mov r2, r5
 	add r0, r0, #0x48
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	beq _0217dbc4
 	mov r0, #1
@@ -2423,7 +2423,7 @@ _0217db78:
 _0217dbac:
 	mov r2, r4
 	add r0, r0, #0x48
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r4, r5, r6, r7, r8, pc}

@@ -163,8 +163,8 @@
 .extern func_0202b308
 .extern func_0202b3bc
 .extern func_0202b66c
-.extern func_0202b864
-.extern func_0202b894
+.extern _ZN12TouchControl13func_0202b864EP5Vec3pic
+.extern _ZN12TouchControl13func_0202b894EP5Vec3pic
 .extern func_0202bbbc
 .extern func_0202e310
 .extern func_0202e58c

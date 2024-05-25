@@ -13127,13 +13127,13 @@ _021788d4:
 	mov r2, #8
 	mov r1, ip
 	beq _021789c4
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	bne _021789ac
 	ldr r1, [sp, #0x18]
 	add r0, sp, #0xc
 	mov r2, #8
-	bl func_0202b864
+	bl _ZN12TouchControl13func_0202b864EP5Vec3pic
 	cmp r0, #0
 	beq _021789b8
 _021789ac:
@@ -13145,13 +13145,13 @@ _021789b8:
 	mov r0, #0
 	ldmia sp!, {r4, r5, r6, r7, pc}
 _021789c4:
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	cmp r0, #0
 	bne _021789e8
 	ldr r1, [sp, #0x18]
 	add r0, sp, #0xc
 	mov r2, #8
-	bl func_0202b894
+	bl _ZN12TouchControl13func_0202b894EP5Vec3pic
 	cmp r0, #0
 	beq _021789f4
 _021789e8:
