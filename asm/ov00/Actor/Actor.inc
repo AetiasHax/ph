@@ -12,7 +12,7 @@
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager18func_ov00_020c398cEj
 .extern _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
-.extern _ZN12ActorManager18func_ov00_020c39acEjPjb
+.extern _ZN12ActorManager18func_ov00_020c39acEjPKjb
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern _ZN14AdventureFlags18func_ov00_02097738Ev

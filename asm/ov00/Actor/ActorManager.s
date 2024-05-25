@@ -459,9 +459,9 @@ _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder: ; 0x020c399c
 _020c39a8: .word func_ov00_020c3f3c
 	arm_func_end _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder
 
-	.global _ZN12ActorManager18func_ov00_020c39acEjPjb
-	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPjb
-_ZN12ActorManager18func_ov00_020c39acEjPjb: ; 0x020c39ac
+	.global _ZN12ActorManager18func_ov00_020c39acEjPKjb
+	arm_func_start _ZN12ActorManager18func_ov00_020c39acEjPKjb
+_ZN12ActorManager18func_ov00_020c39acEjPKjb: ; 0x020c39ac
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x10
 	movs r8, r2
@@ -563,7 +563,7 @@ _020c3b20:
 	mov r0, r4
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-	arm_func_end _ZN12ActorManager18func_ov00_020c39acEjPjb
+	arm_func_end _ZN12ActorManager18func_ov00_020c39acEjPKjb
 
 	.global _ZN12ActorManager18func_ov00_020c3b2cEPi
 	arm_func_start _ZN12ActorManager18func_ov00_020c3b2cEPi

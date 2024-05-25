@@ -1340,7 +1340,7 @@ _ZN5Actor18func_ov00_020c243cEPjPPS_: ; 0x020c243c
 	ldr r0, [r0]
 	mov r2, r5
 	mov r3, r4
-	bl _ZN12ActorManager18func_ov00_020c39acEjPjb
+	bl _ZN12ActorManager18func_ov00_020c39acEjPKjb
 	movs r5, r0
 	beq _020c26e4
 	mov r0, #0xb
@@ -1956,7 +1956,7 @@ _ZN5Actor18func_ov00_020c2c0cEv: ; 0x020c2c0c
 	ldr r1, [r0, #0xc]
 	ldr r0, [r3]
 	mov r3, #0
-	bl _ZN12ActorManager18func_ov00_020c39acEjPjb
+	bl _ZN12ActorManager18func_ov00_020c39acEjPKjb
 	cmp r0, #0
 	addne sp, sp, #8
 	movne r0, #1
@@ -2061,7 +2061,7 @@ _ZN5Actor18func_ov00_020c2d54Ev: ; 0x020c2d54
 	ldr r1, [r4, #0xc]
 	ldr r0, [r0]
 	mov r3, #0
-	bl _ZN12ActorManager18func_ov00_020c39acEjPjb
+	bl _ZN12ActorManager18func_ov00_020c39acEjPKjb
 	movs r5, r0
 	beq _020c2dd0
 	bl _ZN10EquipSword12GetEquipRopeEv

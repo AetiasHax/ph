@@ -13,7 +13,7 @@ void ActorManager::FindActorByType(ActorRef *ref, ActorManager *manager, ActorTy
 void ActorManager::FindNearestActorOfType(ActorRef *ref, ActorManager *manager, ActorTypeId type, Vec3p *pos) {}
 bool ActorManager::func_ov00_020c398c(u32 index) {}
 void ActorManager::func_ov00_020c399c(u32 index, Cylinder *cylinder) {}
-Actor* ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, bool param3) {}
+Actor* ActorManager::func_ov00_020c39ac(u32 index, const ActorTypeId *actorTypes, bool param3) {}
 s32 ActorManager::func_ov00_020c3b2c(s32 *param1) {}
 s32 ActorManager::func_ov00_020c3bb0(unk32 param1, s32 *param2) {}
 void ActorManager::func_ov00_020c3ce8(unk32 param1, unk32 param2) {}

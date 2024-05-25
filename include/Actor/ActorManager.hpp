@@ -87,7 +87,7 @@ public:
     static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, ActorTypeId type, Vec3p *pos);
     bool func_ov00_020c398c(u32 index);
     void func_ov00_020c399c(u32 index, Cylinder *cylinder);
-    Actor* func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, bool param3);
+    Actor* func_ov00_020c39ac(u32 index, const ActorTypeId *actorTypes, bool param3);
     s32 func_ov00_020c3b2c(s32 *param1);
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);
     void func_ov00_020c3ce8(unk32 param1, unk32 param2);
