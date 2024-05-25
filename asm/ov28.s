@@ -12887,7 +12887,7 @@ func_ov28_02177bec: ; 0x02177bec
 _02177cd0:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, [r4, #0x18c]
 	cmp r0, #0
 	beq _02177d94

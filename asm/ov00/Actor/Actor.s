@@ -2173,7 +2173,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	bl _ZN10EquipSword12GetEquipRopeEv
 	ldr r1, [r4, #8]
 	mov r5, r0
-	bl func_ov14_0213d440
+	bl _ZN9EquipRope18func_ov14_0213d440Ei
 	movs r6, r0
 	bmi _020c2fb0
 	mov r0, r5
@@ -2186,7 +2186,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	add r2, sp, #0x10
 	mov r0, r5
 	mov r1, r6
-	bl func_ov14_0213d81c
+	bl _ZN9EquipRope18func_ov14_0213d81cEiP5Vec3p
 	cmp r0, #0
 	beq _020c2fa4
 	ldr r1, [sp, #0x10]
@@ -2201,7 +2201,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #1
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	bne _020c2f8c
 	add r1, sp, #0
@@ -2210,13 +2210,13 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	add r2, sp, #0
 	mov r0, r5
 	mov r1, r6
-	bl func_ov14_0213dadc
+	bl _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _020c2f8c:
 	mov r0, r5
 	mov r1, r6
-	bl func_ov14_0213d91c
+	bl _ZN9EquipRope18func_ov14_0213d91cEi
 	add sp, sp, #0x1c
 	mov r0, #0
 	ldmia sp!, {r3, r4, r5, r6, pc}

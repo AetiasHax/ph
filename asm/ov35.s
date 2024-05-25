@@ -2723,7 +2723,7 @@ _0217e23c:
 	bl func_ov00_020cc3fc
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	strb r0, [r5, #0x302]
 	ldr r0, [r5, #0x48]
 	str r0, [r5, #0x2f0]
@@ -5539,7 +5539,7 @@ _02180a98:
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	strb r0, [r4, #0x566]
 	mov r0, r4
 	bl func_ov35_0218307c

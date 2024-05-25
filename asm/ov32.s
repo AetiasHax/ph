@@ -6021,7 +6021,7 @@ func_ov32_02180a8c: ; 0x02180a8c
 	blx r1
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add r1, r4, #0x400
 	ldrsh r1, [r1, #8]
 	mov r5, r0
@@ -6301,7 +6301,7 @@ func_ov32_02180e08: ; 0x02180e08
 _02180e3c:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov32_02180e08
 

@@ -820,7 +820,7 @@ _02190ab8:
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r4, #0x17c]
 	cmp r0, #0
 	beq _02190b14
@@ -4648,7 +4648,7 @@ func_ov47_02193dec: ; 0x02193dec
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov47_02193dec
 

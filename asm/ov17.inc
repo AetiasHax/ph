@@ -145,7 +145,7 @@
 .extern func_01ffa9fc
 .extern func_01ffbe34
 .extern func_01ffbf5c
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_02002c14
 .extern func_020038a4
 .extern func_020078f4

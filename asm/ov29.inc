@@ -338,10 +338,10 @@
 .extern func_ov14_02120998
 .extern func_ov14_02122e98
 .extern _ZN9EquipRope18func_ov14_0213d420Ev
-.extern func_ov14_0213d440
+.extern _ZN9EquipRope18func_ov14_0213d440Ei
 .extern _ZN9EquipRope18func_ov14_0213d480Ei
 .extern func_ov14_0213d5d0
-.extern func_ov14_0213dadc
+.extern _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 .extern _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 .extern func_ov14_021448d4
 .extern func_ov14_021448dc

@@ -373,7 +373,7 @@ _021959c8:
 	str r1, [r6, #0xa0]
 	mov r0, r6
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r1, [r6, #0x110]
 	mov r4, r0
 	cmp r1, #0

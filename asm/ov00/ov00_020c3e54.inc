@@ -343,7 +343,7 @@
 .extern func_01ffe1cc
 .extern func_01ffe468
 .extern func_01fffb4c
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_020029fc
 .extern func_02002bac
 .extern func_02002bb8

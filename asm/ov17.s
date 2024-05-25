@@ -6925,7 +6925,7 @@ _02160b10:
 	ldmgeia sp!, {r3, r4, r5, pc}
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	addeq sp, sp, #0x20
@@ -6998,7 +6998,7 @@ _02160c28:
 	bge _02160d68
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	beq _02160d68

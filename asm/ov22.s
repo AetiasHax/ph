@@ -3463,7 +3463,7 @@ func_ov22_02170434: ; 0x02170434
 	ble _02170474
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add r0, r4, #0x470
 	mov r1, #5
 	bl func_ov22_0216f41c
@@ -4004,7 +4004,7 @@ func_ov22_02170b50: ; 0x02170b50
 	bl func_ov14_0214a92c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r1, _02170be4 ; =0x00000aab
 	add r0, r4, #0xa8
 	str r1, [sp]
@@ -4821,7 +4821,7 @@ func_ov22_02171638: ; 0x02171638
 	bl func_ov22_021719c4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov22_02171638
 
@@ -4896,7 +4896,7 @@ _0217171c:
 	bl func_ov22_021719c4
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _02171764: .word gSinCosTable
@@ -5021,7 +5021,7 @@ _0217190c:
 	bl func_ov22_021719c4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0x24
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
@@ -5731,7 +5731,7 @@ func_ov22_021721f8: ; 0x021721f8
 	cmp r0, #0
 	ldmgeia sp!, {r4, pc}
 	mov r0, r4
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r4, #0x111]
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
@@ -5981,7 +5981,7 @@ _02172564:
 _0217259c:
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r4, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
 	mov r0, r5
@@ -6063,7 +6063,7 @@ func_ov22_0217260c: ; 0x0217260c
 _021726b0:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r5, #0
 	beq _021726d0
 	mov r0, r4
@@ -8351,7 +8351,7 @@ _021744c8:
 _02174514:
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 _02174520:
 	add r0, r5, #0x21c
 	bl func_ov00_020c5e20
@@ -8458,7 +8458,7 @@ func_ov22_0217463c: ; 0x0217463c
 	bl func_ov00_020cc3fc
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	mov r0, r4
 	bl func_ov00_020cc438
 	mov r0, #1

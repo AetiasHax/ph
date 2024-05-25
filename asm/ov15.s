@@ -6745,7 +6745,7 @@ func_ov15_02125278: ; 0x02125278
 	ldr r4, [r5, #0x4c]
 	mov r1, #0
 	str r1, [r5, #0x4c]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _021252b8
 	mov r0, r5
@@ -7552,7 +7552,7 @@ _02125d90:
 	bge _02125dbc
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02125dbc
 	mov r0, r4
@@ -25480,7 +25480,7 @@ _02134dc0:
 _02134dd0:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02134e14
 	ldrb r0, [r4, #0x112]
@@ -55620,7 +55620,7 @@ _0214e660:
 _0214e6e4:
 	mov r0, r10
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r10, #0x110]
 	cmp r0, #0
 	ldreqb r0, [r10, #0x112]
@@ -84184,7 +84184,7 @@ _02167114:
 _021671bc:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	bne _021671f0
 	mov r0, #0x1000

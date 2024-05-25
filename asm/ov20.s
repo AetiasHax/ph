@@ -5086,7 +5086,7 @@ _02171b54:
 	mov r0, r5
 	bge _02171b8c
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02171bd8
 	mov r0, r5
@@ -5606,7 +5606,7 @@ _02172258:
 	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	beq _021724cc

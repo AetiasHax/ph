@@ -1139,7 +1139,7 @@ _021203e0:
 	mov r1, #0
 	bic r2, r4, #4
 	strh r2, [r6, #0x9c]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	movne r0, #0
 	strneb r0, [r6, #0x118]
@@ -1154,7 +1154,7 @@ _02120438:
 	mov r1, #0
 	mov r0, r6
 	str r1, [r2, #0x34]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _0212052c
 	ldr r1, _02120758 ; =data_ov14_0215abec
@@ -4319,7 +4319,7 @@ _02122fcc:
 	str r2, [r10, #0x58]
 	ldr r2, [sp, #0x2c]
 	str r2, [r10, #0x5c]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	movs r7, r0
 	ldreqb r0, [r10, #0x111]
 	cmpeq r0, #0
@@ -6175,7 +6175,7 @@ _021247d8:
 	mov r2, #2
 	mov r0, r5
 	strh r2, [r5, #0x9c]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, _02124c60 ; =data_ov14_0215ac9c
 	mov r1, #0
 	str r1, [r0, #0x34]
@@ -6222,7 +6222,7 @@ _0212486c:
 	b _02124944
 _021248a8:
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02124930
 	ldr r1, [r5, #0xb8]
@@ -26593,7 +26593,7 @@ _021350d4:
 	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x110]
 	cmp r0, #0
 	ldreqb r0, [r5, #0x112]
@@ -28091,7 +28091,7 @@ _021363a4:
 	bl Vec3p_Add
 	mov r0, r6
 	mov r1, r4
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r1, [r6, #0x111]
 	mov r4, r0
 	cmp r1, #0
@@ -33247,7 +33247,7 @@ _0213a640:
 	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, [r5, #0x64]
 	cmp r0, #0
 	bgt _0213a7fc
@@ -33285,7 +33285,7 @@ _0213a68c:
 	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	beq _0213a7fc
@@ -33583,7 +33583,7 @@ func_ov14_0213aa68: ; 0x0213aa68
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov14_0213aa68
 

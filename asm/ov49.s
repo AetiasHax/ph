@@ -2647,7 +2647,7 @@ _021978a8:
 	mov r0, r5
 	mov r1, #0
 	ldr r4, [r5, #0x64]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	beq _021979e0

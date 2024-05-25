@@ -9953,7 +9953,7 @@ _02184850:
 	mov r1, #0
 	mov r0, r5
 	str r1, [r2, #0x34]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _021848cc
 	ldr r0, [r5, #0xc4]

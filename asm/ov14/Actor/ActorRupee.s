@@ -236,7 +236,7 @@ _ZN10ActorRupee4MoveEv: ; 0x0213b120
 	strh r0, [r4, #0x9c]
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	movne r0, #0
 	strne r0, [r4, #0x60]

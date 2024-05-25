@@ -2210,7 +2210,7 @@ _0217db28:
 	bl func_ov36_0218543c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	mov r0, r4
 	bl func_ov36_021858f0
 	add r0, r4, #0x158
@@ -11918,7 +11918,7 @@ _02186470:
 _02186488:
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r5, #0x111]
 	cmp r0, #0
 	ldreqb r0, [r5, #0x110]

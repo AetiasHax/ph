@@ -653,7 +653,7 @@ func_ov21_0216de7c: ; 0x0216de7c
 	bl func_ov21_0216df08
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov21_0216de7c
 
@@ -679,7 +679,7 @@ func_ov21_0216deac: ; 0x0216deac
 	bl func_ov21_0216df08
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -1449,7 +1449,7 @@ _0216e868:
 	bl func_ov21_0216df08
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _0216e8c4: .word gSinCosTable
@@ -2736,7 +2736,7 @@ func_ov21_0216f7c8: ; 0x0216f7c8
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	mov r0, r10
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	addeq sp, sp, #0x118
 	moveq r0, #0

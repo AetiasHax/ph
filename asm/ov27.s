@@ -5343,7 +5343,7 @@ _02172154:
 	bl func_ov27_02172ab8
 	mov r0, r6
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r6, #0x110]
 	cmp r0, #0
 	ldreqb r0, [r6, #0x112]
@@ -10240,7 +10240,7 @@ func_ov27_021761dc: ; 0x021761dc
 	bl func_ov27_02177bc4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	mov r0, r4
 	ldr r1, [r0]
 	ldr r1, [r1, #0xbc]
@@ -10991,7 +10991,7 @@ _02176c68:
 	bl func_ov27_02177bc4
 	mov r0, r10
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r9, #0
 	beq _02176da0
 	cmp r6, #0
@@ -11135,7 +11135,7 @@ func_ov27_02176e88: ; 0x02176e88
 	bl func_ov27_02177bc4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov27_02176e88
 
@@ -11184,7 +11184,7 @@ func_ov27_02176ed0: ; 0x02176ed0
 	bl func_ov27_02177bc4
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0

@@ -144,7 +144,7 @@
 .extern Vec3p_Distance
 .extern Atan2
 .extern func_01fffbec
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_020078f4
 .extern func_02007908
 .extern func_02016fe8

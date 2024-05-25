@@ -9141,9 +9141,9 @@ _ZN11ItemManager21GetEquipItemUncheckedEi: ; 0x01fffcec
 _01fffd00: .word gItemManager
 	arm_func_end _ZN11ItemManager21GetEquipItemUncheckedEi
 
-	.global func_01fffd04
-	arm_func_start func_01fffd04
-func_01fffd04: ; 0x01fffd04
+	.global _ZN5Actor13func_01fffd04Ei
+	arm_func_start _ZN5Actor13func_01fffd04Ei
+_ZN5Actor13func_01fffd04Ei: ; 0x01fffd04
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x60
 	mov r6, r0
@@ -9277,7 +9277,7 @@ _01fffef8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _01ffff04: .word gMapManager
-	arm_func_end func_01fffd04
+	arm_func_end _ZN5Actor13func_01fffd04Ei
 
 	.global func_01ffff08
 	arm_func_start func_01ffff08

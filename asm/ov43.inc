@@ -82,7 +82,7 @@
 .extern Vec3p_Axpy
 .extern Atan2
 .extern _ZN11ItemManager21GetEquipItemUncheckedEi
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_0201e544
 .extern func_0202b154
 .extern func_0202da8c

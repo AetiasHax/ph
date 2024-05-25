@@ -232,11 +232,11 @@
 .extern func_ov14_021231d4
 .extern func_ov14_02123904
 .extern _ZN9EquipRope18func_ov14_0213d420Ev
-.extern func_ov14_0213d440
+.extern _ZN9EquipRope18func_ov14_0213d440Ei
 .extern _ZN9EquipRope18func_ov14_0213d480Ei
-.extern func_ov14_0213d81c
-.extern func_ov14_0213d91c
-.extern func_ov14_0213dadc
+.extern _ZN9EquipRope18func_ov14_0213d81cEiP5Vec3p
+.extern _ZN9EquipRope18func_ov14_0213d91cEi
+.extern _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 .extern _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 .extern _ZN9EquipRope18func_ov14_0213defcEP5Actor
 .extern func_ov29_0216d74c

@@ -3862,7 +3862,7 @@ func_ov26_02170320: ; 0x02170320
 	str r2, [r4, #0x4c]
 	ldr r2, [sp, #0x10]
 	str r2, [r4, #0x50]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	mov r2, #0
 	add r1, sp, #4
 	add r0, r4, #0x48

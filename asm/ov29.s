@@ -9647,7 +9647,7 @@ func_ov29_02175900: ; 0x02175900
 	bl func_ov29_021758f0
 	ldr r1, [r6, #8]
 	mov r4, r0
-	bl func_ov14_0213d440
+	bl _ZN9EquipRope18func_ov14_0213d440Ei
 	movs r5, r0
 	bmi _02175a94
 	mov r0, r4
@@ -9738,7 +9738,7 @@ _02175a64:
 	add r2, sp, #0xc
 	mov r0, r4
 	mov r1, r5
-	bl func_ov14_0213dadc
+	bl _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 _02175a88:

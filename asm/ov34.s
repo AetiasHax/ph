@@ -6530,7 +6530,7 @@ func_ov34_02181a00: ; 0x02181a00
 	bl func_ov34_021800c4
 	ldr r1, [r6, #8]
 	mov r4, r0
-	bl func_ov14_0213d440
+	bl _ZN9EquipRope18func_ov14_0213d440Ei
 	movs r5, r0
 	bmi _02181afc
 	mov r0, r4
@@ -6566,7 +6566,7 @@ func_ov34_02181a00: ; 0x02181a00
 	add r2, sp, #0x44
 	mov r0, r4
 	mov r1, r5
-	bl func_ov14_0213dadc
+	bl _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 	add r1, r6, #0x104
 	add r0, sp, #0x50
 	add r2, sp, #0x38
@@ -6608,7 +6608,7 @@ _02181afc:
 	beq _02181b50
 	mov r0, r4
 	mov r1, r5
-	bl func_ov14_0213d91c
+	bl _ZN9EquipRope18func_ov14_0213d91cEi
 _02181b50:
 	add r0, r6, #0x104
 	add r0, r0, #0x1c00
@@ -9234,7 +9234,7 @@ func_ov34_02184024: ; 0x02184024
 	bl func_ov34_021800c4
 	ldr r1, [r6, #8]
 	mov r4, r0
-	bl func_ov14_0213d440
+	bl _ZN9EquipRope18func_ov14_0213d440Ei
 	movs r5, r0
 	bmi _02184104
 	mov r0, r4
@@ -9282,7 +9282,7 @@ _02184084:
 	add r2, sp, #0xc
 	mov r0, r4
 	mov r1, r5
-	bl func_ov14_0213dadc
+	bl _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 _02184104:
@@ -10141,7 +10141,7 @@ _02184c10:
 _02184c64:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02184c8c
 	mov r0, r4
@@ -10325,7 +10325,7 @@ _02184ea8:
 _02184efc:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	addeq sp, sp, #0x30
 	ldmeqia sp!, {r3, r4, r5, pc}

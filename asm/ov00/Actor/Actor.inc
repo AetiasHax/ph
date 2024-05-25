@@ -42,7 +42,7 @@
 .extern func_01ffbe34
 .extern _ZN8Cylinder8OverlapsEPS_
 .extern _ZN11ItemManager21GetEquipItemUncheckedEi
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern _ZN12TouchControl13func_0202b864EP5Vec3pic
 .extern _ZN12TouchControl13func_0202b894EP5Vec3pic
 .extern func_0202d95c
@@ -65,11 +65,11 @@
 .extern func_ov05_02103f4c
 .extern _ZN14EquipBoomerang8GetActorEv
 .extern _ZN9EquipRope18func_ov14_0213d420Ev
-.extern func_ov14_0213d440
+.extern _ZN9EquipRope18func_ov14_0213d440Ei
 .extern _ZN9EquipRope18func_ov14_0213d480Ei
-.extern func_ov14_0213d81c
-.extern func_ov14_0213d91c
-.extern func_ov14_0213dadc
+.extern _ZN9EquipRope18func_ov14_0213d81cEiP5Vec3p
+.extern _ZN9EquipRope18func_ov14_0213d91cEi
+.extern _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 .extern _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 .extern _ZN9EquipRope18func_ov14_0213defcEP5Actor
 .extern gAdventureFlags

@@ -98,7 +98,7 @@
 .extern Atan2
 .extern func_01ffa9fc
 .extern _ZN11ItemManager21GetEquipItemUncheckedEi
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_020078f4
 .extern func_02007908
 .extern func_02016fe8
@@ -232,12 +232,12 @@
 .extern func_ov14_021231d4
 .extern func_ov14_02123904
 .extern _ZN9EquipRope18func_ov14_0213d420Ev
-.extern func_ov14_0213d440
+.extern _ZN9EquipRope18func_ov14_0213d440Ei
 .extern _ZN9EquipRope18func_ov14_0213d480Ei
 .extern func_ov14_0213d594
 .extern func_ov14_0213d5d0
-.extern func_ov14_0213d91c
-.extern func_ov14_0213dadc
+.extern _ZN9EquipRope18func_ov14_0213d91cEi
+.extern _ZN9EquipRope18func_ov14_0213dadcEiP8Cylinder
 .extern func_ov14_0213dba4
 .extern _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 .extern _ZN9EquipRope18func_ov14_0213defcEP5Actor

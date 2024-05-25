@@ -1932,7 +1932,7 @@ _0218accc:
 	mov r0, r4
 	mov r1, #0
 	ldr r5, [r4, #0x64]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r4, #0x111]
 	cmp r0, #0
 	addeq sp, sp, #0x3c
@@ -3967,7 +3967,7 @@ func_ov44_0218c4b8: ; 0x0218c4b8
 	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	mov r0, r5
 	beq _0218c53c

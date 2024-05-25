@@ -733,7 +733,7 @@ _02195e48:
 	mov r0, r5
 	bge _02195e7c
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02195e80
 	mov r0, r5
@@ -1978,7 +1978,7 @@ func_ov51_02196dec: ; 0x02196dec
 	bl func_ov51_02196dc4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov51_02196dec
 
@@ -2135,7 +2135,7 @@ _02197018:
 	bl func_ov51_02196dc4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02197030: .word 0x00000199
@@ -2156,7 +2156,7 @@ func_ov51_02197038: ; 0x02197038
 	bl func_ov51_02196dc4
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov51_02197038
 

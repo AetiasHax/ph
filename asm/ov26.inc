@@ -166,7 +166,7 @@
 .extern func_01ffe468
 .extern func_01fffbec
 .extern func_01fffcd8
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_020020d0
 .extern func_0200250c
 .extern func_02002540

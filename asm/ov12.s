@@ -1855,7 +1855,7 @@ _02114398:
 	str r1, [sp, #0x18]
 	str r1, [sp, #0x1c]
 	str r3, [sp, #0x20]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	movs r4, r0
 	ldrneb r0, [r6, #0x110]
 	cmpne r0, #0
@@ -2022,7 +2022,7 @@ _021145fc:
 	str r1, [sp, #0x18]
 	str r1, [sp, #0x1c]
 	str r3, [sp, #0x20]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	ldrneb r0, [r8, #0x110]
 	cmpne r0, #0
@@ -2147,7 +2147,7 @@ _021147d4:
 	bl func_ov12_02113f9c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -2193,7 +2193,7 @@ _02114854:
 _02114890:
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
@@ -34608,7 +34608,7 @@ _0212ed88:
 	mov r1, #0
 	mov r0, r5
 	strb r1, [r5, #0x165]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _0212ee30
 	ldr r2, [r5, #0xcc]

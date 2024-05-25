@@ -8466,7 +8466,7 @@ func_ov19_02174554: ; 0x02174554
 	bl func_ov00_020cc438
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov19_02174554
 

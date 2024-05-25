@@ -9229,7 +9229,7 @@ _020cb2a4:
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r4, #0x110]
 	cmp r0, #0
 	ldreqb r0, [r4, #0x112]
@@ -10730,7 +10730,7 @@ _020cc5e4:
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov00_020cc524
@@ -12405,7 +12405,7 @@ func_ov00_020cdab0: ; 0x020cdab0
 	mov r1, #0
 	strh r0, [r2, #0x9c]
 	ldr r0, [r4]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, [r4]
 	strh r5, [r0, #0x9c]
 	ldmia sp!, {r3, r4, r5, pc}
@@ -21717,7 +21717,7 @@ _020d4c64:
 	ldr r2, [sp, #0x3c]
 	str r2, [r10, #0x5c]
 	str r5, [r4, #0x18]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r1, [r4, #0x18]
 	mov r7, r0
 	sub r0, r1, #1

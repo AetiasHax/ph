@@ -104,7 +104,7 @@
 .extern Atan2
 .extern _ZN8Cylinder8OverlapsEPS_
 .extern func_01fffbec
-.extern func_01fffd04
+.extern _ZN5Actor13func_01fffd04Ei
 .extern func_0202b154
 .extern func_0202bb78
 .extern func_0202bbbc

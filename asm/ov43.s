@@ -3146,7 +3146,7 @@ _0218bf54:
 	bl func_ov00_020cc45c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, [r4, #0x2a0]
 	cmp r0, #0
 	moveq r6, #2
@@ -3641,7 +3641,7 @@ _0218c690:
 	bl func_ov00_020cc45c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	mov r0, r4
 	bl func_ov00_020cb58c
 	cmp r0, #0
@@ -3733,7 +3733,7 @@ _0218c7e8:
 	bl func_ov00_020cc45c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldr r0, [r4, #0x29c]
 	add r0, r0, #0xc
 	bl func_0202e58c

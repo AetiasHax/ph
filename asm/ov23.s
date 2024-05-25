@@ -754,7 +754,7 @@ func_ov23_0216e024: ; 0x0216e024
 	ldmleia sp!, {r4, pc}
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add r0, r4, #0x470
 	mov r1, #4
 	bl func_ov23_0216d74c
@@ -1184,7 +1184,7 @@ func_ov23_0216e598: ; 0x0216e598
 	bl func_ov14_0214a92c
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add r0, r4, #0xa8
 	str r6, [sp]
 	mov r3, r5
@@ -9839,7 +9839,7 @@ _021758c0:
 	mov r0, r4
 	mov r1, #0
 	str r2, [r4, #0xa0]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _021758e4: .word data_ov23_0217acac

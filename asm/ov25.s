@@ -5281,7 +5281,7 @@ func_ov25_02171e30: ; 0x02171e30
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov25_02171e30
 
@@ -5296,7 +5296,7 @@ func_ov25_02171e58: ; 0x02171e58
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov25_02171e58
 
@@ -6806,7 +6806,7 @@ _02173294:
 	bl func_ov25_02173354
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _021732b4: .word 0x00001555
@@ -6856,7 +6856,7 @@ func_ov25_021732fc: ; 0x021732fc
 	bl func_ov25_02173354
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
@@ -11016,7 +11016,7 @@ func_ov25_02176b88: ; 0x02176b88
 	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov25_02176b88
 
@@ -12928,7 +12928,7 @@ _02178404:
 	ldmia sp!, {r3, r4, r5, pc}
 _02178430:
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	beq _02178450
 	mov r0, r5
