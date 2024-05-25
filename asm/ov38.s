@@ -2969,7 +2969,7 @@ func_ov38_0217e688: ; 0x0217e688
 _0217e71c:
 	ldr r1, [r4, #8]
 	mov r0, r5
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	blt _0217e768
 	add sp, sp, #0x10

@@ -3702,7 +3702,7 @@ _0217eca0:
 	beq _0217ecf4
 	bl func_ov32_0217edcc
 	ldr r1, [r4, #8]
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	ldr r1, [r4, #0x4b8]
 	movge r2, #1

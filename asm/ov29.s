@@ -9748,7 +9748,7 @@ _02175a88:
 _02175a94:
 	ldr r1, [r6, #8]
 	mov r0, r4
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	addge sp, sp, #0x18
 	movge r0, #1

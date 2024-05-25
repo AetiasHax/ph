@@ -36,4 +36,6 @@ public:
     /* 30 */ virtual void vfunc_30() override; // func_ov57_02199744
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov57_021998f0
     /* 50 */
+
+    s32 func_ov14_0213d480(s32 actorId);
 };

@@ -18461,7 +18461,7 @@ _020bfc80:
 	str r2, [sp, #0x4c]
 	str r1, [sp, #0x50]
 	str r0, [sp, #0x54]
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	ldrsh r2, [r4, #4]
 	add r1, sp, #0x48
 	add r3, sp, #0x58
@@ -18476,7 +18476,7 @@ _020bfc80:
 	cmp r1, r0
 	bgt _020bfd10
 _020bfcfc:
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	add r1, sp, #0x48
 	add r2, sp, #0x58
 	mov r3, #0
@@ -18651,15 +18651,15 @@ _020bff68: .word 0x00000b33
 _020bff6c: .word data_027e0d38
 	arm_func_end func_ov00_020bf538
 
-	.global func_ov00_020bff70
-	arm_func_start func_ov00_020bff70
-func_ov00_020bff70: ; 0x020bff70
+	.global _ZN10EquipSword12GetEquipRopeEv
+	arm_func_start _ZN10EquipSword12GetEquipRopeEv
+_ZN10EquipSword12GetEquipRopeEv: ; 0x020bff70
 	ldr ip, _020bff7c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
 _020bff7c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
-	arm_func_end func_ov00_020bff70
+	arm_func_end _ZN10EquipSword12GetEquipRopeEv
 
 	.global func_ov00_020bff80
 	arm_func_start func_ov00_020bff80

@@ -58,7 +58,7 @@
 .extern _ZN14PlayerLinkBase18func_ov00_020bc854EP5Vec3p
 .extern _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
 .extern func_ov00_020bd304
-.extern func_ov00_020bff70
+.extern _ZN10EquipSword12GetEquipRopeEv
 .extern func_ov00_020c1500
 .extern func_ov00_020c5924
 .extern func_ov00_020c8398
@@ -66,7 +66,7 @@
 .extern _ZN14EquipBoomerang8GetActorEv
 .extern func_ov14_0213d420
 .extern func_ov14_0213d440
-.extern func_ov14_0213d480
+.extern _ZN9EquipRope18func_ov14_0213d480Ei
 .extern func_ov14_0213d81c
 .extern func_ov14_0213d91c
 .extern func_ov14_0213dadc

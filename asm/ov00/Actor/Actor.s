@@ -2064,9 +2064,9 @@ _ZN5Actor18func_ov00_020c2d54Ev: ; 0x020c2d54
 	bl _ZN12ActorManager18func_ov00_020c39acEjPjb
 	movs r5, r0
 	beq _020c2dd0
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	ldr r1, [r4, #8]
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	bge _020c2dd0
 	ldr r1, [r4, #8]
@@ -2091,7 +2091,7 @@ _ZN5Actor18func_ov00_020c2de4Ev: ; 0x020c2de4
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r0
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	bl func_ov14_0213d420
 	movs r4, r0
 	add r2, sp, #0
@@ -2137,7 +2137,7 @@ _ZN5Actor18func_ov00_020c2e7cEv: ; 0x020c2e7c
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, #0
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	ldrb r1, [r6, #0x11d]
 	mov r4, r0
 	cmp r1, #0
@@ -2158,7 +2158,7 @@ _020c2eb4:
 _ZN5Actor18func_ov00_020c2ebcEv: ; 0x020c2ebc
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	mov r1, r4
 	bl func_ov14_0213defc
 	ldmia sp!, {r4, pc}
@@ -2170,7 +2170,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x1c
 	mov r4, r0
-	bl func_ov00_020bff70
+	bl _ZN10EquipSword12GetEquipRopeEv
 	ldr r1, [r4, #8]
 	mov r5, r0
 	bl func_ov14_0213d440
@@ -2227,7 +2227,7 @@ _020c2fa4:
 _020c2fb0:
 	ldr r1, [r4, #8]
 	mov r0, r5
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	addge sp, sp, #0x1c
 	movge r0, #1

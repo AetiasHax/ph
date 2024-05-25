@@ -344,7 +344,7 @@
 .extern func_ov14_02127ac4
 .extern func_ov14_0213b904
 .extern func_ov14_0213b984
-.extern func_ov14_0213d480
+.extern _ZN9EquipRope18func_ov14_0213d480Ei
 .extern gAdventureFlags
 .extern gMapManager
 .extern strncpy

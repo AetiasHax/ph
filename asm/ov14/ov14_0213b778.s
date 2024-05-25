@@ -2586,9 +2586,9 @@ _0213d478:
 	bx lr
 	arm_func_end func_ov14_0213d440
 
-	.global func_ov14_0213d480
-	arm_func_start func_ov14_0213d480
-func_ov14_0213d480: ; 0x0213d480
+	.global _ZN9EquipRope18func_ov14_0213d480Ei
+	arm_func_start _ZN9EquipRope18func_ov14_0213d480Ei
+_ZN9EquipRope18func_ov14_0213d480Ei: ; 0x0213d480
 	ldrb r2, [r0, #0x68]
 	cmp r2, #0
 	beq _0213d4c0
@@ -2610,7 +2610,7 @@ _0213d4b0:
 _0213d4c0:
 	mvn r0, #0
 	bx lr
-	arm_func_end func_ov14_0213d480
+	arm_func_end _ZN9EquipRope18func_ov14_0213d480Ei
 
 	.global func_ov14_0213d4c8
 	arm_func_start func_ov14_0213d4c8
@@ -3333,7 +3333,7 @@ func_ov14_0213ddd4: ; 0x0213ddd4
 	mvneq r0, #0
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
 	ldr r1, [r4, #8]
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	cmp r0, #0
 	addge sp, sp, #0x2c
 	ldmgeia sp!, {r3, r4, r5, r6, pc}
@@ -3391,7 +3391,7 @@ func_ov14_0213ddd4: ; 0x0213ddd4
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
 	ldr r1, [sp, #0xc]
 	mov r0, r5
-	bl func_ov14_0213d480
+	bl _ZN9EquipRope18func_ov14_0213d480Ei
 	add sp, sp, #0x2c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _0213def0:

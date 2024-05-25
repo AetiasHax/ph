@@ -2,6 +2,7 @@
 
 #include "types.h"
 #include "Player/EquipItem.hpp"
+#include "Player/EquipRope.hpp"
 
 class EquipSword : public EquipItem {
 private:
@@ -55,4 +56,6 @@ public:
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020bff94
     /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const override; // func_ov00_020c01dc
     /* 50 */
+
+    static EquipRope* GetEquipRope();
 };
