@@ -3627,11 +3627,11 @@ _0217ebb0: .word func_01fffcd8
 	.global func_ov32_0217ebb4
 	arm_func_start func_ov32_0217ebb4
 func_ov32_0217ebb4: ; 0x0217ebb4
-	ldr ip, _0217ebc0 ; =func_01fffcec
+	ldr ip, _0217ebc0 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_0217ebc0: .word func_01fffcec
+_0217ebc0: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov32_0217ebb4
 
 	.global func_ov32_0217ebc4
@@ -3782,11 +3782,11 @@ _0217edc8: .word 0x00000201
 	.global func_ov32_0217edcc
 	arm_func_start func_ov32_0217edcc
 func_ov32_0217edcc: ; 0x0217edcc
-	ldr ip, _0217edd8 ; =func_01fffcec
+	ldr ip, _0217edd8 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
-_0217edd8: .word func_01fffcec
+_0217edd8: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov32_0217edcc
 
 	.global func_ov32_0217eddc
@@ -3929,11 +3929,11 @@ _0217efd4: .word 0x00005555
 	.global func_ov32_0217efd8
 	arm_func_start func_ov32_0217efd8
 func_ov32_0217efd8: ; 0x0217efd8
-	ldr ip, _0217efe4 ; =func_01fffcec
+	ldr ip, _0217efe4 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_0217efe4: .word func_01fffcec
+_0217efe4: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov32_0217efd8
 
 	.global func_ov32_0217efe8

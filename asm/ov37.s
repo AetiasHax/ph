@@ -10707,11 +10707,11 @@ _021852fc: .word 0x524f5045
 	.global func_ov37_02185300
 	arm_func_start func_ov37_02185300
 func_ov37_02185300: ; 0x02185300
-	ldr ip, _0218530c ; =func_01fffcec
+	ldr ip, _0218530c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_0218530c: .word func_01fffcec
+_0218530c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov37_02185300
 
 	.global func_ov37_02185310

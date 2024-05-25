@@ -9322,11 +9322,11 @@ _021840b0: .word 0x524f5045
 	.global func_ov36_021840b4
 	arm_func_start func_ov36_021840b4
 func_ov36_021840b4: ; 0x021840b4
-	ldr ip, _021840c0 ; =func_01fffcec
+	ldr ip, _021840c0 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_021840c0: .word func_01fffcec
+_021840c0: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov36_021840b4
 
 	.global func_ov36_021840c4

@@ -9129,9 +9129,9 @@ func_01fffcd8: ; 0x01fffcd8
 _01fffce8: .word data_027e0fdc
 	arm_func_end func_01fffcd8
 
-	.global func_01fffcec
-	arm_func_start func_01fffcec
-func_01fffcec: ; 0x01fffcec
+	.global _ZN11ItemManager21GetEquipItemUncheckedEi
+	arm_func_start _ZN11ItemManager21GetEquipItemUncheckedEi
+_ZN11ItemManager21GetEquipItemUncheckedEi: ; 0x01fffcec
 	ldr r1, _01fffd00 ; =gItemManager
 	ldr r1, [r1]
 	ldr r1, [r1, #0xac]
@@ -9139,7 +9139,7 @@ func_01fffcec: ; 0x01fffcec
 	bx lr
 	.align 2, 0
 _01fffd00: .word gItemManager
-	arm_func_end func_01fffcec
+	arm_func_end _ZN11ItemManager21GetEquipItemUncheckedEi
 
 	.global func_01fffd04
 	arm_func_start func_01fffd04

@@ -5752,11 +5752,11 @@ _021055cc: .word data_ov05_0211264c
 	.global func_ov05_021055d0
 	arm_func_start func_ov05_021055d0
 func_ov05_021055d0: ; 0x021055d0
-	ldr ip, _021055dc ; =func_01fffcec
+	ldr ip, _021055dc ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_021055dc: .word func_01fffcec
+_021055dc: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov05_021055d0
 
 	.global func_ov05_021055e0
@@ -5899,11 +5899,11 @@ _021057b0: .word gPlayerControl
 	.global func_ov05_021057b4
 	arm_func_start func_ov05_021057b4
 func_ov05_021057b4: ; 0x021057b4
-	ldr ip, _021057c0 ; =func_01fffcec
+	ldr ip, _021057c0 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #7
 	bx ip
 	.align 2, 0
-_021057c0: .word func_01fffcec
+_021057c0: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov05_021057b4
 
 	.global func_ov05_021057c4
@@ -6319,11 +6319,11 @@ _02105d80: .word gSinCosTable
 	.global func_ov05_02105d84
 	arm_func_start func_ov05_02105d84
 func_ov05_02105d84: ; 0x02105d84
-	ldr ip, _02105d90 ; =func_01fffcec
+	ldr ip, _02105d90 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_02105d90: .word func_01fffcec
+_02105d90: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov05_02105d84
 
 	.global func_ov05_02105d94
@@ -13017,11 +13017,11 @@ _0210b968: .word gMapManager
 	.global func_ov05_0210b96c
 	arm_func_start func_ov05_0210b96c
 func_ov05_0210b96c: ; 0x0210b96c
-	ldr ip, _0210b978 ; =func_01fffcec
+	ldr ip, _0210b978 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
-_0210b978: .word func_01fffcec
+_0210b978: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov05_0210b96c
 
 	.global func_ov05_0210b97c

@@ -18,7 +18,7 @@
 .extern Vec3p_Sub
 .extern Atan2
 .extern _ZN8Cylinder8OverlapsEPS_
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_ov00_0207c5d4
 .extern _ZN10MapManager18func_ov00_02082af4Ev
 .extern _ZN10MapManager14GetEntrancePosEP5Vec3pi

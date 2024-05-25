@@ -3333,11 +3333,11 @@ _0217024c: .word 0x000001d7
 	.global func_ov19_02170250
 	arm_func_start func_ov19_02170250
 func_ov19_02170250: ; 0x02170250
-	ldr ip, _0217025c ; =func_01fffcec
+	ldr ip, _0217025c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_0217025c: .word func_01fffcec
+_0217025c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov19_02170250
 
 	.global func_ov19_02170260

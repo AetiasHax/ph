@@ -9631,11 +9631,11 @@ _021758ec: .word data_ov29_0217bc78
 	.global func_ov29_021758f0
 	arm_func_start func_ov29_021758f0
 func_ov29_021758f0: ; 0x021758f0
-	ldr ip, _021758fc ; =func_01fffcec
+	ldr ip, _021758fc ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
-_021758fc: .word func_01fffcec
+_021758fc: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov29_021758f0
 
 	.global func_ov29_02175900

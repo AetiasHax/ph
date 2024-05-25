@@ -7262,21 +7262,21 @@ _02181824: .word 0x42494752
 	.global func_ov30_02181828
 	arm_func_start func_ov30_02181828
 func_ov30_02181828: ; 0x02181828
-	ldr ip, _02181834 ; =func_01fffcec
+	ldr ip, _02181834 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_02181834: .word func_01fffcec
+_02181834: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov30_02181828
 
 	.global func_ov30_02181838
 	arm_func_start func_ov30_02181838
 func_ov30_02181838: ; 0x02181838
-	ldr ip, _02181844 ; =func_01fffcec
+	ldr ip, _02181844 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #8
 	bx ip
 	.align 2, 0
-_02181844: .word func_01fffcec
+_02181844: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov30_02181838
 
 	.global func_ov30_02181848

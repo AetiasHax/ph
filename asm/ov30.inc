@@ -114,7 +114,7 @@
 .extern func_01ffbf5c
 .extern func_01ffe1cc
 .extern _ZN8Cylinder8OverlapsEPS_
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_02002c14
 .extern func_0200e8f8
 .extern func_02018450

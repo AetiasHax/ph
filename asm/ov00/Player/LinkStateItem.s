@@ -164,11 +164,11 @@ _020abf4c: .word gPlayerControl
 	.global _ZN13LinkStateItem15GetEquipBombchuEv
 	arm_func_start _ZN13LinkStateItem15GetEquipBombchuEv
 _ZN13LinkStateItem15GetEquipBombchuEv: ; 0x020abf50
-	ldr ip, _020abf5c ; =func_01fffcec
+	ldr ip, _020abf5c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #7
 	bx ip
 	.align 2, 0
-_020abf5c: .word func_01fffcec
+_020abf5c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN13LinkStateItem15GetEquipBombchuEv
 
 	.global _ZN13LinkStateItem16GetLinkStateMoveEv

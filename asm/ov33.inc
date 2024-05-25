@@ -93,7 +93,7 @@
 .extern Vec3p_Distance
 .extern Atan2
 .extern func_01ffe1cc
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_02016fcc
 .extern func_02016fe8
 .extern func_0201e544

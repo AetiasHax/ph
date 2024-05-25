@@ -811,11 +811,11 @@ _021997dc: .word data_ov54_02199914
 	.global func_ov54_021997e0
 	arm_func_start func_ov54_021997e0
 func_ov54_021997e0: ; 0x021997e0
-	ldr ip, _021997ec ; =func_01fffcec
+	ldr ip, _021997ec ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #3
 	bx ip
 	.align 2, 0
-_021997ec: .word func_01fffcec
+_021997ec: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov54_021997e0
 
 	.global func_ov54_021997f0

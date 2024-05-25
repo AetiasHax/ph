@@ -1592,11 +1592,11 @@ _0218a954: .word gPlayerLink
 	.global func_ov41_0218a958
 	arm_func_start func_ov41_0218a958
 func_ov41_0218a958: ; 0x0218a958
-	ldr ip, _0218a964 ; =func_01fffcec
+	ldr ip, _0218a964 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_0218a964: .word func_01fffcec
+_0218a964: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov41_0218a958
 
 	.global func_ov41_0218a968

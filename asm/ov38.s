@@ -2096,11 +2096,11 @@ _0217dabc: .word gSinCosTable
 	.global func_ov38_0217dac0
 	arm_func_start func_ov38_0217dac0
 func_ov38_0217dac0: ; 0x0217dac0
-	ldr ip, _0217dacc ; =func_01fffcec
+	ldr ip, _0217dacc ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
-_0217dacc: .word func_01fffcec
+_0217dacc: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov38_0217dac0
 
 	.global func_ov38_0217dad0
@@ -9319,11 +9319,11 @@ _021840b4: .word 0x524f5045
 	.global func_ov38_021840b8
 	arm_func_start func_ov38_021840b8
 func_ov38_021840b8: ; 0x021840b8
-	ldr ip, _021840c4 ; =func_01fffcec
+	ldr ip, _021840c4 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_021840c4: .word func_01fffcec
+_021840c4: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov38_021840b8
 
 	.global func_ov38_021840c8

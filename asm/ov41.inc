@@ -113,7 +113,7 @@
 .extern Vec3p_Sub
 .extern Vec3p_Axpy
 .extern Atan2
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_02018450
 .extern func_020196bc
 .extern func_020196fc

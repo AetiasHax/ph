@@ -35,7 +35,7 @@
 .extern func_01ffa9fc
 .extern func_01ffbe78
 .extern _ZN8Cylinder8OverlapsEPS_
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_0202b4e4
 .extern func_0204f614
 .extern func_ov00_0207bb1c

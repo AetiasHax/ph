@@ -597,11 +597,11 @@ _02195c68:
 	.global func_ov51_02195c70
 	arm_func_start func_ov51_02195c70
 func_ov51_02195c70: ; 0x02195c70
-	ldr ip, _02195c7c ; =func_01fffcec
+	ldr ip, _02195c7c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_02195c7c: .word func_01fffcec
+_02195c7c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov51_02195c70
 
 	.global func_ov51_02195c80

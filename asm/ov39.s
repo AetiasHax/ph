@@ -2696,11 +2696,11 @@ _0217e284: .word gPlayerLink
 	.global func_ov39_0217e288
 	arm_func_start func_ov39_0217e288
 func_ov39_0217e288: ; 0x0217e288
-	ldr ip, _0217e294 ; =func_01fffcec
+	ldr ip, _0217e294 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_0217e294: .word func_01fffcec
+_0217e294: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov39_0217e288
 
 	.global func_ov39_0217e298
@@ -11674,11 +11674,11 @@ _02185ea4: .word 0x00000312
 	.global func_ov39_02185ea8
 	arm_func_start func_ov39_02185ea8
 func_ov39_02185ea8: ; 0x02185ea8
-	ldr ip, _02185eb4 ; =func_01fffcec
+	ldr ip, _02185eb4 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_02185eb4: .word func_01fffcec
+_02185eb4: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov39_02185ea8
 
 	.global func_ov39_02185eb8

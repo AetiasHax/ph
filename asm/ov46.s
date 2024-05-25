@@ -4668,11 +4668,11 @@ _02193e80: .word 0x00000ddb
 	.global func_ov46_02193e84
 	arm_func_start func_ov46_02193e84
 func_ov46_02193e84: ; 0x02193e84
-	ldr ip, _02193e90 ; =func_01fffcec
+	ldr ip, _02193e90 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_02193e90: .word func_01fffcec
+_02193e90: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov46_02193e84
 
 	.global func_ov46_02193e94

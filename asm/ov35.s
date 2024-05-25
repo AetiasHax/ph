@@ -948,11 +948,11 @@ _0217ca80: .word gActorManager
 	.global func_ov35_0217ca84
 	arm_func_start func_ov35_0217ca84
 func_ov35_0217ca84: ; 0x0217ca84
-	ldr ip, _0217ca90 ; =func_01fffcec
+	ldr ip, _0217ca90 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_0217ca90: .word func_01fffcec
+_0217ca90: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov35_0217ca84
 
 	.global func_ov35_0217ca94

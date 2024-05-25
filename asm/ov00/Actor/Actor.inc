@@ -41,7 +41,7 @@
 .extern Atan2
 .extern func_01ffbe34
 .extern _ZN8Cylinder8OverlapsEPS_
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_01fffd04
 .extern func_0202b864
 .extern func_0202b894

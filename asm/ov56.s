@@ -454,11 +454,11 @@ _021992e4: .word data_027e0d0c
 	.global func_ov56_021992e8
 	arm_func_start func_ov56_021992e8
 func_ov56_021992e8: ; 0x021992e8
-	ldr ip, _021992f4 ; =func_01fffcec
+	ldr ip, _021992f4 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #5
 	bx ip
 	.align 2, 0
-_021992f4: .word func_01fffcec
+_021992f4: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov56_021992e8
 
 	.global func_ov56_021992f8

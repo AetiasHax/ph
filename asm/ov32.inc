@@ -126,7 +126,7 @@
 .extern func_01ffa9fc
 .extern func_01ffbf5c
 .extern func_01fffcd8
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_01fffd04
 .extern func_020020d0
 .extern func_0200250c

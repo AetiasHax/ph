@@ -4751,11 +4751,11 @@ _021800c0: .word 0x00001030
 	.global func_ov34_021800c4
 	arm_func_start func_ov34_021800c4
 func_ov34_021800c4: ; 0x021800c4
-	ldr ip, _021800d0 ; =func_01fffcec
+	ldr ip, _021800d0 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #6
 	bx ip
 	.align 2, 0
-_021800d0: .word func_01fffcec
+_021800d0: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov34_021800c4
 
 	.global func_ov34_021800d4

@@ -260,6 +260,7 @@ public:
     void ForceEquipItem(ItemFlag equipId);
     bool ClearForcedEquipItem();
     void UpdateSwordShieldInUse();
+    static EquipItem* GetEquipItemUnchecked(ItemFlag equipId);
     
     // Ammo
     u16 GetAmmo(ItemFlag equipId) const;

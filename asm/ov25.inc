@@ -150,7 +150,7 @@
 .extern Atan2
 .extern func_01ffe1cc
 .extern func_01fffcd8
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_01fffd04
 .extern func_02002c14
 .extern func_02016fe8

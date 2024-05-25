@@ -10024,11 +10024,11 @@ _02183a04: .word gAdventureFlags
 	.global func_ov40_02183a08
 	arm_func_start func_ov40_02183a08
 func_ov40_02183a08: ; 0x02183a08
-	ldr ip, _02183a14 ; =func_01fffcec
+	ldr ip, _02183a14 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_02183a14: .word func_01fffcec
+_02183a14: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov40_02183a08
 
 	.global func_ov40_02183a18

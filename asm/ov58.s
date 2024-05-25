@@ -2575,11 +2575,11 @@ _0219a5b4: .word gPlayerControl
 	.global func_ov58_0219a5b8
 	arm_func_start func_ov58_0219a5b8
 func_ov58_0219a5b8: ; 0x0219a5b8
-	ldr ip, _0219a5c4 ; =func_01fffcec
+	ldr ip, _0219a5c4 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #7
 	bx ip
 	.align 2, 0
-_0219a5c4: .word func_01fffcec
+_0219a5c4: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov58_0219a5b8
 
 	.global func_ov58_0219a5c8

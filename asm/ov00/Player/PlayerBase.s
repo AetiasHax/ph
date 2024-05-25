@@ -71,21 +71,21 @@ _020a7b88: .word data_027e0e58
 	.global _ZN10PlayerBase13GetEquipSwordEv
 	arm_func_start _ZN10PlayerBase13GetEquipSwordEv
 _ZN10PlayerBase13GetEquipSwordEv: ; 0x020a7b8c
-	ldr ip, _020a7b98 ; =func_01fffcec
+	ldr ip, _020a7b98 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_020a7b98: .word func_01fffcec
+_020a7b98: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN10PlayerBase13GetEquipSwordEv
 
 	.global _ZN10PlayerBase14GetEquipShieldEv
 	arm_func_start _ZN10PlayerBase14GetEquipShieldEv
 _ZN10PlayerBase14GetEquipShieldEv: ; 0x020a7b9c
-	ldr ip, _020a7ba8 ; =func_01fffcec
+	ldr ip, _020a7ba8 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_020a7ba8: .word func_01fffcec
+_020a7ba8: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN10PlayerBase14GetEquipShieldEv
 
 	.global _ZN10PlayerBase6LookAtEP5Vec3p

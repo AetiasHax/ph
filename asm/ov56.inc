@@ -20,7 +20,7 @@
 .extern Vec3p_Add
 .extern func_01ffa9fc
 .extern func_01fffcd8
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern __register_global_object
 .extern func_ov00_02087f08
 .extern func_ov00_0208967c

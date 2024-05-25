@@ -5381,21 +5381,21 @@ _02171dd8: .word 0x524f5045
 	.global func_ov22_02171ddc
 	arm_func_start func_ov22_02171ddc
 func_ov22_02171ddc: ; 0x02171ddc
-	ldr ip, _02171de8 ; =func_01fffcec
+	ldr ip, _02171de8 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_02171de8: .word func_01fffcec
+_02171de8: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov22_02171ddc
 
 	.global func_ov22_02171dec
 	arm_func_start func_ov22_02171dec
 func_ov22_02171dec: ; 0x02171dec
-	ldr ip, _02171df8 ; =func_01fffcec
+	ldr ip, _02171df8 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_02171df8: .word func_01fffcec
+_02171df8: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov22_02171dec
 
 	.global func_ov22_02171dfc

@@ -2035,11 +2035,11 @@ _020c2d40: .word gPlayerPos
 	.global _ZN5Actor17GetEquipBoomerangEv
 	arm_func_start _ZN5Actor17GetEquipBoomerangEv
 _ZN5Actor17GetEquipBoomerangEv: ; 0x020c2d44
-	ldr ip, _020c2d50 ; =func_01fffcec
+	ldr ip, _020c2d50 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #2
 	bx ip
 	.align 2, 0
-_020c2d50: .word func_01fffcec
+_020c2d50: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN5Actor17GetEquipBoomerangEv
 
 	.global _ZN5Actor18func_ov00_020c2d54Ev

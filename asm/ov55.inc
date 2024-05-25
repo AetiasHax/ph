@@ -37,7 +37,7 @@
 .extern data_ov00_020eec9c
 .extern Vec3p_Add
 .extern func_01ffa9fc
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern func_02019570
 .extern func_020385b8
 .extern _ZN10MapManager18func_ov00_02083f44EP5Vec3p
