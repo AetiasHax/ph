@@ -6534,7 +6534,7 @@ func_ov34_02181a00: ; 0x02181a00
 	movs r5, r0
 	bmi _02181afc
 	mov r0, r4
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -6600,7 +6600,7 @@ _02181afc:
 	cmp r5, #0
 	blt _02181b50
 	mov r0, r4
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -9238,7 +9238,7 @@ func_ov34_02184024: ; 0x02184024
 	movs r5, r0
 	bmi _02184104
 	mov r0, r4
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -10245,7 +10245,7 @@ _02184d84:
 	cmp r0, #0
 	beq _02184df8
 	mov r0, r5
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	ldrb r0, [r0, #0x16b]
 	cmp r0, #1
 	beq _02184df8

@@ -9651,7 +9651,7 @@ func_ov29_02175900: ; 0x02175900
 	movs r5, r0
 	bmi _02175a94
 	mov r0, r4
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

@@ -782,7 +782,7 @@ func_ov57_021996b0: ; 0x021996b0
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r0
 	mov r5, r1
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	beq _0219972c
 	mov r0, r4
@@ -891,7 +891,7 @@ _021997f8:
 	str r1, [r0, #0x30]
 	b _0219989c
 _02199848:
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	movs r3, r0
 	beq _0219989c
 	add r0, r3, #0x100
@@ -1441,7 +1441,7 @@ _02199f58:
 	ldmia sp!, {r4, r5, r6, pc}
 _02199fb8:
 	mov r0, r4
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	movs r6, r0
 	bne _02199fe4
 	ldr r1, _0219a1f0 ; =data_ov57_0219aa60
@@ -1608,7 +1608,7 @@ func_ov57_0219a208: ; 0x0219a208
 	mov r4, r0
 	bl func_ov57_02199ecc
 	mov r5, r0
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

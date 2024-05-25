@@ -1,6 +1,9 @@
 #pragma once
 
+#include "global.h"
 #include "types.h"
+
+#include "Actor/ActorRef.hpp"
 #include "Player/EquipItem.hpp"
 
 class EquipRope : public EquipItem {
@@ -9,8 +12,7 @@ private:
     /* 09 */ unk8 mUnk_09;
     /* 0a */ unk16 mUnk_0a;
     /* 0c */ unk8 mUnk_0c[4];
-    /* 10 */ unk32 mUnk_10;
-    /* 14 */ unk32 mUnk_14;
+    /* 10 */ ActorRef mRef;
     /* 18 */ unk8 mUnk_18[0x54];
     /* 6c */ unk16 mUnk_6c;
     /* 6e */ unk8 mUnk_6e[2];
@@ -37,5 +39,6 @@ public:
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov57_021998f0
     /* 50 */
 
+    Actor* func_ov14_0213d420();
     s32 func_ov14_0213d480(s32 actorId);
 };

@@ -512,7 +512,7 @@
 .extern func_ov09_0211cac0
 .extern func_ov12_02134208
 .extern func_ov14_02127df4
-.extern func_ov14_0213d420
+.extern _ZN9EquipRope18func_ov14_0213d420Ev
 .extern func_ov14_0213d63c
 .extern func_ov14_0213ec64
 .extern func_ov14_0214a3dc

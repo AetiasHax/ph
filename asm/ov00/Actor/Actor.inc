@@ -64,7 +64,7 @@
 .extern func_ov00_020c8398
 .extern func_ov05_02103f4c
 .extern _ZN14EquipBoomerang8GetActorEv
-.extern func_ov14_0213d420
+.extern _ZN9EquipRope18func_ov14_0213d420Ev
 .extern func_ov14_0213d440
 .extern _ZN9EquipRope18func_ov14_0213d480Ei
 .extern func_ov14_0213d81c

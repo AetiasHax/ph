@@ -5669,7 +5669,7 @@ _020b5b70:
 	strh r0, [r6, #0xa4]
 	b _020b5c18
 _020b5b8c:
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	movs r4, r0
 	moveq r0, #0
 	streqh r0, [r6, #0x5a]

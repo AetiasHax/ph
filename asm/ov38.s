@@ -1990,7 +1990,7 @@ func_ov38_0217d918: ; 0x0217d918
 	movs r6, r0
 	bmi _0217da1c
 	mov r0, r5
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, r4
 	moveq r0, #0
@@ -2950,7 +2950,7 @@ func_ov38_0217e688: ; 0x0217e688
 	cmp r6, #0
 	blt _0217e71c
 	mov r0, r5
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

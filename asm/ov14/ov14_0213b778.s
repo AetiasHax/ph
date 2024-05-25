@@ -2549,9 +2549,9 @@ func_ov14_0213d404: ; 0x0213d404
 	bx lr
 	arm_func_end func_ov14_0213d404
 
-	.global func_ov14_0213d420
-	arm_func_start func_ov14_0213d420
-func_ov14_0213d420: ; 0x0213d420
+	.global _ZN9EquipRope18func_ov14_0213d420Ev
+	arm_func_start _ZN9EquipRope18func_ov14_0213d420Ev
+_ZN9EquipRope18func_ov14_0213d420Ev: ; 0x0213d420
 	ldr r1, _0213d438 ; =gActorManager
 	mov r2, r0
 	ldr r0, [r1]
@@ -2561,7 +2561,7 @@ func_ov14_0213d420: ; 0x0213d420
 	.align 2, 0
 _0213d438: .word gActorManager
 _0213d43c: .word _ZN12ActorManager8GetActorEP8ActorRef
-	arm_func_end func_ov14_0213d420
+	arm_func_end _ZN9EquipRope18func_ov14_0213d420Ev
 
 	.global func_ov14_0213d440
 	arm_func_start func_ov14_0213d440
@@ -3096,7 +3096,7 @@ func_ov14_0213dadc: ; 0x0213dadc
 	mov r6, r0
 	mov r5, r1
 	mov r4, r2
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	addeq sp, sp, #0xc
 	moveq r0, #0
@@ -3147,7 +3147,7 @@ _0213db4e:
 func_ov14_0213db60: ; 0x0213db60
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	beq _0213db7c
 	bl _ZN5Actor4KillEv
@@ -3338,7 +3338,7 @@ func_ov14_0213ddd4: ; 0x0213ddd4
 	addge sp, sp, #0x2c
 	ldmgeia sp!, {r3, r4, r5, r6, pc}
 	mov r0, r5
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -3515,7 +3515,7 @@ func_ov14_0213dfbc: ; 0x0213dfbc
 	cmp r0, #0
 	beq _0213e0b0
 	mov r0, r7
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, r6
@@ -3605,7 +3605,7 @@ func_ov14_0213e144: ; 0x0213e144
 	rsb r0, r0, r4, asr #12
 	bl Vec3p_Axpy
 	mov r0, r7
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	ldr r2, [sp]
 	mov r1, #1
 	str r2, [r0, #0x174]
@@ -3836,7 +3836,7 @@ _0213e4d8:
 	b _0213e518
 _0213e508:
 	mov r0, r10
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	mov r1, r5
 	bl func_ov14_02123c54
 _0213e518:

@@ -12943,7 +12943,7 @@ _0210b7dc:
 	cmp r1, #1
 	addlt sp, sp, #0x14
 	ldmltia sp!, {r3, r4, r5, r6, pc}
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
@@ -13536,7 +13536,7 @@ _0210c040:
 	bl _ZN13PlayerControl13GetTouchAngleEv
 	strh r0, [r5]
 	bl func_ov05_0210b96c
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0

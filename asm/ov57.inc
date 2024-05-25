@@ -95,7 +95,7 @@
 .extern func_ov14_0213d248
 .extern func_ov14_0213d3d4
 .extern func_ov14_0213d404
-.extern func_ov14_0213d420
+.extern _ZN9EquipRope18func_ov14_0213d420Ev
 .extern func_ov14_0213d6e0
 .extern func_ov14_0213db60
 .extern func_ov14_0213dda0

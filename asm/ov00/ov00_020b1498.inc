@@ -442,7 +442,7 @@
 .extern func_ov12_02134378
 .extern func_ov12_021343bc
 .extern func_ov14_021238f0
-.extern func_ov14_0213d420
+.extern _ZN9EquipRope18func_ov14_0213d420Ev
 .extern func_ov14_0213dfbc
 .extern func_ov14_0213e144
 .extern func_ov14_021474ac

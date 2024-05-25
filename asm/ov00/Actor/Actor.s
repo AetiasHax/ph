@@ -2092,7 +2092,7 @@ _ZN5Actor18func_ov00_020c2de4Ev: ; 0x020c2de4
 	sub sp, sp, #0xc
 	mov r5, r0
 	bl _ZN10EquipSword12GetEquipRopeEv
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	movs r4, r0
 	add r2, sp, #0
 	beq _020c2e30
@@ -2177,7 +2177,7 @@ _ZN5Actor18func_ov00_020c2ed4Ev: ; 0x020c2ed4
 	movs r6, r0
 	bmi _020c2fb0
 	mov r0, r5
-	bl func_ov14_0213d420
+	bl _ZN9EquipRope18func_ov14_0213d420Ev
 	cmp r0, #0
 	movne r0, #1
 	moveq r0, #0
