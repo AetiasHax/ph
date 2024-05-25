@@ -23,6 +23,8 @@ struct Actor_UnkStruct_020 {
     /* 0c */ unk8 mUnk_0f;
     /* 10 */ unk32 mUnk_10;
     /* 14 */
+
+    Actor_UnkStruct_020();
 };
 
 struct Actor_UnkStruct_09c {
@@ -43,15 +45,24 @@ struct Actor_UnkStruct_0a4 {
     /* 04 */ Vec3p mUnk_04;
     /* 10 */ s32 mUnk_10;
     /* 14 */
+
+    Actor_UnkStruct_0a4(q20 x, q20 y, q20 z, s32 unk_10);
 };
 
 class KillPickupsFilter : public FilterActorBase {
 public:
-    /* 0 (base) */
-    /* 4 */ ActorRef mUnk_4[20];
+    /* 00 (base) */
+    /* 04 */ ActorRef mUnk_4[10];
+    /* a4 */
 
     /* 0 */ virtual bool Filter(Actor *actor) override;
     /* 4 */
+
+    inline KillPickupsFilter() {
+        for (s32 i = 0; i < 10; ++i) {
+            mUnk_4[i].Reset();
+        }
+    }
 };
 
 typedef u32 PlayerCollide;
@@ -99,10 +110,10 @@ public:
     /* 09c */ Actor_UnkStruct_09c mUnk_09c;
     /* 0a4 */ Actor_UnkStruct_0a4 mUnk_0a4;
     /* 0b8 */ unk8 mUnk_0b8[0x24];
-    /* 0dc */ unk16 mUnk_0dc;
-    /* 0de */ unk16 mUnk_0de;
-    /* 0e0 */ unk16 mUnk_0e0;
-    /* 0e2 */ unk16 mUnk_0e2;
+    /* 0dc */ u16 mUnk_0dc;
+    /* 0de */ u16 mUnk_0de;
+    /* 0e0 */ u16 mUnk_0e0;
+    /* 0e2 */ u16 mUnk_0e2;
     /* 0e4 */ unk16 mUnk_0e4;
     /* 0e6 */ unk8 mUnk_0e6[0x20];
     /* 106 */ unk8 mUnk_106;
@@ -193,7 +204,7 @@ public:
     
     Actor();
 
-    bool func_01fffd04(s32 param1, Vec3p *param2, s32 param3);
+    bool func_01fffd04(s32 param1);
 
     unk8 func_ov00_020c1788();
     void SetUnk_129(bool value);
@@ -223,7 +234,7 @@ public:
     q20 XzDistanceTo(Vec3p *vec);
     q20 DistanceToLink();
     q20 XzDistanceToLink();
-    s32 GetAngleTo(Vec3p *vec);
+    s16 GetAngleTo(Vec3p *vec);
     s32 GetAngleToLink();
     void func_ov00_020c2988(Vec3p *param1, q20 param2, Vec3p *param3);
     void ResetWallTouch();
@@ -247,7 +258,6 @@ public:
     void Kill();
     void KillInBounds();
     void func_ov00_020c31c0(unk32 param1);
-    void vfunc_ac_Thunk();
     void func_ov00_020c3200(s32 param1);
     void GetLinkPos(Vec3p *result);
     void GetLinkDummyPos(Vec3p *result);

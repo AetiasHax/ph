@@ -13,6 +13,8 @@ extern "C" {
 #include "Player/TouchControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
+static char *sShipTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
+
 struct UnkStruct3 {
     /* 0 */ s16 mUnk_0;
     /* 2 */ u8 mUnk_2;
@@ -52,8 +54,76 @@ const UnkStruct3 sUnkTable[] = {
 };
 
 KILL(_ZN5ActorC1Ev)
-Actor::Actor() {}
-Actor::~Actor() {}
+ARM Actor::Actor():
+    mType(ActorTypeId_Null),
+    mRef(-1, -1),
+    mUnk_010(0),
+    mUnk_011(0),
+    mUnk_012(0),
+    mUnk_034(-1),
+    mUnk_038(-1),
+    mUnk_03c(-1),
+    mUnk_040(-1, -1),
+    mGravity(FLOAT_TO_Q20(0.0498)),
+    mMaxFall(FLOAT_TO_Q20(0.5)),
+    mUnk_074(2),
+    mAngle(0),
+    mUnk_07a(-1),
+    mHitbox(FLOAT_TO_Q20(0.5)),
+    mUnk_08c(mHitbox),
+    mUnk_0a4(0, FLOAT_TO_Q20(1.0), 0, FLOAT_TO_Q20(1.0)),
+    mUnk_0dc(0xffff),
+    mUnk_0de(0xffff),
+    mUnk_0e0(0xffff),
+    mUnk_0e2(0xffff),
+    mUnk_0e4(0),
+    mUnk_106(0),
+    mUnk_107(0),
+    mUnk_108(0),
+    mUnk_110(0),
+    mUnk_111(0),
+    mUnk_112(0),
+    mUnk_113(0),
+    mUnk_114(0),
+    mUnk_115(0),
+    mAlive(true),
+    mUnk_119(1),
+    mVisible(true),
+    mUnk_11b(false),
+    mUnk_11c(0),
+    mUnk_11d(false),
+    mYOffset(0),
+    mUnk_120(4),
+    mUnk_122(0xff),
+    mUnk_124(1),
+    mUnk_125(4),
+    mUnk_126(3),
+    mUnk_128(false),
+    mUnk_129(false),
+    mUnk_12a(0),
+    mUnk_12c(0),
+    mUnk_130(-1),
+    mUnk_134(-1),
+    mActiveFrames(0),
+    mUnk_13c(0),
+    mUnk_140(0),
+    mUnk_144(0)
+{
+    mUnk_014 = 0;
+    mUnk_018 = 0;
+    mUnk_01c = 0;
+    mPos.x = 0;
+    mPos.y = 0;
+    mPos.z = 0;
+    mPrevPos.x = 0;
+    mPrevPos.y = 0;
+    mPrevPos.z = 0;
+    mVel.x = 0;
+    mVel.y = 0;
+    mVel.z = 0;
+}
+
+ARM Actor::~Actor() {}
 
 ARM bool Actor::vfunc_08() {
     return true;
@@ -199,7 +269,7 @@ ARM bool Actor::func_ov00_020c195c() {
 }
 
 struct UnkStruct2 {
-    /* 0 */ s32 mUnk_0;
+    /* 0 */ u32 mUnk_0;
     /* 4 */ s32 mUnk_4;
     /* 8 */
 };
@@ -579,16 +649,9 @@ ARM bool Actor::IsGrabbed() {
 }
 
 ARM q20 Actor::XzDistanceTo(Vec3p *vec) {
-    Vec3p src;
-    src.z = mPos.z;
-    src.x = mPos.x;
-    src.y = 0;
-
-    Vec3p dest;
-    dest.z = vec->z;
-    dest.x = vec->x;
-    dest.y = 0;
-
+    Vec3p src, dest;
+    Vec3p_CopyXZ(&mPos, &src);
+    Vec3p_CopyXZ(vec, &dest);
     return Vec3p_Distance(&src, &dest);
 }
 
@@ -598,22 +661,20 @@ ARM q20 Actor::DistanceToLink() {
 
 ARM q20 Actor::XzDistanceToLink() {
     Vec3p src;
-    src.z = mPos.z;
-    src.x = mPos.x;
-    src.y = 0;
+    Vec3p_CopyXZ(&mPos, &src);
     Vec3p dest = gPlayerPos;
     dest.y = 0;
     return Vec3p_Distance(&src, &dest);
 }
 
-ARM s32 Actor::GetAngleTo(Vec3p *vec) {
-    s32 angle = mAngle;
-    q20 dx = vec->x - mPos.x;
+ARM s16 Actor::GetAngleTo(Vec3p *vec) {
+    s16 angle = mAngle;
     q20 dz = vec->z - mPos.z;
+    q20 dx = vec->x - mPos.x;
     if (dx != 0 || dz != 0) {
         angle = Atan2(dx, dz);
     }
-    return (s16)angle;
+    return angle;
 }
 
 ARM s32 Actor::GetAngleToLink() {
@@ -622,10 +683,12 @@ ARM s32 Actor::GetAngleToLink() {
 
 extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
 ARM void Actor::func_ov00_020c2988(Vec3p *param1, q20 param2, Vec3p *param3) {
+    q20 z1 = param1->z;
+    q20 z0 = mPos.z;
     param3->x = param1->x - mPos.x;
     param3->y = 0;
-    param3->z = param1->z - mPos.z;
-    q20 dist = this->XzDistanceTo(param1) < param2;
+    param3->z = z1 - z0;
+    q20 dist = this->XzDistanceTo(param1);
     if (dist < param2) param2 = dist;
     func_0202d95c(param3, param2);
 }
@@ -648,7 +711,9 @@ ARM void Actor::GetHitbox(Cylinder *hitbox) {
     hitbox->pos.z = mPos.z;
     hitbox->pos.y += mHitbox.pos.y;
 
-    Vec3p_Rotate(&mHitbox.pos, mAngle, &hitbox->pos);
+    q20 sin = SIN(angle);
+    q20 cos = COS(angle);
+    Vec3p_Rotate(&mHitbox.pos, sin, cos, &hitbox->pos);
 }
 
 ARM void Actor::GetUnk_08c(Cylinder *param1) {
@@ -659,7 +724,9 @@ ARM void Actor::GetUnk_08c(Cylinder *param1) {
     param1->pos.z = mPos.z;
     param1->pos.y += mUnk_08c.pos.y;
 
-    Vec3p_Rotate(&mUnk_08c.pos, mAngle, &param1->pos);
+    q20 sin = SIN(angle);
+    q20 cos = COS(angle);
+    Vec3p_Rotate(&mUnk_08c.pos, sin, cos, &param1->pos);
 }
 
 ARM void Actor::IncreaseActiveFrames() {
@@ -739,14 +806,14 @@ ARM bool Actor::func_ov00_020c2de4() {
 }
 
 ARM bool Actor::func_ov00_020c2e7c() {
-    EquipRope *rope = EquipSword::GetEquipRope();
     bool result = false;
+    EquipRope *rope = EquipSword::GetEquipRope();
     if (!mUnk_11d) {
         s32 unk1 = rope->func_ov14_0213ddd4(this);
         s32 unk2 = unk1;
         if (unk1 >= 0) {
             unk1 = rope->mUnk_70;
-            result = unk1 < unk2;
+            if (unk1 >= unk2) result = true;
         }
     }
     return result;
@@ -760,21 +827,27 @@ ARM bool Actor::func_ov00_020c2ebc() {
 ARM bool Actor::func_ov00_020c2ed4() {
     EquipRope *rope = EquipSword::GetEquipRope();
     s32 index = rope->func_ov14_0213d440(mRef.id);
-    if (index < 0) {
+    if (index >= 0) {
+        bool unk1 = rope->func_ov14_0213d420();
+        if (unk1) {
+            Vec3p vel;
+            if (rope->func_ov14_0213d81c(index, &vel)) {
+                mVel = vel;
+                Vec3p_Add(&mPos, &mVel, &mPos);
+                if (!this->func_01fffd04(1)) {
+                    Cylinder hitbox;
+                    this->GetHitbox(&hitbox);
+                    return rope->func_ov14_0213dadc(index, &hitbox);
+                }
+                rope->func_ov14_0213d91c(index);
+                return false;
+            } else {
+                return true;
+            }
+        }
+    } else {
         index = rope->func_ov14_0213d480(mRef.id);
         if (index >= 0) return true;
-    } else if (rope->func_ov14_0213d420() != NULL) {
-        Vec3p vel;
-        if (!rope->func_ov14_0213d81c(index, &vel)) return true;
-        mVel = vel;
-        Vec3p_Add(&mPos, &mVel, &mPos);
-        if (this->func_01fffd04(1, &mPos, vel.z)) {
-            rope->func_ov14_0213d91c(index);
-            return false;
-        }
-        Cylinder hitbox;
-        this->GetHitbox(&hitbox);
-        return rope->func_ov14_0213dadc(index, &hitbox);
     }
     if (rope->mUnk_6a) mVel = gVec3p_ZERO;
     return false;
@@ -850,22 +923,23 @@ ARM void Actor::KillInBounds() {
 }
 
 extern unk32 data_ov00_020e9c88;
-extern "C" void func_ov00_0207b89c(unk32 param1, s32 param2, Vec3p *param3, void (Actor::*param4)(), Actor *param5);
+extern "C" void func_ov00_0207b89c(unk32 *param1, s32 param2, Vec3p *param3, void *param4, Actor *param5);
+void vfunc_ac_Thunk(Actor *actor);
 ARM void Actor::func_ov00_020c31c0(unk32 param1) {
-    func_ov00_0207b89c(data_ov00_020e9c88, param1, &mPos, &Actor::vfunc_ac, this);
+    func_ov00_0207b89c(&data_ov00_020e9c88, param1, &mPos, &vfunc_ac_Thunk, this);
 }
 
-ARM void Actor::vfunc_ac_Thunk() {
-    this->vfunc_ac();
+ARM void vfunc_ac_Thunk(Actor *actor) {
+    actor->vfunc_ac();
 }
 
 ARM void Actor::vfunc_ac() {}
 
 ARM void Actor::func_ov00_020c3200(s32 param1) {
-
+    const UnkStruct3 *entry = &sUnkTable[param1];
     mUnk_122 = sUnkTable[param1].mUnk_0;
     mUnk_120 = sUnkTable[param1].mUnk_0;
-    mUnk_124 = sUnkTable[param1].mUnk_2;
+    mUnk_124 = entry->mUnk_2;
 }
 
 ARM void Actor::vfunc_b0() {}

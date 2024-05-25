@@ -2423,25 +2423,25 @@ _ZN5Actor18func_ov00_020c31c0Ei: ; 0x020c31c0
 	stmdb sp!, {r3, lr}
 	mov ip, r0
 	ldr r0, _020c31e0 ; =data_ov00_020e9c88
-	ldr r3, _020c31e4 ; =_ZN5Actor14vfunc_ac_ThunkEv
+	ldr r3, _020c31e4 ; =_Z14vfunc_ac_ThunkP5Actor
 	add r2, ip, #0x48
 	str ip, [sp]
 	bl func_ov00_0207b89c
 	ldmia sp!, {r3, pc}
 	.align 2, 0
 _020c31e0: .word data_ov00_020e9c88
-_020c31e4: .word _ZN5Actor14vfunc_ac_ThunkEv
+_020c31e4: .word _Z14vfunc_ac_ThunkP5Actor
 	arm_func_end _ZN5Actor18func_ov00_020c31c0Ei
 
-	.global _ZN5Actor14vfunc_ac_ThunkEv
-	arm_func_start _ZN5Actor14vfunc_ac_ThunkEv
-_ZN5Actor14vfunc_ac_ThunkEv: ; 0x020c31e8
+	.global _Z14vfunc_ac_ThunkP5Actor
+	arm_func_start _Z14vfunc_ac_ThunkP5Actor
+_Z14vfunc_ac_ThunkP5Actor: ; 0x020c31e8
 	stmdb sp!, {r3, lr}
 	ldr r1, [r0]
 	ldr r1, [r1, #0xac]
 	blx r1
 	ldmia sp!, {r3, pc}
-	arm_func_end _ZN5Actor14vfunc_ac_ThunkEv
+	arm_func_end _Z14vfunc_ac_ThunkP5Actor
 
 	.global _ZN5Actor8vfunc_acEv
 	arm_func_start _ZN5Actor8vfunc_acEv
