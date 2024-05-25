@@ -4708,7 +4708,7 @@ _0217ffc8:
 	blt _02180038
 	mov r0, r4
 	mov r1, r5
-	bl func_ov14_0213defc
+	bl _ZN9EquipRope18func_ov14_0213defcEP5Actor
 _02180038:
 	mov r0, r5
 	mov r1, #0xa

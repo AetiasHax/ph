@@ -2160,7 +2160,7 @@ _ZN5Actor18func_ov00_020c2ebcEv: ; 0x020c2ebc
 	mov r4, r0
 	bl _ZN10EquipSword12GetEquipRopeEv
 	mov r1, r4
-	bl func_ov14_0213defc
+	bl _ZN9EquipRope18func_ov14_0213defcEP5Actor
 	ldmia sp!, {r4, pc}
 	arm_func_end _ZN5Actor18func_ov00_020c2ebcEv
 

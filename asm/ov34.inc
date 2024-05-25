@@ -240,7 +240,7 @@
 .extern func_ov14_0213dadc
 .extern func_ov14_0213dba4
 .extern func_ov14_0213ddd4
-.extern func_ov14_0213defc
+.extern _ZN9EquipRope18func_ov14_0213defcEP5Actor
 .extern func_ov14_0213dfbc
 .extern func_ov14_0213e144
 .extern func_ov17_02168660

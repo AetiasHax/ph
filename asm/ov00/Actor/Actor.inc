@@ -71,6 +71,6 @@
 .extern func_ov14_0213d91c
 .extern func_ov14_0213dadc
 .extern func_ov14_0213ddd4
-.extern func_ov14_0213defc
+.extern _ZN9EquipRope18func_ov14_0213defcEP5Actor
 .extern gAdventureFlags
 .extern gItemManager

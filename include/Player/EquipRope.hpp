@@ -7,7 +7,7 @@
 #include "Player/EquipItem.hpp"
 
 class EquipRope : public EquipItem {
-private:
+public:
     /* 00 (base) */
     /* 09 */ unk8 mUnk_09;
     /* 0a */ unk16 mUnk_0a;
@@ -23,7 +23,6 @@ private:
     /* a0 */ unk32 mUnk_a0;
     /* a4 */
 
-public:
     EquipRope();
 
     /* 04 */ virtual ~EquipRope() override;
@@ -41,4 +40,6 @@ public:
 
     Actor* func_ov14_0213d420();
     s32 func_ov14_0213d480(s32 actorId);
+    s32 func_ov14_0213ddd4(Actor *actor);
+    bool func_ov14_0213defc(Actor *actor);
 };
