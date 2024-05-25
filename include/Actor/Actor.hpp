@@ -119,7 +119,7 @@ public:
     /* 116 */ unk8 mUnk_116;
     /* 117 */ unk8 mUnk_117;
     /* 118 */ bool mAlive;
-    /* 119 */ unk8 mUnk_119;
+    /* 119 */ u8 mUnk_119;
     /* 11a */ bool mVisible;
     /* 11b */ bool mUnk_11b;
     /* 11c */ unk8 mUnk_11c;
@@ -192,6 +192,9 @@ public:
     /* b4 */
     
     Actor();
+
+    bool func_01fffd04(s32 param1, Vec3p *param2, s32 param3);
+
     unk8 func_ov00_020c1788();
     void SetUnk_129(bool value);
     void SetUnk_11c(unk8 value);

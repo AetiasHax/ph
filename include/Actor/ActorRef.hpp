@@ -8,10 +8,6 @@ struct ActorRef {
     /* 4 */ s32 index;
     /* 8 */
 
-    inline ActorRef() {
-        this->Reset();
-    }
-
     inline void Reset() {
         id = -1;
         index = -1;

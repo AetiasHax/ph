@@ -2,9 +2,17 @@
 
 #include "global.h"
 #include "types.h"
+#include "lib/math.h"
 
 #include "Actor/ActorRef.hpp"
+#include "Physics/Cylinder.hpp"
 #include "Player/EquipItem.hpp"
+
+struct EquipRope_Unk_18 {
+    /* 00 */ Vec3p vec;
+    /* 0c */ unk8 mUnk_0c[0x10];
+    /* 1c */
+};
 
 class EquipRope : public EquipItem {
 public:
@@ -13,7 +21,10 @@ public:
     /* 0a */ unk16 mUnk_0a;
     /* 0c */ unk8 mUnk_0c[4];
     /* 10 */ ActorRef mRef;
-    /* 18 */ unk8 mUnk_18[0x54];
+    /* 18 */ EquipRope_Unk_18 mUnk_18[2];
+    /* 50 */ unk8 mUnk_50[0x1a];
+    /* 6a */ bool mUnk_6a;
+    /* 6b */ unk8 mUnk_6b;
     /* 6c */ unk16 mUnk_6c;
     /* 6e */ unk8 mUnk_6e[2];
     /* 70 */ unk16 mUnk_70;
@@ -39,7 +50,11 @@ public:
     /* 50 */
 
     Actor* func_ov14_0213d420();
+    s32 func_ov14_0213d440(s32 actorId);
     s32 func_ov14_0213d480(s32 actorId);
+    bool func_ov14_0213d81c(s32 index, Vec3p *vec);
+    void func_ov14_0213d91c(s32 index);
+    bool func_ov14_0213dadc(s32 index, Cylinder *cylinder);
     s32 func_ov14_0213ddd4(Actor *actor);
     bool func_ov14_0213defc(Actor *actor);
 };

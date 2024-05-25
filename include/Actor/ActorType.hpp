@@ -50,6 +50,8 @@
 
 typedef u32 ActorTypeId;
 enum ActorTypeId_ {
+    ActorTypeId_Null = __ACTOR_TYPE_ID(N,U,L,L),
+
     ActorTypeId_Navi = __ACTOR_TYPE_ID(N,A,V,I),
     ActorTypeId_ForceNavi = __ACTOR_TYPE_ID(F,C,N,V),
     ActorTypeId_WisdomNavi = __ACTOR_TYPE_ID(W,S,N,V),
