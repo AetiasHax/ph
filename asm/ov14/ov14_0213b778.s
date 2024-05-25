@@ -3320,9 +3320,9 @@ _0213dda8:
 	bx lr
 	arm_func_end func_ov14_0213dda0
 
-	.global func_ov14_0213ddd4
-	arm_func_start func_ov14_0213ddd4
-func_ov14_0213ddd4: ; 0x0213ddd4
+	.global _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
+	arm_func_start _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
+_ZN9EquipRope18func_ov14_0213ddd4EP5Actor: ; 0x0213ddd4
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x2c
 	mov r5, r0
@@ -3398,7 +3398,7 @@ _0213def0:
 	mvn r0, #0
 	add sp, sp, #0x2c
 	ldmia sp!, {r3, r4, r5, r6, pc}
-	arm_func_end func_ov14_0213ddd4
+	arm_func_end _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 
 	.global _ZN9EquipRope18func_ov14_0213defcEP5Actor
 	arm_func_start _ZN9EquipRope18func_ov14_0213defcEP5Actor

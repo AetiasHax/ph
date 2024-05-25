@@ -4703,7 +4703,7 @@ _0217ffc8:
 	bl func_ov34_021800c4
 	mov r1, r5
 	mov r4, r0
-	bl func_ov14_0213ddd4
+	bl _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 	cmp r0, #0
 	blt _02180038
 	mov r0, r4

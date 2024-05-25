@@ -9596,7 +9596,7 @@ _02175850:
 	bl func_ov29_021758f0
 	mov r1, r5
 	mov r6, r0
-	bl func_ov14_0213ddd4
+	bl _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 	movs r4, r0
 	bmi _021758d0
 	ldr r0, _021758ec ; =data_ov29_0217bc78

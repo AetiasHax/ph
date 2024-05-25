@@ -4365,7 +4365,7 @@ _0217fa8c:
 	bl func_ov38_0217dac0
 	mov r1, r4
 	mov r5, r0
-	bl func_ov14_0213ddd4
+	bl _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 	cmp r0, #0
 	blt _0217fae8
 	mov r0, r5

@@ -2143,7 +2143,7 @@ _ZN5Actor18func_ov00_020c2e7cEv: ; 0x020c2e7c
 	cmp r1, #0
 	bne _020c2eb4
 	mov r1, r6
-	bl func_ov14_0213ddd4
+	bl _ZN9EquipRope18func_ov14_0213ddd4EP5Actor
 	cmp r0, #0
 	ldrgesh r1, [r4, #0x70]
 	cmpge r1, r0
