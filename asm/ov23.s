@@ -4002,7 +4002,7 @@ _02170a6c:
 	mov r1, #1
 	str r1, [sp]
 	ldr r0, _02170ae4 ; =data_027e0e58
-	ldr r3, _02170ae8 ; =data_027e0d0c
+	ldr r3, _02170ae8 ; =gVec3p_ZERO
 	ldr r0, [r0]
 	add r1, r4, #0x1bc
 	mov r2, #0xc8
@@ -4021,7 +4021,7 @@ _02170ad8: .word data_027e0ce0
 _02170adc: .word data_ov23_0217a234
 _02170ae0: .word data_027e0d38
 _02170ae4: .word data_027e0e58
-_02170ae8: .word data_027e0d0c
+_02170ae8: .word gVec3p_ZERO
 	arm_func_end func_ov23_021709a0
 
 	.global func_ov23_02170aec
@@ -5442,7 +5442,7 @@ _02171d34:
 	beq _02171dd4
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	ldr r1, _021720b0 ; =data_027e0d0c
+	ldr r1, _021720b0 ; =gVec3p_ZERO
 	ldr r2, [r1]
 	str r2, [r0]
 	ldr r2, [r1, #4]
@@ -5643,7 +5643,7 @@ _021720a0: .word gSinCosTable
 _021720a4: .word 0xffffb8e4
 _021720a8: .word 0x000002e1
 _021720ac: .word 0x50574253
-_021720b0: .word data_027e0d0c
+_021720b0: .word gVec3p_ZERO
 _021720b4: .word 0x00001a44
 _021720b8: .word 0x000004cd
 _021720bc: .word 0x000002d5
@@ -13091,7 +13091,7 @@ _02178298:
 	bl func_ov23_02178344
 	mov r1, #0
 	strb r1, [r0, #0xb]
-	ldr r0, _02178328 ; =data_027e0d0c
+	ldr r0, _02178328 ; =gVec3p_ZERO
 	ldr r2, _0217832c ; =gPlayerVel
 	ldr r3, [r0]
 	ldr r1, [r0, #4]
@@ -13118,7 +13118,7 @@ _02178318: .word gMapManager
 _0217831c: .word data_027e0f64
 _02178320: .word data_027e0fcc
 _02178324: .word data_027e0fd4
-_02178328: .word data_027e0d0c
+_02178328: .word gVec3p_ZERO
 _0217832c: .word gPlayerVel
 _02178330: .word data_ov00_020eec9c
 	arm_func_end func_ov23_02178174
@@ -13177,7 +13177,7 @@ func_ov23_02178354: ; 0x02178354
 	bl func_ov23_02178344
 	mov r1, #0
 	strb r1, [r0, #0xb]
-	ldr r3, _02178418 ; =data_027e0d0c
+	ldr r3, _02178418 ; =gVec3p_ZERO
 	ldr r2, _0217841c ; =gPlayerVel
 	ldr lr, [r3]
 	ldr ip, [r3, #4]
@@ -13196,7 +13196,7 @@ _02178408: .word gPlayerPos
 _0217840c: .word gPlayerAngle
 _02178410: .word data_027e0fcc
 _02178414: .word data_027e0fd4
-_02178418: .word data_027e0d0c
+_02178418: .word gVec3p_ZERO
 _0217841c: .word gPlayerVel
 	arm_func_end func_ov23_02178354
 
@@ -13387,7 +13387,7 @@ _0217867c:
 	ldrb r0, [r4, #0x57]
 	cmp r0, #0
 	beq _021786f8
-	ldr r1, _02178720 ; =data_027e0d0c
+	ldr r1, _02178720 ; =gVec3p_ZERO
 	ldr r0, _02178718 ; =gPlayerVel
 	ldr r3, [r1]
 	ldr r2, [r1, #4]
@@ -13409,7 +13409,7 @@ _021786f8:
 _02178714: .word data_027e0fd4
 _02178718: .word gPlayerVel
 _0217871c: .word gPlayerAngle
-_02178720: .word data_027e0d0c
+_02178720: .word gVec3p_ZERO
 	arm_func_end func_ov23_02178630
 
 	.global func_ov23_02178724

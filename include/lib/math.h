@@ -39,6 +39,8 @@ typedef struct {
     /* c */
 } Vec3p;
 
+extern const Vec3p gVec3p_ZERO;
+
 extern "C" void Vec3p_Add(Vec3p *a, Vec3p *b, Vec3p *out);
 extern "C" void Vec3p_Sub(Vec3p *a, Vec3p *b, Vec3p *out);
 extern "C" q20 Vec3p_Dot(Vec3p *a, Vec3p *b);

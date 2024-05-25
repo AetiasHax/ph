@@ -69,7 +69,7 @@
 .extern data_027e0194
 .extern data_027e03c8
 .extern data_027e0764
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0e58
 .extern gMapManager
 .extern data_027e0f64

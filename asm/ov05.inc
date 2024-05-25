@@ -179,7 +179,7 @@
 .extern data_027e0c68
 .extern data_027e0cbc
 .extern data_027e0d04
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d38
 .extern data_027e0d3c
 .extern data_027e0d44

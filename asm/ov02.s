@@ -5342,7 +5342,7 @@ func_ov02_020f3228: ; 0x020f3228
 	add r0, r4, #4
 	bl func_ov00_020d5cd8
 	ldr r0, [r4]
-	ldr r2, _020f3264 ; =data_027e0d0c
+	ldr r2, _020f3264 ; =gVec3p_ZERO
 	ldr ip, [r0]
 	add r1, sp, #0
 	ldr ip, [ip, #0xc]
@@ -5351,7 +5351,7 @@ func_ov02_020f3228: ; 0x020f3228
 	add sp, sp, #0x24
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_020f3264: .word data_027e0d0c
+_020f3264: .word gVec3p_ZERO
 	arm_func_end func_ov02_020f3228
 
 	.global func_ov02_020f3268

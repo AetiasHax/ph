@@ -7738,7 +7738,7 @@ _02173c58:
 	str r1, [r0, #0x10]
 	b _02173d3c
 _02173c74:
-	ldr r0, _02173d50 ; =data_027e0d0c
+	ldr r0, _02173d50 ; =gVec3p_ZERO
 	mov r1, #0x2000
 	ldr r2, [r0]
 	str r2, [r5, #0x60]
@@ -7801,7 +7801,7 @@ _02173d3c:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02173d4c: .word 0x00000ab8
-_02173d50: .word data_027e0d0c
+_02173d50: .word gVec3p_ZERO
 	arm_func_end func_ov22_02173c18
 
 	.global func_ov22_02173d54
@@ -8735,7 +8735,7 @@ func_ov22_02174990: ; 0x02174990
 	ldr r3, _02174a70 ; =0x00000666
 	str r0, [r4, #0x54]
 	ldr r0, [r4, #0x4c]
-	ldr r1, _02174a74 ; =data_027e0d0c
+	ldr r1, _02174a74 ; =gVec3p_ZERO
 	str r0, [r4, #0x58]
 	ldr r0, [r4, #0x50]
 	add r2, r3, #0x1000
@@ -8787,7 +8787,7 @@ func_ov22_02174990: ; 0x02174990
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02174a70: .word 0x00000666
-_02174a74: .word data_027e0d0c
+_02174a74: .word gVec3p_ZERO
 _02174a78: .word data_027e0fec
 _02174a7c: .word gActorManager
 	arm_func_end func_ov22_02174990

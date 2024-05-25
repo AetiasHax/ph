@@ -3443,7 +3443,7 @@ func_ov46_02192c90: ; 0x02192c90
 	mov r5, #0x1000
 	str r0, [r4, #0x8c]
 	ldr r0, [r4, #0x80]
-	ldr r3, _02192fb0 ; =data_027e0d0c
+	ldr r3, _02192fb0 ; =gVec3p_ZERO
 	str r0, [r4, #0x90]
 	ldr r0, [r4, #0x84]
 	ldr r6, _02192fb4 ; =data_ov46_021944a8
@@ -3628,7 +3628,7 @@ func_ov46_02192c90: ; 0x02192c90
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _02192fac: .word data_ov46_0219448c
-_02192fb0: .word data_027e0d0c
+_02192fb0: .word gVec3p_ZERO
 _02192fb4: .word data_ov46_021944a8
 _02192fb8: .word data_027e0764
 _02192fbc: .word gSinCosTable

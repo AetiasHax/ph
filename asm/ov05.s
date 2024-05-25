@@ -8438,7 +8438,7 @@ _02107b1c:
 	strh r1, [r0, #0xa4]
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	ldr r1, _02107b70 ; =data_027e0d0c
+	ldr r1, _02107b70 ; =gVec3p_ZERO
 	ldr r2, [r1]
 	str r2, [r0]
 	ldr r2, [r1, #4]
@@ -8453,7 +8453,7 @@ _02107b60: .word data_ov05_021126b4
 _02107b64: .word gPlayerControl
 _02107b68: .word gMapManager
 _02107b6c: .word data_ov05_021122e0
-_02107b70: .word data_027e0d0c
+_02107b70: .word gVec3p_ZERO
 	arm_func_end func_ov05_02107954
 
 	.global func_ov05_02107b74
@@ -10779,7 +10779,7 @@ _02109a68:
 	bl _ZN13LinkStateBase6TurnToEsii
 	mov r0, r5
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	ldr r2, _02109cbc ; =data_027e0d0c
+	ldr r2, _02109cbc ; =gVec3p_ZERO
 	mov r1, #0
 	ldr r3, [r2]
 	str r3, [r0]
@@ -10930,7 +10930,7 @@ _02109cac:
 	.align 2, 0
 _02109cb4: .word gItemManager
 _02109cb8: .word 0x00000e39
-_02109cbc: .word data_027e0d0c
+_02109cbc: .word gVec3p_ZERO
 _02109cc0: .word 0x00780335
 _02109cc4: .word data_027e0c68
 _02109cc8: .word 0x00780003
@@ -11841,7 +11841,7 @@ _0210a830:
 	blt _0210a904
 	mov r0, r4
 	ldr r2, [r0]
-	ldr r1, _0210aae8 ; =data_027e0d0c
+	ldr r1, _0210aae8 ; =gVec3p_ZERO
 	ldr r2, [r2, #0x5c]
 	blx r2
 	cmp r0, #0
@@ -11949,7 +11949,7 @@ _0210aa64:
 	str r0, [r4, #0x50]
 	mov r0, r4
 	ldr r2, [r0]
-	ldr r1, _0210aae8 ; =data_027e0d0c
+	ldr r1, _0210aae8 ; =gVec3p_ZERO
 	ldr r2, [r2, #0x5c]
 	blx r2
 	cmp r0, #0
@@ -11982,7 +11982,7 @@ _0210aad8: .word gMapManager
 _0210aadc: .word 0x424f4d42
 _0210aae0: .word gItemManager
 _0210aae4: .word 0x43525953
-_0210aae8: .word data_027e0d0c
+_0210aae8: .word gVec3p_ZERO
 _0210aaec: .word 0x424d5459
 _0210aaf0: .word 0x0000ffff
 _0210aaf4: .word data_ov05_0211291c

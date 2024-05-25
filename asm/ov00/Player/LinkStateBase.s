@@ -354,7 +354,7 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	mov r1, r1, lsr #0x10
 	mov r1, r1, asr #0x4
 	mov r4, r1, lsl #0x1
-	ldr r3, _020a8358 ; =data_027e0d0c
+	ldr r3, _020a8358 ; =gVec3p_ZERO
 	ldr lr, _020a835c ; =gSinCosTable
 	mov r1, r4, lsl #0x1
 	ldrsh ip, [lr, r1]
@@ -387,7 +387,7 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	str r0, [r5, #0x28]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020a8358: .word data_027e0d0c
+_020a8358: .word gVec3p_ZERO
 _020a835c: .word gSinCosTable
 	arm_func_end _ZN13LinkStateBase12ApplyImpulseEii
 

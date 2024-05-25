@@ -4550,7 +4550,7 @@ _0211505c:
 	ldr r0, _021150a0 ; =data_027e0e58
 	str r1, [sp]
 	ldr r0, [r0]
-	ldr r3, _021150a4 ; =data_027e0d0c
+	ldr r3, _021150a4 ; =gVec3p_ZERO
 	add r1, r4, #0x10
 	bl func_ov00_0207c1f8
 	ldr r1, [r4, #0x10]
@@ -4566,7 +4566,7 @@ _0211505c:
 _02115098: .word data_027e0d38
 _0211509c: .word 0x00000219
 _021150a0: .word data_027e0e58
-_021150a4: .word data_027e0d0c
+_021150a4: .word gVec3p_ZERO
 	arm_func_end func_ov09_0211500c
 
 	.global func_ov09_021150a8
@@ -18744,7 +18744,7 @@ _0211d69c:
 	moveq r5, #1
 	str r0, [sp]
 	ldr r2, [r4, #0xc]
-	ldr r1, _0211d78c ; =data_027e0d0c
+	ldr r1, _0211d78c ; =gVec3p_ZERO
 	str r2, [sp, #4]
 	str r1, [sp, #8]
 	movne r5, #2
@@ -18755,7 +18755,7 @@ _0211d69c:
 	ldmia r4, {r2, r3}
 	bl func_ov00_0207c358
 	ldr r0, [r4, #0x18]
-	ldr r1, _0211d78c ; =data_027e0d0c
+	ldr r1, _0211d78c ; =gVec3p_ZERO
 	str r0, [sp]
 	ldr r2, [r4, #0x1c]
 	ldr r0, _0211d790 ; =data_027e0e58
@@ -18773,7 +18773,7 @@ _0211d69c:
 _0211d780: .word data_027e0d38
 _0211d784: .word data_ov09_0211e3d8
 _0211d788: .word data_ov09_0211e444
-_0211d78c: .word data_027e0d0c
+_0211d78c: .word gVec3p_ZERO
 _0211d790: .word data_027e0e58
 	arm_func_end func_ov09_0211d668
 

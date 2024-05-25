@@ -27,7 +27,7 @@
 .extern __register_global_object
 .extern gSinCosTable
 .extern data_027e03c8
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0de4
 .extern data_027e0e58
 .extern gMapManager

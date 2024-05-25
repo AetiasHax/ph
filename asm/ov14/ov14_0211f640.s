@@ -700,7 +700,7 @@ func_ov14_0211fda4: ; 0x0211fda4
 	add r0, r4, #0x100
 	strh ip, [r0, #0xac]
 	strh ip, [r0, #0xb2]
-	ldr r1, _0211fea4 ; =data_027e0d0c
+	ldr r1, _0211fea4 ; =gVec3p_ZERO
 	ldr r3, _0211fea8 ; =0x00000266
 	ldr r2, [r1]
 	mov r0, r4
@@ -726,7 +726,7 @@ func_ov14_0211fda4: ; 0x0211fda4
 	.align 2, 0
 _0211fe9c: .word data_ov14_021559e8
 _0211fea0: .word gItemManager
-_0211fea4: .word data_027e0d0c
+_0211fea4: .word gVec3p_ZERO
 _0211fea8: .word 0x00000266
 	arm_func_end func_ov14_0211fda4
 
@@ -1516,7 +1516,7 @@ _0212094c:
 	strh r2, [r1, #0xb2]
 	bl func_ov14_02120da8
 	add r1, r5, #0x178
-	ldr r0, _02120994 ; =data_027e0d0c
+	ldr r0, _02120994 ; =gVec3p_ZERO
 	str r1, [r5, #0x184]
 	ldr r1, [r0]
 	str r1, [r5, #0x60]
@@ -1529,7 +1529,7 @@ _0212094c:
 	.align 2, 0
 _0212098c: .word gActorManager
 _02120990: .word 0x00001555
-_02120994: .word data_027e0d0c
+_02120994: .word gVec3p_ZERO
 	arm_func_end func_ov14_021207b8
 
 	.global func_ov14_02120998
@@ -1580,7 +1580,7 @@ _02120a30:
 	strh r2, [r1, #0xb2]
 	bl func_ov14_02120da8
 	add r1, r6, #0x178
-	ldr r0, _02120a7c ; =data_027e0d0c
+	ldr r0, _02120a7c ; =gVec3p_ZERO
 	str r1, [r6, #0x184]
 	ldr r1, [r0]
 	str r1, [r6, #0x60]
@@ -1594,7 +1594,7 @@ _02120a30:
 	.align 2, 0
 _02120a74: .word gActorManager
 _02120a78: .word 0x00001555
-_02120a7c: .word data_027e0d0c
+_02120a7c: .word gVec3p_ZERO
 	arm_func_end func_ov14_02120998
 
 	.global func_ov14_02120a80
@@ -1827,7 +1827,7 @@ _02120da4: .word data_027e0f64
 	.global func_ov14_02120da8
 	arm_func_start func_ov14_02120da8
 func_ov14_02120da8: ; 0x02120da8
-	ldr r2, _02120de8 ; =data_027e0d0c
+	ldr r2, _02120de8 ; =gVec3p_ZERO
 	add r1, r0, #0x100
 	ldr ip, [r2]
 	mov r3, #0
@@ -1844,7 +1844,7 @@ func_ov14_02120da8: ; 0x02120da8
 	strb r3, [r0, #0x1b4]
 	bx lr
 	.align 2, 0
-_02120de8: .word data_027e0d0c
+_02120de8: .word gVec3p_ZERO
 	arm_func_end func_ov14_02120da8
 
 	.global func_ov14_02120dec
@@ -2344,7 +2344,7 @@ func_ov14_021214b0: ; 0x021214b0
 	ldr r0, _02121534 ; =data_ov14_02155ac8
 	mov ip, #0xa00
 	str r0, [r4]
-	ldr r1, _02121538 ; =data_027e0d0c
+	ldr r1, _02121538 ; =gVec3p_ZERO
 	str ip, [r4, #0x15c]
 	ldr r0, [r1]
 	mov r2, #0x2000
@@ -2373,7 +2373,7 @@ func_ov14_021214b0: ; 0x021214b0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02121534: .word data_ov14_02155ac8
-_02121538: .word data_027e0d0c
+_02121538: .word gVec3p_ZERO
 	arm_func_end func_ov14_021214b0
 
 	.global func_ov14_0212153c
@@ -2901,7 +2901,7 @@ func_ov14_02121be4: ; 0x02121be4
 	mov r3, #0
 	ldr r7, _02121cd0 ; =0x0000059a
 	str r3, [r4, #0x244]
-	ldr r0, _02121cd4 ; =data_027e0d0c
+	ldr r0, _02121cd4 ; =gVec3p_ZERO
 	add r9, r4, #0x254
 	mov r8, #0x1000
 	add r6, r7, #0x1000
@@ -2940,7 +2940,7 @@ _02121cc4: .word data_ov14_02155cac
 _02121cc8: .word func_ov14_02121cd8 - 1
 _02121ccc: .word func_ov14_02121d6c - 1
 _02121cd0: .word 0x0000059a
-_02121cd4: .word data_027e0d0c
+_02121cd4: .word gVec3p_ZERO
 	arm_func_end func_ov14_02121be4
 
 	.global func_ov14_02121cd8
@@ -3534,7 +3534,7 @@ _02122510:
 	add r1, r5, #0x254
 	mov r2, r0
 	bl Vec3p_Add
-	ldr r2, _02122ae8 ; =data_027e0d0c
+	ldr r2, _02122ae8 ; =gVec3p_ZERO
 	mov r0, r5
 	ldr r3, [r2]
 	mov r1, #0x1a
@@ -3919,7 +3919,7 @@ _02122ad8: .word data_027e0764
 _02122adc: .word 0x0000019a
 _02122ae0: .word data_ov14_02155b9c
 _02122ae4: .word data_027e0f78
-_02122ae8: .word data_027e0d0c
+_02122ae8: .word gVec3p_ZERO
 _02122aec: .word data_ov14_02153bdc
 _02122af0: .word data_ov14_02153be8
 _02122af4: .word 0xffffd555
@@ -30595,7 +30595,7 @@ _021384a4:
 	cmp r3, #2
 	blo _021384a4
 	str r5, [r6, #0x158]
-	ldr r1, _021384f4 ; =data_027e0d0c
+	ldr r1, _021384f4 ; =gVec3p_ZERO
 	str r4, [r6, #0x15c]
 	ldr r0, [r1]
 	mvn r2, #0
@@ -30609,7 +30609,7 @@ _021384a4:
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
 _021384f0: .word data_ov14_021581f0
-_021384f4: .word data_027e0d0c
+_021384f4: .word gVec3p_ZERO
 	arm_func_end func_ov14_0213844c
 
 	.global func_ov14_021384f8
@@ -32267,7 +32267,7 @@ _021399c4:
 	mov r0, #1
 	mov r1, #0
 	strb r0, [r4, #0x128]
-	ldr r2, _02139a4c ; =data_027e0d0c
+	ldr r2, _02139a4c ; =gVec3p_ZERO
 	str r1, [r4, #0x6c]
 	ldr r0, [r2]
 	sub ip, r1, #1
@@ -32299,7 +32299,7 @@ _021399c4:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02139a48: .word gAdventureFlags
-_02139a4c: .word data_027e0d0c
+_02139a4c: .word gVec3p_ZERO
 	arm_func_end func_ov14_0213996c
 
 	.global func_ov14_02139a50
@@ -32660,7 +32660,7 @@ func_ov14_02139eac: ; 0x02139eac
 	mov r2, #0
 	mov r4, r0
 	strb r2, [r4, #0x119]
-	ldr r3, _02139f78 ; =data_027e0d0c
+	ldr r3, _02139f78 ; =gVec3p_ZERO
 	str r2, [r4, #0x6c]
 	ldr r1, [r3]
 	sub lr, r2, #1
@@ -32710,7 +32710,7 @@ _02139f6c:
 	mov r0, #1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_02139f78: .word data_027e0d0c
+_02139f78: .word gVec3p_ZERO
 	arm_func_end func_ov14_02139eac
 
 	.global func_ov14_02139f7c

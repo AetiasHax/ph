@@ -2236,7 +2236,7 @@ _020c2fcc:
 	ldrb r0, [r5, #0x6a]
 	cmp r0, #0
 	beq _020c2ff4
-	ldr r0, _020c3000 ; =data_027e0d0c
+	ldr r0, _020c3000 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
@@ -2248,7 +2248,7 @@ _020c2ff4:
 	add sp, sp, #0x1c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_020c3000: .word data_027e0d0c
+_020c3000: .word gVec3p_ZERO
 	arm_func_end _ZN5Actor18func_ov00_020c2ed4Ev
 
 	.global _ZN5Actor15IsHitboxTouchedEb

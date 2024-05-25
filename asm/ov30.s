@@ -8003,7 +8003,7 @@ _0218219c:
 	mov r1, #3
 	strb r1, [sp, #0x3c]
 	mov r1, #1
-	ldr r0, _0218231c ; =data_027e0d0c
+	ldr r0, _0218231c ; =gVec3p_ZERO
 	mov r3, #0x800
 	add r6, sp, #0x18
 	str r2, [sp, #0x34]
@@ -8060,7 +8060,7 @@ _0218230c: .word 0x0000ffff
 _02182310: .word data_027e0d3c
 _02182314: .word data_02063e4c
 _02182318: .word gSinCosTable
-_0218231c: .word data_027e0d0c
+_0218231c: .word gVec3p_ZERO
 _02182320: .word data_027e0d38
 _02182324: .word data_027e0c38
 	arm_func_end func_ov30_02181ef8

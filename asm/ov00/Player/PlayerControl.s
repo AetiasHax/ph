@@ -118,7 +118,7 @@ _ZN13PlayerControl9UpdateAimEv: ; 0x020aef68
 	add r1, r4, #0
 	add r1, #0x81
 	strb r0, [r1]
-	ldr r1, _020aeff0 ; =data_027e0d0c
+	ldr r1, _020aeff0 ; =gVec3p_ZERO
 	add r0, r4, #0
 	ldr r2, [r1]
 	add r0, #0xb0
@@ -149,7 +149,7 @@ _020aefde:
 	str r1, [r4]
 	pop {r4, pc}
 	nop
-_020aeff0: .word data_027e0d0c
+_020aeff0: .word gVec3p_ZERO
 _020aeff4: .word data_027e0d38
 _020aeff8: .word data_027e103c
 	thumb_func_end _ZN13PlayerControl9UpdateAimEv
@@ -1514,7 +1514,7 @@ _020b0218: .word gItemManager
 	.global _ZN13PlayerControl6SetAimEv
 	arm_func_start _ZN13PlayerControl6SetAimEv
 _ZN13PlayerControl6SetAimEv: ; 0x020b021c
-	ldr r1, _020b023c ; =data_027e0d0c
+	ldr r1, _020b023c ; =gVec3p_ZERO
 	ldr r2, [r1]
 	str r2, [r0, #0xb0]
 	ldr r2, [r1, #4]
@@ -1523,7 +1523,7 @@ _ZN13PlayerControl6SetAimEv: ; 0x020b021c
 	str r1, [r0, #0xb8]
 	bx lr
 	.align 2, 0
-_020b023c: .word data_027e0d0c
+_020b023c: .word gVec3p_ZERO
 	arm_func_end _ZN13PlayerControl6SetAimEv
 
 	.global _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
@@ -1739,7 +1739,7 @@ _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
 	beq _020b05d0
 	cmp r0, #0x400
 	bge _020b05bc
-	ldr r1, _020b05dc ; =data_027e0d0c
+	ldr r1, _020b05dc ; =gVec3p_ZERO
 	ldr r0, _020b05e0 ; =gPlayerAngle
 	ldr r2, [r1]
 	ldr ip, _020b05e4 ; =gSinCosTable
@@ -1793,7 +1793,7 @@ _020b05d0:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020b05d8: .word gPlayerPos
-_020b05dc: .word data_027e0d0c
+_020b05dc: .word gVec3p_ZERO
 _020b05e0: .word gPlayerAngle
 _020b05e4: .word gSinCosTable
 	arm_func_end _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb

@@ -58528,7 +58528,7 @@ func_0202bfc0: ; 0x0202bfc0
 	mov r0, #0x4000
 	cmp r1, #0
 	ldmleia sp!, {r4, pc}
-	ldr r0, _0202c09c ; =data_027e0d0c
+	ldr r0, _0202c09c ; =gVec3p_ZERO
 	ldr r1, [r4]
 	ldr r2, [r0, #8]
 	ldr r0, [r0]
@@ -58547,7 +58547,7 @@ func_0202bfc0: ; 0x0202bfc0
 	orr r1, r1, r0, lsl #20
 	add r0, r3, r1
 	bl func_01ff9958
-	ldr r1, _0202c09c ; =data_027e0d0c
+	ldr r1, _0202c09c ; =gVec3p_ZERO
 	ldr r3, [r4, #4]
 	ldr r2, [r1, #4]
 	mov r1, r0
@@ -58578,7 +58578,7 @@ func_0202bfc0: ; 0x0202bfc0
 	movlt r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0202c09c: .word data_027e0d0c
+_0202c09c: .word gVec3p_ZERO
 _0202c0a0: .word 0x60db9391
 _0202c0a4: .word 0x000028be
 	arm_func_end func_0202bfc0
@@ -77190,7 +77190,7 @@ func_020386d8: ; 0x020386d8
 	mov r4, r0
 	bl func_02037750
 	ldr r0, _02038710 ; =data_02057d3c
-	ldr r1, _02038714 ; =data_027e0d0c
+	ldr r1, _02038714 ; =gVec3p_ZERO
 	str r0, [r4]
 	mvn r2, #0
 	add r0, r4, #0x24
@@ -77200,7 +77200,7 @@ func_020386d8: ; 0x020386d8
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02038710: .word data_02057d3c
-_02038714: .word data_027e0d0c
+_02038714: .word gVec3p_ZERO
 	arm_func_end func_020386d8
 
 	.global func_02038718
@@ -77212,7 +77212,7 @@ func_02038718: ; 0x02038718
 	mov r4, r0
 	bl func_02037750
 	ldr r0, _02038750 ; =data_02057d3c
-	ldr r1, _02038754 ; =data_027e0d0c
+	ldr r1, _02038754 ; =gVec3p_ZERO
 	str r0, [r4]
 	mvn r2, #0
 	add r0, r4, #0x24
@@ -77222,7 +77222,7 @@ func_02038718: ; 0x02038718
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02038750: .word data_02057d3c
-_02038754: .word data_027e0d0c
+_02038754: .word gVec3p_ZERO
 	arm_func_end func_02038718
 
 	.global func_02038758

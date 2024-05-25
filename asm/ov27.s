@@ -297,7 +297,7 @@ func_ov27_0216da38: ; 0x0216da38
 	mov r2, #0x1000
 	str r2, [r1, #0x10]
 	ldr r0, _0216e914 ; =0x00000ccd
-	ldr r1, _0216e918 ; =data_027e0d0c
+	ldr r1, _0216e918 ; =gVec3p_ZERO
 	str r0, [r5, #0x88]
 	ldr r2, [r1]
 	add r0, r5, #0x470
@@ -1260,7 +1260,7 @@ _0216e8fc:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0216e914: .word 0x00000ccd
-_0216e918: .word data_027e0d0c
+_0216e918: .word gVec3p_ZERO
 _0216e91c: .word gMapManager
 _0216e920: .word data_027e0c68
 _0216e924: .word 0x00060003
@@ -2734,7 +2734,7 @@ _0216fce8:
 	bl func_ov00_020b7e6c
 	b _0216fd44
 _0216fd14:
-	ldr r1, _0216fe38 ; =data_027e0d0c
+	ldr r1, _0216fe38 ; =gVec3p_ZERO
 	add r0, r10, #0x470
 	ldr r2, [r1]
 	str r2, [r10, #0x60]
@@ -2812,7 +2812,7 @@ _0216fe28: .word 0x00000bb8
 _0216fe2c: .word data_ov27_02178ee0
 _0216fe30: .word data_027e0e58
 _0216fe34: .word 0x0000099a
-_0216fe38: .word data_027e0d0c
+_0216fe38: .word gVec3p_ZERO
 _0216fe3c: .word data_027e0ffc
 _0216fe40: .word data_027e0764
 	arm_func_end func_ov27_0216fc00
@@ -2830,7 +2830,7 @@ func_ov27_0216fe44: ; 0x0216fe44
 	bl func_ov27_021713d4
 	b _0216fe84
 _0216fe68:
-	ldr r0, _0216ff30 ; =data_027e0d0c
+	ldr r0, _0216ff30 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
@@ -2886,7 +2886,7 @@ _0216ff24:
 	bl func_ov27_0216da38
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0216ff30: .word data_027e0d0c
+_0216ff30: .word gVec3p_ZERO
 _0216ff34: .word data_027e0764
 	arm_func_end func_ov27_0216fe44
 
@@ -2969,7 +2969,7 @@ _02170020:
 	bl func_ov00_020b7e6c
 	b _02170084
 _02170054:
-	ldr r1, _02170188 ; =data_027e0d0c
+	ldr r1, _02170188 ; =gVec3p_ZERO
 	add r0, r10, #0x470
 	ldr r2, [r1]
 	str r2, [r10, #0x60]
@@ -3052,7 +3052,7 @@ _02170178: .word 0x00000bb8
 _0217017c: .word data_ov27_02178ee0
 _02170180: .word data_027e0e58
 _02170184: .word 0x0000099a
-_02170188: .word data_027e0d0c
+_02170188: .word gVec3p_ZERO
 _0217018c: .word data_027e0ffc
 _02170190: .word data_027e0764
 	arm_func_end func_ov27_0216ff38
@@ -5130,7 +5130,7 @@ func_ov27_02171e10: ; 0x02171e10
 	ldr r2, [r0]
 	ldr r2, [r2, #0xc]
 	blx r2
-	ldr r1, _02171f2c ; =data_027e0d0c
+	ldr r1, _02171f2c ; =gVec3p_ZERO
 	mov r0, #0x400
 	ldr r2, [r1]
 	mov lr, #0x1400
@@ -5191,7 +5191,7 @@ _02171eec:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02171f28: .word data_027e0fec
-_02171f2c: .word data_027e0d0c
+_02171f2c: .word gVec3p_ZERO
 _02171f30: .word 0x0000099a
 _02171f34: .word 0x00002710
 _02171f38: .word gActorManager
@@ -5511,7 +5511,7 @@ _021723e0:
 	add r2, r6, #0x48
 	bl Vec3p_Add
 _021723f0:
-	ldr r0, _02172490 ; =data_027e0d0c
+	ldr r0, _02172490 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r6, #0x60]
 	ldr r1, [r0, #4]
@@ -5554,7 +5554,7 @@ _02172480: .word 0x0000019a
 _02172484: .word gMapManager
 _02172488: .word 0x00000b33
 _0217248c: .word 0xffff699a
-_02172490: .word data_027e0d0c
+_02172490: .word gVec3p_ZERO
 _02172494: .word 0x00000333
 _02172498: .word data_027e0ff8
 	arm_func_end func_ov27_02171f3c
@@ -8185,7 +8185,7 @@ func_ov27_02174704: ; 0x02174704
 func_ov27_02174748: ; 0x02174748
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
-	ldr r2, _021747cc ; =data_027e0d0c
+	ldr r2, _021747cc ; =gVec3p_ZERO
 	mov r4, r0
 	ldr r1, [r2]
 	add r0, r4, #0x1d8
@@ -8217,7 +8217,7 @@ func_ov27_02174748: ; 0x02174748
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_021747cc: .word data_027e0d0c
+_021747cc: .word gVec3p_ZERO
 _021747d0: .word gMapManager
 	arm_func_end func_ov27_02174748
 
@@ -8280,7 +8280,7 @@ _02174888:
 	bl func_ov14_02145508
 	cmp r0, #0
 	beq _021748c8
-	ldr r0, _021748e4 ; =data_027e0d0c
+	ldr r0, _021748e4 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r5, #0x60]
 	ldr r1, [r0, #4]
@@ -8296,7 +8296,7 @@ _021748d4: .word gMapManager
 _021748d8: .word 0x00000222
 _021748dc: .word gAdventureFlags
 _021748e0: .word 0x00000266
-_021748e4: .word data_027e0d0c
+_021748e4: .word gVec3p_ZERO
 	arm_func_end func_ov27_021747d4
 
 	.global func_ov27_021748e8
@@ -9134,7 +9134,7 @@ func_ov27_021752a8: ; 0x021752a8
 	str r1, [r4, #0x414]
 	mov r1, #0
 	bl func_ov27_02174df0
-	ldr r1, _021753d0 ; =data_027e0d0c
+	ldr r1, _021753d0 ; =gVec3p_ZERO
 	mov r0, #0
 	ldr ip, [r1]
 	ldr r3, [r1, #4]
@@ -9175,7 +9175,7 @@ _021753c0: .word data_ov27_0217902c
 _021753c4: .word func_ov27_02174f08
 _021753c8: .word data_ov27_0217903c
 _021753cc: .word func_ov27_02175048
-_021753d0: .word data_027e0d0c
+_021753d0: .word gVec3p_ZERO
 _021753d4: .word gMapManager
 	arm_func_end func_ov27_021752a8
 
@@ -9965,7 +9965,7 @@ _02175e38:
 	bl func_ov14_02145e48
 _02175e40:
 	mov r1, #0
-	ldr r0, _02175e70 ; =data_027e0d0c
+	ldr r0, _02175e70 ; =gVec3p_ZERO
 	str r1, [r4, #0x138]
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
@@ -9977,7 +9977,7 @@ _02175e40:
 	.align 2, 0
 _02175e68: .word data_027e0ffc
 _02175e6c: .word 0x0000040a
-_02175e70: .word data_027e0d0c
+_02175e70: .word gVec3p_ZERO
 	arm_func_end func_ov27_02175e00
 
 	.global func_ov27_02175e74
@@ -10217,7 +10217,7 @@ func_ov27_02176164: ; 0x02176164
 	mov r1, #0
 	str r1, [r0, #0x20]
 	mov r1, #1
-	ldr r0, _021761d8 ; =data_027e0d0c
+	ldr r0, _021761d8 ; =gVec3p_ZERO
 	str r1, [r4, #0x4d4]
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
@@ -10229,7 +10229,7 @@ func_ov27_02176164: ; 0x02176164
 	.align 2, 0
 _021761d0: .word data_027e0c68
 _021761d4: .word 0x00060027
-_021761d8: .word data_027e0d0c
+_021761d8: .word gVec3p_ZERO
 	arm_func_end func_ov27_02176164
 
 	.global func_ov27_021761dc

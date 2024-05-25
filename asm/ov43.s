@@ -2707,7 +2707,7 @@ _0218b910:
 	str r0, [r5, #0x3c0]
 	b _0218b9fc
 _0218b91c:
-	ldr r3, _0218ba20 ; =data_027e0d0c
+	ldr r3, _0218ba20 ; =gVec3p_ZERO
 	ldr r2, _0218ba24 ; =0x00000333
 	ldr r1, [r3]
 	add r0, r5, #0x28c
@@ -2779,7 +2779,7 @@ _0218ba10: .word 0x0000ffff
 _0218ba14: .word gActorManager
 _0218ba18: .word 0x50574253
 _0218ba1c: .word 0x504c444d
-_0218ba20: .word data_027e0d0c
+_0218ba20: .word gVec3p_ZERO
 _0218ba24: .word 0x00000333
 _0218ba28: .word data_027e0c68
 _0218ba2c: .word 0x00690331
@@ -3109,7 +3109,7 @@ _0218bed4:
 	beq _0218bf54
 	mov r0, r4
 	bl func_ov00_020cc214
-	ldr r1, _0218c990 ; =data_027e0d0c
+	ldr r1, _0218c990 ; =gVec3p_ZERO
 	mov r0, r4
 	ldr r2, [r1]
 	str r2, [r4, #0x60]
@@ -3428,7 +3428,7 @@ _0218c32c:
 	cmp r2, #0x2000
 	ble _0218c3bc
 _0218c39c:
-	ldr r0, _0218c990 ; =data_027e0d0c
+	ldr r0, _0218c990 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
@@ -3491,7 +3491,7 @@ _0218c474:
 	add r0, r4, #0x28c
 	mov r1, #2
 	bl func_ov43_0218b1a0
-	ldr r0, _0218c990 ; =data_027e0d0c
+	ldr r0, _0218c990 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
@@ -3715,7 +3715,7 @@ _0218c76c:
 	str r1, [r4, #0x68]
 	b _0218c7e8
 _0218c7cc:
-	ldr r0, _0218c990 ; =data_027e0d0c
+	ldr r0, _0218c990 ; =gVec3p_ZERO
 	ldr r1, [r0]
 	str r1, [r4, #0x60]
 	ldr r1, [r0, #4]
@@ -3839,7 +3839,7 @@ _0218c980: .word 0x0000ffff
 _0218c984: .word data_027e0fe8
 _0218c988: .word 0x50425a4b
 _0218c98c: .word gMapManager
-_0218c990: .word data_027e0d0c
+_0218c990: .word gVec3p_ZERO
 _0218c994: .word data_027e0c68
 _0218c998: .word 0x00690330
 _0218c99c: .word data_ov00_020eec9c

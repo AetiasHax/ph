@@ -29,7 +29,7 @@
 .extern data_027e077c
 .extern data_027e0c68
 .extern data_027e0cbc
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d44
 .extern data_027e0d78
 .extern data_027e0f88

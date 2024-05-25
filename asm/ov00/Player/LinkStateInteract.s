@@ -751,7 +751,7 @@ _020aac14:
 	sub r0, r0, #9
 	cmp r0, #1
 	bhi _020aacf4
-	ldr r1, _020ab3c0 ; =data_027e0d0c
+	ldr r1, _020ab3c0 ; =gVec3p_ZERO
 	mov r0, r4
 	ldr r2, [r1]
 	str r2, [r4, #0x18]
@@ -1263,7 +1263,7 @@ _020ab3b0:
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	.align 2, 0
 _020ab3bc: .word gItemManager
-_020ab3c0: .word data_027e0d0c
+_020ab3c0: .word gVec3p_ZERO
 _020ab3c4: .word gSinCosTable
 _020ab3c8: .word 0x000004cd
 _020ab3cc: .word gPlayerControl
@@ -1454,7 +1454,7 @@ _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p: ; 0x020ab614
 	movs ip, r0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r4, r5, pc}
-	ldr r0, _020ab67c ; =data_027e0d0c
+	ldr r0, _020ab67c ; =gVec3p_ZERO
 	add r3, sp, #0
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -1473,7 +1473,7 @@ _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p: ; 0x020ab614
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_020ab67c: .word data_027e0d0c
+_020ab67c: .word gVec3p_ZERO
 	arm_func_end _ZN17LinkStateInteract20SetGrabActorVelocityEP5Vec3p
 
 	.global _ZN17LinkStateInteract15SetBombVelocityEP5Vec3p

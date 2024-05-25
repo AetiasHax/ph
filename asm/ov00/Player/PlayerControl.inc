@@ -23,7 +23,7 @@
 .extern data_027e05f8
 .extern data_027e077c
 .extern data_027e0c68
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d38
 .extern data_027e0e2c
 .extern gMapManager

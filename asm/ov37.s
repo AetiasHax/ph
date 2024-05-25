@@ -907,7 +907,7 @@ func_ov37_0217c924: ; 0x0217c924
 	add r6, r0, #0x2c00
 	ldr r0, _0217cbdc ; =0x00007fff
 	add r1, r8, #0xdf0
-	ldr r9, _0217cbe0 ; =data_027e0d0c
+	ldr r9, _0217cbe0 ; =gVec3p_ZERO
 	add r7, r1, #0x2000
 	mov r4, #0
 	rsb r11, r0, #0
@@ -1000,7 +1000,7 @@ _0217caac:
 	add r7, r0, #0x2c00
 	ldr r0, _0217cbdc ; =0x00007fff
 	add r1, r8, #0x2f4
-	ldr r5, _0217cbe0 ; =data_027e0d0c
+	ldr r5, _0217cbe0 ; =gVec3p_ZERO
 	add r9, r1, #0x2c00
 	mov r10, #0
 	rsb r4, r0, #0
@@ -1075,7 +1075,7 @@ _0217cbc0:
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	.align 2, 0
 _0217cbdc: .word 0x00007fff
-_0217cbe0: .word data_027e0d0c
+_0217cbe0: .word gVec3p_ZERO
 _0217cbe4: .word gActorManager
 _0217cbe8: .word data_ov37_02187dcc
 _0217cbec: .word gPlayerPos
@@ -10717,7 +10717,7 @@ _0218530c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	.global func_ov37_02185310
 	arm_func_start func_ov37_02185310
 func_ov37_02185310: ; 0x02185310
-	ldr r1, _02185360 ; =data_027e0d0c
+	ldr r1, _02185360 ; =gVec3p_ZERO
 	mov ip, #0x1000
 	ldr r3, [r1]
 	mov r2, #0x2000
@@ -10738,7 +10738,7 @@ func_ov37_02185310: ; 0x02185310
 	mov r0, #1
 	bx lr
 	.align 2, 0
-_02185360: .word data_027e0d0c
+_02185360: .word gVec3p_ZERO
 	arm_func_end func_ov37_02185310
 
 	.global func_ov37_02185364
@@ -10831,7 +10831,7 @@ func_ov37_02185410: ; 0x02185410
 	arm_func_start func_ov37_0218544c
 func_ov37_0218544c: ; 0x0218544c
 	stmdb sp!, {r3, lr}
-	ldr r1, _021854a4 ; =data_027e0d0c
+	ldr r1, _021854a4 ; =gVec3p_ZERO
 	ldr ip, _021854a8 ; =0x0000099a
 	ldr r2, [r1]
 	mov r3, #0
@@ -10853,7 +10853,7 @@ func_ov37_0218544c: ; 0x0218544c
 	mov r0, #1
 	ldmia sp!, {r3, pc}
 	.align 2, 0
-_021854a4: .word data_027e0d0c
+_021854a4: .word gVec3p_ZERO
 _021854a8: .word 0x0000099a
 	arm_func_end func_ov37_0218544c
 

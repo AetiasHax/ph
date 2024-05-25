@@ -3180,7 +3180,7 @@ _0216fc2c:
 	ldrsh r6, [r1, r2]
 	mov r0, r0, lsl #0x1
 	ldrsh ip, [r1, r0]
-	ldr r2, _0216fd90 ; =data_027e0d0c
+	ldr r2, _0216fd90 ; =gVec3p_ZERO
 	add r1, sp, #0x10
 	add r3, sp, #0x28
 	mov r0, #0x400
@@ -3259,7 +3259,7 @@ _0216fd80: .word gPlayerPos
 _0216fd84: .word data_027e0764
 _0216fd88: .word 0x00008001
 _0216fd8c: .word gSinCosTable
-_0216fd90: .word data_027e0d0c
+_0216fd90: .word gVec3p_ZERO
 _0216fd94: .word gMapManager
 	arm_func_end func_ov26_0216fba8
 

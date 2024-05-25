@@ -10125,7 +10125,7 @@ _02175be8:
 	strh r1, [r0, #0xa4]
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	ldr r1, _02175c3c ; =data_027e0d0c
+	ldr r1, _02175c3c ; =gVec3p_ZERO
 	ldr r2, [r1]
 	str r2, [r0]
 	ldr r2, [r1, #4]
@@ -10140,7 +10140,7 @@ _02175c2c: .word 0xb60b60b7
 _02175c30: .word data_ov00_020eec9c
 _02175c34: .word gMapManager
 _02175c38: .word data_ov19_02175ee0
-_02175c3c: .word data_027e0d0c
+_02175c3c: .word gVec3p_ZERO
 	arm_func_end func_ov19_02175a2c
 
 	.global func_ov19_02175c40

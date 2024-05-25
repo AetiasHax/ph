@@ -88,7 +88,7 @@
 .extern data_027e0764
 .extern data_027e0c54
 .extern data_027e0c68
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0e58
 .extern gMapManager
 .extern data_027e0f64

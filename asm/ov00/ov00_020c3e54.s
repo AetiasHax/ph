@@ -20170,7 +20170,7 @@ func_ov00_020d3974: ; 0x020d3974
 	arm_func_start func_ov00_020d3988
 func_ov00_020d3988: ; 0x020d3988
 	mov ip, #0
-	ldr r1, _020d3a00 ; =data_027e0d0c
+	ldr r1, _020d3a00 ; =gVec3p_ZERO
 	str ip, [r0, #0x6c]
 	ldr r2, [r1]
 	sub r3, ip, #1
@@ -20200,7 +20200,7 @@ func_ov00_020d3988: ; 0x020d3988
 	mov r0, #1
 	bx lr
 	.align 2, 0
-_020d3a00: .word data_027e0d0c
+_020d3a00: .word gVec3p_ZERO
 	arm_func_end func_ov00_020d3988
 
 	.global func_ov00_020d3a04

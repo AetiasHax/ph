@@ -11,7 +11,7 @@
 .extern _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 .extern _ZN13PlayerControl6SetAimEv
 .extern data_027e0764
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0f64
 .extern gPlayerPos
 .extern gPlayerControl

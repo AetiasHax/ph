@@ -104,7 +104,7 @@
 .extern gSinCosTable
 .extern data_02057200
 .extern data_027e0764
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d38
 .extern data_027e0e58
 .extern gMapManager

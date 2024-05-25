@@ -86,7 +86,7 @@
 .extern data_027e077c
 .extern data_027e0c54
 .extern data_027e0ce0
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d38
 .extern data_027e0d3c
 .extern data_027e0e58

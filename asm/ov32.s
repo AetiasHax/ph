@@ -10552,7 +10552,7 @@ func_ov32_0218477c: ; 0x0218477c
 	ldr r3, _02184878 ; =0x00000666
 	str r0, [r4, #0x54]
 	ldr r0, [r4, #0x4c]
-	ldr r1, _0218487c ; =data_027e0d0c
+	ldr r1, _0218487c ; =gVec3p_ZERO
 	str r0, [r4, #0x58]
 	ldr r0, [r4, #0x50]
 	add r2, r3, #0x1000
@@ -10590,7 +10590,7 @@ func_ov32_0218477c: ; 0x0218477c
 	ldr r2, [r2, #0xc]
 	blx r2
 	mov r0, #0
-	ldr r2, _0218487c ; =data_027e0d0c
+	ldr r2, _0218487c ; =gVec3p_ZERO
 	str r0, [r4, #0x164]
 	ldr r1, [r2]
 	ldr r0, _02184884 ; =gActorManager
@@ -10611,7 +10611,7 @@ func_ov32_0218477c: ; 0x0218477c
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02184878: .word 0x00000666
-_0218487c: .word data_027e0d0c
+_0218487c: .word gVec3p_ZERO
 _02184880: .word data_027e0fec
 _02184884: .word gActorManager
 	arm_func_end func_ov32_0218477c

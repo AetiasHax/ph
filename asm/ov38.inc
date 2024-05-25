@@ -77,7 +77,7 @@
 .extern data_027e0764
 .extern data_027e0c68
 .extern data_027e0ce0
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0e58
 .extern data_027e0e5c
 .extern data_027e0f64

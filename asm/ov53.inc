@@ -18,7 +18,7 @@
 .extern _ZN9SysObjectdlEPv
 .extern __register_global_object
 .extern gSinCosTable
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0de4
 .extern gMapManager
 .extern data_027e0f64

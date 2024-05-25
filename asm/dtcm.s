@@ -3260,15 +3260,9 @@ data_027e0d09:
 	.global data_027e0d0a
 data_027e0d0a:
 	.space 0x2
-	.global data_027e0d0c
-data_027e0d0c:
-	.space 0x4
-	.global data_027e0d10
-data_027e0d10:
-	.space 0x4
-	.global data_027e0d14
-data_027e0d14:
-	.space 0x4
+	.global gVec3p_ZERO
+gVec3p_ZERO:
+	.space 0xc
 	.global data_027e0d18
 data_027e0d18:
 	.space 0x4

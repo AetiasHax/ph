@@ -937,7 +937,7 @@ _0217c998:
 	add r2, r2, #0x5800
 	str r1, [r5, #0x90]
 	ldr r1, [r5, #0x84]
-	ldr r3, _0217cdf0 ; =data_027e0d0c
+	ldr r3, _0217cdf0 ; =gVec3p_ZERO
 	str r1, [r5, #0x94]
 	ldr r6, [r5, #0x88]
 	ldr r1, _0217cdf4 ; =data_ov34_021861a0
@@ -1206,7 +1206,7 @@ _0217cd8c:
 	.align 2, 0
 _0217cde8: .word gAdventureFlags
 _0217cdec: .word 0x00001e66
-_0217cdf0: .word data_027e0d0c
+_0217cdf0: .word gVec3p_ZERO
 _0217cdf4: .word data_ov34_021861a0
 _0217cdf8: .word data_ov34_021861e8
 _0217cdfc: .word data_027e0fec
@@ -1604,7 +1604,7 @@ func_ov34_0217d318: ; 0x0217d318
 	mov r0, #7
 	str r0, [r1, #0x190]
 	mov r2, #0x32
-	ldr r0, _0217d350 ; =data_027e0d0c
+	ldr r0, _0217d350 ; =gVec3p_ZERO
 	str r2, [r1, #0x194]
 	ldr r2, [r0]
 	str r2, [r1, #0x180]
@@ -1615,7 +1615,7 @@ func_ov34_0217d318: ; 0x0217d318
 	bx lr
 	.align 2, 0
 _0217d34c: .word data_ov34_021861a0
-_0217d350: .word data_027e0d0c
+_0217d350: .word gVec3p_ZERO
 	arm_func_end func_ov34_0217d318
 
 	.global func_ov34_0217d354
@@ -1697,7 +1697,7 @@ _0217d470:
 	ldr r0, _0217d4ac ; =data_ov34_02186314
 	mov r4, #0xc00
 	ldr r1, _0217d4b0 ; =data_ov34_02186320
-	ldr r2, _0217d4b4 ; =data_027e0d0c
+	ldr r2, _0217d4b4 ; =gVec3p_ZERO
 	ldr r3, _0217d4b8 ; =0x0000099a
 	str r4, [sp]
 	bl func_ov34_0217ceb0
@@ -1712,7 +1712,7 @@ _0217d4a4: .word data_ov00_020eec9c
 _0217d4a8: .word 0x000002ee
 _0217d4ac: .word data_ov34_02186314
 _0217d4b0: .word data_ov34_02186320
-_0217d4b4: .word data_027e0d0c
+_0217d4b4: .word gVec3p_ZERO
 _0217d4b8: .word 0x0000099a
 	arm_func_end func_ov34_0217d354
 
@@ -9786,7 +9786,7 @@ _02184774: .word data_ov34_02185fbc
 func_ov34_02184778: ; 0x02184778
 	stmdb sp!, {r4, r5, r6, lr}
 	ldrh r1, [r0, #0x20]
-	ldr r2, _02184878 ; =data_027e0d0c
+	ldr r2, _02184878 ; =gVec3p_ZERO
 	mov r4, #0x800
 	str r1, [r0, #0x18c]
 	ldr r1, [r2]
@@ -9849,7 +9849,7 @@ func_ov34_02184778: ; 0x02184778
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_02184878: .word data_027e0d0c
+_02184878: .word gVec3p_ZERO
 _0218487c: .word data_ov34_02186394
 _02184880: .word gSinCosTable
 _02184884: .word data_ov34_021861fd
@@ -9991,7 +9991,7 @@ _02184a30:
 	strle ip, [r4, #0x16c]
 	ldrle ip, [r0, #4]
 _02184a54:
-	ldr r1, _02184aa0 ; =data_027e0d0c
+	ldr r1, _02184aa0 ; =gVec3p_ZERO
 	add r0, ip, #0x21c
 	ldr r3, [r1, #8]
 	ldmia r1, {r2, ip}
@@ -10011,7 +10011,7 @@ _02184a54:
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 _02184a9c: .word data_ov34_021861e0
-_02184aa0: .word data_027e0d0c
+_02184aa0: .word gVec3p_ZERO
 	arm_func_end func_ov34_02184950
 
 	.global func_ov34_02184aa4
@@ -10226,7 +10226,7 @@ func_ov34_02184cec: ; 0x02184cec
 	b _02184df8
 _02184d84:
 	ldr r2, [r4, #0x188]
-	ldr r1, _02184f30 ; =data_027e0d0c
+	ldr r1, _02184f30 ; =gVec3p_ZERO
 	add r0, r4, #0x60
 	bl func_0202b308
 	add r1, sp, #8
@@ -10337,7 +10337,7 @@ _02184efc:
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02184f2c: .word gSinCosTable
-_02184f30: .word data_027e0d0c
+_02184f30: .word gVec3p_ZERO
 	arm_func_end func_ov34_02184cec
 
 	.global func_ov34_02184f34
@@ -11213,7 +11213,7 @@ func_ov34_02185818: ; 0x02185818
 	str r3, [r0, #0x264]
 	str r2, [r0, #0x268]
 	str r3, [r0, #0x27c]
-	ldr r1, _02185964 ; =data_027e0d0c
+	ldr r1, _02185964 ; =gVec3p_ZERO
 	str r2, [r0, #0x280]
 	ldr r3, _02185968 ; =data_ov34_021861e8
 	ldmia r1, {r0, r1, r2}
@@ -11240,7 +11240,7 @@ _02185954: .word func_ov34_0217c570
 _02185958: .word data_ov34_021861c0
 _0218595c: .word data_02057200
 _02185960: .word data_ov34_02185aa0
-_02185964: .word data_027e0d0c
+_02185964: .word gVec3p_ZERO
 _02185968: .word data_ov34_021861e8
 _0218596c: .word data_027e0194
 _02185970: .word data_ov34_02186344

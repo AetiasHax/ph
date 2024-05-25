@@ -824,7 +824,7 @@ func_ov53_02199730: ; 0x02199730
 	mov r2, #1
 	mov r4, r0
 	bl _ZN13LinkStateBase18func_ov00_020a89bcEii
-	ldr r1, _02199774 ; =data_027e0d0c
+	ldr r1, _02199774 ; =gVec3p_ZERO
 	ldr r0, _02199778 ; =gPlayerControl
 	ldr r2, [r1]
 	str r2, [r4, #0x44]
@@ -837,7 +837,7 @@ func_ov53_02199730: ; 0x02199730
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _02199770: .word data_ov53_0219a0f4
-_02199774: .word data_027e0d0c
+_02199774: .word gVec3p_ZERO
 _02199778: .word gPlayerControl
 	arm_func_end func_ov53_02199730
 
@@ -916,7 +916,7 @@ _02199850:
 	str r1, [sp]
 	str r1, [sp, #4]
 	ldr r0, _02199a04 ; =data_027e0f64
-	ldr r3, _02199a0c ; =data_027e0d0c
+	ldr r3, _02199a0c ; =gVec3p_ZERO
 	ldr r0, [r0]
 	add r2, sp, #0x2c
 	ldr r0, [r0, #4]
@@ -1001,7 +1001,7 @@ _02199938:
 	str r0, [sp]
 	str r0, [sp, #4]
 	ldr r0, _02199a04 ; =data_027e0f64
-	ldr r3, _02199a0c ; =data_027e0d0c
+	ldr r3, _02199a0c ; =gVec3p_ZERO
 	ldr r0, [r0]
 	mov r1, #2
 	ldr r0, [r0, #4]
@@ -1015,7 +1015,7 @@ _021999fc: .word gPlayerControl
 _02199a00: .word data_ov53_0219a104
 _02199a04: .word data_027e0f64
 _02199a08: .word gPlayerPos
-_02199a0c: .word data_027e0d0c
+_02199a0c: .word gVec3p_ZERO
 	arm_func_end func_ov53_0219977c
 
 	.global func_ov53_02199a10

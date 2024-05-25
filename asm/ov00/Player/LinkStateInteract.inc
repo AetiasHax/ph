@@ -42,7 +42,7 @@
 .extern _ZNK11ItemManager16GetEquippedFairyEv
 .extern _ZNK11ItemManager8GetFairyEi
 .extern gSinCosTable
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern gMapManager
 .extern gPlayerControl
 .extern gActorManager
