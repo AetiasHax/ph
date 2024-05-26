@@ -43,7 +43,8 @@ def get_build_path(path: Path) -> Path:
 config = dict()
 config["custom_make"] = "make"
 config["custom_args"] = [
-    f"REGION={args.region}"
+    f"REGION={args.region}",
+    "-B" # Always build target
 ]
 config["build_target"] = True
 config["watch_patterns"] = [
