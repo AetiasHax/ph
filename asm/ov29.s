@@ -3230,7 +3230,7 @@ func_ov29_02170144: ; 0x02170144
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, _0217017c ; =data_ov29_0217a60c
 	mov r1, #0
 	str r1, [r0, #0x20]
@@ -3891,7 +3891,7 @@ func_ov29_021709c0: ; 0x021709c0
 	add r1, sp, #0
 	str r2, [r3, #0x20]
 	str r4, [sp]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	add sp, sp, #0x10
 	ldmia sp!, {r3, r4, r5, pc}
 _02170aa8:
@@ -4823,7 +4823,7 @@ _02171744:
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
 _02171764: .word data_ov29_0217bc30
@@ -5868,7 +5868,7 @@ func_ov29_02172494: ; 0x02172494
 	add r1, sp, #4
 	str r2, [sp, #8]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	cmp r0, #1
 	bge _02172590
@@ -5946,7 +5946,7 @@ func_ov29_021725b0: ; 0x021725b0
 	add r1, sp, #4
 	str r2, [sp, #8]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	cmp r0, #1
 	bge _021726a0

@@ -1860,7 +1860,7 @@ func_ov50_02196d94: ; 0x02196d94
 	add r2, sp, #0x28
 	str r3, [r4, #0xc]
 	str r11, [sp, #0x14]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r8, r0
 	cmp r8, #0
 	mov r9, r7
@@ -1937,7 +1937,7 @@ func_ov50_02196ee4: ; 0x02196ee4
 	mov r2, #0
 	str r3, [ip, #0xc]
 	str r4, [sp, #0x14]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	movgt r0, #1
 	movle r0, #0

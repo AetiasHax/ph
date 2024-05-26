@@ -1774,7 +1774,7 @@ func_ov19_0216eda4: ; 0x0216eda4
 	str ip, [sp, #4]
 	str r5, [sp, #8]
 	str r3, [sp, #0xc]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r5, _0216ee58 ; =gActorManager
 	add r7, sp, #0x10
 	mov r6, #0
@@ -8763,7 +8763,7 @@ _02174910:
 	str lr, [ip, #8]
 	str r4, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ldrgt r0, [sp, #8]
 	movgt r5, #0

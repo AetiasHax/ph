@@ -8189,7 +8189,7 @@ _02107664:
 	mov r2, #0
 	ldr r0, [r0]
 	add r1, sp, #8
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ble _021077e8
 	bl func_ov05_02107870
@@ -19893,7 +19893,7 @@ _02111744:
 	strh r2, [sp, #0x3c]
 	ldr r0, [r0]
 	mov r2, #0
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ble _02111868
 	ldr r0, [sp, #0x2c]

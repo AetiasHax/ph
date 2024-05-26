@@ -1,6 +1,6 @@
 #pragma once
 .extern _ZN11ItemManager12GetItemModelEj
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase14GetPlayerAngleEv
 .extern _ZN13LinkStateBase18func_ov00_020a81fcEv

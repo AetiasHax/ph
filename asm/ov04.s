@@ -23486,7 +23486,7 @@ _0210c092:
 	str r0, [sp, #0x20]
 	ldr r0, _0210c0f4 ; =gActorManager
 	ldr r0, [r0]
-	blx _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	blx _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ble _0210c0c2
 	mov r0, #0

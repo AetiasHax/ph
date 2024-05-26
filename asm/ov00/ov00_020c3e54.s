@@ -17573,7 +17573,7 @@ func_ov00_020d1870: ; 0x020d1870
 	mov r2, #0
 	str ip, [sp]
 	strb r3, [sp, #0xa]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -17595,7 +17595,7 @@ func_ov00_020d18b4: ; 0x020d18b4
 	str r3, [sp]
 	strh r2, [sp, #8]
 	strb r2, [sp, #0xa]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
@@ -20472,7 +20472,7 @@ _020d3d1c:
 	str ip, [sp, #4]
 	str r5, [sp, #8]
 	str r3, [sp, #0xc]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r6, r0
 	cmp r6, #0
 	mov r7, #0

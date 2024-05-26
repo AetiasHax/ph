@@ -50,7 +50,7 @@
 .extern _ZN11ItemManager18PlayItemFanfareSfxEi
 .extern _ZN11ItemManager8GiveItemEi
 .extern _ZN11ItemManager9SetPotionEjh
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager18func_ov00_020c3b2cEPi

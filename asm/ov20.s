@@ -7573,7 +7573,7 @@ _02173c3c:
 	str lr, [sp, #0x20]
 	str ip, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	str r0, [r4, #0x188]
 	ldr r0, [sp, #0xc]

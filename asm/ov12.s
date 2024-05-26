@@ -38455,7 +38455,7 @@ _0213207c:
 	str r3, [sp]
 	str ip, [sp, #4]
 	str lr, [sp, #8]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	addle sp, sp, #0xc
 	ldmleia sp!, {r3, r4, pc}

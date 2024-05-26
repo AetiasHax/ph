@@ -312,7 +312,7 @@ _02199050:
 	ldr r3, [r7, #0x40]
 	mov r2, r4
 	str r3, [sp, #0x20]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	bgt _021990c4
 	ldr r0, _02199290 ; =gMapManager

@@ -25,7 +25,7 @@
 .extern _ZN10PlayerBase14GetEquipShieldEv
 .extern _ZN11ItemManager15SetEquippedItemEi
 .extern _ZN11ItemManager18func_ov00_020ad790Ei
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei

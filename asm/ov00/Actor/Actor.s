@@ -617,7 +617,7 @@ _020c1b2c:
 	add r1, sp, #0
 	mov r2, #0
 	str r3, [sp]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	add sp, sp, #0xa4
 	ldmia sp!, {pc}
 	.align 2, 0

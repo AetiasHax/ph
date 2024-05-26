@@ -1,7 +1,7 @@
 #pragma once
 .extern Approach_thunk
 .extern Divide
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN5Actor10SetUnk_11bEv

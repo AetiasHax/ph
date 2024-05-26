@@ -12511,7 +12511,7 @@ func_ov17_02165284: ; 0x02165284
 	mov r2, #0
 	str r3, [sp]
 	str r4, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	movgt r0, #1
 	movle r0, #0

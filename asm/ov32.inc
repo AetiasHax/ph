@@ -8,7 +8,7 @@
 .extern _ZN10MapManager18func_ov00_02084cc8Ei
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN10PlayerBase12CollidesWithEP8Cylinder
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN14AdventureFlags18func_Ov00_02097810Ei

@@ -312,9 +312,9 @@ _020c37e0:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end _ZN11FilterActor6FilterEP5Actor
 
-	.global _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
-	arm_func_start _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
-_ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList: ; 0x020c37ec
+	.global _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
+	arm_func_start _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
+_ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList: ; 0x020c37ec
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	movs r7, r2
 	mov r4, #0
@@ -361,7 +361,7 @@ _020c3880:
 _020c388c:
 	mov r0, r4
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
-	arm_func_end _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	arm_func_end _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 
 	.global _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 	arm_func_start _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j

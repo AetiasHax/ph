@@ -29,7 +29,7 @@
 .extern _ZN11ItemManager6CreateEv
 .extern _ZN11ItemManager7DestroyEv
 .extern _ZN12ActorManager11DeleteActorEjb
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef

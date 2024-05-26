@@ -765,7 +765,7 @@ _02199518:
 	ldr r0, [r0]
 	ldr r1, _021996f8 ; =data_ov53_0219a5e4
 	mov r2, #0
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, _021996e4 ; =data_ov53_0219a580
 	ldrh r1, [r0, #0x40]
 	ldrh r0, [r0, #0x6c]

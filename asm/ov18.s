@@ -2162,7 +2162,7 @@ func_ov18_0215cfac: ; 0x0215cfac
 	mov r2, #0
 	str ip, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
 	.align 2, 0

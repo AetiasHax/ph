@@ -766,7 +766,7 @@ _02189ebc:
 	str r7, [r5, #8]
 	str r4, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ldrgt r0, [sp, #8]
 	movgt r4, r7
@@ -838,7 +838,7 @@ _02189fb8:
 	str r4, [r6, #8]
 	str r5, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ldrgt r0, [sp, #8]
 	movgt r5, r4

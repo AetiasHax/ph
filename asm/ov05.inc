@@ -30,7 +30,7 @@
 .extern _ZN11ItemManager18PlayItemFanfareSfxEi
 .extern _ZN11ItemManager8GiveItemEi
 .extern _ZN12ActorManager11DeleteActorEjb
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase10GetStateIdEv

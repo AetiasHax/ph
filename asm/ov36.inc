@@ -3,7 +3,7 @@
 .extern Divide
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN11ItemManager12GetEquipItemEi
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN5Actor10GetAngleToEP5Vec3p

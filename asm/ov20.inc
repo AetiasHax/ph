@@ -11,7 +11,7 @@
 .extern _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 .extern _ZN10PlayerBase10SetVisibleEb
 .extern _ZN11ItemManager7AddItemEi
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j
 .extern _ZN12ActorManager8GetActorEP8ActorRef
 .extern _ZN13LinkStateBase12GetPlayerPosEv

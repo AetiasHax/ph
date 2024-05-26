@@ -41,7 +41,7 @@ _0213b794:
 	str r6, [r3]
 	str r6, [r3, #4]
 	str r6, [r3, #8]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r6, r0
 	cmp r6, #0
 	mov r11, #0
@@ -17049,7 +17049,7 @@ _021483f8:
 	str r6, [sp, #0x8c]
 	str r6, [sp, #0x90]
 	str r3, [sp, #0x50]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r6, r0
 	cmp r6, #0
 	mov r7, #0
@@ -20286,7 +20286,7 @@ _0214b048:
 	str ip, [sp, #0x38]
 	str r3, [sp, #8]
 	str r5, [sp, #0xc]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r1, r6
 	mov r0, r4
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -20304,7 +20304,7 @@ _0214b048:
 	mov r0, r4
 	str r3, [sp]
 	str r5, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r1, r6
 	mov r0, r4
 	bl _ZN12ActorManager8GetActorEP8ActorRef

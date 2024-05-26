@@ -10112,7 +10112,7 @@ _020b94e8:
 	str r4, [sp, #0x34]
 	str r5, [sp, #0x38]
 	str r6, [sp, #0x3c]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ble _020b956c
 	ldr r2, [sp, #0x30]

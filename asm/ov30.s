@@ -3557,7 +3557,7 @@ _0217ec2c:
 	str r6, [sp, #0x10]
 	str r6, [sp, #0x14]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x20]
 	mov r5, #0
 	cmp r0, #0
@@ -8396,7 +8396,7 @@ _0218271c:
 	str r3, [sp, #0x70]
 	str r6, [sp, #0x68]
 	str r5, [sp, #0x6c]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x70]
 	mov r5, #0
 	cmp r0, #0
@@ -9462,7 +9462,7 @@ _021834e0:
 	add r1, sp, #0x274
 	ldr r0, [r0]
 	add r2, sp, #0x1e8
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x1f0]
 	mov r7, #0
 	cmp r0, #0
@@ -9531,7 +9531,7 @@ _021835e4:
 	add r1, sp, #0x1a0
 	ldr r0, [r0]
 	add r2, sp, #0x114
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x11c]
 	mov r7, #0
 	cmp r0, #0
@@ -9600,7 +9600,7 @@ _021836e8:
 	add r1, sp, #0xcc
 	ldr r0, [r0]
 	add r2, sp, #0x40
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x48]
 	mov r7, #0
 	cmp r0, #0
@@ -9905,7 +9905,7 @@ _02183ab0:
 	str r5, [sp, #0x14]
 	str r5, [sp, #0x18]
 	str r3, [sp, #8]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ldrgt r0, [sp, #0x24]
 	movgt r4, #0
@@ -9985,7 +9985,7 @@ _02183bc8:
 	str r5, [sp, #0x14]
 	str r5, [sp, #0x18]
 	str r3, [sp, #8]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	ldrgt r0, [sp, #0x24]
 	movgt r4, #0
@@ -11332,7 +11332,7 @@ _021848f4:
 	add r1, sp, #0x24
 	ldr r0, [r0]
 	add r2, sp, #0x530
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x534]
 	mov r6, #0
 	str r6, [sp, #0x18]
@@ -11420,7 +11420,7 @@ _02184a34:
 	ldr r0, [r0]
 	add r1, sp, #0x1c
 	add r2, r2, #0xa4
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x4a8]
 	mov r6, #0
 	str r6, [sp, #0x14]
@@ -11520,7 +11520,7 @@ _02184ba8:
 	ldr r0, [r0]
 	add r1, r1, #0x5c
 	add r2, sp, #0x3d0
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x3d4]
 	mov r6, #0
 	str r6, [sp, #0x10]
@@ -11618,7 +11618,7 @@ _02184d18:
 	add r1, sp, #0x388
 	ldr r0, [r0]
 	add r2, sp, #0x2fc
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x300]
 	mov r6, #0
 	str r6, [sp, #0xc]
@@ -11716,7 +11716,7 @@ _02184e84:
 	add r1, sp, #0x2b4
 	ldr r0, [r0]
 	add r2, sp, #0x228
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x22c]
 	mov r7, #0
 	str r7, [sp, #8]
@@ -11811,7 +11811,7 @@ _02184fe4:
 	add r1, sp, #0x1e0
 	ldr r0, [r0]
 	add r2, sp, #0x154
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x158]
 	mov r7, #0
 	str r7, [sp, #4]
@@ -11906,7 +11906,7 @@ _02185144:
 	add r1, sp, #0x10c
 	ldr r0, [r0]
 	add r2, sp, #0x80
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x84]
 	mov r7, #0
 	str r7, [sp]

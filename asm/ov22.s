@@ -3362,7 +3362,7 @@ _021702f8:
 	add r1, sp, #0x10
 	ldr r0, [r0]
 	add r2, sp, #0x20
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x18]
 	str r0, [r4, #0x180]
 	ldr r0, [sp, #0x1c]
@@ -6751,7 +6751,7 @@ _02172f1c:
 	add r1, sp, #4
 	ldr r0, [r0]
 	add r2, sp, #0x20
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r1, [sp, #0xc]
 	mvn r0, #0
 	cmp r1, r0

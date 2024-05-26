@@ -4512,7 +4512,7 @@ func_ov15_021232b4: ; 0x021232b4
 	add r1, sp, #0x28
 	ldr r0, [r0]
 	add r2, sp, #0x40
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	movne r0, r5
 	moveq r0, #1
@@ -18178,7 +18178,7 @@ _0212e7dc:
 	add r2, sp, #0x10
 	str r3, [sp]
 	strh ip, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	beq _0212e854
 	ldr r0, _0212e86c ; =gActorManager
@@ -59961,7 +59961,7 @@ func_ov15_02152184: ; 0x02152184
 	str r8, [sp, #0x30]
 	str r4, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	mov r3, r6
 	cmp r0, #0
@@ -76075,7 +76075,7 @@ _02160188:
 	ldr r0, [r1]
 	add r1, sp, #0
 	add r2, sp, #0x10
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	str r0, [r4, #0x3c0]
 	cmp r0, #0
 	ble _021602fc
@@ -86466,7 +86466,7 @@ func_ov15_021690bc: ; 0x021690bc
 	add r1, sp, #0
 	ldr r0, [r0]
 	mov r2, #0
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
@@ -98021,7 +98021,7 @@ _02172f7c:
 	add r1, sp, #0
 	ldr r0, [r0]
 	add r2, sp, #0xc
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	mov r6, r0
 	cmp r6, #0
 	mov r7, #0
@@ -103934,7 +103934,7 @@ _02177fa0:
 	add r1, sp, #0
 	ldr r0, [r0]
 	add r2, sp, #4
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	beq _0217804c
 	ldr r0, [sp, #0xc]

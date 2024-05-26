@@ -2758,7 +2758,7 @@ _0217e314:
 	add r1, sp, #8
 	ldr r0, [r0]
 	add r2, sp, #0x2c
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	beq _0217e37c
 	ldr r0, _0217e3d4 ; =gActorManager
@@ -4078,7 +4078,7 @@ func_ov36_0217f4f4: ; 0x0217f4f4
 	add r1, sp, #4
 	ldr r0, [r0]
 	add r2, sp, #0x70
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r1, [sp, #0xc]
 	mov r0, r6
 	cmp r1, r0
@@ -9947,7 +9947,7 @@ func_ov36_02184938: ; 0x02184938
 	add r1, sp, #0
 	ldr r0, [r0]
 	add r2, sp, #0x10
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	beq _021849d0
 	ldr r1, [sp, #0x10]

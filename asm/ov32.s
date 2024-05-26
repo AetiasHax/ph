@@ -10270,7 +10270,7 @@ func_ov32_0218439c: ; 0x0218439c
 	str r2, [r3]
 	str r2, [r3, #4]
 	str r2, [r3, #8]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0x18
 	addgt sp, sp, #0x84
 	movgt r0, #0
@@ -10283,7 +10283,7 @@ func_ov32_0218439c: ; 0x0218439c
 	add r1, sp, #0x3c
 	mov r2, #0
 	str r3, [sp, #0x48]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #8
 	addgt sp, sp, #0x84
 	movgt r0, #0

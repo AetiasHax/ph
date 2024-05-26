@@ -6588,7 +6588,7 @@ _0218e4ec:
 	str r4, [sp, #0x28]
 	str r2, [sp, #0x2c]
 	str r3, [sp, #0x30]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	movgt r0, #0
 	movle r0, r5
@@ -6640,7 +6640,7 @@ _0218e5b0:
 	str lr, [ip, #8]
 	str r5, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	movle r5, #0

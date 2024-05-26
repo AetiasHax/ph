@@ -39,7 +39,7 @@
 .extern _ZN11TriggerBase8vfunc_08Ev
 .extern _ZN11TriggerBase8vfunc_0cEv
 .extern _ZN11TriggerBase8vfunc_10Ev
-.extern _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+.extern _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 .extern _ZN12ActorManager13FindActorByIdEj
 .extern _ZN12ActorManager18func_ov00_020c3b2cEPi
 .extern _ZN12ActorManager18func_ov00_020c3bb0EiPi

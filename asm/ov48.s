@@ -4851,7 +4851,7 @@ _02193bd4:
 	add r1, sp, #0x224
 	ldr r0, [r0]
 	add r2, sp, #0x198
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0x1a0]
 	mov r5, #0
 	cmp r0, #0
@@ -4958,7 +4958,7 @@ _02193d68:
 	add r1, sp, #0x150
 	ldr r0, [r0]
 	add r2, sp, #0xc4
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #0xcc]
 	mov r5, #0
 	cmp r0, #0
