@@ -80,6 +80,7 @@ ARM Actor::Actor():
     mUnk_106(0),
     mUnk_107(0),
     mUnk_108(0),
+    mUnk_109(0),
     mUnk_110(0),
     mUnk_111(0),
     mUnk_112(0),
@@ -367,7 +368,7 @@ ARM bool Actor::IsNearLink() {
 }
 
 ARM void Actor::func_ov00_020c1cf8() {
-    if ((!mUnk_0a4.mUnk_00 && !mUnk_0a4.mUnk_01) || !(mUnk_129 != true && mUnk_11d != true && mUnk_11b != true)) {
+    if (mUnk_0a4.mUnk_00 || mUnk_0a4.mUnk_01 || mUnk_129 == true || mUnk_11d == true || mUnk_11b == true) {
         mInactive = 0;
     } else {
         if (this->IsNearLink()) {
@@ -439,45 +440,39 @@ ARM bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
         Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
         if (this->CollidesWithPlayer(flags & PlayerCollide_Sword)) {
             Knockback knockback;
-            knockback.mUnk_00 = 0;
-            knockback.mUnk_10 = 0xb;
-            knockback.mUnk_14 = 0;
-            gPlayer->EquipItem_vfunc_2c();
+            knockback.mUnk_00 = gPlayer->EquipItem_vfunc_2c();
             knockback.vec = vecFromPlayer;
+            knockback.mUnk_10 = 0;
+            knockback.actor = NULL;
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Shield)) {
             Knockback knockback;
-            knockback.mUnk_10 = 0xb;
-            knockback.mUnk_14 = 0;
             knockback.mUnk_00 = 0;
             knockback.vec = vecFromPlayer;
-            s32 wisdomLvl = gItemManager->GetActiveFairyLevel(FairyId_Wisdom);
-            if (wisdomLvl >= 1) {
+            if ((s32) gItemManager->GetActiveFairyLevel(FairyId_Wisdom) >= 1) {
                 knockback.mUnk_10 = 3;
             } else {
                 knockback.mUnk_10 = 2;
             }
+            knockback.actor = NULL;
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Hammer)) {
             Knockback knockback;
-            knockback.mUnk_00 = 0;
-            knockback.mUnk_10 = 0xb;
-            knockback.mUnk_14 = 0;
-            gPlayer->EquipItem_vfunc_2c();
+            knockback.mUnk_00 = gPlayer->EquipItem_vfunc_2c();
             knockback.vec = vecFromPlayer;
+            knockback.mUnk_10 = 4;
+            knockback.actor = NULL;
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Gongoron)) {
             Knockback knockback;
-            knockback.mUnk_00 = 0;
-            knockback.mUnk_10 = 0xb;
-            knockback.mUnk_14 = 0;
-            u8 unk1 = gPlayerLink->vfunc_78();
+            knockback.mUnk_00 = gPlayerLink->vfunc_78();
             knockback.vec = vecFromPlayer;
-            if (unk1 != 0) {
+            if (knockback.mUnk_00 != 0) {
                 knockback.mUnk_10 = 9;
             } else {
                 knockback.mUnk_10 = 2;
             }
+            knockback.actor = NULL;
             result = this->vfunc_48(&knockback);
         }
     }
@@ -533,25 +528,26 @@ ARM void Actor::func_ov00_020c23d4(ActorRef *ref, Actor *actor, Cylinder *cylind
     gActorManager->func_ov00_020c399c(actor->mRef.index, cylinder);
 }
 
-ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result) {
-    if (result) *result = NULL;
+ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
+    if (out) *out = NULL;
     if (gAdventureFlags->func_ov00_02097738()) return false;
+
+    bool result = false;
     if (mHitbox.size >= 0) {
         Actor *actor = gActorManager->func_ov00_020c39ac(mRef.index, actorTypes, false);
         if (actor) {
             Knockback knockback;
-            knockback.mUnk_10 = 0xb;
-            knockback.mUnk_00 = 0;
-            knockback.mUnk_14 = 0;
-
-            Vec3p vec;
-            if (actor->mType != ActorTypeId_Arrow && actor->mType != ActorTypeId_SBEM) {
-                Vec3p_Sub(&mPos, &actor->mPrevPos, &vec);
+            if (actor->mType == ActorTypeId_Arrow || actor->mType == ActorTypeId_SBEM) {
+                q20 cos = COS(actor->mAngle);
+                q20 sin = SIN(actor->mAngle);
+                knockback.vec.x = sin;
+                knockback.vec.y = 0;
+                knockback.vec.z = cos;
             } else {
-                vec.x = SIN(actor->mAngle);
-                vec.z = COS(actor->mAngle);
-                vec.y = 0;
+                Vec3p_Sub(&mPos, &actor->mPrevPos, &knockback.vec);
             }
+            knockback.mUnk_00 = actor->mUnk_125;
+            knockback.actor = actor;
 
             switch (actor->mType) {
                 case ActorTypeId_SBEM: {
@@ -585,6 +581,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result) {
                 case ActorTypeId_BKEY:
                 case ActorTypeId_FORC:
                 case ActorTypeId_FLTB:
+                case ActorTypeId_TSUB:
                 {
                     knockback.mUnk_10 = 10;
                 } break;
@@ -593,19 +590,19 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **result) {
                     knockback.mUnk_10 = 4;
                 } break;
 
-                case ActorTypeId_TSUB: {
+                default: {
                     knockback.mUnk_10 = 11;
                 } break;
             }
 
-            if (this->vfunc_48(&knockback)) {
+            result = this->vfunc_48(&knockback);
+            if (result) {
                 actor->mUnk_040 = this->mRef;
-                if (result) *result = actor;
-                return true;
+                if (out) *out = actor;
             }
         }
-    }   
-    return false;
+    }
+    return result;
 }
 
 ARM bool Actor::CollidesWith(Actor *other) {
@@ -713,7 +710,11 @@ ARM void Actor::GetHitbox(Cylinder *hitbox) {
 
     q20 sin = SIN(angle);
     q20 cos = COS(angle);
-    Vec3p_Rotate(&mHitbox.pos, sin, cos, &hitbox->pos);
+    // Vec3p_Rotate(&mHitbox.pos, sin, cos, &hitbox->pos);
+    hitbox->pos.x += MUL_Q20(mHitbox.pos.z, sin);
+    hitbox->pos.z += MUL_Q20(mHitbox.pos.z, cos);
+    hitbox->pos.x += MUL_Q20(mHitbox.pos.x, cos);
+    hitbox->pos.z += MUL_Q20(mHitbox.pos.x, -sin);
 }
 
 ARM void Actor::GetUnk_08c(Cylinder *param1) {
@@ -876,12 +877,8 @@ ARM void Actor::ApplyGravity() {
 ARM bool Actor::func_ov00_020c3094() {
     bool result = false;
     Vec3p pos, prevPos;
-    pos.x = mPos.x;
-    pos.y = mPos.y;
-    pos.z = mPos.z;
-    prevPos.x = mPrevPos.x;
-    prevPos.y = mPrevPos.y;
-    prevPos.z = mPrevPos.z;
+    Vec3p_Copy(&mPos, &pos);
+    Vec3p_Copy(&mPrevPos, &prevPos);
     s32 unk1 = gMapManager->func_ov00_02083ef8(&pos, &prevPos);
     if (mPos.y <= unk1) {
         result = true;

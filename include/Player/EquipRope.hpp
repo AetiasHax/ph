@@ -14,6 +14,8 @@ struct EquipRope_Unk_18 {
     /* 1c */
 };
 
+class Actor;
+
 class EquipRope : public EquipItem {
 public:
     /* 00 (base) */

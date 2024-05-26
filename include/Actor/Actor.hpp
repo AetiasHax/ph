@@ -49,20 +49,13 @@ struct Actor_UnkStruct_0a4 {
     Actor_UnkStruct_0a4(q20 x, q20 y, q20 z, s32 unk_10);
 };
 
-class KillPickupsFilter : public FilterActorBase {
+class KillPickupsFilter: FilterActorReturn, public FilterActorBase {
 public:
     /* 00 (base) */
-    /* 04 */ ActorRef mUnk_4[10];
-    /* a4 */
+    /* 04 */ 
 
     /* 0 */ virtual bool Filter(Actor *actor) override;
     /* 4 */
-
-    inline KillPickupsFilter() {
-        for (s32 i = 0; i < 10; ++i) {
-            mUnk_4[i].Reset();
-        }
-    }
 };
 
 typedef u32 PlayerCollide;
@@ -78,7 +71,13 @@ struct Knockback {
     /* 00 */ u8 mUnk_00;
     /* 04 */ Vec3p vec;
     /* 10 */ unk32 mUnk_10;
-    /* 14 */ unk32 mUnk_14;
+    /* 14 */ Actor *actor;
+
+    inline Knockback():
+        mUnk_00(0),
+        mUnk_10(0xb),
+        actor(NULL)
+    {}
 };
 
 class Actor : public SysObject {
@@ -139,7 +138,7 @@ public:
     /* 120 */ s16 mUnk_120;
     /* 122 */ unk16 mUnk_122;
     /* 124 */ u8 mUnk_124;
-    /* 125 */ unk8 mUnk_125;
+    /* 125 */ u8 mUnk_125;
     /* 126 */ u16 mUnk_126;
     /* 128 */ bool mUnk_128;
     /* 129 */ bool mUnk_129;

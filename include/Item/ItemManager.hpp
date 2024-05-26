@@ -252,7 +252,7 @@ public:
     void Shield_vfunc_38(unk32 param1);
     void EquipItem_vfunc_38(unk32 param1);
     bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
-    void EquipItem_vfunc_2c(ItemFlag equipId);
+    s32 EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem* GetEquipItem(ItemFlag equipId);
     bool func_ov00_020ad790(unk32 param1);
     bool SetEquippedItem(ItemFlag equipId);

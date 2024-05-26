@@ -211,8 +211,8 @@ ARM bool ItemManager::EquipCollidesWith(Cylinder *hitbox, ItemFlag equipId) {
     return false;
 }
 
-ARM void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
-    (*mEquipItems)[equipId]->vfunc_2c();
+ARM s32 ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
+    return (*mEquipItems)[equipId]->vfunc_2c();
 }
 
 ARM EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {

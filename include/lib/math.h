@@ -65,6 +65,12 @@ inline void Vec3p_CopyXZ(Vec3p *vec, Vec3p *out) {
     out->z = z;
 }
 
+inline void Vec3p_Copy(Vec3p *vec, Vec3p *out) {
+    out->x = vec->x;
+    out->y = vec->y;
+    out->z = vec->z;
+}
+
 typedef struct {
     /* 00 */ q20 x;
     /* 04 */ q20 y;
