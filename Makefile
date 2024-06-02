@@ -11,7 +11,7 @@ endif
 ifeq ($(OS),Windows_NT)
 	WINE :=
 else
-	WINE := wine
+	WINE ?= wine
 	PYTHON ?= python3.11
 endif
 
