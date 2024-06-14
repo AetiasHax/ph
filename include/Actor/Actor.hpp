@@ -76,7 +76,7 @@ public:
     /* 034 */ unk32 mUnk_034;
     /* 038 */ unk32 mUnk_038;
     /* 03c */ unk32 mUnk_03c;
-    /* 040 */ unk32 mUnk_040;
+    /* 040 */ u32 (*mUnk_040)(unk32);
     /* 044 */ unk32 mUnk_044;
     /* 048 */ Vec3p mPos;
     /* 054 */ Vec3p mPrevPos;
