@@ -4,7 +4,8 @@ import os
 import json
 
 parser = argparse.ArgumentParser(description='Generates objdiff.json for configuring objdiff')
-parser.add_argument('region', help='Game region, defaults to EUR', default='EUR')
+parser.add_argument('region', help='Game region, defaults to EUR', default='EUR', choices=['EUR', 'USA'])
+parser.add_argument('--gas', help='Use GNU assembler instead of MW', action=argparse.BooleanOptionalAction)
 
 args = parser.parse_args()
 
@@ -43,8 +44,11 @@ def get_build_path(path: Path) -> Path:
 config = dict()
 config["custom_make"] = "make"
 config["custom_args"] = [
+    "-B",
     f"REGION={args.region}"
 ]
+if args.gas:
+    config["custom_args"].append("GAS=1")
 config["build_target"] = True
 config["watch_patterns"] = [
     "*.c",

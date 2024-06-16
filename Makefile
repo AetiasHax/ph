@@ -41,14 +41,14 @@ BASE_ROM := baserom_$(REGION_NAME).nds
 CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-MW_ASM     := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
-MW_CC      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
-MW_LD      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
+ASM        := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
+CC         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
+LD         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
 MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
 LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
-ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
+ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc -g
 CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
 C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
@@ -56,6 +56,11 @@ LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure
 
 ifeq ($(NONMATCHING),1)
 	CC_FLAGS += -DNONMATCHING
+endif
+
+ifeq ($(GAS),1)
+	ASM       := arm-none-eabi-as
+	ASM_FLAGS := -march=armv5te --defsym $(REGION)=0 --defsym GNU=0 -I asm -g
 endif
 
 .PHONY: help
@@ -122,21 +127,21 @@ lcf: setup $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(ASM) $(ASM_FLAGS) $< -o $@
 
 $(CXX_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
 	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 $(C_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
+	LM_LICENSE_FILE=$(MW_LICENSE) $(CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
 	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
-	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
+	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
 
 .PHONY: compress
 compress: $(OV_LZS)
