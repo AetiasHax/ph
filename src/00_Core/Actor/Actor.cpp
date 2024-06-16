@@ -13,7 +13,7 @@ extern "C" {
 #include "Player/TouchControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
-static char *sShipTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
+static char *sShipTypes[] = { "brg", "anc", "bow", "hul", "can", "dco", "pdl", "fnl" };
 
 struct UnkStruct3 {
     /* 0 */ s16 mUnk_0;
