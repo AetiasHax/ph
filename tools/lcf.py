@@ -33,63 +33,45 @@ DTCM_OBJECTS = [
 ov00 = Overlay(name='ov00', after='ARM9', objects=[
     'asm/ov00/ov00_020773c0.s',
 
-    'src/00_Core/Player/TouchControl.cpp',
     'asm/ov00/Player/TouchControl.s',
 
     'asm/ov00/ov00_0207afa0.s',
 
     'asm/ov00/Map/Course.s',
-    'src/00_Core/Map/Course.cpp',
     'asm/ov00/Map/MapBase.s',
-    'src/00_Core/Map/MapBase.cpp',
 
     'asm/ov00/ov00_0207da38.s',
 
     'asm/ov00/Map/MapManager.s',
-    'src/00_Core/Map/MapManager.cpp',
 
     'asm/ov00/ov00_02086cd0.s',
 
-    'src/00_Core/Save/AdventureFlags.cpp',
     'asm/ov00/Save/AdventureFlags.s',
 
     'asm/ov00/ov00_020980f4.s',
 
-    'src/00_Core/Player/PlayerBase.cpp',
     'asm/ov00/Player/PlayerBase.s',
-    'src/00_Core/Player/LinkStateBase.cpp',
     'asm/ov00/Player/LinkStateBase.s',
-    'src/00_Core/Player/LinkStateMove.cpp',
     'asm/ov00/Player/LinkStateMove.s',
-    'src/00_Core/Player/LinkStateFollow.cpp',
     'asm/ov00/Player/LinkStateFollow.s',
-    'src/00_Core/Player/TouchGesture.cpp',
     'asm/ov00/Player/TouchGesture.s',
 
     'asm/ov00/ov00_020a8e04.s',
 
-    'src/00_Core/Player/LinkStateInteract.cpp',
     'asm/ov00/Player/LinkStateInteract.s',
-    'src/00_Core/Player/LinkStateItem.cpp',
     'asm/ov00/Player/LinkStateItem.s',
-    'src/00_Core/Player/LinkStateDamage.cpp',
     'asm/ov00/Player/LinkStateDamage.s',
-    'src/00_Core/Item/Item.cpp',
     'asm/ov00/Item/Item.s',
     'src/00_Core/Item/ItemManager.cpp',
-    'src/00_Core/Player/LinkStateRoll.cpp',
     'asm/ov00/Player/LinkStateRoll.s',
-    'src/00_Core/Player/PlayerControl.cpp',
     'asm/ov00/Player/PlayerControl.s',
 
     'asm/ov00/ov00_020b1498.s',
 
-    'src/00_Core/Actor/Actor.cpp',
     'asm/ov00/Actor/Actor.s',
 
     'asm/ov00/ov00_020c3348.s',
 
-    'src/00_Core/Actor/ActorManager.cpp',
     'asm/ov00/Actor/ActorManager.s',
 
     'asm/ov00/ov00_020c3e54.s',
@@ -136,7 +118,6 @@ ov13 = Overlay(name='ov13', after=[ov04, ov05, ov06, ov07], objects=[
 ov14 = Overlay(name='ov14', after=[ov08, ov09, ov10, ov13], objects=[
     'asm/ov14/ov14_0211f640.s',
 
-    'src/14_Land/Actor/ActorRupee.cpp',
     'asm/ov14/Actor/ActorRupee.s',
 
     'asm/ov14/ov14_0213b778.s',

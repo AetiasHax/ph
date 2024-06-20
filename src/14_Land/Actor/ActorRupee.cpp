@@ -1,7 +1,5 @@
 #include "Actor/ActorRupee.hpp"
 
-#ifdef STUBS
-
 Resource ActorRupee::gResource;
 ActorType ActorRupee::gType;
 
@@ -21,5 +19,3 @@ void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, boo
 void ActorRupee::func_ov14_0213b6a4(RupeeId id, void *param2) {}
 bool ActorRupee::func_ov14_0213b70c(RupeeId id) {}
 ActorRupee::~ActorRupee() {}
-
-#endif

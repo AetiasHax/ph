@@ -1,7 +1,5 @@
 #include "Map/Course.hpp"
 
-#ifdef STUBS
-
 void Course::GetDungeonProgress(CourseProgress *param_2) {}
 void Course::func_ov00_0207ca28(s32 param_2, unk32 param_3, unk32 param_4) {}
 char* Course::SetCourseName(char *src) {}
@@ -51,5 +49,3 @@ void Course::SetMapDataFlag4(unk32 param_2, unk32 param_3) {}
 bool Course::GetMapDataFlag4(unk32 param_2) {}
 MapData* Course::FindMapData(u32 map) {}
 MapData* Course::FindCurrentMapData() {}
-
-#endif

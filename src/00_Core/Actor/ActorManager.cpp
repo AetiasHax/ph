@@ -1,7 +1,5 @@
 #include "Actor/ActorManager.hpp"
 
-#ifdef STUBS
-
 void ActorManager::DeleteActor(u32 index, bool param2) {}
 void ActorManager::func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3) {}
 void ActorManager::Actor_vfunc_10(u32 param1) {}
@@ -19,5 +17,3 @@ s32 ActorManager::func_ov00_020c3bb0(unk32 param1, s32 *param2) {}
 void ActorManager::func_ov00_020c3ce8(unk32 param1, unk32 param2) {}
 void ActorManager::Actor_vfunc_28() {}
 bool ActorManager::ActorTypeIsOneOf(u32 type, u32 *types) {}
-
-#endif

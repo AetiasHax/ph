@@ -1,7 +1,5 @@
 #include "Player/LinkStateBase.hpp"
 
-#ifdef STUBS
-
 void LinkStateBase::vfunc_00() {}
 void LinkStateBase::OnStateEnter() {}
 void LinkStateBase::OnStateLeave(s32 param1) {}
@@ -85,5 +83,3 @@ unk32 LinkStateBase::Get_PlayerControlData_Unk120() {}
 s32 LinkStateBase::Get_PlayerLinkBase_Unk38() {}
 DebugHierarchy* LinkStateBase::GetDebugHierarchy0() {}
 DebugHierarchy* LinkStateBase::GetDebugHierarchy1() {}
-
-#endif
