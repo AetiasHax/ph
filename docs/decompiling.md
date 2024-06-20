@@ -20,43 +20,55 @@ again. Remember to make a pull request of any notable progress you made on the s
 [non-matching functions](/CONTRIBUTING.md#non-matching-functions).
 
 ## Decompiling a source file
-It can be tricky to fully decompile an assembly file into a C/C++ source file, so here's some advice to make it easier:
-- C/C++ code is built before assembly code
-    - This means you can take one function from the top of your assembly file, decompile it, and append it to the bottom of
-    your C/C++ file.
-- Build the ROM often
-    - We recommend building every time you decompile a function.
-    - This is because functions can sometimes match in decomp.me, but not when building.
-    - If your ROM doesn't match, it's easier to know which function is wrong if it's the only function added since the last
-    successful build.
+We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between C++ and assembly
+code.
+1. [Download the latest release.](https://github.com/encounter/objdiff/releases/latest)
+1. Run `python tools/objdiff.py <EUR|USA>` to generate `objdiff.json` in the project root.
+1. In `objdiff`, set the project directory to the root of this project. This will load `objdiff.json`.
+1. Select your source file in the left sidebar:  
+![List of objects in objdiff](images/objdiff_objects.png)
+5. See the list of functions and data to decompile:  
+![List of symbols in objdiff](images/objdiff_symbols.png)
+
+> [!NOTE]
+> If a source file is missing in `objdiff`, or `objdiff` fails to build a file, first rerun `objdiff.py` to update
+> `objdiff.json`. If the problem persists, feel free to ask for help.
 
 ## Decompiling a function
-Say you've found a function you want to decompile. Here are the steps we recommend for decompiling it:
-1. Visit [decomp.me](https://decomp.me/) and start decomping.
-1. Under the platforms, select "Nintendo DS".
-1. Select compiler preset "Phantom Hourglass".
-1. Copy and paste the target assembly for your function, including the `func_start` and `func_end` macros, and the pool
-constants. For example:
-```arm
-	.global func_ov09_0211bf48
-	thumb_func_start func_ov09_0211bf48
-func_ov09_0211bf48: ; 0x0211bf48
-	ldr r0, _0211bf50 ; =data_ov09_0211f59c
-	ldrb r0, [r0]
-	bx lr
-	nop
-	thumb_func_end func_ov09_0211bf48
-_0211bf50: .word data_ov09_0211f59c
+Once you've opened a source file in `objdiff`, you can choose to decompile the functions in any order. We recommend starting
+with a small function if you're unfamiliar with decompilation. Here's an example:
+
+![Function in objdiff](images/objdiff_function.png)
+
+As a starting point, we look at the decompiler output in Ghidra. You can request access to our shared Ghidra project [in this section](#the-ghidra-project).
+
+![Decompiler in Ghidra](images/ghidra_decomp.png)
+
+Looking at this output, we might try writing something like this:
+```cpp
+ARM bool Actor::SetVelocity(Vec3p *vel) {
+    if (mUnk_11b) {
+        mVel = *vel;
+        mUnk_11b = false;
+        return true;
+    }
+    return false;
+}
 ```
-5. Run `m2ctx.py include/MyHeader.hpp -c` to generate a context and put it in your clipboard.
-    - If no suitable header file exists, make a new one and put any structs and types you need in there.
-1. Paste the context into decomp.me, and create the scratch.
-1. Decompile the function and try to get a 100% match.
-    - There's no ARM decompiler in decomp.me yet, but Ghidra does the job quite well. See [the Ghidra section](#the-ghidra-project)
-    for more info.
-    - If you're unable to get a 100% match, share your decomp.me scratch with other contributors and they may assist you.
-    - In the worst case, you can also contribute [non-matching functions](/CONTRIBUTING.md#non-matching-functions) to this
-    project.
+
+Now we can go back to `objdiff` and look at the result:
+
+![Matching function in objdiff](images/objdiff_match.png)
+
+Success! Note that this was a simple example and that you'll sometimes get stuck on a function. In that case, try the
+following:
+- Decompile a different function and come back later.
+- Export to [decomp.me](https://decomp.me/):
+    1. Press the `decomp.me` button in `objdiff`.
+    1. Once you're sent to `decomp.me`, go to "Options" and change the preset to "Phantom Hourglass".
+    1. Paste your code into the "Source code" tab.
+    1. Share the link with us!
+- Add the function as a [non-matching function](/CONTRIBUTING.md#non-matching-functions).
 
 ## Decompiling `.init` functions
 > [!NOTE]
