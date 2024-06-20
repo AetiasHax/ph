@@ -35,14 +35,15 @@ def find_asm_path(src_path: Path) -> Path | None:
     return asm_path
 
 
-def get_build_path(path: Path) -> Path:
+def get_build_path(path: Path, extension='.o') -> Path:
     region = args.region.lower()
-    return Path('build') / region / path.parent / (path.name + '.o')
+    return Path('build') / region / path.parent / (path.name + extension)
 
 
 config = dict()
 config["custom_make"] = "make"
 config["custom_args"] = [
+    "-B",
     f"REGION={args.region}"
 ]
 config["build_target"] = True
@@ -61,6 +62,7 @@ for (root, dirs, files) in os.walk(src_dir):
         src_path = Path(f'{root}/{file}')
         src_path = src_path.relative_to(src_dir)
         asm_path = find_asm_path(src_path)
+        src_path = 'src' / src_path
 
         if asm_path: asm_path = 'asm' / asm_path
 
@@ -69,8 +71,16 @@ for (root, dirs, files) in os.walk(src_dir):
         obj = dict()
         obj["name"] = name
         if asm_path.exists(): obj["target_path"] = str(get_build_path(asm_path))
-        obj["base_path"] = str(get_build_path('src' / src_path))
+        obj["base_path"] = str(get_build_path(src_path))
         obj["reverse_fn_order"] = False
+
+        scratch = dict()
+        scratch["platform"] = "nds_arm9"
+        scratch["compiler"] = "mwcc_30_131"
+        scratch["ctx_path"] = str(get_build_path(src_path, '.ctx'))
+        scratch["build_ctx"] = True
+
+        obj["scratch"] = scratch
 
         config["objects"].append(obj)
 
