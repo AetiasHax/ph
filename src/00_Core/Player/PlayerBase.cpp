@@ -1,4 +1,4 @@
-#include "Player/PlayerLinkBase.hpp"
+#include "Player/PlayerBase.hpp"
 
 bool PlayerBase::vfunc_04() {}
 ItemFlag PlayerBase::GetEquipId() {}
@@ -11,7 +11,7 @@ void PlayerBase::LookAt(Vec3p *target) {}
 bool PlayerBase::func_ov00_020a7c00(s32 param1) {}
 bool PlayerBase::CollidesWith(Cylinder *cylinder) {}
 bool PlayerBase::func_ov00_020a7c60(Vec3p *param1, Vec3p *param2, s32 param3) {}
-void PlayerBase::EquipItem_vfunc_3c(Cylinder *cylinder, ItemFlag equipId) {}
+bool PlayerBase::EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId) {}
 s32 PlayerBase::EquipItem_vfunc_2c() {}
 void PlayerBase::SetHealth(s16 health) {}
 void PlayerBase::AddHealth(s16 amount) {}
