@@ -1,7 +1,5 @@
 #include "Player/PlayerControl.hpp"
 
-#ifdef STUBS
-
 bool PlayerControl::func_ov00_020aeeac() {}
 void PlayerControl::func_ov00_020aeef8() {}
 void PlayerControl::func_ov00_020aef30() {}
@@ -52,5 +50,3 @@ bool PlayerControl::IsNotTouching() {}
 bool PlayerControl::IsTouchingFast() {}
 bool PlayerControl::IsTappedNow() {}
 bool PlayerControl::func_ov00_020b13c4() {}
-
-#endif

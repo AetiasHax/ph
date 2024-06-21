@@ -140,6 +140,7 @@ struct ActorType {
     /* 10 */ ActorType *next;
     /* 14 */
 
+    inline ActorType() {}
     ActorType(ActorTypeId id, ActorCreateFunc create, unk32 (*unk_08)());
     ~ActorType();
     unk32 func_0203e7c8();

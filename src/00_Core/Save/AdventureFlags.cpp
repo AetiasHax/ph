@@ -1,7 +1,5 @@
 #include "Save/AdventureFlags.hpp"
 
-#ifdef STUBS
-
 bool AdventureFlags::Exists() {}
 void AdventureFlags::CopyTo(unk32 *flags) {}
 void AdventureFlags::func_ov00_02097674() {}
@@ -50,5 +48,3 @@ bool AdventureFlags::func_ov00_0209809c() {}
 bool AdventureFlags::func_ov00_020980ac() {}
 void AdventureFlags::func_ov00_020980bc(s32 param1) {}
 void AdventureFlags::func_ov00_020980d0() {}
-
-#endif

@@ -1,7 +1,5 @@
 #include "Player/PlayerLinkBase.hpp"
 
-#ifdef STUBS
-
 bool PlayerBase::vfunc_04() {}
 ItemFlag PlayerBase::GetEquipId() {}
 bool PlayerBase::CanMove() {}
@@ -20,5 +18,3 @@ void PlayerBase::AddHealth(s16 amount) {}
 bool PlayerBase::Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) {}
 bool PlayerBase::TeleportToEntrance(unk32 entranceId, bool param2) {}
 bool PlayerBase::TeleportToLastEntrance(bool param1) {}
-
-#endif

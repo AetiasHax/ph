@@ -6,6 +6,8 @@ import subprocess
 import os
 from pathlib import Path
 import argparse
+import re
+import tempfile
 
 parser = argparse.ArgumentParser(description="Generates a context for decomp.me")
 parser.add_argument('file', help="Input file to preprocess")
@@ -28,19 +30,40 @@ root_dir = script_dir / ".."
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
-try:
-    ctx: str = subprocess.check_output([
-        'gcc',
-        '-E', '-P', '-fworking-directory', '-undef', '-dD',
-        *CXX_FLAGS,
-        args.file
-    ], cwd=root_dir, encoding=args.encoding)
-except subprocess.CalledProcessError as e:
-    eprint(f"Failed to preprocess '{args.file}'")
-    if args.verbose: eprint(e)
-    else: eprint("Use -v for more verbose error output")
-    exit(1)
+# Finds all lines starting with #include followed by <...> or "..."
+INCLUDE_REGEX = r'^\s*#\s*include\s*([<"][\S ]+[>"])\s*$'
+# Finds all line comments and multiline comments
+COMMENT_REGEX = r'\/\/.*$|\/\*(?:.|\r|\n)+?\*\/'
+# Finds all lines from #ifndef NONMATCHING to #else
+NONMATCH_REGEX = r'^\s*#\s*ifndef\s*NONMATCHING\s*(?:.|\r|\n)*\n\s*#\s*else\s*$'
 
+with open(args.file, 'r') as f:
+    contents = f.read()
+contents = re.sub(COMMENT_REGEX, '', contents, 0, re.MULTILINE)
+contents = re.sub(NONMATCH_REGEX, '', contents, 0, re.MULTILINE)
+includes = re.findall(INCLUDE_REGEX, contents, re.MULTILINE)
+
+_, suffix = os.path.splitext(args.file)
+
+with tempfile.NamedTemporaryFile(delete=True, suffix=suffix) as tmp_file:
+    # Write includes
+    for include in includes:
+        tmp_file.write(f'#include {include}\n'.encode())
+    tmp_file.flush()
+
+    # Run preprocessor
+    try:
+        ctx: str = subprocess.check_output([
+            'gcc',
+            '-E', '-P', '-fworking-directory', '-undef', '-dD',
+            *CXX_FLAGS,
+            tmp_file.name
+        ], cwd=root_dir, encoding=args.encoding)
+    except subprocess.CalledProcessError as e:
+        eprint(f"Failed to preprocess '{args.file}'")
+        if args.verbose: eprint(e)
+        else: eprint("Use -v for more verbose error output")
+        exit(1)
 
 lines = ctx.splitlines(True)
 for i in reversed(range(len(lines))):

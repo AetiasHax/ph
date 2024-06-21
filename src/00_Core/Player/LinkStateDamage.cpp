@@ -1,7 +1,5 @@
 #include "Player/LinkStateDamage.hpp"
 
-#ifdef STUBS
-
 void LinkStateDamage::vfunc_00() {}
 void LinkStateDamage::CreateDebugHierarchy() {}
 void LinkStateDamage::OnStateEnter() {}
@@ -16,5 +14,3 @@ bool LinkStateDamage::vfunc_24(s32 param1) {}
 bool LinkStateDamage::vfunc_20(s32 param1) {}
 void LinkStateDamage::func_ov00_020acfe8(bool param1) {}
 LinkStateId LinkStateDamage::GetId() {}
-
-#endif

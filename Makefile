@@ -11,7 +11,7 @@ endif
 ifeq ($(OS),Windows_NT)
 	WINE :=
 else
-	WINE := wine
+	WINE ?= wine
 	PYTHON ?= python3.11
 endif
 
@@ -27,11 +27,13 @@ ASSETS_TXT := assets.txt
 
 ASM_FILES := $(shell find asm -name *.s)
 CXX_FILES := $(shell find src -name *.cpp) $(shell find libs -name *.cpp)
-C_FILES := $(shell find src -name *.c) $(shell find libs -name *.c)
-ASM_OBJS = $(ASM_FILES:%.s=$(TARGET_DIR)/%.s.o)
-ASM_INCS = $(ASM_FILES:%.s=%.inc)
-CXX_OBJS = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.o)
-C_OBJS = $(C_FILES:%.c=$(TARGET_DIR)/%.c.o)
+C_FILES   := $(shell find src -name *.c) $(shell find libs -name *.c)
+ASM_OBJS   = $(ASM_FILES:%.s=$(TARGET_DIR)/%.s.o)
+ASM_INCS   = $(ASM_FILES:%.s=%.inc)
+CXX_OBJS   = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.o)
+C_OBJS     = $(C_FILES:%.c=$(TARGET_DIR)/%.c.o)
+CXX_CTXS   = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.ctx)
+C_CTXS     = $(C_FILES:%.c=$(TARGET_DIR)/%.c.ctx)
 
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
@@ -124,15 +126,19 @@ $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
 
-$(CXX_OBJS): $(TARGET_DIR)/%.o: %
+$(CXX_OBJS): $(TARGET_DIR)/%.o: % $(TARGET_DIR)/%.ctx
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
 	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
-$(C_OBJS): $(TARGET_DIR)/%.o: %
+$(C_OBJS): $(TARGET_DIR)/%.o: % $(TARGET_DIR)/%.ctx
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
 	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
+
+$(CXX_CTXS) $(C_CTXS): $(TARGET_DIR)/%.ctx: %
+	mkdir -p $(dir $@)
+	$(PYTHON) $(TOOLS_DIR)/m2ctx.py -f $@ $<
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
