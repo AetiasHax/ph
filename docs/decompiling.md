@@ -68,7 +68,7 @@ following:
     1. Once you're sent to `decomp.me`, go to "Options" and change the preset to "Phantom Hourglass".
     1. Paste your code into the "Source code" tab.
     1. Share the link with us!
-- Add the function as a [non-matching function](/CONTRIBUTING.md#non-matching-functions).
+- In the worst case, add the function as a [non-matching function](/CONTRIBUTING.md#non-matching-functions).
 
 ## Decompiling `.init` functions
 > [!NOTE]
