@@ -2901,7 +2901,7 @@ func_ov32_0217e10c: ; 0x0217e10c
 	mov r0, #0x800
 	str r0, [r4, #0x210]
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x24]
 	str r0, [sp, #0x28]
@@ -5469,7 +5469,7 @@ func_ov32_021802c4: ; 0x021802c4
 	sub sp, sp, #0x30
 	mov r4, r0
 	add r0, sp, #4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]
@@ -10289,7 +10289,7 @@ func_ov32_0218439c: ; 0x0218439c
 	movgt r0, #0
 	ldmgtia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mov r1, r5
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]

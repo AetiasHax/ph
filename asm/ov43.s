@@ -2930,7 +2930,7 @@ _0218bbf8:
 	strb r2, [sp, #0x14b]
 	strb r2, [sp, #0x14c]
 	strb r2, [sp, #0x14d]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x64
 	str r1, [sp, #0x80]
@@ -3025,7 +3025,7 @@ _0218bd3c:
 	strb r1, [sp, #0xeb]
 	strb r1, [sp, #0xec]
 	strb r1, [sp, #0xed]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x38
 	str r1, [sp, #0x54]

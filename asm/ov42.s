@@ -355,7 +355,7 @@ _02189918:
 	mov r0, #0
 	strb r0, [r7, #0x66]
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x2c]
 	str r0, [sp, #0x30]

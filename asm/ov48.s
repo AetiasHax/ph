@@ -1330,7 +1330,7 @@ func_ov48_02190e80: ; 0x02190e80
 	mov r1, #0
 	str r1, [r4, r0]
 	add r0, sp, #0x1c
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x38]
@@ -2572,7 +2572,7 @@ _02191e9a:
 	str r0, [sp, #4]
 _02191ed2:
 	add r0, sp, #0x58
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x74]

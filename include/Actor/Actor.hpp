@@ -18,9 +18,9 @@ struct Actor_UnkStruct_020 {
     /* 08 */ u8 mUnk_08[2];
     /* 0a */ u8 mUnk_0a[2];
     /* 0c */ unk8 mUnk_0c;
-    /* 0c */ unk8 mUnk_0d;
-    /* 0c */ unk8 mUnk_0e;
-    /* 0c */ unk8 mUnk_0f;
+    /* 0d */ unk8 mUnk_0d;
+    /* 0e */ unk8 mUnk_0e;
+    /* 0f */ unk8 mUnk_0f;
     /* 10 */ unk32 mUnk_10;
     /* 14 */
 

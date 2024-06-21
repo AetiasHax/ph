@@ -1568,7 +1568,7 @@ _0217cff0:
 	b _0217d360
 _0217d30c:
 	mov r0, r8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, r8
 	str r7, [sp, #0x50]
 	str r7, [sp, #0x54]
@@ -5864,7 +5864,7 @@ _02180f8c:
 	cmp r0, #0
 	beq _02181098
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x24
 	str r1, [sp, #0x40]
@@ -9372,7 +9372,7 @@ func_ov38_02184120: ; 0x02184120
 	add r0, sp, #0x1c
 	str r1, [sp, #8]
 	str r1, [sp, #0xc]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x1c
 	str r1, [sp, #0x38]
@@ -9426,7 +9426,7 @@ func_ov38_021841e0: ; 0x021841e0
 	add r0, sp, #0xc
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -9531,7 +9531,7 @@ _021842c4:
 	bl func_ov00_020a61ac
 _02184374:
 	add r0, sp, #0x7c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x7c
 	str r1, [sp, #0x98]
@@ -9856,7 +9856,7 @@ _02184808:
 	str r2, [sp, #0x4c]
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -10014,7 +10014,7 @@ func_ov38_02184a18: ; 0x02184a18
 	ldrsh r1, [r1, #0x20]
 	strh r1, [r2, #0x80]
 	str r3, [r4, #0x12c]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x28
 	str r1, [sp, #0x44]
@@ -11174,7 +11174,7 @@ func_ov38_02185a70: ; 0x02185a70
 	mov r6, r1
 	mov r5, r2
 	mov r4, r3
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -11222,7 +11222,7 @@ func_ov38_02185b14: ; 0x02185b14
 	mov r4, r3
 	bl func_ov38_0217e4e0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x34]
 	str r0, [sp, #0x38]

@@ -249,7 +249,7 @@ func_ov51_02195804: ; 0x02195804
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]

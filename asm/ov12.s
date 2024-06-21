@@ -33782,7 +33782,7 @@ func_ov12_0212e274: ; 0x0212e274
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x38
 	add r0, sp, #0xc
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -36648,7 +36648,7 @@ func_ov12_02130868: ; 0x02130868
 	str r1, [r2]
 	str r1, [r2, #4]
 	str r1, [r2, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]

@@ -2040,7 +2040,7 @@ func_ov52_02196ea8: ; 0x02196ea8
 	cmp r0, #0
 	beq _02196f6c
 	add r0, sp, #0x50
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x50
 	str r1, [sp, #0x6c]
@@ -2086,7 +2086,7 @@ _02196fa4:
 	add r0, sp, #0x18
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -2201,7 +2201,7 @@ func_ov52_02197118: ; 0x02197118
 	cmp r0, #0
 	bne _021971b0
 	add r0, sp, #0x28
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x28
 	str r1, [sp, #0x44]

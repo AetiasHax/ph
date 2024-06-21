@@ -114,7 +114,7 @@ func_ov47_0219017c: ; 0x0219017c
 	sub sp, sp, #0x30
 	mov r4, r0
 	add r0, sp, #4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]
@@ -3631,7 +3631,7 @@ func_ov47_0219305c: ; 0x0219305c
 	sub sp, sp, #0x44
 	mov r4, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]

@@ -4455,7 +4455,7 @@ func_ov46_02193b30: ; 0x02193b30
 	cmp r0, #2
 	bne _02193c04
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #8
 	str r1, [sp, #0x24]

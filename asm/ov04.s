@@ -13986,7 +13986,7 @@ _0210775c:
 	cmp r0, #2
 	beq _021077ee
 	add r0, sp, #4
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x20]
@@ -17339,7 +17339,7 @@ _021091ca:
 	add r0, r2, r0
 	str r0, [sp, #0x80]
 	add r0, sp, #0x48
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r1, #0
 	add r2, sp, #0x5c
 	add r3, sp, #0x48
@@ -17381,7 +17381,7 @@ _02109222:
 _02109224:
 	strb r1, [r0, #0xe]
 	add r0, sp, #0x1c
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x38]
@@ -18199,7 +18199,7 @@ _02109820:
 	add r2, r0, #0
 	blx Vec3p_Add
 	add r0, sp, #0x3c
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r1, #0
 	add r2, sp, #0x50
 	add r3, sp, #0x3c
@@ -18241,7 +18241,7 @@ _021098b4:
 _021098b6:
 	strb r1, [r0, #0xe]
 	add r0, sp, #0x10
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x2c]
@@ -24818,7 +24818,7 @@ func_ov04_0210cb38: ; 0x0210cb38
 	cmp r0, #4
 	bne _0210cb7a
 	add r0, sp, #0x80
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x9c]
@@ -24850,7 +24850,7 @@ _0210cb7a:
 	cmp r0, #4
 	bne _0210cbc2
 	add r0, sp, #0x48
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x64]
@@ -24879,7 +24879,7 @@ _0210cbc2:
 	cmp r0, #2
 	bne _0210cc04
 	add r0, sp, #0x10
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x2c]

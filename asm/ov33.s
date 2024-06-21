@@ -4246,7 +4246,7 @@ func_ov33_0217f4a0: ; 0x0217f4a0
 	sub sp, sp, #0x30
 	mov r4, r0
 	add r0, sp, #4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]

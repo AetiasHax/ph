@@ -445,7 +445,7 @@ _0217c290:
 	ldrb r1, [r1, #0x125]
 	strb r1, [r10, #0x125]
 	strb r2, [r10, #0x554]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -3652,7 +3652,7 @@ _0217ee08:
 	mov r2, #0x1000
 	add r0, sp, #0x10
 	str r2, [r1, #0x10]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -8187,7 +8187,7 @@ _02182e40:
 	addne sp, sp, #0x118
 	ldmneia sp!, {r4, r5, r6, r7, r8, r9, r10, pc}
 	add r0, sp, #0x58
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x58
 	str r1, [sp, #0x74]

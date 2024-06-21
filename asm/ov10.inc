@@ -185,7 +185,7 @@
 .extern func_ov00_0207c118
 .extern func_ov00_0207c170
 .extern func_ov00_0207c190
-.extern func_ov00_020c1500
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020cfed0
 .extern func_ov00_020d00c4
 .extern func_ov00_020d03c4

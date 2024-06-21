@@ -53,6 +53,22 @@ const UnkStruct3 sUnkTable[] = {
     { 2, 2 },
 };
 
+KILL(_ZN19Actor_UnkStruct_020C2Ev)
+Actor_UnkStruct_020::Actor_UnkStruct_020():
+    mUnk_0c(-1),
+    mUnk_0d(0),
+    mUnk_0e(1),
+    mUnk_10(-1)
+{
+    for (s32 i = 0; i < 4; ++i) {
+        mUnk_00[i] = 0;
+    }
+    for (s32 i = 0; i < 2; ++i) {
+        mUnk_08[i] = 0;
+        mUnk_0a[i] = 0;
+    }
+}
+
 KILL(_ZN5ActorC1Ev)
 ARM Actor::Actor():
     mType(ActorTypeId_Null),

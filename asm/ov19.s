@@ -982,7 +982,7 @@ func_ov19_0216e334: ; 0x0216e334
 	sub sp, sp, #0x7c
 	mov r4, r0
 	add r0, sp, #0x50
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x50
 	str r1, [sp, #0x6c]
@@ -8180,7 +8180,7 @@ func_ov19_0217416c: ; 0x0217416c
 	mov r4, r1
 	str r2, [sp, #4]
 	str r2, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]

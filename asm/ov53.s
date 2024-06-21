@@ -607,7 +607,7 @@ func_ov53_02199410: ; 0x02199410
 	add r0, sp, #4
 	add r1, r1, #0x800
 	str r1, [sp, #0x34]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x20]
 	str r0, [sp, #0x24]

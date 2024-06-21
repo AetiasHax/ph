@@ -4252,7 +4252,7 @@ _0215ecb8:
 	cmpne r0, #0
 	beq _0215ed70
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x24
 	str r1, [sp, #0x40]
@@ -6375,7 +6375,7 @@ func_ov18_0216065c: ; 0x0216065c
 	cmp r0, #0
 	beq _02160774
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x24
 	str r1, [sp, #0x40]
@@ -9046,7 +9046,7 @@ _0216285c:
 	cmp r0, #0
 	bne _02162950
 	add r0, sp, #0x118
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x118
 	str r1, [sp, #0x134]
@@ -9115,7 +9115,7 @@ _02162968:
 	cmp r0, #0
 	bne _02162a48
 	add r0, sp, #0xec
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xec
 	str r1, [sp, #0x108]
@@ -9181,7 +9181,7 @@ _02162a60:
 	cmp r0, #0
 	bne _02162ab4
 	add r0, sp, #0xb4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xb4
 	str r1, [sp, #0xd0]
@@ -9210,7 +9210,7 @@ _02162acc:
 	cmp r0, #0
 	bne _02162b20
 	add r0, sp, #0x88
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x88
 	str r1, [sp, #0xa4]
@@ -9239,7 +9239,7 @@ _02162b38:
 	cmp r0, #0
 	bne _02162b94
 	add r0, sp, #0x5c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x5c
 	str r1, [sp, #0x78]
@@ -9270,7 +9270,7 @@ _02162bac:
 	cmp r0, #0
 	bne _02162c08
 	add r0, sp, #0x30
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x30
 	str r1, [sp, #0x4c]
@@ -9301,7 +9301,7 @@ _02162c20:
 	cmp r0, #0
 	bne _02162c7c
 	add r0, sp, #4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]
@@ -12454,7 +12454,7 @@ func_ov18_02165420: ; 0x02165420
 	mov r1, #0
 	add r0, sp, #0x30
 	str r1, [r4, #0x12c]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x30
 	str r1, [sp, #0x4c]
@@ -12504,7 +12504,7 @@ _02165590:
 	mov r1, #0
 	add r0, sp, #4
 	str r1, [r4, #0x12c]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]

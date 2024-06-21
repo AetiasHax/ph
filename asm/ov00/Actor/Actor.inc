@@ -59,7 +59,7 @@
 .extern _ZN14PlayerLinkBase20GongoronCollidesWithEP8Cylinder
 .extern func_ov00_020bd304
 .extern _ZN10EquipSword12GetEquipRopeEv
-.extern func_ov00_020c1500
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020c5924
 .extern func_ov00_020c8398
 .extern func_ov05_02103f4c

@@ -215,7 +215,7 @@ _0216d878:
 	strh r1, [r4, #0x9c]
 	bl func_ov27_0216da38
 	add r0, sp, #0xc
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x28]
 	str r0, [sp, #0x2c]
@@ -6729,7 +6729,7 @@ func_ov27_02173430: ; 0x02173430
 	addlt sp, sp, #0x44
 	ldmltia sp!, {r3, r4, pc}
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]

@@ -3721,7 +3721,7 @@ func_ov23_021706b8: ; 0x021706b8
 	sub sp, sp, #0x30
 	mov r4, r0
 	add r0, sp, #4
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]
@@ -5939,7 +5939,7 @@ func_ov23_02172434: ; 0x02172434
 	sub sp, sp, #0x38
 	mov r4, r0
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	ldr r3, [r4, #0x3c]
 	cmp r3, #0
 	blt _021724f8
@@ -8137,7 +8137,7 @@ func_ov23_02174204: ; 0x02174204
 	sub sp, sp, #0x44
 	mov r5, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -8744,7 +8744,7 @@ _021749f8:
 	cmp r0, #0
 	beq _02174bbc
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x24
 	str r1, [sp, #0x40]

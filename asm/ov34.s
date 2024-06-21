@@ -3405,7 +3405,7 @@ _0217ece0:
 	str r2, [r1, #0xa78]
 	mvn r1, #0xcc
 	str r1, [r4, #0x68]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -5710,7 +5710,7 @@ _02180d84:
 	cmp r2, #0
 	ble _02180f2c
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]

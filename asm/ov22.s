@@ -7668,7 +7668,7 @@ func_ov22_02173ab0: ; 0x02173ab0
 	strb r2, [r4, #0x1a6]
 	mov r1, #4
 	strb r1, [r4, #0x1a8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x20]
 	str r0, [sp, #0x24]
@@ -12145,7 +12145,7 @@ _02177548:
 	cmp r0, r1
 	bge _021776d4
 	add r0, sp, #0x1c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x1c
 	str r1, [sp, #0x38]

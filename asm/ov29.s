@@ -3524,7 +3524,7 @@ _02170540:
 	cmp r4, #0
 	beq _021705bc
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #8
 	str r1, [sp, #0x24]
@@ -3663,7 +3663,7 @@ _02170734:
 	cmp r4, #0
 	beq _021707b0
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #8
 	str r1, [sp, #0x24]
@@ -4083,7 +4083,7 @@ func_ov29_02170ca0: ; 0x02170ca0
 	str r0, [r5, #0x248]
 	beq _02170dc8
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #8
 	str r1, [sp, #0x24]
@@ -4268,7 +4268,7 @@ _02170ff0:
 	cmp r4, #0
 	beq _02171070
 	add r0, sp, #8
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #8
 	str r1, [sp, #0x24]
@@ -5873,7 +5873,7 @@ func_ov29_02172494: ; 0x02172494
 	cmp r0, #1
 	bge _02172590
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -5951,7 +5951,7 @@ func_ov29_021725b0: ; 0x021725b0
 	cmp r0, #1
 	bge _021726a0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -11042,7 +11042,7 @@ _02176b94:
 	add r0, sp, #0xc
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -11696,7 +11696,7 @@ _02177450:
 	cmp r0, #0
 	beq _02177500
 	add r0, sp, #0x24
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x24
 	str r1, [sp, #0x40]

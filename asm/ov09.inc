@@ -272,7 +272,7 @@
 .extern func_ov00_020c0d68
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
-.extern func_ov00_020c1500
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020cef40
 .extern func_ov00_020cf270
 .extern func_ov00_020cf330

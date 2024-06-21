@@ -1055,7 +1055,7 @@ func_ov08_0211396c: ; 0x0211396c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #0x1c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, r4
 	ldmia sp!, {r4, pc}
 	arm_func_end func_ov08_0211396c

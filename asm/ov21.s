@@ -856,7 +856,7 @@ func_ov21_0216e128: ; 0x0216e128
 	sub sp, sp, #0x44
 	mov r4, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]

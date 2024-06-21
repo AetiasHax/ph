@@ -1267,7 +1267,7 @@ func_ov57_02199d54: ; 0x02199d54
 	add r0, sp, #4
 	add r1, r1, #0x800
 	str r1, [sp, #0x34]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]

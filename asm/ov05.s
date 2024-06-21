@@ -10629,7 +10629,7 @@ _02109868:
 	b _021098bc
 _02109874:
 	add r0, sp, #0
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	sub r0, r4, #0x21
 	and r3, r0, #0xff
 	ldr r1, _021099c8 ; =0x43525953

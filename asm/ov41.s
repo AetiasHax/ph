@@ -3337,7 +3337,7 @@ _0218bff0:
 	mov r3, #0
 	bl func_ov00_020ceacc
 	mov r0, r5
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	str r7, [sp, #0x24]
 	str r7, [sp, #0x28]
 	mov r0, r5

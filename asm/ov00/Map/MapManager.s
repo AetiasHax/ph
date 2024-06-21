@@ -3654,7 +3654,7 @@ _ZN10MapManager8SpawnNPCEP5Vec3pii: ; 0x02084a5c
 	mov r6, r1
 	mov r5, r2
 	mov r4, r3
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]

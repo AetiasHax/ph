@@ -714,7 +714,7 @@ _0219941a:
 	add r0, r1, r0
 	str r0, [sp, #0x34]
 	add r0, sp, #4
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x20]

@@ -6727,7 +6727,7 @@ _0208c564:
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -11169,7 +11169,7 @@ _0208ff48:
 	str r4, [sp, #0x68]
 	str r1, [sp, #0x6c]
 	str r2, [sp, #0x70]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x30
 	str r1, [sp, #0x4c]
@@ -19647,7 +19647,7 @@ _020967e0:
 	cmp r0, #0
 	bge _02096974
 	add r0, sp, #0x2c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x2c
 	str r1, [sp, #0x48]

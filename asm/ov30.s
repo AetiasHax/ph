@@ -9141,7 +9141,7 @@ func_ov30_02183018: ; 0x02183018
 	add r0, sp, #0xc
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -9275,7 +9275,7 @@ func_ov30_0218322c: ; 0x0218322c
 	add r0, sp, #0xc
 	str r1, [sp, #4]
 	str r1, [sp, #8]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -10933,7 +10933,7 @@ _02184564:
 	str r0, [sp, #8]
 	str r0, [sp, #0xc]
 	add r0, sp, #0x10
-	blx func_ov00_020c1500
+	blx _ZN19Actor_UnkStruct_020C1Ev
 	mov r0, #0
 	mvn r0, r0
 	str r0, [sp, #0x2c]

@@ -32,7 +32,7 @@
 .extern func_ov00_020b41c4
 .extern func_ov00_020be990
 .extern func_ov00_020beb30
-.extern func_ov00_020c1500
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020c3348
 .extern func_ov00_020c4048
 .extern func_ov00_020cebcc

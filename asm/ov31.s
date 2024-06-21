@@ -1485,7 +1485,7 @@ func_ov31_0217cfd4: ; 0x0217cfd4
 	str r2, [r1, #0x10]
 	bl func_ov31_0217d588
 	add r0, sp, #0x30
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x30
 	str r1, [sp, #0x4c]

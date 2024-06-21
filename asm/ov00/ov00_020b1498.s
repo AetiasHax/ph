@@ -18409,7 +18409,7 @@ _020bfb20:
 	add r1, r8, r2
 	add r0, sp, #0x64
 	str r1, [sp, #0x98]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x80]
 	str r0, [sp, #0x84]
@@ -20392,34 +20392,6 @@ _020c14f0:
 	bl func_ov00_020c10d4
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 	arm_func_end func_ov00_020c1450
-
-	.global func_ov00_020c1500
-	arm_func_start func_ov00_020c1500
-func_ov00_020c1500: ; 0x020c1500
-	mvn r2, #0
-	mov r3, #0
-	strb r2, [r0, #0xc]
-	strb r3, [r0, #0xd]
-	mov r1, #1
-	strb r1, [r0, #0xe]
-	str r2, [r0, #0x10]
-	mov ip, r3
-_020c1520:
-	mov r1, r3, lsl #0x1
-	add r3, r3, #1
-	strh ip, [r0, r1]
-	cmp r3, #4
-	blt _020c1520
-	mov r1, #0
-_020c1538:
-	add r2, r0, ip
-	strb r1, [r2, #8]
-	add ip, ip, #1
-	strb r1, [r2, #0xa]
-	cmp ip, #2
-	blt _020c1538
-	bx lr
-	arm_func_end func_ov00_020c1500
 
     .rodata
 	.global data_ov00_020dc6d4

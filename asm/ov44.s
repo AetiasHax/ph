@@ -1619,7 +1619,7 @@ func_ov44_0218a954: ; 0x0218a954
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -2136,7 +2136,7 @@ func_ov44_0218af88: ; 0x0218af88
 	sub sp, sp, #0x44
 	mov r4, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -2647,7 +2647,7 @@ func_ov44_0218b450: ; 0x0218b450
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -6290,7 +6290,7 @@ func_ov44_0218e1e8: ; 0x0218e1e8
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]

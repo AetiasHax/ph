@@ -1679,7 +1679,7 @@ func_ov39_0217d210: ; 0x0217d210
 	str r0, [sp, #4]
 	str r0, [sp, #8]
 	add r0, sp, #0x1c
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r0, #0
 	str r0, [sp, #0x38]
 	str r0, [sp, #0x3c]
@@ -4225,7 +4225,7 @@ func_ov39_0217f6dc: ; 0x0217f6dc
 	sub sp, sp, #0x44
 	mov r4, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]

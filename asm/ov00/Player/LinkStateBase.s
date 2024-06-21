@@ -399,7 +399,7 @@ _ZN13LinkStateBase18func_ov00_020a8360Ei: ; 0x020a8360
 	mov r5, r0
 	add r0, sp, #0
 	mov r4, r1
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	add r2, sp, #0
 	mov r0, r5
 	mov r1, r4
@@ -417,7 +417,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	add r0, sp, #0xc
 	mov r6, r1
 	mov r5, r2
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
