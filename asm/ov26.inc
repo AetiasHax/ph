@@ -222,7 +222,7 @@
 .extern func_ov00_02079680
 .extern func_ov00_02079ab4
 .extern func_ov00_02079e68
-.extern func_ov00_0207a188
+.extern _ZN19Actor_UnkStruct_0a4C1Eiiii
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207b55c
 .extern func_ov00_0207b820

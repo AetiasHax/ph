@@ -3716,7 +3716,7 @@ func_ov18_0215e514: ; 0x0215e514
 	mov r3, r1
 	add r0, r4, #0x94
 	str r2, [sp]
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, #0
 	str r0, [r4, #0xa8]
 	strb r0, [r4, #0xac]
@@ -6291,7 +6291,7 @@ func_ov18_021605b0: ; 0x021605b0
 	str r2, [sp]
 	add r0, r4, #0x94
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
@@ -6723,7 +6723,7 @@ func_ov18_02160ad8: ; 0x02160ad8
 	mov r3, r1
 	add r0, r4, #0x94
 	str r2, [sp]
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}

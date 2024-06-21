@@ -1,4 +1,5 @@
 #pragma once
+.extern Vec3p_Add
 .extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern _ZN11ItemManager10GiveRupeesEsb
 .extern _ZN5Actor10SetUnk_11bEv
@@ -8,6 +9,7 @@
 .extern _ZN5Actor12GetOffsetPosEP5Vec3p
 .extern _ZN5Actor12KillInBoundsEv
 .extern _ZN5Actor12SetTransformEP9Transform
+.extern _ZN5Actor13func_01fffd04Ei
 .extern _ZN5Actor15IsHitboxTouchedEb
 .extern _ZN5Actor15TrySetTransformEP9Transform
 .extern _ZN5Actor16CollidesWithLinkEv
@@ -56,13 +58,9 @@
 .extern _ZN9SysObjectnwEmPjj
 .extern __register_global_object
 .extern data_027e0764
-.extern gMapManager
-.extern gPlayerLink
 .extern data_027e0fe0
 .extern data_ov00_020e9370
 .extern data_ov00_020eec9c
-.extern Vec3p_Add
-.extern _ZN5Actor13func_01fffd04Ei
 .extern func_0202bc38
 .extern func_ov00_0207a13c
 .extern func_ov00_0207a1c8
@@ -71,3 +69,5 @@
 .extern func_ov00_020d7ad4
 .extern func_ov05_02102c2c
 .extern gItemManager
+.extern gMapManager
+.extern gPlayerLink

@@ -52,7 +52,7 @@
 .extern func_0202af4c
 .extern func_0202b2f8
 .extern func_0202d95c
-.extern func_ov00_0207a188
+.extern _ZN19Actor_UnkStruct_0a4C1Eiiii
 .extern func_ov00_0207bb1c
 .extern func_ov00_0207c1f8
 .extern func_ov00_0207c444

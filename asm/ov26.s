@@ -944,7 +944,7 @@ func_ov26_0216dfe4: ; 0x0216dfe4
 	str r2, [sp]
 	add r0, r4, #0x44
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	ldr r1, _0216e07c ; =data_ov00_020e2f04
 	mov r0, #1
 	str r1, [r4, #0x58]
@@ -7415,7 +7415,7 @@ func_ov26_02173474: ; 0x02173474
 	str r2, [sp]
 	add r0, r4, #0x110
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, #0
 	str r0, [r4, #0x124]
 	strb r0, [r4, #0x128]
@@ -11643,7 +11643,7 @@ func_ov26_0217640c: ; 0x0217640c
 	str r2, [sp]
 	add r0, r4, #0x138
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, #0
 	strb r0, [r4, #0x7e]
 	strb r0, [r4, #0x88]
@@ -14263,7 +14263,7 @@ func_ov26_0217848c: ; 0x0217848c
 	str r2, [sp]
 	add r0, r4, #0x74
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}

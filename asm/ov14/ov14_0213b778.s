@@ -8392,7 +8392,7 @@ func_ov14_02141b70: ; 0x02141b70
 	str r2, [sp]
 	add r0, r4, #0x70
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
@@ -26224,7 +26224,7 @@ func_ov14_0214fdcc: ; 0x0214fdcc
 	str r2, [sp]
 	add r0, r4, #0x5c
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}

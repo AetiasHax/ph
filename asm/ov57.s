@@ -1811,7 +1811,7 @@ func_ov57_0219a460: ; 0x0219a460
 	str r2, [sp]
 	add r0, r4, #0x18c
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	add r0, r4, #0x8c
 	bl func_ov14_0212382c
 	bl func_ov14_0212384c

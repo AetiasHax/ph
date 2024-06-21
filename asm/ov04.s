@@ -21846,7 +21846,7 @@ func_ov04_0210b3f0: ; 0x0210b3f0
 	add r0, r5, r0
 	add r3, r1, #0
 	str r2, [sp]
-	bl func_ov00_0207a188
+	bl _ZN19Actor_UnkStruct_0a4C1Eiiii
 	ldr r0, _0210b520 ; =func_ov04_0210b3d4
 	ldr r3, _0210b524 ; =func_ov04_0210b634
 	str r0, [sp]

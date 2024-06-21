@@ -1,4 +1,7 @@
 #pragma once
+.extern GiveShipPart
+.extern Vec3p_Add
+.extern Vec3p_Length
 .extern _ZN10MapManager18func_ov00_02082b3cEi
 .extern _ZN10MapManager18func_ov00_020836dcEii
 .extern _ZN10MapManager18func_ov00_020838e8EjPi
@@ -10,6 +13,7 @@
 .extern _ZN14AdventureFlags3GetEj
 .extern _ZN14AdventureFlags3SetEjb
 .extern _ZN14OverlayManager15LoadIfNotLoadedEjj
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
 .extern _ZN5Actor11SetVelocityEP5Vec3p
@@ -65,7 +69,6 @@
 .extern _ZN9SysObjectdlEPv
 .extern _ZN9SysObjectnwEmPjj
 .extern __register_global_object
-.extern gSinCosTable
 .extern data_02063e4c
 .extern data_027e0618
 .extern data_027e0764
@@ -75,11 +78,7 @@
 .extern data_027e0e58
 .extern data_027e0f68
 .extern data_027e0f78
-.extern gPlayerVel
-.extern gPlayerControl
-.extern gPlayerLink
 .extern data_027e0fe0
-.extern gActorManager
 .extern data_027e0fe8
 .extern data_027e0fec
 .extern data_027e0ff8
@@ -93,8 +92,6 @@
 .extern data_ov09_0211f5b4
 .extern func_01ff80d4
 .extern func_01ff8214
-.extern Vec3p_Add
-.extern Vec3p_Length
 .extern func_01ffbe34
 .extern func_020078f4
 .extern func_020196bc
@@ -140,7 +137,6 @@
 .extern func_ov00_020c0c08
 .extern func_ov00_020c0cc8
 .extern func_ov00_020c0e04
-.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020c3348
 .extern func_ov00_020c4048
 .extern func_ov00_020c4588
@@ -167,7 +163,6 @@
 .extern func_ov05_021082e4
 .extern func_ov09_0211c724
 .extern func_ov09_0211c808
-.extern GiveShipPart
 .extern func_ov09_0211cac0
 .extern func_ov14_021448f4
 .extern func_ov14_02144a90
@@ -206,7 +201,12 @@
 .extern func_ov14_02145f0c
 .extern func_ov14_0214a92c
 .extern func_ov14_0214aa0c
+.extern gActorManager
 .extern gAdventureFlags
 .extern gMapManager
 .extern gOverlayManager
+.extern gPlayerControl
+.extern gPlayerLink
+.extern gPlayerVel
+.extern gSinCosTable
 .extern strcpy

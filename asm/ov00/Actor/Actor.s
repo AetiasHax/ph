@@ -83,7 +83,7 @@ _ZN5ActorC2Ev: ; 0x020c1554
 	str r2, [sp]
 	add r0, r4, #0xa4
 	mov r3, r1
-	blx func_ov00_0207a188
+	bl _ZN19Actor_UnkStruct_0a4C1Eiiii
 	ldr r0, _020c1714 ; =0x0000ffff
 	mov lr, #0
 	strh r0, [r4, #0xdc]

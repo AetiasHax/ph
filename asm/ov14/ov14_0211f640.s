@@ -695,7 +695,7 @@ func_ov14_0211fda4: ; 0x0211fda4
 	add r0, r4, #0x188
 	mov r1, #0
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov ip, #0
 	add r0, r4, #0x100
 	strh ip, [r0, #0xac]
@@ -13469,7 +13469,7 @@ func_ov14_0212a5f8: ; 0x0212a5f8
 	add r0, r4, #0xd0
 	mov r1, #0
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	ldr r0, _0212a6e0 ; =data_027e0f68
 	ldr r3, [r4, #0x64]
 	ldr r0, [r0]
@@ -25964,7 +25964,7 @@ func_ov14_021348b0: ; 0x021348b0
 	str r2, [sp]
 	add r0, r4, #0x5c
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}

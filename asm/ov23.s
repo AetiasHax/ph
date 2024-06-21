@@ -10148,7 +10148,7 @@ func_ov23_02175c54: ; 0x02175c54
 	mov r3, r1
 	add r0, r4, #0xc0
 	str r2, [sp]
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}

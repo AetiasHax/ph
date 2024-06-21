@@ -17237,7 +17237,7 @@ func_ov17_02168dc4: ; 0x02168dc4
 	str r2, [sp]
 	add r0, r4, #0xcc
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mvn r0, #0
 	str r0, [r4, #0xe0]
 	str r0, [r4, #0xe4]

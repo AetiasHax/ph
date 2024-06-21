@@ -1760,7 +1760,7 @@ func_ov22_0216edc0: ; 0x0216edc0
 	str r2, [sp]
 	add r0, r4, #0x5c
 	mov r3, r1
-	blx func_ov00_0207a188
+	blx _ZN19Actor_UnkStruct_0a4C1Eiiii
 	mov r0, r4
 	add sp, sp, #4
 	ldmia sp!, {r3, r4, pc}
