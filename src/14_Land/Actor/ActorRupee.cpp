@@ -1,6 +1,5 @@
 #include "Actor/ActorRupee.hpp"
 
-Resource ActorRupee::gResource;
 ActorType ActorRupee::gType;
 
 ActorRupee* ActorRupee::Create() {}
