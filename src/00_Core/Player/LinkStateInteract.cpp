@@ -1,7 +1,5 @@
 #include "Player/LinkStateInteract.hpp"
 
-#ifdef STUBS
-
 void LinkStateInteract::vfunc_00() {}
 LinkStateId LinkStateInteract::GetId() {}
 void LinkStateInteract::CreateDebugHierarchy() {}
@@ -30,5 +28,3 @@ void LinkStateInteract::func_ov00_020abbdc(ActorRef *ref) {}
 void LinkStateInteract::func_ov00_020abc18(ActorRef *ref) {}
 bool LinkStateInteract::func_ov00_020abc40() {}
 bool LinkStateInteract::func_ov00_020abc78(ActorRef *ref) {}
-
-#endif

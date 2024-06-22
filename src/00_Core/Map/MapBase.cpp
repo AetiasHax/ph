@@ -1,8 +1,6 @@
 #include "Map/MapBase.hpp"
 #include "Map/MapManager.hpp"
 
-#ifdef STUBS
-
 MapBase::~MapBase() {}
 MapBase_Unk_180::~MapBase_Unk_180() {}
 void MapBase::SetBounds(unk32 map, unk32 course) {}
@@ -112,5 +110,3 @@ unk32 TriggerBase::vfunc_10() {}
 void MapBase::func_ov00_02080de4() {}
 unk8 MapBase::func_ov00_02080de8(unk32 param_2) {}
 void MapBase::func_ov00_02080edc() {}
-
-#endif

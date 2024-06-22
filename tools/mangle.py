@@ -38,7 +38,6 @@ cc.extend([
     '-i', include_dir,
     '-i', libc_include_dir,
     '-i', libcpp_include_dir,
-    '-DSTUBS',
     args.file
 ])
 

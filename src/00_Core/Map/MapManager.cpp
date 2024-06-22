@@ -1,7 +1,5 @@
 #include "Map/MapManager.hpp"
 
-#ifdef STUBS
-
 void MapManager::func_ov00_020820ec(unk32 *param_2) {}
 void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4) {}
 unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 param_3) {}
@@ -200,5 +198,3 @@ unk8 MapManager::func_ov00_02085c60(unk32 param_2, unk32 param_3, unk32 param_4,
 unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4) {}
 bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7, Vec3p *param_8) {}
 bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7, Vec3p *param_8, Vec3p *param_9) {}
-
-#endif

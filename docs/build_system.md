@@ -56,7 +56,7 @@ When the code is linked, all code of the same section will be written adjacent t
 ## Compiling code
 This game was written in C++, so most of the code we decompile will be in this programming language. In C++, we typically don't
 have to express which section we want the code to be written to. Instead, the compiler determines the section automatically.
-Here are a few examples of how to 
+Here are a few examples of how to generate code for different section types.
 
 - `.text`
     - Functions and member functions (aka methods)

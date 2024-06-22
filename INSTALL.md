@@ -12,13 +12,12 @@ Contents:
 1. Use one of these platforms:
     - Windows (MSYS)
     - Linux via WSL
-        - Recommended for Windows users
     - Linux
 2. Install the following:
     - Python 3.11+ and pip
     - GCC 9+
     - Make
-    - **On Linux/WSL**: Wine
+    - **On Linux/WSL**: Wine/Wibo
 3. Install the Python dependencies:
 ```shell
 python -m pip install -r tools/requirements.txt
@@ -27,6 +26,9 @@ python -m pip install -r tools/requirements.txt
 ```shell
 python tools/setup.py
 ```
+
+> [!NOTE]
+> For Linux users: If you plan to use Wibo instead of Wine, run make with `make WINE=<path/to/wibo> ...`.
 
 ## Build the ROM
 
