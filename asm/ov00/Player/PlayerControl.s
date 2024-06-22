@@ -5,9 +5,9 @@
 
 	.global _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 	arm_func_start _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
-_ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv: ; 0x020aeeac
-	ldr r0, _020aeef0 ; =data_027e077c
-	ldr r2, _020aeef4 ; =data_02056be4
+_ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv: @ 0x020aeeac
+	ldr r0, _020aeef0 @ =data_027e077c
+	ldr r2, _020aeef4 @ =data_02056be4
 	ldr r1, [r0]
 	mov r3, r1
 	ldrb r1, [r2, r1]
@@ -32,9 +32,9 @@ _020aeef4: .word data_02056be4
 
 	.global _ZN13PlayerControl18func_ov00_020aeef8Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020aeef8Ev
-_ZN13PlayerControl18func_ov00_020aeef8Ev: ; 0x020aeef8
+_ZN13PlayerControl18func_ov00_020aeef8Ev: @ 0x020aeef8
 	stmdb sp!, {r3, lr}
-	ldr r0, _020aef2c ; =data_027e077c
+	ldr r0, _020aef2c @ =data_027e077c
 	ldr r1, [r0]
 	mov r0, r1
 	cmp r1, #0x37
@@ -52,7 +52,7 @@ _020aef2c: .word data_027e077c
 
 	.global _ZN13PlayerControl18func_ov00_020aef30Ev
 	thumb_func_start _ZN13PlayerControl18func_ov00_020aef30Ev
-_ZN13PlayerControl18func_ov00_020aef30Ev: ; 0x020aef30
+_ZN13PlayerControl18func_ov00_020aef30Ev: @ 0x020aef30
 	push {r3, r4, lr}
 	sub sp, #0xc
 	add r4, r0, #0
@@ -61,14 +61,14 @@ _ZN13PlayerControl18func_ov00_020aef30Ev: ; 0x020aef30
 	ldr r0, [r4]
 	cmp r0, #0
 	beq _020aef56
-	ldr r1, _020aef5c ; =0x504c5952
-	ldr r2, _020aef60 ; =data_ov00_020e6148
+	ldr r1, _020aef5c @ =0x504c5952
+	ldr r2, _020aef60 @ =data_ov00_020e6148
 	str r1, [sp]
 	mov r1, #0
 	str r1, [sp, #4]
 	str r1, [sp, #8]
 	ldr r4, [r0]
-	ldr r3, _020aef64 ; =0x5043544c
+	ldr r3, _020aef64 @ =0x5043544c
 	ldr r4, [r4, #0x20]
 	blx r4
 _020aef56:
@@ -82,7 +82,7 @@ _020aef64: .word 0x5043544c
 
 	.global _ZN13PlayerControl9UpdateAimEv
 	thumb_func_start _ZN13PlayerControl9UpdateAimEv
-_ZN13PlayerControl9UpdateAimEv: ; 0x020aef68
+_ZN13PlayerControl9UpdateAimEv: @ 0x020aef68
 	push {r4, lr}
 	add r4, r0, #0
 	blx func_ov00_020b78a0
@@ -118,7 +118,7 @@ _ZN13PlayerControl9UpdateAimEv: ; 0x020aef68
 	add r1, r4, #0
 	add r1, #0x81
 	strb r0, [r1]
-	ldr r1, _020aeff0 ; =data_027e0d0c
+	ldr r1, _020aeff0 @ =data_027e0d0c
 	add r0, r4, #0
 	ldr r2, [r1]
 	add r0, #0xb0
@@ -131,12 +131,12 @@ _ZN13PlayerControl9UpdateAimEv: ; 0x020aef68
 	ldr r1, [r1, #8]
 	add r0, #0xb8
 	str r1, [r0]
-	ldr r0, _020aeff4 ; =data_027e0d38
+	ldr r0, _020aeff4 @ =data_027e0d38
 	ldr r0, [r0]
 	blx func_ov00_02078b40
 	cmp r0, #2
 	bne _020aefde
-	ldr r0, _020aeff8 ; =data_027e103c
+	ldr r0, _020aeff8 @ =data_027e103c
 	ldr r0, [r0]
 	blx func_ov00_020cf2b8
 _020aefde:
@@ -156,11 +156,11 @@ _020aeff8: .word data_027e103c
 
 	.global _ZN13PlayerControl14GetFollowActorEv
 	arm_func_start _ZN13PlayerControl14GetFollowActorEv
-_ZN13PlayerControl14GetFollowActorEv: ; 0x020aeffc
-	ldr r1, _020af014 ; =data_027e0fe4
+_ZN13PlayerControl14GetFollowActorEv: @ 0x020aeffc
+	ldr r1, _020af014 @ =data_027e0fe4
 	mov r2, r0
 	ldr r0, [r1]
-	ldr ip, _020af018 ; =_ZN12ActorManager8GetActorEP8ActorRef
+	ldr ip, _020af018 @ =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x84
 	bx ip
 	.align 2, 0
@@ -170,7 +170,7 @@ _020af018: .word _ZN12ActorManager8GetActorEP8ActorRef
 
 	.global _ZN13PlayerControl18func_ov00_020af01cEPc
 	arm_func_start _ZN13PlayerControl18func_ov00_020af01cEPc
-_ZN13PlayerControl18func_ov00_020af01cEPc: ; 0x020af01c
+_ZN13PlayerControl18func_ov00_020af01cEPc: @ 0x020af01c
 	ldrb r2, [r0, #0x81]
 	cmp r2, #0
 	moveq r0, #0
@@ -185,7 +185,7 @@ _ZN13PlayerControl18func_ov00_020af01cEPc: ; 0x020af01c
 
 	.global _ZN13PlayerControl9SetUnk_80Ev
 	arm_func_start _ZN13PlayerControl9SetUnk_80Ev
-_ZN13PlayerControl9SetUnk_80Ev: ; 0x020af044
+_ZN13PlayerControl9SetUnk_80Ev: @ 0x020af044
 	mov r1, #1
 	strb r1, [r0, #0x80]
 	bx lr
@@ -193,7 +193,7 @@ _ZN13PlayerControl9SetUnk_80Ev: ; 0x020af044
 
 	.global _ZN13PlayerControl13StopFollowingEv
 	arm_func_start _ZN13PlayerControl13StopFollowingEv
-_ZN13PlayerControl13StopFollowingEv: ; 0x020af050
+_ZN13PlayerControl13StopFollowingEv: @ 0x020af050
 	mvn r1, #0
 	str r1, [r0, #0x84]
 	str r1, [r0, #0x88]
@@ -205,7 +205,7 @@ _ZN13PlayerControl13StopFollowingEv: ; 0x020af050
 
 	.global _ZN13PlayerControl18func_ov00_020af06cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020af06cEv
-_ZN13PlayerControl18func_ov00_020af06cEv: ; 0x020af06c
+_ZN13PlayerControl18func_ov00_020af06cEv: @ 0x020af06c
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrb r0, [r6, #0x78]
@@ -216,16 +216,16 @@ _ZN13PlayerControl18func_ov00_020af06cEv: ; 0x020af06c
 	ldrb r0, [r6, #0x7a]
 	ldrb r5, [r6, #0x79]
 	cmp r0, #0
-	ldr r0, _020af27c ; =gAdventureFlags
+	ldr r0, _020af27c @ =gAdventureFlags
 	strneb r5, [r6, #0x7b]
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
-	ldreq r0, _020af280 ; =data_027e0c68
+	ldreq r0, _020af280 @ =data_027e0c68
 	ldreqb r0, [r0, #4]
 	cmpeq r0, #0
 	beq _020af0d4
-	ldr r0, _020af284 ; =data_027e0d38
+	ldr r0, _020af284 @ =data_027e0d38
 	ldr r0, [r0]
 	bl func_ov00_02078b40
 	cmp r0, #2
@@ -233,7 +233,7 @@ _ZN13PlayerControl18func_ov00_020af06cEv: ; 0x020af06c
 	strneb r0, [r6, #0x79]
 	ldmia sp!, {r4, r5, r6, pc}
 _020af0d4:
-	ldr r0, _020af288 ; =gItemManager
+	ldr r0, _020af288 @ =gItemManager
 	ldr r0, [r0]
 	ldr r4, [r0]
 	cmp r4, #9
@@ -255,13 +255,13 @@ _020af104:
 	strneb r0, [r6, #0x79]
 	ldmneia sp!, {r4, r5, r6, pc}
 _020af124:
-	ldr r0, _020af284 ; =data_027e0d38
+	ldr r0, _020af284 @ =data_027e0d38
 	ldr r0, [r0]
 	bl func_ov00_02078b40
 	cmp r0, #2
 	bne _020af164
 	mov r1, #1
-	ldr r0, _020af288 ; =gItemManager
+	ldr r0, _020af288 @ =gItemManager
 	strb r1, [r6, #0x7b]
 	ldr r0, [r0]
 	bl _ZN11ItemManager18func_ov00_020ad790Ei
@@ -272,7 +272,7 @@ _020af124:
 	strb r0, [r6, #0x7b]
 	b _020af268
 _020af164:
-	ldr r0, _020af28c ; =data_027e05f8
+	ldr r0, _020af28c @ =data_027e05f8
 	ldrh r0, [r0]
 	tst r0, #0x300
 	ldrneb r0, [r6, #0x7e]
@@ -284,7 +284,7 @@ _020af164:
 	strneb r0, [r6, #0x7b]
 	bne _020af1f8
 _020af190:
-	ldr r0, _020af28c ; =data_027e05f8
+	ldr r0, _020af28c @ =data_027e05f8
 	ldrh r0, [r0]
 	tst r0, #0x300
 	bne _020af1b4
@@ -294,7 +294,7 @@ _020af190:
 	strneb r0, [r6, #0x7b]
 	bne _020af1f8
 _020af1b4:
-	ldr r0, _020af290 ; =data_027e103c
+	ldr r0, _020af290 @ =data_027e103c
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0x20]
 	cmp r0, #2
@@ -312,7 +312,7 @@ _020af1b4:
 	mov r0, #0
 	strb r0, [r6, #0x7c]
 _020af1f8:
-	ldr r0, _020af288 ; =gItemManager
+	ldr r0, _020af288 @ =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN11ItemManager18func_ov00_020ad790Ei
@@ -326,13 +326,13 @@ _020af1f8:
 	ldreqb r0, [r6, #0x7b]
 	cmpeq r0, #1
 	bne _020af268
-	ldr r0, _020af288 ; =gItemManager
+	ldr r0, _020af288 @ =gItemManager
 	mov r1, #0
 	ldr r0, [r0]
 	bl _ZNK11ItemManager8GetFairyEi
 	cmp r0, #0
 	beq _020af268
-	ldr r1, _020af294 ; =data_027e0f94
+	ldr r1, _020af294 @ =data_027e0f94
 	ldr r2, [r0, #0x50]
 	ldr r1, [r1, #4]
 	ldr r0, [r0, #0x48]
@@ -358,9 +358,9 @@ _020af294: .word data_027e0f94
 
 	.global _ZN13PlayerControl20UpdateUsingEquipItemEv
 	arm_func_start _ZN13PlayerControl20UpdateUsingEquipItemEv
-_ZN13PlayerControl20UpdateUsingEquipItemEv: ; 0x020af298
+_ZN13PlayerControl20UpdateUsingEquipItemEv: @ 0x020af298
 	stmdb sp!, {r4, lr}
-	ldr r1, _020af2d0 ; =data_027e05f8
+	ldr r1, _020af2d0 @ =data_027e05f8
 	mov r4, r0
 	ldrh r0, [r1]
 	tst r0, #0x300
@@ -380,9 +380,9 @@ _020af2d0: .word data_027e05f8
 
 	.global _ZN13PlayerControl18func_ov00_020af2d4Ejb
 	arm_func_start _ZN13PlayerControl18func_ov00_020af2d4Ejb
-_ZN13PlayerControl18func_ov00_020af2d4Ejb: ; 0x020af2d4
+_ZN13PlayerControl18func_ov00_020af2d4Ejb: @ 0x020af2d4
 	stmdb sp!, {r4, r5, r6, lr}
-	ldr r3, _020af3bc ; =data_027e0d38
+	ldr r3, _020af3bc @ =data_027e0d38
 	mov r6, r0
 	ldr r0, [r3]
 	mov r5, r1
@@ -416,8 +416,8 @@ _020af33c:
 	mov r4, #1
 	mov r2, #0
 	beq _020af370
-	ldr r0, _020af3c0 ; =data_027e077c
-	ldr r1, _020af3c4 ; =data_02056be4
+	ldr r0, _020af3c0 @ =data_027e077c
+	ldr r1, _020af3c4 @ =data_02056be4
 	ldr r0, [r0]
 	ldrb r0, [r1, r0]
 	tst r0, #1
@@ -430,7 +430,7 @@ _020af370:
 	bl _ZN13PlayerControl18func_ov00_020aeef8Ev
 	cmp r0, #0
 	beq _020af3a0
-	ldr r0, _020af3c8 ; =data_027e103c
+	ldr r0, _020af3c8 @ =data_027e103c
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x24]
 	cmp r0, #0
@@ -454,7 +454,7 @@ _020af3c8: .word data_027e103c
 
 	.global _ZN13PlayerControl15CheckTouchedNowEj
 	arm_func_start _ZN13PlayerControl15CheckTouchedNowEj
-_ZN13PlayerControl15CheckTouchedNowEj: ; 0x020af3cc
+_ZN13PlayerControl15CheckTouchedNowEj: @ 0x020af3cc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r2, #1
 	mov r5, r0
@@ -472,7 +472,7 @@ _020af3f4:
 
 	.global _ZN13PlayerControl17CheckUntouchedNowEj
 	arm_func_start _ZN13PlayerControl17CheckUntouchedNowEj
-_ZN13PlayerControl17CheckUntouchedNowEj: ; 0x020af3fc
+_ZN13PlayerControl17CheckUntouchedNowEj: @ 0x020af3fc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r2, #1
 	mov r5, r0
@@ -490,7 +490,7 @@ _020af424:
 
 	.global _ZN13PlayerControl13CheckTouchingEj
 	arm_func_start _ZN13PlayerControl13CheckTouchingEj
-_ZN13PlayerControl13CheckTouchingEj: ; 0x020af42c
+_ZN13PlayerControl13CheckTouchingEj: @ 0x020af42c
 	stmdb sp!, {r4, lr}
 	mov r2, #1
 	mov r4, r0
@@ -505,7 +505,7 @@ _ZN13PlayerControl13CheckTouchingEj: ; 0x020af42c
 
 	.global _ZN13PlayerControl14CheckTouchFastEj
 	arm_func_start _ZN13PlayerControl14CheckTouchFastEj
-_ZN13PlayerControl14CheckTouchFastEj: ; 0x020af454
+_ZN13PlayerControl14CheckTouchFastEj: @ 0x020af454
 	stmdb sp!, {r4, lr}
 	mov r2, #1
 	mov r4, r0
@@ -531,20 +531,20 @@ _020af49c:
 
 	.global _ZN13PlayerControl18func_ov00_020af4a4Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af4a4Ev
-_ZN13PlayerControl18func_ov00_020af4a4Ev: ; 0x020af4a4
+_ZN13PlayerControl18func_ov00_020af4a4Ev: @ 0x020af4a4
 	stmdb sp!, {r3, lr}
-	ldr r0, _020af528 ; =data_027e0d38
+	ldr r0, _020af528 @ =data_027e0d38
 	ldr r0, [r0]
 	ldr r0, [r0, #0x28]
 	ldrb r0, [r0, #0x34]
 	cmp r0, #0
 	bne _020af520
-	ldr r1, _020af52c ; =data_027e0e2c
+	ldr r1, _020af52c @ =data_027e0e2c
 	mvn r0, #0
 	ldr r1, [r1, #4]
 	cmp r1, r0
 	bne _020af520
-	ldr r0, _020af530 ; =data_027e103c
+	ldr r0, _020af530 @ =data_027e103c
 	ldr r0, [r0]
 	bl func_ov05_02103f4c
 	cmp r0, #0
@@ -553,7 +553,7 @@ _ZN13PlayerControl18func_ov00_020af4a4Ev: ; 0x020af4a4
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, pc}
-	ldr r0, _020af534 ; =data_027e077c
+	ldr r0, _020af534 @ =data_027e077c
 	ldr r0, [r0]
 	cmp r0, #0x1a
 	cmpne r0, #0x1b
@@ -576,7 +576,7 @@ _020af534: .word data_027e077c
 
 	.global _ZN13PlayerControl18func_ov00_020af538Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af538Ev
-_ZN13PlayerControl18func_ov00_020af538Ev: ; 0x020af538
+_ZN13PlayerControl18func_ov00_020af538Ev: @ 0x020af538
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r4, r0
@@ -586,11 +586,11 @@ _ZN13PlayerControl18func_ov00_020af538Ev: ; 0x020af538
 	ldrb r0, [r4, #0x78]
 	cmp r0, #0
 	beq _020af57c
-	ldr r0, _020af6c4 ; =gAdventureFlags
+	ldr r0, _020af6c4 @ =gAdventureFlags
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
-	ldreq r0, _020af6c8 ; =data_027e0c68
+	ldreq r0, _020af6c8 @ =data_027e0c68
 	ldreqb r0, [r0, #4]
 	cmpeq r0, #0
 	beq _020af584
@@ -634,16 +634,16 @@ _020af5c4:
 	ldreqb r0, [r4, #0x81]
 	cmpeq r0, #0
 	beq _020af620
-	ldr r1, _020af6cc ; =data_027e0fac
-	ldr r0, _020af6d0 ; =data_027e0ffc
+	ldr r1, _020af6cc @ =data_027e0fac
+	ldr r0, _020af6d0 @ =data_027e0ffc
 	ldrsh r2, [r1]
-	ldr r1, _020af6d4 ; =0x0000010a
+	ldr r1, _020af6d4 @ =0x0000010a
 	mov r3, #0
 	bl func_ov00_020cebcc
 	mov r0, r4
 	bl _ZN13PlayerControl13StopFollowingEv
 _020af620:
-	ldr r0, _020af6d8 ; =gMapManager
+	ldr r0, _020af6d8 @ =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02085108EPi
@@ -661,7 +661,7 @@ _020af644:
 	ldrb r0, [r4, #0x79]
 	cmp r0, #0
 	bne _020af670
-	ldr r0, _020af6dc ; =data_027e103c
+	ldr r0, _020af6dc @ =data_027e103c
 	ldr r0, [r0]
 	bl func_ov00_020cf20c
 _020af670:
@@ -680,7 +680,7 @@ _020af694:
 	cmp r5, #2
 	blt _020af674
 	mov r1, #0
-	ldr r0, _020af6e0 ; =data_027e05f8
+	ldr r0, _020af6e0 @ =data_027e05f8
 	strb r1, [r4, #0x7f]
 	ldrh r0, [r0]
 	tst r0, #0x300
@@ -701,7 +701,7 @@ _020af6e0: .word data_027e05f8
 
 	.global _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
 	arm_func_start _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii
-_ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: ; 0x020af6e4
+_ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: @ 0x020af6e4
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #4
 	cmp r3, #4
@@ -712,7 +712,7 @@ _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: ; 0x020af6e4
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
 	cmp r5, #0
 	ble _020af72c
-	ldr r0, _020af770 ; =data_027e0f94
+	ldr r0, _020af770 @ =data_027e0f94
 	bl func_01ff9ec0
 	cmp r0, r5
 	addge sp, sp, #4
@@ -721,7 +721,7 @@ _ZN13PlayerControl18func_ov00_020af6e4EP5Vec3pii: ; 0x020af6e4
 	str r0, [r4, #0x84]
 	str r0, [r4, #0x88]
 _020af72c:
-	ldr r1, _020af774 ; =gMapManager
+	ldr r1, _020af774 @ =gMapManager
 	add r0, sp, #0
 	ldr r1, [r1]
 	mov r2, r6
@@ -745,19 +745,19 @@ _020af774: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020af778Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020af778Ev
-_ZN13PlayerControl18func_ov00_020af778Ev: ; 0x020af778
+_ZN13PlayerControl18func_ov00_020af778Ev: @ 0x020af778
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x14
 	mov r9, r0
 	ldrb r0, [r9, #0x78]
 	cmp r0, #0
 	beq _020af7b8
-	ldr r0, _020afabc ; =gAdventureFlags
+	ldr r0, _020afabc @ =gAdventureFlags
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097738Ev
 	cmp r0, #0
 	bne _020af7b8
-	ldr r0, _020afabc ; =gAdventureFlags
+	ldr r0, _020afabc @ =gAdventureFlags
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags18func_ov00_02097750Ev
 	cmp r0, #0
@@ -815,7 +815,7 @@ _020af810:
 	movne r4, #1
 	cmpne r0, #0
 	beq _020af8b0
-	ldr r0, _020afac0 ; =data_027e0f90
+	ldr r0, _020afac0 @ =data_027e0f90
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
@@ -824,17 +824,17 @@ _020af810:
 	mvn r0, #0
 	cmp r1, r0
 	beq _020af8b0
-	ldr r0, _020afac4 ; =gItemManager
+	ldr r0, _020afac4 @ =gItemManager
 	ldr r0, [r0]
 	bl _ZN11ItemManager12GetEquipItemEi
 	mov r5, r0
 _020af8b0:
-	ldr r0, _020afac8 ; =data_027e0fc8
+	ldr r0, _020afac8 @ =data_027e0fc8
 	mov r8, #0
 	ldr r1, [r0]
 	cmp r1, #0
 	beq _020af8dc
-	ldr r0, _020afacc ; =data_027e0fe4
+	ldr r0, _020afacc @ =data_027e0fe4
 	add r1, r1, #0x3c
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -844,7 +844,7 @@ _020af8dc:
 	cmp r4, #0
 	mov r4, #0
 	beq _020afa68
-	ldr r0, _020afacc ; =data_027e0fe4
+	ldr r0, _020afacc @ =data_027e0fe4
 	add r1, r9, #0x8c
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -883,11 +883,11 @@ _020af944:
 	bl _ZN5Actor16XzDistanceToLinkEv
 	mov r4, r0
 _020af97c:
-	ldr r0, _020afad0 ; =gMapManager
+	ldr r0, _020afad0 @ =gMapManager
 	add r1, sp, #8
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02085108EPi
-	ldr r2, _020afad4 ; =data_027e0f94
+	ldr r2, _020afad4 @ =data_027e0f94
 	mov r1, r0
 	ldr r0, [r2, #4]
 	cmp r5, #0
@@ -945,7 +945,7 @@ _020afa18:
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, pc}
 _020afa68:
-	ldr r1, _020afacc ; =data_027e0fe4
+	ldr r1, _020afacc @ =data_027e0fe4
 	add r0, sp, #0
 	ldr r1, [r1]
 	mov r2, r4
@@ -979,10 +979,10 @@ _020afad4: .word data_027e0f94
 
 	.global _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p
-_ZN13PlayerControl18func_ov00_020afad8EP5Vec3p: ; 0x020afad8
+_ZN13PlayerControl18func_ov00_020afad8EP5Vec3p: @ 0x020afad8
 	stmdb sp!, {lr}
 	sub sp, sp, #0xc
-	ldr r2, _020afb60 ; =data_027e0f94
+	ldr r2, _020afb60 @ =data_027e0f94
 	ldr r3, [r1, #4]
 	ldr r1, [r2, #4]
 	cmp r3, r1
@@ -992,14 +992,14 @@ _ZN13PlayerControl18func_ov00_020afad8EP5Vec3p: ; 0x020afad8
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
 	beq _020afb54
-	ldr r0, _020afb64 ; =data_027e0f90
+	ldr r0, _020afb64 @ =data_027e0f90
 	ldr r0, [r0]
 	ldr r1, [r0]
 	ldr r1, [r1, #8]
 	blx r1
 	cmp r0, #3
 	bne _020afb48
-	ldr r0, _020afb68 ; =gMapManager
+	ldr r0, _020afb68 @ =gMapManager
 	add r1, sp, #0
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02085594Ev
@@ -1024,17 +1024,17 @@ _020afb68: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020afb6cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020afb6cEv
-_ZN13PlayerControl18func_ov00_020afb6cEv: ; 0x020afb6c
+_ZN13PlayerControl18func_ov00_020afb6cEv: @ 0x020afb6c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x20
 	mov r9, r0
 	bl _ZN13PlayerControl18func_ov00_020af778Ev
-	ldr r1, _020afe70 ; =data_027e0fe4
+	ldr r1, _020afe70 @ =data_027e0fe4
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r9, #0x84
 	bl _ZN12ActorManager8GetActorEP8ActorRef
-	ldr r1, _020afe74 ; =gItemManager
+	ldr r1, _020afe74 @ =gItemManager
 	mov r5, r0
 	ldr r6, [r1]
 	mov r0, r6
@@ -1053,7 +1053,7 @@ _020afbcc:
 	cmp r5, #0
 	ldr r6, [r9, #0xa4]
 	beq _020afce8
-	ldr r0, _020afe78 ; =data_027e0f94
+	ldr r0, _020afe78 @ =data_027e0f94
 	add r1, r5, #0x48
 	bl func_01ff9ec0
 	mov r6, r0
@@ -1071,13 +1071,13 @@ _020afbcc:
 	mov r8, #3
 	addls pc, pc, r0, lsl #2
 	b _020afc84
-_020afc20: ; jump table
-	b _020afc38 ; case 0
-	b _020afc48 ; case 1
-	b _020afc6c ; case 2
-	b _020afc84 ; case 3
-	b _020afc84 ; case 4
-	b _020afc50 ; case 5
+_020afc20: @ jump table
+	b _020afc38 @ case 0
+	b _020afc48 @ case 1
+	b _020afc6c @ case 2
+	b _020afc84 @ case 3
+	b _020afc84 @ case 4
+	b _020afc50 @ case 5
 _020afc38:
 	sub r0, r8, #4
 	str r0, [r9, #0x84]
@@ -1111,7 +1111,7 @@ _020afc84:
 _020afc9c:
 	cmp r7, #0
 	beq _020afcf4
-	ldr r0, _020afe7c ; =data_027e0fc8
+	ldr r0, _020afe7c @ =data_027e0fc8
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -1123,7 +1123,7 @@ _020afc9c:
 	cmp r4, #0
 	beq _020afcf4
 	ldr r2, [r5, #8]
-	ldr r0, _020afe80 ; =data_027e0ffc
+	ldr r0, _020afe80 @ =data_027e0ffc
 	add r1, sp, #0x10
 	mov r3, r8
 	bl func_ov00_020ced64
@@ -1136,7 +1136,7 @@ _020afcf4:
 	ldrb r0, [r9, #0x81]
 	cmp r0, #0
 	beq _020afe24
-	ldr r0, _020afe84 ; =gMapManager
+	ldr r0, _020afe84 @ =gMapManager
 	add r1, r9, #0x9c
 	ldr r0, [r0]
 	bl _ZN10MapManager16MapData_vfunc_78Ev
@@ -1172,8 +1172,8 @@ _020afd5c:
 	movne r6, r5
 	b _020afdc4
 _020afd88:
-	ldr r1, _020afe78 ; =data_027e0f94
-	ldr r0, _020afe84 ; =gMapManager
+	ldr r1, _020afe78 @ =data_027e0f94
+	ldr r0, _020afe84 @ =gMapManager
 	ldr r1, [r1, #4]
 	ldr r0, [r0]
 	str r1, [sp, #8]
@@ -1190,7 +1190,7 @@ _020afd88:
 _020afdc4:
 	cmp r5, #0
 	beq _020afe10
-	ldr r0, _020afe7c ; =data_027e0fc8
+	ldr r0, _020afe7c @ =data_027e0fc8
 	ldr r0, [r0]
 	bl func_ov00_020bc46c
 	cmp r0, #0
@@ -1204,11 +1204,11 @@ _020afdc4:
 	str r6, [sp]
 	ldrb r2, [r9, #0x9c]
 	ldrb r3, [r9, #0x9d]
-	ldr r0, _020afe80 ; =data_027e0ffc
+	ldr r0, _020afe80 @ =data_027e0ffc
 	add r1, sp, #4
 	bl func_ov00_020ced7c
 _020afe10:
-	ldr r0, _020afe78 ; =data_027e0f94
+	ldr r0, _020afe78 @ =data_027e0f94
 	add r1, sp, #4
 	bl func_01ff9ec0
 	mov r6, r0
@@ -1246,14 +1246,14 @@ _020afe84: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020afe88Eib
 	arm_func_start _ZN13PlayerControl18func_ov00_020afe88Eib
-_ZN13PlayerControl18func_ov00_020afe88Eib: ; 0x020afe88
+_ZN13PlayerControl18func_ov00_020afe88Eib: @ 0x020afe88
 	stmdb sp!, {r3, r4, r5, lr}
 	ldrb r0, [r0, #0x7d]
 	mov r5, r1
 	mov r4, r2
 	cmp r0, #0
 	beq _020afebc
-	ldr r0, _020afee8 ; =data_027e0fcc
+	ldr r0, _020afee8 @ =data_027e0fcc
 	ldr r0, [r0]
 	ldr r2, [r0]
 	ldr r2, [r2, #0x74]
@@ -1280,7 +1280,7 @@ _020afee8: .word data_027e0fcc
 
 	.global _ZN13PlayerControl18func_ov00_020afeecEib
 	arm_func_start _ZN13PlayerControl18func_ov00_020afeecEib
-_ZN13PlayerControl18func_ov00_020afeecEib: ; 0x020afeec
+_ZN13PlayerControl18func_ov00_020afeecEib: @ 0x020afeec
 	stmdb sp!, {r3, r4, r5, lr}
 	ldrb r0, [r0, #0x7d]
 	mov r5, r1
@@ -1288,7 +1288,7 @@ _ZN13PlayerControl18func_ov00_020afeecEib: ; 0x020afeec
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	ldr r0, _020aff8c ; =data_027e0fcc
+	ldr r0, _020aff8c @ =data_027e0fcc
 	ldr r0, [r0]
 	ldr r2, [r0]
 	ldr r2, [r2, #0x78]
@@ -1299,21 +1299,21 @@ _ZN13PlayerControl18func_ov00_020afeecEib: ; 0x020afeec
 	cmp r5, #0xd
 	addls pc, pc, r5, lsl #2
 	b _020aff7c
-_020aff34: ; jump table
-	b _020aff7c ; case 0
-	b _020aff6c ; case 1
-	b _020aff6c ; case 2
-	b _020aff7c ; case 3
-	b _020aff7c ; case 4
-	b _020aff7c ; case 5
-	b _020aff7c ; case 6
-	b _020aff6c ; case 7
-	b _020aff7c ; case 8
-	b _020aff7c ; case 9
-	b _020aff74 ; case 10
-	b _020aff74 ; case 11
-	b _020aff7c ; case 12
-	b _020aff6c ; case 13
+_020aff34: @ jump table
+	b _020aff7c @ case 0
+	b _020aff6c @ case 1
+	b _020aff6c @ case 2
+	b _020aff7c @ case 3
+	b _020aff7c @ case 4
+	b _020aff7c @ case 5
+	b _020aff7c @ case 6
+	b _020aff6c @ case 7
+	b _020aff7c @ case 8
+	b _020aff7c @ case 9
+	b _020aff74 @ case 10
+	b _020aff74 @ case 11
+	b _020aff7c @ case 12
+	b _020aff6c @ case 13
 _020aff6c:
 	mov r0, #1
 	ldmia sp!, {r3, r4, r5, pc}
@@ -1331,16 +1331,16 @@ _020aff8c: .word data_027e0fcc
 
 	.global _ZN13PlayerControl18func_ov00_020aff90Eii
 	arm_func_start _ZN13PlayerControl18func_ov00_020aff90Eii
-_ZN13PlayerControl18func_ov00_020aff90Eii: ; 0x020aff90
+_ZN13PlayerControl18func_ov00_020aff90Eii: @ 0x020aff90
 	stmdb sp!, {r4, r5, r6, lr}
-	ldr r0, _020affe4 ; =data_027e0d38
+	ldr r0, _020affe4 @ =data_027e0d38
 	mov r6, r1
 	ldr r0, [r0]
 	mov r5, r2
 	bl func_ov00_02078b40
 	cmp r0, #2
 	ldmeqia sp!, {r4, r5, r6, pc}
-	ldr r0, _020affe8 ; =gItemManager
+	ldr r0, _020affe8 @ =gItemManager
 	ldr r4, [r0]
 	mov r0, r4
 	bl _ZNK11ItemManager16GetEquippedFairyEv
@@ -1360,7 +1360,7 @@ _020affe8: .word gItemManager
 
 	.global _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_
-_ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_: ; 0x020affec
+_ZN13PlayerControl18func_ov00_020affecEP5Vec3piiS1_: @ 0x020affec
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x30
 	mov r7, r0
@@ -1455,17 +1455,17 @@ _020b0134:
 
 	.global _ZN13PlayerControl18func_ov00_020b014cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020b014cEv
-_ZN13PlayerControl18func_ov00_020b014cEv: ; 0x020b014c
+_ZN13PlayerControl18func_ov00_020b014cEv: @ 0x020b014c
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x10
-	ldr r2, _020b0210 ; =data_ov00_020ee198
+	ldr r2, _020b0210 @ =data_ov00_020ee198
 	mov r5, r0
 	ldr r0, [r2]
 	mov r4, r1
 	tst r0, #1
 	orreq r0, r0, #1
 	streq r0, [r2]
-	ldr r0, _020b0214 ; =data_027e0f64
+	ldr r0, _020b0214 @ =data_027e0f64
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	ldr r0, [r0, #0x15c]
@@ -1480,7 +1480,7 @@ _ZN13PlayerControl18func_ov00_020b014cEv: ; 0x020b014c
 	cmp r0, #0
 	addle sp, sp, #0x10
 	ldmleia sp!, {r4, r5, r6, pc}
-	ldr r0, _020b0218 ; =gItemManager
+	ldr r0, _020b0218 @ =gItemManager
 	ldr r6, [r0]
 	mov r0, r6
 	bl _ZNK11ItemManager16GetEquippedFairyEv
@@ -1513,8 +1513,8 @@ _020b0218: .word gItemManager
 
 	.global _ZN13PlayerControl6SetAimEv
 	arm_func_start _ZN13PlayerControl6SetAimEv
-_ZN13PlayerControl6SetAimEv: ; 0x020b021c
-	ldr r1, _020b023c ; =data_027e0d0c
+_ZN13PlayerControl6SetAimEv: @ 0x020b021c
+	ldr r1, _020b023c @ =data_027e0d0c
 	ldr r2, [r1]
 	str r2, [r0, #0xb0]
 	ldr r2, [r1, #4]
@@ -1528,11 +1528,11 @@ _020b023c: .word data_027e0d0c
 
 	.global _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
 	arm_func_start _ZN13PlayerControl14UpdateAimWorldEP5Vec3p
-_ZN13PlayerControl14UpdateAimWorldEP5Vec3p: ; 0x020b0240
+_ZN13PlayerControl14UpdateAimWorldEP5Vec3p: @ 0x020b0240
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x10
-	ldr r2, _020b031c ; =data_027e0d38
-	ldr lr, _020b0320 ; =data_027e0f94
+	ldr r2, _020b031c @ =data_027e0d38
+	ldr lr, _020b0320 @ =data_027e0f94
 	ldr r3, [r2]
 	add ip, sp, #4
 	mov r5, r0
@@ -1543,7 +1543,7 @@ _ZN13PlayerControl14UpdateAimWorldEP5Vec3p: ; 0x020b0240
 	bl func_ov00_020a5e9c
 	cmp r0, #0x2f
 	bne _020b02a4
-	ldr r0, _020b0324 ; =data_027e0f64
+	ldr r0, _020b0324 @ =data_027e0f64
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	ldr r0, [r0, #0x15c]
@@ -1594,7 +1594,7 @@ _020b0324: .word data_027e0f64
 
 	.global _ZN13PlayerControl13GetTouchAngleEv
 	arm_func_start _ZN13PlayerControl13GetTouchAngleEv
-_ZN13PlayerControl13GetTouchAngleEv: ; 0x020b0328
+_ZN13PlayerControl13GetTouchAngleEv: @ 0x020b0328
 	ldrsh r1, [r0, #0x60]
 	cmp r1, #0
 	ldrgesh r0, [r0, #0x6a]
@@ -1608,7 +1608,7 @@ _ZN13PlayerControl13GetTouchAngleEv: ; 0x020b0328
 
 	.global _ZN13PlayerControl18func_ov00_020b034cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020b034cEv
-_ZN13PlayerControl18func_ov00_020b034cEv: ; 0x020b034c
+_ZN13PlayerControl18func_ov00_020b034cEv: @ 0x020b034c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldrsh r1, [r4, #0x60]
@@ -1619,7 +1619,7 @@ _ZN13PlayerControl18func_ov00_020b034cEv: ; 0x020b034c
 	bl _ZN13PlayerControl18func_ov00_020af2d4Ejb
 	cmp r0, #0
 	beq _020b03e8
-	ldr r0, _020b0410 ; =data_ov00_020e6124
+	ldr r0, _020b0410 @ =data_ov00_020e6124
 	ldr r0, [r0, #0x20]
 	bl func_01ff992c
 	ldr ip, [r4, #0x58]
@@ -1653,7 +1653,7 @@ _020b03e8:
 	ldrb r0, [r4, #0x7f]
 	cmp r0, #0
 	beq _020b0408
-	ldr r0, _020b0414 ; =data_027e05f8
+	ldr r0, _020b0414 @ =data_027e05f8
 	ldrh r0, [r0]
 	tst r0, #0xf0
 	movne r0, #0x1000
@@ -1668,17 +1668,17 @@ _020b0414: .word data_027e05f8
 
 	.global _ZN13PlayerControl18func_ov00_020b0418Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0418Ev
-_ZN13PlayerControl18func_ov00_020b0418Ev: ; 0x020b0418
+_ZN13PlayerControl18func_ov00_020b0418Ev: @ 0x020b0418
 	stmdb sp!, {r3, lr}
-	ldr r0, _020b0488 ; =data_ov00_020eec60
+	ldr r0, _020b0488 @ =data_ov00_020eec60
 	bl func_ov00_020d6be4
 	cmp r0, #0xa
 	movlt r0, #0
 	ldmltia sp!, {r3, pc}
 	cmp r0, #0x19
 	bge _020b0454
-	ldr r1, _020b048c ; =0x00000aaa
-	ldr r2, _020b0490 ; =0x51eb851f
+	ldr r1, _020b048c @ =0x00000aaa
+	ldr r2, _020b0490 @ =0x51eb851f
 	mul r3, r0, r1
 	smull r1, r0, r2, r3
 	mov r1, r3, lsr #0x1f
@@ -1688,10 +1688,10 @@ _020b0454:
 	cmp r0, #0x96
 	movge r0, #0x1000
 	ldmgeia sp!, {r3, pc}
-	ldr r1, _020b0494 ; =0x00000556
+	ldr r1, _020b0494 @ =0x00000556
 	sub r0, r0, #0x19
 	mul r1, r0, r1
-	ldr r2, _020b0498 ; =0x10624dd3
+	ldr r2, _020b0498 @ =0x10624dd3
 	mov r0, r1, lsr #0x1f
 	smull r1, r3, r2, r1
 	add r3, r0, r3, asr #3
@@ -1708,7 +1708,7 @@ _020b0498: .word 0x10624dd3
 
 	.global _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
 	arm_func_start _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb
-_ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
+_ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: @ 0x020b049c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r4, r1
 	mov r1, #1
@@ -1726,7 +1726,7 @@ _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
 	mov r1, r4
 	mov r2, #0x400
 	bl func_ov00_020b7d4c
-	ldr r1, _020b05d8 ; =data_027e0f94
+	ldr r1, _020b05d8 @ =data_027e0f94
 	mov r0, r4
 	mov r2, r4
 	bl func_01ff9bf8
@@ -1739,10 +1739,10 @@ _ZN13PlayerControl18func_ov00_020b049cEP5Vec3pb: ; 0x020b049c
 	beq _020b05d0
 	cmp r0, #0x400
 	bge _020b05bc
-	ldr r1, _020b05dc ; =data_027e0d0c
-	ldr r0, _020b05e0 ; =data_027e0fac
+	ldr r1, _020b05dc @ =data_027e0d0c
+	ldr r0, _020b05e0 @ =data_027e0fac
 	ldr r2, [r1]
-	ldr ip, _020b05e4 ; =data_02050f54
+	ldr ip, _020b05e4 @ =data_02050f54
 	str r2, [r4]
 	ldr r3, [r1, #4]
 	mov r2, #0
@@ -1800,7 +1800,7 @@ _020b05e4: .word data_02050f54
 
 	.global _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
-_ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
+_ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: @ 0x020b05e8
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x10
 	mov r5, r1
@@ -1815,8 +1815,8 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	cmp r0, #0x15
 	bge _020b0758
 	mov r0, r4
-	ldr r2, _020b0764 ; =0x00000333
-	ldr r4, _020b0768 ; =data_027e0f94
+	ldr r2, _020b0764 @ =0x00000333
+	ldr r4, _020b0768 @ =data_027e0f94
 	add r1, sp, #4
 	bl func_ov00_020b7d4c
 	mov r1, r4
@@ -1830,10 +1830,10 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	ldmgtia sp!, {r4, r5, r6, pc}
 	cmp r0, #0x400
 	bge _020b06e0
-	ldr r1, _020b076c ; =data_027e0fac
+	ldr r1, _020b076c @ =data_027e0fac
 	ldr r0, [r4, #4]
 	ldrh r2, [r1]
-	ldr r3, _020b0770 ; =data_02050f54
+	ldr r3, _020b0770 @ =data_02050f54
 	mov r1, #0x800
 	mov r2, r2, asr #0x4
 	mov r6, r2, lsl #0x1
@@ -1864,17 +1864,17 @@ _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p: ; 0x020b05e8
 	str r3, [sp, #4]
 	str r1, [sp, #0xc]
 _020b06e0:
-	ldr r1, _020b0774 ; =gMapManager
+	ldr r1, _020b0774 @ =gMapManager
 	add r0, sp, #0
 	ldr r1, [r1]
 	add r2, sp, #4
 	bl _ZN10MapManager18func_ov00_02083a1cEiPS_P5Vec3p
-	ldr r0, _020b0774 ; =gMapManager
+	ldr r0, _020b0774 @ =gMapManager
 	ldrb r1, [sp]
 	ldr r0, [r0]
 	bl _ZN10MapManager18func_ov00_02083c24Ei
 	ldr r1, [sp, #4]
-	ldr r2, _020b0774 ; =gMapManager
+	ldr r2, _020b0774 @ =gMapManager
 	sub r0, r0, r1
 	add r0, r0, r0, lsr #31
 	add r3, r1, r0, asr #1
@@ -1908,14 +1908,14 @@ _020b0774: .word gMapManager
 
 	.global _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji
-_ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji: ; 0x020b0778
+_ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji: @ 0x020b0778
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x18
 	mov r8, r3
 	mov r3, #0
 	str r3, [r8]
 	ldr r4, [r1]
-	ldr r3, _020b0aac ; =data_027e0f64
+	ldr r3, _020b0aac @ =data_027e0f64
 	str r4, [sp, #0xc]
 	ldr r4, [r1, #4]
 	mov r9, r0
@@ -1943,7 +1943,7 @@ _ZN13PlayerControl18func_ov00_020b0778EP5Vec3pji: ; 0x020b0778
 	mov r0, r0, asr #0x4
 	mov r1, r0, lsl #0x1
 	add r0, r1, #1
-	ldr r3, _020b0ab0 ; =data_02050f54
+	ldr r3, _020b0ab0 @ =data_02050f54
 	mov r2, r1, lsl #0x1
 	mov r1, r0, lsl #0x1
 	ldrsh r2, [r3, r2]
@@ -2135,7 +2135,7 @@ _020b0ab0: .word data_02050f54
 
 	.global _ZN13PlayerControl16CheckNotTouchingEv
 	arm_func_start _ZN13PlayerControl16CheckNotTouchingEv
-_ZN13PlayerControl16CheckNotTouchingEv: ; 0x020b0ab4
+_ZN13PlayerControl16CheckNotTouchingEv: @ 0x020b0ab4
 	stmdb sp!, {r3, lr}
 	mov r1, #1
 	bl _ZN13PlayerControl13CheckTouchingEj
@@ -2147,7 +2147,7 @@ _ZN13PlayerControl16CheckNotTouchingEv: ; 0x020b0ab4
 
 	.global _ZN13PlayerControl18func_ov00_020b0ad0EP5Actor
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0ad0EP5Actor
-_ZN13PlayerControl18func_ov00_020b0ad0EP5Actor: ; 0x020b0ad0
+_ZN13PlayerControl18func_ov00_020b0ad0EP5Actor: @ 0x020b0ad0
 	cmp r1, #0
 	beq _020b0b04
 	ldr r2, [r1, #8]
@@ -2168,7 +2168,7 @@ _020b0b04:
 
 	.global _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb
-_ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb: ; 0x020b0b0c
+_ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb: @ 0x020b0b0c
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x24
 	mov r7, r0
@@ -2178,16 +2178,16 @@ _ZN13PlayerControl18func_ov00_020b0b0cEPsPiS1_Pb: ; 0x020b0b0c
 	mov r5, r3
 	cmp r0, #0
 	beq _020b0b80
-	ldr r0, _020b0de0 ; =gItemManager
+	ldr r0, _020b0de0 @ =gItemManager
 	mov r1, #1
 	ldr r0, [r0]
 	bl _ZN11ItemManager18func_ov00_020ad790Ei
 	cmp r0, #0
 	beq _020b0b80
-	ldr r0, _020b0de0 ; =gItemManager
+	ldr r0, _020b0de0 @ =gItemManager
 	ldr r0, [r0]
 	bl _ZNK11ItemManager15GetEquippedItemEv
-	ldr r1, _020b0de4 ; =data_027e103c
+	ldr r1, _020b0de4 @ =data_027e103c
 	str r0, [r4]
 	ldr r0, [r1]
 	bl func_ov00_020cf330
@@ -2368,7 +2368,7 @@ _020b0de4: .word data_027e103c
 
 	.global _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p
-_ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p: ; 0x020b0de8
+_ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p: @ 0x020b0de8
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r1, #1
@@ -2382,7 +2382,7 @@ _ZN13PlayerControl18func_ov00_020b0de8EP5Vec3p: ; 0x020b0de8
 	sub r1, r0, #0x60
 	mov r0, #0xaa00
 	mul ip, r1, r0
-	ldr r1, _020b0e50 ; =0x2aaaaaab
+	ldr r1, _020b0e50 @ =0x2aaaaaab
 	sub r2, r2, #0x80
 	mov r0, #0xaa
 	mul r3, r2, r0
@@ -2401,7 +2401,7 @@ _020b0e50: .word 0x2aaaaaab
 
 	.global _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_
-_ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_: ; 0x020b0e54
+_ZN13PlayerControl18func_ov00_020b0e54EP5Vec3pS1_: @ 0x020b0e54
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0xc
 	mov r6, r0
@@ -2468,7 +2468,7 @@ _020b0f0c:
 	bl func_ov00_020b7d4c
 	b _020b0f6c
 _020b0f50:
-	ldr r0, _020b0f84 ; =data_027e0f94
+	ldr r0, _020b0f84 @ =data_027e0f94
 	ldr r1, [r0]
 	str r1, [r5]
 	ldr r1, [r0, #4]
@@ -2489,7 +2489,7 @@ _020b0f84: .word data_027e0f94
 
 	.global _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_
-_ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_: ; 0x020b0f88
+_ZN13PlayerControl18func_ov00_020b0f88EP5Vec3piS1_: @ 0x020b0f88
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0xc
 	mov r7, r1
@@ -2548,7 +2548,7 @@ _020b104c:
 
 	.global _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
 	arm_func_start _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_
-_ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_: ; 0x020b1058
+_ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_: @ 0x020b1058
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x18
 	mov r7, r1
@@ -2566,7 +2566,7 @@ _ZN13PlayerControl18func_ov00_020b1058EP5Vec3piS1_S1_: ; 0x020b1058
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	beq _020b1140
-	ldr r1, _020b11d8 ; =data_027e0f94
+	ldr r1, _020b11d8 @ =data_027e0f94
 	add r2, sp, #0
 	bl func_01ff9bf8
 	ldr ip, [sp]
@@ -2654,13 +2654,13 @@ _020b11d8: .word data_027e0f94
 
 	.global _ZN13PlayerControl14IsUntouchedNowEv
 	arm_func_start _ZN13PlayerControl14IsUntouchedNowEv
-_ZN13PlayerControl14IsUntouchedNowEv: ; 0x020b11dc
+_ZN13PlayerControl14IsUntouchedNowEv: @ 0x020b11dc
 	stmdb sp!, {r3, lr}
 	mov r1, #7
 	bl _ZN13PlayerControl17CheckUntouchedNowEj
 	cmp r0, #0
 	beq _020b1208
-	ldr r0, _020b1210 ; =data_027e103c
+	ldr r0, _020b1210 @ =data_027e103c
 	ldr r0, [r0]
 	ldrsh r0, [r0, #0x1c]
 	cmp r0, #0
@@ -2675,14 +2675,14 @@ _020b1210: .word data_027e103c
 
 	.global _ZN13PlayerControl17IsNotUntouchedNowEv
 	arm_func_start _ZN13PlayerControl17IsNotUntouchedNowEv
-_ZN13PlayerControl17IsNotUntouchedNowEv: ; 0x020b1214
+_ZN13PlayerControl17IsNotUntouchedNowEv: @ 0x020b1214
 	stmdb sp!, {r3, lr}
 	mov r1, #7
 	bl _ZN13PlayerControl17CheckUntouchedNowEj
 	cmp r0, #0
 	movne r0, #1
 	ldmneia sp!, {r3, pc}
-	ldr r0, _020b1244 ; =data_027e05f8
+	ldr r0, _020b1244 @ =data_027e05f8
 	ldrh r0, [r0, #2]
 	tst r0, #3
 	movne r0, #1
@@ -2694,7 +2694,7 @@ _020b1244: .word data_027e05f8
 
 	.global _ZN13PlayerControl18func_ov00_020b1248EPi
 	arm_func_start _ZN13PlayerControl18func_ov00_020b1248EPi
-_ZN13PlayerControl18func_ov00_020b1248EPi: ; 0x020b1248
+_ZN13PlayerControl18func_ov00_020b1248EPi: @ 0x020b1248
 	stmdb sp!, {r3, lr}
 	ldr r2, [r0, #0xd0]
 	ldr r3, [r2]
@@ -2721,7 +2721,7 @@ _020b1294:
 
 	.global _ZN13PlayerControl18func_ov00_020b129cEv
 	arm_func_start _ZN13PlayerControl18func_ov00_020b129cEv
-_ZN13PlayerControl18func_ov00_020b129cEv: ; 0x020b129c
+_ZN13PlayerControl18func_ov00_020b129cEv: @ 0x020b129c
 	ldrsh r3, [r0, #0x60]
 	mov r1, #1
 	mov r2, r1
@@ -2740,7 +2740,7 @@ _020b12b8:
 
 	.global _ZN13PlayerControl18func_ov00_020b12d0EPs
 	arm_func_start _ZN13PlayerControl18func_ov00_020b12d0EPs
-_ZN13PlayerControl18func_ov00_020b12d0EPs: ; 0x020b12d0
+_ZN13PlayerControl18func_ov00_020b12d0EPs: @ 0x020b12d0
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r1, #1
@@ -2772,7 +2772,7 @@ _020b1330:
 
 	.global _ZN13PlayerControl13IsNotTouchingEv
 	arm_func_start _ZN13PlayerControl13IsNotTouchingEv
-_ZN13PlayerControl13IsNotTouchingEv: ; 0x020b1338
+_ZN13PlayerControl13IsNotTouchingEv: @ 0x020b1338
 	ldrb r0, [r0, #0xc]
 	cmp r0, #0
 	moveq r0, #1
@@ -2782,14 +2782,14 @@ _ZN13PlayerControl13IsNotTouchingEv: ; 0x020b1338
 
 	.global _ZN13PlayerControl14IsTouchingFastEv
 	arm_func_start _ZN13PlayerControl14IsTouchingFastEv
-_ZN13PlayerControl14IsTouchingFastEv: ; 0x020b134c
+_ZN13PlayerControl14IsTouchingFastEv: @ 0x020b134c
 	stmdb sp!, {r3, lr}
 	mov r1, #1
 	bl _ZN13PlayerControl14CheckTouchFastEj
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}
-	ldr r0, _020b1378 ; =data_ov00_020eec9c
+	ldr r0, _020b1378 @ =data_ov00_020eec9c
 	mov r1, #0x17
 	bl func_ov00_020d77e4
 	mov r0, #1
@@ -2800,7 +2800,7 @@ _020b1378: .word data_ov00_020eec9c
 
 	.global _ZN13PlayerControl11IsTappedNowEv
 	arm_func_start _ZN13PlayerControl11IsTappedNowEv
-_ZN13PlayerControl11IsTappedNowEv: ; 0x020b137c
+_ZN13PlayerControl11IsTappedNowEv: @ 0x020b137c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldrsh r1, [r4, #0x60]
@@ -2824,7 +2824,7 @@ _020b13bc:
 
 	.global _ZN13PlayerControl18func_ov00_020b13c4Ev
 	arm_func_start _ZN13PlayerControl18func_ov00_020b13c4Ev
-_ZN13PlayerControl18func_ov00_020b13c4Ev: ; 0x020b13c4
+_ZN13PlayerControl18func_ov00_020b13c4Ev: @ 0x020b13c4
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r1, #1
 	mov r5, r0
@@ -2832,7 +2832,7 @@ _ZN13PlayerControl18func_ov00_020b13c4Ev: ; 0x020b13c4
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	ldr r0, _020b1494 ; =data_ov00_020e6124
+	ldr r0, _020b1494 @ =data_ov00_020e6124
 	ldr r0, [r0, #0x20]
 	bl func_01ff992c
 	ldrsh r0, [r5, #0x64]
@@ -2885,72 +2885,72 @@ _020b1494: .word data_ov00_020e6124
 
     .data
 	.global data_ov00_020e6104
-data_ov00_020e6104: ; 0x020e6104
+data_ov00_020e6104: @ 0x020e6104
 	.ascii "fnl"
 	.byte 0x00
 	.global data_ov00_020e6108
-data_ov00_020e6108: ; 0x020e6108
+data_ov00_020e6108: @ 0x020e6108
 	.ascii "bow"
 	.byte 0x00
 	.global data_ov00_020e610c
-data_ov00_020e610c: ; 0x020e610c
+data_ov00_020e610c: @ 0x020e610c
 	.ascii "dco"
 	.byte 0x00
 	.global data_ov00_020e6110
-data_ov00_020e6110: ; 0x020e6110
+data_ov00_020e6110: @ 0x020e6110
 	.ascii "can"
 	.byte 0x00
 	.global data_ov00_020e6114
-data_ov00_020e6114: ; 0x020e6114
+data_ov00_020e6114: @ 0x020e6114
 	.ascii "hul"
 	.byte 0x00
 	.global data_ov00_020e6118
-data_ov00_020e6118: ; 0x020e6118
+data_ov00_020e6118: @ 0x020e6118
 	.ascii "pdl"
 	.byte 0x00
 	.global data_ov00_020e611c
-data_ov00_020e611c: ; 0x020e611c
+data_ov00_020e611c: @ 0x020e611c
 	.ascii "anc"
 	.byte 0x00
 	.global data_ov00_020e6120
-data_ov00_020e6120: ; 0x020e6120
+data_ov00_020e6120: @ 0x020e6120
 	.ascii "brg"
 	.byte 0x00
 	.global data_ov00_020e6124
-data_ov00_020e6124: ; 0x020e6124
+data_ov00_020e6124: @ 0x020e6124
     .word data_ov00_020e611c
 	.global data_ov00_020e6128
-data_ov00_020e6128: ; 0x020e6128
+data_ov00_020e6128: @ 0x020e6128
     .word data_ov00_020e6108
 	.global data_ov00_020e612c
-data_ov00_020e612c: ; 0x020e612c
+data_ov00_020e612c: @ 0x020e612c
     .word data_ov00_020e6114
 	.global data_ov00_020e6130
-data_ov00_020e6130: ; 0x020e6130
+data_ov00_020e6130: @ 0x020e6130
     .word data_ov00_020e6110
 	.global data_ov00_020e6134
-data_ov00_020e6134: ; 0x020e6134
+data_ov00_020e6134: @ 0x020e6134
     .word data_ov00_020e610c
 	.global data_ov00_020e6138
-data_ov00_020e6138: ; 0x020e6138
+data_ov00_020e6138: @ 0x020e6138
     .word data_ov00_020e6118
 	.global data_ov00_020e613c
-data_ov00_020e613c: ; 0x020e613c
+data_ov00_020e613c: @ 0x020e613c
     .word data_ov00_020e6104
 	.global data_ov00_020e6140
-data_ov00_020e6140: ; 0x020e6140
+data_ov00_020e6140: @ 0x020e6140
     .word data_ov00_020e6120
 	.global data_ov00_020e6144
-data_ov00_020e6144: ; 0x020e6144
+data_ov00_020e6144: @ 0x020e6144
 	.byte 0x00, 0x00, 0x05, 0x00
 	.global data_ov00_020e6148
-data_ov00_020e6148: ; 0x020e6148
+data_ov00_020e6148: @ 0x020e6148
 	.byte 0x91, 0x80, 0x8d, 0xec
 	.global data_ov00_020e614c
-data_ov00_020e614c: ; 0x020e614c
+data_ov00_020e614c: @ 0x020e614c
 	.byte 0x00, 0x00, 0x00, 0x00
 
-    .sbss
+    .section .sbss
 	.global data_ov00_020ee198
 data_ov00_020ee198:
 	.space 0x4

@@ -5,10 +5,10 @@
 
 	.global _ZN12TouchControlC2Ev
 	thumb_func_start _ZN12TouchControlC2Ev
-_ZN12TouchControlC2Ev: ; 0x0207ac24
+_ZN12TouchControlC2Ev: @ 0x0207ac24
 	mov r1, #1
 	strh r1, [r0]
-	ldr r1, _0207ac5c ; =0x0000ffff
+	ldr r1, _0207ac5c @ =0x0000ffff
 	mov r3, #0
 	strh r1, [r0, #2]
 	strh r1, [r0, #4]
@@ -39,7 +39,7 @@ _0207ac5c: .word 0x0000ffff
 
 	.global _ZN12TouchControl13IncreaseSpeedEs
 	arm_func_start _ZN12TouchControl13IncreaseSpeedEs
-_ZN12TouchControl13IncreaseSpeedEs: ; 0x0207ac60
+_ZN12TouchControl13IncreaseSpeedEs: @ 0x0207ac60
 	mov r2, #0
 	strh r2, [r0, #0x34]
 	ldrh r2, [r0]
@@ -50,7 +50,7 @@ _ZN12TouchControl13IncreaseSpeedEs: ; 0x0207ac60
 
 	.global _ZN12TouchControl11UpdateFlagsEt
 	arm_func_start _ZN12TouchControl11UpdateFlagsEt
-_ZN12TouchControl11UpdateFlagsEt: ; 0x0207ac78
+_ZN12TouchControl11UpdateFlagsEt: @ 0x0207ac78
 	mov r2, #0
 	strh r2, [r0, #0x34]
 	ldrb r2, [r0, #0x18]
@@ -97,7 +97,7 @@ _0207ace8:
 _0207ad20:
 	ldrh ip, [r0]
 	ldrh r3, [r0, #4]
-	ldr r2, _0207ad8c ; =0x0000ffff
+	ldr r2, _0207ad8c @ =0x0000ffff
 	add r3, r3, ip
 	cmp r3, r2
 	strlth r3, [r0, #4]
@@ -129,7 +129,7 @@ _0207ad8c: .word 0x0000ffff
 
 	.global _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
 	arm_func_start _ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst
-_ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst: ; 0x0207ad90
+_ZN12TouchControl20UpdateWithStateFlagsEP15TouchStateFlagst: @ 0x0207ad90
 	ldrb r3, [r0, #0xc]
 	strb r3, [r0, #0x18]
 	ldr r3, [r0, #0x10]
@@ -185,7 +185,7 @@ _0207ae48:
 	str r1, [r0, #0x10]
 	str r1, [r0, #0x14]
 _0207ae5c:
-	ldr ip, _0207ae68 ; =_ZN12TouchControl11UpdateFlagsEt
+	ldr ip, _0207ae68 @ =_ZN12TouchControl11UpdateFlagsEt
 	mov r1, r2
 	bx ip
 	.align 2, 0
@@ -194,9 +194,9 @@ _0207ae68: .word _ZN12TouchControl11UpdateFlagsEt - 1
 
 	.global _ZN12TouchControl6UpdateEP10TouchStatet
 	arm_func_start _ZN12TouchControl6UpdateEP10TouchStatet
-_ZN12TouchControl6UpdateEP10TouchStatet: ; 0x0207ae6c
+_ZN12TouchControl6UpdateEP10TouchStatet: @ 0x0207ae6c
 	ldrb r3, [r0, #0xc]
-	ldr ip, _0207aea8 ; =_ZN12TouchControl11UpdateFlagsEt
+	ldr ip, _0207aea8 @ =_ZN12TouchControl11UpdateFlagsEt
 	strb r3, [r0, #0x18]
 	ldr r3, [r0, #0x10]
 	str r3, [r0, #0x1c]
@@ -216,8 +216,8 @@ _0207aea8: .word _ZN12TouchControl11UpdateFlagsEt - 1
 
 	.global _ZN12TouchControl18func_ov00_0207aeacEv
 	arm_func_start _ZN12TouchControl18func_ov00_0207aeacEv
-_ZN12TouchControl18func_ov00_0207aeacEv: ; 0x0207aeac
-	ldr r0, _0207aecc ; =0x027fffa8
+_ZN12TouchControl18func_ov00_0207aeacEv: @ 0x0207aeac
+	ldr r0, _0207aecc @ =0x027fffa8
 	ldrh r0, [r0]
 	and r0, r0, #0x8000
 	mov r0, r0, asr #0xf
@@ -231,7 +231,7 @@ _0207aecc: .word 0x027fffa8
 
 	.global _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
 	arm_func_start _ZN12TouchControl19UpdateConditionallyEP10TouchStatet
-_ZN12TouchControl19UpdateConditionallyEP10TouchStatet: ; 0x0207aed0
+_ZN12TouchControl19UpdateConditionallyEP10TouchStatet: @ 0x0207aed0
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0xc
 	mov r4, r0
@@ -264,7 +264,7 @@ _0207af20:
 
 	.global _ZN12TouchControl18func_ov00_0207af38Etb
 	arm_func_start _ZN12TouchControl18func_ov00_0207af38Etb
-_ZN12TouchControl18func_ov00_0207af38Etb: ; 0x0207af38
+_ZN12TouchControl18func_ov00_0207af38Etb: @ 0x0207af38
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #8
 	mov r5, r0
@@ -297,20 +297,20 @@ _0207af84:
 
 	.global _ZN12TouchControlD1Ev
 	arm_func_start _ZN12TouchControlD1Ev
-_ZN12TouchControlD1Ev: ; 0x0207af9c
+_ZN12TouchControlD1Ev: @ 0x0207af9c
 	bx lr
 	arm_func_end _ZN12TouchControlD1Ev
 
-    .section .init, 4, 1, 4
+    .section .init
 	.global func_ov00_020df38c
 	arm_func_start func_ov00_020df38c
-func_ov00_020df38c: ; 0x020df38c
+func_ov00_020df38c: @ 0x020df38c
 	stmdb sp!, {r3, lr}
-	ldr r0, _020df3ac ; =data_027e0d78
+	ldr r0, _020df3ac @ =data_027e0d78
 	bl func_ov08_02113080
-	ldr r0, _020df3ac ; =data_027e0d78
-	ldr r1, _020df3b0 ; =_ZN12TouchControlD1Ev
-	ldr r2, _020df3b4 ; =data_027e0d6c
+	ldr r0, _020df3ac @ =data_027e0d78
+	ldr r1, _020df3b0 @ =_ZN12TouchControlD1Ev
+	ldr r2, _020df3b4 @ =data_027e0d6c
 	bl __register_global_object
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -319,7 +319,7 @@ _020df3b0: .word _ZN12TouchControlD1Ev - 1
 _020df3b4: .word data_027e0d6c
 	arm_func_end func_ov00_020df38c
 
-	.section .ctor, 4, 1, 4
+	.section .ctor
 	.global data_ov00_020e1e90
-data_ov00_020e1e90: ; 0x020e1e90
+data_ov00_020e1e90: @ 0x020e1e90
     .word func_ov00_020df378

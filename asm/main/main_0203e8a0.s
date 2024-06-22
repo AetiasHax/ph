@@ -5,10 +5,10 @@
 
 	.global func_0203e8a0
 	thumb_func_start func_0203e8a0
-func_0203e8a0: ; 0x0203e8a0
+func_0203e8a0: @ 0x0203e8a0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
-	ldr r0, _0203e8fc ; =data_02058088
+	ldr r0, _0203e8fc @ =data_02058088
 	mov r1, #2
 	str r0, [sp]
 	mov r3, #0
@@ -16,8 +16,8 @@ func_0203e8a0: ; 0x0203e8a0
 	add r2, r1, #0
 	str r3, [sp, #4]
 	bl func_020304d4
-	ldr r5, _0203e900 ; =gOverlayManager
-	ldr r7, _0203e904 ; =data_02058090
+	ldr r5, _0203e900 @ =gOverlayManager
+	ldr r7, _0203e904 @ =data_02058090
 	mov r4, #3
 	mov r6, #0
 _0203e8be:
@@ -36,7 +36,7 @@ _0203e8be:
 	bl func_020304d4
 	b _0203e8ee
 _0203e8dc:
-	ldr r0, _0203e908 ; =data_02058094
+	ldr r0, _0203e908 @ =data_02058094
 	mov r2, #2
 	str r0, [sp]
 	str r1, [sp, #4]
@@ -61,10 +61,10 @@ _0203e908: .word data_02058094
 
 	.global func_0203e90c
 	arm_func_start func_0203e90c
-func_0203e90c: ; 0x0203e90c
+func_0203e90c: @ 0x0203e90c
 	stmdb sp!, {r3, lr}
 	mov r1, #0x4000000
-	ldr r0, _0203e938 ; =0x00300010
+	ldr r0, _0203e938 @ =0x00300010
 	ldr r2, [r1]
 	sub r1, r0, #0x100000
 	and r0, r2, r0
@@ -79,10 +79,10 @@ _0203e938: .word 0x00300010
 
 	.global func_0203e93c
 	arm_func_start func_0203e93c
-func_0203e93c: ; 0x0203e93c
+func_0203e93c: @ 0x0203e93c
 	stmdb sp!, {r3, lr}
 	mov r1, #0x4000000
-	ldr r0, _0203e968 ; =0x00300010
+	ldr r0, _0203e968 @ =0x00300010
 	ldr r2, [r1]
 	sub r1, r0, #0x100000
 	and r0, r2, r0
@@ -97,10 +97,10 @@ _0203e968: .word 0x00300010
 
 	.global func_0203e96c
 	arm_func_start func_0203e96c
-func_0203e96c: ; 0x0203e96c
+func_0203e96c: @ 0x0203e96c
 	stmdb sp!, {r4, lr}
 	mov r1, #0x4000000
-	ldr r0, _0203e9a8 ; =0x00300010
+	ldr r0, _0203e9a8 @ =0x00300010
 	ldr r2, [r1]
 	sub r1, r0, #0x100000
 	and r0, r2, r0
@@ -120,10 +120,10 @@ _0203e9a8: .word 0x00300010
 
 	.global func_0203e9ac
 	arm_func_start func_0203e9ac
-func_0203e9ac: ; 0x0203e9ac
+func_0203e9ac: @ 0x0203e9ac
 	stmdb sp!, {r3, lr}
 	mov r1, #0x4000000
-	ldr r0, _0203e9dc ; =0x00300010
+	ldr r0, _0203e9dc @ =0x00300010
 	ldr r2, [r1]
 	sub r1, r0, #0x100000
 	and r0, r2, r0
@@ -140,13 +140,13 @@ _0203e9dc: .word 0x00300010
 
 	.global func_0203e9e0
 	arm_func_start func_0203e9e0
-func_0203e9e0: ; 0x0203e9e0
+func_0203e9e0: @ 0x0203e9e0
 	stmdb sp!, {r3, lr}
-	ldr r0, _0203ea1c ; =data_027e0618
+	ldr r0, _0203ea1c @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _0203ea14
-	ldr r0, _0203ea20 ; =data_027e0d38
+	ldr r0, _0203ea20 @ =data_027e0d38
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0203ea14
@@ -164,13 +164,13 @@ _0203ea20: .word data_027e0d38
 
 	.global func_0203ea24
 	arm_func_start func_0203ea24
-func_0203ea24: ; 0x0203ea24
+func_0203ea24: @ 0x0203ea24
 	stmdb sp!, {r3, lr}
-	ldr r0, _0203ea60 ; =data_027e0618
+	ldr r0, _0203ea60 @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _0203ea58
-	ldr r0, _0203ea64 ; =data_027e0d38
+	ldr r0, _0203ea64 @ =data_027e0d38
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0203ea58
@@ -188,13 +188,13 @@ _0203ea64: .word data_027e0d38
 
 	.global func_0203ea68
 	arm_func_start func_0203ea68
-func_0203ea68: ; 0x0203ea68
+func_0203ea68: @ 0x0203ea68
 	stmdb sp!, {r3, lr}
-	ldr r0, _0203eaa4 ; =data_027e0618
+	ldr r0, _0203eaa4 @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _0203ea9c
-	ldr r0, _0203eaa8 ; =data_027e0d38
+	ldr r0, _0203eaa8 @ =data_027e0d38
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0203ea9c
@@ -212,7 +212,7 @@ _0203eaa8: .word data_027e0d38
 
 	.global func_0203eaac
 	arm_func_start func_0203eaac
-func_0203eaac: ; 0x0203eaac
+func_0203eaac: @ 0x0203eaac
 	stmdb sp!, {r3, r4, r5, lr}
 	bl func_0203e9e0
 	mov r5, r0
@@ -226,8 +226,8 @@ func_0203eaac: ; 0x0203eaac
 
 	.global func_0203ead0
 	arm_func_start func_0203ead0
-func_0203ead0: ; 0x0203ead0
-	ldr ip, _0203ead8 ; =func_0203ea24
+func_0203ead0: @ 0x0203ead0
+	ldr ip, _0203ead8 @ =func_0203ea24
 	bx ip
 	.align 2, 0
 _0203ead8: .word func_0203ea24 - 1
@@ -235,7 +235,7 @@ _0203ead8: .word func_0203ea24 - 1
 
 	.global func_0203eadc
 	arm_func_start func_0203eadc
-func_0203eadc: ; 0x0203eadc
+func_0203eadc: @ 0x0203eadc
 	cmp r0, #0
 	blt _0203eaf0
 	cmp r0, #3
@@ -254,9 +254,9 @@ _0203eb04:
 
 	.global func_0203eb0c
 	arm_func_start func_0203eb0c
-func_0203eb0c: ; 0x0203eb0c
+func_0203eb0c: @ 0x0203eb0c
 	mov r0, #0x4000000
-	ldr r1, _0203eb88 ; =0x00300010
+	ldr r1, _0203eb88 @ =0x00300010
 	ldr r2, [r0]
 	sub r0, r1, #0x200000
 	and r2, r2, r1
@@ -299,7 +299,7 @@ _0203eb88: .word 0x00300010
 
 	.global func_0203eb8c
 	thumb_func_start func_0203eb8c
-func_0203eb8c: ; 0x0203eb8c
+func_0203eb8c: @ 0x0203eb8c
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r2, [r4, #0x1c]
@@ -316,7 +316,7 @@ func_0203eb8c: ; 0x0203eb8c
 
 	.global func_0203eba8
 	arm_func_start func_0203eba8
-func_0203eba8: ; 0x0203eba8
+func_0203eba8: @ 0x0203eba8
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	stmia r4, {r1, r2}
@@ -329,7 +329,7 @@ func_0203eba8: ; 0x0203eba8
 
 	.global func_0203ebc8
 	arm_func_start func_0203ebc8
-func_0203ebc8: ; 0x0203ebc8
+func_0203ebc8: @ 0x0203ebc8
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldr r0, [r4]
@@ -340,7 +340,7 @@ func_0203ebc8: ; 0x0203ebc8
 
 	.global func_0203ebe0
 	arm_func_start func_0203ebe0
-func_0203ebe0: ; 0x0203ebe0
+func_0203ebe0: @ 0x0203ebe0
 	mov r1, #0
 	str r1, [r0, #4]
 	strh r1, [r0, #0xc]
@@ -351,7 +351,7 @@ func_0203ebe0: ; 0x0203ebe0
 
 	.global func_0203ebf8
 	arm_func_start func_0203ebf8
-func_0203ebf8: ; 0x0203ebf8
+func_0203ebf8: @ 0x0203ebf8
 	stmdb sp!, {r3, lr}
 	ldr r1, [r0, #8]
 	cmp r1, #0
@@ -371,7 +371,7 @@ func_0203ebf8: ; 0x0203ebf8
 
 	.global func_0203ec34
 	arm_func_start func_0203ec34
-func_0203ec34: ; 0x0203ec34
+func_0203ec34: @ 0x0203ec34
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #8]
 	cmp r0, #0
@@ -382,7 +382,7 @@ func_0203ec34: ; 0x0203ec34
 
 	.global func_0203ec4c
 	arm_func_start func_0203ec4c
-func_0203ec4c: ; 0x0203ec4c
+func_0203ec4c: @ 0x0203ec4c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	mov r9, r0
 	ldr r0, [r9, #8]
@@ -407,7 +407,7 @@ func_0203ec4c: ; 0x0203ec4c
 	bl func_02039208
 	b _0203ecc8
 _0203eca8:
-	ldr r0, _0203ed14 ; =data_ov00_020eec9c
+	ldr r0, _0203ed14 @ =data_ov00_020eec9c
 	mov r1, #0x1d
 	bl func_ov00_020d77e4
 	mov r0, r9
@@ -441,7 +441,7 @@ _0203ed14: .word data_ov00_020eec9c
 
 	.global func_0203ed18
 	arm_func_start func_0203ed18
-func_0203ed18: ; 0x0203ed18
+func_0203ed18: @ 0x0203ed18
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x20
 	mov r5, r0
@@ -502,7 +502,7 @@ _0203edd4:
 
 	.global func_0203edec
 	arm_func_start func_0203edec
-func_0203edec: ; 0x0203edec
+func_0203edec: @ 0x0203edec
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #4
 	mov r8, r0
@@ -530,7 +530,7 @@ func_0203edec: ; 0x0203edec
 
 	.global func_0203ee48
 	arm_func_start func_0203ee48
-func_0203ee48: ; 0x0203ee48
+func_0203ee48: @ 0x0203ee48
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r1, r4, #4
@@ -549,7 +549,7 @@ func_0203ee48: ; 0x0203ee48
 
 	.global func_0203ee80
 	arm_func_start func_0203ee80
-func_0203ee80: ; 0x0203ee80
+func_0203ee80: @ 0x0203ee80
 	stmdb sp!, {r3, lr}
 	add r2, r0, #0x100
 	ldrsh r3, [r2, #0xc]
@@ -566,7 +566,7 @@ func_0203ee80: ; 0x0203ee80
 
 	.global func_0203eeb0
 	arm_func_start func_0203eeb0
-func_0203eeb0: ; 0x0203eeb0
+func_0203eeb0: @ 0x0203eeb0
 	stmdb sp!, {r4, r5, r6, lr}
 	add r3, r0, r1, lsl #1
 	add r4, r3, #0x100
@@ -606,7 +606,7 @@ _0203ef28:
 
 	.global func_0203ef30
 	arm_func_start func_0203ef30
-func_0203ef30: ; 0x0203ef30
+func_0203ef30: @ 0x0203ef30
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r7, r0
 	ldr r0, [r7]
@@ -629,7 +629,7 @@ func_0203ef30: ; 0x0203ef30
 
 	.global func_0203ef78
 	arm_func_start func_0203ef78
-func_0203ef78: ; 0x0203ef78
+func_0203ef78: @ 0x0203ef78
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	add r0, r5, #0x100
@@ -658,12 +658,12 @@ func_0203ef78: ; 0x0203ef78
 
 	.global func_0203efd8
 	thumb_func_start func_0203efd8
-func_0203efd8: ; 0x0203efd8
+func_0203efd8: @ 0x0203efd8
 	push {r4, lr}
 	add r4, r0, #0
 	str r1, [r4]
 	mov r1, #0
-	ldr r3, _0203f01c ; =0x00003fff
+	ldr r3, _0203f01c @ =0x00003fff
 	add r0, r4, #4
 	add r2, r1, #0
 	blx func_ov00_020d0490
@@ -697,21 +697,21 @@ _0203f01c: .word 0x00003fff
 
 	.global func_0203f020
 	arm_func_start func_0203f020
-func_0203f020: ; 0x0203f020
+func_0203f020: @ 0x0203f020
 	ldr r3, [r1, #0xc]
 	add r3, r3, #1
 	cmp r3, #7
 	addls pc, pc, r3, lsl #2
 	b _0203f080
-_0203f034: ; jump table
-	b _0203f054 ; case 0
-	b _0203f054 ; case 1
-	b _0203f054 ; case 2
-	b _0203f054 ; case 3
-	b _0203f054 ; case 4
-	b _0203f054 ; case 5
-	b _0203f054 ; case 6
-	b _0203f054 ; case 7
+_0203f034: @ jump table
+	b _0203f054 @ case 0
+	b _0203f054 @ case 1
+	b _0203f054 @ case 2
+	b _0203f054 @ case 3
+	b _0203f054 @ case 4
+	b _0203f054 @ case 5
+	b _0203f054 @ case 6
+	b _0203f054 @ case 7
 _0203f054:
 	mov r3, #6
 	strh r3, [r0, #0x20]
@@ -730,14 +730,14 @@ _0203f080:
 	cmp r1, #6
 	addls pc, pc, r1, lsl #2
 	b _0203f0b8
-_0203f094: ; jump table
-	b _0203f0b0 ; case 0
-	b _0203f0b0 ; case 1
-	b _0203f0b0 ; case 2
-	b _0203f0b8 ; case 3
-	b _0203f0b8 ; case 4
-	b _0203f0b0 ; case 5
-	b _0203f0b8 ; case 6
+_0203f094: @ jump table
+	b _0203f0b0 @ case 0
+	b _0203f0b0 @ case 1
+	b _0203f0b0 @ case 2
+	b _0203f0b8 @ case 3
+	b _0203f0b8 @ case 4
+	b _0203f0b0 @ case 5
+	b _0203f0b8 @ case 6
 _0203f0b0:
 	mov r1, #0xd
 	b _0203f0bc
@@ -755,15 +755,15 @@ _0203f0bc:
 
 	.global func_0203f0d8
 	arm_func_start func_0203f0d8
-func_0203f0d8: ; 0x0203f0d8
+func_0203f0d8: @ 0x0203f0d8
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x2c
-	ldr r2, _0203f36c ; =data_027e0d38
+	ldr r2, _0203f36c @ =data_027e0d38
 	mov r6, r0
 	ldr r0, [r2]
 	mov r4, #0
 	cmp r0, #0
-	ldrne r0, _0203f370 ; =data_027e0f64
+	ldrne r0, _0203f370 @ =data_027e0f64
 	mov r5, r1
 	ldrne r0, [r0]
 	ldrne r4, [r0, #4]
@@ -771,18 +771,18 @@ func_0203f0d8: ; 0x0203f0d8
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
 	b _0203f1ec
-_0203f114: ; jump table
-	b _0203f124 ; case 0
-	b _0203f130 ; case 1
-	b _0203f168 ; case 2
-	b _0203f1bc ; case 3
+_0203f114: @ jump table
+	b _0203f124 @ case 0
+	b _0203f130 @ case 1
+	b _0203f168 @ case 2
+	b _0203f1bc @ case 3
 _0203f124:
 	mov r0, #0
 	str r0, [r6, #0x18]
 	b _0203f1ec
 _0203f130:
 	ldr r2, [r6]
-	ldr r1, _0203f374 ; =data_027e0d78
+	ldr r1, _0203f374 @ =data_027e0d78
 	add r0, r2, #0x100
 	ldr r2, [r2, #0x14]
 	ldrsh r3, [r0, #0x58]
@@ -835,11 +835,11 @@ _0203f1ec:
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
 	b _0203f364
-_0203f1fc: ; jump table
-	b _0203f20c ; case 0
-	b _0203f21c ; case 1
-	b _0203f258 ; case 2
-	b _0203f2c4 ; case 3
+_0203f1fc: @ jump table
+	b _0203f20c @ case 0
+	b _0203f21c @ case 1
+	b _0203f258 @ case 2
+	b _0203f2c4 @ case 3
 _0203f20c:
 	mov r0, #0
 	add sp, sp, #0x2c
@@ -847,7 +847,7 @@ _0203f20c:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 _0203f21c:
 	ldr r2, [r6]
-	ldr r1, _0203f374 ; =data_027e0d78
+	ldr r1, _0203f374 @ =data_027e0d78
 	add r0, r2, #0x100
 	ldr r2, [r2, #0x18]
 	ldrsh r3, [r0, #0x5a]
@@ -895,11 +895,11 @@ _0203f2c4:
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
 	b _0203f364
-_0203f2d8: ; jump table
-	b _0203f2e8 ; case 0
-	b _0203f2e8 ; case 1
-	b _0203f320 ; case 2
-	b _0203f330 ; case 3
+_0203f2d8: @ jump table
+	b _0203f2e8 @ case 0
+	b _0203f2e8 @ case 1
+	b _0203f320 @ case 2
+	b _0203f330 @ case 3
 _0203f2e8:
 	ldr r1, [r6]
 	ldrsh r3, [r6, #0x24]
@@ -945,7 +945,7 @@ _0203f374: .word data_027e0d78
 
 	.global func_0203f378
 	arm_func_start func_0203f378
-func_0203f378: ; 0x0203f378
+func_0203f378: @ 0x0203f378
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r5, r0
@@ -963,7 +963,7 @@ _0203f394:
 
 	.global func_0203f3a8
 	arm_func_start func_0203f3a8
-func_0203f3a8: ; 0x0203f3a8
+func_0203f3a8: @ 0x0203f3a8
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	add r0, r5, #4
@@ -975,30 +975,30 @@ func_0203f3a8: ; 0x0203f3a8
 	cmp r1, #4
 	addls pc, pc, r1, lsl #2
 	ldmia sp!, {r4, r5, r6, pc}
-_0203f3d4: ; jump table
-	ldmia sp!, {r4, r5, r6, pc} ; case 0
-	b _0203f464 ; case 1
-	b _0203f4ac ; case 2
-	b _0203f3e8 ; case 3
-	b _0203f4bc ; case 4
+_0203f3d4: @ jump table
+	ldmia sp!, {r4, r5, r6, pc} @ case 0
+	b _0203f464 @ case 1
+	b _0203f4ac @ case 2
+	b _0203f3e8 @ case 3
+	b _0203f4bc @ case 4
 _0203f3e8:
-	ldr r0, _0203f568 ; =data_027e0d38
+	ldr r0, _0203f568 @ =data_027e0d38
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0203f454
-	ldr r0, _0203f56c ; =data_027e0f64
+	ldr r0, _0203f56c @ =data_027e0f64
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	bl func_ov00_02089a2c
 	cmp r0, #0
 	beq _0203f454
-	ldr r0, _0203f56c ; =data_027e0f64
+	ldr r0, _0203f56c @ =data_027e0f64
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	bl func_ov00_02089a2c
 	cmp r0, #0
 	beq _0203f444
-	ldr r0, _0203f56c ; =data_027e0f64
+	ldr r0, _0203f56c @ =data_027e0f64
 	ldr r0, [r0]
 	ldr r0, [r0, #4]
 	bl func_ov00_02089a84
@@ -1006,7 +1006,7 @@ _0203f3e8:
 	cmp r0, r1
 	blt _0203f454
 _0203f444:
-	ldr r0, _0203f570 ; =data_027e0618
+	ldr r0, _0203f570 @ =data_027e0618
 	ldrb r0, [r0, #0x101]
 	cmp r0, #0
 	ldmeqia sp!, {r4, r5, r6, pc}
@@ -1068,7 +1068,7 @@ _0203f4bc:
 	add r0, r0, #0x800
 	mov r0, r0, asr #0xc
 	str r0, [r4, #0x174]
-	ldr r0, _0203f574 ; =data_0205809c
+	ldr r0, _0203f574 @ =data_0205809c
 	mov r2, r6
 	ldr r0, [r0]
 	mov r1, #0x2000
@@ -1092,19 +1092,19 @@ _0203f574: .word data_0205809c
 
 	.global func_0203f578
 	arm_func_start func_0203f578
-func_0203f578: ; 0x0203f578
+func_0203f578: @ 0x0203f578
 	stmdb sp!, {r3, lr}
 	ldrsb r1, [r0, #0x29]
 	mov r2, #0x1000
 	cmp r1, #4
 	addls pc, pc, r1, lsl #2
 	b _0203f5d4
-_0203f590: ; jump table
-	b _0203f5a4 ; case 0
-	b _0203f5ac ; case 1
-	b _0203f5d4 ; case 2
-	b _0203f5a4 ; case 3
-	b _0203f5a4 ; case 4
+_0203f590: @ jump table
+	b _0203f5a4 @ case 0
+	b _0203f5ac @ case 1
+	b _0203f5d4 @ case 2
+	b _0203f5a4 @ case 3
+	b _0203f5a4 @ case 4
 _0203f5a4:
 	mov r2, #0
 	b _0203f5d4
@@ -1126,7 +1126,7 @@ _0203f5d4:
 
 	.global func_0203f5dc
 	arm_func_start func_0203f5dc
-func_0203f5dc: ; 0x0203f5dc
+func_0203f5dc: @ 0x0203f5dc
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, r1
@@ -1153,7 +1153,7 @@ func_0203f5dc: ; 0x0203f5dc
 
 	.global func_0203f634
 	arm_func_start func_0203f634
-func_0203f634: ; 0x0203f634
+func_0203f634: @ 0x0203f634
 	stmdb sp!, {r3, lr}
 	ldr r3, [r0]
 	mov r2, r1
@@ -1162,7 +1162,7 @@ func_0203f634: ; 0x0203f634
 	cmp r0, #0
 	ldmleia sp!, {r3, pc}
 	ldrb r3, [r3, #0x50]
-	ldr r0, _0203f664 ; =data_027e0c38
+	ldr r0, _0203f664 @ =data_027e0c38
 	mov r1, #4
 	bl func_02033e70
 	ldmia sp!, {r3, pc}
@@ -1172,7 +1172,7 @@ _0203f664: .word data_027e0c38
 
 	.global func_0203f668
 	arm_func_start func_0203f668
-func_0203f668: ; 0x0203f668
+func_0203f668: @ 0x0203f668
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrb r0, [r6, #2]
@@ -1195,7 +1195,7 @@ func_0203f668: ; 0x0203f668
 
 	.global func_0203f6b0
 	arm_func_start func_0203f6b0
-func_0203f6b0: ; 0x0203f6b0
+func_0203f6b0: @ 0x0203f6b0
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldrb r0, [r4, #2]
@@ -1211,7 +1211,7 @@ func_0203f6b0: ; 0x0203f6b0
 
 	.global func_0203f6dc
 	arm_func_start func_0203f6dc
-func_0203f6dc: ; 0x0203f6dc
+func_0203f6dc: @ 0x0203f6dc
 	mov ip, #0
 	mov r1, ip
 _0203f6e4:
@@ -1227,7 +1227,7 @@ _0203f6e4:
 
 	.global func_0203f704
 	arm_func_start func_0203f704
-func_0203f704: ; 0x0203f704
+func_0203f704: @ 0x0203f704
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, lr}
 	mov r9, r0
 	mov r7, r2
@@ -1237,21 +1237,21 @@ func_0203f704: ; 0x0203f704
 	cmp r0, #0
 	beq _0203f734
 	ldrsh r1, [r0, #0x14]
-	ldr r0, _0203f7c8 ; =data_027e0cbc
+	ldr r0, _0203f7c8 @ =data_027e0cbc
 	mov r2, #0
 	bl func_0203d800
 _0203f734:
 	add r0, r9, r7, lsl #3
 	str r8, [r0, #0x10]
 	ldrsh r1, [r8, #0x14]
-	ldr r0, _0203f7c8 ; =data_027e0cbc
+	ldr r0, _0203f7c8 @ =data_027e0cbc
 	mov r2, #1
 	bl func_0203d800
 	add r6, r7, #1
 	cmp r6, #7
 	bge _0203f7a0
 	mov r4, #0
-	ldr r5, _0203f7c8 ; =data_027e0cbc
+	ldr r5, _0203f7c8 @ =data_027e0cbc
 	mov r10, r4
 _0203f764:
 	add r0, r9, r6, lsl #3
@@ -1286,7 +1286,7 @@ _0203f7c8: .word data_027e0cbc
 
 	.global func_0203f7cc
 	arm_func_start func_0203f7cc
-func_0203f7cc: ; 0x0203f7cc
+func_0203f7cc: @ 0x0203f7cc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r3, #0
 	mov r5, r0
@@ -1302,7 +1302,7 @@ _0203f7e0:
 	cmp r3, #0
 	beq _0203f888
 	ldrsh r1, [r2, #0x14]
-	ldr r0, _0203f898 ; =data_027e0cbc
+	ldr r0, _0203f898 @ =data_027e0cbc
 	mov r2, #0
 	bl func_0203d800
 	mov r3, r4
@@ -1349,7 +1349,7 @@ _0203f898: .word data_027e0cbc
 
 	.global func_0203f89c
 	arm_func_start func_0203f89c
-func_0203f89c: ; 0x0203f89c
+func_0203f89c: @ 0x0203f89c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r5, r0
 	mov r4, r2
@@ -1362,7 +1362,7 @@ func_0203f89c: ; 0x0203f89c
 _0203f8c0:
 	cmp r4, #7
 	ldmgeia sp!, {r3, r4, r5, r6, r7, pc}
-	ldr r7, _0203f900 ; =data_027e0cbc
+	ldr r7, _0203f900 @ =data_027e0cbc
 	mov r6, #0
 _0203f8d0:
 	add r0, r5, r4, lsl #3
@@ -1383,7 +1383,7 @@ _0203f900: .word data_027e0cbc
 
 	.global func_0203f904
 	thumb_func_start func_0203f904
-func_0203f904: ; 0x0203f904
+func_0203f904: @ 0x0203f904
 	push {r3, r4, r5, lr}
 	add r4, r0, #0
 	blx func_0203e93c
@@ -1436,7 +1436,7 @@ func_0203f904: ; 0x0203f904
 
 	.global func_0203f974
 	arm_func_start func_0203f974
-func_0203f974: ; 0x0203f974
+func_0203f974: @ 0x0203f974
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	mov r5, #0
 	mov r8, r0
@@ -1460,7 +1460,7 @@ _0203f98c:
 
 	.global func_0203f9b8
 	arm_func_start func_0203f9b8
-func_0203f9b8: ; 0x0203f9b8
+func_0203f9b8: @ 0x0203f9b8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r6, r1
 	add r1, r6, #0x100
@@ -1482,7 +1482,7 @@ func_0203f9b8: ; 0x0203f9b8
 _0203fa00:
 	cmp r5, #0
 	beq _0203fa2c
-	ldr r0, _0203fa50 ; =data_027e0c54
+	ldr r0, _0203fa50 @ =data_027e0c54
 	ldrb r0, [r0]
 	cmp r0, #0
 	bne _0203fa24
@@ -1508,7 +1508,7 @@ _0203fa50: .word data_027e0c54
 
 	.global func_0203fa54
 	arm_func_start func_0203fa54
-func_0203fa54: ; 0x0203fa54
+func_0203fa54: @ 0x0203fa54
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r5, r0
@@ -1524,7 +1524,7 @@ func_0203fa54: ; 0x0203fa54
 
 	.global func_0203fa80
 	arm_func_start func_0203fa80
-func_0203fa80: ; 0x0203fa80
+func_0203fa80: @ 0x0203fa80
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, r1
@@ -1541,7 +1541,7 @@ func_0203fa80: ; 0x0203fa80
 
 	.global func_0203fab0
 	arm_func_start func_0203fab0
-func_0203fab0: ; 0x0203fab0
+func_0203fab0: @ 0x0203fab0
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	mov r4, #0
 	mov r10, r0
@@ -1575,7 +1575,7 @@ _0203fb04:
 
 	.global func_0203fb18
 	arm_func_start func_0203fb18
-func_0203fb18: ; 0x0203fb18
+func_0203fb18: @ 0x0203fb18
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r4, r2
 	mvn r2, #0
@@ -1597,7 +1597,7 @@ _0203fb3c:
 
 	.global func_0203fb58
 	arm_func_start func_0203fb58
-func_0203fb58: ; 0x0203fb58
+func_0203fb58: @ 0x0203fb58
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl func_0203fc08
@@ -1608,7 +1608,7 @@ func_0203fb58: ; 0x0203fb58
 
 	.global func_0203fb70
 	arm_func_start func_0203fb70
-func_0203fb70: ; 0x0203fb70
+func_0203fb70: @ 0x0203fb70
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, r1
@@ -1624,7 +1624,7 @@ func_0203fb70: ; 0x0203fb70
 
 	.global func_0203fb9c
 	arm_func_start func_0203fb9c
-func_0203fb9c: ; 0x0203fb9c
+func_0203fb9c: @ 0x0203fb9c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	ldrsb r4, [r5, #0x17]
@@ -1659,7 +1659,7 @@ _0203fbf0:
 
 	.global func_0203fc08
 	arm_func_start func_0203fc08
-func_0203fc08: ; 0x0203fc08
+func_0203fc08: @ 0x0203fc08
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	ldrsb r0, [r1, #0x17]
@@ -1674,15 +1674,15 @@ func_0203fc08: ; 0x0203fc08
 
 	.global func_0203fc30
 	arm_func_start func_0203fc30
-func_0203fc30: ; 0x0203fc30
+func_0203fc30: @ 0x0203fc30
 	stmdb sp!, {r3, lr}
 	cmp r2, #0
 	moveq r2, #0x4000000
 	ldreq r3, [r2]
-	ldreq r2, _0203fc70 ; =0x00300010
+	ldreq r2, _0203fc70 @ =0x00300010
 	beq _0203fc54
-	ldr r3, _0203fc74 ; =0x04001000
-	ldr r2, _0203fc70 ; =0x00300010
+	ldr r3, _0203fc74 @ =0x04001000
+	ldr r2, _0203fc70 @ =0x00300010
 	ldr r3, [r3]
 _0203fc54:
 	and r2, r3, r2
@@ -1700,7 +1700,7 @@ _0203fc74: .word 0x04001000
 
 	.global func_0203fc78
 	arm_func_start func_0203fc78
-func_0203fc78: ; 0x0203fc78
+func_0203fc78: @ 0x0203fc78
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	mov r7, r1
 	mov r6, r2
@@ -1724,14 +1724,14 @@ func_0203fc78: ; 0x0203fc78
 	cmp r8, #0
 	moveq r2, #0x4000000
 	ldreq r3, [r2]
-	ldreq r2, _0203fdf4 ; =0x00300010
+	ldreq r2, _0203fdf4 @ =0x00300010
 	beq _0203fce8
-	ldr r3, _0203fdf8 ; =0x04001000
-	ldr r2, _0203fdf4 ; =0x00300010
+	ldr r3, _0203fdf8 @ =0x04001000
+	ldr r2, _0203fdf4 @ =0x00300010
 	ldr r3, [r3]
 _0203fce8:
 	and r9, r3, r2
-	ldr r3, _0203fdfc ; =0x00100010
+	ldr r3, _0203fdfc @ =0x00100010
 	cmp r9, r3
 	bgt _0203fd0c
 	ldmgeia sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
@@ -1811,11 +1811,11 @@ _0203fdfc: .word 0x00100010
 
 	.global func_0203fe00
 	arm_func_start func_0203fe00
-func_0203fe00: ; 0x0203fe00
+func_0203fe00: @ 0x0203fe00
 	ldrsh r2, [r0]
 	cmp r2, #0
 	ble _0203fe2c
-	ldr r1, _0203fe5c ; =data_027e0618
+	ldr r1, _0203fe5c @ =data_027e0618
 	ldrh r1, [r1, #0xf2]
 	sub r1, r2, r1
 	strh r1, [r0]
@@ -1827,7 +1827,7 @@ _0203fe2c:
 	ldrsh r2, [r0, #2]
 	cmp r2, #0
 	bxle lr
-	ldr r1, _0203fe5c ; =data_027e0618
+	ldr r1, _0203fe5c @ =data_027e0618
 	ldrh r1, [r1, #0xf2]
 	sub r1, r2, r1
 	strh r1, [r0, #2]
@@ -1842,9 +1842,9 @@ _0203fe5c: .word data_027e0618
 
 	.global func_0203fe60
 	thumb_func_start func_0203fe60
-func_0203fe60: ; 0x0203fe60
+func_0203fe60: @ 0x0203fe60
 	lsl r3, r1, #1
-	ldr r1, _0203fe80 ; =data_02056c24
+	ldr r1, _0203fe80 @ =data_02056c24
 	ldrb r2, [r1, r3]
 	mov r1, #0
 	ldrsh r1, [r0, r1]
@@ -1852,7 +1852,7 @@ func_0203fe60: ; 0x0203fe60
 	bge _0203fe70
 	strh r2, [r0]
 _0203fe70:
-	ldr r1, _0203fe84 ; =data_02056c25
+	ldr r1, _0203fe84 @ =data_02056c25
 	ldrb r2, [r1, r3]
 	mov r1, #2
 	ldrsh r1, [r0, r1]
@@ -1868,21 +1868,21 @@ _0203fe84: .word data_02056c25
 
 	.global func_0203fe88
 	thumb_func_start func_0203fe88
-func_0203fe88: ; 0x0203fe88
+func_0203fe88: @ 0x0203fe88
 	push {r4, lr}
 	add r4, r0, #0
-	ldr r0, _0203feac ; =data_02075ebc
+	ldr r0, _0203feac @ =data_02075ebc
 	ldrb r0, [r0]
 	cmp r0, #0
 	beq _0203fe9c
-	ldr r0, _0203feb0 ; =data_02063220
+	ldr r0, _0203feb0 @ =data_02063220
 	add r1, r4, #0
 	bl func_0202f52c
 _0203fe9c:
-	ldr r0, _0203feac ; =data_02075ebc
+	ldr r0, _0203feac @ =data_02075ebc
 	mov r1, #0
 	strb r1, [r0]
-	ldr r0, _0203feb0 ; =data_02063220
+	ldr r0, _0203feb0 @ =data_02063220
 	add r1, r4, #0
 	bl func_0202f52c
 	pop {r4, pc}
@@ -1893,10 +1893,10 @@ _0203feb0: .word data_02063220
 
 	.global func_0203feb4
 	thumb_func_start func_0203feb4
-func_0203feb4: ; 0x0203feb4
+func_0203feb4: @ 0x0203feb4
 	push {r3, r4, r5, lr}
 	mov r1, #0x42
-	ldr r4, _0203fee8 ; =data_02075f40
+	ldr r4, _0203fee8 @ =data_02075f40
 	lsl r1, r1, #2
 	add r5, r0, #0
 	add r0, r4, #0
@@ -1924,10 +1924,10 @@ _0203fee8: .word data_02075f40
 
 	.global func_0203feec
 	thumb_func_start func_0203feec
-func_0203feec: ; 0x0203feec
+func_0203feec: @ 0x0203feec
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
-	ldr r5, _0203ff44 ; =data_02075f40
+	ldr r5, _0203ff44 @ =data_02075f40
 	add r7, r0, #0
 	str r1, [sp]
 	blx func_0200ee4c
@@ -1974,9 +1974,9 @@ _0203ff44: .word data_02075f40
 
 	.global func_0203ff48
 	thumb_func_start func_0203ff48
-func_0203ff48: ; 0x0203ff48
+func_0203ff48: @ 0x0203ff48
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r4, _0203ff9c ; =data_02075f40
+	ldr r4, _0203ff9c @ =data_02075f40
 	add r5, r0, #0
 	add r6, r1, #0
 	blx func_0200ee4c
@@ -2021,24 +2021,24 @@ _0203ff9c: .word data_02075f40
 
 	.global func_0203ffa0
 	thumb_func_start func_0203ffa0
-func_0203ffa0: ; 0x0203ffa0
+func_0203ffa0: @ 0x0203ffa0
 	push {r4, lr}
 	sub sp, #8
 	mov r0, #2
-	ldr r4, _0204003c ; =data_02075f40
+	ldr r4, _0204003c @ =data_02075f40
 	mvn r0, r0
 	str r0, [r4, #8]
 	mov r0, #0
 	str r0, [r4, #0xc]
-	ldr r1, _02040040 ; =data_02075ee0
+	ldr r1, _02040040 @ =data_02075ee0
 	str r0, [r4, #0x18]
 	mov r2, #0x60
 	str r1, [r4]
 	blx func_02007938
-	ldr r0, _02040040 ; =data_02075ee0
+	ldr r0, _02040040 @ =data_02075ee0
 	mov r1, #0x60
 	blx func_0200e2c0
-	ldr r0, _02040044 ; =0x027ffc40
+	ldr r0, _02040044 @ =0x027ffc40
 	ldrh r0, [r0]
 	cmp r0, #2
 	bne _0203ffd0
@@ -2050,8 +2050,8 @@ _0203ffd2:
 	cmp r0, #0
 	bne _0203ffe2
 	mov r2, #0x16
-	ldr r0, _02040048 ; =0x027ffe00
-	ldr r1, _0204004c ; =0x027ffa80
+	ldr r0, _02040048 @ =0x027ffe00
+	ldr r1, _0204004c @ =0x027ffa80
 	lsl r2, r2, #4
 	blx func_02007ad8
 _0203ffe2:
@@ -2071,19 +2071,19 @@ _0203ffe2:
 	sub r1, #8
 	str r0, [sp]
 	ldr r0, [r4, r1]
-	ldr r1, _02040050 ; =func_02040b44
+	ldr r1, _02040050 @ =func_02040b44
 	str r0, [sp, #4]
 	add r0, r4, #0
-	ldr r3, _02040054 ; =data_02076560
+	ldr r3, _02040054 @ =data_02076560
 	add r0, #0x44
 	bl func_0200d5e4
 	add r4, #0x44
 	add r0, r4, #0
 	blx func_0200d938
-	ldr r1, _02040058 ; =func_02040b1c 
+	ldr r1, _02040058 @ =func_02040b1c 
 	mov r0, #0xb
 	blx func_02008b04
-	ldr r0, _02040044 ; =0x027ffc40
+	ldr r0, _02040044 @ =0x027ffc40
 	ldrh r0, [r0]
 	cmp r0, #2
 	bne _0204002c
@@ -2112,8 +2112,8 @@ _02040058: .word func_02040b1c
 
 	.global func_0204005c
 	thumb_func_start func_0204005c
-func_0204005c: ; 0x0204005c
-	ldr r0, _02040064 ; =data_02075ec0
+func_0204005c: @ 0x0204005c
+	ldr r0, _02040064 @ =data_02075ec0
 	ldr r0, [r0]
 	bx lr
 	nop
@@ -2122,7 +2122,7 @@ _02040064: .word data_02075ec0
 
 	.global func_02040068
 	thumb_func_start func_02040068
-func_02040068: ; 0x02040068
+func_02040068: @ 0x02040068
 	push {r3, lr}
 	bl func_0204005c
 	cmp r0, #0
@@ -2134,8 +2134,8 @@ _02040076:
 
 	.global func_02040078
 	thumb_func_start func_02040078
-func_02040078: ; 0x02040078
-	ldr r1, _02040080 ; =data_02075ec0
+func_02040078: @ 0x02040078
+	ldr r1, _02040080 @ =data_02075ec0
 	str r0, [r1]
 	bx lr
 	nop
@@ -2144,9 +2144,9 @@ _02040080: .word data_02075ec0
 
 	.global func_02040084
 	thumb_func_start func_02040084
-func_02040084: ; 0x02040084
+func_02040084: @ 0x02040084
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r5, _020400bc ; =data_02075f40
+	ldr r5, _020400bc @ =data_02075f40
 	blx func_0200ee4c
 	mov r4, #0x43
 	lsl r4, r4, #2
@@ -2179,8 +2179,8 @@ _020400bc: .word data_02075f40
 
 	.global func_020400c0
 	thumb_func_start func_020400c0
-func_020400c0: ; 0x020400c0
-	ldr r0, _020400c8 ; =data_02075f40
+func_020400c0: @ 0x020400c0
+	ldr r0, _020400c8 @ =data_02075f40
 	ldr r0, [r0]
 	ldr r0, [r0]
 	bx lr
@@ -2190,7 +2190,7 @@ _020400c8: .word data_02075f40
 
 	.global func_020400cc
 	thumb_func_start func_020400cc
-func_020400cc: ; 0x020400cc
+func_020400cc: @ 0x020400cc
 	push {r4, lr}
 	add r4, r0, #0
 	mov r1, #1
@@ -2203,7 +2203,7 @@ func_020400cc: ; 0x020400cc
 
 	.global func_020400e0
 	thumb_func_start func_020400e0
-func_020400e0: ; 0x020400e0
+func_020400e0: @ 0x020400e0
 	push {r4, lr}
 	add r4, r0, #0
 	blx func_0200c718
@@ -2216,8 +2216,8 @@ func_020400e0: ; 0x020400e0
 
 	.global func_020400f4
 	thumb_func_start func_020400f4
-func_020400f4: ; 0x020400f4
-	ldr r3, _020400fc ; =func_0203feec
+func_020400f4: @ 0x020400f4
+	ldr r3, _020400fc @ =func_0203feec
 	mov r1, #2
 	bx r3
 	nop
@@ -2226,8 +2226,8 @@ _020400fc: .word func_0203feec
 
 	.global func_02040100
 	thumb_func_start func_02040100
-func_02040100: ; 0x02040100
-	ldr r3, _02040108 ; =func_0203ff48
+func_02040100: @ 0x02040100
+	ldr r3, _02040108 @ =func_0203ff48
 	mov r1, #2
 	bx r3
 	nop
@@ -2236,8 +2236,8 @@ _02040108: .word func_0203ff48
 
 	.global func_0204010c
 	thumb_func_start func_0204010c
-func_0204010c: ; 0x0204010c
-	ldr r0, _02040110 ; =0x027ffa80
+func_0204010c: @ 0x0204010c
+	ldr r0, _02040110 @ =0x027ffa80
 	bx lr
 	.align 2, 0
 _02040110: .word 0x027ffa80
@@ -2245,10 +2245,10 @@ _02040110: .word 0x027ffa80
 
 	.global func_02040114
 	thumb_func_start func_02040114
-func_02040114: ; 0x02040114
+func_02040114: @ 0x02040114
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
-	ldr r0, _020402e0 ; =data_02075f40
+	ldr r0, _020402e0 @ =data_02075f40
 	mov r1, #0
 	ldr r4, [r0]
 	mov r2, #0x48
@@ -2374,7 +2374,7 @@ _020401f6:
 	lsl r0, r0, #2
 	str r0, [r4, #0x30]
 	str r0, [r4, #0x44]
-	ldr r0, _020402e4 ; =0x00001388
+	ldr r0, _020402e4 @ =0x00001388
 	str r0, [r4, #0x3c]
 	ldr r1, [r4, #0x4c]
 	mov r0, #0x80
@@ -2391,12 +2391,12 @@ _02040214:
 	str r1, [r4, #0x30]
 	add r0, #0xf5
 	str r0, [r4, #0x3c]
-	ldr r0, _020402e4 ; =0x00001388
+	ldr r0, _020402e4 @ =0x00001388
 	mov r1, #0
 	str r0, [r4, #0x40]
 	lsl r0, r0, #1
 	str r0, [r4, #0x34]
-	ldr r0, _020402e8 ; =0x0000ea60
+	ldr r0, _020402e8 @ =0x0000ea60
 	str r0, [r4, #0x38]
 	add r0, r4, #0
 	add r0, #0x48
@@ -2415,12 +2415,12 @@ _0204024a:
 	mov r0, #0xfa
 	lsl r0, r0, #2
 	str r0, [r4, #0x3c]
-	ldr r0, _020402ec ; =0x00000bb8
+	ldr r0, _020402ec @ =0x00000bb8
 	mov r2, #0
 	str r0, [r4, #0x40]
-	ldr r0, _020402f0 ; =0x000109a0
+	ldr r0, _020402f0 @ =0x000109a0
 	str r0, [r4, #0x34]
-	ldr r0, _020402f4 ; =0x00027100
+	ldr r0, _020402f4 @ =0x00027100
 	str r0, [r4, #0x38]
 	add r0, r4, #0
 	add r0, #0x48
@@ -2485,7 +2485,7 @@ _020402ce:
 	mov r0, #0
 	str r0, [r4, #4]
 	str r0, [r4, #0x18]
-	ldr r0, _020402e0 ; =data_02075f40
+	ldr r0, _020402e0 @ =data_02075f40
 	mov r1, #3
 	ldr r0, [r0]
 	str r1, [r0]
@@ -2502,7 +2502,7 @@ _020402f4: .word 0x00027100
 
 	.global func_020402f8
 	thumb_func_start func_020402f8
-func_020402f8: ; 0x020402f8
+func_020402f8: @ 0x020402f8
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x18
 	add r4, r0, #0
@@ -2514,7 +2514,7 @@ func_020402f8: ; 0x020402f8
 	mov r0, #1
 	lsl r0, r0, #8
 	str r0, [sp, #8]
-	ldr r0, _02040460 ; =data_02000b88
+	ldr r0, _02040460 @ =data_02000b88
 	blx func_02000b60
 	ldr r0, [sp]
 	cmp r0, #0xb
@@ -2571,11 +2571,11 @@ _0204036c:
 	lsl r0, r0, #0x10
 	asr r0, r0, #0x10
 	add pc, r0
-_0204037c: ; jump table
-	.short _02040384 - _0204037c - 2 ; case 0
-	.short _02040398 - _0204037c - 2 ; case 1
-	.short _02040398 - _0204037c - 2 ; case 2
-	.short _020403ba - _0204037c - 2 ; case 3
+_0204037c: @ jump table
+	.short _02040384 - _0204037c - 2 @ case 0
+	.short _02040398 - _0204037c - 2 @ case 1
+	.short _02040398 - _0204037c - 2 @ case 2
+	.short _020403ba - _0204037c - 2 @ case 3
 _02040384:
 	add r0, r6, #0
 	add r1, r5, #0
@@ -2689,15 +2689,15 @@ _02040460: .word data_02000b88
 
 	.global func_02040464
 	thumb_func_start func_02040464
-func_02040464: ; 0x02040464
+func_02040464: @ 0x02040464
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x14
 	str r0, [sp]
-	ldr r0, _02040508 ; =data_02000b88
+	ldr r0, _02040508 @ =data_02000b88
 	str r1, [sp, #4]
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	ldr r5, _0204050c ; =data_02075f40
+	ldr r5, _0204050c @ =data_02075f40
 	blx func_02000b60
 	blx func_0200ee4c
 	str r0, [sp, #0x10]
@@ -2746,15 +2746,15 @@ _020404a0:
 	ldr r0, [sp, #0x2c]
 	cmp r0, #0
 	beq _020404e4
-	ldr r0, _02040510 ; =func_020402f8
+	ldr r0, _02040510 @ =func_020402f8
 	bl func_0203feb4
 	add sp, #0x14
 	mov r0, #1
 	pop {r4, r5, r6, r7, pc}
 _020404e4:
-	ldr r0, _02040514 ; =data_027e02a0
+	ldr r0, _02040514 @ =data_027e02a0
 	ldr r1, [r0, #4]
-	ldr r0, _02040518 ; =data_02076040
+	ldr r0, _02040518 @ =data_02076040
 	str r1, [r0, #4]
 	add r0, r5, #0
 	bl func_020402f8
@@ -2779,8 +2779,8 @@ _02040518: .word data_02076040
 
 	.global func_0204051c
 	thumb_func_start func_0204051c
-func_0204051c: ; 0x0204051c
-	ldr r0, _02040524 ; =data_02075f40
+func_0204051c: @ 0x0204051c
+	ldr r0, _02040524 @ =data_02075f40
 	ldr r0, [r0]
 	ldr r0, [r0, #0x1c]
 	bx lr
@@ -2790,12 +2790,12 @@ _02040524: .word data_02075f40
 
 	.global func_02040528
 	thumb_func_start func_02040528
-func_02040528: ; 0x02040528
+func_02040528: @ 0x02040528
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	str r0, [sp]
-	ldr r0, _02040610 ; =data_02000b88
-	ldr r5, _02040614 ; =data_02075f40
+	ldr r0, _02040610 @ =data_02000b88
+	ldr r5, _02040614 @ =data_02075f40
 	blx func_02000b60
 	ldr r0, [sp]
 	cmp r0, #0
@@ -2836,10 +2836,10 @@ _0204056c:
 	blx func_0200ee60
 	ldr r0, [sp]
 	bl func_02040114
-	ldr r0, _02040618 ; =data_027e02a0
+	ldr r0, _02040618 @ =data_027e02a0
 	mov r2, #1
 	ldr r1, [r0, #4]
-	ldr r0, _0204061c ; =data_02076040
+	ldr r0, _0204061c @ =data_02076040
 	str r1, [r0, #4]
 	add r0, r5, #0
 	mov r1, #2
@@ -2908,10 +2908,10 @@ _0204061c: .word data_02076040
 
 	.global func_02040620
 	thumb_func_start func_02040620
-func_02040620: ; 0x02040620
+func_02040620: @ 0x02040620
 	push {r3, r4, r5, lr}
-	ldr r4, _02040670 ; =data_02075f40
-	ldr r1, _02040674 ; =0xfffffe00
+	ldr r4, _02040670 @ =data_02075f40
+	ldr r1, _02040674 @ =0xfffffe00
 	ldr r2, [r4, #0x1c]
 	add r3, r2, #0
 	and r3, r1
@@ -2957,16 +2957,16 @@ _02040674: .word 0xfffffe00
 
 	.global func_02040678
 	thumb_func_start func_02040678
-func_02040678: ; 0x02040678
+func_02040678: @ 0x02040678
 	push {r3, r4}
 	mov r2, #2
-	ldr r4, _020406ac ; =0x040001a4
+	ldr r4, _020406ac @ =0x040001a4
 	lsl r2, r2, #0x1e
 _02040680:
 	ldr r3, [r4]
 	tst r3, r2
 	bne _02040680
-	ldr r2, _020406b0 ; =0x040001a1
+	ldr r2, _020406b0 @ =0x040001a1
 	mov r3, #0xc0
 	strb r3, [r2]
 	lsr r3, r0, #0x18
@@ -2992,15 +2992,15 @@ _020406b0: .word 0x040001a1
 
 	.global func_020406b4
 	thumb_func_start func_020406b4
-func_020406b4: ; 0x020406b4
+func_020406b4: @ 0x020406b4
 	push {r3, r4, r5, lr}
-	ldr r5, _020406e0 ; =data_02075f40
+	ldr r5, _020406e0 @ =data_02075f40
 	mov r3, #2
 	ldr r0, [r5, #0x28]
-	ldr r1, _020406e4 ; =0x04100010
+	ldr r1, _020406e4 @ =0x04100010
 	ldr r2, [r5, #0x20]
 	lsl r3, r3, #8
-	ldr r4, _020406e8 ; =data_02076580
+	ldr r4, _020406e8 @ =data_02076580
 	blx func_02007d8c
 	ldr r2, [r5, #0x1c]
 	mov r0, #0xb7
@@ -3010,7 +3010,7 @@ func_020406b4: ; 0x020406b4
 	lsl r1, r2, #0x18
 	bl func_02040678
 	ldr r1, [r4, #4]
-	ldr r0, _020406ec ; =0x040001a4
+	ldr r0, _020406ec @ =0x040001a4
 	str r1, [r0]
 	pop {r3, r4, r5, pc}
 	.align 2, 0
@@ -3022,12 +3022,12 @@ _020406ec: .word 0x040001a4
 
 	.global func_020406f0
 	thumb_func_start func_020406f0
-func_020406f0: ; 0x020406f0
+func_020406f0: @ 0x020406f0
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r0, _02040788 ; =data_02075f40
+	ldr r0, _02040788 @ =data_02075f40
 	ldr r0, [r0, #0x28]
 	blx func_0200753c
-	ldr r0, _02040788 ; =data_02075f40
+	ldr r0, _02040788 @ =data_02075f40
 	mov r1, #2
 	ldr r2, [r0, #0x1c]
 	lsl r1, r1, #8
@@ -3053,7 +3053,7 @@ _0204071a:
 	mov r0, #2
 	lsl r0, r0, #0x12
 	blx func_0200c454
-	ldr r5, _02040788 ; =data_02075f40
+	ldr r5, _02040788 @ =data_02075f40
 	bl func_02040958
 	bl func_02040d24
 	ldr r0, [r5]
@@ -3099,11 +3099,11 @@ _02040788: .word data_02075f40
 
 	.global func_0204078c
 	thumb_func_start func_0204078c
-func_0204078c: ; 0x0204078c
+func_0204078c: @ 0x0204078c
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
-	ldr r0, _0204088c ; =data_02075f40
+	ldr r0, _0204088c @ =data_02075f40
 	ldr r5, [r0, #0x20]
 	ldr r4, [r0, #0x24]
 	mov r0, #0
@@ -3115,7 +3115,7 @@ func_0204078c: ; 0x0204078c
 	add r6, r5, #0
 	and r6, r0
 	bne _020407b4
-	ldr r0, _0204088c ; =data_02075f40
+	ldr r0, _0204088c @ =data_02075f40
 	ldr r0, [r0, #0x28]
 	cmp r0, #3
 	bhi _020407b4
@@ -3124,7 +3124,7 @@ _020407b4:
 	cmp r1, #0
 	beq _020407ee
 	blx func_0200e5f8
-	ldr r3, _02040890 ; =func_01ff8000
+	ldr r3, _02040890 @ =func_01ff8000
 	add r2, r5, r4
 	mov r1, #1
 	mov r7, #0
@@ -3156,10 +3156,10 @@ _020407ee:
 	ldr r0, [sp, #4]
 	cmp r0, #0
 	beq _02040806
-	ldr r0, _0204088c ; =data_02075f40
+	ldr r0, _0204088c @ =data_02075f40
 	ldr r0, [r0, #0x1c]
 	add r1, r0, #0
-	ldr r0, _02040894 ; =0x000001ff
+	ldr r0, _02040894 @ =0x000001ff
 	orr r1, r4
 	tst r0, r1
 	bne _02040806
@@ -3174,10 +3174,10 @@ _02040806:
 	mov r0, #1
 	str r0, [sp, #0xc]
 _02040814:
-	ldr r0, _02040898 ; =data_020580b4
+	ldr r0, _02040898 @ =data_020580b4
 	ldr r0, [r0]
 	ldr r1, [r0, #0x60]
-	ldr r0, _0204089c ; =0xf8ffffff
+	ldr r0, _0204089c @ =0xf8ffffff
 	and r1, r0
 	mov r0, #0xa1
 	lsl r0, r0, #0x18
@@ -3208,7 +3208,7 @@ _02040854:
 	blx func_0200e288
 	blx func_0200e2e4
 	mov r0, #2
-	ldr r1, _020408a0 ; =func_020406f0
+	ldr r1, _020408a0 @ =func_020406f0
 	lsl r0, r0, #0x12
 	blx func_0200c224
 	mov r0, #2
@@ -3235,7 +3235,7 @@ _020408a0: .word func_020406f0
 
 	.global func_020408a4
 	thumb_func_start func_020408a4
-func_020408a4: ; 0x020408a4
+func_020408a4: @ 0x020408a4
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	str r0, [sp]
@@ -3243,19 +3243,19 @@ func_020408a4: ; 0x020408a4
 	add r0, #0x20
 	str r0, [sp, #4]
 _020408b0:
-	ldr r0, _02040948 ; =data_02075f40
+	ldr r0, _02040948 @ =data_02075f40
 	ldr r2, [r0, #0x1c]
-	ldr r0, _0204094c ; =0xfffffe00
+	ldr r0, _0204094c @ =0xfffffe00
 	add r1, r2, #0
 	and r1, r0
 	cmp r1, r2
 	bne _020408d4
-	ldr r0, _02040948 ; =data_02075f40
+	ldr r0, _02040948 @ =data_02075f40
 	ldr r4, [r0, #0x20]
 	mov r0, #3
 	tst r0, r4
 	bne _020408d4
-	ldr r0, _02040948 ; =data_02075f40
+	ldr r0, _02040948 @ =data_02075f40
 	ldr r2, [r0, #0x24]
 	mov r0, #2
 	lsl r0, r0, #8
@@ -3273,11 +3273,11 @@ _020408da:
 	lsl r1, r1, #0x18
 	bl func_02040678
 	ldr r0, [sp]
-	ldr r2, _02040950 ; =0x040001a4
+	ldr r2, _02040950 @ =0x040001a4
 	ldr r0, [r0, #4]
 	mov r5, #0
 	str r0, [r2]
-	ldr r1, _02040954 ; =0x04100010
+	ldr r1, _02040954 @ =0x04100010
 	lsl r7, r1, #0x13
 _020408f6:
 	ldr r3, [r2]
@@ -3297,11 +3297,11 @@ _0204090e:
 	lsl r0, r0, #0x1e
 	tst r0, r3
 	bne _020408f6
-	ldr r0, _02040948 ; =data_02075f40
+	ldr r0, _02040948 @ =data_02075f40
 	ldr r0, [r0, #0x20]
 	cmp r4, r0
 	bne _0204093a
-	ldr r1, _02040948 ; =data_02075f40
+	ldr r1, _02040948 @ =data_02075f40
 	mov r0, #2
 	ldr r2, [r1, #0x1c]
 	lsl r0, r0, #8
@@ -3332,23 +3332,23 @@ _02040954: .word 0x04100010
 
 	.global func_02040958
 	thumb_func_start func_02040958
-func_02040958: ; 0x02040958
+func_02040958: @ 0x02040958
 	push {r3, lr}
 	mov r0, #0x2e
 	lsl r0, r0, #0x1a
 	mov r1, #0
 	bl func_02040678
-	ldr r0, _02040990 ; =data_020580b4
+	ldr r0, _02040990 @ =data_020580b4
 	ldr r0, [r0]
 	ldr r1, [r0, #0x60]
-	ldr r0, _02040994 ; =0xf8ffffff
+	ldr r0, _02040994 @ =0xf8ffffff
 	add r2, r1, #0
 	mov r1, #0xa7
 	and r2, r0
 	lsl r1, r1, #0x18
 	orr r1, r2
 	lsl r0, r0, #0xd
-	ldr r2, _02040998 ; =0x040001a4
+	ldr r2, _02040998 @ =0x040001a4
 	and r0, r1
 	str r0, [r2]
 	mov r0, #2
@@ -3357,7 +3357,7 @@ _02040982:
 	ldr r1, [r2]
 	tst r1, r0
 	beq _02040982
-	ldr r0, _0204099c ; =0x04100010
+	ldr r0, _0204099c @ =0x04100010
 	ldr r0, [r0]
 	pop {r3, pc}
 	nop
@@ -3369,9 +3369,9 @@ _0204099c: .word 0x04100010
 
 	.global func_020409a0
 	thumb_func_start func_020409a0
-func_020409a0: ; 0x020409a0
+func_020409a0: @ 0x020409a0
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r4, _02040a08 ; =data_02076580
+	ldr r4, _02040a08 @ =data_02076580
 	add r0, r4, #0
 	bl func_02040620
 	cmp r0, #0
@@ -3380,7 +3380,7 @@ func_020409a0: ; 0x020409a0
 	add r0, r4, #0
 	blx r1
 _020409b4:
-	ldr r5, _02040a0c ; =data_02075f40
+	ldr r5, _02040a0c @ =data_02075f40
 	bl func_02040958
 	bl func_02040d24
 	ldr r0, [r5]
@@ -3424,14 +3424,14 @@ _02040a0c: .word data_02075f40
 
 	.global func_02040a10
 	thumb_func_start func_02040a10
-func_02040a10: ; 0x02040a10
+func_02040a10: @ 0x02040a10
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x14
 	str r0, [sp]
 	str r1, [sp, #4]
 	str r2, [sp, #8]
 	str r3, [sp, #0xc]
-	ldr r5, _02040ab8 ; =data_02075f40
+	ldr r5, _02040ab8 @ =data_02075f40
 	bl func_02040068
 	blx func_0200ee4c
 	mov r4, #0x43
@@ -3462,7 +3462,7 @@ _02040a3a:
 	blx func_0200ee60
 	ldr r0, [sp]
 	str r0, [r5, #0x28]
-	ldr r0, _02040abc ; =data_02076560
+	ldr r0, _02040abc @ =data_02076560
 	ldr r1, [r0]
 	ldr r0, [sp, #4]
 	add r0, r0, r1
@@ -3476,7 +3476,7 @@ _02040a3a:
 	bhi _02040a7a
 	blx func_0200753c
 _02040a7a:
-	ldr r0, _02040ac0 ; =data_02076580
+	ldr r0, _02040ac0 @ =data_02076580
 	bl func_0204078c
 	cmp r0, #0
 	beq _02040a92
@@ -3490,12 +3490,12 @@ _02040a92:
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	beq _02040aa2
-	ldr r0, _02040ac4 ; =func_020409a0
+	ldr r0, _02040ac4 @ =func_020409a0
 	bl func_0203feb4
 	add sp, #0x14
 	pop {r4, r5, r6, r7, pc}
 _02040aa2:
-	ldr r0, _02040ac8 ; =data_027e02a0
+	ldr r0, _02040ac8 @ =data_027e02a0
 	ldr r1, [r0, #4]
 	mov r0, #0x41
 	lsl r0, r0, #2
@@ -3515,10 +3515,10 @@ _02040ac8: .word data_027e02a0
 
 	.global func_02040acc
 	thumb_func_start func_02040acc
-func_02040acc: ; 0x02040acc
+func_02040acc: @ 0x02040acc
 	push {r3, lr}
 	mov r0, #0x45
-	ldr r2, _02040b04 ; =data_02075f40
+	ldr r2, _02040b04 @ =data_02075f40
 	lsl r0, r0, #2
 	ldr r1, [r2, r0]
 	cmp r1, #0
@@ -3531,13 +3531,13 @@ func_02040acc: ; 0x02040acc
 	str r1, [r2, #0x1c]
 	sub r0, r1, #1
 	str r0, [r2, #0x28]
-	ldr r0, _02040b08 ; =data_02076560
+	ldr r0, _02040b08 @ =data_02076560
 	str r1, [r2, #0x38]
 	str r1, [r2, #0x3c]
 	str r1, [r0]
 	bl func_0203ffa0
 	bl func_02040b14
-	ldr r1, _02040b08 ; =data_02076560
+	ldr r1, _02040b08 @ =data_02076560
 	str r0, [r1, #0x20]
 	bl func_02040c64
 _02040b02:
@@ -3549,8 +3549,8 @@ _02040b08: .word data_02076560
 
 	.global func_02040b0c
 	thumb_func_start func_02040b0c
-func_02040b0c: ; 0x02040b0c
-	ldr r3, _02040b10 ; =func_02040084
+func_02040b0c: @ 0x02040b0c
+	ldr r3, _02040b10 @ =func_02040084
 	bx r3
 	.align 2, 0
 _02040b10: .word func_02040084
@@ -3558,8 +3558,8 @@ _02040b10: .word func_02040084
 
 	.global func_02040b14
 	thumb_func_start func_02040b14
-func_02040b14: ; 0x02040b14
-	ldr r0, _02040b18 ; =func_020408a4
+func_02040b14: @ 0x02040b14
+	ldr r0, _02040b18 @ =func_020408a4
 	bx lr
 	.align 2, 0
 _02040b18: .word func_020408a4
@@ -3567,14 +3567,14 @@ _02040b18: .word func_020408a4
 
 	.global func_02040b1c
 	thumb_func_start func_02040b1c
-func_02040b1c: ; 0x02040b1c
+func_02040b1c: @ 0x02040b1c
 	push {r3, lr}
 	cmp r0, #0xb
 	bne _02040b3c
 	cmp r2, #0
 	beq _02040b3c
 	mov r1, #0x45
-	ldr r3, _02040b40 ; =data_02075f40
+	ldr r3, _02040b40 @ =data_02075f40
 	lsl r1, r1, #2
 	ldr r2, [r3, r1]
 	mov r0, #0x20
@@ -3591,9 +3591,9 @@ _02040b40: .word data_02075f40
 
 	.global func_02040b44
 	thumb_func_start func_02040b44
-func_02040b44: ; 0x02040b44
+func_02040b44: @ 0x02040b44
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r5, _02040b84 ; =data_02075f40
+	ldr r5, _02040b84 @ =data_02075f40
 	mov r7, #0x45
 	add r4, r5, #0
 	add r4, #0x44
@@ -3630,7 +3630,7 @@ _02040b84: .word data_02075f40
 
 	.global func_02040b88
 	thumb_func_start func_02040b88
-func_02040b88: ; 0x02040b88
+func_02040b88: @ 0x02040b88
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r0, #0
@@ -3744,13 +3744,13 @@ _02040c5e:
 
 	.global func_02040c64
 	thumb_func_start func_02040c64
-func_02040c64: ; 0x02040c64
+func_02040c64: @ 0x02040c64
 	push {r3, lr}
 	bl func_02008a50
-	ldr r1, _02040c7c ; =func_02040c84
+	ldr r1, _02040c7c @ =func_02040c84
 	mov r0, #0xe
 	blx func_02008b04
-	ldr r0, _02040c80 ; =data_020767a0
+	ldr r0, _02040c80 @ =data_020767a0
 	mov r1, #0
 	str r1, [r0, #4]
 	pop {r3, pc}
@@ -3761,13 +3761,13 @@ _02040c80: .word data_020767a0
 
 	.global func_02040c84
 	thumb_func_start func_02040c84
-func_02040c84: ; 0x02040c84
+func_02040c84: @ 0x02040c84
 	push {r3, lr}
 	mov r0, #0x3f
 	and r0, r1
 	cmp r0, #0x11
 	bne _02040cac
-	ldr r1, _02040cb4 ; =data_020767a0
+	ldr r1, _02040cb4 @ =data_020767a0
 	ldr r0, [r1]
 	cmp r0, #0
 	bne _02040cb0
@@ -3792,8 +3792,8 @@ _02040cb4: .word data_020767a0
 
 	.global func_02040cb8
 	thumb_func_start func_02040cb8
-func_02040cb8: ; 0x02040cb8
-	ldr r0, _02040cc0 ; =data_020767a0
+func_02040cb8: @ 0x02040cb8
+	ldr r0, _02040cc0 @ =data_020767a0
 	ldr r0, [r0]
 	bx lr
 	nop
@@ -3802,7 +3802,7 @@ _02040cc0: .word data_020767a0
 
 	.global func_02040cc4
 	thumb_func_start func_02040cc4
-func_02040cc4: ; 0x02040cc4
+func_02040cc4: @ 0x02040cc4
 	push {r3, r4, r5, lr}
 	mov r4, #1
 	mov r0, #0
@@ -3813,7 +3813,7 @@ func_02040cc4: ; 0x02040cc4
 	blx func_0200753c
 	mov r0, #3
 	blx func_0200753c
-	ldr r0, _02040d1c ; =0x027fffa8
+	ldr r0, _02040d1c @ =0x027fffa8
 	ldrh r1, [r0]
 	lsl r0, r4, #0xf
 	and r0, r1
@@ -3822,7 +3822,7 @@ func_02040cc4: ; 0x02040cc4
 	blx func_0200b4b4
 	cmp r0, #4
 	bne _02040d04
-	ldr r5, _02040d20 ; =0x000a3a47
+	ldr r5, _02040d20 @ =0x000a3a47
 _02040cf6:
 	add r0, r5, #0
 	blx func_0200eebc
@@ -3849,14 +3849,14 @@ _02040d20: .word 0x000a3a47
 
 	.global func_02040d24
 	thumb_func_start func_02040d24
-func_02040d24: ; 0x02040d24
+func_02040d24: @ 0x02040d24
 	push {r3, r4, lr}
 	sub sp, #4
-	ldr r2, _02040d5c ; =0x027ffc10
+	ldr r2, _02040d5c @ =0x027ffc10
 	ldrh r1, [r2]
 	cmp r1, #0
 	bne _02040d34
-	ldr r2, _02040d60 ; =0x027ff800
+	ldr r2, _02040d60 @ =0x027ff800
 	b _02040d36
 _02040d34:
 	sub r2, #0x10
@@ -3884,7 +3884,7 @@ _02040d60: .word 0x027ff800
 
 	.global func_02040d64
 	thumb_func_start func_02040d64
-func_02040d64: ; 0x02040d64
+func_02040d64: @ 0x02040d64
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -3912,7 +3912,7 @@ _02040d90:
 
 	.global func_02040d94
 	thumb_func_start func_02040d94
-func_02040d94: ; 0x02040d94
+func_02040d94: @ 0x02040d94
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -3946,7 +3946,7 @@ _02040db0:
 
 	.global func_02040dd0
 	thumb_func_start func_02040dd0
-func_02040dd0: ; 0x02040dd0
+func_02040dd0: @ 0x02040dd0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r6, r0, #0
@@ -3988,16 +3988,16 @@ _02040df6:
 	lsl r0, r0, #0x10
 	asr r0, r0, #0x10
 	add pc, r0
-_02040e1c: ; jump table
-	.short _02040e2e - _02040e1c - 2 ; case 0
-	.short _02040e2e - _02040e1c - 2 ; case 1
-	.short _02040e40 - _02040e1c - 2 ; case 2
-	.short _02040e40 - _02040e1c - 2 ; case 3
-	.short _02040e2e - _02040e1c - 2 ; case 4
-	.short _02040e40 - _02040e1c - 2 ; case 5
-	.short _02040e40 - _02040e1c - 2 ; case 6
-	.short _02040e40 - _02040e1c - 2 ; case 7
-	.short _02040e32 - _02040e1c - 2 ; case 8
+_02040e1c: @ jump table
+	.short _02040e2e - _02040e1c - 2 @ case 0
+	.short _02040e2e - _02040e1c - 2 @ case 1
+	.short _02040e40 - _02040e1c - 2 @ case 2
+	.short _02040e40 - _02040e1c - 2 @ case 3
+	.short _02040e2e - _02040e1c - 2 @ case 4
+	.short _02040e40 - _02040e1c - 2 @ case 5
+	.short _02040e40 - _02040e1c - 2 @ case 6
+	.short _02040e40 - _02040e1c - 2 @ case 7
+	.short _02040e32 - _02040e1c - 2 @ case 8
 _02040e2e:
 	str r5, [r6, #0x14]
 	b _02040e40
@@ -4016,7 +4016,7 @@ _02040e40:
 	ldr r1, [sp]
 	add r0, r6, #0
 	lsl r2, r1, #2
-	ldr r1, _02040edc ; =data_02056c34
+	ldr r1, _02040edc @ =data_02056c34
 	ldr r1, [r1, r2]
 	blx r1
 	add r5, r0, #0
@@ -4083,7 +4083,7 @@ _02040eb8:
 	cmp r0, #0
 	ldr r1, [r4, #0x1c]
 	bne _02040ece
-	ldr r0, _02040ee0 ; =0xfffffeff
+	ldr r0, _02040ee0 @ =0xfffffeff
 	and r0, r1
 	str r0, [r4, #0x1c]
 	add r0, r6, #0
@@ -4091,7 +4091,7 @@ _02040eb8:
 	bl func_02040d94
 	b _02040ed6
 _02040ece:
-	ldr r0, _02040ee4 ; =0xfffffdff
+	ldr r0, _02040ee4 @ =0xfffffdff
 	and r0, r1
 	str r0, [r4, #0x1c]
 	str r5, [r6, #0x14]
@@ -4107,7 +4107,7 @@ _02040ee4: .word 0xfffffdff
 
 	.global func_02040ee8
 	thumb_func_start func_02040ee8
-func_02040ee8: ; 0x02040ee8
+func_02040ee8: @ 0x02040ee8
 	push {r4, r5}
 	mov r3, #0
 	cmp r2, #0
@@ -4143,7 +4143,7 @@ _02040f14:
 
 	.global func_02040f1c
 	thumb_func_start func_02040f1c
-func_02040f1c: ; 0x02040f1c
+func_02040f1c: @ 0x02040f1c
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r6, r0, #0
@@ -4168,7 +4168,7 @@ func_02040f1c: ; 0x02040f1c
 	b _02040f94
 _02040f48:
 	ldr r2, [r5, #0x1c]
-	ldr r1, _02040fa0 ; =0xfffffdff
+	ldr r1, _02040fa0 @ =0xfffffdff
 	and r1, r2
 	str r1, [r5, #0x1c]
 	b _02040f94
@@ -4222,13 +4222,13 @@ _02040fa0: .word 0xfffffdff
 
 	.global func_02040fa4
 	thumb_func_start func_02040fa4
-func_02040fa4: ; 0x02040fa4
+func_02040fa4: @ 0x02040fa4
 	ldr r3, [r0, #0xc]
 	mov r2, #4
 	orr r2, r3
 	str r2, [r0, #0xc]
 	ldr r2, [r0, #8]
-	ldr r3, _02040fc0 ; =func_02040dd0
+	ldr r3, _02040fc0 @ =func_02040dd0
 	str r2, [r0, #0x30]
 	mov r2, #0
 	str r2, [r0, #0x38]
@@ -4242,7 +4242,7 @@ _02040fc0: .word func_02040dd0
 
 	.global func_02040fc4
 	thumb_func_start func_02040fc4
-func_02040fc4: ; 0x02040fc4
+func_02040fc4: @ 0x02040fc4
 	push {r3, r4, r5, lr}
 	ldr r2, [r0, #0x2c]
 	ldr r3, [r0, #0x38]
@@ -4259,7 +4259,7 @@ func_02040fc4: ; 0x02040fc4
 
 	.global func_02040fdc
 	thumb_func_start func_02040fdc
-func_02040fdc: ; 0x02040fdc
+func_02040fdc: @ 0x02040fdc
 	push {r3, r4, r5, lr}
 	ldr r2, [r0, #0x2c]
 	ldr r3, [r0, #0x38]
@@ -4276,7 +4276,7 @@ func_02040fdc: ; 0x02040fdc
 
 	.global func_02040ff4
 	thumb_func_start func_02040ff4
-func_02040ff4: ; 0x02040ff4
+func_02040ff4: @ 0x02040ff4
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -4318,7 +4318,7 @@ func_02040ff4: ; 0x02040ff4
 _02041042:
 	add r0, sp, #0
 	ldrh r1, [r0, #0xe]
-	ldr r0, _02041054 ; =0x00000fff
+	ldr r0, _02041054 @ =0x00000fff
 	and r0, r1
 	str r0, [r5, #0x2c]
 _0204104c:
@@ -4331,7 +4331,7 @@ _02041054: .word 0x00000fff
 
 	.global func_02041058
 	thumb_func_start func_02041058
-func_02041058: ; 0x02041058
+func_02041058: @ 0x02041058
 	push {r4, r5, lr}
 	sub sp, #0xc
 	add r5, r0, #0
@@ -4395,7 +4395,7 @@ _020410b8:
 	str r1, [r4]
 	add r1, sp, #0
 	ldrh r2, [r1, #2]
-	ldr r1, _020410fc ; =0x00000fff
+	ldr r1, _020410fc @ =0x00000fff
 	and r1, r2
 	strh r1, [r4, #4]
 	mov r1, #0
@@ -4422,7 +4422,7 @@ _020410fc: .word 0x00000fff
 
 	.global func_02041100
 	thumb_func_start func_02041100
-func_02041100: ; 0x02041100
+func_02041100: @ 0x02041100
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x98
 	add r7, r0, #0
@@ -4598,7 +4598,7 @@ _0204121e:
 
 	.global func_02041230
 	thumb_func_start func_02041230
-func_02041230: ; 0x02041230
+func_02041230: @ 0x02041230
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0xf4
 	add r4, r0, #0
@@ -4831,7 +4831,7 @@ _020413ce:
 	mov r0, #0
 	add r2, r0, r7
 	ldr r1, [sp]
-	ldr r0, _020414b0 ; =data_020580b8
+	ldr r0, _020414b0 @ =data_020580b8
 	add r1, r1, r2
 	mov r2, #2
 	blx func_02007ad8
@@ -4943,7 +4943,7 @@ _020414b0: .word data_020580b8
 
 	.global func_020414b4
 	thumb_func_start func_020414b4
-func_020414b4: ; 0x020414b4
+func_020414b4: @ 0x020414b4
 	push {r3, r4, r5, lr}
 	sub sp, #0x10
 	add r5, r0, #0
@@ -4982,7 +4982,7 @@ _020414f4:
 
 	.global func_020414f8
 	thumb_func_start func_020414f8
-func_020414f8: ; 0x020414f8
+func_020414f8: @ 0x020414f8
 	ldr r1, [r0, #0x30]
 	str r1, [r0, #0x24]
 	ldr r1, [r0, #0x30]
@@ -4997,14 +4997,14 @@ func_020414f8: ; 0x020414f8
 
 	.global func_0204150c
 	thumb_func_start func_0204150c
-func_0204150c: ; 0x0204150c
+func_0204150c: @ 0x0204150c
 	mov r0, #0
 	bx lr
 	thumb_func_end func_0204150c
 
 	.global func_02041510
 	thumb_func_start func_02041510
-func_02041510: ; 0x02041510
+func_02041510: @ 0x02041510
 	push {r4, r5}
 	mov r3, #0
 	cmp r1, #3
@@ -5039,7 +5039,7 @@ _0204153e:
 
 	.global func_02041544
 	thumb_func_start func_02041544
-func_02041544: ; 0x02041544
+func_02041544: @ 0x02041544
 	push {r3, lr}
 	ldr r0, [r0, #0x28]
 	add r0, r0, r2
@@ -5051,7 +5051,7 @@ func_02041544: ; 0x02041544
 
 	.global func_02041554
 	thumb_func_start func_02041554
-func_02041554: ; 0x02041554
+func_02041554: @ 0x02041554
 	push {r4, lr}
 	add r4, r0, #0
 	add r0, r1, #0
@@ -5065,7 +5065,7 @@ func_02041554: ; 0x02041554
 
 	.global func_02041568
 	thumb_func_start func_02041568
-func_02041568: ; 0x02041568
+func_02041568: @ 0x02041568
 	push {r3, lr}
 	add r0, r2, #0
 	add r2, r3, #0
@@ -5077,7 +5077,7 @@ func_02041568: ; 0x02041568
 
 	.global func_02041578
 	thumb_func_start func_02041578
-func_02041578: ; 0x02041578
+func_02041578: @ 0x02041578
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x4c
 	add r5, r0, #0
@@ -5282,7 +5282,7 @@ _020416d8:
 
 	.global func_020416e4
 	thumb_func_start func_020416e4
-func_020416e4: ; 0x020416e4
+func_020416e4: @ 0x020416e4
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r6, [r5, #8]
@@ -5334,7 +5334,7 @@ _02041740:
 
 	.global func_02041744
 	thumb_func_start func_02041744
-func_02041744: ; 0x02041744
+func_02041744: @ 0x02041744
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r1, [r4, #0x10]
@@ -5361,7 +5361,7 @@ _0204176e:
 
 	.global func_02041774
 	thumb_func_start func_02041774
-func_02041774: ; 0x02041774
+func_02041774: @ 0x02041774
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r4, [r5, #8]
@@ -5517,7 +5517,7 @@ _0204188c:
 
 	.global func_02041894
 	thumb_func_start func_02041894
-func_02041894: ; 0x02041894
+func_02041894: @ 0x02041894
 	push {r4, lr}
 	mov r1, #0
 	mov r2, #0x5c
@@ -5533,12 +5533,12 @@ func_02041894: ; 0x02041894
 
 	.global func_020418ac
 	thumb_func_start func_020418ac
-func_020418ac: ; 0x020418ac
+func_020418ac: @ 0x020418ac
 	push {r3, r4, r5, lr}
 	bl func_02041510
 	add r4, r0, #0
 	blx func_0200ee4c
-	ldr r1, _020418d4 ; =data_020767a8
+	ldr r1, _020418d4 @ =data_020767a8
 	ldr r5, [r1]
 	b _020418c0
 _020418be:
@@ -5559,7 +5559,7 @@ _020418d4: .word data_020767a8
 
 	.global func_020418d8
 	thumb_func_start func_020418d8
-func_020418d8: ; 0x020418d8
+func_020418d8: @ 0x020418d8
 	push {r3, r4, r5, r6, r7, lr}
 	add r6, r1, #0
 	add r7, r2, #0
@@ -5572,7 +5572,7 @@ func_020418d8: ; 0x020418d8
 	bl func_020418ac
 	cmp r0, #0
 	bne _0204192e
-	ldr r0, _02041938 ; =data_020767a8
+	ldr r0, _02041938 @ =data_020767a8
 	ldr r1, [r0]
 	cmp r1, #0
 	bne _0204190a
@@ -5615,7 +5615,7 @@ _02041938: .word data_020767a8
 
 	.global func_0204193c
 	thumb_func_start func_0204193c
-func_0204193c: ; 0x0204193c
+func_0204193c: @ 0x0204193c
 	push {r4, lr}
 	add r4, r0, #0
 	ldr r0, [r4]
@@ -5641,7 +5641,7 @@ _0204195e:
 	ldr r3, [r4, #0x1c]
 	mov r2, #1
 	bic r3, r2
-	ldr r2, _02041988 ; =data_020767a8
+	ldr r2, _02041988 @ =data_020767a8
 	str r3, [r4, #0x1c]
 	ldr r3, [r2, #4]
 	cmp r3, r4
@@ -5661,7 +5661,7 @@ _02041988: .word data_020767a8
 
 	.global func_0204198c
 	thumb_func_start func_0204198c
-func_0204198c: ; 0x0204198c
+func_0204198c: @ 0x0204198c
 	str r1, [r0, #0x28]
 	str r3, [r0, #0x30]
 	str r2, [r0, #0x3c]
@@ -5674,13 +5674,13 @@ func_0204198c: ; 0x0204198c
 	ldr r1, [sp, #8]
 	cmp r1, #0
 	bne _020419a6
-	ldr r1, _020419c8 ; =func_02041544
+	ldr r1, _020419c8 @ =func_02041544
 _020419a6:
 	str r1, [r0, #0x48]
 	ldr r1, [sp, #0xc]
 	cmp r1, #0
 	bne _020419b0
-	ldr r1, _020419cc ; =func_02041554
+	ldr r1, _020419cc @ =func_02041554
 _020419b0:
 	str r1, [r0, #0x4c]
 	ldr r1, [r0, #0x48]
@@ -5700,7 +5700,7 @@ _020419cc: .word func_02041554
 
 	.global func_020419d0
 	thumb_func_start func_020419d0
-func_020419d0: ; 0x020419d0
+func_020419d0: @ 0x020419d0
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	blx func_0200ee4c
@@ -5764,7 +5764,7 @@ _02041a3a:
 
 	.global func_02041a44
 	thumb_func_start func_02041a44
-func_02041a44: ; 0x02041a44
+func_02041a44: @ 0x02041a44
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x4c
 	add r5, r0, #0
@@ -5837,7 +5837,7 @@ _02041ad6:
 	bl func_02041ea8
 _02041adc:
 	str r4, [r5, #0x34]
-	ldr r0, _02041af4 ; =func_02041568
+	ldr r0, _02041af4 @ =func_02041568
 	str r7, [r5, #0x44]
 	str r0, [r5, #0x50]
 	ldr r1, [r5, #0x1c]
@@ -5854,7 +5854,7 @@ _02041af4: .word func_02041568
 
 	.global func_02041af8
 	thumb_func_start func_02041af8
-func_02041af8: ; 0x02041af8
+func_02041af8: @ 0x02041af8
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	ldr r1, [r5, #0x1c]
@@ -5907,7 +5907,7 @@ _02041b4c:
 
 	.global func_02041b50
 	thumb_func_start func_02041b50
-func_02041b50: ; 0x02041b50
+func_02041b50: @ 0x02041b50
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r0, #0
@@ -5982,7 +5982,7 @@ _02041bbe:
 
 	.global func_02041bcc
 	thumb_func_start func_02041bcc
-func_02041bcc: ; 0x02041bcc
+func_02041bcc: @ 0x02041bcc
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	mov r6, #0
@@ -6027,7 +6027,7 @@ _02041c14:
 
 	.global func_02041c18
 	thumb_func_start func_02041c18
-func_02041c18: ; 0x02041c18
+func_02041c18: @ 0x02041c18
 	cmp r2, #0
 	bne _02041c20
 	mov r1, #0
@@ -6044,7 +6044,7 @@ _02041c26:
 
 	.global func_02041c2c
 	thumb_func_start func_02041c2c
-func_02041c2c: ; 0x02041c2c
+func_02041c2c: @ 0x02041c2c
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r4, r1, #0
@@ -6061,7 +6061,7 @@ _02041c42:
 	cmp r0, #0
 	beq _02041c66
 	ldr r2, [r5, #0x1c]
-	ldr r1, _02041c88 ; =0xfffffeff
+	ldr r1, _02041c88 @ =0xfffffeff
 	ldr r0, [r5, #0x24]
 	and r1, r2
 	str r1, [r5, #0x1c]
@@ -6079,7 +6079,7 @@ _02041c66:
 	str r4, [r6, #0x14]
 	add r7, r0, #0
 	ldr r1, [r5, #0x1c]
-	ldr r0, _02041c8c ; =0xfffffdff
+	ldr r0, _02041c8c @ =0xfffffdff
 	and r0, r1
 	str r0, [r5, #0x1c]
 	add r5, #0xc
@@ -6096,9 +6096,9 @@ _02041c8c: .word 0xfffffdff
 
 	.global func_02041c90
 	thumb_func_start func_02041c90
-func_02041c90: ; 0x02041c90
+func_02041c90: @ 0x02041c90
 	push {r3, lr}
-	ldr r1, _02041ca4 ; =data_020767b8
+	ldr r1, _02041ca4 @ =data_020767b8
 	ldr r2, [r1]
 	cmp r2, #0
 	bne _02041ca2
@@ -6113,7 +6113,7 @@ _02041ca4: .word data_020767b8
 
 	.global func_02041ca8
 	thumb_func_start func_02041ca8
-func_02041ca8: ; 0x02041ca8
+func_02041ca8: @ 0x02041ca8
 	mov r2, #0
 	str r2, [r0]
 	str r2, [r0, #4]
@@ -6128,7 +6128,7 @@ func_02041ca8: ; 0x02041ca8
 
 	.global func_02041cbc
 	thumb_func_start func_02041cbc
-func_02041cbc: ; 0x02041cbc
+func_02041cbc: @ 0x02041cbc
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	add r5, r1, #0
@@ -6141,7 +6141,7 @@ func_02041cbc: ; 0x02041cbc
 	cmp r0, #0x5c
 	bne _02041ce6
 _02041cd2:
-	ldr r0, _02041d88 ; =data_020767ac
+	ldr r0, _02041d88 @ =data_020767ac
 	mov r1, #0
 	ldr r0, [r0]
 	add r5, r5, #1
@@ -6152,7 +6152,7 @@ _02041cd2:
 	strh r1, [r0, #6]
 	b _02041d54
 _02041ce6:
-	ldr r3, _02041d88 ; =data_020767ac
+	ldr r3, _02041d88 @ =data_020767ac
 	add r2, sp, #4
 	ldmia r3!, {r0, r1}
 	stmia r2!, {r0, r1}
@@ -6247,7 +6247,7 @@ _02041d88: .word data_020767ac
 
 	.global func_02041d8c
 	thumb_func_start func_02041d8c
-func_02041d8c: ; 0x02041d8c
+func_02041d8c: @ 0x02041d8c
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r7, [r5, #0x2c]
@@ -6295,7 +6295,7 @@ _02041dd8:
 
 	.global func_02041ddc
 	thumb_func_start func_02041ddc
-func_02041ddc: ; 0x02041ddc
+func_02041ddc: @ 0x02041ddc
 	push {r3, r4, r5, lr}
 	sub sp, #0x48
 	add r5, r0, #0
@@ -6321,7 +6321,7 @@ _02041e00:
 
 	.global func_02041e08
 	thumb_func_start func_02041e08
-func_02041e08: ; 0x02041e08
+func_02041e08: @ 0x02041e08
 	push {r4, lr}
 	add r4, r0, #0
 	str r1, [r4, #8]
@@ -6348,7 +6348,7 @@ _02041e24:
 
 	.global func_02041e34
 	thumb_func_start func_02041e34
-func_02041e34: ; 0x02041e34
+func_02041e34: @ 0x02041e34
 	push {r0, r1, r2, r3}
 	push {r4, lr}
 	ldr r2, [sp, #0xc]
@@ -6390,7 +6390,7 @@ _02041e66:
 
 	.global func_02041e7c
 	thumb_func_start func_02041e7c
-func_02041e7c: ; 0x02041e7c
+func_02041e7c: @ 0x02041e7c
 	push {r4, lr}
 	sub sp, #8
 	add r4, r0, #0
@@ -6416,7 +6416,7 @@ _02041ea0:
 
 	.global func_02041ea8
 	thumb_func_start func_02041ea8
-func_02041ea8: ; 0x02041ea8
+func_02041ea8: @ 0x02041ea8
 	push {r4, lr}
 	mov r1, #8
 	add r4, r0, #0
@@ -6441,7 +6441,7 @@ _02041eba:
 
 	.global func_02041ed0
 	thumb_func_start func_02041ed0
-func_02041ed0: ; 0x02041ed0
+func_02041ed0: @ 0x02041ed0
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #8
 	add r5, r0, #0
@@ -6528,7 +6528,7 @@ _02041f62:
 
 	.global func_02041f68
 	thumb_func_start func_02041f68
-func_02041f68: ; 0x02041f68
+func_02041f68: @ 0x02041f68
 	push {r4, lr}
 	add r4, r0, #0
 	blx func_0200ee4c
@@ -6557,7 +6557,7 @@ _02041f90:
 
 	.global func_02041f98
 	thumb_func_start func_02041f98
-func_02041f98: ; 0x02041f98
+func_02041f98: @ 0x02041f98
 	push {r3, lr}
 	mov r3, #1
 	bl func_02041d8c
@@ -6567,7 +6567,7 @@ func_02041f98: ; 0x02041f98
 
 	.global func_02041fa4
 	thumb_func_start func_02041fa4
-func_02041fa4: ; 0x02041fa4
+func_02041fa4: @ 0x02041fa4
 	push {r3, lr}
 	mov r3, #0
 	bl func_02041d8c
@@ -6577,7 +6577,7 @@ func_02041fa4: ; 0x02041fa4
 
 	.global func_02041fb0
 	thumb_func_start func_02041fb0
-func_02041fb0: ; 0x02041fb0
+func_02041fb0: @ 0x02041fb0
 	cmp r2, #0
 	beq _02041fbe
 	cmp r2, #1
@@ -6619,7 +6619,7 @@ _02041fe4:
 
 	.global func_02041fec
 	thumb_func_start func_02041fec
-func_02041fec: ; 0x02041fec
+func_02041fec: @ 0x02041fec
 	push {r3, r4, lr}
 	sub sp, #0x54
 	add r4, r0, #0
@@ -6637,7 +6637,7 @@ func_02041fec: ; 0x02041fec
 	pop {r3, r4, pc}
 _0204200e:
 	add r3, sp, #0
-	ldr r2, _02042020 ; =data_020767ac
+	ldr r2, _02042020 @ =data_020767ac
 	ldmia r3!, {r0, r1}
 	stmia r2!, {r0, r1}
 	ldr r0, [r3]
@@ -6651,7 +6651,7 @@ _02042020: .word data_020767ac
 
 	.global func_02042024
 	thumb_func_start func_02042024
-func_02042024: ; 0x02042024
+func_02042024: @ 0x02042024
 	push {r4, lr}
 	add r4, r0, #0
 	bl func_02040cb8
@@ -6670,16 +6670,16 @@ _02042036:
 
 	.global func_02042040
 	thumb_func_start func_02042040
-func_02042040: ; 0x02042040
+func_02042040: @ 0x02042040
 	push {r3, r4, lr}
 	sub sp, #0xc
 	add r4, r1, #0
-	ldr r1, _02042064 ; =func_02042024
+	ldr r1, _02042064 @ =func_02042024
 	str r1, [sp]
 	str r0, [sp, #4]
 	mov r0, #1
 	str r0, [sp, #8]
-	ldr r0, _02042068 ; =data_020767bc
+	ldr r0, _02042068 @ =data_020767bc
 	add r1, r2, #0
 	ldr r0, [r0, #4]
 	add r2, r4, #0
@@ -6694,14 +6694,14 @@ _02042068: .word data_020767bc
 
 	.global func_0204206c
 	thumb_func_start func_0204206c
-func_0204206c: ; 0x0204206c
+func_0204206c: @ 0x0204206c
 	mov r0, #1
 	bx lr
 	thumb_func_end func_0204206c
 
 	.global func_02042070
 	thumb_func_start func_02042070
-func_02042070: ; 0x02042070
+func_02042070: @ 0x02042070
 	push {r3, lr}
 	cmp r1, #1
 	beq _020420a0
@@ -6711,7 +6711,7 @@ func_02042070: ; 0x02042070
 	beq _02042090
 	b _020420a4
 _02042080:
-	ldr r0, _020420a8 ; =data_020767bc
+	ldr r0, _020420a8 @ =data_020767bc
 	ldr r0, [r0]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -6719,7 +6719,7 @@ _02042080:
 	mov r0, #0
 	pop {r3, pc}
 _02042090:
-	ldr r0, _020420a8 ; =data_020767bc
+	ldr r0, _020420a8 @ =data_020767bc
 	ldr r0, [r0]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x10
@@ -6738,27 +6738,27 @@ _020420a8: .word data_020767bc
 
 	.global func_020420ac
 	thumb_func_start func_020420ac
-func_020420ac: ; 0x020420ac
+func_020420ac: @ 0x020420ac
 	mov r0, #1
 	bx lr
 	thumb_func_end func_020420ac
 
 	.global func_020420b0
 	thumb_func_start func_020420b0
-func_020420b0: ; 0x020420b0
+func_020420b0: @ 0x020420b0
 	mov r0, #4
 	bx lr
 	thumb_func_end func_020420b0
 
 	.global func_020420b4
 	thumb_func_start func_020420b4
-func_020420b4: ; 0x020420b4
+func_020420b4: @ 0x020420b4
 	push {r3, r4, r5, lr}
 	sub sp, #0x10
-	ldr r1, _02042164 ; =data_020767bc
+	ldr r1, _02042164 @ =data_020767bc
 	str r0, [r1, #4]
 	blx func_0200c76c
-	ldr r1, _02042164 ; =data_020767bc
+	ldr r1, _02042164 @ =data_020767bc
 	str r0, [r1]
 	mov r0, #0
 	str r0, [r1, #8]
@@ -6766,46 +6766,46 @@ func_020420b4: ; 0x020420b4
 	str r0, [r1, #0x10]
 	str r0, [r1, #0x14]
 	bl func_02040acc
-	ldr r0, _02042168 ; =data_020767d4
+	ldr r0, _02042168 @ =data_020767d4
 	bl func_02041894
-	ldr r0, _02042168 ; =data_020767d4
-	ldr r1, _0204216c ; =data_020580bc
+	ldr r0, _02042168 @ =data_020767d4
+	ldr r1, _0204216c @ =data_020580bc
 	mov r2, #3
 	bl func_020418d8
-	ldr r0, _02042170 ; =0x027ffc40
+	ldr r0, _02042170 @ =0x027ffc40
 	ldrh r0, [r0]
 	cmp r0, #2
 	bne _0204211e
 	mov r2, #0
-	ldr r0, _02042164 ; =data_020767bc
+	ldr r0, _02042164 @ =data_020767bc
 	mvn r2, r2
 	str r2, [r0, #8]
 	mov r1, #0
 	str r1, [r0, #0xc]
 	str r2, [r0, #0x10]
 	str r1, [r0, #0x14]
-	ldr r0, _02042168 ; =data_020767d4
-	ldr r1, _02042174 ; =func_020420b0
+	ldr r0, _02042168 @ =data_020767d4
+	ldr r1, _02042174 @ =func_020420b0
 	bl func_02041c18
 	mov r1, #0
 	str r1, [sp]
-	ldr r0, _02042178 ; =func_020420ac
+	ldr r0, _02042178 @ =func_020420ac
 	str r1, [sp, #4]
 	str r0, [sp, #8]
-	ldr r0, _0204217c ; =func_0204206c
+	ldr r0, _0204217c @ =func_0204206c
 	add r2, r1, #0
 	str r0, [sp, #0xc]
-	ldr r0, _02042168 ; =data_020767d4
+	ldr r0, _02042168 @ =data_020767d4
 	add r3, r1, #0
 	bl func_0204198c
 	add sp, #0x10
 	pop {r3, r4, r5, pc}
 _0204211e:
-	ldr r4, _02042180 ; =0x027ffe40
-	ldr r0, _02042168 ; =data_020767d4
+	ldr r4, _02042180 @ =0x027ffe40
+	ldr r0, _02042168 @ =data_020767d4
 	add r5, r4, #0
-	ldr r1, _02042184 ; =func_02042070
-	ldr r2, _02042188 ; =0x00000602
+	ldr r1, _02042184 @ =func_02042070
+	ldr r2, _02042188 @ =0x00000602
 	add r5, #8
 	bl func_02041c18
 	mov r0, #0
@@ -6824,11 +6824,11 @@ _0204211e:
 	ldr r0, [r4, #4]
 	mov r1, #0
 	str r0, [sp, #4]
-	ldr r0, _0204218c ; =func_02042040
+	ldr r0, _0204218c @ =func_02042040
 	str r0, [sp, #8]
-	ldr r0, _0204217c ; =func_0204206c
+	ldr r0, _0204217c @ =func_0204206c
 	str r0, [sp, #0xc]
-	ldr r0, _02042168 ; =data_020767d4
+	ldr r0, _02042168 @ =data_020767d4
 	ldr r3, [r5, #4]
 	bl func_0204198c
 _0204215e:
@@ -6850,20 +6850,20 @@ _0204218c: .word func_02042040
 
 	.global func_02042190
 	thumb_func_start func_02042190
-func_02042190: ; 0x02042190
+func_02042190: @ 0x02042190
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	blx func_0200ee4c
 	add r6, r0, #0
-	ldr r0, _020421bc ; =data_020767bc
+	ldr r0, _020421bc @ =data_020767bc
 	ldr r4, [r0, #4]
-	ldr r0, _020421c0 ; =data_020767d4
+	ldr r0, _020421c0 @ =data_020767d4
 	bl func_02041b50
-	ldr r1, _020421bc ; =data_020767bc
+	ldr r1, _020421bc @ =data_020767bc
 	cmp r0, #0
 	str r5, [r1, #4]
 	beq _020421b2
-	ldr r0, _020421c0 ; =data_020767d4
+	ldr r0, _020421c0 @ =data_020767d4
 	bl func_02041bcc
 _020421b2:
 	add r0, r6, #0
@@ -6877,12 +6877,12 @@ _020421c0: .word data_020767d4
 
 	.global func_020421c4
 	thumb_func_start func_020421c4
-func_020421c4: ; 0x020421c4
+func_020421c4: @ 0x020421c4
 	add r3, r0, #0
 	add r2, r1, #0
 	add r1, r3, #0
-	ldr r3, _020421d0 ; =func_02041a44
-	ldr r0, _020421d4 ; =data_020767d4
+	ldr r3, _020421d0 @ =func_02041a44
+	ldr r0, _020421d4 @ =data_020767d4
 	bx r3
 	.align 2, 0
 _020421d0: .word func_02041a44
@@ -6891,14 +6891,14 @@ _020421d4: .word data_020767d4
 
 	.global func_020421d8
 	thumb_func_start func_020421d8
-func_020421d8: ; 0x020421d8
+func_020421d8: @ 0x020421d8
 	push {r3, r4, lr}
 	sub sp, #4
 	add r4, r1, #0
-	ldr r1, _020421f4 ; =0x0000ffff
+	ldr r1, _020421f4 @ =0x0000ffff
 	add r3, r2, #0
 	str r1, [sp]
-	ldr r1, _020421f8 ; =data_020767d4
+	ldr r1, _020421f8 @ =data_020767d4
 	add r2, r4, #0
 	add r3, r4, r3
 	bl func_02041e08
@@ -6911,7 +6911,7 @@ _020421f8: .word data_020767d4
 
 	.global func_020421fc
 	thumb_func_start func_020421fc
-func_020421fc: ; 0x020421fc
+func_020421fc: @ 0x020421fc
 	ldr r2, [r0, #0x1c]
 	mov r1, #1
 	lsr r3, r2, #0x18
@@ -6927,7 +6927,7 @@ _0204220c:
 
 	.global func_02042210
 	thumb_func_start func_02042210
-func_02042210: ; 0x02042210
+func_02042210: @ 0x02042210
 	push {r4, r5, r6, lr}
 	ldr r4, [r0, #4]
 	ldr r5, [r0, #8]
@@ -6949,9 +6949,9 @@ func_02042210: ; 0x02042210
 
 	.global func_02042238
 	thumb_func_start func_02042238
-func_02042238: ; 0x02042238
+func_02042238: @ 0x02042238
 	sub sp, #8
-	ldr r2, _0204224c ; =data_020767d4
+	ldr r2, _0204224c @ =data_020767d4
 	ldr r1, [r1, #0x18]
 	str r2, [sp]
 	str r2, [r0]
@@ -6965,7 +6965,7 @@ _0204224c: .word data_020767d4
 
 	.global func_02042250
 	thumb_func_start func_02042250
-func_02042250: ; 0x02042250
+func_02042250: @ 0x02042250
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x5c
 	add r5, r0, #0
@@ -7046,16 +7046,16 @@ _020422d4:
 
 	.global func_020422ec
 	thumb_func_start func_020422ec
-func_020422ec: ; 0x020422ec
+func_020422ec: @ 0x020422ec
 	push {r3, r4, r5, lr}
 	sub sp, #0x60
 	add r5, r0, #0
 	add r4, r1, #0
 	bne _020422fa
-	ldr r0, _0204237c ; =data_020767c4
+	ldr r0, _0204237c @ =data_020767c4
 	b _020422fc
 _020422fa:
-	ldr r0, _02042380 ; =data_020767cc
+	ldr r0, _02042380 @ =data_020767cc
 _020422fc:
 	ldr r3, [r0]
 	cmp r3, #0
@@ -7100,7 +7100,7 @@ _0204233e:
 	mov r0, #1
 	pop {r3, r4, r5, pc}
 _02042356:
-	ldr r3, _02042384 ; =0x027ffe50
+	ldr r3, _02042384 @ =0x027ffe50
 	ldr r0, [r3]
 	add r1, r3, #0
 	str r0, [sp]
@@ -7108,7 +7108,7 @@ _02042356:
 	add r1, #8
 	str r0, [sp, #4]
 	ldr r0, [r1]
-	ldr r3, _02042388 ; =data_020767d4
+	ldr r3, _02042388 @ =data_020767d4
 	str r0, [sp, #8]
 	ldr r0, [r1, #4]
 	add r1, r4, #0
@@ -7126,7 +7126,7 @@ _02042388: .word data_020767d4
 
 	.global func_0204238c
 	thumb_func_start func_0204238c
-func_0204238c: ; 0x0204238c
+func_0204238c: @ 0x0204238c
 	push {r3, r4, r5, lr}
 	sub sp, #0x50
 	add r4, r0, #0
@@ -7171,7 +7171,7 @@ _020423dc:
 
 	.global func_020423e8
 	thumb_func_start func_020423e8
-func_020423e8: ; 0x020423e8
+func_020423e8: @ 0x020423e8
 	push {r4, r5, r6, lr}
 	sub sp, #0x58
 	add r5, r0, #0
@@ -7181,11 +7181,11 @@ func_020423e8: ; 0x020423e8
 	mov r1, #0
 	mov r2, #0x14
 	blx func_02007a44
-	ldr r2, _0204243c ; =data_020580c0
+	ldr r2, _0204243c @ =data_020580c0
 	add r1, sp, #4
 	ldmia r2!, {r0, r2}
 	blx func_02007ad8
-	ldr r0, _0204243c ; =data_020580c0
+	ldr r0, _0204243c @ =data_020580c0
 	add r1, r4, #0
 	ldr r0, [r0, #4]
 	add r2, r6, #0
@@ -7220,12 +7220,12 @@ _0204243c: .word data_020580c0
 
 	.global func_02042440
 	thumb_func_start func_02042440
-func_02042440: ; 0x02042440
+func_02042440: @ 0x02042440
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	bl func_020421fc
 	add r6, r0, #0
-	ldr r0, _020424c8 ; =0x027ffc40
+	ldr r0, _020424c8 @ =0x027ffc40
 	ldrh r0, [r0]
 	cmp r0, #2
 	bne _02042496
@@ -7235,8 +7235,8 @@ func_02042440: ; 0x02042440
 	mov r0, #2
 	tst r0, r1
 	beq _02042482
-	ldr r1, _020424cc ; =data_02058e04
-	ldr r0, _020424d0 ; =data_02058e04
+	ldr r1, _020424cc @ =data_02058e04
+	ldr r0, _020424d0 @ =data_02058e04
 	ldr r4, [r5]
 	sub r0, r1, r0
 	mov r1, #0x14
@@ -7244,7 +7244,7 @@ func_02042440: ; 0x02042440
 	cmp r4, r0
 	bhs _02042482
 	mov r0, #0x14
-	ldr r1, _020424d0 ; =data_02058e04
+	ldr r1, _020424d0 @ =data_02058e04
 	mul r0, r4
 	add r0, r1, r0
 	ldr r1, [r5, #4]
@@ -7296,7 +7296,7 @@ _020424d0: .word data_02058e04
 
 	.global func_020424d4
 	thumb_func_start func_020424d4
-func_020424d4: ; 0x020424d4
+func_020424d4: @ 0x020424d4
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
 	str r0, [sp]
@@ -7315,7 +7315,7 @@ _020424da:
 	str r0, [sp, #4]
 	blx func_0200ee4c
 	mov ip, r0
-	ldr r0, _02042574 ; =__global_destructor_chain
+	ldr r0, _02042574 @ =__global_destructor_chain
 	add r1, r6, #0
 	ldr r2, [r0]
 	str r2, [sp, #0xc]
@@ -7351,7 +7351,7 @@ _02042530:
 	ldr r0, [sp, #0xc]
 	cmp r0, r2
 	bne _0204253c
-	ldr r0, _02042574 ; =__global_destructor_chain
+	ldr r0, _02042574 @ =__global_destructor_chain
 	str r3, [sp, #0xc]
 	str r3, [r0]
 _0204253c:
@@ -7394,7 +7394,7 @@ _02042574: .word __global_destructor_chain
 
 	.global func_02042578
 	thumb_func_start func_02042578
-func_02042578: ; 0x02042578
+func_02042578: @ 0x02042578
 	push {r3, lr}
 	bl func_020424d4
 	mov r0, #1
@@ -7404,7 +7404,7 @@ func_02042578: ; 0x02042578
 
 	.global func_02042584
 	thumb_func_start func_02042584
-func_02042584: ; 0x02042584
+func_02042584: @ 0x02042584
 	push {lr}
 	sub sp, #0x2c
 	add r3, r0, #0
@@ -7432,7 +7432,7 @@ _020425a8:
 
 	.global func_020425b4
 	thumb_func_start func_020425b4
-func_020425b4: ; 0x020425b4
+func_020425b4: @ 0x020425b4
 	push {lr}
 	sub sp, #0x2c
 	add r3, r0, #0
@@ -7459,9 +7459,9 @@ _020425d8:
 
 	.global func_020425e0
 	thumb_func_start func_020425e0
-func_020425e0: ; 0x020425e0
+func_020425e0: @ 0x020425e0
 	push {r3, r4, r5, lr}
-	ldr r0, _02042618 ; =data_02076830
+	ldr r0, _02042618 @ =data_02076830
 	ldrh r1, [r0]
 	cmp r1, #0
 	bne _02042616
@@ -7482,7 +7482,7 @@ _02042602:
 	blx func_02008b50
 	cmp r0, #0
 	beq _02042602
-	ldr r1, _0204261c ; =func_02042768
+	ldr r1, _0204261c @ =func_02042768
 	mov r0, #5
 	blx func_02008b04
 _02042616:
@@ -7494,13 +7494,13 @@ _0204261c: .word func_02042768
 
 	.global func_02042620
 	thumb_func_start func_02042620
-func_02042620: ; 0x02042620
+func_02042620: @ 0x02042620
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
 	add r6, r2, #0
 	blx func_0200ee4c
-	ldr r1, _02042664 ; =data_02076830
+	ldr r1, _02042664 @ =data_02076830
 	ldr r2, [r1, #4]
 	cmp r2, #0
 	beq _0204263c
@@ -7511,7 +7511,7 @@ _0204263c:
 	mov r2, #1
 	str r2, [r1, #4]
 	blx func_0200ee60
-	ldr r0, _02042664 ; =data_02076830
+	ldr r0, _02042664 @ =data_02076830
 	mov r1, #0
 	str r1, [r0, #0x18]
 	str r1, [r0, #0x1c]
@@ -7532,18 +7532,18 @@ _02042664: .word data_02076830
 
 	.global func_02042668
 	thumb_func_start func_02042668
-func_02042668: ; 0x02042668
+func_02042668: @ 0x02042668
 	push {r3, lr}
-	ldr r1, _02042684 ; =func_02042acc
+	ldr r1, _02042684 @ =func_02042acc
 	mov r2, #0
 	bl func_02042620
-	ldr r1, _02042688 ; =data_02076830
+	ldr r1, _02042688 @ =data_02076830
 	cmp r0, #0
 	str r0, [r1, #0x24]
 	bne _0204267e
 	blx func_02042ad8
 _0204267e:
-	ldr r0, _02042688 ; =data_02076830
+	ldr r0, _02042688 @ =data_02076830
 	ldr r0, [r0, #0x24]
 	pop {r3, pc}
 	.align 2, 0
@@ -7553,13 +7553,13 @@ _02042688: .word data_02076830
 
 	.global func_0204268c
 	thumb_func_start func_0204268c
-func_0204268c: ; 0x0204268c
+func_0204268c: @ 0x0204268c
 	push {r4, r5, r6, lr}
 	add r5, r0, #0
 	add r4, r1, #0
 	add r6, r2, #0
 	blx func_0200ee4c
-	ldr r1, _020426d0 ; =data_02076830
+	ldr r1, _020426d0 @ =data_02076830
 	ldr r2, [r1, #4]
 	cmp r2, #0
 	beq _020426a8
@@ -7570,7 +7570,7 @@ _020426a8:
 	mov r2, #1
 	str r2, [r1, #4]
 	blx func_0200ee60
-	ldr r0, _020426d0 ; =data_02076830
+	ldr r0, _020426d0 @ =data_02076830
 	mov r1, #1
 	str r1, [r0, #0x18]
 	mov r1, #0
@@ -7592,18 +7592,18 @@ _020426d0: .word data_02076830
 
 	.global func_020426d4
 	thumb_func_start func_020426d4
-func_020426d4: ; 0x020426d4
+func_020426d4: @ 0x020426d4
 	push {r3, lr}
-	ldr r1, _020426f0 ; =func_02042acc
+	ldr r1, _020426f0 @ =func_02042acc
 	mov r2, #0
 	bl func_0204268c
-	ldr r1, _020426f4 ; =data_02076830
+	ldr r1, _020426f4 @ =data_02076830
 	cmp r0, #0
 	str r0, [r1, #0x24]
 	bne _020426ea
 	blx func_02042ad8
 _020426ea:
-	ldr r0, _020426f4 ; =data_02076830
+	ldr r0, _020426f4 @ =data_02076830
 	ldr r0, [r0, #0x24]
 	pop {r3, pc}
 	.align 2, 0
@@ -7613,14 +7613,14 @@ _020426f4: .word data_02076830
 
 	.global func_020426f8
 	thumb_func_start func_020426f8
-func_020426f8: ; 0x020426f8
+func_020426f8: @ 0x020426f8
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r4, r1, #0
 	add r6, r2, #0
 	add r7, r3, #0
 	blx func_0200ee4c
-	ldr r1, _02042740 ; =data_02076830
+	ldr r1, _02042740 @ =data_02076830
 	ldr r2, [r1, #4]
 	cmp r2, #0
 	beq _02042716
@@ -7631,7 +7631,7 @@ _02042716:
 	mov r2, #1
 	str r2, [r1, #4]
 	blx func_0200ee60
-	ldr r0, _02042740 ; =data_02076830
+	ldr r0, _02042740 @ =data_02076830
 	mov r1, #2
 	str r1, [r0, #0x18]
 	mov r1, #0
@@ -7654,18 +7654,18 @@ _02042740: .word data_02076830
 
 	.global func_02042744
 	thumb_func_start func_02042744
-func_02042744: ; 0x02042744
+func_02042744: @ 0x02042744
 	push {r3, lr}
-	ldr r2, _02042760 ; =func_02042acc
+	ldr r2, _02042760 @ =func_02042acc
 	mov r3, #0
 	bl func_020426f8
-	ldr r1, _02042764 ; =data_02076830
+	ldr r1, _02042764 @ =data_02076830
 	cmp r0, #0
 	str r0, [r1, #0x24]
 	bne _0204275a
 	blx func_02042ad8
 _0204275a:
-	ldr r0, _02042764 ; =data_02076830
+	ldr r0, _02042764 @ =data_02076830
 	ldr r0, [r0, #0x24]
 	pop {r3, pc}
 	.align 2, 0
@@ -7675,25 +7675,25 @@ _02042764: .word data_02076830
 
 	.global func_02042768
 	thumb_func_start func_02042768
-func_02042768: ; 0x02042768
+func_02042768: @ 0x02042768
 	push {r3, r4, r5, lr}
 	cmp r2, #0
 	beq _0204279a
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	ldr r1, [r0, #0x1c]
 	cmp r1, #0
 	beq _0204277a
 	mov r1, #0
 	str r1, [r0, #0x1c]
 _0204277a:
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	ldr r1, [r0, #4]
 	cmp r1, #0
 	beq _02042786
 	mov r1, #0
 	str r1, [r0, #4]
 _02042786:
-	ldr r1, _02042a74 ; =data_02076830
+	ldr r1, _02042a74 @ =data_02076830
 	ldr r2, [r1, #8]
 	cmp r2, #0
 	beq _020427b6
@@ -7714,7 +7714,7 @@ _0204279a:
 	lsr r0, r0, #0x18
 	cmp r1, #0x30
 	bne _020427bc
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	ldr r0, [r0, #0x20]
 	cmp r0, #0
 	bne _020427b8
@@ -7728,7 +7728,7 @@ _020427bc:
 	beq _020427c2
 	b _02042a1e
 _020427c2:
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	mov r4, #0
 	ldr r1, [r0, #0x18]
 	cmp r1, #0xf
@@ -7741,38 +7741,38 @@ _020427ce:
 	lsl r1, r1, #0x10
 	asr r1, r1, #0x10
 	add pc, r1
-_020427da: ; jump table
-	.short _020427fa - _020427da - 2 ; case 0
-	.short _02042830 - _020427da - 2 ; case 1
-	.short _0204285e - _020427da - 2 ; case 2
-	.short _02042a4c - _020427da - 2 ; case 3
-	.short _02042a4c - _020427da - 2 ; case 4
-	.short _02042a4c - _020427da - 2 ; case 5
-	.short _020428c2 - _020427da - 2 ; case 6
-	.short _020428da - _020427da - 2 ; case 7
-	.short _020428f0 - _020427da - 2 ; case 8
-	.short _0204294e - _020427da - 2 ; case 9
-	.short _020429b4 - _020427da - 2 ; case 10
-	.short _02042a4c - _020427da - 2 ; case 11
-	.short _02042a4c - _020427da - 2 ; case 12
-	.short _02042a4c - _020427da - 2 ; case 13
-	.short _02042a4c - _020427da - 2 ; case 14
-	.short _02042a4c - _020427da - 2 ; case 15
+_020427da: @ jump table
+	.short _020427fa - _020427da - 2 @ case 0
+	.short _02042830 - _020427da - 2 @ case 1
+	.short _0204285e - _020427da - 2 @ case 2
+	.short _02042a4c - _020427da - 2 @ case 3
+	.short _02042a4c - _020427da - 2 @ case 4
+	.short _02042a4c - _020427da - 2 @ case 5
+	.short _020428c2 - _020427da - 2 @ case 6
+	.short _020428da - _020427da - 2 @ case 7
+	.short _020428f0 - _020427da - 2 @ case 8
+	.short _0204294e - _020427da - 2 @ case 9
+	.short _020429b4 - _020427da - 2 @ case 10
+	.short _02042a4c - _020427da - 2 @ case 11
+	.short _02042a4c - _020427da - 2 @ case 12
+	.short _02042a4c - _020427da - 2 @ case 13
+	.short _02042a4c - _020427da - 2 @ case 14
+	.short _02042a4c - _020427da - 2 @ case 15
 _020427fa:
 	ldr r5, [r0, #0xc]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	bl func_02042a84
 	str r0, [r5]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0x13
 	lsr r0, r0, #0x1b
 	bl func_02042a84
 	str r0, [r5, #4]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0xa
 	lsr r0, r0, #0x1a
@@ -7784,19 +7784,19 @@ _020427fa:
 	b _02042a4c
 _02042830:
 	ldr r5, [r0, #0xc]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x1a
 	lsr r0, r0, #0x1a
 	bl func_02042a84
 	str r0, [r5]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x11
 	lsr r0, r0, #0x19
 	bl func_02042a84
 	str r0, [r5, #4]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #9
 	lsr r0, r0, #0x19
@@ -7805,19 +7805,19 @@ _02042830:
 	b _02042a4c
 _0204285e:
 	ldr r5, [r0, #0xc]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x18
 	bl func_02042a84
 	str r0, [r5]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0x13
 	lsr r0, r0, #0x1b
 	bl func_02042a84
 	str r0, [r5, #4]
-	ldr r0, _02042a78 ; =0x027ffde8
+	ldr r0, _02042a78 @ =0x027ffde8
 	ldr r0, [r0]
 	lsl r0, r0, #0xa
 	lsr r0, r0, #0x1a
@@ -7826,21 +7826,21 @@ _0204285e:
 	add r0, r5, #0
 	bl func_02042c9c
 	str r0, [r5, #0xc]
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	ldr r5, [r0, #0x10]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x1a
 	lsr r0, r0, #0x1a
 	bl func_02042a84
 	str r0, [r5]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x11
 	lsr r0, r0, #0x19
 	bl func_02042a84
 	str r0, [r5, #4]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #9
 	lsr r0, r0, #0x19
@@ -7849,7 +7849,7 @@ _0204285e:
 	b _02042a4c
 _020428c2:
 	ldr r1, [r0, #0xc]
-	ldr r0, _02042a80 ; =0x027ffdea
+	ldr r0, _02042a80 @ =0x027ffdea
 	ldrh r0, [r0]
 	lsl r0, r0, #0x1c
 	lsr r0, r0, #0x1c
@@ -7863,7 +7863,7 @@ _020428d6:
 	b _02042a4c
 _020428da:
 	ldr r1, [r0, #0xc]
-	ldr r0, _02042a80 ; =0x027ffdea
+	ldr r0, _02042a80 @ =0x027ffdea
 	ldrh r0, [r0]
 	lsl r0, r0, #0x19
 	lsr r0, r0, #0x1f
@@ -7875,7 +7875,7 @@ _020428ec:
 	str r4, [r1]
 	b _02042a4c
 _020428f0:
-	ldr r1, _02042a7c ; =0x027ffdec
+	ldr r1, _02042a7c @ =0x027ffdec
 	ldr r5, [r0, #0xc]
 	ldr r0, [r1]
 	lsl r0, r0, #0x1d
@@ -7886,7 +7886,7 @@ _020428f0:
 	lsr r0, r0, #0x1a
 	bl func_02042a84
 	str r0, [r5, #4]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #9
 	lsr r0, r0, #0x19
@@ -7894,7 +7894,7 @@ _020428f0:
 	str r0, [r5, #8]
 	add r0, r4, #0
 	str r0, [r5, #0xc]
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x18
 	lsr r0, r0, #0x1f
@@ -7903,7 +7903,7 @@ _020428f0:
 	add r0, r0, #1
 	str r0, [r5, #0xc]
 _0204292a:
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #0x10
 	lsr r0, r0, #0x1f
@@ -7912,7 +7912,7 @@ _0204292a:
 	add r0, r0, #2
 	str r0, [r5, #0xc]
 _0204293a:
-	ldr r0, _02042a7c ; =0x027ffdec
+	ldr r0, _02042a7c @ =0x027ffdec
 	ldr r0, [r0]
 	lsl r0, r0, #8
 	lsr r0, r0, #0x1f
@@ -7930,7 +7930,7 @@ _0204294e:
 	ldr r1, [r0, #0xc]
 	ldr r1, [r1]
 	cmp r1, #1
-	ldr r1, _02042a80 ; =0x027ffdea
+	ldr r1, _02042a80 @ =0x027ffdea
 	bne _0204298a
 	ldrh r3, [r1]
 	lsl r3, r3, #0x1c
@@ -7948,7 +7948,7 @@ _0204294e:
 	bl func_02042b14
 	cmp r0, #0
 	bne _02042a4c
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	add r1, r4, #0
 	str r1, [r0, #0x1c]
 	mov r4, #3
@@ -7967,7 +7967,7 @@ _0204298a:
 	bl func_02042b14
 	cmp r0, #0
 	bne _02042a4c
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	add r1, r4, #0
 	str r1, [r0, #0x1c]
 	mov r4, #3
@@ -7982,7 +7982,7 @@ _020429b4:
 	ldr r1, [r0, #0xc]
 	ldr r1, [r1]
 	cmp r1, #1
-	ldr r1, _02042a80 ; =0x027ffdea
+	ldr r1, _02042a80 @ =0x027ffdea
 	bne _020429ea
 	ldrh r3, [r1]
 	lsl r3, r3, #0x19
@@ -7997,7 +7997,7 @@ _020429b4:
 	bl func_02042b14
 	cmp r0, #0
 	bne _02042a4c
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	add r1, r4, #0
 	str r1, [r0, #0x1c]
 	mov r4, #3
@@ -8016,7 +8016,7 @@ _020429ea:
 	bl func_02042b14
 	cmp r0, #0
 	bne _02042a4c
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	add r1, r4, #0
 	str r1, [r0, #0x1c]
 	mov r4, #3
@@ -8025,13 +8025,13 @@ _02042a10:
 	str r4, [r0, #0x1c]
 	b _02042a4c
 _02042a14:
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	mov r1, #0
 	mov r4, #4
 	str r1, [r0, #0x1c]
 	b _02042a4c
 _02042a1e:
-	ldr r1, _02042a74 ; =data_02076830
+	ldr r1, _02042a74 @ =data_02076830
 	mov r2, #0
 	str r2, [r1, #0x1c]
 	cmp r0, #4
@@ -8042,12 +8042,12 @@ _02042a1e:
 	lsl r0, r0, #0x10
 	asr r0, r0, #0x10
 	add pc, r0
-_02042a34: ; jump table
-	.short _02042a4a - _02042a34 - 2 ; case 0
-	.short _02042a3e - _02042a34 - 2 ; case 1
-	.short _02042a42 - _02042a34 - 2 ; case 2
-	.short _02042a46 - _02042a34 - 2 ; case 3
-	.short _02042a4a - _02042a34 - 2 ; case 4
+_02042a34: @ jump table
+	.short _02042a4a - _02042a34 - 2 @ case 0
+	.short _02042a3e - _02042a34 - 2 @ case 1
+	.short _02042a42 - _02042a34 - 2 @ case 2
+	.short _02042a46 - _02042a34 - 2 @ case 3
+	.short _02042a4a - _02042a34 - 2 @ case 4
 _02042a3e:
 	mov r4, #4
 	b _02042a4c
@@ -8060,7 +8060,7 @@ _02042a46:
 _02042a4a:
 	mov r4, #6
 _02042a4c:
-	ldr r0, _02042a74 ; =data_02076830
+	ldr r0, _02042a74 @ =data_02076830
 	ldr r1, [r0, #0x1c]
 	cmp r1, #0
 	bne _02042a70
@@ -8070,7 +8070,7 @@ _02042a4c:
 	mov r1, #0
 	str r1, [r0, #4]
 _02042a5e:
-	ldr r1, _02042a74 ; =data_02076830
+	ldr r1, _02042a74 @ =data_02076830
 	ldr r2, [r1, #8]
 	cmp r2, #0
 	beq _02042a70
@@ -8090,7 +8090,7 @@ _02042a80: .word 0x027ffdea
 
 	.global func_02042a84
 	thumb_func_start func_02042a84
-func_02042a84: ; 0x02042a84
+func_02042a84: @ 0x02042a84
 	push {r4, r5, r6, r7}
 	mov r1, #0
 	add r4, r1, #0
@@ -8134,8 +8134,8 @@ _02042ab0:
 
 	.global func_02042acc
 	thumb_func_start func_02042acc
-func_02042acc: ; 0x02042acc
-	ldr r1, _02042ad4 ; =data_02076830
+func_02042acc: @ 0x02042acc
+	ldr r1, _02042ad4 @ =data_02076830
 	str r0, [r1, #0x24]
 	bx lr
 	nop
@@ -8144,8 +8144,8 @@ _02042ad4: .word data_02076830
 
 	.global func_02042ad8
 	arm_func_start func_02042ad8
-func_02042ad8: ; 0x02042ad8
-	ldr ip, _02042aec ; =data_02076834
+func_02042ad8: @ 0x02042ad8
+	ldr ip, _02042aec @ =data_02076834
 _02042adc:
 	ldr r0, [ip]
 	cmp r0, #1
@@ -8157,8 +8157,8 @@ _02042aec: .word data_02076834
 
 	.global func_02042af0
 	thumb_func_start func_02042af0
-func_02042af0: ; 0x02042af0
-	ldr r3, _02042af8 ; =func_02042b20
+func_02042af0: @ 0x02042af0
+	ldr r3, _02042af8 @ =func_02042b20
 	mov r0, #0x10
 	bx r3
 	nop
@@ -8167,8 +8167,8 @@ _02042af8: .word func_02042b20
 
 	.global func_02042afc
 	thumb_func_start func_02042afc
-func_02042afc: ; 0x02042afc
-	ldr r3, _02042b04 ; =func_02042b20
+func_02042afc: @ 0x02042afc
+	ldr r3, _02042b04 @ =func_02042b20
 	mov r0, #0x11
 	bx r3
 	nop
@@ -8177,8 +8177,8 @@ _02042b04: .word func_02042b20
 
 	.global func_02042b08
 	thumb_func_start func_02042b08
-func_02042b08: ; 0x02042b08
-	ldr r3, _02042b10 ; =func_02042b20
+func_02042b08: @ 0x02042b08
+	ldr r3, _02042b10 @ =func_02042b20
 	mov r0, #0x12
 	bx r3
 	nop
@@ -8187,8 +8187,8 @@ _02042b10: .word func_02042b20
 
 	.global func_02042b14
 	thumb_func_start func_02042b14
-func_02042b14: ; 0x02042b14
-	ldr r3, _02042b1c ; =func_02042b20
+func_02042b14: @ 0x02042b14
+	ldr r3, _02042b1c @ =func_02042b20
 	mov r0, #0x27
 	bx r3
 	nop
@@ -8197,7 +8197,7 @@ _02042b1c: .word func_02042b20
 
 	.global func_02042b20
 	thumb_func_start func_02042b20
-func_02042b20: ; 0x02042b20
+func_02042b20: @ 0x02042b20
 	push {r3, lr}
 	add r1, r0, #0
 	lsl r2, r1, #8
@@ -8218,7 +8218,7 @@ _02042b3c:
 
 	.global func_02042b40
 	thumb_func_start func_02042b40
-func_02042b40: ; 0x02042b40
+func_02042b40: @ 0x02042b40
 	push {r3, r4}
 	ldr r2, [r0]
 	cmp r2, #0x64
@@ -8246,7 +8246,7 @@ _02042b6a:
 	pop {r3, r4}
 	bx lr
 _02042b72:
-	ldr r0, _02042b98 ; =data_020580c4
+	ldr r0, _02042b98 @ =data_020580c4
 	sub r4, r3, #1
 	lsl r3, r1, #2
 	ldr r0, [r0, r3]
@@ -8258,7 +8258,7 @@ _02042b72:
 	bne _02042b88
 	add r3, r3, #1
 _02042b88:
-	ldr r0, _02042b9c ; =0x0000016d
+	ldr r0, _02042b9c @ =0x0000016d
 	mul r0, r2
 	add r1, r3, r0
 	add r0, r2, #3
@@ -8273,7 +8273,7 @@ _02042b9c: .word 0x0000016d
 
 	.global func_02042ba0
 	thumb_func_start func_02042ba0
-func_02042ba0: ; 0x02042ba0
+func_02042ba0: @ 0x02042ba0
 	push {r3, r4}
 	ldr r1, [r0]
 	ldr r4, [r0, #8]
@@ -8290,7 +8290,7 @@ func_02042ba0: ; 0x02042ba0
 
 	.global func_02042bb8
 	thumb_func_start func_02042bb8
-func_02042bb8: ; 0x02042bb8
+func_02042bb8: @ 0x02042bb8
 	push {r3, r4, r5, lr}
 	add r4, r1, #0
 	bl func_02042b40
@@ -8312,7 +8312,7 @@ _02042bce:
 	add r2, r0, #0
 	b _02042bf4
 _02042be2:
-	ldr r2, _02042bf8 ; =0x00015180
+	ldr r2, _02042bf8 @ =0x00015180
 	asr r1, r5, #0x1f
 	add r0, r5, #0
 	mov r3, #0
@@ -8329,14 +8329,14 @@ _02042bf8: .word 0x00015180
 
 	.global func_02042bfc
 	thumb_func_start func_02042bfc
-func_02042bfc: ; 0x02042bfc
+func_02042bfc: @ 0x02042bfc
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r4, r1, #0
 	bpl _02042c06
 	mov r4, #0
 _02042c06:
-	ldr r0, _02042c8c ; =0x00008eac
+	ldr r0, _02042c8c @ =0x00008eac
 	cmp r4, r0
 	ble _02042c0e
 	add r4, r0, #0
@@ -8344,7 +8344,7 @@ _02042c0e:
 	add r0, r4, #6
 	mov r1, #7
 	blx func_02002c14
-	ldr r2, _02042c90 ; =0x0000016d
+	ldr r2, _02042c90 @ =0x0000016d
 	str r1, [r5, #0xc]
 	mov r0, #0
 	add r3, r2, #1
@@ -8368,7 +8368,7 @@ _02042c36:
 	cmp r0, #0x63
 	blo _02042c20
 _02042c3c:
-	ldr r1, _02042c90 ; =0x0000016d
+	ldr r1, _02042c90 @ =0x0000016d
 	cmp r4, r1
 	ble _02042c44
 	add r4, r1, #0
@@ -8394,7 +8394,7 @@ _02042c5c:
 _02042c64:
 	sub r4, r4, #1
 _02042c66:
-	ldr r1, _02042c94 ; =data_020580f4
+	ldr r1, _02042c94 @ =data_020580f4
 	mov r2, #0xb
 _02042c6a:
 	ldr r0, [r1]
@@ -8402,7 +8402,7 @@ _02042c6a:
 	blt _02042c82
 	add r0, r2, #1
 	str r0, [r5, #4]
-	ldr r0, _02042c98 ; =data_020580c8
+	ldr r0, _02042c98 @ =data_020580c8
 	lsl r1, r2, #2
 	ldr r0, [r0, r1]
 	sub r0, r4, r0
@@ -8423,7 +8423,7 @@ _02042c98: .word data_020580c8
 
 	.global func_02042c9c
 	thumb_func_start func_02042c9c
-func_02042c9c: ; 0x02042c9c
+func_02042c9c: @ 0x02042c9c
 	push {r3, r4, r5, r6, r7, lr}
 	mov r1, #0x7d
 	ldr r2, [r0]
@@ -8473,7 +8473,7 @@ _02042cb4:
 
 	.global func_02042cfc
 	thumb_func_start func_02042cfc
-func_02042cfc: ; 0x02042cfc
+func_02042cfc: @ 0x02042cfc
 	push {r3, r4, r5, r6, r7, lr}
 	add r7, r2, #0
 	mov ip, r1
@@ -8512,7 +8512,7 @@ _02042d32:
 
 	.global func_02042d3c
 	thumb_func_start func_02042d3c
-func_02042d3c: ; 0x02042d3c
+func_02042d3c: @ 0x02042d3c
 	mov r2, #0
 	ldrsb r1, [r0, r2]
 	cmp r1, #0
@@ -8529,11 +8529,11 @@ _02042d4c:
 
 	.global func_02042d50
 	arm_func_start func_02042d50
-func_02042d50: ; 0x02042d50
+func_02042d50: @ 0x02042d50
 	stmdb sp!, {r3, lr}
 	mov r0, #1
 	bl func_02046ed8
-	ldr r1, _02042d70 ; =data_02076858
+	ldr r1, _02042d70 @ =data_02076858
 	mov r0, #1
 	str r0, [r1, #0xc]
 	bl func_02042d74
@@ -8544,20 +8544,20 @@ _02042d70: .word data_02076858
 
 	.global func_02042d74
 	arm_func_start func_02042d74
-func_02042d74: ; 0x02042d74
+func_02042d74: @ 0x02042d74
 	stmdb sp!, {r4, lr}
-	ldr r1, _02042dbc ; =data_02076858
+	ldr r1, _02042dbc @ =data_02076858
 	mov r4, r0
 	ldr r0, [r1, #0xc]
 	cmp r0, #0
 	bne _02042db0
 	bl func_0204f4b8
-	ldr r0, _02042dbc ; =data_02076858
+	ldr r0, _02042dbc @ =data_02076858
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _02042db0
 	blx r0
-	ldr r0, _02042dbc ; =data_02076858
+	ldr r0, _02042dbc @ =data_02076858
 	mov r1, #0
 	str r1, [r0, #4]
 _02042db0:
@@ -8570,51 +8570,51 @@ _02042dbc: .word data_02076858
 
 	.global func_02042dc0
 	arm_func_start func_02042dc0
-func_02042dc0: ; 0x02042dc0
+func_02042dc0: @ 0x02042dc0
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r0, _02042ed0 ; =data_020769b0
+	ldr r0, _02042ed0 @ =data_020769b0
 	bl func_0200e160
 	cmp r0, #0
 	bne _02042df8
-	ldr r0, _02042ed4 ; =data_027e02a0
-	ldr r1, _02042ed8 ; =data_02076968
+	ldr r0, _02042ed4 @ =data_027e02a0
+	ldr r1, _02042ed8 @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02042edc ; =data_0207698c
+	ldr r0, _02042edc @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1]
 	str r2, [r0]
 	b _02042e50
 _02042df8:
-	ldr r0, _02042ed4 ; =data_027e02a0
-	ldr r1, _02042ed8 ; =data_02076968
+	ldr r0, _02042ed4 @ =data_027e02a0
+	ldr r1, _02042ed8 @ =data_02076968
 	ldr r0, [r0, #4]
 	ldr r1, [r1]
 	ldr r0, [r0, #0x6c]
 	cmp r1, r0
 	bne _02042e28
-	ldr r0, _02042edc ; =data_0207698c
+	ldr r0, _02042edc @ =data_0207698c
 	ldr r1, [r0]
 	add r1, r1, #1
 	str r1, [r0]
 	b _02042e50
 _02042e28:
-	ldr r0, _02042ed0 ; =data_020769b0
+	ldr r0, _02042ed0 @ =data_020769b0
 	bl func_0200e044
-	ldr r0, _02042ed4 ; =data_027e02a0
-	ldr r1, _02042ed8 ; =data_02076968
+	ldr r0, _02042ed4 @ =data_027e02a0
+	ldr r1, _02042ed8 @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02042edc ; =data_0207698c
+	ldr r0, _02042edc @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1]
 	str r2, [r0]
 _02042e50:
-	ldr r4, _02042ee0 ; =data_02076858
+	ldr r4, _02042ee0 @ =data_02076858
 	ldr r0, [r4, #8]
 	cmp r0, #0
 	ble _02042e84
-	ldr r5, _02042ee4 ; =data_02076868
+	ldr r5, _02042ee4 @ =data_02076868
 _02042e64:
 	ldr r0, [r4, #8]
 	sub r1, r0, #1
@@ -8625,20 +8625,20 @@ _02042e64:
 	cmp r0, #0
 	bgt _02042e64
 _02042e84:
-	ldr r0, _02042edc ; =data_0207698c
+	ldr r0, _02042edc @ =data_0207698c
 	ldr r1, [r0]
 	subs r1, r1, #1
 	str r1, [r0]
 	bne _02042ea0
-	ldr r0, _02042ed0 ; =data_020769b0
+	ldr r0, _02042ed0 @ =data_020769b0
 	bl func_0200e0c8
 _02042ea0:
-	ldr r0, _02042ee0 ; =data_02076858
+	ldr r0, _02042ee0 @ =data_02076858
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _02042ec0
 	blx r0
-	ldr r0, _02042ee0 ; =data_02076858
+	ldr r0, _02042ee0 @ =data_02076858
 	mov r1, #0
 	str r1, [r0]
 _02042ec0:
@@ -8657,9 +8657,9 @@ _02042ee4: .word data_02076868
 
 	.global func_02042ee8
 	arm_func_start func_02042ee8
-func_02042ee8: ; 0x02042ee8
-	ldr r0, _02042ef8 ; =data_02058218
-	ldr ip, _02042efc ; =func_02002488
+func_02042ee8: @ 0x02042ee8
+	ldr r0, _02042ef8 @ =data_02058218
+	ldr ip, _02042efc @ =func_02002488
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
@@ -8669,9 +8669,9 @@ _02042efc: .word func_02002488
 
 	.global func_02042f00
 	arm_func_start func_02042f00
-func_02042f00: ; 0x02042f00
+func_02042f00: @ 0x02042f00
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
-	ldr r0, _02042f64 ; =data_020580f8
+	ldr r0, _02042f64 @ =data_020580f8
 	mov r4, #0
 	mov r5, #1
 	mov r8, r0
@@ -8704,7 +8704,7 @@ _02042f64: .word data_020580f8
 
 	.global func_02042f68
 	arm_func_start func_02042f68
-func_02042f68: ; 0x02042f68
+func_02042f68: @ 0x02042f68
 	cmp r0, #0
 	rsblt r0, r0, #0
 	bx lr
@@ -8712,7 +8712,7 @@ func_02042f68: ; 0x02042f68
 
 	.global func_02042f74
 	arm_func_start func_02042f74
-func_02042f74: ; 0x02042f74
+func_02042f74: @ 0x02042f74
 	cmp r0, #0
 	rsblt r0, r0, #0
 	bx lr
@@ -8720,14 +8720,14 @@ func_02042f74: ; 0x02042f74
 
 	.global func_02042f80
 	arm_func_start func_02042f80
-func_02042f80: ; 0x02042f80
+func_02042f80: @ 0x02042f80
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
 	mov lr, r1
 	mov ip, r2
 	str r3, [sp]
-	ldr r0, _02042fb8 ; =data_020581dc
+	ldr r0, _02042fb8 @ =data_020581dc
 	mov r1, r4
 	mov r2, lr
 	mov r3, ip
@@ -8741,13 +8741,13 @@ _02042fb8: .word data_020581dc
 
 	.global func_02042fbc
 	arm_func_start func_02042fbc
-func_02042fbc: ; 0x02042fbc
+func_02042fbc: @ 0x02042fbc
 	bx lr
 	arm_func_end func_02042fbc
 
 	.global func_02042fc0
 	arm_func_start func_02042fc0
-func_02042fc0: ; 0x02042fc0
+func_02042fc0: @ 0x02042fc0
 	ldr r1, [r0, #0x1c]
 	str r1, [r0, #0x24]
 	ldr r3, [r0, #0x20]
@@ -8764,7 +8764,7 @@ func_02042fc0: ; 0x02042fc0
 
 	.global func_02042ff0
 	arm_func_start func_02042ff0
-func_02042ff0: ; 0x02042ff0
+func_02042ff0: @ 0x02042ff0
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	ldr r2, [r5, #0x24]
@@ -8805,7 +8805,7 @@ _02043068:
 
 	.global func_02043078
 	arm_func_start func_02043078
-func_02043078: ; 0x02043078
+func_02043078: @ 0x02043078
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #8
 	mov r9, r3
@@ -8995,7 +8995,7 @@ _020432fc:
 
 	.global func_02043328
 	arm_func_start func_02043328
-func_02043328: ; 0x02043328
+func_02043328: @ 0x02043328
 	stmdb sp!, {r4, lr}
 	movs r4, r0
 	bne _0204333c
@@ -9063,9 +9063,9 @@ _020433f8:
 
 	.global func_02043410
 	arm_func_start func_02043410
-func_02043410: ; 0x02043410
+func_02043410: @ 0x02043410
 	stmdb sp!, {r3, lr}
-	ldr r3, _02043428 ; =data_02058338
+	ldr r3, _02043428 @ =data_02058338
 	ldr r3, [r3, #8]
 	ldr r3, [r3]
 	blx r3
@@ -9076,7 +9076,7 @@ _02043428: .word data_02058338
 
 	.global func_0204342c
 	arm_func_start func_0204342c
-func_0204342c: ; 0x0204342c
+func_0204342c: @ 0x0204342c
 	cmp r1, #0
 	moveq r0, #0
 	bxeq lr
@@ -9095,7 +9095,7 @@ func_0204342c: ; 0x0204342c
 
 	.global func_02043464
 	arm_func_start func_02043464
-func_02043464: ; 0x02043464
+func_02043464: @ 0x02043464
 	cmp r0, #0
 	moveq r0, #0
 	strneb r1, [r0]
@@ -9105,9 +9105,9 @@ func_02043464: ; 0x02043464
 
 	.global func_02043478
 	arm_func_start func_02043478
-func_02043478: ; 0x02043478
+func_02043478: @ 0x02043478
 	stmdb sp!, {r3, lr}
-	ldr r2, _02043490 ; =data_02058338
+	ldr r2, _02043490 @ =data_02058338
 	ldr r2, [r2, #8]
 	ldr r2, [r2, #4]
 	blx r2
@@ -9118,7 +9118,7 @@ _02043490: .word data_02058338
 
 	.global func_02043494
 	arm_func_start func_02043494
-func_02043494: ; 0x02043494
+func_02043494: @ 0x02043494
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	mov r7, r1
 	mov r8, r0
@@ -9161,7 +9161,7 @@ _02043514:
 
 	.global func_0204351c
 	arm_func_start func_0204351c
-func_0204351c: ; 0x0204351c
+func_0204351c: @ 0x0204351c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	movs r4, r0
 	mov r9, r1
@@ -9198,7 +9198,7 @@ _0204358c:
 
 	.global func_02043594
 	arm_func_start func_02043594
-func_02043594: ; 0x02043594
+func_02043594: @ 0x02043594
 	mov ip, r0
 	cmp r2, #0
 	bxeq lr
@@ -9212,7 +9212,7 @@ _020435a0:
 
 	.global func_020435b4
 	arm_func_start func_020435b4
-func_020435b4: ; 0x020435b4
+func_020435b4: @ 0x020435b4
 	cmp r1, r0
 	blo _020435dc
 	mov ip, r0
@@ -9239,7 +9239,7 @@ _020435ec:
 
 	.global func_02043600
 	arm_func_start func_02043600
-func_02043600: ; 0x02043600
+func_02043600: @ 0x02043600
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_020436ac
@@ -9249,7 +9249,7 @@ func_02043600: ; 0x02043600
 
 	.global func_02043614
 	arm_func_start func_02043614
-func_02043614: ; 0x02043614
+func_02043614: @ 0x02043614
 	cmp r2, #0
 	and r3, r1, #0xff
 	beq _02043638
@@ -9267,7 +9267,7 @@ _02043638:
 
 	.global func_02043640
 	arm_func_start func_02043640
-func_02043640: ; 0x02043640
+func_02043640: @ 0x02043640
 	cmp r2, #0
 	and r3, r1, #0xff
 	add r0, r0, r2
@@ -9285,7 +9285,7 @@ _02043664:
 
 	.global func_0204366c
 	arm_func_start func_0204366c
-func_0204366c: ; 0x0204366c
+func_0204366c: @ 0x0204366c
 	cmp r2, #0
 	beq _020436a4
 _02043674:
@@ -9309,7 +9309,7 @@ _020436a4:
 
 	.global func_020436ac
 	arm_func_start func_020436ac
-func_020436ac: ; 0x020436ac
+func_020436ac: @ 0x020436ac
 	cmp r2, #0x20
 	and r3, r1, #0xff
 	blo _02043740
@@ -9367,7 +9367,7 @@ _0204374c:
 
 	.global func_0204375c
 	arm_func_start func_0204375c
-func_0204375c: ; 0x0204375c
+func_0204375c: @ 0x0204375c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x10
 	ldrsb r3, [r0, #1]
@@ -9461,7 +9461,7 @@ _02043898:
 	ldrsb r3, [ip, #1]!
 	b _020438f0
 _020438a0:
-	ldr r4, _02043ce4 ; =data_02056d98
+	ldr r4, _02043ce4 @ =data_02056d98
 	mov r5, #0
 	mov r0, #0xa
 	b _020438c4
@@ -9488,7 +9488,7 @@ _020438e8:
 	bne _020438b0
 _020438f0:
 	ldr r2, [sp, #8]
-	ldr r0, _02043ce8 ; =0x000001fd
+	ldr r0, _02043ce8 @ =0x000001fd
 	cmp r2, r0
 	ble _02043920
 	mov r1, #0xff
@@ -9518,7 +9518,7 @@ _02043920:
 	strltb r0, [sp, #2]
 	b _020439b4
 _02043964:
-	ldr r2, _02043ce4 ; =data_02056d98
+	ldr r2, _02043ce4 @ =data_02056d98
 	mov r4, #0
 	mov r0, #0xa
 	b _02043988
@@ -9616,14 +9616,14 @@ _02043a7c:
 	subs r0, r3, #0x41
 	addpl pc, pc, r0, lsl #2
 	b _02043cc4
-_02043aa8: ; jump table
-	b _02043bb8 ; case 0
-	b _02043cc4 ; case 1
-	b _02043cc4 ; case 2
-	b _02043cc4 ; case 3
-	b _02043c00 ; case 4
-	b _02043b80 ; case 5
-	b _02043bf0 ; case 6
+_02043aa8: @ jump table
+	b _02043bb8 @ case 0
+	b _02043cc4 @ case 1
+	b _02043cc4 @ case 2
+	b _02043cc4 @ case 3
+	b _02043c00 @ case 4
+	b _02043b80 @ case 5
+	b _02043bf0 @ case 6
 _02043ac4:
 	cmp r3, #0x58
 	beq _02043b44
@@ -9638,28 +9638,28 @@ _02043ae0:
 	cmp r0, #0x14
 	addls pc, pc, r0, lsl #2
 	b _02043cc4
-_02043af0: ; jump table
-	b _02043b44 ; case 0
-	b _02043c00 ; case 1
-	b _02043b80 ; case 2
-	b _02043bf0 ; case 3
-	b _02043cc4 ; case 4
-	b _02043b44 ; case 5
-	b _02043cc4 ; case 6
-	b _02043cc4 ; case 7
-	b _02043cc4 ; case 8
-	b _02043cc4 ; case 9
-	b _02043cb0 ; case 10
-	b _02043b44 ; case 11
-	b _02043c3c ; case 12
-	b _02043cc4 ; case 13
-	b _02043cc4 ; case 14
-	b _02043c8c ; case 15
-	b _02043cc4 ; case 16
-	b _02043b44 ; case 17
-	b _02043cc4 ; case 18
-	b _02043cc4 ; case 19
-	b _02043b44 ; case 20
+_02043af0: @ jump table
+	b _02043b44 @ case 0
+	b _02043c00 @ case 1
+	b _02043b80 @ case 2
+	b _02043bf0 @ case 3
+	b _02043cc4 @ case 4
+	b _02043b44 @ case 5
+	b _02043cc4 @ case 6
+	b _02043cc4 @ case 7
+	b _02043cc4 @ case 8
+	b _02043cc4 @ case 9
+	b _02043cb0 @ case 10
+	b _02043b44 @ case 11
+	b _02043c3c @ case 12
+	b _02043cc4 @ case 13
+	b _02043cc4 @ case 14
+	b _02043c8c @ case 15
+	b _02043cc4 @ case 16
+	b _02043b44 @ case 17
+	b _02043cc4 @ case 18
+	b _02043cc4 @ case 19
+	b _02043b44 @ case 20
 _02043b44:
 	ldrb r0, [sp, #4]
 	cmp r0, #9
@@ -9782,7 +9782,7 @@ _02043ce8: .word 0x000001fd
 
 	.global func_02043cec
 	arm_func_start func_02043cec
-func_02043cec: ; 0x02043cec
+func_02043cec: @ 0x02043cec
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x10
@@ -9902,7 +9902,7 @@ _02043e5c:
 _02043e90:
 	ldr r0, [sp]
 	sub r1, r0, r5
-	ldr r0, _02043f34 ; =0x000001fd
+	ldr r0, _02043f34 @ =0x000001fd
 	add r1, r7, r1
 	cmp r1, r0
 	addgt sp, sp, #0x10
@@ -9951,7 +9951,7 @@ _02043f34: .word 0x000001fd
 
 	.global func_02043f38
 	arm_func_start func_02043f38
-func_02043f38: ; 0x02043f38
+func_02043f38: @ 0x02043f38
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x18
@@ -10104,7 +10104,7 @@ _0204410c:
 	strne r0, [sp, #0x10]
 _0204415c:
 	ldr r0, [sp]
-	ldr r1, _02044214 ; =0x000001fd
+	ldr r1, _02044214 @ =0x000001fd
 	sub r2, r0, r6
 	ldr r0, [sp, #0x10]
 	add r0, r0, r2
@@ -10159,12 +10159,12 @@ _02044214: .word 0x000001fd
 
 	.global func_02044218
 	arm_func_start func_02044218
-func_02044218: ; 0x02044218
+func_02044218: @ 0x02044218
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, lr}
 	sub sp, sp, #0x44
 	ldr r7, [sp, #0x80]
-	ldr r0, _020446c8 ; =0x000001fd
+	ldr r0, _020446c8 @ =0x000001fd
 	mov r8, r2
 	cmp r7, r0
 	ldrb r6, [sp, #0x79]
@@ -10193,7 +10193,7 @@ func_02044218: ; 0x02044218
 	mov r1, r0
 	bl func_02001e98
 	bne _020442e4
-	ldr r3, _020446cc ; =data_02058440
+	ldr r3, _020446cc @ =data_02058440
 	sub r0, r8, #6
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10221,7 +10221,7 @@ _020442e4:
 	cmp r6, #0x41
 	sub r0, r8, #5
 	bne _02044344
-	ldr r3, _020446d0 ; =data_02058448
+	ldr r3, _020446d0 @ =data_02058448
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10237,7 +10237,7 @@ _020442e4:
 	add sp, sp, #0x10
 	bx lr
 _02044344:
-	ldr r3, _020446d4 ; =data_02058450
+	ldr r3, _020446d4 @ =data_02058450
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10256,7 +10256,7 @@ _02044380:
 	cmp r6, #0x41
 	sub r0, r8, #4
 	bne _020443c0
-	ldr r3, _020446d8 ; =data_02058458
+	ldr r3, _020446d8 @ =data_02058458
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10270,7 +10270,7 @@ _02044380:
 	add sp, sp, #0x10
 	bx lr
 _020443c0:
-	ldr r3, _020446dc ; =data_0205845c
+	ldr r3, _020446dc @ =data_0205845c
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10292,7 +10292,7 @@ _020443f4:
 	cmp r6, #0x41
 	sub r0, r8, #5
 	bne _02044450
-	ldr r3, _020446e0 ; =data_02058460
+	ldr r3, _020446e0 @ =data_02058460
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10308,7 +10308,7 @@ _020443f4:
 	add sp, sp, #0x10
 	bx lr
 _02044450:
-	ldr r3, _020446e4 ; =data_02058468
+	ldr r3, _020446e4 @ =data_02058468
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10327,7 +10327,7 @@ _0204448c:
 	cmp r6, #0x41
 	sub r0, r8, #4
 	bne _020444cc
-	ldr r3, _020446e8 ; =data_02058470
+	ldr r3, _020446e8 @ =data_02058470
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10341,7 +10341,7 @@ _0204448c:
 	add sp, sp, #0x10
 	bx lr
 _020444cc:
-	ldr r3, _020446ec ; =data_02058474
+	ldr r3, _020446ec @ =data_02058474
 	add sp, sp, #0x44
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10378,7 +10378,7 @@ _02044530:
 	blt _02044530
 	ldrb r0, [sp, #0x69]
 	ldrb r1, [sp, #0x68]
-	ldr r9, _020446f0 ; =0x000007ff
+	ldr r9, _020446f0 @ =0x000007ff
 	mov r0, r0, lsl #0x11
 	orr r1, r0, r1, lsl #25
 	add r0, sp, #0x34
@@ -10491,7 +10491,7 @@ _020446f0: .word 0x000007ff
 
 	.global func_020446f4
 	arm_func_start func_020446f4
-func_020446f4: ; 0x020446f4
+func_020446f4: @ 0x020446f4
 	stmdb sp!, {r4, lr}
 	cmp r1, #0
 	bge _0204471c
@@ -10581,12 +10581,12 @@ _02044808:
 
 	.global func_02044818
 	arm_func_start func_02044818
-func_02044818: ; 0x02044818
+func_02044818: @ 0x02044818
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x2c
 	ldr r7, [sp, #0x68]
-	ldr r3, _02044f50 ; =0x000001fd
+	ldr r3, _02044f50 @ =0x000001fd
 	ldrb r6, [sp, #0x61]
 	ldrb r5, [sp, #0x5f]
 	ldrb r4, [sp, #0x5d]
@@ -10655,14 +10655,14 @@ _02044918:
 	mov r1, #0
 	b _02044930
 _02044920:
-	ldr r1, _02044f54 ; =data_02056d98
+	ldr r1, _02044f54 @ =data_02056d98
 	mov r2, r6, lsl #0x1
 	ldrh r1, [r1, r2]
 	and r1, r1, #0x200
 _02044930:
 	cmp r1, #0
 	beq _02044974
-	ldr r3, _02044f58 ; =data_02058448
+	ldr r3, _02044f58 @ =data_02058448
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10678,7 +10678,7 @@ _02044930:
 	add sp, sp, #0x10
 	bx lr
 _02044974:
-	ldr r3, _02044f5c ; =data_02058450
+	ldr r3, _02044f5c @ =data_02058450
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10703,14 +10703,14 @@ _020449c4:
 	mov r1, #0
 	b _020449dc
 _020449cc:
-	ldr r1, _02044f54 ; =data_02056d98
+	ldr r1, _02044f54 @ =data_02056d98
 	mov r2, r6, lsl #0x1
 	ldrh r1, [r1, r2]
 	and r1, r1, #0x200
 _020449dc:
 	cmp r1, #0
 	beq _02044a18
-	ldr r3, _02044f60 ; =data_02058458
+	ldr r3, _02044f60 @ =data_02058458
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10724,7 +10724,7 @@ _020449dc:
 	add sp, sp, #0x10
 	bx lr
 _02044a18:
-	ldr r3, _02044f64 ; =data_0205845c
+	ldr r3, _02044f64 @ =data_0205845c
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10750,14 +10750,14 @@ _02044a6c:
 	mov r1, #0
 	b _02044a84
 _02044a74:
-	ldr r1, _02044f54 ; =data_02056d98
+	ldr r1, _02044f54 @ =data_02056d98
 	mov r2, r6, lsl #0x1
 	ldrh r1, [r1, r2]
 	and r1, r1, #0x200
 _02044a84:
 	cmp r1, #0
 	beq _02044ac8
-	ldr r3, _02044f68 ; =data_02058460
+	ldr r3, _02044f68 @ =data_02058460
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10773,7 +10773,7 @@ _02044a84:
 	add sp, sp, #0x10
 	bx lr
 _02044ac8:
-	ldr r3, _02044f6c ; =data_02058468
+	ldr r3, _02044f6c @ =data_02058468
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10798,14 +10798,14 @@ _02044b18:
 	mov r1, #0
 	b _02044b30
 _02044b20:
-	ldr r1, _02044f54 ; =data_02056d98
+	ldr r1, _02044f54 @ =data_02056d98
 	mov r2, r6, lsl #0x1
 	ldrh r1, [r1, r2]
 	and r1, r1, #0x200
 _02044b30:
 	cmp r1, #0
 	beq _02044b6c
-	ldr r3, _02044f70 ; =data_02058470
+	ldr r3, _02044f70 @ =data_02058470
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10819,7 +10819,7 @@ _02044b30:
 	add sp, sp, #0x10
 	bx lr
 _02044b6c:
-	ldr r3, _02044f74 ; =data_02058474
+	ldr r3, _02044f74 @ =data_02058474
 	add sp, sp, #0x2c
 	ldrb r2, [r3]
 	ldrb r1, [r3, #1]
@@ -10909,7 +10909,7 @@ _02044c98:
 	cmp lr, #0
 	rsblt lr, lr, #0
 	movlt r11, #0x2d
-	ldr r3, _02044f78 ; =0x66666667
+	ldr r3, _02044f78 @ =0x66666667
 	mov r0, #0xa
 	b _02044cec
 _02044cbc:
@@ -10933,7 +10933,7 @@ _02044cec:
 	strb r11, [r8, #-1]
 	strb r6, [r8, #-2]!
 	sub r1, r9, r8
-	ldr r0, _02044f50 ; =0x000001fd
+	ldr r0, _02044f50 @ =0x000001fd
 	add r1, r7, r1
 	cmp r1, r0
 	addgt sp, sp, #0x2c
@@ -11005,7 +11005,7 @@ _02044dc8:
 _02044e08:
 	adds r0, r3, #1
 	movmi r0, #0
-	ldr r3, _02044f50 ; =0x000001fd
+	ldr r3, _02044f50 @ =0x000001fd
 	add r6, r0, r1
 	cmp r6, r3
 	addgt sp, sp, #0x2c
@@ -11113,7 +11113,7 @@ _02044f78: .word 0x66666667
 
 	.global func_02044f7c
 	arm_func_start func_02044f7c
-func_02044f7c: ; 0x02044f7c
+func_02044f7c: @ 0x02044f7c
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x22c
@@ -11176,14 +11176,14 @@ _02045030:
 	subs r0, r1, #0x41
 	addpl pc, pc, r0, lsl #2
 	b _02045084
-_02045068: ; jump table
-	b _02045400 ; case 0
-	b _020455e8 ; case 1
-	b _020455e8 ; case 2
-	b _020455e8 ; case 3
-	b _02045398 ; case 4
-	b _02045398 ; case 5
-	b _02045398 ; case 6
+_02045068: @ jump table
+	b _02045400 @ case 0
+	b _020455e8 @ case 1
+	b _020455e8 @ case 2
+	b _020455e8 @ case 3
+	b _02045398 @ case 4
+	b _02045398 @ case 5
+	b _02045398 @ case 6
 _02045084:
 	cmp r1, #0x25
 	beq _020455d4
@@ -11198,25 +11198,25 @@ _0204509c:
 	subs r0, r1, #0x64
 	addpl pc, pc, r0, lsl #2
 	b _020450f8
-_020450b0: ; jump table
-	b _0204511c ; case 0
-	b _02045398 ; case 1
-	b _02045398 ; case 2
-	b _02045398 ; case 3
-	b _020455e8 ; case 4
-	b _0204511c ; case 5
-	b _020455e8 ; case 6
-	b _020455e8 ; case 7
-	b _020455e8 ; case 8
-	b _020455e8 ; case 9
-	b _02045528 ; case 10
-	b _0204525c ; case 11
-	b _020455e8 ; case 12
-	b _020455e8 ; case 13
-	b _020455e8 ; case 14
-	b _02045468 ; case 15
-	b _020455e8 ; case 16
-	b _0204525c ; case 17
+_020450b0: @ jump table
+	b _0204511c @ case 0
+	b _02045398 @ case 1
+	b _02045398 @ case 2
+	b _02045398 @ case 3
+	b _020455e8 @ case 4
+	b _0204511c @ case 5
+	b _020455e8 @ case 6
+	b _020455e8 @ case 7
+	b _020455e8 @ case 8
+	b _020455e8 @ case 9
+	b _02045528 @ case 10
+	b _0204525c @ case 11
+	b _020455e8 @ case 12
+	b _020455e8 @ case 13
+	b _020455e8 @ case 14
+	b _02045468 @ case 15
+	b _020455e8 @ case 16
+	b _0204525c @ case 17
 _020450f8:
 	cmp r1, #0x63
 	beq _020455b4
@@ -11473,7 +11473,7 @@ _02045468:
 	ldr r1, [r0, #-4]
 	add r0, sp, #0x2c
 	cmp r1, #0
-	ldreq r1, _02045798 ; =data_02058478
+	ldreq r1, _02045798 @ =data_02058478
 	bl func_0204351c
 	cmp r0, #0
 	blt _020455e8
@@ -11487,7 +11487,7 @@ _020454a8:
 _020454b8:
 	ldrb r0, [sp, #0x1f]
 	cmp r7, #0
-	ldreq r7, _0204579c ; =data_0205847c
+	ldreq r7, _0204579c @ =data_0205847c
 	cmp r0, #0
 	beq _020454ec
 	ldrb r0, [sp, #0x1e]
@@ -11524,16 +11524,16 @@ _02045528:
 	cmp r0, #8
 	addls pc, pc, r0, lsl #2
 	b _02045778
-_02045548: ; jump table
-	b _0204556c ; case 0
-	b _02045778 ; case 1
-	b _02045574 ; case 2
-	b _0204557c ; case 3
-	b _020455a4 ; case 4
-	b _02045778 ; case 5
-	b _02045584 ; case 6
-	b _02045594 ; case 7
-	b _0204559c ; case 8
+_02045548: @ jump table
+	b _0204556c @ case 0
+	b _02045778 @ case 1
+	b _02045574 @ case 2
+	b _0204557c @ case 3
+	b _020455a4 @ case 4
+	b _02045778 @ case 5
+	b _02045584 @ case 6
+	b _02045594 @ case 7
+	b _0204559c @ case 8
 _0204556c:
 	str r10, [r1]
 	b _02045778
@@ -11700,7 +11700,7 @@ _0204579c: .word data_0205847c
 
 	.global func_020457a0
 	arm_func_start func_020457a0
-func_020457a0: ; 0x020457a0
+func_020457a0: @ 0x020457a0
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r0, r1
@@ -11716,7 +11716,7 @@ func_020457a0: ; 0x020457a0
 
 	.global func_020457cc
 	arm_func_start func_020457cc
-func_020457cc: ; 0x020457cc
+func_020457cc: @ 0x020457cc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r0
 	ldr r3, [r4, #8]
@@ -11738,10 +11738,10 @@ func_020457cc: ; 0x020457cc
 
 	.global func_02045810
 	arm_func_start func_02045810
-func_02045810: ; 0x02045810
+func_02045810: @ 0x02045810
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, lr}
-	ldr r0, _02045910 ; =data_02058144
+	ldr r0, _02045910 @ =data_02058144
 	mvn r1, #0
 	bl func_02049040
 	cmp r0, #0
@@ -11749,39 +11749,39 @@ func_02045810: ; 0x02045810
 	ldmgeia sp!, {r4, lr}
 	addge sp, sp, #0x10
 	bxge lr
-	ldr r0, _02045914 ; =data_020769f8
+	ldr r0, _02045914 @ =data_020769f8
 	bl func_0200e160
 	cmp r0, #0
 	bne _0204586c
-	ldr r0, _02045918 ; =data_027e02a0
-	ldr r1, _0204591c ; =data_02076968
+	ldr r0, _02045918 @ =data_027e02a0
+	ldr r1, _0204591c @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02045920 ; =data_0207698c
+	ldr r0, _02045920 @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1, #0xc]
 	str r2, [r0, #0xc]
 	b _020458c4
 _0204586c:
-	ldr r0, _02045918 ; =data_027e02a0
-	ldr r1, _0204591c ; =data_02076968
+	ldr r0, _02045918 @ =data_027e02a0
+	ldr r1, _0204591c @ =data_02076968
 	ldr r0, [r0, #4]
 	ldr r1, [r1, #0xc]
 	ldr r0, [r0, #0x6c]
 	cmp r1, r0
 	bne _0204589c
-	ldr r0, _02045920 ; =data_0207698c
+	ldr r0, _02045920 @ =data_0207698c
 	ldr r1, [r0, #0xc]
 	add r1, r1, #1
 	str r1, [r0, #0xc]
 	b _020458c4
 _0204589c:
-	ldr r0, _02045914 ; =data_020769f8
+	ldr r0, _02045914 @ =data_020769f8
 	bl func_0200e044
-	ldr r0, _02045918 ; =data_027e02a0
-	ldr r1, _0204591c ; =data_02076968
+	ldr r0, _02045918 @ =data_027e02a0
+	ldr r1, _0204591c @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02045920 ; =data_0207698c
+	ldr r0, _02045920 @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1, #0xc]
@@ -11790,17 +11790,17 @@ _020458c4:
 	add r0, sp, #8
 	bic r3, r0, #3
 	ldr r2, [sp, #8]
-	ldr r0, _02045924 ; =func_020457a0
-	ldr r1, _02045910 ; =data_02058144
+	ldr r0, _02045924 @ =func_020457a0
+	ldr r1, _02045910 @ =data_02058144
 	add r3, r3, #4
 	bl func_02044f7c
-	ldr r1, _02045920 ; =data_0207698c
+	ldr r1, _02045920 @ =data_0207698c
 	mov r4, r0
 	ldr r0, [r1, #0xc]
 	subs r0, r0, #1
 	str r0, [r1, #0xc]
 	bne _02045900
-	ldr r0, _02045914 ; =data_020769f8
+	ldr r0, _02045914 @ =data_020769f8
 	bl func_0200e0c8
 _02045900:
 	mov r0, r4
@@ -11818,13 +11818,13 @@ _02045924: .word func_020457a0 - 1
 
 	.global func_02045928
 	arm_func_start func_02045928
-func_02045928: ; 0x02045928
+func_02045928: @ 0x02045928
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r0
 	mov r4, r1
 	mov ip, #0
-	ldr r0, _0204598c ; =func_020457cc
+	ldr r0, _0204598c @ =func_020457cc
 	add r1, sp, #0
 	str r5, [sp]
 	str r4, [sp, #4]
@@ -11850,7 +11850,7 @@ _0204598c: .word func_020457cc - 1
 
 	.global func_02045990
 	arm_func_start func_02045990
-func_02045990: ; 0x02045990
+func_02045990: @ 0x02045990
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, lr}
 	add r3, sp, #0x10
@@ -11865,7 +11865,7 @@ func_02045990: ; 0x02045990
 
 	.global func_020459b8
 	arm_func_start func_020459b8
-func_020459b8: ; 0x020459b8
+func_020459b8: @ 0x020459b8
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, lr}
 	add r1, sp, #0xc
@@ -11881,7 +11881,7 @@ func_020459b8: ; 0x020459b8
 
 	.global func_020459e4
 	arm_func_start func_020459e4
-func_020459e4: ; 0x020459e4
+func_020459e4: @ 0x020459e4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x10
 	mov r9, r1
@@ -11985,11 +11985,11 @@ _02045b40:
 
 	.global func_02045b48
 	arm_func_start func_02045b48
-func_02045b48: ; 0x02045b48
-	ldr r2, _02045b70 ; =data_02058480
-	ldr r0, _02045b74 ; =0x41c64e6d
+func_02045b48: @ 0x02045b48
+	ldr r2, _02045b70 @ =data_02058480
+	ldr r0, _02045b74 @ =0x41c64e6d
 	ldr r3, [r2]
-	ldr r1, _02045b78 ; =0x00007fff
+	ldr r1, _02045b78 @ =0x00007fff
 	mul r0, r3, r0
 	add r0, r0, #0x39
 	add r0, r0, #0x3000
@@ -12004,8 +12004,8 @@ _02045b78: .word 0x00007fff
 
 	.global func_02045b7c
 	arm_func_start func_02045b7c
-func_02045b7c: ; 0x02045b7c
-	ldr r1, _02045b88 ; =data_02058480
+func_02045b7c: @ 0x02045b7c
+	ldr r1, _02045b88 @ =data_02058480
 	str r0, [r1]
 	bx lr
 	.align 2, 0
@@ -12014,10 +12014,10 @@ _02045b88: .word data_02058480
 
 	.global func_02045b8c
 	arm_func_start func_02045b8c
-func_02045b8c: ; 0x02045b8c
+func_02045b8c: @ 0x02045b8c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x28
-	ldr r6, _0204607c ; =data_02056e98
+	ldr r6, _0204607c @ =data_02056e98
 	add r5, sp, #0
 	mov r7, r0
 	mov lr, r1
@@ -12055,7 +12055,7 @@ _02045c18:
 	mov r1, #0
 	b _02045c30
 _02045c20:
-	ldr r1, _02046080 ; =data_02056d98
+	ldr r1, _02046080 @ =data_02056d98
 	mov r2, r0, lsl #0x1
 	ldrh r1, [r1, r2]
 	and r1, r1, #8
@@ -12063,7 +12063,7 @@ _02045c30:
 	cmp r1, #0
 	beq _02045cd0
 	mov r1, #0
-	ldr r3, _02046080 ; =data_02056d98
+	ldr r3, _02046080 @ =data_02056d98
 	str r1, [sp, #4]
 	mov r4, r1
 	mov r1, #0xa
@@ -12178,14 +12178,14 @@ _02045d98:
 	subs r1, r0, #0x41
 	addpl pc, pc, r1, lsl #2
 	b _0204604c
-_02045dc4: ; jump table
-	b _02045e78 ; case 0
-	b _0204604c ; case 1
-	b _0204604c ; case 2
-	b _0204604c ; case 3
-	b _02045e78 ; case 4
-	b _02045e78 ; case 5
-	b _02045e78 ; case 6
+_02045dc4: @ jump table
+	b _02045e78 @ case 0
+	b _0204604c @ case 1
+	b _0204604c @ case 2
+	b _0204604c @ case 3
+	b _02045e78 @ case 4
+	b _02045e78 @ case 5
+	b _02045e78 @ case 6
 _02045de0:
 	cmp r0, #0x58
 	beq _02045e64
@@ -12200,29 +12200,29 @@ _02045dfc:
 	cmp r0, #0x15
 	addls pc, pc, r0, lsl #2
 	b _0204604c
-_02045e0c: ; jump table
-	b _02045ec8 ; case 0
-	b _02045e64 ; case 1
-	b _02045e78 ; case 2
-	b _02045e78 ; case 3
-	b _02045e78 ; case 4
-	b _0204604c ; case 5
-	b _02045e64 ; case 6
-	b _0204604c ; case 7
-	b _0204604c ; case 8
-	b _0204604c ; case 9
-	b _0204604c ; case 10
-	b _02046054 ; case 11
-	b _02045e64 ; case 12
-	b _02045eb4 ; case 13
-	b _0204604c ; case 14
-	b _0204604c ; case 15
-	b _02045eec ; case 16
-	b _0204604c ; case 17
-	b _02045e64 ; case 18
-	b _0204604c ; case 19
-	b _0204604c ; case 20
-	b _02045e64 ; case 21
+_02045e0c: @ jump table
+	b _02045ec8 @ case 0
+	b _02045e64 @ case 1
+	b _02045e78 @ case 2
+	b _02045e78 @ case 3
+	b _02045e78 @ case 4
+	b _0204604c @ case 5
+	b _02045e64 @ case 6
+	b _0204604c @ case 7
+	b _0204604c @ case 8
+	b _0204604c @ case 9
+	b _0204604c @ case 10
+	b _02046054 @ case 11
+	b _02045e64 @ case 12
+	b _02045eb4 @ case 13
+	b _0204604c @ case 14
+	b _0204604c @ case 15
+	b _02045eec @ case 16
+	b _0204604c @ case 17
+	b _02045e64 @ case 18
+	b _0204604c @ case 19
+	b _0204604c @ case 20
+	b _02045e64 @ case 21
 _02045e64:
 	ldrb r0, [sp, #2]
 	cmp r0, #9
@@ -12383,7 +12383,7 @@ _02046080: .word data_02056d98
 
 	.global func_02046084
 	arm_func_start func_02046084
-func_02046084: ; 0x02046084
+func_02046084: @ 0x02046084
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x88
 	ldrsb r5, [r2]
@@ -12413,14 +12413,14 @@ _020460e0:
 	movne r0, #0
 	bne _020460fc
 	mov r1, r5, lsl #0x1
-	ldr r0, _02046dd0 ; =data_02056d98
+	ldr r0, _02046dd0 @ =data_02056d98
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x100
 _020460fc:
 	cmp r0, #0
 	beq _020461bc
 	mov r2, #0
-	ldr r1, _02046dd0 ; =data_02056d98
+	ldr r1, _02046dd0 @ =data_02056d98
 	mov ip, r2
 	mov r3, #1
 _02046114:
@@ -12443,7 +12443,7 @@ _02046134:
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	bne _02046d88
-	ldr r5, _02046dd0 ; =data_02056d98
+	ldr r5, _02046dd0 @ =data_02056d98
 	b _02046168
 _02046164:
 	add r4, r4, #1
@@ -12549,14 +12549,14 @@ _020462b4:
 	subs r0, r1, #0x41
 	addpl pc, pc, r0, lsl #2
 	b _020462f4
-_020462d8: ; jump table
-	b _0204675c ; case 0
-	b _02046d98 ; case 1
-	b _02046d98 ; case 2
-	b _02046d98 ; case 3
-	b _0204675c ; case 4
-	b _0204675c ; case 5
-	b _0204675c ; case 6
+_020462d8: @ jump table
+	b _0204675c @ case 0
+	b _02046d98 @ case 1
+	b _02046d98 @ case 2
+	b _02046d98 @ case 3
+	b _0204675c @ case 4
+	b _0204675c @ case 5
+	b _0204675c @ case 6
 _020462f4:
 	cmp r1, #0x25
 	beq _020469d8
@@ -12571,29 +12571,29 @@ _0204630c:
 	subs r0, r1, #0x63
 	addpl pc, pc, r0, lsl #2
 	b _02046378
-_02046320: ; jump table
-	b _02046820 ; case 0
-	b _0204638c ; case 1
-	b _0204675c ; case 2
-	b _0204675c ; case 3
-	b _0204675c ; case 4
-	b _02046d98 ; case 5
-	b _02046394 ; case 6
-	b _02046d98 ; case 7
-	b _02046d98 ; case 8
-	b _02046d98 ; case 9
-	b _02046d98 ; case 10
-	b _02046d24 ; case 11
-	b _02046588 ; case 12
-	b _02046d98 ; case 13
-	b _02046d98 ; case 14
-	b _02046d98 ; case 15
-	b _02046a64 ; case 16
-	b _02046d98 ; case 17
-	b _02046590 ; case 18
-	b _02046d98 ; case 19
-	b _02046d98 ; case 20
-	b _02046598 ; case 21
+_02046320: @ jump table
+	b _02046820 @ case 0
+	b _0204638c @ case 1
+	b _0204675c @ case 2
+	b _0204675c @ case 3
+	b _0204675c @ case 4
+	b _02046d98 @ case 5
+	b _02046394 @ case 6
+	b _02046d98 @ case 7
+	b _02046d98 @ case 8
+	b _02046d98 @ case 9
+	b _02046d98 @ case 10
+	b _02046d24 @ case 11
+	b _02046588 @ case 12
+	b _02046d98 @ case 13
+	b _02046d98 @ case 14
+	b _02046d98 @ case 15
+	b _02046a64 @ case 16
+	b _02046d98 @ case 17
+	b _02046590 @ case 18
+	b _02046d98 @ case 19
+	b _02046d98 @ case 20
+	b _02046598 @ case 21
 _02046378:
 	cmp r1, #0x61
 	beq _0204675c
@@ -12694,15 +12694,15 @@ _020464c0:
 	cmp r0, #7
 	addls pc, pc, r0, lsl #2
 	b _02046564
-_020464d8: ; jump table
-	b _020464f8 ; case 0
-	b _02046504 ; case 1
-	b _02046510 ; case 2
-	b _0204651c ; case 3
-	b _02046528 ; case 4
-	b _0204653c ; case 5
-	b _02046548 ; case 6
-	b _02046554 ; case 7
+_020464d8: @ jump table
+	b _020464f8 @ case 0
+	b _02046504 @ case 1
+	b _02046510 @ case 2
+	b _0204651c @ case 3
+	b _02046528 @ case 4
+	b _0204653c @ case 5
+	b _02046548 @ case 6
+	b _02046554 @ case 7
 _020464f8:
 	ldr r0, [sp, #0x1c]
 	str r0, [r5]
@@ -12831,15 +12831,15 @@ _02046694:
 	cmp r0, #7
 	addls pc, pc, r0, lsl #2
 	b _02046738
-_020466ac: ; jump table
-	b _020466cc ; case 0
-	b _020466d8 ; case 1
-	b _020466e4 ; case 2
-	b _020466f0 ; case 3
-	b _020466fc ; case 4
-	b _02046710 ; case 5
-	b _0204671c ; case 6
-	b _02046728 ; case 7
+_020466ac: @ jump table
+	b _020466cc @ case 0
+	b _020466d8 @ case 1
+	b _020466e4 @ case 2
+	b _020466f0 @ case 3
+	b _020466fc @ case 4
+	b _02046710 @ case 5
+	b _0204671c @ case 6
+	b _02046728 @ case 7
 _020466cc:
 	ldr r0, [sp, #0x3c]
 	str r0, [r5]
@@ -12890,7 +12890,7 @@ _0204675c:
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	beq _02046778
-	ldr r0, _02046dd4 ; =data_02058218
+	ldr r0, _02046dd4 @ =data_02058218
 	ldr r0, [r0]
 	bl func_02002488
 	b _020467c4
@@ -12909,7 +12909,7 @@ _02046778:
 	beq _02046d98
 	mov r0, #1
 	str r0, [sp, #0x30]
-	ldr r0, _02046dd4 ; =data_02058218
+	ldr r0, _02046dd4 @ =data_02058218
 	ldr r0, [r0]
 	bl func_02002488
 	b _020467c4
@@ -13072,7 +13072,7 @@ _020469d8:
 	ldr r0, [sp, #0x30]
 	cmp r0, #0
 	bne _02046d88
-	ldr r5, _02046dd0 ; =data_02056d98
+	ldr r5, _02046dd0 @ =data_02056d98
 	b _020469f0
 _020469ec:
 	add r4, r4, #1
@@ -13137,7 +13137,7 @@ _02046ab4:
 	mov r0, #0
 	b _02046acc
 _02046abc:
-	ldr r0, _02046dd0 ; =data_02056d98
+	ldr r0, _02046dd0 @ =data_02056d98
 	mov r2, r1, lsl #0x1
 	ldrh r0, [r0, r2]
 	and r0, r0, #0x100
@@ -13316,15 +13316,15 @@ _02046d24:
 	cmp r0, #7
 	addls pc, pc, r0, lsl #2
 	b _02046d88
-_02046d3c: ; jump table
-	b _02046d5c ; case 0
-	b _02046d74 ; case 1
-	b _02046d64 ; case 2
-	b _02046d6c ; case 3
-	b _02046d88 ; case 4
-	b _02046d88 ; case 5
-	b _02046d88 ; case 6
-	b _02046d7c ; case 7
+_02046d3c: @ jump table
+	b _02046d5c @ case 0
+	b _02046d74 @ case 1
+	b _02046d64 @ case 2
+	b _02046d6c @ case 3
+	b _02046d88 @ case 4
+	b _02046d88 @ case 5
+	b _02046d88 @ case 6
+	b _02046d7c @ case 7
 _02046d5c:
 	str r4, [r5]
 	b _02046d88
@@ -13369,7 +13369,7 @@ _02046dd4: .word data_02058218
 
 	.global func_02046dd8
 	arm_func_start func_02046dd8
-func_02046dd8: ; 0x02046dd8
+func_02046dd8: @ 0x02046dd8
 	cmp r2, #0
 	beq _02046df4
 	cmp r2, #1
@@ -13413,7 +13413,7 @@ _02046e54:
 
 	.global func_02046e5c
 	arm_func_start func_02046e5c
-func_02046e5c: ; 0x02046e5c
+func_02046e5c: @ 0x02046e5c
 	stmdb sp!, {lr}
 	sub sp, sp, #0xc
 	str r0, [sp, #4]
@@ -13427,7 +13427,7 @@ func_02046e5c: ; 0x02046e5c
 	ldmeqia sp!, {pc}
 	mov ip, #0
 	str ip, [sp, #8]
-	ldr r0, _02046eac ; =func_02046dd8
+	ldr r0, _02046eac @ =func_02046dd8
 	add r1, sp, #4
 	mov r2, lr
 	str ip, [sp]
@@ -13440,7 +13440,7 @@ _02046eac: .word func_02046dd8 - 1
 
 	.global func_02046eb0
 	arm_func_start func_02046eb0
-func_02046eb0: ; 0x02046eb0
+func_02046eb0: @ 0x02046eb0
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, lr}
 	add r2, sp, #0xc
@@ -13455,7 +13455,7 @@ func_02046eb0: ; 0x02046eb0
 
 	.global func_02046ed8
 	arm_func_start func_02046ed8
-func_02046ed8: ; 0x02046ed8
+func_02046ed8: @ 0x02046ed8
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	cmp r5, #1
@@ -13466,56 +13466,56 @@ _02046ef0:
 	mvn r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 _02046ef8:
-	ldr r0, _02046ff4 ; =data_02076a58
+	ldr r0, _02046ff4 @ =data_02076a58
 	bl func_0200e160
 	cmp r0, #0
 	bne _02046f2c
-	ldr r0, _02046ff8 ; =data_027e02a0
-	ldr r1, _02046ffc ; =data_02076968
+	ldr r0, _02046ff8 @ =data_027e02a0
+	ldr r1, _02046ffc @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02047000 ; =data_0207698c
+	ldr r0, _02047000 @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1, #0x1c]
 	str r2, [r0, #0x1c]
 	b _02046f84
 _02046f2c:
-	ldr r0, _02046ff8 ; =data_027e02a0
-	ldr r1, _02046ffc ; =data_02076968
+	ldr r0, _02046ff8 @ =data_027e02a0
+	ldr r1, _02046ffc @ =data_02076968
 	ldr r0, [r0, #4]
 	ldr r1, [r1, #0x1c]
 	ldr r0, [r0, #0x6c]
 	cmp r1, r0
 	bne _02046f5c
-	ldr r0, _02047000 ; =data_0207698c
+	ldr r0, _02047000 @ =data_0207698c
 	ldr r1, [r0, #0x1c]
 	add r1, r1, #1
 	str r1, [r0, #0x1c]
 	b _02046f84
 _02046f5c:
-	ldr r0, _02046ff4 ; =data_02076a58
+	ldr r0, _02046ff4 @ =data_02076a58
 	bl func_0200e044
-	ldr r0, _02046ff8 ; =data_027e02a0
-	ldr r1, _02046ffc ; =data_02076968
+	ldr r0, _02046ff8 @ =data_027e02a0
+	ldr r1, _02046ffc @ =data_02076968
 	ldr r2, [r0, #4]
-	ldr r0, _02047000 ; =data_0207698c
+	ldr r0, _02047000 @ =data_0207698c
 	ldr r3, [r2, #0x6c]
 	mov r2, #1
 	str r3, [r1, #0x1c]
 	str r2, [r0, #0x1c]
 _02046f84:
-	ldr r1, _02047004 ; =data_02076d8c
+	ldr r1, _02047004 @ =data_02076d8c
 	sub r2, r5, #1
 	ldr r4, [r1, r2, lsl #2]
 	cmp r4, #1
 	movne r0, #0
 	strne r0, [r1, r2, lsl #2]
-	ldr r0, _02047000 ; =data_0207698c
+	ldr r0, _02047000 @ =data_0207698c
 	ldr r1, [r0, #0x1c]
 	subs r1, r1, #1
 	str r1, [r0, #0x1c]
 	bne _02046fb8
-	ldr r0, _02046ff4 ; =data_02076a58
+	ldr r0, _02046ff4 @ =data_02076a58
 	bl func_0200e0c8
 _02046fb8:
 	cmp r4, #1
@@ -13546,7 +13546,7 @@ _02047004: .word data_02076d8c
 
 	.global strlen
 	arm_func_start strlen
-strlen: ; 0x02047008
+strlen: @ 0x02047008
 	mvn r2, #0
 _0204700c:
 	ldrsb r1, [r0], #1
@@ -13559,7 +13559,7 @@ _0204700c:
 
 	.global strcpy
 	arm_func_start strcpy
-strcpy: ; 0x02047024
+strcpy: @ 0x02047024
 	stmdb sp!, {r3, r4, r5, lr}
 	and r4, r1, #3
 	and r3, r0, #3
@@ -13586,10 +13586,10 @@ _02047074:
 	add r1, r1, #1
 _0204707c:
 	ldr r5, [r1]
-	ldr r3, _020470e4 ; =0xfefefeff
+	ldr r3, _020470e4 @ =0xfefefeff
 	mvn r4, r5
 	add lr, r5, r3
-	ldr ip, _020470e8 ; =0x80808080
+	ldr ip, _020470e8 @ =0x80808080
 	and r4, lr, r4
 	tst r4, ip
 	bne _020470c0
@@ -13621,7 +13621,7 @@ _020470e8: .word 0x80808080
 
 	.global strncpy
 	arm_func_start strncpy
-strncpy: ; 0x020470ec
+strncpy: @ 0x020470ec
 	stmdb sp!, {r3, lr}
 	mov lr, r0
 	cmp r2, #0
@@ -13649,7 +13649,7 @@ _02047130:
 
 	.global strcat
 	arm_func_start strcat
-strcat: ; 0x0204713c
+strcat: @ 0x0204713c
 	mov r3, r0
 _02047140:
 	ldrsb r2, [r3], #1
@@ -13668,7 +13668,7 @@ _02047150:
 
 	.global strcmp
 	arm_func_start strcmp
-strcmp: ; 0x0204716c
+strcmp: @ 0x0204716c
 	stmdb sp!, {r4, lr}
 	ldrb r2, [r0]
 	ldrb r3, [r1]
@@ -13702,10 +13702,10 @@ _020471d8:
 	add r1, r1, #1
 _020471e0:
 	ldr r2, [r0]
-	ldr r3, _02047278 ; =0xfefefeff
+	ldr r3, _02047278 @ =0xfefefeff
 	mvn r4, r2
 	add lr, r2, r3
-	ldr ip, _0204727c ; =0x80808080
+	ldr ip, _0204727c @ =0x80808080
 	and r4, lr, r4
 	tst r4, ip
 	ldr r4, [r1]
@@ -13751,7 +13751,7 @@ _0204727c: .word 0x80808080
 
 	.global strncmp
 	arm_func_start strncmp
-strncmp: ; 0x02047280
+strncmp: @ 0x02047280
 	cmp r2, #0
 	beq _020472ac
 _02047288:
@@ -13771,7 +13771,7 @@ _020472ac:
 
 	.global strchr
 	arm_func_start strchr
-strchr: ; 0x020472b4
+strchr: @ 0x020472b4
 	ldrsb r2, [r0], #1
 	mov r1, r1, lsl #0x18
 	mov r1, r1, asr #0x18
@@ -13793,7 +13793,7 @@ _020472e0:
 
 	.global strstr
 	arm_func_start strstr
-strstr: ; 0x020472f0
+strstr: @ 0x020472f0
 	stmdb sp!, {r4, lr}
 	cmp r1, #0
 	ldrneb r2, [r1]
@@ -13830,7 +13830,7 @@ _02047354:
 
 	.global func_0204735c
 	arm_func_start func_0204735c
-func_0204735c: ; 0x0204735c
+func_0204735c: @ 0x0204735c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xa8
 	ldr r4, [sp, #0xd0]
@@ -13873,7 +13873,7 @@ _02047394:
 	add r4, r4, #1
 	blx sb
 	mov r1, r0
-	ldr r7, _0204833c ; =data_02056ec5
+	ldr r7, _0204833c @ =data_02056ec5
 	add r0, sp, #0x4d
 	mov r6, #4
 _0204740c:
@@ -13886,7 +13886,7 @@ _0204740c:
 	subs r6, r6, #1
 	bne _0204740c
 	ldrb r3, [r7]
-	ldr r2, _02048340 ; =data_02056ec0
+	ldr r2, _02048340 @ =data_02056ec0
 	strb r3, [r0]
 	ldrb r3, [r2, #1]
 	ldrb r0, [r2, #2]
@@ -13911,16 +13911,16 @@ _02047464:
 	cmp r5, #0
 	addge pc, pc, r5, lsl #2
 	b _02048150
-_02047490: ; jump table
-	b _02048150 ; case 0
-	b _02047520 ; case 1
-	b _02047904 ; case 2
-	b _02048150 ; case 3
-	b _020479b4 ; case 4
-	b _02048150 ; case 5
-	b _02048150 ; case 6
-	b _02048150 ; case 7
-	b _020479dc ; case 8
+_02047490: @ jump table
+	b _02048150 @ case 0
+	b _02047520 @ case 1
+	b _02047904 @ case 2
+	b _02048150 @ case 3
+	b _020479b4 @ case 4
+	b _02048150 @ case 5
+	b _02048150 @ case 6
+	b _02048150 @ case 7
+	b _020479dc @ case 8
 _020474b4:
 	cmp r5, #0x10
 	beq _02047a80
@@ -13965,7 +13965,7 @@ _02047530:
 	b _02047548
 _02047538:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #0x100
 _02047548:
@@ -13989,7 +13989,7 @@ _02047584:
 	mov r0, r1
 	b _02047594
 _0204758c:
-	ldr r0, _02048348 ; =data_02056d18
+	ldr r0, _02048348 @ =data_02056d18
 	ldrb r0, [r0, r1]
 _02047594:
 	cmp r0, #0x49
@@ -14057,7 +14057,7 @@ _02047650:
 	bne _02047650
 	ldrb r2, [r7]
 	add r6, sp, #0x77
-	ldr r7, _02048348 ; =data_02056d18
+	ldr r7, _02048348 @ =data_02056d18
 	strb r2, [r0]
 	b _020476a4
 _02047684:
@@ -14092,14 +14092,14 @@ _020476d4:
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
 	beq _02047704
-	ldr r1, _0204834c ; =data_02058214
+	ldr r1, _0204834c @ =data_02058214
 	mov r0, #0
 	ldr r1, [r1]
 	bl func_02002774
 	bl func_02002488
 	b _02047710
 _02047704:
-	ldr r0, _0204834c ; =data_02058214
+	ldr r0, _0204834c @ =data_02058214
 	ldr r0, [r0]
 	bl func_02002488
 _02047710:
@@ -14159,7 +14159,7 @@ _020477cc:
 	mov r2, r1
 	b _020477dc
 _020477d4:
-	ldr r0, _02048348 ; =data_02056d18
+	ldr r0, _02048348 @ =data_02056d18
 	ldrb r2, [r0, r1]
 _020477dc:
 	ldrsb r0, [r7]
@@ -14171,7 +14171,7 @@ _020477e8:
 	bhi _020478fc
 	cmp r5, #4
 	bne _020478a0
-	ldr r7, _02048344 ; =data_02056d98
+	ldr r7, _02048344 @ =data_02056d98
 	b _02047828
 _02047804:
 	add r0, sp, #0x56
@@ -14271,7 +14271,7 @@ _0204793c:
 	b _02047954
 _02047944:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047954:
@@ -14290,7 +14290,7 @@ _02047954:
 	blt _02047998
 	cmp r0, #0x80
 	bge _02047998
-	ldr r2, _02048348 ; =data_02056d18
+	ldr r2, _02048348 @ =data_02056d18
 	ldrb r0, [r2, r0]
 _02047998:
 	cmp r0, #0x58
@@ -14322,7 +14322,7 @@ _020479ec:
 	b _02047a04
 _020479f4:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047a04:
@@ -14369,7 +14369,7 @@ _02047a90:
 	b _02047aa8
 _02047a98:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047aa8:
@@ -14387,7 +14387,7 @@ _02047ac8:
 	b _02047ae0
 _02047ad0:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047ae0:
@@ -14427,7 +14427,7 @@ _02047b54:
 	mov r0, r1
 	b _02047b64
 _02047b5c:
-	ldr r0, _02048348 ; =data_02056d18
+	ldr r0, _02048348 @ =data_02056d18
 	ldrb r0, [r0, r1]
 _02047b64:
 	cmp r0, #0x45
@@ -14475,7 +14475,7 @@ _02047bf4:
 	b _02047c0c
 _02047bfc:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047c0c:
@@ -14514,7 +14514,7 @@ _02047c7c:
 	b _02047c94
 _02047c84:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02047c94:
@@ -14525,7 +14525,7 @@ _02047c94:
 	sub r2, r1, #0x30
 	mov r1, #0xa
 	mla r0, r1, r0, r2
-	ldr r1, _02048350 ; =0x00007fff
+	ldr r1, _02048350 @ =0x00007fff
 	str r0, [sp, #0x20]
 	cmp r0, r1
 	ldrgt r0, [sp, #0xd0]
@@ -14547,16 +14547,16 @@ _02047ce4:
 	cmp r10, #0
 	addge pc, pc, r10, lsl #2
 	b _02048150
-_02047d04: ; jump table
-	b _02048150 ; case 0
-	b _02047d58 ; case 1
-	b _02047da8 ; case 2
-	b _02048150 ; case 3
-	b _02047dd0 ; case 4
-	b _02048150 ; case 5
-	b _02048150 ; case 6
-	b _02048150 ; case 7
-	b _02047ee0 ; case 8
+_02047d04: @ jump table
+	b _02048150 @ case 0
+	b _02047d58 @ case 1
+	b _02047da8 @ case 2
+	b _02048150 @ case 3
+	b _02047dd0 @ case 4
+	b _02048150 @ case 5
+	b _02048150 @ case 6
+	b _02048150 @ case 7
+	b _02047ee0 @ case 8
 _02047d28:
 	cmp r10, #0x10
 	beq _02047fbc
@@ -14614,7 +14614,7 @@ _02047de0:
 	b _02047df8
 _02047de8:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #0x400
 _02047df8:
@@ -14646,7 +14646,7 @@ _02047e2c:
 	blt _02047e6c
 	cmp r1, #0x80
 	bge _02047e6c
-	ldr r2, _02048348 ; =data_02056d18
+	ldr r2, _02048348 @ =data_02056d18
 	ldrb r1, [r2, r1]
 _02047e6c:
 	cmp r1, #0x41
@@ -14689,7 +14689,7 @@ _02047ef0:
 	b _02047f08
 _02047ef8:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #0x400
 _02047f08:
@@ -14707,7 +14707,7 @@ _02047f08:
 	blt _02047f48
 	cmp r1, #0x80
 	bge _02047f48
-	ldr r2, _02048348 ; =data_02056d18
+	ldr r2, _02048348 @ =data_02056d18
 	ldrb r1, [r2, r1]
 _02047f48:
 	cmp r1, #0x41
@@ -14749,7 +14749,7 @@ _02047fcc:
 	mov r0, r1
 	b _02047fdc
 _02047fd4:
-	ldr r0, _02048348 ; =data_02056d18
+	ldr r0, _02048348 @ =data_02056d18
 	ldrb r0, [r0, r1]
 _02047fdc:
 	cmp r0, #0x50
@@ -14793,7 +14793,7 @@ _02048060:
 	b _02048078
 _02048068:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02048078:
@@ -14832,7 +14832,7 @@ _020480e8:
 	b _02048100
 _020480f0:
 	mov r2, r1, lsl #0x1
-	ldr r0, _02048344 ; =data_02056d98
+	ldr r0, _02048344 @ =data_02056d98
 	ldrh r0, [r0, r2]
 	and r0, r0, #8
 _02048100:
@@ -14844,7 +14844,7 @@ _02048100:
 	mov r1, #0xa
 	mla r0, r1, r0, r2
 	str r0, [sp, #0x10]
-	ldr r1, _02048350 ; =0x00007fff
+	ldr r1, _02048350 @ =0x00007fff
 	ldr r0, [sp, #0x20]
 	add r4, r4, #1
 	cmp r0, r1
@@ -14868,7 +14868,7 @@ _02048150:
 _02048170:
 	cmp r5, #0x8000
 	beq _0204818c
-	ldr r0, _02048354 ; =0x00000e2c
+	ldr r0, _02048354 @ =0x00000e2c
 	tst r5, r0
 	moveq r0, #1
 	movne r0, #0
@@ -14877,7 +14877,7 @@ _0204818c:
 	sub r0, r4, #1
 	cmp r0, #2
 	ble _020481a4
-	ldr r0, _02048358 ; =0x0000018e
+	ldr r0, _02048358 @ =0x0000018e
 	tst r10, r0
 	bne _020481ac
 _020481a4:
@@ -14959,11 +14959,11 @@ _02048288:
 	ldmneia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
-	ldreq r1, _0204835c ; =data_0205821c
+	ldreq r1, _0204835c @ =data_0205821c
 	addeq sp, sp, #0xa8
 	ldmeqia r1, {r0, r1}
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, pc}
-	ldr r1, _0204835c ; =data_0205821c
+	ldr r1, _0204835c @ =data_0205821c
 	mov r0, #0
 	ldmia r1, {r2, r3}
 	mov r1, r0
@@ -15005,7 +15005,7 @@ _02048358: .word 0x0000018e
 _0204835c: .word data_0205821c
 _02048360: .word 0x7fefffff
 _02048364:
-	ldr r3, _02048360 ; =0x7fefffff
+	ldr r3, _02048360 @ =0x7fefffff
 	mov r0, r4
 	mov r1, r6
 	mvn r2, #0
@@ -15013,14 +15013,14 @@ _02048364:
 	bls _02048390
 	ldr r0, [sp, #0xd0]
 	mov r2, #1
-	ldr r1, _0204835c ; =data_0205821c
+	ldr r1, _0204835c @ =data_0205821c
 	str r2, [r0]
 	ldmia r1, {r4, r6}
 _02048390:
 	ldr r0, [sp, #0x28]
 	cmp r0, #0
 	beq _020483c4
-	ldr r0, _02048354 ; =0x00000e2c
+	ldr r0, _02048354 @ =0x00000e2c
 	tst r5, r0
 	beq _020483c4
 	mov r0, #0
@@ -15165,7 +15165,7 @@ _0204857c:
 
 	.global func_020485a8
 	arm_func_start func_020485a8
-func_020485a8: ; 0x020485a8
+func_020485a8: @ 0x020485a8
 	stmdb sp!, {r4, r5, r6, r7, lr}
 	sub sp, sp, #0x14
 	mov r7, r0
@@ -15174,7 +15174,7 @@ func_020485a8: ; 0x020485a8
 	str r0, [sp, #8]
 	add r4, sp, #0xc
 	str r7, [sp, #4]
-	ldr r1, _0204867c ; =func_02046dd8
+	ldr r1, _0204867c @ =func_02046dd8
 	add r2, sp, #4
 	add r3, sp, #0x10
 	sub r0, r0, #0x80000001
@@ -15206,14 +15206,14 @@ func_020485a8: ; 0x020485a8
 	mov r3, #0x100000
 	bl func_02001dfc
 	blo _02048660
-	ldr r3, _02048680 ; =0x7fefffff
+	ldr r3, _02048680 @ =0x7fefffff
 	mov r0, r6
 	mov r1, r7
 	mvn r2, #0
 	bl func_02001cc0
 	bls _0204866c
 _02048660:
-	ldr r0, _02048684 ; =data_02076d88
+	ldr r0, _02048684 @ =data_02076d88
 	mov r1, #0x22
 	str r1, [r0]
 _0204866c:
@@ -15229,8 +15229,8 @@ _02048684: .word data_02076d88
 
 	.global func_02048688
 	arm_func_start func_02048688
-func_02048688: ; 0x02048688
-	ldr ip, _02048694 ; =func_020485a8
+func_02048688: @ 0x02048688
+	ldr ip, _02048694 @ =func_020485a8
 	mov r1, #0
 	bx ip
 	.align 2, 0
@@ -15239,7 +15239,7 @@ _02048694: .word func_020485a8 - 1
 
 	.global func_02048698
 	arm_func_start func_02048698
-func_02048698: ; 0x02048698
+func_02048698: @ 0x02048698
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xc
 	ldr r4, [sp, #0x38]
@@ -15299,16 +15299,16 @@ _0204875c:
 	cmp r4, #0
 	addge pc, pc, r4, lsl #2
 	b _02048a14
-_02048770: ; jump table
-	b _02048a14 ; case 0
-	b _020487a0 ; case 1
-	b _0204884c ; case 2
-	b _02048a14 ; case 3
-	b _02048888 ; case 4
-	b _02048a14 ; case 5
-	b _02048a14 ; case 6
-	b _02048a14 ; case 7
-	b _020488c8 ; case 8
+_02048770: @ jump table
+	b _02048a14 @ case 0
+	b _020487a0 @ case 1
+	b _0204884c @ case 2
+	b _02048a14 @ case 3
+	b _02048888 @ case 4
+	b _02048a14 @ case 5
+	b _02048a14 @ case 6
+	b _02048a14 @ case 7
+	b _020488c8 @ case 8
 _02048794:
 	cmp r4, #0x10
 	beq _020488c8
@@ -15322,7 +15322,7 @@ _020487b0:
 	mov r0, #0
 	b _020487c8
 _020487b8:
-	ldr r0, _02048a78 ; =data_02056d98
+	ldr r0, _02048a78 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x100
@@ -15417,7 +15417,7 @@ _020488fc:
 	mov r0, #0
 	b _02048914
 _02048904:
-	ldr r0, _02048a78 ; =data_02056d98
+	ldr r0, _02048a78 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #8
@@ -15441,7 +15441,7 @@ _0204894c:
 	mov r0, #0
 	b _02048964
 _02048954:
-	ldr r0, _02048a78 ; =data_02056d98
+	ldr r0, _02048a78 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #1
@@ -15456,7 +15456,7 @@ _0204897c:
 	mov r0, r6
 	b _0204898c
 _02048984:
-	ldr r0, _02048a7c ; =data_02056d18
+	ldr r0, _02048a7c @ =data_02056d18
 	ldrb r0, [r0, r6]
 _0204898c:
 	sub r0, r0, #0x37
@@ -15472,7 +15472,7 @@ _020489a8:
 	blt _020489c0
 	cmp r6, #0x80
 	bge _020489c0
-	ldr r0, _02048a7c ; =data_02056d18
+	ldr r0, _02048a7c @ =data_02056d18
 	ldrb r6, [r0, r6]
 _020489c0:
 	sub r6, r6, #0x37
@@ -15533,7 +15533,7 @@ _02048a7c: .word data_02056d18
 
 	.global func_02048a80
 	arm_func_start func_02048a80
-func_02048a80: ; 0x02048a80
+func_02048a80: @ 0x02048a80
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x1c
 	ldr r4, [sp, #0x48]
@@ -15598,16 +15598,16 @@ _02048b58:
 	cmp r4, #0
 	addge pc, pc, r4, lsl #2
 	b _02048e54
-_02048b6c: ; jump table
-	b _02048e54 ; case 0
-	b _02048b9c ; case 1
-	b _02048c48 ; case 2
-	b _02048e54 ; case 3
-	b _02048c84 ; case 4
-	b _02048e54 ; case 5
-	b _02048e54 ; case 6
-	b _02048e54 ; case 7
-	b _02048cc4 ; case 8
+_02048b6c: @ jump table
+	b _02048e54 @ case 0
+	b _02048b9c @ case 1
+	b _02048c48 @ case 2
+	b _02048e54 @ case 3
+	b _02048c84 @ case 4
+	b _02048e54 @ case 5
+	b _02048e54 @ case 6
+	b _02048e54 @ case 7
+	b _02048cc4 @ case 8
 _02048b90:
 	cmp r4, #0x10
 	beq _02048cc4
@@ -15621,7 +15621,7 @@ _02048bac:
 	mov r0, #0
 	b _02048bc4
 _02048bb4:
-	ldr r0, _02048ec4 ; =data_02056d98
+	ldr r0, _02048ec4 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x100
@@ -15722,7 +15722,7 @@ _02048d10:
 	mov r0, #0
 	b _02048d28
 _02048d18:
-	ldr r0, _02048ec4 ; =data_02056d98
+	ldr r0, _02048ec4 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #8
@@ -15746,7 +15746,7 @@ _02048d60:
 	mov r0, #0
 	b _02048d78
 _02048d68:
-	ldr r0, _02048ec4 ; =data_02056d98
+	ldr r0, _02048ec4 @ =data_02056d98
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #1
@@ -15761,7 +15761,7 @@ _02048d90:
 	mov r0, r6
 	b _02048da0
 _02048d98:
-	ldr r0, _02048ec8 ; =data_02056d18
+	ldr r0, _02048ec8 @ =data_02056d18
 	ldrb r0, [r0, r6]
 _02048da0:
 	sub r0, r0, #0x37
@@ -15777,7 +15777,7 @@ _02048dbc:
 	blt _02048dd4
 	cmp r6, #0x80
 	bge _02048dd4
-	ldr r0, _02048ec8 ; =data_02056d18
+	ldr r0, _02048ec8 @ =data_02056d18
 	ldrb r6, [r0, r6]
 _02048dd4:
 	sub r6, r6, #0x37
@@ -15852,7 +15852,7 @@ _02048ec8: .word data_02056d18
 
 	.global func_02048ecc
 	arm_func_start func_02048ecc
-func_02048ecc: ; 0x02048ecc
+func_02048ecc: @ 0x02048ecc
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x20
 	mov r5, r0
@@ -15866,7 +15866,7 @@ func_02048ecc: ; 0x02048ecc
 	add r1, sp, #0x18
 	str r1, [sp, #4]
 	add ip, sp, #0x14
-	ldr r2, _02048f5c ; =func_02046dd8
+	ldr r2, _02048f5c @ =func_02046dd8
 	add r3, sp, #0xc
 	sub r1, lr, #0x80000001
 	str ip, [sp, #8]
@@ -15878,7 +15878,7 @@ func_02048ecc: ; 0x02048ecc
 	ldr r1, [sp, #0x14]
 	cmp r1, #0
 	beq _02048f48
-	ldr r0, _02048f60 ; =data_02076d88
+	ldr r0, _02048f60 @ =data_02076d88
 	mov r1, #0x22
 	str r1, [r0]
 	add sp, sp, #0x20
@@ -15897,7 +15897,7 @@ _02048f60: .word data_02076d88
 
 	.global func_02048f64
 	arm_func_start func_02048f64
-func_02048f64: ; 0x02048f64
+func_02048f64: @ 0x02048f64
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x20
 	mov r5, r0
@@ -15911,7 +15911,7 @@ func_02048f64: ; 0x02048f64
 	add r1, sp, #0x18
 	str r1, [sp, #4]
 	add ip, sp, #0x14
-	ldr r2, _02049024 ; =func_02046dd8
+	ldr r2, _02049024 @ =func_02046dd8
 	add r3, sp, #0xc
 	sub r1, lr, #0x80000001
 	str ip, [sp, #8]
@@ -15936,7 +15936,7 @@ _02048fe0:
 	bls _02049014
 _02048ff0:
 	ldr r0, [sp, #0x18]
-	ldr r1, _02049028 ; =data_02076d88
+	ldr r1, _02049028 @ =data_02076d88
 	mov r2, #0x22
 	cmp r0, #0
 	movne r0, #0x80000000
@@ -15956,8 +15956,8 @@ _02049028: .word data_02076d88
 
 	.global func_0204902c
 	arm_func_start func_0204902c
-func_0204902c: ; 0x0204902c
-	ldr ip, _0204903c ; =func_02048f64
+func_0204902c: @ 0x0204902c
+	ldr ip, _0204903c @ =func_02048f64
 	mov r1, #0
 	mov r2, #0xa
 	bx ip
@@ -15967,7 +15967,7 @@ _0204903c: .word func_02048f64 - 1
 
 	.global func_02049040
 	arm_func_start func_02049040
-func_02049040: ; 0x02049040
+func_02049040: @ 0x02049040
 	cmp r0, #0
 	beq _02049058
 	ldr r3, [r0, #4]
@@ -16007,8 +16007,8 @@ _020490ac:
 
 	.global func_020490b4
 	arm_func_start func_020490b4
-func_020490b4: ; 0x020490b4
-	ldr ip, _020490c0 ; =func_02043594
+func_020490b4: @ 0x020490b4
+	ldr ip, _020490c0 @ =func_02043594
 	mov r2, r2, lsl #0x1
 	bx ip
 	.align 2, 0
@@ -16017,7 +16017,7 @@ _020490c0: .word func_02043594 - 1
 
 	.global func_020490c4
 	arm_func_start func_020490c4
-func_020490c4: ; 0x020490c4
+func_020490c4: @ 0x020490c4
 	cmp r2, #0
 	beq _020490e4
 _020490cc:
@@ -16034,7 +16034,7 @@ _020490e4:
 
 	.global func_020490ec
 	arm_func_start func_020490ec
-func_020490ec: ; 0x020490ec
+func_020490ec: @ 0x020490ec
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x10
 	ldrh r3, [r0, #2]
@@ -16129,7 +16129,7 @@ _02049228:
 	b _02049274
 _02049230:
 	mov r2, #0
-	ldr r5, _02049658 ; =data_02056fd0
+	ldr r5, _02049658 @ =data_02056fd0
 	mov r0, #0xa
 	b _02049254
 _02049240:
@@ -16150,10 +16150,10 @@ _0204926c:
 	bne _02049240
 _02049274:
 	ldr r2, [sp, #8]
-	ldr r0, _0204965c ; =0x000001fd
+	ldr r0, _0204965c @ =0x000001fd
 	cmp r2, r0
 	ble _020492a4
-	ldr r1, _02049660 ; =0x0000ffff
+	ldr r1, _02049660 @ =0x0000ffff
 	add r0, sp, #0
 	strh r1, [sp, #6]
 	ldmia r0, {r0, r1, r2, r3}
@@ -16181,7 +16181,7 @@ _020492a4:
 	b _0204932c
 _020492e8:
 	mov r1, #0
-	ldr r4, _02049658 ; =data_02056fd0
+	ldr r4, _02049658 @ =data_02056fd0
 	mov r0, #0xa
 	b _0204930c
 _020492f8:
@@ -16273,14 +16273,14 @@ _020493f4:
 	subs r0, r3, #0x41
 	addpl pc, pc, r0, lsl #2
 	b _02049638
-_02049420: ; jump table
-	b _0204952c ; case 0
-	b _02049638 ; case 1
-	b _02049638 ; case 2
-	b _02049638 ; case 3
-	b _02049574 ; case 4
-	b _020494f4 ; case 5
-	b _02049564 ; case 6
+_02049420: @ jump table
+	b _0204952c @ case 0
+	b _02049638 @ case 1
+	b _02049638 @ case 2
+	b _02049638 @ case 3
+	b _02049574 @ case 4
+	b _020494f4 @ case 5
+	b _02049564 @ case 6
 _0204943c:
 	cmp r3, #0x58
 	beq _020494bc
@@ -16295,28 +16295,28 @@ _02049458:
 	cmp r0, #0x14
 	addls pc, pc, r0, lsl #2
 	b _02049638
-_02049468: ; jump table
-	b _020494bc ; case 0
-	b _02049574 ; case 1
-	b _020494f4 ; case 2
-	b _02049564 ; case 3
-	b _02049638 ; case 4
-	b _020494bc ; case 5
-	b _02049638 ; case 6
-	b _02049638 ; case 7
-	b _02049638 ; case 8
-	b _02049638 ; case 9
-	b _02049624 ; case 10
-	b _020494bc ; case 11
-	b _020495b0 ; case 12
-	b _02049638 ; case 13
-	b _02049638 ; case 14
-	b _02049600 ; case 15
-	b _02049638 ; case 16
-	b _020494bc ; case 17
-	b _02049638 ; case 18
-	b _02049638 ; case 19
-	b _020494bc ; case 20
+_02049468: @ jump table
+	b _020494bc @ case 0
+	b _02049574 @ case 1
+	b _020494f4 @ case 2
+	b _02049564 @ case 3
+	b _02049638 @ case 4
+	b _020494bc @ case 5
+	b _02049638 @ case 6
+	b _02049638 @ case 7
+	b _02049638 @ case 8
+	b _02049638 @ case 9
+	b _02049624 @ case 10
+	b _020494bc @ case 11
+	b _020495b0 @ case 12
+	b _02049638 @ case 13
+	b _02049638 @ case 14
+	b _02049600 @ case 15
+	b _02049638 @ case 16
+	b _020494bc @ case 17
+	b _02049638 @ case 18
+	b _02049638 @ case 19
+	b _020494bc @ case 20
 _020494bc:
 	ldrb r0, [sp, #4]
 	cmp r0, #9
@@ -16339,7 +16339,7 @@ _020494f4:
 	cmpne r0, #7
 	cmpne r0, #8
 	cmpne r0, #4
-	ldreq r0, _02049660 ; =0x0000ffff
+	ldreq r0, _02049660 @ =0x0000ffff
 	streqh r0, [sp, #6]
 	beq _02049640
 	ldrb r0, [sp, #2]
@@ -16359,7 +16359,7 @@ _0204952c:
 	cmpne r0, #8
 	cmpne r0, #4
 	cmpne r0, #1
-	ldreq r0, _02049660 ; =0x0000ffff
+	ldreq r0, _02049660 @ =0x0000ffff
 	streqh r0, [sp, #6]
 	b _02049640
 _02049564:
@@ -16375,7 +16375,7 @@ _02049574:
 	cmpne r0, #8
 	cmpne r0, #4
 	cmpne r0, #1
-	ldreq r0, _02049660 ; =0x0000ffff
+	ldreq r0, _02049660 @ =0x0000ffff
 	streqh r0, [sp, #6]
 	beq _02049640
 	ldrb r0, [sp, #2]
@@ -16402,7 +16402,7 @@ _020495d4:
 	ldrb r0, [sp, #2]
 	cmp r0, #0
 	cmpeq r1, #0
-	ldrne r0, _02049660 ; =0x0000ffff
+	ldrne r0, _02049660 @ =0x0000ffff
 	strneh r0, [sp, #6]
 	b _02049640
 _02049600:
@@ -16412,7 +16412,7 @@ _02049600:
 	streqb r0, [sp, #4]
 	beq _02049640
 	cmp r0, #0
-	ldrne r0, _02049660 ; =0x0000ffff
+	ldrne r0, _02049660 @ =0x0000ffff
 	strneh r0, [sp, #6]
 	b _02049640
 _02049624:
@@ -16422,7 +16422,7 @@ _02049624:
 	streqb r0, [sp, #4]
 	b _02049640
 _02049638:
-	ldr r0, _02049660 ; =0x0000ffff
+	ldr r0, _02049660 @ =0x0000ffff
 	strh r0, [sp, #6]
 _02049640:
 	add r0, sp, #0
@@ -16439,7 +16439,7 @@ _02049660: .word 0x0000ffff
 
 	.global func_02049664
 	arm_func_start func_02049664
-func_02049664: ; 0x02049664
+func_02049664: @ 0x02049664
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x10
@@ -16558,7 +16558,7 @@ _020497d4:
 	subne r7, r7, #2
 _02049808:
 	ldr r0, [sp]
-	ldr r1, _020498b0 ; =0x000001fd
+	ldr r1, _020498b0 @ =0x000001fd
 	sub r0, r0, r5
 	add r0, r0, r0, lsr #31
 	add r0, r7, r0, asr #1
@@ -16609,7 +16609,7 @@ _020498b0: .word 0x000001fd
 
 	.global func_020498b4
 	arm_func_start func_020498b4
-func_020498b4: ; 0x020498b4
+func_020498b4: @ 0x020498b4
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x18
@@ -16762,7 +16762,7 @@ _02049a88:
 	strne r0, [sp, #0x10]
 _02049ad8:
 	ldr r0, [sp]
-	ldr r2, _02049b94 ; =0x000001fd
+	ldr r2, _02049b94 @ =0x000001fd
 	sub r0, r0, r6
 	add r1, r0, r0, lsr #31
 	ldr r0, [sp, #0x10]
@@ -16818,12 +16818,12 @@ _02049b94: .word 0x000001fd
 
 	.global func_02049b98
 	arm_func_start func_02049b98
-func_02049b98: ; 0x02049b98
+func_02049b98: @ 0x02049b98
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, lr}
 	sub sp, sp, #0x44
 	ldr r7, [sp, #0x80]
-	ldr r0, _02049f04 ; =0x000001fd
+	ldr r0, _02049f04 @ =0x000001fd
 	mov r8, r2
 	cmp r7, r0
 	ldrh r6, [sp, #0x7a]
@@ -16853,7 +16853,7 @@ func_02049b98: ; 0x02049b98
 	bl func_02001e98
 	bne _02049c40
 	sub r4, r8, #0xc
-	ldr r1, _02049f08 ; =data_02058484
+	ldr r1, _02049f08 @ =data_02058484
 	mov r0, r4
 	bl func_0204b084
 	add sp, sp, #0x44
@@ -16871,12 +16871,12 @@ _02049c40:
 	cmp r6, #0x41
 	sub r4, r8, #0xa
 	bne _02049c74
-	ldr r1, _02049f0c ; =data_02058490
+	ldr r1, _02049f0c @ =data_02058490
 	mov r0, r4
 	bl func_0204b084
 	b _02049cac
 _02049c74:
-	ldr r1, _02049f10 ; =data_0205849c
+	ldr r1, _02049f10 @ =data_0205849c
 	mov r0, r4
 	bl func_0204b084
 	b _02049cac
@@ -16884,12 +16884,12 @@ _02049c84:
 	cmp r6, #0x41
 	sub r4, r8, #8
 	bne _02049ca0
-	ldr r1, _02049f14 ; =data_020584a8
+	ldr r1, _02049f14 @ =data_020584a8
 	mov r0, r4
 	bl func_0204b084
 	b _02049cac
 _02049ca0:
-	ldr r1, _02049f18 ; =data_020584b0
+	ldr r1, _02049f18 @ =data_020584b0
 	mov r0, r4
 	bl func_0204b084
 _02049cac:
@@ -16907,12 +16907,12 @@ _02049cc0:
 	cmp r6, #0x41
 	sub r4, r8, #0xa
 	bne _02049cf0
-	ldr r1, _02049f1c ; =data_020584b8
+	ldr r1, _02049f1c @ =data_020584b8
 	mov r0, r4
 	bl func_0204b084
 	b _02049d28
 _02049cf0:
-	ldr r1, _02049f20 ; =data_020584c4
+	ldr r1, _02049f20 @ =data_020584c4
 	mov r0, r4
 	bl func_0204b084
 	b _02049d28
@@ -16920,12 +16920,12 @@ _02049d00:
 	cmp r6, #0x41
 	sub r4, r8, #8
 	bne _02049d1c
-	ldr r1, _02049f24 ; =data_020584d0
+	ldr r1, _02049f24 @ =data_020584d0
 	mov r0, r4
 	bl func_0204b084
 	b _02049d28
 _02049d1c:
-	ldr r1, _02049f28 ; =data_020584d8
+	ldr r1, _02049f28 @ =data_020584d8
 	mov r0, r4
 	bl func_0204b084
 _02049d28:
@@ -16958,7 +16958,7 @@ _02049d6c:
 	blt _02049d6c
 	ldrb r0, [sp, #0x69]
 	ldrb r1, [sp, #0x68]
-	ldr r9, _02049f2c ; =0x000007ff
+	ldr r9, _02049f2c @ =0x000007ff
 	mov r0, r0, lsl #0x11
 	orr r1, r0, r1, lsl #25
 	add r0, sp, #0x34
@@ -17071,7 +17071,7 @@ _02049f2c: .word 0x000007ff
 
 	.global func_02049f30
 	arm_func_start func_02049f30
-func_02049f30: ; 0x02049f30
+func_02049f30: @ 0x02049f30
 	stmdb sp!, {r4, lr}
 	cmp r1, #0
 	bge _02049f58
@@ -17161,14 +17161,14 @@ _0204a044:
 
 	.global func_0204a054
 	arm_func_start func_0204a054
-func_0204a054: ; 0x0204a054
+func_0204a054: @ 0x0204a054
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x22c
 	mov r10, r0
 	add r0, sp, #0x250
 	ldr r7, [sp, #0x268]
-	ldr r3, _0204a674 ; =0x000001fd
+	ldr r3, _0204a674 @ =0x000001fd
 	ldrh r6, [r0, #0x12]
 	cmp r7, r3
 	ldrb r5, [sp, #0x25f]
@@ -17231,19 +17231,19 @@ _0204a12c:
 	sub r4, r9, #0xa
 	movhs r0, #0
 	bhs _0204a164
-	ldr r0, _0204a678 ; =data_02056fd0
+	ldr r0, _0204a678 @ =data_02056fd0
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x200
 _0204a164:
 	cmp r0, #0
 	beq _0204a17c
-	ldr r1, _0204a67c ; =data_02058490
+	ldr r1, _0204a67c @ =data_02058490
 	mov r0, r4
 	bl func_0204b084
 	b _0204a1d0
 _0204a17c:
-	ldr r1, _0204a680 ; =data_0205849c
+	ldr r1, _0204a680 @ =data_0205849c
 	mov r0, r4
 	bl func_0204b084
 	b _0204a1d0
@@ -17252,19 +17252,19 @@ _0204a18c:
 	sub r4, r9, #8
 	movhs r0, #0
 	bhs _0204a1ac
-	ldr r0, _0204a678 ; =data_02056fd0
+	ldr r0, _0204a678 @ =data_02056fd0
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x200
 _0204a1ac:
 	cmp r0, #0
 	beq _0204a1c4
-	ldr r1, _0204a684 ; =data_020584a8
+	ldr r1, _0204a684 @ =data_020584a8
 	mov r0, r4
 	bl func_0204b084
 	b _0204a1d0
 _0204a1c4:
-	ldr r1, _0204a688 ; =data_020584b0
+	ldr r1, _0204a688 @ =data_020584b0
 	mov r0, r4
 	bl func_0204b084
 _0204a1d0:
@@ -17281,19 +17281,19 @@ _0204a1e4:
 	sub r4, r9, #0xa
 	movhs r0, #0
 	bhs _0204a210
-	ldr r0, _0204a678 ; =data_02056fd0
+	ldr r0, _0204a678 @ =data_02056fd0
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x200
 _0204a210:
 	cmp r0, #0
 	beq _0204a228
-	ldr r1, _0204a68c ; =data_020584b8
+	ldr r1, _0204a68c @ =data_020584b8
 	mov r0, r4
 	bl func_0204b084
 	b _0204a27c
 _0204a228:
-	ldr r1, _0204a690 ; =data_020584c4
+	ldr r1, _0204a690 @ =data_020584c4
 	mov r0, r4
 	bl func_0204b084
 	b _0204a27c
@@ -17302,19 +17302,19 @@ _0204a238:
 	sub r4, r9, #8
 	movhs r0, #0
 	bhs _0204a258
-	ldr r0, _0204a678 ; =data_02056fd0
+	ldr r0, _0204a678 @ =data_02056fd0
 	mov r1, r6, lsl #0x1
 	ldrh r0, [r0, r1]
 	and r0, r0, #0x200
 _0204a258:
 	cmp r0, #0
 	beq _0204a270
-	ldr r1, _0204a694 ; =data_020584d0
+	ldr r1, _0204a694 @ =data_020584d0
 	mov r0, r4
 	bl func_0204b084
 	b _0204a27c
 _0204a270:
-	ldr r1, _0204a698 ; =data_020584d8
+	ldr r1, _0204a698 @ =data_020584d8
 	mov r0, r4
 	bl func_0204b084
 _0204a27c:
@@ -17402,7 +17402,7 @@ _0204a390:
 	cmp lr, #0
 	rsblt lr, lr, #0
 	movlt r11, #0x2d
-	ldr r3, _0204a69c ; =0x66666667
+	ldr r3, _0204a69c @ =0x66666667
 	mov r0, #0xa
 	b _0204a3e4
 _0204a3b4:
@@ -17427,7 +17427,7 @@ _0204a3e4:
 	strb r11, [r8, #-1]
 	strb r6, [r8, #-2]!
 	sub r1, r0, r8
-	ldr r0, _0204a674 ; =0x000001fd
+	ldr r0, _0204a674 @ =0x000001fd
 	add r1, r1, r7
 	cmp r1, r0
 	addgt sp, sp, #0x22c
@@ -17499,7 +17499,7 @@ _0204a4c4:
 _0204a504:
 	adds r0, r3, #1
 	movmi r0, #0
-	ldr r3, _0204a674 ; =0x000001fd
+	ldr r3, _0204a674 @ =0x000001fd
 	add r6, r0, r1
 	cmp r6, r3
 	addgt sp, sp, #0x22c
@@ -17617,7 +17617,7 @@ _0204a69c: .word 0x66666667
 
 	.global func_0204a6a0
 	arm_func_start func_0204a6a0
-func_0204a6a0: ; 0x0204a6a0
+func_0204a6a0: @ 0x0204a6a0
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x430
@@ -17683,14 +17683,14 @@ _0204a75c:
 	subs r0, r1, #0x41
 	addpl pc, pc, r0, lsl #2
 	b _0204a7b4
-_0204a798: ; jump table
-	b _0204ab38 ; case 0
-	b _0204addc ; case 1
-	b _0204addc ; case 2
-	b _0204addc ; case 3
-	b _0204aac8 ; case 4
-	b _0204aac8 ; case 5
-	b _0204aac8 ; case 6
+_0204a798: @ jump table
+	b _0204ab38 @ case 0
+	b _0204addc @ case 1
+	b _0204addc @ case 2
+	b _0204addc @ case 3
+	b _0204aac8 @ case 4
+	b _0204aac8 @ case 5
+	b _0204aac8 @ case 6
 _0204a7b4:
 	cmp r1, #0x25
 	beq _0204adc8
@@ -17705,25 +17705,25 @@ _0204a7cc:
 	subs r0, r1, #0x64
 	addpl pc, pc, r0, lsl #2
 	b _0204a828
-_0204a7e0: ; jump table
-	b _0204a850 ; case 0
-	b _0204aac8 ; case 1
-	b _0204aac8 ; case 2
-	b _0204aac8 ; case 3
-	b _0204addc ; case 4
-	b _0204a850 ; case 5
-	b _0204addc ; case 6
-	b _0204addc ; case 7
-	b _0204addc ; case 8
-	b _0204addc ; case 9
-	b _0204ace4 ; case 10
-	b _0204a98c ; case 11
-	b _0204addc ; case 12
-	b _0204addc ; case 13
-	b _0204addc ; case 14
-	b _0204aba8 ; case 15
-	b _0204addc ; case 16
-	b _0204a98c ; case 17
+_0204a7e0: @ jump table
+	b _0204a850 @ case 0
+	b _0204aac8 @ case 1
+	b _0204aac8 @ case 2
+	b _0204aac8 @ case 3
+	b _0204addc @ case 4
+	b _0204a850 @ case 5
+	b _0204addc @ case 6
+	b _0204addc @ case 7
+	b _0204addc @ case 8
+	b _0204addc @ case 9
+	b _0204ace4 @ case 10
+	b _0204a98c @ case 11
+	b _0204addc @ case 12
+	b _0204addc @ case 13
+	b _0204addc @ case 14
+	b _0204aba8 @ case 15
+	b _0204addc @ case 16
+	b _0204a98c @ case 17
 _0204a828:
 	cmp r1, #0x63
 	beq _0204ad70
@@ -17734,7 +17734,7 @@ _0204a834:
 	beq _0204a98c
 	b _0204addc
 _0204a844:
-	ldr r0, _0204af84 ; =0x0000ffff
+	ldr r0, _0204af84 @ =0x0000ffff
 	cmp r1, r0
 	b _0204addc
 _0204a850:
@@ -17983,7 +17983,7 @@ _0204aba8:
 	ldr r6, [r0, #-4]
 	ldrb r0, [sp, #0x23]
 	cmp r6, #0
-	ldreq r6, _0204af88 ; =data_020584e0
+	ldreq r6, _0204af88 @ =data_020584e0
 	cmp r0, #0
 	beq _0204abfc
 	ldrh r1, [r6], #2
@@ -18022,7 +18022,7 @@ _0204ac44:
 	ldr r5, [r0, #-4]
 	ldrb r0, [sp, #0x23]
 	cmp r5, #0
-	ldreq r5, _0204af8c ; =data_020584e4
+	ldreq r5, _0204af8c @ =data_020584e4
 	cmp r0, #0
 	beq _0204ac8c
 	ldrh r1, [r6]
@@ -18068,16 +18068,16 @@ _0204ace4:
 	cmp r0, #8
 	addls pc, pc, r0, lsl #2
 	b _0204af64
-_0204ad04: ; jump table
-	b _0204ad28 ; case 0
-	b _0204af64 ; case 1
-	b _0204ad30 ; case 2
-	b _0204ad38 ; case 3
-	b _0204ad60 ; case 4
-	b _0204af64 ; case 5
-	b _0204ad40 ; case 6
-	b _0204ad50 ; case 7
-	b _0204ad58 ; case 8
+_0204ad04: @ jump table
+	b _0204ad28 @ case 0
+	b _0204af64 @ case 1
+	b _0204ad30 @ case 2
+	b _0204ad38 @ case 3
+	b _0204ad60 @ case 4
+	b _0204af64 @ case 5
+	b _0204ad40 @ case 6
+	b _0204ad50 @ case 7
+	b _0204ad58 @ case 8
 _0204ad28:
 	str r4, [r6]
 	b _0204af64
@@ -18258,7 +18258,7 @@ _0204af8c: .word data_020584e4
 
 	.global func_0204af90
 	arm_func_start func_0204af90
-func_0204af90: ; 0x0204af90
+func_0204af90: @ 0x0204af90
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r0
 	ldr r3, [r4, #8]
@@ -18279,7 +18279,7 @@ func_0204af90: ; 0x0204af90
 
 	.global func_0204afd0
 	arm_func_start func_0204afd0
-func_0204afd0: ; 0x0204afd0
+func_0204afd0: @ 0x0204afd0
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, lr}
 	add r3, sp, #0x10
@@ -18294,13 +18294,13 @@ func_0204afd0: ; 0x0204afd0
 
 	.global func_0204aff8
 	arm_func_start func_0204aff8
-func_0204aff8: ; 0x0204aff8
+func_0204aff8: @ 0x0204aff8
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r0
 	mov r4, r1
 	mov ip, #0
-	ldr r0, _0204b064 ; =func_0204af90
+	ldr r0, _0204b064 @ =func_0204af90
 	add r1, sp, #0
 	str r5, [sp]
 	str r4, [sp, #4]
@@ -18329,7 +18329,7 @@ _0204b064: .word func_0204af90 - 1
 
 	.global func_0204b068
 	arm_func_start func_0204b068
-func_0204b068: ; 0x0204b068
+func_0204b068: @ 0x0204b068
 	mvn r2, #0
 _0204b06c:
 	ldrh r1, [r0], #2
@@ -18342,7 +18342,7 @@ _0204b06c:
 
 	.global func_0204b084
 	arm_func_start func_0204b084
-func_0204b084: ; 0x0204b084
+func_0204b084: @ 0x0204b084
 	mov r3, r0
 _0204b088:
 	ldrh r2, [r1], #2
@@ -18356,7 +18356,7 @@ _0204b088:
 
 	.global func_0204b0a4
 	arm_func_start func_0204b0a4
-func_0204b0a4: ; 0x0204b0a4
+func_0204b0a4: @ 0x0204b0a4
 	mov r3, r0
 _0204b0a8:
 	ldrh r2, [r3], #2
@@ -18375,7 +18375,7 @@ _0204b0b8:
 
 	.global func_0204b0d4
 	arm_func_start func_0204b0d4
-func_0204b0d4: ; 0x0204b0d4
+func_0204b0d4: @ 0x0204b0d4
 	ldrh r3, [r1], #2
 	ldrh r2, [r0], #2
 	cmp r2, r3
@@ -18395,7 +18395,7 @@ _0204b100:
 
 	.global func_0204b108
 	arm_func_start func_0204b108
-func_0204b108: ; 0x0204b108
+func_0204b108: @ 0x0204b108
 	ldrh r2, [r0], #2
 	cmp r2, #0
 	beq _0204b12c
@@ -18415,7 +18415,7 @@ _0204b12c:
 
 	.global func_0204b13c
 	arm_func_start func_0204b13c
-func_0204b13c: ; 0x0204b13c
+func_0204b13c: @ 0x0204b13c
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x80
@@ -18428,18 +18428,18 @@ func_0204b13c: ; 0x0204b13c
 	bic r4, r6, #0x80000000
 	addeq sp, sp, #0x80
 	moveq r0, #0
-	ldreq r1, _0204b6e8 ; =0x3ff00000
+	ldreq r1, _0204b6e8 @ =0x3ff00000
 	ldmeqia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	addeq sp, sp, #0x10
 	bxeq lr
-	ldr r1, _0204b6ec ; =0x7ff00000
+	ldr r1, _0204b6ec @ =0x7ff00000
 	cmp r4, r1
 	bgt _0204b1ac
 	bne _0204b194
 	cmp r7, #0
 	bne _0204b1ac
 _0204b194:
-	ldr r1, _0204b6ec ; =0x7ff00000
+	ldr r1, _0204b6ec @ =0x7ff00000
 	cmp r9, r1
 	bgt _0204b1ac
 	bne _0204b1d0
@@ -18459,14 +18459,14 @@ _0204b1d0:
 	cmp r6, #0
 	mov r5, #0
 	bge _0204b238
-	ldr r1, _0204b6f0 ; =0x43400000
+	ldr r1, _0204b6f0 @ =0x43400000
 	cmp r9, r1
 	movge r5, #2
 	bge _0204b238
 	sub r1, r1, #0x3500000
 	cmp r9, r1
 	blt _0204b238
-	ldr r1, _0204b6f4 ; =0xfffffc01
+	ldr r1, _0204b6f4 @ =0xfffffc01
 	add r1, r1, r9, asr #20
 	cmp r1, #0x14
 	ble _0204b220
@@ -18486,7 +18486,7 @@ _0204b220:
 _0204b238:
 	cmp r0, #0
 	bne _0204b394
-	ldr r1, _0204b6ec ; =0x7ff00000
+	ldr r1, _0204b6ec @ =0x7ff00000
 	cmp r9, r1
 	bne _0204b2ec
 	add r0, r4, #0x100000
@@ -18564,7 +18564,7 @@ _0204b338:
 	add sp, sp, #0x10
 	bx lr
 _0204b364:
-	ldr r0, _0204b6f8 ; =0x3fe00000
+	ldr r0, _0204b6f8 @ =0x3fe00000
 	cmp r8, r0
 	bne _0204b394
 	cmp r6, #0
@@ -18584,7 +18584,7 @@ _0204b394:
 	str r1, [sp, #0x74]
 	cmp r7, #0
 	bne _0204b498
-	ldr r0, _0204b6ec ; =0x7ff00000
+	ldr r0, _0204b6ec @ =0x7ff00000
 	cmp r4, r0
 	cmpne r4, #0
 	subne r0, r0, #0x40000000
@@ -18596,7 +18596,7 @@ _0204b394:
 	str r3, [sp, #0x7c]
 	cmp r8, #0
 	bge _0204b3f4
-	ldr r1, _0204b6e8 ; =0x3ff00000
+	ldr r1, _0204b6e8 @ =0x3ff00000
 	mov r0, #0
 	bl func_0200301c
 	str r0, [sp, #0x78]
@@ -18650,8 +18650,8 @@ _0204b498:
 	add r7, r0, #1
 	orrs r0, r7, r5
 	bne _0204b4d0
-	ldr r0, _0204b6fc ; =data_02058218
-	ldr r1, _0204b700 ; =data_02076d88
+	ldr r0, _0204b6fc @ =data_02058218
+	ldr r1, _0204b700 @ =data_02076d88
 	ldr r0, [r0]
 	mov r2, #0x21
 	str r2, [r1]
@@ -18661,13 +18661,13 @@ _0204b498:
 	add sp, sp, #0x10
 	bx lr
 _0204b4d0:
-	ldr r3, _0204b704 ; =0x41e00000
+	ldr r3, _0204b704 @ =0x41e00000
 	cmp r9, r3
 	ble _0204b7d4
 	add r0, r3, #0x2100000
 	cmp r9, r0
 	ble _0204b540
-	ldr r1, _0204b708 ; =0x3fefffff
+	ldr r1, _0204b708 @ =0x3fefffff
 	cmp r4, r1
 	bgt _0204b514
 	cmp r8, #0
@@ -18691,7 +18691,7 @@ _0204b514:
 	add sp, sp, #0x10
 	bx lr
 _0204b540:
-	ldr r2, _0204b708 ; =0x3fefffff
+	ldr r2, _0204b708 @ =0x3fefffff
 	cmp r4, r2
 	bge _0204b56c
 	cmp r8, #0
@@ -18729,12 +18729,12 @@ _0204b598:
 	mov r4, r0
 	ldr r2, [sp, #0x50]
 	ldr r3, [sp, #0x54]
-	ldr r1, _0204b70c ; =0x3fd00000
+	ldr r1, _0204b70c @ =0x3fd00000
 	mov r0, #0
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b710 ; =0x55555555
+	ldr r0, _0204b710 @ =0x55555555
 	sub r1, r0, #0x15800000
 	bl func_020016e8
 	mov r2, r0
@@ -18745,7 +18745,7 @@ _0204b598:
 	mov r2, r0
 	mov r3, r1
 	mov r0, #0
-	ldr r1, _0204b6f8 ; =0x3fe00000
+	ldr r1, _0204b6f8 @ =0x3fe00000
 	bl func_020016e8
 	mov r2, r0
 	mov r0, r4
@@ -18755,21 +18755,21 @@ _0204b598:
 	mov r6, r0
 	mov r8, r1
 	mov r0, #0x60000000
-	ldr r1, _0204b714 ; =0x3ff71547
+	ldr r1, _0204b714 @ =0x3ff71547
 	ldr r2, [sp, #0x50]
 	ldr r3, [sp, #0x54]
 	bl func_020011d0
 	mov r4, r0
 	mov r9, r1
-	ldr r0, _0204b718 ; =0xf85ddf44
-	ldr r1, _0204b71c ; =0x3e54ae0b
+	ldr r0, _0204b718 @ =0xf85ddf44
+	ldr r1, _0204b71c @ =0x3e54ae0b
 	ldr r2, [sp, #0x50]
 	ldr r3, [sp, #0x54]
 	bl func_020011d0
 	mov r11, r0
 	mov r10, r1
-	ldr r0, _0204b720 ; =0x652b82fe
-	ldr r1, _0204b714 ; =0x3ff71547
+	ldr r0, _0204b720 @ =0x652b82fe
+	ldr r1, _0204b714 @ =0x3ff71547
 	mov r2, r6
 	mov r3, r8
 	bl func_020011d0
@@ -18873,8 +18873,8 @@ _0204b7d4:
 	str r4, [sp, #0x74]
 	sub r6, r6, #0x35
 _0204b804:
-	ldr r0, _0204b6f4 ; =0xfffffc01
-	ldr r1, _0204b724 ; =0x0003988e
+	ldr r0, _0204b6f4 @ =0xfffffc01
+	ldr r1, _0204b724 @ =0x0003988e
 	and r2, r4, r0, lsr #12
 	add r0, r0, r4, asr #20
 	orr r9, r2, #0xff00000
@@ -18883,14 +18883,14 @@ _0204b804:
 	orr r9, r9, #0x30000000
 	movle r8, #0
 	ble _0204b844
-	ldr r0, _0204b728 ; =0x000bb67a
+	ldr r0, _0204b728 @ =0x000bb67a
 	cmp r2, r0
 	movlt r8, #1
 	addge r6, r6, #1
 	subge r9, r9, #0x100000
 	movge r8, #0
 _0204b844:
-	ldr r2, _0204b72c ; =data_020571e0
+	ldr r2, _0204b72c @ =data_020571e0
 	ldr r0, [sp, #0x70]
 	add r1, r2, r8, lsl #3
 	ldr r3, [r1, #4]
@@ -18898,7 +18898,7 @@ _0204b844:
 	mov r1, r9
 	str r9, [sp, #0x74]
 	bl func_020016e8
-	ldr r2, _0204b72c ; =data_020571e0
+	ldr r2, _0204b72c @ =data_020571e0
 	mov r10, r0
 	add r3, r2, r8, lsl #3
 	mov r4, r1
@@ -18909,7 +18909,7 @@ _0204b844:
 	bl func_02000c60
 	mov r3, r1
 	mov r2, r0
-	ldr r1, _0204b6e8 ; =0x3ff00000
+	ldr r1, _0204b6e8 @ =0x3ff00000
 	mov r0, #0
 	bl func_0200301c
 	str r1, [sp, #0x24]
@@ -18924,7 +18924,7 @@ _0204b844:
 	mov r9, r1
 	add r2, r2, #0x80000
 	add r1, r2, r8, lsl #18
-	ldr r2, _0204b72c ; =data_020571e0
+	ldr r2, _0204b72c @ =data_020571e0
 	str r0, [sp, #0x28]
 	add r3, r2, r8, lsl #3
 	mov r0, #0
@@ -18983,15 +18983,15 @@ _0204b844:
 	bl func_020011d0
 	str r0, [sp, #0x34]
 	mov r11, r1
-	ldr r0, _0204b730 ; =0x4a454eef
-	ldr r1, _0204b734 ; =0x3fca7e28
+	ldr r0, _0204b730 @ =0x4a454eef
+	ldr r1, _0204b734 @ =0x3fca7e28
 	mov r2, r4
 	mov r3, r10
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b738 ; =0x93c9db65
-	ldr r1, _0204b73c ; =0x3fcd864a
+	ldr r0, _0204b738 @ =0x93c9db65
+	ldr r1, _0204b73c @ =0x3fcd864a
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19000,8 +19000,8 @@ _0204b844:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b740 ; =0xa91d4101
-	ldr r1, _0204b744 ; =0x3fd17460
+	ldr r0, _0204b740 @ =0xa91d4101
+	ldr r1, _0204b744 @ =0x3fd17460
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19010,8 +19010,8 @@ _0204b844:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b748 ; =0x518f264d
-	ldr r1, _0204b74c ; =0x3fd55555
+	ldr r0, _0204b748 @ =0x518f264d
+	ldr r1, _0204b74c @ =0x3fd55555
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19020,8 +19020,8 @@ _0204b844:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b750 ; =0xdb6fabff
-	ldr r1, _0204b754 ; =0x3fdb6db6
+	ldr r0, _0204b750 @ =0xdb6fabff
+	ldr r1, _0204b754 @ =0x3fdb6db6
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19030,8 +19030,8 @@ _0204b844:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b758 ; =0x33333303
-	ldr r1, _0204b75c ; =0x3fe33333
+	ldr r0, _0204b758 @ =0x33333303
+	ldr r1, _0204b75c @ =0x3fe33333
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19064,7 +19064,7 @@ _0204b844:
 	bl func_020011d0
 	str r1, [sp, #0xc]
 	mov r11, r0
-	ldr r1, _0204b760 ; =0x40080000
+	ldr r1, _0204b760 @ =0x40080000
 	ldr r3, [sp, #0xc]
 	mov r0, #0
 	mov r2, r11
@@ -19073,7 +19073,7 @@ _0204b844:
 	mov r3, r10
 	bl func_02000c60
 	mov r0, #0
-	ldr r3, _0204b760 ; =0x40080000
+	ldr r3, _0204b760 @ =0x40080000
 	mov r2, r0
 	str r1, [sp, #0x44]
 	str r0, [sp, #0x40]
@@ -19132,15 +19132,15 @@ _0204b844:
 	bl func_020016e8
 	mov r10, r1
 	mov r11, r0
-	ldr r1, _0204b764 ; =0x3feec709
+	ldr r1, _0204b764 @ =0x3feec709
 	ldr r2, [sp, #0x68]
 	ldr r3, [sp, #0x6c]
 	mov r0, #0xe0000000
 	bl func_020011d0
 	mov r4, r0
 	mov r9, r1
-	ldr r0, _0204b768 ; =0x145b01f5
-	ldr r1, _0204b76c ; =0xbe3e2fe0
+	ldr r0, _0204b768 @ =0x145b01f5
+	ldr r1, _0204b76c @ =0xbe3e2fe0
 	ldr r2, [sp, #0x68]
 	ldr r3, [sp, #0x6c]
 	bl func_020011d0
@@ -19148,8 +19148,8 @@ _0204b844:
 	mov r3, r10
 	mov r11, r0
 	mov r10, r1
-	ldr r0, _0204b770 ; =0xdc3a03fd
-	ldr r1, _0204b764 ; =0x3feec709
+	ldr r0, _0204b770 @ =0xdc3a03fd
+	ldr r1, _0204b764 @ =0x3feec709
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
@@ -19158,7 +19158,7 @@ _0204b844:
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b774 ; =data_020571f0
+	ldr r0, _0204b774 @ =data_020571f0
 	add r1, r0, r8, lsl #3
 	ldr r0, [r0, r8, lsl #3]
 	ldr r1, [r1, #4]
@@ -19174,7 +19174,7 @@ _0204b844:
 	mov r2, r11
 	mov r3, r10
 	bl func_02000c60
-	ldr r2, _0204b778 ; =data_020571d0
+	ldr r2, _0204b778 @ =data_020571d0
 	add r3, r2, r8, lsl #3
 	ldr r2, [r2, r8, lsl #3]
 	ldr r3, [r3, #4]
@@ -19190,7 +19190,7 @@ _0204b844:
 	ldr r2, [sp, #0x50]
 	ldr r3, [sp, #0x54]
 	bl func_020016e8
-	ldr r2, _0204b778 ; =data_020571d0
+	ldr r2, _0204b778 @ =data_020571d0
 	add r3, r2, r8, lsl #3
 	ldr r2, [r2, r8, lsl #3]
 	ldr r3, [r3, #4]
@@ -19209,7 +19209,7 @@ _0204bd30:
 	sub r0, r5, #1
 	ldr r1, [sp, #0xb4]
 	orrs r0, r7, r0
-	ldr r5, _0204b6e8 ; =0x3ff00000
+	ldr r5, _0204b6e8 @ =0x3ff00000
 	mov r2, #0
 	ldr r0, [sp, #0xb0]
 	mov r3, r1
@@ -19250,7 +19250,7 @@ _0204bd30:
 	str r3, [sp, #0x6c]
 	bl func_02000c60
 	mov r9, r1
-	ldr r2, _0204b77c ; =0x40900000
+	ldr r2, _0204b77c @ =0x40900000
 	str r0, [sp, #0x78]
 	str r9, [sp, #0x7c]
 	cmp r9, r2
@@ -19259,23 +19259,23 @@ _0204bd30:
 	add r1, r1, #0xb0000000
 	orrs r0, r1, r0
 	beq _0204be3c
-	ldr r0, _0204b780 ; =0x8800759c
-	ldr r1, _0204b784 ; =0x7e37e43c
+	ldr r0, _0204b780 @ =0x8800759c
+	ldr r1, _0204b784 @ =0x7e37e43c
 	mov r2, r6
 	mov r3, r5
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b780 ; =0x8800759c
-	ldr r1, _0204b784 ; =0x7e37e43c
+	ldr r0, _0204b780 @ =0x8800759c
+	ldr r1, _0204b784 @ =0x7e37e43c
 	bl func_020011d0
 	add sp, sp, #0x80
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	add sp, sp, #0x10
 	bx lr
 _0204be3c:
-	ldr r0, _0204b720 ; =0x652b82fe
-	ldr r1, _0204b788 ; =0x3c971547
+	ldr r0, _0204b720 @ =0x652b82fe
+	ldr r1, _0204b788 @ =0x3c971547
 	mov r2, r7
 	mov r3, r8
 	bl func_02000c60
@@ -19292,15 +19292,15 @@ _0204be3c:
 	mov r1, r10
 	bl func_02001cc0
 	bls _0204bf70
-	ldr r0, _0204b780 ; =0x8800759c
-	ldr r1, _0204b784 ; =0x7e37e43c
+	ldr r0, _0204b780 @ =0x8800759c
+	ldr r1, _0204b784 @ =0x7e37e43c
 	mov r2, r6
 	mov r3, r5
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b780 ; =0x8800759c
-	ldr r1, _0204b784 ; =0x7e37e43c
+	ldr r0, _0204b780 @ =0x8800759c
+	ldr r1, _0204b784 @ =0x7e37e43c
 	bl func_020011d0
 	add sp, sp, #0x80
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
@@ -19311,19 +19311,19 @@ _0204bebc:
 	add r2, r2, #0xcc00
 	cmp r3, r2
 	blt _0204bf70
-	ldr r2, _0204b78c ; =0x3f6f3400
+	ldr r2, _0204b78c @ =0x3f6f3400
 	add r2, r9, r2
 	orrs r2, r2, r0
 	beq _0204bf14
-	ldr r0, _0204b790 ; =0xc2f8f359
-	ldr r1, _0204b794 ; =0x01a56e1f
+	ldr r0, _0204b790 @ =0xc2f8f359
+	ldr r1, _0204b794 @ =0x01a56e1f
 	mov r2, r6
 	mov r3, r5
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b790 ; =0xc2f8f359
-	ldr r1, _0204b794 ; =0x01a56e1f
+	ldr r0, _0204b790 @ =0xc2f8f359
+	ldr r1, _0204b794 @ =0x01a56e1f
 	bl func_020011d0
 	add sp, sp, #0x80
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
@@ -19339,24 +19339,24 @@ _0204bf14:
 	mov r1, r8
 	bl func_02001d58
 	bhi _0204bf70
-	ldr r0, _0204b790 ; =0xc2f8f359
-	ldr r1, _0204b794 ; =0x01a56e1f
+	ldr r0, _0204b790 @ =0xc2f8f359
+	ldr r1, _0204b794 @ =0x01a56e1f
 	mov r2, r6
 	mov r3, r5
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b790 ; =0xc2f8f359
-	ldr r1, _0204b794 ; =0x01a56e1f
+	ldr r0, _0204b790 @ =0xc2f8f359
+	ldr r1, _0204b794 @ =0x01a56e1f
 	bl func_020011d0
 	add sp, sp, #0x80
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	add sp, sp, #0x10
 	bx lr
 _0204bf70:
-	ldr r0, _0204b6f4 ; =0xfffffc01
+	ldr r0, _0204b6f4 @ =0xfffffc01
 	bic r3, r9, #0x80000000
-	ldr r1, _0204b6f8 ; =0x3fe00000
+	ldr r1, _0204b6f8 @ =0x3fe00000
 	add r2, r0, r3, asr #20
 	cmp r3, r1
 	mov r4, #0
@@ -19393,7 +19393,7 @@ _0204bfec:
 	bl func_02000c60
 	mov r3, r1
 	mov r0, #0
-	ldr r1, _0204b798 ; =0x3fe62e43
+	ldr r1, _0204b798 @ =0x3fe62e43
 	mov r2, r0
 	str r3, [sp, #0x54]
 	str r0, [sp, #0x50]
@@ -19412,13 +19412,13 @@ _0204bfec:
 	bl func_020016e8
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b79c ; =0xfefa39ef
-	ldr r1, _0204b7a0 ; =0x3fe62e42
+	ldr r0, _0204b79c @ =0xfefa39ef
+	ldr r1, _0204b7a0 @ =0x3fe62e42
 	bl func_020011d0
 	mov r7, r0
 	mov r8, r1
-	ldr r0, _0204b7a4 ; =0x0ca86c39
-	ldr r1, _0204b7a8 ; =0xbe205c61
+	ldr r0, _0204b7a4 @ =0x0ca86c39
+	ldr r1, _0204b7a8 @ =0xbe205c61
 	ldr r2, [sp, #0x50]
 	ldr r3, [sp, #0x54]
 	bl func_020011d0
@@ -19455,13 +19455,13 @@ _0204bfec:
 	str r2, [sp, #0x50]
 	mov r3, r1
 	str r3, [sp, #0x54]
-	ldr r0, _0204b7ac ; =0x72bea4d0
-	ldr r1, _0204b7b0 ; =0x3e663769
+	ldr r0, _0204b7ac @ =0x72bea4d0
+	ldr r1, _0204b7b0 @ =0x3e663769
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b7b4 ; =0xc5d26bf1
-	ldr r1, _0204b7b8 ; =0xbebbbd41
+	ldr r0, _0204b7b4 @ =0xc5d26bf1
+	ldr r1, _0204b7b8 @ =0xbebbbd41
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19470,8 +19470,8 @@ _0204bfec:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b7bc ; =0xaf25de2c
-	ldr r1, _0204b7c0 ; =0x3f11566a
+	ldr r0, _0204b7bc @ =0xaf25de2c
+	ldr r1, _0204b7c0 @ =0x3f11566a
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19480,8 +19480,8 @@ _0204bfec:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b7c4 ; =0x16bebd93
-	ldr r1, _0204b7c8 ; =0xbf66c16c
+	ldr r0, _0204b7c4 @ =0x16bebd93
+	ldr r1, _0204b7c8 @ =0xbf66c16c
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19490,8 +19490,8 @@ _0204bfec:
 	bl func_020011d0
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204b7cc ; =0x5555553e
-	ldr r1, _0204b7d0 ; =0x3fc55555
+	ldr r0, _0204b7cc @ =0x5555553e
+	ldr r1, _0204b7d0 @ =0x3fc55555
 	bl func_02000c60
 	mov r2, r0
 	mov r3, r1
@@ -19544,7 +19544,7 @@ _0204bfec:
 	bl func_020016e8
 	mov r3, r1
 	mov r2, r0
-	ldr r1, _0204b6e8 ; =0x3ff00000
+	ldr r1, _0204b6e8 @ =0x3ff00000
 	mov r0, #0
 	bl func_020016e8
 	add r3, r1, r4, lsl #20
@@ -19573,7 +19573,7 @@ _0204c2a0:
 
 	.global func_0204c2c4
 	arm_func_start func_0204c2c4
-func_0204c2c4: ; 0x0204c2c4
+func_0204c2c4: @ 0x0204c2c4
 	stmdb sp!, {r0, r1, r2, r3}
 	ldr r1, [sp, #4]
 	ldr r0, [sp, #0xc]
@@ -19588,7 +19588,7 @@ func_0204c2c4: ; 0x0204c2c4
 
 	.global func_0204c2ec
 	arm_func_start func_0204c2ec
-func_0204c2ec: ; 0x0204c2ec
+func_0204c2ec: @ 0x0204c2ec
 	stmdb sp!, {r0, r1, r2, r3}
 	add r2, sp, #0
 	ldr r1, [r2, #4]
@@ -19601,11 +19601,11 @@ func_0204c2ec: ; 0x0204c2ec
 
 	.global func_0204c30c
 	arm_func_start func_0204c30c
-func_0204c30c: ; 0x0204c30c
+func_0204c30c: @ 0x0204c30c
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, lr}
 	ldr r1, [sp, #0xc]
-	ldr r0, _0204c3b8 ; =0x7ff00000
+	ldr r0, _0204c3b8 @ =0x7ff00000
 	mov r4, r2
 	bic r3, r1, #0x80000000
 	mov r2, #0
@@ -19626,7 +19626,7 @@ _0204c354:
 	bge _0204c380
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0xc]
-	ldr r3, _0204c3bc ; =0x43500000
+	ldr r3, _0204c3bc @ =0x43500000
 	bl func_020011d0
 	mvn r2, #0x35
 	str r0, [sp, #8]
@@ -19634,8 +19634,8 @@ _0204c354:
 	str r2, [r4]
 	bic r3, r1, #0x80000000
 _0204c380:
-	ldr r2, _0204c3c0 ; =0x800fffff
-	ldr r0, _0204c3c4 ; =0xfffffc02
+	ldr r2, _0204c3c0 @ =0x800fffff
+	ldr r0, _0204c3c4 @ =0xfffffc02
 	and r1, r1, r2
 	orr r1, r1, #0xfe00000
 	orr r1, r1, #0x30000000
@@ -19657,7 +19657,7 @@ _0204c3c4: .word 0xfffffc02
 
 	.global func_0204c3c8
 	arm_func_start func_0204c3c8
-func_0204c3c8: ; 0x0204c3c8
+func_0204c3c8: @ 0x0204c3c8
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, lr}
 	ldr r0, [sp, #8]
@@ -19680,7 +19680,7 @@ _0204c400:
 	bx lr
 _0204c414:
 	ldr r3, [sp, #0xc]
-	ldr r0, _0204c5e8 ; =0x7ff00000
+	ldr r0, _0204c5e8 @ =0x7ff00000
 	ldr r1, [sp, #8]
 	and r0, r3, r0
 	movs ip, r0, asr #0x14
@@ -19694,12 +19694,12 @@ _0204c414:
 	bxeq lr
 	ldr r0, [sp, #8]
 	ldr r1, [sp, #0xc]
-	ldr r3, _0204c5ec ; =0x43500000
+	ldr r3, _0204c5ec @ =0x43500000
 	mov r2, #0
 	bl func_020011d0
 	mov r3, r1
-	ldr r1, _0204c5e8 ; =0x7ff00000
-	ldr ip, _0204c5f0 ; =0xffff3cb0
+	ldr r1, _0204c5e8 @ =0x7ff00000
+	ldr ip, _0204c5f0 @ =0xffff3cb0
 	and r1, r3, r1
 	mov r2, r0
 	mov r0, r1, asr #0x14
@@ -19708,14 +19708,14 @@ _0204c414:
 	cmp r4, ip
 	sub ip, r0, #0x36
 	bge _0204c4a0
-	ldr r0, _0204c5f4 ; =0xc2f8f359
-	ldr r1, _0204c5f8 ; =0x01a56e1f
+	ldr r0, _0204c5f4 @ =0xc2f8f359
+	ldr r1, _0204c5f8 @ =0x01a56e1f
 	bl func_020011d0
 	ldmia sp!, {r4, lr}
 	add sp, sp, #0x10
 	bx lr
 _0204c4a0:
-	ldr r0, _0204c5fc ; =0x000007ff
+	ldr r0, _0204c5fc @ =0x000007ff
 	cmp ip, r0
 	bne _0204c4cc
 	ldr r0, [sp, #8]
@@ -19733,13 +19733,13 @@ _0204c4cc:
 	ble _0204c510
 	ldr r2, [sp, #8]
 	ldr r3, [sp, #0xc]
-	ldr r0, _0204c600 ; =0x8800759c
-	ldr r1, _0204c604 ; =0x7e37e43c
+	ldr r0, _0204c600 @ =0x8800759c
+	ldr r1, _0204c604 @ =0x7e37e43c
 	bl func_0204c2c4
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204c600 ; =0x8800759c
-	ldr r1, _0204c604 ; =0x7e37e43c
+	ldr r0, _0204c600 @ =0x8800759c
+	ldr r1, _0204c604 @ =0x7e37e43c
 	bl func_020011d0
 	ldmia sp!, {r4, lr}
 	add sp, sp, #0x10
@@ -19747,7 +19747,7 @@ _0204c4cc:
 _0204c510:
 	cmp r2, #0
 	ble _0204c538
-	ldr r1, _0204c608 ; =0x800fffff
+	ldr r1, _0204c608 @ =0x800fffff
 	ldr r0, [sp, #8]
 	and r1, r3, r1
 	orr r1, r1, r2, lsl #20
@@ -19759,18 +19759,18 @@ _0204c538:
 	mvn r0, #0x35
 	cmp r2, r0
 	bgt _0204c5b8
-	ldr r0, _0204c60c ; =0x0000c350
+	ldr r0, _0204c60c @ =0x0000c350
 	cmp r4, r0
 	ble _0204c584
 	ldr r2, [sp, #8]
 	ldr r3, [sp, #0xc]
-	ldr r0, _0204c600 ; =0x8800759c
-	ldr r1, _0204c604 ; =0x7e37e43c
+	ldr r0, _0204c600 @ =0x8800759c
+	ldr r1, _0204c604 @ =0x7e37e43c
 	bl func_0204c2c4
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204c600 ; =0x8800759c
-	ldr r1, _0204c604 ; =0x7e37e43c
+	ldr r0, _0204c600 @ =0x8800759c
+	ldr r1, _0204c604 @ =0x7e37e43c
 	bl func_020011d0
 	ldmia sp!, {r4, lr}
 	add sp, sp, #0x10
@@ -19778,24 +19778,24 @@ _0204c538:
 _0204c584:
 	ldr r2, [sp, #8]
 	ldr r3, [sp, #0xc]
-	ldr r0, _0204c5f4 ; =0xc2f8f359
-	ldr r1, _0204c5f8 ; =0x01a56e1f
+	ldr r0, _0204c5f4 @ =0xc2f8f359
+	ldr r1, _0204c5f8 @ =0x01a56e1f
 	bl func_0204c2c4
 	mov r2, r0
 	mov r3, r1
-	ldr r0, _0204c5f4 ; =0xc2f8f359
-	ldr r1, _0204c5f8 ; =0x01a56e1f
+	ldr r0, _0204c5f4 @ =0xc2f8f359
+	ldr r1, _0204c5f8 @ =0x01a56e1f
 	bl func_020011d0
 	ldmia sp!, {r4, lr}
 	add sp, sp, #0x10
 	bx lr
 _0204c5b8:
-	ldr r0, _0204c608 ; =0x800fffff
+	ldr r0, _0204c608 @ =0x800fffff
 	add r1, r2, #0x36
 	and r0, r3, r0
 	orr r3, r0, r1, lsl #20
 	ldr r2, [sp, #8]
-	ldr r1, _0204c610 ; =0x3c900000
+	ldr r1, _0204c610 @ =0x3c900000
 	mov r0, #0
 	str r3, [sp, #0xc]
 	bl func_020011d0
@@ -19818,8 +19818,8 @@ _0204c610: .word 0x3c900000
 
 	.global func_0204c614
 	arm_func_start func_0204c614
-func_0204c614: ; 0x0204c614
-	ldr ip, _0204c61c ; =func_0204b13c
+func_0204c614: @ 0x0204c614
+	ldr ip, _0204c61c @ =func_0204b13c
 	bx ip
 	.align 2, 0
 _0204c61c: .word func_0204b13c - 1
@@ -19827,7 +19827,7 @@ _0204c61c: .word func_0204b13c - 1
 
 	.global func_0204c620
 	arm_func_start func_0204c620
-func_0204c620: ; 0x0204c620
+func_0204c620: @ 0x0204c620
 	add r3, r0, #5
 	ldrb r2, [r3, r1]
 	add ip, r3, r1
@@ -19861,7 +19861,7 @@ _0204c670:
 
 	.global func_0204c68c
 	arm_func_start func_0204c68c
-func_0204c68c: ; 0x0204c68c
+func_0204c68c: @ 0x0204c68c
 	add r3, r0, #5
 	add r1, r3, r1
 	sub ip, r1, #1
@@ -19887,13 +19887,13 @@ _0204c6d0:
 
 	.global func_0204c6d8
 	arm_func_start func_0204c6d8
-func_0204c6d8: ; 0x0204c6d8
+func_0204c6d8: @ 0x0204c6d8
 	bx lr
 	arm_func_end func_0204c6d8
 
 	.global func_0204c6dc
 	arm_func_start func_0204c6dc
-func_0204c6dc: ; 0x0204c6dc
+func_0204c6dc: @ 0x0204c6dc
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r5, r0
@@ -19914,7 +19914,7 @@ func_0204c6dc: ; 0x0204c6dc
 
 	.global func_0204c71c
 	arm_func_start func_0204c71c
-func_0204c71c: ; 0x0204c71c
+func_0204c71c: @ 0x0204c71c
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	mov r10, r0
 	mov r0, #0
@@ -19974,7 +19974,7 @@ _0204c7d8:
 
 	.global func_0204c7e8
 	arm_func_start func_0204c7e8
-func_0204c7e8: ; 0x0204c7e8
+func_0204c7e8: @ 0x0204c7e8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x40
 	ldrb r6, [r1, #4]
@@ -20015,7 +20015,7 @@ _0204c864:
 	mla r4, ip, r3, r4
 	bgt _0204c864
 _0204c87c:
-	ldr r3, _0204c968 ; =0xcccccccd
+	ldr r3, _0204c968 @ =0xcccccccd
 	sub r5, r5, #1
 	umull r8, r9, r4, r3
 	mov r9, r9, lsr #0x3
@@ -20088,7 +20088,7 @@ _0204c968: .word 0xcccccccd
 
 	.global func_0204c96c
 	arm_func_start func_0204c96c
-func_0204c96c: ; 0x0204c96c
+func_0204c96c: @ 0x0204c96c
 	stmdb sp!, {r3, lr}
 	strh r2, [r0, #2]
 	mov ip, #0
@@ -20138,7 +20138,7 @@ _0204c9fc:
 
 	.global func_0204ca08
 	arm_func_start func_0204ca08
-func_0204ca08: ; 0x0204ca08
+func_0204ca08: @ 0x0204ca08
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0x4c
 	mov r4, r1
@@ -20156,171 +20156,171 @@ _0204ca38:
 	cmp r1, #0x28
 	addls pc, pc, r1, lsl #2
 	b _0204cc94
-_0204ca48: ; jump table
-	b _0204cb18 ; case 0
-	b _0204cc94 ; case 1
-	b _0204cc94 ; case 2
-	b _0204cc94 ; case 3
-	b _0204cc94 ; case 4
-	b _0204cc94 ; case 5
-	b _0204cc94 ; case 6
-	b _0204cc94 ; case 7
-	b _0204cc94 ; case 8
-	b _0204cc94 ; case 9
-	b _0204cc94 ; case 10
-	b _0204cc94 ; case 11
-	b _0204cc94 ; case 12
-	b _0204cc94 ; case 13
-	b _0204cc94 ; case 14
-	b _0204cc94 ; case 15
-	b _0204cb2c ; case 16
-	b _0204cc94 ; case 17
-	b _0204cc94 ; case 18
-	b _0204cc94 ; case 19
-	b _0204cc94 ; case 20
-	b _0204cc94 ; case 21
-	b _0204cc94 ; case 22
-	b _0204cc94 ; case 23
-	b _0204cb40 ; case 24
-	b _0204cb54 ; case 25
-	b _0204cb68 ; case 26
-	b _0204cb7c ; case 27
-	b _0204cb90 ; case 28
-	b _0204cba4 ; case 29
-	b _0204cbb8 ; case 30
-	b _0204cbcc ; case 31
-	b _0204cbe0 ; case 32
-	b _0204cbf4 ; case 33
-	b _0204cc08 ; case 34
-	b _0204cc1c ; case 35
-	b _0204cc30 ; case 36
-	b _0204cc44 ; case 37
-	b _0204cc58 ; case 38
-	b _0204cc6c ; case 39
-	b _0204cc80 ; case 40
+_0204ca48: @ jump table
+	b _0204cb18 @ case 0
+	b _0204cc94 @ case 1
+	b _0204cc94 @ case 2
+	b _0204cc94 @ case 3
+	b _0204cc94 @ case 4
+	b _0204cc94 @ case 5
+	b _0204cc94 @ case 6
+	b _0204cc94 @ case 7
+	b _0204cc94 @ case 8
+	b _0204cc94 @ case 9
+	b _0204cc94 @ case 10
+	b _0204cc94 @ case 11
+	b _0204cc94 @ case 12
+	b _0204cc94 @ case 13
+	b _0204cc94 @ case 14
+	b _0204cc94 @ case 15
+	b _0204cb2c @ case 16
+	b _0204cc94 @ case 17
+	b _0204cc94 @ case 18
+	b _0204cc94 @ case 19
+	b _0204cc94 @ case 20
+	b _0204cc94 @ case 21
+	b _0204cc94 @ case 22
+	b _0204cc94 @ case 23
+	b _0204cb40 @ case 24
+	b _0204cb54 @ case 25
+	b _0204cb68 @ case 26
+	b _0204cb7c @ case 27
+	b _0204cb90 @ case 28
+	b _0204cba4 @ case 29
+	b _0204cbb8 @ case 30
+	b _0204cbcc @ case 31
+	b _0204cbe0 @ case 32
+	b _0204cbf4 @ case 33
+	b _0204cc08 @ case 34
+	b _0204cc1c @ case 35
+	b _0204cc30 @ case 36
+	b _0204cc44 @ case 37
+	b _0204cc58 @ case 38
+	b _0204cc6c @ case 39
+	b _0204cc80 @ case 40
 _0204caec:
-	ldr r1, _0204cd38 ; =data_02058528
+	ldr r1, _0204cd38 @ =data_02058528
 	mov r0, r5
 	mvn r2, #0x13
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb04:
-	ldr r1, _0204cd3c ; =data_02058558
+	ldr r1, _0204cd3c @ =data_02058558
 	add r2, r2, #0x25
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb18:
-	ldr r1, _0204cd40 ; =data_02058580
+	ldr r1, _0204cd40 @ =data_02058580
 	add r2, r2, #0x2b
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb2c:
-	ldr r1, _0204cd44 ; =data_02058598
+	ldr r1, _0204cd44 @ =data_02058598
 	add r2, r2, #0x30
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb40:
-	ldr r1, _0204cd48 ; =data_020585a8
+	ldr r1, _0204cd48 @ =data_020585a8
 	add r2, r2, #0x32
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb54:
-	ldr r1, _0204cd4c ; =data_020585b0
+	ldr r1, _0204cd4c @ =data_020585b0
 	add r2, r2, #0x32
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb68:
-	ldr r1, _0204cd50 ; =data_020585b8
+	ldr r1, _0204cd50 @ =data_020585b8
 	add r2, r2, #0x33
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb7c:
-	ldr r1, _0204cd54 ; =data_020585c0
+	ldr r1, _0204cd54 @ =data_020585c0
 	add r2, r2, #0x33
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cb90:
-	ldr r1, _0204cd58 ; =data_020585c8
+	ldr r1, _0204cd58 @ =data_020585c8
 	add r2, r2, #0x33
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cba4:
-	ldr r1, _0204cd5c ; =data_020585cc
+	ldr r1, _0204cd5c @ =data_020585cc
 	add r2, r2, #0x34
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cbb8:
-	ldr r1, _0204cd60 ; =data_020585d0
+	ldr r1, _0204cd60 @ =data_020585d0
 	add r2, r2, #0x34
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cbcc:
-	ldr r1, _0204cd64 ; =data_020585d4
+	ldr r1, _0204cd64 @ =data_020585d4
 	add r2, r2, #0x34
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cbe0:
-	ldr r1, _0204cd68 ; =data_020585d8
+	ldr r1, _0204cd68 @ =data_020585d8
 	mov r2, #0
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cbf4:
-	ldr r1, _0204cd6c ; =data_020585dc
+	ldr r1, _0204cd6c @ =data_020585dc
 	mov r2, #0
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc08:
-	ldr r1, _0204cd70 ; =data_020585e0
+	ldr r1, _0204cd70 @ =data_020585e0
 	mov r2, #0
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc1c:
-	ldr r1, _0204cd74 ; =data_020585e4
+	ldr r1, _0204cd74 @ =data_020585e4
 	mov r2, #0
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc30:
-	ldr r1, _0204cd78 ; =data_020585e8
+	ldr r1, _0204cd78 @ =data_020585e8
 	mov r2, #1
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc44:
-	ldr r1, _0204cd7c ; =data_020585ec
+	ldr r1, _0204cd7c @ =data_020585ec
 	mov r2, #1
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc58:
-	ldr r1, _0204cd80 ; =data_020585f0
+	ldr r1, _0204cd80 @ =data_020585f0
 	mov r2, #1
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc6c:
-	ldr r1, _0204cd84 ; =data_020585f4
+	ldr r1, _0204cd84 @ =data_020585f4
 	mov r2, #2
 	bl func_0204c96c
 	add sp, sp, #0x4c
 	ldmia sp!, {r4, r5, pc}
 _0204cc80:
-	ldr r1, _0204cd88 ; =data_020585f8
+	ldr r1, _0204cd88 @ =data_020585f8
 	mov r2, #2
 	bl func_0204c96c
 	add sp, sp, #0x4c
@@ -20355,12 +20355,12 @@ _0204ccd0:
 	strh r0, [r3]
 	add r0, sp, #0x26
 	ble _0204cd14
-	ldr r1, _0204cd6c ; =data_020585dc
+	ldr r1, _0204cd6c @ =data_020585dc
 	mov r2, #0
 	bl func_0204c96c
 	b _0204cd20
 _0204cd14:
-	ldr r1, _0204cd64 ; =data_020585d4
+	ldr r1, _0204cd64 @ =data_020585d4
 	mvn r2, #0
 	bl func_0204c96c
 _0204cd20:
@@ -20396,7 +20396,7 @@ _0204cd88: .word data_020585f8
 
 	.global func_0204cd8c
 	arm_func_start func_0204cd8c
-func_0204cd8c: ; 0x0204cd8c
+func_0204cd8c: @ 0x0204cd8c
 	stmdb sp!, {r4, lr}
 	ldrb r3, [r0, #5]
 	cmp r3, #0
@@ -20464,7 +20464,7 @@ _0204ce64:
 
 	.global func_0204ce6c
 	arm_func_start func_0204ce6c
-func_0204ce6c: ; 0x0204ce6c
+func_0204ce6c: @ 0x0204ce6c
 	stmdb sp!, {r3, r4, r5, lr}
 	ldrb r2, [r0, #5]
 	cmp r2, #0
@@ -20531,7 +20531,7 @@ _0204cf40:
 
 	.global func_0204cf4c
 	arm_func_start func_0204cf4c
-func_0204cf4c: ; 0x0204cf4c
+func_0204cf4c: @ 0x0204cf4c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r6, r0
 	mov r5, #9
@@ -20729,7 +20729,7 @@ _0204d1e0:
 
 	.global func_0204d1f0
 	arm_func_start func_0204d1f0
-func_0204d1f0: ; 0x0204d1f0
+func_0204d1f0: @ 0x0204d1f0
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x58
 	mov r8, r1
@@ -20833,7 +20833,7 @@ _0204d2cc:
 
 	.global func_0204d370
 	arm_func_start func_0204d370
-func_0204d370: ; 0x0204d370
+func_0204d370: @ 0x0204d370
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r3
 	ldrsh r5, [r0, #2]
@@ -20883,7 +20883,7 @@ _0204d3f4:
 
 	.global func_0204d418
 	arm_func_start func_0204d418
-func_0204d418: ; 0x0204d418
+func_0204d418: @ 0x0204d418
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xfc
 	mov r4, r0
@@ -20893,9 +20893,9 @@ func_0204d418: ; 0x0204d418
 	ldrsb r0, [r4]
 	mov r2, #0
 	cmp r0, #0
-	ldreq r3, _0204da1c ; =0x3ff00000
+	ldreq r3, _0204da1c @ =0x3ff00000
 	mov r0, #0
-	ldrne r3, _0204da20 ; =0xbff00000
+	ldrne r3, _0204da20 @ =0xbff00000
 	mov r1, r0
 	bl func_0204c2c4
 	add sp, sp, #0xfc
@@ -20913,9 +20913,9 @@ _0204d478:
 	ldrsb r0, [r4]
 	mov r2, #0
 	cmp r0, #0
-	ldreq r3, _0204da1c ; =0x3ff00000
+	ldreq r3, _0204da1c @ =0x3ff00000
 	mov r0, #0
-	ldrne r3, _0204da20 ; =0xbff00000
+	ldrne r3, _0204da20 @ =0xbff00000
 	mov r1, r0
 	bl func_0204c2c4
 	add sp, sp, #0xfc
@@ -20924,9 +20924,9 @@ _0204d4a0:
 	ldrsb r0, [r4]
 	mov r5, #0
 	cmp r0, #0
-	ldreq r4, _0204da1c ; =0x3ff00000
-	ldr r0, _0204da24 ; =data_02058214
-	ldrne r4, _0204da20 ; =0xbff00000
+	ldreq r4, _0204da1c @ =0x3ff00000
+	ldr r0, _0204da24 @ =data_02058214
+	ldrne r4, _0204da20 @ =0xbff00000
 	ldr r0, [r0]
 	bl func_02002488
 	mov r2, r5
@@ -20935,7 +20935,7 @@ _0204d4a0:
 	add sp, sp, #0xfc
 	ldmia sp!, {r4, r5, r6, r7, r8, r9, r10, r11, pc}
 _0204d4d4:
-	ldr r1, _0204da28 ; =0x7ff00000
+	ldr r1, _0204da28 @ =0x7ff00000
 	add r3, sp, #0x10
 	mov r2, #0
 	str r2, [r3]
@@ -20987,7 +20987,7 @@ _0204d578:
 	sub r1, r1, #1
 	add r1, r2, r1
 	strh r1, [sp, #0xd8]
-	ldr r1, _0204da2c ; =data_020585fc
+	ldr r1, _0204da2c @ =data_020585fc
 	mov r2, #0x134
 	ldrsh r11, [sp, #0xd8]
 	bl func_0204c96c
@@ -20999,9 +20999,9 @@ _0204d578:
 	ldrsb r0, [r4]
 	mov r5, #0
 	cmp r0, #0
-	ldreq r4, _0204da1c ; =0x3ff00000
-	ldr r0, _0204da24 ; =data_02058214
-	ldrne r4, _0204da20 ; =0xbff00000
+	ldreq r4, _0204da1c @ =0x3ff00000
+	ldr r0, _0204da24 @ =data_02058214
+	ldrne r4, _0204da20 @ =0xbff00000
 	ldr r0, [r0]
 	bl func_02002488
 	mov r2, r5
@@ -21036,7 +21036,7 @@ _0204d630:
 	mla r6, r0, r6, r1
 	blt _0204d630
 _0204d644:
-	ldr r0, _0204da30 ; =data_020584e8
+	ldr r0, _0204da30 @ =data_020584e8
 	ldr r1, [sp, #0xc]
 	add r3, r0, r7, lsl #3
 	ldr r2, [r3, #-8]
@@ -21075,7 +21075,7 @@ _0204d6c0:
 	bl func_02001154
 	mov r3, r1
 	mov r2, r0
-	ldr r1, _0204da34 ; =0x40140000
+	ldr r1, _0204da34 @ =0x40140000
 	mov r0, #0
 	bl func_0204c614
 	mov r2, r0
@@ -21091,7 +21091,7 @@ _0204d704:
 	bl func_02001154
 	mov r3, r1
 	mov r2, r0
-	ldr r1, _0204da34 ; =0x40140000
+	ldr r1, _0204da34 @ =0x40140000
 	mov r0, #0
 	bl func_0204c614
 	mov r2, r0
@@ -21111,7 +21111,7 @@ _0204d73c:
 	bl func_0204dae4
 	cmp r0, #2
 	bne _0204d770
-	ldr r0, _0204da38 ; =0x7fefffff
+	ldr r0, _0204da38 @ =0x7fefffff
 	mvn r1, #0
 	str r1, [sp, #8]
 	str r0, [sp, #0xc]
@@ -21313,14 +21313,14 @@ _0204da38: .word 0x7fefffff
 
 	.global func_0204da3c
 	arm_func_start func_0204da3c
-func_0204da3c: ; 0x0204da3c
+func_0204da3c: @ 0x0204da3c
 	mov r3, r0, lsr #0x1
-	ldr r2, _0204dac4 ; =0x55555555
+	ldr r2, _0204dac4 @ =0x55555555
 	orr r3, r3, r1, lsl #31
 	and r3, r3, r2
 	subs ip, r0, r3
 	and r2, r2, r1, lsr #1
-	ldr r0, _0204dac8 ; =0x33333333
+	ldr r0, _0204dac8 @ =0x33333333
 	sbc r3, r1, r2
 	mov r1, ip, lsr #0x2
 	orr r1, r1, r3, lsl #30
@@ -21333,7 +21333,7 @@ func_0204da3c: ; 0x0204da3c
 	mov r0, r2, lsr #0x4
 	orr r0, r0, r1, lsl #28
 	adds r2, r2, r0
-	ldr r0, _0204dacc ; =0x0f0f0f0f
+	ldr r0, _0204dacc @ =0x0f0f0f0f
 	adc r1, r1, r1, lsr #4
 	and r3, r2, r0
 	and r2, r1, r0
@@ -21356,7 +21356,7 @@ _0204dacc: .word 0x0f0f0f0f
 
 	.global func_0204dad0
 	arm_func_start func_0204dad0
-func_0204dad0: ; 0x0204dad0
+func_0204dad0: @ 0x0204dad0
 	stmdb sp!, {r0, r1, r2, r3}
 	ldr r0, [sp, #4]
 	and r0, r0, #0x80000000
@@ -21366,15 +21366,15 @@ func_0204dad0: ; 0x0204dad0
 
 	.global func_0204dae4
 	arm_func_start func_0204dae4
-func_0204dae4: ; 0x0204dae4
+func_0204dae4: @ 0x0204dae4
 	stmdb sp!, {r0, r1, r2, r3}
 	ldr r2, [sp, #4]
-	ldr r0, _0204db4c ; =0x7ff00000
+	ldr r0, _0204db4c @ =0x7ff00000
 	ands r1, r2, r0
 	beq _0204db20
 	cmp r1, r0
 	bne _0204db40
-	ldr r0, _0204db50 ; =0x000fffff
+	ldr r0, _0204db50 @ =0x000fffff
 	tst r2, r0
 	ldreq r0, [sp]
 	add sp, sp, #0x10
@@ -21383,7 +21383,7 @@ func_0204dae4: ; 0x0204dae4
 	moveq r0, #2
 	bx lr
 _0204db20:
-	ldr r0, _0204db50 ; =0x000fffff
+	ldr r0, _0204db50 @ =0x000fffff
 	tst r2, r0
 	ldreq r0, [sp]
 	add sp, sp, #0x10
@@ -21402,7 +21402,7 @@ _0204db50: .word 0x000fffff
 
 	.global func_0204db54
 	arm_func_start func_0204db54
-func_0204db54: ; 0x0204db54
+func_0204db54: @ 0x0204db54
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r2
@@ -21418,7 +21418,7 @@ func_0204db54: ; 0x0204db54
 
 	.global func_0204db80
 	arm_func_start func_0204db80
-func_0204db80: ; 0x0204db80
+func_0204db80: @ 0x0204db80
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #8
@@ -21432,10 +21432,10 @@ func_0204db80: ; 0x0204db80
 	bl func_0202e99c
 	cmp r0, #0
 	beq _0204dbd0
-	ldr r1, _0204dbf8 ; =data_020586a0
+	ldr r1, _0204dbf8 @ =data_020586a0
 	mov r2, #1
 	stmia r0, {r1, r2}
-	ldr r1, _0204dbfc ; =data_020586b8
+	ldr r1, _0204dbfc @ =data_020586b8
 	str r2, [r0, #8]
 	str r1, [r0]
 	str r4, [r0, #0xc]
@@ -21457,7 +21457,7 @@ _0204dbfc: .word data_020586b8
 
 	.global func_0204dc00
 	arm_func_start func_0204dc00
-func_0204dc00: ; 0x0204dc00
+func_0204dc00: @ 0x0204dc00
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl _ZN9SysObjectdlEPv
@@ -21467,17 +21467,17 @@ func_0204dc00: ; 0x0204dc00
 
 	.global func_0204dc14
 	arm_func_start func_0204dc14
-func_0204dc14: ; 0x0204dc14
+func_0204dc14: @ 0x0204dc14
 	bx lr
 	arm_func_end func_0204dc14
 
 	.global func_0204dc18
 	arm_func_start func_0204dc18
-func_0204dc18: ; 0x0204dc18
+func_0204dc18: @ 0x0204dc18
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	mov r0, r1
-	ldr r1, _0204dc3c ; =data_0205863c
+	ldr r1, _0204dc3c @ =data_0205863c
 	bl func_0204f7e8
 	cmp r0, #0
 	addne r0, r4, #0xc
@@ -21489,8 +21489,8 @@ _0204dc3c: .word data_0205863c
 
 	.global func_0204dc40
 	arm_func_start func_0204dc40
-func_0204dc40: ; 0x0204dc40
-	ldr ip, _0204dc4c ; =func_0202ea18
+func_0204dc40: @ 0x0204dc40
+	ldr ip, _0204dc4c @ =func_0202ea18
 	ldr r0, [r0, #0xc]
 	bx ip
 	.align 2, 0
@@ -21499,7 +21499,7 @@ _0204dc4c: .word func_0202ea18
 
 	.global func_0204dc50
 	arm_func_start func_0204dc50
-func_0204dc50: ; 0x0204dc50
+func_0204dc50: @ 0x0204dc50
 	stmdb sp!, {r3, r4, r11, lr}
 	sub sp, sp, #0x18
 	mov r11, sp
@@ -21522,7 +21522,7 @@ _0204dc84:
 
 	.global func_0204dc90
 	arm_func_start func_0204dc90
-func_0204dc90: ; 0x0204dc90
+func_0204dc90: @ 0x0204dc90
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldr r0, [r4]
@@ -21536,7 +21536,7 @@ _0204dca8:
 
 	.global func_0204dcb0
 	arm_func_start func_0204dcb0
-func_0204dcb0: ; 0x0204dcb0
+func_0204dcb0: @ 0x0204dcb0
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl _ZN9SysObjectdlEPv
@@ -21546,20 +21546,20 @@ func_0204dcb0: ; 0x0204dcb0
 
 	.global func_0204dcc4
 	arm_func_start func_0204dcc4
-func_0204dcc4: ; 0x0204dcc4
+func_0204dcc4: @ 0x0204dcc4
 	bx lr
 	arm_func_end func_0204dcc4
 
 	.global func_0204dcc8
 	arm_func_start func_0204dcc8
-func_0204dcc8: ; 0x0204dcc8
+func_0204dcc8: @ 0x0204dcc8
 	ldr r0, [r0, #4]
 	bx lr
 	arm_func_end func_0204dcc8
 
 	.global func_0204dcd0
 	arm_func_start func_0204dcd0
-func_0204dcd0: ; 0x0204dcd0
+func_0204dcd0: @ 0x0204dcd0
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #4
@@ -21570,7 +21570,7 @@ func_0204dcd0: ; 0x0204dcd0
 
 	.global func_0204dce8
 	arm_func_start func_0204dce8
-func_0204dce8: ; 0x0204dce8
+func_0204dce8: @ 0x0204dce8
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #4
@@ -21583,7 +21583,7 @@ func_0204dce8: ; 0x0204dce8
 
 	.global func_0204dd08
 	arm_func_start func_0204dd08
-func_0204dd08: ; 0x0204dd08
+func_0204dd08: @ 0x0204dd08
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #4
@@ -21594,7 +21594,7 @@ func_0204dd08: ; 0x0204dd08
 
 	.global func_0204dd20
 	arm_func_start func_0204dd20
-func_0204dd20: ; 0x0204dd20
+func_0204dd20: @ 0x0204dd20
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	add r0, r4, #4
@@ -21607,7 +21607,7 @@ func_0204dd20: ; 0x0204dd20
 
 	.global func_0204dd40
 	arm_func_start func_0204dd40
-func_0204dd40: ; 0x0204dd40
+func_0204dd40: @ 0x0204dd40
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	ldr r1, [r4, #4]
@@ -21624,7 +21624,7 @@ func_0204dd40: ; 0x0204dd40
 
 	.global func_0204dd70
 	arm_func_start func_0204dd70
-func_0204dd70: ; 0x0204dd70
+func_0204dd70: @ 0x0204dd70
 	stmdb sp!, {r3, lr}
 	ldr r1, [r0, #8]
 	subs r1, r1, #1
@@ -21640,11 +21640,11 @@ func_0204dd70: ; 0x0204dd70
 
 	.global func_0204dd9c
 	arm_func_start func_0204dd9c
-func_0204dd9c: ; 0x0204dd9c
+func_0204dd9c: @ 0x0204dd9c
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x10
-	ldr r4, _0204de18 ; =data_02058810
-	ldr r1, _0204de1c ; =data_02058804
+	ldr r4, _0204de18 @ =data_02058810
+	ldr r1, _0204de1c @ =data_02058804
 	add r6, sp, #4
 	mov r0, r4
 	str r1, [sp, #4]
@@ -21664,9 +21664,9 @@ func_0204dd9c: ; 0x0204dd9c
 	ldr r0, [r5]
 	mov r1, r4
 	bl strcpy
-	ldr r3, _0204de20 ; =data_020587f0
-	ldr r0, _0204de24 ; =data_02058824
-	ldr r2, _0204de28 ; =func_0204dd08
+	ldr r3, _0204de20 @ =data_020587f0
+	ldr r0, _0204de24 @ =data_02058824
+	ldr r2, _0204de28 @ =func_0204dd08
 	mov r1, r6
 	str r3, [sp, #4]
 	bl func_0204fc20
@@ -21682,9 +21682,9 @@ _0204de28: .word func_0204dd08 - 1
 
 	.global func_0204de2c
 	arm_func_start func_0204de2c
-func_0204de2c: ; 0x0204de2c
+func_0204de2c: @ 0x0204de2c
 	stmdb sp!, {r3, lr}
-	ldr r3, _0204de90 ; =data_02056c98
+	ldr r3, _0204de90 @ =data_02056c98
 _0204de34:
 	ldrb r2, [r0], #1
 	cmp r2, #0
@@ -21717,8 +21717,8 @@ _0204de90: .word data_02056c98
 
 	.global func_0204de94
 	arm_func_start func_0204de94
-func_0204de94: ; 0x0204de94
-	ldr ip, _0204de9c ; =func_0204de2c
+func_0204de94: @ 0x0204de94
+	ldr ip, _0204de9c @ =func_0204de2c
 	bx ip
 	.align 2, 0
 _0204de9c: .word func_0204de2c - 1
@@ -21726,7 +21726,7 @@ _0204de9c: .word func_0204de2c - 1
 
 	.global func_0204dea0
 	arm_func_start func_0204dea0
-func_0204dea0: ; 0x0204dea0
+func_0204dea0: @ 0x0204dea0
 	str lr, [sp, #-4]!
 	mov r1, r0
 	mov r0, #3
@@ -21736,7 +21736,7 @@ func_0204dea0: ; 0x0204dea0
 
 	.global func_0204deb4
 	arm_func_start func_0204deb4
-func_0204deb4: ; 0x0204deb4
+func_0204deb4: @ 0x0204deb4
 	str lr, [sp, #-4]!
 	mov r1, #0
 	mov r0, #7
@@ -21746,7 +21746,7 @@ func_0204deb4: ; 0x0204deb4
 
 	.global func_0204dec8
 	arm_func_start func_0204dec8
-func_0204dec8: ; 0x0204dec8
+func_0204dec8: @ 0x0204dec8
 	mov r1, #0
 	mov r0, #0x18
 	swi 0x123456
@@ -21755,7 +21755,7 @@ func_0204dec8: ; 0x0204dec8
 
 	.global func_0204ded8
 	arm_func_start func_0204ded8
-func_0204ded8: ; 0x0204ded8
+func_0204ded8: @ 0x0204ded8
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r6, r2
 	ldr r5, [r6]
@@ -21782,7 +21782,7 @@ _0204df20:
 
 	.global func_0204df28
 	arm_func_start func_0204df28
-func_0204df28: ; 0x0204df28
+func_0204df28: @ 0x0204df28
 	stmdb sp!, {r4, r5, r6, lr}
 	ldr r5, [r2]
 	mov r6, r1
@@ -21802,14 +21802,14 @@ _0204df54:
 
 	.global func_0204df5c
 	arm_func_start func_0204df5c
-func_0204df5c: ; 0x0204df5c
+func_0204df5c: @ 0x0204df5c
 	mov r0, #0
 	bx lr
 	arm_func_end func_0204df5c
 
 	.global func_0204df64
 	arm_func_start func_0204df64
-func_0204df64: ; 0x0204df64
+func_0204df64: @ 0x0204df64
 	stmdb sp!, {r4, lr}
 	ldrsb r2, [r0]
 	tst r2, #1
@@ -21852,7 +21852,7 @@ _0204dfcc:
 
 	.global func_0204dff0
 	arm_func_start func_0204dff0
-func_0204dff0: ; 0x0204dff0
+func_0204dff0: @ 0x0204dff0
 	stmdb sp!, {r4, lr}
 	ldrb r2, [r0]
 	tst r2, #1
@@ -21895,7 +21895,7 @@ _0204e058:
 
 	.global func_0204e07c
 	arm_func_start func_0204e07c
-func_0204e07c: ; 0x0204e07c
+func_0204e07c: @ 0x0204e07c
 	stmdb sp!, {r4, r5, r6, lr}
 	subs r6, r1, #1
 	mov r5, #0
@@ -21928,7 +21928,7 @@ _0204e0d8:
 
 	.global func_0204e0e0
 	arm_func_start func_0204e0e0
-func_0204e0e0: ; 0x0204e0e0
+func_0204e0e0: @ 0x0204e0e0
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0xc
 	mov r4, r0
@@ -21944,7 +21944,7 @@ func_0204e0e0: ; 0x0204e0e0
 	ldmeqia sp!, {r4, r5, r6, r7, r8, r9, pc}
 	ldr r0, [r9, #0xc]
 	ldr r1, [r9, #0x10]
-	ldr r3, _0204e1e4 ; =0x2aaaaaab
+	ldr r3, _0204e1e4 @ =0x2aaaaaab
 	sub r5, r1, r0
 	smull r2, r1, r3, r5
 	mov r3, r5, lsr #0x1f
@@ -22001,7 +22001,7 @@ _0204e1e4: .word 0x2aaaaaab
 
 	.global func_0204e1e8
 	arm_func_start func_0204e1e8
-func_0204e1e8: ; 0x0204e1e8
+func_0204e1e8: @ 0x0204e1e8
 	ldr r0, [r0, #8]
 	cmp r0, #0
 	ldrneb r0, [r0]
@@ -22013,7 +22013,7 @@ func_0204e1e8: ; 0x0204e1e8
 
 	.global func_0204e204
 	arm_func_start func_0204e204
-func_0204e204: ; 0x0204e204
+func_0204e204: @ 0x0204e204
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0xa0
 	mov r4, r0
@@ -22047,27 +22047,27 @@ _0204e26c:
 	cmp r0, #0x13
 	addls pc, pc, r0, lsl #2
 	b _0204e530
-_0204e27c: ; jump table
-	b _0204e530 ; case 0
-	b _0204e530 ; case 1
-	b _0204e2cc ; case 2
-	b _0204e2e4 ; case 3
-	b _0204e304 ; case 4
-	b _0204e31c ; case 5
-	b _0204e344 ; case 6
-	b _0204e364 ; case 7
-	b _0204e384 ; case 8
-	b _0204e3ac ; case 9
-	b _0204e3dc ; case 10
-	b _0204e3f4 ; case 11
-	b _0204e414 ; case 12
-	b _0204e430 ; case 13
-	b _0204e530 ; case 14
-	b _0204e444 ; case 15
-	b _0204e470 ; case 16
-	b _0204e4bc ; case 17
-	b _0204e4f0 ; case 18
-	b _0204e51c ; case 19
+_0204e27c: @ jump table
+	b _0204e530 @ case 0
+	b _0204e530 @ case 1
+	b _0204e2cc @ case 2
+	b _0204e2e4 @ case 3
+	b _0204e304 @ case 4
+	b _0204e31c @ case 5
+	b _0204e344 @ case 6
+	b _0204e364 @ case 7
+	b _0204e384 @ case 8
+	b _0204e3ac @ case 9
+	b _0204e3dc @ case 10
+	b _0204e3f4 @ case 11
+	b _0204e414 @ case 12
+	b _0204e430 @ case 13
+	b _0204e530 @ case 14
+	b _0204e444 @ case 15
+	b _0204e470 @ case 16
+	b _0204e4bc @ case 17
+	b _0204e4f0 @ case 18
+	b _0204e51c @ case 19
 _0204e2cc:
 	add r1, sp, #0x9c
 	add r0, r2, #1
@@ -22268,7 +22268,7 @@ _0204e558:
 
 	.global func_0204e58c
 	arm_func_start func_0204e58c
-func_0204e58c: ; 0x0204e58c
+func_0204e58c: @ 0x0204e58c
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xa4
 	mov r9, r0
@@ -22300,27 +22300,27 @@ _0204e5e8:
 	cmp r0, #0x13
 	addls pc, pc, r0, lsl #2
 	b _0204ee20
-_0204e5fc: ; jump table
-	b _0204ee20 ; case 0
-	b _0204e64c ; case 1
-	b _0204e66c ; case 2
-	b _0204e6b8 ; case 3
-	b _0204e738 ; case 4
-	b _0204e798 ; case 5
-	b _0204e81c ; case 6
-	b _0204e88c ; case 7
-	b _0204e8fc ; case 8
-	b _0204e9a4 ; case 9
-	b _0204ea58 ; case 10
-	b _0204eab4 ; case 11
-	b _0204eb44 ; case 12
-	b _0204eb70 ; case 13
-	b _0204ee20 ; case 14
-	b _0204ebbc ; case 15
-	b _0204ebf8 ; case 16
-	b _0204ec9c ; case 17
-	b _0204ed48 ; case 18
-	b _0204ee0c ; case 19
+_0204e5fc: @ jump table
+	b _0204ee20 @ case 0
+	b _0204e64c @ case 1
+	b _0204e66c @ case 2
+	b _0204e6b8 @ case 3
+	b _0204e738 @ case 4
+	b _0204e798 @ case 5
+	b _0204e81c @ case 6
+	b _0204e88c @ case 7
+	b _0204e8fc @ case 8
+	b _0204e9a4 @ case 9
+	b _0204ea58 @ case 10
+	b _0204eab4 @ case 11
+	b _0204eb44 @ case 12
+	b _0204eb70 @ case 13
+	b _0204ee20 @ case 14
+	b _0204ebbc @ case 15
+	b _0204ebf8 @ case 16
+	b _0204ec9c @ case 17
+	b _0204ed48 @ case 18
+	b _0204ee0c @ case 19
 _0204e64c:
 	add r1, sp, #0xa0
 	add r0, r2, #1
@@ -22880,7 +22880,7 @@ _0204ee34:
 
 	.global func_0204ee3c
 	arm_func_start func_0204ee3c
-func_0204ee3c: ; 0x0204ee3c
+func_0204ee3c: @ 0x0204ee3c
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0x8c
 	ldr r2, [r1]
@@ -22927,26 +22927,26 @@ _0204eee0:
 	cmp r0, #0x12
 	addls pc, pc, r0, lsl #2
 	b _0204ef38
-_0204eeec: ; jump table
-	b _0204ef44 ; case 0
-	b _0204ef38 ; case 1
-	b _0204ef44 ; case 2
-	b _0204ef44 ; case 3
-	b _0204ef44 ; case 4
-	b _0204ef44 ; case 5
-	b _0204ef44 ; case 6
-	b _0204ef44 ; case 7
-	b _0204ef44 ; case 8
-	b _0204ef44 ; case 9
-	b _0204ef44 ; case 10
-	b _0204ef44 ; case 11
-	b _0204ef44 ; case 12
-	b _0204ef50 ; case 13
-	b _0204ef38 ; case 14
-	b _0204ef44 ; case 15
-	b _0204ef44 ; case 16
-	b _0204ef44 ; case 17
-	b _0204ef44 ; case 18
+_0204eeec: @ jump table
+	b _0204ef44 @ case 0
+	b _0204ef38 @ case 1
+	b _0204ef44 @ case 2
+	b _0204ef44 @ case 3
+	b _0204ef44 @ case 4
+	b _0204ef44 @ case 5
+	b _0204ef44 @ case 6
+	b _0204ef44 @ case 7
+	b _0204ef44 @ case 8
+	b _0204ef44 @ case 9
+	b _0204ef44 @ case 10
+	b _0204ef44 @ case 11
+	b _0204ef44 @ case 12
+	b _0204ef50 @ case 13
+	b _0204ef38 @ case 14
+	b _0204ef44 @ case 15
+	b _0204ef44 @ case 16
+	b _0204ef44 @ case 17
+	b _0204ef44 @ case 18
 _0204ef38:
 	add sp, sp, #0x8c
 	mov r0, #0
@@ -22976,7 +22976,7 @@ _0204ef50:
 
 	.global func_0204ef90
 	arm_func_start func_0204ef90
-func_0204ef90: ; 0x0204ef90
+func_0204ef90: @ 0x0204ef90
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #8
 	mov r6, r1
@@ -23016,7 +23016,7 @@ _0204f008:
 
 	.global func_0204f014
 	arm_func_start func_0204f014
-func_0204f014: ; 0x0204f014
+func_0204f014: @ 0x0204f014
 	stmdb sp!, {r4, r11, lr}
 	sub sp, sp, #0x2c
 	mov r11, sp
@@ -23040,14 +23040,14 @@ _0204f030:
     beq _0204f068
     bl func_0204fc68
 _0204f068:
-    ldr r0, data_0204f0ac ; =data_020588a8
+    ldr r0, data_0204f0ac @ =data_020588a8
     add r1, r11, #0x1c
     bl func_0204ef90
     cmp r0, #0
     beq _0204f094
-    ldr r3, data_0204f0b0 ; =data_0205889c
-    ldr r0, data_0204f0b4 ; =data_020588c0
-    ldr r2, data_0204f0b8 ; =data_0204f0bc
+    ldr r3, data_0204f0b0 @ =data_0205889c
+    ldr r0, data_0204f0b4 @ =data_020588c0
+    ldr r2, data_0204f0b8 @ =data_0204f0bc
     add r1, r11, #0
     str r3, [r11]
     bl func_0204fc20
@@ -23060,28 +23060,28 @@ _0204f0a0:
 	add sp, r11, #0x2c
 	ldmia sp!, {r4, r11, pc}
 	.global data_0204f0ac
-data_0204f0ac: ; 0x0204f0ac
+data_0204f0ac: @ 0x0204f0ac
     .word data_020588a8
 	.global data_0204f0b0
-data_0204f0b0: ; 0x0204f0b0
+data_0204f0b0: @ 0x0204f0b0
     .word data_0205889c
 	.global data_0204f0b4
-data_0204f0b4: ; 0x0204f0b4
+data_0204f0b4: @ 0x0204f0b4
     .word data_020588c0
 	.global data_0204f0b8
-data_0204f0b8: ; 0x0204f0b8
+data_0204f0b8: @ 0x0204f0b8
     .word func_0204f0bc - 1
 	arm_func_end func_0204f014
 
 	.global func_0204f0bc
 	arm_func_start func_0204f0bc
-func_0204f0bc: ; 0x0204f0bc
+func_0204f0bc: @ 0x0204f0bc
 	bx lr
 	arm_func_end func_0204f0bc
 
 	.global func_0204f0c0
 	arm_func_start func_0204f0c0
-func_0204f0c0: ; 0x0204f0c0
+func_0204f0c0: @ 0x0204f0c0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r4, r3
 	mov r5, r2
@@ -23110,7 +23110,7 @@ func_0204f0c0: ; 0x0204f0c0
 
 	.global func_0204f120
 	arm_func_start func_0204f120
-func_0204f120: ; 0x0204f120
+func_0204f120: @ 0x0204f120
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xa4
 	mov r5, r1
@@ -23163,27 +23163,27 @@ _0204f1dc:
 	cmp r0, #0x13
 	addls pc, pc, r0, lsl #2
 	b _0204f2dc
-_0204f1e8: ; jump table
-	b _0204f2e4 ; case 0
-	b _0204f2dc ; case 1
-	b _0204f2e4 ; case 2
-	b _0204f2e4 ; case 3
-	b _0204f2e4 ; case 4
-	b _0204f2e4 ; case 5
-	b _0204f2e4 ; case 6
-	b _0204f2e4 ; case 7
-	b _0204f2e4 ; case 8
-	b _0204f2e4 ; case 9
-	b _0204f2e4 ; case 10
-	b _0204f2e4 ; case 11
-	b _0204f238 ; case 12
-	b _0204f2e4 ; case 13
-	b _0204f2dc ; case 14
-	b _0204f28c ; case 15
-	b _0204f2e4 ; case 16
-	b _0204f2e4 ; case 17
-	b _0204f2e4 ; case 18
-	b _0204f2e4 ; case 19
+_0204f1e8: @ jump table
+	b _0204f2e4 @ case 0
+	b _0204f2dc @ case 1
+	b _0204f2e4 @ case 2
+	b _0204f2e4 @ case 3
+	b _0204f2e4 @ case 4
+	b _0204f2e4 @ case 5
+	b _0204f2e4 @ case 6
+	b _0204f2e4 @ case 7
+	b _0204f2e4 @ case 8
+	b _0204f2e4 @ case 9
+	b _0204f2e4 @ case 10
+	b _0204f2e4 @ case 11
+	b _0204f238 @ case 12
+	b _0204f2e4 @ case 13
+	b _0204f2dc @ case 14
+	b _0204f28c @ case 15
+	b _0204f2e4 @ case 16
+	b _0204f2e4 @ case 17
+	b _0204f2e4 @ case 18
+	b _0204f2e4 @ case 19
 _0204f238:
 	ldr lr, [sp, #0x24]
 	mov r1, r9
@@ -23242,7 +23242,7 @@ _0204f2f0:
 
 	.global func_0204f2fc
 	arm_func_start func_0204f2fc
-func_0204f2fc: ; 0x0204f2fc
+func_0204f2fc: @ 0x0204f2fc
 	stmdb sp!, {r3, lr}
 	ldr lr, [r0, #0x18]
 	ldr ip, [r0, #4]
@@ -23270,7 +23270,7 @@ func_0204f2fc: ; 0x0204f2fc
 
     .global func_0204f358
     arm_func_start func_0204f358
-func_0204f358: ; 0x0304f358
+func_0204f358: @ 0x0304f358
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x28
 	mov r5, r0
@@ -23336,7 +23336,7 @@ _0204f3bc:
 
 	.global func_0204f444
 	arm_func_start func_0204f444
-func_0204f444: ; 0x0204f444
+func_0204f444: @ 0x0204f444
 	stmdb sp!, {r3, lr}
 	ldr r1, [r0]
 	cmp r1, #0
@@ -23351,7 +23351,7 @@ func_0204f444: ; 0x0204f444
 
 	.global func_0204f46c
 	arm_func_start func_0204f46c
-func_0204f46c: ; 0x0204f46c
+func_0204f46c: @ 0x0204f46c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl _ZN9SysObjectdlEPv
@@ -23361,8 +23361,8 @@ func_0204f46c: ; 0x0204f46c
 
 	.global func_0204f480
 	arm_func_start func_0204f480
-func_0204f480: ; 0x0204f480
-	ldr r0, _0204f488 ; =data_02058870
+func_0204f480: @ 0x0204f480
+	ldr r0, _0204f488 @ =data_02058870
 	bx lr
 	.align 2, 0
 _0204f488: .word data_02058870
@@ -23370,9 +23370,9 @@ _0204f488: .word data_02058870
 
 	.global func_0204f48c
 	arm_func_start func_0204f48c
-func_0204f48c: ; 0x0204f48c
+func_0204f48c: @ 0x0204f48c
 	stmdb sp!, {r4, lr}
-	ldr r4, _0204f4b4 ; =data_0205725c
+	ldr r4, _0204f4b4 @ =data_0205725c
 	b _0204f4a0
 _0204f498:
 	blx r0
@@ -23389,9 +23389,9 @@ _0204f4b4: .word data_0205725c
 
 	.global func_0204f4b8
 	arm_func_start func_0204f4b8
-func_0204f4b8: ; 0x0204f4b8
+func_0204f4b8: @ 0x0204f4b8
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r4, _0204f4f8 ; =__global_destructor_chain
+	ldr r4, _0204f4f8 @ =__global_destructor_chain
 	ldr r2, [r4]
 	cmp r2, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
@@ -23413,7 +23413,7 @@ _0204f4f8: .word __global_destructor_chain
 
 	.global func_0204f4fc
 	arm_func_start func_0204f4fc
-func_0204f4fc: ; 0x0204f4fc
+func_0204f4fc: @ 0x0204f4fc
 	stmdb sp!, {r4, r5, r6, r7, r11, lr}
 	sub sp, sp, #0x18
 	mov r11, sp
@@ -23437,7 +23437,7 @@ _0204f528:
 
 	.global func_0204f544
 	arm_func_start func_0204f544
-func_0204f544: ; 0x0204f544
+func_0204f544: @ 0x0204f544
 	bl func_0204f8a4
 	add r0, r11, #0
 	bl func_0204f444
@@ -23447,7 +23447,7 @@ func_0204f544: ; 0x0204f544
 
 	.global func_0204f558
 	arm_func_start func_0204f558
-func_0204f558: ; 0x0204f558
+func_0204f558: @ 0x0204f558
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r11, lr}
 	sub sp, sp, #0x18
 	mov r11, sp
@@ -23505,7 +23505,7 @@ _0204f608:
 
 	.global func_0204f614
 	arm_func_start func_0204f614
-func_0204f614: ; 0x0204f614
+func_0204f614: @ 0x0204f614
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r11, lr}
 	sub sp, sp, #0x18
 	mov r11, sp
@@ -23557,7 +23557,7 @@ _0204f6a8:
 
 	.global func_0204f6c4
 	arm_func_start func_0204f6c4
-func_0204f6c4: ; 0x0204f6c4
+func_0204f6c4: @ 0x0204f6c4
 	stmdb sp!, {r4, r5, r6, r7, r11, lr}
 	sub sp, sp, #0x30
 	mov r11, sp
@@ -23602,7 +23602,7 @@ _0204f740:
 
 	.global func_0204f754
 	arm_func_start func_0204f754
-func_0204f754: ; 0x0204f754
+func_0204f754: @ 0x0204f754
 	stmdb sp!, {r4, r5, r6, r7, r11, lr}
 	sub sp, sp, #0x18
 	mov r11, sp
@@ -23632,7 +23632,7 @@ _0204f79c:
 
 	.global func_0204f7b0
 	arm_func_start func_0204f7b0
-func_0204f7b0: ; 0x0204f7b0
+func_0204f7b0: @ 0x0204f7b0
 	stmdb sp!, {r3, r4, r5, lr}
 	movs r5, r0
 	mov r4, r2
@@ -23651,13 +23651,13 @@ _0204f7d8:
 
 	.global func_0204f7e4
 	arm_func_start func_0204f7e4
-func_0204f7e4: ; 0x0204f7e4
+func_0204f7e4: @ 0x0204f7e4
 	bx lr
 	arm_func_end func_0204f7e4
 
 	.global func_0204f7e8
 	arm_func_start func_0204f7e8
-func_0204f7e8: ; 0x0204f7e8
+func_0204f7e8: @ 0x0204f7e8
 	stmdb sp!, {r3, lr}
 	cmp r0, r1
 	beq _0204f808
@@ -23676,7 +23676,7 @@ _0204f810:
 
 	.global func_0204f818
 	arm_func_start func_0204f818
-func_0204f818: ; 0x0204f818
+func_0204f818: @ 0x0204f818
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_0204f7e4
@@ -23686,7 +23686,7 @@ func_0204f818: ; 0x0204f818
 
 	.global func_0204f82c
 	arm_func_start func_0204f82c
-func_0204f82c: ; 0x0204f82c
+func_0204f82c: @ 0x0204f82c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_0204f7e4
@@ -23698,7 +23698,7 @@ func_0204f82c: ; 0x0204f82c
 
 	.global func_0204f848
 	arm_func_start func_0204f848
-func_0204f848: ; 0x0204f848
+func_0204f848: @ 0x0204f848
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_0204f7e4
@@ -23708,7 +23708,7 @@ func_0204f848: ; 0x0204f848
 
 	.global func_0204f85c
 	arm_func_start func_0204f85c
-func_0204f85c: ; 0x0204f85c
+func_0204f85c: @ 0x0204f85c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_0204f848
@@ -23718,7 +23718,7 @@ func_0204f85c: ; 0x0204f85c
 
 	.global func_0204f870
 	arm_func_start func_0204f870
-func_0204f870: ; 0x0204f870
+func_0204f870: @ 0x0204f870
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl func_0204f848
@@ -23730,8 +23730,8 @@ func_0204f870: ; 0x0204f870
 
 	.global func_0204f88c
 	arm_func_start func_0204f88c
-func_0204f88c: ; 0x0204f88c
-	ldr ip, _0204f894 ; =func_02042d50
+func_0204f88c: @ 0x0204f88c
+	ldr ip, _0204f894 @ =func_02042d50
 	bx ip
 	.align 2, 0
 _0204f894: .word func_02042d50 - 1
@@ -23739,8 +23739,8 @@ _0204f894: .word func_02042d50 - 1
 
 	.global func_0204f898
 	arm_func_start func_0204f898
-func_0204f898: ; 0x0204f898
-	ldr ip, _0204f8a0 ; =func_0204f8a4
+func_0204f898: @ 0x0204f898
+	ldr ip, _0204f8a0 @ =func_0204f8a4
 	bx ip
 	.align 2, 0
 _0204f8a0: .word func_0204f8a4 - 1
@@ -23748,9 +23748,9 @@ _0204f8a0: .word func_0204f8a4 - 1
 
 	.global func_0204f8a4
 	arm_func_start func_0204f8a4
-func_0204f8a4: ; 0x0204f8a4
+func_0204f8a4: @ 0x0204f8a4
 	stmdb sp!, {r3, lr}
-	ldr r0, _0204f8b8 ; =data_02058b1c
+	ldr r0, _0204f8b8 @ =data_02058b1c
 	ldr r0, [r0]
 	blx r0
 	ldmia sp!, {r3, pc}
@@ -23760,9 +23760,9 @@ _0204f8b8: .word data_02058b1c
 
 	.global func_0204f8bc
 	arm_func_start func_0204f8bc
-func_0204f8bc: ; 0x0204f8bc
+func_0204f8bc: @ 0x0204f8bc
 	stmdb sp!, {r3, lr}
-	ldr r0, _0204f8d0 ; =data_02058b1c
+	ldr r0, _0204f8d0 @ =data_02058b1c
 	ldr r0, [r0, #4]
 	blx r0
 	ldmia sp!, {r3, pc}
@@ -23770,54 +23770,54 @@ func_0204f8bc: ; 0x0204f8bc
 _0204f8d0: .word data_02058b1c
 	arm_func_end func_0204f8bc
 
-    .rodata
+    .section .rodata
 	.global data_02056c24
-data_02056c24: ; 0x02056c24
+data_02056c24: @ 0x02056c24
 	.byte 0x0a
 	.global data_02056c25
-data_02056c25: ; 0x02056c25
+data_02056c25: @ 0x02056c25
 	.byte 0x1e, 0x10, 0x00, 0x06, 0x00, 0x04, 0x04, 0xf0, 0xf0, 0x00, 0x00
 .ifdef EUR
 	.global gpBuildDate
-gpBuildDate: ; 0x02056c30
+gpBuildDate: @ 0x02056c30
     .word gBuildDate
 .endif
 	.global data_02056c34
-data_02056c34: ; 0x02056c34
+data_02056c34: @ 0x02056c34
     .word func_02040fc4
 	.global data_02056c38
-data_02056c38: ; 0x02056c38
+data_02056c38: @ 0x02056c38
     .word func_02040fdc
 	.global data_02056c3c
-data_02056c3c: ; 0x02056c3c
+data_02056c3c: @ 0x02056c3c
     .word func_02040ff4
 	.global data_02056c40
-data_02056c40: ; 0x02056c40
+data_02056c40: @ 0x02056c40
     .word func_02041058
 	.global data_02056c44
-data_02056c44: ; 0x02056c44
+data_02056c44: @ 0x02056c44
     .word func_02041100
 	.global data_02056c48
-data_02056c48: ; 0x02056c48
+data_02056c48: @ 0x02056c48
     .word func_02041230
 	.global data_02056c4c
-data_02056c4c: ; 0x02056c4c
+data_02056c4c: @ 0x02056c4c
     .word func_020414b4
 	.global data_02056c50
-data_02056c50: ; 0x02056c50
+data_02056c50: @ 0x02056c50
     .word func_020414f8
 	.global data_02056c54
-data_02056c54: ; 0x02056c54
+data_02056c54: @ 0x02056c54
     .word func_0204150c
 	.global data_02056c58
-data_02056c58: ; 0x02056c58
+data_02056c58: @ 0x02056c58
 	.byte 0x21, 0x06, 0xc0, 0xde, 0xba, 0x98, 0xce, 0x3f
 	.byte 0xa6, 0x92, 0xe3, 0x9d, 0x46, 0xf2, 0xed, 0x01, 0x76, 0xe3, 0xcc, 0x08, 0x56, 0x23, 0x63, 0xfa
 	.byte 0xca, 0xd4, 0xec, 0xdf, 0x9a, 0x62, 0x78, 0x34, 0x8f, 0x6d, 0x63, 0x3c, 0xfe, 0x22, 0xca, 0x92
 	.byte 0x20, 0x88, 0x97, 0x23, 0xd2, 0xcf, 0xae, 0xc2, 0x32, 0x67, 0x8d, 0xfe, 0xca, 0x83, 0x64, 0x98
 	.byte 0xac, 0xfd, 0x3e, 0x37, 0x87, 0x46, 0x58, 0x24
 	.global data_02056c98
-data_02056c98: ; 0x02056c98
+data_02056c98: @ 0x02056c98
 	.byte 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07
 	.byte 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17
 	.byte 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27
@@ -23828,7 +23828,7 @@ data_02056c98: ; 0x02056c98
 	.byte 0x68, 0x69, 0x6a, 0x6b, 0x6c, 0x6d, 0x6e, 0x6f, 0x70, 0x71, 0x72, 0x73, 0x74, 0x75, 0x76, 0x77
 	.byte 0x78, 0x79, 0x7a, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f
 	.global data_02056d18
-data_02056d18: ; 0x02056d18
+data_02056d18: @ 0x02056d18
 	.byte 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07
 	.byte 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, 0x10, 0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17
 	.byte 0x18, 0x19, 0x1a, 0x1b, 0x1c, 0x1d, 0x1e, 0x1f, 0x20, 0x21, 0x22, 0x23, 0x24, 0x25, 0x26, 0x27
@@ -23839,7 +23839,7 @@ data_02056d18: ; 0x02056d18
 	.byte 0x48, 0x49, 0x4a, 0x4b, 0x4c, 0x4d, 0x4e, 0x4f, 0x50, 0x51, 0x52, 0x53, 0x54, 0x55, 0x56, 0x57
 	.byte 0x58, 0x59, 0x5a, 0x7b, 0x7c, 0x7d, 0x7e, 0x7f
 	.global data_02056d98
-data_02056d98: ; 0x02056d98
+data_02056d98: @ 0x02056d98
 	.byte 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00
 	.byte 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x06, 0x01, 0x04, 0x01, 0x04, 0x01
 	.byte 0x04, 0x01, 0x04, 0x01, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00
@@ -23858,430 +23858,430 @@ data_02056d98: ; 0x02056d98
 	.byte 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0xd0, 0x00
 	.byte 0xd0, 0x00, 0xd0, 0x00, 0xd0, 0x00, 0x04, 0x00
 	.global data_02056e98
-data_02056e98: ; 0x02056e98
+data_02056e98: @ 0x02056e98
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056e9c
-data_02056e9c: ; 0x02056e9c
+data_02056e9c: @ 0x02056e9c
 	.byte 0xff, 0xff, 0xff, 0x7f
 	.global data_02056ea0
-data_02056ea0: ; 0x02056ea0
+data_02056ea0: @ 0x02056ea0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056ea4
-data_02056ea4: ; 0x02056ea4
+data_02056ea4: @ 0x02056ea4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056ea8
-data_02056ea8: ; 0x02056ea8
+data_02056ea8: @ 0x02056ea8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056eac
-data_02056eac: ; 0x02056eac
+data_02056eac: @ 0x02056eac
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056eb0
-data_02056eb0: ; 0x02056eb0
+data_02056eb0: @ 0x02056eb0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056eb4
-data_02056eb4: ; 0x02056eb4
+data_02056eb4: @ 0x02056eb4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056eb8
-data_02056eb8: ; 0x02056eb8
+data_02056eb8: @ 0x02056eb8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056ebc
-data_02056ebc: ; 0x02056ebc
+data_02056ebc: @ 0x02056ebc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02056ec0
-data_02056ec0: ; 0x02056ec0
+data_02056ec0: @ 0x02056ec0
 	.ascii "NAN("
 	.byte 0x00
 	.global data_02056ec5
-data_02056ec5: ; 0x02056ec5
+data_02056ec5: @ 0x02056ec5
 	.ascii "INFINITY"
 	.byte 0x00, 0x00, 0x00
 	.byte 0x00
 	.global data_02056ed1
-data_02056ed1: ; 0x02056ed1
+data_02056ed1: @ 0x02056ed1
 	.byte 0x00
 	.global data_02056ed2
-data_02056ed2: ; 0x02056ed2
+data_02056ed2: @ 0x02056ed2
 	.byte 0x01, 0x00
 	.global data_02056ed4
-data_02056ed4: ; 0x02056ed4
+data_02056ed4: @ 0x02056ed4
 	.byte 0x02, 0x00
 	.global data_02056ed6
-data_02056ed6: ; 0x02056ed6
+data_02056ed6: @ 0x02056ed6
 	.byte 0x03, 0x00
 	.global data_02056ed8
-data_02056ed8: ; 0x02056ed8
+data_02056ed8: @ 0x02056ed8
 	.byte 0x04, 0x00
 	.global data_02056eda
-data_02056eda: ; 0x02056eda
+data_02056eda: @ 0x02056eda
 	.byte 0x05, 0x00
 	.global data_02056edc
-data_02056edc: ; 0x02056edc
+data_02056edc: @ 0x02056edc
 	.byte 0x06, 0x00
 	.global data_02056ede
-data_02056ede: ; 0x02056ede
+data_02056ede: @ 0x02056ede
 	.byte 0x07, 0x00
 	.global data_02056ee0
-data_02056ee0: ; 0x02056ee0
+data_02056ee0: @ 0x02056ee0
 	.byte 0x08, 0x00
 	.global data_02056ee2
-data_02056ee2: ; 0x02056ee2
+data_02056ee2: @ 0x02056ee2
 	.byte 0x09, 0x00
 	.global data_02056ee4
-data_02056ee4: ; 0x02056ee4
+data_02056ee4: @ 0x02056ee4
 	.byte 0x0a, 0x00
 	.global data_02056ee6
-data_02056ee6: ; 0x02056ee6
+data_02056ee6: @ 0x02056ee6
 	.byte 0x0b, 0x00
 	.global data_02056ee8
-data_02056ee8: ; 0x02056ee8
+data_02056ee8: @ 0x02056ee8
 	.byte 0x0c, 0x00
 	.global data_02056eea
-data_02056eea: ; 0x02056eea
+data_02056eea: @ 0x02056eea
 	.byte 0x0d, 0x00
 	.global data_02056eec
-data_02056eec: ; 0x02056eec
+data_02056eec: @ 0x02056eec
 	.byte 0x0e, 0x00
 	.global data_02056eee
-data_02056eee: ; 0x02056eee
+data_02056eee: @ 0x02056eee
 	.byte 0x0f, 0x00
 	.global data_02056ef0
-data_02056ef0: ; 0x02056ef0
+data_02056ef0: @ 0x02056ef0
 	.byte 0x10, 0x00
 	.global data_02056ef2
-data_02056ef2: ; 0x02056ef2
+data_02056ef2: @ 0x02056ef2
 	.byte 0x11, 0x00
 	.global data_02056ef4
-data_02056ef4: ; 0x02056ef4
+data_02056ef4: @ 0x02056ef4
 	.byte 0x12, 0x00
 	.global data_02056ef6
-data_02056ef6: ; 0x02056ef6
+data_02056ef6: @ 0x02056ef6
 	.byte 0x13, 0x00
 	.global data_02056ef8
-data_02056ef8: ; 0x02056ef8
+data_02056ef8: @ 0x02056ef8
 	.byte 0x14, 0x00
 	.global data_02056efa
-data_02056efa: ; 0x02056efa
+data_02056efa: @ 0x02056efa
 	.byte 0x15, 0x00
 	.global data_02056efc
-data_02056efc: ; 0x02056efc
+data_02056efc: @ 0x02056efc
 	.byte 0x16, 0x00
 	.global data_02056efe
-data_02056efe: ; 0x02056efe
+data_02056efe: @ 0x02056efe
 	.byte 0x17, 0x00
 	.global data_02056f00
-data_02056f00: ; 0x02056f00
+data_02056f00: @ 0x02056f00
 	.byte 0x18, 0x00
 	.global data_02056f02
-data_02056f02: ; 0x02056f02
+data_02056f02: @ 0x02056f02
 	.byte 0x19, 0x00
 	.global data_02056f04
-data_02056f04: ; 0x02056f04
+data_02056f04: @ 0x02056f04
 	.byte 0x1a, 0x00
 	.global data_02056f06
-data_02056f06: ; 0x02056f06
+data_02056f06: @ 0x02056f06
 	.byte 0x1b, 0x00
 	.global data_02056f08
-data_02056f08: ; 0x02056f08
+data_02056f08: @ 0x02056f08
 	.byte 0x1c, 0x00
 	.global data_02056f0a
-data_02056f0a: ; 0x02056f0a
+data_02056f0a: @ 0x02056f0a
 	.byte 0x1d, 0x00
 	.global data_02056f0c
-data_02056f0c: ; 0x02056f0c
+data_02056f0c: @ 0x02056f0c
 	.byte 0x1e, 0x00
 	.global data_02056f0e
-data_02056f0e: ; 0x02056f0e
+data_02056f0e: @ 0x02056f0e
 	.byte 0x1f, 0x00
 	.global data_02056f10
-data_02056f10: ; 0x02056f10
+data_02056f10: @ 0x02056f10
 	.byte 0x20, 0x00
 	.global data_02056f12
-data_02056f12: ; 0x02056f12
+data_02056f12: @ 0x02056f12
 	.byte 0x21, 0x00
 	.global data_02056f14
-data_02056f14: ; 0x02056f14
+data_02056f14: @ 0x02056f14
 	.byte 0x22, 0x00
 	.global data_02056f16
-data_02056f16: ; 0x02056f16
+data_02056f16: @ 0x02056f16
 	.byte 0x23, 0x00
 	.global data_02056f18
-data_02056f18: ; 0x02056f18
+data_02056f18: @ 0x02056f18
 	.byte 0x24, 0x00
 	.global data_02056f1a
-data_02056f1a: ; 0x02056f1a
+data_02056f1a: @ 0x02056f1a
 	.byte 0x25, 0x00
 	.global data_02056f1c
-data_02056f1c: ; 0x02056f1c
+data_02056f1c: @ 0x02056f1c
 	.byte 0x26, 0x00
 	.global data_02056f1e
-data_02056f1e: ; 0x02056f1e
+data_02056f1e: @ 0x02056f1e
 	.byte 0x27, 0x00
 	.global data_02056f20
-data_02056f20: ; 0x02056f20
+data_02056f20: @ 0x02056f20
 	.byte 0x28, 0x00
 	.global data_02056f22
-data_02056f22: ; 0x02056f22
+data_02056f22: @ 0x02056f22
 	.byte 0x29, 0x00
 	.global data_02056f24
-data_02056f24: ; 0x02056f24
+data_02056f24: @ 0x02056f24
 	.byte 0x2a, 0x00
 	.global data_02056f26
-data_02056f26: ; 0x02056f26
+data_02056f26: @ 0x02056f26
 	.byte 0x2b, 0x00
 	.global data_02056f28
-data_02056f28: ; 0x02056f28
+data_02056f28: @ 0x02056f28
 	.byte 0x2c, 0x00
 	.global data_02056f2a
-data_02056f2a: ; 0x02056f2a
+data_02056f2a: @ 0x02056f2a
 	.byte 0x2d, 0x00
 	.global data_02056f2c
-data_02056f2c: ; 0x02056f2c
+data_02056f2c: @ 0x02056f2c
 	.byte 0x2e, 0x00
 	.global data_02056f2e
-data_02056f2e: ; 0x02056f2e
+data_02056f2e: @ 0x02056f2e
 	.byte 0x2f, 0x00
 	.global data_02056f30
-data_02056f30: ; 0x02056f30
+data_02056f30: @ 0x02056f30
 	.byte 0x30, 0x00
 	.global data_02056f32
-data_02056f32: ; 0x02056f32
+data_02056f32: @ 0x02056f32
 	.byte 0x31, 0x00
 	.global data_02056f34
-data_02056f34: ; 0x02056f34
+data_02056f34: @ 0x02056f34
 	.byte 0x32, 0x00
 	.global data_02056f36
-data_02056f36: ; 0x02056f36
+data_02056f36: @ 0x02056f36
 	.byte 0x33, 0x00
 	.global data_02056f38
-data_02056f38: ; 0x02056f38
+data_02056f38: @ 0x02056f38
 	.byte 0x34, 0x00
 	.global data_02056f3a
-data_02056f3a: ; 0x02056f3a
+data_02056f3a: @ 0x02056f3a
 	.byte 0x35, 0x00
 	.global data_02056f3c
-data_02056f3c: ; 0x02056f3c
+data_02056f3c: @ 0x02056f3c
 	.byte 0x36, 0x00
 	.global data_02056f3e
-data_02056f3e: ; 0x02056f3e
+data_02056f3e: @ 0x02056f3e
 	.byte 0x37, 0x00
 	.global data_02056f40
-data_02056f40: ; 0x02056f40
+data_02056f40: @ 0x02056f40
 	.byte 0x38, 0x00
 	.global data_02056f42
-data_02056f42: ; 0x02056f42
+data_02056f42: @ 0x02056f42
 	.byte 0x39, 0x00
 	.global data_02056f44
-data_02056f44: ; 0x02056f44
+data_02056f44: @ 0x02056f44
 	.byte 0x3a, 0x00
 	.global data_02056f46
-data_02056f46: ; 0x02056f46
+data_02056f46: @ 0x02056f46
 	.byte 0x3b, 0x00
 	.global data_02056f48
-data_02056f48: ; 0x02056f48
+data_02056f48: @ 0x02056f48
 	.byte 0x3c, 0x00
 	.global data_02056f4a
-data_02056f4a: ; 0x02056f4a
+data_02056f4a: @ 0x02056f4a
 	.byte 0x3d, 0x00
 	.global data_02056f4c
-data_02056f4c: ; 0x02056f4c
+data_02056f4c: @ 0x02056f4c
 	.byte 0x3e, 0x00
 	.global data_02056f4e
-data_02056f4e: ; 0x02056f4e
+data_02056f4e: @ 0x02056f4e
 	.byte 0x3f, 0x00
 	.global data_02056f50
-data_02056f50: ; 0x02056f50
+data_02056f50: @ 0x02056f50
 	.byte 0x40, 0x00
 	.global data_02056f52
-data_02056f52: ; 0x02056f52
+data_02056f52: @ 0x02056f52
 	.byte 0x61, 0x00
 	.global data_02056f54
-data_02056f54: ; 0x02056f54
+data_02056f54: @ 0x02056f54
 	.byte 0x62, 0x00
 	.global data_02056f56
-data_02056f56: ; 0x02056f56
+data_02056f56: @ 0x02056f56
 	.byte 0x63, 0x00
 	.global data_02056f58
-data_02056f58: ; 0x02056f58
+data_02056f58: @ 0x02056f58
 	.byte 0x64, 0x00
 	.global data_02056f5a
-data_02056f5a: ; 0x02056f5a
+data_02056f5a: @ 0x02056f5a
 	.byte 0x65, 0x00
 	.global data_02056f5c
-data_02056f5c: ; 0x02056f5c
+data_02056f5c: @ 0x02056f5c
 	.byte 0x66, 0x00
 	.global data_02056f5e
-data_02056f5e: ; 0x02056f5e
+data_02056f5e: @ 0x02056f5e
 	.byte 0x67, 0x00
 	.global data_02056f60
-data_02056f60: ; 0x02056f60
+data_02056f60: @ 0x02056f60
 	.byte 0x68, 0x00
 	.global data_02056f62
-data_02056f62: ; 0x02056f62
+data_02056f62: @ 0x02056f62
 	.byte 0x69, 0x00
 	.global data_02056f64
-data_02056f64: ; 0x02056f64
+data_02056f64: @ 0x02056f64
 	.byte 0x6a, 0x00
 	.global data_02056f66
-data_02056f66: ; 0x02056f66
+data_02056f66: @ 0x02056f66
 	.byte 0x6b, 0x00
 	.global data_02056f68
-data_02056f68: ; 0x02056f68
+data_02056f68: @ 0x02056f68
 	.byte 0x6c, 0x00
 	.global data_02056f6a
-data_02056f6a: ; 0x02056f6a
+data_02056f6a: @ 0x02056f6a
 	.byte 0x6d, 0x00
 	.global data_02056f6c
-data_02056f6c: ; 0x02056f6c
+data_02056f6c: @ 0x02056f6c
 	.byte 0x6e, 0x00
 	.global data_02056f6e
-data_02056f6e: ; 0x02056f6e
+data_02056f6e: @ 0x02056f6e
 	.byte 0x6f, 0x00
 	.global data_02056f70
-data_02056f70: ; 0x02056f70
+data_02056f70: @ 0x02056f70
 	.byte 0x70, 0x00
 	.global data_02056f72
-data_02056f72: ; 0x02056f72
+data_02056f72: @ 0x02056f72
 	.byte 0x71, 0x00
 	.global data_02056f74
-data_02056f74: ; 0x02056f74
+data_02056f74: @ 0x02056f74
 	.byte 0x72, 0x00
 	.global data_02056f76
-data_02056f76: ; 0x02056f76
+data_02056f76: @ 0x02056f76
 	.byte 0x73, 0x00
 	.global data_02056f78
-data_02056f78: ; 0x02056f78
+data_02056f78: @ 0x02056f78
 	.byte 0x74, 0x00
 	.global data_02056f7a
-data_02056f7a: ; 0x02056f7a
+data_02056f7a: @ 0x02056f7a
 	.byte 0x75, 0x00
 	.global data_02056f7c
-data_02056f7c: ; 0x02056f7c
+data_02056f7c: @ 0x02056f7c
 	.byte 0x76, 0x00
 	.global data_02056f7e
-data_02056f7e: ; 0x02056f7e
+data_02056f7e: @ 0x02056f7e
 	.byte 0x77, 0x00
 	.global data_02056f80
-data_02056f80: ; 0x02056f80
+data_02056f80: @ 0x02056f80
 	.byte 0x78, 0x00
 	.global data_02056f82
-data_02056f82: ; 0x02056f82
+data_02056f82: @ 0x02056f82
 	.byte 0x79, 0x00
 	.global data_02056f84
-data_02056f84: ; 0x02056f84
+data_02056f84: @ 0x02056f84
 	.byte 0x7a, 0x00
 	.global data_02056f86
-data_02056f86: ; 0x02056f86
+data_02056f86: @ 0x02056f86
 	.byte 0x5b, 0x00
 	.global data_02056f88
-data_02056f88: ; 0x02056f88
+data_02056f88: @ 0x02056f88
 	.byte 0x5c, 0x00
 	.global data_02056f8a
-data_02056f8a: ; 0x02056f8a
+data_02056f8a: @ 0x02056f8a
 	.byte 0x5d, 0x00
 	.global data_02056f8c
-data_02056f8c: ; 0x02056f8c
+data_02056f8c: @ 0x02056f8c
 	.byte 0x5e, 0x00
 	.global data_02056f8e
-data_02056f8e: ; 0x02056f8e
+data_02056f8e: @ 0x02056f8e
 	.byte 0x5f, 0x00
 	.global data_02056f90
-data_02056f90: ; 0x02056f90
+data_02056f90: @ 0x02056f90
 	.byte 0x60, 0x00
 	.global data_02056f92
-data_02056f92: ; 0x02056f92
+data_02056f92: @ 0x02056f92
 	.byte 0x61, 0x00
 	.global data_02056f94
-data_02056f94: ; 0x02056f94
+data_02056f94: @ 0x02056f94
 	.byte 0x62, 0x00
 	.global data_02056f96
-data_02056f96: ; 0x02056f96
+data_02056f96: @ 0x02056f96
 	.byte 0x63, 0x00
 	.global data_02056f98
-data_02056f98: ; 0x02056f98
+data_02056f98: @ 0x02056f98
 	.byte 0x64, 0x00
 	.global data_02056f9a
-data_02056f9a: ; 0x02056f9a
+data_02056f9a: @ 0x02056f9a
 	.byte 0x65, 0x00
 	.global data_02056f9c
-data_02056f9c: ; 0x02056f9c
+data_02056f9c: @ 0x02056f9c
 	.byte 0x66, 0x00
 	.global data_02056f9e
-data_02056f9e: ; 0x02056f9e
+data_02056f9e: @ 0x02056f9e
 	.byte 0x67, 0x00
 	.global data_02056fa0
-data_02056fa0: ; 0x02056fa0
+data_02056fa0: @ 0x02056fa0
 	.byte 0x68, 0x00
 	.global data_02056fa2
-data_02056fa2: ; 0x02056fa2
+data_02056fa2: @ 0x02056fa2
 	.byte 0x69, 0x00
 	.global data_02056fa4
-data_02056fa4: ; 0x02056fa4
+data_02056fa4: @ 0x02056fa4
 	.byte 0x6a, 0x00
 	.global data_02056fa6
-data_02056fa6: ; 0x02056fa6
+data_02056fa6: @ 0x02056fa6
 	.byte 0x6b, 0x00
 	.global data_02056fa8
-data_02056fa8: ; 0x02056fa8
+data_02056fa8: @ 0x02056fa8
 	.byte 0x6c, 0x00
 	.global data_02056faa
-data_02056faa: ; 0x02056faa
+data_02056faa: @ 0x02056faa
 	.byte 0x6d, 0x00
 	.global data_02056fac
-data_02056fac: ; 0x02056fac
+data_02056fac: @ 0x02056fac
 	.byte 0x6e, 0x00
 	.global data_02056fae
-data_02056fae: ; 0x02056fae
+data_02056fae: @ 0x02056fae
 	.byte 0x6f, 0x00
 	.global data_02056fb0
-data_02056fb0: ; 0x02056fb0
+data_02056fb0: @ 0x02056fb0
 	.byte 0x70, 0x00
 	.global data_02056fb2
-data_02056fb2: ; 0x02056fb2
+data_02056fb2: @ 0x02056fb2
 	.byte 0x71, 0x00
 	.global data_02056fb4
-data_02056fb4: ; 0x02056fb4
+data_02056fb4: @ 0x02056fb4
 	.byte 0x72, 0x00
 	.global data_02056fb6
-data_02056fb6: ; 0x02056fb6
+data_02056fb6: @ 0x02056fb6
 	.byte 0x73, 0x00
 	.global data_02056fb8
-data_02056fb8: ; 0x02056fb8
+data_02056fb8: @ 0x02056fb8
 	.byte 0x74, 0x00
 	.global data_02056fba
-data_02056fba: ; 0x02056fba
+data_02056fba: @ 0x02056fba
 	.byte 0x75, 0x00
 	.global data_02056fbc
-data_02056fbc: ; 0x02056fbc
+data_02056fbc: @ 0x02056fbc
 	.byte 0x76, 0x00
 	.global data_02056fbe
-data_02056fbe: ; 0x02056fbe
+data_02056fbe: @ 0x02056fbe
 	.byte 0x77, 0x00
 	.global data_02056fc0
-data_02056fc0: ; 0x02056fc0
+data_02056fc0: @ 0x02056fc0
 	.byte 0x78, 0x00
 	.global data_02056fc2
-data_02056fc2: ; 0x02056fc2
+data_02056fc2: @ 0x02056fc2
 	.byte 0x79, 0x00
 	.global data_02056fc4
-data_02056fc4: ; 0x02056fc4
+data_02056fc4: @ 0x02056fc4
 	.byte 0x7a, 0x00
 	.global data_02056fc6
-data_02056fc6: ; 0x02056fc6
+data_02056fc6: @ 0x02056fc6
 	.byte 0x7b, 0x00
 	.global data_02056fc8
-data_02056fc8: ; 0x02056fc8
+data_02056fc8: @ 0x02056fc8
 	.byte 0x7c, 0x00
 	.global data_02056fca
-data_02056fca: ; 0x02056fca
+data_02056fca: @ 0x02056fca
 	.byte 0x7d, 0x00
 	.global data_02056fcc
-data_02056fcc: ; 0x02056fcc
+data_02056fcc: @ 0x02056fcc
 	.byte 0x7e, 0x00
 	.global data_02056fce
-data_02056fce: ; 0x02056fce
+data_02056fce: @ 0x02056fce
 	.byte 0x7f, 0x00
 	.global data_02056fd0
-data_02056fd0: ; 0x02056fd0
+data_02056fd0: @ 0x02056fd0
 	.byte 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00
 	.byte 0x04, 0x00, 0x06, 0x01, 0x04, 0x01, 0x04, 0x01, 0x04, 0x01, 0x04, 0x01, 0x04, 0x00, 0x04, 0x00
 	.byte 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00, 0x04, 0x00
@@ -24299,7 +24299,7 @@ data_02056fd0: ; 0x02056fd0
 	.byte 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0x71, 0x00
 	.byte 0x71, 0x00, 0x71, 0x00, 0x71, 0x00, 0xd0, 0x00, 0xd0, 0x00, 0xd0, 0x00, 0xd0, 0x00, 0x04, 0x00
 	.global data_020570d0
-data_020570d0: ; 0x020570d0
+data_020570d0: @ 0x020570d0
 	.byte 0x00, 0x00, 0x01, 0x00, 0x02, 0x00, 0x03, 0x00, 0x04, 0x00, 0x05, 0x00, 0x06, 0x00, 0x07, 0x00
 	.byte 0x08, 0x00, 0x09, 0x00, 0x0a, 0x00, 0x0b, 0x00, 0x0c, 0x00, 0x0d, 0x00, 0x0e, 0x00, 0x0f, 0x00
 	.byte 0x10, 0x00, 0x11, 0x00, 0x12, 0x00, 0x13, 0x00, 0x14, 0x00, 0x15, 0x00, 0x16, 0x00, 0x17, 0x00
@@ -24317,1916 +24317,1916 @@ data_020570d0: ; 0x020570d0
 	.byte 0x50, 0x00, 0x51, 0x00, 0x52, 0x00, 0x53, 0x00, 0x54, 0x00, 0x55, 0x00, 0x56, 0x00, 0x57, 0x00
 	.byte 0x58, 0x00, 0x59, 0x00, 0x5a, 0x00, 0x7b, 0x00, 0x7c, 0x00, 0x7d, 0x00, 0x7e, 0x00, 0x7f, 0x00
 	.global data_020571d0
-data_020571d0: ; 0x020571d0
+data_020571d0: @ 0x020571d0
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x40, 0x03, 0xb8, 0xe2, 0x3f
 	.global data_020571e0
-data_020571e0: ; 0x020571e0
+data_020571e0: @ 0x020571e0
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf0, 0x3f, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0xf8, 0x3f
 	.global data_020571f0
-data_020571f0: ; 0x020571f0
+data_020571f0: @ 0x020571f0
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x06, 0xd0, 0xcf, 0x43, 0xeb, 0xfd, 0x4c, 0x3e
 	.global data_02057200
-data_02057200: ; 0x02057200
+data_02057200: @ 0x02057200
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057204
-data_02057204: ; 0x02057204
+data_02057204: @ 0x02057204
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057208
-data_02057208: ; 0x02057208
+data_02057208: @ 0x02057208
 	.byte 0x14, 0x00, 0x00, 0x00
 	.global data_0205720c
-data_0205720c: ; 0x0205720c
+data_0205720c: @ 0x0205720c
 	.byte 0x40, 0x00, 0x00, 0x00
 	.global data_02057210
-data_02057210: ; 0x02057210
+data_02057210: @ 0x02057210
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057214
-data_02057214: ; 0x02057214
+data_02057214: @ 0x02057214
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057218
-data_02057218: ; 0x02057218
+data_02057218: @ 0x02057218
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205721c
-data_0205721c: ; 0x0205721c
+data_0205721c: @ 0x0205721c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02057220
-data_02057220: ; 0x02057220
+data_02057220: @ 0x02057220
 	.byte 0x00, 0x00, 0x00, 0x00, 0x14, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.byte 0x14, 0x00, 0x00, 0x00, 0x40, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 
-	.section .ctor, 4, 1, 4
+	.section .ctor
 	.global data_0205725c
-data_0205725c: ; 0x0205725c
+data_0205725c: @ 0x0205725c
     .word func_02050ca0
 	.global data_02057260
-data_02057260: ; 0x02057260
+data_02057260: @ 0x02057260
     .word func_02050cb4
 	.global data_02057264
-data_02057264: ; 0x02057264
+data_02057264: @ 0x02057264
     .word func_02050ce0
 	.global data_02057268
-data_02057268: ; 0x02057268
+data_02057268: @ 0x02057268
     .word func_02050d0c
 	.global data_0205726c
-data_0205726c: ; 0x0205726c
+data_0205726c: @ 0x0205726c
     .word func_02050d20
 	.global data_02057270
-data_02057270: ; 0x02057270
+data_02057270: @ 0x02057270
     .word func_02050d34
 	.global data_02057274
-data_02057274: ; 0x02057274
+data_02057274: @ 0x02057274
     .word func_02050d48
 	.global data_02057278
-data_02057278: ; 0x02057278
+data_02057278: @ 0x02057278
     .word func_02050d5c
 	.global data_0205727c
-data_0205727c: ; 0x0205727c
+data_0205727c: @ 0x0205727c
     .word func_02050d70
 	.global data_02057280
-data_02057280: ; 0x02057280
+data_02057280: @ 0x02057280
     .word func_02050d88
 	.global data_02057284
-data_02057284: ; 0x02057284
+data_02057284: @ 0x02057284
     .word func_02050d9c
 	.global data_02057288
-data_02057288: ; 0x02057288
+data_02057288: @ 0x02057288
     .word func_02050db8
 	.global data_0205728c
-data_0205728c: ; 0x0205728c
+data_0205728c: @ 0x0205728c
     .word func_02050dcc
 	.global data_02057290
-data_02057290: ; 0x02057290
+data_02057290: @ 0x02057290
     .word func_02050de0
 	.global data_02057294
-data_02057294: ; 0x02057294
+data_02057294: @ 0x02057294
     .word func_02050df4
 	.global data_02057298
-data_02057298: ; 0x02057298
+data_02057298: @ 0x02057298
     .word func_02050e10
 	.global data_0205729c
-data_0205729c: ; 0x0205729c
+data_0205729c: @ 0x0205729c
     .word func_02050e24
 	.global data_020572a0
-data_020572a0: ; 0x020572a0
+data_020572a0: @ 0x020572a0
     .word func_02050e38
 	.global data_020572a4
-data_020572a4: ; 0x020572a4
+data_020572a4: @ 0x020572a4
     .word func_02050e64
 	.global data_020572a8
-data_020572a8: ; 0x020572a8
+data_020572a8: @ 0x020572a8
     .word func_02050e90
 	.global data_020572ac
-data_020572ac: ; 0x020572ac
+data_020572ac: @ 0x020572ac
     .word func_02050ea4
 	.global data_020572b0
-data_020572b0: ; 0x020572b0
+data_020572b0: @ 0x020572b0
     .word func_02050eb8
 	.global data_020572b4
-data_020572b4: ; 0x020572b4
+data_020572b4: @ 0x020572b4
     .word func_02050ee4
 	.global data_020572b8
-data_020572b8: ; 0x020572b8
+data_020572b8: @ 0x020572b8
     .word func_02050f00
 	.global data_020572bc
-data_020572bc: ; 0x020572bc
+data_020572bc: @ 0x020572bc
     .word func_02050f40
 	.global data_020572c0
-data_020572c0: ; 0x020572c0
+data_020572c0: @ 0x020572c0
 	.byte 0x00, 0x00, 0x00, 0x00
 
     .data
 	.global data_02058088
-data_02058088: ; 0x02058088
+data_02058088: @ 0x02058088
 	.ascii "Overlay"
 	.byte 0x00
 	.global data_02058090
-data_02058090: ; 0x02058090
+data_02058090: @ 0x02058090
 	.ascii "--"
 	.byte 0x00, 0x00
 	.global data_02058094
-data_02058094: ; 0x02058094
+data_02058094: @ 0x02058094
 	.ascii "%02d"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205809c
-data_0205809c: ; 0x0205809c
+data_0205809c: @ 0x0205809c
 	.byte 0x99, 0x01, 0x00, 0x00
 .ifdef EUR
 	.global gBuildDate
-gBuildDate: ; 0x020580a0
+gBuildDate: @ 0x020580a0
 	.ascii "2007_08_11-11_29"
 	.byte 0x00, 0x00, 0x00, 0x00
 .endif
 	.global data_020580b4
-data_020580b4: ; 0x020580b4
+data_020580b4: @ 0x020580b4
 	.byte 0x00, 0xfe, 0x7f, 0x02
 	.global data_020580b8
-data_020580b8: ; 0x020580b8
+data_020580b8: @ 0x020580b8
 	.ascii ":/"
 	.byte 0x00, 0x00
 	.global data_020580bc
-data_020580bc: ; 0x020580bc
+data_020580bc: @ 0x020580bc
 	.ascii "rom"
 	.byte 0x00
 	.global data_020580c0
-data_020580c0: ; 0x020580c0
+data_020580c0: @ 0x020580c0
     .word data_02056c58
 	.global data_020580c4
-data_020580c4: ; 0x020580c4
+data_020580c4: @ 0x020580c4
 	.byte 0x40, 0x00, 0x00, 0x00
 	.global data_020580c8
-data_020580c8: ; 0x020580c8
+data_020580c8: @ 0x020580c8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020580cc
-data_020580cc: ; 0x020580cc
+data_020580cc: @ 0x020580cc
 	.byte 0x1f, 0x00, 0x00, 0x00
 	.global data_020580d0
-data_020580d0: ; 0x020580d0
+data_020580d0: @ 0x020580d0
 	.byte 0x3b, 0x00, 0x00, 0x00
 	.global data_020580d4
-data_020580d4: ; 0x020580d4
+data_020580d4: @ 0x020580d4
 	.byte 0x5a, 0x00, 0x00, 0x00
 	.global data_020580d8
-data_020580d8: ; 0x020580d8
+data_020580d8: @ 0x020580d8
 	.byte 0x78, 0x00, 0x00, 0x00
 	.global data_020580dc
-data_020580dc: ; 0x020580dc
+data_020580dc: @ 0x020580dc
 	.byte 0x97, 0x00, 0x00, 0x00
 	.global data_020580e0
-data_020580e0: ; 0x020580e0
+data_020580e0: @ 0x020580e0
 	.byte 0xb5, 0x00, 0x00, 0x00
 	.global data_020580e4
-data_020580e4: ; 0x020580e4
+data_020580e4: @ 0x020580e4
 	.byte 0xd4, 0x00, 0x00, 0x00
 	.global data_020580e8
-data_020580e8: ; 0x020580e8
+data_020580e8: @ 0x020580e8
 	.byte 0xf3, 0x00, 0x00, 0x00
 	.global data_020580ec
-data_020580ec: ; 0x020580ec
+data_020580ec: @ 0x020580ec
 	.byte 0x11, 0x01, 0x00, 0x00
 	.global data_020580f0
-data_020580f0: ; 0x020580f0
+data_020580f0: @ 0x020580f0
 	.byte 0x30, 0x01, 0x00, 0x00
 	.global data_020580f4
-data_020580f4: ; 0x020580f4
+data_020580f4: @ 0x020580f4
 	.byte 0x4e, 0x01, 0x00, 0x00
 	.global data_020580f8
-data_020580f8: ; 0x020580f8
+data_020580f8: @ 0x020580f8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020580fc
-data_020580fc: ; 0x020580fc
+data_020580fc: @ 0x020580fc
 	.byte 0x24, 0x01, 0x00, 0x00
 	.global data_02058100
-data_02058100: ; 0x02058100
+data_02058100: @ 0x02058100
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058104
-data_02058104: ; 0x02058104
+data_02058104: @ 0x02058104
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058108
-data_02058108: ; 0x02058108
+data_02058108: @ 0x02058108
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205810c
-data_0205810c: ; 0x0205810c
+data_0205810c: @ 0x0205810c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058110
-data_02058110: ; 0x02058110
+data_02058110: @ 0x02058110
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058114
-data_02058114: ; 0x02058114
+data_02058114: @ 0x02058114
     .word data_02076c88
 	.global data_02058118
-data_02058118: ; 0x02058118
+data_02058118: @ 0x02058118
 	.byte 0x00, 0x01, 0x00, 0x00
 	.global data_0205811c
-data_0205811c: ; 0x0205811c
+data_0205811c: @ 0x0205811c
     .word data_02076c88
 	.global data_02058120
-data_02058120: ; 0x02058120
+data_02058120: @ 0x02058120
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058124
-data_02058124: ; 0x02058124
+data_02058124: @ 0x02058124
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058128
-data_02058128: ; 0x02058128
+data_02058128: @ 0x02058128
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205812c
-data_0205812c: ; 0x0205812c
+data_0205812c: @ 0x0205812c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058130
-data_02058130: ; 0x02058130
+data_02058130: @ 0x02058130
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058134
-data_02058134: ; 0x02058134
+data_02058134: @ 0x02058134
     .word func_0204ded8 - 1
 	.global data_02058138
-data_02058138: ; 0x02058138
+data_02058138: @ 0x02058138
     .word func_0204df28 - 1
 	.global data_0205813c
-data_0205813c: ; 0x0205813c
+data_0205813c: @ 0x0205813c
     .word func_0204df5c - 1
 	.global data_02058140
-data_02058140: ; 0x02058140
+data_02058140: @ 0x02058140
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058144
-data_02058144: ; 0x02058144
+data_02058144: @ 0x02058144
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058148
-data_02058148: ; 0x02058148
+data_02058148: @ 0x02058148
 	.byte 0x28, 0x01, 0x00, 0x00
 	.global data_0205814c
-data_0205814c: ; 0x0205814c
+data_0205814c: @ 0x0205814c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058150
-data_02058150: ; 0x02058150
+data_02058150: @ 0x02058150
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058154
-data_02058154: ; 0x02058154
+data_02058154: @ 0x02058154
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058158
-data_02058158: ; 0x02058158
+data_02058158: @ 0x02058158
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205815c
-data_0205815c: ; 0x0205815c
+data_0205815c: @ 0x0205815c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058160
-data_02058160: ; 0x02058160
+data_02058160: @ 0x02058160
     .word data_02076b88
 	.global data_02058164
-data_02058164: ; 0x02058164
+data_02058164: @ 0x02058164
 	.byte 0x00, 0x01, 0x00, 0x00
 	.global data_02058168
-data_02058168: ; 0x02058168
+data_02058168: @ 0x02058168
     .word data_02076b88
 	.global data_0205816c
-data_0205816c: ; 0x0205816c
+data_0205816c: @ 0x0205816c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058170
-data_02058170: ; 0x02058170
+data_02058170: @ 0x02058170
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058174
-data_02058174: ; 0x02058174
+data_02058174: @ 0x02058174
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058178
-data_02058178: ; 0x02058178
+data_02058178: @ 0x02058178
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205817c
-data_0205817c: ; 0x0205817c
+data_0205817c: @ 0x0205817c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058180
-data_02058180: ; 0x02058180
+data_02058180: @ 0x02058180
     .word func_0204ded8 - 1
 	.global data_02058184
-data_02058184: ; 0x02058184
+data_02058184: @ 0x02058184
     .word func_0204df28 - 1
 	.global data_02058188
-data_02058188: ; 0x02058188
+data_02058188: @ 0x02058188
     .word func_0204df5c - 1
 	.global data_0205818c
-data_0205818c: ; 0x0205818c
+data_0205818c: @ 0x0205818c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058190
-data_02058190: ; 0x02058190
+data_02058190: @ 0x02058190
 	.byte 0x02, 0x00, 0x00, 0x00
 	.global data_02058194
-data_02058194: ; 0x02058194
+data_02058194: @ 0x02058194
 	.byte 0x08, 0x01, 0x00, 0x00
 	.global data_02058198
-data_02058198: ; 0x02058198
+data_02058198: @ 0x02058198
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205819c
-data_0205819c: ; 0x0205819c
+data_0205819c: @ 0x0205819c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581a0
-data_020581a0: ; 0x020581a0
+data_020581a0: @ 0x020581a0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581a4
-data_020581a4: ; 0x020581a4
+data_020581a4: @ 0x020581a4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581a8
-data_020581a8: ; 0x020581a8
+data_020581a8: @ 0x020581a8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581ac
-data_020581ac: ; 0x020581ac
+data_020581ac: @ 0x020581ac
     .word data_02076a88
 	.global data_020581b0
-data_020581b0: ; 0x020581b0
+data_020581b0: @ 0x020581b0
 	.byte 0x00, 0x01, 0x00, 0x00
 	.global data_020581b4
-data_020581b4: ; 0x020581b4
+data_020581b4: @ 0x020581b4
     .word data_02076a88
 	.global data_020581b8
-data_020581b8: ; 0x020581b8
+data_020581b8: @ 0x020581b8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581bc
-data_020581bc: ; 0x020581bc
+data_020581bc: @ 0x020581bc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581c0
-data_020581c0: ; 0x020581c0
+data_020581c0: @ 0x020581c0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581c4
-data_020581c4: ; 0x020581c4
+data_020581c4: @ 0x020581c4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581c8
-data_020581c8: ; 0x020581c8
+data_020581c8: @ 0x020581c8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581cc
-data_020581cc: ; 0x020581cc
+data_020581cc: @ 0x020581cc
     .word func_0204ded8 - 1
 	.global data_020581d0
-data_020581d0: ; 0x020581d0
+data_020581d0: @ 0x020581d0
     .word func_0204df28 - 1
 	.global data_020581d4
-data_020581d4: ; 0x020581d4
+data_020581d4: @ 0x020581d4
     .word func_0204df5c - 1
 	.global data_020581d8
-data_020581d8: ; 0x020581d8
+data_020581d8: @ 0x020581d8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020581dc
-data_020581dc: ; 0x020581dc
+data_020581dc: @ 0x020581dc
 	.ascii "Assertion (%s) failed in \"%s\", function \"%s\", line %d\n"
 	.byte 0x00, 0x00
 	.global data_02058214
-data_02058214: ; 0x02058214
+data_02058214: @ 0x02058214
 	.byte 0x00, 0x00, 0x80, 0x7f
 	.global data_02058218
-data_02058218: ; 0x02058218
+data_02058218: @ 0x02058218
 	.byte 0xff, 0xff, 0xff, 0x7f
 	.global data_0205821c
-data_0205821c: ; 0x0205821c
+data_0205821c: @ 0x0205821c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058220
-data_02058220: ; 0x02058220
+data_02058220: @ 0x02058220
 	.byte 0x00, 0x00, 0xf0, 0x7f
 	.global data_02058224
-data_02058224: ; 0x02058224
+data_02058224: @ 0x02058224
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058228
-data_02058228: ; 0x02058228
+data_02058228: @ 0x02058228
 	.ascii "%T"
 	.byte 0x00, 0x00
 	.global data_0205822c
-data_0205822c: ; 0x0205822c
+data_0205822c: @ 0x0205822c
 	.ascii "AM|PM"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058234
-data_02058234: ; 0x02058234
+data_02058234: @ 0x02058234
     .word func_0204342c - 1
 	.global data_02058238
-data_02058238: ; 0x02058238
+data_02058238: @ 0x02058238
     .word func_02043464 - 1
 	.global data_0205823c
-data_0205823c: ; 0x0205823c
+data_0205823c: @ 0x0205823c
 	.byte 0x20, 0x00, 0x00, 0x00
 	.global data_02058240
-data_02058240: ; 0x02058240
+data_02058240: @ 0x02058240
 	.byte 0x6e, 0x00, 0x00, 0x00
 	.global data_02058244
-data_02058244: ; 0x02058244
+data_02058244: @ 0x02058244
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058248
-data_02058248: ; 0x02058248
+data_02058248: @ 0x02058248
     .word data_0205826c
 	.global data_0205824c
-data_0205824c: ; 0x0205824c
+data_0205824c: @ 0x0205824c
     .word data_0205822c
 	.global data_02058250
-data_02058250: ; 0x02058250
+data_02058250: @ 0x02058250
     .word data_02058350
 	.global data_02058254
-data_02058254: ; 0x02058254
+data_02058254: @ 0x02058254
     .word data_02058344
 	.global data_02058258
-data_02058258: ; 0x02058258
+data_02058258: @ 0x02058258
     .word data_0205832c
 	.global data_0205825c
-data_0205825c: ; 0x0205825c
+data_0205825c: @ 0x0205825c
     .word data_02058228
 	.global data_02058260
-data_02058260: ; 0x02058260
+data_02058260: @ 0x02058260
     .word data_02058360
 	.global data_02058264
-data_02058264: ; 0x02058264
+data_02058264: @ 0x02058264
     .word data_020583b8
 	.global data_02058268
-data_02058268: ; 0x02058268
+data_02058268: @ 0x02058268
     .word data_02058224
 	.global data_0205826c
-data_0205826c: ; 0x0205826c
+data_0205826c: @ 0x0205826c
 	.byte 0x01, 0x00
 	.global data_0205826e
-data_0205826e: ; 0x0205826e
+data_0205826e: @ 0x0205826e
 	.byte 0x02, 0x00
 	.global data_02058270
-data_02058270: ; 0x02058270
+data_02058270: @ 0x02058270
 	.byte 0x03, 0x00
 	.global data_02058272
-data_02058272: ; 0x02058272
+data_02058272: @ 0x02058272
 	.byte 0x04, 0x00
 	.global data_02058274
-data_02058274: ; 0x02058274
+data_02058274: @ 0x02058274
 	.byte 0x05, 0x00
 	.global data_02058276
-data_02058276: ; 0x02058276
+data_02058276: @ 0x02058276
 	.byte 0x06, 0x00
 	.global data_02058278
-data_02058278: ; 0x02058278
+data_02058278: @ 0x02058278
 	.byte 0x07, 0x00
 	.global data_0205827a
-data_0205827a: ; 0x0205827a
+data_0205827a: @ 0x0205827a
 	.byte 0x08, 0x00
 	.global data_0205827c
-data_0205827c: ; 0x0205827c
+data_0205827c: @ 0x0205827c
 	.byte 0x09, 0x00
 	.global data_0205827e
-data_0205827e: ; 0x0205827e
+data_0205827e: @ 0x0205827e
 	.byte 0x0a, 0x00
 	.global data_02058280
-data_02058280: ; 0x02058280
+data_02058280: @ 0x02058280
 	.byte 0x0b, 0x00
 	.global data_02058282
-data_02058282: ; 0x02058282
+data_02058282: @ 0x02058282
 	.byte 0x0c, 0x00
 	.global data_02058284
-data_02058284: ; 0x02058284
+data_02058284: @ 0x02058284
 	.byte 0x0d, 0x00
 	.global data_02058286
-data_02058286: ; 0x02058286
+data_02058286: @ 0x02058286
 	.byte 0x0e, 0x00
 	.global data_02058288
-data_02058288: ; 0x02058288
+data_02058288: @ 0x02058288
 	.byte 0x0f, 0x00
 	.global data_0205828a
-data_0205828a: ; 0x0205828a
+data_0205828a: @ 0x0205828a
 	.byte 0x10, 0x00
 	.global data_0205828c
-data_0205828c: ; 0x0205828c
+data_0205828c: @ 0x0205828c
 	.byte 0x21, 0x00
 	.global data_0205828e
-data_0205828e: ; 0x0205828e
+data_0205828e: @ 0x0205828e
 	.byte 0x22, 0x00
 	.global data_02058290
-data_02058290: ; 0x02058290
+data_02058290: @ 0x02058290
 	.byte 0x23, 0x00
 	.global data_02058292
-data_02058292: ; 0x02058292
+data_02058292: @ 0x02058292
 	.byte 0x24, 0x00
 	.global data_02058294
-data_02058294: ; 0x02058294
+data_02058294: @ 0x02058294
 	.byte 0x25, 0x00
 	.global data_02058296
-data_02058296: ; 0x02058296
+data_02058296: @ 0x02058296
 	.byte 0x26, 0x00
 	.global data_02058298
-data_02058298: ; 0x02058298
+data_02058298: @ 0x02058298
 	.byte 0x27, 0x00
 	.global data_0205829a
-data_0205829a: ; 0x0205829a
+data_0205829a: @ 0x0205829a
 	.byte 0x28, 0x00
 	.global data_0205829c
-data_0205829c: ; 0x0205829c
+data_0205829c: @ 0x0205829c
 	.byte 0x29, 0x00
 	.global data_0205829e
-data_0205829e: ; 0x0205829e
+data_0205829e: @ 0x0205829e
 	.byte 0x2a, 0x00
 	.global data_020582a0
-data_020582a0: ; 0x020582a0
+data_020582a0: @ 0x020582a0
 	.byte 0x11, 0x00
 	.global data_020582a2
-data_020582a2: ; 0x020582a2
+data_020582a2: @ 0x020582a2
 	.byte 0x12, 0x00
 	.global data_020582a4
-data_020582a4: ; 0x020582a4
+data_020582a4: @ 0x020582a4
 	.byte 0x13, 0x00
 	.global data_020582a6
-data_020582a6: ; 0x020582a6
+data_020582a6: @ 0x020582a6
 	.byte 0x14, 0x00
 	.global data_020582a8
-data_020582a8: ; 0x020582a8
+data_020582a8: @ 0x020582a8
 	.byte 0x15, 0x00
 	.global data_020582aa
-data_020582aa: ; 0x020582aa
+data_020582aa: @ 0x020582aa
 	.byte 0x16, 0x00
 	.global data_020582ac
-data_020582ac: ; 0x020582ac
+data_020582ac: @ 0x020582ac
 	.byte 0x17, 0x00
 	.global data_020582ae
-data_020582ae: ; 0x020582ae
+data_020582ae: @ 0x020582ae
 	.byte 0x2b, 0x00
 	.global data_020582b0
-data_020582b0: ; 0x020582b0
+data_020582b0: @ 0x020582b0
 	.byte 0x2d, 0x00
 	.global data_020582b2
-data_020582b2: ; 0x020582b2
+data_020582b2: @ 0x020582b2
 	.byte 0x2f, 0x00
 	.global data_020582b4
-data_020582b4: ; 0x020582b4
+data_020582b4: @ 0x020582b4
 	.byte 0x31, 0x00
 	.global data_020582b6
-data_020582b6: ; 0x020582b6
+data_020582b6: @ 0x020582b6
 	.byte 0x33, 0x00
 	.global data_020582b8
-data_020582b8: ; 0x020582b8
+data_020582b8: @ 0x020582b8
 	.byte 0x35, 0x00
 	.global data_020582ba
-data_020582ba: ; 0x020582ba
+data_020582ba: @ 0x020582ba
 	.byte 0x37, 0x00
 	.global data_020582bc
-data_020582bc: ; 0x020582bc
+data_020582bc: @ 0x020582bc
 	.byte 0x39, 0x00
 	.global data_020582be
-data_020582be: ; 0x020582be
+data_020582be: @ 0x020582be
 	.byte 0x3b, 0x00
 	.global data_020582c0
-data_020582c0: ; 0x020582c0
+data_020582c0: @ 0x020582c0
 	.byte 0x3d, 0x00
 	.global data_020582c2
-data_020582c2: ; 0x020582c2
+data_020582c2: @ 0x020582c2
 	.byte 0x3f, 0x00
 	.global data_020582c4
-data_020582c4: ; 0x020582c4
+data_020582c4: @ 0x020582c4
 	.byte 0x41, 0x00
 	.global data_020582c6
-data_020582c6: ; 0x020582c6
+data_020582c6: @ 0x020582c6
 	.byte 0x43, 0x00
 	.global data_020582c8
-data_020582c8: ; 0x020582c8
+data_020582c8: @ 0x020582c8
 	.byte 0x45, 0x00
 	.global data_020582ca
-data_020582ca: ; 0x020582ca
+data_020582ca: @ 0x020582ca
 	.byte 0x47, 0x00
 	.global data_020582cc
-data_020582cc: ; 0x020582cc
+data_020582cc: @ 0x020582cc
 	.byte 0x49, 0x00
 	.global data_020582ce
-data_020582ce: ; 0x020582ce
+data_020582ce: @ 0x020582ce
 	.byte 0x4b, 0x00
 	.global data_020582d0
-data_020582d0: ; 0x020582d0
+data_020582d0: @ 0x020582d0
 	.byte 0x4d, 0x00
 	.global data_020582d2
-data_020582d2: ; 0x020582d2
+data_020582d2: @ 0x020582d2
 	.byte 0x4f, 0x00
 	.global data_020582d4
-data_020582d4: ; 0x020582d4
+data_020582d4: @ 0x020582d4
 	.byte 0x51, 0x00
 	.global data_020582d6
-data_020582d6: ; 0x020582d6
+data_020582d6: @ 0x020582d6
 	.byte 0x53, 0x00
 	.global data_020582d8
-data_020582d8: ; 0x020582d8
+data_020582d8: @ 0x020582d8
 	.byte 0x55, 0x00
 	.global data_020582da
-data_020582da: ; 0x020582da
+data_020582da: @ 0x020582da
 	.byte 0x57, 0x00
 	.global data_020582dc
-data_020582dc: ; 0x020582dc
+data_020582dc: @ 0x020582dc
 	.byte 0x59, 0x00
 	.global data_020582de
-data_020582de: ; 0x020582de
+data_020582de: @ 0x020582de
 	.byte 0x5b, 0x00
 	.global data_020582e0
-data_020582e0: ; 0x020582e0
+data_020582e0: @ 0x020582e0
 	.byte 0x5d, 0x00
 	.global data_020582e2
-data_020582e2: ; 0x020582e2
+data_020582e2: @ 0x020582e2
 	.byte 0x18, 0x00
 	.global data_020582e4
-data_020582e4: ; 0x020582e4
+data_020582e4: @ 0x020582e4
 	.byte 0x19, 0x00
 	.global data_020582e6
-data_020582e6: ; 0x020582e6
+data_020582e6: @ 0x020582e6
 	.byte 0x1a, 0x00
 	.global data_020582e8
-data_020582e8: ; 0x020582e8
+data_020582e8: @ 0x020582e8
 	.byte 0x1b, 0x00
 	.global data_020582ea
-data_020582ea: ; 0x020582ea
+data_020582ea: @ 0x020582ea
 	.byte 0x1c, 0x00
 	.global data_020582ec
-data_020582ec: ; 0x020582ec
+data_020582ec: @ 0x020582ec
 	.byte 0x00, 0x00
 	.global data_020582ee
-data_020582ee: ; 0x020582ee
+data_020582ee: @ 0x020582ee
 	.byte 0x2c, 0x00
 	.global data_020582f0
-data_020582f0: ; 0x020582f0
+data_020582f0: @ 0x020582f0
 	.byte 0x2e, 0x00
 	.global data_020582f2
-data_020582f2: ; 0x020582f2
+data_020582f2: @ 0x020582f2
 	.byte 0x30, 0x00
 	.global data_020582f4
-data_020582f4: ; 0x020582f4
+data_020582f4: @ 0x020582f4
 	.byte 0x32, 0x00
 	.global data_020582f6
-data_020582f6: ; 0x020582f6
+data_020582f6: @ 0x020582f6
 	.byte 0x34, 0x00
 	.global data_020582f8
-data_020582f8: ; 0x020582f8
+data_020582f8: @ 0x020582f8
 	.byte 0x36, 0x00
 	.global data_020582fa
-data_020582fa: ; 0x020582fa
+data_020582fa: @ 0x020582fa
 	.byte 0x38, 0x00
 	.global data_020582fc
-data_020582fc: ; 0x020582fc
+data_020582fc: @ 0x020582fc
 	.byte 0x3a, 0x00
 	.global data_020582fe
-data_020582fe: ; 0x020582fe
+data_020582fe: @ 0x020582fe
 	.byte 0x3c, 0x00
 	.global data_02058300
-data_02058300: ; 0x02058300
+data_02058300: @ 0x02058300
 	.byte 0x3e, 0x00
 	.global data_02058302
-data_02058302: ; 0x02058302
+data_02058302: @ 0x02058302
 	.byte 0x40, 0x00
 	.global data_02058304
-data_02058304: ; 0x02058304
+data_02058304: @ 0x02058304
 	.byte 0x42, 0x00
 	.global data_02058306
-data_02058306: ; 0x02058306
+data_02058306: @ 0x02058306
 	.byte 0x44, 0x00
 	.global data_02058308
-data_02058308: ; 0x02058308
+data_02058308: @ 0x02058308
 	.byte 0x46, 0x00
 	.global data_0205830a
-data_0205830a: ; 0x0205830a
+data_0205830a: @ 0x0205830a
 	.byte 0x48, 0x00
 	.global data_0205830c
-data_0205830c: ; 0x0205830c
+data_0205830c: @ 0x0205830c
 	.byte 0x4a, 0x00
 	.global data_0205830e
-data_0205830e: ; 0x0205830e
+data_0205830e: @ 0x0205830e
 	.byte 0x4c, 0x00
 	.global data_02058310
-data_02058310: ; 0x02058310
+data_02058310: @ 0x02058310
 	.byte 0x4e, 0x00
 	.global data_02058312
-data_02058312: ; 0x02058312
+data_02058312: @ 0x02058312
 	.byte 0x50, 0x00
 	.global data_02058314
-data_02058314: ; 0x02058314
+data_02058314: @ 0x02058314
 	.byte 0x52, 0x00
 	.global data_02058316
-data_02058316: ; 0x02058316
+data_02058316: @ 0x02058316
 	.byte 0x54, 0x00
 	.global data_02058318
-data_02058318: ; 0x02058318
+data_02058318: @ 0x02058318
 	.byte 0x56, 0x00
 	.global data_0205831a
-data_0205831a: ; 0x0205831a
+data_0205831a: @ 0x0205831a
 	.byte 0x58, 0x00
 	.global data_0205831c
-data_0205831c: ; 0x0205831c
+data_0205831c: @ 0x0205831c
 	.byte 0x5a, 0x00
 	.global data_0205831e
-data_0205831e: ; 0x0205831e
+data_0205831e: @ 0x0205831e
 	.byte 0x5c, 0x00
 	.global data_02058320
-data_02058320: ; 0x02058320
+data_02058320: @ 0x02058320
 	.byte 0x5e, 0x00
 	.global data_02058322
-data_02058322: ; 0x02058322
+data_02058322: @ 0x02058322
 	.byte 0x1d, 0x00
 	.global data_02058324
-data_02058324: ; 0x02058324
+data_02058324: @ 0x02058324
 	.byte 0x1e, 0x00
 	.global data_02058326
-data_02058326: ; 0x02058326
+data_02058326: @ 0x02058326
 	.byte 0x1f, 0x00
 	.global data_02058328
-data_02058328: ; 0x02058328
+data_02058328: @ 0x02058328
 	.byte 0x20, 0x00
 	.global data_0205832a
-data_0205832a: ; 0x0205832a
+data_0205832a: @ 0x0205832a
 	.byte 0x00, 0x00
 	.global data_0205832c
-data_0205832c: ; 0x0205832c
+data_0205832c: @ 0x0205832c
 	.ascii "%m/%d/%y"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058338
-data_02058338: ; 0x02058338
+data_02058338: @ 0x02058338
     .word data_0205824c
 	.global data_0205833c
-data_0205833c: ; 0x0205833c
+data_0205833c: @ 0x0205833c
     .word data_0205823c
 	.global data_02058340
-data_02058340: ; 0x02058340
+data_02058340: @ 0x02058340
     .word data_02058234
 	.global data_02058344
-data_02058344: ; 0x02058344
+data_02058344: @ 0x02058344
 	.ascii "%I:%M:%S %p"
 	.byte 0x00
 	.global data_02058350
-data_02058350: ; 0x02058350
+data_02058350: @ 0x02058350
 	.ascii "%a %b %e %T %Y"
 	.byte 0x00, 0x00
 	.global data_02058360
-data_02058360: ; 0x02058360
+data_02058360: @ 0x02058360
 	.ascii "Sun|Sunday|Mon|Monday|Tue|Tuesday|Wed|Wednesday|Thu|Thursday|Fri|Friday|Sat|Saturday"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020583b8
-data_020583b8: ; 0x020583b8
+data_020583b8: @ 0x020583b8
 	.ascii "Jan|January|Feb|February|Mar|March|Apr|April|May|May|Jun|June|Jul|July|Aug|August|Sep|September|Oct|October|Nov|November|Dec|December"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058440
-data_02058440: ; 0x02058440
+data_02058440: @ 0x02058440
 	.ascii "0x0p0"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058448
-data_02058448: ; 0x02058448
+data_02058448: @ 0x02058448
 	.ascii "-INF"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058450
-data_02058450: ; 0x02058450
+data_02058450: @ 0x02058450
 	.ascii "-inf"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058458
-data_02058458: ; 0x02058458
+data_02058458: @ 0x02058458
 	.ascii "INF"
 	.byte 0x00
 	.global data_0205845c
-data_0205845c: ; 0x0205845c
+data_0205845c: @ 0x0205845c
 	.ascii "inf"
 	.byte 0x00
 	.global data_02058460
-data_02058460: ; 0x02058460
+data_02058460: @ 0x02058460
 	.ascii "-NAN"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058468
-data_02058468: ; 0x02058468
+data_02058468: @ 0x02058468
 	.ascii "-nan"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058470
-data_02058470: ; 0x02058470
+data_02058470: @ 0x02058470
 	.ascii "NAN"
 	.byte 0x00
 	.global data_02058474
-data_02058474: ; 0x02058474
+data_02058474: @ 0x02058474
 	.ascii "nan"
 	.byte 0x00
 	.global data_02058478
-data_02058478: ; 0x02058478
+data_02058478: @ 0x02058478
 	.byte 0x00
 	.global data_02058479
-data_02058479: ; 0x02058479
+data_02058479: @ 0x02058479
 	.byte 0x00
 	.global data_0205847a
-data_0205847a: ; 0x0205847a
+data_0205847a: @ 0x0205847a
 	.byte 0x00
 	.global data_0205847b
-data_0205847b: ; 0x0205847b
+data_0205847b: @ 0x0205847b
 	.byte 0x00
 	.global data_0205847c
-data_0205847c: ; 0x0205847c
+data_0205847c: @ 0x0205847c
 	.byte 0x00
 	.global data_0205847d
-data_0205847d: ; 0x0205847d
+data_0205847d: @ 0x0205847d
 	.byte 0x00
 	.global data_0205847e
-data_0205847e: ; 0x0205847e
+data_0205847e: @ 0x0205847e
 	.byte 0x00
 	.global data_0205847f
-data_0205847f: ; 0x0205847f
+data_0205847f: @ 0x0205847f
 	.byte 0x00
 	.global data_02058480
-data_02058480: ; 0x02058480
+data_02058480: @ 0x02058480
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058484
-data_02058484: ; 0x02058484
+data_02058484: @ 0x02058484
 	.byte 0x30, 0x00, 0x78, 0x00, 0x30, 0x00, 0x70, 0x00, 0x30, 0x00, 0x00, 0x00
 	.global data_02058490
-data_02058490: ; 0x02058490
+data_02058490: @ 0x02058490
 	.byte 0x2d, 0x00, 0x49, 0x00, 0x4e, 0x00, 0x46, 0x00, 0x00, 0x00
 	.global data_0205849a
-data_0205849a: ; 0x0205849a
+data_0205849a: @ 0x0205849a
 	.byte 0x00
 	.global data_0205849b
-data_0205849b: ; 0x0205849b
+data_0205849b: @ 0x0205849b
 	.byte 0x00
 	.global data_0205849c
-data_0205849c: ; 0x0205849c
+data_0205849c: @ 0x0205849c
 	.byte 0x2d, 0x00, 0x69, 0x00
 	.byte 0x6e, 0x00, 0x66, 0x00, 0x00, 0x00
 	.global data_020584a6
-data_020584a6: ; 0x020584a6
+data_020584a6: @ 0x020584a6
 	.byte 0x00
 	.global data_020584a7
-data_020584a7: ; 0x020584a7
+data_020584a7: @ 0x020584a7
 	.byte 0x00
 	.global data_020584a8
-data_020584a8: ; 0x020584a8
+data_020584a8: @ 0x020584a8
 	.byte 0x49, 0x00, 0x4e, 0x00, 0x46, 0x00, 0x00, 0x00
 	.global data_020584b0
-data_020584b0: ; 0x020584b0
+data_020584b0: @ 0x020584b0
 	.byte 0x69, 0x00, 0x6e, 0x00, 0x66, 0x00, 0x00, 0x00
 	.global data_020584b8
-data_020584b8: ; 0x020584b8
+data_020584b8: @ 0x020584b8
 	.byte 0x2d, 0x00, 0x4e, 0x00, 0x41, 0x00, 0x4e, 0x00
 	.byte 0x00, 0x00
 	.global data_020584c2
-data_020584c2: ; 0x020584c2
+data_020584c2: @ 0x020584c2
 	.byte 0x00
 	.global data_020584c3
-data_020584c3: ; 0x020584c3
+data_020584c3: @ 0x020584c3
 	.byte 0x00
 	.global data_020584c4
-data_020584c4: ; 0x020584c4
+data_020584c4: @ 0x020584c4
 	.byte 0x2d, 0x00, 0x6e, 0x00, 0x61, 0x00, 0x6e, 0x00, 0x00, 0x00
 	.global data_020584ce
-data_020584ce: ; 0x020584ce
+data_020584ce: @ 0x020584ce
 	.byte 0x00
 	.global data_020584cf
-data_020584cf: ; 0x020584cf
+data_020584cf: @ 0x020584cf
 	.byte 0x00
 	.global data_020584d0
-data_020584d0: ; 0x020584d0
+data_020584d0: @ 0x020584d0
 	.byte 0x4e, 0x00, 0x41, 0x00, 0x4e, 0x00, 0x00, 0x00
 	.global data_020584d8
-data_020584d8: ; 0x020584d8
+data_020584d8: @ 0x020584d8
 	.byte 0x6e, 0x00, 0x61, 0x00, 0x6e, 0x00, 0x00, 0x00
 	.global data_020584e0
-data_020584e0: ; 0x020584e0
+data_020584e0: @ 0x020584e0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020584e4
-data_020584e4: ; 0x020584e4
+data_020584e4: @ 0x020584e4
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020584e8
-data_020584e8: ; 0x020584e8
+data_020584e8: @ 0x020584e8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020584ec
-data_020584ec: ; 0x020584ec
+data_020584ec: @ 0x020584ec
 	.byte 0x00, 0x00, 0x24, 0x40
 	.global data_020584f0
-data_020584f0: ; 0x020584f0
+data_020584f0: @ 0x020584f0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020584f4
-data_020584f4: ; 0x020584f4
+data_020584f4: @ 0x020584f4
 	.byte 0x00, 0x00, 0x59, 0x40
 	.global data_020584f8
-data_020584f8: ; 0x020584f8
+data_020584f8: @ 0x020584f8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020584fc
-data_020584fc: ; 0x020584fc
+data_020584fc: @ 0x020584fc
 	.byte 0x00, 0x40, 0x8f, 0x40
 	.global data_02058500
-data_02058500: ; 0x02058500
+data_02058500: @ 0x02058500
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058504
-data_02058504: ; 0x02058504
+data_02058504: @ 0x02058504
 	.byte 0x00, 0x88, 0xc3, 0x40
 	.global data_02058508
-data_02058508: ; 0x02058508
+data_02058508: @ 0x02058508
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205850c
-data_0205850c: ; 0x0205850c
+data_0205850c: @ 0x0205850c
 	.byte 0x00, 0x6a, 0xf8, 0x40
 	.global data_02058510
-data_02058510: ; 0x02058510
+data_02058510: @ 0x02058510
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058514
-data_02058514: ; 0x02058514
+data_02058514: @ 0x02058514
 	.byte 0x80, 0x84, 0x2e, 0x41
 	.global data_02058518
-data_02058518: ; 0x02058518
+data_02058518: @ 0x02058518
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205851c
-data_0205851c: ; 0x0205851c
+data_0205851c: @ 0x0205851c
 	.byte 0xd0, 0x12, 0x63, 0x41
 	.global data_02058520
-data_02058520: ; 0x02058520
+data_02058520: @ 0x02058520
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058524
-data_02058524: ; 0x02058524
+data_02058524: @ 0x02058524
 	.byte 0x84, 0xd7, 0x97, 0x41
 	.global data_02058528
-data_02058528: ; 0x02058528
+data_02058528: @ 0x02058528
 	.ascii "542101086242752217003726400434970855712890625"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058558
-data_02058558: ; 0x02058558
+data_02058558: @ 0x02058558
 	.ascii "11102230246251565404236316680908203125"
 	.byte 0x00, 0x00
 	.global data_02058580
-data_02058580: ; 0x02058580
+data_02058580: @ 0x02058580
 	.ascii "23283064365386962890625"
 	.byte 0x00
 	.global data_02058598
-data_02058598: ; 0x02058598
+data_02058598: @ 0x02058598
 	.ascii "152587890625"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020585a8
-data_020585a8: ; 0x020585a8
+data_020585a8: @ 0x020585a8
 	.ascii "390625"
 	.byte 0x00, 0x00
 	.global data_020585b0
-data_020585b0: ; 0x020585b0
+data_020585b0: @ 0x020585b0
 	.ascii "78125"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585b8
-data_020585b8: ; 0x020585b8
+data_020585b8: @ 0x020585b8
 	.ascii "15625"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585c0
-data_020585c0: ; 0x020585c0
+data_020585c0: @ 0x020585c0
 	.ascii "3125"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020585c8
-data_020585c8: ; 0x020585c8
+data_020585c8: @ 0x020585c8
 	.ascii "625"
 	.byte 0x00
 	.global data_020585cc
-data_020585cc: ; 0x020585cc
+data_020585cc: @ 0x020585cc
 	.ascii "125"
 	.byte 0x00
 	.global data_020585d0
-data_020585d0: ; 0x020585d0
+data_020585d0: @ 0x020585d0
 	.ascii "25"
 	.byte 0x00, 0x00
 	.global data_020585d4
-data_020585d4: ; 0x020585d4
+data_020585d4: @ 0x020585d4
 	.ascii "5"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585d8
-data_020585d8: ; 0x020585d8
+data_020585d8: @ 0x020585d8
 	.ascii "1"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585dc
-data_020585dc: ; 0x020585dc
+data_020585dc: @ 0x020585dc
 	.ascii "2"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585e0
-data_020585e0: ; 0x020585e0
+data_020585e0: @ 0x020585e0
 	.ascii "4"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585e4
-data_020585e4: ; 0x020585e4
+data_020585e4: @ 0x020585e4
 	.ascii "8"
 	.byte 0x00, 0x00, 0x00
 	.global data_020585e8
-data_020585e8: ; 0x020585e8
+data_020585e8: @ 0x020585e8
 	.ascii "16"
 	.byte 0x00, 0x00
 	.global data_020585ec
-data_020585ec: ; 0x020585ec
+data_020585ec: @ 0x020585ec
 	.ascii "32"
 	.byte 0x00, 0x00
 	.global data_020585f0
-data_020585f0: ; 0x020585f0
+data_020585f0: @ 0x020585f0
 	.ascii "64"
 	.byte 0x00, 0x00
 	.global data_020585f4
-data_020585f4: ; 0x020585f4
+data_020585f4: @ 0x020585f4
 	.ascii "128"
 	.byte 0x00
 	.global data_020585f8
-data_020585f8: ; 0x020585f8
+data_020585f8: @ 0x020585f8
 	.ascii "256"
 	.byte 0x00
 	.global data_020585fc
-data_020585fc: ; 0x020585fc
+data_020585fc: @ 0x020585fc
 	.ascii "179769313486231580793728714053034151"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058624
-data_02058624: ; 0x02058624
+data_02058624: @ 0x02058624
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058628
-data_02058628: ; 0x02058628
+data_02058628: @ 0x02058628
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205862c
-data_0205862c: ; 0x0205862c
+data_0205862c: @ 0x0205862c
     .word data_02058990
 	.global data_02058630
-data_02058630: ; 0x02058630
+data_02058630: @ 0x02058630
     .word data_02058670
 	.global data_02058634
-data_02058634: ; 0x02058634
+data_02058634: @ 0x02058634
     .word data_02058990
 	.global data_02058638
-data_02058638: ; 0x02058638
+data_02058638: @ 0x02058638
     .word data_020586ec
 	.global data_0205863c
-data_0205863c: ; 0x0205863c
+data_0205863c: @ 0x0205863c
     .word data_02058990
 	.global data_02058640
-data_02058640: ; 0x02058640
+data_02058640: @ 0x02058640
     .word data_020586c8
 	.global data_02058644
-data_02058644: ; 0x02058644
+data_02058644: @ 0x02058644
     .word data_02058990
 	.global data_02058648
-data_02058648: ; 0x02058648
+data_02058648: @ 0x02058648
     .word data_02058664
 	.global data_0205864c
-data_0205864c: ; 0x0205864c
+data_0205864c: @ 0x0205864c
     .word data_02058980
 	.global data_02058650
-data_02058650: ; 0x02058650
+data_02058650: @ 0x02058650
     .word data_02058680
 	.global data_02058654
-data_02058654: ; 0x02058654
+data_02058654: @ 0x02058654
     .word data_0205862c
 	.global data_02058658
-data_02058658: ; 0x02058658
+data_02058658: @ 0x02058658
     .word data_02058980
 	.global data_0205865c
-data_0205865c: ; 0x0205865c
+data_0205865c: @ 0x0205865c
     .word data_02058718
 	.global data_02058660
-data_02058660: ; 0x02058660
+data_02058660: @ 0x02058660
     .word data_02058634
 	.global data_02058664
-data_02058664: ; 0x02058664
+data_02058664: @ 0x02058664
 	.ascii "St8ios_base"
 	.byte 0x00
 	.global data_02058670
-data_02058670: ; 0x02058670
+data_02058670: @ 0x02058670
 	.ascii "St9exception"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058680
-data_02058680: ; 0x02058680
+data_02058680: @ 0x02058680
 	.ascii "NSt8ios_base7failureE"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058698
-data_02058698: ; 0x02058698
+data_02058698: @ 0x02058698
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205869c
-data_0205869c: ; 0x0205869c
+data_0205869c: @ 0x0205869c
     .word data_02058634
 	.global data_020586a0
-data_020586a0: ; 0x020586a0
+data_020586a0: @ 0x020586a0
     .word func_0204dc14 - 1
 	.global data_020586a4
-data_020586a4: ; 0x020586a4
+data_020586a4: @ 0x020586a4
     .word func_0204dc00 - 1
 	.global data_020586a8
-data_020586a8: ; 0x020586a8
+data_020586a8: @ 0x020586a8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020586ac
-data_020586ac: ; 0x020586ac
+data_020586ac: @ 0x020586ac
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020586b0
-data_020586b0: ; 0x020586b0
+data_020586b0: @ 0x020586b0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020586b4
-data_020586b4: ; 0x020586b4
+data_020586b4: @ 0x020586b4
     .word data_02058658
 	.global data_020586b8
-data_020586b8: ; 0x020586b8
+data_020586b8: @ 0x020586b8
     .word func_0204dcc4 - 1
 	.global data_020586bc
-data_020586bc: ; 0x020586bc
+data_020586bc: @ 0x020586bc
     .word func_0204dcb0 - 1
 	.global data_020586c0
-data_020586c0: ; 0x020586c0
+data_020586c0: @ 0x020586c0
     .word func_0204dc18 - 1
 	.global data_020586c4
-data_020586c4: ; 0x020586c4
+data_020586c4: @ 0x020586c4
     .word func_0204dc40 - 1
 	.global data_020586c8
-data_020586c8: ; 0x020586c8
+data_020586c8: @ 0x020586c8
 	.ascii "NSt6detail14default_deleteIA0_cEE"
 	.byte 0x00, 0x00, 0x00
 	.global data_020586ec
-data_020586ec: ; 0x020586ec
+data_020586ec: @ 0x020586ec
 	.ascii "NSt3tr16detail25shared_ptr_deleter_commonE"
 	.byte 0x00, 0x00
 	.global data_02058718
-data_02058718: ; 0x02058718
+data_02058718: @ 0x02058718
 	.ascii "NSt3tr16detail18shared_ptr_deleterIcNSt6detail14default_deleteIA0_cEEEE"
 	.byte 0x00
 	.global data_02058760
-data_02058760: ; 0x02058760
+data_02058760: @ 0x02058760
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058764
-data_02058764: ; 0x02058764
+data_02058764: @ 0x02058764
 	.byte 0x20, 0x00, 0x00, 0x00
 	.global data_02058768
-data_02058768: ; 0x02058768
+data_02058768: @ 0x02058768
     .word data_02058990
 	.global data_0205876c
-data_0205876c: ; 0x0205876c
+data_0205876c: @ 0x0205876c
     .word data_020586ec
 	.global data_02058770
-data_02058770: ; 0x02058770
+data_02058770: @ 0x02058770
     .word data_02058990
 	.global data_02058774
-data_02058774: ; 0x02058774
+data_02058774: @ 0x02058774
     .word data_020586c8
 	.global data_02058778
-data_02058778: ; 0x02058778
+data_02058778: @ 0x02058778
     .word data_02058990
 	.global data_0205877c
-data_0205877c: ; 0x0205877c
+data_0205877c: @ 0x0205877c
     .word data_02058670
 	.global data_02058780
-data_02058780: ; 0x02058780
+data_02058780: @ 0x02058780
     .word data_02058980
 	.global data_02058784
-data_02058784: ; 0x02058784
+data_02058784: @ 0x02058784
     .word data_020587b0
 	.global data_02058788
-data_02058788: ; 0x02058788
+data_02058788: @ 0x02058788
     .word data_0205862c
 	.global data_0205878c
-data_0205878c: ; 0x0205878c
+data_0205878c: @ 0x0205878c
     .word data_02058980
 	.global data_02058790
-data_02058790: ; 0x02058790
+data_02058790: @ 0x02058790
     .word data_020587c0
 	.global data_02058794
-data_02058794: ; 0x02058794
+data_02058794: @ 0x02058794
     .word data_02058780
 	.global data_02058798
-data_02058798: ; 0x02058798
+data_02058798: @ 0x02058798
     .word data_02058980
 	.global data_0205879c
-data_0205879c: ; 0x0205879c
+data_0205879c: @ 0x0205879c
     .word data_020587d4
 	.global data_020587a0
-data_020587a0: ; 0x020587a0
+data_020587a0: @ 0x020587a0
     .word data_02058780
 	.global data_020587a4
-data_020587a4: ; 0x020587a4
+data_020587a4: @ 0x020587a4
     .word data_02058980
 	.global data_020587a8
-data_020587a8: ; 0x020587a8
+data_020587a8: @ 0x020587a8
     .word data_02058718
 	.global data_020587ac
-data_020587ac: ; 0x020587ac
+data_020587ac: @ 0x020587ac
     .word data_02058634
 	.global data_020587b0
-data_020587b0: ; 0x020587b0
+data_020587b0: @ 0x020587b0
 	.ascii "St11logic_error"
 	.byte 0x00
 	.global data_020587c0
-data_020587c0: ; 0x020587c0
+data_020587c0: @ 0x020587c0
 	.ascii "St12out_of_range"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020587d4
-data_020587d4: ; 0x020587d4
+data_020587d4: @ 0x020587d4
 	.ascii "St12length_error"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020587e8
-data_020587e8: ; 0x020587e8
+data_020587e8: @ 0x020587e8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020587ec
-data_020587ec: ; 0x020587ec
+data_020587ec: @ 0x020587ec
     .word data_02058798
 	.global data_020587f0
-data_020587f0: ; 0x020587f0
+data_020587f0: @ 0x020587f0
     .word func_0204dd08 - 1
 	.global data_020587f4
-data_020587f4: ; 0x020587f4
+data_020587f4: @ 0x020587f4
     .word func_0204dd20 - 1
 	.global data_020587f8
-data_020587f8: ; 0x020587f8
+data_020587f8: @ 0x020587f8
     .word func_0204dcc8 - 1
 	.global data_020587fc
-data_020587fc: ; 0x020587fc
+data_020587fc: @ 0x020587fc
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058800
-data_02058800: ; 0x02058800
+data_02058800: @ 0x02058800
     .word data_02058780
 	.global data_02058804
-data_02058804: ; 0x02058804
+data_02058804: @ 0x02058804
     .word func_0204dcd0 - 1
 	.global data_02058808
-data_02058808: ; 0x02058808
+data_02058808: @ 0x02058808
     .word func_0204dce8 - 1
 	.global data_0205880c
-data_0205880c: ; 0x0205880c
+data_0205880c: @ 0x0205880c
     .word func_0204dcc8 - 1
 	.global data_02058810
-data_02058810: ; 0x02058810
+data_02058810: @ 0x02058810
 	.ascii "vector length error"
 	.byte 0x00
 	.global data_02058824
-data_02058824: ; 0x02058824
+data_02058824: @ 0x02058824
 	.ascii "!std::exception!!std::logic_error!!std::length_error!!"
 	.byte 0x00, 0x00
 	.global data_0205885c
-data_0205885c: ; 0x0205885c
+data_0205885c: @ 0x0205885c
     .word data_02058990
 	.global data_02058860
-data_02058860: ; 0x02058860
+data_02058860: @ 0x02058860
     .word data_02058670
 	.global data_02058864
-data_02058864: ; 0x02058864
+data_02058864: @ 0x02058864
     .word data_02058980
 	.global data_02058868
-data_02058868: ; 0x02058868
+data_02058868: @ 0x02058868
     .word data_02058880
 	.global data_0205886c
-data_0205886c: ; 0x0205886c
+data_0205886c: @ 0x0205886c
     .word data_0205862c
 	.global data_02058870
-data_02058870: ; 0x02058870
+data_02058870: @ 0x02058870
 	.ascii "bad_exception"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058880
-data_02058880: ; 0x02058880
+data_02058880: @ 0x02058880
 	.ascii "St13bad_exception"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058894
-data_02058894: ; 0x02058894
+data_02058894: @ 0x02058894
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058898
-data_02058898: ; 0x02058898
+data_02058898: @ 0x02058898
     .word data_02058864
 	.global data_0205889c
-data_0205889c: ; 0x0205889c
+data_0205889c: @ 0x0205889c
     .word func_0204f0bc - 1
 	.global data_020588a0
-data_020588a0: ; 0x020588a0
+data_020588a0: @ 0x020588a0
     .word func_0204f46c - 1
 	.global data_020588a4
-data_020588a4: ; 0x020588a4
+data_020588a4: @ 0x020588a4
     .word func_0204f480 - 1
 	.global data_020588a8
-data_020588a8: ; 0x020588a8
+data_020588a8: @ 0x020588a8
 	.ascii "!std::bad_exception!!"
 	.byte 0x00, 0x00, 0x00
 	.global data_020588c0
-data_020588c0: ; 0x020588c0
+data_020588c0: @ 0x020588c0
 	.ascii "!std::exception!!std::bad_exception!!"
 	.byte 0x00, 0x00, 0x00
 	.global data_020588e8
-data_020588e8: ; 0x020588e8
+data_020588e8: @ 0x020588e8
     .word data_02058990
 	.global data_020588ec
-data_020588ec: ; 0x020588ec
+data_020588ec: @ 0x020588ec
     .word data_02058968
 	.global data_020588f0
-data_020588f0: ; 0x020588f0
+data_020588f0: @ 0x020588f0
     .word data_02058980
 	.global data_020588f4
-data_020588f4: ; 0x020588f4
+data_020588f4: @ 0x020588f4
     .word data_02058a04
 	.global data_020588f8
-data_020588f8: ; 0x020588f8
+data_020588f8: @ 0x020588f8
     .word data_020588e8
 	.global data_020588fc
-data_020588fc: ; 0x020588fc
+data_020588fc: @ 0x020588fc
     .word data_02058980
 	.global data_02058900
-data_02058900: ; 0x02058900
+data_02058900: @ 0x02058900
     .word data_02058a28
 	.global data_02058904
-data_02058904: ; 0x02058904
+data_02058904: @ 0x02058904
     .word data_02058914
 	.global data_02058908
-data_02058908: ; 0x02058908
+data_02058908: @ 0x02058908
     .word data_02058980
 	.global data_0205890c
-data_0205890c: ; 0x0205890c
+data_0205890c: @ 0x0205890c
     .word data_02058998
 	.global data_02058910
-data_02058910: ; 0x02058910
+data_02058910: @ 0x02058910
     .word data_020588e8
 	.global data_02058914
-data_02058914: ; 0x02058914
+data_02058914: @ 0x02058914
     .word data_02058980
 	.global data_02058918
-data_02058918: ; 0x02058918
+data_02058918: @ 0x02058918
     .word data_020589bc
 	.global data_0205891c
-data_0205891c: ; 0x0205891c
+data_0205891c: @ 0x0205891c
     .word data_020588e8
 	.global data_02058920
-data_02058920: ; 0x02058920
+data_02058920: @ 0x02058920
     .word data_02058980
 	.global data_02058924
-data_02058924: ; 0x02058924
+data_02058924: @ 0x02058924
     .word data_02058a9c
 	.global data_02058928
-data_02058928: ; 0x02058928
+data_02058928: @ 0x02058928
     .word data_0205895c
 	.global data_0205892c
-data_0205892c: ; 0x0205892c
+data_0205892c: @ 0x0205892c
     .word data_02058980
 	.global data_02058930
-data_02058930: ; 0x02058930
+data_02058930: @ 0x02058930
     .word data_02058a4c
 	.global data_02058934
-data_02058934: ; 0x02058934
+data_02058934: @ 0x02058934
     .word data_020588e8
 	.global data_02058938
-data_02058938: ; 0x02058938
+data_02058938: @ 0x02058938
     .word data_02058980
 	.global data_0205893c
-data_0205893c: ; 0x0205893c
+data_0205893c: @ 0x0205893c
     .word data_02058a74
 	.global data_02058940
-data_02058940: ; 0x02058940
+data_02058940: @ 0x02058940
     .word data_0205895c
 	.global data_02058944
-data_02058944: ; 0x02058944
+data_02058944: @ 0x02058944
     .word data_02058980
 	.global data_02058948
-data_02058948: ; 0x02058948
+data_02058948: @ 0x02058948
     .word data_02058aec
 	.global data_0205894c
-data_0205894c: ; 0x0205894c
+data_0205894c: @ 0x0205894c
     .word data_02058914
 	.global data_02058950
-data_02058950: ; 0x02058950
+data_02058950: @ 0x02058950
     .word data_02058980
 	.global data_02058954
-data_02058954: ; 0x02058954
+data_02058954: @ 0x02058954
     .word data_02058ac4
 	.global data_02058958
-data_02058958: ; 0x02058958
+data_02058958: @ 0x02058958
     .word data_020588e8
 	.global data_0205895c
-data_0205895c: ; 0x0205895c
+data_0205895c: @ 0x0205895c
     .word data_02058980
 	.global data_02058960
-data_02058960: ; 0x02058960
+data_02058960: @ 0x02058960
     .word data_020589e0
 	.global data_02058964
-data_02058964: ; 0x02058964
+data_02058964: @ 0x02058964
     .word data_020588e8
 	.global data_02058968
-data_02058968: ; 0x02058968
+data_02058968: @ 0x02058968
 	.ascii "St9type_info"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058978
-data_02058978: ; 0x02058978
+data_02058978: @ 0x02058978
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205897c
-data_0205897c: ; 0x0205897c
+data_0205897c: @ 0x0205897c
     .word data_02058938
 	.global data_02058980
-data_02058980: ; 0x02058980
+data_02058980: @ 0x02058980
     .word func_0204f85c - 1
 	.global data_02058984
-data_02058984: ; 0x02058984
+data_02058984: @ 0x02058984
     .word func_0204f870 - 1
 	.global data_02058988
-data_02058988: ; 0x02058988
+data_02058988: @ 0x02058988
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_0205898c
-data_0205898c: ; 0x0205898c
+data_0205898c: @ 0x0205898c
     .word data_0205895c
 	.global data_02058990
-data_02058990: ; 0x02058990
+data_02058990: @ 0x02058990
     .word func_0204f818 - 1
 	.global data_02058994
-data_02058994: ; 0x02058994
+data_02058994: @ 0x02058994
     .word func_0204f82c - 1
 	.global data_02058998
-data_02058998: ; 0x02058998
+data_02058998: @ 0x02058998
 	.ascii "N10__cxxabiv116__enum_type_infoE"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_020589bc
-data_020589bc: ; 0x020589bc
+data_020589bc: @ 0x020589bc
 	.ascii "N10__cxxabiv117__pbase_type_infoE"
 	.byte 0x00, 0x00, 0x00
 	.global data_020589e0
-data_020589e0: ; 0x020589e0
+data_020589e0: @ 0x020589e0
 	.ascii "N10__cxxabiv117__class_type_infoE"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058a04
-data_02058a04: ; 0x02058a04
+data_02058a04: @ 0x02058a04
 	.ascii "N10__cxxabiv117__array_type_infoE"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058a28
-data_02058a28: ; 0x02058a28
+data_02058a28: @ 0x02058a28
 	.ascii "N10__cxxabiv119__pointer_type_infoE"
 	.byte 0x00
 	.global data_02058a4c
-data_02058a4c: ; 0x02058a4c
+data_02058a4c: @ 0x02058a4c
 	.ascii "N10__cxxabiv120__function_type_infoE"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058a74
-data_02058a74: ; 0x02058a74
+data_02058a74: @ 0x02058a74
 	.ascii "N10__cxxabiv120__si_class_type_infoE"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058a9c
-data_02058a9c: ; 0x02058a9c
+data_02058a9c: @ 0x02058a9c
 	.ascii "N10__cxxabiv121__vmi_class_type_infoE"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058ac4
-data_02058ac4: ; 0x02058ac4
+data_02058ac4: @ 0x02058ac4
 	.ascii "N10__cxxabiv123__fundamental_type_infoE"
 	.byte 0x00
 	.global data_02058aec
-data_02058aec: ; 0x02058aec
+data_02058aec: @ 0x02058aec
 	.ascii "N10__cxxabiv129__pointer_to_member_type_infoE"
 	.byte 0x00, 0x00, 0x00
 	.global data_02058b1c
-data_02058b1c: ; 0x02058b1c
+data_02058b1c: @ 0x02058b1c
     .word func_0204f88c - 1
 	.global data_02058b20
-data_02058b20: ; 0x02058b20
+data_02058b20: @ 0x02058b20
     .word func_0204f898 - 1
 	.global data_02058b24
-data_02058b24: ; 0x02058b24
+data_02058b24: @ 0x02058b24
 	.byte 0x80, 0x00, 0x00, 0x00
 	.global data_02058b28
-data_02058b28: ; 0x02058b28
+data_02058b28: @ 0x02058b28
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058b2c
-data_02058b2c: ; 0x02058b2c
+data_02058b2c: @ 0x02058b2c
 	.byte 0x06, 0x00, 0x00, 0x00
 	.global data_02058b30
-data_02058b30: ; 0x02058b30
+data_02058b30: @ 0x02058b30
 	.byte 0x0b, 0x00, 0x00, 0x00
 	.global data_02058b34
-data_02058b34: ; 0x02058b34
+data_02058b34: @ 0x02058b34
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058b38
-data_02058b38: ; 0x02058b38
+data_02058b38: @ 0x02058b38
 	.byte 0x05, 0x00, 0x00, 0x00
 	.global data_02058b3c
-data_02058b3c: ; 0x02058b3c
+data_02058b3c: @ 0x02058b3c
 	.byte 0x0a, 0x00, 0x00, 0x00
 	.global data_02058b40
-data_02058b40: ; 0x02058b40
+data_02058b40: @ 0x02058b40
 	.byte 0x0f, 0x00, 0x00, 0x00
 	.global data_02058b44
-data_02058b44: ; 0x02058b44
+data_02058b44: @ 0x02058b44
 	.byte 0x04, 0x00, 0x00, 0x00
 	.global data_02058b48
-data_02058b48: ; 0x02058b48
+data_02058b48: @ 0x02058b48
 	.byte 0x09, 0x00, 0x00, 0x00
 	.global data_02058b4c
-data_02058b4c: ; 0x02058b4c
+data_02058b4c: @ 0x02058b4c
 	.byte 0x0e, 0x00, 0x00, 0x00
 	.global data_02058b50
-data_02058b50: ; 0x02058b50
+data_02058b50: @ 0x02058b50
 	.byte 0x03, 0x00, 0x00, 0x00
 	.global data_02058b54
-data_02058b54: ; 0x02058b54
+data_02058b54: @ 0x02058b54
 	.byte 0x08, 0x00, 0x00, 0x00
 	.global data_02058b58
-data_02058b58: ; 0x02058b58
+data_02058b58: @ 0x02058b58
 	.byte 0x0d, 0x00, 0x00, 0x00
 	.global data_02058b5c
-data_02058b5c: ; 0x02058b5c
+data_02058b5c: @ 0x02058b5c
 	.byte 0x02, 0x00, 0x00, 0x00
 	.global data_02058b60
-data_02058b60: ; 0x02058b60
+data_02058b60: @ 0x02058b60
 	.byte 0x07, 0x00, 0x00, 0x00
 	.global data_02058b64
-data_02058b64: ; 0x02058b64
+data_02058b64: @ 0x02058b64
 	.byte 0x0c, 0x00, 0x00, 0x00
 	.global data_02058b68
-data_02058b68: ; 0x02058b68
+data_02058b68: @ 0x02058b68
 	.byte 0x05, 0x00, 0x00, 0x00
 	.global data_02058b6c
-data_02058b6c: ; 0x02058b6c
+data_02058b6c: @ 0x02058b6c
 	.byte 0x08, 0x00, 0x00, 0x00
 	.global data_02058b70
-data_02058b70: ; 0x02058b70
+data_02058b70: @ 0x02058b70
 	.byte 0x0b, 0x00, 0x00, 0x00
 	.global data_02058b74
-data_02058b74: ; 0x02058b74
+data_02058b74: @ 0x02058b74
 	.byte 0x0e, 0x00, 0x00, 0x00
 	.global data_02058b78
-data_02058b78: ; 0x02058b78
+data_02058b78: @ 0x02058b78
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058b7c
-data_02058b7c: ; 0x02058b7c
+data_02058b7c: @ 0x02058b7c
 	.byte 0x04, 0x00, 0x00, 0x00
 	.global data_02058b80
-data_02058b80: ; 0x02058b80
+data_02058b80: @ 0x02058b80
 	.byte 0x07, 0x00, 0x00, 0x00
 	.global data_02058b84
-data_02058b84: ; 0x02058b84
+data_02058b84: @ 0x02058b84
 	.byte 0x0a, 0x00, 0x00, 0x00
 	.global data_02058b88
-data_02058b88: ; 0x02058b88
+data_02058b88: @ 0x02058b88
 	.byte 0x0d, 0x00, 0x00, 0x00
 	.global data_02058b8c
-data_02058b8c: ; 0x02058b8c
+data_02058b8c: @ 0x02058b8c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058b90
-data_02058b90: ; 0x02058b90
+data_02058b90: @ 0x02058b90
 	.byte 0x03, 0x00, 0x00, 0x00
 	.global data_02058b94
-data_02058b94: ; 0x02058b94
+data_02058b94: @ 0x02058b94
 	.byte 0x06, 0x00, 0x00, 0x00
 	.global data_02058b98
-data_02058b98: ; 0x02058b98
+data_02058b98: @ 0x02058b98
 	.byte 0x09, 0x00, 0x00, 0x00
 	.global data_02058b9c
-data_02058b9c: ; 0x02058b9c
+data_02058b9c: @ 0x02058b9c
 	.byte 0x0c, 0x00, 0x00, 0x00
 	.global data_02058ba0
-data_02058ba0: ; 0x02058ba0
+data_02058ba0: @ 0x02058ba0
 	.byte 0x0f, 0x00, 0x00, 0x00
 	.global data_02058ba4
-data_02058ba4: ; 0x02058ba4
+data_02058ba4: @ 0x02058ba4
 	.byte 0x02, 0x00, 0x00, 0x00
 	.global data_02058ba8
-data_02058ba8: ; 0x02058ba8
+data_02058ba8: @ 0x02058ba8
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058bac
-data_02058bac: ; 0x02058bac
+data_02058bac: @ 0x02058bac
 	.byte 0x07, 0x00, 0x00, 0x00
 	.global data_02058bb0
-data_02058bb0: ; 0x02058bb0
+data_02058bb0: @ 0x02058bb0
 	.byte 0x0e, 0x00, 0x00, 0x00
 	.global data_02058bb4
-data_02058bb4: ; 0x02058bb4
+data_02058bb4: @ 0x02058bb4
 	.byte 0x05, 0x00, 0x00, 0x00
 	.global data_02058bb8
-data_02058bb8: ; 0x02058bb8
+data_02058bb8: @ 0x02058bb8
 	.byte 0x0c, 0x00, 0x00, 0x00
 	.global data_02058bbc
-data_02058bbc: ; 0x02058bbc
+data_02058bbc: @ 0x02058bbc
 	.byte 0x03, 0x00, 0x00, 0x00
 	.global data_02058bc0
-data_02058bc0: ; 0x02058bc0
+data_02058bc0: @ 0x02058bc0
 	.byte 0x0a, 0x00, 0x00, 0x00
 	.global data_02058bc4
-data_02058bc4: ; 0x02058bc4
+data_02058bc4: @ 0x02058bc4
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058bc8
-data_02058bc8: ; 0x02058bc8
+data_02058bc8: @ 0x02058bc8
 	.byte 0x08, 0x00, 0x00, 0x00
 	.global data_02058bcc
-data_02058bcc: ; 0x02058bcc
+data_02058bcc: @ 0x02058bcc
 	.byte 0x0f, 0x00, 0x00, 0x00
 	.global data_02058bd0
-data_02058bd0: ; 0x02058bd0
+data_02058bd0: @ 0x02058bd0
 	.byte 0x06, 0x00, 0x00, 0x00
 	.global data_02058bd4
-data_02058bd4: ; 0x02058bd4
+data_02058bd4: @ 0x02058bd4
 	.byte 0x0d, 0x00, 0x00, 0x00
 	.global data_02058bd8
-data_02058bd8: ; 0x02058bd8
+data_02058bd8: @ 0x02058bd8
 	.byte 0x04, 0x00, 0x00, 0x00
 	.global data_02058bdc
-data_02058bdc: ; 0x02058bdc
+data_02058bdc: @ 0x02058bdc
 	.byte 0x0b, 0x00, 0x00, 0x00
 	.global data_02058be0
-data_02058be0: ; 0x02058be0
+data_02058be0: @ 0x02058be0
 	.byte 0x02, 0x00, 0x00, 0x00
 	.global data_02058be4
-data_02058be4: ; 0x02058be4
+data_02058be4: @ 0x02058be4
 	.byte 0x09, 0x00, 0x00, 0x00
 	.global data_02058be8
-data_02058be8: ; 0x02058be8
+data_02058be8: @ 0x02058be8
 	.byte 0x78, 0xa4, 0x6a, 0xd7
 	.global data_02058bec
-data_02058bec: ; 0x02058bec
+data_02058bec: @ 0x02058bec
 	.byte 0x56, 0xb7, 0xc7, 0xe8
 	.global data_02058bf0
-data_02058bf0: ; 0x02058bf0
+data_02058bf0: @ 0x02058bf0
 	.byte 0xdb, 0x70, 0x20, 0x24
 	.global data_02058bf4
-data_02058bf4: ; 0x02058bf4
+data_02058bf4: @ 0x02058bf4
 	.byte 0xee, 0xce, 0xbd, 0xc1
 	.global data_02058bf8
-data_02058bf8: ; 0x02058bf8
+data_02058bf8: @ 0x02058bf8
 	.byte 0xaf, 0x0f, 0x7c, 0xf5
 	.global data_02058bfc
-data_02058bfc: ; 0x02058bfc
+data_02058bfc: @ 0x02058bfc
 	.byte 0x2a, 0xc6, 0x87, 0x47
 	.global data_02058c00
-data_02058c00: ; 0x02058c00
+data_02058c00: @ 0x02058c00
 	.byte 0x13, 0x46, 0x30, 0xa8
 	.global data_02058c04
-data_02058c04: ; 0x02058c04
+data_02058c04: @ 0x02058c04
 	.byte 0x01, 0x95, 0x46, 0xfd
 	.global data_02058c08
-data_02058c08: ; 0x02058c08
+data_02058c08: @ 0x02058c08
 	.byte 0xd8, 0x98, 0x80, 0x69
 	.global data_02058c0c
-data_02058c0c: ; 0x02058c0c
+data_02058c0c: @ 0x02058c0c
 	.byte 0xaf, 0xf7, 0x44, 0x8b
 	.global data_02058c10
-data_02058c10: ; 0x02058c10
+data_02058c10: @ 0x02058c10
 	.byte 0xb1, 0x5b, 0xff, 0xff
 	.global data_02058c14
-data_02058c14: ; 0x02058c14
+data_02058c14: @ 0x02058c14
 	.byte 0xbe, 0xd7, 0x5c, 0x89
 	.global data_02058c18
-data_02058c18: ; 0x02058c18
+data_02058c18: @ 0x02058c18
 	.byte 0x22, 0x11, 0x90, 0x6b
 	.global data_02058c1c
-data_02058c1c: ; 0x02058c1c
+data_02058c1c: @ 0x02058c1c
 	.byte 0x93, 0x71, 0x98, 0xfd
 	.global data_02058c20
-data_02058c20: ; 0x02058c20
+data_02058c20: @ 0x02058c20
 	.byte 0x8e, 0x43, 0x79, 0xa6
 	.global data_02058c24
-data_02058c24: ; 0x02058c24
+data_02058c24: @ 0x02058c24
 	.byte 0x21, 0x08, 0xb4, 0x49
 	.global data_02058c28
-data_02058c28: ; 0x02058c28
+data_02058c28: @ 0x02058c28
 	.byte 0x62, 0x25, 0x1e, 0xf6
 	.global data_02058c2c
-data_02058c2c: ; 0x02058c2c
+data_02058c2c: @ 0x02058c2c
 	.byte 0x40, 0xb3, 0x40, 0xc0
 	.global data_02058c30
-data_02058c30: ; 0x02058c30
+data_02058c30: @ 0x02058c30
 	.byte 0x51, 0x5a, 0x5e, 0x26
 	.global data_02058c34
-data_02058c34: ; 0x02058c34
+data_02058c34: @ 0x02058c34
 	.byte 0xaa, 0xc7, 0xb6, 0xe9
 	.global data_02058c38
-data_02058c38: ; 0x02058c38
+data_02058c38: @ 0x02058c38
 	.byte 0x5d, 0x10, 0x2f, 0xd6
 	.global data_02058c3c
-data_02058c3c: ; 0x02058c3c
+data_02058c3c: @ 0x02058c3c
 	.byte 0x53, 0x14, 0x44, 0x02
 	.global data_02058c40
-data_02058c40: ; 0x02058c40
+data_02058c40: @ 0x02058c40
 	.byte 0x81, 0xe6, 0xa1, 0xd8
 	.global data_02058c44
-data_02058c44: ; 0x02058c44
+data_02058c44: @ 0x02058c44
 	.byte 0xc8, 0xfb, 0xd3, 0xe7
 	.global data_02058c48
-data_02058c48: ; 0x02058c48
+data_02058c48: @ 0x02058c48
 	.byte 0xe6, 0xcd, 0xe1, 0x21
 	.global data_02058c4c
-data_02058c4c: ; 0x02058c4c
+data_02058c4c: @ 0x02058c4c
 	.byte 0xd6, 0x07, 0x37, 0xc3
 	.global data_02058c50
-data_02058c50: ; 0x02058c50
+data_02058c50: @ 0x02058c50
 	.byte 0x87, 0x0d, 0xd5, 0xf4
 	.global data_02058c54
-data_02058c54: ; 0x02058c54
+data_02058c54: @ 0x02058c54
 	.byte 0xed, 0x14, 0x5a, 0x45
 	.global data_02058c58
-data_02058c58: ; 0x02058c58
+data_02058c58: @ 0x02058c58
 	.byte 0x05, 0xe9, 0xe3, 0xa9
 	.global data_02058c5c
-data_02058c5c: ; 0x02058c5c
+data_02058c5c: @ 0x02058c5c
 	.byte 0xf8, 0xa3, 0xef, 0xfc
 	.global data_02058c60
-data_02058c60: ; 0x02058c60
+data_02058c60: @ 0x02058c60
 	.byte 0xd9, 0x02, 0x6f, 0x67
 	.global data_02058c64
-data_02058c64: ; 0x02058c64
+data_02058c64: @ 0x02058c64
 	.byte 0x8a, 0x4c, 0x2a, 0x8d
 	.global data_02058c68
-data_02058c68: ; 0x02058c68
+data_02058c68: @ 0x02058c68
 	.byte 0x42, 0x39, 0xfa, 0xff
 	.global data_02058c6c
-data_02058c6c: ; 0x02058c6c
+data_02058c6c: @ 0x02058c6c
 	.byte 0x81, 0xf6, 0x71, 0x87
 	.global data_02058c70
-data_02058c70: ; 0x02058c70
+data_02058c70: @ 0x02058c70
 	.byte 0x22, 0x61, 0x9d, 0x6d
 	.global data_02058c74
-data_02058c74: ; 0x02058c74
+data_02058c74: @ 0x02058c74
 	.byte 0x0c, 0x38, 0xe5, 0xfd
 	.global data_02058c78
-data_02058c78: ; 0x02058c78
+data_02058c78: @ 0x02058c78
 	.byte 0x44, 0xea, 0xbe, 0xa4
 	.global data_02058c7c
-data_02058c7c: ; 0x02058c7c
+data_02058c7c: @ 0x02058c7c
 	.byte 0xa9, 0xcf, 0xde, 0x4b
 	.global data_02058c80
-data_02058c80: ; 0x02058c80
+data_02058c80: @ 0x02058c80
 	.byte 0x60, 0x4b, 0xbb, 0xf6
 	.global data_02058c84
-data_02058c84: ; 0x02058c84
+data_02058c84: @ 0x02058c84
 	.byte 0x70, 0xbc, 0xbf, 0xbe
 	.global data_02058c88
-data_02058c88: ; 0x02058c88
+data_02058c88: @ 0x02058c88
 	.byte 0xc6, 0x7e, 0x9b, 0x28
 	.global data_02058c8c
-data_02058c8c: ; 0x02058c8c
+data_02058c8c: @ 0x02058c8c
 	.byte 0xfa, 0x27, 0xa1, 0xea
 	.global data_02058c90
-data_02058c90: ; 0x02058c90
+data_02058c90: @ 0x02058c90
 	.byte 0x85, 0x30, 0xef, 0xd4
 	.global data_02058c94
-data_02058c94: ; 0x02058c94
+data_02058c94: @ 0x02058c94
 	.byte 0x05, 0x1d, 0x88, 0x04
 	.global data_02058c98
-data_02058c98: ; 0x02058c98
+data_02058c98: @ 0x02058c98
 	.byte 0x39, 0xd0, 0xd4, 0xd9
 	.global data_02058c9c
-data_02058c9c: ; 0x02058c9c
+data_02058c9c: @ 0x02058c9c
 	.byte 0xe5, 0x99, 0xdb, 0xe6
 	.global data_02058ca0
-data_02058ca0: ; 0x02058ca0
+data_02058ca0: @ 0x02058ca0
 	.byte 0xf8, 0x7c, 0xa2, 0x1f
 	.global data_02058ca4
-data_02058ca4: ; 0x02058ca4
+data_02058ca4: @ 0x02058ca4
 	.byte 0x65, 0x56, 0xac, 0xc4
 	.global data_02058ca8
-data_02058ca8: ; 0x02058ca8
+data_02058ca8: @ 0x02058ca8
 	.byte 0x44, 0x22, 0x29, 0xf4
 	.global data_02058cac
-data_02058cac: ; 0x02058cac
+data_02058cac: @ 0x02058cac
 	.byte 0x97, 0xff, 0x2a, 0x43
 	.global data_02058cb0
-data_02058cb0: ; 0x02058cb0
+data_02058cb0: @ 0x02058cb0
 	.byte 0xa7, 0x23, 0x94, 0xab
 	.global data_02058cb4
-data_02058cb4: ; 0x02058cb4
+data_02058cb4: @ 0x02058cb4
 	.byte 0x39, 0xa0, 0x93, 0xfc
 	.global data_02058cb8
-data_02058cb8: ; 0x02058cb8
+data_02058cb8: @ 0x02058cb8
 	.byte 0xc3, 0x59, 0x5b, 0x65
 	.global data_02058cbc
-data_02058cbc: ; 0x02058cbc
+data_02058cbc: @ 0x02058cbc
 	.byte 0x92, 0xcc, 0x0c, 0x8f
 	.global data_02058cc0
-data_02058cc0: ; 0x02058cc0
+data_02058cc0: @ 0x02058cc0
 	.byte 0x7d, 0xf4, 0xef, 0xff
 	.global data_02058cc4
-data_02058cc4: ; 0x02058cc4
+data_02058cc4: @ 0x02058cc4
 	.byte 0xd1, 0x5d, 0x84, 0x85
 	.global data_02058cc8
-data_02058cc8: ; 0x02058cc8
+data_02058cc8: @ 0x02058cc8
 	.byte 0x4f, 0x7e, 0xa8, 0x6f
 	.global data_02058ccc
-data_02058ccc: ; 0x02058ccc
+data_02058ccc: @ 0x02058ccc
 	.byte 0xe0, 0xe6, 0x2c, 0xfe
 	.global data_02058cd0
-data_02058cd0: ; 0x02058cd0
+data_02058cd0: @ 0x02058cd0
 	.byte 0x14, 0x43, 0x01, 0xa3
 	.global data_02058cd4
-data_02058cd4: ; 0x02058cd4
+data_02058cd4: @ 0x02058cd4
 	.byte 0xa1, 0x11, 0x08, 0x4e
 	.global data_02058cd8
-data_02058cd8: ; 0x02058cd8
+data_02058cd8: @ 0x02058cd8
 	.byte 0x82, 0x7e, 0x53, 0xf7
 	.global data_02058cdc
-data_02058cdc: ; 0x02058cdc
+data_02058cdc: @ 0x02058cdc
 	.byte 0x35, 0xf2, 0x3a, 0xbd
 	.global data_02058ce0
-data_02058ce0: ; 0x02058ce0
+data_02058ce0: @ 0x02058ce0
 	.byte 0xbb, 0xd2, 0xd7, 0x2a
 	.global data_02058ce4
-data_02058ce4: ; 0x02058ce4
+data_02058ce4: @ 0x02058ce4
 	.byte 0x91, 0xd3, 0x86, 0xeb
 	.global data_02058ce8
-data_02058ce8: ; 0x02058ce8
+data_02058ce8: @ 0x02058ce8
 	.byte 0x61, 0x00, 0x00, 0x00
 	.global data_02058cec
-data_02058cec: ; 0x02058cec
+data_02058cec: @ 0x02058cec
     .word func_02050a20
 	.global data_02058cf0
-data_02058cf0: ; 0x02058cf0
+data_02058cf0: @ 0x02058cf0
     .word data_02058d54
 	.global data_02058cf4
-data_02058cf4: ; 0x02058cf4
+data_02058cf4: @ 0x02058cf4
     .word data_02058d6c
 	.global data_02058cf8
-data_02058cf8: ; 0x02058cf8
+data_02058cf8: @ 0x02058cf8
     .word data_02058d24
 	.global data_02058cfc
-data_02058cfc: ; 0x02058cfc
+data_02058cfc: @ 0x02058cfc
     .word data_02058d3c
 	.global data_02058d00
-data_02058d00: ; 0x02058d00
+data_02058d00: @ 0x02058d00
     .word data_02058d20
 	.global data_02058d04
-data_02058d04: ; 0x02058d04
+data_02058d04: @ 0x02058d04
     .word data_02058d84
 	.global data_02058d08
-data_02058d08: ; 0x02058d08
+data_02058d08: @ 0x02058d08
     .word data_02058ce8
 	.global data_02058d0c
-data_02058d0c: ; 0x02058d0c
+data_02058d0c: @ 0x02058d0c
     .word data_02058dc0
 	.global data_02058d10
-data_02058d10: ; 0x02058d10
+data_02058d10: @ 0x02058d10
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058d14
-data_02058d14: ; 0x02058d14
+data_02058d14: @ 0x02058d14
 	.byte 0x01, 0x00, 0x00, 0x00
 	.global data_02058d18
-data_02058d18: ; 0x02058d18
+data_02058d18: @ 0x02058d18
 	.byte 0x40, 0x42, 0x0f, 0x00
 	.global data_02058d1c
-data_02058d1c: ; 0x02058d1c
+data_02058d1c: @ 0x02058d1c
 	.byte 0x0a, 0x00, 0x00, 0x00
 	.global data_02058d20
-data_02058d20: ; 0x02058d20
+data_02058d20: @ 0x02058d20
 	.ascii "abc"
 	.byte 0x00
 	.global data_02058d24
-data_02058d24: ; 0x02058d24
+data_02058d24: @ 0x02058d24
 	.byte 0x34, 0xaa, 0x97, 0x3c
 	.global data_02058d28
-data_02058d28: ; 0x02058d28
+data_02058d28: @ 0x02058d28
 	.byte 0xd4, 0xc4, 0xda, 0xa4
 	.global data_02058d2c
-data_02058d2c: ; 0x02058d2c
+data_02058d2c: @ 0x02058d2c
 	.byte 0xf6, 0x1e, 0xeb, 0x2b
 	.global data_02058d30
-data_02058d30: ; 0x02058d30
+data_02058d30: @ 0x02058d30
 	.byte 0xdb, 0xad, 0x27, 0x31
 	.global data_02058d34
-data_02058d34: ; 0x02058d34
+data_02058d34: @ 0x02058d34
 	.byte 0x65, 0x34, 0x01, 0x6f
 	.global data_02058d38
-data_02058d38: ; 0x02058d38
+data_02058d38: @ 0x02058d38
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058d3c
-data_02058d3c: ; 0x02058d3c
+data_02058d3c: @ 0x02058d3c
 	.byte 0xde, 0xa3, 0x56, 0xa2
 	.global data_02058d40
-data_02058d40: ; 0x02058d40
+data_02058d40: @ 0x02058d40
 	.byte 0xcd, 0xdd, 0x90, 0xc7
 	.global data_02058d44
-data_02058d44: ; 0x02058d44
+data_02058d44: @ 0x02058d44
 	.byte 0xa7, 0xec, 0xed, 0xc5
 	.global data_02058d48
-data_02058d48: ; 0x02058d48
+data_02058d48: @ 0x02058d48
 	.byte 0xeb, 0xb5, 0x63, 0x93
 	.global data_02058d4c
-data_02058d4c: ; 0x02058d4c
+data_02058d4c: @ 0x02058d4c
 	.byte 0x4f, 0x46, 0x04, 0x52
 	.global data_02058d50
-data_02058d50: ; 0x02058d50
+data_02058d50: @ 0x02058d50
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058d54
-data_02058d54: ; 0x02058d54
+data_02058d54: @ 0x02058d54
 	.byte 0xa9, 0x99, 0x3e, 0x36
 	.global data_02058d58
-data_02058d58: ; 0x02058d58
+data_02058d58: @ 0x02058d58
 	.byte 0x47, 0x06, 0x81, 0x6a
 	.global data_02058d5c
-data_02058d5c: ; 0x02058d5c
+data_02058d5c: @ 0x02058d5c
 	.byte 0xba, 0x3e, 0x25, 0x71
 	.global data_02058d60
-data_02058d60: ; 0x02058d60
+data_02058d60: @ 0x02058d60
 	.byte 0x78, 0x50, 0xc2, 0x6c
 	.global data_02058d64
-data_02058d64: ; 0x02058d64
+data_02058d64: @ 0x02058d64
 	.byte 0x9c, 0xd0, 0xd8, 0x9d
 	.global data_02058d68
-data_02058d68: ; 0x02058d68
+data_02058d68: @ 0x02058d68
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058d6c
-data_02058d6c: ; 0x02058d6c
+data_02058d6c: @ 0x02058d6c
 	.byte 0x84, 0x98, 0x3e, 0x44
 	.global data_02058d70
-data_02058d70: ; 0x02058d70
+data_02058d70: @ 0x02058d70
 	.byte 0x1c, 0x3b, 0xd2, 0x6e
 	.global data_02058d74
-data_02058d74: ; 0x02058d74
+data_02058d74: @ 0x02058d74
 	.byte 0xba, 0xae, 0x4a, 0xa1
 	.global data_02058d78
-data_02058d78: ; 0x02058d78
+data_02058d78: @ 0x02058d78
 	.byte 0xf9, 0x51, 0x29, 0xe5
 	.global data_02058d7c
-data_02058d7c: ; 0x02058d7c
+data_02058d7c: @ 0x02058d7c
 	.byte 0xe5, 0x46, 0x70, 0xf1
 	.global data_02058d80
-data_02058d80: ; 0x02058d80
+data_02058d80: @ 0x02058d80
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058d84
-data_02058d84: ; 0x02058d84
+data_02058d84: @ 0x02058d84
 	.ascii "abcdbcdecdefdefgefghfghighijhijkijkljklmklmnlmnomnopnopq"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058dc0
-data_02058dc0: ; 0x02058dc0
+data_02058dc0: @ 0x02058dc0
 	.ascii "0123456701234567012345670123456701234567012345670123456701234567"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_02058e04
-data_02058e04: ; 0x02058e04
+data_02058e04: @ 0x02058e04
 	.byte 0x00, 0x00, 0x00, 0x00
 
     .bss

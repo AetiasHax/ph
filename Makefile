@@ -43,14 +43,14 @@ BASE_ROM := baserom_$(REGION_NAME).nds
 CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-ASM        := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
+ASM        := arm-none-eabi-as
 CC         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
 LD         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
 MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
 LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
-ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc -g
+ASM_FLAGS := -march=armv5te --defsym $(REGION)=0 -I asm -g
 CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
 C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
@@ -58,11 +58,6 @@ LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure
 
 ifeq ($(NONMATCHING),1)
 	CC_FLAGS += -DNONMATCHING
-endif
-
-ifeq ($(GAS),1)
-	ASM       := arm-none-eabi-as
-	ASM_FLAGS := -march=armv5te --defsym $(REGION)=0 --defsym GNU=0 -I asm -g
 endif
 
 .PHONY: help

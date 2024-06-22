@@ -5,22 +5,22 @@
 
 	.global _ZN13LinkStateRoll8vfunc_00Ev
 	thumb_func_start _ZN13LinkStateRoll8vfunc_00Ev
-_ZN13LinkStateRoll8vfunc_00Ev: ; 0x020ae790
+_ZN13LinkStateRoll8vfunc_00Ev: @ 0x020ae790
 	bx lr
 	.align 2, 0
 	thumb_func_end _ZN13LinkStateRoll8vfunc_00Ev
 
 	.global _ZN13LinkStateRoll5GetIdEv
 	arm_func_start _ZN13LinkStateRoll5GetIdEv
-_ZN13LinkStateRoll5GetIdEv: ; 0x020ae794
+_ZN13LinkStateRoll5GetIdEv: @ 0x020ae794
 	mov r0, #4
 	bx lr
 	arm_func_end _ZN13LinkStateRoll5GetIdEv
 
 	.global _ZN13LinkStateRoll20CreateDebugHierarchyEv
 	thumb_func_start _ZN13LinkStateRoll20CreateDebugHierarchyEv
-_ZN13LinkStateRoll20CreateDebugHierarchyEv: ; 0x020ae79c
-	ldr r3, _020ae7a0 ; =_ZN13LinkStateBase18GetDebugHierarchy0Ev
+_ZN13LinkStateRoll20CreateDebugHierarchyEv: @ 0x020ae79c
+	ldr r3, _020ae7a0 @ =_ZN13LinkStateBase18GetDebugHierarchy0Ev
 	bx r3
 	.align 2, 0
 _020ae7a0: .word _ZN13LinkStateBase18GetDebugHierarchy0Ev
@@ -28,7 +28,7 @@ _020ae7a0: .word _ZN13LinkStateBase18GetDebugHierarchy0Ev
 
 	.global _ZN13LinkStateRoll12OnStateEnterEv
 	arm_func_start _ZN13LinkStateRoll12OnStateEnterEv
-_ZN13LinkStateRoll12OnStateEnterEv: ; 0x020ae7a4
+_ZN13LinkStateRoll12OnStateEnterEv: @ 0x020ae7a4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #0x14
 	mov r4, r0
@@ -36,17 +36,17 @@ _ZN13LinkStateRoll12OnStateEnterEv: ; 0x020ae7a4
 	cmp r1, #9
 	addls pc, pc, r1, lsl #2
 	b _020aeb08
-_020ae7c0: ; jump table
-	b _020ae7e8 ; case 0
-	b _020ae94c ; case 1
-	b _020ae9fc ; case 2
-	b _020aea40 ; case 3
-	b _020ae9c8 ; case 4
-	b _020aea90 ; case 5
-	b _020aea9c ; case 6
-	b _020aeab8 ; case 7
-	b _020aeaf8 ; case 8
-	b _020aeb04 ; case 9
+_020ae7c0: @ jump table
+	b _020ae7e8 @ case 0
+	b _020ae94c @ case 1
+	b _020ae9fc @ case 2
+	b _020aea40 @ case 3
+	b _020ae9c8 @ case 4
+	b _020aea90 @ case 5
+	b _020aea9c @ case 6
+	b _020aeab8 @ case 7
+	b _020aeaf8 @ case 8
+	b _020aeb04 @ case 9
 _020ae7e8:
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	mov r0, r4
@@ -69,7 +69,7 @@ _020ae7e8:
 	mov r1, r5, asr #0x4
 	mov r2, r1, lsl #0x1
 	mov r6, r2, lsl #0x1
-	ldr r5, _020aeb10 ; =data_02050f54
+	ldr r5, _020aeb10 @ =data_02050f54
 	add r2, r2, #1
 	mov r2, r2, lsl #0x1
 	ldrsh lr, [r5, r2]
@@ -107,25 +107,25 @@ _020ae7e8:
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
 	ldr r1, [r0, #4]
-	ldr r0, _020aeb14 ; =0x0000019a
+	ldr r0, _020aeb14 @ =0x0000019a
 	cmp r1, r0
 	bge _020ae8f0
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerVelEv
-	ldr r1, _020aeb14 ; =0x0000019a
+	ldr r1, _020aeb14 @ =0x0000019a
 	str r1, [r0, #4]
 _020ae8f0:
-	ldr r0, _020aeb18 ; =data_027e0fb8
+	ldr r0, _020aeb18 @ =data_027e0fb8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl13StopFollowingEv
-	ldr r1, _020aeb1c ; =data_ov00_020e6078
+	ldr r1, _020aeb1c @ =data_ov00_020e6078
 	mov r0, r4
 	mov r2, #1
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
-	ldr r0, _020aeb20 ; =data_ov00_020eec9c
+	ldr r0, _020aeb20 @ =data_ov00_020eec9c
 	mov r1, #0xd1
 	bl func_ov00_020d7a84
 	mov r1, #2
@@ -139,7 +139,7 @@ _020ae8f0:
 	str r0, [r4, #0x20]
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020ae94c:
-	ldr r1, _020aeb24 ; =data_ov00_020e6088
+	ldr r1, _020aeb24 @ =data_ov00_020e6088
 	mov r2, #1
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	mov r0, r4
@@ -150,7 +150,7 @@ _020ae94c:
 	mov r0, #0
 	strh r0, [r4, #0xe]
 	strh r0, [r4, #0x12]
-	ldr r1, _020aeb28 ; =data_027e0e58
+	ldr r1, _020aeb28 @ =data_027e0e58
 	mov r0, r4
 	ldr r5, [r1]
 	bl _ZN13LinkStateBase12GetPlayerPosEv
@@ -188,7 +188,7 @@ _020ae9fc:
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	bl func_ov00_020b4c2c
 	mov r1, r0
-	ldr r3, _020aeb2c ; =0x00002aab
+	ldr r3, _020aeb2c @ =0x00002aab
 	mov r0, r4
 	mov r2, r1
 	bl _ZN13LinkStateBase6TurnToEsii
@@ -197,13 +197,13 @@ _020ae9fc:
 	mov r0, r4
 	bl _ZN13LinkStateBase12GetPlayerPosEv
 	mov r2, r0
-	ldr r0, _020aeb20 ; =data_ov00_020eec9c
+	ldr r0, _020aeb20 @ =data_ov00_020eec9c
 	mov r1, #0xf0
 	bl func_ov00_020d7a84
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020aea40:
-	ldr r1, _020aeb30 ; =data_ov00_020e6098
+	ldr r1, _020aeb30 @ =data_ov00_020e6098
 	mov r2, #1
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
 	mov r0, r4
@@ -228,7 +228,7 @@ _020aea90:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 _020aea9c:
-	ldr r1, _020aeb34 ; =data_ov00_020e60a8
+	ldr r1, _020aeb34 @ =data_ov00_020e60a8
 	mov r3, #0
 	mov r2, #1
 	strh r3, [r4, #0x18]
@@ -246,7 +246,7 @@ _020aeab8:
 	bl _ZN13LinkStateBase18func_ov00_020a82acEv
 	mov r0, r4
 	bl _ZN13LinkStateBase18EquipItem_vfunc_28Ev
-	ldr r1, _020aeb34 ; =data_ov00_020e60a8
+	ldr r1, _020aeb34 @ =data_ov00_020e60a8
 	mov r0, r4
 	mov r2, #1
 	bl _ZN13LinkStateBase18func_ov00_020a8a4cEii
@@ -276,7 +276,7 @@ _020aeb34: .word data_ov00_020e60a8
 
 	.global _ZN13LinkStateRoll12OnStateLeaveEi
 	arm_func_start _ZN13LinkStateRoll12OnStateLeaveEi
-_ZN13LinkStateRoll12OnStateLeaveEi: ; 0x020aeb38
+_ZN13LinkStateRoll12OnStateLeaveEi: @ 0x020aeb38
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r4, r0
 	bl _ZN13LinkStateBase12OnStateLeaveEi
@@ -284,22 +284,22 @@ _ZN13LinkStateRoll12OnStateLeaveEi: ; 0x020aeb38
 	cmp r0, #9
 	addls pc, pc, r0, lsl #2
 	b _020aebe4
-_020aeb54: ; jump table
-	b _020aebe4 ; case 0
-	b _020aeb7c ; case 1
-	b _020aebe4 ; case 2
-	b _020aebc8 ; case 3
-	b _020aebe4 ; case 4
-	b _020aebe4 ; case 5
-	b _020aebb8 ; case 6
-	b _020aebe4 ; case 7
-	b _020aebe4 ; case 8
-	b _020aebdc ; case 9
+_020aeb54: @ jump table
+	b _020aebe4 @ case 0
+	b _020aeb7c @ case 1
+	b _020aebe4 @ case 2
+	b _020aebc8 @ case 3
+	b _020aebe4 @ case 4
+	b _020aebe4 @ case 5
+	b _020aebb8 @ case 6
+	b _020aebe4 @ case 7
+	b _020aebe4 @ case 8
+	b _020aebdc @ case 9
 _020aeb7c:
 	mov r0, r4
 	mov r1, #1
 	bl _ZN13LinkStateBase26Clear_PlayerLinkBase_Unk48Et
-	ldr r0, _020aec0c ; =data_027e0e58
+	ldr r0, _020aec0c @ =data_027e0e58
 	add r7, r4, #0x2c
 	ldr r5, [r0]
 	mov r6, #0
@@ -344,7 +344,7 @@ _020aec0c: .word data_027e0e58
 
 	.global _ZN13LinkStateRoll8vfunc_20Ei
 	arm_func_start _ZN13LinkStateRoll8vfunc_20Ei
-_ZN13LinkStateRoll8vfunc_20Ei: ; 0x020aec10
+_ZN13LinkStateRoll8vfunc_20Ei: @ 0x020aec10
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	mov r4, r1
@@ -360,7 +360,7 @@ _ZN13LinkStateRoll8vfunc_20Ei: ; 0x020aec10
 	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _020aecc8
-	ldr r1, _020aed84 ; =data_027e0fb8
+	ldr r1, _020aed84 @ =data_027e0fb8
 	mov r0, r5
 	ldr r6, [r1]
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -379,7 +379,7 @@ _ZN13LinkStateRoll8vfunc_20Ei: ; 0x020aec10
 	bl _ZN13LinkStateBase29HasFlags_PlayerLinkBase_Unk48Et
 	cmp r0, #0
 	bne _020aecc8
-	ldr r0, _020aed88 ; =data_027e0618
+	ldr r0, _020aed88 @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _020aecb8
@@ -393,7 +393,7 @@ _020aecb8:
 	mov r0, #1
 	ldmia sp!, {r4, r5, r6, pc}
 _020aecc8:
-	ldr r0, _020aed88 ; =data_027e0618
+	ldr r0, _020aed88 @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #2
 	bne _020aed7c
@@ -416,15 +416,15 @@ _020aed08:
 	mov r0, r5
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	ldr r1, [r0, #0xdc]
-	ldr r0, _020aed8c ; =0x0000099a
+	ldr r0, _020aed8c @ =0x0000099a
 	cmp r1, r0
 	blt _020aed70
-	ldr r0, _020aed84 ; =data_027e0fb8
+	ldr r0, _020aed84 @ =data_027e0fb8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	cmp r0, #0
 	ble _020aed70
-	ldr r0, _020aed84 ; =data_027e0fb8
+	ldr r0, _020aed84 @ =data_027e0fb8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r2, #0
@@ -451,22 +451,22 @@ _020aed8c: .word 0x0000099a
 
 	.global _ZN13LinkStateRoll8vfunc_24Ei
 	arm_func_start _ZN13LinkStateRoll8vfunc_24Ei
-_ZN13LinkStateRoll8vfunc_24Ei: ; 0x020aed90
+_ZN13LinkStateRoll8vfunc_24Ei: @ 0x020aed90
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r4, r1
 	mov r5, r0
 	cmp r4, #7
 	addls pc, pc, r4, lsl #2
 	b _020aee40
-_020aeda8: ; jump table
-	b _020aee40 ; case 0
-	b _020aedc8 ; case 1
-	b _020aee48 ; case 2
-	b _020aee48 ; case 3
-	b _020aede4 ; case 4
-	b _020aedf8 ; case 5
-	b _020aee40 ; case 6
-	b _020aee14 ; case 7
+_020aeda8: @ jump table
+	b _020aee40 @ case 0
+	b _020aedc8 @ case 1
+	b _020aee48 @ case 2
+	b _020aee48 @ case 3
+	b _020aede4 @ case 4
+	b _020aedf8 @ case 5
+	b _020aee40 @ case 6
+	b _020aee14 @ case 7
 _020aedc8:
 	ldr r0, [r5, #4]
 	cmp r0, #5
@@ -513,7 +513,7 @@ _020aee48:
 
 	.global _ZN13LinkStateRoll18func_ov00_020aee58Est
 	arm_func_start _ZN13LinkStateRoll18func_ov00_020aee58Est
-_ZN13LinkStateRoll18func_ov00_020aee58Est: ; 0x020aee58
+_ZN13LinkStateRoll18func_ov00_020aee58Est: @ 0x020aee58
 	ldrh r3, [r0, #0x16]
 	cmp r3, r2
 	movne r3, #0
@@ -529,7 +529,7 @@ _ZN13LinkStateRoll18func_ov00_020aee58Est: ; 0x020aee58
 
 	.global _ZN13LinkStateRoll18func_ov00_020aee84Ev
 	arm_func_start _ZN13LinkStateRoll18func_ov00_020aee84Ev
-_ZN13LinkStateRoll18func_ov00_020aee84Ev: ; 0x020aee84
+_ZN13LinkStateRoll18func_ov00_020aee84Ev: @ 0x020aee84
 	ldrsh r1, [r0, #0x14]
 	cmp r1, #0
 	subgt r1, r1, #1
@@ -544,57 +544,57 @@ _ZN13LinkStateRoll18func_ov00_020aee84Ev: ; 0x020aee84
 
     .data
 	.global data_ov00_020e6078
-data_ov00_020e6078: ; 0x020e6078
+data_ov00_020e6078: @ 0x020e6078
 	.byte 0x0b, 0x00, 0x00, 0x00
 	.global data_ov00_020e607c
-data_ov00_020e607c: ; 0x020e607c
+data_ov00_020e607c: @ 0x020e607c
 	.byte 0x9a, 0x11, 0x00, 0x00
 	.global data_ov00_020e6080
-data_ov00_020e6080: ; 0x020e6080
+data_ov00_020e6080: @ 0x020e6080
 	.byte 0x00, 0x10, 0x00, 0x00
 	.global data_ov00_020e6084
-data_ov00_020e6084: ; 0x020e6084
+data_ov00_020e6084: @ 0x020e6084
 	.byte 0x00, 0x30, 0x01, 0x00
 	.global data_ov00_020e6088
-data_ov00_020e6088: ; 0x020e6088
+data_ov00_020e6088: @ 0x020e6088
 	.byte 0x23, 0x00, 0x00, 0x00
 	.global data_ov00_020e608c
-data_ov00_020e608c: ; 0x020e608c
+data_ov00_020e608c: @ 0x020e608c
 	.byte 0x00, 0x10, 0x00, 0x00
 	.global data_ov00_020e6090
-data_ov00_020e6090: ; 0x020e6090
+data_ov00_020e6090: @ 0x020e6090
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e6094
-data_ov00_020e6094: ; 0x020e6094
+data_ov00_020e6094: @ 0x020e6094
 	.byte 0x00, 0xc0, 0x02, 0x00
 	.global data_ov00_020e6098
-data_ov00_020e6098: ; 0x020e6098
+data_ov00_020e6098: @ 0x020e6098
 	.byte 0x45, 0x00, 0x00, 0x00
 	.global data_ov00_020e609c
-data_ov00_020e609c: ; 0x020e609c
+data_ov00_020e609c: @ 0x020e609c
 	.byte 0x00, 0x10, 0x00, 0x00
 	.global data_ov00_020e60a0
-data_ov00_020e60a0: ; 0x020e60a0
+data_ov00_020e60a0: @ 0x020e60a0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e60a4
-data_ov00_020e60a4: ; 0x020e60a4
+data_ov00_020e60a4: @ 0x020e60a4
 	.byte 0x00, 0x10, 0x00, 0x00
 	.global data_ov00_020e60a8
-data_ov00_020e60a8: ; 0x020e60a8
+data_ov00_020e60a8: @ 0x020e60a8
 	.byte 0x2d, 0x00, 0x00, 0x00
 	.global data_ov00_020e60ac
-data_ov00_020e60ac: ; 0x020e60ac
+data_ov00_020e60ac: @ 0x020e60ac
 	.byte 0x00, 0x30, 0x00, 0x00
 	.global data_ov00_020e60b0
-data_ov00_020e60b0: ; 0x020e60b0
+data_ov00_020e60b0: @ 0x020e60b0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e60b4
-data_ov00_020e60b4: ; 0x020e60b4
+data_ov00_020e60b4: @ 0x020e60b4
 	.byte 0x00, 0x10, 0x01, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global _ZTV13LinkStateRoll
-_ZTV13LinkStateRoll: ; 0x020e60c0
+_ZTV13LinkStateRoll: @ 0x020e60c0
     .word _ZN13LinkStateRoll8vfunc_00Ev
     .word func_ov04_0210ae80
     .word func_ov04_0210aea8

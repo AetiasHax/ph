@@ -5,21 +5,21 @@
 
 	.global _ZN15LinkStateFollow8vfunc_00Ev
 	thumb_func_start _ZN15LinkStateFollow8vfunc_00Ev
-_ZN15LinkStateFollow8vfunc_00Ev: ; 0x020a8f74
+_ZN15LinkStateFollow8vfunc_00Ev: @ 0x020a8f74
 	bx lr
 	.align 2, 0
 	thumb_func_end _ZN15LinkStateFollow8vfunc_00Ev
 
 	.global _ZN15LinkStateFollow5GetIdEv
 	arm_func_start _ZN15LinkStateFollow5GetIdEv
-_ZN15LinkStateFollow5GetIdEv: ; 0x020a8f78
+_ZN15LinkStateFollow5GetIdEv: @ 0x020a8f78
 	mov r0, #3
 	bx lr
 	arm_func_end _ZN15LinkStateFollow5GetIdEv
 
 	.global _ZN15LinkStateFollow16MoveTowardTargetEv
 	arm_func_start _ZN15LinkStateFollow16MoveTowardTargetEv
-_ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
+_ZN15LinkStateFollow16MoveTowardTargetEv: @ 0x020a8f80
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r0
@@ -30,7 +30,7 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	ldmneia sp!, {r4, r5, pc}
 	mov r0, r5
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
-	ldr r2, _020a9020 ; =gMapManager
+	ldr r2, _020a9020 @ =gMapManager
 	add r1, r0, #0xc4
 	ldr r0, [r2]
 	bl _ZN10MapManager16MapData_vfunc_78Ev
@@ -47,7 +47,7 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	add r0, sp, #0
 	str r1, [sp, #4]
 	bl func_01ff9cec
-	ldr r1, _020a9024 ; =0x00000155
+	ldr r1, _020a9024 @ =0x00000155
 	cmp r0, r1
 	addlt sp, sp, #0xc
 	ldmltia sp!, {r4, r5, pc}
@@ -67,11 +67,11 @@ _020a9024: .word 0x00000155
 
 	.global _ZN15LinkStateFollow12OnStateLeaveEi
 	arm_func_start _ZN15LinkStateFollow12OnStateLeaveEi
-_ZN15LinkStateFollow12OnStateLeaveEi: ; 0x020a9028
+_ZN15LinkStateFollow12OnStateLeaveEi: @ 0x020a9028
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	bl _ZN13LinkStateBase12OnStateLeaveEi
-	ldr r0, _020a90a8 ; =data_027e0fb8
+	ldr r0, _020a90a8 @ =data_027e0fb8
 	ldr r0, [r0]
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
@@ -82,7 +82,7 @@ _020a904c:
 	cmp r0, #6
 	cmpne r0, #7
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r1, _020a90ac ; =gMapManager
+	ldr r1, _020a90ac @ =gMapManager
 	add r0, sp, #0
 	ldr r4, [r1]
 	add r2, r5, #0x24
@@ -108,18 +108,18 @@ _020a90ac: .word gMapManager
 
 	.global _ZN15LinkStateFollow8vfunc_24Ei
 	arm_func_start _ZN15LinkStateFollow8vfunc_24Ei
-_ZN15LinkStateFollow8vfunc_24Ei: ; 0x020a90b0
+_ZN15LinkStateFollow8vfunc_24Ei: @ 0x020a90b0
 	stmdb sp!, {r3, lr}
 	cmp r1, #5
 	addls pc, pc, r1, lsl #2
 	b _020a9104
-_020a90c0: ; jump table
-	b _020a9104 ; case 0
-	b _020a910c ; case 1
-	b _020a910c ; case 2
-	b _020a910c ; case 3
-	b _020a90d8 ; case 4
-	b _020a90f0 ; case 5
+_020a90c0: @ jump table
+	b _020a9104 @ case 0
+	b _020a910c @ case 1
+	b _020a910c @ case 2
+	b _020a910c @ case 3
+	b _020a90d8 @ case 4
+	b _020a90f0 @ case 5
 _020a90d8:
 	ldr r2, [r0, #4]
 	cmp r2, #1
@@ -151,7 +151,7 @@ _020a9128:
 
 	.global _ZN15LinkStateFollow8vfunc_28Ev
 	arm_func_start _ZN15LinkStateFollow8vfunc_28Ev
-_ZN15LinkStateFollow8vfunc_28Ev: ; 0x020a9130
+_ZN15LinkStateFollow8vfunc_28Ev: @ 0x020a9130
 	stmdb sp!, {r3, lr}
 	bl _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	ldr r0, [r0, #0x38]
@@ -163,8 +163,8 @@ _ZN15LinkStateFollow8vfunc_28Ev: ; 0x020a9130
 
 	.global _ZN15LinkStateFollow20GetLinkStateCutsceneEv
 	arm_func_start _ZN15LinkStateFollow20GetLinkStateCutsceneEv
-_ZN15LinkStateFollow20GetLinkStateCutsceneEv: ; 0x020a914c
-	ldr ip, _020a9158 ; =func_01fffcd8
+_ZN15LinkStateFollow20GetLinkStateCutsceneEv: @ 0x020a914c
+	ldr ip, _020a9158 @ =func_01fffcd8
 	mov r0, #6
 	bx ip
 	.align 2, 0
@@ -173,7 +173,7 @@ _020a9158: .word func_01fffcd8
 
 	.global _ZN15LinkStateFollow8vfunc_34EP5Vec3p
 	arm_func_start _ZN15LinkStateFollow8vfunc_34EP5Vec3p
-_ZN15LinkStateFollow8vfunc_34EP5Vec3p: ; 0x020a915c
+_ZN15LinkStateFollow8vfunc_34EP5Vec3p: @ 0x020a915c
 	ldr r0, [r0, #4]
 	cmp r0, #2
 	movne r0, #0
@@ -187,9 +187,9 @@ _ZN15LinkStateFollow8vfunc_34EP5Vec3p: ; 0x020a915c
 
 	.global _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 	arm_func_start _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
-_ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p: ; 0x020a9180
+_ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p: @ 0x020a9180
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _020a9208 ; =data_027e0fb8
+	ldr r2, _020a9208 @ =data_027e0fb8
 	mov r4, r1
 	ldr r3, [r2]
 	ldr r5, [r3, #0xa0]
@@ -204,7 +204,7 @@ _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p: ; 0x020a9180
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, r4, r5, pc}
-	ldr r0, _020a920c ; =gMapManager
+	ldr r0, _020a920c @ =gMapManager
 	ldrb r2, [sp]
 	ldrb r1, [sp, #1]
 	ldr r0, [r0]
@@ -230,7 +230,7 @@ _020a920c: .word gMapManager
 
 	.global _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
 	arm_func_start _ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor
-_ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor: ; 0x020a9210
+_ZN15LinkStateFollow18func_ov00_020a9210EP5Vec3pP5Actor: @ 0x020a9210
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
 	mov r5, r2
@@ -274,115 +274,115 @@ _020a9280:
 
     .data
 	.global data_ov00_020e575c
-data_ov00_020e575c: ; 0x020e575c
+data_ov00_020e575c: @ 0x020e575c
 	.ascii "brg"
 	.byte 0x00
 	.global data_ov00_020e5760
-data_ov00_020e5760: ; 0x020e5760
+data_ov00_020e5760: @ 0x020e5760
 	.ascii "fnl"
 	.byte 0x00
 	.global data_ov00_020e5764
-data_ov00_020e5764: ; 0x020e5764
+data_ov00_020e5764: @ 0x020e5764
 	.ascii "pdl"
 	.byte 0x00
 	.global data_ov00_020e5768
-data_ov00_020e5768: ; 0x020e5768
+data_ov00_020e5768: @ 0x020e5768
 	.ascii "dco"
 	.byte 0x00
 	.global data_ov00_020e576c
-data_ov00_020e576c: ; 0x020e576c
+data_ov00_020e576c: @ 0x020e576c
 	.ascii "can"
 	.byte 0x00
 	.global data_ov00_020e5770
-data_ov00_020e5770: ; 0x020e5770
+data_ov00_020e5770: @ 0x020e5770
 	.ascii "hul"
 	.byte 0x00
 	.global data_ov00_020e5774
-data_ov00_020e5774: ; 0x020e5774
+data_ov00_020e5774: @ 0x020e5774
 	.ascii "bow"
 	.byte 0x00
 	.global data_ov00_020e5778
-data_ov00_020e5778: ; 0x020e5778
+data_ov00_020e5778: @ 0x020e5778
 	.ascii "anc"
 	.byte 0x00
 	.global data_ov00_020e577c
-data_ov00_020e577c: ; 0x020e577c
+data_ov00_020e577c: @ 0x020e577c
     .word data_ov00_020e5778
 	.global data_ov00_020e5780
-data_ov00_020e5780: ; 0x020e5780
+data_ov00_020e5780: @ 0x020e5780
     .word data_ov00_020e5774
 	.global data_ov00_020e5784
-data_ov00_020e5784: ; 0x020e5784
+data_ov00_020e5784: @ 0x020e5784
     .word data_ov00_020e5770
 	.global data_ov00_020e5788
-data_ov00_020e5788: ; 0x020e5788
+data_ov00_020e5788: @ 0x020e5788
     .word data_ov00_020e576c
 	.global data_ov00_020e578c
-data_ov00_020e578c: ; 0x020e578c
+data_ov00_020e578c: @ 0x020e578c
     .word data_ov00_020e5768
 	.global data_ov00_020e5790
-data_ov00_020e5790: ; 0x020e5790
+data_ov00_020e5790: @ 0x020e5790
     .word data_ov00_020e5764
 	.global data_ov00_020e5794
-data_ov00_020e5794: ; 0x020e5794
+data_ov00_020e5794: @ 0x020e5794
     .word data_ov00_020e5760
 	.global data_ov00_020e5798
-data_ov00_020e5798: ; 0x020e5798
+data_ov00_020e5798: @ 0x020e5798
     .word data_ov00_020e575c
 	.global data_ov00_020e579c
-data_ov00_020e579c: ; 0x020e579c
+data_ov00_020e579c: @ 0x020e579c
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e57a0
-data_ov00_020e57a0: ; 0x020e57a0
+data_ov00_020e57a0: @ 0x020e57a0
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global _ZTV15LinkStateFollow
-_ZTV15LinkStateFollow: ; 0x020e57a4
+_ZTV15LinkStateFollow: @ 0x020e57a4
     .word _ZN15LinkStateFollow8vfunc_00Ev
 	.global data_ov00_020e57a8
-data_ov00_020e57a8: ; 0x020e57a8
-    .word func_ov04_0210ad94 ; data_ov07_0210ad94
+data_ov00_020e57a8: @ 0x020e57a8
+    .word func_ov04_0210ad94 @ data_ov07_0210ad94
 	.global data_ov00_020e57ac
-data_ov00_020e57ac: ; 0x020e57ac
-    .word func_ov04_0210adb0 ; data_ov07_0210adb0
+data_ov00_020e57ac: @ 0x020e57ac
+    .word func_ov04_0210adb0 @ data_ov07_0210adb0
 	.global data_ov00_020e57b0
-data_ov00_020e57b0: ; 0x020e57b0
+data_ov00_020e57b0: @ 0x020e57b0
     .word _ZN15LinkStateFollow5GetIdEv - 1
 	.global data_ov00_020e57b4
-data_ov00_020e57b4: ; 0x020e57b4
-    .word func_ov04_0210adf8 ; data_ov07_0210adf8
+data_ov00_020e57b4: @ 0x020e57b4
+    .word func_ov04_0210adf8 @ data_ov07_0210adf8
 	.global data_ov00_020e57b8
-data_ov00_020e57b8: ; 0x020e57b8
-    .word func_ov05_0210b57c ; data_ov07_0210b57c
+data_ov00_020e57b8: @ 0x020e57b8
+    .word func_ov05_0210b57c @ data_ov07_0210b57c
 	.global data_ov00_020e57bc
-data_ov00_020e57bc: ; 0x020e57bc
+data_ov00_020e57bc: @ 0x020e57bc
     .word _ZN15LinkStateFollow12OnStateLeaveEi - 1
 	.global data_ov00_020e57c0
-data_ov00_020e57c0: ; 0x020e57c0
-    .word func_ov05_0210b97c ; data_ov07_0210b97c
+data_ov00_020e57c0: @ 0x020e57c0
+    .word func_ov05_0210b97c @ data_ov07_0210b97c
 	.global data_ov00_020e57c4
-data_ov00_020e57c4: ; 0x020e57c4
-    .word func_ov05_0210c20c ; data_ov07_0210c20c
+data_ov00_020e57c4: @ 0x020e57c4
+    .word func_ov05_0210c20c @ data_ov07_0210c20c
 	.global data_ov00_020e57c8
-data_ov00_020e57c8: ; 0x020e57c8
+data_ov00_020e57c8: @ 0x020e57c8
     .word _ZN15LinkStateFollow8vfunc_24Ei - 1
 	.global data_ov00_020e57cc
-data_ov00_020e57cc: ; 0x020e57cc
+data_ov00_020e57cc: @ 0x020e57cc
     .word _ZN15LinkStateFollow8vfunc_28Ev - 1
 	.global data_ov00_020e57d0
-data_ov00_020e57d0: ; 0x020e57d0
-    .word func_ov05_0210c990 ; data_ov07_0210c990
+data_ov00_020e57d0: @ 0x020e57d0
+    .word func_ov05_0210c990 @ data_ov07_0210c990
 	.global data_ov00_020e57d4
-data_ov00_020e57d4: ; 0x020e57d4
+data_ov00_020e57d4: @ 0x020e57d4
     .word func_ov05_0210f708
 	.global data_ov00_020e57d8
-data_ov00_020e57d8: ; 0x020e57d8
+data_ov00_020e57d8: @ 0x020e57d8
     .word _ZN15LinkStateFollow8vfunc_34EP5Vec3p - 1
 	.global data_ov00_020e57dc
-data_ov00_020e57dc: ; 0x020e57dc
+data_ov00_020e57dc: @ 0x020e57dc
     .word func_ov05_0210f70c
 	.global data_ov00_020e57e0
-data_ov00_020e57e0: ; 0x020e57e0
+data_ov00_020e57e0: @ 0x020e57e0
     .word func_ov05_0210f714
 	.global data_ov00_020e57e4
-data_ov00_020e57e4: ; 0x020e57e4
+data_ov00_020e57e4: @ 0x020e57e4
     .word func_ov05_0210f71c

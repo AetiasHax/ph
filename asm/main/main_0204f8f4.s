@@ -4,7 +4,7 @@
     .text
 	.global func_0204f8f4
 	arm_func_start func_0204f8f4
-func_0204f8f4: ; 0x0204f8f4
+func_0204f8f4: @ 0x0204f8f4
 	stmdb sp!, {r3, lr}
 	mov ip, #0
 	mov r3, r1
@@ -131,7 +131,7 @@ _0204fa9c:
 
 	.global func_0204faa4
 	arm_func_start func_0204faa4
-func_0204faa4: ; 0x0204faa4
+func_0204faa4: @ 0x0204faa4
 	stmdb sp!, {r4, lr}
 	ldrb r1, [r0, #0x6a]
 	ldr ip, [r0, #0x60]
@@ -160,7 +160,7 @@ _0204fad0:
 
 	.global func_0204fb00
 	arm_func_start func_0204fb00
-func_0204fb00: ; 0x0204fb00
+func_0204fb00: @ 0x0204fb00
 	stmdb sp!, {r4, r5, r6, lr}
 	ldr r1, [r1, #4]
 	mov r6, r0
@@ -207,9 +207,9 @@ _0204fb94:
 
 	.global func_0204fba0
 	arm_func_start func_0204fba0
-func_0204fba0: ; 0x0204fba0
-	ldr r2, _0204fbb8 ; =func_02050ca0
-	ldr r1, _0204fbbc ; =func_02050ca0
+func_0204fba0: @ 0x0204fba0
+	ldr r2, _0204fbb8 @ =func_02050ca0
+	ldr r1, _0204fbbc @ =func_02050ca0
 	str r2, [r0, #0xc]
 	str r1, [r0, #0x10]
 	mov r0, #1
@@ -221,7 +221,7 @@ _0204fbbc: .word func_02050ca0
 
 	.global func_0204fbc0
 	arm_func_start func_0204fbc0
-func_0204fbc0: ; 0x0204fbc0
+func_0204fbc0: @ 0x0204fbc0
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	ldrb r4, [r0], #2
@@ -238,7 +238,7 @@ func_0204fbc0: ; 0x0204fbc0
 
 	.global func_0204fbf0
 	arm_func_start func_0204fbf0
-func_0204fbf0: ; 0x0204fbf0
+func_0204fbf0: @ 0x0204fbf0
 	ldr r4, [r0, #0x2c]
 	ldr r5, [r0, #0x30]
 	ldr r6, [r0, #0x34]
@@ -255,7 +255,7 @@ func_0204fbf0: ; 0x0204fbf0
 
 	.global func_0204fc20
 	arm_func_start func_0204fc20
-func_0204fc20: ; 0x0204fc20
+func_0204fc20: @ 0x0204fc20
 	mov ip, sp
 	sub sp, sp, #0x70
 	str r4, [sp, #0x2c]
@@ -278,7 +278,7 @@ func_0204fc20: ; 0x0204fc20
 
 	.global func_0204fc68
 	arm_func_start func_0204fc68
-func_0204fc68: ; 0x0204fc68
+func_0204fc68: @ 0x0204fc68
 	mov ip, sp
 	sub sp, sp, #0x70
 	str r4, [sp, #0x2c]
@@ -302,8 +302,8 @@ func_0204fc68: ; 0x0204fc68
 
 	.global func_0204fcb4
 	arm_func_start func_0204fcb4
-func_0204fcb4: ; 0x0204fcb4
-	ldr ip, _0204fcbc ; =func_0204dec8
+func_0204fcb4: @ 0x0204fcb4
+	ldr ip, _0204fcbc @ =func_0204dec8
 	bx ip
 	.align 2, 0
 _0204fcbc: .word func_0204dec8
@@ -311,16 +311,16 @@ _0204fcbc: .word func_0204dec8
 
 	.global func_0204fcc0
 	thumb_func_start func_0204fcc0
-func_0204fcc0: ; 0x0204fcc0
+func_0204fcc0: @ 0x0204fcc0
 	push {r3, lr}
 	mov r0, #0
 	str r0, [sp]
-	ldr r1, _0204fcdc ; =data_02076db0
-	ldr r2, _0204fce0 ; =0x05000001
+	ldr r1, _0204fcdc @ =data_02076db0
+	ldr r2, _0204fce0 @ =0x05000001
 	add r0, sp, #0
 	bl CpuSet
 	blx func_0200c76c
-	ldr r1, _0204fce4 ; =data_02076dac
+	ldr r1, _0204fce4 @ =data_02076dac
 	strh r0, [r1, #6]
 	pop {r3, pc}
 	nop
@@ -331,7 +331,7 @@ _0204fce4: .word data_02076dac
 
 	.global func_0204fce8
 	thumb_func_start func_0204fce8
-func_0204fce8: ; 0x0204fce8
+func_0204fce8: @ 0x0204fce8
 	push {r3, lr}
 	bl func_0204fd14
 	cmp r0, #0
@@ -349,8 +349,8 @@ _0204fcfe:
 
 	.global func_0204fd04
 	thumb_func_start func_0204fd04
-func_0204fd04: ; 0x0204fd04
-	ldr r0, _0204fd10 ; =0x027ffc30
+func_0204fd04: @ 0x0204fd04
+	ldr r0, _0204fd10 @ =0x027ffc30
 	ldrb r0, [r0, #5]
 	lsl r0, r0, #0x1f
 	lsr r0, r0, #0x1f
@@ -361,11 +361,11 @@ _0204fd10: .word 0x027ffc30
 
 	.global func_0204fd14
 	thumb_func_start func_0204fd14
-func_0204fd14: ; 0x0204fd14
+func_0204fd14: @ 0x0204fd14
 	push {r4, lr}
 	sub sp, #0x10
-	ldr r2, _0204fdb0 ; =0x027ffc30
-	ldr r0, _0204fdb4 ; =0x0000ffff
+	ldr r2, _0204fdb0 @ =0x027ffc30
+	ldr r0, _0204fdb4 @ =0x0000ffff
 	ldrh r1, [r2]
 	mov r4, #1
 	cmp r1, r0
@@ -383,7 +383,7 @@ _0204fd2a:
 	mov r0, #0
 	pop {r4, pc}
 _0204fd3a:
-	ldr r0, _0204fdb8 ; =data_02076dac
+	ldr r0, _0204fdb8 @ =data_02076dac
 	add r1, sp, #8
 	ldrh r0, [r0, #6]
 	bl func_0204fe1c
@@ -396,7 +396,7 @@ _0204fd3a:
 	ldrb r3, [r0]
 	cmp r3, #0x96
 	bne _0204fd64
-	ldr r0, _0204fdb0 ; =0x027ffc30
+	ldr r0, _0204fdb0 @ =0x027ffc30
 	add r2, #0xbe
 	ldrh r1, [r0]
 	ldrh r0, [r2]
@@ -405,15 +405,15 @@ _0204fd3a:
 _0204fd64:
 	cmp r3, #0x96
 	beq _0204fd74
-	ldr r0, _0204fdb0 ; =0x027ffc30
+	ldr r0, _0204fdb0 @ =0x027ffc30
 	ldrh r1, [r0]
-	ldr r0, _0204fdbc ; =0x0801fffe
+	ldr r0, _0204fdbc @ =0x0801fffe
 	ldrh r0, [r0]
 	cmp r1, r0
 	bne _0204fd8c
 _0204fd74:
 	mov r0, #2
-	ldr r2, _0204fdb0 ; =0x027ffc30
+	ldr r2, _0204fdb0 @ =0x027ffc30
 	lsl r0, r0, #0x1a
 	add r0, #0xac
 	ldr r1, [r2, #8]
@@ -425,7 +425,7 @@ _0204fd74:
 	lsr r0, r0, #0x1f
 	beq _0204fd98
 _0204fd8c:
-	ldr r2, _0204fdb0 ; =0x027ffc30
+	ldr r2, _0204fdb0 @ =0x027ffc30
 	mov r0, #2
 	ldrb r1, [r2, #5]
 	mov r4, #0
@@ -434,7 +434,7 @@ _0204fd8c:
 _0204fd98:
 	add r0, sp, #0
 	bl func_0204fdf4
-	ldr r0, _0204fdb8 ; =data_02076dac
+	ldr r0, _0204fdb8 @ =data_02076dac
 	add r1, sp, #8
 	ldrh r0, [r0, #6]
 	bl func_0204fe58
@@ -450,9 +450,9 @@ _0204fdbc: .word 0x0801fffe
 
 	.global func_0204fdc0
 	thumb_func_start func_0204fdc0
-func_0204fdc0: ; 0x0204fdc0
+func_0204fdc0: @ 0x0204fdc0
 	push {r3, r4}
-	ldr r1, _0204fdf0 ; =0x04000204
+	ldr r1, _0204fdf0 @ =0x04000204
 	mov r3, #0xc
 	ldrh r2, [r1]
 	and r2, r3
@@ -481,9 +481,9 @@ _0204fdf0: .word 0x04000204
 
 	.global func_0204fdf4
 	thumb_func_start func_0204fdf4
-func_0204fdf4: ; 0x0204fdf4
+func_0204fdf4: @ 0x0204fdf4
 	push {r3, r4}
-	ldr r1, _0204fe18 ; =0x04000204
+	ldr r1, _0204fe18 @ =0x04000204
 	ldr r4, [r0]
 	ldrh r3, [r1]
 	mov r2, #0xc
@@ -506,9 +506,9 @@ _0204fe18: .word 0x04000204
 
 	.global func_0204fe1c
 	thumb_func_start func_0204fe1c
-func_0204fe1c: ; 0x0204fe1c
+func_0204fe1c: @ 0x0204fe1c
 	push {r3, r4, r5, r6, r7, lr}
-	ldr r7, _0204fe54 ; =0x027fffe8
+	ldr r7, _0204fe54 @ =0x027fffe8
 	add r5, r0, #0
 	add r4, r1, #0
 	mov r6, #0x40
@@ -537,7 +537,7 @@ _0204fe54: .word 0x027fffe8
 
 	.global func_0204fe58
 	thumb_func_start func_0204fe58
-func_0204fe58: ; 0x0204fe58
+func_0204fe58: @ 0x0204fe58
 	push {r4, lr}
 	add r4, r1, #0
 	ldr r1, [r4]
@@ -553,7 +553,7 @@ _0204fe66:
 
 	.global func_0204fe70
 	thumb_func_start func_0204fe70
-func_0204fe70: ; 0x0204fe70
+func_0204fe70: @ 0x0204fe70
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	mov r0, #0xd
@@ -581,12 +581,12 @@ _0204fe9c:
 
 	.global func_0204fea0
 	thumb_func_start func_0204fea0
-func_0204fea0: ; 0x0204fea0
+func_0204fea0: @ 0x0204fea0
 	push {r3, r4, r5, lr}
 	add r5, r0, #0
 	blx func_0200ee4c
 	add r4, r0, #0
-	ldr r0, _0204fed4 ; =data_02076dac
+	ldr r0, _0204fed4 @ =data_02076dac
 	str r5, [r0]
 	bl func_0204fce8
 	cmp r0, #0
@@ -612,16 +612,16 @@ _0204fed4: .word data_02076dac
 
 	.global func_0204fed8
 	thumb_func_start func_0204fed8
-func_0204fed8: ; 0x0204fed8
+func_0204fed8: @ 0x0204fed8
 	push {r3, r4, r5, lr}
-	ldr r0, _0204ff3c ; =data_02076dc0
+	ldr r0, _0204ff3c @ =data_02076dc0
 	ldr r1, [r0, #8]
 	cmp r1, #0
 	bne _0204ff3a
 	mov r1, #1
 	str r1, [r0, #8]
 	bl func_0204fcc0
-	ldr r0, _0204ff3c ; =data_02076dc0
+	ldr r0, _0204ff3c @ =data_02076dc0
 	mov r1, #0
 	str r1, [r0, #0xc]
 	bl func_02008a50
@@ -633,22 +633,22 @@ _0204fef8:
 	blx func_02008b50
 	cmp r0, #0
 	beq _0204fef8
-	ldr r1, _0204ff40 ; =func_020500a0
+	ldr r1, _0204ff40 @ =func_020500a0
 	mov r0, #0xd
 	blx func_02008b04
 	bl func_0204ff50
 	mov r0, #0xd
 	mov r1, #0
 	blx func_02008b04
-	ldr r1, _0204ff44 ; =func_020500bc
+	ldr r1, _0204ff44 @ =func_020500bc
 	mov r0, #0xd
 	blx func_02008b04
-	ldr r0, _0204ff3c ; =data_02076dc0
+	ldr r0, _0204ff3c @ =data_02076dc0
 	mov r1, #0
 	str r1, [r0, #0x18]
-	ldr r0, _0204ff48 ; =data_02076ea0
+	ldr r0, _0204ff48 @ =data_02076ea0
 	bl func_02050110
-	ldr r1, _0204ff4c ; =func_02050104
+	ldr r1, _0204ff4c @ =func_02050104
 	mov r0, #0x11
 	blx func_02008b04
 	mov r0, #0
@@ -665,10 +665,10 @@ _0204ff4c: .word func_02050104 + 1
 
 	.global func_0204ff50
 	thumb_func_start func_0204ff50
-func_0204ff50: ; 0x0204ff50
+func_0204ff50: @ 0x0204ff50
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0x10
-	ldr r0, _02050070 ; =data_02076dc0
+	ldr r0, _02050070 @ =data_02076dc0
 	ldr r1, [r0]
 	cmp r1, #0
 	beq _0204ff5e
@@ -676,45 +676,45 @@ func_0204ff50: ; 0x0204ff50
 _0204ff5e:
 	mov r1, #1
 	str r1, [r0]
-	ldr r0, _02050074 ; =0x04000300
+	ldr r0, _02050074 @ =0x04000300
 	ldrh r0, [r0]
 	tst r0, r1
 	beq _0205006a
 	lsl r0, r1, #0x12
 	blx func_0200c3c8
-	ldr r1, _02050078 ; =0x04000208
+	ldr r1, _02050078 @ =0x04000208
 	add r7, r0, #0
 	ldrh r6, [r1]
 	mov r0, #1
 	strh r0, [r1]
-	ldr r0, _0205007c ; =data_02076db0
+	ldr r0, _0205007c @ =data_02076db0
 	add r1, sp, #8
 	ldrh r0, [r0, #2]
 	bl func_0204fe1c
-	ldr r0, _02050080 ; =0x04000204
+	ldr r0, _02050080 @ =0x04000204
 	ldrh r1, [r0]
 	lsr r0, r0, #0xb
 	and r0, r1
 	asr r4, r0, #0xf
 	add r0, sp, #0
 	bl func_0204fdc0
-	ldr r2, _02050080 ; =0x04000204
-	ldr r0, _02050084 ; =0xffff7fff
+	ldr r2, _02050080 @ =0x04000204
+	ldr r0, _02050084 @ =0xffff7fff
 	ldrh r1, [r2]
 	and r0, r1
 	strh r0, [r2]
-	ldr r0, _02050088 ; =data_02076de0
+	ldr r0, _02050088 @ =data_02076de0
 	mov r1, #0x40
 	add r0, #0x80
 	blx func_0200e288
-	ldr r2, _02050088 ; =data_02076de0
-	ldr r1, _0205008c ; =0x08000080
+	ldr r2, _02050088 @ =data_02076de0
+	ldr r1, _0205008c @ =0x08000080
 	mov r0, #1
 	add r2, #0x80
 	mov r3, #0x40
 	blx func_0200730c
-	ldr r2, _02050080 ; =0x04000204
-	ldr r0, _02050084 ; =0xffff7fff
+	ldr r2, _02050080 @ =0x04000204
+	ldr r0, _02050084 @ =0xffff7fff
 	ldrh r1, [r2]
 	and r1, r0
 	lsl r0, r4, #0xf
@@ -722,11 +722,11 @@ _0204ff5e:
 	strh r0, [r2]
 	add r0, sp, #0
 	bl func_0204fdf4
-	ldr r0, _0205007c ; =data_02076db0
+	ldr r0, _0205007c @ =data_02076db0
 	add r1, sp, #8
 	ldrh r0, [r0, #2]
 	bl func_0204fe58
-	ldr r1, _02050090 ; =0x027fff9b
+	ldr r1, _02050090 @ =0x027fff9b
 	ldrb r0, [r1]
 	cmp r0, #0
 	bne _0204ffe4
@@ -735,8 +735,8 @@ _0204ff5e:
 	cmp r0, #0
 	bne _0205002a
 _0204ffe4:
-	ldr r1, _02050088 ; =data_02076de0
-	ldr r2, _02050094 ; =0x027ffc30
+	ldr r1, _02050088 @ =data_02076de0
+	ldr r2, _02050094 @ =0x027ffc30
 	add r0, r1, #0
 	add r0, #0xbe
 	ldrh r0, [r0]
@@ -768,19 +768,19 @@ _02050000:
 _0205001e:
 	mov r1, #0
 _02050020:
-	ldr r0, _02050090 ; =0x027fff9b
+	ldr r0, _02050090 @ =0x027fff9b
 	strb r1, [r0]
 	mov r1, #1
 	sub r0, r0, #1
 	strb r1, [r0]
 _0205002a:
-	ldr r0, _02050098 ; =0xffff0020
-	ldr r1, _0205009c ; =data_02076de4
+	ldr r0, _02050098 @ =0xffff0020
+	ldr r1, _0205009c @ =data_02076de4
 	mov r2, #0x9c
 	blx func_02007908
 	blx func_0200e254
 	mov r0, #2
-	ldr r1, _02050088 ; =data_02076de0
+	ldr r1, _02050088 @ =data_02076de0
 	lsl r0, r0, #0x18
 	sub r0, r1, r0
 	lsr r0, r0, #5
@@ -789,7 +789,7 @@ _0205002a:
 	orr r0, r1
 	bl func_0204fe70
 	mov r5, #1
-	ldr r4, _0205007c ; =data_02076db0
+	ldr r4, _0205007c @ =data_02076db0
 	b _02050058
 _02050052:
 	add r0, r5, #0
@@ -798,7 +798,7 @@ _02050058:
 	ldrh r0, [r4]
 	cmp r0, #1
 	bne _02050052
-	ldr r1, _02050078 ; =0x04000208
+	ldr r1, _02050078 @ =0x04000208
 	ldrh r0, [r1]
 	add r0, r7, #0
 	strh r6, [r1]
@@ -823,13 +823,13 @@ _0205009c: .word data_02076de4
 
 	.global func_020500a0
 	thumb_func_start func_020500a0
-func_020500a0: ; 0x020500a0
+func_020500a0: @ 0x020500a0
 	push {r3, lr}
 	mov r0, #0x3f
 	and r0, r1
 	cmp r0, #1
 	bne _020500b2
-	ldr r0, _020500b8 ; =data_02076db0
+	ldr r0, _020500b8 @ =data_02076db0
 	mov r1, #1
 	strh r1, [r0]
 	pop {r3, pc}
@@ -842,13 +842,13 @@ _020500b8: .word data_02076db0
 
 	.global func_020500bc
 	thumb_func_start func_020500bc
-func_020500bc: ; 0x020500bc
+func_020500bc: @ 0x020500bc
 	push {r3, lr}
 	mov r0, #0x3f
 	and r0, r1
 	cmp r0, #0x11
 	bne _020500e8
-	ldr r1, _020500f0 ; =data_02076dc0
+	ldr r1, _020500f0 @ =data_02076dc0
 	ldr r0, [r1, #0xc]
 	cmp r0, #0
 	bne _020500ec
@@ -862,7 +862,7 @@ _020500d8:
 	beq _020500e0
 	bl func_020500f4
 _020500e0:
-	ldr r0, _020500f0 ; =data_02076dc0
+	ldr r0, _020500f0 @ =data_02076dc0
 	mov r1, #1
 	str r1, [r0, #0xc]
 	pop {r3, pc}
@@ -876,7 +876,7 @@ _020500f0: .word data_02076dc0
 
 	.global func_020500f4
 	thumb_func_start func_020500f4
-func_020500f4: ; 0x020500f4
+func_020500f4: @ 0x020500f4
 	push {r3, lr}
 	mov r0, #2
 	bl func_0204fe70
@@ -887,8 +887,8 @@ func_020500f4: ; 0x020500f4
 
 	.global func_02050104
 	thumb_func_start func_02050104
-func_02050104: ; 0x02050104
-	ldr r0, _0205010c ; =data_02076dc0
+func_02050104: @ 0x02050104
+	ldr r0, _0205010c @ =data_02076dc0
 	mov r1, #0
 	str r1, [r0, #4]
 	bx lr
@@ -898,13 +898,13 @@ _0205010c: .word data_02076dc0
 
 	.global func_02050110
 	thumb_func_start func_02050110
-func_02050110: ; 0x02050110
+func_02050110: @ 0x02050110
 	push {r3, r4, r5, lr}
 	sub sp, #8
 	add r5, r0, #0
 	blx func_0200ee4c
 	add r4, r0, #0
-	ldr r0, _02050164 ; =data_02076f88
+	ldr r0, _02050164 @ =data_02076f88
 	ldr r1, [r0]
 	cmp r1, #0
 	bne _02050158
@@ -912,7 +912,7 @@ func_02050110: ; 0x02050110
 	add r0, r5, #0
 	add r0, #0xc4
 	bl func_02050174
-	ldr r0, _02050168 ; =data_02076f8c
+	ldr r0, _02050168 @ =data_02076f8c
 	bl func_02050174
 	add r0, r5, #0
 	mov r1, #0
@@ -923,8 +923,8 @@ func_02050110: ; 0x02050110
 	str r0, [sp]
 	mov r0, #0x14
 	str r0, [sp, #4]
-	ldr r1, _0205016c ; =func_02050180
-	ldr r3, _02050170 ; =data_020773b0
+	ldr r1, _0205016c @ =func_02050180
+	ldr r3, _02050170 @ =data_020773b0
 	add r0, r5, #0
 	add r2, r5, #0
 	bl func_0200d5e4
@@ -944,8 +944,8 @@ _02050170: .word data_020773b0
 
 	.global func_02050174
 	thumb_func_start func_02050174
-func_02050174: ; 0x02050174
-	ldr r3, _0205017c ; =func_02007a44
+func_02050174: @ 0x02050174
+	ldr r3, _0205017c @ =func_02007a44
 	mov r1, #0
 	mov r2, #0x24
 	bx r3
@@ -955,7 +955,7 @@ _0205017c: .word func_02007a44
 
 	.global func_02050180
 	thumb_func_start func_02050180
-func_02050180: ; 0x02050180
+func_02050180: @ 0x02050180
 	push {r4, r5, r6, r7, lr}
 	sub sp, #0x24
 	add r5, r0, #0
@@ -1006,14 +1006,14 @@ _020501da:
 	add r6, r0, #0
 	ldr r2, [sp, #4]
 	mov r0, #0
-	ldr r1, _02050210 ; =data_02076fa8
+	ldr r1, _02050210 @ =data_02076fa8
 	cmp r2, #0
 	strb r0, [r1, #6]
 	beq _020501f0
 	add r0, sp, #0
 	blx r2
 _020501f0:
-	ldr r0, _02050214 ; =data_02076f88
+	ldr r0, _02050214 @ =data_02076f88
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _02050208
@@ -1035,14 +1035,14 @@ _02050214: .word data_02076f88
 
 	.global func_02050218
 	thumb_func_start func_02050218
-func_02050218: ; 0x02050218
-	ldr r1, _02050230 ; =0x67452301
+func_02050218: @ 0x02050218
+	ldr r1, _02050230 @ =0x67452301
 	str r1, [r0]
-	ldr r1, _02050234 ; =0xefcdab89
+	ldr r1, _02050234 @ =0xefcdab89
 	str r1, [r0, #4]
-	ldr r1, _02050238 ; =0x98badcfe
+	ldr r1, _02050238 @ =0x98badcfe
 	str r1, [r0, #8]
-	ldr r1, _0205023c ; =0x10325476
+	ldr r1, _0205023c @ =0x10325476
 	str r1, [r0, #0xc]
 	mov r1, #0
 	str r1, [r0, #0x10]
@@ -1057,7 +1057,7 @@ _0205023c: .word 0x10325476
 
 	.global func_02050240
 	thumb_func_start func_02050240
-func_02050240: ; 0x02050240
+func_02050240: @ 0x02050240
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	ldr r6, [r5, #0x10]
@@ -1070,7 +1070,7 @@ func_02050240: ; 0x02050240
 	add r3, r2, #0
 	add r6, r6, r3
 	ldr r4, [r0, #4]
-	ldr r3, _020502d0 ; =0x00000000
+	ldr r3, _020502d0 @ =0x00000000
 	str r6, [r5, #0x10]
 	adc r4, r3
 	str r4, [r0, #4]
@@ -1134,7 +1134,7 @@ _020502d0: .word 0x00000000
 
 	.global func_020502d4
 	thumb_func_start func_020502d4
-func_020502d4: ; 0x020502d4
+func_020502d4: @ 0x020502d4
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r1, #0
 	ldr r2, [r5, #0x10]
@@ -1144,7 +1144,7 @@ func_020502d4: ; 0x020502d4
 	lsr r0, r2, #0x1d
 	orr r4, r0
 	lsl r6, r2, #3
-	ldr r1, _02050348 ; =data_02058b24
+	ldr r1, _02050348 @ =data_02058b24
 	add r0, r5, #0
 	mov r2, #1
 	bl func_02050240
@@ -1194,7 +1194,7 @@ _02050348: .word data_02058b24
 
 	.global func_0205034c
 	thumb_func_start func_0205034c
-func_0205034c: ; 0x0205034c
+func_0205034c: @ 0x0205034c
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xb0
 	str r0, [sp]
@@ -1209,7 +1209,7 @@ func_0205034c: ; 0x0205034c
 	ldr r1, [r1, #4]
 	ldr r2, [r2, #8]
 	ldr r3, [r3, #0xc]
-	ldr r7, _0205067c ; =data_02058be8
+	ldr r7, _0205067c @ =data_02058be8
 	str r4, [sp, #0x14]
 	str r5, [sp, #0x10]
 _0205036e:
@@ -1307,7 +1307,7 @@ _0205036e:
 	cmp r5, #4
 	blt _0205036e
 	mov r4, #0
-	ldr r6, _02050680 ; =data_02058b28
+	ldr r6, _02050680 @ =data_02058b28
 	str r4, [sp, #4]
 _0205042e:
 	ldr r4, [r7]
@@ -1613,16 +1613,16 @@ _02050680: .word data_02058b28
 
 	.global func_02050684
 	thumb_func_start func_02050684
-func_02050684: ; 0x02050684
-	ldr r1, _020506a4 ; =0x67452301
+func_02050684: @ 0x02050684
+	ldr r1, _020506a4 @ =0x67452301
 	str r1, [r0]
-	ldr r1, _020506a8 ; =0xefcdab89
+	ldr r1, _020506a8 @ =0xefcdab89
 	str r1, [r0, #4]
-	ldr r1, _020506ac ; =0x98badcfe
+	ldr r1, _020506ac @ =0x98badcfe
 	str r1, [r0, #8]
-	ldr r1, _020506b0 ; =0x10325476
+	ldr r1, _020506b0 @ =0x10325476
 	str r1, [r0, #0xc]
-	ldr r1, _020506b4 ; =0xc3d2e1f0
+	ldr r1, _020506b4 @ =0xc3d2e1f0
 	str r1, [r0, #0x10]
 	mov r1, #0
 	str r1, [r0, #0x14]
@@ -1639,7 +1639,7 @@ _020506b4: .word 0xc3d2e1f0
 
 	.global func_020506b8
 	thumb_func_start func_020506b8
-func_020506b8: ; 0x020506b8
+func_020506b8: @ 0x020506b8
 	push {r3, r4, r5, r6, r7, lr}
 	add r5, r0, #0
 	add r6, r5, #0
@@ -1677,7 +1677,7 @@ _020506d8:
 	add r2, r7, #0
 	blx func_02007ad8
 	ldr r0, [sp]
-	ldr r3, _02050788 ; =data_02058cec
+	ldr r3, _02050788 @ =data_02058cec
 	sub r0, r0, r7
 	str r0, [sp]
 	ldr r3, [r3]
@@ -1712,7 +1712,7 @@ _0205072e:
 	mov r0, #3
 	tst r0, r4
 	bne _02050756
-	ldr r3, _02050788 ; =data_02058cec
+	ldr r3, _02050788 @ =data_02058cec
 	add r0, r5, #0
 	ldr r3, [r3]
 	add r1, r4, #0
@@ -1725,7 +1725,7 @@ _02050756:
 	add r1, r6, #0
 	mov r2, #0x40
 	blx func_02007ad8
-	ldr r3, _02050788 ; =data_02058cec
+	ldr r3, _02050788 @ =data_02058cec
 	add r0, r5, #0
 	ldr r3, [r3]
 	add r1, r6, #0
@@ -1752,7 +1752,7 @@ _02050788: .word data_02058cec
 
 	.global func_0205078c
 	thumb_func_start func_0205078c
-func_0205078c: ; 0x0205078c
+func_0205078c: @ 0x0205078c
 	push {r0, r1, r2, r3}
 	push {r3, r4, r5, r6, r7, lr}
 	ldr r0, [sp, #0x18]
@@ -1801,7 +1801,7 @@ _020507da:
 	cmp r3, #0x10
 	blt _020507da
 _020507e2:
-	ldr r3, _020508c0 ; =data_02058cec
+	ldr r3, _020508c0 @ =data_02058cec
 	ldr r0, [sp, #0x18]
 	ldr r3, [r3]
 	add r1, r7, #0
@@ -1853,7 +1853,7 @@ _02050802:
 	lsr r0, r0, #0x18
 	add r4, #0x38
 	strb r0, [r4]
-	ldr r3, _020508c0 ; =data_02058cec
+	ldr r3, _020508c0 @ =data_02058cec
 	ldr r0, [sp, #0x18]
 	ldr r3, [r3]
 	add r1, r7, #0
@@ -1920,10 +1920,10 @@ _020508c0: .word data_02058cec
 
 	.global func_020508c4
 	thumb_func_start func_020508c4
-func_020508c4: ; 0x020508c4
+func_020508c4: @ 0x020508c4
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xa0
-	ldr r5, _02050908 ; =data_02057208
+	ldr r5, _02050908 @ =data_02057208
 	add r4, sp, #8
 	add r7, r0, #0
 	mov ip, r1
@@ -1941,11 +1941,11 @@ func_020508c4: ; 0x020508c4
 	str r0, [sp, #0x10]
 	add r0, sp, #0x24
 	str r0, [sp, #0x14]
-	ldr r0, _0205090c ; =func_02050684
+	ldr r0, _0205090c @ =func_02050684
 	str r0, [sp, #0x18]
-	ldr r0, _02050910 ; =func_020506b8
+	ldr r0, _02050910 @ =func_020506b8
 	str r0, [sp, #0x1c]
-	ldr r0, _02050914 ; =func_0205078c
+	ldr r0, _02050914 @ =func_0205078c
 	str r0, [sp, #0x20]
 	ldr r0, [sp, #0xb8]
 	str r0, [sp]
@@ -1963,7 +1963,7 @@ _02050914: .word func_0205078c + 1
 
 	.global func_02050918
 	thumb_func_start func_02050918
-func_02050918: ; 0x02050918
+func_02050918: @ 0x02050918
 	push {r3, r4, r5, r6, r7, lr}
 	sub sp, #0xc8
 	str r0, [sp]
@@ -2105,14 +2105,14 @@ _02050a1c: .word 0xca62c1d6
 
 	.global func_02050a20
 	arm_func_start func_02050a20
-func_02050a20: ; 0x02050a20
+func_02050a20: @ 0x02050a20
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, ip, lr}
 	ldmia r0, {r3, r9, r10, r11, ip}
 	sub sp, sp, #0x84
 	str r2, [sp, #0x80]
 _02050a30:
-	ldr r8, _02050a10 ; =0x5a827999
-	ldr r7, _02050a0c ; =0x00ff00ff
+	ldr r8, _02050a10 @ =0x5a827999
+	ldr r7, _02050a0c @ =0x00ff00ff
 	mov r6, sp
 	mov r5, #0
 _02050a40:
@@ -2167,7 +2167,7 @@ _02050aa0:
 	add r7, r7, #4
 	cmp r7, #0x10
 	blt _02050aa0
-	ldr r8, _02050a14 ; =0x6ed9eba1
+	ldr r8, _02050a14 @ =0x6ed9eba1
 	mov r7, #0
 _02050b10:
 	ldr r2, [r6]
@@ -2197,7 +2197,7 @@ _02050b10:
 	moveq r6, sp
 	cmp r7, #0x14
 	blt _02050b10
-	ldr r8, _02050a18 ; =0x8f1bbcdc
+	ldr r8, _02050a18 @ =0x8f1bbcdc
 	mov r7, #0
 _02050b84:
 	ldr r2, [r6]
@@ -2229,7 +2229,7 @@ _02050b84:
 	moveq r6, sp
 	cmp r7, #0x14
 	blt _02050b84
-	ldr r8, _02050a1c ; =0xca62c1d6
+	ldr r8, _02050a1c @ =0xca62c1d6
 	mov r7, #0
 _02050c00:
 	ldr r2, [r6]

@@ -4,9 +4,9 @@
     .text
 	.global _ZN7MapBaseD1Ev
 	arm_func_start _ZN7MapBaseD1Ev
-_ZN7MapBaseD1Ev: ; 0x0207da38
+_ZN7MapBaseD1Ev: @ 0x0207da38
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207db0c ; =_ZTV7MapBase
+	ldr r1, _0207db0c @ =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -24,14 +24,14 @@ _0207da74:
 	mov r0, #0
 	str r0, [r4, #0x144]
 _0207da7c:
-	ldr r0, _0207db10 ; =data_ov00_020ec81c
+	ldr r0, _0207db10 @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207dac0
 	ldr r1, [r0]
 	ldr r1, [r1, #0xc]
 	blx r1
-	ldr r0, _0207db10 ; =data_ov00_020ec81c
+	ldr r0, _0207db10 @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207dab4
@@ -39,13 +39,13 @@ _0207da7c:
 	ldr r1, [r1, #4]
 	blx r1
 _0207dab4:
-	ldr r0, _0207db10 ; =data_ov00_020ec81c
+	ldr r0, _0207db10 @ =data_ov00_020ec81c
 	mov r1, #0
 	str r1, [r0, #4]
 _0207dac0:
 	mov r0, r4
 	blx func_ov04_0210cb1c
-	ldr r3, _0207db14 ; =_ZN15MapBase_Unk_180D1Ev
+	ldr r3, _0207db14 @ =_ZN15MapBase_Unk_180D1Ev
 	add r0, r4, #0x180
 	mov r1, #2
 	mov r2, #4
@@ -70,15 +70,15 @@ _0207db14: .word _ZN15MapBase_Unk_180D1Ev
 
 	.global _ZN15MapBase_Unk_180D1Ev
 	arm_func_start _ZN15MapBase_Unk_180D1Ev
-_ZN15MapBase_Unk_180D1Ev: ; 0x0207db18
+_ZN15MapBase_Unk_180D1Ev: @ 0x0207db18
 	bx lr
 	arm_func_end _ZN15MapBase_Unk_180D1Ev
 
 	.global _ZN7MapBaseD0Ev
 	arm_func_start _ZN7MapBaseD0Ev
-_ZN7MapBaseD0Ev: ; 0x0207db1c
+_ZN7MapBaseD0Ev: @ 0x0207db1c
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207dbf8 ; =_ZTV7MapBase
+	ldr r1, _0207dbf8 @ =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -96,14 +96,14 @@ _0207db58:
 	mov r0, #0
 	str r0, [r4, #0x144]
 _0207db60:
-	ldr r0, _0207dbfc ; =data_ov00_020ec81c
+	ldr r0, _0207dbfc @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207dba4
 	ldr r1, [r0]
 	ldr r1, [r1, #0xc]
 	blx r1
-	ldr r0, _0207dbfc ; =data_ov00_020ec81c
+	ldr r0, _0207dbfc @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207db98
@@ -111,13 +111,13 @@ _0207db60:
 	ldr r1, [r1, #4]
 	blx r1
 _0207db98:
-	ldr r0, _0207dbfc ; =data_ov00_020ec81c
+	ldr r0, _0207dbfc @ =data_ov00_020ec81c
 	mov r1, #0
 	str r1, [r0, #4]
 _0207dba4:
 	mov r0, r4
 	blx func_ov04_0210cb1c
-	ldr r3, _0207dc00 ; =_ZN15MapBase_Unk_180D1Ev
+	ldr r3, _0207dc00 @ =_ZN15MapBase_Unk_180D1Ev
 	add r0, r4, #0x180
 	mov r1, #2
 	mov r2, #4
@@ -144,9 +144,9 @@ _0207dc00: .word _ZN15MapBase_Unk_180D1Ev
 
 	.global _ZN7MapBaseD2Ev
 	arm_func_start _ZN7MapBaseD2Ev
-_ZN7MapBaseD2Ev: ; 0x0207dc04
+_ZN7MapBaseD2Ev: @ 0x0207dc04
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0207dcd8 ; =_ZTV7MapBase
+	ldr r1, _0207dcd8 @ =_ZTV7MapBase
 	mov r4, r0
 	str r1, [r4]
 	ldr r1, [r0]
@@ -164,14 +164,14 @@ _0207dc40:
 	mov r0, #0
 	str r0, [r4, #0x144]
 _0207dc48:
-	ldr r0, _0207dcdc ; =data_ov00_020ec81c
+	ldr r0, _0207dcdc @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207dc8c
 	ldr r1, [r0]
 	ldr r1, [r1, #0xc]
 	blx r1
-	ldr r0, _0207dcdc ; =data_ov00_020ec81c
+	ldr r0, _0207dcdc @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	beq _0207dc80
@@ -179,13 +179,13 @@ _0207dc48:
 	ldr r1, [r1, #4]
 	blx r1
 _0207dc80:
-	ldr r0, _0207dcdc ; =data_ov00_020ec81c
+	ldr r0, _0207dcdc @ =data_ov00_020ec81c
 	mov r1, #0
 	str r1, [r0, #4]
 _0207dc8c:
 	mov r0, r4
 	blx func_ov04_0210cb1c
-	ldr r3, _0207dce0 ; =_ZN15MapBase_Unk_180D1Ev
+	ldr r3, _0207dce0 @ =_ZN15MapBase_Unk_180D1Ev
 	add r0, r4, #0x180
 	mov r1, #2
 	mov r2, #4
@@ -210,7 +210,7 @@ _0207dce0: .word _ZN15MapBase_Unk_180D1Ev
 
 	.global _ZN7MapBase9SetBoundsEii
 	arm_func_start _ZN7MapBase9SetBoundsEii
-_ZN7MapBase9SetBoundsEii: ; 0x0207dce4
+_ZN7MapBase9SetBoundsEii: @ 0x0207dce4
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0x2c
 	mov r4, r0
@@ -261,16 +261,16 @@ _ZN7MapBase9SetBoundsEii: ; 0x0207dce4
 
 	.global _ZN15MapManager_Unk2D1Ev
 	arm_func_start _ZN15MapManager_Unk2D1Ev
-_ZN15MapManager_Unk2D1Ev: ; 0x0207dd9c
+_ZN15MapManager_Unk2D1Ev: @ 0x0207dd9c
 	bx lr
 	arm_func_end _ZN15MapManager_Unk2D1Ev
 
 	.global _ZN7MapBase14GetMapFilePathEPcii
 	arm_func_start _ZN7MapBase14GetMapFilePathEPcii
-_ZN7MapBase14GetMapFilePathEPcii: ; 0x0207dda0
+_ZN7MapBase14GetMapFilePathEPcii: @ 0x0207dda0
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #4
-	ldr ip, _0207ddec ; =0x66666667
+	ldr ip, _0207ddec @ =0x66666667
 	mov r6, r1
 	smull r0, r5, ip, r2
 	mov r0, r3
@@ -280,7 +280,7 @@ _ZN7MapBase14GetMapFilePathEPcii: ; 0x0207dda0
 	mov lr, #0xa
 	smull r1, ip, lr, r5
 	sub r5, r2, r1
-	ldr r1, _0207ddf0 ; =data_ov00_020e2410
+	ldr r1, _0207ddf0 @ =data_ov00_020e2410
 	mov r2, r6
 	add r3, r4, r3, asr #2
 	str r5, [sp]
@@ -294,13 +294,13 @@ _0207ddf0: .word data_ov00_020e2410
 
 	.global _ZN7MapBase8vfunc_18Ev
 	arm_func_start _ZN7MapBase8vfunc_18Ev
-_ZN7MapBase8vfunc_18Ev: ; 0x0207ddf4
+_ZN7MapBase8vfunc_18Ev: @ 0x0207ddf4
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_18Ev
 
 	.global _ZN7MapBase18func_ov00_0207ddf8Eb
 	arm_func_start _ZN7MapBase18func_ov00_0207ddf8Eb
-_ZN7MapBase18func_ov00_0207ddf8Eb: ; 0x0207ddf8
+_ZN7MapBase18func_ov00_0207ddf8Eb: @ 0x0207ddf8
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	mov r7, #0
 	mov r10, r0
@@ -337,7 +337,7 @@ _0207de54:
 
 	.global _ZN7MapBase18func_ov00_0207de68Ei
 	arm_func_start _ZN7MapBase18func_ov00_0207de68Ei
-_ZN7MapBase18func_ov00_0207de68Ei: ; 0x0207de68
+_ZN7MapBase18func_ov00_0207de68Ei: @ 0x0207de68
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #0x144]
 	mov r2, r1
@@ -350,7 +350,7 @@ _ZN7MapBase18func_ov00_0207de68Ei: ; 0x0207de68
 
 	.global _ZN7MapBase18func_ov00_0207de88Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207de88Ev
-_ZN7MapBase18func_ov00_0207de88Ev: ; 0x0207de88
+_ZN7MapBase18func_ov00_0207de88Ev: @ 0x0207de88
 	stmdb sp!, {r3, lr}
 	ldr r0, [r0, #0x144]
 	cmp r0, #0
@@ -361,11 +361,11 @@ _ZN7MapBase18func_ov00_0207de88Ev: ; 0x0207de88
 
 	.global _ZN7MapBase18func_ov00_0207dea0Eb
 	arm_func_start _ZN7MapBase18func_ov00_0207dea0Eb
-_ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
+_ZN7MapBase18func_ov00_0207dea0Eb: @ 0x0207dea0
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x10
 	mov r5, r0
-	ldr r2, _0207e044 ; =data_027e0f78
+	ldr r2, _0207e044 @ =data_027e0f78
 	ldr r0, [r5, #0x144]
 	mov r4, r1
 	ldr r6, [r2]
@@ -374,7 +374,7 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	mov r0, r6
 	mov r1, #0
 	bl func_ov00_0209cc3c
-	ldr r1, _0207e044 ; =data_027e0f78
+	ldr r1, _0207e044 @ =data_027e0f78
 	ldr r0, [r5, #0x144]
 	ldr r6, [r1]
 	bl func_ov00_0209c530
@@ -383,7 +383,7 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	mov r0, r6
 	mov r1, #1
 	bl func_ov00_0209cc3c
-	ldr r1, _0207e044 ; =data_027e0f78
+	ldr r1, _0207e044 @ =data_027e0f78
 	ldr r0, [r5, #0x144]
 	ldr r6, [r1]
 	bl func_ov00_0209c530
@@ -392,7 +392,7 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	mov r0, r6
 	mov r1, #2
 	bl func_ov00_0209cc3c
-	ldr r1, _0207e044 ; =data_027e0f78
+	ldr r1, _0207e044 @ =data_027e0f78
 	ldr r0, [r5, #0x144]
 	ldr r6, [r1]
 	bl func_ov00_0209c530
@@ -401,10 +401,10 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	mov r0, r6
 	mov r1, #3
 	bl func_ov00_0209cc3c
-	ldr r0, _0207e044 ; =data_027e0f78
+	ldr r0, _0207e044 @ =data_027e0f78
 	ldr r0, [r0]
 	bl func_ov00_0209cc48
-	ldr r1, _0207e048 ; =data_027e0f88
+	ldr r1, _0207e048 @ =data_027e0f88
 	ldr r0, [r5, #0x144]
 	ldr r6, [r1]
 	bl func_ov00_0209c530
@@ -416,7 +416,7 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	cmp r4, #0
 	beq _0207dff0
 	ldr r0, [r5, #0x144]
-	ldr r1, _0207e04c ; =data_ov00_020ecde4
+	ldr r1, _0207e04c @ =data_ov00_020ecde4
 	ldr r2, [r0, #0xc]
 	mov r0, #0x68
 	mla r0, r2, r0, r1
@@ -427,12 +427,12 @@ _ZN7MapBase18func_ov00_0207dea0Eb: ; 0x0207dea0
 	ldr r0, [sp]
 	cmp r0, #1
 	blt _0207dfb4
-	ldr r0, _0207e050 ; =data_ov00_020ee0a0
+	ldr r0, _0207e050 @ =data_ov00_020ee0a0
 	mov r1, #1
 	bl func_ov00_0209cd80
 	b _0207dfc0
 _0207dfb4:
-	ldr r0, _0207e050 ; =data_ov00_020ee0a0
+	ldr r0, _0207e050 @ =data_ov00_020ee0a0
 	mov r1, #0
 	bl func_ov00_0209cd80
 _0207dfc0:
@@ -440,23 +440,23 @@ _0207dfc0:
 	bl func_ov00_0209c530
 	ldrh r1, [r0, #0xe]
 	ldr r2, [sp, #0xc]
-	ldr r0, _0207e050 ; =data_ov00_020ee0a0
+	ldr r0, _0207e050 @ =data_ov00_020ee0a0
 	bl func_ov00_0209cd9c
 	ldr r1, [sp, #4]
-	ldr r0, _0207e050 ; =data_ov00_020ee0a0
+	ldr r0, _0207e050 @ =data_ov00_020ee0a0
 	bl func_ov00_0209cddc
 	ldr r1, [sp, #8]
-	ldr r0, _0207e050 ; =data_ov00_020ee0a0
+	ldr r0, _0207e050 @ =data_ov00_020ee0a0
 	bl func_ov00_0209cdf8
 _0207dff0:
-	ldr r0, _0207e054 ; =data_027e0d38
+	ldr r0, _0207e054 @ =data_027e0d38
 	ldr r0, [r0]
 	bl func_ov00_02078b40
 	cmp r0, #2
 	bne _0207e01c
 	ldr r0, [r5, #0x144]
 	bl func_ov00_0209c530
-	ldr r1, _0207e058 ; =data_027e0e58
+	ldr r1, _0207e058 @ =data_027e0e58
 	ldrh r2, [r0, #0x10]
 	ldr r0, [r1]
 	strh r2, [r0, #0x22]
@@ -464,7 +464,7 @@ _0207e01c:
 	ldr r0, [r5, #0x144]
 	bl func_ov00_0209c530
 	mov r1, r0
-	ldr r0, _0207e05c ; =data_027e0f8c
+	ldr r0, _0207e05c @ =data_027e0f8c
 	add r1, r1, #0x12
 	bl func_ov00_020a3de0
 	ldr r0, [r5, #0x144]
@@ -483,7 +483,7 @@ _0207e05c: .word data_027e0f8c
 
 	.global _ZN7MapBase8vfunc_b0Eii
 	arm_func_start _ZN7MapBase8vfunc_b0Eii
-_ZN7MapBase8vfunc_b0Eii: ; 0x0207e060
+_ZN7MapBase8vfunc_b0Eii: @ 0x0207e060
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	ldr r0, [r5, #0x13c]
@@ -499,7 +499,7 @@ _ZN7MapBase8vfunc_b0Eii: ; 0x0207e060
 
 	.global _ZN7MapBase18func_ov00_0207e08cEii
 	arm_func_start _ZN7MapBase18func_ov00_0207e08cEii
-_ZN7MapBase18func_ov00_0207e08cEii: ; 0x0207e08c
+_ZN7MapBase18func_ov00_0207e08cEii: @ 0x0207e08c
 	stmdb sp!, {r3, lr}
 	ldr r3, [r0, #0x13c]
 	cmp r3, #0
@@ -529,7 +529,7 @@ _ZN7MapBase18func_ov00_0207e08cEii: ; 0x0207e08c
 
 	.global _ZN7MapBase18func_ov00_0207e0f0Ei
 	arm_func_start _ZN7MapBase18func_ov00_0207e0f0Ei
-_ZN7MapBase18func_ov00_0207e0f0Ei: ; 0x0207e0f0
+_ZN7MapBase18func_ov00_0207e0f0Ei: @ 0x0207e0f0
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
 	mov r10, r0
@@ -643,7 +643,7 @@ _0207e280:
 
 	.global _ZN7MapBase18func_ov00_0207e28cEi
 	arm_func_start _ZN7MapBase18func_ov00_0207e28cEi
-_ZN7MapBase18func_ov00_0207e28cEi: ; 0x0207e28c
+_ZN7MapBase18func_ov00_0207e28cEi: @ 0x0207e28c
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
 	mov r10, r0
@@ -764,9 +764,9 @@ _0207e438:
 
 	.global _ZN7MapBase8vfunc_b4Ev
 	arm_func_start _ZN7MapBase8vfunc_b4Ev
-_ZN7MapBase8vfunc_b4Ev: ; 0x0207e444
+_ZN7MapBase8vfunc_b4Ev: @ 0x0207e444
 	stmdb sp!, {r3, lr}
-	ldr r0, _0207e468 ; =data_ov00_020ec81c
+	ldr r0, _0207e468 @ =data_ov00_020ec81c
 	ldr r0, [r0, #4]
 	cmp r0, #0
 	moveq r0, #0
@@ -780,7 +780,7 @@ _0207e468: .word data_ov00_020ec81c
 
 	.global _ZN7MapBase8vfunc_48Ev
 	arm_func_start _ZN7MapBase8vfunc_48Ev
-_ZN7MapBase8vfunc_48Ev: ; 0x0207e46c
+_ZN7MapBase8vfunc_48Ev: @ 0x0207e46c
 	stmdb sp!, {r4, lr}
 	mov r4, r0
 	bl _ZN7MapBase16Trigger_vfunc_08Ev
@@ -792,52 +792,52 @@ _ZN7MapBase8vfunc_48Ev: ; 0x0207e46c
 
 	.global _ZN7MapBase8vfunc_50Ev
 	arm_func_start _ZN7MapBase8vfunc_50Ev
-_ZN7MapBase8vfunc_50Ev: ; 0x0207e488
+_ZN7MapBase8vfunc_50Ev: @ 0x0207e488
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_50Ev
 
 	.global _ZN7MapBase8vfunc_54Ev
 	arm_func_start _ZN7MapBase8vfunc_54Ev
-_ZN7MapBase8vfunc_54Ev: ; 0x0207e490
+_ZN7MapBase8vfunc_54Ev: @ 0x0207e490
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_54Ev
 
 	.global _ZN7MapBase8vfunc_58Ev
 	arm_func_start _ZN7MapBase8vfunc_58Ev
-_ZN7MapBase8vfunc_58Ev: ; 0x0207e498
+_ZN7MapBase8vfunc_58Ev: @ 0x0207e498
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_58Ev
 
 	.global _ZN7MapBase8vfunc_5cEv
 	arm_func_start _ZN7MapBase8vfunc_5cEv
-_ZN7MapBase8vfunc_5cEv: ; 0x0207e4a0
+_ZN7MapBase8vfunc_5cEv: @ 0x0207e4a0
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_5cEv
 
 	.global _ZN7MapBase8vfunc_60Ev
 	arm_func_start _ZN7MapBase8vfunc_60Ev
-_ZN7MapBase8vfunc_60Ev: ; 0x0207e4a8
+_ZN7MapBase8vfunc_60Ev: @ 0x0207e4a8
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_60Ev
 
 	.global _ZN7MapBase8vfunc_64Ev
 	arm_func_start _ZN7MapBase8vfunc_64Ev
-_ZN7MapBase8vfunc_64Ev: ; 0x0207e4b0
+_ZN7MapBase8vfunc_64Ev: @ 0x0207e4b0
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_64Ev
 
 	.global _ZN7MapBase8vfunc_68Eii
 	arm_func_start _ZN7MapBase8vfunc_68Eii
-_ZN7MapBase8vfunc_68Eii: ; 0x0207e4b8
+_ZN7MapBase8vfunc_68Eii: @ 0x0207e4b8
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x7c
-	ldr r3, _0207e92c ; =gMapManager
+	ldr r3, _0207e92c @ =gMapManager
 	mov r9, r1
 	ldr r1, [r3]
 	mov r8, r0
@@ -861,17 +861,17 @@ _ZN7MapBase8vfunc_68Eii: ; 0x0207e4b8
 	cmp r0, #0
 	addge pc, pc, r0, lsl #2
 	b _0207e63c
-_0207e520: ; jump table
-	b _0207e63c ; case 0
-	b _0207e724 ; case 1
-	b _0207e724 ; case 2
-	b _0207e724 ; case 3
-	b _0207e724 ; case 4
-	b _0207e63c ; case 5
-	b _0207e63c ; case 6
-	b _0207e63c ; case 7
-	b _0207e724 ; case 8
-	b _0207e724 ; case 9
+_0207e520: @ jump table
+	b _0207e63c @ case 0
+	b _0207e724 @ case 1
+	b _0207e724 @ case 2
+	b _0207e724 @ case 3
+	b _0207e724 @ case 4
+	b _0207e63c @ case 5
+	b _0207e63c @ case 6
+	b _0207e63c @ case 7
+	b _0207e724 @ case 8
+	b _0207e724 @ case 9
 _0207e548:
 	cmp r0, #0x16
 	beq _0207e724
@@ -894,18 +894,18 @@ _0207e570:
 	subs r1, r0, #0x1f
 	addpl pc, pc, r1, lsl #2
 	b _0207e63c
-_0207e590: ; jump table
-	b _0207e724 ; case 0
-	b _0207e63c ; case 1
-	b _0207e63c ; case 2
-	b _0207e63c ; case 3
-	b _0207e63c ; case 4
-	b _0207e63c ; case 5
-	b _0207e63c ; case 6
-	b _0207e63c ; case 7
-	b _0207e724 ; case 8
-	b _0207e724 ; case 9
-	b _0207e724 ; case 10
+_0207e590: @ jump table
+	b _0207e724 @ case 0
+	b _0207e63c @ case 1
+	b _0207e63c @ case 2
+	b _0207e63c @ case 3
+	b _0207e63c @ case 4
+	b _0207e63c @ case 5
+	b _0207e63c @ case 6
+	b _0207e63c @ case 7
+	b _0207e724 @ case 8
+	b _0207e724 @ case 9
+	b _0207e724 @ case 10
 _0207e5bc:
 	cmp r0, #0x30
 	beq _0207e724
@@ -1008,15 +1008,15 @@ _0207e724:
 	str r0, [sp]
 	mov r1, #0
 	str r1, [sp, #4]
-	ldr r0, _0207e930 ; =data_027e0f6c
-	ldr r3, _0207e934 ; =data_ov00_020ec824
+	ldr r0, _0207e930 @ =data_027e0f6c
+	ldr r3, _0207e934 @ =data_ov00_020ec824
 	ldr r0, [r0]
 	mov r1, r9
 	mov r2, #2
 	bl func_01fff084
-	ldr r4, _0207e938 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r4, _0207e938 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	mov r5, r0
-	ldr r3, _0207e93c ; =_ZN7MapBase18func_ov00_0207e96cEv
+	ldr r3, _0207e93c @ =_ZN7MapBase18func_ov00_0207e96cEv
 	add r0, sp, #0x48
 	mov r1, #3
 	mov r2, #0x10
@@ -1033,8 +1033,8 @@ _0207e724:
 	stmia r4, {r0, r1, r2}
 	cmp r5, #0
 	ble _0207e8a0
-	ldr r10, _0207e934 ; =data_ov00_020ec824
-	ldr r9, _0207e930 ; =data_027e0f6c
+	ldr r10, _0207e934 @ =data_ov00_020ec824
+	ldr r9, _0207e930 @ =data_027e0f6c
 	mov r11, #0x4c
 _0207e7a4:
 	mov r0, r7, lsl #0x1
@@ -1114,7 +1114,7 @@ _0207e8a0:
 	adc r1, r2, #0
 	mov r4, r3, lsr #0xc
 	orr r4, r4, r1, lsl #20
-	ldr r3, _0207e938 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207e938 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	ldr r5, [sp, #0x1c]
 	add r0, sp, #0x48
 	mov r1, #3
@@ -1130,7 +1130,7 @@ _0207e8f4:
 	ldr r2, [r2, #0x60]
 	blx r2
 	mov r4, r0
-	ldr r3, _0207e938 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207e938 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x48
 	mov r1, #3
 	mov r2, #0x10
@@ -1148,10 +1148,10 @@ _0207e93c: .word _ZN7MapBase18func_ov00_0207e96cEv
 
 	.global _ZN7MapBase18func_ov00_0207e940EPc
 	arm_func_start _ZN7MapBase18func_ov00_0207e940EPc
-_ZN7MapBase18func_ov00_0207e940EPc: ; 0x0207e940
+_ZN7MapBase18func_ov00_0207e940EPc: @ 0x0207e940
 	stmdb sp!, {r4, lr}
 	mov r4, r0
-	ldr r3, _0207e964 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207e964 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, r4, #0x18
 	mov r1, #3
 	mov r2, #0x10
@@ -1164,22 +1164,22 @@ _0207e964: .word _ZN7MapBase18func_ov00_0207e968Ev
 
 	.global _ZN7MapBase18func_ov00_0207e968Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207e968Ev
-_ZN7MapBase18func_ov00_0207e968Ev: ; 0x0207e968
+_ZN7MapBase18func_ov00_0207e968Ev: @ 0x0207e968
 	bx lr
 	arm_func_end _ZN7MapBase18func_ov00_0207e968Ev
 
 	.global _ZN7MapBase18func_ov00_0207e96cEv
 	arm_func_start _ZN7MapBase18func_ov00_0207e96cEv
-_ZN7MapBase18func_ov00_0207e96cEv: ; 0x0207e96c
+_ZN7MapBase18func_ov00_0207e96cEv: @ 0x0207e96c
 	bx lr
 	arm_func_end _ZN7MapBase18func_ov00_0207e96cEv
 
 	.global _ZN7MapBase8vfunc_6cEiii
 	arm_func_start _ZN7MapBase8vfunc_6cEiii
-_ZN7MapBase8vfunc_6cEiii: ; 0x0207e970
+_ZN7MapBase8vfunc_6cEiii: @ 0x0207e970
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0xc4
-	ldr r4, _0207ee00 ; =gMapManager
+	ldr r4, _0207ee00 @ =gMapManager
 	mov r9, r1
 	ldr r1, [r4]
 	mov r8, r0
@@ -1204,17 +1204,17 @@ _ZN7MapBase8vfunc_6cEiii: ; 0x0207e970
 	cmp r0, #0
 	addge pc, pc, r0, lsl #2
 	b _0207ea9c
-_0207e9dc: ; jump table
-	b _0207ea9c ; case 0
-	b _0207eb04 ; case 1
-	b _0207eb04 ; case 2
-	b _0207eb04 ; case 3
-	b _0207eb04 ; case 4
-	b _0207ea9c ; case 5
-	b _0207ea9c ; case 6
-	b _0207ea9c ; case 7
-	b _0207eb04 ; case 8
-	b _0207eb04 ; case 9
+_0207e9dc: @ jump table
+	b _0207ea9c @ case 0
+	b _0207eb04 @ case 1
+	b _0207eb04 @ case 2
+	b _0207eb04 @ case 3
+	b _0207eb04 @ case 4
+	b _0207ea9c @ case 5
+	b _0207ea9c @ case 6
+	b _0207ea9c @ case 7
+	b _0207eb04 @ case 8
+	b _0207eb04 @ case 9
 _0207ea04:
 	cmp r0, #0x16
 	beq _0207eb04
@@ -1237,18 +1237,18 @@ _0207ea2c:
 	subs r1, r0, #0x1f
 	addpl pc, pc, r1, lsl #2
 	b _0207ea9c
-_0207ea4c: ; jump table
-	b _0207eb04 ; case 0
-	b _0207ea9c ; case 1
-	b _0207ea9c ; case 2
-	b _0207ea9c ; case 3
-	b _0207ea9c ; case 4
-	b _0207ea9c ; case 5
-	b _0207ea9c ; case 6
-	b _0207ea9c ; case 7
-	b _0207eb04 ; case 8
-	b _0207eb04 ; case 9
-	b _0207eb04 ; case 10
+_0207ea4c: @ jump table
+	b _0207eb04 @ case 0
+	b _0207ea9c @ case 1
+	b _0207ea9c @ case 2
+	b _0207ea9c @ case 3
+	b _0207ea9c @ case 4
+	b _0207ea9c @ case 5
+	b _0207ea9c @ case 6
+	b _0207ea9c @ case 7
+	b _0207eb04 @ case 8
+	b _0207eb04 @ case 9
+	b _0207eb04 @ case 10
 _0207ea78:
 	cmp r0, #0x30
 	beq _0207eb04
@@ -1293,23 +1293,23 @@ _0207eb04:
 	str r0, [sp]
 	mov r1, #0
 	str r1, [sp, #4]
-	ldr r0, _0207ee04 ; =data_027e0f6c
-	ldr r3, _0207ee08 ; =data_ov00_020ec864
+	ldr r0, _0207ee04 @ =data_027e0f6c
+	ldr r3, _0207ee08 @ =data_ov00_020ec864
 	ldr r0, [r0]
 	mov r1, r9
 	mov r2, #2
 	bl func_01fff084
-	ldr r5, _0207ee0c ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r5, _0207ee0c @ =_ZN7MapBase18func_ov00_0207e968Ev
 	mov r4, r0
 	str r5, [sp]
-	ldr r3, _0207ee10 ; =_ZN7MapBase18func_ov00_0207e96cEv
+	ldr r3, _0207ee10 @ =_ZN7MapBase18func_ov00_0207e96cEv
 	add r0, sp, #0x90
 	mov r1, #3
 	mov r2, #0x10
 	mov r5, #0x2000
 	bl func_0204f614
-	ldr r1, _0207ee0c ; =_ZN7MapBase18func_ov00_0207e968Ev
-	ldr r3, _0207ee10 ; =_ZN7MapBase18func_ov00_0207e96cEv
+	ldr r1, _0207ee0c @ =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207ee10 @ =_ZN7MapBase18func_ov00_0207e96cEv
 	str r1, [sp]
 	add r0, sp, #0x44
 	mov r1, #3
@@ -1325,8 +1325,8 @@ _0207eb04:
 	cmp r4, #0
 	stmia r3, {r0, r1, r2}
 	ble _0207ed48
-	ldr r10, _0207ee08 ; =data_ov00_020ec864
-	ldr r9, _0207ee04 ; =data_027e0f6c
+	ldr r10, _0207ee08 @ =data_ov00_020ec864
+	ldr r9, _0207ee04 @ =data_027e0f6c
 	mov r11, #0x4c
 _0207eba0:
 	mov r0, r6, lsl #0x1
@@ -1473,12 +1473,12 @@ _0207eda4:
 	mov r0, #0x1000
 	stmib r7, {r0, r1}
 _0207edd0:
-	ldr r3, _0207ee0c ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207ee0c @ =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x44
 	mov r1, #3
 	mov r2, #0x10
 	bl func_0204f754
-	ldr r3, _0207ee0c ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207ee0c @ =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x90
 	mov r1, #3
 	mov r2, #0x10
@@ -1495,10 +1495,10 @@ _0207ee10: .word _ZN7MapBase18func_ov00_0207e96cEv
 
 	.global _ZN7MapBase8vfunc_70EP5Vec3p
 	arm_func_start _ZN7MapBase8vfunc_70EP5Vec3p
-_ZN7MapBase8vfunc_70EP5Vec3p: ; 0x0207ee14
+_ZN7MapBase8vfunc_70EP5Vec3p: @ 0x0207ee14
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x74
-	ldr r0, _0207efdc ; =gMapManager
+	ldr r0, _0207efdc @ =gMapManager
 	mov r9, r1
 	ldr r1, [r0]
 	add r0, sp, #8
@@ -1508,21 +1508,21 @@ _ZN7MapBase8vfunc_70EP5Vec3p: ; 0x0207ee14
 	str r0, [sp]
 	mov r1, #0
 	str r1, [sp, #4]
-	ldr r0, _0207efe0 ; =data_027e0f6c
-	ldr r3, _0207efe4 ; =data_ov00_020ec8a4
+	ldr r0, _0207efe0 @ =data_027e0f6c
+	ldr r3, _0207efe4 @ =data_ov00_020ec8a4
 	ldr r0, [r0]
 	mov r1, r9
 	mov r2, #2
 	bl func_01fff084
-	ldr r1, _0207efe8 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r1, _0207efe8 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	mov r5, r0
 	str r1, [sp]
-	ldr r3, _0207efec ; =_ZN7MapBase18func_ov00_0207e96cEv
+	ldr r3, _0207efec @ =_ZN7MapBase18func_ov00_0207e96cEv
 	add r0, sp, #0x40
 	mov r1, #3
 	mov r2, #0x10
 	mov r6, #0x2000
-	ldr r7, _0207eff0 ; =0x0000ffff
+	ldr r7, _0207eff0 @ =0x0000ffff
 	bl func_0204f614
 	mov r8, #0
 	sub r0, r8, #0x10000
@@ -1534,8 +1534,8 @@ _ZN7MapBase8vfunc_70EP5Vec3p: ; 0x0207ee14
 	cmp r5, #0
 	stmia r4, {r0, r1, r2}
 	ble _0207efbc
-	ldr r10, _0207efe4 ; =data_ov00_020ec8a4
-	ldr r9, _0207efe0 ; =data_027e0f6c
+	ldr r10, _0207efe4 @ =data_ov00_020ec8a4
+	ldr r9, _0207efe0 @ =data_027e0f6c
 	mov r11, #0x4c
 _0207eeb8:
 	mov r0, r8, lsl #0x1
@@ -1605,7 +1605,7 @@ _0207efa8:
 	mov r8, r0, lsr #0x10
 	bgt _0207eeb8
 _0207efbc:
-	ldr r3, _0207efe8 ; =_ZN7MapBase18func_ov00_0207e968Ev
+	ldr r3, _0207efe8 @ =_ZN7MapBase18func_ov00_0207e968Ev
 	add r0, sp, #0x40
 	mov r1, #3
 	mov r2, #0x10
@@ -1624,10 +1624,10 @@ _0207eff0: .word 0x0000ffff
 
 	.global _ZN7MapBase8vfunc_74EP5Vec3p
 	arm_func_start _ZN7MapBase8vfunc_74EP5Vec3p
-_ZN7MapBase8vfunc_74EP5Vec3p: ; 0x0207eff4
+_ZN7MapBase8vfunc_74EP5Vec3p: @ 0x0207eff4
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x24
-	ldr r0, _0207f0f4 ; =gMapManager
+	ldr r0, _0207f0f4 @ =gMapManager
 	mov r8, r1
 	ldr r1, [r0]
 	add r0, sp, #8
@@ -1646,8 +1646,8 @@ _ZN7MapBase8vfunc_74EP5Vec3p: ; 0x0207eff4
 	str r0, [sp]
 	mov r0, #0
 	str r0, [sp, #4]
-	ldr r0, _0207f0f8 ; =data_027e0f6c
-	ldr r3, _0207f0fc ; =data_ov00_020ec8e4
+	ldr r0, _0207f0f8 @ =data_027e0f6c
+	ldr r3, _0207f0fc @ =data_ov00_020ec8e4
 	ldr r0, [r0]
 	mov r1, r4
 	mov r2, #8
@@ -1656,8 +1656,8 @@ _ZN7MapBase8vfunc_74EP5Vec3p: ; 0x0207eff4
 	cmp r5, #0
 	mov r6, #0
 	ble _0207f0e8
-	ldr r4, _0207f0fc ; =data_ov00_020ec8e4
-	ldr r9, _0207f0f8 ; =data_027e0f6c
+	ldr r4, _0207f0fc @ =data_ov00_020ec8e4
+	ldr r9, _0207f0f8 @ =data_027e0f6c
 _0207f078:
 	mov r0, r6, lsl #0x1
 	ldr r1, [r9]
@@ -1700,15 +1700,15 @@ _0207f0fc: .word data_ov00_020ec8e4
 
 	.global _ZN7MapBase18func_ov00_0207f100Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207f100Ev
-_ZN7MapBase18func_ov00_0207f100Ev: ; 0x0207f100
+_ZN7MapBase18func_ov00_0207f100Ev: @ 0x0207f100
 	bx lr
 	arm_func_end _ZN7MapBase18func_ov00_0207f100Ev
 
 	.global _ZN7MapBase18func_ov00_0207f104Eii
 	arm_func_start _ZN7MapBase18func_ov00_0207f104Eii
-_ZN7MapBase18func_ov00_0207f104Eii: ; 0x0207f104
+_ZN7MapBase18func_ov00_0207f104Eii: @ 0x0207f104
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
-	ldr r3, _0207f1f0 ; =gMapManager
+	ldr r3, _0207f1f0 @ =gMapManager
 	mov r5, r1
 	ldr r1, [r3]
 	mov r6, r0
@@ -1773,10 +1773,10 @@ _0207f1f0: .word gMapManager
 
 	.global _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
 	arm_func_start _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi
-_ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi: ; 0x0207f1f4
+_ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi: @ 0x0207f1f4
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, r10, lr}
 	sub sp, sp, #0x3c
-	ldr r0, _0207f318 ; =gMapManager
+	ldr r0, _0207f318 @ =gMapManager
 	mov r9, r1
 	ldr r1, [r0]
 	mov r8, r2
@@ -1796,8 +1796,8 @@ _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi: ; 0x0207f1f4
 	str r0, [sp]
 	mov r0, #0
 	str r0, [sp, #4]
-	ldr r0, _0207f31c ; =data_027e0f6c
-	ldr r3, _0207f320 ; =data_ov00_020ec924
+	ldr r0, _0207f31c @ =data_027e0f6c
+	ldr r3, _0207f320 @ =data_ov00_020ec924
 	ldr r0, [r0]
 	mov r1, r4
 	mov r2, #8
@@ -1806,8 +1806,8 @@ _ZN7MapBase18func_ov00_0207f1f4EP5Vec3pPi: ; 0x0207f1f4
 	cmp r5, #0
 	mov r6, #0
 	ble _0207f30c
-	ldr r4, _0207f320 ; =data_ov00_020ec924
-	ldr r10, _0207f31c ; =data_027e0f6c
+	ldr r4, _0207f320 @ =data_ov00_020ec924
+	ldr r10, _0207f31c @ =data_027e0f6c
 _0207f27c:
 	mov r0, r6, lsl #0x1
 	ldr r1, [r10]
@@ -1858,73 +1858,73 @@ _0207f320: .word data_ov00_020ec924
 
 	.global _ZN7MapBase8vfunc_88Ev
 	arm_func_start _ZN7MapBase8vfunc_88Ev
-_ZN7MapBase8vfunc_88Ev: ; 0x0207f324
+_ZN7MapBase8vfunc_88Ev: @ 0x0207f324
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_88Ev
 
 	.global _ZN7MapBase8vfunc_8cEv
 	arm_func_start _ZN7MapBase8vfunc_8cEv
-_ZN7MapBase8vfunc_8cEv: ; 0x0207f32c
+_ZN7MapBase8vfunc_8cEv: @ 0x0207f32c
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_8cEv
 
 	.global _ZN7MapBase8vfunc_9cEv
 	arm_func_start _ZN7MapBase8vfunc_9cEv
-_ZN7MapBase8vfunc_9cEv: ; 0x0207f334
+_ZN7MapBase8vfunc_9cEv: @ 0x0207f334
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_9cEv
 
 	.global _ZN7MapBase8vfunc_a0Ev
 	arm_func_start _ZN7MapBase8vfunc_a0Ev
-_ZN7MapBase8vfunc_a0Ev: ; 0x0207f338
+_ZN7MapBase8vfunc_a0Ev: @ 0x0207f338
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_a0Ev
 
 	.global _ZN7MapBase8vfunc_a4Ev
 	arm_func_start _ZN7MapBase8vfunc_a4Ev
-_ZN7MapBase8vfunc_a4Ev: ; 0x0207f33c
+_ZN7MapBase8vfunc_a4Ev: @ 0x0207f33c
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_a4Ev
 
 	.global _ZN7MapBase8vfunc_a8Ev
 	arm_func_start _ZN7MapBase8vfunc_a8Ev
-_ZN7MapBase8vfunc_a8Ev: ; 0x0207f344
+_ZN7MapBase8vfunc_a8Ev: @ 0x0207f344
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_a8Ev
 
 	.global _ZN7MapBase8vfunc_acEv
 	arm_func_start _ZN7MapBase8vfunc_acEv
-_ZN7MapBase8vfunc_acEv: ; 0x0207f348
+_ZN7MapBase8vfunc_acEv: @ 0x0207f348
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_acEv
 
 	.global _ZN7MapBase8vfunc_78Ev
 	arm_func_start _ZN7MapBase8vfunc_78Ev
-_ZN7MapBase8vfunc_78Ev: ; 0x0207f34c
+_ZN7MapBase8vfunc_78Ev: @ 0x0207f34c
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_78Ev
 
 	.global _ZN7MapBase8vfunc_7cEv
 	arm_func_start _ZN7MapBase8vfunc_7cEv
-_ZN7MapBase8vfunc_7cEv: ; 0x0207f354
+_ZN7MapBase8vfunc_7cEv: @ 0x0207f354
 	mov r0, #1
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_7cEv
 
 	.global _ZN7MapBase8vfunc_80Ev
 	arm_func_start _ZN7MapBase8vfunc_80Ev
-_ZN7MapBase8vfunc_80Ev: ; 0x0207f35c
+_ZN7MapBase8vfunc_80Ev: @ 0x0207f35c
 	mov r0, #1
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_80Ev
 
 	.global _ZN7MapBase8vfunc_84Ei
 	arm_func_start _ZN7MapBase8vfunc_84Ei
-_ZN7MapBase8vfunc_84Ei: ; 0x0207f364
+_ZN7MapBase8vfunc_84Ei: @ 0x0207f364
 	stmdb sp!, {r3, lr}
 	ldrb r3, [r1, #0x15]
 	ldrb r2, [r1, #0x14]
@@ -1939,7 +1939,7 @@ _ZN7MapBase8vfunc_84Ei: ; 0x0207f364
 
 	.global _ZN7MapBase18func_ov00_0207f38cEi
 	arm_func_start _ZN7MapBase18func_ov00_0207f38cEi
-_ZN7MapBase18func_ov00_0207f38cEi: ; 0x0207f38c
+_ZN7MapBase18func_ov00_0207f38cEi: @ 0x0207f38c
 	stmdb sp!, {r4, lr}
 	ldr r2, [r0]
 	mov r4, r1
@@ -1948,7 +1948,7 @@ _ZN7MapBase18func_ov00_0207f38cEi: ; 0x0207f38c
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r4, pc}
-	ldr r0, _0207f3c0 ; =data_027e0f68
+	ldr r0, _0207f3c0 @ =data_027e0f68
 	mov r1, r4
 	ldr r0, [r0]
 	bl func_ov00_0208d820
@@ -1959,7 +1959,7 @@ _0207f3c0: .word data_027e0f68
 
 	.global _ZN7MapBase8vfunc_90Eiii
 	arm_func_start _ZN7MapBase8vfunc_90Eiii
-_ZN7MapBase8vfunc_90Eiii: ; 0x0207f3c4
+_ZN7MapBase8vfunc_90Eiii: @ 0x0207f3c4
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	ldr r3, [r0]
 	mov r6, r0
@@ -2021,13 +2021,13 @@ _0207f470:
 
 	.global _ZN7MapBase8vfunc_94Ev
 	arm_func_start _ZN7MapBase8vfunc_94Ev
-_ZN7MapBase8vfunc_94Ev: ; 0x0207f4a0
+_ZN7MapBase8vfunc_94Ev: @ 0x0207f4a0
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_94Ev
 
 	.global _ZN7MapBase18func_ov00_0207f4a4EP5Vec2si
 	arm_func_start _ZN7MapBase18func_ov00_0207f4a4EP5Vec2si
-_ZN7MapBase18func_ov00_0207f4a4EP5Vec2si: ; 0x0207f4a4
+_ZN7MapBase18func_ov00_0207f4a4EP5Vec2si: @ 0x0207f4a4
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	ldrsh r3, [r1, #2]
@@ -2071,7 +2071,7 @@ _0207f524:
 
 	.global _ZN7MapBase18func_ov00_0207f53cEP5Vec2sPS_P5Vec3p
 	arm_func_start _ZN7MapBase18func_ov00_0207f53cEP5Vec2sPS_P5Vec3p
-_ZN7MapBase18func_ov00_0207f53cEP5Vec2sPS_P5Vec3p: ; 0x0207f53c
+_ZN7MapBase18func_ov00_0207f53cEP5Vec2sPS_P5Vec3p: @ 0x0207f53c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r0, #0
@@ -2095,18 +2095,18 @@ _ZN7MapBase18func_ov00_0207f53cEP5Vec2sPS_P5Vec3p: ; 0x0207f53c
 
 	.global _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
 	arm_func_start _ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi
-_ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi: ; 0x0207f588
+_ZN7MapBase18func_ov00_0207f588EP5Vec2sPS_P5Vec2bi: @ 0x0207f588
 	mov r1, #0
 	strh r1, [r0]
 	strh r1, [r0, #2]
 	cmp r3, #3
 	addls pc, pc, r3, lsl #2
 	bx lr
-_0207f5a0: ; jump table
-	b _0207f5b0 ; case 0
-	b _0207f5cc ; case 1
-	b _0207f5ec ; case 2
-	b _0207f60c ; case 3
+_0207f5a0: @ jump table
+	b _0207f5b0 @ case 0
+	b _0207f5cc @ case 1
+	b _0207f5ec @ case 2
+	b _0207f60c @ case 3
 _0207f5b0:
 	ldrb r1, [r2]
 	mov r1, r1, lsl #0x1
@@ -2147,7 +2147,7 @@ _0207f60c:
 
 	.global _ZN7MapBase18func_ov00_0207f630EP5Vec2sP5Vec3p
 	arm_func_start _ZN7MapBase18func_ov00_0207f630EP5Vec2sP5Vec3p
-_ZN7MapBase18func_ov00_0207f630EP5Vec2sP5Vec3p: ; 0x0207f630
+_ZN7MapBase18func_ov00_0207f630EP5Vec2sP5Vec3p: @ 0x0207f630
 	stmdb sp!, {r4, lr}
 	ldrsh r3, [r1, #2]
 	ldrsh r1, [r1]
@@ -2177,7 +2177,7 @@ _ZN7MapBase18func_ov00_0207f630EP5Vec2sP5Vec3p: ; 0x0207f630
 
 	.global _ZN7MapBase13GetTileStartXEi
 	arm_func_start _ZN7MapBase13GetTileStartXEi
-_ZN7MapBase13GetTileStartXEi: ; 0x0207f694
+_ZN7MapBase13GetTileStartXEi: @ 0x0207f694
 	ldr r0, [r0, #0xf4]
 	add r0, r0, r1, lsl #12
 	bx lr
@@ -2185,7 +2185,7 @@ _ZN7MapBase13GetTileStartXEi: ; 0x0207f694
 
 	.global _ZN7MapBase13GetTileStartZEi
 	arm_func_start _ZN7MapBase13GetTileStartZEi
-_ZN7MapBase13GetTileStartZEi: ; 0x0207f6a0
+_ZN7MapBase13GetTileStartZEi: @ 0x0207f6a0
 	ldr r0, [r0, #0xfc]
 	add r0, r0, r1, lsl #12
 	bx lr
@@ -2193,7 +2193,7 @@ _ZN7MapBase13GetTileStartZEi: ; 0x0207f6a0
 
 	.global _ZN7MapBase11GetTileEndXEi
 	arm_func_start _ZN7MapBase11GetTileEndXEi
-_ZN7MapBase11GetTileEndXEi: ; 0x0207f6ac
+_ZN7MapBase11GetTileEndXEi: @ 0x0207f6ac
 	stmdb sp!, {r3, lr}
 	bl _ZN7MapBase13GetTileStartXEi
 	add r0, r0, #0x1000
@@ -2202,7 +2202,7 @@ _ZN7MapBase11GetTileEndXEi: ; 0x0207f6ac
 
 	.global _ZN7MapBase11GetTileEndZEi
 	arm_func_start _ZN7MapBase11GetTileEndZEi
-_ZN7MapBase11GetTileEndZEi: ; 0x0207f6bc
+_ZN7MapBase11GetTileEndZEi: @ 0x0207f6bc
 	stmdb sp!, {r3, lr}
 	bl _ZN7MapBase13GetTileStartZEi
 	add r0, r0, #0x1000
@@ -2211,7 +2211,7 @@ _ZN7MapBase11GetTileEndZEi: ; 0x0207f6bc
 
 	.global _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB
 	arm_func_start _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB
-_ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB: ; 0x0207f6cc
+_ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB: @ 0x0207f6cc
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	sub sp, sp, #0x18
 	mov r7, r1
@@ -2226,7 +2226,7 @@ _ZN7MapBase13GetTileBoundsEP5Vec2bP4AABB: ; 0x0207f6cc
 	ldrb r1, [r7]
 	mov r0, r6
 	bl _ZN7MapBase13GetTileStartXEi
-	ldr r2, _0207f774 ; =0xffffeccd
+	ldr r2, _0207f774 @ =0xffffeccd
 	str r0, [sp, #0xc]
 	ldrb r1, [r7, #1]
 	mov r0, r6
@@ -2260,7 +2260,7 @@ _0207f774: .word 0xffffeccd
 
 	.global _ZN7MapBase15GetClampedTileXEi
 	arm_func_start _ZN7MapBase15GetClampedTileXEi
-_ZN7MapBase15GetClampedTileXEi: ; 0x0207f778
+_ZN7MapBase15GetClampedTileXEi: @ 0x0207f778
 	ldr r2, [r0, #0xf4]
 	ldrh r0, [r0, #0x28]
 	sub r1, r1, r2
@@ -2275,7 +2275,7 @@ _ZN7MapBase15GetClampedTileXEi: ; 0x0207f778
 
 	.global _ZN7MapBase15GetClampedTileYEi
 	arm_func_start _ZN7MapBase15GetClampedTileYEi
-_ZN7MapBase15GetClampedTileYEi: ; 0x0207f7a0
+_ZN7MapBase15GetClampedTileYEi: @ 0x0207f7a0
 	ldr r2, [r0, #0xfc]
 	ldrh r0, [r0, #0x2a]
 	sub r1, r1, r2
@@ -2290,7 +2290,7 @@ _ZN7MapBase15GetClampedTileYEi: ; 0x0207f7a0
 
 	.global _ZN7MapBase8GetTileXEi
 	arm_func_start _ZN7MapBase8GetTileXEi
-_ZN7MapBase8GetTileXEi: ; 0x0207f7c8
+_ZN7MapBase8GetTileXEi: @ 0x0207f7c8
 	ldr r0, [r0, #0xf4]
 	sub r0, r1, r0
 	mov r0, r0, asr #0xc
@@ -2299,7 +2299,7 @@ _ZN7MapBase8GetTileXEi: ; 0x0207f7c8
 
 	.global _ZN7MapBase8GetTileYEi
 	arm_func_start _ZN7MapBase8GetTileYEi
-_ZN7MapBase8GetTileYEi: ; 0x0207f7d8
+_ZN7MapBase8GetTileYEi: @ 0x0207f7d8
 	ldr r0, [r0, #0xfc]
 	sub r0, r1, r0
 	mov r0, r0, asr #0xc
@@ -2308,7 +2308,7 @@ _ZN7MapBase8GetTileYEi: ; 0x0207f7d8
 
 	.global _ZN7MapBase10IsInBoundsEP5Vec3p
 	arm_func_start _ZN7MapBase10IsInBoundsEP5Vec3p
-_ZN7MapBase10IsInBoundsEP5Vec3p: ; 0x0207f7e8
+_ZN7MapBase10IsInBoundsEP5Vec3p: @ 0x0207f7e8
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r1
 	ldr r1, [r5]
@@ -2338,7 +2338,7 @@ _0207f83c:
 
 	.global _ZN7MapBase11AddEntranceEP8Entrance
 	arm_func_start _ZN7MapBase11AddEntranceEP8Entrance
-_ZN7MapBase11AddEntranceEP8Entrance: ; 0x0207f844
+_ZN7MapBase11AddEntranceEP8Entrance: @ 0x0207f844
 	stmdb sp!, {r3, lr}
 	mov lr, #0
 	strb lr, [sp, #1]
@@ -2375,7 +2375,7 @@ _0207f8a0:
 
 	.global _ZN7MapBase12FindEntranceEi
 	arm_func_start _ZN7MapBase12FindEntranceEi
-_ZN7MapBase12FindEntranceEi: ; 0x0207f8c0
+_ZN7MapBase12FindEntranceEi: @ 0x0207f8c0
 	sub sp, sp, #0x18
 	ldr r3, [r0, #0x100]
 	ldr r2, [r0, #0x104]
@@ -2407,7 +2407,7 @@ _0207f8fc:
 
 	.global _ZN7MapBase18func_ov00_0207f924Ei
 	arm_func_start _ZN7MapBase18func_ov00_0207f924Ei
-_ZN7MapBase18func_ov00_0207f924Ei: ; 0x0207f924
+_ZN7MapBase18func_ov00_0207f924Ei: @ 0x0207f924
 	add r1, r0, r1
 	ldrb r0, [r1, #0x18]
 	strb r0, [r1, #0x16]
@@ -2416,7 +2416,7 @@ _ZN7MapBase18func_ov00_0207f924Ei: ; 0x0207f924
 
 	.global _ZN7MapBase18func_ov00_0207f934Ev
 	arm_func_start _ZN7MapBase18func_ov00_0207f934Ev
-_ZN7MapBase18func_ov00_0207f934Ev: ; 0x0207f934
+_ZN7MapBase18func_ov00_0207f934Ev: @ 0x0207f934
 	ldr r0, [r0, #0x140]
 	cmp r0, #0
 	moveq r0, #0
@@ -2426,7 +2426,7 @@ _ZN7MapBase18func_ov00_0207f934Ev: ; 0x0207f934
 
 	.global _ZN7MapBase18func_ov00_0207f948Ei
 	arm_func_start _ZN7MapBase18func_ov00_0207f948Ei
-_ZN7MapBase18func_ov00_0207f948Ei: ; 0x0207f948
+_ZN7MapBase18func_ov00_0207f948Ei: @ 0x0207f948
 	ldr r0, [r0, #0x140]
 	cmp r0, #0
 	strne r1, [r0, #0x60]
@@ -2435,7 +2435,7 @@ _ZN7MapBase18func_ov00_0207f948Ei: ; 0x0207f948
 
 	.global _ZN7MapBase10AddTriggerEP13TriggerParams
 	arm_func_start _ZN7MapBase10AddTriggerEP13TriggerParams
-_ZN7MapBase10AddTriggerEP13TriggerParams: ; 0x0207f958
+_ZN7MapBase10AddTriggerEP13TriggerParams: @ 0x0207f958
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #8
 	mov r2, #0
@@ -2446,7 +2446,7 @@ _ZN7MapBase10AddTriggerEP13TriggerParams: ; 0x0207f958
 	mov r2, #4
 	cmp r1, #0
 	beq _0207f9a8
-	ldr r1, _0207faa4 ; =data_027e0ce0
+	ldr r1, _0207faa4 @ =data_027e0ce0
 	mov r0, #0x5c
 	ldr r1, [r1, #4]
 	bl _ZN9SysObjectnwEmPjj
@@ -2461,7 +2461,7 @@ _0207f9a8:
 	ldrb r0, [r4, #9]
 	cmp r0, #1
 	bne _0207f9dc
-	ldr r1, _0207faa4 ; =data_027e0ce0
+	ldr r1, _0207faa4 @ =data_027e0ce0
 	mov r0, #0xe0
 	ldr r1, [r1, #4]
 	bl _ZN9SysObjectnwEmPjj
@@ -2476,7 +2476,7 @@ _0207f9dc:
 	ldrb r0, [r4, #0xa]
 	cmp r0, #1
 	bne _0207fa10
-	ldr r1, _0207faa4 ; =data_027e0ce0
+	ldr r1, _0207faa4 @ =data_027e0ce0
 	mov r0, #0x28
 	ldr r1, [r1, #4]
 	bl _ZN9SysObjectnwEmPjj
@@ -2488,7 +2488,7 @@ _0207fa08:
 	str r0, [sp, #4]
 	b _0207fa34
 _0207fa10:
-	ldr r1, _0207faa4 ; =data_027e0ce0
+	ldr r1, _0207faa4 @ =data_027e0ce0
 	mov r0, #0x2c
 	ldr r1, [r1, #4]
 	bl _ZN9SysObjectnwEmPjj
@@ -2534,13 +2534,13 @@ _0207faa4: .word data_027e0ce0
 
 	.global _ZN11TriggerBase8vfunc_08Ev
 	arm_func_start _ZN11TriggerBase8vfunc_08Ev
-_ZN11TriggerBase8vfunc_08Ev: ; 0x0207faa8
+_ZN11TriggerBase8vfunc_08Ev: @ 0x0207faa8
 	bx lr
 	arm_func_end _ZN11TriggerBase8vfunc_08Ev
 
 	.global _ZN7MapBase21GetTriggerBoundingBoxEiP4AABB
 	arm_func_start _ZN7MapBase21GetTriggerBoundingBoxEiP4AABB
-_ZN7MapBase21GetTriggerBoundingBoxEiP4AABB: ; 0x0207faac
+_ZN7MapBase21GetTriggerBoundingBoxEiP4AABB: @ 0x0207faac
 	stmdb sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
 	sub sp, sp, #0x18
 	mov r9, r0
@@ -2592,14 +2592,14 @@ _0207fb50:
 
 	.global _ZN11TriggerBase14GetBoundingBoxEv
 	arm_func_start _ZN11TriggerBase14GetBoundingBoxEv
-_ZN11TriggerBase14GetBoundingBoxEv: ; 0x0207fb5c
+_ZN11TriggerBase14GetBoundingBoxEv: @ 0x0207fb5c
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN11TriggerBase14GetBoundingBoxEv
 
 	.global _ZN7MapBase23GetTriggerBoundingBoxesEiP4AABBi
 	arm_func_start _ZN7MapBase23GetTriggerBoundingBoxesEiP4AABBi
-_ZN7MapBase23GetTriggerBoundingBoxesEiP4AABBi: ; 0x0207fb64
+_ZN7MapBase23GetTriggerBoundingBoxesEiP4AABBi: @ 0x0207fb64
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, lr}
 	sub sp, sp, #0x18
 	mov r10, r0
@@ -2657,7 +2657,7 @@ _0207fc20:
 
 	.global _ZN7MapBase21GetOverlappingTriggerEP5Vec3p
 	arm_func_start _ZN7MapBase21GetOverlappingTriggerEP5Vec3p
-_ZN7MapBase21GetOverlappingTriggerEP5Vec3p: ; 0x0207fc2c
+_ZN7MapBase21GetOverlappingTriggerEP5Vec3p: @ 0x0207fc2c
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r6, r0
 	ldr r4, [r6, #0x10c]
@@ -2689,14 +2689,14 @@ _0207fc88:
 
 	.global _ZN11TriggerBase8OverlapsEv
 	arm_func_start _ZN11TriggerBase8OverlapsEv
-_ZN11TriggerBase8OverlapsEv: ; 0x0207fc90
+_ZN11TriggerBase8OverlapsEv: @ 0x0207fc90
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN11TriggerBase8OverlapsEv
 
 	.global _ZN7MapBase11FindTriggerEi
 	arm_func_start _ZN7MapBase11FindTriggerEi
-_ZN7MapBase11FindTriggerEi: ; 0x0207fc98
+_ZN7MapBase11FindTriggerEi: @ 0x0207fc98
 	ldr ip, [r0, #0x10c]
 	ldr r2, [r0, #0x110]
 	add r2, ip, r2, lsl #2
@@ -2721,7 +2721,7 @@ _0207fcd8:
 
 	.global _ZN7MapBase22GetOverlappingTriggersEP5Vec3pPP11TriggerBasei
 	arm_func_start _ZN7MapBase22GetOverlappingTriggersEP5Vec3pPP11TriggerBasei
-_ZN7MapBase22GetOverlappingTriggersEP5Vec3pPP11TriggerBasei: ; 0x0207fce0
+_ZN7MapBase22GetOverlappingTriggersEP5Vec3pPP11TriggerBasei: @ 0x0207fce0
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, lr}
 	mov r10, r0
 	ldr r6, [r10, #0x10c]
@@ -2758,7 +2758,7 @@ _0207fd50:
 
 	.global _ZN7MapBase23IsTriggerTypeOverlappedEiP5Vec3p
 	arm_func_start _ZN7MapBase23IsTriggerTypeOverlappedEiP5Vec3p
-_ZN7MapBase23IsTriggerTypeOverlappedEiP5Vec3p: ; 0x0207fd58
+_ZN7MapBase23IsTriggerTypeOverlappedEiP5Vec3p: @ 0x0207fd58
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	movs r6, r1
 	mov r7, r0
@@ -2796,7 +2796,7 @@ _0207fdc8:
 
 	.global _ZN7MapBase18AnyTrigger_func_0cEi
 	arm_func_start _ZN7MapBase18AnyTrigger_func_0cEi
-_ZN7MapBase18AnyTrigger_func_0cEi: ; 0x0207fdd0
+_ZN7MapBase18AnyTrigger_func_0cEi: @ 0x0207fdd0
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r7, r0
 	ldr r5, [r7, #0x10c]
@@ -2829,14 +2829,14 @@ _0207fe2c:
 
 	.global _ZN11TriggerBase8vfunc_0cEv
 	arm_func_start _ZN11TriggerBase8vfunc_0cEv
-_ZN11TriggerBase8vfunc_0cEv: ; 0x0207fe34
+_ZN11TriggerBase8vfunc_0cEv: @ 0x0207fe34
 	mov r0, #0
 	bx lr
 	arm_func_end _ZN11TriggerBase8vfunc_0cEv
 
 	.global _ZN7MapBase16Trigger_vfunc_08Ev
 	arm_func_start _ZN7MapBase16Trigger_vfunc_08Ev
-_ZN7MapBase16Trigger_vfunc_08Ev: ; 0x0207fe3c
+_ZN7MapBase16Trigger_vfunc_08Ev: @ 0x0207fe3c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	ldr r4, [r5, #0x10c]
@@ -2859,7 +2859,7 @@ _0207fe58:
 
 	.global _ZN7MapBase10AddTriggerEi
 	arm_func_start _ZN7MapBase10AddTriggerEi
-_ZN7MapBase10AddTriggerEi: ; 0x0207fe80
+_ZN7MapBase10AddTriggerEi: @ 0x0207fe80
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
@@ -2934,7 +2934,7 @@ _0207ff74:
 
 	.global _ZN7MapBase18func_ov00_0207ff88Ei
 	arm_func_start _ZN7MapBase18func_ov00_0207ff88Ei
-_ZN7MapBase18func_ov00_0207ff88Ei: ; 0x0207ff88
+_ZN7MapBase18func_ov00_0207ff88Ei: @ 0x0207ff88
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x28
 	ldrb r2, [r1, #4]
@@ -2996,8 +2996,8 @@ _02080014:
 
 	.global _ZN7MapBase18func_ov00_0208005cEiii
 	arm_func_start _ZN7MapBase18func_ov00_0208005cEiii
-_ZN7MapBase18func_ov00_0208005cEiii: ; 0x0208005c
-	ldr ip, _02080068 ; =func_ov00_0209c1e4
+_ZN7MapBase18func_ov00_0208005cEiii: @ 0x0208005c
+	ldr ip, _02080068 @ =func_ov00_0209c1e4
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
@@ -3006,8 +3006,8 @@ _02080068: .word func_ov00_0209c1e4
 
 	.global _ZN7MapBase18func_ov00_0208006cEii
 	arm_func_start _ZN7MapBase18func_ov00_0208006cEii
-_ZN7MapBase18func_ov00_0208006cEii: ; 0x0208006c
-	ldr ip, _02080078 ; =func_ov00_0209c2b4
+_ZN7MapBase18func_ov00_0208006cEii: @ 0x0208006c
+	ldr ip, _02080078 @ =func_ov00_0209c2b4
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
@@ -3016,8 +3016,8 @@ _02080078: .word func_ov00_0209c2b4
 
 	.global _ZN7MapBase18func_ov00_0208007cEii
 	arm_func_start _ZN7MapBase18func_ov00_0208007cEii
-_ZN7MapBase18func_ov00_0208007cEii: ; 0x0208007c
-	ldr ip, _02080088 ; =func_ov00_0209c2d0
+_ZN7MapBase18func_ov00_0208007cEii: @ 0x0208007c
+	ldr ip, _02080088 @ =func_ov00_0209c2d0
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
@@ -3026,8 +3026,8 @@ _02080088: .word func_ov00_0209c2d0
 
 	.global _ZN7MapBase18func_ov00_0208008cEj
 	arm_func_start _ZN7MapBase18func_ov00_0208008cEj
-_ZN7MapBase18func_ov00_0208008cEj: ; 0x0208008c
-	ldr ip, _02080098 ; =func_ov00_0209c8e4
+_ZN7MapBase18func_ov00_0208008cEj: @ 0x0208008c
+	ldr ip, _02080098 @ =func_ov00_0209c8e4
 	ldr r0, [r0, #0x144]
 	bx ip
 	.align 2, 0
@@ -3036,7 +3036,7 @@ _02080098: .word func_ov00_0209c8e4
 
 	.global _ZN7MapBase7AddExitEP4Exit
 	arm_func_start _ZN7MapBase7AddExitEP4Exit
-_ZN7MapBase7AddExitEP4Exit: ; 0x0208009c
+_ZN7MapBase7AddExitEP4Exit: @ 0x0208009c
 	stmdb sp!, {r3, lr}
 	mov ip, #0
 	strb ip, [sp, #1]
@@ -3083,7 +3083,7 @@ _02080120:
 
 	.global _ZN7MapBase18func_ov00_02080140EP4Exit
 	arm_func_start _ZN7MapBase18func_ov00_02080140EP4Exit
-_ZN7MapBase18func_ov00_02080140EP4Exit: ; 0x02080140
+_ZN7MapBase18func_ov00_02080140EP4Exit: @ 0x02080140
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, lr}
 	sub sp, sp, #0x50
 	ldr r9, [r1]
@@ -3214,7 +3214,7 @@ _02080318:
 
 	.global _ZN12MapBase_Unk118func_ov00_02080324Eiii
 	arm_func_start _ZN12MapBase_Unk118func_ov00_02080324Eiii
-_ZN12MapBase_Unk118func_ov00_02080324Eiii: ; 0x02080324
+_ZN12MapBase_Unk118func_ov00_02080324Eiii: @ 0x02080324
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	mov r7, r0
@@ -3252,7 +3252,7 @@ _0208038c:
 
 	.global _ZN7MapBase8FindExitEiP4Exit
 	arm_func_start _ZN7MapBase8FindExitEiP4Exit
-_ZN7MapBase8FindExitEiP4Exit: ; 0x0208039c
+_ZN7MapBase8FindExitEiP4Exit: @ 0x0208039c
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
 	cmp r1, #0
@@ -3311,7 +3311,7 @@ _020803f0:
 
 	.global _ZN7MapBase18AddCameraViewpointEP15CameraViewpoint
 	arm_func_start _ZN7MapBase18AddCameraViewpointEP15CameraViewpoint
-_ZN7MapBase18AddCameraViewpointEP15CameraViewpoint: ; 0x0208046c
+_ZN7MapBase18AddCameraViewpointEP15CameraViewpoint: @ 0x0208046c
 	stmdb sp!, {r3, lr}
 	mov ip, #0
 	strb ip, [sp, #1]
@@ -3358,7 +3358,7 @@ _020804f0:
 
 	.global _ZN7MapBase19FindViewpoint_Unk_4EcP15CameraViewpoint
 	arm_func_start _ZN7MapBase19FindViewpoint_Unk_4EcP15CameraViewpoint
-_ZN7MapBase19FindViewpoint_Unk_4EcP15CameraViewpoint: ; 0x02080510
+_ZN7MapBase19FindViewpoint_Unk_4EcP15CameraViewpoint: @ 0x02080510
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
 	ldr ip, [r0, #0x124]
@@ -3413,7 +3413,7 @@ _02080554:
 
 	.global _ZN7MapBase19FindViewpoint_Unk_0EiP15CameraViewpoint
 	arm_func_start _ZN7MapBase19FindViewpoint_Unk_0EiP15CameraViewpoint
-_ZN7MapBase19FindViewpoint_Unk_0EiP15CameraViewpoint: ; 0x020805d0
+_ZN7MapBase19FindViewpoint_Unk_0EiP15CameraViewpoint: @ 0x020805d0
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x18
 	ldr ip, [r0, #0x124]
@@ -3466,7 +3466,7 @@ _0208060c:
 
 	.global _ZN7MapBase19GetCurrentViewpointEP15CameraViewpointi
 	arm_func_start _ZN7MapBase19GetCurrentViewpointEP15CameraViewpointi
-_ZN7MapBase19GetCurrentViewpointEP15CameraViewpointi: ; 0x02080688
+_ZN7MapBase19GetCurrentViewpointEP15CameraViewpointi: @ 0x02080688
 	stmdb sp!, {r3, r4, r5, r6, lr}
 	sub sp, sp, #0x1c
 	mov r6, r0
@@ -3536,7 +3536,7 @@ _02080730:
 
 	.global _ZN7MapBase26GetCurrentViewpoint_Unk_00Ei
 	arm_func_start _ZN7MapBase26GetCurrentViewpoint_Unk_00Ei
-_ZN7MapBase26GetCurrentViewpoint_Unk_00Ei: ; 0x02080780
+_ZN7MapBase26GetCurrentViewpoint_Unk_00Ei: @ 0x02080780
 	stmdb sp!, {lr}
 	sub sp, sp, #0x1c
 	mov lr, #0
@@ -3563,9 +3563,9 @@ _020807ac:
 
 	.global _ZN7MapBase8vfunc_b8Ev
 	arm_func_start _ZN7MapBase8vfunc_b8Ev
-_ZN7MapBase8vfunc_b8Ev: ; 0x020807d4
+_ZN7MapBase8vfunc_b8Ev: @ 0x020807d4
 	stmdb sp!, {r3, lr}
-	ldr r0, _02080820 ; =data_027e0618
+	ldr r0, _02080820 @ =data_027e0618
 	ldr r0, [r0]
 	cmp r0, #6
 	bne _02080818
@@ -3593,7 +3593,7 @@ _02080820: .word data_027e0618
 
 	.global _ZN7MapBase18func_ov00_02080824Eii
 	arm_func_start _ZN7MapBase18func_ov00_02080824Eii
-_ZN7MapBase18func_ov00_02080824Eii: ; 0x02080824
+_ZN7MapBase18func_ov00_02080824Eii: @ 0x02080824
 	stmdb sp!, {r4, lr}
 	ldr r4, [r0, #0x14c]
 	cmp r4, #0
@@ -3644,13 +3644,13 @@ _020808c8:
 
 	.global _ZN7MapBase10AddUnk_130Ei
 	arm_func_start _ZN7MapBase10AddUnk_130Ei
-_ZN7MapBase10AddUnk_130Ei: ; 0x020808d0
+_ZN7MapBase10AddUnk_130Ei: @ 0x020808d0
 	stmdb sp!, {r0, r1, r2, r3}
 	arm_func_end _ZN7MapBase10AddUnk_130Ei
 
 	.global func_ov00_020808d4
 	arm_func_start func_ov00_020808d4
-func_ov00_020808d4: ; 0x020808d4
+func_ov00_020808d4: @ 0x020808d4
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
 	ldr r1, [r0, #0x134]
@@ -3716,7 +3716,7 @@ _020809a4:
 
 	.global _ZN7MapBase18func_ov00_020809b8Ei
 	arm_func_start _ZN7MapBase18func_ov00_020809b8Ei
-_ZN7MapBase18func_ov00_020809b8Ei: ; 0x020809b8
+_ZN7MapBase18func_ov00_020809b8Ei: @ 0x020809b8
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x28
 	ldr ip, [r0, #0x130]
@@ -3773,7 +3773,7 @@ _02080a30:
 
 	.global _ZN7MapBase18func_ov00_02080a78EP5Vec3p
 	arm_func_start _ZN7MapBase18func_ov00_02080a78EP5Vec3p
-_ZN7MapBase18func_ov00_02080a78EP5Vec3p: ; 0x02080a78
+_ZN7MapBase18func_ov00_02080a78EP5Vec3p: @ 0x02080a78
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x18
 	mov r4, r0
@@ -3800,7 +3800,7 @@ _ZN7MapBase18func_ov00_02080a78EP5Vec3p: ; 0x02080a78
 
 	.global _ZN12MapBase_Unk218func_ov00_02080ad0EPP11TriggerBaseS2_
 	arm_func_start _ZN12MapBase_Unk218func_ov00_02080ad0EPP11TriggerBaseS2_
-_ZN12MapBase_Unk218func_ov00_02080ad0EPP11TriggerBaseS2_: ; 0x02080ad0
+_ZN12MapBase_Unk218func_ov00_02080ad0EPP11TriggerBaseS2_: @ 0x02080ad0
 	stmdb sp!, {r0, r1, r2, r3}
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r7, r0
@@ -3829,7 +3829,7 @@ _02080b14:
 
 	.global _ZN7MapBase18func_ov00_02080b24EP5Vec2b
 	arm_func_start _ZN7MapBase18func_ov00_02080b24EP5Vec2b
-_ZN7MapBase18func_ov00_02080b24EP5Vec2b: ; 0x02080b24
+_ZN7MapBase18func_ov00_02080b24EP5Vec2b: @ 0x02080b24
 	stmdb sp!, {r4, r5, r6, r7, r8, r9, r10, r11, lr}
 	sub sp, sp, #0x14
 	ldr r3, [r0]
@@ -3962,7 +3962,7 @@ _02080cd0:
 
 	.global _ZN7MapBase18func_ov00_02080d08Ei
 	arm_func_start _ZN7MapBase18func_ov00_02080d08Ei
-_ZN7MapBase18func_ov00_02080d08Ei: ; 0x02080d08
+_ZN7MapBase18func_ov00_02080d08Ei: @ 0x02080d08
 	stmdb sp!, {r3, r4, r5, lr}
 	ldr r3, [r0]
 	mov r2, #4
@@ -3994,25 +3994,25 @@ _ZN7MapBase18func_ov00_02080d08Ei: ; 0x02080d08
 
 	.global _ZN7MapBase8vfunc_bcEv
 	arm_func_start _ZN7MapBase8vfunc_bcEv
-_ZN7MapBase8vfunc_bcEv: ; 0x02080d74
+_ZN7MapBase8vfunc_bcEv: @ 0x02080d74
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_bcEv
 
 	.global _ZN7MapBase8vfunc_98Ev
 	arm_func_start _ZN7MapBase8vfunc_98Ev
-_ZN7MapBase8vfunc_98Ev: ; 0x02080d78
+_ZN7MapBase8vfunc_98Ev: @ 0x02080d78
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_98Ev
 
 	.global _ZN7MapBase8vfunc_c0Ev
 	arm_func_start _ZN7MapBase8vfunc_c0Ev
-_ZN7MapBase8vfunc_c0Ev: ; 0x02080d7c
+_ZN7MapBase8vfunc_c0Ev: @ 0x02080d7c
 	bx lr
 	arm_func_end _ZN7MapBase8vfunc_c0Ev
 
 	.global _ZN7MapBase22TriggerOfType_vfunc_10Ei
 	arm_func_start _ZN7MapBase22TriggerOfType_vfunc_10Ei
-_ZN7MapBase22TriggerOfType_vfunc_10Ei: ; 0x02080d80
+_ZN7MapBase22TriggerOfType_vfunc_10Ei: @ 0x02080d80
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldr r4, [r6, #0x10c]
@@ -4043,22 +4043,22 @@ _02080dd4:
 
 	.global _ZN11TriggerBase8vfunc_10Ev
 	arm_func_start _ZN11TriggerBase8vfunc_10Ev
-_ZN11TriggerBase8vfunc_10Ev: ; 0x02080ddc
+_ZN11TriggerBase8vfunc_10Ev: @ 0x02080ddc
 	mov r0, #1
 	bx lr
 	arm_func_end _ZN11TriggerBase8vfunc_10Ev
 
 	.global _ZN7MapBase18func_ov00_02080de4Ev
 	arm_func_start _ZN7MapBase18func_ov00_02080de4Ev
-_ZN7MapBase18func_ov00_02080de4Ev: ; 0x02080de4
+_ZN7MapBase18func_ov00_02080de4Ev: @ 0x02080de4
 	bx lr
 	arm_func_end _ZN7MapBase18func_ov00_02080de4Ev
 
 	.global _ZN7MapBase18func_ov00_02080de8Ei
 	arm_func_start _ZN7MapBase18func_ov00_02080de8Ei
-_ZN7MapBase18func_ov00_02080de8Ei: ; 0x02080de8
+_ZN7MapBase18func_ov00_02080de8Ei: @ 0x02080de8
 	stmdb sp!, {r4, r5, r6, lr}
-	ldr r2, _02080ed4 ; =data_027e0f64
+	ldr r2, _02080ed4 @ =data_027e0f64
 	mov r5, r0
 	ldr r0, [r2]
 	mov r4, #0
@@ -4073,19 +4073,19 @@ _ZN7MapBase18func_ov00_02080de8Ei: ; 0x02080de8
 	cmp r0, #0
 	addge pc, pc, r0, lsl #2
 	b _02080e94
-_02080e28: ; jump table
-	b _02080e84 ; case 0
-	b _02080e84 ; case 1
-	b _02080e84 ; case 2
-	b _02080e8c ; case 3
-	b _02080e94 ; case 4
-	b _02080e94 ; case 5
-	b _02080e94 ; case 6
-	b _02080e94 ; case 7
-	b _02080e94 ; case 8
-	b _02080e94 ; case 9
-	b _02080e94 ; case 10
-	b _02080e88 ; case 11
+_02080e28: @ jump table
+	b _02080e84 @ case 0
+	b _02080e84 @ case 1
+	b _02080e84 @ case 2
+	b _02080e8c @ case 3
+	b _02080e94 @ case 4
+	b _02080e94 @ case 5
+	b _02080e94 @ case 6
+	b _02080e94 @ case 7
+	b _02080e94 @ case 8
+	b _02080e94 @ case 9
+	b _02080e94 @ case 10
+	b _02080e88 @ case 11
 _02080e58:
 	cmp r0, #0x15
 	beq _02080e84
@@ -4114,7 +4114,7 @@ _02080e94:
 	beq _02080ec8
 	add r0, r6, #0x200
 	ldrsh r1, [r0, #0x24]
-	ldr r0, _02080ed8 ; =0x00001c72
+	ldr r0, _02080ed8 @ =0x00001c72
 	cmp r1, r0
 	ble _02080ec4
 	rsb r0, r0, #0x4000
@@ -4133,9 +4133,9 @@ _02080ed8: .word 0x00001c72
 
 	.global _ZN7MapBase18func_ov00_02080edcEv
 	arm_func_start _ZN7MapBase18func_ov00_02080edcEv
-_ZN7MapBase18func_ov00_02080edcEv: ; 0x02080edc
+_ZN7MapBase18func_ov00_02080edcEv: @ 0x02080edc
 	stmdb sp!, {r4, lr}
-	ldr r1, _02080f1c ; =data_027e0d38
+	ldr r1, _02080f1c @ =data_027e0d38
 	mov r4, r0
 	ldr r0, [r1]
 	add r0, r0, #0xc
@@ -4157,227 +4157,227 @@ _02080f1c: .word data_027e0d38
 
     .data
 	.global data_ov00_020e22fc
-data_ov00_020e22fc: ; 0x020e22fc
+data_ov00_020e22fc: @ 0x020e22fc
 	.ascii "fnl"
 	.byte 0x00
 	.global data_ov00_020e2300
-data_ov00_020e2300: ; 0x020e2300
+data_ov00_020e2300: @ 0x020e2300
 	.ascii "bow"
 	.byte 0x00
 	.global data_ov00_020e2304
-data_ov00_020e2304: ; 0x020e2304
+data_ov00_020e2304: @ 0x020e2304
 	.ascii "dco"
 	.byte 0x00
 	.global data_ov00_020e2308
-data_ov00_020e2308: ; 0x020e2308
+data_ov00_020e2308: @ 0x020e2308
 	.ascii "can"
 	.byte 0x00
 	.global data_ov00_020e230c
-data_ov00_020e230c: ; 0x020e230c
+data_ov00_020e230c: @ 0x020e230c
 	.ascii "hul"
 	.byte 0x00
 	.global data_ov00_020e2310
-data_ov00_020e2310: ; 0x020e2310
+data_ov00_020e2310: @ 0x020e2310
 	.ascii "pdl"
 	.byte 0x00
 	.global data_ov00_020e2314
-data_ov00_020e2314: ; 0x020e2314
+data_ov00_020e2314: @ 0x020e2314
 	.ascii "anc"
 	.byte 0x00
 	.global data_ov00_020e2318
-data_ov00_020e2318: ; 0x020e2318
+data_ov00_020e2318: @ 0x020e2318
 	.ascii "brg"
 	.byte 0x00
 	.global data_ov00_020e231c
-data_ov00_020e231c: ; 0x020e231c
+data_ov00_020e231c: @ 0x020e231c
     .word data_ov00_020e2314
 	.global data_ov00_020e2320
-data_ov00_020e2320: ; 0x020e2320
+data_ov00_020e2320: @ 0x020e2320
     .word data_ov00_020e2300
 	.global data_ov00_020e2324
-data_ov00_020e2324: ; 0x020e2324
+data_ov00_020e2324: @ 0x020e2324
     .word data_ov00_020e230c
 	.global data_ov00_020e2328
-data_ov00_020e2328: ; 0x020e2328
+data_ov00_020e2328: @ 0x020e2328
     .word data_ov00_020e2308
 	.global data_ov00_020e232c
-data_ov00_020e232c: ; 0x020e232c
+data_ov00_020e232c: @ 0x020e232c
     .word data_ov00_020e2304
 	.global data_ov00_020e2330
-data_ov00_020e2330: ; 0x020e2330
+data_ov00_020e2330: @ 0x020e2330
     .word data_ov00_020e2310
 	.global data_ov00_020e2334
-data_ov00_020e2334: ; 0x020e2334
+data_ov00_020e2334: @ 0x020e2334
     .word data_ov00_020e22fc
 	.global data_ov00_020e2338
-data_ov00_020e2338: ; 0x020e2338
+data_ov00_020e2338: @ 0x020e2338
     .word data_ov00_020e2318
 	.global data_ov00_020e233c
-data_ov00_020e233c: ; 0x020e233c
+data_ov00_020e233c: @ 0x020e233c
     .word data_ov00_020e240c
 	.global data_ov00_020e2340
-data_ov00_020e2340: ; 0x020e2340
+data_ov00_020e2340: @ 0x020e2340
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e2344
-data_ov00_020e2344: ; 0x020e2344
+data_ov00_020e2344: @ 0x020e2344
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global _ZTV7MapBase
-_ZTV7MapBase: ; 0x020e2348
+_ZTV7MapBase: @ 0x020e2348
     .word _ZN7MapBaseD2Ev
 	.global data_ov00_020e234c
-data_ov00_020e234c: ; 0x020e234c
+data_ov00_020e234c: @ 0x020e234c
     .word _ZN7MapBaseD0Ev
 	.global data_ov00_020e2350
-data_ov00_020e2350: ; 0x020e2350
-    .word func_ov04_0210c1f8 ; data_ov07_0210c1f8
+data_ov00_020e2350: @ 0x020e2350
+    .word func_ov04_0210c1f8 @ data_ov07_0210c1f8
 	.global data_ov00_020e2354
-data_ov00_020e2354: ; 0x020e2354
-    .word func_ov04_0210c3fc ; data_ov07_0210c3fc
+data_ov00_020e2354: @ 0x020e2354
+    .word func_ov04_0210c3fc @ data_ov07_0210c3fc
 	.global data_ov00_020e2358
-data_ov00_020e2358: ; 0x020e2358
-    .word func_ov04_0210c52c ; data_ov07_0210c52c
+data_ov00_020e2358: @ 0x020e2358
+    .word func_ov04_0210c52c @ data_ov07_0210c52c
 	.global data_ov00_020e235c
-data_ov00_020e235c: ; 0x020e235c
-    .word func_ov04_0210bfa8 ; data_ov07_0210bfa8
+data_ov00_020e235c: @ 0x020e235c
+    .word func_ov04_0210bfa8 @ data_ov07_0210bfa8
 	.global data_ov00_020e2360
-data_ov00_020e2360: ; 0x020e2360
+data_ov00_020e2360: @ 0x020e2360
     .word _ZN7MapBase8vfunc_18Ev
 	.global data_ov00_020e2364
-data_ov00_020e2364: ; 0x020e2364
+data_ov00_020e2364: @ 0x020e2364
     .word func_ov05_02111bc0
 	.global data_ov00_020e2368
-data_ov00_020e2368: ; 0x020e2368
+data_ov00_020e2368: @ 0x020e2368
     .word func_ov05_02111c00
 	.global data_ov00_020e236c
-data_ov00_020e236c: ; 0x020e236c
+data_ov00_020e236c: @ 0x020e236c
     .word func_ov05_02111c6c
 	.global data_ov00_020e2370
-data_ov00_020e2370: ; 0x020e2370
+data_ov00_020e2370: @ 0x020e2370
     .word func_ov05_02111c70
 	.global data_ov00_020e2374
-data_ov00_020e2374: ; 0x020e2374
-    .word func_ov04_0210c5cc ; data_ov07_0210c5cc
+data_ov00_020e2374: @ 0x020e2374
+    .word func_ov04_0210c5cc @ data_ov07_0210c5cc
 	.global data_ov00_020e2378
-data_ov00_020e2378: ; 0x020e2378
-    .word func_ov04_0210c764 ; data_ov07_0210c764
+data_ov00_020e2378: @ 0x020e2378
+    .word func_ov04_0210c764 @ data_ov07_0210c764
 	.global data_ov00_020e237c
-data_ov00_020e237c: ; 0x020e237c
-    .word func_ov04_0210c800 ; data_ov07_0210c800
+data_ov00_020e237c: @ 0x020e237c
+    .word func_ov04_0210c800 @ data_ov07_0210c800
 	.global data_ov00_020e2380
-data_ov00_020e2380: ; 0x020e2380
-    .word func_ov04_0210c88c ; data_ov07_0210c88c
+data_ov00_020e2380: @ 0x020e2380
+    .word func_ov04_0210c88c @ data_ov07_0210c88c
 	.global data_ov00_020e2384
-data_ov00_020e2384: ; 0x020e2384
-    .word func_ov04_0210c8d4 ; data_ov07_0210c8d4
+data_ov00_020e2384: @ 0x020e2384
+    .word func_ov04_0210c8d4 @ data_ov07_0210c8d4
 	.global data_ov00_020e2388
-data_ov00_020e2388: ; 0x020e2388
-    .word func_ov04_0210ca84 ; data_ov07_0210ca84
+data_ov00_020e2388: @ 0x020e2388
+    .word func_ov04_0210ca84 @ data_ov07_0210ca84
 	.global data_ov00_020e238c
-data_ov00_020e238c: ; 0x020e238c
-    .word func_ov04_0210cb00 ; data_ov07_0210cb00
+data_ov00_020e238c: @ 0x020e238c
+    .word func_ov04_0210cb00 @ data_ov07_0210cb00
 	.global data_ov00_020e2390
-data_ov00_020e2390: ; 0x020e2390
+data_ov00_020e2390: @ 0x020e2390
     .word _ZN7MapBase8vfunc_48Ev
 	.global data_ov00_020e2394
-data_ov00_020e2394: ; 0x020e2394
+data_ov00_020e2394: @ 0x020e2394
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e2398
-data_ov00_020e2398: ; 0x020e2398
+data_ov00_020e2398: @ 0x020e2398
     .word _ZN7MapBase8vfunc_50Ev
 	.global data_ov00_020e239c
-data_ov00_020e239c: ; 0x020e239c
+data_ov00_020e239c: @ 0x020e239c
     .word _ZN7MapBase8vfunc_54Ev
 	.global data_ov00_020e23a0
-data_ov00_020e23a0: ; 0x020e23a0
+data_ov00_020e23a0: @ 0x020e23a0
     .word _ZN7MapBase8vfunc_58Ev
 	.global data_ov00_020e23a4
-data_ov00_020e23a4: ; 0x020e23a4
+data_ov00_020e23a4: @ 0x020e23a4
     .word _ZN7MapBase8vfunc_5cEv
 	.global data_ov00_020e23a8
-data_ov00_020e23a8: ; 0x020e23a8
+data_ov00_020e23a8: @ 0x020e23a8
     .word _ZN7MapBase8vfunc_60Ev
 	.global data_ov00_020e23ac
-data_ov00_020e23ac: ; 0x020e23ac
+data_ov00_020e23ac: @ 0x020e23ac
     .word _ZN7MapBase8vfunc_64Ev
 	.global data_ov00_020e23b0
-data_ov00_020e23b0: ; 0x020e23b0
+data_ov00_020e23b0: @ 0x020e23b0
     .word _ZN7MapBase8vfunc_68Eii
 	.global data_ov00_020e23b4
-data_ov00_020e23b4: ; 0x020e23b4
+data_ov00_020e23b4: @ 0x020e23b4
     .word _ZN7MapBase8vfunc_6cEiii
 	.global data_ov00_020e23b8
-data_ov00_020e23b8: ; 0x020e23b8
+data_ov00_020e23b8: @ 0x020e23b8
     .word _ZN7MapBase8vfunc_70EP5Vec3p
 	.global data_ov00_020e23bc
-data_ov00_020e23bc: ; 0x020e23bc
+data_ov00_020e23bc: @ 0x020e23bc
     .word _ZN7MapBase8vfunc_74EP5Vec3p
 	.global data_ov00_020e23c0
-data_ov00_020e23c0: ; 0x020e23c0
+data_ov00_020e23c0: @ 0x020e23c0
     .word _ZN7MapBase8vfunc_78Ev
 	.global data_ov00_020e23c4
-data_ov00_020e23c4: ; 0x020e23c4
+data_ov00_020e23c4: @ 0x020e23c4
     .word _ZN7MapBase8vfunc_7cEv
 	.global data_ov00_020e23c8
-data_ov00_020e23c8: ; 0x020e23c8
+data_ov00_020e23c8: @ 0x020e23c8
     .word _ZN7MapBase8vfunc_80Ev
 	.global data_ov00_020e23cc
-data_ov00_020e23cc: ; 0x020e23cc
+data_ov00_020e23cc: @ 0x020e23cc
     .word _ZN7MapBase8vfunc_84Ei
 	.global data_ov00_020e23d0
-data_ov00_020e23d0: ; 0x020e23d0
+data_ov00_020e23d0: @ 0x020e23d0
     .word _ZN7MapBase8vfunc_88Ev
 	.global data_ov00_020e23d4
-data_ov00_020e23d4: ; 0x020e23d4
+data_ov00_020e23d4: @ 0x020e23d4
     .word _ZN7MapBase8vfunc_8cEv
 	.global data_ov00_020e23d8
-data_ov00_020e23d8: ; 0x020e23d8
+data_ov00_020e23d8: @ 0x020e23d8
     .word _ZN7MapBase8vfunc_90Eiii
 	.global data_ov00_020e23dc
-data_ov00_020e23dc: ; 0x020e23dc
+data_ov00_020e23dc: @ 0x020e23dc
     .word _ZN7MapBase8vfunc_94Ev
 	.global data_ov00_020e23e0
-data_ov00_020e23e0: ; 0x020e23e0
+data_ov00_020e23e0: @ 0x020e23e0
     .word _ZN7MapBase8vfunc_98Ev
 	.global data_ov00_020e23e4
-data_ov00_020e23e4: ; 0x020e23e4
+data_ov00_020e23e4: @ 0x020e23e4
     .word _ZN7MapBase8vfunc_9cEv
 	.global data_ov00_020e23e8
-data_ov00_020e23e8: ; 0x020e23e8
+data_ov00_020e23e8: @ 0x020e23e8
     .word _ZN7MapBase8vfunc_a0Ev
 	.global data_ov00_020e23ec
-data_ov00_020e23ec: ; 0x020e23ec
+data_ov00_020e23ec: @ 0x020e23ec
     .word _ZN7MapBase8vfunc_a4Ev
 	.global data_ov00_020e23f0
-data_ov00_020e23f0: ; 0x020e23f0
+data_ov00_020e23f0: @ 0x020e23f0
     .word _ZN7MapBase8vfunc_a8Ev
 	.global data_ov00_020e23f4
-data_ov00_020e23f4: ; 0x020e23f4
+data_ov00_020e23f4: @ 0x020e23f4
     .word _ZN7MapBase8vfunc_acEv
 	.global data_ov00_020e23f8
-data_ov00_020e23f8: ; 0x020e23f8
+data_ov00_020e23f8: @ 0x020e23f8
     .word _ZN7MapBase8vfunc_b0Eii
 	.global data_ov00_020e23fc
-data_ov00_020e23fc: ; 0x020e23fc
+data_ov00_020e23fc: @ 0x020e23fc
     .word _ZN7MapBase8vfunc_b4Ev
 	.global data_ov00_020e2400
-data_ov00_020e2400: ; 0x020e2400
+data_ov00_020e2400: @ 0x020e2400
     .word _ZN7MapBase8vfunc_b8Ev
 	.global data_ov00_020e2404
-data_ov00_020e2404: ; 0x020e2404
+data_ov00_020e2404: @ 0x020e2404
     .word _ZN7MapBase8vfunc_bcEv
 	.global data_ov00_020e2408
-data_ov00_020e2408: ; 0x020e2408
+data_ov00_020e2408: @ 0x020e2408
     .word _ZN7MapBase8vfunc_c0Ev
 	.global data_ov00_020e240c
-data_ov00_020e240c: ; 0x020e240c
+data_ov00_020e240c: @ 0x020e240c
 	.ascii "M00"
 	.byte 0x00
 	.global data_ov00_020e2410
-data_ov00_020e2410: ; 0x020e2410
+data_ov00_020e2410: @ 0x020e2410
 	.ascii "Map/%s/map%d%d.bin"
 	.byte 0x00, 0x00
 
-    .sbss
+    .section .sbss
 	.global data_ov00_020ec81c
 data_ov00_020ec81c:
 	.space 0x4

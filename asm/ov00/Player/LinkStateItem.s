@@ -5,21 +5,21 @@
 
 	.global _ZN13LinkStateItem8vfunc_00Ev
 	thumb_func_start _ZN13LinkStateItem8vfunc_00Ev
-_ZN13LinkStateItem8vfunc_00Ev: ; 0x020abd78
+_ZN13LinkStateItem8vfunc_00Ev: @ 0x020abd78
 	bx lr
 	.align 2, 0
 	thumb_func_end _ZN13LinkStateItem8vfunc_00Ev
 
 	.global _ZN13LinkStateItem5GetIdEv
 	arm_func_start _ZN13LinkStateItem5GetIdEv
-_ZN13LinkStateItem5GetIdEv: ; 0x020abd7c
+_ZN13LinkStateItem5GetIdEv: @ 0x020abd7c
 	mov r0, #1
 	bx lr
 	arm_func_end _ZN13LinkStateItem5GetIdEv
 
 	.global _ZN13LinkStateItem16IsHammerEquippedEv
 	arm_func_start _ZN13LinkStateItem16IsHammerEquippedEv
-_ZN13LinkStateItem16IsHammerEquippedEv: ; 0x020abd84
+_ZN13LinkStateItem16IsHammerEquippedEv: @ 0x020abd84
 	ldr r0, [r0, #0x14]
 	cmp r0, #8
 	bne _020abd98
@@ -32,7 +32,7 @@ _020abd98:
 
 	.global _ZN13LinkStateItem12OnStateLeaveEi
 	arm_func_start _ZN13LinkStateItem12OnStateLeaveEi
-_ZN13LinkStateItem12OnStateLeaveEi: ; 0x020abda0
+_ZN13LinkStateItem12OnStateLeaveEi: @ 0x020abda0
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r5, r0
 	mov r4, r1
@@ -41,20 +41,20 @@ _ZN13LinkStateItem12OnStateLeaveEi: ; 0x020abda0
 	cmp r0, #0xa
 	addls pc, pc, r0, lsl #2
 	b _020abe68
-_020abdc0: ; jump table
-	b _020abe68 ; case 0
-	b _020abe68 ; case 1
-	b _020abe68 ; case 2
-	b _020abe60 ; case 3
-	b _020abe1c ; case 4
-	b _020abe68 ; case 5
-	b _020abe2c ; case 6
-	b _020abdec ; case 7
-	b _020abe38 ; case 8
-	b _020abe44 ; case 9
-	b _020abe44 ; case 10
+_020abdc0: @ jump table
+	b _020abe68 @ case 0
+	b _020abe68 @ case 1
+	b _020abe68 @ case 2
+	b _020abe60 @ case 3
+	b _020abe1c @ case 4
+	b _020abe68 @ case 5
+	b _020abe2c @ case 6
+	b _020abdec @ case 7
+	b _020abe38 @ case 8
+	b _020abe44 @ case 9
+	b _020abe44 @ case 10
 _020abdec:
-	ldr r0, _020abf44 ; =data_027e103c
+	ldr r0, _020abf44 @ =data_027e103c
 	ldr r0, [r0]
 	bl func_ov00_020cf01c
 	ldrb r0, [r0, #0xe0]
@@ -63,7 +63,7 @@ _020abdec:
 	bl _ZN13LinkStateItem15GetEquipBombchuEv
 	bl func_ov14_0213ec64
 _020abe0c:
-	ldr r0, _020abf48 ; =data_027e1098
+	ldr r0, _020abf48 @ =data_027e1098
 	ldr r0, [r0]
 	blx func_ov14_0211fd04
 	b _020abe68
@@ -81,7 +81,7 @@ _020abe38:
 	bl func_ov59_0219931c
 	b _020abe68
 _020abe44:
-	ldr r0, _020abf44 ; =data_027e103c
+	ldr r0, _020abf44 @ =data_027e103c
 	mov r1, #0
 	ldr r0, [r0]
 	mov r2, r1
@@ -145,7 +145,7 @@ _020abf0c:
 	cmp r6, r4
 	bne _020abf0c
 _020abf20:
-	ldr r0, _020abf4c ; =data_027e0fb8
+	ldr r0, _020abf4c @ =data_027e0fb8
 	ldr r0, [r0]
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
@@ -163,8 +163,8 @@ _020abf4c: .word data_027e0fb8
 
 	.global _ZN13LinkStateItem15GetEquipBombchuEv
 	arm_func_start _ZN13LinkStateItem15GetEquipBombchuEv
-_ZN13LinkStateItem15GetEquipBombchuEv: ; 0x020abf50
-	ldr ip, _020abf5c ; =func_01fffcec
+_ZN13LinkStateItem15GetEquipBombchuEv: @ 0x020abf50
+	ldr ip, _020abf5c @ =func_01fffcec
 	mov r0, #7
 	bx ip
 	.align 2, 0
@@ -173,8 +173,8 @@ _020abf5c: .word func_01fffcec
 
 	.global _ZN13LinkStateItem16GetLinkStateMoveEv
 	arm_func_start _ZN13LinkStateItem16GetLinkStateMoveEv
-_ZN13LinkStateItem16GetLinkStateMoveEv: ; 0x020abf60
-	ldr ip, _020abf6c ; =func_01fffcd8
+_ZN13LinkStateItem16GetLinkStateMoveEv: @ 0x020abf60
+	ldr ip, _020abf6c @ =func_01fffcd8
 	mov r0, #0
 	bx ip
 	.align 2, 0
@@ -183,11 +183,11 @@ _020abf6c: .word func_01fffcd8
 
 	.global _ZN13LinkStateItem18func_ov00_020abf70Ev
 	arm_func_start _ZN13LinkStateItem18func_ov00_020abf70Ev
-_ZN13LinkStateItem18func_ov00_020abf70Ev: ; 0x020abf70
-	ldr r1, _020abf88 ; =gAdventureFlags
+_ZN13LinkStateItem18func_ov00_020abf70Ev: @ 0x020abf70
+	ldr r1, _020abf88 @ =gAdventureFlags
 	mov r2, r0
 	ldr r0, [r1]
-	ldr ip, _020abf8c ; =_ZN14AdventureFlags18func_ov00_02097b9cEv
+	ldr ip, _020abf8c @ =_ZN14AdventureFlags18func_ov00_02097b9cEv
 	ldr r1, [r2, #0x5c]
 	bx ip
 	.align 2, 0
@@ -197,7 +197,7 @@ _020abf8c: .word _ZN14AdventureFlags18func_ov00_02097b9cEv
 
 	.global _ZN13LinkStateItem8vfunc_28Ev
 	arm_func_start _ZN13LinkStateItem8vfunc_28Ev
-_ZN13LinkStateItem8vfunc_28Ev: ; 0x020abf90
+_ZN13LinkStateItem8vfunc_28Ev: @ 0x020abf90
 	ldr r0, [r0, #0x5c]
 	cmp r0, #0
 	movlt r0, #1
@@ -209,7 +209,7 @@ _ZN13LinkStateItem8vfunc_28Ev: ; 0x020abf90
 	.byte 0x00, 0x00, 0x00, 0x00
 	.byte 0x00, 0x00, 0x00, 0x00
     .global _ZTV13LinkStateItem
-_ZTV13LinkStateItem: ; 0x020e5a48
+_ZTV13LinkStateItem: @ 0x020e5a48
     .word _ZN13LinkStateItem8vfunc_00Ev
     .word func_ov04_02109ae8
     .word func_ov04_02109b08

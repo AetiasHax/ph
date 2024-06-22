@@ -5,7 +5,7 @@
 
 	.global _ZN6Course18GetDungeonProgressEP14CourseProgress
 	arm_func_start _ZN6Course18GetDungeonProgressEP14CourseProgress
-_ZN6Course18GetDungeonProgressEP14CourseProgress: ; 0x0207ca00
+_ZN6Course18GetDungeonProgressEP14CourseProgress: @ 0x0207ca00
 	ldr r2, [r0, #0x268]
 	str r2, [r1]
 	ldr r2, [r0, #4]
@@ -20,7 +20,7 @@ _ZN6Course18GetDungeonProgressEP14CourseProgress: ; 0x0207ca00
 
 	.global _ZN6Course18func_ov00_0207ca28Eiii
 	arm_func_start _ZN6Course18func_ov00_0207ca28Eiii
-_ZN6Course18func_ov00_0207ca28Eiii: ; 0x0207ca28
+_ZN6Course18func_ov00_0207ca28Eiii: @ 0x0207ca28
 	stmdb sp!, {r3, lr}
 	ldr ip, [r0, #4]
 	add r0, r0, r1, lsl #2
@@ -42,8 +42,8 @@ _0207ca54:
 
 	.global _ZN6Course13SetCourseNameEPc
 	arm_func_start _ZN6Course13SetCourseNameEPc
-_ZN6Course13SetCourseNameEPc: ; 0x0207ca68
-	ldr ip, _0207ca74 ; =strcpy
+_ZN6Course13SetCourseNameEPc: @ 0x0207ca68
+	ldr ip, _0207ca74 @ =strcpy
 	add r0, r0, #0xc
 	bx ip
 	.align 2, 0
@@ -52,7 +52,7 @@ _0207ca74: .word strcpy
 
 	.global _ZN6Course18func_ov00_0207ca78Eici
 	arm_func_start _ZN6Course18func_ov00_0207ca78Eici
-_ZN6Course18func_ov00_0207ca78Eici: ; 0x0207ca78
+_ZN6Course18func_ov00_0207ca78Eici: @ 0x0207ca78
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	mov r4, r2
@@ -69,7 +69,7 @@ _ZN6Course18func_ov00_0207ca78Eici: ; 0x0207ca78
 
 	.global _ZN6Course18func_ov00_0207caa8EiPiPc
 	arm_func_start _ZN6Course18func_ov00_0207caa8EiPiPc
-_ZN6Course18func_ov00_0207caa8EiPiPc: ; 0x0207caa8
+_ZN6Course18func_ov00_0207caa8EiPiPc: @ 0x0207caa8
 	stmdb sp!, {r3, r4, r5, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -108,12 +108,12 @@ _ZN6Course18func_ov00_0207caa8EiPiPc: ; 0x0207caa8
 
 	.global _ZN6Course18func_ov00_0207cb30Ei
 	arm_func_start _ZN6Course18func_ov00_0207cb30Ei
-_ZN6Course18func_ov00_0207cb30Ei: ; 0x0207cb30
+_ZN6Course18func_ov00_0207cb30Ei: @ 0x0207cb30
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
 	addeq sp, sp, #0x10
-	ldreq r0, _0207cb78 ; =0x0000ffff
+	ldreq r0, _0207cb78 @ =0x0000ffff
 	ldmeqia sp!, {r3, pc}
 	mov r3, #0x47
 	mov r2, #0
@@ -124,7 +124,7 @@ _ZN6Course18func_ov00_0207cb30Ei: ; 0x0207cb30
 	bl func_ov00_020a3710
 	cmp r0, #0
 	ldrneh r0, [sp, #0xa]
-	ldreq r0, _0207cb78 ; =0x0000ffff
+	ldreq r0, _0207cb78 @ =0x0000ffff
 	add sp, sp, #0x10
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -133,7 +133,7 @@ _0207cb78: .word 0x0000ffff
 
 	.global _ZN6Course14FindMapGridPosEP5Vec2bPS_j
 	arm_func_start _ZN6Course14FindMapGridPosEP5Vec2bPS_j
-_ZN6Course14FindMapGridPosEP5Vec2bPS_j: ; 0x0207cb7c
+_ZN6Course14FindMapGridPosEP5Vec2bPS_j: @ 0x0207cb7c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov lr, #0
 	mov r5, r1
@@ -163,7 +163,7 @@ _0207cb90:
 
 	.global _ZN6Course13FindMapCenterEi
 	arm_func_start _ZN6Course13FindMapCenterEi
-_ZN6Course13FindMapCenterEi: ; 0x0207cbd8
+_ZN6Course13FindMapCenterEi: @ 0x0207cbd8
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course11FindMapDataEj
 	add r0, r0, #0x14
@@ -172,7 +172,7 @@ _ZN6Course13FindMapCenterEi: ; 0x0207cbd8
 
 	.global _ZN6Course18func_ov00_0207cbe8Ei
 	arm_func_start _ZN6Course18func_ov00_0207cbe8Ei
-_ZN6Course18func_ov00_0207cbe8Ei: ; 0x0207cbe8
+_ZN6Course18func_ov00_0207cbe8Ei: @ 0x0207cbe8
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -192,7 +192,7 @@ _ZN6Course18func_ov00_0207cbe8Ei: ; 0x0207cbe8
 
 	.global _ZN6Course18func_ov00_0207cc24Ei
 	arm_func_start _ZN6Course18func_ov00_0207cc24Ei
-_ZN6Course18func_ov00_0207cc24Ei: ; 0x0207cc24
+_ZN6Course18func_ov00_0207cc24Ei: @ 0x0207cc24
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #0x10
 	cmp r1, #0
@@ -215,7 +215,7 @@ _ZN6Course18func_ov00_0207cc24Ei: ; 0x0207cc24
 
 	.global _ZN6Course18FindMapData_Unk_08Ei
 	arm_func_start _ZN6Course18FindMapData_Unk_08Ei
-_ZN6Course18FindMapData_Unk_08Ei: ; 0x0207cc6c
+_ZN6Course18FindMapData_Unk_08Ei: @ 0x0207cc6c
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
@@ -226,64 +226,64 @@ _ZN6Course18FindMapData_Unk_08Ei: ; 0x0207cc6c
 
 	.global _ZN6Course14GetMCSFilePathEiii
 	arm_func_start _ZN6Course14GetMCSFilePathEiii
-_ZN6Course14GetMCSFilePathEiii: ; 0x0207cc84
+_ZN6Course14GetMCSFilePathEiii: @ 0x0207cc84
 	stmdb sp!, {r3, lr}
 	mov lr, r0
 	mov ip, r2
 	cmp r3, #3
 	addls pc, pc, r3, lsl #2
 	b _0207cd3c
-_0207cc9c: ; jump table
-	b _0207cd3c ; case 0
-	b _0207ccac ; case 1
-	b _0207cce8 ; case 2
-	b _0207cd24 ; case 3
+_0207cc9c: @ jump table
+	b _0207cd3c @ case 0
+	b _0207ccac @ case 1
+	b _0207cce8 @ case 2
+	b _0207cd24 @ case 3
 _0207ccac:
 	cmp ip, #0
 	bne _0207cccc
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd5c ; =data_ov00_020e2058
+	ldr r1, _0207cd5c @ =data_ov00_020e2058
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 _0207cccc:
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd60 ; =data_ov00_020e2070
+	ldr r1, _0207cd60 @ =data_ov00_020e2070
 	mov r3, ip
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 _0207cce8:
 	cmp ip, #0
 	bne _0207cd08
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd64 ; =data_ov00_020e208c
+	ldr r1, _0207cd64 @ =data_ov00_020e208c
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 _0207cd08:
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd68 ; =data_ov00_020e20a4
+	ldr r1, _0207cd68 @ =data_ov00_020e20a4
 	mov r3, ip
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 _0207cd24:
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd6c ; =data_ov00_020e20c0
+	ldr r1, _0207cd6c @ =data_ov00_020e20c0
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
 _0207cd3c:
-	ldr r2, _0207cd58 ; =data_ov00_020e2508
+	ldr r2, _0207cd58 @ =data_ov00_020e2508
 	mov r0, r1
 	ldr r2, [r2]
-	ldr r1, _0207cd70 ; =data_ov00_020e20d8
+	ldr r1, _0207cd70 @ =data_ov00_020e20d8
 	add r3, lr, #0xc
 	bl func_0200c8d0
 	ldmia sp!, {r3, pc}
@@ -299,46 +299,46 @@ _0207cd70: .word data_ov00_020e20d8
 
 	.global _ZN6Course14GetMRCFilePathEiii
 	arm_func_start _ZN6Course14GetMRCFilePathEiii
-_ZN6Course14GetMRCFilePathEiii: ; 0x0207cd74
+_ZN6Course14GetMRCFilePathEiii: @ 0x0207cd74
 	stmdb sp!, {r4, lr}
 	mov r4, r2
 	cmp r3, #3
 	addls pc, pc, r3, lsl #2
 	b _0207cde0
-_0207cd88: ; jump table
-	b _0207cde0 ; case 0
-	b _0207cd98 ; case 1
-	b _0207cdb0 ; case 2
-	b _0207cdc8 ; case 3
+_0207cd88: @ jump table
+	b _0207cde0 @ case 0
+	b _0207cd98 @ case 1
+	b _0207cdb0 @ case 2
+	b _0207cdc8 @ case 3
 _0207cd98:
-	ldr r0, _0207ce08 ; =data_ov00_020e250c
-	ldr r1, _0207ce0c ; =data_ov00_020e20ec
+	ldr r0, _0207ce08 @ =data_ov00_020e250c
+	ldr r1, _0207ce0c @ =data_ov00_020e20ec
 	ldr r2, [r0]
 	mov r0, r4
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
 _0207cdb0:
-	ldr r0, _0207ce08 ; =data_ov00_020e250c
-	ldr r1, _0207ce10 ; =data_ov00_020e2104
+	ldr r0, _0207ce08 @ =data_ov00_020e250c
+	ldr r1, _0207ce10 @ =data_ov00_020e2104
 	ldr r2, [r0]
 	mov r0, r4
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
 _0207cdc8:
-	ldr r0, _0207ce08 ; =data_ov00_020e250c
-	ldr r1, _0207ce14 ; =data_ov00_020e211c
+	ldr r0, _0207ce08 @ =data_ov00_020e250c
+	ldr r1, _0207ce14 @ =data_ov00_020e211c
 	ldr r2, [r0]
 	mov r0, r4
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
 _0207cde0:
-	ldr r0, _0207ce18 ; =data_027e0f7c
+	ldr r0, _0207ce18 @ =data_027e0f7c
 	ldr r0, [r0]
 	bl func_ov00_0209d71c
-	ldr r1, _0207ce08 ; =data_ov00_020e250c
+	ldr r1, _0207ce08 @ =data_ov00_020e250c
 	mov r3, r0
 	ldr r2, [r1]
-	ldr r1, _0207ce1c ; =data_ov00_020e2134
+	ldr r1, _0207ce1c @ =data_ov00_020e2134
 	mov r0, r4
 	bl func_0200c8d0
 	ldmia sp!, {r4, pc}
@@ -353,7 +353,7 @@ _0207ce1c: .word data_ov00_020e2134
 
 	.global _ZN6Course18func_ov00_0207ce20EiiPci
 	arm_func_start _ZN6Course18func_ov00_0207ce20EiiPci
-_ZN6Course18func_ov00_0207ce20EiiPci: ; 0x0207ce20
+_ZN6Course18func_ov00_0207ce20EiiPci: @ 0x0207ce20
 	stmdb sp!, {r3, lr}
 	sub sp, sp, #8
 	ldr ip, [sp, #0x10]
@@ -369,10 +369,10 @@ _ZN6Course18func_ov00_0207ce20EiiPci: ; 0x0207ce20
 
 	.global _ZN6Course18func_ov00_0207ce4cEiiiPci
 	arm_func_start _ZN6Course18func_ov00_0207ce4cEiiiPci
-_ZN6Course18func_ov00_0207ce4cEiiiPci: ; 0x0207ce4c
+_ZN6Course18func_ov00_0207ce4cEiiiPci: @ 0x0207ce4c
 	stmdb sp!, {r4, r5, r6, r7, r8, lr}
 	sub sp, sp, #8
-	ldr r4, _0207d3ac ; =data_027e0f7c
+	ldr r4, _0207d3ac @ =data_027e0f7c
 	mov r8, r0
 	ldr r0, [r4]
 	mov r7, r1
@@ -385,17 +385,17 @@ _ZN6Course18func_ov00_0207ce4cEiiiPci: ; 0x0207ce4c
 	cmp r1, #7
 	addls pc, pc, r1, lsl #2
 	b _0207d364
-_0207ce88: ; jump table
-	b _0207d364 ; case 0
-	b _0207cef0 ; case 1
-	b _0207cea8 ; case 2
-	b _0207cf38 ; case 3
-	b _0207d07c ; case 4
-	b _0207d294 ; case 5
-	b _0207d2d8 ; case 6
-	b _0207d31c ; case 7
+_0207ce88: @ jump table
+	b _0207d364 @ case 0
+	b _0207cef0 @ case 1
+	b _0207cea8 @ case 2
+	b _0207cf38 @ case 3
+	b _0207d07c @ case 4
+	b _0207d294 @ case 5
+	b _0207d2d8 @ case 6
+	b _0207d31c @ case 7
 _0207cea8:
-	ldr r2, _0207d3b0 ; =0x66666667
+	ldr r2, _0207d3b0 @ =0x66666667
 	mov r1, r6, lsr #0x1f
 	smull r0, r5, r2, r6
 	smull r0, r7, r2, r6
@@ -405,16 +405,16 @@ _0207cea8:
 	smull r0, r1, r2, r5
 	sub r5, r6, r0
 	str r7, [sp]
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
 	str r5, [sp, #4]
 	ldr r2, [r0]
-	ldr r1, _0207d3b8 ; =data_ov00_020e2148
+	ldr r1, _0207d3b8 @ =data_ov00_020e2148
 	mov r0, r4
 	bl func_0200c8d0
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207cef0:
-	ldr r2, _0207d3b0 ; =0x66666667
+	ldr r2, _0207d3b0 @ =0x66666667
 	mov r1, r6, lsr #0x1f
 	smull r0, r5, r2, r6
 	smull r0, r7, r2, r6
@@ -424,10 +424,10 @@ _0207cef0:
 	smull r0, r1, r2, r5
 	sub r5, r6, r0
 	str r7, [sp]
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
 	str r5, [sp, #4]
 	ldr r2, [r0]
-	ldr r1, _0207d3bc ; =data_ov00_020e2160
+	ldr r1, _0207d3bc @ =data_ov00_020e2160
 	mov r0, r4
 	bl func_0200c8d0
 	add sp, sp, #8
@@ -437,12 +437,12 @@ _0207cf38:
 	mvn r0, #1
 	cmp r1, r0
 	bne _0207cf98
-	ldr r0, _0207d3c0 ; =data_027e0d38
+	ldr r0, _0207d3c0 @ =data_027e0d38
 	ldr r0, [r0]
 	ldr r0, [r0, #0x28]
 	add r0, r0, #0x44
 	bl func_ov00_020a5e9c
-	ldr r2, _0207d3c0 ; =data_027e0d38
+	ldr r2, _0207d3c0 @ =data_027e0d38
 	mov r1, r0
 	ldr r0, [r2]
 	mov r3, r5
@@ -479,14 +479,14 @@ _0207cfc8:
 _0207cfdc:
 	cmp r7, #0x1b
 	bne _0207cffc
-	ldr r1, _0207d3c4 ; =data_ov00_020e2174
+	ldr r1, _0207d3c4 @ =data_ov00_020e2174
 	mov r0, r4
 	mov r2, r3
 	bl func_0200c8d0
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207cffc:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r2, r3
 	smull r0, r8, r1, r6
 	smull r0, r3, r1, r6
@@ -495,7 +495,7 @@ _0207cffc:
 	mov r5, #0xa
 	smull r0, r1, r5, r8
 	sub r8, r6, r0
-	ldr r1, _0207d3c8 ; =data_ov00_020e2188
+	ldr r1, _0207d3c8 @ =data_ov00_020e2188
 	mov r0, r4
 	add r3, r7, r3, asr #2
 	str r8, [sp]
@@ -503,7 +503,7 @@ _0207cffc:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d03c:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r2, r3
 	smull r0, r8, r1, r6
 	smull r0, r3, r1, r6
@@ -512,7 +512,7 @@ _0207d03c:
 	mov r5, #0xa
 	smull r0, r1, r5, r8
 	sub r8, r6, r0
-	ldr r1, _0207d3cc ; =data_ov00_020e219c
+	ldr r1, _0207d3cc @ =data_ov00_020e219c
 	mov r0, r4
 	add r3, r7, r3, asr #2
 	str r8, [sp]
@@ -537,14 +537,14 @@ _0207d07c:
 _0207d0b4:
 	cmp r0, #0x38
 	bne _0207d1d4
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3d0 ; =data_ov00_020e21b4
+	ldr r1, _0207d3d0 @ =data_ov00_020e21b4
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -552,14 +552,14 @@ _0207d0b4:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d0f4:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3d4 ; =data_ov00_020e21d0
+	ldr r1, _0207d3d4 @ =data_ov00_020e21d0
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -567,14 +567,14 @@ _0207d0f4:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d12c:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3d8 ; =data_ov00_020e21f0
+	ldr r1, _0207d3d8 @ =data_ov00_020e21f0
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -582,14 +582,14 @@ _0207d12c:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d164:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3dc ; =data_ov00_020e2210
+	ldr r1, _0207d3dc @ =data_ov00_020e2210
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -597,14 +597,14 @@ _0207d164:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d19c:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3e0 ; =data_ov00_020e2230
+	ldr r1, _0207d3e0 @ =data_ov00_020e2230
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -614,12 +614,12 @@ _0207d19c:
 _0207d1d4:
 	cmp r6, #3
 	bne _0207d25c
-	ldr r0, _0207d3e4 ; =gAdventureFlags
+	ldr r0, _0207d3e4 @ =gAdventureFlags
 	mov r1, #0x32
 	ldr r0, [r0]
 	bl _ZN14AdventureFlags3GetEj
 	cmp r0, #0
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	beq _0207d22c
 	smull r0, r3, r1, r6
@@ -627,7 +627,7 @@ _0207d1d4:
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3e8 ; =data_ov00_020e2250
+	ldr r1, _0207d3e8 @ =data_ov00_020e2250
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -640,7 +640,7 @@ _0207d22c:
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3ec ; =data_ov00_020e226c
+	ldr r1, _0207d3ec @ =data_ov00_020e226c
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -648,14 +648,14 @@ _0207d22c:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d25c:
-	ldr r1, _0207d3b0 ; =0x66666667
+	ldr r1, _0207d3b0 @ =0x66666667
 	mov r5, r6, lsr #0x1f
 	smull r0, r3, r1, r6
 	smull r0, r2, r1, r6
 	add r3, r5, r3, asr #2
 	mov r1, #0xa
 	smull r3, r0, r1, r3
-	ldr r1, _0207d3f0 ; =data_ov00_020e2284
+	ldr r1, _0207d3f0 @ =data_ov00_020e2284
 	mov r0, r4
 	add r2, r5, r2, asr #2
 	sub r3, r6, r3
@@ -663,7 +663,7 @@ _0207d25c:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d294:
-	ldr r8, _0207d3b0 ; =0x66666667
+	ldr r8, _0207d3b0 @ =0x66666667
 	mov r7, r6, lsr #0x1f
 	smull r0, r1, r8, r6
 	add r1, r7, r1, asr #2
@@ -672,8 +672,8 @@ _0207d294:
 	sub r1, r6, r0
 	smull r0, r3, r8, r6
 	stmia sp, {r1, r5}
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
-	ldr r1, _0207d3f4 ; =data_ov00_020e229c
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
+	ldr r1, _0207d3f4 @ =data_ov00_020e229c
 	ldr r2, [r0]
 	mov r0, r4
 	add r3, r7, r3, asr #2
@@ -681,7 +681,7 @@ _0207d294:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d2d8:
-	ldr r8, _0207d3b0 ; =0x66666667
+	ldr r8, _0207d3b0 @ =0x66666667
 	mov r7, r6, lsr #0x1f
 	smull r0, r1, r8, r6
 	add r1, r7, r1, asr #2
@@ -690,8 +690,8 @@ _0207d2d8:
 	sub r1, r6, r0
 	smull r0, r3, r8, r6
 	stmia sp, {r1, r5}
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
-	ldr r1, _0207d3f8 ; =data_ov00_020e22b8
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
+	ldr r1, _0207d3f8 @ =data_ov00_020e22b8
 	ldr r2, [r0]
 	mov r0, r4
 	add r3, r7, r3, asr #2
@@ -699,7 +699,7 @@ _0207d2d8:
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d31c:
-	ldr r2, _0207d3b0 ; =0x66666667
+	ldr r2, _0207d3b0 @ =0x66666667
 	mov r1, r6, lsr #0x1f
 	smull r0, r5, r2, r6
 	smull r0, r7, r2, r6
@@ -709,16 +709,16 @@ _0207d31c:
 	smull r0, r1, r2, r5
 	sub r5, r6, r0
 	str r7, [sp]
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
 	str r5, [sp, #4]
 	ldr r2, [r0]
-	ldr r1, _0207d3fc ; =data_ov00_020e22d4
+	ldr r1, _0207d3fc @ =data_ov00_020e22d4
 	mov r0, r4
 	bl func_0200c8d0
 	add sp, sp, #8
 	ldmia sp!, {r4, r5, r6, r7, r8, pc}
 _0207d364:
-	ldr r2, _0207d3b0 ; =0x66666667
+	ldr r2, _0207d3b0 @ =0x66666667
 	mov r1, r6, lsr #0x1f
 	smull r0, r5, r2, r6
 	smull r0, r7, r2, r6
@@ -728,10 +728,10 @@ _0207d364:
 	smull r0, r1, r2, r5
 	str r7, [sp]
 	sub r5, r6, r0
-	ldr r0, _0207d3b4 ; =data_ov00_020e233c
+	ldr r0, _0207d3b4 @ =data_ov00_020e233c
 	str r5, [sp, #4]
 	ldr r2, [r0]
-	ldr r1, _0207d400 ; =data_ov00_020e22e8
+	ldr r1, _0207d400 @ =data_ov00_020e22e8
 	mov r0, r4
 	bl func_0200c8d0
 	add sp, sp, #8
@@ -763,7 +763,7 @@ _0207d400: .word data_ov00_020e22e8
 
 	.global _ZN6Course18func_ov00_0207d404Eiii
 	arm_func_start _ZN6Course18func_ov00_0207d404Eiii
-_ZN6Course18func_ov00_0207d404Eiii: ; 0x0207d404
+_ZN6Course18func_ov00_0207d404Eiii: @ 0x0207d404
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
 	mov r6, r0
@@ -798,8 +798,8 @@ _ZN6Course18func_ov00_0207d404Eiii: ; 0x0207d404
 
 	.global _ZN6Course22IsCurrentMapInMainGridEv
 	arm_func_start _ZN6Course22IsCurrentMapInMainGridEv
-_ZN6Course22IsCurrentMapInMainGridEv: ; 0x0207d47c
-	ldr ip, _0207d48c ; =_ZN6Course12IsInMainGridEii
+_ZN6Course22IsCurrentMapInMainGridEv: @ 0x0207d47c
+	ldr ip, _0207d48c @ =_ZN6Course12IsInMainGridEii
 	ldrb r1, [r0, #0x1c]
 	ldrb r2, [r0, #0x1d]
 	bx ip
@@ -809,7 +809,7 @@ _0207d48c: .word _ZN6Course12IsInMainGridEii
 
 	.global _ZN6Course12IsInMainGridEii
 	arm_func_start _ZN6Course12IsInMainGridEii
-_ZN6Course12IsInMainGridEii: ; 0x0207d490
+_ZN6Course12IsInMainGridEii: @ 0x0207d490
 	ldrb r3, [r0, #0x25c]
 	cmp r3, #0
 	moveq r0, #1
@@ -836,7 +836,7 @@ _0207d4dc:
 
 	.global _ZN6Course15IsMapInMainGridEj
 	arm_func_start _ZN6Course15IsMapInMainGridEj
-_ZN6Course15IsMapInMainGridEj: ; 0x0207d4e4
+_ZN6Course15IsMapInMainGridEj: @ 0x0207d4e4
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #4
 	mov r4, r0
@@ -854,7 +854,7 @@ _ZN6Course15IsMapInMainGridEj: ; 0x0207d4e4
 
 	.global _ZN6Course15GetMapScreenPosEiPiS0_
 	arm_func_start _ZN6Course15GetMapScreenPosEiPiS0_
-_ZN6Course15GetMapScreenPosEiPiS0_: ; 0x0207d518
+_ZN6Course15GetMapScreenPosEiPiS0_: @ 0x0207d518
 	stmdb sp!, {r3, r4, r5, r6, r7, lr}
 	mov r4, r1
 	mov r7, r0
@@ -902,7 +902,7 @@ _ZN6Course15GetMapScreenPosEiPiS0_: ; 0x0207d518
 
 	.global _ZN6Course21GetScreenMapCellSizeXEv
 	arm_func_start _ZN6Course21GetScreenMapCellSizeXEv
-_ZN6Course21GetScreenMapCellSizeXEv: ; 0x0207d5c4
+_ZN6Course21GetScreenMapCellSizeXEv: @ 0x0207d5c4
 	stmdb sp!, {r3, lr}
 	ldrb r1, [r0, #0x86]
 	ldrb r0, [r0, #0x87]
@@ -918,7 +918,7 @@ _ZN6Course21GetScreenMapCellSizeXEv: ; 0x0207d5c4
 
 	.global _ZN6Course21GetScreenMapCellSizeYEv
 	arm_func_start _ZN6Course21GetScreenMapCellSizeYEv
-_ZN6Course21GetScreenMapCellSizeYEv: ; 0x0207d5f0
+_ZN6Course21GetScreenMapCellSizeYEv: @ 0x0207d5f0
 	stmdb sp!, {r3, lr}
 	ldrb r1, [r0, #0x87]
 	ldrb r0, [r0, #0x86]
@@ -934,7 +934,7 @@ _ZN6Course21GetScreenMapCellSizeYEv: ; 0x0207d5f0
 
 	.global _ZN6Course13Get_Unk_c8_00Ev
 	arm_func_start _ZN6Course13Get_Unk_c8_00Ev
-_ZN6Course13Get_Unk_c8_00Ev: ; 0x0207d61c
+_ZN6Course13Get_Unk_c8_00Ev: @ 0x0207d61c
 	ldr r0, [r0, #0xc8]
 	ldr r0, [r0]
 	bx lr
@@ -942,7 +942,7 @@ _ZN6Course13Get_Unk_c8_00Ev: ; 0x0207d61c
 
 	.global _ZN6Course13Get_Unk_c8_04Ev
 	arm_func_start _ZN6Course13Get_Unk_c8_04Ev
-_ZN6Course13Get_Unk_c8_04Ev: ; 0x0207d628
+_ZN6Course13Get_Unk_c8_04Ev: @ 0x0207d628
 	ldr r0, [r0, #0xc8]
 	ldr r0, [r0, #4]
 	bx lr
@@ -950,7 +950,7 @@ _ZN6Course13Get_Unk_c8_04Ev: ; 0x0207d628
 
 	.global _ZN6Course23IsAdjacentMapOnMainGridEi
 	arm_func_start _ZN6Course23IsAdjacentMapOnMainGridEi
-_ZN6Course23IsAdjacentMapOnMainGridEi: ; 0x0207d634
+_ZN6Course23IsAdjacentMapOnMainGridEi: @ 0x0207d634
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	ldrb r4, [r6, #0x1c]
@@ -958,11 +958,11 @@ _ZN6Course23IsAdjacentMapOnMainGridEi: ; 0x0207d634
 	cmp r1, #3
 	addls pc, pc, r1, lsl #2
 	b _0207d67c
-_0207d650: ; jump table
-	b _0207d660 ; case 0
-	b _0207d668 ; case 1
-	b _0207d670 ; case 2
-	b _0207d678 ; case 3
+_0207d650: @ jump table
+	b _0207d660 @ case 0
+	b _0207d668 @ case 1
+	b _0207d670 @ case 2
+	b _0207d678 @ case 3
 _0207d660:
 	add r4, r4, #1
 	b _0207d67c
@@ -991,7 +991,7 @@ _0207d67c:
 
 	.global _ZN6Course10HasGridMapEii
 	arm_func_start _ZN6Course10HasGridMapEii
-_ZN6Course10HasGridMapEii: ; 0x0207d6ac
+_ZN6Course10HasGridMapEii: @ 0x0207d6ac
 	cmp r1, #0
 	cmpge r2, #0
 	blt _0207d6c4
@@ -1014,7 +1014,7 @@ _0207d6cc:
 
 	.global _ZN6Course14GetAdjacentMapEi
 	arm_func_start _ZN6Course14GetAdjacentMapEi
-_ZN6Course14GetAdjacentMapEi: ; 0x0207d6ec
+_ZN6Course14GetAdjacentMapEi: @ 0x0207d6ec
 	stmdb sp!, {r4, r5, r6, lr}
 	mov r6, r0
 	mov r5, r1
@@ -1038,7 +1038,7 @@ _ZN6Course14GetAdjacentMapEi: ; 0x0207d6ec
 
 	.global _ZN6Course15GetAdjacentMapXEi
 	arm_func_start _ZN6Course15GetAdjacentMapXEi
-_ZN6Course15GetAdjacentMapXEi: ; 0x0207d738
+_ZN6Course15GetAdjacentMapXEi: @ 0x0207d738
 	cmp r1, #0
 	ldrb r0, [r0, #0x1c]
 	beq _0207d750
@@ -1052,7 +1052,7 @@ _0207d750:
 
 	.global _ZN6Course15GetAdjacentMapYEi
 	arm_func_start _ZN6Course15GetAdjacentMapYEi
-_ZN6Course15GetAdjacentMapYEi: ; 0x0207d758
+_ZN6Course15GetAdjacentMapYEi: @ 0x0207d758
 	cmp r1, #2
 	ldrb r0, [r0, #0x1d]
 	beq _0207d770
@@ -1066,7 +1066,7 @@ _0207d770:
 
 	.global _ZN6Course25FindCurrentMapData_Unk_04Ev
 	arm_func_start _ZN6Course25FindCurrentMapData_Unk_04Ev
-_ZN6Course25FindCurrentMapData_Unk_04Ev: ; 0x0207d778
+_ZN6Course25FindCurrentMapData_Unk_04Ev: @ 0x0207d778
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course18FindCurrentMapDataEv
 	ldrh r0, [r0, #4]
@@ -1075,11 +1075,11 @@ _ZN6Course25FindCurrentMapData_Unk_04Ev: ; 0x0207d778
 
 	.global _ZN6Course18FindMapData_Unk_04Ei
 	arm_func_start _ZN6Course18FindMapData_Unk_04Ei
-_ZN6Course18FindMapData_Unk_04Ei: ; 0x0207d788
+_ZN6Course18FindMapData_Unk_04Ei: @ 0x0207d788
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
-	ldreq r0, _0207d7a0 ; =0x0000ffff
+	ldreq r0, _0207d7a0 @ =0x0000ffff
 	ldrneh r0, [r0, #4]
 	ldmia sp!, {r3, pc}
 	.align 2, 0
@@ -1088,7 +1088,7 @@ _0207d7a0: .word 0x0000ffff
 
 	.global _ZN6Course18FindMapData_Unk_0cEi
 	arm_func_start _ZN6Course18FindMapData_Unk_0cEi
-_ZN6Course18FindMapData_Unk_0cEi: ; 0x0207d7a4
+_ZN6Course18FindMapData_Unk_0cEi: @ 0x0207d7a4
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course11FindMapDataEj
 	cmp r0, #0
@@ -1099,10 +1099,10 @@ _ZN6Course18FindMapData_Unk_0cEi: ; 0x0207d7a4
 
 	.global _ZN6Course18func_ov00_0207d7bcEv
 	arm_func_start _ZN6Course18func_ov00_0207d7bcEv
-_ZN6Course18func_ov00_0207d7bcEv: ; 0x0207d7bc
+_ZN6Course18func_ov00_0207d7bcEv: @ 0x0207d7bc
 	stmdb sp!, {r3, lr}
 	bl _ZN6Course18FindCurrentMapDataEv
-	ldr r2, _0207d7d8 ; =data_027e103c
+	ldr r2, _0207d7d8 @ =data_027e103c
 	ldrh r1, [r0, #4]
 	ldr r0, [r2]
 	bl func_ov00_020cf414
@@ -1113,7 +1113,7 @@ _0207d7d8: .word data_027e103c
 
 	.global _ZN6Course8SetFlag0Ejb
 	arm_func_start _ZN6Course8SetFlag0Ejb
-_ZN6Course8SetFlag0Ejb: ; 0x0207d7dc
+_ZN6Course8SetFlag0Ejb: @ 0x0207d7dc
 	cmp r2, #0
 	beq _0207d804
 	add ip, r0, #0x264
@@ -1138,7 +1138,7 @@ _0207d804:
 
 	.global _ZN6Course8GetFlag0Ej
 	arm_func_start _ZN6Course8GetFlag0Ej
-_ZN6Course8GetFlag0Ej: ; 0x0207d828
+_ZN6Course8GetFlag0Ej: @ 0x0207d828
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x264]
@@ -1151,7 +1151,7 @@ _ZN6Course8GetFlag0Ej: ; 0x0207d828
 
 	.global _ZN6Course8SetFlag1Ejb
 	arm_func_start _ZN6Course8SetFlag1Ejb
-_ZN6Course8SetFlag1Ejb: ; 0x0207d848
+_ZN6Course8SetFlag1Ejb: @ 0x0207d848
 	cmp r2, #0
 	beq _0207d870
 	add ip, r0, #0x268
@@ -1176,7 +1176,7 @@ _0207d870:
 
 	.global _ZN6Course8SetFlag1Ej
 	arm_func_start _ZN6Course8SetFlag1Ej
-_ZN6Course8SetFlag1Ej: ; 0x0207d894
+_ZN6Course8SetFlag1Ej: @ 0x0207d894
 	mov r2, r1, lsr #0x5
 	add r0, r0, r2, lsl #2
 	ldr r2, [r0, #0x268]
@@ -1189,7 +1189,7 @@ _ZN6Course8SetFlag1Ej: ; 0x0207d894
 
 	.global _ZN6Course15SetMapDataFlag0Eib
 	arm_func_start _ZN6Course15SetMapDataFlag0Eib
-_ZN6Course15SetMapDataFlag0Eib: ; 0x0207d8b4
+_ZN6Course15SetMapDataFlag0Eib: @ 0x0207d8b4
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
@@ -1202,7 +1202,7 @@ _ZN6Course15SetMapDataFlag0Eib: ; 0x0207d8b4
 
 	.global _ZN6Course15GetMapDataFlag0Ei
 	arm_func_start _ZN6Course15GetMapDataFlag0Ei
-_ZN6Course15GetMapDataFlag0Ei: ; 0x0207d8d4
+_ZN6Course15GetMapDataFlag0Ei: @ 0x0207d8d4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl _ZN6Course18FindCurrentMapDataEv
@@ -1213,7 +1213,7 @@ _ZN6Course15GetMapDataFlag0Ei: ; 0x0207d8d4
 
 	.global _ZN6Course15SetMapDataFlag1Eib
 	arm_func_start _ZN6Course15SetMapDataFlag1Eib
-_ZN6Course15SetMapDataFlag1Eib: ; 0x0207d8ec
+_ZN6Course15SetMapDataFlag1Eib: @ 0x0207d8ec
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
@@ -1226,7 +1226,7 @@ _ZN6Course15SetMapDataFlag1Eib: ; 0x0207d8ec
 
 	.global _ZN6Course15GetMapDataFlag1Ei
 	arm_func_start _ZN6Course15GetMapDataFlag1Ei
-_ZN6Course15GetMapDataFlag1Ei: ; 0x0207d90c
+_ZN6Course15GetMapDataFlag1Ei: @ 0x0207d90c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl _ZN6Course18FindCurrentMapDataEv
@@ -1237,7 +1237,7 @@ _ZN6Course15GetMapDataFlag1Ei: ; 0x0207d90c
 
 	.global _ZN6Course15SetMapDataFlag2Eib
 	arm_func_start _ZN6Course15SetMapDataFlag2Eib
-_ZN6Course15SetMapDataFlag2Eib: ; 0x0207d924
+_ZN6Course15SetMapDataFlag2Eib: @ 0x0207d924
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
@@ -1250,7 +1250,7 @@ _ZN6Course15SetMapDataFlag2Eib: ; 0x0207d924
 
 	.global _ZN6Course15GetMapDataFlag2Ei
 	arm_func_start _ZN6Course15GetMapDataFlag2Ei
-_ZN6Course15GetMapDataFlag2Ei: ; 0x0207d944
+_ZN6Course15GetMapDataFlag2Ei: @ 0x0207d944
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl _ZN6Course18FindCurrentMapDataEv
@@ -1261,7 +1261,7 @@ _ZN6Course15GetMapDataFlag2Ei: ; 0x0207d944
 
 	.global _ZN6Course15SetMapDataFlag3Eib
 	arm_func_start _ZN6Course15SetMapDataFlag3Eib
-_ZN6Course15SetMapDataFlag3Eib: ; 0x0207d95c
+_ZN6Course15SetMapDataFlag3Eib: @ 0x0207d95c
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
@@ -1274,7 +1274,7 @@ _ZN6Course15SetMapDataFlag3Eib: ; 0x0207d95c
 
 	.global _ZN6Course15GetMapDataFlag3Ei
 	arm_func_start _ZN6Course15GetMapDataFlag3Ei
-_ZN6Course15GetMapDataFlag3Ei: ; 0x0207d97c
+_ZN6Course15GetMapDataFlag3Ei: @ 0x0207d97c
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl _ZN6Course18FindCurrentMapDataEv
@@ -1285,7 +1285,7 @@ _ZN6Course15GetMapDataFlag3Ei: ; 0x0207d97c
 
 	.global _ZN6Course15SetMapDataFlag4Eii
 	arm_func_start _ZN6Course15SetMapDataFlag4Eii
-_ZN6Course15SetMapDataFlag4Eii: ; 0x0207d994
+_ZN6Course15SetMapDataFlag4Eii: @ 0x0207d994
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r1
 	mov r4, r2
@@ -1298,7 +1298,7 @@ _ZN6Course15SetMapDataFlag4Eii: ; 0x0207d994
 
 	.global _ZN6Course15GetMapDataFlag4Ei
 	arm_func_start _ZN6Course15GetMapDataFlag4Ei
-_ZN6Course15GetMapDataFlag4Ei: ; 0x0207d9b4
+_ZN6Course15GetMapDataFlag4Ei: @ 0x0207d9b4
 	stmdb sp!, {r4, lr}
 	mov r4, r1
 	bl _ZN6Course18FindCurrentMapDataEv
@@ -1309,7 +1309,7 @@ _ZN6Course15GetMapDataFlag4Ei: ; 0x0207d9b4
 
 	.global _ZN6Course11FindMapDataEj
 	arm_func_start _ZN6Course11FindMapDataEj
-_ZN6Course11FindMapDataEj: ; 0x0207d9cc
+_ZN6Course11FindMapDataEj: @ 0x0207d9cc
 	ldrb r2, [r0, #0xb0]
 	mov ip, #0
 	cmp r2, #0
@@ -1335,13 +1335,13 @@ _0207da0c:
 
 	.global _ZN6Course18FindCurrentMapDataEv
 	arm_func_start _ZN6Course18FindCurrentMapDataEv
-_ZN6Course18FindCurrentMapDataEv: ; 0x0207da14
+_ZN6Course18FindCurrentMapDataEv: @ 0x0207da14
 	ldrb r3, [r0, #0x1c]
 	mov r1, #0xa
 	ldrb r2, [r0, #0x1d]
 	mla r1, r3, r1, r0
 	add r1, r1, r2
-	ldr ip, _0207da34 ; =_ZN6Course11FindMapDataEj
+	ldr ip, _0207da34 @ =_ZN6Course11FindMapDataEj
 	ldrb r1, [r1, #0x20]
 	bx ip
 	.align 2, 0
@@ -1350,110 +1350,110 @@ _0207da34: .word _ZN6Course11FindMapDataEj
 
     .data
 	.global data_ov00_020e2058
-data_ov00_020e2058: ; 0x020e2058
+data_ov00_020e2058: @ 0x020e2058
 	.ascii "%s:objlist/motype.zob"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2070
-data_ov00_020e2070: ; 0x020e2070
+data_ov00_020e2070: @ 0x020e2070
 	.ascii "%s:objlist/motype_%d.zob"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e208c
-data_ov00_020e208c: ; 0x020e208c
+data_ov00_020e208c: @ 0x020e208c
 	.ascii "%s:objlist/npctype.zob"
 	.byte 0x00, 0x00
 	.global data_ov00_020e20a4
-data_ov00_020e20a4: ; 0x020e20a4
+data_ov00_020e20a4: @ 0x020e20a4
 	.ascii "%s:objlist/npctype_%d.zob"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e20c0
-data_ov00_020e20c0: ; 0x020e20c0
+data_ov00_020e20c0: @ 0x020e20c0
 	.ascii "%s:tex/mapModel.nsbtx"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e20d8
-data_ov00_020e20d8: ; 0x020e20d8
+data_ov00_020e20d8: @ 0x020e20d8
 	.ascii "%s:arrange/%s.zab"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e20ec
-data_ov00_020e20ec: ; 0x020e20ec
+data_ov00_020e20ec: @ 0x020e20ec
 	.ascii "%s:objlist/motype.zob"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2104
-data_ov00_020e2104: ; 0x020e2104
+data_ov00_020e2104: @ 0x020e2104
 	.ascii "%s:objlist/npctype.zob"
 	.byte 0x00, 0x00
 	.global data_ov00_020e211c
-data_ov00_020e211c: ; 0x020e211c
+data_ov00_020e211c: @ 0x020e211c
 	.ascii "%s:tex/mapModel.nsbtx"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2134
-data_ov00_020e2134: ; 0x020e2134
+data_ov00_020e2134: @ 0x020e2134
 	.ascii "%s:arrange/%s.zab"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2148
-data_ov00_020e2148: ; 0x020e2148
+data_ov00_020e2148: @ 0x020e2148
 	.ascii "%s:nsbmd/%s_%d%d.nsbmd"
 	.byte 0x00, 0x00
 	.global data_ov00_020e2160
-data_ov00_020e2160: ; 0x020e2160
+data_ov00_020e2160: @ 0x020e2160
 	.ascii "%s:zcb/%s_%d%d.zcb"
 	.byte 0x00, 0x00
 	.global data_ov00_020e2174
-data_ov00_020e2174: ; 0x020e2174
+data_ov00_020e2174: @ 0x020e2174
 	.ascii "Map2D/%s/map00.bin"
 	.byte 0x00, 0x00
 	.global data_ov00_020e2188
-data_ov00_020e2188: ; 0x020e2188
+data_ov00_020e2188: @ 0x020e2188
 	.ascii "Map2D/%s/mapwd.bin"
 	.byte 0x00, 0x00
 	.global data_ov00_020e219c
-data_ov00_020e219c: ; 0x020e219c
+data_ov00_020e219c: @ 0x020e219c
 	.ascii "Map2D/%s/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e21b4
-data_ov00_020e21b4: ; 0x020e21b4
+data_ov00_020e21b4: @ 0x020e21b4
 	.ascii "Map2D/seatest/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e21d0
-data_ov00_020e21d0: ; 0x020e21d0
+data_ov00_020e21d0: @ 0x020e21d0
 	.ascii "Map2D/sea_minigame/map%d%d.bin"
 	.byte 0x00, 0x00
 	.global data_ov00_020e21f0
-data_ov00_020e21f0: ; 0x020e21f0
+data_ov00_020e21f0: @ 0x020e21f0
 	.ascii "Map2D/sea_fishing/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2210
-data_ov00_020e2210: ; 0x020e2210
+data_ov00_020e2210: @ 0x020e2210
 	.ascii "Map2D/sea_salvage/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2230
-data_ov00_020e2230: ; 0x020e2230
+data_ov00_020e2230: @ 0x020e2230
 	.ascii "Map2D/boss_last2/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e2250
-data_ov00_020e2250: ; 0x020e2250
+data_ov00_020e2250: @ 0x020e2250
 	.ascii "Map2D/sea/map%d%d_02.bin"
 	.byte 0x00, 0x00, 0x00, 0x00
 	.global data_ov00_020e226c
-data_ov00_020e226c: ; 0x020e226c
+data_ov00_020e226c: @ 0x020e226c
 	.ascii "Map2D/sea/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e2284
-data_ov00_020e2284: ; 0x020e2284
+data_ov00_020e2284: @ 0x020e2284
 	.ascii "Map2D/sea/map%d%d.bin"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e229c
-data_ov00_020e229c: ; 0x020e229c
+data_ov00_020e229c: @ 0x020e229c
 	.ascii "%s:zob/motype_%d%d_%d.zob"
 	.byte 0x00, 0x00, 0x00
 	.global data_ov00_020e22b8
-data_ov00_020e22b8: ; 0x020e22b8
+data_ov00_020e22b8: @ 0x020e22b8
 	.ascii "%s:zob/npctype_%d%d_%d.zob"
 	.byte 0x00, 0x00
 	.global data_ov00_020e22d4
-data_ov00_020e22d4: ; 0x020e22d4
+data_ov00_020e22d4: @ 0x020e22d4
 	.ascii "%s:mcb/%s_%d%d.mcb"
 	.byte 0x00, 0x00
 	.global data_ov00_020e22e8
-data_ov00_020e22e8: ; 0x020e22e8
+data_ov00_020e22e8: @ 0x020e22e8
 	.ascii "%s:zmb/%s_%d%d.zmb"
 	.byte 0x00, 0x00
