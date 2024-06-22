@@ -287,18 +287,20 @@ ARM bool Actor::func_ov00_020c195c() {
 
 struct UnkStruct2 {
     /* 0 */ u32 mUnk_0;
-    /* 4 */ s32 mUnk_4;
+    /* 4 */ u32 mUnk_4;
     /* 8 */
 };
 extern UnkStruct2 data_027e077c;
-extern u8 *data_02056be4;
+extern u8 data_02056be4[];
 extern "C" bool func_ov05_02103f4c(s32 param1);
 extern s32 data_027e103c;
 ARM bool Actor::func_ov00_020c198c() {
+    u32 unk1 = data_027e077c.mUnk_0;
+    u32 unk2 = data_027e077c.mUnk_4;
     if (
         data_027e077c.mUnk_0 != data_027e077c.mUnk_4
-        || (data_02056be4[data_027e077c.mUnk_0] & 1) != 0
-        || (data_02056be4[data_027e077c.mUnk_0] & 4) != 0
+        || (data_02056be4[unk1] & 1) != 0
+        || (data_02056be4[unk2] & 4) != 0
         || func_ov05_02103f4c(data_027e103c)
         || gPlayer->mHealth <= 0
     ) {
