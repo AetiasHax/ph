@@ -5018,7 +5018,7 @@ _021716f8:
 	ldmeqia sp!, {r4, pc}
 	ldr r0, _021718cc ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	addeq sp, sp, #0x18
 	ldmeqia sp!, {r4, pc}

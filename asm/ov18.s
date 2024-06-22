@@ -14417,7 +14417,7 @@ func_ov18_02166e7c: ; 0x02166e7c
 	ldmeqia sp!, {r4, pc}
 	ldr r0, _02166f18 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	ldmeqia sp!, {r4, pc}
 	mov r0, r4

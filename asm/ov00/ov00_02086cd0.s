@@ -6630,7 +6630,7 @@ func_ov00_0208c3a4: ; 0x0208c3a4
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0208c448
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}
@@ -6675,7 +6675,7 @@ func_ov00_0208c468: ; 0x0208c468
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _0208c4e0
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}

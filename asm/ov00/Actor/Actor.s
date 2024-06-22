@@ -538,7 +538,7 @@ _020c19f4:
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _020c1a14
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	moveq r0, #0
 	ldmeqia sp!, {r3, pc}

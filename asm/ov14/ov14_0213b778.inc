@@ -510,7 +510,7 @@
 .extern func_ov00_020bcdb8
 .extern func_ov00_020bcf50
 .extern func_ov00_020bcfb8
-.extern func_ov00_020bd304
+.extern _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 .extern func_ov00_020bd318
 .extern func_ov00_020bd5f4
 .extern func_ov00_020bd5fc

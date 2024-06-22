@@ -2797,7 +2797,7 @@ _0218b870:
 	beq _0218bda8
 	ldr r0, _0218bdfc ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0218bda8
 	add r0, r4, #0x1d8
@@ -2984,7 +2984,7 @@ _0218bb2c:
 	beq _0218bda8
 	ldr r0, _0218bdfc ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0218bda8
 	ldrsh r0, [r4, #0x12]
@@ -4099,7 +4099,7 @@ _0218ca08:
 	bne _0218cbd0
 	ldr r0, _0218cbe4 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0218cbd0
 	mov r0, r6
@@ -4117,7 +4117,7 @@ _0218ca3c:
 	bge _0218ca80
 	ldr r0, _0218cbe4 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0218ca80
 	mov r0, r6
@@ -4203,7 +4203,7 @@ _0218cb5c:
 	bge _0218cbd0
 	ldr r0, _0218cbe4 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0218cbd0
 	mov r0, r6

@@ -261,7 +261,7 @@
 .extern func_ov00_020a6110
 .extern func_ov00_020a61ac
 .extern func_ov00_020b3ea8
-.extern func_ov00_020bd304
+.extern _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 .extern func_ov00_020bd618
 .extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020c3348

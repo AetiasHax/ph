@@ -161,7 +161,7 @@
 .extern func_ov00_020bbb18
 .extern func_ov00_020bc500
 .extern func_ov00_020bcf50
-.extern func_ov00_020bd304
+.extern _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 .extern func_ov00_020bf008
 .extern func_ov00_020c0c08
 .extern func_ov00_020c0ec0

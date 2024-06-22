@@ -15137,15 +15137,15 @@ _020bd2fc:
 	ldmia sp!, {r3, r4, r5, pc}
 	arm_func_end func_ov00_020bd2bc
 
-	.global func_ov00_020bd304
-	arm_func_start func_ov00_020bd304
-func_ov00_020bd304: ; 0x020bd304
+	.global _ZN14PlayerLinkBase18func_ov00_020bd304Ev
+	arm_func_start _ZN14PlayerLinkBase18func_ov00_020bd304Ev
+_ZN14PlayerLinkBase18func_ov00_020bd304Ev: ; 0x020bd304
 	ldrb r0, [r0, #0x5f]
 	cmp r0, #0
 	moveq r0, #1
 	movne r0, #0
 	bx lr
-	arm_func_end func_ov00_020bd304
+	arm_func_end _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 
 	.global func_ov00_020bd318
 	arm_func_start func_ov00_020bd318

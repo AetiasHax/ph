@@ -58,7 +58,7 @@
 .extern func_ov00_0207a1c8
 .extern func_ov00_0207b89c
 .extern func_ov00_02087ef0
-.extern func_ov00_020bd304
+.extern _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 .extern func_ov00_020c5924
 .extern func_ov00_020c8398
 .extern func_ov05_02103f4c

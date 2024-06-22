@@ -2270,7 +2270,7 @@ _0216f40c:
 	bne _0216f450
 	ldr r0, _0216f460 ; =gPlayerLink
 	ldr r0, [r0]
-	bl func_ov00_020bd304
+	bl _ZN14PlayerLinkBase18func_ov00_020bd304Ev
 	cmp r0, #0
 	beq _0216f450
 	mov r0, r4
