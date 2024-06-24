@@ -1,4 +1,4 @@
-build/
+build*/
 .vscode/
 ph_*/
 *.nds
