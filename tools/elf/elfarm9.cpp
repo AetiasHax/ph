@@ -2,7 +2,7 @@
 #include <fstream> // ofstream, ios
 #include <initializer_list> // initializer_list
 #include <iostream> // cout, cerr, endl
-#include <string> // string
+#include <string> // string, compare
 
 #include <elfio/elfio.hpp>
 
@@ -10,11 +10,17 @@
 
 using namespace ELFIO;
 
+bool EndsWith(const std::string &str, const std::string &suffix) {
+    if (str.length() < suffix.length()) return false;
+    return str.compare(str.length() - suffix.length(), suffix.length(), suffix) == 0;
+}
+
 bool FindSectionsToExtract(const elfio &elf, std::vector<const section*> &outSections) {
     for (int i = 0; i < elf.sections.size(); ++i) {
         const section *section = elf.sections[i];
         const std::string &name = section->get_name();
         if (name.empty() || name[0] == '.') continue;
+        if (EndsWith(name, "bss")) continue;
         outSections.push_back(section);
     }
     return true;
@@ -26,7 +32,9 @@ const section* TakeSectionWithName(std::vector<const section*> &sections, const 
         std::cerr << "Failed to find section '" << name << "'" << std::endl;
         return nullptr;
     }
-    return *sections.erase(it);
+    const section *section = *it;
+    sections.erase(it);
+    return section;
 }
 
 bool WriteFile(const std::string &filename, std::initializer_list<const section*> sections) {

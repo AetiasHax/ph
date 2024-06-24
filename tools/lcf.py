@@ -276,9 +276,12 @@ OVERLAYS = [
 
 BUILD = 'build/'
 
-def max_of(overlays: list[Overlay]):
+def max_of(overlays: list[Overlay], bss = True):
+    if type(overlays) is not list:
+        overlays = [overlays]
     overlay = overlays[0]
-    end_addr = f'LOADADDR({overlay}) + SIZEOF({overlay})'
+    suffix = '_bss' if bss else ''
+    end_addr = f'LOADADDR({overlay}{suffix}) + SIZEOF({overlay}{suffix})'
     if len(overlays) < 2: return end_addr
     return (
         f'MAX({end_addr}, '
@@ -297,7 +300,7 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
     file.write('    METADATA  (r) : ORIGIN = 0x2000, LENGTH = 0x1000\n')
     file.write('    OV_TABLE  (r) : ORIGIN = 0x3000, LENGTH = 0x100000\n')
     file.write('\n')
-    # file.write('    DISCARD (r) : ORIGIN = 0x100000000, LENGTH = -1\n')
+    file.write('    QUIET (r) : ORIGIN = 0x8000000, LENGTH = 0x8000000\n')
     file.write('}\n')
     file.write('\n')
     file.write('SECTIONS {\n')
@@ -305,13 +308,23 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
     file.write('        *(.dead)\n')
     file.write('    }\n')
     file.write('\n')
+    file.write('    .quiet : {\n')
+    file.write('        *(.glue_7)\n')
+    file.write('        *(.glue_7t)\n')
+    file.write('        *(.vfp11_veneer)\n')
+    file.write('        *(.v4_bx)\n')
+    file.write('    } > QUIET\n')
+    file.write('\n')
     file.write('    itcm : {\n')
     file.write('        . = ALIGN(32);\n')
     file.write('        itcm_start = .;\n')
     for obj in ITCM_OBJECTS: file.write(f'        {obj}.o(.text)\n')
     for obj in ITCM_OBJECTS: file.write(f'        {obj}.o(.rodata)\n')
     file.write('        itcm_end = .;\n')
-    file.write('        itcm_size = itcm_end - itcm_start;\n')
+    file.write('    } > ITCM\n')
+    file.write('    itcm_size = itcm_end - itcm_start;\n')
+    file.write('\n')
+    file.write('    itcm_bss : {\n')
     file.write('        . = ALIGN(32);\n')
     for obj in ITCM_OBJECTS: file.write(f'        {obj}.o(.bss)\n')
     for obj in ITCM_OBJECTS: file.write(f'        {obj}.o(.sbss)\n')
@@ -323,10 +336,11 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
     file.write('        dtcm_start = .;\n')
     for obj in DTCM_OBJECTS: file.write(f'        {obj}.o(.data)\n')
     file.write('        dtcm_end = .;\n')
-    file.write('        dtcm_size = dtcm_end - dtcm_start;\n')
     file.write('        . = ALIGN(32);\n')
-    file.write('        dtcm_end = .;\n')
-    file.write('        dtcm_aligned_size = dtcm_end - dtcm_start;\n')
+    file.write('    } > DTCM\n')
+    file.write('    dtcm_size = dtcm_end - dtcm_start;\n')
+    file.write('\n')
+    file.write('    dtcm_bss : {\n')
     file.write('        . = ALIGN(32);\n')
     for obj in DTCM_OBJECTS: file.write(f'        {obj}.o(.bss)\n')
     for obj in DTCM_OBJECTS: file.write(f'        {obj}.o(.sbss)\n')
@@ -344,6 +358,9 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
     for obj in ARM9_OBJECTS: file.write(f'        {obj}.o(.ctor)\n')
     file.write('        . = ALIGN(32);\n')
     for obj in ARM9_OBJECTS: file.write(f'        {obj}.o(.data)\n')
+    file.write('    } > RAM\n')
+    file.write('\n')
+    file.write('    arm9_bss : {\n')
     file.write('        . = ALIGN(32);\n')
     file.write('        arm9_bss_start = .;\n')
     for obj in ARM9_OBJECTS: file.write(f'        {obj}.o(.bss)\n')
@@ -355,10 +372,7 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
     file.write('\n')
     for overlay in OVERLAYS:
         file.write('    OVERLAY ')
-        if type(overlay.after) is list:
-            file.write(max_of(overlay.after))
-        else:
-            file.write(f'LOADADDR({overlay.after}) + SIZEOF({overlay.after})')
+        file.write(max_of(overlay.after))
         file.write(' : {\n')
         file.write(f'        {overlay} ' + '{\n')
         file.write('            . = ALIGN(32);\n')
@@ -377,16 +391,22 @@ with open(f'{BUILD}arm9_linker_script.ld', 'w') as file:
         file.write('\n')
         file.write('            . = ALIGN(32);\n')
         file.write(f'            {overlay}_end = .;\n')
-        file.write(f'            {overlay}_size = {overlay}_end - {overlay}_start;\n')
+        file.write('        }\n')
+        file.write('    } > RAM\n')
+        file.write(f'    {overlay}_size = {overlay}_end - {overlay}_start;\n')
         file.write('\n')
+        file.write('    OVERLAY ')
+        file.write(max_of(overlay.name, False))
+        file.write(' : {\n')
+        file.write(f'        {overlay}_bss ' + '{\n')
         file.write(f'            {overlay}_bss_start = .;\n')
         for obj in overlay.objects: file.write(f'            {obj}.o(.bss)\n')
         for obj in overlay.objects: file.write(f'            {obj}.o(.sbss)\n')
         file.write(f'            {overlay}_bss_end = .;\n')
-        file.write(f'            {overlay}_bss_size = {overlay}_bss_end - {overlay}_bss_start;\n')
         file.write('            . = ALIGN(32);\n')
         file.write('        }\n')
         file.write('    } > RAM\n')
+        file.write(f'    {overlay}_bss_size = {overlay}_bss_end - {overlay}_bss_start;\n')
         file.write('\n')
     file.write('    autoloads : {\n')
     file.write('        autoloads_start = arm9_bss_start + itcm_size + dtcm_size;\n')
