@@ -143,6 +143,7 @@ $(CXX_CTXS) $(C_CTXS): $(TARGET_DIR)/%.ctx: %
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
 	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(LD) $(LD_FLAGS) -T $(LCF_FILE)
+	$(TOOLS_DIR)/elf/elfarm9 -e $(TARGET_DIR)/main.bin -d $(TARGET_DIR)/
 
 .PHONY: compress
 compress: $(OV_LZS)
