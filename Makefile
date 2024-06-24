@@ -45,16 +45,16 @@ CHECKSUM := ph_$(REGION_NAME).sha1
 MW_VER     := 2.0/sp1p5
 ASM        := arm-none-eabi-as
 CC         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
-LD         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
+LD         := arm-none-eabi-ld
 MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
-LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
+LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.ld
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
-ASM_FLAGS := -march=armv5te --defsym $(REGION)=0 -I asm -g
+ASM_FLAGS := -march=armv5te -mthumb-interwork --defsym $(REGION)=0 -I asm -g
 CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
 C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
-LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
+LD_FLAGS  := --architecture=armv5te --use-blx --no-check-sections -nostdlib --entry=Entry -Map=ph.map -o main.bin
 
 ifeq ($(NONMATCHING),1)
 	CC_FLAGS += -DNONMATCHING
@@ -142,7 +142,7 @@ $(CXX_CTXS) $(C_CTXS): $(TARGET_DIR)/%.ctx: %
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
-	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
+	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(LD) $(LD_FLAGS) -T $(LCF_FILE)
 
 .PHONY: compress
 compress: $(OV_LZS)
