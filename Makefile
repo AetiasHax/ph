@@ -43,18 +43,20 @@ BASE_ROM := baserom_$(REGION_NAME).nds
 CHECKSUM := ph_$(REGION_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-ASM        := arm-none-eabi-as
+ASM        := clang-18
 CC         := $(WINE) $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
 LD         := arm-none-eabi-ld
+# LD         := ld.lld-18
 MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
 LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.ld
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
-ASM_FLAGS := -march=armv5te -mthumb-interwork --defsym $(REGION)=0 -I asm -g
+ASM_FLAGS := -c --target=arm -mcpu=arm946e-s -mfloat-abi=soft -Wa,-defsym,$(REGION)=0 -I asm -g
 CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
 C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
-LD_FLAGS  := --architecture=armv5te --use-blx --no-check-sections -nostdlib --entry=Entry -Map=ph.map -o main.bin
+LD_FLAGS  := --architecture=armv5te --use-blx -support-old-code --no-check-sections -nostdlib --entry=Entry -Map=ph.map -o main.bin
+# LD_FLAGS  := --no-check-sections --nostdlib --entry=Entry --Map=ph.map -o main.bin
 
 ifeq ($(NONMATCHING),1)
 	CC_FLAGS += -DNONMATCHING
@@ -124,7 +126,8 @@ lcf: setup $(TOOLS_DIR)/lcf.py
 
 $(ASM_OBJS): $(TARGET_DIR)/%.o: %
 	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(ASM) $(ASM_FLAGS) $< -o $@
+	$(ASM) $(ASM_FLAGS) $< -o $@
+	# $(TOOLS_DIR)/elf/elfrecode -e $@
 
 $(CXX_OBJS): $(TARGET_DIR)/%.o: % $(TARGET_DIR)/%.ctx
 	mkdir -p $(dir $@)
@@ -142,7 +145,7 @@ $(CXX_CTXS) $(C_CTXS): $(TARGET_DIR)/%.ctx: %
 
 .PHONY: link
 link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
-	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(LD) $(LD_FLAGS) -T $(LCF_FILE)
+	cd $(TARGET_DIR) && $(LD) $(LD_FLAGS) -T $(LCF_FILE) @$(OBJS_FILE)
 	$(TOOLS_DIR)/elf/elfarm9 -e $(TARGET_DIR)/main.bin -d $(TARGET_DIR)/
 
 .PHONY: compress
