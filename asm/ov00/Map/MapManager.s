@@ -2679,9 +2679,9 @@ _ZN10MapManager16MapData_vfunc_68Ev: ; 0x02083ee0
 	ldmia sp!, {r3, pc}
 	arm_func_end _ZN10MapManager16MapData_vfunc_68Ev
 
-	.global _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
-	arm_func_start _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
-_ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_: ; 0x02083ef8
+	.global _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
+	arm_func_start _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
+_ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i: ; 0x02083ef8
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
 	add ip, sp, #0
@@ -2701,7 +2701,7 @@ _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_: ; 0x02083ef8
 	blx ip
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
-	arm_func_end _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+	arm_func_end _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 
 	.global _ZN10MapManager18func_ov00_02083f44EP5Vec3p
 	arm_func_start _ZN10MapManager18func_ov00_02083f44EP5Vec3p
@@ -2717,7 +2717,7 @@ _ZN10MapManager18func_ov00_02083f44EP5Vec3p: ; 0x02083f44
 	str lr, [sp]
 	str ip, [sp, #4]
 	str r4, [sp, #8]
-	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0

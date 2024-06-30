@@ -37609,7 +37609,7 @@ func_ov12_021314e8: ; 0x021314e8
 	str ip, [sp, #4]
 	ldr ip, [r4, #0x5c]
 	str ip, [sp, #8]
-	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 	ldr r1, _021315b8 ; =data_ov12_02137680
 	str r0, [r4, #0x4c]
 	ldr r2, [r1, #0x28]

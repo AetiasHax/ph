@@ -2351,7 +2351,7 @@ _ZN5Actor18func_ov00_020c3094Ev: ; 0x020c3094
 	ldr ip, [r5, #0x5c]
 	mov r3, r4
 	str ip, [sp, #8]
-	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 	ldr r1, [r5, #0x4c]
 	cmp r1, r0
 	movle r4, #1

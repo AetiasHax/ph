@@ -7092,7 +7092,7 @@ _01ffdfa8:
 	mov r1, r7
 	mov r2, r9
 	str r4, [sp, #0x31c]
-	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+	bl _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 	ldr r1, [sp, #0x1d4]
 	add r0, r0, r8
 	cmp r1, r0

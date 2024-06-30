@@ -6,7 +6,7 @@
 .extern Vec3p_Sub
 .extern _ZN10EquipSword12GetEquipRopeEv
 .extern _ZN10MapManager18func_ov00_02083570Eii
-.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 .extern _ZN10MapManager18func_ov00_02084b38Eiii
 .extern _ZN10MapManager18func_ov00_02084be0Eii
 .extern _ZN10MapManager18func_ov00_02084c5cEii

@@ -127,7 +127,7 @@ unk8 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
 unk8 MapManager::MapData_vfunc_60() {}
 unk8 MapManager::func_ov00_02083e70() {}
 unk8 MapManager::MapData_vfunc_68() {}
-s32 MapManager::func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3) {}
+s32 MapManager::func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3, unk32 param_4) {}
 void MapManager::func_ov00_02083f44(Vec3p *param_2) {}
 unk8 MapManager::MapData_vfunc_6c() {}
 unk8 MapManager::MapData_vfunc_70() {}

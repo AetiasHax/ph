@@ -25,7 +25,7 @@
 .extern _ZN10MapManager18func_ov00_02083c24Ei
 .extern _ZN10MapManager18func_ov00_02083c50Ei
 .extern _ZN10MapManager18func_ov00_02083e34Ecci
-.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 .extern _ZN10MapManager18func_ov00_02083fb0EiPS_i
 .extern _ZN10MapManager18func_ov00_020840a0Ecci
 .extern _ZN10PlayerBase12CollidesWithEP8Cylinder
