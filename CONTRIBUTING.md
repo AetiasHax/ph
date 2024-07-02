@@ -122,7 +122,7 @@ Non-matching functions must be written as follows:
 ```cpp
 #include "global.hpp"
 
-NONMATCH void MyFunction() {
+void NONMATCH(MyFunction)() {
     #ifndef NONMATCHING
     #include "../asm/path/to/asm.inc"
     #else
