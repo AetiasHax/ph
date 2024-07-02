@@ -128,7 +128,7 @@ bool GetFunctionSymbols(const elfio &elf, std::vector<Symbol> &outSymbols) {
         if (symbol.name.find("@", 0) == 0) continue;
         if (symbol.name.find("$", 0) == 0) continue;
         if (symbol.name.find(".", 0) == 0) continue;
-        if (symbol.section.name != ".text") continue;
+        if (symbol.section.name != ".text" && symbol.section.name != ".data") continue;
 
         symbols.push_back(symbol);
     }
@@ -141,6 +141,7 @@ bool FindSymbolsToKill(const char *srcFile, std::unordered_set<std::string> &out
     std::ifstream file(srcFile);
 
     const std::string killMacro = "KILL(";
+    const std::string lineComment = "//";
     std::string line;
     size_t row = 0;
     std::unordered_set<std::string> symbolsToKill;
@@ -150,6 +151,9 @@ bool FindSymbolsToKill(const char *srcFile, std::unordered_set<std::string> &out
         while (true) {
             size_t macroOffset = line.find(killMacro, endOffset);
             if (macroOffset == std::string::npos) break;
+            
+            size_t commentOffset = line.find(lineComment, endOffset);
+            if (macroOffset > commentOffset) break;
 
             size_t symbolOffset = macroOffset + killMacro.length();
             symbolOffset = line.find_first_not_of(" \t", symbolOffset);

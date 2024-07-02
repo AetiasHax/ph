@@ -46,12 +46,12 @@ _020ad800:
 	cmp r0, #1
 	bhi _020ad874
 _020ad840:
-	lda r0, data_027e0fc8
+	lda r0, gPlayerLink
 	ldr r0, [r0]
 	cmp r0, #0
 	beq _020ad860
 	mov r1, r5
-	bl func_ov00_020bbd80
+	bl _ZN14PlayerLinkBase18func_ov00_020bbd80Ei
 	cmp r0, #0
 	beq _020ad874
 _020ad860:

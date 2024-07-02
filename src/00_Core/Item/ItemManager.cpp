@@ -1,4 +1,5 @@
 #include "Item/ItemManager.hpp"
+#include "Player/PlayerLinkBase.hpp"
 
 static const char *sShipPartTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
 
@@ -198,20 +199,20 @@ ARM void ItemManager::EquipItem_vfunc_38(unk32 param1) {
     (*mEquipItems)[equip]->vfunc_38(param1);
 }
 
-ARM bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
-    Vec4p result;
-    if ((*mEquipItems)[equipId]->vfunc_3c(&result)) {
+ARM bool ItemManager::EquipCollidesWith(Cylinder *hitbox, ItemFlag equipId) {
+    Cylinder equipHitbox;
+    if ((*mEquipItems)[equipId]->GetHitbox(&equipHitbox)) {
         s32 step = (*mEquipItems)[equipId]->vfunc_4c();
         if (step > 0) {
-            Approach_thunk(&result.y, param1->y, step);
+            Approach_thunk(&equipHitbox.pos.y, hitbox->pos.y, step);
         }
-        return func_01ffec34(param1, &result);
+        return hitbox->Overlaps(&equipHitbox);
     }
     return false;
 }
 
-ARM void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
-    (*mEquipItems)[equipId]->vfunc_2c();
+ARM s32 ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
+    return (*mEquipItems)[equipId]->vfunc_2c();
 }
 
 ARM EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
@@ -237,8 +238,7 @@ extern void *data_027e10a4;
 extern "C" bool func_ov15_02136670(void *param1);
 extern unk8 data_ov29_0217a4ac[];
 extern "C" bool _ZN10MapManager18func_ov00_020849f8Ei(void *param1);
-extern unk32 data_027e0fc8;
-extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
+extern "C" bool _ZN14PlayerLinkBase18func_ov00_020bbd80Ei(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
 extern "C" void _ZN11ItemManager12GetEquipItemEi();
 ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
@@ -258,7 +258,7 @@ ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
     if (
         mEquippedItem != ItemFlag_None &&
         (unk2 || (u32) mEquippedItem - 9 <= 1) &&
-        (data_027e0fc8 == 0 || func_ov00_020bbd80(data_027e0fc8, param1)) &&
+        (gPlayerLink == 0 || gPlayerLink->func_ov00_020bbd80(param1)) &&
         this->HasItem(mEquippedItem)
     ) {
         equipId = mEquippedItem;

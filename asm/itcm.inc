@@ -1,5 +1,5 @@
 #pragma once
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02054f54
 .extern data_02055058
 .extern data_0205ada4
@@ -57,7 +57,7 @@
 .extern _ZN10MapManager18func_ov00_020839d4Ev
 .extern _ZN10MapManager18func_ov00_020839f8Ev
 .extern _ZN10MapManager16MapData_vfunc_68Ev
-.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_
+.extern _ZN10MapManager18func_ov00_02083ef8EP5Vec3pS1_i
 .extern _ZN10MapManager16MapData_vfunc_78Ev
 .extern _ZN10MapManager18func_ov00_02086284EPiP5Vec3pS2_itS2_S2_
 .extern _ZN10MapManager18func_ov00_02086a84EPiP5Vec3pS2_iiiS2_S2_

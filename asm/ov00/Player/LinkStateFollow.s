@@ -42,11 +42,11 @@ _ZN15LinkStateFollow16MoveTowardTargetEv: ; 0x020a8f80
 	mov r1, r0
 	add r2, sp, #0
 	add r0, r4, #0x18
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r1, #0
 	add r0, sp, #0
 	str r1, [sp, #4]
-	bl func_01ff9cec
+	bl Vec3p_Length
 	ldr r1, _020a9024 ; =0x00000155
 	cmp r0, r1
 	addlt sp, sp, #0xc
@@ -71,7 +71,7 @@ _ZN15LinkStateFollow12OnStateLeaveEi: ; 0x020a9028
 	stmdb sp!, {r3, r4, r5, lr}
 	mov r5, r0
 	bl _ZN13LinkStateBase12OnStateLeaveEi
-	ldr r0, _020a90a8 ; =data_027e0fb8
+	ldr r0, _020a90a8 ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
@@ -102,7 +102,7 @@ _020a904c:
 	bl func_ov14_0214bd08
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020a90a8: .word data_027e0fb8
+_020a90a8: .word gPlayerControl
 _020a90ac: .word gMapManager
 	arm_func_end _ZN15LinkStateFollow12OnStateLeaveEi
 
@@ -189,7 +189,7 @@ _ZN15LinkStateFollow8vfunc_34EP5Vec3p: ; 0x020a915c
 	arm_func_start _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p: ; 0x020a9180
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r2, _020a9208 ; =data_027e0fb8
+	ldr r2, _020a9208 ; =gPlayerControl
 	mov r4, r1
 	ldr r3, [r2]
 	ldr r5, [r3, #0xa0]
@@ -224,7 +224,7 @@ _020a91f0:
 	moveq r0, #0
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_020a9208: .word data_027e0fb8
+_020a9208: .word gPlayerControl
 _020a920c: .word gMapManager
 	arm_func_end _ZN15LinkStateFollow18func_ov00_020a9180EP5Vec3p
 

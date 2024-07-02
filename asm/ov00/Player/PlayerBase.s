@@ -71,21 +71,21 @@ _020a7b88: .word data_027e0e58
 	.global _ZN10PlayerBase13GetEquipSwordEv
 	arm_func_start _ZN10PlayerBase13GetEquipSwordEv
 _ZN10PlayerBase13GetEquipSwordEv: ; 0x020a7b8c
-	ldr ip, _020a7b98 ; =func_01fffcec
+	ldr ip, _020a7b98 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #0
 	bx ip
 	.align 2, 0
-_020a7b98: .word func_01fffcec
+_020a7b98: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN10PlayerBase13GetEquipSwordEv
 
 	.global _ZN10PlayerBase14GetEquipShieldEv
 	arm_func_start _ZN10PlayerBase14GetEquipShieldEv
 _ZN10PlayerBase14GetEquipShieldEv: ; 0x020a7b9c
-	ldr ip, _020a7ba8 ; =func_01fffcec
+	ldr ip, _020a7ba8 ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_020a7ba8: .word func_01fffcec
+_020a7ba8: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN10PlayerBase14GetEquipShieldEv
 
 	.global _ZN10PlayerBase6LookAtEP5Vec3p
@@ -94,9 +94,9 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	stmdb sp!, {lr}
 	sub sp, sp, #0xc
 	mov r0, r1
-	ldr r1, _020a7bf8 ; =data_027e0f94
+	ldr r1, _020a7bf8 ; =gPlayerPos
 	add r2, sp, #0
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	cmp r0, #0
 	ldreq r0, [sp, #8]
@@ -105,14 +105,14 @@ _ZN10PlayerBase6LookAtEP5Vec3p: ; 0x020a7bac
 	ldmeqia sp!, {pc}
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
-	ldr r1, _020a7bfc ; =data_027e0fac
+	bl Atan2
+	ldr r1, _020a7bfc ; =gPlayerAngle
 	strh r0, [r1]
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	.align 2, 0
-_020a7bf8: .word data_027e0f94
-_020a7bfc: .word data_027e0fac
+_020a7bf8: .word gPlayerPos
+_020a7bfc: .word gPlayerAngle
 	arm_func_end _ZN10PlayerBase6LookAtEP5Vec3p
 
 	.global _ZN10PlayerBase18func_ov00_020a7c00Ei
@@ -128,9 +128,9 @@ _ZN10PlayerBase18func_ov00_020a7c00Ei: ; 0x020a7c00
 _020a7c18: .word data_027e0c54
 	arm_func_end _ZN10PlayerBase18func_ov00_020a7c00Ei
 
-	.global _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-	arm_func_start _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
-_ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder: ; 0x020a7c1c
+	.global _ZN10PlayerBase12CollidesWithEP8Cylinder
+	arm_func_start _ZN10PlayerBase12CollidesWithEP8Cylinder
+_ZN10PlayerBase12CollidesWithEP8Cylinder: ; 0x020a7c1c
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x10
 	ldr r2, [r0]
@@ -145,10 +145,10 @@ _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder: ; 0x020a7c1c
 	ldmltia sp!, {r4, pc}
 	add r1, sp, #0
 	mov r0, r4
-	bl func_01ffec34
+	bl _ZN8Cylinder8OverlapsEPS_
 	add sp, sp, #0x10
 	ldmia sp!, {r4, pc}
-	arm_func_end _ZN10PlayerBase18func_ov00_020a7c1cEP8Cylinder
+	arm_func_end _ZN10PlayerBase12CollidesWithEP8Cylinder
 
 	.global _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 	arm_func_start _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
@@ -188,17 +188,17 @@ _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i: ; 0x020a7c60
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end _ZN10PlayerBase18func_ov00_020a7c60EP5Vec3pS1_i
 
-	.global _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
-	arm_func_start _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
-_ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi: ; 0x020a7ce4
+	.global _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
+	arm_func_start _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
+_ZN10PlayerBase17EquipCollidesWithEP8Cylinderi: ; 0x020a7ce4
 	ldr r0, _020a7cf4 ; =gItemManager
-	ldr ip, _020a7cf8 ; =_ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
+	ldr ip, _020a7cf8 ; =_ZN11ItemManager17EquipCollidesWithEP8Cylinderi
 	ldr r0, [r0]
 	bx ip
 	.align 2, 0
 _020a7cf4: .word gItemManager
-_020a7cf8: .word _ZN11ItemManager18EquipItem_vfunc_3cEP5Vec4pi
-	arm_func_end _ZN10PlayerBase18EquipItem_vfunc_3cEP8Cylinderi
+_020a7cf8: .word _ZN11ItemManager17EquipCollidesWithEP8Cylinderi
+	arm_func_end _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi
 
 	.global _ZN10PlayerBase18EquipItem_vfunc_2cEv
 	arm_func_start _ZN10PlayerBase18EquipItem_vfunc_2cEv
@@ -324,7 +324,7 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	sub sp, sp, #0xc
 	mov r5, r1
 	ldr r0, [r5]
-	ldr r3, _020a7f64 ; =data_027e0f94
+	ldr r3, _020a7f64 ; =gPlayerPos
 	mov r4, r2
 	str r0, [r3]
 	ldr r1, [r5, #4]
@@ -343,11 +343,11 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	str r3, [sp, #8]
 	bl _ZN10MapManager16MapData_vfunc_68Ev
 	ldr ip, [r5, #4]
-	ldr r2, _020a7f6c ; =data_027e0fac
+	ldr r2, _020a7f6c ; =gPlayerAngle
 	cmp ip, r0
 	movle ip, r0
-	ldr r3, _020a7f64 ; =data_027e0f94
-	ldr r1, _020a7f70 ; =data_027e0fa0
+	ldr r3, _020a7f64 ; =gPlayerPos
+	ldr r1, _020a7f70 ; =gPlayerVel
 	mov r5, #0
 	ldr r0, _020a7f74 ; =data_027e0fb0
 	str r5, [r1]
@@ -355,11 +355,11 @@ _ZN10PlayerBase18TeleportToEntranceEib: ; 0x020a7e70
 	str ip, [r3, #4]
 	strh r4, [r2]
 	str r5, [r1, #4]
-	ldr r0, _020a7f78 ; =data_027e0fb8
+	ldr r0, _020a7f78 ; =gPlayerControl
 	str r5, [r1, #8]
 	ldr r0, [r0]
 	blx _ZN13PlayerControl9UpdateAimEv
-	ldr r0, _020a7f7c ; =data_027e0fe4
+	ldr r0, _020a7f7c ; =gActorManager
 	ldrb r1, [sp, #0x18]
 	ldr r0, [r0]
 	bl _ZN12ActorManager14Actor_vfunc_10Ej
@@ -384,13 +384,13 @@ _020a7f58:
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_020a7f64: .word data_027e0f94
+_020a7f64: .word gPlayerPos
 _020a7f68: .word gMapManager
-_020a7f6c: .word data_027e0fac
-_020a7f70: .word data_027e0fa0
+_020a7f6c: .word gPlayerAngle
+_020a7f70: .word gPlayerVel
 _020a7f74: .word data_027e0fb0
-_020a7f78: .word data_027e0fb8
-_020a7f7c: .word data_027e0fe4
+_020a7f78: .word gPlayerControl
+_020a7f7c: .word gActorManager
 _020a7f80: .word gAdventureFlags
 _020a7f84: .word data_027e0f64
 	arm_func_end _ZN10PlayerBase18TeleportToEntranceEib

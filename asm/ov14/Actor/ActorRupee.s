@@ -221,7 +221,7 @@ _ZN10ActorRupee4MoveEv: ; 0x0213b120
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, #1
 	strb r0, [r4, #0x9f]
 	ldr r0, [r4, #0x98]
@@ -236,7 +236,7 @@ _ZN10ActorRupee4MoveEv: ; 0x0213b120
 	strh r0, [r4, #0x9c]
 	mov r0, r4
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	movne r0, #0
 	strne r0, [r4, #0x60]
@@ -351,7 +351,7 @@ _ZN10ActorRupee6UpdateEb: ; 0x0213b254
 	bl _ZN10ActorRupee22GetRupeeCutsceneItemIdEv
 	movs r1, r0
 	bmi _0213b2f8
-	ldr r0, _0213b50c ; =data_027e0fc8
+	ldr r0, _0213b50c ; =gPlayerLink
 	ldr r0, [r0]
 	bl func_ov00_020bce48
 	cmp r0, #0
@@ -454,7 +454,7 @@ _0213b42c:
 	bl _ZN10ActorRupee18func_ov14_0213b204Ei
 	b _0213b4fc
 _0213b438:
-	ldr r1, _0213b50c ; =data_027e0fc8
+	ldr r1, _0213b50c ; =gPlayerLink
 	mov r0, r5
 	ldr r4, [r1]
 	bl _ZN10ActorRupee22GetRupeeCutsceneItemIdEv
@@ -513,7 +513,7 @@ _0213b4fc:
 	add sp, sp, #0x10
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0213b50c: .word data_027e0fc8
+_0213b50c: .word gPlayerLink
 _0213b510: .word gItemManager
 _0213b514: .word data_ov00_020eec9c
 _0213b518: .word gMapManager
@@ -854,7 +854,7 @@ data_ov14_021589fc: ; 0x021589fc
     .word _ZN10ActorRupee8vfunc_18Ej
 	.global data_ov14_02158a00
 data_ov14_02158a00: ; 0x02158a00
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov14_02158a04
 data_ov14_02158a04: ; 0x02158a04
     .word _ZN10ActorRupee8vfunc_20Ei
@@ -884,10 +884,10 @@ data_ov14_02158a24: ; 0x02158a24
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov14_02158a28
 data_ov14_02158a28: ; 0x02158a28
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov14_02158a2c
 data_ov14_02158a2c: ; 0x02158a2c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov14_02158a30
 data_ov14_02158a30: ; 0x02158a30
     .word _ZN5Actor8vfunc_4cEPi

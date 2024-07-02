@@ -145,7 +145,7 @@ _020abf0c:
 	cmp r6, r4
 	bne _020abf0c
 _020abf20:
-	ldr r0, _020abf4c ; =data_027e0fb8
+	ldr r0, _020abf4c ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r1, [r0, #0x80]
 	cmp r1, #0
@@ -158,17 +158,17 @@ _020abf38:
 	.align 2, 0
 _020abf44: .word data_027e103c
 _020abf48: .word data_027e1098
-_020abf4c: .word data_027e0fb8
+_020abf4c: .word gPlayerControl
 	arm_func_end _ZN13LinkStateItem12OnStateLeaveEi
 
 	.global _ZN13LinkStateItem15GetEquipBombchuEv
 	arm_func_start _ZN13LinkStateItem15GetEquipBombchuEv
 _ZN13LinkStateItem15GetEquipBombchuEv: ; 0x020abf50
-	ldr ip, _020abf5c ; =func_01fffcec
+	ldr ip, _020abf5c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #7
 	bx ip
 	.align 2, 0
-_020abf5c: .word func_01fffcec
+_020abf5c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end _ZN13LinkStateItem15GetEquipBombchuEv
 
 	.global _ZN13LinkStateItem16GetLinkStateMoveEv

@@ -42,8 +42,8 @@
 .extern data_ov00_020e9c88
 .extern data_ov00_020eec68
 .extern data_ov00_020eec9c
-.extern func_01ff9bc4
-.extern func_01ffa0f4
+.extern Vec3p_Add
+.extern Atan2
 .extern func_02019534
 .extern func_0201e388
 .extern func_0202d95c

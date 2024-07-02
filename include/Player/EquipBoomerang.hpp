@@ -1,15 +1,20 @@
 #pragma once
 
+#include "global.h"
 #include "types.h"
+
+#include "Actor/ActorRef.hpp"
 #include "Player/EquipItem.hpp"
+
+class Actor;
 
 class EquipBoomerang : public EquipItem {
 private:
     /* 00 (base) */
     /* 09 */ u8 mUnk_09[3];
     /* 0c */ void *mUnk_0c;
-    /* 10 */ u32 mUnk_10;
-    /* 14 */ u8 mUnk_18[8];
+    /* 10 */ ActorRef mRef;
+    /* 18 */ u8 mUnk_18[8];
     /* 20 */ u32 mUnk_20;
     /* 24 */ u32 mUnk_24;
     /* 28 */ u32 mUnk_28;
@@ -29,4 +34,6 @@ public:
     /* 30 */ virtual void vfunc_30() override; // func_ov53_0219913c
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov53_02199318
     /* 50 */
+
+    Actor* GetActor();
 };

@@ -236,7 +236,7 @@ _021897d4: .word 0xfffffe66
 func_ov44_021897d8: ; 0x021897d8
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
-	ldr r1, _02189818 ; =data_027e0f94
+	ldr r1, _02189818 ; =gPlayerPos
 	add r3, sp, #8
 	mov ip, r0
 	ldmia r1, {r0, r1, r2}
@@ -251,7 +251,7 @@ func_ov44_021897d8: ; 0x021897d8
 	add sp, sp, #0x14
 	ldmia sp!, {pc}
 	.align 2, 0
-_02189818: .word data_027e0f94
+_02189818: .word gPlayerPos
 	arm_func_end func_ov44_021897d8
 
 	.global func_ov44_0218981c
@@ -259,7 +259,7 @@ _02189818: .word data_027e0f94
 func_ov44_0218981c: ; 0x0218981c
 	stmdb sp!, {lr}
 	sub sp, sp, #0x14
-	ldr r1, _0218985c ; =data_027e0f94
+	ldr r1, _0218985c ; =gPlayerPos
 	add r3, sp, #8
 	mov ip, r0
 	ldmia r1, {r0, r1, r2}
@@ -274,7 +274,7 @@ func_ov44_0218981c: ; 0x0218981c
 	add sp, sp, #0x14
 	ldmia sp!, {pc}
 	.align 2, 0
-_0218985c: .word data_027e0f94
+_0218985c: .word gPlayerPos
 	arm_func_end func_ov44_0218981c
 
 	.global func_ov44_02189860
@@ -1019,7 +1019,7 @@ _0218a19c: .word 0x00000119
 	arm_func_start func_ov44_0218a1a0
 func_ov44_0218a1a0: ; 0x0218a1a0
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218a1c8 ; =data_027e0fe4
+	ldr r1, _0218a1c8 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -1029,7 +1029,7 @@ func_ov44_0218a1a0: ; 0x0218a1a0
 	str r0, [r4, #0x74]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218a1c8: .word data_027e0fe4
+_0218a1c8: .word gActorManager
 	arm_func_end func_ov44_0218a1a0
 
 	.global func_ov44_0218a1cc
@@ -1037,7 +1037,7 @@ _0218a1c8: .word data_027e0fe4
 func_ov44_0218a1cc: ; 0x0218a1cc
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
-	ldr r1, _0218a290 ; =data_027e0fe4
+	ldr r1, _0218a290 ; =gActorManager
 	mov r5, r0
 	ldr r0, [r1]
 	add r1, r5, #0x318
@@ -1087,18 +1087,18 @@ _0218a26c:
 	add r2, r4, #0x48
 	add r3, r5, #0x48
 	str ip, [sp, #4]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0218a290: .word data_027e0fe4
+_0218a290: .word gActorManager
 	arm_func_end func_ov44_0218a1cc
 
 	.global func_ov44_0218a294
 	arm_func_start func_ov44_0218a294
 func_ov44_0218a294: ; 0x0218a294
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218a2cc ; =data_027e0fe4
+	ldr r1, _0218a2cc ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -1112,7 +1112,7 @@ func_ov44_0218a294: ; 0x0218a294
 	movge r0, #0
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218a2cc: .word data_027e0fe4
+_0218a2cc: .word gActorManager
 	arm_func_end func_ov44_0218a294
 
 	.global func_ov44_0218a2d0
@@ -1159,7 +1159,7 @@ _0218a348:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r0, [r4, #0x74]
 	bl func_0202bba8
 	strh r0, [r4, #0x78]
@@ -1301,7 +1301,7 @@ _0218a4a4:
 	str ip, [r2, #4]
 	add r1, r5, #0xa
 	str r1, [r4, #0x13c]
-	ldr r0, _0218a600 ; =data_027e0fe4
+	ldr r0, _0218a600 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1340,14 +1340,14 @@ _0218a564:
 	mov r0, r4
 	str r2, [r1, #0x10]
 	bl func_ov44_0218a1a0
-	ldr r0, _0218a600 ; =data_027e0fe4
+	ldr r0, _0218a600 ; =gActorManager
 	add r1, r4, #0x320
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r5, r0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r4, r5, pc}
-	ldr r0, _0218a600 ; =data_027e0fe4
+	ldr r0, _0218a600 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1373,7 +1373,7 @@ _0218a5f4:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _0218a5fc: .word data_027e0764
-_0218a600: .word data_027e0fe4
+_0218a600: .word gActorManager
 	arm_func_end func_ov44_0218a468
 
 	.global func_ov44_0218a604
@@ -1413,7 +1413,7 @@ _0218a66c: ; jump table
 	b _0218a868 ; case 2
 	b _0218a8a8 ; case 3
 _0218a67c:
-	ldr r0, _0218a8f8 ; =data_027e0fe4
+	ldr r0, _0218a8f8 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1491,7 +1491,7 @@ _0218a79c:
 	ldrb r0, [r4, #0x342]
 	cmp r0, #0
 	bne _0218a7fc
-	ldr r0, _0218a900 ; =data_027e0f94
+	ldr r0, _0218a900 ; =gPlayerPos
 	add r3, sp, #0x14
 	ldmia r0, {r0, r1, r2}
 	stmia r3, {r0, r1, r2}
@@ -1517,7 +1517,7 @@ _0218a7fc:
 	bl func_ov44_0218a3fc
 	cmp r0, #0
 	beq _0218a8ec
-	ldr r1, _0218a8f8 ; =data_027e0fe4
+	ldr r1, _0218a8f8 ; =gActorManager
 	ldr r2, _0218a904 ; =0x52415448
 	ldr r1, [r1]
 	add r0, sp, #0
@@ -1550,7 +1550,7 @@ _0218a868:
 	ldr r1, [r4, #0x138]
 	cmp r1, r0, asr #12
 	ble _0218a8ec
-	ldr r0, _0218a8f8 ; =data_027e0fe4
+	ldr r0, _0218a8f8 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1565,7 +1565,7 @@ _0218a8a8:
 	bl func_ov44_0218a294
 	cmp r0, #0
 	beq _0218a8ec
-	ldr r0, _0218a8f8 ; =data_027e0fe4
+	ldr r0, _0218a8f8 ; =gActorManager
 	add r1, r4, #0x320
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -1582,9 +1582,9 @@ _0218a8ec:
 	add sp, sp, #0x20
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_0218a8f8: .word data_027e0fe4
+_0218a8f8: .word gActorManager
 _0218a8fc: .word data_027e0764
-_0218a900: .word data_027e0f94
+_0218a900: .word gPlayerPos
 _0218a904: .word 0x52415448
 	arm_func_end func_ov44_0218a604
 
@@ -1619,7 +1619,7 @@ func_ov44_0218a954: ; 0x0218a954
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -1901,7 +1901,7 @@ _0218ac5c:
 	add r1, sp, #0x30
 	add r2, sp, #0x24
 	add r0, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0x24
 	mov r1, #0x800
 	mov r2, r0
@@ -1913,11 +1913,11 @@ _0218ac5c:
 	add r0, sp, #0x24
 	add r1, sp, #0x30
 	add r2, sp, #0x18
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	add r0, sp, #0x18
 	add r2, sp, #0xc
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0xc]
 	str r0, [r4, #0x60]
 	ldr r0, [sp, #0x14]
@@ -1928,11 +1928,11 @@ _0218accc:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r4
 	mov r1, #0
 	ldr r5, [r4, #0x64]
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	ldrb r0, [r4, #0x111]
 	cmp r0, #0
 	addeq sp, sp, #0x3c
@@ -1971,7 +1971,7 @@ _0218ad78:
 	add r2, sp, #0
 	add r0, r4, #0x164
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	add r0, sp, #0
 	ldr r1, _0218ae40 ; =0x0000019a
 	mov r2, r0
@@ -1985,7 +1985,7 @@ _0218ad78:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldr r1, [r4, #0x168]
 	ldr r0, [r4, #0x4c]
 	cmp r0, r1
@@ -2060,7 +2060,7 @@ func_ov44_0218ae78: ; 0x0218ae78
 	addeq sp, sp, #0x3c
 	ldmeqia sp!, {r3, r4, pc}
 	ldrh r1, [r4, #0x78]
-	ldr r3, _0218af2c ; =data_02050f54
+	ldr r3, _0218af2c ; =gSinCosTable
 	add r0, sp, #0x18
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -2092,7 +2092,7 @@ func_ov44_0218ae78: ; 0x0218ae78
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0218af2c: .word data_02050f54
+_0218af2c: .word gSinCosTable
 _0218af30: .word 0x00000266
 _0218af34: .word data_ov00_020e9370
 	arm_func_end func_ov44_0218ae78
@@ -2136,7 +2136,7 @@ func_ov44_0218af88: ; 0x0218af88
 	sub sp, sp, #0x44
 	mov r4, r0
 	add r0, sp, #0x18
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x18
 	str r1, [sp, #0x34]
@@ -2165,7 +2165,7 @@ func_ov44_0218af88: ; 0x0218af88
 	ldr r1, _0218b034 ; =0x4e4b4559
 	mov r2, r5
 	bl func_ov00_020c4048
-	ldr r0, _0218b038 ; =data_027e0fe4
+	ldr r0, _0218b038 ; =gActorManager
 	add r1, sp, #4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -2177,7 +2177,7 @@ func_ov44_0218af88: ; 0x0218af88
 	.align 2, 0
 _0218b030: .word data_027e0fe8
 _0218b034: .word 0x4e4b4559
-_0218b038: .word data_027e0fe4
+_0218b038: .word gActorManager
 	arm_func_end func_ov44_0218af88
 
 	.global func_ov44_0218b03c
@@ -2595,7 +2595,7 @@ _0218b3b4: .word 0x00000404
 func_ov44_0218b3b8: ; 0x0218b3b8
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0x14
-	ldr r1, _0218b430 ; =data_027e0f94
+	ldr r1, _0218b430 ; =gPlayerPos
 	mov r4, r0
 	add r3, sp, #8
 	ldmia r1, {r0, r1, r2}
@@ -2625,7 +2625,7 @@ _0218b408:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0218b430: .word data_027e0f94
+_0218b430: .word gPlayerPos
 _0218b434: .word 0x00001555
 	arm_func_end func_ov44_0218b3b8
 
@@ -2647,7 +2647,7 @@ func_ov44_0218b450: ; 0x0218b450
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -2658,7 +2658,7 @@ func_ov44_0218b450: ; 0x0218b450
 	mov ip, #0
 	strh r0, [sp, #0x24]
 	ldr r2, [r4, #8]
-	ldr r5, _0218b528 ; =data_02050f54
+	ldr r5, _0218b528 ; =gSinCosTable
 	str r2, [sp, #0x2c]
 	ldr r2, [r4, #0xc]
 	ldr r0, _0218b52c ; =0x00000666
@@ -2676,7 +2676,7 @@ func_ov44_0218b450: ; 0x0218b450
 	ldrsh ip, [r5, ip]
 	str lr, [sp, #4]
 	str ip, [sp, #0xc]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	mov r0, #0
 	str r0, [sp]
 	ldr r0, _0218b530 ; =data_027e0fe8
@@ -2698,7 +2698,7 @@ func_ov44_0218b450: ; 0x0218b450
 	add sp, sp, #0x3c
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_0218b528: .word data_02050f54
+_0218b528: .word gSinCosTable
 _0218b52c: .word 0x00000666
 _0218b530: .word data_027e0fe8
 _0218b534: .word 0x4f435348
@@ -2811,7 +2811,7 @@ _0218b660: ; jump table
 	b _0218b6a8 ; case 3
 _0218b670:
 	ldr r1, [r4, #0x50]
-	ldr r0, _0218b6f8 ; =data_027e0f94
+	ldr r0, _0218b6f8 ; =gPlayerPos
 	str r1, [sp, #4]
 	ldr r1, [r0, #8]
 	ldr r2, _0218b6fc ; =0x0000019a
@@ -2825,7 +2825,7 @@ _0218b670:
 	str r0, [r4, #0x68]
 	b _0218b6dc
 _0218b6a8:
-	ldr r0, _0218b6f8 ; =data_027e0f94
+	ldr r0, _0218b6f8 ; =gPlayerPos
 	ldr r3, [r4, #0x48]
 	ldr r1, [r0]
 	ldr r2, _0218b6fc ; =0x0000019a
@@ -2847,7 +2847,7 @@ _0218b6dc:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0218b6f4: .word 0x00001555
-_0218b6f8: .word data_027e0f94
+_0218b6f8: .word gPlayerPos
 _0218b6fc: .word 0x0000019a
 	arm_func_end func_ov44_0218b630
 
@@ -3964,10 +3964,10 @@ func_ov44_0218c4b8: ; 0x0218c4b8
 	strgt r0, [r5, #0x16c]
 	add r0, r5, #0x48
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	mov r0, r5
 	mov r1, #0
-	bl func_01fffd04
+	bl _ZN5Actor13func_01fffd04Ei
 	cmp r0, #0
 	mov r0, r5
 	beq _0218c53c
@@ -3990,13 +3990,13 @@ _0218c56c:
 	ldr r1, [r5, #0x48]
 	ldr r0, [r5, #0x14]
 	sub r0, r1, r0
-	bl func_02042f74
+	bl abs
 	cmp r0, #0xa000
 	bge _0218c59c
 	ldr r1, [r5, #0x50]
 	ldr r0, [r5, #0x1c]
 	sub r0, r1, r0
-	bl func_02042f74
+	bl abs
 	cmp r0, #0xa000
 	blt _0218c5a8
 _0218c59c:
@@ -4024,11 +4024,11 @@ _0218c5cc:
 	.global func_ov44_0218c5e0
 	arm_func_start func_ov44_0218c5e0
 func_ov44_0218c5e0: ; 0x0218c5e0
-	ldr ip, _0218c5ec ; =func_01fffcec
+	ldr ip, _0218c5ec ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #1
 	bx ip
 	.align 2, 0
-_0218c5ec: .word func_01fffcec
+_0218c5ec: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov44_0218c5e0
 
 	.global func_ov44_0218c5f0
@@ -4506,7 +4506,7 @@ func_ov44_0218cac4: ; 0x0218cac4
 	add r2, sp, #0
 	add r0, r4, #0x14
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r2, [sp, #8]
 	ldr ip, [sp]
 	smull r1, r0, r2, r2
@@ -4545,7 +4545,7 @@ _0218cb44:
 _0218cb68:
 	strh r0, [r4, #0x78]
 	ldrh r1, [r4, #0x78]
-	ldr r3, _0218cc68 ; =data_02050f54
+	ldr r3, _0218cc68 ; =gSinCosTable
 	mov r0, #0
 	mov r1, r1, asr #0x4
 	mov r1, r1, lsl #0x1
@@ -4603,13 +4603,13 @@ _0218cc18:
 	ldmeqia sp!, {r3, r4, pc}
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
 _0218cc64: .word 0xfffff8e4
-_0218cc68: .word data_02050f54
+_0218cc68: .word gSinCosTable
 _0218cc6c: .word 0x0000019a
 	arm_func_end func_ov44_0218cac4
 
@@ -4633,17 +4633,17 @@ func_ov44_0218cc70: ; 0x0218cc70
 	add r0, sp, #0xc
 	add r2, sp, #0
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r1, r0, asr #0x10
 	ldr r2, _0218cd94 ; =0x0000038e
 	add r0, r4, #0x78
 	bl func_0202b154
 	ldrh r1, [r4, #0x78]
-	ldr r3, _0218cd98 ; =data_02050f54
+	ldr r3, _0218cd98 ; =gSinCosTable
 	ldr r0, _0218cd9c ; =0x0000019a
 	mov r1, r1, asr #0x4
 	mov r1, r1, lsl #0x2
@@ -4693,7 +4693,7 @@ _0218cd78:
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0218cd94: .word 0x0000038e
-_0218cd98: .word data_02050f54
+_0218cd98: .word gSinCosTable
 _0218cd9c: .word 0x0000019a
 	arm_func_end func_ov44_0218cc70
 
@@ -4701,7 +4701,7 @@ _0218cd9c: .word 0x0000019a
 	arm_func_start func_ov44_0218cda0
 func_ov44_0218cda0: ; 0x0218cda0
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218ce98 ; =data_027e0f94
+	ldr r1, _0218ce98 ; =gPlayerPos
 	mov r4, r0
 	ldr r2, [r4, #0x48]
 	ldr r0, [r1]
@@ -4717,7 +4717,7 @@ func_ov44_0218cda0: ; 0x0218cda0
 	mov r2, #0x2d8
 	bl func_0202b154
 	ldrh r1, [r4, #0x78]
-	ldr r3, _0218ce9c ; =data_02050f54
+	ldr r3, _0218ce9c ; =gSinCosTable
 	ldr r0, _0218cea0 ; =0x0000019a
 	mov r1, r1, asr #0x4
 	mov r1, r1, lsl #0x2
@@ -4765,8 +4765,8 @@ _0218ce80:
 	blx r1
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218ce98: .word data_027e0f94
-_0218ce9c: .word data_02050f54
+_0218ce98: .word gPlayerPos
+_0218ce9c: .word gSinCosTable
 _0218cea0: .word 0x0000019a
 	arm_func_end func_ov44_0218cda0
 
@@ -4997,7 +4997,7 @@ _0218d168:
 	beq _0218d234
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	mov r0, r4
 	mov r1, #0
@@ -5037,7 +5037,7 @@ _0218d1fc:
 	beq _0218d234
 	ldr r0, [r4, #0xc4]
 	ldr r1, [r4, #0xcc]
-	bl func_01ffa0f4
+	bl Atan2
 	strh r0, [r4, #0x78]
 	mov r0, r4
 	mov r1, #0
@@ -5474,7 +5474,7 @@ _0218d720: .word func_ov44_0218d658
 func_ov44_0218d724: ; 0x0218d724
 	stmdb sp!, {r4, lr}
 	sub sp, sp, #0x18
-	ldr r1, _0218d7c8 ; =data_027e0fe4
+	ldr r1, _0218d7c8 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -5492,7 +5492,7 @@ _0218d760:
 	add r2, sp, #0xc
 	add r0, r0, #0x48
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp, #0x14]
 	cmp r0, #0
 	movgt r0, #2
@@ -5504,7 +5504,7 @@ _0218d78c:
 	add r2, sp, #0
 	add r0, r0, #0x48
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	cmp r0, #0
 	movgt r0, #0
@@ -5518,7 +5518,7 @@ _0218d7b4:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d7c8: .word data_027e0fe4
+_0218d7c8: .word gActorManager
 	arm_func_end func_ov44_0218d724
 
 	.global func_ov44_0218d7cc
@@ -5535,7 +5535,7 @@ _0218d7d4: .word func_ov44_0218d658
 func_ov44_0218d7d8: ; 0x0218d7d8
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
-	ldr r1, _0218d874 ; =data_027e0fe4
+	ldr r1, _0218d874 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -5543,7 +5543,7 @@ func_ov44_0218d7d8: ; 0x0218d7d8
 	add r2, sp, #0
 	add r0, r0, #0x48
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [r4, #0x74]
 	cmp r0, #3
 	addls pc, pc, r0, lsl #2
@@ -5577,7 +5577,7 @@ _0218d868:
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0218d874: .word data_027e0fe4
+_0218d874: .word gActorManager
 _0218d878: .word 0x0000019a
 	arm_func_end func_ov44_0218d7d8
 
@@ -5586,7 +5586,7 @@ _0218d878: .word 0x0000019a
 func_ov44_0218d87c: ; 0x0218d87c
 	stmdb sp!, {r3, r4, lr}
 	sub sp, sp, #0xc
-	ldr r1, _0218d8d8 ; =data_027e0fe4
+	ldr r1, _0218d8d8 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -5594,10 +5594,10 @@ func_ov44_0218d87c: ; 0x0218d87c
 	add r2, sp, #0
 	add r0, r0, #0x48
 	add r1, r4, #0x48
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	ldr r0, [sp]
 	ldr r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	mov r0, r0, asr #0x10
 	bl func_0202bbbc
@@ -5608,7 +5608,7 @@ func_ov44_0218d87c: ; 0x0218d87c
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, pc}
 	.align 2, 0
-_0218d8d8: .word data_027e0fe4
+_0218d8d8: .word gActorManager
 	arm_func_end func_ov44_0218d87c
 
 	.global func_ov44_0218d8dc
@@ -5624,7 +5624,7 @@ _0218d8e4: .word func_ov44_0218d658
 	arm_func_start func_ov44_0218d8e8
 func_ov44_0218d8e8: ; 0x0218d8e8
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218d914 ; =data_027e0fe4
+	ldr r1, _0218d914 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -5635,7 +5635,7 @@ func_ov44_0218d8e8: ; 0x0218d8e8
 	bl func_ov00_020ce284
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d914: .word data_027e0fe4
+_0218d914: .word gActorManager
 _0218d918: .word 0x00000666
 	arm_func_end func_ov44_0218d8e8
 
@@ -5643,7 +5643,7 @@ _0218d918: .word 0x00000666
 	arm_func_start func_ov44_0218d91c
 func_ov44_0218d91c: ; 0x0218d91c
 	stmdb sp!, {r4, lr}
-	ldr r1, _0218d944 ; =data_027e0fe4
+	ldr r1, _0218d944 ; =gActorManager
 	mov r4, r0
 	ldr r0, [r1]
 	add r1, r4, #0x318
@@ -5653,14 +5653,14 @@ func_ov44_0218d91c: ; 0x0218d91c
 	str r0, [r4, #0x74]
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_0218d944: .word data_027e0fe4
+_0218d944: .word gActorManager
 	arm_func_end func_ov44_0218d91c
 
 	.global func_ov44_0218d948
 	arm_func_start func_ov44_0218d948
 func_ov44_0218d948: ; 0x0218d948
 	stmdb sp!, {r3, r4, r5, lr}
-	ldr r1, _0218d984 ; =data_027e0fe4
+	ldr r1, _0218d984 ; =gActorManager
 	mov r5, r0
 	ldr r0, [r1]
 	add r1, r5, #0x318
@@ -5675,7 +5675,7 @@ func_ov44_0218d948: ; 0x0218d948
 	bl func_ov44_0218e6b4
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0218d984: .word data_027e0fe4
+_0218d984: .word gActorManager
 	arm_func_end func_ov44_0218d948
 
 	.global func_ov44_0218d988
@@ -5724,7 +5724,7 @@ _0218d9fc:
 	add r0, r4, #0x48
 	add r1, r4, #0x60
 	mov r2, r0
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	ldmia sp!, {r4, pc}
 	.align 2, 0
 _0218da24: .word 0x00000266
@@ -5867,14 +5867,14 @@ _0218dbe4:
 _0218dbf8:
 	str r2, [r4, #0x12c]
 	bl func_ov44_0218d91c
-	ldr r0, _0218dd68 ; =data_027e0fe4
+	ldr r0, _0218dd68 ; =gActorManager
 	add r1, r4, #0x320
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
 	movs r5, r0
 	addeq sp, sp, #0xc
 	ldmeqia sp!, {r3, r4, r5, r6, pc}
-	ldr r0, _0218dd68 ; =data_027e0fe4
+	ldr r0, _0218dd68 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -5919,7 +5919,7 @@ _0218dc74:
 	str r6, [r1, #4]
 	add r1, r5, #0xa
 	str r1, [r4, #0x13c]
-	ldr r0, _0218dd68 ; =data_027e0fe4
+	ldr r0, _0218dd68 ; =gActorManager
 	add r1, r4, #0x320
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -5951,7 +5951,7 @@ _0218dcf4:
 	str r5, [r1, #4]
 	add r1, ip, #0xa
 	str r1, [r4, #0x13c]
-	ldr r0, _0218dd68 ; =data_027e0fe4
+	ldr r0, _0218dd68 ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -5962,7 +5962,7 @@ _0218dd5c:
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
 _0218dd64: .word data_027e0764
-_0218dd68: .word data_027e0fe4
+_0218dd68: .word gActorManager
 	arm_func_end func_ov44_0218da70
 
 	.global func_ov44_0218dd6c
@@ -6012,7 +6012,7 @@ _0218ddf4:
 	ldr r0, [r4, #0x13c]
 	cmp r1, r0
 	blt _0218e180
-	ldr r1, _0218e18c ; =data_027e0fe4
+	ldr r1, _0218e18c ; =gActorManager
 	ldr r2, _0218e190 ; =0x52415448
 	ldr r1, [r1]
 	add r0, sp, #0
@@ -6161,7 +6161,7 @@ _0218e018:
 	ldr r1, [r4, #0x138]
 	cmp r1, r0, asr #12
 	ble _0218e180
-	ldr r0, _0218e18c ; =data_027e0fe4
+	ldr r0, _0218e18c ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -6202,7 +6202,7 @@ _0218e0bc:
 	bl func_ov44_0218da70
 	b _0218e180
 _0218e0cc:
-	ldr r0, _0218e18c ; =data_027e0fe4
+	ldr r0, _0218e18c ; =gActorManager
 	add r1, r4, #0x318
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -6253,7 +6253,7 @@ _0218e180:
 	add sp, sp, #0x14
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_0218e18c: .word data_027e0fe4
+_0218e18c: .word gActorManager
 _0218e190: .word 0x52415448
 _0218e194: .word data_027e0764
 _0218e198: .word 0x00000266
@@ -6290,7 +6290,7 @@ func_ov44_0218e1e8: ; 0x0218e1e8
 	sub sp, sp, #0x3c
 	mov r4, r0
 	add r0, sp, #0x10
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0x10
 	str r1, [sp, #0x2c]
@@ -6491,7 +6491,7 @@ func_ov44_0218e3e0: ; 0x0218e3e0
 	addeq sp, sp, #0x3c
 	ldmeqia sp!, {r4, r5, pc}
 	ldrh r1, [r4, #0x78]
-	ldr r3, _0218e498 ; =data_02050f54
+	ldr r3, _0218e498 ; =gSinCosTable
 	add r0, sp, #0x18
 	mov r1, r1, asr #0x4
 	mov r2, r1, lsl #0x1
@@ -6502,7 +6502,7 @@ func_ov44_0218e3e0: ; 0x0218e3e0
 	ldrsh r2, [r3, r2]
 	blx func_01ff8214
 	ldrh r0, [r4, #0x78]
-	ldr r1, _0218e498 ; =data_02050f54
+	ldr r1, _0218e498 ; =gSinCosTable
 	mov lr, #0
 	mov r0, r0, asr #0x4
 	mov r2, r0, lsl #0x1
@@ -6518,7 +6518,7 @@ func_ov44_0218e3e0: ; 0x0218e3e0
 	str r5, [sp]
 	str lr, [sp, #4]
 	str ip, [sp, #8]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add r0, r4, #0x158
 	ldr r3, [r0]
 	add r1, sp, #0x18
@@ -6528,7 +6528,7 @@ func_ov44_0218e3e0: ; 0x0218e3e0
 	add sp, sp, #0x3c
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0218e498: .word data_02050f54
+_0218e498: .word gSinCosTable
 _0218e49c: .word 0xfffff852
 	arm_func_end func_ov44_0218e3e0
 
@@ -6560,7 +6560,7 @@ _0218e4ec:
 	add r1, sp, #0x38
 	mvn r3, #0
 	ldr r5, _0218e590 ; =0x5053424c
-	ldr r0, _0218e594 ; =data_027e0fe4
+	ldr r0, _0218e594 ; =gActorManager
 	str r5, [sp, #8]
 	str ip, [sp, #4]
 	str r3, [sp, #0xc]
@@ -6588,7 +6588,7 @@ _0218e4ec:
 	str r4, [sp, #0x28]
 	str r2, [sp, #0x2c]
 	str r3, [sp, #0x30]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	cmp r0, #0
 	movgt r0, #0
 	movle r0, r5
@@ -6598,7 +6598,7 @@ _0218e4ec:
 _0218e588: .word gMapManager
 _0218e58c: .word _ZTV11FilterActor
 _0218e590: .word 0x5053424c
-_0218e594: .word data_027e0fe4
+_0218e594: .word gActorManager
 	arm_func_end func_ov44_0218e4a0
 
 	.global func_ov44_0218e598
@@ -6616,7 +6616,7 @@ _0218e5b0:
 	add r2, r2, #8
 	cmp r2, r0
 	blo _0218e5b0
-	ldr r0, _0218e6a4 ; =data_027e0fe4
+	ldr r0, _0218e6a4 ; =gActorManager
 	mov lr, #0
 	ldr r7, _0218e6a8 ; =_ZTV11FilterActor
 	add ip, sp, #0x40
@@ -6640,7 +6640,7 @@ _0218e5b0:
 	str lr, [ip, #8]
 	str r5, [sp]
 	str r3, [sp, #4]
-	bl _ZN12ActorManager12FilterActorsEP15ActorFilterBaseP9ActorList
+	bl _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList
 	ldr r0, [sp, #8]
 	cmp r0, #0
 	movle r5, #0
@@ -6674,7 +6674,7 @@ _0218e684:
 	add sp, sp, #0x154
 	ldmia sp!, {r3, r4, r5, r6, r7, r8, pc}
 	.align 2, 0
-_0218e6a4: .word data_027e0fe4
+_0218e6a4: .word gActorManager
 _0218e6a8: .word _ZTV11FilterActor
 _0218e6ac: .word 0x52415448
 _0218e6b0: .word data_027e0764
@@ -6726,7 +6726,7 @@ _0218e734:
 	sub r0, ip, #0x1000
 	add r2, r2, #0x48
 	str ip, [sp, #4]
-	bl func_01ff9e64
+	bl Vec3p_Axpy
 	add sp, sp, #0xc
 	ldmia sp!, {pc}
 	arm_func_end func_ov44_0218e6b4
@@ -6840,7 +6840,7 @@ _0218e870: .word func_ov00_020c6c78
 func_ov44_0218e874: ; 0x0218e874
 	stmdb sp!, {r4, r5, lr}
 	sub sp, sp, #0xc
-	ldr ip, _0218e8b0 ; =data_027e0f94
+	ldr ip, _0218e8b0 ; =gPlayerPos
 	add r3, sp, #0
 	mov r5, r0
 	mov r4, r1
@@ -6854,7 +6854,7 @@ func_ov44_0218e874: ; 0x0218e874
 	add sp, sp, #0xc
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
-_0218e8b0: .word data_027e0f94
+_0218e8b0: .word gPlayerPos
 	arm_func_end func_ov44_0218e874
 
 	.global func_ov44_0218e8b4
@@ -7766,7 +7766,7 @@ data_ov44_0218f2a0: ; 0x0218f2a0
     .word func_ov00_020cad30
 	.global data_ov44_0218f2a4
 data_ov44_0218f2a4: ; 0x0218f2a4
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218f2a8
 data_ov44_0218f2a8: ; 0x0218f2a8
     .word func_ov00_020cb1c0
@@ -7796,7 +7796,7 @@ data_ov44_0218f2c8: ; 0x0218f2c8
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218f2cc
 data_ov44_0218f2cc: ; 0x0218f2cc
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218f2d0
 data_ov44_0218f2d0: ; 0x0218f2d0
     .word func_ov00_020caeb4
@@ -8137,7 +8137,7 @@ data_ov44_0218f484: ; 0x0218f484
     .word func_ov00_020cad30
 	.global data_ov44_0218f488
 data_ov44_0218f488: ; 0x0218f488
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218f48c
 data_ov44_0218f48c: ; 0x0218f48c
     .word func_ov00_020cb1c0
@@ -8167,7 +8167,7 @@ data_ov44_0218f4ac: ; 0x0218f4ac
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218f4b0
 data_ov44_0218f4b0: ; 0x0218f4b0
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218f4b4
 data_ov44_0218f4b4: ; 0x0218f4b4
     .word func_ov00_020caeb4
@@ -8397,7 +8397,7 @@ data_ov44_0218f5d4: ; 0x0218f5d4
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov44_0218f5d8
 data_ov44_0218f5d8: ; 0x0218f5d8
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218f5dc
 data_ov44_0218f5dc: ; 0x0218f5dc
     .word func_ov44_0218ae78
@@ -8427,10 +8427,10 @@ data_ov44_0218f5fc: ; 0x0218f5fc
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218f600
 data_ov44_0218f600: ; 0x0218f600
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218f604
 data_ov44_0218f604: ; 0x0218f604
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov44_0218f608
 data_ov44_0218f608: ; 0x0218f608
     .word _ZN5Actor8vfunc_4cEPi
@@ -8730,7 +8730,7 @@ data_ov44_0218f790: ; 0x0218f790
     .word func_ov00_020cad30
 	.global data_ov44_0218f794
 data_ov44_0218f794: ; 0x0218f794
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218f798
 data_ov44_0218f798: ; 0x0218f798
     .word func_ov00_020cb1c0
@@ -8760,7 +8760,7 @@ data_ov44_0218f7b8: ; 0x0218f7b8
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218f7bc
 data_ov44_0218f7bc: ; 0x0218f7bc
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218f7c0
 data_ov44_0218f7c0: ; 0x0218f7c0
     .word func_ov00_020caeb4
@@ -9078,7 +9078,7 @@ data_ov44_0218f97c: ; 0x0218f97c
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov44_0218f980
 data_ov44_0218f980: ; 0x0218f980
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218f984
 data_ov44_0218f984: ; 0x0218f984
     .word func_ov44_0218c5f0
@@ -9108,10 +9108,10 @@ data_ov44_0218f9a4: ; 0x0218f9a4
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218f9a8
 data_ov44_0218f9a8: ; 0x0218f9a8
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218f9ac
 data_ov44_0218f9ac: ; 0x0218f9ac
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov44_0218f9b0
 data_ov44_0218f9b0: ; 0x0218f9b0
     .word _ZN5Actor8vfunc_4cEPi
@@ -9371,7 +9371,7 @@ data_ov44_0218faf8: ; 0x0218faf8
     .word func_ov00_020cad30
 	.global data_ov44_0218fafc
 data_ov44_0218fafc: ; 0x0218fafc
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218fb00
 data_ov44_0218fb00: ; 0x0218fb00
     .word func_ov00_020cb1c0
@@ -9401,7 +9401,7 @@ data_ov44_0218fb20: ; 0x0218fb20
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218fb24
 data_ov44_0218fb24: ; 0x0218fb24
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218fb28
 data_ov44_0218fb28: ; 0x0218fb28
     .word func_ov44_0218cfc4
@@ -9762,7 +9762,7 @@ data_ov44_0218fd08: ; 0x0218fd08
     .word func_ov00_020cad30
 	.global data_ov44_0218fd0c
 data_ov44_0218fd0c: ; 0x0218fd0c
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218fd10
 data_ov44_0218fd10: ; 0x0218fd10
     .word func_ov00_020cb1c0
@@ -9792,7 +9792,7 @@ data_ov44_0218fd30: ; 0x0218fd30
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218fd34
 data_ov44_0218fd34: ; 0x0218fd34
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218fd38
 data_ov44_0218fd38: ; 0x0218fd38
     .word func_ov00_020caeb4
@@ -9981,7 +9981,7 @@ data_ov44_0218fe2c: ; 0x0218fe2c
     .word _ZN5Actor8vfunc_18Ej
 	.global data_ov44_0218fe30
 data_ov44_0218fe30: ; 0x0218fe30
-    .word _ZN5Actor8vfunc_1cEt
+    .word _ZN5Actor8vfunc_1cEPt
 	.global data_ov44_0218fe34
 data_ov44_0218fe34: ; 0x0218fe34
     .word func_ov44_0218e3e0
@@ -10011,10 +10011,10 @@ data_ov44_0218fe54: ; 0x0218fe54
     .word _ZN5Actor15IsHitboxTouchedEb
 	.global data_ov44_0218fe58
 data_ov44_0218fe58: ; 0x0218fe58
-    .word _ZN5Actor12CollidesWithEPKS_
+    .word _ZN5Actor12CollidesWithEPS_
 	.global data_ov44_0218fe5c
 data_ov44_0218fe5c: ; 0x0218fe5c
-    .word _ZN5Actor8vfunc_48Ei
+    .word _ZN5Actor8vfunc_48EP9Knockback
 	.global data_ov44_0218fe60
 data_ov44_0218fe60: ; 0x0218fe60
     .word _ZN5Actor8vfunc_4cEPi

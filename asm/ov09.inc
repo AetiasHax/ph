@@ -19,7 +19,7 @@
 .extern _ZNK11ItemManager16GetTreasureCountEj
 .extern _ZNK11ItemManager19GetEquippedShipPartEj
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02057200
 .extern data_0205785c
 .extern data_02057878
@@ -39,7 +39,7 @@
 .extern data_027e0c68
 .extern data_027e0ce0
 .extern data_027e0d04
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d38
 .extern data_027e0d3c
 .extern data_027e0d54
@@ -51,8 +51,8 @@
 .extern data_027e0e58
 .extern gMapManager
 .extern data_027e0f64
-.extern data_027e0f90
-.extern data_027e0fe4
+.extern gPlayer
+.extern gActorManager
 .extern data_027e0ffc
 .extern data_027e103c
 .extern data_027e1040
@@ -101,8 +101,8 @@
 .extern func_01ff9a18
 .extern func_01ff9a50
 .extern func_01ff9b4c
-.extern func_01ff9bc4
-.extern func_01ff9bf8
+.extern Vec3p_Add
+.extern Vec3p_Sub
 .extern func_01ffa8d4
 .extern func_01ffa9fc
 .extern func_01ffbe34
@@ -272,7 +272,7 @@
 .extern func_ov00_020c0d68
 .extern func_ov00_020c0e04
 .extern func_ov00_020c0e24
-.extern func_ov00_020c1500
+.extern _ZN19Actor_UnkStruct_020C1Ev
 .extern func_ov00_020cef40
 .extern func_ov00_020cf270
 .extern func_ov00_020cf330

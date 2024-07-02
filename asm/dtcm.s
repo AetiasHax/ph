@@ -3260,15 +3260,9 @@ data_027e0d09:
 	.global data_027e0d0a
 data_027e0d0a:
 	.space 0x2
-	.global data_027e0d0c
-data_027e0d0c:
-	.space 0x4
-	.global data_027e0d10
-data_027e0d10:
-	.space 0x4
-	.global data_027e0d14
-data_027e0d14:
-	.space 0x4
+	.global gVec3p_ZERO
+gVec3p_ZERO:
+	.space 0xc
 	.global data_027e0d18
 data_027e0d18:
 	.space 0x4
@@ -3968,38 +3962,27 @@ data_027e0f88:
 	.global data_027e0f8c
 data_027e0f8c:
 	.space 0x4
-	.global data_027e0f90
-data_027e0f90:
+	.global gPlayer
+gPlayer:
 	.space 0x4
-	.global data_027e0f94
-data_027e0f94:
-	.space 0x4
-	.global data_027e0f98
-data_027e0f98:
-	.space 0x4
-	.global data_027e0f9c
-data_027e0f9c:
-	.space 0x4
-	.global data_027e0fa0
-data_027e0fa0:
-	.space 0x4
-	.global data_027e0fa4
-data_027e0fa4:
-	.space 0x4
-	.global data_027e0fa8
-data_027e0fa8:
-	.space 0x4
-	.global data_027e0fac
-data_027e0fac:
-	.space 0x4
+	.global gPlayerPos
+gPlayerPos:
+	.space 0xc
+	.global gPlayerVel
+gPlayerVel:
+	.space 0xc
+	.global gPlayerAngle
+gPlayerAngle:
+	.space 0x2
+	.space 0x2
 	.global data_027e0fb0
 data_027e0fb0:
 	.space 0x4
 	.global gItemManager
 gItemManager:
 	.space 0x4
-	.global data_027e0fb8
-data_027e0fb8:
+	.global gPlayerControl
+gPlayerControl:
 	.space 0x4
 	.global gHealthManager
 gHealthManager:
@@ -4010,8 +3993,8 @@ data_027e0fc0:
 	.global data_027e0fc4
 data_027e0fc4:
 	.space 0x4
-	.global data_027e0fc8
-data_027e0fc8:
+	.global gPlayerLink
+gPlayerLink:
 	.space 0x4
 	.global data_027e0fcc
 data_027e0fcc:
@@ -4031,8 +4014,8 @@ data_027e0fdc:
 	.global data_027e0fe0
 data_027e0fe0:
 	.space 0x4
-	.global data_027e0fe4
-data_027e0fe4:
+	.global gActorManager
+gActorManager:
 	.space 0x4
 	.global data_027e0fe8
 data_027e0fe8:

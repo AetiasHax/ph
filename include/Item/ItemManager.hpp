@@ -251,8 +251,8 @@ public:
     void Sword_vfunc_38(unk32 param1);
     void Shield_vfunc_38(unk32 param1);
     void EquipItem_vfunc_38(unk32 param1);
-    bool EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId);
-    void EquipItem_vfunc_2c(ItemFlag equipId);
+    bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
+    s32 EquipItem_vfunc_2c(ItemFlag equipId);
     EquipItem* GetEquipItem(ItemFlag equipId);
     bool func_ov00_020ad790(unk32 param1);
     bool SetEquippedItem(ItemFlag equipId);
@@ -260,6 +260,7 @@ public:
     void ForceEquipItem(ItemFlag equipId);
     bool ClearForcedEquipItem();
     void UpdateSwordShieldInUse();
+    static EquipItem* GetEquipItemUnchecked(ItemFlag equipId);
     
     // Ammo
     u16 GetAmmo(ItemFlag equipId) const;

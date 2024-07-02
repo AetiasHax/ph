@@ -24,10 +24,10 @@
 .extern _ZN13PlayerControl18_ZN13PlayerControl18func_ov00_020aeeacEvEv
 .extern _ZN13PlayerControl18func_ov00_020b034cEv
 .extern _ZN13PlayerControl18func_ov00_020b12d0EPs
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_027e0618
 .extern data_027e0e58
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_ov00_020eec9c
 .extern func_ov00_0207c39c
 .extern func_ov00_0207c444

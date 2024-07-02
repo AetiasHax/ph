@@ -5628,9 +5628,9 @@ func_ov00_0207a13c: ; 0x0207a13c
 _0207a184: .word 0x00007fff
 	arm_func_end func_ov00_0207a13c
 
-	.global func_ov00_0207a188
-	thumb_func_start func_ov00_0207a188
-func_ov00_0207a188: ; 0x0207a188
+	.global _ZN19Actor_UnkStruct_0a4C1Eiiii
+	thumb_func_start _ZN19Actor_UnkStruct_0a4C1Eiiii
+_ZN19Actor_UnkStruct_0a4C1Eiiii: ; 0x0207a188
 	push {r3, r4}
 	mov r4, #1
 	strb r4, [r0]
@@ -5645,7 +5645,7 @@ func_ov00_0207a188: ; 0x0207a188
 	str r1, [r0, #0x10]
 	pop {r3, r4}
 	bx lr
-	thumb_func_end func_ov00_0207a188
+	thumb_func_end _ZN19Actor_UnkStruct_0a4C1Eiiii
 
 	.global func_ov00_0207a1a4
 	arm_func_start func_ov00_0207a1a4
@@ -5675,7 +5675,7 @@ func_ov00_0207a1c8: ; 0x0207a1c8
 	add r2, sp, #0
 	add r0, r5, #4
 	str r3, [sp, #0xc]
-	bl func_01ff9bc4
+	bl Vec3p_Add
 _0207a1f8:
 	ldr r0, _0207a28c ; =data_027e0c54
 	mov r2, #1

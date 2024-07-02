@@ -8,7 +8,7 @@
 .extern data_027e077c
 .extern gMapManager
 .extern data_027e103c
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern func_ov00_0208e72c
 .extern func_ov00_0208e7a4
 .extern func_ov00_0208f318

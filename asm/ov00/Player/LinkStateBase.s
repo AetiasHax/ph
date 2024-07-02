@@ -111,7 +111,7 @@ _020a8084:
 _020a80c8:
 	cmp r4, #0
 	beq _020a80e8
-	ldr r0, _020a8104 ; =data_027e0fb8
+	ldr r0, _020a8104 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020af4a4Ev
 	cmp r0, #0
@@ -127,7 +127,7 @@ _020a80f0:
 _020a80f8: .word gAdventureFlags
 _020a80fc: .word data_027e0c68
 _020a8100: .word data_027e0f64
-_020a8104: .word data_027e0fb8
+_020a8104: .word gPlayerControl
 	arm_func_end _ZN13LinkStateBase8vfunc_24Ei
 
 	.global _ZN13LinkStateBase8vfunc_28Ev
@@ -292,11 +292,11 @@ _020a8234: .word func_ov00_020bbbd0
 	arm_func_start _ZN13LinkStateBase6TurnToEsii
 _ZN13LinkStateBase6TurnToEsii: ; 0x020a8238
 	stmdb sp!, {r4, lr}
-	ldr r0, _020a8274 ; =data_027e0fac
+	ldr r0, _020a8274 ; =gPlayerAngle
 	mov r4, r2
 	mov r2, r3
 	bl func_0202b154
-	ldr r0, _020a8274 ; =data_027e0fac
+	ldr r0, _020a8274 ; =gPlayerAngle
 	ldr r1, _020a8278 ; =data_027e0fcc
 	ldrsh r3, [r0]
 	ldr r0, [r1]
@@ -307,7 +307,7 @@ _ZN13LinkStateBase6TurnToEsii: ; 0x020a8238
 	bl func_ov00_020b4558
 	ldmia sp!, {r4, pc}
 	.align 2, 0
-_020a8274: .word data_027e0fac
+_020a8274: .word gPlayerAngle
 _020a8278: .word data_027e0fcc
 	arm_func_end _ZN13LinkStateBase6TurnToEsii
 
@@ -354,8 +354,8 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	mov r1, r1, lsr #0x10
 	mov r1, r1, asr #0x4
 	mov r4, r1, lsl #0x1
-	ldr r3, _020a8358 ; =data_027e0d0c
-	ldr lr, _020a835c ; =data_02050f54
+	ldr r3, _020a8358 ; =gVec3p_ZERO
+	ldr lr, _020a835c ; =gSinCosTable
 	mov r1, r4, lsl #0x1
 	ldrsh ip, [lr, r1]
 	add r1, r4, #1
@@ -387,8 +387,8 @@ _ZN13LinkStateBase12ApplyImpulseEii: ; 0x020a82c4
 	str r0, [r5, #0x28]
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020a8358: .word data_027e0d0c
-_020a835c: .word data_02050f54
+_020a8358: .word gVec3p_ZERO
+_020a835c: .word gSinCosTable
 	arm_func_end _ZN13LinkStateBase12ApplyImpulseEii
 
 	.global _ZN13LinkStateBase18func_ov00_020a8360Ei
@@ -399,7 +399,7 @@ _ZN13LinkStateBase18func_ov00_020a8360Ei: ; 0x020a8360
 	mov r5, r0
 	add r0, sp, #0
 	mov r4, r1
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	add r2, sp, #0
 	mov r0, r5
 	mov r1, r4
@@ -417,7 +417,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	add r0, sp, #0xc
 	mov r6, r1
 	mov r5, r2
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #0xc
 	str r1, [sp, #0x28]
@@ -465,7 +465,7 @@ _ZN13LinkStateBase18func_ov00_020a8390EiPv: ; 0x020a8390
 	add r3, sp, #0xc
 	str r4, [sp]
 	bl func_ov00_020c4048
-	ldr r0, _020a84b8 ; =data_027e0fe4
+	ldr r0, _020a84b8 ; =gActorManager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -487,7 +487,7 @@ _020a84a8:
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
 _020a84b4: .word data_027e0fe8
-_020a84b8: .word data_027e0fe4
+_020a84b8: .word gActorManager
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8390EiPv
 
 	.global _ZN13LinkStateBase18func_ov00_020a84bcEi
@@ -555,7 +555,7 @@ _ZN13LinkStateBase18func_ov00_020a853cEP5Vec3p: ; 0x020a853c
 _020a8578:
 	ldr r4, [r4, #8]
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r2, r0
 	add r1, sp, #0
 	mov r0, r4
@@ -728,7 +728,7 @@ _ZN13LinkStateBase18func_ov00_020a8704EPs: ; 0x020a8704
 	beq _020a876c
 	ldr r0, [r5, #0x64]
 	ldr r1, [r5, #0x6c]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r5, r0, lsl #0x10
 	mov r0, r6
 	bl _ZN13LinkStateBase14GetPlayerAngleEv
@@ -754,7 +754,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	mov r1, r0
 	add r2, sp, #0
 	mov r0, r5
-	bl func_01ff9bf8
+	bl Vec3p_Sub
 	mov r0, r6
 	bl _ZN13LinkStateBase18func_ov00_020a8d40Ev
 	mov r1, r4, lsl #0x10
@@ -763,7 +763,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	ldr r0, [r0, #0x2c]
 	mov r2, r1, lsl #0x1
 	rsb lr, r0, #0
-	ldr r3, _020a8840 ; =data_02050f54
+	ldr r3, _020a8840 ; =gSinCosTable
 	add r1, r2, #1
 	mov r0, r2, lsl #0x1
 	ldrsh r2, [r3, r0]
@@ -785,7 +785,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	add r1, r2, r1
 	str r0, [sp]
 	str r1, [sp, #8]
-	bl func_01ffa0f4
+	bl Atan2
 	mov r0, r0, lsl #0x10
 	rsb r0, r4, r0, asr #16
 	mov r0, r0, lsl #0x10
@@ -797,7 +797,7 @@ _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi: ; 0x020a8774
 	add sp, sp, #0xc
 	ldmia sp!, {r3, r4, r5, r6, pc}
 	.align 2, 0
-_020a8840: .word data_02050f54
+_020a8840: .word gSinCosTable
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8774EP5Vec3pi
 
 	.global _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
@@ -805,7 +805,7 @@ _020a8840: .word data_02050f54
 _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb: ; 0x020a8844
 	stmdb sp!, {r4, r5, r6, lr}
 	sub sp, sp, #0x18
-	ldr r4, _020a8948 ; =data_027e0fb8
+	ldr r4, _020a8948 ; =gPlayerControl
 	mov r6, r0
 	ldr r0, [r4]
 	mov r5, r2
@@ -870,7 +870,7 @@ _020a8904:
 	add sp, sp, #0x18
 	ldmia sp!, {r4, r5, r6, pc}
 	.align 2, 0
-_020a8948: .word data_027e0fb8
+_020a8948: .word gPlayerControl
 _020a894c: .word data_027e0618
 _020a8950: .word data_027e0f64
 	arm_func_end _ZN13LinkStateBase18func_ov00_020a8844EP5Vec3pbb
@@ -1123,11 +1123,11 @@ _020a8bd4: .word data_027e0fcc
 	.global _ZN13LinkStateBase19GetCurrentCharacterEv
 	arm_func_start _ZN13LinkStateBase19GetCurrentCharacterEv
 _ZN13LinkStateBase19GetCurrentCharacterEv: ; 0x020a8bd8
-	ldr ip, _020a8be4 ; =func_ov00_020bc46c
+	ldr ip, _020a8be4 ; =_ZN14PlayerLinkBase19GetCurrentCharacterEv
 	ldr r0, [r0, #8]
 	bx ip
 	.align 2, 0
-_020a8be4: .word func_ov00_020bc46c
+_020a8be4: .word _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	arm_func_end _ZN13LinkStateBase19GetCurrentCharacterEv
 
 	.global _ZN13LinkStateBase20GetPlayerControlDataEv
@@ -1164,7 +1164,7 @@ _ZN13LinkStateBase25GetCurrentCharacterHealthEv: ; 0x020a8c14
 	stmdb sp!, {r4, lr}
 	ldr r4, [r0, #8]
 	mov r0, r4
-	bl func_ov00_020bc46c
+	bl _ZN14PlayerLinkBase19GetCurrentCharacterEv
 	mov r1, r0
 	mov r0, r4
 	bl func_ov00_020bc48c
@@ -1186,19 +1186,19 @@ _020a8c48: .word func_ov00_020b5268
 	.global _ZN13LinkStateBase12GetPlayerPosEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerPosEv
 _ZN13LinkStateBase12GetPlayerPosEv: ; 0x020a8c4c
-	ldr r0, _020a8c54 ; =data_027e0f94
+	ldr r0, _020a8c54 ; =gPlayerPos
 	bx lr
 	.align 2, 0
-_020a8c54: .word data_027e0f94
+_020a8c54: .word gPlayerPos
 	arm_func_end _ZN13LinkStateBase12GetPlayerPosEv
 
 	.global _ZN13LinkStateBase12GetPlayerVelEv
 	arm_func_start _ZN13LinkStateBase12GetPlayerVelEv
 _ZN13LinkStateBase12GetPlayerVelEv: ; 0x020a8c58
-	ldr r0, _020a8c60 ; =data_027e0fa0
+	ldr r0, _020a8c60 ; =gPlayerVel
 	bx lr
 	.align 2, 0
-_020a8c60: .word data_027e0fa0
+_020a8c60: .word gPlayerVel
 	arm_func_end _ZN13LinkStateBase12GetPlayerVelEv
 
 	.global _ZN13LinkStateBase18func_ov00_020a8c64Ev
@@ -1215,10 +1215,10 @@ _020a8c74: .word data_027e0fd4
 	.global _ZN13LinkStateBase14GetPlayerAngleEv
 	arm_func_start _ZN13LinkStateBase14GetPlayerAngleEv
 _ZN13LinkStateBase14GetPlayerAngleEv: ; 0x020a8c78
-	ldr r0, _020a8c80 ; =data_027e0fac
+	ldr r0, _020a8c80 ; =gPlayerAngle
 	bx lr
 	.align 2, 0
-_020a8c80: .word data_027e0fac
+_020a8c80: .word gPlayerAngle
 	arm_func_end _ZN13LinkStateBase14GetPlayerAngleEv
 
 	.global _ZN13LinkStateBase15GetPlayer_Unk18Ev
@@ -1244,14 +1244,14 @@ _020a8ca0: .word data_027e0fcc
 	.global _ZN13LinkStateBase12GetGrabActorEv
 	arm_func_start _ZN13LinkStateBase12GetGrabActorEv
 _ZN13LinkStateBase12GetGrabActorEv: ; 0x020a8ca4
-	ldr r1, _020a8cbc ; =data_027e0fe4
+	ldr r1, _020a8cbc ; =gActorManager
 	ldr r2, [r0, #8]
 	ldr r0, [r1]
 	ldr ip, _020a8cc0 ; =_ZN12ActorManager8GetActorEP8ActorRef
 	add r1, r2, #0x3c
 	bx ip
 	.align 2, 0
-_020a8cbc: .word data_027e0fe4
+_020a8cbc: .word gActorManager
 _020a8cc0: .word _ZN12ActorManager8GetActorEP8ActorRef
 	arm_func_end _ZN13LinkStateBase12GetGrabActorEv
 

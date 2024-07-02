@@ -71,7 +71,7 @@ func_ov55_02198da4: ; 0x02198da4
 	add r6, r0, #0x24
 	cmp r7, r6
 	ldmeqia sp!, {r3, r4, r5, r6, r7, pc}
-	ldr r4, _02198df4 ; =data_027e0fe4
+	ldr r4, _02198df4 ; =gActorManager
 	mvn r5, #0
 _02198dc0:
 	ldr r0, [r7]
@@ -89,7 +89,7 @@ _02198de4:
 	bne _02198dc0
 	ldmia sp!, {r3, r4, r5, r6, r7, pc}
 	.align 2, 0
-_02198df4: .word data_027e0fe4
+_02198df4: .word gActorManager
 	arm_func_end func_ov55_02198da4
 
 	.global func_ov55_02198df8
@@ -144,7 +144,7 @@ func_ov55_02198e60: ; 0x02198e60
 	add r0, sp, #4
 	add r1, r1, #0x1000
 	str r1, [sp, #0x34]
-	bl func_ov00_020c1500
+	bl _ZN19Actor_UnkStruct_020C1Ev
 	mvn r1, #0
 	add r0, sp, #4
 	str r1, [sp, #0x20]
@@ -192,7 +192,7 @@ _02198f40:
 	mov r1, #0
 	ldr r2, [r2, #0x28]
 	blx r2
-	ldr r0, _02198f74 ; =data_027e0fe4
+	ldr r0, _02198f74 ; =gActorManager
 	mov r1, r4
 	ldr r0, [r0]
 	bl _ZN12ActorManager8GetActorEP8ActorRef
@@ -201,7 +201,7 @@ _02198f40:
 	.align 2, 0
 _02198f6c: .word data_027e0fe8
 _02198f70: .word 0x424f4d42
-_02198f74: .word data_027e0fe4
+_02198f74: .word gActorManager
 	arm_func_end func_ov55_02198e60
 
 	.global func_ov55_02198f78
@@ -228,7 +228,7 @@ func_ov55_02198f90: ; 0x02198f90
 	bl _ZN13LinkStateBase12GetGrabActorEv
 	cmp r0, #0
 	ldmneia sp!, {r3, r4, r5, pc}
-	ldr r0, _0219900c ; =data_027e0fb8
+	ldr r0, _0219900c ; =gPlayerControl
 	ldr r0, [r0]
 	ldrb r0, [r0, #0x79]
 	cmp r0, #0
@@ -246,22 +246,22 @@ func_ov55_02198f90: ; 0x02198f90
 	ldr r1, [r0]
 	ldr r1, [r1, #0x58]
 	blx r1
-	ldr r0, _0219900c ; =data_027e0fb8
+	ldr r0, _0219900c ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	ldmia sp!, {r3, r4, r5, pc}
 	.align 2, 0
-_0219900c: .word data_027e0fb8
+_0219900c: .word gPlayerControl
 	arm_func_end func_ov55_02198f90
 
 	.global func_ov55_02199010
 	arm_func_start func_ov55_02199010
 func_ov55_02199010: ; 0x02199010
-	ldr ip, _0219901c ; =func_01fffcec
+	ldr ip, _0219901c ; =_ZN11ItemManager21GetEquipItemUncheckedEi
 	mov r0, #4
 	bx ip
 	.align 2, 0
-_0219901c: .word func_01fffcec
+_0219901c: .word _ZN11ItemManager21GetEquipItemUncheckedEi
 	arm_func_end func_ov55_02199010
 
 	.global func_ov55_02199020
@@ -296,7 +296,7 @@ _0219907c:
 	bl _ZN13LinkStateBase18func_ov00_020a8b80Ev
 	cmp r0, #0
 	beq _02199128
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	add r1, sp, #8
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b05e8EP5Vec3p
@@ -310,13 +310,13 @@ _0219907c:
 	mov r1, r0
 	add r0, sp, #8
 	add r2, r4, #0x38
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	bl func_020385b8
 	add r1, r4, #0x38
 	bl _ZN17LinkStateInteract24SetNormalizedThrowOffsetEP5Vec3p
 	b _02199128
 _021990dc:
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	add r1, sp, #8
 	ldr r0, [r0]
 	mov r2, r5
@@ -331,7 +331,7 @@ _021990dc:
 	mov r1, r0
 	add r0, sp, #8
 	add r2, r4, #0x38
-	bl func_01ff9bc4
+	bl Vec3p_Add
 	bl func_020385b8
 	add r1, r4, #0x38
 	bl _ZN17LinkStateInteract14SetThrowOffsetEP5Vec3p
@@ -348,7 +348,7 @@ _02199128:
 	ldr r1, [r0]
 	ldr r1, [r1, #0x58]
 	blx r1
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl20UpdateUsingEquipItemEv
 	mov r0, r4
@@ -357,7 +357,7 @@ _02199128:
 	add sp, sp, #0x14
 	ldmia sp!, {r4, r5, pc}
 _02199178:
-	ldr r0, _021991a4 ; =data_027e0fb8
+	ldr r0, _021991a4 ; =gPlayerControl
 	ldr r0, [r0]
 	bl _ZN13PlayerControl18func_ov00_020b034cEv
 	mov r1, r0
@@ -369,7 +369,7 @@ _02199178:
 	ldmia sp!, {r4, r5, pc}
 	.align 2, 0
 _021991a0: .word data_ov55_02199840
-_021991a4: .word data_027e0fb8
+_021991a4: .word gPlayerControl
 	arm_func_end func_ov55_02199020
 
 	.global func_ov55_021991a8
@@ -405,7 +405,7 @@ func_ov55_021991b0: ; 0x021991b0
 	beq _0219922c
 	b _02199244
 _021991f4:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x18
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -413,7 +413,7 @@ _021991f4:
 	blx r2
 	b _02199244
 _02199210:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x20
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -421,7 +421,7 @@ _02199210:
 	blx r2
 	b _02199244
 _0219922c:
-	ldr r0, _02199270 ; =data_027e0f90
+	ldr r0, _02199270 ; =gPlayer
 	mov r1, #0x3e8
 	ldr r0, [r0]
 	ldr r2, [r0]
@@ -440,7 +440,7 @@ _02199244:
 	.align 2, 0
 _02199268: .word data_027e103c
 _0219926c: .word gItemManager
-_02199270: .word data_027e0f90
+_02199270: .word gPlayer
 	arm_func_end func_ov55_021991b0
 
 	.global func_ov55_02199274

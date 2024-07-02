@@ -17,7 +17,7 @@
 .extern _ZNK11ItemManager21HasTreasurePriceShownEj
 .extern _ZNK11ItemManager7HasItemEi
 .extern __register_global_object
-.extern data_02050f54
+.extern gSinCosTable
 .extern data_02057200
 .extern data_020691a0
 .extern data_027e037c
@@ -29,7 +29,7 @@
 .extern data_027e077c
 .extern data_027e0c68
 .extern data_027e0cbc
-.extern data_027e0d0c
+.extern gVec3p_ZERO
 .extern data_027e0d44
 .extern data_027e0d78
 .extern data_027e0f88
@@ -54,7 +54,7 @@
 .extern func_01ff8690
 .extern func_01ff9b4c
 .extern func_01ff9b88
-.extern func_01ff9bc4
+.extern Vec3p_Add
 .extern func_01ffa9fc
 .extern func_01ffbe34
 .extern func_02002c14

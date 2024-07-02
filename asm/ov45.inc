@@ -7,7 +7,7 @@
 .extern _ZN5Actor10SetUnk_11bEv
 .extern _ZN5Actor10SetUnk_11cEc
 .extern _ZN5Actor11SetVelocityEP5Vec3p
-.extern _ZN5Actor12CollidesWithEPKS_
+.extern _ZN5Actor12CollidesWithEPS_
 .extern _ZN5Actor12GetOffsetPosEP5Vec3p
 .extern _ZN5Actor12SetTransformEP9Transform
 .extern _ZN5Actor15IsHitboxTouchedEb
@@ -16,13 +16,13 @@
 .extern _ZN5Actor6GetPosEv
 .extern _ZN5Actor8vfunc_0cEv
 .extern _ZN5Actor8vfunc_10Ej
-.extern _ZN5Actor8vfunc_1cEt
+.extern _ZN5Actor8vfunc_1cEPt
 .extern _ZN5Actor8vfunc_24Ev
 .extern _ZN5Actor8vfunc_28Ev
 .extern _ZN5Actor8vfunc_2cEv
 .extern _ZN5Actor8vfunc_30Ev
 .extern _ZN5Actor8vfunc_38Ev
-.extern _ZN5Actor8vfunc_48Ei
+.extern _ZN5Actor8vfunc_48EP9Knockback
 .extern _ZN5Actor8vfunc_4cEPi
 .extern _ZN5Actor8vfunc_54Ev
 .extern _ZN5Actor8vfunc_60Ev
@@ -60,9 +60,9 @@
 .extern data_027e0e28
 .extern data_027e0e58
 .extern data_027e0f64
-.extern data_027e0f94
-.extern data_027e0fb8
-.extern data_027e0fc8
+.extern gPlayerPos
+.extern gPlayerControl
+.extern gPlayerLink
 .extern data_027e0fe0
 .extern data_027e0ff8
 .extern data_027e0ffc
@@ -75,7 +75,7 @@
 .extern data_ov09_0211f524
 .extern data_ov09_0211f52c
 .extern func_01ff9158
-.extern func_01ff9ec0
+.extern Vec3p_Distance
 .extern func_01ffbe34
 .extern func_020052e4
 .extern func_02007908

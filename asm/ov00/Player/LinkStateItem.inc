@@ -5,11 +5,11 @@
 .extern _ZN13LinkStateBase8vfunc_34EP5Vec3p
 .extern _ZN13PlayerControl13StopFollowingEv
 .extern gAdventureFlags
-.extern data_027e0fb8
+.extern gPlayerControl
 .extern data_027e103c
 .extern data_027e1098
 .extern func_01fffcd8
-.extern func_01fffcec
+.extern _ZN11ItemManager21GetEquipItemUncheckedEi
 .extern _ZN14AdventureFlags18func_ov00_02097b9cEv
 .extern func_ov00_020b7e6c
 .extern func_ov00_020cf01c
