@@ -88,9 +88,7 @@ public:
     /* 010 */ u8 mUnk_010;
     /* 011 */ u8 mUnk_011;
     /* 012 */ unk16 mUnk_012;
-    /* 014 */ unk32 mUnk_014;
-    /* 018 */ unk32 mUnk_018;
-    /* 01c */ unk32 mUnk_01c;
+    /* 014 */ Vec3p mUnk_014;
     /* 020 */ Actor_UnkStruct_020 mUnk_020;
     /* 034 */ unk32 mUnk_034;
     /* 038 */ unk32 mUnk_038;

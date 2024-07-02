@@ -126,9 +126,9 @@ ARM Actor::Actor():
     mUnk_140(0),
     mUnk_144(0)
 {
-    mUnk_014 = 0;
-    mUnk_018 = 0;
-    mUnk_01c = 0;
+    mUnk_014.x = 0;
+    mUnk_014.y = 0;
+    mUnk_014.z = 0;
     mPos.x = 0;
     mPos.y = 0;
     mPos.z = 0;
@@ -720,31 +720,27 @@ ARM bool Actor::func_ov00_020c29ec(q20 param1) {
 
 ARM void Actor::GetHitbox(Cylinder *hitbox) {
     hitbox->size = mHitbox.size;
-    u16 angle = mAngle;
+    u32 angle = 2 * (mAngle >> 4);
     hitbox->pos.x = mPos.x;
     hitbox->pos.y = mPos.y;
     hitbox->pos.z = mPos.z;
     hitbox->pos.y += mHitbox.pos.y;
 
-    q20 sin = SIN(angle);
-    q20 cos = COS(angle);
-    // Vec3p_Rotate(&mHitbox.pos, sin, cos, &hitbox->pos);
-    hitbox->pos.x += MUL_Q20(mHitbox.pos.z, sin);
-    hitbox->pos.z += MUL_Q20(mHitbox.pos.z, cos);
-    hitbox->pos.x += MUL_Q20(mHitbox.pos.x, cos);
-    hitbox->pos.z += MUL_Q20(mHitbox.pos.x, -sin);
+    q20 sin = gSinCosTable[angle];
+    q20 cos = gSinCosTable[angle + 1];
+    Vec3p_Rotate(&mHitbox.pos, sin, cos, &hitbox->pos);
 }
 
 ARM void Actor::GetUnk_08c(Cylinder *param1) {
     param1->size = mUnk_08c.size;
-    u16 angle = mAngle;
+    u32 angle = 2 * (mAngle >> 4);
     param1->pos.x = mPos.x;
     param1->pos.y = mPos.y;
     param1->pos.z = mPos.z;
     param1->pos.y += mUnk_08c.pos.y;
 
-    q20 sin = SIN(angle);
-    q20 cos = COS(angle);
+    q20 sin = gSinCosTable[angle];
+    q20 cos = gSinCosTable[angle + 1];
     Vec3p_Rotate(&mUnk_08c.pos, sin, cos, &param1->pos);
 }
 
@@ -897,7 +893,7 @@ ARM bool Actor::func_ov00_020c3094() {
     Vec3p pos, prevPos;
     Vec3p_Copy(&mPos, &pos);
     Vec3p_Copy(&mPrevPos, &prevPos);
-    s32 unk1 = gMapManager->func_ov00_02083ef8(&pos, &prevPos);
+    s32 unk1 = gMapManager->func_ov00_02083ef8(&pos, &prevPos, 0);
     if (mPos.y <= unk1) {
         result = true;
         mPos.y = unk1;
