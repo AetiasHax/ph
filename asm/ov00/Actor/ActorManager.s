@@ -506,7 +506,7 @@ _020c3a14:
 	mov r1, r8
 	ldr r0, [r0, r5, lsl #2]
 	ldr r0, [r0, #4]
-	bl _ZN12ActorManager16ActorTypeIsOneOfEjPj
+	bl _Z16ActorTypeIsOneOfPcPS_
 	cmp r7, r0
 	beq _020c3b08
 _020c3a60:
@@ -791,9 +791,9 @@ _020c3e04:
 	ldmia sp!, {r4, r5, r6, pc}
 	arm_func_end _ZN12ActorManager14Actor_vfunc_28Ev
 
-	.global _ZN12ActorManager16ActorTypeIsOneOfEjPj
-	arm_func_start _ZN12ActorManager16ActorTypeIsOneOfEjPj
-_ZN12ActorManager16ActorTypeIsOneOfEjPj: ; 0x020c3e1c
+	.global _Z16ActorTypeIsOneOfPcPS_
+	arm_func_start _Z16ActorTypeIsOneOfPcPS_
+_Z16ActorTypeIsOneOfPcPS_: ; 0x020c3e1c
 	ldr ip, [r1]
 	ldr r2, _020c3e50 ; =0x4e554c4c
 	mov r3, #0
@@ -811,7 +811,7 @@ _020c3e48:
 	bx lr
 	.align 2, 0
 _020c3e50: .word 0x4e554c4c
-	arm_func_end _ZN12ActorManager16ActorTypeIsOneOfEjPj
+	arm_func_end _Z16ActorTypeIsOneOfPcPS_
 
     .data
 	.global data_ov00_020e72a8
