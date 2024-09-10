@@ -64,7 +64,6 @@ help:
 	@echo "make eur ........................ Builds European ROM"
 	@echo "make usa ........................ Builds American ROM"
 	@echo "make clean ...................... Clean up build files"
-	@echo "make gen_externs ................ Generates .inc files for Assembly"
 
 .PHONY: eur
 eur:
@@ -146,9 +145,3 @@ compress: $(OV_LZS)
 
 $(OV_LZS): %.lz: %.bin
 	$(TOOLS_DIR)/compress/compress -p -i $< -o $@
-
-.PHONY: gen_externs
-gen_externs: $(ASM_INCS)
-
-$(ASM_INCS): %.inc: %.s
-	$(PYTHON) $(TOOLS_DIR)/gen_externs.py $<
