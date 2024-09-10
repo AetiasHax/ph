@@ -3,7 +3,6 @@
 - [Decompiling](#decompiling)
 - [Code style](#code-style)
 - [Creating new `.c`/`.cpp` files](#creating-new-ccpp-files)
-- [Non-matching functions](#non-matching-functions)
 
 ## Project structure
 - `asm/`: Non-decompiled assembly code
@@ -114,31 +113,3 @@ s32 MyClass::MyMethod(MyStruct *myStruct, s32 &anInteger) {
     return mInteger;
 }
 ```
-
-## Non-matching functions
-This project supports non-matching functions, and you can build them by using `make NONMATCHING=1`.
-
-Non-matching functions must be written as follows:
-```cpp
-#include "global.hpp"
-
-void NONMATCH(MyFunction)() {
-    #ifndef NONMATCHING
-    #include "../asm/path/to/asm.inc"
-    #else
-    // non-matching code here
-    #endif
-}
-```
-
-When building normally, the `NONMATCH` macro will mark `MyFunction` as an assembly function, and the `NONMATCHING` macro will
-not be defined so that the `asm.inc` file will be included.
-
-Conversely, when building in non-matching mode, `MyFunction` will be a regular C/C++ function, and the non-matching code will
-be inserted instead of `asm.inc`.
-
-When contributing non-matching functions to this project, please build in both modes and fix any build errors you may get.
-Delete the `.o` file between building in each mode so that the `Makefile` runs the compiler both times.
-
-> [!NOTE] 
-> The inline assembler does not function the same as the standalone assembler. [See differences here.](docs/inline_assembler.md#differences-from-standalone-assembler)

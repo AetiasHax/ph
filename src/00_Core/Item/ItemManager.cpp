@@ -241,10 +241,7 @@ extern "C" bool _ZN10MapManager18func_ov00_020849f8Ei(void *param1);
 extern "C" bool _ZN14PlayerLinkBase18func_ov00_020bbd80Ei(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
 extern "C" void _ZN11ItemManager12GetEquipItemEi();
-ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/Item/ItemManager_func_ov00_020ad790.inc"
-    #else
+ARM bool ItemManager::func_ov00_020ad790(unk32 param1) {
     unk32 unk1 = func_ov00_02078b40(data_027e0d38);
     if (unk1 == 2) return func_ov15_02136670(data_027e10a4);
     if (data_027e0d38->mUnk_14 == 1) return false;
@@ -269,7 +266,6 @@ ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
         return this->GetEquipItem(equipId)->IsUsable(param1);
     }
     return false;
-    #endif
 }
 
 THUMB ShipType ItemManager::GetEquippedShipPart(ShipPart part) const {

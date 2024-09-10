@@ -56,10 +56,6 @@ C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
 LD_FLAGS  := -proc arm946e -nostdlib -interworking -nodead -m Entry -map closure,unused -o main.bin -msgstyle gcc
 
-ifeq ($(NONMATCHING),1)
-	CC_FLAGS += -DNONMATCHING
-endif
-
 .PHONY: help
 help:
 	@echo "Usage:"

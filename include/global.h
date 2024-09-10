@@ -7,14 +7,6 @@
 #define SET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] |= 1 << ((pos) & 0x1f))
 #define RESET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
 
-// NONMATCH(name) marks the function `name` as nonmatching
-// The reason for the macro is to easily detect it in progress.py
-#ifdef NONMATCHING
-#define NONMATCH(name) name
-#else
-#define NONMATCH(name) asm name
-#endif
-
 // KILL(name) causes a function to be excluded from the output ROM, see elfkill.cpp
 #define KILL(name)
 
@@ -29,9 +21,11 @@
 #define override
 
 // Define .sbss variables by using #pragma section sbss begin|end
-#pragma define_section sbss ".data" ".sbss"
+#pragma define_section sbss ".data" \
+                            ".sbss"
 
 // Force variables to be in .data by using #pragma section force_data begin|end
-#pragma define_section force_data ".data" ".data"
+#pragma define_section force_data ".data" \
+                                  ".data"
 
 #endif

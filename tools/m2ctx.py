@@ -34,13 +34,10 @@ def eprint(*args, **kwargs):
 INCLUDE_REGEX = r'^\s*#\s*include\s*([<"][\S ]+[>"])\s*$'
 # Finds all line comments and multiline comments
 COMMENT_REGEX = r'\/\/.*$|\/\*(?:.|\r|\n)+?\*\/'
-# Finds all lines from #ifndef NONMATCHING to #else
-NONMATCH_REGEX = r'^\s*#\s*ifndef\s*NONMATCHING\s*(?:.|\r|\n)*\n\s*#\s*else\s*$'
 
 with open(args.file, 'r') as f:
     contents = f.read()
 contents = re.sub(COMMENT_REGEX, '', contents, 0, re.MULTILINE)
-contents = re.sub(NONMATCH_REGEX, '', contents, 0, re.MULTILINE)
 includes = re.findall(INCLUDE_REGEX, contents, re.MULTILINE)
 
 _, suffix = os.path.splitext(args.file)
