@@ -7,3 +7,5 @@ ph_*/
 *.sav
 *.xMAP
 objdiff.json
+/dsd
+/dsd.exe
