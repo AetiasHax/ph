@@ -1,9 +1,9 @@
 ifeq ($(REGION), EUR)
-	REGION_NAME := eur
-	REGION_SUFFIX := P
+	GAME_NAME := ph_eur
+	GAME_CODE := AZEP01
 else ifeq ($(REGION), USA)
-	REGION_NAME := usa
-	REGION_SUFFIX := E
+	GAME_NAME := ph_usa
+	GAME_CODE := AZEE01
 else ifneq ($(REGION),)
 	$(error Unknown region '$(REGION)')
 endif
@@ -16,41 +16,41 @@ else
 endif
 
 PYTHON ?= python
+DSD ?= ./dsd
 
 ROOT       := $(shell pwd)
 BUILD_DIR  := build
-TARGET_DIR := $(BUILD_DIR)/$(REGION_NAME)
+TARGET_DIR := $(BUILD_DIR)/$(GAME_NAME)
 TOOLS_DIR  := tools
-BASE_DIR   := ph_$(REGION_NAME)
+BASE_DIR   := $(GAME_NAME)
 ARM7_BIOS  := arm7_bios.bin
-ASSETS_TXT := assets.txt
+DELINK_DIR := $(TARGET_DIR)/delink
 
-ASM_FILES := $(shell find asm -name *.s)
 CXX_FILES := $(shell find src -name *.cpp) $(shell find libs -name *.cpp)
 C_FILES   := $(shell find src -name *.c) $(shell find libs -name *.c)
-ASM_OBJS   = $(ASM_FILES:%.s=$(TARGET_DIR)/%.s.o)
-ASM_INCS   = $(ASM_FILES:%.s=%.inc)
 CXX_OBJS   = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.o)
 C_OBJS     = $(C_FILES:%.c=$(TARGET_DIR)/%.c.o)
 CXX_CTXS   = $(CXX_FILES:%.cpp=$(TARGET_DIR)/%.cpp.ctx)
 C_CTXS     = $(C_FILES:%.c=$(TARGET_DIR)/%.c.ctx)
 
+DELINK_OBJS = $(shell find $(DELINK_DIR) -name *.o)
+# ALL_OBJS = $(CXX_OBJS:$(TARGET_DIR)/%=%) $(C_OBJS:$(TARGET_DIR)/%=%) $(DELINK_OBJS:$(TARGET_DIR)/%=%)
+ALL_OBJS = $(DELINK_OBJS:$(TARGET_DIR)/%=%)
+
 OV_BINS := $(wildcard $(TARGET_DIR)/overlays/*.bin)
 OV_LZS = $(OV_BINS:%.bin=%.lz)
 
-NDS_FILE := ph_$(REGION_NAME).nds
-BASE_ROM := baserom_$(REGION_NAME).nds
-CHECKSUM := ph_$(REGION_NAME).sha1
+NDS_FILE := $(GAME_NAME).nds
+BASE_ROM := baserom_$(GAME_NAME).nds
+CHECKSUM := $(GAME_NAME).sha1
 
 MW_VER     := 2.0/sp1p5
-MW_ASM     := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwasmarm.exe
 MW_CC      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwccarm.exe
 MW_LD      := $(ROOT)/$(TOOLS_DIR)/mwccarm/$(MW_VER)/mwldarm.exe
 MW_LICENSE := $(ROOT)/$(TOOLS_DIR)/mwccarm/license.dat
-LCF_FILE   := $(ROOT)/$(BUILD_DIR)/arm9_linker_script.lcf
+LCF_FILE   := $(ROOT)/$(BUILD_DIR)/$(GAME_NAME)/arm9_linker_script.lcf
 OBJS_FILE  := $(ROOT)/$(BUILD_DIR)/arm9_objects.txt
 
-ASM_FLAGS := -proc arm5te -d $(REGION) -i asm -msgstyle gcc
 CC_FLAGS  := -O4,p -enum int -char signed -str noreuse -proc arm946e -gccext,on -fp soft -inline on,noauto -Cpp_exceptions off -RTTI off -interworking -sym on -gccinc -i include -i libs/c/include -i libs/cpp/include -nolink -d $(REGION) -msgstyle gcc
 C_FLAGS   := -lang=c
 CXX_FLAGS := -lang=c++
@@ -74,74 +74,58 @@ usa:
 	$(MAKE) all REGION=USA
 
 .PHONY: all
-all: tools rom
+all: rom
 	sha1sum $(NDS_FILE)
 	sha1sum -c $(CHECKSUM)
 
-.PHONY: tools
-tools:
-	cd $(TOOLS_DIR)/compress && $(MAKE)
-	cd $(TOOLS_DIR)/rom && $(MAKE)
-	cd $(TOOLS_DIR)/elf && $(MAKE)
+ifneq (,$(wildcard $(ARM7_BIOS)))
+	ARM7_BIOS_FLAG = --arm7-bios $(ARM7_BIOS)
+endif
 
 .PHONY: rom
 rom: arm9
-ifneq (,$(wildcard $(ARM7_BIOS)))
-	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE) -s $(ASSETS_TXT) -7 $(ARM7_BIOS)
-else
-	$(TOOLS_DIR)/rom/buildrom -a $(BASE_DIR) -b $(TARGET_DIR) -r $(REGION_SUFFIX) -o $(NDS_FILE) -s $(ASSETS_TXT)
-endif
+	$(DSD) rom build $(ARM7_BIOS_FLAG) --extract-path $(BASE_DIR) --rom $(NDS_FILE)
 
 .PHONY: extract
 extract: tools
 ifeq (,$(REGION))
 	$(MAKE) extract REGION=EUR
 	$(MAKE) extract REGION=USA
-else ifneq (,$(wildcard $(BASE_ROM)))
-	$(TOOLS_DIR)/rom/extractrom -o $(BASE_DIR) -i $(BASE_ROM)
+else
+	$(DSD) rom extract $(ARM7_BIOS_FLAG) --rom $(BASE_ROM) --output-path $(BASE_DIR)
 endif
 
-.PHONY: arm9
-arm9: link
-	$(MAKE) compress
-
-.PHONY: setup
-setup:
-	mkdir -p $(TARGET_DIR)/overlays
+.PHONY: delink
+delink:
+ifeq (,$(REGION))
+	$(MAKE) delink REGION=EUR
+	$(MAKE) delink REGION=USA
+else
+	$(DSD) delink --config-path config/$(GAME_CODE)/arm9/config.yaml --elf-path $(DELINK_DIR)
+endif
 
 .PHONY: clean
 clean:
 	rm -rf build/
 
 .PHONY: lcf
-lcf: setup $(TOOLS_DIR)/lcf.py
-	$(PYTHON) $(TOOLS_DIR)/lcf.py
-
-$(ASM_OBJS): $(TARGET_DIR)/%.o: %
-	mkdir -p $(dir $@)
-	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_ASM) $(ASM_FLAGS) $< -o $@
+lcf:
+	$(DSD) lcf --config-path config/$(GAME_CODE)/arm9/config.yaml --output-path $(BUILD_DIR)/$(GAME_NAME)/arm9_linker_script.lcf
 
 $(CXX_OBJS): $(TARGET_DIR)/%.o: % $(TARGET_DIR)/%.ctx
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(CXX_FLAGS) $< -o $@
-	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
+	# $(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 $(C_OBJS): $(TARGET_DIR)/%.o: % $(TARGET_DIR)/%.ctx
 	mkdir -p $(dir $@)
 	LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_CC) $(CC_FLAGS) $(C_FLAGS) $< -o $@
-	$(TOOLS_DIR)/elf/elfkill -s $< -e $@
+	# $(TOOLS_DIR)/elf/elfkill -s $< -e $@
 
 $(CXX_CTXS) $(C_CTXS): $(TARGET_DIR)/%.ctx: %
 	mkdir -p $(dir $@)
 	$(PYTHON) $(TOOLS_DIR)/m2ctx.py -f $@ $<
 
-.PHONY: link
-link: lcf $(ASM_OBJS) $(CXX_OBJS) $(C_OBJS)
-	cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) @$(OBJS_FILE)
-
-.PHONY: compress
-compress: $(OV_LZS)
-	$(TOOLS_DIR)/compress/compress -s 0x4000 -i $(TARGET_DIR)/arm9.bin -o $(TARGET_DIR)/arm9.lz
-
-$(OV_LZS): %.lz: %.bin
-	$(TOOLS_DIR)/compress/compress -p -i $< -o $@
+.PHONY: arm9
+arm9: lcf $(CXX_OBJS) $(C_OBJS)
+	@cd $(TARGET_DIR) && LM_LICENSE_FILE=$(MW_LICENSE) $(WINE) $(MW_LD) $(LD_FLAGS) $(LCF_FILE) $(ALL_OBJS)
