@@ -10,3 +10,5 @@ objdiff.json
 /dsd
 /dsd.exe
 /dsd.pdb
+build.ninja
+.ninja_log
