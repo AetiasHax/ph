@@ -3,4 +3,5 @@
     .init       start:0x0211233c end:0x021123e4 kind:code align:4
     .ctor       start:0x021123e4 end:0x021123f8 kind:data align:4
     .data       start:0x02112400 end:0x02112ba0 kind:data align:32
+    .bss        start:0x02112ba0 end:0x02112ba0 kind:bss align:32
 
