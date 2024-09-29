@@ -146,7 +146,7 @@ from:0x0216e3d4 kind:load to:0x0217927c module:overlay(26)
 from:0x0216e3d8 kind:load to:0x0217928c module:overlay(26)
 from:0x0216e444 kind:load to:0x027e0f74 module:dtcm
 from:0x0216e448 kind:load to:0x02097700 module:overlay(0)
-from:0x0216e450 kind:thumb_call to:0x0214393c module:overlays(14,60)
+from:0x0216e450 kind:thumb_call to:0x0214393c module:overlay(14)
 from:0x0216e460 kind:thumb_call_arm to:0x0202e9d8 module:main
 from:0x0216e468 kind:thumb_call to:0x0216e818 module:overlay(26)
 from:0x0216e474 kind:load to:0x0217a46c module:overlay(26)

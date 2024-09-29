@@ -1704,7 +1704,7 @@ from:0x0211f5a8 kind:arm_call to:0x0212dd3c module:overlay(12)
 from:0x0211f5f8 kind:arm_call to:0x0211ce60 module:overlay(12)
 from:0x0211f5fc kind:arm_call to:0x0211ce50 module:overlay(12)
 from:0x0211f600 kind:arm_call to:0x0211cf08 module:overlay(12)
-from:0x0211f608 kind:arm_call_thumb to:0x02100ae0 module:overlays(4,5,6,7)
+from:0x0211f608 kind:arm_call_thumb to:0x02100ae0 module:overlay(4)
 from:0x0211f614 kind:arm_call_thumb to:0x02100bcc module:overlay(4)
 from:0x0211f624 kind:arm_call_thumb to:0x0202ff64 module:main
 from:0x0211f628 kind:arm_call to:0x0212e274 module:overlay(12)

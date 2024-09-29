@@ -36,11 +36,11 @@ from:0x020efe3a kind:thumb_call to:0x020efa88 module:overlay(3)
 from:0x020f0108 kind:thumb_call to:0x02105ff0 module:overlay(4)
 from:0x020f0114 kind:thumb_call_arm to:0x020a5e9c module:overlay(0)
 from:0x020f0124 kind:thumb_call_arm to:0x0202e9dc module:main
-from:0x020f0130 kind:thumb_call to:0x021761b4 module:overlays(20,26)
+from:0x020f0130 kind:thumb_call to:0x021761b4 module:overlay(26)
 from:0x020f0148 kind:load to:0x02100050 module:overlay(3)
 from:0x020f014c kind:load to:0x027e0d38 module:dtcm
 from:0x020f0150 kind:load to:0x027e0ce0 module:dtcm
-from:0x020f0164 kind:thumb_call to:0x021761dc module:overlays(26,27)
+from:0x020f0164 kind:thumb_call to:0x021761dc module:overlay(26)
 from:0x020f016a kind:thumb_call_arm to:0x0202ea0c module:main
 from:0x020f0170 kind:thumb_call to:0x02106054 module:overlay(4)
 from:0x020f0186 kind:thumb_call_arm to:0x02007a44 module:main

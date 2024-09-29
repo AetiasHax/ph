@@ -705,7 +705,7 @@ from:0x0218dcb0 kind:arm_call_thumb to:0x0211be48 module:overlay(9)
 from:0x0218dcb4 kind:arm_call to:0x020329b0 module:main
 from:0x0218dcd4 kind:arm_call to:0x02032a74 module:main
 from:0x0218dcf8 kind:arm_call to:0x02032714 module:main
-from:0x0218dd00 kind:arm_call_thumb to:0x02116b00 module:overlays(9,10)
+from:0x0218dd00 kind:arm_call_thumb to:0x02116b00 module:overlay(9)
 from:0x0218dd40 kind:arm_call_thumb to:0x02113c34 module:overlay(9)
 from:0x0218dd58 kind:arm_call_thumb to:0x02113f40 module:overlay(9)
 from:0x0218dd80 kind:arm_call_thumb to:0x02113c34 module:overlay(9)

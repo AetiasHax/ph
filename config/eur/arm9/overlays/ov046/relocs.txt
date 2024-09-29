@@ -156,7 +156,7 @@ from:0x021914b4 kind:arm_call to:0x020d7f18 module:overlay(0)
 from:0x021914ec kind:arm_call to:0x02037628 module:main
 from:0x02191504 kind:arm_call to:0x02036f68 module:main
 from:0x02191528 kind:arm_call to:0x02036700 module:main
-from:0x02191544 kind:arm_call_thumb to:0x02175f78 module:overlays(26,61)
+from:0x02191544 kind:arm_call_thumb to:0x02175f78 module:overlay(26)
 from:0x02191568 kind:load to:0x027e077c module:dtcm
 from:0x0219156c kind:load to:0x027e103c module:dtcm
 from:0x02191570 kind:load to:0x027e1054 module:dtcm

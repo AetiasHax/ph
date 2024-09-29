@@ -316,7 +316,7 @@ from:0x020f1294 kind:arm_call_thumb to:0x0211be48 module:overlay(9)
 from:0x020f1298 kind:arm_call to:0x020329b0 module:main
 from:0x020f12b8 kind:arm_call to:0x02032a74 module:main
 from:0x020f12dc kind:arm_call to:0x02032714 module:main
-from:0x020f12e4 kind:arm_call_thumb to:0x02116b00 module:overlays(9,10)
+from:0x020f12e4 kind:arm_call_thumb to:0x02116b00 module:overlay(9)
 from:0x020f1320 kind:arm_call_thumb to:0x02113c20 module:overlay(9)
 from:0x020f1338 kind:arm_call_thumb to:0x02113f40 module:overlay(9)
 from:0x020f1340 kind:arm_call_thumb to:0x02116b24 module:overlay(9)

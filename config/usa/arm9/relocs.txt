@@ -3792,14 +3792,14 @@ from:0x0202fbc8 kind:load to:0x020ee6d4 module:overlay(0)
 from:0x0202fbcc kind:load to:0x027e0618 module:dtcm
 from:0x0202fbd0 kind:load to:0x020561b0 module:main
 from:0x0202fbdc kind:load to:0x020ee7c0 module:overlay(0)
-from:0x0202fc4c kind:arm_call to:0x02115730 module:overlays(11,13)
+from:0x0202fc4c kind:arm_call to:0x02115730 module:overlay(13)
 from:0x0202fc60 kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fc6c kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fc7c kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fcac kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fcb8 kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fcd0 kind:arm_call to:0x0200b7a4 module:main
-from:0x0202fd10 kind:arm_call to:0x02115730 module:overlays(11,13)
+from:0x0202fd10 kind:arm_call to:0x02115730 module:overlay(13)
 from:0x0202fd24 kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fd34 kind:arm_call_thumb to:0x0202fa24 module:main
 from:0x0202fd44 kind:arm_call_thumb to:0x0202fa24 module:main
@@ -4680,7 +4680,7 @@ from:0x02038238 kind:arm_call to:0x020ae280 module:overlay(0)
 from:0x02038258 kind:arm_call_thumb to:0x0207b290 module:overlay(0)
 from:0x02038288 kind:arm_call_thumb to:0x0207b2d4 module:overlay(0)
 from:0x020382e8 kind:arm_call to:0x02083888 module:overlay(0)
-from:0x02038314 kind:arm_call to:0x02100a60 module:overlays(4,5,6,7)
+from:0x02038314 kind:arm_call to:0x02100a60 module:overlays(5,6,7)
 from:0x02038368 kind:arm_call to:0x02038574 module:main
 from:0x0203836c kind:arm_call to:0x020ab668 module:overlay(0)
 from:0x02038394 kind:arm_call_thumb to:0x020ae308 module:overlay(0)
@@ -6951,7 +6951,7 @@ from:0x02050dd8 kind:load to:0x0211fe48 module:overlay(16)
 from:0x02050ddc kind:load to:0x02068e04 module:main
 from:0x02050dec kind:load to:0x02035fc9 module:main
 from:0x02050df0 kind:load to:0x027e0c54 module:dtcm
-from:0x02050dfc kind:arm_call to:0x0211f5c0 module:overlays(14,15,16)
+from:0x02050dfc kind:arm_call to:0x0211f5c0 module:overlays(15,16)
 from:0x02050e0c kind:arm_call to:0x0204f890 module:main
 from:0x02050e14 kind:load to:0x027e0c68 module:dtcm
 from:0x02050e18 kind:load to:0x0203716c module:main

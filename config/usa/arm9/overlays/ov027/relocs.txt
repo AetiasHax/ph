@@ -705,7 +705,7 @@ from:0x02173788 kind:load to:0x0217966c module:overlay(27)
 from:0x0217378c kind:load to:0x02145e68 module:overlay(14)
 from:0x0217379c kind:arm_call to:0x02145274 module:overlay(14)
 from:0x02173800 kind:arm_call to:0x02083888 module:overlay(0)
-from:0x02173814 kind:arm_call to:0x02100a60 module:overlays(4,5,6,7)
+from:0x02173814 kind:arm_call to:0x02100a60 module:overlays(5,6,7)
 from:0x02173824 kind:arm_call to:0x020c18a8 module:overlay(0)
 from:0x02173838 kind:load to:0x027e0e60 module:dtcm
 from:0x0217383c kind:load to:0x027e0d38 module:dtcm
