@@ -1289,7 +1289,7 @@ from:0x0211a3fc kind:load to:0x027e0ce0 module:dtcm
 from:0x0211a412 kind:thumb_call to:0x0211a3c8 module:overlay(9)
 from:0x0211a418 kind:thumb_call_arm to:0x0202ea0c module:main
 from:0x0211a424 kind:load to:0x027e104c module:dtcm
-from:0x0211a42c kind:load to:0x020eed41 module:overlays(1,2,3)
+from:0x0211a42c kind:load to:0x020eed41 module:overlay(3)
 from:0x0211a434 kind:load to:0x0211a4d5 module:overlay(9)
 from:0x0211a454 kind:thumb_call to:0x020eed54 module:overlay(3)
 from:0x0211a460 kind:thumb_call to:0x0201739c module:main
