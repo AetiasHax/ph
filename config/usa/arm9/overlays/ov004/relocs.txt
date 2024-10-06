@@ -1417,7 +1417,9 @@ from:0x02107058 kind:thumb_call to:0x0203d694 module:main
 from:0x02107066 kind:thumb_call to:0x0203d694 module:main
 from:0x02107090 kind:load to:0x02179670 module:overlays(20,22,26,27,28)
 from:0x02107094 kind:load to:0x02153fd0 module:overlay(14)
+from:0x02107098 kind:load to:0x0216b5cc module:overlay(18)
 from:0x0210709c kind:load to:0x0211db0c module:overlay(9)
+from:0x021070a0 kind:load to:0x0216b5c0 module:overlay(18)
 from:0x021070ac kind:load to:0x0203d6ed module:main
 from:0x021070d0 kind:thumb_call_arm to:0x02078ae0 module:overlay(0)
 from:0x021070e2 kind:thumb_call_arm to:0x020a5e3c module:overlay(0)
