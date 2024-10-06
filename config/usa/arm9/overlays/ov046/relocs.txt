@@ -369,7 +369,7 @@ from:0x02193a78 kind:load to:0x027e0e58 module:dtcm
 from:0x02193a7c kind:load to:0x0217a534 module:overlays(22,23,24,25,26,29,61)
 from:0x02193a80 kind:load to:0x027e0764 module:dtcm
 from:0x02193a88 kind:load to:0x02050f10 module:main
-from:0x02193a8c kind:load to:0x02186148 module:overlays(15,32,34,35)
+from:0x02193a8c kind:load to:0x02186148 module:overlays(15,32,34,35,39)
 from:0x02193ad0 kind:arm_call to:0x0207c150 module:overlay(0)
 from:0x02193af4 kind:arm_call to:0x0207c150 module:overlay(0)
 from:0x02193b08 kind:arm_call to:0x020cea6c module:overlay(0)
