@@ -1382,7 +1382,7 @@ from:0x02106ef8 kind:thumb_call to:0x0210d4bc module:overlay(4)
 from:0x02106f00 kind:load to:0x027e0618 module:dtcm
 from:0x02106f04 kind:load to:0x027e0d38 module:dtcm
 from:0x02106f08 kind:load to:0x021881bc module:overlays(37,40)
-from:0x02106f0c kind:load to:0x021881c4 module:overlays(37,40)
+from:0x02106f0c kind:load to:0x021881c4 module:overlay(40)
 from:0x02106f10 kind:load to:0x021881dc module:overlays(37,40)
 from:0x02106f14 kind:load to:0x0218710c module:overlay(15)
 from:0x02106f18 kind:load to:0x0218713c module:overlay(15)
