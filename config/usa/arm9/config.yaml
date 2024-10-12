@@ -1,4 +1,6 @@
 rom_config: '../../../extract/usa/config.yaml'
+build_path: '../../../build/usa'
+delinks_path: '../../../build/usa/delinks'
 main_module:
   name: main
   object: '../../../build/usa/build/arm9.bin'

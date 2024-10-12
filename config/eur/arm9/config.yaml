@@ -1,4 +1,6 @@
 rom_config: '../../../extract/eur/config.yaml'
+build_path: '../../../build/eur'
+delinks_path: '../../../build/eur/delinks'
 main_module:
   name: main
   object: '../../../build/eur/build/arm9.bin'
