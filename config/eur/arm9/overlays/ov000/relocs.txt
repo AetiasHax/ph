@@ -5468,7 +5468,7 @@ from:0x020ad8d4 kind:load to:0x0217a4ac module:overlays(22,23,24,25,26,29,61)
 from:0x020ad8d8 kind:load to:0x027e0e60 module:dtcm
 from:0x020ad8dc kind:load to:0x027e0fc8 module:dtcm
 from:0x020ad952 kind:thumb_call_arm to:0x01ff98e0 module:itcm
-from:0x020ad9d8 kind:load to:0x020dc6c6 module:overlay(0)
+from:0x020ad9d8 kind:load to:0x020dc6c4 add:2 module:overlay(0)
 from:0x020ad9dc kind:load to:0x020dc6cc module:overlay(0)
 from:0x020ada08 kind:arm_call to:0x020ad414 module:overlay(0)
 from:0x020ada28 kind:arm_call to:0x020ad414 module:overlay(0)
