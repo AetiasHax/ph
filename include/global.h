@@ -7,8 +7,6 @@
 #define SET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] |= 1 << ((pos) & 0x1f))
 #define RESET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
 
-// KILL(name) causes a function to be excluded from the output ROM, see elfkill.cpp
-#define KILL(name)
 
 // Prevent the IDE from reporting errors that the compiler/linker won't report
 #ifdef __INTELLISENSE__

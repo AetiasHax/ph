@@ -2,10 +2,6 @@
 
 ActorTypeList sActorTypeList;
 
-// Kill duplicate dtors
-KILL(_ZN9ActorTypeC2EjPFP5ActorvEPFivE)
-KILL(_ZN9ActorTypeD2Ev)
-
 ARM ActorType::ActorType(ActorTypeId id, ActorCreateFunc create, unk32 (*unk_08)()) {
     this->id = id;
     this->create = create;
