@@ -31,7 +31,6 @@ LD_FLAGS = " ".join([
     "-proc arm946e",        # Target processor
     "-nostdlib",            # No C/C++ standard library
     "-interworking",        # Enable ARM/Thumb interworking
-    "-nodead",              # No dead code elimination
     "-m Entry",             # Set entry function
     "-map closure,unused",  # Generate map file
     "-msgstyle gcc",        # Use GCC-like messages (some IDEs will make file names clickable)
@@ -121,7 +120,7 @@ def main():
 
         n.rule(
             name="lcf",
-            command="./dsd lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file --objects-path $objects_path --build-path $build_path"
+            command="./dsd lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file --delinks-path $delinks_path --build-path $build_path"
         )
         n.newline()
 
@@ -173,7 +172,7 @@ def add_extract_build(n: ninja_syntax.Writer, game_extract: Path, game_version: 
 
 def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_config: Path, game_version: str):
     source_object_files = [
-        str(game_build / source_file) + ".o"
+        str(game_build / source_file.with_suffix(".o"))
         for source_file in get_c_cpp_files([src_path, libs_path])
     ]
     lcf_file = str(game_build / "linker_script.lcf")
@@ -211,7 +210,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
 
 def add_mwcc_builds(n: ninja_syntax.Writer, game_version: str, game_build: Path):
     for source_file in get_c_cpp_files([src_path, libs_path]):
-        output_file = str(game_build / source_file) + ".o"
+        output_file = str(game_build / source_file.with_suffix(".o"))
         cc_flags = []
         if is_cpp(source_file): cc_flags.append("-lang=c++")
         elif is_c(source_file): cc_flags.append("-lang=c")
@@ -271,7 +270,7 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
             "config_path": game_config / "arm9" / "config.yaml",
             "lcf_file": lcf_file,
             "objects_file": objects_file,
-            "objects_path": delinks_path,
+            "delinks_path": delinks_path,
             "build_path": game_build,
         }
     )
