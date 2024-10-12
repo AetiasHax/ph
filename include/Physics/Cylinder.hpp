@@ -14,6 +14,7 @@ struct Cylinder {
         pos.x = 0;
         pos.y = size;
         pos.z = 0;
+
         this->size = size;
     }
 

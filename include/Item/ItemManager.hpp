@@ -1,24 +1,24 @@
 #pragma once
 
 extern "C" {
-    #include <string.h>
+#include <string.h>
 }
 
 #include "global.h"
-#include "types.h"
 #include "lib/math.h"
+#include "types.h"
 
 #include "Actor/ActorNavi.hpp"
 #include "DTCM/UnkStruct_027e0f78.hpp"
-#include "Save/AdventureFlags.hpp"
 #include "Item/Item.hpp"
 #include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
 #include "Player/HealthManager.hpp"
-#include "Sound/Sfx.hpp"
-#include "System/SysNew.hpp"
-#include "System/OverlayManager.hpp"
 #include "Render/ModelRender.hpp"
+#include "Save/AdventureFlags.hpp"
+#include "Sound/Sfx.hpp"
+#include "System/OverlayManager.hpp"
+#include "System/SysNew.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2
@@ -69,7 +69,7 @@ enum ShipType_ {
 };
 
 typedef u32 ShipItem;
-#define SHIP_ITEM(part, ship) (ShipPart_ ## part * ShipPart_COUNT + ShipType_ ## type)
+#define SHIP_ITEM(part, ship) (ShipPart_##part * ShipPart_COUNT + ShipType_##type)
 #define ShipItem_COUNT (ShipPart_COUNT * ShipType_COUNT)
 
 typedef u32 Treasure;
@@ -95,7 +95,6 @@ enum Potion_ {
     Potion_Yellow,
     Potion_COUNT,
 };
-
 
 struct ItemFlags {
     /* 00 */ u32 flags[CEIL_DIV(ItemFlag_COUNT, 32)];
@@ -229,7 +228,7 @@ private:
     /* 150 */
 
 public:
-    static ItemManager* Create();
+    static ItemManager *Create();
     static void Destroy();
     ItemManager();
     ~ItemManager();
@@ -240,7 +239,7 @@ public:
 
     // Fairy
     FairyId GetEquippedFairy() const;
-    ActorNavi* GetFairy(FairyId id) const;
+    ActorNavi *GetFairy(FairyId id) const;
     u32 GetActiveFairyLevel(FairyId id) const;
     u32 GetFairyLevel(FairyId id) const;
 
@@ -253,15 +252,15 @@ public:
     void EquipItem_vfunc_38(unk32 param1);
     bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
     s32 EquipItem_vfunc_2c(ItemFlag equipId);
-    EquipItem* GetEquipItem(ItemFlag equipId);
+    EquipItem *GetEquipItem(ItemFlag equipId);
     bool func_ov00_020ad790(unk32 param1);
     bool SetEquippedItem(ItemFlag equipId);
     void EquipPreviousItem();
     void ForceEquipItem(ItemFlag equipId);
     bool ClearForcedEquipItem();
     void UpdateSwordShieldInUse();
-    static EquipItem* GetEquipItemUnchecked(ItemFlag equipId);
-    
+    static EquipItem *GetEquipItemUnchecked(ItemFlag equipId);
+
     // Ammo
     u16 GetAmmo(ItemFlag equipId) const;
     void GiveAmmo(ItemFlag equipId, u16 amount);
@@ -272,10 +271,10 @@ public:
 
     // Item model
     void func_ov00_020ad528();
-    ItemModel* GetItemModel(ItemModelId id);
+    ItemModel *GetItemModel(ItemModelId id);
     void func_ov00_020ad538(unk32 param1) const;
     void func_ov00_020ad560(unk32 param1) const;
-    ItemModel* GetDungeonItemModel(DungeonItemModelId id);
+    ItemModel *GetDungeonItemModel(DungeonItemModelId id);
     void func_ov00_020ad594(unk32 param1) const;
     void LoadFanfareItem(ItemId id);
     bool GetFanfareItemScale(Vec3p *pScale) const;
@@ -299,7 +298,7 @@ public:
     bool IsTreasureSalvaged(u32 index) const;
     void SetTreasureSalvaged(u32 index);
     u8 GetMaxTreasureCount() const;
-    
+
     // mUnk_098, mUnk_09e
     u8 GetUnk_098(u32 index) const;
     u16 GetUnk_09e(u32 index) const;

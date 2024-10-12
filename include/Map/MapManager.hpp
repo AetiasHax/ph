@@ -57,7 +57,7 @@ public:
     unk8 func_ov00_02082494(unk32 param_2);
     unk8 func_ov00_020824cc(unk32 param_2);
     unk8 func_ov00_02082504();
-    unk8 * func_ov00_02082538();
+    unk8 *func_ov00_02082538();
     void func_ov00_02082594();
     void func_ov00_020825ac();
     s32 GetCourseFilePath(char *courseName, char *buf);
@@ -79,7 +79,7 @@ public:
     unk8 GetCourseData_Unk_b0();
     s32 func_ov00_02082914(unk32 param_2);
     unk8 func_ov00_02082acc();
-    unk32 * func_ov00_02082adc();
+    unk32 *func_ov00_02082adc();
     unk8 func_ov00_02082af4();
     bool func_ov00_02082b3c(s32 param_2);
     unk8 func_ov00_02082d08();
@@ -236,8 +236,10 @@ public:
     s32 func_ov00_02085a34(unk32 param_2, unk32 param_3);
     unk8 func_ov00_02085c60(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     unk8 func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4);
-    bool func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7, Vec3p *param_8);
-    bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7, Vec3p *param_8, Vec3p *param_9);
+    bool func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7,
+                            Vec3p *param_8);
+    bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
+                            Vec3p *param_8, Vec3p *param_9);
 };
 
 extern MapManager *gMapManager;

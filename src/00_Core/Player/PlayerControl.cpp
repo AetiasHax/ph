@@ -4,7 +4,7 @@ bool PlayerControl::func_ov00_020aeeac() {}
 void PlayerControl::func_ov00_020aeef8() {}
 void PlayerControl::func_ov00_020aef30() {}
 void PlayerControl::UpdateAim() {}
-Actor* PlayerControl::GetFollowActor() {}
+Actor *PlayerControl::GetFollowActor() {}
 bool PlayerControl::func_ov00_020af01c(unk8 *param1) {}
 void PlayerControl::SetUnk_80() {}
 void PlayerControl::StopFollowing() {}

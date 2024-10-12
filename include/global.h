@@ -3,10 +3,9 @@
 
 #define NULL 0
 
-#define GET_FLAG(arr, pos) (((1 << ((pos) & 0x1f)) & (arr)[((u32)(pos)) >> 5]) != 0)
-#define SET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] |= 1 << ((pos) & 0x1f))
-#define RESET_FLAG(arr, pos) ((arr)[((u32)(pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
-
+#define GET_FLAG(arr, pos) (((1 << ((pos) & 0x1f)) & (arr)[((u32) (pos)) >> 5]) != 0)
+#define SET_FLAG(arr, pos) ((arr)[((u32) (pos)) >> 5] |= 1 << ((pos) & 0x1f))
+#define RESET_FLAG(arr, pos) ((arr)[((u32) (pos)) >> 5] &= ~(1 << ((pos) & 0x1f)))
 
 // Prevent the IDE from reporting errors that the compiler/linker won't report
 #ifdef __INTELLISENSE__

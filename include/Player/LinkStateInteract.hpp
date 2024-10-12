@@ -1,14 +1,13 @@
 #pragma once
 
 #include "global.h"
+#include "lib/math.h"
 #include "types.h"
 
-#include "lib/math.h"
-
+#include "Actor/Actor.hpp"
+#include "Actor/ActorManager.hpp"
 #include "Player/LinkStateBase.hpp"
 #include "Player/LinkStateRoll.hpp"
-#include "Actor/ActorManager.hpp"
-#include "Actor/Actor.hpp"
 
 class LinkStateInteract : public LinkStateBase {
 public:
@@ -37,7 +36,7 @@ public:
     s32 GetGrabActorId();
     bool func_ov00_020aa818();
     void func_ov00_020aa844(Actor *param1);
-    LinkStateRoll* GetLinkStateRoll();
+    LinkStateRoll *GetLinkStateRoll();
     void SetGrabActorVelocity(Vec3p *velocity);
     void SetBombVelocity(Vec3p *velocity);
     void func_ov00_020ab6c8();

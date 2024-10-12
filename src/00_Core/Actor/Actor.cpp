@@ -1,5 +1,5 @@
 extern "C" {
-    #include <stdlib.h>
+#include <stdlib.h>
 }
 
 #include "Actor/Actor.hpp"
@@ -13,7 +13,7 @@ extern "C" {
 #include "Player/TouchControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
-static char *sShipTypes[] = { "brg", "anc", "bow", "hul", "can", "dco", "pdl", "fnl" };
+static char *sShipTypes[] = {"brg", "anc", "bow", "hul", "can", "dco", "pdl", "fnl"};
 
 struct UnkStruct3 {
     /* 0 */ s16 mUnk_0;
@@ -21,44 +21,16 @@ struct UnkStruct3 {
     /* 3 */
 };
 const UnkStruct3 sUnkTable[] = {
-    { 0xff, 2 },
-    { 0xff, 2 },
-    { 0xff, 2 },
-    { 0xff, 2 },
-    { 0xff, 2 },
-    { 6, 2 },
-    { 4, 2 },
-    { 4, 2 },
-    { 4, 2 },
-    { 1, 2 },
-    { 12, 2 },
-    { 4, 2 },
-    { 4, 2 },
-    { 8, 2 },
-    { 12, 2 },
-    { 2, 2 },
-    { 2, 2 },
-    { 20, 2 },
-    { 20, 2 },
-    { 1, 2 },
-    { 4, 2 },
-    { 4, 2 },
-    { 4, 2 },
-    { 8, 2 },
-    { 4, 2 },
-    { 0xff, 2 },
-    { 20, 2 },
-    { 6, 2 },
-    { 6, 2 },
-    { 2, 2 },
+    {0xff, 2}, {0xff, 2}, {0xff, 2}, {0xff, 2}, {0xff, 2}, {6, 2},    {4, 2},  {4, 2},  {4, 2},  {1, 2},
+    {12, 2},   {4, 2},    {4, 2},    {8, 2},    {12, 2},   {2, 2},    {2, 2},  {20, 2}, {20, 2}, {1, 2},
+    {4, 2},    {4, 2},    {4, 2},    {8, 2},    {4, 2},    {0xff, 2}, {20, 2}, {6, 2},  {6, 2},  {2, 2},
 };
 
-Actor_UnkStruct_020::Actor_UnkStruct_020():
+Actor_UnkStruct_020::Actor_UnkStruct_020() :
     mUnk_0c(-1),
     mUnk_0d(0),
     mUnk_0e(1),
-    mUnk_10(-1)
-{
+    mUnk_10(-1) {
     for (s32 i = 0; i < 4; ++i) {
         mUnk_00[i] = 0;
     }
@@ -122,20 +94,19 @@ ARM Actor::Actor() :
     mActiveFrames(0),
     mUnk_13c(0),
     mUnk_140(0),
-    mUnk_144(0)
-{
+    mUnk_144(0) {
     mUnk_014.x = 0;
     mUnk_014.y = 0;
     mUnk_014.z = 0;
-    mPos.x = 0;
-    mPos.y = 0;
-    mPos.z = 0;
+    mPos.x     = 0;
+    mPos.y     = 0;
+    mPos.z     = 0;
     mPrevPos.x = 0;
     mPrevPos.y = 0;
     mPrevPos.z = 0;
-    mVel.x = 0;
-    mVel.y = 0;
-    mVel.z = 0;
+    mVel.x     = 0;
+    mVel.y     = 0;
+    mVel.z     = 0;
 }
 
 ARM Actor::~Actor() {}
@@ -196,7 +167,8 @@ struct UnkStruct1 {
 };
 extern void *data_027e0d3c;
 extern unk32 data_02063e4c;
-extern "C" bool func_ov00_02079470(void *param1, Vec3p *param2, unk32 param3, unk32 param4, unk32 *param5, unk32 *param6, unk32 param7, unk32 param8);
+extern "C" bool func_ov00_02079470(void *param1, Vec3p *param2, unk32 param3, unk32 param4, unk32 *param5, unk32 *param6,
+                                   unk32 param7, unk32 param8);
 extern "C" void func_01ffbe34(UnkStruct1 *param1);
 extern "C" void func_020313c8(unk32 *param1, unk32 param2, unk32 param3, u32 param4, UnkStruct1 *param5);
 ARM void Actor::vfunc_1c(u16 *param1) {
@@ -229,7 +201,7 @@ ARM bool Actor::SetUnk_11b() {
 
 ARM bool Actor::SetVelocity(Vec3p *vel) {
     if (!mUnk_11b) return false;
-    mVel = *vel;
+    mVel     = *vel;
     mUnk_11b = false;
     return true;
 }
@@ -295,13 +267,9 @@ extern s32 data_027e103c;
 ARM bool Actor::func_ov00_020c198c() {
     u32 unk1 = data_027e077c.mUnk_0;
     u32 unk2 = data_027e077c.mUnk_4;
-    if (
-        data_027e077c.mUnk_0 != data_027e077c.mUnk_4
-        || (data_02056be4[unk1] & 1) != 0
-        || (data_02056be4[unk2] & 4) != 0
-        || func_ov05_02103f4c(data_027e103c)
-        || gPlayer->mHealth <= 0
-    ) {
+    if (data_027e077c.mUnk_0 != data_027e077c.mUnk_4 || (data_02056be4[unk1] & 1) != 0 || (data_02056be4[unk2] & 4) != 0 ||
+        func_ov05_02103f4c(data_027e103c) || gPlayer->mHealth <= 0)
+    {
         return false;
     }
     if (gPlayerLink && !gPlayerLink->func_ov00_020bd304()) return false;
@@ -319,8 +287,7 @@ ARM bool KillPickupsFilter::Filter(Actor *actor) {
         case ActorTypeId_FLAL:
         case ActorTypeId_FLBM:
         case ActorTypeId_FLBT:
-        case ActorTypeId_FLTM:
-        {
+        case ActorTypeId_FLTM: {
             actor->Kill();
             return true;
         }
@@ -336,16 +303,16 @@ ARM void Actor::KillPickupItemActors() {
 
 ARM bool Actor::TrySetTransform(Transform *transform) {
     mPrevPos = mPos;
-    mPos = transform->pos;
-    mAngle = transform->angle;
+    mPos     = transform->pos;
+    mAngle   = transform->angle;
     mVisible = transform->visible;
     return true;
 }
 
 ARM void Actor::SetTransform(Transform *transform) {
     mPrevPos = mPos;
-    mPos = transform->pos;
-    mAngle = transform->angle;
+    mPos     = transform->pos;
+    mAngle   = transform->angle;
     mVisible = transform->visible;
 }
 
@@ -376,7 +343,8 @@ ARM bool Actor::vfunc_4c(unk32 *param1) {
 
 ARM bool Actor::IsNearLink() {
     Vec3p playerPos = gPlayerPos;
-    q20 z = playerPos.z;
+
+    q20 z  = playerPos.z;
     q20 dx = abs(playerPos.x - mPos.x);
     if (dx > FLOAT_TO_Q20(10.0)) return false;
     q20 dz = abs(playerPos.z - mPos.z);
@@ -457,38 +425,42 @@ ARM bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
         if (this->CollidesWithPlayer(flags & PlayerCollide_Sword)) {
             Knockback knockback;
             knockback.mUnk_00 = gPlayer->EquipItem_vfunc_2c();
-            knockback.vec = vecFromPlayer;
+            knockback.vec     = vecFromPlayer;
             knockback.mUnk_10 = 0;
-            knockback.actor = NULL;
+            knockback.actor   = NULL;
+
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Shield)) {
             Knockback knockback;
             knockback.mUnk_00 = 0;
-            knockback.vec = vecFromPlayer;
+            knockback.vec     = vecFromPlayer;
             if ((s32) gItemManager->GetActiveFairyLevel(FairyId_Wisdom) >= 1) {
                 knockback.mUnk_10 = 3;
             } else {
                 knockback.mUnk_10 = 2;
             }
             knockback.actor = NULL;
+
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Hammer)) {
             Knockback knockback;
             knockback.mUnk_00 = gPlayer->EquipItem_vfunc_2c();
-            knockback.vec = vecFromPlayer;
+            knockback.vec     = vecFromPlayer;
             knockback.mUnk_10 = 4;
-            knockback.actor = NULL;
+            knockback.actor   = NULL;
+
             result = this->vfunc_48(&knockback);
         } else if (this->CollidesWithPlayer(flags & PlayerCollide_Gongoron)) {
             Knockback knockback;
             knockback.mUnk_00 = gPlayerLink->vfunc_78();
-            knockback.vec = vecFromPlayer;
+            knockback.vec     = vecFromPlayer;
             if (knockback.mUnk_00 != 0) {
                 knockback.mUnk_10 = 9;
             } else {
                 knockback.mUnk_10 = 2;
             }
             knockback.actor = NULL;
+
             result = this->vfunc_48(&knockback);
         }
     }
@@ -499,8 +471,8 @@ ARM bool Actor::CollidesWithShield(Cylinder *param1) {
     Vec3p vecFromPlayer;
     Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
     s32 currAngle = gPlayerAngle;
-    s32 angle = Atan2(vecFromPlayer.x, vecFromPlayer.z);
-    s32 angleDiff = (s16)angle - currAngle;
+    s32 angle     = Atan2(vecFromPlayer.x, vecFromPlayer.z);
+    s32 angleDiff = (s16) angle - currAngle;
     if (angleDiff < 0) angleDiff = -angleDiff;
     if (angleDiff <= DEG_TO_ANG(90) && gPlayer->EquipCollidesWith(param1, ItemFlag_WoodenShield)) {
         return true;
@@ -556,6 +528,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
             if (actor->mType == ActorTypeId_Arrow || actor->mType == ActorTypeId_SBEM) {
                 q20 cos = COS(actor->mAngle);
                 q20 sin = SIN(actor->mAngle);
+
                 knockback.vec.x = sin;
                 knockback.vec.y = 0;
                 knockback.vec.z = cos;
@@ -563,7 +536,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
                 Vec3p_Sub(&mPos, &actor->mPrevPos, &knockback.vec);
             }
             knockback.mUnk_00 = actor->mUnk_125;
-            knockback.actor = actor;
+            knockback.actor   = actor;
 
             switch (actor->mType) {
                 case ActorTypeId_SBEM: {
@@ -597,8 +570,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
                 case ActorTypeId_BKEY:
                 case ActorTypeId_FORC:
                 case ActorTypeId_FLTB:
-                case ActorTypeId_TSUB:
-                {
+                case ActorTypeId_TSUB: {
                     knockback.mUnk_10 = 10;
                 } break;
 
@@ -676,12 +648,14 @@ ARM q20 Actor::XzDistanceToLink() {
     Vec3p src;
     Vec3p_CopyXZ(&mPos, &src);
     Vec3p dest = gPlayerPos;
+
     dest.y = 0;
     return Vec3p_Distance(&src, &dest);
 }
 
 ARM s16 Actor::GetAngleTo(Vec3p *vec) {
     s16 angle = mAngle;
+
     q20 dz = vec->z - mPos.z;
     q20 dx = vec->x - mPos.x;
     if (dx != 0 || dz != 0) {
@@ -698,10 +672,11 @@ extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
 ARM void Actor::func_ov00_020c2988(Vec3p *param1, q20 param2, Vec3p *param3) {
     q20 z1 = param1->z;
     q20 z0 = mPos.z;
+
     param3->x = param1->x - mPos.x;
     param3->y = 0;
     param3->z = z1 - z0;
-    q20 dist = this->XzDistanceTo(param1);
+    q20 dist  = this->XzDistanceTo(param1);
     if (dist < param2) param2 = dist;
     func_0202d95c(param3, param2);
 }
@@ -717,8 +692,8 @@ ARM bool Actor::func_ov00_020c29ec(q20 param1) {
 }
 
 ARM void Actor::GetHitbox(Cylinder *hitbox) {
-    hitbox->size = mHitbox.size;
-    u32 angle = 2 * (mAngle >> 4);
+    hitbox->size  = mHitbox.size;
+    u32 angle     = 2 * (mAngle >> 4);
     hitbox->pos.x = mPos.x;
     hitbox->pos.y = mPos.y;
     hitbox->pos.z = mPos.z;
@@ -730,8 +705,8 @@ ARM void Actor::GetHitbox(Cylinder *hitbox) {
 }
 
 ARM void Actor::GetUnk_08c(Cylinder *param1) {
-    param1->size = mUnk_08c.size;
-    u32 angle = 2 * (mAngle >> 4);
+    param1->size  = mUnk_08c.size;
+    u32 angle     = 2 * (mAngle >> 4);
     param1->pos.x = mPos.x;
     param1->pos.y = mPos.y;
     param1->pos.z = mPos.z;
@@ -778,8 +753,8 @@ ARM bool Actor::func_ov00_020c2c70() {
     return boomerang != NULL;
 }
 
-ARM EquipBoomerang* Actor::GetEquipBoomerang() {
-    return (EquipBoomerang*) ItemManager::GetEquipItemUnchecked(ItemFlag_Boomerang);
+ARM EquipBoomerang *Actor::GetEquipBoomerang() {
+    return (EquipBoomerang *) ItemManager::GetEquipItemUnchecked(ItemFlag_Boomerang);
 }
 
 ARM bool Actor::func_ov00_020c2d54() {
@@ -804,6 +779,7 @@ ARM bool Actor::func_ov00_020c2de4() {
     Vec3p vel;
 
     EquipRope *rope = EquipSword::GetEquipRope();
+
     Actor *actor = rope->func_ov14_0213d420();
     if (actor) {
         Vec3p_Sub(&actor->mPos, &mPos, &vel);
@@ -820,6 +796,7 @@ ARM bool Actor::func_ov00_020c2de4() {
 
 ARM bool Actor::func_ov00_020c2e7c() {
     bool result = false;
+
     EquipRope *rope = EquipSword::GetEquipRope();
     if (!mUnk_11d) {
         s32 unk1 = rope->func_ov14_0213ddd4(this);
@@ -839,6 +816,7 @@ ARM bool Actor::func_ov00_020c2ebc() {
 
 ARM bool Actor::func_ov00_020c2ed4() {
     EquipRope *rope = EquipSword::GetEquipRope();
+
     s32 index = rope->func_ov14_0213d440(mRef.id);
     if (index >= 0) {
         bool unk1 = rope->func_ov14_0213d420();
@@ -868,6 +846,7 @@ ARM bool Actor::func_ov00_020c2ed4() {
 
 ARM bool Actor::IsHitboxTouched(bool param1) {
     q20 size = mHitbox.size;
+
     bool result = false;
     if (size >= 0) {
         Vec3p pos = mPos;
@@ -899,7 +878,7 @@ ARM bool Actor::func_ov00_020c3094() {
     return result;
 }
 
-ARM Vec3p* Actor::GetPos() {
+ARM Vec3p *Actor::GetPos() {
     return &mPos;
 }
 
@@ -946,6 +925,7 @@ ARM void Actor::vfunc_ac() {}
 
 ARM void Actor::func_ov00_020c3200(s32 param1) {
     const UnkStruct3 *entry = &sUnkTable[param1];
+
     mUnk_122 = sUnkTable[param1].mUnk_0;
     mUnk_120 = sUnkTable[param1].mUnk_0;
     mUnk_124 = entry->mUnk_2;
@@ -963,7 +943,7 @@ ARM void Actor::GetLinkPos(Vec3p *result) {
 ARM void Actor::GetLinkDummyPos(Vec3p *result) {
     ActorRef dummyRef;
     ActorManager::FindActorByType(&dummyRef, gActorManager, ActorTypeId_PlayerDummy);
-    ActorPlayerDummy *dummy = (ActorPlayerDummy*) gActorManager->GetActor(&dummyRef);
+    ActorPlayerDummy *dummy = (ActorPlayerDummy *) gActorManager->GetActor(&dummyRef);
     if (dummy != NULL && dummy->mUnk_16e == 0) {
         *result = dummy->mPos;
         return;
@@ -977,4 +957,3 @@ Actor_UnkStruct_09c::Actor_UnkStruct_09c() {
     mUnk_3 = 0;
     mUnk_4 = 0;
 }
-

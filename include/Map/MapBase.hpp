@@ -7,11 +7,11 @@
 
 #include "lib/math.h"
 
+#include "Map/CameraViewpoint.hpp"
 #include "Map/Course.hpp"
 #include "Map/Entrance.hpp"
-#include "Map/TriggerBase.hpp"
 #include "Map/Exit.hpp"
-#include "Map/CameraViewpoint.hpp"
+#include "Map/TriggerBase.hpp"
 #include "System/SysNew.hpp"
 
 #define MAX_ENTRANCES 0x40
@@ -94,10 +94,10 @@ public:
     /* 0e8 */ Vec3p mUnk_0e8;
     /* 0f4 */ Vec3p mUnk_0f4;
     /* 100 */ std::vector<Entrance> mEntrances;
-    /* 10c */ std::vector<TriggerBase*> mTriggers;
+    /* 10c */ std::vector<TriggerBase *> mTriggers;
     /* 118 */ std::vector<Exit> mExits;
     /* 124 */ std::vector<CameraViewpoint> mViewpoints;
-    /* 130 */ std::vector<TriggerBase*> mUnk_130;
+    /* 130 */ std::vector<TriggerBase *> mUnk_130;
     /* 13c */ unk32 mUnk_13c;
     /* 140 */ unk32 mUnk_140;
     /* 144 */ void *mUnk_144;
@@ -144,7 +144,7 @@ public:
     /* 68 */ virtual unk8 vfunc_68(unk32 param_2, unk32 param_3);
     /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
-    /* 74 */ virtual s32* vfunc_74(Vec3p *param_2);
+    /* 74 */ virtual s32 *vfunc_74(Vec3p *param_2);
     /* 78 */ virtual unk32 vfunc_78();
     /* 7c */ virtual unk32 vfunc_7c();
     /* 80 */ virtual unk32 vfunc_80();
@@ -206,7 +206,7 @@ public:
     unk8 GetTriggerBoundingBoxes(unk32 param_2, AABB *param_3, unk32 param_4);
     unk32 GetOverlappingTrigger(Vec3p *param_2);
     unk8 FindTrigger(unk32 type);
-    unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase * *triggers, unk32 capacity);
+    unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity);
     bool IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3);
     bool AnyTrigger_func_0c(unk32 type);
     unk8 Trigger_vfunc_08();

@@ -2,7 +2,7 @@
 
 ActorType ActorRupee::gType;
 
-ActorRupee* ActorRupee::Create() {}
+ActorRupee *ActorRupee::Create() {}
 ActorRupee::ActorRupee() {}
 bool ActorRupee::vfunc_08() {}
 bool ActorRupee::vfunc_60() {}

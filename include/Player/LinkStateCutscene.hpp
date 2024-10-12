@@ -1,12 +1,11 @@
 #pragma once
 
 #include "global.h"
+#include "lib/math.h"
 #include "types.h"
 
-#include "lib/math.h"
-
-#include "Player/LinkStateBase.hpp"
 #include "Item/Item.hpp"
+#include "Player/LinkStateBase.hpp"
 
 class LinkStateCutscene : public LinkStateBase {
 public:

@@ -1,15 +1,15 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
-#include "lib/touch.h"
 #include "lib/math.h"
+#include "lib/touch.h"
+#include "types.h"
 
 typedef u16 TouchFlags;
 enum TouchFlag_ {
-    TouchFlag_TouchedNow = 0x0001,
+    TouchFlag_TouchedNow   = 0x0001,
     TouchFlag_UntouchedNow = 0x0002,
-    TouchFlag_Repeat = 0x0004,
+    TouchFlag_Repeat       = 0x0004,
 };
 
 class TouchControl {

@@ -3,11 +3,11 @@
 ActorTypeList sActorTypeList;
 
 ARM ActorType::ActorType(ActorTypeId id, ActorCreateFunc create, unk32 (*unk_08)()) {
-    this->id = id;
+    this->id     = id;
     this->create = create;
     this->unk_08 = unk_08;
     this->unk_0c = 0;
-    this->next = NULL;
+    this->next   = NULL;
     this->Register();
     sActorTypeList.tail = this;
 }
@@ -37,13 +37,13 @@ ARM void ActorType::Register() {
 ARM void ActorType::Unregister() {
     ActorType *actorType;
 
-    ActorType **current = &sActorTypeList.head;
+    ActorType **current  = &sActorTypeList.head;
     ActorType **previous = NULL;
 
     for (actorType = sActorTypeList.head; actorType != NULL; actorType = actorType->next) {
         if (actorType == this) break;
         previous = current;
-        current = &actorType->next;
+        current  = &actorType->next;
     }
 
     if (previous != NULL) {
