@@ -198,12 +198,7 @@ data_ov039_02186124 kind:data(any) addr:0x2186124
 data_ov039_021861ac kind:data(any) addr:0x21861ac ambiguous
 data_ov039_021861e8 kind:data(any) addr:0x21861e8 ambiguous
 data_ov039_021861ec kind:data(any) addr:0x21861ec ambiguous
-data_ov039_02186218 kind:data(any) addr:0x2186218 ambiguous
-data_ov039_02186244 kind:data(any) addr:0x2186244 ambiguous
 data_ov039_02186264 kind:data(any) addr:0x2186264 ambiguous
-data_ov039_02186284 kind:data(any) addr:0x2186284 ambiguous
-data_ov039_021862a4 kind:data(any) addr:0x21862a4 ambiguous
-data_ov039_021862d0 kind:data(any) addr:0x21862d0 ambiguous
 data_ov039_021862fc kind:data(any) addr:0x21862fc ambiguous
 data_ov039_02186374 kind:data(any) addr:0x2186374 ambiguous
 data_ov039_02186390 kind:data(any) addr:0x2186390

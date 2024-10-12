@@ -345,7 +345,6 @@ data_ov024_02179540 kind:data(any) addr:0x2179540
 data_ov024_0217954c kind:data(any) addr:0x217954c
 data_ov024_02179558 kind:data(any) addr:0x2179558
 data_ov024_02179564 kind:data(any) addr:0x2179564 ambiguous
-data_ov024_02179584 kind:data(any) addr:0x2179584 ambiguous
 data_ov024_021795a4 kind:data(any) addr:0x21795a4 ambiguous
 data_ov024_021795b8 kind:data(any) addr:0x21795b8 ambiguous
 func_ov024_021795d0 kind:function(arm,size=0x38) addr:0x21795d0

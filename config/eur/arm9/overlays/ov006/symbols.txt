@@ -89,8 +89,6 @@ data_ov006_02103014 kind:data(any) addr:0x2103014
 data_ov006_0210307c kind:data(any) addr:0x210307c
 data_ov006_021030ec kind:data(any) addr:0x21030ec
 data_ov006_0210315c kind:data(any) addr:0x210315c
-data_ov006_02103445 kind:data(any) addr:0x2103445 ambiguous
-data_ov006_021034fd kind:data(any) addr:0x21034fd ambiguous
 data_ov006_02103954 kind:data(any) addr:0x2103954
 data_ov006_0210396c kind:data(any) addr:0x210396c
 data_ov006_0210398c kind:data(any) addr:0x210398c ambiguous

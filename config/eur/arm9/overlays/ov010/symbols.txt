@@ -566,7 +566,6 @@ data_ov010_0211f2ec kind:data(any) addr:0x211f2ec
 data_ov010_0211f2f0 kind:data(any) addr:0x211f2f0
 data_ov010_0211f2fc kind:data(any) addr:0x211f2fc
 data_ov010_0211f300 kind:data(any) addr:0x211f300
-data_ov010_0211f308 kind:data(any) addr:0x211f308 ambiguous
 data_ov010_0211f324 kind:data(any) addr:0x211f324
 data_ov010_0211f338 kind:data(any) addr:0x211f338
 data_ov010_0211f34c kind:data(any) addr:0x211f34c

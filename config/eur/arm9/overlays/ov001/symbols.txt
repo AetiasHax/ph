@@ -353,8 +353,6 @@ data_ov001_020f96e8 kind:bss addr:0x20f96e8
 data_ov001_020f96ee kind:bss addr:0x20f96ee
 data_ov001_020f96f0 kind:bss addr:0x20f96f0
 data_ov001_020f9748 kind:bss addr:0x20f9748
-data_ov001_020f9ef5 kind:bss addr:0x20f9ef5 ambiguous
-data_ov001_020fae89 kind:bss addr:0x20fae89 ambiguous
 data_ov001_020fc438 kind:bss addr:0x20fc438 ambiguous
 data_ov001_020fc448 kind:bss addr:0x20fc448 ambiguous
 data_ov001_020fc464 kind:bss addr:0x20fc464 ambiguous
