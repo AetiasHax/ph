@@ -3,9 +3,14 @@
 import os
 from pathlib import Path
 import platform
+import argparse
 
 import ninja_syntax
 
+
+parser = argparse.ArgumentParser(description="Generates build.ninja")
+parser.add_argument('-w', type=str, default="wine", dest="wine", required=False, help="Path to Wine (linux only)")
+args = parser.parse_args()
 
 # Config
 GAME = "ph"
@@ -78,7 +83,7 @@ elif system.startswith("MSYS"):
     MW_LICENSE_SHELL = lambda cmd: f"LM_LICENSE_FILE={mw_license_path} {cmd}"
 elif system == "Linux":
     system = "linux"
-    WINE = "wine"
+    WINE = args.wine
     MW_LICENSE_SHELL = lambda cmd: f"LM_LICENSE_FILE={mw_license_path} {cmd}"
 else:
     print(f"Unknown system '{system}'")
@@ -139,6 +144,12 @@ def main():
         n.rule(
             name="rom_build",
             command="./dsd rom build --config $in --rom $out $arm7_bios_flag"
+        )
+        n.newline()
+        
+        n.rule(
+            name="objdiff",
+            command="./dsd objdiff --config-path $config_path --output-path $output_path"
         )
         n.newline()
 
@@ -260,6 +271,7 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
         }
     )
     n.newline()
+
     lcf_file = game_build / "linker_script.lcf"
     objects_file = game_build / "objects.txt"
     n.build(
@@ -275,6 +287,17 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
         }
     )
     n.newline()
+
+    objdiff_config = game_config / "arm9" / "objdiff.json"
+    n.build(
+        inputs=delinks_files + relocs_files + symbols_files,
+        rule="objdiff",
+        outputs=[str(objdiff_config)],
+        variables={
+            "config_path": game_config / "arm9" / "config.yaml",
+            "output_path": objdiff_config.parent,
+        }
+    )
 
 
 def get_config_files(game_config: Path, name: str):
