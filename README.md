@@ -1,8 +1,8 @@
 # The Legend of Zelda: Phantom Hourglass
 
 **Work in progress!** This project aims to recreate source code for ***The Legend of Zelda: Phantom Hourglass*** by decompiling
-assembly code by hand. **The repository only contains code.** To build the ROM, you must own an existing copy of the game to
-extract assets from.
+assembly code by hand. **The repository does not contain assets or assembly code.** To build the ROM, you must own an existing
+copy of the game to extract assets from.
 
 **Note:** The project targets the European and American versions, and other versions might be supported later.
 
