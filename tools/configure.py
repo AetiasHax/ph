@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import platform
 import argparse
+import sys
 
 import ninja_syntax
 
@@ -95,6 +96,9 @@ match platform.machine().lower():
         exit(1)
 
 
+PYTHON = sys.executable
+
+
 def main():
     with build_ninja_path.open("w") as file:
         n = ninja_syntax.Writer(file)
@@ -153,6 +157,12 @@ def main():
         )
         n.newline()
 
+        n.rule(
+            name="m2ctx",
+            command=f"{PYTHON} tools/m2ctx.py -f $out $in"
+        )
+        n.newline()
+
         for game_version in os.listdir(config_path):
             game_config = config_path / game_version
             if not game_config.is_dir(): continue
@@ -179,6 +189,7 @@ def add_extract_build(n: ninja_syntax.Writer, game_extract: Path, game_version: 
             "output_path": str(game_extract)
         }
     )
+    n.newline()
 
 
 def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_config: Path, game_version: str):
@@ -200,6 +211,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
             "lcf_file": lcf_file,
         }
     )
+    n.newline()
 
     rom_config_file = str(game_build / "build" / "rom_config.yaml")
     n.build(
@@ -210,6 +222,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
             "config_path": game_config / "arm9" / "config.yaml",
         }
     )
+    n.newline()
 
     rom_file = f"{GAME}_{game_version}.nds"
     n.build(
@@ -217,6 +230,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
         rule="rom_build",
         outputs=rom_file,
     )
+    n.newline()
 
 
 def add_mwcc_builds(n: ninja_syntax.Writer, game_version: str, game_build: Path):
@@ -233,6 +247,15 @@ def add_mwcc_builds(n: ninja_syntax.Writer, game_version: str, game_build: Path)
                 "game_version": game_version,
                 "cc_flags": " ".join(cc_flags)
             }
+        )
+        n.newline()
+        
+        extension = source_file.suffix
+        ctx_file = str(game_build / source_file.with_suffix(f".ctx{extension}"))
+        n.build(
+            inputs=str(source_file),
+            rule="m2ctx",
+            outputs=ctx_file,
         )
         n.newline()
 
@@ -298,6 +321,7 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
             "output_path": objdiff_config.parent,
         }
     )
+    n.newline()
 
 
 def get_config_files(game_config: Path, name: str):
