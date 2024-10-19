@@ -47,15 +47,11 @@ ActorRupee *ActorRupee::Create() {
 }
 
 extern "C" asm ActorRupee *_ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
-#ifndef NONMATCHING
-    #include "../../../asm/ov14/Actor/ActorRupee_ActorRupee.inc"
-#else
     _ZN5ActorC2Ev(thisx);
     _ZTV10ActorRupee = thisx;
     thisx->mRupeeId  = 8;
     thisx->mUnk_15c  = 0;
     return thisx;
-#endif
 }
 
 // ActorRupee::ActorRupee() {
@@ -72,10 +68,7 @@ extern "C" void _ZN10ActorRupee8vfunc_20Ei();
 extern "C" void _ZN10ActorRupee8vfunc_60Ev();
 extern "C" void _ZN10ActorRupee8vfunc_64Ev();
 extern "C" u32 data_027e0764[];
-bool NONMATCH(ActorRupee::vfunc_08)() {
-#ifndef NONMATCHING
-    #include "../../../asm/ov14/Actor/ActorRupee_vfunc_08.inc"
-#else
+bool ActorRupee::vfunc_08() {
     u32 *puVar2; // undefined
     u32 uVar4;
     u32 dVar5;
@@ -168,7 +161,6 @@ bool NONMATCH(ActorRupee::vfunc_08)() {
     }
 
     return true;
-#endif
 }
 
 bool ActorRupee::vfunc_60() {
@@ -411,16 +403,8 @@ bool ActorRupee::func_ov14_0213b70c(RupeeId id) {
     return false;
 }
 
-extern "C" asm void _ZN10ActorRupeeD0Ev() {
-#ifndef NONMATCHING
-    #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD0Ev.inc"
-#endif
-}
+extern "C" asm void _ZN10ActorRupeeD0Ev() {}
 
-extern "C" asm void _ZN10ActorRupeeD2Ev() {
-#ifndef NONMATCHING
-    #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD2Ev.inc"
-#endif
-}
+extern "C" asm void _ZN10ActorRupeeD2Ev() {}
 
 // ActorRupee::~ActorRupee() {}
