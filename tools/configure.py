@@ -11,11 +11,14 @@ import ninja_syntax
 
 parser = argparse.ArgumentParser(description="Generates build.ninja")
 parser.add_argument('-w', type=str, default="wine", dest="wine", required=False, help="Path to Wine (linux only)")
+parser.add_argument('version', help='Game version')
 args = parser.parse_args()
+
 
 # Config
 GAME = "ph"
 MWCC_VERSION = "2.0/sp1p5"
+DECOMP_ME_COMPILER = "mwcc_30_131"
 CC_FLAGS = " ".join([
     "-O4,p",                # Optimize maximally for performance
     "-enum int",            # Use int-sized enums
@@ -40,6 +43,12 @@ LD_FLAGS = " ".join([
     "-m Entry",             # Set entry function
     "-map closure,unused",  # Generate map file
     "-msgstyle gcc",        # Use GCC-like messages (some IDEs will make file names clickable)
+])
+DSD_OBJDIFF_ARGS = " ".join([
+    "--scratch",                        # Metadata for creating decomp.me scratches
+    f"--compiler {DECOMP_ME_COMPILER}", # decomp.me compiler name
+    f'--c-flags "{CC_FLAGS}"',          # decomp.me compiler flags
+    "--custom-make ninja",              # Command for rebuilding files
 ])
 
 
@@ -100,6 +109,12 @@ PYTHON = sys.executable
 
 
 def main():
+    game_version: str = args.version
+    game_config = config_path / game_version
+    if not game_config.is_dir():
+        print(f"Version '{game_version}' not recognized")
+        return
+
     with build_ninja_path.open("w") as file:
         n = ninja_syntax.Writer(file)
 
@@ -153,7 +168,7 @@ def main():
         
         n.rule(
             name="objdiff",
-            command="./dsd objdiff --config-path $config_path --output-path $output_path"
+            command=f"./dsd objdiff --config-path $config_path {DSD_OBJDIFF_ARGS}"
         )
         n.newline()
 
@@ -163,19 +178,13 @@ def main():
         )
         n.newline()
 
-        for game_version in os.listdir(config_path):
-            game_config = config_path / game_version
-            if not game_config.is_dir(): continue
-            game_build = build_path / game_version
-            game_extract = extract_path / game_version
+        game_build = build_path / game_version
+        game_extract = extract_path / game_version
 
-            n.newline()
-            n.comment(f"VERSION: {game_version}")
-
-            add_extract_build(n, game_extract, game_version)
-            add_delink_and_lcf_builds(n, game_config, game_build, game_extract)
-            add_mwcc_builds(n, game_version, game_build)
-            add_mwld_and_rom_builds(n, game_build, game_config, game_version)
+        add_extract_build(n, game_extract, game_version)
+        add_delink_and_lcf_builds(n, game_config, game_build, game_extract)
+        add_mwcc_builds(n, game_version, game_build)
+        add_mwld_and_rom_builds(n, game_build, game_config, game_version)
 
 
 def add_extract_build(n: ninja_syntax.Writer, game_extract: Path, game_version: str):
@@ -311,14 +320,12 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
     )
     n.newline()
 
-    objdiff_config = game_config / "arm9" / "objdiff.json"
     n.build(
         inputs=delinks_files + relocs_files + symbols_files,
         rule="objdiff",
-        outputs=[str(objdiff_config)],
+        outputs="objdiff.json",
         variables={
             "config_path": game_config / "arm9" / "config.yaml",
-            "output_path": objdiff_config.parent,
         }
     )
     n.newline()
