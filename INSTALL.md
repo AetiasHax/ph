@@ -27,7 +27,7 @@ python tools/setup.py
 ```
 5. Run the Ninja configure script:
 ```shell
-python tools/configure.py
+python tools/configure.py <eur|usa>
 ```
 
 > [!IMPORTANT]
@@ -36,6 +36,8 @@ python tools/configure.py
 > [!NOTE]
 > For Linux users: If you plan to use Wibo instead of Wine, run `configure.py` with `-w <path/to/wibo>`.
 6. Put one or more base ROMs in the [`/extract/`](/extract/README.md) directory of this repository.
+
+Now you can run `ninja` to build a ROM for the chosen version.
 
 ### Matching the base ROM
 

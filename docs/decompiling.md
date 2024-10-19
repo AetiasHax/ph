@@ -20,10 +20,9 @@ again. Remember to make a pull request of any progress you made on the source fi
 partially decompiled code.
 
 ## Decompiling a source file
-We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between C++ and assembly
-code.
+We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between our decompiled C++ code and the base ROM's code.
 1. [Download the latest release.](https://github.com/encounter/objdiff/releases/latest)
-1. Run `configure.py` and `ninja` to generate `objdiff.json` in the `/config/<version>/arm9/` directories.
+1. Run `configure.py <eur|usa>` and `ninja` to generate `objdiff.json` in the repository root.
 1. In `objdiff`, set the project directory to one of the mentioned `arm9/` directories.
 1. Select your source file in the left sidebar:  
 ![List of objects in objdiff](images/objdiff_objects.png)
