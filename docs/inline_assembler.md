@@ -21,7 +21,7 @@ dcd 0x1234
 
 #### `ldconst`: Loads a literal 32-bit value
 ```asm
-ldconst 0x1234
+ldconst r0, #0x1234
 bx lr
 ```
 This code is equivalent to the above example using `dcd`.

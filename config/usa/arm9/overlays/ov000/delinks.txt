@@ -1,0 +1,92 @@
+    .text       start:0x02077360 end:0x020d8710 kind:code align:32
+    .rodata     start:0x020d8710 end:0x020df2d8 kind:data align:4
+    .init       start:0x020df2d8 end:0x020e1e28 kind:code align:4
+    .ctor       start:0x020e1e28 end:0x020e1f0c kind:data align:4
+    .data       start:0x020e1f20 end:0x020e92c0 kind:data align:32
+    .bss        start:0x020e92c0 end:0x020ec718 kind:bss align:32
+    .sbss       start:0x020ec718 end:0x020eece0 kind:bss align:4
+
+src/00_Core/Actor/Actor.cpp:
+    .text       start:0x020c14a0 end:0x020c32e8
+    .rodata     start:0x020dd310 end:0x020dd398
+    .data       start:0x020e7140 end:0x020e7248
+
+src/00_Core/Actor/ActorManager.cpp:
+    .text       start:0x020c3374 end:0x020c3df4
+    .data       start:0x020e7248 end:0x020e7294
+
+src/00_Core/Item/Item.cpp:
+    .text       start:0x020acfc0 end:0x020ad030
+    .rodata     start:0x020dc514 end:0x020dc664
+
+src/00_Core/Item/ItemManager.cpp:
+    .text       start:0x020ad030 end:0x020ae730
+    .rodata     start:0x020dc664 end:0x020dc674
+    .data       start:0x020e5bf8 end:0x020e6018
+
+src/00_Core/Map/Course.cpp:
+    .text       start:0x0207c9a0 end:0x0207d9d8
+    .data       start:0x020e1ff8 end:0x020e229c
+
+src/00_Core/Map/MapBase.cpp:
+    .text       start:0x0207d9d8 end:0x02080ec0
+    .data       start:0x020e229c end:0x020e23b4
+    .sbss       start:0x020ec7bc end:0x020ec904
+
+src/00_Core/Map/MapManager.cpp:
+    .text       start:0x0208208c end:0x02086c70
+    .rodata     start:0x020d8890 end:0x020d8a48
+    .init       start:0x020df46c end:0x020df5e0
+    .ctor       start:0x020e1e5c end:0x020e1e60
+    .data       start:0x020e2464 end:0x020e24dc
+    .sbss       start:0x020ec904 end:0x020ec974
+
+src/00_Core/Player/LinkStateBase.cpp:
+    .text       start:0x020a7f44 end:0x020a8da4
+    .rodata     start:0x020dc4b0 end:0x020dc4c8
+    .data       start:0x020e55d0 end:0x020e5690
+
+src/00_Core/Player/LinkStateDamage.cpp:
+    .text       start:0x020abf44 end:0x020acfc0
+    .rodata     start:0x020dc500 end:0x020dc514
+    .data       start:0x020e5a2c end:0x020e5bf8
+
+src/00_Core/Player/LinkStateFollow.cpp:
+    .text       start:0x020a8f14 end:0x020a9244
+    .data       start:0x020e56fc end:0x020e5788
+
+src/00_Core/Player/LinkStateInteract.cpp:
+    .text       start:0x020aa2cc end:0x020abd18
+    .rodata     start:0x020dc4c8 end:0x020dc500
+    .data       start:0x020e5888 end:0x020e59e0
+
+src/00_Core/Player/LinkStateItem.cpp:
+    .text       start:0x020abd18 end:0x020abf44
+    .data       start:0x020e59e0 end:0x020e5a2c
+
+src/00_Core/Player/LinkStateMove.cpp:
+    .text       start:0x020a8da4 end:0x020a8f14
+    .data       start:0x020e5690 end:0x020e56fc
+
+src/00_Core/Player/LinkStateRoll.cpp:
+    .text       start:0x020ae730 end:0x020aee4c
+    .data       start:0x020e6018 end:0x020e60a4
+
+src/00_Core/Player/PlayerBase.cpp:
+    .text       start:0x020a7a90 end:0x020a7f44
+    .data       start:0x020e5530 end:0x020e55d0
+
+src/00_Core/Player/PlayerControl.cpp:
+    .text       start:0x020aee4c end:0x020b1438
+    .data       start:0x020e60a4 end:0x020e60f0
+    .sbss       start:0x020ee138 end:0x020ee140
+
+src/00_Core/Player/TouchControl.cpp:
+    .text       start:0x0207abc4 end:0x0207af40
+    .init       start:0x020df32c end:0x020df358
+    .ctor       start:0x020e1e30 end:0x020e1e34
+
+src/00_Core/Save/AdventureFlags.cpp:
+    .text       start:0x020975c8 end:0x02098094
+    .data       start:0x020e30ac end:0x020e3a78
+    .bss        start:0x020eaa64 end:0x020eaa68

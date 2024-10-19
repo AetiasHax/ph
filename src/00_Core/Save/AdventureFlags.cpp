@@ -1,7 +1,5 @@
 #include "Save/AdventureFlags.hpp"
 
-#ifdef STUBS
-
 bool AdventureFlags::Exists() {}
 void AdventureFlags::CopyTo(unk32 *flags) {}
 void AdventureFlags::func_ov00_02097674() {}
@@ -34,14 +32,14 @@ unk32 AdventureFlags::Get_FlagsUnk_44(int index) {}
 unk32 AdventureFlags::Get_FlagsUnk_30(int index) {}
 bool AdventureFlags::Get_FlagsUnk_00(int index, FlagsUnk2 *result) {}
 bool AdventureFlags::Get_FlagsUnk_18(int index, FlagsUnk2 *result) {}
-FlagsUnk* AdventureFlags::Get_FlagsUnk(int index) {}
+FlagsUnk *AdventureFlags::Get_FlagsUnk(int index) {}
 bool AdventureFlags::func_ov00_02097e6c() {}
 bool AdventureFlags::func_ov00_02097e7c() {}
 bool AdventureFlags::func_ov00_02097ea4() {}
 unk32 AdventureFlags::func_ov00_02097ecc() {}
-void* AdventureFlags::func_ov00_02097f8c() {}
-void* AdventureFlags::func_ov00_02097fac() {}
-void* AdventureFlags::func_ov00_02097fd0() {}
+void *AdventureFlags::func_ov00_02097f8c() {}
+void *AdventureFlags::func_ov00_02097fac() {}
+void *AdventureFlags::func_ov00_02097fd0() {}
 void AdventureFlags::func_ov00_02097ff4(bool param1, bool param2) {}
 unk32 AdventureFlags::func_ov00_02098058() {}
 bool AdventureFlags::func_ov00_02098064(unk32 param1) {}
@@ -50,5 +48,3 @@ bool AdventureFlags::func_ov00_0209809c() {}
 bool AdventureFlags::func_ov00_020980ac() {}
 void AdventureFlags::func_ov00_020980bc(s32 param1) {}
 void AdventureFlags::func_ov00_020980d0() {}
-
-#endif

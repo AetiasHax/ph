@@ -2,24 +2,23 @@
 #include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
 
-
 // char* data_ov14_021589b4 = *data_ov14_02158994;
 
 extern "C" {
     void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
-    u32 func_01fffd04(void*, u32);
+    u32 func_01fffd04(void *, u32);
     bool func_ov00_020c313c();
     void func_ov00_0207a1c8(bool *param_1, bool param_2, Vec3p *param_3);
     void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
-    void func_ov05_02102c2c(u32* param_1, int param_2, Vec3p *param_3, int param_4, int param_5,
-        u32 param_6, int param_7, char param_8, char param_9, char param_10);
-    void func_ov00_020d7ad4(u32* param1, u32 param2);
+    void func_ov05_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
+                            char param_8, char param_9, char param_10);
+    void func_ov00_020d7ad4(u32 *param1, u32 param2);
     u16 func_ov00_020c5a24(RupeeId id); // GetRupeeValue
-    bool func_ov00_020bce48(PlayerLinkBase* implicit, ItemId cutsceneItemId);
-    void func_ov00_0207a13c(Actor_UnkStruct_012* implicit);
+    bool func_ov00_020bce48(PlayerLinkBase *implicit, ItemId cutsceneItemId);
+    void func_ov00_0207a13c(Actor_UnkStruct_012 *implicit);
     void _ZN5ActorD2Ev();
     void _ZN9SysObjectdlEPv();
-    ActorRupee* _ZN5ActorC2Ev(ActorRupee *thisx);
+    ActorRupee *_ZN5ActorC2Ev(ActorRupee *thisx);
     void _ZN10ActorRupeeD2Ev();
 
     u32 data_ov14_021589b4;
@@ -27,34 +26,34 @@ extern "C" {
     u32 data_ov14_021589d8;
 }
 
-/* inline */ char *data_ov14_02158994[8] = { "brg", "fnl", "pdl", "dco", "can", "hul", "bow", "anc" }; // gShipParts
-extern "C" void* _ZTV10ActorRupee = _ZN10ActorRupeeD2Ev;
+/* inline */ char *data_ov14_02158994[8] = {"brg", "fnl", "pdl", "dco", "can", "hul", "bow", "anc"}; // gShipParts
+extern "C" void *_ZTV10ActorRupee        = _ZN10ActorRupeeD2Ev;
 
 extern u32 data_ov00_020e9370[];
 extern u32 data_ov00_020eec9c[];
 extern PlayerLinkBase *data_027e0fc8; // gPlayerLink
 extern u32 **data_027e0fe0[];
 
-ActorType ActorRupee::gType = ActorType(ActorTypeId_Rupee, (ActorCreateFunc)ActorRupee::Create, NULL);
+ActorType ActorRupee::gType           = ActorType(ActorTypeId_Rupee, (ActorCreateFunc) ActorRupee::Create, NULL);
 ActorType_UnkClass data_ov14_021589f4 = ActorType_UnkClass(0x3bb, 0xeeb);
 
 // #pragma section pinit begin
 // extern "C" void* data_ov14_0215591c = func_ov14_0215517c;
 // #pragma section pinit end
 
-ActorRupee* ActorRupee::Create() {
-    ActorRupee* newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
+ActorRupee *ActorRupee::Create() {
+    ActorRupee *newRupee = new(*data_027e0fe0[0], 4) ActorRupee();
     return newRupee;
 }
 
-extern "C" asm ActorRupee* _ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
+extern "C" asm ActorRupee *_ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
 #ifndef NONMATCHING
     #include "../../../asm/ov14/Actor/ActorRupee_ActorRupee.inc"
 #else
     _ZN5ActorC2Ev(thisx);
     _ZTV10ActorRupee = thisx;
-    thisx->mRupeeId = 8;
-    thisx->mUnk_15c = 0;
+    thisx->mRupeeId  = 8;
+    thisx->mUnk_15c  = 0;
     return thisx;
 #endif
 }
@@ -74,9 +73,9 @@ extern "C" void _ZN10ActorRupee8vfunc_60Ev();
 extern "C" void _ZN10ActorRupee8vfunc_64Ev();
 extern "C" u32 data_027e0764[];
 bool NONMATCH(ActorRupee::vfunc_08)() {
-    #ifndef NONMATCHING
+#ifndef NONMATCHING
     #include "../../../asm/ov14/Actor/ActorRupee_vfunc_08.inc"
-    #else
+#else
     u32 *puVar2; // undefined
     u32 uVar4;
     u32 dVar5;
@@ -91,28 +90,28 @@ bool NONMATCH(ActorRupee::vfunc_08)() {
     mRupeeId = mUnk_020.mUnk_00[0];
 
     dVar5 = func_ov14_0213b70c(mRupeeId) ? data_ov14_021589d8[0] : FLOAT_TO_Q20(0.666);
-    iVar7 = (s32)dVar5 >> 1;
+    iVar7 = (s32) dVar5 >> 1;
 
-    mHitbox.pos.x = 0;
-    mHitbox.pos.y = iVar7;
-    mHitbox.pos.z = 0;
-    mHitbox.size = iVar7;
-    mUnk_08c.pos = mHitbox.pos;
-    mUnk_08c.size = mHitbox.size;
+    mHitbox.pos.x      = 0;
+    mHitbox.pos.y      = iVar7;
+    mHitbox.pos.z      = 0;
+    mHitbox.size       = iVar7;
+    mUnk_08c.pos       = mHitbox.pos;
+    mUnk_08c.size      = mHitbox.size;
     mUnk_0a4.mUnk_04.x = 0;
     mUnk_0a4.mUnk_04.y = iVar7;
     mUnk_0a4.mUnk_04.z = 0;
-    mUnk_0a4.mUnk_10 = iVar7 + FLOAT_TO_Q20(1.0);
+    mUnk_0a4.mUnk_10   = iVar7 + FLOAT_TO_Q20(1.0);
     mUnk_09c.mUnk_0 &= 0xFFFFFF4F;
     mUnk_09c.mUnk_3 = 1;
-    mMaxFall = mUnk_08c.size - 1;
+    mMaxFall        = mUnk_08c.size - 1;
 
     puVar2 = data_027e0764;
 
     if (mUnk_03c >= 0) {
         func_ov14_0213b204(1);
     } else {
-        switch(mUnk_144) {
+        switch (mUnk_144) {
             case 0:
                 mVel.x = 0;
                 mVel.y = 0;
@@ -123,50 +122,39 @@ bool NONMATCH(ActorRupee::vfunc_08)() {
                 uVar8 = PTR_DWORD_overlay_d_14__0213b108[8];
                 uVar4 = PTR_DWORD_overlay_d_14__0213b108[uVar8];
 
-                uVar9 = PTR_DWORD_overlay_d_14__0213b108[16];
-                iVar7 = PTR_DWORD_overlay_d_14__0213b108[12];
+                uVar9  = PTR_DWORD_overlay_d_14__0213b108[16];
+                iVar7  = PTR_DWORD_overlay_d_14__0213b108[12];
                 uVar11 = uVar9 + uVar4;
 
                 iVar12 = PTR_DWORD_overlay_d_14__0213b108[20];
-                uVar6 = (u64)uVar11 * (u64)uVar8;
-                uVar10 = (
-                    iVar12 
-                    + (iVar7 * PTR_DWORD_overlay_d_14__0213b108[0])
-                    + (uVar8 * PTR_DWORD_overlay_d_14__0213b108[4])
-                    + ((uVar4) >> 0x20)
+                uVar6  = (u64) uVar11 * (u64) uVar8;
+                uVar10 = (iVar12 + (iVar7 * PTR_DWORD_overlay_d_14__0213b108[0]) +
+                          (uVar8 * PTR_DWORD_overlay_d_14__0213b108[4]) + ((uVar4) >> 0x20)
                    // + CARRY4(uVar9, uVar4)
                 );
 
-                uVar4 = uVar9 + uVar6;
+                uVar4                               = uVar9 + uVar6;
                 PTR_DWORD_overlay_d_14__0213b108[0] = uVar11;
-                puVar2[4] = uVar10;
+                puVar2[4]                           = uVar10;
 
                 puVar2[0] = uVar4;
-                uVar6 = (
-                    iVar12
-                    + (iVar7 * uVar11)
-                    + (uVar8 * uVar10)
-                    + ((u64)uVar11 * (FP_1(uVar8) >> 0x20))
+                uVar6     = (iVar12 + (iVar7 * uVar11) + (uVar8 * uVar10) + ((u64) uVar11 * (FP_1(uVar8) >> 0x20))
                    // + CARRY4(uVar9, uVar6)
                 );
-                uVar11 = uVar4 * uVar8;
+                uVar11    = uVar4 * uVar8;
 
                 PTR_DWORD_overlay_d_14__0213b108[4] = uVar6;
-                puVar2 = PTR_DWORD_overlay_d_14__0213b108;
-                uVar4 = (
-                    iVar12
-                    + (iVar7 * uVar4)
-                    + (uVar8 * uVar6)
-                    + ((u64)uVar4 * (FP_1(uVar8) >> 0x20)) 
+                puVar2                              = PTR_DWORD_overlay_d_14__0213b108;
+                uVar4 = (iVar12 + (iVar7 * uVar4) + (uVar8 * uVar6) + ((u64) uVar4 * (FP_1(uVar8) >> 0x20))
                    // + CARRY4(uVar9, uVar11)
                 );
 
                 PTR_DWORD_overlay_d_14__0213b108[0] = uVar9 + uVar11;
-                puVar2[4] = uVar4;
+                puVar2[4]                           = uVar4;
 
-                mVel.x = (s32)((u64)uVar4 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
-                mVel.y = (s32)((u64)uVar6 * FLOAT_TO_Q20(0.2) >> 0x20) + FLOAT_TO_Q20(0.3333);
-                mVel.z = (s32)((u64)uVar10 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
+                mVel.x = (s32) ((u64) uVar4 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
+                mVel.y = (s32) ((u64) uVar6 * FLOAT_TO_Q20(0.2) >> 0x20) + FLOAT_TO_Q20(0.3333);
+                mVel.z = (s32) ((u64) uVar10 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
                 func_ov14_0213b204(0);
                 break;
             case 2:
@@ -175,14 +163,12 @@ bool NONMATCH(ActorRupee::vfunc_08)() {
                 mVel.z = 0;
                 func_ov14_0213b204(0);
                 break;
-            case 3:
-                func_ov14_0213b204(5);
-                break;
+            case 3: func_ov14_0213b204(5); break;
         }
     }
 
     return true;
-    #endif
+#endif
 }
 
 bool ActorRupee::vfunc_60() {
@@ -214,32 +200,23 @@ void ActorRupee::Move() {
 
 ItemId ActorRupee::GetRupeeCutsceneItemId() {
     switch (mRupeeId) {
-        case RupeeId_Green:
-            return ItemId_None;
+        case RupeeId_Green: return ItemId_None;
 
-        case RupeeId_Blue:
-            return ItemId_None;
+        case RupeeId_Blue: return ItemId_None;
 
-        case RupeeId_Red:
-            return ItemId_None;
+        case RupeeId_Red: return ItemId_None;
 
-        case RupeeId_BigGreen:
-            return ItemId_BigGreenRupee;
+        case RupeeId_BigGreen: return ItemId_BigGreenRupee;
 
-        case RupeeId_BigRed:
-            return ItemId_BigRedRupee;
+        case RupeeId_BigRed: return ItemId_BigRedRupee;
 
-        case RupeeId_Gold:
-            return ItemId_GoldRupee;
+        case RupeeId_Gold: return ItemId_GoldRupee;
 
-        case RupeeId_Rupoor10:
-            return ItemId_Rupoor10;
+        case RupeeId_Rupoor10: return ItemId_Rupoor10;
 
-        case RupeeId_Rupoor50:
-            return ItemId_Rupoor50;
+        case RupeeId_Rupoor50: return ItemId_Rupoor50;
 
-        default:
-            break;
+        default: break;
     }
 
     return ItemId_None;
@@ -247,9 +224,7 @@ ItemId ActorRupee::GetRupeeCutsceneItemId() {
 
 void ActorRupee::func_ov14_0213b204(unk32 param1) {
     switch (param1) {
-        case 0:
-            mVisible = true;
-            break;
+        case 0: mVisible = true; break;
         case 1:
         case 2:
         case 3:
@@ -262,10 +237,10 @@ void ActorRupee::func_ov14_0213b204(unk32 param1) {
     }
 
     mActiveFrames = 0;
-    mUnk_130 = param1;
+    mUnk_130      = param1;
 }
 
-extern "C" void _ZN11ItemManager10GiveRupeesEsb(ItemManager* implicit, u16 amount, unk32 param2);
+extern "C" void _ZN11ItemManager10GiveRupeesEsb(ItemManager *implicit, u16 amount, unk32 param2);
 void ActorRupee::Update(bool param1) {
     ItemId cutsceneItemId;
     s32 uVar3;
@@ -280,29 +255,22 @@ void ActorRupee::Update(bool param1) {
         cutsceneItemId = GetRupeeCutsceneItemId();
 
         if (cutsceneItemId >= 0) {
-            if (/*data_027e0fc8->*/func_ov00_020bce48(data_027e0fc8, cutsceneItemId)) {
+            if (/*data_027e0fc8->*/ func_ov00_020bce48(data_027e0fc8, cutsceneItemId)) {
                 Kill();
             } else {
                 func_ov14_0213b204(3);
             }
         } else {
-            ItemManager* pItem = gItemManager;
-            rupeeValue = func_ov00_020c5a24(mRupeeId);
+            ItemManager *pItem = gItemManager;
+            rupeeValue         = func_ov00_020c5a24(mRupeeId);
             pItem->GiveRupees(rupeeValue, false); // giverupees
             uVar3 = -1;
 
             switch (mRupeeId) {
-                case RupeeId_Green:
-                    uVar3 = 0xfa;
-                    break;
-                case RupeeId_Blue:
-                    uVar3 = 0xfb;
-                    break;
-                case RupeeId_Red:
-                    uVar3 = 0xfc;
-                    break;
-                default:
-                    break;
+                case RupeeId_Green: uVar3 = 0xfa; break;
+                case RupeeId_Blue: uVar3 = 0xfb; break;
+                case RupeeId_Red: uVar3 = 0xfc; break;
+                default: break;
             }
 
             func_ov00_020d7ad4(data_ov00_020eec9c, uVar3);
@@ -332,8 +300,8 @@ void ActorRupee::Update(bool param1) {
             }
             break;
         case 3:
-            PlayerLinkBase* pLink = data_027e0fc8;
-            if (/*pLink->*/func_ov00_020bce48(pLink, GetRupeeCutsceneItemId())) {
+            PlayerLinkBase *pLink = data_027e0fc8;
+            if (/*pLink->*/ func_ov00_020bce48(pLink, GetRupeeCutsceneItemId())) {
                 Kill();
             }
             break;
@@ -363,8 +331,7 @@ void ActorRupee::Update(bool param1) {
                 func_ov14_0213b204(1);
             }
             break;
-        default:
-            break;
+        default: break;
     }
 
     KillInBounds();
@@ -393,7 +360,8 @@ void ActorRupee::vfunc_20(bool param1) {
 
 void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, bool param4) {
     Actor_UnkStruct_012 unk_class;
-    static const u32 data_ov14_02153e28[] = { // sRupeePalettes
+    static const u32 data_ov14_02153e28[] = {
+ // sRupeePalettes
         0x9, // RupeeId_Green
         0xA, // RupeeId_Blue
         0x8, // RupeeId_Red
@@ -435,26 +403,24 @@ bool ActorRupee::func_ov14_0213b70c(RupeeId id) {
         case RupeeId_BigGreen:
         case RupeeId_BigRed:
         case RupeeId_Gold:
-        case RupeeId_Rupoor50:
-            return true;
+        case RupeeId_Rupoor50: return true;
 
-        default:
-            break;
+        default: break;
     }
 
     return false;
 }
 
 extern "C" asm void _ZN10ActorRupeeD0Ev() {
-    #ifndef NONMATCHING
+#ifndef NONMATCHING
     #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD0Ev.inc"
-    #endif
+#endif
 }
 
 extern "C" asm void _ZN10ActorRupeeD2Ev() {
-    #ifndef NONMATCHING
+#ifndef NONMATCHING
     #include "../../../asm/ov14/Actor/ActorRupee__ZN10ActorRupeeD2Ev.inc"
-    #endif
+#endif
 }
 
 // ActorRupee::~ActorRupee() {}

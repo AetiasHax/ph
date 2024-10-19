@@ -1,7 +1,5 @@
 #include "Player/LinkStateInteract.hpp"
 
-#ifdef STUBS
-
 void LinkStateInteract::vfunc_00() {}
 LinkStateId LinkStateInteract::GetId() {}
 void LinkStateInteract::CreateDebugHierarchy() {}
@@ -11,7 +9,7 @@ void LinkStateInteract::OnStateLeave(s32 param1) {}
 bool LinkStateInteract::func_ov00_020aa818() {}
 void LinkStateInteract::func_ov00_020aa844(Actor *param1) {}
 bool LinkStateInteract::vfunc_20(s32 param1) {}
-LinkStateRoll* LinkStateInteract::GetLinkStateRoll() {}
+LinkStateRoll *LinkStateInteract::GetLinkStateRoll() {}
 bool LinkStateInteract::vfunc_24(s32 param1) {}
 bool LinkStateInteract::vfunc_34(Vec3p *param1) {}
 void LinkStateInteract::SetGrabActorVelocity(Vec3p *velocity) {}
@@ -30,5 +28,3 @@ void LinkStateInteract::func_ov00_020abbdc(ActorRef *ref) {}
 void LinkStateInteract::func_ov00_020abc18(ActorRef *ref) {}
 bool LinkStateInteract::func_ov00_020abc40() {}
 bool LinkStateInteract::func_ov00_020abc78(ActorRef *ref) {}
-
-#endif

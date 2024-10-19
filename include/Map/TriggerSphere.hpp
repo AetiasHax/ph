@@ -3,8 +3,8 @@
 #include "global.h"
 #include "types.h"
 
-#include "Physics/Sphere.hpp"
 #include "Map/TriggerBase.hpp"
+#include "Physics/Sphere.hpp"
 
 class TriggerSphere : public TriggerBase {
     /* 00 (base) */

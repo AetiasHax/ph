@@ -80,17 +80,19 @@ public:
     void DeleteActor(u32 index, bool param2);
     static void func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3);
     void Actor_vfunc_10(u32 param1);
-    Actor* FindActorById(u32 id);
-    Actor* GetActor(ActorRef *ref);
+    Actor *FindActorById(u32 id);
+    Actor *GetActor(ActorRef *ref);
     s32 FilterActors(FilterActorBase *filter, ActorList *filteredActors);
-    static void FindActorByType(ActorRef *ref, ActorManager *manager, u32 type);
-    static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, u32 type, Vec3p *pos);
-    void func_ov00_020c398c();
-    void func_ov00_020c399c();
-    void func_ov00_020c39ac(u32 index, u32 *actorTypes, bool param3);
+    static void FindActorByType(ActorRef *ref, ActorManager *manager, ActorTypeId type);
+    static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, ActorTypeId type, Vec3p *pos);
+    bool func_ov00_020c398c(u32 index);
+    void func_ov00_020c399c(u32 index, Cylinder *cylinder);
+    Actor *func_ov00_020c39ac(u32 index, const ActorTypeId *actorTypes, bool param3);
     s32 func_ov00_020c3b2c(s32 *param1);
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);
     void func_ov00_020c3ce8(unk32 param1, unk32 param2);
     void Actor_vfunc_28();
-    static bool ActorTypeIsOneOf(u32 type, u32 *types);
+    static bool ActorTypeIsOneOf(u32 type, ActorTypeId *types);
 };
+
+extern ActorManager *gActorManager;

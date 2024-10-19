@@ -1,8 +1,6 @@
 #include "Map/MapBase.hpp"
 #include "Map/MapManager.hpp"
 
-#ifdef STUBS
-
 MapBase::~MapBase() {}
 MapBase_Unk_180::~MapBase_Unk_180() {}
 void MapBase::SetBounds(unk32 map, unk32 course) {}
@@ -31,7 +29,7 @@ unk8 MapBase::func_ov00_0207e968() {}
 unk8 MapBase::func_ov00_0207e96c() {}
 unk8 MapBase::vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4) {}
 unk32 MapBase::vfunc_70(Vec3p *param_2) {}
-s32* MapBase::vfunc_74(Vec3p *param_2) {}
+s32 *MapBase::vfunc_74(Vec3p *param_2) {}
 unk8 MapBase::func_ov00_0207f100() {}
 bool MapBase::func_ov00_0207f104(unk32 param_2, unk32 param_3) {}
 unk32 MapBase::func_ov00_0207f1f4(Vec3p *param_2, unk32 *param_3) {}
@@ -76,7 +74,7 @@ unk8 MapBase::GetTriggerBoundingBoxes(unk32 param_2, AABB *param_3, unk32 param_
 unk32 MapBase::GetOverlappingTrigger(Vec3p *param_2) {}
 bool TriggerBase::Overlaps() {}
 unk8 MapBase::FindTrigger(unk32 type) {}
-unk8 MapBase::GetOverlappingTriggers(Vec3p *param_2, TriggerBase * *triggers, unk32 capacity) {}
+unk8 MapBase::GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity) {}
 bool MapBase::IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3) {}
 bool MapBase::AnyTrigger_func_0c(unk32 type) {}
 unk32 TriggerBase::vfunc_0c() {}
@@ -101,7 +99,7 @@ bool MapBase::func_ov00_02080824(unk32 param_2, unk32 param_3) {}
 bool MapBase::AddUnk_130(unk32 param_2) {}
 bool MapBase::func_ov00_020809b8(unk32 param_2) {}
 unk8 MapBase::func_ov00_02080a78(Vec3p *param_2) {}
-void MapBase_Unk2::func_ov00_02080ad0(TriggerBase * *param_2, TriggerBase * *param_3) {}
+void MapBase_Unk2::func_ov00_02080ad0(TriggerBase **param_2, TriggerBase **param_3) {}
 unk8 MapBase::func_ov00_02080b24(Vec2b *param_2) {}
 void MapBase::func_ov00_02080d08(unk32 param_2) {}
 void MapBase::vfunc_bc() {}
@@ -112,5 +110,3 @@ unk32 TriggerBase::vfunc_10() {}
 void MapBase::func_ov00_02080de4() {}
 unk8 MapBase::func_ov00_02080de8(unk32 param_2) {}
 void MapBase::func_ov00_02080edc() {}
-
-#endif

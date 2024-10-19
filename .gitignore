@@ -6,3 +6,9 @@ ph_*/
 /m2ctx
 *.sav
 *.xMAP
+objdiff.json
+/dsd
+/dsd.exe
+/dsd.pdb
+build.ninja
+.ninja_log

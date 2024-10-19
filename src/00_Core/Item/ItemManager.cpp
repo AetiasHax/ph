@@ -1,9 +1,10 @@
 #include "Item/ItemManager.hpp"
+#include "Player/PlayerLinkBase.hpp"
 
-static const char *sShipPartTypes[] = { "anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg" };
+static const char *sShipPartTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
 extern u32 *data_027e0ce0[];
-THUMB ItemManager* ItemManager::Create() {
+THUMB ItemManager *ItemManager::Create() {
     gItemManager = new(data_027e0ce0[1], 4) ItemManager();
     return gItemManager;
 }
@@ -23,12 +24,12 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
     for (s32 i = 0; i < NUM_POTIONS; ++i) {
         save->potions[i] = mPotions[i];
     }
-    save->numBombs = (u8) (*mAmmo)[ItemFlag_BombBag];
-    save->numBombchus = (u8) (*mAmmo)[ItemFlag_BombchuBag];
-    save->numArrows = (u8) (*mAmmo)[ItemFlag_Bow];
-    save->equippedItem = (u8) mEquippedItem;
+    save->numBombs              = (u8) (*mAmmo)[ItemFlag_BombBag];
+    save->numBombchus           = (u8) (*mAmmo)[ItemFlag_BombchuBag];
+    save->numArrows             = (u8) (*mAmmo)[ItemFlag_Bow];
+    save->equippedItem          = (u8) mEquippedItem;
     save->salvagedTreasureFlags = mSalvagedTreasureFlags;
-    save->hourglassSeconds = FastDivide(mHourglassSandFrames, 60);
+    save->hourglassSeconds      = FastDivide(mHourglassSandFrames, 60);
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = mNumGems[i];
     }
@@ -47,8 +48,8 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
         save->unk_9f[i] = mUnk_098[i];
         save->unk_82[i] = mUnk_09e[i];
     }
-    save->quiverSize = mQuiverSize;
-    save->bombBagSize = mBombBagSize;
+    save->quiverSize     = mQuiverSize;
+    save->bombBagSize    = mBombBagSize;
     save->bombchuBagSize = mBombchuBagSize;
     if (mEquippedFairy == FairyId_None) {
         save->equippedFairy = 3;
@@ -60,21 +61,20 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
 THUMB void ItemManager::Load(const SaveItemManager *save) {
     mItemFlags = save->itemFlags;
     mNumRupees = save->numRupees;
-    mHourglassSandFrames = save->hourglassSeconds <= MAX_HOURGLASS_SECONDS
-        ? save->hourglassSeconds * 60
-        : MAX_HOURGLASS_SECONDS * 60;
+    mHourglassSandFrames =
+        save->hourglassSeconds <= MAX_HOURGLASS_SECONDS ? save->hourglassSeconds * 60 : MAX_HOURGLASS_SECONDS * 60;
     for (s32 i = ItemFlag_EQUIP_START; i < ItemFlag_EQUIP_END; ++i) {
         if (GET_FLAG(mItemFlags.flags, (u32) i)) {
             (*mAmmo)[i] = 1;
         }
     }
-    (*mAmmo)[ItemFlag_BombBag] = save->numBombs;
+    (*mAmmo)[ItemFlag_BombBag]    = save->numBombs;
     (*mAmmo)[ItemFlag_BombchuBag] = save->numBombchus;
-    (*mAmmo)[ItemFlag_Bow] = save->numArrows;
+    (*mAmmo)[ItemFlag_Bow]        = save->numArrows;
     for (s32 i = 0; i < NUM_POTIONS; ++i) {
         mPotions[i] = save->potions[i];
     }
-    mEquippedItem = save->equippedItem;
+    mEquippedItem          = save->equippedItem;
     mSalvagedTreasureFlags = save->salvagedTreasureFlags;
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         mNumGems[i] = save->numGems[i];
@@ -94,10 +94,10 @@ THUMB void ItemManager::Load(const SaveItemManager *save) {
         mUnk_098[i] = save->unk_9f[i];
         mUnk_09e[i] = save->unk_82[i];
     }
-    mQuiverSize = save->quiverSize;
-    mBombBagSize = save->bombBagSize;
+    mQuiverSize     = save->quiverSize;
+    mBombBagSize    = save->bombBagSize;
     mBombchuBagSize = save->bombchuBagSize;
-    mEquippedFairy = save->equippedFairy;
+    mEquippedFairy  = save->equippedFairy;
     if (mEquippedFairy >= FairyId_COUNT) {
         mEquippedFairy = FairyId_None;
     }
@@ -120,7 +120,7 @@ ARM FairyId ItemManager::GetEquippedFairy() const {
     return fairy;
 }
 
-ARM ActorNavi* ItemManager::GetFairy(FairyId id) const {
+ARM ActorNavi *ItemManager::GetFairy(FairyId id) const {
     return mFairies[id];
 }
 
@@ -149,29 +149,29 @@ ARM void ItemManager::TickEquipItem(void) {
 
 ARM void ItemManager::func_ov00_020ad528() {}
 
-ARM ItemModel* ItemManager::GetItemModel(ItemModelId id) {
+ARM ItemModel *ItemManager::GetItemModel(ItemModelId id) {
     return mItemModels[id];
 }
 
 extern unk32 data_027e0fc4;
-extern "C" void* func_ov00_020bb3a8(unk32 param1, u32 index);
+extern "C" void *func_ov00_020bb3a8(unk32 param1, u32 index);
 extern "C" void func_ov00_020c0bdc(void *param1, unk32 param2);
 ARM void ItemManager::func_ov00_020ad538(unk32 param1) const {
-    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
+    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
     func_ov00_020c0bdc(unk1, param1);
 }
 
 ARM void ItemManager::func_ov00_020ad560(unk32 param1) const {
-    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
+    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
     func_ov00_020c0bdc(unk1, param1);
 }
 
-ARM ItemModel* ItemManager::GetDungeonItemModel(u32 index) {
+ARM ItemModel *ItemManager::GetDungeonItemModel(u32 index) {
     return mDungeonItemModels[index];
 }
 
 ARM void ItemManager::func_ov00_020ad594(unk32 param1) const {
-    void* unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
+    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
     func_ov00_020c0bdc(unk1, param1);
 }
 
@@ -190,7 +190,7 @@ ARM void ItemManager::EquipItem_vfunc_38(unk32 param1) {
         this->Shield_vfunc_38(param1);
     }
     if (data_027e0d38->mUnk_14 == 1) return;
-    
+
     ItemFlag equip = this->GetEquippedItem();
     if (equip == ItemFlag_None) return;
     if (mEquipLoadTimer > 0) return;
@@ -198,23 +198,23 @@ ARM void ItemManager::EquipItem_vfunc_38(unk32 param1) {
     (*mEquipItems)[equip]->vfunc_38(param1);
 }
 
-ARM bool ItemManager::EquipItem_vfunc_3c(Vec4p *param1, ItemFlag equipId) {
-    Vec4p result;
-    if ((*mEquipItems)[equipId]->vfunc_3c(&result)) {
+ARM bool ItemManager::EquipCollidesWith(Cylinder *hitbox, ItemFlag equipId) {
+    Cylinder equipHitbox;
+    if ((*mEquipItems)[equipId]->GetHitbox(&equipHitbox)) {
         s32 step = (*mEquipItems)[equipId]->vfunc_4c();
         if (step > 0) {
-            Approach_thunk(&result.y, param1->y, step);
+            Approach_thunk(&equipHitbox.pos.y, hitbox->pos.y, step);
         }
-        return func_01ffec34(param1, &result);
+        return hitbox->Overlaps(&equipHitbox);
     }
     return false;
 }
 
-ARM void ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
-    (*mEquipItems)[equipId]->vfunc_2c();
+ARM s32 ItemManager::EquipItem_vfunc_2c(ItemFlag equipId) {
+    return (*mEquipItems)[equipId]->vfunc_2c();
 }
 
-ARM EquipItem* ItemManager::GetEquipItem(ItemFlag equipId) {
+ARM EquipItem *ItemManager::GetEquipItem(ItemFlag equipId) {
     if (equipId == ItemFlag_None) {
         return NULL;
     } else {
@@ -236,15 +236,10 @@ extern "C" unk32 func_ov00_02078b40(UnkStruct_027e0d38 *param1);
 extern void *data_027e10a4;
 extern "C" bool func_ov15_02136670(void *param1);
 extern unk8 data_ov29_0217a4ac[];
-extern "C" bool _ZN10MapManager18func_ov00_020849f8Ei(void *param1);
-extern unk32 data_027e0fc8;
-extern "C" bool func_ov00_020bbd80(unk32 param1, unk32 param2);
+extern "C" bool _ZN14PlayerLinkBase18func_ov00_020bbd80Ei(unk32 param1, unk32 param2);
 extern "C" bool _ZNK11ItemManager7HasItemEi();
 extern "C" void _ZN11ItemManager12GetEquipItemEi();
-ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
-    #ifndef NONMATCHING
-    #include "../asm/ov00/Item/ItemManager_func_ov00_020ad790.inc"
-    #else
+ARM bool ItemManager::func_ov00_020ad790(unk32 param1) {
     unk32 unk1 = func_ov00_02078b40(data_027e0d38);
     if (unk1 == 2) return func_ov15_02136670(data_027e10a4);
     if (data_027e0d38->mUnk_14 == 1) return false;
@@ -252,24 +247,20 @@ ARM bool NONMATCH(ItemManager::func_ov00_020ad790)(unk32 param1) {
     if (gOverlayManager.mLoadedOverlays[OverlayIndex_6] == OverlayId_29 && data_ov29_0217a4ac[0x54] != 0) {
         return false;
     }
-    
+
     ItemFlag equipId = mForcedItem;
-    bool unk2 = !gMapManager->func_ov00_020849f8();
-    if (
-        mEquippedItem != ItemFlag_None &&
-        (unk2 || (u32) mEquippedItem - 9 <= 1) &&
-        (data_027e0fc8 == 0 || func_ov00_020bbd80(data_027e0fc8, param1)) &&
-        this->HasItem(mEquippedItem)
-    ) {
+    bool unk2        = !gMapManager->func_ov00_020849f8(equipId);
+    if (mEquippedItem != ItemFlag_None && (unk2 || (u32) mEquippedItem - 9 <= 1) &&
+        (gPlayerLink == 0 || gPlayerLink->func_ov00_020bbd80(param1)) && this->HasItem(mEquippedItem))
+    {
         equipId = mEquippedItem;
     }
-    
+
     if (equipId != ItemFlag_None) {
         if (mEquipLoadTimer != 0) return param1 == 0;
         return this->GetEquipItem(equipId)->IsUsable(param1);
     }
     return false;
-    #endif
 }
 
 THUMB ShipType ItemManager::GetEquippedShipPart(ShipPart part) const {
@@ -308,7 +299,7 @@ THUMB u16 ItemManager::GetUnk_09e(u32 index) const {
 
 THUMB s32 ItemManager::GetUnk_09e_Divided(u32 index) const {
     q20 quotient = Divide(INT_TO_Q20(mUnk_09e[index]), FLOAT_TO_Q20(2.54));
-    s32 result = ROUND_Q20(quotient);
+    s32 result   = ROUND_Q20(quotient);
     if (result < 1) result = 1;
     return result;
 }
@@ -323,7 +314,7 @@ THUMB void ItemManager::SetUnk_09e(u32 index, u16 value) {
     }
 }
 
-const u16 sQuiverSizes[] = {20, 20, 30, 50};
+const u16 sQuiverSizes[]  = {20, 20, 30, 50};
 const u16 sBombBagSizes[] = {10, 20, 30};
 
 THUMB u16 ItemManager::GetMaxAmmo(ItemFlag equipId) const {
@@ -383,9 +374,10 @@ THUMB void ItemManager::RemoveItem(ItemFlag item) {
 
 extern ItemModel **data_027e1058;
 extern ItemModel **data_027e105c;
-extern "C" ItemModel* func_ov00_02079ffc(void*, const char *modelName, const char *textureName, unk32 param4, unk8 param5, unk8 param6, bool param7);
-extern "C" ItemModel* LoadTreasureItemFanfare(ItemModel**, s32 treasureType, bool, bool);
-static char *sDefaultItemModel = "key";
+extern "C" ItemModel *func_ov00_02079ffc(void *, const char *modelName, const char *textureName, unk32 param4, unk8 param5,
+                                         unk8 param6, bool param7);
+extern "C" ItemModel *LoadTreasureItemFanfare(ItemModel **, s32 treasureType, bool, bool);
+static char *sDefaultItemModel   = "key";
 static char *sItemModelNames[70] = {
     [ItemId_Nothing]           = "key",
     [ItemId_SmallKey]          = "key",
@@ -480,37 +472,24 @@ static char *sItemModelNames3[9] = {
     [ItemId_Unk_135 - ItemId_CycloneSlate]      = NULL,
 };
 char *sSpecialItemModelNames[7] = {
-    "mapTakara\0\0",
-    "arrowpodL\0\0",
-    "bmbagL\0",
-    "bcbagL\0",
-    "Player/get/gd_\0",
-    ".nsbmd\0",
-    ".nsbtx\0",
+    "mapTakara\0\0", "arrowpodL\0\0", "bmbagL\0", "bcbagL\0", "Player/get/gd_\0", ".nsbmd\0", ".nsbtx\0",
 };
 THUMB void ItemManager::LoadFanfareItem(ItemId id) {
     mFanfareItem = id;
-    
+
     ItemModel *model;
-    if (
-        id == ItemId_Unk_43 ||
-        id == ItemId_Cannon ||
-        (id >= ItemId_GOLDEN_SHIP_START && id <= ItemId_GOLDEN_SHIP_END) ||
-        id == ItemId_Unk_126 ||
-        id == ItemId_Unk_133
-    ) {
+    if (id == ItemId_Unk_43 || id == ItemId_Cannon || (id >= ItemId_GOLDEN_SHIP_START && id <= ItemId_GOLDEN_SHIP_END) ||
+        id == ItemId_Unk_126 || id == ItemId_Unk_133)
+    {
         model = *data_027e1058;
-    } else if (
-        id >= ItemId_TREASURE_START &&
-        id <= ItemId_TREASURE_END
-    ) {
+    } else if (id >= ItemId_TREASURE_START && id <= ItemId_TREASURE_END) {
         model = LoadTreasureItemFanfare(data_027e105c, id - ItemId_TREASURE_START, true, false);
     } else if (id == ItemId_Unk_125) {
         model = *data_027e105c;
     } else {
-        char modelName[0x80] = {};
+        char modelName[0x80]   = {};
         char textureName[0x80] = {};
-        const char *itemName = NULL;
+        const char *itemName   = NULL;
         if (id == ItemId_Quiver && (s32) mQuiverSize >= 1) {
             itemName = sSpecialItemModelNames[1];
         } else if (id == ItemId_BigBombBag && (s32) mBombBagSize >= 1) {
@@ -774,11 +753,11 @@ THUMB void ItemManager::GiveItem(ItemId id) {
                 break;
             }
         } break;
-        
+
         case ItemId_SandOfHours: {
             mHourglassSandFrames += 3600;
         } break;
-        
+
         case ItemId_GoldenChimney: {
             gAdventureFlags->Set(AdventureFlag_ReceivedGoldenChimney, true);
             GiveShipPart(ShipPart_Chimney, ShipType_Golden);
@@ -814,7 +793,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         case ItemId_Rupoor50: {
             this->GiveRupees(-50, true);
         } break;
-        
+
         case ItemId_Nothing: break;
         case ItemId_Unk_5: break;
         case ItemId_Unk_16: break;
@@ -827,11 +806,9 @@ THUMB void ItemManager::GiveItem(ItemId id) {
             }
         } break;
     }
-    if (
-        gAdventureFlags->Get(AdventureFlag_Azurine) &&
-        gAdventureFlags->Get(AdventureFlag_Crimsonine) &&
-        gAdventureFlags->Get(AdventureFlag_Aquanine)
-    ) {
+    if (gAdventureFlags->Get(AdventureFlag_Azurine) && gAdventureFlags->Get(AdventureFlag_Crimsonine) &&
+        gAdventureFlags->Get(AdventureFlag_Aquanine))
+    {
         gAdventureFlags->Set(AdventureFlag_Unk_128, true);
     }
 }
@@ -841,7 +818,7 @@ THUMB void ItemManager::GiveEquipItem(ItemFlag item, u16 ammo) {
     SET_FLAG(mItemFlags.flags, flag);
     this->GetEquipItem(item)->GiveAmmo(ammo);
     if (mEquippedItem == ItemFlag_None) {
-        this->mEquippedItem = item;
+        this->mEquippedItem   = item;
         this->mEquipLoadTimer = 1;
     }
 }
@@ -898,8 +875,8 @@ ARM ItemFlag ItemManager::GetEquippedItem() const {
 
 ARM bool ItemManager::SetEquippedItem(ItemFlag equipId) {
     mPrevEquippedItem = mEquippedItem;
-    mEquippedItem = equipId;
-    mEquipLoadTimer = 2;
+    mEquippedItem     = equipId;
+    mEquipLoadTimer   = 2;
     return true;
 }
 
@@ -912,7 +889,7 @@ THUMB void ItemManager::ForceEquipItem(ItemFlag equipId) {
         if (i == equipId) continue;
         (*mEquipItems)[i - ItemFlag_EQUIP_START]->UpdateInUse(0);
     }
-    mForcedItem = equipId;
+    mForcedItem     = equipId;
     mEquipLoadTimer = 1;
 }
 
@@ -966,12 +943,10 @@ ARM bool ItemManager::HasPotion(u32 index) const {
     switch (mPotions[index]) {
         case Potion_Red:
         case Potion_Purple:
-        case Potion_Yellow:
-            return true;
-        
+        case Potion_Yellow: return true;
+
         case Potion_None:
-        default:
-            return false;
+        default: return false;
     }
 }
 
@@ -1032,7 +1007,7 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
         case ItemId_GoldRupee: {
             sfx = SfxId_Fanfare_GoldRupee;
         } break;
-        
+
         case ItemId_SmallKey:
         case ItemId_GreenRupee:
         case ItemId_BlueRupee:
@@ -1040,7 +1015,7 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
             sfx = SfxId_Fanfare_Rupee;
         } break;
 
-        case ItemId_Rupoor10: 
+        case ItemId_Rupoor10:
         case ItemId_Rupoor50: {
             sfx = SfxId_Fanfare_Rupoor;
         } break;
@@ -1053,13 +1028,14 @@ THUMB void ItemManager::PlayItemFanfareSfx(ItemId item) {
         case ItemId_HeartContainer: {
             sfx = SfxId_Fanfare_HeartContainer;
         } break;
-        
+
         default: {
             sfx = SfxId_Fanfare_Treasure;
         } break;
     }
     if (gItemManager->mFanfareSfx != SfxId_None) {
         sfx = gItemManager->mFanfareSfx;
+
         gItemManager->mFanfareSfx = SfxId_None;
     }
     PlaySoundEffect(&data_ov00_020eec68, sfx);

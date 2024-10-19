@@ -1,24 +1,23 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
 #include "lib/math.h"
-
-#include "Player/PlayerBase.hpp"
-#include "Player/MotionParams.hpp"
+#include "types.h"
 
 #include "Actor/ActorManager.hpp"
-
 #include "Debug/DebugHierarchy.hpp"
+#include "Player/MotionParams.hpp"
+#include "Player/PlayerBase.hpp"
 
 typedef s32 PlayerCharacter;
 enum PlayerCharacter_ {
-    PlayerCharacter_Link = 0,
+    PlayerCharacter_Link     = 0,
     PlayerCharacter_Gongoron = 1,
-    PlayerCharacter_COUNT = 2,
+    PlayerCharacter_COUNT    = 2,
 };
 
-class PlayerLinkBase: public PlayerBase {
+class PlayerLinkBase : public PlayerBase {
+public:
     /* 00 (base) */
     /* 14 */ Vec3p mPos;
     /* 20 */ Vec3p mVel;
@@ -43,7 +42,7 @@ class PlayerLinkBase: public PlayerBase {
     /* 68 */ DebugHierarchy *mDebugHierarchy_1;
     /* 6c */ DebugHierarchy *mDebugHierarchy_2;
     /* 70 */
-    
+
     /* 00 */ s32 GetMaxHealth() override;
     /* 08 */ ItemFlag GetEquipId() override;
     /* 0c */ bool CanMove() override;
@@ -68,11 +67,19 @@ class PlayerLinkBase: public PlayerBase {
     /* 6c */ virtual void vfunc_6c();
     /* 70 */ virtual void vfunc_70(s32 param1, Vec3p *param2, unk32 param3);
     /* 74 */ virtual void vfunc_74();
-    /* 78 */ virtual bool vfunc_78();
+    /* 78 */ virtual unk32 vfunc_78();
     /* 7c */ virtual void vfunc_7c();
     /* 80 */ virtual void SetUnk_5e();
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
-    public:
-        bool func_ov00_020bce48(ItemId cutsceneItemId); // PlayItemCutscene
+
+    bool func_ov00_020bbd80(s32 param1);
+    void func_ov00_020bc854(Vec3p *param1);
+    bool func_ov00_020bce48(ItemId cutsceneItemId); // PlayItemCutscene
+    bool func_ov00_020bd304();
+    bool GongoronCollidesWith(Cylinder *hitbox);
+    s32 GetGrabActorId();
+    PlayerCharacter GetCurrentCharacter();
 };
+
+extern PlayerLinkBase *gPlayerLink;

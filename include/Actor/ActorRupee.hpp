@@ -1,8 +1,8 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
 #include "lib/math.h"
+#include "types.h"
 
 #include "Actor/Actor.hpp"
 #include "Actor/ActorType.hpp"
@@ -41,8 +41,8 @@ public:
     /* 64 */ virtual void vfunc_64() override;
     /* b4 */
 
-    static ActorRupee* Create();
-    ActorRupee(void);
+    static ActorRupee *Create();
+    ActorRupee();
     void Move();
     ItemId GetRupeeCutsceneItemId();
     void func_ov14_0213b204(unk32 param1);

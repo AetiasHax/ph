@@ -1,7 +1,5 @@
 #include "Map/MapManager.hpp"
 
-#ifdef STUBS
-
 void MapManager::func_ov00_020820ec(unk32 *param_2) {}
 void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4) {}
 unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 param_3) {}
@@ -19,7 +17,7 @@ unk8 MapManager::func_ov00_02082454(unk32 param_2, unk32 param_3) {}
 unk8 MapManager::func_ov00_02082494(unk32 param_2) {}
 unk8 MapManager::func_ov00_020824cc(unk32 param_2) {}
 unk8 MapManager::func_ov00_02082504() {}
-unk8 * MapManager::func_ov00_02082538() {}
+unk8 *MapManager::func_ov00_02082538() {}
 void MapManager::func_ov00_02082594() {}
 void MapManager::func_ov00_020825ac() {}
 s32 MapManager::GetCourseFilePath(char *courseName, char *buf) {}
@@ -41,7 +39,7 @@ bool MapManager::func_ov00_020828f8(s32 *param_2) {}
 unk8 MapManager::GetCourseData_Unk_b0() {}
 s32 MapManager::func_ov00_02082914(unk32 param_2) {}
 unk8 MapManager::func_ov00_02082acc() {}
-unk32 * MapManager::func_ov00_02082adc() {}
+unk32 *MapManager::func_ov00_02082adc() {}
 unk8 MapManager::func_ov00_02082af4() {}
 bool MapManager::func_ov00_02082b3c(s32 param_2) {}
 unk8 MapManager::func_ov00_02082d08() {}
@@ -129,7 +127,7 @@ unk8 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
 unk8 MapManager::MapData_vfunc_60() {}
 unk8 MapManager::func_ov00_02083e70() {}
 unk8 MapManager::MapData_vfunc_68() {}
-void MapManager::func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3) {}
+s32 MapManager::func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3, unk32 param_4) {}
 void MapManager::func_ov00_02083f44(Vec3p *param_2) {}
 unk8 MapManager::MapData_vfunc_6c() {}
 unk8 MapManager::MapData_vfunc_70() {}
@@ -198,7 +196,7 @@ unk8 MapManager::func_ov00_020858b0() {}
 s32 MapManager::func_ov00_02085a34(unk32 param_2, unk32 param_3) {}
 unk8 MapManager::func_ov00_02085c60(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5) {}
 unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4) {}
-bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7, Vec3p *param_8) {}
-bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7, Vec3p *param_8, Vec3p *param_9) {}
-
-#endif
+bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7,
+                                    Vec3p *param_8) {}
+bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
+                                    Vec3p *param_8, Vec3p *param_9) {}

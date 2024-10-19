@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+
 #include "Player/EquipItem.hpp"
 
 class EquipScoop : public EquipItem {
@@ -24,4 +25,3 @@ public:
     /* 48 */ virtual unk32 vfunc_48(unk32 param1) const override; // func_ov54_02198d48
     /* 50 */
 };
-
