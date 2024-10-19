@@ -132,7 +132,7 @@ def main():
 
         n.rule(
             name="delink",
-            command="./dsd delink --config-path $config_path --elf-path $delinks_path"
+            command="./dsd delink --config-path $config_path"
         )
         n.newline()
 
@@ -144,7 +144,7 @@ def main():
 
         n.rule(
             name="lcf",
-            command="./dsd lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file --delinks-path $delinks_path --build-path $build_path"
+            command="./dsd lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file"
         )
         n.newline()
 
@@ -299,7 +299,6 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
         outputs=str(delinks_path / "delink.yaml"),
         variables={
             "config_path": game_config / "arm9" / "config.yaml",
-            "delinks_path": delinks_path,
         }
     )
     n.newline()
@@ -314,8 +313,6 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
             "config_path": game_config / "arm9" / "config.yaml",
             "lcf_file": lcf_file,
             "objects_file": objects_file,
-            "delinks_path": delinks_path,
-            "build_path": game_build,
         }
     )
     n.newline()
