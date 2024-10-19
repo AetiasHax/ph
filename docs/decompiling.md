@@ -10,21 +10,20 @@ stuck or need assistance.
 ## Pick a source file
 See the `decomp` tag in the [issue tracker](https://github.com/AetiasHax/ph/issues?q=is%3Aopen+is%3Aissue+label%3Adecomp) for
 a list of delinked source files that are ready to be decompiled. This list grows as more source files are delinked from the
-rest of the Assembly code.
+rest of the base ROM.
 
 You can claim a source file by leaving a comment on its issue, so that GitHub allows us to assign you to it. This indicates
 that you are currently decompiling that source file.
 
 If you want to unclaim the file, leave another comment so we can be certain that the source file is available to be claimed
-again. Remember to make a pull request of any notable progress you made on the source file, which can include
-[non-matching functions](/CONTRIBUTING.md#non-matching-functions).
+again. Remember to make a pull request of any progress you made on the source file, whether it is just header files or
+partially decompiled code.
 
 ## Decompiling a source file
-We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between C++ and assembly
-code.
+We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between our decompiled C++ code and the base ROM's code.
 1. [Download the latest release.](https://github.com/encounter/objdiff/releases/latest)
-1. Run `python tools/objdiff.py <EUR|USA>` to generate `objdiff.json` in the project root.
-1. In `objdiff`, set the project directory to the root of this project. This will load `objdiff.json`.
+1. Run `configure.py <eur|usa>` and `ninja` to generate `objdiff.json` in the repository root.
+1. In `objdiff`, set the project directory to one of the mentioned `arm9/` directories.
 1. Select your source file in the left sidebar:  
 ![List of objects in objdiff](images/objdiff_objects.png)
 5. See the list of functions and data to decompile:  
@@ -68,7 +67,6 @@ following:
     1. Once you're sent to `decomp.me`, go to "Options" and change the preset to "Phantom Hourglass".
     1. Paste your code into the "Source code" tab.
     1. Share the link with us!
-- In the worst case, add the function as a [non-matching function](/CONTRIBUTING.md#non-matching-functions).
 
 ## Decompiling `.init` functions
 > [!NOTE]

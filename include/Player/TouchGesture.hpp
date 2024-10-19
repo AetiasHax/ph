@@ -29,7 +29,7 @@ public:
     /* 2c */ u16 mTouchX[GESTURE_BUFFER_LENGTH];
     /* 48 */ u16 mTouchY[GESTURE_BUFFER_LENGTH];
     /* 64 */
-    
+
     /* 00 */ virtual ~TouchGesture() override;
     /* 08 */ virtual void ResetTouchHistory() override;
     /* 0c */ virtual void Update(void *param1) override;

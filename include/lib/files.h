@@ -10,4 +10,3 @@ struct FileEntry {
     /* 0c */ unk32 mUnk_0c;
     /* 10 */
 };
-

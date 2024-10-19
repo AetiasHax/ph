@@ -35,5 +35,5 @@ public:
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov53_02199318
     /* 50 */
 
-    Actor* GetActor();
+    Actor *GetActor();
 };

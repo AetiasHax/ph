@@ -5,8 +5,8 @@ ItemFlag PlayerBase::GetEquipId() {}
 bool PlayerBase::CanMove() {}
 void PlayerBase::SetUpdatePos(bool updatePos) {}
 void PlayerBase::SetVisible(bool visible) {}
-EquipSword* PlayerBase::GetEquipSword() {}
-EquipShield* PlayerBase::GetEquipShield() {}
+EquipSword *PlayerBase::GetEquipSword() {}
+EquipShield *PlayerBase::GetEquipShield() {}
 void PlayerBase::LookAt(Vec3p *target) {}
 bool PlayerBase::func_ov00_020a7c00(s32 param1) {}
 bool PlayerBase::CollidesWith(Cylinder *cylinder) {}

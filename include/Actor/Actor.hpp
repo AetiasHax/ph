@@ -49,10 +49,10 @@ struct Actor_UnkStruct_0a4 {
     Actor_UnkStruct_0a4(q20 x, q20 y, q20 z, s32 unk_10);
 };
 
-class KillPickupsFilter: FilterActorReturn, public FilterActorBase {
+class KillPickupsFilter : FilterActorReturn, public FilterActorBase {
 public:
     /* 00 (base) */
-    /* 04 */ 
+    /* 04 */
 
     /* 0 */ virtual bool Filter(Actor *actor) override;
     /* 4 */
@@ -60,11 +60,11 @@ public:
 
 typedef u32 PlayerCollide;
 enum PlayerCollide_ {
-    PlayerCollide_Player = 0x1,
-    PlayerCollide_Sword = 0x2,
-    PlayerCollide_Shield = 0x4,
+    PlayerCollide_Player   = 0x1,
+    PlayerCollide_Sword    = 0x2,
+    PlayerCollide_Shield   = 0x4,
     PlayerCollide_Gongoron = 0x8,
-    PlayerCollide_Hammer = 0x10,
+    PlayerCollide_Hammer   = 0x10,
 };
 
 struct Knockback {
@@ -73,11 +73,10 @@ struct Knockback {
     /* 10 */ unk32 mUnk_10;
     /* 14 */ Actor *actor;
 
-    inline Knockback():
+    inline Knockback() :
         mUnk_00(0),
         mUnk_10(0xb),
-        actor(NULL)
-    {}
+        actor(NULL) {}
 };
 
 class Actor : public SysObject {
@@ -172,7 +171,7 @@ public:
     /* 44 */ virtual bool CollidesWith(Actor *other);
     /* 48 */ virtual bool vfunc_48(Knockback *param1);
     /* 4c */ virtual bool vfunc_4c(unk32 *param1);
-    /* 50 */ virtual Vec3p* GetPos();
+    /* 50 */ virtual Vec3p *GetPos();
     /* 54 */ virtual void vfunc_54();
     /* 58 */ virtual bool SetUnk_11b();
     /* 5c */ virtual bool SetVelocity(Vec3p *vel);
@@ -198,7 +197,7 @@ public:
     /* ac */ virtual void vfunc_ac();
     /* b0 */ virtual void vfunc_b0();
     /* b4 */
-    
+
     Actor();
 
     bool func_01fffd04(s32 param1);
@@ -241,7 +240,7 @@ public:
     void IncreaseActiveFrames();
     bool func_ov00_020c2c0c();
     bool func_ov00_020c2c70();
-    EquipBoomerang* GetEquipBoomerang();
+    EquipBoomerang *GetEquipBoomerang();
     bool func_ov00_020c2d54();
     bool func_ov00_020c2de4();
     bool func_ov00_020c2e7c();

@@ -1,9 +1,8 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
-
 #include "lib/math.h"
+#include "types.h"
 
 #include "Actor/Actor.hpp"
 #include "Player/LinkStateBase.hpp"
@@ -35,7 +34,7 @@ public:
     /* 44 */
 
     void MoveTowardTarget();
-    LinkStateCutscene* GetLinkStateCutscene();
+    LinkStateCutscene *GetLinkStateCutscene();
     bool func_ov00_020a9180(Vec3p *param1);
     bool func_ov00_020a9210(Vec3p *param1, Actor *param2);
 };

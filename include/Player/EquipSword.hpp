@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+
 #include "Player/EquipItem.hpp"
 #include "Player/EquipRope.hpp"
 
@@ -57,5 +58,5 @@ public:
     /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const override; // func_ov00_020c01dc
     /* 50 */
 
-    static EquipRope* GetEquipRope();
+    static EquipRope *GetEquipRope();
 };

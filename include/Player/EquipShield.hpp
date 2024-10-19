@@ -1,6 +1,7 @@
 #pragma once
 
 #include "types.h"
+
 #include "Player/EquipItem.hpp"
 
 class EquipShield {

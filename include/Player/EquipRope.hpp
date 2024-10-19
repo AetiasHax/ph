@@ -1,8 +1,8 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
 #include "lib/math.h"
+#include "types.h"
 
 #include "Actor/ActorRef.hpp"
 #include "Physics/Cylinder.hpp"
@@ -45,13 +45,13 @@ public:
     u16 GetAmmo();
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
     /* 18 */ virtual void vfunc_18() override; // func_ov57_021992f4
-    /* 1c */ virtual void vfunc_1c() override; // func_ov57_0219935c    
+    /* 1c */ virtual void vfunc_1c() override; // func_ov57_0219935c
 
     /* 30 */ virtual void vfunc_30() override; // func_ov57_02199744
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov57_021998f0
     /* 50 */
 
-    Actor* func_ov14_0213d420();
+    Actor *func_ov14_0213d420();
     s32 func_ov14_0213d440(s32 actorId);
     s32 func_ov14_0213d480(s32 actorId);
     bool func_ov14_0213d81c(s32 index, Vec3p *vec);

@@ -1,23 +1,22 @@
 #pragma once
 
 #include "global.h"
+#include "lib/math.h"
 #include "types.h"
 
-#include "lib/math.h"
-
-#include "Player/TouchControl.hpp"
-#include "Player/TouchGesture.hpp"
-#include "Actor/ActorManager.hpp"
 #include "Actor/Actor.hpp"
+#include "Actor/ActorManager.hpp"
 #include "Debug/DebugHierarchy.hpp"
 #include "Item/Item.hpp"
+#include "Player/TouchControl.hpp"
+#include "Player/TouchGesture.hpp"
 
 typedef u16 TouchEdge;
 enum TouchEdge_ {
-    TouchEdge_Right = 0,
-    TouchEdge_Left = 1,
+    TouchEdge_Right  = 0,
+    TouchEdge_Left   = 1,
     TouchEdge_Bottom = 2,
-    TouchEdge_Top = 3,
+    TouchEdge_Top    = 3,
     TouchEdge_Middle = 4
 };
 
@@ -79,7 +78,7 @@ public:
     void func_ov00_020aeef8();
     void func_ov00_020aef30();
     void UpdateAim();
-    Actor* GetFollowActor();
+    Actor *GetFollowActor();
     bool func_ov00_020af01c(unk8 *param1);
     void SetUnk_80();
     void StopFollowing();
