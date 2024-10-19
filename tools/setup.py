@@ -5,7 +5,7 @@ from pathlib import Path
 import shutil
 import platform
 
-DSD_VERSION = 'v0.1.0'
+DSD_VERSION = 'v0.2.0'
 
 
 tools_path = Path(__file__).parent
