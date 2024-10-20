@@ -64,7 +64,6 @@ libs_path        = root_path / "libs"
 extract_path     = root_path / "extract"
 tools_path       = root_path / "tools"
 mwcc_path        = tools_path / "mwccarm" / MWCC_VERSION
-mw_license_path  = tools_path / "mwccarm" / "license.dat"
 
 
 # Includes
@@ -81,20 +80,13 @@ CC_INCLUDES = " ".join(f"-i {include}" for include in includes)
 # Platform info
 EXE = ""
 WINE = ""
-MW_LICENSE_SHELL = ""
 system = platform.system()
-if system == "Windows":
+if system == "Windows" or system.startswith("MSYS") or system.startswith("MINGW"):
     system = "windows"
     EXE = ".exe"
-    MW_LICENSE_SHELL = lambda cmd: f'cmd /s /c "set LM_LICENSE_FILE="{mw_license_path}" && cmd /s /c "&& {cmd}""'
-elif system.startswith("MSYS"):
-    system = "msys"
-    EXE = ".exe"
-    MW_LICENSE_SHELL = lambda cmd: f"LM_LICENSE_FILE={mw_license_path} {cmd}"
 elif system == "Linux":
     system = "linux"
     WINE = args.wine
-    MW_LICENSE_SHELL = lambda cmd: f"LM_LICENSE_FILE={mw_license_path} {cmd}"
 else:
     print(f"Unknown system '{system}'")
     exit(1)
@@ -138,7 +130,7 @@ def main():
 
         n.rule(
             name="mwcc",
-            command=MW_LICENSE_SHELL(f'{WINE} "{mwcc_path}/mwccarm.exe" {CC_FLAGS} {CC_INCLUDES} $cc_flags -d $game_version $in -o $out')
+            command=f'{WINE} "{mwcc_path}/mwccarm.exe" {CC_FLAGS} {CC_INCLUDES} $cc_flags -d $game_version $in -o $out'
         )
         n.newline()
 
@@ -150,7 +142,7 @@ def main():
 
         n.rule(
             name="mwld",
-            command=MW_LICENSE_SHELL(f'{WINE} "{mwcc_path}/mwldarm.exe" {LD_FLAGS} @$objects_file $lcf_file -o $out')
+            command=f'{WINE} "{mwcc_path}/mwldarm.exe" {LD_FLAGS} @$objects_file $lcf_file -o $out'
         )
         n.newline()
 
