@@ -233,6 +233,13 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
     )
     n.newline()
 
+    n.build(
+        inputs=rom_file,
+        rule="phony",
+        outputs="rom",
+    )
+    n.newline()
+
 
 def add_mwcc_builds(n: ninja_syntax.Writer, game_version: str, game_build: Path):
     for source_file in get_c_cpp_files([src_path, libs_path]):
@@ -316,6 +323,13 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
         variables={
             "config_path": game_config / "arm9" / "config.yaml",
         }
+    )
+    n.newline()
+
+    n.build(
+        inputs="objdiff.json",
+        rule="phony",
+        outputs="objdiff",
     )
     n.newline()
 
