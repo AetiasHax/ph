@@ -178,7 +178,7 @@ public:
     /* 14 */ virtual void vfunc_14(u32 param1);
     /* 18 */ virtual void vfunc_18(u32 param1);
     /* 1c */ virtual void vfunc_1c(u16 *param1);
-    /* 20 */ virtual void vfunc_20(s32 param1);
+    /* 20 */ virtual void vfunc_20(bool param1);
     /* 24 */ virtual void vfunc_24();
     /* 28 */ virtual void vfunc_28();
     /* 2c */ virtual s32 vfunc_2c();
