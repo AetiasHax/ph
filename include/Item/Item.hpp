@@ -89,7 +89,8 @@ enum ItemFlag_ {
 
 typedef s32 ItemId;
 enum ItemId_ {
-    /* 0x00 */ ItemId_None              = 0,
+    /* -1 */ ItemId_None                = -1,
+    /* 0x00 */ ItemId_Nothing           = 0,
     /* 0x01 */ ItemId_SmallKey          = 1,
     /* 0x02 */ ItemId_GreenRupee        = 2,
     /* 0x03 */ ItemId_OshusSword        = 3,

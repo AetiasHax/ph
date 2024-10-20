@@ -126,6 +126,18 @@ enum ActorTypeId_ {
     ActorTypeId_VLR0 = __ACTOR_TYPE_ID(V, L, R, 0),
 };
 
+class ActorType_UnkClass {
+public:
+    u32 unk_00;
+    u32 unk_04;
+    u32 unk_08;
+    u32 unk_0C;
+    u32 unk_10;
+    ActorType_UnkClass(u32 unk_00, u32 unk_04) :
+        unk_00(unk_00),
+        unk_04(unk_04) {}
+};
+
 class Actor;
 typedef Actor *(*ActorCreateFunc)();
 

@@ -3214,7 +3214,7 @@ from:0x0213ae80 kind:arm_call to:0x0202e9dc module:main
 from:0x0213ae8c kind:arm_call to:0x0213ae98 module:overlay(14)
 from:0x0213ae94 kind:load to:0x027e0fe0 module:dtcm
 from:0x0213aea0 kind:arm_call to:0x020c1554 module:overlay(0)
-from:0x0213aec8 kind:load to:0x021589e4 module:overlay(14)
+from:0x0213aec8 kind:load to:0x021589dc add:8 module:overlay(14)
 from:0x0213aee0 kind:arm_call to:0x0213b70c module:overlay(14)
 from:0x0213af70 kind:arm_call to:0x0213b204 module:overlay(14)
 from:0x0213afac kind:arm_call to:0x0213b204 module:overlay(14)

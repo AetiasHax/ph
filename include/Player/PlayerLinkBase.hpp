@@ -75,6 +75,7 @@ public:
 
     bool func_ov00_020bbd80(s32 param1);
     void func_ov00_020bc854(Vec3p *param1);
+    bool func_ov00_020bce48(ItemId cutsceneItemId); // PlayItemCutscene
     bool func_ov00_020bd304();
     bool GongoronCollidesWith(Cylinder *hitbox);
     s32 GetGrabActorId();

@@ -9,7 +9,9 @@ typedef s32 q20;
 typedef s16 q4;
 
 #define INT_TO_Q20(n) ((s32) ((n) << 12))
+#define FLOAT_TO_Q21(n) ((s32) (((n) * 8192 + 1) / 4))
 #define FLOAT_TO_Q20(n) ((s32) (((n) * 8192 + 1) / 2))
+#define FLOAT_TO_Q19(n) ((s32) (((n) * 8192 + 1)))
 #define ROUND_Q20(n) (((s32) (n) + 0x800) >> 12)
 #define MUL_Q20(a, b) (q20)((((s64) (a)) * ((s64) (b)) + 0x800) >> 12)
 

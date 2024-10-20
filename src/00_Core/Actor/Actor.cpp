@@ -187,7 +187,7 @@ ARM void Actor::vfunc_1c(u16 *param1) {
     }
 }
 
-ARM void Actor::vfunc_20(s32 param1) {}
+ARM void Actor::vfunc_20(bool param1) {}
 
 ARM void Actor::SetUnk_129(bool value) {
     if (mUnk_128) mUnk_129 = value;
@@ -957,3 +957,5 @@ Actor_UnkStruct_09c::Actor_UnkStruct_09c() {
     mUnk_3 = 0;
     mUnk_4 = 0;
 }
+
+Actor_UnkStruct_012::Actor_UnkStruct_012() {}
