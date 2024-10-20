@@ -5,26 +5,25 @@
 #include "System/Random.hpp"
 
 extern "C" {
-    void func_01ff9bc4(Vec3p *a, Vec3p *b, Vec3p *sum);
-    void func_ov00_0207a1c8(bool *param_1, unk32 param_2, Vec3p *param_3);
+    void func_ov000_0207a1c8(bool *param_1, unk32 param_2, Vec3p *param_3);
     void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
-    void func_ov05_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
-                            char param_8, char param_9, char param_10);
-    void func_ov00_020d7ad4(u32 *param1, u32 param2);
+    void func_ov005_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
+                             char param_8, char param_9, char param_10);
+    void func_ov000_020d7ad4(u32 *param1, u32 param2);
 }
 u16 GetRupeeValue(RupeeId id);
 
 char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
-extern u32 *data_ov14_021589d8;
-extern u32 data_ov00_020e9370[];
-extern u32 data_ov00_020eec9c[];
+extern u32 *data_ov014_021589d8;
+extern u32 data_ov000_020e9370[];
+extern u32 data_ov000_020eec9c[];
 extern u32 **data_027e0fe0[];
 
 ActorType ActorRupee::gType = ActorType(ActorTypeId_Rupee, (ActorCreateFunc) ActorRupee::Create, NULL);
 
 #pragma section force_data begin
-ActorType_UnkClass data_ov14_021589f4 = ActorType_UnkClass(0x3bb, 0xeeb);
+ActorType_UnkClass data_ov014_021589f4 = ActorType_UnkClass(FLOAT_TO_Q21(0.4662), FLOAT_TO_Q19(0.4661));
 #pragma section force_data end
 
 ActorRupee *ActorRupee::Create() {
@@ -44,7 +43,7 @@ bool ActorRupee::vfunc_08() {
 
     mRupeeId = mUnk_020.mUnk_00[0];
 
-    dVar5 = func_ov14_0213b70c(mRupeeId) ? *data_ov14_021589d8 : FLOAT_TO_Q20(0.666);
+    dVar5 = func_ov14_0213b70c(mRupeeId) ? *data_ov014_021589d8 : FLOAT_TO_Q20(0.666);
     iVar7 = (s32) dVar5 >> 1;
 
     mHitbox.pos.x      = 0;
@@ -105,7 +104,7 @@ void ActorRupee::Move() {
     s32 size;
 
     ApplyGravity();
-    func_01ff9bc4(&mPos, &mVel, &mPos); // Vec3p::Add()
+    Vec3p_Add(&mPos, &mVel, &mPos); // Vec3p::Add()
     mUnk_09c.mUnk_3 = 1;
     size = mMaxFall = mUnk_08c.size - 1;
 
@@ -164,7 +163,6 @@ void ActorRupee::func_ov14_0213b204(unk32 param1) {
     mUnk_130      = param1;
 }
 
-extern "C" void _ZN11ItemManager10GiveRupeesEsb(ItemManager *implicit, u16 amount, unk32 param2);
 void ActorRupee::Update(bool param1) {
     ItemId cutsceneItemId;
     s32 uVar3;
@@ -185,9 +183,9 @@ void ActorRupee::Update(bool param1) {
                 func_ov14_0213b204(3);
             }
         } else {
-            ItemManager *pItem = gItemManager;
-            rupeeValue         = GetRupeeValue(mRupeeId);
-            pItem->GiveRupees(rupeeValue, false); // giverupees
+            ItemManager *pItemMgr = gItemManager;
+            rupeeValue            = GetRupeeValue(mRupeeId);
+            pItemMgr->GiveRupees(rupeeValue, false);
             uVar3 = -1;
 
             switch (mRupeeId) {
@@ -197,7 +195,7 @@ void ActorRupee::Update(bool param1) {
                 default: break;
             }
 
-            func_ov00_020d7ad4(data_ov00_020eec9c, uVar3);
+            func_ov000_020d7ad4(data_ov000_020eec9c, uVar3);
             Kill();
         }
     }
@@ -265,14 +263,14 @@ void ActorRupee::vfunc_14(u32 param1) {
     if (func_ov00_020c313c(param1)) {
         Update(false);
     }
-    func_ov00_0207a1c8(&mUnk_0a4.mUnk_00, param1, &mPos);
+    func_ov000_0207a1c8(&mUnk_0a4.mUnk_00, param1, &mPos);
 }
 
 void ActorRupee::vfunc_18(u32 param1) {
     if (func_ov00_020c313c(param1)) {
         Update(true);
     }
-    func_ov00_0207a1c8(&mUnk_0a4.mUnk_00, param1, &mPos);
+    func_ov000_0207a1c8(&mUnk_0a4.mUnk_00, param1, &mPos);
 }
 
 #define VFUNC20_COND (param1 ? mUnk_0a4.mUnk_01 : mUnk_0a4.mUnk_00)
@@ -284,7 +282,7 @@ void ActorRupee::vfunc_20(bool param1) {
 
 void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, bool param4) {
     Actor_UnkStruct_012 unk_class;
-    static const u32 data_ov14_02153e28[] = {
+    static const u32 data_ov014_02153e28[] = {
         // sRupeePalettes
         0x9, // RupeeId_Green
         0xA, // RupeeId_Blue
@@ -297,11 +295,11 @@ void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, boo
     };
 
     func_ov14_0213b6a4(id, &unk_class);
-    func_0202bc38(param2, param3, data_ov14_02153e28[id], &unk_class, 0);
+    func_0202bc38(param2, param3, data_ov014_02153e28[id], &unk_class, 0);
 
     if (param4) {
         u32 var = func_ov14_0213b70c(id) ? 0x4cd : 0x400;
-        func_ov05_02102c2c(&data_ov00_020e9370[0], 0, param3, var, var, 0, 0x1f, 0, 1, 1);
+        func_ov005_02102c2c(&data_ov000_020e9370[0], 0, param3, var, var, 0, 0x1f, 0, 1, 1);
     }
 }
 
@@ -311,13 +309,13 @@ void ActorRupee::func_ov14_0213b6a4(RupeeId id, Actor_UnkStruct_012 *param2) {
     if (func_ov14_0213b70c(id)) {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;
-        param2->mUnk_14 = data_ov14_021589f4.unk_00;
-        param2->mUnk_18 = data_ov14_021589f4.unk_04;
+        param2->mUnk_14 = data_ov014_021589f4.unk_00;
+        param2->mUnk_18 = data_ov014_021589f4.unk_04;
     } else {
         param2->mUnk_08 = 2;
         param2->mUnk_0c = 2;
-        param2->mUnk_14 = 0x2aa;
-        param2->mUnk_18 = 0xaa8;
+        param2->mUnk_14 = FLOAT_TO_Q21(0.333);
+        param2->mUnk_18 = FLOAT_TO_Q19(0.333);
     }
 }
 

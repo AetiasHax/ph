@@ -839,7 +839,7 @@ ARM s32 ItemManager::GetMaxRupees() const {
 extern void *data_027e103c;
 extern "C" s32 func_ov00_020cf374(void *param1, bool param2);
 extern "C" void func_ov05_02104004(void *param1);
-ARM void ItemManager::GiveRupees(s16 amount, bool param2) {
+ARM void ItemManager::GiveRupees(s32 amount, bool param2) {
     s32 newRupees = mNumRupees + amount;
     if (newRupees > this->GetMaxRupees()) {
         newRupees = this->GetMaxRupees();
