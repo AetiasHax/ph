@@ -1,6 +1,7 @@
 #include "Actor/ActorRupee.hpp"
 #include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
+#include "System/Random.hpp"
 
 // char* data_ov14_021589b4 = *data_ov14_02158994;
 
@@ -23,7 +24,7 @@ extern "C" {
 
     u32 data_ov14_021589b4;
     u32 data_ov14_021589d4;
-    u32 data_ov14_021589d8;
+    u32 *data_ov14_021589d8;
 }
 
 /* inline */ char *data_ov14_02158994[8] = {"brg", "fnl", "pdl", "dco", "can", "hul", "bow", "anc"}; // gShipParts
@@ -46,13 +47,13 @@ ActorRupee *ActorRupee::Create() {
     return newRupee;
 }
 
-extern "C" asm ActorRupee *_ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
-    _ZN5ActorC2Ev(thisx);
-    _ZTV10ActorRupee = thisx;
-    thisx->mRupeeId  = 8;
-    thisx->mUnk_15c  = 0;
-    return thisx;
-}
+// extern "C" asm ActorRupee *_ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
+//     _ZN5ActorC2Ev(thisx);
+//     _ZTV10ActorRupee = thisx;
+//     thisx->mRupeeId  = 8;
+//     thisx->mUnk_15c  = 0;
+//     return thisx;
+// }
 
 // ActorRupee::ActorRupee() {
 //     mRupeeId = 8;
@@ -60,6 +61,7 @@ extern "C" asm ActorRupee *_ZN10ActorRupeeC1Ev(ActorRupee *thisx) {
 // }
 
 // https://decomp.me/scratch/1qjCc
+#define FP_1(n) (u64)((n) << 0x800)
 extern "C" void _ZN10ActorRupee18func_ov14_0213b204Ei();
 extern "C" void _ZN10ActorRupee18func_ov14_0213b70cEj();
 extern "C" void _ZN10ActorRupee8vfunc_14Ei();
@@ -67,22 +69,13 @@ extern "C" void _ZN10ActorRupee8vfunc_18Ej();
 extern "C" void _ZN10ActorRupee8vfunc_20Ei();
 extern "C" void _ZN10ActorRupee8vfunc_60Ev();
 extern "C" void _ZN10ActorRupee8vfunc_64Ev();
-extern "C" u32 data_027e0764[];
 bool ActorRupee::vfunc_08() {
-    u32 *puVar2; // undefined
-    u32 uVar4;
     u32 dVar5;
-    u32 uVar6;
     u32 iVar7;
-    u32 uVar8;
-    u32 uVar9;
-    u32 uVar10;
-    u32 uVar11;
-    u32 iVar12;
 
     mRupeeId = mUnk_020.mUnk_00[0];
 
-    dVar5 = func_ov14_0213b70c(mRupeeId) ? data_ov14_021589d8[0] : FLOAT_TO_Q20(0.666);
+    dVar5 = func_ov14_0213b70c(mRupeeId) ? *data_ov14_021589d8 : FLOAT_TO_Q20(0.666);
     iVar7 = (s32) dVar5 >> 1;
 
     mHitbox.pos.x      = 0;
@@ -99,8 +92,6 @@ bool ActorRupee::vfunc_08() {
     mUnk_09c.mUnk_3 = 1;
     mMaxFall        = mUnk_08c.size - 1;
 
-    puVar2 = data_027e0764;
-
     if (mUnk_03c >= 0) {
         func_ov14_0213b204(1);
     } else {
@@ -112,42 +103,14 @@ bool ActorRupee::vfunc_08() {
                 func_ov14_0213b204(0);
                 break;
             case 1:
-                uVar8 = PTR_DWORD_overlay_d_14__0213b108[8];
-                uVar4 = PTR_DWORD_overlay_d_14__0213b108[uVar8];
+                q20 x = gRandom->Next(FLOAT_TO_Q20(0.1335));
+                q20 y = gRandom->Next(FLOAT_TO_Q20(0.2));
+                q20 z = gRandom->Next(FLOAT_TO_Q20(0.1335));
 
-                uVar9  = PTR_DWORD_overlay_d_14__0213b108[16];
-                iVar7  = PTR_DWORD_overlay_d_14__0213b108[12];
-                uVar11 = uVar9 + uVar4;
+                mVel.x = x - FLOAT_TO_Q20(0.0666);
+                mVel.y = y + FLOAT_TO_Q20(0.3333);
+                mVel.z = z - FLOAT_TO_Q20(0.0666);
 
-                iVar12 = PTR_DWORD_overlay_d_14__0213b108[20];
-                uVar6  = (u64) uVar11 * (u64) uVar8;
-                uVar10 = (iVar12 + (iVar7 * PTR_DWORD_overlay_d_14__0213b108[0]) +
-                          (uVar8 * PTR_DWORD_overlay_d_14__0213b108[4]) + ((uVar4) >> 0x20)
-                   // + CARRY4(uVar9, uVar4)
-                );
-
-                uVar4                               = uVar9 + uVar6;
-                PTR_DWORD_overlay_d_14__0213b108[0] = uVar11;
-                puVar2[4]                           = uVar10;
-
-                puVar2[0] = uVar4;
-                uVar6     = (iVar12 + (iVar7 * uVar11) + (uVar8 * uVar10) + ((u64) uVar11 * (FP_1(uVar8) >> 0x20))
-                   // + CARRY4(uVar9, uVar6)
-                );
-                uVar11    = uVar4 * uVar8;
-
-                PTR_DWORD_overlay_d_14__0213b108[4] = uVar6;
-                puVar2                              = PTR_DWORD_overlay_d_14__0213b108;
-                uVar4 = (iVar12 + (iVar7 * uVar4) + (uVar8 * uVar6) + ((u64) uVar4 * (FP_1(uVar8) >> 0x20))
-                   // + CARRY4(uVar9, uVar11)
-                );
-
-                PTR_DWORD_overlay_d_14__0213b108[0] = uVar9 + uVar11;
-                puVar2[4]                           = uVar4;
-
-                mVel.x = (s32) ((u64) uVar4 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
-                mVel.y = (s32) ((u64) uVar6 * FLOAT_TO_Q20(0.2) >> 0x20) + FLOAT_TO_Q20(0.3333);
-                mVel.z = (s32) ((u64) uVar10 * FLOAT_TO_Q20(0.1335) >> 0x20) - FLOAT_TO_Q20(0.0666);
                 func_ov14_0213b204(0);
                 break;
             case 2:
@@ -177,14 +140,14 @@ void ActorRupee::Move() {
     mUnk_09c.mUnk_3 = 1;
     size = mMaxFall = mUnk_08c.size - 1;
 
-    size += mUnk_018;
+    size += mUnk_014.y;
     if (size < mPos.y) {
         mUnk_09c.mUnk_0 = 0x49;
     } else {
         mUnk_09c.mUnk_0 = 0xcb;
     }
 
-    if (func_01fffd04(this, 0)) {
+    if (this->func_01fffd04(0)) {
         mVel.x = 0;
         mVel.z = 0;
     }
@@ -353,7 +316,7 @@ void ActorRupee::vfunc_20(bool param1) {
 void ActorRupee::func_ov14_0213b5f4(RupeeId id, unk32 param2, Vec3p *param3, bool param4) {
     Actor_UnkStruct_012 unk_class;
     static const u32 data_ov14_02153e28[] = {
- // sRupeePalettes
+        // sRupeePalettes
         0x9, // RupeeId_Green
         0xA, // RupeeId_Blue
         0x8, // RupeeId_Red

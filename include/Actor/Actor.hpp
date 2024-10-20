@@ -26,6 +26,8 @@ struct Actor_UnkStruct_012 {
     /* 14 */ u32 mUnk_14;
     /* 18 */ u32 mUnk_18;
     /* 1c */
+
+    Actor_UnkStruct_012();
 };
 
 struct Actor_UnkStruct_020 {
