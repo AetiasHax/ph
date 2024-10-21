@@ -7,4 +7,4 @@ typedef struct DestructorChain {
     /* c */
 } DestructorChain;
 
-void* __register_global_object(void *object, void *destructor, DestructorChain *link);
+void *__register_global_object(void *object, void *destructor, DestructorChain *link);

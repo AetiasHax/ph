@@ -3,10 +3,10 @@
 #include "global.h"
 #include "types.h"
 
+#include "Item/Item.hpp"
+#include "Player/EquipBombchu.hpp"
 #include "Player/LinkStateBase.hpp"
 #include "Player/LinkStateMove.hpp"
-#include "Player/EquipBombchu.hpp"
-#include "Item/Item.hpp"
 
 class LinkStateItem : public LinkStateBase {
 public:
@@ -47,7 +47,7 @@ public:
     /* 44 */
 
     s32 IsHammerEquipped(); // returns 0 if hammer is equipped, otherwise -1
-    EquipBombchu* GetEquipBombchu();
-    LinkStateMove* GetLinkStateMove();
+    EquipBombchu *GetEquipBombchu();
+    LinkStateMove *GetLinkStateMove();
     bool func_ov00_020abf70();
 };

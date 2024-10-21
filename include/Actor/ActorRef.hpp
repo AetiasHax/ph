@@ -9,13 +9,12 @@ struct ActorRef {
     /* 8 */
 
     inline ActorRef() {}
-    inline ActorRef(s32 id, s32 index):
+    inline ActorRef(s32 id, s32 index) :
         id(id),
-        index(index)
-    {}
+        index(index) {}
 
     inline void Reset() {
-        id = -1;
+        id    = -1;
         index = -1;
     }
 };

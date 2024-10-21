@@ -1,7 +1,7 @@
 #pragma once
 
-#include "types.h"
 #include "global.h"
+#include "types.h"
 
 #include "Item/Item.hpp"
 #include "Physics/Cylinder.hpp"

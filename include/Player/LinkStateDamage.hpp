@@ -1,9 +1,8 @@
 #pragma once
 
 #include "global.h"
-#include "types.h"
-
 #include "lib/math.h"
+#include "types.h"
 
 #include "Player/LinkStateBase.hpp"
 #include "Render/ModelRender.hpp"

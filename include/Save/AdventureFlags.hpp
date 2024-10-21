@@ -23,17 +23,17 @@ enum AdventureFlag_ {
 
     /* 0x30 */ AdventureFlag_Cannon = 48,
 
-    /* 0x7d */ AdventureFlag_Azurine = 125,
+    /* 0x7d */ AdventureFlag_Azurine    = 125,
     /* 0x7e */ AdventureFlag_Crimsonine = 126,
-    /* 0x7f */ AdventureFlag_Aquanine = 127,
-    /* 0x80 */ AdventureFlag_Unk_128 = 128,
+    /* 0x7f */ AdventureFlag_Aquanine   = 127,
+    /* 0x80 */ AdventureFlag_Unk_128    = 128,
 
     /* 0x8c */ AdventureFlag_SalvageArm = 140,
 
-    /* 0x126 */ AdventureFlag_ReceivedGoldenChimney = 294,
+    /* 0x126 */ AdventureFlag_ReceivedGoldenChimney  = 294,
     /* 0x127 */ AdventureFlag_ReceivedGoldenHandrail = 295,
-    /* 0x128 */ AdventureFlag_ReceivedGoldenCannon = 296,
-    /* 0x129 */ AdventureFlag_ReceivedGoldenHull = 297,
+    /* 0x128 */ AdventureFlag_ReceivedGoldenCannon   = 296,
+    /* 0x129 */ AdventureFlag_ReceivedGoldenHull     = 297,
 
     /* 0x187 */ AdventureFlag_COUNT = 391,
 };
@@ -110,14 +110,14 @@ public:
     static unk32 Get_FlagsUnk_30(int index);
     static bool Get_FlagsUnk_00(int index, FlagsUnk2 *result);
     bool Get_FlagsUnk_18(int index, FlagsUnk2 *result);
-    FlagsUnk* Get_FlagsUnk(int index);
+    FlagsUnk *Get_FlagsUnk(int index);
     bool func_ov00_02097e6c();
     bool func_ov00_02097e7c();
     bool func_ov00_02097ea4();
     static unk32 func_ov00_02097ecc();
-    void* func_ov00_02097f8c();
-    void* func_ov00_02097fac();
-    void* func_ov00_02097fd0();
+    void *func_ov00_02097f8c();
+    void *func_ov00_02097fac();
+    void *func_ov00_02097fd0();
     void func_ov00_02097ff4(bool param1, bool param2);
     unk32 func_ov00_02098058();
     bool func_ov00_02098064(unk32 param1);

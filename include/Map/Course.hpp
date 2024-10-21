@@ -12,11 +12,11 @@
 
 typedef unk32 CourseType;
 enum CourseType_ {
-    CourseType_Normal = 0,
-    CourseType_Dungeon = 1,
-    CourseType_Sea = 2,
+    CourseType_Normal               = 0,
+    CourseType_Dungeon              = 1,
+    CourseType_Sea                  = 2,
     CourseType_TempleOfTheOceanKing = 3,
-    CourseType_Battle = 4,
+    CourseType_Battle               = 4,
 };
 
 struct CourseProgress {
@@ -64,12 +64,12 @@ class Course : public SysObject {
 
     void GetDungeonProgress(CourseProgress *param_2);
     void func_ov00_0207ca28(s32 param_2, unk32 param_3, unk32 param_4);
-    char* SetCourseName(char *src);
+    char *SetCourseName(char *src);
     void func_ov00_0207ca78(unk32 param_2, unk8 param_3, unk32 param_4);
     bool func_ov00_0207caa8(s32 param_2, unk32 *param_3, unk8 *param_4);
     unk32 func_ov00_0207cb30(s32 param_2);
     static void FindMapGridPos(Vec2b *pos, Course *param_2, u32 map);
-    Vec3p* FindMapCenter(unk32 map);
+    Vec3p *FindMapCenter(unk32 map);
     void func_ov00_0207cbe8(s32 param_2);
     unk8 func_ov00_0207cc24(s32 param_2);
     unk32 FindMapData_Unk_08(unk32 map);
@@ -109,6 +109,6 @@ class Course : public SysObject {
     bool GetMapDataFlag3(unk32 param_2);
     void SetMapDataFlag4(unk32 param_2, unk32 param_3);
     bool GetMapDataFlag4(unk32 param_2);
-    MapData* FindMapData(u32 map);
-    MapData* FindCurrentMapData();
+    MapData *FindMapData(u32 map);
+    MapData *FindCurrentMapData();
 };

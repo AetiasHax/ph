@@ -1,26 +1,25 @@
 #pragma once
 
 #include "global.h"
+#include "lib/math.h"
 #include "types.h"
 
-#include "lib/math.h"
-
-#include "System/SysNew.hpp"
-#include "Player/PlayerLinkBase.hpp"
-#include "Player/PlayerControlData.hpp"
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
-#include "Player/EquipItem.hpp"
 #include "Debug/DebugHierarchy.hpp"
+#include "Player/EquipItem.hpp"
+#include "Player/PlayerControlData.hpp"
+#include "Player/PlayerLinkBase.hpp"
+#include "System/SysNew.hpp"
 
 typedef unk32 LinkStateId;
 enum LinkStateId_ {
-    LinkStateId_Move = 0,
-    LinkStateId_Item = 1,
-    LinkStateId_Grab = 2,
-    LinkStateId_Unk3 = 3,
-    LinkStateId_Unk4 = 4,
-    LinkStateId_Damage = 5,
+    LinkStateId_Move    = 0,
+    LinkStateId_Item    = 1,
+    LinkStateId_Grab    = 2,
+    LinkStateId_Unk3    = 3,
+    LinkStateId_Unk4    = 4,
+    LinkStateId_Damage  = 5,
     LinkStateId_ItemGet = 6,
     LinkStateId_COUNT
 };
@@ -59,7 +58,7 @@ public:
     void EquipItem_vfunc_28();
     void UpdateSwordShieldInUse();
     void func_ov00_020a81b8(unk32 param1, unk32 param2);
-    LinkStateItem* GetLinkItemState();
+    LinkStateItem *GetLinkItemState();
     void LookAt(Vec3p *target);
     void func_ov00_020a81fc();
     void AddHealth(s16 amount);
@@ -102,30 +101,30 @@ public:
     unk8 Get_PlayerLinkBase_Unk5e();
     unk32 Get_PlayerControlData_Unk004();
     PlayerCharacter GetCurrentCharacter();
-    PlayerControlData* GetPlayerControlData();
+    PlayerControlData *GetPlayerControlData();
     LinkStateId GetStateId();
     s32 GetHealth();
     s32 GetCurrentCharacterHealth();
     bool func_ov00_020a8c34();
-    Vec3p* GetPlayerPos();
-    Vec3p* GetPlayerVel();
-    unk8* func_ov00_020a8c64();
-    s16* GetPlayerAngle();
-    void* GetPlayer_Unk18();
+    Vec3p *GetPlayerPos();
+    Vec3p *GetPlayerVel();
+    unk8 *func_ov00_020a8c64();
+    s16 *GetPlayerAngle();
+    void *GetPlayer_Unk18();
     s32 Get_PlayerControlData_Unk32();
-    Actor* GetGrabActor();
-    ActorRef* GetGrabActorRef();
+    Actor *GetGrabActor();
+    ActorRef *GetGrabActorRef();
     unk32 Grab();
     s32 Get_PlayerLinkBase_Unk44();
     bool IsEquipBeingUsed(ItemFlag id);
-    EquipItem* GetEquipItem(ItemFlag id);
-    void* func_ov00_020a8d40();
+    EquipItem *GetEquipItem(ItemFlag id);
+    void *func_ov00_020a8d40();
     unk32 func_ov00_020a8d50();
     unk32 func_ov00_020a8d6c();
     s32 PlayerControlData_vfunc_14(s32 param1);
     unk32 Get_PlayerControlData_Unk100();
     unk32 Get_PlayerControlData_Unk120();
     s32 Get_PlayerLinkBase_Unk38();
-    DebugHierarchy* GetDebugHierarchy0();
-    DebugHierarchy* GetDebugHierarchy1();
+    DebugHierarchy *GetDebugHierarchy0();
+    DebugHierarchy *GetDebugHierarchy1();
 };

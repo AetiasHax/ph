@@ -8,10 +8,12 @@ typedef s32 q20;
 // Q4.12 fixed point number
 typedef s16 q4;
 
-#define INT_TO_Q20(n) ((s32)((n) << 12))
-#define FLOAT_TO_Q20(n) ((s32)(((n) * 8192 + 1) / 2))
-#define ROUND_Q20(n) (((s32)(n) + 0x800) >> 12)
-#define MUL_Q20(a,b) (q20)((((s64)(a)) * ((s64)(b)) + 0x800) >> 12)
+#define INT_TO_Q20(n) ((s32) ((n) << 12))
+#define FLOAT_TO_Q21(n) ((s32) (((n) * 8192 + 1) / 4))
+#define FLOAT_TO_Q20(n) ((s32) (((n) * 8192 + 1) / 2))
+#define FLOAT_TO_Q19(n) ((s32) (((n) * 8192 + 1)))
+#define ROUND_Q20(n) (((s32) (n) + 0x800) >> 12)
+#define MUL_Q20(a, b) (q20)((((s64) (a)) * ((s64) (b)) + 0x800) >> 12)
 
 #define DEG_TO_ANG(n) ((n) * 0x10000 / 360)
 #define SIN(n) (gSinCosTable[2 * ((n) >> 4)])
@@ -60,6 +62,7 @@ inline void Vec3p_Rotate(Vec3p *vec, q20 sin, q20 cos, Vec3p *out) {
 inline void Vec3p_CopyXZ(Vec3p *vec, Vec3p *out) {
     q20 z = vec->z;
     q20 x = vec->x;
+
     out->x = x;
     out->y = 0;
     out->z = z;
