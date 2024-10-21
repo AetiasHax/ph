@@ -8,4 +8,6 @@
 struct AABB {
     Vec3p min;
     Vec3p max;
+
+    bool ContainsInXZ(Vec3p *vec);
 };

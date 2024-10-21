@@ -21,13 +21,13 @@ class FilterActor : public FilterActorBase {
     /* 04 */ u32 mType;
     /* 08 */ s32 mUnk_08;
     /* 0c */ s32 mUnk_0c;
-    /* 10 */ s32 *mExcludeIds; // list of excluded actor ids, terminated by -1
+    /* 10 */ ActorRef *mExcludeRefs; // list of excluded actor ids, terminated by -1
     /* 14 */ bool mExcludeNotInAABB;
     /* 15 */ unk8 mUnk_15[3];
     /* 18 */ AABB mAABB;
     /* 30 */ bool mExcludeNotInSphere;
     /* 31 */ unk8 mUnk_1a[3];
-    /* 34 */ Sphere sphere;
+    /* 34 */ Sphere mSphere;
     /* 44 */
 
     /* 0 */ virtual bool Filter(Actor *actor) override;
@@ -78,21 +78,21 @@ public:
     /* c4 */
 
     void DeleteActor(u32 index, bool param2);
-    static void func_ov00_020c3484(ActorRef *ref, Actor *actor, unk32 param3);
+    static void func_ov00_020c3484(ActorRef *ref, ActorManager *actorMgr, unk32 param3);
     void Actor_vfunc_10(u32 param1);
     Actor *FindActorById(s32 id);
     Actor *GetActor(ActorRef *ref);
     s32 FilterActors(FilterActorBase *filter, ActorList *filteredActors);
-    static void FindActorByType(ActorRef *ref, ActorManager *manager, ActorTypeId type);
-    static void FindNearestActorOfType(ActorRef *ref, ActorManager *manager, ActorTypeId type, Vec3p *pos);
+    static void FindActorByType(ActorRef *ref, ActorManager *actorMgr, ActorTypeId type);
+    static void FindNearestActorOfType(ActorRef *ref, ActorManager *actorMgr, ActorTypeId type, Vec3p *pos);
     bool func_ov00_020c398c(u32 index);
     void func_ov00_020c399c(u32 index, Cylinder *cylinder);
-    Actor *func_ov00_020c39ac(u32 index, const ActorTypeId *actorTypes, bool param3);
+    Actor *func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, bool param3);
     s32 func_ov00_020c3b2c(s32 *param1);
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);
     void func_ov00_020c3ce8(unk32 param1, unk32 param2);
     void Actor_vfunc_28();
-    static bool ActorTypeIsOneOf(char *type, char **types);
+    static bool ActorTypeIsOneOf(ActorTypeId type, ActorTypeId *types);
 };
 
 extern ActorManager *gActorManager;

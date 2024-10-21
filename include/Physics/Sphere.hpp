@@ -8,4 +8,6 @@
 struct Sphere {
     Vec3p pos;
     int radius;
+
+    bool ContainsInXZ(Vec3p *vec);
 };
