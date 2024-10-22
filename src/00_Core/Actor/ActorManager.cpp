@@ -1,5 +1,6 @@
 #include "Actor/ActorManager.hpp"
 #include "DTCM/UnkStruct_027e103c.hpp"
+#include "Map/MapManager.hpp"
 
 char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
@@ -250,28 +251,30 @@ ARM Actor *ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, 
     Actor *actor  = mActorTable[index];
     Actor *result = NULL;
     if (actor != NULL && actor->mAlive) {
-        if (actorTypes != NULL || mMaxActorIndex > 0) {
-            for (s16 i = 0; i < mMaxActorIndex; ++i) {
+        if (mMaxActorIndex > 0) {
+            for (u16 i = 0; i < mMaxActorIndex; ++i) {
                 if (i != index) {
                     Actor *otherActor = mActorTable[i];
                     if (otherActor != NULL && func_ov000_020c3f08(mUnk_14, i)) {
                         if ((actorTypes == NULL && !param3) ||
-                            (this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes) != param3))
+                            (param3 != this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes)))
                         {
-                            Cylinder oldHitbox = otherActor->mHitbox;
-                            // q20 x              = otherActor->mHitbox.pos.x;
-                            // q20 y              = otherActor->mHitbox.pos.y;
-                            // q20 z              = otherActor->mHitbox.pos.z;
-                            // q20 size           = otherActor->mHitbox.size;
+                            Cylinder oldHitbox  = mActorTable[i]->mHitbox;
                             Cylinder *newHitbox = func_ov000_020c3ef0(mUnk_14, i);
 
-                            otherActor->mHitbox = *newHitbox;
-                            if (otherActor->CollidesWith(actor)) result = otherActor;
-                            otherActor->mHitbox = oldHitbox;
-                            // otherActor->mHitbox.pos.x = x;
-                            // otherActor->mHitbox.pos.y = y;
-                            // otherActor->mHitbox.pos.z = z;
-                            // otherActor->mHitbox.size = size;
+                            Actor *otherActor2         = mActorTable[i];
+                            otherActor2->mHitbox.pos.x = newHitbox->pos.x;
+                            otherActor2->mHitbox.pos.y = newHitbox->pos.y;
+                            otherActor2->mHitbox.pos.z = newHitbox->pos.z;
+                            otherActor2->mHitbox.size  = newHitbox->size;
+                            if (mActorTable[i]->CollidesWith(actor)) {
+                                result = mActorTable[i];
+                            }
+
+                            otherActor->mHitbox.pos.x = oldHitbox.pos.x;
+                            otherActor->mHitbox.pos.y = oldHitbox.pos.y;
+                            otherActor->mHitbox.pos.z = oldHitbox.pos.z;
+                            otherActor->mHitbox.size  = oldHitbox.size;
 
                             if (result != NULL) return result;
                         }
@@ -284,9 +287,89 @@ ARM Actor *ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, 
     return result;
 }
 
-ARM s32 ActorManager::func_ov00_020c3b2c(s32 *param1) {}
-ARM s32 ActorManager::func_ov00_020c3bb0(unk32 param1, s32 *param2) {}
-ARM void ActorManager::func_ov00_020c3ce8(unk32 param1, unk32 param2) {}
+ARM s32 ActorManager::func_ov00_020c3b2c(s32 *param1) {
+    if (param1 != NULL) *param1 = 0;
+
+    s32 i;
+    s32 numAlive = 0;
+
+    Actor **actorIter = mActorTable;
+
+    for (i = 0; i < mMaxActorIndex; ++i, ++actorIter) {
+        Actor *actor = *actorIter;
+        if (actor != NULL && actor->mAlive && actor->mUnk_128) {
+            if (param1 != NULL && actor->mUnk_120 > 0) {
+                *param1 += 1;
+            }
+            numAlive += 1;
+        }
+    }
+
+    return numAlive;
+}
+
+ARM s32 ActorManager::func_ov00_020c3bb0(unk32 param1, s32 *param2) {
+    if (param2 != NULL) *param2 = 0;
+
+    AABB boxes[8];
+    s32 numBoxes = gMapManager->GetTriggerBoundingBoxes(param1, boxes, ARRAY_LEN(boxes));
+    if (numBoxes <= 0) return 0;
+
+    s32 i;
+    s32 numInBox = 0;
+    bool isInBox;
+
+    Actor **actorIter = mActorTable;
+    for (i = 0; i < mMaxActorIndex; ++i, ++actorIter) {
+        Actor *actor = *actorIter;
+        if (actor != NULL && actor->mAlive && actor->mUnk_128) {
+            isInBox = false;
+            for (s32 j = 0; j < numBoxes; ++j) {
+                Actor *actor2 = *actorIter;
+                Vec3p pos;
+                pos.x = actor2->mPos.x;
+                pos.y = actor2->mPos.y;
+                pos.z = actor2->mPos.z;
+                if (boxes[j].ContainsInXZ(&pos)) {
+                    isInBox = true;
+                    break;
+                }
+            }
+            if (isInBox) {
+                if (param2 != NULL && (*actorIter)->mUnk_120 > 0) {
+                    *param2 += 1;
+                }
+                numInBox += 1;
+            }
+        }
+    }
+
+    return numInBox;
+}
+
+ARM void ActorManager::func_ov00_020c3ce8(unk32 param1, bool param2) {
+    AABB boxes[8];
+    s32 numBoxes = gMapManager->GetTriggerBoundingBoxes(param1, boxes, ARRAY_LEN(boxes));
+    if (numBoxes <= 0) return;
+
+    s32 i;
+    Actor **actorIter = mActorTable;
+    for (i = 0; i < mMaxActorIndex; ++i, ++actorIter) {
+        Actor *actor = *actorIter;
+        if (actor != NULL && actor->mAlive && actor->mUnk_128) {
+            for (s32 j = 0; j < numBoxes; ++j) {
+                Actor *actor2 = *actorIter;
+                Vec3p pos;
+                pos.x = actor2->mPos.x;
+                pos.y = actor2->mPos.y;
+                pos.z = actor2->mPos.z;
+                if (boxes[j].Contains(&pos)) {
+                    (*actorIter)->SetUnk_129(param2);
+                }
+            }
+        }
+    }
+}
 
 ARM void ActorManager::Actor_vfunc_28() {
     int i;

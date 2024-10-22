@@ -90,7 +90,7 @@ public:
     Actor *func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, bool param3);
     s32 func_ov00_020c3b2c(s32 *param1);
     s32 func_ov00_020c3bb0(unk32 param1, s32 *param2);
-    void func_ov00_020c3ce8(unk32 param1, unk32 param2);
+    void func_ov00_020c3ce8(unk32 param1, bool param2);
     void Actor_vfunc_28();
     static bool ActorTypeIsOneOf(ActorTypeId type, ActorTypeId *types);
 };
