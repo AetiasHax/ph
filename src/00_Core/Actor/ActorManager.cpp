@@ -50,8 +50,8 @@ ARM void ActorManager::func_ov00_020c3484(ActorRef *ref, ActorManager *actorMgr,
     ref->Reset();
     if (data_027e103c->mUnk_24 == 0) return;
 
-    Actor **actorIter     = actorMgr->mActorTable;
     q20 minDistance       = 0x7fffffff;
+    Actor **actorIter     = actorMgr->mActorTable;
     u8 unkByte            = data_02056be4[data_027e077c];
     bool unk1             = (unkByte & 1) != 0;
     Actor **actorTableEnd = actorIter + actorMgr->mMaxActorIndex;
@@ -60,11 +60,11 @@ ARM void ActorManager::func_ov00_020c3484(ActorRef *ref, ActorManager *actorMgr,
         Actor *actor = *actorIter;
         if (actor != NULL && actor->mAlive) {
             if (actor->func_ov00_020c27a8(param3)) {
-                if (actor->mUnk_0a4.mUnk_00 || unk1) {
-                    if (actor->IsHitboxTouched(false)) {
-                        q20 distance = actor->DistanceToLink();
+                if ((*actorIter)->mUnk_0a4.mUnk_00 || unk1) {
+                    if ((*actorIter)->IsHitboxTouched(false)) {
+                        q20 distance = (*actorIter)->DistanceToLink();
                         if (distance < minDistance) {
-                            *ref        = actor->mRef;
+                            *ref        = (*actorIter)->mRef;
                             minDistance = distance;
                         }
                     }
@@ -158,7 +158,8 @@ ARM bool FilterActor::Filter(Actor *actor) {
     if (mUnk_08 != -1 && mUnk_08 != actor->mUnk_034) return false;
     if (mExcludeRefs != NULL) {
         for (s32 i = 0; mExcludeRefs[i].id != -1; ++i) {
-            if (mExcludeRefs[i].id == actor->mRef.id) return false;
+            volatile Actor *actor2 = actor;
+            if (mExcludeRefs[i].id == actor2->mRef.id) return false;
         }
     }
     if (mExcludeNotInAABB) {
@@ -251,33 +252,31 @@ ARM Actor *ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, 
     Actor *actor  = mActorTable[index];
     Actor *result = NULL;
     if (actor != NULL && actor->mAlive) {
-        if (mMaxActorIndex > 0) {
-            for (u16 i = 0; i < mMaxActorIndex; ++i) {
-                if (i != index) {
-                    Actor *otherActor = mActorTable[i];
-                    if (otherActor != NULL && func_ov000_020c3f08(mUnk_14, i)) {
-                        if ((actorTypes == NULL && !param3) ||
-                            (param3 != this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes)))
-                        {
-                            Cylinder oldHitbox  = mActorTable[i]->mHitbox;
-                            Cylinder *newHitbox = func_ov000_020c3ef0(mUnk_14, i);
+        for (u16 i = 0; i < mMaxActorIndex; ++i) {
+            if (i != index) {
+                Actor *otherActor = mActorTable[i];
+                if (otherActor != NULL && func_ov000_020c3f08(mUnk_14, i)) {
+                    if ((actorTypes != NULL && !param3) &&
+                        (param3 != this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes)))
+                    {
+                        Cylinder oldHitbox  = mActorTable[i]->mHitbox;
+                        Cylinder *newHitbox = func_ov000_020c3ef0(mUnk_14, i);
 
-                            Actor *otherActor2         = mActorTable[i];
-                            otherActor2->mHitbox.pos.x = newHitbox->pos.x;
-                            otherActor2->mHitbox.pos.y = newHitbox->pos.y;
-                            otherActor2->mHitbox.pos.z = newHitbox->pos.z;
-                            otherActor2->mHitbox.size  = newHitbox->size;
-                            if (mActorTable[i]->CollidesWith(actor)) {
-                                result = mActorTable[i];
-                            }
-
-                            otherActor->mHitbox.pos.x = oldHitbox.pos.x;
-                            otherActor->mHitbox.pos.y = oldHitbox.pos.y;
-                            otherActor->mHitbox.pos.z = oldHitbox.pos.z;
-                            otherActor->mHitbox.size  = oldHitbox.size;
-
-                            if (result != NULL) return result;
+                        Actor *otherActor2         = mActorTable[i];
+                        otherActor2->mHitbox.pos.x = newHitbox->pos.x;
+                        otherActor2->mHitbox.pos.y = newHitbox->pos.y;
+                        otherActor2->mHitbox.pos.z = newHitbox->pos.z;
+                        otherActor2->mHitbox.size  = newHitbox->size;
+                        if (mActorTable[i]->CollidesWith(actor)) {
+                            result = mActorTable[i];
                         }
+
+                        otherActor->mHitbox.pos.x = oldHitbox.pos.x;
+                        otherActor->mHitbox.pos.y = oldHitbox.pos.y;
+                        otherActor->mHitbox.pos.z = oldHitbox.pos.z;
+                        otherActor->mHitbox.size  = oldHitbox.size;
+
+                        if (result != NULL) break;
                     }
                 }
             }
