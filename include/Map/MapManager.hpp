@@ -131,7 +131,7 @@ public:
     bool GetEntrancePos(Vec3p *param_2, unk32 entranceId);
     bool func_ov00_02083664(Vec3p *param_2, unk32 entranceId);
     s32 func_ov00_020836bc(u32 param_2, unk32 *param_3);
-    u32 func_ov00_020836cc(u32 param_2, AABB *param_3, u32 param_4);
+    s32 GetTriggerBoundingBoxes(u32 param_2, AABB *param_3, u32 param_4);
     unk8 func_ov00_020836dc(unk32 param_2, unk32 param_3);
     bool func_ov00_02083770(u32 param_2, unk32 param_3);
     bool func_ov00_02083780(unk32 param_2);

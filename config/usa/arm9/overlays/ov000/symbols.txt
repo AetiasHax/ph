@@ -579,7 +579,7 @@ _ZN10MapManager18func_ov00_02083614Ei kind:function(arm,size=0x10) addr:0x20835b
 _ZN10MapManager14GetEntrancePosEP5Vec3pi kind:function(arm,size=0x40) addr:0x20835c4
 _ZN10MapManager18func_ov00_02083664EP5Vec3pi kind:function(arm,size=0x58) addr:0x2083604
 _ZN10MapManager18func_ov00_020836bcEjPi kind:function(arm,size=0x10) addr:0x208365c
-_ZN10MapManager18func_ov00_020836ccEjP4AABBj kind:function(arm,size=0x10) addr:0x208366c
+_ZN10MapManager23GetTriggerBoundingBoxesEjP4AABBj kind:function(arm,size=0x10) addr:0x208366c
 _ZN10MapManager18func_ov00_020836dcEii kind:function(arm,size=0x94) addr:0x208367c
 _ZN10MapManager18func_ov00_02083770Eji kind:function(arm,size=0x10) addr:0x2083710
 _ZN10MapManager18func_ov00_02083780Ei kind:function(arm,size=0x10) addr:0x2083720
@@ -914,8 +914,8 @@ func_ov000_0208e6b0 kind:function(arm,size=0x40) addr:0x208e650
 func_ov000_0208e6f0 kind:function(arm,size=0x14) addr:0x208e690
 func_ov000_0208e704 kind:function(arm,size=0x14) addr:0x208e6a4
 func_ov000_0208e718 kind:function(arm,size=0x14) addr:0x208e6b8
-func_ov000_0208e72c kind:function(arm,size=0x78) addr:0x208e6cc
-func_ov000_0208e7a4 kind:function(arm,size=0x44) addr:0x208e744
+_ZN4AABB8ContainsEP5Vec3p kind:function(arm,size=0x78) addr:0x208e6cc
+_ZN4AABB12ContainsInXZEP5Vec3p kind:function(arm,size=0x44) addr:0x208e744
 func_ov000_0208e7e8 kind:function(arm,size=0x44) addr:0x208e788
 func_ov000_0208e82c kind:function(arm,size=0x50) addr:0x208e7cc
 func_ov000_0208e87c kind:function(arm,size=0x4f8) addr:0x208e81c
@@ -927,7 +927,7 @@ func_ov000_0208ee90 kind:function(arm,size=0x1a0) addr:0x208ee30
 func_ov000_0208f030 kind:function(arm,size=0x170) addr:0x208efd0
 func_ov000_0208f1a0 kind:function(arm,size=0xf4) addr:0x208f140
 func_ov000_0208f294 kind:function(arm,size=0x84) addr:0x208f234
-func_ov000_0208f318 kind:function(arm,size=0x5c) addr:0x208f2b8
+_ZN6Sphere12ContainsInXZEP5Vec3p kind:function(arm,size=0x5c) addr:0x208f2b8
 func_ov000_0208f374 kind:function(arm,size=0x104) addr:0x208f314
 func_ov000_0208f478 kind:function(arm,size=0x224) addr:0x208f418
 func_ov000_0208f69c kind:function(arm,size=0x38) addr:0x208f63c
@@ -2838,9 +2838,9 @@ func_ov000_020c336c kind:function(thumb,size=0x1c) addr:0x20c330c
 func_ov000_020c3388 kind:function(thumb,size=0x28) addr:0x20c3328
 func_ov000_020c33b0 kind:function(thumb,size=0x24) addr:0x20c3350
 _ZN12ActorManager11DeleteActorEjb kind:function(arm,size=0xb0) addr:0x20c3374
-_ZN12ActorManager18func_ov00_020c3484EP8ActorRefP5Actori kind:function(arm,size=0xf8) addr:0x20c3424
+_ZN12ActorManager18func_ov00_020c3484EP8ActorRefPS_i kind:function(arm,size=0xf8) addr:0x20c3424
 _ZN12ActorManager14Actor_vfunc_10Ej kind:function(arm,size=0x5c) addr:0x20c351c
-_ZN12ActorManager13FindActorByIdEj kind:function(arm,size=0x9c) addr:0x20c3578
+_ZN12ActorManager13FindActorByIdEi kind:function(arm,size=0x9c) addr:0x20c3578
 _ZN12ActorManager8GetActorEP8ActorRef kind:function(arm,size=0x40) addr:0x20c3614
 _ZN11FilterActor6FilterEP5Actor kind:function(arm,size=0x138) addr:0x20c3654
 _ZN12ActorManager12FilterActorsEP15FilterActorBaseP9ActorList kind:function(arm,size=0xa8) addr:0x20c378c
@@ -2848,12 +2848,12 @@ _ZN12ActorManager15FindActorByTypeEP8ActorRefPS_j kind:function(arm,size=0x68) a
 _ZN12ActorManager22FindNearestActorOfTypeEP8ActorRefPS_jP5Vec3p kind:function(arm,size=0x90) addr:0x20c389c
 _ZN12ActorManager18func_ov00_020c398cEj kind:function(arm,size=0x10) addr:0x20c392c
 _ZN12ActorManager18func_ov00_020c399cEjP8Cylinder kind:function(arm,size=0x10) addr:0x20c393c
-_ZN12ActorManager18func_ov00_020c39acEjPKjb kind:function(arm,size=0x180) addr:0x20c394c
+_ZN12ActorManager18func_ov00_020c39acEiPKjb kind:function(arm,size=0x180) addr:0x20c394c
 _ZN12ActorManager18func_ov00_020c3b2cEPi kind:function(arm,size=0x84) addr:0x20c3acc
 _ZN12ActorManager18func_ov00_020c3bb0EiPi kind:function(arm,size=0x138) addr:0x20c3b50
-_ZN12ActorManager18func_ov00_020c3ce8Eii kind:function(arm,size=0xe8) addr:0x20c3c88
+_ZN12ActorManager18func_ov00_020c3ce8Eib kind:function(arm,size=0xe8) addr:0x20c3c88
 _ZN12ActorManager14Actor_vfunc_28Ev kind:function(arm,size=0x4c) addr:0x20c3d70
-_ZN12ActorManager16ActorTypeIsOneOfEjPj kind:function(arm,size=0x38) addr:0x20c3dbc
+_ZN12ActorManager16ActorTypeIsOneOfEjPKj kind:function(arm,size=0x38) addr:0x20c3dbc
 func_ov000_020c3e54 kind:function(arm,size=0x8) addr:0x20c3df4
 func_ov000_020c3e5c kind:function(arm,size=0x54) addr:0x20c3dfc
 func_ov000_020c3eb0 kind:function(arm,size=0x40) addr:0x20c3e50
@@ -5078,7 +5078,7 @@ data_ov000_020e72b8 kind:data(any) addr:0x20e7258
 data_ov000_020e72bc kind:data(any) addr:0x20e725c
 data_ov000_020e72c0 kind:data(any) addr:0x20e7260
 data_ov000_020e72c4 kind:data(any) addr:0x20e7264
-_ZTV11FilterActor kind:data(any) addr:0x20e7290
+_ZTV11FilterActor kind:data(any) addr:0x20e7288
 data_ov000_020e72fc kind:data(any) addr:0x20e729c
 data_ov000_020e7300 kind:data(any) addr:0x20e72a0
 data_ov000_020e7304 kind:data(any) addr:0x20e72a4
