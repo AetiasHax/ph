@@ -302,6 +302,13 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, game_config: Path, game_bu
     )
     n.newline()
 
+    n.build(
+        inputs=str(delinks_path / "delink.yaml"),
+        rule="phony",
+        outputs="delink"
+    )
+    n.newline()
+
     lcf_file = game_build / "linker_script.lcf"
     objects_file = game_build / "objects.txt"
     n.build(
