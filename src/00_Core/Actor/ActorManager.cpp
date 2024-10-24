@@ -2,7 +2,7 @@
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Map/MapManager.hpp"
 
-char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+static char *sShipTypes[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
 extern "C" Cylinder *func_ov000_020c3ef0(void *, u32 index);
 extern "C" bool func_ov000_020c3f08(void *, u32 index);

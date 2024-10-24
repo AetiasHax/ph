@@ -5078,7 +5078,7 @@ data_ov000_020e72b8 kind:data(any) addr:0x20e72b8
 data_ov000_020e72bc kind:data(any) addr:0x20e72bc
 data_ov000_020e72c0 kind:data(any) addr:0x20e72c0
 data_ov000_020e72c4 kind:data(any) addr:0x20e72c4
-_ZTV11FilterActor kind:data(any) addr:0x20e72f0
+_ZTV11FilterActor kind:data(any) addr:0x20e72e8
 data_ov000_020e72fc kind:data(any) addr:0x20e72fc
 data_ov000_020e7300 kind:data(any) addr:0x20e7300
 data_ov000_020e7304 kind:data(any) addr:0x20e7304
