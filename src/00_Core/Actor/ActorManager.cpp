@@ -158,8 +158,9 @@ ARM bool FilterActor::Filter(Actor *actor) {
     if (mUnk_08 != -1 && mUnk_08 != actor->mUnk_034) return false;
     if (mExcludeRefs != NULL) {
         for (s32 i = 0; mExcludeRefs[i].id != -1; ++i) {
+            ActorRef *ref          = &mExcludeRefs[i];
             volatile Actor *actor2 = actor;
-            if (mExcludeRefs[i].id == actor2->mRef.id) return false;
+            if (ref->id == actor2->mRef.id) return false;
         }
     }
     if (mExcludeNotInAABB) {
@@ -246,19 +247,19 @@ ARM void ActorManager::func_ov00_020c399c(u32 index, Cylinder *cylinder) {
     func_ov000_020c3f3c(mUnk_14, index, cylinder);
 }
 
-ARM Actor *ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, bool param3) {
+ARM Actor *ActorManager::func_ov00_020c39ac(s32 index, const ActorTypeId *actorTypes, bool param3) {
     if (actorTypes == NULL && param3) return NULL;
 
     Actor *actor  = mActorTable[index];
     Actor *result = NULL;
     if (actor != NULL && actor->mAlive) {
+        u16 i;
+        bool unk1 = actorTypes == NULL && !param3 ? true : false;
         for (u16 i = 0; i < mMaxActorIndex; ++i) {
             if (i != index) {
                 Actor *otherActor = mActorTable[i];
-                if (otherActor != NULL && func_ov000_020c3f08(mUnk_14, i)) {
-                    if ((actorTypes != NULL && !param3) &&
-                        (param3 != this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes)))
-                    {
+                if (mActorTable[i] != NULL && func_ov000_020c3f08(mUnk_14, i)) {
+                    if (unk1 || (param3 != this->ActorTypeIsOneOf(mActorTable[i]->mType, actorTypes))) {
                         Cylinder oldHitbox  = mActorTable[i]->mHitbox;
                         Cylinder *newHitbox = func_ov000_020c3ef0(mUnk_14, i);
 
@@ -271,10 +272,11 @@ ARM Actor *ActorManager::func_ov00_020c39ac(u32 index, ActorTypeId *actorTypes, 
                             result = mActorTable[i];
                         }
 
-                        otherActor->mHitbox.pos.x = oldHitbox.pos.x;
-                        otherActor->mHitbox.pos.y = oldHitbox.pos.y;
-                        otherActor->mHitbox.pos.z = oldHitbox.pos.z;
-                        otherActor->mHitbox.size  = oldHitbox.size;
+                        Actor *otherActor3         = mActorTable[i];
+                        otherActor3->mHitbox.pos.x = oldHitbox.pos.x;
+                        otherActor3->mHitbox.pos.y = oldHitbox.pos.y;
+                        otherActor3->mHitbox.pos.z = oldHitbox.pos.z;
+                        otherActor3->mHitbox.size  = oldHitbox.size;
 
                         if (result != NULL) break;
                     }
@@ -384,7 +386,7 @@ ARM void ActorManager::Actor_vfunc_28() {
     }
 }
 
-ARM bool ActorManager::ActorTypeIsOneOf(ActorTypeId type, ActorTypeId *types) {
+ARM bool ActorManager::ActorTypeIsOneOf(ActorTypeId type, const ActorTypeId *types) {
     int i;
     bool found = false;
 
