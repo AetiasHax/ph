@@ -22,16 +22,17 @@ translations. Feel free to contribute to this list!
 
  ID    | Translation  | Meaning
 -------|--------------|---------
-`ITBT` | Item Bombchus | 10 Bombchus
-`ITBM` | Item Bombs | 10 Bombs
-`ITHU` | | Heart container
 `ITAP` | Item Arrow Pod | Quiver
+`ITAR` | Item Arrows | 10 Arrows
 `ITBB` | Item Bomb Bag
+`ITBM` | Item Bombs | 10 Bombs
+`ITBT` | Item Bombchus | 10 Bombchus
+`ITHU` | | Heart container
 `ITPB` | Item Potion Bottle
-`ITSR` | Item Source | Power/Wisdom/Courage gem shop item (Ç›Ç»Ç‡Ç∆ or "source" in Japanese)
 `ITSL` | Item Shield
 `ITSO` | | Sold out sign in shop
 `ITSP` | Item Ship Part
+`ITSR` | Item Source | Power/Wisdom/Courage gem shop item („Åø„Å™„ÇÇ„Å® or "source" in Japanese)
 `ITTR` | Item Treasure
 
 ### Pickups
@@ -54,20 +55,33 @@ translations. Feel free to contribute to this list!
 `BMRN` | Boomerang
 `BMTY` | Bombchu
 `BOMB` | Bomb
+`DRUM` | Drum | Storage drum on the Ghost Ship, held by Link
 `FGGN` | Fog
 `ROPE` | Rope | Grappling hook
 `PLDM` | Player Dummy | Placeholder for switching between Gongoron/Link
 `SBEM` | Sword Beam
+`STNE` | Stone | Stone held by Link
+`TARU` | Taru („Åü„Çã) | Barrel held by Link
+`TSUB` | Tsubo („Å§„Åº) | Pot held by link
 
 ### Dungeon
 
  ID    | Translation  | Meaning
 -------|--------------|---------
+`BIGR` | Big Rock
 `BKEY` | Boss Key
+`CRYS` | Crystal | Shape crystal
+`FIRB` | Fire Bar
+`FIRS` | Fire Sphere | Winder (electric balls following each other, used to be fire balls in older games)
+`FORC` | Force Gem
+`NKEY` | ??? Key | Small key or ghost key
+`NTRP` | Needle Trap | Blade Trap
+`PFLR` | Pen Floor | Moves along a drawn path
+`PSBA` | Pushable Armos | Armos statue
 `PSBL` | Push Block
+`RFLR` | Repeating? Floor | Moves repetetively along a set path
+`SPRL` | Spike Roller
 `WBLK` | Wind Block | The blocks in the Wind Temple that blow air
-`DRUM` | Drum | Storage drum on the Ghost Ship
-`NKEY` | Normal Key | Small key
 `WPHL` | Warp Hole | Blue warp
 
 ### Enemies
@@ -75,32 +89,45 @@ translations. Feel free to contribute to this list!
  ID    | Translation  | Meaning
 -------|--------------|---------
 `AMOS` | Armos
-`BBLE` | Bubble?
+`BBLE` | Bubble
 `BEE0` | Bee
 `BEEH` | Bee Hive
-`BMOS` | Beamos
-`CHS2` | | Swift Phantom
-`CHSR` | | Phantom
+`BMOS` | Beamos beam
+`BMSE` | Beamos enemy
+`CHS2` | Chaser 2 | Swift Phantom
+`CHS4` | Chaser 4 | Reapling
+`CHS6` | Chaser 6 | Gold Phantom
+`CHSR` | Chaser | Phantom
 `CHUC` | ChuChu
 `CROW` | Crow | Bird that steals rupees
+`EGST` | Escape Ghost | Poe
+`FLTB` | Floating ??? | Flying pot
 `FSHB` | Fish Bullet | Geozard bullet
-`FSHM` | Fish Monster | Geozard
+`FSHM` | Fishman | Geozard
 `GELL` | Gel
-`ICHC` | Iwa (Ç¢ÇÌ) ChuChu | Rock ChuChu
-`ICHH` | Iwa (Ç¢ÇÌ) ChuChu Helmet | The rock on a ChuChu's head
+`HNKS` | Hinocks | Hinox
+`ICHC` | Iwa („ÅÑ„Çè) ChuChu | Rock ChuChu
+`ICHH` | Iwa („ÅÑ„Çè) ChuChu Helmet | The rock on a ChuChu's head
 `KETH` | Keese
+`KMBD` | | Wizzrobe
 `KOKO` | Cucco
 `LKLK` | Like Like
 `MLDW` | Moldworm | Sandworm
-`OCTA` | Octorok
-`PBLN` | | Miniblin
+`OCSH` | Octa Shell | Octorok bullet
+`OCTA` | Octarock | Octorok
+`PBLN` | Petit Blin | Miniblin
+`PB ` | | Eye Slug
 `PLSV` | Pols Voice
+`POON` | P≈çn („Éù„Éº„É≥) | Hardhat beetle
 `RAT0` | Rat
+`RATH` | Rat Hole
 `RAT1`
 `SNAK` | Snake | Rope, the purple snake enemy
-`SPRL` | Spike Roller
+`SPDR` | Spider | Skulltula
 `STLF` | Stalfos
 `STLW` | Stalfos Warrior
+`TAIL` | Tail | Moldorm head
+`TALB` | Tail Body | One of Moldorm's 3 body parts
 `TEKT` | Tektite
 `WTCR` | Watcher | Phantom eye
 `YETI` | Yook
@@ -109,7 +136,18 @@ translations. Feel free to contribute to this list!
 
  ID    | Translation  | Meaning
 -------|--------------|---------
-`DMHG` | Dungeon ??? Hourglass | Appears during cutscenes when boss sand is added to the hourglass
+`CBS0` | Cubus Girl Boss
+`CBS2` | Cubus Girl Bullet
+`CBS3` | Cubus Girls Controller | Only exists while there are multiple Cubus sisters
+`CBS4` | Cubus Girl Split Bullet
+`PWBS` | Power Boss | Dongorongo
+`PBFR` | Power Boss Fire | Dongorongo fire ball
+`RYRD` | Reyard | Crayk
+`RYDH` | Reyard Hamp | Weak spots on Crayk's shell
+`RYDM` | Reyard Mini | Craykling
+`RYDS` | Reyard Shell
+`SBOS` | Sea Boss | Massive Eye
+`SBEY` | Sea Boss Eye
 `WBSA` | Wind boss attack | Tornados that Cyclok spits at Link
 `WBSS` | Wind boss | Cyclok
 `WBST` | Wind boss tornado | Tornados that fling bombs up
@@ -119,35 +157,51 @@ translations. Feel free to contribute to this list!
  ID    | Translation  | Meaning
 -------|--------------|---------
 `ANCS` | Anchored ship | SS Linebeck on land
-`BMST` | Bar Master | Bartender
-`CHSB` | Character ??? | Old wayfarer
-`CMNB` | Character Man B | Adult? Male NPC
-`CMNC` | Character Man C | Adult? Male NPC
-`CMWB` | Character Woman B | Adult? Female NPC
-`CMWC` | Character Woman C | Adult? Female NPC
-`COMA` | Character Old ... | Elder Female NPC
-`COBS` | Character Old ... | Elder Male NPC
+`BMST` | Bar Master | Midori, bartender of Mercay Island
+`CBS1` | Cubus Girl 1 | Cubus sister (inside Ghost Ship)
+`CCLD` | Character Child | Chaco, child of Molida Island
+`CHSB` | Character Husband | Old wayfarer
+`CMML` | Character Mom Large | Potato, woman in yellow of Molida Island
+`CMMS` | Character Mom Small | Ocara, woman in green of Molida Island
+`CMNB` | Character Man B | Ojibe, man in green of Mercay Island
+`CMNC` | Character Man C | Doudo, man in blue of Mercay Island
+`COMA` | Character Old A | Tuzi, woman in brown of Mercay Island
+`COBS` | Character Old B/Shared | Maltza, man at the bar of Mercay Island
 `CRPS` | Corpse | Non-moving skeleton with a blue spirit
-`CSTM` | Character Standard Man | Adult? Male NPC
-`CWMN` | Character Woman | Adult? Female NPC
-`DMCH` | Demo Character | Actors on the title screen
-`DMTR` | Demo ???
+`CSTM` | Character Standard Man | Adult Male NPC
+`CWIF` | Character Wife | Maronie, woman in purple of Molida Island
+`CWMB` | Character Woman B | Saya, woman in blue of Mercay Island
+`CWMC` | Character Woman C | Fuchiko, woman in purple of Mercay Island
+`CWMN` | Character Woman | Adult Female NPC
+`FLNK` | Fake Link | Nyeve
 `FRBS` | Frog Boss | Cylos, chief of the golden frogs
 `FRCH` | Frog Character | Golden frogs swimming in the uncharted island cave
-`FUJI` | | Fuzo, the Cannon Island apprentice
-`ITSN` | Item Shopkeeper NPC
+`FUJI` | Fuji | Fuzo, the Cannon Island apprentice
+`GDMN` | | Nyave, sails in the southwestern sea
+`GRCB` | Goron Child B
+`GRMG` | Goron ??? | Gongoron
+`GRNC` | Goron Child
+`GRNE` | Goron Elder | Biggoron
+`GRNM` | Goron Man
+`ITS3` | Item Seller NPC 3 | Mi, item seller of Goron Island
+`ITSN` | Item Seller NPC | Ai, item seller of Mercay Island
 `JUDG` | Judge | The treasure teller
 `LNBK` | Linebeck
 `LNB2` | Linebeck 2
 `MMID` | Mermaid | Joanne
 `MNRT` | | Eddo, the Cannon Island inventor
 `MREG` | | Gazpacho, the shipyard worker
+`MTNP` | Mato („Åæ„Å®) NPC | Romanos
+`PLLB` | Pirate Lady Linebeck | Linebeck during fights with Jolene
+`PLSD` | Pirate Lady Sword | Jolene's sword
 `POST` | Mailbox
+`PRLD` | Pirate Lady | Jolene
 `PSTM` | Postman
 `SAUZ` | Zauz
 `SITS` | Sea Item Shopkeeper | Beedle
-`SMTN` | Sea Minigame ??? | Salvatore
-`SWON` | Sh?wan (ÉVÅ[ÉèÉì) | Oshus
+`SMTN` | Salvatore Mato („Åæ„Å®) NPC | Salvatore
+`SWON` | Shƒ´wan („Ç∑„Éº„ÉØ„É≥) | Oshus
+`TETR` | Tetra
 `TRAD` | Trader | Freedle
 `TRAB` | Trade Box/Bucket
 
@@ -159,15 +213,17 @@ translations. Feel free to contribute to this list!
 `BUII` | Buoy | Sea Trap, shoot both to lower the rope
 `CBLS` | Cannon Ball Blast
 `CNBL` | Cannon Ball
-`DNPC` | ??? NPC | Southwestern NPC ship
+`DNPC` | ??? NPC | NPC Ship
 `EFWV` | Effect Wave
 `EFRP` | Effect Ripple
+`FLPR` | Flapper | Eyeball monster
 `FSRL` | Fish Reel | Roaming fish
 `GFIS` | Golden Frog ???
 `GSIP` | Ghost Ship
 `HRCN` | Hurricane | Stops you from going to other seas
-`KMME` | Kamome (ÉJÉÇÉÅ) | Seagull
+`KMME` | Kamome („Ç´„É¢„É°) | Seagull
 `LOND` | | Explosive barrel
+`PLSP` | Pirate Lady Ship | Jolene's ship
 `PSIP` | Pirate Ship
 `SEKE` | Seeker? | Flying fish, red/orange flying enemy
 `SEOC` | Sea Octorok
@@ -175,65 +231,76 @@ translations. Feel free to contribute to this list!
 `SLTR` | Salvage ??? | Salvage arm
 `SLOC` | Salvage Octorok
 `SLRC` | Salvage Rupee ???
+`SNAV` | Sea Navi | Shows proximity to the Ghost Ship
 `SPKN` | Sea Plant ??? | Eye Plant
 `SROP` | Sea Rope | Sea Trap rope, jump over to avoid damage
 `SRPY` | Sea Rupee | Drops from enemies
 `STND` | Sea Tornado
+`TOPD` | Torpedo
 `TSIP` | Trade Ship | Beedle's Shop Ship
 
 ### Map/Events
 
  ID    | Translation  | Meaning
 -------|--------------|---------
+`ACOB` | Action Object | Performs actions when Link gets close to it
 `ATAR` | Attention Area | Moves the camera to something important
-`BRMT` | Boss room tag
+`BRMP` | Boss Room Power Tag | Dongorongo boss room
+`BRMT` | Boss Room Tag
+`CHOB` | Chaser Object? | Spawns a Phantom
 `DGTG` | Dig Tag | Diggable spot
 `ENGE` | Enemy Generator | Spawns an enemy when Link is locked inside a small room
-`EVIC` | Event ??? Camera | Camera viewpoint during events, such as opening doors
+`EVIC` | Event Icon | Exclamation point icon on the map screen
+`EQAR` | Earthquake Area
+`FMSG` | Freestanding? Message | Freestanding textbox
 `ITGE` | Item Generator | Spawns an item, such as a small key 
-`NMSG` | Navi Message? | Starts dialogue with the fairy
+`NCMA` | NPC Conversation Message?
+`NCM2` | NPC Conversation Message 2?
+`NMSG` | Navi Message | Starts dialogue with the fairy
 `RMTG` | Room Tag | Midpoint of small rooms, such as houses
+`SWDS` | 
 `SWOB` | Switch Object | Causes an event when one or more switches are active
+`VOCA` | Voice Area | Listens for microphone volume while Link is in the area
 `WNAR` | Wind Area | Creates gusts of wind that push Link
+
+### Cutscenes
+
+ ID    | Translation  | Meaning
+-------|--------------|---------
+`BEAC` | Bellum Actor? | Appears on save file load when Tetra pleas for help
+`DMCH` | Demo Character
+`DMHG` | Demo Hourglass
+`DMKS` | Demo Kamishibai („Åã„Åø„Åó„Å∞„ÅÑ) | Storytelling with pictures
+`DMTR` | Demo Tetra
+
+### Minigames
+
+ ID    | Translation  | Meaning
+-------|--------------|---------
+`MTGH` | Mato („Åæ„Å®) Ghost | Ghost target
+`MTGR` | Mato („Åæ„Å®) Girl | Girl target
 
 ### Unknown
 
  ID    | Translation  | Meaning
 -------|--------------|---------
-`SWOB`
-`EVIC`
-`ACOB`
 `EFRL`
-`LOND`
-`FMSG` | F Message?
 `CMSG` | C Message?
 `TMAP` | Treasure Map
 `BTCH`
 `BTRF`
 `BTDC`
-`WBSS`
 `FBSS`
 `FBS1`
 `VLRG`
 `HPLP`
 `HLMK`
-`CBS0`
-`EGST`
-`FIRS`
-`FLTB`
 `GO1M`
 `GROK`
-`HNKS`
-`ICHC`
-`ICHH`
 `KMDB`
 `PMET`
 `PBZK`
-`POON`
-`RYDM`
-`SPDR`
 `STLP`
 `STLH`
-`TAIL`
 `WSBS`
 `WSBH`
