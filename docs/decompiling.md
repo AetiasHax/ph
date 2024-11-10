@@ -23,7 +23,7 @@ partially decompiled code.
 We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff) to track differences between our decompiled C++ code and the base ROM's code.
 1. [Download the latest release.](https://github.com/encounter/objdiff/releases/latest)
 1. Run `configure.py <eur|usa>` and `ninja` to generate `objdiff.json` in the repository root.
-1. In `objdiff`, set the project directory to one of the mentioned `arm9/` directories.
+1. In `objdiff`, set the project directory to the repository root.
 1. Select your source file in the left sidebar:  
 ![List of objects in objdiff](images/objdiff_objects.png)
 5. See the list of functions and data to decompile:  
