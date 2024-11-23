@@ -28,6 +28,7 @@ CC_FLAGS = " ".join([
     "-gccext,on",           # Enable GCC extensions
     "-fp soft",             # Compute float operations in software
     "-inline on,noauto",    # Inline only functions marked with 'inline'
+    "-lang=c++",            # Set language to C++
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
     "-interworking",        # Enable ARM/Thumb interworking
@@ -47,7 +48,7 @@ LD_FLAGS = " ".join([
 DSD_OBJDIFF_ARGS = " ".join([
     "--scratch",                        # Metadata for creating decomp.me scratches
     f"--compiler {DECOMP_ME_COMPILER}", # decomp.me compiler name
-    f'--c-flags "{CC_FLAGS}"',          # decomp.me compiler flags
+    f'--c-flags "{CC_FLAGS} -lang=c++"',# decomp.me compiler flags
     "--custom-make ninja",              # Command for rebuilding files
 ])
 
