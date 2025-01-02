@@ -32,7 +32,7 @@ files to the project.
 Each `delinks.txt` file belongs to one module, such as the ARM9 program, the ITCM, the DTCM or an overlay.
 
 > [!NOTE]
-> For interested readers:  
+> For interested readers:
 > All modules are loaded into RAM. This is different from the DS predecessor, the Game Boy Advance (GBA), in which all code was
 > simply on the ROM at all times. As a result, the GBA's RAM only consisted of variable data.
 >

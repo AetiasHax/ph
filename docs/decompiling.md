@@ -24,9 +24,9 @@ We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff)
 1. [Download the latest release.](https://github.com/encounter/objdiff/releases/latest)
 1. Run `configure.py <eur|usa>` and `ninja` to generate `objdiff.json` in the repository root.
 1. In `objdiff`, set the project directory to the repository root.
-1. Select your source file in the left sidebar:  
+1. Select your source file in the left sidebar:
 ![List of objects in objdiff](images/objdiff_objects.png)
-5. See the list of functions and data to decompile:  
+5. See the list of functions and data to decompile:
 ![List of symbols in objdiff](images/objdiff_symbols.png)
 
 > [!NOTE]

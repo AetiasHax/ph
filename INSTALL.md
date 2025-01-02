@@ -46,7 +46,7 @@ Now you can run `ninja` to build a ROM for the chosen version.
 First, [extract the ARM7 BIOS from your DS device](https://wiki.ds-homebrew.com/ds-index/ds-bios-firmware-dump). Put the
 ARM7 BIOS in the root directory of this repository, and verify that your dumped BIOS matches the one below:
 
-| File name       | SHA1                                       | 
+| File name       | SHA1                                       |
 | --------------- | ------------------------------------------ |
 | `arm7_bios.bin` | `6ee830c7f552c5bf194c20a2c13d5bb44bdb5c03` |
 

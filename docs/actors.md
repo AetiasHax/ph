@@ -253,12 +253,12 @@ translations. Feel free to contribute to this list!
 `EVIC` | Event Icon | Exclamation point icon on the map screen
 `EQAR` | Earthquake Area
 `FMSG` | Freestanding? Message | Freestanding textbox
-`ITGE` | Item Generator | Spawns an item, such as a small key 
+`ITGE` | Item Generator | Spawns an item, such as a small key
 `NCMA` | NPC Conversation Message?
 `NCM2` | NPC Conversation Message 2?
 `NMSG` | Navi Message | Starts dialogue with the fairy
 `RMTG` | Room Tag | Midpoint of small rooms, such as houses
-`SWDS` | 
+`SWDS` |
 `SWOB` | Switch Object | Causes an event when one or more switches are active
 `VOCA` | Voice Area | Listens for microphone volume while Link is in the area
 `WNAR` | Wind Area | Creates gusts of wind that push Link
