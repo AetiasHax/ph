@@ -46,7 +46,6 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
             }
             func_ov014_0211fd04(*(s32 *) (0x20abf48));
             break;
-        case 9:
         case 0: break;
         case 1: break;
         case 2: break;
@@ -54,6 +53,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case 5: break;
         case 6: EquipRope::StopUsing(this); break;
         case 8: EquipHammer::StopUsing(this); break;
+        case 9:
         case 10:
             iVar3                    = *(int *) (0x20abf44);
             *(unk8 *) (iVar3 + 0x2a) = 0;
