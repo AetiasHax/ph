@@ -10,8 +10,11 @@
 extern unk32 func_ov000_020cf01c(s32 *param1);
 extern void func_ov000_020cf9dc(s32 param1, s32 param2, s32 param3);
 extern void func_ov014_0213ec64(s32 param1);
-extern void func_ov014_0211fd04(s32 param1);
+extern void func_ov014_0211fd04(s32 *param1);
 extern void func_ov000_020b7e6c(s32 *param1);
+
+extern s32 *data_027e103c;
+extern s32 *data_027e1098;
 
 THUMB void LinkStateItem::vfunc_00() {}
 
@@ -40,11 +43,11 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
     switch (this->mEquipId) {
         case 7:
             /* bombchu */
-            iVar3 = func_ov000_020cf01c((s32 *) (*(s32 *) 0x20abf44));
+            iVar3 = func_ov000_020cf01c(data_027e103c);
             if (*(u8 *) (iVar3 + 0xe0) == '\0') {
                 func_ov014_0213ec64((s32) GetEquipBombchu());
             }
-            func_ov014_0211fd04(*(s32 *) (0x20abf48));
+            func_ov014_0211fd04(data_027e1098);
             break;
         case 0: break;
         case 1: break;
@@ -55,8 +58,8 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case 8: EquipHammer::StopUsing(this); break;
         case 9:
         case 10:
-            iVar3                    = *(int *) (0x20abf44);
-            *(unk8 *) (iVar3 + 0x2a) = 0;
+            iVar3                    = (int ) (data_027e103c);
+            *(unk8 *) ((s16*)data_027e103c + 0x15) = 0;
             func_ov000_020cf9dc(iVar3, 0, 0);
             break;
         case 3: EquipScoop::StopUsing(this); break;
