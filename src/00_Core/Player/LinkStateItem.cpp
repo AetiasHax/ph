@@ -88,7 +88,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
     this->mNextEquip = -1;
 
     puVar4 = (unk32 *) this + 20;
-    for (; puVar4 != (unk32 *) this + 22; puVar4 = puVar4 + 4) {
+    for (; puVar4 != (unk32 *) this + 22; puVar4++) {
         func_ov000_020b7e6c(puVar4);
     }
     if (gPlayerControl->mUnk_80 != false) {
