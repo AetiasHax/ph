@@ -1,9 +1,9 @@
+#include "Player/LinkStateItem.hpp"
 #include "Item/ItemManager.hpp"
 #include "Player/EquipBomb.hpp"
 #include "Player/EquipHammer.hpp"
 #include "Player/EquipItem.hpp"
 #include "Player/EquipScoop.hpp"
-#include "Player/LinkStateItem.hpp"
 #include "Player/PlayerControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
@@ -24,13 +24,10 @@ ARM LinkStateId LinkStateItem::GetId() {
 
 ARM s32 LinkStateItem::IsHammerEquipped() {
     switch (this->mEquipId) {
-        case 8:
-            return 0;
-        default:
-            return -1;
+        case 8: return 0;
+        default: return -1;
     }
 }
-
 
 ARM void LinkStateItem::OnStateLeave(s32 param1) {
     EquipItem *pEVar1;
@@ -58,8 +55,8 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case 8: EquipHammer::StopUsing(this); break;
         case 9:
         case 10:
-            iVar3                    = (int ) (data_027e103c);
-            *(unk8 *) ((s16*)data_027e103c + 0x15) = 0;
+            iVar3                                    = (int) (data_027e103c);
+            *(unk8 *) ((s16 *) data_027e103c + 0x15) = 0;
             func_ov000_020cf9dc(iVar3, 0, 0);
             break;
         case 3: EquipScoop::StopUsing(this); break;
@@ -72,18 +69,14 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
 
     switch (this->mEquipId) {
         case -1:
-        case 0:
-            break;
-        case 1:
-            break;
+        case 0: break;
+        case 1: break;
         case 9:
-        case 10:
-            this->EquipItem_vfunc_28();
-            break;
+        case 10: this->EquipItem_vfunc_28(); break;
         default:
             this->EquipItem_vfunc_28();
             if (param1 != 4 && param1 != 2) {
-                pLVar2 = this->GetLinkStateMove();
+                pLVar2          = this->GetLinkStateMove();
                 pLVar2->mUnk_14 = true;
             }
     }
@@ -102,11 +95,11 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
 }
 
 ARM EquipBombchu *LinkStateItem::GetEquipBombchu() {
-    return (EquipBombchu *)ItemManager::GetEquipItemUnchecked(7);
+    return (EquipBombchu *) ItemManager::GetEquipItemUnchecked(7);
 }
 
 ARM LinkStateMove *LinkStateItem::GetLinkStateMove() {
-  return (LinkStateMove *)GetLinkState(0);
+    return (LinkStateMove *) GetLinkState(0);
 }
 
 ARM bool LinkStateItem::func_ov00_020abf70() {
