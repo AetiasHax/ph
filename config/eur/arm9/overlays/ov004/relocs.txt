@@ -1960,7 +1960,7 @@ from:0x02109a4c kind:thumb_call_arm to:0x020d0530 module:overlay(0)
 from:0x02109a52 kind:thumb_call to:0x021099b0 module:overlay(4)
 from:0x02109a5e kind:thumb_call to:0x0210add4 module:overlay(4)
 from:0x02109aba kind:thumb_call_arm to:0x0204f614 module:main
-from:0x02109ad8 kind:load to:0x020e5a48 module:overlay(0)
+from:0x02109ad8 kind:load to:0x020e5a48 add:8 module:overlay(0)
 from:0x02109adc kind:load to:0x021079d5 module:overlay(4)
 from:0x02109ae0 kind:load to:0x02057200 module:main
 from:0x02109ae4 kind:load to:0x020b7d74 module:overlay(0)

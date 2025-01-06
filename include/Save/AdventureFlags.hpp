@@ -92,7 +92,7 @@ public:
     void func_Ov00_02097810(s32 param1);
     unk32 func_ov00_02097968(unk32 param1);
     unk32 func_ov00_02097a44(unk32 param1, s32 param2);
-    bool func_ov00_02097b9c();
+    bool func_ov00_02097b9c(s32 param1);
     bool func_ov00_02097bac();
     bool func_ov00_02097bbc();
     bool func_ov00_02097bcc();

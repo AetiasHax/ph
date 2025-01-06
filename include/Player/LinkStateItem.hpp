@@ -13,8 +13,8 @@ public:
     /* 00 (base) */
     /* 0c */ void *mUnk_0c;
     /* 10 */ unk32 mUnk_10;
-    /* 14 */ ItemId mEquipId;
-    /* 18 */ ItemId mNextEquip;
+    /* 14 */ ItemFlag mEquipId;
+    /* 18 */ ItemFlag mNextEquip;
     /* 1c */ unk32 mUnk_1c;
     /* 20 */ unk16 mUnk_20;
     /* 22 */ unk8 mUnk_22[2];
@@ -47,7 +47,7 @@ public:
     /* 44 */
 
     s32 IsHammerEquipped(); // returns 0 if hammer is equipped, otherwise -1
-    EquipBombchu *GetEquipBombchu();
-    LinkStateMove *GetLinkStateMove();
+    static EquipBombchu *GetEquipBombchu();
+    static LinkStateMove *GetLinkStateMove();
     bool func_ov00_020abf70();
 };
