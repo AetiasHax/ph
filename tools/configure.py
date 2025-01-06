@@ -158,7 +158,7 @@ def main():
             command="./dsd rom build --config $in --rom $out $arm7_bios_flag"
         )
         n.newline()
-        
+
         n.rule(
             name="objdiff",
             command=f"./dsd objdiff --config-path $config_path {DSD_OBJDIFF_ARGS}"
@@ -258,7 +258,7 @@ def add_mwcc_builds(n: ninja_syntax.Writer, game_version: str, game_build: Path)
             }
         )
         n.newline()
-        
+
         extension = source_file.suffix
         ctx_file = str(game_build / source_file.with_suffix(f".ctx{extension}"))
         n.build(
