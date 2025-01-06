@@ -21,11 +21,15 @@ Contents:
 ```shell
 python -m pip install -r tools/requirements.txt
 ```
-4. Run the setup script:
+4. Install pre-commit hooks:
+```shell
+pre-commit install
+```
+5. Run the setup script:
 ```shell
 python tools/setup.py
 ```
-5. Run the Ninja configure script:
+6. Run the Ninja configure script:
 ```shell
 python tools/configure.py <eur|usa>
 ```
