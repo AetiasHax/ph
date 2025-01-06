@@ -30,8 +30,8 @@ We use the object diffing tool [`objdiff`](https://github.com/encounter/objdiff)
 ![List of symbols in objdiff](images/objdiff_symbols.png)
 
 > [!NOTE]
-> If a source file is missing in `objdiff`, or `objdiff` fails to build a file, first rerun `objdiff.py` to update
-> `objdiff.json`. If the problem persists, feel free to ask for help.
+> If a source file is missing in `objdiff`, or `objdiff` fails to build a file, first rerun `ninja` to update `objdiff.json`.
+> If the problem persists, feel free to ask for help.
 
 ## Decompiling a function
 Once you've opened a source file in `objdiff`, you can choose to decompile the functions in any order. We recommend starting
