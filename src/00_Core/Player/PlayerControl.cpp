@@ -1,14 +1,120 @@
 #include "Player/PlayerControl.hpp"
+#include "Actor/ActorManager.hpp"
+#include "DTCM/UnkStruct_027e05f8.hpp"
+#include "DTCM/UnkStruct_027e077c.hpp"
+#include "DTCM/UnkStruct_027e0c68.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
+#include "Item/ItemManager.hpp"
+#include "Save/AdventureFlags.hpp"
 
-bool PlayerControl::func_ov00_020aeeac() {}
-void PlayerControl::func_ov00_020aeef8() {}
-void PlayerControl::func_ov00_020aef30() {}
-void PlayerControl::UpdateAim() {}
-Actor *PlayerControl::GetFollowActor() {}
-bool PlayerControl::func_ov00_020af01c(unk8 *param1) {}
-void PlayerControl::SetUnk_80() {}
-void PlayerControl::StopFollowing() {}
-void PlayerControl::func_ov00_020af06c() {}
+ARM bool PlayerControl::func_ov00_020aeeac() {
+    unk32 index = data_027e077c.mUnk_0;
+    if (((data_02056be4[index] & 1) != 0) || ((data_02056be4[index] & 4) != 0)) {
+        return false;
+    }
+    return index == data_027e077c.mUnk_4;
+}
+
+ARM bool PlayerControl::func_ov00_020aeef8() {
+    unk32 index = data_027e077c.mUnk_0;
+    if (index == 0x37 || index == 0x3b) {
+        return false;
+    }
+    if (index == 0x3d) {
+        return true;
+    }
+    return func_ov00_020aeeac();
+}
+
+THUMB void PlayerControl::func_ov00_020aef30() {
+    this->ResetTouchWorld();
+    if (mDebug) {
+        // 操作 = Operation
+        mDebug->vfunc_20(0, "\x91\x80\x8d\xec", 'PCTL', 'PLYR', 0, 0);
+    }
+}
+
+THUMB void PlayerControl::UpdateAim() {
+    ResetTouchWorld();
+    mAimWorld.x = 0;
+    mAimWorld.y = 0;
+    mAimWorld.z = 0;
+    mUnk_80     = false;
+    mUnk_82     = 0;
+    mFollowRef.Reset();
+    mNextFollowRef.Reset();
+    mFollowing = false;
+    mAim       = gVec3p_ZERO;
+    s32 iVar2  = data_027e0d38->func_ov000_02078b40();
+    if (iVar2 == 2) {
+        data_027e103c->func_ov000_020cf2b8();
+    }
+    mUnk_c8 = -1;
+    mUnk_cc = -1;
+}
+
+ARM Actor *PlayerControl::GetFollowActor() {
+    return gActorManager->GetActor(&mFollowRef);
+}
+
+ARM bool PlayerControl::func_ov00_020af01c(unk8 *param1) {
+    if (mFollowing) {
+        param1[0] = mUnk_9c;
+        param1[1] = mUnk_9d;
+        return true;
+    }
+    return false;
+}
+
+ARM void PlayerControl::SetUnk_80() {
+    mUnk_80 = true;
+}
+
+ARM void PlayerControl::StopFollowing() {
+    mFollowRef.Reset();
+    mFollowing   = false;
+    mFollowActor = NULL;
+}
+
+ARM void PlayerControl::func_ov00_020af06c() {
+    if (!mUnk_78) {
+        mUsingEquipItem = false;
+        return;
+    }
+    if (mUnk_7a) {
+        mUnk_7b = mUsingEquipItem;
+    }
+    if (gAdventureFlags->func_ov00_02097738() || data_027e0c68->mUnk_04 != 0) {
+        if (data_027e0d38->func_ov000_02078b40() != 2) {
+            mUsingEquipItem = false;
+        }
+        return;
+    }
+    if (gItemManager->mEquippedItem == ItemFlag_PotionA) {
+        if (gItemManager->HasPotion(0)) {
+            mUsingEquipItem = true;
+            return;
+        }
+    } else if (gItemManager->mEquippedItem == ItemFlag_PotionB) {
+        if (gItemManager->HasPotion(1)) {
+            mUsingEquipItem = true;
+            return;
+        }
+    }
+    if (data_027e0d38->func_ov000_02078b40() == 2) {
+        mUnk_7b = false;
+        mUnk_7b = (mUnk_7b & gItemManager->func_ov00_020ad790(1)) != 0;
+    } else {
+        if (((data_027e05f8.mUnk_0 & 0x300) == 0) || !func_ov00_020aeef8()) {
+            if (((data_027e05f8.mUnk_0 & 0x300) == 0) && mUnk_83) {
+                mUnk_7b = false;
+            } else {
+            }
+        }
+    }
+}
+
 void PlayerControl::UpdateUsingEquipItem() {}
 bool PlayerControl::func_ov00_020af2d4(u32 param1, bool param2) {}
 bool PlayerControl::CheckTouchedNow(u32 param1) {}

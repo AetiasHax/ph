@@ -18,6 +18,8 @@ struct UnkStruct_027e103c {
     /* 24 */ u8 mUnk_24;
     /* 25 */ unk8 mUnk_25[7];
     /* 2c */
+
+    void func_ov000_020cf2b8();
 };
 
 extern UnkStruct_027e103c *data_027e103c;

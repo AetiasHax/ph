@@ -19,7 +19,7 @@ HuffUnCompReadByCallback kind:function(thumb,size=0x4) addr:0x200079e
 Entry kind:function(arm,size=0x13c) addr:0x2000800
 func_0200093c kind:function(arm,size=0x14) addr:0x200093c
 func_02000950 kind:function(arm,size=0xac) addr:0x2000950
-func_020009fc kind:function(arm,size=0x7c) addr:0x20009fc
+func_020009fc kind:function(arm,size=0x78) addr:0x20009fc
 AutoloadCallback kind:function(arm,size=0x4) addr:0x2000a74
 func_02000a78 kind:function(arm,size=0xe8) addr:0x2000a78
 func_02000b60 kind:function(arm,size=0x4) addr:0x2000b60
@@ -2581,7 +2581,7 @@ data_02056af8 kind:data(any) addr:0x2056af8
 data_02056afd kind:data(any) addr:0x2056afd
 data_02056afe kind:data(any) addr:0x2056afe
 data_02056b00 kind:data(any) addr:0x2056b00
-data_02056be4 kind:data(any) addr:0x2056be4
+data_02056be4 kind:data(byte[64]) addr:0x2056be4
 data_02056c24 kind:data(any) addr:0x2056c24
 data_02056c25 kind:data(any) addr:0x2056c25
 gpBuildDate kind:data(any) addr:0x2056c30
