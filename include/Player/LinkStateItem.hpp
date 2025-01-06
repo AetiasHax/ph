@@ -13,8 +13,8 @@ public:
     /* 00 (base) */
     /* 0c */ void *mUnk_0c;
     /* 10 */ unk32 mUnk_10;
-    /* 14 */ ItemId mEquipId;
-    /* 18 */ ItemId mNextEquip;
+    /* 14 */ ItemFlag mEquipId;
+    /* 18 */ ItemFlag mNextEquip;
     /* 1c */ unk32 mUnk_1c;
     /* 20 */ unk16 mUnk_20;
     /* 22 */ unk8 mUnk_22[2];

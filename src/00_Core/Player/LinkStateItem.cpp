@@ -19,12 +19,12 @@ extern s32 *data_027e1098;
 THUMB void LinkStateItem::vfunc_00() {}
 
 ARM LinkStateId LinkStateItem::GetId() {
-    return 1;
+    return LinkStateId_Item;
 }
 
 ARM s32 LinkStateItem::IsHammerEquipped() {
     switch (this->mEquipId) {
-        case 8: return 0;
+        case ItemFlag_Hammer: return 0;
         default: return -1;
     }
 }
@@ -38,41 +38,40 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
     LinkStateBase::OnStateLeave(param1);
 
     switch (this->mEquipId) {
-        case 7:
-            /* bombchu */
+        case ItemFlag_BombchuBag:
             iVar3 = func_ov000_020cf01c(data_027e103c);
             if (*(u8 *) (iVar3 + 0xe0) == '\0') {
                 func_ov014_0213ec64((s32) GetEquipBombchu());
             }
             func_ov014_0211fd04(data_027e1098);
             break;
-        case 0: break;
-        case 1: break;
-        case 2: break;
-        case 4: EquipBomb::StopUsing(this, param1); break;
-        case 5: break;
-        case 6: EquipRope::StopUsing(this); break;
-        case 8: EquipHammer::StopUsing(this); break;
-        case 9:
-        case 10:
+        case ItemFlag_OshusSword: break;
+        case ItemFlag_WoodenShield: break;
+        case ItemFlag_Boomerang: break;
+        case ItemFlag_BombBag: EquipBomb::StopUsing(this, param1); break;
+        case ItemFlag_Bow: break;
+        case ItemFlag_GrapplingHook: EquipRope::StopUsing(this); break;
+        case ItemFlag_Hammer: EquipHammer::StopUsing(this); break;
+        case ItemFlag_PotionA:
+        case ItemFlag_PotionB:
             iVar3                                    = (int) (data_027e103c);
             *(unk8 *) ((s16 *) data_027e103c + 0x15) = 0;
             func_ov000_020cf9dc(iVar3, 0, 0);
             break;
-        case 3: EquipScoop::StopUsing(this); break;
+        case ItemFlag_Shovel: EquipScoop::StopUsing(this); break;
     }
 
-    if (this->mEquipId != -1) {
+    if (this->mEquipId != ItemFlag_None) {
         pEVar1 = this->GetEquipItem(this->mEquipId);
         pEVar1->vfunc_1c();
     }
 
     switch (this->mEquipId) {
-        case -1:
-        case 0: break;
-        case 1: break;
-        case 9:
-        case 10: this->EquipItem_vfunc_28(); break;
+        case ItemFlag_None:
+        case ItemFlag_OshusSword: break;
+        case ItemFlag_WoodenShield: break;
+        case ItemFlag_PotionA:
+        case ItemFlag_PotionB: this->EquipItem_vfunc_28(); break;
         default:
             this->EquipItem_vfunc_28();
             if (param1 != 4 && param1 != 2) {
@@ -81,7 +80,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
             }
     }
 
-    this->mNextEquip = -1;
+    this->mNextEquip = ItemFlag_None;
 
     puVar4 = (unk32 *) this + 20;
     for (; puVar4 != (unk32 *) this + 22; puVar4++) {
@@ -95,11 +94,11 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
 }
 
 ARM EquipBombchu *LinkStateItem::GetEquipBombchu() {
-    return (EquipBombchu *) ItemManager::GetEquipItemUnchecked(7);
+    return (EquipBombchu *) ItemManager::GetEquipItemUnchecked(ItemFlag_BombchuBag);
 }
 
 ARM LinkStateMove *LinkStateItem::GetLinkStateMove() {
-    return (LinkStateMove *) GetLinkState(0);
+    return (LinkStateMove *) GetLinkState(LinkStateId_Move);
 }
 
 ARM bool LinkStateItem::func_ov00_020abf70() {
