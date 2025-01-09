@@ -102,5 +102,5 @@ You can see examples of these data sections in the [compilation section in `buil
 
 ## The Ghidra project
 We use a shared Ghidra project to analyze the game and decompile functions. To gain access to the project, install
-[Ghidra version 10.2.3](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_10.2.3_build) and request access
+[Ghidra version 11.2.1](https://github.com/NationalSecurityAgency/ghidra/releases/tag/Ghidra_11.2.1_build) and request access
 from @aetias on Discord.
