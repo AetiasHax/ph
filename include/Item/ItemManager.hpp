@@ -8,7 +8,7 @@ extern "C" {
 #include "lib/math.h"
 #include "types.h"
 
-#include "Actor/ActorNavi.hpp"
+#include "Actor/ActorNaviBase.hpp"
 #include "DTCM/UnkStruct_027e0f78.hpp"
 #include "Item/Item.hpp"
 #include "Map/MapManager.hpp"
@@ -172,7 +172,7 @@ public:
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
     /* 00c */ u32 mHourglassSandFrames;
     /* 010 */ FairyId mEquippedFairy;
-    /* 014 */ ActorNavi *mFairies[FairyId_COUNT];
+    /* 014 */ ActorNaviBase *mFairies[FairyId_COUNT];
     /* 020 */ u16 mEquipLoadTimer;
     /* 022 */ u16 mNumRupees;
     /* 024 */ u8 mNumGems[Gem_COUNT];
@@ -218,7 +218,7 @@ public:
 
     // Fairy
     FairyId GetEquippedFairy() const;
-    ActorNavi *GetFairy(FairyId id) const;
+    ActorNaviBase *GetFairy(FairyId id) const;
     u32 GetActiveFairyLevel(FairyId id) const;
     u32 GetFairyLevel(FairyId id) const;
 

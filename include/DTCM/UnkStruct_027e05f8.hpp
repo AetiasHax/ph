@@ -4,7 +4,7 @@
 #include "types.h"
 
 struct UnkStruct_027e05f8 {
-    /* 0 */ unk16 mUnk_0;
+    /* 0 */ u16 mUnk_0;
     /* 2 */ unk16 mUnk_2;
     /* 4 */ unk16 mUnk_4;
     /* 6 */

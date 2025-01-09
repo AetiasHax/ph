@@ -41,4 +41,6 @@ public:
     /* 34 */ virtual void vfunc_34(unk16 *param1) override; // func_ov58_0213ecb4
     /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov58_02199170
     /* 50 */
+
+    void func_ov014_0213ec64();
 };

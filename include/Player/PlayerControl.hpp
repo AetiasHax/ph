@@ -48,7 +48,7 @@ public:
     /* 7b */ bool mUnk_7b;
     /* 7c */ s8 mUnk_7c;
     /* 7d */ bool mUnk_7d;
-    /* 7e */ s8 mUnk_7e;
+    /* 7e */ u8 mUnk_7e;
     /* 7f */ bool mUnk_7f;
     /* 80 */ bool mUnk_80;
     /* 81 */ bool mFollowing;

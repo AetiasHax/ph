@@ -1,11 +1,13 @@
 #include "Player/PlayerControl.hpp"
 #include "Actor/ActorManager.hpp"
+#include "Actor/ActorNaviBase.hpp"
 #include "DTCM/UnkStruct_027e05f8.hpp"
 #include "DTCM/UnkStruct_027e077c.hpp"
 #include "DTCM/UnkStruct_027e0c68.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Item/ItemManager.hpp"
+#include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
 
 ARM bool PlayerControl::func_ov00_020aeeac() {
@@ -82,8 +84,9 @@ ARM void PlayerControl::func_ov00_020af06c() {
         mUsingEquipItem = false;
         return;
     }
+    bool usingEquipItem = mUsingEquipItem;
     if (mUnk_7a) {
-        mUnk_7b = mUsingEquipItem;
+        mUnk_7b = usingEquipItem;
     }
     if (gAdventureFlags->func_ov00_02097738() || data_027e0c68->mUnk_04 != 0) {
         if (data_027e0d38->func_ov000_02078b40() != 2) {
@@ -91,27 +94,47 @@ ARM void PlayerControl::func_ov00_020af06c() {
         }
         return;
     }
-    if (gItemManager->mEquippedItem == ItemFlag_PotionA) {
-        if (gItemManager->HasPotion(0)) {
+    ItemManager *itemManager = gItemManager;
+    if (itemManager->mEquippedItem == ItemFlag_PotionA) {
+        if (itemManager->HasPotion(0)) {
             mUsingEquipItem = true;
             return;
         }
-    } else if (gItemManager->mEquippedItem == ItemFlag_PotionB) {
-        if (gItemManager->HasPotion(1)) {
+    } else if (itemManager->mEquippedItem == ItemFlag_PotionB) {
+        if (itemManager->HasPotion(1)) {
             mUsingEquipItem = true;
             return;
         }
     }
     if (data_027e0d38->func_ov000_02078b40() == 2) {
-        mUnk_7b = false;
-        mUnk_7b = (mUnk_7b & gItemManager->func_ov00_020ad790(1)) != 0;
+        mUnk_7b = true;
+        mUnk_7b = (mUnk_7b & itemManager->func_ov00_020ad790(1)) != 0;
     } else {
-        if (((data_027e05f8.mUnk_0 & 0x300) == 0) || !func_ov00_020aeef8()) {
+        if (((data_027e05f8.mUnk_0 & 0x300) != 0) && mUnk_7e != 0 && func_ov00_020aeef8()) {
+            mUnk_7b = true;
+        } else {
             if (((data_027e05f8.mUnk_0 & 0x300) == 0) && mUnk_83) {
                 mUnk_7b = false;
             } else {
+                if (data_027e103c->mUnk_20 == 2 && !mTouch && func_ov00_020aeef8()) {
+                    mUnk_7b = !mUnk_7b;
+                    mUnk_7c = 0;
+                }
             }
         }
+        mUnk_7b = (mUnk_7b & itemManager->func_ov00_020ad790(1)) != 0;
+
+        if (itemManager->mEquippedItem == ItemFlag_Hammer && !mUsingEquipItem && mUnk_7b == true) {
+            ActorNaviBase *courageFairy = itemManager->GetFairy(FairyId_Courage);
+            if (courageFairy != NULL) {
+                mAimWorld.x = courageFairy->mPos.x;
+                mAimWorld.y = gPlayerPos.y + FLOAT_TO_Q20(0.5);
+                mAimWorld.z = courageFairy->mPos.z;
+            }
+        }
+    }
+    if (!mUnk_7a) {
+        mUsingEquipItem = mUnk_7b;
     }
 }
 
