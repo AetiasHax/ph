@@ -138,8 +138,53 @@ ARM void PlayerControl::func_ov00_020af06c() {
     }
 }
 
-void PlayerControl::UpdateUsingEquipItem() {}
-bool PlayerControl::func_ov00_020af2d4(u32 param1, bool param2) {}
+void PlayerControl::UpdateUsingEquipItem() {
+    if ((data_027e05f8.mUnk_0 & 0x300) != 0 && this->func_ov00_020aeef8()) {
+        mUsingEquipItem = true;
+        return;
+    }
+    mUsingEquipItem = false;
+}
+
+struct UnkStruct_ov015_0213ce4c {
+    /* 00 */ unk8 mUnk_00[0x3d];
+    /* 3d */ bool mUnk_3d;
+    /* 3e */ unk8 mUnk_3e[0x1];
+    /* 3f */ bool mUnk_3f;
+    /* 40 */ bool mUnk_40;
+    /* 41 */
+
+    static UnkStruct_ov015_0213ce4c *GetInstance();
+
+    bool GetUnk3f();
+    bool GetUnk40();
+};
+
+bool PlayerControl::func_ov00_020af2d4(u32 param1, bool param2) {
+    if (data_027e0d38->func_ov000_02078b40() == 2 && param2) {
+        if (UnkStruct_ov015_0213ce4c::GetInstance()->mUnk_3d) {
+            return false;
+        }
+        if (UnkStruct_ov015_0213ce4c::GetInstance()->GetUnk3f() || UnkStruct_ov015_0213ce4c::GetInstance()->GetUnk40()) {
+            return false;
+        }
+    }
+
+    if (mUnk_7c) {
+        bool unk1 = true;
+        bool unk2 = true;
+        if ((param1 & 0x2) != 0 && (data_02056be4[data_027e077c.mUnk_0] & 0x1) != 0) {
+            unk2 = false;
+        }
+        if (!unk2 && ((param1 & 0x1) == 0 || !this->func_ov00_020aeef8() || !data_027e103c->mUnk_24)) {
+            unk1 = false;
+        }
+        return unk1;
+    } else {
+        return (param1 & 0x4) != 0;
+    }
+}
+
 bool PlayerControl::CheckTouchedNow(u32 param1) {}
 bool PlayerControl::CheckUntouchedNow(u32 param1) {}
 bool PlayerControl::CheckTouching(u32 param1) {}

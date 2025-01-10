@@ -46,7 +46,7 @@ public:
     /* 79 */ bool mUsingEquipItem;
     /* 7a */ bool mUnk_7a;
     /* 7b */ bool mUnk_7b;
-    /* 7c */ s8 mUnk_7c;
+    /* 7c */ u8 mUnk_7c;
     /* 7d */ bool mUnk_7d;
     /* 7e */ u8 mUnk_7e;
     /* 7f */ bool mUnk_7f;
