@@ -89,7 +89,7 @@ public:
     /* 048 */ u32 mUnk_048;
     /* 04c */ unk32 mUnk_04c;
     /* 050 */ unk8 mUnk_050[0x80];
-    /* 0d0 */ Vec3p mUnk_0d0;
+    /* 0d0 */ Vec3p mCenter;
     /* 0dc */ AABB mBounds;
     /* 0f4 */ Vec3p mUnk_0f4;
     /* 100 */ std::vector<Entrance> mEntrances;

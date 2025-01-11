@@ -95,8 +95,14 @@ ARM q20 MapManager::GetMapMaxZ() {
     return (this->mMap->mBounds).max.z;
 }
 
-unk8 MapManager::Get_MapData_Unk_d0() {}
-unk8 MapManager::Get_MapData_Unk_d8() {}
+ARM q20 MapManager::GetMapCenterX() {
+    return (this->mMap->mCenter).x;
+}
+
+ARM q20 MapManager::GetMapCenterZ() {
+    return (this->mMap->mCenter).z;
+}
+
 unk8 MapManager::GetMapData_Unk_dc(Vec3p *param_2) {}
 unk8 MapManager::GetMapData_Unk_e8(Vec3p *param_2) {}
 unk8 MapManager::GetMapData_Unk_d0(Vec3p *param_2) {}

@@ -110,8 +110,8 @@ public:
     q20 GetMapMinZ();
     q20 GetMapMaxX();
     q20 GetMapMaxZ();
-    unk8 Get_MapData_Unk_d0();
-    unk8 Get_MapData_Unk_d8();
+    q20 GetMapCenterX();
+    q20 GetMapCenterZ();
     unk8 GetMapData_Unk_dc(Vec3p *param_2);
     unk8 GetMapData_Unk_e8(Vec3p *param_2);
     unk8 GetMapData_Unk_d0(Vec3p *param_2);
