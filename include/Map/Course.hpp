@@ -27,6 +27,7 @@ struct CourseProgress {
 };
 
 class Course : public SysObject {
+public:
     /* 000 */ unk32 mIndex;
     /* 004 */ CourseType mType;
     /* 008 */ unk32 mUnk_008;
@@ -41,11 +42,7 @@ class Course : public SysObject {
     /* 08c */ s32 mScreenMapOffsetY;
     /* 090 */ unk32 mUnk_090;
     /* 094 */ unk32 mUnk_094;
-
-public:
     /* 098 */ AABB mBounds;
-
-private:
     /* 0b0 */ s8 mNumMaps;
     /* 0b1 */ unk8 mUnk_0b1;
     /* 0b2 */ unk8 mUnk_0b2;

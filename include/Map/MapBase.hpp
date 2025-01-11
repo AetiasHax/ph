@@ -75,8 +75,8 @@ public:
     /* 01f */ unk8 mUnk_01f;
     /* 020 */ unk32 mUnk_020;
     /* 024 */ unk32 mUnk_024;
-    /* 028 */ s16 mUnk_028;
-    /* 02a */ s16 mUnk_02a;
+    /* 028 */ s16 mWidth;
+    /* 02a */ s16 mHeight;
     /* 02c */ unk16 mUnk_02c;
     /* 02e */ unk16 mUnk_02e;
     /* 030 */ s16 mUnk_030;

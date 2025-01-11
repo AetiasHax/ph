@@ -58,10 +58,22 @@ bool MapManager::func_ov00_02083318(unk32 param_2) {}
 unk8 MapManager::func_ov00_02083328() {}
 unk8 MapManager::GetCourseData_Unk_86() {}
 unk8 MapManager::GetCourseData_Unk_87() {}
-unk8 MapManager::Get_MapData_Unk28() {}
-unk8 MapManager::Get_MapData_Unk2a() {}
-unk8 MapManager::func_ov00_02083374() {}
-unk8 MapManager::func_ov00_02083384() {}
+
+ARM u16 MapManager::GetMapWidth() {
+    return this->mMap->mWidth;
+}
+
+ARM u16 MapManager::GetMapHeight() {
+    return this->mMap->mHeight;
+}
+
+ARM s32 MapManager::func_ov00_02083374() {
+    return this->GetMapWidth() << 0xc;
+}
+
+ARM s32 MapManager::func_ov00_02083384() {
+    return this->GetMapHeight() << 0xc;
+}
 
 ARM q20 MapManager::GetCourseMinX() {
     return (this->mCourse->mBounds).min.x;
@@ -108,7 +120,6 @@ ARM void MapManager::GetMapMinBounds(Vec3p *param_2) {
     param_2->x       = (mapBase->mBounds).min.x;
     param_2->y       = (mapBase->mBounds).min.y;
     param_2->z       = (mapBase->mBounds).min.z;
-    return;
 }
 
 ARM void MapManager::GetMapMaxBounds(Vec3p *param_2) {
@@ -116,7 +127,6 @@ ARM void MapManager::GetMapMaxBounds(Vec3p *param_2) {
     param_2->x       = (mapBase->mBounds).max.x;
     param_2->y       = (mapBase->mBounds).max.y;
     param_2->z       = (mapBase->mBounds).max.z;
-    return;
 }
 
 ARM void MapManager::GetMapCenter(Vec3p *param_2) {
@@ -124,11 +134,29 @@ ARM void MapManager::GetMapCenter(Vec3p *param_2) {
     param_2->x       = (mapBase->mCenter).x;
     param_2->y       = (mapBase->mCenter).y;
     param_2->z       = (mapBase->mCenter).z;
-    return;
 }
 
-unk8 MapManager::func_ov00_0208346c(AABB *param_2) {}
-unk8 MapManager::func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4) {}
+ARM void MapManager::func_ov00_0208346c(AABB *param_2) {
+    (param_2->min).x = this->GetMapMinX();
+    (param_2->min).z = this->GetMapMinZ();
+    (param_2->max).x = this->GetMapMaxX();
+    (param_2->max).z = this->GetMapMaxZ();
+    (param_2->max).y = 0x1333;
+    (param_2->min).y = 0;
+}
+
+ARM void MapManager::func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4) {
+    Vec3p *mapCenter = this->mCourse->FindMapCenter((u32) (u8) this->mCourse->mMapGrid[param_3][param_4]);
+    s32 iVar2;
+    param_2->x = mapCenter->x;
+    param_2->y = mapCenter->y;
+    param_2->z = mapCenter->z;
+    iVar2      = this->func_ov00_02083374();
+    param_2->x = param_2->x - (iVar2 >> 1);
+    iVar2      = this->func_ov00_02083384();
+    param_2->z = param_2->z - (iVar2 >> 1);
+}
+
 unk8 MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4) {}
 void MapManager::func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3) {}
 unk8 MapManager::func_ov00_02083570(unk32 param_2, unk32 param_3) {}
