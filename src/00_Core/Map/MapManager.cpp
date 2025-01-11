@@ -183,7 +183,7 @@ ARM void MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 par
     param_2->z       = mapCenter->z;
 }
 
-void MapManager::func_ov00_02083560(Vec2b pos, MapManager *param_2, u32 param_3) {}
+void MapManager::func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3) {}
 unk8 MapManager::func_ov00_02083570(unk32 param_2, unk32 param_3) {}
 unk32 MapManager::func_ov00_02083588() {}
 unk32 MapManager::func_ov00_020835a4() {}
