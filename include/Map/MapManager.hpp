@@ -110,11 +110,11 @@ public:
     q20 GetMapMinZ();
     q20 GetMapMaxX();
     q20 GetMapMaxZ();
-    unk8 Get_MapData_Unk_d0();
-    unk8 Get_MapData_Unk_d8();
-    unk8 GetMapData_Unk_dc(Vec3p *param_2);
-    unk8 GetMapData_Unk_e8(Vec3p *param_2);
-    unk8 GetMapData_Unk_d0(Vec3p *param_2);
+    q20 GetMapCenterX();
+    q20 GetMapCenterZ();
+    void GetMapMinBounds(Vec3p *param_2);
+    void GetMapMaxBounds(Vec3p *param_2);
+    void GetMapCenter(Vec3p *param_2);
     unk8 func_ov00_0208346c(AABB *param_2);
     unk8 func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4);
     unk8 func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4);

@@ -95,11 +95,38 @@ ARM q20 MapManager::GetMapMaxZ() {
     return (this->mMap->mBounds).max.z;
 }
 
-unk8 MapManager::Get_MapData_Unk_d0() {}
-unk8 MapManager::Get_MapData_Unk_d8() {}
-unk8 MapManager::GetMapData_Unk_dc(Vec3p *param_2) {}
-unk8 MapManager::GetMapData_Unk_e8(Vec3p *param_2) {}
-unk8 MapManager::GetMapData_Unk_d0(Vec3p *param_2) {}
+ARM q20 MapManager::GetMapCenterX() {
+    return (this->mMap->mCenter).x;
+}
+
+ARM q20 MapManager::GetMapCenterZ() {
+    return (this->mMap->mCenter).z;
+}
+
+ARM void MapManager::GetMapMinBounds(Vec3p *param_2) {
+    MapBase *mapBase = this->mMap;
+    param_2->x       = (mapBase->mBounds).min.x;
+    param_2->y       = (mapBase->mBounds).min.y;
+    param_2->z       = (mapBase->mBounds).min.z;
+    return;
+}
+
+ARM void MapManager::GetMapMaxBounds(Vec3p *param_2) {
+    MapBase *mapBase = this->mMap;
+    param_2->x       = (mapBase->mBounds).max.x;
+    param_2->y       = (mapBase->mBounds).max.y;
+    param_2->z       = (mapBase->mBounds).max.z;
+    return;
+}
+
+ARM void MapManager::GetMapCenter(Vec3p *param_2) {
+    MapBase *mapBase = this->mMap;
+    param_2->x       = (mapBase->mCenter).x;
+    param_2->y       = (mapBase->mCenter).y;
+    param_2->z       = (mapBase->mCenter).z;
+    return;
+}
+
 unk8 MapManager::func_ov00_0208346c(AABB *param_2) {}
 unk8 MapManager::func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4) {}
 unk8 MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4) {}
