@@ -82,7 +82,7 @@ public:
     unk32 *func_ov00_02082adc();
     unk8 func_ov00_02082af4();
     bool func_ov00_02082b3c(s32 param_2);
-    unk8 func_ov00_02082d08();
+    u8 UpdateMapGrid();
     unk8 GetCourseData_Unk_1c();
     unk8 GetCourseData_Unk_1d();
     unk8 func_ov00_02082d40();
@@ -93,11 +93,11 @@ public:
     void func_ov00_0208315c(s32 *param_2, s32 *param_3);
     void func_ov00_02083244(u32 param_2, s32 *param_3, s32 *param_4, s32 *param_5);
     void func_ov00_02083298(u32 param_2, s32 *param_3, s32 *param_4, s32 *param_5);
-    unk8 GetCourseData_Unk_25c();
+    bool GetCourseData_Unk_25c();
     bool func_ov00_02083318(unk32 param_2);
-    static unk8 func_ov00_02083328();
-    unk8 GetCourseData_Unk_86();
-    unk8 GetCourseData_Unk_87();
+    bool func_ov00_02083328();
+    u8 GetCourseMainGridSizeX();
+    u8 GetCourseMainGridSizeY();
     u16 GetMapWidth();
     u16 GetMapHeight();
     s32 func_ov00_02083374();
@@ -117,7 +117,7 @@ public:
     void GetMapCenter(Vec3p *param_2);
     void func_ov00_0208346c(AABB *param_2);
     void func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4);
-    unk8 func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4);
+    void func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4);
     static void func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3);
     unk8 func_ov00_02083570(unk32 param_2, unk32 param_3);
     unk32 func_ov00_02083588();
