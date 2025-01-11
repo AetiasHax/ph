@@ -57,8 +57,8 @@ public:
     /* 84 */ ActorRef mFollowRef;
     /* 8c */ ActorRef mNextFollowRef;
     /* 94 */ ActorRef mLastFollowRef;
-    /* 9c */ unk8 mUnk_9c;
-    /* 9d */ unk8 mUnk_9d;
+    /* 9c */ u8 mUnk_9c;
+    /* 9d */ u8 mUnk_9d;
     /* 9e */ unk8 mUnk_9e[2];
     /* a0 */ void *mFollowActor;
     /* a4 */ q20 mFollowDist;
@@ -75,7 +75,7 @@ public:
     /* d8 */
 
     static bool func_ov00_020aeeac();
-    void func_ov00_020aeef8();
+    bool func_ov00_020aeef8();
     void func_ov00_020aef30();
     void UpdateAim();
     Actor *GetFollowActor();
@@ -124,6 +124,13 @@ public:
     bool IsTouchingFast();
     bool IsTappedNow();
     bool func_ov00_020b13c4();
+
+    // More methods starting from 020b78a0, different TU?
+    void ResetTouchWorld();
+    void InitTouchMovement();
+    void func_ov000_020b7924(s32 param1);
+    void ApplyTouchWorld(Vec3p *result, q20 scale);
+    bool func_ov000_020b7d6c();
 };
 
 extern PlayerControl *gPlayerControl;

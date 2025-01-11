@@ -106,26 +106,6 @@ struct ShipPartPricesShown {
     /* c */
 };
 
-struct UnkStruct_027e0d38 {
-    /* 00 */ unk8 mUnk_00;
-    /* 01 */ unk8 mUnk_01[3]; // padding?
-    /* 04 */ unk32 mUnk_04;
-    /* 08 */ unk32 mUnk_08;
-    /* 0c */ unk32 mUnk_0c;
-    /* 10 */ unk32 mUnk_10;
-    /* 14 */ unk32 mUnk_14;
-    /* 18 */ unk32 mUnk_18;
-    /* 1c */ unk16 mUnk_1c;
-    /* 1e */ unk8 mUnk_1e;
-    /* 1f */ unk8 mUnk_1f;
-    /* 20 */ unk8 mUnk_20;
-    /* 21 */ unk8 mUnk_21;
-    /* 22 */ unk8 mUnk_22[2]; // padding?
-    /* 24 */ void *mUnk_24;
-    /* 28 */ void *mUnk_28;
-    /* 2c */
-};
-
 typedef u32 ItemModelId;
 enum ItemModelId_ {
     ItemModelId_OshusSword,   // swA
@@ -186,7 +166,7 @@ struct SaveItemManager {
 };
 
 class ItemManager : public SysObject {
-private:
+public:
     /* 000 */ ItemFlag mEquippedItem;
     /* 004 */ ItemFlag mPrevEquippedItem;
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
@@ -227,7 +207,6 @@ private:
     /* 14e */ unk8 mUnk_14e[0x2]; // padding?
     /* 150 */
 
-public:
     static ItemManager *Create();
     static void Destroy();
     ItemManager();
