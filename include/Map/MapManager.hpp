@@ -103,9 +103,9 @@ public:
     static unk8 func_ov00_02083374();
     static unk8 func_ov00_02083384();
     q20 GetCourseMinX();
-    unk8 GetCourseMinZ();
-    unk8 GetCourseMaxX();
-    unk8 GetCourseMaxZ();
+    q20 GetCourseMinZ();
+    q20 GetCourseMaxX();
+    q20 GetCourseMaxZ();
     unk8 func_ov00_020833c4();
     unk8 func_ov00_020833d0();
     unk8 func_ov00_020833dc();

@@ -67,9 +67,18 @@ ARM q20 MapManager::GetCourseMinX() {
     return (this->mCourse->mBounds).min.x;
 }
 
-unk8 MapManager::GetCourseMinZ() {}
-unk8 MapManager::GetCourseMaxX() {}
-unk8 MapManager::GetCourseMaxZ() {}
+ARM q20 MapManager::GetCourseMinZ() {
+    return (this->mCourse->mBounds).min.z;
+}
+
+ARM q20 MapManager::GetCourseMaxX() {
+    return (this->mCourse->mBounds).max.x;
+}
+
+ARM q20 MapManager::GetCourseMaxZ() {
+    return (this->mCourse->mBounds).max.z;
+}
+
 unk8 MapManager::func_ov00_020833c4() {}
 unk8 MapManager::func_ov00_020833d0() {}
 unk8 MapManager::func_ov00_020833dc() {}
