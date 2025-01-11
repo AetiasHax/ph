@@ -90,8 +90,7 @@ public:
     /* 04c */ unk32 mUnk_04c;
     /* 050 */ unk8 mUnk_050[0x80];
     /* 0d0 */ Vec3p mUnk_0d0;
-    /* 0dc */ Vec3p mUnk_0dc;
-    /* 0e8 */ Vec3p mUnk_0e8;
+    /* 0dc */ AABB mBounds;
     /* 0f4 */ Vec3p mUnk_0f4;
     /* 100 */ std::vector<Entrance> mEntrances;
     /* 10c */ std::vector<TriggerBase *> mTriggers;

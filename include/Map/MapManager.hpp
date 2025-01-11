@@ -106,10 +106,10 @@ public:
     q20 GetCourseMinZ();
     q20 GetCourseMaxX();
     q20 GetCourseMaxZ();
-    unk8 func_ov00_020833c4();
-    unk8 func_ov00_020833d0();
-    unk8 func_ov00_020833dc();
-    unk8 func_ov00_020833e8();
+    q20 GetMapMinX();
+    q20 GetMapMinZ();
+    q20 GetMapMaxX();
+    q20 GetMapMaxZ();
     unk8 Get_MapData_Unk_d0();
     unk8 Get_MapData_Unk_d8();
     unk8 GetMapData_Unk_dc(Vec3p *param_2);

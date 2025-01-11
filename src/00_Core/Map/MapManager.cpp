@@ -79,10 +79,22 @@ ARM q20 MapManager::GetCourseMaxZ() {
     return (this->mCourse->mBounds).max.z;
 }
 
-unk8 MapManager::func_ov00_020833c4() {}
-unk8 MapManager::func_ov00_020833d0() {}
-unk8 MapManager::func_ov00_020833dc() {}
-unk8 MapManager::func_ov00_020833e8() {}
+ARM q20 MapManager::GetMapMinX() {
+    return (this->mMap->mBounds).min.x;
+}
+
+ARM q20 MapManager::GetMapMinZ() {
+    return (this->mMap->mBounds).min.z;
+}
+
+ARM q20 MapManager::GetMapMaxX() {
+    return (this->mMap->mBounds).max.x;
+}
+
+ARM q20 MapManager::GetMapMaxZ() {
+    return (this->mMap->mBounds).max.z;
+}
+
 unk8 MapManager::Get_MapData_Unk_d0() {}
 unk8 MapManager::Get_MapData_Unk_d8() {}
 unk8 MapManager::GetMapData_Unk_dc(Vec3p *param_2) {}
