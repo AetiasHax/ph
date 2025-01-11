@@ -62,7 +62,11 @@ unk8 MapManager::Get_MapData_Unk28() {}
 unk8 MapManager::Get_MapData_Unk2a() {}
 unk8 MapManager::func_ov00_02083374() {}
 unk8 MapManager::func_ov00_02083384() {}
-unk8 MapManager::GetCourseMinX() {}
+
+ARM q20 MapManager::GetCourseMinX() {
+    return (this->mCourse->mBounds).min.x;
+}
+
 unk8 MapManager::GetCourseMinZ() {}
 unk8 MapManager::GetCourseMaxX() {}
 unk8 MapManager::GetCourseMaxZ() {}

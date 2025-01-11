@@ -102,7 +102,7 @@ public:
     unk8 Get_MapData_Unk2a();
     static unk8 func_ov00_02083374();
     static unk8 func_ov00_02083384();
-    unk8 GetCourseMinX();
+    q20 GetCourseMinX();
     unk8 GetCourseMinZ();
     unk8 GetCourseMaxX();
     unk8 GetCourseMaxZ();
