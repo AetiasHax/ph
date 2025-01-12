@@ -82,7 +82,7 @@ public:
     unk32 *func_ov00_02082adc();
     unk8 func_ov00_02082af4();
     bool func_ov00_02082b3c(s32 param_2);
-    u8 UpdateMapGrid();
+    u8 func_ov00_02082d08();
     unk8 GetCourseData_Unk_1c();
     unk8 GetCourseData_Unk_1d();
     unk8 func_ov00_02082d40();
@@ -119,11 +119,11 @@ public:
     void func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4);
     void func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4);
     static void func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3);
-    unk8 func_ov00_02083570(unk32 param_2, unk32 param_3);
+    u8 func_ov00_02083570(unk32 param_2, unk32 param_3);
     unk32 func_ov00_02083588();
     unk32 func_ov00_020835a4();
     unk32 func_ov00_020835b4();
-    unk8 func_ov00_020835c4(unk32 param_2, unk32 param_3);
+    s8 func_ov00_020835c4(s32 param_2, unk32 param_3);
     bool func_ov00_020835e4(s32 param_2, unk32 *param_3, unk32 *param_4);
     unk32 func_ov00_020835f4(s32 param_2);
     void func_ov00_02083604(s32 param_2);

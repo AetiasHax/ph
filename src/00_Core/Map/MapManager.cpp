@@ -43,7 +43,7 @@ unk32 *MapManager::func_ov00_02082adc() {}
 unk8 MapManager::func_ov00_02082af4() {}
 bool MapManager::func_ov00_02082b3c(s32 param_2) {}
 
-ARM u8 MapManager::UpdateMapGrid() {
+ARM u8 MapManager::func_ov00_02082d08() {
     Course *course = this->mCourse;
     return course->mMapGrid[(u8) course->mCurrMapPos.x][(u8) course->mCurrMapPos.y];
 }
@@ -66,7 +66,7 @@ ARM bool MapManager::GetCourseData_Unk_25c() {
 ARM bool MapManager::func_ov00_02083318(unk32 param_2) {}
 
 ARM bool MapManager::func_ov00_02083328() {
-    u32 map = (u32) this->UpdateMapGrid();
+    u32 map = (u32) this->func_ov00_02082d08();
     return this->mCourse->IsMapInMainGrid(map);
 }
 
@@ -184,11 +184,27 @@ ARM void MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 par
 }
 
 void MapManager::func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3) {}
-unk8 MapManager::func_ov00_02083570(unk32 param_2, unk32 param_3) {}
-unk32 MapManager::func_ov00_02083588() {}
-unk32 MapManager::func_ov00_020835a4() {}
-unk32 MapManager::func_ov00_020835b4() {}
-unk8 MapManager::func_ov00_020835c4(unk32 param_2, unk32 param_3) {}
+
+ARM u8 MapManager::func_ov00_02083570(unk32 param_2, unk32 param_3) {
+    return this->mCourse->mMapGrid[param_2][param_3];
+}
+
+ARM unk32 MapManager::func_ov00_02083588() {
+    return this->mCourse->FindMapData_Unk_08(this->func_ov00_02082d08());
+}
+
+ARM unk32 MapManager::func_ov00_020835a4() {
+    return this->mCourse->Get_Unk_c8_00();
+}
+
+ARM unk32 MapManager::func_ov00_020835b4() {
+    return this->mCourse->Get_Unk_c8_04();
+}
+
+ARM s8 MapManager::func_ov00_020835c4(s32 param_2, unk32 param_3) {
+    return this->mCourse->func_ov00_0207d404(param_2, 0, param_3);
+}
+
 bool MapManager::func_ov00_020835e4(s32 param_2, unk32 *param_3, unk32 *param_4) {}
 unk32 MapManager::func_ov00_020835f4(s32 param_2) {}
 void MapManager::func_ov00_02083604(s32 param_2) {}
