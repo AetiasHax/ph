@@ -201,9 +201,9 @@ public:
     unk8 func_ov00_0207f934();
     unk8 func_ov00_0207f948(unk32 param_2);
     void AddTrigger(TriggerParams *param_2);
-    s32 GetTriggerBoundingBox(unk32 param_2, AABB *param_3);
-    unk8 GetTriggerBoundingBoxes(unk32 param_2, AABB *param_3, unk32 param_4);
-    unk32 GetOverlappingTrigger(Vec3p *param_2);
+    s32 GetTriggerBoundingBox(s32 param_2, AABB *param_3);
+    s32 GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4);
+    bool GetOverlappingTrigger(Vec3p *param_2);
     unk8 FindTrigger(unk32 type);
     unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity);
     bool IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3);

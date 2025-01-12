@@ -1,4 +1,7 @@
 #include "Map/MapManager.hpp"
+#include "Actor/Actor.hpp"
+#include "Actor/ActorManager.hpp"
+#include "Player/PlayerBase.hpp"
 
 void MapManager::func_ov00_020820ec(unk32 *param_2) {}
 void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4) {}
@@ -183,7 +186,9 @@ ARM void MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 par
     param_2->z       = mapCenter->z;
 }
 
-void MapManager::func_ov00_02083560(unk32 param_1, MapManager *param_2, u32 param_3) {}
+void MapManager::func_ov00_02083560(Vec2b *param_1, MapManager *param_2, u32 param_3) {
+    param_2->mCourse->FindMapGridPos(param_1, param_2->mCourse, param_3);
+}
 
 ARM u8 MapManager::func_ov00_02083570(unk32 param_2, unk32 param_3) {
     return this->mCourse->mMapGrid[param_2][param_3];
@@ -223,8 +228,8 @@ ARM unk8 MapManager::func_ov00_02083614(s32 param_2) {
 
 ARM bool MapManager::GetEntrancePos(Vec3p *pos, unk32 entranceId) {
     Vec3p *entrancePos = (Vec3p *) this->mMap->FindEntrance(entranceId);
-    int y              = entrancePos->y;
-    int z              = entrancePos->z;
+    s32 y              = entrancePos->y;
+    s32 z              = entrancePos->z;
     pos->x             = entrancePos->x;
     pos->y             = y;
     pos->z             = z;
@@ -245,11 +250,43 @@ ARM bool MapManager::func_ov00_02083664(Vec3p *param_2, unk32 entranceId) {
     return false;
 }
 
-s32 MapManager::func_ov00_020836bc(u32 param_2, unk32 *param_3) {}
-s32 MapManager::GetTriggerBoundingBoxes(u32 param_2, AABB *param_3, u32 param_4) {}
-unk8 MapManager::func_ov00_020836dc(unk32 param_2, unk32 param_3) {}
-bool MapManager::func_ov00_02083770(u32 param_2, unk32 param_3) {}
-bool MapManager::func_ov00_02083780(unk32 param_2) {}
+ARM s32 MapManager::func_ov00_020836bc(s32 param_2, AABB *param_3) {
+    return this->mMap->GetTriggerBoundingBox(param_2, param_3);
+}
+
+ARM s32 MapManager::GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4) {
+    return this->mMap->GetTriggerBoundingBoxes(param_2, param_3, param_4);
+}
+
+ARM bool MapManager::func_ov00_020836dc(u32 type, u32 actorId) {
+    bool state;
+    Actor *actor;
+    Vec3p playerPos;
+
+    if (actorId < 2) {
+        playerPos.x = gPlayerPos->x;
+        playerPos.y = gPlayerPos->y;
+        playerPos.z = gPlayerPos->z;
+    } else {
+        actor = gActorManager->FindActorById(actorId);
+        if (actor == NULL) {
+            return false;
+        }
+        playerPos.x = *(s32 *) (actor + 0x48);
+        playerPos.y = *(s32 *) (actor + 0x4c);
+        playerPos.z = *(s32 *) (actor + 0x50);
+    }
+    return this->IsTriggerTypeOverlapped(type, &playerPos);
+}
+
+ARM bool MapManager::IsTriggerTypeOverlapped(u32 type, Vec3p *pos) {
+    return this->mMap->IsTriggerTypeOverlapped(type, pos);
+}
+
+ARM bool MapManager::GetOverlappingTrigger(Vec3p *param_2) {
+    return this->mMap->GetOverlappingTrigger(param_2);
+}
+
 bool MapManager::func_ov00_02083790(unk32 param_2) {}
 unk8 MapManager::func_ov00_02083840(unk32 param_2) {}
 bool MapManager::func_ov00_020838c8(s32 param_2) {}
