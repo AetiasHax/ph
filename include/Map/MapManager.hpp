@@ -123,8 +123,8 @@ public:
     unk32 func_ov00_02083588();
     unk32 func_ov00_020835a4();
     unk32 func_ov00_020835b4();
-    s8 func_ov00_020835c4(s32 param_2, unk32 param_3);
-    bool func_ov00_020835e4(s32 param_2, unk32 *param_3, unk32 *param_4);
+    unk8 func_ov00_020835c4(s32 param_2, unk32 param_3);
+    bool func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4);
     unk32 func_ov00_020835f4(s32 param_2);
     void func_ov00_02083604(s32 param_2);
     unk8 func_ov00_02083614(s32 param_2);

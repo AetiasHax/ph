@@ -62,7 +62,7 @@ unk8 MapBase::GetTileX(unk32 worldX) {}
 unk8 MapBase::GetTileY(unk32 worldZ) {}
 bool MapBase::IsInBounds(Vec3p *tileWorldPos) {}
 s32 MapBase::AddEntrance(Entrance *param_2) {}
-unk8 MapBase::FindEntrance(unk32 id) {}
+Entrance *MapBase::FindEntrance(unk32 id) {}
 unk8 MapBase::func_ov00_0207f924(unk32 param_2) {}
 unk8 MapBase::func_ov00_0207f934() {}
 unk8 MapBase::func_ov00_0207f948(unk32 param_2) {}

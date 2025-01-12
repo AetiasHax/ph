@@ -196,7 +196,7 @@ public:
     unk8 GetTileY(unk32 worldZ);
     bool IsInBounds(Vec3p *tileWorldPos);
     s32 AddEntrance(Entrance *param_2);
-    unk8 FindEntrance(unk32 id);
+    Entrance *FindEntrance(unk32 id);
     unk8 func_ov00_0207f924(unk32 param_2);
     unk8 func_ov00_0207f934();
     unk8 func_ov00_0207f948(unk32 param_2);

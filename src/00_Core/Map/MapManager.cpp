@@ -201,16 +201,50 @@ ARM unk32 MapManager::func_ov00_020835b4() {
     return this->mCourse->Get_Unk_c8_04();
 }
 
-ARM s8 MapManager::func_ov00_020835c4(s32 param_2, unk32 param_3) {
+ARM unk8 MapManager::func_ov00_020835c4(s32 param_2, unk32 param_3) {
     return this->mCourse->func_ov00_0207d404(param_2, 0, param_3);
 }
 
-bool MapManager::func_ov00_020835e4(s32 param_2, unk32 *param_3, unk32 *param_4) {}
-unk32 MapManager::func_ov00_020835f4(s32 param_2) {}
-void MapManager::func_ov00_02083604(s32 param_2) {}
-unk8 MapManager::func_ov00_02083614(s32 param_2) {}
-bool MapManager::GetEntrancePos(Vec3p *param_2, unk32 entranceId) {}
-bool MapManager::func_ov00_02083664(Vec3p *param_2, unk32 entranceId) {}
+ARM bool MapManager::func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4) {
+    return this->mCourse->func_ov00_0207caa8(param_2, param_3, param_4);
+}
+
+ARM unk32 MapManager::func_ov00_020835f4(s32 param_2) {
+    return this->mCourse->func_ov00_0207cb30(param_2);
+}
+
+ARM void MapManager::func_ov00_02083604(s32 param_2) {
+    this->mCourse->func_ov00_0207cbe8(param_2);
+}
+
+ARM unk8 MapManager::func_ov00_02083614(s32 param_2) {
+    return this->mCourse->func_ov00_0207cc24(param_2);
+}
+
+ARM bool MapManager::GetEntrancePos(Vec3p *pos, unk32 entranceId) {
+    Vec3p *entrancePos = (Vec3p *) this->mMap->FindEntrance(entranceId);
+    int y              = entrancePos->y;
+    int z              = entrancePos->z;
+    pos->x             = entrancePos->x;
+    pos->y             = y;
+    pos->z             = z;
+    //*&pos[1].x       = *&entrancePos[1].x;
+    //*(&pos[1].x + 2) = *(&entrancePos[1].x + 2);
+    // pos[1].y = entrancePos[1].y;
+    return true;
+}
+
+ARM bool MapManager::func_ov00_02083664(Vec3p *param_2, unk32 entranceId) {
+    Vec3p entrancePos;
+    if (this->GetEntrancePos(&entrancePos, entranceId)) {
+        param_2->x = entrancePos.x;
+        param_2->y = entrancePos.y;
+        param_2->z = entrancePos.z;
+        return true;
+    }
+    return false;
+}
+
 s32 MapManager::func_ov00_020836bc(u32 param_2, unk32 *param_3) {}
 s32 MapManager::GetTriggerBoundingBoxes(u32 param_2, AABB *param_3, u32 param_4) {}
 unk8 MapManager::func_ov00_020836dc(unk32 param_2, unk32 param_3) {}
