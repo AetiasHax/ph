@@ -12,9 +12,9 @@ void MapBase::func_ov00_0207de68(unk32 param_2) {}
 void MapBase::func_ov00_0207de88() {}
 void MapBase::func_ov00_0207dea0(bool param_2) {}
 unk8 MapBase::vfunc_b0(unk32 param_2, unk32 param_3) {}
-bool MapBase::func_ov00_0207e08c(unk32 param_2, unk32 param_3) {}
-s32 MapBase::func_ov00_0207e0f0(unk32 param_2) {}
-s32 MapBase::func_ov00_0207e28c(unk32 param_2) {}
+bool MapBase::func_ov00_0207e08c(s32 *param_2, s32 param_3) {}
+s32 MapBase::func_ov00_0207e0f0(s32 param_2) {}
+s32 MapBase::func_ov00_0207e28c(s32 param_2) {}
 void MapBase::vfunc_b4() {}
 void MapBase::vfunc_48() {}
 unk32 MapBase::vfunc_50() {}

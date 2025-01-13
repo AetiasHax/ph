@@ -28,7 +28,7 @@ struct CourseProgress {
 
 class Course : public SysObject {
 public:
-    /* 000 */ unk32 mIndex;
+    /* 000 */ s32 mIndex;
     /* 004 */ CourseType mType;
     /* 008 */ unk32 mUnk_008;
     /* 00c */ char mName[0x10];

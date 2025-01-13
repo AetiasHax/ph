@@ -133,7 +133,7 @@ public:
     /* 40 */ virtual void vfunc_40();
     /* 44 */ virtual void vfunc_44();
     /* 48 */ virtual void vfunc_48();
-    /* 4c */ virtual void vfunc_4c() = 0;
+    /* 4c */ virtual s32 vfunc_4c() = 0;
     /* 50 */ virtual unk32 vfunc_50();
     /* 54 */ virtual unk32 vfunc_54();
     /* 58 */ virtual unk32 vfunc_58();
@@ -171,9 +171,9 @@ public:
     void func_ov00_0207de68(unk32 param_2);
     void func_ov00_0207de88();
     void func_ov00_0207dea0(bool param_2);
-    bool func_ov00_0207e08c(unk32 param_2, unk32 param_3);
-    s32 func_ov00_0207e0f0(unk32 param_2);
-    s32 func_ov00_0207e28c(unk32 param_2);
+    bool func_ov00_0207e08c(s32 *param_2, s32 param_3);
+    s32 func_ov00_0207e0f0(s32 param_2);
+    s32 func_ov00_0207e28c(s32 param_2);
     static unk8 func_ov00_0207e940(unk8 *param_1);
     static unk8 func_ov00_0207e968();
     static unk8 func_ov00_0207e96c();

@@ -3,21 +3,88 @@
 #include "Actor/ActorManager.hpp"
 #include "Player/PlayerBase.hpp"
 
-void MapManager::func_ov00_020820ec(unk32 *param_2) {}
-void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4) {}
+ARM void MapManager::GetCourseDungeonProgress(CourseProgress *param_2) {
+    this->mCourse->GetDungeonProgress(param_2);
+}
+
+ARM void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4) {
+    this->mCourse->func_ov00_0207ca28(param_2, param_3, param_4);
+}
+
 unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 param_3) {}
-unk8 MapManager::func_ov00_0208230c(unk32 param_2) {}
-unk8 MapManager::func_ov00_02082348(unk32 param_2) {}
-void MapManager::func_ov00_020823a4(unk32 param_2) {}
-unk8 MapManager::func_ov00_020823b4() {}
-bool MapManager::func_ov00_020823c4(unk32 *param_2, s32 param_3) {}
-s32 MapManager::func_ov00_020823d4(s32 param_2) {}
-s32 MapManager::func_ov00_020823e4(s32 param_2) {}
-unk8 MapManager::MapData_vfunc_b4() {}
-unk8 MapManager::MapData_vfunc_9c() {}
-s32 MapManager::func_ov00_02082424() {}
-unk8 MapManager::func_ov00_02082454(unk32 param_2, unk32 param_3) {}
-unk8 MapManager::func_ov00_02082494(unk32 param_2) {}
+
+ARM void MapManager::func_ov00_0208230c(s32 *param_2) {
+    *param_2                         = this->mCourse->mIndex;
+    Course *course                   = this->mCourse;
+    *(unk8 *) ((u32) param_2 + 0x12) = course->mMapGrid[(u8) course->mCurrMapPos.x][(u8) course->mCurrMapPos.y];
+    *(unk8 *) ((u32) param_2 + 0x13) = this->mUnk_0c;
+}
+
+ARM void MapManager::func_ov00_02082348(unk32 param_2) {
+    // s32 var[4];
+    // var[0] = 0x47;
+    // var[1] = 0;
+    // var[2] = 0;
+    // var[3] = 0xfffffffe;
+    // this->func_ov00_0208230c(var);
+    // func_ov00_02078bf0(var, param2) ???
+}
+
+ARM void MapManager::func_ov00_020823a4(unk32 param_2) {
+    this->mMap->func_ov00_0207de68(param_2);
+}
+
+ARM void MapManager::func_ov00_020823b4() {
+    this->mMap->func_ov00_0207de88();
+}
+
+ARM bool MapManager::func_ov00_020823c4(s32 *param_2, s32 param_3) {
+    return this->mMap->func_ov00_0207e08c(param_2, param_3);
+}
+
+ARM s32 MapManager::func_ov00_020823d4(s32 param_2) {
+    return this->mMap->func_ov00_0207e0f0(param_2);
+}
+
+ARM s32 MapManager::func_ov00_020823e4(s32 param_2) {
+    return this->mMap->func_ov00_0207e28c(param_2);
+}
+
+ARM void MapManager::MapData_vfunc_b4() {
+    this->mMap->vfunc_b4();
+}
+
+ARM void MapManager::MapData_vfunc_9c() {
+    this->mMap->vfunc_9c();
+}
+
+ARM s32 MapManager::func_ov00_02082424() {
+    s32 var = this->mMap->vfunc_4c();
+    if (var == 2) {
+        // var = this->mMap->func_ov015_02129c14(); // Does not exist.
+        return var;
+    }
+    return 0;
+}
+
+ARM bool MapManager::func_ov00_02082454(Vec3p *param_2, Vec3p *param_3) {
+    s32 var = this->mMap->vfunc_4c();
+    if (var == 2) {
+        bool state;// = this->mMap->func_ov015_02129c24(param_2, param_3); // Does not exist.
+        return state;
+    }
+    return false;
+}
+
+ARM bool MapManager::func_ov00_02082494(s32 param_2) {
+    s32 var = this->mMap->vfunc_4c();
+    if (var == 2) {
+        bool state;// = this->mMap->func_ov015_02129c34(param_2); // Does not exist.
+        return state;
+    }
+    return false;
+}
+
 unk8 MapManager::func_ov00_020824cc(unk32 param_2) {}
 unk8 MapManager::func_ov00_02082504() {}
 unk8 *MapManager::func_ov00_02082538() {}
@@ -55,7 +122,7 @@ unk8 MapManager::GetCourseData_Unk_1c() {}
 unk8 MapManager::GetCourseData_Unk_1d() {}
 unk8 MapManager::func_ov00_02082d40() {}
 u32 MapManager::func_ov00_02082d74(unk32 param_2) {}
-unk8 MapManager::func_ov00_02082d84() {}
+ARM void MapManager::func_ov00_02082d84() {}
 bool MapManager::func_ov00_02082e1c(s32 *param_2, s32 *param_3) {}
 unk8 MapManager::func_ov00_0208306c() {}
 void MapManager::func_ov00_0208315c(s32 *param_2, s32 *param_3) {}
@@ -66,7 +133,9 @@ ARM bool MapManager::GetCourseData_Unk_25c() {
     return this->mCourse->mUnk_25c;
 }
 
-ARM bool MapManager::func_ov00_02083318(unk32 param_2) {}
+ARM bool MapManager::IsMapInMainGrid(u32 map) {
+    return this->mCourse->IsMapInMainGrid(map);
+}
 
 ARM bool MapManager::func_ov00_02083328() {
     u32 map = (u32) this->func_ov00_02082d08();
@@ -186,7 +255,7 @@ ARM void MapManager::func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 par
     param_2->z       = mapCenter->z;
 }
 
-void MapManager::func_ov00_02083560(Vec2b *param_1, MapManager *param_2, u32 param_3) {
+ARM void MapManager::func_ov00_02083560(Vec2b *param_1, MapManager *param_2, u32 param_3) {
     param_2->mCourse->FindMapGridPos(param_1, param_2->mCourse, param_3);
 }
 
