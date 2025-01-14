@@ -11,7 +11,7 @@ void MapBase::func_ov00_0207ddf8(bool param_2) {}
 void MapBase::func_ov00_0207de68(unk32 param_2) {}
 void MapBase::func_ov00_0207de88() {}
 void MapBase::func_ov00_0207dea0(bool param_2) {}
-unk8 MapBase::vfunc_b0(unk32 param_2, unk32 param_3) {}
+void MapBase::vfunc_b0(unk32 param_2, unk32 param_3) {}
 bool MapBase::func_ov00_0207e08c(s32 *param_2, s32 param_3) {}
 s32 MapBase::func_ov00_0207e0f0(s32 param_2) {}
 s32 MapBase::func_ov00_0207e28c(s32 param_2) {}
@@ -41,10 +41,10 @@ unk32 MapBase::vfunc_a4() {}
 void MapBase::vfunc_a8() {}
 void MapBase::vfunc_ac() {}
 unk32 MapBase::vfunc_78() {}
-unk32 MapBase::vfunc_7c() {}
+void MapBase::vfunc_7c() {}
 unk32 MapBase::vfunc_80() {}
 void MapBase::vfunc_84(unk32 param_2) {}
-unk8 MapBase::func_ov00_0207f38c(unk32 param_2) {}
+bool MapBase::func_ov00_0207f38c(s32 *param_2) {}
 unk8 MapBase::vfunc_90(unk32 param_2, unk32 param_3, unk32 param_4) {}
 void MapBase::vfunc_94() {}
 void MapBase::func_ov00_0207f4a4(Vec2s *param_2, unk32 param_3) {}
@@ -103,7 +103,7 @@ void MapBase_Unk2::func_ov00_02080ad0(TriggerBase **param_2, TriggerBase **param
 unk8 MapBase::func_ov00_02080b24(Vec2b *param_2) {}
 void MapBase::func_ov00_02080d08(unk32 param_2) {}
 void MapBase::vfunc_bc() {}
-void MapBase::vfunc_98() {}
+void MapBase::vfunc_98(unk32 param_2, unk32 param_3, unk32 param_4) {}
 void MapBase::vfunc_c0() {}
 bool MapBase::TriggerOfType_vfunc_10(unk32 type) {}
 unk32 TriggerBase::vfunc_10() {}
