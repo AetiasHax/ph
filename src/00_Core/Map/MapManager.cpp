@@ -200,7 +200,6 @@ ARM void MapManager::CreateMap(unk32 mapType, unk32 param_3, unk32 param_4) {
         }
         this->mMap = mapBase;
     }
-    return;
 }
 
 ARM void MapManager::DestroyMap() {
@@ -484,7 +483,7 @@ ARM void MapManager::func_ov00_0208306c(s32 *param_2, s32 *param_3) {
     local_1c.y = gPlayerPos->y;
     local_1c.x = gPlayerPos->x;
     local_1c.z = gPlayerPos->z;
-    this->func_ov00_02083a1c(auStack_2c, this, &local_1c);
+    this->func_ov00_02083a1c((s32 *) auStack_2c, this, &local_1c);
     this->func_ov00_02082d84(auStack_2c, param_2, param_3);
 }
 
@@ -551,6 +550,7 @@ ARM void MapManager::func_ov00_02083298(u32 param_2, Vec3p *param_3, s32 *param_
              0x800 >>
          0xc); */
 
+    // [!] BELOW IS NOT CODE:
     // PTR_MapManager_Unk1_overlay_d_0__020e24c8_overlay_d_0__02083300
     // PTR_MapManager_Unk2_overlay_d_0__020e24e8_overlay_d_0__020832fc
     // PTR_MapManager_Unk1_overlay_d_0__020e24c8.field1_0x4_overlay_d_0__02083308
@@ -786,34 +786,246 @@ ARM bool MapManager::GetOverlappingTrigger(Vec3p *param_2) {
     return this->mMap->GetOverlappingTrigger(param_2);
 }
 
-bool MapManager::func_ov00_02083790(unk32 param_2) {}
-unk8 MapManager::func_ov00_02083840(unk32 param_2) {}
-bool MapManager::func_ov00_020838c8(s32 param_2) {}
-bool MapManager::func_ov00_020838d8(s32 param_2) {}
-bool MapManager::func_ov00_020838e8(u32 param_2, unk32 *param_3) {}
-char MapManager::func_ov00_020838f8(unk32 *param_2) {}
-bool MapManager::func_ov00_02083908(char param_2, unk32 *param_3) {}
-void MapManager::func_ov00_02083918(s32 param_2, s32 *param_3) {}
-void MapManager::func_ov00_02083928(unk8 *param_2, s32 param_3) {}
-unk32 MapManager::func_ov00_02083938(s32 param_2) {}
-unk8 MapManager::Set_MapData_Unk_16(unk8 value, unk32 index) {}
-void MapManager::func_ov00_02083958(s32 param_2) {}
-void MapManager::func_ov00_02083968(u32 param_2, unk8 *param_3) {}
-bool MapManager::func_ov00_02083978(unk32 param_2, Vec3p *param_3) {}
-bool MapManager::func_ov00_020839b4(s32 param_2) {}
-bool MapManager::func_ov00_020839c4(s32 param_2) {}
-unk8 MapManager::func_ov00_020839d4() {}
-unk8 MapManager::func_ov00_020839f8() {}
-void MapManager::func_ov00_02083a1c(unk8 *param_1, MapManager *param_2, Vec3p *param_3) {}
-unk8 MapManager::func_ov00_02083a54(u8 *param_1, MapManager *param_2, s32 *param_3, u8 param_4, u8 param_5) {}
-unk8 MapManager::func_ov00_02083b84() {}
-unk8 MapManager::func_ov00_02083bac() {}
-unk8 MapManager::func_ov00_02083bd4() {}
-unk8 MapManager::func_ov00_02083bfc() {}
-unk8 MapManager::func_ov00_02083c24(unk32 param_2) {}
-unk8 MapManager::func_ov00_02083c50(unk32 param_2) {}
-unk8 MapManager::func_ov00_02083c7c(Vec3p *param_2, unk32 param_3) {}
-unk8 MapManager::func_ov00_02083ce8(unk8 param_1, unk8 param_2, unk8 param_3, unk8 param_4, unk32 param_5) {}
+ARM bool MapManager::func_ov00_02083790(s32 param_2) {
+    unk8 *puVar1;
+    unk8 *puVar2;
+    bool bVar3;
+    s32 iVar4;
+    s32 iStack_18;
+    s32 aiStack_14[2];
+
+    // puVar2 = PTR_PTR_overlay_d_0__02083834;
+    // puVar1 = PTR_DWORD_overlay_d_0__02083830;
+    if (param_2 != 0) {
+        // *(s32 *) (*(s32 *) (*(s32 *) PTR_DWORD_overlay_d_0__02083830 + 8) + 0x1b4) = param_2;
+        *(s32 *) (*(s32 *) (*(s32 *) puVar1 + 4) + 0x1b4) = param_2;
+        // iVar4 = UnkStruct_027e0d38::FUN_overlay_d_0__02078b40(*(UnkStruct_027e0d38 **) puVar2);
+        if ((iVar4 != 0) && (bVar3 = this->func_ov00_02082e1c(aiStack_14, &iStack_18), !bVar3)) {
+            // FUN_overlay_d_0__02079898(*(undefined4 *) PTR_DWORD_overlay_d_0__02083838, param_2, 0x10);
+            gActorManager->func_ov00_020c3ce8(param_2, true);
+        }
+        bVar3 = this->mMap->AnyTrigger_func_0c(param_2);
+        return bVar3;
+    }
+    return true;
+}
+
+ARM bool MapManager::func_ov00_02083840(s32 param_2) {
+    unk8 *puVar1;
+    unk8 *puVar2;
+    bool bVar3;
+    s32 iVar4;
+
+    // puVar2 = PTR_DWORD_overlay_d_0__020838c0;
+    // puVar1 = PTR_DWORD_overlay_d_0__020838bc;
+    if (param_2 != 0) {
+        // *(unk32 *) (*(int *) (*(int *) PTR_DWORD_overlay_d_0__020838bc + 8) + 0x1b4) = 0xffffffff;
+        // *(unk32 *) (*(int *) (*(int *) puVar1 + 4) + 0x1b4)                          = 0xffffffff;
+        // iVar4 = FUN_overlay_d_0__02078fe8(*(unk32 *) puVar2);
+        if (-1 < iVar4) {
+            // FUN_overlay_d_0__020798bc(*(unk32 *) PTR_DWORD_overlay_d_0__020838c0, 0x10);
+            gActorManager->func_ov00_020c3ce8(param_2, false);
+        }
+        bVar3 = this->mMap->TriggerOfType_vfunc_10(param_2);
+        return bVar3;
+    }
+    return true;
+}
+
+ARM bool MapManager::AddTrigger(s32 param_2) {
+    return this->mMap->AddTrigger(param_2);
+}
+
+ARM bool MapManager::func_ov00_020838d8(s32 param_2) {
+    return this->mMap->func_ov00_0207ff88(param_2);
+}
+
+ARM bool MapManager::FindExit(u32 param_2, Exit *param_3) {
+    return this->mMap->FindExit(param_2, param_3);
+}
+
+ARM char MapManager::func_ov00_020838f8(Exit *param_2) {
+    return this->mMap->func_ov00_02080140(param_2);
+}
+
+ARM bool MapManager::func_ov00_02083908(char id, CameraViewpoint *param_3) {
+    return this->mMap->FindViewpoint_Unk_4(id, param_3);
+}
+
+ARM void MapManager::func_ov00_02083918(s32 param_2, CameraViewpoint *param_3) {
+    this->mMap->FindViewpoint_Unk_0(param_2, param_3);
+}
+
+ARM void MapManager::GetCurrentViewpoint(CameraViewpoint *param_2, s32 param_3) {
+    this->mMap->GetCurrentViewpoint(param_2, param_3);
+}
+
+ARM unk32 MapManager::func_ov00_02083938(s32 param_2) {
+    return this->mMap->GetCurrentViewpoint_Unk_00(param_2);
+}
+
+ARM void MapManager::SetCurrentViewpointId(unk8 value, s32 index) {
+    this->mMap->mCurrViewpointId[index] = value;
+}
+
+ARM void MapManager::func_ov00_02083958(s32 param_2) {
+    this->mMap->func_ov00_0207f924(param_2);
+}
+
+ARM void MapManager::func_ov00_02083968(u32 param_2, unk8 *param_3) {
+    this->mMap->func_ov00_02080824(param_2, param_3);
+}
+
+ARM bool MapManager::func_ov00_02083978(Vec3p *param_2, Vec3p *param_3) {
+    s32 iVar1 = this->mMap->func_ov00_02080a78(param_2);
+    if (iVar1 != 0) {
+        param_3->x = *(s32 *) (iVar1 + 0x8);
+        param_3->y = *(s32 *) (iVar1 + 0xc);
+        param_3->z = *(s32 *) (iVar1 + 0x10);
+        return true;
+    }
+    return false;
+}
+
+ARM bool MapManager::func_ov00_020839b4(s32 param_2) {
+    return this->mMap->AddUnk_130(param_2);
+}
+
+ARM bool MapManager::func_ov00_020839c4(s32 param_2) {
+    return this->mMap->func_ov00_020809b8(param_2);
+}
+
+ARM s32 MapManager::func_ov00_020839d4(s32 param_2) {
+    return this->mMap->GetClampedTileX(param_2 - this->GetMapCenterX());
+}
+
+ARM s32 MapManager::func_ov00_020839f8(s32 param_2) {
+    return this->mMap->GetClampedTileY(param_2 - this->GetMapCenterZ());
+}
+
+ARM void MapManager::func_ov00_02083a1c(s32 *param_1, MapManager *param_2, Vec3p *param_3) {
+    *param_1   = param_2->func_ov00_020839f8(param_3->z);
+    param_1[1] = param_2->func_ov00_020839d4(param_3->x);
+}
+
+ARM void MapManager::func_ov00_02083a54(u8 *param_1, MapManager *param_2, s32 *param_3, s32 param_4, s32 *param_5) {
+    bool bVar1;
+    unk8 uVar2;
+    unk8 uVar3;
+    s32 iVar4;
+    u32 uVar5;
+    s32 *piVar6;
+    Vec3p local_38;
+    Vec3p local_2c;
+    Vec3p VStack_20;
+
+    piVar6 = param_3;
+    iVar4  = param_2->GetCourseData_Unk_25c();
+    if (iVar4 == 0) {
+        uVar2      = param_2->func_ov00_020839f8(param_3[2]);
+        uVar3      = param_2->func_ov00_020839d4(*param_3);
+        *param_1   = uVar3;
+        param_1[1] = uVar2;
+        return;
+    }
+    if (param_4 != -1) {
+        piVar6 = param_5;
+    }
+    if (param_4 != -1 && piVar6 != (int *) 0xffffffff) {
+        uVar5 = (u32) * (u8 *) ((s32) piVar6 + (s32) (param_2->mCourse->mMapGrid + param_4));
+    } else {
+        uVar5 = param_2->func_ov00_02082d08();
+    }
+    bVar1 = param_2->IsMapInMainGrid(uVar5);
+    if (!bVar1) {
+        uVar2      = param_2->func_ov00_020839f8(param_3[2]);
+        uVar3      = param_2->func_ov00_020839d4(*param_3);
+        *param_1   = uVar3;
+        param_1[1] = uVar2;
+        return;
+    }
+    param_2->func_ov00_02083524(&VStack_20, param_4, *param_5);
+    local_38.x = *param_3;
+    local_38.y = param_3[1];
+    local_38.z = param_3[2];
+    Vec3p_Sub(&local_38, &VStack_20, &local_2c);
+    uVar2      = param_2->mMap->GetClampedTileY(local_2c.z);
+    uVar3      = param_2->mMap->GetClampedTileX(local_2c.x);
+    *param_1   = uVar3;
+    param_1[1] = uVar2;
+}
+
+ARM s32 MapManager::GetTileStartX(unk32 x) {
+    return this->GetMapCenterX() + this->mMap->GetTileStartX(x);
+}
+
+ARM s32 MapManager::GetTileStartZ(unk32 z) {
+    return this->GetMapCenterZ() + this->mMap->GetTileStartZ(z);
+}
+
+ARM s32 MapManager::GetTileEndX(unk32 x) {
+    return this->GetMapCenterX() + this->mMap->GetTileEndX(x);
+}
+
+ARM s32 MapManager::GetTileEndZ(unk32 z) {
+    return this->GetMapCenterZ() + this->mMap->GetTileEndZ(z);
+}
+
+ARM s32 MapManager::func_ov00_02083c24(unk32 x) {
+    return this->GetMapCenterX() + this->mMap->GetTileStartX(x) + 0x800;
+}
+
+ARM s32 MapManager::func_ov00_02083c50(unk32 z) {
+    return this->GetMapCenterZ() + this->mMap->GetTileStartZ(z) + 0x800;
+}
+
+ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, u32 param_3) {
+    Vec3p local_28; // Unused. So why, ghidra? Why? Tell me why.
+    param_2->x = this->func_ov00_02083c24(param_3 & 0xff);
+    param_2->z = this->func_ov00_02083c50(param_3 >> 8 & 0xff);
+    param_2->y = this->MapData_vfunc_68();
+}
+
+ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5) {
+    bool bVar1;
+    s32 iVar2;
+    u32 uVar3;
+    Vec3p local_2c;
+
+    uVar3 = param_3;
+    iVar2 = param_1->GetCourseData_Unk_25c();
+    if (iVar2 == 0) {
+        iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
+        *param_2   = iVar2 + 0x800;
+        iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
+        param_2[2] = iVar2 + 0x800;
+    } else {
+        if (param_4 != -1) {
+            uVar3 = param_5;
+        }
+        if (param_4 != -1 && uVar3 != 0xffffffff) {
+            uVar3 = (u32) (u8) param_1->mCourse->mMapGrid[param_4][uVar3];
+        } else {
+            uVar3 = param_1->func_ov00_02082d08();
+        }
+        bVar1 = param_1->IsMapInMainGrid(uVar3);
+        if (bVar1) {
+            param_1->func_ov00_02083524(&local_2c, param_4, param_5);
+            iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
+            *param_2   = local_2c.x + iVar2 + 0x800;
+            iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
+            param_2[2] = local_2c.z + iVar2 + 0x800;
+        } else {
+            iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
+            *param_2   = iVar2 + 0x800;
+            iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
+            param_2[2] = iVar2 + 0x800;
+        }
+    }
+    iVar2      = param_1->MapData_vfunc_68();
+    param_2[1] = iVar2;
+}
+
 unk8 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {}
 unk8 MapManager::MapData_vfunc_60() {}
 unk8 MapManager::func_ov00_02083e70() {}
