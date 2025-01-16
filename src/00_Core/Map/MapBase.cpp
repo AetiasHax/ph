@@ -23,13 +23,13 @@ unk32 MapBase::vfunc_58() {}
 unk32 MapBase::vfunc_5c() {}
 unk32 MapBase::vfunc_60() {}
 unk32 MapBase::vfunc_64() {}
-unk8 MapBase::vfunc_68(unk32 param_2, unk32 param_3) {}
+unk8 MapBase::vfunc_68() {}
 unk8 MapBase::func_ov00_0207e940(unk8 *param_1) {}
 unk8 MapBase::func_ov00_0207e968() {}
 unk8 MapBase::func_ov00_0207e96c() {}
 unk8 MapBase::vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4) {}
 unk32 MapBase::vfunc_70(Vec3p *param_2) {}
-s32 *MapBase::vfunc_74(Vec3p *param_2) {}
+s32 MapBase::vfunc_74(Vec3p *param_2) {}
 unk8 MapBase::func_ov00_0207f100() {}
 bool MapBase::func_ov00_0207f104(unk32 param_2, unk32 param_3) {}
 unk32 MapBase::func_ov00_0207f1f4(Vec3p *param_2, unk32 *param_3) {}
