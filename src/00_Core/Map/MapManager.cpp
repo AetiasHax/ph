@@ -3,6 +3,10 @@
 #include "Actor/ActorManager.hpp"
 #include "Player/PlayerBase.hpp"
 
+extern void func_ov000_0208cc88(s32 *param1);
+
+extern s32 *data_027e0f68;
+
 ARM void MapManager::GetCourseDungeonProgress(CourseProgress *param_2) {
     this->mCourse->GetDungeonProgress(param_2);
 }
@@ -300,7 +304,7 @@ ARM void MapManager::MapData_vfunc_44() {
     this->mMap->vfunc_44();
 }
 
-ARM void MapManager::func_ov00_02082808(s32 param_2, unk32 param_3, unk32 param_4) {
+ARM void MapManager::func_ov00_02082808(s32 param_2) {
     // How to define PTR_027e0d38 ?
     // if (*(int*)(*(int*)PTR_027e0d38 + 0x14) == 1) {
     //    return;
@@ -312,13 +316,13 @@ ARM void MapManager::func_ov00_02082808(s32 param_2, unk32 param_3, unk32 param_
         if (var1 == var2) {
             return;
         }
-        // func_ov00_020d70a4(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_4); // And these?
+        // func_ov00_020d70a4(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_3); // And these?
     } else {
         // var2 = func_ov00_020a5e9c(*(s32 *) PTR_027e0d38 + 0xc);
         if (var2 == 0) {
             // func_ov015_021849a4(DWORD_overlay_d_15_bss__02190458);
         }
-        // func_ov00_020a5e9c(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_4);
+        // func_ov00_020a5e9c(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_3);
     }
     // var1 = func_ov00_020a5e9c(*(s32 *) PTR_027e0d38 + 0xc);
     if (var1 == 0) {
@@ -427,9 +431,9 @@ ARM unk32 *MapManager::func_ov00_02082adc() {
 }
 
 ARM void MapManager::func_ov00_02082af4() {
-    // func_ov00_02082af4(DWORD_027e0f68) // Does not exist.
+    func_ov000_0208cc88(data_027e0f68);
     this->mMap->vfunc_48();
-    // this->func_ov00_02082808(0, ?, ?) // Only 1/3 params specified.
+    this->func_ov00_02082808(0);
     this->mUnk_0a = 1;
     this->mUnk_0b = 0;
 }
@@ -492,7 +496,7 @@ ARM u8 MapManager::GetCurrentMapPosY() {
     return this->mCourse->mCurrMapPos.y;
 }
 
-ARM unk8 MapManager::func_ov00_02082d40() {
+ARM u8 MapManager::func_ov00_02082d40() {
     if (this->mCourse->mType == CourseType_Sea) {
         return this->mCourse->mMapGrid[(u8) this->mCourse->mCurrMapPos.x][(u8) this->mCourse->mCurrMapPos.y];
     }

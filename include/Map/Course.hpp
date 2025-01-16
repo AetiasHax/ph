@@ -35,7 +35,7 @@ public:
     /* 01c */ Vec2b mCurrMapPos; // position in the map grid
     /* 01e */ unk8 mUnk_01e;
     /* 01f */ unk8 mUnk_01f;
-    /* 020 */ unk8 mMapGrid[10][10];
+    /* 020 */ u8 mMapGrid[10][10];
     /* 084 */ Vec2b mMainGrid; // part of the grid where you can walk off screen to another map
     /* 086 */ Vec2b mMainGridSize;
     /* 088 */ s32 mScreenMapOffsetX;
@@ -44,7 +44,7 @@ public:
     /* 094 */ unk32 mUnk_094;
     /* 098 */ AABB mBounds;
     /* 0b0 */ u8 mNumMaps;
-    /* 0b1 */ unk8 mUnk_0b1;
+    /* 0b1 */ u8 mUnk_0b1;
     /* 0b2 */ unk8 mUnk_0b2;
     /* 0b3 */ unk8 mUnk_0b3;
     /* 0b4 */ unk32 mUnk_0b4;

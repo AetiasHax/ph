@@ -72,7 +72,7 @@ public:
     void CreateMap(unk32 mapType, unk32 param_3, unk32 param_4);
     void DestroyMap();
     void MapData_vfunc_44();
-    void func_ov00_02082808(s32 param_2, unk32 param_3, unk32 param_4);
+    void func_ov00_02082808(s32 param_2);
     void MapData_vfunc_7c();
     void MapData_vfunc_84(unk32 param_2);
     bool func_ov00_020828f8(s32 *param_2);
@@ -85,7 +85,7 @@ public:
     u8 func_ov00_02082d08();
     u8 GetCurrentMapPosX();
     u8 GetCurrentMapPosY();
-    unk8 func_ov00_02082d40();
+    u8 func_ov00_02082d40();
     u32 func_ov00_02082d74(unk32 param_2);
     void func_ov00_02082d84(unk8 *param_2, s32 *param_3, s32 *param_4);
     bool func_ov00_02082e1c(s32 *param_2, s32 *param_3);
