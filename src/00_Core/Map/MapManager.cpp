@@ -4,8 +4,12 @@
 #include "Player/PlayerBase.hpp"
 
 extern u32 func_ov000_02078bc4(unk32 param_1);
+extern void func_ov00_02078bf0(s32 *param_1, unk32 param_2);
 extern void func_ov000_0208cc88(s32 *param1);
+extern void func_ov000_0208d620(s32 *param_1);
+extern void func_ov000_0208d680(s32 *param_1);
 extern s32 *func_ov000_02096418(s32 *param_1);
+extern bool func_ov015_02129c44(s32 param_1);
 
 extern s32 *data_027e0f68;
 extern s32 *data_027e0f70;
@@ -114,13 +118,13 @@ ARM void MapManager::func_ov00_0208230c(s32 *param_2) {
 }
 
 ARM void MapManager::func_ov00_02082348(unk32 param_2) {
-    // s32 var[4];
-    // var[0] = 0x47;
-    // var[1] = 0;
-    // var[2] = 0;
-    // var[3] = 0xfffffffe;
-    // this->func_ov00_0208230c(var);
-    // func_ov00_02078bf0(var, param2) ???
+    s32 var[4];
+    var[0] = 0x47;
+    var[1] = 0;
+    var[2] = 0;
+    var[3] = 0xfffffffe;
+    this->func_ov00_0208230c(var);
+    func_ov00_02078bf0(var, param_2);
 }
 
 ARM void MapManager::func_ov00_020823a4(unk32 param_2) {
@@ -181,7 +185,7 @@ ARM bool MapManager::func_ov00_02082494(s32 param_2) {
 ARM bool MapManager::func_ov00_020824cc(s32 param_2) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state;// = this->mMap->func_ov015_02129c44(param_2); // Does not exist.
+        bool state = func_ov015_02129c44(param_2);
         return state;
     }
     return false;
@@ -206,13 +210,11 @@ ARM unk8 *MapManager::func_ov00_02082538() {
 }
 
 ARM void MapManager::func_ov00_02082594() {
-    // func_ov000_0208d620(DWORD_027e0f68) does not exist.
-    return;
+    func_ov000_0208d620(data_027e0f68);
 }
 
 ARM void MapManager::func_ov00_020825ac() {
-    // func_ov000_0208d680(DWORD_027e0f68) does not exist.
-    return;
+    func_ov000_0208d680(data_027e0f68);
 }
 
 ARM s32 MapManager::GetCourseFilePath(char *courseName, char *buf) {
@@ -885,7 +887,7 @@ ARM bool MapManager::func_ov00_02083664(Vec3p *param_2, unk32 entranceId) {
     return false;
 }
 
-ARM s32 MapManager::func_ov00_020836bc(s32 param_2, AABB *param_3) {
+ARM s32 MapManager::GetTriggerBoundingBox(s32 param_2, AABB *param_3) {
     return this->mMap->GetTriggerBoundingBox(param_2, param_3);
 }
 

@@ -130,7 +130,7 @@ public:
     unk8 func_ov00_02083614(s32 param_2);
     bool GetEntrancePos(Vec3p *param_2, unk32 entranceId);
     bool func_ov00_02083664(Vec3p *param_2, unk32 entranceId);
-    s32 func_ov00_020836bc(s32 param_2, AABB *param_3);
+    s32 GetTriggerBoundingBox(s32 param_2, AABB *param_3);
     s32 GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4);
     bool func_ov00_020836dc(u32 param_2, u32 actorId);
     bool IsTriggerTypeOverlapped(u32 param_2, Vec3p *param_3);
