@@ -3,9 +3,12 @@
 #include "Actor/ActorManager.hpp"
 #include "Player/PlayerBase.hpp"
 
+extern u32 func_ov000_02078bc4(unk32 param_1);
 extern void func_ov000_0208cc88(s32 *param1);
+extern s32 *func_ov000_02096418(s32 *param_1);
 
 extern s32 *data_027e0f68;
+extern s32 *data_027e0f70;
 
 ARM void MapManager::GetCourseDungeonProgress(CourseProgress *param_2) {
     this->mCourse->GetDungeonProgress(param_2);
@@ -426,8 +429,8 @@ ARM void MapManager::func_ov00_02082acc() {
     this->mCourse->func_ov00_0207d7bc();
 }
 
-ARM unk32 *MapManager::func_ov00_02082adc() {
-    // func_ov000_02096418(DWORD_027e0f70); // Does not exist.
+ARM s32 *MapManager::func_ov00_02082adc() {
+    return func_ov000_02096418(data_027e0f70);
 }
 
 ARM void MapManager::func_ov00_02082af4() {
@@ -504,7 +507,7 @@ ARM u8 MapManager::func_ov00_02082d40() {
 }
 
 ARM u32 MapManager::func_ov00_02082d74(unk32 param_2) {
-    // return func_ov00_02082d80(param_2); // Does not exist.
+    return func_ov000_02078bc4(param_2);
 }
 
 ARM void MapManager::func_ov00_02082d84(unk8 *param_2, s32 *param_3, s32 *param_4) {
