@@ -153,16 +153,16 @@ ARM ItemModel *ItemManager::GetItemModel(ItemModelId id) {
     return mItemModels[id];
 }
 
-extern unk32 data_027e0fc4;
+extern unk32 gItemModelLoader;
 extern "C" void *func_ov00_020bb3a8(unk32 param1, u32 index);
 extern "C" void func_ov00_020c0bdc(void *param1, unk32 param2);
 ARM void ItemManager::func_ov00_020ad538(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 6);
     func_ov00_020c0bdc(unk1, param1);
 }
 
 ARM void ItemManager::func_ov00_020ad560(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 7);
     func_ov00_020c0bdc(unk1, param1);
 }
 
@@ -171,7 +171,7 @@ ARM ItemModel *ItemManager::GetDungeonItemModel(u32 index) {
 }
 
 ARM void ItemManager::func_ov00_020ad594(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 11);
     func_ov00_020c0bdc(unk1, param1);
 }
 
