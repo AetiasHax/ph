@@ -40,6 +40,11 @@ public:
     /* 0f */ unk8 mUnk_0f;
     /* 10 */
 
+    bool func_01ffbe78(Vec3p *param1, Vec3p *param2, Vec3p *param3, Vec4p *param4);
+    bool func_01ffbf5c(s32 param1, Vec3p *param2, Vec3p *param3, s32 length);
+    bool func_01ffc118(s32 *param1, Vec3p *param2, Vec3p *param3, s32 param4, s32 *param5, u32 param6, s32 *param7);
+    bool func_01ffd1e0(s32 *param1, Vec3p *param2, Vec3p *param3, s32 param4, s32 *param5, u32 param6, s32 *param7);
+
     void func_ov00_020820ec(unk32 *param_2);
     void func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4);
     unk8 func_ov00_0208210c(unk32 param_2, unk32 param_3);

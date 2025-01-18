@@ -58,6 +58,7 @@ q20 Vec3p_Length(Vec3p *a) {}
 void Vec3p_Normalize(Vec3p *vec, Vec3p *out) {}
 void Vec3p_Axpy(q20 a, Vec3p *x, Vec3p *y, Vec3p *out) {}
 q20 Vec3p_Distance(Vec3p *a, Vec3p *b) {}
+void Vec3p_func_01fffc94(Vec3p *a, Vec3p *b);
 
 u32 func_01ff9f3c(s32 a, s32 b) {}
 s32 Atan2(s32 x, s32 y) {}

@@ -120,6 +120,10 @@ q20 Vec3p_Length(Vec3p *a);
 void Vec3p_Normalize(Vec3p *vec, Vec3p *out);
 void Vec3p_Axpy(q20 a, Vec3p *x, Vec3p *y, Vec3p *out);
 q20 Vec3p_Distance(Vec3p *a, Vec3p *b);
+bool Vec3p_TryNormalize(Vec3p *vec);
+q20 Vec3p_DistanceSquared(Vec3p *a, Vec3p *b);
+void Vec3p_Scale(Vec3p *vec, q20 scale);
+bool Vec3p_CalculateNormal(Vec3p *vec, Vec3p *a, Vec3p *b, Vec3p *c);
 
 inline void Vec3p_Rotate(Vec3p *vec, q20 sin, q20 cos, Vec3p *out) {
     out->x += MUL_Q20(vec->z, sin);
