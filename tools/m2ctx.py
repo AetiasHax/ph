@@ -37,8 +37,8 @@ COMMENT_REGEX = r'\/\/.*$|\/\*(?:.|\r|\n)+?\*\/'
 
 with open(args.file, 'r') as f:
     contents = f.read()
-contents = re.sub(COMMENT_REGEX, '', contents, 0, re.MULTILINE)
-includes = re.findall(INCLUDE_REGEX, contents, re.MULTILINE)
+contents = re.sub(COMMENT_REGEX, '', contents, count=0, flags=re.MULTILINE)
+includes = re.findall(INCLUDE_REGEX, contents, flags=re.MULTILINE)
 
 _, suffix = os.path.splitext(args.file)
 
