@@ -21,6 +21,7 @@ public:
 };
 
 class UnkStruct_02032f0c {
+public:
     /* 00 (vtable) */
     /* 04 */ unk32 mUnk_04;
     /* 08 */ unk32 mUnk_08;

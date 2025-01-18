@@ -1449,7 +1449,7 @@ _ZN9SysObjectdaEPv kind:function(arm,size=0xc) addr:0x202ea18
 _ZN18UnkStruct_027e0fe04InitEv kind:function(thumb,size=0x10) addr:0x202ea24
 _ZN18UnkStruct_027e0fe07DisposeEv kind:function(thumb,size=0x1c) addr:0x202ea34
 _ZN18UnkStruct_027e0fe013func_0202ea50Eiii kind:function(thumb,size=0x48) addr:0x202ea50
-_ZN18UnkStruct_027e0fe07DisposeEv kind:function(thumb,size=0x24) addr:0x202ea98
+_ZN18UnkStruct_027e0fe013func_0202ea98Ev kind:function(thumb,size=0x24) addr:0x202ea98
 func_0202eabc kind:function(arm,size=0x80) addr:0x202eabc
 func_0202eb3c kind:function(arm,size=0x58) addr:0x202eb3c
 func_0202eb94 kind:function(arm,size=0x28) addr:0x202eb94
@@ -1862,7 +1862,7 @@ _ZN18UnkStruct_020386d88vfunc_08Ei kind:function(arm,size=0x18) addr:0x2038758
 _ZN18UnkStruct_020386d88vfunc_24Ei kind:function(arm,size=0x1c) addr:0x2038770
 _ZN18UnkStruct_020386d88vfunc_28Ev kind:function(arm,size=0x18) addr:0x203878c
 _ZN18UnkStruct_020386d88vfunc_30Ev kind:function(arm,size=0x28) addr:0x20387a4
-_ZN18UnkStruct_02037750D0Ev kind:function(arm,size=0x14) addr:0x20387cc
+_ZN18UnkStruct_020386d88D0Ev kind:function(arm,size=0x14) addr:0x20387cc
 func_020387e0 kind:function(thumb,size=0xc) addr:0x20387e0
 func_020387ec kind:function(arm,size=0x18) addr:0x20387ec
 func_02038804 kind:function(arm,size=0x18) addr:0x2038804
@@ -2703,7 +2703,7 @@ data_02057994 kind:data(any) addr:0x2057994
 data_02057998 kind:data(any) addr:0x2057998
 data_0205799c kind:data(any) addr:0x205799c
 _ZTV18UnkStruct_02032f0c kind:data(any) addr:0x20579c8
-_ZTV18UnkStruct_02032f0c kind:data(any) addr:0x20579f8
+_ZTV18UnkStruct_02032e7c kind:data(any) addr:0x20579f8
 data_02057a00 kind:data(any) addr:0x2057a00
 data_02057a08 kind:data(any) addr:0x2057a08
 data_02057a10 kind:data(any) addr:0x2057a10
