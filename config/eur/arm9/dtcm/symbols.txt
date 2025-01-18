@@ -1,7 +1,6 @@
 data_027e0000 kind:data(any) addr:0x27e0000
 data_027e0004 kind:data(any) addr:0x27e0004
 data_027e0014 kind:data(any) addr:0x27e0014
-data_027e0021 kind:data(any) addr:0x27e0021
 data_027e006c kind:data(any) addr:0x27e006c
 data_027e0070 kind:data(any) addr:0x27e0070
 data_027e0074 kind:data(any) addr:0x27e0074

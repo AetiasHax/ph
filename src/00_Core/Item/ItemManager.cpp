@@ -29,7 +29,7 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
     save->numArrows             = (u8) (*mAmmo)[ItemFlag_Bow];
     save->equippedItem          = (u8) mEquippedItem;
     save->salvagedTreasureFlags = mSalvagedTreasureFlags;
-    save->hourglassSeconds      = FastDivide(mHourglassSandFrames, 60);
+    save->hourglassSeconds      = SoftDivide(mHourglassSandFrames, 60);
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = mNumGems[i];
     }

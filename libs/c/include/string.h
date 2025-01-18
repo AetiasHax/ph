@@ -3,6 +3,12 @@
 
 typedef unsigned int size_t;
 
+void memset(void *dest, int ch, size_t count);
+void *memchr(const void *ptr, int ch, size_t count);
+void *memrchr(const void *ptr, int ch, size_t count);
+int memcmp(const void *ptr1, const void *ptr2, size_t count);
+void __memset_impl(void *dest, int ch, size_t count);
+
 size_t strlen(const char *str);
 char *strcpy(char *dest, const char *src);
 char *strncpy(char *dest, const char *src, size_t num);
