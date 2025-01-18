@@ -2,17 +2,41 @@
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Player/PlayerBase.hpp"
+#include "Save/AdventureFlags.hpp"
 
 extern u32 func_ov000_02078bc4(unk32 param_1);
-extern void func_ov00_02078bf0(s32 *param_1, unk32 param_2);
+extern void func_ov000_02078bf0(s32 *param_1, unk32 param_2);
+extern s32 func_ov000_02078fe8(s32 *param_1);
+extern void func_ov000_020798bc(s32 *param_1, s32 param_2);
+extern void func_ov000_0208b13c(s32 *param_1);
 extern void func_ov000_0208cc88(s32 *param1);
 extern void func_ov000_0208d620(s32 *param_1);
 extern void func_ov000_0208d680(s32 *param_1);
+extern void func_ov000_0208e6b0(s32 *param_1, Vec3p *param_2);
+extern void func_ov000_02093a1c(u32 *param_1, s32 *param_2);
+extern void func_ov000_02096324(s32 *param_1, s32 param_2);
 extern s32 *func_ov000_02096418(s32 *param_1);
+extern void func_ov000_0209d6e8(s32 param_1, s32 param_2);
+extern unk32 func_ov000_020a5e9c(unk32 *param_1);
+extern void func_ov004_021024c4(MapManager *param_1, s32 param_2, bool param_3, s32 param_4);
+extern void func_ov004_02102770(s32 *param_1);
+extern void func_ov004_02102b28(s32 *param_1);
+extern void func_ov004_02102e3c(s32 *param_1);
+extern void func_ov004_02105578(ActorManager *param_1, u32 param_2);
+extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
+extern s32 func_ov015_02129c14();
 extern bool func_ov015_02129c44(s32 param_1);
 
+extern s32 *data_027e0c68;
+extern s32 *data_027e0d38;
+extern s32 *data_027e0d3c;
+extern s32 *data_027e0f64;
 extern s32 *data_027e0f68;
+extern s32 *data_027e0f6c;
 extern s32 *data_027e0f70;
+extern s32 *data_027e0f78;
+extern s32 *data_027e0f7c;
+extern s32 *data_027e103c;
 
 ARM void MapManager::GetCourseDungeonProgress(CourseProgress *param_2) {
     this->mCourse->GetDungeonProgress(param_2);
@@ -22,29 +46,29 @@ ARM void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_
     this->mCourse->func_ov00_0207ca28(param_2, param_3, param_4);
 }
 
-unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 param_3) {
-    /* undefined *puVar1;
-    undefined uVar2;
-    undefined4 uVar3;
-    int iVar4;
-    undefined4 local_40;
-    undefined4 local_3c;
-    undefined4 local_38;
-    undefined4 local_34;
-    undefined2 local_30;
-    undefined local_2e;
-    undefined local_2d;
-    undefined local_2c;
-    undefined local_2b;
-    undefined4 local_28;
-    undefined4 local_24;
-    undefined4 local_20;
-    undefined4 local_1c;
-    undefined2 local_18;
-    undefined local_16;
-    undefined local_15;
-    undefined local_14;
-    undefined local_13;
+unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
+    unk32 *puVar1;
+    unk8 uVar2;
+    unk32 uVar3;
+    s32 iVar4;
+    unk32 local_40;
+    unk32 local_3c;
+    unk32 local_38;
+    unk32 local_34;
+    unk16 local_30;
+    unk8 local_2e;
+    unk8 local_2d;
+    unk8 local_2c;
+    unk8 local_2b;
+    unk32 local_28;
+    unk32 local_24;
+    unk32 local_20;
+    unk32 local_1c;
+    unk16 local_18;
+    unk8 local_16;
+    unk8 local_15;
+    unk8 local_14;
+    unk8 local_13;
 
     local_28 = 0x47;
     local_24 = 0;
@@ -56,58 +80,58 @@ unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 param_3) {
     local_14 = 0;
     local_13 = 0;
     if (param_2 == 0) {
-        FUN_overlay_d_0__02082348(param_1, &local_28);
-        uVar3                        = FUN_overlay_d_0__020a5e9c(&local_28);
-        *param_3                     = uVar3;
-        *(undefined *) (param_3 + 1) = local_16;
-        uVar2                        = local_15;
+        this->func_ov00_02082348(&local_28);
+        uVar3                   = func_ov000_020a5e9c(&local_28);
+        *param_3                = uVar3;
+        *(unk8 *) (param_3 + 1) = local_16;
+        uVar2                   = local_15;
     } else {
-        *param_3                     = 0xb;
-        *(undefined *) (param_3 + 1) = 2;
-        uVar2                        = 4;
+        *param_3                = 0xb;
+        *(unk8 *) (param_3 + 1) = 2;
+        uVar2                   = 4;
     }
-    *(undefined *) ((int) param_3 + 5) = uVar2;
-    uVar3                         = FUN_overlay_d_0__020a5e9c(*(int *) (*(int *) PTR_PTR_overlay_d_0__02082300 + 0x28) + 0x1c);
-    puVar1                        = PTR_PTR_overlay_d_0__02082300;
-    param_3[2]                    = uVar3;
-    *(undefined *) (param_3 + 4)  = *(undefined *) (*(int *) (*(int *) puVar1 + 0x28) + 0x2e);
-    *(undefined2 *) (param_3 + 5) = *(undefined2 *) (*(int *) (*(int *) puVar1 + 0x28) + 0x36);
-    iVar4                         = *(int *) (*(int *) puVar1 + 0x28);
-    param_3[6]                    = *(undefined4 *) (iVar4 + 0x38);
-    param_3[7]                    = *(undefined4 *) (iVar4 + 0x3c);
-    param_3[8]                    = *(undefined4 *) (iVar4 + 0x40);
-    uVar3                         = FUN_overlay_d_0__020a5e9c(*(int *) (*(int *) puVar1 + 0x28) + 0x44);
-    param_3[3]                    = uVar3;
-    puVar1                        = PTR_PTR_overlay_d_0__02082300;
-    *(undefined *) ((int) param_3 + 0x11)  = *(undefined *) (*(int *) (*(int *) PTR_PTR_overlay_d_0__02082300 + 0x28) + 0x56);
-    iVar4                                  = *(int *) (*(int *) puVar1 + 0x28);
-    param_3[9]                             = *(undefined4 *) (iVar4 + 0x5c);
-    param_3[10]                            = *(undefined4 *) (iVar4 + 0x60);
-    param_3[0xb]                           = *(undefined4 *) (iVar4 + 100);
-    *(undefined2 *) ((int) param_3 + 0x16) = *(undefined2 *) (*(int *) (*(int *) puVar1 + 0x28) + 0x68);
-    iVar4                                  = *(int *) (*(int *) puVar1 + 0x28);
-    local_40                               = *(undefined4 *) (iVar4 + 0x70);
-    local_3c                               = *(undefined4 *) (iVar4 + 0x74);
-    local_38                               = *(undefined4 *) (iVar4 + 0x78);
-    local_34                               = *(undefined4 *) (iVar4 + 0x7c);
-    local_30                               = *(undefined2 *) (iVar4 + 0x80);
-    local_2e                               = *(undefined *) (iVar4 + 0x82);
-    local_2d                               = *(undefined *) (iVar4 + 0x83);
-    local_2c                               = *(undefined *) (iVar4 + 0x84);
-    local_2b                               = *(undefined *) (iVar4 + 0x85);
-    uVar3                                  = FUN_overlay_d_0__020a5e9c(&local_40);
-    param_3[0x70]                          = uVar3;
-    puVar1                                 = PTR_DWORD_overlay_d_0__02082304;
-    *(undefined *) ((int) param_3 + 0x1be) = local_2e;
-    *(undefined *) ((int) param_3 + 0x1bf) = local_2d;
-    FUN_overlay_d_0__02096324(*(undefined4 *) puVar1, param_3);
-    FUN_overlay_d_0__0209d6e8(*(undefined4 *) PTR_DWORD_overlay_d_0__02082308, param_3);
-    if (param_1->mCourse->mType != 3) {
-        *(undefined1 *) ((int) param_3 + 7) = param_1->field2_0x8;
-        *(undefined1 *) (param_3 + 0x6f)    = param_1->field3_0x9;
+    *(unk8 *) ((int) param_3 + 5)     = uVar2;
+    uVar3                             = func_ov000_020a5e9c(data_027e0d38 + 0x28) + 0x1c;
+    puVar1                            = data_027e0d38;
+    param_3[2]                        = uVar3;
+    *(unk8 *) (param_3 + 4)           = *(unk8 *) (*(s32 *) (*(s32 *) puVar1 + 0x28) + 0x2e);
+    *(unk16 *) (param_3 + 5)          = *(unk16 *) (*(s32 *) (*(s32 *) puVar1 + 0x28) + 0x36);
+    iVar4                             = *(s32 *) (*(int *) puVar1 + 0x28);
+    param_3[6]                        = *(unk32 *) (iVar4 + 0x38);
+    param_3[7]                        = *(unk32 *) (iVar4 + 0x3c);
+    param_3[8]                        = *(unk32 *) (iVar4 + 0x40);
+    uVar3                             = func_ov000_020a5e9c(puVar1 + 0x28) + 0x44;
+    param_3[3]                        = uVar3;
+    puVar1                            = data_027e0d38;
+    *(unk8 *) ((int) param_3 + 0x11)  = *(unk8 *) (*(s32 *) (*(s32 *) data_027e0d38 + 0x28) + 0x56);
+    iVar4                             = *(s32 *) (*(s32 *) puVar1 + 0x28);
+    param_3[9]                        = *(unk32 *) (iVar4 + 0x5c);
+    param_3[10]                       = *(unk32 *) (iVar4 + 0x60);
+    param_3[0xb]                      = *(unk32 *) (iVar4 + 100);
+    *(unk16 *) ((int) param_3 + 0x16) = *(unk16 *) (*(s32 *) (*(s32 *) puVar1 + 0x28) + 0x68);
+    iVar4                             = *(s32 *) (*(s32 *) puVar1 + 0x28);
+    local_40                          = *(unk32 *) (iVar4 + 0x70);
+    local_3c                          = *(unk32 *) (iVar4 + 0x74);
+    local_38                          = *(unk32 *) (iVar4 + 0x78);
+    local_34                          = *(unk32 *) (iVar4 + 0x7c);
+    local_30                          = *(unk16 *) (iVar4 + 0x80);
+    local_2e                          = *(unk8 *) (iVar4 + 0x82);
+    local_2d                          = *(unk8 *) (iVar4 + 0x83);
+    local_2c                          = *(unk8 *) (iVar4 + 0x84);
+    local_2b                          = *(unk8 *) (iVar4 + 0x85);
+    uVar3                             = func_ov000_020a5e9c(&local_40);
+    param_3[0x70]                     = uVar3;
+    puVar1                            = data_027e0f70;
+    *(unk8 *) ((int) param_3 + 0x1be) = local_2e;
+    *(unk8 *) ((int) param_3 + 0x1bf) = local_2d;
+    func_ov000_02096324(puVar1, *param_3); // unsure if (s32 *param_1, s32 param_2) or (s32 param_1, s32 *param_2)
+    func_ov000_0209d6e8(*data_027e0f7c, *param_3);
+    if (this->mCourse->mType != CourseType_TempleOfTheOceanKing) {
+        *(unk8 *) ((int) param_3 + 7) = this->mUnk_08;
+        *(unk8 *) (param_3 + 0x6f)    = this->mUnk_09;
         return;
     }
-    return; */
+    return;
 }
 
 ARM void MapManager::func_ov00_0208230c(s32 *param_2) {
@@ -117,14 +141,14 @@ ARM void MapManager::func_ov00_0208230c(s32 *param_2) {
     *(unk8 *) ((u32) param_2 + 0x13) = this->mUnk_0c;
 }
 
-ARM void MapManager::func_ov00_02082348(unk32 param_2) {
+ARM void MapManager::func_ov00_02082348(unk32 *param_2) {
     s32 var[4];
     var[0] = 0x47;
     var[1] = 0;
     var[2] = 0;
     var[3] = 0xfffffffe;
     this->func_ov00_0208230c(var);
-    func_ov00_02078bf0(var, param_2);
+    func_ov000_02078bf0(var, *param_2);
 }
 
 ARM void MapManager::func_ov00_020823a4(unk32 param_2) {
@@ -158,7 +182,7 @@ ARM void MapManager::MapData_vfunc_9c() {
 ARM s32 MapManager::func_ov00_02082424() {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        // var = this->mMap->func_ov015_02129c14(); // Does not exist.
+        var = func_ov015_02129c14(); // MapBase::GetUnk_19c_Unk_28 according to Ghidra
         return var;
     }
     return 0;
@@ -444,48 +468,48 @@ ARM void MapManager::func_ov00_02082af4() {
 }
 
 bool MapManager::func_ov00_02082b3c(s32 param_2) {
-    /* byte bVar1;
-    undefined *puVar2;
-    ushort uVar3;
-    uint uVar4;
-    undefined4 uVar5;
-    uint in_r3;
+    u8 bVar1;
+    PlayerBase *puVar2;
+    u16 uVar3;
+    u32 uVar4;
+    unk32 uVar5;
+    u32 in_r3;
     ActorManager *pAVar6;
-    undefined4 local_18;
+    unk32 local_18;
 
-    local_18 = in_r3;
-    Course::FindMapGridPos((Vec2b *) &local_18, param_1->mCourse, (uint) * (byte *) (param_2 + 0x12));
-    uVar4 = GetCourseData_Unk_1c(param_1);
-    if (((((local_18 & 0xff) == uVar4) && (uVar4 = GetCourseData_Unk_1d(param_1), (local_18 >> 8 & 0xff) == uVar4)) &&
-         ((*(int *) (param_2 + 8) != 1 || (*(int *) (*(int *) PTR_PTR_overlay_d_0__02082ce0 + 0x14) != 1)))) &&
+    local_18 = in_r3; // what's the point of that?
+    this->mCourse->FindMapGridPos((Vec2b *) &local_18, this->mCourse, (u32) * (u8 *) (param_2 + 0x12));
+    uVar4 = this->GetCurrentMapPosX();
+    if (((((local_18 & 0xff) == uVar4) && (uVar4 = this->GetCurrentMapPosY(), (local_18 >> 8 & 0xff) == uVar4)) &&
+         ((*(s32 *) (param_2 + 8) != 1 || (*(s32 *) (*(s32 *) data_027e0d38 + 0x14) != 1)))) &&
         (*(char *) (param_2 + 0x15) == '\0'))
     {
-        AdventureFlags::FUN_overlay_d_0__020976c8(*(AdventureFlags **) PTR_gAdventureFlags_overlay_d_0__02082ce4);
-        puVar2              = PTR_gPlayer_overlay_d_0__02082d00;
-        param_1->field6_0xc = *(undefined *) (param_2 + 0x13);
-        (**(code **) (**(int **) puVar2 + 0x38))(*(int **) puVar2, *(undefined *) (param_2 + 0x13), 0);
-        UnkStruct_027e0c68::FUN_overlay_d_4__02106db8((UnkStruct_027e0c68 *) PTR_DWORD_overlay_d_0__02082d04);
-        (**(code **) (param_1->mMap->vtable + 0x18))();
+        gAdventureFlags->func_ov00_020976c8();
+        puVar2        = gPlayer;
+        this->mUnk_0c = *(unk32 *) (param_2 + 0x13);
+        // (**(code **) (**(int **) puVar2 + 0x38))(*(int **) puVar2, *(unk32 *) (param_2 + 0x13), 0);
+        // UnkStruct_027e0c68::FUN_overlay_d_4__02106db8((UnkStruct_027e0c68 *) PTR_DWORD_overlay_d_0__02082d04);
+        this->mMap->vfunc_18();
     } else {
-        AdventureFlags::FUN_overlay_d_0__020976c8(*(AdventureFlags **) PTR_gAdventureFlags_overlay_d_0__02082ce4);
-        FUN_overlay_d_0__0208b13c(*(undefined4 *) PTR_DWORD_overlay_d_0__02082ce8);
-        pAVar6 = *PTR_gActorManager_overlay_d_0__02082cec;
-        uVar5  = FUN_overlay_d_0__02082d08(param_1);
-        FUN_overlay_d_4__02105608(pAVar6, local_18 & 0xff, local_18 >> 8 & 0xff, uVar5);
-        (**(code **) (param_1->mMap->vtable + 0x2c))();
-        FUN_overlay_d_4__02102b28(*(undefined4 *) PTR_DWORD_overlay_d_0__02082cf0);
-        FUN_overlay_d_4__02102770(*(undefined4 *) PTR_DWORD_overlay_d_0__02082cf4);
-        FUN_overlay_d_4__02102e3c(*(undefined4 *) PTR_DWORD_overlay_d_0__02082cf8);
-        bVar1                             = *(byte *) (param_2 + 0x12);
-        uVar3                             = Course::FindCurrentMapData_Unk_04(param_1->mCourse);
-        uVar4                             = Course::FindMapData_Unk_04(param_1->mCourse, (uint) bVar1);
-        (param_1->mCourse->mCurrMapPos).x = (byte) local_18;
-        (param_1->mCourse->mCurrMapPos).y = local_18._1_1_;
-        FUN_overlay_d_4__021024c4(param_1, param_2, uVar3 != uVar4, 0);
-        FUN_overlay_d_4__02105578(*PTR_gActorManager_overlay_d_0__02082cec, (uint) * (byte *) (param_2 + 0x12));
-        UnkStruct_027e0103c::thunk_FUN_overlay_d_0__020cf7e8(*PTR_PTR_overlay_d_0__02082cfc);
+        gAdventureFlags->func_ov00_020976c8();
+        func_ov000_0208b13c(data_027e0f64);
+        pAVar6 = gActorManager;
+        uVar5  = this->func_ov00_02082d08();
+        func_ov004_02105608(pAVar6, local_18 & 0xff, local_18 >> 8 & 0xff, uVar5);
+        this->mMap->vfunc_2c();
+        func_ov004_02102b28(data_027e0f68);
+        func_ov004_02102770(data_027e0f6c);
+        func_ov004_02102e3c(data_027e0f78);
+        bVar1                          = *(u8 *) (param_2 + 0x12);
+        uVar3                          = this->mCourse->FindCurrentMapData_Unk_04();
+        uVar4                          = this->mCourse->FindMapData_Unk_04((u32) bVar1);
+        (this->mCourse->mCurrMapPos).x = (u8) local_18;
+        (this->mCourse->mCurrMapPos).y = (u8) * (&local_18 + 0x4); // I assume this is what Ghidra means by "local_18._1_1_"
+        func_ov004_021024c4(this, param_2, uVar3 != uVar4, 0);
+        func_ov004_02105578(gActorManager, (u32) * (u8 *) (param_2 + 0x12));
+        // UnkStruct_027e0103c::thunk_FUN_overlay_d_0__020cf7e8(*PTR_PTR_overlay_d_0__02082cfc);
     }
-    return true; */
+    return true;
 }
 
 ARM u8 MapManager::func_ov00_02082d08() {
@@ -949,19 +973,19 @@ ARM bool MapManager::func_ov00_02083790(s32 param_2) {
 }
 
 ARM bool MapManager::func_ov00_02083840(s32 param_2) {
-    unk8 *puVar1;
-    unk8 *puVar2;
+    s32 *puVar1;
+    s32 *puVar2;
     bool bVar3;
     s32 iVar4;
 
-    // puVar2 = PTR_DWORD_overlay_d_0__020838c0;
-    // puVar1 = PTR_DWORD_overlay_d_0__020838bc;
+    puVar2 = data_027e0d3c;
+    puVar1 = data_027e0f64;
     if (param_2 != 0) {
-        // *(unk32 *) (*(int *) (*(int *) PTR_DWORD_overlay_d_0__020838bc + 8) + 0x1b4) = 0xffffffff;
-        // *(unk32 *) (*(int *) (*(int *) puVar1 + 4) + 0x1b4)                          = 0xffffffff;
-        // iVar4 = FUN_overlay_d_0__02078fe8(*(unk32 *) puVar2);
+        *(unk32 *) (*(int *) (*(int *) data_027e0f64 + 8) + 0x1b4) = 0xffffffff;
+        *(unk32 *) (*(int *) (*(int *) puVar1 + 4) + 0x1b4)        = 0xffffffff;
+        iVar4                                                      = func_ov000_02078fe8(puVar2);
         if (-1 < iVar4) {
-            // FUN_overlay_d_0__020798bc(*(unk32 *) PTR_DWORD_overlay_d_0__020838c0, 0x10);
+            func_ov000_020798bc(data_027e0d3c, 0x10);
             gActorManager->func_ov00_020c3ce8(param_2, false);
         }
         bVar3 = this->mMap->TriggerOfType_vfunc_10(param_2);
@@ -1243,7 +1267,7 @@ unk8 MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *pa
     }
     dVar2 = param_2->MapData_vfunc_70(param_3);
     if (dVar2 != 0xffff) {
-        // FUN_overlay_d_0__02093a1c(param_1, *(unk32 *) PTR_DWORD_overlay_d_0__02084020);
+        func_ov000_02093a1c(param_1, data_027e0f6c);
         return;
     }
     *param_1 = 0;
@@ -3094,10 +3118,10 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
 
 bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
                                     Vec3p *param_8, Vec3p *param_9) {
-    /* bool bVar1;
+    bool bVar1;
     int iVar2;
     Vec3p VStack_a0;
-    undefined auStack_94[24];
+    unk32 auStack_94[24];
     Vec3p local_7c;
     int local_70[5];
     Vec3p local_5c;
@@ -3107,33 +3131,34 @@ bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4
     int local_2c;
     Vec3p VStack_28;
 
-    Vec3p::Sub(param_3, param_4, &VStack_28);
-    iVar2 = (**(code **) (*param_2 + 8))();
+    Vec3p_Sub(param_3, param_4, &VStack_28);
+    // iVar2 = (**(code **) (*param_2 + 8))();
     if (iVar2 == 0) {
-        (**(code **) (*param_2 + 0x24))(param_2, &local_38);
+        //(**(code **) (*param_2 + 0x24))(param_2, &local_38);
         if (param_6 == 0) {
             local_44.x = local_38.x;
             local_44.y = local_38.y;
             local_44.z = local_38.z;
-            iVar2      = Vec3p::Distance(param_3, &local_44);
-            Vec3p::Sub(param_3, &local_38, &local_44);
-            bVar1 = Vec3p::Normalize(&local_44);
+            iVar2      = Vec3p_Distance(param_3, &local_44);
+            Vec3p_Sub(param_3, &local_38, &local_44);
+            // bVar1 = Vec3p_Normalize(&local_44);   // This function needs to be declared and defined separately to the other
+            // Vec3p_Normalize with the return type as bool.
             if (!bVar1) {
                 local_44.x = 0;
                 local_44.y = 0;
                 local_44.z = 0x1000;
             }
-            Vec3p::Scale(&local_44, (local_2c + param_5) - iVar2);
-            Vec3p::Add(param_3, &local_44, param_8);
+            Vec3p_Scale(&local_44, (local_2c + param_5) - iVar2);
+            Vec3p_Add(param_3, &local_44, param_8);
         } else {
-            Vec3p::Scale(&VStack_28, param_6);
-            Vec3p::Add(param_4, &VStack_28, param_8);
+            Vec3p_Scale(&VStack_28, param_6);
+            Vec3p_Add(param_4, &VStack_28, param_8);
         }
         local_5c.x = local_38.x;
         local_5c.y = local_38.y;
         local_5c.z = local_38.z;
-        Vec3p::Sub(param_4, &local_5c, &local_50);
-        Vec3p::Normalize(&local_50);
+        Vec3p_Sub(param_4, &local_5c, &local_50);
+        // Vec3p_Normalize(&local_50);
         param_9->x = local_50.x;
         param_9->y = local_50.y;
         param_9->z = local_50.z;
@@ -3143,25 +3168,25 @@ bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4
         if (iVar2 != 2) {
             return false;
         }
-        (**(code **) (*param_2 + 0x2c))(param_2, auStack_94);
-        FUN_overlay_d_0__0208e6b0(auStack_94, &VStack_a0);
-        Vec3p::Scale(&VStack_28, param_6);
-        Vec3p::Add(param_4, &VStack_28, param_8);
-        Vec3p::Sub(param_4, &VStack_a0, param_9);
-        Vec3p::Normalize(param_9);
+        //(**(code **) (*param_2 + 0x2c))(param_2, auStack_94);
+        func_ov000_0208e6b0(auStack_94, &VStack_a0);
+        Vec3p_Scale(&VStack_28, param_6); // Doesn't exist.
+        Vec3p_Add(param_4, &VStack_28, param_8);
+        Vec3p_Sub(param_4, &VStack_a0, param_9);
+        // Vec3p_Normalize(param_9);
         return false;
     }
     local_70[3] = 0;
     local_70[0] = 0;
     local_70[1] = 0;
     local_70[2] = 0;
-    (**(code **) (*param_2 + 0x28))(param_2, local_70);
-    Vec3p::Scale(&VStack_28, param_6);
-    Vec3p::Add(param_4, &VStack_28, param_8);
+    // (**(code **) (*param_2 + 0x28))(param_2, local_70);
+    // Vec3p_Scale(&VStack_28, param_6); // Doesn't exist.
+    Vec3p_Add(param_4, &VStack_28, param_8);
     local_7c.x = local_70[0];
     local_7c.z = local_70[2];
     local_7c.y = param_4->y;
-    Vec3p::Sub(param_4, &local_7c, param_9);
-    Vec3p::Normalize(param_9);
-    return false; */
+    Vec3p_Sub(param_4, &local_7c, param_9);
+    // Vec3p_Normalize(param_9);
+    return false;
 }
