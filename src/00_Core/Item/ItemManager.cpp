@@ -298,7 +298,7 @@ THUMB u16 ItemManager::GetUnk_09e(u32 index) const {
 }
 
 THUMB s32 ItemManager::GetUnk_09e_Divided(u32 index) const {
-    q20 quotient = Divide(INT_TO_Q20(mUnk_09e[index]), FLOAT_TO_Q20(2.54));
+    q20 quotient = CoDivide64By32(INT_TO_Q20(mUnk_09e[index]), FLOAT_TO_Q20(2.54));
     s32 result   = ROUND_Q20(quotient);
     if (result < 1) result = 1;
     return result;

@@ -1,7 +1,7 @@
 #pragma once
 
 #include "global.h"
-#include "lib/math.h"
+#include "nds/math.h"
 #include "types.h"
 
 #include "Actor/Actor.hpp"

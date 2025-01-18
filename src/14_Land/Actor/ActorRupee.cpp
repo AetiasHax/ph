@@ -5,11 +5,11 @@
 #include "System/Random.hpp"
 
 extern "C" {
-    void func_ov000_0207a1c8(bool *param_1, unk32 param_2, Vec3p *param_3);
-    void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
-    void func_ov005_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
-                             char param_8, char param_9, char param_10);
-    void func_ov000_020d7ad4(u32 *param1, u32 param2);
+void func_ov000_0207a1c8(bool *param_1, unk32 param_2, Vec3p *param_3);
+void func_0202bc38(unk32 param_1, Vec3p *param_2, u32 param_3, Actor_UnkStruct_012 *param_4, bool);
+void func_ov005_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
+                         char param_8, char param_9, char param_10);
+void func_ov000_020d7ad4(u32 *param1, u32 param2);
 }
 u16 GetRupeeValue(RupeeId id);
 

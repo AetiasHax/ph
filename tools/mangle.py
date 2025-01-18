@@ -15,6 +15,7 @@ include_dir = root_dir / 'include'
 libs_dir = root_dir / 'libs'
 libc_include_dir = libs_dir / 'c' / 'include'
 libcpp_include_dir = libs_dir / 'cpp' / 'include'
+libnds_include_dir = libs_dir / 'nds' / 'include'
 
 if platform.system() == 'Windows': cc = [str(cc_path)]
 else: cc = ['wine', str(cc_path)]
@@ -38,6 +39,7 @@ cc.extend([
     '-i', include_dir,
     '-i', libc_include_dir,
     '-i', libcpp_include_dir,
+    '-i', libnds_include_dir,
     args.file
 ])
 

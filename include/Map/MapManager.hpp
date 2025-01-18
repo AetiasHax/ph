@@ -3,7 +3,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "lib/math.h"
+#include "nds/math.h"
 
 #include "Map/Course.hpp"
 #include "Map/MapBase.hpp"
