@@ -28,7 +28,7 @@ cc.extend([
     '-proc', 'arm946e',
     '-gccext,on',
     '-fp', 'soft',
-    '-inline', 'on,noauto',
+    '-inline', 'noauto',
     '-Cpp_exceptions', 'off',
     '-RTTI', 'off',
     '-interworking',

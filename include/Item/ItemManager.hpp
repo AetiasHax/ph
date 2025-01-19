@@ -9,21 +9,16 @@ extern "C" {
 #include "types.h"
 
 #include "Actor/ActorNavi.hpp"
-#include "DTCM/UnkStruct_027e0f78.hpp"
 #include "Item/Item.hpp"
-#include "Map/MapManager.hpp"
 #include "Player/EquipItem.hpp"
-#include "Player/HealthManager.hpp"
 #include "Render/ModelRender.hpp"
-#include "Save/AdventureFlags.hpp"
+#include "Save/SaveItemManager.hpp"
 #include "Sound/Sfx.hpp"
-#include "System/OverlayManager.hpp"
 #include "System/SysNew.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2
 #define MAX_UNK_0BA 9
-#define MAX_POTIONS 2
 
 typedef s32 FairyId;
 enum FairyId_ {
@@ -32,98 +27,6 @@ enum FairyId_ {
     FairyId_Power   = 1,
     FairyId_Wisdom  = 2,
     FairyId_COUNT   = 3,
-};
-
-enum Gem {
-    Gem_Courage,
-    Gem_Power,
-    Gem_Wisdom,
-    Gem_COUNT,
-};
-
-typedef u32 ShipPart;
-enum ShipPart_ {
-    ShipPart_Anchor,
-    ShipPart_Prow,
-    ShipPart_Hull,
-    ShipPart_Cannon,
-    ShipPart_Handrail,
-    ShipPart_Wheel,
-    ShipPart_Chimney,
-    ShipPart_Bridge,
-    ShipPart_COUNT,
-};
-
-typedef u32 ShipType;
-enum ShipType_ {
-    ShipType_Linebeck,
-    ShipType_Bright,
-    ShipType_Iron,
-    ShipType_Stone,
-    ShipType_Vintage,
-    ShipType_Demon,
-    ShipType_Tropical,
-    ShipType_Dignified,
-    ShipType_Golden,
-    ShipType_COUNT,
-};
-
-typedef u32 ShipItem;
-#define SHIP_ITEM(part, ship) (ShipPart_##part * ShipPart_COUNT + ShipType_##type)
-#define ShipItem_COUNT (ShipPart_COUNT * ShipType_COUNT)
-
-typedef u32 Treasure;
-enum Treasure_ {
-    Treasure_PinkCoral,
-    Treasure_WhitePearlLoop,
-    Treasure_DarkPearlLoop,
-    Treasure_ZoraScale,
-    Treasure_GoronAmber,
-    Treasure_RutoCrown,
-    Treasure_HelmarocPlume,
-    Treasure_RegalRing,
-
-    Treasure_COUNT,
-};
-
-#define NUM_POTIONS 2
-typedef u8 Potion;
-enum Potion_ {
-    Potion_None,
-    Potion_Red,
-    Potion_Purple,
-    Potion_Yellow,
-    Potion_COUNT,
-};
-
-struct ItemFlags {
-    /* 00 */ u32 flags[CEIL_DIV(ItemFlag_COUNT, 32)];
-    /* 10 */
-};
-
-struct ShipPartPricesShown {
-    /* 0 */ u32 flags[CEIL_DIV(ShipItem_COUNT, 32)];
-    /* c */
-};
-
-struct UnkStruct_027e0d38 {
-    /* 00 */ unk8 mUnk_00;
-    /* 01 */ unk8 mUnk_01[3]; // padding?
-    /* 04 */ unk32 mUnk_04;
-    /* 08 */ unk32 mUnk_08;
-    /* 0c */ unk32 mUnk_0c;
-    /* 10 */ unk32 mUnk_10;
-    /* 14 */ unk32 mUnk_14;
-    /* 18 */ unk32 mUnk_18;
-    /* 1c */ unk16 mUnk_1c;
-    /* 1e */ unk8 mUnk_1e;
-    /* 1f */ unk8 mUnk_1f;
-    /* 20 */ unk8 mUnk_20;
-    /* 21 */ unk8 mUnk_21;
-    /* 22 */ unk8 mUnk_22[2]; // padding?
-    /* 24 */ void *mUnk_24;
-    /* 28 */ void *mUnk_28;
-    /* 2c */
 };
 
 typedef u32 ItemModelId;
@@ -154,35 +57,6 @@ enum DungeonItemModelId_ {
     DungeonItemModelId_SquareCrystal,   // switch_cstl_s_c
     DungeonItemModelId_TriangleCrystal, // switch_cstl_t_c
     DungeonItemModelId_COUNT,
-};
-
-struct SaveItemManager {
-    /* 00 */ ItemFlags itemFlags;
-    /* 10 */ u32 salvagedTreasureFlags;
-    /* 14 */ ShipPartPricesShown shipPartPricesShown;
-    /* 20 */ u32 treasurePriceShownFlags[CEIL_DIV(Treasure_COUNT, 32)];
-    /* 24 */ u8 equippedShipParts[ShipPart_COUNT];
-    /* 2c */ s8 shipParts[ShipPart_COUNT][ShipType_COUNT];
-    /* 74 */ s8 treasure[Treasure_COUNT];
-    /* 7c */ unk8 unk_7c[4];
-    /* 80 */ u16 hourglassSeconds;
-    /* 82 */ u16 unk_82[6];
-    /* 8e */ u16 numRupees;
-    /* 90 */ unk8 unk_90;
-    /* 91 */ unk8 unk_91;
-    /* 92 */ unk8 unk_92;
-    /* 93 */ u8 numBombs;
-    /* 94 */ u8 numBombchus;
-    /* 95 */ u8 numArrows;
-    /* 96 */ s8 equippedItem;
-    /* 97 */ Potion potions[NUM_POTIONS];
-    /* 99 */ u8 numGems[Gem_COUNT];
-    /* 9c */ u8 quiverSize;
-    /* 9d */ u8 bombBagSize;
-    /* 9e */ u8 bombchuBagSize;
-    /* 9f */ u8 unk_9f[6];
-    /* a5 */ u8 equippedFairy;
-    /* a6 */
 };
 
 class ItemManager : public SysObject {

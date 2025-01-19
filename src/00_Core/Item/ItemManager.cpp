@@ -1,5 +1,11 @@
 #include "Item/ItemManager.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
+#include "DTCM/UnkStruct_027e0f78.hpp"
+#include "Map/MapManager.hpp"
+#include "Player/HealthManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
+#include "Save/AdventureFlags.hpp"
+#include "System/OverlayManager.hpp"
 
 static const char *sShipPartTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
@@ -21,7 +27,7 @@ THUMB void ItemManager::ClearPrevEquippedItem() {
 THUMB void ItemManager::Save(SaveItemManager *save) {
     save->itemFlags = mItemFlags;
     save->numRupees = mNumRupees;
-    for (s32 i = 0; i < NUM_POTIONS; ++i) {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
         save->potions[i] = mPotions[i];
     }
     save->numBombs              = (u8) (*mAmmo)[ItemFlag_BombBag];
@@ -71,7 +77,7 @@ THUMB void ItemManager::Load(const SaveItemManager *save) {
     (*mAmmo)[ItemFlag_BombBag]    = save->numBombs;
     (*mAmmo)[ItemFlag_BombchuBag] = save->numBombchus;
     (*mAmmo)[ItemFlag_Bow]        = save->numArrows;
-    for (s32 i = 0; i < NUM_POTIONS; ++i) {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
         mPotions[i] = save->potions[i];
     }
     mEquippedItem          = save->equippedItem;
@@ -124,7 +130,6 @@ ARM ActorNavi *ItemManager::GetFairy(FairyId id) const {
     return mFairies[id];
 }
 
-extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();

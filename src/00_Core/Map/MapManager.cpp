@@ -132,7 +132,7 @@ void MapManager::func_ov00_02083f44(Vec3p *param_2) {}
 unk8 MapManager::MapData_vfunc_6c() {}
 unk8 MapManager::MapData_vfunc_70() {}
 unk8 MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {}
-void MapManager::func_ov00_02084024(unk32 param_2, AABB *param_3) {}
+void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {}
 unk8 MapManager::MapData_vfunc_54() {}
 unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {}
 unk8 MapManager::MapData_vfunc_78() {}

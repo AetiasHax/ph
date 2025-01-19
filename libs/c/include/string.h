@@ -1,8 +1,10 @@
 #ifndef _C_STRING_H
 #define _C_STRING_H
 
-typedef unsigned int size_t;
+#include <stddef.h>
 
+void memcpy(void *dest, void *src, size_t count);
+void memmove(void *dest, void *src, size_t count);
 void memset(void *dest, int ch, size_t count);
 void *memchr(const void *ptr, int ch, size_t count);
 void *memrchr(const void *ptr, int ch, size_t count);
