@@ -54,12 +54,20 @@ output = output.decode()
 # print(output)
 
 mangled_funcs: list[str] = re.findall(r'.text +([^\$ ]\S+)', output)
+init_funcs: list[str] = re.findall(r'.init +([^\$ ]\S+)', output)
 mangled_data: list[str] = re.findall(r'(?:.data|.bss) +([^\. ]\S+)', output)
 
 if len(mangled_funcs) > 0:
     print('Functions:')
     print()
     for func in mangled_funcs:
+        print(func)
+    print()
+    print()
+if len(init_funcs) > 0:
+    print('Static initializers:')
+    print()
+    for func in init_funcs:
         print(func)
     print()
     print()
