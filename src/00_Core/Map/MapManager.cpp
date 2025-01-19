@@ -12,7 +12,9 @@ extern void func_ov000_0208b13c(s32 *param_1);
 extern void func_ov000_0208cc88(s32 *param1);
 extern void func_ov000_0208d620(s32 *param_1);
 extern void func_ov000_0208d680(s32 *param_1);
-extern void func_ov000_0208e6b0(s32 *param_1, Vec3p *param_2);
+extern void func_ov000_0208e6b0(Vec3p *param_1, Vec3p *param_2);
+extern s32 func_ov000_0208e6f0(Vec3p *param_1);
+extern s32 func_ov000_0208e704(Vec3p *param_1);
 extern void func_ov000_02093a1c(u32 *param_1, s32 *param_2);
 extern void func_ov000_02096324(s32 *param_1, s32 param_2);
 extern s32 *func_ov000_02096418(s32 *param_1);
@@ -25,6 +27,8 @@ extern void func_ov004_02102e3c(s32 *param_1);
 extern void func_ov004_02105578(ActorManager *param_1, u32 param_2);
 extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
 extern s32 func_ov015_02129c14();
+extern bool func_ov015_02129c24(Vec3p *param_1, Vec3p *param_2);
+extern bool func_ov015_02129c34(s32 param_1);
 extern bool func_ov015_02129c44(s32 param_1);
 
 extern s32 *data_027e0c68;
@@ -191,7 +195,7 @@ ARM s32 MapManager::func_ov00_02082424() {
 ARM bool MapManager::func_ov00_02082454(Vec3p *param_2, Vec3p *param_3) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state;// = this->mMap->func_ov015_02129c24(param_2, param_3); // Does not exist.
+        bool state = func_ov015_02129c24(param_2, param_3);
         return state;
     }
     return false;
@@ -200,7 +204,7 @@ ARM bool MapManager::func_ov00_02082454(Vec3p *param_2, Vec3p *param_3) {
 ARM bool MapManager::func_ov00_02082494(s32 param_2) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state;// = this->mMap->func_ov015_02129c34(param_2); // Does not exist.
+        bool state = func_ov015_02129c34(param_2);
         return state;
     }
     return false;
@@ -324,9 +328,8 @@ ARM void MapManager::CreateMap(unk32 mapType, unk32 param_3, unk32 param_4) {
 ARM void MapManager::DestroyMap() {
     if (this->mMap == NULL) {
         return;
-    } else {
-        // this->mMap->vfunc_04(); Doesn't exist.
     }
+    this->mMap->~MapBase();
 }
 
 ARM void MapManager::MapData_vfunc_44() {
@@ -2822,57 +2825,57 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
 
 bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7,
                                     Vec3p *param_8) {
-    /* bool bVar1;
-    int iVar2;
-    int iVar3;
-    int local_d0[2];
-    int local_c8;
+    bool bVar1;
+    s32 iVar2;
+    s32 iVar3;
+    Vec3p local_d0;
+    s32 local_c8;
     Vec3p local_c4;
     Vec3p local_b8;
-    int local_ac[2];
-    int local_a4;
-    int local_a0[2];
-    int local_98;
-    int local_94;
-    int local_90;
-    int local_8c;
+    Vec3p local_ac;
+    s32 local_a4;
+    Vec3p local_a0;
+    s32 local_98;
+    s32 local_94;
+    s32 local_90;
+    s32 local_8c;
     Vec3p local_88;
     Vec3p local_7c;
     Vec3p local_70;
-    int local_64;
-    int local_60;
-    int local_5c;
-    int local_58;
-    int local_54;
+    s32 local_64;
+    s32 local_60;
+    s32 local_5c;
+    s32 local_58;
+    s32 local_54;
     Vec3p local_50;
     Vec3p local_44;
     Vec3p local_38;
-    int local_2c;
-    int iStack_28;
-    int iStack_24;
-    int local_20;
+    s32 local_2c;
+    s32 iStack_28;
+    s32 iStack_24;
+    s32 local_20;
 
-    iVar2 = (**(code **) (*param_2 + 8))();
+    // iVar2 = (**(code **) (*param_2 + 8))(); // What pointer address is contained in param_2?
     if (iVar2 == 0) {
-        (**(code **) (*param_2 + 0x24))(param_2, &local_2c);
+        // (**(code **) (*param_2 + 0x24))(param_2, &local_2c);
         local_38.x = local_2c;
         local_38.y = iStack_28;
         local_38.z = iStack_24;
-        iVar2      = Vec3p::Distance(param_3, &local_38);
-        Vec3p::Sub(param_3, &local_38, &local_38);
-        bVar1 = Vec3p::Normalize(&local_38);
+        iVar2      = Vec3p_Distance(param_3, &local_38);
+        Vec3p_Sub(param_3, &local_38, &local_38);
+        // bVar1 = Vec3p_Normalize(&local_38);
         if (!bVar1) {
             local_38.x = 0;
             local_38.y = 0;
             local_38.z = 0x1000;
         }
-        Vec3p::Scale(&local_38, (local_20 + param_5) - iVar2);
-        Vec3p::Add(param_3, &local_38, param_7);
+        Vec3p_Scale(&local_38, (local_20 + param_5) - iVar2);
+        Vec3p_Add(param_3, &local_38, param_7);
         local_50.x = local_2c;
         local_50.y = iStack_28;
         local_50.z = iStack_24;
-        Vec3p::Sub(param_4, &local_50, &local_44);
-        Vec3p::Normalize(&local_44);
+        Vec3p_Sub(param_4, &local_50, &local_44);
+        // Vec3p_Normalize(&local_44);
         param_8->x = local_44.x;
         param_8->y = local_44.y;
         param_8->z = local_44.z;
@@ -2883,12 +2886,12 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
         local_64 = 0;
         local_60 = 0;
         local_5c = 0;
-        (**(code **) (*param_2 + 0x28))(param_2, &local_64);
+        // (**(code **) (*param_2 + 0x28))(param_2, &local_64);
         local_70.y = param_3->y;
         local_70.x = local_64;
         local_70.z = local_5c;
         if ((((*(char *) ((int) param_2 + 5) != '\0') && ((param_6 & 0x80) != 0)) &&
-             (iVar2 = Vec3p::Distance(&local_70, param_3), iVar2 <= local_58)) &&
+             (iVar2 = Vec3p_Distance(&local_70, param_3), iVar2 <= local_58)) &&
             ((local_60 + local_54 <= param_4->y && (iVar2 = param_5 + local_60 + local_54, param_3->y <= iVar2))))
         {
             param_7->y = iVar2;
@@ -2897,22 +2900,22 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             param_8->z = 0;
             return true;
         }
-        iVar2 = Vec3p::Distance(param_3, &local_70);
+        iVar2 = Vec3p_Distance(param_3, &local_70);
         iVar3 = local_58 + param_5;
-        Vec3p::Sub(param_3, &local_70, &local_70);
-        bVar1 = Vec3p::Normalize(&local_70);
+        Vec3p_Sub(param_3, &local_70, &local_70);
+        // bVar1 = Vec3p_Normalize(&local_70);
         if (!bVar1) {
             local_70.x = 0;
             local_70.y = 0;
             local_70.z = 0x1000;
         }
-        Vec3p::Scale(&local_70, iVar3 - iVar2);
-        Vec3p::Add(param_3, &local_70, param_7);
+        Vec3p_Scale(&local_70, iVar3 - iVar2);
+        Vec3p_Add(param_3, &local_70, param_7);
         local_88.x = local_64;
         local_88.z = local_5c;
         local_88.y = param_4->y;
-        Vec3p::Sub(param_4, &local_88, &local_7c);
-        Vec3p::Normalize(&local_7c);
+        Vec3p_Sub(param_4, &local_88, &local_7c);
+        // Vec3p_Normalize(&local_7c);
         param_8->x = local_7c.x;
         param_8->y = local_7c.y;
         param_8->z = local_7c.z;
@@ -2921,23 +2924,23 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
     if (iVar2 != 2) {
         return false;
     }
-    (**(code **) (*param_2 + 0x2c))(param_2, local_a0);
-    FUN_overlay_d_0__0208e6b0(local_a0, local_ac);
+    // (**(code **) (*param_2 + 0x2c))(param_2, local_a0);
+    func_ov000_0208e6b0(&local_a0, &local_ac);
     local_b8.y = param_3->y;
-    local_b8.x = local_ac[0];
+    local_b8.x = local_ac.x; // previously = local_ac[0] (of type s32)
     local_b8.z = local_a4;
-    Vec3p::Sub(param_3, &local_b8, &local_b8);
+    Vec3p_Sub(param_3, &local_b8, &local_b8);
     local_c4.x = local_b8.x;
     local_c4.y = local_b8.y;
     local_c4.z = local_b8.z;
-    bVar1      = Vec3p::Normalize(&local_c4);
+    // bVar1      = Vec3p_Normalize(&local_c4);
     if (!bVar1) {
         local_c4.x = 0;
         local_c4.y = 0;
         local_c4.z = 0x1000;
     }
     if (((*(char *) ((int) param_2 + 5) != '\0') && ((param_6 & 0x80) != 0)) &&
-        (((param_3->x < local_94 && (((local_a0[0] <= param_3->x && (param_3->z < local_8c)) && (local_98 <= param_3->z)))) ||
+        (((param_3->x < local_94 && (((local_a0.x <= param_3->x && (param_3->z < local_8c)) && (local_98 <= param_3->z)))) ||
           (local_90 + param_5 <= param_4->y))))
     {
         param_7->y = local_90 + param_5;
@@ -2946,24 +2949,24 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
         param_8->z = 0;
         return true;
     }
-    FUN_overlay_d_0__0208e6b0(local_a0, local_d0);
+    func_ov000_0208e6b0(&local_a0, &local_d0);
     iVar2 = param_3->z;
-    if (((iVar2 < local_8c) && (local_98 <= iVar2)) && ((param_3->x < local_94 && (local_a0[0] <= param_3->x)))) {
-        iVar2 = FUN_overlay_d_0__0208e6f0(local_a0);
-        iVar3 = FUN_overlay_d_0__0208e704(local_a0);
+    if (((iVar2 < local_8c) && (local_98 <= iVar2)) && ((param_3->x < local_94 && (local_a0.x <= param_3->x)))) {
+        iVar2 = func_ov000_0208e6f0(&local_a0);
+        iVar3 = func_ov000_0208e704(&local_a0);
         if (iVar2 == iVar3) {
             local_c8 = local_c8 - param_3->z;
             if (local_c8 < 0) {
                 local_c8 = -local_c8;
             }
-            local_d0[0] = local_d0[0] - param_3->x;
-            if (local_d0[0] < 0) {
-                local_d0[0] = -local_d0[0];
+            local_d0.x = local_d0.x - param_3->x;
+            if (local_d0.x < 0) {
+                local_d0.x = -local_d0.x;
             }
-            bVar1 = local_c8 < local_d0[0];
+            bVar1 = local_c8 < local_d0.x;
         } else {
-            iVar2 = FUN_overlay_d_0__0208e6f0(local_a0);
-            iVar3 = FUN_overlay_d_0__0208e704(local_a0);
+            iVar2 = func_ov000_0208e6f0(&local_a0);
+            iVar3 = func_ov000_0208e704(&local_a0);
             if (iVar2 < iVar3) {
                 bVar1 = true;
             } else {
@@ -2976,7 +2979,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.x < 0) {
                     iVar2 = -local_b8.x;
                 }
-                iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                iVar3      = func_ov000_0208e6f0(&local_a0);
                 param_7->x = param_7->x - ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = -0x1000;
                 param_8->y = 0;
@@ -2986,7 +2989,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.x < 0) {
                     iVar2 = -local_b8.x;
                 }
-                iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                iVar3      = func_ov000_0208e6f0(&local_a0);
                 param_7->x = param_7->x + ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0x1000;
                 param_8->y = 0;
@@ -2997,7 +3000,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             if (local_b8.z < 0) {
                 iVar2 = -local_b8.z;
             }
-            iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+            iVar3      = func_ov000_0208e704(&local_a0);
             param_7->z = param_7->z - ((param_5 + (iVar3 >> 1)) - iVar2);
             param_8->x = 0;
             param_8->y = 0;
@@ -3007,7 +3010,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             if (local_b8.z < 0) {
                 iVar2 = -local_b8.z;
             }
-            iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+            iVar3      = func_ov000_0208e704(&local_a0);
             param_7->z = param_7->z + ((param_5 + (iVar3 >> 1)) - iVar2);
             param_8->x = 0;
             param_8->y = 0;
@@ -3015,13 +3018,13 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
         }
     } else {
         iVar3 = param_3->x;
-        if ((iVar3 < local_94) && (local_a0[0] <= iVar3)) {
+        if ((iVar3 < local_94) && (local_a0.x <= iVar3)) {
             if (local_c4.z < 0) {
                 iVar2 = local_b8.z;
                 if (local_b8.z < 0) {
                     iVar2 = -local_b8.z;
                 }
-                iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+                iVar3      = func_ov000_0208e704(&local_a0);
                 param_7->z = param_7->z - ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0;
                 param_8->y = 0;
@@ -3031,7 +3034,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.z < 0) {
                     iVar2 = -local_b8.z;
                 }
-                iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+                iVar3      = func_ov000_0208e704(&local_a0);
                 param_7->z = param_7->z + ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0;
                 param_8->y = 0;
@@ -3043,7 +3046,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.x < 0) {
                     iVar2 = -local_b8.x;
                 }
-                iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                iVar3      = func_ov000_0208e6f0(&local_a0);
                 param_7->x = param_7->x - ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = -0x1000;
                 param_8->y = 0;
@@ -3053,7 +3056,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.x < 0) {
                     iVar2 = -local_b8.x;
                 }
-                iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                iVar3      = func_ov000_0208e6f0(&local_a0);
                 param_7->x = param_7->x + ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0x1000;
                 param_8->y = 0;
@@ -3064,17 +3067,17 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             if (local_c8 < 0) {
                 local_c8 = -local_c8;
             }
-            local_d0[0] = local_d0[0] - iVar3;
-            if (local_d0[0] < 0) {
-                local_d0[0] = -local_d0[0];
+            local_d0.x = local_d0.x - iVar3;
+            if (local_d0.x < 0) {
+                local_d0.x = -local_d0.x; // local_d0.x previously local_d0[0]
             }
-            if (local_c8 < local_d0[0]) {
+            if (local_c8 < local_d0.x) {
                 if (local_c4.x < 0) {
                     iVar2 = local_b8.x;
                     if (local_b8.x < 0) {
                         iVar2 = -local_b8.x;
                     }
-                    iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                    iVar3      = func_ov000_0208e6f0(&local_a0);
                     param_7->x = param_7->x - ((param_5 + (iVar3 >> 1)) - iVar2);
                     param_8->x = -0x1000;
                     param_8->y = 0;
@@ -3084,7 +3087,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                     if (local_b8.x < 0) {
                         iVar2 = -local_b8.x;
                     }
-                    iVar3      = FUN_overlay_d_0__0208e6f0(local_a0);
+                    iVar3      = func_ov000_0208e6f0(&local_a0);
                     param_7->x = param_7->x + ((param_5 + (iVar3 >> 1)) - iVar2);
                     param_8->x = 0x1000;
                     param_8->y = 0;
@@ -3095,7 +3098,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.z < 0) {
                     iVar2 = -local_b8.z;
                 }
-                iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+                iVar3      = func_ov000_0208e704(&local_a0);
                 param_7->z = param_7->z - ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0;
                 param_8->y = 0;
@@ -3105,7 +3108,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
                 if (local_b8.z < 0) {
                     iVar2 = -local_b8.z;
                 }
-                iVar3      = FUN_overlay_d_0__0208e704(local_a0);
+                iVar3      = func_ov000_0208e704(&local_a0);
                 param_7->z = param_7->z + ((param_5 + (iVar3 >> 1)) - iVar2);
                 param_8->x = 0;
                 param_8->y = 0;
@@ -3113,7 +3116,7 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             }
         }
     }
-    return false; */
+    return false;
 }
 
 bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
@@ -3169,8 +3172,8 @@ bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4
             return false;
         }
         //(**(code **) (*param_2 + 0x2c))(param_2, auStack_94);
-        func_ov000_0208e6b0(auStack_94, &VStack_a0);
-        Vec3p_Scale(&VStack_28, param_6); // Doesn't exist.
+        // func_ov000_0208e6b0(auStack_94, &VStack_a0);
+        Vec3p_Scale(&VStack_28, param_6);
         Vec3p_Add(param_4, &VStack_28, param_8);
         Vec3p_Sub(param_4, &VStack_a0, param_9);
         // Vec3p_Normalize(param_9);
@@ -3181,7 +3184,7 @@ bool MapManager::func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4
     local_70[1] = 0;
     local_70[2] = 0;
     // (**(code **) (*param_2 + 0x28))(param_2, local_70);
-    // Vec3p_Scale(&VStack_28, param_6); // Doesn't exist.
+    Vec3p_Scale(&VStack_28, param_6);
     Vec3p_Add(param_4, &VStack_28, param_8);
     local_7c.x = local_70[0];
     local_7c.z = local_70[2];
