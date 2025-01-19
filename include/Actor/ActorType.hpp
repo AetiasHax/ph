@@ -38,6 +38,7 @@ enum ActorTypeId_ {
 
     ActorTypeId_SmallKey     = 'NKEY',
     ActorTypeId_SwitchObject = 'SWOB',
+    ActorTypeId_EventIcon    = 'EVIC',
 
     ActorTypeId_Sandworm       = 'MLDW',
     ActorTypeId_Tektite        = 'TEKT',
