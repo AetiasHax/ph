@@ -51,6 +51,7 @@ extern "C" q20 Vec3p_Length(Vec3p *a);
 extern "C" void Vec3p_Normalize(Vec3p *vec, Vec3p *out);
 extern "C" void Vec3p_Axpy(q20 a, Vec3p *x, Vec3p *y, Vec3p *out);
 extern "C" q20 Vec3p_Distance(Vec3p *a, Vec3p *b);
+extern "C" void Vec3p_Scale(Vec3p *vec, q20 scale);
 
 inline void Vec3p_Rotate(Vec3p *vec, q20 sin, q20 cos, Vec3p *out) {
     out->x += MUL_Q20(vec->z, sin);
