@@ -123,7 +123,7 @@ public:
     unk32 func_ov00_02083588();
     unk32 func_ov00_020835a4();
     unk32 func_ov00_020835b4();
-    unk8 func_ov00_020835c4(s32 param_2, unk32 param_3);
+    unk8 func_ov00_020835c4(MapManager *param_1, s32 param_2, unk32 param_3);
     bool func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4);
     unk32 func_ov00_020835f4(s32 param_2);
     void func_ov00_02083604(s32 param_2);
@@ -235,7 +235,7 @@ public:
     static unk8 func_ov00_020858b0();
     s32 func_ov00_02085a34(unk32 param_2, unk32 param_3);
     unk8 func_ov00_02085c60(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
-    unk8 func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4);
+    unk8 func_ov00_02086044(Vec3p *param_2, Vec3p *param_3, unk32 param_4);
     bool func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7,
                             Vec3p *param_8);
     bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,

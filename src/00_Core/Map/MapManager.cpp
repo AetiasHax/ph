@@ -9,12 +9,15 @@ extern void func_ov000_02078bf0(s32 *param_1, unk32 param_2);
 extern s32 func_ov000_02078fe8(s32 *param_1);
 extern void func_ov000_020798bc(s32 *param_1, s32 param_2);
 extern void func_ov000_0208b13c(s32 *param_1);
+extern s32 func_ov000_0208b804(s32 *param_1, Vec3p *param_2, Vec3p *param_3);
 extern void func_ov000_0208cc88(s32 *param1);
 extern void func_ov000_0208d620(s32 *param_1);
 extern void func_ov000_0208d680(s32 *param_1);
 extern void func_ov000_0208e6b0(Vec3p *param_1, Vec3p *param_2);
 extern s32 func_ov000_0208e6f0(Vec3p *param_1);
 extern s32 func_ov000_0208e704(Vec3p *param_1);
+extern s32 func_ov000_0208e87c(AABB *param_1, Vec3p *param_2, Vec3p *param_3);
+extern void func_ov000_0208ed74(AABB *param_1, Vec3p *param_2);
 extern void func_ov000_02093a1c(u32 *param_1, s32 *param_2);
 extern void func_ov000_02096324(s32 *param_1, s32 param_2);
 extern s32 *func_ov000_02096418(s32 *param_1);
@@ -26,9 +29,9 @@ extern void func_ov004_02102b28(s32 *param_1);
 extern void func_ov004_02102e3c(s32 *param_1);
 extern void func_ov004_02105578(ActorManager *param_1, u32 param_2);
 extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
-extern s32 func_ov015_02129c14();
-extern bool func_ov015_02129c24(Vec3p *param_1, Vec3p *param_2);
-extern bool func_ov015_02129c34(s32 param_1);
+extern s32 func_ov015_02129c14(MapBase *param_1);
+extern bool func_ov015_02129c24(MapBase *param_1, Vec3p *param_2, Vec3p *param_3);
+extern bool func_ov015_02129c34(MapBase *param_1, s32 param_2);
 extern bool func_ov015_02129c44(s32 param_1);
 
 extern s32 *data_027e0c68;
@@ -186,7 +189,7 @@ ARM void MapManager::MapData_vfunc_9c() {
 ARM s32 MapManager::func_ov00_02082424() {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        var = func_ov015_02129c14(); // MapBase::GetUnk_19c_Unk_28 according to Ghidra
+        var = func_ov015_02129c14(this->mMap); // MapBase::GetUnk_19c_Unk_28 according to Ghidra
         return var;
     }
     return 0;
@@ -195,7 +198,7 @@ ARM s32 MapManager::func_ov00_02082424() {
 ARM bool MapManager::func_ov00_02082454(Vec3p *param_2, Vec3p *param_3) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state = func_ov015_02129c24(param_2, param_3);
+        bool state = func_ov015_02129c24(this->mMap, param_2, param_3);
         return state;
     }
     return false;
@@ -204,7 +207,7 @@ ARM bool MapManager::func_ov00_02082454(Vec3p *param_2, Vec3p *param_3) {
 ARM bool MapManager::func_ov00_02082494(s32 param_2) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state = func_ov015_02129c34(param_2);
+        bool state = func_ov015_02129c34(this->mMap, param_2);
         return state;
     }
     return false;
@@ -870,8 +873,8 @@ ARM unk32 MapManager::func_ov00_020835b4() {
     return this->mCourse->Get_Unk_c8_04();
 }
 
-ARM unk8 MapManager::func_ov00_020835c4(s32 param_2, unk32 param_3) {
-    return this->mCourse->func_ov00_0207d404(param_2, 0, param_3);
+ARM unk8 MapManager::func_ov00_020835c4(MapManager *param_1, s32 param_2, unk32 param_3) {
+    return param_1->mCourse->func_ov00_0207d404(param_2, 0, param_3);
 }
 
 ARM bool MapManager::func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4) {
@@ -2731,9 +2734,9 @@ unk8 MapManager::func_ov00_02085c60(unk32 param_2, unk32 param_3, unk32 param_4,
     return 0; */
 }
 
-unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4) {
-    /* undefined uVar1;
-    undefined uVar2;
+unk8 MapManager::func_ov00_02086044(Vec3p *param_2, Vec3p *param_3, unk32 param_4) {
+    unk32 uVar1;
+    unk32 uVar2;
     int iVar3;
     int iVar4;
     int iVar5;
@@ -2743,9 +2746,8 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
     int *piVar9;
     Vec3p *pVVar10;
     int iVar11;
-    undefined local_c6;
-    undefined local_c5;
-    undefined auStack_c4[4];
+    Vec2b local_c6;
+    unk32 auStack_c4[4];
     Vec3p iStack_c0;
     Vec3p local_b0;
     Vec3p local_a0;
@@ -2766,12 +2768,12 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
     local_88.x     = param_2->x;
     local_88.y     = param_2->y;
     local_88.z     = param_2->z;
-    FUN_overlay_d_0__0208ed74(&local_40, &local_88);
-    AABB::Grow(&local_40, param_4);
-    iVar3      = FUN_overlay_d_0__020839d4(param_1, local_40.min.x);
-    iVar4      = FUN_overlay_d_0__020839f8(param_1, local_40.min.z);
-    iVar5      = FUN_overlay_d_0__020839d4(param_1, local_40.max.x);
-    iVar6      = FUN_overlay_d_0__020839f8(param_1, local_40.max.z);
+    func_ov000_0208ed74(&local_40, &local_88);
+    // AABB_Grow(&local_40, param_4);
+    iVar3      = this->func_ov00_020839d4(local_40.min.x);
+    iVar4      = this->func_ov00_020839f8(local_40.min.z);
+    iVar5      = this->func_ov00_020839d4(local_40.max.x);
+    iVar6      = this->func_ov00_020839f8(local_40.max.z);
     local_4c.x = param_3->x;
     local_4c.y = param_3->y;
     local_4c.z = param_3->z;
@@ -2782,10 +2784,10 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
     local_a0.x = param_3->x;
     local_a0.y = param_3->y;
     local_a0.z = param_3->z;
-    Vec3p::Sub(&local_94, pVVar10, &VStack_58);
-    uVar1 = FUN_overlay_d_0__020839d4(param_1, param_3->x);
-    uVar2 = FUN_overlay_d_0__020839f8(param_1, param_3->z);
-    iVar7 = FUN_overlay_d_0__02083e34(param_1, uVar1, uVar2, pVVar10);
+    Vec3p_Sub(&local_94, pVVar10, &VStack_58);
+    uVar1 = this->func_ov00_020839d4(param_3->x);
+    uVar2 = this->func_ov00_020839f8(param_3->z);
+    // iVar7 = this->func_ov00_02083e34(uVar1, uVar2, pVVar10);
     do {
         if (iVar5 < iVar3) {
             return 0;
@@ -2793,25 +2795,25 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
         if (iVar4 <= iVar6) {
             iVar11 = iVar4;
             do {
-                iVar8 = FUN_overlay_d_0__02083e34(param_1, (char) iVar3, (char) iVar11, pVVar10);
+                // iVar8 = this->func_ov00_02083e34((char) iVar3, (char) iVar11, pVVar10);
                 if (iVar7 < iVar8) {
-                    local_c6 = (char) iVar3;
-                    local_c5 = (char) iVar11;
-                    FUN_overlay_d_0__02084024(*(MapManager **) PTR_gMapManager_overlay_d_0__02086280, &local_c6, &AStack_70);
-                    Vec3p::Sub(param_2, param_3, &VStack_7c);
+                    local_c6.x = (char) iVar3;
+                    local_c6.y = (char) iVar11;
+                    gMapManager->func_ov00_02084024(&local_c6, &AStack_70);
+                    Vec3p_Sub(param_2, param_3, &VStack_7c);
                     pVVar10 = (Vec3p *) auStack_c4;
-                    iVar8   = FUN_overlay_d_0__0208e87c(&AStack_70, &local_b0, &VStack_7c);
+                    iVar8   = func_ov000_0208e87c(&AStack_70, &local_b0, &VStack_7c);
                     if (iVar8 != 0) {
                         return 1;
                     }
                 }
-                piVar9 = (int *) MapData_vfunc_78(param_1);
-                if ((piVar9 != (int *) 0x0) && (iVar8 = (**(code **) (*piVar9 + 0x58))(), iVar8 != 0)) {
+                piVar9 = (int *) this->MapData_vfunc_78();
+                if ((piVar9 != (int *) 0x0) /*&& (iVar8 = (**(code **) (*piVar9 + 0x58))(), iVar8 != 0)*/) {
                     iStack_c0.x = param_3->x;
                     iStack_c0.y = param_3->y;
                     pVVar10     = (Vec3p *) param_3->z;
                     iStack_c0.z = (int) pVVar10;
-                    iVar8       = FUN_overlay_d_0__0208b804(piVar9, &iStack_c0, &VStack_58);
+                    iVar8       = func_ov000_0208b804(piVar9, &iStack_c0, &VStack_58);
                     if (iVar8 != 0) {
                         return 1;
                     }
@@ -2820,7 +2822,7 @@ unk8 MapManager::func_ov00_02086044(unk32 param_2, unk32 param_3, unk32 param_4)
             } while (iVar11 <= iVar6);
         }
         iVar3 = iVar3 + 1;
-    } while (true); */
+    } while (true);
 }
 
 bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, u16 param_6, Vec3p *param_7,
