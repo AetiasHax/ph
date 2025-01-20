@@ -92,9 +92,12 @@ class OverlayManager {
 public:
     OverlayId mLoadedOverlays[OverlayIndex_COUNT];
 
-    void Unload(OverlayIndex index);
     void Load(OverlayIndex index, OverlayId id);
     void LoadIfNotLoaded(OverlayIndex index, OverlayId id);
+    void Unload(OverlayIndex index);
+    void LoadOverlaySetup(s32 index);
+    void UnloadOverlaySetup();
+
     void LoadEquipItem(ItemFlag equipId);
 };
 

@@ -1,8 +1,8 @@
 #pragma once
 
 #include "global.h"
-#include "lib/math.h"
 #include "lib/touch.h"
+#include "nds/math.h"
 #include "types.h"
 
 typedef u16 TouchFlags;

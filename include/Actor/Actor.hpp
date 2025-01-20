@@ -3,7 +3,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "lib/math.h"
+#include "nds/math.h"
 
 #include "Actor/ActorRef.hpp"
 #include "Actor/ActorType.hpp"

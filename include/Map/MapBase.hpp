@@ -5,7 +5,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "lib/math.h"
+#include "nds/math.h"
 
 #include "Map/CameraViewpoint.hpp"
 #include "Map/Course.hpp"

@@ -3,6 +3,9 @@
 #include "global.h"
 #include "types.h"
 
+#include "nds/math.h"
+
+#include "Physics/AABB.hpp"
 #include "System/SysNew.hpp"
 
 struct TriggerParams {
@@ -21,6 +24,7 @@ struct TriggerParams {
 };
 
 class TriggerBase : public SysObject {
+public:
     /* 00 (vtable) */
     /* 04 */ unk8 mUnk_04;
     /* 05 */ u8 mId;
@@ -31,10 +35,13 @@ class TriggerBase : public SysObject {
     /* 14 */
 
     /* 00 */ virtual ~TriggerBase();
-    /* 08 */ void vfunc_08();
-    /* 0c */ unk32 vfunc_0c();
-    /* 10 */ unk32 vfunc_10();
-    /* 14 */ bool Overlaps();
-    /* 18 */ bool GetBoundingBox();
+    /* 08 */ virtual void vfunc_08();
+    /* 0c */ virtual unk32 vfunc_0c();
+    /* 10 */ virtual unk32 vfunc_10();
+    /* 14 */ virtual bool Overlaps(Vec3p *point);
+    /* 18 */ virtual bool GetBoundingBox(AABB *bbox);
     /* 1c */
+
+    TriggerBase(TriggerParams *params);
+    TriggerBase(u8 id, u32 param2, u32 param3, u32 param4);
 };

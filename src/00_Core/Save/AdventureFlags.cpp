@@ -47,4 +47,3 @@ bool AdventureFlags::func_ov00_02098074(unk32 param1, unk16 param2, unk32 param3
 bool AdventureFlags::func_ov00_0209809c() {}
 bool AdventureFlags::func_ov00_020980ac() {}
 void AdventureFlags::func_ov00_020980bc(s32 param1) {}
-void AdventureFlags::func_ov00_020980d0() {}

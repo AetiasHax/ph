@@ -6318,7 +6318,6 @@ from:0x0212b9d4 kind:load to:0x0212ecf4 module:overlay(11)
 from:0x0212b9e4 kind:arm_call_thumb to:0x0202c0b8 module:main
 from:0x0212b9ec kind:arm_call to:0x0202ea0c module:main
 from:0x0212ba00 kind:arm_call_thumb to:0x0202c0b8 module:main
-from:0x0212cfe8 kind:load to:0x02060402 module:main
 from:0x0212e7f4 kind:load to:0x02125e81 module:overlay(11)
 from:0x0212e7f8 kind:load to:0x02125ea9 module:overlay(11)
 from:0x0212e828 kind:load to:0x02126055 module:overlay(11)

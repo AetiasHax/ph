@@ -15,6 +15,7 @@ include_dir = root_dir / 'include'
 libs_dir = root_dir / 'libs'
 libc_include_dir = libs_dir / 'c' / 'include'
 libcpp_include_dir = libs_dir / 'cpp' / 'include'
+libnds_include_dir = libs_dir / 'nds' / 'include'
 
 if platform.system() == 'Windows': cc = [str(cc_path)]
 else: cc = ['wine', str(cc_path)]
@@ -27,7 +28,7 @@ cc.extend([
     '-proc', 'arm946e',
     '-gccext,on',
     '-fp', 'soft',
-    '-inline', 'on,noauto',
+    '-inline', 'noauto',
     '-Cpp_exceptions', 'off',
     '-RTTI', 'off',
     '-interworking',
@@ -38,6 +39,7 @@ cc.extend([
     '-i', include_dir,
     '-i', libc_include_dir,
     '-i', libcpp_include_dir,
+    '-i', libnds_include_dir,
     args.file
 ])
 
@@ -52,12 +54,20 @@ output = output.decode()
 # print(output)
 
 mangled_funcs: list[str] = re.findall(r'.text +([^\$ ]\S+)', output)
+init_funcs: list[str] = re.findall(r'.init +([^\$ ]\S+)', output)
 mangled_data: list[str] = re.findall(r'(?:.data|.bss) +([^\. ]\S+)', output)
 
 if len(mangled_funcs) > 0:
     print('Functions:')
     print()
     for func in mangled_funcs:
+        print(func)
+    print()
+    print()
+if len(init_funcs) > 0:
+    print('Static initializers:')
+    print()
+    for func in init_funcs:
         print(func)
     print()
     print()
