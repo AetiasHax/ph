@@ -51,6 +51,8 @@ struct FlagsUnk2 {
     /* 16 */ unk8 mUnk_16;
     /* 17 */ unk8 mUnk_17;
     /* 18 */
+
+    ~FlagsUnk2();
 };
 
 struct FlagsUnk {
@@ -69,6 +71,10 @@ struct FlagsUnk {
     /* 4a */ unk8 mUnk_4a;
     /* 4b */ unk8 mUnk_4b;
     /* 4c */
+
+    ~FlagsUnk();
+
+    void func_ov000_020980f8();
 };
 
 class AdventureFlags : public SysObject {
@@ -125,7 +131,6 @@ public:
     bool func_ov00_0209809c();
     bool func_ov00_020980ac();
     void func_ov00_020980bc(s32 param1);
-    void func_ov00_020980d0();
 };
 
 extern AdventureFlags *gAdventureFlags;

@@ -21,8 +21,22 @@ public:
     /* 20 */ unk32 mFlags0[1];
     /* 24 */ unk32 mFlags1[8];
     /* 44 */ unk32 mFlags2[2];
-    /* 4c */ unk32 mFlags3[1];
-    /* 50 */ unk32 mUnk_50;
-    /* 54 */ unk32 mUnk_54;
+    /* 4c */ unk32 mFlags3[2];
+    /* 54 */ unk32 mFlags4[1];
     /* 58 */
+
+    MapData(u8 *map, unk8 param2, unk8 param3, unk32 param4, unk32 param5);
+    ~MapData();
+    void func_ov000_020972e4(u16 *param1, unk32 *param2, bool param3);
+    void func_ov000_02097354();
+    void SetFlag0(u32 index, bool value);
+    bool GetFlag0(u32 index);
+    void SetFlag1(u32 index, bool value);
+    bool GetFlag1(u32 index);
+    void SetFlag2(u32 index, bool value);
+    bool GetFlag2(u32 index);
+    void SetFlag3(u32 index, bool value);
+    bool GetFlag3(u32 index);
+    void SetFlag4(u32 index, bool value);
+    bool GetFlag4(u32 index);
 };
