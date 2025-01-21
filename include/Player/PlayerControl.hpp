@@ -124,6 +124,12 @@ public:
     bool IsTouchingFast();
     bool IsTappedNow();
     bool func_ov00_020b13c4();
+
+    void ResetTouchWorld();
+    void InitTouchMovement();
+    void func_ov000_020b7924(s32 param1);
+    void ApplyTouchWorld(Vec3p *result, unk32 scale);
+    bool func_ov000_020b7d6c();
 };
 
 extern PlayerControl *gPlayerControl;

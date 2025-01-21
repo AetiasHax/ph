@@ -6,6 +6,20 @@
 
 #include "Item/Item.hpp"
 #include "Player/LinkStateBase.hpp"
+#include "Unknown/UnkStruct_02037750.hpp"
+
+class UnkStruct_ov004_0210abb8 : public UnkStruct_02037750 {
+public:
+    /* 00 (base) */
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */
+
+    /* 00 */ ~UnkStruct_ov004_0210abb8() override;
+    /* 08 */ void vfunc_08(unk32 param1) override;
+    /* 24 */ void vfunc_24(unk32 param1) override;
+    /* 2c */ unk32 vfunc_2c(s32 param1) override;
+    /* 34 */
+};
 
 class LinkStateCutscene : public LinkStateBase {
 public:
@@ -58,4 +72,28 @@ public:
     /* 38 */ virtual bool vfunc_38() override;
     /* 40 */ virtual bool vfunc_40() override;
     /* 44 */
+
+    bool func_ov000_020b1e98(s32 param1);
+    bool func_ov000_020b1eb8();
+    bool func_ov000_020b1eec();
+    void StopVerticalVelocity();
+    void func_ov000_020b2568();
+    void func_ov000_020b2598();
+    void func_ov000_020b2ba4();
+    void func_ov000_020b2ce4(unk32 param1, s16 param2);
+    void func_ov000_020b2cf0();
+    void func_ov000_020b2d60();
+    bool func_ov000_020b2d8c();
+    void func_ov000_020b2e84();
+    void func_ov000_020b2f48(unk32 param1, unk32 param2);
+    void func_ov000_020b2f70(unk32 param1, void *param2, unk32 *param3);
+    void ChangeToMoveState();
+    bool func_ov000_020b2fac();
+    void func_ov000_020b3024(Vec3p *param1, unk32 param2);
+    void func_ov000_020b305c(Vec3p *param1, Vec3p *param2);
+    void func_ov000_020b309c(Vec3p *param1);
+    void func_ov000_020b30e4(u32 param1, unk32 param2, unk32 param3);
+    void func_ov000_020b3278(s32 param1, s32 *param2);
+    void func_ov000_020b35d8(s32 param1, s32 param2);
+    void func_ov000_020b38dc(u32 param1, u32 param2);
 };

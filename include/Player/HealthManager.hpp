@@ -3,6 +3,7 @@
 #include "global.h"
 #include "types.h"
 
+#include "Save/SaveItemManager.hpp"
 #include "System/SysNew.hpp"
 
 class HealthManager : public SysObject {
@@ -17,6 +18,10 @@ public:
     /* 0e */ unk8 mUnk_0e;
     /* 0f */ unk8 mUnk_0f;
     /* 10 */
+
+    void Save(SaveItemManager *save);
+    void IncreaseMaxHealth(s16 amount);
+    void UpdateShipMaxHealth();
 };
 
 extern HealthManager *gHealthManager;
