@@ -31,9 +31,7 @@ THUMB int func_020371c8(BMGFileInfo* pData, u32* pFile, int param_3) {
     pData->unk_18 = param_3;
     pData->pHeader = (BMGHeader*)pFile;
 
-    acVar1 = BMG_TAG_FLI1;
-
-    // acVar1 = 'FLI1';
+    // acVar1 = BMG_TAG_FLI1;
     // pacVar2 = pHeader->firstSection;
     // uVar5 = 0;
     // dVar4 = 0xFFFF;

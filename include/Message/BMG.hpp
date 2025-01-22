@@ -21,10 +21,10 @@ typedef enum BMGEncoding {
     /* 5 */ BMG_ENCODING_MAX
 } BMGEncoding;
 
-typedef struct BMGSectionBase {
+typedef struct SectionBase {
     /* 0x00 */ char tag[4]; // "INF1", "DAT1", ...
     /* 0x04 */ u32 size; // the size of the section
-} BMGSectionBase; // size = 0x8
+} SectionBase; // size = 0x8
 
 typedef struct BMGHeader {
     /* 0x00 */ char magic[8]; // always "MESGbmg1"
@@ -32,16 +32,16 @@ typedef struct BMGHeader {
     /* 0x0C */ u32 numSections; // the number of sections (INF1, DAT1, ...)
     /* 0x10 */ u8 encoding; // see `BMGEncoding`
     /* 0x11 */ u8 unk_11[0xF]; // alignment padding?
-    /* 0x20 */ BMGSectionBase* firstSection; // technically not part of the header but used by functions
+    /* 0x20 */ SectionBase* firstSection; // technically not part of the header but used by functions
 } BMGHeader; // size = 0x24
 
 typedef struct EntryINF1 {
     /* 0x00 */ u32 offset; // relative to the end of the DAT1 header
-    /* 0x04 */ u32 unk_04; // flags?
+    /* 0x04 */ u32 unk_04; // flags/attributes?
 } EntryINF1; // size = 0x8
 
 typedef struct SectionINF1 {
-    /* 0x00 */ BMGSectionBase base;
+    /* 0x00 */ SectionBase base;
     /* 0x08 */ u16 numEntries;
     /* 0x0A */ u16 entrySize;
     /* 0x0C */ u16 groupId;
@@ -50,22 +50,62 @@ typedef struct SectionINF1 {
     /* 0x10 */ EntryINF1* entries;
 } SectionINF1;
 
-typedef struct EntryFLW1 {
-    /* 0x00 */ u8* data; //! TODO: find what's the format
-} EntryFLW1;
+typedef enum InstrType {
+    /* 1 */ FLW1_TYPE_SHOW_MSG = 1,
+    /* 2 */ FLW1_TYPE_BRANCH = 2,
+    /* 3 */ FLW1_TYPE_EVENT = 3,
+} InstrType;
+
+typedef struct InstrShowMsg {
+    /* 0x01 */ u8 bmgFileIndex; // index into sBMGFiles
+    /* 0x02 */ u16 msgIndex; // index of INF1 entry
+    /* 0x04 */ s16 nextIndex; // index of FLW1 entry, 0xFFFF stops the conversation
+    /* 0x06 */ s16 nextBMGFileIndex; // index into sBMGFiles
+} InstrShowMsg; // size = 0x8
+
+typedef struct InstrBranch {
+    /* 0x01 */ u8 unk_01;
+    /* 0x02 */ u16 funcIndex; // index of the query function to run
+    /* 0x04 */ u16 funcArg; // the argument to use in the function
+    /* 0x06 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
+} InstrBranch; // size = 0x8
+
+typedef struct InstrEvent {
+    /* 0x01 */ u8 funcIndex; // index of the query function to run
+    /* 0x02 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
+    /* 0x04 */ u32 funcArg; // the argument to use in the function
+} InstrEvent; // size = 0x8
+
+typedef struct FLW1Instr {
+    /* 0x00 */ u8 type; // see InstrType
+    /* 0x01 */ union {
+        InstrShowMsg showMsg;
+        InstrBranch branch;
+        InstrEvent event;
+    };
+} FLW1Instr; // size = 0x8
 
 typedef struct SectionFLW1 {
-    /* 0x00 */ BMGSectionBase base;
-    /* 0x08 */ EntryFLW1* entries;
+    /* 0x00 */ SectionBase base;
+    /* 0x04 */ u16 numInstructions;
+    /* 0x08 */ u16 numLabels;
+    /* 0x0C */ u32 unk_0C; // always zero?
+    /* 0x10 */ FLW1Instr* instructions;
+    /* 0x14 */ s16* flwEntries;
+    /* 0x18 */ s8* bmgFileIndices;
 } SectionFLW1;
 
 typedef struct EntryFLI1 {
-    /* 0x00 */ u8* data; //! TODO: find what's the format
-} EntryFLI1;
+    /* 0x00 */ u32 msgFlowID;
+    /* 0x04 */ u32 msgFlowNodeIndex;
+} EntryFLI1; // size = 0x8
 
 typedef struct SectionFLI1 {
-    /* 0x00 */ BMGSectionBase base;
-    /* 0x08 */ EntryFLI1* entries;
+    /* 0x00 */ SectionBase base;
+    /* 0x04 */ u16 numEntries;
+    /* 0x08 */ u16 entrySize;
+    /* 0x0C */ u32 unk_0C; // always zero?
+    /* 0x10 */ EntryFLI1* entries;
 } SectionFLI1;
 
 typedef struct EntryDAT1 {
@@ -73,15 +113,15 @@ typedef struct EntryDAT1 {
 } EntryDAT1;
 
 typedef struct SectionDAT1 {
-    /* 0x00 */ BMGSectionBase base;
+    /* 0x00 */ SectionBase base;
     /* 0x08 */ EntryDAT1* entries;
 } SectionDAT1;
 
 typedef struct BMGFileInfo {
     /* 0x00 */ BMGHeader* pHeader; // pointer to the file's header
     /* 0x04 */ SectionINF1* pINF1; // pointer to the data informations (INF -> informations)
-    /* 0x08 */ SectionFLW1* pFLW1; // pointer to an unknown dataset (FLW -> ?)
-    /* 0x0C */ SectionFLI1* pFLI1; // pointer to an unknown dataset (FLI -> ?)
+    /* 0x08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
+    /* 0x0C */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
     /* 0x10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
     /* 0x14 */ BMGHeader* unk_14; // same as unk_00 (?)
     /* 0x18 */ s16 unk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
