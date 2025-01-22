@@ -15,5 +15,8 @@ libs/cpp/src/__register_global_object.cpp:
     .text       start:0x0204f8d4 end:0x0204f8f4
     .bss        start:0x02076da8 end:0x02076dac
 
-src/Main/MessageManager.cpp:
-    .text       start:0x020371b4 end:0x020373b4
+src/Main/BmgRelatedFunctions.cpp:
+    .text       start:0x0202d3bc end:0x0202d56c
+
+src/Main/BMG.cpp:
+    .text       start:0x02036c50 end:0x0203744c

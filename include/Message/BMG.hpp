@@ -23,6 +23,44 @@ typedef enum BMGEncoding {
     /* 5 */ BMG_ENCODING_MAX
 } BMGEncoding;
 
+typedef enum BMGFileIndex {
+    /*  0 */ BMG_FILE_INDEX_SYSTEM,
+    /*  1 */ BMG_FILE_INDEX_REGULAR,
+    /*  2 */ BMG_FILE_INDEX_BATTLE,
+    /*  3 */ BMG_FILE_INDEX_TEST,
+    /*  4 */ BMG_FILE_INDEX_DEFAULT,
+    /*  5 */ BMG_FILE_INDEX_SEA,
+    /*  6 */ BMG_FILE_INDEX_KAITEI,
+    /*  7 */ BMG_FILE_INDEX_MAIN_ISL,
+    /*  8 */ BMG_FILE_INDEX_BRAVE,
+    /*  9 */ BMG_FILE_INDEX_FLAME,
+    /* 10 */ BMG_FILE_INDEX_WIND,
+    /* 11 */ BMG_FILE_INDEX_FROST,
+    /* 12 */ BMG_FILE_INDEX_POWER,
+    /* 13 */ BMG_FILE_INDEX_WISDOM,
+    /* 14 */ BMG_FILE_INDEX_GHOST,
+    /* 15 */ BMG_FILE_INDEX_HIDARI,
+    /* 16 */ BMG_FILE_INDEX_SENNIN,
+    /* 17 */ BMG_FILE_INDEX_SHIP,
+    /* 18 */ BMG_FILE_INDEX_COLLECT,
+    /* 19 */ BMG_FILE_INDEX_MAINSELECT,
+    /* 20 */ BMG_FILE_INDEX_FIELD,
+    /* 21 */ BMG_FILE_INDEX_WISDOM_DNGN,
+    /* 22 */ BMG_FILE_INDEX_DEMO,
+    /* 23 */ BMG_FILE_INDEX_BATTLECOMMON,
+    /* 24 */ BMG_FILE_INDEX_BOSSLAST1,
+    /* 25 */ BMG_FILE_INDEX_BOSSLAST3,
+    /* 26 */ BMG_FILE_INDEX_TORII,
+    /* 27 */ BMG_FILE_INDEX_MYOU,
+    /* 28 */ BMG_FILE_INDEX_KOJIMA1,
+    /* 29 */ BMG_FILE_INDEX_KOJIMA2,
+    /* 30 */ BMG_FILE_INDEX_KOJIMA5,
+    /* 31 */ BMG_FILE_INDEX_KOJIMA3,
+    /* 32 */ BMG_FILE_INDEX_STAFF,
+    /* 33 */ BMG_FILE_INDEX_KAITEI_F,
+    /* 34 */ BMG_FILE_INDEX_MAX
+} BMGFileIndex;
+
 typedef struct SectionBase {
     /* 0x00 */ u32 tag; // "INF1", "DAT1", ...
     /* 0x04 */ u32 size; // the size of the section
@@ -126,5 +164,11 @@ typedef struct BMGFileInfo {
     /* 0x10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
     /* 0x14 */ BMGHeader* unk_14; // same as unk_00 (?)
     /* 0x18 */ s16 unk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
-    /* 0x1A */ s16 unk_1A; // stores result of `func_020371c8` (currently undetermined purpose)
+    /* 0x1A */ s16 groupId; // stores the group id
 } BMGFileInfo; // size = 0x1C
+
+// 0x027E0C68 + 0x14
+typedef struct BMGGroups {
+    /* 0x00 */ BMGFileInfo* entries; // accessed with `groupId`
+    /* 0x04 */ u32 numEntries;
+} BMGGroups; // size = 0x8

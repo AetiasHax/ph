@@ -1,7 +1,7 @@
 extern "C" {
 #include <string.h>
 }
-#include "Message/MessageManager.hpp"
+#include "Message/BMG.hpp"
 
 char* func_0202ab38(u32* lang);
 u32* func_0202d550(int, u32*, char* path, int, int, int);
@@ -10,14 +10,54 @@ extern u32 *data_027e0ce0[];
 extern u32 data_027e05f4; // language
 extern u32* data_ov002_0210016c;
 
-THUMB void func_020371b4(BMGFileInfo* pData) {
-    pData->pHeader = NULL;
-    pData->pINF1 = NULL;
-    pData->pFLW1 = NULL;
-    pData->pFLI1 = NULL;
-    pData->pDAT1 = NULL;
-    pData->unk_14 = NULL;
-    pData->unk_18 = 0;
+static char* sBMGFiles[BMG_FILE_INDEX_MAX] = {
+    "system",       // BMG_FILE_INDEX_SYSTEM
+    "regular",      // BMG_FILE_INDEX_REGULAR
+    "battle",       // BMG_FILE_INDEX_BATTLE
+    "test",         // BMG_FILE_INDEX_TEST
+    "default",      // BMG_FILE_INDEX_DEFAULT
+    "sea",          // BMG_FILE_INDEX_SEA
+    "kaitei",       // BMG_FILE_INDEX_KAITEI
+    "main_isl",     // BMG_FILE_INDEX_MAIN_ISL
+    "brave",        // BMG_FILE_INDEX_BRAVE
+    "flame",        // BMG_FILE_INDEX_FLAME
+    "wind",         // BMG_FILE_INDEX_WIND
+    "frost",        // BMG_FILE_INDEX_FROST
+    "power",        // BMG_FILE_INDEX_POWER
+    "wisdom",       // BMG_FILE_INDEX_WISDOM
+    "ghost",        // BMG_FILE_INDEX_GHOST
+    "hidari",       // BMG_FILE_INDEX_HIDARI
+    "sennin",       // BMG_FILE_INDEX_SENNIN
+    "ship",         // BMG_FILE_INDEX_SHIP
+    "collect",      // BMG_FILE_INDEX_COLLECT
+    "mainselect",   // BMG_FILE_INDEX_MAINSELECT
+    "field",        // BMG_FILE_INDEX_FIELD
+    "wisdom_dngn",  // BMG_FILE_INDEX_WISDOM_DNGN
+    "demo",         // BMG_FILE_INDEX_DEMO
+    "battleCommon", // BMG_FILE_INDEX_BATTLECOMMON
+    "bossLast1",    // BMG_FILE_INDEX_BOSSLAST1
+    "bossLast3",    // BMG_FILE_INDEX_BOSSLAST3
+    "torii",        // BMG_FILE_INDEX_TORII
+    "myou",         // BMG_FILE_INDEX_MYOU
+    "kojima1",      // BMG_FILE_INDEX_KOJIMA1
+    "kojima2",      // BMG_FILE_INDEX_KOJIMA2
+    "kojima5",      // BMG_FILE_INDEX_KOJIMA5
+    "kojima3",      // BMG_FILE_INDEX_KOJIMA3
+    "staff",        // BMG_FILE_INDEX_STAFF
+    "kaitei_F",     // BMG_FILE_INDEX_KAITEI_F
+};
+
+ARM void func_020371b0(void) {
+}
+
+THUMB void func_020371b4(BMGFileInfo* pFileInfo) {
+    pFileInfo->pHeader = NULL;
+    pFileInfo->pINF1 = NULL;
+    pFileInfo->pFLW1 = NULL;
+    pFileInfo->pFLI1 = NULL;
+    pFileInfo->pDAT1 = NULL;
+    pFileInfo->unk_14 = NULL;
+    pFileInfo->unk_18 = 0;
 }
 
 THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
@@ -94,44 +134,7 @@ ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
     return -1;
 }
 
-static char* sBMGFiles[] = {
-    "system",
-    "regular",
-    "battle",
-    "test",
-    "default",
-    "sea",
-    "kaitei",
-    "main_isl",
-    "brave",
-    "flame",
-    "wind",
-    "frost",
-    "power",
-    "wisdom",
-    "ghost",
-    "hidari",
-    "sennin",
-    "ship",
-    "collect",
-    "mainselect",
-    "field",
-    "wisdom_dngn",
-    "demo",
-    "battleCommon",
-    "bossLast1",
-    "bossLast3",
-    "torii",
-    "myou",
-    "kojima1",
-    "kojima2",
-    "kojima5",
-    "kojima3",
-    "staff",
-    "kaitei_F",
-};
-
-THUMB void MessageManager::func_020372f0(int index, s16 unk_18, int param_4) {
+THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18, int param_4) {
     char bmgPath[64];
     BMGFileInfo bmgFile;
     u32* pFile;
@@ -140,7 +143,7 @@ THUMB void MessageManager::func_020372f0(int index, s16 unk_18, int param_4) {
     // path to the bmg file for the current language (i.e.: "English/Message/battle.bmg")
     strcpy(bmgPath, func_0202ab38(&data_027e05f4));
     strcat(bmgPath, "/Message/");
-    strcat(bmgPath, sBMGFiles[index]);
+    strcat(bmgPath, sBMGFiles[eIndex]);
     strcat(bmgPath, ".bmg");
 
     pFile = data_027e0ce0[1];
@@ -157,10 +160,10 @@ THUMB void MessageManager::func_020372f0(int index, s16 unk_18, int param_4) {
 
     pFile = func_0202d550(0xC4, pFile, bmgPath, 0, 0x10, 0);
 
-    bmgFile.unk_1A = 0;
+    bmgFile.groupId = 0;
     func_020371b4(&bmgFile);
 
     groupId = func_020371c8(&bmgFile, pFile, unk_18);
-    this->aUnknownData[groupId] = bmgFile;
-    this->aUnknownData[groupId].unk_1A = groupId;
+    pGroups->entries[groupId] = bmgFile;
+    pGroups->entries[groupId].groupId = groupId;
 }
