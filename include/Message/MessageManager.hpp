@@ -17,5 +17,5 @@ private:
     BMGFileInfo* aUnknownData;
 
 public:
-    void func_020372f0(int index, int param_3, int param_4);
+    void func_020372f0(int index, s16 unk_18, int param_4);
 };

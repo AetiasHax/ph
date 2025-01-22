@@ -4,13 +4,15 @@
 #include "types.h"
 
 #define BMG_MAGIC "MESGbmg1"
-#define BMG_TAG(a, b, c, d) (((a) << 24) | ((b) << 16) | ((c) << 8) | (d))
+#define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
 
 typedef enum BMGTag {
     /* "INF1" */ BMG_TAG_INF1 = BMG_TAG('I', 'N', 'F', '1'),
     /* "FLW1" */ BMG_TAG_FLW1 = BMG_TAG('F', 'L', 'W', '1'),
     /* "FLI1" */ BMG_TAG_FLI1 = BMG_TAG('F', 'L', 'I', '1'),
     /* "DAT1" */ BMG_TAG_DAT1 = BMG_TAG('D', 'A', 'T', '1'),
+    /* "MID1" */ BMG_TAG_MID1 = BMG_TAG('M', 'I', 'D', '1'),
+    /* "MID1" */ BMG_TAG_STR1 = BMG_TAG('S', 'T', 'R', '1'),
 } BMGTag;
 
 typedef enum BMGEncoding {
@@ -22,7 +24,7 @@ typedef enum BMGEncoding {
 } BMGEncoding;
 
 typedef struct SectionBase {
-    /* 0x00 */ char tag[4]; // "INF1", "DAT1", ...
+    /* 0x00 */ u32 tag; // "INF1", "DAT1", ...
     /* 0x04 */ u32 size; // the size of the section
 } SectionBase; // size = 0x8
 
@@ -32,8 +34,7 @@ typedef struct BMGHeader {
     /* 0x0C */ u32 numSections; // the number of sections (INF1, DAT1, ...)
     /* 0x10 */ u8 encoding; // see `BMGEncoding`
     /* 0x11 */ u8 unk_11[0xF]; // alignment padding?
-    /* 0x20 */ SectionBase* firstSection; // technically not part of the header but used by functions
-} BMGHeader; // size = 0x24
+} BMGHeader; // size = 0x20
 
 typedef struct EntryINF1 {
     /* 0x00 */ u32 offset; // relative to the end of the DAT1 header

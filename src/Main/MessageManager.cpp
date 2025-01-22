@@ -20,89 +20,78 @@ THUMB void func_020371b4(BMGFileInfo* pData) {
     pData->unk_18 = 0;
 }
 
-THUMB int func_020371c8(BMGFileInfo* pData, u32* pFile, int param_3) {
-    char acVar1;
-    char* pacVar2;
-    char acVar3;
-    int dVar4;
-    u32 uVar5;
+THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
+    SectionBase* pSection;
+    u16 groupId;
+    u32 i;
 
-    pData->unk_14 = (BMGHeader*)pFile;
-    pData->unk_18 = param_3;
-    pData->pHeader = (BMGHeader*)pFile;
+    groupId = -1;
+    pFileInfo->unk_14 = (BMGHeader*)pFile;
+    pFileInfo->pHeader = (BMGHeader*)pFile;
+    pFileInfo->unk_18 = unk_18;
+    pSection = (SectionBase*)((u8*)pFile + sizeof(BMGHeader));
 
-    // acVar1 = BMG_TAG_FLI1;
-    // pacVar2 = pHeader->firstSection;
-    // uVar5 = 0;
-    // dVar4 = 0xFFFF;
+    for (i = 0; i < pFileInfo->pHeader->numSections; i++) {
+        switch (pSection->tag) {
+            case BMG_TAG_MID1:
+                // unused
+                break;
+            case BMG_TAG_STR1:
+                // unused
+                break;
+            case BMG_TAG_INF1:
+                pFileInfo->pINF1 = (SectionINF1*)pSection;
+                groupId = pFileInfo->pINF1->groupId;
+                break;
+            case BMG_TAG_DAT1:
+                //! TODO: fake?
+                pFileInfo->pDAT1 = (SectionDAT1*)(pSection + 1);
+                break;
+            case BMG_TAG_FLW1:
+                pFileInfo->pFLW1 = (SectionFLW1*)pSection;
+                break;
+            case BMG_TAG_FLI1:
+                pFileInfo->pFLI1 = (SectionFLI1*)pSection;
+                break;
+        }
 
-    if (pData->pFLI1 != NULL) {
-    //     do {
-    //         acVar3 = *pacVar2;
-
-            if (acVar1 < acVar3) {
-    //             if ('DAT1' < acVar3) {
-    //                 if (acVar3 == 'FLW1') {
-    //                     pData->pFLW1 = (int)pacVar2;
-    //                 }
-    //             } else if ('DAT1' <= acVar3) {
-    //                 pData->pDAT1 = (int)(pacVar2 + 2);
-    //             }
-            } else if (acVar3 < acVar1) {
-    //             if (('MID1' < acVar3) && (acVar3 == 'INF1')) {
-    //                 pData->pINF1 = (int)pacVar2;
-    //                 dVar4 = pacVar2[3];
-    //             }
-            } else {
-    //             pData->pFLI1 = (int)pacVar2;
-            }
-
-    //         uVar5 = uVar5 + 1;
-    //         pacVar2++;
-    //     } while (uVar5 < pData->pFLI1);
+        pSection = (SectionBase*)((u8*)pSection + pSection->size);
     }
 
-    return dVar4;
+    return groupId;
 }
 
-ARM int func_02037258(BMGFileInfo* pData, unk32 param_2) {
-    // u32 iVar1;
+ARM EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2) {
+    SectionINF1* pINF1 = pFileInfo->pINF1;
 
-    // iVar1 = pData->pINF1;
+    if (pINF1 == NULL) {
+        return NULL;
+    }
 
-    // if (iVar1 == 0) {
-    //     return 0;
-    // }
+    if (param_2 < pINF1->numEntries) {
+        return &pINF1->entries[pINF1->entrySize * param_2];
+    }
 
-    // if (param_2 < iVar1) {
-    //     return (iVar1 + 10) * param_2 + iVar1 + 0x10;
-    // }
-
-    // return 0;
+    return NULL;
 }
 
-ARM s64 func_0203728c(BMGFileInfo* pData, unk32 param_2) {
-    // u32* iVar1;
-    // u32 uVar2;
-    // u32 uVar3;
+ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
+    SectionFLI1* pFLI1;
+    u16 i;
 
-    // iVar1 = pData->unk_0C;
-    // if (iVar1 == 0) {
-    //     return 0xFFFF;
-    // }
+    pFLI1 = pFileInfo->pFLI1;
 
-    // uVar2 = 0;
-    // if (iVar1 + 0xC + 8 != 0) {
-    //     do {
-    //         if (param_2 == *(int *)(iVar1 + 0x10 + uVar2 * 8)) {
-    //             return iVar1 + 0x10 + uVar2 * 8 + 4;
-    //         }
-    //         uVar3 = uVar2 + 1;
-    //         uVar2 = uVar3 & 0xFFFF;
-    //     } while ((uVar3 & 0xFFFF) < iVar1 + 0xC + 8);
-    // }
+    if (pFLI1 == NULL) {
+        return -1;
+    }
 
-    // return 0xFFFF;
+    for (i = 0; i < pFLI1->entrySize; i++) {
+        if (param_2 == pFLI1->entries[i * 8].msgFlowID) {
+            return pFLI1->entries[i * 8].msgFlowNodeIndex;
+        }
+    }
+
+    return -1;
 }
 
 static char* sBMGFiles[] = {
@@ -142,11 +131,11 @@ static char* sBMGFiles[] = {
     "kaitei_F",
 };
 
-THUMB void MessageManager::func_020372f0(int index, int param_3, int param_4) {
+THUMB void MessageManager::func_020372f0(int index, s16 unk_18, int param_4) {
     char bmgPath[64];
     BMGFileInfo bmgFile;
     u32* pFile;
-    int iVar1;
+    u16 groupId;
 
     // path to the bmg file for the current language (i.e.: "English/Message/battle.bmg")
     strcpy(bmgPath, func_0202ab38(&data_027e05f4));
@@ -156,8 +145,8 @@ THUMB void MessageManager::func_020372f0(int index, int param_3, int param_4) {
 
     pFile = data_027e0ce0[1];
 
-    if (param_3 != 1) {
-        if (param_3 != 4) {
+    if (unk_18 != 1) {
+        if (unk_18 != 4) {
             pFile = data_027e0ce0[0];
         } else {
             pFile = data_ov002_0210016c;
@@ -171,7 +160,7 @@ THUMB void MessageManager::func_020372f0(int index, int param_3, int param_4) {
     bmgFile.unk_1A = 0;
     func_020371b4(&bmgFile);
 
-    iVar1 = func_020371c8(&bmgFile, pFile, param_3);
-    this->aUnknownData[iVar1] = bmgFile;
-    this->aUnknownData[iVar1].unk_1A = iVar1;
+    groupId = func_020371c8(&bmgFile, pFile, unk_18);
+    this->aUnknownData[groupId] = bmgFile;
+    this->aUnknownData[groupId].unk_1A = groupId;
 }
