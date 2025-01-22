@@ -2,21 +2,19 @@
 
 #include "global.h"
 #include "types.h"
+#include "Message/BMG.hpp"
 
-typedef struct UnknownData {
-    unk32 unk_00;
-    unk32 unk_04;
-    unk32 unk_08;
-    unk32 unk_0C;
-    unk32 unk_10;
-    unk32 unk_14;
-    unk16 unk_18;
-    unk16 unk_1A;
-} UnknownData;
+/**
+ * - pHeader
+ * 021ACFD0
+ * 021FD7B0
+ * 02204380
+ * 023D98B0
+ */
 
 class MessageManager {
 private:
-    UnknownData* aUnknownData;
+    BMGFileInfo* aUnknownData;
 
 public:
     void func_020372f0(int index, int param_3, int param_4);
