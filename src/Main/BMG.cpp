@@ -5,12 +5,13 @@ extern "C" {
 
 char* func_0202ab38(u32* lang);
 u32* func_0202d550(int, u32*, char* path, int, int, int);
+void func_0202d590(BMGHeader*);
 
 extern u32 *data_027e0ce0[];
 extern u32 data_027e05f4; // language
 extern u32* data_ov002_0210016c;
 
-static char* sBMGFiles[BMG_FILE_INDEX_MAX] = {
+static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
     "system",       // BMG_FILE_INDEX_SYSTEM
     "regular",      // BMG_FILE_INDEX_REGULAR
     "battle",       // BMG_FILE_INDEX_BATTLE
@@ -46,6 +47,66 @@ static char* sBMGFiles[BMG_FILE_INDEX_MAX] = {
     "staff",        // BMG_FILE_INDEX_STAFF
     "kaitei_F",     // BMG_FILE_INDEX_KAITEI_F
 };
+
+s32 func_02036824(void);
+s32 func_02036850(Struct_027E0C68*);
+
+ARM s32 func_02036ce4(Struct_027E0C68*, Struct_027E0C68_unk_18*, unk32) {
+    // TODO
+}
+
+ARM Struct_027E0C68_unk_18* func_020370d0(Struct_027E0C68* param_1, unk32 param_2, unk32 param_3) {
+    return func_020370e8(param_1, param_2, -1, -1, param_3);
+}
+
+ARM Struct_027E0C68_unk_18* func_020370e8(Struct_027E0C68* param_1, unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5) {
+    Struct_027E0C68_unk_18* puVar2;
+
+    if (func_02036824() != 0) {
+        puVar2 = param_1->unk_18;
+    } else {
+        if (func_02036850(param_1) != 0) {
+            puVar2 = param_1->unk_1C;
+        } else {
+            return NULL;
+        }
+    }
+
+    puVar2->unk_30 = param_5;
+    puVar2->unk_34 = param_3;
+    puVar2->unk_36 = param_4;
+
+    if (func_02036ce4(param_1, puVar2, param_2) != 0) {
+        return puVar2;
+    }
+
+    return NULL;
+}
+
+ARM void func_02037158(Struct_027E0C68* param_1, u32 param_2) {
+    Struct_027E0C68_unk_28* pSVar1;
+
+    pSVar1 = func_02037178(param_1, param_2);
+
+    if (pSVar1 != NULL) {
+        pSVar1->unk_00->unk_58(pSVar1);
+    }
+}
+
+ARM Struct_027E0C68_unk_28* func_02037178(Struct_027E0C68* param_1, u32 param_2) {
+    Struct_027E0C68_unk_28* piVar1;
+    s32 iVar2;
+
+    for (iVar2 = 0; iVar2 < ARRAY_LEN(param_1->unk_28); iVar2++) {
+        piVar1 = param_1->unk_28[iVar2];
+
+        if (piVar1 != NULL && piVar1->unk_08 == param_2) {
+            return piVar1;
+        }
+    }
+
+    return NULL;
+}
 
 ARM void func_020371b0(void) {
 }
@@ -125,9 +186,9 @@ ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
         return -1;
     }
 
-    for (i = 0; i < pFLI1->entrySize; i++) {
-        if (param_2 == pFLI1->entries[i * 8].msgFlowID) {
-            return pFLI1->entries[i * 8].msgFlowNodeIndex;
+    for (i = 0; i < pFLI1->numEntries; i++) {
+        if (param_2 == pFLI1->entries[i * 2].msgFlowID) {
+            return pFLI1->entries[i].msgFlowNodeIndex;
         }
     }
 
@@ -143,7 +204,7 @@ THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18, in
     // path to the bmg file for the current language (i.e.: "English/Message/battle.bmg")
     strcpy(bmgPath, func_0202ab38(&data_027e05f4));
     strcat(bmgPath, "/Message/");
-    strcat(bmgPath, sBMGFiles[eIndex]);
+    strcat(bmgPath, sBMGFileNames[eIndex]);
     strcat(bmgPath, ".bmg");
 
     pFile = data_027e0ce0[1];
@@ -158,12 +219,44 @@ THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18, in
             // pFile = data_027e0ce0[0];
     }
 
+    // get file data
     pFile = func_0202d550(0xC4, pFile, bmgPath, 0, 0x10, 0);
 
+    // initialize file info
     bmgFile.groupId = 0;
     func_020371b4(&bmgFile);
 
+    // assign sections and set the file info in the groups entries
     groupId = func_020371c8(&bmgFile, pFile, unk_18);
     pGroups->entries[groupId] = bmgFile;
     pGroups->entries[groupId].groupId = groupId;
+}
+
+THUMB void func_020373b4(BMGGroups* pGroups, s16 unk_18) {
+    s32 i;
+
+    for (i = 0; i < pGroups->numEntries; i++) {
+        if (pGroups->entries[i].unk_18 == unk_18) {
+            func_0202d590(pGroups->entries[i].unk_14);
+            func_020371b4(&pGroups->entries[i]);
+        }
+    }
+}
+
+ARM u32 func_020373ec(BMGGroups* pGroups, unk32 param_2) {
+    u16 dVar1;
+    u16 uVar2;
+    s32 i;
+
+    dVar1 = -1;
+
+    for (i = 0; i < pGroups->numEntries; i++) {
+        uVar2 = func_0203728c(&pGroups->entries[i], param_2);
+
+        if (uVar2 != dVar1) {
+            return uVar2 | i << 0x10;
+        }
+    }
+
+    return -1;
 }
