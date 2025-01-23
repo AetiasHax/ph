@@ -6,8 +6,10 @@
 
 #include "Actor/ActorManager.hpp"
 #include "Debug/DebugHierarchy.hpp"
+#include "Item/ItemManager.hpp"
 #include "Player/MotionParams.hpp"
 #include "Player/PlayerBase.hpp"
+#include "Player/PlayerControlData.hpp"
 
 typedef s32 PlayerCharacter;
 enum PlayerCharacter_ {
@@ -73,13 +75,83 @@ public:
     /* 84 */ virtual void ResetUnk_5e();
     /* 88 */
 
-    bool func_ov00_020bbd80(s32 param1);
-    void func_ov00_020bc854(Vec3p *param1);
-    bool func_ov00_020bce48(ItemId cutsceneItemId); // PlayItemCutscene
-    bool func_ov00_020bd304();
-    bool GongoronCollidesWith(Cylinder *hitbox);
-    s32 GetGrabActorId();
+    void UnequipPotion();
+    void ChangeLinkState(s32 index);
+    void SetLinkSubState(s32 index, unk32 substate);
+    PlayerControlData *GetPlayerControlData(s32 index);
+    void GetDistanceTo(Vec3p *vec, q20 *yDist, q20 *xzDist);
+    bool func_ov000_020bb68c(Vec3p *target);
+    bool func_ov000_020bb6d4();
+    void func_ov000_020bb810(Vec3p *target, unk32 param2);
+    void func_ov000_020bb8c4(Vec3p *param1);
+    void TurnTo(Vec3p *target);
+    void func_ov000_020bb9b0();
+    void func_ov000_020bb9c8();
+    void func_ov000_020bb9e4();
+    bool func_ov000_020bba00();
+    bool func_ov000_020bba14();
+    bool func_ov000_020bba28();
+    void func_ov000_020bba48();
+    bool func_ov000_020bbabc();
+    bool func_ov000_020bbb18();
+    bool func_ov000_020bbb64();
+    bool func_ov000_020bbb78();
+    void func_ov000_020bbbb8();
+    bool func_ov000_020bbbd0(s32 param1, s32 param2);
+    bool func_ov000_020bbc68(s32 param1);
+    bool func_ov000_020bbd40();
+    bool func_ov000_020bbd60();
+    bool func_ov000_020bbd80(s32 param1);
+    unk32 func_ov000_020bbe94();
+    void func_ov000_020bc088();
+    ItemManager *GetItemManager();
+    void func_ov000_020bc1c8(unk32 param1, unk32 param2, unk32 param3);
+    bool func_ov000_020bc210();
+    void SetVelocity(Vec3p *velocity, bool setAngle);
+    void func_ov000_020bc280(unk16 param1);
+    unk32 func_ov000_020bc2d4(unk32 param1);
+    unk32 func_ov000_020bc320(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov000_020bc398(unk32 param1, s32 param2);
     PlayerCharacter GetCurrentCharacter();
+    s32 GetHealth(PlayerCharacter character);
+    void AddHealth(s16 amount, PlayerCharacter character);
+    void func_ov000_020bc4ac();
+    s32 GetStateId();
+    s32 func_ov000_020bc520(Vec3p *param1);
+    unk32 Grab();
+    void func_ov000_020bc7e0(unk32 param1);
+    s32 GetGrabActorId();
+    s32 func_ov000_020bc808();
+    unk32 func_ov000_020bc84c();
+    void func_ov000_020bc854(Vec3p *param1);
+    void UpdateTilePos(Vec3p *param1, PlayerCharacter character);
+    void func_ov000_020bc90c(unk32 *param1, s32 param2);
+    bool func_ov000_020bc960(unk32 param1, unk32 param2, unk32 param3);
+    bool GongoronCollidesWith(Cylinder *hitbox);
+    bool func_ov000_020bcc78();
+    void func_ov000_020bccc8();
+    void func_ov000_020bcdb8();
+    void func_ov000_020bcdec(Vec3p *param1, unk16 param2);
+    bool PlayItemCutscene(ItemId cutsceneItemId);
+    bool func_ov000_020bcec8();
+    bool func_ov000_020bcefc();
+    bool func_ov000_020bcf2c();
+    bool func_ov000_020bcf50(Vec3p *param1, unk32 param2);
+    bool func_ov000_020bcf84(Vec3p *param1, Vec3p *param2);
+    bool func_ov000_020bcfb8(s32 param1);
+    bool func_ov000_020bd030(unk32 param1);
+    bool func_ov000_020bd070(unk32 param1);
+    bool func_ov000_020bd0a8();
+    bool func_ov000_020bd0bc(Vec3p *param1, s32 param2);
+    bool func_ov000_020bd268();
+    bool func_ov000_020bd2bc();
+    bool func_ov000_020bd304();
+    bool func_ov000_020bd318();
+    void SetPlayerCharacter(PlayerCharacter character);
+    bool func_ov000_020bd3b0(unk32 param1, unk32 param2, unk32 param3, unk16 param4);
+    void SetPosition(Vec3p *position);
+    void SetAngle(s16 *angle);
+    bool func_ov000_020bd510(s32 param1, unk32 *param2);
 };
 
 extern PlayerLinkBase *gPlayerLink;

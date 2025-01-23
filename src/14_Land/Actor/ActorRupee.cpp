@@ -177,7 +177,7 @@ void ActorRupee::Update(bool param1) {
         cutsceneItemId = GetRupeeCutsceneItemId();
 
         if (cutsceneItemId >= 0) {
-            if (gPlayerLink->func_ov00_020bce48(cutsceneItemId)) {
+            if (gPlayerLink->PlayItemCutscene(cutsceneItemId)) {
                 Kill();
             } else {
                 func_ov14_0213b204(3);
@@ -223,7 +223,7 @@ void ActorRupee::Update(bool param1) {
             break;
         case 3:
             PlayerLinkBase *pLink = gPlayerLink;
-            if (pLink->func_ov00_020bce48(GetRupeeCutsceneItemId())) {
+            if (pLink->PlayItemCutscene(GetRupeeCutsceneItemId())) {
                 Kill();
             }
             break;

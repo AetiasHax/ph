@@ -251,7 +251,7 @@ ARM bool Actor::vfunc_9c() {}
 
 ARM bool Actor::func_ov00_020c195c() {
     if (!mUnk_11b) return false;
-    gPlayerLink->func_ov00_020bc854(&mPos);
+    gPlayerLink->func_ov000_020bc854(&mPos);
     return true;
 }
 
@@ -272,7 +272,7 @@ ARM bool Actor::func_ov00_020c198c() {
     {
         return false;
     }
-    if (gPlayerLink && !gPlayerLink->func_ov00_020bd304()) return false;
+    if (gPlayerLink && !gPlayerLink->func_ov000_020bd304()) return false;
     return true;
 }
 

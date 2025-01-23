@@ -8,7 +8,7 @@ extern "C" {
 #include "nds/math.h"
 #include "types.h"
 
-#include "Actor/ActorNavi.hpp"
+#include "Actor/Navi/ActorNavi.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipItem.hpp"
 #include "Render/ModelRender.hpp"

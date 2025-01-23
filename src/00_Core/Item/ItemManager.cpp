@@ -256,7 +256,7 @@ ARM bool ItemManager::func_ov00_020ad790(unk32 param1) {
     ItemFlag equipId = mForcedItem;
     bool unk2        = !gMapManager->func_ov00_020849f8(equipId);
     if (mEquippedItem != ItemFlag_None && (unk2 || (u32) mEquippedItem - 9 <= 1) &&
-        (gPlayerLink == 0 || gPlayerLink->func_ov00_020bbd80(param1)) && this->HasItem(mEquippedItem))
+        (gPlayerLink == 0 || gPlayerLink->func_ov000_020bbd80(param1)) && this->HasItem(mEquippedItem))
     {
         equipId = mEquippedItem;
     }
