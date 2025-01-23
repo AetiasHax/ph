@@ -48,66 +48,6 @@ static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
     "kaitei_F",     // BMG_FILE_INDEX_KAITEI_F
 };
 
-s32 func_02036824(void);
-s32 func_02036850(Struct_027E0C68*);
-
-ARM s32 func_02036ce4(Struct_027E0C68*, Struct_027E0C68_unk_18*, unk32) {
-    // TODO
-}
-
-ARM Struct_027E0C68_unk_18* func_020370d0(Struct_027E0C68* param_1, unk32 param_2, unk32 param_3) {
-    return func_020370e8(param_1, param_2, -1, -1, param_3);
-}
-
-ARM Struct_027E0C68_unk_18* func_020370e8(Struct_027E0C68* param_1, unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5) {
-    Struct_027E0C68_unk_18* puVar2;
-
-    if (func_02036824() != 0) {
-        puVar2 = param_1->unk_18;
-    } else {
-        if (func_02036850(param_1) != 0) {
-            puVar2 = param_1->unk_1C;
-        } else {
-            return NULL;
-        }
-    }
-
-    puVar2->unk_30 = param_5;
-    puVar2->unk_34 = param_3;
-    puVar2->unk_36 = param_4;
-
-    if (func_02036ce4(param_1, puVar2, param_2) != 0) {
-        return puVar2;
-    }
-
-    return NULL;
-}
-
-ARM void func_02037158(Struct_027E0C68* param_1, u32 param_2) {
-    Struct_027E0C68_unk_28* pSVar1;
-
-    pSVar1 = func_02037178(param_1, param_2);
-
-    if (pSVar1 != NULL) {
-        pSVar1->unk_00->unk_58(pSVar1);
-    }
-}
-
-ARM Struct_027E0C68_unk_28* func_02037178(Struct_027E0C68* param_1, u32 param_2) {
-    Struct_027E0C68_unk_28* piVar1;
-    s32 iVar2;
-
-    for (iVar2 = 0; iVar2 < ARRAY_LEN(param_1->unk_28); iVar2++) {
-        piVar1 = param_1->unk_28[iVar2];
-
-        if (piVar1 != NULL && piVar1->unk_08 == param_2) {
-            return piVar1;
-        }
-    }
-
-    return NULL;
-}
-
 ARM void func_020371b0(void) {
 }
 

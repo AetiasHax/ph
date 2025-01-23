@@ -173,7 +173,9 @@ typedef struct BMGGroups {
     /* 0x04 */ s32 numEntries;
 } BMGGroups; // size = 0x8
 
+typedef void (*Struct_027E0C68_unk_28_unk_50)(struct Struct_027E0C68_unk_28*, EntryINF1*, int, u8*);
 typedef void (*Struct_027E0C68_unk_28_unk_58)(struct Struct_027E0C68_unk_28*);
+typedef void (*Struct_027E0C68_unk_18_unk_08)(struct Struct_027E0C68_unk_18*);
 
 typedef struct Struct_027E0C68_unk_28_unk_00 {
     /* 0x00 */ unk32 unk_00;
@@ -196,21 +198,29 @@ typedef struct Struct_027E0C68_unk_28_unk_00 {
     /* 0x44 */ unk32 unk_44;
     /* 0x48 */ unk32 unk_48;
     /* 0x4C */ unk32 unk_4C;
-    /* 0x50 */ unk32 unk_50;
+    /* 0x50 */ Struct_027E0C68_unk_28_unk_50 unk_50;
     /* 0x54 */ unk32 unk_54;
     /* 0x58 */ Struct_027E0C68_unk_28_unk_58 unk_58;
     /* 0x5C */ unk32 unk_5C;
 } Struct_027E0C68_unk_28_unk_00;
 
+//! TODO: this should be a class
 typedef struct Struct_027E0C68_unk_28 {
     /* 0x00 */ Struct_027E0C68_unk_28_unk_00* unk_00;
-    /* 0x04 */ unk32 unk_04;
-    /* 0x08 */ unk32 unk_08;
+    /* 0x04 */ struct Struct_027E0C68_unk_28* unk_04;
+    /* 0x08 */ struct Struct_027E0C68_unk_28* unk_08;
     /* 0x0C */ unk32 unk_0C;
 } Struct_027E0C68_unk_28;
 
-typedef struct Struct_027E0C68_unk_18 {
+typedef struct Struct_027E0C68_unk_18_unk_00 {
     /* 0x00 */ unk32 unk_00;
+    /* 0x04 */ unk32 unk_04;
+    /* 0x08 */ Struct_027E0C68_unk_18_unk_08 unk_08;
+    /* 0x0C */ unk32 unk_0C;
+} Struct_027E0C68_unk_18_unk_00;
+
+typedef struct Struct_027E0C68_unk_18 {
+    /* 0x00 */ Struct_027E0C68_unk_18_unk_00* unk_00;
     /* 0x04 */ unk32 unk_04;
     /* 0x08 */ unk32 unk_08;
     /* 0x0C */ unk32 unk_0C;
@@ -235,8 +245,10 @@ typedef struct Struct_027E0C68_unk_18 {
 typedef struct Struct_027E0C68 {
     /* 0x00 */ unk16 unk_00;
     /* 0x02 */ unk16 unk_02;
-    /* 0x04 */ unk32 unk_04;
-    /* 0x08 */ unk32 unk_08;
+    /* 0x04 */ u8 unk_04;
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ unk16 unk_06;
+    /* 0x08 */ Struct_027E0C68_unk_28* unk_08;
     /* 0x0C */ unk32 unk_0C;
     /* 0x10 */ unk32 unk_10;
     /* 0x14 */ BMGGroups* pGroups;
@@ -247,5 +259,8 @@ typedef struct Struct_027E0C68 {
     /* 0x28 */ Struct_027E0C68_unk_28* unk_28[6]; // 022172B0
 } Struct_027E0C68;
 
-Struct_027E0C68_unk_18* func_020370e8(Struct_027E0C68* param_1, unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5);
-Struct_027E0C68_unk_28* func_02037178(Struct_027E0C68* param_1, u32 param_2);
+extern Struct_027E0C68_unk_28* func_02036f68(Struct_027E0C68 *param_1, u32 param_2, u8* param_3);
+extern Struct_027E0C68_unk_18* func_020370e8(Struct_027E0C68* param_1, unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5);
+extern Struct_027E0C68_unk_28* func_02037178(Struct_027E0C68* param_1, u32 param_2);
+extern EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2);
+extern u32 func_020373ec(BMGGroups* pGroups, unk32 param_2);
