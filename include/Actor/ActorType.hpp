@@ -111,6 +111,7 @@ enum ActorTypeId_ {
     ActorTypeId_BMTY = __ACTOR_TYPE_ID(B, M, T, Y),
     ActorTypeId_BTRF = __ACTOR_TYPE_ID(B, T, R, F),
     ActorTypeId_CBLS = __ACTOR_TYPE_ID(C, B, L, S),
+    ActorTypeId_EVIC = __ACTOR_TYPE_ID(E, V, I, C),
     ActorTypeId_FLAL = __ACTOR_TYPE_ID(F, L, A, L),
     ActorTypeId_FLBM = __ACTOR_TYPE_ID(F, L, B, M),
     ActorTypeId_FLBT = __ACTOR_TYPE_ID(F, L, B, T),
