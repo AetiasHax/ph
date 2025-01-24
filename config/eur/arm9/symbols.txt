@@ -2565,7 +2565,7 @@ data_02056898 kind:data(any) addr:0x2056898
 data_02056918 kind:data(any) addr:0x2056918
 data_0205691c kind:data(any) addr:0x205691c
 data_02056924 kind:data(any) addr:0x2056924
-data_02056958 kind:data(any) addr:0x2056958
+sBMGFileNames kind:data(any) addr:0x2056958
 data_020569e0 kind:data(any) addr:0x20569e0
 data_020569ec kind:data(any) addr:0x20569ec
 data_020569f0 kind:data(any) addr:0x20569f0

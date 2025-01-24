@@ -171,7 +171,6 @@ typedef struct BMGFileInfo {
     /* 0x1A */ s16 groupId; // stores the group id
 } BMGFileInfo; // size = 0x1C
 
-
 class BMGGroups : public SysObject {
 public:
     /* 0x00 */ BMGFileInfo* entries; // accessed with `groupId`
