@@ -3,6 +3,7 @@
 #include "global.h"
 #include "types.h"
 
+#include "System/SysNew.hpp"
 #include "Message/BMG.hpp"
 
 // temp
@@ -36,6 +37,8 @@ public:
     /* 0x54 */ unk32 unk_54;
     /* 0x58 */ unk32 unk_58;
     /* 0x5C */ s16 unk_5C;
+    /* 0x60 */ unk32 unk_60[0x3D];
+    /* 0x5C */ s16 unk_15C;
 
     /* 0x00 */ virtual UNK_TYPE vfunc_00(void);
     /* 0x04 */ virtual UNK_TYPE vfunc_04(void);
@@ -106,7 +109,7 @@ public:
     /* 0x34 */ virtual UNK_TYPE vfunc_34(void);
 };
 
-class UnkStruct_027E0C68 {
+class UnkStruct_027E0C68 : public SysObject {
 private:
     /* 0x00 */ unk16 unk_00;
     /* 0x02 */ unk16 unk_02;
@@ -121,10 +124,17 @@ private:
     /* 0x1C */ UnkStruct_027E0C68_UnkSubClass2* unk_1C;
     /* 0x20 */ u32* unk_20;
     /* 0x24 */ unk32 unk_24;
-    /* 0x28 */ UnkStruct_027E0C68_UnkSubClass1* unk_28[6]; // 022172B0
+    /* 0x28 */ UnkStruct_027E0C68_UnkSubClass1* unk_28[6];
 
 public:
+    UnkStruct_027E0C68();
+    ~UnkStruct_027E0C68();
     UnkStruct_027E0C68_UnkSubClass1* func_020366c4(void);
+    UnkStruct_027E0C68_UnkSubClass1* func_02036700(void);
+    UnkStruct_027E0C68_UnkSubClass2* func_0203673c(void);
+    unk32 func_02036798(void);
+    bool func_020367dc(int param_2);
+    bool UnkStruct_027E0C68::func_020367ec(void);
     bool func_02036808(void);
     bool func_02036824(void);
     bool func_02036850(void);

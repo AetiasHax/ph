@@ -17,8 +17,72 @@ extern UnkStruct2 data_027e077c;
 extern u32 data_ov000_020eec9c[];
 extern u8 data_02056be4[];
 
+// non-matching
+ARM UnkStruct_027E0C68::~UnkStruct_027E0C68() {}
+
+// non-matching
+ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_020366c4(void) {
+    if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) && ((data_02056be4[data_027e077c.mUnk_0] & 2) == 0)) {
+        return this->unk_28[2];
+    }
+
+    return this->unk_28[0];
+}
+
+// non-matching
+ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036700(void) {
+    if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) && ((data_02056be4[data_027e077c.mUnk_0] & 2) == 0)) {
+        return this->unk_28[0];
+    }
+
+    return this->unk_28[2];
+}
+
+ARM UnkStruct_027E0C68_UnkSubClass2* UnkStruct_027E0C68::func_0203673c(void) {
+    bool iVar1 = this->func_02036824();
+    bool iVar2 = this->func_02036850();
+
+    if (iVar1) {
+        return this->unk_18;
+    } 
+
+    if (iVar2) {
+        return this->unk_1C;
+    }
+
+    return NULL;
+}
+
+ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
+    unk32 uVar2 = 1;
+
+    if (this->unk_04 == 0) {
+        bool bVar1 = false;
+
+        if (this->unk_1C != NULL && (this->unk_1C->unk_18 & 0xFFFF0000) != 0x1000000) {
+            bVar1 = true;
+        }
+
+        if (!bVar1) {
+            uVar2 = 0;
+        }
+    }
+
+    return uVar2;
+}
+
+ARM bool UnkStruct_027E0C68::func_020367dc(int param_2) {
+    return param_2 == 0;
+}
+
+ARM bool UnkStruct_027E0C68::func_020367ec(void) {
+    //! TODO: fake?
+    return this->unk_28[0]->unk_15C > 0;
+}
+
 ARM bool UnkStruct_027E0C68::func_02036808(void) {
-    return this->unk_28[2]->unk_15[0x2E] > 0;
+    //! TODO: fake?
+    return this->unk_28[2]->unk_15C > 0;
 }
 
 ARM bool UnkStruct_027E0C68::func_02036824(void) {
@@ -34,6 +98,7 @@ ARM bool UnkStruct_027E0C68::func_02036824(void) {
     return false;
 }
 
+// non-matching
 ARM bool UnkStruct_027E0C68::func_02036850(void) {
     bool ret = false;
     u8 value;
@@ -52,7 +117,8 @@ ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_027E0C68_UnkSubClass2* para
     if ((param_2->unk_18 & 0xFFFF0000) != 0x1000000) {
         UnkStruct_027E0C68_UnkSubClass1* iVar1 = this->func_020366c4();
 
-        if (iVar1->unk_5C <= 0) {
+        //! TODO: fake?
+        if (iVar1->unk_15C <= 0) {
             param_2->vfunc_10();
         } else {
             param_2->vfunc_0C(this->func_020366c4());
