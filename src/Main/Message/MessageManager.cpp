@@ -1,4 +1,5 @@
 #include "Message/MessageManager.hpp"
+#include "Actor/ActorManager.hpp"
 
 extern unk32 func_ov000_020d7f18(u32*, unk32);
 extern unk32 func_ov000_020d77e4(u32*, unk32);
@@ -22,6 +23,13 @@ extern u32** data_027e0ce0[];
 extern u32 data_02056924[];
 extern u32* data_02068e6c;
 extern u32* data_02068e8c;
+extern u16 data_02056918[];
+extern ActorTypeId data_0205691c[];
+extern u8 data_027e0c54;
+
+// this should be `data_027e0ffc->func_ov000_020cec60(u16, Vec3p*, s32);`
+extern u32* data_027e0ffc;
+extern void func_ov000_020cec60(u32*, u16, Vec3p*, Actor*, unk32);
 
 ARM void func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
     BMGGroups *pBVar2 = param_2->pGroups;
@@ -239,7 +247,7 @@ ARM bool UnkStruct_027E0C68::func_02036850(void) {
 }
 
 ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_027E0C68_UnkSubClass2* param_2) {    
-    if ((param_2->unk_18 & 0xFFFF0000) != 0x1000000) {
+    if ((param_2->unk_18 & ~0xFFFF) != (0x100 << 0x10)) {
         UnkStruct_027E0C68_UnkSubClass1* iVar1 = this->func_020366c4();
 
         //! TODO: fake?
@@ -251,13 +259,108 @@ ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_027E0C68_UnkSubClass2* para
     }
 }
 
-ARM bool UnkStruct_027E0C68::func_020368f4(unk32 param_2) {
-    if (this->unk_24 != 0) {
+ARM bool UnkStruct_027E0C68::func_020368f4(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+    if (this->unk_20[1] != NULL) {
         return false;
     }
 
-    this->unk_24 = param_2;
+    this->unk_20[1] = param_2;
     return true;
+}
+
+ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 param_4) {
+    UnkStruct_027E0C68_UnkSubClass1* unk_28_0;
+    UnkStruct_027E0C68_UnkSubClass1* unk_28_2;
+    UnkStruct_027E0C68_UnkSubClass1 *pSVar4;
+    ActorRef actorRef;
+    Actor* pActor;
+    bool iVar1;
+    bool iVar2;
+    s32 i;
+
+    if (!this->func_020367dc(param_2)) {
+        return;
+    }
+
+    this->unk_40[1] = this->unk_40[0];
+
+    unk_28_0 = this->unk_28[0];
+
+    if (unk_28_0 != NULL && unk_28_0->unk_15C > 0) {
+        unk_28_2 = this->unk_28[2];
+
+        if (unk_28_2 != NULL && unk_28_2->unk_15C > 0) {
+            this->unk_40[0] = this->func_020366c4();
+        } else {
+            this->unk_40[0] = unk_28_2;
+        }
+    } else {
+        unk_28_2 = this->unk_28[2];
+
+        if (unk_28_2 != NULL && unk_28_2->unk_15C > 0) {
+            this->unk_40[0] = unk_28_0;
+        } else {
+            this->unk_40[0] = NULL;
+        }
+    }
+
+    iVar1 = this->func_02036824();
+    iVar2 = this->func_02036850();
+
+    if (this->unk_20[1] != NULL && ((this->unk_20[1]->unk_18 & ~0xFFFF) != (0x100 << 0x10))) {
+        this->unk_20[1]->vfunc_10();
+        this->unk_20[1] = NULL;
+    }
+
+    if (iVar1) {
+        this->func_02036888(this->unk_18[0]);
+    } else if (iVar2) {
+        this->func_02036888(this->unk_18[1]);
+    }
+
+    for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
+        if (this->unk_28[i] != NULL) {
+            this->unk_28[i]->vfunc_2C();
+        }
+    }
+
+    this->unk_04 = 0;
+
+    if (this->unk_20[0] != NULL) {
+        if ((this->unk_20[0]->unk_18 & ~0xFFFF) == (0x100 << 0x10)) {
+            this->unk_20[0] = NULL;
+        } else {
+            this->unk_04 = 1;
+        }
+    }
+
+    if ((this->unk_18[0] != NULL) && ((this->unk_18[0]->unk_18 & ~0xFFFF) != (0x100 << 0x10))) {
+        this->unk_04 = 1;
+
+        //! TODO: fake?
+        pSVar4 = this->func_02037178((UnkStruct_027E0C68_UnkSubClass1*)this->unk_18[0]);
+
+        if (data_027e0c54 != 0 && pSVar4 != NULL && pSVar4->unk_48 != ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0)) {
+            this->unk_04 = 0;
+        }
+    }
+
+    if (this->unk_08 != NULL && this->unk_08->unk_15C > 0) {
+        this->unk_04 = 1;
+    } else {
+        this->unk_08 = NULL;
+    }
+
+    this->func_02036bbc();
+
+    if (this->unk_10 != 0) {
+        ActorManager::FindActorByType(&actorRef, gActorManager, data_0205691c[this->unk_10]);
+        pActor = gActorManager->GetActor(&actorRef);
+
+        if (pActor != NULL) {
+            func_ov000_020cec60(data_027e0ffc, data_02056918[this->unk_10], &pActor->mPos, pActor, 0);
+        }
+    }
 }
 
 ARM void UnkStruct_027E0C68::func_02036c50(unk32 param_2) {
@@ -296,22 +399,22 @@ ARM s32 UnkStruct_027E0C68::func_02036ce4(UnkStruct_027E0C68_UnkSubClass2* param
     return 0;
 }
 
-ARM unk32 UnkStruct_027E0C68::func_02036d30(u32* param_2) {
-    if (this->unk_20 != NULL && this->unk_20 != param_2) {
-        return 0;
+ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+    if (this->unk_20[0] != NULL && this->unk_20[0] != param_2) {
+        return false;
     }
 
-    this->unk_20 = param_2;
-    return 1;
+    this->unk_20[0] = param_2;
+    return true;
 }
 
-ARM unk32 UnkStruct_027E0C68::func_02036d4c(u32* param_2) {
-    if (this->unk_20 == param_2) {
-        this->unk_20 = NULL;
-        return 1;
+ARM bool UnkStruct_027E0C68::func_02036d4c(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+    if (this->unk_20[0] == param_2) {
+        this->unk_20[0] = NULL;
+        return true;
     }
 
-    return 0;
+    return false;
 }
 
 // non-matching

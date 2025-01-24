@@ -31,7 +31,9 @@ public:
     /* 0x3C */ unk32 unk_3C;
     /* 0x40 */ unk32 unk_40;
     /* 0x44 */ unk32 unk_44;
-    /* 0x48 */ unk32 unk_48;
+    /* 0x48 */ u8 unk_48;
+    /* 0x49 */ u8 unk_49;
+    /* 0x4A */ unk16 unk_4A;
     /* 0x4C */ unk32 unk_4C;
     /* 0x50 */ unk32 unk_50;
     /* 0x54 */ unk32 unk_54;
@@ -51,7 +53,7 @@ public:
     /* 0x20 */ virtual UNK_TYPE vfunc_20(void) override;
     /* 0x24 */ virtual UNK_TYPE vfunc_24(void) override;
     /* 0x28 */ virtual void vfunc_28(void) override;
-    /* 0x2C */ virtual UNK_TYPE vfunc_2C(void) override;
+    /* 0x2C */ virtual void vfunc_2C(void) override;
     /* 0x30 */ virtual UNK_TYPE vfunc_30(void) override;
     /* 0x34 */ virtual UNK_TYPE vfunc_34(void) override;
     /* 0x38 */ virtual UNK_TYPE vfunc_38(void) override;
@@ -107,6 +109,32 @@ public:
     /* 0x34 */ virtual UNK_TYPE vfunc_34(void) override;
 };
 
+class UnkStruct_027E0C68_UnkSubClass3 : public SysObject {
+public:
+    /* 0x00 (vtable) */
+    /* 0x04 */ unk32 unk_04;
+    /* 0x08 */ unk32 unk_08;
+    /* 0x0C */ unk32 unk_0C;
+    /* 0x10 */ unk32 unk_10;
+    /* 0x14 */ unk32 unk_14;
+    /* 0x18 */ u32 unk_18;
+
+    UnkStruct_027E0C68_UnkSubClass3();
+    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass3() override;
+    /* 0x08 */ virtual UNK_TYPE vfunc_08(void) override;
+    /* 0x0C */ virtual UNK_TYPE vfunc_0C(void) override;
+    /* 0x10 */ virtual void vfunc_10(void) override;
+    /* 0x14 */ virtual UNK_TYPE vfunc_14(void) override;
+    /* 0x1C */ virtual UNK_TYPE vfunc_1C(void) override;
+    /* 0x20 */ virtual UNK_TYPE vfunc_20(void) override;
+    /* 0x24 */ virtual UNK_TYPE vfunc_24(void) override;
+    /* 0x28 */ virtual UNK_TYPE vfunc_28(void) override;
+    /* 0x2C */ virtual UNK_TYPE vfunc_2C(void) override;
+    /* 0x30 */ virtual UNK_TYPE vfunc_30(void) override;
+    /* 0x34 */ virtual UNK_TYPE vfunc_34(void) override;
+    /* 0x38 */ virtual UNK_TYPE vfunc_38(void) override;
+};
+
 class UnkStruct_027E0C68 : public SysObject {
 public:
     /* 0x00 */ unk16 unk_00;
@@ -119,12 +147,13 @@ public:
     /* 0x0C */ u8 unk_0C;
     /* 0x0C */ u8 unk_0D;
     /* 0x0C */ unk16 unk_0E;
-    /* 0x10 */ unk32 unk_10;
+    /* 0x10 */ unk16 unk_10;
+    /* 0x10 */ unk16 unk_12;
     /* 0x14 */ BMGGroups* pGroups;
     /* 0x18 */ UnkStruct_027E0C68_UnkSubClass2* unk_18[2];
-    /* 0x20 */ u32* unk_20;
-    /* 0x24 */ unk32 unk_24;
+    /* 0x20 */ UnkStruct_027E0C68_UnkSubClass3* unk_20[2]; // is it actually UnkStruct_027E0C68_UnkSubClass2?
     /* 0x28 */ UnkStruct_027E0C68_UnkSubClass1* unk_28[6];
+    /* 0x40 */ UnkStruct_027E0C68_UnkSubClass1* unk_40[2]; // is array size 6?
 
     void func_02036490(unk32 param_2, unk32 param_3, unk32 param_4);
     void func_0203665c(void);
@@ -140,12 +169,14 @@ public:
     bool func_02036824(void);
     bool func_02036850(void);
     void func_02036888(UnkStruct_027E0C68_UnkSubClass2* param_2);
-    bool func_020368f4(unk32 param_2);
+    bool func_020368f4(UnkStruct_027E0C68_UnkSubClass3* param_2);
+    void func_0203690c(unk32 param_2, unk32 param_3, unk32 param_4);
+    void func_02036bbc(UNK_TYPE);
     void func_02036c50(unk32 param_2);
     void func_02036ca4(unk32 param_2);
     s32 func_02036ce4(UnkStruct_027E0C68_UnkSubClass2* param_2, unk32 param_3);
-    unk32 func_02036d30(u32* param_2);
-    unk32 func_02036d4c(u32* param_2);
+    bool func_02036d30(UnkStruct_027E0C68_UnkSubClass3* param_2);
+    bool func_02036d4c(UnkStruct_027E0C68_UnkSubClass3* param_2);
     void func_02036d6c(void);
     UnkStruct_027E0C68_UnkSubClass1* func_02036da8(u32 param_2, s32* param_3);
     void func_02036edc(u32 param_2, u8 param_3);
