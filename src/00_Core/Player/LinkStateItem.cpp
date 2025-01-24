@@ -1,4 +1,5 @@
 #include "Player/LinkStateItem.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
 #include "Item/ItemManager.hpp"
 #include "Player/EquipBomb.hpp"
 #include "Player/EquipHammer.hpp"
@@ -7,13 +8,11 @@
 #include "Player/PlayerControl.hpp"
 #include "Save/AdventureFlags.hpp"
 
-extern unk32 func_ov000_020cf01c(s32 *param1);
 extern void func_ov000_020cf9dc(s32 param1, s32 param2, s32 param3);
 extern void func_ov014_0213ec64(s32 param1);
 extern void func_ov014_0211fd04(s32 *param1);
 extern void func_ov000_020b7e6c(s32 *param1);
 
-extern s32 *data_027e103c;
 extern s32 *data_027e1098;
 
 THUMB void LinkStateItem::vfunc_00() {}
@@ -39,7 +38,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
 
     switch (this->mEquipId) {
         case ItemFlag_BombchuBag:
-            iVar3 = func_ov000_020cf01c(data_027e103c);
+            iVar3 = data_027e103c->func_ov000_020cf01c();
             if (*(u8 *) (iVar3 + 0xe0) == '\0') {
                 func_ov014_0213ec64((s32) GetEquipBombchu());
             }
@@ -54,9 +53,9 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case ItemFlag_Hammer: EquipHammer::StopUsing(this); break;
         case ItemFlag_PotionA:
         case ItemFlag_PotionB:
-            iVar3                                    = (int) (data_027e103c);
-            *(unk8 *) ((s16 *) data_027e103c + 0x15) = 0;
-            func_ov000_020cf9dc(iVar3, 0, 0);
+            UnkStruct_027e103c *pData_027e103c = data_027e103c;
+            pData_027e103c->mUnk_2a            = 0;
+            pData_027e103c->func_ov000_020cf9dc(0, 0);
             break;
         case ItemFlag_Shovel: EquipScoop::StopUsing(this); break;
     }
