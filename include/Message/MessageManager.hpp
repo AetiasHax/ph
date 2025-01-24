@@ -154,3 +154,5 @@ public:
     void func_02037158(UnkStruct_027E0C68_UnkSubClass1* param_2);
     UnkStruct_027E0C68_UnkSubClass1* func_02037178(UnkStruct_027E0C68_UnkSubClass1* param_2);
 };
+
+extern UnkStruct_027E0C68 data_027e0c68;
