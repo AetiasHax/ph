@@ -1,5 +1,6 @@
 #include "Message/MessageManager.hpp"
 #include "Actor/ActorManager.hpp"
+#include "Player/TouchControl.hpp"
 
 extern unk32 func_ov000_020d7f18(u32*, unk32);
 extern unk32 func_ov000_020d77e4(u32*, unk32);
@@ -26,6 +27,8 @@ extern u32* data_02068e8c;
 extern u16 data_02056918[];
 extern ActorTypeId data_0205691c[];
 extern u8 data_027e0c54;
+extern TouchControl data_027e0d78;
+extern s16 data_027e0d04;
 
 // this should be `data_027e0ffc->func_ov000_020cec60(u16, Vec3p*, s32);`
 extern u32* data_027e0ffc;
@@ -359,6 +362,28 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
 
         if (pActor != NULL) {
             func_ov000_020cec60(data_027e0ffc, data_02056918[this->unk_10], &pActor->mPos, pActor, 0);
+        }
+    }
+}
+
+ARM void UnkStruct_027E0C68::func_02036bbc(void) {
+    UnkStruct_027E0C68_UnkSubClass1* pSVar3;
+    bool bVar2;
+    bool bVar4;
+    s32 i;
+
+    if (data_027e0d04 > 0) {
+        return;
+    }
+
+    bVar2 = this->func_02036824();
+    bVar4 = this->func_02036850();
+
+    for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
+        pSVar3 = this->unk_28[i];
+
+        if (pSVar3 != NULL && ((bVar2 && pSVar3->unk_48 == 0) || (bVar4 && pSVar3->unk_48 != 0))) {
+            pSVar3->vfunc_44(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
         }
     }
 }
