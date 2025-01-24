@@ -159,6 +159,7 @@ public:
     /* 0x20 */ UnkStruct_027E0C68_UnkSubClass3* unk_20[2]; // is it actually UnkStruct_027E0C68_UnkSubClass2?
     /* 0x28 */ UnkStruct_027E0C68_UnkSubClass1* unk_28[6];
     /* 0x40 */ UnkStruct_027E0C68_UnkSubClass1* unk_40[2]; // is array size 6?
+    /* 0x48 */
 
     static void func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3);
     void func_02036490(unk32 param_2, unk32 param_3, unk32 param_4);

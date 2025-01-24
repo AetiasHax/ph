@@ -135,7 +135,7 @@ ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
     return -1;
 }
 
-THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18) {
+THUMB void BMGGroups::func_020372f0(BMGFileIndex eIndex, s16 unk_18) {
     char bmgPath[64];
     BMGFileInfo bmgFile;
     u32* pFile;
@@ -168,30 +168,30 @@ THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18) {
 
     // assign sections and set the file info in the groups entries
     groupId = func_020371c8(&bmgFile, pFile, unk_18);
-    pGroups->entries[groupId] = bmgFile;
-    pGroups->entries[groupId].groupId = groupId;
+    this->entries[groupId] = bmgFile;
+    this->entries[groupId].groupId = groupId;
 }
 
-THUMB void func_020373b4(BMGGroups* pGroups, s16 unk_18) {
+THUMB void BMGGroups::func_020373b4(s16 unk_18) {
     s32 i;
 
-    for (i = 0; i < pGroups->numEntries; i++) {
-        if (pGroups->entries[i].unk_18 == unk_18) {
-            func_0202d590(pGroups->entries[i].unk_14);
-            func_020371b4(&pGroups->entries[i]);
+    for (i = 0; i < this->numEntries; i++) {
+        if (this->entries[i].unk_18 == unk_18) {
+            func_0202d590(this->entries[i].unk_14);
+            func_020371b4(&this->entries[i]);
         }
     }
 }
 
-ARM u32 func_020373ec(BMGGroups* pGroups, unk32 param_2) {
+ARM u32 BMGGroups::func_020373ec(unk32 param_2) {
     u16 dVar1;
     u16 uVar2;
     s32 i;
 
     dVar1 = -1;
 
-    for (i = 0; i < pGroups->numEntries; i++) {
-        uVar2 = func_0203728c(&pGroups->entries[i], param_2);
+    for (i = 0; i < this->numEntries; i++) {
+        uVar2 = func_0203728c(&this->entries[i], param_2);
 
         if (uVar2 != dVar1) {
             return uVar2 | i << 0x10;

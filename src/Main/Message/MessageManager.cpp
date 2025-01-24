@@ -45,23 +45,23 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
     this->unk_03 = 0;
     this->unk_0C = 0;
 
-    func_020372f0(this->pGroups, BMG_FILE_INDEX_SYSTEM, 2);
+    this->pGroups->func_020372f0(BMG_FILE_INDEX_SYSTEM, 2);
 
     switch (data_027e0618) {
         case 3:
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_MAINSELECT, 2);
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_MAINSELECT, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLE, 2);
             break;
         case 5:
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLECOMMON, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLE, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLECOMMON, 2);
             break;
         case 6:
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLECOMMON, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLE, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLECOMMON, 2);
             break;
         case 7:
-            func_020372f0(this->pGroups, BMG_FILE_INDEX_MAINSELECT, 2);
+            this->pGroups->func_020372f0(BMG_FILE_INDEX_MAINSELECT, 2);
             break;
         default:
             break;
@@ -143,7 +143,7 @@ THUMB void UnkStruct_027E0C68::func_0203665c(void) {
         }
     }
 
-    func_020373b4(this->pGroups, 2);
+    this->pGroups->func_020373b4(2);
 }
 
 // non-matching
@@ -405,7 +405,7 @@ ARM bool UnkStruct_027E0C68::func_02036ce4(UnkStruct_027E0C68_UnkSubClass2* para
         return false;
     }
 
-    uVar1 = func_020373ec(this->pGroups, param_3);
+    uVar1 = this->pGroups->func_020373ec(param_3);
 
     if (uVar1 != -1) {
         param_2->vfunc_08(uVar1);

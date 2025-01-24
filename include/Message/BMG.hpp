@@ -2,6 +2,7 @@
 
 #include "global.h"
 #include "types.h"
+#include "System/SysNew.hpp"
 
 #define BMG_MAGIC "MESGbmg1"
 #define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
@@ -170,13 +171,18 @@ typedef struct BMGFileInfo {
     /* 0x1A */ s16 groupId; // stores the group id
 } BMGFileInfo; // size = 0x1C
 
-// 0x027E0C68 + 0x14
-typedef struct BMGGroups {
+
+class BMGGroups : public SysObject {
+public:
     /* 0x00 */ BMGFileInfo* entries; // accessed with `groupId`
     /* 0x04 */ s32 numEntries;
-} BMGGroups; // size = 0x8
+    /* 0x08 */
+
+    BMGGroups();
+    ~BMGGroups();
+    void func_020372f0(BMGFileIndex eIndex, s16 unk_18);
+    void func_020373b4(s16 unk_18);
+    u32 func_020373ec(unk32 param_2);
+};
 
 extern EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2);
-extern void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18);
-extern void func_020373b4(BMGGroups* pGroups, s16 unk_18);
-extern u32 func_020373ec(BMGGroups* pGroups, unk32 param_2);
