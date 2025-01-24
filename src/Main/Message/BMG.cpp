@@ -135,7 +135,7 @@ ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
     return -1;
 }
 
-THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18, int param_4) {
+THUMB void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18) {
     char bmgPath[64];
     BMGFileInfo bmgFile;
     u32* pFile;

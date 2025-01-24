@@ -5,6 +5,9 @@
 
 #define BMG_MAGIC "MESGbmg1"
 #define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
+#define BMG_GET_INF1(pGroups, flags) (func_02037258(&(pGroups)->entries[(flags) >> 0x10], (flags) & 0xFFFF))
+#define BMG_GET_MSG_OFFSET(pGroups, flags) (BMG_GET_INF1((pGroups), (flags))->offset)
+#define BMG_GET_MSG_ADDR(pGroups, flags) ((u32)(pGroups)->entries[(flags) >> 0x10].pDAT1 + (BMG_GET_MSG_OFFSET((pGroups), (flags)) & ~1))
 
 typedef enum BMGTag {
     /* "INF1" */ BMG_TAG_INF1 = BMG_TAG('I', 'N', 'F', '1'),
@@ -174,4 +177,6 @@ typedef struct BMGGroups {
 } BMGGroups; // size = 0x8
 
 extern EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2);
+extern void func_020372f0(BMGGroups* pGroups, BMGFileIndex eIndex, s16 unk_18);
+extern void func_020373b4(BMGGroups* pGroups, s16 unk_18);
 extern u32 func_020373ec(BMGGroups* pGroups, unk32 param_2);

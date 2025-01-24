@@ -6,6 +6,7 @@ extern unk32 func_02037628(u8*);
 extern THUMB unk32 func_0202ab48(void);
 extern ARM void func_02038b40(UnkStruct_027E0C68_UnkSubClass1*);
 extern ARM unk32 func_0203de14(UnkStruct_027E0C68_UnkSubClass1*, unk32);
+extern ARM void func_0203dc74(UnkStruct_027E0C68_UnkSubClass1*, unk32, unk32);
 
 // see Actor.cpp
 struct UnkStruct2 {
@@ -16,6 +17,126 @@ struct UnkStruct2 {
 extern UnkStruct2 data_027e077c;
 extern u32 data_ov000_020eec9c[];
 extern u8 data_02056be4[];
+extern u32 data_027e0618;
+extern u32** data_027e0ce0[];
+extern u32 data_02056924[];
+extern u32* data_02068e6c;
+extern u32* data_02068e8c;
+
+ARM void func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
+    BMGGroups *pBVar2 = param_2->pGroups;
+    *param_1 = BMG_GET_MSG_ADDR(pBVar2, param_3);
+}
+
+THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32 param_4) {
+    s32 i;
+
+    this->unk_03 = 0;
+    this->unk_0C = 0;
+
+    func_020372f0(this->pGroups, BMG_FILE_INDEX_SYSTEM, 2);
+
+    switch (data_027e0618) {
+        case 3:
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_MAINSELECT, 2);
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
+            break;
+        case 5:
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLECOMMON, 2);
+            break;
+        case 6:
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLE, 2);
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_BATTLECOMMON, 2);
+            break;
+        case 7:
+            func_020372f0(this->pGroups, BMG_FILE_INDEX_MAINSELECT, 2);
+            break;
+        default:
+            break;
+    }
+
+    for (i = 0; i < ARRAY_LEN(this->unk_18); i++) {
+        if (this->unk_18[i] != NULL) {
+            this->unk_18[i] = NULL;
+        }
+    }
+
+    for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
+        if (this->unk_28[i] != NULL) {
+            this->unk_28[i] = NULL;
+        }
+    }
+
+    for (i = 0; i < ARRAY_LEN(this->unk_18); i++) {
+        this->unk_18[i] = new(*data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass2();
+    }
+
+    this->unk_18[0]->unk_39 = 0;
+    this->unk_18[1]->unk_39 = 1;
+
+    // switch?
+    if (data_027e0618 == 2 || data_027e0618 == 3 || data_027e0618 == 6) {
+        for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
+            switch (data_02056924[i + 1]) {
+                case 0:
+                    if (data_027e0618 != 2) {
+                        this->unk_28[i] = new(*data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1();
+                        func_0203dc74(this->unk_28[i], 0xE0, 0x40);
+                        this->unk_28[i]->unk_2C = data_02068e6c;
+                        this->unk_28[i]->unk_50 = i != 0;
+                    }
+                    break;
+                case 1:
+                    this->unk_28[i] = new(*data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1();
+                    func_0203dc74(this->unk_28[i], 0x50, 0x60);
+                    this->unk_28[i]->unk_2C = data_02068e6c;
+                    break;
+                case 2:
+                    this->unk_28[i] = NULL;
+                    break;
+                case 3:
+                    if (func_0202ab48() == 0) {
+                        this->unk_28[i] = new(*data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1();
+                        func_0203dc74(this->unk_28[i], 0xC0, 0x20);
+                        this->unk_28[i]->unk_2C = data_02068e8c;
+                    } else {
+                        this->unk_28[i] = NULL;
+                    }
+                    break;
+                default:
+                    break;
+            }
+
+            if (this->unk_28[i] != NULL) {
+                this->unk_28[i]->vfunc_4C();
+            }
+        }
+    }
+}
+
+// non-matching
+THUMB void UnkStruct_027E0C68::func_0203665c(void) {
+    s32 i;
+
+    for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
+        if (this->unk_28[i] != NULL) {
+            delete this->unk_28[i];
+
+            this->unk_28[i] = NULL;
+        }
+    }
+
+    for (i = 0; i < ARRAY_LEN(this->unk_18); i++) {
+        if (this->unk_18[i] != NULL) {
+            delete this->unk_18[i];
+
+            this->unk_18[i] = NULL;
+        }
+    }
+
+    func_020373b4(this->pGroups, 2);
+}
 
 // non-matching
 ARM UnkStruct_027E0C68::~UnkStruct_027E0C68() {}
@@ -43,14 +164,18 @@ ARM UnkStruct_027E0C68_UnkSubClass2* UnkStruct_027E0C68::func_0203673c(void) {
     bool iVar2 = this->func_02036850();
 
     if (iVar1) {
-        return this->unk_18;
+        return this->unk_18[0];
     } 
 
     if (iVar2) {
-        return this->unk_1C;
+        return this->unk_18[1];
     }
 
     return NULL;
+}
+
+ARM bool UnkStruct_027E0C68::func_02036770(u32 param_2) {
+    return (this->unk_18[param_2]->unk_18 & ~0xFFFF) == (0x100 << 0x10);
 }
 
 ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
@@ -59,7 +184,7 @@ ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
     if (this->unk_04 == 0) {
         bool bVar1 = false;
 
-        if (this->unk_1C != NULL && (this->unk_1C->unk_18 & 0xFFFF0000) != 0x1000000) {
+        if (this->unk_18[1] != NULL && (this->unk_18[1]->unk_18 & 0xFFFF0000) != 0x1000000) {
             bVar1 = true;
         }
 
@@ -241,9 +366,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param
         iStack_34 = param_3[1];
         iStack_30 = param_3[2];
         pBVar5 = this->pGroups;
-        pEVar2 = func_02037258(&pBVar5->entries[param_2 >> 0x10], param_2 & 0xFFFF);
-
-        pSVar4->vfunc_50(pEVar1, (int)&((pBVar5->entries[param_2 >> 0x10].pDAT1)->base).tag + (pEVar2->offset & 0xfffffffe), &iStack_38);
+        pSVar4->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), &iStack_38);
 
         func_ov000_020d77e4(data_ov000_020eec9c, 0x1C);
         return pSVar4;
@@ -283,7 +406,6 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036f68(u32 param
     EntryINF1 *pEVar3;
     int iVar4;
     UnkStruct_027E0C68_UnkSubClass1 *pSVar5;
-    BMGGroups *pBVar6;
     
     pEVar1 = func_02037258(&this->pGroups->entries[param_2 >> 0x10], param_2 & 0xffff);
 
@@ -299,12 +421,9 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036f68(u32 param
         pSVar2 = this->unk_28[1];
     }
 
-    pSVar5[0x16].unk_04 = (unk32*)pSVar2;
+    // pSVar5[0x16].unk_04 = (unk32*)pSVar2;
     pSVar5[0x41].unk_08 = (unk32*)this->unk_28[5];
-    pBVar6 = this->pGroups;
-    pEVar3 = func_02037258(&pBVar6->entries[param_2 >> 0x10], param_2 & 0xffff);
-
-    pSVar5->vfunc_50(pEVar1, (int)&((pBVar6->entries[param_2 >> 0x10].pDAT1)->base).tag + (pEVar3->offset & 0xfffffffe), param_3);
+    pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), param_3);
 
     if (func_ov000_020d7f18(data_ov000_020eec9c, 0x19) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x18) == 0 &&
         func_ov000_020d7f18(data_ov000_020eec9c, 0x34) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x35) == 0 &&
@@ -324,10 +443,10 @@ ARM UnkStruct_027E0C68_UnkSubClass2* UnkStruct_027E0C68::func_020370e8(unk32 par
     UnkStruct_027E0C68_UnkSubClass2* puVar2;
 
     if (this->func_02036824() != 0) {
-        puVar2 = this->unk_18;
+        puVar2 = this->unk_18[0];
     } else {
         if (this->func_02036850() != 0) {
-            puVar2 = this->unk_1C;
+            puVar2 = this->unk_18[1];
         } else {
             return NULL;
         }
