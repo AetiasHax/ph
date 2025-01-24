@@ -31,7 +31,7 @@ extern u8 data_027e0c54;
 extern u32* data_027e0ffc;
 extern void func_ov000_020cec60(u32*, u16, Vec3p*, Actor*, unk32);
 
-ARM void func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
+ARM void UnkStruct_027E0C68::func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
     BMGGroups *pBVar2 = param_2->pGroups;
     *param_1 = BMG_GET_MSG_ADDR(pBVar2, param_3);
 }
