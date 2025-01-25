@@ -16,7 +16,7 @@ func_ov054_021997e0 kind:function(arm,size=0x10) addr:0x2199740
 _ZN10EquipScoop9StopUsingEP13LinkStateItem kind:function(arm,size=0xe4) addr:0x2199750
 func_ov054_021998d4 kind:function(arm,size=0x40) addr:0x2199834
 data_ov054_02199914 kind:data(any) addr:0x2199874
-func_ov054_02199924 kind:function(arm,size=0x30) addr:0x2199884
+__sinit_ov054_02199924 kind:function(arm,size=0x30) addr:0x2199884
 data_ov054_02199960 kind:data(any) addr:0x21998c0
 data_ov054_02199964 kind:data(any) addr:0x21998c4
 data_ov054_02199968 kind:data(any) addr:0x21998c8

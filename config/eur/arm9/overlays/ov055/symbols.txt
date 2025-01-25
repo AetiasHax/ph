@@ -18,7 +18,7 @@ func_ov055_02199654 kind:function(arm,size=0x15c) addr:0x2199654
 data_ov055_021997b0 kind:data(any) addr:0x21997b0
 data_ov055_021997c4 kind:data(any) addr:0x21997c4
 data_ov055_021997d8 kind:data(any) addr:0x21997d8
-func_ov055_021997ec kind:function(arm,size=0x30) addr:0x21997ec
+__sinit_ov055_021997ec kind:function(arm,size=0x30) addr:0x21997ec
 data_ov055_02199840 kind:data(any) addr:0x2199840
 data_ov055_02199850 kind:data(any) addr:0x2199850
 data_ov055_02199854 kind:data(any) addr:0x2199854
