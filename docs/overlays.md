@@ -8,7 +8,7 @@ contribute to this list!
 `01` | ---             | 1    |
 `02` | ---             | 1    |
 `03` | ---             | 1    |
-`04` | Memory          | 2    | Memory management
+`04` | Load            | 2    | Scene loading
 `05` | ---             | 2    |
 `06` | ---             | 2    |
 `07` | ---             | 2    |
@@ -20,7 +20,7 @@ contribute to this list!
 `13` | ---             | 3    |
 `14` | Land            | 4    | Link and essential land-based actors
 `15` | ---             | 4    |
-`16` | ---             | -    |
+`16` | Startup         | N/A  | Exists briefly on game startup. Initializes RNG, messages, and more.
 `17` | ---             | 5    |
 `18` | ---             | 5    |
 `19` | ---             | 6    |
