@@ -120,7 +120,7 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
             }
 
             if (this->unk_28[i] != NULL) {
-                this->unk_28[i]->vfunc_4C();
+                this->unk_28[i]->func_02039a3c();
             }
         }
     }
@@ -311,7 +311,7 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
 
     for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
         if (this->unk_28[i] != NULL) {
-            this->unk_28[i]->vfunc_2C();
+            this->unk_28[i]->func_02039a5c();
         }
     }
 
@@ -331,7 +331,7 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
         //! TODO: fake?
         pSVar4 = this->func_02037178((UnkStruct_027E0C68_UnkSubClass1*)this->unk_18[0]);
 
-        if (data_027e0c54 != 0 && pSVar4 != NULL && pSVar4->unk_48 != ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0)) {
+        if (data_027e0c54 != 0 && pSVar4 != NULL && pSVar4->unk_50 != ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0)) {
             this->unk_04 = 0;
         }
     }
@@ -370,8 +370,8 @@ ARM void UnkStruct_027E0C68::func_02036bbc(void) {
     for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
         pSVar3 = this->unk_28[i];
 
-        if (pSVar3 != NULL && ((bVar2 && pSVar3->unk_48 == 0) || (bVar4 && pSVar3->unk_48 != 0))) {
-            pSVar3->vfunc_44(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
+        if (pSVar3 != NULL && ((bVar2 && pSVar3->unk_50 == 0) || (bVar4 && pSVar3->unk_50 != 0))) {
+            pSVar3->func_0203a3fc(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
         }
     }
 }
@@ -381,7 +381,7 @@ ARM void UnkStruct_027E0C68::func_02036c50(unk32 param_2) {
 
     for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
         if (this->unk_28[i] != NULL && func_0203de14(this->unk_28[i], param_2) != 0) {
-            this->unk_28[i]->vfunc_28();
+            this->unk_28[i]->func_0203e0c8();
         }
     }
 }
@@ -393,7 +393,7 @@ ARM void UnkStruct_027E0C68::func_02036ca4(unk32 param_2) {
         UnkStruct_027E0C68_UnkSubClass1* pSVar1 = this->unk_28[i];
 
         if (pSVar1 != NULL) {
-            pSVar1->vfunc_3C(param_2);
+            pSVar1->func_02039ccc(param_2);
         }
     }
 }
@@ -479,7 +479,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param
         iStack_34 = param_3[1];
         iStack_30 = param_3[2];
         pBVar5 = this->pGroups;
-        pSVar4->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), &iStack_38);
+        pSVar4->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), &iStack_38);
 
         func_ov000_020d77e4(data_ov000_020eec9c, 0x1C);
         return pSVar4;
@@ -538,7 +538,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036f68(u32 param
     pSVar5->unk_164 = pSVar2;
     pSVar5->unk_418 = this->unk_28[5];
 
-    pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), param_3);
+    pSVar5->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), param_3);
 
     if (func_ov000_020d7f18(data_ov000_020eec9c, 0x19) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x18) == 0 &&
         func_ov000_020d7f18(data_ov000_020eec9c, 0x34) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x35) == 0 &&
@@ -584,7 +584,7 @@ ARM void UnkStruct_027E0C68::func_02037158(UnkStruct_027E0C68_UnkSubClass1* para
     pSVar1 = this->func_02037178(param_2);
 
     if (pSVar1 != NULL) {
-        pSVar1->vfunc_58();
+        pSVar1->func_0203af1c();
     }
 }
 
