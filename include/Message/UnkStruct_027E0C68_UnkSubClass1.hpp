@@ -229,32 +229,31 @@ public:
     /* 0x70 */ virtual void func_020394d8(unk32* param_2, unk32* param_3) override;
     /* 0x74 */
 
+    unk32 func_02032fa4(void);
     unk32 func_020337d8(unk32 param_2);
     void func_02038b28(void);
-    void func_0203e090(void);
-    void func_0203dcfc(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
-    unk32 func_0203a30c(void);
     unk32 func_0203905c(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
-    unk32 func_0203cb5c(unk8, unk32);
     void func_020393a8(unk32 param_2);
+    unk32 func_0203a30c(void);
     void func_0203be08(void);
-    unk32 func_02032fa4(void);
+    unk32 func_0203cb5c(unk8, unk32);
+    void func_0203dc10(u8 param_2);
+    void func_0203dc10(u8 param_2, u8 param_3);
+    void func_0203dcfc(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
+    void func_0203e090(void);
     void func_0203e0f8(void);
 
-    void func_0203dc10(u8 param_2, u8 param_3);
-    void func_0203dc10(u8 param_2);
-
     // not sure it belongs to this class:
-    void func_0203e2ac(unk32* param_2, unk32* param_3);
+    void func_02032fcc(unk32, unk32);
     void func_02033190(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
-    void func_02038b40(void);
+    void func_020331c4(unk32, unk32);
     void func_020350ac(u32*);
     void func_02038b1c(void);
+    void func_02038b40(void);
+    void func_0203947c(void);
     unk32 func_0203951c(void);
     unk32 func_0203e284(UnkStruct_0203b264*, unk32, unk32);
+    void func_0203e2ac(unk32* param_2, unk32* param_3);
     void func_0203f020(UnkSubClass1_unk_124*, unk32, unk32);
-    void func_0203947c(void);
     void func_0203fc78(unk32*, unk32*);
-    void func_02032fcc(unk32, unk32);
-    void func_020331c4(unk32, unk32);
 };
