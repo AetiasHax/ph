@@ -3826,9 +3826,9 @@ data_ov000_020dc6e4 kind:data(any) addr:0x20dc6e4
 data_ov000_020dc6e8 kind:data(any) addr:0x20dc6e8
 data_ov000_020dc6ec kind:data(any) addr:0x20dc6ec
 data_ov000_020dc704 kind:data(any) addr:0x20dc704
-data_ov000_020dc7c8 kind:data(any) addr:0x20dc7c8
+sDefaultMaxHealth kind:data(any) addr:0x20dc7c8
 data_ov000_020dc7ca kind:data(any) addr:0x20dc7ca
-data_ov000_020dc7cc kind:data(any) addr:0x20dc7cc
+sDefaultMaxShipHealth kind:data(any) addr:0x20dc7cc
 data_ov000_020dc7d0 kind:data(any) addr:0x20dc7d0
 data_ov000_020dc7e4 kind:data(any) addr:0x20dc7e4
 data_ov000_020dc7f8 kind:data(any) addr:0x20dc7f8
@@ -4008,7 +4008,7 @@ data_ov000_020dda8c kind:data(any) addr:0x20dda8c
 data_ov000_020ddab0 kind:data(any) addr:0x20ddab0
 data_ov000_020ddad8 kind:data(any) addr:0x20ddad8
 data_ov000_020ddfa0 kind:data(any) addr:0x20ddfa0
-data_ov000_020ded6c kind:data(any) addr:0x20ded6c
+sRupeeValues kind:data(any) addr:0x20ded6c
 data_ov000_020ded90 kind:data(any) addr:0x20ded90
 data_ov000_020dedcc kind:data(any) addr:0x20dedcc
 data_ov000_020dede0 kind:data(any) addr:0x20dede0
@@ -5886,7 +5886,7 @@ data_ov000_020e9c70 kind:bss addr:0x20e9c70
 data_ov000_020e9c88 kind:bss addr:0x20e9c88
 data_ov000_020e9e08 kind:bss addr:0x20e9e08
 data_ov000_020e9e0c kind:bss addr:0x20e9e0c
-data_ov000_020e9e18 kind:bss addr:0x20e9e18
+gSaveItemManager kind:bss addr:0x20e9e18
 data_ov000_020e9e94 kind:bss addr:0x20e9e94
 data_ov000_020e9e98 kind:bss addr:0x20e9e98
 data_ov000_020e9ec0 kind:bss addr:0x20e9ec0
