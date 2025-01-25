@@ -29,10 +29,43 @@ typedef struct UnkStruct1 {
     /* 0x04 */ UnkCallback1 unk_04;
 } UnkStruct1; // size = 0x8
 
-class UnkSubClass1_unk_168 {
+class UnkSubClass1_UnkownClass1 {
 public:
     /* 0x00 */ UnkStruct1* unk_00;
-    /* 0x04 */
+    /* 0x04 */ u32* unk_04;
+    /* 0x08 */ u32* unk_08;
+    /* 0x0C */ unk32 unk_0C;
+    /* 0x10 */ unk32 unk_10;
+    /* 0x14 */ unk32 unk_14;
+    /* 0x18 */ unk32 unk_18;
+    /* 0x1C */ unk32 unk_1C;
+    /* 0x20 */ u32* unk_20;
+    /* 0x24 */ unk32 unk_24;
+    /* 0x28 */ unk32 unk_28;
+    /* 0x2C */ unk32 unk_2C;
+    /* 0x30 */ unk32 unk_30;
+    /* 0x34 */ u32* unk_34;
+    /* 0x38 */ u32* unk_38;
+    /* 0x3C */ unk32 unk_3C;
+    /* 0x40 */ unk32 unk_40;
+    /* 0x44 */ unk32 unk_44;
+    /* 0x48 */ unk32 unk_48;
+    /* 0x4C */ unk32 unk_4C;
+    /* 0x50 */ unk32 unk_50;
+    /* 0x54 */ unk32 unk_54;
+    /* 0x58 */ unk32 unk_58;
+    /* 0x5C */ unk32 unk_5C;
+    /* 0x60 */ unk32 unk_60;
+    /* 0x64 */ unk32 unk_64;
+    /* 0x68 */ unk32 unk_68;
+    /* 0x6C */ unk32 unk_6C;
+    /* 0x70 */ unk32 unk_70;
+    /* 0x74 */ u32* unk_74;
+    /* 0x78 */ u32* unk_78;
+    /* 0x7C */ unk32 unk_7C;
+    /* 0x80 */ unk32 unk_80;
+    /* 0x84 */ unk32 unk_84;
+    /* 0x88 */
 
     void func_020350b4(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_020351b8(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
@@ -130,27 +163,11 @@ public:
     /* 0x15F */ s8 unk_15F;
     /* 0x160 */ unk32 unk_160;
     /* 0x164 */ UnkStruct_027E0C68_UnkSubClass1* unk_164;
-    /* 0x168 */ UnkSubClass1_unk_168 unk_168;
-    /* 0x16C */ u32* unk_16C;
-    /* 0x16C */ u32* unk_170;
-    /* 0x16C */ u8 unk_174[0x58];
-    /* 0x1CC */ u32 unk_1CC;
-    /* 0x1D0 */ unk32 unk_1D0;
-    /* 0x1D4 */ unk32 unk_1D4;
-    /* 0x1D8 */ unk32 unk_1D8;
-    /* 0x1DC */ u32* unk_1DC;
-    /* 0x1E0 */ u32* unk_1E0;
-    /* 0x1E4 */ u32 unk_1E4;
-    /* 0x1E8 */ unk32 unk_1E8;
-    /* 0x1EC */ unk32 unk_1EC;
-    /* 0x1F0 */ UnkSubClass1_unk_168 unk_1F0;
-    /* 0x1F4 */ u8 unk_1F4[0x84];
-    /* 0x278 */ UnkSubClass1_unk_168 unk_278;
-    /* 0x27C */ u8 unk_27C[0x84];
-    /* 0x300 */ UnkSubClass1_unk_168 unk_300;
-    /* 0x304 */ u8 unk_304[0x84];
-    /* 0x388 */ UnkSubClass1_unk_168 unk_388;
-    /* 0x38C */ u8 unk_38C[0x84];
+    /* 0x168 */ UnkSubClass1_UnkownClass1 unk_168;
+    /* 0x1F0 */ UnkSubClass1_UnkownClass1 unk_1F0;
+    /* 0x278 */ UnkSubClass1_UnkownClass1 unk_278;
+    /* 0x300 */ UnkSubClass1_UnkownClass1 unk_300;
+    /* 0x388 */ UnkSubClass1_UnkownClass1 unk_388;
     /* 0x410 */ UnkSubClass1_unk_410 unk_410;
     /* 0x414 */ unk32 unk_414;
     /* 0x418 */ UnkStruct_027E0C68_UnkSubClass1* unk_418;

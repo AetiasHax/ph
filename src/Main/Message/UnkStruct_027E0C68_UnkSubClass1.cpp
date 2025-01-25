@@ -101,10 +101,10 @@ ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1::func_0203a988(UNK_TYPE) {
 
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203aea8(void) {
     if (this->unk_15F == 0 || this->unk_154->unk_06 <= 2) {
-        this->unk_1CC = this->unk_1E4;
+        this->unk_168.unk_64 = this->unk_168.unk_7C;
         this->unk_168.func_020352d8();
     } else {
-        this->unk_1CC = 0;
+        this->unk_168.unk_64 = 0;
         this->unk_168.func_020352d8();
         this->unk_168.func_020351b8(1, 0, 0, 0);
     }
