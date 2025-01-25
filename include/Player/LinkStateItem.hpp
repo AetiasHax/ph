@@ -50,4 +50,6 @@ public:
     static EquipBombchu *GetEquipBombchu();
     static LinkStateMove *GetLinkStateMove();
     bool func_ov00_020abf70();
+
+    LinkStateItem(PlayerLinkBase *link);
 };

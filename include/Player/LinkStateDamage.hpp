@@ -48,4 +48,6 @@ class LinkStateDamage : public LinkStateBase {
     void func_ov00_020ace90(Vec3p *param1, unk32 param2);
 
     void func_ov00_020acfe8(bool param1);
+
+    LinkStateDamage(PlayerLinkBase *link);
 };

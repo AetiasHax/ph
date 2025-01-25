@@ -2,8 +2,8 @@
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "DTCM/UnkStruct_027e0f78.hpp"
 #include "Map/MapManager.hpp"
-#include "Player/HealthManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
+#include "Player/PlayerManager.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "System/OverlayManager.hpp"
 
@@ -692,7 +692,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         case ItemId_SalvageArm: {
             SET_FLAG(mItemFlags.flags, ItemFlag_SalvageArm);
             gAdventureFlags->Set(AdventureFlag_SalvageArm, true);
-            gHealthManager->mSalvageArmHealth = 5;
+            gPlayerManager->mSalvageArmHealth = 5;
         } break;
 
         case ItemId_SwordsmanScroll: {

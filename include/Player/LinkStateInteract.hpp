@@ -53,4 +53,6 @@ public:
     void func_ov00_020abc18(ActorRef *ref);
     bool func_ov00_020abc40();
     bool func_ov00_020abc78(ActorRef *ref);
+
+    LinkStateInteract(PlayerLinkBase *link);
 };

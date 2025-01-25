@@ -6,7 +6,7 @@
 #include "Save/SaveItemManager.hpp"
 #include "System/SysNew.hpp"
 
-class HealthManager : public SysObject {
+class PlayerManager : public SysObject {
 public:
     /* 00 */ u16 mMaxHealth;
     /* 02 */ u16 mHealth;
@@ -22,6 +22,13 @@ public:
     void Save(SaveItemManager *save);
     void IncreaseMaxHealth(s16 amount);
     void UpdateShipMaxHealth();
+
+    static void Create();
+    static void Destroy();
+    PlayerManager();
+    ~PlayerManager();
+    void Init(bool param1);
+    void func_ov004_02108008();
 };
 
-extern HealthManager *gHealthManager;
+extern PlayerManager *gPlayerManager;

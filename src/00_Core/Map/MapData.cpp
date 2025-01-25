@@ -1,6 +1,6 @@
 #include "Map/MapData.hpp"
 
-MapData::MapData(u8 *map, unk8 param2, unk8 param3, unk32 param4, unk32 param5) {}
+MapData::MapData(u8 *map, unk8 x, unk8 y, unk32 param4, unk32 param5) {}
 MapData::~MapData() {}
 void MapData::func_ov000_020972e4(u16 *param1, unk32 *param2, bool param3) {}
 void MapData::func_ov000_02097354() {}

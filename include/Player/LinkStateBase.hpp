@@ -127,6 +127,8 @@ public:
     s32 Get_PlayerLinkBase_Unk38();
     DebugHierarchy *GetDebugHierarchy0();
     DebugHierarchy *GetDebugHierarchy1();
+
+    LinkStateBase(PlayerLinkBase *link);
 };
 
 LinkStateBase *GetLinkState(s32 index);

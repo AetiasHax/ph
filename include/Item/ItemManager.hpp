@@ -106,6 +106,7 @@ public:
     static void Destroy();
     ItemManager();
     ~ItemManager();
+    void Init();
 
     // Save/load
     void Save(SaveItemManager *save);
@@ -116,6 +117,7 @@ public:
     ActorNavi *GetFairy(FairyId id) const;
     u32 GetActiveFairyLevel(FairyId id) const;
     u32 GetFairyLevel(FairyId id) const;
+    void SpawnFairies();
 
     // Equip item
     void ClearPrevEquippedItem();
@@ -134,6 +136,11 @@ public:
     bool ClearForcedEquipItem();
     void UpdateSwordShieldInUse();
     static EquipItem *GetEquipItemUnchecked(ItemFlag equipId);
+    void InitEquipItems();
+    void func_ov004_02107648();
+    void func_ov004_02107650();
+    void func_ov004_02107698();
+    void func_ov004_021076bc();
 
     // Ammo
     u16 GetAmmo(ItemFlag equipId) const;

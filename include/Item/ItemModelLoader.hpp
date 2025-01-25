@@ -23,4 +23,7 @@ public:
     void func_ov000_020bb414(unk32 param1);
     void func_ov000_020bb420(unk32 param1);
     void func_ov000_020bb42c(unk32 param1);
+
+    static void Create();
+    static void Destroy();
 };

@@ -12,7 +12,8 @@ class ActorNaviBase : public Actor {
     /* 000 (base) */
     /* 158 */ Vec3p mUnk_158;
     /* 164 */ unk32 mUnk_164;
-    /* 168 */ unk8 mUnk_168[0x68];
+    /* 168 */ ModelRender mUnk_168;
+    /* 1c4 */ unk8 mUnk_1c4[0xc];
     /* 1d0 */ void *mUnk_1d0;
     /* 1d4 */ unk8 mUnk_1d4[0x30];
     /* 214 */ unk16 mUnk_214;
@@ -98,4 +99,6 @@ class ActorNaviBase : public Actor {
     void func_ov000_020bad18();
     static void func_ov000_020bb0ac();
     static void func_ov000_020bb0e0();
+
+    ActorNaviBase();
 };

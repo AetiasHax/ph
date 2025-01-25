@@ -7,6 +7,7 @@
 #include "System/SysNew.hpp"
 
 class DebugHierarchyBase : public SysObject {
+public:
     /* 00 (vtable) */
     /* 04 */ void *mNodes;
     /* 08 */

@@ -152,6 +152,8 @@ public:
     void SetPosition(Vec3p *position);
     void SetAngle(s16 *angle);
     bool func_ov000_020bd510(s32 param1, unk32 *param2);
+
+    PlayerLinkBase();
 };
 
 extern PlayerLinkBase *gPlayerLink;

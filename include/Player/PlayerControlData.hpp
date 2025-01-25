@@ -102,4 +102,6 @@ public:
     void func_ov000_020b484c(s32 param1, s32 param2, s32 param3);
     void func_ov000_020b4944(unk32 param1, u32 param2, s32 param3);
     void func_ov000_020b4a00(s32 *param1, s32 *param2, s32 *param3, s32 param4);
+
+    PlayerControlData();
 };

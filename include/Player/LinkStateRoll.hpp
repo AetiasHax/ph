@@ -43,4 +43,6 @@ public:
     void func_ov00_020aee58(s16 param1, u16 param2);
     void func_ov00_020aee84();
     bool func_ov00_020aeeac();
+
+    LinkStateRoll(PlayerLinkBase *link);
 };

@@ -245,6 +245,16 @@ public:
                             Vec3p *param_8);
     bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
                             Vec3p *param_8, Vec3p *param_9);
+
+    MapManager();
+    ~MapManager();
+    static void Create();
+    static void Destroy();
+    static void LoadMapTexSprites(s32 param1);
+    void func_ov004_02102260();
+    void func_ov004_02102264(unk32 *param1, char *param2);
+    void func_ov004_021024c4(s32 param1, unk32 param2, unk32 param3);
+    void func_ov004_021025d8();
 };
 
 extern MapManager *gMapManager;

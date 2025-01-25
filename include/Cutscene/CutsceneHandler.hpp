@@ -43,7 +43,6 @@ public:
     /* 88 */ s32 mUnk_88;
     /* 8c */
 
-    CutsceneHandler();
     s32 func_ov000_020980fc(unk32 param1, unk32 param2, void **param3);
     bool func_ov000_02098114();
     bool SkipCutscene(s32 param1);
@@ -58,4 +57,9 @@ public:
     bool func_ov000_02098860();
     unk32 func_ov000_02098890(unk32 param1, s32 param2);
     static unk32 func_ov000_02098920(unk32 param1);
+
+    CutsceneHandler();
+    ~CutsceneHandler();
+    void func_ov004_0210f3e4(s32 param1);
+    void func_ov004_0210f46c();
 };

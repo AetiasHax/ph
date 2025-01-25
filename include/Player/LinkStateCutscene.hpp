@@ -96,4 +96,6 @@ public:
     void func_ov000_020b3278(s32 param1, s32 *param2);
     void func_ov000_020b35d8(s32 param1, s32 param2);
     void func_ov000_020b38dc(u32 param1, u32 param2);
+
+    LinkStateCutscene(PlayerLinkBase *link);
 };

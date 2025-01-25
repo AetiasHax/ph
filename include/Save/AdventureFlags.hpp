@@ -131,6 +131,16 @@ public:
     bool func_ov00_0209809c();
     bool func_ov00_020980ac();
     void func_ov00_020980bc(s32 param1);
+
+    AdventureFlags();
+    ~AdventureFlags();
+    static void Create();
+    static void Destroy();
+    void func_ov004_021044f8(s32 param1);
+    void func_ov004_0210453c();
+    bool func_ov004_0210455c(s32 param1);
+    void func_ov004_021046c8(unk32 param1);
+    void func_ov004_021046d4();
 };
 
 extern AdventureFlags *gAdventureFlags;

@@ -101,6 +101,18 @@ struct UnkStruct_027e103c {
     void func_ov000_020cfe40(unk8 param1, unk32 param2);
     void func_ov000_020cfe74(unk32 param1, unk32 param2);
     unk32 func_ov000_020cfea8();
+
+    UnkStruct_027e103c();
+    ~UnkStruct_027e103c();
+    static void Create();
+    static void Destroy();
+    void func_ov004_02104d68();
+    static bool func_ov004_02104f5c();
+    void func_ov004_02104f78();
+    void func_ov004_02104fa8();
+    void func_ov004_02104fb8();
+    void func_ov004_02104ffc(unk32 param1, unk32 param2);
+    void func_ov004_0210504c();
 };
 
 extern UnkStruct_027e103c *data_027e103c;

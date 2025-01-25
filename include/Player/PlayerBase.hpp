@@ -57,6 +57,8 @@ public:
     bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
     s32 EquipItem_vfunc_2c();
     void SetHealth(s16 health);
+
+    PlayerBase();
 };
 
 extern PlayerBase *gPlayer;

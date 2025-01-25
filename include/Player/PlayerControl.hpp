@@ -130,6 +130,14 @@ public:
     void func_ov000_020b7924(s32 param1);
     void ApplyTouchWorld(Vec3p *result, unk32 scale);
     bool func_ov000_020b7d6c();
+
+    PlayerControl();
+    ~PlayerControl();
+    static void Create();
+    static void Destroy();
+    void Init();
+    void func_ov004_0210b1d0();
+    static void func_ov004_0210b1f0();
 };
 
 extern PlayerControl *gPlayerControl;

@@ -134,7 +134,7 @@ gPlayerAngle kind:bss addr:0x27e0fac
 data_027e0fb0 kind:bss addr:0x27e0fb0
 gItemManager kind:bss addr:0x27e0fb4
 gPlayerControl kind:bss addr:0x27e0fb8
-gHealthManager kind:bss addr:0x27e0fbc
+gPlayerManager kind:bss addr:0x27e0fbc
 data_027e0fc0 kind:bss addr:0x27e0fc0
 gItemModelLoader kind:bss addr:0x27e0fc4
 gPlayerLink kind:bss addr:0x27e0fc8
