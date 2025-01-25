@@ -818,7 +818,7 @@ data_ov009_0211f2e0 kind:data(any) addr:0x211f2e0
 data_ov009_0211f2e4 kind:data(any) addr:0x211f2e4
 data_ov009_0211f2e8 kind:data(any) addr:0x211f2e8
 data_ov009_0211f308 kind:data(any) addr:0x211f308
-data_ov009_0211f30c kind:data(any) addr:0x211f30c
+sBaseTreasureFileNames kind:data(any) addr:0x211f30c
 data_ov009_0211f32c kind:data(any) addr:0x211f32c
 data_ov009_0211f334 kind:data(any) addr:0x211f334
 data_ov009_0211f33c kind:data(any) addr:0x211f33c
