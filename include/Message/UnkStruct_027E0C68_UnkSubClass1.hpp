@@ -211,7 +211,7 @@ public:
     /* 0x28 */ virtual bool func_0203e0c8(void) override;
     /* 0x2C */ virtual void func_02039a5c(void) override;
     /* 0x30 */ virtual void func_02038ed0(void) override;
-    /* 0x34 */ virtual UNK_TYPE func_02038c34(void) override;
+    /* 0x34 */ virtual unk32 func_02038c34(unk32 param_2) override;
     /* 0x38 */ virtual bool func_0203c350(void) override;
     /* 0x3C */ virtual void func_02039ccc(unk32 param_2) override;
     /* 0x40 */ virtual UNK_TYPE func_02039d74(void) override;
@@ -230,8 +230,10 @@ public:
     /* 0x74 */
 
     unk32 func_02032fa4(void);
+    unk32 func_02032fb4(void);
     unk32 func_020337d8(unk32 param_2);
     void func_02038b28(void);
+    unk32 func_02038d10(void);
     unk32 func_0203905c(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
     void func_020393a8(unk32 param_2);
     unk32 func_0203a30c(void);
@@ -247,13 +249,12 @@ public:
     void func_02032fcc(unk32, unk32);
     void func_02033190(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     void func_020331c4(unk32, unk32);
-    void func_020350ac(u32*);
+    unk32 func_02038cf4(void);
     void func_02038b1c(void);
     void func_02038b40(void);
     void func_0203947c(void);
     unk32 func_0203951c(void);
     unk32 func_0203e284(UnkStruct_0203b264*, unk32, unk32);
-    void func_0203e2ac(unk32* param_2, unk32* param_3);
-    void func_0203f020(UnkSubClass1_unk_124*, unk32, unk32);
+    void func_0203e2ac(unk32* param_2);
     void func_0203fc78(unk32*, unk32*);
 };

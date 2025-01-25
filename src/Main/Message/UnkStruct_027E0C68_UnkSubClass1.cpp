@@ -2,11 +2,34 @@
 #include "Message/MessageManager.hpp"
 #include "Save/AdventureFlags.hpp"
 
+extern u32 func_01ff9b4c(unk32, unk32);
 extern unk32 func_0203c084(void);
-extern s32 data_027e0db0;
 
-ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1::func_02038c34(UNK_TYPE) {
-    // TODO
+struct Struct_027e0db0 {
+    /* 0x00 */ unk32 unk_00;
+    /* 0x04 */ unk32 unk_04;
+};
+extern Struct_027e0db0 data_027e0db0;
+
+ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_02038c34(unk32 param_2) {
+    unk32 iVar1;
+    unk32 iVar2;
+    unk32 iVar3;
+    unk32 uVar4;
+
+    iVar2 = this->func_02038cf4();
+    iVar3 = this->func_02038d10();
+    iVar1 = ((this->unk_15A - (this->unk_18 << 3) / 2) << 0x10) >> 0x10;
+
+    if ((param_2 < iVar2 + iVar1) || (iVar2 + iVar3 + iVar1 <= param_2)) {
+        return -1;
+    }
+
+    iVar3 = this->unk_34;
+    uVar4 = this->func_02032fb4();
+    iVar2 = (param_2 - iVar1) - iVar2;
+
+    return func_01ff9b4c(iVar2 + iVar3 / 2, uVar4);
 }
 
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_02038ed0(void) {
@@ -19,12 +42,9 @@ ARM void UnkStruct_027E0C68_UnkSubClass1::func_02038ed0(void) {
 
 // non-matching
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_02039228(unk32* param_2, unk32* param_3) {
-    int temp;
     this->unk_15C = 10;
-    // temp = param_3[2];
     this->unk_152 = 1;
-    // param_3[0] = param_3[2];
-    this->func_0203e2ac(param_2, param_3);
+    this->func_0203e2ac(param_3);
 }
 
 ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_020393d0(unk32 param_2) {    
@@ -47,7 +67,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_020393d0(unk32 param_2) {
             break;
     }
 
-    return (this->unk_18 * 8 - this->func_020337d8(param_2)) / 2;
+    return ((this->unk_18 << 3) - this->func_020337d8(param_2)) / 2;
 }
 
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_020394d8(unk32* param_2, unk32* param_3) {
@@ -78,8 +98,8 @@ ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1::func_02039d74(UNK_TYPE) {
     // TODO
 }
 
-// non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a328(UNK_TYPE) {
+// non-matching (regalloc)
+ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a328(void) {
     if (this->unk_164 != NULL && this->unk_164->unk_15C > 0) {
         this->func_02038b40();
     }
@@ -177,7 +197,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_0203b310(unk8 param_2, UnkStruct
             return this->func_0203905c(param_2, param_3, param_4, param_5);
         case 1:
             iVar1 = this->func_0203a30c();
-            return this->unk_164->func_0203cb5c(param_2, (this->unk_428[this->unk_528[iVar1]] & ~0xFFFF) >> 0x10);
+            return this->unk_164->func_0203cb5c(param_2, ((this->unk_428[this->unk_528[iVar1]] & ~0xFFFF)) >> 0x10);
         default:
             break;
     }
@@ -189,17 +209,17 @@ ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1::func_0203b410(UNK_TYPE) {
     // TODO
 }
 
-// non-matching
+// non-matching (regalloc)
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203b5d0(unk32 param_2) {
     unk32 uVar2;
 
-    if ((this->unk_50 == 0 && data_027e0db0 <= 0 && func_0203c084() != 0) || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
+    if (this->unk_50 != 0 || data_027e0db0.unk_04 > 0 || func_0203c084() != 0 || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
         uVar2 = 0x16;
     } else {
         uVar2 = 0;
     }
 
-    this->func_0203f020(this->unk_124, param_2, uVar2);
+    this->unk_124->func_0203f020(param_2, uVar2);
     this->func_0203be08();
 
     if (this->func_02032fa4()) {
