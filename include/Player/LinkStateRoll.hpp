@@ -23,7 +23,7 @@ public:
     /* 28 */ unk8 mUnk_28[4];
     /* 2c */ unk32 mUnk_2c[5];
     /* 40 */ unk32 mUnk_40;
-    /* 44 */ unk32 mUnk_44[0x10];
+    /* 44 */ ActorRef mUnk_44[0x8];
     /* 84 */ void *mUnk_84;
     /* 88 */ unk32 mUnk_88;
     /* 8c */ unk8 mUnk_8c[0xc];
@@ -45,4 +45,22 @@ public:
     bool func_ov00_020aeeac();
 
     LinkStateRoll(PlayerLinkBase *link);
+
+    s32 func_ov005_02106c80(u32 param1);
+    void func_ov005_02106cd0();
+    void func_ov005_02107208(u32 param1);
+    void func_ov005_02107214();
+    void func_ov005_021073b8();
+    void func_ov005_021075bc();
+    void func_ov005_02107880();
+    void func_ov005_02107954(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov005_02107b74(unk32 *param1, unk16 param2, unk16 param3);
+    bool func_ov005_02107bd4();
+    bool func_ov005_02107c8c();
+    bool func_ov005_02107d74();
+    unk32 func_ov005_02107e80(u32 param1, unk32 *param2, unk16 param3, unk8 *param4);
+    void func_ov005_02107fc0();
+    bool func_ov005_02108094();
+    void func_ov005_02108188();
+    void func_ov005_021081a8();
 };

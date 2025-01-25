@@ -52,4 +52,16 @@ public:
     bool func_ov00_020abf70();
 
     LinkStateItem(PlayerLinkBase *link);
+
+    void func_ov005_02105850();
+    void func_ov005_02105c28();
+    void func_ov005_02105d94();
+    void func_ov005_02105dac();
+    void func_ov005_02106644();
+    void func_ov005_02106700(Vec3p *param1, unk8 *param2);
+    void func_ov005_02106740(s32 *param1, s32 param2);
+    bool func_ov005_02106894(s32 param1, s32 param2);
+    void func_ov005_02106980(unk32 param, s32 param2, s32 *param3);
+    bool func_ov005_02106a50();
+    bool func_ov005_02106bbc(Vec3p *param1, unk32 param2, u32 param3);
 };

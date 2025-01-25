@@ -98,4 +98,28 @@ public:
     void func_ov000_020b38dc(u32 param1, u32 param2);
 
     LinkStateCutscene(PlayerLinkBase *link);
+
+    void func_ov005_021089c0();
+    void func_ov005_021089f4();
+    void func_ov005_02108d08();
+    void func_ov005_02108e08();
+    void func_ov005_02108e8c();
+    void func_ov005_02108f38();
+    void func_ov005_02108f98(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov005_021092bc();
+    void func_ov005_0210952c();
+    void func_ov005_02109588();
+    void func_ov005_0210960c();
+    void func_ov005_02109650();
+    bool PlayItemCutscene(unk32 itemId);
+    bool func_ov005_02109768();
+    void func_ov005_021097b0(s32 param1);
+    void func_ov005_021099dc();
+    bool func_ov005_02109cd0(s32 *param1, s32 param2, unk32 param3);
+    void func_ov005_02109e84();
+    void func_ov005_02109f2c();
+    void func_ov005_02109f88();
+    void func_ov005_0210a018();
+    void func_ov005_0210a06c();
+    bool func_ov005_0210a0c0(unk16 param1);
 };

@@ -154,6 +154,9 @@ public:
     bool func_ov000_020bd510(s32 param1, unk32 *param2);
 
     PlayerLinkBase();
+
+    void UpdatePos(unk32 param1);
+    bool func_ov005_0210eba4();
 };
 
 extern PlayerLinkBase *gPlayerLink;

@@ -113,6 +113,29 @@ struct UnkStruct_027e103c {
     void func_ov004_02104fb8();
     void func_ov004_02104ffc(unk32 param1, unk32 param2);
     void func_ov004_0210504c();
+
+    void func_ov005_02103f20();
+    void func_ov005_02103f3c();
+    bool func_ov005_02103f4c();
+    void func_ov005_02103f70();
+    void func_ov005_02103f80(unk8 param1);
+    void func_ov005_02103f8c(char *param1);
+    void func_ov005_02103fb4();
+    void func_ov005_02103fc8(unk8 param1);
+    void func_ov005_02103fd8();
+    void func_ov005_02103ff0();
+    void WalletFull();
+    void func_ov005_02104104();
+    void func_ov005_02104028(bool param1);
+    void func_ov005_02104058();
+    void func_ov005_02104070();
+    void func_ov005_02104088(unk32 param1);
+    void func_ov005_021040c8();
+    bool func_ov005_021040ec();
+    void func_ov005_02104114();
+    void func_ov005_0210413c();
+    void func_ov005_02104160();
+    void func_Ov005_0210418c(char param1);
 };
 
 extern UnkStruct_027e103c *data_027e103c;

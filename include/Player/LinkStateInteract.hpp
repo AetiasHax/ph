@@ -55,4 +55,13 @@ public:
     bool func_ov00_020abc78(ActorRef *ref);
 
     LinkStateInteract(PlayerLinkBase *link);
+
+    void func_ov005_0210a690();
+    bool func_ov005_0210a714();
+    void func_ov005_0210a774();
+    void func_ov005_0210a7d4();
+    void func_ov005_0210ab1c();
+    void func_ov005_0210ad88();
+    void func_ov005_0210b2a4();
+    void func_ov005_0210b4f4(Vec3p *vec, Actor *actor);
 };
