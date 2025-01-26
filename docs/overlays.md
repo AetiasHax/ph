@@ -16,7 +16,7 @@ contribute to this list!
 `09` | ---             | 3    |
 `10` | ---             | 3    |
 `11` | ---             | 3    |
-`12` | ---             | 3    |
+`12` | Battle          | 3    | Handles battle mode.
 `13` | ---             | 3    |
 `14` | Land            | 4    | Link and essential land-based actors
 `15` | ---             | 4    |
