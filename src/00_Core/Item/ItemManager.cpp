@@ -124,7 +124,6 @@ ARM ActorNavi *ItemManager::GetFairy(FairyId id) const {
     return mFairies[id];
 }
 
-extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();

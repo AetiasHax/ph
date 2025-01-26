@@ -1,11 +1,16 @@
+#include "global.h"
 #include "Message/UnkStruct_027E0C68_UnkSubClass1.hpp"
 #include "Message/MessageManager.hpp"
 #include "Save/AdventureFlags.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
+#include "Player/TouchControl.hpp"
+#include "Item/ItemManager.hpp"
 
-extern u32 func_01ff9b4c(unk32, unk32);
-extern unk32 func_0203c084(void);
-extern void func_ov018_02169634(UnkStruct_027E0C68_UnkSubClass1*);
-extern unk32 func_ov000_02079e04(void);
+extern "C" u32 func_01ff9b4c(unk32, unk32);
+extern "C" unk32 func_0203c084(void);
+extern "C" void func_ov018_02169634(UnkStruct_027E0C68_UnkSubClass1*);
+extern "C" unk32 func_ov000_02079e04(void);
+extern "C" unk32 func_01ff9b88(unk32, unk32);
 
 struct Struct_027e0db0 {
     /* 0x00 */ unk32 unk_00;
@@ -21,7 +26,7 @@ struct UnkStruct2 {
 };
 extern UnkStruct2 data_027e077c;
 extern u8 data_02056be4[];
-extern unk32 data_027e0618[];
+extern u8 data_027e0618[];
 
 class UnkClass_027e0cbc {
 public:
@@ -37,6 +42,17 @@ extern "C" void func_020347b0(unk32, unk16, unk32*, unk32*, unk32, unk32);
 extern THUMB unk32 func_0202ab48(void);
 extern "C" void func_02034984(unk32, unk32, unk32, unk32, unk32);
 extern "C" void func_02034698(unk32, unk32, unk32*, unk32*);
+extern TouchControl data_027e0d78;
+
+class UnkClass_027e0e28 {
+public:
+    unk32 func_ov000_0207bc48();
+};
+extern UnkClass_027e0e28* data_027e0e28;
+extern u8 data_027e0c54;
+extern unk32* data_ov009_0211f5b4;
+extern "C" unk32 func_ov003_020f3f94(unk32*);
+extern unk32* data_02057ed4;
 
 // see Actor.cpp
 typedef struct UnkStruct_01ffbe34 {
@@ -56,6 +72,16 @@ typedef struct UnkStruct_01ffbe34 {
     /* 20 */
 } UnkStruct_01ffbe34;
 extern "C" void func_01ffbe34(UnkStruct_01ffbe34 *param1);
+
+
+class UnkClass_027e1054 {
+public:
+    unk32 unk_00;
+    unk32 unk_04;
+
+    void func_ov003_020f4874(void);
+};
+extern UnkClass_027e1054 data_027e1054;
 
 ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_02038c34(unk32 param_2) {
     s16 iVar1;
@@ -342,16 +368,338 @@ ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a328(void) {
     this->unk_410.func_0203ec34();
 }
 
+// non-matching
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a3fc(s32 touchLastX, s32 touchLastY) {
-    // TODO
+    unk32 iVar2;
+    unk32 iVar5;
+    unk32 iStack_14;
+    unk32 iStack_18;
+
+    if (this->unk_15C <= 0 || this->func_0203951c() == 0) {
+        return;
+    }
+
+    iStack_14 = 0;
+    iStack_18 = 0;
+
+    this->func_0203bdcc(&iStack_14, &iStack_18);
+
+    iVar5 = touchLastX - iStack_14;
+    iVar2 = touchLastY - iStack_18;
+
+    if ((data_027e103c != 0 && data_027e103c->mUnk_1c == 0x8F) || (data_027e077c.mUnk_0 != data_027e077c.mUnk_4)) {
+        return;
+    }
+
+    if ((data_02056be4[data_027e077c.mUnk_0] & 2) == 0) {
+        if ((data_027e0d78.mFlags & 1) != 0) {
+            if (this->unk_50 == 0 && data_027e0d38 != 0) {
+                if (func_ov000_02079e04() == 0 && data_027e0e28->func_ov000_0207bc48() == 0) {
+                    if (data_027e0618[0x101] == 0 && data_027e103c->mUnk_24 == 0) {
+                        return;
+                    }
+                }
+            }
+
+            if (this->func_0203a6d0(iVar5, iVar2) == 0 && this->func_0203a2c0() != 0) {
+                this->unk_57F = 1;
+            }
+        } else {
+            if (data_027e0d78.mTouch != 0) {
+                this->func_0203a6d0(iVar5, iVar2);
+                return;
+            }
+
+            if (data_027e0d78.mTouch == 0) {
+                switch(this->unk_151) {
+                    case 3:
+                    case 4:
+                        break;
+                    case 5:
+                        if (data_027e103c->mUnk_20 == 3) {
+                            this->func_0203b0ec(1);
+                        }
+                        break;
+                    case 6:
+                        if (data_027e103c->mUnk_20 == 5) {
+                            this->func_0203b0ec(1);
+                        }
+                        break;
+                    case 7:
+                        break;
+                    case 2:
+                        if (this->unk_164->unk_168.unk_06 <= 0) {
+                            if ((data_027e0d78.mFlags & 2) != 0) {
+                                this->unk_13C = 0;
+
+                                if (this->func_0203b0bc() != 0) {
+                                    this->func_0203b0ec(1);
+                                }
+
+                                this->unk_1F0.unk_64 = 0;
+                                this->unk_1F0.func_020352d8();
+                            }
+                        }
+                        break;
+                    case 0:
+                    case 1:
+                    default:
+                        if ((data_027e0d78.mFlags & 2) != 0) {
+                            this->unk_13C = 0;
+
+                            if (this->func_0203b0bc() != 0) {
+                                this->func_0203b0ec(1);
+                            }
+
+                            this->unk_1F0.unk_64 = 0;
+                            this->unk_1F0.func_020352d8();
+                        }
+                        break;
+                }
+            }
+        }
+    }
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a7f0(EntryINF1* param_2, int param_3, u8* param_4) {
-    // TODO
+// non-matching
+ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a7f0(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) {
+    bool bVar5;
+    bool bVar2;
+    int iVar4;
+    int iVar6;
+    s16 temp;
+
+    iVar6 = param_4[0];
+
+    if (data_027e0c54 != 0) {
+        UnkStruct_027E0C68_UnkSubClass1* pVar4 = data_027e0c68.func_02036700();
+
+        if (pVar4 != NULL && pVar4->unk_15C > 0) {
+            this->func_02038b40();
+        }
+    }
+
+    if (*((s32*)data_027e0618) == 2 && data_027e0d38->func_ov000_02078b40() == 2 && func_ov003_020f3f94(data_ov009_0211f5b4) == 0) {
+        UnkStruct_027E0C68_UnkSubClass1* pVar4 = data_027e0c68.unk_28[4];
+
+        if (pVar4 != NULL && pVar4->unk_15C > 0) {
+            this->func_02038b40();
+        }
+    }
+
+    this->unk_586 = (data_02056be4[data_027e077c.mUnk_0] & 1) != 0;
+    temp = param_4[8];
+
+    if (temp >= 0 && param_4[9] >= 0) {
+        temp = param_4[10];
+    }
+
+    if (temp < 0) {
+        this->unk_57B = temp;
+    } else {
+        this->unk_57B = 0;
+    }
+
+    this->func_02038f44(param_2, param_3, param_4, param_5, iVar6);
+    this->unk_574 = 0;
+
+    if (data_027e0d38 != 0 && (data_02056be4[data_027e077c.mUnk_0] & 1) != 0 && (param_4[11])) {
+        data_027e103c->func_ov000_020cf284(0x80, 0);
+    }
 }
 
-ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1::func_0203a988(UNK_TYPE) {
-    // TODO
+// non-matching (can't get the switch decomp...)
+ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203a988(void) {
+    short sVar1;
+    int iVar2;
+    u16* puVar3;
+    int iVar4;
+    u16 uVar5;
+    unk8 uVar6;
+    u16 *local_54 [17];
+    
+    if ((this->unk_18 & 0x1FFFFFFF) != 8) {
+        this->func_0203e060(0xE0, 0x40);
+    
+        if (this->unk_154 == 0) {
+            iVar2 = 2;
+        } else {
+            iVar2 = (int)*(char *)(this->unk_154->unk_05);
+        }
+
+        this->func_0203dcfc(this->unk_50, 0, (int)this->unk_11E, iVar2);
+    }
+
+    this->unk_410.func_0203ebe0();
+    this->unk_580 = 0;
+    this->func_020392b4();
+    this->unk_57C = 0;
+    this->unk_164->unk_168.unk_06 = 0;
+    this->unk_57D = 0;
+    this->unk_57F = 0;
+    this->unk_57A = 0;
+
+    if (this->unk_154->unk_06 < 2) {
+        this->unk_580 = 1;
+    }
+
+    this->unk_424.func_0203ee48();
+    this->unk_151 = 1;
+    puVar3 = this->unk_12C;
+    local_54[0] = puVar3;
+    iVar2 = 0;
+
+    for (iVar2 = 0; func_01ff9b88(iVar2, this->unk_154->unk_06) == 0; iVar2++, puVar3 = this->func_02037604(local_54)) {
+        if (local_54[iVar2] != NULL) {
+            puVar3 = local_54[iVar2];
+        }
+
+        if (local_54[iVar2] == NULL || puVar3 == NULL) {
+            break;
+        }
+
+        if (*local_54[iVar2] == ESCAPE_SEQUENCE_MARKER) {
+            uVar5 = (local_54[iVar2][3] << 0x10) | local_54[iVar2][2];
+            if (0x00010017 < uVar5) {
+                if (uVar5 == 0x00020001) {
+                    sVar1 = this->unk_164->unk_168.unk_06;
+                    // (param_1 + sVar1 * 2 + 0x562)[0] = '\x1B';
+                    // (param_1 + sVar1 * 2 + 0x562)[1] = 0;
+                }
+            } else {
+                // switch (*local_54[iVar2]) {
+                //     case 0:
+                //         continue;
+                //     case 1:
+                //     case 2:
+                //     case 3:
+                //     case 4:
+                //         if (this->unk_164->unk_168.unk_06 == 0) {
+                //             this->func_0203cabc(this->unk_164->unk_50);
+                //             this->unk_164->unk_50 = 0x1A; // ???
+
+                //             while (this->unk_564 < 4) {
+                //                 this->unk_564--; // ???
+                //             }
+
+                //             this->unk_580 = 1;
+                //         } else {
+                //             this->unk_151 = 4
+                //         }
+                //         break;
+                //     case 5:
+                //     case 6:
+                //     case 7:
+                //     case 8:
+                //     case 9:
+                //     case 10:
+                //     case 11:
+                //     case 12:
+                //     case 13:
+                //     case 14:
+                //     case 15:
+                //     case 16:
+                //     case 17:
+                //     case 18:
+                //     case 19:
+                //     case 20:
+                //     case 21:
+                //     case 22:
+                //     case 23:
+                //     case 24:
+                //     case 25:
+                //         sVar1 = this->unk_164->unk_168.unk_06;
+                //         break;
+                //     default:
+                //         return;
+                // }
+            }
+        }
+
+        if (*local_54[iVar2] == '\n') {
+            continue;
+        }
+    }
+
+/*     while(true) {
+
+        // switch (*local_54[iVar2]) {
+        //     case ESCAPE_SEQUENCE_MARKER:
+        //     case '\n':
+        // }
+
+        if (*local_54[iVar2] == ESCAPE_SEQUENCE_MARKER) {
+            uVar5 = (local_54[iVar2][3] << 0x10) | local_54[iVar2][2];
+            if (0x00010017 < uVar5) {
+                if (uVar5 == 0x00020001) {
+                    sVar1 = this->unk_164->unk_168.unk_06;
+                    // (param_1 + sVar1 * 2 + 0x562)[0] = '\x1B';
+                    // (param_1 + sVar1 * 2 + 0x562)[1] = 0;
+                }
+            } else {
+                    /* WARNING: Could not recover jumptable at 0x0203aa7c. Too many branches */
+                    /* WARNING: Treating indirect jump as call 
+                // if (-1 < (int)(uVar5 - 0x10000)) {
+                //     (*(code *)((uVar5 - 0x10000) * 4 + 0x203aa84))();
+                //     return;
+                // }
+            }
+        } else if (*local_54[iVar2] == '\n') {
+            iVar2 = iVar2 + 1;
+            iVar4 = func_01ff9b88(iVar2, this->unk_154->unk_06);
+
+            if (iVar4 == 0) {
+                break;
+            }
+        }
+    }
+ */
+    if (this->unk_15E == '\x06') {
+        this->func_0203e060(0xE0, 0x30);
+
+        if (this->unk_154 == 0) {
+            iVar2 = 2;
+        } else {
+            iVar2 = this->unk_154->unk_05;
+        }
+
+        this->func_0203dcfc(this->unk_50,0,(int)this->unk_11E,iVar2);
+    }
+
+    if (this->unk_580 != 0) {
+        this->func_0203e060(0xE0, 0x28);
+
+        if (this->unk_154 == 0) {
+            iVar2 = 2;
+        } else {
+            iVar2 = this->unk_154->unk_05;
+        }
+
+        this->func_0203dcfc(this->unk_50, 0, this->unk_11E, iVar2);
+
+        if (this->unk_50 == 0) {
+            uVar6 = 1;
+        } else {
+            uVar6 = 7;
+        }
+        
+        // *(undefined *)((int)PTR_PTR_0203aea4->unk_28 + ((byte)param_1[0x50] - 0x28)) = uVar6;
+        // PTR_PTR_0203aea4[this->unk_50] = uVar6;
+        data_027e0c68.unk_28[this->unk_50]->unk_18 = uVar6;
+        this->func_0203b764();
+
+        if (this->unk_15F == 0 || this->unk_154->unk_06 < 3) {
+            this->unk_168.unk_64 = this->unk_168.unk_7C;
+            this->unk_168.func_020352d8();
+        } else {
+            this->unk_168.func_020351b8(1, 0, 0, 0);
+        }
+    }
+
+    this->unk_1F0.unk_64 = 0;
+    this->unk_1F0.func_020352d8();
+    this->func_02039578(0, 0, 0, 0);
+    // (**(code **)(*(int *)param_1 + 0x10))(0);
 }
 
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203aea8(void) {
@@ -365,8 +713,51 @@ ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203aea8(void) {
     }
 }
 
+// non-matching
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_0203af1c(void) {
-    // TODO
+    bool bVar1;
+    unk8* puVar2;
+    int iVar3;
+    char *pcVar4;
+    
+    if (this->unk_160 != 0) {
+        if (data_027e103c != NULL) {
+            if (data_027e103c->func_ov000_020cf4bc() != 0) {
+                puVar2 = data_027e103c->func_ov000_020cef9c();
+
+                if ((puVar2 + 0x244) != NULL || (puVar2[0x250] == '\x02')) {
+                    puVar2 = data_027e103c->func_ov000_020cef9c();
+
+                    if ((UnkStruct_027E0C68_UnkSubClass1*)(puVar2 + 0x244) == this) {
+                        data_027e103c->func_ov000_020cfb38();
+                    }
+                }
+            }
+
+            if (this->unk_581 != 0 && data_027e103c->func_ov000_020cf488() != 0) {
+                data_027e103c->func_ov000_020cfa24();
+                this->unk_581 = 0;
+            }
+
+            if (this->unk_582 != 0) {
+                data_027e103c->func_ov000_020cfe40(0, 2);
+                this->unk_582 = 0;
+            }
+
+            if (this->unk_583 != 0) {
+                data_027e103c->func_ov005_02104028(0);
+                this->unk_583 = 0;
+            }
+        }
+
+        if (data_027e0618[0] == 2 && func_ov000_02079e04() && (data_027e1054.unk_04 + 0x99) != 0 &&
+                (data_027e077c.mUnk_0 != 0x39 || data_027e103c->func_ov000_020cf0bc())) {
+            data_027e1054.func_ov003_020f4874();
+            data_027e103c->func_ov005_02103f8c(data_02057ed4);
+        }
+    }
+
+    this->func_02039398();
 }
 
 // non-matching (regalloc)

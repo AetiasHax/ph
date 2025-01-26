@@ -18,6 +18,18 @@ struct UnkStruct_027e103c {
     /* 24 */ u8 mUnk_24;
     /* 25 */ unk8 mUnk_25[7];
     /* 2c */
+
+    void func_ov000_020cf284(unk32, unk32);
+
+    unk32 func_ov000_020cf4bc(void);
+    unk8* func_ov000_020cef9c(void);
+    void func_ov000_020cfb38(void);
+    unk32 func_ov000_020cf488(void);
+    void func_ov000_020cfa24(void);
+    void func_ov000_020cfe40(unk32, unk32);
+    void func_ov005_02104028(unk32);
+    unk32 func_ov000_020cf0bc(void);
+    void func_ov005_02103f8c(unk32*);
 };
 
 extern UnkStruct_027e103c *data_027e103c;

@@ -115,7 +115,7 @@ public:
     bool func_02036d30(UnkStruct_027E0C68_UnkSubClass3* param_2);
     bool func_02036d4c(UnkStruct_027E0C68_UnkSubClass3* param_2);
     void func_02036d6c(void);
-    UnkStruct_027E0C68_UnkSubClass1* func_02036da8(u32 param_2, s32* param_3);
+    UnkStruct_027E0C68_UnkSubClass1* func_02036da8(u32 param_2, s16* param_3);
     void func_02036edc(u32 param_2, u8 param_3);
     UnkStruct_027E0C68_UnkSubClass1* func_02036f68(u32 param_2, u8* param_3);
     UnkStruct_027E0C68_UnkSubClass2* func_020370d0(unk32 param_2, unk32 param_3);

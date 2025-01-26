@@ -442,16 +442,15 @@ ARM void UnkStruct_027E0C68::func_02036d6c(void) {
 }
 
 // non-matching
-ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param_2, s32* param_3) {
+ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param_2, s16* param_3) {
     EntryINF1 *pEVar1;
     EntryINF1 *pEVar2;
     UnkStruct_027E0C68_UnkSubClass1 *pSVar4;
     BMGGroups *pBVar5;
     bool bVar6;
-    u8 iStack_38;
+    s16 iStack_38;
     int iStack_34;
     int iStack_30;
-    u8 uStack_2c;
     
     pEVar1 = func_02037258(&this->pGroups->entries[param_2 >> 0x10], param_2 & 0xFFFF);
 
@@ -461,7 +460,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param
 
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0) {
         pSVar4 = this->unk_28[4];
-        func_02037628(&iStack_38);
+        func_02037628((u8*)&iStack_38);
 
         // ???
         bVar6 = (data_02056be4[data_027e077c.mUnk_0] & 1) == 0;
@@ -472,12 +471,16 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036da8(u32 param
             data_02056be4[0] = 0;
         }
 
-        uStack_2c = 1;
         iStack_38 = *param_3;
-        iStack_34 = param_3[1];
-        iStack_30 = param_3[2];
+        // iStack_34 = param_3[1];
+        // iStack_30 = param_3[2];
         pBVar5 = this->pGroups;
-        pSVar4->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), &iStack_38);
+        // pSVar4->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), (s16*)&iStack_38, 1);
+        BMGFileInfo* entry = &(pBVar5)->entries[(param_2) >> 0x10];
+        pSVar4->func_0203a7f0(pEVar1, 
+        ((u32)entry->pDAT1 + (((func_02037258(entry, (((param_2))) & 0xFFFF))->offset) & ~1)),
+        // BMG_GET_MSG_ADDR(pBVar5, param_2), 
+        (s16*)&iStack_38, 1);
 
         func_ov000_020d77e4(data_ov000_020eec9c, 0x1C);
         return pSVar4;
@@ -536,7 +539,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1* UnkStruct_027E0C68::func_02036f68(u32 param
     pSVar5->unk_164 = pSVar2;
     pSVar5->unk_418 = this->unk_28[5];
 
-    pSVar5->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), param_3);
+    pSVar5->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s16*)param_3, 0);
 
     if (func_ov000_020d7f18(data_ov000_020eec9c, 0x19) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x18) == 0 &&
         func_ov000_020d7f18(data_ov000_020eec9c, 0x34) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x35) == 0 &&

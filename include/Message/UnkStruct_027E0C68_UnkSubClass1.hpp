@@ -6,6 +6,8 @@
 // temp
 #define UNK_TYPE void
 
+#define ESCAPE_SEQUENCE_MARKER '\x1A'
+
 typedef struct UnkStruct_0203b264 {
     /* 0 */ u8 mUnk_0[0x4];
     /* 4 */ u16 *mUnk_4;
@@ -32,7 +34,8 @@ typedef struct UnkStruct1 {
 class UnkSubClass1_UnkownClass1 {
 public:
     /* 0x00 */ UnkStruct1* unk_00;
-    /* 0x04 */ u32* unk_04;
+    /* 0x04 */ unk16 unk_04;
+    /* 0x06 */ unk16 unk_06;
     /* 0x08 */ u32* unk_08;
     /* 0x0C */ unk32 unk_0C;
     /* 0x10 */ unk32 unk_10;
@@ -82,6 +85,7 @@ public:
     /* 0x04 */
 
     void func_0203ec34(void);
+    void func_0203ebe0(void);
     void func_0203ebf8(void);
 };
 
@@ -93,6 +97,7 @@ public:
     void func_0203ee80(unk32);
     void func_0203ef78(unk16, u16, unk8);
     void func_0203ef78(unk16); // overload?
+    void func_0203ee48(void);
 };
 
 class UnkSubClass1_unk_124 {
@@ -233,7 +238,8 @@ public:
     /* 0x528 */ s16* unk_528;
     /* 0x52C */ u8 unk_52C[0x30];
     /* 0x55C */ unk32 unk_55C;
-    /* 0x560 */ unk32 unk_560;
+    /* 0x560 */ unk16 unk_560;
+    /* 0x560 */ unk16 unk_562;
     /* 0x564 */ unk32 unk_564;
     /* 0x568 */ unk32 unk_568;
     /* 0x56C */ unk16 unk_56C;
@@ -279,8 +285,8 @@ public:
     /* 0x44 */ virtual void func_0203a3fc(s32 touchLastX, s32 touchLastY) override;
     /* 0x48 */ virtual void func_0203a328(void) override;
     /* 0x4C */ virtual void func_02039a3c(void) override;
-    /* 0x50 */ virtual void func_0203a7f0(EntryINF1* param_2, int param_3, u8* param_4) override;
-    /* 0x54 */ virtual UNK_TYPE func_0203a988(void) override;
+    /* 0x50 */ virtual void func_0203a7f0(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) override;
+    /* 0x54 */ virtual void func_0203a988(void) override;
     /* 0x58 */ virtual void func_0203af1c(void) override;
     /* 0x5C */ virtual void func_0203aea8(void) override;
     /* 0x60 */ virtual UNK_TYPE func_0203b410(void) override;
@@ -314,9 +320,16 @@ public:
     unk32 func_0203de14(unk32);
     void func_0203e090(void);
     void func_0203e0f8(void);
+    void func_020392b4(void);
+    void func_0203b764(void);
 
     void func_0203a188(unk32, unk32);
     void func_0203e1b0(unk32, unk32, unk32);
+    unk32 func_0203a6d0(unk32, unk32);
+    unk32 func_0203b0bc(void);
+    void func_02038f44(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5, unk32 param_6);
+    u16* func_02037604(u16**);
+    void func_02039398(void);
 
     // not sure it belongs to this class:
     void func_02032fcc(unk32, unk32);
@@ -329,4 +342,6 @@ public:
     unk32 func_0203e284(UnkStruct_0203b264*, unk32, unk32);
     void func_0203e2ac(unk32* param_2);
     void func_0203fc78(unk32*, unk32*);
+
+    void func_0203cabc(unk32);
 };

@@ -124,6 +124,8 @@ struct UnkStruct_027e0d38 {
     /* 24 */ void *mUnk_24;
     /* 28 */ void *mUnk_28;
     /* 2c */
+
+    unk32 func_ov000_02078b40(void);
 };
 
 typedef u32 ItemModelId;
@@ -332,3 +334,4 @@ public:
 };
 
 extern ItemManager *gItemManager;
+extern UnkStruct_027e0d38 *data_027e0d38;
