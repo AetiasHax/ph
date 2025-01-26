@@ -21,17 +21,51 @@ struct UnkStruct2 {
 };
 extern UnkStruct2 data_027e077c;
 extern u8 data_02056be4[];
-extern u8 data_027e0618[];
+extern unk32 data_027e0618[];
+
+class UnkClass_027e0cbc {
+public:
+    unk32 func_0203d7e0(unk32);
+};
+extern UnkClass_027e0cbc data_027e0cbc;
+extern unk16 data_02056a10[];
+extern unk16 data_02056a16[];
+extern unk32 data_02056a04[];
+extern unk32 data_027e0c38[];
+extern "C" void func_0203489c(unk32, unk16, unk32*, unk32*);
+extern "C" void func_020347b0(unk32, unk16, unk32*, unk32*, unk32, unk32);
+extern THUMB unk32 func_0202ab48(void);
+extern "C" void func_02034984(unk32, unk32, unk32, unk32, unk32);
+extern "C" void func_02034698(unk32, unk32, unk32*, unk32*);
+
+// see Actor.cpp
+typedef struct UnkStruct_01ffbe34 {
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk8 mUnk_08;
+    /* 09 */ unk8 mUnk_09;
+    /* 0a */ unk8 mUnk_0a;
+    /* 0b */ unk8 mUnk_0b;
+    /* 0c */ unk32 mUnk_0c;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk8 mUnk_14;
+    /* 15 */ unk8 mUnk_15;
+    /* 16 */ unk16 mUnk_16;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk32 mUnk_1c;
+    /* 20 */
+} UnkStruct_01ffbe34;
+extern "C" void func_01ffbe34(UnkStruct_01ffbe34 *param1);
 
 ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_02038c34(unk32 param_2) {
-    unk32 iVar1;
+    s16 iVar1;
     unk32 iVar2;
     unk32 iVar3;
     unk32 uVar4;
 
     iVar2 = this->func_02038cf4();
     iVar3 = this->func_02038d10();
-    iVar1 = ((this->unk_15A - (this->unk_18 << 3) / 2) << 0x10) >> 0x10;
+    iVar1 = ((this->unk_15A - (this->unk_18 << 3) / 2));
 
     if ((param_2 < iVar2 + iVar1) || (iVar2 + iVar3 + iVar1 <= param_2)) {
         return -1;
@@ -193,8 +227,110 @@ ARM void UnkStruct_027E0C68_UnkSubClass1::func_02039ccc(unk32 param_2) {
 
 }
 
+// non-matching
 ARM void UnkStruct_027E0C68_UnkSubClass1::func_02039d74(unk32 param_2, unk32 param_3) {
-    // TODO
+    UnkStruct_027E0C68_UnkSubClass1* bVar1;
+    s8 cVar2;
+    unk32 iVar4;
+    unk32 iVar6;
+    unk32 iVar7;
+    unk32 iVar8;
+    unk32 uVar9;
+    unk32 iStack_a8;
+    unk32 iStack_a4;
+    unk32 local_a0;
+    unk32 local_9c;
+    unk32 local_98;
+    unk32 local_94;
+    unk32 local_90;
+    unk32 local_8c;
+    unk32 iVar5;
+    UnkStruct_01ffbe34 aStack_88;
+    UnkStruct_01ffbe34 aStack_68;
+    UnkStruct_01ffbe34 aStack_48;
+
+    local_8c = 0;
+    local_90 = 0;
+    bVar1 = data_027e0c68.unk_28[this->unk_50];
+
+    this->func_0203bdcc(&local_8c, &local_90);
+    this->func_0203a188(local_8c + param_2, local_90 + param_3);
+    this->func_0203e1b0(param_2 + local_8c + (this->unk_158 - (this->unk_14 << 3) / 2), param_3 + local_90 + (this->unk_15A - (this->unk_18 << 3) / 2), 0);
+
+    if (this->unk_584 != 0) {
+        iVar5 = this->unk_18 << 3;
+
+        if (this->unk_580 != 0) {
+            iVar5 = -0xC;
+        } else  {
+            iVar5 = 0;
+        }
+
+        this->unk_300.func_02034a1c(param_2 + local_8c + this->unk_55C + (this->unk_158 - (this->unk_14 << 3) / 2),
+            iVar5 + param_3 + local_90 + this->unk_560 + ((this->unk_15A - (iVar5 / 2))), 0);
+    }
+
+    if (this->unk_585 != 0 && ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0)) {
+        switch (data_027e0618[0]) {
+            case 2:
+                if (data_027e0cbc.func_0203d7e0(3) != 0) {
+                    this->unk_388.func_02034b0c(0xBE, 0, 0, 0, 0);
+                }
+                break;
+            case 6:
+                if (data_027e0cbc.func_0203d7e0(0x58) != 0) {
+                    this->unk_388.func_02034b0c(0x013B, 0, 0, 0, 0);
+                }
+                break;
+        }
+    }
+
+    iVar5 = this->func_02032fa4();
+    iVar8 = bVar1->unk_18;
+    uVar9 = data_02056a04[iVar8];
+    func_0203489c(uVar9, data_02056a16[iVar8], &local_94, &local_98);
+    iVar6 = this->unk_158 - local_94;
+    iVar7 = this->unk_15A - local_98;
+
+    if ((this->unk_15E != 7) && (this->func_0203a2c0() != 0)) {
+        func_01ffbe34(&aStack_48);
+        func_020347b0(uVar9, data_02056a10[iVar8], &local_9c, &local_a0, 4, 4);
+        local_9c += param_2 + local_8c + iVar6;
+        local_a0 += param_3 + local_90 + iVar7;
+
+        if (data_027e0c38[5] == 1) {
+            iVar8 = func_0202ab48();
+
+            if (iVar8 == 0) {
+                iVar8 = 0;
+            } else {
+                iVar8 = -3;
+            }
+
+            local_9c = (0x108 - local_9c) + iVar8;
+        }
+
+        if ((this->unk_57F == 0) && (this->unk_56C <= 0)) {
+            func_01ffbe34(&aStack_68);
+            aStack_68.mUnk_0a = 1;
+            this->unk_1F0.func_02034a1c(local_9c, local_a0, &aStack_68);
+        } else {
+            func_02034984(iVar5 != 0 ? 0x11F : 0x18, 0, local_9c, local_a0 + 2, 0);
+        }
+    }
+
+    if (this->unk_08 != 0) {
+        if ((this->unk_08->unk_1C == 1 || this->unk_08->unk_1C == 2) == 0) {
+            return;
+        }
+
+        func_01ffbe34(&aStack_88);
+        aStack_88.mUnk_0a = 1;
+        func_02034698(iVar5 != 0 ? 0x11F : 0x18, 2, &iStack_a4, &iStack_a8);
+        iStack_a4 += param_2 + local_8c + iVar6;
+        iStack_a8 += param_3 + local_90 + iVar7;
+        this->unk_278.func_02034a1c(iStack_a4, iStack_a8, &aStack_88);
+    }
 }
 
 // non-matching (regalloc)
@@ -296,7 +432,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1::func_0203b310(unk8 param_2, UnkStruct
             return this->func_0203905c(param_2, param_3, param_4, param_5);
         case 1:
             iVar1 = this->func_0203a30c();
-            return this->unk_164->func_0203cb5c(param_2, ((this->unk_428[this->unk_528[iVar1]] & ~0xFFFF)) >> 0x10);
+            return this->unk_164->func_0203cb5c(param_2, ((this->unk_428[this->unk_528[iVar1]] & ~0xFFFF)));
         default:
             break;
     }

@@ -67,6 +67,8 @@ public:
     /* 0x84 */ unk32 unk_84;
     /* 0x88 */
 
+    void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34*);
+    void func_02034b0c(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_020350ac(void);
     void func_020350b4(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_0203516c(void);
@@ -153,7 +155,10 @@ public:
     /* 0x00C */ unk32* unk_0C;
     /* 0x010 */ unk32* unk_10;
     /* 0x014 */ unk32 unk_14;
-    /* 0x018 */ unk32 unk_18;
+    /* 0x018 */ u8 unk_18;
+    /* 0x018 */ u8 unk_19;
+    /* 0x018 */ u8 unk_1A;
+    /* 0x018 */ u8 unk_1B;
     /* 0x01C */ unk32 unk_1C;
     /* 0x020 */ unk32 unk_20;
     /* 0x024 */ unk32* unk_24;
@@ -226,7 +231,10 @@ public:
     /* 0x430 */ unk32 unk_430;
     /* 0x434 */ u8 unk_434[0xF4];
     /* 0x528 */ s16* unk_528;
-    /* 0x52C */ u8 unk_52C[0x3C];
+    /* 0x52C */ u8 unk_52C[0x30];
+    /* 0x55C */ unk32 unk_55C;
+    /* 0x560 */ unk32 unk_560;
+    /* 0x564 */ unk32 unk_564;
     /* 0x568 */ unk32 unk_568;
     /* 0x56C */ unk16 unk_56C;
     /* 0x56E */ unk16 unk_56E;
@@ -299,13 +307,16 @@ public:
     void func_0203bd8c(u16 param_2);
     void func_0203be08(void);
     void func_0203be64(void);
-    unk32 func_0203cb5c(unk8, unk32);
+    unk32 func_0203cb5c(unk8, s16);
     void func_0203dc10(u8 param_2);
     void func_0203dc10(u8 param_2, u8 param_3);
     void func_0203dcfc(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     unk32 func_0203de14(unk32);
     void func_0203e090(void);
     void func_0203e0f8(void);
+
+    void func_0203a188(unk32, unk32);
+    void func_0203e1b0(unk32, unk32, unk32);
 
     // not sure it belongs to this class:
     void func_02032fcc(unk32, unk32);
