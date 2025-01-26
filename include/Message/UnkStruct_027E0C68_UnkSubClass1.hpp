@@ -286,6 +286,7 @@ public:
     unk32 func_02032fb4(void);
     unk32 func_020337d8(unk32 param_2);
     void func_02038b28(void);
+    void func_02038b40(void);
     unk32 func_02038d10(void);
     void func_02038d20(void);
     unk32 func_0203905c(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
@@ -312,7 +313,6 @@ public:
     void func_020331c4(unk32, unk32);
     unk32 func_02038cf4(void);
     void func_02038b1c(void);
-    void func_02038b40(void);
     void func_0203947c(void);
     unk32 func_0203951c(void);
     unk32 func_0203e284(UnkStruct_0203b264*, unk32, unk32);

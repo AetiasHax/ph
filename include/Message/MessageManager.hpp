@@ -34,13 +34,14 @@ public:
     /* 0x0C */ virtual void vfunc_0C(UnkStruct_027E0C68_UnkSubClass1* param_2) override;
     /* 0x10 */ virtual void vfunc_10(void) override;
     /* 0x14 */ virtual UNK_TYPE vfunc_14(void) override;
+    /* 0x18 */ virtual UNK_TYPE vfunc_18(void) override;
     /* 0x1C */ virtual UNK_TYPE vfunc_1C(void) override;
     /* 0x20 */ virtual UNK_TYPE vfunc_20(void) override;
     /* 0x24 */ virtual UNK_TYPE vfunc_24(void) override;
     /* 0x28 */ virtual UNK_TYPE vfunc_28(void) override;
     /* 0x2C */ virtual UNK_TYPE vfunc_2C(void) override;
     /* 0x30 */ virtual UNK_TYPE vfunc_30(void) override;
-    /* 0x34 */ virtual UNK_TYPE vfunc_34(void) override;
+    /* 0x34 */
 };
 
 class UnkStruct_027E0C68_UnkSubClass3 : public SysObject {
@@ -119,8 +120,8 @@ public:
     UnkStruct_027E0C68_UnkSubClass1* func_02036f68(u32 param_2, u8* param_3);
     UnkStruct_027E0C68_UnkSubClass2* func_020370d0(unk32 param_2, unk32 param_3);
     UnkStruct_027E0C68_UnkSubClass2* func_020370e8(unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5);
-    void func_02037158(UnkStruct_027E0C68_UnkSubClass1* param_2);
-    UnkStruct_027E0C68_UnkSubClass1* func_02037178(UnkStruct_027E0C68_UnkSubClass1* param_2);
+    void func_02037158(UnkSubClass1_02256FF8* param_2);
+    UnkStruct_027E0C68_UnkSubClass1* func_02037178(UnkSubClass1_02256FF8* param_2);
 };
 
 extern UnkStruct_027E0C68 data_027e0c68;
