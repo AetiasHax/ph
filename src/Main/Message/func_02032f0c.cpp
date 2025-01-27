@@ -1,0 +1,7 @@
+#include "global.h"
+#include "Message/UnkStruct_027E0C68_UnkSubClass1.hpp"
+#include "Message/MessageManager.hpp"
+#include "Save/AdventureFlags.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
+#include "Player/TouchControl.hpp"
+#include "Item/ItemManager.hpp"

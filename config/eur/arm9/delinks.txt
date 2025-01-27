@@ -18,6 +18,9 @@ libs/cpp/src/__register_global_object.cpp:
 src/Main/Message/BmgRelatedFunctions.cpp:
     .text       start:0x0202d3bc end:0x0202d56c
 
+src/Main/Message/func_02032f0c.cpp:
+    .text       start:0x02032f0c end:0x0203643c
+
 src/Main/Message/MessageManager.cpp:
     .text       start:0x0203643c end:0x020371b0
 
@@ -26,5 +29,14 @@ src/Main/Message/BMG.cpp:
     .data       start:0x02057b78 end:0x02057cb8
     .rodata     start:0x02056958 end:0x020569e0
 
+src/Main/Message/func_0203744c.cpp:
+    .text       start:0x0203744c end:0x02038b28
+
 src/Main/Message/UnkStruct_027E0C68_UnkSubClass1.cpp:
-    .text       start:0x02038b28 end:0x0203e0f8
+    .text       start:0x02038b28 end:0x020397f8
+
+src/Main/Message/func_020397f8.cpp:
+    .text       start:0x020397f8 end:0x0203c8a8
+
+src/Main/Message/func_0203c8a8.cpp:
+    .text       start:0x0203c8a8 end:0x0203e784
