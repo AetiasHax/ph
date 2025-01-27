@@ -7,7 +7,7 @@
 #include "Item/ItemManager.hpp"
 
 // non-matching
-ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203dcb4(unk32 param_2, unk32 param_3) {
+ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_14(unk32 param_2, unk32 param_3) {
     unk32 uVar1;
     unk32 local_c;
     unk32 local_10;
@@ -29,7 +29,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203e060(u8 param_2, u8 para
     this->func_020331c4(param_2, -1);
 }
 
-ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203e0c8(void) {
+ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_28(void) {
     if (this->unk_122 != 0) {
         this->func_0203e0f8();
         this->func_0203dc10(0);

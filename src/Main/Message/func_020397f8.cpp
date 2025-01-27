@@ -13,7 +13,7 @@ THUMB void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039a3c(void) {
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039a5c(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_2C(void) {
     if (data_027e0618[0x101] != 0) {
         if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) != this->unk_50) {
             return;
@@ -88,7 +88,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039a5c(void) {
     }
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039ccc(unk32 param_2) {    
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_3C(unk32 param_2) {    
     if (this->unk_15C > 0 && this->func_0203de14(param_2) != 0) {
         if (this->unk_124->unk_29 != 3) {
             if ((this->unk_50 == 0) && func_ov000_02079e04() != 0) {
@@ -101,14 +101,14 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039ccc(unk32 param_2) {
                 }
             }
 
-            this->func_02039d74(0, 0);
+            this->vfunc_40(0, 0);
         }
     }
 
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039d74(unk32 param_2, unk32 param_3) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_40(unk32 param_2, unk32 param_3) {
     UnkStruct_027E0C68_UnkSubClass1_Base* bVar1;
     s8 cVar2;
     unk32 iVar4;
@@ -133,7 +133,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039d74(unk32 param_2, unk3
     local_90 = 0;
     bVar1 = data_027e0c68.unk_28[this->unk_50];
 
-    this->func_0203bdcc(&local_8c, &local_90);
+    this->vfunc_6C(&local_8c, &local_90);
     this->func_0203a188(local_8c + param_2, local_90 + param_3);
     this->func_0203e1b0(param_2 + local_8c + (this->unk_158 - (this->unk_14 << 3) / 2), param_3 + local_90 + (this->unk_15A - (this->unk_18 << 3) / 2), 0);
 
@@ -214,7 +214,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039d74(unk32 param_2, unk3
 }
 
 // non-matching (regalloc)
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a328(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_48(void) {
     if (this->unk_164 != NULL && this->unk_164->unk_15C > 0) {
         this->func_02038b40();
     }
@@ -223,7 +223,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a328(void) {
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a3fc(s32 touchLastX, s32 touchLastY) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_44(s32 touchLastX, s32 touchLastY) {
     unk32 iVar2;
     unk32 iVar5;
     unk32 iStack_14;
@@ -236,7 +236,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a3fc(s32 touchLastX, s32
     iStack_14 = 0;
     iStack_18 = 0;
 
-    this->func_0203bdcc(&iStack_14, &iStack_18);
+    this->vfunc_6C(&iStack_14, &iStack_18);
 
     iVar5 = touchLastX - iStack_14;
     iVar2 = touchLastY - iStack_18;
@@ -317,7 +317,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a3fc(s32 touchLastX, s32
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a7f0(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) {
     bool bVar5;
     bool bVar2;
     int iVar4;
@@ -364,7 +364,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a7f0(EntryINF1* param_2,
 }
 
 // non-matching (can't get the switch decomp...)
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a988(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_54(void) {
     short sVar1;
     int iVar2;
     u16* puVar3;
@@ -556,11 +556,11 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203a988(void) {
 
     this->unk_1F0.unk_64 = 0;
     this->unk_1F0.func_020352d8();
-    this->func_02039578(0, 0, 0, 0);
+    this->vfunc_0C(0, 0, 0, 0);
     // (**(code **)(*(int *)param_1 + 0x10))(0);
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203aea8(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_5C(void) {
     if (this->unk_15F == 0 || this->unk_154->unk_06 <= 2) {
         this->unk_168.unk_64 = this->unk_168.unk_7C;
         this->unk_168.func_020352d8();
@@ -572,7 +572,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203aea8(void) {
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203af1c(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_58(void) {
     bool bVar1;
     unk8* puVar2;
     int iVar3;
@@ -619,7 +619,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203af1c(void) {
 }
 
 // non-matching (regalloc)
-ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b264(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) {
+ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) {
     u16 sVar1;
     u32 uVar4;
     s32 unaff_r4;
@@ -657,7 +657,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b264(UnkStruct_0203b264
 }
 
 // non-matching
-ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b310(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) {
+ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_1C(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) {
     int iVar1;
     u16* psVar3;
 
@@ -690,7 +690,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b310(unk8 param_2, UnkS
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b410(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) {
     unk16 sVar1;
     unk16 uVar2;
     unk32 iVar3;
@@ -771,7 +771,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b410(func_0203b410_param
 }
 
 // non-matching (regalloc)
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b5d0(unk32 param_2) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_64(unk32 param_2) {
     unk32 uVar2;
 
     if (this->unk_50 != 0 || data_027e0db0.unk_04 > 0 || func_0203c084() != 0 || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
@@ -800,11 +800,11 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b5d0(unk32 param_2) {
 }
 
 // switch decomp issue
-ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203b814(UNK_TYPE) {
+ARM UNK_TYPE UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_20(UNK_TYPE) {
     // TODO
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203bdcc(unk32* param_2, unk32* param_3) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_6C(unk32* param_2, unk32* param_3) {
     this->func_0203947c();
     *param_2 += this->unk_56E;
     *param_3 += this->unk_570;
@@ -819,6 +819,6 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Sub1::~UnkStruct_027E0C68_UnkSubClass1_Sub1(
     this->func_02038b1c();
 }
 
-ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203c350(void) {
+ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_38(void) {
     return true;
 }

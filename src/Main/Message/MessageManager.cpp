@@ -5,27 +5,15 @@
 extern ARM unk32 func_ov000_020d7f18(u32*, unk32);
 extern ARM unk32 func_ov000_020d77e4(u32*, unk32);
 extern ARM unk32 func_02037628(u8*);
-extern THUMB unk32 func_0202ab48(void);
 extern ARM void func_0203dc74(UnkStruct_027E0C68_UnkSubClass1_Base*, unk32, unk32);
 
-// see Actor.cpp
-struct UnkStruct2 {
-    /* 0 */ u32 mUnk_0;
-    /* 4 */ u32 mUnk_4;
-    /* 8 */
-};
-extern UnkStruct2 data_027e077c;
-extern u8 data_02056be4[];
 extern u32 data_ov000_020eec9c[];
-extern u32 data_027e0618;
 extern u32** data_027e0ce0[];
 extern u32 data_02056924[];
 extern u32* data_02068e6c;
 extern u32* data_02068e8c;
 extern u16 data_02056918[];
 extern ActorTypeId data_0205691c[];
-extern u8 data_027e0c54;
-extern TouchControl data_027e0d78;
 extern s16 data_027e0d04;
 
 // this should be `data_027e0ffc->func_ov000_020cec60(u16, Vec3p*, s32);`
@@ -45,7 +33,7 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
 
     this->pGroups->func_020372f0(BMG_FILE_INDEX_SYSTEM, 2);
 
-    switch (data_027e0618) {
+    switch (*data_027e0618) {
         case 3:
             this->pGroups->func_020372f0(BMG_FILE_INDEX_MAINSELECT, 2);
             this->pGroups->func_020372f0(BMG_FILE_INDEX_BATTLE, 2);
@@ -85,11 +73,11 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
     this->unk_18[1]->unk_39 = 1;
 
     // switch?
-    if (data_027e0618 == 2 || data_027e0618 == 3 || data_027e0618 == 6) {
+    if (*data_027e0618 == 2 || *data_027e0618 == 3 || *data_027e0618 == 6) {
         for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
             switch (data_02056924[i + 1]) {
                 case 0:
-                    if (data_027e0618 != 2) {
+                    if (*data_027e0618 != 2) {
                         this->unk_28[i] = new(*data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1_Sub1();
                         func_0203dc74(this->unk_28[i], 0xE0, 0x40);
                         this->unk_28[i]->unk_2C = data_02068e6c;
@@ -118,7 +106,7 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
             }
 
             if (this->unk_28[i] != NULL) {
-                this->unk_28[i]->func_02039a3c();
+                this->unk_28[i]->vfunc_4C();
             }
         }
     }
@@ -306,7 +294,7 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
 
     for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
         if (this->unk_28[i] != NULL) {
-            this->unk_28[i]->func_02039a5c();
+            this->unk_28[i]->vfunc_2C();
         }
     }
 
@@ -366,7 +354,7 @@ ARM void UnkStruct_027E0C68::func_02036bbc(void) {
         pSVar3 = this->unk_28[i];
 
         if (pSVar3 != NULL && ((bVar2 && pSVar3->unk_50 == 0) || (bVar4 && pSVar3->unk_50 != 0))) {
-            pSVar3->func_0203a3fc(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
+            pSVar3->vfunc_44(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
         }
     }
 }
@@ -376,7 +364,7 @@ ARM void UnkStruct_027E0C68::func_02036c50(unk32 param_2) {
 
     for (i = 0; i < ARRAY_LEN(this->unk_28); i++) {
         if (this->unk_28[i] != NULL && this->unk_28[i]->func_0203de14(param_2) != 0) {
-            this->unk_28[i]->func_0203e0c8();
+            this->unk_28[i]->vfunc_28();
         }
     }
 }
@@ -388,7 +376,7 @@ ARM void UnkStruct_027E0C68::func_02036ca4(unk32 param_2) {
         UnkStruct_027E0C68_UnkSubClass1_Base* pSVar1 = this->unk_28[i];
 
         if (pSVar1 != NULL) {
-            pSVar1->func_02039ccc(param_2);
+            pSVar1->vfunc_3C(param_2);
         }
     }
 }
@@ -472,9 +460,9 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Base* UnkStruct_027E0C68::func_02036da8(u32 
         // iStack_34 = param_3[1];
         // iStack_30 = param_3[2];
         pBVar5 = this->pGroups;
-        // pSVar4->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), (s16*)&iStack_38, 1);
+        // pSVar4->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), (s16*)&iStack_38, 1);
         BMGFileInfo* entry = &(pBVar5)->entries[(param_2) >> 0x10];
-        pSVar4->func_0203a7f0(pEVar1, 
+        pSVar4->vfunc_50(pEVar1, 
         ((u32)entry->pDAT1 + (((func_02037258(entry, (((param_2))) & 0xFFFF))->offset) & ~1)),
         // BMG_GET_MSG_ADDR(pBVar5, param_2), 
         (s16*)&iStack_38, 1);
@@ -536,7 +524,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Sub1* UnkStruct_027E0C68::func_02036f68(u32 
     pSVar5->unk_164 = pSVar2;
     pSVar5->unk_418 = this->unk_28[5];
 
-    pSVar5->func_0203a7f0(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s16*)param_3, 0);
+    pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s16*)param_3, 0);
 
     if (func_ov000_020d7f18(data_ov000_020eec9c, 0x19) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x18) == 0 &&
         func_ov000_020d7f18(data_ov000_020eec9c, 0x34) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x35) == 0 &&
@@ -582,7 +570,7 @@ ARM void UnkStruct_027E0C68::func_02037158(UnkSubClass1_02256FF8* param_2) {
     pSVar1 = this->func_02037178(param_2);
 
     if (pSVar1 != NULL) {
-        pSVar1->func_0203af1c();
+        pSVar1->vfunc_58();
     }
 }
 

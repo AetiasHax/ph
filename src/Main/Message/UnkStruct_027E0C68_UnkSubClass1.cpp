@@ -6,7 +6,7 @@
 #include "Player/TouchControl.hpp"
 #include "Item/ItemManager.hpp"
 
-ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02038c34(unk32 param_2) {
+ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_34(unk32 param_2) {
     s16 iVar1;
     unk32 iVar2;
     unk32 iVar3;
@@ -27,7 +27,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02038c34(unk32 param_2) {
     return func_01ff9b4c(iVar2 + iVar3 / 2, uVar4);
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02038ed0(void) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_30(void) {
     if (this->unk_15C > 0) {
         this->func_0203e090();
     } else {
@@ -36,13 +36,13 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02038ed0(void) {
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039228(unk32* param_2, unk32* param_3) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_08(unk32* param_2, unk32* param_3) {
     this->unk_15C = 10;
     this->unk_152 = 1;
     this->func_0203e2ac(param_3);
 }
 
-ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_020393d0(unk32 param_2) {    
+ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_68(unk32 param_2) {    
     switch (param_2) {
         case 0:
             break;
@@ -65,13 +65,13 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::func_020393d0(unk32 param_2) {
     return ((this->unk_18 << 3) - this->func_020337d8(param_2)) / 2;
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_020394d8(unk32* param_2, unk32* param_3) {
-    this->func_0203bdcc(param_2, param_3);
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_70(unk32* param_2, unk32* param_3) {
+    this->vfunc_6C(param_2, param_3);
     *param_2 += this->unk_158;
     *param_3 += this->unk_15A;
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039578(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) {
+ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) {
     this->func_0203dc10(1, param_3);
     this->func_02033190(param_2, param_3, param_4, param_5);
 }
