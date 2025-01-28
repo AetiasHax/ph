@@ -11,7 +11,7 @@ extern "C" void func_02007938(unk32, unk32, unk32, unk32, unk32);
 extern "C" UnknownClass2* func_0203d1d0(void);
 extern "C" UnknownClass2* func_0203d254(void);
 
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Base_0(unk8 param_2, unk32 param_3, unk32 param_4) {
+THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4) {
     UnknownClass2 *pvVar1;
 
     this->unk_114 = NULL;

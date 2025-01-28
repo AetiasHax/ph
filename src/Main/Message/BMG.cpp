@@ -48,9 +48,6 @@ static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
     "kaitei_F",     // BMG_FILE_INDEX_KAITEI_F
 };
 
-ARM void func_020371b0(void) {
-}
-
 THUMB void func_020371b4(BMGFileInfo* pFileInfo) {
     pFileInfo->pHeader = NULL;
     pFileInfo->pINF1 = NULL;

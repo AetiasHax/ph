@@ -35,14 +35,25 @@ typedef struct UnkSubClass1_unk_154 {
 
 typedef u32 (*UnkCallback1)(void);
 
-typedef struct UnkStruct1 {
-    /* 0x00 */ UnkCallback1 unk_00;
-    /* 0x04 */ UnkCallback1 unk_04;
-} UnkStruct1; // size = 0x8
+// astruct_11
+class UnkSubClass1_UnkownClass1_Sub1 {
+public:
+    /* 0x00 */ unk16 unk_00;
+    /* 0x02 */ unk16 unk_02;
+    /* 0x04 */ unk32 unk_04;
+    /* 0x08 */ unk32 unk_08;
+    /* 0x0C */ unk32 unk_0C;
+    /* 0x10 */ unk32 unk_10;
+    /* 0x14 */ unk32 unk_14;
+    /* 0x18 */
 
+    UnkSubClass1_UnkownClass1_Sub1();
+};
+
+// astruct_10
 class UnkSubClass1_UnkownClass1 {
 public:
-    /* 0x00 */ UnkStruct1* unk_00;
+    /* 0x00 (vtable) */
     /* 0x04 */ unk16 unk_04;
     /* 0x06 */ unk16 unk_06;
     /* 0x08 */ u32* unk_08;
@@ -66,27 +77,58 @@ public:
     /* 0x50 */ unk32 unk_50;
     /* 0x54 */ unk32 unk_54;
     /* 0x58 */ unk32 unk_58;
-    /* 0x5C */ unk32 unk_5C;
-    /* 0x60 */ unk32 unk_60;
-    /* 0x64 */ unk32 unk_64;
-    /* 0x68 */ unk32 unk_68;
-    /* 0x6C */ unk32 unk_6C;
-    /* 0x70 */ unk32 unk_70;
+    /* 0x5C */ UnkSubClass1_UnkownClass1_Sub1 unk_5C;
     /* 0x74 */ u32* unk_74;
     /* 0x78 */ u32* unk_78;
     /* 0x7C */ unk32 unk_7C;
-    /* 0x80 */ unk32 unk_80;
-    /* 0x84 */ unk32 unk_84;
+    /* 0x80 */ unk16 unk_80;
+    /* 0x80 */ unk16 unk_82;
+    /* 0x84 */ unk16 unk_84;
+    /* 0x84 */ unk8 unk_86;
+    /* 0x84 */ unk8 unk_87;
     /* 0x88 */
 
+    /* 0x00 */ virtual unk16 func_020351a8(void);
+    /* 0x04 */ virtual unk16 func_020351b0(void);
+    /* 0x08 */
+
     UnkSubClass1_UnkownClass1();
+    ~UnkSubClass1_UnkownClass1();
     void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34*);
     void func_02034b0c(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
-    void func_020350ac(void);
     void func_020350b4(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_0203516c(void);
     void func_020351b8(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     void func_020352d8(void);
+};
+
+class UnkSubClass1_UnkownClass2_Base1 {
+public:
+    /* 0x00 (vtable) */
+    /* 0x04 */ u16* unk_00; // pointer to the current position in the message to display
+    /* 0x08 */ unk16 unk_08;
+    /* 0x0A */ unk16 unk_0A;
+    /* 0x0C */ unk16 unk_0C;
+    /* 0x0E */ unk16 unk_0E;
+    /* 0x10 */ unk32 unk_10;
+
+    UnkSubClass1_UnkownClass2_Base1();
+    /* 0x00 */ virtual ~UnkSubClass1_UnkownClass2_Base1() override;
+    /* 0x08 */
+};
+
+class UnkSubClass1_UnkownClass2 : public UnkSubClass1_UnkownClass2_Base1 {
+public:
+    /* 0x14 */ unk32 unk_14;
+    /* 0x18 */ unk32 unk_18;
+    /* 0x1C */ unk32 unk_1C;
+    /* 0x20 */ unk32 unk_20;
+    /* 0x24 */ unk32 unk_24;
+    /* 0x2C */
+
+    UnkSubClass1_UnkownClass2();
+    /* 0x00 */ virtual ~UnkSubClass1_UnkownClass2() override;
+    /* 0x08 */
 };
 
 class UnknownClass2 : public SysObject {
@@ -303,10 +345,7 @@ public:
     /* 0x123 */ u8 unk_123;
     /* 0x124 */
 
-    //! TODO: fake?
-    UnkStruct_027E0C68_UnkSubClass1_Base_0();
-
-    UnkStruct_027E0C68_UnkSubClass1_Base_0(unk8 param_2, unk32 param_3, unk32 param_4);
+    UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_0();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
@@ -339,22 +378,11 @@ public:
     /* 0x74 */
 };
 
+// astruct_6
 class UnkStruct_027E0C68_UnkSubClass1_Base : public UnkStruct_027E0C68_UnkSubClass1_Base_0 {
 public:
     /* 0x124 */ UnkSubClass1_unk_124* unk_124;
-    /* 0x128 */ UnkStruct1* unk_128;
-
-    //! TODO: confirm this is part of this class
-    /* 0x12C */ u16* unk_12C; // pointer to the current position in the message to display
-    /* 0x130 */ unk16 unk_130;
-    /* 0x132 */ unk16 unk_132;
-    /* 0x134 */ unk32 unk_134;
-    /* 0x138 */ unk32 unk_138;
-    /* 0x13C */ unk32 unk_13C;
-    /* 0x140 */ unk32 unk_140;
-    /* 0x144 */ unk32 unk_144;
-    /* 0x148 */ unk32 unk_148;
-    /* 0x14C */ unk32 unk_14C;
+    /* 0x128 */ UnkSubClass1_UnkownClass2 unk_128;
     /* 0x150 */ u8 unk_150[4];
     /* 0x154 */ UnkSubClass1_unk_154* unk_154;
     /* 0x158 */ unk16 unk_158;
@@ -371,7 +399,7 @@ public:
     //! TODO: fake?
     UnkStruct_027E0C68_UnkSubClass1_Base();
 
-    UnkStruct_027E0C68_UnkSubClass1_Base(unk32 param_2, unk8 param_3);
+    UnkStruct_027E0C68_UnkSubClass1_Base(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
@@ -403,8 +431,7 @@ public:
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
     /* 0x74 */
 
-    static void func_0203881c(UnkStruct1** param_2);
-    static void func_020387e0(unk8* param_2);
+    static void func_020387e0(u8* param_2);
 
     unk32 func_02032fa4(void);
     unk32 func_02032fb4(void);
@@ -443,7 +470,6 @@ public:
     void func_02033190(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     void func_020331c4(unk32, unk32);
     unk32 func_02038cf4(void);
-    void func_02038b1c(void);
     void func_0203947c(void);
     unk32 func_0203951c(void);
     void func_0203cabc(unk32);
@@ -518,7 +544,6 @@ public:
     /* 0x588 */ UnkSubClass1_unk_124 unk_588;
     /* 0x5B4 */
 
-
     UnkStruct_027E0C68_UnkSubClass1_Sub1();
     //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub1() override;
@@ -557,6 +582,7 @@ public:
     unk32 func_02038b78(void);
     unk32 func_02039250(void);
     void func_02039ca8(void);
+    void func_0203a188(unk32 param_2, unk32 param_3, unk32 param_4);
     bool func_0203a2c0(void);
     unk32 func_0203a30c(void);
     bool func_0203a3e0(void);
@@ -687,7 +713,7 @@ extern unk32 data_027e0c38[];
 extern "C" void func_0203489c(unk32, unk16, unk32*, unk32*);
 extern "C" void func_020347b0(unk32, unk16, unk32*, unk32*, unk32, unk32);
 extern THUMB unk32 func_0202ab48(void);
-extern "C" void func_02034984(unk32, unk32, unk32, unk32, unk32);
+extern "C" void func_02034984(unk32, u8, unk32, unk32);
 extern "C" void func_02034698(unk32, unk32, unk32*, unk32*);
 extern struct TouchControl data_027e0d78;
 

@@ -133,7 +133,9 @@ THUMB void UnkStruct_027E0C68::func_0203665c(void) {
 }
 
 // non-matching
-ARM UnkStruct_027E0C68::~UnkStruct_027E0C68() {}
+ARM UnkStruct_027E0C68_UnkSubClass2_Base1::~UnkStruct_027E0C68_UnkSubClass2_Base1() {
+
+}
 
 // non-matching
 ARM UnkStruct_027E0C68_UnkSubClass1_Sub1* UnkStruct_027E0C68::func_020366c4(void) {
@@ -232,7 +234,7 @@ ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_027E0C68_UnkSubClass2* para
     }
 }
 
-ARM bool UnkStruct_027E0C68::func_020368f4(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+ARM bool UnkStruct_027E0C68::func_020368f4(UnkStruct_027E0C68_UnkSubClass2_Base1* param_2) {
     if (this->unk_20[1] != NULL) {
         return false;
     }
@@ -398,7 +400,7 @@ ARM bool UnkStruct_027E0C68::func_02036ce4(UnkStruct_027E0C68_UnkSubClass2* para
     return false;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_027E0C68_UnkSubClass2_Base1* param_2) {
     if (this->unk_20[0] != NULL && this->unk_20[0] != param_2) {
         return false;
     }
@@ -407,7 +409,7 @@ ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_027E0C68_UnkSubClass3* para
     return true;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036d4c(UnkStruct_027E0C68_UnkSubClass3* param_2) {
+ARM bool UnkStruct_027E0C68::func_02036d4c(UnkStruct_027E0C68_UnkSubClass2_Base1* param_2) {
     if (this->unk_20[0] == param_2) {
         this->unk_20[0] = NULL;
         return true;
@@ -521,7 +523,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Sub1* UnkStruct_027E0C68::func_02036f68(u32 
     }
 
     //! TODO: fake?
-    pSVar5->unk_164 = pSVar2;
+    pSVar5->unk_164 = (UnkStruct_027E0C68_UnkSubClass1_Sub1*)pSVar2;
     pSVar5->unk_418 = this->unk_28[5];
 
     pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s16*)param_3, 0);
@@ -584,4 +586,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Base* UnkStruct_027E0C68::func_02037178(UnkS
     }
 
     return NULL;
+}
+
+ARM UnkStruct_027E0C68::~UnkStruct_027E0C68() {
 }
