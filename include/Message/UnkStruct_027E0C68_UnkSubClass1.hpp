@@ -205,6 +205,7 @@ public:
     /* 0x04C */ unk8 unk_4F;
     /* 0x050 */ u8 unk_50;
     /* 0x051 */ unk8 unk_51;
+    /* 0x052 */
 
     UnkStruct_027E0C68_UnkSubClass1_Base_1();
     /* 0x00*/ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_1();
@@ -261,6 +262,30 @@ public:
     /* 0x094 */ unk32 unk_94;
     /* 0x098 */ unk32 unk_98;
     /* 0x09C */ unk32 unk_9C;
+    /* 0x0A0 */ unk32 unk_A0;
+    /* 0x0A4 */ unk32 unk_A4;
+    /* 0x0A8 */ unk32 unk_A8;
+    /* 0x0AC */ unk32 unk_AC;
+    /* 0x0B0 */ unk32 unk_B0;
+    /* 0x0B4 */ unk32 unk_B4;
+    /* 0x0B8 */ unk32 unk_B8;
+    /* 0x0BC */ unk32 unk_BC;
+    /* 0x0C0 */ unk32 unk_C0;
+    /* 0x0C4 */ unk32 unk_C4;
+    /* 0x0C8 */ unk32 unk_C8;
+    /* 0x0CC */ unk32 unk_CC;
+    /* 0x0D0 */ unk32 unk_D0;
+    /* 0x0D4 */ unk32 unk_D4;
+    /* 0x0D8 */ unk32 unk_D8;
+    /* 0x0DC */ unk32 unk_DC;
+    /* 0x0E0 */ unk32 unk_E0;
+    /* 0x0E4 */ unk32 unk_E4;
+    /* 0x0E8 */ unk32 unk_E8;
+    /* 0x0EC */ unk32 unk_EC;
+    /* 0x0F0 */ unk32 unk_F0;
+    /* 0x0F4 */ unk32 unk_F4;
+    /* 0x0F8 */ unk32 unk_F8;
+    /* 0x0FC */ unk32 unk_FC;
     /* 0x100 */ unk32 unk_100;
     /* 0x104 */ unk32 unk_104;
     /* 0x108 */ unk32 unk_108;
@@ -277,6 +302,9 @@ public:
     /* 0x122 */ u8 unk_122;
     /* 0x123 */ u8 unk_123;
     /* 0x124 */
+
+    //! TODO: fake?
+    UnkStruct_027E0C68_UnkSubClass1_Base_0();
 
     UnkStruct_027E0C68_UnkSubClass1_Base_0(unk8 param_2, unk32 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
@@ -316,7 +344,7 @@ public:
     /* 0x124 */ UnkSubClass1_unk_124* unk_124;
     /* 0x128 */ UnkStruct1* unk_128;
 
-    //! TODO: confirm this is part of the base class
+    //! TODO: confirm this is part of this class
     /* 0x12C */ u16* unk_12C; // pointer to the current position in the message to display
     /* 0x130 */ unk16 unk_130;
     /* 0x132 */ unk16 unk_132;
@@ -476,7 +504,6 @@ public:
     /* 0x574 */ s16 unk_574;
     /* 0x576 */ unk16 unk_576;
     /* 0x578 */ s16 unk_578;
-    // /* 0x579 */ u8 unk_579;
     /* 0x57A */ u8 unk_57A;
     /* 0x57B */ s8 unk_57B;
     /* 0x57C */ u8 unk_57C;
