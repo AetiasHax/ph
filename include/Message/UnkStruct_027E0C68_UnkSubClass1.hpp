@@ -355,7 +355,7 @@ public:
     /* 0x144 */ unk32 unk_144;
     /* 0x148 */ unk32 unk_148;
     /* 0x14C */ unk32 unk_14C;
-    /* 0x150 */ unk8 unk_150[4];
+    /* 0x150 */ u8 unk_150[4];
     /* 0x154 */ UnkSubClass1_unk_154* unk_154;
     /* 0x158 */ unk16 unk_158;
     /* 0x15A */ unk16 unk_15A;
@@ -420,8 +420,6 @@ public:
     void func_02039398(void);
     void func_020393a8(unk32 param_2);
     void func_0203a188(unk32, unk32);
-    unk32 func_0203a2c0(void);
-    unk32 func_0203a30c(void);
     void func_0203a35c(void);
     unk32 func_0203a3e0(void);
     unk32 func_0203a6d0(unk32, unk32);
@@ -456,7 +454,7 @@ public:
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub1 : public UnkStruct_027E0C68_UnkSubClass1_Base {
 public:
-    /* 0x164 */ UnkStruct_027E0C68_UnkSubClass1_Base* unk_164;
+    /* 0x164 */ UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_164;
     /* 0x168 */ UnkSubClass1_UnkownClass1 unk_168;
     /* 0x1F0 */ UnkSubClass1_UnkownClass1 unk_1F0;
     /* 0x278 */ UnkSubClass1_UnkownClass1 unk_278;
@@ -495,8 +493,7 @@ public:
     /* 0x55C */ unk8 unk_55B;
     /* 0x55C */ unk32 unk_55C;
     /* 0x560 */ unk32 unk_560;
-    /* 0x564 */ unk32 unk_564;
-    /* 0x568 */ unk32 unk_568;
+    /* 0x564 */ u16 unk_564[4];
     /* 0x56C */ unk16 unk_56C;
     /* 0x56E */ unk16 unk_56E;
     /* 0x570 */ unk16 unk_570;
@@ -557,7 +554,12 @@ public:
     void func_0203e060(u8 param_2, u8 param_3);
     void func_02039a3c(void);
 
+    unk32 func_02038b78(void);
+    unk32 func_02039250(void);
     void func_02039ca8(void);
+    bool func_0203a2c0(void);
+    unk32 func_0203a30c(void);
+    bool func_0203a3e0(void);
 };
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub2 : public UnkStruct_027E0C68_UnkSubClass1_Base {
