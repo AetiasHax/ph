@@ -6,6 +6,76 @@
 #include "Player/TouchControl.hpp"
 #include "Item/ItemManager.hpp"
 
+extern "C" void func_ov000_020d0460(void*);
+extern "C" void func_0203efd8(void*, void*);
+extern "C" void func_0203ee48(void*);
+
+THUMB UnkStruct_027E0C68_UnkSubClass1_Sub1::UnkStruct_027E0C68_UnkSubClass1_Sub1() : unk_164(NULL) {
+    u16** ppuVar3;
+
+    this->unk_410.unk_00 = this;
+    this->unk_414 = 0;
+    this->unk_418 = NULL;
+    this->unk_41C = 0;
+    this->unk_41E = 0;
+    this->unk_420 = 0;
+    this->unk_424.unk_00 = this;
+
+    // ???
+    ppuVar3 = &this->unk_428;
+    do {
+        *ppuVar3 = NULL;
+        ppuVar3 += 2;
+    } while (ppuVar3 < &this->unk_528);
+
+    func_0203ee48(&this->unk_424);
+    func_ov000_020d0460(&this->unk_534);
+    this->unk_53C = 0;
+    this->unk_540 = ~0x7FFF;
+    this->unk_544 = 3;
+    func_ov000_020d0460(&this->unk_548);
+    this->unk_550 = 0;
+    this->unk_554 = 0x00016000;
+    this->unk_558 = 3;
+    this->unk_55C = -1;
+    this->unk_560 = -1;
+    this->unk_56C = 0;
+    this->unk_56E = 0;
+    this->unk_570 = 0;
+    this->unk_572 = 0;
+    this->unk_574 = 0;
+    this->unk_576 = 0;
+    this->unk_578 = 3;
+    this->unk_57A = 0;
+    this->unk_57B = -1;
+    this->unk_57C = 0;
+    this->unk_57D = 0;
+    this->unk_57E = 0;
+    this->unk_57F = 0;
+    this->unk_580 = 0;
+    this->unk_581 = 0;
+    this->unk_582 = 0;
+    this->unk_583 = 0;
+    this->unk_585 = 0;
+    this->unk_586 = 0;
+    func_0203efd8(&this->unk_588, this);
+    this->unk_124 = (UnkSubClass1_unk_124*)&this->unk_588;
+    this->func_02039ca8();
+
+    if (this->func_02032fa4() != 0) {
+        this->unk_168.func_020350b4(0x39, 0, 2, 0, 0);
+        this->unk_1F0.func_020350b4(0x33, 0, 2, 0, 0);
+        this->unk_278.func_020350b4(0x33, 1, 2, 0, 0);
+    } else {
+        this->unk_168.func_020350b4(0x34, 0, 2, 0, 0);
+        this->unk_1F0.func_020350b4(0x32, 0, 2, 0, 0);
+        this->unk_278.func_020350b4(0x32, 1, 2, 0, 0);
+    }
+
+    this->unk_168.func_020351b8(true, false, false, false);
+    this->unk_1F0.func_020351b8(false, false, false, false);
+    this->unk_278.func_020351b8(false, false, false, false);
+}
 
 THUMB void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_02039a3c(void) {
     this->func_02038b28();
@@ -71,7 +141,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_2C(void) {
 
     if (this->unk_15C == 1) {
         if (this->unk_586 == ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) ) {
-            switch (this->unk_151) {
+            switch (this->unk_150[1]) {
                 case 0:
                     this->func_0203b0ec(1);
                     break;
@@ -265,7 +335,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_44(s32 touchLastX, s32 touc
             }
 
             if (data_027e0d78.mTouch == 0) {
-                switch(this->unk_151) {
+                switch(this->unk_150[1]) {
                     case 3:
                     case 4:
                         break;
@@ -400,7 +470,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_54(void) {
     }
 
     this->unk_424.func_0203ee48();
-    this->unk_151 = 1;
+    this->unk_150[1] = 1;
     puVar3 = this->unk_12C;
     local_54[0] = puVar3;
     iVar2 = 0;
@@ -442,7 +512,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_54(void) {
 
                 //             this->unk_580 = 1;
                 //         } else {
-                //             this->unk_151 = 4
+                //             this->unk_150[1] = 4
                 //         }
                 //         break;
                 //     case 5:
@@ -668,7 +738,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_1C(unk8 param_2, UnkStruct
         this->unk_574++;
 
         if (this->func_0203a30c() == 0) {
-            this->unk_153 = 1;
+            this->unk_150[3] = 1;
         }
     }
 

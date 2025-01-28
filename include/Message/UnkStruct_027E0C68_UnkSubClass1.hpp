@@ -79,6 +79,7 @@ public:
     /* 0x84 */ unk32 unk_84;
     /* 0x88 */
 
+    UnkSubClass1_UnkownClass1();
     void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34*);
     void func_02034b0c(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);
     void func_020350ac(void);
@@ -88,9 +89,22 @@ public:
     void func_020352d8(void);
 };
 
+class UnknownClass2 : public SysObject {
+public:
+    /* 0x00 (vtable) */
+    /* 0x04 */ unk32* unk_04;
+    /* 0x08 */
+
+    UnknownClass2();
+    /* 0x00 */ virtual ~UnknownClass2();
+    /* 0x08 */ virtual UNK_TYPE vfunc_08(UNK_TYPE);
+    /* 0x0C */ virtual UNK_TYPE vfunc_0C(UNK_TYPE);
+    /* 0x10 */
+};
+
 class UnkSubClass1_unk_410 {
 public:
-    /* 0x00 */ unk32 unk_00;
+    /* 0x00 */ struct UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_00;
     /* 0x04 */
 
     void func_0203ec34(void);
@@ -98,9 +112,10 @@ public:
     void func_0203ebf8(void);
 };
 
+// same as UnkSubClass1_unk_410?
 class UnkSubClass1_unk_424 {
 public:
-    /* 0x00 */ unk32 unk_00;
+    /* 0x00 */ struct UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_00;
     /* 0x04 */
 
     void func_0203ee80(unk32);
@@ -111,22 +126,21 @@ public:
 
 class UnkSubClass1_unk_124 {
 public:
-    /* 0x00 */ unk32 unk_00;
-    /* 0x00 */ unk32 unk_04;
-    /* 0x00 */ unk32 unk_08;
-    /* 0x00 */ unk32 unk_0C;
-    /* 0x00 */ unk32 unk_10;
-    /* 0x00 */ unk32 unk_14;
-    /* 0x00 */ unk32 unk_18;
-    /* 0x00 */ unk32 unk_1C;
-    /* 0x00 */ unk32 unk_20;
-    /* 0x00 */ unk32 unk_24;
-    /* 0x00 */ unk8 unk_28;
-    /* 0x00 */ unk8 unk_29;
-    /* 0x00 */ unk8 unk_2A;
-    /* 0x00 */ unk8 unk_2B;
-    /* 0x00 */ unk32 unk_2C;
-    /* 0x04 */
+    /* 0x00 */ void* unk_00; // pointer to UnkStruct_027E0C68_UnkSubClass1_Base (well, the first members of the base class)
+    /* 0x04 */ unk32 unk_04;
+    /* 0x08 */ unk32 unk_08;
+    /* 0x0C */ unk32 unk_0C;
+    /* 0x10 */ unk32 unk_10;
+    /* 0x14 */ unk32 unk_14;
+    /* 0x18 */ unk32 unk_18;
+    /* 0x1C */ unk32 unk_1C;
+    /* 0x20 */ unk32 unk_20;
+    /* 0x24 */ unk32 unk_24;
+    /* 0x28 */ unk8 unk_28;
+    /* 0x29 */ unk8 unk_29;
+    /* 0x2A */ unk8 unk_2A;
+    /* 0x2B */ unk8 unk_2B;
+    /* 0x2C */
 
     void func_0203f020(unk32, unk32);
 };
@@ -161,7 +175,7 @@ public:
     /* 0x3C */
 };
 
-class UnkStruct_027E0C68_UnkSubClass1_Base : public SysObject {
+class UnkStruct_027E0C68_UnkSubClass1_Base_1 : public SysObject {
 public:
     /* 0x000 (vtable) */
     /* 0x004 */ unk32* unk_04;
@@ -178,56 +192,22 @@ public:
     /* 0x030 */ unk32 unk_30;
     /* 0x034 */ unk32 unk_34;
     /* 0x038 */ unk32 unk_38;
-    /* 0x03C */ unk32 unk_3C;
+    /* 0x03C */ unk16 unk_3C;
+    /* 0x03E */ unk16 unk_3E;
     /* 0x040 */ unk32 unk_40;
     /* 0x044 */ unk32 unk_44;
     /* 0x048 */ u8 unk_48;
     /* 0x049 */ u8 unk_49;
     /* 0x04A */ unk16 unk_4A;
-    /* 0x04C */ unk32 unk_4C;
+    /* 0x04C */ unk8 unk_4C;
+    /* 0x04C */ unk8 unk_4D;
+    /* 0x04C */ unk8 unk_4E;
+    /* 0x04C */ unk8 unk_4F;
     /* 0x050 */ u8 unk_50;
     /* 0x051 */ unk8 unk_51;
-    /* 0x052 */ unk16 unk_52;
-    /* 0x054 */ unk32 unk_54;
-    /* 0x058 */ unk32 unk_58;
-    /* 0x05C */ s16 unk_5C;
-    /* 0x05E */ s16 unk_5E;
-    /* 0x060 */ unk32 unk_60[0x2E];
-    /* 0x118 */ s32 unk_118;
-    /* 0x11C */ unk8 unk_11C;
-    /* 0x11D */ unk8 unk_11D;
-    /* 0x11E */ u8 unk_11E;
-    /* 0x11F */ unk8 unk_11F;
-    /* 0x120 */ u8 unk_120;
-    /* 0x120 */ u8 unk_121;
-    /* 0x122 */ u8 unk_122;
-    /* 0x122 */ u8 unk_123;
-    /* 0x124 */ UnkSubClass1_unk_124* unk_124;
-    /* 0x128 */ UnkStruct1* unk_128;
 
-    //! TODO: confirm this is part of the base class
-    /* 0x12C */ u16* unk_12C; // pointer to the current position in the message to display
-    /* 0x130 */ unk16 unk_130;
-    /* 0x132 */ unk16 unk_132;
-    /* 0x134 */ unk32 unk_134;
-    /* 0x138 */ unk32 unk_138;
-    /* 0x13C */ unk32 unk_13C;
-    /* 0x140 */ unk32 unk_140;
-    /* 0x144 */ unk32 unk_144;
-    /* 0x148 */ unk32 unk_148;
-    /* 0x14C */ unk32 unk_14C;
-    /* 0x150 */ unk8 unk_150;
-    /* 0x151 */ u8 unk_151;
-    /* 0x152 */ unk8 unk_152;
-    /* 0x153 */ unk8 unk_153;
-    /* 0x154 */ UnkSubClass1_unk_154* unk_154;
-    /* 0x158 */ unk16 unk_158;
-    /* 0x15A */ unk16 unk_15A;
-    /* 0x15C */ s16 unk_15C;
-    /* 0x15E */
-
-    UnkStruct_027E0C68_UnkSubClass1_Base();
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base();
+    UnkStruct_027E0C68_UnkSubClass1_Base_1();
+    /* 0x00*/ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_1();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3);
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5);
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3); // func_0203e060?
@@ -256,6 +236,147 @@ public:
     /* 0x6C */ virtual void vfunc_6C(unk32* param_2, unk32* param_3);
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3);
     /* 0x74 */
+};
+
+class UnkStruct_027E0C68_UnkSubClass1_Base_0 : public UnkStruct_027E0C68_UnkSubClass1_Base_1 {
+public:
+    /* 0x052 */ unk16 unk_52;
+    /* 0x054 */ unk32 unk_54;
+    /* 0x058 */ unk32 unk_58;
+    /* 0x05C */ s16 unk_5C;
+    /* 0x05E */ s16 unk_5E;
+    /* 0x060 */ unk32 unk_60;
+    /* 0x064 */ unk32 unk_64;
+    /* 0x068 */ unk32 unk_68;
+    /* 0x06C */ unk32 unk_6C;
+    /* 0x070 */ unk32 unk_70;
+    /* 0x074 */ unk32 unk_74;
+    /* 0x078 */ unk32 unk_78;
+    /* 0x07C */ unk32 unk_7C;
+    /* 0x080 */ unk32 unk_80;
+    /* 0x084 */ unk32 unk_84;
+    /* 0x088 */ unk32 unk_88;
+    /* 0x08C */ unk32 unk_8C;
+    /* 0x090 */ unk32 unk_90;
+    /* 0x094 */ unk32 unk_94;
+    /* 0x098 */ unk32 unk_98;
+    /* 0x09C */ unk32 unk_9C;
+    /* 0x100 */ unk32 unk_100;
+    /* 0x104 */ unk32 unk_104;
+    /* 0x108 */ unk32 unk_108;
+    /* 0x10C */ unk32 unk_10C;
+    /* 0x110 */ unk32 unk_110;
+    /* 0x118 */ void* unk_114;
+    /* 0x118 */ s32 unk_118;
+    /* 0x11C */ unk8 unk_11C;
+    /* 0x11D */ unk8 unk_11D;
+    /* 0x11E */ u8 unk_11E;
+    /* 0x11F */ unk8 unk_11F;
+    /* 0x120 */ u8 unk_120;
+    /* 0x121 */ u8 unk_121;
+    /* 0x122 */ u8 unk_122;
+    /* 0x123 */ u8 unk_123;
+    /* 0x124 */
+
+    UnkStruct_027E0C68_UnkSubClass1_Base_0(unk8 param_2, unk32 param_3, unk32 param_4);
+    //! TODO: remove the function declarations that are not overridden
+    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_0();
+    /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
+    /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
+    /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
+    /* 0x14 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
+    /* 0x18 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
+    /* 0x1C */ virtual unk32 vfunc_1C(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
+    /* 0x20 */ virtual UNK_TYPE vfunc_20(UNK_TYPE) override;
+    /* 0x24 */ virtual UNK_TYPE vfunc_24(UNK_TYPE) override;
+    /* 0x28 */ virtual bool vfunc_28(void) override;
+    /* 0x2C */ virtual void vfunc_2C(void) override;
+    /* 0x30 */ virtual void vfunc_30(void) override;
+    /* 0x34 */ virtual unk32 vfunc_34(unk32 param_2) override;
+    /* 0x38 */ virtual bool vfunc_38(void) override;
+    /* 0x3C */ virtual void vfunc_3C(unk32 param_2) override;
+    /* 0x40 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
+    /* 0x44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
+    /* 0x48 */ virtual void vfunc_48(void) override;
+    /* 0x4C */ virtual void vfunc_4C(void) override; // func_02039a3c?
+    /* 0x50 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) override;
+    /* 0x54 */ virtual void vfunc_54(void) override;
+    /* 0x58 */ virtual void vfunc_58(void) override;
+    /* 0x5C */ virtual void vfunc_5C(void) override;
+    /* 0x60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
+    /* 0x64 */ virtual void vfunc_64(unk32 param_2) override;
+    /* 0x68 */ virtual unk32 vfunc_68(unk32 param_2) override;
+    /* 0x6C */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
+    /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
+    /* 0x74 */
+};
+
+class UnkStruct_027E0C68_UnkSubClass1_Base : public UnkStruct_027E0C68_UnkSubClass1_Base_0 {
+public:
+    /* 0x124 */ UnkSubClass1_unk_124* unk_124;
+    /* 0x128 */ UnkStruct1* unk_128;
+
+    //! TODO: confirm this is part of the base class
+    /* 0x12C */ u16* unk_12C; // pointer to the current position in the message to display
+    /* 0x130 */ unk16 unk_130;
+    /* 0x132 */ unk16 unk_132;
+    /* 0x134 */ unk32 unk_134;
+    /* 0x138 */ unk32 unk_138;
+    /* 0x13C */ unk32 unk_13C;
+    /* 0x140 */ unk32 unk_140;
+    /* 0x144 */ unk32 unk_144;
+    /* 0x148 */ unk32 unk_148;
+    /* 0x14C */ unk32 unk_14C;
+    /* 0x150 */ unk8 unk_150[4];
+    /* 0x154 */ UnkSubClass1_unk_154* unk_154;
+    /* 0x158 */ unk16 unk_158;
+    /* 0x15A */ unk16 unk_15A;
+    /* 0x15C */ s16 unk_15C;
+    /* 0x15E */ s8 unk_15E;
+    /* 0x15F */ s8 unk_15F;
+    /* 0x160 */ unk8 unk_160;
+    /* 0x160 */ unk8 unk_161;
+    /* 0x160 */ unk8 unk_162;
+    /* 0x160 */ unk8 unk_163;
+    /* 0x164 */
+
+    //! TODO: fake?
+    UnkStruct_027E0C68_UnkSubClass1_Base();
+
+    UnkStruct_027E0C68_UnkSubClass1_Base(unk32 param_2, unk8 param_3);
+    //! TODO: remove the function declarations that are not overridden
+    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base();
+    /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
+    /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
+    /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
+    /* 0x14 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
+    /* 0x18 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
+    /* 0x1C */ virtual unk32 vfunc_1C(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
+    /* 0x20 */ virtual UNK_TYPE vfunc_20(UNK_TYPE) override;
+    /* 0x24 */ virtual UNK_TYPE vfunc_24(UNK_TYPE) override;
+    /* 0x28 */ virtual bool vfunc_28(void) override;
+    /* 0x2C */ virtual void vfunc_2C(void) override;
+    /* 0x30 */ virtual void vfunc_30(void) override;
+    /* 0x34 */ virtual unk32 vfunc_34(unk32 param_2) override;
+    /* 0x38 */ virtual bool vfunc_38(void) override;
+    /* 0x3C */ virtual void vfunc_3C(unk32 param_2) override;
+    /* 0x40 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
+    /* 0x44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
+    /* 0x48 */ virtual void vfunc_48(void) override;
+    /* 0x4C */ virtual void vfunc_4C(void) override; // func_02039a3c?
+    /* 0x50 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) override;
+    /* 0x54 */ virtual void vfunc_54(void) override;
+    /* 0x58 */ virtual void vfunc_58(void) override;
+    /* 0x5C */ virtual void vfunc_5C(void) override;
+    /* 0x60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
+    /* 0x64 */ virtual void vfunc_64(unk32 param_2) override;
+    /* 0x68 */ virtual unk32 vfunc_68(unk32 param_2) override;
+    /* 0x6C */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
+    /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
+    /* 0x74 */
+
+    static void func_0203881c(UnkStruct1** param_2);
+    static void func_020387e0(unk8* param_2);
 
     unk32 func_02032fa4(void);
     unk32 func_02032fb4(void);
@@ -307,9 +428,6 @@ public:
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub1 : public UnkStruct_027E0C68_UnkSubClass1_Base {
 public:
-    /* 0x15E */ s8 unk_15E;
-    /* 0x15F */ s8 unk_15F;
-    /* 0x160 */ unk32 unk_160;
     /* 0x164 */ UnkStruct_027E0C68_UnkSubClass1_Base* unk_164;
     /* 0x168 */ UnkSubClass1_UnkownClass1 unk_168;
     /* 0x1F0 */ UnkSubClass1_UnkownClass1 unk_1F0;
@@ -319,18 +437,36 @@ public:
     /* 0x410 */ UnkSubClass1_unk_410 unk_410;
     /* 0x414 */ unk32 unk_414;
     /* 0x418 */ UnkStruct_027E0C68_UnkSubClass1_Base* unk_418;
-    /* 0x41C */ unk32 unk_41C;
-    /* 0x420 */ unk32 unk_420;
+    /* 0x41C */ unk16 unk_41C;
+    /* 0x41C */ unk16 unk_41E;
+    /* 0x420 */ unk16 unk_420;
+    /* 0x420 */ unk16 unk_422;
     /* 0x424 */ UnkSubClass1_unk_424 unk_424;
     /* 0x428 */ u16* unk_428;
     /* 0x42C */ unk32 unk_42C;
     /* 0x430 */ unk32 unk_430;
     /* 0x434 */ u8 unk_434[0xF4];
-    /* 0x528 */ s16* unk_528;
-    /* 0x52C */ u8 unk_52C[0x30];
+    /* 0x528 */ u16* unk_528;
+    /* 0x52C */ u8 unk_52C;
+    /* 0x55C */ unk32 unk_530;
+    /* 0x55C */ unk32 unk_534;
+    /* 0x55C */ unk32 unk_538;
+    /* 0x55C */ unk32 unk_53C;
+    /* 0x55C */ unk32 unk_540;
+    /* 0x55C */ unk8 unk_544;
+    /* 0x55C */ unk8 unk_545;
+    /* 0x55C */ unk8 unk_546;
+    /* 0x55C */ unk8 unk_547;
+    /* 0x55C */ unk32 unk_548;
+    /* 0x55C */ unk32 unk_54C;
+    /* 0x55C */ unk32 unk_550;
+    /* 0x55C */ unk32 unk_554;
+    /* 0x55C */ unk8 unk_558;
+    /* 0x55C */ unk8 unk_559;
+    /* 0x55C */ unk8 unk_55A;
+    /* 0x55C */ unk8 unk_55B;
     /* 0x55C */ unk32 unk_55C;
-    /* 0x560 */ unk16 unk_560;
-    /* 0x560 */ unk16 unk_562;
+    /* 0x560 */ unk32 unk_560;
     /* 0x564 */ unk32 unk_564;
     /* 0x568 */ unk32 unk_568;
     /* 0x56C */ unk16 unk_56C;
@@ -338,12 +474,11 @@ public:
     /* 0x570 */ unk16 unk_570;
     /* 0x572 */ u16 unk_572;
     /* 0x574 */ s16 unk_574;
-    /* 0x576 */ u8 unk_576;
-    /* 0x577 */ u8 unk_577;
-    /* 0x578 */ u8 unk_578;
-    /* 0x579 */ u8 unk_579;
+    /* 0x576 */ unk16 unk_576;
+    /* 0x578 */ s16 unk_578;
+    // /* 0x579 */ u8 unk_579;
     /* 0x57A */ u8 unk_57A;
-    /* 0x57B */ u8 unk_57B;
+    /* 0x57B */ s8 unk_57B;
     /* 0x57C */ u8 unk_57C;
     /* 0x57D */ u8 unk_57D;
     /* 0x57E */ u8 unk_57E;
@@ -355,12 +490,13 @@ public:
     /* 0x584 */ u8 unk_584;
     /* 0x585 */ u8 unk_585;
     /* 0x586 */ u8 unk_586;
-    /* 0x588 */ u8 unk_588[0x2C];
+    /* 0x586 */ u8 unk_587;
+    /* 0x588 */ UnkSubClass1_unk_124 unk_588;
     /* 0x5B4 */
 
-    //! TODO: remove the function declarations that are not overridden
 
     UnkStruct_027E0C68_UnkSubClass1_Sub1();
+    //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub1() override;
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
@@ -393,16 +529,17 @@ public:
 
     void func_0203e060(u8 param_2, u8 param_3);
     void func_02039a3c(void);
+
+    void func_02039ca8(void);
 };
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub2 : public UnkStruct_027E0C68_UnkSubClass1_Base {
 public:
-    /* 0x15E */ u8 unk_15E[0x62];
+    /* 0x164 */ u8 unk_164[0x5C];
     /* 0x1C0 */
 
-    //! TODO: remove the function declarations that are not overridden
-
     UnkStruct_027E0C68_UnkSubClass1_Sub2();
+    //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub2();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
@@ -437,12 +574,11 @@ public:
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub3 : public UnkStruct_027E0C68_UnkSubClass1_Base {
 public:
-    /* 0x15E */ u8 unk_15E[0x12];
+    /* 0x164 */ u8 unk_164[0xC];
     /* 0x170 */
 
-    //! TODO: remove the function declarations that are not overridden
-
     UnkStruct_027E0C68_UnkSubClass1_Sub3();
+    //! TODO: remove the function declarations that are not overridden
     /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub3();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;

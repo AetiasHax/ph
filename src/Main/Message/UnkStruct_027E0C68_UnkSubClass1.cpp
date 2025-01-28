@@ -38,7 +38,7 @@ ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_30(void) {
 // non-matching
 ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_08(unk32* param_2, unk32* param_3) {
     this->unk_15C = 10;
-    this->unk_152 = 1;
+    this->unk_150[2] = 1;
     this->func_0203e2ac(param_3);
 }
 
