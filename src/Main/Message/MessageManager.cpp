@@ -133,11 +133,6 @@ THUMB void UnkStruct_027E0C68::func_0203665c(void) {
 }
 
 // non-matching
-ARM UnkStruct_027E0C68_UnkSubClass2_Base1::~UnkStruct_027E0C68_UnkSubClass2_Base1() {
-
-}
-
-// non-matching
 ARM UnkStruct_027E0C68_UnkSubClass1_Sub1* UnkStruct_027E0C68::func_020366c4(void) {
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) && !(data_02056be4[data_027e077c.mUnk_0] & 2)) {
         return (UnkStruct_027E0C68_UnkSubClass1_Sub1*)this->unk_28[2];

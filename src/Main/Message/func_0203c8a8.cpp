@@ -5,15 +5,13 @@
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Player/TouchControl.hpp"
 #include "Item/ItemManager.hpp"
+#include "System/SysNew.hpp"
 
 extern u32 *data_027e0ce0[];
-extern "C" void func_02007938(unk32, unk32, unk32, unk32, unk32);
-extern "C" UnknownClass2* func_0203d1d0(void);
-extern "C" UnknownClass2* func_0203d254(void);
+extern "C" void func_02007938(unk32, unk32*, unk32, unk32, unk32);
 
+// non-matching
 THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4) {
-    UnknownClass2 *pvVar1;
-
     this->unk_114 = NULL;
     this->unk_118 = -1;
     this->unk_11C = 0;
@@ -23,24 +21,19 @@ THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Ba
     this->unk_121 = param_2;
     this->unk_122 = 0;
 
-    func_02007938(0, this->unk_54, 0xc0, 1, param_4);
+    func_02007938(0, &this->unk_54, 0xC0, 1, param_4);
 
-    if (this->unk_10[this->unk_121 - 0x10] == '\0') {
-        // pvVar1 = new(*data_027e0ce0[0], 4) UnknownClass2();
-
-        if (pvVar1 != NULL) {
-            pvVar1 = func_0203d1d0();
-        }
-
-        this->unk_114 = pvVar1;
+    if (this->unk_121 == 0) {
+        this->unk_114 = new(data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114();
     } else {
-        // pvVar1 = new(*data_027e0ce0[0], 4) UnknownClass2();
+        this->unk_114 = new(data_027e0ce0[1], 4) UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114();
+    }
+}
 
-        if (pvVar1 != NULL) {
-            pvVar1 = func_0203d254();
-        }
-
-        this->unk_114 = pvVar1;
+THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::~UnkStruct_027E0C68_UnkSubClass1_Base_0() {
+    if (this->unk_114 != NULL) {
+        delete this->unk_114;
+        this->unk_114 = NULL;
     }
 }
 
