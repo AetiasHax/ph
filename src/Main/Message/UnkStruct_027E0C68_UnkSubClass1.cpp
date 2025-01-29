@@ -14,7 +14,7 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_34(unk32 param_2) {
 
     iVar2 = this->func_02038cf4();
     iVar3 = this->func_02038d10();
-    iVar1 = ((this->unk_15A - (this->unk_18 << 3) / 2));
+    iVar1 = ((this->unk_158.y - (this->unk_18 << 3) / 2));
 
     if ((param_2 < iVar2 + iVar1) || (iVar2 + iVar3 + iVar1 <= param_2)) {
         return -1;
@@ -67,8 +67,8 @@ ARM unk32 UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_68(unk32 param_2) {
 
 ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_70(unk32* param_2, unk32* param_3) {
     this->vfunc_6C(param_2, param_3);
-    *param_2 += this->unk_158;
-    *param_3 += this->unk_15A;
+    *param_2 += this->unk_158.x;
+    *param_3 += this->unk_158.y;
 }
 
 ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) {

@@ -49,7 +49,7 @@ THUMB UnkStruct_027E0C68_UnkSubClass1_Base::UnkStruct_027E0C68_UnkSubClass1_Base
 {
     this->func_020387e0(this->unk_150);
     this->unk_154 = 0;
-    this->unk_15A = 0;
+    this->unk_158.y = 0;
     this->unk_15C = 0;
     this->unk_15E = 0xFF;
     this->unk_15F = 0xFF;

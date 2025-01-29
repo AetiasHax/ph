@@ -3,6 +3,7 @@
 #include "System/SysNew.hpp"
 #include "Message/BMG.hpp"
 #include "Unknown/func_ov000_020d0644.hpp"
+#include "lib/math.h"
 
 // temp
 #define UNK_TYPE void
@@ -140,6 +141,7 @@ public:
     void func_0203ec34(void);
     void func_0203ebe0(void);
     void func_0203ebf8(void);
+    void func_0203ec4c(UnkStruct_0203b264* param_2, unk32 param_3, s32 param_4, s32 param_5);
 };
 
 // same as UnkSubClass1_unk_410?
@@ -152,6 +154,7 @@ public:
     void func_0203ef78(unk16, u16, unk8);
     void func_0203ef78(unk16); // overload?
     void func_0203ee48(void);
+    UnkStruct_0203b264* func_0203eeb0(unk32 param_2, unk32 param_3);
 };
 
 class UnkSubClass1_unk_124 {
@@ -213,7 +216,7 @@ public:
     /* 0x008 */ UnkSubClass1_02256FF8* unk_08;
     /* 0x00C */ unk32* unk_0C;
     /* 0x010 */ unk32 unk_10;
-    /* 0x014 */ unk32 unk_14;
+    /* 0x014 */ s32 unk_14;
     /* 0x018 */ s32 unk_18;
     /* 0x01C */ unk32 unk_1C;
     /* 0x020 */ unk32 unk_20;
@@ -287,7 +290,8 @@ public:
 class UnkStruct_027E0C68_UnkSubClass1_Base_0 : public UnkStruct_027E0C68_UnkSubClass1_Base_1 {
 public:
     /* 0x052 */ unk16 unk_52;
-    /* 0x054 */ unk32 unk_54;
+    /* 0x054 */ unk16 unk_54;
+    /* 0x054 */ unk16 unk_56;
     /* 0x058 */ unk32 unk_58;
     /* 0x05C */ s16 unk_5C;
     /* 0x05E */ s16 unk_5E;
@@ -333,7 +337,10 @@ public:
     /* 0x0FC */ unk32 unk_FC;
     /* 0x100 */ unk32 unk_100;
     /* 0x104 */ unk32 unk_104;
-    /* 0x108 */ unk32 unk_108;
+    /* 0x108 */ unk8 unk_108;
+    /* 0x108 */ unk8 unk_109;
+    /* 0x108 */ unk8 unk_10A;
+    /* 0x108 */ unk8 unk_10B;
     /* 0x10C */ unk32 unk_10C;
     /* 0x110 */ unk32 unk_110;
     /* 0x118 */ UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114* unk_114;
@@ -387,8 +394,7 @@ public:
     /* 0x128 */ UnkSubClass1_UnkownClass2 unk_128;
     /* 0x150 */ u8 unk_150[4];
     /* 0x154 */ UnkSubClass1_unk_154* unk_154;
-    /* 0x158 */ unk16 unk_158;
-    /* 0x15A */ unk16 unk_15A;
+    /* 0x158 */ Vec2s unk_158; // textbox position?
     /* 0x15C */ s16 unk_15C;
     /* 0x15E */ s8 unk_15E;
     /* 0x15F */ s8 unk_15F;
@@ -447,11 +453,6 @@ public:
     void func_020393a8(unk32 param_2);
     void func_0203a188(unk32, unk32);
     unk32 func_0203a3e0(void);
-    unk32 func_0203a6d0(unk32, unk32);
-    unk32 func_0203b0bc(void);
-    void func_0203b0ec(unk32 param_2);
-    void func_0203b764(void);
-    void func_0203bd8c(u16 param_2);
     void func_0203be08(void);
     void func_0203be64(void);
     unk32 func_0203cb5c(unk8, s16);
@@ -462,6 +463,7 @@ public:
     void func_0203e090(void);
     void func_0203e0f8(void);
     void func_0203e1b0(unk32, unk32, unk32);
+    void func_02039440(unk32, unk32);
 
     // not sure it belongs to this class:
     void func_02032fcc(unk32, unk32);
@@ -590,6 +592,13 @@ public:
     unk32 func_0203a30c(void);
     void func_0203a35c(void);
     bool func_0203a3e0(void);
+    bool func_0203a6d0(unk32 param_2, unk32 param_3);
+    bool func_0203b0bc(void);
+    unk32 func_0203b0ec(unk32 param_2);
+    void func_0203b764(void);
+    void func_0203bd8c(u16 param_2);
+
+    unk32 func_02038cb8(unk32 param_2);
 };
 
 class UnkStruct_027E0C68_UnkSubClass1_Sub2 : public UnkStruct_027E0C68_UnkSubClass1_Base {
@@ -776,3 +785,15 @@ public:
     void func_ov003_020f4874(void);
 };
 extern UnkClass_027e1054 data_027e1054;
+
+class UnkClass_ov000_020eec9c {
+public:
+    void func_ov000_020d77e4(unk32);
+};
+extern UnkClass_ov000_020eec9c data_ov000_020eec9c;
+
+class UnkClass_ov000_027e0d04 {
+public:
+    void func_0203fe60(unk32);
+};
+extern UnkClass_ov000_027e0d04 data_027e0d04;

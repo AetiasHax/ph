@@ -21,6 +21,8 @@ struct UnkStruct_027e103c {
 
     void func_ov000_020cf284(unk32, unk32);
 
+    void func_ov000_020cf224(unk32);
+    void func_ov000_020cf2a0(unk32);
     unk32 func_ov000_020cf4bc(void);
     unk8* func_ov000_020cef9c(void);
     void func_ov000_020cfb38(void);
