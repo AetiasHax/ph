@@ -8,7 +8,7 @@
 #include "System/SysNew.hpp"
 
 extern u32 *data_027e0ce0[];
-extern "C" void func_02007938(unk32, unk32*, unk32, unk32, unk32);
+extern "C" void func_02007938(unk32, unk16*, unk32, unk32, unk32);
 
 // non-matching
 THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4) {

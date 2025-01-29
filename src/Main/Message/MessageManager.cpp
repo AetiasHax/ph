@@ -3,18 +3,15 @@
 #include "Player/TouchControl.hpp"
 
 extern ARM unk32 func_ov000_020d7f18(u32*, unk32);
-extern ARM unk32 func_ov000_020d77e4(u32*, unk32);
 extern ARM unk32 func_02037628(u8*);
 extern ARM void func_0203dc74(UnkStruct_027E0C68_UnkSubClass1_Base*, unk32, unk32);
 
-extern u32 data_ov000_020eec9c[];
 extern u32** data_027e0ce0[];
 extern u32 data_02056924[];
 extern u32* data_02068e6c;
 extern u32* data_02068e8c;
 extern u16 data_02056918[];
 extern ActorTypeId data_0205691c[];
-extern s16 data_027e0d04;
 
 // this should be `data_027e0ffc->func_ov000_020cec60(u16, Vec3p*, s32);`
 extern u32* data_027e0ffc;
@@ -340,7 +337,7 @@ ARM void UnkStruct_027E0C68::func_02036bbc(void) {
     bool bVar4;
     s32 i;
 
-    if (data_027e0d04 > 0) {
+    if (data_027e0d04.unk_00 > 0) {
         return;
     }
 
@@ -464,7 +461,7 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Base* UnkStruct_027E0C68::func_02036da8(u32 
         // BMG_GET_MSG_ADDR(pBVar5, param_2), 
         (s16*)&iStack_38, 1);
 
-        func_ov000_020d77e4(data_ov000_020eec9c, 0x1C);
+        data_ov000_020eec9c.func_ov000_020d77e4(0x1C);
         return pSVar4;
     }
 
@@ -523,11 +520,11 @@ ARM UnkStruct_027E0C68_UnkSubClass1_Sub1* UnkStruct_027E0C68::func_02036f68(u32 
 
     pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s16*)param_3, 0);
 
-    if (func_ov000_020d7f18(data_ov000_020eec9c, 0x19) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x18) == 0 &&
-        func_ov000_020d7f18(data_ov000_020eec9c, 0x34) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x35) == 0 &&
-        func_ov000_020d7f18(data_ov000_020eec9c, 0x1A) == 0 && func_ov000_020d7f18(data_ov000_020eec9c, 0x1B) == 0 &&
+    if (data_ov000_020eec9c.func_ov000_020d7f18(0x19) == 0 && data_ov000_020eec9c.func_ov000_020d7f18(0x18) == 0 &&
+        data_ov000_020eec9c.func_ov000_020d7f18(0x34) == 0 && data_ov000_020eec9c.func_ov000_020d7f18(0x35) == 0 &&
+        data_ov000_020eec9c.func_ov000_020d7f18(0x1A) == 0 && data_ov000_020eec9c.func_ov000_020d7f18(0x1B) == 0 &&
         (param_3[12]) != 7) {
-        func_ov000_020d77e4(data_ov000_020eec9c, 0x1C);
+        data_ov000_020eec9c.func_ov000_020d77e4(0x1C);
     }
 
     return pSVar5;

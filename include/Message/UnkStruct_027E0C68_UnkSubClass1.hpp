@@ -789,11 +789,14 @@ extern UnkClass_027e1054 data_027e1054;
 class UnkClass_ov000_020eec9c {
 public:
     void func_ov000_020d77e4(unk32);
+    unk32 func_ov000_020d7f18(unk32);
 };
 extern UnkClass_ov000_020eec9c data_ov000_020eec9c;
 
 class UnkClass_ov000_027e0d04 {
 public:
+    /* 0x00 */ unk16 unk_00;
+
     void func_0203fe60(unk32);
 };
 extern UnkClass_ov000_027e0d04 data_027e0d04;
