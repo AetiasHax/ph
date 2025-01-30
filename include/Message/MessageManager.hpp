@@ -82,6 +82,7 @@ public:
 class UnkStruct_027E0C68 : public SysObject {
 public:
     /* 0x00 */ u8 unk_00[2];
+    /* 0x02 */ u8 unk_02;
     /* 0x03 */ u8 unk_03;
     /* 0x04 */ u8 unk_04;
     /* 0x05 */ u8 unk_05;

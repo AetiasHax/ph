@@ -119,12 +119,14 @@ public:
     /* 0x08 */
 };
 
+typedef bool (*UnknownCallback)(class UnkStruct_027E0C68_UnkSubClass1_Sub1*);
+
 class UnkSubClass1_UnkownClass2 : public UnkSubClass1_UnkownClass2_Base1 {
 public:
     /* 0x14 */ unk32 unk_14;
     /* 0x18 */ unk32 unk_18;
-    /* 0x1C */ unk32 unk_1C;
-    /* 0x20 */ unk32 unk_20;
+    /* 0x1C */ UnknownCallback unk_1C;
+    /* 0x20 */ class UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_20;
     /* 0x24 */ unk32 unk_24;
     /* 0x2C */
 
@@ -271,6 +273,8 @@ public:
     /* 0x6C */ virtual void vfunc_6C(unk32* param_2, unk32* param_3);
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3);
     /* 0x74 */
+
+    unk32 func_02032fa4(void);
 };
 
 class UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114 : public SysObject {
@@ -437,7 +441,6 @@ public:
 
     static void func_020387e0(u8* param_2);
 
-    unk32 func_02032fa4(void);
     unk32 func_02032fb4(void);
     unk32 func_020337d8(unk32 param_2);
     u16* func_02037604(u16**);
@@ -453,8 +456,6 @@ public:
     void func_020393a8(unk32 param_2);
     void func_0203a188(unk32, unk32);
     unk32 func_0203a3e0(void);
-    void func_0203be08(void);
-    void func_0203be64(void);
     unk32 func_0203cb5c(unk8, s16);
     void func_0203dc10(u8 param_2);
     void func_0203dc10(u8 param_2, u8 param_3);
@@ -505,16 +506,20 @@ public:
     /* 0x428 */ UnknownMsgChoiceStruct unk_428[0x20];
     /* 0x528 */ unk16 unk_528[4]; // number of choices?
     /* 0x55C */ unk32 unk_530;
-    /* 0x55C */ unk32 unk_534;
-    /* 0x55C */ unk32 unk_538;
+    /* 0x55C */ unk16 unk_534;
+    /* 0x55C */ unk16 unk_536;
+    /* 0x55C */ unk16 unk_538;
+    /* 0x55C */ unk16 unk_53A;
     /* 0x55C */ unk32 unk_53C;
     /* 0x55C */ unk32 unk_540;
     /* 0x55C */ unk8 unk_544;
     /* 0x55C */ unk8 unk_545;
     /* 0x55C */ unk8 unk_546;
     /* 0x55C */ unk8 unk_547;
-    /* 0x55C */ unk32 unk_548;
-    /* 0x55C */ unk32 unk_54C;
+    /* 0x55C */ unk16 unk_548;
+    /* 0x55C */ unk16 unk_54A;
+    /* 0x55C */ unk16 unk_54C;
+    /* 0x55C */ unk16 unk_54E;
     /* 0x55C */ unk32 unk_550;
     /* 0x55C */ unk32 unk_554;
     /* 0x55C */ unk8 unk_558;
@@ -581,6 +586,8 @@ public:
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
     /* 0x74 */
 
+    static bool func_0203c25c(class UnkStruct_027E0C68_UnkSubClass1_Sub1* param_1);
+
     void func_0203e060(u8 param_2, u8 param_3);
     void func_02039a3c(void);
 
@@ -597,6 +604,11 @@ public:
     unk32 func_0203b0ec(unk32 param_2);
     void func_0203b764(void);
     void func_0203bd8c(u16 param_2);
+    void func_0203be08(void);
+    void func_0203be64(void);
+    unk32 func_0203c084(void);
+    bool func_0203c13c(void);
+    unk32 func_0203c1a0(void);
 
     unk32 func_02038cb8(unk32 param_2);
 };
@@ -777,12 +789,21 @@ typedef struct UnkStruct_01ffbe34 {
 } UnkStruct_01ffbe34;
 extern "C" void func_01ffbe34(UnkStruct_01ffbe34 *param1);
 
+struct UnkClass_027e1054_unk_00_unk00 {
+    /* 0x00 */ u8 unk_00[0x95];
+    /* 0x95 */ u8 unk_95;
+};
+struct UnkClass_027e1054_unk_00 {
+    /* 0x00 */ unk32 unk_04;
+    /* 0x00 */ UnkClass_027e1054_unk_00_unk00* unk_00;
+};
 class UnkClass_027e1054 {
 public:
-    unk32 unk_00;
+    UnkClass_027e1054_unk_00* unk_00;
     unk32 unk_04;
 
     void func_ov003_020f4874(void);
+    void func_ov003_020f4760(u8, unk32);
 };
 extern UnkClass_027e1054 data_027e1054;
 
@@ -800,3 +821,9 @@ public:
     void func_0203fe60(unk32);
 };
 extern UnkClass_ov000_027e0d04 data_027e0d04;
+
+class UnkClass_data_027e0f7c {
+public:
+    u8* func_ov000_0209d90c(s8, s8);
+};
+extern UnkClass_data_027e0f7c data_027e0f7c;
