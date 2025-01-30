@@ -23,7 +23,7 @@ ARM UnkSubClass1_UnkownClass2_Base1::UnkSubClass1_UnkownClass2_Base1() {
     }
 }
 
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base_1::UnkStruct_027E0C68_UnkSubClass1_Base_1() {
+THUMB MsgProc_Base::MsgProc_Base() {
     this->unk_04 = 0;
     this->unk_08 = 0;
     this->unk_0C = NULL;

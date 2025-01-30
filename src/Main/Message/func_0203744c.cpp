@@ -43,8 +43,8 @@ ARM UnkSubClass1_UnkownClass2::UnkSubClass1_UnkownClass2() {
     this->unk_24 = 0;
 }
 
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base::UnkStruct_027E0C68_UnkSubClass1_Base(unk32 param_2, unk16 param_3, unk32 param_4)
-    : UnkStruct_027E0C68_UnkSubClass1_Base_0(param_2, param_3, param_4),
+THUMB MsgProc_Main::MsgProc_Main(unk32 param_2, unk16 param_3, unk32 param_4)
+    : MsgProc_Base2(param_2, param_3, param_4),
     unk_124(0)
 {
     this->func_020387e0(this->unk_150);
@@ -57,5 +57,5 @@ THUMB UnkStruct_027E0C68_UnkSubClass1_Base::UnkStruct_027E0C68_UnkSubClass1_Base
     this->unk_11E = param_3;
 }
 
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base::~UnkStruct_027E0C68_UnkSubClass1_Base() {
+THUMB MsgProc_Main::~MsgProc_Main() {
 }

@@ -11,7 +11,7 @@ extern u32 *data_027e0ce0[];
 extern "C" void func_02007938(unk32, unk16*, unk32, unk32, unk32);
 
 // non-matching
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4) {
+THUMB MsgProc_Base2::MsgProc_Base2(unk32 param_2, unk32 param_3, unk32 param_4) {
     this->unk_114 = NULL;
     this->unk_118 = -1;
     this->unk_11C = 0;
@@ -24,13 +24,13 @@ THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::UnkStruct_027E0C68_UnkSubClass1_Ba
     func_02007938(0, &this->unk_54, 0xC0, 1, param_4);
 
     if (this->unk_121 == 0) {
-        this->unk_114 = new(data_027e0ce0[0], 4) UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114();
+        this->unk_114 = new(data_027e0ce0[0], 4) MsgProc_Base2_unk_114();
     } else {
-        this->unk_114 = new(data_027e0ce0[1], 4) UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114();
+        this->unk_114 = new(data_027e0ce0[1], 4) MsgProc_Base2_unk_114();
     }
 }
 
-THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::~UnkStruct_027E0C68_UnkSubClass1_Base_0() {
+THUMB MsgProc_Base2::~MsgProc_Base2() {
     if (this->unk_114 != NULL) {
         delete this->unk_114;
         this->unk_114 = NULL;
@@ -38,7 +38,7 @@ THUMB UnkStruct_027E0C68_UnkSubClass1_Base_0::~UnkStruct_027E0C68_UnkSubClass1_B
 }
 
 // non-matching
-ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_14(unk32 param_2, unk32 param_3) {
+ARM bool MsgProc_Type1::vfunc_14(unk32 param_2, unk32 param_3) {
     unk32 uVar1;
     unk32 local_c;
     unk32 local_10;
@@ -53,14 +53,14 @@ ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_14(unk32 param_2, unk32 par
     return true;
 }
 
-ARM void UnkStruct_027E0C68_UnkSubClass1_Sub1::func_0203e060(u8 param_2, u8 param_3) {
+ARM void MsgProc_Type1::func_0203e060(u8 param_2, u8 param_3) {
     this->func_0203dc10(1, param_3);
     this->unk_11E = param_2;
     this->unk_118 = -1;
     this->func_020331c4(param_2, -1);
 }
 
-ARM bool UnkStruct_027E0C68_UnkSubClass1_Sub1::vfunc_28(void) {
+ARM bool MsgProc_Type1::vfunc_28(void) {
     if (this->unk_122 != 0) {
         this->func_0203e0f8();
         this->func_0203dc10(0);

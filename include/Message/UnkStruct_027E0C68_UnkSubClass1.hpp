@@ -119,14 +119,14 @@ public:
     /* 0x08 */
 };
 
-typedef bool (*UnknownCallback)(class UnkStruct_027E0C68_UnkSubClass1_Sub1*);
+typedef bool (*UnknownCallback)(class MsgProc_Type1*);
 
 class UnkSubClass1_UnkownClass2 : public UnkSubClass1_UnkownClass2_Base1 {
 public:
     /* 0x14 */ unk32 unk_14;
     /* 0x18 */ unk32 unk_18;
     /* 0x1C */ UnknownCallback unk_1C;
-    /* 0x20 */ class UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_20;
+    /* 0x20 */ class MsgProc_Type1* unk_20;
     /* 0x24 */ unk32 unk_24;
     /* 0x2C */
 
@@ -137,7 +137,7 @@ public:
 
 class UnkSubClass1_unk_410 {
 public:
-    /* 0x00 */ struct UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_00;
+    /* 0x00 */ struct MsgProc_Type1* unk_00;
     /* 0x04 */
 
     void func_0203ec34(void);
@@ -149,7 +149,7 @@ public:
 // same as UnkSubClass1_unk_410?
 class UnkSubClass1_unk_424 {
 public:
-    /* 0x00 */ struct UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_00;
+    /* 0x00 */ struct MsgProc_Type1* unk_00;
     /* 0x04 */
 
     void func_0203ee80(unk32);
@@ -161,7 +161,7 @@ public:
 
 class UnkSubClass1_unk_124 {
 public:
-    /* 0x00 */ void* unk_00; // pointer to UnkStruct_027E0C68_UnkSubClass1_Base (well, the first members of the base class)
+    /* 0x00 */ void* unk_00; // pointer to MsgProc_Main (well, the first members of the base class)
     /* 0x04 */ unk32 unk_04;
     /* 0x08 */ unk32 unk_08;
     /* 0x0C */ unk32 unk_0C;
@@ -211,7 +211,7 @@ public:
 };
 
 // astruct_8?
-class UnkStruct_027E0C68_UnkSubClass1_Base_1 : public SysObject {
+class MsgProc_Base : public SysObject {
 public:
     /* 0x000 (vtable) */
     /* 0x004 */ unk32* unk_04;
@@ -243,8 +243,8 @@ public:
     /* 0x051 */ unk8 unk_51;
     /* 0x052 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Base_1();
-    /* 0x00*/ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_1();
+    MsgProc_Base();
+    /* 0x00*/ virtual ~MsgProc_Base();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3);
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5);
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3); // func_0203e060?
@@ -277,14 +277,14 @@ public:
     unk32 func_02032fa4(void);
 };
 
-class UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114 : public SysObject {
+class MsgProc_Base2_unk_114 : public SysObject {
 public:
     /* 0x00 (vtable) */
     /* 0x04 */ unk32* unk_04;
     /* 0x08 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114();
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114() override;
+    MsgProc_Base2_unk_114();
+    /* 0x00 */ virtual ~MsgProc_Base2_unk_114() override;
     /* 0x04 */ virtual UNK_TYPE vfunc_04(UNK_TYPE);
     /* 0x08 */ virtual unk32 vfunc_08(void*, s16);
     /* 0x0C */
@@ -293,7 +293,7 @@ public:
 };
 
 // astruct_7
-class UnkStruct_027E0C68_UnkSubClass1_Base_0 : public UnkStruct_027E0C68_UnkSubClass1_Base_1 {
+class MsgProc_Base2 : public MsgProc_Base {
 public:
     /* 0x052 */ unk16 unk_52;
     /* 0x054 */ unk16 unk_54;
@@ -349,7 +349,7 @@ public:
     /* 0x108 */ unk8 unk_10B;
     /* 0x10C */ unk32 unk_10C;
     /* 0x110 */ unk32 unk_110;
-    /* 0x118 */ UnkStruct_027E0C68_UnkSubClass1_Base_0_unk_114* unk_114;
+    /* 0x118 */ MsgProc_Base2_unk_114* unk_114;
     /* 0x118 */ s32 unk_118;
     /* 0x11C */ unk16 unk_11C;
     /* 0x11E */ unk8 unk_11E;
@@ -360,9 +360,9 @@ public:
     /* 0x123 */ u8 unk_123;
     /* 0x124 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Base_0(unk32 param_2, unk32 param_3, unk32 param_4);
+    MsgProc_Base2(unk32 param_2, unk32 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base_0();
+    /* 0x00 */ virtual ~MsgProc_Base2();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
@@ -394,7 +394,7 @@ public:
 };
 
 // astruct_6
-class UnkStruct_027E0C68_UnkSubClass1_Base : public UnkStruct_027E0C68_UnkSubClass1_Base_0 {
+class MsgProc_Main : public MsgProc_Base2 {
 public:
     /* 0x124 */ UnkSubClass1_unk_124* unk_124;
     /* 0x128 */ UnkSubClass1_UnkownClass2 unk_128;
@@ -409,9 +409,9 @@ public:
     /* 0x160 */ unk16 unk_162;
     /* 0x164 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Base(unk32 param_2, unk16 param_3, unk32 param_4);
+    MsgProc_Main(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Base();
+    /* 0x00 */ virtual ~MsgProc_Main();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
@@ -491,9 +491,9 @@ struct UnknownMsgChoiceStruct {
 };
 
 // astruct_2
-class UnkStruct_027E0C68_UnkSubClass1_Sub1 : public UnkStruct_027E0C68_UnkSubClass1_Base {
+class MsgProc_Type1 : public MsgProc_Main {
 public:
-    /* 0x164 */ UnkStruct_027E0C68_UnkSubClass1_Sub1* unk_164;
+    /* 0x164 */ MsgProc_Type1* unk_164;
     /* 0x168 */ UnkSubClass1_UnkownClass1 unk_168;
     /* 0x1F0 */ UnkSubClass1_UnkownClass1 unk_1F0;
     /* 0x278 */ UnkSubClass1_UnkownClass1 unk_278;
@@ -501,7 +501,7 @@ public:
     /* 0x388 */ UnkSubClass1_UnkownClass1 unk_388;
     /* 0x410 */ UnkSubClass1_unk_410 unk_410;
     /* 0x414 */ unk32 unk_414;
-    /* 0x418 */ UnkStruct_027E0C68_UnkSubClass1_Base* unk_418;
+    /* 0x418 */ MsgProc_Main* unk_418;
     /* 0x41C */ unk16 unk_41C;
     /* 0x41C */ unk16 unk_41E;
     /* 0x420 */ unk16 unk_420;
@@ -557,10 +557,10 @@ public:
     /* 0x588 */ UnkSubClass1_unk_124 unk_588;
     /* 0x5B4 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Sub1();
-    UnkStruct_027E0C68_UnkSubClass1_Sub1(unk32 param_2, unk16 param_3, unk32 param_4);
+    MsgProc_Type1();
+    MsgProc_Type1(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub1() override;
+    /* 0x00 */ virtual ~MsgProc_Type1() override;
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
@@ -590,7 +590,7 @@ public:
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
     /* 0x74 */
 
-    static bool func_0203c25c(class UnkStruct_027E0C68_UnkSubClass1_Sub1* param_1);
+    static bool func_0203c25c(class MsgProc_Type1* param_1);
 
     void func_0203e060(u8 param_2, u8 param_3);
     void func_02039a3c(void);
@@ -617,7 +617,7 @@ public:
     unk32 func_02038cb8(unk32 param_2);
 };
 
-class UnkStruct_027E0C68_UnkSubClass1_Sub2 : public UnkStruct_027E0C68_UnkSubClass1_Base {
+class MsgProc_Type3 : public MsgProc_Main {
 public:
     /* 0x164 */ unk16 unk_164;
     /* 0x166 */ unk16 unk_166;
@@ -633,10 +633,10 @@ public:
     /* 0x180 */ UnkClass_func_ov000_020d0644 unk_180[4];
     /* 0x1C0 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Sub2();
-    UnkStruct_027E0C68_UnkSubClass1_Sub2(unk32 param_2, unk16 param_3, unk32 param_4);
+    MsgProc_Type3();
+    MsgProc_Type3(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub2();
+    /* 0x00 */ virtual ~MsgProc_Type3();
     /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
     /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
@@ -669,7 +669,7 @@ public:
     static void func_0203c83c(void);
 };
 
-class UnkStruct_027E0C68_UnkSubClass1_Sub3 : public UnkStruct_027E0C68_UnkSubClass1_Base {
+class MsgProc_Type2 : public MsgProc_Main {
 public:
     /* 0x164 */ unk16 unk_164;
     /* 0x164 */ unk16 unk_166;
@@ -679,10 +679,10 @@ public:
     /* 0x164 */ unk16 unk_16E;
     /* 0x170 */
 
-    UnkStruct_027E0C68_UnkSubClass1_Sub3();
-    UnkStruct_027E0C68_UnkSubClass1_Sub3(unk32 param_2, unk16 param_3, unk32 param_4);
+    MsgProc_Type2();
+    MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~UnkStruct_027E0C68_UnkSubClass1_Sub3();
+    /* 0x00 */ virtual ~MsgProc_Type2();
     /* 0x08 */ /* func_02039228 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
     /* 0x0C */ /* func_02039578 */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
     /* 0x10 */ /* func_0203e060 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
@@ -722,7 +722,7 @@ public:
 
 extern "C" u32 func_01ff9b4c(unk32, unk32);
 extern "C" unk32 func_0203c084(void);
-extern "C" void func_ov018_02169634(UnkStruct_027E0C68_UnkSubClass1_Sub1*);
+extern "C" void func_ov018_02169634(MsgProc_Type1*);
 extern "C" unk32 func_ov000_02079e04(void);
 extern "C" unk32 func_02016fcc(unk32);
 extern "C" void func_02032304(unk32*, char*, unk32, unk32,  unk32);
