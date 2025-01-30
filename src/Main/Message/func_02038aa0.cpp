@@ -1,10 +1,27 @@
 #include "global.h"
-#include "Message/UnkStruct_027E0C68_UnkSubClass1.hpp"
+#include "Message/MsgProc.hpp"
 #include "Message/MessageManager.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Player/TouchControl.hpp"
 #include "Item/ItemManager.hpp"
+
+THUMB MsgProc_Main::MsgProc_Main(unk32 param_2, unk16 param_3, unk32 param_4)
+    : MsgProc_Base2(param_2, param_3, param_4),
+    unk_124(0)
+{
+    this->func_020387e0(this->unk_150);
+    this->unk_154 = 0;
+    this->unk_158.y = 0;
+    this->unk_15C = 0;
+    this->unk_15E = 0xFF;
+    this->unk_15F = 0xFF;
+    this->unk_160 = 1;
+    this->unk_11E = param_3;
+}
+
+THUMB MsgProc_Main::~MsgProc_Main() {
+}
 
 ARM unk32 MsgProc_Type1::vfunc_34(unk32 param_2) {
     s16 iVar1;

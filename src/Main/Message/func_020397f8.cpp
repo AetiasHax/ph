@@ -1,5 +1,5 @@
 #include "global.h"
-#include "Message/UnkStruct_027E0C68_UnkSubClass1.hpp"
+#include "Message/MsgProc.hpp"
 #include "Message/MessageManager.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "DTCM/UnkStruct_027e103c.hpp"
@@ -9,7 +9,6 @@
 extern "C" void func_ov000_020d0460(void*);
 extern "C" void func_0203efd8(void*, void*);
 extern "C" void func_0203ee48(void*);
-extern "C" void func_0204f614(UnkClass_func_ov000_020d0644*, unk32, unk32, void*, void*);
 
 extern unk16 data_02056a0e[];
 extern u8 data_02056a08[];
@@ -1215,103 +1214,4 @@ ARM MsgProc_Type1::~MsgProc_Type1() {
 
 ARM bool MsgProc_Type1::vfunc_38(void) {
     return true;
-}
-
-THUMB MsgProc_Type2::MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4) :
-    MsgProc_Main(0, 0, param_4)    
-{
-    this->unk_162 = 4;
-    this->unk_164 = 1;
-    this->unk_166 = 0;
-    this->unk_168 = -1;
-    this->unk_16A = 0;
-    this->unk_16C = 1;
-    this->unk_16E = 0;
-}
-
-// non-matching
-THUMB void MsgProc_Type2::func_0203c39c(unk32 param_2, unk32 param_3) {
-    u16 uVar1;
-    unk32 uVar2;
-    s16 uVar3;
-    s32 iVar4;
-    s32 local_20;
-    s32 local_1c [2];
-    
-    this->func_02038b28();
-    uVar3 = 0;
-
-    for (iVar4 = 0; iVar4 < 2; iVar4++) {
-        local_1c[0] = 0xC0;
-        local_20 = 0x10;
-
-        if (iVar4 != 0) {
-            this->func_0203fc78(local_1c, &local_20);
-        }
-
-        uVar1 = this->func_0203d318((s32)(local_1c[0] + 7 + ((u32)(local_1c[0] + 7 >> 2) >> 0x1D)) >> 3,
-                             (s32)(local_20 + 7 + ((u32)(local_20 + 7 >> 2) >> 0x1D)) >> 3);
-
-        if (uVar3 < uVar1) {
-            uVar3 = uVar1;
-        }
-    }
-
-    if (this->unk_114->vfunc_08(this, uVar3) != 0) {
-        this->unk_10 = this->unk_114->func_0203d1b4();
-    }
-}
-
-ARM void MsgProc_Type2::vfunc_3C(unk32 param_2) {
-    if (this->unk_15C > 0 && this->unk_122 != 1) {
-        if (this->func_0203de14(param_2) != 0) {
-            this->vfunc_40(0, 0);
-        }
-    }
-}
-
-ARM void MsgProc_Type2::vfunc_40(unk32 param_2, unk32 param_3) {
-    param_2 += this->unk_166;
-    param_3 += this->unk_168;
-
-    this->func_0203c4ac(param_2 + this->unk_16A, param_3 + this->unk_16C);
-    this->func_02038ef4(param_2, param_3);
-}
-
-//! TODO: solve vfunc oddities
-extern "C" bool func_0203dcb4(unk32);
-// non-matching
-ARM bool MsgProc_Type2::vfunc_14(unk32 param_2, unk32 param_3) {
-    return func_0203dcb4(param_2 + this->unk_162);
-}
-
-ARM MsgProc_Type2::~MsgProc_Type2() {
-}
-
-// non-matching
-ARM MsgProc_Type3::MsgProc_Type3(unk32 param_2, unk16 param_3, unk32 param_4) :
-    MsgProc_Main(1, 0, param_4)
-{
-    this->unk_162 = 1;
-    this->unk_164 = 0x1A;
-    this->unk_166 = 0xA6;
-    this->unk_168 = 0x1D;
-    this->unk_16A = 0;
-    this->unk_16C = 1;
-    this->unk_170 = -1;
-    this->unk_172 = -1;
-    this->unk_174 = -1;
-
-    func_0204f614(this->unk_180, ARRAY_LEN(this->unk_180), sizeof(UnkClass_func_ov000_020d0644), UnkClass_func_ov000_020d0644::func_020d060c, this->func_0203c83c);
-
-    this->unk_180[0].func_ov000_020d0644(0x1E, 0, 0x8A, 0, 0);
-    this->unk_180[1].func_ov000_020d0644(0x1E, 1, 0x8B, 0, 0);
-    this->unk_180[2].func_ov000_020d0644(0x1E, 2, 0x8C, 0, 0);
-    this->unk_180[3].func_ov000_020d0644(0x1E, 3, 0x8D, 0, 0);
-}
-
-ARM void MsgProc_Type3::func_0203c83c(void) {
-}
-
-ARM MsgProc_Type3::~MsgProc_Type3() {
 }

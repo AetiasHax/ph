@@ -5,7 +5,7 @@
 
 #include "System/SysNew.hpp"
 #include "Message/BMG.hpp"
-#include "Message/UnkStruct_027E0C68_UnkSubClass1.hpp"
+#include "Message/MsgProc.hpp"
 #include "lib/math.h"
 
 // astruct_14
