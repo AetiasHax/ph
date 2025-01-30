@@ -259,19 +259,6 @@ ARM void MsgProc_Type1::func_02039ca8(void) {
     }
 }
 
-// non-matching
-ARM bool MsgProc_Type1::func_0203a2c0(void) {
-    if ((this->unk_150[1] != 1 && this->unk_150[1] != 2) && (this->func_02039250() != 0 && this->func_02038b78() != 0)) {
-        return true;
-    }
-
-    return false;
-}
-
-ARM unk32 MsgProc_Type1::func_0203a30c(void) {    
-    return this->unk_574 / this->unk_154->unk_06;
-}
-
 ARM void MsgProc_Type1::vfunc_3C(unk32 param_2) {    
     if (this->unk_15C > 0 && this->func_0203de14(param_2) != 0) {
         if (this->unk_124->unk_29 != 3) {
@@ -438,6 +425,19 @@ ARM void MsgProc_Type1::func_0203a188(unk32 param_2, unk32 param_3, unk32 param_
             func_02034984(uVar5, data_02056a08[iVar6], param_2 + iVar3, param_3 + iVar4);
         }
     }
+}
+
+// non-matching
+ARM bool MsgProc_Type1::func_0203a2c0(void) {
+    if ((this->unk_150[1] != 1 && this->unk_150[1] != 2) && (this->func_02039250() != 0 && this->func_02038b78() != 0)) {
+        return true;
+    }
+
+    return false;
+}
+
+ARM unk32 MsgProc_Type1::func_0203a30c(void) {    
+    return this->unk_574 / this->unk_154->unk_06;
 }
 
 // non-matching (regalloc)
@@ -963,41 +963,6 @@ ARM unk32 MsgProc_Type1::func_0203b0ec(unk32 param_2) {
     return iVar4;
 }
 
-// non-matching
-ARM void MsgProc_Type1::func_0203b764(void) {
-    s32 i = data_027e0c68.unk_00[this->unk_50];
-
-    this->func_02039440(data_02056a04[i * 0x18], data_02056a16[i]);
-
-    switch (this->unk_57B) {
-        case 1:
-            this->unk_158.y -= 38;
-            break;
-        case 2:
-            switch (this->unk_154->unk_06) {
-                case 2:
-                    this->unk_158.y -= 111;
-                    break;
-                case 3:
-                    this->unk_158.y -= 98;
-                    break;
-                default:
-                    break;
-            }
-            break;
-        default:
-            break;
-    }
-}
-
-ARM void MsgProc_Type1::func_0203bd8c(u16 param_2) {
-    this->unk_576 = param_2;
-
-    if (this->func_0203b0ec(0) != 0) {
-        data_ov000_020eec9c.func_ov000_020d77e4(this->unk_564[param_2]);
-    }
-}
-
 // non-matching (regalloc)
 ARM unk32 MsgProc_Type1::vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) {
     u16 sVar1;
@@ -1181,9 +1146,44 @@ ARM void MsgProc_Type1::vfunc_64(unk32 param_2) {
     this->func_020393a8(param_2);
 }
 
+// non-matching
+ARM void MsgProc_Type1::func_0203b764(void) {
+    s32 i = data_027e0c68.unk_00[this->unk_50];
+
+    this->func_02039440(data_02056a04[i * 0x18], data_02056a16[i]);
+
+    switch (this->unk_57B) {
+        case 1:
+            this->unk_158.y -= 38;
+            break;
+        case 2:
+            switch (this->unk_154->unk_06) {
+                case 2:
+                    this->unk_158.y -= 111;
+                    break;
+                case 3:
+                    this->unk_158.y -= 98;
+                    break;
+                default:
+                    break;
+            }
+            break;
+        default:
+            break;
+    }
+}
+
 // switch decomp issue
 ARM UNK_TYPE MsgProc_Type1::vfunc_20(UNK_TYPE) {
     // TODO
+}
+
+ARM void MsgProc_Type1::func_0203bd8c(u16 param_2) {
+    this->unk_576 = param_2;
+
+    if (this->func_0203b0ec(0) != 0) {
+        data_ov000_020eec9c.func_ov000_020d77e4(this->unk_564[param_2]);
+    }
 }
 
 ARM void MsgProc_Type1::vfunc_6C(unk32* param_2, unk32* param_3) {
