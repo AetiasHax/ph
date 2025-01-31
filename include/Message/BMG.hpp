@@ -80,7 +80,10 @@ typedef struct BMGHeader {
 
 typedef struct EntryINF1 {
     /* 0x00 */ u32 offset; // relative to the end of the DAT1 header
-    /* 0x04 */ u32 unk_04; // flags/attributes?
+    /* 0x04 */ u8 unk_04; // flags/attributes? (+0x04 to +0x06)
+    /* 0x05 */ u8 unk_05;
+    /* 0x06 */ u8 unk_06;
+    /* 0x07 */ u8 unk_07;
 } EntryINF1; // size = 0x8
 
 typedef struct SectionINF1 {

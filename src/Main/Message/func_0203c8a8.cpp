@@ -53,11 +53,11 @@ ARM bool MsgProc_Type1::vfunc_14(unk32 param_2, unk32 param_3) {
     return true;
 }
 
-ARM void MsgProc_Type1::func_0203e060(u8 param_2, u8 param_3) {
-    this->func_0203dc10(1, param_3);
-    this->unk_11E = param_2;
-    this->unk_118 = -1;
-    this->func_020331c4(param_2, -1);
+ARM void MsgProc_Type1::func_0203e060(MsgProc_Main* param_1, u8 param_2, u8 param_3) {
+    param_1->func_0203dc10(1, param_3);
+    param_1->unk_11E = param_2;
+    param_1->unk_118 = -1;
+    param_1->func_020331c4(param_2, -1);
 }
 
 ARM bool MsgProc_Type1::vfunc_28(void) {

@@ -35,6 +35,7 @@ struct UnkStruct_027e103c {
     void func_ov005_02104028(unk32);
     void func_ov000_020cfb58(u8*);
     unk32 func_ov000_020cf8fc(unk32);
+    void func_ov000_020cfc9c(unk32, unk32);
 
     //! TODO: find out if the type is always `MsgProc_Type1*`
     void func_ov000_020cfb20(void*);

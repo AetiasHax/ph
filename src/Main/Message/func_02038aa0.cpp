@@ -18,7 +18,7 @@ THUMB MsgProc_Main::MsgProc_Main(unk32 param_2, unk16 param_3, unk32 param_4)
     unk_124(0)
 {
     this->func_020387e0(this->unk_150);
-    this->unk_154 = 0;
+    this->pInfoEntry = 0;
     this->unk_158.y = 0;
     this->unk_15C = 0;
     this->unk_15E = 0xFF;
@@ -30,7 +30,44 @@ THUMB MsgProc_Main::MsgProc_Main(unk32 param_2, unk16 param_3, unk32 param_4)
 THUMB MsgProc_Main::~MsgProc_Main() {
 }
 
-ARM unk32 MsgProc_Type1::vfunc_34(unk32 param_2) {
+THUMB void MsgProc_Main::func_02038b28(void) {
+    this->unk_114->unk_04 = NULL;
+}
+
+ARM void MsgProc_Main::func_02038b34(u8 param_2, u8 param_3) {
+    MsgProc_Type1::func_0203e060(this, param_2, param_3);
+}
+
+ARM void MsgProc_Main::func_02038b40(void) {
+    this->unk_15C = -1;
+    this->unk_128.unk_00 = NULL;
+    this->func_0203dc10(0);
+    this->vfunc_48();
+}
+
+ARM void MsgProc_Main::func_02038b74(void) {
+}
+
+// non-matching
+ARM bool MsgProc_Main::func_02038b78(void) {
+    if (data_027e0c54 == 0) {
+        if ((this->unk_50 != 0 && data_027e0c68.func_02036850() != 0) || (this->unk_50 == 0 && data_027e0c68.func_02036824() != 0)) {
+            return true;
+        }
+
+        return false;
+    } else {
+        bool ret = CHECK_UNK_FLAGS(1);
+
+        if ((this->unk_50 == 0 || ret)) {
+            return (this->unk_50 != 0 && ret);
+        }
+
+        return false;
+    }
+}
+
+ARM unk32 MsgProc_Main::vfunc_34(unk32 param_2) {
     s16 iVar1;
     unk32 iVar2;
     unk32 iVar3;
@@ -51,7 +88,27 @@ ARM unk32 MsgProc_Type1::vfunc_34(unk32 param_2) {
     return func_01ff9b4c(iVar2 + iVar3 / 2, uVar4);
 }
 
-ARM void MsgProc_Type1::vfunc_30(void) {
+ARM unk32 MsgProc_Main::func_02038cb8(unk32 param_2) {
+    u8 bVar1 = this->unk_2C->unk_00->unk_08[1];
+    unk32 iVar2 = this->func_02038cf4();
+    unk32 iVar1 = this->func_020337d8(param_2 + 1);
+    return iVar2 + iVar1 - bVar1;
+}
+
+ARM unk32 MsgProc_Main::func_02038cf4(void) {
+    unk32 iVar1;
+    unk32 iVar2;
+    
+    iVar2 = this->unk_18;
+    iVar1 = this->func_02038d10();
+    return (iVar2 * 8 - iVar1) / 2;
+}
+
+ARM unk32 MsgProc_Main::func_02038d10(void) {
+    return this->func_020337d8(this->unk_150[0]);
+}
+
+ARM void MsgProc_Main::vfunc_30(void) {
     if (this->unk_15C > 0) {
         this->func_0203e090();
     } else {
@@ -59,14 +116,75 @@ ARM void MsgProc_Type1::vfunc_30(void) {
     }
 }
 
+ARM void MsgProc_Main::func_02038ef4(unk32 param_2, unk32 param_3) {
+    unk32 local_14;
+    unk32 local_18;
+
+    this->vfunc_70(&local_14, &local_18);
+    this->func_0203e1b0(local_14 + param_2, local_18 + param_3, 0);
+}
+
+ARM void MsgProc_Main::func_02038f40(void) {
+}
+
 // non-matching
-ARM void MsgProc_Type1::vfunc_08(unk32* param_2, unk32* param_3) {
+ARM void MsgProc_Main::func_02038f44(EntryINF1* param_2, u32 param_3, func_02038f44_param4* param_4, UnkSubClass1_02256FF8* param_5, unk32 param_6) {
+    int iVar1;
+    
+    this->pInfoEntry = param_2;
+    this->unk_08 = param_5;
+    this->unk_15F = -1;
+    this->unk_15C = 0x78;
+    this->unk_15E = param_4->unk_0C;
+    this->func_0203dcfc(param_6, 0, this->unk_11E, 2);
+    this->unk_128.func_02038858(param_3);
+    this->unk_30 = this->unk_150[4] + 5;
+
+    this->vfunc_54();
+    // this->vfunc_60(0, 0, (unk32)param_4);
+    // this->vfunc_64(param_4);
+
+    if (*(unk32*)data_027e0618 == 2) {
+        if (this->func_02032fa4() == 0) {
+            data_027e103c->func_ov000_020cfc9c(1, 0);
+        } else {
+            data_027e103c->func_ov000_020cfc9c(0, 1);
+        }
+    }
+
+    this->vfunc_5C();
+}
+
+ARM void MsgProc_Main::func_02039058(void) {
+}
+
+// non-matching
+ARM unk32 MsgProc_Main::func_0203905c(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) {
+    u16 sVar1;
+    bool bVar5;
+    
+    sVar1 = param_2[0];
+    bVar5 = (sVar1 == 0xA || sVar1 == 0x20) || sVar1 == 0x3000;
+
+    if (bVar5 && this->unk_150[2] != 0) {
+        this->unk_150[2] = 1;
+    } else {
+        this->unk_150[2] = 0;
+    }
+
+    // this->unk_150[2] = bVar5;
+
+    return this->func_02033360();
+}
+
+// non-matching
+ARM void MsgProc_Main::vfunc_08(unk32* param_2, unk32* param_3) {
     this->unk_15C = 10;
     this->unk_150[2] = 1;
     this->func_0203e2ac(param_3);
 }
 
-ARM unk32 MsgProc_Type1::vfunc_68(unk32 param_2) {    
+ARM unk32 MsgProc_Main::vfunc_68(unk32 param_2) {    
     switch (param_2) {
         case 0:
             break;
@@ -89,13 +207,13 @@ ARM unk32 MsgProc_Type1::vfunc_68(unk32 param_2) {
     return ((this->unk_18 << 3) - this->func_020337d8(param_2)) / 2;
 }
 
-ARM void MsgProc_Type1::vfunc_70(unk32* param_2, unk32* param_3) {
+ARM void MsgProc_Main::vfunc_70(unk32* param_2, unk32* param_3) {
     this->vfunc_6C(param_2, param_3);
     *param_2 += this->unk_158.x;
     *param_3 += this->unk_158.y;
 }
 
-ARM void MsgProc_Type1::vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) {
+ARM void MsgProc_Main::vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) {
     this->func_0203dc10(1, param_3);
     this->func_02033190(param_2, param_3, param_4, param_5);
 }
@@ -437,7 +555,7 @@ ARM bool MsgProc_Type1::func_0203a2c0(void) {
 }
 
 ARM unk32 MsgProc_Type1::func_0203a30c(void) {    
-    return this->unk_574 / this->unk_154->unk_06;
+    return this->unk_574 / this->pInfoEntry->unk_06;
 }
 
 // non-matching (regalloc)
@@ -594,7 +712,7 @@ ARM bool MsgProc_Type1::func_0203a6d0(unk32 param_2, unk32 param_3) {
 }
 
 // non-matching
-ARM void MsgProc_Type1::vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, unk32 param_5) {
+ARM void MsgProc_Type1::vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, UnkSubClass1_02256FF8* param_5) {
     bool bVar5;
     bool bVar2;
     int iVar4;
@@ -632,7 +750,7 @@ ARM void MsgProc_Type1::vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, 
         this->unk_57B = 0;
     }
 
-    this->func_02038f44(param_2, param_3, param_4, param_5, iVar6);
+    // this->func_02038f44(param_2, param_3, param_4, param_5, iVar6);
     this->unk_574 = 0;
 
     if (data_027e0d38 != 0 && (data_02056be4[data_027e077c.mUnk_0] & 1) != 0 && (param_4[11])) {
@@ -651,12 +769,12 @@ ARM void MsgProc_Type1::vfunc_54(void) {
     u16 *local_54 [17];
     
     if ((this->unk_18 & 0x1FFFFFFF) != 8) {
-        this->func_0203e060(0xE0, 0x40);
+        this->func_0203e060(this, 0xE0, 0x40);
     
-        if (this->unk_154 == 0) {
+        if (this->pInfoEntry == NULL) {
             iVar2 = 2;
         } else {
-            iVar2 = (int)*(char *)(this->unk_154->unk_05);
+            iVar2 = (int)*(char *)(this->pInfoEntry->unk_05);
         }
 
         this->func_0203dcfc(this->unk_50, 0, (int)this->unk_11E, iVar2);
@@ -672,7 +790,7 @@ ARM void MsgProc_Type1::vfunc_54(void) {
     this->unk_57F = 0;
     this->unk_57A = 0;
 
-    if (this->unk_154->unk_06 < 2) {
+    if (this->pInfoEntry->unk_06 < 2) {
         this->unk_580 = 1;
     }
 
@@ -682,7 +800,7 @@ ARM void MsgProc_Type1::vfunc_54(void) {
     local_54[0] = puVar3;
     iVar2 = 0;
 
-    for (iVar2 = 0; (iVar2 / this->unk_154->unk_06) == 0; iVar2++, puVar3 = this->func_02037604(local_54)) {
+    for (iVar2 = 0; (iVar2 / this->pInfoEntry->unk_06) == 0; iVar2++, puVar3 = this->func_02037604(local_54)) {
         if (local_54[iVar2] != NULL) {
             puVar3 = local_54[iVar2];
         }
@@ -781,7 +899,7 @@ ARM void MsgProc_Type1::vfunc_54(void) {
             }
         } else if (*local_54[iVar2] == '\n') {
             iVar2 = iVar2 + 1;
-            iVar4 = (iVar2 / this->unk_154->unk_06);
+            iVar4 = (iVar2 / this->pInfoEntry->unk_06);
 
             if (iVar4 == 0) {
                 break;
@@ -790,24 +908,24 @@ ARM void MsgProc_Type1::vfunc_54(void) {
     }
  */
     if (this->unk_15E == '\x06') {
-        this->func_0203e060(0xE0, 0x30);
+        this->func_0203e060(this, 0xE0, 0x30);
 
-        if (this->unk_154 == 0) {
+        if (this->pInfoEntry == NULL) {
             iVar2 = 2;
         } else {
-            iVar2 = this->unk_154->unk_05;
+            iVar2 = this->pInfoEntry->unk_05;
         }
 
         this->func_0203dcfc(this->unk_50,0,(int)this->unk_11E,iVar2);
     }
 
     if (this->unk_580 != 0) {
-        this->func_0203e060(0xE0, 0x28);
+        this->func_0203e060(this, 0xE0, 0x28);
 
-        if (this->unk_154 == 0) {
+        if (this->pInfoEntry == NULL) {
             iVar2 = 2;
         } else {
-            iVar2 = this->unk_154->unk_05;
+            iVar2 = this->pInfoEntry->unk_05;
         }
 
         this->func_0203dcfc(this->unk_50, 0, this->unk_11E, iVar2);
@@ -823,7 +941,7 @@ ARM void MsgProc_Type1::vfunc_54(void) {
         data_027e0c68.unk_28[this->unk_50]->unk_18 = uVar6;
         this->func_0203b764();
 
-        if (this->unk_15F == 0 || this->unk_154->unk_06 < 3) {
+        if (this->unk_15F == 0 || this->pInfoEntry->unk_06 < 3) {
             this->unk_168.unk_5C.unk_08 = this->unk_168.unk_7C;
             this->unk_168.func_020352d8();
         } else {
@@ -838,7 +956,7 @@ ARM void MsgProc_Type1::vfunc_54(void) {
 }
 
 ARM void MsgProc_Type1::vfunc_5C(void) {
-    if (this->unk_15F == 0 || this->unk_154->unk_06 <= 2) {
+    if (this->unk_15F == 0 || this->pInfoEntry->unk_06 <= 2) {
         this->unk_168.unk_5C.unk_08 = this->unk_168.unk_7C;
         this->unk_168.func_020352d8();
     } else {
@@ -1002,7 +1120,7 @@ ARM unk32 MsgProc_Type1::vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, un
 }
 
 // non-matching
-ARM unk32 MsgProc_Type1::vfunc_1C(unk8 param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) {
+ARM unk32 MsgProc_Type1::vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) {
     int iVar1;
     u16* psVar3;
 
@@ -1028,7 +1146,7 @@ ARM unk32 MsgProc_Type1::vfunc_1C(unk8 param_2, UnkStruct_0203b264* param_3, unk
             UnknownMsgChoiceStruct* pChoiceData;
             s32 i = this->func_0203a30c();
             pChoiceData = &this->unk_428[this->unk_528[i]];
-            return this->unk_164->func_0203cb5c(param_2, (((pChoiceData->unk_00->mUnk_0[3] << 0x10) | ((u16*)pChoiceData->unk_00->mUnk_0)[2]) + ~0xFFFE));
+            return this->unk_164->func_0203cb5c(*param_2, (((pChoiceData->unk_00->mUnk_0[3] << 0x10) | ((u16*)pChoiceData->unk_00->mUnk_0)[2]) + ~0xFFFE));
         default:
             break;
     }
@@ -1118,7 +1236,7 @@ ARM void MsgProc_Type1::vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, 
 }
 
 // non-matching (regalloc)
-ARM void MsgProc_Type1::vfunc_64(unk32 param_2) {
+ARM void MsgProc_Type1::vfunc_64(s16* param_2) {
     unk32 uVar2;
 
     if (this->unk_50 != 0 || data_027e0db0.unk_04 > 0 || func_0203c084() != 0 || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
@@ -1157,7 +1275,7 @@ ARM void MsgProc_Type1::func_0203b764(void) {
             this->unk_158.y -= 38;
             break;
         case 2:
-            switch (this->unk_154->unk_06) {
+            switch (this->pInfoEntry->unk_06) {
                 case 2:
                     this->unk_158.y -= 111;
                     break;
