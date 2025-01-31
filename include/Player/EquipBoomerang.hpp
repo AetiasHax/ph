@@ -40,4 +40,15 @@ public:
     Actor *GetActor();
     void func_ov014_0213d184();
     void func_ov014_0213d1b0();
+
+    void func_ov053_02199014();
+    void func_ov053_02199020();
+    s32 func_ov053_0219902c(s32 param1);
+    void func_ov053_02199038();
+    void func_ov053_021990f0(unk16 param1);
+    bool func_ov053_02199128(s32 *param1);
+    void func_ov053_02199168();
+    void func_ov053_021991ec();
+    bool func_ov053_02199410(s32 param1);
+    bool func_ov053_021994cc(Vec3p *param1);
 };
