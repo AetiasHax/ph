@@ -4,7 +4,10 @@
 #include "types.h"
 
 #include "DTCM/UnkStruct_027e0fd4.hpp"
+#include "Player/EquipBombchu.hpp"
+#include "Player/EquipShield.hpp"
 #include "Player/LinkStateCutscene.hpp"
+#include "Player/LinkStateFollow.hpp"
 #include "Player/PlayerLinkBase.hpp"
 
 class PlayerLink : public PlayerLinkBase {
@@ -48,4 +51,15 @@ public:
     static void func_ov014_0213f734(unk32 *param1, UnkStruct_027e0fd4 *param2);
     void func_ov014_0213f740();
     void func_ov014_0213f97c();
+
+    unk32 func_ov023_02177e7c();
+    unk32 func_ov023_02177e84();
+    void func_ov023_02177e90();
+    bool func_ov023_02178058();
+    static LinkStateFollow *GetLinkStateFollow();
+    void func_ov023_02178174();
+    static EquipBombchu *GetEquipBombchu();
+    static EquipShield *GetEquipShield();
+    void GiveControlToLink();
+    void func_ov023_02178630();
 };
