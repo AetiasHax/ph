@@ -53,7 +53,7 @@ public:
     /* 18 */ void vfunc_18(s32 param1) override;
     /* 1c */ void Init() override;
     /* 20 */ void vfunc_20() override;
-    /* 24 */ void vfunc_24() override;
+    /* 24 */ void UpdatePos() override;
     /* 28 */ void vfunc_28(s32 param1) override;
     /* 2c */ void vfunc_2c(s32 param1, unk8 param2) override;
     /* 30 */ bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) override;

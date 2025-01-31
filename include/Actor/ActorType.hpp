@@ -28,8 +28,9 @@ enum ActorTypeId_ {
     ActorTypeId_Heart = 'HART',
     ActorTypeId_Rupee = 'RUPY',
 
-    ActorTypeId_Bomb  = 'BOMB',
     ActorTypeId_Arrow = 'ARRW',
+    ActorTypeId_Blast = 'BLST',
+    ActorTypeId_Bomb  = 'BOMB',
 
     ActorTypeId_PlayerDummy = 'PLDM',
     ActorTypeId_PushBlock   = 'PSBL',
@@ -66,7 +67,6 @@ enum ActorTypeId_ {
 
     ActorTypeId_BIGR = 'BIGR',
     ActorTypeId_BKEY = 'BKEY',
-    ActorTypeId_BLST = 'BLST',
     ActorTypeId_BMRN = 'BMRN',
     ActorTypeId_BMTY = 'BMTY',
     ActorTypeId_BTRF = 'BTRF',

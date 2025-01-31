@@ -40,7 +40,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case ItemFlag_BombchuBag:
             iVar3 = data_027e103c->func_ov000_020cf01c();
             if (*(u8 *) (iVar3 + 0xe0) == '\0') {
-                func_ov014_0213ec64((s32) GetEquipBombchu());
+                GetEquipBombchu()->func_ov014_0213ec64();
             }
             func_ov014_0211fd04(data_027e1098);
             break;

@@ -25,15 +25,19 @@ private:
 public:
     /* 04 */ virtual ~EquipBoomerang() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-    /* 10 */ virtual void vfunc_10() override; // func_ov14_0213d078
-
+    /* 10 */ virtual void vfunc_10() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
-    /* 18 */ virtual void vfunc_18() override; // func_ov53_02199064
-    /* 1c */ virtual void vfunc_1c() override; // func_ov53_021990d0
-
-    /* 30 */ virtual void vfunc_30() override; // func_ov53_0219913c
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov53_02199318
+    /* 18 */ virtual void vfunc_18() override;
+    /* 1c */ virtual void vfunc_1c() override;
+    /* 28 */ virtual bool UpdateInUse(unk32 param1) override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
     /* 50 */
 
+    EquipBoomerang();
+    void func_ov014_0213d098();
+    void func_ov014_0213d0bc(Vec3p *param1);
     Actor *GetActor();
+    void func_ov014_0213d184();
+    void func_ov014_0213d1b0();
 };

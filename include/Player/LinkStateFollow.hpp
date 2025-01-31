@@ -40,6 +40,7 @@ public:
 
     LinkStateFollow(PlayerLinkBase *link);
 
+    static EquipRope *GetEquipRope();
     void func_ov005_0210b9c4();
     void func_ov005_0210ba98();
     void func_ov005_0210babc();

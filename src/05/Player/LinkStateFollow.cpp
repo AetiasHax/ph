@@ -2,7 +2,7 @@
 #include "Player/LinkStateCutscene.hpp"
 
 void LinkStateFollow::OnStateEnter() {}
-EquipRope *GetEquipRope() {}
+EquipRope *LinkStateFollow::GetEquipRope() {}
 void LinkStateFollow::vfunc_1c() {}
 void LinkStateFollow::func_ov005_0210b9c4() {}
 void LinkStateFollow::func_ov005_0210ba98() {}

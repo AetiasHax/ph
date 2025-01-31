@@ -37,29 +37,47 @@ public:
     /* a0 */ unk32 mUnk_a0;
     /* a4 */
 
-    EquipRope();
-
     /* 04 */ virtual ~EquipRope() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-    /* 10 */ virtual void vfunc_10() override; // func_ov14_0213d3a0
-
-    u16 GetAmmo();
+    /* 10 */ virtual void vfunc_10() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
-    /* 18 */ virtual void vfunc_18() override; // func_ov57_021992f4
-    /* 1c */ virtual void vfunc_1c() override; // func_ov57_0219935c
-
-    /* 30 */ virtual void vfunc_30() override; // func_ov57_02199744
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov57_021998f0
+    /* 18 */ virtual void vfunc_18() override;
+    /* 1c */ virtual void vfunc_1c() override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
     /* 50 */
 
+    u16 GetAmmo();
+
+    EquipRope();
+    bool func_ov014_0213d3d4(Vec3p *vec);
+    void func_ov014_0213d404(unk32 *param1);
     Actor *func_ov14_0213d420();
     s32 func_ov14_0213d440(s32 actorId);
     s32 func_ov14_0213d480(s32 actorId);
+    bool func_ov014_0213d4c8();
+    bool func_ov014_0213d4ec(unk32 *param1, s32 param2);
+    s32 func_ov014_0213d594(s32 param1);
+    bool func_ov014_0213d5d0(unk32 *param1, s32 param2);
+    s32 func_ov014_0213d63c(s32 param1);
+    bool func_ov014_0213d684();
+    bool func_ov014_0213d6e0();
+    bool func_ov014_0213d71c(s32 param1, ActorRef *param2);
+    bool func_ov014_0213d788(s32 param1);
     bool func_ov14_0213d81c(s32 index, Vec3p *vec);
     void func_ov14_0213d91c(s32 index);
+    bool func_ov014_0213d9ac();
     bool func_ov14_0213dadc(s32 index, Cylinder *cylinder);
+    void func_ov014_0213db34();
+    void func_ov014_0213db60();
+    void func_ov014_0213dba4(Vec3p *param1);
+    s32 func_ov014_0213dda0();
     s32 func_ov14_0213ddd4(Actor *actor);
     bool func_ov14_0213defc(Actor *actor);
+    bool func_ov014_0213dfbc(Cylinder *cylinder, s32 param2, Vec3p *vec);
+    void func_ov014_0213e144(Vec3p *param1, Vec3p *param2, s32 param3);
+    bool func_ov014_0213e20c(s32 param1, Vec3p *param2);
+    bool func_ov014_0213e328();
 
     static void StopUsing(LinkStateItem *param1);
 };

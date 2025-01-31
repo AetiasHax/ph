@@ -556,7 +556,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
                 } break;
 
                 case ActorTypeId_Bomb:
-                case ActorTypeId_BLST:
+                case ActorTypeId_Blast:
                 case ActorTypeId_BMTY:
                 case ActorTypeId_CBLS: {
                     knockback.mUnk_10 = 6;

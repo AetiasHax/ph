@@ -15,19 +15,17 @@ private:
     /* 24 */
 
 public:
-    EquipBomb();
-
-    /* 00 */ virtual void vfunc_00() override; // func_ov55_02198d00
+    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipBomb() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
-    /* 18 */ virtual void vfunc_18() override; // func_ov55_02198d8c
-
-    /* 30 */ virtual void vfunc_30() override; // func_ov55_02198da4
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov55_2198df8
-    /* 50 */ virtual void vfunc_50(); // func_ov14_0213d228
+    /* 18 */ virtual void vfunc_18() override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
+    /* 50 */ virtual unk32 vfunc_50();
     /* 54 */
 
     static void StopUsing(LinkStateItem *param1, unk32 param2);
+
+    EquipBomb();
 };
