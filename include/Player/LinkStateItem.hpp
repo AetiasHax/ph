@@ -64,4 +64,6 @@ public:
     void func_ov005_02106980(unk32 param, s32 param2, s32 *param3);
     bool func_ov005_02106a50();
     bool func_ov005_02106bbc(Vec3p *param1, unk32 param2, u32 param3);
+
+    void StopUsingScoop();
 };

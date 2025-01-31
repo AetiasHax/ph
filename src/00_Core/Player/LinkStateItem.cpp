@@ -57,7 +57,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
             pData_027e103c->mUnk_2a            = 0;
             pData_027e103c->func_ov000_020cf9dc(0, 0);
             break;
-        case ItemFlag_Shovel: EquipScoop::StopUsing(this); break;
+        case ItemFlag_Shovel: this->StopUsingScoop(); break;
     }
 
     if (this->mEquipId != ItemFlag_None) {

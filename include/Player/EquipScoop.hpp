@@ -25,7 +25,9 @@ public:
     /* 48 */ virtual unk32 vfunc_48(unk32 param1) const override;
     /* 50 */
 
-    static void StopUsing(LinkStateItem *param1);
-
     EquipScoop();
+
+    s32 func_ov054_02198e08(Vec3p *param1);
+    bool func_ov054_021980e24(Vec3p *param1);
+    void func_ov054_02198eec(unk32 param1);
 };
