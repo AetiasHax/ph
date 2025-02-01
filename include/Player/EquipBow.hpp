@@ -3,9 +3,13 @@
 #include "types.h"
 
 #include "Player/EquipItem.hpp"
+#include "Render/ModelRender.hpp"
 
 class EquipBow : public EquipItem {
-private:
+public:
+    static ModelRender gModelRenderBow;
+    static ModelRender gModelRenderArrow;
+
     /* 00 (base) */
     /* 09 */ unk8 mUnk_09;
     /* 0a */ unk8 mUnk_0a;
@@ -14,7 +18,6 @@ private:
     /* 0d */ unk8 mUnk_0d[3];
     /* 10 */
 
-public:
     /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipBow() override;
     /* 0c */ virtual ItemFlag GetId() const override;
@@ -25,4 +28,8 @@ public:
     /* 50 */
 
     EquipBow();
+
+    bool func_ov056_02198ee8();
+    void func_ov056_02198f48(u16 param1);
+    bool func_ov056_021992f8();
 };

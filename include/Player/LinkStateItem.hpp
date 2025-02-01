@@ -75,4 +75,8 @@ public:
     void func_ov055_02199020();
     void func_ov055_021993b8();
     void func_ov055_02199654();
+
+    void func_ov056_021990c0();
+    void func_ov056_0219911c();
+    bool func_ov056_021992f8();
 };
