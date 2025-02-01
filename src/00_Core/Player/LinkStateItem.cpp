@@ -47,7 +47,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case ItemFlag_OshusSword: break;
         case ItemFlag_WoodenShield: break;
         case ItemFlag_Boomerang: break;
-        case ItemFlag_BombBag: EquipBomb::StopUsing(this, param1); break;
+        case ItemFlag_BombBag: this->StopUsingBomb(param1); break;
         case ItemFlag_Bow: break;
         case ItemFlag_GrapplingHook: EquipRope::StopUsing(this); break;
         case ItemFlag_Hammer: EquipHammer::StopUsing(this); break;
