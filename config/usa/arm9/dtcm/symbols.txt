@@ -146,7 +146,7 @@ gPlayerControlDatas kind:bss addr:0x27e0fd8
 gLinkStates kind:bss addr:0x27e0fdc
 data_027e0fe0 kind:bss addr:0x27e0fe0
 gActorManager kind:bss addr:0x27e0fe4
-data_027e0fe8 kind:bss addr:0x27e0fe8
+gActorSpawner kind:bss addr:0x27e0fe8
 data_027e0fec kind:bss addr:0x27e0fec
 data_027e0ff0 kind:bss addr:0x27e0ff0
 data_027e0ff4 kind:bss addr:0x27e0ff4
