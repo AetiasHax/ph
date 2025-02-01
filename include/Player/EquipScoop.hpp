@@ -3,16 +3,18 @@
 #include "types.h"
 
 #include "Player/EquipItem.hpp"
+#include "Render/ModelRender.hpp"
 
 class LinkStateItem;
 
 class EquipScoop : public EquipItem {
-private:
+public:
+    static ModelRender gModelRender;
+
     /* 0 (base) */
     /* 9 */ unk8 mUnk_9[3];
     /* c */
 
-public:
     /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipScoop() override;
     /* 0c */ virtual ItemFlag GetId() const override;
@@ -29,5 +31,4 @@ public:
 
     s32 func_ov054_02198e08(Vec3p *param1);
     bool func_ov054_021980e24(Vec3p *param1);
-    void func_ov054_02198eec(unk32 param1);
 };
