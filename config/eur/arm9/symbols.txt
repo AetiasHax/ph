@@ -1650,7 +1650,7 @@ _ZN31UnkSubClass1_UnkownClass2_Base1C1Ev kind:function(arm,size=0x48) addr:0x203
 _ZN12MsgProc_BaseC2Ev kind:function(thumb,size=0x78) addr:0x2032f0c
 func_02032f84 kind:function(thumb,size=0x4) addr:0x2032f84
 func_02032f88 kind:function(thumb,size=0xc) addr:0x2032f88
-func_02032f94 kind:function(thumb,size=0x4) addr:0x2032f94
+_ZN12MsgProc_BaseD2Ev kind:function(thumb,size=0x4) addr:0x2032f94
 func_02032f98 kind:function(arm,size=0xc) addr:0x2032f98
 func_02032fa4 kind:function(arm,size=0x10) addr:0x2032fa4
 func_02032fb4 kind:function(arm,size=0x18) addr:0x2032fb4
@@ -2805,7 +2805,7 @@ data_02057f90 kind:data(any) addr:0x2057f90
 data_0205800c kind:data(any) addr:0x205800c
 data_02058024 kind:data(any) addr:0x2058024
 data_0205803c kind:data(any) addr:0x205803c
-data_02058054 kind:data(any) addr:0x2058054
+_ZTV13MsgProc_Base2 kind:data(any) addr:0x2058054
 data_02058088 kind:data(any) addr:0x2058088
 data_02058090 kind:data(any) addr:0x2058090
 data_02058094 kind:data(any) addr:0x2058094

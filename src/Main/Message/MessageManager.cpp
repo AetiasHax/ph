@@ -8,8 +8,8 @@ extern ARM void func_0203dc74(MsgProc_Main*, unk32, unk32);
 
 extern u32** data_027e0ce0[];
 extern u32 data_02056924[];
-extern u32* data_02068e6c;
-extern u32* data_02068e8c;
+extern UnkStruct_MsgProc_Base_unk_2C* data_02068e6c;
+extern UnkStruct_MsgProc_Base_unk_2C* data_02068e8c;
 extern u16 data_02056918[];
 extern ActorTypeId data_0205691c[];
 
@@ -456,10 +456,10 @@ ARM MsgProc_Main* UnkStruct_027E0C68::func_02036da8(u32 param_2, s16* param_3) {
         pBVar5 = this->pGroups;
         // pSVar4->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), (s16*)&iStack_38, 1);
         BMGFileInfo* entry = &(pBVar5)->entries[(param_2) >> 0x10];
-        pSVar4->vfunc_50(pEVar1, 
-        ((u32)entry->pDAT1 + (((func_02037258(entry, (((param_2))) & 0xFFFF))->offset) & ~1)),
-        // BMG_GET_MSG_ADDR(pBVar5, param_2), 
-        (s16*)&iStack_38, 1);
+        // pSVar4->vfunc_50(pEVar1, 
+        // ((u32)entry->pDAT1 + (((func_02037258(entry, (((param_2))) & 0xFFFF))->offset) & ~1)),
+        // // BMG_GET_MSG_ADDR(pBVar5, param_2), 
+        // (s16*)&iStack_38, 1);
 
         data_ov000_020eec9c.func_ov000_020d77e4(0x1C);
         return pSVar4;
