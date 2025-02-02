@@ -85,4 +85,7 @@ public:
     void func_ov057_0219a208();
     void StopUsingRope();
     bool func_ov057_0219a364();
+
+    void func_ov058_0219a454();
+    void func_ov058_0219a47c();
 };
