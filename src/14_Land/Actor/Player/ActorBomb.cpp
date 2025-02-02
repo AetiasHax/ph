@@ -3,8 +3,8 @@
 ActorType ActorBomb::gType = ActorType(ActorTypeId_Bomb, (ActorCreateFunc) ActorBomb::Create, NULL);
 
 ActorBomb *ActorBomb::Create() {}
-void ActorBomb_Unk1::vfunc_08(unk16 *param1) {}
-void ActorBomb_Unk1::vfunc_0c(s32 *param1) {}
+void ActorBomb_Unk1::vfunc_0c(unk16 *param1) {}
+void ActorBomb_Unk1::vfunc_10(s32 *param1) {}
 ActorBomb::ActorBomb() {}
 ActorBomb_Unk2::~ActorBomb_Unk2() {}
 ActorBomb::~ActorBomb() {}

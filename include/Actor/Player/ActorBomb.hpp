@@ -15,8 +15,8 @@ public:
     /* 10 */
 
     /* 00 */ ~ActorBomb_Unk1() override;
-    /* 08 */ void vfunc_08(unk16 *param1) override;
-    /* 0c */ void vfunc_0c(s32 *param1) override;
+    /* 08 */ void vfunc_0c(unk16 *param1) override;
+    /* 0c */ void vfunc_10(s32 *param1) override;
     /* 18 */
 };
 

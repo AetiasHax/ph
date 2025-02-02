@@ -11,12 +11,12 @@ public:
     /* c */
 
     /* 00 */ virtual ~UnkStruct_ov000_020beba8();
-    /* 04 */ virtual void vfunc_04(unk16 *param1);
     /* 08 */ virtual void vfunc_08(unk16 *param1);
-    /* 0c */ virtual void vfunc_0c(s32 *param1);
-    /* 10 */ virtual void vfunc_10(u16 *param1);
-    /* 14 */ virtual void vfunc_14(s32 *param1);
-    /* 18 */
+    /* 0c */ virtual void vfunc_0c(unk16 *param1);
+    /* 10 */ virtual void vfunc_10(s32 *param1);
+    /* 14 */ virtual void vfunc_14(u16 *param1);
+    /* 18 */ virtual void vfunc_18(s32 *param1);
+    /* 1c */
 
     UnkStruct_ov000_020beba8(unk32 param1);
 };
