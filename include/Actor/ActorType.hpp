@@ -28,9 +28,10 @@ enum ActorTypeId_ {
     ActorTypeId_Heart = 'HART',
     ActorTypeId_Rupee = 'RUPY',
 
-    ActorTypeId_Arrow = 'ARRW',
-    ActorTypeId_Blast = 'BLST',
-    ActorTypeId_Bomb  = 'BOMB',
+    ActorTypeId_Arrow         = 'ARRW',
+    ActorTypeId_Blast         = 'BLST',
+    ActorTypeId_Bomb          = 'BOMB',
+    ActorTypeId_GrapplingHook = 'ROPE',
 
     ActorTypeId_PlayerDummy = 'PLDM',
     ActorTypeId_PushBlock   = 'PSBL',
@@ -77,7 +78,6 @@ enum ActorTypeId_ {
     ActorTypeId_FLTB = 'FLTB',
     ActorTypeId_FLTM = 'FLTM',
     ActorTypeId_FORC = 'FORC',
-    ActorTypeId_ROPE = 'ROPE',
     ActorTypeId_SBEM = 'SBEM',
     ActorTypeId_STNE = 'STNE',
     ActorTypeId_TARU = 'TARU',

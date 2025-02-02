@@ -5,6 +5,7 @@
 #include "types.h"
 
 #include "Actor/ActorRef.hpp"
+#include "Actor/Player/ActorRope.hpp"
 #include "Physics/Cylinder.hpp"
 #include "Player/EquipItem.hpp"
 
@@ -23,7 +24,7 @@ public:
     /* 09 */ unk8 mUnk_09;
     /* 0a */ unk16 mUnk_0a;
     /* 0c */ unk8 mUnk_0c[4];
-    /* 10 */ ActorRef mRef;
+    /* 10 */ ActorRef mRopeRef;
     /* 18 */ EquipRope_Unk_18 mUnk_18[2];
     /* 50 */ unk8 mUnk_50[0x1a];
     /* 6a */ bool mUnk_6a;
@@ -52,7 +53,7 @@ public:
     EquipRope();
     bool func_ov014_0213d3d4(Vec3p *vec);
     void func_ov014_0213d404(unk32 *param1);
-    Actor *func_ov14_0213d420();
+    ActorRope *GetRopeActor();
     s32 func_ov14_0213d440(s32 actorId);
     s32 func_ov14_0213d480(s32 actorId);
     bool func_ov014_0213d4c8();

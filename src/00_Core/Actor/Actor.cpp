@@ -551,7 +551,7 @@ ARM bool Actor::func_ov00_020c243c(ActorTypeId *actorTypes, Actor **out) {
                     knockback.mUnk_10 = 5;
                 } break;
 
-                case ActorTypeId_ROPE: {
+                case ActorTypeId_GrapplingHook: {
                     knockback.mUnk_10 = 8;
                 } break;
 
@@ -759,7 +759,7 @@ ARM EquipBoomerang *Actor::GetEquipBoomerang() {
 
 ARM bool Actor::func_ov00_020c2d54() {
     const ActorTypeId types[] = {
-        ActorTypeId_ROPE,
+        ActorTypeId_GrapplingHook,
         ActorTypeId_Null,
     };
     if (mHitbox.size >= 0) {
@@ -780,7 +780,7 @@ ARM bool Actor::func_ov00_020c2de4() {
 
     EquipRope *rope = EquipSword::GetEquipRope();
 
-    Actor *actor = rope->func_ov14_0213d420();
+    ActorRope *actor = rope->GetRopeActor();
     if (actor) {
         Vec3p_Sub(&actor->mPos, &mPos, &vel);
         if (Vec3p_Length(&vel) > FLOAT_TO_Q20(1.0)) {
@@ -819,8 +819,8 @@ ARM bool Actor::func_ov00_020c2ed4() {
 
     s32 index = rope->func_ov14_0213d440(mRef.id);
     if (index >= 0) {
-        bool unk1 = rope->func_ov14_0213d420();
-        if (unk1) {
+        ActorRope *actor = rope->GetRopeActor();
+        if (actor) {
             Vec3p vel;
             if (rope->func_ov14_0213d81c(index, &vel)) {
                 mVel = vel;
