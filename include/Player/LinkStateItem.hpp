@@ -79,4 +79,10 @@ public:
     void func_ov056_021990c0();
     void func_ov056_0219911c();
     bool func_ov056_021992f8();
+
+    void func_ov057_02199e64();
+    void func_ov057_02199edc();
+    void func_ov057_0219a208();
+    void StopUsingRope();
+    bool func_ov057_0219a364();
 };

@@ -13,6 +13,27 @@ struct EquipRope_Unk_18 {
     /* 00 */ Vec3p vec;
     /* 0c */ unk8 mUnk_0c[0x10];
     /* 1c */
+
+    bool func_ov057_02198e80();
+    void func_ov057_02198fc0(u32 param1);
+    void func_ov057_02199028(s32 param1);
+    bool func_ov057_02199104(EquipRope_Unk_18 *other);
+};
+
+class EquipRope_Unk_02198dd0 {
+public:
+    /* 0 (vtable) */
+    /* 4 */ unk32 mUnk_4;
+    /* 8 */
+
+    /* 00 */ virtual ~EquipRope_Unk_02198dd0();
+    /* 08 */ unk32 vfunc_08();
+    /* 0c */ unk32 vfunc_0c();
+    /* 10 */ unk32 vfunc_10(s32 *param1);
+    /* 14 */ unk32 vfunc_14();
+    /* 18 */
+
+    EquipRope_Unk_02198dd0();
 };
 
 class Actor;
@@ -80,5 +101,16 @@ public:
     bool func_ov014_0213e20c(s32 param1, Vec3p *param2);
     bool func_ov014_0213e328();
 
-    static void StopUsing(LinkStateItem *param1);
+    void func_ov057_021990ec();
+    void func_ov057_021990f8();
+    bool func_ov057_0219922c(u32 param1);
+    void func_ov057_021992b4(s32 param1);
+    bool func_ov057_0219939c(s32 *param1, s32 param2);
+    bool func_ov057_02199454(s32 param1);
+    bool func_ov057_021994c0(unk32 *param1);
+    s32 func_ov057_021996b0(Vec3p *param1);
+    void func_ov057_02199ad8();
+    void func_ov057_02199c78();
+    void func_ov057_02199d54();
+    void func_ov057_02199e24();
 };

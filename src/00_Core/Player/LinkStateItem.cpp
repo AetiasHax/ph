@@ -49,7 +49,7 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case ItemFlag_Boomerang: break;
         case ItemFlag_BombBag: this->StopUsingBomb(param1); break;
         case ItemFlag_Bow: break;
-        case ItemFlag_GrapplingHook: EquipRope::StopUsing(this); break;
+        case ItemFlag_GrapplingHook: this->StopUsingRope(); break;
         case ItemFlag_Hammer: EquipHammer::StopUsing(this); break;
         case ItemFlag_PotionA:
         case ItemFlag_PotionB:
