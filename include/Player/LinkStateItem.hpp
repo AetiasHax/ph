@@ -88,4 +88,9 @@ public:
 
     void func_ov058_0219a454();
     void func_ov058_0219a47c();
+
+    void func_ov059_02198ffc();
+    void func_ov059_0219907c();
+    void func_ov059_021990a4();
+    void StopUsingHammer();
 };

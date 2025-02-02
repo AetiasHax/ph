@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Player/EquipHammer.hpp"
 #include "Render/ModelRender.hpp"
 
 class ActorNaviBase_Unk1 {};
@@ -43,7 +44,7 @@ class ActorNaviBase : public Actor {
     /* 344 */ unk32 mUnk_344;
     /* 348 */ unk32 mUnk_348;
     /* 34c */ unk8 mUnk_34c[0x68];
-    /* 3b4 */ unk32 mUnk_3b4;
+    /* 3b4 */ EquipHammer *mHammer;
     /* 3b8 */ unk32 mUnk_3b8;
     /* 3bc */ unk32 mUnk_3bc;
     /* 3c0 */ unk8 mUnk_3c0[0x8];
@@ -101,4 +102,12 @@ class ActorNaviBase : public Actor {
     static void func_ov000_020bb0e0();
 
     ActorNaviBase();
+
+    bool func_ov059_0219933c(u32 param1);
+    void func_ov059_0219a0ac();
+    void func_ov059_0219aa08();
+    void func_ov059_0219aba8(u32 param1);
+    bool func_ov059_0219af14();
+    bool func_ov059_0219afc4();
+    void func_ov059_0219b020();
 };

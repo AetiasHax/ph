@@ -10,7 +10,7 @@ class EquipHammer : public EquipItem {
 private:
     /* 00 (base) */
     /* 09 */ unk8 mUnk_09[3];
-    /* 0c */ unk8 mUnk_0c[0xc];
+    /* 0c */ Vec3p mUnk_0c;
     /* 18 */ unk32 mUnk_18;
     /* 1c */ unk8 mUnk_1c;
     /* 1d */ unk8 mUnk_1d;
@@ -34,7 +34,12 @@ public:
     /* 4c */ virtual s32 vfunc_4c() const override;
     /* 50 */
 
-    static void StopUsing(LinkStateItem *param1);
-
     EquipHammer();
+
+    void func_ov059_02198e90();
+    bool func_ov059_02198ebc();
+    bool func_ov059_02198ed4();
+    void func_ov059_02198f10(Vec3p *vec, unk32 param2, s32 param3);
+    void func_ov059_02198fa8(unk32 param1);
+    bool func_ov059_02198fe0();
 };
