@@ -6,7 +6,7 @@ bool EquipItem::IsUsable(unk32 param1) const {}
 bool EquipItem::IsInUse() const {}
 bool EquipItem::UpdateInUse(unk32 param1) {}
 u32 EquipItem::vfunc_2c() {}
-void vfunc_34(unk16 *param1) {}
+void EquipItem::vfunc_34(unk16 *param1) {}
 unk32 EquipItem::vfunc_40() const {}
 unk32 EquipItem::vfunc_44(unk32 param1) const {}
 unk32 EquipItem::vfunc_48(unk32 param1) const {}

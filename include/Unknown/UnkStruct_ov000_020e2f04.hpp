@@ -1,5 +1,8 @@
 #pragma once
 
+#include <nds/math.H>
+
+#include "Physics/AABB.hpp"
 #include "global.h"
 #include "types.h"
 
