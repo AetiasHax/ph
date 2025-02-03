@@ -8,7 +8,7 @@
 #include "Message/MsgProc.hpp"
 #include "lib/math.h"
 
-// astruct_14
+// astruct_14, UnkStruct_02037750
 class UnkStruct_027E0C68_UnkSubClass2_Base1 : public SysObject {
 public:
     /* 0x00 (vtable) */
@@ -45,7 +45,7 @@ public:
     void func_020376c0(Vec3p param_2);
 };
 
-// astruct_15
+// astruct_15, UnkStruct_020386d88
 class UnkStruct_027E0C68_UnkSubClass2 : public UnkStruct_027E0C68_UnkSubClass2_Base1 {
 public:
     /* 0x20 */ unk8 unk_20;

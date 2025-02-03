@@ -28,7 +28,7 @@ typedef struct UnkStruct_0203b264 {
 
 typedef u32 (*UnkCallback1)(void);
 
-// astruct_11
+// astruct_11, UnkStruct_02035064
 class UnkSubClass1_UnkownClass1_Sub1 {
 public:
     /* 0x00 */ unk16 unk_00;
@@ -43,7 +43,7 @@ public:
     UnkSubClass1_UnkownClass1_Sub1();
 };
 
-// astruct_10
+// astruct_10, UnkStruct_02035064
 class UnkSubClass1_UnkownClass1 {
 public:
     /* 0x00 (vtable) */
@@ -114,6 +114,7 @@ public:
 
 typedef bool (*UnknownCallback)(class MsgProc_Type1*);
 
+// UnkStruct_0203881c
 class UnkSubClass1_UnkownClass2 : public UnkSubClass1_UnkownClass2_Base1 {
 public:
     /* 0x14 */ unk32 unk_14;
@@ -221,7 +222,7 @@ struct UnkStruct_MsgProc_Base_unk_2C {
     /* 0x0C */
 };
 
-// astruct_8
+// astruct_8, UnkStruct_02032e7c
 class MsgProc_Base : public SysObject {
 public:
     /* 0x000 (vtable) */
@@ -309,7 +310,7 @@ public:
     unk32 func_0203d1b4(void);
 };
 
-// astruct_7
+// astruct_7, UnkStruct_0203dae0
 class MsgProc_Base2 : public MsgProc_Base {
 public:
     /* 0x052 */ unk16 unk_52;
@@ -425,7 +426,7 @@ struct func_02038f44_param4 {
     u8 unk_15;
 };
 
-// astruct_6
+// astruct_6, UnkStruct_02038aa0
 class MsgProc_Main : public MsgProc_Base2 {
 public:
     /* 0x124 */ UnkSubClass1_unk_124* unk_124;
@@ -531,7 +532,7 @@ struct UnknownMsgChoiceStruct {
     /* 0x08 */
 };
 
-// astruct_2
+// astruct_2, UnkStruct_020397f8
 class MsgProc_Type1 : public MsgProc_Main {
 public:
     /* 0x164 */ MsgProc_Type1* unk_164;

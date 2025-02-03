@@ -43,20 +43,31 @@ private:
 public:
     EquipSword();
 
-    /* 00 */ virtual void vfunc_00() override; // func_ov00_020beffc
+    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipSword() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-    /* 10 */ virtual void vfunc_10() override; // func_ov00_020bf18c
+    /* 10 */ virtual void vfunc_10() override;
 
-    /* 18 */ virtual void vfunc_18() override; // func_ov00_020bf270
-    /* 1c */ virtual void vfunc_1c() override; // func_ov00_020bf2d8
+    /* 18 */ virtual void vfunc_18() override;
+    /* 1c */ virtual void vfunc_1c() override;
 
     /* 28 */ virtual bool UpdateInUse(unk32 param1) override;
-    /* 2c */ virtual u32 vfunc_2c() override; // func_ov00_020c0674
-    /* 30 */ virtual void vfunc_30() override; // func_ov00_020bf538
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020bff94
-    /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const override; // func_ov00_020c01dc
+    /* 2c */ virtual u32 vfunc_2c() override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
+    /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const override;
     /* 50 */
 
+    void func_ov000_020bf008(unk16 param1, unk16 param2);
+    bool func_ov000_020bf028();
+    void func_ov000_020bf088();
+    void func_ov000_020bf330();
+    bool func_ov000_020bf4f4();
     static EquipRope *GetEquipRope();
+    void func_ov000_020c024c(Vec3p *param1, s32 param2);
+    void func_ov000_020c0318(Vec3p *param1, s32 param2);
+    void func_ov000_020c0550(Vec3p *param1, s32 param2);
+    void func_ov000_020c05ec(s32 param1);
+    void func_ov000_020c0648();
+    void func_ov000_020c06b0(s32 param1);
 };

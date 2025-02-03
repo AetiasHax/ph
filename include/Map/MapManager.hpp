@@ -3,7 +3,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "lib/math.h"
+#include "nds/math.h"
 
 #include "Map/Course.hpp"
 #include "Map/MapBase.hpp"
@@ -39,6 +39,11 @@ public:
     /* 0e */ unk8 mUnk_0e;
     /* 0f */ unk8 mUnk_0f;
     /* 10 */
+
+    bool func_01ffbe78(Vec3p *param1, Vec3p *param2, Vec3p *param3, Vec4p *param4);
+    bool func_01ffbf5c(s32 param1, Vec3p *param2, Vec3p *param3, s32 length);
+    bool func_01ffc118(s32 *param1, Vec3p *param2, Vec3p *param3, s32 param4, s32 *param5, u32 param6, s32 *param7);
+    bool func_01ffd1e0(s32 *param1, Vec3p *param2, Vec3p *param3, s32 param4, s32 *param5, u32 param6, s32 *param7);
 
     void func_ov00_020820ec(unk32 *param_2);
     void func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4);
@@ -172,7 +177,7 @@ public:
     unk8 MapData_vfunc_6c();
     unk8 MapData_vfunc_70();
     static unk8 func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
-    void func_ov00_02084024(unk32 param_2, AABB *param_3);
+    void GetTileWorldBounds(Vec2b *tile, AABB *tileBounds);
     unk8 MapData_vfunc_54();
     unk8 func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4);
     unk8 MapData_vfunc_78();
@@ -240,6 +245,16 @@ public:
                             Vec3p *param_8);
     bool func_ov00_02086a84(s32 *param_2, Vec3p *param_3, Vec3p *param_4, s32 param_5, s32 param_6, unk32 param_7,
                             Vec3p *param_8, Vec3p *param_9);
+
+    MapManager();
+    ~MapManager();
+    static void Create();
+    static void Destroy();
+    static void LoadMapTexSprites(s32 param1);
+    void func_ov004_02102260();
+    void func_ov004_02102264(unk32 *param1, char *param2);
+    void func_ov004_021024c4(s32 param1, unk32 param2, unk32 param3);
+    void func_ov004_021025d8();
 };
 
 extern MapManager *gMapManager;

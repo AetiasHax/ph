@@ -29,4 +29,8 @@ public:
 
     bool func_ov00_020a8f2c();
     bool func_ov00_020a8f4c();
+
+    LinkStateMove(PlayerLinkBase *link);
+
+    void func_ov005_021113d0();
 };

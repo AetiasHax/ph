@@ -449,21 +449,21 @@ data_ov026_0217975c kind:data(any) addr:0x217975c ambiguous
 data_ov026_0217977c kind:data(any) addr:0x217977c ambiguous
 data_ov026_0217979c kind:data(any) addr:0x217979c ambiguous
 data_ov026_021797bc kind:data(any) addr:0x21797bc ambiguous
-func_ov026_021797dc kind:function(arm,size=0x27c) addr:0x21797dc
-func_ov026_02179a58 kind:function(arm,size=0x38) addr:0x2179a58
-func_ov026_02179a90 kind:function(arm,size=0x11c) addr:0x2179a90
-func_ov026_02179bac kind:function(arm,size=0x38) addr:0x2179bac
-func_ov026_02179be4 kind:function(arm,size=0x38) addr:0x2179be4
-func_ov026_02179c1c kind:function(arm,size=0x38) addr:0x2179c1c
-func_ov026_02179c54 kind:function(arm,size=0x38) addr:0x2179c54
-func_ov026_02179c8c kind:function(arm,size=0x94) addr:0x2179c8c
-func_ov026_02179d20 kind:function(arm,size=0x38) addr:0x2179d20
-func_ov026_02179d58 kind:function(arm,size=0x38) addr:0x2179d58
-func_ov026_02179d90 kind:function(arm,size=0x54) addr:0x2179d90
-func_ov026_02179de4 kind:function(arm,size=0x18c) addr:0x2179de4
-func_ov026_02179f70 kind:function(arm,size=0x40) addr:0x2179f70
-func_ov026_02179fb0 kind:function(arm,size=0x38) addr:0x2179fb0
-func_ov026_02179fe8 kind:function(arm,size=0x38) addr:0x2179fe8
+__sinit_ov026_021797dc kind:function(arm,size=0x27c) addr:0x21797dc
+__sinit_ov026_02179a58 kind:function(arm,size=0x38) addr:0x2179a58
+__sinit_ov026_02179a90 kind:function(arm,size=0x11c) addr:0x2179a90
+__sinit_ov026_02179bac kind:function(arm,size=0x38) addr:0x2179bac
+__sinit_ov026_02179be4 kind:function(arm,size=0x38) addr:0x2179be4
+__sinit_ov026_02179c1c kind:function(arm,size=0x38) addr:0x2179c1c
+__sinit_ov026_02179c54 kind:function(arm,size=0x38) addr:0x2179c54
+__sinit_ov026_02179c8c kind:function(arm,size=0x94) addr:0x2179c8c
+__sinit_ov026_02179d20 kind:function(arm,size=0x38) addr:0x2179d20
+__sinit_ov026_02179d58 kind:function(arm,size=0x38) addr:0x2179d58
+__sinit_ov026_02179d90 kind:function(arm,size=0x54) addr:0x2179d90
+__sinit_ov026_02179de4 kind:function(arm,size=0x18c) addr:0x2179de4
+__sinit_ov026_02179f70 kind:function(arm,size=0x40) addr:0x2179f70
+__sinit_ov026_02179fb0 kind:function(arm,size=0x38) addr:0x2179fb0
+__sinit_ov026_02179fe8 kind:function(arm,size=0x38) addr:0x2179fe8
 data_ov026_0217a068 kind:data(any) addr:0x217a068
 data_ov026_0217a0cc kind:data(any) addr:0x217a0cc ambiguous
 data_ov026_0217a0ec kind:data(any) addr:0x217a0ec ambiguous
