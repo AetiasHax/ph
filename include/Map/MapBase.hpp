@@ -5,7 +5,7 @@
 #include "global.h"
 #include "types.h"
 
-#include "lib/math.h"
+#include "nds/math.h"
 
 #include "Map/CameraViewpoint.hpp"
 #include "Map/Course.hpp"
@@ -25,6 +25,7 @@ struct MapBase_Unk_180 {
     /* 4 */
 
     ~MapBase_Unk_180();
+    MapBase_Unk_180();
 };
 
 struct MapBase_Unk1 {
@@ -234,4 +235,11 @@ public:
     void func_ov00_02080de4();
     unk8 func_ov00_02080de8(unk32 param_2);
     void func_ov00_02080edc();
+
+    MapBase(u32 param1, u32 param2);
+    void func_ov004_0210c118();
+    void func_ov004_0210cb1c();
+    void func_ov004_0210cb38();
+    void func_ov004_0210cc20(Course *course);
+    void func_ov004_0210cc58(Course *course, u32 map);
 };

@@ -50,4 +50,47 @@ public:
     static EquipBombchu *GetEquipBombchu();
     static LinkStateMove *GetLinkStateMove();
     bool func_ov00_020abf70();
+
+    LinkStateItem(PlayerLinkBase *link);
+
+    void func_ov005_02105850();
+    void func_ov005_02105c28();
+    void func_ov005_02105d94();
+    void func_ov005_02105dac();
+    void func_ov005_02106644();
+    void func_ov005_02106700(Vec3p *param1, unk8 *param2);
+    void func_ov005_02106740(s32 *param1, s32 param2);
+    bool func_ov005_02106894(s32 param1, s32 param2);
+    void func_ov005_02106980(unk32 param, s32 param2, s32 *param3);
+    bool func_ov005_02106a50();
+    bool func_ov005_02106bbc(Vec3p *param1, unk32 param2, u32 param3);
+
+    bool func_ov054_02198efc(s32 param1, unk32 param2, u32 param3);
+    bool func_ov054_021992c8(unk32 param1, unk32 param2, u32 param3);
+    void StopUsingScoop();
+
+    void func_ov054_02198eec();
+    void func_ov055_02198f78();
+    void StopUsingBomb(s32 param1);
+    void func_ov055_02199020();
+    void func_ov055_021993b8();
+    void func_ov055_02199654();
+
+    void func_ov056_021990c0();
+    void func_ov056_0219911c();
+    bool func_ov056_021992f8();
+
+    void func_ov057_02199e64();
+    void func_ov057_02199edc();
+    void func_ov057_0219a208();
+    void StopUsingRope();
+    bool func_ov057_0219a364();
+
+    void func_ov058_0219a454();
+    void func_ov058_0219a47c();
+
+    void func_ov059_02198ffc();
+    void func_ov059_0219907c();
+    void func_ov059_021990a4();
+    void StopUsingHammer();
 };

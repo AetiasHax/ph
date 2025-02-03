@@ -2,32 +2,35 @@
 
 #include "types.h"
 
+#include "Actor/Actor.hpp"
+#include "Actor/ActorRef.hpp"
 #include "Player/EquipItem.hpp"
+#include "Render/ModelRender.hpp"
+
+#define MAX_BOMB_ACTORS 3
 
 class LinkStateItem;
 
 class EquipBomb : public EquipItem {
-private:
+public:
+    static ModelRender gModelRender;
+
     /* 00 (base) */
-    /* 09 */ unk8 mUnk_09[3];
-    /* 0c */ unk32 mUnk_0c;
-    /* 10 */ unk8 mUnk_10[0x14];
+    /* 09 */ unk8 mUnk_09[0x3];
+    /* 0c */ ActorRef mBombs[MAX_BOMB_ACTORS];
     /* 24 */
 
-public:
-    EquipBomb();
-
-    /* 00 */ virtual void vfunc_00() override; // func_ov55_02198d00
+    /* 00 */ virtual void vfunc_00() override;
     /* 04 */ virtual ~EquipBomb() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
-    /* 18 */ virtual void vfunc_18() override; // func_ov55_02198d8c
-
-    /* 30 */ virtual void vfunc_30() override; // func_ov55_02198da4
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov55_2198df8
-    /* 50 */ virtual void vfunc_50(); // func_ov14_0213d228
+    /* 18 */ virtual void vfunc_18() override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
+    /* 50 */ virtual unk32 vfunc_50();
     /* 54 */
 
-    static void StopUsing(LinkStateItem *param1, unk32 param2);
+    EquipBomb();
+
+    Actor *func_ov055_02198e60();
 };

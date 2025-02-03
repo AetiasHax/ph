@@ -8,7 +8,7 @@ AllowShortCaseLabelsOnASingleLine: true
 AllowShortEnumsOnASingleLine: false
 
 IndentCaseLabels: true
-IndentExternBlock: Indent
+IndentExternBlock: NoIndent
 IndentPPDirectives: BeforeHash
 NamespaceIndentation: All
 IndentAccessModifiers: false
