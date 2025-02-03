@@ -18,10 +18,10 @@ public:
     /* 160 */ s32 mUnk_160;
     /* 164 */
 
-    /* 00 */ ~ActorBlast() override;
-    /* 08 */ bool vfunc_08() override;
-    /* 14 */ void vfunc_14(u32 param1) override;
-    /* 18 */ void vfunc_18(u32 param1) override;
+    /* 00 */ virtual ~ActorBlast() override;
+    /* 08 */ virtual bool vfunc_08() override;
+    /* 14 */ virtual void vfunc_14(u32 param1) override;
+    /* 18 */ virtual void vfunc_18(u32 param1) override;
     /* b4 */
 
     static ActorBlast *Create();

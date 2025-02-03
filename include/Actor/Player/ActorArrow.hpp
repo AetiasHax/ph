@@ -35,14 +35,14 @@ public:
     /* 1b7 */ bool mUnk_1b7;
     /* 1b8 */
 
-    /* 00 */ ~ActorArrow() override;
-    /* 08 */ bool vfunc_08() override;
-    /* 10 */ void vfunc_10(u32 param1) override;
-    /* 14 */ void vfunc_14(u32 param1) override;
-    /* 18 */ void vfunc_18(u32 param1) override;
-    /* 20 */ void vfunc_20(bool param1) override;
-    /* 44 */ bool CollidesWith(Actor *other) override;
-    /* 48 */ bool vfunc_48(Knockback *param1) override;
+    /* 00 */ virtual ~ActorArrow() override;
+    /* 08 */ virtual bool vfunc_08() override;
+    /* 10 */ virtual void vfunc_10(u32 param1) override;
+    /* 14 */ virtual void vfunc_14(u32 param1) override;
+    /* 18 */ virtual void vfunc_18(u32 param1) override;
+    /* 20 */ virtual void vfunc_20(bool param1) override;
+    /* 44 */ virtual bool CollidesWith(Actor *other) override;
+    /* 48 */ virtual bool vfunc_48(Knockback *param1) override;
     /* b4 */
 
     static ActorArrow *Create();

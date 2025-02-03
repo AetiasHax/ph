@@ -45,22 +45,22 @@ public:
     /* 6c */ DebugHierarchy *mDebugHierarchy_2;
     /* 70 */
 
-    /* 00 */ s32 GetMaxHealth() override;
-    /* 08 */ ItemFlag GetEquipId() override;
-    /* 0c */ bool CanMove() override;
-    /* 10 */ void vfunc_10(Cylinder *param1) override;
-    /* 14 */ void vfunc_14(Cylinder *param1) override;
-    /* 18 */ void vfunc_18(s32 param1) override;
-    /* 1c */ void Init() override;
-    /* 20 */ void vfunc_20() override;
-    /* 24 */ void UpdatePos() override;
-    /* 28 */ void vfunc_28(s32 param1) override;
-    /* 2c */ void vfunc_2c(s32 param1, unk8 param2) override;
-    /* 30 */ bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) override;
-    /* 34 */ bool Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) override;
-    /* 38 */ bool TeleportToEntrance(unk32 entranceId, bool param2) override;
-    /* 3c */ bool TeleportToLastEntrance(bool param1) override;
-    /* 50 */ ~PlayerLinkBase() override;
+    /* 00 */ virtual s32 GetMaxHealth() override;
+    /* 08 */ virtual ItemFlag GetEquipId() override;
+    /* 0c */ virtual bool CanMove() override;
+    /* 10 */ virtual void vfunc_10(Cylinder *param1) override;
+    /* 14 */ virtual void vfunc_14(Cylinder *param1) override;
+    /* 18 */ virtual void vfunc_18(s32 param1) override;
+    /* 1c */ virtual void Init() override;
+    /* 20 */ virtual void vfunc_20() override;
+    /* 24 */ virtual void UpdatePos() override;
+    /* 28 */ virtual void vfunc_28(s32 param1) override;
+    /* 2c */ virtual void vfunc_2c(s32 param1, unk8 param2) override;
+    /* 30 */ virtual bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) override;
+    /* 34 */ virtual bool Teleport(Vec3p *pos, s16 angle, unk32 param3, bool param4, bool param5) override;
+    /* 38 */ virtual bool TeleportToEntrance(unk32 entranceId, bool param2) override;
+    /* 3c */ virtual bool TeleportToLastEntrance(bool param1) override;
+    /* 50 */ virtual ~PlayerLinkBase() override;
     /* 58 */ virtual bool vfunc_58();
     /* 5c */ virtual bool vfunc_5c();
     /* 60 */ virtual bool vfunc_60();

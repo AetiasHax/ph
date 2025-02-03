@@ -24,24 +24,24 @@ public:
     /* 247 */ unk8 mUnk_247;
     /* 248 */
 
-    /* 04 */ ~PlayerBattleLinkControlData() override;
-    /* 10 */ unk32 GetCharacterId() override;
-    /* 14 */ void vfunc_14(s32 param1) override;
-    /* 18 */ void vfunc_18() override;
-    /* 20 */ void vfunc_20() override;
-    /* 2c */ void vfunc_2c() override;
-    /* 30 */ void vfunc_30() override;
-    /* 38 */ void vfunc_38(s32 param1, s32 param2) override;
-    /* 3c */ void vfunc_3c(s32 param1, s32 param2) override;
-    /* 40 */ void vfunc_40(u16 *param1, Vec3p *param2, unk32 param3, char param4) override;
-    /* 44 */ void vfunc_44(unk32 param1, unk32 *param2, unk32 param3, unk16 param4) override;
-    /* 4c */ void vfunc_4c(unk32 param1, Vec3p *param2) override;
-    /* 60 */ void vfunc_60(unk32 param1, unk32 param2, s32 param3) override;
-    /* 64 */ void vfunc_64(u32 param1) override;
-    /* 68 */ void vfunc_68(unk32 param1, unk32 param2) override;
-    /* 6c */ void vfunc_6c(s32 param1, Vec3p *param2) override;
-    /* 70 */ void vfunc_70(s32 param1) override;
-    /* 80 */ void vfunc_80(s32 param1) override;
+    /* 04 */ virtual ~PlayerBattleLinkControlData() override;
+    /* 10 */ virtual unk32 GetCharacterId() override;
+    /* 14 */ virtual void vfunc_14(s32 param1) override;
+    /* 18 */ virtual void vfunc_18() override;
+    /* 20 */ virtual void vfunc_20() override;
+    /* 2c */ virtual void vfunc_2c() override;
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(s32 param1, s32 param2) override;
+    /* 3c */ virtual void vfunc_3c(s32 param1, s32 param2) override;
+    /* 40 */ virtual void vfunc_40(u16 *param1, Vec3p *param2, unk32 param3, char param4) override;
+    /* 44 */ virtual void vfunc_44(unk32 param1, unk32 *param2, unk32 param3, unk16 param4) override;
+    /* 4c */ virtual void vfunc_4c(unk32 param1, Vec3p *param2) override;
+    /* 60 */ virtual void vfunc_60(unk32 param1, unk32 param2, s32 param3) override;
+    /* 64 */ virtual void vfunc_64(u32 param1) override;
+    /* 68 */ virtual void vfunc_68(unk32 param1, unk32 param2) override;
+    /* 6c */ virtual void vfunc_6c(s32 param1, Vec3p *param2) override;
+    /* 70 */ virtual void vfunc_70(s32 param1) override;
+    /* 80 */ virtual void vfunc_80(s32 param1) override;
     /* 84 */
 
     PlayerBattleLinkControlData();

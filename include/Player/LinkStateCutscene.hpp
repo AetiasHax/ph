@@ -14,10 +14,10 @@ public:
     /* 20 */ unk32 mUnk_20;
     /* 24 */
 
-    /* 00 */ ~UnkStruct_ov004_0210abb8() override;
-    /* 08 */ void vfunc_08(unk32 param1) override;
-    /* 24 */ void vfunc_24(unk32 param1) override;
-    /* 2c */ unk32 vfunc_2c(s32 param1) override;
+    /* 00 */ virtual ~UnkStruct_ov004_0210abb8() override;
+    /* 08 */ virtual void vfunc_08(unk32 param1) override;
+    /* 24 */ virtual void vfunc_24(unk32 param1) override;
+    /* 2c */ virtual unk32 vfunc_2c(s32 param1) override;
     /* 34 */
 };
 

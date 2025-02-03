@@ -13,21 +13,21 @@ public:
     /* 14 */ AABB mUnk_14;
     /* 2c */
 
-    /* 00 */ ~TriggerAABB_Unk2_Unk1() override;
-    /* 08 */ unk32 vfunc_08() override;
-    /* 14 */ void vfunc_14(AABB *param1, unk32 param2, unk32 param3, unk32 param4) override;
-    /* 20 */ void SetBoundingBox(AABB *param1) override;
-    /* 2c */ void GetBoundingBox(AABB *bbox) override;
-    /* 30 */ void SetPosition(Vec3p *pos) override;
-    /* 34 */ void vfunc_34() override;
-    /* 38 */ void vfunc_38() override;
-    /* 3c */ void GetPosition(Vec3p *pos) override;
-    /* 40 */ q20 GetSizeXZ() override;
-    /* 44 */ q20 GetHeight() override;
-    /* 48 */ bool ContainsInXZ(Vec3p *pos) override;
-    /* 4c */ bool Contains(Vec3p *pos) override;
-    /* 50 */ bool IntersectsCube(Cube *cube) override;
-    /* 54 */ void vfunc_54(Cube *param1, Vec3p *param2, u32 *param3) override;
+    /* 00 */ virtual ~TriggerAABB_Unk2_Unk1() override;
+    /* 08 */ virtual unk32 vfunc_08() override;
+    /* 14 */ virtual void vfunc_14(AABB *param1, unk32 param2, unk32 param3, unk32 param4) override;
+    /* 20 */ virtual void SetBoundingBox(AABB *param1) override;
+    /* 2c */ virtual void GetBoundingBox(AABB *bbox) override;
+    /* 30 */ virtual void SetPosition(Vec3p *pos) override;
+    /* 34 */ virtual void vfunc_34() override;
+    /* 38 */ virtual void vfunc_38() override;
+    /* 3c */ virtual void GetPosition(Vec3p *pos) override;
+    /* 40 */ virtual q20 GetSizeXZ() override;
+    /* 44 */ virtual q20 GetHeight() override;
+    /* 48 */ virtual bool ContainsInXZ(Vec3p *pos) override;
+    /* 4c */ virtual bool Contains(Vec3p *pos) override;
+    /* 50 */ virtual bool IntersectsCube(Cube *cube) override;
+    /* 54 */ virtual void vfunc_54(Cube *param1, Vec3p *param2, u32 *param3) override;
     /* 5c */
 
     TriggerAABB_Unk2_Unk1();

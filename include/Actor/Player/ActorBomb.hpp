@@ -14,9 +14,9 @@ public:
     /* 0c */ unk32 mUnk_0c;
     /* 10 */
 
-    /* 00 */ ~ActorBomb_Unk1() override;
-    /* 08 */ void vfunc_0c(unk16 *param1) override;
-    /* 0c */ void vfunc_10(s32 *param1) override;
+    /* 00 */ virtual ~ActorBomb_Unk1() override;
+    /* 08 */ virtual void vfunc_0c(unk16 *param1) override;
+    /* 0c */ virtual void vfunc_10(s32 *param1) override;
     /* 18 */
 };
 
@@ -53,13 +53,13 @@ public:
     /* 264 */ unk8 mUnk_264[0x8];
     /* 26c */
 
-    /* 00 */ ~ActorBomb() override;
-    /* 08 */ bool vfunc_08() override;
-    /* 14 */ void vfunc_14(u32 param1) override;
-    /* 18 */ void vfunc_18(u32 param1) override;
-    /* 20 */ void vfunc_20(bool param1) override;
-    /* 54 */ void vfunc_54() override;
-    /* 5c */ bool SetVelocity(Vec3p *vel) override;
+    /* 00 */ virtual ~ActorBomb() override;
+    /* 08 */ virtual bool vfunc_08() override;
+    /* 14 */ virtual void vfunc_14(u32 param1) override;
+    /* 18 */ virtual void vfunc_18(u32 param1) override;
+    /* 20 */ virtual void vfunc_20(bool param1) override;
+    /* 54 */ virtual void vfunc_54() override;
+    /* 5c */ virtual bool SetVelocity(Vec3p *vel) override;
     /* b4 */
 
     static ActorBomb *Create();

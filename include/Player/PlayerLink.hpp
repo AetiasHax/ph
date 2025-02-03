@@ -21,23 +21,23 @@ public:
     /* 81 */ unk8 mUnk_81[0x3];
     /* 84 */
 
-    /* 00 */ s32 GetMaxHealth() override;
-    /* 04 */ bool vfunc_04() override;
-    /* 1c */ void Init() override;
-    /* 24 */ void UpdatePos() override;
-    /* 2c */ void vfunc_2c(s32 param1, unk8 param2) override;
-    /* 40 */ void AddHealth(s16 amount) override;
-    /* 44 */ void vfunc_44() override;
-    /* 48 */ void vfunc_48() override;
-    /* 4c */ void vfunc_4c() override;
-    /* 50 */ ~PlayerLink() override;
-    /* 68 */ void vfunc_68() override;
-    /* 6c */ void vfunc_6c() override;
-    /* 74 */ void vfunc_74() override;
-    /* 78 */ unk32 vfunc_78() override;
-    /* 7c */ void vfunc_7c() override;
-    /* 80 */ void SetUnk_5e() override;
-    /* 84 */ void ResetUnk_5e() override;
+    /* 00 */ virtual s32 GetMaxHealth() override;
+    /* 04 */ virtual bool vfunc_04() override;
+    /* 1c */ virtual void Init() override;
+    /* 24 */ virtual void UpdatePos() override;
+    /* 2c */ virtual void vfunc_2c(s32 param1, unk8 param2) override;
+    /* 40 */ virtual void AddHealth(s16 amount) override;
+    /* 44 */ virtual void vfunc_44() override;
+    /* 48 */ virtual void vfunc_48() override;
+    /* 4c */ virtual void vfunc_4c() override;
+    /* 50 */ virtual ~PlayerLink() override;
+    /* 68 */ virtual void vfunc_68() override;
+    /* 6c */ virtual void vfunc_6c() override;
+    /* 74 */ virtual void vfunc_74() override;
+    /* 78 */ virtual unk32 vfunc_78() override;
+    /* 7c */ virtual void vfunc_7c() override;
+    /* 80 */ virtual void SetUnk_5e() override;
+    /* 84 */ virtual void ResetUnk_5e() override;
     /* 88 */ virtual void OnDeath(bool param1);
     /* 8c */
 

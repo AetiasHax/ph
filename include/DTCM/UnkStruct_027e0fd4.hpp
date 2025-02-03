@@ -96,12 +96,12 @@ public:
     /* 120 */ Vec3p mUnk_120;
     /* 12c */
 
-    /* 00 */ ~UnkStruct_027e0fd4() override;
-    /* 08 */ bool vfunc_08() override;
-    /* 0c */ bool vfunc_0c() override;
-    /* 10 */ bool vfunc_10(s32 *param1) override;
-    /* 14 */ bool vfunc_14(u16 *index, unk32 param2) override;
-    /* 18 */ void Clear() override;
+    /* 00 */ virtual ~UnkStruct_027e0fd4() override;
+    /* 08 */ virtual bool vfunc_08() override;
+    /* 0c */ virtual bool vfunc_0c() override;
+    /* 10 */ virtual bool vfunc_10(s32 *param1) override;
+    /* 14 */ virtual bool vfunc_14(u16 *index, unk32 param2) override;
+    /* 18 */ virtual void Clear() override;
     /* 1c */ virtual void vfunc_1c();
     /* 20 */
 
