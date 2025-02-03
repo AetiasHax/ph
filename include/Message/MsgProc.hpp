@@ -85,6 +85,8 @@ public:
     /* 0x04 */ virtual unk16 func_020351b0(void);
     /* 0x08 */
 
+    static unk32 func_02035428(u8 param_2);
+
     UnkSubClass1_UnkownClass1();
     ~UnkSubClass1_UnkownClass1();
     void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34*);
@@ -204,13 +206,18 @@ public:
 };
 
 struct UnkStruct_MsgProc_Base_unk_2C_2 {
-    /* 0x00 */ unk32 unk_00;
+    /* 0x00 */ s8 unk_00;
+    /* 0x00 */ s8 unk_01;
+    /* 0x00 */ s8 unk_02;
+    /* 0x00 */ s8 unk_03;
     /* 0x04 */ unk32 unk_04;
     /* 0x00 */ u8* unk_08;
     /* 0x04 */
 };
 struct UnkStruct_MsgProc_Base_unk_2C {
-    /* 0x08 */ UnkStruct_MsgProc_Base_unk_2C_2* unk_00;
+    /* 0x00 */ UnkStruct_MsgProc_Base_unk_2C_2* unk_00;
+    /* 0x04 */ unk32 unk_04;
+    /* 0x08 */ unk32 unk_08;
     /* 0x0C */
 };
 
@@ -220,8 +227,8 @@ public:
     /* 0x000 (vtable) */
     /* 0x004 */ unk32* unk_04;
     /* 0x008 */ UnkSubClass1_02256FF8* unk_08;
-    /* 0x00C */ unk32* unk_0C;
-    /* 0x010 */ unk32 unk_10;
+    /* 0x00C */ unk32 unk_0C;
+    /* 0x010 */ unk32* unk_10;
     /* 0x014 */ s32 unk_14;
     /* 0x018 */ s32 unk_18;
     /* 0x01C */ unk32 unk_1C;
@@ -238,8 +245,8 @@ public:
     /* 0x044 */ unk32 unk_44;
     /* 0x048 */ u8 unk_48;
     /* 0x049 */ u8 unk_49;
-    /* 0x04A */ unk16 unk_4A;
-    /* 0x04C */ unk8 unk_4C;
+    /* 0x04A */ u16 unk_4A;
+    /* 0x04C */ u8 unk_4C;
     /* 0x04C */ unk8 unk_4D;
     /* 0x04C */ unk8 unk_4E;
     /* 0x04C */ unk8 unk_4F;
@@ -252,7 +259,7 @@ public:
     /* 0x08 */ /* func_02033030 */ virtual void vfunc_08(unk32* param_2, unk32* param_3);
     /* 0x0C */ /* func_02033190 */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5);
     /* 0x10 */ /* func_020331c4 */ virtual void vfunc_10(u8 param_2, u8 param_3);
-    /* 0x14 */ /* func_02032fcc */ virtual bool vfunc_14(unk32 param_2, unk32 param_3);
+    /* 0x14 */ /* func_02032fcc */ virtual bool vfunc_14(u16 param_2, u8 param_3);
     /* 0x18 */ /* func_020332e4 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4);
     /* 0x1C */ /* func_02033360 */ virtual unk32 vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
     /* 0x20 */ /* func_020333e0 */ virtual UNK_TYPE vfunc_20(UNK_TYPE);
@@ -280,7 +287,9 @@ public:
     /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3);
     /* 0x74 */
 
+    unk32* func_02032f98(unk32 param_2);
     unk32 func_02032fa4(void);
+    unk32 func_02032fb4(void);
     unk32 func_02033360(void);
     unk32 func_020337d8(unk32 param_2);
 };
