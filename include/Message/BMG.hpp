@@ -80,10 +80,10 @@ typedef struct BMGHeader {
 
 typedef struct EntryINF1 {
     /* 0x00 */ u32 offset; // relative to the end of the DAT1 header
-    /* 0x04 */ u8 unk_04; // flags/attributes? (+0x04 to +0x06)
-    /* 0x05 */ u8 unk_05;
-    /* 0x06 */ u8 unk_06;
-    /* 0x07 */ u8 unk_07;
+    /* 0x04 */ u8 mUnk_04; // flags/attributes? (+0x04 to +0x06)
+    /* 0x05 */ u8 mUnk_05;
+    /* 0x06 */ u8 mUnk_06;
+    /* 0x07 */ u8 mUnk_07;
 } EntryINF1; // size = 0x8
 
 typedef struct SectionINF1 {
@@ -110,7 +110,7 @@ typedef struct InstrShowMsg {
 } InstrShowMsg; // size = 0x8
 
 typedef struct InstrBranch {
-    /* 0x01 */ u8 unk_01;
+    /* 0x01 */ u8 mUnk_01;
     /* 0x02 */ u16 funcIndex; // index of the query function to run
     /* 0x04 */ u16 funcArg; // the argument to use in the function
     /* 0x06 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
@@ -135,7 +135,7 @@ typedef struct SectionFLW1 {
     /* 0x00 */ SectionBase base;
     /* 0x04 */ u16 numInstructions;
     /* 0x08 */ u16 numLabels;
-    /* 0x0C */ u32 unk_0C; // always zero?
+    /* 0x0C */ u32 mUnk_0c; // always zero?
     /* 0x10 */ FLW1Instr* instructions;
     /* 0x14 */ s16* flwEntries;
     /* 0x18 */ s8* bmgFileIndices;
@@ -150,7 +150,7 @@ typedef struct SectionFLI1 {
     /* 0x00 */ SectionBase base;
     /* 0x04 */ u16 numEntries;
     /* 0x08 */ u16 entrySize;
-    /* 0x0C */ u32 unk_0C; // always zero?
+    /* 0x0C */ u32 mUnk_0c; // always zero?
     /* 0x10 */ EntryFLI1* entries;
 } SectionFLI1;
 
@@ -169,8 +169,8 @@ typedef struct BMGFileInfo {
     /* 0x08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
     /* 0x0C */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
     /* 0x10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
-    /* 0x14 */ BMGHeader* unk_14; // same as unk_00 (?)
-    /* 0x18 */ s16 unk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
+    /* 0x14 */ BMGHeader* mUnk_14; // same as unk_00 (?)
+    /* 0x18 */ s16 mUnk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
     /* 0x1A */ s16 groupId; // stores the group id
 } BMGFileInfo; // size = 0x1C
 

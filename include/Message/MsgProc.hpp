@@ -10,7 +10,7 @@
 #include "Unknown/UnkStruct_020397f8.hpp"
 #include "Unknown/UnkStruct_02035064.hpp"
 #include "Unknown/UnkStruct_02037750.hpp"
-#include "libs/nds/include/nds/math.h"
+#include "nds/math.h"
 
 // temp
 #define UNK_TYPE void
@@ -26,7 +26,7 @@ typedef struct UnkStruct_0203b264 {
 
 class UnkSubClass1_unk_410 {
 public:
-    /* 0x00 */ struct MsgProc_Type1* unk_00;
+    /* 0x00 */ struct MsgProc_Type1* mUnk_00;
     /* 0x04 */
 
     void func_0203ec34(void);
@@ -38,7 +38,7 @@ public:
 // same as UnkSubClass1_unk_410?
 class UnkSubClass1_unk_424 {
 public:
-    /* 0x00 */ struct MsgProc_Type1* unk_00;
+    /* 0x00 */ struct MsgProc_Type1* mUnk_00;
     /* 0x04 */
 
     void func_0203ee80(unk32);
@@ -51,7 +51,7 @@ public:
 class MsgProc_Base2_unk_114 : public SysObject {
 public:
     /* 0x00 (vtable) */
-    /* 0x04 */ unk32* unk_04;
+    /* 0x04 */ unk32* mUnk_04;
     /* 0x08 */
 
     MsgProc_Base2_unk_114();
@@ -64,16 +64,16 @@ public:
 };
 
 struct func_02038f44_param4 {
-    u8 unk_00;
-    u8 unk_01;
-    u8 unk_02;
-    u8 unk_03;
-    unk32 unk_04;
-    unk32 unk_08;
-    unk32 unk_0C;
-    unk32 unk_10;
-    unk8 unk_14;
-    u8 unk_15;
+    u8 mUnk_00;
+    u8 mUnk_01;
+    u8 mUnk_02;
+    u8 mUnk_03;
+    unk32 mUnk_04;
+    unk32 mUnk_08;
+    unk32 mUnk_0c;
+    unk32 mUnk_10;
+    unk8 mUnk_14;
+    u8 mUnk_15;
 };
 
 // TEMPORARY
@@ -94,8 +94,8 @@ extern char* data_02057eec; // "Menu/UI_main/opening.bin"
 extern char* data_02057ed8; // "MSP:opening.nclr"
 
 struct Struct_027e0db0 {
-    /* 0x00 */ unk32 unk_00;
-    /* 0x04 */ unk32 unk_04;
+    /* 0x00 */ unk32 mUnk_00;
+    /* 0x04 */ unk32 mUnk_04;
 };
 extern Struct_027e0db0 data_027e0db0;
 
@@ -157,16 +157,16 @@ extern "C" void func_01ffbe34(UnkStruct_01ffbe34 *param1);
 
 struct UnkClass_027e1054_unk_00_unk00 {
     /* 0x00 */ u8 unk_00[0x95];
-    /* 0x95 */ u8 unk_95;
+    /* 0x95 */ u8 mUnk_95;
 };
 struct UnkClass_027e1054_unk_00 {
-    /* 0x00 */ unk32 unk_04;
-    /* 0x00 */ UnkClass_027e1054_unk_00_unk00* unk_00;
+    /* 0x00 */ unk32 mUnk_04;
+    /* 0x00 */ UnkClass_027e1054_unk_00_unk00* mUnk_00;
 };
 class UnkClass_027e1054 {
 public:
-    UnkClass_027e1054_unk_00* unk_00;
-    unk32 unk_04;
+    UnkClass_027e1054_unk_00* mUnk_00;
+    unk32 mUnk_04;
 
     void func_ov003_020f4874(void);
     void func_ov003_020f4760(u8, unk32);
@@ -182,7 +182,7 @@ extern UnkClass_ov000_020eec9c data_ov000_020eec9c;
 
 class UnkClass_ov000_027e0d04 {
 public:
-    /* 0x00 */ unk16 unk_00;
+    /* 0x00 */ unk16 mUnk_00;
 
     void func_0203fe60(unk32);
 };

@@ -41,8 +41,8 @@ public:
 
 class UnkStruct_020386d8_24 {
 public:
-    /* 0x00 */ unk32 mUnk_00;
-    /* 0x04 */
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */
 
     void func_020376c0(Vec3p param_2);
 };

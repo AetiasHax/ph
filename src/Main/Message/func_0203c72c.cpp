@@ -11,7 +11,7 @@ extern "C" void func_0204f614(UnkClass_func_ov000_020d0644*, unk32, unk32, void*
 
 // non-matching
 ARM MsgProc_Type3::MsgProc_Type3(unk32 param_2, unk16 param_3, unk32 param_4) :
-    MsgProc_Main(1, 0, param_4)
+    UnkStruct_02038aa0(1, 0)
 {
     this->unk_162 = 1;
     this->unk_164 = 0x1A;

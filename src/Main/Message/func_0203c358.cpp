@@ -8,7 +8,7 @@
 #include "System/SysNew.hpp"
 
 THUMB MsgProc_Type2::MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4) :
-    MsgProc_Main(0, 0, param_4)    
+    UnkStruct_02038aa0(0, 0)    
 {
     this->unk_162 = 4;
     this->unk_164 = 1;
@@ -61,8 +61,8 @@ ARM void MsgProc_Type2::vfunc_3C(unk32 param_2) {
 }
 
 ARM void MsgProc_Type2::vfunc_40(unk32 param_2, unk32 param_3) {
-    param_2 += this->unk_166;
-    param_3 += this->unk_168;
+    param_2 += this->mUnk_166;
+    param_3 += this->mUnk_168;
 
     this->func_0203c4ac(param_2 + this->unk_16A, param_3 + this->unk_16C);
     this->func_02038ef4(param_2, param_3);

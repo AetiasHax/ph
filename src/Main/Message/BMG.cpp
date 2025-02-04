@@ -66,7 +66,7 @@ THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
     groupId = -1;
     pFileInfo->unk_14 = (BMGHeader*)pFile;
     pFileInfo->pHeader = (BMGHeader*)pFile;
-    pFileInfo->unk_18 = unk_18;
+    pFileInfo->unk_18 = mUnk_18;
     pSection = (SectionBase*)((u8*)pFile + sizeof(BMGHeader));
 
     for (i = 0; i < pFileInfo->pHeader->numSections; i++) {

@@ -8,9 +8,9 @@
 
 // does it host both choices?
 struct UnknownMsgChoiceStruct {
-    /* 0x00 */ UnkStruct_0203b264* unk_00;
-    /* 0x04 */ unk32 unk_04;
-    /* 0x08 */
+    /* 00 */ UnkStruct_0203b264* mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */
 };
 
 // astruct_2, MsgProc_Type1
@@ -30,31 +30,31 @@ public:
     /* 41c */ unk16 mUnk_41c;
     /* 41e */ unk16 mUnk_41e;
     /* 420 */ unk16 mUnk_420;
-    /* 422 */ unk16 unk_422;
+    /* 422 */ unk16 mUnk_422;
     /* 424 */ unk32 *mUnk_424; // UnkSubClass1_unk_424?
     /* 428 */ UnknownMsgChoiceStruct unk_428[0x20];
-    /* 0x528 */ unk16 unk_528[4]; // number of choices?
-    /* 0x55C */ unk32 unk_530;
-    /* 0x55C */ unk16 unk_534;
-    /* 0x55C */ unk16 unk_536;
-    /* 0x55C */ unk16 unk_538;
-    /* 0x55C */ unk16 unk_53A;
-    /* 0x55C */ unk32 unk_53C;
-    /* 0x55C */ unk32 unk_540;
-    /* 0x55C */ unk8 unk_544;
-    /* 0x55C */ unk8 unk_545;
-    /* 0x55C */ unk8 unk_546;
-    /* 0x55C */ unk8 unk_547;
-    /* 0x55C */ unk16 unk_548;
-    /* 0x55C */ unk16 unk_54A;
-    /* 0x55C */ unk16 unk_54C;
-    /* 0x55C */ unk16 unk_54E;
+    /* 528 */ unk16 unk_528[4]; // number of choices?
+    /* 530 */ unk32 mUnk_530;
+    /* 534 */ unk16 mUnk_534;
+    /* 536 */ unk16 mUnk_536;
+    /* 538 */ unk16 mUnk_538;
+    /* 53a */ unk16 mUnk_53a;
+    /* 53c */ unk32 mUnk_53c;
+    /* 540 */ unk32 mUnk_540;
+    /* 544 */ unk8 mUnk_544;
+    /* 545 */ unk8 mUnk_545;
+    /* 546 */ unk8 mUnk_546;
+    /* 547 */ unk8 mUnk_547;
+    /* 548 */ unk16 mUnk_548;
+    /* 54a */ unk16 mUnk_54a;
+    /* 54c */ unk16 mUnk_54c;
+    /* 54e */ unk16 mUnk_54e;
     /* 550 */ unk32 mUnk_550;
     /* 554 */ unk32 mUnk_554;
-    /* 558 */ unk8 unk_558;
-    /* 0x55C */ unk8 unk_559;
-    /* 0x55C */ unk8 unk_55A;
-    /* 0x55C */ unk8 unk_55B;
+    /* 558 */ unk8 mUnk_558;
+    /* 559 */ unk8 mUnk_559;
+    /* 55a */ unk8 mUnk_55a;
+    /* 55b */ unk8 mUnk_55b;
     /* 55c */ unk32 mUnk_55c;
     /* 560 */ unk32 mUnk_560;
     /* 564 */ u16 unk_564[4];
@@ -117,12 +117,12 @@ public:
     bool func_0203c1a0();
     bool func_0203c25c();
     /* 00 */ virtual ~UnkStruct_020397f8();
-    /* 38 */ virtual unk32 vfunc_38();
+    /* 38 */ virtual bool vfunc_38();
     /* 74 */
 
     //! TODO: check if this is really here
     static bool func_0203c25c(class MsgProc_Type1* param_1);
-    static void func_0203e060(MsgProc_Main* param_1, u8 param_2, u8 param_3);
+    static void func_0203e060(UnkStruct_02038aa0* param_1, u8 param_2, u8 param_3);
     void func_02039a3c(void);
     unk32 func_02039250(void);
     void func_02039ca8(void);
@@ -138,105 +138,103 @@ public:
     void func_0203bd8c(u16 param_2);
     void func_0203be08(void);
     void func_0203be64(void);
-    unk32 func_0203c084(void);
     bool func_0203c13c(void);
-    unk32 func_0203c1a0(void);
 };
 
 class MsgProc_Type3 : public UnkStruct_02038aa0 {
 public:
-    /* 0x164 */ unk16 unk_164;
-    /* 0x166 */ unk16 unk_166;
-    /* 0x168 */ unk16 unk_168;
-    /* 0x16A */ unk16 unk_16A;
-    /* 0x16C */ unk16 unk_16C;
-    /* 0x16E */ unk16 unk_16E;
-    /* 0x170 */ unk16 unk_170;
-    /* 0x172 */ unk16 unk_172;
-    /* 0x174 */ unk16 unk_174;
-    /* 0x178 */ unk32 unk_178;
-    /* 0x17C */ unk32 unk_17C;
-    /* 0x180 */ UnkClass_func_ov000_020d0644 unk_180[4];
-    /* 0x1C0 */
+    /* 164 */ unk16 mUnk_164;
+    /* 166 */ unk16 mUnk_166;
+    /* 168 */ unk16 mUnk_168;
+    /* 16a */ unk16 mUnk_16a;
+    /* 16c */ unk16 mUnk_16c;
+    /* 16e */ unk16 mUnk_16e;
+    /* 170 */ unk16 mUnk_170;
+    /* 172 */ unk16 mUnk_172;
+    /* 174 */ unk16 mUnk_174;
+    /* 178 */ unk32 mUnk_178;
+    /* 17c */ unk32 mUnk_17c;
+    /* 180 */ UnkClass_func_ov000_020d0644 unk_180[4];
+    /* 1c0 */
 
     MsgProc_Type3();
     MsgProc_Type3(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~MsgProc_Type3();
-    /* 0x08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
-    /* 0x0C */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
-    /* 0x10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
-    /* 0x14 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
-    /* 0x18 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
-    /* 0x1C */ virtual unk32 vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
-    /* 0x20 */ virtual void vfunc_20(void) override;
-    /* 0x24 */ virtual void vfunc_24(void) override;
-    /* 0x28 */ virtual bool vfunc_28(void) override;
-    /* 0x2C */ virtual void vfunc_2C(void) override;
-    /* 0x30 */ virtual void vfunc_30(void) override;
-    /* 0x34 */ virtual unk32 vfunc_34(unk32 param_2) override;
-    /* 0x38 */ virtual bool vfunc_38(void) override;
-    /* 0x3C */ virtual void vfunc_3C(unk32 param_2) override;
-    /* 0x40 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
-    /* 0x44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
-    /* 0x48 */ virtual void vfunc_48(void) override;
-    /* 0x4C */ virtual void vfunc_4C(void) override; // func_02039a3c?
-    /* 0x50 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, UnkSubClass1_02256FF8* param_5) override;
-    /* 0x54 */ virtual void vfunc_54(void) override;
-    /* 0x58 */ virtual void vfunc_58(void) override;
-    /* 0x5C */ virtual void vfunc_5C(void) override;
-    /* 0x60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
-    /* 0x64 */ virtual void vfunc_64(s16* param_2) override;
-    /* 0x68 */ virtual unk32 vfunc_68(unk32 param_2) override;
-    /* 0x6C */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
-    /* 0x70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
-    /* 0x74 */
+    /* 00 */ virtual ~MsgProc_Type3();
+    /* 08 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
+    /* 0c */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
+    /* 10 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
+    /* 14 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
+    /* 18 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
+    /* 1c */ virtual unk32 vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
+    /* 20 */ virtual void vfunc_20(void) override;
+    /* 24 */ virtual void vfunc_24(void) override;
+    /* 28 */ virtual bool vfunc_28(void) override;
+    /* 2c */ virtual void vfunc_2C(void) override;
+    /* 30 */ virtual void vfunc_30(void) override;
+    /* 34 */ virtual unk32 vfunc_34(unk32 param_2) override;
+    /* 38 */ virtual bool vfunc_38(void) override;
+    /* 3c */ virtual void vfunc_3C(unk32 param_2) override;
+    /* 40 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
+    /* 44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
+    /* 48 */ virtual void vfunc_48(void) override;
+    /* 4c */ virtual void vfunc_4C(void) override; // func_02039a3c?
+    /* 50 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, UnkSubClass1_02256FF8* param_5) override;
+    /* 54 */ virtual void vfunc_54(void) override;
+    /* 58 */ virtual void vfunc_58(void) override;
+    /* 5c */ virtual void vfunc_5C(void) override;
+    /* 60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
+    /* 64 */ virtual void vfunc_64(s16* param_2) override;
+    /* 68 */ virtual unk32 vfunc_68(unk32 param_2) override;
+    /* 6c */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
+    /* 70 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
+    /* 74 */
 
     static void func_0203c83c(void);
 };
 
 class MsgProc_Type2 : public UnkStruct_02038aa0 {
 public:
-    /* 0x164 */ unk16 unk_164;
-    /* 0x164 */ unk16 unk_166;
-    /* 0x164 */ unk16 unk_168;
-    /* 0x164 */ unk16 unk_16A;
-    /* 0x164 */ unk16 unk_16C;
-    /* 0x164 */ unk16 unk_16E;
-    /* 0x170 */
+    /* 164 */ unk16 mUnk_164;
+    /* 166 */ unk16 mUnk_166;
+    /* 168 */ unk16 mUnk_168;
+    /* 16a */ unk16 mUnk_16a;
+    /* 16c */ unk16 mUnk_16c;
+    /* 16e */ unk16 mUnk_16e;
+    /* 170 */
 
     MsgProc_Type2();
     MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4);
     //! TODO: remove the function declarations that are not overridden
-    /* 0x00 */ virtual ~MsgProc_Type2();
-    /* 0x08 */ /* func_02039228 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
-    /* 0x0C */ /* func_02039578 */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
-    /* 0x10 */ /* func_0203e060 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
-    /* 0x14 */ /* func_0203c5c4 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
-    /* 0x18 */ /* func_0203e284 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
-    /* 0x1C */ /* func_0203905c */ virtual unk32 vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
-    /* 0x20 */ /* func_020390a4 */ virtual void vfunc_20(void) override;
-    /* 0x24 */ /* astruct_8::vfunc_24 */ virtual void vfunc_24(void) override;
-    /* 0x28 */ /* func_0203e0c8 */ virtual bool vfunc_28(void) override;
-    /* 0x2C */ /* func_02038d20 */ virtual void vfunc_2C(void) override;
-    /* 0x30 */ /* func_02038ed0 */ virtual void vfunc_30(void) override;
-    /* 0x34 */ /* func_02038c34 */ virtual unk32 vfunc_34(unk32 param_2) override;
-    /* 0x38 */ /* func_02039570 */ virtual bool vfunc_38(void) override;
-    /* 0x3C */ /* func_0203c414 */ virtual void vfunc_3C(unk32 param_2) override;
-    /* 0x40 */ /* func_0203c460 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
-    /* 0x44 */ /* func_02038f40 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
-    /* 0x48 */ /* func_02038b74 */ virtual void vfunc_48(void) override;
-    /* 0x4C */ /* func_0203c39c */ virtual void vfunc_4C(void) override; // func_02039a3c?
-    /* 0x50 */ /* func_02038f44 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, UnkSubClass1_02256FF8* param_5) override;
-    /* 0x54 */ /* func_020392b4 */ virtual void vfunc_54(void) override;
-    /* 0x58 */ /* func_02039398 */ virtual void vfunc_58(void) override;
-    /* 0x5C */ /* func_02039058 */ virtual void vfunc_5C(void) override;
-    /* 0x60 */ /* func_020393a4 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
-    /* 0x64 */ /* func_020393a8 */ virtual void vfunc_64(s16* param_2) override;
-    /* 0x68 */ /* func_020393d0 */ virtual unk32 vfunc_68(unk32 param_2) override;
-    /* 0x6C */ /* func_0203947c */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
-    /* 0x70 */ /* func_020394d8 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
-    /* 0x74 */
+    /* 00 */ virtual ~MsgProc_Type2();
+    /* 08 */ /* func_02039228 */ virtual void vfunc_08(unk32* param_2, unk32* param_3) override;
+    /* 0c */ /* func_02039578 */ virtual void vfunc_0C(u8 param_2, u8 param_3, u8 param_4, unk32 param_5) override;
+    /* 10 */ /* func_0203e060 */ virtual void vfunc_10(u8 param_2, u8 param_3) override; // func_0203e060?
+    /* 14 */ /* func_0203c5c4 */ virtual bool vfunc_14(unk32 param_2, unk32 param_3) override;
+    /* 18 */ /* func_0203e284 */ virtual unk32 vfunc_18(UnkStruct_0203b264* param_2, unk32 param_3, unk32 param_4) override;
+    /* 1c */ /* func_0203905c */ virtual unk32 vfunc_1C(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5) override;
+    /* 20 */ /* func_020390a4 */ virtual void vfunc_20(void) override;
+    /* 24 */ /* astruct_8::vfunc_24 */ virtual void vfunc_24(void) override;
+    /* 28 */ /* func_0203e0c8 */ virtual bool vfunc_28(void) override;
+    /* 2c */ /* func_02038d20 */ virtual void vfunc_2C(void) override;
+    /* 30 */ /* func_02038ed0 */ virtual void vfunc_30(void) override;
+    /* 34 */ /* func_02038c34 */ virtual unk32 vfunc_34(unk32 param_2) override;
+    /* 38 */ /* func_02039570 */ virtual bool vfunc_38(void) override;
+    /* 3c */ /* func_0203c414 */ virtual void vfunc_3C(unk32 param_2) override;
+    /* 40 */ /* func_0203c460 */ virtual void vfunc_40(unk32 param_2, unk32 param_3) override;
+    /* 44 */ /* func_02038f40 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY) override;
+    /* 48 */ /* func_02038b74 */ virtual void vfunc_48(void) override;
+    /* 4c */ /* func_0203c39c */ virtual void vfunc_4C(void) override; // func_02039a3c?
+    /* 50 */ /* func_02038f44 */ virtual void vfunc_50(EntryINF1* param_2, u32 param_3, s16* param_4, UnkSubClass1_02256FF8* param_5) override;
+    /* 54 */ /* func_020392b4 */ virtual void vfunc_54(void) override;
+    /* 58 */ /* func_02039398 */ virtual void vfunc_58(void) override;
+    /* 5c */ /* func_02039058 */ virtual void vfunc_5C(void) override;
+    /* 60 */ /* func_020393a4 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
+    /* 64 */ /* func_020393a8 */ virtual void vfunc_64(s16* param_2) override;
+    /* 68 */ /* func_020393d0 */ virtual unk32 vfunc_68(unk32 param_2) override;
+    /* 6c */ /* func_0203947c */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
+    /* 70 */ /* func_020394d8 */ virtual void vfunc_70(unk32* param_2, unk32* param_3) override;
+    /* 74 */
 
     //! TODO: vfunc_4C?
     void func_0203c39c(unk32 param_2, unk32 param_3);

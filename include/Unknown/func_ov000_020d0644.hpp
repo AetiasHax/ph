@@ -5,10 +5,10 @@
 
 class UnkClass_func_ov000_020d0644 {
 public:
-    /* 0x00 */ unk32 unk_00;
-    /* 0x04 */ unk32 unk_04;
-    /* 0x08 */ unk32 unk_08;
-    // /* 0x0C */ unk32 unk_0C;
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    // /* 0c */ unk32 mUnk_0c;
     /* 0x10 */
 
     static void func_020d060c(void);

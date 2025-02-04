@@ -30,21 +30,21 @@ public:
 
 class UnkSubClass1_unk_124 {
 public:
-    /* 0x00 */ void* unk_00; // pointer to MsgProc_Main (well, the first members of the base class)
-    /* 0x04 */ unk32 unk_04;
-    /* 0x08 */ unk32 unk_08;
-    /* 0x0C */ unk32 unk_0C;
-    /* 0x10 */ unk32 unk_10;
-    /* 0x14 */ unk32 unk_14;
-    /* 0x18 */ unk32 unk_18;
-    /* 0x1C */ unk32 unk_1C;
-    /* 0x20 */ unk32 unk_20;
-    /* 0x24 */ unk32 unk_24;
-    /* 0x28 */ unk8 unk_28;
-    /* 0x29 */ unk8 unk_29;
-    /* 0x2A */ unk8 unk_2A;
-    /* 0x2B */ unk8 unk_2B;
-    /* 0x2C */
+    /* 00 */ void* mUnk_00; // pointer to MsgProc_Main (well, the first members of the base class)
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
+    /* 0c */ unk32 mUnk_0c;
+    /* 10 */ unk32 mUnk_10;
+    /* 14 */ unk32 mUnk_14;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk32 mUnk_1c;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ unk8 mUnk_28;
+    /* 29 */ unk8 mUnk_29;
+    /* 2a */ unk8 mUnk_2a;
+    /* 2b */ unk8 mUnk_2b;
+    /* 2c */
 
     void func_0203f020(s16*, unk32);
 };
@@ -58,7 +58,7 @@ public:
     /* 128 */ UnkStruct_0203881c mUnk_128;
     /* 150 */ u8 unk_150[4];
     /* 154 */ EntryINF1* pInfoEntry;
-    /* 158 */ Vec2s unk_158; // textbox position?
+    /* 158 */ Vec2s mUnk_158; // textbox position?
     /* 15c */ s16 mUnk_15c;
     /* 15e */ s8 mUnk_15e;
     /* 15f */ s8 mUnk_15f;
@@ -73,7 +73,7 @@ public:
     /* 2c */ virtual void vfunc_2c();
     /* 30 */ virtual void vfunc_30();
     /* 34 */ virtual unk32 vfunc_34(s32 param1);
-    /* 38 */ virtual unk32 vfunc_38();
+    /* 38 */ virtual bool vfunc_38();
     /* 3c */ virtual void vfunc_3c() = 0;
     /* 40 */ virtual void vfunc_40() = 0;
     /* 44 */ virtual void vfunc_44();

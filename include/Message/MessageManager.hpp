@@ -6,27 +6,27 @@
 #include "System/SysNew.hpp"
 #include "Message/BMG.hpp"
 #include "Message/MsgProc.hpp"
-#include "libs/nds/include/nds/math.h"
+#include "nds/math.h"
 #include "Unknown/UnkStruct_02037750.hpp"
 
 class UnkStruct_027E0C68 : public SysObject {
 public:
     /* 0x00 */ u8 unk_00[2];
-    /* 0x02 */ u8 unk_02;
-    /* 0x03 */ u8 unk_03;
-    /* 0x04 */ u8 unk_04;
-    /* 0x05 */ u8 unk_05;
-    /* 0x06 */ unk16 unk_06;
-    /* 0x08 */ MsgProc_Type1* unk_08;
-    /* 0x0C */ u8 unk_0C;
-    /* 0x0C */ u8 unk_0D;
-    /* 0x0C */ unk16 unk_0E;
-    /* 0x10 */ unk16 unk_10;
-    /* 0x10 */ unk16 unk_12;
+    /* 0x02 */ u8 mUnk_02;
+    /* 0x03 */ u8 mUnk_03;
+    /* 0x04 */ u8 mUnk_04;
+    /* 0x05 */ u8 mUnk_05;
+    /* 0x06 */ unk16 mUnk_06;
+    /* 0x08 */ MsgProc_Type1* mUnk_08;
+    /* 0x0C */ u8 mUnk_0c;
+    /* 0x0C */ u8 mUnk_0d;
+    /* 0x0C */ unk16 mUnk_0e;
+    /* 0x10 */ unk16 mUnk_10;
+    /* 0x10 */ unk16 mUnk_12;
     /* 0x14 */ BMGGroups* pGroups;
     /* 0x18 */ UnkStruct_020386d8* unk_18[2];
     /* 0x20 */ UnkStruct_02037750* unk_20[2];
-    /* 0x28 */ MsgProc_Main* unk_28[6];
+    /* 0x28 */ UnkStruct_02038aa0* unk_28[6];
     /* 0x40 */ MsgProc_Type1* unk_40[2]; // is array size 6?
     /* 0x48 */
 
@@ -55,13 +55,13 @@ public:
     bool func_02036d30(UnkStruct_02037750* param_2);
     bool func_02036d4c(UnkStruct_02037750* param_2);
     void func_02036d6c(void);
-    MsgProc_Main* func_02036da8(u32 param_2, s16* param_3);
+    UnkStruct_02038aa0* func_02036da8(u32 param_2, s16* param_3);
     void func_02036edc(u32 param_2, u8 param_3);
     MsgProc_Type1* func_02036f68(u32 param_2, u8* param_3);
     UnkStruct_020386d8* func_020370d0(unk32 param_2, unk32 param_3);
     UnkStruct_020386d8* func_020370e8(unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5);
     void func_02037158(UnkSubClass1_02256FF8* param_2);
-    MsgProc_Main* func_02037178(UnkSubClass1_02256FF8* param_2);
+    UnkStruct_02038aa0* func_02037178(UnkSubClass1_02256FF8* param_2);
 };
 
 extern UnkStruct_027E0C68 data_027e0c68;
