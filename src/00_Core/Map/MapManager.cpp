@@ -45,7 +45,7 @@ extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 para
 extern s32 func_ov015_02129c14(MapBase *param_1);
 extern bool func_ov015_02129c24(MapBase *param_1, Vec3p *param_2, Vec3p *param_3);
 extern bool func_ov015_02129c34(MapBase *param_1, s32 param_2);
-extern bool func_ov015_02129c44(s32 param_1);
+extern bool func_ov015_02129c44(MapBase *param_1, s32 param_2);
 
 extern s32 *data_027e0c68;
 extern s32 *data_027e0d38;
@@ -229,7 +229,7 @@ ARM bool MapManager::func_ov00_02082494(s32 param_2) {
 ARM bool MapManager::func_ov00_020824cc(s32 param_2) {
     s32 var = this->mMap->vfunc_4c();
     if (var == 2) {
-        bool state = func_ov015_02129c44(param_2);
+        bool state = func_ov015_02129c44(this->mMap, param_2);
         return state;
     }
     return false;
@@ -545,10 +545,11 @@ ARM u8 MapManager::GetCurrentMapPosY() {
 }
 
 ARM u8 MapManager::func_ov00_02082d40() {
-    if (this->mCourse->mType == CourseType_Sea) {
-        return this->mCourse->mMapGrid[(u8) this->mCourse->mCurrMapPos.x][(u8) this->mCourse->mCurrMapPos.y];
+    switch (this->mCourse->mType) {
+        case CourseType_Sea:
+            return this->mCourse->mMapGrid[(u8) this->mCourse->mCurrMapPos.x][(u8) this->mCourse->mCurrMapPos.y];
+        default: return this->mCourse->mUnk_0b1;
     }
-    return this->mCourse->mUnk_0b1;
 }
 
 ARM u32 MapManager::func_ov00_02082d74(unk32 param_2) {
@@ -906,25 +907,27 @@ ARM unk8 MapManager::func_ov00_02083614(s32 param_2) {
     return this->mCourse->func_ov00_0207cc24(param_2);
 }
 
-ARM bool MapManager::GetEntrancePos(Vec3p *pos, unk32 entranceId) {
-    Vec3p *entrancePos = (Vec3p *) this->mMap->FindEntrance(entranceId);
-    s32 y              = entrancePos->y;
-    s32 z              = entrancePos->z;
-    pos->x             = entrancePos->x;
-    pos->y             = y;
-    pos->z             = z;
-    //*&pos[1].x       = *&entrancePos[1].x;
-    //*(&pos[1].x + 2) = *(&entrancePos[1].x + 2);
-    // pos[1].y = entrancePos[1].y;
+ARM bool MapManager::GetEntrancePos(Entrance *param_1, unk32 entranceId) {
+    Entrance *entrance = this->mMap->FindEntrance(entranceId);
+    q20 y              = entrance->mPos.y;
+    q20 z              = entrance->mPos.z;
+    param_1->mPos.x    = entrance->mPos.x;
+    param_1->mPos.y    = y;
+    param_1->mPos.z    = z;
+    param_1->mAngle    = entrance->mAngle;
+    param_1->mId       = entrance->mId; // mId needs to be u8 according to objdiff
+    param_1->mUnk_10   = entrance->mUnk_10;
     return true;
 }
 
-ARM bool MapManager::func_ov00_02083664(Vec3p *param_2, unk32 entranceId) {
-    Vec3p entrancePos;
-    if (this->GetEntrancePos(&entrancePos, entranceId)) {
-        param_2->x = entrancePos.x;
-        param_2->y = entrancePos.y;
-        param_2->z = entrancePos.z;
+ARM bool MapManager::func_ov00_02083664(Entrance *param_2, unk32 entranceId) {
+    Entrance entrance;
+    entrance.mId     = (u8) 0xff; // mId needs to be u8
+    entrance.mUnk_10 = 0;
+    if (this->GetEntrancePos(&entrance, entranceId)) {
+        param_2->mPos.x = entrance.mPos.x;
+        param_2->mPos.y = entrance.mPos.y;
+        param_2->mPos.z = entrance.mPos.z;
         return true;
     }
     return false;
@@ -939,11 +942,10 @@ ARM s32 MapManager::GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 para
 }
 
 ARM bool MapManager::func_ov00_020836dc(u32 type, u32 actorId) {
-    bool state;
     Actor *actor;
     Vec3p playerPos;
 
-    if (actorId < 2) {
+    if (!(actorId != 0 && actorId != 1)) { // what an awkward statement (as opposed to actorId < 2)
         playerPos.x = gPlayerPos->x;
         playerPos.y = gPlayerPos->y;
         playerPos.z = gPlayerPos->z;
@@ -952,9 +954,9 @@ ARM bool MapManager::func_ov00_020836dc(u32 type, u32 actorId) {
         if (actor == NULL) {
             return false;
         }
-        playerPos.x = *(s32 *) (actor + 0x48);
-        playerPos.y = *(s32 *) (actor + 0x4c);
-        playerPos.z = *(s32 *) (actor + 0x50);
+        playerPos.x = actor->mPos.x;
+        playerPos.y = actor->mPos.y;
+        playerPos.z = actor->mPos.z;
     }
     return this->IsTriggerTypeOverlapped(type, &playerPos);
 }
@@ -1164,7 +1166,7 @@ ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, u32 param_3) {
     Vec3p local_28;
     param_2->x = this->func_ov00_02083c24(param_3 & 0xff);
     param_2->z = this->func_ov00_02083c50(param_3 >> 8 & 0xff);
-    param_2->y = this->MapData_vfunc_68(&local_28, 0); // please tell me this is correct
+    param_2->y = this->MapData_vfunc_68(&local_28, true); // please tell me this is correct
 }
 
 ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5) {
@@ -1203,7 +1205,7 @@ ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 p
             param_2[2] = iVar2 + 0x800;
         }
     }
-    iVar2      = param_1->MapData_vfunc_68(&local_2c, 0); // I really do hope this is right
+    iVar2      = param_1->MapData_vfunc_68(&local_2c, true); // I really do hope this is right
     param_2[1] = iVar2;
 }
 
@@ -1238,7 +1240,7 @@ ARM bool MapManager::func_ov00_02083e70() {
     return iVar2 <= iVar1;
 }
 
-ARM unk32 MapManager::MapData_vfunc_68(Vec3p *param_1, bool *param_2) { // not sure about the bool* here.
+ARM unk32 MapManager::MapData_vfunc_68(Vec3p *param_1, bool param_2) {
     return this->mMap->vfunc_68(param_1, param_2);
 }
 
@@ -1493,7 +1495,7 @@ unk8 MapManager::func_ov00_0208439c(Vec2s *param_2, Vec3p *param_3) {
     this->mMap->func_ov00_0207f630(param_2, param_3);
     this->GetMapMinBounds(&VStack_18);
     Vec3p_Add(param_3, &VStack_18, param_3);
-    iVar1      = this->MapData_vfunc_68(param_3, 0); // is this correct?
+    iVar1      = this->MapData_vfunc_68(param_3, true); // is this correct?
     param_3->y = iVar1;
 }
 
@@ -1913,7 +1915,7 @@ void MapManager::func_ov00_02084c7c(unk32 param_2) {
 bool MapManager::func_ov00_02084c94(unk32 param_2) {
     bool bVar1;
 
-    if (-1 < param_2) {
+    if (0 <= param_2) {
         bVar1 = this->mCourse->GetMapDataFlag2(param_2);
         return bVar1;
     }
@@ -1932,7 +1934,7 @@ void MapManager::func_ov00_02084cb0(unk32 param_2) {
 bool MapManager::func_ov00_02084cc8(unk32 param_2) {
     bool bVar1;
 
-    if (-1 < param_2) {
+    if (0 <= param_2) {
         bVar1 = this->mCourse->GetMapDataFlag3(param_2);
         return bVar1;
     }
@@ -1951,7 +1953,7 @@ void MapManager::func_ov00_02084ce4(unk32 param_2) {
 bool MapManager::func_ov00_02084cfc(unk32 param_2) {
     bool bVar1;
 
-    if (-1 < param_2) {
+    if (0 <= param_2) {
         bVar1 = this->mCourse->GetMapDataFlag4(param_2);
         return bVar1;
     }
