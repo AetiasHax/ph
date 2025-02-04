@@ -6,7 +6,7 @@
 #include "Player/TouchControl.hpp"
 #include "Item/ItemManager.hpp"
 
-ARM UnkStruct_027E0C68_UnkSubClass2_Base1::UnkStruct_027E0C68_UnkSubClass2_Base1(unk32 param_2, unk32 param_3) {
+ARM UnkStruct_02037750::UnkStruct_02037750(unk32 param_2, unk32 param_3) {
     s32 i;
 
     this->unk_14 = param_3;
@@ -20,22 +20,22 @@ ARM UnkStruct_027E0C68_UnkSubClass2_Base1::UnkStruct_027E0C68_UnkSubClass2_Base1
     }
 }
 
-ARM UnkStruct_027E0C68_UnkSubClass2_Base1::~UnkStruct_027E0C68_UnkSubClass2_Base1() {
+ARM UnkStruct_02037750::~UnkStruct_02037750() {
     if (data_027e0c68.unk_20[0] == this) {
         data_027e0c68.func_02036d4c(this);
     }
 }
 
 // non-matching
-ARM UnkStruct_027E0C68_UnkSubClass2::UnkStruct_027E0C68_UnkSubClass2() : UnkStruct_027E0C68_UnkSubClass2_Base1(0x1000000, 0) {
+ARM UnkStruct_020386d8::UnkStruct_020386d8() : UnkStruct_02037750(0x1000000, 0) {
     this->unk_20 = -1;
     this->unk_24.func_020376c0(gVec3p_ZERO);
 }
 
-ARM UnkStruct_027E0C68_UnkSubClass2::~UnkStruct_027E0C68_UnkSubClass2() {
+ARM UnkStruct_020386d8::~UnkStruct_020386d8() {
 }
 
-ARM UnkSubClass1_UnkownClass2::UnkSubClass1_UnkownClass2() {
+ARM UnkStruct_0203881c::UnkStruct_0203881c() {
     this->unk_14 = 0x1000;
     this->unk_18 = 0;
     this->unk_1C = 0;

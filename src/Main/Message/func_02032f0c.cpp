@@ -10,7 +10,7 @@ extern "C" void func_020078f4(unk32, void*, unk32);
 extern "C" void func_020078c0(unk32, void*, unk32);
 extern "C" void func_020296e0(unk32**, UnkStruct_MsgProc_Base_unk_2C*, u8, u8, unk32, u8);
 
-ARM UnkSubClass1_UnkownClass2_Base1::UnkSubClass1_UnkownClass2_Base1() {
+ARM UnkStruct_02032e7c::UnkStruct_02032e7c() {
     this->unk_00 = NULL;
     this->unk_08 = 0;
     this->unk_0A = 0;
@@ -55,7 +55,7 @@ ARM unk32* MsgProc_Base::func_02032f98(unk32 param_2) {
 }
 
 ARM unk32 MsgProc_Base::func_02032fa4(void) {
-    return UnkSubClass1_UnkownClass1::func_02035428(this->unk_50);
+    return UnkStruct_02035064::func_02035428(this->unk_50);
 }
 
 ARM unk32 MsgProc_Base::func_02032fb4(void) {
@@ -85,9 +85,9 @@ ARM unk32 MsgProc_Base::func_020337d8(unk32 param_2) {
     return this->unk_2C->unk_00->unk_08[1] * param_2 + (param_2 - 1) * this->unk_34;
 }
 
-ARM UnkSubClass1_UnkownClass1::UnkSubClass1_UnkownClass1() {
+ARM UnkStruct_02035064::UnkStruct_02035064() {
     this->unk_74 = NULL;
-    this->unk_78 = 0;
+    this->unk_78 = NULL;
     this->unk_7C = 0;
     this->unk_80 = 0;
     this->unk_82 = 0;
@@ -96,5 +96,5 @@ ARM UnkSubClass1_UnkownClass1::UnkSubClass1_UnkownClass1() {
     this->unk_87 = 0;
 }
 
-ARM UnkSubClass1_UnkownClass1::~UnkSubClass1_UnkownClass1() {
+ARM UnkStruct_02035064::~UnkStruct_02035064() {
 }
