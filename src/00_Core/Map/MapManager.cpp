@@ -524,7 +524,7 @@ bool MapManager::func_ov00_02082b3c(s32 param_2) {
         uVar4                          = this->mCourse->FindMapData_Unk_04((u32) bVar1);
         (this->mCourse->mCurrMapPos).x = (u8) local_18;
         (this->mCourse->mCurrMapPos).y = (u8) * (&local_18 + 0x4); // I assume this is what Ghidra means by "local_18._1_1_"
-        func_ov004_021024c4(this, param_2, uVar3 != uVar4, 0);
+        func_ov004_021024c4(param_2, uVar3 != uVar4, 0);
         func_ov004_02105578(gActorManager, (u32) * (u8 *) (param_2 + 0x12));
         // UnkStruct_027e0103c::thunk_FUN_overlay_d_0__020cf7e8(*PTR_PTR_overlay_d_0__02082cfc);
     }
@@ -1227,7 +1227,7 @@ ARM bool MapManager::func_ov00_02083e70() {
     int iVar1;
     int iVar2;
 
-    iVar1 = this->MapData_vfunc_54(0);
+    iVar1 = this->MapData_vfunc_54();
     if (iVar1 < 0x2c) {
         if ((0x2a < iVar1) || (iVar1 == 0x1b)) {
             return true;
@@ -1307,8 +1307,8 @@ void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {
     Vec3p_Add(&tileBounds->max, &local_20, &tileBounds->max);
 }
 
-unk32 MapManager::MapData_vfunc_54(unk8 *param_1) { // what type is this param?
-    return this->mMap->vfunc_54(param_1);
+unk32 MapManager::MapData_vfunc_54() {
+    return this->mMap->vfunc_54(0); // what to use for this param?
 }
 
 unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
@@ -1318,7 +1318,7 @@ unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
     // _local_8 = CONCAT11(param_3, param_2);
-    this->MapData_vfunc_54(&local_8); // Doesn't take any params.
+    this->MapData_vfunc_54(/*&local_8*/); // Doesn't take any params.
     // No calls to functions according to objdiff, why???
 }
 
@@ -1367,7 +1367,7 @@ unk8 MapManager::func_ov00_02084164(Vec2b *param_2) {
 
     iVar1 = this->mMap->vfunc_58(param_2, 7 /*, pcVar3, param_4*/); // Params?
     if (iVar1 == 0) {
-        uVar2 = this->MapData_vfunc_54(0);
+        uVar2 = this->MapData_vfunc_54();
         switch (uVar2) {
             case 0: break;
             case 1: return 0;
@@ -2061,7 +2061,7 @@ unk32 MapManager::func_ov00_02084ebc(Vec3p *param_2) {
     if (iVar2 != 0) {
         return 0;
     }
-    iVar2 = this->MapData_vfunc_54(0);
+    iVar2 = this->MapData_vfunc_54();
     if (iVar2 < 0x47) {
         if (0x45 < iVar2) {
             return 0;
@@ -2811,7 +2811,7 @@ unk8 MapManager::func_ov00_02086044(Vec3p *param_2, Vec3p *param_3, unk32 param_
                 if (iVar7 < iVar8) {
                     local_c6.x = (char) iVar3;
                     local_c6.y = (char) iVar11;
-                    gMapManager->func_ov00_02084024(&local_c6, &AStack_70);
+                    gMapManager->GetTileWorldBounds(&local_c6, &AStack_70);
                     Vec3p_Sub(param_2, param_3, &VStack_7c);
                     pVVar10 = (Vec3p *) auStack_c4;
                     iVar8   = func_ov000_0208e87c(&AStack_70, &local_b0, &VStack_7c);

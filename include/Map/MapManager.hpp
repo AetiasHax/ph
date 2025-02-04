@@ -178,7 +178,7 @@ public:
     unk8 MapData_vfunc_70(Vec3p *param_2);
     static unk8 func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
     void GetTileWorldBounds(Vec2b *tile, AABB *tileBounds);
-    unk8 MapData_vfunc_54();
+    unk32 MapData_vfunc_54();
     unk8 func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4);
     unk32 MapData_vfunc_78(bool *param_1);
     unk8 func_ov00_020840dc();
