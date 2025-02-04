@@ -4,7 +4,7 @@ import io
 from pathlib import Path
 import platform
 
-DSD_VERSION = 'v0.2.3'
+DSD_VERSION = 'v0.4.0'
 
 
 tools_path = Path(__file__).parent
@@ -13,7 +13,7 @@ root_path = tools_path.parent
 
 EXE = ""
 system = platform.system()
-if system == "Windows" or system.startswith("MSYS") or system.startswith("MINGW"):
+if system == "Windows":
     system = "windows"
     EXE = ".exe"
 elif system == "Linux":

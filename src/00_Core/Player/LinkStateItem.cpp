@@ -43,17 +43,17 @@ ARM void LinkStateItem::OnStateLeave(s32 param1) {
         case ItemFlag_OshusSword: break;
         case ItemFlag_WoodenShield: break;
         case ItemFlag_Boomerang: break;
-        case ItemFlag_BombBag: EquipBomb::StopUsing(this, param1); break;
+        case ItemFlag_BombBag: this->StopUsingBomb(param1); break;
         case ItemFlag_Bow: break;
-        case ItemFlag_GrapplingHook: EquipRope::StopUsing(this); break;
-        case ItemFlag_Hammer: EquipHammer::StopUsing(this); break;
+        case ItemFlag_GrapplingHook: this->StopUsingRope(); break;
+        case ItemFlag_Hammer: this->StopUsingHammer(); break;
         case ItemFlag_PotionA:
         case ItemFlag_PotionB:
-            UnkStruct_027e103c *unk = data_027e103c;
-            unk->mUnk_2a            = 0;
-            unk->func_ov000_020cf9dc(0, 0);
+            UnkStruct_027e103c *pData_027e103c = data_027e103c;
+            pData_027e103c->mUnk_2a            = 0;
+            pData_027e103c->func_ov000_020cf9dc(0, 0);
             break;
-        case ItemFlag_Shovel: EquipScoop::StopUsing(this); break;
+        case ItemFlag_Shovel: this->StopUsingScoop(); break;
     }
 
     if (this->mEquipId != ItemFlag_None) {

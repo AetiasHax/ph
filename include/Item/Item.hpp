@@ -2,6 +2,8 @@
 
 #include "types.h"
 
+#define MAX_POTIONS 2
+
 typedef s32 ItemFlag;
 enum ItemFlag_ {
     ItemFlag_None                     = -1,
@@ -231,6 +233,77 @@ enum ItemId_ {
     /* 0x86 */ ItemId_Unk_134      = 134,
     /* 0x87 */ ItemId_Unk_135      = 135,
     /* 0x88 */ ItemId_Unk_136      = 136,
+};
+
+enum Gem {
+    Gem_Courage,
+    Gem_Power,
+    Gem_Wisdom,
+    Gem_COUNT,
+};
+
+typedef u32 ShipPart;
+enum ShipPart_ {
+    ShipPart_Anchor,
+    ShipPart_Prow,
+    ShipPart_Hull,
+    ShipPart_Cannon,
+    ShipPart_Handrail,
+    ShipPart_Wheel,
+    ShipPart_Chimney,
+    ShipPart_Bridge,
+    ShipPart_COUNT,
+};
+
+typedef u32 ShipType;
+enum ShipType_ {
+    ShipType_Linebeck,
+    ShipType_Bright,
+    ShipType_Iron,
+    ShipType_Stone,
+    ShipType_Vintage,
+    ShipType_Demon,
+    ShipType_Tropical,
+    ShipType_Dignified,
+    ShipType_Golden,
+    ShipType_COUNT,
+};
+
+typedef u32 ShipItem;
+#define SHIP_ITEM(part, ship) (ShipPart_##part * ShipPart_COUNT + ShipType_##type)
+#define ShipItem_COUNT (ShipPart_COUNT * ShipType_COUNT)
+
+typedef u32 Treasure;
+enum Treasure_ {
+    Treasure_PinkCoral,
+    Treasure_WhitePearlLoop,
+    Treasure_DarkPearlLoop,
+    Treasure_ZoraScale,
+    Treasure_GoronAmber,
+    Treasure_RutoCrown,
+    Treasure_HelmarocPlume,
+    Treasure_RegalRing,
+
+    Treasure_COUNT,
+};
+
+typedef u8 Potion;
+enum Potion_ {
+    Potion_None,
+    Potion_Red,
+    Potion_Purple,
+    Potion_Yellow,
+    Potion_COUNT,
+};
+
+struct ItemFlags {
+    /* 00 */ u32 flags[CEIL_DIV(ItemFlag_COUNT, 32)];
+    /* 10 */
+};
+
+struct ShipPartPricesShown {
+    /* 0 */ u32 flags[CEIL_DIV(ShipItem_COUNT, 32)];
+    /* c */
 };
 
 namespace Item {

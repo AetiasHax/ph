@@ -1,6 +1,6 @@
 #include "Player/PlayerControl.hpp"
 #include "Actor/ActorManager.hpp"
-#include "Actor/ActorNaviBase.hpp"
+#include "Actor/Navi/ActorNaviBase.hpp"
 #include "DTCM/UnkStruct_027e05f8.hpp"
 #include "DTCM/UnkStruct_027e077c.hpp"
 #include "DTCM/UnkStruct_027e0c68.hpp"

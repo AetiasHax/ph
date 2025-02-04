@@ -23,6 +23,8 @@ struct UnkStruct_027e0d38 {
     /* 2c */
 
     s32 func_ov000_02078b40();
+    unk8 func_ov000_02078b64();
+    bool func_ov000_02078b88();
 };
 
 extern UnkStruct_027e0d38 *data_027e0d38;

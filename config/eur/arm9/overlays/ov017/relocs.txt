@@ -1843,7 +1843,6 @@ from:0x0216b028 kind:load to:0x020e8398 module:overlay(0)
 from:0x0216b04c kind:arm_call to:0x020c6e08 module:overlay(0)
 from:0x0216b078 kind:arm_call to:0x020c6164 module:overlay(0)
 from:0x0216b08c kind:arm_call to:0x020c6d9c module:overlay(0)
-from:0x0216b25c kind:load to:0x02060204 module:main
 from:0x0216b270 kind:load to:0x0216ce68 module:overlay(17)
 from:0x0216b278 kind:load to:0x0216ce78 module:overlay(17)
 from:0x0216b280 kind:load to:0x0216ce88 module:overlay(17)
