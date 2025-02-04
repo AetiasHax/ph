@@ -306,10 +306,10 @@ data_ov031_02181ad4 kind:data(any) addr:0x2181ad4
 data_ov031_02181b10 kind:data(any) addr:0x2181b10
 data_ov031_02181b24 kind:data(any) addr:0x2181b24
 data_ov031_02181b30 kind:data(any) addr:0x2181b30
-func_ov031_02181b6c kind:function(arm,size=0x3ec) addr:0x2181b6c
-func_ov031_02181f58 kind:function(arm,size=0xa8) addr:0x2181f58
-func_ov031_02182000 kind:function(arm,size=0x40) addr:0x2182000
-func_ov031_02182040 kind:function(arm,size=0x40) addr:0x2182040
+__sinit_ov031_02181b6c kind:function(arm,size=0x3ec) addr:0x2181b6c
+__sinit_ov031_02181f58 kind:function(arm,size=0xa8) addr:0x2181f58
+__sinit_ov031_02182000 kind:function(arm,size=0x40) addr:0x2182000
+__sinit_ov031_02182040 kind:function(arm,size=0x40) addr:0x2182040
 data_ov031_021820a0 kind:data(any) addr:0x21820a0
 data_ov031_021820a4 kind:data(any) addr:0x21820a4
 data_ov031_021820a8 kind:data(any) addr:0x21820a8

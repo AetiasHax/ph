@@ -347,21 +347,21 @@ data_ov024_02179558 kind:data(any) addr:0x21794b8
 data_ov024_02179564 kind:data(any) addr:0x21794c4 ambiguous
 data_ov024_021795a4 kind:data(any) addr:0x2179504 ambiguous
 data_ov024_021795b8 kind:data(any) addr:0x2179518 ambiguous
-func_ov024_021795d0 kind:function(arm,size=0x38) addr:0x2179530
-func_ov024_02179608 kind:function(arm,size=0x10c) addr:0x2179568
-func_ov024_02179714 kind:function(arm,size=0x74) addr:0x2179674
-func_ov024_02179788 kind:function(arm,size=0x38) addr:0x21796e8
-func_ov024_021797c0 kind:function(arm,size=0xa8) addr:0x2179720
-func_ov024_02179868 kind:function(arm,size=0x10c) addr:0x21797c8
-func_ov024_02179974 kind:function(arm,size=0x118) addr:0x21798d4
-func_ov024_02179a8c kind:function(arm,size=0x118) addr:0x21799ec
-func_ov024_02179ba4 kind:function(arm,size=0x118) addr:0x2179b04
-func_ov024_02179cbc kind:function(arm,size=0x40) addr:0x2179c1c
-func_ov024_02179cfc kind:function(arm,size=0x38) addr:0x2179c5c
-func_ov024_02179d34 kind:function(arm,size=0x38) addr:0x2179c94
-func_ov024_02179d6c kind:function(arm,size=0x40) addr:0x2179ccc
-func_ov024_02179dac kind:function(arm,size=0x38) addr:0x2179d0c
-func_ov024_02179de4 kind:function(arm,size=0x38) addr:0x2179d44
+__sinit_ov024_021795d0 kind:function(arm,size=0x38) addr:0x2179530
+__sinit_ov024_02179608 kind:function(arm,size=0x10c) addr:0x2179568
+__sinit_ov024_02179714 kind:function(arm,size=0x74) addr:0x2179674
+__sinit_ov024_02179788 kind:function(arm,size=0x38) addr:0x21796e8
+__sinit_ov024_021797c0 kind:function(arm,size=0xa8) addr:0x2179720
+__sinit_ov024_02179868 kind:function(arm,size=0x10c) addr:0x21797c8
+__sinit_ov024_02179974 kind:function(arm,size=0x118) addr:0x21798d4
+__sinit_ov024_02179a8c kind:function(arm,size=0x118) addr:0x21799ec
+__sinit_ov024_02179ba4 kind:function(arm,size=0x118) addr:0x2179b04
+__sinit_ov024_02179cbc kind:function(arm,size=0x40) addr:0x2179c1c
+__sinit_ov024_02179cfc kind:function(arm,size=0x38) addr:0x2179c5c
+__sinit_ov024_02179d34 kind:function(arm,size=0x38) addr:0x2179c94
+__sinit_ov024_02179d6c kind:function(arm,size=0x40) addr:0x2179ccc
+__sinit_ov024_02179dac kind:function(arm,size=0x38) addr:0x2179d0c
+__sinit_ov024_02179de4 kind:function(arm,size=0x38) addr:0x2179d44
 data_ov024_02179e68 kind:data(any) addr:0x2179dc8
 data_ov024_02179ef4 kind:data(any) addr:0x2179e54
 data_ov024_02179efc kind:data(any) addr:0x2179e5c

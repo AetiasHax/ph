@@ -1294,17 +1294,17 @@ unk8 MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *pa
     *param_1 = 0;
 }
 
-void MapManager::func_ov00_02084024(Vec2b *param_2, AABB *param_3) {
+void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {
     int iVar1;
     Vec3p local_20;
 
-    this->mMap->GetTileBounds(param_2, param_3);
+    this->mMap->GetTileBounds(tile, tileBounds);
     iVar1      = this->GetMapCenterZ();
     local_20.x = this->GetMapCenterX();
     local_20.y = 0;
     local_20.z = iVar1;
-    Vec3p_Add(&param_3->min, &local_20, &param_3->min);
-    Vec3p_Add(&param_3->max, &local_20, &param_3->max);
+    Vec3p_Add(&tileBounds->min, &local_20, &tileBounds->min);
+    Vec3p_Add(&tileBounds->max, &local_20, &tileBounds->max);
 }
 
 unk32 MapManager::MapData_vfunc_54(unk8 *param_1) { // what type is this param?

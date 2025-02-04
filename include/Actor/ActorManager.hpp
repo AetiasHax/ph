@@ -93,6 +93,18 @@ public:
     void func_ov00_020c3ce8(unk32 param1, bool param2);
     void Actor_vfunc_28();
     static bool ActorTypeIsOneOf(ActorTypeId type, const ActorTypeId *types);
+
+    static void Create();
+    static void Destroy();
+    ActorManager();
+    ~ActorManager();
+    void func_ov004_0210532c();
+    void func_ov004_021053dc();
+    void func_ov004_021054a4(s32 *param1, s32 param2, unk32 param3);
+    void func_ov004_0210554c();
+    bool func_ov004_02105578(unk32 param1);
+    bool func_ov004_02105608(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov004_021056b8();
 };
 
 extern ActorManager *gActorManager;

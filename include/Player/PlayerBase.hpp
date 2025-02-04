@@ -32,7 +32,7 @@ public:
     /* 18 */ virtual void vfunc_18()                                      = 0;
     /* 1c */ virtual void Init()                                          = 0;
     /* 20 */ virtual void vfunc_20()                                      = 0;
-    /* 24 */ virtual void vfunc_24()                                      = 0;
+    /* 24 */ virtual void UpdatePos()                                     = 0;
     /* 28 */ virtual void vfunc_28(s32 param1)                            = 0;
     /* 2c */ virtual void vfunc_2c(s32 param1, unk8 param2)               = 0;
     /* 30 */ virtual bool vfunc_30(s32 param1, Vec3p *param2, s32 param3) = 0;
@@ -57,6 +57,8 @@ public:
     bool EquipCollidesWith(Cylinder *cylinder, ItemFlag equipId);
     s32 EquipItem_vfunc_2c();
     void SetHealth(s16 health);
+
+    PlayerBase();
 };
 
 extern PlayerBase *gPlayer;

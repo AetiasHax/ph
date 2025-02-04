@@ -1,7 +1,7 @@
 #pragma once
 
 #include "global.h"
-#include "lib/math.h"
+#include "nds/math.h"
 #include "types.h"
 
 #include "Actor/Actor.hpp"
@@ -37,4 +37,16 @@ public:
     LinkStateCutscene *GetLinkStateCutscene();
     bool func_ov00_020a9180(Vec3p *param1);
     bool func_ov00_020a9210(Vec3p *param1, Actor *param2);
+
+    LinkStateFollow(PlayerLinkBase *link);
+
+    static EquipRope *GetEquipRope();
+    void func_ov005_0210b9c4();
+    void func_ov005_0210ba98();
+    void func_ov005_0210babc();
+    void func_ov005_0210bb50();
+    void func_ov005_0210bb98();
+    void func_ov005_0210bd70();
+    void func_ov005_0210bf50();
+    void func_ov005_0210ca80(Vec3p *param1, s32 *param2);
 };

@@ -99,10 +99,10 @@ data_ov046_02194478 kind:data(any) addr:0x21943d8
 data_ov046_0219448c kind:data(any) addr:0x21943ec
 data_ov046_0219449c kind:data(any) addr:0x21943fc
 data_ov046_021944a8 kind:data(any) addr:0x2194408
-func_ov046_021944ac kind:function(arm,size=0x40) addr:0x219440c
-func_ov046_021944ec kind:function(arm,size=0x40) addr:0x219444c
-func_ov046_0219452c kind:function(arm,size=0x80) addr:0x219448c
-func_ov046_021945ac kind:function(arm,size=0x90) addr:0x219450c
+__sinit_ov046_021944ac kind:function(arm,size=0x40) addr:0x219440c
+__sinit_ov046_021944ec kind:function(arm,size=0x40) addr:0x219444c
+__sinit_ov046_0219452c kind:function(arm,size=0x80) addr:0x219448c
+__sinit_ov046_021945ac kind:function(arm,size=0x90) addr:0x219450c
 data_ov046_02194660 kind:data(any) addr:0x21945c0
 data_ov046_02194664 kind:data(any) addr:0x21945c4
 data_ov046_0219466c kind:data(any) addr:0x21945cc

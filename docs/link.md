@@ -25,84 +25,84 @@ addition, the states have names in Japanese.
 > The hierarchy and Japanese names were likely used for debugging and may have no meaning in the actual game engine.
 
 - `PLYR`: Player
-    - `PLNK`: Link motion (ƒŠƒ“ƒNƒ‚[ƒVƒ‡ƒ“)
-        - `LGNR`: General (‘S”Ê)
-        - `LWIT`: Wait (ƒEƒFƒCƒg)
-        - `LMOV`: Move (ˆÚ“®)
-        - `LROL`: Roll (‘O“])
-        - `LAJP`: Auto-jump (ƒI[ƒgƒWƒƒƒ“ƒv)
-        - `LATK`: Attack (Œ•U‚è)
-            - `LVAT`: Vertical attack (cØ‚è)
-            - `LLAT`: Horizontal attack (‰¡Ø‚è)
-            - `LSAT`: Stab attack (“Ë‚«)
-            - `LTAT`: Spin attack (‰ñ“]Ø‚è)
-            - `LARB`: Recoil (”½“®)
-        - `LJAT`: Jump attack (ƒWƒƒƒ“ƒvØ‚è)
-        - `LDFC`: Defence (–hŒä)
-        - `LDMG`: Damage (ƒ_ƒ[ƒW)
-        - `LGRB`: Grab (‚¿ã‚°)
-        - `LPSH`: Push/pull (‰Ÿ‚µˆø‚«)
-        - `LIGT`: Item get (ƒAƒCƒeƒ€ƒQƒbƒg)
-        - `LNAV`: Navi (¸—ì)
-        - `LBOW`: Bow (‹|–î)
-        - `LBMR`: Boomerang (ƒu[ƒƒ‰ƒ“)
-        - `LHMR`: Hammer (ƒnƒ“ƒ}[)
-        - `LROP`: Rope (ƒ[ƒv)
-        - `LSCP`: Scoop (ƒXƒRƒbƒv)
-        - `LOIT`: Other item (‘¼‚ÌƒAƒCƒeƒ€)
-        - `LABN`: Abnormal state (ó‘ÔˆÙí)
-        - `LLOT`: Other (‚»‚Ì‘¼)
-    - `PTMP`: Temporary (ˆê’²®)
-    - `PEFT`: Effect (ƒGƒtƒFƒNƒg)
+    - `PLNK`: Link motion (ãƒªãƒ³ã‚¯ãƒ¢ãƒ¼ã‚·ãƒ§ãƒ³)
+        - `LGNR`: General (å…¨èˆ¬)
+        - `LWIT`: Wait (ã‚¦ã‚§ã‚¤ãƒˆ)
+        - `LMOV`: Move (ç§»å‹•)
+        - `LROL`: Roll (å‰è»¢)
+        - `LAJP`: Auto-jump (ã‚ªãƒ¼ãƒˆã‚¸ãƒ£ãƒ³ãƒ—)
+        - `LATK`: Attack (å‰£æŒ¯ã‚Š)
+            - `LVAT`: Vertical attack (ç¸¦åˆ‡ã‚Š)
+            - `LLAT`: Horizontal attack (æ¨ªåˆ‡ã‚Š)
+            - `LSAT`: Stab attack (çªã)
+            - `LTAT`: Spin attack (å›è»¢åˆ‡ã‚Š)
+            - `LARB`: Recoil (åå‹•)
+        - `LJAT`: Jump attack (ã‚¸ãƒ£ãƒ³ãƒ—åˆ‡ã‚Š)
+        - `LDFC`: Defence (é˜²å¾¡)
+        - `LDMG`: Damage (ãƒ€ãƒ¡ãƒ¼ã‚¸)
+        - `LGRB`: Grab (æŒã¡ä¸Šã’)
+        - `LPSH`: Push/pull (æŠ¼ã—å¼•ã)
+        - `LIGT`: Item get (ã‚¢ã‚¤ãƒ†ãƒ ã‚²ãƒƒãƒˆ)
+        - `LNAV`: Navi (ç²¾éœŠ)
+        - `LBOW`: Bow (å¼“çŸ¢)
+        - `LBMR`: Boomerang (ãƒ–ãƒ¼ãƒ¡ãƒ©ãƒ³)
+        - `LHMR`: Hammer (ãƒãƒ³ãƒãƒ¼)
+        - `LROP`: Rope (ãƒ­ãƒ¼ãƒ—)
+        - `LSCP`: Scoop (ã‚¹ã‚³ãƒƒãƒ—)
+        - `LOIT`: Other item (ä»–ã®ã‚¢ã‚¤ãƒ†ãƒ )
+        - `LABN`: Abnormal state (çŠ¶æ…‹ç•°å¸¸)
+        - `LLOT`: Other (ãã®ä»–)
+    - `PTMP`: Temporary (ä¸€æ™‚èª¿æ•´)
+    - `PEFT`: Effect (ã‚¨ãƒ•ã‚§ã‚¯ãƒˆ)
 
 The states can also be found in `Player/motion.bhio` in the assets. The file appears to contain configurable properties for
 some of the states. The properties are labelled with up to 12 bytes (6 characters) of Japanese text, causing some labels to be cut off.
 
 State  | Property                 | Type    | Value | Japanese
 -------|--------------------------|---------|-------|----------
-`LGNR` | Shadow darkness          | `int`   | 26    | ‰e‚Ì”Z‚³
-`LGNR` | Model type               | `int`   | 2     | ƒ‚ƒfƒ‹ƒ^ƒCƒv
-`LGNR` | Semi-transparent model   | `int`   | 11    | ”¼“§–¾ƒ‚ƒfƒ‹
-`LGNR` | Semi-transparent R       | `int`   | 31    | ”¼“§–¾‚q
-`LGNR` | Semi-transparent G       | `int`   | 31    | ”¼“§–¾‚f
-`LGNR` | Semi-transparent B       | `int`   | 31    | ”¼“§–¾‚a
-`LGNR` | Area change              | `int`   | 15    | ƒGƒŠƒA‘Ö‚¦ƒt
-`LGNR` | Stairway fade            | `int`   | 10    | ŠK’iƒtƒF[ƒh
-`LGNR` | Other ho...              | `int`   | 13    | ‚»‚Ì‘¼ƒtƒF[
-`LGNR` | Area movement offset     | `20.12` | 1.9   | ƒGƒŠƒAˆÚ“®ƒI
-`LDMG` | Damage tie...            | `int`   | 0     | ƒ_ƒ[ƒWƒ^ƒC
-`LDMG` | Small damage speed       | `20.12` | 2.0   | ¬ƒ_ƒÄ¶‘¬
-`LDMG` | Small damage start frame | `20.12` | 0.0   | ¬ƒ_ƒŠJnƒt
-`LDMG` | Small damage end frame   | `20.12` | 10.0  | ¬ƒ_ƒI—¹ƒt
-`LDMG` | ???                      | `int`   | 6     | ƒrƒŠƒrƒŠ‰ñ”
-`LDMG` | ???                      | `20.12` | 1.0   | ƒrƒŠƒrƒŠÄ¶
-`LDMG` | ???                      | `20.12` | 1.23  | ‚«ã‚°‚‚³
-`LDMG` | ???                      | `20.12` | 0.2   | ‚«ã‚°‚Ó‚Á
-`LDMG` | ???                      | `20.12` | 0.2   | ƒtƒŠƒbƒN’µ‚Ñ
-`LDMG` | Ice damage?              | `int`   | 60    | “€‚èƒ_ƒ[ƒW
-`LGRB` | Grab speed               | `20.12` | 1.6   | ‚¿ã‚°Ä¶
-`LGRB` | Grab start               | `20.12` | 2.0   | ‚¿ã‚°ŠJn
-`LGRB` | Grab end                 | `20.12` | 10.0  | ‚¿ã‚°I—¹
-`LGRB` | Throw speed              | `20.12` | 1.0   | “Š‚°Ä¶‘¬“x
-`LGRB` | Throw start frame        | `20.12` | 0.0   | “Š‚°ŠJnƒtƒŒ
-`LGRB` | Throw end frame          | `20.12` | 15.0  | “Š‚°I—¹ƒtƒŒ
-`LGRB` | Throw frame              | `20.12` | 2.0   | “Š‚°—£‚êƒtƒŒ
-`LPSH` | Stop time                | `int`   | 3     | ’â~ŠÔ
-`LPSH` | Direct push              | `20.12` | 0.5   | ƒ_ƒCƒŒƒNƒgƒv
-`LIGT` | X-offset                 | `20.12` | 0.368 | ƒIƒtƒZƒbƒg‚w
-`LIGT` | Y-offset                 | `20.12` | 1.323 | ƒIƒtƒZƒbƒg‚x
-`LIGT` | Z-offset                 | `20.12` | 0.05  | ƒIƒtƒZƒbƒg‚y
-`LIGT` | Rotation speed           | `20.12` | 0.066 | ‰ñ“]‘¬“x
-`LROP` | Rope width               | `20.12` | 0.12  | ƒ[ƒv•
-`LROP` | Texture...               | `20.12` | 30.0  | ƒeƒNƒXƒ`ƒƒƒŠ
-`LROP` | High jump                | `20.12` | 0.54  | ƒnƒCƒWƒƒƒ“ƒv
-`LROP` | Lean depth?              | `20.12` | 0.6   | Šñ‚è‚©‚©‚è[
-`LLOT` | Breath start frame       | `20.12` | 0.0   | ‘§‚«ŠJnƒt
-`LLOT` | Breath end frame         | `20.12` | 10.0  | ‘§‚«I—¹ƒt
-`LLOT` | Walk offset              | `20.12` | 1.1   | •à‚«ƒIƒtƒZƒb
-`LLOT` | Run offset               | `20.12` | 1.7   | ‘–‚èƒIƒtƒZƒb
-`LLOT` | Stairway offset          | `20.12` | 1.0   | ŠK’iƒIƒtƒZƒb
-`LLOT` | Player ...               | `20.12` | 0.01  | ƒvƒŒƒCƒ„[Á
-`LLOT` | Warp ho...               | `int`   | 55    | ƒ[ƒvƒtƒF[
-`LLOT` | Player ...               | `int`   | 10    | ƒvƒŒƒCƒ„[”¼
-`LLOT` | Warp rise                | `20.12` | 0.03  | ƒ[ƒv•‚‚«ã
+`LGNR` | Shadow darkness          | `int`   | 26    | å½±ã®æ¿ƒã•
+`LGNR` | Model type               | `int`   | 2     | ãƒ¢ãƒ‡ãƒ«ã‚¿ã‚¤ãƒ—
+`LGNR` | Semi-transparent model   | `int`   | 11    | åŠé€æ˜ãƒ¢ãƒ‡ãƒ«
+`LGNR` | Semi-transparent R       | `int`   | 31    | åŠé€æ˜ï¼²
+`LGNR` | Semi-transparent G       | `int`   | 31    | åŠé€æ˜ï¼§
+`LGNR` | Semi-transparent B       | `int`   | 31    | åŠé€æ˜ï¼¢
+`LGNR` | Area change              | `int`   | 15    | ã‚¨ãƒªã‚¢æ›¿ãˆãƒ•
+`LGNR` | Stairway fade            | `int`   | 10    | éšæ®µãƒ•ã‚§ãƒ¼ãƒ‰
+`LGNR` | Other ho...              | `int`   | 13    | ãã®ä»–ãƒ•ã‚§ãƒ¼
+`LGNR` | Area movement offset     | `20.12` | 1.9   | ã‚¨ãƒªã‚¢ç§»å‹•ã‚ª
+`LDMG` | Damage tie...            | `int`   | 0     | ãƒ€ãƒ¡ãƒ¼ã‚¸ã‚¿ã‚¤
+`LDMG` | Small damage speed       | `20.12` | 2.0   | å°ãƒ€ãƒ¡å†ç”Ÿé€Ÿ
+`LDMG` | Small damage start frame | `20.12` | 0.0   | å°ãƒ€ãƒ¡é–‹å§‹ãƒ•
+`LDMG` | Small damage end frame   | `20.12` | 10.0  | å°ãƒ€ãƒ¡çµ‚äº†ãƒ•
+`LDMG` | ???                      | `int`   | 6     | ãƒ“ãƒªãƒ“ãƒªå›æ•°
+`LDMG` | ???                      | `20.12` | 1.0   | ãƒ“ãƒªãƒ“ãƒªå†ç”Ÿ
+`LDMG` | ???                      | `20.12` | 1.23  | å¹ãä¸Šã’é«˜ã•
+`LDMG` | ???                      | `20.12` | 0.2   | å¹ãä¸Šã’ãµã£
+`LDMG` | ???                      | `20.12` | 0.2   | ãƒ•ãƒªãƒƒã‚¯è·³ã³
+`LDMG` | Ice damage?              | `int`   | 60    | å‡ã‚Šãƒ€ãƒ¡ãƒ¼ã‚¸
+`LGRB` | Grab speed               | `20.12` | 1.6   | æŒã¡ä¸Šã’å†ç”Ÿ
+`LGRB` | Grab start               | `20.12` | 2.0   | æŒã¡ä¸Šã’é–‹å§‹
+`LGRB` | Grab end                 | `20.12` | 10.0  | æŒã¡ä¸Šã’çµ‚äº†
+`LGRB` | Throw speed              | `20.12` | 1.0   | æŠ•ã’å†ç”Ÿé€Ÿåº¦
+`LGRB` | Throw start frame        | `20.12` | 0.0   | æŠ•ã’é–‹å§‹ãƒ•ãƒ¬
+`LGRB` | Throw end frame          | `20.12` | 15.0  | æŠ•ã’çµ‚äº†ãƒ•ãƒ¬
+`LGRB` | Throw frame              | `20.12` | 2.0   | æŠ•ã’é›¢ã‚Œãƒ•ãƒ¬
+`LPSH` | Stop time                | `int`   | 3     | åœæ­¢æ™‚é–“
+`LPSH` | Direct push              | `20.12` | 0.5   | ãƒ€ã‚¤ãƒ¬ã‚¯ãƒˆãƒ—
+`LIGT` | X-offset                 | `20.12` | 0.368 | ã‚ªãƒ•ã‚»ãƒƒãƒˆï¼¸
+`LIGT` | Y-offset                 | `20.12` | 1.323 | ã‚ªãƒ•ã‚»ãƒƒãƒˆï¼¹
+`LIGT` | Z-offset                 | `20.12` | 0.05  | ã‚ªãƒ•ã‚»ãƒƒãƒˆï¼º
+`LIGT` | Rotation speed           | `20.12` | 0.066 | å›è»¢é€Ÿåº¦
+`LROP` | Rope width               | `20.12` | 0.12  | ãƒ­ãƒ¼ãƒ—å¹…
+`LROP` | Texture...               | `20.12` | 30.0  | ãƒ†ã‚¯ã‚¹ãƒãƒ£ãƒª
+`LROP` | High jump                | `20.12` | 0.54  | ãƒã‚¤ã‚¸ãƒ£ãƒ³ãƒ—
+`LROP` | Lean depth?              | `20.12` | 0.6   | å¯„ã‚Šã‹ã‹ã‚Šæ·±
+`LLOT` | Breath start frame       | `20.12` | 0.0   | æ¯å¹ãé–‹å§‹ãƒ•
+`LLOT` | Breath end frame         | `20.12` | 10.0  | æ¯å¹ãçµ‚äº†ãƒ•
+`LLOT` | Walk offset              | `20.12` | 1.1   | æ­©ãã‚ªãƒ•ã‚»ãƒƒ
+`LLOT` | Run offset               | `20.12` | 1.7   | èµ°ã‚Šã‚ªãƒ•ã‚»ãƒƒ
+`LLOT` | Stairway offset          | `20.12` | 1.0   | éšæ®µã‚ªãƒ•ã‚»ãƒƒ
+`LLOT` | Player ...               | `20.12` | 0.01  | ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼æ¶ˆ
+`LLOT` | Warp ho...               | `int`   | 55    | ãƒ¯ãƒ¼ãƒ—ãƒ•ã‚§ãƒ¼
+`LLOT` | Player ...               | `int`   | 10    | ãƒ—ãƒ¬ã‚¤ãƒ¤ãƒ¼åŠ
+`LLOT` | Warp rise                | `20.12` | 0.03  | ãƒ¯ãƒ¼ãƒ—æµ®ãä¸Š
