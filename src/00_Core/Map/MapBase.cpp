@@ -70,8 +70,8 @@ void MapBase::AddTrigger(TriggerParams *param_2) {}
 void TriggerBase::vfunc_08() {}
 s32 MapBase::GetTriggerBoundingBox(unk32 param_2, AABB *param_3) {}
 bool TriggerBase::GetBoundingBox(AABB *bbox) {}
-unk8 MapBase::GetTriggerBoundingBoxes(unk32 param_2, AABB *param_3, unk32 param_4) {}
-unk32 MapBase::GetOverlappingTrigger(Vec3p *param_2) {}
+s32 MapBase::GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4) {}
+bool MapBase::GetOverlappingTrigger(Vec3p *param_2) {}
 bool TriggerBase::Overlaps(Vec3p *point) {}
 unk8 MapBase::FindTrigger(unk32 type) {}
 unk8 MapBase::GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity) {}
