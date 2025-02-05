@@ -32,6 +32,7 @@ CC_FLAGS = " ".join([
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
     "-interworking",        # Enable ARM/Thumb interworking
+    "-w off",               # Disable warnings
     "-sym on",              # Debug info, including line numbers
     "-gccinc",              # Interpret #include "..." and #include <...> equally
     "-nolink",              # Do not link

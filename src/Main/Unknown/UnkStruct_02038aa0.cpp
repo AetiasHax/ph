@@ -35,11 +35,10 @@ THUMB void UnkStruct_02038aa0::func_02038b28(void) {
     this->mUnk_114->mUnk_04 = NULL;
 }
 
-ARM void UnkStruct_02038aa0::func_02038b34(u32 param1, unk32 param2) {
-    UnkStruct_020397f8::func_0203e060(this, param1, param2);
+ARM void UnkStruct_02038aa0::vfunc_4c(u32 param1, unk32 param2) {
+    this->UnkStruct_0203dae0::vfunc_10(param1, param2);
 }
 
-ARM void UnkStruct_02038aa0::vfunc_4c() {}
 ARM void UnkStruct_02038aa0::vfunc_10(unk32 param1) {}
 
 ARM void UnkStruct_02038aa0::func_02038b40() {

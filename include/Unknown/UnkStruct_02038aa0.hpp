@@ -85,7 +85,7 @@ public:
     /* 40 */ virtual void vfunc_40();
     /* 44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY);
     /* 48 */ virtual void vfunc_48();
-    /* 4c */ virtual void vfunc_4c();
+    /* 4c */ virtual void vfunc_4c(u32 param1, unk32 param2);
     /* 50 */ virtual void vfunc_50(EntryINF1* param1, u32 param2, s16* param3, UnkSubClass1_02256FF8* param4);
     /* 54 */ virtual void vfunc_54();
     /* 58 */ virtual void vfunc_58();
@@ -112,7 +112,6 @@ public:
     // /* 0x38 */ /* func_02039570 */ virtual bool vfunc_38(void) override;
 
     UnkStruct_02038aa0(u8 param1, u8 param2);
-    void func_02038b34(u32 param1, unk32 param2);
     void func_02038b40();
     bool func_02038b78();
     s32 func_02038cb8(s32 param1);

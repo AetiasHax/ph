@@ -125,7 +125,6 @@ public:
     /* 74 */
 
     //! TODO: check if this is really here
-    static void func_0203e060(UnkStruct_02038aa0* param_1, u8 param_2, u8 param_3);
     void func_02039a3c(void);
     unk32 func_02039250(void);
 };
