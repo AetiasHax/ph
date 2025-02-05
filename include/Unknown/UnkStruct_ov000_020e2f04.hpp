@@ -1,6 +1,6 @@
 #pragma once
 
-#include <nds/math.H>
+#include <nds/math.h>
 
 #include "Physics/AABB.hpp"
 #include "global.h"
