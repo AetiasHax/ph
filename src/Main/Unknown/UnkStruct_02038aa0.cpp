@@ -10,7 +10,6 @@ UnkStruct_0203881c::~UnkStruct_0203881c() {}
 UnkStruct_02038aa0::UnkStruct_02038aa0(u8 param1, u8 param2) :
     UnkStruct_0203dae0(param1) {}
 UnkStruct_02038aa0::~UnkStruct_02038aa0() {}
-void UnkStruct_02038aa0::func_02038b34(u32 param1, unk32 param2) {}
 void UnkStruct_02038aa0::vfunc_4c() {}
 void UnkStruct_02038aa0::vfunc_10(unk32 param1) {}
 void UnkStruct_02038aa0::func_02038b40() {}
