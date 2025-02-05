@@ -23,6 +23,7 @@ src/Main/Unknown/UnkStruct_02032f0c.cpp:
 
 src/Main/Unknown/UnkStruct_02035064.cpp:
     .text       start:0x02035064 end:0x02035370
+    .data       start:0x02057b28 end:0x02057b30
 
 src/Main/Message/MessageManager.cpp:
     .text       start:0x0203643c end:0x020371b4
@@ -34,6 +35,7 @@ src/Main/Message/BMG.cpp:
 
 src/Main/Unknown/UnkStruct_02037750.cpp:
     .text       start:0x02037750 end:0x020387e0
+    .data       start:0x02057d00 end:0x02057d70
 
 src/Main/Unknown/UnkStruct_02038aa0.cpp:
     .text       start:0x0203881c end:0x02039578

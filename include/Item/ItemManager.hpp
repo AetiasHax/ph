@@ -197,6 +197,9 @@ public:
     // Rupees
     s32 GetMaxRupees() const;
     void GiveRupees(s32 amount, bool param2);
+    inline u16 GetNumRupees(void) {
+        return this->mNumRupees;
+    }
 
     // Potion
     void SetPotion(u32 index, Potion potion);

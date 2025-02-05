@@ -43,8 +43,8 @@ public:
     /* 87 */ unk8 mUnk_87;
     /* 88 */
 
-    /* 0 */ virtual s32 vfunc_0(); // func_020351a8
-    /* 4 */ virtual s32 vfunc_4(); // func_020351b0
+    /* 0 */ virtual s32 vfunc_00(); // func_020351a8
+    /* 4 */ virtual s32 vfunc_04(); // func_020351b0
     /* 8 */
 
     UnkStruct_02035064();

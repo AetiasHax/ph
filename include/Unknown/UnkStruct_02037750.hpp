@@ -7,12 +7,13 @@
 #include "System/SysNew.hpp"
 
 class UnkStruct_020397f8;
+typedef unk32 (*UnkStruct_02037750_Callback1)(unk32);
 
 // astruct_14
 class UnkStruct_02037750 : public SysObject {
 public:
     /* 00 (vtable) */
-    /* 04 */ unk32 mUnk_04[0x4];
+    /* 04 */ UnkStruct_02037750_Callback1 mUnk_04[0x4];
     /* 14 */ unk32 mUnk_14;
     /* 18 */ u32 mUnk_18;
     /* 1c */ u8 mUnk_1c;
@@ -29,7 +30,7 @@ public:
     /* 1c */ virtual bool vfunc_1c();
     /* 20 */ virtual void vfunc_20();
     /* 24 */ virtual bool vfunc_24(unk32 param1);
-    /* 28 */ virtual unk8 vfunc_28(s32 param1);
+    /* 28 */ virtual unk32 vfunc_28(s32 param1);
     /* 2c */ virtual unk32 vfunc_2c(s32 param1);
     /* 30 */ virtual bool vfunc_30();
     /* 34 */
@@ -73,7 +74,7 @@ public:
     /* 00 */ virtual ~UnkStruct_020386d8();
     /* 08 */ virtual void vfunc_08(u32 param1);
     /* 24 */ virtual bool vfunc_24(unk32 param1);
-    /* 28 */ virtual unk8 vfunc_28(s32 param1);
+    /* 28 */ virtual unk32 vfunc_28(s32 param1);
     /* 30 */ virtual bool vfunc_30();
     /* 34 */
 };
