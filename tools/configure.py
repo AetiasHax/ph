@@ -27,7 +27,7 @@ CC_FLAGS = " ".join([
     "-proc arm946e",        # Target processor
     "-gccext,on",           # Enable GCC extensions
     "-fp soft",             # Compute float operations in software
-    "-inline on,noauto",    # Inline only functions marked with 'inline'
+    "-inline noauto",       # Inline only functions marked with 'inline'
     "-lang=c++",            # Set language to C++
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
@@ -179,6 +179,12 @@ def main():
         )
         n.newline()
 
+        n.rule(
+            name="sha1",
+            command=f"{PYTHON} tools/sha1.py $in -c $sha1_file"
+        )
+        n.newline()
+
         game_build = build_path / game_version
         game_extract = extract_path / game_version
 
@@ -246,6 +252,16 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, game_build: Path, game_confi
         inputs=rom_file,
         rule="phony",
         outputs="rom",
+    )
+    n.newline()
+
+    n.build(
+        inputs=rom_file,
+        rule="sha1",
+        variables={
+            "sha1_file": str(Path(rom_file).with_suffix(".sha1"))
+        },
+        outputs="sha1",
     )
     n.newline()
 

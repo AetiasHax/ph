@@ -20,17 +20,17 @@ private:
 public:
     EquipShield();
 
-    /* 00 */ virtual void vfunc_00() override; // func_ov00_020c06d4
-    /* 04 */ virtual ~EquipShield() override; // func_ov04_0210bc94
+    /* 00 */ virtual void vfunc_00() override;
+    /* 04 */ virtual ~EquipShield() override;
     /* 0c */ virtual ItemFlag GetId() const override;
-    /* 10 */ virtual void vfunc_10() override; // func_ov00_020c076c
-
+    /* 10 */ virtual void vfunc_10() override;
     /* 14 */ virtual bool IsUsable(unk32 param1) const override;
-    /* 18 */ virtual void vfunc_18() override; // func_ov00_020c0770
-    /* 1c */ virtual void vfunc_1c(); // func_ov00_020c07f8
-
-    /* 30 */ virtual void vfunc_30() override; // func_ov00_020c0804
-    /* 38 */ virtual void vfunc_38(unk32 param1) override; // func_ov00_020c086c
-    /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const; // func_ov00_020c0a88
+    /* 18 */ virtual void vfunc_18() override;
+    /* 1c */ virtual void vfunc_1c();
+    /* 30 */ virtual void vfunc_30() override;
+    /* 38 */ virtual void vfunc_38(unk32 param1) override;
+    /* 3c */ virtual bool GetHitbox(Cylinder *hitbox) const;
     /* 50 */
+
+    void func_ov000_020c070c(u32 param1, Vec3p *param2, unk32 param3);
 };

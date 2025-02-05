@@ -1,11 +1,25 @@
 #pragma once
 
 #include "global.h"
-#include "lib/math.h"
+#include "nds/math.h"
 #include "types.h"
 
 #include "Item/Item.hpp"
 #include "Player/LinkStateBase.hpp"
+#include "Unknown/UnkStruct_02037750.hpp"
+
+class UnkStruct_ov004_0210abb8 : public UnkStruct_02037750 {
+public:
+    /* 00 (base) */
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */
+
+    /* 00 */ virtual ~UnkStruct_ov004_0210abb8() override;
+    /* 08 */ virtual void vfunc_08(unk32 param1) override;
+    /* 24 */ virtual void vfunc_24(unk32 param1) override;
+    /* 2c */ virtual unk32 vfunc_2c(s32 param1) override;
+    /* 34 */
+};
 
 class LinkStateCutscene : public LinkStateBase {
 public:
@@ -58,4 +72,54 @@ public:
     /* 38 */ virtual bool vfunc_38() override;
     /* 40 */ virtual bool vfunc_40() override;
     /* 44 */
+
+    bool func_ov000_020b1e98(s32 param1);
+    bool func_ov000_020b1eb8();
+    bool func_ov000_020b1eec();
+    void StopVerticalVelocity();
+    void func_ov000_020b2568();
+    void func_ov000_020b2598();
+    void func_ov000_020b2ba4();
+    void func_ov000_020b2ce4(unk32 param1, s16 param2);
+    void func_ov000_020b2cf0();
+    void func_ov000_020b2d60();
+    bool func_ov000_020b2d8c();
+    void func_ov000_020b2e84();
+    void func_ov000_020b2f48(unk32 param1, unk32 param2);
+    void func_ov000_020b2f70(unk32 param1, void *param2, unk32 *param3);
+    void ChangeToMoveState();
+    bool func_ov000_020b2fac();
+    void func_ov000_020b3024(Vec3p *param1, unk32 param2);
+    void func_ov000_020b305c(Vec3p *param1, Vec3p *param2);
+    void func_ov000_020b309c(Vec3p *param1);
+    void func_ov000_020b30e4(u32 param1, unk32 param2, unk32 param3);
+    void func_ov000_020b3278(s32 param1, s32 *param2);
+    void func_ov000_020b35d8(s32 param1, s32 param2);
+    void func_ov000_020b38dc(u32 param1, u32 param2);
+
+    LinkStateCutscene(PlayerLinkBase *link);
+
+    void func_ov005_021089c0();
+    void func_ov005_021089f4();
+    void func_ov005_02108d08();
+    void func_ov005_02108e08();
+    void func_ov005_02108e8c();
+    void func_ov005_02108f38();
+    void func_ov005_02108f98(unk32 param1, unk32 param2, unk32 param3);
+    void func_ov005_021092bc();
+    void func_ov005_0210952c();
+    void func_ov005_02109588();
+    void func_ov005_0210960c();
+    void func_ov005_02109650();
+    bool PlayItemCutscene(unk32 itemId);
+    bool func_ov005_02109768();
+    void func_ov005_021097b0(s32 param1);
+    void func_ov005_021099dc();
+    bool func_ov005_02109cd0(s32 *param1, s32 param2, unk32 param3);
+    void func_ov005_02109e84();
+    void func_ov005_02109f2c();
+    void func_ov005_02109f88();
+    void func_ov005_0210a018();
+    void func_ov005_0210a06c();
+    bool func_ov005_0210a0c0(unk16 param1);
 };

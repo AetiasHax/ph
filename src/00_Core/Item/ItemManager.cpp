@@ -1,5 +1,11 @@
 #include "Item/ItemManager.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
+#include "DTCM/UnkStruct_027e0f78.hpp"
+#include "Map/MapManager.hpp"
 #include "Player/PlayerLinkBase.hpp"
+#include "Player/PlayerManager.hpp"
+#include "Save/AdventureFlags.hpp"
+#include "System/OverlayManager.hpp"
 
 static const char *sShipPartTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
@@ -21,7 +27,7 @@ THUMB void ItemManager::ClearPrevEquippedItem() {
 THUMB void ItemManager::Save(SaveItemManager *save) {
     save->itemFlags = mItemFlags;
     save->numRupees = mNumRupees;
-    for (s32 i = 0; i < NUM_POTIONS; ++i) {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
         save->potions[i] = mPotions[i];
     }
     save->numBombs              = (u8) (*mAmmo)[ItemFlag_BombBag];
@@ -29,7 +35,7 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
     save->numArrows             = (u8) (*mAmmo)[ItemFlag_Bow];
     save->equippedItem          = (u8) mEquippedItem;
     save->salvagedTreasureFlags = mSalvagedTreasureFlags;
-    save->hourglassSeconds      = FastDivide(mHourglassSandFrames, 60);
+    save->hourglassSeconds      = SoftDivide(mHourglassSandFrames, 60);
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->numGems[i] = mNumGems[i];
     }
@@ -71,7 +77,7 @@ THUMB void ItemManager::Load(const SaveItemManager *save) {
     (*mAmmo)[ItemFlag_BombBag]    = save->numBombs;
     (*mAmmo)[ItemFlag_BombchuBag] = save->numBombchus;
     (*mAmmo)[ItemFlag_Bow]        = save->numArrows;
-    for (s32 i = 0; i < NUM_POTIONS; ++i) {
+    for (s32 i = 0; i < MAX_POTIONS; ++i) {
         mPotions[i] = save->potions[i];
     }
     mEquippedItem          = save->equippedItem;
@@ -124,7 +130,6 @@ ARM ActorNavi *ItemManager::GetFairy(FairyId id) const {
     return mFairies[id];
 }
 
-extern UnkStruct_027e0d38 *data_027e0d38;
 extern unk32 gPlayerAnimHandler;
 extern "C" void LoadEquipItemModel(unk32 param1, ItemFlag param2);
 extern "C" void _ZNK11ItemManager15GetEquippedItemEv();
@@ -153,16 +158,16 @@ ARM ItemModel *ItemManager::GetItemModel(ItemModelId id) {
     return mItemModels[id];
 }
 
-extern unk32 data_027e0fc4;
+extern unk32 gItemModelLoader;
 extern "C" void *func_ov00_020bb3a8(unk32 param1, u32 index);
 extern "C" void func_ov00_020c0bdc(void *param1, unk32 param2);
 ARM void ItemManager::func_ov00_020ad538(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 6);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 6);
     func_ov00_020c0bdc(unk1, param1);
 }
 
 ARM void ItemManager::func_ov00_020ad560(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 7);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 7);
     func_ov00_020c0bdc(unk1, param1);
 }
 
@@ -171,7 +176,7 @@ ARM ItemModel *ItemManager::GetDungeonItemModel(u32 index) {
 }
 
 ARM void ItemManager::func_ov00_020ad594(unk32 param1) const {
-    void *unk1 = func_ov00_020bb3a8(data_027e0fc4, 11);
+    void *unk1 = func_ov00_020bb3a8(gItemModelLoader, 11);
     func_ov00_020c0bdc(unk1, param1);
 }
 
@@ -251,7 +256,7 @@ ARM bool ItemManager::func_ov00_020ad790(unk32 param1) {
     ItemFlag equipId = mForcedItem;
     bool unk2        = !gMapManager->func_ov00_020849f8(equipId);
     if (mEquippedItem != ItemFlag_None && (unk2 || (u32) mEquippedItem - 9 <= 1) &&
-        (gPlayerLink == 0 || gPlayerLink->func_ov00_020bbd80(param1)) && this->HasItem(mEquippedItem))
+        (gPlayerLink == 0 || gPlayerLink->func_ov000_020bbd80(param1)) && this->HasItem(mEquippedItem))
     {
         equipId = mEquippedItem;
     }
@@ -298,7 +303,7 @@ THUMB u16 ItemManager::GetUnk_09e(u32 index) const {
 }
 
 THUMB s32 ItemManager::GetUnk_09e_Divided(u32 index) const {
-    q20 quotient = Divide(INT_TO_Q20(mUnk_09e[index]), FLOAT_TO_Q20(2.54));
+    q20 quotient = CoDivide64By32(INT_TO_Q20(mUnk_09e[index]), FLOAT_TO_Q20(2.54));
     s32 result   = ROUND_Q20(quotient);
     if (result < 1) result = 1;
     return result;
@@ -687,7 +692,7 @@ THUMB void ItemManager::GiveItem(ItemId id) {
         case ItemId_SalvageArm: {
             SET_FLAG(mItemFlags.flags, ItemFlag_SalvageArm);
             gAdventureFlags->Set(AdventureFlag_SalvageArm, true);
-            gHealthManager->mSalvageArmHealth = 5;
+            gPlayerManager->mSalvageArmHealth = 5;
         } break;
 
         case ItemId_SwordsmanScroll: {

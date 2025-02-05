@@ -212,7 +212,7 @@ data_ov002_020f683c kind:data(any) addr:0x20f683c
 data_ov002_020f6840 kind:data(any) addr:0x20f6840
 data_ov002_020f6844 kind:data(any) addr:0x20f6844
 data_ov002_020f6898 kind:data(any) addr:0x20f6898
-func_ov002_020f6978 kind:function(arm,size=0x2c) addr:0x20f6978
+__sinit_ov002_020f6978 kind:function(arm,size=0x2c) addr:0x20f6978
 data_ov002_020f69c0 kind:data(any) addr:0x20f69c0
 data_ov002_020f69c4 kind:data(any) addr:0x20f69c4
 data_ov002_020f69c8 kind:data(any) addr:0x20f69c8
