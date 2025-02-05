@@ -519,7 +519,7 @@ ARM UnkStruct_020397f8* UnkStruct_027E0C68::func_02036f68(u32 param_2, u8* param
     pSVar5->mUnk_164 = (UnkStruct_020397f8*)pSVar2;
     pSVar5->mUnk_418 = this->mUnk_28[5];
 
-    pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s32)param_3, 0);
+    pSVar5->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(this->pGroups, param_2), (s32*)param_3, 0);
 
     if (data_ov000_020eec9c.func_ov000_020d7f18(0x19) == 0 && data_ov000_020eec9c.func_ov000_020d7f18(0x18) == 0 &&
         data_ov000_020eec9c.func_ov000_020d7f18(0x34) == 0 && data_ov000_020eec9c.func_ov000_020d7f18(0x35) == 0 &&

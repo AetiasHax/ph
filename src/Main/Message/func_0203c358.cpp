@@ -7,6 +7,8 @@
 #include "Item/ItemManager.hpp"
 #include "System/SysNew.hpp"
 
+extern "C" void func_0203fc78(unk32*, unk32*);
+
 THUMB MsgProc_Type2::MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4) :
     UnkStruct_02038aa0(0, 0)    
 {
@@ -36,7 +38,7 @@ THUMB void MsgProc_Type2::func_0203c39c(unk32 param_2, unk32 param_3) {
         local_20 = 0x10;
 
         if (iVar4 != 0) {
-            this->func_0203fc78(local_1c, &local_20);
+            func_0203fc78(local_1c, &local_20);
         }
 
         uVar1 = this->func_0203d318((s32)(local_1c[0] + 7 + ((u32)(local_1c[0] + 7 >> 2) >> 0x1D)) >> 3,

@@ -63,7 +63,7 @@ struct UnkStruct_MsgProc_Base_unk_2C {
     /* 0c */
 };
 
-struct func_0203b410_param_2 {
+struct func_0203b410_param1 {
     /* 00 */ unk32 mUnk_00;
     /* 04 */ unk32 mUnk_04;
     /* 08 */ unk32 mUnk_08;
@@ -141,7 +141,7 @@ public:
     /* 54 */ virtual void vfunc_54(void);
     /* 58 */ virtual void vfunc_58(void);
     /* 5c */ virtual void vfunc_5C(void);
-    /* 60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4);
+    /* 60 */ virtual void vfunc_60(func_0203b410_param1* param_2, unk32 param_3, unk32 param_4);
     /* 64 */ virtual void vfunc_64(s16* param_2);
     /* 68 */ virtual unk32 vfunc_68(unk32 param_2);
     /* 6c */ virtual void vfunc_6C(unk32* param_2, unk32* param_3);

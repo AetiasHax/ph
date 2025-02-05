@@ -1,10 +1,11 @@
 #include "Unknown/UnkStruct_02037750.hpp"
+#include "Message/MessageManager.hpp"
 
 UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
     s32 i;
 
-    this->mUnk_14 = param_3;
-    this->mUnk_18 = param_2;
+    this->mUnk_14 = param2;
+    this->mUnk_18 = param1;
     this->mUnk_1c = 0;
     this->mUnk_1d = 0xFF;
     this->mUnk_1e = 0;
@@ -15,13 +16,13 @@ UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
 }
 
 ARM UnkStruct_02037750::~UnkStruct_02037750() {
-    if (data_027e0c68.unk_20[0] == this) {
+    if (data_027e0c68.mUnk_20[0] == this) {
         data_027e0c68.func_02036d4c(this);
     }
 }
 
-ARM void UnkStruct_02037750::vfunc_08(unk32 param1) {}
-ARM void UnkStruct_02037750::vfunc_0c(s32 param1) {}
+ARM void UnkStruct_02037750::vfunc_08(u32 param1) {}
+ARM void UnkStruct_02037750::vfunc_0c(UnkStruct_020397f8* param1) {}
 ARM void UnkStruct_02037750::vfunc_10() {}
 ARM void UnkStruct_02037750::vfunc_24(unk32 param1) {}
 ARM void UnkStruct_02037750::vfunc_28(s32 param1) {}
@@ -41,7 +42,7 @@ ARM UnkStruct_020386d8::UnkStruct_020386d8() :
     this->mUnk_24.func_020376c0(gVec3p_ZERO);
 }
 
-ARM void UnkStruct_020386d8::vfunc_08(unk32 param1) {}
+ARM void UnkStruct_020386d8::vfunc_08(u32 param1) {}
 ARM void UnkStruct_020386d8::vfunc_24(unk32 param1) {}
 ARM void UnkStruct_020386d8::vfunc_28() {}
 ARM unk32 UnkStruct_020386d8::vfunc_30() {}

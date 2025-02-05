@@ -156,7 +156,7 @@ typedef struct UnkStruct_01ffbe34 {
 extern "C" void func_01ffbe34(UnkStruct_01ffbe34 *param1);
 
 struct UnkClass_027e1054_unk_00_unk00 {
-    /* 0x00 */ u8 unk_00[0x95];
+    /* 0x00 */ u8 mUnk_00[0x95];
     /* 0x95 */ u8 mUnk_95;
 };
 struct UnkClass_027e1054_unk_00 {

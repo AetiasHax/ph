@@ -108,7 +108,7 @@ public:
     /* 54 */ virtual void vfunc_54(void) override;
     /* 58 */ virtual void vfunc_58(void) override;
     /* 5c */ virtual void vfunc_5C(void) override;
-    /* 60 */ virtual void vfunc_60(func_0203b410_param_2* param_2, unk32 param_3, unk32 param_4) override;
+    /* 60 */ virtual void vfunc_60(func_0203b410_param1* param_2, unk32 param_3, unk32 param_4) override;
     /* 64 */ virtual void vfunc_64(s16* param_2) override;
     /* 68 */ virtual unk32 vfunc_68(unk32 param_2) override;
     /* 6c */ virtual void vfunc_6C(unk32* param_2, unk32* param_3) override;
