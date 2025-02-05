@@ -4,6 +4,11 @@
 extern u32 *data_027e0ce0[];
 extern "C" void Fill256(unk32, unk16*, unk32, unk32);
 extern "C" void func_0203fc78(u8, unk32*, unk32*);
+extern "C" u16 func_0203d318(unk32, unk32);
+extern "C" void func_020298b8(unk32*, unk32, unk32, unk32, unk32);
+extern "C" void func_02029830(unk32*, unk32, unk32, unk32, unk32);
+extern "C" unk32 func_0203d400(u8);
+extern "C" void func_02035440(u8);
 
 // non-matching
 THUMB UnkStruct_0203dae0::UnkStruct_0203dae0(u8 param1) {
@@ -69,13 +74,9 @@ ARM bool UnkStruct_0203dae0::vfunc_14(s32 param1, s32 param2) {
     return true;
 }
 
-extern "C" u16 func_0203d318(unk32, unk32);
-extern "C" void func_020298b8(unk32*, unk32, unk32, unk32, unk32);
-extern "C" void func_02029830(unk32*, unk32, unk32, unk32, unk32);
-extern "C" unk32 func_0203d400(u8);
-
+// non-matching
 ARM void UnkStruct_0203dae0::func_0203dcfc(u8 param1, unk32 param2, unk32 param3, s32 param4) {
-    unk32 uVar5;
+    unk32* uVar5;
     
     this->mUnk_50 = param1;
     this->vfunc_14(this->mUnk_4a, this->mUnk_4c);
@@ -84,25 +85,44 @@ ARM void UnkStruct_0203dae0::func_0203dcfc(u8 param1, unk32 param2, unk32 param3
 
     if (func_0203d400(this->UnkStruct_02032f0c::func_02032fa4()) != 0x0) {
         uVar5 = this->func_0203ddec();
-        func_020298b8(this->mUnk_10, uVar5, this->mUnk_10[0x1], this->mUnk_10[0x2], 0x4);
+        func_020298b8(this->mUnk_10, *uVar5, this->mUnk_10[0x1], this->mUnk_10[0x2], 0x4);
     } else {
         uVar5 = this->func_0203ddec();
-        func_02029830(this->mUnk_10, uVar5, this->mUnk_10[0x1], this->mUnk_10[0x2], 0x4);
+        func_02029830(this->mUnk_10, *uVar5, this->mUnk_10[0x1], this->mUnk_10[0x2], 0x4);
     }
 
     this->mUnk_28 = this->mUnk_10;
-    this->mUnk_2c = this->mUnk_2c;
+    this->mUnk_2c = this->mUnk_2c; // this->mUnk_2c = &(UnkStruct_MsgProc_Base_unk_2C*)this->mUnk_10;
     this->mUnk_30 = param4;
     this->mUnk_34 = 3;
-    this->vfunc_10(param3, 0);
+    this->vfunc_10(param3, 3);
 
     this->func_0203de58(param2);
 }
 
-ARM unk32 UnkStruct_0203dae0::func_0203ddec() {}
-ARM void UnkStruct_0203dae0::func_0203ddfc() {}
-ARM void UnkStruct_0203dae0::func_0203de14() {}
-ARM s32 UnkStruct_0203dae0::func_0203de24() {}
+ARM unk32* UnkStruct_0203dae0::func_0203ddec() {
+    return this->mUnk_114->func_0203d1b4();
+}
+
+ARM void UnkStruct_0203dae0::func_0203ddfc() {
+    this->mUnk_114->mUnk_04 = 0;
+    this->mUnk_11c = 0;
+}
+
+ARM void UnkStruct_0203dae0::func_0203de14() {
+    //! TODO: class?
+    func_02035440(this->mUnk_50);
+}
+
+// non-matching
+ARM s32 UnkStruct_0203dae0::func_0203de24() {
+    if (func_0203d400(this->UnkStruct_02032f0c::func_02032fa4()) == 0x0) {
+        return this->mUnk_10[5] * this->mUnk_10[6] * 0x20;
+    }
+
+    return this->mUnk_10[6] << 0xa;
+}
+
 ARM bool UnkStruct_0203dae0::func_0203de58(s32 param1) {}
 
 ARM void UnkStruct_0203dae0::vfunc_10(u32 param1, unk32 param2) {

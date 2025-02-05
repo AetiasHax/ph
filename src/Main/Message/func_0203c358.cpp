@@ -49,7 +49,7 @@ THUMB void MsgProc_Type2::func_0203c39c(unk32 param_2, unk32 param_3) {
         }
     }
 
-    if (this->mUnk_114->vfunc_08(this, uVar3) != 0) {
+    if (this->mUnk_114->vfunc_08(this) != 0) {
         this->mUnk_10 = this->mUnk_114->func_0203d1b4();
     }
 }

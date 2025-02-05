@@ -122,7 +122,7 @@ public:
     void func_0203dc10(unk32 param_2, unk32 param_3);
     bool func_0203dc74(s32 param1, s32 param2);
     void func_0203dcfc(u8 param1, unk32 param2, unk32 param3, s32 param4);
-    unk32 func_0203ddec();
+    unk32* func_0203ddec();
     void func_0203ddfc();
     void func_0203de14();
     s32 func_0203de24();
