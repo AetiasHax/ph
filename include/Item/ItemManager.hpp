@@ -15,6 +15,7 @@ extern "C" {
 #include "Save/SaveItemManager.hpp"
 #include "Sound/Sfx.hpp"
 #include "System/SysNew.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2

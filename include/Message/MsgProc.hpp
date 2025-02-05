@@ -3,13 +3,6 @@
 #include "System/SysNew.hpp"
 #include "Message/BMG.hpp"
 #include "Unknown/func_ov000_020d0644.hpp"
-#include "Unknown/UnkStruct_0202e1a0.hpp"
-#include "Unknown/UnkStruct_0203dae0.hpp"
-#include "Unknown/UnkStruct_02032f0c.hpp"
-#include "Unknown/UnkStruct_02038aa0.hpp"
-#include "Unknown/UnkStruct_020397f8.hpp"
-#include "Unknown/UnkStruct_02035064.hpp"
-#include "Unknown/UnkStruct_02037750.hpp"
 #include "nds/math.h"
 
 // temp

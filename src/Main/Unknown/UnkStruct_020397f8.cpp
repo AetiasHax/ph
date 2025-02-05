@@ -214,7 +214,7 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
     bVar1 = data_027e0c68.mUnk_28[this->mUnk_50];
 
     this->vfunc_6C(&local_8c, &local_90);
-    this->func_0203a188(local_8c + param1, local_90 + param2, 0);
+    this->func_0203a188(local_8c + param1, local_90 + param2);
     this->func_0203e1b0(param1 + local_8c + (this->mUnk_158.x - (this->mUnk_14 << 3) / 2), param2 + local_90 + (this->mUnk_158.y - (this->mUnk_18 << 3) / 2), 0);
 
     if (this->mUnk_584 != 0) {

@@ -5,6 +5,8 @@
 
 #include "Unknown/UnkStruct_0203dae0.hpp"
 #include "System/SysNew.hpp"
+#include "nds/math.h"
+#include "Message/MsgProc.hpp"
 
 class UnkStruct_02038aa0;
 typedef bool (*UnknownCallback)(class UnkStruct_020397f8*);
@@ -50,6 +52,9 @@ public:
     void func_0203f020(s16*, unk32);
 };
 
+struct UnkStruct_0203b264;
+struct func_02038f44_param4;
+
 // astruct_6, MsgProc_Main
 class UnkStruct_02038aa0 : public UnkStruct_0203dae0 {
 public:
@@ -84,7 +89,7 @@ public:
     /* 50 */ virtual void vfunc_50(EntryINF1* param1, u32 param2, s16* param3, UnkSubClass1_02256FF8* param4);
     /* 54 */ virtual void vfunc_54();
     /* 58 */ virtual void vfunc_58();
-    /* 5c */ virtual void vfunc_5c(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
+    /* 5c */ virtual void vfunc_5c(u16* param_2, struct UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
     /* 60 */ virtual void vfunc_60();
     /* 64 */ virtual void vfunc_64();
     /* 68 */ virtual s32 vfunc_68(unk32 param1);
@@ -126,7 +131,7 @@ public:
     void func_02038b28(void);
     void func_02038b74(void); // is this a dtor?
     void func_02038f40(void);
-    void func_02038f44(EntryINF1* param_2, u32 param_3, func_02038f44_param4* param_4, UnkSubClass1_02256FF8* param_5, unk32 param_6);
+    void func_02038f44(EntryINF1* param_2, u32 param_3, struct func_02038f44_param4* param_4, UnkSubClass1_02256FF8* param_5, unk32 param_6);
     void func_02039058(void);
     unk32 func_0203905c(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
     void func_02038d20(void);

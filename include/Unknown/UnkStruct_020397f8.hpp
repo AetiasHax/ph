@@ -6,6 +6,7 @@
 #include "Unknown/UnkStruct_02035064.hpp"
 #include "Unknown/UnkStruct_02038aa0.hpp"
 #include "System/SysNew.hpp"
+#include "Message/MsgProc.hpp"
 
 // does it host both choices?
 struct UnknownMsgChoiceStruct {
@@ -91,7 +92,7 @@ public:
     void func_02039ca8();
     /* 3c */ virtual void vfunc_3c(unk32 param1);
     /* 40 */ virtual void vfunc_40(s32 param1, s32 param2);
-    void func_0203a188(s32 param1, s32 param2);
+    void func_0203a188(s32 param1, s32 param2); // void func_0203a188(unk32 param_2, unk32 param_3, unk32 param_4);
     bool func_0203a2c0();
     unk32 func_0203a30c();
     /* 48 */ virtual void vfunc_48();
@@ -111,7 +112,7 @@ public:
     /* 64 */ virtual void vfunc_64(s16* param1);
     void func_0203b764();
     /* 20 */ virtual unk32 vfunc_20(s32 param1, s32 *param2);
-    void func_0203bd8c(s32 param1);
+    void func_0203bd8c(s32 param1); // void func_0203bd8c(u16 param_2);
     /* 6c */ virtual void vfunc_6c(s32 *param1, s32 *param2);
     void func_0203be08();
     void func_0203be64();
@@ -127,20 +128,6 @@ public:
     static void func_0203e060(UnkStruct_02038aa0* param_1, u8 param_2, u8 param_3);
     void func_02039a3c(void);
     unk32 func_02039250(void);
-    void func_02039ca8(void);
-    void func_0203a188(unk32 param_2, unk32 param_3, unk32 param_4);
-    bool func_0203a2c0(void);
-    unk32 func_0203a30c(void);
-    void func_0203a35c(void);
-    bool func_0203a3e0(void);
-    bool func_0203a6d0(unk32 param_2, unk32 param_3);
-    bool func_0203b0bc(void);
-    unk32 func_0203b0ec(unk32 param_2);
-    void func_0203b764(void);
-    void func_0203bd8c(u16 param_2);
-    void func_0203be08(void);
-    void func_0203be64(void);
-    bool func_0203c13c(void);
 };
 
 class MsgProc_Type3 : public UnkStruct_02038aa0 {

@@ -7,6 +7,13 @@
 #include "Message/BMG.hpp"
 #include "Message/MsgProc.hpp"
 #include "nds/math.h"
+
+#include "Unknown/UnkStruct_0202e1a0.hpp"
+#include "Unknown/UnkStruct_0203dae0.hpp"
+#include "Unknown/UnkStruct_02032f0c.hpp"
+#include "Unknown/UnkStruct_02038aa0.hpp"
+#include "Unknown/UnkStruct_020397f8.hpp"
+#include "Unknown/UnkStruct_02035064.hpp"
 #include "Unknown/UnkStruct_02037750.hpp"
 
 class UnkStruct_027E0C68 : public SysObject {

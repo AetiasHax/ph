@@ -6,6 +6,8 @@
 #include "Unknown/UnkStruct_02032f0c.hpp"
 #include "Message/MsgProc.hpp"
 
+class UnkStruct_0203dae0_114;
+
 // astruct_7, MsgProc_Base2
 class UnkStruct_0203dae0 : public UnkStruct_02032f0c {
 public:

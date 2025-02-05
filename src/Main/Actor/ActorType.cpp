@@ -5,8 +5,8 @@ ActorTypeList sActorTypeList;
 ARM ActorType::ActorType(ActorTypeId id, ActorCreateFunc create, unk32 (*unk_08)()) {
     this->id     = id;
     this->create = create;
-    this->mUnk_08 = unk_08;
-    this->mUnk_0c = 0;
+    this->unk_08 = unk_08;
+    this->unk_0c = 0;
     this->next   = NULL;
     this->Register();
     sActorTypeList.tail = this;
@@ -17,7 +17,7 @@ ARM ActorType::~ActorType() {
 }
 
 ARM unk32 ActorType::func_0203e7c8() {
-    if (this->mUnk_08 == NULL) {
+    if (this->unk_08 == NULL) {
         return 0;
     }
     return (*unk_08)();
