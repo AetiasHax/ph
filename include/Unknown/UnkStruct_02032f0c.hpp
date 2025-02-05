@@ -6,7 +6,7 @@
 #include "Message/BMG.hpp"
 #include "System/SysNew.hpp"
 
-class UnkStruct_02032e7c {
+class UnkStruct_02032e7c : public SysObject {
 public:
     /* 00 (vtable) */
     /* 04 */ u16* mUnk_04; // pointer to the current position in the message to display

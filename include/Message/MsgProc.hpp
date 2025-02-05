@@ -49,8 +49,8 @@ public:
 
     UnkStruct_0203dae0_114();
     /* 0x00 */ virtual ~UnkStruct_0203dae0_114() override;
-    /* 0x04 */ virtual UNK_TYPE vfunc_04(UNK_TYPE);
-    /* 0x08 */ virtual unk32 vfunc_08(void*, s16);
+    /* 0x08 */ virtual unk32 vfunc_08(void*);
+    /* 0x08 */ virtual unk32 vfunc_0c(void);
     /* 0x0C */
 
     unk32* func_0203d1b4(void);

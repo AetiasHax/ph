@@ -1,9 +1,9 @@
 #include "Unknown/UnkStruct_02032f0c.hpp"
 #include "Unknown/UnkStruct_02035064.hpp"
 
-extern "C" void func_020078f4(unk32, void*, unk32);
-extern "C" void func_020078c0(unk32, void*, unk32);
-extern "C" void func_020296e0(unk32**, UnkStruct_MsgProc_Base_unk_2C*, u8, u8, unk32, u8);
+extern "C" void Fill32(unk32, void*, unk32);
+extern "C" void Fill16(unk32, void*, unk32);
+extern "C" void func_020296e0(unk32**, UnkStruct_MsgProc_Base_unk_2C**, unk32, unk32, unk32, unk32);
 extern THUMB unk32 func_0202ab48(void);
 
 ARM UnkStruct_02032e7c::UnkStruct_02032e7c() {
@@ -33,9 +33,9 @@ THUMB UnkStruct_02032f0c::UnkStruct_02032f0c() {
     this->mUnk_4f = 0;
     this->mUnk_50 = 0;
     this->mUnk_51 = 0;
-    func_020078f4(0, &this->mUnk_10, 0x18);
-    func_020078f4(0, &this->mUnk_28, 0x10);
-    func_020078c0(0, &this->mUnk_3e, 0xC);
+    Fill32(0, &this->mUnk_10, 0x18);
+    Fill32(0, &this->mUnk_28, 0x10);
+    Fill16(0, &this->mUnk_3e, 0xC);
     this->mUnk_10 = NULL;
     this->mUnk_2c = NULL;
     this->mUnk_30 = 2;
@@ -78,7 +78,7 @@ ARM bool UnkStruct_02032f0c::vfunc_14(s32 param1, s32 param2) {
 ARM void UnkStruct_02032f0c::vfunc_08(s32 param1, unk32 param2, s16 *param3, unk32 param4) {}
 
 ARM void UnkStruct_02032f0c::vfunc_0c(unk32 param1, unk32 param2, unk32 param3, unk32 param4) {
-    func_020296e0(&this->mUnk_10, *this->mUnk_2c, param1, param2, param4, param3);
+    func_020296e0(&this->mUnk_10, this->mUnk_2c, param1, param2, param4, param3);
 }
 
 ARM void UnkStruct_02032f0c::vfunc_10(u32 param1, unk32 param2) {}
@@ -106,4 +106,6 @@ ARM u16 *UnkStruct_02032f0c::func_02033b0c(s32 param1) {}
 ARM bool UnkStruct_02032f0c::func_02033c6c() {}
 ARM unk32 UnkStruct_02032f0c::func_02033c88(u32 param1) {}
 ARM s32 UnkStruct_02032f0c::func_02033cbc(s16 *param1) {}
-ARM UnkStruct_02032e7c::~UnkStruct_02032e7c() {}
+
+ARM UnkStruct_02032e7c::~UnkStruct_02032e7c() {
+}

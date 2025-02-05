@@ -1,7 +1,7 @@
 #include "Unknown/UnkStruct_02037750.hpp"
 #include "Message/MessageManager.hpp"
 
-UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
+ARM UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
     s32 i;
 
     this->mUnk_14 = param2;
@@ -30,7 +30,10 @@ ARM unk32 UnkStruct_02037750::vfunc_2c(s32 param1) {}
 ARM LinkStateInteract *UnkStruct_02037750::GetLinkStateInteract() {}
 ARM unk32 UnkStruct_02037750::vfunc_30() {}
 ARM void UnkStruct_02037750::func_020385d0(s32 param1, unk32 *param2) {}
-ARM void UnkStruct_02037750::vfunc_14() {}
+
+ARM void UnkStruct_02037750::vfunc_14() {
+}
+
 ARM void UnkStruct_02037750::vfunc_18() {}
 ARM unk32 UnkStruct_02037750::vfunc_1c() {}
 ARM void UnkStruct_02037750::vfunc_20() {}

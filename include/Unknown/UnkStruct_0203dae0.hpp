@@ -68,11 +68,11 @@ public:
     /* 110 */ unk32 mUnk_110;
     /* 114 */ UnkStruct_0203dae0_114 *mUnk_114;
     /* 118 */ s32 mUnk_118;
-    /* 11c */ unk16 mUnk_11c;
+    /* 11c */ u16 mUnk_11c;
     /* 11e */ u8 mUnk_11e;
     /* 11f */ u8 mUnk_11f;
     /* 120 */ u8 mUnk_120;
-    /* 121 */ u8 mUnk_121;
+    /* 121 */ s8 mUnk_121;
     /* 123 */ u8 mUnk_122;
 
     /* 00 */ virtual ~UnkStruct_0203dae0();
@@ -118,15 +118,16 @@ public:
     /* 74 */
 
     UnkStruct_0203dae0(u8 param1);
-    void func_0203dc10(s32 param1);
+    void func_0203dc10(unk32 param1);
+    void func_0203dc10(unk32 param_2, unk32 param_3);
     bool func_0203dc74(s32 param1, s32 param2);
     void func_0203dcfc(u8 param1, unk32 param2, unk32 param3, s32 param4);
-    void func_0203ddec();
+    unk32 func_0203ddec();
     void func_0203ddfc();
     void func_0203de14();
     s32 func_0203de24();
     bool func_0203de58(s32 param1);
-    bool func_0203e0f8(unk32 param1, s32 param2);
+    bool func_0203e0f8();
     bool func_0203e1b0(unk32 param1, unk32 param2, s32 param3);
     void func_0203e2e8(s32 param1, s32 param2, unk32 param3, u32 param4);
     void func_0203e510(s32 *param1, s32 param2, s32 param3);
