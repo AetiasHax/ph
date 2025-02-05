@@ -8,7 +8,8 @@
 class UnkStruct_02035064 {
 public:
     /* 00 (vtable) */
-    /* 04 */ unk32 mUnk_04;
+    /* 04 */ unk16 mUnk_04;
+    /* 04 */ unk16 mUnk_06;
     /* 08 */ u32* mUnk_08;
     /* 0c */ unk32 mUnk_0c;
     /* 10 */ unk32 mUnk_10;
@@ -48,6 +49,8 @@ public:
 
     UnkStruct_02035064();
     ~UnkStruct_02035064();
+
+    static u8 func_02035428(u8 param1);
 
     void func_02034a1c(unk32, unk32, struct UnkStruct_01ffbe34*);
     void func_02034b0c(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5, unk32 param_6);

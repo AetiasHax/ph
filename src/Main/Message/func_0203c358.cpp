@@ -10,13 +10,13 @@
 THUMB MsgProc_Type2::MsgProc_Type2(unk32 param_2, unk16 param_3, unk32 param_4) :
     UnkStruct_02038aa0(0, 0)    
 {
-    this->unk_162 = 4;
-    this->unk_164 = 1;
-    this->unk_166 = 0;
-    this->unk_168 = -1;
-    this->unk_16A = 0;
-    this->unk_16C = 1;
-    this->unk_16E = 0;
+    this->mUnk_162 = 4;
+    this->mUnk_164 = 1;
+    this->mUnk_166 = 0;
+    this->mUnk_168 = -1;
+    this->mUnk_16a = 0;
+    this->mUnk_16c = 1;
+    this->mUnk_16e = 0;
 }
 
 // non-matching
@@ -47,13 +47,13 @@ THUMB void MsgProc_Type2::func_0203c39c(unk32 param_2, unk32 param_3) {
         }
     }
 
-    if (this->unk_114->vfunc_08(this, uVar3) != 0) {
-        this->unk_10 = this->unk_114->func_0203d1b4();
+    if (this->mUnk_114->vfunc_08(this, uVar3) != 0) {
+        this->mUnk_10 = this->mUnk_114->func_0203d1b4();
     }
 }
 
 ARM void MsgProc_Type2::vfunc_3C(unk32 param_2) {
-    if (this->unk_15C > 0 && this->unk_122 != 1) {
+    if (this->mUnk_15c > 0 && this->mUnk_122 != 1) {
         if (this->func_0203de14(param_2) != 0) {
             this->vfunc_40(0, 0);
         }
@@ -64,7 +64,7 @@ ARM void MsgProc_Type2::vfunc_40(unk32 param_2, unk32 param_3) {
     param_2 += this->mUnk_166;
     param_3 += this->mUnk_168;
 
-    this->func_0203c4ac(param_2 + this->unk_16A, param_3 + this->unk_16C);
+    this->func_0203c4ac(param_2 + this->mUnk_16a, param_3 + this->mUnk_16c);
     this->func_02038ef4(param_2, param_3);
 }
 
@@ -72,7 +72,7 @@ ARM void MsgProc_Type2::vfunc_40(unk32 param_2, unk32 param_3) {
 extern "C" bool func_0203dcb4(unk32);
 // non-matching
 ARM bool MsgProc_Type2::vfunc_14(unk32 param_2, unk32 param_3) {
-    return func_0203dcb4(param_2 + this->unk_162);
+    return func_0203dcb4(param_2 + this->mUnk_162);
 }
 
 ARM MsgProc_Type2::~MsgProc_Type2() {

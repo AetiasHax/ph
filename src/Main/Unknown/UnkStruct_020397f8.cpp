@@ -1,4 +1,8 @@
+#include "Message/MsgProc.hpp"
+#include "Message/MessageManager.hpp"
 #include "Unknown/UnkStruct_020397f8.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
+#include "Player/TouchControl.hpp"
 
 extern "C" void func_ov000_020d0460(void*);
 extern "C" void func_0203efd8(void*, void*);
@@ -11,142 +15,142 @@ THUMB UnkStruct_020397f8::UnkStruct_020397f8() :
     UnkStruct_02038aa0(0, 0), mUnk_164(NULL) {
     UnknownMsgChoiceStruct* puVar3;
 
-    this->unk_410.unk_00 = this;
-    this->unk_414 = 0;
-    this->unk_418 = NULL;
-    this->unk_41C = 0;
-    this->unk_41E = 0;
-    this->unk_420 = 0;
-    this->unk_424.unk_00 = this;
+    this->mUnk_410.mUnk_00 = this;
+    this->mUnk_414 = 0;
+    this->mUnk_418 = NULL;
+    this->mUnk_41c = 0;
+    this->mUnk_41e = 0;
+    this->mUnk_420 = 0;
+    this->mUnk_424.mUnk_00 = this;
 
     // ???
     puVar3 = this->mUnk_428;
     do {
-        puVar3->unk_00 = NULL;
+        puVar3->mUnk_00 = NULL;
         puVar3 += 1;
-    } while ((unk32*)puVar3 < (unk32*)this->unk_528);
+    } while ((unk32*)puVar3 < (unk32*)this->mUnk_528);
 
-    func_0203ee48(&this->unk_424);
-    func_ov000_020d0460(&this->unk_534);
-    this->unk_53C = 0;
-    this->unk_540 = ~0x7FFF;
-    this->unk_544 = 3;
-    func_ov000_020d0460(&this->unk_548);
-    this->unk_550 = 0;
-    this->unk_554 = 0x00016000;
-    this->unk_558 = 3;
-    this->unk_55C = -1;
-    this->unk_560 = -1;
-    this->unk_56C = 0;
-    this->unk_56E = 0;
-    this->unk_570 = 0;
-    this->unk_572 = 0;
-    this->unk_574 = 0;
-    this->unk_576 = 0;
-    this->unk_578 = 3;
-    this->unk_57A = 0;
-    this->unk_57B = -1;
-    this->unk_57C = 0;
-    this->unk_57D = 0;
-    this->unk_57E = 0;
-    this->unk_57F = 0;
-    this->unk_580 = 0;
-    this->unk_581 = 0;
-    this->unk_582 = 0;
-    this->unk_583 = 0;
-    this->unk_585 = 0;
-    this->unk_586 = 0;
-    func_0203efd8(&this->unk_588, this);
-    this->unk_124 = (UnkSubClass1_unk_124*)&this->mUnk_588;
+    func_0203ee48(&this->mUnk_424);
+    func_ov000_020d0460(&this->mUnk_534);
+    this->mUnk_53c = 0;
+    this->mUnk_540 = ~0x7FFF;
+    this->mUnk_544 = 3;
+    func_ov000_020d0460(&this->mUnk_548);
+    this->mUnk_550 = 0;
+    this->mUnk_554 = 0x00016000;
+    this->mUnk_558 = 3;
+    this->mUnk_55c = -1;
+    this->mUnk_560 = -1;
+    this->mUnk_56c = 0;
+    this->mUnk_56e = 0;
+    this->mUnk_570 = 0;
+    this->mUnk_572 = 0;
+    this->mUnk_574 = 0;
+    this->mUnk_576 = 0;
+    this->mUnk_578 = 3;
+    this->mUnk_57a = 0;
+    this->mUnk_57b = -1;
+    this->mUnk_57c = 0;
+    this->mUnk_57d = 0;
+    this->mUnk_57e = 0;
+    this->mUnk_57f = 0;
+    this->mUnk_580 = 0;
+    this->mUnk_581 = 0;
+    this->mUnk_582 = 0;
+    this->mUnk_583 = 0;
+    this->mUnk_585 = 0;
+    this->mUnk_586 = 0;
+    func_0203efd8(&this->mUnk_588, this);
+    this->mUnk_124 = (UnkSubClass1_unk_124*)&this->mUnk_588;
     this->func_02039ca8();
 
     if (this->func_02032fa4() != 0) {
-        this->unk_168.func_020350b4(0x39, 0, 2, 0, 0);
-        this->unk_1F0.func_020350b4(0x33, 0, 2, 0, 0);
-        this->unk_278.func_020350b4(0x33, 1, 2, 0, 0);
+        this->mUnk_168.func_020350b4(0x39, 0, 2, 0, 0);
+        this->mUnk_1f0.func_020350b4(0x33, 0, 2, 0, 0);
+        this->mUnk_278.func_020350b4(0x33, 1, 2, 0, 0);
     } else {
-        this->unk_168.func_020350b4(0x34, 0, 2, 0, 0);
-        this->unk_1F0.func_020350b4(0x32, 0, 2, 0, 0);
-        this->unk_278.func_020350b4(0x32, 1, 2, 0, 0);
+        this->mUnk_168.func_020350b4(0x34, 0, 2, 0, 0);
+        this->mUnk_1f0.func_020350b4(0x32, 0, 2, 0, 0);
+        this->mUnk_278.func_020350b4(0x32, 1, 2, 0, 0);
     }
 
-    this->unk_168.func_020351b8(true, false, false, false);
-    this->unk_1F0.func_020351b8(false, false, false, false);
-    this->unk_278.func_020351b8(false, false, false, false);
+    this->mUnk_168.func_020351b8(true, false, false, false);
+    this->mUnk_1f0.func_020351b8(false, false, false, false);
+    this->mUnk_278.func_020351b8(false, false, false, false);
 }
 
 THUMB void UnkStruct_020397f8::vfunc_4c() {
     this->func_02038b28();
-    this->func_0203dcfc(this->unk_50, 0, 0, 2);
+    this->func_0203dcfc(this->mUnk_50, 0, 0, 2);
 }
 
 // non-matching
 ARM void UnkStruct_020397f8::vfunc_2c() {
     if (data_027e0618[0x101] != 0) {
-        if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) != this->unk_50) {
+        if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) != this->mUnk_50) {
             return;
         }
     }
 
     this->func_02038d20();
 
-    if (this->unk_56C > 0) {
-        this->unk_56C--;
+    if (this->mUnk_56c > 0) {
+        this->mUnk_56c--;
     }
 
-    if (this->unk_50 != ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0)) {
-        this->unk_57F = 0;
+    if (this->mUnk_50 != ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0)) {
+        this->mUnk_57f = 0;
     }
 
-    if (this->unk_15C > 0) {
-        if ((this->unk_128.unk_00 == NULL || this->unk_128.unk_00[0] == 0) != 0) {
-            this->unk_424.func_0203ef78(this->unk_128.unk_08);
+    if (this->mUnk_15c > 0) {
+        if ((this->mUnk_128.mUnk_04 == NULL || this->mUnk_128.mUnk_04[0] == 0) != 0) {
+            this->mUnk_424.func_0203ef78(this->mUnk_128.mUnk_08);
         }
 
         this->func_0203be64();
         this->func_0203a35c();
         
-        if (this->unk_580 != 0) {
-            this->unk_168.func_0203516c();
+        if (this->mUnk_580 != 0) {
+            this->mUnk_168.func_0203516c();
         }
 
-        if (this->unk_584 != 0) {
-            this->unk_300.func_0203516c();
+        if (this->mUnk_584 != 0) {
+            this->mUnk_300.func_0203516c();
         }
         
-        if (this->unk_585 != 0) {
-            this->unk_388.func_0203516c();
+        if (this->mUnk_585 != 0) {
+            this->mUnk_388.func_0203516c();
         }
        
-        if ((this->func_0203a2c0() != 0 && this->unk_57F == 0) && this->unk_56C <= 0) {
-            this->unk_1F0.func_0203516c();
+        if ((this->func_0203a2c0() != 0 && this->mUnk_57f == 0) && this->mUnk_56c <= 0) {
+            this->mUnk_1f0.func_0203516c();
         }
 
-        if (this->unk_08 != NULL) {
-            bool value = this->unk_08->mUnk_1c;
+        if (this->mUnk_08 != NULL) {
+            bool value = this->mUnk_08->mUnk_1c;
 
             if ((value == 1) || (value == 2)) {
-                this->unk_278.func_0203516c();
+                this->mUnk_278.func_0203516c();
             }
         }
 
-        if (this->unk_15E == 6) {
+        if (this->mUnk_15e == 6) {
             func_ov018_02169634(this);
         } else {
-            this->unk_410.func_0203ebf8();
+            this->mUnk_410.func_0203ebf8();
         }
     }
 
-    if (this->unk_15C == 1) {
-        if (this->unk_586 == ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) ) {
-            switch (this->unk_150[1]) {
+    if (this->mUnk_15c == 1) {
+        if (this->mUnk_586 == ((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) ) {
+            switch (this->mUnk_150[1]) {
                 case 0:
                     this->func_0203b0ec(1);
                     break;
                 case 2:
                 case 3:
                     if (this->func_0203a3e0() != 0) {
-                        this->func_0203bd8c(this->unk_572);
+                        this->func_0203bd8c(this->mUnk_572);
                     } else {
                         this->func_0203b0ec(1);
                     }
@@ -159,20 +163,20 @@ ARM void UnkStruct_020397f8::vfunc_2c() {
 ARM void UnkStruct_020397f8::func_02039ca8() {
     s32 i;
 
-    for (i = 0; i < ARRAY_LEN(this->unk_564); i++) {
-        this->unk_564[i] = 0x1A;
+    for (i = 0; i < ARRAY_LEN(this->mUnk_564); i++) {
+        this->mUnk_564[i] = 0x1A;
     }
 }
 
 ARM void UnkStruct_020397f8::vfunc_3c() {
-    if (this->unk_15C > 0 && this->func_0203de14(param_2) != 0) {
-        if (this->unk_124->unk_29 != 3) {
-            if ((this->unk_50 == 0) && func_ov000_02079e04() != 0) {
+    if (this->mUnk_15c > 0 && this->func_0203de14(param_2) != 0) {
+        if (this->mUnk_124->mUnk_29 != 3) {
+            if ((this->mUnk_50 == 0) && func_ov000_02079e04() != 0) {
                 return;
             }
 
             if (data_027e0618[0x101] != 0) {
-                if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) != this->unk_50) {
+                if (((data_02056be4[data_027e077c.mUnk_0] & 1) != 0) != this->mUnk_50) {
                     return;
                 }
             }
@@ -184,7 +188,7 @@ ARM void UnkStruct_020397f8::vfunc_3c() {
 
 // non-matching
 ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
-    MsgProc_Main* bVar1;
+    UnkStruct_02038aa0* bVar1;
     s8 cVar2;
     unk32 iVar4;
     unk32 iVar6;
@@ -206,35 +210,35 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
 
     local_8c = 0;
     local_90 = 0;
-    bVar1 = data_027e0c68.unk_28[this->unk_50];
+    bVar1 = data_027e0c68.mUnk_28[this->mUnk_50];
 
     this->vfunc_6C(&local_8c, &local_90);
     this->func_0203a188(local_8c + param_2, local_90 + param_3, 0);
-    this->func_0203e1b0(param_2 + local_8c + (this->unk_158.x - (this->unk_14 << 3) / 2), param_3 + local_90 + (this->unk_158.y - (this->unk_18 << 3) / 2), 0);
+    this->func_0203e1b0(param_2 + local_8c + (this->mUnk_158.x - (this->mUnk_14 << 3) / 2), param_3 + local_90 + (this->mUnk_158.y - (this->mUnk_18 << 3) / 2), 0);
 
-    if (this->unk_584 != 0) {
-        iVar5 = this->unk_18 << 3;
+    if (this->mUnk_584 != 0) {
+        iVar5 = this->mUnk_18 << 3;
 
-        if (this->unk_580 != 0) {
+        if (this->mUnk_580 != 0) {
             iVar5 = -0xC;
         } else  {
             iVar5 = 0;
         }
 
-        this->unk_300.func_02034a1c(param_2 + local_8c + this->unk_55C + (this->unk_158.x - (this->unk_14 << 3) / 2),
-            iVar5 + param_3 + local_90 + this->unk_560 + ((this->unk_158.y - (iVar5 / 2))), 0);
+        this->mUnk_300.func_02034a1c(param_2 + local_8c + this->mUnk_55c + (this->mUnk_158.x - (this->mUnk_14 << 3) / 2),
+            iVar5 + param_3 + local_90 + this->mUnk_560 + ((this->mUnk_158.y - (iVar5 / 2))), 0);
     }
 
-    if (this->unk_585 != 0 && ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0)) {
+    if (this->mUnk_585 != 0 && ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0)) {
         switch (data_027e0618[0]) {
             case 2:
                 if (data_027e0cbc.func_0203d7e0(3) != 0) {
-                    this->unk_388.func_02034b0c(0xBE, 0, 0, 0, 0);
+                    this->mUnk_388.func_02034b0c(0xBE, 0, 0, 0, 0);
                 }
                 break;
             case 6:
                 if (data_027e0cbc.func_0203d7e0(0x58) != 0) {
-                    this->unk_388.func_02034b0c(0x013B, 0, 0, 0, 0);
+                    this->mUnk_388.func_02034b0c(0x013B, 0, 0, 0, 0);
                 }
                 break;
         }
@@ -244,10 +248,10 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
     iVar8 = bVar1->mUnk_18;
     uVar9 = data_02056a04[iVar8];
     // func_0203489c(uVar9, data_02056a16[iVar8], &local_94, &local_98);
-    iVar6 = this->unk_158.x - local_94;
-    iVar7 = this->unk_158.y - local_98;
+    iVar6 = this->mUnk_158.x - local_94;
+    iVar7 = this->mUnk_158.y - local_98;
 
-    if ((this->unk_15E != 7) && (this->func_0203a2c0() != 0)) {
+    if ((this->mUnk_15e != 7) && (this->func_0203a2c0() != 0)) {
         func_01ffbe34(&aStack_48);
         func_020347b0(uVar9, data_02056a10[iVar8], &local_9c, &local_a0, 4, 4);
         local_9c += param_2 + local_8c + iVar6;
@@ -265,17 +269,17 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
             local_9c = (0x108 - local_9c) + iVar8;
         }
 
-        if ((this->unk_57F == 0) && (this->unk_56C <= 0)) {
+        if ((this->mUnk_57f == 0) && (this->mUnk_56c <= 0)) {
             func_01ffbe34(&aStack_68);
             aStack_68.mUnk_0a = 1;
-            this->unk_1F0.func_02034a1c(local_9c, local_a0, &aStack_68);
+            this->mUnk_1f0.func_02034a1c(local_9c, local_a0, &aStack_68);
         } else {
             // func_02034984(iVar5 != 0 ? 0x11F : 0x18, 0, local_9c, local_a0 + 2, 0);
         }
     }
 
-    if (this->unk_08 != 0) {
-        if ((this->unk_08->unk_1C == 1 || this->unk_08->unk_1C == 2) == 0) {
+    if (this->mUnk_08 != 0) {
+        if ((this->mUnk_08->mUnk_1c == 1 || this->mUnk_08->mUnk_1c == 2) == 0) {
             return;
         }
 
@@ -284,7 +288,7 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
         func_02034698(iVar5 != 0 ? 0x11F : 0x18, 2, &iStack_a4, &iStack_a8);
         iStack_a4 += param_2 + local_8c + iVar6;
         iStack_a8 += param_3 + local_90 + iVar7;
-        this->unk_278.func_02034a1c(iStack_a4, iStack_a8, &aStack_88);
+        this->mUnk_278.func_02034a1c(iStack_a4, iStack_a8, &aStack_88);
     }
 }
 
@@ -302,29 +306,29 @@ ARM void UnkStruct_020397f8::func_0203a188(s32 param1, s32 param2) {
     UnkStruct_01ffbe34 aStack_44;
     unk32 uStack_24;
 
-    if (this->unk_15E == 7) {
+    if (this->mUnk_15e == 7) {
         return;
     }
 
-    // (short)(ushort)*(byte *)((int)data_027e0c68.unk_28[(this->unk_50 - 0x28) * 0x18];
+    // (short)(ushort)*(byte *)((int)data_027e0c68.mUnk_28[(this->mUnk_50 - 0x28) * 0x18];
 
-    iVar6 = data_027e0c68.unk_10 + this->mUnk_50;
+    iVar6 = data_027e0c68.mUnk_10 + this->mUnk_50;
     // uStack_24 = param_4;
 
     if (data_027e0cbc.func_0203d7e0(data_02056a00[iVar6]) != 0) {
         uVar5 = data_02056a04[iVar6];
 
         func_0203489c(uVar5, data_02056a16[iVar6], &iStack_48, &iStack_4c);
-        iVar3 = iStack_50 + (this->unk_158.x - iStack_48);
+        iVar3 = iStack_50 + (this->mUnk_158.x - iStack_48);
 
         func_02034698(uVar5, data_02056a0e[iVar6], &iStack_50, &iStack_54);
-        iVar4 = iStack_54 + (this->unk_158.y - iStack_4c);
+        iVar4 = iStack_54 + (this->mUnk_158.y - iStack_4c);
 
         func_01ffbe34(&aStack_44);
         aStack_44.mUnk_0a = 1;
 
-        if (this->unk_580 != 0) {
-            this->unk_168.func_02034a1c(param_2 + iVar3, param_3 + iVar4, &aStack_44);
+        if (this->mUnk_580 != 0) {
+            this->mUnk_168.func_02034a1c(param_2 + iVar3, param_3 + iVar4, &aStack_44);
         } else {
             func_02034984(uVar5, data_02056a08[iVar6], param_2 + iVar3, param_3 + iVar4);
         }
@@ -333,7 +337,7 @@ ARM void UnkStruct_020397f8::func_0203a188(s32 param1, s32 param2) {
 
 // non-matching
 ARM bool UnkStruct_020397f8::func_0203a2c0() {
-    if ((this->unk_150[1] != 1 && this->unk_150[1] != 2) && (this->func_02039250() != 0 && this->func_02038b78() != 0)) {
+    if ((this->mUnk_150[1] != 1 && this->mUnk_150[1] != 2) && (this->func_02039250() != 0 && this->func_02038b78() != 0)) {
         return true;
     }
 
@@ -341,46 +345,46 @@ ARM bool UnkStruct_020397f8::func_0203a2c0() {
 }
 
 ARM unk32 UnkStruct_020397f8::func_0203a30c() {
-    return this->unk_574 / this->pInfoEntry->mUnk_06;
+    return this->mUnk_574 / this->pInfoEntry->mUnk_06;
 }
 
 // non-matching (regalloc)
 ARM void UnkStruct_020397f8::vfunc_48() {
-    if (this->unk_164 != NULL && this->unk_164->unk_15C > 0) {
+    if (this->mUnk_164 != NULL && this->mUnk_164->mUnk_15c > 0) {
         this->func_02038b40();
     }
 
-    this->unk_410.func_0203ec34();
+    this->mUnk_410.func_0203ec34();
 }
 
 ARM void UnkStruct_020397f8::func_0203a35c() {
-    if ((this->unk_57C == 1 || this->unk_150[3] != 0) || (this->unk_128.unk_00 == NULL || this->unk_128.unk_00[0] == 0) != 0) {
+    if ((this->mUnk_57c == 1 || this->mUnk_150[3] != 0) || (this->mUnk_128.mUnk_04 == NULL || this->mUnk_128.mUnk_04[0] == 0) != 0) {
         if (this->func_0203a3e0()) {
-            s16 unk_56E = this->mUnk_56e;
-            s16 unk_570 = this->mUnk_570;
-            MsgProc_Type1* unk_164 = this->mUnk_164;
+            s16 mUnk_56e = this->mUnk_56e;
+            s16 mUnk_570 = this->mUnk_570;
+            UnkStruct_020397f8* mUnk_164 = this->mUnk_164;
 
-            unk_164->unk_168.unk_10 = mUnk_56e;
-            unk_164->unk_168.unk_14 = mUnk_570;
-            this->unk_164->func_02039208(4);
+            mUnk_164->mUnk_168.mUnk_10 = mUnk_56e;
+            mUnk_164->mUnk_168.mUnk_14 = mUnk_570;
+            this->mUnk_164->func_02039208(4);
         }
     } else {
-        this->unk_164->func_02038b40();
+        this->mUnk_164->func_02038b40();
     }
 }
 
 ARM bool UnkStruct_020397f8::func_0203a3e0() {
-    return this->unk_164->unk_168.unk_06 > 0;
+    return this->mUnk_164->mUnk_168.mUnk_06 > 0;
 }
 
 // non-matching
-ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
+ARM void UnkStruct_020397f8::vfunc_44(s32 touchLastX, s32 touchLastY) {
     unk32 iVar2;
     unk32 iVar5;
     unk32 iStack_14;
     unk32 iStack_18;
 
-    if (this->unk_15C <= 0 || this->func_0203951c() == 0) {
+    if (this->mUnk_15c <= 0 || this->func_0203951c() == 0) {
         return;
     }
 
@@ -398,7 +402,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
 
     if ((data_02056be4[data_027e077c.mUnk_0] & 2) == 0) {
         if ((data_027e0d78.mFlags & 1) != 0) {
-            if (this->unk_50 == 0 && data_027e0d38 != 0) {
+            if (this->mUnk_50 == 0 && data_027e0d38 != 0) {
                 if (func_ov000_02079e04() == 0 && data_027e0e28->func_ov000_0207bc48() == 0) {
                     if (data_027e0618[0x101] == 0 && data_027e103c->mUnk_24 == 0) {
                         return;
@@ -407,7 +411,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
             }
 
             if (this->func_0203a6d0(iVar5, iVar2) == 0 && this->func_0203a2c0() != 0) {
-                this->unk_57F = 1;
+                this->mUnk_57f = 1;
             }
         } else {
             if (data_027e0d78.mTouch != 0) {
@@ -416,7 +420,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
             }
 
             if (data_027e0d78.mTouch == 0) {
-                switch(this->unk_150[1]) {
+                switch(this->mUnk_150[1]) {
                     case 3:
                     case 4:
                         break;
@@ -434,16 +438,16 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
                         break;
                     case 2:
                         //! TODO: fixme
-                        // if (this->unk_164->unk_168.unk_06 <= 0) {
+                        // if (this->mUnk_164->mUnk_168.mUnk_06 <= 0) {
                         //     if ((data_027e0d78.mFlags & 2) != 0) {
-                        //         this->unk_128.unk_14 = 0;
+                        //         this->mUnk_128.mUnk_14 = 0;
 
                         //         if (this->func_0203b0bc() != 0) {
                         //             this->func_0203b0ec(1);
                         //         }
 
-                        //         this->unk_1F0.unk_5C.unk_08 = 0;
-                        //         this->unk_1F0.func_020352d8();
+                        //         this->mUnk_1f0.mUnk_5c.mUnk_08 = 0;
+                        //         this->mUnk_1f0.func_020352d8();
                         //     }
                         // }
                         break;
@@ -451,14 +455,14 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 param1, s32 param2) {
                     case 1:
                     default:
                         if ((data_027e0d78.mFlags & 2) != 0) {
-                            this->unk_128.unk_14 = 0;
+                            this->mUnk_128.mUnk_14 = 0;
 
                             if (this->func_0203b0bc() != 0) {
                                 this->func_0203b0ec(1);
                             }
 
-                            this->unk_1F0.unk_5C.unk_08 = 0;
-                            this->unk_1F0.func_020352d8();
+                            this->mUnk_1f0.mUnk_5c.mUnk_08 = 0;
+                            this->mUnk_1f0.func_020352d8();
                         }
                         break;
                 }
@@ -472,7 +476,7 @@ ARM bool UnkStruct_020397f8::func_0203a6d0(unk32 param1) {
     unk32 uVar2;
     UnkStruct_0203b264* piVar3;
     
-    if (this->unk_164->unk_168.unk_06 > 0 && this->unk_164->unk_15C <= 0) {
+    if (this->mUnk_164->mUnk_168.mUnk_06 > 0 && this->mUnk_164->mUnk_15c <= 0) {
         return false;
     }
 
@@ -480,17 +484,17 @@ ARM bool UnkStruct_020397f8::func_0203a6d0(unk32 param1) {
     piVar3 = NULL;
 
     if (!(iVar1 < 0) && iVar1 < 4) {
-        piVar3 = this->unk_424.func_0203eeb0(iVar1, param_2);
+        piVar3 = this->mUnk_424.func_0203eeb0(iVar1, param_2);
     }
 
     if (piVar3 != NULL && ((piVar3->mUnk_0[3] << 0x10) | ((u16*)piVar3->mUnk_0)[2]) == 0x00FF0002) {
         uVar2 = this->func_02038cb8(iVar1);
-        this->unk_410.func_0203ec4c(piVar3, uVar2, 
-            (s16)(this->unk_158.x - ((this->unk_14 << 3) / 2)) + iVar1 + this->unk_56E,
-            (s16)(this->unk_158.y - ((this->unk_18 << 3) / 2)) + iVar1 + this->unk_570
+        this->mUnk_410.func_0203ec4c(piVar3, uVar2, 
+            (s16)(this->mUnk_158.x - ((this->mUnk_14 << 3) / 2)) + iVar1 + this->mUnk_56e,
+            (s16)(this->mUnk_158.y - ((this->mUnk_18 << 3) / 2)) + iVar1 + this->mUnk_570
         );
 
-        this->unk_57F = 0;
+        this->mUnk_57f = 0;
         return true;
     }
 
@@ -508,22 +512,22 @@ ARM void UnkStruct_020397f8::vfunc_50(unk32 param1, unk32 param2, s32 param3, un
     iVar6 = param_4[0];
 
     if (data_027e0c54 != 0) {
-        MsgProc_Type1* pVar4 = data_027e0c68.func_02036700();
+        UnkStruct_020397f8* pVar4 = data_027e0c68.func_02036700();
 
-        if (pVar4 != NULL && pVar4->unk_15C > 0) {
+        if (pVar4 != NULL && pVar4->mUnk_15c > 0) {
             this->func_02038b40();
         }
     }
 
     if (*((s32*)data_027e0618) == 2 && data_027e0d38->func_ov000_02078b40() == 2 && func_ov003_020f3f94(data_ov009_0211f5b4) == 0) {
-        MsgProc_Type1* pVar4 = (MsgProc_Type1*)data_027e0c68.unk_28[4];
+        UnkStruct_020397f8* pVar4 = (UnkStruct_020397f8*)data_027e0c68.mUnk_28[4];
 
-        if (pVar4 != NULL && pVar4->unk_15C > 0) {
+        if (pVar4 != NULL && pVar4->mUnk_15c > 0) {
             this->func_02038b40();
         }
     }
 
-    this->unk_586 = (data_02056be4[data_027e077c.mUnk_0] & 1) != 0;
+    this->mUnk_586 = (data_02056be4[data_027e077c.mUnk_0] & 1) != 0;
     temp = param_4[8];
 
     if (temp >= 0 && param_4[9] >= 0) {
@@ -531,13 +535,13 @@ ARM void UnkStruct_020397f8::vfunc_50(unk32 param1, unk32 param2, s32 param3, un
     }
 
     if (temp < 0) {
-        this->unk_57B = temp;
+        this->mUnk_57b = temp;
     } else {
-        this->unk_57B = 0;
+        this->mUnk_57b = 0;
     }
 
     // this->func_02038f44(param_2, param_3, param_4, param_5, iVar6);
-    this->unk_574 = 0;
+    this->mUnk_574 = 0;
 
     if (data_027e0d38 != 0 && (data_02056be4[data_027e077c.mUnk_0] & 1) != 0 && (param_4[11])) {
         data_027e103c->func_ov000_020cf284(0x80, 0);
@@ -548,13 +552,13 @@ ARM void UnkStruct_020397f8::vfunc_50(unk32 param1, unk32 param2, s32 param3, un
 ARM void UnkStruct_020397f8::vfunc_54() {}
 
 ARM void UnkStruct_020397f8::vfunc_5c() {
-    if (this->unk_15F == 0 || this->pInfoEntry->unk_06 <= 2) {
-        this->unk_168.unk_5C.unk_08 = this->unk_168.mUnk_7c;
-        this->unk_168.func_020352d8();
+    if (this->mUnk_15f == 0 || this->pInfoEntry->mUnk_06 <= 2) {
+        this->mUnk_168.mUnk_5c.mUnk_08 = this->mUnk_168.mUnk_7c;
+        this->mUnk_168.func_020352d8();
     } else {
-        this->unk_168.unk_5C.unk_08 = 0;
-        this->unk_168.func_020352d8();
-        this->unk_168.func_020351b8(1, 0, 0, 0);
+        this->mUnk_168.mUnk_5c.mUnk_08 = 0;
+        this->mUnk_168.func_020352d8();
+        this->mUnk_168.func_020351b8(1, 0, 0, 0);
     }
 }
 
@@ -565,7 +569,7 @@ ARM void UnkStruct_020397f8::vfunc_58() {
     int iVar3;
     char *pcVar4;
     
-    if (this->unk_160 != 0) {
+    if (this->mUnk_160 != 0) {
         if (data_027e103c != NULL) {
             if (data_027e103c->func_ov000_020cf4bc() != 0) {
                 puVar2 = data_027e103c->func_ov000_020cef9c();
@@ -573,29 +577,29 @@ ARM void UnkStruct_020397f8::vfunc_58() {
                 if ((puVar2 + 0x244) != NULL || (puVar2[0x250] == '\x02')) {
                     puVar2 = data_027e103c->func_ov000_020cef9c();
 
-                    if ((MsgProc_Type1*)(puVar2 + 0x244) == this) {
+                    if ((UnkStruct_020397f8*)(puVar2 + 0x244) == this) {
                         data_027e103c->func_ov000_020cfb38();
                     }
                 }
             }
 
-            if (this->unk_581 != 0 && data_027e103c->func_ov000_020cf488() != 0) {
+            if (this->mUnk_581 != 0 && data_027e103c->func_ov000_020cf488() != 0) {
                 data_027e103c->func_ov000_020cfa24();
-                this->unk_581 = 0;
+                this->mUnk_581 = 0;
             }
 
-            if (this->unk_582 != 0) {
+            if (this->mUnk_582 != 0) {
                 data_027e103c->func_ov000_020cfe40(0, 2);
-                this->unk_582 = 0;
+                this->mUnk_582 = 0;
             }
 
-            if (this->unk_583 != 0) {
+            if (this->mUnk_583 != 0) {
                 data_027e103c->func_ov005_02104028(0);
-                this->unk_583 = 0;
+                this->mUnk_583 = 0;
             }
         }
 
-        // if (data_027e0618[0] == 2 && func_ov000_02079e04() && (data_027e1054.unk_04 + 0x99) != 0 &&
+        // if (data_027e0618[0] == 2 && func_ov000_02079e04() && (data_027e1054.mUnk_04 + 0x99) != 0 &&
         //         (data_027e077c.mUnk_0 != 0x39 || data_027e103c->func_ov000_020cf0bc())) {
         //     data_027e1054.func_ov003_020f4874();
         //     data_027e103c->func_ov005_02103f8c(data_02057ed4);
@@ -606,7 +610,7 @@ ARM void UnkStruct_020397f8::vfunc_58() {
 }
 
 ARM bool UnkStruct_020397f8::func_0203b0bc() {
-    return this->unk_57F != 0 && data_027e077c.mUnk_0 == data_027e077c.mUnk_4;
+    return this->mUnk_57f != 0 && data_027e077c.mUnk_0 == data_027e077c.mUnk_4;
 }
 
 // non-matching
@@ -620,7 +624,7 @@ ARM s32 UnkStruct_020397f8::func_0203b0ec(u32 param1) {
     iVar4 = 0;
     bVar1 = false;
 
-    uVar3 = param_2;
+    uVar3 = param1;
 
     if (((data_02056be4[data_027e077c.mUnk_0] & 1) == 0)) {
         uVar3 = 0;
@@ -628,19 +632,19 @@ ARM s32 UnkStruct_020397f8::func_0203b0ec(u32 param1) {
         uVar3 = 1;
     }
 
-    unaff_r6 = this->unk_50 == uVar3;
+    unaff_r6 = this->mUnk_50 == uVar3;
 
-    this->unk_410.func_0203ec34();
-    this->unk_585 = 0;
-    this->unk_584 = 0;
+    this->mUnk_410.func_0203ec34();
+    this->mUnk_585 = 0;
+    this->mUnk_584 = 0;
 
-    if (this->unk_150[3] != 0) {
+    if (this->mUnk_150[3] != 0) {
         iVar4 = 1;
-        this->unk_56C = this->mUnk_578;
+        this->mUnk_56c = this->mUnk_578;
         bVar1 = true;
-        this->unk_15C = 0x78;
+        this->mUnk_15c = 0x78;
     } else {
-        if ((this->unk_128.unk_00 == NULL || this->unk_128.unk_00[0] == 0) != 0) {
+        if ((this->mUnk_128.mUnk_04 == NULL || this->mUnk_128.mUnk_04[0] == 0) != 0) {
             this->func_02038b40();
 
             if (data_027e0d38 != 0) {
@@ -648,7 +652,7 @@ ARM s32 UnkStruct_020397f8::func_0203b0ec(u32 param1) {
                 data_027e103c->func_ov000_020cf2a0(1);
             }
 
-            if (this->unk_08 == NULL) {
+            if (this->mUnk_08 == NULL) {
                 this->vfunc_58();
             }
 
@@ -666,7 +670,7 @@ ARM s32 UnkStruct_020397f8::func_0203b0ec(u32 param1) {
         }
     }
 
-    if (((param_2 != 0 && iVar4 != 0) && unaff_r6 != 0) && this->unk_15E != 7) {
+    if (((param1 != 0 && iVar4 != 0) && unaff_r6 != 0) && this->mUnk_15e != 7) {
         data_ov000_020eec9c.func_ov000_020d77e4(0x19);
     }
 
@@ -684,7 +688,7 @@ ARM unk32 UnkStruct_020397f8::vfunc_18(s32 param1) {
         return 1;
     }
 
-    if (this->unk_580 != 0) {
+    if (this->mUnk_580 != 0) {
         unaff_r4 = -0xC;
     } else {
         unaff_r4 = 0;
@@ -704,7 +708,7 @@ ARM unk32 UnkStruct_020397f8::vfunc_18(s32 param1) {
         }
 
         if (bVar5) {
-            this->unk_424.func_0203ee80(this->unk_128.unk_08);
+            this->mUnk_424.func_0203ee80(this->mUnk_128.mUnk_08);
         }
     }
 
@@ -719,26 +723,26 @@ ARM unk32 UnkStruct_020397f8::vfunc_1c(s32 param1, unk32 *param2, unk32 param3, 
     psVar3 = param_3->mUnk_4;
 
     if (psVar3[0] == 10) {
-        this->unk_424.func_0203ef78(this->unk_128.unk_08, psVar3[0], param_4);
-        this->unk_574++;
+        this->mUnk_424.func_0203ef78(this->mUnk_128.mUnk_08, psVar3[0], param_4);
+        this->mUnk_574++;
 
         if (this->func_0203a30c() == 0) {
-            this->unk_150[3] = 1;
+            this->mUnk_150[3] = 1;
         }
     }
 
-    if (this->unk_15E == 6) {
+    if (this->mUnk_15e == 6) {
         return 1;
     }
 
-    switch (this->unk_57A) {
+    switch (this->mUnk_57a) {
         case 0:
             return this->func_0203905c(param_2, param_3, param_4, param_5);
         case 1:
             UnknownMsgChoiceStruct* pChoiceData;
             s32 i = this->func_0203a30c();
-            pChoiceData = &this->unk_428[this->unk_528[i]];
-            return this->unk_164->func_0203cb5c(*param_2, (((pChoiceData->unk_00->mUnk_0[3] << 0x10) | ((u16*)pChoiceData->unk_00->mUnk_0)[2]) + ~0xFFFE));
+            pChoiceData = &this->mUnk_428[this->mUnk_528[i]];
+            return this->mUnk_164->func_0203cb5c(*param_2, (((pChoiceData->mUnk_00->mUnk_0[3] << 0x10) | ((u16*)pChoiceData->mUnk_00->mUnk_0)[2]) + ~0xFFFE));
         default:
             break;
     }
@@ -758,10 +762,10 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
     uVar6 = 0;
 
     if (this->func_02032fa4() == 0) {
-        switch(param_2->unk_0C) {
+        switch(param_2->mUnk_0c) {
             case 0:
             case 1:
-                uVar6 = this->unk_580 != 0;
+                uVar6 = this->mUnk_580 != 0;
                 break;
             case 2:
                 uVar6 = 2;
@@ -777,7 +781,7 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
                 break;
             default:
                 // why???
-                switch (param_2->unk_0C) {
+                switch (param_2->mUnk_0c) {
                     case 4:
                         uVar6 = 8;
                         break;
@@ -785,7 +789,7 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
                         uVar6 = 9;
                         break;
                     default:
-                        if (this->unk_580 != 0) {
+                        if (this->mUnk_580 != 0) {
                             uVar6 = 7;
                         } else {
                             uVar6 = 6;
@@ -797,9 +801,9 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
     }
 
     // PTR_PTR_0203b5ac[(byte)param_1[0x50]] = (char)uVar6;
-    data_027e0c68.unk_28[this->unk_50]->unk_50 = uVar6;
+    data_027e0c68.mUnk_28[this->mUnk_50]->mUnk_50 = uVar6;
 
-    if (this->unk_15E == 7) {
+    if (this->mUnk_15e == 7) {
         uVar5 = func_0202d5b4(data_02057f08, data_02057eec, data_020691a0, 0xCC00, 1);
         func_02032304(data_02068894, data_02057ed8, data_02056af0, 1, param_4);
         iVar3 = func_02016fcc(uVar5);
@@ -814,14 +818,14 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
         iVar3 = data_027e0cbc.func_0203d77c(data_02056a00[uVar6 * 0x18] - 2, 1, 1);
     }
 
-    if (param_2->unk_10 < 0) {
+    if (param_2->mUnk_10 < 0) {
         iVar3 = param_2->mUnk_12;
     }
 
-    if (param_2->unk_10 <= 0 && iVar3 > 0) {
+    if (param_2->mUnk_10 <= 0 && iVar3 > 0) {
         uVar2 = param_2->mUnk_12;
-        this->unk_158.x = param_2->mUnk_10;
-        this->unk_158.y = uVar2;
+        this->mUnk_158.x = param_2->mUnk_10;
+        this->mUnk_158.y = uVar2;
     } else {
         this->func_0203b764();
     }
@@ -831,48 +835,48 @@ ARM void UnkStruct_020397f8::vfunc_60(s32 param1) {
 ARM void UnkStruct_020397f8::vfunc_64(unk32 param1) {
     unk32 uVar2;
 
-    if (this->unk_50 != 0 || data_027e0db0.unk_04 > 0 || func_0203c084() != 0 || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
+    if (this->mUnk_50 != 0 || data_027e0db0.mUnk_04 > 0 || func_0203c084() != 0 || (gAdventureFlags->Exists() && gAdventureFlags->func_ov00_02097738())) {
         uVar2 = 0x16;
     } else {
         uVar2 = 0;
     }
 
-    this->unk_124->func_0203f020(param_2, uVar2);
+    this->mUnk_124->func_0203f020(param_2, uVar2);
     this->func_0203be08();
 
     if (this->func_02032fa4()) {
-        this->unk_168.func_020350b4(0x39, 0, 2, 0, 0);
-        this->unk_1F0.func_020350b4(0x33, 0, 2, 0, 0);
-        this->unk_278.func_020350b4(0x33, 1, 2, 0, 0);
+        this->mUnk_168.func_020350b4(0x39, 0, 2, 0, 0);
+        this->mUnk_1f0.func_020350b4(0x33, 0, 2, 0, 0);
+        this->mUnk_278.func_020350b4(0x33, 1, 2, 0, 0);
     } else {
-        this->unk_168.func_020350b4(0x34, 0, 2, 0, 0);
-        this->unk_1F0.func_020350b4(0x32, 0, 2, 0, 0);
-        this->unk_278.func_020350b4(0x32, 1, 2, 0, 0);
+        this->mUnk_168.func_020350b4(0x34, 0, 2, 0, 0);
+        this->mUnk_1f0.func_020350b4(0x32, 0, 2, 0, 0);
+        this->mUnk_278.func_020350b4(0x32, 1, 2, 0, 0);
     }
 
-    this->unk_168.func_020351b8(1, 0, 0, 0);
-    this->unk_1F0.func_020351b8(0, 0, 0, 0);
-    this->unk_278.func_020351b8(0, 0, 0, 0);
+    this->mUnk_168.func_020351b8(1, 0, 0, 0);
+    this->mUnk_1f0.func_020351b8(0, 0, 0, 0);
+    this->mUnk_278.func_020351b8(0, 0, 0, 0);
     this->func_020393a8(param_2);
 }
 
 // non-matching
 ARM void UnkStruct_020397f8::func_0203b764() {
-    s32 i = data_027e0c68.unk_00[this->unk_50];
+    s32 i = data_027e0c68.mUnk_00[this->mUnk_50];
 
     this->func_02039440(data_02056a04[i * 0x18], data_02056a16[i]);
 
-    switch (this->unk_57B) {
+    switch (this->mUnk_57b) {
         case 1:
-            this->unk_158.y -= 38;
+            this->mUnk_158.y -= 38;
             break;
         case 2:
-            switch (this->pInfoEntry->unk_06) {
+            switch (this->pInfoEntry->mUnk_06) {
                 case 2:
-                    this->unk_158.y -= 111;
+                    this->mUnk_158.y -= 111;
                     break;
                 case 3:
-                    this->unk_158.y -= 98;
+                    this->mUnk_158.y -= 98;
                     break;
                 default:
                     break;
@@ -887,10 +891,10 @@ ARM void UnkStruct_020397f8::func_0203b764() {
 ARM unk32 UnkStruct_020397f8::vfunc_20(s32 param1, s32 *param2) {}
 
 ARM void UnkStruct_020397f8::func_0203bd8c(s32 param1) {
-    this->unk_576 = param_2;
+    this->mUnk_576 = param_2;
 
     if (this->func_0203b0ec(0) != 0) {
-        data_ov000_020eec9c.func_ov000_020d77e4(this->unk_564[param_2]);
+        data_ov000_020eec9c.func_ov000_020d77e4(this->mUnk_564[param_2]);
     }
 }
 
@@ -903,13 +907,13 @@ ARM void UnkStruct_020397f8::vfunc_6c(s32 *param1, s32 *param2) {
 ARM void UnkStruct_020397f8::func_0203be08() {
     if (data_027e0d38 != 0) {
         if (data_027e103c->func_ov000_020cf42c() != 0) {
-            this->unk_534 = this->mUnk_538;
+            this->mUnk_534 = this->mUnk_538;
         } else {
-            this->unk_534 = this->mUnk_536;
+            this->mUnk_534 = this->mUnk_536;
         }
 
         if (this->func_0203c084() != 0) {
-            this->unk_548 = this->mUnk_54c;
+            this->mUnk_548 = this->mUnk_54c;
         }
     }
 }
@@ -925,7 +929,7 @@ ARM bool UnkStruct_020397f8::func_0203c084() {
 
     uVar4 = 0;
 
-    if (this->unk_50 == 0) {
+    if (this->mUnk_50 == 0) {
         bVar2 = true;
         bVar1 = true;
 
@@ -951,12 +955,12 @@ ARM bool UnkStruct_020397f8::func_0203c13c() {
     if (this->func_02032fa4() == 0) {
         data_ov000_020eec9c.func_ov000_020d77e4(6);
         data_027e103c->func_ov000_020cfb20(this);
-        this->unk_585 = 1;
-        this->unk_584 = 1;
-        this->unk_128.unk_18 = 0x00016000;
-        this->unk_128.unk_1C = NULL;
-        this->unk_128.unk_20 = 0;
-        this->unk_128.unk_24 = 0;
+        this->mUnk_585 = 1;
+        this->mUnk_584 = 1;
+        this->mUnk_128.mUnk_18 = 0x00016000;
+        this->mUnk_128.mUnk_1c = NULL;
+        this->mUnk_128.mUnk_20 = 0;
+        this->mUnk_128.mUnk_24 = 0;
 
         return true;
     }
@@ -970,7 +974,7 @@ ARM bool UnkStruct_020397f8::func_0203c1a0() {
     u8* iVar3;
 
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0) {
-        this->unk_584 = 1;
+        this->mUnk_584 = 1;
 
         pVar1 = data_027e103c->func_ov000_020cef9c();
         iVar3 = data_027e0f7c.func_ov000_0209d90c(pVar1[0x24F], 0);
@@ -978,10 +982,10 @@ ARM bool UnkStruct_020397f8::func_0203c1a0() {
         data_ov000_020eec9c.func_ov000_020d77e4(6);
         data_027e103c->func_ov000_020cfb58(iVar3);
 
-        this->unk_128.unk_18 = 0x0000A000;
-        this->unk_128.unk_1C = this->func_0203c25c;
-        this->unk_128.unk_20 = this;
-        this->unk_128.unk_24 = 0;
+        this->mUnk_128.mUnk_18 = 0x0000A000;
+        this->mUnk_128.mUnk_1c = this->func_0203c25c;
+        this->mUnk_128.mUnk_20 = this;
+        this->mUnk_128.mUnk_24 = 0;
 
         return 0;
     }
@@ -990,16 +994,16 @@ ARM bool UnkStruct_020397f8::func_0203c1a0() {
 }
 
 ARM bool UnkStruct_020397f8::func_0203c25c() {
-    if (data_027e1054.unk_00->unk_00->unk_95 != 0) {
+    if (data_027e1054.mUnk_00->mUnk_00->mUnk_95 != 0) {
         return false;
     }
 
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) == 0) {
-        param_1->unk_585 = 1;
-        param_1->unk_128.unk_18 = 0x00016000;
-        param_1->unk_128.unk_1C = NULL;
-        param_1->unk_128.unk_20 = 0;
-        param_1->unk_128.unk_24 = 0;
+        param_1->mUnk_585 = 1;
+        param_1->mUnk_128.mUnk_18 = 0x00016000;
+        param_1->mUnk_128.mUnk_1c = NULL;
+        param_1->mUnk_128.mUnk_20 = 0;
+        param_1->mUnk_128.mUnk_24 = 0;
         return true;
     }
 

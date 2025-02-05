@@ -1,14 +1,14 @@
 #include "Unknown/UnkStruct_02035064.hpp"
 
 ARM UnkStruct_02035064::UnkStruct_02035064() {
-    this->unk_74 = NULL;
-    this->unk_78 = NULL;
-    this->unk_7C = 0;
-    this->unk_80 = 0;
-    this->unk_82 = 0;
-    this->unk_84 = 0;
-    this->unk_86 = 0;
-    this->unk_87 = 0;
+    this->mUnk_74 = NULL;
+    this->mUnk_78 = NULL;
+    this->mUnk_7c = 0;
+    this->mUnk_80 = 0;
+    this->mUnk_82 = 0;
+    this->mUnk_84 = 0;
+    this->mUnk_86 = 0;
+    this->mUnk_87 = 0;
 }
 
 ARM UnkStruct_02035064::~UnkStruct_02035064() {

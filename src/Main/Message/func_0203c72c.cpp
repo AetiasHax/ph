@@ -13,22 +13,22 @@ extern "C" void func_0204f614(UnkClass_func_ov000_020d0644*, unk32, unk32, void*
 ARM MsgProc_Type3::MsgProc_Type3(unk32 param_2, unk16 param_3, unk32 param_4) :
     UnkStruct_02038aa0(1, 0)
 {
-    this->unk_162 = 1;
-    this->unk_164 = 0x1A;
-    this->unk_166 = 0xA6;
-    this->unk_168 = 0x1D;
-    this->unk_16A = 0;
-    this->unk_16C = 1;
-    this->unk_170 = -1;
-    this->unk_172 = -1;
-    this->unk_174 = -1;
+    this->mUnk_162 = 1;
+    this->mUnk_164 = 0x1A;
+    this->mUnk_166 = 0xA6;
+    this->mUnk_168 = 0x1D;
+    this->mUnk_16a = 0;
+    this->mUnk_16c = 1;
+    this->mUnk_170 = -1;
+    this->mUnk_172 = -1;
+    this->mUnk_174 = -1;
 
-    func_0204f614(this->unk_180, ARRAY_LEN(this->unk_180), sizeof(UnkClass_func_ov000_020d0644), UnkClass_func_ov000_020d0644::func_020d060c, this->func_0203c83c);
+    func_0204f614(this->mUnk_180, ARRAY_LEN(this->mUnk_180), sizeof(UnkClass_func_ov000_020d0644), UnkClass_func_ov000_020d0644::func_020d060c, this->func_0203c83c);
 
-    this->unk_180[0].func_ov000_020d0644(0x1E, 0, 0x8A, 0, 0);
-    this->unk_180[1].func_ov000_020d0644(0x1E, 1, 0x8B, 0, 0);
-    this->unk_180[2].func_ov000_020d0644(0x1E, 2, 0x8C, 0, 0);
-    this->unk_180[3].func_ov000_020d0644(0x1E, 3, 0x8D, 0, 0);
+    this->mUnk_180[0].func_ov000_020d0644(0x1E, 0, 0x8A, 0, 0);
+    this->mUnk_180[1].func_ov000_020d0644(0x1E, 1, 0x8B, 0, 0);
+    this->mUnk_180[2].func_ov000_020d0644(0x1E, 2, 0x8C, 0, 0);
+    this->mUnk_180[3].func_ov000_020d0644(0x1E, 3, 0x8D, 0, 0);
 }
 
 ARM void MsgProc_Type3::func_0203c83c(void) {

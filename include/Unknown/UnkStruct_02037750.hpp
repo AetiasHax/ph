@@ -6,7 +6,7 @@
 #include "Player/LinkStateInteract.hpp"
 #include "System/SysNew.hpp"
 
-class MsgProc_Type1;
+class UnkStruct_020397f8;
 
 // astruct_14
 class UnkStruct_02037750 : public SysObject {
@@ -22,7 +22,7 @@ public:
 
     /* 00 */ virtual ~UnkStruct_02037750();
     /* 08 */ virtual void vfunc_08(u32 param1);
-    /* 0c */ virtual void vfunc_0c(class MsgProc_Type1* param1);
+    /* 0c */ virtual void vfunc_0c(class UnkStruct_020397f8* param1);
     /* 10 */ virtual void vfunc_10();
     /* 14 */ virtual void vfunc_14();
     /* 18 */ virtual void vfunc_18();

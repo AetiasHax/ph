@@ -54,8 +54,8 @@ THUMB void func_020371b4(BMGFileInfo* pFileInfo) {
     pFileInfo->pFLW1 = NULL;
     pFileInfo->pFLI1 = NULL;
     pFileInfo->pDAT1 = NULL;
-    pFileInfo->unk_14 = NULL;
-    pFileInfo->unk_18 = 0;
+    pFileInfo->mUnk_14 = NULL;
+    pFileInfo->mUnk_18 = 0;
 }
 
 THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
@@ -64,9 +64,9 @@ THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
     u32 i;
 
     groupId = -1;
-    pFileInfo->unk_14 = (BMGHeader*)pFile;
+    pFileInfo->mUnk_14 = (BMGHeader*)pFile;
     pFileInfo->pHeader = (BMGHeader*)pFile;
-    pFileInfo->unk_18 = mUnk_18;
+    pFileInfo->mUnk_18 = unk_18;
     pSection = (SectionBase*)((u8*)pFile + sizeof(BMGHeader));
 
     for (i = 0; i < pFileInfo->pHeader->numSections; i++) {
@@ -173,8 +173,8 @@ THUMB void BMGGroups::func_020373b4(s16 unk_18) {
     s32 i;
 
     for (i = 0; i < this->numEntries; i++) {
-        if (this->entries[i].unk_18 == unk_18) {
-            func_0202d590(this->entries[i].unk_14);
+        if (this->entries[i].mUnk_18 == unk_18) {
+            func_0202d590(this->entries[i].mUnk_14);
             func_020371b4(&this->entries[i]);
         }
     }

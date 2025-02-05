@@ -2,7 +2,9 @@
 
 #include "global.h"
 #include "types.h"
+
 #include "Message/BMG.hpp"
+#include "System/SysNew.hpp"
 
 class UnkStruct_02032e7c {
 public:
@@ -72,7 +74,7 @@ struct func_0203b410_param_2 {
 };
 
 // astruct_8, MsgProc_Base
-class UnkStruct_02032f0c {
+class UnkStruct_02032f0c : public SysObject {
 public:
     /* 00 (vtable) */
     /* 04 */ unk32* mUnk_04;
@@ -152,6 +154,7 @@ public:
     u16 **SetUnk_0c(u16 *value);
     u8 func_02032fa4();
     s32 func_02032fb4();
+    void func_02032fcc(unk32, unk32);
     void func_02033214(unk32 param1, unk32 param2, unk32 param3, u8 param4, unk32 param5);
     unk32 func_02033360(void);
     void func_020334b4(u32 param1, s32 param2, s32 param3, s32 param4);

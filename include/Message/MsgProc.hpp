@@ -24,9 +24,9 @@ typedef struct UnkStruct_0203b264 {
     /* 8 */
 } UnkStruct_0203b264;
 
-class UnkSubClass1_unk_410 {
+class UnkStruct_020397f8_410 {
 public:
-    /* 0x00 */ struct MsgProc_Type1* mUnk_00;
+    /* 0x00 */ struct UnkStruct_020397f8* mUnk_00;
     /* 0x04 */
 
     void func_0203ec34(void);
@@ -35,10 +35,10 @@ public:
     void func_0203ec4c(UnkStruct_0203b264* param_2, unk32 param_3, s32 param_4, s32 param_5);
 };
 
-// same as UnkSubClass1_unk_410?
-class UnkSubClass1_unk_424 {
+// same as UnkStruct_020397f8_410?
+class UnkStruct_020397f8_424 {
 public:
-    /* 0x00 */ struct MsgProc_Type1* mUnk_00;
+    /* 0x00 */ struct UnkStruct_020397f8* mUnk_00;
     /* 0x04 */
 
     void func_0203ee80(unk32);
@@ -48,19 +48,19 @@ public:
     UnkStruct_0203b264* func_0203eeb0(unk32 param_2, unk32 param_3);
 };
 
-class MsgProc_Base2_unk_114 : public SysObject {
+class UnkStruct_0203dae0_114 : public SysObject {
 public:
     /* 0x00 (vtable) */
     /* 0x04 */ unk32* mUnk_04;
     /* 0x08 */
 
-    MsgProc_Base2_unk_114();
-    /* 0x00 */ virtual ~MsgProc_Base2_unk_114() override;
+    UnkStruct_0203dae0_114();
+    /* 0x00 */ virtual ~UnkStruct_0203dae0_114() override;
     /* 0x04 */ virtual UNK_TYPE vfunc_04(UNK_TYPE);
     /* 0x08 */ virtual unk32 vfunc_08(void*, s16);
     /* 0x0C */
 
-    unk32 func_0203d1b4(void);
+    unk32* func_0203d1b4(void);
 };
 
 struct func_02038f44_param4 {
@@ -80,7 +80,7 @@ struct func_02038f44_param4 {
 
 extern "C" u32 func_01ff9b4c(unk32, unk32);
 extern "C" unk32 func_0203c084(void);
-extern "C" void func_ov018_02169634(MsgProc_Type1*);
+extern "C" void func_ov018_02169634(UnkStruct_020397f8*);
 extern "C" unk32 func_ov000_02079e04(void);
 extern "C" unk32 func_02016fcc(unk32);
 extern "C" void func_02032304(unk32*, char*, unk32, unk32,  unk32);

@@ -5,6 +5,7 @@
 
 #include "Unknown/UnkStruct_02035064.hpp"
 #include "Unknown/UnkStruct_02038aa0.hpp"
+#include "System/SysNew.hpp"
 
 // does it host both choices?
 struct UnknownMsgChoiceStruct {
@@ -13,27 +14,29 @@ struct UnknownMsgChoiceStruct {
     /* 08 */
 };
 
-// astruct_2, MsgProc_Type1
+class UnkStruct_020397f8_410;
+
+// astruct_2, UnkStruct_020397f8
 class UnkStruct_020397f8 : public UnkStruct_02038aa0 {
 public:
     /* 000 (base) */
     /* 161 */ unk8 mUnk_161[0x3];
-    /* 164 */ MsgProc_Type1* mUnk_164;
+    /* 164 */ UnkStruct_020397f8* mUnk_164;
     /* 168 */ UnkStruct_02035064 mUnk_168;
     /* 1f0 */ UnkStruct_02035064 mUnk_1f0;
     /* 278 */ UnkStruct_02035064 mUnk_278;
     /* 300 */ UnkStruct_02035064 mUnk_300;
     /* 388 */ UnkStruct_02035064 mUnk_388;
-    /* 410 */ unk32 *mUnk_410; // UnkSubClass1_unk_410?
+    /* 410 */ UnkStruct_020397f8_410 mUnk_410;
     /* 414 */ unk32 mUnk_414;
     /* 418 */ UnkStruct_02038aa0* mUnk_418;
     /* 41c */ unk16 mUnk_41c;
     /* 41e */ unk16 mUnk_41e;
     /* 420 */ unk16 mUnk_420;
     /* 422 */ unk16 mUnk_422;
-    /* 424 */ unk32 *mUnk_424; // UnkSubClass1_unk_424?
-    /* 428 */ UnknownMsgChoiceStruct unk_428[0x20];
-    /* 528 */ unk16 unk_528[4]; // number of choices?
+    /* 424 */ UnkStruct_020397f8_424 mUnk_424;
+    /* 428 */ UnknownMsgChoiceStruct mUnk_428[0x20];
+    /* 528 */ unk16 mUnk_528[4]; // number of choices?
     /* 530 */ unk32 mUnk_530;
     /* 534 */ unk16 mUnk_534;
     /* 536 */ unk16 mUnk_536;
@@ -57,7 +60,7 @@ public:
     /* 55b */ unk8 mUnk_55b;
     /* 55c */ unk32 mUnk_55c;
     /* 560 */ unk32 mUnk_560;
-    /* 564 */ u16 unk_564[4];
+    /* 564 */ u16 mUnk_564[4];
     /* 56c */ unk16 mUnk_56c;
     /* 56e */ unk16 mUnk_56e;
     /* 570 */ unk16 mUnk_570;
@@ -94,9 +97,9 @@ public:
     /* 48 */ virtual void vfunc_48();
     void func_0203a35c();
     bool func_0203a3e0();
-    /* 44 */ virtual void vfunc_44(s32 param1, s32 param2);
+    /* 44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY);
     bool func_0203a6d0(unk32 param1);
-    /* 50 */ virtual void vfunc_50(unk32 param1, unk32 param2, s32 param3, unk32 param4);
+    /* 50 */ virtual void vfunc_50(EntryINF1* param1, unk32 param2, s32 param3, unk32 param4);
     /* 54 */ virtual void vfunc_54();
     /* 5c */ virtual void vfunc_5c();
     /* 58 */ virtual void vfunc_58();
@@ -121,7 +124,7 @@ public:
     /* 74 */
 
     //! TODO: check if this is really here
-    static bool func_0203c25c(class MsgProc_Type1* param_1);
+    static bool func_0203c25c(class UnkStruct_020397f8* param_1);
     static void func_0203e060(UnkStruct_02038aa0* param_1, u8 param_2, u8 param_3);
     void func_02039a3c(void);
     unk32 func_02039250(void);
@@ -143,6 +146,9 @@ public:
 
 class MsgProc_Type3 : public UnkStruct_02038aa0 {
 public:
+    /* 000 (base) */
+    /* 161 */ unk8 mUnk_161;
+    /* 162 */ unk16 mUnk_162;
     /* 164 */ unk16 mUnk_164;
     /* 166 */ unk16 mUnk_166;
     /* 168 */ unk16 mUnk_168;
@@ -154,7 +160,7 @@ public:
     /* 174 */ unk16 mUnk_174;
     /* 178 */ unk32 mUnk_178;
     /* 17c */ unk32 mUnk_17c;
-    /* 180 */ UnkClass_func_ov000_020d0644 unk_180[4];
+    /* 180 */ UnkClass_func_ov000_020d0644 mUnk_180[4];
     /* 1c0 */
 
     MsgProc_Type3();
@@ -195,6 +201,9 @@ public:
 
 class MsgProc_Type2 : public UnkStruct_02038aa0 {
 public:
+    /* 000 (base) */
+    /* 161 */ unk8 mUnk_161;
+    /* 162 */ unk16 mUnk_162;
     /* 164 */ unk16 mUnk_164;
     /* 166 */ unk16 mUnk_166;
     /* 168 */ unk16 mUnk_168;

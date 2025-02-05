@@ -169,7 +169,7 @@ typedef struct BMGFileInfo {
     /* 0x08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
     /* 0x0C */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
     /* 0x10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
-    /* 0x14 */ BMGHeader* mUnk_14; // same as unk_00 (?)
+    /* 0x14 */ BMGHeader* mUnk_14; // same as pHeader (?)
     /* 0x18 */ s16 mUnk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
     /* 0x1A */ s16 groupId; // stores the group id
 } BMGFileInfo; // size = 0x1C

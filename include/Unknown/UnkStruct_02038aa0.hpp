@@ -4,9 +4,10 @@
 #include "types.h"
 
 #include "Unknown/UnkStruct_0203dae0.hpp"
+#include "System/SysNew.hpp"
 
 class UnkStruct_02038aa0;
-typedef bool (*UnknownCallback)(class MsgProc_Type1*);
+typedef bool (*UnknownCallback)(class UnkStruct_020397f8*);
 
 class UnkStruct_0203881c : public UnkStruct_02032e7c {
 public:
@@ -14,7 +15,7 @@ public:
     /* 14 */ unk32 mUnk_14;
     /* 18 */ unk32 mUnk_18;
     /* 1c */ UnknownCallback mUnk_1c;
-    /* 20 */ class MsgProc_Type1* mUnk_20;
+    /* 20 */ class UnkStruct_020397f8* mUnk_20;
     /* 24 */ unk32 mUnk_24;
     /* 28 */
 
@@ -56,7 +57,7 @@ public:
     /* 123 */ unk8 mUnk_123;
     /* 124 */ UnkSubClass1_unk_124* mUnk_124;
     /* 128 */ UnkStruct_0203881c mUnk_128;
-    /* 150 */ u8 unk_150[4];
+    /* 150 */ u8 mUnk_150[4];
     /* 154 */ EntryINF1* pInfoEntry;
     /* 158 */ Vec2s mUnk_158; // textbox position?
     /* 15c */ s16 mUnk_15c;
@@ -66,7 +67,8 @@ public:
     /* 161 */
 
     /* 00 */ virtual ~UnkStruct_02038aa0();
-    /* 08 */ virtual void vfunc_08(s32 param1, unk32 param2, s16 *param3, unk32 param4);
+    /* 08 */ virtual void vfunc_08(s32 param1, unk32* param2, s16 *param3, unk32 param4);
+    /* 0c */ virtual void vfunc_0c(u8 param_2, u8 param_3, u8 param_4, unk32 param_5);
     /* 10 */ virtual void vfunc_10(unk32 param1);
     /* 1c */ virtual unk32 vfunc_1c(s32 param1, unk32 *param2, unk32 param3, unk32 param4);
     /* 20 */ virtual unk32 vfunc_20(s32 param1, s32 *param2);
@@ -74,15 +76,15 @@ public:
     /* 30 */ virtual void vfunc_30();
     /* 34 */ virtual unk32 vfunc_34(s32 param1);
     /* 38 */ virtual bool vfunc_38();
-    /* 3c */ virtual void vfunc_3c() = 0;
-    /* 40 */ virtual void vfunc_40() = 0;
-    /* 44 */ virtual void vfunc_44();
+    /* 3c */ virtual void vfunc_3c();
+    /* 40 */ virtual void vfunc_40();
+    /* 44 */ virtual void vfunc_44(s32 touchLastX, s32 touchLastY);
     /* 48 */ virtual void vfunc_48();
     /* 4c */ virtual void vfunc_4c();
-    /* 50 */ virtual void vfunc_50(unk32 param1, unk32 param2, s32 param3, unk32 param4);
+    /* 50 */ virtual void vfunc_50(EntryINF1* param1, u32 param2, s16* param3, UnkSubClass1_02256FF8* param4);
     /* 54 */ virtual void vfunc_54();
     /* 58 */ virtual void vfunc_58();
-    /* 5c */ virtual void vfunc_5c();
+    /* 5c */ virtual void vfunc_5c(u16* param_2, UnkStruct_0203b264* param_3, unk8 param_4, unk32 param_5);
     /* 60 */ virtual void vfunc_60();
     /* 64 */ virtual void vfunc_64();
     /* 68 */ virtual s32 vfunc_68(unk32 param1);
@@ -145,13 +147,12 @@ public:
     void func_0203e1b0(unk32, unk32, unk32);
 
     //! TODO: not sure it belongs to this class:
-    void func_02032fcc(unk32, unk32);
+    
     void func_02033190(unk32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     void func_020331c4(unk32, unk32);
     void func_0203947c(void);
     void func_0203cabc(unk32);
     unk32 func_0203e284(UnkStruct_0203b264*, unk32, unk32);
     void func_0203e2ac(unk32* param_2);
-    void func_0203fc78(unk32*, unk32*);
     s16 func_0203d318(s16, s16);
 };

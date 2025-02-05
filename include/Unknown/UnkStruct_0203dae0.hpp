@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Unknown/UnkStruct_02032f0c.hpp"
+#include "Message/MsgProc.hpp"
 
 // astruct_7, MsgProc_Base2
 class UnkStruct_0203dae0 : public UnkStruct_02032f0c {
@@ -63,7 +64,7 @@ public:
     /* 108 */ unk8 mUnk_10b;
     /* 10c */ unk32 mUnk_10c;
     /* 110 */ unk32 mUnk_110;
-    /* 114 */ void *mUnk_114; // MsgProc_Base2_unk_114?
+    /* 114 */ UnkStruct_0203dae0_114 *mUnk_114;
     /* 118 */ s32 mUnk_118;
     /* 11c */ unk16 mUnk_11c;
     /* 11e */ u8 mUnk_11e;

@@ -3,14 +3,14 @@
 UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
     s32 i;
 
-    this->unk_14 = param_3;
-    this->unk_18 = param_2;
-    this->unk_1C = 0;
-    this->unk_1D = 0xFF;
-    this->unk_1E = 0;
+    this->mUnk_14 = param_3;
+    this->mUnk_18 = param_2;
+    this->mUnk_1c = 0;
+    this->mUnk_1d = 0xFF;
+    this->mUnk_1e = 0;
 
-    for (i = 0; i < ARRAY_LEN(this->unk_04); i++) {
-        this->unk_04[i] = 0;
+    for (i = 0; i < ARRAY_LEN(this->mUnk_04); i++) {
+        this->mUnk_04[i] = 0;
     }
 }
 
@@ -37,8 +37,8 @@ ARM void UnkStruct_02037750::vfunc_20() {}
 // non-matching
 ARM UnkStruct_020386d8::UnkStruct_020386d8() :
     UnkStruct_02037750(0x1000000, 0) {
-    this->unk_20 = -1;
-    this->unk_24.func_020376c0(gVec3p_ZERO);
+    this->mUnk_20 = -1;
+    this->mUnk_24.func_020376c0(gVec3p_ZERO);
 }
 
 ARM void UnkStruct_020386d8::vfunc_08(unk32 param1) {}
