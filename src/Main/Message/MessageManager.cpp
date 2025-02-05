@@ -173,7 +173,7 @@ ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
     if (this->mUnk_04 == 0) {
         bool bVar1 = false;
 
-        if (this->mUnk_18[1] != NULL && (this->mUnk_18[1]->mUnk_18 & 0xFFFF0000) != 0x1000000) {
+        if (this->mUnk_18[1] != NULL && (this->mUnk_18[1]->mUnk_18 & 0xFFFF0000) != (1 << 24)) {
             bVar1 = true;
         }
 

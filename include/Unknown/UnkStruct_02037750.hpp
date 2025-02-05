@@ -25,26 +25,29 @@ public:
     /* 0c */ virtual void vfunc_0c(class UnkStruct_020397f8* param1);
     /* 10 */ virtual void vfunc_10();
     /* 14 */ virtual void vfunc_14();
-    /* 18 */ virtual void vfunc_18();
-    /* 1c */ virtual unk32 vfunc_1c();
+    /* 18 */ virtual void vfunc_18(unk32* param1);
+    /* 1c */ virtual bool vfunc_1c();
     /* 20 */ virtual void vfunc_20();
-    /* 24 */ virtual void vfunc_24(unk32 param1);
-    /* 28 */ virtual void vfunc_28(s32 param1);
+    /* 24 */ virtual bool vfunc_24(unk32 param1);
+    /* 28 */ virtual unk8 vfunc_28(s32 param1);
     /* 2c */ virtual unk32 vfunc_2c(s32 param1);
-    /* 30 */ virtual unk32 vfunc_30();
+    /* 30 */ virtual bool vfunc_30();
     /* 34 */
 
     UnkStruct_02037750(unk32 param1, unk32 param2);
     LinkStateInteract *GetLinkStateInteract();
-    void func_020385d0(s32 param1, unk32 *param2);
+    unk32 func_020385d0(s32 param1, u8 *param2);
 };
 
 class UnkStruct_020386d8_24 {
 public:
-    /* 00 */ unk32 mUnk_00;
+    /* 00 */ u8 mUnk_00;
+    /* 00 */ u8 mUnk_01;
+    /* 00 */ u8 mUnk_02;
+    /* 00 */ u8 mUnk_03;
     /* 04 */
 
-    void func_020376c0(Vec3p param_2);
+    void func_020376c0(const Vec3p* param_2);
 };
 
 // astruct_15
@@ -52,7 +55,9 @@ class UnkStruct_020386d8 : public UnkStruct_02037750 {
 public:
     /* 00 (base) */
     /* 20 */ unk8 mUnk_20;
-    /* 21 */ unk8 mUnk_21[0x3];
+    /* 21 */ unk8 mUnk_21;
+    /* 21 */ unk8 mUnk_22;
+    /* 21 */ unk8 mUnk_23;
     /* 24 */ UnkStruct_020386d8_24 mUnk_24;
     /* 28 */ unk32 mUnk_28;
     /* 2C */ unk32 mUnk_2C;
@@ -67,8 +72,8 @@ public:
     UnkStruct_020386d8();
     /* 00 */ virtual ~UnkStruct_020386d8();
     /* 08 */ virtual void vfunc_08(u32 param1);
-    /* 24 */ virtual void vfunc_24(unk32 param1);
-    /* 28 */ virtual void vfunc_28();
-    /* 30 */ virtual unk32 vfunc_30();
+    /* 24 */ virtual bool vfunc_24(unk32 param1);
+    /* 28 */ virtual unk8 vfunc_28(s32 param1);
+    /* 30 */ virtual bool vfunc_30();
     /* 34 */
 };
