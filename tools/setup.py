@@ -3,6 +3,7 @@ import zipfile
 import io
 from pathlib import Path
 import platform
+import stat
 
 DSD_VERSION = 'v0.4.0'
 
@@ -30,8 +31,10 @@ match platform.machine().lower():
 
 print('\nInstalling dsd...')
 response = requests.get(f'https://github.com/AetiasHax/ds-decomp/releases/download/{DSD_VERSION}/dsd-{system}-{machine}{EXE}')
-with open(root_path / f'dsd{EXE}', 'wb') as f:
+dsd_path = root_path / f'dsd{EXE}'
+with open(dsd_path, 'wb') as f:
     f.write(response.content)
+dsd_path.chmod(dsd_path.stat().st_mode | stat.S_IEXEC)
 
 
 print('\nInstalling toolchain...')
