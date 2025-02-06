@@ -6,26 +6,26 @@
 
 #define BMG_MAGIC "MESGbmg1"
 #define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
-#define BMG_GET_INF1(pGroups, flags) (func_02037258(&(pGroups)->entries[(flags) >> 0x10], (flags) & 0xFFFF))
+#define BMG_GET_INF1(pGroups, flags) ((pGroups)->entries[(flags) >> 0x10].func_02037258((flags) & 0xFFFF))
 #define BMG_GET_MSG_OFFSET(pGroups, flags) (BMG_GET_INF1((pGroups), (flags))->offset)
 #define BMG_GET_MSG_ADDR(pGroups, flags) ((u32)(pGroups)->entries[(flags) >> 0x10].pDAT1 + (BMG_GET_MSG_OFFSET((pGroups), (flags)) & ~1))
 
-typedef enum BMGTag {
+enum BMGTag {
     /* "INF1" */ BMG_TAG_INF1 = BMG_TAG('I', 'N', 'F', '1'),
     /* "FLW1" */ BMG_TAG_FLW1 = BMG_TAG('F', 'L', 'W', '1'),
     /* "FLI1" */ BMG_TAG_FLI1 = BMG_TAG('F', 'L', 'I', '1'),
     /* "DAT1" */ BMG_TAG_DAT1 = BMG_TAG('D', 'A', 'T', '1'),
     /* "MID1" */ BMG_TAG_MID1 = BMG_TAG('M', 'I', 'D', '1'),
     /* "MID1" */ BMG_TAG_STR1 = BMG_TAG('S', 'T', 'R', '1'),
-} BMGTag;
+};
 
-typedef enum BMGEncoding {
+enum BMGEncoding {
     /* 1 */ BMG_ENCODING_CP1252 = 1,
     /* 2 */ BMG_ENCODING_UTF16_BE,
     /* 3 */ BMG_ENCODING_SHIFT_JIS,
     /* 4 */ BMG_ENCODING_UTF8,
     /* 5 */ BMG_ENCODING_MAX
-} BMGEncoding;
+};
 
 typedef enum BMGFileIndex {
     /*  0 */ BMG_FILE_INDEX_SYSTEM,
@@ -65,120 +65,140 @@ typedef enum BMGFileIndex {
     /* 34 */ BMG_FILE_INDEX_MAX
 } BMGFileIndex;
 
-typedef struct SectionBase {
-    /* 0x00 */ u32 tag; // "INF1", "DAT1", ...
-    /* 0x04 */ u32 size; // the size of the section
-} SectionBase; // size = 0x8
+struct SectionBase {
+    /* 00 */ u32 tag; // "INF1", "DAT1", ...
+    /* 04 */ u32 size; // the size of the section
+    /* 08 */
+};
 
-typedef struct BMGHeader {
-    /* 0x00 */ char magic[8]; // always "MESGbmg1"
-    /* 0x08 */ u32 fileSize; // the size of the BMG file
-    /* 0x0C */ u32 numSections; // the number of sections (INF1, DAT1, ...)
-    /* 0x10 */ u8 encoding; // see `BMGEncoding`
-    /* 0x11 */ u8 unk_11[0xF]; // alignment padding?
-} BMGHeader; // size = 0x20
+struct BMGHeader {
+    /* 00 */ char magic[8]; // always "MESGbmg1"
+    /* 08 */ u32 fileSize; // the size of the BMG file
+    /* 0c */ u32 numSections; // the number of sections (INF1, DAT1, ...)
+    /* 10 */ u8 encoding; // see `BMGEncoding`
+    /* 11 */ u8 unk_11[0xF]; // alignment padding?
+    /* 20 */
+};
 
-typedef struct EntryINF1 {
-    /* 0x00 */ u32 offset; // relative to the end of the DAT1 header
-    /* 0x04 */ u8 mUnk_04; // flags/attributes? (+0x04 to +0x06)
-    /* 0x05 */ u8 mUnk_05;
-    /* 0x06 */ u8 mUnk_06;
-    /* 0x07 */ u8 mUnk_07;
-} EntryINF1; // size = 0x8
+struct EntryINF1 {
+    /* 00 */ u32 offset; // relative to the end of the DAT1 header
+    /* 04 */ u8 mUnk_04; // flags/attributes? (+0x04 to +0x06)
+    /* 05 */ u8 mUnk_05;
+    /* 06 */ u8 mUnk_06;
+    /* 07 */ u8 mUnk_07;
+    /* 08 */
+};
 
-typedef struct SectionINF1 {
-    /* 0x00 */ SectionBase base;
-    /* 0x08 */ u16 numEntries;
-    /* 0x0A */ u16 entrySize;
-    /* 0x0C */ u16 groupId;
-    /* 0x0E */ u8 colorId;
-    /* 0x0F */ u8 unk_0F[0x1]; // alignment padding?
-    /* 0x10 */ EntryINF1* entries;
-} SectionINF1;
+struct SectionINF1 {
+    /* 00 */ SectionBase base;
+    /* 08 */ u16 numEntries;
+    /* 0a */ u16 entrySize;
+    /* 0c */ u16 groupId;
+    /* 0e */ u8 colorId;
+    /* 0f */ u8 mUnk_0F[0x1]; // alignment padding?
+    /* 10 */ EntryINF1* entries;
+    /* 14 */
+};
 
-typedef enum InstrType {
+enum InstrType {
     /* 1 */ FLW1_TYPE_SHOW_MSG = 1,
     /* 2 */ FLW1_TYPE_BRANCH = 2,
     /* 3 */ FLW1_TYPE_EVENT = 3,
-} InstrType;
+    /* 4 */
+};
 
-typedef struct InstrShowMsg {
-    /* 0x01 */ u8 bmgFileIndex; // index into sBMGFiles
-    /* 0x02 */ u16 msgIndex; // index of INF1 entry
-    /* 0x04 */ s16 nextIndex; // index of FLW1 entry, 0xFFFF stops the conversation
-    /* 0x06 */ s16 nextBMGFileIndex; // index into sBMGFiles
-} InstrShowMsg; // size = 0x8
+struct InstrShowMsg {
+    /* 01 */ u8 bmgFileIndex; // index into sBMGFiles
+    /* 02 */ u16 msgIndex; // index of INF1 entry
+    /* 04 */ s16 nextIndex; // index of FLW1 entry, 0xFFFF stops the conversation
+    /* 06 */ s16 nextBMGFileIndex; // index into sBMGFiles
+    /* 08 */
+};
 
-typedef struct InstrBranch {
-    /* 0x01 */ u8 mUnk_01;
-    /* 0x02 */ u16 funcIndex; // index of the query function to run
-    /* 0x04 */ u16 funcArg; // the argument to use in the function
-    /* 0x06 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
-} InstrBranch; // size = 0x8
+struct InstrBranch {
+    /* 01 */ u8 mUnk_01;
+    /* 02 */ u16 funcIndex; // index of the query function to run
+    /* 04 */ u16 funcArg; // the argument to use in the function
+    /* 06 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
+    /* 08 */
+};
 
-typedef struct InstrEvent {
-    /* 0x01 */ u8 funcIndex; // index of the query function to run
-    /* 0x02 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
-    /* 0x04 */ u32 funcArg; // the argument to use in the function
-} InstrEvent; // size = 0x8
+struct InstrEvent {
+    /* 01 */ u8 funcIndex; // index of the query function to run
+    /* 02 */ u16 flwEntry; // the index of the second section table to be used next in the conversation.
+    /* 04 */ u32 funcArg; // the argument to use in the function
+    /* 08 */
+};
 
-typedef struct FLW1Instr {
-    /* 0x00 */ u8 type; // see InstrType
-    /* 0x01 */ union {
+struct FLW1Instr {
+    /* 00 */ u8 type; // see InstrType
+    /* 01 */ union {
         InstrShowMsg showMsg;
         InstrBranch branch;
         InstrEvent event;
     };
-} FLW1Instr; // size = 0x8
+    /* 09 */
+};
 
-typedef struct SectionFLW1 {
-    /* 0x00 */ SectionBase base;
-    /* 0x04 */ u16 numInstructions;
-    /* 0x08 */ u16 numLabels;
-    /* 0x0C */ u32 mUnk_0c; // always zero?
-    /* 0x10 */ FLW1Instr* instructions;
-    /* 0x14 */ s16* flwEntries;
-    /* 0x18 */ s8* bmgFileIndices;
-} SectionFLW1;
+struct SectionFLW1 {
+    /* 00 */ SectionBase base;
+    /* 04 */ u16 numInstructions;
+    /* 08 */ u16 numLabels;
+    /* 0c */ u32 mUnk_0c; // always zero?
+    /* 10 */ FLW1Instr* instructions;
+    /* 14 */ s16* flwEntries;
+    /* 18 */ s8* bmgFileIndices;
+    /* 1c */
+};
 
-typedef struct EntryFLI1 {
-    /* 0x00 */ u32 msgFlowID;
-    /* 0x04 */ u32 msgFlowNodeIndex;
-} EntryFLI1; // size = 0x8
+struct EntryFLI1 {
+    /* 00 */ u32 msgFlowID;
+    /* 04 */ u32 msgFlowNodeIndex;
+    /* 08 */
+};
 
-typedef struct SectionFLI1 {
-    /* 0x00 */ SectionBase base;
-    /* 0x04 */ u16 numEntries;
-    /* 0x08 */ u16 entrySize;
-    /* 0x0C */ u32 mUnk_0c; // always zero?
-    /* 0x10 */ EntryFLI1* entries;
-} SectionFLI1;
+struct SectionFLI1 {
+    /* 00 */ SectionBase base;
+    /* 04 */ u16 numEntries;
+    /* 08 */ u16 entrySize;
+    /* 0c */ u32 mUnk_0c; // always zero?
+    /* 10 */ EntryFLI1* entries;
+    /* 14 */
+};
 
-typedef struct EntryDAT1 {
-    /* 0x00 */ char* text;
-} EntryDAT1;
+struct EntryDAT1 {
+    /* 00 */ char* text;
+    /* 04 */
+};
 
-typedef struct SectionDAT1 {
-    /* 0x00 */ SectionBase base;
-    /* 0x08 */ EntryDAT1* entries;
-} SectionDAT1;
+struct SectionDAT1 {
+    /* 00 */ SectionBase base;
+    /* 08 */ EntryDAT1* entries;
+    /* 0c */
+};
 
-typedef struct BMGFileInfo {
-    /* 0x00 */ BMGHeader* pHeader; // pointer to the file's header
-    /* 0x04 */ SectionINF1* pINF1; // pointer to the data informations (INF -> informations)
-    /* 0x08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
-    /* 0x0C */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
-    /* 0x10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
-    /* 0x14 */ BMGHeader* mUnk_14; // same as pHeader (?)
-    /* 0x18 */ s16 mUnk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
-    /* 0x1A */ s16 groupId; // stores the group id
-} BMGFileInfo; // size = 0x1C
+struct BMGFileInfo {
+    /* 00 */ BMGHeader* pHeader; // pointer to the file's header
+    /* 04 */ SectionINF1* pINF1; // pointer to the data informations (INF -> informations)
+    /* 08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
+    /* 0c */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
+    /* 10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
+    /* 14 */ BMGHeader* mUnk_14; // same as pHeader (?)
+    /* 18 */ s16 mUnk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
+    /* 1a */ s16 groupId; // stores the group id
+    /* 1c */
+
+    void func_020371b4();
+    u16 func_020371c8(u32* pFile, s16 unk_18);
+    EntryINF1* func_02037258(u16 param_2);
+    u16 func_0203728c(unk32 param_2);
+};
 
 class BMGGroups : public SysObject {
 public:
-    /* 0x00 */ BMGFileInfo* entries; // accessed with `groupId`
-    /* 0x04 */ s32 numEntries;
-    /* 0x08 */
+    /* 00 */ BMGFileInfo* entries; // accessed with `groupId`
+    /* 04 */ s32 numEntries;
+    /* 08 */
 
     BMGGroups();
     ~BMGGroups();
@@ -186,5 +206,3 @@ public:
     void func_020373b4(s16 unk_18);
     u32 func_020373ec(unk32 param_2);
 };
-
-extern EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2);

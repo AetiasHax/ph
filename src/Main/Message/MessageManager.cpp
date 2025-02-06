@@ -432,7 +432,7 @@ ARM UnkStruct_02038aa0* UnkStruct_027E0C68::func_02036da8(u32 param_2, s16* para
     int iStack_34;
     int iStack_30;
     
-    pEVar1 = func_02037258(&this->pGroups->entries[param_2 >> 0x10], param_2 & 0xFFFF);
+    pEVar1 = this->pGroups->entries[param_2 >> 0x10].func_02037258(param_2 & 0xFFFF);
 
     if (pEVar1 == NULL) {
         return NULL;
@@ -458,7 +458,7 @@ ARM UnkStruct_02038aa0* UnkStruct_027E0C68::func_02036da8(u32 param_2, s16* para
         // pSVar4->vfunc_50(pEVar1, BMG_GET_MSG_ADDR(pBVar5, param_2), (s16*)&iStack_38, 1);
         BMGFileInfo* entry = &(pBVar5)->entries[(param_2) >> 0x10];
         // pSVar4->vfunc_50(pEVar1, 
-        // ((u32)entry->pDAT1 + (((func_02037258(entry, (((param_2))) & 0xFFFF))->offset) & ~1)),
+        // ((u32)entry->pDAT1 + (((entry.func_02037258((((param_2))) & 0xFFFF))->offset) & ~1)),
         // // BMG_GET_MSG_ADDR(pBVar5, param_2), 
         // (s16*)&iStack_38, 1);
 
@@ -501,7 +501,7 @@ ARM UnkStruct_020397f8* UnkStruct_027E0C68::func_02036f68(u32 param_2, u8* param
     int iVar4;
     UnkStruct_020397f8 *pSVar5;
     
-    pEVar1 = func_02037258(&this->pGroups->entries[param_2 >> 0x10], param_2 & 0xffff);
+    pEVar1 = this->pGroups->entries[param_2 >> 0x10].func_02037258(param_2 & 0xffff);
 
     if (pEVar1 == NULL) {
         return NULL;

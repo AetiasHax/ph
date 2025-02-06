@@ -48,28 +48,30 @@ static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
     "kaitei_F",     // BMG_FILE_INDEX_KAITEI_F
 };
 
-THUMB void func_020371b4(BMGFileInfo* pFileInfo) {
-    pFileInfo->pHeader = NULL;
-    pFileInfo->pINF1 = NULL;
-    pFileInfo->pFLW1 = NULL;
-    pFileInfo->pFLI1 = NULL;
-    pFileInfo->pDAT1 = NULL;
-    pFileInfo->mUnk_14 = NULL;
-    pFileInfo->mUnk_18 = 0;
+THUMB void BMGFileInfo::func_020371b4() {
+    this->pHeader = NULL;
+    this->pINF1 = NULL;
+    this->pFLW1 = NULL;
+    this->pFLI1 = NULL;
+    this->pDAT1 = NULL;
+    this->mUnk_14 = NULL;
+    this->mUnk_18 = 0;
 }
 
-THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
+// non-matching (equivalent)
+THUMB u16 BMGFileInfo::func_020371c8(u32* pFile, s16 unk_18) {
     SectionBase* pSection;
     u16 groupId;
     u32 i;
+    BMGHeader* pHeader = (BMGHeader*)pFile;
 
     groupId = -1;
-    pFileInfo->mUnk_14 = (BMGHeader*)pFile;
-    pFileInfo->pHeader = (BMGHeader*)pFile;
-    pFileInfo->mUnk_18 = unk_18;
+    this->mUnk_14 = pHeader;
+    this->mUnk_18 = unk_18;
+    this->pHeader = pHeader;
     pSection = (SectionBase*)((u8*)pFile + sizeof(BMGHeader));
 
-    for (i = 0; i < pFileInfo->pHeader->numSections; i++) {
+    for (i = 0; i < this->mUnk_14->numSections; i++) {
         switch (pSection->tag) {
             case BMG_TAG_MID1:
                 // unused
@@ -78,18 +80,18 @@ THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
                 // unused
                 break;
             case BMG_TAG_INF1:
-                pFileInfo->pINF1 = (SectionINF1*)pSection;
-                groupId = pFileInfo->pINF1->groupId;
+                this->pINF1 = (SectionINF1*)pSection;
+                groupId = this->pINF1->groupId;
                 break;
             case BMG_TAG_DAT1:
                 //! TODO: fake?
-                pFileInfo->pDAT1 = (SectionDAT1*)(pSection + 1);
+                this->pDAT1 = (SectionDAT1*)(pSection + 1);
                 break;
             case BMG_TAG_FLW1:
-                pFileInfo->pFLW1 = (SectionFLW1*)pSection;
+                this->pFLW1 = (SectionFLW1*)pSection;
                 break;
             case BMG_TAG_FLI1:
-                pFileInfo->pFLI1 = (SectionFLI1*)pSection;
+                this->pFLI1 = (SectionFLI1*)pSection;
                 break;
         }
 
@@ -99,35 +101,49 @@ THUMB u16 func_020371c8(BMGFileInfo* pFileInfo, u32* pFile, s16 unk_18) {
     return groupId;
 }
 
-ARM EntryINF1* func_02037258(BMGFileInfo* pFileInfo, unk32 param_2) {
-    SectionINF1* pINF1 = pFileInfo->pINF1;
+ARM EntryINF1* BMGFileInfo::func_02037258(u16 param_2) {
+    if (this->pINF1 != NULL) {
+        if (param_2 < this->pINF1->numEntries) {
+            return (EntryINF1*)((u32)&this->pINF1->entries + this->pINF1->entrySize * param_2);
+        }
 
-    if (pINF1 == NULL) {
         return NULL;
-    }
-
-    if (param_2 < pINF1->numEntries) {
-        return &pINF1->entries[pINF1->entrySize * param_2];
     }
 
     return NULL;
 }
 
-ARM u16 func_0203728c(BMGFileInfo* pFileInfo, unk32 param_2) {
+// non-matching
+ARM u16 BMGFileInfo::func_0203728c(unk32 param_2) {
     SectionFLI1* pFLI1;
-    u16 i;
+    EntryFLI1* entry;
+    u32 i;
+    u16 j;
 
-    pFLI1 = pFileInfo->pFLI1;
+    pFLI1 = this->pFLI1;
 
     if (pFLI1 == NULL) {
         return -1;
     }
 
-    for (i = 0; i < pFLI1->numEntries; i++) {
-        if (param_2 == pFLI1->entries[i * 2].msgFlowID) {
-            return pFLI1->entries[i].msgFlowNodeIndex;
+    i = 0;
+    do {
+        entry = &pFLI1->entries[i];
+
+        if (param_2 > entry->msgFlowID) {
+            return entry->msgFlowNodeIndex;
         }
-    }
+
+        // i++;
+        j = i + 1;
+        i = j & 0xFFFF;
+    } while (j < pFLI1->numEntries);
+
+    // for (i = 0; (u16)i < pFLI1->numEntries; i++) {
+    //     if (param_2 == pFLI1->entries[i].msgFlowID) {
+    //         return pFLI1->entries[i].msgFlowNodeIndex;
+    //     }
+    // }
 
     return -1;
 }
@@ -161,10 +177,10 @@ THUMB void BMGGroups::func_020372f0(BMGFileIndex eIndex, s16 unk_18) {
 
     // initialize file info
     bmgFile.groupId = 0;
-    func_020371b4(&bmgFile);
+    bmgFile.func_020371b4();
 
     // assign sections and set the file info in the groups entries
-    groupId = func_020371c8(&bmgFile, pFile, unk_18);
+    groupId = bmgFile.func_020371c8(pFile, unk_18);
     this->entries[groupId] = bmgFile;
     this->entries[groupId].groupId = groupId;
 }
@@ -175,7 +191,7 @@ THUMB void BMGGroups::func_020373b4(s16 unk_18) {
     for (i = 0; i < this->numEntries; i++) {
         if (this->entries[i].mUnk_18 == unk_18) {
             func_0202d590(this->entries[i].mUnk_14);
-            func_020371b4(&this->entries[i]);
+            this->entries[i].func_020371b4();
         }
     }
 }
@@ -188,7 +204,7 @@ ARM u32 BMGGroups::func_020373ec(unk32 param_2) {
     dVar1 = -1;
 
     for (i = 0; i < this->numEntries; i++) {
-        uVar2 = func_0203728c(&this->entries[i], param_2);
+        uVar2 = this->entries[i].func_0203728c(param_2);
 
         if (uVar2 != dVar1) {
             return uVar2 | i << 0x10;
