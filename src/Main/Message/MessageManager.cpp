@@ -5,27 +5,30 @@
 
 extern ARM unk32 func_ov000_020d7f18(u32*, unk32);
 extern ARM unk32 func_02037628(u8*);
-extern ARM void func_0203dc74(UnkStruct_02038aa0*, unk32, unk32);
 
-extern u32** data_027e0ce0[];
+extern u32* data_027e0ce0[];
 extern u32 data_02056924[];
 extern UnkStruct_MsgProc_Base_unk_2C* data_02068e6c;
 extern UnkStruct_MsgProc_Base_unk_2C* data_02068e8c;
 extern u16 data_02056918[];
 extern ActorTypeId data_0205691c[];
 
-// this should be `data_027e0ffc->func_ov000_020cec60(u16, Vec3p*, s32);`
-extern u32* data_027e0ffc;
-extern void func_ov000_020cec60(u32*, u16, Vec3p*, Actor*, unk32);
+struct UnkStruct_027e0ffc {
+    void func_ov000_020cec60(u16, Vec3p*, Actor*, unk32);
+};
+extern UnkStruct_027e0ffc* data_027e0ffc;
 
-ARM void UnkStruct_027E0C68::func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
+extern u32 data_027e0618[];
+
+// non-matching
+ARM void UnkStruct_027E0C68::func_0203643c(u32 *param_1, UnkStruct_027E0C68* param_2, u32 param_3) {
     BMGGroups *pBVar2 = param_2->pGroups;
-    *param_1 = BMG_GET_MSG_ADDR(pBVar2, param_3);
+
+    *param_1 = ((u32)pBVar2->entries[param_3 >> 0x10].pDAT1 + (pBVar2->entries[param_3 >> 0x10].func_02037258(param_3 & 0xFFFF)->offset & ~1));
 }
 
+// non-matching
 THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32 param_4) {
-    s32 i;
-
     this->mUnk_03 = 0;
     this->mUnk_0c = 0;
 
@@ -51,40 +54,35 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
             break;
     }
 
-    for (i = 0; i < ARRAY_LEN(this->mUnk_18); i++) {
-        if (this->mUnk_18[i] != NULL) {
-            this->mUnk_18[i] = NULL;
-        }
+    for (s32 i = 0; i < ARRAY_LEN(this->mUnk_18); i++) {
+        this->mUnk_18[i] = NULL;
     }
 
-    for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
-        if (this->mUnk_28[i] != NULL) {
-            this->mUnk_28[i] = NULL;
-        }
+    for (s32 i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
+        this->mUnk_28[i] = NULL;
     }
 
-    for (i = 0; i < ARRAY_LEN(this->mUnk_18); i++) {
-        this->mUnk_18[i] = new(*data_027e0ce0[0], 4) UnkStruct_020386d8();
+    for (s32 i = 0; i < ARRAY_LEN(this->mUnk_18); i++) {
+        this->mUnk_18[i] = new(data_027e0ce0[1], 4) UnkStruct_020386d8();
     }
 
     this->mUnk_18[0]->mUnk_39 = 0;
     this->mUnk_18[1]->mUnk_39 = 1;
 
-    // switch?
     if (*data_027e0618 == 2 || *data_027e0618 == 3 || *data_027e0618 == 6) {
-        for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
+        for (s32 i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
             switch (data_02056924[i + 1]) {
                 case 0:
                     if (*data_027e0618 != 2) {
-                        this->mUnk_28[i] = new(*data_027e0ce0[0], 4) UnkStruct_020397f8();
-                        func_0203dc74(this->mUnk_28[i], 0xE0, 0x40);
+                        this->mUnk_28[i] = new(data_027e0ce0[1], 4) UnkStruct_020397f8();
+                        this->mUnk_28[i]->func_0203dc74(0xE0, 0x40);
                         this->mUnk_28[i]->mUnk_2c = &data_02068e6c;
                         this->mUnk_28[i]->mUnk_50 = i != 0;
                     }
                     break;
                 case 1:
-                    this->mUnk_28[i] = new(*data_027e0ce0[0], 4) MsgProc_Type3();
-                    func_0203dc74(this->mUnk_28[i], 0x50, 0x60);
+                    this->mUnk_28[i] = new(data_027e0ce0[1], 4) MsgProc_Type3();
+                    this->mUnk_28[i]->func_0203dc74(0x50, 0x60);
                     this->mUnk_28[i]->mUnk_2c = &data_02068e6c;
                     break;
                 case 2:
@@ -92,8 +90,8 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
                     break;
                 case 3:
                     if (func_0202ab48() == 0) {
-                        this->mUnk_28[i] = new(*data_027e0ce0[0], 4) MsgProc_Type2();
-                        func_0203dc74(this->mUnk_28[i], 0xC0, 0x20);
+                        this->mUnk_28[i] = new(data_027e0ce0[1], 4) MsgProc_Type2();
+                        this->mUnk_28[i]->func_0203dc74(0xC0, 0x20);
                         this->mUnk_28[i]->mUnk_2c = &data_02068e8c;
                     } else {
                         this->mUnk_28[i] = NULL;
@@ -327,7 +325,7 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
         pActor = gActorManager->GetActor(&actorRef);
 
         if (pActor != NULL) {
-            func_ov000_020cec60(data_027e0ffc, data_02056918[this->mUnk_10], &pActor->mPos, pActor, 0);
+            data_027e0ffc->func_ov000_020cec60(data_02056918[this->mUnk_10], &pActor->mPos, pActor, 0);
         }
     }
 }
@@ -349,7 +347,7 @@ ARM void UnkStruct_027E0C68::func_02036bbc(void) {
         pSVar3 = this->mUnk_28[i];
 
         if (pSVar3 != NULL && ((bVar2 && pSVar3->mUnk_50 == 0) || (bVar4 && pSVar3->mUnk_50 != 0))) {
-            pSVar3->vfunc_44(data_027e0d78.mTouchLastX, data_027e0d78.mTouchLastY);
+            pSVar3->vfunc_44(gTouchControl.mTouchLastX, gTouchControl.mTouchLastY);
         }
     }
 }
@@ -416,7 +414,7 @@ ARM void UnkStruct_027E0C68::func_02036d6c(void) {
 
     for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
         if (func_0202ab48() == 0 || i != 5) {
-            this->mUnk_28[i]->func_02038b40();
+            this->mUnk_28[i]->UnkStruct_02038aa0::vfunc_10();
         }
     }
 }

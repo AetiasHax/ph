@@ -73,7 +73,6 @@ struct func_02038f44_param4 {
 
 extern "C" u32 func_01ff9b4c(unk32, unk32);
 extern "C" unk32 func_0203c084(void);
-extern "C" void func_ov018_02169634(UnkStruct_020397f8*);
 extern "C" unk32 func_ov000_02079e04(void);
 extern "C" unk32 func_02016fcc(unk32);
 extern "C" void func_02032304(unk32*, char*, unk32, unk32,  unk32);
@@ -100,7 +99,6 @@ struct UnkStruct2 {
 };
 extern UnkStruct2 data_027e077c;
 extern u8 data_02056be4[];
-extern u8 data_027e0618[];
 
 class UnkClass_027e0cbc {
 public:
@@ -117,7 +115,7 @@ extern "C" void func_020347b0(unk32, unk16, unk32*, unk32*, unk32, unk32);
 extern THUMB unk32 func_0202ab48(void);
 extern "C" void func_02034984(unk32, u8, unk32, unk32);
 extern "C" void func_02034698(unk32, unk32, unk32*, unk32*);
-extern struct TouchControl data_027e0d78;
+extern struct TouchControl gTouchControl;
 
 class UnkClass_027e0e28 {
 public:

@@ -74,11 +74,11 @@ public:
     /* 00 */ virtual ~UnkStruct_02038aa0();
     /* 08 */ virtual void vfunc_08(s32 param1, unk32* param2, s16 *param3, unk32 param4);
     /* 0c */ virtual void vfunc_0c(u8 param_2, u8 param_3, u8 param_4, unk32 param_5);
-    /* 10 */ virtual void vfunc_10(unk32 param1);
+    /* 10 */ virtual void vfunc_10();
     /* 1c */ virtual unk32 vfunc_1c(s32 param1, unk32 *param2, unk32 param3, unk32 param4);
     /* 20 */ virtual unk32 vfunc_20(s32 param1, s32 *param2);
     /* 2c */ virtual void vfunc_2c();
-    /* 30 */ virtual void vfunc_30();
+    /* 30 */ virtual void vfunc_30(unk32 param_2, unk32 param_3);
     /* 34 */ virtual unk32 vfunc_34(s32 param1);
     /* 38 */ virtual bool vfunc_38();
     /* 3c */ virtual void vfunc_3c();

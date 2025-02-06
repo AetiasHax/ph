@@ -8,9 +8,11 @@
 extern "C" void func_ov000_020d0460(void*);
 extern "C" void func_0203efd8(void*, void*);
 extern "C" void func_0203ee48(void*);
+extern "C" void func_ov018_02169634(UnkStruct_020397f8*);
 
 extern unk16 data_02056a0e[];
 extern u8 data_02056a08[];
+extern u32 data_027e0618[];
 
 THUMB UnkStruct_020397f8::UnkStruct_020397f8() :
     UnkStruct_02038aa0(0, 0), mUnk_164(NULL) {
@@ -402,7 +404,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 touchLastX, s32 touchLastY) {
     }
 
     if ((data_02056be4[data_027e077c.mUnk_0] & 2) == 0) {
-        if ((data_027e0d78.mFlags & 1) != 0) {
+        if ((gTouchControl.mFlags & 1) != 0) {
             if (this->mUnk_50 == 0 && data_027e0d38 != 0) {
                 if (func_ov000_02079e04() == 0 && data_027e0e28->func_ov000_0207bc48() == 0) {
                     if (data_027e0618[0x101] == 0 && data_027e103c->mUnk_24 == 0) {
@@ -415,12 +417,12 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 touchLastX, s32 touchLastY) {
                 this->mUnk_57f = 1;
             }
         } else {
-            if (data_027e0d78.mTouch != 0) {
+            if (gTouchControl.mTouch != 0) {
                 this->func_0203a6d0(iVar5, iVar2);
                 return;
             }
 
-            if (data_027e0d78.mTouch == 0) {
+            if (gTouchControl.mTouch == 0) {
                 switch(this->mUnk_150[1]) {
                     case 3:
                     case 4:
@@ -440,7 +442,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 touchLastX, s32 touchLastY) {
                     case 2:
                         //! TODO: fixme
                         // if (this->mUnk_164->mUnk_168.mUnk_06 <= 0) {
-                        //     if ((data_027e0d78.mFlags & 2) != 0) {
+                        //     if ((gTouchControl.mFlags & 2) != 0) {
                         //         this->mUnk_128.mUnk_14 = 0;
 
                         //         if (this->func_0203b0bc() != 0) {
@@ -455,7 +457,7 @@ ARM void UnkStruct_020397f8::vfunc_44(s32 touchLastX, s32 touchLastY) {
                     case 0:
                     case 1:
                     default:
-                        if ((data_027e0d78.mFlags & 2) != 0) {
+                        if ((gTouchControl.mFlags & 2) != 0) {
                             this->mUnk_128.mUnk_14 = 0;
 
                             if (this->func_0203b0bc() != 0) {

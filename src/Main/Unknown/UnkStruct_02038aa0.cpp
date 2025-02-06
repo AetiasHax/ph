@@ -2,6 +2,8 @@
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Message/MessageManager.hpp"
 
+extern u32 data_027e0618[];
+
 ARM UnkStruct_0203881c::UnkStruct_0203881c() {
     this->mUnk_14 = 0x1000;
     this->mUnk_18 = 0;
@@ -39,7 +41,7 @@ ARM void UnkStruct_02038aa0::vfunc_4c(u32 param1, unk32 param2) {
     this->UnkStruct_0203dae0::vfunc_10(param1, param2);
 }
 
-ARM void UnkStruct_02038aa0::vfunc_10(unk32 param1) {}
+ARM void UnkStruct_02038aa0::vfunc_10() {}
 
 ARM void UnkStruct_02038aa0::func_02038b40() {
     this->mUnk_15c = -1;
@@ -115,7 +117,7 @@ ARM s32 UnkStruct_02038aa0::func_02038d10() {
 
 ARM void UnkStruct_02038aa0::vfunc_2c() {}
 
-ARM void UnkStruct_02038aa0::vfunc_30() {
+ARM void UnkStruct_02038aa0::vfunc_30(unk32 param_2, unk32 param_3) {
     if (this->mUnk_15c > 0) {
         this->func_0203e090();
     } else {

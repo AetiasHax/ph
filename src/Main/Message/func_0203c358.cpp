@@ -67,14 +67,11 @@ ARM void MsgProc_Type2::vfunc_40(unk32 param_2, unk32 param_3) {
     param_3 += this->mUnk_168;
 
     this->func_0203c4ac(param_2 + this->mUnk_16a, param_3 + this->mUnk_16c);
-    this->func_02038ef4(param_2, param_3);
+    this->UnkStruct_02038aa0::vfunc_30(param_2, param_3);
 }
 
-//! TODO: solve vfunc oddities
-extern "C" bool func_0203dcb4(unk32);
-// non-matching
 ARM bool MsgProc_Type2::vfunc_14(unk32 param_2, unk32 param_3) {
-    return func_0203dcb4(param_2 + this->mUnk_162);
+    return this->UnkStruct_0203dae0::vfunc_14(param_2 + this->mUnk_162, param_3);
 }
 
 ARM MsgProc_Type2::~MsgProc_Type2() {

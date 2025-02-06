@@ -33,11 +33,11 @@ public:
     /* 0x14 */ BMGGroups* pGroups;
     /* 0x18 */ UnkStruct_020386d8* mUnk_18[2];
     /* 0x20 */ UnkStruct_02037750* mUnk_20[2];
-    /* 0x28 */ UnkStruct_02038aa0* mUnk_28[6];
+    /* 0x28 */ UnkStruct_02038aa0* mUnk_28[6]; //! TODO: is it the right type?
     /* 0x40 */ UnkStruct_020397f8* mUnk_40[2]; // is array size 6?
     /* 0x48 */
 
-    static void func_0203643c(int *param_1, UnkStruct_027E0C68* param_2, u32 param_3);
+    static void func_0203643c(u32 *param_1, UnkStruct_027E0C68* param_2, u32 param_3);
     void func_02036490(unk32 param_2, unk32 param_3, unk32 param_4);
     void func_0203665c(void);
     UnkStruct_027E0C68();

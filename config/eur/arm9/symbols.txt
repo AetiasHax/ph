@@ -1803,14 +1803,14 @@ _ZN18UnkStruct_027E0C6813func_020367ecEv kind:function(arm,size=0x1c) addr:0x203
 _ZN18UnkStruct_027E0C6813func_02036808Ev kind:function(arm,size=0x1c) addr:0x2036808
 _ZN18UnkStruct_027E0C6813func_02036824Ev kind:function(arm,size=0x2c) addr:0x2036824
 _ZN18UnkStruct_027E0C6813func_02036850Ev kind:function(arm,size=0x38) addr:0x2036850
-_ZN18UnkStruct_027E0C6813func_02036888EP31UnkStruct_020386d8 kind:function(arm,size=0x6c) addr:0x2036888
-_ZN18UnkStruct_027E0C6813func_020368f4EP37UnkStruct_02037750 kind:function(arm,size=0x18) addr:0x20368f4
+_ZN18UnkStruct_027E0C6813func_02036888EP18UnkStruct_020386d8 kind:function(arm,size=0x6c) addr:0x2036888
+_ZN18UnkStruct_027E0C6813func_020368f4EP18UnkStruct_02037750 kind:function(arm,size=0x18) addr:0x20368f4
 _ZN18UnkStruct_027E0C6813func_0203690cEiii kind:function(arm,size=0x2b0) addr:0x203690c
 _ZN18UnkStruct_027E0C6813func_02036bbcEv kind:function(arm,size=0x94) addr:0x2036bbc
 _ZN18UnkStruct_027E0C6813func_02036c50Ei kind:function(arm,size=0x54) addr:0x2036c50
 _ZN18UnkStruct_027E0C6813func_02036ca4Ei kind:function(arm,size=0x40) addr:0x2036ca4
-_ZN18UnkStruct_027E0C6813func_02036ce4EP31UnkStruct_020386d8i kind:function(arm,size=0x4c) addr:0x2036ce4
-_ZN18UnkStruct_027E0C6813func_02036d30EP37UnkStruct_02037750 kind:function(arm,size=0x1c) addr:0x2036d30
+_ZN18UnkStruct_027E0C6813func_02036ce4EP18UnkStruct_020386d8i kind:function(arm,size=0x4c) addr:0x2036ce4
+_ZN18UnkStruct_027E0C6813func_02036d30EP18UnkStruct_02037750 kind:function(arm,size=0x1c) addr:0x2036d30
 _ZN18UnkStruct_027E0C6813func_02036d4cEP18UnkStruct_02037750 kind:function(arm,size=0x20) addr:0x2036d4c
 _ZN18UnkStruct_027E0C6813func_02036d6cEv kind:function(arm,size=0x3c) addr:0x2036d6c
 _ZN18UnkStruct_027E0C6813func_02036da8EjPs kind:function(arm,size=0x134) addr:0x2036da8
@@ -1887,7 +1887,7 @@ _ZN18UnkStruct_02038aa013func_02038cf4Ev kind:function(arm,size=0x1c) addr:0x203
 _ZN18UnkStruct_02038aa013func_02038d10Ev kind:function(arm,size=0x10) addr:0x2038d10
 _ZN18UnkStruct_02038aa013func_02038d20Ev kind:function(arm,size=0x1b0) addr:0x2038d20
 _ZN18UnkStruct_02038aa08vfunc_2cEv kind:function(arm,size=0x24) addr:0x2038ed0
-_ZN18UnkStruct_02038aa08vfunc_30Ev kind:function(arm,size=0x4c) addr:0x2038ef4
+_ZN18UnkStruct_02038aa08vfunc_30Eii kind:function(arm,size=0x4c) addr:0x2038ef4
 _ZN18UnkStruct_02038aa013func_02038f40Eii kind:function(arm,size=0x4) addr:0x2038f40
 _ZN18UnkStruct_02038aa08vfunc_44Ev kind:function(arm,size=0x114) addr:0x2038f44
 _ZN18UnkStruct_02038aa08vfunc_50Eiiii kind:function(arm,size=0x4) addr:0x2039058
@@ -1950,7 +1950,7 @@ _ZN13MsgProc_Type2C1Eisi kind:function(thumb,size=0x44) addr:0x203c358
 _ZN13MsgProc_Type213func_0203c39cEii kind:function(thumb,size=0x78) addr:0x203c39c
 _ZN13MsgProc_Type28vfunc_3CEi kind:function(arm,size=0x4c) addr:0x203c414
 _ZN13MsgProc_Type28vfunc_40Eii kind:function(arm,size=0x4c) addr:0x203c460
-func_0203c4ac kind:function(arm,size=0x118) addr:0x203c4ac
+_ZN13MsgProc_Type213func_0203c4acEii kind:function(arm,size=0x118) addr:0x203c4ac
 _ZN13MsgProc_Type28vfunc_14Eii kind:function(arm,size=0x18) addr:0x203c5c4
 func_0203c5dc kind:function(arm,size=0x120) addr:0x203c5dc
 _ZN13MsgProc_Type2D0Ev kind:function(arm,size=0x1c) addr:0x203c6fc
@@ -2034,7 +2034,7 @@ _ZN18UnkStruct_0203dae08vfunc_14Eii kind:function(arm,size=0x48) addr:0x203dcb4
 _ZN18UnkStruct_0203dae013func_0203dcfcEhiii kind:function(arm,size=0xf0) addr:0x203dcfc
 _ZN18UnkStruct_0203dae013func_0203ddecEv kind:function(arm,size=0x10) addr:0x203ddec
 _ZN18UnkStruct_0203dae013func_0203ddfcEv kind:function(arm,size=0x18) addr:0x203ddfc
-_ZN18UnkStruct_0203dae013func_0203de14Ev kind:function(arm,size=0x10) addr:0x203de14
+_ZN18UnkStruct_02038aa013func_0203de14Ei kind:function(arm,size=0x10) addr:0x203de14
 _ZN18UnkStruct_0203dae013func_0203de24Ev kind:function(arm,size=0x34) addr:0x203de24
 _ZN18UnkStruct_0203dae013func_0203de58Ei kind:function(arm,size=0x208) addr:0x203de58
 _ZN18UnkStruct_0203dae08vfunc_10Eji kind:function(arm,size=0x30) addr:0x203e060
@@ -2800,7 +2800,7 @@ data_02057ed4 kind:data(any) addr:0x2057ed4
 data_02057ed8 kind:data(any) addr:0x2057ed8
 data_02057eec kind:data(any) addr:0x2057eec
 data_02057f08 kind:data(any) addr:0x2057f08
-data_02057f14 kind:data(any) addr:0x2057f14
+_ZTV13MsgProc_Type2 kind:data(any) addr:0x2057f14
 data_02057f90 kind:data(any) addr:0x2057f90
 data_0205800c kind:data(any) addr:0x205800c
 data_02058024 kind:data(any) addr:0x2058024
