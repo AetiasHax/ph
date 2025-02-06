@@ -6,6 +6,7 @@ import platform
 import stat
 
 DSD_VERSION = 'v0.4.0'
+WIBO_VERSION = '0.6.16'
 
 
 tools_path = Path(__file__).parent
@@ -41,4 +42,13 @@ print('\nInstalling toolchain...')
 response = requests.get('http://decomp.aetias.com/files/mwccarm.zip')
 zip_file = zipfile.ZipFile(io.BytesIO(response.content))
 zip_file.extractall(tools_path)
+
+
+if system == "linux":
+    print('\nInstalling wibo...')
+    response = requests.get(f'https://github.com/decompals/wibo/releases/download/{WIBO_VERSION}/wibo')
+    wibo_path = root_path / 'wibo'
+    with open(wibo_path, 'wb') as f:
+        f.write(response.content)
+    wibo_path.chmod(wibo_path.stat().st_mode | stat.S_IEXEC)
 
