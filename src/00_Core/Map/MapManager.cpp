@@ -945,10 +945,15 @@ ARM bool MapManager::func_ov00_020836dc(u32 type, u32 actorId) {
     Actor *actor;
     Vec3p playerPos;
 
-    if (!(actorId != 0 && actorId != 1)) { // what an awkward statement (as opposed to actorId < 2)
-        playerPos.x = gPlayerPos->x;
-        playerPos.y = gPlayerPos->y;
-        playerPos.z = gPlayerPos->z;
+    if (!(actorId != 0 && actorId != 1)) { // what an awkward statement (as opposed to if (actorId < 2))
+        // below doesn't match in objdiff
+        q20 x       = gPlayerPos->x;
+        q20 y       = gPlayerPos->y;
+        playerPos.x = x;
+        playerPos.y = y;
+        q20 z       = gPlayerPos->z;
+        playerPos.z = z;
+
     } else {
         actor = gActorManager->FindActorById(actorId);
         if (actor == NULL) {
@@ -1210,12 +1215,14 @@ ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 p
 }
 
 ARM void MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
-    unk8 local_8; // Should this be a bool or a Vec2p or a Vec3p?
+    // Missing opcode in objdiff
+    unk8 local_8; // What type is this?
     unk8 local_7; // Unused.
-    unk16 uStack_6;
+    unk16 uStack_6; // Unused.
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
-    // _local_8 = CONCAT11(param_3, param_2); What is this?
+    local_8  = param_2;
+    local_7  = param_3;
     this->mMap->vfunc_60(&local_8);
 }
 
@@ -1227,7 +1234,7 @@ ARM bool MapManager::func_ov00_02083e70() {
     int iVar1;
     int iVar2;
 
-    iVar1 = this->MapData_vfunc_54();
+    iVar1 = this->MapData_vfunc_54(0);
     if (iVar1 < 0x2c) {
         if ((0x2a < iVar1) || (iVar1 == 0x1b)) {
             return true;
@@ -1277,7 +1284,7 @@ unk8 MapManager::MapData_vfunc_70(Vec3p *param_2) {
     this->mMap->vfunc_70(param_2);
 }
 
-unk8 MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {
+ARM void MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {
     s32 iVar1;
     unk32 dVar2;
 
@@ -1307,8 +1314,8 @@ void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {
     Vec3p_Add(&tileBounds->max, &local_20, &tileBounds->max);
 }
 
-unk32 MapManager::MapData_vfunc_54() {
-    return this->mMap->vfunc_54(0); // what to use for this param?
+unk32 MapManager::MapData_vfunc_54(unk8 *a) {
+    return this->mMap->vfunc_54(a); // what to use for this param?
 }
 
 unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
@@ -1318,7 +1325,7 @@ unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
     // _local_8 = CONCAT11(param_3, param_2);
-    this->MapData_vfunc_54(/*&local_8*/); // Doesn't take any params.
+    this->MapData_vfunc_54(&local_8); // Doesn't take any params.
     // No calls to functions according to objdiff, why???
 }
 
@@ -1367,7 +1374,7 @@ unk8 MapManager::func_ov00_02084164(Vec2b *param_2) {
 
     iVar1 = this->mMap->vfunc_58(param_2, 7 /*, pcVar3, param_4*/); // Params?
     if (iVar1 == 0) {
-        uVar2 = this->MapData_vfunc_54();
+        uVar2 = this->MapData_vfunc_54(0);
         switch (uVar2) {
             case 0: break;
             case 1: return 0;
@@ -1599,32 +1606,30 @@ void MapManager::func_ov00_020843ec(s32 *param_2) {
     }
 }
 
-unk32 MapManager::GetMapData_Unk_38() {
+ARM unk32 MapManager::GetMapData_Unk_38() {
     return this->mMap->mUnk_038;
 }
 
-unk8 MapManager::func_ov00_020846a4() {
+ARM s32 MapManager::func_ov00_020846a4() {
     s32 iVar1 = *(s32 *) ((s32) this->mMap->mUnk_144 + 4);
     if (iVar1 == 0xff) {
         switch (this->mCourse->mType) {
-            case CourseType_Normal: return 0;
-            case CourseType_Dungeon: break;
+            case CourseType_Dungeon:
+            case CourseType_TempleOfTheOceanKing:
+            case CourseType_Battle: return 1;
             case CourseType_Sea: return 2;
-            case CourseType_TempleOfTheOceanKing: break;
-            case CourseType_Battle: break;
+            case CourseType_Normal:
             default: return 0;
         }
-        return 1;
     }
     return iVar1;
 }
 
-unk8 MapManager::func_ov00_02084700(s32 *param_1) { // param_1 perhaps Vec2b ?
-    int iVar1;
-
-    iVar1 = *(int *) (param_1[1] + 0x34);
+ARM s32 MapManager::func_ov00_02084700(MapManager *pMapManager) {
+    s32 iVar1;
+    iVar1 = pMapManager->mMap->mUnk_034;
     if (iVar1 == -1) {
-        iVar1 = *(int *) (*param_1 + 0xc4);
+        iVar1 = pMapManager->mCourse->mUnk_0c4;
     }
     if ((iVar1 == 0x1b) && (gActorManager->mUnk_29 != false)) {
         iVar1 = 0x1c;
@@ -2061,7 +2066,7 @@ unk32 MapManager::func_ov00_02084ebc(Vec3p *param_2) {
     if (iVar2 != 0) {
         return 0;
     }
-    iVar2 = this->MapData_vfunc_54();
+    iVar2 = this->MapData_vfunc_54(0);
     if (iVar2 < 0x47) {
         if (0x45 < iVar2) {
             return 0;
