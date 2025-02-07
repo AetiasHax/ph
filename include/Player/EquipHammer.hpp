@@ -11,12 +11,12 @@ private:
     /* 00 (base) */
     /* 09 */ unk8 mUnk_09[3];
     /* 0c */ Vec3p mUnk_0c;
-    /* 18 */ unk32 mUnk_18;
-    /* 1c */ unk8 mUnk_1c;
-    /* 1d */ unk8 mUnk_1d;
+    /* 18 */ s32 mUnk_18;
+    /* 1c */ u8 mUnk_1c;
+    /* 1d */ u8 mUnk_1d;
     /* 1e */ unk8 mUnk_1e[2];
     /* 20 */ unk32 mUnk_20;
-    /* 24 */ void *mUnk_24;
+    /* 24 */ unk32 mUnk_24;
     /* 28 */ unk32 mUnk_28;
     /* 2c */
 
