@@ -1,6 +1,7 @@
 #include "Player/EquipHammer.hpp"
 #include "Player/LinkStateItem.hpp"
 #include "Player/PlayerLink.hpp"
+#include "Player/PlayerControl.hpp"
 #include "Map/MapManager.hpp"
 #include "Item/ItemManager.hpp"
 #include "DTCM/UnkStruct_027e0fd4.hpp"
@@ -8,7 +9,24 @@
 
 extern "C" void ApproachAngle_thunk(s16* src, s16* dst, u32 param3);
 extern "C" void func_ov000_020b853c(void);
+
+struct EquipHammer_UnkStruct {
+    /* 00 */ unk8 mUnk_00[0x20];
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk8 mUnk_24[0xC];
+    /* 30 */ unk32 mUnk_30;
+    /* 34 */ unk8 mUnk_34[0xC];
+    /* 40 */ unk32 mUnk_40;
+    /* 44 */ unk8 mUnk_44[0xC];
+    /* 50 */ unk32 mUnk_50;
+    /* 54 */
+};
+
+extern EquipHammer_UnkStruct data_ov059_0219b160;
 extern unk32 data_ov059_0219b180;
+extern unk32 data_ov059_0219b190;
+extern unk32 data_ov059_0219b1a0;
+extern unk32 data_ov059_0219b1b0;
 
 ARM bool EquipHammer::IsUsable(unk32 param1) const {
     ActorNavi *pAVar3;
@@ -166,7 +184,61 @@ ARM void LinkStateItem::func_ov059_0219907c() {
     this->mUnk_25[3] = 0;
 }
 
-ARM void LinkStateItem::func_ov059_021990a4() {}
+#define CHECK_0219b160(field) ((field) == this->Get_PlayerControlData_Unk100())
+
+ARM void LinkStateItem::func_ov059_021990a4() {
+    EquipHammer *pEVar4;
+    ActorNavi *pAVar5;
+
+    if (this->mUnk_25[0x2] != 0 && this->mUnk_25[0x3] == 0) {
+        return;
+    }
+
+    pEVar4 = GetEquipHammer();
+    pAVar5 = gItemManager->GetFairy(FairyId_Courage);
+
+    if (CHECK_0219b160(data_ov059_0219b160.mUnk_20)) {
+        this->mUnk_38 = gPlayerControl->mAimWorld;
+
+        if (pAVar5->mUnk_3c0[0] != 0 && gPlayerControl->UpdateAimWorld(&this->mUnk_38) && pEVar4->GetUnk_18() <= 0) {
+            pEVar4->func_ov059_02198e90();
+
+            if (this->mUnk_25[2] != 0 && this->mUnk_25[3] != 0) {
+                this->LookAt(&this->mUnk_38);
+            }
+
+            this->func_ov00_020a89bc(&data_ov059_0219b190, 1);
+        }
+    } else {
+        if (CHECK_0219b160(data_ov059_0219b160.mUnk_50)) {
+            if (this->func_ov00_020a8b3c(1) != 0 || gPlayerControl->UpdateAimWorld(&this->mUnk_38)) {
+                this->func_ov00_020a89bc(&data_ov059_0219b180, 1);
+            }
+        } else if (CHECK_0219b160(data_ov059_0219b160.mUnk_30) || CHECK_0219b160(data_ov059_0219b160.mUnk_40)) {
+            gPlayerControl->UpdateAimWorld(&this->mUnk_38);
+            pEVar4->func_ov059_02198e90();
+
+            if (this->mUnk_25[0x2] != 0 && this->mUnk_25[0x3] != 0) {
+                this->LookAt(&this->mUnk_38);
+            }
+
+            if (gPlayerControl->CheckTouching(1) ? false : true) {
+                if (pEVar4->GetUnk_18() > 0) {
+                    pEVar4->func_ov059_02198ebc();
+                    this->func_ov00_020a89bc(&data_ov059_0219b1b0, 1);
+                }
+            } else if (!CHECK_0219b160(data_ov059_0219b160.mUnk_40) && pEVar4->GetUnk_20() <= 0) {
+                this->func_ov00_020a89bc(&data_ov059_0219b1a0, 1);
+            }
+        } else {
+            this->func_ov00_020a89bc(&data_ov059_0219b180, 1);
+        }
+    }
+
+    if (this->mUnk_25[0x2] == 0 || this->mUnk_25[0x3] == 0) {
+        this->func_ov059_02198ffc();
+    }
+}
 
 ARM EquipHammer *GetEquipHammer() {
     return (EquipHammer*)ItemManager::GetEquipItemUnchecked(ItemFlag_Hammer);

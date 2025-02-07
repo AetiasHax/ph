@@ -42,6 +42,15 @@ public:
     void func_ov059_02198f10(Vec3p *vec, unk32 param2, s32 param3);
     void func_ov059_02198fa8(unk32 param1);
     bool func_ov059_02198fe0();
+
+    inline s32 GetUnk_18(void) {
+        return mUnk_18;
+    }
+
+    inline unk32 GetUnk_20(void) {
+        return mUnk_20;
+    }
 };
 
 extern LinkStateItem *GetLinkStateItem();
+extern EquipHammer *GetEquipHammer();

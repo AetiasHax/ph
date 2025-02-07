@@ -48,7 +48,7 @@ public:
     /* 3b4 */ EquipHammer *mHammer;
     /* 3b8 */ unk32 mUnk_3b8;
     /* 3bc */ unk32 mUnk_3bc;
-    /* 3c0 */ unk8 mUnk_3c0[0x8];
+    /* 3c0 */ u8 mUnk_3c0[0x8];
     /* 3c8 */
 
     /* 00 */ virtual ~ActorNaviBase() override;
