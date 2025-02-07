@@ -1,13 +1,58 @@
 #include "Player/EquipHammer.hpp"
 #include "Player/LinkStateItem.hpp"
+#include "Player/PlayerLink.hpp"
 #include "Map/MapManager.hpp"
 #include "Item/ItemManager.hpp"
+#include "DTCM/UnkStruct_027e0fd4.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
 
 extern "C" void ApproachAngle_thunk(s16* src, s16* dst, u32 param3);
 extern "C" void func_ov000_020b853c(void);
 extern unk32 data_ov059_0219b180;
 
-ARM bool EquipHammer::IsUsable(unk32 param1) const {}
+ARM bool EquipHammer::IsUsable(unk32 param1) const {
+    ActorNavi *pAVar3;
+
+    if (this->GetAmmo() <= 0) {
+        return false;
+    }
+
+    if (data_027e0fd4->mUnk_0f0 != 0 || data_027e0fd4->mUnk_0f8 != 0) {
+        return false;
+    }
+
+    pAVar3 = gItemManager->GetFairy(FairyId_Courage);
+
+    if (pAVar3 == NULL || pAVar3->mUnk_3b8 != 0) {
+        return false;
+    }
+
+    if (gItemManager->GetUnk_14d() != 0) {
+        return false;
+    }
+
+    if (param1 != 0) {
+        LinkStateItem* pLVar4 = GetLinkStateItem();
+
+        if (pLVar4->mUnk_25[2] != 0 && pLVar4->mUnk_25[3] == 0) {
+            return false;
+        }
+
+        if (data_027e0fd4->mUnk_0c6 < 0 && data_027e0d38->mUnk_0c.func_ov000_020a5e9c() != 0x2f) {
+            bool bVar5 = false;
+
+            if (gPlayerLink->GetStateId() == 4 && gLinkState != NULL && gLinkState->mSubState == 0) {
+                bVar5 = true;
+            }
+
+            if (!bVar5) {
+                return false;
+            }
+        }
+    }
+
+    return true;
+}
 
 ARM LinkStateItem *GetLinkStateItem() {
     return (LinkStateItem*)GetLinkState(1);

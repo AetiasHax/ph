@@ -19,7 +19,7 @@ public:
     /* 20 */ unk16 mUnk_20;
     /* 22 */ unk8 mUnk_22[2];
     /* 24 */ s8 mUnk_24;
-    /* 25 */ unk8 mUnk_25[7];
+    /* 25 */ u8 mUnk_25[7];
     /* 2c */ unk16 mUnk_2c;
     /* 2e */ unk8 mUnk_2e[2];
     /* 30 */ void *mUnk_30;

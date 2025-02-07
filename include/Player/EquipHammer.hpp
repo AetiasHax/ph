@@ -43,3 +43,5 @@ public:
     void func_ov059_02198fa8(unk32 param1);
     bool func_ov059_02198fe0();
 };
+
+extern LinkStateItem *GetLinkStateItem();

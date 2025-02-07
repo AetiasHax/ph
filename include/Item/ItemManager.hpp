@@ -108,6 +108,11 @@ public:
     ~ItemManager();
     void Init();
 
+    // Access to members
+    inline u8 GetUnk_14d(void) {
+        return mUnk_14d;
+    }
+
     // Save/load
     void Save(SaveItemManager *save);
     void Load(const SaveItemManager *save);

@@ -154,4 +154,5 @@ public:
 
 LinkStateBase *GetLinkState(s32 index);
 
+extern LinkStateBase *gLinkState;
 extern LinkStateBase **gLinkStates;

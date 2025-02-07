@@ -1,3 +1,7 @@
 #pragma once
 
-class ActorNavi;
+#include "Actor/Navi/ActorNaviBase.hpp"
+
+class ActorNavi : public ActorNaviBase {
+
+};
