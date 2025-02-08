@@ -8,7 +8,7 @@
 #include "DTCM/UnkStruct_027e0d38.hpp"
 
 extern "C" void ApproachAngle_thunk(s16* src, s16 dst, u32 param3);
-extern "C" void func_ov000_020b853c(void);
+extern "C" void func_ov000_020b853c(ActorNavi*);
 
 struct EquipHammer_UnkStruct {
     /* 00 */ unk8 mUnk_00[0x20];
@@ -77,16 +77,16 @@ ARM LinkStateItem *GetLinkStateItem() {
 }
 
 ARM void EquipHammer::vfunc_18() {
-    this->mUnk_1c = 0;
-    this->mUnk_1d = 0;
-    this->mUnk_18 = 0;
+    this->mIsHeld = false;
+    this->mIsReleased = false;
+    this->mState = EQUIP_HAMMER_STATE_IDLE;
     this->mUnk_28 = 0x1000;
 }
 
 ARM void EquipHammer::vfunc_1c() {
-    this->mUnk_1c = 0;
-    this->mUnk_1d = 0;
-    this->mUnk_18 = 0;
+    this->mIsHeld = false;
+    this->mIsReleased = false;
+    this->mState = EQUIP_HAMMER_STATE_IDLE;
 }
 
 ARM void EquipHammer::vfunc_30() {    
@@ -94,34 +94,34 @@ ARM void EquipHammer::vfunc_30() {
         this->mUnk_24--;
 
         if (this->mUnk_24 <= 1) {
-            this->mUnk_18 = 0;
+            this->mState = EQUIP_HAMMER_STATE_IDLE;
         }
     }
 }
 
 ARM void EquipHammer::func_ov059_02198e90() {
-    if (this->mUnk_24 <= 0 && this->mUnk_1c == 0) {
-        this->mUnk_1c = 1;
-        this->mUnk_20 = 0x28;
+    if (this->mUnk_24 <= 0 && !this->mIsHeld) {
+        this->mIsHeld = true;
+        this->mChargeTimer = HAMMER_CHARGE_TIMER;
     }
 }
 
 ARM bool EquipHammer::func_ov059_02198ebc() {
     if (this->mUnk_24 <= 0) {
-        this->mUnk_1d = 1;
+        this->mIsReleased = true;
     }
 
     return true;
 }
 
 ARM bool EquipHammer::func_ov059_02198ed4() {
-    if (this->mUnk_20 > 0) {
-        this->mUnk_18 = 0x10000;
-        this->mUnk_20--;
-        return this->mUnk_20 == 0;
+    if (this->mChargeTimer > 0) {
+        this->mState = EQUIP_HAMMER_STATE_CHARGING;
+        this->mChargeTimer--;
+        return this->mChargeTimer == 0;
     }
 
-    this->mUnk_18 = 0x20000;
+    this->mState = EQUIP_HAMMER_STATE_CHARGED;
     return false;
 }
 
@@ -130,24 +130,24 @@ ARM void EquipHammer::func_ov059_02198f10(Vec3p *vec, unk32 param2, s32 param3) 
     
     this->mUnk_0c = *vec;
 
-    if (this->mUnk_1d != 0) {
-        this->mUnk_1d = 0;
+    if (this->mIsReleased) {
+        this->mIsReleased = false;
 
         if (param3 == 0) {
             local_18 = this->mUnk_0c;
-            MapManager::func_ov00_020858b0(gMapManager, &local_18, this->mUnk_20 == 0x0);
+            MapManager::func_ov00_020858b0(gMapManager, &local_18, this->mChargeTimer == 0);
         }
     }
 
-    this->mUnk_1c = 0;
+    this->mIsHeld = false;
     this->mUnk_24 = 4;
     this->mUnk_28 = param2;
 }
 
 ARM void EquipHammer::func_ov059_02198fa8(unk32 param1) {
-    this->mUnk_1d = 0;
-    this->mUnk_1c = 0;
-    this->mUnk_18 = 0;
+    this->mIsReleased = false;
+    this->mIsHeld = false;
+    this->mState = EQUIP_HAMMER_STATE_IDLE;
     this->mUnk_24 = 4;
     this->mUnk_28 = param1;
 }
@@ -157,11 +157,11 @@ ARM void EquipHammer::vfunc_38(unk32 param1) {
 
 ARM u32 EquipHammer::vfunc_2c() {
     //! TODO: fake?
-    return (this->mUnk_18 + (s32)((u32)(this->mUnk_18 >> 0xB) >> 0x14)) >> 0xC;
+    return (this->mState + (s32)((u32)(this->mState >> 0xB) >> 0x14)) >> 0xC;
 }
 
-ARM bool EquipHammer::func_ov059_02198fe0() {
-    return this->mUnk_18 == 0x20000 && this->mUnk_20 == 0;
+ARM bool EquipHammer::IsHammerCharged() {
+    return this->mState == EQUIP_HAMMER_STATE_CHARGED && this->mChargeTimer == 0;
 }
 
 ARM void LinkStateItem::func_ov059_02198ffc() {
@@ -183,7 +183,7 @@ ARM void LinkStateItem::func_ov059_0219907c() {
     this->mUnk_25[3] = 0;
 }
 
-#define CHECK_0219b160(field) ((field) == this->Get_PlayerControlData_Unk100())
+#define CHECK_0219b160(value) ((value) == this->Get_PlayerControlData_Unk100())
 
 ARM void LinkStateItem::func_ov059_021990a4() {
     EquipHammer *pEVar4;
@@ -199,7 +199,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
     if (CHECK_0219b160(data_ov059_0219b160.mUnk_20)) {
         this->mUnk_38 = gPlayerControl->mAimWorld;
 
-        if (pAVar5->mUnk_3c0[0] != 0 && gPlayerControl->UpdateAimWorld(&this->mUnk_38) && pEVar4->GetUnk_18() <= 0) {
+        if (pAVar5->mUnk_3c0[0] != 0 && gPlayerControl->UpdateAimWorld(&this->mUnk_38) && pEVar4->GetState() <= 0) {
             pEVar4->func_ov059_02198e90();
 
             if (this->mUnk_25[2] != 0 && this->mUnk_25[3] != 0) {
@@ -222,11 +222,11 @@ ARM void LinkStateItem::func_ov059_021990a4() {
             }
 
             if (gPlayerControl->CheckTouching(1) ? false : true) {
-                if (pEVar4->GetUnk_18() > 0) {
+                if (pEVar4->GetState() > 0) {
                     pEVar4->func_ov059_02198ebc();
                     this->func_ov00_020a89bc(&data_ov059_0219b1b0, 1);
                 }
-            } else if (!CHECK_0219b160(data_ov059_0219b160.mUnk_40) && pEVar4->GetUnk_20() <= 0) {
+            } else if (!CHECK_0219b160(data_ov059_0219b160.mUnk_40) && pEVar4->GetChargeTimer() <= 0) {
                 this->func_ov00_020a89bc(&data_ov059_0219b1a0, 1);
             }
         } else {
@@ -244,6 +244,5 @@ ARM EquipHammer *GetEquipHammer() {
 }
 
 ARM void LinkStateItem::StopUsingHammer() {
-    gItemManager->GetFairy(FairyId_Courage);
-    func_ov000_020b853c();
+    func_ov000_020b853c(gItemManager->GetFairy(FairyId_Courage));
 }
