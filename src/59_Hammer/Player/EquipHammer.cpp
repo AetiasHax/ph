@@ -1,14 +1,14 @@
 #include "Player/EquipHammer.hpp"
-#include "Player/LinkStateItem.hpp"
-#include "Player/PlayerLink.hpp"
-#include "Player/PlayerControl.hpp"
-#include "Map/MapManager.hpp"
-#include "Item/ItemManager.hpp"
-#include "DTCM/UnkStruct_027e0fd4.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
+#include "DTCM/UnkStruct_027e0fd4.hpp"
+#include "Item/ItemManager.hpp"
+#include "Map/MapManager.hpp"
+#include "Player/LinkStateItem.hpp"
+#include "Player/PlayerControl.hpp"
+#include "Player/PlayerLink.hpp"
 
-extern "C" void ApproachAngle_thunk(s16* src, s16 dst, u32 param3);
-extern "C" void func_ov000_020b853c(ActorNavi*);
+extern "C" void ApproachAngle_thunk(s16 *src, s16 dst, u32 param3);
+extern "C" void func_ov000_020b853c(ActorNavi *);
 
 struct EquipHammer_UnkStruct {
     /* 00 */ unk8 mUnk_00[0x20];
@@ -50,7 +50,7 @@ ARM bool EquipHammer::IsUsable(unk32 param1) const {
     }
 
     if (param1 != 0) {
-        LinkStateItem* pLVar4 = GetLinkStateItem();
+        LinkStateItem *pLVar4 = GetLinkStateItem();
 
         if (pLVar4->mUnk_25[2] != 0 && pLVar4->mUnk_25[3] == 0) {
             return false;
@@ -73,23 +73,23 @@ ARM bool EquipHammer::IsUsable(unk32 param1) const {
 }
 
 ARM LinkStateItem *GetLinkStateItem() {
-    return (LinkStateItem*)GetLinkState(1);
+    return (LinkStateItem *) GetLinkState(LinkStateId_Item);
 }
 
 ARM void EquipHammer::vfunc_18() {
-    this->mIsHeld = false;
+    this->mIsHeld     = false;
     this->mIsReleased = false;
-    this->mState = EQUIP_HAMMER_STATE_IDLE;
-    this->mUnk_28 = 0x1000;
+    this->mState      = EQUIP_HAMMER_STATE_IDLE;
+    this->mUnk_28     = 0x1000;
 }
 
 ARM void EquipHammer::vfunc_1c() {
-    this->mIsHeld = false;
+    this->mIsHeld     = false;
     this->mIsReleased = false;
-    this->mState = EQUIP_HAMMER_STATE_IDLE;
+    this->mState      = EQUIP_HAMMER_STATE_IDLE;
 }
 
-ARM void EquipHammer::vfunc_30() {    
+ARM void EquipHammer::vfunc_30() {
     if (this->mUnk_24 > 0) {
         this->mUnk_24--;
 
@@ -101,7 +101,7 @@ ARM void EquipHammer::vfunc_30() {
 
 ARM void EquipHammer::func_ov059_02198e90() {
     if (this->mUnk_24 <= 0 && !this->mIsHeld) {
-        this->mIsHeld = true;
+        this->mIsHeld      = true;
         this->mChargeTimer = HAMMER_CHARGE_TIMER;
     }
 }
@@ -127,7 +127,7 @@ ARM bool EquipHammer::func_ov059_02198ed4() {
 
 ARM void EquipHammer::func_ov059_02198f10(Vec3p *vec, unk32 param2, s32 param3) {
     Vec3p local_18;
-    
+
     this->mUnk_0c = *vec;
 
     if (this->mIsReleased) {
@@ -146,18 +146,17 @@ ARM void EquipHammer::func_ov059_02198f10(Vec3p *vec, unk32 param2, s32 param3) 
 
 ARM void EquipHammer::func_ov059_02198fa8(unk32 param1) {
     this->mIsReleased = false;
-    this->mIsHeld = false;
-    this->mState = EQUIP_HAMMER_STATE_IDLE;
-    this->mUnk_24 = 4;
-    this->mUnk_28 = param1;
+    this->mIsHeld     = false;
+    this->mState      = EQUIP_HAMMER_STATE_IDLE;
+    this->mUnk_24     = 4;
+    this->mUnk_28     = param1;
 }
 
-ARM void EquipHammer::vfunc_38(unk32 param1) {
-}
+ARM void EquipHammer::vfunc_38(unk32 param1) {}
 
 ARM u32 EquipHammer::vfunc_2c() {
     //! TODO: fake?
-    return (this->mState + (s32)((u32)(this->mState >> 0xB) >> 0x14)) >> 0xC;
+    return (this->mState + (s32) ((u32) (this->mState >> 0xB) >> 0x14)) >> 0xC;
 }
 
 ARM bool EquipHammer::IsHammerCharged() {
@@ -240,7 +239,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
 }
 
 ARM EquipHammer *GetEquipHammer() {
-    return (EquipHammer*)ItemManager::GetEquipItemUnchecked(ItemFlag_Hammer);
+    return (EquipHammer *) ItemManager::GetEquipItemUnchecked(ItemFlag_Hammer);
 }
 
 ARM void LinkStateItem::StopUsingHammer() {
