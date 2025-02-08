@@ -55,6 +55,10 @@ public:
         return mState;
     }
 
+    inline bool IsReleased(void) {
+        return mIsReleased;
+    }
+
     inline unk32 GetChargeTimer(void) {
         return mChargeTimer;
     }

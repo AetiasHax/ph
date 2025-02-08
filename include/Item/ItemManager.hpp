@@ -215,6 +215,8 @@ public:
 
     // Unknown
     void func_ov00_020ae4dc(s32 param1);
+    void func_ov000_020c0c44(void*);
+    void func_ov000_020c0e5c(void*, unk32);
 };
 
 extern ItemManager *gItemManager;

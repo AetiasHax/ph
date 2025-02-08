@@ -70,7 +70,7 @@ public:
     /* ec */ virtual void vfunc_ec();
     /* f0 */
 
-    void func_ov000_020b8c50();
+    void func_ov000_020b8c50(unk32);
     void func_ov000_020b8c98(unk32 param1, unk32 param2, unk32 param3);
     void TeleportAboveLink();
     void func_ov000_020b9770(s32 param1);

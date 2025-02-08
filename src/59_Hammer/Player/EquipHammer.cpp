@@ -8,7 +8,6 @@
 #include "Player/PlayerLink.hpp"
 
 extern "C" void ApproachAngle_thunk(s16 *src, s16 dst, u32 param3);
-extern "C" void func_ov000_020b853c(ActorNavi *);
 
 struct EquipHammer_UnkStruct {
     /* 00 */ unk8 mUnk_00[0x20];
@@ -243,5 +242,5 @@ ARM EquipHammer *GetEquipHammer() {
 }
 
 ARM void LinkStateItem::StopUsingHammer() {
-    func_ov000_020b853c(gItemManager->GetFairy(FairyId_Courage));
+    gItemManager->GetFairy(FairyId_Courage)->func_ov000_020b853c();
 }
