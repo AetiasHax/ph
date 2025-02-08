@@ -74,7 +74,6 @@ public:
     /* 74 */
 
     UnkStruct_02038aa0(u8 param1, u8 param2);
-    void func_02038b34(u32 param1, unk32 param2);
     void func_02038b40();
     bool func_02038b78();
     s32 func_02038cb8(s32 param1);

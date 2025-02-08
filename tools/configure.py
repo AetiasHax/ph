@@ -10,7 +10,7 @@ import ninja_syntax
 
 
 parser = argparse.ArgumentParser(description="Generates build.ninja")
-parser.add_argument('-w', type=str, default="wine", dest="wine", required=False, help="Path to Wine (linux only)")
+parser.add_argument('-w', type=str, default="./wibo", dest="wine", required=False, help="Path to Wine/Wibo (linux only)")
 parser.add_argument('version', help='Game version')
 args = parser.parse_args()
 
@@ -32,6 +32,7 @@ CC_FLAGS = " ".join([
     "-Cpp_exceptions off",  # Disable C++ exceptions
     "-RTTI off",            # Disable runtime type information
     "-interworking",        # Enable ARM/Thumb interworking
+    "-w off",               # Disable warnings
     "-sym on",              # Debug info, including line numbers
     "-gccinc",              # Interpret #include "..." and #include <...> equally
     "-nolink",              # Do not link
