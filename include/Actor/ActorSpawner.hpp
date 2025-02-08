@@ -16,8 +16,8 @@ public:
     static void Destroy();
     ActorSpawner();
     ~ActorSpawner();
-    void _ZN12ActorSpawner19func_ov000_020c4014Ev();
-    void _ZN12ActorSpawner19func_ov000_020c4018Ev();
+    void func_ov000_020c4014();
+    void func_ov000_020c4018();
     Actor *CreateActor(ActorTypeId type);
     s32 Spawn(ActorTypeId type, Vec3p *pos, void *param3, ActorRef *ref);
 };
