@@ -36,9 +36,10 @@ THUMB void OverlayManager::Load(OverlayIndex index, OverlayId id) {
     this->mLoadedOverlays[index] = id;
 }
 
-// non-matching (regalloc)
 THUMB void OverlayManager::LoadIfNotLoaded(OverlayIndex index, OverlayId id) {
-    if (this->mLoadedOverlays[index] != id) {
+    OverlayId loadedId = this->mLoadedOverlays[index];
+
+    if (loadedId != id) {
         this->Unload(index);
         this->Load(index, id);
     }
