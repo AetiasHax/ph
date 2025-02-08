@@ -12,7 +12,7 @@ void ActorNaviBase::func_ov000_020b8c50() {}
 void ActorNaviBase::func_ov000_020b8c98(unk32 param1, unk32 param2, unk32 param3) {}
 void ActorNaviBase::vfunc_d4() {}
 void ActorNaviBase::vfunc_d8() {}
-void ActorNaviBase::SetActive(bool active) {}
+void ActorNaviBase::SetActive(unk32 active) {}
 void ActorNaviBase::TeleportAboveLink() {}
 void ActorNaviBase::vfunc_e0() {}
 void ActorNaviBase::vfunc_e4() {}
