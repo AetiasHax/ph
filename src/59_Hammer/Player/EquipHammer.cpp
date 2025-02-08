@@ -7,7 +7,7 @@
 #include "DTCM/UnkStruct_027e0fd4.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
 
-extern "C" void ApproachAngle_thunk(s16* src, s16* dst, u32 param3);
+extern "C" void ApproachAngle_thunk(s16* src, s16 dst, u32 param3);
 extern "C" void func_ov000_020b853c(void);
 
 struct EquipHammer_UnkStruct {
@@ -164,18 +164,17 @@ ARM bool EquipHammer::func_ov059_02198fe0() {
     return this->mUnk_18 == 0x20000 && this->mUnk_20 == 0;
 }
 
-// non-matching
 ARM void LinkStateItem::func_ov059_02198ffc() {
-    s16 dest;
-    Vec3p local_20;
     Vec3p local_14;
+    Vec3p local_20;
+    s16 dest;
 
     local_14 = this->mUnk_38;
     local_20 = *this->GetPlayerPos();
 
     Vec3p_Sub(&local_14, &local_20, &local_14);
     dest = Atan2(local_14.x, local_14.z);
-    ApproachAngle_thunk(this->GetPlayerAngle(), &dest, 0x2000);
+    ApproachAngle_thunk(this->GetPlayerAngle(), dest, 0x2000);
 }
 
 ARM void LinkStateItem::func_ov059_0219907c() {
