@@ -49,8 +49,8 @@ bool Approach_thunk(unk32 *src, unk32 dest, unk32 step);
 extern q4 gSinCosTable[];
 
 typedef struct {
-    /* 0 */ s8 x;
-    /* 1 */ s8 y;
+    /* 0 */ u8 x;
+    /* 1 */ u8 y;
     /* 2 */
 } Vec2b;
 

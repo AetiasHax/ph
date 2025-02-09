@@ -28,7 +28,7 @@ public:
     /* 50 */ q20 mTouchSpeedX; // how fast the stylus moves
     /* 54 */ q20 mTouchSpeedY;
     /* 58 */ q20 mTouchDist; // pixel distance from touch to link, deadzone is 20 pixels
-    /* 5c */ unk32 mUnk_5c;
+    /* 5c */ q20 mTouchSpeed;
     /* 60 */ s16 mTouchDuration;
     /* 62 */ s16 mTouchSlowDuration; // resets to 0 if stylus is fast enough
     /* 64 */ s16 mTouchFastTime; // gets set to mTouchDuration if stylus is fast enough
@@ -57,13 +57,12 @@ public:
     /* 84 */ ActorRef mFollowRef;
     /* 8c */ ActorRef mNextFollowRef;
     /* 94 */ ActorRef mLastFollowRef;
-    /* 9c */ u8 mUnk_9c;
-    /* 9d */ u8 mUnk_9d;
+    /* 9c */ Vec2b mUnk_9c;
     /* 9e */ unk8 mUnk_9e[2];
     /* a0 */ void *mFollowActor;
     /* a4 */ q20 mFollowDist;
     /* a8 */ u16 mFollowStuckTimer;
-    /* aa */ u16 mCutsceneEndTimer;
+    /* aa */ s16 mCutsceneEndTimer;
     /* ac */ s16 mUnk_ac;
     /* ae */ unk16 mUnk_ae;
     /* b0 */ Vec3p mAim; // used by boomerang, bow and rope
@@ -75,11 +74,11 @@ public:
     /* d8 */
 
     static bool func_ov00_020aeeac();
-    bool func_ov00_020aeef8();
+    static bool func_ov00_020aeef8();
     void func_ov00_020aef30();
     void UpdateAim();
     Actor *GetFollowActor();
-    bool func_ov00_020af01c(unk8 *param1);
+    bool func_ov00_020af01c(Vec2b *param1);
     void SetUnk_80();
     void StopFollowing();
     void func_ov00_020af06c();
@@ -90,14 +89,14 @@ public:
     bool CheckTouching(u32 param1);
     bool CheckTouchFast(u32 param1);
     bool func_ov00_020af4a4();
-    void func_ov00_020af538();
+    void func_ov00_020af538(bool param1, u8 param2);
     void func_ov00_020af6e4(Vec3p *param1, s32 param3, s32 param4);
     bool func_ov00_020af778();
     bool func_ov00_020afad8(Vec3p *param1);
     void func_ov00_020afb6c();
     bool func_ov00_020afe88(s32 param1, bool param2);
     bool func_ov00_020afeec(unk32 param1, bool param2);
-    void func_ov00_020aff90(unk32 param1, unk32 param2);
+    void func_ov00_020aff90(Cylinder *param1, unk32 param2);
     void func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec3p *param4);
     void func_ov00_020b014c();
     void SetAim();

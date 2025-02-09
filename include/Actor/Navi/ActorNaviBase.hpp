@@ -10,6 +10,7 @@
 class ActorNaviBase_Unk1 {};
 
 class ActorNaviBase : public Actor {
+public:
     /* 000 (base) */
     /* 158 */ Vec3p mOffsetPos;
     /* 164 */ unk32 mUnk_164;
