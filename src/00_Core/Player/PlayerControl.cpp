@@ -78,8 +78,8 @@ ARM void PlayerControl::SetUnk_80() {
 
 ARM void PlayerControl::StopFollowing() {
     mFollowRef.Reset();
-    mFollowing   = false;
-    mFollowActor = NULL;
+    mFollowing    = false;
+    mFollowObject = NULL;
 }
 
 ARM void PlayerControl::func_ov00_020af06c() {
@@ -442,13 +442,13 @@ ARM void PlayerControl::func_ov00_020afb6c() {
     }
 
     if (!mFollowing) {
-        mFollowActor = NULL;
+        mFollowObject = NULL;
     } else {
-        mFollowActor = (void *) gMapManager->MapData_vfunc_78();
+        mFollowObject = (void *) gMapManager->MapData_vfunc_78();
         Vec3p local_3c;
         s32 iVar2;
         s32 iVar7;
-        if (mFollowActor == NULL) {
+        if (mFollowObject == NULL) {
             local_3c.y     = gPlayerPos.y;
             Vec2b local_44 = mUnk_9c;
             gMapManager->func_ov00_02083c7c(&local_3c, local_44);
@@ -459,15 +459,168 @@ ARM void PlayerControl::func_ov00_020afb6c() {
     }
 }
 
-bool PlayerControl::func_ov00_020afe88(s32 param1, bool param2) {}
-bool PlayerControl::func_ov00_020afeec(unk32 param1, bool param2) {}
-void PlayerControl::func_ov00_020aff90(Cylinder *param1, unk32 param2) {}
-void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec3p *param4) {}
-void PlayerControl::func_ov00_020b014c() {}
-void PlayerControl::SetAim() {}
-bool PlayerControl::UpdateAimWorld(Vec3p *param1) {}
-s16 PlayerControl::GetTouchAngle() {}
-u32 PlayerControl::func_ov00_020b034c() {}
+ARM bool PlayerControl::func_ov00_020afe88(s32 param1, bool param2) {
+    if (!mUnk_7d || !gPlayerControlData->vfunc_74(param1)) {
+        return false;
+    }
+    if (!param2) {
+        return true;
+    }
+    return param1 == 2 || param1 == 6;
+}
+
+ARM bool PlayerControl::func_ov00_020afeec(unk32 param1, bool param2) {
+    if (!mUnk_7d) {
+        return false;
+    }
+    if (!gPlayerControlData->vfunc_78(param1)) {
+        return false;
+    }
+    switch (param1) {
+        case 1:
+        case 2:
+        case 7:
+        case 13: return true;
+
+        case 10:
+        case 11: return param2;
+
+        default: return !param2;
+    }
+}
+
+ARM void PlayerControl::func_ov00_020aff90(Cylinder *param1, unk32 param2) {
+    if (data_027e0d38->func_ov000_02078b40() == 2) {
+        return;
+    }
+    ItemManager *itemMgr = gItemManager;
+    FairyId fairyId      = itemMgr->GetEquippedFairy();
+    ActorNaviBase *fairy = itemMgr->GetFairy(fairyId);
+    if (fairy == NULL) {
+        return;
+    }
+    fairy->func_ov000_020baca8(param1, param2);
+}
+
+ARM void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec3p *param4) {
+    if (mUnk_44.x != 0 || mUnk_44.z != 0) {
+        Vec3p local_24;
+        Vec3p_Axpy(y, &mUnk_44, &mTouchWorld, &local_24);
+
+        Vec3p local_30;
+        local_30.x = param4->x - local_24.x;
+        local_30.y = 0;
+        local_30.z = param4->z - local_24.z;
+        q20 iVar2  = Vec3p_Length(&local_30);
+        if (iVar2 <= param3) {
+            *param1 = local_24;
+            return;
+        }
+
+        Vec3p local_3c;
+        local_3c.x    = mUnk_44.x;
+        local_3c.y    = 0;
+        local_3c.z    = mUnk_44.z;
+        q20 lengthInv = CoReciprocal(Vec3p_Length(&local_3c));
+        local_3c.x    = MUL_Q20(local_3c.x, lengthInv);
+        local_3c.z    = MUL_Q20(local_3c.z, lengthInv);
+        iVar2         = Vec3p_Dot(&local_30, &local_3c);
+
+        Vec3p local_48;
+        local_48.x = local_3c.x;
+        local_48.y = lengthInv;
+        local_48.z = local_3c.z;
+        Vec3p_Axpy(iVar2 - param3, &local_48, &local_24, param1);
+        return;
+    }
+
+    param1->x = mTouchWorld.x;
+    param1->y = y;
+    param1->z = mTouchWorld.z;
+}
+
+extern u32 data_ov000_020ee198;
+extern u32 data_027e0f64;
+
+ARM void PlayerControl::func_ov00_020b014c(Vec3p *param1) {
+    if ((data_ov000_020ee198 & 1) == 0) {
+        data_ov000_020ee198 |= 1;
+    }
+    if (*(s32 *) (*(s32 *) (data_027e0f64 + 0x4) + 0x15c) == 0x16) {
+        return;
+    }
+    if (!this->func_ov00_020aeef8()) {
+        return;
+    }
+    if (mTouchDuration > 0) {
+        ItemManager *itemMgr = gItemManager;
+        FairyId fairyId      = itemMgr->GetEquippedFairy();
+        ActorNaviBase *fairy = itemMgr->GetFairy(fairyId);
+        if (fairy != NULL) {
+            Vec3p auStack_1c;
+            this->func_ov00_020affec(&auStack_1c, FLOAT_TO_Q20(0.5), FLOAT_TO_Q20(8.0), param1);
+            fairy->func_ov000_020ba204(&auStack_1c, &mUnk_44, mTouchWorld.y + FLOAT_TO_Q20(4.2));
+        }
+    }
+}
+
+ARM void PlayerControl::ResetAim() {
+    mAim = gVec3p_ZERO;
+}
+
+extern "C" s32 func_ov000_020a5e9c(unk32 param1);
+
+ARM bool PlayerControl::UpdateAimWorld(Vec3p *param1) {
+    Vec3p pos;
+    pos = gPlayerPos;
+
+    s32 iVar2 = func_ov000_020a5e9c(data_027e0d38->mUnk_0c);
+    if (iVar2 == 0x2f && *(s32 *) (*(s32 *) (data_027e0f64 + 0x4) + 0x15c) == 0x31) {
+        return this->func_ov024_02178348(param1);
+    }
+
+    if (this->CheckTouching(1)) {
+        this->func_ov00_020affec(param1, 0, FLOAT_TO_Q20(8.0), &pos);
+        mAimWorld = *param1;
+        return true;
+    }
+    *param1 = mAimWorld;
+    return false;
+}
+
+ARM s16 PlayerControl::GetTouchAngle() {
+    if (mTouchDuration >= 0) {
+        return mTouchAngle;
+    }
+    if (!mUnk_7f) {
+        return 0;
+    }
+    return mUnk_ac;
+}
+
+const q20 data_ov000_020e6144 = FLOAT_TO_Q20(80.0);
+
+ARM u32 PlayerControl::func_ov00_020b034c() {
+    if (mTouchDuration >= 0 && this->func_ov00_020af2d4(1, true)) {
+        q20 uVar5 = func_01ff992c(data_ov000_020e6144);
+        s64 lVar1 = mTouchDist * uVar5;
+        if (mTouchDuration < 4) {
+            lVar1 -= (4 - mTouchDuration) * FLOAT_TO_Q20(1.0);
+        }
+        if (lVar1 < 0) {
+            return 0;
+        }
+        if (lVar1 > FLOAT_TO_Q20(1.0)) {
+            return FLOAT_TO_Q20(1.0);
+        }
+        return lVar1;
+    }
+    if (!mUnk_7f && (data_027e05f8.mUnk_0 & 0xf0) != 0) {
+        return FLOAT_TO_Q20(1.0);
+    }
+    return 0;
+}
+
 s32 PlayerControl::func_ov00_020b0418() {}
 bool PlayerControl::func_ov00_020b049c(Vec3p *param1, bool param2) {}
 bool PlayerControl::func_ov00_020b05e8(Vec3p *param1) {}

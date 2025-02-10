@@ -59,7 +59,7 @@ public:
     /* 94 */ ActorRef mLastFollowRef;
     /* 9c */ Vec2b mUnk_9c;
     /* 9e */ unk8 mUnk_9e[2];
-    /* a0 */ void *mFollowActor;
+    /* a0 */ void *mFollowObject;
     /* a4 */ q20 mFollowDist;
     /* a8 */ u16 mFollowStuckTimer;
     /* aa */ s16 mCutsceneEndTimer;
@@ -98,8 +98,8 @@ public:
     bool func_ov00_020afeec(unk32 param1, bool param2);
     void func_ov00_020aff90(Cylinder *param1, unk32 param2);
     void func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec3p *param4);
-    void func_ov00_020b014c();
-    void SetAim();
+    void func_ov00_020b014c(Vec3p *param1);
+    void ResetAim();
     bool UpdateAimWorld(Vec3p *param1);
     s16 GetTouchAngle();
     u32 func_ov00_020b034c();
@@ -137,6 +137,8 @@ public:
     void Init();
     void func_ov004_0210b1d0();
     static void func_ov004_0210b1f0();
+
+    bool func_ov024_02178348(Vec3p *param1);
 };
 
 extern PlayerControl *gPlayerControl;
