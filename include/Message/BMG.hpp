@@ -1,14 +1,15 @@
 #pragma once
 
+#include "System/SysNew.hpp"
 #include "global.h"
 #include "types.h"
-#include "System/SysNew.hpp"
 
 #define BMG_MAGIC "MESGbmg1"
 #define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
 #define BMG_GET_INF1(pGroups, flags) ((pGroups)->entries[(flags) >> 0x10].func_02037258((flags) & 0xFFFF))
 #define BMG_GET_MSG_OFFSET(pGroups, flags) (BMG_GET_INF1((pGroups), (flags))->offset)
-#define BMG_GET_MSG_ADDR(pGroups, flags) ((u32)(pGroups)->entries[(flags) >> 0x10].pDAT1 + (BMG_GET_MSG_OFFSET((pGroups), (flags)) & ~1))
+#define BMG_GET_MSG_ADDR(pGroups, flags) \
+    ((u32) (pGroups)->entries[(flags) >> 0x10].pDAT1 + (BMG_GET_MSG_OFFSET((pGroups), (flags)) & ~1))
 
 enum BMGTag {
     /* "INF1" */ BMG_TAG_INF1 = BMG_TAG('I', 'N', 'F', '1'),
@@ -96,14 +97,14 @@ struct SectionINF1 {
     /* 0c */ u16 groupId;
     /* 0e */ u8 colorId;
     /* 0f */ u8 mUnk_0F[0x1]; // alignment padding?
-    /* 10 */ EntryINF1* entries;
+    /* 10 */ EntryINF1 *entries;
     /* 14 */
 };
 
 enum InstrType {
     /* 1 */ FLW1_TYPE_SHOW_MSG = 1,
-    /* 2 */ FLW1_TYPE_BRANCH = 2,
-    /* 3 */ FLW1_TYPE_EVENT = 3,
+    /* 2 */ FLW1_TYPE_BRANCH   = 2,
+    /* 3 */ FLW1_TYPE_EVENT    = 3,
     /* 4 */
 };
 
@@ -145,9 +146,9 @@ struct SectionFLW1 {
     /* 04 */ u16 numInstructions;
     /* 08 */ u16 numLabels;
     /* 0c */ u32 mUnk_0c; // always zero?
-    /* 10 */ FLW1Instr* instructions;
-    /* 14 */ s16* flwEntries;
-    /* 18 */ s8* bmgFileIndices;
+    /* 10 */ FLW1Instr *instructions;
+    /* 14 */ s16 *flwEntries;
+    /* 18 */ s8 *bmgFileIndices;
     /* 1c */
 };
 
@@ -162,41 +163,41 @@ struct SectionFLI1 {
     /* 04 */ u16 numEntries;
     /* 08 */ u16 entrySize;
     /* 0c */ u32 mUnk_0c; // always zero?
-    /* 10 */ EntryFLI1* entries;
+    /* 10 */ EntryFLI1 *entries;
     /* 14 */
 };
 
 struct EntryDAT1 {
-    /* 00 */ char* text;
+    /* 00 */ char *text;
     /* 04 */
 };
 
 struct SectionDAT1 {
     /* 00 */ SectionBase base;
-    /* 08 */ EntryDAT1* entries;
+    /* 08 */ EntryDAT1 *entries;
     /* 0c */
 };
 
 struct BMGFileInfo {
-    /* 00 */ BMGHeader* pHeader; // pointer to the file's header
-    /* 04 */ SectionINF1* pINF1; // pointer to the data informations (INF -> informations)
-    /* 08 */ SectionFLW1* pFLW1; // pointer to the message flow data (FLW -> flow)
-    /* 0c */ SectionFLI1* pFLI1; // pointer to the message flow index table (FLI -> flow index table)
-    /* 10 */ SectionDAT1* pDAT1; // pointer to the data (DAT -> data)
-    /* 14 */ BMGHeader* mUnk_14; // same as pHeader (?)
+    /* 00 */ BMGHeader *pHeader; // pointer to the file's header
+    /* 04 */ SectionINF1 *pINF1; // pointer to the data informations (INF -> informations)
+    /* 08 */ SectionFLW1 *pFLW1; // pointer to the message flow data (FLW -> flow)
+    /* 0c */ SectionFLI1 *pFLI1; // pointer to the message flow index table (FLI -> flow index table)
+    /* 10 */ SectionDAT1 *pDAT1; // pointer to the data (DAT -> data)
+    /* 14 */ BMGHeader *mUnk_14; // same as pHeader (?)
     /* 18 */ s16 mUnk_18; // stores `func_020372f0`->param_3 value (currently undetermined purpose)
     /* 1a */ s16 groupId; // stores the group id
     /* 1c */
 
     void func_020371b4();
-    u16 func_020371c8(u32* pFile, s16 unk_18);
-    EntryINF1* func_02037258(u16 param_2);
+    u16 func_020371c8(u32 *pFile, s16 unk_18);
+    EntryINF1 *func_02037258(u16 param_2);
     u16 func_0203728c(unk32 param_2);
 };
 
 class BMGGroups : public SysObject {
 public:
-    /* 00 */ BMGFileInfo* entries; // accessed with `groupId`
+    /* 00 */ BMGFileInfo *entries; // accessed with `groupId`
     /* 04 */ s32 numEntries;
     /* 08 */
 

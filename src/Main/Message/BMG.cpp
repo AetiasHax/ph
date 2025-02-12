@@ -3,15 +3,15 @@ extern "C" {
 }
 #include "Message/BMG.hpp"
 
-char* func_0202ab38(u32* lang);
-u32* func_0202d550(int, u32*, char* path, int, int, int);
-void func_0202d590(BMGHeader*);
+char *func_0202ab38(u32 *lang);
+u32 *func_0202d550(int, u32 *, char *path, int, int, int);
+void func_0202d590(BMGHeader *);
 
 extern u32 *data_027e0ce0[];
 extern u32 data_027e05f4; // language
-extern u32* data_ov002_0210016c;
+extern u32 *data_ov002_0210016c;
 
-static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
+static char *sBMGFileNames[BMG_FILE_INDEX_MAX] = {
     "system",       // BMG_FILE_INDEX_SYSTEM
     "regular",      // BMG_FILE_INDEX_REGULAR
     "battle",       // BMG_FILE_INDEX_BATTLE
@@ -50,26 +50,26 @@ static char* sBMGFileNames[BMG_FILE_INDEX_MAX] = {
 
 THUMB void BMGFileInfo::func_020371b4() {
     this->pHeader = NULL;
-    this->pINF1 = NULL;
-    this->pFLW1 = NULL;
-    this->pFLI1 = NULL;
-    this->pDAT1 = NULL;
+    this->pINF1   = NULL;
+    this->pFLW1   = NULL;
+    this->pFLI1   = NULL;
+    this->pDAT1   = NULL;
     this->mUnk_14 = NULL;
     this->mUnk_18 = 0;
 }
 
 // non-matching (equivalent)
-THUMB u16 BMGFileInfo::func_020371c8(u32* pFile, s16 unk_18) {
-    SectionBase* pSection;
+THUMB u16 BMGFileInfo::func_020371c8(u32 *pFile, s16 unk_18) {
+    SectionBase *pSection;
     u16 groupId;
     u32 i;
-    BMGHeader* pHeader = (BMGHeader*)pFile;
+    BMGHeader *pHeader = (BMGHeader *) pFile;
 
-    groupId = -1;
+    groupId       = -1;
     this->mUnk_14 = pHeader;
     this->mUnk_18 = unk_18;
     this->pHeader = pHeader;
-    pSection = (SectionBase*)((u8*)pFile + sizeof(BMGHeader));
+    pSection      = (SectionBase *) ((u8 *) pFile + sizeof(BMGHeader));
 
     for (i = 0; i < this->mUnk_14->numSections; i++) {
         switch (pSection->tag) {
@@ -80,31 +80,27 @@ THUMB u16 BMGFileInfo::func_020371c8(u32* pFile, s16 unk_18) {
                 // unused
                 break;
             case BMG_TAG_INF1:
-                this->pINF1 = (SectionINF1*)pSection;
-                groupId = this->pINF1->groupId;
+                this->pINF1 = (SectionINF1 *) pSection;
+                groupId     = this->pINF1->groupId;
                 break;
             case BMG_TAG_DAT1:
                 //! TODO: fake?
-                this->pDAT1 = (SectionDAT1*)(pSection + 1);
+                this->pDAT1 = (SectionDAT1 *) (pSection + 1);
                 break;
-            case BMG_TAG_FLW1:
-                this->pFLW1 = (SectionFLW1*)pSection;
-                break;
-            case BMG_TAG_FLI1:
-                this->pFLI1 = (SectionFLI1*)pSection;
-                break;
+            case BMG_TAG_FLW1: this->pFLW1 = (SectionFLW1 *) pSection; break;
+            case BMG_TAG_FLI1: this->pFLI1 = (SectionFLI1 *) pSection; break;
         }
 
-        pSection = (SectionBase*)((u8*)pSection + pSection->size);
+        pSection = (SectionBase *) ((u8 *) pSection + pSection->size);
     }
 
     return groupId;
 }
 
-ARM EntryINF1* BMGFileInfo::func_02037258(u16 param_2) {
+ARM EntryINF1 *BMGFileInfo::func_02037258(u16 param_2) {
     if (this->pINF1 != NULL) {
         if (param_2 < this->pINF1->numEntries) {
-            return (EntryINF1*)((u32)&this->pINF1->entries + this->pINF1->entrySize * param_2);
+            return (EntryINF1 *) ((u32) & this->pINF1->entries + this->pINF1->entrySize * param_2);
         }
 
         return NULL;
@@ -115,8 +111,8 @@ ARM EntryINF1* BMGFileInfo::func_02037258(u16 param_2) {
 
 // non-matching
 ARM u16 BMGFileInfo::func_0203728c(unk32 param_2) {
-    SectionFLI1* pFLI1;
-    EntryFLI1* entry;
+    SectionFLI1 *pFLI1;
+    EntryFLI1 *entry;
     u32 i;
     u16 j;
 
@@ -151,7 +147,7 @@ ARM u16 BMGFileInfo::func_0203728c(unk32 param_2) {
 THUMB void BMGGroups::func_020372f0(BMGFileIndex eIndex, s16 unk_18) {
     char bmgPath[64];
     BMGFileInfo bmgFile;
-    u32* pFile;
+    u32 *pFile;
     u16 groupId;
 
     // path to the bmg file for the current language (i.e.: "English/Message/battle.bmg")
@@ -180,8 +176,8 @@ THUMB void BMGGroups::func_020372f0(BMGFileIndex eIndex, s16 unk_18) {
     bmgFile.func_020371b4();
 
     // assign sections and set the file info in the groups entries
-    groupId = bmgFile.func_020371c8(pFile, unk_18);
-    this->entries[groupId] = bmgFile;
+    groupId                        = bmgFile.func_020371c8(pFile, unk_18);
+    this->entries[groupId]         = bmgFile;
     this->entries[groupId].groupId = groupId;
 }
 

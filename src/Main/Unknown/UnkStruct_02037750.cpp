@@ -1,13 +1,13 @@
 #include "Unknown/UnkStruct_02037750.hpp"
-#include "Message/MessageManager.hpp"
-#include "System/Random.hpp"
-#include "Save/AdventureFlags.hpp"
 #include "Actor/ActorManager.hpp"
 #include "Item/ItemManager.hpp"
+#include "Message/MessageManager.hpp"
+#include "Save/AdventureFlags.hpp"
+#include "System/Random.hpp"
 
-extern "C" ARM unk32 func_02037628(u8*);
-extern u8* data_027e0d54;
-extern unk32* data_027e0cb4;
+extern "C" ARM unk32 func_02037628(u8 *);
+extern u8 *data_027e0d54;
+extern unk32 *data_027e0cb4;
 
 ARM UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
     s32 i;
@@ -34,7 +34,7 @@ ARM void UnkStruct_02037750::vfunc_08(u32 param1) {
     this->mUnk_1c = 0;
 }
 
-ARM void UnkStruct_02037750::vfunc_0c(UnkStruct_020397f8* param1) {}
+ARM void UnkStruct_02037750::vfunc_0c(UnkStruct_020397f8 *param1) {}
 ARM void UnkStruct_02037750::vfunc_10() {}
 
 ARM bool UnkStruct_02037750::vfunc_24(unk32 param1) {
@@ -58,13 +58,13 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
     u32 uVar10;
     u32 uVar11;
     bool bVar12;
-    
+
     pRVar3 = gRandom;
-    uVar7 = (u32)*(u16 *)(param1 + 0x2);
+    uVar7  = (u32) * (u16 *) (param1 + 0x2);
 
     if (uVar7 >= 0xF && uVar7 <= 0x2E) {
         pcVar8 = this->mUnk_04[((uVar7 - 0xF) << 0x1E) >> 0x1C];
-        iVar9 = 0;
+        iVar9  = 0;
 
         if (pcVar8 != NULL) {
             iVar9 = pcVar8(this->mUnk_14);
@@ -73,11 +73,10 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
         return iVar9;
     }
 
-    if ((s32)uVar7 <= 0) {
-        switch(uVar7) {
+    if ((s32) uVar7 <= 0) {
+        switch (uVar7) {
             case 0x0:
-            case 0x2f:
-                break;
+            case 0x2f: break;
             case 0x7:
                 if (data_027e0d54[0xd] != 0) {
                     return -0x1;
@@ -87,7 +86,7 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
             case 0x1:
             case 0x2:
             case 0x3:
-                UnkStruct_020397f8* ret_3 = data_027e0c68.func_020366c4();
+                UnkStruct_020397f8 *ret_3 = data_027e0c68.func_020366c4();
 
                 if (0x0 < ret_3->mUnk_15c) {
                     return -0x1;
@@ -102,7 +101,7 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
                 if (uVar7 == 0x0) {
                     uVar10 = 0x0;
                 } else {
-                    lVar2 = gRandom->mRandomValue * gRandom->mFactor;
+                    lVar2  = gRandom->mRandomValue * gRandom->mFactor;
                     uVar10 = gRandom->Next(lVar2);
                     // uVar10 = *(int *)((int)&gRandom->mAddend + 0x4) +
                     //         *(int *)((int)&gRandom->mFactor + 0x4) *
@@ -120,30 +119,24 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
                 }
 
                 return uVar10;
-            case 0x4:
-                return gAdventureFlags->Get(param1 + 0x4) != false;
-            case 0x5:
-                return gActorManager->func_ov00_020c3b2c(NULL) != 0;
-            case 0x6:
-                break;
-            case 0x8:
-                return (((data_027e0cb4[(param1 + 0x4) >> 5]) & 1) << ((param1 + 0x4) & 0x1f)) == 0x0;
-            case 0x9:
-                break;
-            case 0xa:
-                break;
+            case 0x4: return gAdventureFlags->Get(param1 + 0x4) != false;
+            case 0x5: return gActorManager->func_ov00_020c3b2c(NULL) != 0;
+            case 0x6: break;
+            case 0x8: return (((data_027e0cb4[(param1 + 0x4) >> 5]) & 1) << ((param1 + 0x4) & 0x1f)) == 0x0;
+            case 0x9: break;
+            case 0xa: break;
             case 0xb:
-                lVar2 = gRandom->mRandomValue * gRandom->mFactor;
-                uVar7 = lVar2;
+                lVar2  = gRandom->mRandomValue * gRandom->mFactor;
+                uVar7  = lVar2;
                 uVar10 = gRandom->Next(uVar7);
 
-                return (int)(uVar10 * 0x64 >> 0x20) < (param1 + 0x4);
+                return (int) (uVar10 * 0x64 >> 0x20) < (param1 + 0x4);
             case 0xc:
                 uVar7 = (param1 + 0x1);
                 if (uVar7 == 0x0) {
                     uVar10 = 0x0;
                 } else {
-                    lVar2 = gRandom->mRandomValue * gRandom->mFactor;
+                    lVar2  = gRandom->mRandomValue * gRandom->mFactor;
                     uVar11 = lVar2;
                     uVar10 = gRandom->Next(uVar11);
 
@@ -151,11 +144,9 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
                         uVar10 = (uVar7 * uVar10 >> 0x20);
                     }
                 }
-                return (int)(char)uVar10;
-            case 0xd:
-                return gItemManager->GetNumRupees() != 0;
-            case 0xe:
-                return gItemManager->HasItem(param1 + 0x4) != 0;
+                return (int) (char) uVar10;
+            case 0xd: return gItemManager->GetNumRupees() != 0;
+            case 0xe: return gItemManager->HasItem(param1 + 0x4) != 0;
             default:
                 if (uVar7 == 0x2f) {
                     return gItemManager->HasItem((param1 + 0x4) + 0x60) != 0;
@@ -168,7 +159,7 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
     if (uVar7 == 0x0) {
         uVar10 = 0x0;
     } else {
-        lVar2 = gRandom->mRandomValue * gRandom->mFactor;
+        lVar2  = gRandom->mRandomValue * gRandom->mFactor;
         uVar11 = lVar2;
         uVar10 = gRandom->Next(uVar11);
 
@@ -177,26 +168,25 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
         }
     }
 
-    return (int)(char)uVar10;
+    return (int) (char) uVar10;
 }
 
 ARM unk32 UnkStruct_02037750::vfunc_2c(s32 param1) {}
 
 ARM LinkStateInteract *UnkStruct_02037750::GetLinkStateInteract() {
-    return (LinkStateInteract*)GetLinkState(2);
+    return (LinkStateInteract *) GetLinkState(2);
 }
 
 ARM bool UnkStruct_02037750::vfunc_30() {
     return true;
 }
 
-ARM unk32 UnkStruct_02037750::func_020385d0(s32 param1, u8* param2) {}
+ARM unk32 UnkStruct_02037750::func_020385d0(s32 param1, u8 *param2) {}
 
-ARM void UnkStruct_02037750::vfunc_14() {
-}
+ARM void UnkStruct_02037750::vfunc_14() {}
 
 // non-matching
-ARM void UnkStruct_02037750::vfunc_18(unk32* param1) {
+ARM void UnkStruct_02037750::vfunc_18(unk32 *param1) {
     param1[0] = 0;
 }
 
@@ -233,5 +223,4 @@ ARM bool UnkStruct_020386d8::vfunc_30() {
     return data_027e0c68.func_020366c4()->mUnk_15c <= 0;
 }
 
-ARM UnkStruct_020386d8::~UnkStruct_020386d8() {
-}
+ARM UnkStruct_020386d8::~UnkStruct_020386d8() {}

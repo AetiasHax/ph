@@ -23,10 +23,10 @@ public:
 
     /* 00 */ virtual ~UnkStruct_02037750();
     /* 08 */ virtual void vfunc_08(u32 param1);
-    /* 0c */ virtual void vfunc_0c(class UnkStruct_020397f8* param1);
+    /* 0c */ virtual void vfunc_0c(class UnkStruct_020397f8 *param1);
     /* 10 */ virtual void vfunc_10();
     /* 14 */ virtual void vfunc_14();
-    /* 18 */ virtual void vfunc_18(unk32* param1);
+    /* 18 */ virtual void vfunc_18(unk32 *param1);
     /* 1c */ virtual bool vfunc_1c();
     /* 20 */ virtual void vfunc_20();
     /* 24 */ virtual bool vfunc_24(unk32 param1);
@@ -48,7 +48,7 @@ public:
     /* 00 */ u8 mUnk_03;
     /* 04 */
 
-    void func_020376c0(const Vec3p* param_2);
+    void func_020376c0(const Vec3p *param_2);
 };
 
 // astruct_15

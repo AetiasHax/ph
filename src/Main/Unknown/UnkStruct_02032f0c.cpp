@@ -1,9 +1,9 @@
 #include "Unknown/UnkStruct_02032f0c.hpp"
 #include "Unknown/UnkStruct_02035064.hpp"
 
-extern "C" void Fill32(unk32, void*, unk32);
-extern "C" void Fill16(unk32, void*, unk32);
-extern "C" void func_020296e0(unk32**, UnkStruct_MsgProc_Base_unk_2C**, unk32, unk32, unk32, unk32);
+extern "C" void Fill32(unk32, void *, unk32);
+extern "C" void Fill16(unk32, void *, unk32);
+extern "C" void func_020296e0(unk32 **, UnkStruct_MsgProc_Base_unk_2C **, unk32, unk32, unk32, unk32);
 extern THUMB unk32 func_0202ab48(void);
 
 ARM UnkStruct_02032e7c::UnkStruct_02032e7c() {
@@ -42,8 +42,7 @@ THUMB UnkStruct_02032f0c::UnkStruct_02032f0c() {
     this->mUnk_34 = 3;
 }
 
-THUMB UnkStruct_02032f0c::~UnkStruct_02032f0c() {
-}
+THUMB UnkStruct_02032f0c::~UnkStruct_02032f0c() {}
 
 ARM void UnkStruct_02032f0c::func_02032f94() {}
 
@@ -64,9 +63,9 @@ ARM s32 UnkStruct_02032f0c::func_02032fb4() {
 ARM bool UnkStruct_02032f0c::vfunc_14(s32 param1, s32 param2) {
     s16 iVar1;
     s16 iVar2;
-    
-    iVar1 = ((param1 + 0x7 + ((param1 + 0x7) >> 0x1D)) ) * 0x8;
-    iVar2 = ((param2 + 0x7 + ((param2 + 0x7) >> 0x1D)) ) * 0x8;
+
+    iVar1         = ((param1 + 0x7 + ((param1 + 0x7) >> 0x1D))) * 0x8;
+    iVar2         = ((param2 + 0x7 + ((param2 + 0x7) >> 0x1D))) * 0x8;
     this->mUnk_4a = param1;
     this->mUnk_4c = param2;
     this->mUnk_14 = (iVar1 + (iVar1 >> 0x1D)) * 0x2000 >> 0x10;
@@ -107,5 +106,4 @@ ARM bool UnkStruct_02032f0c::func_02033c6c() {}
 ARM unk32 UnkStruct_02032f0c::func_02033c88(u32 param1) {}
 ARM s32 UnkStruct_02032f0c::func_02033cbc(s16 *param1) {}
 
-ARM UnkStruct_02032e7c::~UnkStruct_02032e7c() {
-}
+ARM UnkStruct_02032e7c::~UnkStruct_02032e7c() {}

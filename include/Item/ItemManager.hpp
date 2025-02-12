@@ -9,13 +9,13 @@ extern "C" {
 #include "types.h"
 
 #include "Actor/Navi/ActorNavi.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipItem.hpp"
 #include "Render/ModelRender.hpp"
 #include "Save/SaveItemManager.hpp"
 #include "Sound/Sfx.hpp"
 #include "System/SysNew.hpp"
-#include "DTCM/UnkStruct_027e0d38.hpp"
 
 #define MAX_HOURGLASS_SECONDS 1500 // 25 minutes
 #define MAX_AMMO_UPGRADE 2

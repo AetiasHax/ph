@@ -1,7 +1,7 @@
 #pragma once
 
-#include "global.h"
 #include "System/SysNew.hpp"
+#include "global.h"
 
 class UnkClass_func_ov000_020d0644 {
 public:

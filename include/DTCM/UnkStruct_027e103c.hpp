@@ -82,7 +82,7 @@ struct UnkStruct_027e103c {
     void func_ov000_020cfae8(s32 param1, s32 param2);
 
     //! TODO: find out if the type is always `UnkStruct_020397f8*`
-    void func_ov000_020cfb20(void*);
+    void func_ov000_020cfb20(void *);
 
     void func_ov000_020cfb38();
     void func_ov000_020cfb48();

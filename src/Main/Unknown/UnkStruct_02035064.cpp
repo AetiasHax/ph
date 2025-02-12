@@ -11,11 +11,9 @@ ARM UnkStruct_02035064::UnkStruct_02035064() {
     this->mUnk_87 = 0;
 }
 
-ARM UnkStruct_02035064::~UnkStruct_02035064() {
-}
+ARM UnkStruct_02035064::~UnkStruct_02035064() {}
 
-ARM void UnkStruct_02035064::func_020350b0() {
-}
+ARM void UnkStruct_02035064::func_020350b0() {}
 
 ARM void UnkStruct_02035064::func_020350b4(s32 param1, unk32 param2, unk8 param3, unk16 param4, unk16 param5) {}
 

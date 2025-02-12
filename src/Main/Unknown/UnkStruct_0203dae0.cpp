@@ -2,17 +2,17 @@
 #include "System/SysNew.hpp"
 
 extern u32 *data_027e0ce0[];
-extern "C" void Fill256(unk32, unk16*, unk32, unk32);
-extern "C" void func_0203fc78(u8, unk32*, unk32*);
+extern "C" void Fill256(unk32, unk16 *, unk32, unk32);
+extern "C" void func_0203fc78(u8, unk32 *, unk32 *);
 extern "C" u16 func_0203d318(unk32, unk32);
-extern "C" void func_020298b8(unk32*, unk32, unk32, unk32, unk32);
-extern "C" void func_02029830(unk32*, unk32, unk32, unk32, unk32);
+extern "C" void func_020298b8(unk32 *, unk32, unk32, unk32, unk32);
+extern "C" void func_02029830(unk32 *, unk32, unk32, unk32, unk32);
 extern "C" unk32 func_0203d400(u8);
 extern "C" void func_02035440(u8);
 
 class UnkStruct_02075dac {
 public:
-    unk32 func_0203f9b8(void*);
+    unk32 func_0203f9b8(void *);
 };
 extern UnkStruct_02075dac data_02075dac;
 
@@ -71,7 +71,7 @@ ARM bool UnkStruct_0203dae0::vfunc_14(s32 param1, s32 param2) {
     unk32 local_c;
     unk32 local_10;
 
-    local_c = param1;
+    local_c  = param1;
     local_10 = param2;
 
     func_0203fc78(this->func_02032fa4(), &local_c, &local_10);
@@ -82,8 +82,8 @@ ARM bool UnkStruct_0203dae0::vfunc_14(s32 param1, s32 param2) {
 
 // non-matching
 ARM void UnkStruct_0203dae0::func_0203dcfc(u8 param1, unk32 param2, unk32 param3, s32 param4) {
-    unk32* uVar5;
-    
+    unk32 *uVar5;
+
     this->mUnk_50 = param1;
     this->vfunc_14(this->mUnk_4a, this->mUnk_4c);
     this->mUnk_11c = func_0203d318(this->mUnk_10[0x1], this->mUnk_10[0x2]);
@@ -106,13 +106,13 @@ ARM void UnkStruct_0203dae0::func_0203dcfc(u8 param1, unk32 param2, unk32 param3
     this->func_0203de58(param2);
 }
 
-ARM unk32* UnkStruct_0203dae0::func_0203ddec() {
+ARM unk32 *UnkStruct_0203dae0::func_0203ddec() {
     return this->mUnk_114->func_0203d1b4();
 }
 
 ARM void UnkStruct_0203dae0::func_0203ddfc() {
     this->mUnk_114->mUnk_04 = 0;
-    this->mUnk_11c = 0;
+    this->mUnk_11c          = 0;
 }
 
 ARM void UnkStruct_0203dae0::func_0203de14() {
@@ -141,7 +141,7 @@ ARM void UnkStruct_0203dae0::vfunc_10(u32 param1, unk32 param2) {
 ARM void UnkStruct_0203dae0::vfunc_30() {
     unk32 iVar2;
 
-    iVar2 = this->mUnk_118;
+    iVar2          = this->mUnk_118;
     this->mUnk_118 = data_02075dac.func_0203f9b8(this);
 
     if (this->mUnk_118 == iVar2) {
@@ -171,7 +171,7 @@ ARM bool UnkStruct_0203dae0::func_0203e1b0(unk32 param1, unk32 param2, s32 param
 
 ARM unk32 UnkStruct_0203dae0::vfunc_18(s32 param1) {
     unk32 iVar1;
-    
+
     iVar1 = this->UnkStruct_02032f0c::vfunc_18(param1);
 
     if (iVar1 != 0) {
