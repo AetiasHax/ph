@@ -30,14 +30,14 @@ struct UnkStruct_02063220_08 {
 
 class UnkStruct_02063220 {
 public:
-    /* 00 */ char* path;
+    /* 00 */ char *path;
     /* 04 */ u8 mUnk_04;
     /* 05 */ u8 mUnk_05;
     /* 06 */ unk16 mUnk_06;
     /* 08 */ UnkStruct_02063220_08 mUnk_08;
 
-    void DisplayAssertError(char* file, u16 line, char* msg, ...);
-    void DisplayException(Registers* param1);
+    void DisplayAssertError(char *file, u16 line, char *msg, ...);
+    void DisplayException(Registers *param1);
     static bool func_0202f3f0(unk32 param1);
     static unk32 func_0202f400(unk32 param1);
     void func_0202f4b4(void);

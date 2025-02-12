@@ -7,4 +7,4 @@ struct UnkStruct_027e02a0 {
     unk32 mUnk_94[23];
 };
 
-extern UnkStruct_027e02a0* data_027e02a0;
+extern UnkStruct_027e02a0 *data_027e02a0;

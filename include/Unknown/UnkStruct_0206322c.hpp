@@ -27,7 +27,7 @@ public:
     void func_02030354(bool doTopScreen, bool doBottomScreen);
 
     // ctor?
-    void* func_02030408(void);
+    void *func_02030408(void);
 
     // copy the screen data to VRAM
     void func_02030464(bool doTopScreen, bool doBottomScreen);

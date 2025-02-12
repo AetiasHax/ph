@@ -1,76 +1,62 @@
-#include <string.h>
-#include <stdarg.h>
-#include "nds/math.h"
-#include "nds/button.h"
-#include "System/OverlayManager.hpp"
+#include "Unknown/UnkStruct_02063220.hpp"
 #include "DTCM/UnkStruct_027e02a0.hpp"
 #include "DTCM/UnkStruct_027e05f8.hpp"
 #include "DTCM/UnkStruct_027e0618.hpp"
 #include "DTCM/UnkStruct_027e08f8.hpp"
-#include "Unknown/UnkStruct_02063220.hpp"
-#include "Unknown/UnkStruct_020ee734.hpp"
+#include "System/OverlayManager.hpp"
 #include "Unknown/UnkStruct_0206322c.hpp"
+#include "Unknown/UnkStruct_020ee734.hpp"
+#include "nds/button.h"
+#include "nds/math.h"
+#include <stdarg.h>
+#include <string.h>
 
-void DisplayDebugText(unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char*, unk32);
-void DisplayDebugTextFormat(unk32 param1, unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char* fmt, va_list args);
-void DisplayDebugTextFormat_thunk(unk32 param1, unk32 param2, unk32 param3, unk32 param4, unk32 param5, char* fmt, ...);
-void DisplayDebugTextF(unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char* fmt, ...);
+void DisplayDebugText(unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char *, unk32);
+void DisplayDebugTextFormat(unk32 param1, unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char *fmt, va_list args);
+void DisplayDebugTextFormat_thunk(unk32 param1, unk32 param2, unk32 param3, unk32 param4, unk32 param5, char *fmt, ...);
+void DisplayDebugTextF(unk32 x, unk32 y, unk32 unkVal1, unk32 unkVal2, char *fmt, ...);
 extern u8 data_02075ebc;
 
 extern "C" {
-    void func_0200f248();
-    void func_0202bac4();
-    void func_0202c5e8(void);
-    void func_0202cf34(unk32);
-    void func_0202d164();
-    void func_0202e6a4(void);
-    void func_0203e8a0(void);
-    void func_0202f374();
+void func_0200f248();
+void func_0202bac4();
+void func_0202c5e8(void);
+void func_0202cf34(unk32);
+void func_0202d164();
+void func_0202e6a4(void);
+void func_0203e8a0(void);
+void func_0202f374();
 
     // probably GX/GXS functions?
-    void func_02003ce4(unk32);
-    void func_02004730(unk32);
-    void func_02003a9c(unk32, unk32, unk32);
-    void func_02003b04(unk32);
-    void SetBrightColor(u16*, unk32);
+void func_02003ce4(unk32);
+void func_02004730(unk32);
+void func_02003a9c(unk32, unk32, unk32);
+void func_02003b04(unk32);
+void SetBrightColor(u16 *, unk32);
 }
 
-#define ITCM_END ((s8*)0x01FFFFFF)
-#define ARM9_RAM_START ((s8*)0x02000000)
-#define ARM9_RAM_END ((s8*)0x0219B1C0)
+#define ITCM_END ((s8 *) 0x01FFFFFF)
+#define ARM9_RAM_START ((s8 *) 0x02000000)
+#define ARM9_RAM_END ((s8 *) 0x0219B1C0)
 
-#define REG_A_DISPCNT (*(u32*)0x04000000)
-#define REG_A_2D_ENGINE (*(u16*)0x04000008)
-#define REG_A_MASTER_BRIGHT ((u16*)0x0400006C)
+#define REG_A_DISPCNT (*(u32 *) 0x04000000)
+#define REG_A_2D_ENGINE (*(u16 *) 0x04000008)
+#define REG_A_MASTER_BRIGHT ((u16 *) 0x0400006C)
 #define REG_B_DISPCNT_ADDR (0x04001000)
-#define REG_B_DISPCNT (*(u32*)REG_B_DISPCNT_ADDR)
-#define REG_B_2D_ENGINE (*(u16*)0x04001008)
-#define REG_B_MASTER_BRIGHT ((u16*)0x0400106C)
+#define REG_B_DISPCNT (*(u32 *) REG_B_DISPCNT_ADDR)
+#define REG_B_2D_ENGINE (*(u16 *) 0x04001008)
+#define REG_B_MASTER_BRIGHT ((u16 *) 0x0400106C)
 
 u16 data_020562e2[] = {
-    BTN_DUP,
-    BTN_DDOWN,
-    BTN_DDOWN,
-    BTN_DUP,
-    BTN_SELECT,
-    BTN_B,
-    BTN_R,
-    BTN_START,
-    BTN_DLEFT,
-    BTN_DLEFT,
-    BTN_DRIGHT,
-    BTN_DLEFT,
-    BTN_START,
-    BTN_DUP,
+    BTN_DUP,   BTN_DDOWN, BTN_DDOWN, BTN_DUP,    BTN_SELECT, BTN_B,     BTN_R,
+    BTN_START, BTN_DLEFT, BTN_DLEFT, BTN_DRIGHT, BTN_DLEFT,  BTN_START, BTN_DUP,
 };
 
 THUMB bool UnkStruct_02063220::func_0202f3f0(unk32 param1) {
     switch (param1) {
         case 2:
-        case 3:
-            return true;
-        default:
-            break;
+        case 3: return true;
+        default: break;
     }
 
     return false;
@@ -80,20 +66,15 @@ THUMB unk32 UnkStruct_02063220::func_0202f400(unk32 param1) {
     unk32 ret = 0;
 
     switch (param1) {
-        case 2:
-            ret = 1;
-            break;
-        case 3:
-            ret = 2;
-            break;
-        default:
-            break;
+        case 2: ret = 1; break;
+        case 3: ret = 2; break;
+        default: break;
     }
 
     return ret;
 }
 
-THUMB void UnkStruct_02063220::DisplayAssertError(char* file, u16 line, char* msg, ...) {
+THUMB void UnkStruct_02063220::DisplayAssertError(char *file, u16 line, char *msg, ...) {
     va_list args;
 
     data_0206322c.func_020304a8(true, true);
@@ -126,13 +107,13 @@ THUMB void UnkStruct_02063220::func_0202f500(void) {
 }
 
 // non-matching
-THUMB void UnkStruct_02063220::DisplayException(Registers* param1) {
+THUMB void UnkStruct_02063220::DisplayException(Registers *param1) {
     int iVar1;
     s8 *pbVar2;
     int iVar3;
     s32 *puVar4;
     int *piVar5;
-    
+
     if (this->mUnk_05 != 0) {
         this->func_0202f500();
     } else {
@@ -195,7 +176,7 @@ THUMB void UnkStruct_02063220::DisplayException(Registers* param1) {
         iVar3 = 1;
 
         for (iVar3 = 1; puVar4 < data_027e02a0[1].mUnk_94; puVar4++) {
-            pbVar2 = (s8*)puVar4;
+            pbVar2 = (s8 *) puVar4;
 
             if ((ITCM_END < pbVar2 && pbVar2 < ARM9_RAM_END) || pbVar2 < ARM9_RAM_START) {
                 DisplayDebugTextFormat_thunk(1, 23, iVar3, 0, 0, "%08X", pbVar2);
@@ -218,7 +199,7 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
     u16 uVar4;
     bool bVar5;
     bool bVar6;
-    
+
     func_0202c5e8();
     this->mUnk_04 = 0;
     this->mUnk_05 = 0;
@@ -231,8 +212,8 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
         func_02003a9c(1, 0, 0);
         func_02003b04(0);
 
-        REG_A_DISPCNT = (REG_A_DISPCNT & 0xFFFFE0FF) | 0x100;
-        REG_B_DISPCNT = (REG_B_DISPCNT & 0xFFFFE0FF) | (REG_B_DISPCNT_ADDR >> 0x12);
+        REG_A_DISPCNT   = (REG_A_DISPCNT & 0xFFFFE0FF) | 0x100;
+        REG_B_DISPCNT   = (REG_B_DISPCNT & 0xFFFFE0FF) | (REG_B_DISPCNT_ADDR >> 0x12);
         REG_A_2D_ENGINE = (REG_A_2D_ENGINE & 0x43) | 0x4;
         REG_B_2D_ENGINE = (REG_B_2D_ENGINE & 0x43) | 0x4;
         data_0206322c.func_02030354(1, 1);
@@ -254,13 +235,13 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
 
             if (bVar5) {
                 bVar6 = false;
-                
+
                 if (((~uVar4 & 0xFFF) & (~uVar1 & 0xFFFF)) != 0 && (uVar1 & 0xFFF) != 0) {
                     this->mUnk_04 = 0;
                 }
             }
         }
-                
+
         this->mUnk_04++;
         if (this->mUnk_04 >= 0xC ? 1 : 0) {
             this->func_0202f3f0(param1);
@@ -288,5 +269,5 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
 
             func_0200f248();
         }
-    } while(true);
+    } while (true);
 }
