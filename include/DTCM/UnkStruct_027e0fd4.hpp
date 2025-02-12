@@ -129,4 +129,4 @@ public:
     bool func_ov000_020b6e70();
 };
 
-extern UnkStruct_027e0fd4* data_027e0fd4;
+extern UnkStruct_027e0fd4 *data_027e0fd4;

@@ -1,18 +1,18 @@
 #include "Actor/Navi/ActorNaviBase.hpp"
 #include "Actor/Navi/ActorNavi.hpp"
-#include "Player/PlayerControl.hpp"
-#include "Player/PlayerBase.hpp"
-#include "Player/LinkStateItem.hpp"
+#include "DTCM/UnkStruct_027e0fd4.hpp"
 #include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
-#include "DTCM/UnkStruct_027e0fd4.hpp"
+#include "Player/LinkStateItem.hpp"
+#include "Player/PlayerBase.hpp"
+#include "Player/PlayerControl.hpp"
 
 extern unk32 data_ov000_020dc7d0;
 extern unk32 data_ov000_020dc7e4;
 extern u32 data_ov000_020e9370[];
-extern "C" void Vec3p_RotateY(u32, Vec3p*);
-extern "C" void func_ov005_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6, int param_7,
-    char param_8, char param_9, char param_10);
+extern "C" void Vec3p_RotateY(u32, Vec3p *);
+extern "C" void func_ov005_02102c2c(u32 *param_1, int param_2, Vec3p *param_3, int param_4, int param_5, u32 param_6,
+                                    int param_7, char param_8, char param_9, char param_10);
 
 ARM bool ActorNavi::func_ov059_0219933c(u32 param1) {}
 ARM void ActorNavi::func_ov059_0219a0ac() {}
@@ -32,7 +32,7 @@ ARM void ActorNavi::func_ov059_0219aa08() {
         VStack_24.x = this->mPos.x;
         VStack_24.y = this->mPos.y + 0x333; // FLOAT_TO_Q20(0.2)?
         VStack_24.z = this->mPos.z;
-        
+
         uVar3 = this->mUnk_340 - 0x4000; // FLOAT_TO_Q20(12.0)?
         Mat3p_InitYRotation(&MStack_48, SIN(uVar3), COS(uVar3));
 
@@ -42,19 +42,18 @@ ARM void ActorNavi::func_ov059_0219aa08() {
         lVar2 = 0x666 * this->mUnk_344;
         uVar4 = lVar2;
 
-        this->mUnk_334.x = ROUND_Q20(uVar4) |
-             ((this->mUnk_344 >> 0x1F) * 0x666 + (lVar2 >> 0x20) + (~0x800 < uVar4)) * 0x100000;
+        this->mUnk_334.x =
+            ROUND_Q20(uVar4) | ((this->mUnk_344 >> 0x1F) * 0x666 + (lVar2 >> 0x20) + (~0x800 < uVar4)) * 0x100000;
 
         Mat3p_MultiplyVec(&this->mUnk_334, &this->mUnk_384, &this->mUnk_334);
         Vec3p_RotateY(uVar3, &this->mUnk_334);
         Vec3p_Add(&this->mUnk_334, &VStack_24, &this->mUnk_334);
         VStack_60.z = this->mUnk_334.z;
         VStack_60.x = this->mUnk_334.x;
-        lVar2 = 0x333 * this->mUnk_344;
-        uVar4 = lVar2;
+        lVar2       = 0x333 * this->mUnk_344;
+        uVar4       = lVar2;
         VStack_60.y = this->mUnk_334.y + 0x800;
-        uVar4 = ROUND_Q20(uVar4) |
-                ((this->mUnk_344 >> 0x1F) * 0x333 + (lVar2 >> 0x20) + (~0x800 < uVar4)) * 0x100000;
+        uVar4       = ROUND_Q20(uVar4) | ((this->mUnk_344 >> 0x1F) * 0x333 + (lVar2 >> 0x20) + (~0x800 < uVar4)) * 0x100000;
         func_ov005_02102c2c(&data_ov000_020e9370[0], 0, &VStack_60, uVar4, uVar4, 0, 0x10, 0, 0, 0);
     }
 }
@@ -161,7 +160,7 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             auStack_80.mUnk_10 = 0;
             auStack_80.mUnk_11 = 0;
             auStack_80.mUnk_12 = 0;
-            local_11c.y = iVar5;
+            local_11c.y        = iVar5;
 
             local_110.x = uVar4;
             local_110.y = iVar5;
@@ -176,7 +175,7 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             local_56 = local_5c;
 
             if (gMapManager->func_01ffbf5c(&auStack_80, &local_110, &local_11c, this->mUnk_08c.size) ? false : true) {
-                this->mPos = local_e4;
+                this->mPos     = local_e4;
                 this->mPrevPos = local_e4;
                 this->mUnk_158 = local_e4;
             } else {
@@ -196,9 +195,9 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             auStack_e0.mUnk_14.y = gPlayerPos.y + FLOAT_TO_Q20(0.5);
             auStack_e0.mUnk_14.z = data_027e0fd4->mUnk_020.pos.z;
 
-            bVar1 = gPlayerControl->UpdateAimWorld(&local_104);
-            bVar7 = false;
-            local_104.y = auStack_e0.mUnk_14.y;
+            bVar1              = gPlayerControl->UpdateAimWorld(&local_104);
+            bVar7              = false;
+            local_104.y        = auStack_e0.mUnk_14.y;
             auStack_80.mUnk_00 = -1;
             auStack_80.mUnk_02 = 0;
             auStack_80.mUnk_04 = 0;
@@ -214,9 +213,9 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             auStack_80.mUnk_10 = 0;
             auStack_80.mUnk_11 = 0;
             auStack_80.mUnk_12 = 0;
-            local_ba = local_bc;
-            local_b8 = local_bc;
-            local_b6 = local_bc;
+            local_ba           = local_bc;
+            local_b8           = local_bc;
+            local_b6           = local_bc;
 
             if (bVar1) {
                 local_128 = auStack_e0.mUnk_14;
@@ -231,14 +230,12 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             }
 
             if (!bVar7) {
-                this->mPos = auStack_e0.mUnk_14;
+                this->mPos     = auStack_e0.mUnk_14;
                 this->mPrevPos = auStack_e0.mUnk_14;
                 this->mUnk_158 = auStack_e0.mUnk_14;
             }
             break;
-        default:
-            this->func_ov000_020b853c();
-            break;
+        default: this->func_ov000_020b853c(); break;
     }
 
     pIVar3 = gItemManager;
@@ -254,14 +251,13 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             pIVar3->func_ov000_020c0c44(&this->mUnk_2f0);
             pIVar3->func_ov000_020c0e5c(&this->mUnk_2f0, 1);
             break;
-        default:
-            break;
+        default: break;
     }
 }
 
 ARM bool ActorNavi::func_ov059_0219af14() {
     int iVar1;
-    
+
     if (this->mUnk_3c0[2] != 0) {
         return false;
     }
@@ -287,25 +283,20 @@ ARM bool ActorNavi::func_ov059_0219af14() {
                 this->mVel.y = this->mUnk_158.y - this->mPos.y;
                 return true;
             }
-        default:
-            break;
+        default: break;
     }
 
     return false;
 }
 
-ARM bool ActorNavi::func_ov059_0219afc4() {   
+ARM bool ActorNavi::func_ov059_0219afc4() {
     this->mUnk_3c0[2] = 0;
     this->func_ov059_0219933c(0);
 
     switch (this->mUnk_130) {
-        case 3:
-            this->mUnk_158.y = gPlayerPos.y + 0x1666;
-            return true;
-        case 4:
-            return true;
-        default:
-            break;
+        case 3: this->mUnk_158.y = gPlayerPos.y + 0x1666; return true;
+        case 4: return true;
+        default: break;
     }
 
     return false;
@@ -313,16 +304,16 @@ ARM bool ActorNavi::func_ov059_0219afc4() {
 
 ARM void ActorNavi::func_ov059_0219b020() {
     if (gItemManager->GetEquippedFairy() != FairyId_Courage) {
-        ItemManager* itemMgr = gItemManager;
+        ItemManager *itemMgr = gItemManager;
 
         this->mPrevPos = this->mUnk_158 = this->mPos = itemMgr->GetFairy(itemMgr->GetEquippedFairy())->mPos;
     } else {
         this->mUnk_158 = this->mPos;
     }
-    
+
     gPlayerControl->mAimWorld = this->mUnk_158;
 
-    this->mHammer = GetEquipHammer();
+    this->mHammer     = GetEquipHammer();
     this->mUnk_3c0[0] = 0x0;
     this->mUnk_3c0[2] = 0x0;
     this->SetActive(3);

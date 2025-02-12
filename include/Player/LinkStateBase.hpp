@@ -88,7 +88,7 @@ public:
     void func_ov00_020a8844(Vec3p *param1, bool param2, bool param3);
     void func_ov00_020a8954(bool param1, unk32 *param2);
     void func_ov00_020a8994();
-    void func_ov00_020a89bc(unk32* param1, unk32 param2);
+    void func_ov00_020a89bc(unk32 *param1, unk32 param2);
     void func_ov00_020a8a08(unk32 param1);
     void func_ov00_020a8a4c(unk32 param1, unk32 param2);
     void func_ov00_020a8a90(unk32 param1);

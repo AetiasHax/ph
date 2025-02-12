@@ -9,9 +9,9 @@
 
 //! TODO: change "state" to "flags"? see `vfunc_2c`
 typedef enum EquipHammerState {
-    /* 0x00000 */ EQUIP_HAMMER_STATE_IDLE = (0 << 16),
+    /* 0x00000 */ EQUIP_HAMMER_STATE_IDLE     = (0 << 16),
     /* 0x10000 */ EQUIP_HAMMER_STATE_CHARGING = (1 << 16),
-    /* 0x20000 */ EQUIP_HAMMER_STATE_CHARGED = (2 << 16),
+    /* 0x20000 */ EQUIP_HAMMER_STATE_CHARGED  = (2 << 16),
 } EquipHammerState;
 
 class EquipHammer : public EquipItem {

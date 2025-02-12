@@ -34,7 +34,7 @@ public:
     /* 288 */ unk8 mUnk_288[0x2];
     /* 28a */ unk16 mUnk_28a;
     /* 28c */ unk8 mUnk_28c[0x8];
-    /* 294 */    
+    /* 294 */
 
     /* 00 */ virtual ~ActorNaviBase() override;
     /* 08 */ virtual bool vfunc_08() override;
