@@ -5,7 +5,7 @@
 
 struct UnkStruct_027e05f8 {
     /* 0 */ u16 mUnk_0;
-    /* 2 */ unk16 mUnk_2;
+    /* 2 */ u16 mUnk_2;
     /* 4 */ unk16 mUnk_4;
     /* 6 */
 

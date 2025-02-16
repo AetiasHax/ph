@@ -6,6 +6,7 @@
 #include "DTCM/UnkStruct_027e0c68.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "DTCM/UnkStruct_027e0e2c.hpp"
+#include "DTCM/UnkStruct_027e0f64.hpp"
 #include "DTCM/UnkStruct_027e0ffc.hpp"
 #include "DTCM/UnkStruct_027e103c.hpp"
 #include "Item/ItemManager.hpp"
@@ -540,13 +541,12 @@ ARM void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec
 }
 
 extern u32 data_ov000_020ee198;
-extern u32 data_027e0f64;
 
 ARM void PlayerControl::func_ov00_020b014c(Vec3p *param1) {
     if ((data_ov000_020ee198 & 1) == 0) {
         data_ov000_020ee198 |= 1;
     }
-    if (*(s32 *) (*(s32 *) (data_027e0f64 + 0x4) + 0x15c) == 0x16) {
+    if (*(s32 *) ((s32) data_027e0f64->mUnk_4 + 0x15c) == 0x16) {
         return;
     }
     if (!this->func_ov00_020aeef8()) {
@@ -598,7 +598,7 @@ ARM s16 PlayerControl::GetTouchAngle() {
     return mUnk_ac;
 }
 
-const q20 data_ov000_020e6144 = FLOAT_TO_Q20(80.0);
+static q20 data_ov000_020e6144 = FLOAT_TO_Q20(80.0);
 
 ARM u32 PlayerControl::func_ov00_020b034c() {
     if (mTouchDuration >= 0 && this->func_ov00_020af2d4(1, true)) {
@@ -621,23 +621,416 @@ ARM u32 PlayerControl::func_ov00_020b034c() {
     return 0;
 }
 
-s32 PlayerControl::func_ov00_020b0418() {}
-bool PlayerControl::func_ov00_020b049c(Vec3p *param1, bool param2) {}
-bool PlayerControl::func_ov00_020b05e8(Vec3p *param1) {}
-bool PlayerControl::func_ov00_020b0778(Vec3p *param1, u32 param2, unk32 param3) {}
-bool PlayerControl::CheckNotTouching() {}
-bool PlayerControl::func_ov00_020b0ad0(Actor *actor) {}
-bool PlayerControl::func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk32 *pCardinal, bool *pFast) {}
-bool PlayerControl::func_ov00_020b0de8(Vec3p *param1) {}
-bool PlayerControl::func_ov00_020b0e54(Vec3p *param1, Vec3p *param2) {}
-bool PlayerControl::func_ov00_020b0f88(Vec3p *param1, unk32 param2, Vec3p *param3) {}
-bool PlayerControl::func_ov00_020b1058(Vec3p *param1, unk32 param2, Vec3p *param3, Vec3p *param4) {}
-bool PlayerControl::IsUntouchedNow() {}
-bool PlayerControl::IsNotUntouchedNow() {}
-bool PlayerControl::func_ov00_020b1248(unk32 *param1) {}
-bool PlayerControl::func_ov00_020b129c() {}
-bool PlayerControl::func_ov00_020b12d0(s16 *pAngle) {}
-bool PlayerControl::IsNotTouching() {}
-bool PlayerControl::IsTouchingFast() {}
-bool PlayerControl::IsTappedNow() {}
-bool PlayerControl::func_ov00_020b13c4() {}
+ARM s32 PlayerControl::func_ov00_020b0418() {}
+
+extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
+ARM bool PlayerControl::func_ov00_020b049c(Vec3p *param1, bool param2) {
+    if (this->CheckUntouchedNow(1) && mTouchDuration >= 0 && mTouchDuration < 21) {
+        this->ApplyTouchWorld(param1, FLOAT_TO_Q20(0.25));
+        Vec3p_Sub(param1, &gPlayerPos, param1);
+        q20 length = Vec3p_Length(param1);
+        if (length >= FLOAT_TO_Q20(1.25)) {
+            return true;
+        }
+        if (param2) {
+            if (length < FLOAT_TO_Q20(0.25)) {
+                *param1 = gVec3p_ZERO;
+                param1->x += MUL_Q20(SIN(gPlayerAngle), FLOAT_TO_Q20(1.25));
+                param1->z += MUL_Q20(COS(gPlayerAngle), FLOAT_TO_Q20(1.25));
+            } else {
+                func_0202d95c(param1, FLOAT_TO_Q20(1.25));
+            }
+            return true;
+        }
+    }
+    return false;
+}
+
+ARM bool PlayerControl::func_ov00_020b05e8(Vec3p *param1) {
+    if (this->CheckUntouchedNow(1) && mTouchDuration >= 0 && mTouchDuration < 21) {
+        Vec3p *playerPos = &gPlayerPos;
+
+        Vec3p VStack_1c;
+        this->ApplyTouchWorld(&VStack_1c, FLOAT_TO_Q20(0.2));
+        VStack_1c.y = gPlayerPos.y;
+
+        q20 distance = Vec3p_Distance(&VStack_1c, playerPos);
+        if (distance > FLOAT_TO_Q20(1.25)) {
+            return false;
+        }
+
+        if (distance < FLOAT_TO_Q20(0.25)) {
+            VStack_1c.y = playerPos->y;
+            VStack_1c.x = playerPos->x + MUL_Q20(SIN(gPlayerAngle), FLOAT_TO_Q20(0.25));
+            VStack_1c.z = playerPos->z + MUL_Q20(COS(gPlayerAngle), FLOAT_TO_Q20(0.25));
+        }
+
+        Vec2b VStack_20;
+        MapManager::func_ov00_02083a1c(&VStack_20, gMapManager, &VStack_1c);
+        VStack_1c.x += (gMapManager->func_ov00_02083c24(VStack_20.x) - VStack_1c.x) / 2;
+        VStack_1c.z += (gMapManager->func_ov00_02083c50(VStack_20.y) - VStack_1c.z) / 2;
+        Vec3p_Sub(&VStack_1c, playerPos, param1);
+        return true;
+    }
+    return false;
+}
+
+extern "C" bool func_01ffe468(unk32 param1, Vec3p *param2, s32 *param3, s32 *param4, bool param5);
+
+ARM bool PlayerControl::func_ov00_020b0778(Vec3p *param1, u32 angle, unk32 *param3) {
+    static const sThreshold = FLOAT_TO_Q20(0.0059);
+
+    *param3        = 0;
+    Vec3p local_2c = *param1;
+
+    s32 unk2X, unk2Y;
+    unk32 uVar2 = data_027e0f64->func_ov000_0208b180();
+    if (!func_01ffe468(uVar2, &local_2c, &unk2X, &unk2Y, false)) {
+        return false;
+    }
+
+    q20 dirX = MUL_Q20(SIN(angle), 2 * sThreshold);
+    q20 dirY = MUL_Q20(COS(angle), 2 * sThreshold);
+
+    q20 x = mTouchX - unk2X;
+    q20 y = mTouchY - unk2Y;
+
+    q20 unk1X, unk1Y;
+    bool bVar1, bVar8, bVar7;
+    if (this->CheckTouchedNow(1)) {
+        unk1X = dirX - sThreshold;
+        if (unk1X <= x) {
+            unk1X = dirX + sThreshold;
+        }
+        if (unk1X == x) {
+            unk1Y = dirY - sThreshold;
+            if (unk1Y <= y) {
+                unk1Y = dirY + sThreshold;
+                if (unk1Y == y) {
+                    *param3 = FLOAT_TO_Q20(1.0);
+                    return true;
+                }
+            }
+        }
+        unk1X = -sThreshold - dirX;
+        if (unk1X <= x) {
+            unk1X = sThreshold - dirX;
+        }
+        if (unk1X == x) {
+            unk1Y = -sThreshold - dirY;
+            if (unk1Y == y) {
+                unk1Y = sThreshold - dirY;
+                if (y == unk1Y) {
+                    *param3 = -FLOAT_TO_Q20(1.0);
+                    return true;
+                }
+            }
+        }
+        if (ABS(dirX) - sThreshold <= x && x <= ABS(dirX) + sThreshold) {
+            if (ABS(dirY) - sThreshold <= y && y <= ABS(dirY) + sThreshold) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    unk1Y = this->CheckTouching(1);
+    if (unk1Y) {
+        bVar1 = dirX < 0;
+        if (dirX < 0) {
+            unk1Y = dirX + sThreshold;
+            bVar1 = x - unk1Y < 0;
+        }
+        if (bVar1 == (dirX < 0 && (x < unk1Y))) {
+            bVar1 = dirX == 0;
+            unk1X = dirX;
+            if (0 < dirX) {
+                unk1Y = dirX - sThreshold;
+                unk1X = x - unk1Y;
+                bVar1 = x == unk1Y;
+            }
+            if (bVar1 || unk1X < 0 != (0 < dirX && (x < unk1Y))) {
+                bVar7 = dirY < 0;
+                bVar1 = bVar7;
+                if (bVar7) {
+                    unk1Y = dirY + sThreshold;
+                    bVar1 = y - unk1Y < 0;
+                }
+                if (bVar1 == (bVar7 && (y < unk1Y))) {
+                    bVar1 = dirY == 0;
+                    unk1X = dirY;
+                    if (0 < dirY) {
+                        unk1Y = dirY - sThreshold;
+                        unk1X = y - unk1Y;
+                        bVar1 = y == unk1Y;
+                    }
+                    if (bVar1 || unk1X < 0 != (0 < dirY && (y < unk1Y))) {
+                        if ((0 < dirX && dirX < sThreshold - x) || (0 > dirX && dirX > -sThreshold - x) ||
+                            (0 < dirY && dirY < sThreshold - y) || (0 > dirY && dirY > -sThreshold - y))
+                        {
+                            *param3 = -FLOAT_TO_Q20(1.0);
+                        }
+                        return true;
+                    }
+                }
+            }
+        }
+        *param3 = FLOAT_TO_Q20(1.0);
+        return true;
+    }
+
+    if (this->CheckUntouchedNow(1)) {
+        unk2X = mTouchPrevX - unk2X;
+        unk2Y = mTouchPrevY - unk2Y;
+        if (sThreshold < ABS(dirX) && ABS(dirX) < ABS(unk2X) + sThreshold) {
+            return false;
+        }
+        if (sThreshold < ABS(dirY) && ABS(dirY) < ABS(unk2Y) + sThreshold) {
+            return false;
+        }
+    }
+    return true;
+}
+
+ARM bool PlayerControl::CheckNotTouching() {
+    return !this->CheckTouching(1);
+}
+
+ARM bool PlayerControl::func_ov00_020b0ad0(Actor *actor) {
+    if (actor != NULL && actor->mRef.id == mLastFollowRef.id) {
+        return mTouchDuration >= 15 && mTouchDuration < 30;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk32 *pCardinal, bool *pFast) {
+    if (mUsingEquipItem && gItemManager->func_ov00_020ad790(1)) {
+        ItemFlag equipId = gItemManager->GetEquippedItem();
+        *pEquipId        = equipId;
+        data_027e103c->func_ov000_020cf330();
+        return *pEquipId != ItemFlag_None;
+    }
+
+    *pEquipId = ItemFlag_OshusSword;
+    if (this->func_ov00_020b1248(pCardinal)) {
+        *pEquipId = ItemFlag_OshusSword;
+        return true;
+    }
+
+    if ((this->CheckUntouchedNow(1) && mTouchDuration >= 0 && mTouchDuration < 21) ||
+        (this->CheckTouchFast(1) && mTouchSlowDuration > 21))
+    {
+        s32 dx = mTouchLastX - mTouchFastX;
+        s32 dy = mTouchLastY - mTouchFastY;
+        Vec3p local_20;
+        local_20.x = INT_TO_Q20(dx);
+        local_20.y = 0;
+        local_20.z = INT_TO_Q20(dy);
+        q20 length = Vec3p_Length(&local_20);
+        if (length < FLOAT_TO_Q20(10.0)) {
+            return false;
+        }
+        if (mUnk_82 && length < FLOAT_TO_Q20(20.0)) {
+            return false;
+        }
+
+        *pEquipId = ItemFlag_OshusSword;
+        *pAngle   = mTouchAngle + ((mTouchFastAngle - mTouchAngle) << 16 >> 16) / 2;
+
+        if (mTouchSpeed > FLOAT_TO_Q20(0.5)) {
+            q20 touchMoveAngle = Atan2(mTouchSpeedX, mTouchSpeedY);
+            if (pFast != NULL) {
+                *pFast = true;
+            }
+            *pCardinal = ((mTouchFastAngle - mTouchAngle) * 0x10000 >> 0x10) ? 2 : 1;
+            return true;
+        }
+
+        s32 unkAngle = Atan2(local_20.x, local_20.z);
+
+        Vec3p VStack_2c;
+        VStack_2c.x = INT_TO_Q20(mTouchFastX);
+        VStack_2c.y = INT_TO_Q20(mTouchFastY);
+        VStack_2c.z = 0;
+
+        Vec3p VStack_38;
+        VStack_38.x = INT_TO_Q20(mTouchLastX);
+        VStack_38.y = INT_TO_Q20(mTouchLastY);
+        VStack_38.z = 0;
+
+        s32 unkAngle2 = (unkAngle - *pAngle) * 0x10000 >> 0x10;
+        Vec3p_Sub(&VStack_38, &VStack_2c, &VStack_38);
+        if (mTouchDist > FLOAT_TO_Q20(10.0)) {
+            if (unkAngle2 >= 0x6000 || unkAngle2 <= -0x6000) {
+                *pCardinal = 0;
+            } else if (unkAngle2 >= 0x2000) {
+                *pCardinal = 1;
+            } else if (unkAngle2 >= -0x2000) {
+                *pCardinal = 3;
+            } else {
+                *pCardinal = 4;
+            }
+            return true;
+        }
+        *pCardinal = 0;
+        *pAngle    = mTouchFastAngle;
+        return true;
+    }
+
+    return false;
+}
+
+ARM bool PlayerControl::func_ov00_020b0de8(Vec3p *param1) {
+    if (!this->CheckTouching(1)) {
+        return false;
+    }
+    q20 z     = (mTouchLastY - 96) * 0xaa00;
+    param1->x = (mTouchLastX - 128) * 0xaa;
+    param1->y = 0;
+    param1->z = z / 6;
+    return true;
+}
+
+ARM bool PlayerControl::func_ov00_020b0e54(Vec3p *param1, Vec3p *param2) {
+    Vec3p local_20;
+    if (mTouchDuration >= 16 && this->func_ov00_020b0de8(&local_20)) {
+        this->ApplyTouchWorld(param1, FLOAT_TO_Q20(0.5));
+        q20 length = Vec3p_Length(&local_20);
+        if (length > FLOAT_TO_Q20(4.0)) {
+            local_20.x = DIV_Q20(local_20.x * 4, length);
+            local_20.z = DIV_Q20(local_20.z * 4, length);
+        }
+        mAim    = local_20;
+        *param2 = local_20;
+        return true;
+    }
+
+    if (mTouchDuration >= 0 && this->func_ov00_020af2d4(1, true)) {
+        if (mTouchDist > FLOAT_TO_Q20(24.0)) {
+            this->ApplyTouchWorld(param1, FLOAT_TO_Q20(0.5));
+        } else {
+            *param1 = gPlayerPos;
+        }
+        return true;
+    }
+
+    return false;
+}
+
+extern "C" bool func_0202b2e8(Vec3p *param1, Vec3p *param2, q20 param3);
+ARM bool PlayerControl::func_ov00_020b0f88(Vec3p *param1, unk32 scale, Vec3p *param3) {
+    Vec3p local_20;
+    if (this->func_ov00_020b0de8(&local_20)) {
+        this->ApplyTouchWorld(param1, scale);
+        q20 length = Vec3p_Length(&local_20);
+        if (length > FLOAT_TO_Q20(4.0)) {
+            local_20.x = DIV_Q20(local_20.x * 4, length);
+            local_20.z = DIV_Q20(local_20.z * 4, length);
+        }
+        q20 touchSpeed = CoSqrt((mTouchDiffX * mTouchDiffX + mTouchDiffY * mTouchDiffY + 4) * 0x10);
+        func_0202b2e8(param3, &local_20, touchSpeed);
+        mAim = local_20;
+        return true;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::func_ov00_020b1058(Vec3p *param1, unk32 param2, Vec3p *param3, Vec3p *param4) {
+    Vec3p local_24;
+    if (this->func_ov00_020b0de8(&local_24)) {
+        this->ApplyTouchWorld(param1, param2);
+        if (param4 != NULL) {
+            Vec3p local_30;
+            Vec3p_Sub(param4, &gPlayerPos, &local_30);
+            local_30.x = MUL_Q20(local_30.x, FLOAT_TO_Q20(0.5));
+            local_30.y = MUL_Q20(local_30.y, FLOAT_TO_Q20(0.5));
+            local_30.z = MUL_Q20(local_30.z, FLOAT_TO_Q20(0.5));
+            func_0202b2e8(&local_30, &local_24, FLOAT_TO_Q20(2.5));
+            local_24 = local_30;
+        }
+        q20 length = Vec3p_Length(&local_24);
+        if (length > FLOAT_TO_Q20(4.0)) {
+            local_24.x = DIV_Q20(local_24.x * 4, length);
+            local_24.z = DIV_Q20(local_24.z * 4, length);
+        }
+        q20 touchSpeed = CoSqrt((mTouchDiffX * mTouchDiffX + mTouchDiffY * mTouchDiffY + 4) * 0x10);
+        func_0202b2e8(param3, &local_24, touchSpeed);
+        mAim = *param3;
+        return true;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::IsUntouchedNow() {
+    return this->CheckUntouchedNow(7) && data_027e103c->mUnk_1c == 0;
+}
+
+ARM bool PlayerControl::IsNotUntouchedNow() {
+    if (!this->CheckUntouchedNow(7)) {
+        return (data_027e05f8.mUnk_2 & 3) != 0;
+    }
+    return true;
+}
+
+ARM bool PlayerControl::func_ov00_020b1248(unk32 *param1) {
+    if (*this->mTouchGesture != NULL && (*this->mTouchGesture)->mUnk_4) {
+        *param1 = (*this->mTouchGesture)->mUnk_08 == 0 ? 5 : 6;
+        (*this->mTouchGesture)->ResetTouchHistory();
+        return true;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::func_ov00_020b129c() {
+    return mTouchDuration < 2 || mTouchDuration > 10 || mTouchDuration != mTimeSinceTouch;
+}
+
+ARM bool PlayerControl::func_ov00_020b12d0(s16 *pAngle) {
+    if (!this->func_ov00_020af2d4(1, true)) {
+        return false;
+    }
+    if (mTouchSlowDuration <= 15 && this->func_ov000_020b7d6c() && mTouchEdge == mTouchLastEdge) {
+        *pAngle = mTouchAngle;
+        return true;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::IsNotTouching() {
+    return !mTouch;
+}
+
+extern u32 data_ov000_020eec9c[];
+extern "C" void func_ov000_020d77e4(u32 *param1, u32 param2);
+ARM bool PlayerControl::IsTouchingFast() {
+    if (this->CheckTouchFast(1)) {
+        func_ov000_020d77e4(data_ov000_020eec9c, 0x17);
+        return true;
+    }
+    return false;
+}
+
+ARM bool PlayerControl::IsTappedNow() {
+    return mTouchDuration < 10 && this->func_ov00_020af2d4(1, true) && this->CheckUntouchedNow(1);
+}
+
+ARM bool PlayerControl::func_ov00_020b13c4() {
+    if (!this->CheckTouching(1)) {
+        return false;
+    }
+    func_01ff992c(data_ov000_020e6144);
+    q20 touchDist = mTouchDist;
+    s32 iVar2     = mTouchDuration;
+    if (mTouchFastTime > 0 && mTouchFastTime < iVar2) {
+        iVar2 = (iVar2 - mTouchFastTime) << 16 >> 16;
+    }
+    if (touchDist >= FLOAT_TO_Q20(80.0)) {
+        return iVar2 >= 2;
+    }
+    if (mTouchDist < FLOAT_TO_Q20(16.0)) {
+        return false;
+    }
+    q20 uVar4 = CoReciprocal(FLOAT_TO_Q20(64.0));
+    q20 unk1  = MUL_Q20(mTouchDist - FLOAT_TO_Q20(16.0), uVar4);
+    return iVar2 >= MUL_Q20(FLOAT_TO_Q20(1.0) - unk1, FLOAT_TO_Q20(0.0058)) + 2;
+}

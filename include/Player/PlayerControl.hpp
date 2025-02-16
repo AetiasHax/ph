@@ -11,7 +11,7 @@
 #include "Player/TouchControl.hpp"
 #include "Player/TouchGesture.hpp"
 
-typedef u16 TouchEdge;
+typedef s16 TouchEdge;
 enum TouchEdge_ {
     TouchEdge_Right  = 0,
     TouchEdge_Left   = 1,
@@ -52,7 +52,7 @@ public:
     /* 7f */ bool mUnk_7f;
     /* 80 */ bool mUnk_80;
     /* 81 */ bool mFollowing;
-    /* 82 */ unk8 mUnk_82;
+    /* 82 */ bool mUnk_82;
     /* 83 */ bool mUnk_83;
     /* 84 */ ActorRef mFollowRef;
     /* 8c */ ActorRef mNextFollowRef;
@@ -106,13 +106,13 @@ public:
     s32 func_ov00_020b0418();
     bool func_ov00_020b049c(Vec3p *param1, bool param2);
     bool func_ov00_020b05e8(Vec3p *param1);
-    bool func_ov00_020b0778(Vec3p *param1, u32 param2, unk32 param3);
+    bool func_ov00_020b0778(Vec3p *param1, u32 param2, unk32 *param3);
     bool CheckNotTouching();
     bool func_ov00_020b0ad0(Actor *actor);
     bool func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk32 *pCardinal, bool *pFast);
     bool func_ov00_020b0de8(Vec3p *param1);
     bool func_ov00_020b0e54(Vec3p *param1, Vec3p *param2);
-    bool func_ov00_020b0f88(Vec3p *param1, unk32 param2, Vec3p *param3);
+    bool func_ov00_020b0f88(Vec3p *param1, unk32 scale, Vec3p *param3);
     bool func_ov00_020b1058(Vec3p *param1, unk32 param2, Vec3p *param3, Vec3p *param4);
     bool IsUntouchedNow();
     bool IsNotUntouchedNow();
