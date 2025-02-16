@@ -6,6 +6,7 @@
 
 typedef u32 OverlayId;
 enum OverlayId_ {
+    OverlayId_None = -1,
     OverlayId_Core,
     OverlayId_01,
     OverlayId_02,
