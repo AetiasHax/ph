@@ -21,7 +21,7 @@ extern UnkStruct_027e0ffc *data_027e0ffc;
 extern u32 data_027e0618[];
 
 // non-matching
-ARM void UnkStruct_027E0C68::func_0203643c(u32 *param_1, UnkStruct_027E0C68 *param_2, u32 param_3) {
+ARM void MessageManager::func_0203643c(u32 *param_1, MessageManager *param_2, u32 param_3) {
     BMGGroups *pBVar2 = param_2->pGroups;
 
     *param_1 = ((u32) pBVar2->entries[param_3 >> 0x10].pDAT1 +
@@ -29,7 +29,7 @@ ARM void UnkStruct_027E0C68::func_0203643c(u32 *param_1, UnkStruct_027E0C68 *par
 }
 
 // non-matching
-THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32 param_4) {
+THUMB void MessageManager::func_02036490(unk32 param_2, unk32 param_3, unk32 param_4) {
     this->mUnk_03 = 0;
     this->mUnk_0c = 0;
 
@@ -103,7 +103,7 @@ THUMB void UnkStruct_027E0C68::func_02036490(unk32 param_2, unk32 param_3, unk32
     }
 }
 
-THUMB void UnkStruct_027E0C68::func_0203665c(void) {
+THUMB void MessageManager::func_0203665c(void) {
     for (s32 i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
         if (this->mUnk_28[i] != NULL) {
             delete this->mUnk_28[i];
@@ -124,7 +124,7 @@ THUMB void UnkStruct_027E0C68::func_0203665c(void) {
 }
 
 // non-matching
-ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_020366c4(void) {
+ARM UnkStruct_020397f8 *MessageManager::func_020366c4(void) {
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) && !(data_02056be4[data_027e077c.mUnk_0] & 2)) {
         return (UnkStruct_020397f8 *) this->mUnk_28[2];
     }
@@ -133,7 +133,7 @@ ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_020366c4(void) {
 }
 
 // non-matching
-ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_02036700(void) {
+ARM UnkStruct_020397f8 *MessageManager::func_02036700(void) {
     if ((data_02056be4[data_027e077c.mUnk_0] & 1) && !(data_02056be4[data_027e077c.mUnk_0] & 2)) {
         return (UnkStruct_020397f8 *) this->mUnk_28[0];
     }
@@ -141,7 +141,7 @@ ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_02036700(void) {
     return (UnkStruct_020397f8 *) this->mUnk_28[2];
 }
 
-ARM UnkStruct_020386d8 *UnkStruct_027E0C68::func_0203673c(void) {
+ARM UnkStruct_020386d8 *MessageManager::func_0203673c(void) {
     bool iVar1 = this->func_02036824();
     bool iVar2 = this->func_02036850();
 
@@ -156,11 +156,11 @@ ARM UnkStruct_020386d8 *UnkStruct_027E0C68::func_0203673c(void) {
     return NULL;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036770(u32 param_2) {
+ARM bool MessageManager::func_02036770(u32 param_2) {
     return (this->mUnk_18[param_2]->mUnk_18 & ~0xFFFF) == (0x100 << 0x10);
 }
 
-ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
+ARM unk32 MessageManager::func_02036798(void) {
     unk32 uVar2 = 1;
 
     if (this->mUnk_04 == 0) {
@@ -178,19 +178,19 @@ ARM unk32 UnkStruct_027E0C68::func_02036798(void) {
     return uVar2;
 }
 
-ARM bool UnkStruct_027E0C68::func_020367dc(int param_2) {
+ARM bool MessageManager::func_020367dc(int param_2) {
     return param_2 == 0;
 }
 
-ARM bool UnkStruct_027E0C68::func_020367ec(void) {
+ARM bool MessageManager::func_020367ec(void) {
     return ((UnkStruct_020397f8 *) this->mUnk_28[0])->mUnk_15c > 0;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036808(void) {
+ARM bool MessageManager::func_02036808(void) {
     return ((UnkStruct_020397f8 *) this->mUnk_28[2])->mUnk_15c > 0;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036824(void) {
+ARM bool MessageManager::func_02036824(void) {
     switch (data_027e077c.mUnk_0) {
         case 0x01:
         case 0x37:
@@ -202,11 +202,11 @@ ARM bool UnkStruct_027E0C68::func_02036824(void) {
 }
 
 // non-matching
-ARM bool UnkStruct_027E0C68::func_02036850(void) {
+ARM bool MessageManager::func_02036850(void) {
     return !(data_02056be4[data_027e077c.mUnk_0] & 2) && (data_02056be4[data_027e077c.mUnk_0] & 1);
 }
 
-ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_020386d8 *param_2) {
+ARM void MessageManager::func_02036888(UnkStruct_020386d8 *param_2) {
     if ((param_2->mUnk_18 & ~0xFFFF) != (0x100 << 0x10)) {
         UnkStruct_020397f8 *iVar1 = this->func_020366c4();
 
@@ -218,7 +218,7 @@ ARM void UnkStruct_027E0C68::func_02036888(UnkStruct_020386d8 *param_2) {
     }
 }
 
-ARM bool UnkStruct_027E0C68::func_020368f4(UnkStruct_02037750 *param_2) {
+ARM bool MessageManager::func_020368f4(UnkStruct_02037750 *param_2) {
     if (this->mUnk_20[1] != NULL) {
         return false;
     }
@@ -228,7 +228,7 @@ ARM bool UnkStruct_027E0C68::func_020368f4(UnkStruct_02037750 *param_2) {
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 param_4) {
+ARM void MessageManager::func_0203690c(unk32 param_2, unk32 param_3, unk32 param_4) {
     UnkStruct_020397f8 *unk_28_0;
     UnkStruct_020397f8 *unk_28_2;
     UnkStruct_02038aa0 *pSVar4;
@@ -323,7 +323,7 @@ ARM void UnkStruct_027E0C68::func_0203690c(unk32 param_2, unk32 param_3, unk32 p
     }
 }
 
-ARM void UnkStruct_027E0C68::func_02036bbc(void) {
+ARM void MessageManager::func_02036bbc(void) {
     UnkStruct_02038aa0 *pSVar3;
     bool bVar2;
     bool bVar4;
@@ -345,7 +345,7 @@ ARM void UnkStruct_027E0C68::func_02036bbc(void) {
     }
 }
 
-ARM void UnkStruct_027E0C68::func_02036c50(unk32 param_2) {
+ARM void MessageManager::func_02036c50(unk32 param_2) {
     s32 i;
 
     for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
@@ -355,7 +355,7 @@ ARM void UnkStruct_027E0C68::func_02036c50(unk32 param_2) {
     }
 }
 
-ARM void UnkStruct_027E0C68::func_02036ca4(unk32 param_2) {
+ARM void MessageManager::func_02036ca4(unk32 param_2) {
     s32 i;
 
     for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
@@ -367,7 +367,7 @@ ARM void UnkStruct_027E0C68::func_02036ca4(unk32 param_2) {
     }
 }
 
-ARM bool UnkStruct_027E0C68::func_02036ce4(UnkStruct_020386d8 *param_2, unk32 param_3) {
+ARM bool MessageManager::func_02036ce4(UnkStruct_020386d8 *param_2, unk32 param_3) {
     u32 uVar1;
 
     if (param_3 == 0) {
@@ -384,7 +384,7 @@ ARM bool UnkStruct_027E0C68::func_02036ce4(UnkStruct_020386d8 *param_2, unk32 pa
     return false;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_02037750 *param_2) {
+ARM bool MessageManager::func_02036d30(UnkStruct_02037750 *param_2) {
     if (this->mUnk_20[0] != NULL && this->mUnk_20[0] != param_2) {
         return false;
     }
@@ -393,7 +393,7 @@ ARM bool UnkStruct_027E0C68::func_02036d30(UnkStruct_02037750 *param_2) {
     return true;
 }
 
-ARM bool UnkStruct_027E0C68::func_02036d4c(UnkStruct_02037750 *param_2) {
+ARM bool MessageManager::func_02036d4c(UnkStruct_02037750 *param_2) {
     if (this->mUnk_20[0] == param_2) {
         this->mUnk_20[0] = NULL;
         return true;
@@ -402,7 +402,7 @@ ARM bool UnkStruct_027E0C68::func_02036d4c(UnkStruct_02037750 *param_2) {
     return false;
 }
 
-ARM void UnkStruct_027E0C68::func_02036d6c(void) {
+ARM void MessageManager::func_02036d6c(void) {
     s32 i;
 
     for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
@@ -413,7 +413,7 @@ ARM void UnkStruct_027E0C68::func_02036d6c(void) {
 }
 
 // non-matching
-ARM UnkStruct_02038aa0 *UnkStruct_027E0C68::func_02036da8(u32 param_2, s16 *param_3) {
+ARM UnkStruct_02038aa0 *MessageManager::func_02036da8(u32 param_2, s16 *param_3) {
     EntryINF1 *pEVar1;
     EntryINF1 *pEVar2;
     UnkStruct_02038aa0 *pSVar4;
@@ -461,7 +461,7 @@ ARM UnkStruct_02038aa0 *UnkStruct_027E0C68::func_02036da8(u32 param_2, s16 *para
 }
 
 // non-matching
-ARM void UnkStruct_027E0C68::func_02036edc(u32 param_2, u8 param_3) {
+ARM void MessageManager::func_02036edc(u32 param_2, u8 param_3) {
     UnkStruct_020397f8 *pSVar1;
     u8 auStack_28[24];
     u8 local_13;
@@ -485,7 +485,7 @@ ARM void UnkStruct_027E0C68::func_02036edc(u32 param_2, u8 param_3) {
 }
 
 // non-matching
-ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_02036f68(u32 param_2, u8 *param_3) {
+ARM UnkStruct_020397f8 *MessageManager::func_02036f68(u32 param_2, u8 *param_3) {
     EntryINF1 *pEVar1;
     UnkStruct_02038aa0 *pSVar2;
     EntryINF1 *pEVar3;
@@ -523,11 +523,11 @@ ARM UnkStruct_020397f8 *UnkStruct_027E0C68::func_02036f68(u32 param_2, u8 *param
     return pSVar5;
 }
 
-ARM UnkStruct_020386d8 *UnkStruct_027E0C68::func_020370d0(unk32 param_2, unk32 param_3) {
+ARM UnkStruct_020386d8 *MessageManager::func_020370d0(unk32 param_2, unk32 param_3) {
     return this->func_020370e8(param_2, -1, -1, param_3);
 }
 
-ARM UnkStruct_020386d8 *UnkStruct_027E0C68::func_020370e8(unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5) {
+ARM UnkStruct_020386d8 *MessageManager::func_020370e8(unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5) {
     UnkStruct_020386d8 *puVar2;
 
     if (this->func_02036824()) {
@@ -551,7 +551,7 @@ ARM UnkStruct_020386d8 *UnkStruct_027E0C68::func_020370e8(unk32 param_2, unk16 p
     return NULL;
 }
 
-ARM void UnkStruct_027E0C68::func_02037158(UnkSubClass1_02256FF8 *param_2) {
+ARM void MessageManager::func_02037158(UnkSubClass1_02256FF8 *param_2) {
     UnkStruct_02038aa0 *pSVar1;
 
     pSVar1 = this->func_02037178(param_2);
@@ -561,7 +561,7 @@ ARM void UnkStruct_027E0C68::func_02037158(UnkSubClass1_02256FF8 *param_2) {
     }
 }
 
-ARM UnkStruct_02038aa0 *UnkStruct_027E0C68::func_02037178(UnkSubClass1_02256FF8 *param_2) {
+ARM UnkStruct_02038aa0 *MessageManager::func_02037178(UnkSubClass1_02256FF8 *param_2) {
     s32 i;
 
     for (i = 0; i < ARRAY_LEN(this->mUnk_28); i++) {
@@ -573,4 +573,4 @@ ARM UnkStruct_02038aa0 *UnkStruct_027E0C68::func_02037178(UnkSubClass1_02256FF8 
     return NULL;
 }
 
-ARM UnkStruct_027E0C68::~UnkStruct_027E0C68() {}
+ARM MessageManager::~MessageManager() {}

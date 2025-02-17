@@ -57,8 +57,8 @@ ARM void UnkStruct_02038aa0::func_02038b74(void) {}
 // non-matching
 ARM bool UnkStruct_02038aa0::func_02038b78() {
     if (data_027e0c54 == 0) {
-        if ((this->mUnk_50 != 0 && data_027e0c68.func_02036850() != 0) ||
-            (this->mUnk_50 == 0 && data_027e0c68.func_02036824() != 0))
+        if ((this->mUnk_50 != 0 && gMessageManager.func_02036850() != 0) ||
+            (this->mUnk_50 == 0 && gMessageManager.func_02036824() != 0))
         {
             return true;
         }

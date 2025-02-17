@@ -52,7 +52,10 @@ public:
     /* 0dc */ unk32 mUnk_dc;
     /* 0e0 */ unk32 mUnk_e0;
     /* 0e4 */ unk32 mUnk_e4;
-    /* 0e8 */ unk32 mUnk_e8;
+    /* 0e8 */ unk8 mUnk_e8;
+    /* 0e8 */ unk8 mUnk_e9;
+    /* 0e8 */ unk8 mUnk_ea;
+    /* 0e8 */ unk8 mUnk_eb;
     /* 0ec */ unk32 mUnk_ec;
     /* 0f0 */ unk32 mUnk_f0;
     /* 0f4 */ unk32 mUnk_f4;
@@ -134,4 +137,6 @@ public:
     void func_0203e510(s32 *param1, s32 param2, s32 param3);
     void func_0203e62c(s32 *param1, s32 param2);
     bool func_0203e6e4(u32 param1, u32 param2, s32 param3);
+
+    void func_ov003_020f13b0(unk32 param1);
 };

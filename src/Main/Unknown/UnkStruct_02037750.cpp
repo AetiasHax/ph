@@ -24,8 +24,8 @@ ARM UnkStruct_02037750::UnkStruct_02037750(unk32 param1, unk32 param2) {
 }
 
 ARM UnkStruct_02037750::~UnkStruct_02037750() {
-    if (data_027e0c68.mUnk_20[0] == this) {
-        data_027e0c68.func_02036d4c(this);
+    if (gMessageManager.mUnk_20[0] == this) {
+        gMessageManager.func_02036d4c(this);
     }
 }
 
@@ -86,7 +86,7 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
             case 0x1:
             case 0x2:
             case 0x3:
-                UnkStruct_020397f8 *ret_3 = data_027e0c68.func_020366c4();
+                UnkStruct_020397f8 *ret_3 = gMessageManager.func_020366c4();
 
                 if (0x0 < ret_3->mUnk_15c) {
                     return -0x1;
@@ -220,7 +220,7 @@ ARM unk32 UnkStruct_020386d8::vfunc_28(s32 param1) {
 }
 
 ARM bool UnkStruct_020386d8::vfunc_30() {
-    return data_027e0c68.func_020366c4()->mUnk_15c <= 0;
+    return gMessageManager.func_020366c4()->mUnk_15c <= 0;
 }
 
 ARM UnkStruct_020386d8::~UnkStruct_020386d8() {}

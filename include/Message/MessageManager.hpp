@@ -7,6 +7,7 @@
 #include "Message/MsgProc.hpp"
 #include "System/SysNew.hpp"
 #include "nds/math.h"
+#include "Debug/DebugHierarchy.hpp"
 
 #include "Unknown/UnkStruct_0202e1a0.hpp"
 #include "Unknown/UnkStruct_02032f0c.hpp"
@@ -16,12 +17,12 @@
 #include "Unknown/UnkStruct_020397f8.hpp"
 #include "Unknown/UnkStruct_0203dae0.hpp"
 
-class UnkStruct_027E0C68 : public SysObject {
+class MessageManager : public SysObject {
 public:
     /* 0x00 */ u8 mUnk_00[2];
     /* 0x02 */ u8 mUnk_02;
     /* 0x03 */ u8 mUnk_03;
-    /* 0x04 */ u8 mUnk_04;
+    /* 0x04 */ u8 mUnk_04; // halts actors and hides the item menu
     /* 0x05 */ u8 mUnk_05;
     /* 0x06 */ unk16 mUnk_06;
     /* 0x08 */ UnkStruct_020397f8 *mUnk_08;
@@ -35,20 +36,21 @@ public:
     /* 0x20 */ UnkStruct_02037750 *mUnk_20[2];
     /* 0x28 */ UnkStruct_02038aa0 *mUnk_28[6]; //! TODO: is it the right type?
     /* 0x40 */ UnkStruct_020397f8 *mUnk_40[2]; // is array size 6?
-    /* 0x48 */
+    /* 0x48 */ DebugHierarchy* mDebug;
+    /* 0x4C */
 
-    static void func_0203643c(u32 *param_1, UnkStruct_027E0C68 *param_2, u32 param_3);
+    static void func_0203643c(u32 *param_1, MessageManager *param_2, u32 param_3);
     void func_02036490(unk32 param_2, unk32 param_3, unk32 param_4);
     void func_0203665c(void);
-    UnkStruct_027E0C68();
-    ~UnkStruct_027E0C68();
+    MessageManager();
+    ~MessageManager();
     UnkStruct_020397f8 *func_020366c4(void);
     UnkStruct_020397f8 *func_02036700(void);
     UnkStruct_020386d8 *func_0203673c(void);
     bool func_02036770(u32 param_2);
     unk32 func_02036798(void);
     bool func_020367dc(int param_2);
-    bool UnkStruct_027E0C68::func_020367ec(void);
+    bool MessageManager::func_020367ec(void);
     bool func_02036808(void);
     bool func_02036824(void);
     bool func_02036850(void);
@@ -69,6 +71,8 @@ public:
     UnkStruct_020386d8 *func_020370e8(unk32 param_2, unk16 param_3, unk16 param_4, unk32 param_5);
     void func_02037158(UnkSubClass1_02256FF8 *param_2);
     UnkStruct_02038aa0 *func_02037178(UnkSubClass1_02256FF8 *param_2);
+
+    void func_ov004_021069c4(void);
 };
 
-extern UnkStruct_027E0C68 data_027e0c68;
+extern MessageManager gMessageManager;

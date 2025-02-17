@@ -212,7 +212,7 @@ ARM void UnkStruct_020397f8::vfunc_40(s32 param1, s32 param2) {
 
     local_8c = 0;
     local_90 = 0;
-    bVar1    = data_027e0c68.mUnk_28[this->mUnk_50];
+    bVar1    = gMessageManager.mUnk_28[this->mUnk_50];
 
     this->vfunc_6C(&local_8c, &local_90);
     this->func_0203a188(local_8c + param1, local_90 + param2);
@@ -313,9 +313,9 @@ ARM void UnkStruct_020397f8::func_0203a188(s32 param1, s32 param2) {
         return;
     }
 
-    // (short)(ushort)*(byte *)((int)data_027e0c68.mUnk_28[(this->mUnk_50 - 0x28) * 0x18];
+    // (short)(ushort)*(byte *)((int)gMessageManager.mUnk_28[(this->mUnk_50 - 0x28) * 0x18];
 
-    iVar6 = data_027e0c68.mUnk_10 + this->mUnk_50;
+    iVar6 = gMessageManager.mUnk_10 + this->mUnk_50;
     // uStack_24 = param_4;
 
     if (data_027e0cbc.func_0203d7e0(data_02056a00[iVar6]) != 0) {
@@ -514,7 +514,7 @@ ARM void UnkStruct_020397f8::vfunc_50(EntryINF1 *param1, unk32 param2, s32 *para
     iVar6 = param3[0];
 
     if (data_027e0c54 != 0) {
-        UnkStruct_020397f8 *pVar4 = data_027e0c68.func_02036700();
+        UnkStruct_020397f8 *pVar4 = gMessageManager.func_02036700();
 
         if (pVar4 != NULL && pVar4->mUnk_15c > 0) {
             this->func_02038b40();
@@ -524,7 +524,7 @@ ARM void UnkStruct_020397f8::vfunc_50(EntryINF1 *param1, unk32 param2, s32 *para
     if (*((s32 *) data_027e0618) == 2 && data_027e0d38->func_ov000_02078b40() == 2 &&
         func_ov003_020f3f94(data_ov009_0211f5b4) == 0)
     {
-        UnkStruct_020397f8 *pVar4 = (UnkStruct_020397f8 *) data_027e0c68.mUnk_28[4];
+        UnkStruct_020397f8 *pVar4 = (UnkStruct_020397f8 *) gMessageManager.mUnk_28[4];
 
         if (pVar4 != NULL && pVar4->mUnk_15c > 0) {
             this->func_02038b40();
@@ -790,7 +790,7 @@ ARM void UnkStruct_020397f8::vfunc_60(func_0203b410_param1 *param1, unk32 param2
     }
 
     // PTR_PTR_0203b5ac[(byte)param_1[0x50]] = (char)uVar6;
-    data_027e0c68.mUnk_28[this->mUnk_50]->mUnk_50 = uVar6;
+    gMessageManager.mUnk_28[this->mUnk_50]->mUnk_50 = uVar6;
 
     if (this->mUnk_15e == 7) {
         uVar5 = func_0202d5b4(data_02057f08, data_02057eec, data_020691a0, 0xCC00, 1);
@@ -853,7 +853,7 @@ ARM void UnkStruct_020397f8::vfunc_64(s16 *param1) {
 
 // non-matching
 ARM void UnkStruct_020397f8::func_0203b764() {
-    s32 i = data_027e0c68.mUnk_00[this->mUnk_50];
+    s32 i = gMessageManager.mUnk_00[this->mUnk_50];
 
     this->func_02039440(data_02056a04[i * 0x18], data_02056a16[i]);
 
