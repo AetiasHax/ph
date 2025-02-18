@@ -24,4 +24,4 @@ struct UnkStruct_027e0c68 {
     /* 4c */
 };
 
-extern UnkStruct_027e0c68 *data_027e0c68;
+extern UnkStruct_027e0c68 data_027e0c68;

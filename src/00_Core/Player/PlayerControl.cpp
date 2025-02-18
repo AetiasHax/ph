@@ -92,19 +92,20 @@ ARM void PlayerControl::func_ov00_020af06c() {
     if (mUnk_7a) {
         mUnk_7b = usingEquipItem;
     }
-    if (gAdventureFlags->func_ov00_02097738() || data_027e0c68->mUnk_04 != 0) {
+    if (gAdventureFlags->func_ov00_02097738() || data_027e0c68.mUnk_04 != 0) {
         if (data_027e0d38->func_ov000_02078b40() != 2) {
             mUsingEquipItem = false;
         }
         return;
     }
     ItemManager *itemManager = gItemManager;
-    if (itemManager->mEquippedItem == ItemFlag_PotionA) {
+    ItemFlag equippedItem    = itemManager->mEquippedItem;
+    if (equippedItem == ItemFlag_PotionA) {
         if (itemManager->HasPotion(0)) {
             mUsingEquipItem = true;
             return;
         }
-    } else if (itemManager->mEquippedItem == ItemFlag_PotionB) {
+    } else if (equippedItem == ItemFlag_PotionB) {
         if (itemManager->HasPotion(1)) {
             mUsingEquipItem = true;
             return;
@@ -112,7 +113,7 @@ ARM void PlayerControl::func_ov00_020af06c() {
     }
     if (data_027e0d38->func_ov000_02078b40() == 2) {
         mUnk_7b = true;
-        mUnk_7b = (mUnk_7b & itemManager->func_ov00_020ad790(1)) != 0;
+        mUnk_7b = (mUnk_7b & gItemManager->func_ov00_020ad790(1)) != 0;
     } else {
         if (((data_027e05f8.mUnk_0 & 0x300) != 0) && mUnk_7e != 0 && func_ov00_020aeef8()) {
             mUnk_7b = true;
@@ -126,18 +127,21 @@ ARM void PlayerControl::func_ov00_020af06c() {
                 }
             }
         }
-        mUnk_7b = (mUnk_7b & itemManager->func_ov00_020ad790(1)) != 0;
+        mUnk_7b = (mUnk_7b & gItemManager->func_ov00_020ad790(1)) != 0;
 
-        if (itemManager->mEquippedItem == ItemFlag_Hammer && !mUsingEquipItem && mUnk_7b == true) {
-            ActorNaviBase *courageFairy = itemManager->GetFairy(FairyId_Courage);
+        if (equippedItem == ItemFlag_Hammer && !usingEquipItem && mUnk_7b == true) {
+            ActorNaviBase *courageFairy = gItemManager->GetFairy(FairyId_Courage);
             if (courageFairy != NULL) {
-                mAimWorld.x = courageFairy->mPos.x;
-                mAimWorld.y = gPlayerPos.y + FLOAT_TO_Q20(0.5);
-                mAimWorld.z = courageFairy->mPos.z;
+                q20 x       = courageFairy->mPos.x;
+                q20 y       = gPlayerPos.y + FLOAT_TO_Q20(0.5);
+                q20 z       = courageFairy->mPos.z;
+                mAimWorld.x = x;
+                mAimWorld.y = y;
+                mAimWorld.z = z;
             }
         }
     }
-    if (!mUnk_7a) {
+    if (mUnk_7a) {
         mUsingEquipItem = mUnk_7b;
     }
 }
@@ -176,9 +180,9 @@ bool PlayerControl::func_ov00_020af2d4(u32 param1, bool param2) {
 
     if (mUnk_7c) {
         bool unk1 = true;
-        bool unk2 = true;
+        bool unk2 = false;
         if ((param1 & 0x2) != 0 && (data_02056be4[data_027e077c.mUnk_0] & 0x1) != 0) {
-            unk2 = false;
+            unk2 = true;
         }
         if (!unk2 && ((param1 & 0x1) == 0 || !this->func_ov00_020aeef8() || !data_027e103c->mUnk_24)) {
             unk1 = false;
@@ -242,7 +246,7 @@ ARM void PlayerControl::func_ov00_020af538(bool param1, u8 param2) {
     mUnk_7e = param2;
     mUnk_7d = param1;
     if (mUnk_78) {
-        bool unk = gAdventureFlags->func_ov00_02097738() || data_027e0c68->mUnk_04 ? false : true;
+        bool unk = gAdventureFlags->func_ov00_02097738() || data_027e0c68.mUnk_04 ? false : true;
         if (unk) {
             if (!this->func_ov00_020af4a4()) {
                 mUnk_7c = false;
@@ -317,17 +321,19 @@ ARM bool PlayerControl::func_ov00_020af778() {
         return false;
     }
 
-    bool bVar1 = false;
-    EquipItem *equipItem;
+    bool bVar1           = false;
+    EquipItem *equipItem = NULL;
     if ((mFlags & TouchFlag_UntouchedNow) != 0 && mTouchDuration < 21) {
         s32 dx = mTouchLastX - mTouchFastX;
         s32 dy = mTouchLastY - mTouchFastY;
         if (dx * dx + dy * dy < 100) {
-            bVar1 = !this->func_ov00_020af2d4(7, true);
-            if (!bVar1 && mUsingEquipItem) {
-                ItemFlag equipId = gPlayer->GetEquipId();
-                if (equipId != ItemFlag_None) {
-                    equipItem = gItemManager->GetEquipItem(equipId);
+            if (this->func_ov00_020af2d4(7, true)) {
+                bVar1 = true;
+                if (mUsingEquipItem) {
+                    ItemFlag equipId = gPlayer->GetEquipId();
+                    if (equipId != ItemFlag_None) {
+                        equipItem = gItemManager->GetEquipItem(equipId);
+                    }
                 }
             }
         }
@@ -358,13 +364,13 @@ ARM bool PlayerControl::func_ov00_020af778() {
                 return true;
             }
         } else {
-            if (equipItem->vfunc_48()) {
+            if (equipItem->vfunc_48(iVar4)) {
                 this->func_ov00_020af6e4(&vec, followDistance, uVar4);
                 return true;
             }
             if (followDistance == 0 && equipItem->vfunc_40()) {
                 this->ApplyTouchWorld(&vec, 0);
-                this->func_ov00_020af6e4(&vec, 0, uVar4);
+                this->func_ov00_020af6e4(&vec, followDistance, uVar4);
                 return true;
             }
         }
@@ -396,17 +402,16 @@ ARM bool PlayerControl::func_ov00_020afad8(Vec3p *param1) {
 ARM void PlayerControl::func_ov00_020afb6c() {
     bool iVar1           = this->func_ov00_020af778();
     Actor *followActor   = gActorManager->GetActor(&mFollowRef);
-    FairyId fairyId      = gItemManager->GetEquippedFairy();
-    ActorNaviBase *fairy = gItemManager->GetFairy(fairyId);
+    ItemManager *itemMgr = gItemManager;
+    FairyId fairyId      = itemMgr->GetEquippedFairy();
+    ActorNaviBase *fairy = itemMgr->GetFairy(fairyId);
 
-    if (followActor == NULL && fairy != NULL) {
+    if (followActor == NULL && !mFollowing && fairy != NULL) {
         fairy->func_ov000_020bad18();
     }
 
     q20 followDist = mFollowDist;
-    if (followActor == NULL) {
-        mFollowRef.Reset();
-    } else {
+    if (followActor != NULL) {
         followDist = Vec3p_Distance(&gPlayerPos, &followActor->mPos);
         Cylinder followHitbox;
         followActor->GetHitbox(&followHitbox);
@@ -417,47 +422,80 @@ ARM void PlayerControl::func_ov00_020afb6c() {
         switch (followActor->mUnk_12c) {
             case 0: mFollowRef.Reset(); break;
             case 1: iVar8 = 1; break;
-            case 2:
-                iVar8 = 3;
-                followHitbox.pos.y += followHitbox.size;
-                uVar9 = 0;
-                break;
-            case 3:
-            case 4:
-                iVar8 = 2;
-                followHitbox.pos.y += followHitbox.size;
-                uVar9 = 2;
-                break;
             case 5:
                 iVar8 = 2;
                 uVar9 = 1;
                 followHitbox.pos.y += followActor->mYOffset;
                 break;
+            case 2:
+                iVar8 = 3;
+                followHitbox.pos.y += followHitbox.size;
+                uVar9 = 0;
+                break;
+            default:
+                iVar8 = 2;
+                followHitbox.pos.y += followHitbox.size;
+                uVar9 = 2;
+                break;
         }
         if (iVar8 != 0 && gPlayerLink->GetCurrentCharacter() == PlayerCharacter_Link) {
-            this->func_ov00_020aff90(&followHitbox, iVar8);
+            this->func_ov00_020aff90(&followHitbox.pos, iVar8);
             if (iVar1) {
-                data_027e0ffc.func_ov000_020ced64(&followHitbox, followActor->mRef.id);
+                data_027e0ffc.func_ov000_020ced64(&followHitbox, followActor->mRef.id, uVar9);
             }
         }
+    } else {
+        mFollowRef.Reset();
     }
 
-    if (!mFollowing) {
-        mFollowObject = NULL;
-    } else {
-        mFollowObject = (void *) gMapManager->MapData_vfunc_78();
+    if (mFollowing) {
+        mFollowObject = (void *) gMapManager->MapData_vfunc_78(&mUnk_9c);
         Vec3p local_3c;
         s32 iVar2;
         s32 iVar7;
-        if (mFollowObject == NULL) {
+        if (mFollowObject != NULL) {
+            local_3c     = *(Vec3p *) ((u32) mFollowObject + 0x18);
+            void *piVar4 = (*(void *(**) (void *) )((*(u32 *) mFollowObject) + 0x54))(mFollowObject);
+            if (piVar4 == NULL) {
+                iVar7 = 0;
+            } else {
+                iVar7 = (*(s32(**)(void *))((*(u32 *) piVar4) + 0x44))(piVar4);
+            }
+            local_3c.y += iVar7;
+            if (*(s8 *) ((u32) mFollowObject + 0x12) == 1) {
+                iVar2 = 1;
+                iVar7 = 3;
+            } else {
+                iVar2 = 2;
+                iVar7 = 2;
+            }
+        } else {
             local_3c.y     = gPlayerPos.y;
             Vec2b local_44 = mUnk_9c;
             gMapManager->func_ov00_02083c7c(&local_3c, local_44);
             iVar2 = 2;
             iVar7 = 3;
-        } else {
+        }
+
+        if (iVar2 != 0 && gPlayerLink->GetCurrentCharacter() == PlayerCharacter_Link) {
+            this->func_ov00_020aff90(&local_3c, iVar2);
+            if (iVar1) {
+                data_027e0ffc.func_ov000_020ced7c(&local_3c, mUnk_9c.x, mUnk_9c.y, iVar7);
+            }
+        }
+        followDist = Vec3p_Distance(&gPlayerPos, &local_3c);
+    } else {
+        mFollowObject = NULL;
+    }
+
+    if (mFollowStuckTimer > 0 && mFollowDist - followDist <= FLOAT_TO_Q20(0.01)) {
+        mFollowStuckTimer -= 1;
+        if (mFollowStuckTimer <= 0) {
+            this->StopFollowing();
         }
     }
+
+    mFollowDist = followDist;
 }
 
 ARM bool PlayerControl::func_ov00_020afe88(s32 param1, bool param2) {
@@ -490,7 +528,7 @@ ARM bool PlayerControl::func_ov00_020afeec(unk32 param1, bool param2) {
     }
 }
 
-ARM void PlayerControl::func_ov00_020aff90(Cylinder *param1, unk32 param2) {
+ARM void PlayerControl::func_ov00_020aff90(Vec3p *param1, unk32 param2) {
     if (data_027e0d38->func_ov000_02078b40() == 2) {
         return;
     }
@@ -509,8 +547,8 @@ ARM void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec
         Vec3p_Axpy(y, &mUnk_44, &mTouchWorld, &local_24);
 
         Vec3p local_30;
-        local_30.x = param4->x - local_24.x;
         local_30.y = 0;
+        local_30.x = param4->x - local_24.x;
         local_30.z = param4->z - local_24.z;
         q20 iVar2  = Vec3p_Length(&local_30);
         if (iVar2 <= param3) {

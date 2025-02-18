@@ -97,7 +97,7 @@ public:
     bool func_ov000_020ba458();
     void func_ov000_020ba4e4();
     void func_ov000_020ba53c();
-    void func_ov000_020baca8(Cylinder *param1, unk32 param2);
+    void func_ov000_020baca8(Vec3p *param1, unk32 param2);
     void func_ov000_020bad18();
     static void func_ov000_020bb0ac();
     static void func_ov000_020bb0e0();

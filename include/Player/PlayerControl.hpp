@@ -61,7 +61,7 @@ public:
     /* 9e */ unk8 mUnk_9e[2];
     /* a0 */ void *mFollowObject;
     /* a4 */ q20 mFollowDist;
-    /* a8 */ u16 mFollowStuckTimer;
+    /* a8 */ s16 mFollowStuckTimer;
     /* aa */ s16 mCutsceneEndTimer;
     /* ac */ s16 mUnk_ac;
     /* ae */ unk16 mUnk_ae;
@@ -96,7 +96,7 @@ public:
     void func_ov00_020afb6c();
     bool func_ov00_020afe88(s32 param1, bool param2);
     bool func_ov00_020afeec(unk32 param1, bool param2);
-    void func_ov00_020aff90(Cylinder *param1, unk32 param2);
+    void func_ov00_020aff90(Vec3p *param1, unk32 param2);
     void func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec3p *param4);
     void func_ov00_020b014c(Vec3p *param1);
     void ResetAim();
