@@ -16,6 +16,13 @@ src/00_Core/Actor/ActorManager.cpp:
     .text       start:0x020c33d4 end:0x020c3e54
     .data       start:0x020e72a8 end:0x020e72f4
 
+src/00_Core/Actor/Dungeon/ActorSwitchObject.cpp:
+    .text       start:0x0208fa70 end:0x020903a8
+    .init       start:0x020df678 end:0x020df6b8
+    .ctor       start:0x020e1ec4 end:0x020e1ec8
+    .data       start:0x020e2928 end:0x020e29e4
+    .sbss       start:0x020ecd64 end:0x020ecd84
+
 src/00_Core/Actor/Dungeon/ActorEventIcon.cpp:
     .text       start:0x020904f4 end:0x020908f8
     .init       start:0x020df6f8 end:0x020df738
