@@ -10,6 +10,7 @@
 class ActorNaviBase_Unk1 {};
 
 class ActorNaviBase : public Actor {
+public:
     /* 000 (base) */
     /* 158 */ Vec3p mUnk_158;
     /* 164 */ unk32 mUnk_164;
@@ -33,22 +34,7 @@ class ActorNaviBase : public Actor {
     /* 288 */ unk8 mUnk_288[0x2];
     /* 28a */ unk16 mUnk_28a;
     /* 28c */ unk8 mUnk_28c[0x8];
-    /* 294 */ ModelRender mUnk_294;
-    /* 2f0 */ void *mUnk_2f0;
-    /* 2f4 */ unk8 mUnk_2f4[0x40];
-    /* 334 */ unk32 mUnk_334;
-    /* 338 */ unk32 mUnk_338;
-    /* 33c */ unk32 mUnk_33c;
-    /* 340 */ unk16 mUnk_340;
-    /* 342 */ unk8 mUnk_342[0x2];
-    /* 344 */ unk32 mUnk_344;
-    /* 348 */ unk32 mUnk_348;
-    /* 34c */ unk8 mUnk_34c[0x68];
-    /* 3b4 */ EquipHammer *mHammer;
-    /* 3b8 */ unk32 mUnk_3b8;
-    /* 3bc */ unk32 mUnk_3bc;
-    /* 3c0 */ unk8 mUnk_3c0[0x8];
-    /* 3c8 */
+    /* 294 */
 
     /* 00 */ virtual ~ActorNaviBase() override;
     /* 08 */ virtual bool vfunc_08() override;

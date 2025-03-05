@@ -30,6 +30,13 @@ src/00_Core/Actor/Dungeon/ActorEventIcon.cpp:
     .data       start:0x020e2a40 end:0x020e2afc
     .sbss       start:0x020ecd44 end:0x020ecd64
 
+src/00_Core/Actor/Navi/ActorNavi.cpp:
+    .text       start:0x020b8080 end:0x020b8578
+    .init       start:0x020e1278 end:0x020e12dc
+    .ctor       start:0x020e1ea8 end:0x020e1eac
+    .data       start:0x020e64b4 end:0x020e6614
+    .sbss       start:0x020ee140 end:0x020ee178
+
 src/00_Core/Actor/Navi/ActorNaviBase.cpp:
     .text       start:0x020b87fc end:0x020bb0b8
     .rodata     start:0x020dc7bc end:0x020dc7f8
