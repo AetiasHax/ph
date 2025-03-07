@@ -50,6 +50,13 @@ src/00_Core/Actor/Navi/ActorNaviBase.cpp:
     .data       start:0x020e670c end:0x020e6874
     .sbss       start:0x020ee198 end:0x020ee19c
 
+src/00_Core/Actor/Navi/ActorWisdomNavi.cpp:
+    .text       start:0x020c0b04 end:0x020c0b7c
+    .init       start:0x020e1af4 end:0x020e1b34
+    .ctor       start:0x020e1eb8 end:0x020e1ebc
+    .data       start:0x020e7038 end:0x020e7130
+    .sbss       start:0x020ee530 end:0x020ee53c
+
 src/00_Core/Item/Item.cpp:
     .text       start:0x020acfc0 end:0x020ad030
     .rodata     start:0x020dc514 end:0x020dc664
