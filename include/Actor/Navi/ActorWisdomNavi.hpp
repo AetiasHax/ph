@@ -9,8 +9,7 @@ public:
     /* 000 (base) */
     /* 294 */
 
-    /* 00 */ virtual ~ActorWisdomNavi() override;
-    /* b4 */ virtual void vfunc_b4() override;
+    /* b4 */ virtual FairyId GetFairyId() override;
 
     static ActorWisdomNavi *Create();
 };

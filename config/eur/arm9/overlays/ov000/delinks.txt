@@ -38,6 +38,7 @@ src/00_Core/Actor/Navi/ActorNavi.cpp:
     .sbss       start:0x020ee1a0 end:0x020ee1d8
 
 src/00_Core/Actor/Navi/ActorForceNavi.cpp:
+    complete
     .text       start:0x020b862c end:0x020b86a4
     .init       start:0x020e133c end:0x020e137c
     .ctor       start:0x020e1f0c end:0x020e1f10
@@ -51,6 +52,7 @@ src/00_Core/Actor/Navi/ActorNaviBase.cpp:
     .sbss       start:0x020ee1f8 end:0x020ee1fc
 
 src/00_Core/Actor/Navi/ActorWisdomNavi.cpp:
+    complete
     .text       start:0x020c0b64 end:0x020c0bdc
     .init       start:0x020e1b54 end:0x020e1b94
     .ctor       start:0x020e1f18 end:0x020e1f1c

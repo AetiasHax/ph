@@ -14,7 +14,7 @@ void UnkStruct_ov000_020b8110::vfunc_14(u16 *param1) {}
 void ActorNavi::func_ov000_020b8200() {}
 void ActorNavi::vfunc_c4() {}
 void ActorNavi::vfunc_c8() {}
-void ActorNavi::vfunc_b4() {}
+FairyId ActorNavi::GetFairyId() {}
 s32 ActorNavi::vfunc_b8() {}
 void ActorNavi::vfunc_d4() {}
 void ActorNavi::vfunc_d0() {}

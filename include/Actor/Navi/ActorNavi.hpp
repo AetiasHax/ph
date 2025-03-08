@@ -43,7 +43,7 @@ public:
     /* 08 */ virtual bool vfunc_08() override;
     /* 20 */ virtual void vfunc_20(bool param1) override;
     /* 8c */ virtual bool vfunc_8c() override;
-    /* b4 */ virtual void vfunc_b4() override;
+    /* b4 */ virtual FairyId GetFairyId() override;
     /* b8 */ virtual s32 vfunc_b8() override;
     /* c0 */ virtual bool vfunc_c0(Vec3p *param1) override;
     /* c4 */ virtual void vfunc_c4() override;
