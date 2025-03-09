@@ -63,7 +63,7 @@ ARM void ActorActionObject::vfunc_14(u32 param1) {
     if (!gMapManager->func_ov00_020836dc((u32) mUnk_020.mUnk_00[1], 0)) {
         return;
     }
-    if (mUnk_020.mUnk_0a[0] != 0 && !this->func_Ov00_020c1bfc(0)) {
+    if (mUnk_020.mUnk_0a[0] != 0 && !this->func_ov00_020c1bfc(0)) {
         return;
     }
     if (flag != 0 && !gAdventureFlags->Get(flag)) {

@@ -318,7 +318,7 @@ ARM void Actor::SetTransform(Transform *transform) {
 
 ARM void Actor::vfunc_a8() {}
 
-ARM bool Actor::func_Ov00_020c1bfc(s32 param1) {
+ARM bool Actor::func_ov00_020c1bfc(s32 param1) {
     return gMapManager->func_ov00_02084be0(mUnk_020.mUnk_0a[param1], mUnk_020.mUnk_08[param1]);
 }
 
