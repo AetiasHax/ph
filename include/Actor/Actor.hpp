@@ -227,7 +227,7 @@ public:
     bool func_ov00_020c195c();
     bool func_ov00_020c198c();
     void KillPickupItemActors();
-    void func_Ov00_020c1bfc(s32 param1);
+    bool func_ov00_020c1bfc(s32 param1);
     void func_ov00_020c1c20(s32 param1, unk32 param2);
     bool IsNearLink();
     void func_ov00_020c1cf8();
