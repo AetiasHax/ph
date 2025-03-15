@@ -2,6 +2,8 @@ name: Build
 
 on:
   push:
+    branches:
+      - main
   pull_request:
 
 jobs:
@@ -20,7 +22,7 @@ jobs:
 
       - name: Build
         run: |
-          python tools/configure.py ${{ matrix.version }} -w wibo --compiler /mwccarm
+          python tools/configure.py ${{ matrix.version }} -w wibo --compiler /mwccarm --extract /extract
           ninja arm9 report check
 
       - name: Upload report

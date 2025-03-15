@@ -14,7 +14,8 @@ DEFAULT_WIBO_PATH = "./wibo"
 
 parser = argparse.ArgumentParser(description="Generates build.ninja")
 parser.add_argument('-w', type=str, default=DEFAULT_WIBO_PATH, dest="wine", required=False, help="Path to Wine/Wibo (linux only)")
-parser.add_argument("--compiler", type=Path, required=False, help="Path to compiler root directory")
+parser.add_argument("--compiler", type=Path, required=False, help="Path to pre-installed compiler root directory")
+parser.add_argument("--extract", type=Path, required=False, help="Path to pre-made extract directory")
 parser.add_argument('version', help='Game version')
 args = parser.parse_args()
 
@@ -70,7 +71,7 @@ config_path      = root_path / "config"
 build_path       = root_path / "build"
 src_path         = root_path / "src"
 libs_path        = root_path / "libs"
-extract_path     = root_path / "extract"
+extract_path     = args.extract or root_path / "extract"
 tools_path       = root_path / "tools"
 mwcc_root        = args.compiler or tools_path / "mwccarm"
 mwcc_path        = mwcc_root / MWCC_VERSION
@@ -328,16 +329,17 @@ def add_download_tool_builds(n: ninja_syntax.Writer):
 
 
 def add_extract_build(n: ninja_syntax.Writer, project: Project):
-    n.build(
-        inputs=str(project.baserom()),
-        implicit=DSD,
-        rule="extract",
-        outputs=str(project.baserom_config()),
-        variables={
-            "output_path": str(project.game_extract)
-        }
-    )
-    n.newline()
+    if args.extract is None:
+        n.build(
+            inputs=str(project.baserom()),
+            implicit=DSD,
+            rule="extract",
+            outputs=str(project.baserom_config()),
+            variables={
+                "output_path": str(project.game_extract)
+            }
+        )
+        n.newline()
 
 
 def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
