@@ -95,7 +95,7 @@ if platform is None:
     exit(1)
 EXE = platform.exe
 WINE = args.wine if platform.system != "windows" else ""
-DSD = args.dsd or os.path.join('.', str(root_path / f"dsd{EXE}"))
+DSD = str(args.dsd) or os.path.join('.', str(root_path / f"dsd{EXE}"))
 OBJDIFF = os.path.join('.', str(root_path / f"objdiff-cli{EXE}"))
 CC = os.path.join('.', str(mwcc_path / "mwccarm.exe"))
 LD = os.path.join('.', str(mwcc_path / "mwldarm.exe"))
