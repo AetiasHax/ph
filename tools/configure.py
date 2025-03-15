@@ -15,7 +15,8 @@ DEFAULT_WIBO_PATH = "./wibo"
 parser = argparse.ArgumentParser(description="Generates build.ninja")
 parser.add_argument('-w', type=str, default=DEFAULT_WIBO_PATH, dest="wine", required=False, help="Path to Wine/Wibo (linux only)")
 parser.add_argument("--compiler", type=Path, required=False, help="Path to pre-installed compiler root directory")
-parser.add_argument("--no-extract", type=bool, required=False, help="Skip extract step")
+parser.add_argument("--no-extract", action="store_true", help="Skip extract step")
+parser.add_argument("--dsd", type=Path, required=False, help="Path to pre-installed dsd CLI")
 parser.add_argument('version', help='Game version')
 args = parser.parse_args()
 
@@ -281,16 +282,17 @@ def main():
 
 
 def add_download_tool_builds(n: ninja_syntax.Writer):
-    n.build(
-        rule="download_tool",
-        outputs=DSD,
-        variables={
-            "tool": "dsd",
-            "tag": DSD_VERSION,
-            "path": DSD,
-        },
-    )
-    n.newline()
+    if args.dsd is None:
+        n.build(
+            rule="download_tool",
+            outputs=DSD,
+            variables={
+                "tool": "dsd",
+                "tag": DSD_VERSION,
+                "path": DSD,
+            },
+        )
+        n.newline()
 
     n.build(
         rule="download_tool",
