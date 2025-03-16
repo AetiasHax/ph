@@ -20,7 +20,7 @@ jobs:
 
       - name: Build
         run: |
-          mv -r /extract .
+          mv /extract/* ./extract
           python tools/configure.py ${{ matrix.version }} -w wibo --compiler /mwccarm --no-extract
           ninja arm9 report check
 
