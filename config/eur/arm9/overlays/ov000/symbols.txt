@@ -3955,11 +3955,11 @@ __sinit_ov000_020e11d8 kind:function(arm,size=0x34) addr:0x20e11d8
 __sinit_ov000_020e120c kind:function(arm,size=0x44) addr:0x20e120c
 __sinit_ov000_020e1250 kind:function(arm,size=0x40) addr:0x20e1250
 __sinit_ov000_020e1290 kind:function(arm,size=0x48) addr:0x20e1290
-__sinit_ActorNavi.cpp kind:function(arm,size=0x64) addr:0x20e12d8
-__sinit_ActorForceNavi.cpp kind:function(arm,size=0x40) addr:0x20e133c
+__sinit_ActorNavi.cpp kind:function(arm,size=0x64) addr:0x20e12d8 local
+__sinit_ActorForceNavi.cpp kind:function(arm,size=0x40) addr:0x20e133c local
 __sinit_ov000_020e137c kind:function(arm,size=0x798) addr:0x20e137c
-__sinit_ActorActionObject.cpp kind:function(arm,size=0x40) addr:0x20e1b14
-__sinit_ActorWisdomNavi.cpp kind:function(arm,size=0x40) addr:0x20e1b54
+__sinit_ActorActionObject.cpp kind:function(arm,size=0x40) addr:0x20e1b14 local
+__sinit_ActorWisdomNavi.cpp kind:function(arm,size=0x40) addr:0x20e1b54 local
 __sinit_ov000_020e1b94 kind:function(arm,size=0x40) addr:0x20e1b94
 __sinit_ov000_020e1bd4 kind:function(arm,size=0x40) addr:0x20e1bd4
 __sinit_ov000_020e1c14 kind:function(arm,size=0x40) addr:0x20e1c14
@@ -4768,7 +4768,7 @@ data_ov000_020e59fc kind:data(any) addr:0x20e59fc
 data_ov000_020e5a0c kind:data(any) addr:0x20e5a0c
 data_ov000_020e5a20 kind:data(any) addr:0x20e5a20
 data_ov000_020e5a34 kind:data(any) addr:0x20e5a34
-_ZTV13LinkStateItem kind:data(any) addr:0x20e5a48
+_ZTV13LinkStateItem kind:data(any) addr:0x20e5a40
 data_ov000_020e5a8c kind:data(any) addr:0x20e5a8c
 data_ov000_020e5a90 kind:data(any) addr:0x20e5a90
 data_ov000_020e5a94 kind:data(any) addr:0x20e5a94
@@ -4958,7 +4958,7 @@ data_ov000_020e6530 kind:data(any) addr:0x20e6530
 data_ov000_020e6534 kind:data(any) addr:0x20e6534
 _ZTV9ActorNavi kind:data(any) addr:0x20e6560
 _ZTV24UnkStruct_ov000_020b8110 kind:data(any) addr:0x20e6658
-_ZTV14ActorForceNavi kind:data(any) addr:0x20e667c
+_ZTV14ActorForceNavi kind:data(any) addr:0x20e6674
 data_ov000_020e676c kind:data(any) addr:0x20e676c
 data_ov000_020e6770 kind:data(any) addr:0x20e6770
 data_ov000_020e6774 kind:data(any) addr:0x20e6774
@@ -5057,7 +5057,7 @@ data_ov000_020e7014 kind:data(any) addr:0x20e7014
 data_ov000_020e7018 kind:data(any) addr:0x20e7018
 data_ov000_020e701c kind:data(any) addr:0x20e701c
 data_ov000_020e7048 kind:data(any) addr:0x20e7048
-_ZTV15ActorWisdomNavi kind:data(any) addr:0x20e70a0
+_ZTV15ActorWisdomNavi kind:data(any) addr:0x20e7098
 data_ov000_020e7198 kind:data(any) addr:0x20e7198
 data_ov000_020e71a0 kind:data(any) addr:0x20e71a0
 data_ov000_020e71a4 kind:data(any) addr:0x20e71a4
@@ -5070,14 +5070,14 @@ data_ov000_020e71bc kind:data(any) addr:0x20e71bc
 sShipTypes kind:data(any) addr:0x20e71c0
 _ZTV17KillPickupsFilter kind:data(any) addr:0x20e71e8
 _ZTV5Actor kind:data(any) addr:0x20e71f4
-data_ov000_020e72a8 kind:data(any) addr:0x20e72a8
-data_ov000_020e72ac kind:data(any) addr:0x20e72ac
-data_ov000_020e72b0 kind:data(any) addr:0x20e72b0
-data_ov000_020e72b4 kind:data(any) addr:0x20e72b4
-data_ov000_020e72b8 kind:data(any) addr:0x20e72b8
-data_ov000_020e72bc kind:data(any) addr:0x20e72bc
-data_ov000_020e72c0 kind:data(any) addr:0x20e72c0
-data_ov000_020e72c4 kind:data(any) addr:0x20e72c4
+@965 kind:data(any) addr:0x20e72a8 local
+@964 kind:data(any) addr:0x20e72ac local
+@963 kind:data(any) addr:0x20e72b0 local
+@962 kind:data(any) addr:0x20e72b4 local
+@961 kind:data(any) addr:0x20e72b8 local
+@960 kind:data(any) addr:0x20e72bc local
+@959 kind:data(any) addr:0x20e72c0 local
+@958 kind:data(any) addr:0x20e72c4 local
 _ZTV11FilterActor kind:data(any) addr:0x20e72e8
 data_ov000_020e72fc kind:data(any) addr:0x20e72fc
 data_ov000_020e7300 kind:data(any) addr:0x20e7300
@@ -5879,7 +5879,7 @@ data_ov000_020ee198 kind:bss addr:0x20ee198
 _ZN9ActorNavi5gTypeE kind:bss addr:0x20ee1ac
 @419 kind:bss addr:0x20ee1c0 local
 data_ov000_020ee1cc kind:bss addr:0x20ee1cc
-@405 kind:bss addr:0x20ee1d8 local
+@403 kind:bss addr:0x20ee1d8 local
 _ZN14ActorForceNavi5gTypeE kind:bss addr:0x20ee1e4
 data_ov000_020ee1f8 kind:bss addr:0x20ee1f8
 data_ov000_020ee1fc kind:bss addr:0x20ee1fc
@@ -5943,7 +5943,7 @@ data_ov000_020ee548 kind:bss addr:0x20ee548
 _ZN17ActorActionObject5gTypeE kind:bss addr:0x20ee568
 gPlayerAnimHandler kind:bss addr:0x20ee57c
 data_ov000_020ee588 kind:bss addr:0x20ee588
-@405 kind:bss addr:0x20ee590 local
+@403 kind:bss addr:0x20ee590 local
 _ZN15ActorWisdomNavi5gTypeE kind:bss addr:0x20ee59c
 data_ov000_020ee5b0 kind:bss addr:0x20ee5b0
 data_ov000_020ee5bc kind:bss addr:0x20ee5bc
