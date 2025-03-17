@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    container: ghcr.io/aetiashax/ph-build:main
+    container: ghcr.io/zeldaret/ph-build:main
 
     runs-on: ubuntu-latest
     strategy:
@@ -17,10 +17,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Prepare
+        run: |
+          mv /extract/* ./extract
 
       - name: Build
         run: |
-          mv /extract/* ./extract
           python tools/configure.py ${{ matrix.version }} -w wibo --compiler /mwccarm --no-extract
           ninja arm9 report check
 
