@@ -62,7 +62,7 @@ public:
     bool func_ov00_02082494(s32 param_2);
     bool func_ov00_020824cc(s32 param_2);
     s32 func_ov00_02082504();
-    unk8 *func_ov00_02082538();
+    Vec3p *func_ov00_02082538();
     void func_ov00_02082594();
     void func_ov00_020825ac();
     s32 GetCourseFilePath(char *courseName, char *buf);
@@ -78,7 +78,7 @@ public:
     void DestroyMap();
     void MapData_vfunc_44();
     void func_ov00_02082808(s32 param_2);
-    void MapData_vfunc_7c();
+    s32 MapData_vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]);
     void MapData_vfunc_84(unk32 param_2);
     bool func_ov00_020828f8(s32 *param_2);
     u8 GetNumMaps();
@@ -168,14 +168,14 @@ public:
     s32 func_ov00_02083c50(unk32 z);
     void func_ov00_02083c7c(Vec3p *param_2, u32 param_3);
     static void func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5);
-    void func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
-    unk32 MapData_vfunc_60(unk8 *param_1);
+    s32 func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
+    unk32 MapData_vfunc_60(u8 *param_1);
     bool func_ov00_02083e70();
     unk32 MapData_vfunc_68(Vec3p *param_1, bool param_2);
     s32 func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3);
     void func_ov00_02083f44(Vec3p *param_2);
     unk8 MapData_vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
-    unk8 MapData_vfunc_70(Vec3p *param_2);
+    unk32 MapData_vfunc_70(Vec3p *param_2);
     static void func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
     void GetTileWorldBounds(Vec2b *tile, AABB *tileBounds);
     unk32 MapData_vfunc_54(unk8 *a);

@@ -111,7 +111,7 @@ public:
     /* 180 */ MapBase_Unk_180 mUnk_180[2];
     /* 188 */ unk8 mUnk_188[0x14];
     /* 19c */ unk32 mUnk_19c;
-    /* 1a0 */ unk8 mUnk_1a0[0xc];
+    /* 1a0 */ Vec3p mUnk_1a0;
     /* 1ac */ s16 mUnk_1ac;
     /* 1ae */ unk8 mUnk_1ae[2];
     /* 1b0 */
@@ -139,14 +139,14 @@ public:
     /* 54 */ virtual unk32 vfunc_54(unk8 *param_1);
     /* 58 */ virtual unk32 vfunc_58(Vec2b *param_1, int param_2);
     /* 5c */ virtual unk32 vfunc_5c();
-    /* 60 */ virtual unk32 vfunc_60(unk8 *param_1);
+    /* 60 */ virtual unk32 vfunc_60(u8 *param_1);
     /* 64 */ virtual unk32 vfunc_64();
     /* 68 */ virtual unk8 vfunc_68(Vec3p *param_1, bool param_2);
     /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
     /* 74 */ virtual s32 vfunc_74(Vec3p *param_2);
     /* 78 */ virtual unk32 vfunc_78(bool *param_1);
-    /* 7c */ virtual void vfunc_7c();
+    /* 7c */ virtual s32 vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]);
     /* 80 */ virtual unk32 vfunc_80();
     /* 84 */ virtual void vfunc_84(unk32 param_2);
     /* 88 */ virtual unk32 vfunc_88();
