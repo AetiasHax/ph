@@ -29,7 +29,7 @@ public:
     /* 0c */ virtual bool CanMove();
     /* 10 */ virtual void vfunc_10(Cylinder *param1)                      = 0;
     /* 14 */ virtual void vfunc_14(Cylinder *param1)                      = 0;
-    /* 18 */ virtual void vfunc_18()                                      = 0;
+    /* 18 */ virtual bool vfunc_18(s32 param1)                            = 0;
     /* 1c */ virtual void Init()                                          = 0;
     /* 20 */ virtual void vfunc_20()                                      = 0;
     /* 24 */ virtual void UpdatePos()                                     = 0;
