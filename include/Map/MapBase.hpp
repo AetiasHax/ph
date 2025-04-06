@@ -112,7 +112,7 @@ public:
     /* 188 */ unk8 mUnk_188[0x14];
     /* 19c */ unk32 mUnk_19c;
     /* 1a0 */ Vec3p mUnk_1a0;
-    /* 1ac */ unk32 mUnk_1ac;
+    /* 1ac */ s16 mUnk_1ac;
     /* 1b0 */
 
     /* 00 */ virtual ~MapBase();
