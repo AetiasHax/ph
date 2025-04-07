@@ -18,7 +18,7 @@ s32 MapBase::func_ov00_0207e28c(s32 param_2) {}
 void MapBase::vfunc_b4() {}
 void MapBase::vfunc_48() {}
 unk32 MapBase::vfunc_50() {}
-unk32 MapBase::vfunc_54(unk8 *param_1) {}
+unk32 MapBase::vfunc_54(Vec2b *param_1) {}
 unk32 MapBase::vfunc_58(Vec2b *param_1, int param_2) {}
 unk32 MapBase::vfunc_5c() {}
 unk32 MapBase::vfunc_60(u8 *param_1) {}

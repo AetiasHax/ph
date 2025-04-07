@@ -252,12 +252,7 @@ ARM Vec3p *MapManager::func_ov00_02082538() {
     s32 var1 = this->mMap->vfunc_4c();
     Vec3p var0;
     if (var1 == 2) return &this->mMap->mUnk_1a0;
-    q20 x  = gPlayerPos.x;
-    q20 y  = gPlayerPos.y;
-    var0.x = x;
-    var0.y = y;
-    q20 z  = gPlayerPos.z;
-    var0.z = z;
+    var0 = gPlayerPos;
     return &var0;
 }
 
@@ -353,7 +348,11 @@ ARM void MapManager::DestroyMap() {
     if (this->mMap == NULL) {
         return;
     }
-    this->mMap->~MapBase();
+    if (this->mMap != NULL) {
+        this->mMap->~MapBase(); // 0x0 offset instead of the expected 0x4.
+    }
+    this->mMap = NULL;
+    return;
 }
 
 ARM void MapManager::MapData_vfunc_44() {
@@ -1300,7 +1299,8 @@ ARM void MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p
 
     iVar1 = param_2->mMap->vfunc_74(param_3);
     if (iVar1 != 0) {
-        *param_1 = *(unk32 *) (iVar1 + 0xc);
+        // iVar1 += 0xc;
+        *param_1 = iVar1;
         return;
     }
     dVar2 = param_2->MapData_vfunc_70(param_3);
@@ -1324,12 +1324,12 @@ void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {
     Vec3p_Add(&tileBounds->max, &local_20, &tileBounds->max);
 }
 
-unk32 MapManager::MapData_vfunc_54(unk8 *a) {
+unk32 MapManager::MapData_vfunc_54(Vec2b *a) {
     return this->mMap->vfunc_54(a); // what to use for this param?
 }
 
 unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
-    unk8 local_8;
+    Vec2b local_8;
     unk8 local_7;
     unk16 uStack_6;
 
@@ -1383,97 +1383,63 @@ unk8 MapManager::func_ov00_02084164(Vec2b *param_2) {
     unk32 uVar2;
 
     iVar1 = this->mMap->vfunc_58(param_2, 7 /*, pcVar3, param_4*/); // Params?
-    if (iVar1 == 0) {
-        uVar2 = this->MapData_vfunc_54(0);
-        switch (uVar2) {
-            case 0: break;
-            case 1: return 0;
-            case 2: return 0;
-            case 3: return 0;
-            case 4: return 0;
-            case 5: return 0;
-            case 6: return 0;
-            case 7: return 0;
-            case 8: break;
-            case 9: break;
-            case 10: return 0;
-            case 0xb: break;
-            case 0xc: break;
-            case 0xd: break;
-            case 0xe: break; // I mean, honestly Ghidra.
-            case 0xf: break; // What are we going to do with you?
-            case 0x10: break;
-            case 0x11: break;
-            case 0x12: break;
-            case 0x13: break;
-            case 0x14: return 0;
-            case 0x15: break;
-            case 0x16: break;
-            case 0x17: return 0;
-            case 0x18: break;
-            case 0x19: return 0;
-            case 0x1a: break;
-            case 0x1b: return 0;
-            case 0x1c: return 0;
-            case 0x1d: return 0;
-            case 0x1e: return 0;
-            case 0x1f: return 0;
-            case 0x20: break;
-            case 0x21: break;
-            case 0x22: break;
-            case 0x23: break;
-            case 0x24: return 0;
-            case 0x25: break;
-            case 0x26: break;
-            case 0x27: break;
-            case 0x28: break;
-            case 0x29: break;
-            case 0x2a: break;
-            case 0x2b: return 0;
-            case 0x2c: break;
-            case 0x2d: break;
-            case 0x2e: break;
-            case 0x2f: break;
-            case 0x30: return 0;
-            case 0x31: break;
-            case 0x32: break;
-            case 0x33: return 0;
-            case 0x34: return 0;
-            case 0x35: break;
-            case 0x36: break;
-            case 0x37: return 0;
-            case 0x38: break;
-            case 0x39: break;
-            case 0x3a: break;
-            case 0x3b: break;
-            case 0x3c: break;
-            case 0x3d: break;
-            case 0x3e: break;
-            case 0x3f: break;
-            case 0x40: return 0;
-            case 0x41: break;
-            case 0x42: break;
-            case 0x43: break;
-            case 0x44: break;
-            case 0x45: break;
-            case 0x46: return 0;
-            case 0x47: return 0;
-            case 0x48: return 0;
-            case 0x49: return 0;
-            case 0x4a: return 0;
-            case 0x4b: return 0;
-            case 0x4c: return 0;
-            case 0x4d: break;
-            case 0x4e: return 0;
-            case 0x4f: return 0;
-            case 0x50: return 0;
-            case 0x51: break;
-            case 0x52: break;
-            case 0x53: break;
-            case 0x54: break;
-            default: return 0;
-        }
-        return 1;
+    if (iVar1 != 0) {
+        return 0;
+    }
+    uVar2 = this->MapData_vfunc_54(param_2);
+    switch (uVar2) {
+        case 0:
+        case 8:
+        case 9:
+        case 0xb:
+        case 0xc:
+        case 0xd:
+        case 0xe:
+        case 0xf:
+        case 0x10:
+        case 0x11:
+        case 0x12:
+        case 0x13:
+        case 0x15:
+        case 0x16:
+        case 0x18:
+        case 0x1a:
+        case 0x20:
+        case 0x21:
+        case 0x22:
+        case 0x23:
+        case 0x25:
+        case 0x26:
+        case 0x27:
+        case 0x28:
+        case 0x29:
+        case 0x2a:
+        case 0x2c:
+        case 0x2d:
+        case 0x2e:
+        case 0x2f:
+        case 0x31:
+        case 0x32:
+        case 0x35:
+        case 0x36:
+        case 0x38:
+        case 0x39:
+        case 0x3a:
+        case 0x3b:
+        case 0x3c:
+        case 0x3d:
+        case 0x3e:
+        case 0x3f:
+        case 0x41:
+        case 0x42:
+        case 0x43:
+        case 0x44:
+        case 0x45:
+        case 0x4d:
+        case 0x51:
+        case 0x52:
+        case 0x53:
+        case 0x54: return 1;
     }
     return 0;
 }
@@ -1714,54 +1680,30 @@ unk8 MapManager::func_ov00_020847f0() {
 bool MapManager::func_ov00_02084838() {
     unk32 uVar1 = this->GetMapData_Unk_38();
     switch (uVar1) {
-        case 0: return false;
-        case 1: break;
-        case 2: break;
-        case 3: break;
-        case 4: break;
-        case 5: break;
-        case 6: return false;
-        case 7: return false;
-        case 8: return false;
-        case 9: return false;
-        case 10: break;
-        case 0xb: break;
-        case 0xc: break;
-        case 0xd: return false;
-        case 0xe: return false;
-        case 0xf: return false;
-        case 0x10: return false;
-        case 0x11: break;
-        case 0x12: return false;
-        case 0x13: break;
-        case 0x14: break;
-        case 0x15: break;
-        case 0x16: break;
+        case 1:
+        case 2:
+        case 3:
+        case 4:
+        case 5:
+        case 10:
+        case 0xb:
+        case 0xc:
+        case 0x11:
+        case 0x13:
+        case 0x14:
+        case 0x15:
+        case 0x16: return true;
         default: return false;
     }
-    return true;
 }
 
 bool MapManager::func_ov00_020848b8() {
     unk32 uVar1 = this->func_ov00_020846a4();
     switch (uVar1) {
-        case 0: break;
-        case 1: break;
-        case 2: break;
-        case 3: break;
-        case 4: break;
-        case 5: break;
-        case 6: return true;
-        case 7: break;
-        case 8: break;
-        case 9: break;
-        case 10: break;
-        case 0xb: break;
-        case 0xc: return true;
-        case 0xd: return true;
-        case 0xe: break;
-        case 0xf: return true;
-        case 0x10: break;
+        case 6:
+        case 0xc:
+        case 0xd:
+        case 0xf:
         case 0x11: return true;
     }
     return false;
