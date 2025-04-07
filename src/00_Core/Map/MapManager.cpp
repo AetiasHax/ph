@@ -1324,8 +1324,8 @@ void MapManager::GetTileWorldBounds(Vec2b *tile, AABB *tileBounds) {
     Vec3p_Add(&tileBounds->max, &local_20, &tileBounds->max);
 }
 
-unk32 MapManager::MapData_vfunc_54(Vec2b *a) {
-    return this->mMap->vfunc_54(a); // what to use for this param?
+unk32 MapManager::MapData_vfunc_54(Vec2b *param_1) {
+    return this->mMap->vfunc_54(param_1);
 }
 
 unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
@@ -1335,8 +1335,7 @@ unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
     // _local_8 = CONCAT11(param_3, param_2);
-    this->MapData_vfunc_54(&local_8); // Doesn't take any params.
-    // No calls to functions according to objdiff, why???
+    this->MapData_vfunc_54(&local_8);
 }
 
 unk32 MapManager::MapData_vfunc_78(bool *param_1) { // bool* param placeholder for now, no way of knowing what the type is.
@@ -1378,11 +1377,11 @@ unk8 MapManager::MapData_vfunc_58(Vec2b *param_1, int param_2) {
     this->mMap->vfunc_58(param_1, param_2);
 }
 
-unk8 MapManager::func_ov00_02084164(Vec2b *param_2) {
+ARM s32 MapManager::func_ov00_02084164(Vec2b *param_2) {
     int iVar1;
     unk32 uVar2;
 
-    iVar1 = this->mMap->vfunc_58(param_2, 7 /*, pcVar3, param_4*/); // Params?
+    iVar1 = this->mMap->vfunc_58(param_2, 7);
     if (iVar1 != 0) {
         return 0;
     }
