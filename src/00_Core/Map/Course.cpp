@@ -15,7 +15,7 @@ void Course::GetMCSFilePath(unk32 buf, s32 fileIndex, unk32 fileType) {}
 void Course::GetMRCFilePath(unk32 param_2, unk32 buf, unk32 param_4) {}
 void Course::func_ov00_0207ce20(unk32 param_2, unk32 param_3, char *param_4, unk32 param_5) {}
 void Course::func_ov00_0207ce4c(s32 param_2, s32 param_3, unk32 param_4, char *param_5, unk32 param_6) {}
-bool Course::func_ov00_0207d404(s32 param_2, unk32 param_3, unk32 param_4) {}
+bool Course::func_ov00_0207d404(s32 param_2, unk32 param_3, unk32 param_4, unk32 param_5) {}
 bool Course::IsCurrentMapInMainGrid() {}
 bool Course::IsInMainGrid(s32 x, s32 y) {}
 bool Course::IsMapInMainGrid(u32 map) {}

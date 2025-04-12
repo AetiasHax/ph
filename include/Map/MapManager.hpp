@@ -73,7 +73,7 @@ public:
     void func_ov00_02082660(s32 param_2, s32 param_3);
     void func_ov00_02082670(unk32 param_2, s32 param_3);
     void func_ov00_02082680(unk32 param_2, unk32 param_3);
-    void func_ov00_020826a0(unk32 param_2, unk32 param_3, unk32 param_4);
+    void func_ov00_020826a0(unk32 param_2, unk32 param_3);
     void CreateMap(unk32 mapType, unk32 param_3, unk32 param_4);
     void DestroyMap();
     void MapData_vfunc_44();
@@ -128,7 +128,7 @@ public:
     unk32 func_ov00_02083588();
     unk32 func_ov00_020835a4();
     unk32 func_ov00_020835b4();
-    unk8 func_ov00_020835c4(MapManager *param_1, s32 param_2, unk32 param_3);
+    bool func_ov00_020835c4(s32 param_2, unk32 param_3);
     bool func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4);
     unk32 func_ov00_020835f4(s32 param_2);
     void func_ov00_02083604(s32 param_2);
@@ -204,7 +204,7 @@ public:
     bool func_ov00_02084838();
     bool func_ov00_020848b8();
     void func_ov00_02084924(u32 param_2);
-    bool func_ov00_02084934(s32 *param_2);
+    bool func_ov00_02084934(Vec3p *param_2);
     u8 GetMapData_Unk_06();
     u8 GetMapData_Unk_07();
     bool func_ov00_0208499c();
@@ -229,7 +229,7 @@ public:
     void func_ov00_02084ce4(unk32 param_2);
     bool func_ov00_02084cfc(unk32 param_2);
     u8 GetMapData_Unk_09();
-    unk8 func_ov00_02084d24(unk8 param_2, unk8 param_3, unk32 param_4);
+    void func_ov00_02084d24(unk32 param_2, unk32 param_3, unk32 param_4);
     s32 func_ov00_02084d4c(unk32 param_2, unk32 param_3, Vec3p *param_4);
     unk32 func_ov00_02084ebc(Vec3p *param_2);
     s32 func_ov00_02085108(s32 *param_2);

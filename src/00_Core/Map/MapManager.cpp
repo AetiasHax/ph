@@ -1,6 +1,11 @@
+// TODO: Make sure every function has either ARM or THUMB
+// TODO: Optimise functions' bodies as much as possible (without affecting asm)
+// Clear these comments when done
+
 #include "Map/MapManager.hpp"
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
 #include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
 
@@ -33,6 +38,7 @@ extern void func_ov000_02093a1c(u32 *param_1, s32 *param_2);
 extern void func_ov000_02096324(s32 *param_1, s32 param_2);
 extern s32 *func_ov000_02096418(s32 *param_1);
 extern void func_ov000_0209d6e8(s32 param_1, s32 param_2);
+extern s32 func_ov000_0209d71c(s32 *param_1, s32 param_2);
 extern unk32 func_ov000_020a5e9c(unk32 *param_1);
 
 extern void func_ov004_021024c4(MapManager *param_1, s32 param_2, bool param_3, s32 param_4);
@@ -42,20 +48,32 @@ extern void func_ov004_02102e3c(s32 *param_1);
 extern void func_ov004_02105578(ActorManager *param_1, u32 param_2);
 extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
 
+extern MapBase *func_ov012_0212b358(MapBase *param_1, unk32 param_2, unk32 param_3);
+
+extern MapBase *func_ov015_02128dd8(MapBase *param_1, unk32 param_2, unk32 param_3);
 extern s32 func_ov015_02129c14(MapBase *param_1);
 extern bool func_ov015_02129c24(MapBase *param_1, Vec3p *param_2, Vec3p *param_3);
 extern bool func_ov015_02129c34(MapBase *param_1, s32 param_2);
 extern bool func_ov015_02129c44(MapBase *param_1, s32 param_2);
 
-struct UnkStruct_027e0d38 {
-    /* 00 */ unk8 mUnk_00[0xc];
+extern MapBase *func_ov017_0215b4e8(MapBase *param_1, unk32 param_2, unk32 param_3);
+
+extern MapBase *func_ov018_0215b4a0(MapBase *param_1, unk32 param_2, unk32 param_3);
+
+// Should this be defined?
+extern int sprintf(char *__restrict s, const char *__restrict format, ...);
+
+struct UnkStruct_02082348 {
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk32 mUnk_08;
     /* 0c */ unk32 mUnk_0c;
-    /* 10 */ unk8 mUnk_10[0x18];
-    /* 28 */ unk32 mUnk_28;
+    /* 10 */ unk16 mUnk_10;
+    /* 12 */ unk8 mUnk_12[0x4];
 };
 
 extern s32 *data_027e0c68;
-extern UnkStruct_027e0d38 *data_027e0d38;
+extern u32 *data_027e0ce4;
 extern s32 *data_027e0d3c;
 extern s32 *data_027e0f64;
 extern s32 *data_027e0f68;
@@ -117,8 +135,8 @@ unk8 MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
         *(unk8 *) (param_3 + 1) = 2;
         uVar2                   = 4;
     }
-    *(unk8 *) ((int) param_3 + 5)     = uVar2;
-    uVar3                             = func_ov000_020a5e9c(&data_027e0d38->mUnk_28) + 0x1c;
+    *(unk8 *) ((int) param_3 + 5) = uVar2;
+    // uVar3                             = func_ov000_020a5e9c(data_027e0d38->mUnk_28) + 0x1c;
     puVar1                            = (s32 *) data_027e0d38;
     param_3[2]                        = uVar3;
     *(unk8 *) (param_3 + 4)           = *(unk8 *) (*(s32 *) (*(s32 *) puVar1 + 0x28) + 0x2e);
@@ -169,13 +187,18 @@ ARM void MapManager::func_ov00_0208230c(s32 *param_2) {
 }
 
 ARM void MapManager::func_ov00_02082348(unk32 *param_2) {
-    s32 var[4];
-    var[0] = 0x47;
-    var[1] = 0;
-    var[2] = 0;
-    var[3] = 0xfffffffe;
-    this->func_ov00_0208230c(var);
-    func_ov000_02078bf0(var, *param_2);
+    UnkStruct_02082348 unkStruct;
+    unkStruct.mUnk_00    = 0x47;
+    unkStruct.mUnk_04    = 0;
+    unkStruct.mUnk_08    = 0;
+    unkStruct.mUnk_0c    = 0;
+    unkStruct.mUnk_10    = 0;
+    unkStruct.mUnk_12[0] = 0xff;
+    unkStruct.mUnk_12[1] = 0;
+    unkStruct.mUnk_12[2] = 0;
+    unkStruct.mUnk_12[3] = 0;
+    this->func_ov00_0208230c((s32 *) &unkStruct);
+    func_ov000_02078bf0((s32 *) &unkStruct, *param_2);
 }
 
 ARM void MapManager::func_ov00_020823a4(unk32 param_2) {
@@ -265,14 +288,13 @@ ARM void MapManager::func_ov00_020825ac() {
 }
 
 ARM s32 MapManager::GetCourseFilePath(char *courseName, char *buf) {
-    // s32 var = sprintf(buf, "Map/%s/course.bin", courseName); // Should we manually define sprintf?
-    // return var;
+    s32 var = sprintf(buf, "Map/%s/course.bin", courseName); // Should we manually define sprintf?
+    return var;
+    // reference to func_ov000_020e2528 (changed to @1495 in symbols)
 }
 
 ARM void MapManager::func_ov00_020825e4(unk32 param_2, char *buf) {
-    // param2 unused.
-    // return value of GetCourseFilePath unused.
-    char *courseName; // = (char *) func_ov000_0209d71c(*(unk32 *) DWORD_027e0f7c) does not exist.
+    char *courseName = (char *) func_ov000_0209d71c(data_027e0f7c, param_2);
     this->GetCourseFilePath(courseName, buf);
 }
 
@@ -300,10 +322,8 @@ ARM void MapManager::func_ov00_02082680(unk32 param_2, unk32 param_3) {
     this->mMap->vfunc_98(param_2, 5, param_3);
 }
 
-ARM void MapManager::func_ov00_020826a0(unk32 param_2, unk32 param_3, unk32 param_4) {
-    this->mMap->vfunc_98(param_2, 7, param_3 /*, param_4*/);
-    // vfunc_98 takes either three params or four ??? This doesn't make sense
-    // objdiff says 100%
+ARM void MapManager::func_ov00_020826a0(unk32 param_2, unk32 param_3) {
+    this->mMap->vfunc_98(param_2, 7, param_3);
 }
 
 ARM void MapManager::CreateMap(unk32 mapType, unk32 param_3, unk32 param_4) {
@@ -312,33 +332,33 @@ ARM void MapManager::CreateMap(unk32 mapType, unk32 param_3, unk32 param_4) {
     if (this->mMap == NULL) {
         switch (mapType) {
             case 0:
-                // mapBase = (MapBase *) SysObject::operator_new(0x1dc, (astruct_19 **)(DWORD_027e0ce0 + 4), 4);
-                // What is astruct_19 ** ? What is DWORD_027e0ce0 ?
+            // data_027e0ce4 (data_027e0ce0) of type UnkStruct_0202e894
+                SysObject::operator new(0x1dc, data_027e0ce4, 4);
                 if (mapBase != NULL) {
-                    // mapBase = (MapBase *)func_ov018_0215b4a0(mapBase, param_3, param_4); // Does not exist.
+                    mapBase = (MapBase *) func_ov018_0215b4a0(mapBase, param_3, param_4); // Does not exist.
                 }
                 this->mMap = mapBase;
                 return;
             case 1: break;
             case 2:
-                // mapBase = (MapBase *) SysObject::operator_new(0x1b0, (astruct_19 **)(DWORD_027e0ce0 + 4), 4);
+                mapBase = (MapBase *) SysObject::operator new(0x1b0, data_027e0ce4, 4);
                 if (mapBase != NULL) {
-                    // mapBase = (MapBase *)func_ov015_02128dd8(mapBase, param_3, param_4); // Does not exist.
+                    mapBase = (MapBase *) func_ov015_02128dd8(mapBase, param_3, param_4); // Does not exist.
                 }
                 this->mMap = mapBase;
                 return;
             case 3: break;
             case 4:
-                // mapBase = (MapBase *) SysObject::operator_new(0x790, (astruct_19 **)(DWORD_027e0ce0 + 4), 4);
+                mapBase = (MapBase *) SysObject::operator new(0x790, data_027e0ce4, 4);
                 if (mapBase != NULL) {
-                    // mapBase = (MapBase *)func_ov012_0212b358(mapBase, param_3, param_4); // Does not exist.
+                    mapBase = (MapBase *) func_ov012_0212b358(mapBase, param_3, param_4); // Does not exist.
                 }
                 this->mMap = mapBase;
                 return;
         }
-        // mapBase = (MapBase *) SysObject::operator_new(0x790, (astruct_19 **)(DWORD_027e0ce0 + 4), 4);
+        mapBase = (MapBase *) SysObject::operator new(0x790, data_027e0ce4, 4);
         if (mapBase != NULL) {
-            // mapBase = (MapBase *)func_ov017_0215b4e8(mapBase, param_3, param_4); // Does not exist.
+            mapBase = (MapBase *) func_ov017_0215b4e8(mapBase, param_3, param_4); // Does not exist.
         }
         this->mMap = mapBase;
     }
@@ -360,26 +380,25 @@ ARM void MapManager::MapData_vfunc_44() {
 }
 
 ARM void MapManager::func_ov00_02082808(s32 param_2) {
-    // How to define PTR_027e0d38 ?
-    // if (*(int*)(*(int*)PTR_027e0d38 + 0x14) == 1) {
-    //    return;
-    // }
-    s32 var1; // = func_ov00_02084740()
+    if (*(int *) (*(int *) data_027e0d38 + 0x14) == 1) {
+        return;
+    }
+    s32 var1 = this->func_ov00_02084740();
     s32 var2;
     if (param_2 == 0) {
         // var2 = thunk_FUN_0201f91c(DWORD_overlay_d_0_bss__020eec68); // What are these?
         if (var1 == var2) {
             return;
         }
-        // func_ov00_020d70a4(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_3); // And these?
+        // func_ov000_020d70a4(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_3); // And these?
     } else {
-        // var2 = func_ov00_020a5e9c(*(s32 *) PTR_027e0d38 + 0xc);
+        var2 = func_ov000_020a5e9c((unk32 *) data_027e0d38 + 0xc);
         if (var2 == 0) {
             // func_ov015_021849a4(DWORD_overlay_d_15_bss__02190458);
         }
         // func_ov00_020a5e9c(DWORD_overlay_d_0_bss__020eec68, var1, 0, 0x7f, param_3);
     }
-    // var1 = func_ov00_020a5e9c(*(s32 *) PTR_027e0d38 + 0xc);
+    var1 = func_ov000_020a5e9c((unk32 *) data_027e0d38 + 0xc);
     if (var1 == 0) {
         return;
     }
@@ -564,14 +583,14 @@ ARM u32 MapManager::func_ov00_02082d74(unk32 param_2) {
 }
 
 ARM void MapManager::func_ov00_02082d84(unk8 *param_2, s32 *param_3, s32 *param_4) {
-    s32 mapWidth = this->GetMapWidth();
-    u32 uVar3; // = CoDivide64By32(0x100000, mapWidth << 0xc); Not defined ?
+    s32 mapWidth  = this->GetMapWidth();
+    u32 uVar3     = CoDivide64By32(0x100000, mapWidth << 0xc);
     s32 mapHeight = this->GetMapHeight();
-    u32 uVar4; // = CoDivide64By32(0xc0000, mapHeight << 0xc); Not defined ?
-    s64 lVar1 = (s64) (s32) ((u32) *param_2 << 0xc);
-    *param_3  = (s32) (((u32) lVar1 >> 0xc | (s32) ((u64) lVar1 >> 0x20) * 0x100000) + ((s32) uVar4 >> 1) + 0x800) >> 0xc;
-    lVar1     = (s64) (s32) ((u32) param_2[1] << 0xc) * (s64) (s32) uVar4 + 0x800;
-    *param_4  = (s32) (((u32) lVar1 >> 0xc | (s32) ((u64) lVar1 >> 0x20) * 0x100000) + ((s32) uVar4 >> 1) + 0x800) >> 0xc;
+    u32 uVar4     = CoDivide64By32(0xc0000, mapHeight << 0xc);
+    s64 lVar1     = (s64) (s32) ((u32) *param_2 << 0xc);
+    *param_3      = (s32) (((u32) lVar1 >> 0xc | (s32) ((u64) lVar1 >> 0x20) * 0x100000) + ((s32) uVar4 >> 1) + 0x800) >> 0xc;
+    lVar1         = (s64) (s32) ((u32) param_2[1] << 0xc) * (s64) (s32) uVar4 + 0x800;
+    *param_4      = (s32) (((u32) lVar1 >> 0xc | (s32) ((u64) lVar1 >> 0x20) * 0x100000) + ((s32) uVar4 >> 1) + 0x800) >> 0xc;
 }
 
 ARM bool MapManager::func_ov00_02082e1c(s32 *param_2, s32 *param_3) {
@@ -597,7 +616,7 @@ ARM bool MapManager::func_ov00_02082e1c(s32 *param_2, s32 *param_3) {
         local_44[0] = -0x100;
         local_48    = -0x100;
         bVar1       = this->mMap->mUnk_01a;
-        // iVar5       = UnkStruct_027e0d38::FUN_overlay_d_0__02078b40(*(UnkStruct_027e0d38 **) PTR_PTR_overlay_d_0__02083068);
+        iVar5       = data_027e0d38->func_ov000_02078b40();
         if (iVar5 == 0) {
             // bVar2 = *(u8 *) (*(s32 *) (*(s32 *) PTR_PTR_overlay_d_0__02083068 + 0x28) + 0x9a);
         } else {
@@ -894,8 +913,8 @@ ARM unk32 MapManager::func_ov00_020835b4() {
     return this->mCourse->Get_Unk_c8_04();
 }
 
-ARM unk8 MapManager::func_ov00_020835c4(MapManager *param_1, s32 param_2, unk32 param_3) {
-    return param_1->mCourse->func_ov00_0207d404(param_2, 0, param_3);
+ARM bool MapManager::func_ov00_020835c4(s32 param_1, unk32 param_2) {
+    return this->mCourse->func_ov00_0207d404(param_1, 0, param_2, 3);
 }
 
 ARM bool MapManager::func_ov00_020835e4(s32 param_2, unk32 *param_3, unk8 *param_4) {
@@ -916,14 +935,7 @@ ARM unk8 MapManager::func_ov00_02083614(s32 param_2) {
 
 ARM bool MapManager::GetEntrancePos(Entrance *param_1, unk32 entranceId) {
     Entrance *entrance = this->mMap->FindEntrance(entranceId);
-    q20 y              = entrance->mPos.y;
-    q20 z              = entrance->mPos.z;
-    param_1->mPos.x    = entrance->mPos.x;
-    param_1->mPos.y    = y;
-    param_1->mPos.z    = z;
-    param_1->mAngle    = entrance->mAngle;
-    param_1->mId       = entrance->mId;
-    param_1->mUnk_10   = entrance->mUnk_10;
+    *param_1           = *entrance;
     return true;
 }
 
@@ -1099,8 +1111,10 @@ ARM s32 MapManager::func_ov00_020839f8(s32 param_2) {
 }
 
 ARM void MapManager::func_ov00_02083a1c(Vec2b *param_1, MapManager *param_2, Vec3p *param_3) {
-    param_1->x /*or y?*/ = param_2->func_ov00_020839f8(param_3->z);
-    param_1->y /*or x?*/ = param_2->func_ov00_020839d4(param_3->x);
+    s8 x       = param_2->func_ov00_020839f8(param_3->z);
+    s8 y       = param_2->func_ov00_020839d4(param_3->x);
+    param_1->x = y;
+    param_1->y = x;
 }
 
 ARM void MapManager::func_ov00_02083a54(u8 *param_1, MapManager *param_2, s32 *param_3, s32 param_4, s32 *param_5) {
@@ -1175,13 +1189,16 @@ ARM s32 MapManager::func_ov00_02083c50(unk32 z) {
 }
 
 ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, u32 param_3) {
+    q20 x;
+    q20 z;
+    q20 y;
     Vec3p local_28;
-    q20 x = this->func_ov00_02083c24(param_3 & 0xff);
-    // param_2->x = x;
-    q20 z = this->func_ov00_02083c50(param_3 >> 8 & 0xff);
-    // param_2->z = z;
-    q20 y = this->MapData_vfunc_68(&local_28, true);
-    // param_2->y = y;
+    x          = this->func_ov00_02083c24(param_3 & 0xff);
+    param_2->x = x;
+    z          = this->func_ov00_02083c50(param_3 >> 8 & 0xff);
+    param_2->z = z;
+    y          = this->MapData_vfunc_68(&local_28, true);
+    param_2->y = y;
 }
 
 ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5) {
@@ -1612,6 +1629,7 @@ ARM s32 MapManager::func_ov00_02084700(MapManager *pMapManager) {
 
 unk8 MapManager::func_ov00_02084740() {
     static const s32 data_ov000_020d88f0[] = {
+        // Map IDs?
         0x51, 0x6e, 0x65, 0x50, 0x30, 0x74, 0x49, 0x50, 0x51, 0x54, 0x52, 0x53, 0x55, 0x56, 0x57, 0x58, 0x59, 0x5a, 0x5f,
         0x60, 0x61, 0x5c, 0x5b, 0x5e, 0x62, 0x63, 0x64, 0x3f, 0x40, 0x41, 0x42, 0x43, 0x44, 0x45, 0x46, 0x5d, 0x31, 0x39,
         0x3a, 0x3b, 0x3c, 0x32, 0x33, 0x34, 0x35, 0x38, 0x3d, 0xd9, 0xdc, 0xa1, 0xa2, 0xa3, 0xa4, 0xa5, 0xa6, 0x6f, 0x72,
@@ -1625,7 +1643,7 @@ unk8 MapManager::func_ov00_02084740() {
     unk32 uVar5;
     unk32 uVar6;
     unk32 uVar7;
-    unk32 *puVar8;
+    s32 *puVar8;
     unk32 *puVar9;
     unk32 local_1c8;
     unk32 local_1c4;
@@ -1645,7 +1663,7 @@ unk8 MapManager::func_ov00_02084740() {
     }
     puVar9 = local_1bc;
     iVar3  = 0x1b;
-    // puVar8 = (unk32 *) PTR_DWORD_overlay_d_0__020d88f0_overlay_d_0__020847dc;
+    puVar8 = (s32 *) data_ov000_020d88f0;
     do {
         uVar4     = *puVar8;
         uVar5     = puVar8[1];
@@ -1717,17 +1735,17 @@ void MapManager::func_ov00_02084924(u32 param_2) {
     this->mMap->func_ov00_0208008c(param_2);
 }
 
-bool MapManager::func_ov00_02084934(s32 *param_2) {
-    int iVar2;
-    int iVar3;
-    int iVar4;
+bool MapManager::func_ov00_02084934(Vec3p *param_2) {
+    q20 iVar2;
+    q20 iVar3;
+    q20 iVar4;
     Vec3p local_20;
 
     iVar2      = this->GetMapCenterZ();
-    iVar3      = param_2[2];
-    iVar4      = param_2[1];
+    iVar3      = param_2->z;
+    iVar4      = param_2->y;
     local_20.x = this->GetMapCenterX();
-    local_20.x = *param_2 - local_20.x;
+    local_20.x = param_2->x - local_20.x;
     local_20.y = iVar4;
     local_20.z = iVar3 - iVar2;
     return this->mMap->IsInBounds(&local_20);
@@ -1822,22 +1840,20 @@ unk8 MapManager::func_ov00_02084b38(unk32 param_2, unk32 param_3, unk32 param_4)
     if (param_2 != 0) {
         // value = SUB41(param_4, 0); // What is SUB41 and where is it defined?
         switch (param_3) {
-            case 0: goto LAB_overlay_d_0__02084b60;
+            case 0:
+                pMVar1 = this->mMap;
+                if (param_4 == 0) {
+                    pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 & ~(1 << (param_2 & 0x1f));
+                    return;
+                }
+                pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 | 1 << (param_2 & 0x1f);
+                return;
             case 1: this->mCourse->SetMapDataFlag0(param_2, value); return;
             case 2: this->mCourse->SetFlag0(param_2, value); return;
             case 3: this->mCourse->SetFlag1(param_2, value); return;
             default: return;
         }
     }
-    return;
-LAB_overlay_d_0__02084b60:
-    pMVar1 = this->mMap;
-    if (param_4 == 0) {
-        pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 & ~(1 << (param_2 & 0x1f));
-        return;
-    }
-    pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 | 1 << (param_2 & 0x1f);
-    return;
 }
 
 bool MapManager::func_ov00_02084be0(u32 param_2, unk32 param_3) {
@@ -1924,14 +1940,14 @@ u8 MapManager::GetMapData_Unk_09() {
     return this->mMap->mUnk_009;
 }
 
-unk8 MapManager::func_ov00_02084d24(unk8 param_2, unk8 param_3, unk32 param_4) {
+ARM void MapManager::func_ov00_02084d24(unk32 param_2, unk32 param_3, unk32 param_4) {
     unk8 local_8;
     unk8 local_7;
     unk16 uStack_6;
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
-    // _local_8 = CONCAT11(param_3, param_2); // What is CONCAT11 ?
-    // this->mMap->vfunc_90(&local_8, param_4); // Missing parameter ?
+    //  _local_8 = CONCAT11(param_3, param_2); // What is CONCAT11 ?
+    this->mMap->vfunc_90(param_2, param_3, param_4); // Missing parameter ?
 }
 
 s32 MapManager::func_ov00_02084d4c(unk32 param_2, unk32 param_3, Vec3p *param_4) {
@@ -2028,48 +2044,25 @@ unk32 MapManager::func_ov00_02084ebc(Vec3p *param_2) {
         }
         if (iVar2 < 0x2a) {
             switch (iVar2) {
-                case 0: break;
-                case 1: return 0;
-                case 2: return 0;
-                case 3: return 0;
-                case 4: return 0;
-                case 5: return 0;
-                case 6: return 0;
-                case 7: break;
-                case 8: return 0;
-                case 9: return 0;
-                case 10: break;
-                case 0xb: break;
-                case 0xc: break;
-                case 0xd: break;
-                case 0xe: break;
-                case 0xf: break;
-                case 0x10: break;
-                case 0x11: break;
-                case 0x12: break;
-                case 0x13: break;
-                case 0x14: return 0;
-                case 0x15: break;
-                case 0x16: return 0;
-                case 0x17: return 0;
-                case 0x18: break;
-                case 0x19: return 0;
-                case 0x1a: break;
-                case 0x1b: break;
-                case 0x1c: break;
-                case 0x1d: return 0;
-                case 0x1e: return 0;
-                case 0x1f: return 0;
-                case 0x20: break;
-                case 0x21: break;
-                case 0x22: break;
-                case 0x23: break;
-                case 0x24: break;
-                case 0x25: break;
-                case 0x26: break;
-                case 0x27: return 0;
-                case 0x28: return 0;
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:
+                case 8:
+                case 9:
+                case 0x14:
+                case 0x16:
+                case 0x17:
+                case 0x19:
+                case 0x1d:
+                case 0x1e:
+                case 0x1f:
+                case 0x27:
+                case 0x28:
                 case 0x29: return 0;
+                default: break;
             }
         } else if (iVar2 == 0x37) {
             return 0;

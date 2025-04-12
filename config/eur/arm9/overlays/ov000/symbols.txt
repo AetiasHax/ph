@@ -83,7 +83,7 @@ _ZN18UnkStruct_027e0d3819func_ov000_02078b40Ev kind:function(arm,size=0x24) addr
 _ZN18UnkStruct_027e0d3819func_ov000_02078b64Ev kind:function(arm,size=0x24) addr:0x2078b64
 _ZN18UnkStruct_027e0d3819func_ov000_02078b88Ev kind:function(arm,size=0x3c) addr:0x2078b88
 _Z19func_ov000_02078bc4i kind:function(thumb,size=0x2c) addr:0x2078bc4
-func_ov000_02078bf0 kind:function(thumb,size=0x11c) addr:0x2078bf0
+_Z19func_ov000_02078bf0Pii kind:function(thumb,size=0x11c) addr:0x2078bf0
 func_ov000_02078d0c kind:function(thumb,size=0x24) addr:0x2078d0c
 func_ov000_02078d30 kind:function(thumb,size=0x24) addr:0x2078d30
 func_ov000_02078d54 kind:function(thumb,size=0x3c) addr:0x2078d54
@@ -283,7 +283,7 @@ _ZN6Course14GetMCSFilePathEiii kind:function(arm,size=0xf0) addr:0x207cc84
 _ZN6Course14GetMRCFilePathEiii kind:function(arm,size=0xac) addr:0x207cd74
 _ZN6Course18func_ov00_0207ce20EiiPci kind:function(arm,size=0x2c) addr:0x207ce20
 _ZN6Course18func_ov00_0207ce4cEiiiPci kind:function(arm,size=0x5b8) addr:0x207ce4c
-_ZN6Course18func_ov00_0207d404Eiii kind:function(arm,size=0x78) addr:0x207d404
+_ZN6Course18func_ov00_0207d404Eiiii kind:function(arm,size=0x78) addr:0x207d404
 _ZN6Course22IsCurrentMapInMainGridEv kind:function(arm,size=0x14) addr:0x207d47c
 _ZN6Course12IsInMainGridEii kind:function(arm,size=0x54) addr:0x207d490
 _ZN6Course15IsMapInMainGridEj kind:function(arm,size=0x34) addr:0x207d4e4
@@ -516,7 +516,7 @@ _ZN10MapManager18func_ov00_02082650Eiii kind:function(arm,size=0x10) addr:0x2082
 _ZN10MapManager18func_ov00_02082660Eii kind:function(arm,size=0x10) addr:0x2082660
 _ZN10MapManager18func_ov00_02082670Eii kind:function(arm,size=0x10) addr:0x2082670
 _ZN10MapManager18func_ov00_02082680Eii kind:function(arm,size=0x20) addr:0x2082680
-_ZN10MapManager18func_ov00_020826a0Eiii kind:function(arm,size=0x20) addr:0x20826a0
+_ZN10MapManager18func_ov00_020826a0Eii kind:function(arm,size=0x20) addr:0x20826a0
 _ZN10MapManager9CreateMapEiii kind:function(arm,size=0x100) addr:0x20826c0
 _ZN10MapManager10DestroyMapEv kind:function(arm,size=0x30) addr:0x20827c0
 _ZN10MapManager16MapData_vfunc_44Ev kind:function(arm,size=0x18) addr:0x20827f0
@@ -571,7 +571,7 @@ _ZN10MapManager18func_ov00_02083570Eii kind:function(arm,size=0x18) addr:0x20835
 _ZN10MapManager18func_ov00_02083588Ev kind:function(arm,size=0x1c) addr:0x2083588
 _ZN10MapManager18func_ov00_020835a4Ev kind:function(arm,size=0x10) addr:0x20835a4
 _ZN10MapManager18func_ov00_020835b4Ev kind:function(arm,size=0x10) addr:0x20835b4
-_ZN10MapManager18func_ov00_020835c4EPS_ii kind:function(arm,size=0x20) addr:0x20835c4
+_ZN10MapManager18func_ov00_020835c4Eii kind:function(arm,size=0x20) addr:0x20835c4
 _ZN10MapManager18func_ov00_020835e4EiPiPc kind:function(arm,size=0x10) addr:0x20835e4
 _ZN10MapManager18func_ov00_020835f4Ei kind:function(arm,size=0x10) addr:0x20835f4
 _ZN10MapManager18func_ov00_02083604Ei kind:function(arm,size=0x10) addr:0x2083604
@@ -647,7 +647,7 @@ _ZN10MapManager18func_ov00_020847f0Ev kind:function(arm,size=0x48) addr:0x20847f
 _ZN10MapManager18func_ov00_02084838Ev kind:function(arm,size=0x80) addr:0x2084838
 _ZN10MapManager18func_ov00_020848b8Ev kind:function(arm,size=0x6c) addr:0x20848b8
 _ZN10MapManager18func_ov00_02084924Ej kind:function(arm,size=0x10) addr:0x2084924
-_ZN10MapManager18func_ov00_02084934EPi kind:function(arm,size=0x50) addr:0x2084934
+_ZN10MapManager18func_ov00_02084934EP5Vec3p kind:function(arm,size=0x50) addr:0x2084934
 _ZN10MapManager17GetMapData_Unk_06Ev kind:function(arm,size=0xc) addr:0x2084984
 _ZN10MapManager17GetMapData_Unk_07Ev kind:function(arm,size=0xc) addr:0x2084990
 _ZN10MapManager18func_ov00_0208499cEv kind:function(arm,size=0x24) addr:0x208499c
@@ -672,7 +672,7 @@ _ZN10MapManager18func_ov00_02084cc8Ei kind:function(arm,size=0x1c) addr:0x2084cc
 _ZN10MapManager18func_ov00_02084ce4Ei kind:function(arm,size=0x18) addr:0x2084ce4
 _ZN10MapManager18func_ov00_02084cfcEi kind:function(arm,size=0x1c) addr:0x2084cfc
 _ZN10MapManager17GetMapData_Unk_09Ev kind:function(arm,size=0xc) addr:0x2084d18
-_ZN10MapManager18func_ov00_02084d24Ecci kind:function(arm,size=0x28) addr:0x2084d24
+_ZN10MapManager18func_ov00_02084d24Eiii kind:function(arm,size=0x28) addr:0x2084d24
 _ZN10MapManager18func_ov00_02084d4cEiiP5Vec3p kind:function(arm,size=0x170) addr:0x2084d4c
 _ZN10MapManager18func_ov00_02084ebcEP5Vec3p kind:function(arm,size=0x24c) addr:0x2084ebc
 _ZN10MapManager18func_ov00_02085108EPi kind:function(arm,size=0x174) addr:0x2085108
@@ -1459,7 +1459,7 @@ func_ov000_0209d6d0 kind:function(arm,size=0x4) addr:0x209d6d0
 func_ov000_0209d6d4 kind:function(arm,size=0x14) addr:0x209d6d4
 _Z19func_ov000_0209d6e8ii kind:function(arm,size=0x28) addr:0x209d6e8
 func_ov000_0209d710 kind:function(arm,size=0xc) addr:0x209d710
-func_ov000_0209d71c kind:function(arm,size=0xc) addr:0x209d71c
+_Z19func_ov000_0209d71cPii kind:function(arm,size=0xc) addr:0x209d71c
 func_ov000_0209d728 kind:function(arm,size=0x10) addr:0x209d728
 func_ov000_0209d738 kind:function(arm,size=0x10) addr:0x209d738
 func_ov000_0209d748 kind:function(arm,size=0x10) addr:0x209d748
@@ -4054,7 +4054,7 @@ data_ov000_020e250c kind:data(any) addr:0x20e250c
 data_ov000_020e2510 kind:data(any) addr:0x20e2510
 data_ov000_020e2520 kind:data(any) addr:0x20e2520
 data_ov000_020e2524 kind:data(any) addr:0x20e2524
-data_ov000_020e2528 kind:data(any) addr:0x20e2528
+@1495 kind:data(any) addr:0x20e2528
 data_ov000_020e2544 kind:data(any) addr:0x20e2544
 data_ov000_020e2568 kind:data(any) addr:0x20e2568
 data_ov000_020e2588 kind:data(any) addr:0x20e2588
