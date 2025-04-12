@@ -8,6 +8,7 @@
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
+#include "stdio.h"
 
 extern bool func_01ffbe78(Vec3p *param1, Vec3p *param2, Vec3p *param3, Vec4p *param4);
 
@@ -59,9 +60,6 @@ extern bool func_ov015_02129c44(MapBase *param_1, s32 param_2);
 extern MapBase *func_ov017_0215b4e8(MapBase *param_1, unk32 param_2, unk32 param_3);
 
 extern MapBase *func_ov018_0215b4a0(MapBase *param_1, unk32 param_2, unk32 param_3);
-
-// Should this be defined?
-extern int sprintf(char *__restrict s, const char *__restrict format, ...);
 
 struct UnkStruct_02082348 {
     /* 00 */ unk32 mUnk_00;
@@ -288,9 +286,8 @@ ARM void MapManager::func_ov00_020825ac() {
 }
 
 ARM s32 MapManager::GetCourseFilePath(char *courseName, char *buf) {
-    s32 var = sprintf(buf, "Map/%s/course.bin", courseName); // Should we manually define sprintf?
+    s32 var = sprintf(buf, "Map/%s/course.bin", courseName);
     return var;
-    // reference to func_ov000_020e2528 (changed to @1495 in symbols)
 }
 
 ARM void MapManager::func_ov00_020825e4(unk32 param_2, char *buf) {
