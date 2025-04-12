@@ -8,6 +8,7 @@
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
+#include "stdio.h"
 
 extern bool func_01ffbe78(Vec3p *param1, Vec3p *param2, Vec3p *param3, Vec4p *param4);
 
