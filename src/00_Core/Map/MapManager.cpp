@@ -1938,13 +1938,13 @@ u8 MapManager::GetMapData_Unk_09() {
 }
 
 ARM void MapManager::func_ov00_02084d24(unk32 param_2, unk32 param_3, unk32 param_4) {
-    unk8 local_8;
-    unk8 local_7;
+    unk8 local_8 = param_2;
+    unk8 local_7 = param_3;
     unk16 uStack_6;
 
     uStack_6 = (unk16) ((u32) param_4 >> 0x10);
-    //  _local_8 = CONCAT11(param_3, param_2); // What is CONCAT11 ?
-    this->mMap->vfunc_90(param_2, param_3, param_4); // Missing parameter ?
+    //  _local_8 = CONCAT11(param_3, param_2);
+    this->mMap->vfunc_90(param_2, param_3, param_4);
 }
 
 s32 MapManager::func_ov00_02084d4c(unk32 param_2, unk32 param_3, Vec3p *param_4) {
