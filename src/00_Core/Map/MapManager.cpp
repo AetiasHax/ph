@@ -6,6 +6,7 @@
 #include "Actor/Actor.hpp"
 #include "Actor/ActorManager.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
+#include "DTCM/UnkStruct_027e0fd4.hpp"
 #include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "stdio.h"
@@ -1308,17 +1309,16 @@ ARM unk32 MapManager::MapData_vfunc_70(Vec3p *param_2) {
 }
 
 ARM void MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {
-    s32 iVar1;
+    Vec4p *iVar1;
     s32 dVar2;
 
-    iVar1 = param_2->mMap->vfunc_74(param_3);
-    if (iVar1 != 0) {
-        // iVar1 += 0xc;
-        *param_1 = iVar1;
+    iVar1 = (Vec4p *) param_2->mMap->vfunc_74(param_3);
+    if (iVar1 != NULL) {
+        *param_1 = iVar1->w;
         return;
     }
     dVar2 = param_2->MapData_vfunc_70(param_3);
-    if (iVar1 != 0xffff) {
+    if (dVar2 != 0xffff) {
         func_ov000_02093a1c(param_1, data_027e0f6c);
         return;
     }
@@ -1342,26 +1342,24 @@ unk32 MapManager::MapData_vfunc_54(Vec2b *param_1) {
     return this->mMap->vfunc_54(param_1);
 }
 
-unk8 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4) {
-    Vec2b local_8;
-    unk8 local_7;
-    unk16 uStack_6;
-
-    uStack_6 = (unk16) ((u32) param_4 >> 0x10);
-    // _local_8 = CONCAT11(param_3, param_2);
-    this->MapData_vfunc_54(&local_8);
+ARM unk32 MapManager::func_ov00_020840a0(unk8 param_2, unk8 param_3, unk16 param_4) {
+    // Correct param types?
+    Vec2b vec;
+    vec.x = param_2;
+    vec.y = param_3;
+    return this->mMap->vfunc_54(&vec);
 }
 
-unk32 MapManager::MapData_vfunc_78(bool *param_1) { // bool* param placeholder for now, no way of knowing what the type is.
+unk32 *MapManager::MapData_vfunc_78(Vec2b *param_1) {
     return this->mMap->vfunc_78(param_1);
 }
 
-unk8 MapManager::func_ov00_020840dc() {
-    int *piVar1;
+unk8 MapManager::func_ov00_020840dc(Vec2b *param_1) {
+    UnkStruct_027e0fd4 *piVar1;
 
-    piVar1 = (int *) this->MapData_vfunc_78(0);
-    if (piVar1 != (int *) 0x0) {
-        // (**(code **) (*piVar1 + 0x1c))(); // MapBase::func_ov00_0207f934() ??
+    piVar1 = (UnkStruct_027e0fd4 *) this->MapData_vfunc_78(param_1);
+    if (piVar1 != NULL) {
+        piVar1->vfunc_1c();
     }
 }
 
@@ -1937,14 +1935,14 @@ u8 MapManager::GetMapData_Unk_09() {
     return this->mMap->mUnk_009;
 }
 
-ARM void MapManager::func_ov00_02084d24(unk32 param_2, unk32 param_3, unk32 param_4) {
-    unk8 local_8 = param_2;
-    unk8 local_7 = param_3;
-    unk16 uStack_6;
-
-    uStack_6 = (unk16) ((u32) param_4 >> 0x10);
-    //  _local_8 = CONCAT11(param_3, param_2);
-    this->mMap->vfunc_90(param_2, param_3, param_4);
+ARM void MapManager::func_ov00_02084d24(unk8 param_2, unk8 param_3, unk16 param_4) {
+    // Matches, but param types unsure.
+    // param_2 and param_3 aren't both part of a Vec2b *
+    // param_3 short or int?
+    Vec2b vec;
+    vec.x = param_2;
+    vec.y = param_3;
+    this->mMap->vfunc_90(&vec, param_4);
 }
 
 s32 MapManager::func_ov00_02084d4c(unk32 param_2, unk32 param_3, Vec3p *param_4) {
@@ -2010,7 +2008,7 @@ unk32 MapManager::func_ov00_02084ebc(Vec3p *param_2) {
     u32 uStack_14;
 
     this->func_ov00_02083a1c(auStack_18, this, param_2);
-    piVar1 = (int *) this->MapData_vfunc_78(0);
+    piVar1 = (int *) this->MapData_vfunc_78(auStack_18);
     if (piVar1 != (int *) 0x0) {
         // iVar2 = (**(code **) (*piVar1 + 0x1c))();
         if (iVar2 < 0x39) {
@@ -2119,7 +2117,7 @@ s32 MapManager::func_ov00_02085108(s32 *param_2) {
             uVar5  = (u32) local_39;
             if ((u32) local_3a <= (u32) local_39) {
                 do {
-                    piVar3 = (int *) puVar1->MapData_vfunc_78(0);
+                    // piVar3 = (int *) puVar1->MapData_vfunc_78();
                     if ((piVar3 != (int *) 0x0) && ((piVar3[1] & 4U) != 0)) {
                         iVar7 = piVar3[7];
                         iVar6 = piVar3[6];
@@ -2196,7 +2194,7 @@ s32 MapManager::func_ov00_0208527c(MapManager *param_1, unk32 param_2, unk32 *pa
             return 0;
         }
         for (; (int) uVar1 <= (int) uVar6; uVar1 = uVar1 + 1) {
-            iVar4 = puVar2->MapData_vfunc_78(0);
+            // iVar4 = puVar2->MapData_vfunc_78(0);
             if (((iVar4 != 0) && ((*(u32 *) (iVar4 + 4) & 4) != 0)) &&
                 (iVar5 = func_ov000_0208b73c(iVar4, param_2), iVar5 != 0))
             {
@@ -2257,7 +2255,7 @@ s32 MapManager::func_ov00_020853fc(MapManager *param_1, Vec3p *param_2, s32 *par
     local_30 = 0;
     for (; uVar1 = local_50, (int) local_48 <= (int) (u32) local_3b; local_48 = local_48 + 1) {
         for (; (int) uVar1 <= (int) uVar6; uVar1 = uVar1 + 1) {
-            iVar3 = gMapManager->MapData_vfunc_78(0);
+            // iVar3 = gMapManager->MapData_vfunc_78(0);
             if ((((iVar3 != 0) && ((*(u32 *) (iVar3 + 4) & 4) != 0)) &&
                  (iVar4 = Vec3p_Distance((Vec3p *) (iVar3 + 0x18), param_2), iVar4 < *param_3)) &&
                 (iVar5 = func_ov000_0208b7d0(iVar3, param_2), iVar5 != 0))
@@ -2282,7 +2280,7 @@ unk32 MapManager::func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 
     Vec3p VStack_20;
 
     param_1->func_ov00_02083a1c(&local_28, param_1, param_2);
-    piVar1 = (int *) param_1->MapData_vfunc_78(0);
+    piVar1 = (int *) param_1->MapData_vfunc_78(&local_28);
     bVar5  = true;
     if (piVar1 != (int *) 0x0) {
         param_2->x = piVar1[6];
@@ -2401,11 +2399,11 @@ unk32 MapManager::func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 
 
 void MapManager::func_ov00_0208583c(MapManager *param_1, Vec3p *param_2, unk32 param_3) {
     s32 *piVar1;
-    unk8 auStack_10[4];
+    Vec2b auStack_10[2];
 
     // param_1->func_ov00_02083a1c(auStack_10, param_1, param_2); // Should auStack_10 be pointer type or not ?
-    piVar1 = (s32 *) param_1->MapData_vfunc_78(0);
-    if (piVar1 == (s32 *) 0x0) {
+    piVar1 = (unk32 *) param_1->MapData_vfunc_78(auStack_10);
+    if (piVar1 == (unk32 *) 0x0) {
         return;
     }
     // if (*(s32 *) PTR_UnkStruct_027e077c_overlay_d_0__020858ac == 1) {
@@ -2447,7 +2445,7 @@ unk8 MapManager::func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 par
                     if (iVar4 < 0) {
                         iVar4 = -iVar4;
                     }
-                    if ((iVar4 < 0xce) && (piVar5 = (int *) param_1->MapData_vfunc_78(0), piVar5 != (int *) 0x0)) {
+                    if ((iVar4 < 0xce) && (piVar5 = (int *) param_1->MapData_vfunc_78(&local_28), piVar5 != (int *) 0x0)) {
                         // local_38 = (**(code **) (*piVar5 + 0x38))(piVar5, param_3);
                     }
                 }
@@ -2479,7 +2477,7 @@ s32 MapManager::func_ov00_02085a34(Vec3p *param_2, s32 param_3) {
             return -1;
         }
         this->func_ov00_02083a1c(auStack_2a, this, param_2);
-        piVar1 = (int *) this->MapData_vfunc_78(0);
+        piVar1 = (int *) this->MapData_vfunc_78(auStack_2a);
         if (piVar1 == (int *) 0x0) {
             return -1;
         }
@@ -2497,7 +2495,7 @@ s32 MapManager::func_ov00_02085a34(Vec3p *param_2, s32 param_3) {
     if (iVar2 == 0) {
         return -1;
     }
-    piVar1 = (int *) this->MapData_vfunc_78(0);
+    piVar1 = (int *) this->MapData_vfunc_78(aVStack_28);
     if (piVar1 != (int *) 0x0) {
         // iVar2 = (**(code **) (*piVar1 + 0x1c))();
         if (0x38 < iVar2) {
@@ -2539,7 +2537,7 @@ s32 MapManager::func_ov00_02085a34(Vec3p *param_2, s32 param_3) {
     if (iVar2 == 0) {
         return -1;
     }
-    iVar2 = MapData_vfunc_78(0); // Same here.
+    // iVar2 = MapData_vfunc_78(0); // Same here.
     if ((iVar2 != 0) && (0 < *(s16 *) (iVar2 + 0xe))) {
         return 1;
     }
@@ -2769,7 +2767,7 @@ unk8 MapManager::func_ov00_02086044(Vec3p *param_2, Vec3p *param_3, unk32 param_
                         return 1;
                     }
                 }
-                piVar9 = (int *) this->MapData_vfunc_78(0);
+                piVar9 = (int *) this->MapData_vfunc_78(&local_c6);
                 if ((piVar9 != (int *) 0x0) /*&& (iVar8 = (**(code **) (*piVar9 + 0x58))(), iVar8 != 0)*/) {
                     iStack_c0.x = param_3->x;
                     iStack_c0.y = param_3->y;

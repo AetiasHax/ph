@@ -143,14 +143,14 @@ public:
     /* 68 */ virtual unk8 vfunc_68(Vec3p *param_1, bool param_2);
     /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
-    /* 74 */ virtual s32 vfunc_74(Vec3p *param_2);
-    /* 78 */ virtual unk32 vfunc_78(bool *param_1);
+    /* 74 */ virtual s32 *vfunc_74(Vec3p *param_2);
+    /* 78 */ virtual unk32 *vfunc_78(Vec2b *param_1);
     /* 7c */ virtual s32 vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]);
     /* 80 */ virtual unk32 vfunc_80();
     /* 84 */ virtual void vfunc_84(unk32 param_2);
     /* 88 */ virtual unk32 vfunc_88();
     /* 8c */ virtual unk32 vfunc_8c();
-    /* 90 */ virtual unk8 vfunc_90(unk32 param_2, unk32 param_3, unk32 param_4);
+    /* 90 */ virtual unk8 vfunc_90(Vec2b *param_2, unk32 param_3);
     /* 94 */ virtual void vfunc_94();
     /* 98 */ virtual void vfunc_98(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 9c */ virtual void vfunc_9c();
