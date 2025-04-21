@@ -71,16 +71,18 @@ struct UnkStruct_02082348 {
     /* 12 */ unk8 mUnk_12[0x4];
 };
 
-extern s32 *data_027e0c68;
+extern unk32 *data_027e0c68;
 extern u32 *data_027e0ce4;
-extern s32 *data_027e0d3c;
-extern s32 *data_027e0f64;
-extern s32 *data_027e0f68;
-extern s32 *data_027e0f6c;
-extern s32 *data_027e0f70;
-extern s32 *data_027e0f78;
-extern s32 *data_027e0f7c;
-extern s32 *data_027e103c;
+extern unk32 *data_027e0d3c;
+extern unk32 *data_027e0f64;
+extern unk32 *data_027e0f68;
+extern unk32 *data_027e0f6c;
+extern unk32 *data_027e0f70;
+extern unk32 *data_027e0f78;
+extern unk32 *data_027e0f7c;
+extern unk32 *data_027e103c;
+
+extern unk32 *data_ov000_020e24a4;
 
 ARM void MapManager::GetCourseDungeonProgress(CourseProgress *param_2) {
     this->mCourse->GetDungeonProgress(param_2);
@@ -1294,9 +1296,7 @@ ARM void MapManager::func_ov00_02083f44(Vec3p *param_2) {
 
     local_18.z = param_2->z;
     local_18.x = param_2->x;
-    /*local_18.y = *(int *)(
-                        PTR_PTR_s_anc_overlay_d_0__020e24a0_overlay_d_0__020e24a4_overlay_d_0__02083f7c
-                        + 0x20);*/
+    local_18.y = *(data_ov000_020e24a4 + 0x10);
     this->func_ov00_02083ef8(param_2, &local_18);
 }
 
@@ -1467,7 +1467,7 @@ unk8 MapManager::MapData_vfunc_a4(unk8 *param_1) {
     this->mMap->vfunc_a4(param_1);
 }
 
-unk8 MapManager::func_ov00_0208433c(Vec3p *param_2, Vec3p *param_3) {
+unk8 MapManager::func_ov00_0208433c(Vec3p *param_2, Vec2s *param_3) {
     Vec2s local_28;
     Vec3p VStack_24;
     Vec3p local_18;

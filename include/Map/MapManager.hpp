@@ -192,7 +192,7 @@ public:
     u8 GetMapData_Unk_0a();
     u8 GetMapData_Unk_0b();
     unk8 MapData_vfunc_a4(unk8 *param_1);
-    unk8 func_ov00_0208433c(Vec3p *param_2, Vec3p *param_3);
+    unk8 func_ov00_0208433c(Vec3p *param_2, Vec2s *param_3);
     unk8 func_ov00_0208439c(Vec2s *param_2, Vec3p *param_3);
     void func_ov00_020843ec(s32 *param_2);
     unk32 GetMapData_Unk_38();
