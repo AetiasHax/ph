@@ -653,7 +653,7 @@ _ZN10MapManager17GetMapData_Unk_07Ev kind:function(arm,size=0xc) addr:0x02084930
 _ZN10MapManager18func_ov00_0208499cEv kind:function(arm,size=0x24) addr:0x0208493c
 _ZN10MapManager18func_ov00_020849c0Ev kind:function(arm,size=0x1c) addr:0x02084960
 _ZN10MapManager18func_ov00_020849dcEv kind:function(arm,size=0x1c) addr:0x0208497c
-_ZN10MapManager18func_ov00_020849f8Ei kind:function(arm,size=0x58) addr:0x02084998
+_ZN10MapManager18func_ov00_020849f8Ev kind:function(arm,size=0x58) addr:0x02084998
 _ZN10MapManager18func_ov00_02084a50Ev kind:function(arm,size=0xc) addr:0x020849f0
 _ZN10MapManager8SpawnNPCEP5Vec3pii kind:function(arm,size=0x68) addr:0x020849fc
 _ZN10MapManager18func_ov00_02084ac4Ej kind:function(arm,size=0x44) addr:0x02084a64
@@ -3721,8 +3721,8 @@ data_ov000_020dc55c kind:data(any) addr:0x020dc4fc
 data_ov000_020dc560 kind:data(any) addr:0x020dc500
 data_ov000_020dc574 kind:data(any) addr:0x020dc514
 data_ov000_020dc674 kind:data(any) addr:0x020dc614
-sQuiverSizes kind:data(any) addr:0x020dc664
-sBombBagSizes kind:data(any) addr:0x020dc66c
+sQuiverSizes kind:data(any) addr:0x020dc664 local
+sBombBagSizes kind:data(any) addr:0x020dc66c local
 data_ov000_020dc6e0 kind:data(any) addr:0x020dc680
 data_ov000_020dc6e4 kind:data(any) addr:0x020dc684
 data_ov000_020dc6e8 kind:data(any) addr:0x020dc688

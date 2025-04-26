@@ -653,7 +653,7 @@ _ZN10MapManager17GetMapData_Unk_07Ev kind:function(arm,size=0xc) addr:0x02084990
 _ZN10MapManager18func_ov00_0208499cEv kind:function(arm,size=0x24) addr:0x0208499c
 _ZN10MapManager18func_ov00_020849c0Ev kind:function(arm,size=0x1c) addr:0x020849c0
 _ZN10MapManager18func_ov00_020849dcEv kind:function(arm,size=0x1c) addr:0x020849dc
-_ZN10MapManager18func_ov00_020849f8Ei kind:function(arm,size=0x58) addr:0x020849f8
+_ZN10MapManager18func_ov00_020849f8Ev kind:function(arm,size=0x58) addr:0x020849f8
 _ZN10MapManager18func_ov00_02084a50Ev kind:function(arm,size=0xc) addr:0x02084a50
 _ZN10MapManager8SpawnNPCEP5Vec3pii kind:function(arm,size=0x68) addr:0x02084a5c
 _ZN10MapManager18func_ov00_02084ac4Ej kind:function(arm,size=0x44) addr:0x02084ac4
@@ -3721,8 +3721,8 @@ data_ov000_020dc55c kind:data(any) addr:0x020dc55c
 data_ov000_020dc560 kind:data(any) addr:0x020dc560
 data_ov000_020dc574 kind:data(any) addr:0x020dc574
 data_ov000_020dc674 kind:data(any) addr:0x020dc674
-sQuiverSizes kind:data(any) addr:0x020dc6c4
-sBombBagSizes kind:data(any) addr:0x020dc6cc
+sQuiverSizes kind:data(any) addr:0x020dc6c4 local
+sBombBagSizes kind:data(any) addr:0x020dc6cc local
 data_ov000_020dc6e0 kind:data(any) addr:0x020dc6e0
 data_ov000_020dc6e4 kind:data(any) addr:0x020dc6e4
 data_ov000_020dc6e8 kind:data(any) addr:0x020dc6e8
@@ -4808,10 +4808,10 @@ data_ov000_020e5c58 kind:data(any) addr:0x020e5c58
 data_ov000_020e5c5c kind:data(any) addr:0x020e5c5c
 data_ov000_020e5c60 kind:data(any) addr:0x020e5c60
 data_ov000_020e5c64 kind:data(any) addr:0x020e5c64
-data_ov000_020e5c68 kind:data(any) addr:0x020e5c68
-data_ov000_020e5c6c kind:data(any) addr:0x020e5c6c
-data_ov000_020e5c70 kind:data(any) addr:0x020e5c70
-data_ov000_020e5c74 kind:data(any) addr:0x020e5c74
+@1377 kind:data(any) addr:0x020e5c68 local
+@1376 kind:data(any) addr:0x020e5c6c local
+@1375 kind:data(any) addr:0x020e5c70 local
+@1374 kind:data(any) addr:0x020e5c74 local
 sShipPartTypes kind:data(any) addr:0x020e5c78
 sDefaultItemModel kind:data(any) addr:0x020e5c98
 sItemModelNames kind:data(any) addr:0x020e5c9c
