@@ -133,7 +133,7 @@ public:
     /* 40 */ virtual void vfunc_40();
     /* 44 */ virtual void vfunc_44();
     /* 48 */ virtual void vfunc_48();
-    /* 4c */ virtual s32 vfunc_4c() = 0;
+    /* 4c */ virtual s32 vfunc_4c();
     /* 50 */ virtual unk32 vfunc_50();
     /* 54 */ virtual unk32 vfunc_54(Vec2b *param_1);
     /* 58 */ virtual unk32 vfunc_58(Vec2b *param_1, int param_2);

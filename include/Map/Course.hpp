@@ -108,7 +108,7 @@ public:
     bool GetMapDataFlag2(unk32 param_2);
     void SetMapDataFlag3(unk32 param_2, bool param_3);
     bool GetMapDataFlag3(unk32 param_2);
-    void SetMapDataFlag4(unk32 param_2, unk32 param_3);
+    void SetMapDataFlag4(unk32 param_2, bool param_3);
     bool GetMapDataFlag4(unk32 param_2);
     MapData *FindMapData(u32 map);
     MapData *FindCurrentMapData();

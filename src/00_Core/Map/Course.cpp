@@ -45,7 +45,7 @@ void Course::SetMapDataFlag2(unk32 param_2, bool param_3) {}
 bool Course::GetMapDataFlag2(unk32 param_2) {}
 void Course::SetMapDataFlag3(unk32 param_2, bool param_3) {}
 bool Course::GetMapDataFlag3(unk32 param_2) {}
-void Course::SetMapDataFlag4(unk32 param_2, unk32 param_3) {}
+void Course::SetMapDataFlag4(unk32 param_2, bool param_3) {}
 bool Course::GetMapDataFlag4(unk32 param_2) {}
 MapData *Course::FindMapData(u32 map) {}
 MapData *Course::FindCurrentMapData() {}
