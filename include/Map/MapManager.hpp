@@ -31,7 +31,7 @@ public:
     /* 00 */ Course *mCourse;
     /* 04 */ MapBase *mMap;
     /* 08 */ unk8 mUnk_08;
-    /* 09 */ unk8 mUnk_09;
+    /* 09 */ u8 mUnk_09;
     /* 0a */ unk8 mUnk_0a;
     /* 0b */ unk8 mUnk_0b;
     /* 0c */ u8 mUnk_0c;
@@ -47,7 +47,7 @@ public:
 
     void GetCourseDungeonProgress(CourseProgress *param_2);
     void func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_4);
-    unk8 func_ov00_0208210c(unk32 param_2, unk32 *param_3);
+    void func_ov00_0208210c(unk32 param_2, unk32 *param_3);
     void func_ov00_0208230c(s32 *param_2);
     void func_ov00_02082348(unk32 *param_2);
     void func_ov00_020823a4(unk32 param_2);
@@ -198,7 +198,7 @@ public:
     unk32 GetMapData_Unk_38();
     s32 func_ov00_020846a4();
     static s32 func_ov00_02084700(MapManager *pMapManager);
-    unk8 func_ov00_02084740();
+    unk32 func_ov00_02084740();
     unk32 func_ov00_020847e0();
     unk8 func_ov00_020847f0();
     bool func_ov00_02084838();
@@ -218,7 +218,7 @@ public:
     unk32 GetNumKeys();
     void SetBlueWarpOpen(bool state);
     bool GetBlueWarpOpen();
-    unk8 func_ov00_02084b38(unk32 param_2, unk32 param_3, unk32 param_4);
+    unk8 func_ov00_02084b38(unk32 param_2, unk32 param_3, bool param_4);
     bool func_ov00_02084be0(u32 param_2, unk32 param_3);
     void SetMapDataFlag1(unk32 param_2, bool param_3);
     bool GetMapDataFlag1(unk32 param_2);
