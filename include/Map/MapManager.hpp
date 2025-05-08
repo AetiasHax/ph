@@ -32,8 +32,8 @@ public:
     /* 04 */ MapBase *mMap;
     /* 08 */ unk8 mUnk_08;
     /* 09 */ u8 mUnk_09;
-    /* 0a */ unk8 mUnk_0a;
-    /* 0b */ unk8 mUnk_0b;
+    /* 0a */ bool mUnk_0a;
+    /* 0b */ bool mUnk_0b;
     /* 0c */ u8 mUnk_0c;
     /* 0d */ unk8 mUnk_0d;
     /* 0e */ unk8 mUnk_0e;
@@ -77,7 +77,7 @@ public:
     void CreateMap(unk32 mapType, unk32 param_3, unk32 param_4);
     void DestroyMap();
     void MapData_vfunc_44();
-    void func_ov00_02082808(s32 param_2);
+    void func_ov00_02082808(bool param_2);
     s32 MapData_vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]);
     void MapData_vfunc_84(unk32 param_2);
     bool func_ov00_020828f8(s32 *param_2);
@@ -86,7 +86,7 @@ public:
     void func_ov00_02082acc();
     unk32 *func_ov00_02082adc();
     void func_ov00_02082af4();
-    bool func_ov00_02082b3c(s32 param_2);
+    bool func_ov00_02082b3c(unk32 *param_2);
     u8 func_ov00_02082d08();
     u8 GetCurrentMapPosX();
     u8 GetCurrentMapPosY();
@@ -96,7 +96,7 @@ public:
     bool func_ov00_02082e1c(s32 *param_2, s32 *param_3);
     void func_ov00_0208306c(s32 *param_2, s32 *param_3);
     void func_ov00_0208315c(s32 *param_2, s32 *param_3);
-    void func_ov00_02083244(u32 param_2, s32 *param_3, s32 *param_4, s32 *param_5);
+    void func_ov00_02083244(u32 param_2, Vec3p *param_3, s32 *param_4, s32 *param_5);
     void func_ov00_02083298(u32 param_2, Vec3p *param_3, s32 *param_4, s32 *param_5);
     bool GetCourseData_Unk_25c();
     bool IsMapInMainGrid(u32 map);
@@ -124,7 +124,7 @@ public:
     void func_ov00_020834bc(Vec3p *param_2, unk32 param_3, unk32 param_4);
     void func_ov00_02083524(Vec3p *param_2, unk32 param_3, unk32 param_4);
     static void func_ov00_02083560(Vec2b *param_1, MapManager *param_2, u32 param_3);
-    u8 func_ov00_02083570(unk32 param_2, unk32 param_3);
+    u8 func_ov00_02083570(u8 param_2, u8 param_3);
     unk32 func_ov00_02083588();
     unk32 func_ov00_020835a4();
     unk32 func_ov00_020835b4();
@@ -169,11 +169,11 @@ public:
     void func_ov00_02083c7c(Vec3p *param_2, Vec2b *param_3);
     static void func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5);
     s32 func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
-    unk32 MapData_vfunc_60(u8 *param_1);
-    bool func_ov00_02083e70();
+    unk32 MapData_vfunc_60(Vec2b *param_1);
+    bool func_ov00_02083e70(Vec2b *param_2);
     unk32 MapData_vfunc_68(Vec3p *param_1, bool param_2);
-    s32 func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3);
-    unk32 func_ov00_02083f44(Vec3p *param_2);
+    s32 func_ov00_02083ef8(Vec3p *param_2, Vec3p *param_3, bool param_4);
+    unk32 func_ov00_02083f44(Vec3p *param_2, bool param_3);
     unk8 MapData_vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     unk32 MapData_vfunc_70(Vec3p *param_2);
     static void func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
@@ -253,7 +253,7 @@ public:
     static void LoadMapTexSprites(s32 param1);
     void func_ov004_02102260();
     void func_ov004_02102264(unk32 *param1, char *param2);
-    void func_ov004_021024c4(s32 param1, unk32 param2, unk32 param3);
+    void func_ov004_021024c4(unk32 *param1, unk32 param2, bool param3);
     void func_ov004_021025d8();
 };
 

@@ -21,9 +21,9 @@ unk32 MapBase::vfunc_50() {}
 unk32 MapBase::vfunc_54(Vec2b *param_1) {}
 unk32 MapBase::vfunc_58(Vec2b *param_1, int param_2) {}
 unk32 MapBase::vfunc_5c() {}
-unk32 MapBase::vfunc_60(u8 *param_1) {}
+unk32 MapBase::vfunc_60(Vec2b *param_1) {}
 unk32 MapBase::vfunc_64() {}
-unk8 MapBase::vfunc_68(Vec3p *param_1, bool param_2) {}
+unk32 MapBase::vfunc_68(Vec3p *param_1, bool param_2) {}
 unk8 MapBase::func_ov00_0207e940(unk8 *param_1) {}
 unk8 MapBase::func_ov00_0207e968() {}
 unk8 MapBase::func_ov00_0207e96c() {}

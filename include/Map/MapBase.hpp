@@ -138,9 +138,9 @@ public:
     /* 54 */ virtual unk32 vfunc_54(Vec2b *param_1);
     /* 58 */ virtual unk32 vfunc_58(Vec2b *param_1, int param_2);
     /* 5c */ virtual unk32 vfunc_5c();
-    /* 60 */ virtual unk32 vfunc_60(u8 *param_1);
+    /* 60 */ virtual unk32 vfunc_60(Vec2b *param_1);
     /* 64 */ virtual unk32 vfunc_64();
-    /* 68 */ virtual unk8 vfunc_68(Vec3p *param_1, bool param_2);
+    /* 68 */ virtual unk32 vfunc_68(Vec3p *param_1, bool param_2);
     /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
     /* 74 */ virtual s32 *vfunc_74(Vec3p *param_2);
