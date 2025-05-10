@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 # Config
 GAME = "ph"
-DSD_VERSION = 'v0.6.0'
+DSD_VERSION = 'v0.8.0'
 WIBO_VERSION = '0.6.16'
 OBJDIFF_VERSION = 'v2.7.1'
 MWCC_VERSION = "2.0/sp1p5"
@@ -60,6 +60,9 @@ DSD_OBJDIFF_ARGS = " ".join([
     f"--compiler {DECOMP_ME_COMPILER}", # decomp.me compiler name
     f'--c-flags "{CC_FLAGS} -lang=c++"',# decomp.me compiler flags
     "--custom-make ninja",              # Command for rebuilding files
+])
+DSD_BASE_FLAGS = " ".join([
+    "--force-color", # Force color output
 ])
 
 
@@ -188,13 +191,13 @@ def main():
 
         n.rule(
             name="extract",
-            command=f"{DSD} rom extract --rom $in --output-path $output_path $arm7_bios_flag"
+            command=f"{DSD} {DSD_BASE_FLAGS} rom extract --rom $in --output-path $output_path $arm7_bios_flag"
         )
         n.newline()
 
         n.rule(
             name="delink",
-            command=f"{DSD} delink --config-path $config_path"
+            command=f"{DSD} {DSD_BASE_FLAGS} delink --config-path $config_path"
         )
         n.newline()
 
@@ -214,7 +217,7 @@ def main():
 
         n.rule(
             name="lcf",
-            command=f"{DSD} lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file"
+            command=f"{DSD} {DSD_BASE_FLAGS} lcf -c $config_path --lcf-file $lcf_file --objects-file $objects_file"
         )
         n.newline()
 
@@ -226,19 +229,19 @@ def main():
 
         n.rule(
             name="rom_config",
-            command=f"{DSD} rom config --elf $in --config $config_path"
+            command=f"{DSD} {DSD_BASE_FLAGS} rom config --elf $in --config $config_path"
         )
         n.newline()
 
         n.rule(
             name="rom_build",
-            command=f"{DSD} rom build --config $in --rom $out $arm7_bios_flag"
+            command=f"{DSD} {DSD_BASE_FLAGS} rom build --config $in --rom $out $arm7_bios_flag"
         )
         n.newline()
 
         n.rule(
             name="objdiff",
-            command=f"{DSD} objdiff --config-path $config_path {DSD_OBJDIFF_ARGS}"
+            command=f"{DSD} {DSD_BASE_FLAGS} objdiff --config-path $config_path {DSD_OBJDIFF_ARGS}"
         )
         n.newline()
 
@@ -256,13 +259,13 @@ def main():
 
         n.rule(
             name="check_modules",
-            command=f"{DSD} check modules --config-path $config_path --fail"
+            command=f"{DSD} {DSD_BASE_FLAGS} check modules --config-path $config_path --fail"
         )
         n.newline()
 
         n.rule(
             name="check_symbols",
-            command=f"{DSD} check symbols --config-path $config_path --elf-path $elf_path --fail"
+            command=f"{DSD} {DSD_BASE_FLAGS} check symbols --config-path $config_path --elf-path $elf_path --fail"
         )
         n.newline()
 
