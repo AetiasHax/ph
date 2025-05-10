@@ -118,6 +118,7 @@ src/00_Core/Player/LinkStateItem.cpp:
     .data       start:0x020e5a40 end:0x020e5a8c
 
 src/00_Core/Player/LinkStateMove.cpp:
+    complete
     .text       start:0x020a8e04 end:0x020a8f74
     .data       start:0x020e56f0 end:0x020e575c
 

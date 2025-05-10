@@ -12,8 +12,9 @@ public:
     /* 10 */ unk16 mUnk_10;
     /* 12 */ unk16 mUnk_12;
     /* 14 */ bool mUnk_14;
-    /* 14 */ bool mUnk_15;
-    /* 16 */ unk8 mUnk_16[2];
+    /* 15 */ bool mUnk_15;
+    /* 16 */ bool mUnk_16;
+    /* 17 */ bool mUnk_17;
     /* 18 */
 
     /* 00 */ virtual void vfunc_00() override;
