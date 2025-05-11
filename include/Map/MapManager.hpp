@@ -30,8 +30,8 @@ class MapManager : public SysObject {
 public:
     /* 00 */ Course *mCourse;
     /* 04 */ MapBase *mMap;
-    /* 08 */ unk8 mUnk_08;
-    /* 09 */ u8 mUnk_09;
+    /* 08 */ bool mUnk_08;
+    /* 09 */ bool mUnk_09;
     /* 0a */ bool mUnk_0a;
     /* 0b */ bool mUnk_0b;
     /* 0c */ u8 mUnk_0c;
@@ -166,7 +166,7 @@ public:
     s32 GetTileEndZ(unk32 z);
     s32 func_ov00_02083c24(unk32 x);
     s32 func_ov00_02083c50(unk32 z);
-    void func_ov00_02083c7c(Vec3p *param_2, Vec2b *param_3);
+    void func_ov00_02083c7c(Vec3p *param_2, Vec2s *param_3);
     static void func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5);
     s32 func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
     unk32 MapData_vfunc_60(Vec2b *param_1);
@@ -237,7 +237,7 @@ public:
     static s32 func_ov00_020853fc(MapManager *param_1, Vec3p *param_2, s32 *param_3);
     static unk32 func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 param_3, unk32 param_4);
     static void func_ov00_0208583c(MapManager *param_1, Vec3p *param_2, unk32 param_3);
-    static unk8 func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 param_3);
+    static unk32 func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 param_3);
     s32 func_ov00_02085a34(Vec3p *param_2, unk32 param_3);
     unk8 func_ov00_02085c60(Vec3p *param_2, unk32 *param_3, unk32 *param_4, u32 param_5);
     unk8 func_ov00_02086044(Vec3p *param_2, Vec3p *param_3, unk32 param_4);

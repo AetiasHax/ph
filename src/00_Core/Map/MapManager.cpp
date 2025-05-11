@@ -88,6 +88,13 @@ struct UnkStruct_02082348 {
     /* 16 */
 };
 
+struct UnkStruct_027e077c {
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ unk32 mUnk_04;
+    /* 08 */ unk16 mUnk_08;
+    /* 0a */ unk8 mUnk_0a;
+};
+
 class Case_0 : public MapBase {
 public:
     char pad[0x790 - 0x1B0];
@@ -109,8 +116,10 @@ public:
     virtual ~Case_Default() override;
 };
 
+extern UnkStruct_027e077c *data_027e077c;
 extern unk32 *data_027e0c68;
 extern u32 *data_027e0ce0[];
+extern UnkStruct_0202e894 *data_027e0ce4;
 extern unk32 *data_027e0d3c;
 extern unk32 data_027e0f64[];
 extern unk32 *data_027e0f68;
@@ -124,7 +133,50 @@ extern unk32 *data_ov000_020e24a4;
 extern unk32 data_ov000_020eec68;
 extern unk32 data_ov015_02190458;
 
-MapManager::MapManager() {}
+MapManager::MapManager() {
+    /*MapManager_Unk1 *object;
+    undefined *destructor;
+    undefined *chain;
+
+    DWORD_arm9_ov000__020e24c4 = 0x5fff;
+    data_ov000_020e24c8.field0_0x0 = 0;
+    data_ov000_020e24c8.field1_0x4 = 0x60;
+    __register_global_object
+              (&data_ov000_020e24c8,func_ov000_02086cd0,(DestructorChain *)(undefined *)0x20ec964);
+    data_ov000_020e24d0.field0_0x0 = 0;
+    data_ov000_020e24d0.field1_0x4 = 0;
+    __register_global_object
+              (&data_ov000_020e24d0,func_ov000_02086cd0,(DestructorChain *)(undefined *)0x20ec970);
+    data_ov000_020e24d8.field0_0x0 = 0x80;
+    data_ov000_020e24d8.field1_0x4 = 0x60;
+    __register_global_object
+              (&data_ov000_020e24d8,func_ov000_02086cd0,(DestructorChain *)(undefined *)0x20ec97c);
+    data_ov000_020e24e0.field0_0x0 = 0x80;
+    data_ov000_020e24e0.field1_0x4 = 0;
+    __register_global_object
+              (&data_ov000_020e24e0,func_ov000_02086cd0,(DestructorChain *)(undefined *)0x20ec988);
+    data_ov000_020e24e8.field0_0x0 = 0xfff80000;
+    data_ov000_020e24e8.field1_0x4 = 0xfffa0000;
+    __register_global_object
+              (&data_ov000_020e24e8,MapManager_Unk2::~MapManager_Unk2,
+               (DestructorChain *)(undefined *)0x20ec994);
+    data_ov000_020e24f0.field0_0x0 = 0xfff80000;
+    data_ov000_020e24f0.field1_0x4 = 0xfffa0000;
+    __register_global_object
+              (&data_ov000_020e24f0,MapManager_Unk2::~MapManager_Unk2,
+               (DestructorChain *)(undefined *)0x20ec9a0);
+    data_ov000_020e24f8.field0_0x0 = 0xfff80000;
+    data_ov000_020e24f8.field1_0x4 = 0xfffa0000;
+    __register_global_object
+              (&data_ov000_020e24f8,MapManager_Unk2::~MapManager_Unk2,
+               (DestructorChain *)(undefined *)0x20ec9ac);
+    data_ov000_020e2500.field0_0x0 = 0xfff80000;
+    data_ov000_020e2500.field1_0x4 = 0xfffa0000;
+    __register_global_object
+              (&data_ov000_020e2500,MapManager_Unk2::~MapManager_Unk2,
+               (DestructorChain *)(undefined *)0x20ec9b8);
+    return;*/
+}
 
 MapManager::~MapManager() {}
 
@@ -138,6 +190,7 @@ ARM void MapManager::func_ov00_020820fc(s32 param_2, unk32 param_3, unk32 param_
 
 ARM void MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
     void *pvVar3;
+    unk32 uVar2;
     UnkStruct_02082348 local_40[2];
 
     local_40[1].mUnk_00 = 0x47;
@@ -183,14 +236,15 @@ ARM void MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
     local_40[0].mUnk_13               = *(u8 *) ((int) pvVar3 + 0x83);
     local_40[0].mUnk_14               = *(u8 *) ((int) pvVar3 + 0x84);
     local_40[0].mUnk_15               = *(u8 *) ((int) pvVar3 + 0x85);
-    param_3[0x70]                     = func_ov000_020a5e9c((unk32 *) &local_40[0]);
+    uVar2                             = func_ov000_020a5e9c((unk32 *) &local_40[0]);
+    param_3[0x70]                     = uVar2;
     *(u8 *) ((int) param_3 + 0x1be)   = local_40[0].mUnk_12;
     *(u8 *) ((int) param_3 + 0x1bf)   = local_40[0].mUnk_13;
     func_ov000_02096324(data_027e0f70, param_3);
     func_ov000_0209d6e8(data_027e0f7c, param_3);
     if (this->mCourse->mType != CourseType_TempleOfTheOceanKing) {
-        *(unk8 *) ((int) param_3 + 7) = (u8) this->mUnk_08;
-        *(unk8 *) (param_3 + 0x6f)    = this->mUnk_09;
+        *(bool *) ((int) param_3 + 7) = this->mUnk_08;
+        *(bool *) (param_3 + 0x6f)    = this->mUnk_09;
     }
 }
 
@@ -1154,8 +1208,9 @@ ARM s32 MapManager::func_ov00_02083c50(unk32 z) {
     return this->GetMapCenterZ() + this->mMap->GetTileStartZ(z) + 0x800;
 }
 
-ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, Vec2b *param_3) {
+ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, Vec2s *param_3) {
     Vec3p local_28;
+
     param_2->x = this->func_ov00_02083c24(param_3->x);
     param_2->z = this->func_ov00_02083c50(param_3->y);
     local_28   = *param_2;
@@ -1204,15 +1259,12 @@ ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 p
 
 ARM s32 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
     Vec2b local_8;
-    // unk16 uStack_6; // Unused.
-
-    // uStack_6   = (unk16) ((u32) param_4 >> 0x10);
-    local_8.x = param_2; // Likely a struct
+    local_8.x = param_2;
     local_8.y = param_3;
     return this->mMap->vfunc_60(&local_8);
 }
 
-ARM unk32 MapManager::MapData_vfunc_60(Vec2b *param_1) { // should the param be bool*?
+ARM unk32 MapManager::MapData_vfunc_60(Vec2b *param_1) {
     return this->mMap->vfunc_60(param_1);
 }
 
@@ -1264,7 +1316,7 @@ ARM unk32 MapManager::MapData_vfunc_70(Vec3p *param_2) {
 }
 
 ARM void MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {
-    Vec4p *iVar1; // Unsure
+    Vec4p *iVar1; // Vec4p * unsure, need type with field at offset 0xc
     s32 dVar2;
 
     iVar1 = (Vec4p *) param_2->mMap->vfunc_74(param_3);
@@ -1742,13 +1794,13 @@ u8 MapManager::func_ov00_02084a50() {
 }
 
 void MapManager::SpawnNPC(Vec3p *param_2, unk32 param_3, unk32 param_4) {
-    astruct_16 aStack_3c; // = Actor_UnkStruct_020();
-    // aStack_3c.        = 0xffffffff;
-    //  aStack_3c.field25_0x20 = 0xffffffff;
-    func_ov000_020c3348((unk32 *) &aStack_3c);
+    void *aStack_3c; // = Actor_UnkStruct_020();
+    // aStack_3c.field24_0x1c = 0xffffffff;
+    // aStack_3c.field25_0x20 = 0xffffffff;
+    func_ov000_020c3348((unk32 *) aStack_3c);
     //  aStack_3c.field26_0x24 = param_3;
     //  aStack_3c.field27_0x28 = param_4;
-    gActorSpawner->Spawn(ActorTypeId_EVIC, param_2, &aStack_3c, NULL);
+    gActorSpawner->Spawn(ActorTypeId_EVIC, param_2, aStack_3c, NULL);
 }
 
 ARM bool MapManager::func_ov00_02084ac4(u32 actorId) {
@@ -1783,21 +1835,22 @@ bool MapManager::GetBlueWarpOpen() {
 
 unk8 MapManager::func_ov00_02084b38(unk32 param_2, unk32 param_3, bool param_4) {
     MapBase *pMVar1;
-    if (param_2 != 0) {
-        switch (param_3) {
-            case 0:
-                pMVar1 = this->mMap;
-                if (!param_4) {
-                    pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 & ~(1 << (param_2 & 0x1f));
-                    return;
-                }
-                pMVar1->mUnk_180[param_2 >> 5].mUnk_0 = pMVar1->mUnk_180[param_2 >> 5].mUnk_0 | 1 << (param_2 & 0x1f);
+    if (param_2 == 0) {
+        return;
+    }
+    switch (param_3) {
+        case 0:
+            pMVar1 = this->mMap;
+            if (param_4) {
+                pMVar1->mUnk_180[param_2 >> 5].mUnk_0 |= 1 << (param_2 & 0x1f);
                 break;
-            case 1: this->mCourse->SetMapDataFlag0(param_2, param_4); break;
-            case 2: this->mCourse->SetFlag0(param_2, param_4); break;
-            case 3: this->mCourse->SetFlag1(param_2, param_4); break;
-            default: break;
-        }
+            }
+            pMVar1->mUnk_180[param_2 >> 5].mUnk_0 &= ~(1 << (param_2 & 0x1f));
+            break;
+        case 1: this->mCourse->SetMapDataFlag0(param_2, param_4); break;
+        case 2: this->mCourse->SetFlag0(param_2, param_4); break;
+        case 3: this->mCourse->SetFlag1(param_2, param_4); break;
+        default: break;
     }
 }
 
@@ -2218,7 +2271,7 @@ unk32 MapManager::func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 
     unk32 dVar3; // dword
     unk32 uVar4;
     bool bVar5;
-    Vec2b uStack_2c[2];
+    Vec2s uStack_2c;
     Vec2b local_28;
     u32 uStack_24;
     Vec3p VStack_20;
@@ -2296,9 +2349,9 @@ unk32 MapManager::func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 
     if (iVar2 != 0) {
         return 0;
     }
-    uStack_2c[0].y = local_28.y;
-    uStack_2c[0].x = local_28.x;
-    param_1->func_ov00_02083c7c(&VStack_20, uStack_2c);
+    uStack_2c.y = local_28.y;
+    uStack_2c.x = local_28.x;
+    param_1->func_ov00_02083c7c(&VStack_20, &uStack_2c);
     dVar3 = param_1->MapData_vfunc_70(&VStack_20);
     if (dVar3 != 0xffff) {
         func_ov000_02093a1c(&uStack_24, data_027e0f6c, dVar3);
@@ -2316,24 +2369,24 @@ unk32 MapManager::func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 
 }
 
 void MapManager::func_ov00_0208583c(MapManager *param_1, Vec3p *param_2, unk32 param_3) {
-    s32 *piVar1;
-    Vec2b auStack_10[2];
+    void *piVar1;
+    Vec2b auStack_10;
 
-    param_1->func_ov00_02083a1c(auStack_10, param_1, param_2);
-    piVar1 = (unk32 *) param_1->MapData_vfunc_78(auStack_10);
-    if (piVar1 == (unk32 *) 0x0) {
+    param_1->func_ov00_02083a1c(&auStack_10, param_1, param_2);
+    piVar1 = (unk32 *) param_1->MapData_vfunc_78(&auStack_10);
+    if (piVar1 == NULL) {
         return;
     }
-    // if (*(s32 *) PTR_UnkStruct_027e077c_overlay_d_0__020858ac == 1) {
-    //    if (*(s32 *) (PTR_UnkStruct_027e077c_overlay_d_0__020858ac + 4) == 1) {
-    //        (**(code **) (*piVar1 + 0x30))(piVar1, param_3);
-    //        return;
-    //    }
-    //    return;
-    //}
+    if (data_027e077c->mUnk_00 == 1) {
+        if (data_027e077c->mUnk_04 == 1) {
+            //(**(code **) (*piVar1 + 0x30))(piVar1, param_3);
+            return;
+        }
+        return;
+    }
 }
 
-unk8 MapManager::func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 param_3) {
+unk32 MapManager::func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 param_3) {
     int iVar1;
     int iVar2;
     int iVar3;
@@ -2730,20 +2783,18 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
     Vec3p local_50;
     Vec3p local_44;
     Vec3p local_38;
-    s32 local_2c;
-    s32 iStack_28;
-    s32 iStack_24;
+    Vec3p local_2c;
     s32 local_20;
 
     // iVar2 = (**(code **) (*param_2 + 8))(); // What pointer address is contained in param_2?
     if (iVar2 == 0) {
         // (**(code **) (*param_2 + 0x24))(param_2, &local_2c);
-        local_38.x = local_2c;
-        local_38.y = iStack_28;
-        local_38.z = iStack_24;
+        local_38.x = local_2c.x;
+        local_38.y = local_2c.y;
+        local_38.z = local_2c.z;
         iVar2      = Vec3p_Distance(param_3, &local_38);
         Vec3p_Sub(param_3, &local_38, &local_38);
-        // bVar1 = Vec3p_Normalize(&local_38);
+        Vec3p_Normalize(&local_38, &local_2c);
         if (!bVar1) {
             local_38.x = 0;
             local_38.y = 0;
@@ -2751,9 +2802,9 @@ bool MapManager::func_ov00_02086284(s32 *param_2, Vec3p *param_3, Vec3p *param_4
         }
         Vec3p_Scale(&local_38, (local_20 + param_5) - iVar2);
         Vec3p_Add(param_3, &local_38, param_7);
-        local_50.x = local_2c;
-        local_50.y = iStack_28;
-        local_50.z = iStack_24;
+        local_50.x = local_2c.x;
+        local_50.y = local_2c.y;
+        local_50.z = local_2c.z;
         Vec3p_Sub(param_4, &local_50, &local_44);
         // Vec3p_Normalize(&local_44);
         param_8->x = local_44.x;
