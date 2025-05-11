@@ -48,8 +48,8 @@ public:
 
     void SetUpdatePos(bool updatePos);
     void SetVisible(bool visible);
-    EquipSword *GetEquipSword();
-    EquipShield *GetEquipShield();
+    static EquipSword *GetEquipSword();
+    static EquipShield *GetEquipShield();
     void LookAt(Vec3p *target);
     bool func_ov00_020a7c00(s32 param1);
     bool CollidesWith(Cylinder *cylinder);
