@@ -4,6 +4,7 @@ import os
 from pathlib import Path
 import argparse
 import sys
+import subprocess
 
 import ninja_syntax
 from get_platform import get_platform
@@ -275,6 +276,14 @@ def main():
         )
         n.newline()
 
+        configure_cmdline = subprocess.list2cmdline(sys.argv[1:])
+        n.rule(
+            name="configure",
+            command=f"{PYTHON} tools/configure.py {configure_cmdline}",
+            generator=True
+        )
+        n.newline()
+
         add_download_tool_builds(n)
         add_extract_build(n, project)
         add_delink_and_lcf_builds(n, project)
@@ -282,6 +291,7 @@ def main():
         add_mwld_and_rom_builds(n, project)
         add_check_builds(n, project)
         add_objdiff_builds(n, project)
+        add_configure_build(n, project)
 
 
 def add_download_tool_builds(n: ninja_syntax.Writer):
@@ -559,6 +569,17 @@ def add_objdiff_builds(n: ninja_syntax.Writer, project: Project):
         outputs="report",
     )
     n.newline()
+
+
+def add_configure_build(n: ninja_syntax.Writer, project: Project):
+    this_file = str(Path(__file__).resolve())
+    n.build(
+        outputs="build.ninja",
+        rule="configure",
+        implicit=[
+            this_file,
+        ]
+    )
 
 
 def get_config_files(game_config: Path, name: str) -> list[str]:
