@@ -7,7 +7,7 @@ import sys
 import subprocess
 
 import ninja_syntax
-from get_platform import get_platform
+from get_platform import Platform, get_platform
 
 
 DEFAULT_WIBO_PATH = "./wibo"
@@ -84,7 +84,7 @@ mwcc_path        = mwcc_root / MWCC_VERSION
 
 # Includes
 includes = [
-    str(root_path / "include")
+    root_path / "include"
 ]
 for root, dirs, _ in os.walk(libs_path):
     for dir in dirs:
@@ -107,7 +107,7 @@ PYTHON = sys.executable
 
 
 class Project:
-    def __init__(self, game_version: str):
+    def __init__(self, game_version: str, platform: Platform):
         self.game_version = game_version
         '''Version of the game'''
         self.game_config = config_path / game_version
@@ -116,6 +116,9 @@ class Project:
         if not self.game_config.is_dir():
             print(f"Version '{game_version}' not recognized")
             exit(1)
+
+        self.platform = platform
+        '''Host platform information'''
 
         self.game_build = build_path / game_version
         '''Path to build directory'''
@@ -173,7 +176,8 @@ class Project:
 
 
 def main():
-    project = Project(args.version)
+    if platform is None: return
+    project = Project(args.version, platform)
 
     with build_ninja_path.open("w") as file:
         n = ninja_syntax.Writer(file)
@@ -284,7 +288,7 @@ def main():
         )
         n.newline()
 
-        add_download_tool_builds(n)
+        add_download_tool_builds(n, project)
         add_extract_build(n, project)
         add_delink_and_lcf_builds(n, project)
         add_mwcc_builds(n, project, mwcc_implicit)
@@ -294,7 +298,7 @@ def main():
         add_configure_build(n, project)
 
 
-def add_download_tool_builds(n: ninja_syntax.Writer):
+def add_download_tool_builds(n: ninja_syntax.Writer, project: Project):
     if args.dsd is None:
         n.build(
             rule="download_tool",
@@ -325,12 +329,12 @@ def add_download_tool_builds(n: ninja_syntax.Writer):
             variables={
                 "tool": "mwccarm",
                 "tag": "latest",
-                "path": tools_path,
+                "path": str(tools_path),
             },
         )
         n.newline()
 
-    if platform.system != "windows" and WINE == DEFAULT_WIBO_PATH:
+    if project.platform.system != "windows" and WINE == DEFAULT_WIBO_PATH:
         n.build(
             rule="download_tool",
             outputs=WINE,
@@ -368,7 +372,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
         rule="mwld",
         outputs=elf_file,
         variables={
-            "target_dir": project.game_build,
+            "target_dir": str(project.game_build),
             "objects_file": objects_file,
             "lcf_file": lcf_file,
         }
@@ -389,7 +393,7 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
         rule="rom_config",
         outputs=rom_config_file,
         variables={
-            "config_path": project.arm9_config_yaml(),
+            "config_path": str(project.arm9_config_yaml()),
         }
     )
     n.newline()
@@ -421,10 +425,10 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     n.newline()
 
 
-def add_mwcc_builds(n: ninja_syntax.Writer, project: Project, mwcc_implicit: list[Path]):
+def add_mwcc_builds(n: ninja_syntax.Writer, project: Project, mwcc_implicit: list[str]):
     for source_file in get_c_cpp_files([src_path, libs_path]):
         src_obj_path = project.game_build / source_file
-        cc_flags = []
+        cc_flags: list[str] = []
         if is_cpp(source_file): cc_flags.append("-lang=c++")
         elif is_c(source_file): cc_flags.append("-lang=c")
         n.build(
@@ -460,11 +464,11 @@ def get_c_cpp_files(dirs: list[Path]):
                     yield root / file
 
 
-def is_cpp(name: str):
+def is_cpp(name: str | Path):
     return Path(name).suffix in [".cpp"]
 
 
-def is_c(name: str):
+def is_c(name: str | Path):
     return Path(name).suffix in [".c"]
 
 
@@ -478,7 +482,7 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, project: Project):
         rule="delink",
         outputs=str(delinks_path / "delink.yaml"),
         variables={
-            "config_path": project.arm9_config_yaml(),
+            "config_path": str(project.arm9_config_yaml()),
         }
     )
     n.newline()
@@ -498,9 +502,9 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, project: Project):
         rule="lcf",
         outputs=[str(lcf_file), str(objects_file)],
         variables={
-            "config_path": project.arm9_config_yaml(),
-            "lcf_file": lcf_file,
-            "objects_file": objects_file,
+            "config_path": str(project.arm9_config_yaml()),
+            "lcf_file": str(lcf_file),
+            "objects_file": str(objects_file),
         }
     )
     n.newline()
@@ -512,7 +516,7 @@ def add_check_builds(n: ninja_syntax.Writer, project: Project):
         rule="check_modules",
         outputs="check_modules",
         variables={
-            "config_path": project.arm9_config_yaml(),
+            "config_path": str(project.arm9_config_yaml()),
         },
     )
     n.newline()
@@ -522,8 +526,8 @@ def add_check_builds(n: ninja_syntax.Writer, project: Project):
         rule="check_symbols",
         outputs="check_symbols",
         variables={
-            "config_path": project.arm9_config_yaml(),
-            "elf_path": project.arm9_o(),
+            "config_path": str(project.arm9_config_yaml()),
+            "elf_path": str(project.arm9_o()),
         },
     )
     n.newline()
@@ -543,7 +547,7 @@ def add_objdiff_builds(n: ninja_syntax.Writer, project: Project):
         rule="objdiff",
         outputs="objdiff.json",
         variables={
-            "config_path": project.arm9_config_yaml(),
+            "config_path": str(project.arm9_config_yaml()),
         }
     )
     n.newline()
