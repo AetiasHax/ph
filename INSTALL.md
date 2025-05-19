@@ -32,9 +32,6 @@ python tools/configure.py <eur|usa>
 
 Now you can run `ninja` to build a ROM for the chosen version.
 
-> [!IMPORTANT]
-> Rerun `configure.py` often to ensure that all C/C++ code gets compiled.
-
 > [!NOTE]
 > For Linux users: Wibo is used by default. If you want to use Wine instead, run `configure.py` with `-w <path/to/wine>`.
 
@@ -49,5 +46,3 @@ ARM7 BIOS in the root directory of this repository, and verify that your dumped 
 | --------------- | ------------------------------------------ |
 | `arm7_bios.bin` | `6ee830c7f552c5bf194c20a2c13d5bb44bdb5c03` |
 | `arm7_bios.bin` | `24f67bdea115a2c847c8813a262502ee1607b7df` |
-
-Now, rerun `configure.py` so it can update `build.ninja` to build a matching ROM.
