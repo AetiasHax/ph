@@ -655,9 +655,10 @@ def add_objdiff_builds(n: ninja_syntax.Writer, project: Project):
     )
     n.newline()
 
+    delink_files = [file['delink_file'] for module in project.modules() for file in module['files']]
     n.build(
         inputs=["objdiff.json"],
-        implicit=[OBJDIFF] + project.source_object_files(),
+        implicit=[OBJDIFF] + delink_files + project.source_object_files(),
         rule="objdiff_report",
         outputs=str(project.objdiff_report()),
     )
