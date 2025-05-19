@@ -305,6 +305,12 @@ def main():
         n.newline()
 
         n.rule(
+            name="apply",
+            command=f"{DSD} {DSD_BASE_FLAGS} apply --config-path $config_path --elf-path $elf_path"
+        )
+        n.newline()
+
+        n.rule(
             name="sha1",
             command=f"{PYTHON} tools/sha1.py $in -c $sha1_file"
         )
@@ -327,6 +333,7 @@ def main():
         add_check_builds(n, project)
         add_objdiff_builds(n, project)
         add_configure_build(n, project)
+        add_apply_build(n, project)
 
         n.default(["objdiff", "check", "sha1"])
 
@@ -644,6 +651,20 @@ def add_configure_build(n: ninja_syntax.Writer, project: Project):
             *project.dsd_configs(),
         ]
     )
+
+
+def add_apply_build(n: ninja_syntax.Writer, project: Project):
+    n.build(
+        inputs=project.dsd_configs() + [str(project.arm9_o())],
+        implicit=DSD,
+        rule="apply",
+        outputs="apply",
+        variables={
+            "config_path": str(project.arm9_config_yaml()),
+            "elf_path": str(project.arm9_o()),
+        }
+    )
+    n.newline()
 
 
 def get_config_files(game_config: Path, name: str) -> list[str]:
