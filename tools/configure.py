@@ -172,6 +172,9 @@ class Project:
     def arm9_o(self) -> Path:
         return self.game_build / "arm9.o"
 
+    def arm9_disassembly_dir(self) -> Path:
+        return self.game_build / "asm"
+
     def objdiff_report(self) -> Path:
         return self.game_build / "report.json"
 
@@ -224,6 +227,12 @@ def main():
         n.rule(
             name="delink",
             command=f"{DSD} {DSD_BASE_FLAGS} delink --config-path $config_path"
+        )
+        n.newline()
+
+        n.rule(
+            name="disassemble",
+            command=f"{DSD} {DSD_BASE_FLAGS} dis --config-path $config_path --asm-path $output_path --ual"
         )
         n.newline()
 
@@ -312,11 +321,14 @@ def main():
         add_download_tool_builds(n, project)
         add_extract_build(n, project)
         add_delink_and_lcf_builds(n, project)
+        add_disassemble_builds(n, project)
         add_mwcc_builds(n, project, mwcc_implicit)
         add_mwld_and_rom_builds(n, project)
         add_check_builds(n, project)
         add_objdiff_builds(n, project)
         add_configure_build(n, project)
+
+        n.default(["objdiff", "check", "sha1"])
 
 
 def add_download_tool_builds(n: ninja_syntax.Writer, project: Project):
@@ -536,6 +548,20 @@ def add_delink_and_lcf_builds(n: ninja_syntax.Writer, project: Project):
         outputs=lcf_files,
         variables={
             "config_path": str(project.arm9_config_yaml()),
+        }
+    )
+    n.newline()
+
+
+def add_disassemble_builds(n: ninja_syntax.Writer, project: Project):
+    n.build(
+        inputs=project.dsd_configs(),
+        implicit=DSD,
+        rule="disassemble",
+        outputs="dis",
+        variables={
+            "config_path": str(project.arm9_config_yaml()),
+            "output_path": str(project.arm9_disassembly_dir()),
         }
     )
     n.newline()
