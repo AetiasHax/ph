@@ -210,6 +210,8 @@ def can_run_dsd() -> bool:
         return version == DSD_VERSION
     except subprocess.CalledProcessError:
         return False
+    except FileNotFoundError:
+        return False
 
 
 def main():
