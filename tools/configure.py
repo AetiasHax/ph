@@ -118,7 +118,7 @@ PYTHON = sys.executable
 
 
 class Project:
-    def __init__(self, game_version: str, *, platform: Platform, delinks_json: Any):
+    def __init__(self, game_version: str, *, platform: Platform, delinks_json: Any | None):
         self.game_version = game_version
         '''Version of the game'''
         self.game_config = config_path / game_version
@@ -178,27 +178,53 @@ class Project:
     def objdiff_report(self) -> Path:
         return self.game_build / "report.json"
 
+    def modules(self) -> list[Any]:
+        if self.delinks_json is None:
+            return []
+        return self.delinks_json['modules']
+
     def delink_files(self) -> list[str]:
+        if self.delinks_json is None:
+            return []
         return [file['delink_file'] for module in self.delinks_json['modules'] for file in module['files']]
 
     def arm9_lcf_file(self) -> str:
+        if self.delinks_json is None:
+            return ""
         return self.delinks_json['arm9_lcf_file']
 
     def module_lcf_files(self) -> list[str]:
+        if self.delinks_json is None:
+            return []
         return [module['lcf_file'] for module in self.delinks_json['modules']]
+
+
+def can_run_dsd() -> bool:
+    try:
+        output = subprocess.run([DSD, "--version"], capture_output=True, text=True, check=True)
+        version = output.stdout.strip().split(" ")[-1]
+        if not version.startswith("v"):
+            version = "v" + version
+
+        # If it's not the correct version, Ninja will download it and then rerun this script
+        return version == DSD_VERSION
+    except subprocess.CalledProcessError:
+        return False
 
 
 def main():
     if platform is None: return
 
-    out = subprocess.run([
-        DSD,
-        "--force-color",
-        "json",
-        "delinks",
-        "--config-path", config_path / args.version / "arm9" / "config.yaml"
-    ], capture_output=True, text=True, check=True)
-    delinks_json = json.loads(out.stdout)
+    delinks_json = None
+    if can_run_dsd():
+        out = subprocess.run([
+            DSD,
+            "--force-color",
+            "json",
+            "delinks",
+            "--config-path", config_path / args.version / "arm9" / "config.yaml"
+        ], capture_output=True, text=True, check=True)
+        delinks_json = json.loads(out.stdout)
 
     project = Project(args.version, platform=platform, delinks_json=delinks_json)
 
@@ -403,7 +429,7 @@ def add_extract_build(n: ninja_syntax.Writer, project: Project):
 
 def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     n.comment("Link each module separately")
-    for module in project.delinks_json['modules']:
+    for module in project.modules():
         lcf_file = module['lcf_file']
         objects_to_link = [file['object_to_link'] for file in module['files']]
         elf_file = module['elf_file']
@@ -419,18 +445,20 @@ def add_mwld_and_rom_builds(n: ninja_syntax.Writer, project: Project):
     n.newline()
 
     n.comment("Link all modules together")
-    module_elf_files = [module['elf_file'] for module in project.delinks_json['modules']]
+    module_elf_files = [module['elf_file'] for module in project.modules()]
     elf_file = str(project.arm9_o())
     lcf_file = project.arm9_lcf_file()
-    n.build(
-        inputs=module_elf_files + [lcf_file],
-        implicit=LD,
-        rule="mwld",
-        outputs=elf_file,
-        variables={
-            'extra_ld_flags': ARM9_LD_FLAGS,
-        }
-    )
+    if len(module_elf_files) > 0:
+        n.build(
+            inputs=module_elf_files + [lcf_file],
+            implicit=LD,
+            rule="mwld",
+            outputs=elf_file,
+            variables={
+                'extra_ld_flags': ARM9_LD_FLAGS,
+            }
+        )
+        n.newline()
 
     n.build(
         inputs=elf_file,
@@ -526,38 +554,40 @@ def is_c(name: str | Path):
 
 
 def add_delink_and_lcf_builds(n: ninja_syntax.Writer, project: Project):
-    n.comment("Delink ELF binaries when any delinks.txt file is modified")
     rom_config = str(project.baserom_config())
     delink_files = project.delink_files()
-    n.build(
-        inputs=project.dsd_configs() + [rom_config],
-        implicit=DSD,
-        rule="delink",
-        outputs=delink_files,
-        variables={
-            "config_path": str(project.arm9_config_yaml()),
-        }
-    )
-    n.newline()
+    if len(delink_files) > 0:
+        n.comment("Delink ELF binaries when any delinks.txt file is modified")
+        n.build(
+            inputs=project.dsd_configs() + [rom_config],
+            implicit=DSD,
+            rule="delink",
+            outputs=delink_files,
+            variables={
+                "config_path": str(project.arm9_config_yaml()),
+            }
+        )
+        n.newline()
 
-    n.build(
-        inputs=delink_files,
-        rule="phony",
-        outputs="delink"
-    )
-    n.newline()
+        n.build(
+            inputs=delink_files,
+            rule="phony",
+            outputs="delink"
+        )
+        n.newline()
 
     lcf_files = project.module_lcf_files() + [project.arm9_lcf_file()]
-    n.build(
-        inputs=project.delinks_files + [str(rom_config)],
-        implicit=DSD,
-        rule="lcf",
-        outputs=lcf_files,
-        variables={
-            "config_path": str(project.arm9_config_yaml()),
-        }
-    )
-    n.newline()
+    if len(lcf_files) > 1:
+        n.build(
+            inputs=project.delinks_files + [str(rom_config)],
+            implicit=DSD,
+            rule="lcf",
+            outputs=lcf_files,
+            variables={
+                "config_path": str(project.arm9_config_yaml()),
+            }
+        )
+        n.newline()
 
 
 def add_disassemble_builds(n: ninja_syntax.Writer, project: Project):
