@@ -20,15 +20,6 @@ extern "C" {
 #define MAX_AMMO_UPGRADE 2
 #define MAX_UNK_0BA 9
 
-typedef s32 FairyId;
-enum FairyId_ {
-    FairyId_None    = -1,
-    FairyId_Courage = 0,
-    FairyId_Power   = 1,
-    FairyId_Wisdom  = 2,
-    FairyId_COUNT   = 3,
-};
-
 typedef u32 ItemModelId;
 enum ItemModelId_ {
     ItemModelId_OshusSword,   // swA

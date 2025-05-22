@@ -210,7 +210,7 @@ public:
     unk8 func_ov00_0208499c();
     unk8 func_ov00_020849c0();
     unk8 func_ov00_020849dc();
-    static bool func_ov00_020849f8(unk32 param_1);
+    bool func_ov00_020849f8();
     unk8 func_ov00_02084a50();
     void SpawnNPC(Vec3p *param_2, unk32 param_3, unk32 param_4);
     bool func_ov00_02084ac4(u32 actorId);
