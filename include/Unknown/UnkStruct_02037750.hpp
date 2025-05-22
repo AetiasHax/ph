@@ -31,7 +31,7 @@ public:
     /* 34 */
 
     UnkStruct_02037750(unk32 param1, unk32 param2);
-    LinkStateInteract *GetLinkStateInteract();
+    static LinkStateInteract *GetLinkStateInteract();
     void func_020385d0(s32 param1, unk32 *param2);
 };
 
