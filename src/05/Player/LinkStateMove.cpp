@@ -207,7 +207,7 @@ ARM void LinkStateMove::vfunc_1c() {
 }
 
 ARM bool LinkStateMove::vfunc_3c() {
-    if ((gPlayerControl->GetFollowActor() == NULL) && (gPlayerControl->mFollowActor == NULL) &&
+    if ((gPlayerControl->GetFollowActor() == NULL) && (gPlayerControl->mFollowObject == NULL) &&
         (this->Get_PlayerControlData_Unk120() != 2) && (this->Get_PlayerControlData_Unk120() != 3))
     {
         return true;
