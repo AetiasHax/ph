@@ -51,7 +51,7 @@ ARM void ActorManager::func_ov00_020c3484(ActorRef *ref, ActorManager *actorMgr,
 
     q20 minDistance       = 0x7fffffff;
     Actor **actorIter     = actorMgr->mActorTable;
-    u8 unkByte            = data_02056be4[data_027e077c.mUnk_0];
+    u8 unkByte            = data_02056be4[data_027e077c.GetUnk0()];
     bool unk1             = (unkByte & 1) != 0;
     Actor **actorTableEnd = actorIter + actorMgr->mMaxActorIndex;
 

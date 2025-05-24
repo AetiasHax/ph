@@ -779,7 +779,7 @@ func_ov000_0208aed8 kind:function(arm,size=0x244) addr:0x208ae78
 func_ov000_0208b11c kind:function(arm,size=0x20) addr:0x208b0bc
 func_ov000_0208b13c kind:function(arm,size=0x1c) addr:0x208b0dc
 func_ov000_0208b158 kind:function(arm,size=0x28) addr:0x208b0f8
-func_ov000_0208b180 kind:function(arm,size=0x28) addr:0x208b120
+_ZN18UnkStruct_027e0f6419func_ov000_0208b180Ev kind:function(arm,size=0x28) addr:0x208b120
 func_ov000_0208b1a8 kind:function(arm,size=0x28) addr:0x208b148
 func_ov000_0208b1d0 kind:function(arm,size=0x28) addr:0x208b170
 func_ov000_0208b1f8 kind:function(arm,size=0x28) addr:0x208b198
@@ -4905,7 +4905,7 @@ data_ov000_020e6118 kind:data(any) addr:0x20e60b8
 data_ov000_020e611c kind:data(any) addr:0x20e60bc
 data_ov000_020e6120 kind:data(any) addr:0x20e60c0
 data_ov000_020e6124 kind:data(any) addr:0x20e60c4
-@1518 kind:data(any) addr:0x20e60e8
+@1548 kind:data(any) addr:0x20e60e8
 data_ov000_020e6158 kind:data(any) addr:0x20e60f8
 data_ov000_020e6174 kind:data(any) addr:0x20e6114
 data_ov000_020e6178 kind:data(any) addr:0x20e6118

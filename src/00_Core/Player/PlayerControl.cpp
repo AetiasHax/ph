@@ -15,20 +15,20 @@
 #include "Player/PlayerLinkBase.hpp"
 #include "Save/AdventureFlags.hpp"
 
+static char *sShipTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+
 ARM bool PlayerControl::func_ov00_020aeeac() {
-    unk32 index = data_027e077c.mUnk_0;
-    if (((data_02056be4[index] & 1) != 0) || ((data_02056be4[index] & 4) != 0)) {
+    if (((data_02056be4[data_027e077c.GetUnk0()] & 1) != 0) || ((data_02056be4[data_027e077c.GetUnk0()] & 4) != 0)) {
         return false;
     }
-    return index == data_027e077c.mUnk_4;
+    return data_027e077c.GetUnk0() == data_027e077c.GetUnk4();
 }
 
 ARM bool PlayerControl::func_ov00_020aeef8() {
-    unk32 index = data_027e077c.mUnk_0;
-    if (index == 0x37 || index == 0x3b) {
+    if (data_027e077c.GetUnk0() == 0x37 || data_027e077c.GetUnk0() == 0x3b) {
         return false;
     }
-    if (index == 0x3d) {
+    if (data_027e077c.GetUnk0() == 0x3d) {
         return true;
     }
     return func_ov00_020aeeac();
@@ -42,6 +42,7 @@ THUMB void PlayerControl::func_ov00_020aef30() {
     }
 }
 
+// NONMATCH: Instruction ordering
 THUMB void PlayerControl::UpdateAim() {
     ResetTouchWorld();
     mAimWorld.x = 0;
@@ -88,6 +89,7 @@ ARM void PlayerControl::func_ov00_020af06c() {
         mUsingEquipItem = false;
         return;
     }
+    ItemFlag equippedItem;
     bool usingEquipItem = mUsingEquipItem;
     if (mUnk_7a) {
         mUnk_7b = usingEquipItem;
@@ -99,7 +101,7 @@ ARM void PlayerControl::func_ov00_020af06c() {
         return;
     }
     ItemManager *itemManager = gItemManager;
-    ItemFlag equippedItem    = itemManager->mEquippedItem;
+    equippedItem             = itemManager->mEquippedItem;
     if (equippedItem == ItemFlag_PotionA) {
         if (itemManager->HasPotion(0)) {
             mUsingEquipItem = true;
@@ -181,7 +183,7 @@ bool PlayerControl::func_ov00_020af2d4(u32 param1, bool param2) {
     if (mUnk_7c) {
         bool unk1 = true;
         bool unk2 = false;
-        if ((param1 & 0x2) != 0 && (data_02056be4[data_027e077c.mUnk_0] & 0x1) != 0) {
+        if ((param1 & 0x2) != 0 && (data_02056be4[data_027e077c.GetUnk0()] & 0x1) != 0) {
             unk2 = true;
         }
         if (!unk2 && ((param1 & 0x1) == 0 || !this->func_ov00_020aeef8() || !data_027e103c->mUnk_24)) {
@@ -231,7 +233,7 @@ ARM bool PlayerControl::func_ov00_020af4a4() {
         if (this->func_ov00_020aeeac()) {
             return true;
         }
-        switch (data_027e077c.mUnk_0) {
+        switch (data_027e077c.GetUnk0()) {
             case 0x1a:
             case 0x1b:
             case 0x1c: return true;
@@ -245,16 +247,13 @@ ARM void PlayerControl::func_ov00_020af538(bool param1, u8 param2) {
     mUnk_7c = param1;
     mUnk_7e = param2;
     mUnk_7d = param1;
-    if (mUnk_78) {
-        bool unk = gAdventureFlags->func_ov00_02097738() || data_027e0c68.mUnk_04 ? false : true;
-        if (unk) {
-            if (!this->func_ov00_020af4a4()) {
-                mUnk_7c = false;
-            }
-        }
-        if (!unk && this->func_ov00_020aeef8()) {
-            mUnk_7d = false;
-        }
+
+    bool unk = !mUnk_78 || gAdventureFlags->func_ov00_02097738() || data_027e0c68.mUnk_04;
+    if (unk || !this->func_ov00_020af4a4()) {
+        mUnk_7c = false;
+    }
+    if (unk || !this->func_ov00_020aeef8()) {
+        mUnk_7d = false;
     }
 
     this->func_ov000_020b7924(mUnk_7c);
@@ -546,29 +545,21 @@ ARM void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec
         Vec3p local_24;
         Vec3p_Axpy(y, &mUnk_44, &mTouchWorld, &local_24);
 
-        Vec3p local_30;
-        local_30.y = 0;
-        local_30.x = param4->x - local_24.x;
-        local_30.z = param4->z - local_24.z;
-        q20 iVar2  = Vec3p_Length(&local_30);
+        Vec3p local_30 = {param4->x - local_24.x, 0, param4->z - local_24.z};
+        q20 iVar2      = Vec3p_Length(&local_30);
         if (iVar2 <= param3) {
             *param1 = local_24;
             return;
         }
 
-        Vec3p local_3c;
-        local_3c.x    = mUnk_44.x;
-        local_3c.y    = 0;
-        local_3c.z    = mUnk_44.z;
-        q20 lengthInv = CoReciprocal(Vec3p_Length(&local_3c));
-        local_3c.x    = MUL_Q20(local_3c.x, lengthInv);
-        local_3c.z    = MUL_Q20(local_3c.z, lengthInv);
-        iVar2         = Vec3p_Dot(&local_30, &local_3c);
+        Vec3p local_3c = {mUnk_44.x, 0, mUnk_44.z};
+        q20 lengthInv  = CoReciprocal(Vec3p_Length(&local_3c));
+        local_3c.x     = MUL_Q20(local_3c.x, lengthInv);
+        local_3c.z     = MUL_Q20(local_3c.z, lengthInv);
+        iVar2          = Vec3p_Dot(&local_30, &local_3c);
 
-        Vec3p local_48;
-        local_48.x = local_3c.x;
-        local_48.y = lengthInv;
-        local_48.z = local_3c.z;
+        Vec3p local_48 = local_3c;
+        local_48.y     = lengthInv;
         Vec3p_Axpy(iVar2 - param3, &local_48, &local_24, param1);
         return;
     }
@@ -606,14 +597,13 @@ ARM void PlayerControl::ResetAim() {
     mAim = gVec3p_ZERO;
 }
 
-extern "C" s32 func_ov000_020a5e9c(unk32 param1);
+extern "C" s32 func_ov000_020a5e9c(unk32 *param1);
 
 ARM bool PlayerControl::UpdateAimWorld(Vec3p *param1) {
-    Vec3p pos;
-    pos = gPlayerPos;
+    Vec3p pos = gPlayerPos;
 
-    s32 iVar2 = func_ov000_020a5e9c(data_027e0d38->mUnk_0c);
-    if (iVar2 == 0x2f && *(s32 *) (*(s32 *) (data_027e0f64 + 0x4) + 0x15c) == 0x31) {
+    s32 iVar2 = func_ov000_020a5e9c(&data_027e0d38->mUnk_0c);
+    if (iVar2 == 0x2f && *(s32 *) (*(s32 *) ((s32) data_027e0f64 + 0x4) + 0x15c) == 0x31) {
         return this->func_ov024_02178348(param1);
     }
 
@@ -639,27 +629,53 @@ ARM s16 PlayerControl::GetTouchAngle() {
 static q20 data_ov000_020e6144 = FLOAT_TO_Q20(80.0);
 
 ARM u32 PlayerControl::func_ov00_020b034c() {
-    if (mTouchDuration >= 0 && this->func_ov00_020af2d4(1, true)) {
-        q20 uVar5 = func_01ff992c(data_ov000_020e6144);
-        s64 lVar1 = mTouchDist * uVar5;
-        if (mTouchDuration < 4) {
-            lVar1 -= (4 - mTouchDuration) * FLOAT_TO_Q20(1.0);
+    s16 temp_r2;
+    s64 temp_ip;
+    s32 temp_r2_2;
+    s64 temp_r3;
+    u64 temp_ret;
+    s32 var_r0;
+
+    if ((mTouchDuration >= 0) && (this->func_ov00_020af2d4(1, 1) != 0)) {
+        temp_ret = func_01ff992c(data_ov000_020e6144);
+        temp_ip  = mTouchDist;
+        temp_r2  = mTouchDuration;
+        temp_r3  = temp_ret * temp_ip + 0x80000000;
+        var_r0   = (((temp_r3 >> 32) * (temp_r3 >> 32)) + 0x800) >> 12;
+        if (temp_r2 < 4) {
+            temp_r2_2 = (4 - temp_r2) << 0xc;
+            var_r0 -= (s32) (temp_r2_2 + ((u32) (temp_r2_2 >> 1) >> 0x1e)) >> 2;
         }
-        if (lVar1 < 0) {
+        if (var_r0 < 0) {
             return 0;
         }
-        if (lVar1 > FLOAT_TO_Q20(1.0)) {
-            return FLOAT_TO_Q20(1.0);
+        if (var_r0 > FLOAT_TO_Q20(1.0)) {
+            var_r0 = FLOAT_TO_Q20(1.0);
         }
-        return lVar1;
+        return var_r0;
     }
-    if (!mUnk_7f && (data_027e05f8.mUnk_0 & 0xf0) != 0) {
+    if ((mUnk_7f != 0) && (data_027e05f8.mUnk_0 & 0xF0)) {
         return FLOAT_TO_Q20(1.0);
     }
     return 0;
 }
 
-ARM s32 PlayerControl::func_ov00_020b0418() {}
+extern unk32 data_ov000_020eec60;
+extern "C" unk32 func_ov000_020d6be4(unk32 *param1);
+
+ARM s32 PlayerControl::func_ov00_020b0418() {
+    unk32 unk = func_ov000_020d6be4(&data_ov000_020eec60);
+    if (unk < 10) {
+        return 0;
+    }
+    if (unk < 25) {
+        return (unk * FLOAT_TO_Q20(0.6666)) / 25;
+    }
+    if (unk < 150) {
+        return (unk - 25) * FLOAT_TO_Q20(0.3334) / 125 + FLOAT_TO_Q20(0.6666);
+    }
+    return FLOAT_TO_Q20(1.0);
+}
 
 extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
 ARM bool PlayerControl::func_ov00_020b049c(Vec3p *param1, bool param2) {
@@ -698,9 +714,9 @@ ARM bool PlayerControl::func_ov00_020b05e8(Vec3p *param1) {
         }
 
         if (distance < FLOAT_TO_Q20(0.25)) {
-            VStack_1c.y = playerPos->y;
-            VStack_1c.x = playerPos->x + MUL_Q20(SIN(gPlayerAngle), FLOAT_TO_Q20(0.25));
-            VStack_1c.z = playerPos->z + MUL_Q20(COS(gPlayerAngle), FLOAT_TO_Q20(0.25));
+            VStack_1c = *playerPos;
+            VStack_1c.x += MUL_Q20(SIN(gPlayerAngle), FLOAT_TO_Q20(0.25));
+            VStack_1c.z += MUL_Q20(COS(gPlayerAngle), FLOAT_TO_Q20(0.25));
         }
 
         Vec2b VStack_20;
@@ -716,117 +732,102 @@ ARM bool PlayerControl::func_ov00_020b05e8(Vec3p *param1) {
 extern "C" bool func_01ffe468(unk32 param1, Vec3p *param2, s32 *param3, s32 *param4, bool param5);
 
 ARM bool PlayerControl::func_ov00_020b0778(Vec3p *param1, u32 angle, unk32 *param3) {
-    static const sThreshold = FLOAT_TO_Q20(0.0059);
+    Vec3p spC;
+    *param3 = 0;
+    spC     = *param1;
 
-    *param3        = 0;
-    Vec3p local_2c = *param1;
-
-    s32 unk2X, unk2Y;
-    unk32 uVar2 = data_027e0f64->func_ov000_0208b180();
-    if (!func_01ffe468(uVar2, &local_2c, &unk2X, &unk2Y, false)) {
-        return false;
+    s32 sp8;
+    s32 sp4;
+    bool var_r0 = !func_01ffe468(data_027e0f64->func_ov000_0208b180(), &spC, &sp8, &sp4, 0);
+    if (var_r0) {
+        return 0;
     }
 
-    q20 dirX = MUL_Q20(SIN(angle), 2 * sThreshold);
-    q20 dirY = MUL_Q20(COS(angle), 2 * sThreshold);
-
-    q20 x = mTouchX - unk2X;
-    q20 y = mTouchY - unk2Y;
-
-    q20 unk1X, unk1Y;
-    bool bVar1, bVar8, bVar7;
-    if (this->CheckTouchedNow(1)) {
-        unk1X = dirX - sThreshold;
-        if (unk1X <= x) {
-            unk1X = dirX + sThreshold;
+    s32 temp_r2 = SIN((u16) angle) * 0x30;
+    s32 temp_r3 = COS((u16) angle) * 0x30;
+    s32 temp_r4;
+    s32 temp_r5;
+    s32 var_r6;
+    s32 var_r7;
+    var_r6  = (s32) (temp_r2 + ((u32) (temp_r2 >> 11) >> 20)) >> 0xC;
+    var_r7  = (s32) (temp_r3 + ((u32) (temp_r3 >> 11) >> 20)) >> 0xC;
+    temp_r4 = mTouchX - sp8;
+    temp_r5 = mTouchY - sp4;
+    if (this->CheckTouchedNow(1) != 0) {
+        if (((var_r6 - 0x18) <= temp_r4) && (temp_r4 <= (var_r6 + 0x18)) && ((var_r7 - 0x18) <= temp_r5) &&
+            (temp_r5 <= (var_r7 + 0x18)))
+        {
+            *param3 = FLOAT_TO_Q20(1.0);
+            return true;
         }
-        if (unk1X == x) {
-            unk1Y = dirY - sThreshold;
-            if (unk1Y <= y) {
-                unk1Y = dirY + sThreshold;
-                if (unk1Y == y) {
-                    *param3 = FLOAT_TO_Q20(1.0);
-                    return true;
-                }
+        if (((-0x18 - var_r6) <= temp_r4) && (temp_r4 <= (0x18 - var_r6)) && ((-0x18 - var_r7) <= temp_r5) &&
+            (temp_r5 <= (0x18 - var_r7)))
+        {
+            *param3 = -FLOAT_TO_Q20(1.0);
+            return true;
+        }
+        s32 temp_r1_2 = 0 - var_r6;
+        s32 var_r0_2  = var_r6 < temp_r1_2 ? var_r6 : temp_r1_2;
+        if (temp_r4 >= (var_r0_2 - 0x18)) {
+            if (var_r6 <= temp_r1_2) {
+                var_r6 = temp_r1_2;
             }
-        }
-        unk1X = -sThreshold - dirX;
-        if (unk1X <= x) {
-            unk1X = sThreshold - dirX;
-        }
-        if (unk1X == x) {
-            unk1Y = -sThreshold - dirY;
-            if (unk1Y == y) {
-                unk1Y = sThreshold - dirY;
-                if (y == unk1Y) {
-                    *param3 = -FLOAT_TO_Q20(1.0);
-                    return true;
-                }
-            }
-        }
-        if (ABS(dirX) - sThreshold <= x && x <= ABS(dirX) + sThreshold) {
-            if (ABS(dirY) - sThreshold <= y && y <= ABS(dirY) + sThreshold) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    unk1Y = this->CheckTouching(1);
-    if (unk1Y) {
-        bVar1 = dirX < 0;
-        if (dirX < 0) {
-            unk1Y = dirX + sThreshold;
-            bVar1 = x - unk1Y < 0;
-        }
-        if (bVar1 == (dirX < 0 && (x < unk1Y))) {
-            bVar1 = dirX == 0;
-            unk1X = dirX;
-            if (0 < dirX) {
-                unk1Y = dirX - sThreshold;
-                unk1X = x - unk1Y;
-                bVar1 = x == unk1Y;
-            }
-            if (bVar1 || unk1X < 0 != (0 < dirX && (x < unk1Y))) {
-                bVar7 = dirY < 0;
-                bVar1 = bVar7;
-                if (bVar7) {
-                    unk1Y = dirY + sThreshold;
-                    bVar1 = y - unk1Y < 0;
-                }
-                if (bVar1 == (bVar7 && (y < unk1Y))) {
-                    bVar1 = dirY == 0;
-                    unk1X = dirY;
-                    if (0 < dirY) {
-                        unk1Y = dirY - sThreshold;
-                        unk1X = y - unk1Y;
-                        bVar1 = y == unk1Y;
+            if ((var_r6 + 0x18) >= temp_r4) {
+                s32 temp_r1_3 = 0 - var_r7;
+                s32 var_r0_3  = var_r7 < temp_r1_3 ? var_r7 : temp_r1_3;
+                if (temp_r5 >= (var_r0_3 - 0x18)) {
+                    if (var_r7 <= temp_r1_3) {
+                        var_r7 = temp_r1_3;
                     }
-                    if (bVar1 || unk1X < 0 != (0 < dirY && (y < unk1Y))) {
-                        if ((0 < dirX && dirX < sThreshold - x) || (0 > dirX && dirX > -sThreshold - x) ||
-                            (0 < dirY && dirY < sThreshold - y) || (0 > dirY && dirY > -sThreshold - y))
-                        {
-                            *param3 = -FLOAT_TO_Q20(1.0);
-                        }
-                        return true;
+                    if ((var_r7 + 0x18) >= temp_r5) {
+                        goto ret_true;
                     }
                 }
             }
         }
-        *param3 = FLOAT_TO_Q20(1.0);
-        return true;
+        return false;
     }
-
-    if (this->CheckUntouchedNow(1)) {
-        unk2X = mTouchPrevX - unk2X;
-        unk2Y = mTouchPrevY - unk2Y;
-        if (sThreshold < ABS(dirX) && ABS(dirX) < ABS(unk2X) + sThreshold) {
-            return false;
+    if (this->CheckTouching(1) != 0) {
+        if (((var_r6 < 0) && (temp_r4 < (var_r6 + 0x18))) || ((var_r6 > 0) && (temp_r4 > (var_r6 - 0x18))) ||
+            ((var_r7 < 0) && (temp_r5 < (var_r7 + 0x18))) || ((var_r7 > 0) && (temp_r5 > (var_r7 - 0x18))))
+        {
+            *param3 = FLOAT_TO_Q20(1.0);
+            return true;
         }
-        if (sThreshold < ABS(dirY) && ABS(dirY) < ABS(unk2Y) + sThreshold) {
-            return false;
+        if (((var_r6 > 0) && (temp_r4 < (0x18 - var_r6))) || ((var_r6 < 0) && (temp_r4 > (-0x18 - var_r6))) ||
+            ((var_r7 > 0) && (temp_r5 < (0x18 - var_r7))) || ((var_r7 < 0) && (temp_r5 > (-0x18 - var_r7))))
+        {
+            *param3 = -FLOAT_TO_Q20(1.0);
+            return true;
+        }
+    } else if (this->CheckUntouchedNow(1) != 0) {
+        if (var_r6 < 0) {
+            var_r6 = -var_r6;
+        }
+        if (var_r7 < 0) {
+            var_r7 = -var_r7;
+        }
+        s32 var_r2 = mTouchPrevX - sp8;
+        s32 var_r1 = mTouchPrevY - sp4;
+        if (var_r6 > 0x18) {
+            if (var_r2 < 0) {
+                var_r2 = -var_r2;
+            }
+            if (var_r2 > (var_r6 - 0x18)) {
+                goto ret_false;
+            }
+        }
+        if (var_r7 > 0x18) {
+            if (var_r1 < 0) {
+                var_r1 = -var_r1;
+            }
+            if (var_r1 > (var_r7 - 0x18)) {
+            ret_false:
+                return false;
+            }
         }
     }
+ret_true:
     return true;
 }
 
@@ -858,12 +859,12 @@ ARM bool PlayerControl::func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk3
     if ((this->CheckUntouchedNow(1) && mTouchDuration >= 0 && mTouchDuration < 21) ||
         (this->CheckTouchFast(1) && mTouchSlowDuration > 21))
     {
-        s32 dx = mTouchLastX - mTouchFastX;
-        s32 dy = mTouchLastY - mTouchFastY;
+        s32 dy = INT_TO_Q20(mTouchLastY - mTouchFastY);
+        s32 dx = INT_TO_Q20(mTouchLastX - mTouchFastX);
         Vec3p local_20;
-        local_20.x = INT_TO_Q20(dx);
+        local_20.x = dx;
         local_20.y = 0;
-        local_20.z = INT_TO_Q20(dy);
+        local_20.z = dy;
         q20 length = Vec3p_Length(&local_20);
         if (length < FLOAT_TO_Q20(10.0)) {
             return false;
@@ -873,59 +874,52 @@ ARM bool PlayerControl::func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk3
         }
 
         *pEquipId = ItemFlag_OshusSword;
-        *pAngle   = mTouchAngle + ((mTouchFastAngle - mTouchAngle) << 16 >> 16) / 2;
+        *pAngle   = mTouchAngle + ((s16) (mTouchFastAngle - mTouchAngle)) / 2;
 
         if (mTouchSpeed > FLOAT_TO_Q20(0.5)) {
-            q20 touchMoveAngle = Atan2(mTouchSpeedX, mTouchSpeedY);
+            q4 touchMoveAngle = Atan2(mTouchSpeedX, mTouchSpeedY) - *pAngle;
             if (pFast != NULL) {
                 *pFast = true;
             }
-            *pCardinal = ((mTouchFastAngle - mTouchAngle) * 0x10000 >> 0x10) ? 2 : 1;
+            *pCardinal = touchMoveAngle >= 0 ? 1 : 2;
             return true;
         }
 
         s32 unkAngle = Atan2(local_20.x, local_20.z);
 
-        Vec3p VStack_2c;
-        VStack_2c.x = INT_TO_Q20(mTouchFastX);
-        VStack_2c.y = INT_TO_Q20(mTouchFastY);
-        VStack_2c.z = 0;
+        s32 unkAngle2   = (s16) ((s16) unkAngle - *pAngle);
+        Vec3p VStack_2c = {INT_TO_Q20(mTouchFastX), INT_TO_Q20(mTouchFastY), 0};
+        Vec3p VStack_38 = {INT_TO_Q20(mTouchLastX), INT_TO_Q20(mTouchLastY), 0};
 
-        Vec3p VStack_38;
-        VStack_38.x = INT_TO_Q20(mTouchLastX);
-        VStack_38.y = INT_TO_Q20(mTouchLastY);
-        VStack_38.z = 0;
-
-        s32 unkAngle2 = (unkAngle - *pAngle) * 0x10000 >> 0x10;
         Vec3p_Sub(&VStack_38, &VStack_2c, &VStack_38);
-        if (mTouchDist > FLOAT_TO_Q20(10.0)) {
-            if (unkAngle2 >= 0x6000 || unkAngle2 <= -0x6000) {
-                *pCardinal = 0;
-            } else if (unkAngle2 >= 0x2000) {
-                *pCardinal = 1;
-            } else if (unkAngle2 >= -0x2000) {
-                *pCardinal = 3;
-            } else {
-                *pCardinal = 4;
-            }
+        if (mTouchDist <= FLOAT_TO_Q20(10.0)) {
+            *pCardinal = 0;
+            *pAngle    = mTouchFastAngle;
             return true;
         }
-        *pCardinal = 0;
-        *pAngle    = mTouchFastAngle;
+        if (unkAngle2 >= 0x6000 || unkAngle2 <= -0x6000) {
+            *pCardinal = 0;
+        } else if (unkAngle2 >= 0x2000) {
+            *pCardinal = 1;
+        } else if (unkAngle2 < -0x2000) {
+            *pCardinal = 2;
+        } else {
+            *pCardinal = 3;
+        }
         return true;
     }
-
     return false;
 }
 
 ARM bool PlayerControl::func_ov00_020b0de8(Vec3p *param1) {
-    if (!this->CheckTouching(1)) {
+    if (this->CheckTouching(1) == 0) {
         return false;
     }
-    q20 z     = (mTouchLastY - 96) * 0xaa00;
-    param1->x = (mTouchLastX - 128) * 0xaa;
+    s32 x     = (mTouchLastX - 0x80) * 0xAA;
+    s32 z     = ((mTouchLastY - 0x60) * 0xAA00) / 192;
+    param1->x = x;
     param1->y = 0;
-    param1->z = z / 6;
+    param1->z = z;
     return true;
 }
 

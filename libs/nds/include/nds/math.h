@@ -34,7 +34,7 @@ u32 SoftDivide(u32 a, u32 b);
 u32 CoDivide64By32(u32 a, u32 b);
 u32 func_01ff98f0(u32 a, u32 b);
 u32 CoReciprocal(u32 x);
-u32 func_01ff992c(u32 x);
+u64 func_01ff992c(u32 x);
 u32 CoSqrt(u32 x);
 u32 CoInvSqrt(u32 x);
 u32 AwaitDivisionResult();
