@@ -6,6 +6,7 @@ extern "C" {
 #include "Actor/ActorManager.hpp"
 #include "Actor/ActorPlayerDummy.hpp"
 #include "DTCM/UnkStruct_027e077c.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
 #include "Item/ItemManager.hpp"
 #include "Map/MapManager.hpp"
 #include "Player/EquipSword.hpp"
@@ -256,13 +257,9 @@ ARM bool Actor::func_ov00_020c195c() {
     return true;
 }
 
-extern "C" bool func_ov05_02103f4c(s32 param1);
-extern s32 data_027e103c;
 ARM bool Actor::func_ov00_020c198c() {
-    u32 unk1 = data_027e077c.mUnk_0;
-    u32 unk2 = data_027e077c.mUnk_4;
-    if (data_027e077c.mUnk_0 != data_027e077c.mUnk_4 || (data_02056be4[unk1] & 1) != 0 || (data_02056be4[unk2] & 4) != 0 ||
-        func_ov05_02103f4c(data_027e103c) || gPlayer->mHealth <= 0)
+    if (data_027e077c.GetUnk0() != data_027e077c.GetUnk4() || (data_02056be4[data_027e077c.GetUnk0()] & 1) != 0 ||
+        (data_02056be4[data_027e077c.GetUnk4()] & 4) != 0 || data_027e103c->func_ov005_02103f4c() || gPlayer->mHealth <= 0)
     {
         return false;
     }
