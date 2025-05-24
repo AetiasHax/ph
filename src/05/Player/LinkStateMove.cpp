@@ -200,6 +200,7 @@ ARM void LinkStateMove::vfunc_1c() {
             }
         }
         ActorRef sp4;
+        sp4.Reset();
         this->PlayerLinkBase_vfunc_58(0, &sp4);
         return;
     }
