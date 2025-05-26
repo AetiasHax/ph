@@ -4896,16 +4896,17 @@ data_ov000_020e6088 kind:data(any) addr:0x20e6088
 data_ov000_020e6098 kind:data(any) addr:0x20e6098
 data_ov000_020e60a8 kind:data(any) addr:0x20e60a8
 _ZTV13LinkStateRoll kind:data(any) addr:0x20e60c0
-data_ov000_020e6104 kind:data(any) addr:0x20e6104
-data_ov000_020e6108 kind:data(any) addr:0x20e6108
-data_ov000_020e610c kind:data(any) addr:0x20e610c
-data_ov000_020e6110 kind:data(any) addr:0x20e6110
-data_ov000_020e6114 kind:data(any) addr:0x20e6114
-data_ov000_020e6118 kind:data(any) addr:0x20e6118
-data_ov000_020e611c kind:data(any) addr:0x20e611c
-data_ov000_020e6120 kind:data(any) addr:0x20e6120
-data_ov000_020e6124 kind:data(any) addr:0x20e6124
-@1548 kind:data(any) addr:0x20e6148
+@1505 kind:data(any) addr:0x20e6104
+@1504 kind:data(any) addr:0x20e6108
+@1503 kind:data(any) addr:0x20e610c
+@1502 kind:data(any) addr:0x20e6110
+@1501 kind:data(any) addr:0x20e6114
+@1500 kind:data(any) addr:0x20e6118
+@1499 kind:data(any) addr:0x20e611c
+@1498 kind:data(any) addr:0x20e6120
+sShipTypes kind:data(any) addr:0x20e6124 local
+data_ov000_020e6144 kind:data(any) addr:0x20e6144
+@1556 kind:data(any) addr:0x20e6148
 data_ov000_020e6158 kind:data(any) addr:0x20e6158
 data_ov000_020e6174 kind:data(any) addr:0x20e6174
 data_ov000_020e6178 kind:data(any) addr:0x20e6178
@@ -5876,6 +5877,7 @@ data_ov000_020ee16c kind:bss addr:0x20ee16c
 data_ov000_020ee178 kind:bss addr:0x20ee178
 data_ov000_020ee184 kind:bss addr:0x20ee184
 data_ov000_020ee198 kind:bss addr:0x20ee198
+data_ov000_020ee19c kind:bss addr:0x20ee19c
 @418 kind:bss addr:0x20ee1a0 local
 _ZN9ActorNavi5gTypeE kind:bss addr:0x20ee1ac
 @419 kind:bss addr:0x20ee1c0 local

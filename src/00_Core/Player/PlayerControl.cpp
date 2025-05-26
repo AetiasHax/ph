@@ -15,7 +15,7 @@
 #include "Player/PlayerLinkBase.hpp"
 #include "Save/AdventureFlags.hpp"
 
-static char *sShipTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+static char *sShipTypes[] = {"brg", "anc", "pdl", "hul", "can", "dco", "bow", "fnl"};
 
 ARM bool PlayerControl::func_ov00_020aeeac() {
     if (((data_02056be4[data_027e077c.GetUnk0()] & 1) != 0) || ((data_02056be4[data_027e077c.GetUnk0()] & 4) != 0)) {
@@ -569,7 +569,10 @@ ARM void PlayerControl::func_ov00_020affec(Vec3p *param1, s32 y, s32 param3, Vec
     param1->z = mTouchWorld.z;
 }
 
-extern u32 data_ov000_020ee198;
+#pragma section sbss begin
+static u32 data_ov000_020ee198;
+static u32 data_ov000_020ee19c;
+#pragma section sbss end
 
 ARM void PlayerControl::func_ov00_020b014c(Vec3p *param1) {
     if ((data_ov000_020ee198 & 1) == 0) {
@@ -629,32 +632,23 @@ ARM s16 PlayerControl::GetTouchAngle() {
 static q20 data_ov000_020e6144 = FLOAT_TO_Q20(80.0);
 
 ARM u32 PlayerControl::func_ov00_020b034c() {
-    s16 temp_r2;
-    s64 temp_ip;
-    s32 temp_r2_2;
-    s64 temp_r3;
-    u64 temp_ret;
-    s32 var_r0;
-
     if ((mTouchDuration >= 0) && (this->func_ov00_020af2d4(1, 1) != 0)) {
-        temp_ret = func_01ff992c(data_ov000_020e6144);
-        temp_ip  = mTouchDist;
-        temp_r2  = mTouchDuration;
-        temp_r3  = temp_ret * temp_ip + 0x80000000;
-        var_r0   = (((temp_r3 >> 32) * (temp_r3 >> 32)) + 0x800) >> 12;
-        if (temp_r2 < 4) {
-            temp_r2_2 = (4 - temp_r2) << 0xc;
-            var_r0 -= (s32) (temp_r2_2 + ((u32) (temp_r2_2 >> 1) >> 0x1e)) >> 2;
+        u64 temp_r0_r1 = func_01ff992c(data_ov000_020e6144); // 0x03333333
+        s32 temp_r3    = (temp_r0_r1 * mTouchDist + 0x80000000) >> 32;
+        s32 temp_r1_r0 = MUL_Q20(temp_r3, temp_r3);
+        if (mTouchDuration < 4) {
+            s32 temp_r2_2 = (4 - mTouchDuration) << 0xc;
+            temp_r1_r0 -= (s32) (temp_r2_2 + ((u32) (temp_r2_2 >> 1) >> 0x1e)) >> 2;
         }
-        if (var_r0 < 0) {
+        if (temp_r1_r0 < 0) {
             return 0;
         }
-        if (var_r0 > FLOAT_TO_Q20(1.0)) {
-            var_r0 = FLOAT_TO_Q20(1.0);
+        if (temp_r1_r0 > FLOAT_TO_Q20(1.0)) {
+            temp_r1_r0 = FLOAT_TO_Q20(1.0);
         }
-        return var_r0;
+        return temp_r1_r0;
     }
-    if ((mUnk_7f != 0) && (data_027e05f8.mUnk_0 & 0xF0)) {
+    if ((mUnk_7f != 0) && (data_027e05f8.mUnk_0 & 0xf0)) {
         return FLOAT_TO_Q20(1.0);
     }
     return 0;
@@ -678,6 +672,7 @@ ARM s32 PlayerControl::func_ov00_020b0418() {
 }
 
 extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
+// NONMATCH: Register allocation, instruction ordering
 ARM bool PlayerControl::func_ov00_020b049c(Vec3p *param1, bool param2) {
     if (this->CheckUntouchedNow(1) && mTouchDuration >= 0 && mTouchDuration < 21) {
         this->ApplyTouchWorld(param1, FLOAT_TO_Q20(0.25));
@@ -743,12 +738,13 @@ ARM bool PlayerControl::func_ov00_020b0778(Vec3p *param1, u32 angle, unk32 *para
         return 0;
     }
 
-    s32 temp_r2 = SIN((u16) angle) * 0x30;
-    s32 temp_r3 = COS((u16) angle) * 0x30;
+    // NONMATCH: Register allocation
+    q20 temp_r2 = SIN((u16) angle) * 0x30;
+    q20 temp_r3 = COS((u16) angle) * 0x30;
     s32 temp_r4;
     s32 temp_r5;
-    s32 var_r6;
-    s32 var_r7;
+    q20 var_r6;
+    q20 var_r7;
     var_r6  = (s32) (temp_r2 + ((u32) (temp_r2 >> 11) >> 20)) >> 0xC;
     var_r7  = (s32) (temp_r3 + ((u32) (temp_r3 >> 11) >> 20)) >> 0xC;
     temp_r4 = mTouchX - sp8;
@@ -809,6 +805,7 @@ ARM bool PlayerControl::func_ov00_020b0778(Vec3p *param1, u32 angle, unk32 *para
         }
         s32 var_r2 = mTouchPrevX - sp8;
         s32 var_r1 = mTouchPrevY - sp4;
+        // NONMATCH: Instruction ordering
         if (var_r6 > 0x18) {
             if (var_r2 < 0) {
                 var_r2 = -var_r2;
@@ -911,12 +908,13 @@ ARM bool PlayerControl::func_ov00_020b0b0c(s16 *pAngle, ItemFlag *pEquipId, unk3
     return false;
 }
 
+// NONMATCH: Instruction ordering
 ARM bool PlayerControl::func_ov00_020b0de8(Vec3p *param1) {
-    if (this->CheckTouching(1) == 0) {
+    if (!this->CheckTouching(1)) {
         return false;
     }
-    s32 x     = (mTouchLastX - 0x80) * 0xAA;
-    s32 z     = ((mTouchLastY - 0x60) * 0xAA00) / 192;
+    s32 z     = (mTouchLastY - 96) * FLOAT_TO_Q20(10.625) / 192;
+    s32 x     = (mTouchLastX - 128) * (FLOAT_TO_Q20(10.625) / 256);
     param1->x = x;
     param1->y = 0;
     param1->z = z;
