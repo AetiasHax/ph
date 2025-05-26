@@ -240,9 +240,6 @@ ARM void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
 extern void *data_027e10a4;
 extern "C" bool func_ov015_02136670(void *param1);
 extern u8 data_ov022_0217a4ac[];
-extern "C" bool _ZN14PlayerLinkBase18func_ov00_020bbd80Ei(unk32 param1, unk32 param2);
-extern "C" bool _ZNK11ItemManager7HasItemEi();
-extern "C" void _ZN11ItemManager12GetEquipItemEi();
 ARM bool ItemManager::func_ov00_020ad790(unk32 param1) {
     unk32 unk1 = data_027e0d38->func_ov000_02078b40();
     if (unk1 == 2) return func_ov015_02136670(data_027e10a4);

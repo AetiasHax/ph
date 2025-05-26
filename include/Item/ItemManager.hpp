@@ -51,7 +51,7 @@ enum DungeonItemModelId_ {
 };
 
 class ItemManager : public SysObject {
-private:
+public:
     /* 000 */ ItemFlag mEquippedItem;
     /* 004 */ ItemFlag mPrevEquippedItem;
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
@@ -92,7 +92,6 @@ private:
     /* 14e */ unk8 mUnk_14e[0x2]; // padding?
     /* 150 */
 
-public:
     static ItemManager *Create();
     static void Destroy();
     ItemManager();
