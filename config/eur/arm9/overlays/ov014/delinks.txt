@@ -18,3 +18,4 @@ src/14_Land/Actor/Player/ActorRefill.cpp:
     .init       start:0x02154c14 end:0x02154d24
     .ctor       start:0x021558ec end:0x021558f0
     .data       start:0x021578b0 end:0x02157d70
+    .bss        start:0x0215af94 end:0x0215b034

@@ -4,6 +4,7 @@
 #include "types.h"
 
 #include "Actor/Actor.hpp"
+#include "Actor/ActorType.hpp"
 
 class ActorRefill : public Actor {
 public:
@@ -31,6 +32,8 @@ public:
 
 class ActorRefillBombs : public ActorRefill {
 public:
+    static ActorType gType;
+
     /* 000 (base) */
     /* 168 */
 
@@ -45,6 +48,8 @@ public:
 
 class ActorRefillBombchus : public ActorRefill {
 public:
+    static ActorType gType;
+
     /* 000 (base) */
     /* 168 */
 
@@ -59,6 +64,8 @@ public:
 
 class ActorRefillArrows : public ActorRefill {
 public:
+    static ActorType gType;
+
     /* 000 (base) */
     /* 168 */
 
@@ -73,6 +80,8 @@ public:
 
 class ActorRefillTime : public ActorRefill {
 public:
+    static ActorType gType;
+
     /* 000 (base) */
     /* 168 */
 
@@ -88,6 +97,8 @@ public:
 
 class ActorLSTM : public ActorRefill {
 public:
+    static ActorType gType;
+
     /* 000 (base) */
     /* 168 */
 

@@ -1,5 +1,11 @@
 #include "Actor/Player/ActorRefill.hpp"
 
+ActorType ActorRefillBombs::gType;
+ActorType ActorRefillBombchus::gType;
+ActorType ActorRefillArrows::gType;
+ActorType ActorRefillTime::gType;
+ActorType ActorLSTM::gType;
+
 ActorRefillBombs *ActorRefillBombs::Create() {}
 ActorRefillBombchus *ActorRefillBombchus::Create() {}
 ActorRefillArrows *ActorRefillArrows::Create() {}
