@@ -231,7 +231,7 @@ ARM u16 ItemManager::GetAmmo(ItemFlag equipId) const {
     return (*mAmmo)[equipId];
 }
 
-ARM void ItemManager::GiveAmmo(ItemFlag equipId, u16 amount) {
+ARM void ItemManager::GiveAmmo(ItemFlag equipId, u32 amount) {
     (*mAmmo)[equipId] += amount;
     if ((*mAmmo)[equipId] <= this->GetMaxAmmo(equipId)) return;
     (*mAmmo)[equipId] = this->GetMaxAmmo(equipId);

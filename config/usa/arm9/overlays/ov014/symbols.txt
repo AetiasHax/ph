@@ -591,7 +591,7 @@ _ZN19ActorRefillBombchus6CreateEv kind:function(arm,size=0x30) addr:0x2134db0
 _ZN17ActorRefillArrows6CreateEv kind:function(arm,size=0x30) addr:0x2134de0
 _ZN15ActorRefillTime6CreateEv kind:function(arm,size=0x30) addr:0x2134e10
 _ZN9ActorLSTM6CreateEv kind:function(arm,size=0x30) addr:0x2134e40
-_ZN11ActorRefillC2Ev kind:function(arm,size=0x40) addr:0x2134e70
+_ZN11ActorRefillC2Ei kind:function(arm,size=0x40) addr:0x2134e70
 _ZN11ActorRefillD1Ev kind:function(arm,size=0x14) addr:0x2134eb0
 _ZN11ActorRefillD0Ev kind:function(arm,size=0x1c) addr:0x2134ec4
 _ZN11ActorRefillD2Ev kind:function(arm,size=0x14) addr:0x2134ee0
@@ -1855,12 +1855,12 @@ data_ov014_021578c4 kind:data(any) addr:0x2157824
 data_ov014_021578c8 kind:data(any) addr:0x2157828
 data_ov014_021578cc kind:data(any) addr:0x215782c
 sShipTypes kind:data(any) addr:0x2157830 local
-_ZTV9ActorLSTM kind:data(any) addr:0x2157858
-_ZTV15ActorRefillTime kind:data(any) addr:0x2157918
-_ZTV17ActorRefillArrows kind:data(any) addr:0x21579d8
-_ZTV19ActorRefillBombchus kind:data(any) addr:0x2157a98
-_ZTV16ActorRefillBombs kind:data(any) addr:0x2157b58
-_ZTV11ActorRefill kind:data(any) addr:0x2157c18
+_ZTV9ActorLSTM kind:data(any) addr:0x2157850
+_ZTV15ActorRefillTime kind:data(any) addr:0x2157910
+_ZTV17ActorRefillArrows kind:data(any) addr:0x21579d0
+_ZTV19ActorRefillBombchus kind:data(any) addr:0x2157a90
+_ZTV16ActorRefillBombs kind:data(any) addr:0x2157b50
+_ZTV11ActorRefill kind:data(any) addr:0x2157c10
 data_ov014_02157d70 kind:data(any) addr:0x2157cd0
 data_ov014_02157d7c kind:data(any) addr:0x2157cdc
 data_ov014_02157d88 kind:data(any) addr:0x2157ce8

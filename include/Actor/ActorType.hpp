@@ -25,8 +25,13 @@ enum ActorTypeId_ {
     ActorTypeId_ShopItemShield         = 'ITSL',
     ActorTypeId_ShopItemSoldOut        = 'ITSO',
 
-    ActorTypeId_Heart = 'HART',
-    ActorTypeId_Rupee = 'RUPY',
+    ActorTypeId_RefillArrows   = 'FLAL',
+    ActorTypeId_RefillBombs    = 'FLBM',
+    ActorTypeId_RefillBombchus = 'FLBT',
+    ActorTypeId_RefillTime     = 'FLTM',
+    ActorTypeId_Heart          = 'HART',
+    ActorTypeId_LSTM           = 'LSTM',
+    ActorTypeId_Rupee          = 'RUPY',
 
     ActorTypeId_Arrow         = 'ARRW',
     ActorTypeId_Blast         = 'BLST',

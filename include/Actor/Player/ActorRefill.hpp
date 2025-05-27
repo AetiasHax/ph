@@ -12,18 +12,18 @@ public:
     /* 158 */ unk32 mUnk_158;
     /* 15c */ unk32 mUnk_15c;
     /* 160 */ unk32 mUnk_160;
-    /* 164 */ unk8 mUnk_164;
+    /* 164 */ u8 mUnk_164;
     /* 165 */ unk8 mUnk_165[0x3];
     /* 168 */
 
 public:
-    ActorRefill();
+    ActorRefill(unk32 param1);
 
     /* 00 */ virtual ~ActorRefill() override;
     /* 08 */ virtual bool vfunc_08() override;
     /* 14 */ virtual void vfunc_14(u32 param1) override;
     /* 20 */ virtual void vfunc_20(bool param1) override;
-    /* b4 */ virtual unk32 vfunc_b4() = 0;
+    /* b4 */ virtual ItemFlag vfunc_b4() = 0;
     /* b8 */
 
     bool func_ov014_02135364(unk32 param1);
@@ -42,7 +42,7 @@ public:
     static ActorRefillBombs *Create();
 
     /* 00 */ virtual ~ActorRefillBombs() override;
-    /* b4 */ virtual unk32 vfunc_b4() override;
+    /* b4 */ virtual ItemFlag vfunc_b4() override;
     /* b8 */
 };
 
@@ -58,7 +58,7 @@ public:
     static ActorRefillBombchus *Create();
 
     /* 00 */ virtual ~ActorRefillBombchus() override;
-    /* b4 */ virtual unk32 vfunc_b4() override;
+    /* b4 */ virtual ItemFlag vfunc_b4() override;
     /* b8 */
 };
 
@@ -74,7 +74,7 @@ public:
     static ActorRefillArrows *Create();
 
     /* 00 */ virtual ~ActorRefillArrows() override;
-    /* b4 */ virtual unk32 vfunc_b4() override;
+    /* b4 */ virtual ItemFlag vfunc_b4() override;
     /* b8 */
 };
 
@@ -91,7 +91,7 @@ public:
 
     /* 00 */ virtual ~ActorRefillTime() override;
     /* 08 */ virtual bool vfunc_08() override;
-    /* b4 */ virtual unk32 vfunc_b4() override;
+    /* b4 */ virtual ItemFlag vfunc_b4() override;
     /* b8 */
 };
 
@@ -108,6 +108,6 @@ public:
 
     /* 00 */ virtual ~ActorLSTM() override;
     /* 08 */ virtual bool vfunc_08() override;
-    /* b4 */ virtual unk32 vfunc_b4() override;
+    /* b4 */ virtual ItemFlag vfunc_b4() override;
     /* b8 */
 };
