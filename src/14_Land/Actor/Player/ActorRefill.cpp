@@ -134,16 +134,11 @@ ARM void ActorRefill::vfunc_14(u32 param1) {
                             }
                             break;
                         case 2:
-#define ROTATE_RIGHT(x, n) ((x >> n) | (x << (32 - n)))
-                            temp_r0_4 = mActiveFrames;
-                            temp_r1   = (u32) temp_r0_4 >> 31;
-
-                            if ((temp_r1 + ROTATE_RIGHT((temp_r0_4 << 29) - temp_r1, 29)) < 4) {
-                                var_r0 = 0;
+                            if (mActiveFrames % 8 < 4) {
+                                mUnk_164 = 0;
                             } else {
-                                var_r0 = 31;
+                                mUnk_164 = 31;
                             }
-                            mUnk_164 = var_r0;
                             if (this->func_ov00_020c2c0c()) {
                                 this->func_ov014_02135364(4);
                             } else if (this->func_ov00_020c2d54()) {
@@ -209,17 +204,17 @@ ARM void ActorRefill::vfunc_20(bool param1) {
         sp18.mUnk_18 = 0x1000;
         sp18.mUnk_02 = mUnk_164;
         func_0202bc38(param1, &mPos, mUnk_15c, &sp18, 0);
-        func_ov005_02102c2c(&data_ov000_020e9370[0], 0, &mPos, 0x400, 0, mUnk_164, 0, 0, 1, 0);
+        func_ov005_02102c2c(&data_ov000_020e9370[0], 0, &mPos, 0x400, 0x400, 0, mUnk_164, 0, 0, 1);
     }
 }
 
-extern unk32 data_027e0e58;
+extern unk32 *data_027e0e58;
 extern "C" void func_ov000_0207c1b0(unk32 *param1, unk32 param2, Vec3p *param3, unk32 param4, unk32 param5, unk32 param6);
 ARM void ActorRefill::func_ov014_02135474() {
     s32 iVar1 = mUnk_130;
     if (iVar1 != 4 && iVar1 != 5) {
-        func_ov000_0207c1b0(&data_027e0e58, 0x241, &mPos, 2, 0, 0);
-        func_ov000_0207c1b0(&data_027e0e58, 0x242, &mPos, 2, 0, 0);
+        func_ov000_0207c1b0(data_027e0e58, 0x241, &mPos, 2, 0, 0);
+        func_ov000_0207c1b0(data_027e0e58, 0x242, &mPos, 2, 0, 0);
         mAlive = false;
     }
 }
@@ -269,7 +264,6 @@ ARM ActorRefillTime::ActorRefillTime() :
 ARM ActorRefillTime::~ActorRefillTime() {}
 
 ARM bool ActorRefillTime::vfunc_08() {
-
     if (!ActorRefill::vfunc_08()) {
         return false;
     }
@@ -281,7 +275,7 @@ ARM bool ActorRefillTime::vfunc_08() {
         case 0:
         case 1:
         case 3:
-            s32 temp_ip = gRandom->Next(10);
+            s32 temp_ip = gRandom.Next(10);
             if (temp_ip >= 9) {
                 mUnk_158 = 30;
             } else if (temp_ip >= 6) {
@@ -291,14 +285,10 @@ ARM bool ActorRefillTime::vfunc_08() {
             }
             break;
     }
-    if (mUnk_158 != -0x1E) {
-        if (mUnk_158 == -0xF) {
-            mUnk_15c = 0x48;
-        } else {
-            mUnk_15c = 0x47;
-        }
-    } else {
-        mUnk_15c = 0x49;
+    switch (mUnk_158) {
+        case 15: mUnk_15c = 0x45; break;
+        case 30: mUnk_15c = 0x46; break;
+        default: mUnk_15c = 0x44; break;
     }
     return true;
 }
@@ -327,7 +317,7 @@ ARM bool ActorLSTM::vfunc_08() {
         case 0:
         case 1:
         case 3:
-            s32 temp_ip = gRandom->Next(10);
+            s32 temp_ip = gRandom.Next(10);
             if (temp_ip >= 9) {
                 mUnk_158 = -30;
             } else if (temp_ip >= 6) {
@@ -337,14 +327,10 @@ ARM bool ActorLSTM::vfunc_08() {
             }
             break;
     }
-    if (mUnk_158 != -0x1E) {
-        if (mUnk_158 == -0xF) {
-            mUnk_15c = 0x48;
-        } else {
-            mUnk_15c = 0x47;
-        }
-    } else {
-        mUnk_15c = 0x49;
+    switch (mUnk_158) {
+        case -15: mUnk_15c = 0x48; break;
+        case -30: mUnk_15c = 0x49; break;
+        default: mUnk_15c = 0x47; break;
     }
     return true;
 }

@@ -14,6 +14,7 @@ src/14_Land/Actor/ActorRupee.cpp:
     .bss        start:0x0215b154 end:0x0215b174
 
 src/14_Land/Actor/Player/ActorRefill.cpp:
+    complete
     .text       start:0x02134d80 end:0x0213589c
     .init       start:0x02154b70 end:0x02154c80
     .ctor       start:0x02155848 end:0x0215584c

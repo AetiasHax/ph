@@ -1672,7 +1672,7 @@ __sinit_ov014_02154b34 kind:function(arm,size=0x38) addr:0x2154a90
 __sinit_ov014_02154b6c kind:function(arm,size=0x38) addr:0x2154ac8
 __sinit_ov014_02154ba4 kind:function(arm,size=0x38) addr:0x2154b00
 __sinit_ov014_02154bdc kind:function(arm,size=0x38) addr:0x2154b38
-__sinit_ActorRefill.cpp kind:function(arm,size=0x110) addr:0x2154b70
+__sinit_ActorRefill.cpp kind:function(arm,size=0x110) addr:0x2154b70 local
 __sinit_ov014_02154d24 kind:function(arm,size=0x1d8) addr:0x2154c80
 __sinit_ov014_02154efc kind:function(arm,size=0x40) addr:0x2154e58
 __sinit_ov014_02154f3c kind:function(arm,size=0x40) addr:0x2154e98
@@ -1846,14 +1846,14 @@ data_ov014_02157768 kind:data(any) addr:0x21576c8
 data_ov014_0215777c kind:data(any) addr:0x21576dc
 data_ov014_02157790 kind:data(any) addr:0x21576f0
 data_ov014_02157824 kind:data(any) addr:0x2157784
-data_ov014_021578b0 kind:data(any) addr:0x2157810
-data_ov014_021578b4 kind:data(any) addr:0x2157814
-data_ov014_021578b8 kind:data(any) addr:0x2157818
-data_ov014_021578bc kind:data(any) addr:0x215781c
-data_ov014_021578c0 kind:data(any) addr:0x2157820
-data_ov014_021578c4 kind:data(any) addr:0x2157824
-data_ov014_021578c8 kind:data(any) addr:0x2157828
-data_ov014_021578cc kind:data(any) addr:0x215782c
+@570 kind:data(any) addr:0x2157810 local
+@569 kind:data(any) addr:0x2157814 local
+@568 kind:data(any) addr:0x2157818 local
+@567 kind:data(any) addr:0x215781c local
+@566 kind:data(any) addr:0x2157820 local
+@565 kind:data(any) addr:0x2157824 local
+@564 kind:data(any) addr:0x2157828 local
+@563 kind:data(any) addr:0x215782c local
 sShipTypes kind:data(any) addr:0x2157830 local
 _ZTV9ActorLSTM kind:data(any) addr:0x2157850
 _ZTV15ActorRefillTime kind:data(any) addr:0x2157910
@@ -2196,15 +2196,15 @@ data_ov014_0215af6c kind:bss addr:0x215aecc
 data_ov014_0215af74 kind:bss addr:0x215aed4
 data_ov014_0215af80 kind:bss addr:0x215aee0
 data_ov014_0215af88 kind:bss addr:0x215aee8
-@363 kind:bss addr:0x215aef4
-_ZN19ActorRefillBombchus5gTypeE kind:bss addr:0x215af00
-@361 kind:bss addr:0x215af14
-_ZN15ActorRefillTime5gTypeE kind:bss addr:0x215af20
-@364 kind:bss addr:0x215af34
+@363 kind:bss addr:0x215aef4 local
+_ZN16ActorRefillBombs5gTypeE kind:bss addr:0x215af00
+@361 kind:bss addr:0x215af14 local
+_ZN19ActorRefillBombchus5gTypeE kind:bss addr:0x215af20
+@364 kind:bss addr:0x215af34 local
 _ZN17ActorRefillArrows5gTypeE kind:bss addr:0x215af40
-@360 kind:bss addr:0x215af54
-_ZN16ActorRefillBombs5gTypeE kind:bss addr:0x215af60
-@362 kind:bss addr:0x215af74
+@360 kind:bss addr:0x215af54 local
+_ZN15ActorRefillTime5gTypeE kind:bss addr:0x215af60
+@362 kind:bss addr:0x215af74 local
 _ZN9ActorLSTM5gTypeE kind:bss addr:0x215af80
 data_ov014_0215b034 kind:bss addr:0x215af94
 data_ov014_0215b040 kind:bss addr:0x215afa0
