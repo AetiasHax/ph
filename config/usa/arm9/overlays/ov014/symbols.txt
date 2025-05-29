@@ -586,42 +586,42 @@ func_ov014_02134c04 kind:function(arm,size=0x8) addr:0x2134b60
 func_ov014_02134c0c kind:function(arm,size=0x8) addr:0x2134b68
 func_ov014_02134c14 kind:function(arm,size=0x200) addr:0x2134b70
 func_ov014_02134e14 kind:function(arm,size=0x10) addr:0x2134d70
-func_ov014_02134e24 kind:function(arm,size=0x30) addr:0x2134d80
-func_ov014_02134e54 kind:function(arm,size=0x30) addr:0x2134db0
-func_ov014_02134e84 kind:function(arm,size=0x30) addr:0x2134de0
-func_ov014_02134eb4 kind:function(arm,size=0x30) addr:0x2134e10
-func_ov014_02134ee4 kind:function(arm,size=0x30) addr:0x2134e40
-func_ov014_02134f14 kind:function(arm,size=0x40) addr:0x2134e70
-func_ov014_02134f54 kind:function(arm,size=0x14) addr:0x2134eb0
-func_ov014_02134f68 kind:function(arm,size=0x1c) addr:0x2134ec4
-func_ov014_02134f84 kind:function(arm,size=0x14) addr:0x2134ee0
-func_ov014_02134f98 kind:function(arm,size=0xf4) addr:0x2134ef4
-func_ov014_0213508c kind:function(arm,size=0x2d8) addr:0x2134fe8
-func_ov014_02135364 kind:function(arm,size=0x54) addr:0x21352c0
-func_ov014_021353b8 kind:function(arm,size=0xbc) addr:0x2135314
-func_ov014_02135474 kind:function(arm,size=0x84) addr:0x21353d0
-func_ov014_021354f8 kind:function(arm,size=0x34) addr:0x2135454
-func_ov014_0213552c kind:function(arm,size=0x14) addr:0x2135488
-func_ov014_02135540 kind:function(arm,size=0x1c) addr:0x213549c
-func_ov014_0213555c kind:function(arm,size=0x8) addr:0x21354b8
-func_ov014_02135564 kind:function(arm,size=0x34) addr:0x21354c0
-func_ov014_02135598 kind:function(arm,size=0x14) addr:0x21354f4
-func_ov014_021355ac kind:function(arm,size=0x1c) addr:0x2135508
-func_ov014_021355c8 kind:function(arm,size=0x8) addr:0x2135524
-func_ov014_021355d0 kind:function(arm,size=0x34) addr:0x213552c
-func_ov014_02135604 kind:function(arm,size=0x14) addr:0x2135560
-func_ov014_02135618 kind:function(arm,size=0x1c) addr:0x2135574
-func_ov014_02135634 kind:function(arm,size=0x8) addr:0x2135590
-func_ov014_0213563c kind:function(arm,size=0x34) addr:0x2135598
-func_ov014_02135670 kind:function(arm,size=0x14) addr:0x21355cc
-func_ov014_02135684 kind:function(arm,size=0x1c) addr:0x21355e0
-func_ov014_021356a0 kind:function(arm,size=0x114) addr:0x21355fc
-func_ov014_021357b4 kind:function(arm,size=0x8) addr:0x2135710
-func_ov014_021357bc kind:function(arm,size=0x34) addr:0x2135718
-func_ov014_021357f0 kind:function(arm,size=0x14) addr:0x213574c
-func_ov014_02135804 kind:function(arm,size=0x1c) addr:0x2135760
-func_ov014_02135820 kind:function(arm,size=0x118) addr:0x213577c
-func_ov014_02135938 kind:function(arm,size=0x8) addr:0x2135894
+_ZN16ActorRefillBombs6CreateEv kind:function(arm,size=0x30) addr:0x2134d80
+_ZN19ActorRefillBombchus6CreateEv kind:function(arm,size=0x30) addr:0x2134db0
+_ZN17ActorRefillArrows6CreateEv kind:function(arm,size=0x30) addr:0x2134de0
+_ZN15ActorRefillTime6CreateEv kind:function(arm,size=0x30) addr:0x2134e10
+_ZN9ActorLSTM6CreateEv kind:function(arm,size=0x30) addr:0x2134e40
+_ZN11ActorRefillC2Ei kind:function(arm,size=0x40) addr:0x2134e70
+_ZN11ActorRefillD1Ev kind:function(arm,size=0x14) addr:0x2134eb0
+_ZN11ActorRefillD0Ev kind:function(arm,size=0x1c) addr:0x2134ec4
+_ZN11ActorRefillD2Ev kind:function(arm,size=0x14) addr:0x2134ee0
+_ZN11ActorRefill8vfunc_08Ev kind:function(arm,size=0xf4) addr:0x2134ef4
+_ZN11ActorRefill8vfunc_14Ej kind:function(arm,size=0x2d8) addr:0x2134fe8
+_ZN11ActorRefill19func_ov014_02135364Ei kind:function(arm,size=0x54) addr:0x21352c0
+_ZN11ActorRefill8vfunc_20Eb kind:function(arm,size=0xbc) addr:0x2135314
+_ZN11ActorRefill19func_ov014_02135474Ev kind:function(arm,size=0x84) addr:0x21353d0
+_ZN16ActorRefillBombsC1Ev kind:function(arm,size=0x34) addr:0x2135454
+_ZN16ActorRefillBombsD1Ev kind:function(arm,size=0x14) addr:0x2135488
+_ZN16ActorRefillBombsD0Ev kind:function(arm,size=0x1c) addr:0x213549c
+_ZN16ActorRefillBombs8vfunc_b4Ev kind:function(arm,size=0x8) addr:0x21354b8
+_ZN19ActorRefillBombchusC1Ev kind:function(arm,size=0x34) addr:0x21354c0
+_ZN19ActorRefillBombchusD1Ev kind:function(arm,size=0x14) addr:0x21354f4
+_ZN19ActorRefillBombchusD0Ev kind:function(arm,size=0x1c) addr:0x2135508
+_ZN19ActorRefillBombchus8vfunc_b4Ev kind:function(arm,size=0x8) addr:0x2135524
+_ZN17ActorRefillArrowsC1Ev kind:function(arm,size=0x34) addr:0x213552c
+_ZN17ActorRefillArrowsD1Ev kind:function(arm,size=0x14) addr:0x2135560
+_ZN17ActorRefillArrowsD0Ev kind:function(arm,size=0x1c) addr:0x2135574
+_ZN17ActorRefillArrows8vfunc_b4Ev kind:function(arm,size=0x8) addr:0x2135590
+_ZN15ActorRefillTimeC1Ev kind:function(arm,size=0x34) addr:0x2135598
+_ZN15ActorRefillTimeD1Ev kind:function(arm,size=0x14) addr:0x21355cc
+_ZN15ActorRefillTimeD0Ev kind:function(arm,size=0x1c) addr:0x21355e0
+_ZN15ActorRefillTime8vfunc_08Ev kind:function(arm,size=0x114) addr:0x21355fc
+_ZN15ActorRefillTime8vfunc_b4Ev kind:function(arm,size=0x8) addr:0x2135710
+_ZN9ActorLSTMC1Ev kind:function(arm,size=0x34) addr:0x2135718
+_ZN9ActorLSTMD1Ev kind:function(arm,size=0x14) addr:0x213574c
+_ZN9ActorLSTMD0Ev kind:function(arm,size=0x1c) addr:0x2135760
+_ZN9ActorLSTM8vfunc_08Ev kind:function(arm,size=0x118) addr:0x213577c
+_ZN9ActorLSTM8vfunc_b4Ev kind:function(arm,size=0x8) addr:0x2135894
 func_ov014_02135940 kind:function(arm,size=0x34) addr:0x213589c
 func_ov014_02135974 kind:function(arm,size=0xc4) addr:0x21358d0
 func_ov014_02135a38 kind:function(arm,size=0xc4) addr:0x2135994
@@ -1672,7 +1672,7 @@ __sinit_ov014_02154b34 kind:function(arm,size=0x38) addr:0x2154a90
 __sinit_ov014_02154b6c kind:function(arm,size=0x38) addr:0x2154ac8
 __sinit_ov014_02154ba4 kind:function(arm,size=0x38) addr:0x2154b00
 __sinit_ov014_02154bdc kind:function(arm,size=0x38) addr:0x2154b38
-__sinit_ov014_02154c14 kind:function(arm,size=0x110) addr:0x2154b70
+__sinit_ActorRefill.cpp kind:function(arm,size=0x110) addr:0x2154b70 local
 __sinit_ov014_02154d24 kind:function(arm,size=0x1d8) addr:0x2154c80
 __sinit_ov014_02154efc kind:function(arm,size=0x40) addr:0x2154e58
 __sinit_ov014_02154f3c kind:function(arm,size=0x40) addr:0x2154e98
@@ -1846,20 +1846,21 @@ data_ov014_02157768 kind:data(any) addr:0x21576c8
 data_ov014_0215777c kind:data(any) addr:0x21576dc
 data_ov014_02157790 kind:data(any) addr:0x21576f0
 data_ov014_02157824 kind:data(any) addr:0x2157784
-data_ov014_021578b0 kind:data(any) addr:0x2157810
-data_ov014_021578b4 kind:data(any) addr:0x2157814
-data_ov014_021578b8 kind:data(any) addr:0x2157818
-data_ov014_021578bc kind:data(any) addr:0x215781c
-data_ov014_021578c0 kind:data(any) addr:0x2157820
-data_ov014_021578c4 kind:data(any) addr:0x2157824
-data_ov014_021578c8 kind:data(any) addr:0x2157828
-data_ov014_021578cc kind:data(any) addr:0x215782c
-data_ov014_021578f8 kind:data(any) addr:0x2157858
-data_ov014_021579b8 kind:data(any) addr:0x2157918
-data_ov014_02157a78 kind:data(any) addr:0x21579d8
-data_ov014_02157b38 kind:data(any) addr:0x2157a98
-data_ov014_02157bf8 kind:data(any) addr:0x2157b58
-data_ov014_02157cb8 kind:data(any) addr:0x2157c18
+@570 kind:data(any) addr:0x2157810 local
+@569 kind:data(any) addr:0x2157814 local
+@568 kind:data(any) addr:0x2157818 local
+@567 kind:data(any) addr:0x215781c local
+@566 kind:data(any) addr:0x2157820 local
+@565 kind:data(any) addr:0x2157824 local
+@564 kind:data(any) addr:0x2157828 local
+@563 kind:data(any) addr:0x215782c local
+sShipTypes kind:data(any) addr:0x2157830 local
+_ZTV9ActorLSTM kind:data(any) addr:0x2157850
+_ZTV15ActorRefillTime kind:data(any) addr:0x2157910
+_ZTV17ActorRefillArrows kind:data(any) addr:0x21579d0
+_ZTV19ActorRefillBombchus kind:data(any) addr:0x2157a90
+_ZTV16ActorRefillBombs kind:data(any) addr:0x2157b50
+_ZTV11ActorRefill kind:data(any) addr:0x2157c10
 data_ov014_02157d70 kind:data(any) addr:0x2157cd0
 data_ov014_02157d7c kind:data(any) addr:0x2157cdc
 data_ov014_02157d88 kind:data(any) addr:0x2157ce8
@@ -2195,16 +2196,16 @@ data_ov014_0215af6c kind:bss addr:0x215aecc
 data_ov014_0215af74 kind:bss addr:0x215aed4
 data_ov014_0215af80 kind:bss addr:0x215aee0
 data_ov014_0215af88 kind:bss addr:0x215aee8
-data_ov014_0215af94 kind:bss addr:0x215aef4
-data_ov014_0215afa0 kind:bss addr:0x215af00
-data_ov014_0215afb4 kind:bss addr:0x215af14
-data_ov014_0215afc0 kind:bss addr:0x215af20
-data_ov014_0215afd4 kind:bss addr:0x215af34
-data_ov014_0215afe0 kind:bss addr:0x215af40
-data_ov014_0215aff4 kind:bss addr:0x215af54
-data_ov014_0215b000 kind:bss addr:0x215af60
-data_ov014_0215b014 kind:bss addr:0x215af74
-data_ov014_0215b020 kind:bss addr:0x215af80
+@363 kind:bss addr:0x215aef4 local
+_ZN16ActorRefillBombs5gTypeE kind:bss addr:0x215af00
+@361 kind:bss addr:0x215af14 local
+_ZN19ActorRefillBombchus5gTypeE kind:bss addr:0x215af20
+@364 kind:bss addr:0x215af34 local
+_ZN17ActorRefillArrows5gTypeE kind:bss addr:0x215af40
+@360 kind:bss addr:0x215af54 local
+_ZN15ActorRefillTime5gTypeE kind:bss addr:0x215af60
+@362 kind:bss addr:0x215af74 local
+_ZN9ActorLSTM5gTypeE kind:bss addr:0x215af80
 data_ov014_0215b034 kind:bss addr:0x215af94
 data_ov014_0215b040 kind:bss addr:0x215afa0
 data_ov014_0215b054 kind:bss addr:0x215afb4
