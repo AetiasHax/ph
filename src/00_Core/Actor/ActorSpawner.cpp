@@ -82,7 +82,7 @@ ARM s32 ActorSpawner::Spawn(ActorTypeId type, Vec3p *pos, ActorSpawnOptions *opt
         }
         actorManager->mNextActorId += 1;
         actorManager->mNumActors += 1;
-        if (!(*actorSlot)->vfunc_08()) {
+        if (!(*actorSlot)->Init()) {
             (*actorSlot)->mAlive = false;
             if (ref != NULL) {
                 ref->Reset();

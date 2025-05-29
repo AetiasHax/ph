@@ -41,7 +41,7 @@ ARM ActorRefill::ActorRefill(unk32 param1) :
 
 ARM ActorRefill::~ActorRefill() {}
 
-ARM bool ActorRefill::vfunc_08() {
+ARM bool ActorRefill::Init() {
     ItemManager *itemManager;
 
     if (this->vfunc_b4() == ItemFlag_None) {
@@ -263,8 +263,8 @@ ARM ActorRefillTime::ActorRefillTime() :
 
 ARM ActorRefillTime::~ActorRefillTime() {}
 
-ARM bool ActorRefillTime::vfunc_08() {
-    if (!ActorRefill::vfunc_08()) {
+ARM bool ActorRefillTime::Init() {
+    if (!ActorRefill::Init()) {
         return false;
     }
     switch (mUnk_020.mUnk_00[0]) {
@@ -305,8 +305,8 @@ ARM ActorLSTM::ActorLSTM() :
 
 ARM ActorLSTM::~ActorLSTM() {}
 
-ARM bool ActorLSTM::vfunc_08() {
-    if (!ActorRefill::vfunc_08()) {
+ARM bool ActorLSTM::Init() {
+    if (!ActorRefill::Init()) {
         return false;
     }
     switch (mUnk_020.mUnk_00[0]) {

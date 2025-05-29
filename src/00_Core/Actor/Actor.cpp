@@ -113,7 +113,7 @@ ARM Actor::Actor() :
 
 ARM Actor::~Actor() {}
 
-ARM bool Actor::vfunc_08() {
+ARM bool Actor::Init() {
     return true;
 }
 
