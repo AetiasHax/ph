@@ -33,10 +33,10 @@ extern "C" unk32 GetCardinal(s16 angle);
 ARM s32 ActorSpawner::Spawn(ActorTypeId type, Vec3p *pos, ActorSpawnOptions *options, ActorRef *ref) {
     ActorManager *actorManager = gActorManager;
     u16 maxActors              = actorManager->mMaxActors;
-    Actor **actorSlot          = actorManager->mActorTable;
-    ActorRef actorRef;
-    actorRef.id = -1;
-    for (actorRef.index = 0; actorRef.index < maxActors; actorRef.index++, actorSlot++) {
+    s32 id                     = -1;
+    s32 index;
+    Actor **actorSlot = actorManager->mActorTable;
+    for (index = 0; index < maxActors; index++, actorSlot++) {
         if (*actorSlot != NULL) {
             continue;
         }
@@ -51,7 +51,7 @@ ARM s32 ActorSpawner::Spawn(ActorTypeId type, Vec3p *pos, ActorSpawnOptions *opt
         }
         actor->mType             = type;
         (*actorSlot)->mRef.id    = actorManager->mNextActorId;
-        (*actorSlot)->mRef.index = actorRef.index;
+        (*actorSlot)->mRef.index = index;
         (*actorSlot)->mUnk_014   = *pos;
         (*actorSlot)->mUnk_020   = options->mUnk_00;
         (*actorSlot)->mAngle     = options->mAngle;
@@ -70,15 +70,15 @@ ARM s32 ActorSpawner::Spawn(ActorTypeId type, Vec3p *pos, ActorSpawnOptions *opt
         actor2->mPrevPos       = *pos;
         (*actorSlot)->mUnk_010 = gMapManager->GetCourseData_Unk_1c();
         (*actorSlot)->mUnk_011 = gMapManager->GetCourseData_Unk_1d();
-        u16 nextIndex          = actorRef.index + 1;
+        u16 nextIndex          = index + 1;
         if (actorManager->mMaxActorIndex < nextIndex) {
             actorManager->mMaxActorIndex = nextIndex;
         }
-        actorManager->mCacheEmptyActorIndex = actorRef.index;
+        actorManager->mCacheEmptyActorIndex = index;
 
-        actorRef.id = actorManager->mNextActorId;
+        id = actorManager->mNextActorId;
         if (ref != NULL) {
-            *ref = actorRef;
+            *ref = ActorRef(id, index);
         }
         actorManager->mNextActorId += 1;
         actorManager->mNumActors += 1;
@@ -91,8 +91,8 @@ ARM s32 ActorSpawner::Spawn(ActorTypeId type, Vec3p *pos, ActorSpawnOptions *opt
         }
         break;
     }
-    if ((actorRef.id == -1) && (ref != NULL)) {
+    if ((id == -1) && (ref != NULL)) {
         ref->Reset();
     }
-    return actorRef.id;
+    return id;
 }
