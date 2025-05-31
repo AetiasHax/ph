@@ -64,7 +64,9 @@ void ActorSwitchObject::vfunc_14(u32 param1) {
     return;
 }
 
-void ActorSwitchObject::vfunc_18(u32 param1) {}
+void ActorSwitchObject::vfunc_18(u32 param1) {
+    this->vfunc_14(param1);
+}
 
 bool ActorSwitchObject::func_ov000_0208fc10(s32 param1) {
     this->mUnk_130 = param1;
