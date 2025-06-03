@@ -59,7 +59,7 @@ public:
     /* 25e */ unk8 mUnk_25e;
     /* 25f */ unk8 mUnk_25f;
     /* 260 */ unk32 mNumKeys;
-    /* 260 */ unk32 mFlags0[1];
+    /* 264 */ unk32 mFlags0[1];
     /* 268 */ unk32 mFlags1[1]; // knows which doors are open in a dungeon
     /* 26c */
 
