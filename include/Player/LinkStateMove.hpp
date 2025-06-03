@@ -7,6 +7,8 @@
 
 class LinkStateMove : public LinkStateBase {
 public:
+    static unk32 data_ov000_020e56f0;
+
     /* 00 (base) */
     /* 0c */ s32 mUnk_0c;
     /* 10 */ unk16 mUnk_10;

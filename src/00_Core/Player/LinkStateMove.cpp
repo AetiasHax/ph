@@ -1,6 +1,6 @@
 #include "Player/LinkStateMove.hpp"
 
-unk32 data_ov000_020e56f0 = 0x800;
+unk32 LinkStateMove::data_ov000_020e56f0 = 0x800;
 
 THUMB void LinkStateMove::vfunc_00() {}
 
