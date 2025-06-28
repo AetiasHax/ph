@@ -197,10 +197,10 @@ public:
     void func_ov00_020843ec(s32 *param_2);
     unk32 GetMapData_Unk_38();
     s32 func_ov00_020846a4();
-    static s32 func_ov00_02084700(MapManager *pMapManager);
+    s32 func_ov00_02084700();
     unk32 func_ov00_02084740();
     unk32 func_ov00_020847e0();
-    unk8 func_ov00_020847f0();
+    unk32 func_ov00_020847f0(unk32 type);
     bool func_ov00_02084838();
     bool func_ov00_020848b8();
     void func_ov00_02084924(u32 param_2);

@@ -204,7 +204,7 @@ public:
     s32 GetTriggerBoundingBox(s32 param_2, AABB *param_3);
     s32 GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4);
     bool GetOverlappingTrigger(Vec3p *param_2);
-    unk8 FindTrigger(unk32 type);
+    TriggerBase *FindTrigger(unk32 type);
     unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity);
     bool IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3);
     bool AnyTrigger_func_0c(unk32 type);

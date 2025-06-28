@@ -130,6 +130,8 @@ extern unk32 *data_027e0f7c;
 extern unk32 *data_027e103c;
 
 extern unk32 *data_ov000_020e24a4;
+extern MapManager_Unk2 data_ov000_020e24c8[];
+extern MapManager_Unk2 data_ov000_020e24e8[];
 extern unk32 data_ov000_020eec68;
 extern unk32 data_ov015_02190458;
 
@@ -742,57 +744,50 @@ ARM void MapManager::func_ov00_0208306c(s32 *param_2, s32 *param_3) {
 ARM void MapManager::func_ov00_0208315c(s32 *param_2, s32 *param_3) {
     u32 uVar1;
     s32 *piVar2;
-    s32 iVar3;
+    UnkStruct_027e0d38_Unk28 *pvVar3;
     s32 *piVar4;
-    s32 local_2c; // This has to be a Vec3p, but uncertain as of now.
-    unk32 local_28; // Unused.
-    unk32 local_24; // Unused.
     Vec3p local_20;
+    Vec3p local_2c;
 
-    piVar4 = (s32 *) this->mCourse->mUnk_008;
-    piVar2 = param_2;
-    if (piVar4 != (s32 *) 0xfffffffd) {
-        piVar2 = (s32 *) 0xfffffffe;
+    *piVar4 = this->mCourse->mUnk_008;
+    *piVar2 = *param_2;
+
+    if (*piVar4 != -3) {
+        *piVar2 = -2;
     }
-    if (piVar4 == (s32 *) 0xfffffffd || piVar4 == piVar2) {
-        // iVar3    = *(s32 *) (*(s32 *) PTR_PTR_overlay_d_0__02083240 + 0x28);
-        local_2c = *(s32 *) (iVar3 + 0x5c);
-        local_28 = *(unk32 *) (iVar3 + 0x60);
-        local_24 = *(unk32 *) (iVar3 + 100);
-        /*this->func_ov00_02083298((u32) * (u8 *) (*(s32 *) (*(s32 *) PTR_PTR_overlay_d_0__02083240 + 0x28) + 0x56),
-                                  &local_2c, param_2, param_3);*/
-        return;
-    }
-    if (piVar4 != (s32 *) 0xffffffff) {
-        *param_2 = this->mCourse->mUnk_0bc;
-        *param_3 = this->mCourse->mUnk_0c0;
-        return;
-    }
-    local_20.x = *(s32 *) gPlayerPos.x;
-    local_20.y = *(s32 *) gPlayerPos.y;
-    local_20.z = *(s32 *) gPlayerPos.z;
+    local_20.x = gPlayerPos.x;
+    local_20.y = gPlayerPos.y;
+    local_20.z = gPlayerPos.z;
     uVar1      = this->func_ov00_02082d08();
     this->func_ov00_02083298(uVar1, &local_20, param_2, param_3);
+
+    if (*piVar4 == -2 || piVar4 == piVar2) {
+        pvVar3   = data_027e0d38->mUnk_28;
+        local_2c = pvVar3->mUnk_5c;
+        this->func_ov00_02083298((u32) * (u8 *) (*(s32 *) data_027e0d38->mUnk_28 + 0x56), &local_2c, param_2, param_3);
+        return;
+    }
+    if (*piVar4 != -1) {
+        *param_2 = this->mCourse->mUnk_0bc;
+        *param_3 = this->mCourse->mUnk_0c0;
+    }
 }
 
 ARM void MapManager::func_ov00_02083244(u32 param_2, Vec3p *param_3, s32 *param_4, s32 *param_5) {
     if (4 <= param_2) {
         param_2 = 0;
     }
-    // *param_4 = (param_3->x - (&data_ov000_020e24e8)[param_2].mUnk_00) + 0x800 >> 0xc;
-    // *param_5 = (param_3->z - (&data_ov000_020e24ec)[param_2].mUnk_04) + 0x800 >> 0xc;
+    *param_4 = (param_3->x - data_ov000_020e24e8[param_2].mUnk_0) + 0x800 >> 0xc;
+    *param_5 = (param_3->z - data_ov000_020e24e8[param_2].mUnk_4) + 0x800 >> 0xc;
 }
 
 ARM void MapManager::func_ov00_02083298(u32 param_2, Vec3p *param_3, s32 *param_4, s32 *param_5) {
-    if (3 < param_2) {
+    if (4 <= param_2) {
         param_2 = 0;
     }
-    /*
-    *param_4 =
-        (&data_ov000_020e24c8)[param_2].mUnk_00 + ((param_3->x - (&data_ov000_020e24e8)[param_2].mUnk_00 >> 1) + 0x800 >> 0xc);
-    *param_5 =
-        (&data_ov000_020e24c8)[param_2].mUnk_04 + ((param_3->z - (&data_ov000_020e24e8)[param_2].mUnk_04 >> 1) + 0x800 >> 0xc);
-    */
+
+    *param_4 = data_ov000_020e24c8[param_2].mUnk_0 + ((param_3->x - data_ov000_020e24e8[param_2].mUnk_0 >> 1) + 0x800 >> 0xc);
+    *param_5 = data_ov000_020e24c8[param_2].mUnk_4 + ((param_3->z - data_ov000_020e24e8[param_2].mUnk_4 >> 1) + 0x800 >> 0xc);
 }
 
 ARM bool MapManager::GetCourseData_Unk_25c() {
@@ -1310,12 +1305,12 @@ ARM unk32 MapManager::MapData_vfunc_70(Vec3p *param_2) {
 }
 
 ARM void MapManager::func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3) {
-    Vec4p *iVar1; // Vec4p * unsure, need type with field at offset 0xc
+    unk32 *iVar1; // find type with field that exists at offset 0xc
     s32 dVar2;
 
-    iVar1 = (Vec4p *) param_2->mMap->vfunc_74(param_3);
+    iVar1 = (unk32 *) param_2->mMap->vfunc_74(param_3);
     if (iVar1 != NULL) {
-        *param_1 = iVar1->w; // offset 0xc
+        *param_1 = *(u32 *) ((unk32 *) iVar1 + 0x3); // offset 0xc
         return;
     }
     dVar2 = param_2->MapData_vfunc_70(param_3);
@@ -1611,11 +1606,11 @@ ARM s32 MapManager::func_ov00_020846a4() {
     return iVar1;
 }
 
-ARM s32 MapManager::func_ov00_02084700(MapManager *pMapManager) {
+ARM s32 MapManager::func_ov00_02084700() {
     s32 iVar1;
-    iVar1 = pMapManager->mMap->mUnk_034;
+    iVar1 = this->mMap->mUnk_034;
     if (iVar1 == -1) {
-        iVar1 = pMapManager->mCourse->mUnk_0c4;
+        iVar1 = this->mCourse->mUnk_0c4;
     }
     if ((iVar1 == 0x1b) && (gActorManager->mUnk_29 != false)) {
         iVar1 = 0x1c;
@@ -1654,7 +1649,7 @@ unk32 MapManager::func_ov00_02084740() {
         local_1c0 = *(unk32 *) gPlayerPos.z;
         // bVar1     = FUN_overlay_d_0__02083780(&local_1c8); // MapManager method?
         if (bVar1) {
-            iVar2 = this->func_ov00_020847f0();
+            // iVar2 = this->func_ov00_020847f0();
         }
     }
     puVar9 = local_1bc;
@@ -1680,19 +1675,16 @@ unk32 MapManager::func_ov00_020847e0() {
     return *(s32 *) ((s32) this->mMap->mUnk_144 + 0xc);
 }
 
-unk8 MapManager::func_ov00_020847f0() {
-    s32 iVar1;
-    unk32 in_r1;
+ARM unk32 MapManager::func_ov00_020847f0(unk32 type) {
+    TriggerBase *triggerBase = this->mMap->FindTrigger(type);
 
-    iVar1 = this->mMap->FindTrigger(in_r1);
-    if (iVar1 == 0) {
-        // this->func_ov00_02084700(?);
-        return;
+    if (triggerBase == NULL) {
+        return this->func_ov00_02084700();
     }
-    if ((*(int *) (iVar1 + 0xc) != -1) && (*(int *) (iVar1 + 0xc) < 0x6c)) {
-        return;
+    if ((triggerBase->mUnk_0c != -1) && ((int) triggerBase->mUnk_0c < 0x6c)) {
+        return triggerBase->mUnk_0c;
     }
-    // this->func_ov00_02084700(?);
+    return this->func_ov00_02084700();
 }
 
 bool MapManager::func_ov00_02084838() {
@@ -1731,19 +1723,15 @@ void MapManager::func_ov00_02084924(u32 param_2) {
     this->mMap->func_ov00_0208008c(param_2);
 }
 
-bool MapManager::func_ov00_02084934(Vec3p *param_2) {
-    q20 iVar2;
-    q20 iVar3;
-    q20 iVar4;
+ARM bool MapManager::func_ov00_02084934(Vec3p *param_2) {
     Vec3p local_20;
 
-    iVar2      = this->GetMapCenterZ();
-    iVar3      = param_2->z;
-    iVar4      = param_2->y;
-    local_20.x = this->GetMapCenterX();
-    local_20.x = param_2->x - local_20.x;
-    local_20.y = iVar4;
-    local_20.z = iVar3 - iVar2;
+    q20 mapCenterZ = this->GetMapCenterZ();
+    q20 y          = param_2->y;
+    q20 zDiff      = param_2->z - mapCenterZ;
+    local_20.x     = param_2->x - this->GetMapCenterX();
+    local_20.y     = y;
+    local_20.z     = zDiff;
     return this->mMap->IsInBounds(&local_20);
 }
 
