@@ -167,7 +167,7 @@ public:
     s32 func_ov00_02083c24(unk32 x);
     s32 func_ov00_02083c50(unk32 z);
     void func_ov00_02083c7c(Vec3p *param_2, Vec2b param_3);
-    static void func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5);
+    void func_ov00_02083ce8(Vec3p *param_2, u32 param_3, s32 param_4, u32 param_5);
     s32 func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
     unk32 MapData_vfunc_60(Vec2b *param_1);
     bool func_ov00_02083e70(Vec2b *param_2);

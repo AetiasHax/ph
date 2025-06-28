@@ -1217,44 +1217,38 @@ ARM void MapManager::func_ov00_02083c7c(Vec3p *param_2, Vec2b param_3) {
     param_2->y = this->MapData_vfunc_68(&local_28, true);
 }
 
-ARM void MapManager::func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5) {
+ARM void MapManager::func_ov00_02083ce8(Vec3p *param_2, u32 param_3, s32 param_4, u32 param_5) {
     bool bVar1;
-    s32 iVar2;
-    u32 uVar3;
+    u32 uVar2;
+    Vec3p local_38;
     Vec3p local_2c;
 
-    uVar3 = param_3;
-    iVar2 = param_1->GetCourseData_Unk_25c();
-    if (iVar2 == 0) {
-        iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
-        *param_2   = iVar2 + 0x800;
-        iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
-        param_2[2] = iVar2 + 0x800;
-    } else {
+    uVar2 = param_3;
+    bVar1 = GetCourseData_Unk_25c();
+    if (bVar1) {
         if (param_4 != -1) {
-            uVar3 = param_5;
-        }
-        if (param_4 != -1 && uVar3 != 0xffffffff) {
-            uVar3 = (u32) (u8) param_1->mCourse->mMapGrid[param_4][uVar3];
+            uVar2 = param_5;
+        } else if (param_4 != -1 && uVar2 != -1) {
+            uVar2 = this->mCourse->mMapGrid[param_4][uVar2];
         } else {
-            uVar3 = param_1->func_ov00_02082d08();
+            uVar2 = this->func_ov00_02082d08();
         }
-        bVar1 = param_1->IsMapInMainGrid(uVar3);
+        bVar1 = this->IsMapInMainGrid(uVar2);
         if (bVar1) {
-            param_1->func_ov00_02083524(&local_2c, param_4, param_5);
-            iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
-            *param_2   = local_2c.x + iVar2 + 0x800;
-            iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
-            param_2[2] = local_2c.z + iVar2 + 0x800;
+            func_ov00_02083524(&local_2c, param_4, param_5);
+            param_2->x = local_2c.x + this->mMap->GetTileStartX(param_3 & 0xff) + 0x800;
+            param_2->z = local_2c.z + this->mMap->GetTileStartZ(param_3 >> 8 & 0xff) + 0x800;
         } else {
-            iVar2      = param_1->mMap->GetTileStartX(param_3 & 0xff);
-            *param_2   = iVar2 + 0x800;
-            iVar2      = param_1->mMap->GetTileStartZ(param_3 >> 8 & 0xff);
-            param_2[2] = iVar2 + 0x800;
+            param_2->x = this->mMap->GetTileStartX(param_3 & 0xff) + 0x800;
+            param_2->z = this->mMap->GetTileStartZ(param_3 >> 8 & 0xff) + 0x800;
         }
+    } else {
+        param_2->x = this->mMap->GetTileStartX(param_3 & 0xff) + 0x800;
+        param_2->z = this->mMap->GetTileStartZ(param_3 >> 8 & 0xff) + 0x800;
     }
-    iVar2      = param_1->MapData_vfunc_68(&local_2c, true); // I really do hope this is right
-    param_2[1] = iVar2;
+    local_38   = *param_2;
+    param_2->y = MapData_vfunc_68(&local_38, true);
+    ;
 }
 
 ARM s32 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
