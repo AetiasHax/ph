@@ -431,7 +431,7 @@ ARM void MapManager::func_ov00_02082808(bool param_2) {
         return;
     }
     iVar1 = this->func_ov00_02084740();
-    if (!param_2) {
+    if (param_2) {
         iVar2 = func_ov000_020a5e9c(&data_027e0d38->mUnk_0c);
         if (iVar2 == 0) {
             func_ov015_021849a4(&data_ov015_02190458);
@@ -1833,7 +1833,7 @@ bool MapManager::GetBlueWarpOpen() {
     return this->mCourse->mBlueWarpOpen;
 }
 
-unk8 MapManager::func_ov00_02084b38(unk32 param_2, unk32 param_3, bool param_4) {
+ARM void MapManager::func_ov00_02084b38(u32 param_2, unk32 param_3, bool param_4) {
     MapBase *pMVar1;
     if (param_2 == 0) {
         return;
