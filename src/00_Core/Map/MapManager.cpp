@@ -762,8 +762,10 @@ ARM void MapManager::func_ov00_0208315c(s32 *param_2, s32 *param_3) {
     this->func_ov00_02083298(uVar1, &local_20, param_2, param_3);
 
     if (*piVar4 == -2 || piVar4 == piVar2) {
-        pvVar3   = data_027e0d38->mUnk_28;
-        local_2c = pvVar3->mUnk_5c;
+        pvVar3     = data_027e0d38->mUnk_28;
+        local_2c.x = pvVar3->mUnk_5c[0];
+        local_2c.y = pvVar3->mUnk_5c[1];
+        local_2c.z = pvVar3->mUnk_5c[2];
         this->func_ov00_02083298((u32) * (u8 *) (*(s32 *) data_027e0d38->mUnk_28 + 0x56), &local_2c, param_2, param_3);
         return;
     }
