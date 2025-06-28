@@ -77,16 +77,25 @@ THUMB unk32 UnkStruct_02063220::func_0202f400(unk32 param1) {
 THUMB void UnkStruct_02063220::DisplayAssertError(char *file, u16 line, char *msg, ...) {
     va_list args;
 
+    // reset screen data
     data_0206322c.func_020304a8(true, true);
+
+    // "draw" strings to the screen array
     DisplayDebugText(0, 0, false, true, "Assert", 0);
     DisplayDebugTextF(0, 2, false, true, "FILE:%s", file);
     DisplayDebugTextF(0, 3, false, true, "LINE:%d", line);
     va_start(args, msg);
     DisplayDebugTextFormat(0, 0, 5, false, true, msg, args);
     va_end(args);
+
+    // unknown but other "draw" stuff
     func_0202f374();
     func_0202d164();
+
+    // "draw" last file
     this->func_0202f4b4();
+
+    // actual draw of the screen
     this->func_0202f754(0);
 }
 
