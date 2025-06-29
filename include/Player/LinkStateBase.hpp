@@ -14,13 +14,13 @@
 
 typedef unk32 LinkStateId;
 enum LinkStateId_ {
-    LinkStateId_Move    = 0,
-    LinkStateId_Item    = 1,
-    LinkStateId_Grab    = 2,
-    LinkStateId_Unk3    = 3,
-    LinkStateId_Unk4    = 4,
-    LinkStateId_Damage  = 5,
-    LinkStateId_ItemGet = 6,
+    LinkStateId_Move     = 0,
+    LinkStateId_Item     = 1,
+    LinkStateId_Interact = 2,
+    LinkStateId_Follow   = 3,
+    LinkStateId_Roll     = 4,
+    LinkStateId_Damage   = 5,
+    LinkStateId_Cutscene = 6,
     LinkStateId_COUNT
 };
 
@@ -60,7 +60,7 @@ public:
     void func_ov00_020a81b8(unk32 param1, unk32 param2);
     LinkStateItem *GetLinkItemState();
     void LookAt(Vec3p *target);
-    void func_ov00_020a81fc();
+    void func_ov00_020a81fc(Vec3p *param1, unk32 param2);
     void AddHealth(s16 amount);
     void func_ov00_020a8224(unk32 param1);
     void TurnTo(s16 angle, unk32 param2, unk32 speed);
@@ -82,7 +82,7 @@ public:
     void Clear_PlayerLinkBase_Unk48(u16 flags);
     void func_ov00_020a8680(unk32 param1, unk16 param2, bool param3);
     void PlayerLinkBase_func_ov00_020bccc8();
-    bool PlayerLinkBase_vfunc_58();
+    bool PlayerLinkBase_vfunc_58(unk32 param1, ActorRef *param2);
     bool func_ov00_020a8704(s16 *pAngle);
     bool func_ov00_020a8774(Vec3p *param1, s32 angle);
     void func_ov00_020a8844(Vec3p *param1, bool param2, bool param3);
@@ -90,7 +90,7 @@ public:
     void func_ov00_020a8994();
     void func_ov00_020a89bc(unk32 *param1, unk32 param2);
     void func_ov00_020a8a08(unk32 param1);
-    void func_ov00_020a8a4c(unk32 param1, unk32 param2);
+    void func_ov00_020a8a4c(const void *param1, unk32 param2);
     void func_ov00_020a8a90(unk32 param1);
     void func_ov00_020a8ab0(unk32 param1);
     void func_ov00_020a8ad0(unk32 param1);
@@ -152,7 +152,7 @@ public:
     void func_ov005_021113c4(bool param1);
 };
 
-LinkStateBase *GetLinkState(s32 index);
+LinkStateBase *GetLinkState(LinkStateId index);
 
 extern LinkStateBase *gLinkState;
 extern LinkStateBase **gLinkStates;

@@ -7,17 +7,27 @@
 #include "Player/EquipHammer.hpp"
 #include "Render/ModelRender.hpp"
 
+typedef s32 FairyId;
+enum FairyId_ {
+    FairyId_None    = -1,
+    FairyId_Courage = 0,
+    FairyId_Power   = 1,
+    FairyId_Wisdom  = 2,
+    FairyId_COUNT   = 3,
+};
+
 class ActorNaviBase_Unk1 {};
 
 class ActorNaviBase : public Actor {
 public:
     /* 000 (base) */
-    /* 158 */ Vec3p mUnk_158;
+    /* 158 */ Vec3p mOffsetPos;
     /* 164 */ unk32 mUnk_164;
     /* 168 */ ModelRender mUnk_168;
     /* 1c4 */ unk8 mUnk_1c4[0xc];
     /* 1d0 */ void *mUnk_1d0;
-    /* 1d4 */ unk8 mUnk_1d4[0x40];
+    /* 1d4 */ unk8 mUnk_1d4[0x20];
+    /* 1f4 */ unk8 mUnk_1f4[0x20];
     /* 214 */ unk16 mUnk_214;
     /* 216 */ unk8 mUnk_216[0xc];
     /* 222 */ unk16 mUnk_222;
@@ -37,7 +47,7 @@ public:
     /* 294 */
 
     /* 00 */ virtual ~ActorNaviBase() override;
-    /* 08 */ virtual bool vfunc_08() override;
+    /* 08 */ virtual bool Init() override;
     /* 10 */ virtual void vfunc_10(u32 param1) override;
     /* 14 */ virtual void vfunc_14(u32 param1) override;
     /* 18 */ virtual void vfunc_18(u32 param1) override;
@@ -51,9 +61,7 @@ public:
     /* 84 */ virtual void vfunc_84() override;
     /* 90 */ virtual bool vfunc_90() override;
     /* 94 */ virtual void vfunc_94() override;
-    /* a0 */ virtual bool TrySetTransform(Transform *transform) override;
-    /* b0 */ virtual void SetTransform(Transform *transform) override;
-    /* b4 */ virtual void vfunc_b4() = 0;
+    /* b4 */ virtual FairyId GetFairyId() = 0;
     /* b8 */ virtual s32 vfunc_b8();
     /* bc */ virtual bool vfunc_bc(unk32 param1, unk8 param2, s32 param3);
     /* c0 */ virtual bool vfunc_c0(Vec3p *param1);
