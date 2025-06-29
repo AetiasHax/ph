@@ -238,7 +238,7 @@ THUMB void UnkStruct_02063220::func_0202f754(unk32 param1) {
                 data_027e08f8.func_0202f9a0(1);
             }
 
-            uVar1 = data_027e05f8.mUnk_02;
+            uVar1 = data_027e05f8.mUnk_2;
             uVar4 = data_020562e2[this->mUnk_04];
             bVar5 = (uVar1 & uVar4) != 0;
 
