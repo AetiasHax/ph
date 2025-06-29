@@ -5,8 +5,8 @@ ActorType ActorSwitchObject::gType = ActorType(ActorTypeId_SwitchObject, (ActorC
 
 ActorSwitchObject *ActorSwitchObject::Create() {}
 
-bool ActorSwitchObject::vfunc_08() {
-    Actor::vfunc_08();
+bool ActorSwitchObject::Init() {
+    Actor::Init();
     this->func_ov000_0208fc7c();
     this->mUnk_130 = 0;
     return true;
