@@ -52,7 +52,7 @@ public:
     /* d0 */ virtual void vfunc_d0() override;
     /* d4 */ virtual void vfunc_d4() override;
     /* d8 */ virtual void vfunc_d8() override;
-    /* dc */ virtual void SetActive(bool active) override;
+    /* dc */ virtual void SetActive(unk32 active) override;
     /* e0 */ virtual void vfunc_e0() override;
     /* e8 */ virtual void vfunc_e8() override;
     /* ec */ virtual void vfunc_ec() override;

@@ -6,6 +6,7 @@
 #include "Player/LinkStateItem.hpp"
 #include "Player/PlayerControl.hpp"
 #include "Player/PlayerLink.hpp"
+#include "Actor/Navi/ActorNavi.hpp"
 
 extern "C" void ApproachAngle_thunk(s16 *src, s16 dst, u32 param3);
 
@@ -38,7 +39,7 @@ ARM bool EquipHammer::IsUsable(unk32 param1) const {
         return false;
     }
 
-    pAVar3 = gItemManager->GetFairy(FairyId_Courage);
+    pAVar3 = (ActorNavi*)gItemManager->GetFairy(FairyId_Courage);
 
     if (pAVar3 == NULL || pAVar3->mUnk_3b8 != 0) {
         return false;
@@ -192,7 +193,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
     }
 
     pEVar4 = GetEquipHammer();
-    pAVar5 = gItemManager->GetFairy(FairyId_Courage);
+    pAVar5 = (ActorNavi*)gItemManager->GetFairy(FairyId_Courage);
 
     if (CHECK_0219b160(data_ov059_0219b160.mUnk_20)) {
         this->mUnk_38 = gPlayerControl->mAimWorld;
@@ -242,5 +243,5 @@ ARM EquipHammer *GetEquipHammer() {
 }
 
 ARM void LinkStateItem::StopUsingHammer() {
-    gItemManager->GetFairy(FairyId_Courage)->func_ov000_020b853c();
+    ((ActorNavi*)gItemManager->GetFairy(FairyId_Courage))->func_ov000_020b853c();
 }

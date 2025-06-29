@@ -177,11 +177,11 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             if (gMapManager->func_01ffbf5c(&auStack_80, &local_110, &local_11c, this->mUnk_08c.size) ? false : true) {
                 this->mPos     = local_e4;
                 this->mPrevPos = local_e4;
-                this->mUnk_158 = local_e4;
+                this->mOffsetPos = local_e4;
             } else {
-                this->mUnk_158.x = uVar4;
-                this->mUnk_158.y = iVar5;
-                this->mUnk_158.z = uVar6;
+                this->mOffsetPos.x = uVar4;
+                this->mOffsetPos.y = iVar5;
+                this->mOffsetPos.z = uVar6;
             }
             break;
         case 4:
@@ -232,7 +232,7 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             if (!bVar7) {
                 this->mPos     = auStack_e0.mUnk_14;
                 this->mPrevPos = auStack_e0.mUnk_14;
-                this->mUnk_158 = auStack_e0.mUnk_14;
+                this->mOffsetPos = auStack_e0.mUnk_14;
             }
             break;
         default: this->func_ov000_020b853c(); break;
@@ -276,11 +276,11 @@ ARM bool ActorNavi::func_ov059_0219af14() {
             break;
         case 4:
             if (this->mHammer->IsReleased()) {
-                this->mVel.y = this->mUnk_158.y - this->mPos.y;
+                this->mVel.y = this->mOffsetPos.y - this->mPos.y;
                 return true;
             } else {
                 this->func_ov000_020b8c50(0x3000);
-                this->mVel.y = this->mUnk_158.y - this->mPos.y;
+                this->mVel.y = this->mOffsetPos.y - this->mPos.y;
                 return true;
             }
         default: break;
@@ -294,7 +294,7 @@ ARM bool ActorNavi::func_ov059_0219afc4() {
     this->func_ov059_0219933c(0);
 
     switch (this->mUnk_130) {
-        case 3: this->mUnk_158.y = gPlayerPos.y + 0x1666; return true;
+        case 3: this->mOffsetPos.y = gPlayerPos.y + 0x1666; return true;
         case 4: return true;
         default: break;
     }
@@ -306,12 +306,12 @@ ARM void ActorNavi::func_ov059_0219b020() {
     if (gItemManager->GetEquippedFairy() != FairyId_Courage) {
         ItemManager *itemMgr = gItemManager;
 
-        this->mPrevPos = this->mUnk_158 = this->mPos = itemMgr->GetFairy(itemMgr->GetEquippedFairy())->mPos;
+        this->mPrevPos = this->mOffsetPos = this->mPos = itemMgr->GetFairy(itemMgr->GetEquippedFairy())->mPos;
     } else {
-        this->mUnk_158 = this->mPos;
+        this->mOffsetPos = this->mPos;
     }
 
-    gPlayerControl->mAimWorld = this->mUnk_158;
+    gPlayerControl->mAimWorld = this->mOffsetPos;
 
     this->mHammer     = GetEquipHammer();
     this->mUnk_3c0[0] = 0x0;
