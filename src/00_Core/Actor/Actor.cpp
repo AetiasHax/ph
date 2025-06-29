@@ -116,7 +116,7 @@ ARM bool Actor::Init() {
     return true;
 }
 
-ARM void Actor::vfunc_0c() {}
+ARM bool Actor::vfunc_0c() {}
 ARM void Actor::vfunc_10(u32 param1) {}
 ARM void Actor::vfunc_24() {}
 ARM void Actor::vfunc_28() {}
