@@ -26,8 +26,9 @@ void func_0202d164();
 void func_0202e6a4(void);
 void func_0203e8a0(void);
 void func_0202f374();
+char* strncpy(char*, char const*, unsigned int);
 
-    // probably GX/GXS functions?
+// probably GX/GXS functions?
 void func_02003ce4(unk32);
 void func_02004730(unk32);
 void func_02003a9c(unk32, unk32, unk32);
@@ -47,7 +48,7 @@ void SetBrightColor(u16 *, unk32);
 #define REG_B_2D_ENGINE (*(u16 *) 0x04001008)
 #define REG_B_MASTER_BRIGHT ((u16 *) 0x0400106C)
 
-u16 data_020562e2[] = {
+const u16 data_020562e2[] = {
     BTN_DUP,   BTN_DDOWN, BTN_DDOWN, BTN_DUP,    BTN_SELECT, BTN_B,     BTN_R,
     BTN_START, BTN_DLEFT, BTN_DLEFT, BTN_DRIGHT, BTN_DLEFT,  BTN_START, BTN_DUP,
 };
@@ -112,6 +113,7 @@ THUMB void UnkStruct_02063220::func_0202f4b4(void) {
 }
 
 THUMB void UnkStruct_02063220::func_0202f500(void) {
+    // "reigaichuu(%d,%d)"
     DisplayDebugTextF(16, 0, 0, 1, "レイガイチュウ(%d,%d)", data_02075ebc, this->mUnk_05);
 }
 
@@ -141,26 +143,26 @@ THUMB void UnkStruct_02063220::DisplayException(Registers *param1) {
         }
 
         for (iVar3 = 0; iVar3 < ARRAY_LEN(param1->mUnk_04); iVar3++) {
-            DisplayDebugTextF(0, iVar3 + 2, 0, 0, "R%02d__=_0x%08X", iVar3, param1->mUnk_04[iVar3]);
+            DisplayDebugTextF(0, iVar3 + 2, 0, 0, "R%02d  = 0x%08X", iVar3, param1->mUnk_04[iVar3]);
             this->mUnk_05++;
         }
 
-        DisplayDebugTextF(0, 15, 0, 0, "SP___=_0x%08X", param1->mUnk_0C);
+        DisplayDebugTextF(0, 15, 0, 0, "SP    = 0x%08X", param1->mUnk_0C);
         this->mUnk_05++;
 
-        DisplayDebugTextF(0, 16, 0, 1, "LR___=_0x%08X", param1->mUnk_10);
+        DisplayDebugTextF(0, 16, 0, 1, "LR    = 0x%08X", param1->mUnk_10);
         this->mUnk_05++;
 
-        DisplayDebugTextF(0, 17, 0, 1, "PC___=_0x%08X", param1->mUnk_14);
+        DisplayDebugTextF(0, 17, 0, 1, "PC    = 0x%08X", param1->mUnk_14);
         this->mUnk_05++;
 
-        DisplayDebugTextF(0, 18, 0, 0, "CPSR_=_0x%08X", param1->mUnk_00);
+        DisplayDebugTextF(0, 18, 0, 0, "CPSR = 0x%08X", param1->mUnk_00);
         this->mUnk_05++;
 
-        DisplayDebugTextF(0, 19, 0, 0, "SPSR_=_0x%08X", param1->mUnk_3C);
+        DisplayDebugTextF(0, 19, 0, 0, "SPSR = 0x%08X", param1->mUnk_3C);
         this->mUnk_05++;
 
-        DisplayDebugTextF(0, 20, 0, 0, "CP15_=_0x%08X", param1->mUnk_38);
+        DisplayDebugTextF(0, 20, 0, 0, "CP15 = 0x%08X", param1->mUnk_38);
         this->mUnk_05++;
 
         func_0202f374();
