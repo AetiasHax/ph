@@ -45,7 +45,7 @@ extern s32 *func_ov000_02096418(s32 *param_1);
 extern void func_ov000_0209d6e8(unk32 *param_1, unk32 *param_2);
 extern s32 func_ov000_0209d71c(s32 *param_1, s32 param_2);
 extern unk32 func_ov000_020a5e9c(unk32 *param_1);
-extern void func_ov000_020c3348(unk32 *param_1);
+extern void func_ov000_020c3348(ActorSpawnOptions *param_1);
 extern void func_ov000_020d70a4(unk32 *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
 extern void func_ov000_020d72b8(unk32 *param_1);
 extern unk32 func_ov000_020d7424(unk32 *param_1);
@@ -72,7 +72,19 @@ extern MapBase *func_ov017_0215b4e8(MapBase *param_1, unk32 param_2, unk32 param
 
 // extern MapBase *func_ov018_0215b4a0(MapBase *param_1, unk32 param_2, unk32 param_3);
 
-struct astruct_16 {}; // What is this struct?
+struct astruct_16 {
+    /* 00 */ Actor_UnkStruct_020 *mUnk_00;
+    /* 04 */ unk8 mUnk_08[0x10];
+    /* 14 */ unk16 mAngle;
+    /* 16 */ unk8 mUnk_16;
+    /* 17 */ unk8 mUnk_17;
+    /* 18 */ unk32 mUnk_18;
+    /* 1c */ unk32 mUnk_1c;
+    /* 20 */ unk32 mUnk_20;
+    /* 24 */ unk32 mUnk_24;
+    /* 28 */ unk32 mUnk_28;
+    /* 2c */
+}; // What is this struct?
 
 // This might be FlagsUnk2
 struct UnkStruct_02082348 {
@@ -1777,14 +1789,15 @@ u8 MapManager::func_ov00_02084a50() {
     return this->mMap->mUnk_011;
 }
 
-void MapManager::SpawnNPC(Vec3p *param_2, unk32 param_3, unk32 param_4) {
-    void *aStack_3c; // = Actor_UnkStruct_020();
-    // aStack_3c.field24_0x1c = 0xffffffff;
-    // aStack_3c.field25_0x20 = 0xffffffff;
-    func_ov000_020c3348((unk32 *) aStack_3c);
-    //  aStack_3c.field26_0x24 = param_3;
-    //  aStack_3c.field27_0x28 = param_4;
-    gActorSpawner->Spawn(ActorTypeId_EVIC, param_2, aStack_3c, NULL);
+void MapManager::SpawnNPC(Vec3p *pos, unk32 param_3, unk32 param_4) {
+    ActorSpawnOptions actorSpawnOptions;
+    actorSpawnOptions.mUnk_00       = Actor_UnkStruct_020();
+    actorSpawnOptions.mUnk_1c.id    = -1;
+    actorSpawnOptions.mUnk_1c.index = -1;
+    func_ov000_020c3348(&actorSpawnOptions);
+    actorSpawnOptions.mUnk_24 = param_3;
+    actorSpawnOptions.mUnk_28 = param_4;
+    gActorSpawner->Spawn(ActorTypeId_EVIC, pos, &actorSpawnOptions, NULL);
 }
 
 ARM bool MapManager::func_ov00_02084ac4(u32 actorId) {
