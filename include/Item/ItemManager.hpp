@@ -21,15 +21,6 @@ extern "C" {
 #define MAX_AMMO_UPGRADE 2
 #define MAX_UNK_0BA 9
 
-typedef s32 FairyId;
-enum FairyId_ {
-    FairyId_None    = -1,
-    FairyId_Courage = 0,
-    FairyId_Power   = 1,
-    FairyId_Wisdom  = 2,
-    FairyId_COUNT   = 3,
-};
-
 typedef u32 ItemModelId;
 enum ItemModelId_ {
     ItemModelId_OshusSword,   // swA
@@ -61,13 +52,13 @@ enum DungeonItemModelId_ {
 };
 
 class ItemManager : public SysObject {
-private:
+public:
     /* 000 */ ItemFlag mEquippedItem;
     /* 004 */ ItemFlag mPrevEquippedItem;
     /* 008 */ ItemFlag mForcedItem; // game crashes when any item besides this one is equipped
     /* 00c */ u32 mHourglassSandFrames;
     /* 010 */ FairyId mEquippedFairy;
-    /* 014 */ ActorNavi *mFairies[FairyId_COUNT];
+    /* 014 */ ActorNaviBase *mFairies[FairyId_COUNT];
     /* 020 */ u16 mEquipLoadTimer;
     /* 022 */ u16 mNumRupees;
     /* 024 */ u8 mNumGems[Gem_COUNT];
@@ -102,7 +93,6 @@ private:
     /* 14e */ unk8 mUnk_14e[0x2]; // padding?
     /* 150 */
 
-public:
     static ItemManager *Create();
     static void Destroy();
     ItemManager();
@@ -115,7 +105,7 @@ public:
 
     // Fairy
     FairyId GetEquippedFairy() const;
-    ActorNavi *GetFairy(FairyId id) const;
+    ActorNaviBase *GetFairy(FairyId id) const;
     u32 GetActiveFairyLevel(FairyId id) const;
     u32 GetFairyLevel(FairyId id) const;
     void SpawnFairies();
@@ -145,7 +135,7 @@ public:
 
     // Ammo
     u16 GetAmmo(ItemFlag equipId) const;
-    void GiveAmmo(ItemFlag equipId, u16 amount);
+    void GiveAmmo(ItemFlag equipId, u32 amount);
     u16 GetMaxAmmo(ItemFlag equipId) const;
     void UpgradeQuiver();
     void UpgradeBombBag();
