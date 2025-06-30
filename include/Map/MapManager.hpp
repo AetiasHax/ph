@@ -86,7 +86,7 @@ public:
     void func_ov00_02082acc();
     unk32 *func_ov00_02082adc();
     void func_ov00_02082af4();
-    bool func_ov00_02082b3c(unk32 *param_2);
+    void func_ov00_02082b3c(unk32 *param_2, Vec2b *param3);
     u8 func_ov00_02082d08();
     u8 GetCurrentMapPosX();
     u8 GetCurrentMapPosY();

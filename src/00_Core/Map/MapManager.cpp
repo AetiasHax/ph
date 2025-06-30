@@ -8,6 +8,7 @@
 #include "Actor/ActorSpawner.hpp"
 #include "DTCM/UnkStruct_027e0d38.hpp"
 #include "DTCM/UnkStruct_027e0fd4.hpp"
+#include "DTCM/UnkStruct_027e103c.hpp"
 #include "Player/PlayerBase.hpp"
 #include "Save/AdventureFlags.hpp"
 #include "Unknown/UnkStruct_02037750.hpp"
@@ -54,8 +55,6 @@ extern void func_ov004_021024c4(MapManager *param_1, s32 param_2, bool param_3, 
 extern void func_ov004_02102770(s32 *param_1);
 extern void func_ov004_02102b28(s32 *param_1);
 extern void func_ov004_02102e3c(s32 *param_1);
-extern void func_ov004_02105578(ActorManager *param_1, u32 param_2);
-extern void func_ov004_02105608(ActorManager *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
 extern void func_ov004_02106db8(unk32 *param_1); // UnkStruct_027e0c68 doesn't exist, so using unk32
 
 extern MapBase *func_ov012_0212b358(MapBase *param_1, unk32 param_2, unk32 param_3);
@@ -139,7 +138,7 @@ extern unk32 *data_027e0f6c;
 extern unk32 *data_027e0f70;
 extern unk32 *data_027e0f78;
 extern unk32 *data_027e0f7c;
-extern unk32 *data_027e103c;
+extern UnkStruct_027e103c *data_027e103c;
 
 extern unk32 *data_ov000_020e24a4;
 extern MapManager_Unk2 data_ov000_020e24c8[];
@@ -567,35 +566,30 @@ ARM void MapManager::func_ov00_02082af4() {
     this->mUnk_0b = false;
 }
 
-bool MapManager::func_ov00_02082b3c(unk32 *param_2) {
+void MapManager::func_ov00_02082b3c(unk32 *param_2, Vec2b *param_3) {
     u8 bVar1;
-    PlayerBase *puVar2;
     u16 uVar3;
     u32 uVar4;
     unk32 uVar5;
-    u32 in_r3;
     ActorManager *pAVar6;
-    unk32 local_18;
+    PlayerBase *puVar2;
 
-    local_18 = in_r3; // what's the point of that?
-    this->mCourse->FindMapGridPos((Vec2b *) &local_18, this->mCourse, (u32) * (u8 *) (param_2 + 0x12));
+    this->mCourse->FindMapGridPos(param_3, this->mCourse, *(u32 *) ((unk32) param_2 + 0x12));
     uVar4 = this->GetCurrentMapPosX();
-    if (((((local_18 & 0xff) == uVar4) && (uVar4 = this->GetCurrentMapPosY(), (local_18 >> 8 & 0xff) == uVar4)) &&
+    if (((((param_3->x) == uVar4) && (uVar4 = this->GetCurrentMapPosY(), (param_3->y) == uVar4)) &&
          ((*(s32 *) (param_2 + 8) != 1 || (*(s32 *) (*(s32 *) data_027e0d38 + 0x14) != 1)))) &&
         (*(char *) (param_2 + 0x15) == '\0'))
     {
         gAdventureFlags->func_ov00_020976c8();
-        puVar2        = gPlayer;
         this->mUnk_0c = *(unk32 *) (param_2 + 0x13);
-        // puVar2->TeleportToEntrance(*(unk32 *) (param_2 + 0x13), false);
-        //  (**(code **) (**(int **) puVar2 + 0x38))(*(int **) puVar2, *(unk32 *) (param_2 + 0x13), 0);
-        // func_ov004_02106db8(data_027e0c68);
+        gPlayer->TeleportToEntrance(*(unk32 *) (param_2 + 0x13), false);
+        func_ov004_02106db8(data_027e0c68);
         this->mMap->vfunc_18();
     } else {
         gAdventureFlags->func_ov00_020976c8();
         func_ov000_0208b13c(data_027e0f64);
         uVar5 = this->func_ov00_02082d08();
-        gActorManager->func_ov004_02105608(local_18 & 0xff, local_18 >> 8 & 0xff, uVar5);
+        gActorManager->func_ov004_02105608(param_3->x, param_3->y, uVar5);
         this->mMap->vfunc_2c();
         func_ov004_02102b28(data_027e0f68);
         func_ov004_02102770(data_027e0f6c);
@@ -603,14 +597,12 @@ bool MapManager::func_ov00_02082b3c(unk32 *param_2) {
         bVar1                          = *(u8 *) (param_2 + 0x12);
         uVar3                          = this->mCourse->FindCurrentMapData_Unk_04();
         uVar4                          = this->mCourse->FindMapData_Unk_04((u32) bVar1);
-        (this->mCourse->mCurrMapPos).x = (u8) local_18;
-        (this->mCourse->mCurrMapPos).y = (u8) * (&local_18 + 0x4); // I assume this is what Ghidra means by "local_18._1_1_"
+        (this->mCourse->mCurrMapPos).x = (u8) param_3->x;
+        (this->mCourse->mCurrMapPos).y = (u8) param_3->y;
         this->func_ov004_021024c4(param_2, uVar3 != uVar4, 0);
-        func_ov004_02105578(gActorManager, (u32) * (u8 *) (param_2 + 0x12));
-        // data_027e0d3c->
-        // UnkStruct_027e0103c::thunk_FUN_overlay_d_0__020cf7e8(*PTR_PTR_overlay_d_0__02082cfc);
+        gActorManager->func_ov004_02105578(*(unk32 *) ((unk32) param_2 + 0x12));
+        data_027e103c->func_ov000_020cfcec();
     }
-    return true;
 }
 
 ARM u8 MapManager::func_ov00_02082d08() {
@@ -1257,7 +1249,6 @@ ARM void MapManager::func_ov00_02083ce8(Vec3p *param_2, u32 param_3, s32 param_4
     }
     local_38   = *param_2;
     param_2->y = MapData_vfunc_68(&local_38, true);
-    ;
 }
 
 ARM s32 MapManager::func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4) {
@@ -1791,7 +1782,6 @@ u8 MapManager::func_ov00_02084a50() {
 
 void MapManager::SpawnNPC(Vec3p *pos, unk32 param_3, unk32 param_4) {
     ActorSpawnOptions actorSpawnOptions;
-    // actorSpawnOptions.mUnk_00       = Actor_UnkStruct_020();
     actorSpawnOptions.mUnk_1c.id    = -1;
     actorSpawnOptions.mUnk_1c.index = -1;
     func_ov000_020c3348(&actorSpawnOptions);
