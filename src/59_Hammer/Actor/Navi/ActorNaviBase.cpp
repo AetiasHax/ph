@@ -175,8 +175,8 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             local_56 = local_5c;
 
             if (gMapManager->func_01ffbf5c(&auStack_80, &local_110, &local_11c, this->mUnk_08c.size) ? false : true) {
-                this->mPos     = local_e4;
-                this->mPrevPos = local_e4;
+                this->mPos       = local_e4;
+                this->mPrevPos   = local_e4;
                 this->mOffsetPos = local_e4;
             } else {
                 this->mOffsetPos.x = uVar4;
@@ -230,8 +230,8 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             }
 
             if (!bVar7) {
-                this->mPos     = auStack_e0.mUnk_14;
-                this->mPrevPos = auStack_e0.mUnk_14;
+                this->mPos       = auStack_e0.mUnk_14;
+                this->mPrevPos   = auStack_e0.mUnk_14;
                 this->mOffsetPos = auStack_e0.mUnk_14;
             }
             break;
