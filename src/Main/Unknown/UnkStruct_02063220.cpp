@@ -26,7 +26,7 @@ void func_0202d164();
 void func_0202e6a4(void);
 void func_0203e8a0(void);
 void func_0202f374();
-char* strncpy(char*, char const*, unsigned int);
+char *strncpy(char *, char const *, unsigned int);
 
 // probably GX/GXS functions?
 void func_02003ce4(unk32);
