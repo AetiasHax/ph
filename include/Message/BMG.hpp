@@ -5,19 +5,18 @@
 #include "types.h"
 
 #define BMG_MAGIC "MESGbmg1"
-#define BMG_TAG(a, b, c, d) (((d) << 24) | ((c) << 16) | ((b) << 8) | (a))
 #define BMG_GET_INF1(pGroups, flags) ((pGroups)->entries[(flags) >> 0x10].func_02037258((flags) & 0xFFFF))
 #define BMG_GET_MSG_OFFSET(pGroups, flags) (BMG_GET_INF1((pGroups), (flags))->offset)
 #define BMG_GET_MSG_ADDR(pGroups, flags) \
     ((u32) (pGroups)->entries[(flags) >> 0x10].pDAT1 + (BMG_GET_MSG_OFFSET((pGroups), (flags)) & ~1))
 
 enum BMGTag {
-    /* "INF1" */ BMG_TAG_INF1 = BMG_TAG('I', 'N', 'F', '1'),
-    /* "FLW1" */ BMG_TAG_FLW1 = BMG_TAG('F', 'L', 'W', '1'),
-    /* "FLI1" */ BMG_TAG_FLI1 = BMG_TAG('F', 'L', 'I', '1'),
-    /* "DAT1" */ BMG_TAG_DAT1 = BMG_TAG('D', 'A', 'T', '1'),
-    /* "MID1" */ BMG_TAG_MID1 = BMG_TAG('M', 'I', 'D', '1'),
-    /* "MID1" */ BMG_TAG_STR1 = BMG_TAG('S', 'T', 'R', '1'),
+    /* "INF1" */ BMG_TAG_INF1 = '1FNI',
+    /* "FLW1" */ BMG_TAG_FLW1 = '1WLF',
+    /* "FLI1" */ BMG_TAG_FLI1 = '1ILF',
+    /* "DAT1" */ BMG_TAG_DAT1 = '1TAD',
+    /* "MID1" */ BMG_TAG_MID1 = '1DIM',
+    /* "STR1" */ BMG_TAG_STR1 = '1RTS',
 };
 
 enum BMGEncoding {

@@ -38,7 +38,7 @@ src/Main/Message/BMG.cpp:
 
 src/Main/Unknown/UnkStruct_02037750.cpp:
     .text       start:0x02037750 end:0x020387e0
-    .data       start:0x02057d00 end:0x02057d70
+    .data       start:0x02057cb8 end:0x02057d70
 
 src/Main/Unknown/UnkStruct_02038aa0.cpp:
     .text       start:0x0203881c end:0x02039578

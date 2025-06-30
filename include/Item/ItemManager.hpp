@@ -207,4 +207,3 @@ public:
 };
 
 extern ItemManager *gItemManager;
-extern UnkStruct_027e0d38 *data_027e0d38;

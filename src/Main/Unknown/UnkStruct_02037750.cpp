@@ -48,7 +48,6 @@ ARM bool UnkStruct_02037750::vfunc_24(unk32 param1) {
 ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
     u16 uVar1;
     s64 lVar2;
-    Random *pRVar3;
     char cVar4;
     u16 uVar5;
     int iVar6;
@@ -59,8 +58,7 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
     u32 uVar11;
     bool bVar12;
 
-    pRVar3 = gRandom;
-    uVar7  = (u32) * (u16 *) (param1 + 0x2);
+    uVar7 = (u32) * (u16 *) (param1 + 0x2);
 
     if (uVar7 >= 0xF && uVar7 <= 0x2E) {
         pcVar8 = this->mUnk_04[((uVar7 - 0xF) << 0x1E) >> 0x1C];
@@ -101,17 +99,17 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
                 if (uVar7 == 0x0) {
                     uVar10 = 0x0;
                 } else {
-                    lVar2  = gRandom->mRandomValue * gRandom->mFactor;
-                    uVar10 = gRandom->Next(lVar2);
-                    // uVar10 = *(int *)((int)&gRandom->mAddend + 0x4) +
-                    //         *(int *)((int)&gRandom->mFactor + 0x4) *
-                    //         *(uint *)&gRandom->mRandomValue + *(uint *)&gRandom->mFactor *
-                    //         *(int *)((int)&gRandom->mRandomValue + 0x4) +
-                    //         (lVar2 >> 0x20) + (gRandom->mAddend << uVar11); // CARRY4
+                    lVar2  = gRandom.mRandomValue * gRandom.mFactor;
+                    uVar10 = gRandom.Next(lVar2);
+                    // uVar10 = *(int *)((int)&gRandom.mAddend + 0x4) +
+                    //         *(int *)((int)&gRandom.mFactor + 0x4) *
+                    //         *(uint *)&gRandom.mRandomValue + *(uint *)&gRandom.mFactor *
+                    //         *(int *)((int)&gRandom.mRandomValue + 0x4) +
+                    //         (lVar2 >> 0x20) + (gRandom.mAddend << uVar11); // CARRY4
 
                     // part of the inline?
-                    // *(uint *)&gRandom->mRandomValue = *(uint *)&gRandom->mAddend + uVar11;
-                    // *(uint *)((int)&gRandom->mRandomValue + 0x4) = uVar10;
+                    // *(uint *)&gRandom.mRandomValue = *(uint *)&gRandom.mAddend + uVar11;
+                    // *(uint *)((int)&gRandom.mRandomValue + 0x4) = uVar10;
 
                     if (uVar7 != 0x0) {
                         uVar10 = (uVar7 * uVar10 >> 0x20);
@@ -126,9 +124,9 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
             case 0x9: break;
             case 0xa: break;
             case 0xb:
-                lVar2  = gRandom->mRandomValue * gRandom->mFactor;
+                lVar2  = gRandom.mRandomValue * gRandom.mFactor;
                 uVar7  = lVar2;
-                uVar10 = gRandom->Next(uVar7);
+                uVar10 = gRandom.Next(uVar7);
 
                 return (int) (uVar10 * 0x64 >> 0x20) < (param1 + 0x4);
             case 0xc:
@@ -136,9 +134,9 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
                 if (uVar7 == 0x0) {
                     uVar10 = 0x0;
                 } else {
-                    lVar2  = gRandom->mRandomValue * gRandom->mFactor;
+                    lVar2  = gRandom.mRandomValue * gRandom.mFactor;
                     uVar11 = lVar2;
-                    uVar10 = gRandom->Next(uVar11);
+                    uVar10 = gRandom.Next(uVar11);
 
                     if (uVar7 != 0x0) {
                         uVar10 = (uVar7 * uVar10 >> 0x20);
@@ -159,9 +157,9 @@ ARM unk32 UnkStruct_02037750::vfunc_28(s32 param1) {
     if (uVar7 == 0x0) {
         uVar10 = 0x0;
     } else {
-        lVar2  = gRandom->mRandomValue * gRandom->mFactor;
+        lVar2  = gRandom.mRandomValue * gRandom.mFactor;
         uVar11 = lVar2;
-        uVar10 = gRandom->Next(uVar11);
+        uVar10 = gRandom.Next(uVar11);
 
         if (uVar7 != 0x0) {
             uVar10 = (uVar7 * uVar10 >> 0x20);
