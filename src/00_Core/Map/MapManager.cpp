@@ -1791,7 +1791,7 @@ u8 MapManager::func_ov00_02084a50() {
 
 void MapManager::SpawnNPC(Vec3p *pos, unk32 param_3, unk32 param_4) {
     ActorSpawnOptions actorSpawnOptions;
-    actorSpawnOptions.mUnk_00       = Actor_UnkStruct_020();
+    // actorSpawnOptions.mUnk_00       = Actor_UnkStruct_020();
     actorSpawnOptions.mUnk_1c.id    = -1;
     actorSpawnOptions.mUnk_1c.index = -1;
     func_ov000_020c3348(&actorSpawnOptions);
