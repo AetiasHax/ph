@@ -59,7 +59,7 @@ public:
 
     static ActorNavi *Create();
     void func_ov000_020b8200();
-    void func_ov000_020b853c(void);
+    void func_ov000_020b853c();
 
     bool func_ov059_0219933c(u32 param1);
     void func_ov059_0219a0ac();
