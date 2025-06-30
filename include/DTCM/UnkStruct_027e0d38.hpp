@@ -6,7 +6,7 @@
 struct UnkStruct_027e0d38_UnkC {
     /* 00 */ unk32 mUnk_00;
 
-    unk32 func_ov000_020a5e9c(void);
+    s32 func_ov000_020a5e9c(void);
 };
 
 struct UnkStruct_027e0d38_Unk28 {
