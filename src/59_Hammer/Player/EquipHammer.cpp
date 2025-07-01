@@ -8,6 +8,8 @@
 #include "Player/PlayerControl.hpp"
 #include "Player/PlayerLink.hpp"
 
+char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+
 extern "C" void ApproachAngle_thunk(s16 *src, s16 dst, u32 param3);
 
 struct EquipHammer_UnkStruct {
