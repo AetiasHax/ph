@@ -8,27 +8,9 @@
 #include "Player/PlayerControl.hpp"
 #include "Player/PlayerLink.hpp"
 
-char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
+static char *gShipParts[8] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
 extern "C" void ApproachAngle_thunk(s16 *src, s16 dst, u32 param3);
-
-struct EquipHammer_UnkStruct {
-    /* 00 */ unk8 mUnk_00[0x20];
-    /* 20 */ unk32 mUnk_20;
-    /* 24 */ unk8 mUnk_24[0xC];
-    /* 30 */ unk32 mUnk_30;
-    /* 34 */ unk8 mUnk_34[0xC];
-    /* 40 */ unk32 mUnk_40;
-    /* 44 */ unk8 mUnk_44[0xC];
-    /* 50 */ unk32 mUnk_50;
-    /* 54 */
-};
-
-extern EquipHammer_UnkStruct data_ov059_0219b160;
-extern unk32 data_ov059_0219b180;
-extern unk32 data_ov059_0219b190;
-extern unk32 data_ov059_0219b1a0;
-extern unk32 data_ov059_0219b1b0;
 
 ARM bool EquipHammer::IsUsable(unk32 param1) const {
     ActorNavi *pAVar3;
@@ -74,7 +56,12 @@ ARM bool EquipHammer::IsUsable(unk32 param1) const {
     return true;
 }
 
-ARM LinkStateItem *GetLinkStateItem() {
+static LinkStateBase_UnkStruct1 data_ov059_0219b180 = {0x39, {FLOAT_TO_Q20(1.0), 0, FLOAT_TO_Q20(64.0)}};
+static LinkStateBase_UnkStruct1 data_ov059_0219b190 = {0x3c, {FLOAT_TO_Q20(1.0), 0, FLOAT_TO_Q20(5.0)}};
+static LinkStateBase_UnkStruct1 data_ov059_0219b1a0 = {0x3d, {FLOAT_TO_Q20(1.0), 0, FLOAT_TO_Q20(3.0)}};
+static LinkStateBase_UnkStruct1 data_ov059_0219b1b0 = {0x3e, {FLOAT_TO_Q20(1.2), 0, FLOAT_TO_Q20(6.0)}};
+
+ARM LinkStateItem *EquipHammer::GetLinkStateItem() {
     return (LinkStateItem *) GetLinkState(LinkStateId_Item);
 }
 
@@ -197,7 +184,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
     pEVar4 = GetEquipHammer();
     pAVar5 = (ActorNavi *) gItemManager->GetFairy(FairyId_Courage);
 
-    if (CHECK_0219b160(data_ov059_0219b160.mUnk_20)) {
+    if (CHECK_0219b160(data_ov059_0219b180.mUnk_00)) {
         this->mUnk_38 = gPlayerControl->mAimWorld;
 
         if (pAVar5->mUnk_3c0[0] != 0 && gPlayerControl->UpdateAimWorld(&this->mUnk_38) && pEVar4->GetState() <= 0) {
@@ -210,11 +197,11 @@ ARM void LinkStateItem::func_ov059_021990a4() {
             this->func_ov00_020a89bc(&data_ov059_0219b190, 1);
         }
     } else {
-        if (CHECK_0219b160(data_ov059_0219b160.mUnk_50)) {
+        if (CHECK_0219b160(data_ov059_0219b1b0.mUnk_00)) {
             if (this->func_ov00_020a8b3c(1) != 0 || gPlayerControl->UpdateAimWorld(&this->mUnk_38)) {
                 this->func_ov00_020a89bc(&data_ov059_0219b180, 1);
             }
-        } else if (CHECK_0219b160(data_ov059_0219b160.mUnk_30) || CHECK_0219b160(data_ov059_0219b160.mUnk_40)) {
+        } else if (CHECK_0219b160(data_ov059_0219b190.mUnk_00) || CHECK_0219b160(data_ov059_0219b1a0.mUnk_00)) {
             gPlayerControl->UpdateAimWorld(&this->mUnk_38);
             pEVar4->func_ov059_02198e90();
 
@@ -227,7 +214,7 @@ ARM void LinkStateItem::func_ov059_021990a4() {
                     pEVar4->func_ov059_02198ebc();
                     this->func_ov00_020a89bc(&data_ov059_0219b1b0, 1);
                 }
-            } else if (!CHECK_0219b160(data_ov059_0219b160.mUnk_40) && pEVar4->GetChargeTimer() <= 0) {
+            } else if (!CHECK_0219b160(data_ov059_0219b1a0.mUnk_00) && pEVar4->GetChargeTimer() <= 0) {
                 this->func_ov00_020a89bc(&data_ov059_0219b1a0, 1);
             }
         } else {

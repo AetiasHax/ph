@@ -132,7 +132,7 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
 
     switch (param1) {
         case 3:
-            uVar1 = GetLinkStateItem();
+            uVar1 = EquipHammer::GetLinkStateItem();
 
             if (uVar1->mUnk_25[2] != 0 && uVar1->mUnk_25[3] != 0) {
                 break;
@@ -185,7 +185,7 @@ ARM void ActorNavi::func_ov059_0219aba8(u32 param1) {
             }
             break;
         case 4:
-            uVar1 = GetLinkStateItem();
+            uVar1 = EquipHammer::GetLinkStateItem();
 
             if (uVar1->mUnk_25[2] != 0 && uVar1->mUnk_25[3] != 0) {
                 break;

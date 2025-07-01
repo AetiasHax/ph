@@ -14,6 +14,8 @@ typedef enum EquipHammerState {
     /* 0x20000 */ EQUIP_HAMMER_STATE_CHARGED  = (2 << 16),
 } EquipHammerState;
 
+class LinkStateItem;
+
 class EquipHammer : public EquipItem {
 private:
     /* 00 (base) */
@@ -44,6 +46,7 @@ public:
 
     EquipHammer();
 
+    static LinkStateItem *GetLinkStateItem();
     void func_ov059_02198e90();
     bool func_ov059_02198ebc();
     bool func_ov059_02198ed4();
@@ -64,7 +67,4 @@ public:
     }
 };
 
-class LinkStateItem;
-
-extern LinkStateItem *GetLinkStateItem();
 extern EquipHammer *GetEquipHammer();
