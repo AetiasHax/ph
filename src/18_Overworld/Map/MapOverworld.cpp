@@ -22,7 +22,7 @@ s32 MapOverworld::func_ov018_0215c380(u8 *param1) {}
 void MapOverworld::vfunc_bc() {}
 void MapOverworld::vfunc_98() {}
 void MapOverworld::vfunc_c0() {}
-unk32 MapOverworld::vfunc_78() {}
+unk32 *MapOverworld::vfunc_78() {}
 unk32 MapOverworld::vfunc_7c() {}
 unk32 MapOverworld::vfunc_80() {}
 void MapOverworld::vfunc_b0(unk32 param_2, unk32 param_3) {}

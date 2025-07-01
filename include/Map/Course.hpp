@@ -59,7 +59,7 @@ public:
     /* 25e */ unk8 mUnk_25e;
     /* 25f */ unk8 mUnk_25f;
     /* 260 */ unk32 mNumKeys;
-    /* 260 */ unk32 mFlags0[1];
+    /* 264 */ unk32 mFlags0[1];
     /* 268 */ unk32 mFlags1[1]; // knows which doors are open in a dungeon
     /* 26c */
 
@@ -78,7 +78,7 @@ public:
     void GetMRCFilePath(unk32 param_2, unk32 buf, unk32 param_4);
     void func_ov00_0207ce20(unk32 param_2, unk32 param_3, char *param_4, unk32 param_5);
     void func_ov00_0207ce4c(s32 param_2, s32 param_3, unk32 param_4, char *param_5, unk32 param_6);
-    bool func_ov00_0207d404(s32 param_2, unk32 param_3, unk32 param_4);
+    bool func_ov00_0207d404(s32 param_2, unk32 param_3, unk32 param_4, unk32 param_5);
     bool IsCurrentMapInMainGrid();
     bool IsInMainGrid(s32 x, s32 y);
     bool IsMapInMainGrid(u32 map);
@@ -108,7 +108,7 @@ public:
     bool GetMapDataFlag2(unk32 param_2);
     void SetMapDataFlag3(unk32 param_2, bool param_3);
     bool GetMapDataFlag3(unk32 param_2);
-    void SetMapDataFlag4(unk32 param_2, unk32 param_3);
+    void SetMapDataFlag4(unk32 param_2, bool param_3);
     bool GetMapDataFlag4(unk32 param_2);
     MapData *FindMapData(u32 map);
     MapData *FindCurrentMapData();

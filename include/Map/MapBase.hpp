@@ -112,7 +112,7 @@ public:
     /* 188 */ unk8 mUnk_188[0x14];
     /* 19c */ unk32 mUnk_19c;
     /* 1a0 */ Vec3p mUnk_1a0;
-    /* 1ac */ unk32 mUnk_1ac;
+    /* 1ac */ s16 mUnk_1ac;
     /* 1b0 */
 
     /* 00 */ virtual ~MapBase();
@@ -133,24 +133,24 @@ public:
     /* 40 */ virtual void vfunc_40();
     /* 44 */ virtual void vfunc_44();
     /* 48 */ virtual void vfunc_48();
-    /* 4c */ virtual s32 vfunc_4c() = 0;
+    /* 4c */ virtual s32 vfunc_4c();
     /* 50 */ virtual unk32 vfunc_50();
     /* 54 */ virtual unk32 vfunc_54(Vec2b *param_1);
     /* 58 */ virtual unk32 vfunc_58(Vec2b *param_1, int param_2);
     /* 5c */ virtual unk32 vfunc_5c();
-    /* 60 */ virtual unk32 vfunc_60(u8 *param_1);
+    /* 60 */ virtual unk32 vfunc_60(Vec2b *param_1);
     /* 64 */ virtual unk32 vfunc_64();
-    /* 68 */ virtual unk8 vfunc_68(Vec3p *param_1, bool param_2);
+    /* 68 */ virtual unk32 vfunc_68(Vec3p *param_1, bool param_2);
     /* 6c */ virtual unk8 vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 70 */ virtual unk32 vfunc_70(Vec3p *param_2);
-    /* 74 */ virtual s32 vfunc_74(Vec3p *param_2);
-    /* 78 */ virtual unk32 vfunc_78(Vec2b *param_1);
+    /* 74 */ virtual unk32 *vfunc_74(Vec3p *param_2);
+    /* 78 */ virtual unk32 *vfunc_78(Vec2b *param_1);
     /* 7c */ virtual s32 vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]);
     /* 80 */ virtual unk32 vfunc_80();
     /* 84 */ virtual void vfunc_84(unk32 param_2);
     /* 88 */ virtual unk32 vfunc_88();
     /* 8c */ virtual unk32 vfunc_8c();
-    /* 90 */ virtual unk8 vfunc_90(unk32 param_2, unk32 param_3, unk32 param_4);
+    /* 90 */ virtual unk8 vfunc_90(Vec2b *param_2, unk32 param_3);
     /* 94 */ virtual void vfunc_94();
     /* 98 */ virtual void vfunc_98(unk32 param_2, unk32 param_3, unk32 param_4);
     /* 9c */ virtual void vfunc_9c();
@@ -204,7 +204,7 @@ public:
     s32 GetTriggerBoundingBox(s32 param_2, AABB *param_3);
     s32 GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4);
     bool GetOverlappingTrigger(Vec3p *param_2);
-    unk8 FindTrigger(unk32 type);
+    TriggerBase *FindTrigger(unk32 type);
     unk8 GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity);
     bool IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3);
     bool AnyTrigger_func_0c(unk32 type);

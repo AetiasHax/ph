@@ -860,7 +860,7 @@ ARM bool Actor::func_ov00_020c3094() {
     Vec3p pos, prevPos;
     Vec3p_Copy(&mPos, &pos);
     Vec3p_Copy(&mPrevPos, &prevPos);
-    s32 unk1 = gMapManager->func_ov00_02083ef8(&pos, &prevPos);
+    s32 unk1 = gMapManager->func_ov00_02083ef8(&pos, &prevPos, false);
     if (mPos.y <= unk1) {
         result = true;
         mPos.y = unk1;

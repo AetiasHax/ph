@@ -21,15 +21,15 @@ unk32 MapBase::vfunc_50() {}
 unk32 MapBase::vfunc_54(Vec2b *param_1) {}
 unk32 MapBase::vfunc_58(Vec2b *param_1, int param_2) {}
 unk32 MapBase::vfunc_5c() {}
-unk32 MapBase::vfunc_60(u8 *param_1) {}
+unk32 MapBase::vfunc_60(Vec2b *param_1) {}
 unk32 MapBase::vfunc_64() {}
-unk8 MapBase::vfunc_68(Vec3p *param_1, bool param_2) {}
+unk32 MapBase::vfunc_68(Vec3p *param_1, bool param_2) {}
 unk8 MapBase::func_ov00_0207e940(unk8 *param_1) {}
 unk8 MapBase::func_ov00_0207e968() {}
 unk8 MapBase::func_ov00_0207e96c() {}
 unk8 MapBase::vfunc_6c(unk32 param_2, unk32 param_3, unk32 param_4) {}
 unk32 MapBase::vfunc_70(Vec3p *param_2) {}
-s32 MapBase::vfunc_74(Vec3p *param_2) {}
+unk32 *MapBase::vfunc_74(Vec3p *param_2) {}
 unk8 MapBase::func_ov00_0207f100() {}
 bool MapBase::func_ov00_0207f104(unk32 param_2, unk32 param_3) {}
 unk32 MapBase::func_ov00_0207f1f4(Vec3p *param_2, unk32 *param_3) {}
@@ -40,12 +40,12 @@ void MapBase::vfunc_a0() {}
 unk32 MapBase::vfunc_a4(unk8 *param_1) {}
 void MapBase::vfunc_a8() {}
 void MapBase::vfunc_ac() {}
-unk32 MapBase::vfunc_78(Vec2b *param_1) {}
+unk32 *MapBase::vfunc_78(Vec2b *param_1) {}
 s32 MapBase::vfunc_7c(s32 param_1, unk32 *param_2, s32 param_3, short param_4[4]) {}
 unk32 MapBase::vfunc_80() {}
 void MapBase::vfunc_84(unk32 param_2) {}
 bool MapBase::func_ov00_0207f38c(s32 *param_2) {}
-unk8 MapBase::vfunc_90(unk32 param_2, unk32 param_3, unk32 param_4) {}
+unk8 MapBase::vfunc_90(Vec2b *param_2, unk32 param_3) {}
 void MapBase::vfunc_94() {}
 void MapBase::func_ov00_0207f4a4(Vec2s *param_2, unk32 param_3) {}
 void MapBase::func_ov00_0207f53c(Vec2s *param_1, MapBase *param_2, Vec3p *param_3) {}
@@ -73,7 +73,7 @@ bool TriggerBase::GetBoundingBox(AABB *bbox) {}
 s32 MapBase::GetTriggerBoundingBoxes(s32 param_2, AABB *param_3, s32 param_4) {}
 bool MapBase::GetOverlappingTrigger(Vec3p *param_2) {}
 bool TriggerBase::Overlaps(Vec3p *point) {}
-unk8 MapBase::FindTrigger(unk32 type) {}
+TriggerBase *MapBase::FindTrigger(unk32 type) {}
 unk8 MapBase::GetOverlappingTriggers(Vec3p *param_2, TriggerBase **triggers, unk32 capacity) {}
 bool MapBase::IsTriggerTypeOverlapped(unk32 type, Vec3p *param_3) {}
 bool MapBase::AnyTrigger_func_0c(unk32 type) {}

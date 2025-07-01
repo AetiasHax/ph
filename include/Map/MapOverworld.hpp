@@ -52,7 +52,7 @@ public:
     /* 5c */ virtual unk32 vfunc_5c() override;
     /* 60 */ virtual unk32 vfunc_60() override;
     /* 64 */ virtual unk32 vfunc_64() override;
-    /* 78 */ virtual unk32 vfunc_78() override;
+    /* 78 */ virtual unk32 *vfunc_78() override;
     /* 7c */ virtual unk32 vfunc_7c() override;
     /* 80 */ virtual unk32 vfunc_80() override;
     /* 94 */ virtual void vfunc_94() override;
