@@ -332,7 +332,7 @@ ARM bool Actor::vfunc_4c(unk32 *param1) {
 }
 
 ARM bool Actor::IsNearLink() {
-    Vec3p playerPos = *gPlayerPos;
+    Vec3p playerPos = gPlayerPos;
 
     q20 z  = playerPos.z;
     q20 dx = abs(playerPos.x - mPos.x);
@@ -365,7 +365,7 @@ ARM bool Actor::func_ov00_020c1da0(s32 param1, Vec3p *param2) {
     if (param2) {
         vec = *param2;
     } else {
-        Vec3p_Sub(gPlayerPos, &mPrevPos, &vec);
+        Vec3p_Sub(&gPlayerPos, &mPrevPos, &vec);
     }
 
     return gPlayer->vfunc_30(mUnk_124, &vec, param1);
@@ -379,7 +379,7 @@ ARM bool Actor::func_ov00_020c1e2c(s32 param1, Vec3p *param2) {
     if (param2) {
         vec = *param2;
     } else {
-        Vec3p_Sub(gPlayerPos, &mPrevPos, &vec);
+        Vec3p_Sub(&gPlayerPos, &mPrevPos, &vec);
     }
 
     Cylinder hitbox;
@@ -411,7 +411,7 @@ ARM bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
     bool result = false;
     if (mHitbox.size >= 0) {
         Vec3p vecFromPlayer;
-        Vec3p_Sub(&mPos, gPlayerPos, &vecFromPlayer);
+        Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
         if (this->CollidesWithPlayer(flags & PlayerCollide_Sword)) {
             Knockback knockback;
             knockback.mUnk_00 = gPlayer->EquipItem_vfunc_2c();
@@ -459,7 +459,7 @@ ARM bool Actor::func_ov00_020c1fc8(PlayerCollide flags) {
 
 ARM bool Actor::CollidesWithShield(Cylinder *param1) {
     Vec3p vecFromPlayer;
-    Vec3p_Sub(&mPos, gPlayerPos, &vecFromPlayer);
+    Vec3p_Sub(&mPos, &gPlayerPos, &vecFromPlayer);
     s32 currAngle = gPlayerAngle;
     s32 angle     = Atan2(vecFromPlayer.x, vecFromPlayer.z);
     s32 angleDiff = (s16) angle - currAngle;
@@ -631,13 +631,13 @@ ARM q20 Actor::XzDistanceTo(Vec3p *vec) {
 }
 
 ARM q20 Actor::DistanceToLink() {
-    return Vec3p_Distance(&mPos, gPlayerPos);
+    return Vec3p_Distance(&mPos, &gPlayerPos);
 }
 
 ARM q20 Actor::XzDistanceToLink() {
     Vec3p src;
     Vec3p_CopyXZ(&mPos, &src);
-    Vec3p dest = *gPlayerPos;
+    Vec3p dest = gPlayerPos;
 
     dest.y = 0;
     return Vec3p_Distance(&src, &dest);
@@ -655,7 +655,7 @@ ARM s16 Actor::GetAngleTo(Vec3p *vec) {
 }
 
 ARM s32 Actor::GetAngleToLink() {
-    return this->GetAngleTo(gPlayerPos);
+    return this->GetAngleTo(&gPlayerPos);
 }
 
 extern "C" void func_0202d95c(Vec3p *param1, q20 param2);
@@ -735,7 +735,7 @@ ARM bool Actor::func_ov00_020c2c70() {
             this->GetLinkPos(&pos);
             Vec3p_Sub(&pos, &mPos, &vel);
         } else {
-            Vec3p_Sub(gPlayerPos, &mPos, &vel);
+            Vec3p_Sub(&gPlayerPos, &mPos, &vel);
         }
     }
     Vec3p_Add(&mPos, &vel, &mPos);
@@ -777,7 +777,7 @@ ARM bool Actor::func_ov00_020c2de4() {
             func_0202d95c(&vel, FLOAT_TO_Q20(1.0));
         }
     } else {
-        Vec3p_Sub(gPlayerPos, &mPos, &vel);
+        Vec3p_Sub(&gPlayerPos, &mPos, &vel);
     }
     Vec3p_Add(&mPos, &vel, &mPos);
     mVel = vel;
@@ -927,7 +927,7 @@ ARM void Actor::GetLinkPos(Vec3p *result) {
     if (gPlayerLink != NULL && gPlayerLink->GetCurrentCharacter() != PlayerCharacter_Link) {
         return this->GetLinkDummyPos(result);
     }
-    result = gPlayerPos;
+    *result = gPlayerPos;
 }
 
 ARM void Actor::GetLinkDummyPos(Vec3p *result) {
@@ -938,7 +938,7 @@ ARM void Actor::GetLinkDummyPos(Vec3p *result) {
         *result = dummy->mPos;
         return;
     }
-    result = gPlayerPos;
+    *result = gPlayerPos;
 }
 
 Actor_UnkStruct_09c::Actor_UnkStruct_09c() {

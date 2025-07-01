@@ -166,7 +166,7 @@ public:
     s32 GetTileEndZ(unk32 z);
     s32 func_ov00_02083c24(unk32 x);
     s32 func_ov00_02083c50(unk32 z);
-    void func_ov00_02083c7c(Vec3p *param_2, u32 param_3);
+    void func_ov00_02083c7c(Vec3p *param_2, Vec2b param_3);
     static void func_ov00_02083ce8(MapManager *param_1, s32 *param_2, u32 param_3, s32 param_4, u32 param_5);
     s32 func_ov00_02083e34(unk8 param_2, unk8 param_3, unk32 param_4);
     unk32 MapData_vfunc_60(u8 *param_1);
@@ -178,9 +178,9 @@ public:
     unk32 MapData_vfunc_70(Vec3p *param_2);
     static void func_ov00_02083fb0(u32 *param_1, MapManager *param_2, Vec3p *param_3);
     void GetTileWorldBounds(Vec2b *tile, AABB *tileBounds);
-    unk32 MapData_vfunc_54(unk8 *a);
-    unk8 func_ov00_020840a0(unk8 param_2, unk8 param_3, unk32 param_4);
-    unk32 MapData_vfunc_78(bool *param_1);
+    unk32 MapData_vfunc_54(Vec2b *a);
+    unk32 func_ov00_020840a0(unk8 param_2, unk8 param_3);
+    unk32 MapData_vfunc_78(Vec2b *param_1);
     unk8 func_ov00_020840dc();
     static unk8 func_ov00_02084100(unk32 *param_1, MapManager *param_2);
     u32 GetMapData_Unk_48();
@@ -232,10 +232,10 @@ public:
     unk8 func_ov00_02084d24(unk8 param_2, unk8 param_3, unk32 param_4);
     s32 func_ov00_02084d4c(unk32 param_2, unk32 param_3, Vec3p *param_4);
     unk32 func_ov00_02084ebc(Vec3p *param_2);
-    s32 func_ov00_02085108(s32 *param_2);
+    s32 func_ov00_02085108(Vec3p *param_2);
     static s32 func_ov00_0208527c(MapManager *param_1, unk32 param_2, unk32 *param_3);
     static s32 func_ov00_020853fc(MapManager *param_1, Vec3p *param_2, s32 *param_3);
-    static unk32 func_ov00_02085594(MapManager *param_1, Vec3p *param_2, unk32 param_3, unk32 param_4);
+    unk32 func_ov00_02085594(Vec3p *param_2);
     static void func_ov00_0208583c(MapManager *param_1, Vec3p *param_2, unk32 param_3);
     static unk8 func_ov00_020858b0(MapManager *param_1, Vec3p *param_2, s32 param_3);
     s32 func_ov00_02085a34(Vec3p *param_2, unk32 param_3);
