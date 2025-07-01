@@ -3,7 +3,10 @@
 #include "global.h"
 #include "types.h"
 
-struct UnkStruct_027e0f64 {
+#include "Debug/DebugHierarchy.hpp"
+
+class UnkStruct_027e0f64 {
+public:
     /* 0 */ DebugHierarchyBase *mUnk_0;
     /* 4 */ void *mUnk_4;
     /* 8 */ void *mUnk_8;
