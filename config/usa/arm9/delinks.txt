@@ -51,3 +51,11 @@ src/Main/Message/func_0203c72c.cpp:
 
 src/Main/Unknown/UnkStruct_0203dae0.cpp:
     .text       start:0x0203da9c end:0x0203e740
+
+src/Main/Unknown/UnkStruct_0206322c.cpp:
+    .text       start:0x02030350 end:0x020306bc
+
+src/Main/Unknown/UnkStruct_02063220.cpp:
+    .text       start:0x0202f3ec end:0x0202f8e4
+    .rodata     start:0x0205629c end:0x020562bc
+    .data       start:0x020576e4 end:0x020577c0
