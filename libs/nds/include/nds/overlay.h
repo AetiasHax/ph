@@ -5,6 +5,9 @@
 extern "C" {
 #endif
 
+#define EXTERN_OVERLAY_ID(name_or_index) extern u32 OVERLAY_##name_or_index##_ID;
+#define OVERLAY_ID(name_or_index) ((u32) & OVERLAY_##name_or_index##_ID)
+
 typedef struct Overlay {
     /* 00 */ unk32 mId;
     /* 04 */ void *mBaseAddress;

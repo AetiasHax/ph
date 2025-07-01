@@ -21,7 +21,7 @@ class ActorNaviBase_Unk1 {};
 class ActorNaviBase : public Actor {
 public:
     /* 000 (base) */
-    /* 158 */ Vec3p mUnk_158;
+    /* 158 */ Vec3p mOffsetPos;
     /* 164 */ unk32 mUnk_164;
     /* 168 */ ModelRender mUnk_168;
     /* 1c4 */ unk8 mUnk_1c4[0xc];
@@ -46,7 +46,7 @@ public:
     /* 294 */
 
     /* 00 */ virtual ~ActorNaviBase() override;
-    /* 08 */ virtual bool vfunc_08() override;
+    /* 08 */ virtual bool Init() override;
     /* 10 */ virtual void vfunc_10(u32 param1) override;
     /* 14 */ virtual void vfunc_14(u32 param1) override;
     /* 18 */ virtual void vfunc_18(u32 param1) override;

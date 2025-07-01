@@ -16,6 +16,10 @@ src/00_Core/Actor/ActorManager.cpp:
     .text       start:0x020c33d4 end:0x020c3e54
     .data       start:0x020e72a8 end:0x020e72f4
 
+src/00_Core/Actor/ActorSpawner.cpp:
+    complete
+    .text       start:0x020c3f9c end:0x020c42d8
+
 src/00_Core/Actor/Dungeon/ActorSwitchObject.cpp:
     .text       start:0x0208fa70 end:0x020903a8
     .init       start:0x020df678 end:0x020df6b8
@@ -71,6 +75,7 @@ src/00_Core/Item/Item.cpp:
     .rodata     start:0x020dc574 end:0x020dc6c4
 
 src/00_Core/Item/ItemManager.cpp:
+    complete
     .text       start:0x020ad090 end:0x020ae790
     .rodata     start:0x020dc6c4 end:0x020dc6d4
     .data       start:0x020e5c58 end:0x020e6078
@@ -117,6 +122,7 @@ src/00_Core/Player/LinkStateItem.cpp:
     .data       start:0x020e5a40 end:0x020e5a8c
 
 src/00_Core/Player/LinkStateMove.cpp:
+    complete
     .text       start:0x020a8e04 end:0x020a8f74
     .data       start:0x020e56f0 end:0x020e575c
 
