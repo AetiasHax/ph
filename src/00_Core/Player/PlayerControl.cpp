@@ -600,12 +600,10 @@ ARM void PlayerControl::ResetAim() {
     mAim = gVec3p_ZERO;
 }
 
-extern "C" s32 func_ov000_020a5e9c(unk32 *param1);
-
 ARM bool PlayerControl::UpdateAimWorld(Vec3p *param1) {
     Vec3p pos = gPlayerPos;
 
-    s32 iVar2 = func_ov000_020a5e9c(&data_027e0d38->mUnk_0c);
+    s32 iVar2 = data_027e0d38->mUnk_0c.func_ov000_020a5e9c();
     if (iVar2 == 0x2f && *(s32 *) (*(s32 *) ((s32) data_027e0f64 + 0x4) + 0x15c) == 0x31) {
         return this->func_ov024_02178348(param1);
     }

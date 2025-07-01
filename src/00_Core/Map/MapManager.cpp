@@ -45,7 +45,6 @@ extern void func_ov000_02096324(unk32 *param_1, unk32 *param_2);
 extern s32 *func_ov000_02096418(s32 *param_1);
 extern void func_ov000_0209d6e8(unk32 *param_1, unk32 *param_2);
 extern s32 func_ov000_0209d71c(s32 *param_1, s32 param_2);
-extern unk32 func_ov000_020a5e9c(unk32 *param_1);
 extern void func_ov000_020c3348(ActorSpawnOptions *param_1);
 extern void func_ov000_020d70a4(unk32 *param_1, unk32 param_2, unk32 param_3, unk32 param_4);
 extern void func_ov000_020d72b8(unk32 *param_1);
@@ -221,18 +220,18 @@ ARM void MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
         *(u8 *) ((int) param_3 + 5) = 4;
     } else {
         this->func_ov00_02082348((unk32 *) &local_40[1]);
-        *param_3                    = func_ov000_020a5e9c((unk32 *) &local_40[1]);
+        *param_3                    = ((UnkStruct_027e0d38_UnkC *) &local_40[1])->func_ov000_020a5e9c();
         *(unk8 *) (param_3 + 1)     = local_40[1].mUnk_12;
         *(u8 *) ((int) param_3 + 5) = local_40[1].mUnk_13;
     }
-    param_3[2]                        = func_ov000_020a5e9c((unk32 *) ((unk32) (data_027e0d38->mUnk_28) + 0x1c));
-    *(u8 *) (param_3 + 4)             = *(u8 *) ((int) data_027e0d38->mUnk_28 + 0x2e);
-    *(unk16 *) (param_3 + 5)          = *(unk16 *) ((int) data_027e0d38->mUnk_28 + 0x36);
-    pvVar3                            = data_027e0d38->mUnk_28;
-    param_3[6]                        = *(unk32 *) ((int) pvVar3 + 0x38); // Likely Vec3p
-    param_3[7]                        = *(unk32 *) ((int) pvVar3 + 0x3c);
-    param_3[8]                        = *(unk32 *) ((int) pvVar3 + 0x40);
-    param_3[3]                        = func_ov000_020a5e9c((unk32 *) ((unk32) data_027e0d38->mUnk_28 + 0x44));
+    param_3[2]               = ((UnkStruct_027e0d38_UnkC *) ((unk32) (data_027e0d38->mUnk_28) + 0x1c))->func_ov000_020a5e9c();
+    *(u8 *) (param_3 + 4)    = *(u8 *) ((int) data_027e0d38->mUnk_28 + 0x2e);
+    *(unk16 *) (param_3 + 5) = *(unk16 *) ((int) data_027e0d38->mUnk_28 + 0x36);
+    pvVar3                   = data_027e0d38->mUnk_28;
+    param_3[6]               = *(unk32 *) ((int) pvVar3 + 0x38); // Likely Vec3p
+    param_3[7]               = *(unk32 *) ((int) pvVar3 + 0x3c);
+    param_3[8]               = *(unk32 *) ((int) pvVar3 + 0x40);
+    param_3[3]               = ((UnkStruct_027e0d38_UnkC *) ((unk32) data_027e0d38->mUnk_28 + 0x44))->func_ov000_020a5e9c();
     *(u8 *) ((int) param_3 + 0x11)    = *(u8 *) ((int) data_027e0d38->mUnk_28 + 0x56);
     pvVar3                            = data_027e0d38->mUnk_28;
     param_3[9]                        = *(unk32 *) ((int) pvVar3 + 0x5c); // Likely Vec3p
@@ -249,7 +248,7 @@ ARM void MapManager::func_ov00_0208210c(unk32 param_2, unk32 *param_3) {
     local_40[0].mUnk_13               = *(u8 *) ((int) pvVar3 + 0x83);
     local_40[0].mUnk_14               = *(u8 *) ((int) pvVar3 + 0x84);
     local_40[0].mUnk_15               = *(u8 *) ((int) pvVar3 + 0x85);
-    uVar2                             = func_ov000_020a5e9c((unk32 *) &local_40[0]);
+    uVar2                             = ((UnkStruct_027e0d38_UnkC *) &local_40[0])->func_ov000_020a5e9c();
     param_3[0x70]                     = uVar2;
     *(u8 *) ((int) param_3 + 0x1be)   = local_40[0].mUnk_12;
     *(u8 *) ((int) param_3 + 0x1bf)   = local_40[0].mUnk_13;
@@ -445,7 +444,7 @@ ARM void MapManager::func_ov00_02082808(bool param_2) {
     }
     iVar1 = this->func_ov00_02084740();
     if (param_2) {
-        iVar2 = func_ov000_020a5e9c(&data_027e0d38->mUnk_0c);
+        iVar2 = data_027e0d38->mUnk_0c.func_ov000_020a5e9c();
         if (iVar2 == 0) {
             func_ov015_021849a4(&data_ov015_02190458);
         }
@@ -457,7 +456,7 @@ ARM void MapManager::func_ov00_02082808(bool param_2) {
         }
         func_ov000_020d70a4(&data_ov000_020eec68, iVar1, 0, 0x7f);
     }
-    iVar1 = func_ov000_020a5e9c(&data_027e0d38->mUnk_0c);
+    iVar1 = data_027e0d38->mUnk_0c.func_ov000_020a5e9c();
     if (iVar1 == 0) {
         return;
     }
@@ -1765,7 +1764,7 @@ bool MapManager::func_ov00_020849dc() {
 }
 
 ARM bool MapManager::func_ov00_020849f8() {
-    switch (func_ov000_020a5e9c(&data_027e0d38->mUnk_0c)) {
+    switch (data_027e0d38->mUnk_0c.func_ov000_020a5e9c()) {
         case 5: return true;
         default:
             if (this->GetMapData_Unk_06() != 0 && !this->func_ov00_020849c0()) {
