@@ -24,6 +24,12 @@ enum LinkStateId_ {
     LinkStateId_COUNT
 };
 
+struct LinkStateBase_UnkStruct1 {
+    /* 00 */ unk32 mUnk_00;
+    /* 04 */ Vec3p mUnk_04;
+    /* 10 */
+};
+
 class LinkStateItem;
 
 class LinkStateBase : public SysObject {
@@ -88,14 +94,14 @@ public:
     void func_ov00_020a8844(Vec3p *param1, bool param2, bool param3);
     void func_ov00_020a8954(bool param1, unk32 *param2);
     void func_ov00_020a8994();
-    void func_ov00_020a89bc(unk32 param1, unk32 param2);
+    void func_ov00_020a89bc(LinkStateBase_UnkStruct1 *param1, unk32 param2);
     void func_ov00_020a8a08(unk32 param1);
     void func_ov00_020a8a4c(const void *param1, unk32 param2);
     void func_ov00_020a8a90(unk32 param1);
     void func_ov00_020a8ab0(unk32 param1);
     void func_ov00_020a8ad0(unk32 param1);
     void func_ov00_020a8b04(s32 param1, bool param2);
-    void func_ov00_020a8b3c(s32 param1);
+    unk32 func_ov00_020a8b3c(s32 param1);
     bool func_ov00_020a8b80();
     bool HasFlags_PlayerLinkBase_Unk48(u16 flags);
     unk8 Get_PlayerLinkBase_Unk5e();
@@ -154,4 +160,5 @@ public:
 
 LinkStateBase *GetLinkState(LinkStateId index);
 
+extern LinkStateBase *gLinkState;
 extern LinkStateBase **gLinkStates;

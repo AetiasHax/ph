@@ -8,7 +8,8 @@ extern "C" {
 #include "nds/math.h"
 #include "types.h"
 
-#include "Actor/Navi/ActorNaviBase.hpp"
+#include "Actor/Navi/ActorNavi.hpp"
+#include "DTCM/UnkStruct_027e0d38.hpp"
 #include "Item/Item.hpp"
 #include "Player/EquipItem.hpp"
 #include "Render/ModelRender.hpp"
@@ -98,6 +99,11 @@ public:
     ~ItemManager();
     void Init();
 
+    // Access to members
+    inline u8 GetUnk_14d(void) {
+        return mUnk_14d;
+    }
+
     // Save/load
     void Save(SaveItemManager *save);
     void Load(const SaveItemManager *save);
@@ -186,6 +192,9 @@ public:
     // Rupees
     s32 GetMaxRupees() const;
     void GiveRupees(s32 amount, bool param2);
+    inline u16 GetNumRupees(void) {
+        return this->mNumRupees;
+    }
 
     // Potion
     void SetPotion(u32 index, Potion potion);
@@ -200,6 +209,8 @@ public:
 
     // Unknown
     void func_ov00_020ae4dc(s32 param1);
+    void func_ov000_020c0c44(void *);
+    void func_ov000_020c0e5c(void *, unk32);
 };
 
 extern ItemManager *gItemManager;
