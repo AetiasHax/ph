@@ -71,8 +71,8 @@ src/00_Core/Actor/Navi/ActorWisdomNavi.cpp:
     .sbss       start:0x020ee530 end:0x020ee550
 
 src/00_Core/Item/Item.cpp:
+    complete
     .text       start:0x020acfc0 end:0x020ad030
-    .rodata     start:0x020dc514 end:0x020dc664
 
 src/00_Core/Item/ItemManager.cpp:
     complete
