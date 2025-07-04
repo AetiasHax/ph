@@ -1493,8 +1493,8 @@ func_0202ff30 kind:function(arm,size=0x14) addr:0x0202ff30
 _ZN14OverlayManager4LoadEjj kind:function(thumb,size=0x1e) addr:0x0202ff44
 _ZN14OverlayManager15LoadIfNotLoadedEjj kind:function(thumb,size=0x20) addr:0x0202ff64
 _ZN14OverlayManager6UnloadEj kind:function(thumb,size=0x1e) addr:0x0202ff84
-_ZN14OverlayManager16LoadOverlaySetupEi kind:function(thumb,size=0x64) addr:0x0202ffa4
-_ZN14OverlayManager18UnloadOverlaySetupEv kind:function(thumb,size=0x34) addr:0x02030008
+_ZN14OverlayManager12LoadGameModeEi kind:function(thumb,size=0x64) addr:0x0202ffa4
+_ZN14OverlayManager14UnloadGameModeEv kind:function(thumb,size=0x34) addr:0x02030008
 func_0203003c kind:function(thumb,size=0x2) addr:0x0203003c
 func_02030040 kind:function(thumb,size=0xc) addr:0x02030040
 func_0203004c kind:function(thumb,size=0x2) addr:0x0203004c
@@ -2536,7 +2536,7 @@ data_020561c4 kind:data(any) addr:0x020561c4
 data_020561d4 kind:data(any) addr:0x020561d4
 data_020561dc kind:data(any) addr:0x020561dc
 data_020561f0 kind:data(any) addr:0x020561f0
-gOverlaySetups kind:data(any) addr:0x020561f4
+gGameModes kind:data(any) addr:0x020561f4
 data_020562d4 kind:data(any) addr:0x020562d4
 data_020562e2 kind:data(any) addr:0x020562e2
 data_02056300 kind:data(any) addr:0x02056300

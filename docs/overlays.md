@@ -67,8 +67,8 @@ contribute to this list!
 `60` | ---             | 12   |
 `61` | ---             | 12   |
 
-## Overlay setups
-The game contains a list of "overlay setups" which contain overlay IDs to load into slot 1, 2, 3 and 12.
+## Game modes
+There is a list of game mode called `gGameModes` which contain overlay IDs to load into slot 1, 2, 3 and 12.
 
  Index | Slot 1 | Slot 2 | Slot 3 | Slot 12 | Usage
 -------|--------|--------|--------|---------|-------
