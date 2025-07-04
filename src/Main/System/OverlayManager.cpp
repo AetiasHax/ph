@@ -52,8 +52,6 @@ THUMB void OverlayManager::Unload(OverlayIndex index) {
     }
 }
 
-//! TODO: solve the .word issue with the overlay IDs
-//! both functions should match otherwise
 THUMB void OverlayManager::LoadGameMode(s32 mode) {
     OverlayId overlayId;
     GameMode *pSetup;
