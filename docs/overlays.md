@@ -74,9 +74,9 @@ There is a list of game mode called `gGameModes` which contain overlay IDs to lo
 -------|--------|--------|--------|---------|-------
 `0`    | None   | None   | None   | None    | Game load
 `1`    | 1      | None   | 8      | None    | Startup screen (before title screen)
-`2`    | 3      | 4      | 9      | None    | Scene load
+`2`    | 3      | 4      | 9      | None    | Adventure mode
 `3`    | 1      | 6      | 10     | None    | File selection
 `4`    | 1      | None   | 11     | 61      | Wi-Fi connection setup
-`5`    | 1      | 7      | None   | None    | DS download play battle mode
-`6`    | 1      | 4      | 12     | 60      | Multi-card battle mode
+`5`    | 1      | 7      | None   | None    | DS download play
+`6`    | 1      | 4      | 12     | 60      | Battle mode
 `7`    | 1      | None   | 13     | None    | Contact mode (trading items)
