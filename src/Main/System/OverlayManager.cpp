@@ -9,7 +9,7 @@ struct UnkStruct_020ee698 {
 };
 extern UnkStruct_020ee698 data_ov000_020ee698;
 
-struct GameMode {
+struct GameModeData {
     /* 00 */ unk8 mUnk_00;
     /* 01 */ unk8 mUnk_01;
     /* 02 */ unk8 mUnk_02;
@@ -22,7 +22,7 @@ struct GameMode {
     /* 18 */ void *mUnk_18;
     /* 1c */
 };
-extern GameMode gGameModes[];
+extern GameModeData gGameModes[];
 
 extern u32 *data_027e0ce0[];
 extern "C" void func_ov007_02102850(u32 **);
@@ -54,7 +54,7 @@ THUMB void OverlayManager::Unload(OverlayIndex index) {
 
 THUMB void OverlayManager::LoadGameMode(s32 mode) {
     OverlayId overlayId;
-    GameMode *pSetup;
+    GameModeData *pSetup;
 
     pSetup = &gGameModes[mode];
 
