@@ -79,7 +79,7 @@ public:
 };
 
 struct FlagsUnk2 {
-    /* 00 */ struct UnkStruct_027e0d38_UnkC mUnk_00;
+    /* 00 */ UnkStruct_027e0d38_UnkC mUnk_00;
     /* 04 */ UnkStruct_02082348_04 mUnk_04;
     /* 18 */
 
