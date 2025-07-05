@@ -1,35 +1,9 @@
 #pragma once
 
+#include "Save/AdventureFlags.hpp"
 #include "global.h"
 #include "nds/math.h"
 #include "types.h"
-
-struct UnkStruct_027e0d38_UnkC {
-    /* 00 */ unk32 mUnk_00;
-
-    s32 func_ov000_020a5e9c(void);
-};
-
-class UnkStruct_02082348_04 {
-public:
-    /* 00 */ Vec3p mPos;
-    /* 0c */ unk16 mAngle;
-    /* 0e */ u8 mId;
-    /* 0f */ u8 mUnk_0f;
-    /* 10 */ u8 mUnk_10;
-    /* 11 */ u8 mUnk_11;
-    /* 14 */
-};
-
-// This might be FlagsUnk2
-struct UnkStruct_02082348 {
-    /* 00 */ UnkStruct_027e0d38_UnkC mUnk_00;
-    /* 04 */ UnkStruct_02082348_04 mUnk_04;
-    /* 18 */
-
-    void func_ov000_02078bf0(UnkStruct_02082348 *param_2);
-    void func_ov004_02100ae0();
-};
 
 struct UnkStruct_027e0d38_Unk28 {
     /* 000 */ unk32 *mUnk_00;
@@ -64,7 +38,7 @@ struct UnkStruct_027e0d38_Unk28 {
     /* 057 */ unk8 mUnk_57;
     /* 058 */ unk32 mUnk_58;
     /* 05c */ UnkStruct_02082348_04 mUnk_5c;
-    /* 070 */ UnkStruct_02082348 mUnk_70;
+    /* 070 */ FlagsUnk2 mUnk_70;
     /* 088 */ unk8 pad1[0x9A - 0x88];
     /* 09a */ u8 mUnk_9a;
     /* 09b */ u8 mUnk_9b;

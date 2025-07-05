@@ -37,7 +37,7 @@ THUMB GameModeAdventure *GameModeAdventure::Create(unk32 param1) {
 // non-matching
 THUMB GameModeAdventure::GameModeAdventure(unk32 param1) :
     GameModePlay(param1) {
-    UnkStruct_02082348 local_28;
+    FlagsUnk2 local_28;
 
     this->mUnk_008 = new(data_027e0ce0[1], 4) UnkStruct_0211a9ac();
     this->mUnk_00c = new(data_027e0ce0[1], 4) UnkStruct_020fadf4(this->mUnk_008);
@@ -47,30 +47,30 @@ THUMB GameModeAdventure::GameModeAdventure(unk32 param1) :
     func_ov003_020f4510();
 
     local_28.mUnk_00.mUnk_00 = 0x47;
-    local_28.mUnk_04.mPos.x  = 0;
-    local_28.mUnk_04.mPos.y  = 0;
-    local_28.mUnk_04.mPos.z  = -2;
-    local_28.mUnk_04.mAngle  = 0;
-    local_28.mUnk_04.mId     = -1;
+    local_28.mUnk_04.mUnk_00 = 0;
+    local_28.mUnk_04.mUnk_04 = 0;
+    local_28.mUnk_04.mUnk_08 = -2;
+    local_28.mUnk_04.mUnk_0c = 0;
+    local_28.mUnk_04.mUnk_0e = -1;
     local_28.mUnk_04.mUnk_0f = 0;
     local_28.mUnk_04.mUnk_10 = 0;
     local_28.mUnk_04.mUnk_11 = 0;
 
     if (gGame.mUnk_102 != 0) {
-        AdventureFlags::Get_FlagsUnk_00(0x17, (FlagsUnk2 *) &local_28);
+        AdventureFlags::Get_FlagsUnk_00(0x17, &local_28);
     } else {
         if (gGame.mPrevModeId == 1) {
-            AdventureFlags::Get_FlagsUnk_00(0x17, (FlagsUnk2 *) &local_28);
+            AdventureFlags::Get_FlagsUnk_00(0x17, &local_28);
         } else if (data_ov000_020eab04 == 0x47) {
-            AdventureFlags::Get_FlagsUnk_00(0x01, (FlagsUnk2 *) &local_28);
+            AdventureFlags::Get_FlagsUnk_00(0x01, &local_28);
         } else {
             unk32 index = AdventureFlags::func_ov00_02097ecc();
 
             if (index != 0x21) {
-                AdventureFlags::Get_FlagsUnk_00(index, (FlagsUnk2 *) &local_28);
+                AdventureFlags::Get_FlagsUnk_00(index, &local_28);
             } else {
                 local_28.mUnk_00.mUnk_00 = data_ov000_020eab04;
-                local_28.mUnk_04.mId     = data_ov000_020eab08;
+                local_28.mUnk_04.mUnk_0e = data_ov000_020eab08;
                 local_28.mUnk_04.mUnk_0f = data_ov000_020eab09;
             }
         }
