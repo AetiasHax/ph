@@ -44,8 +44,15 @@ public:
 
 class UnkStruct_020f2978_00 {
 public:
-    /* 00 */ unk8 pad[0x18];
+    /* 000 (vtable) */
+    /* 04 */ unk8 pad[0x14];
     /* 18 */
+
+    /* 00 */ virtual void vfunc_00(); // func_ov000_020d0670
+    /* 04 */ virtual void vfunc_04(); // func_ov000_020cff1c
+    /* 08 */ virtual void vfunc_08(); // func_ov000_020d0000
+    /* 0c */ virtual void vfunc_0c(); // func_ov000_020d0048
+    /* 10 */ virtual void vfunc_10(); // func_ov000_020cff8c
 
     UnkStruct_020f2978_00();
     ~UnkStruct_020f2978_00();
