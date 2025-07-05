@@ -8,7 +8,7 @@
 class GameMode : public SysObject {
 public:
     /* 000 (vtable) */
-    /* 004 */ unk32 mUnk_000;
+    /* 004 */ unk32 mUnk_004;
     /* 008 */
 
     /* 00 */ virtual ~GameMode();
@@ -21,7 +21,7 @@ public:
 
     inline GameMode() {}
     inline GameMode(unk32 param1) :
-        mUnk_000(param1) {}
+        mUnk_004(param1) {}
 
     void func_0202c0b8();
 };
