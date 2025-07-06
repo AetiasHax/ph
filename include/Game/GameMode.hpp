@@ -24,10 +24,10 @@ public:
     /* 008 */
 
     /* 00 */ virtual ~GameMode();
-    /* 08 */ virtual unk32 vfunc_08(unk32 param1) = 0;
+    /* 08 */ virtual GameModeId vfunc_08(bool param1) = 0;
     /* 0c */ virtual void vfunc_0c(u16 *param1);
     /* 10 */ virtual void vfunc_10(u16 *param1);
-    /* 14 */ virtual void vfunc_14(u16 *param1);
+    /* 14 */ virtual void vfunc_14(bool param1);
     /* 18 */ virtual void vfunc_18();
     /* 1c */
 
