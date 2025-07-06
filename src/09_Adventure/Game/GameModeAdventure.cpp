@@ -100,7 +100,7 @@ THUMB GameModeAdventure::~GameModeAdventure() {
 }
 
 // non-matching
-ARM unk32 GameModeAdventure::vfunc_08(unk32 param1) {
+ARM unk32 GameModeAdventure::vfunc_08(bool param1) {
     unk32 uVar2 = 0;
 
     if (data_027e0d38->mUnk_14 == 1) {
