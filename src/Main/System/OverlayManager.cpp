@@ -38,7 +38,7 @@ THUMB void OverlayManager::Unload(OverlayIndex index) {
 
 THUMB void OverlayManager::LoadGameMode(s32 mode) {
     OverlayId overlayId;
-    GameModeData *pSetup;
+    const GameModeData *pSetup;
 
     pSetup = &gGameModes[mode];
 
