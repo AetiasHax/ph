@@ -38,7 +38,7 @@ THUMB void ItemManager::Save(SaveItemManager *save) {
     save->inventory.numArrows             = (u8) (*mAmmo)[ItemFlag_Bow];
     save->inventory.equippedItem          = (u8) mEquippedItem;
     save->inventory.salvagedTreasureFlags = mSalvagedTreasureFlags;
-    save->inventory.hourglassSeconds      = SoftDivide(mHourglassSandFrames, 60);
+    save->inventory.hourglassSeconds      = mHourglassSandFrames / 60;
     for (s32 i = 0; i < Gem_COUNT; ++i) {
         save->inventory.numGems[i] = mNumGems[i];
     }
