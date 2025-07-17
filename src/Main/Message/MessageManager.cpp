@@ -1,5 +1,6 @@
 #include "Message/MessageManager.hpp"
 #include "Actor/ActorManager.hpp"
+#include "DTCM/UnkStruct_027e0c54.hpp"
 #include "Game/Game.hpp"
 #include "Player/TouchControl.hpp"
 #include "System/SysNew.hpp"
