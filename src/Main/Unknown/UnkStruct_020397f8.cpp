@@ -516,7 +516,7 @@ ARM void UnkStruct_020397f8::vfunc_50(EntryINF1 *param1, unk32 param2, s32 *para
 
     iVar6 = param3[0];
 
-    if (data_027e0c54 != 0) {
+    if (data_027e0c54.mUnk_0) {
         UnkStruct_020397f8 *pVar4 = gMessageManager.func_02036700();
 
         if (pVar4 != NULL && pVar4->mUnk_15c > 0) {
