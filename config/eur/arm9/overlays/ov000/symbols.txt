@@ -244,7 +244,7 @@ _ZN18UnkStruct_020ec7dc19func_ov000_0207c0f0Ei kind:function(thumb,size=0x28) ad
 func_ov000_0207c118 kind:function(thumb,size=0x58) addr:0x0207c118
 _ZN18UnkStruct_020ec7dc19func_ov000_0207c170Ev kind:function(thumb,size=0x1e) addr:0x0207c170
 func_ov000_0207c190 kind:function(thumb,size=0x1e) addr:0x0207c190
-func_ov000_0207c1b0 kind:function(arm,size=0x48) addr:0x0207c1b0
+_ZN18UnkStruct_027e0e5819func_ov000_0207c1b0EiP5Vec3piii kind:function(arm,size=0x48) addr:0x0207c1b0
 func_ov000_0207c1f8 kind:function(arm,size=0x68) addr:0x0207c1f8
 func_ov000_0207c260 kind:function(arm,size=0x88) addr:0x0207c260
 func_ov000_0207c2e8 kind:function(arm,size=0x34) addr:0x0207c2e8
@@ -256,7 +256,7 @@ func_ov000_0207c444 kind:function(arm,size=0x30) addr:0x0207c444
 func_ov000_0207c474 kind:function(arm,size=0xa4) addr:0x0207c474
 func_ov000_0207c518 kind:function(arm,size=0x98) addr:0x0207c518
 func_ov000_0207c5b0 kind:function(thumb,size=0x22) addr:0x0207c5b0
-func_ov000_0207c5d4 kind:function(arm,size=0x48) addr:0x0207c5d4
+_ZN18UnkStruct_027e0e5819func_ov000_0207c5d4Eib kind:function(arm,size=0x48) addr:0x0207c5d4
 func_ov000_0207c61c kind:function(arm,size=0x58) addr:0x0207c61c
 func_ov000_0207c674 kind:function(arm,size=0x20) addr:0x0207c674
 func_ov000_0207c694 kind:function(arm,size=0x58) addr:0x0207c694
@@ -774,7 +774,7 @@ func_ov000_0208add4 kind:function(arm,size=0x54) addr:0x0208add4
 func_ov000_0208ae28 kind:function(arm,size=0x28) addr:0x0208ae28
 func_ov000_0208ae50 kind:function(arm,size=0x8) addr:0x0208ae50
 func_ov000_0208ae58 kind:function(arm,size=0x3c) addr:0x0208ae58
-func_ov000_0208ae94 kind:function(arm,size=0x44) addr:0x0208ae94
+_ZN18UnkStruct_027e0f6419func_ov000_0208ae94Ev kind:function(arm,size=0x44) addr:0x0208ae94
 func_ov000_0208aed8 kind:function(arm,size=0x244) addr:0x0208aed8
 func_ov000_0208b11c kind:function(arm,size=0x20) addr:0x0208b11c
 func_ov000_0208b13c kind:function(arm,size=0x1c) addr:0x0208b13c
@@ -924,7 +924,7 @@ _ZN4AABB4GrowEP5Vec3p kind:function(arm,size=0x28) addr:0x0208edd8
 _ZN4AABB10GrowScalarEi kind:function(arm,size=0x4c) addr:0x0208ee00
 func_ov000_0208ee4c kind:function(arm,size=0x44) addr:0x0208ee4c
 func_ov000_0208ee90 kind:function(arm,size=0x1a0) addr:0x0208ee90
-func_ov000_0208f030 kind:function(arm,size=0x170) addr:0x0208f030
+_ZN8Cylinder19func_ov000_0208f030EP5Vec3pS1_i kind:function(arm,size=0x170) addr:0x0208f030
 func_ov000_0208f1a0 kind:function(arm,size=0xf4) addr:0x0208f1a0
 func_ov000_0208f294 kind:function(arm,size=0x84) addr:0x0208f294
 _ZN6Sphere12ContainsInXZEP5Vec3p kind:function(arm,size=0x5c) addr:0x0208f318
@@ -1874,8 +1874,8 @@ _ZN10PlayerBase17EquipCollidesWithEP8Cylinderi kind:function(arm,size=0x18) addr
 _ZN10PlayerBase18EquipItem_vfunc_2cEv kind:function(arm,size=0x38) addr:0x020a7cfc
 _ZN10PlayerBase9SetHealthEs kind:function(arm,size=0x58) addr:0x020a7d34
 _ZN10PlayerBase9AddHealthEs kind:function(arm,size=0x68) addr:0x020a7d8c
-_ZN10PlayerBase8TeleportEP5Vec3psibb kind:function(arm,size=0x7c) addr:0x020a7df4
-_ZN10PlayerBase18TeleportToEntranceEib kind:function(arm,size=0x118) addr:0x020a7e70
+_ZN10PlayerBase18TeleportToEntranceEib kind:function(arm,size=0x7c) addr:0x020a7df4
+_ZN10PlayerBase8TeleportEP5Vec3psibb kind:function(arm,size=0x118) addr:0x020a7e70
 _ZN10PlayerBase22TeleportToLastEntranceEb kind:function(arm,size=0x1c) addr:0x020a7f88
 _ZN13LinkStateBase8vfunc_00Ev kind:function(thumb,size=0x2) addr:0x020a7fa4
 _ZN13LinkStateBase12OnStateEnterEv kind:function(arm,size=0x4) addr:0x020a7fa8
@@ -4760,15 +4760,15 @@ data_ov000_020e5454 kind:data(any) addr:0x020e5454
 data_ov000_020e54a4 kind:data(any) addr:0x020e54a4
 data_ov000_020e54f4 kind:data(any) addr:0x020e54f4
 data_ov000_020e5548 kind:data(any) addr:0x020e5548
-data_ov000_020e5590 kind:data(any) addr:0x020e5590
-data_ov000_020e5594 kind:data(any) addr:0x020e5594
-data_ov000_020e5598 kind:data(any) addr:0x020e5598
-data_ov000_020e559c kind:data(any) addr:0x020e559c
-data_ov000_020e55a0 kind:data(any) addr:0x020e55a0
-data_ov000_020e55a4 kind:data(any) addr:0x020e55a4
-data_ov000_020e55a8 kind:data(any) addr:0x020e55a8
-data_ov000_020e55ac kind:data(any) addr:0x020e55ac
-_ZTV10PlayerBase kind:data(any) addr:0x020e55d8
+@1464 kind:data(any) addr:0x020e5590 local
+@1463 kind:data(any) addr:0x020e5594 local
+@1462 kind:data(any) addr:0x020e5598 local
+@1461 kind:data(any) addr:0x020e559c local
+@1460 kind:data(any) addr:0x020e55a0 local
+@1459 kind:data(any) addr:0x020e55a4 local
+@1458 kind:data(any) addr:0x020e55a8 local
+@1457 kind:data(any) addr:0x020e55ac local
+_ZTV10PlayerBase kind:data(any) addr:0x020e55d0
 data_ov000_020e5630 kind:data(any) addr:0x020e5630
 data_ov000_020e5634 kind:data(any) addr:0x020e5634
 data_ov000_020e5638 kind:data(any) addr:0x020e5638
