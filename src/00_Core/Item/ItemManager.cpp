@@ -10,6 +10,7 @@
 #include "Save/AdventureFlags.hpp"
 #include "System/OverlayManager.hpp"
 #include "Unknown/UnkStruct_020eec68.hpp"
+#include "flags.h"
 
 static const char *sShipPartTypes[] = {"anc", "bow", "hul", "can", "dco", "pdl", "fnl", "brg"};
 
@@ -408,7 +409,7 @@ THUMB void ItemManager::SetTreasureSalvaged(u32 index) {
 }
 
 THUMB void ItemManager::RemoveItem(ItemFlag item) {
-    RESET_FLAG(mItemFlags.flags, item);
+    UNSET_FLAG(mItemFlags.flags, item);
     if (item >= ItemFlag_EQUIP_START && item <= ItemFlag_EQUIP_END) {
         (*mAmmo)[item] = 0;
     }
@@ -993,7 +994,7 @@ ARM void ItemManager::func_ov00_020ae4dc(s32 param1) {
 ARM void ItemManager::SetPotion(u32 index, Potion potion) {
     mPotions[index] = potion;
     if (potion == Potion_None) {
-        RESET_FLAG(mItemFlags.flags, index + ItemFlag_PotionA);
+        UNSET_FLAG(mItemFlags.flags, index + ItemFlag_PotionA);
     } else {
         SET_FLAG(mItemFlags.flags, index + ItemFlag_PotionA);
     }
