@@ -844,20 +844,20 @@ func_020197bc kind:function(arm,size=0x40) addr:0x020197bc
 func_020197fc kind:function(arm,size=0x40) addr:0x020197fc
 func_0201983c kind:function(arm,size=0x40) addr:0x0201983c
 func_0201987c kind:function(arm,size=0x40) addr:0x0201987c
-func_020198bc kind:function(arm,size=0x48) addr:0x020198bc
-func_02019904 kind:function(arm,size=0x17c) addr:0x02019904
-func_02019a80 kind:function(arm,size=0x68) addr:0x02019a80
-ExecModelRenderCommands kind:function(arm,size=0xdc) addr:0x02019ae8
-func_02019bc4 kind:function(arm,size=0x28) addr:0x02019bc4
-func_02019bec kind:function(arm,size=0x28) addr:0x02019bec
-func_02019c14 kind:function(arm,size=0x308) addr:0x02019c14
-func_02019f1c kind:function(arm,size=0x364) addr:0x02019f1c
-func_0201a280 kind:function(arm,size=0x75c) addr:0x0201a280
-func_0201a9dc kind:function(arm,size=0xdc) addr:0x0201a9dc
-func_0201aab8 kind:function(arm,size=0x70) addr:0x0201aab8
-func_0201ab28 kind:function(arm,size=0x314) addr:0x0201ab28
-func_0201ae3c kind:function(arm,size=0x380) addr:0x0201ae3c
-func_0201b1bc kind:function(arm,size=0x8c) addr:0x0201b1bc
+G3d_RenderSBCCommands kind:function(arm,size=0x48) addr:0x020198bc
+G3d_InitRenderState kind:function(arm,size=0x17c) addr:0x02019904
+G3d_SetRenderObjAnimationMap kind:function(arm,size=0x68) addr:0x02019a80
+G3d_Render kind:function(arm,size=0xdc) addr:0x02019ae8
+G3d_SBCRender_NOP kind:function(arm,size=0x28) addr:0x02019bc4
+G3d_SBCRender_END kind:function(arm,size=0x28) addr:0x02019bec
+G3d_SBCRender_007 kind:function(arm,size=0x308) addr:0x02019c14
+G3d_SBCRender_008 kind:function(arm,size=0x364) addr:0x02019f1c
+G3d_SBCRender_SKN kind:function(arm,size=0x75c) addr:0x0201a280
+G3d_SBCRender_00A kind:function(arm,size=0xdc) addr:0x0201a9dc
+G3d_SBCRender_SCL kind:function(arm,size=0x70) addr:0x0201aab8
+G3d_SBCRender_00C kind:function(arm,size=0x314) addr:0x0201ab28
+G3d_SBCRender_00D kind:function(arm,size=0x380) addr:0x0201ae3c
+G3d_GetCurrentMtx kind:function(arm,size=0x8c) addr:0x0201b1bc
 func_0201b248 kind:function(thumb,size=0x24) addr:0x0201b248
 func_0201b26c kind:function(arm,size=0x44) addr:0x0201b26c
 func_0201b2b0 kind:function(arm,size=0x48) addr:0x0201b2b0
@@ -2634,19 +2634,11 @@ data_020572fc kind:data(any) addr:0x020572fc
 data_02057300 kind:data(any) addr:0x02057300
 data_02057304 kind:data(any) addr:0x02057304
 data_02057308 kind:data(any) addr:0x02057308
-data_02057354 kind:data(any) addr:0x02057354
-data_02057358 kind:data(any) addr:0x02057358
-data_02057360 kind:data(any) addr:0x02057360
-data_02057384 kind:data(any) addr:0x02057384
-data_02057390 kind:data(any) addr:0x02057390
-data_0205739c kind:data(any) addr:0x0205739c
-data_020573a0 kind:data(any) addr:0x020573a0
-data_020573a8 kind:data(any) addr:0x020573a8
-data_020573cc kind:data(any) addr:0x020573cc
-data_020573d8 kind:data(any) addr:0x020573d8
-data_020573e8 kind:data(any) addr:0x020573e8
-data_020573f0 kind:data(any) addr:0x020573f0
-data_020573f4 kind:data(any) addr:0x020573f4
+funcArgs$383 kind:data(any) addr:0x02057354 local
+funcArgs$481 kind:data(any) addr:0x0205739c local
+funcArgs$745 kind:data(any) addr:0x020573e4 local
+cmd$841 kind:data(any) addr:0x020573ec local
+mtx$855 kind:data(any) addr:0x020573f4 local
 data_02057434 kind:data(any) addr:0x02057434
 data_02057454 kind:data(any) addr:0x02057454
 data_02057458 kind:data(any) addr:0x02057458
@@ -3028,11 +3020,6 @@ data_0205ade4 kind:bss addr:0x0205ade4
 data_0205ade8 kind:bss addr:0x0205ade8
 data_0205adf4 kind:bss addr:0x0205adf4
 data_0205ae08 kind:bss addr:0x0205ae08
-data_0205bc14 kind:bss addr:0x0205bc14
-data_0205bc18 kind:bss addr:0x0205bc18
-data_0205bc1c kind:bss addr:0x0205bc1c
-data_0205c208 kind:bss addr:0x0205c208
-data_0205c248 kind:bss addr:0x0205c248
 data_0205db08 kind:bss addr:0x0205db08
 data_0205db0c kind:bss addr:0x0205db0c
 data_0205db10 kind:bss addr:0x0205db10
