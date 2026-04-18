@@ -165,7 +165,7 @@ class Project:
     def build_rom_config(self) -> Path:
         return self.game_build / "build" / "rom_config.yaml"
 
-    def source_files(self) -> Generator[Path]:
+    def source_files(self) -> Generator[Path, None, None]:
         yield from get_c_cpp_files([src_path, libs_path])
 
     def source_object_files(self) -> list[str]:
